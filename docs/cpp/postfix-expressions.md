@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 897eb80c713f786ecf0f7e6c9cf24cd8bdfc0aa8
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 9a5c99c78623f2192b59a73f270f3ad5d2a34516
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032276"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231167"
 ---
 # <a name="postfix-expressions"></a>Expressions suffixées
 
@@ -21,10 +21,10 @@ Les expressions suffixées se composent d'expressions primaires ou d'expressions
 
 |Nom de l’opérateur|Notation de l'opérateur|
 |-------------------|-----------------------|
-|[Opérateur de sous-scriptum](../cpp/subscript-operator.md)|**[ ]**|
+|[Opérateur d’indice](../cpp/subscript-operator.md)|**[ ]**|
 |[Opérateur d'appel de fonction](../cpp/function-call-operator-parens.md)|**( )**|
-|[Opérateur de conversion de type explicite](../cpp/explicit-type-conversion-operator-parens.md)|*nom de type* **( )**|
-|[Opérateur d’accès membre](../cpp/member-access-operators-dot-and.md)|**.** Ou**->**|
+|[Opérateur de conversion de type explicite](../cpp/explicit-type-conversion-operator-parens.md)|*nom de type* **()**|
+|[Opérateur d’accès aux membres](../cpp/member-access-operators-dot-and.md)|**.** ni**->**|
 |[Opérateur d'incrément suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[Opérateur de décrémentation suffixé](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
 
@@ -35,13 +35,13 @@ primary-expression
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
-*L’expression postfixe ci-dessus* peut être une expression primaire ou une autre expression postfixe.  Voir **les expressions primaires**.  Les expressions suffixées sont regroupées de gauche à droite. Elles peuvent ainsi être chaînées les unes aux autres comme suit :
+L' *expression postfixer* ci-dessus peut être une [expression primaire](primary-expressions.md) ou une autre expression postfix. Les expressions suffixées sont regroupées de gauche à droite. Elles peuvent ainsi être chaînées les unes aux autres comme suit :
 
 ```cpp
 func(1)->GetValue()++
 ```
 
-Dans l’expression `func` ci-dessus, `func(1)` est une expression `func(1)->GetValue` primaire, est une expression postfixe `func(1)->GetValue()` de fonction, est une expression postfixe spécifiant un membre de la classe, est une autre expression postfixe de fonction, et l’expression entière est une expression postfixe incrémentant la valeur de retour de GetValue.  L’expression entière signifie : Appeler fonction passant 1 comme argument et obtenir un pointeur vers une classe comme valeur de retour.  Ensuite, `GetValue()` faites appel à cette classe, puis incrément de la valeur retournée.
+Dans l’expression ci-dessus, `func` est une expression primaire, `func(1)` est une expression de suffixe de fonction, `func(1)->GetValue` est une expression suffixe qui spécifie un membre de la classe, `func(1)->GetValue()` est une autre expression de suffixe de fonction, et l’expression entière est une expression suffixée qui incrémente la valeur de retour de GetValue.  L’expression entière signifie : Appeler fonction passant 1 comme argument et obtenir un pointeur vers une classe comme valeur de retour.  Appelez ensuite `GetValue()` sur cette classe, puis incrémentez la valeur retournée.
 
 Les expressions répertoriées ci-dessus sont des expressions d'assignation, ce qui signifie que le résultat de ces expressions doit être une r-value.
 
@@ -53,9 +53,9 @@ simple-type-name ( expression-list )
 
 indique l'appel du constructeur.  Si le nom-type-simple est un type fondamental, la liste d'expressions doit être une expression unique, et cette expression montre un cast de la valeur de l'expression au type fondamental.  Ce type d'expression de cast simule un constructeur.  Cette forme permet aux classes et aux types fondamentaux d'être construits à l'aide de la même syntaxe. Elle est donc particulièrement utile lorsque vous définissez des classes de modèles.
 
-Le *mot-clé est* l’un des **dynamic_cast**, **static_cast** ou **reinterpret_cast**.  Plus d’informations peuvent être trouvées dans **dynamic_cast**, **static_cast** et **reinterpet_cast**.
+Le *mot clé Cast* est l’un des **`dynamic_cast`** , **`static_cast`** ou **`reinterpret_cast`** .  Des informations supplémentaires sont disponibles dans [`dynamic_cast`](dynamic-cast-operator.md) , [`static_cast`](static-cast-operator.md) et [`reinterpet_cast`](reinterpret-cast-operator.md) .
 
-**L’opérateur typeide** est considéré comme une expression postfixe.  Voir **l’opérateur typeid**.
+L' **`typeid`** opérateur est considéré comme une expression suffixée.  Consultez **opérateur typeid**.
 
 ## <a name="formal-and-actual-arguments"></a>Arguments formels et arguments réels
 
@@ -65,7 +65,7 @@ Lorsqu’une fonction est appelée, les tâches suivantes sont effectuées :
 
 - Tous les arguments réels (ceux fournis par l'appelant) sont évalués. Il n’y a pas d’ordre implicite dans lequel ces arguments sont évalués, mais ils sont tous évalués et les effets secondaires sont résolus avant l’entrée dans la fonction.
 
-- Chaque argument formel est initialisé avec son argument réel correspondant dans la liste d'expressions. (Un argument formel est un argument qui est déclaré dans l’en-tête de la fonction et utilisé dans le corps d’une fonction.) Les conversions se font comme par initialisation — les conversions standard et définies par l’utilisateur sont effectuées dans la conversion d’un argument réel au bon type. L'initialisation exécutée est illustrée conceptuellement par le code suivant :
+- Chaque argument formel est initialisé avec son argument réel correspondant dans la liste d'expressions. (Un argument formel est un argument déclaré dans l’en-tête de fonction et utilisé dans le corps d’une fonction.) Les conversions sont effectuées comme si par l’initialisation : les conversions standard et les conversions définies par l’utilisateur sont effectuées lors de la conversion d’un argument réel en type correct. L'initialisation exécutée est illustrée conceptuellement par le code suivant :
 
     ```cpp
     void Func( int i ); // Function prototype
@@ -80,13 +80,13 @@ Lorsqu’une fonction est appelée, les tâches suivantes sont effectuées :
     Func( Temp_i );
     ```
 
-   Notez que l'initialisation est exécutée comme si la syntaxe de signe égal était utilisée au lieu de la syntaxe de parenthèses. Une copie de `i` est effectuée avant de passer la valeur à la fonction. (Pour plus d’informations, voir [Initializers](../cpp/initializers.md) and [Conversions](../cpp/user-defined-type-conversions-cpp.md)).
+   Notez que l'initialisation est exécutée comme si la syntaxe de signe égal était utilisée au lieu de la syntaxe de parenthèses. Une copie de `i` est effectuée avant de passer la valeur à la fonction. (Pour plus d’informations, consultez [initialiseurs](../cpp/initializers.md) et [conversions](../cpp/user-defined-type-conversions-cpp.md)).
 
-   Par conséquent, si le prototype de fonction (déclaration) exige un argument de type **long,** et si le programme d’appel fournit un argument réel de type **int**, l’argument réel est promu en utilisant une conversion de type standard en type **long** (voir [conversions standard](../cpp/standard-conversions.md)).
+   Par conséquent, si le prototype de fonction (déclaration) appelle pour un argument de type **`long`** , et si le programme appelant fournit un argument réel de type **`int`** , l’argument réel est promu à l’aide d’une conversion de type standard en type **`long`** (consultez [conversions standard](../cpp/standard-conversions.md)).
 
    C’est une erreur de fournir un argument réel pour lequel il n’existe aucune conversion standard ou définie par l’utilisateur au type de l’argument formel.
 
-   Pour les arguments réels du type classe, l’argument formel est initialisé en appelant le constructeur de la classe. (Voir [Les constructeurs](../cpp/constructors-cpp.md) pour en savoir plus sur ces fonctions spéciales de membre de la classe.)
+   Pour les arguments réels du type classe, l’argument formel est initialisé en appelant le constructeur de la classe. (Pour plus d’informations sur ces fonctions membres de classe spéciales, consultez [constructeurs](../cpp/constructors-cpp.md) .)
 
 - L'appel de fonction est exécuté.
 
@@ -111,11 +111,11 @@ void func( long param1, double param2 )
 }
 ```
 
-Lorsqu’il `func` est appelé à `param1` partir du principal, `i` `i` le paramètre formel est initialisé avec la valeur de (est converti en type `j` `j` **long** pour correspondre au type correct à l’aide d’une conversion standard), et le paramètre `param2` formel est initialisé avec la valeur de (est converti en **type double** en utilisant une conversion standard).
+Quand `func` est appelé à partir de main, le paramètre formel `param1` est initialisé avec la valeur de `i` ( `i` est converti en type **`long`** pour correspondre au type correct à l’aide d’une conversion standard) et le paramètre formel `param2` est initialisé avec la valeur de `j` ( `j` est converti en type **`double`** à l’aide d’une conversion standard).
 
 ## <a name="treatment-of-argument-types"></a>Traitement des types d'arguments
 
-Les arguments formels déclarés en tant que types const ne peuvent pas être modifiés dans le corps d'une fonction. Fonctions peuvent changer tout argument qui n’est pas de type **const**. Toutefois, la modification est locale à la fonction et n’affecte pas la valeur de l’argument réel à moins que l’argument réel était une référence à un objet qui n’était pas de type **const**.
+Les arguments formels déclarés en tant que **`const`** types ne peuvent pas être modifiés dans le corps d’une fonction. Les fonctions peuvent modifier tout argument qui n’est pas de type **`const`** . Toutefois, la modification est locale à la fonction et n’affecte pas la valeur de l’argument réel, sauf si l’argument réel est une référence à un objet qui n’est pas de type **`const`** .
 
 Les fonctions suivantes illustrent certains de ces concepts :
 
@@ -135,23 +135,23 @@ double& func2( double& d, const char *c ) {
 }
 ```
 
-## <a name="ellipsis-and-default-arguments"></a>Ellipsis et arguments par défaut
+## <a name="ellipsis-and-default-arguments"></a>Points de suspension et arguments par défaut
 
 Les fonctions peuvent être déclarées pour accepter moins d’arguments que le nombre spécifié dans la définition de fonction, en utilisant l’une des deux méthodes suivantes : points de suspension (`...`) ou arguments par défaut.
 
-Ellipsis indique que des arguments peuvent être nécessaires, mais que le nombre et les types ne sont pas spécifiés dans la déclaration. C'est habituellement une mauvaise pratique de programmation C++ car elle occulte l'un des avantages du C++ : la sécurité de type. Différentes conversions sont appliquées aux fonctions déclarées avec élipsis que pour les fonctions pour lesquelles les types d’arguments formels et réels sont connus :
+Les points de suspension indiquent que des arguments peuvent être requis mais que le nombre et les types ne sont pas spécifiés dans la déclaration. C'est habituellement une mauvaise pratique de programmation C++ car elle occulte l'un des avantages du C++ : la sécurité de type. Différentes conversions sont appliquées aux fonctions déclarées avec des points de suspension que aux fonctions pour lesquelles les types d’arguments formels et réels sont connus :
 
-- Si l’argument réel est de type **flotteur,** il est promu pour taper **le double** avant l’appel de fonction.
+- Si l’argument réel est de type **`float`** , il est promu au type **`double`** avant l’appel de la fonction.
 
-- Tout **char**signé ou non signé, **court,** type énuméré, ou champ de bits est converti en un **int** signé ou non signé en utilisant la promotion intégrale.
+- Tout **`signed char`** type ou, **`unsigned char`** **`signed short`** ou **`unsigned short`** , type énuméré, ou champ de bits est converti en **`signed int`** ou à l’aide d’une **`unsigned int`** promotion intégrale.
 
 - Tout argument de type classe est transmis par valeur comme une structure de données. La copie est créée par copie binaire plutôt que par appel d’un constructeur de copie de la classe (le cas échéant).
 
-Ellipsis, s’il est utilisé, doit être déclaré dernier dans la liste d’arguments. Pour plus d’informations sur l’adoption d’un nombre variable d’arguments, consultez la discussion de [va_arg, va_start et va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) dans le *run-Time Library Reference*.
+Les points de suspension, s’ils sont utilisés, doivent être déclarés en dernier dans la liste d’arguments. Pour plus d’informations sur le passage d’un nombre variable d’arguments, consultez la description de [va_arg, va_start et va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) dans la référence de la *bibliothèque Runtime*.
 
-Pour plus d’informations sur les arguments par défaut dans la programmation CLR, voir [Listes d’arguments variables (...) (C/CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Pour plus d’informations sur les arguments par défaut dans la programmation CLR, consultez [listes d’arguments de variable (...) (C++/CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
-Les arguments par défaut vous permettent de spécifier la valeur qu’un argument doit prendre si aucune n’est fournie dans l’appel de fonction. Le fragment de code suivant montre le fonctionnement des arguments par défaut. Pour plus d’informations sur les restrictions sur la spécifier les arguments par défaut, voir [Arguments par défaut](../cpp/default-arguments.md).
+Les arguments par défaut vous permettent de spécifier la valeur qu’un argument doit prendre si aucune n’est fournie dans l’appel de fonction. Le fragment de code suivant montre le fonctionnement des arguments par défaut. Pour plus d’informations sur les restrictions relatives à la spécification des arguments par défaut, consultez [arguments par défaut](../cpp/default-arguments.md).
 
 ```cpp
 // expre_Ellipsis_and_Default_Arguments.cpp
@@ -184,7 +184,7 @@ void print( const char *string, const char *terminator )
 }
 ```
 
-Le programme précédent déclare une fonction, `print`, qui accepte deux arguments. Cependant, le deuxième argument, *terminateur* `"\n"`, a une valeur par défaut, . Dans `main`, les deux `print` premiers appels pour permettre à l’argument par défaut deuxième de fournir une nouvelle ligne pour mettre fin à la chaîne imprimée. Le troisième appel indique une valeur explicite pour le deuxième argument. Le résultat généré par le programme est
+Le programme précédent déclare une fonction, `print`, qui accepte deux arguments. Toutefois, le deuxième argument, *terminateur*, a une valeur par défaut, `"\n"` . Dans `main` , les deux premiers appels à `print` permettent au deuxième argument par défaut de fournir une nouvelle ligne pour terminer la chaîne imprimée. Le troisième appel indique une valeur explicite pour le deuxième argument. Le résultat généré par le programme est
 
 ```Output
 hello,
@@ -194,4 +194,4 @@ good morning, sunshine.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Types d'expressions](../cpp/types-of-expressions.md)
+[Types d’expressions](../cpp/types-of-expressions.md)

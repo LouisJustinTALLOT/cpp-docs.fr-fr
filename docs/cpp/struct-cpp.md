@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f247a99d3f04a15ebd54718a46dae8512a580d6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231115"
 ---
 # <a name="struct-c"></a>struct (C++)
 
-Le **struct** mot clé définit un type structure et/ou une variable d’un type structure.
+Le **`struct`** mot clé définit un type structure et/ou une variable d’un type structure.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,44 +29,44 @@ Le **struct** mot clé définit un type structure et/ou une variable d’un type
 
 #### <a name="parameters"></a>Paramètres
 
-*template-spec*<br/>
-Spécifications de modèle facultatives. Pour plus d’informations, consultez [spécifications de modèle](templates-cpp.md).
+*spécification de modèle*<br/>
+Spécifications de modèle facultatives. Pour plus d’informations, consultez [spécifications du modèle](templates-cpp.md).
 
-*struct*<br/>
-Le **struct** mot clé.
+*modélis*<br/>
+**`struct`** Mot clé.
 
-*ms-decl-spec*<br/>
-Spécification de classe de stockage facultative. Pour plus d’informations, reportez-vous à la [__declspec](../cpp/declspec.md) mot clé.
+*MS-decl-spec*<br/>
+Spécification de classe de stockage facultative. Pour plus d’informations, reportez-vous au mot clé [__declspec](../cpp/declspec.md) .
 
-*tag*<br/>
-Nom de type donné à la structure. La balise devient un mot réservé dans la portée de la structure. La balise est facultative. Si elle est omise, une structure anonyme est définie. Pour plus d’informations, consultez [des Types de classe anonymes](../cpp/anonymous-class-types.md).
+*Référence*<br/>
+Nom de type donné à la structure. La balise devient un mot réservé dans la portée de la structure. La balise est facultative. Si elle est omise, une structure anonyme est définie. Pour plus d’informations, consultez [types de classes anonymes](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
-Liste facultative des classes ou structures dont dérivent les membres de cette structure. Consultez [des Classes de Base](../cpp/base-classes.md) pour plus d’informations. Chaque nom de classe ou une structure de base peut être précédée d’un spécificateur d’accès ([public](../cpp/public-cpp.md), [privé](../cpp/private-cpp.md), [protégé](../cpp/protected-cpp.md)) et le [virtuels](../cpp/virtual-cpp.md) mot clé. Consultez le tableau de l’accès aux membres de [contrôle de l’accès aux membres de classe](member-access-control-cpp.md) pour plus d’informations.
+Liste facultative des classes ou structures dont dérivent les membres de cette structure. Pour plus d’informations, consultez [classes de base](../cpp/base-classes.md) . Chaque nom de classe de base ou de structure peut être précédé d’un spécificateur d’accès ([public](../cpp/public-cpp.md), [Private](../cpp/private-cpp.md), [protected](../cpp/protected-cpp.md)) et du mot clé [Virtual](../cpp/virtual-cpp.md) . Pour plus d’informations, consultez la table accès aux membres dans contrôle de l' [accès aux membres](member-access-control-cpp.md) de la classe.
 
-*member-list*<br/>
-Liste des membres de structure. Reportez-vous à [vue d’ensemble des membres de classe](../cpp/class-member-overview.md) pour plus d’informations. La seule différence ici est que **struct** est utilisé à la place de **classe**.
+*Member-List*<br/>
+Liste des membres de structure. Pour plus d’informations, consultez [vue d’ensemble des membres de classe](../cpp/class-member-overview.md) . La seule différence ici est que **`struct`** est utilisé à la place de **`class`** .
 
 *declarators*<br/>
-Liste des déclarateurs spécifiant les noms de la structure. Les listes des déclarateurs déclarent une ou plusieurs instances du type structure. Déclarateurs peuvent inclure des listes d’initialiseurs si tous les membres de données de la structure sont **public**. Listes d’initialiseurs sont fréquentes dans les structures, car les données membres sont **public** par défaut.  Consultez [vue d’ensemble des déclarateurs](../cpp/overview-of-declarators.md) pour plus d’informations.
+Liste des déclarateurs spécifiant les noms de la structure. Les listes des déclarateurs déclarent une ou plusieurs instances du type structure. Les déclarateurs peuvent inclure des listes d’initialiseurs si toutes les données membres de la structure sont **`public`** . Les listes d’initialiseurs sont courantes dans les structures, car les membres de données sont **`public`** par défaut.  Pour plus d’informations, consultez [vue d’ensemble des déclarateurs](../cpp/overview-of-declarators.md) .
 
 ## <a name="remarks"></a>Notes
 
 Un type structure est un type composite défini par l'utilisateur. Il comprend des champs ou des membres qui peuvent avoir différents types.
 
-En C++, une structure est identique à une classe sauf que ses membres sont **public** par défaut.
+En C++, une structure est identique à une classe, sauf que ses membres sont **`public`** par défaut.
 
-Pour plus d’informations sur les classes managées et les structures en C / c++ / CLI, consultez [les Classes et Structs](../extensions/classes-and-structs-cpp-component-extensions.md).
+Pour plus d’informations sur les classes et les structs managés en C++/CLI, consultez [classes et structs](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="using-a-structure"></a>Utilisation d'une structure
 
-En C, vous devez utiliser explicitement le **struct** mot clé pour déclarer une structure. En C++, vous n’avez pas besoin d’utiliser le **struct** mot clé une fois que le type a été défini.
+En C, vous devez utiliser explicitement le **`struct`** mot clé pour déclarer une structure. En C++, vous n’avez pas besoin d’utiliser le **`struct`** mot clé une fois que le type a été défini.
 
 Vous avez la possibilité de déclarer des variables lorsque le type de structure est défini en plaçant un ou plusieurs noms de variables séparés par des virgules entre l'accolade fermante et le point-virgule.
 
 Les variables de structure peuvent être initialisées. L'initialisation de chaque variable doit être placée entre accolades.
 
-Pour plus d’informations, consultez [classe](../cpp/class-cpp.md), [union](../cpp/unions.md), et [enum](../cpp/enumerations-cpp.md).
+Pour obtenir des informations connexes, consultez [Class](../cpp/class-cpp.md), [Union](../cpp/unions.md)et [enum](../cpp/enumerations-cpp.md).
 
 ## <a name="example"></a>Exemple
 

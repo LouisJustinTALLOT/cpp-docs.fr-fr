@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 0fc49d4cd26593cb02a2ff05c3205cc630ef848c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444622"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231245"
 ---
 # <a name="stream-io"></a>E/S de flux
 
@@ -51,12 +51,12 @@ Ces fonctions permettent de traiter des données de tailles et de formats diffé
 |[getchar, getwchar](../c-runtime-library/reference/getc-getwc.md)|Lire un caractère à partir de **stdin** (versions macro de **fgetchar** et **fgetwchar**)|
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|Retourner le nombre autorisé de fichiers ouverts simultanément au niveau de l'E/S du flux|
 |[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|Lire une ligne à partir de **stdin**|
-|[_getw](../c-runtime-library/reference/getw.md)|Lire un **int** binaire dans le flux|
+|[_getw](../c-runtime-library/reference/getw.md)|Lire le binaire **`int`** à partir du flux|
 |[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md),[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|Écrire des données mises en forme dans **stdout**|
 |[putc, putwc](../c-runtime-library/reference/putc-putwc.md)|Écrire un caractère dans un flux (versions macro de **fputc** et **fputwc**)|
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Écrire un caractère dans **stdout** (versions macro de **fputchar** et **fputwchar**)|
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Écrire une ligne dans le flux|
-|[_putw](../c-runtime-library/reference/putw.md)|Écrire un **int** binaire dans le flux|
+|[_putw](../c-runtime-library/reference/putw.md)|Écrire le binaire **`int`** dans le flux|
 |[rewind](../c-runtime-library/reference/rewind.md)|Déplacer la position d'un fichier au début du flux|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Supprimer les fichiers temporaires créés par **tmpfile**|
 |[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Lire les données mises en forme d’un **stdin**|

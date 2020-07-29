@@ -24,12 +24,12 @@ f1_keywords:
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: bacda4288a6745ea57c31e68e515ae7b37418096
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9150642a6a21198ae43bdea5f33cc5a8f0b6a581
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946018"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188997"
 ---
 # <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s, vswscanf_s
 
@@ -52,7 +52,7 @@ int vswscanf_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Données stockées
 
 *format*<br/>
@@ -71,18 +71,18 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **vsscanf_s** lit les données de la *mémoire tampon* dans les emplacements fournis par chaque argument dans la liste d’arguments *arglist* . Les arguments de la liste d’arguments spécifient des pointeurs vers des variables dont le type correspond à un spécificateur de type au *format*. Contrairement à la version moins sécurisée **vsscanf**, un paramètre de taille de mémoire tampon est requis lorsque vous utilisez les jeux de champs de type **c**, **c**, **s**, **s**ou String-Control qui sont placés dans **[]** . La taille de mémoire tampon en caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite.
+La fonction **vsscanf_s** lit les données de la *mémoire tampon* dans les emplacements fournis par chaque argument dans la liste d’arguments *arglist* . Les arguments de la liste d’arguments spécifient des pointeurs vers des variables dont le type correspond à un spécificateur de type au *format*. Contrairement à la version moins sécurisée **vsscanf**, un paramètre de taille de mémoire tampon est requis lorsque vous utilisez les jeux de champs de type **c**, **c**, **s**, **s**ou String-Control qui sont placés dans **[]**. La taille de mémoire tampon des caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite.
 
 La taille de la mémoire tampon inclut le caractère Null de fin. Un champ de spécification de largeur peut être utilisé pour faire en sorte que le jeton lu tiendra dans la mémoire tampon. Si aucun champ de spécification de largeur n'est utilisé, et si le jeton lu est trop grand pour la mémoire tampon, aucune valeur n'est écrite dans cette mémoire tampon.
 
 Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Caractères du champ de type scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Le paramètre size est de type **unsigned**, et non **size_t**.
+> Le paramètre de taille est de type **`unsigned`** , et non **size_t**.
 
 L’argument *format* contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument *format* pour la fonction **scanf_s** . Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-**vswscanf_s** est une version à caractères larges de **vsscanf_s**; les arguments de **vswscanf_s** sont des chaînes à caractères larges. **vsscanf_s** ne gère pas les caractères hexadécimaux multioctets. **vswscanf_s** ne gère pas les caractères hexadécimaux ou « zone de compatibilité » Unicode à pleine chasse. Sinon, **vswscanf_s** et **vsscanf_s** se comportent de la même façon.
+**vswscanf_s** est une version à caractères larges de **vsscanf_s**; les arguments de **vswscanf_s** sont des chaînes à caractères larges. **vsscanf_s** ne gère pas les caractères hexadécimaux multioctets. **vswscanf_s** ne gère pas les caractères hexadécimaux ou « zone de compatibilité » Unicode à pleine chasse. Dans le cas contraire, **vswscanf_s** et **vsscanf_s** se comportent de la même façon.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -90,7 +90,7 @@ L’argument *format* contrôle l’interprétation des champs d’entrée et a 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstscanf_s**|**vsscanf_s**|**vsscanf_s**|**vswscanf_s**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -157,5 +157,5 @@ Real:     = 15.000000
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vsscanf, vswscanf](vsscanf-vswscanf.md)<br/>

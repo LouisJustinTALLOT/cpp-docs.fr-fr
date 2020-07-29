@@ -1,43 +1,43 @@
 ---
 title: for, instruction (C++)
-description: Référence à la standard C POUR l’énoncé dans Microsoft Visual Studio C.
+description: Référence à l’instruction C++ standard for dans Microsoft Visual Studio C++.
 f1_keywords:
 - for_cpp
 ms.date: 04/14/2020
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: 92f7ae4b1f2fbaaf710cd5a8739b78cb98a0accb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16486fd58a9b3fec750ebef6ec6647f9d92bca3b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375385"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231180"
 ---
 # <a name="for-statement-c"></a>for, instruction (C++)
 
-Exécute une instruction à plusieurs reprises jusqu'à ce que la condition soit false. Pour plus d’informations sur la plage pour l’instruction, voir [Range-based for Statement (CMD)](../cpp/range-based-for-statement-cpp.md).
+Exécute une instruction à plusieurs reprises jusqu'à ce que la condition soit false. Pour plus d’informations sur l’instruction for basée sur une plage, consultez [instruction for basée sur une plage (C++)](../cpp/range-based-for-statement-cpp.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **`for (`***init-expression* **`;`** *cond-expression* **`;`** *boucle-expression***`)`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;_Déclaration_**`;`**
+> **`for (`***init-expression* **`;`** *cond-expression* **`;`** *loop-expression***`)`**\
+> &nbsp;&nbsp;&nbsp;&nbsp;_gestion_**`;`**
 
 ## <a name="remarks"></a>Notes
 
-Utilisez l’énoncé **pour** construire des boucles qui doivent exécuter un nombre précis de fois.
+Utilisez l' **`for`** instruction pour construire des boucles qui doivent s’exécuter un nombre de fois spécifié.
 
-**L’énoncé de l’instruction** se compose de trois pièces facultatives, comme indiqué dans le tableau suivant.
+L' **`for`** instruction se compose de trois parties facultatives, comme indiqué dans le tableau suivant.
 
 ### <a name="for-loop-elements"></a>Éléments de boucle For
 
 |Nom de la syntaxe|Moment de l'exécution|Description|
 |-----------------|-------------------|-----------------|
-|`init-expression`|Avant tout autre élément de `init-expression` la **déclaration pour,** n’est exécuté qu’une seule fois. Le contrôle passe alors à `cond-expression`.|Souvent employé pour initialiser des index de boucle. Elle peut contenir des expressions ou des déclarations.|
+|`init-expression`|Avant tout autre élément de l' **`for`** instruction, `init-expression` n’est exécuté qu’une seule fois. Le contrôle passe alors à `cond-expression`.|Souvent employé pour initialiser des index de boucle. Elle peut contenir des expressions ou des déclarations.|
 |`cond-expression`|Avant l'exécution de chaque itération de `statement`, y compris la première itération. `statement` est exécuté uniquement si `cond-expression` a la valeur true (valeur différente de zéro).|Expression qui correspond à un type intégral ou à un type de classe avec une conversion non ambiguë en type intégral. Normalement utilisée pour déterminer les critères d'arrêts de boucles.|
 |`loop-expression`|À la fin de chaque itération de `statement`. `loop-expression` est évalué après l'exécution de `cond-expression`.|Normalement utilisée pour incrémenter les index de boucle.|
 
-Les exemples suivants montrent **for** différentes façons d’utiliser l’instruction.
+Les exemples suivants illustrent différentes façons d’utiliser l' **`for`** instruction.
 
 ```cpp
 #include <iostream>
@@ -99,11 +99,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-Une **boucle pour** se termine quand une [pause,](../cpp/break-statement-cpp.md) [retour](../cpp/return-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md) `statement` (à une déclaration étiquetée en dehors de la boucle **pour)** à l’intérieur est exécuté. Une [instruction continue](../cpp/continue-statement-cpp.md) dans une boucle **pour** ne met fin qu’à l’itération actuelle.
+Une **`for`** boucle se termine lorsqu’une instruction [break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md) (vers une instruction étiquetée à l’extérieur de la **`for`** boucle) `statement` est exécutée. Une instruction [continue](../cpp/continue-statement-cpp.md) dans une **`for`** boucle ne termine que l’itération en cours.
 
-Si `cond-expression` elle est omise, `true`elle est considérée, et la boucle **ne** se terminera `statement`pas sans **pause,** **retour,** ou **goto** à l’intérieur .
+Si `cond-expression` est omis, il est pris **`true`** en compte et la **`for`** boucle ne se termine pas sans **`break`** , **`return`** ou **`goto`** dans `statement` .
 
-Bien que les trois champs de **l’instruction pour** sont normalement utilisés pour l’initialisation, les tests de terminaison, et l’augmentation, ils ne sont pas limités à ces utilisations. Par exemple, le code suivant affiche les nombres 0 à 4. Dans ce cas, `statement` est l'instruction null :
+Bien que les trois champs de l' **`for`** instruction soient normalement utilisés pour l’initialisation, le test de fin et l’incrémentation, ils ne sont pas limités à ces utilisations. Par exemple, le code suivant affiche les nombres 0 à 4. Dans ce cas, `statement` est l'instruction null :
 
 ```cpp
 #include <iostream>
@@ -120,7 +120,7 @@ int main()
 
 ## <a name="for-loops-and-the-c-standard"></a>Boucles for et norme C++
 
-La norme Cmd indique qu’une variable déclarée en **boucle** doit sortir de portée après **la** fin de la boucle. Par exemple :
+La norme C++ indique qu’une variable déclarée dans une **`for`** boucle doit sortir de la portée après la fin de la **`for`** boucle. Par exemple :
 
 ```cpp
 for (int i = 0 ; i < 5 ; i++) {
@@ -129,11 +129,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope
 ```
 
-Par défaut, sous [/Ze](../build/reference/za-ze-disable-language-extensions.md), une variable déclarée en **boucle** reste dans **la** portée jusqu’à ce que la portée d’enceinte de la boucle se termine.
+Par défaut, sous [/Ze](../build/reference/za-ze-disable-language-extensions.md), une variable déclarée dans une **`for`** boucle reste dans la portée jusqu’à la fin de la **`for`** portée englobante de la boucle.
 
-[/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) permet un comportement standard des variables déclarées `/Za`pour les boucles sans avoir besoin de spécifier .
+[/Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) active le comportement standard des variables déclarées dans les boucles for sans avoir à spécifier `/Za` .
 
-Il est également possible d’utiliser les différences **for** de portée de la `/Ze` boucle pour redéclarer les variables ci-dessous comme suit:
+Il est également possible d’utiliser les différences de portée de la **`for`** boucle pour redéclarer les variables sous `/Ze` comme suit :
 
 ```cpp
 // for_statement5.cpp
@@ -145,12 +145,12 @@ int main(){
 }
 ```
 
-Ce comportement imite plus étroitement le comportement standard d’une variable déclarée dans une boucle **pour,** qui nécessite des variables déclarées dans une boucle **pour** sortir de la portée après la boucle est faite. Lorsqu’une variable est déclarée en **boucle,** le compilateur la promeut à l’interne à une variable locale dans **la** portée d’enceinte de la boucle. Il est promu même s’il ya déjà une variable locale avec le même nom.
+Ce comportement reproduit plus fidèlement le comportement standard d’une variable déclarée dans une **`for`** boucle, ce qui nécessite que les variables déclarées dans une **`for`** boucle soient hors de portée une fois la boucle terminée. Lorsqu’une variable est déclarée dans une **`for`** boucle, le compilateur la promeut en interne vers une variable locale dans la **`for`** portée englobante de la boucle. Elle est promue même s’il existe déjà une variable locale portant le même nom.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Instructions d'itération](../cpp/iteration-statements-cpp.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[tandis que l’énoncé (C)](../cpp/while-statement-cpp.md)<br/>
-[déclaration de faire-while (C)](../cpp/do-while-statement-cpp.md)<br/>
+[while, instruction (C++)](../cpp/while-statement-cpp.md)<br/>
+[do-while, instruction (C++)](../cpp/do-while-statement-cpp.md)<br/>
 [Basé sur une plage, instruction (C++)](../cpp/range-based-for-statement-cpp.md)

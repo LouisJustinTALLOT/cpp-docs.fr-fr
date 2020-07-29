@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: 03f0d0d04ad8ef2b052b9303d15437c53369a003
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c827f811813091abc62d07f12ac387bc2a0a0cc5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177623"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231141"
 ---
 # <a name="primary-expressions"></a>Expressions primaires
 
@@ -28,9 +28,9 @@ name
 
 Un *littéral* est une expression primaire constante. Son type dépend de la forme de sa spécification. Pour obtenir des informations complètes sur la spécification des littéraux, consultez [littéraux](../cpp/numeric-boolean-and-pointer-literals-cpp.md) .
 
-Le mot clé **This** est un pointeur vers un objet de classe. Il est disponible dans les fonctions membres non statiques et pointe vers l'instance de la classe pour laquelle la fonction est appelée. Le mot clé **This** ne peut pas être utilisé en dehors du corps d’une fonction membre de classe.
+Le **`this`** mot clé est un pointeur vers un objet de classe. Il est disponible dans les fonctions membres non statiques et pointe vers l'instance de la classe pour laquelle la fonction est appelée. Le **`this`** mot clé ne peut pas être utilisé en dehors du corps d’une fonction membre de classe.
 
-Le type du pointeur **This** est `type` **\*const** (où `type` est le nom de la classe) dans les fonctions qui ne modifient pas spécifiquement le pointeur **This** . L’exemple suivant montre des déclarations de fonctions membres et les **types de :**
+Le type du **`this`** pointeur est `type` ** \* const** (où `type` est le nom de la classe) dans les fonctions qui ne modifient pas spécifiquement le **`this`** pointeur. L’exemple suivant montre des déclarations de fonctions membres et les types de **`this`** :
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-Pour plus d’informations sur la modification du type du pointeur **This** , consultez [ce pointeur](this-pointer.md) .
+Pour plus d’informations sur la modification du type du pointeur, consultez [ce pointeur](this-pointer.md) **`this`** .
 
 L’opérateur résolution-portée (`::`) suivi d’un nom constitue une expression primaire.  Ces noms doivent être des noms au niveau de la portée globale, pas des noms de membres.  Le type de cette expression est déterminé par la déclaration du nom. Il s'agit d'une l-value (autrement dit, il peut apparaître dans la partie gauche d'une expression opérateur d'assignation) si le nom de déclaration est une l-value. L’opérateur résolution-portée permet de faire référence à un nom global, même si ce nom est masqué dans la portée actuelle. Consultez [scope](../cpp/scope-visual-cpp.md) pour obtenir un exemple d’utilisation de l’opérateur de résolution de portée.
 
