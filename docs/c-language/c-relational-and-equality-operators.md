@@ -8,25 +8,25 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 9ae5a31b5f4b81876d2fe518635a9766d2b5323c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400532"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227944"
 ---
 # <a name="c-relational-and-equality-operators"></a>Opérateurs relationnels et d'égalité C
 
-Les opérateurs binaires relationnels et d’égalité comparent leur premier opérande à leur second opérande pour tester la validité de la relation spécifiée. Le résultat d'une expression relationnelle est 1 si la relation testée a la valeur true et 0 si elle a la valeur false. Le type du résultat est `int`.
+Les opérateurs binaires relationnels et d’égalité comparent leur premier opérande à leur second opérande pour tester la validité de la relation spécifiée. Le résultat d'une expression relationnelle est 1 si la relation testée a la valeur true et 0 si elle a la valeur false. Le type du résultat est **`int`** .
 
 **Syntaxe**
 
 *Relational-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-* **&lt;** expression *Shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-* **>** expression *Shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-* ** &lt; ** expression *Shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-* **>=** expression *Shift-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-expression* **&lt;** *Shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-expression* **>** *Shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-expression* **&lt;=** *Shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-expression* **>=** *Shift-expression*
 
 *equality-expression* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
@@ -48,13 +48,13 @@ Les quatre premiers opérateurs dans la liste ci-dessus ont une priorité plus �
 
 Les opérandes peuvent être de type intégral, flottant ou pointeur. Les types d'opérande peuvent être différents. Les opérateurs relationnels exécutent les conversions arithmétiques habituelles sur les opérandes de type intégral et flottant. En outre, vous pouvez utiliser les combinaisons suivantes des types d'opérande avec les opérateurs relationnels et d'égalité :
 
-- Les deux opérandes de tout opérateur relationnel ou d'égalité peuvent être des pointeurs vers le même type. Pour les opérateurs d'égalité (`==`) et d'inégalité (`!=`), le résultat de la comparaison indique si les deux pointeurs pointent vers le même emplacement de mémoire. Pour les autres opérateurs relationnels (**\<**, **>**, **\<**= et **>**=), le résultat de la comparaison indique la position relative des deux adresses mémoire des objets vers lesquels pointe. Les opérateurs relationnels comparent uniquement les décalages.
+- Les deux opérandes de tout opérateur relationnel ou d'égalité peuvent être des pointeurs vers le même type. Pour les opérateurs d'égalité (`==`) et d'inégalité (`!=`), le résultat de la comparaison indique si les deux pointeurs pointent vers le même emplacement de mémoire. Pour les autres opérateurs relationnels ( **\<**, **>** , **\<**=, and **>** =), le résultat de la comparaison indique la position relative des deux adresses mémoire des objets vers lesquels pointe. Les opérateurs relationnels comparent uniquement les décalages.
 
    La comparaison de pointeur est définie uniquement pour les parties du même objet. Si les pointeurs font référence aux membres d'un tableau, la comparaison est équivalente à la comparaison des indices correspondants. L'adresse du premier élément du tableau est « inférieure à » l'adresse du dernier élément. Dans le cas de structures, les pointeurs vers des membres de structures déclarés ultérieurement sont « supérieurs à » aux pointeurs vers des membres déclarés précédemment dans la structure. Les pointeurs vers des membres de la même union sont égaux.
 
 - Une valeur de pointeur peut être comparée à la valeur de constante 0 pour l'égalité (`==`) ou l'inégalité (`!=`). Un pointeur avec une valeur de 0 est appelé pointeur « Null » ; autrement dit, il ne pointe pas vers un emplacement de mémoire valide.
 
-- Les opérateurs d'égalité suivent les mêmes règles que les opérateurs relationnels, mais offrent des possibilités supplémentaires : un pointeur peut être comparé à une expression intégrale constante ayant pour valeur 0, ou à un pointeur vers `void`. Si deux pointeurs sont tous deux des pointeurs Null, ils sont considérés comme égaux. Les opérateurs d'égalité comparent à la fois le segment et le décalage.
+- Les opérateurs d’égalité suivent les mêmes règles que les opérateurs relationnels, mais autorisent des possibilités supplémentaires : un pointeur peut être comparé à une expression intégrale constante avec la valeur 0, ou à un pointeur vers **`void`** . Si deux pointeurs sont tous deux des pointeurs Null, ils sont considérés comme égaux. Les opérateurs d'égalité comparent à la fois le segment et le décalage.
 
 ## <a name="examples"></a>Exemples
 
@@ -88,9 +88,9 @@ enum color { red, white, green } col;
    .
 ```
 
-Ces instructions déclarent une variable d'énumération nommée `col` avec la balise `color`. À tout moment, la variable peut contenir une valeur entière 0, 1 ou 2, qui représente un des éléments de l'ensemble d'énumération `color` : le rouge, le blanc ou le vert, respectivement. Si `col` contient 0 lorsque l'instruction **if** est exécutée, toutes les instructions dépendant de **if** sont exécutées.
+Ces instructions déclarent une variable d'énumération nommée `col` avec la balise `color`. À tout moment, la variable peut contenir une valeur entière 0, 1 ou 2, qui représente un des éléments de l'ensemble d'énumération `color` : le rouge, le blanc ou le vert, respectivement. Si `col` contient 0 lorsque l' **`if`** instruction est exécutée, toutes les instructions dépendant de l' **`if`** seront exécutées.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Opérateurs relationnels : \<, >, \<= et >=](../cpp/relational-operators-equal-and-equal.md)<br/>
+[Opérateurs relationnels : \<, > ,\<=, and >=](../cpp/relational-operators-equal-and-equal.md)<br/>
 [Opérateurs d’égalité : = = et ! =](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

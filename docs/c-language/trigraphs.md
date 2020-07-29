@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ed8849656ac57f4774825294aba7bb41a050eee
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227749"
 ---
 # <a name="trigraphs"></a>Trigraphes
 
@@ -28,7 +28,7 @@ Le jeu de caractères source des programmes sources C est contenu dans le jeu d
 
 C++17 supprime les trigraphes du langage. Bien que cela soit déconseillé, les implémentations peuvent continuer à prendre en charge des trigraphes dans le cadre du mappage défini par l’implémentation entre le fichier source physique et le *jeu de caractères source de base*. Jusqu’à C++14, les trigraphes sont pris en charge comme dans C.
 
-Visual C++ prend toujours en charge la substitution de trigraphes, mais celle-ci est désactivée par défaut. Pour plus d’informations sur la façon d’activer la substitution de trigraphes, consultez [/Zc:trigraphs (substitution de trigraphes)](../build/reference/zc-trigraphs-trigraphs-substitution.md).
+Visual C++ prend toujours en charge la substitution de trigraphes, mais celle-ci est désactivée par défaut. Pour plus d’informations sur l’activation de la substitution de trigraphes, consultez [ `/Zc:trigraphs` (substitution de trigraphes)](../build/reference/zc-trigraphs-trigraphs-substitution.md).
 
 Le tableau suivant indique les neuf séquences de trigraphe. Dans un fichier source, toutes les occurrences des caractères de ponctuation de la première colonne sont remplacées par le caractère correspondant de la deuxième colonne.
 
@@ -36,19 +36,19 @@ Le tableau suivant indique les neuf séquences de trigraphe. Dans un fichier sou
 
 | Trigraphe | Caractère de ponctuation |
 |----------|-----------------------|
-| ??= | # |
-| ??( | \[ |
-| ??/ | \\ |
-| ??) | ] |
-| ??' | ^ |
-| ??\< | { |
-| ??! | &#124; |
-| ??> | } |
-| ??- | ~ |
+| `??=` | `#` |
+| `??(` | `[` |
+| `??/` | `\` |
+| `??)` | `]` |
+| `??'` | `^` |
+| `??<` | `{` |
+| `??!` | `|` |
+| `??>` | `}` |
+| `??-` | `~` |
 
 Un trigraphe est toujours traité comme un caractère source unique. La traduction des trigraphes a lieu dans la première [phase de traduction](../preprocessor/phases-of-translation.md), avant la reconnaissance des caractères d’échappement dans les littéraux de chaîne et des constantes de caractère. Seuls les neuf trigraphes indiqués dans le tableau ci-dessus sont identifiés. Toutes les autres séquences de caractères restent inchangées.
 
-La séquence d’échappement de caractère, ** \\?**, empêche la mauvaise interprétation des séquences de caractères de type trigraphe. (Pour plus d’informations sur les séquences d’échappement, consultez [séquences d’échappement](../c-language/escape-sequences.md).) Par exemple, si vous essayez d’imprimer la chaîne `What??!` avec cette `printf` instruction
+La séquence d’échappement de caractère, **`\?`** , empêche la mauvaise interprétation des séquences de caractères de type trigraphe. (Pour plus d’informations sur les séquences d’échappement, consultez [séquences d’échappement](../c-language/escape-sequences.md).) Par exemple, si vous essayez d’imprimer la chaîne `What??!` avec cette `printf` instruction
 
 ```C
 printf( "What??!\n" );
@@ -64,5 +64,5 @@ Dans cette instruction `printf`, un caractère d'échappement barre oblique inve
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Zc:, trigrammes (substitution de trigrammes) (C++)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
-[identificateurs C](../c-language/c-identifiers.md)
+[`/Zc:trigraphs`(Substitution de trigraphes)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
+[Identificateurs C](../c-language/c-identifiers.md)

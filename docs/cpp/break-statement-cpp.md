@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 23d31e1456106d5f82c4a13079c72c231b8477bd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30ca602ecc65099adff7300f730c500a31fe0ed5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190480"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227606"
 ---
 # <a name="break-statement-c"></a>break, instruction (C++)
 
-L’instruction **break** termine l’exécution de la boucle englobante ou de l’instruction conditionnelle la plus proche dans laquelle elle apparaît. Le contrôle est passé à l'instruction qui suit l'instruction terminée, le cas échéant.
+L' **`break`** instruction termine l’exécution de la boucle englobante ou de l’instruction conditionnelle la plus proche dans laquelle elle apparaît. Le contrôle est passé à l'instruction qui suit l'instruction terminée, le cas échéant.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,17 +25,17 @@ break;
 
 ## <a name="remarks"></a>Notes
 
-L’instruction **break** est utilisée avec l’instruction [de commutateur](../cpp/switch-statement-cpp.md) conditionnel et avec les instructions [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)et [while](../cpp/while-statement-cpp.md) .
+L' **`break`** instruction est utilisée avec l’instruction de [commutateur](../cpp/switch-statement-cpp.md) conditionnel et avec les instructions [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)et [while](../cpp/while-statement-cpp.md) .
 
-Dans une instruction **switch** , l’instruction **break** fait en sorte que le programme exécute l’instruction suivante à l’extérieur de l’instruction **switch** . Sans instruction **break** , chaque instruction de l’étiquette **case** correspondante jusqu’à la fin de l’instruction **switch** , y compris la clause **default** , est exécutée.
+Dans une **`switch`** instruction, l' **`break`** instruction fait en sorte que le programme exécute l’instruction suivante à l’extérieur de l' **`switch`** instruction. Sans **`break`** instruction, chaque instruction de l' **`case`** étiquette mise en correspondance à la fin de l' **`switch`** instruction, y compris la **`default`** clause, est exécutée.
 
-Dans les boucles, l’instruction **break** termine l’exécution de l’instruction **do**, **for**ou **while** la plus proche. Le contrôle est passé à l'instruction qui suit l'instruction terminée, le cas échéant.
+Dans les boucles, l' **`break`** instruction termine l’exécution de l' **`do`** instruction, ou englobante la plus proche **`for`** **`while`** . Le contrôle est passé à l'instruction qui suit l'instruction terminée, le cas échéant.
 
-Dans les instructions imbriquées, l’instruction **break** met fin uniquement **à**l’instruction **do**, for, **switch**ou **while** qui l’englobe immédiatement. Vous pouvez utiliser une instruction **Return** ou **goto** pour transférer le contrôle à partir de structures plus profondément imbriquées.
+Dans les instructions imbriquées, l' **`break`** instruction met fin **`do`** uniquement **`for`** à l’instruction,, **`switch`** ou **`while`** qui l’englobe immédiatement. Vous pouvez utiliser une **`return`** **`goto`** instruction ou pour transférer le contrôle à partir de structures plus profondément imbriquées.
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment utiliser l’instruction **break** dans une boucle **for** .
+Le code suivant montre comment utiliser l' **`break`** instruction dans une **`for`** boucle.
 
 ```cpp
 #include <iostream>
@@ -71,7 +71,7 @@ In each case:
 3
 ```
 
-Le code suivant montre comment utiliser **break** dans une boucle **while** et une boucle **do** .
+Le code suivant illustre l’utilisation **`break`** de dans une boucle **`while`** et une **`do`** boucle.
 
 ```cpp
 #include <iostream>
@@ -104,7 +104,7 @@ In each case:
 0123
 ```
 
-Le code suivant montre comment utiliser **break** dans une instruction switch. Vous devez utiliser **break** dans tous les cas si vous souhaitez gérer chaque cas séparément. Si vous n’utilisez pas **break**, l’exécution du code passe au cas suivant.
+Le code suivant montre comment utiliser **`break`** dans une instruction switch. Vous devez utiliser **`break`** dans tous les cas si vous souhaitez gérer chaque cas séparément. Si vous n’utilisez pas **`break`** , l’exécution du code passe au cas suivant.
 
 ```cpp
 #include <iostream>
@@ -155,4 +155,4 @@ int main() {
 
 [Instructions de saut](../cpp/jump-statements-cpp.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[Instruction continue](../cpp/continue-statement-cpp.md)
+[continue (instruction)](../cpp/continue-statement-cpp.md)

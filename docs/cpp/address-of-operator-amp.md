@@ -1,5 +1,5 @@
 ---
-title: 'Opérateur d’adresse : &amp;'
+title: Opérateur d’adresse :&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-ms.openlocfilehash: 4c9ae9aedaec202c8798ab454ee5df1a68278a6d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 836802684e24c721f97dc4c5558d87b9a5e69bc8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181601"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227684"
 ---
-# <a name="address-of-operator-amp"></a>Opérateur d’adresse : &amp;
+# <a name="address-of-operator-amp"></a>Opérateur d’adresse :&amp;
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ ms.locfileid: "80181601"
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur d’adresse unaire ( **&** ) prend l’adresse de son opérande. L’opérande de l’opérateur d’adresse peut être un désignateur de fonction ou une l-value qui désigne un objet qui n’est pas un champ de bits.
+L’opérateur unaire Address-of ( **&** ) prend l’adresse de son opérande. L’opérande de l’opérateur d’adresse peut être un désignateur de fonction ou une l-value qui désigne un objet qui n’est pas un champ de bits.
 
 L'opérateur d'adresse peut être appliqué uniquement aux variables dotées de types fondamentaux, de structure, de classe ou d'union qui sont déclarées au niveau de la portée du fichier, ou aux références indicées de tableau. Dans ces expressions, une expression constante qui n'inclut pas l'opérateur d'adresse peut être ajoutée ou soustraite dans l'expression d'adresse.
 
-Lorsqu’il est appliqué à des fonctions ou des l-values, le résultat de l’expression est un type pointeur (une r-value) dérivé du type de l’opérande. Par exemple, si l’opérande est de type **char**, le résultat de l’expression est de type pointeur vers **char**. L’opérateur d’adresse, appliqué aux objets **const** ou **volatile** , prend la valeur `const type *` ou `volatile type *`, où **type** est le type de l’objet d’origine.
+Lorsqu’il est appliqué à des fonctions ou des l-values, le résultat de l’expression est un type pointeur (une r-value) dérivé du type de l’opérande. Par exemple, si l’opérande est de type **`char`** , le résultat de l’expression est de type pointeur vers **`char`** . L’opérateur d’adresse, appliqué aux **`const`** objets ou **`volatile`** , a la valeur `const type *` ou `volatile type *` , où **type** est le type de l’objet d’origine.
 
 Lorsque l’opérateur address-of est appliqué à un nom qualifié, le résultat varie selon que le *nom qualifié* spécifie ou non un membre statique. Si oui, le résultat est un pointeur vers le type spécifié dans la déclaration du membre. Si le membre n’est pas statique, le résultat est un pointeur vers le *nom* de membre de la classe indiqué par *Qualified-Class-Name*. (Pour plus d’informations sur *Qualified-Class-Name*, consultez [expressions primaires](../cpp/primary-expressions.md) .) Le fragment de code suivant montre comment le résultat est différent, selon que le membre est statique ou non :
 

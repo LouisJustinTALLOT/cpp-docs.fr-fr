@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 495dc3cf77df79336af364eb80ea7edf17b54400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227866"
 ---
 # <a name="function-calls"></a>Appels de fonction
 
@@ -20,7 +20,7 @@ Un *appel de fonction* est une expression qui passe le contrôle et des argument
 
 *expression* (*expression-List*<sub>OPT</sub>)
 
-où *expression* est un nom de fonction ou correspond à une adresse de fonction et où *expression-list* est une liste d'expressions (séparées par des virgules). Les valeurs de ces dernières expressions sont les arguments passés à la fonction. Si la fonction ne retourne pas de valeur, vous la déclarez comme une fonction qui retourne `void`.
+où *expression* est un nom de fonction ou correspond à une adresse de fonction et où *expression-list* est une liste d'expressions (séparées par des virgules). Les valeurs de ces dernières expressions sont les arguments passés à la fonction. Si la fonction ne retourne pas de valeur, vous la déclarez comme étant une fonction qui retourne **`void`** .
 
 Si une déclaration existe avant l'appel de fonction, mais qu'aucune information n'est donnée concernant les paramètres, tous les arguments non déclarés subissent simplement les conversions arithmétiques habituelles.
 
@@ -29,9 +29,9 @@ Si une déclaration existe avant l'appel de fonction, mais qu'aucune information
 
 La seule exigence à respecter dans un appel de fonction est que l’expression avant les parenthèses doit correspondre à une adresse de fonction. Cela signifie qu'une fonction peut être appelée via toute expression de pointeur fonction.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
-L'exemple ci-dessous illustre des appels de fonction à partir d'une instruction `switch` :
+Cet exemple illustre les appels de fonction appelés à partir d’une **`switch`** instruction :
 
 ```
 int main()
@@ -81,9 +81,9 @@ work( count, lift );
 
 passe une variable entière, `count`, et l'adresse de la fonction `lift` à la fonction `work`. Notez que l'adresse de fonction est passée simplement en fournissant l'identificateur de fonction, étant donné qu'un identificateur de fonction correspond à une expression de pointeur. Pour utiliser un identificateur de fonction de cette façon, la fonction doit être déclarée ou définie avant que l'identificateur soit utilisé ; sinon, l'identificateur n'est pas reconnu. Dans ce cas, un prototype pour `work` est fourni au début de la fonction `main`.
 
-Le paramètre `function` figurant dans `work` est déclaré comme étant un pointeur désignant une fonction qui accepte un seul argument `int` et retourne une valeur **long**. Les parenthèses autour du nom du paramètre sont requises. Sans elles, la déclaration spécifierait une fonction retournant un pointeur vers une valeur **long**.
+Le paramètre `function` dans `work` est déclaré comme étant un pointeur vers une fonction qui prend un **`int`** argument et retourne une **`long`** valeur. Les parenthèses autour du nom du paramètre sont requises ; sans elles, la déclaration spécifierait une fonction retournant un pointeur vers une **`long`** valeur.
 
-La fonction `work` appelle la fonction sélectionnée à partir de la boucle **for** à l'aide de l'appel de fonction suivant :
+La fonction `work` appelle la fonction sélectionnée à l’intérieur de la boucle à l' **`for`** aide de l’appel de fonction suivant :
 
 ```
 ( *function )( i );

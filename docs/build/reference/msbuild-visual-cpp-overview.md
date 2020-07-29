@@ -4,12 +4,12 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 010fa244ed77ea782fa76be959c58ff1e1b254a9
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166717"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190492"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Composants internes MSBuild pour les projets C++
 
@@ -23,47 +23,47 @@ Par défaut, les principaux fichiers de support Visual Studio sont situés dans 
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*version*\\VCTargets\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *version* \\ VCTargets\\
 
   Contient les principaux fichiers cibles (.targets) et fichiers de propriétés (.props) qui sont utilisés par les cibles. Par défaut, la macro $(VCTargetsPath) référence ce répertoire. L’espace réservé *version* fait référence à la version de Visual Studio : V160 pour visual studio 2019, V150 pour visual studio 2017.
 
-- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*version*\\VCTargets\\plateformes\\*plate-forme*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *version* \\ VCTargets \\ \\ *platform* plateformes\\
 
   Contient les fichiers cibles et de propriétés spécifiques à la plateforme qui remplacent les cibles et propriétés dans le répertoire parent. Ce répertoire contient également une DLL qui définit les tâches qui sont utilisées par les cibles dans ce répertoire. L’espace réservé *plateforme* représente le sous-répertoire ARM, Win32 ou x64.
 
-- % VSINSTALLDIR% MSBuild\\Microsoft\\VC\\*version*\\VCTargets\\plateformes\\*plateforme*\\PlatformToolsets\\*ensemble d’outils*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *version* \\ VCTargets plateformes \\ \\ *plateforme* \\ PlatformToolsets \\ *ensemble d’outils*\\
 
   Contient les répertoires qui permettent de générer des applications C++ en utilisant l’*ensemble d’outils* spécifié. L’espace réservé *plateforme* représente le sous-répertoire ARM, Win32 ou x64. L’espace réservé d' *ensemble d’outils* représente le sous-répertoire de l’ensemble d’outils.
 
-### <a name="visual-studio-2017"></a>Visual Studio 2017
+### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\
+- % VSINSTALLDIR% Common7 \\ \\ VC IDE \\ VCTargets\\
 
   Contient les principaux fichiers cibles (.targets) et fichiers de propriétés (.props) qui sont utilisés par les cibles. Par défaut, la macro $(VCTargetsPath) référence ce répertoire.
 
-- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\plateformes\\*plate-forme*\\
+- Plateforme plateformes \\ \\ VC VCTargets IDE \\ \\ \\ *platform* % VSInstallDir% Common7\\
 
   Contient les fichiers cibles et de propriétés spécifiques à la plateforme qui remplacent les cibles et propriétés dans le répertoire parent. Ce répertoire contient également une DLL qui définit les tâches qui sont utilisées par les cibles dans ce répertoire. L’espace réservé *plateforme* représente le sous-répertoire ARM, Win32 ou x64.
 
-- % VSINSTALLDIR% Common7\\IDE\\VC\\VCTargets\\plateformes\\*plateforme*\\PlatformToolsets\\de l' *ensemble d’outils*\\
+- % VSINSTALLDIR% Common7 \\ IDE \\ VC \\ VCTargets \\ plateforme plateformes \\ *platform* \\ PlatformToolsets \\ *ensemble d’outils*\\
 
   Contient les répertoires qui permettent de générer des applications C++ en utilisant l’*ensemble d’outils* spécifié. L’espace réservé *plateforme* représente le sous-répertoire ARM, Win32 ou x64. L’espace réservé d' *ensemble d’outils* représente le sous-répertoire de l’ensemble d’outils.
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 et versions antérieures
 
-- *lecteur*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp (x86)\\v 4.0\\*version*\\
+- *lecteur*: \\ Program Files *(x86)* \\ MSBuild \\ Microsoft. cpp (x86) \\ v 4.0 \\ *version*\\
 
   Contient les principaux fichiers cibles (.targets) et fichiers de propriétés (.props) qui sont utilisés par les cibles. Par défaut, la macro $(VCTargetsPath) référence ce répertoire.
 
-- *lecteur*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp\\v 4.0\\*version*\\plateformes\\*plateforme*\\
+- *lecteur*: \\ Program Files *(x86)* \\ MSBuild \\ Microsoft. cpp \\ v 4.0 \\ *version* \\ \\ *plateforme* plateformes\\
 
   Contient les fichiers cibles et de propriétés spécifiques à la plateforme qui remplacent les cibles et propriétés dans le répertoire parent. Ce répertoire contient également une DLL qui définit les tâches qui sont utilisées par les cibles dans ce répertoire. L’espace réservé *plateforme* représente le sous-répertoire ARM, Win32 ou x64.
 
-- *lecteur*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp\\v 4.0\\*version*\\plateformes\\plateforme\\\\ *\\ de* la *plateforme*
+- *lecteur*: \\ Program Files *(x86)* \\ MSBuild \\ Microsoft. cpp \\ v 4.0 \\ *version* \\ plateforme plateformes \\ *platform* \\ \\ *ensemble d’outils* PlatformToolsets\\
 
   Contient les répertoires qui permettent de générer des applications C++ en utilisant l’*ensemble d’outils* spécifié. L’espace réservé de *version* est V110 pour visual studio 2012, V120 pour Visual Studio 2013 et V140 pour visual studio 2015. L’espace réservé *plateforme* représente le sous-répertoire ARM, Win32 ou x64. L’espace réservé d' *ensemble d’outils* représente le sous-répertoire de l’ensemble d’outils. Par exemple, il s’agit de V140 pour la création d’applications Windows à l’aide de l’ensemble d’outils Visual Studio 2015. Ou v120_xp pour générer Windows XP à l’aide de l’ensemble d’outils Visual Studio 2013.
 
-- *lecteur*:\\Program Files *(x86)* \\MSBuild\\Microsoft. Cpp\\v 4.0\\plateformes\\*plate-forme*\\*PlatformToolsets\\de* la plateforme\\
+- *lecteur*: \\ Program Files *(x86)* \\ MSBuild \\ Microsoft. cpp \\ v 4.0 \\ \\ *plateforme plate-forme* \\ PlatformToolsets \\ *ensemble d’outils*\\
 
   Les chemins d’accès qui permettent à la build de générer des applications Visual Studio 2008 ou Visual Studio 2010 n’incluent pas la *version*. Dans ces versions, l’espace réservé de la *plateforme* représente le sous-répertoire Itanium, Win32 ou x64. L’espace réservé *ensemble_outils* représente le sous-répertoire de l’ensemble d’outils v90 ou v100.
 
@@ -74,8 +74,8 @@ Les répertoires des fichiers de support contiennent des fichiers avec les exten
 | Extension | Description |
 | --------- | ----------- |
 | .targets | Contient des éléments XML `Target` qui spécifient les tâches qui sont exécutées par la cible. Peut également contenir des éléments `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup` et `Item` définis par l’utilisateur qui sont utilisés pour assigner des fichiers et des options de ligne de commande aux paramètres de tâche.<br /><br /> Pour plus d’informations, consultez [Target, élément (MSBuild)](/visualstudio/msbuild/target-element-msbuild). |
-| .props | Contient des éléments XML `Property Group` définis par l’utilisateur et `Property` qui spécifient des paramètres de fichier et des paramètres qui sont utilisés pendant une génération.<br /><br /> Peut également contenir des éléments XML `ItemDefinitionGroup` définis par l’utilisateur et `Item` qui spécifient des paramètres supplémentaires. Les éléments définis dans un groupe de définitions d’éléments sont similaires aux propriétés, mais ils ne sont pas accessibles à partir de la ligne de commande. Les fichiers projet Visual Studio utilisent fréquemment des éléments au lieu de propriétés pour représenter les paramètres.<br /><br /> Pour plus d’informations, consultez [ItemGroup, élément (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [ItemDefinitionGroup, élément (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)et [Item, élément (MSBuild)](/visualstudio/msbuild/item-element-msbuild). |
-| .xml | Contient des éléments XML qui déclarent et initialisent des éléments de l’interface utilisateur IDE. Par exemple, les feuilles de propriétés, les pages de propriétés, les contrôles TextBox et les contrôles ListBox.<br /><br /> Les fichiers .xml prennent directement en charge l’IDE, mais pas MSBuild. Toutefois, les valeurs des propriétés IDE sont assignées pour générer des propriétés et des éléments.<br /><br /> La plupart des fichiers .xml se trouvent dans un sous-répertoire spécifique aux paramètres régionaux. Par exemple, les fichiers de la région anglais (États-Unis) se trouvent dans $ (VCTargetsPath)\\1033\\. |
+| .props | Contient des éléments XML `Property` définis par l’utilisateur et `Property Group` qui spécifient des paramètres de fichier et des paramètres qui sont utilisés pendant une génération.<br /><br /> Peut également contenir des éléments XML `Item` définis par l’utilisateur et `ItemDefinitionGroup` qui spécifient des paramètres supplémentaires. Les éléments définis dans un groupe de définitions d’éléments sont similaires aux propriétés, mais ils ne sont pas accessibles à partir de la ligne de commande. Les fichiers projet Visual Studio utilisent fréquemment des éléments au lieu de propriétés pour représenter les paramètres.<br /><br /> Pour plus d’informations, consultez [ItemGroup, élément (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [ItemDefinitionGroup, élément (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)et [Item, élément (MSBuild)](/visualstudio/msbuild/item-element-msbuild). |
+| .xml | Contient des éléments XML qui déclarent et initialisent des éléments de l’interface utilisateur IDE. Par exemple, les feuilles de propriétés, les pages de propriétés, les contrôles TextBox et les contrôles ListBox.<br /><br /> Les fichiers .xml prennent directement en charge l’IDE, mais pas MSBuild. Toutefois, les valeurs des propriétés IDE sont assignées pour générer des propriétés et des éléments.<br /><br /> La plupart des fichiers .xml se trouvent dans un sous-répertoire spécifique aux paramètres régionaux. Par exemple, les fichiers de la région anglais (États-Unis) se trouvent dans $ (VCTargetsPath) \\ 1033 \\ . |
 
 ## <a name="user-targets-and-properties"></a>Cibles et propriétés utilisateur
 
@@ -99,13 +99,13 @@ Par exemple, affectez à la propriété `PreferredToolArchitecture` la valeur `x
 
 ### <a name="useenv-property"></a>Propriété UseEnv
 
-Par défaut, les paramètres spécifiques à la plateforme pour le projet actuel substituent les variables d’environnement PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION et PLATFORM. Affectez à la propriété `UseEnv` la **valeur true** pour garantir que les variables d’environnement ne sont pas remplacées.
+Par défaut, les paramètres spécifiques à la plateforme pour le projet actuel substituent les variables d’environnement PATH, INCLUDE, LIB, LIBPATH, CONFIGURATION et PLATFORM. Affectez à la propriété la valeur `UseEnv` **`true`** pour garantir que les variables d’environnement ne sont pas remplacées.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
 ### <a name="targets"></a>Cibles
 
-Il existe des centaines de cibles dans les fichiers de support Visual Studio. Toutefois, la plupart sont des cibles orientées système que l’utilisateur peut ignorer. La plupart des cibles système sont précédées d’un trait de soulignement (`_`) ou d’un nom commençant par « PrepareFor », « Compute », « before », « after », « pre » ou « poster ».
+Il existe des centaines de cibles dans les fichiers de support Visual Studio. Toutefois, la plupart sont des cibles orientées système que l’utilisateur peut ignorer. La plupart des cibles système sont précédées d’un trait de soulignement ( `_` ), d’un nom commençant par « PrepareFor », « Compute », « before », « after », « pre » ou « poster ».
 
 Le tableau suivant liste plusieurs cibles orientées utilisateur utiles.
 
@@ -129,15 +129,15 @@ Le tableau suivant liste plusieurs cibles orientées utilisateur utiles.
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [tâches MSBuild](/visualstudio/msbuild/msbuild-task-reference)\
-\ de la [tâche BSCMAKE](/visualstudio/msbuild/bscmake-task)
-\ de [tâche CL](/visualstudio/msbuild/cl-task)
-\ de la [tâche CPPClean,](/visualstudio/msbuild/cppclean-task)
-\ de la [tâche lib](/visualstudio/msbuild/lib-task)
-\ de [tâche de liaison](/visualstudio/msbuild/link-task)
-\ de [tâche MIDL](/visualstudio/msbuild/midl-task)
-\ de la [tâche MT](/visualstudio/msbuild/mt-task)
-\ de la [tâche RC](/visualstudio/msbuild/rc-task)
-\ de [tâche setenv](/visualstudio/msbuild/setenv-task)
-\ de la [tâche VCMessage,](/visualstudio/msbuild/vcmessage-task)
+[Référence des tâches MSBuild](/visualstudio/msbuild/msbuild-task-reference)\
+[BscMake, tâche](/visualstudio/msbuild/bscmake-task)\
+[CL (tâche)](/visualstudio/msbuild/cl-task)\
+[Tâche CPPClean,](/visualstudio/msbuild/cppclean-task)\
+[LIB, tâche](/visualstudio/msbuild/lib-task)\
+[Lier la tâche](/visualstudio/msbuild/link-task)\
+[MIDL, tâche](/visualstudio/msbuild/midl-task)\
+[MT, tâche](/visualstudio/msbuild/mt-task)\
+[RC, tâche](/visualstudio/msbuild/rc-task)\
+[SetEnv, tâche](/visualstudio/msbuild/setenv-task)\
+[Tâche VCMessage,](/visualstudio/msbuild/vcmessage-task)\
 [XDCMake, tâche](/visualstudio/msbuild/xdcmake-task)

@@ -9,43 +9,43 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 50e3a3f8c064b2a054f0018e87c4e8782a5dc363
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5c1edd4c5d31d9a0e8e5270d074d25b5dd129a0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618844"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87184245"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions : interception et suppression d'exceptions
 
-Les instructions et exemples suivants vous montrent comment intercepter et supprimer des exceptions. Pour plus d’informations sur les mots clés **try**, **catch**et **throw** , consultez [meilleures pratiques C++ modernes pour les exceptions et la gestion des erreurs](../cpp/errors-and-exception-handling-modern-cpp.md).
+Les instructions et exemples suivants vous montrent comment intercepter et supprimer des exceptions. Pour plus d’informations sur **`try`** les **`catch`** **`throw`** Mots clés, et, consultez [meilleures pratiques C++ modernes pour les exceptions et la gestion des erreurs](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 Vos gestionnaires d’exceptions doivent supprimer les objets d’exception qu’ils gèrent, car l’échec de la suppression de l’exception provoque une fuite de mémoire chaque fois que le code intercepte une exception.
 
-Votre bloc **catch** doit supprimer une exception dans les cas suivants :
+Votre **`catch`** bloc doit supprimer une exception dans les cas suivants :
 
-- Le bloc **catch** lève une nouvelle exception.
+- Le **`catch`** bloc lève une nouvelle exception.
 
    Bien entendu, vous ne devez pas supprimer l’exception si vous relevez la même exception :
 
    [!code-cpp[NVC_MFCExceptions#3](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- L’exécution retourne à partir du bloc **catch** .
+- L’exécution retourne à partir du **`catch`** bloc.
 
 > [!NOTE]
-> Lors de la suppression d’un `CException` , utilisez la `Delete` fonction membre pour supprimer l’exception. N’utilisez pas le mot clé **Delete** , car il peut échouer si l’exception n’est pas sur le tas.
+> Lors de la suppression d’un `CException` , utilisez la `Delete` fonction membre pour supprimer l’exception. N’utilisez pas le **`delete`** mot clé, car il peut échouer si l’exception n’est pas sur le tas.
 
 #### <a name="to-catch-and-delete-exceptions"></a>Pour intercepter et supprimer des exceptions
 
-1. Utilisez le mot clé **try** pour configurer un bloc **try** . Exécutez les instructions de programme qui peuvent lever une exception dans un bloc **try** .
+1. Utilisez le **`try`** mot clé pour configurer un **`try`** bloc. Exécutez les instructions de programme qui peuvent lever une exception dans un **`try`** bloc.
 
-   Utilisez le mot clé **catch** pour configurer un bloc **catch** . Placez le code de gestion des exceptions dans un bloc **catch** . Le code du bloc **catch** est exécuté uniquement si le code du bloc **try** lève une exception du type spécifié dans l’instruction **catch** .
+   Utilisez le **`catch`** mot clé pour configurer un **`catch`** bloc. Placez le code de gestion des exceptions dans un **`catch`** bloc. Le code dans le **`catch`** bloc est exécuté uniquement si le code du **`try`** bloc lève une exception du type spécifié dans l' **`catch`** instruction.
 
-   La structure suivante montre comment les blocs **try** et **catch** sont normalement organisés :
+   La structure suivante montre comment **`try`** les **`catch`** blocs et sont normalement organisés :
 
    [!code-cpp[NVC_MFCExceptions#4](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   Quand une exception est levée, le contrôle passe au premier bloc **catch** dont la déclaration d’exception correspond au type de l’exception. Vous pouvez gérer de manière sélective différents types d’exceptions avec des blocs **catch** séquentiels, comme indiqué ci-dessous :
+   Quand une exception est levée, le contrôle passe au premier **`catch`** bloc dont la déclaration d’exception correspond au type de l’exception. Vous pouvez gérer de manière sélective différents types d’exceptions avec des blocs séquentiels **`catch`** comme indiqué ci-dessous :
 
    [!code-cpp[NVC_MFCExceptions#5](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 

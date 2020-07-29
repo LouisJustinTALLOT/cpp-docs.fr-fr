@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: c2e372ebe93b9240ac6f489e8b1aefc1fbbded80
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5e1fe80f3bc1f581c6ea05c54409b1e76eacfce7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857149"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190219"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Attributs étendus de classe de stockage C
 
@@ -27,17 +27,17 @@ La syntaxe à attributs étendus utilisée pour la spécification des informatio
 ## <a name="syntax"></a>Syntaxe
 
 *storage-class-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-modifier-SEQ* **)**  / \* spécifique à Microsoft\*/
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-modifier-SEQ* **)**  / \* Spécifique à Microsoft\*/
 
-*Extended-decl-modifier-SEQ*:&nbsp; &nbsp; &nbsp; &nbsp; / \* spécifique à Microsoft\*/<br/>
+*Extended-decl-modifier-SEQ*: &nbsp; &nbsp; &nbsp; &nbsp; / \* spécifique à Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*Extended-decl-modifier*:&nbsp; &nbsp; &nbsp; &nbsp; / \* spécifique à Microsoft\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**nue**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
+*Extended-decl-modifier*: &nbsp; &nbsp; &nbsp; &nbsp; / \* spécifique à Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**
 
 Un espace blanc sépare les modificateurs de déclaration. Notez que *extended-decl-modifier-seq* peut être vide, auquel cas __declspec n'a aucun effet.
 

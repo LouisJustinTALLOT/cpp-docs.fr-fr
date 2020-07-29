@@ -1,5 +1,5 @@
 ---
-title: '/Guard : ehcont (activer les métadonnées de continuation EH)'
+title: /guard:ehcont (Activer les métadonnées de continuation EH)
 description: 'Guide de référence de l’option de compilateur Microsoft C++/Guard : ehcont.'
 ms.date: 06/03/2020
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: e8775b331440e932efb16148ee15acf1c740cd6e
-ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
+ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84425537"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190518"
 ---
-# <a name="guardehcont-enable-eh-continuation-metadata"></a>/Guard : ehcont (activer les métadonnées de continuation EH)
+# <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (Activer les métadonnées de continuation EH)
 
 Active la génération de métadonnées de continuation EH (EHCONT) par le compilateur.
 
@@ -33,7 +33,7 @@ La [technologie d’application du transit de contrôle (cet)](https://software.
 
 Lorsque des piles cachées sont disponibles pour empêcher les attaques de ROP, les attaquants se déplacent pour utiliser d’autres techniques d’exploitation. Une technique qu’ils peuvent utiliser est de corrompre la valeur du pointeur d’instruction à l’intérieur de la structure du [contexte](/windows/win32/api/winnt/ns-winnt-context) . Cette structure est passée dans les appels système qui redirigent l’exécution d’un thread, tel que `NtContinue` , [`RtlRestoreContext`](/windows/win32/api/winnt/nf-winnt-rtlrestorecontext) et [`SetThreadContext`](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadcontext) . La `CONTEXT` structure est stockée en mémoire. Le fait d’endommager le pointeur d’instruction qu’il contient peut entraîner le transfert de l’exécution par les appels système vers une adresse contrôlée par un attaquant. Actuellement, `NTContinue` peut être appelé avec n’importe quel point de continuation. C’est pourquoi il est essentiel de valider le pointeur d’instruction lorsque les piles cachées sont activées.
 
-`RtlRestoreContext`et `NtContinue` sont utilisés pendant le déroulement d’exception de gestion structurée des exceptions (SEH) à dérouler au frame cible qui contient le `__except` bloc. Le pointeur d’instruction du `__except` bloc n’est pas censé se trouver sur la pile cachée, car il échouerait à la validation du pointeur d’instruction. Le **`/guard:ehcont`** commutateur du compilateur génère une « table de continuation Eh ». Elle contient une liste triée des adresses RVA de toutes les cibles de continuation de gestion des exceptions valides dans le fichier binaire. `NtContinue`vérifie d’abord la pile d’ombres pour le pointeur d’instruction fourni par l’utilisateur, et si le pointeur d’instruction est introuvable, il poursuit la vérification de la table de continuation EH du binaire qui contient le pointeur d’instruction. Si le fichier binaire conteneur n’a pas été compilé avec la table, pour la compatibilité avec les binaires hérités, `NtContinue` est autorisé à continuer. Il est important de faire la distinction entre les binaires hérités qui n’ont pas de données EHCONT et les fichiers binaires contenant des données EHCONT, mais pas d’entrées de table. La première permet d’autoriser toutes les adresses à l’intérieur du fichier binaire comme cibles de continuation valides. Ce dernier n’autorise aucune adresse dans le fichier binaire en tant que cible de continuation valide.
+`RtlRestoreContext`et `NtContinue` sont utilisés pendant le déroulement d’exception de gestion structurée des exceptions (SEH) à dérouler au frame cible qui contient le **`__except`** bloc. Le pointeur d’instruction du **`__except`** bloc n’est pas censé se trouver sur la pile cachée, car il échouerait à la validation du pointeur d’instruction. Le **`/guard:ehcont`** commutateur du compilateur génère une « table de continuation Eh ». Elle contient une liste triée des adresses RVA de toutes les cibles de continuation de gestion des exceptions valides dans le fichier binaire. `NtContinue`vérifie d’abord la pile d’ombres pour le pointeur d’instruction fourni par l’utilisateur, et si le pointeur d’instruction est introuvable, il poursuit la vérification de la table de continuation EH du binaire qui contient le pointeur d’instruction. Si le fichier binaire conteneur n’a pas été compilé avec la table, pour la compatibilité avec les binaires hérités, `NtContinue` est autorisé à continuer. Il est important de faire la distinction entre les binaires hérités qui n’ont pas de données EHCONT et les fichiers binaires contenant des données EHCONT, mais pas d’entrées de table. La première permet d’autoriser toutes les adresses à l’intérieur du fichier binaire comme cibles de continuation valides. Ce dernier n’autorise aucune adresse dans le fichier binaire en tant que cible de continuation valide.
 
 L' **`/guard:ehcont`** option doit être passée à la fois au compilateur et à l’éditeur de liens pour générer des adresses RVA de continuation de type Eh pour un binaire. Si votre fichier binaire est généré à l'aide d'une seule commande `cl` , le compilateur passe l'option à l'éditeur de liens. Le compilateur passe également l' [**`/guard:cf`**](guard-enable-control-flow-guard.md) option à l’éditeur de liens. Si vous compilez et liez séparément, ces options doivent être définies à la fois sur les commandes du compilateur et de l’éditeur de liens.
 

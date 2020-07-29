@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers, based
 - based addressing
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
-ms.openlocfilehash: e5d8c529adfb92c9db1fdcc5a38f688853606d5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1ef1ec98d718e408621f5303e809d09020d5719
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327429"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190245"
 ---
 # <a name="based-pointers-c"></a>Pointeurs basés sur (C)
 
@@ -24,7 +24,7 @@ Pour les compilateurs C 32 bits et 64 bits de Microsoft, un pointeur based est
 
 > *déclarateur* de *type* **__based (** *base* **)**
 
-La variante « basé sur le pointeur » de l'adressage based permet de spécifier un pointeur comme base. Le pointeur based représente alors un décalage dans la section de mémoire qui démarre au début du pointeur sur lequel il est basé. Les pointeurs basés sur des adresses de pointeur sont la seule forme valide du mot clé `__based` dans les compilations 32 bits et 64 bits. Dans ces compilations, ils représentent des déplacements 32 bits ou 64 bits par rapport à une base 32 bits ou 64 bits.
+La variante « basé sur le pointeur » de l'adressage based permet de spécifier un pointeur comme base. Le pointeur based représente alors un décalage dans la section de mémoire qui démarre au début du pointeur sur lequel il est basé. Les pointeurs basés sur des adresses de pointeur sont la seule forme du **`__based`** mot clé valide dans les compilations 32 bits et 64 bits. Dans ces compilations, ils représentent des déplacements 32 bits ou 64 bits par rapport à une base 32 bits ou 64 bits.
 
 Les pointeurs basés sur pointeurs peuvent par exemple être utilisés pour des identificateurs persistants qui contiennent des pointeurs. Une liste liée composée de pointeurs basés sur un pointeur peut être enregistrée sur le disque, puis rechargée dans un autre emplacement mémoire, et les pointeurs restent valides.
 

@@ -7,24 +7,22 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0bf31423cd76c838cbeffa7458bbccb89592bf43
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181523"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227619"
 ---
 # <a name="allocate"></a>allocate
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Le spécificateur de Déclaration **allocate** désigne un segment de données dans lequel l’élément de données sera alloué.
+Le **`allocate`** spécificateur de déclaration désigne un segment de données dans lequel l’élément de données sera alloué.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-   __declspec(allocate("segname")) declarator
-```
+> **`__declspec(allocate("`***segname* **`))`** *déclarateur*
 
 ## <a name="remarks"></a>Notes
 
@@ -51,9 +49,9 @@ int main() {
 }
 ```
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)
