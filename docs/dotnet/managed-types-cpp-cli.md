@@ -17,22 +17,22 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c542151bda780e5306db35049d988e6514fffd62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152766"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225603"
 ---
 # <a name="managed-types-ccli"></a>Types managés (C++/CLI)
 
-Visual C++ permet d’accéder aux fonctionnalités .NET via des types managés, qui prennent en charge les fonctionnalités du common language runtime et sont soumis aux avantages et restrictions du runtime.
+Visual C++ permet d’accéder aux fonctionnalités .NET par le biais de types managés, qui assurent la prise en charge des fonctionnalités du common language runtime et sont soumis aux avantages et aux restrictions du Runtime.
 
-## <a name="main_functions"></a> Types managés et fonction main
+## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a>Types managés et fonction main
 
-Lorsque vous écrivez une application à l’aide **/CLR**, les arguments de la **main()** fonction ne peut pas être d’un type managé.
+Lors de l’écriture d’une application à l’aide **`/clr`** de, les arguments de la fonction **main ()** ne peuvent pas être d’un type managé.
 
-Est un exemple d’une signature correcte :
+Voici un exemple de signature correcte :
 
 ```cpp
 // managed_types_and_main.cpp
@@ -40,33 +40,33 @@ Est un exemple d’une signature correcte :
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="dotnet"></a> Équivalents .NET framework des types natifs C++
+## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a>.NET Framework équivalents aux types natifs C++
 
-Le tableau suivant présente les mots clés des types intégrés Visual C++, qui sont des alias des types prédéfinis dans le **système** espace de noms.
+Le tableau suivant présente les mots clés des types de Visual C++ intégrés, qui sont des alias de types prédéfinis dans l’espace de noms **System** .
 
-|Type de Visual C++|Type .NET Framework|
+|Type de Visual C++|Type .NET Framework|
 |-----------------------|-------------------------|
-|**void**|<xref:System.Void?displayProperty=nameWithType>|
-|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
-|**char signé** |<xref:System.SByte?displayProperty=nameWithType>|
-|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
-|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
-|**court** et **signés short**|<xref:System.Int16?displayProperty=nameWithType>|
-|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
-|**int**, **type signed int**, **long**, et **long signé**|<xref:System.Int32?displayProperty=nameWithType>|
-|**unsigned int** et **long non signé**|<xref:System.UInt32?displayProperty=nameWithType>|
-|**__int64** et **signé __int64**|<xref:System.Int64?displayProperty=nameWithType>|
-|**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
-|**float**|<xref:System.Single?displayProperty=nameWithType>|
-|**Double** et **long double**|<xref:System.Double?displayProperty=nameWithType>|
+|**`void`**|<xref:System.Void?displayProperty=nameWithType>|
+|**`bool`**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**`signed char`** |<xref:System.SByte?displayProperty=nameWithType>|
+|**`unsigned char`**|<xref:System.Byte?displayProperty=nameWithType>|
+|**`wchar_t`**|<xref:System.Char?displayProperty=nameWithType>|
+|**`short`** les**`signed short`**|<xref:System.Int16?displayProperty=nameWithType>|
+|**`unsigned short`**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**`int`**, **`signed int`** , **`long`** et**`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
+|**`unsigned int`** les**`unsigned long`**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**`__int64`** les**`signed __int64`**|<xref:System.Int64?displayProperty=nameWithType>|
+|**`unsigned __int64`**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**`float`**|<xref:System.Single?displayProperty=nameWithType>|
+|**`double`** les**`long double`**|<xref:System.Double?displayProperty=nameWithType>|
 
-Pour plus d’informations sur l’option de compilateur par défaut non signé ou signé **char**, consultez [/J (type de caractère par défaut n’est pas signé)](../build/reference/j-default-char-type-is-unsigned.md).
+Pour plus d’informations sur l’option de compilateur pour la valeur par défaut **`signed char`** ou **`unsigned char`** , consultez [ `/J` (type par défaut : **`char`** **`unsigned`** )](../build/reference/j-default-char-type-is-unsigned.md).
 
-## <a name="version_issues"></a> Problèmes de version pour les Types valeur imbriqués dans les Types natifs
+## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a>Problèmes de version pour les types valeur imbriqués dans les types natifs
 
-Envisagez un composant d’assembly signé (nom fort) utilisé pour générer un assembly client. Le composant contient un type valeur qui est utilisé dans le client comme type pour un membre d’une union native, une classe ou un tableau. Si une version future du composant modifie la taille ou la disposition du type valeur, le client doit être recompilé.
+Prenons l’exemple d’un composant d’assembly signé (nom fort) utilisé pour générer un assembly client. Le composant contient un type valeur qui est utilisé dans le client comme type pour un membre d’une Union native, une classe ou un tableau. Si une version ultérieure du composant modifie la taille ou la disposition du type de valeur, le client doit être recompilé.
 
-Créez un fichier de clé avec [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).
+Créez un KeyFile avec [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) ( `sn -k mykey.snk` ).
 
 ### <a name="example"></a>Exemple
 
@@ -114,7 +114,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 S.i = 5
@@ -125,11 +125,11 @@ S.i = 11
 
 ### <a name="comments"></a>Commentaires
 
-Toutefois, si vous ajoutez un autre membre `struct S` dans nested_value_types.cpp, (par exemple, `double d;`) et recompiler le composant sans recompiler le client, le résultat est une exception non gérée (de type <xref:System.IO.FileLoadException?displayProperty=fullName>).
+Toutefois, si vous ajoutez un autre membre à `struct S` dans nested_value_types. cpp, (par exemple, `double d;` ) et que vous recompilez le composant sans recompiler le client, le résultat est une exception non gérée (de type <xref:System.IO.FileLoadException?displayProperty=fullName> ).
 
-## <a name="test_equality"></a> Guide pratique pour Test d’égalité
+## <a name="how-to-test-for-equality"></a><a name="test_equality"></a>Comment : tester l’égalité
 
-Dans l’exemple suivant, un test d’égalité qui utilise les Extensions managées pour C++ est basé sur quoi les descripteurs de référence.
+Dans l’exemple suivant, un test d’égalité qui utilise Extensions managées pour C++ est basé sur ce à quoi les handles font référence.
 
 ### <a name="example"></a>Exemple
 
@@ -145,38 +145,38 @@ bool Test1() {
 }
 ```
 
-Le langage intermédiaire pour ce programme montre que la valeur de retour est implémentée à l’aide d’un appel à op_Equality.
+Le langage intermédiaire de ce programme montre que la valeur de retour est implémentée à l’aide d’un appel à op_Equality.
 
 ```MSIL
 IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> Guide pratique pour Diagnostiquer et résoudre les problèmes de compatibilité d’Assembly
+## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a>Comment : diagnostiquer et résoudre les problèmes de compatibilité des assemblys
 
-Cette rubrique explique ce qui peut se produire lorsque la version d’un assembly référencé au moment de la compilation ne correspond pas à la version de l’assembly référencé lors de l’exécution et comment éviter le problème.
+Cette rubrique explique ce qui peut se produire lorsque la version d’un assembly référencé au moment de la compilation ne correspond pas à la version de l’assembly référencée au moment de l’exécution et comment éviter le problème.
 
-Lorsqu’un assembly est compilé, les autres assemblys peuvent être référencés avec la `#using` syntaxe. Lors de la compilation, ces assemblys sont accessibles par le compilateur. Informations à partir de ces assemblys sont utilisées pour prendre des décisions d’optimisation.
+Lorsqu’un assembly est compilé, d’autres assemblys peuvent être référencés avec la `#using` syntaxe. Pendant la compilation, le compilateur accède à ces assemblys. Les informations de ces assemblys sont utilisées pour prendre des décisions d’optimisation.
 
-Toutefois, si l’assembly référencé est modifié et recompilé, et vous ne pas recompilez l’assembly de référence qui en dépend, les assemblys peut ne pas toujours être compatible. Les décisions d’optimisation qui étaient valides à tout d’abord peut-être pas correctes par rapport à la nouvelle version de l’assembly. Diverses erreurs d’exécution peuvent se produire en raison de ces incompatibilités. Il n’existe aucune exception spécifique qui est générée dans ce cas. La façon de que l’échec est consigné lors de l’exécution dépend de la nature de la modification de code qui a provoqué le problème.
+Toutefois, si l’assembly référencé est modifié et recompilé, et si vous ne recompilez pas l’assembly de référence qui en dépend, les assemblys peuvent ne pas être encore compatibles. Les décisions d’optimisation valides au préalable peuvent ne pas être correctes par rapport à la nouvelle version de l’assembly. Diverses erreurs d’exécution peuvent se produire en raison de ces incompatibilités. Il n’existe aucune exception spécifique qui sera produite dans de tels cas. Le mode de signalement de l’échec au moment de l’exécution dépend de la nature de la modification de code qui a provoqué le problème.
 
-Ces erreurs ne doivent pas être un problème dans votre code de production final, que l’application entière est reconstruite pour la version publiée de votre produit. Les assemblys qui sont proposées au public doivent être marqués avec un numéro de version officielle afin de vous assurer que ces problèmes sont évités. Pour plus d’informations, consultez [Versioning des assemblys](/dotnet/framework/app-domains/assembly-versioning).
+Ces erreurs ne doivent pas être un problème dans le code de production final tant que l’application entière est reconstruite pour la version finale de votre produit. Les assemblys qui sont publiés dans le public doivent être signalés par un numéro de version officiel, ce qui garantit que ces problèmes sont évités. Pour plus d’informations, consultez [Versioning des assemblys](/dotnet/framework/app-domains/assembly-versioning).
 
-### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnostiquer et résoudre une erreur d’incompatibilité
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>Diagnostic et résolution d’une erreur d’incompatibilité
 
-1. Si vous rencontrez des exceptions runtime ou autres conditions d’erreur qui se produisent dans le code qui référence un autre assembly et que vous disposez d’aucun autre cause identifiée, vous pourrez être confronté à un assembly obsolète.
+1. Si vous rencontrez des exceptions d’exécution ou d’autres conditions d’erreur qui se produisent dans le code qui fait référence à un autre assembly et n’ont aucune autre cause identifiée, vous pouvez être confronté à un assembly obsolète.
 
-1. Tout d’abord, isoler et reproduire l’exception ou une autre condition d’erreur. Un problème qui se produit en raison d’une exception obsolète doit être reproductible.
+1. Tout d’abord, isolez et reproduisez l’exception ou une autre condition d’erreur. Un problème qui se produit en raison d’une exception obsolète doit être reproductible.
 
 1. Vérifiez l’horodatage de tous les assemblys référencés dans votre application.
 
-1. Si les horodateurs de tous les assemblys référencés par la suite à l’horodateur de la dernière compilation de votre application, votre application est obsolète. Si cela se produit, recompiler votre application avec l’assembly le plus récent et apportez les modifications de code requis.
+1. Si les horodateurs de tous les assemblys référencés sont postérieurs à l’horodateur de la dernière compilation de votre application, votre application est obsolète. Si cela se produit, recompilez votre application avec l’assembly le plus récent et apportez les modifications nécessaires au code.
 
-1. Réexécutez l’application, effectuez les étapes pour reproduire le problème et vérifiez que l’exception ne se produit pas.
+1. Réexécutez l’application, effectuez les étapes qui reproduisent le problème et vérifiez que l’exception ne se produit pas.
 
 ### <a name="example"></a>Exemple
 
-Le programme suivant illustre le problème en réduisant l’accessibilité d’une méthode et tente d’accéder à cette méthode dans un autre assembly sans avoir à recompiler. Essayez de compiler `changeaccess.cpp` première. Il s’agit de l’assembly référencé qui changera. Ensuite, compilez `referencing.cpp`. La compilation réussit. À présent, réduire l’accessibilité de la méthode appelée. Recompilez `changeaccess.cpp` avec l’indicateur `/DCHANGE_ACCESS`. Cela rend la méthode protégée, plutôt que privé, il peut donc plus être appelée légalement. Sans avoir à recompiler `referencing.exe`, réexécutez l’application. Une exception <xref:System.MethodAccessException> entraîne.
+Le programme suivant illustre le problème en réduisant l’accessibilité d’une méthode et en tentant d’accéder à cette méthode dans un autre assembly sans recompilation. Essayez de compiler en `changeaccess.cpp` premier. Il s’agit de l’assembly référencé qui sera modifié. Ensuite, compilez `referencing.cpp` . La compilation a échoué. À présent, réduisez l’accessibilité de la méthode appelée. Recompilez `changeaccess.cpp` avec l’indicateur `/DCHANGE_ACCESS` . Cela rend la méthode protégée, plutôt que privée, afin qu’elle puisse être plus appelée légalement. Sans recompilation `referencing.exe` , réexécutez l’application. Une exception <xref:System.MethodAccessException> se produit.
 
 ```cpp
 // changeaccess.cpp
@@ -229,7 +229,7 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
-[Interopérabilité avec d’autres langages .NET (C++-CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)<br/>
-[Types managés (C++-CLI)](../dotnet/managed-types-cpp-cli.md)<br/>
-[Directive #using](../preprocessor/hash-using-directive-cpp.md)
+[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[Interopérabilité avec d’autres langages .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)<br/>
+[Types managés (C++/CLI)](../dotnet/managed-types-cpp-cli.md)<br/>
+[#using directive](../preprocessor/hash-using-directive-cpp.md)

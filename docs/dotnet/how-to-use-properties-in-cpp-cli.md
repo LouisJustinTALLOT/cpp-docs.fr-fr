@@ -1,24 +1,24 @@
 ---
-title: 'Procédure : Utiliser des propriétés en C / c++ / CLI'
+title: 'Comment : utiliser des propriétés dans C++/CLI'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447314"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225668"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Procédure : Utiliser des propriétés en C / c++ / CLI
+# <a name="how-to-use-properties-in-ccli"></a>Comment : utiliser des propriétés dans C++/CLI
 
-Cet article explique comment utiliser les propriétés en C / c++ / CLI.
+Cet article explique comment utiliser des propriétés dans C++/CLI.
 
 ## <a name="basic-properties"></a>Propriétés de base
 
-Pour les propriétés de base : ceux qui simplement attribuer et récupérer un membre de données privées, vous n’êtes pas obligé de définir la méthode get et définir les fonctions d’accesseur, car le compilateur fournit automatiquement en cas de la fonction simplement le type de données de la propriété explicitement. Ce code illustre une propriété de base :
+Pour les propriétés de base (celles qui affectent et récupèrent simplement un membre de données privé), vous n’avez pas besoin de définir explicitement les fonctions d’accesseur get et Set, car le compilateur les fournit automatiquement lorsque le type de données de la propriété est fourni. Ce code illustre une propriété de base :
 
 ```cpp
 // SimpleProperties.cpp
@@ -43,7 +43,7 @@ c->Size = 111
 
 ## <a name="static-properties"></a>Propriétés statiques
 
-Cet exemple de code montre comment déclarer et utiliser une propriété statique.  Une propriété statique peut accéder uniquement à des membres statiques de sa classe.
+Cet exemple de code montre comment déclarer et utiliser une propriété statique.  Une propriété statique ne peut accéder qu’aux membres statiques de sa classe.
 
 ```cpp
 // mcppv2_property_3.cpp
@@ -84,13 +84,13 @@ int main() {
 
 ## <a name="indexed-properties"></a>Propriétés indexées
 
-En général, une propriété indexée expose une structure de données qui est accessible à l’aide d’un opérateur d’indice.
+Une propriété indexée expose généralement une structure de données accessible à l’aide d’un opérateur d’indice.
 
-Si vous utilisez une valeur par défaut de propriété indexée, vous pouvez accéder à la structure de données simplement en faisant référence au nom de classe, mais si vous utilisez une propriété indexée défini par l’utilisateur, vous devez pour spécifier le nom de propriété pour accéder à la structure de données.
+Si vous utilisez une propriété indexée par défaut, vous pouvez accéder à la structure de données simplement en faisant référence au nom de la classe, mais si vous utilisez une propriété indexée définie par l’utilisateur, vous devez spécifier le nom de la propriété pour accéder à la structure de données.
 
-Pour plus d’informations sur l’utilisation d’un indexeur qui est écrit dans C#, consultez [Comment : Consommer un C# indexeur (C++ / c++ / CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Pour plus d’informations sur l’utilisation d’un indexeur écrit en C#, consultez [Comment : consommer un indexeur c# (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
-Cet exemple de code montre comment utiliser la valeur par défaut et les propriétés indexées définies par l’utilisateur :
+Cet exemple de code montre comment utiliser les propriétés indexées par défaut et définies par l’utilisateur :
 
 ```cpp
 // mcppv2_property_2.cpp
@@ -153,7 +153,7 @@ int main() {
 [ 0 2 4 6 8 ]
 ```
 
-L’exemple suivant montre comment appeler l’indexeur par défaut à l’aide de la `this` pointeur.
+L’exemple suivant montre comment appeler l’indexeur par défaut à l’aide du **`this`** pointeur.
 
 ```cpp
 // call_default_indexer_through_this_pointer.cpp
@@ -193,7 +193,7 @@ public ref struct Squares {
 };
 ```
 
-L’exemple suivant utilise les métadonnées qui sont créée dans l’exemple précédent.
+L’exemple suivant consomme les métadonnées créées dans l’exemple précédent.
 
 ```cpp
 // consume_default_indexer.cpp
@@ -259,9 +259,9 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Propriétés abstract et sealed
 
-Bien que le [abstraite](../extensions/abstract-cpp-component-extensions.md) et [sealed](../extensions/sealed-cpp-component-extensions.md) mots clés sont spécifiés comme étant valides dans la norme ECMA C++spécification /CLI, pour Microsoft C++ compilateur, vous ne pouvez pas spécifier les propriétés trivial, ni sur les la déclaration de propriété d’une propriété non triviale.
+Bien que les mots clés [abstract](../extensions/abstract-cpp-component-extensions.md) et [sealed](../extensions/sealed-cpp-component-extensions.md) soient spécifiés comme valides dans la spécification ECMA c++/CLI, pour le compilateur Microsoft c++, vous ne pouvez pas les spécifier sur des propriétés triviales, ni sur la déclaration de propriété d’une propriété non triviale.
 
-Pour déclarer une propriété scellée ou abstraite, vous devez définir une propriété non triviale, puis spécifiez le `abstract` ou `sealed` mot clé dans la méthode get et définir les fonctions d’accesseur.
+Pour déclarer une propriété sealed ou abstract, vous devez définir une propriété non triviale, puis spécifier **`abstract`** le **`sealed`** mot clé ou sur les fonctions d’accesseur get et Set.
 
 ```cpp
 // properties_abstract_sealed.cpp
@@ -409,4 +409,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[propriété](../extensions/property-cpp-component-extensions.md)
+[property](../extensions/property-cpp-component-extensions.md)

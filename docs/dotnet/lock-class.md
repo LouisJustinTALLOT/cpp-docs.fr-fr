@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: ea09dd3d4a2eaf4cf7708d09509cfecfa4a6c6d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373074"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225616"
 ---
 # <a name="lock-class"></a>lock, classe
 
-Cette classe automatise la prise d’un verrou pour synchroniser l’accès à un objet à partir de plusieurs threads.  Lorsqu’il est construit, il acquiert la serrure et lorsqu’il est détruit, il libère la serrure.
+Cette classe automatise la création d’un verrou pour synchroniser l’accès à un objet à partir de plusieurs threads.  Lorsqu’il est construit, il acquiert le verrou et, lorsqu’il est détruit, il libère le verrou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,9 +33,9 @@ ref class lock;
 
 ## <a name="remarks"></a>Notes
 
-`lock`n’est disponible que pour les objets CLR et ne peut être utilisé que dans le code CLR.
+`lock`est disponible uniquement pour les objets CLR et peut uniquement être utilisé dans le code CLR.
 
-En interne, la <xref:System.Threading.Monitor> classe de verrouillage utilise pour synchroniser l’accès. Pour plus d’informations, voir l’article référencé.
+En interne, la classe Lock utilise <xref:System.Threading.Monitor> pour synchroniser l’accès. Pour plus d’informations, consultez l’article référencé.
 
 ## <a name="members"></a>Membres
 
@@ -43,35 +43,35 @@ En interne, la <xref:System.Threading.Monitor> classe de verrouillage utilise po
 
 |Nom|Description|
 |---------|-----------|
-|[lock::lock](#lock)|Construit un `lock` objet, en attente d’acquérir la serrure pour toujours, pour une durée spécifiée, ou pas du tout.|
-|[serrure: :-lock](#tilde-lock)|Destruction d’un `lock` objet.|
+|[lock::lock](#lock)|Construit un `lock` objet, en attendant éventuellement d’acquérir le verrou définitivement, pendant un laps de temps spécifié, ou pas du tout.|
+|[verrou :: ~ Lock](#tilde-lock)|Détruit un `lock` objet.|
 
 ### <a name="public-methods"></a>Méthodes publiques
 
 |Nom|Description|
 |---------|-----------|
-|[lock::acquire](#acquire)|Acquiert un verrou sur un objet, en attente d’acquisition de la serrure pour toujours, pour un temps spécifié, ou pas du tout.|
-|[lock::is_locked](#is-locked)|Indique si un verrou est en cours.|
-|[lock::release](#release)|Libère une serrure.|
-|[lock::try_acquire](#try-acquire)|Acquiert un verrou sur un objet, en attente `bool` d’un temps spécifié et en retournant un pour signaler le succès de l’acquisition au lieu de jeter une exception.|
+|[lock::acquire](#acquire)|Acquiert un verrou sur un objet, en attendant éventuellement acquérir le verrou indéfiniment, pendant un laps de temps spécifié, ou pas du tout.|
+|[lock::is_locked](#is-locked)|Indique si un verrou est maintenu.|
+|[lock::release](#release)|Libère un verrou.|
+|[lock::try_acquire](#try-acquire)|Acquiert un verrou sur un objet, en attente d’un laps de temps spécifié et en retournant un **`bool`** pour signaler la réussite de l’acquisition au lieu de lever une exception.|
 
 ### <a name="public-operators"></a>Opérateurs publics
 
 |Nom|Description|
 |---------|-----------|
-|[serrure::opérateur&nbsp;bool](#operator-bool)|Opérateur pour `lock` l’utilisation dans une expression conditionnelle.|
+|[Lock ::, opérateur &nbsp; bool](#operator-bool)|Opérateur à utiliser `lock` dans une expression conditionnelle.|
 |[lock::operator==](#operator-equality)|Opérateur d’égalité.|
-|[serrure::opérateur!](#operator-inequality)|Opérateur d’inégalité.|
+|[Lock :: Operator ! =](#operator-inequality)|Opérateur d’inégalité.|
 
 ## <a name="requirements"></a>Spécifications
 
-**Fichier d’en-tête** \<msclr-lock.h>
+**Fichier d’en-tête** \<msclr\lock.h>
 
-**Namespace** msclr
+**Espace de noms** msclr,
 
-## <a name="locklock"></a><a name="lock"></a>serrure::lock
+## <a name="locklock"></a><a name="lock"></a>verrou :: Lock
 
-Construit un `lock` objet, en attente d’acquérir la serrure pour toujours, pour une durée spécifiée, ou pas du tout.
+Construit un `lock` objet, en attendant éventuellement d’acquérir le verrou définitivement, pendant un laps de temps spécifié, ou pas du tout.
 
 ```cpp
 template<class T> lock(
@@ -94,28 +94,28 @@ template<class T> lock(
 ### <a name="parameters"></a>Paramètres
 
 *_object*<br/>
-L’objet à verrouiller.
+Objet à verrouiller.
 
 *_timeout*<br/>
-Temps d’une valeur en <xref:System.TimeSpan>millisecondes ou en .
+Valeur du délai d’attente en millisecondes ou <xref:System.TimeSpan> .
 
 ### <a name="exceptions"></a>Exceptions
 
-Les <xref:System.ApplicationException> lancers si l’acquisition de verrouillage ne se produit pas avant le délai d’attente.
+Lève une exception <xref:System.ApplicationException> si l’acquisition de verrous ne se produit pas avant le délai d’attente.
 
 ### <a name="remarks"></a>Notes
 
-Les trois premières formes du constructeur tentent `_object` d’obtenir un verrou <xref:System.Threading.Timeout.Infinite> dans la période de délai spécifié (ou si aucune n’est spécifiée).
+Les trois premières formes du constructeur essaient d’acquérir un verrou dans le délai d' `_object` attente spécifié (ou <xref:System.Threading.Timeout.Infinite> si aucun n’est spécifié).
 
-La quatrième forme du constructeur n’acquiert pas de serrure. `_object` `lock_later`est membre de [l’enum lock_when](../dotnet/lock-when-enum.md). Utilisez [le verrou : : acquérir](../dotnet/lock-acquire.md) ou verrouiller : : [try_acquire](../dotnet/lock-try-acquire.md) d’acquérir la serrure dans ce cas.
+La quatrième forme du constructeur n’acquiert pas de verrou sur `_object` . `lock_later`est un membre de l' [énumération lock_when](../dotnet/lock-when-enum.md). Utilisez [Lock :: Acquire](../dotnet/lock-acquire.md) ou [lock :: try_acquire](../dotnet/lock-try-acquire.md) pour acquérir le verrou dans ce cas.
 
-Le verrou sera automatiquement libéré lorsque le destructeur est appelé.
+Le verrou est libéré automatiquement lorsque le destructeur est appelé.
 
-`_object`ne peut <xref:System.Threading.ReaderWriterLock>pas être .  Si c’est le cas, une erreur de compilateur en résultera.
+`_object`ne peut pas être <xref:System.Threading.ReaderWriterLock> .  Si c’est le cas, une erreur de compilation se produit.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple utilise une seule instance d’une classe à travers plusieurs threads. La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le fil d’application principal utilise un verrou sur le même cas de la classe pour vérifier périodiquement si des threads de travailleur existent toujours. L’application principale attend alors de sortir jusqu’à ce que tous les fils de travailleur aient terminé leurs tâches.
+Cet exemple utilise une seule instance d’une classe sur plusieurs threads. La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le thread d’application principal utilise un verrou sur la même instance de la classe pour vérifier périodiquement si des threads de travail existent encore. L’application principale attend ensuite de quitter jusqu’à ce que tous les threads de travail aient terminé leurs tâches.
 
 ```cpp
 // msl_lock_lock.cpp
@@ -203,9 +203,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>serrure: :-lock
+## <a name="locklock"></a><a name="tilde-lock"></a>verrou :: ~ Lock
 
-Destruction d’un `lock` objet.
+Détruit un `lock` objet.
 
 ```cpp
 ~lock();
@@ -213,11 +213,11 @@ Destruction d’un `lock` objet.
 
 ### <a name="remarks"></a>Notes
 
-Le destructor appelle [le verrou::release](../dotnet/lock-release.md).
+Le destructeur appelle [Lock :: Release](../dotnet/lock-release.md).
 
 ### <a name="example"></a>Exemple
 
-Cet exemple utilise une seule instance d’une classe à travers plusieurs threads.  La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread.  Le fil d’application principal utilise un verrou sur le même cas de la classe pour vérifier périodiquement si des threads de travailleur existent toujours. L’application principale attend alors de sortir jusqu’à ce que tous les fils de travailleur aient terminé leurs tâches.
+Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principal utilise un verrou sur la même instance de la classe pour vérifier périodiquement si des threads de travail existent encore. L’application principale attend ensuite de quitter jusqu’à ce que tous les threads de travail aient terminé leurs tâches.
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -305,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>serrure::acquire
+## <a name="lockacquire"></a><a name="acquire"></a>Lock :: Acquire
 
-Acquiert un verrou sur un objet, en attente d’acquisition de la serrure pour toujours, pour un temps spécifié, ou pas du tout.
+Acquiert un verrou sur un objet, en attendant éventuellement acquérir le verrou indéfiniment, pendant un laps de temps spécifié, ou pas du tout.
 
 ```cpp
 void acquire();
@@ -322,21 +322,21 @@ void acquire(
 ### <a name="parameters"></a>Paramètres
 
 *_timeout*<br/>
-Valeur de temps en millisecondes ou en tant que <xref:System.TimeSpan>.
+Valeur de délai d’attente en millisecondes ou en tant que <xref:System.TimeSpan> .
 
 ### <a name="exceptions"></a>Exceptions
 
-Les <xref:System.ApplicationException> lancers si l’acquisition de verrouillage ne se produit pas avant le délai d’attente.
+Lève une exception <xref:System.ApplicationException> si l’acquisition de verrous ne se produit pas avant le délai d’attente.
 
 ### <a name="remarks"></a>Notes
 
-Si une valeur de délai d’attente n’est pas fournie, le délai d’attente par défaut est <xref:System.Threading.Timeout.Infinite>.
+Si une valeur de délai d’attente n’est pas fournie, le délai d’attente par défaut est <xref:System.Threading.Timeout.Infinite> .
 
 Si un verrou a déjà été acquis, cette fonction ne fait rien.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple utilise une seule instance d’une classe à travers plusieurs threads.  La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le fil d’application principal utilise un verrou sur le même cas de la classe pour vérifier périodiquement si des threads de travailleur existent toujours. L’application principale attend alors de sortir jusqu’à ce que tous les fils de travailleur aient terminé leurs tâches.
+Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le thread d’application principal utilise un verrou sur la même instance de la classe pour vérifier périodiquement si des threads de travail existent encore. L’application principale attend ensuite de quitter jusqu’à ce que tous les threads de travail aient terminé leurs tâches.
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -424,9 +424,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>serrure::is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>Lock :: is_locked
 
-Indique si un verrou est en cours.
+Indique si un verrou est maintenu.
 
 ```cpp
 bool is_locked();
@@ -434,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>Valeur retournée
 
-`true`si une serrure `false` est tenue, sinon.
+**`true`** Si un verrou est maintenu ; **`false`** sinon,.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple utilise une seule instance d’une classe à travers plusieurs threads.  La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread.  Le fil d’application principal utilise un verrou sur le même cas de la classe pour vérifier périodiquement si des threads de travailleur existent toujours, et attend de sortir jusqu’à ce que tous les fils de travailleur ont terminé leurs tâches.
+Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread.  Le thread d’application principal utilise un verrou sur la même instance de la classe pour vérifier périodiquement si des threads de travail existent toujours, et attend de quitter jusqu’à ce que tous les threads de travail aient terminé leurs tâches.
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -527,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>serrure::opérateur bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>Lock ::, opérateur bool
 
-Opérateur pour `lock` l’utilisation dans une expression conditionnelle.
+Opérateur à utiliser `lock` dans une expression conditionnelle.
 
 ```cpp
 operator bool();
@@ -537,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>Valeur retournée
 
-`true`si une serrure `false` est tenue, sinon.
+**`true`** Si un verrou est maintenu ; **`false`** sinon,.
 
 ### <a name="remarks"></a>Notes
 
-Cet opérateur se `_detail_class::_safe_bool` convertit en `bool` fait à ce qui est plus sûr que parce qu’il ne peut pas être converti en un type intégral.
+Cet opérateur convertit en fait `_detail_class::_safe_bool` la valeur qui est plus sûre que **`bool`** parce qu’il ne peut pas être converti en type intégral.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple utilise une seule instance d’une classe à travers plusieurs threads.  La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le fil d’application principal utilise un verrou sur le même cas de la classe pour vérifier périodiquement si des threads de travailleur existent toujours. L’application principale attend de sortir jusqu’à ce que tous les threads de travailleur ont terminé leurs tâches.
+Cet exemple utilise une seule instance d’une classe sur plusieurs threads.  La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le thread d’application principal utilise un verrou sur la même instance de la classe pour vérifier périodiquement si des threads de travail existent encore. L’application principale attend de quitter jusqu’à ce que tous les threads de travail aient terminé leurs tâches.
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -634,9 +634,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>serrure::libération
+## <a name="lockrelease"></a><a name="release"></a>Lock :: Release
 
-Libère une serrure.
+Libère un verrou.
 
 ```cpp
 void release();
@@ -644,13 +644,13 @@ void release();
 
 ### <a name="remarks"></a>Notes
 
-Si aucun verrou n’est tenu, `release` ne fait rien.
+Si aucun verrou n’est maintenu, `release` ne fait rien.
 
-Vous n’avez pas à appeler cette fonction explicitement. Quand `lock` un objet sort de portée, `release`son destructeur appelle .
+Vous n’avez pas besoin d’appeler cette fonction explicitement. Lorsqu’un `lock` objet est hors de portée, son destructeur appelle `release` .
 
 ### <a name="example"></a>Exemple
 
-Cet exemple utilise une seule instance d’une classe à travers plusieurs threads. La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le fil d’application principal utilise un verrou sur le même cas de la classe pour vérifier périodiquement si des threads de travailleur existent toujours. L’application principale attend alors de sortir jusqu’à ce que tous les fils de travailleur aient terminé leurs tâches.
+Cet exemple utilise une seule instance d’une classe sur plusieurs threads. La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le thread d’application principal utilise un verrou sur la même instance de la classe pour vérifier périodiquement si des threads de travail existent encore. L’application principale attend ensuite de quitter jusqu’à ce que tous les threads de travail aient terminé leurs tâches.
 
 ```cpp
 // msl_lock_release.cpp
@@ -738,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>serrure::try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>Lock :: try_acquire
 
-Acquiert un verrou sur un objet, en attente `bool` d’un temps spécifié et en retournant un pour signaler le succès de l’acquisition au lieu de jeter une exception.
+Acquiert un verrou sur un objet, en attente d’un laps de temps spécifié et en retournant un **`bool`** pour signaler la réussite de l’acquisition au lieu de lever une exception.
 
 ```cpp
 bool try_acquire(
@@ -754,11 +754,11 @@ bool try_acquire(
 ### <a name="parameters"></a>Paramètres
 
 *_timeout*<br/>
-Valeur de temps en millisecondes ou en tant que <xref:System.TimeSpan>.
+Valeur de délai d’attente en millisecondes ou en tant que <xref:System.TimeSpan> .
 
 ### <a name="return-value"></a>Valeur retournée
 
-`true`si le verrou `false` a été acquis, sinon.
+**`true`** Si le verrou a été acquis ; **`false`** sinon,.
 
 ### <a name="remarks"></a>Notes
 
@@ -766,7 +766,7 @@ Si un verrou a déjà été acquis, cette fonction ne fait rien.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple utilise une seule instance d’une classe à travers plusieurs threads. La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le fil d’application principal utilise un verrou sur le même cas de la classe pour vérifier périodiquement si des threads de travailleur existent toujours. L’application principale attend alors de sortir jusqu’à ce que tous les fils de travailleur aient terminé leurs tâches.
+Cet exemple utilise une seule instance d’une classe sur plusieurs threads. La classe utilise un verrou sur lui-même pour s’assurer que les accès à ses données internes sont cohérents pour chaque thread. Le thread d’application principal utilise un verrou sur la même instance de la classe pour vérifier périodiquement si des threads de travail existent encore. L’application principale attend ensuite de quitter jusqu’à ce que tous les threads de travail aient terminé leurs tâches.
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>serrure: :opérateur
+## <a name="lockoperator"></a><a name="operator-equality"></a>Lock :: Operator = =
 
 Opérateur d’égalité.
 
@@ -866,12 +866,12 @@ template<class T> bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
+*t*<br/>
 Objet dont l'égalité doit être comparée.
 
 ### <a name="return-value"></a>Valeur retournée
 
-Retourne `true` `t` si est le même que `false` l’objet de la serrure, sinon.
+Retourne **`true`** si `t` est identique à l’objet du verrou ; **`false`** sinon,.
 
 ### <a name="example"></a>Exemple
 
@@ -897,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>serrure::opérateur!
+## <a name="lockoperator"></a><a name="operator-inequality"></a>Lock :: Operator ! =
 
 Opérateur d’inégalité.
 
@@ -909,12 +909,12 @@ template<class T> bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*T*<br/>
-L’objectif de comparer pour l’inégalité.
+*t*<br/>
+Objet à comparer pour déterminer s’il est inégal.
 
 ### <a name="return-value"></a>Valeur retournée
 
-Retourne `true` `t` si diffère de l’objet `false` de la serrure, sinon.
+Retourne **`true`** si `t` diffère de l’objet du verrou ; **`false`** sinon,.
 
 ### <a name="example"></a>Exemple
 
