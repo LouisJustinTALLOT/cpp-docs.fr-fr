@@ -37,12 +37,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 3a80efab34b45348ca00f09b2fd6e2ea5077fd86
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d2eb3f6d27e943110c5e82968d4fee949644601f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909628"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234157"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -92,9 +92,9 @@ En cas de réussite, retourne l’exposant de base 2 de *x*, c’est-à-dire 2<s
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **EXP2** qui acceptent et retournent des types **float** et **long double** . Dans un programme C, **EXP2** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **EXP2** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **EXP2** accepte et retourne toujours un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -108,6 +108,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>

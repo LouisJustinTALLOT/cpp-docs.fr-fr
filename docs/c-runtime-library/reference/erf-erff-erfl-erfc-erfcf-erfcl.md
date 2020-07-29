@@ -46,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 633a766684ed7485ab579157ae4c94fe209f7e73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5511e7a7d17c47deaaaf61eedf3c00eec12db119
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915010"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234183"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -101,7 +101,7 @@ Valeur à virgule flottante.
 
 Les fonctions **ERF** retournent la fonction d’erreur Gauss de *x*. Les fonctions **ERFC** retournent la fonction d’erreur Gauss complémentaire de *x*.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **ERF** calculent la fonction d’erreur Gauss de *x*, qui est définie comme suit :
 
@@ -109,13 +109,13 @@ Les fonctions **ERF** calculent la fonction d’erreur Gauss de *x*, qui est dé
 
 La fonction d’erreur Gauss complémentaire est définie comme 1-ERF (x). Les fonctions **ERF** retournent une valeur comprise entre-1,0 et 1,0. Aucun retour d'erreur. Les fonctions **ERFC** retournent une valeur comprise dans la plage 0 à 2. Si *x* est trop grand pour **ERFC**, la variable **errno** est définie sur **ERANGE**.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **ERF** et **ERFC** qui acceptent et retournent des types **double** de type **float** et **long** . Dans un programme C, **ERF** et **ERFC** prennent toujours et retournent un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **ERF** et **ERFC** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **ERF** et **ERFC** prennent toujours et retournent un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**ERF**, **ERFF**, **erfl**, **ERFC**, **erfcf**, **erfcl**|\<math.h>|
 

@@ -13,20 +13,20 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators
 - structures [C++], MASM
 ms.assetid: fb7410c7-156a-4131-bcfc-211aa70533e3
-ms.openlocfilehash: 916dce0346bebfc5ff65ca558ae75317a187660a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bcacb0cdd26181da3cf80a582866c1e30567d043
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169537"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192351"
 ---
 # <a name="data-directives-and-operators-in-inline-assembly"></a>Directives et opérateurs de données dans l'assembly inline
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Bien qu'un bloc `__asm` puisse faire référence à des types de données et des objets C ou C++, il ne peut pas définir d'objets de données avec des directives ou des opérateurs MASM. Plus précisément, vous ne pouvez pas utiliser les directives de définition **DB**, `DW`, **DD**, `DQ`, `DT`et `DF` **, ni les**opérateurs `DUP` ou. Les structures et les enregistrements MASM ne sont pas non plus disponibles. L’assembleur inline n’accepte pas les directives `STRUC`, `RECORD`, **Width**ou **Mask**.
+Bien qu’un **`__asm`** bloc puisse référencer des types de données et des objets C ou C++, il ne peut pas définir d’objets de données avec des directives ou des opérateurs MASM. Plus précisément, vous ne pouvez pas utiliser les directives de définition **DB**, `DW` , **DD**, `DQ` , `DT` , et `DF` ou les opérateurs `DUP` ou. **THIS** Les structures et les enregistrements MASM ne sont pas non plus disponibles. L’assembleur inline n’accepte pas les directives `STRUC` , `RECORD` , **Width**ou **Mask**.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

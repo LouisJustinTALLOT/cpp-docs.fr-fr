@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-ms.openlocfilehash: 8878bb046a122b545f969dd067c37eeb97126387
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5abd90f6106cbca54a9c869841ff70383edb5edc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920255"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234144"
 ---
 # <a name="_expand"></a>_expand
 
@@ -71,9 +71,9 @@ Nouvelle taille en octets.
 
 Si la mémoire disponible est insuffisante pour étendre le bloc à la taille donnée sans la déplacer, la fonction retourne la **valeur null**. **_expand** ne retourne jamais un bloc développé à une taille inférieure à celle demandée. Si une défaillance se produit, **errno** indique la nature de la défaillance. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour vérifier la nouvelle taille de l’élément, utilisez **_msize**. Pour obtenir un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour.
+La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour vérifier la nouvelle taille de l’élément, utilisez **_msize**. Pour obtenir un pointeur vers un type autre que **`void`** , utilisez un cast de type sur la valeur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_expand** modifie la taille d’un bloc de mémoire précédemment alloué en tentant de développer ou de contracter le bloc sans déplacer son emplacement dans le tas. Le paramètre *memblock* pointe vers le début du bloc. Le paramètre *Size* donne la nouvelle taille du bloc, en octets. Le contenu du bloc est inchangé jusqu’à la plus courte des tailles nouvelle et ancienne. *memblock* ne doit pas être un bloc qui a été libéré.
 
@@ -88,7 +88,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_expand**|\<malloc.h>|
 

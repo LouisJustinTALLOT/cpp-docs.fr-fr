@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b6d4906212073ab8cb04a0ab77d1234d444a4c95
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909659"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234170"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -84,15 +84,15 @@ Les fonctions **exp** retournent la valeur exponentielle du paramètre à virgul
 
 La fonction **exp** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **exp** qui acceptent un argument **float** ou **long double** . Dans un programme C, **exp** prend toujours et retourne une valeur **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **exp** qui acceptent un **`float`** **`long double`** argument ou. Dans un programme C, **exp** accepte et retourne toujours un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C requis|En-tête C++ requis|
+|Fonction|En-tête C requis|En-tête C++ requis|
 |--------------|---------------------|---|
 |**exp**, **expf,**, **expl**|\<math.h>|\<cmath> ou \<math.h>|
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-ms.openlocfilehash: 77bd44975e97cc646f7d2fd100d86b6661b8c2e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63e984f2228ac6896cd9d2ea959b491565bfb8d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941544"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234131"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
 
@@ -72,9 +72,9 @@ Les fonctions **expm1** retournent une valeur à virgule flottante qui représen
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **expm1** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **expm1** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **expm1** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, **expm1** accepte et retourne toujours un **`double`** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

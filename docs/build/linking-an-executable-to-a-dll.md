@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417361"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223939"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Lier un exécutable à une DLL
 
@@ -42,11 +42,11 @@ La bibliothèque d’importation contient uniquement du code pour charger la DLL
 
 Lorsque le système démarre un programme qui contient des références liées de manière dynamique, il utilise les informations du fichier exécutable du programme pour localiser les dll requises. S’il ne peut pas localiser la DLL, le système met fin au processus et affiche une boîte de dialogue qui signale l’erreur. Dans le cas contraire, le système mappe les modules DLL dans l’espace d’adressage du processus.
 
-Si l’une des dll a une fonction de point d’entrée pour l’initialisation et le code d' `DllMain`arrêt, comme, le système d’exploitation appelle la fonction. L’un des paramètres passés à la fonction de point d’entrée spécifie un code qui indique que la DLL est attachée au processus. Si la fonction de point d’entrée ne retourne pas la valeur TRUE, le système met fin au processus et signale l’erreur.
+Si l’une des dll a une fonction de point d’entrée pour l’initialisation et le code d’arrêt, comme `DllMain` , le système d’exploitation appelle la fonction. L’un des paramètres passés à la fonction de point d’entrée spécifie un code qui indique que la DLL est attachée au processus. Si la fonction de point d’entrée ne retourne pas la valeur TRUE, le système met fin au processus et signale l’erreur.
 
 Enfin, le système modifie le code exécutable du processus pour fournir des adresses de démarrage pour les fonctions DLL.
 
-À l’instar du reste du code d’un programme, le chargeur mappe le code de la DLL dans l’espace d’adressage du processus au démarrage du processus. Le système d’exploitation le charge en mémoire uniquement lorsque cela est nécessaire. Par conséquent, les attributs `PRELOAD` de `LOADONCALL` code et utilisés par les fichiers. def pour contrôler le chargement dans les versions précédentes de Windows n’ont plus de sens.
+À l’instar du reste du code d’un programme, le chargeur mappe le code de la DLL dans l’espace d’adressage du processus au démarrage du processus. Le système d’exploitation le charge en mémoire uniquement lorsque cela est nécessaire. Par conséquent, les `PRELOAD` attributs de `LOADONCALL` code et utilisés par les fichiers. def pour contrôler le chargement dans les versions précédentes de Windows n’ont plus de sens.
 
 ### <a name="explicit-linking"></a>Liaison explicite
 
@@ -56,17 +56,17 @@ La plupart des applications utilisent la liaison implicite, car il s’agit de l
 
 - Un processus qui utilise la liaison implicite est arrêté par le système d’exploitation si la DLL est introuvable au démarrage du processus. Un processus qui utilise la liaison explicite ne se termine pas dans cette situation et peut tenter de récupérer à partir de l’erreur. Par exemple, le processus peut informer l’utilisateur de l’erreur et demander à l’utilisateur de spécifier un autre chemin d’accès à la DLL.
 
-- Un processus qui utilise la liaison implicite est également terminé si l’une des dll auxquelles il est lié a `DllMain` une fonction qui échoue. Un processus qui utilise la liaison explicite ne se termine pas dans cette situation.
+- Un processus qui utilise la liaison implicite est également terminé si l’une des dll auxquelles il est lié a une `DllMain` fonction qui échoue. Un processus qui utilise la liaison explicite ne se termine pas dans cette situation.
 
 - Une application qui lie implicitement à de nombreuses dll peut être lente à démarrer parce que Windows charge toutes les dll lors du chargement de l’application. Pour améliorer les performances de démarrage, une application peut uniquement utiliser la liaison implicite pour les dll requises immédiatement après le chargement. Elle peut utiliser la liaison explicite pour charger d’autres dll uniquement lorsqu’elles sont nécessaires.
 
-- Les liaisons explicites éliminent le besoin de lier l’application à l’aide d’une bibliothèque d’importation. Si les modifications apportées à la DLL entraînent la modification des ordinaux d’exportation, les applications n' `GetProcAddress` ont pas besoin de se relier s’ils appellent à l’aide du nom d’une fonction et non d’une valeur ordinale. Les applications qui utilisent la liaison implicite doivent toujours être liées à la bibliothèque d’importation modifiée.
+- Les liaisons explicites éliminent le besoin de lier l’application à l’aide d’une bibliothèque d’importation. Si les modifications apportées à la DLL entraînent la modification des ordinaux d’exportation, les applications n’ont pas besoin de se relier s’ils appellent `GetProcAddress` à l’aide du nom d’une fonction et non d’une valeur ordinale. Les applications qui utilisent la liaison implicite doivent toujours être liées à la bibliothèque d’importation modifiée.
 
 Voici deux dangers de la liaison explicite à connaître :
 
-- Si la DLL a une `DllMain` fonction de point d’entrée, le système d’exploitation appelle la fonction dans le contexte du thread `LoadLibrary`qui a appelé. La fonction de point d’entrée n’est pas appelée si la DLL est déjà attachée au processus en raison d' `LoadLibrary` un appel précédent à qui n’avait aucun `FreeLibrary` appel correspondant à la fonction. La liaison explicite peut provoquer des problèmes si la DLL `DllMain` utilise une fonction pour initialiser chaque thread d’un processus, car tous les threads `LoadLibrary` qui existent `AfxLoadLibrary`déjà quand (ou) est appelé ne sont pas initialisés.
+- Si la DLL a une `DllMain` fonction de point d’entrée, le système d’exploitation appelle la fonction dans le contexte du thread qui a appelé `LoadLibrary` . La fonction de point d’entrée n’est pas appelée si la DLL est déjà attachée au processus en raison d’un appel précédent à `LoadLibrary` qui n’avait aucun appel correspondant à la `FreeLibrary` fonction. La liaison explicite peut provoquer des problèmes si la DLL utilise une `DllMain` fonction pour initialiser chaque thread d’un processus, car tous les threads qui existent déjà quand `LoadLibrary` (ou `AfxLoadLibrary` ) est appelé ne sont pas initialisés.
 
-- Si une DLL déclare des données d’étendue statique comme `__declspec(thread)`, elle peut provoquer une erreur de protection si elle est liée de manière explicite. Une fois que la DLL est chargée par un `LoadLibrary`appel à, elle provoque une erreur de protection chaque fois que le code fait référence à ces données. (Les données d’étendue statiques incluent à la fois des éléments statiques globaux et locaux.) C’est pourquoi, lorsque vous créez une DLL, vous devez éviter d’utiliser le stockage local des threads. Si ce n’est pas le cas, Informez vos utilisateurs de DLL à propos des pièges potentiels de chargement dynamique de votre DLL. Pour plus d’informations, consultez [utilisation du stockage local des threads dans une bibliothèque de liens dynamiques (SDK Windows)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
+- Si une DLL déclare des données d’étendue statique comme `__declspec(thread)` , elle peut provoquer une erreur de protection si elle est liée de manière explicite. Une fois que la DLL est chargée par un appel à `LoadLibrary` , elle provoque une erreur de protection chaque fois que le code fait référence à ces données. (Les données d’étendue statiques incluent à la fois des éléments statiques globaux et locaux.) C’est pourquoi, lorsque vous créez une DLL, vous devez éviter d’utiliser le stockage local des threads. Si ce n’est pas le cas, Informez vos utilisateurs de DLL à propos des pièges potentiels de chargement dynamique de votre DLL. Pour plus d’informations, consultez [utilisation du stockage local des threads dans une bibliothèque de liens dynamiques (SDK Windows)](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library).
 
 <a name="linking-implicitly"></a>
 
@@ -74,7 +74,7 @@ Voici deux dangers de la liaison explicite à connaître :
 
 Pour utiliser une DLL par liaison implicite, les exécutables clients doivent obtenir ces fichiers auprès du fournisseur de la DLL :
 
-- Un ou plusieurs fichiers d’en-tête (fichiers. h) qui contiennent les déclarations des données exportées, des fonctions et des classes C++ dans la DLL. Les classes, les fonctions et les données exportées par la DLL doivent `__declspec(dllimport)` toutes être marquées dans le fichier d’en-tête. Pour plus d’informations, consultez [dllexport, dllimport](../cpp/dllexport-dllimport.md).
+- Un ou plusieurs fichiers d’en-tête (fichiers. h) qui contiennent les déclarations des données exportées, des fonctions et des classes C++ dans la DLL. Les classes, les fonctions et les données exportées par la DLL doivent toutes être marquées `__declspec(dllimport)` dans le fichier d’en-tête. Pour plus d’informations, consultez [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
 - Bibliothèque d’importation à lier à votre fichier exécutable. L’éditeur de liens crée la bibliothèque d’importation lorsque la DLL est générée. Pour plus d’informations, consultez [fichiers lib en tant qu’entrée dans l’éditeur de liens](reference/dot-lib-files-as-linker-input.md).
 
@@ -94,11 +94,11 @@ Pour utiliser une DLL par liaison explicite, les applications doivent effectuer 
 
 - Appelez [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) ou une fonction similaire pour charger la dll et obtenir un handle de module.
 
-- Appelez [GetProcAddress](getprocaddress.md) pour obtenir un pointeur de fonction vers chaque fonction exportée appelée par l’application. Étant donné que les applications appellent les fonctions DLL via un pointeur, le compilateur ne génère pas de références externes, donc il n’est pas nécessaire d’établir une liaison avec une bibliothèque d’importation. Toutefois, vous devez avoir une `typedef` instruction `using` ou qui définit la signature d’appel des fonctions exportées que vous appelez.
+- Appelez [GetProcAddress](getprocaddress.md) pour obtenir un pointeur de fonction vers chaque fonction exportée appelée par l’application. Étant donné que les applications appellent les fonctions DLL via un pointeur, le compilateur ne génère pas de références externes, donc il n’est pas nécessaire d’établir une liaison avec une bibliothèque d’importation. Toutefois, vous devez avoir une **`typedef`** **`using`** instruction ou qui définit la signature d’appel des fonctions exportées que vous appelez.
 
 - Appelez [FreeLibrary](freelibrary-and-afxfreelibrary.md) quand vous avez terminé avec la dll.
 
-Par exemple, cet exemple de fonction `LoadLibrary` appelle pour charger une DLL nommée « myDll », `GetProcAddress` appelle pour obtenir un pointeur vers une fonction nommée « DLLFunc1 », appelle la fonction et enregistre le résultat, puis appelle `FreeLibrary` pour décharger la dll.
+Par exemple, cet exemple de fonction appelle `LoadLibrary` pour charger une DLL nommée « myDll », appelle `GetProcAddress` pour obtenir un pointeur vers une fonction nommée « DLLFunc1 », appelle la fonction et enregistre le résultat, puis appelle `FreeLibrary` pour décharger la dll.
 
 ```C
 #include "windows.h"
@@ -135,7 +135,7 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 }
 ```
 
-Contrairement à cet exemple, dans la plupart des cas `LoadLibrary` , `FreeLibrary` vous devez appeler et une seule fois dans votre application pour une dll donnée. Cela est particulièrement vrai si vous envisagez d’appeler plusieurs fonctions dans la DLL ou d’appeler des fonctions DLL à plusieurs reprises.
+Contrairement à cet exemple, dans la plupart des cas, vous devez appeler `LoadLibrary` et une `FreeLibrary` seule fois dans votre application pour une dll donnée. Cela est particulièrement vrai si vous envisagez d’appeler plusieurs fonctions dans la DLL ou d’appeler des fonctions DLL à plusieurs reprises.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
