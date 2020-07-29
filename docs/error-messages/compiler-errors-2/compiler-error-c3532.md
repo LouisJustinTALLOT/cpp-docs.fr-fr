@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: 2ef5eb3c2bedd9defbd0b80e6d8c5c8912fcf16d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e2329111e916df9eac99d156bcf58a58e148cb08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761931"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228815"
 ---
 # <a name="compiler-error-c3532"></a>Erreur du compilateur C3532
 
 'type' : utilisation incorrecte de’auto'
 
-Le type indiqué ne peut pas être déclaré avec le mot clé `auto`. Par exemple, vous ne pouvez pas utiliser le mot clé `auto` pour déclarer un tableau ou un type de retour de méthode.
+Le type indiqué ne peut pas être déclaré avec le **`auto`** mot clé. Par exemple, vous ne pouvez pas utiliser le **`auto`** mot clé pour déclarer un tableau ou un type de retour de méthode.
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
@@ -27,7 +27,7 @@ Le type indiqué ne peut pas être déclaré avec le mot clé `auto`. Par exempl
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3532, car le mot clé `auto` ne peut pas déclarer un type de retour de méthode.
+L’exemple suivant génère C3532, car le **`auto`** mot clé ne peut pas déclarer un type de retour de méthode.
 
 ```cpp
 // C3532a.cpp
@@ -37,7 +37,7 @@ auto f(){}   // C3532
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3532, car le mot clé `auto` ne peut pas déclarer un tableau.
+L’exemple suivant génère C3532, car le **`auto`** mot clé ne peut pas déclarer un tableau.
 
 ```cpp
 // C3532b.cpp
@@ -56,4 +56,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[auto, mot clé](../../cpp/auto-keyword.md)
+[Auto, mot clé](../../cpp/auto-keyword.md)

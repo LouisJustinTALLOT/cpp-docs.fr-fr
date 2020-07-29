@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
-ms.openlocfilehash: cd53aeb7f767b06c017c64caa55c916aa1e2b9c9
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: e361077a5584ba97c7efe22b99ec46567fc9ba4e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990576"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228737"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Avertissement du compilateur (niveau 4) C4673
 
 levée de’identifier’les types suivants ne seront pas pris en compte sur le site d’interception
 
-Un objet Throw ne peut pas être géré dans le bloc **catch** . Chaque type qui ne peut pas être géré est listé dans la sortie d’erreur immédiatement après la ligne contenant cet avertissement. Chaque type non géré a son propre avertissement. Pour plus d’informations, lisez l’avertissement pour chaque type spécifique.
+Un objet Throw ne peut pas être géré dans le **`catch`** bloc. Chaque type qui ne peut pas être géré est listé dans la sortie d’erreur immédiatement après la ligne contenant cet avertissement. Chaque type non géré a son propre avertissement. Pour plus d’informations, lisez l’avertissement pour chaque type spécifique.
 
 L’exemple suivant génère l’C4673 :
 

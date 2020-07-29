@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 21d7424e727dab54ff507a8ec9a38db44df1806f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738009"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228841"
 ---
 # <a name="compiler-error-c3499"></a>Erreur du compilateur C3499
 
 une expression lambda dont le type de retour spécifié est void ne peut pas retourner de valeur
 
-Le compilateur génère cette erreur quand une expression lambda qui spécifie `void` comme type de retour retourne une valeur, ou quand une expression lambda contient plusieurs instructions et retourne une valeur, mais ne spécifie pas son type de retour.
+Le compilateur génère cette erreur lorsqu’une expression lambda qui spécifie **`void`** comme type de retour retourne une valeur, ou lorsqu’une expression lambda contient plusieurs instructions et retourne une valeur, mais ne spécifie pas son type de retour.
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4645
 ms.assetid: fd7c1ddf-f0d0-4e10-bab9-ccb4c3476298
-ms.openlocfilehash: d9aff4b554f4b162f87de9e1d373d59dea019637
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 607122b5592c9db4fc2ad4cabf369b4605b2673b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991740"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228763"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>Avertissement du compilateur (niveau 3) C4645
 
 la fonction déclarée avec __declspec(noreturn) a une instruction return
 
-A [return](../../cpp/return-statement-in-program-termination-cpp.md) instruction a été trouvée dans une fonction qui est marquée avec le modificateur [noreturn](../../cpp/noreturn.md) `__declspec` . L’instruction `return` a été ignorée.
+Une instruction [Return](../../cpp/return-statement-in-program-termination-cpp.md) a été trouvée dans une fonction qui est marquée [avec le](../../cpp/noreturn.md) **`__declspec`** modificateur noreturn. L' **`return`** instruction a été ignorée.
 
 L’exemple suivant génère l’avertissement C4645 :
 

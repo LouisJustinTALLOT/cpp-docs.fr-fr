@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5d7ed7dc84c0ef61c7789deeb128b99977fa6028
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b107b25714dd3333c3adcb8c83bf56775bf91823
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076946"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228750"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Avertissement du compilateur (niveau 4) C4471
 
 '*énumération*' : une déclaration anticipée d’une énumération non délimitée doit avoir un type sous-jacent (int pris par défaut)
 
-Une déclaration anticipée d’une énumération non délimitée a été trouvée sans spécificateur pour le type sous-jacent. Par défaut, Visual C++ suppose `int` est le type sous-jacent pour une énumération. Cela peut provoquer des problèmes si un type différent est utilisé dans la définition d’énumération, par exemple, si un type explicite différent est spécifié, ou si un type différent est défini implicitement par un initialiseur. Vous pouvez également rencontrer des problèmes de portabilité. les autres compilateurs ne supposent pas `int` est le type sous-jacent d’une énumération.
+Une déclaration anticipée d’une énumération non délimitée a été trouvée sans spécificateur pour le type sous-jacent. Par défaut, Visual C++ suppose que **`int`** est le type sous-jacent pour une énumération. Cela peut provoquer des problèmes si un type différent est utilisé dans la définition d’énumération, par exemple, si un type explicite différent est spécifié, ou si un type différent est défini implicitement par un initialiseur. Vous pouvez également rencontrer des problèmes de portabilité. les autres compilateurs ne supposent pas que **`int`** est le type sous-jacent d’une énumération.
 
 Cet avertissement est désactivé par défaut. vous pouvez utiliser/Wall ou/w*N*4471 pour l’activer sur la ligne de commande, ou utiliser #pragma [Avertissement](../../preprocessor/warning.md) dans votre fichier source.
 

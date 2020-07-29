@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - .ERRNZ directive
 ms.assetid: 373a9222-140f-4505-8dec-ef370a069ebf
-ms.openlocfilehash: a53bf013e02c4a7d541b7574e5ab38cc7257591b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: dff5fa6a1b35387b625f1aaae20a71c2d2d7547b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313884"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190804"
 ---
-# <a name="errnz"></a>**.ERRNZ**
+# `.ERRNZ`
 
 Génère une erreur si l' *expression* est vraie (différente de zéro).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **. ERRNZ** *expression* ⟦ __,__ *message*⟧
+> **`.ERRNZ`***expression* ⟦ **`,`** *message*⟧
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

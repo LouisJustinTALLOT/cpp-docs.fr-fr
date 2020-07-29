@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2872
 ms.assetid: c619ef97-6e0e-41d7-867c-f8d28a07d553
-ms.openlocfilehash: 103998c7872b683c7405796ee28bd550246ae9bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57b250f87bd7f2c5808b5a681ddfe49dfa5e876
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257608"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228893"
 ---
 # <a name="compiler-error-c2872"></a>Erreur du compilateur C2872
 
-«*symbole*' : symbole ambigu
+'*symbol*' : symbole ambigu
 
-Le compilateur ne peut pas déterminer quel symbole que vous faites référence. Plusieurs symboles avec le nom spécifié est dans la portée. Consultez les remarques qui suivent le message d’erreur pour les emplacements de fichier et les déclarations le compilateur a trouvé pour le symbole ambigu. Pour résoudre ce problème, vous pouvez qualifier entièrement le symbole ambigu à l’aide de son espace de noms, par exemple, `std::byte` ou `::byte`. Vous pouvez également utiliser un [alias d’espace de noms](../../cpp/namespaces-cpp.md#namespace_aliases) pour donner à un espace de noms inclus un nom court pratique à utiliser lors de la résolution des ambiguïtés pour les symboles dans votre code source.
+Le compilateur ne peut pas déterminer le symbole auquel vous faites référence. Plusieurs symboles portant le nom spécifié sont dans la portée. Consultez les remarques qui suivent le message d’erreur pour les emplacements de fichiers et les déclarations que le compilateur a trouvé pour le symbole ambigu. Pour résoudre ce problème, vous pouvez qualifier complètement le symbole ambigu à l’aide de son espace de noms, par exemple `std::byte` ou `::byte` . Vous pouvez également utiliser un [alias d’espace de noms](../../cpp/namespaces-cpp.md#namespace_aliases) pour attribuer à un espace de noms inclus un nom abrégé pratique à utiliser lors de la disambiguating des symboles dans votre code source.
 
-C2872 peut se produire si un fichier d’en-tête inclut un [à l’aide de la directive](../../cpp/namespaces-cpp.md#using_directives), et un fichier d’en-tête suivant est inclus qui contient un type qui se trouve également dans l’espace de noms spécifié dans la `using` directive. Spécifiez un `using` directive uniquement une fois que toutes vos fichiers d’en-tête sont spécifiés avec `#include`.
+C2872 peut se produire si un fichier d’en-tête inclut une [directive using](../../cpp/namespaces-cpp.md#using_directives)et qu’un fichier d’en-tête suivant est inclus et qu’il contient un type qui se trouve également dans l’espace de noms spécifié dans la **`using`** directive. Spécifiez une **`using`** directive uniquement une fois que tous vos fichiers d’en-tête sont spécifiés avec `#include` .
 
-C2872 peut se produire dans Visual Studio 2013 en raison d’un conflit entre la `Windows::Foundation::Metadata::Platform` enum type et C++ / c++ / CX-défini `Platform` espace de noms. Pour contourner ce problème, procédez comme suit :
+C2872 peut se produire dans Visual Studio 2013 en raison d’un conflit entre le `Windows::Foundation::Metadata::Platform` type enum et l' `Platform` espace de noms C++/CX-defined. Pour contourner ce problème, procédez comme suit :
 
-- Supprimez la clause « à l’aide d’espace de noms Windows::Foundation::Metadata » à partir des fichiers projet.
+- Supprimez la clause « utilisation de l’espace de noms Windows :: Foundation :: Metadata » des fichiers projet.
 
-- Spécifiez le nom qualifié complet pour tout type qui est inclus dans cet espace de noms.
+- Spécifiez le nom qualifié complet de tout type inclus dans cet espace de noms.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2872, car une référence ambiguë est effectuée pour une variable nommée `i`; deux variables portant le même nom sont dans la portée :
+L’exemple suivant génère C2872, car une référence ambiguë est apportée à une variable nommée `i` ; deux variables portant le même nom se trouvent dans la portée :
 
 ```cpp
 // C2872.cpp

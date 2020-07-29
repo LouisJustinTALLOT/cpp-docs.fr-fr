@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3291
 ms.assetid: ed2e9f89-8dbc-4387-bc26-cc955e840858
-ms.openlocfilehash: eb98be3677de6c93fdb7bedf7c0d482115891697
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4e8bc312bc10fb5ddc82d811f686004f08603d06
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760138"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228867"
 ---
 # <a name="compiler-error-c3291"></a>Erreur du compilateur C3291
 
 'default' : ne peut pas être le nom d'une propriété triviale
 
-Une propriété triviale ne peut pas être nommée `default`. Pour plus d'informations, voir [property](../../extensions/property-cpp-component-extensions.md) .
+Une propriété triviale ne peut pas être nommée **`default`** . Pour plus d’informations, consultez [property](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Exemple
 

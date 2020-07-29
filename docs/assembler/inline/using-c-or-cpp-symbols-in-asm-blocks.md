@@ -8,30 +8,30 @@ helpviewer_keywords:
 - __asm keyword [C++], C/C++ elements in
 - Visual C++, in __asm blocks
 ms.assetid: 0758ffdc-dfe9-41c8-a5e1-fd395bcac328
-ms.openlocfilehash: fd9f8b444d263818aca1b16260f70730d5350e7c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ecdd3b6b6916a5c9585678838d8e494a58e0508c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169108"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191194"
 ---
 # <a name="using-c-or-c-symbols-in-__asm-blocks"></a>Utilisation des symboles C ou C++ dans les blocs __asm
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Un bloc `__asm` peut faire référence à n'importe quel symbole C ou C++ dans la portée où le bloc apparaît. (Les symboles C et C++ sont des noms de variables, des noms de fonctions et des étiquettes ; autrement dit, des noms qui ne sont pas des constantes symboliques ni des membres `enum`. Vous ne pouvez pas appeler les fonctions membres C++.)
+Un **`__asm`** bloc peut faire référence à n’importe quel symbole C ou C++ dans la portée où le bloc apparaît. (Les symboles C et C++ sont des noms de variables, des noms de fonctions et des étiquettes ; autrement dit, des noms qui ne sont pas des constantes symboliques ou des **`enum`** membres. Vous ne pouvez pas appeler les fonctions membres C++.)
 
 Quelques restrictions s'appliquent à l'utilisation des symboles C et C++ :
 
 - Chaque instruction en langage assembleur peut contenir un seul symbole C ou C++. Plusieurs symboles peuvent apparaître dans la même instruction d’assembly uniquement avec des expressions de **longueur**, de **type**et de **taille** .
 
-- Les fonctions référencées dans un bloc `__asm` doivent être déclarées (prototypées) auparavant dans le programme. Sinon, le compilateur ne peut pas distinguer les noms de fonctions et les étiquettes dans le bloc `__asm`.
+- Les fonctions référencées dans un **`__asm`** bloc doivent être déclarées (prototypées) plus tôt dans le programme. Dans le cas contraire, le compilateur ne peut pas faire la distinction entre les noms de fonctions et les étiquettes du **`__asm`** bloc.
 
-- Un bloc `__asm` ne peut utiliser aucun symbole C ou C++ avec la même orthographe que les mots réservés MASM (indépendamment de la casse). Les mots réservés MASM incluent des noms d’instructions tels que les noms **Push** et Register, comme si.
+- Un **`__asm`** bloc ne peut pas utiliser de symboles C ou C++ avec la même orthographe que les mots réservés MASM (sans tenir compte de la casse). Les mots réservés MASM incluent des noms d’instructions tels que les noms **Push** et Register, comme si.
 
-- Les étiquettes de structure et d’union ne sont pas reconnues dans les blocs `__asm`.
+- Les balises de structure et d’Union ne sont pas reconnues dans les **`__asm`** blocs.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

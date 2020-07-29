@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172566"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228724"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref et struct ref (C++/CLI et C++/CX)
 
@@ -41,16 +41,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>Paramètres
 
 *class_access*<br/>
-(Facultatif) Accessibilité de la classe ou du struct en dehors de l’assembly. Les valeurs possibles sont **public** et **private** (**private** est la valeur par défaut). Les classes ou structs imbriqués ne peuvent pas avoir de spécificateur *class_access*.
+(Facultatif) Accessibilité de la classe ou du struct en dehors de l’assembly. Les valeurs possibles sont **`public`** et **`private`** ( **`private`** est la valeur par défaut). Les classes ou structs imbriqués ne peuvent pas avoir de spécificateur *class_access*.
 
 *name*<br/>
 Nom de la classe ou du struct.
 
-*modifier*<br/>
+*modificateur*<br/>
 (Facultatif) [abstract](abstract-cpp-component-extensions.md) et [sealed](sealed-cpp-component-extensions.md) sont des modificateurs valides.
 
 *inherit_access*<br/>
-(Facultatif) Accessibilité de *base_type*. La seule accessibilité autorisée est **public** (**public** est la valeur par défaut).
+(Facultatif) Accessibilité de *base_type*. La seule accessibilité autorisée est **`public`** ( **`public`** est la valeur par défaut).
 
 *base_type*<br/>
 (Facultatif) Le type de base. Toutefois, un type valeur ne peut pas agir comme un type de base.
@@ -59,29 +59,29 @@ Pour plus d’informations, consultez les descriptions propres aux langages de c
 
 ### <a name="remarks"></a>Notes
 
-L’accessibilité des membres par défaut d’un objet déclaré avec une **classe ref** ou une **classe value** est **private**. Et l’accessibilité des membres par défaut d’un objet déclaré avec un **struct ref** ou un **struct value** est **public**.
+L’accessibilité par défaut d’un objet déclaré avec une classe **ref** ou une **classe value** est **`private`** . Et l’accessibilité par défaut des membres d’un objet déclaré avec **struct Ref** ou **struct value** est **`public`** .
 
-Quand un type référence hérite d’un autre type référence, les fonctions virtuelles dans la classe de base doivent être explicitement remplacées (avec [override](override-cpp-component-extensions.md)) ou masquées (avec [new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Les fonctions de classes dérivées doivent également être marquées explicitement comme **virtual**.
+Quand un type référence hérite d’un autre type référence, les fonctions virtuelles dans la classe de base doivent être explicitement remplacées (avec [override](override-cpp-component-extensions.md)) ou masquées (avec [new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Les fonctions de classe dérivée doivent également être marquées explicitement comme **`virtual`** .
 
-Pour détecter au moment de la compilation si un type est une **classe ref** ou un **struct ref**, ou une **classe value** ou un **struct value**, utilisez `__is_ref_class (type)`, `__is_value_class (type)`, ou `__is_simple_value_class (type)`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
+Pour détecter au moment de la compilation si un type est une **classe ref** ou un **struct ref**, ou une **classe value** ou un **struct value**, utilisez `__is_ref_class (type)`, `__is_value_class (type)`, ou `__is_simple_value_class (type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 Pour plus d'informations sur les classes et structs, consultez
 
 - [Instanciation de classes et structs](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md)
 
-- [Sémantique de pile C++ pour les types de référence](../dotnet/cpp-stack-semantics-for-reference-types.md)
+- [Sémantique de pile C++ pour les types référence](../dotnet/cpp-stack-semantics-for-reference-types.md)
 
 - [Classes, structures et unions](../cpp/classes-and-structs-cpp.md)
 
-- [Destructeurs et finaliseurs dans Comment : définir et consommer des classes et des structsC++(/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destructeurs et finaliseurs dans Comment : définir et consommer des classes et des structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
-- [Opérateurs définis par l’utilisateur (C++-CLI)](../dotnet/user-defined-operators-cpp-cli.md)
+- [Opérateurs définis par l’utilisateur (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
-- [Conversions définies par l’utilisateur (C++-CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
+- [Conversions définies par l’utilisateur (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md)
 
-- [Guide pratique pour inclure une classe native dans un wrapper pour une utilisation par C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
+- [Comment : encapsuler une classe native pour une utilisation par C #](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-- [Classes génériques (C++-CLI)](generic-classes-cpp-cli.md)
+- [Classes génériques (C++/CLI)](generic-classes-cpp-cli.md)
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -123,4 +123,4 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
-ms.openlocfilehash: 3766eaa83457ba6cffaf8b1599983a065772911c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 023d7f0a5d509c4b301a9985da8ea7feb1f3d203
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750141"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228828"
 ---
 # <a name="compiler-error-c3530"></a>Erreur du compilateur C3530
 
 'auto’ne peut pas être combiné avec un autre spécificateur de type
 
-Un spécificateur de type est utilisé avec le mot clé `auto`.
+Un spécificateur de type est utilisé avec le **`auto`** mot clé.
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-1. N’utilisez pas de spécificateur de type dans une déclaration de variable qui utilise le mot clé `auto`.
+1. N’utilisez pas de spécificateur de type dans une déclaration de variable qui utilise le **`auto`** mot clé.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3530, car la variable `x` est déclarée avec le mot clé `auto` et le type `int`, et parce que l’exemple est compilé avec **/Zc : auto**.
+L’exemple suivant génère C3530, car la variable `x` est déclarée avec le **`auto`** mot clé et le type **`int`** , et parce que l’exemple est compilé avec **/Zc : auto**.
 
 ```cpp
 // C3530.cpp
@@ -39,4 +39,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[auto, mot clé](../../cpp/auto-keyword.md)
+[Auto, mot clé](../../cpp/auto-keyword.md)

@@ -2,12 +2,12 @@
 title: Classes partielles (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740476"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87185461"
 ---
 # <a name="partial-classes-ccx"></a>Classes partielles (C++/CX)
 
@@ -17,23 +17,23 @@ Une classe partielle est une construction qui prend en charge les scénarios dan
 
 Pour définir une classe partielle, utilisez le mot clé `partial` immédiatement avant la clé-classe de ce qui devrait être une définition de classe normale. Un mot clé comme `partial ref class` est un mot clé contextuel qui contient des espaces blancs. Les définitions partielles sont prises en charge dans les constructions ci-dessous.
 
-- `class` ou `struct`
+- **`class`** ni**`struct`**
 
-- `ref class` ou `ref struct`
+- **`ref class`** ni**`ref struct`**
 
-- `value class` ou `value struct`
+- **`value class`** ni**`value struct`**
 
-- `enum` ou `enum class`
+- **`enum`** ni**`enum class`**
 
-- `ref interface`, `interface class`, `interface struct`ou `__interface`
+- `ref interface`, **`interface class`** , **`interface struct`** ou **' __interface**
 
-- `union`
+- **`union`**
 
-L'exemple suivant illustre une `ref class`partielle :
+Cet exemple illustre une partie **`ref class`** :
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
-## <a name="contents"></a>Sommaire
+## <a name="contents"></a>Contenu
 
 Une définition de classe partielle peut contenir tout ce que la définition de classe complète peut contenir si le mot clé `partial` a été omis. Sauf une exception, cela inclut toutes les constructions valides, telles que les classes de base, les données membres, les fonctions de membre, les énumérations, les déclarations Friend et les attributs. Les définitions inline des données membres statiques sont autorisées.
 
@@ -61,7 +61,7 @@ Il peut y avoir zéro définition de classe partielle ou plus pour chaque défin
 
 Chaque définition de classe partielle d'une classe doit précéder lexicalement la seule définition complète de cette classe, mais ne doit pas précéder les déclarations anticipées de cette classe. S'il n'existe aucune définition complète de la classe, les déclarations de classe partielles ne peuvent être que des déclarations anticipées.
 
-Toutes les clés-classe comme `class` et `struct` doivent concorder. Par exemple, c’est une erreur de coder `partial class X {}; struct X {};`.
+Toutes les clés de classe telles que **`class`** et **`struct`** doivent correspondre. Par exemple, c’est une erreur de coder `partial class X {}; struct X {};`.
 
 L'exemple suivant illustre le nombre et le classement. La dernière déclaration partielle échoue car la classe est déjà définie.
 
@@ -85,7 +85,7 @@ Une classe partielle ne peut pas être un modèle.
 
 Une classe partielle ne peut pas s'étendre au-delà d'une unité de traduction.
 
-Le mot clé `partial` est pris en charge uniquement en association avec le mot clé `ref class` ou `value class` .
+Le `partial` mot clé est pris en charge uniquement en association avec le mot **`ref class`** clé ou le **`value class`** mot clé.
 
 ### <a name="examples"></a>Exemples
 
@@ -97,6 +97,6 @@ L'exemple suivant définit la classe `Address` pour deux fichiers de code. Le co
 
 ## <a name="see-also"></a>Voir aussi
 
-[Système de type](../cppcx/type-system-c-cx.md)<br/>
+[Système de types](../cppcx/type-system-c-cx.md)<br/>
 [Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)
+[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)
