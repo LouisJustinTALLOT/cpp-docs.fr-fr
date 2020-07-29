@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7ce730b8d723a839c5b509c825cff84111ca613
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371478"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226917"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits (structure)
 
-Définit les caractéristiques communes d’une poignée uninitialisée.
+Définit les caractéristiques communes d’un handle non initialisé.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,14 +34,14 @@ struct HANDLENullTraits;
 
 Nom   | Description
 ------ | ---------------------
-`Type` | Un synonyme de HANDLE.
+`Type` | Synonyme de descripteur.
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 Nom                                                  | Description
 ----------------------------------------------------- | -----------------------------
-[HANDLENullTraits::Fermer](#close)                     | Ferme la poignée spécifiée.
-[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Représente une poignée invalide.
+[HANDLENullTraits :: Close](#close)                     | Ferme le handle spécifié.
+[HANDLENullTraits :: Getinvalidvalue,](#getinvalidvalue) | Représente un handle non valide.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -49,13 +49,13 @@ Nom                                                  | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** corewrappers.h
+**En-tête :** corewrappers. h
 
-**Espace nom:** Microsoft::WRL::Wrappers::HandleTraits
+**Espace de noms :** Microsoft :: WRL :: wrappers :: HandleTraits
 
-## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Fermer
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits :: Close
 
-Ferme la poignée spécifiée.
+Ferme le handle spécifié.
 
 ```cpp
 inline static bool Close(
@@ -66,15 +66,15 @@ inline static bool Close(
 ### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-Le manche à fermer.
+Handle à fermer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**vrai** si poignée *h* fermé avec succès; autrement, **faux**.
+**`true`** Si handle *h* a été fermé avec succès ; Sinon, **`false`** .
 
-## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits :: Getinvalidvalue,
 
-Représente une poignée invalide.
+Représente un handle non valide.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -82,4 +82,4 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne toujours `nullptr`.
+Retourne toujours **`nullptr`** .

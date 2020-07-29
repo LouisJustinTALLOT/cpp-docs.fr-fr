@@ -2,16 +2,16 @@
 title: Résolution du nom pour les types dépendants
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: de40bd056fe351e679ff32d9908c068ea4c6752a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161151"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227307"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Résolution du nom pour les types dépendants
 
-Utilisez **TypeName** pour les noms qualifiés dans les définitions de modèle pour indiquer au compilateur que le nom qualifié donné identifie un type. Pour plus d’informations, consultez [TypeName](../cpp/typename.md).
+Utilisez **`typename`** pour les noms qualifiés dans les définitions de modèle pour indiquer au compilateur que le nom qualifié donné identifie un type. Pour plus d’informations, consultez [TypeName](../cpp/typename.md).
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-La recherche de nom pour les noms dépendants examine les noms à la fois dans le contexte de la définition de modèle. dans l’exemple suivant, ce contexte trouve `myFunction(char)`, et le contexte de l’instanciation de modèle. Dans l’exemple suivant, le modèle est instancié dans main ; par conséquent, le `MyNamespace::myFunction` est visible à partir du point d’instanciation et est choisi comme meilleure correspondance. Si `MyNamespace::myFunction` était renommé, `myFunction(char)` serait appelé à la place.
+La recherche de nom pour les noms dépendants examine les noms à la fois dans le contexte de la définition de modèle. dans l’exemple suivant, ce contexte est trouvé `myFunction(char)` et le contexte de l’instanciation du modèle. Dans l’exemple suivant, le modèle est instancié dans main ; par conséquent, `MyNamespace::myFunction` est visible à partir du point d’instanciation et est choisi comme meilleure correspondance. Si `MyNamespace::myFunction` était renommé, `myFunction(char)` serait appelé à la place.
 
 Tous les noms sont résolus comme s'ils étaient des noms dépendants. Néanmoins, nous vous recommandons d'utiliser des noms complets en cas de conflit éventuel.
 

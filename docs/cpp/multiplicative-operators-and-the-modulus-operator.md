@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: 791f18793b49f7d3a986c3271fddef3acef33062
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c277c93640201de69a4cb29060bc5191aa91629c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367923"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227359"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Opérateurs de multiplication et opérateur modulo
 
@@ -36,21 +36,21 @@ expression % expression
 
 Les opérateurs de multiplication sont :
 
-- Multiplication<strong>\*</strong>( )
+- Multiplication ( <strong>\*</strong> )
 
-- Division**/**( )
+- Division ( **/** )
 
-- Modulus (reste de**%** la division) ( )
+- Modulo (reste de la Division) ( **%** )
 
 Ces opérateurs binaires ont une associativité de droite à gauche.
 
-Les opérateurs de multiplication prennent des opérandes de types arithmétiques. L’opérateur de**%** modulus ( ) a une exigence plus stricte en ce que ses opérandes doivent être de type intégral. (Pour obtenir le reste d’une division de points flottants, utilisez la fonction run-time, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Les conversions couvertes dans [les conversions standard](standard-conversions.md) sont appliquées aux opérands, et le résultat est du type converti.
+Les opérateurs de multiplication prennent des opérandes de types arithmétiques. L’opérateur modulo ( **%** ) a une exigence plus stricte en ce que ses opérandes doivent être de type intégral. (Pour obtenir le reste d’une division à virgule flottante, utilisez la fonction runtime, [fmod](../c-runtime-library/reference/fmod-fmodf.md).) Les conversions couvertes dans les [conversions standard](standard-conversions.md) sont appliquées aux opérandes, et le résultat est du type converti.
 
 L'opérateur de multiplication montre le résultat de la multiplication du premier opérande par le second.
 
 L’opérateur de division montre le résultat de la division du premier opérande par le second.
 
-L’opérateur de modulus cède le reste donné par l’expression suivante, où *e1* est le premier \* opéra et *e2* est le second: *e1* - (*e1* / *e2*) *e2*, où les deux opérands sont de types intégrals.
+L’opérateur modulo produit le reste donné par l’expression suivante, où *E1* est le premier opérande et *E2* le second : *E1* -(*E1*  /  *E2*) \* *E2*, où les deux opérandes sont des types intégraux.
 
 La division par 0 dans une division ou une expression de modulo est éliminée et provoque une erreur d'exécution. Par conséquent, les expressions suivantes génèrent des résultats indéterminés et erronés :
 
@@ -64,19 +64,19 @@ Si les deux opérandes pour une expression de multiplication, de division ou de 
 > [!NOTE]
 > Étant donné que les conversions exécutées par les opérateurs de multiplication ne fournissent pas de conditions de dépassement de capacité positif ou de dépassement de capacité négatif, les informations peuvent être perdues si le résultat d'une opération de multiplication ne peut pas être représenté dans le type des opérandes après conversion.
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
 Dans Microsoft C++, le résultat d'une expression de modulo est toujours le même que le signe du premier opérande.
 
-**END Microsoft Spécifique**
+**FIN spécifique à Microsoft**
 
-Si la division calculée de deux entiers est incorrecte et qu'un seul opérande est négatif, le résultat est le plus grand entier (en amplitude, sans tenir compte du signe) qui est inférieur à la valeur exacte que l'opérateur de division produirait. Par exemple, la valeur calculée de -11 / 3 est de -3.66666666666. Le résultat de cette division intégrale est de -3.
+Si la division calculée de deux entiers est incorrecte et qu'un seul opérande est négatif, le résultat est le plus grand entier (en amplitude, sans tenir compte du signe) qui est inférieur à la valeur exacte que l'opérateur de division produirait. Par exemple, la valeur calculée de-11/3 est-3,666666666. Le résultat de cette division intégrale est-3.
 
-La relation entre les opérateurs multiplicatifs est donnée \* par l’identité (*e1* / *e2*) *e2* + *e1* % *e2* == *e1*.
+La relation entre les opérateurs de multiplication est donnée par l’identité (*E1*  /  *E2*) \* *E2*  +  *E1 E1*  %  *e2*  ==  *E1*.
 
 ## <a name="example"></a>Exemple
 
-Le programme suivant montre les opérateurs de multiplication. Notez que l’un ou l’autre opérande de `10 / 3` doit être explicitement moulé pour taper **flotteur** pour éviter la troncation de sorte que les deux opérandes sont de type **flotter** avant la division.
+Le programme suivant montre les opérateurs de multiplication. Notez que l’un des opérandes de `10 / 3` doit être explicitement casté en type **`float`** pour éviter la troncation afin que les deux opérandes soient de type **`float`** avant la Division.
 
 ```cpp
 // expre_Multiplicative_Operators.cpp

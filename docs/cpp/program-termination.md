@@ -1,75 +1,75 @@
 ---
-title: C++arrêt du programme
-description: Décrit les façons d' exit un C++programme de langage.
+title: Arrêt du programme C++
+description: "Décrit les façons d' :::no-loc(exit)::: un programme en langage C++."
 ms.date: 01/15/2020
 helpviewer_keywords:
 - terminating execution
 - quitting applications
-- exiting applications
+- :::no-loc(exit):::ing applications
 - programs [C++], terminating
 ms.assetid: fa0ba9de-b5f1-4e7b-aa65-e7932068b48c
 no-loc:
-- exit
-- abort
-- return
-- main
-- atexit
-- void
-ms.openlocfilehash: f83c9d5da5b0a1127603a97fd7946e9cca43a7a5
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+- ':::no-loc(exit):::'
+- ':::no-loc(abort):::'
+- ':::no-loc(return):::'
+- ':::no-loc(main):::'
+- ':::no-loc(atexit):::'
+- ':::no-loc(void):::'
+ms.openlocfilehash: 216aef5dbe8d110f9d75d43b5009b89fc5bfda51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123953"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227177"
 ---
-# <a name="c-program-termination"></a>C++arrêt du programme
+# <a name="c-program-termination"></a>Arrêt du programme C++
 
-Dans C++, vous pouvez exit un programme de l’une des manières suivantes :
+En C++, vous pouvez :::no-loc(exit)::: un programme de l’une des manières suivantes :
 
-- Appelez la fonction [exit](exit-function.md) .
-- Appelez la fonction [abort](abort-function.md) .
-- Exécutez une instruction [return](return-statement-cpp.md) à partir de `main`.
+- Appelez la [:::no-loc(exit):::](:::no-loc(exit):::-function.md) fonction.
+- Appelez la [:::no-loc(abort):::](:::no-loc(abort):::-function.md) fonction.
+- Exécutez une [:::no-loc(return):::](:::no-loc(return):::-statement-cpp.md) instruction à partir de `:::no-loc(main):::` .
 
-## <a name="opno-locexit-function"></a>Fonction exit
+## <a name="no-locexit-function"></a>Fonction :::no-loc(exit):::
 
-La fonction [exit](../c-runtime-library/reference/exit-exit-exit.md) , déclarée dans \<stdlib. h >, termine C++ un programme. La valeur fournie en tant qu’argument à `exit` est retournée au système d’exploitation en tant que code return ou exit code du programme. Par Convention, un return code de zéro signifie que le programme s’est terminé correctement. Vous pouvez utiliser les constantes EXIT_FAILURE et EXIT_SUCCESS, également définies dans \<stdlib. h >, pour indiquer la réussite ou l’échec de votre programme.
+La [:::no-loc(exit):::](../c-runtime-library/reference/:::no-loc(exit):::-:::no-loc(exit):::-:::no-loc(exit):::.md) fonction, déclarée dans \<stdlib.h> , met fin à un programme C++. La valeur fournie comme argument à `:::no-loc(exit):::` est :::no-loc(return)::: Ed sur le système d’exploitation en tant que :::no-loc(return)::: code ou code du programme :::no-loc(exit)::: . Par Convention, un :::no-loc(return)::: Code de zéro signifie que le programme s’est terminé correctement. Vous pouvez utiliser les constantes EXIT_FAILURE et EXIT_SUCCESS, également définies dans \<stdlib.h> , pour indiquer la réussite ou l’échec de votre programme.
 
-L’émission d’une instruction **return** à partir de la fonction `main` revient à appeler la fonction `exit` avec la valeur return comme argument.
+L’émission d’une **`:::no-loc(return):::`** instruction à partir de la `:::no-loc(main):::` fonction équivaut à appeler la `:::no-loc(exit):::` fonction avec la :::no-loc(return)::: valeur comme argument.
 
-## <a name="opno-locabort-function"></a>Fonction abort
+## <a name="no-locabort-function"></a>Fonction :::no-loc(abort):::
 
-La fonction [abort](../c-runtime-library/reference/abort.md) , également déclarée dans le fichier Include standard \<stdlib. h >, termine un C++ programme. La différence entre les `exit` et les `abort` est que `exit` C++ autorise le traitement de l’arrêt au moment de l’exécution (les destructeurs d’objets globaux seront appelés), tandis que `abort` met immédiatement fin au programme. La fonction `abort` ignore le processus de destruction normal pour les objets statiques globaux initialisés. Il contourne également tout traitement spécial qui a été spécifié à l’aide de la fonction [atexit](../c-runtime-library/reference/atexit.md) .
+La [:::no-loc(abort):::](../c-runtime-library/reference/:::no-loc(abort):::.md) fonction, également déclarée dans le fichier Include standard \<stdlib.h> , met fin à un programme C++. La différence entre `:::no-loc(exit):::` et `:::no-loc(abort):::` est que `:::no-loc(exit):::` permet au traitement de l’arrêt du runtime C++ d’avoir lieu (les destructeurs d’objets globaux sont appelés), tandis que `:::no-loc(abort):::` met immédiatement fin au programme. La `:::no-loc(abort):::` fonction ignore le processus de destruction normal pour les objets statiques globaux initialisés. Il contourne également tout traitement spécial qui a été spécifié à l’aide de la [:::no-loc(atexit):::](../c-runtime-library/reference/:::no-loc(atexit):::.md) fonction.
 
-## <a name="opno-locatexit-function"></a>Fonction atexit
+## <a name="no-locatexit-function"></a>Fonction :::no-loc(atexit):::
 
-Utilisez la fonction [atexit](../c-runtime-library/reference/atexit.md) pour spécifier les actions qui s’exécutent avant l’arrêt du programme. Aucun objet statique global initialisé avant l’appel à **atexit** n’est détruit avant l’exécution de la fonction de traitement des exit.
+Utilisez la [:::no-loc(atexit):::](../c-runtime-library/reference/:::no-loc(atexit):::.md) fonction pour spécifier les actions qui s’exécutent avant l’arrêt du programme. Aucun objet statique global initialisé avant l’appel à **:::no-loc(atexit):::** n’est détruit avant l’exécution de la :::no-loc(exit)::: fonction de traitement.
 
-## <a name="opno-locreturn-statement-in-opno-locmain"></a>instruction return dans main
+## <a name="no-locreturn-statement-in-no-locmain"></a>:::no-loc(return):::instruction dans:::no-loc(main):::
 
-L’émission d’une instruction [return](return-statement-cpp.md) à partir de `main` est fonctionnellement équivalente à l’appel de la fonction `exit`. Prenons l'exemple suivant :
+L’émission d’une [:::no-loc(return):::](:::no-loc(return):::-statement-cpp.md) instruction à partir de `:::no-loc(main):::` est fonctionnellement équivalente à l’appel de la `:::no-loc(exit):::` fonction. Prenons l’exemple suivant :
 
 ```cpp
-// return_statement.cpp
+// :::no-loc(return):::_statement.cpp
 #include <stdlib.h>
-int main()
+int :::no-loc(main):::()
 {
-    exit( 3 );
-    return 3;
+    :::no-loc(exit):::( 3 );
+    :::no-loc(return)::: 3;
 }
 ```
 
-Les instructions `exit` et **return** dans l’exemple précédent sont fonctionnellement identiques. Toutefois, C++ exige que les fonctions qui ont des types de return autres que **void** return une valeur. L’instruction **return** vous permet d' return une valeur à partir de `main`.
+Les `:::no-loc(exit):::` **`:::no-loc(return):::`** instructions et dans l’exemple précédent sont fonctionnellement identiques. Toutefois, C++ requiert que les fonctions qui ont des :::no-loc(return)::: types autres qu' **`:::no-loc(void):::`** :::no-loc(return)::: une valeur. L' **`:::no-loc(return):::`** instruction vous permet d' :::no-loc(return)::: obtenir une valeur à partir de `:::no-loc(main):::` .
 
 ## <a name="destruction-of-static-objects"></a>Destruction d’objets statiques
 
-Lorsque vous appelez `exit` ou exécutez une instruction **return** à partir d' `main`, les objets statiques sont détruits dans l’ordre inverse de leur initialisation (après l’appel à `atexit` le cas échéant). L'exemple suivant montre comment ce type d'initialisation et de nettoyage fonctionne.
+Quand vous appelez `:::no-loc(exit):::` ou exécutez une **`:::no-loc(return):::`** instruction à partir de `:::no-loc(main):::` , les objets statiques sont détruits dans l’ordre inverse de leur initialisation (après l’appel à s’il en `:::no-loc(atexit):::` existe un). L'exemple suivant montre comment ce type d'initialisation et de nettoyage fonctionne.
 
 ### <a name="example"></a>Exemple
 
-Dans l’exemple suivant, les objets statiques `sd1` et `sd2` sont créés et initialisés avant l’entrée dans `main`. Une fois que ce programme s’est arrêté à l’aide de l’instruction **return** , le premier `sd2` est détruit, puis `sd1`. Le destructeur de la classe `ShowData` ferme les fichiers associés à ces objets statiques.
+Dans l’exemple suivant, les objets statiques `sd1` et `sd2` sont créés et initialisés avant l’entrée dans `:::no-loc(main):::` . Une fois que ce programme s’est arrêté à l’aide de l' **`:::no-loc(return):::`** instruction, le premier `sd2` est détruit, puis `sd1` . Le destructeur de la classe `ShowData` ferme les fichiers associés à ces objets statiques.
 
 ```cpp
-// using_exit_or_return1.cpp
+// using_:::no-loc(exit):::_or_:::no-loc(return):::1.cpp
 #include <stdio.h>
 class ShowData {
 public:
@@ -83,7 +83,7 @@ public:
    ~ShowData() { fclose( OutputDev ); }
 
    // Disp function shows a string on the output device.
-   void Disp( char *szData ) {
+   :::no-loc(void)::: Disp( char *szData ) {
       fputs( szData, OutputDev );
    }
 private:
@@ -98,7 +98,7 @@ ShowData sd1 = "CON";
 //   is directed to a file called "HELLO.DAT"
 ShowData sd2 = "hello.dat";
 
-int main() {
+int :::no-loc(main):::() {
    sd1.Disp( "hello to default device\n" );
    sd2.Disp( "hello to file hello.dat\n" );
 }
@@ -107,7 +107,7 @@ int main() {
 Une autre façon d’écrire ce code consiste à déclarer les objets `ShowData` avec portée de bloc, ce qui permet leur destruction lorsqu’ils sont hors de portée :
 
 ```cpp
-int main() {
+int :::no-loc(main):::() {
    ShowData sd1, sd2( "hello.dat" );
 
    sd1.Disp( "hello to default device\n" );
@@ -117,4 +117,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[main fonction et arguments de ligne de commande](main-function-command-line-args.md)
+[:::no-loc(main):::arguments de ligne de commande et de fonction](:::no-loc(main):::-function-command-line-args.md)

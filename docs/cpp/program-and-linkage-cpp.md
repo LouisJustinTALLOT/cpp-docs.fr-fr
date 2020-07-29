@@ -2,12 +2,12 @@
 title: Unités de traduction et liaison (C++)
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: e964a3c70c138caf8848e6a6366097cbfb90f548
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: 5a166efc7ae926f6b028c35007b0972d0a652d6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108392"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227190"
 ---
 # <a name="translation-units-and-linkage"></a>Unités de traduction et liaison
 
@@ -44,7 +44,7 @@ Dans certains cas, il peut être nécessaire de déclarer une variable globale o
 
 Une *fonction Free* est une fonction définie au niveau de la portée globale ou de l’espace de noms. Par défaut, les variables globales et les fonctions libres non const ont une *liaison externe*; ils sont visibles à partir de n’importe quelle unité de traduction du programme. Par conséquent, aucun autre objet global ne peut avoir ce nom. Un symbole avec *liaison interne* ou *aucune liaison* n’est visible que dans l’unité de traduction dans laquelle il est déclaré. Lorsqu’un nom a une liaison interne, le même nom peut exister dans une autre unité de traduction. Les variables déclarées dans des définitions de classe ou des corps de fonction n’ont aucune liaison.
 
-Vous pouvez forcer un nom global à avoir une liaison interne en le déclarant explicitement comme **static**. Cela limite sa visibilité à la même unité de traduction dans laquelle elle est déclarée. Dans ce contexte, **static** signifie autre chose que lorsqu’il est appliqué à des variables locales.
+Vous pouvez forcer un nom global à avoir une liaison interne en le déclarant explicitement comme **`static`** . Cela limite sa visibilité à la même unité de traduction dans laquelle elle est déclarée. Dans ce contexte, **`static`** signifie autre chose que lorsqu’elle est appliquée à des variables locales.
 
 Les objets suivants ont une liaison interne par défaut :
 
@@ -53,7 +53,7 @@ Les objets suivants ont une liaison interne par défaut :
 - typedefs
 - objets statiques dans la portée espace de noms
 
-Pour donner une liaison externe d’objet const, déclarez-la comme **extern** et affectez-lui une valeur :
+Pour donner une liaison externe d’objet const, déclarez-la comme **`extern`** et affectez-lui une valeur :
 
 ```cpp
 extern const int value = 42;

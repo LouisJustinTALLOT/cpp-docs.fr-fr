@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 17f7fb415303ab74f588a2205bc9430127091e96
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 6234e8a2d2c18177a1e66475fff850c76f7ef73e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227073"
 ---
 # <a name="try-finally-statement"></a>try-finally, instruction
 
@@ -45,7 +45,7 @@ La syntaxe suivante décrit l’instruction **try-finally** :
 ## <a name="grammar"></a>Grammaire
 
 *try-finally-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;try Compound *-* **Statement \_ \_finally** *Compound-Statement* ** \_ \_**
+&nbsp;&nbsp;&nbsp;&nbsp;** \_ \_ try** *Compound-Statement* ** \_ \_ finally** *Compound-Statement*
 
 L’instruction **try-finally** est une extension Microsoft des langages C et C++ qui permet aux applications cibles de garantir l’exécution du code de nettoyage lorsque l’exécution d’un bloc de code est interrompue. Le nettoyage se compose de tâches telles que la désallocation de mémoire, la fermeture de fichiers et la libération des handles de fichiers. L’instruction **try-finally** est particulièrement utile pour les routines qui ont plusieurs endroits où un contrôle est effectué pour une erreur susceptible de provoquer un retour prématuré de la routine.
 
@@ -54,17 +54,17 @@ Pour obtenir des informations connexes et un exemple de code, consultez [instruc
 > [!NOTE]
 > La gestion structurée des exceptions fonctionne avec Win32 pour les fichiers sources C et C++. Toutefois, elle n'est pas conçue spécifiquement pour C++. Vous pouvez vous assurer que votre code est plus portable en utilisant la gestion des exceptions C++. En outre, la gestion des exceptions C++ est plus souple, car elle permet de traiter des exceptions de tout type. Pour les programmes C++, il est recommandé d’utiliser le mécanisme de gestion des exceptions C++ (instructions[try, catch et Throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
 
-L’instruction composée après la clause **__try** est la section protégée. L’instruction composée après la clause **__finally** est le gestionnaire de terminaisons. Le gestionnaire spécifie un jeu d'actions qui s'exécutent lorsque la section protégée est fermée, que la section protégée soit fermée par une exception (fin anormale) ou par un passage standard (fin normale).
+L’instruction composée après la clause **__try** est la section protégée. L’instruction composée après la **`__finally`** clause est le gestionnaire de terminaisons. Le gestionnaire spécifie un jeu d'actions qui s'exécutent lorsque la section protégée est fermée, que la section protégée soit fermée par une exception (fin anormale) ou par un passage standard (fin normale).
 
 Le contrôle atteint une **__try** instruction par exécution séquentielle simple (passage). Lorsque le contrôle entre dans le **__try**, son gestionnaire associé devient actif. Si le flux de contrôle atteint la fin du bloc try, l'exécution se produit de la façon suivante :
 
 1. Le gestionnaire de terminaisons est appelé.
 
-1. Lorsque le gestionnaire de terminaisons se termine, l’exécution se poursuit après l’instruction **__finally** . Quelle que soit la façon dont la section protégée se termine (par exemple, via une instruction **goto** dans le corps protégé ou une instruction **Return** ), le gestionnaire de terminaisons est exécuté *avant que* le déroulement du contrôle ne quitte la section protégée.
+1. Une fois le gestionnaire de terminaisons terminé, l’exécution se poursuit après l' **`__finally`** instruction. Quelle que soit la façon dont la section protégée se termine (par exemple, par le biais **`goto`** d’un corps protégé ou d’une **`return`** instruction), le gestionnaire de terminaisons est exécuté *avant que* le déroulement du contrôle ne quitte la section protégée.
 
-   Une instruction **__finally** ne bloque pas la recherche d’un gestionnaire d’exceptions approprié.
+   Une **`__finally`** instruction ne bloque pas la recherche d’un gestionnaire d’exceptions approprié.
 
-Si une exception se produit dans le bloc **__try** , le système d’exploitation doit trouver un gestionnaire pour l’exception ou le programme échoue. Si un gestionnaire est trouvé, tous les blocs **__finally** et tous sont exécutés et l’exécution reprend dans le gestionnaire.
+Si une exception se produit dans le bloc **__try** , le système d’exploitation doit trouver un gestionnaire pour l’exception ou le programme échoue. Si un gestionnaire est trouvé, tous les blocs et tous **`__finally`** sont exécutés et l’exécution reprend dans le gestionnaire.
 
 Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à la fonction D, comme indiqué dans l'illustration suivante. Chaque fonction a un gestionnaire de terminaisons. Si une exception est levée dans la fonction D et gérée dans A, les gestionnaires de terminaisons sont appelés dans l'ordre suivant à mesure que le système déroule la pile : D, C, B.
 
@@ -72,21 +72,21 @@ Par exemple, supposons qu'une série d'appels de fonction lie la fonction A à 
 Fin de l'ordre d'exécution du gestionnaire
 
 > [!NOTE]
-> Le comportement de try-finally est différent de celui des autres langages qui prennent en charge l’utilisation de **finally**, tels que C#.  Un **__try** unique peut avoir, mais pas les deux, **__finally** et **__except**.  Si les deux doivent être utilisés conjointement, une instruction try-except externe doit entourer l'instruction try-finally interne.  Les règles qui spécifient le moment d'exécution de chaque blocs sont également différentes.
+> Le comportement de try-finally est différent de celui des autres langages qui prennent en charge l’utilisation de **finally**, tels que C#.  Un **__try** unique peut avoir, mais pas les deux, de **`__finally`** et **`__except`** .  Si les deux doivent être utilisés conjointement, une instruction try-except externe doit entourer l'instruction try-finally interne.  Les règles qui spécifient le moment d'exécution de chaque blocs sont également différentes.
 
-Pour la compatibilité avec les versions précédentes, **_try**, **_finally**et **_leave** sont des synonymes pour **__try**, **__finally**et **__leave** , sauf si l’option de compilateur [/za \(désactive les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
+Pour la compatibilité avec les versions précédentes, **_try**, **_finally**et **_leave** sont des synonymes pour **__try**, **`__finally`** et **`__leave`** sauf si l’option de compilateur [/za \( désactive les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
 ## <a name="the-__leave-keyword"></a>Mot clé __leave
 
-Le mot clé **__leave** est valide uniquement dans la section protégée d’une instruction **try-finally** , et son effet est d’accéder à la fin de la section protégée. L'exécution continue à la première instruction dans le gestionnaire de terminaisons.
+Le **`__leave`** mot clé est valide uniquement dans la section protégée d’une instruction **try-finally** , et son effet est d’accéder à la fin de la section protégée. L'exécution continue à la première instruction dans le gestionnaire de terminaisons.
 
-Une instruction **goto** peut également sortir de la section protégée, mais elle dégrade les performances car elle appelle le déroulement de la pile. L’instruction **__leave** est plus efficace, car elle ne provoque pas le déroulement de la pile.
+Une **`goto`** instruction peut également sortir de la section protégée, mais elle dégrade les performances car elle appelle le déroulement de la pile. L' **`__leave`** instruction est plus efficace, car elle ne provoque pas le déroulement de la pile.
 
 ## <a name="abnormal-termination"></a>Arrêt anormal
 
-La sortie d’une instruction **try-finally** à l’aide de la fonction runtime [longjmp](../c-runtime-library/reference/longjmp.md) est considérée comme un arrêt anormal. Il n’est pas non plus possible d’accéder à une instruction **__try** , mais d’en sortir un. Toutes les instructions **__finally** qui sont actives entre le point de départ (fin normale du bloc **__try** ) et la destination (le bloc **__except** qui gère l’exception) doivent être exécutées. Cela s'appelle un déroulement local.
+La sortie d’une instruction **try-finally** à l’aide de la fonction runtime [longjmp](../c-runtime-library/reference/longjmp.md) est considérée comme un arrêt anormal. Il n’est pas non plus possible d’accéder à une instruction **__try** , mais d’en sortir un. Toutes les **`__finally`** instructions qui sont actives entre le point de départ (fin normale du bloc **__try** ) et la destination (le **`__except`** bloc qui gère l’exception) doivent être exécutées. Cela s'appelle un déroulement local.
 
-Si un bloc **try** s’arrête prématurément pour une raison quelconque, y compris un saut hors du bloc, le système exécute le bloc **finally** associé dans le cadre du processus de déroulement de la pile. Dans ce cas, la fonction [AbnormalTermination](/windows/win32/Debug/abnormaltermination) retourne **true** si elle est appelée depuis le bloc **finally** ; Sinon, elle retourne **false**.
+Si un **`try`** bloc se termine prématurément pour une raison quelconque, y compris un saut hors du bloc, le système exécute le bloc **finally** associé dans le cadre du processus de déroulement de la pile. Dans ce cas, la fonction [AbnormalTermination](/windows/win32/Debug/abnormaltermination) retourne **`true`** si elle est appelée à partir du bloc **finally** ; sinon, elle retourne **`false`** .
 
 Le gestionnaire de terminaisons n’est pas appelé si un processus est supprimé au milieu de l’exécution d’une instruction **try-finally** .
 
@@ -94,7 +94,7 @@ Le gestionnaire de terminaisons n’est pas appelé si un processus est supprim�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)<br/>
+[Écriture d’un gestionnaire des arrêts](../cpp/writing-a-termination-handler.md)<br/>
 [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [Syntaxe du gestionnaire de terminaisons](/windows/win32/Debug/termination-handler-syntax)

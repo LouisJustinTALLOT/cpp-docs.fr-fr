@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: 97ef7093aa56b41b869979e09d77fc448c6cf43d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b8c7503c7d1c1b711006415a327c360731222042
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186437"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196342"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>Avertissement du compilateur (niveau 1) C4532
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186437"
 
 Le compilateur a rencontré l’un des mots clés suivants :
 
-- [continue](../../cpp/continue-statement-cpp.md)
+- [pouvoir](../../cpp/continue-statement-cpp.md)
 
 - [break](../../cpp/break-statement-cpp.md)
 
@@ -27,9 +27,9 @@ Le compilateur a rencontré l’un des mots clés suivants :
 
 provoquer un saut hors d’un bloc [__finally](../../cpp/try-finally-statement.md) ou [finally](../../dotnet/finally.md) pendant un arrêt anormal.
 
-Si une exception se produit et que la pile est déroulée pendant l’exécution des gestionnaires de terminaisons (les blocs `__finally` ou finally) et que votre code passe hors d’un bloc `__finally` avant la fin du bloc `__finally`, le comportement n’est pas défini. Le contrôle peut ne pas retourner au code de déroulement. l’exception peut donc ne pas être gérée correctement.
+Si une exception se produit et que la pile est déroulée pendant l’exécution des gestionnaires de terminaisons (les **`__finally`** blocs ou finally) et que votre code se déplace hors d’un **`__finally`** bloc avant la **`__finally`** fin du bloc, le comportement n’est pas défini. Le contrôle peut ne pas retourner au code de déroulement. l’exception peut donc ne pas être gérée correctement.
 
-Si vous devez sortir d’un bloc de **__finally** , recherchez d’abord un arrêt anormal.
+Si vous devez sortir d’un **`__finally`** bloc, recherchez d’abord un arrêt anormal.
 
 L’exemple suivant génère l’C4532 ; il vous suffit de commenter les instructions de saut pour résoudre les avertissements.
 

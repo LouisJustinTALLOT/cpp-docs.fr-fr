@@ -10,41 +10,39 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 09348d061fde4cb09eb6eb351f146404f355e184
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f7564270408d14f58d1528c1f41c0afd2dbe219c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187789"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226969"
 ---
-# <a name="__uuidof-operator"></a>__uuidof, opérateur
+# <a name="__uuidof-operator"></a>`__uuidof`, opérateur
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Récupère le GUID attaché à l’expression.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-__uuidof (expression)
-```
+> **`__uuidof (`***expression***`)`**
 
 ## <a name="remarks"></a>Notes
 
 L' *expression* peut être un nom de type, un pointeur, une référence ou un tableau de ce type, un modèle spécialisé sur ces types ou une variable de ces types. L’argument est valide tant que le compilateur peut l’utiliser pour rechercher le GUID attaché.
 
-Un cas particulier de cet intrinsèque est lorsque **0** ou null est fourni en tant qu’argument. Dans ce cas, **__uuidof** retourne un GUID composé de zéros.
+Un cas particulier de cet intrinsèque est lorsque **0** ou null est fourni en tant qu’argument. Dans ce cas, **`__uuidof`** retourne un GUID composé de zéros.
 
 Utilisez ce mot clé pour extraire le GUID attaché à :
 
-- Objet par l’attribut étendu [UUID](../cpp/uuid-cpp.md) .
+- Objet par l' [`uuid`](../cpp/uuid-cpp.md) attribut étendu.
 
-- Bloc de bibliothèque créé avec l’attribut de [module](../windows/attributes/module-cpp.md) .
+- Bloc de bibliothèque créé avec l' [`module`](../windows/attributes/module-cpp.md) attribut.
 
 > [!NOTE]
-> Dans une version Debug, **__uuidof** Initialise toujours un objet de manière dynamique (au moment de l’exécution). Dans une version Release, **__uuidof** pouvez initialiser un objet de manière statique (au moment de la compilation).
+> Dans une version Debug, **`__uuidof`** Initialise toujours un objet de manière dynamique (au moment de l’exécution). Dans une version Release, **`__uuidof`** peut initialiser de manière statique (au moment de la compilation) un objet.
 
-Pour la compatibilité avec les versions précédentes, **_uuidof** est un synonyme de **__uuidof** sauf si l’option de compilateur [/za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
+Pour la compatibilité avec les versions précédentes, **`_uuidof`** est un synonyme de, **`__uuidof`** sauf si l’option de compilateur [ `/Za` \( désactive les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
 ## <a name="example"></a>Exemple
 
@@ -73,13 +71,13 @@ int main() {
 
 ## <a name="comments"></a>Commentaires
 
-Dans les cas où le nom de la bibliothèque n’est plus dans la portée, vous pouvez utiliser `__LIBID_` au lieu de **__uuidof**. Par exemple :
+Dans les cas où le nom de la bibliothèque n’est plus dans la portée, vous pouvez utiliser à la `__LIBID_` place de **`__uuidof`** . Par exemple :
 
 ```cpp
 StringFromCLSID(__LIBID_, &lpolestr);
 ```
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

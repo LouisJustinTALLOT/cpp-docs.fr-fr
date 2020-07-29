@@ -7,16 +7,16 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: 7cac70da5dd7093ce3e9c1cf3d2350d780c6b391
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e663f33213a5fd57f2adbdcc53233c6af29954e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353731"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227372"
 ---
 # <a name="multiple-base-classes"></a>Plusieurs classes de base
 
-Une classe peut être dérivée de plus d’une classe de base. Dans un modèle multi-héritage (où les classes sont dérivées de plus d’une classe de base), les classes de base sont spécifiées à l’aide de l’élément de grammaire *de base.* Par exemple, la déclaration de classe pour `CollectionOfBook`, dérivé de `Collection` et `Book`, peut être spécifiée :
+Une classe peut être dérivée de plusieurs classes de base. Dans un modèle d’héritage multiple (où les classes sont dérivées de plusieurs classes de base), les classes de base sont spécifiées à l’aide de l’élément de grammaire *de liste de base* . Par exemple, la déclaration de classe pour `CollectionOfBook`, dérivé de `Collection` et `Book`, peut être spécifiée :
 
 ```cpp
 // deriv_MultipleBaseClasses.cpp
@@ -31,14 +31,14 @@ class CollectionOfBook : public Book, public Collection {
 
 L'ordre dans lequel les classes de base sont spécifiées n'a pas d'importance sauf dans certains cas où les constructeurs et les destructeurs sont appelés. Dans ces cas, l'ordre dans lequel les classes de base sont spécifiées a une incidence sur ce qui suit :
 
-- L'ordre dans lequel l'initialisation du constructeur est exécutée. Si votre code repose sur la partie `Book` de `CollectionOfBook` à initialiser avant la partie `Collection`, l'ordre des spécifications est important. L’initialisation a lieu dans l’ordre que les classes sont spécifiées dans la *liste de base*.
+- L'ordre dans lequel l'initialisation du constructeur est exécutée. Si votre code repose sur la partie `Book` de `CollectionOfBook` à initialiser avant la partie `Collection`, l'ordre des spécifications est important. L’initialisation a lieu dans l’ordre dans lequel les classes sont spécifiées dans la *liste de base*.
 
 - L'ordre dans lequel les destructeurs sont appelés pour effectuer le nettoyage. Là encore, si un « élément » particulier de la classe doit être présent lorsque l'autre élément est détruit, l'ordre a une importance. Les destructeurs sont appelés dans l’ordre inverse des classes spécifiées dans la *liste de base*.
 
     > [!NOTE]
     >  L'ordre de spécification des classes de base peut avoir une incidence sur la disposition de mémoire de la classe. Ne prenez aucune décision de programmation concernant l'ordre des membres de base en mémoire.
 
-Lorsque vous spécifiez la *liste de base,* vous ne pouvez pas spécifier le même nom de classe plus d’une fois. Toutefois, il est possible qu'une classe représente plusieurs fois une base indirecte par rapport à une classe dérivée plusieurs fois.
+Lorsque vous spécifiez la *liste de base*, vous ne pouvez pas spécifier plusieurs fois le même nom de classe. Toutefois, il est possible qu'une classe représente plusieurs fois une base indirecte par rapport à une classe dérivée plusieurs fois.
 
 ## <a name="virtual-base-classes"></a>Classes de base virtuelles
 
@@ -48,16 +48,16 @@ Chaque objet non virtuel contient une copie des données membres définies dans 
 
 Lorsqu'une classe de base est spécifiée comme base virtuelle, elle peut agir comme base indirecte plusieurs fois sans duplication de ses données membres. Une copie unique de ses données membres est partagée par toutes les classes de base qui l'utilisent comme base virtuelle.
 
-Lors de la déclaration d’une classe de base virtuelle, le mot clé **virtuel** apparaît dans les listes de base des classes dérivées.
+Lors de la déclaration d’une classe de base virtuelle, le **`virtual`** mot clé apparaît dans les listes de base des classes dérivées.
 
 Dans la figure ci-dessous, la hiérarchie de classes illustre un objet Lunch-Line simulé.
 
 ![Graphique Lunch-Line simulé](../cpp/media/vc38xp1.gif "Graphique Lunch-Line simulé") <br/>
-Graphique simulé de la ligne du déjeuner
+Graphique en courbes de déjeuner simulé
 
 Dans la figure, `Queue` représente la classe de base de `CashierQueue` et `LunchQueue`. Toutefois, lorsque les deux classes sont combinées pour former `LunchCashierQueue`, le problème suivant survient : la nouvelle classe contient deux sous-objets de type `Queue`, l'un provenant de `CashierQueue` et l'autre de `LunchQueue`. La figure suivante montre la disposition de mémoire conceptuelle (la disposition de mémoire réelle peut être optimisée).
 
-![Objet simulé de ligne de&#45;de déjeuner](../cpp/media/vc38xp2.gif "Objet simulé de ligne de&#45;de déjeuner") <br/>
+![Objet de ligne&#45;déjeuner simulé](../cpp/media/vc38xp2.gif "Objet de ligne&#45;déjeuner simulé") <br/>
 Objet Lunch-Line simulé
 
 Notez que deux sous-objets `Queue` figurent dans l'objet `LunchCashierQueue`. Le code suivant déclare `Queue` en tant que classe de base virtuelle :
@@ -71,27 +71,27 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 ```
 
-Le mot clé **virtuel** garantit qu’une `Queue` seule copie du sous-exemple est incluse (voir la figure suivante).
+Le **`virtual`** mot clé garantit qu’une seule copie du sous-objet `Queue` est incluse (voir la figure suivante).
 
-![Objet de ligne de&#45;de déjeuner simulé, classes de base virtuelles](../cpp/media/vc38xp3.gif "Objet de ligne de&#45;de déjeuner simulé, classes de base virtuelles") <br/>
-Objet simulé de ligne de déjeuner avec des classes de base virtuelles
+![Objet de ligne&#45;déjeuner simulé, classes de base virtuelles](../cpp/media/vc38xp3.gif "Objet de ligne&#45;déjeuner simulé, classes de base virtuelles") <br/>
+Objet de ligne de déjeuner simulé avec des classes de base virtuelles
 
 Une classe peut avoir à la fois un composant virtuel et un composant non virtuel d'un type donné. Cela se produit dans les conditions illustrées à la figure suivante.
 
-![Composants virtuels et non&#45;virtuels d’une classe](../cpp/media/vc38xp4.gif "Composants virtuels et non&#45;virtuels d’une classe") <br/>
+![Composants virtuels et non&#45;d’une classe](../cpp/media/vc38xp4.gif "Composants virtuels et non&#45;d’une classe") <br/>
 Composants virtuels et non virtuels de la même classe
 
 Dans cette figure, `CashierQueue` et `LunchQueue` utilisent `Queue` comme classe de base virtuelle. Toutefois, `TakeoutQueue` spécifie `Queue` en tant que classe de base, et non pas comme classe de base virtuelle. Par conséquent, `LunchTakeoutCashierQueue` a deux sous-objets de type `Queue` : l’un provenant du chemin d’héritage qui inclut `LunchCashierQueue` et l’autre provenant du chemin qui inclut `TakeoutQueue`. La figure ci-dessous illustre cela.
 
-![Virtual & non&#45;'héritage virtuel dans la mise en page des objets](../cpp/media/vc38xp5.gif "Virtual & non&#45;'héritage virtuel dans la mise en page des objets") <br/>
-Mise en page d’objets avec héritage virtuel et non virtuel
+![Héritage virtuel non&#45;& virtuel dans la disposition des objets](../cpp/media/vc38xp5.gif "Héritage virtuel non&#45;& virtuel dans la disposition des objets") <br/>
+Disposition des objets avec héritage virtuel et non virtuel
 
 > [!NOTE]
 > L'héritage virtuel fournit des avantages de taille significatifs par rapport à l'héritage non virtuel. Toutefois, il peut introduire une certaine surcharge de traitement.
 
-Si une classe dérivée remplace une fonction virtuelle qu'elle hérite d'une classe de base virtuelle, et si un constructeur ou un destructeur pour la classe de base dérivée appelle cette fonction à l'aide d'un pointeur désignant la classe de base virtuelle, le compilateur peut introduire des champs « vtordisp » masqués supplémentaires dans les classes dotées de bases virtuelles. L’option `/vd0` compilateur supprime l’ajout du membre caché du constructeur/destructor de déplacement de vtordisp. L’option `/vd1` compilateur, par défaut, leur permet de s’en remettre là où elles sont nécessaires. Désactivez les paramètres vtordisp seulement si vous êtes certain que tous les constructeurs et destructeurs de classe appellent virtuellement les fonctions virtuelles.
+Si une classe dérivée remplace une fonction virtuelle qu'elle hérite d'une classe de base virtuelle, et si un constructeur ou un destructeur pour la classe de base dérivée appelle cette fonction à l'aide d'un pointeur désignant la classe de base virtuelle, le compilateur peut introduire des champs « vtordisp » masqués supplémentaires dans les classes dotées de bases virtuelles. L' `/vd0` option de compilateur supprime l’ajout du membre de déplacement du constructeur/destructeur vtordisp masqué. L' `/vd1` option de compilateur, la valeur par défaut, les active là où elles sont nécessaires. Désactivez les paramètres vtordisp seulement si vous êtes certain que tous les constructeurs et destructeurs de classe appellent virtuellement les fonctions virtuelles.
 
-L’option `/vd` compilateur affecte un module de compilation entier. Utilisez `vtordisp` le pragma pour supprimer `vtordisp` puis réenable champs sur une base classe par classe:
+L' `/vd` option de compilateur affecte un module de compilation entier. Utilisez le `vtordisp` pragma pour supprimer, puis réactiver les `vtordisp` champs classe par classe :
 
 ```cpp
 #pragma vtordisp( off )
@@ -142,7 +142,7 @@ Le compilateur détecte les ambiguïtés en exécutant des tests dans cet ordre�
 
 1. Si les fonctions surchargées ne sont pas ambiguës, elles sont résolues.
 
-1. Si l'accès au nom ne respecte pas l'autorisation accès-membre, un message d'erreur est généré. (Pour plus d’informations, voir [Contrôle d’accès membre.)](../cpp/member-access-control-cpp.md)
+1. Si l'accès au nom ne respecte pas l'autorisation accès-membre, un message d'erreur est généré. (Pour plus d’informations, consultez [member-Access Control](../cpp/member-access-control-cpp.md).)
 
 Lorsqu'une expression génère une ambiguïté par héritage, vous pouvez manuellement la résoudre en qualifiant le nom en question avec son nom de classe. Pour que l'exemple précédent se compile correctement sans ambiguïtés, utilisez par exemple ce code :
 
@@ -188,7 +188,7 @@ Les conversions explicites et implicites à partir de pointeurs ou de référenc
 
 - La déclaration d'un objet de type `D`.
 
-- L’effet de l’application**&** de l’adresse de l’opérateur ( ) à cet objet. Notez que l'opérateur d'adresse fournit toujours l'adresse de base de l'objet.
+- Effet de l’application de l’opérateur d’adresse ( **&** ) à cet objet. Notez que l'opérateur d'adresse fournit toujours l'adresse de base de l'objet.
 
 - L'effet de la conversion explicite du pointeur obtenu à l'aide de l'opérateur d'adresse vers le type de classe de base `A`. Notez que forcer l'adresse de l'objet en type `A*` ne fournit pas toujours au compilateur suffisamment d'informations concernant le sous-objet de type `A` à sélectionner ; dans ce cas, deux sous-objets existent.
 
@@ -209,7 +209,7 @@ Si des classes de base virtuelles sont utilisées, les fonctions, les objets, le
 L'illustration suivante montre comment les objets sont composés à l'aide de l'héritage virtuel et non virtuel.
 
 ![Dérivation virtuelle et dérivation virtuelle non&#45;](../cpp/media/vc38xr1.gif "Dérivation virtuelle et dérivation virtuelle non&#45;") <br/>
-Dérivation virtuelle vs non virtuelle
+Dérivation virtuelle et non virtuelle
 
 Dans l'illustration, accéder à un membre de classe `A` via des classes de base non virtuelles provoque une ambiguïté ; le compilateur ne propose aucune information indiquant s'il convient d'utiliser le sous-objet associé à `B` ou le sous-objet associé à `C`. Toutefois, lorsque `A` est spécifié comme classe de base virtuelle, il n'y a aucune interrogation quant au sous-objet faisant l'objet d'un accès.
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: a5b5601c89991fbe1a148ebaf781fe2ad6a9dfc4
-ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
+ms.openlocfilehash: 5cff7a4607201175c7095a87134850583b76d636
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204137"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227086"
 ---
 # <a name="scope-c"></a>Portée (C++)
 
@@ -31,9 +31,9 @@ Il existe six types d’étendue :
 
 - **Portée locale** Un nom déclaré dans une fonction ou une expression lambda, y compris les noms de paramètres, ont une portée locale. Elles sont souvent appelées « variables locales ». Elles sont uniquement visibles à partir de leur point de déclaration jusqu’à la fin de la fonction ou du corps lambda. L’étendue locale est un type d’étendue de bloc, qui est abordé plus loin dans cet article.
 
-- **Portée** de la classe Les noms des membres de classe ont une portée de classe, qui s’étend sur toute la définition de la classe, quel que soit le point de déclaration. L’accessibilité des membres de classe est contrôlée par les mots clés **public**, **Private**et **protected** . Les membres publics ou protégés sont accessibles uniquement à l’aide des opérateurs de sélection de membres (**.** ou **->** ) ou des opérateurs de pointeur vers membre (**.** <strong>\*</strong> ou **->** <strong>\*</strong> ).
+- **Portée** de la classe Les noms des membres de classe ont une portée de classe, qui s’étend sur toute la définition de la classe, quel que soit le point de déclaration. L’accessibilité des membres de classe est contrôlée par les **`public`** **`private`** **`protected`** Mots clés, et. Les membres publics ou protégés sont accessibles uniquement à l’aide des opérateurs de sélection de membres (**.** ou **->** ) ou des opérateurs de pointeur vers membre (**.** <strong>\*</strong> ou **->** <strong>\*</strong> ).
 
-- **Portée** de l’instruction Les noms déclarés dans une instruction **for**, **If**, **while**ou **switch** sont visibles jusqu’à la fin du bloc d’instructions.
+- **Portée** de l’instruction Les noms déclarés dans une **`for`** **`if`** instruction,, **`while`** ou **`switch`** sont visibles jusqu’à la fin du bloc d’instructions.
 
 - **Portée** de la fonction Une [étiquette](labeled-statements.md) a une portée de fonction, ce qui signifie qu’elle est visible dans l’ensemble d’un corps de fonction avant son point de déclaration. La portée de la fonction permet d’écrire des instructions comme `goto cleanup` avant la déclaration de l' `cleanup` étiquette.
 
@@ -58,7 +58,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Masquage des noms de classes
 
-Vous pouvez masquer les noms de classe en déclarant une fonction, un objet, une variable ou un énumérateur dans la même portée. Toutefois, le nom de la classe est toujours accessible lorsqu’il est préfixé par la **classe**de mots clés.
+Vous pouvez masquer les noms de classe en déclarant une fonction, un objet, une variable ou un énumérateur dans la même portée. Toutefois, le nom de la classe est toujours accessible lorsqu’il est préfixé par le mot clé **`class`** .
 
 ```cpp
 // hiding_class_names.cpp
@@ -94,18 +94,18 @@ int main()
 > [!NOTE]
 > Chaque fois que le nom de la classe ( `Account` ) est appelé, la classe de mots clés doit être utilisée pour le différencier du compte de la variable de portée globale. Cette règle ne s’applique pas lorsque le nom de classe apparaît à gauche de l’opérateur de résolution de portée (::). Les noms à gauche de l'opérateur de résolution de portée sont toujours considérés comme des noms de classe.
 
-L’exemple suivant montre comment déclarer un pointeur vers un objet de type `Account` à l’aide du mot clé **Class** :
+L’exemple suivant montre comment déclarer un pointeur vers un objet de type `Account` à l’aide du **`class`** mot clé :
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
-La `Account` dans l’initialiseur (entre parenthèses) de l’instruction précédente a une portée globale ; elle est de type **double**.
+La `Account` dans l’initialiseur (entre parenthèses) de l’instruction précédente a une portée globale ; elle est de type **`double`** .
 
 > [!NOTE]
 > La réutilisation des noms d'identificateur, comme l'indique cet exemple, est considérée comme un style de programmation médiocre.
 
-Pour plus d’informations sur la déclaration et l’initialisation des objets de classe, consultez [classes, structures et unions](../cpp/classes-and-structs-cpp.md). Pour plus d’informations sur l’utilisation des opérateurs **New** et **Delete** Free-Store, consultez [opérateurs New et Delete](new-and-delete-operators.md).
+Pour plus d’informations sur la déclaration et l’initialisation des objets de classe, consultez [classes, structures et unions](../cpp/classes-and-structs-cpp.md). Pour plus d’informations sur l’utilisation des **`new`** **`delete`** opérateurs Free-Store, consultez [opérateurs New et Delete](new-and-delete-operators.md).
 
 ## <a name="hiding-names-with-global-scope"></a>Masquage des noms avec une portée globale
 

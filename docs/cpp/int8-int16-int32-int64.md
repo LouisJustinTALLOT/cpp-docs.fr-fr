@@ -22,18 +22,18 @@ helpviewer_keywords:
 - __int8 keyword [C++]
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
-ms.openlocfilehash: 4e793f23581f7dc62a39fcd8c5c504fb5a2ccbc9
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 7888a282fffbaa2a23783c3875e02838fd0b1826
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301468"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227398"
 ---
 # <a name="__int8-__int16-__int32-__int64"></a>__int8, __int16, __int32, __int64
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Prise en charge des fonctionnalités Microsoft C/C++ pour les types d'entiers dimensionnés. Vous pouvez déclarer des variables de type entier 8, 16, 32 ou 64 bits à l’aide du spécificateur de type **__int**<em>n</em> , où *n* est 8, 16, 32 ou 64.
+Prise en charge des fonctionnalités Microsoft C/C++ pour les types d'entiers dimensionnés. Vous pouvez déclarer des variables de type entier 8, 16, 32 ou 64 bits à l’aide du **`__intN`** spécificateur de type, où ***`N`*** est 8, 16, 32 ou 64.
 
 L'exemple suivant déclare une variable pour chacun de ces types d'entiers dimensionnés :
 
@@ -44,13 +44,13 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-Les types **__int8**, **__int16**et **__int32** sont des synonymes des types ANSI qui ont la même taille et sont utiles pour écrire du code portable qui se comporte de manière identique sur plusieurs plateformes. Le type de données **__int8** est synonyme du type **char**, **__int16** est synonyme du type **short**et **__int32** est synonyme du type **int**. Le type de **__int64** est synonyme de type **long**long.
+Les types **`__int8`** , **`__int16`** et **`__int32`** sont des synonymes des types ANSI qui ont la même taille, et sont utiles pour écrire du code portable qui se comporte de manière identique sur plusieurs plateformes. Le **`__int8`** type de données est synonyme de type **`char`** , **`__int16`** est synonyme de type **`short`** et **`__int32`** est synonyme de type **`int`** . Le **`__int64`** type est synonyme de type **`long long`** .
 
-Pour la compatibilité avec les versions précédentes, **_int8**, **_int16**, **_int32**et **_int64** sont des synonymes de **__int8**, **__int16**, **__int32**et **__int64** , sauf si l’option de compilateur [/za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
+Pour la compatibilité avec les versions antérieures, **`_int8`** ,, **`_int16`** **`_int32`** et **`_int64`** sont des synonymes de **`__int8`** , **`__int16`** , et, **`__int32`** **`__int64`** sauf si l’option de compilateur [ `/Za` \( Désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre qu’un paramètre __int*XX* sera promu en **int**:
+L’exemple suivant montre qu’un `__intN` paramètre sera promu **`int`** :
 
 ```cpp
 // sized_int_types.cpp
@@ -72,8 +72,6 @@ int main()
 ```Output
 func
 ```
-
-**Fin de la section spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

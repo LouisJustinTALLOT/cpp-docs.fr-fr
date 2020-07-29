@@ -11,30 +11,30 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: a16f68088ffffd6c3cf38f5ae3adda5f2d59fb57
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 822bd5efb3125e69ff60aa42ba6419969cace403
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188569"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227229"
 ---
 # <a name="operator-overloading"></a>Surcharge d’opérateur
 
-Le mot clé **Operator** déclare une fonction qui spécifie ce que signifie *Operator-Symbol* lorsqu’il est appliqué aux instances d’une classe. Cela donne à l'opérateur plusieurs significations ou le « surcharge ». Le compilateur fait la distinction entre les différentes significations d’un opérateur en examinant les types de ses opérandes.
+Le **`operator`** mot clé déclare une fonction qui spécifie le symbole de l' *opérateur* , lorsqu’il est appliqué aux instances d’une classe. Cela donne à l'opérateur plusieurs significations ou le « surcharge ». Le compilateur fait la distinction entre les différentes significations d’un opérateur en examinant les types de ses opérandes.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *type* **Operator** *opérateur-Symbol* **(** *parameter-list* **)**
+> *type* **`operator`** *Operator-Symbol* **(** *paramètre-list* **)**
 
 ## <a name="remarks"></a>Notes
 
 Vous pouvez redéfinir la fonction de la plupart des opérateurs intégrés de manière globale ou classe par classe. Les opérateurs surchargés sont implémentés en tant que fonctions.
 
-Le nom d’un opérateur surchargé est l' **opérateur** *x*, où *x* est l’opérateur tel qu’il apparaît dans le tableau suivant. Par exemple, pour surcharger l’opérateur d’addition, vous définissez une fonction appelée **Operator +** . De même, pour surcharger l’opérateur d’addition/assignation, **+=** , définissez une fonction appelée **opérateur + =** .
+Le nom d’un opérateur surchargé est **`operator`** *x*, où *x* est l’opérateur tel qu’il apparaît dans le tableau suivant. Par exemple, pour surcharger l’opérateur d’addition, vous définissez une fonction appelée **Operator +**. De même, pour surcharger l’opérateur d’addition/assignation, **+=** , définissez une fonction appelée **opérateur + =**.
 
 ### <a name="redefinable-operators"></a>Opérateurs redéfinissables
 
-|Opérateur|Name|Type|
+|Opérateur|Nom|Type|
 |--------------|----------|----------|
 |**,**|Comma|Binary|
 |**!**|NOT logique|Unaire|
@@ -79,8 +79,8 @@ Le nom d’un opérateur surchargé est l' **opérateur** *x*, où *x* est l’o
 |**&#124;=**|Assignation d'opération OR inclusive au niveau du bit|Binary|
 |**&#124;&#124;**|OU logique|Binary|
 |**~**|Complément à 1|Unaire|
-|**delete**|DELETE|—|
-|**nouveau**|Nouveau|—|
+|**`delete`**|DELETE|—|
+|**`new`**|Nouveau|—|
 |opérateurs de conversion|opérateurs de conversion|Unaire|
 
 <sup>1</sup> deux versions des opérateurs d’incrémentation et de décrémentation unaires existent : precrement et postincrémentation.
@@ -93,24 +93,24 @@ Pour plus d’informations, consultez [règles générales pour la surcharge d�
 
 - [Affectation](../cpp/assignment.md)
 
-- [Appel de fonction ](../cpp/function-call-cpp.md)
+- [Appel de fonction](../cpp/function-call-cpp.md)
 
 - [Indices](../cpp/subscripting.md)
 
-- [Accès au membre de classe](../cpp/member-access.md)
+- [Accès aux membres de la classe](../cpp/member-access.md)
 
 - [Incrémentation et décrémentation](../cpp/increment-and-decrement-operator-overloading-cpp.md).
 
 - [Conversions de type définies par l’utilisateur](../cpp/user-defined-type-conversions-cpp.md)
 
-Les opérateurs indiqués dans le tableau suivant ne peuvent pas être surchargés. La table comprend les symboles de préprocesseur **#** et **##** .
+Les opérateurs indiqués dans le tableau suivant ne peuvent pas être surchargés. Le tableau comprend les symboles de préprocesseur **#** et **##** .
 
 ### <a name="nonredefinable-operators"></a>Opérateurs non redéfinissables
 
-|Opérateur|Name|
+|Opérateur|Nom|
 |-|-|
 |**.**|Sélection de membres|
-|**.&#42;**|Sélection de pointeur de membre|
+|**. &#42;**|Sélection de pointeur de membre|
 |**::**|Résolution de portée|
 |**? :**|Logique conditionnelle|
 |**#**|Préprocesseur convertir en type string|
@@ -125,7 +125,7 @@ pt.operator+( 3 );  // Call addition operator to add 3 to pt.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant surcharge l’opérateur **+** pour ajouter deux nombres complexes et retourne le résultat.
+L’exemple suivant surcharge l' **+** opérateur pour ajouter deux nombres complexes et retourne le résultat.
 
 ```cpp
 // operator_overloading.cpp
@@ -162,7 +162,7 @@ int main() {
 
 ## <a name="in-this-section"></a>Contenu de cette section
 
-- [Règles générales de surcharge d’opérateur](../cpp/general-rules-for-operator-overloading.md)
+- [Règles générales pour la surcharge d’opérateur](../cpp/general-rules-for-operator-overloading.md)
 
 - [Surcharge des opérateurs unaires](../cpp/overloading-unary-operators.md)
 
@@ -170,7 +170,7 @@ int main() {
 
 - [Affectation](../cpp/assignment.md)
 
-- [Appel de fonction ](../cpp/function-call-cpp.md)
+- [Appel de fonction](../cpp/function-call-cpp.md)
 
 - [Indices](../cpp/subscripting.md)
 

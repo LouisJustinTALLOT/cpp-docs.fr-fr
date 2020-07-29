@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 672156e65e223be45c91558ed91065859566a8b9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367903"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227281"
 ---
 # <a name="nested-class-declarations"></a>Déclarations de classes imbriquées
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput`et `BufferedIO::BufferedOutput` sont `BufferedIO`déclarés à l’intérieur . Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`. Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.
+`BufferedIO::BufferedInput`et `BufferedIO::BufferedOutput` sont déclarées dans `BufferedIO` . Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`. Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.
 
 Les classes imbriquées ne peuvent utiliser directement les noms, les noms de types, les noms des membres statiques et les énumérateurs qu'à partir de la classe englobante. Pour utiliser des noms d'autres membres de classe, vous devez utiliser des pointeurs, les références ou des noms d'objet.
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-Dans l’exemple précédent, la syntaxe *de type qualifié* est utilisée pour déclarer le nom de la fonction. La déclaration :
+Dans l’exemple précédent, la syntaxe *Qualified-type-name* est utilisée pour déclarer le nom de la fonction. La déclaration :
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-signifie « la fonction `read` qui est membre de la classe `BufferedInput` qui est dans la portée de la classe `BufferedIO`  ». Étant donné que cette déclaration utilise la syntaxe *de type qualifié,* des constructions de la forme suivante sont possibles :
+signifie « la fonction `read` qui est membre de la classe `BufferedInput` qui est dans la portée de la classe `BufferedIO`  ». Étant donné que cette déclaration utilise la syntaxe *Qualified-type-name* , les constructions de la forme suivante sont possibles :
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-La déclaration précédente est équivalente à la précédente, mais elle utilise un nom **dactylographe** à la place des noms de classe.
+La déclaration précédente est équivalente à la précédente, mais elle utilise un **`typedef`** nom à la place des noms de classe.
 
 ## <a name="friend-functions-in-nested-classes"></a>Fonctions friend dans les classes imbriquées
 
