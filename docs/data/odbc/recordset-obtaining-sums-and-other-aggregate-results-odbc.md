@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9e70716ad90a14bbed552d47f48d5a3317e5a62
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368654"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225707"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset : calculs de totaux et autres résultats de regroupement (ODBC)
 
@@ -36,7 +36,7 @@ Cette rubrique explique comment obtenir les résultats d’agrégation avec les 
 
 - **COUNT** comptabilise le nombre d’enregistrements dans une colonne de n’importe quel type de données.
 
-Ces fonctions SQL s’utilisent pour obtenir des informations statistiques sur les enregistrements contenus dans une source de données plutôt que pour extraire des enregistrements de la source de données. Le recordset créé se compose généralement d’un seul enregistrement (si toutes les colonnes sont des agrégats) contenant une valeur. (Il peut y avoir plus d’un enregistrement si vous avez utilisé une clause **GROUPE BY.)** Cette valeur est le résultat du calcul ou de l’extraction effectué par la fonction SQL.
+Ces fonctions SQL s’utilisent pour obtenir des informations statistiques sur les enregistrements contenus dans une source de données plutôt que pour extraire des enregistrements de la source de données. Le recordset créé se compose généralement d’un seul enregistrement (si toutes les colonnes sont des agrégats) contenant une valeur. (Il peut y avoir plus d’un enregistrement si vous avez utilisé une clause **Group by** .) Cette valeur est le résultat du calcul ou de l’extraction effectué par la fonction SQL.
 
 > [!TIP]
 > Quand vous ajoutez une clause SQL **GROUP BY** (et éventuellement une clause **HAVING**) à l’instruction SQL, placez-la à la fin de `m_strFilter`. Par exemple :
@@ -50,13 +50,13 @@ Vous pouvez limiter le nombre d’enregistrements utilisés pour obtenir des ré
 > [!CAUTION]
 > Certains opérateurs d’agrégation retournent un type de données différent des colonnes sur lesquelles porte l’agrégation.
 
-- **SUM** et **AVG** peuvent retourner un type de données de longueur immédiatement supérieure (par exemple, l’appel avec `int` retourne le type **LONG** ou **double**).
+- **Sum** et **AVG** peuvent retourner le plus grand type de données suivant (par exemple, l’appel de avec **`int`** retourne une **valeur long** ou **`double`** ).
 
 - **COUNT** retourne généralement le type **LONG** indépendamment du type de la colonne cible.
 
 - **MAX** et **MIN** retournent le même type de données que les colonnes utilisées pour le calcul.
 
-     Par exemple, l’Assistant **Ajouter une classe** crée `long` `m_lSales` dans le cas d’une colonne Sales, mais vous devez le remplacer par un membre de données `double m_dblSumSales` pouvant contenir le résultat de l’agrégation. Consultez l’exemple qui suit.
+     Par exemple, l’Assistant **Ajouter une classe** crée **`long`** `m_lSales` pour s’adapter à une colonne sales, mais vous devez le remplacer par un `double m_dblSumSales` membre de données pour prendre en charge le résultat de l’agrégat. Consultez l’exemple qui suit.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Pour obtenir un résultat d’agrégation à partir d’un recordset
 
@@ -94,4 +94,4 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : sélection d'enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Recordset : sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

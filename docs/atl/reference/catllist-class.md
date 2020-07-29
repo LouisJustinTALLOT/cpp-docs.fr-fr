@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 2c16713af11a915772085165ed294cba4ae337f2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 15830a30e8236a13f3911d1b84d3727d3246fc0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168044"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226670"
 ---
 # <a name="catllist-class"></a>CAtlList, classe
 
@@ -266,7 +266,7 @@ Destructeur.
 
 Libère toutes les ressources allouées, y compris un appel à [CAtlList :: RemoveAll](#removeall) pour supprimer tous les éléments de la liste.
 
-Dans les versions Debug, un échec d’assertion se produit si la liste contient toujours des éléments après l' `RemoveAll`appel à.
+Dans les versions Debug, un échec d’assertion se produit si la liste contient toujours des éléments après l’appel à `RemoveAll` .
 
 ## <a name="catllistfind"></a><a name="find"></a>CAtlList :: find
 
@@ -343,9 +343,9 @@ Référence à l’élément ou copie de celui-ci.
 
 ### <a name="remarks"></a>Notes
 
-Si la liste est **const**, `GetAt` retourne une copie de l’élément. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
+Si la liste est **`const`** , `GetAt` retourne une copie de l’élément. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
 
-Si la liste n’est pas **const**, `GetAt` retourne une référence à l’élément. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
+Si la liste n’est pas **`const`** , `GetAt` retourne une référence à l’élément. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
 
 Dans les versions Debug, un échec d’assertion se produit si *pos* est égal à null.
 
@@ -384,9 +384,9 @@ Retourne une référence à, ou une copie de, l’élément au début de la list
 
 ### <a name="remarks"></a>Notes
 
-Si la liste est **const**, `GetHead` retourne une copie de l’élément au début de la liste. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
+Si la liste est **`const`** , `GetHead` retourne une copie de l’élément au début de la liste. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
 
-Si la liste n’est pas **const**, `GetHead` retourne une référence à l’élément au début de la liste. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
+Si la liste n’est pas **`const`** , `GetHead` retourne une référence à l’élément situé à l’en-tête de la liste. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
 
 Dans les versions Debug, un échec d’assertion se produit si le début de la liste pointe vers NULL.
 
@@ -426,13 +426,13 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *imprim*<br/>
-Valeur de position, retournée par un appel précédent `GetNext`à, [CAtlList :: GetHeadPosition](#getheadposition)ou autre `CAtlList` méthode.
+Valeur de POSITION, retournée par un appel précédent à `GetNext` , [CAtlList :: GetHeadPosition](#getheadposition)ou autre `CAtlList` méthode.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la liste est **const**, `GetNext` retourne une copie de l’élément suivant de la liste. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
+Si la liste est **`const`** , `GetNext` retourne une copie de l’élément suivant de la liste. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
 
-Si la liste n’est pas **const**, `GetNext` retourne une référence à l’élément suivant de la liste. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
+Si la liste n’est pas **`const`** , `GetNext` retourne une référence à l’élément suivant de la liste. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
 
 ### <a name="remarks"></a>Notes
 
@@ -454,13 +454,13 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *imprim*<br/>
-Valeur de position, retournée par un appel précédent `GetPrev`à, [CAtlList :: GetTailPosition](#gettailposition)ou autre `CAtlList` méthode.
+Valeur de POSITION, retournée par un appel précédent à `GetPrev` , [CAtlList :: GetTailPosition](#gettailposition)ou autre `CAtlList` méthode.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la liste est **const**, `GetPrev` retourne une copie d’un élément de la liste. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
+Si la liste est **`const`** , `GetPrev` retourne une copie d’un élément de la liste. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
 
-Si la liste n’est pas **const**, `GetPrev` retourne une référence à un élément de la liste. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
+Si la liste n’est pas **`const`** , `GetPrev` retourne une référence à un élément de la liste. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
 
 ### <a name="remarks"></a>Notes
 
@@ -485,9 +485,9 @@ Retourne une référence à ou une copie de l’élément à la fin de la liste.
 
 ### <a name="remarks"></a>Notes
 
-Si la liste est **const**, `GetTail` retourne une copie de l’élément au début de la liste. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
+Si la liste est **`const`** , `GetTail` retourne une copie de l’élément au début de la liste. Cela permet d’utiliser la méthode uniquement à droite d’une instruction d’assignation et de protéger la liste contre toute modification.
 
-Si la liste n’est pas **const**, `GetTail` retourne une référence à l’élément au début de la liste. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
+Si la liste n’est pas **`const`** , `GetTail` retourne une référence à l’élément situé à l’en-tête de la liste. Cela permet d’utiliser la méthode de chaque côté d’une instruction d’assignation, ce qui permet de modifier les entrées de liste.
 
 Dans les versions Debug, un échec d’assertion se produit si la fin de la liste pointe vers la valeur NULL.
 
@@ -798,5 +798,5 @@ Permute les éléments aux deux positions spécifiées. Dans les versions Debug,
 
 ## <a name="see-also"></a>Voir aussi
 
-[CList, classe](../../mfc/reference/clist-class.md)<br/>
+[CList (classe)](../../mfc/reference/clist-class.md)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
-ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9da9a566ef0b8d34a1a3d64dd2b8ce659194e6ce
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234431"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226377"
 ---
 # <a name="definitions-and-conventions"></a>Définitions et conventions
 
@@ -28,7 +28,7 @@ Les conventions syntaxiques utilisent différents attributs de police pour diff�
 |Attribut|Description|
 |---------------|-----------------|
 |*élément non terminal*|Le type italique indique des symboles non terminaux.|
-|**const**|Les symboles terminaux en gras sont des mots réservés littéraux et des symboles littéraux qui doivent être écrits comme indiqué. Les caractères situés dans ce contexte respectent toujours la casse.|
+|**`const`**|Les symboles terminaux en gras sont des mots réservés littéraux et des symboles littéraux qui doivent être écrits comme indiqué. Les caractères situés dans ce contexte respectent toujours la casse.|
 |<sub>option</sub>|Les non terminaux suivis de <sub>OPT</sub> sont toujours facultatifs.|
 |police par défaut|Les caractères dans le jeu décrit ou répertorié dans cette police peuvent être utilisés comme terminaux dans les instructions C.|
 
@@ -36,4 +36,4 @@ Un signe deux-points (**:**) qui suit un symbole non terminal introduit sa défi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Résumé de syntaxe du langage C](../c-language/c-language-syntax-summary.md)
+[Résumé de la syntaxe du langage C](../c-language/c-language-syntax-summary.md)

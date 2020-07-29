@@ -7,16 +7,16 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: c1b9d8f6510dfe15644f0e47cad7e0aecbac36c9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6475bc3703ce1bd7cf6103f4be8c12edc36e98b9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180974"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226006"
 ---
 # <a name="class-c"></a>class (C++)
 
-Le mot clé **Class** déclare un type de classe ou définit un objet d’un type de classe.
+Le **`class`** mot clé déclare un type de classe ou définit un objet d’un type de classe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,7 +35,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 Spécifications de modèle facultatives. Pour plus d’informations, consultez [modèles](templates-cpp.md).
 
 *class*<br/>
-Mot clé **Class** .
+**`class`** Mot clé.
 
 *MS-decl-spec*<br/>
 Spécification de classe de stockage facultative. Pour plus d’informations, reportez-vous au mot clé [__declspec](../cpp/declspec.md) .
@@ -50,13 +50,13 @@ Liste facultative des classes ou structures dont cette classe dérivera ses memb
 Liste des membres de la classe. Pour plus d’informations, consultez [vue d’ensemble des membres de classe](../cpp/class-member-overview.md) .
 
 *declarators*<br/>
-Liste des déclarateurs spécifiant les noms d’une ou plusieurs instances du type de classe. Les déclarateurs peuvent inclure des listes d’initialiseurs si toutes les données membres de la classe sont **publiques**. Cela est plus courant dans les structures, dont les membres de données sont **publics** par défaut, que dans les classes. Pour plus d’informations, consultez [vue d’ensemble des déclarateurs](../cpp/overview-of-declarators.md) .
+Liste des déclarateurs spécifiant les noms d’une ou plusieurs instances du type de classe. Les déclarateurs peuvent inclure des listes d’initialiseurs si toutes les données membres de la classe sont **`public`** . Cela est plus courant dans les structures, dont les membres de données sont **`public`** par défaut, que dans les classes. Pour plus d’informations, consultez [vue d’ensemble des déclarateurs](../cpp/overview-of-declarators.md) .
 
 ## <a name="remarks"></a>Notes
 
 Pour plus d’informations sur les classes en général, reportez-vous à l’une des rubriques suivantes :
 
-- [struct](../cpp/struct-cpp.md)
+- [modélis](../cpp/struct-cpp.md)
 
 - [union](../cpp/unions.md)
 
@@ -66,7 +66,7 @@ Pour plus d’informations sur les classes en général, reportez-vous à l’un
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Pour plus d’informations sur les classes et les C++structs C++managés dans/CLI et/CX, consultez [classes et structs](../extensions/classes-and-structs-cpp-component-extensions.md)
+Pour plus d’informations sur les classes et les structures managées en C++/CLI et C++/CX, consultez [classes et structs](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>Exemple
 
@@ -78,7 +78,6 @@ Pour plus d’informations sur les classes et les C++structs C++managés dans/CL
 
 #include <iostream>
 #include <string>
-#define TRUE = 1
 using namespace std;
 
 class dog

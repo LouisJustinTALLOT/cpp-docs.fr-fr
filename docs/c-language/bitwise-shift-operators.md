@@ -7,27 +7,27 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8a72a8657daec39bb042fea744b5f97d3b34009
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326025"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226527"
 ---
 # <a name="bitwise-shift-operators"></a>Opérateurs de décalage de bits
 
-Les opérateurs de décalage décalent leur premier**&lt;** opérande vers la gauche**>>**() ou vers la droite () du nombre de positions que le second opérande spécifie.
+Les opérateurs de décalage décalent leur premier opérande vers la gauche ( **&lt;&lt;** ) ou vers la droite ( **>>** ) du nombre de positions que le second opérande spécifie.
 
 ## <a name="syntax"></a>Syntaxe
 
 *shift-expression* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Shift-expression* ** &lt; ** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Shift-expression* **&lt;&lt;** *additive-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Shift-expression* **>>** *additive-expression*
 
 Les deux opérandes doivent être des valeurs intégrales. Ces opérateurs exécutent les conversions arithmétiques habituelles ; le type du résultat est le type de l'opérande gauche après conversion.
 
-Pour les décalages vers la gauche, les bits droits libérés prennent la valeur 0. Pour les décalages vers la droite, les bits gauche libérés sont remplis en fonction du type du premier opérande après conversion. Si le type est `unsigned`, ils prennent la valeur 0. Sinon, ils sont remplis avec des copies du bit de signe. Pour les opérateurs à décalage vers la gauche sans dépassement de capacité, l'instruction
+Pour les décalages vers la gauche, les bits droits libérés prennent la valeur 0. Pour les décalages vers la droite, les bits gauche libérés sont remplis en fonction du type du premier opérande après conversion. Si le type est **`unsigned`** , ils ont la valeur 0. Sinon, ils sont remplis avec des copies du bit de signe. Pour les opérateurs à décalage vers la gauche sans dépassement de capacité, l'instruction
 
 ```C
 expr1 << expr2

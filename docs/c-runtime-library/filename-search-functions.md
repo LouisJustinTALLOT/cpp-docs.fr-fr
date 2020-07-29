@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226240"
 ---
 # <a name="filename-search-functions"></a>Fonctions de recherche de nom de fichier
 
@@ -88,7 +88,7 @@ Fichier système. Ne s’affiche généralement pas avec la commande **DIR** , s
 
 Vous pouvez imbriquer les fonctions `_find` . Par exemple, si un appel à `_findfirst` ou `_findnext` trouve le fichier qui est un sous-répertoire, une nouvelle recherche peut être lancée avec un autre appel à `_findfirst` ou `_findnext`.
 
-`_wfindfirst` et `_wfindnext` sont des versions à caractères larges de `_findfirst` et `_findnext`. L’argument de structure des versions à caractères larges a le type de données `_wfinddata_t` , qui est défini dans IO.h et dans Wchar.h. Les champs de ce type de données sont les mêmes que ceux du type de données `_finddata_t` , sauf que dans `_wfinddata_t` , le champ de nom est de type `wchar_t` et non `char`. Sinon, `_wfindfirst` et `_wfindnext` se comportent de la même façon que `_findfirst` et `_findnext`.
+`_wfindfirst` et `_wfindnext` sont des versions à caractères larges de `_findfirst` et `_findnext`. L’argument de structure des versions à caractères larges a le type de données `_wfinddata_t` , qui est défini dans IO.h et dans Wchar.h. Les champs de ce type de données sont les mêmes que ceux du `_finddata_t` type de données, sauf que dans `_wfinddata_t` le champ de nom est de type **`wchar_t`** et non de type **`char`** . Sinon, `_wfindfirst` et `_wfindnext` se comportent de la même façon que `_findfirst` et `_findnext`.
 
 `_findfirst` et `_findnext` utilisent le type de temps 64 bits. Si vous devez utiliser l’ancien type de temps 32 bits, vous pouvez définir `_USE_32BIT_TIME_T`. Les versions de ces fonctions qui ont le suffixe `32` dans leur nom utilisent le type de temps 32 bits et celles avec le suffixe `64` utilisent le type de temps 64 bits.
 
@@ -100,11 +100,11 @@ Les fonctions `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`et `_wfindn
 |---------------|---------------|--------------------|
 |`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
 |`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
+|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|**`__int64`**|
+|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t` est un `typedef` pour `unsigned long` (32 bits).
+`_fsize_t`est un **`typedef`** pour **`unsigned long`** (32 bits).
 
 ## <a name="example"></a>Exemple
 

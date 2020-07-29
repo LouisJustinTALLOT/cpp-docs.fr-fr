@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916717"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226175"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -76,11 +76,11 @@ Les fonctions **Round** retournent une valeur à virgule flottante qui représen
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Aucun|**_DOMAIN**|
+|± **QNAN**, **IND**|aucun|**_DOMAIN**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **arrondi** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Round** prend toujours et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges d’une **séquence** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, **Round** prend toujours et retourne un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: 7f15e16b075b9a5327723a7f081100313f14ea77
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 699e62362bc74009e3faed3b4fd66b579c9c4cd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167719"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226657"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr, classe
 
@@ -53,7 +53,7 @@ Type de pointeur.
 |----------|-----------------|
 |[CAutoPtr :: Attach](#attach)|Appelez cette méthode pour prendre possession d’un pointeur existant.|
 |[CAutoPtr ::D Etach](#detach)|Appelez cette méthode pour libérer la propriété d’un pointeur.|
-|[CAutoPtr :: Free](#free)|Appelez cette méthode pour supprimer un objet désigné par un `CAutoPtr`.|
+|[CAutoPtr :: Free](#free)|Appelez cette méthode pour supprimer un objet désigné par un `CAutoPtr` .|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
@@ -73,11 +73,11 @@ Type de pointeur.
 
 Cette classe fournit des méthodes pour créer et gérer un pointeur intelligent, ce qui vous permet de vous protéger contre les fuites de mémoire en libérant automatiquement les ressources lorsqu’elles sont hors de portée.
 
-En outre `CAutoPtr`, le constructeur de copie et l’opérateur d’assignation transfère la propriété du pointeur, en copiant le pointeur source vers le pointeur de destination et en définissant le pointeur source sur la valeur null. Il est donc impossible d’avoir deux `CAutoPtr` objets qui stockent chacun le même pointeur, ce qui réduit la possibilité de supprimer deux fois le même pointeur.
+En outre, le `CAutoPtr` constructeur de copie et l’opérateur d’assignation transfère la propriété du pointeur, en copiant le pointeur source vers le pointeur de destination et en définissant le pointeur source sur la valeur null. Il est donc impossible d’avoir deux `CAutoPtr` objets qui stockent chacun le même pointeur, ce qui réduit la possibilité de supprimer deux fois le même pointeur.
 
-`CAutoPtr`simplifie également la création de collections de pointeurs. Au lieu de dériver une classe de collection et de substituer le destructeur, il est plus simple de créer une `CAutoPtr` collection d’objets. Lorsque la collection est supprimée, `CAutoPtr` les objets sont hors de portée et se suppriment automatiquement.
+`CAutoPtr`simplifie également la création de collections de pointeurs. Au lieu de dériver une classe de collection et de substituer le destructeur, il est plus simple de créer une collection d' `CAutoPtr` objets. Lorsque la collection est supprimée, les `CAutoPtr` objets sont hors de portée et se suppriment automatiquement.
 
-Les [CHeapPtr](../../atl/reference/cheapptr-class.md) et les variantes fonctionnent de la même `CAutoPtr`façon que, sauf qu’ils allouent et libèrent de la mémoire à l’aide de différentes fonctions de tas au lieu des opérateurs C++ **New** et **Delete** . [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) est similaire à `CAutoPtr`, la seule différence étant qu’il utilise **Vector New []** et **Vector delete []** pour allouer et libérer de la mémoire.
+Les [CHeapPtr](../../atl/reference/cheapptr-class.md) et les variantes fonctionnent de la même façon que `CAutoPtr` , sauf qu’ils allouent et libèrent de la mémoire à l’aide de différentes fonctions de tas au lieu des **`new`** opérateurs C++ et **`delete`** . [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) est similaire à `CAutoPtr` , la seule différence étant qu’il utilise **Vector New []** et **Vector delete []** pour allouer et libérer de la mémoire.
 
 Voir aussi [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) et [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) lorsque des tableaux ou des listes de pointeurs intelligents sont requis.
 
@@ -133,7 +133,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 Pointeur existant.
 
 *TSrc*<br/>
-Type géré par un autre `CAutoPtr`, utilisé pour initialiser l’objet actuel.
+Type géré par un autre `CAutoPtr` , utilisé pour initialiser l’objet actuel.
 
 ### <a name="remarks"></a>Notes
 
@@ -169,7 +169,7 @@ Retourne une copie du pointeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère la propriété d’un pointeur, définit la variable de membre de données [CAutoPtr :: m_p](#m_p) sur la valeur null et retourne une copie du pointeur. Après l' `Detach`appel de, il incombe au programmeur de libérer toutes les ressources allouées sur lesquelles l' `CAutoPtr` objet a pu supposer Reponsibility précédemment.
+Libère la propriété d’un pointeur, définit la variable de membre de données [CAutoPtr :: m_p](#m_p) sur la valeur null et retourne une copie du pointeur. Après l’appel de `Detach` , il incombe au programmeur de libérer toutes les ressources allouées sur lesquelles l' `CAutoPtr` objet a pu supposer Reponsibility précédemment.
 
 ### <a name="example"></a>Exemple
 
@@ -177,7 +177,7 @@ Consultez l’exemple dans la [vue d’ensemble de CAutoPtr](../../atl/reference
 
 ## <a name="cautoptrfree"></a><a name="free"></a>CAutoPtr :: Free
 
-Appelez cette méthode pour supprimer un objet désigné par un `CAutoPtr`.
+Appelez cette méthode pour supprimer un objet désigné par un `CAutoPtr` .
 
 ```cpp
 void Free() throw();
@@ -221,7 +221,7 @@ Type de classe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une référence à un **>\< T CAutoPtr **.
+Retourne une référence à un **CAutoPtr \< T > **.
 
 ### <a name="remarks"></a>Notes
 
@@ -245,7 +245,7 @@ Retourne la valeur de la variable de membre de données [CAutoPtr :: m_p](#m_p)
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle pointe l' `CAutoPtr` objet. Dans les versions Debug, un échec d’assertion se produit `CAutoPtr` si le pointe vers la valeur null.
+Utilisez cet opérateur pour appeler une méthode dans une classe vers laquelle pointe l' `CAutoPtr` objet. Dans les versions Debug, un échec d’assertion se produit si le `CAutoPtr` pointe vers la valeur null.
 
 ### <a name="example"></a>Exemple
 

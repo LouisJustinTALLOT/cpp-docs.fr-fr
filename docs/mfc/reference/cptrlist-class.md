@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
-ms.openlocfilehash: 5b88b0950b3b46f9738bd26080883c00d46f8555
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7da4fe52d25d9ffdf6371aa40f41d7082f1165c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372437"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226839"
 ---
 # <a name="cptrlist-class"></a>CPtrList, classe
 
@@ -27,7 +27,7 @@ class CPtrList : public CObject
 
 ## <a name="members"></a>Membres
 
-Les fonctions membres de `CPtrList` sont similaires aux fonctions membres de classe [CObList](../../mfc/reference/coblist-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObList` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez par un pointeur vers **void**.
+Les fonctions membres de `CPtrList` sont similaires aux fonctions membres de la classe [CObList](../../mfc/reference/coblist-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObList` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur sous la forme d’un paramètre de fonction ou d’une valeur de retour, remplacez un pointeur par **`void`** .
 
 `CObject*& CObList::GetHead() const;`
 
@@ -37,13 +37,13 @@ par exemple, se traduit par
 
 ## <a name="remarks"></a>Notes
 
-`CPtrList` incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge d’accès de type au moment de l’exécution et le vidage à un `CDumpContext` objet. Si vous avez besoin d’un vidage d’éléments de liste individuels de pointeur, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur.
+`CPtrList`incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un `CDumpContext` objet. Si vous avez besoin d’un vidage d’éléments de liste de pointeurs individuels, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
 
-Listes de pointeur ne peut pas être sérialisés.
+Les listes de pointeurs ne peuvent pas être sérialisées.
 
-Quand un `CPtrList` objet est supprimé, ou lorsque ses éléments sont supprimés, seuls les pointeurs sont supprimées, pas les entités qu’elles référencent.
+Lorsqu’un `CPtrList` objet est supprimé ou que ses éléments sont supprimés, seuls les pointeurs sont supprimés, et non les entités auxquelles ils font référence.
 
-Pour plus d’informations sur l’utilisation de `CPtrList`, consultez l’article [Collections](../../mfc/collections.md).
+Pour plus d’informations sur l’utilisation de `CPtrList` , consultez l’article [Collections](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -51,12 +51,12 @@ Pour plus d’informations sur l’utilisation de `CPtrList`, consultez l’arti
 
 `CPtrList`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxcoll.h
+**En-tête :** afxcoll. h
 
 ## <a name="see-also"></a>Voir aussi
 
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CObList, classe](../../mfc/reference/coblist-class.md)
+[CObList (classe)](../../mfc/reference/coblist-class.md)

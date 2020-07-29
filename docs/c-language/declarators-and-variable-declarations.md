@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b20cde6982e99dedaff59518b71c041233a01dd8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234521"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226449"
 ---
 # <a name="declarators-and-variable-declarations"></a>Déclarateurs et déclarations de variable
 
@@ -26,7 +26,7 @@ Le reste de cette section décrit la forme et la signification des déclarations
 |[Structures](../c-language/structure-declarations.md)|Variables composées d’une collection de valeurs qui peuvent avoir des types différents|
 |[Unions](../c-language/union-declarations.md)|Variables composées de plusieurs valeurs de types différents qui occupent le même espace de stockage|
 
-Un déclarateur est la partie d'une déclaration qui spécifie le nom qui doit être introduit dans le programme. Il peut inclure des modificateurs tels <strong>\*</strong> que (pointeur vers) et l’un des mots clés de convention d’appel Microsoft.
+Un déclarateur est la partie d'une déclaration qui spécifie le nom qui doit être introduit dans le programme. Il peut inclure des modificateurs tels que <strong>\*</strong> (pointeur vers) et l’un des mots clés de convention d’appel Microsoft.
 
 **Spécifique à Microsoft**
 
@@ -36,7 +36,7 @@ Dans le déclarateur
 __declspec(thread) char *var;
 ```
 
-`char` est le spécificateur de type, `__declspec(thread)` et `*` sont les modificateurs, et `var` est le nom de l'identificateur.
+**`char`** est le spécificateur de type, `__declspec(thread)` et `*` sont les modificateurs, et `var` est le nom de l’identificateur.
 
 **FIN spécifique à Microsoft**
 
@@ -65,7 +65,7 @@ Vous utilisez des déclarateurs pour déclarer des tableaux de valeurs, des poin
 > [!NOTE]
 > Consultez la syntaxe des *déclarations* dans la section [Vue d’ensemble des déclarations](../c-language/overview-of-declarations.md) ou [Résumé de syntaxe du langage C](../c-language/c-language-syntax-summary.md) pour la syntaxe qui référence un *déclarateur*.
 
-Lorsqu'un déclarateur se compose d'un identificateur non modifié, l'élément déclaré a un type de base. Si un astérisque (<strong>\*</strong>) apparaît à gauche d’un identificateur, le type est remplacé par un type pointeur. Si l’identificateur est suivi de crochets (**[ ]**), le type est remplacé par un type tableau. Si l'identificateur est suivi de parenthèses, le type est remplacé par un type fonction. Pour plus d’informations sur l’interprétation de la priorité dans les déclarations, consultez [Interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md).
+Lorsqu'un déclarateur se compose d'un identificateur non modifié, l'élément déclaré a un type de base. Si un astérisque ( <strong>\*</strong> ) apparaît à gauche d’un identificateur, le type est remplacé par un type pointeur. Si l’identificateur est suivi de crochets (**[ ]**), le type est remplacé par un type tableau. Si l'identificateur est suivi de parenthèses, le type est remplacé par un type fonction. Pour plus d’informations sur l’interprétation de la priorité dans les déclarations, consultez [Interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md).
 
 Chaque déclarateur déclare au moins un identificateur. Un déclarateur doit contenir un spécificateur de type afin que la déclaration soit complète. Le spécificateur de type indique le type des éléments d’un type tableau, le type d’objet adressé par un type pointeur ou le type de retour d’une fonction.
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: fc1dfcc54259dfe40d2fc37be1e1c0ab63ab7c4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916309"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226214"
 ---
 # <a name="_getw"></a>_getw
 
@@ -56,9 +56,9 @@ Pointeur désignant la structure **FILE**.
 
 **_getw** retourne la valeur entière lue. Une valeur de retour de **EOF** indique une erreur ou la fin du fichier. Toutefois, étant donné que la valeur **EOF** est également une valeur entière légitime, utilisez **feof** ou un pour vérifier une condition d’erreur **ou de fin** de fichier. Si *Stream* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_getw** lit la valeur binaire suivante de type **int** à partir du fichier associé au *flux* et incrémente le pointeur de fichier associé (le cas échéant) pour pointer vers le caractère non lu suivant. **_getw** n’assume pas l’alignement spécial des éléments dans le flux. Des problèmes de Portage peuvent survenir avec **_getw** car la taille du type **int** et l’ordre des octets dans le type **int** diffèrent entre les systèmes.
+La fonction **_getw** lit la valeur binaire suivante du type **`int`** à partir du fichier associé au *flux* et incrémente le pointeur de fichier associé (le cas échéant) pour pointer vers le caractère non lu suivant. **_getw** n’assume pas l’alignement spécial des éléments dans le flux. Des problèmes de Portage peuvent survenir avec **_getw** car la taille du **`int`** type et l’ordre des octets dans le **`int`** type diffèrent d’un système à l’autre.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -70,7 +70,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_getw.c

@@ -1,12 +1,12 @@
 ---
-title: setlocale, _wsetlocale
-description: Décrit les fonctions setlocale de la bibliothèque Microsoft C Runtime (CRT _wsetlocale) et.
+title: ':::no-loc(setlocale):::, :::no-loc(_wsetlocale):::'
+description: 'Décrit les fonctions de la bibliothèque Microsoft C Runtime (CRT) :::no-loc(setlocale)::: et :::no-loc(_wsetlocale)::: .'
 ms.date: 4/2/2020
 api_name:
-- _wsetlocale
-- setlocale
-- _o__wsetlocale
-- _o_setlocale
+- ':::no-loc(_wsetlocale):::'
+- ':::no-loc(setlocale):::'
+- '_o_:::no-loc(_wsetlocale):::'
+- '_o_:::no-loc(setlocale):::'
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,40 +25,40 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _wsetlocale
-- _tsetlocale
-- setlocale
+- ':::no-loc(_wsetlocale):::'
+- '_t:::no-loc(setlocale):::'
+- ':::no-loc(setlocale):::'
 helpviewer_keywords:
-- wsetlocale function
-- setlocale function
-- tsetlocale function
+- 'w:::no-loc(setlocale)::: function'
+- ':::no-loc(setlocale)::: function'
+- 't:::no-loc(setlocale)::: function'
 - locales, defining
-- _tsetlocale function
+- '_t:::no-loc(setlocale)::: function'
 - defining locales
-- _wsetlocale function
+- ':::no-loc(_wsetlocale)::: function'
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
-- setlocale
-- _wsetlocale
-ms.openlocfilehash: 312fd8e9f794368d334ea353e2c92241d701ab0b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+- ':::no-loc(setlocale):::'
+- ':::no-loc(_wsetlocale):::'
+ms.openlocfilehash: 05e4e96297e2237ed6768e05ff4cacfd63744e1a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918852"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226136"
 ---
-# <a name="setlocale-_wsetlocale"></a>setlocale, _wsetlocale
+# <a name="no-locsetlocale-no-loc_wsetlocale"></a>:::no-loc(setlocale):::, :::no-loc(_wsetlocale):::
 
 Définit ou extrait les paramètres régionaux d'exécution.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```C
-char *setlocale(
+char *:::no-loc(setlocale):::(
    int category,
    const char *locale
 );
-wchar_t *_wsetlocale(
+wchar_t *:::no-loc(_wsetlocale):::(
    int category,
    const wchar_t *locale
 );
@@ -69,7 +69,7 @@ wchar_t *_wsetlocale(
 *catégorie*\
 Catégorie affectée par les paramètres régionaux.
 
-*locale*\
+*paramètres régionaux*\
 Spécificateur de paramètres régionaux.
 
 ## <a name="return-value"></a>Valeur retournée
@@ -79,7 +79,7 @@ Si des *paramètres régionaux* et une *catégorie* valides sont fournis, retour
 Par exemple, l'appel
 
 ```C
-setlocale( LC_ALL, "en-US" );
+:::no-loc(setlocale):::( LC_ALL, "en-US" );
 ```
 
 définit toutes les catégories, en retournant uniquement la chaîne
@@ -88,13 +88,13 @@ définit toutes les catégories, en retournant uniquement la chaîne
 en-US
 ```
 
-Vous pouvez copier la chaîne retournée par **setlocale** pour restaurer cette partie des informations de paramètres régionaux du programme. Le stockage local des threads ou globaux est utilisé pour la chaîne retournée par **setlocale**. Les appels ultérieurs à **setlocale** remplacent la chaîne, ce qui invalide les pointeurs de chaîne retournés par les appels antérieurs.
+Vous pouvez copier la chaîne retournée par **:::no-loc(setlocale):::** pour restaurer cette partie des informations de paramètres régionaux du programme. Le stockage local global ou de thread est utilisé pour la chaîne retournée par **:::no-loc(setlocale):::** . **:::no-loc(setlocale):::** Par la suite, les appels à remplacent la chaîne, ce qui invalide les pointeurs de chaîne retournés par les appels antérieurs.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Utilisez la fonction **setlocale** pour définir, modifier ou interroger certaines ou toutes les informations de paramètres régionaux du programme en cours spécifiées par les *paramètres régionaux* et la *catégorie*. les *paramètres régionaux* font référence à la localité (pays/région et langue) pour laquelle vous pouvez personnaliser certains aspects de votre programme. Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires. Si vous définissez les *paramètres régionaux* sur la chaîne par défaut pour une langue qui a plusieurs formulaires pris en charge sur votre ordinateur, vous devez vérifier la valeur de retour de **setlocale** pour connaître la langue en vigueur. Par exemple, si vous affectez à *paramètres régionaux* la valeur « chinois », la valeur de retour peut être « chinois simplifié » ou « chinois traditionnel ».
+Utilisez la **:::no-loc(setlocale):::** fonction pour définir, modifier ou interroger certaines ou toutes les informations de paramètres régionaux du programme en cours spécifiées par les *paramètres régionaux* et la *catégorie*. les *paramètres régionaux* font référence à la localité (pays/région et langue) pour laquelle vous pouvez personnaliser certains aspects de votre programme. Certaines catégories dépendent des paramètres régionaux, notamment la mise en forme des dates et le format d'affichage des valeurs monétaires. Si vous définissez les *paramètres régionaux* sur la chaîne par défaut pour une langue qui a plusieurs formulaires pris en charge sur votre ordinateur, vous devez vérifier la **:::no-loc(setlocale):::** valeur de retour pour connaître la langue en vigueur. Par exemple, si vous affectez à *paramètres régionaux* la valeur « chinois », la valeur de retour peut être « chinois simplifié » ou « chinois traditionnel ».
 
-**_wsetlocale** est une version à caractères larges de **setlocale**; l’argument de *paramètres régionaux* et la valeur de retour de **_wsetlocale** sont des chaînes à caractères larges. dans le cas contraire, **_wsetlocale** et **setlocale** se comportent de la même façon.
+**:::no-loc(_wsetlocale):::** est une version à caractères larges de **:::no-loc(setlocale):::** ; l’argument de *paramètres régionaux* et la valeur de retour de **:::no-loc(_wsetlocale):::** sont des chaînes à caractères larges. **:::no-loc(_wsetlocale):::** et **:::no-loc(setlocale):::** se comportent sinon de la même façon.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -102,7 +102,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
+|**_t:::no-loc(setlocale):::**|**:::no-loc(setlocale):::**|**:::no-loc(setlocale):::**|**:::no-loc(_wsetlocale):::**|
 
 L’argument *Category* spécifie les parties des informations relatives aux paramètres régionaux d’un programme qui sont affectées. Les macros utilisées pour la *catégorie* et les parties du programme qu’elles affectent sont les suivantes :
 
@@ -117,22 +117,22 @@ L’argument *Category* spécifie les parties des informations relatives aux par
 
 Cette fonction valide le paramètre de catégorie. Si le paramètre Category n’est pas l’une des valeurs indiquées dans le tableau précédent, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit **errno** sur **EINVAL** et retourne **null**.
 
-L’argument de *paramètres régionaux* est un pointeur vers une chaîne qui spécifie les paramètres régionaux. Pour plus d’informations sur le format de l’argument de *paramètres régionaux* , consultez [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Si *locale* pointe vers une chaîne vide, les paramètres régionaux sont donnés par l'environnement défini lors de l'implémentation. La valeur **c** spécifie l’environnement de conformité ANSI minimal pour la traduction C. Les paramètres régionaux **C** partent du principe que tous les types de données **char** sont 1 octet et que leur valeur est toujours inférieure à 256.
+L’argument de *paramètres régionaux* est un pointeur vers une chaîne qui spécifie les paramètres régionaux. Pour plus d’informations sur le format de l’argument de *paramètres régionaux* , consultez [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Si *locale* pointe vers une chaîne vide, les paramètres régionaux sont donnés par l'environnement défini lors de l'implémentation. La valeur **c** spécifie l’environnement de conformité ANSI minimal pour la traduction C. Les paramètres régionaux **C** partent du principe que tous les **`char`** types de données sont 1 octet et que leur valeur est toujours inférieure à 256.
 
 Au démarrage du programme, l'équivalent de l'instruction suivante est exécuté :
 
-`setlocale( LC_ALL, "C" );`
+`:::no-loc(setlocale):::( LC_ALL, "C" );`
 
-L’argument des *paramètres régionaux* peut accepter un nom de paramètres régionaux, une chaîne de langue, une chaîne de langue et un pays/région, une page de codes ou une chaîne de langue, un pays/région et une page de codes. L’ensemble des noms de paramètres régionaux, des langues, des codes de pays/région et des pages de codes disponibles comprend tous ceux pris en charge par l’API NLS Windows. Le jeu de noms de paramètres régionaux pris en charge par **setlocale** est décrit dans [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région pris en charge par **setlocale** est répertorié dans [chaînes de langue](../../c-runtime-library/language-strings.md) et [chaînes de pays/région](../../c-runtime-library/country-region-strings.md). Nous recommandons d'utiliser la forme de nom des paramètres régionaux pour des questions de performance et de maintenance des chaînes de paramètres régionaux incorporées dans le code ou sérialisées du stockage. Les chaînes de nom des paramètres régionaux sont moins susceptibles d'être modifiées par une mise à niveau du système d'exploitation que la forme de nom de la langue et du pays ou de la région.
+L’argument des *paramètres régionaux* peut accepter un nom de paramètres régionaux, une chaîne de langue, une chaîne de langue et un pays/région, une page de codes ou une chaîne de langue, un pays/région et une page de codes. L’ensemble des noms de paramètres régionaux, des langues, des codes de pays/région et des pages de codes disponibles comprend tous ceux pris en charge par l’API NLS Windows. Le jeu de noms de paramètres régionaux pris en charge par **:::no-loc(setlocale):::** est décrit dans [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région pris en charge par **:::no-loc(setlocale):::** est répertorié dans [chaînes de langue](../../c-runtime-library/language-strings.md) et [chaînes de pays/région](../../c-runtime-library/country-region-strings.md). Nous recommandons d'utiliser la forme de nom des paramètres régionaux pour des questions de performance et de maintenance des chaînes de paramètres régionaux incorporées dans le code ou sérialisées du stockage. Les chaînes de nom des paramètres régionaux sont moins susceptibles d'être modifiées par une mise à niveau du système d'exploitation que la forme de nom de la langue et du pays ou de la région.
 
-Un pointeur null passé comme argument de *paramètres régionaux* indique à **setlocale** d’interroger au lieu de définir l’environnement international. Si l’argument de *paramètres régionaux* est un pointeur null, les paramètres régionaux actuels du programme ne sont pas modifiés. Au lieu de cela, **setlocale** retourne un pointeur vers la chaîne associée à la *catégorie* des paramètres régionaux actuels du thread. Si l’argument *Category* est **LC_ALL**, la fonction retourne une chaîne qui indique le paramètre actuel de chaque catégorie, en les séparant par des points-virgules. Par exemple, la séquence d'appels
+Un pointeur null passé comme argument de *paramètres régionaux* indique à d' **:::no-loc(setlocale):::** interroger au lieu de définir l’environnement international. Si l’argument de *paramètres régionaux* est un pointeur null, les paramètres régionaux actuels du programme ne sont pas modifiés. Au lieu de cela, **:::no-loc(setlocale):::** retourne un pointeur vers la chaîne associée à la *catégorie* des paramètres régionaux actuels du thread. Si l’argument *Category* est **LC_ALL**, la fonction retourne une chaîne qui indique le paramètre actuel de chaque catégorie, en les séparant par des points-virgules. Par exemple, la séquence d'appels
 
 ```C
 // Set all categories and return "en-US"
-setlocale(LC_ALL, "en-US");
+:::no-loc(setlocale):::(LC_ALL, "en-US");
 // Set only the LC_MONETARY category and return "fr-FR"
-setlocale(LC_MONETARY, "fr-FR");
-printf("%s\n", setlocale(LC_ALL, NULL));
+:::no-loc(setlocale):::(LC_MONETARY, "fr-FR");
+printf("%s\n", :::no-loc(setlocale):::(LC_ALL, NULL));
 ```
 
 retourne
@@ -145,81 +145,81 @@ qui est la chaîne associée à la catégorie **LC_ALL** .
 
 Les exemples suivants se rapportent à la catégorie **LC_ALL** . L’une ou l’autre des chaînes». OCP « and ». ACP» peut être utilisé à la place d’un numéro de page de codes pour spécifier l’utilisation de la page de codes OEM par défaut de l’utilisateur et de la page de codes ANSI utilisateur par défaut pour ce nom de paramètres régionaux, respectivement.
 
-- `setlocale( LC_ALL, "" );`
+- `:::no-loc(setlocale):::( LC_ALL, "" );`
 
    Définit les paramètres régionaux à la valeur par défaut, qui est la page de codes ANSI utilisateur par défaut obtenue du système d'exploitation. Le nom des paramètres régionaux est défini sur la valeur retournée par [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). La page de codes est définie sur la valeur retournée par [GetACP](/windows/win32/api/winnls/nf-winnls-getacp).
 
-- `setlocale( LC_ALL, ".OCP" );`
+- `:::no-loc(setlocale):::( LC_ALL, ".OCP" );`
 
    Définit les paramètres régionaux sur la page de codes OEM actuelle obtenue à partir du système d’exploitation. Le nom des paramètres régionaux est défini sur la valeur retournée par [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). La page de codes est définie sur la valeur [LOCALE_IDEFAULTCODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux par défaut de l’utilisateur par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
-- `setlocale( LC_ALL, ".ACP" );`
+- `:::no-loc(setlocale):::( LC_ALL, ".ACP" );`
 
    Définit les paramètres régionaux à la page de codes ANSI fournie par le système d'exploitation. Le nom des paramètres régionaux est défini sur la valeur retournée par [GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename). La page de codes est définie sur la valeur [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux par défaut de l’utilisateur par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
-- `setlocale( LC_ALL, "<localename>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<localename>" );`
 
-   Définit les paramètres régionaux pour le nom des paramètres régionaux indiqué par * \<localename>*. La page de codes est définie sur la valeur [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux spécifié par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Définit les paramètres régionaux en spécifiant le nom des paramètres régionaux indiqué par *\<localename>* . La page de codes est définie sur la valeur [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux spécifié par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
-- `setlocale( LC_ALL, "<language>_<country>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<language>_<country>" );`
 
-   Définit les paramètres régionaux sur la langue et le pays/région indiqués par * \<la langue>* et * \<le pays>*, ainsi que la page de codes par défaut obtenue du système d’exploitation hôte. La page de codes est définie sur la valeur [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux spécifié par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
+   Définit les paramètres régionaux sur la langue et le pays/région indiqués par *\<language>* et *\<country>* , ainsi que la page de codes par défaut obtenue du système d’exploitation hôte. La page de codes est définie sur la valeur [LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants) pour le nom de paramètres régionaux spécifié par [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex).
 
-- `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   Définit les paramètres régionaux pour la langue, le pays/la région et la page de codes indiqués par la * \<langue>*, * \<le pays>* et les chaînes de * \<>code_page* . Vous pouvez utiliser différentes combinaisons de langues, pays/région et page de codes. Par exemple, cet appel définit les paramètres régionaux à français du Canada avec la page de codes 1252 :
+   Définit les paramètres régionaux de la langue, du pays/de la région et de la page de codes indiqués par les *\<language>* *\<country>* chaînes, et *\<code_page>* . Vous pouvez utiliser différentes combinaisons de langues, pays/région et page de codes. Par exemple, cet appel définit les paramètres régionaux à français du Canada avec la page de codes 1252 :
 
-   `setlocale( LC_ALL, "French_Canada.1252" );`
+   `:::no-loc(setlocale):::( LC_ALL, "French_Canada.1252" );`
 
    Cet appel définit les paramètres régionaux à français du Canada avec la page de codes ANSI par défaut :
 
-   `setlocale( LC_ALL, "French_Canada.ACP" );`
+   `:::no-loc(setlocale):::( LC_ALL, "French_Canada.ACP" );`
 
    Cet appel définit les paramètres régionaux à français du Canada avec la page de codes OEM par défaut :
 
-   `setlocale( LC_ALL, "French_Canada.OCP" );`
+   `:::no-loc(setlocale):::( LC_ALL, "French_Canada.OCP" );`
 
-- `setlocale( LC_ALL, "<language>" );`
+- `:::no-loc(setlocale):::( LC_ALL, "<language>" );`
 
-   Définit les paramètres régionaux sur la langue indiquée par * \<la langue>* et utilise le pays ou la région par défaut pour la langue spécifiée et la page de codes ANSI utilisateur par défaut pour ce pays/cette région, telle qu’elle est obtenue à partir du système d’exploitation hôte. Par exemple, les appels suivants à **setlocale** sont fonctionnellement équivalents :
+   Définit les paramètres régionaux sur la langue indiquée par *\<language>* et utilise le pays ou la région par défaut pour la langue spécifiée et la page de codes ANSI par défaut de l’utilisateur pour ce pays/cette région, telle qu’elle est obtenue à partir du système d’exploitation hôte. Par exemple, les appels suivants à **:::no-loc(setlocale):::** sont fonctionnellement équivalents :
 
-   `setlocale( LC_ALL, "en-US" );`
+   `:::no-loc(setlocale):::( LC_ALL, "en-US" );`
 
-   `setlocale( LC_ALL, "English" );`
+   `:::no-loc(setlocale):::( LC_ALL, "English" );`
 
-   `setlocale( LC_ALL, "English_United States.1252" );`
+   `:::no-loc(setlocale):::( LC_ALL, "English_United States.1252" );`
 
    Nous recommandons la première forme pour des questions de performances et de maintenance.
 
-- `setlocale( LC_ALL, ".<code_page>" );`
+- `:::no-loc(setlocale):::( LC_ALL, ".<code_page>" );`
 
    Définit la page de codes en fonction de la valeur indiquée par *<code_page>*, ainsi que du pays/région et de la langue par défaut (tels que définis par le système d’exploitation hôte) pour la page de codes spécifiée.
 
-La catégorie doit être **LC_ALL** ou **LC_CTYPE** pour appliquer une modification de la page de codes. Par exemple, si le pays/la région et la langue par défaut du système d’exploitation hôte sont « États-Unis » et « anglais », les deux appels suivants à **setlocale** sont fonctionnellement équivalents :
+La catégorie doit être **LC_ALL** ou **LC_CTYPE** pour appliquer une modification de la page de codes. Par exemple, si le pays/la région et la langue par défaut du système d’exploitation hôte sont « États-Unis » et « anglais », les deux appels suivants à **:::no-loc(setlocale):::** sont fonctionnellement équivalents :
 
-`setlocale( LC_ALL, ".1252" );`
+`:::no-loc(setlocale):::( LC_ALL, ".1252" );`
 
-`setlocale( LC_ALL, "English_United States.1252");`
+`:::no-loc(setlocale):::( LC_ALL, "English_United States.1252");`
 
-Pour plus d’informations, consultez la directive pragma [setlocale](../../preprocessor/setlocale.md) dans [Référence du préprocesseur C/C++](../../preprocessor/c-cpp-preprocessor-reference.md).
+Pour plus d’informations, consultez la [:::no-loc(setlocale):::](../../preprocessor/:::no-loc(setlocale):::.md) directive pragma dans la [Référence du préprocesseur C/C++](../../preprocessor/c-cpp-preprocessor-reference.md).
 
-La fonction [_configthreadlocale](configthreadlocale.md) permet de contrôler si **setlocale** affecte les paramètres régionaux de tous les threads d’un programme ou uniquement les paramètres régionaux du thread appelant.
+La fonction [_configthreadlocale](configthreadlocale.md) est utilisée pour contrôler si **:::no-loc(setlocale):::** affecte les paramètres régionaux de tous les threads d’un programme ou uniquement les paramètres régionaux du thread appelant.
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**setlocale**|\<locale.h>|
-|**_wsetlocale**|\<locale.h> ou \<wchar.h>|
+|**:::no-loc(setlocale):::**|\<locale.h>|
+|**:::no-loc(_wsetlocale):::**|\<locale.h> ou \<wchar.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
 ```C
-// crt_setlocale.c
+// crt_:::no-loc(setlocale):::.c
 //
-// This program demonstrates the use of setlocale when
+// This program demonstrates the use of :::no-loc(setlocale)::: when
 // using two independent threads.
 //
 
@@ -263,7 +263,7 @@ uintptr_t __stdcall SecondThreadFunc( void* pArguments )
 
     // Set the thread locale
     printf("The thread locale is now set to %s.\n",
-           setlocale(LC_ALL, locale));
+           :::no-loc(setlocale):::(LC_ALL, locale));
 
     // Retrieve the date string from the helper function
     if (get_date(str) == 0)
@@ -289,7 +289,7 @@ int main()
 
     // Set the locale of the main thread to US English.
     printf("The thread locale is now set to %s.\n",
-           setlocale(LC_ALL, "en-US"));
+           :::no-loc(setlocale):::(LC_ALL, "en-US"));
 
     // Create the second thread with a German locale.
     // Our thread function takes an argument of the locale to use.

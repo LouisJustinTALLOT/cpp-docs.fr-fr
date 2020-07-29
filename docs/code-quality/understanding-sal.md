@@ -3,12 +3,12 @@ title: Présentation de SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: fe48e31e5f4390915c4f3b5b6bf9c09bbd9fffe1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403983"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226045"
 ---
 # <a name="understanding-sal"></a>Présentation de SAL
 
@@ -359,7 +359,7 @@ Visual Studio Code analyse vérifie que cette fonction vérifie la valeur NULL a
 
 ### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Exemple : l' \_ \_ annotation de réussite en association avec \_\_
 
-Les annotations peuvent être appliquées à la plupart des objets.  En particulier, vous pouvez annoter une fonction entière.  L’une des caractéristiques les plus évidentes d’une fonction est qu’elle peut réussir ou échouer. Mais comme l’association entre une mémoire tampon et sa taille, C/C++ ne peut pas exprimer la réussite ou l’échec de la fonction. À l’aide de l' `_Success_` annotation, vous pouvez indiquer la réussite d’une fonction.  Le paramètre de l' `_Success_` annotation est simplement une expression qui, lorsqu’elle a la valeur true, indique que la fonction a réussi. L’expression peut être tout ce que l’analyseur d’annotation peut gérer. Les effets des annotations après le retour de la fonction sont applicables uniquement lorsque la fonction est réussie. Cet exemple montre comment `_Success_` interagit avec `_Out_` pour effectuer la bonne chose. Vous pouvez utiliser le mot clé `return` pour représenter la valeur de retour.
+Les annotations peuvent être appliquées à la plupart des objets.  En particulier, vous pouvez annoter une fonction entière.  L’une des caractéristiques les plus évidentes d’une fonction est qu’elle peut réussir ou échouer. Mais comme l’association entre une mémoire tampon et sa taille, C/C++ ne peut pas exprimer la réussite ou l’échec de la fonction. À l’aide de l' `_Success_` annotation, vous pouvez indiquer la réussite d’une fonction.  Le paramètre de l' `_Success_` annotation est simplement une expression qui, lorsqu’elle a la valeur true, indique que la fonction a réussi. L’expression peut être tout ce que l’analyseur d’annotation peut gérer. Les effets des annotations après le retour de la fonction sont applicables uniquement lorsque la fonction est réussie. Cet exemple montre comment `_Success_` interagit avec `_Out_` pour effectuer la bonne chose. Vous pouvez utiliser le mot clé **`return`** pour représenter la valeur de retour.
 
 ```cpp
 _Success_(return != false) // Can also be stated as _Success_(return)

@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
-ms.openlocfilehash: 13d6044269f60dc426a8b0b9b03463f387dfaa10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0147f51063127cb26ce8caf70bc46eadc87b8d3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313335"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226514"
 ---
 # <a name="c-sequence-points"></a>Points de séquence C
 
 La valeur d'un objet peut être modifiée une seule fois par une expression entre les « points de séquence » consécutifs. Le langage C définit les points de séquence suivants :
 
-- Opérande gauche de l’opérateur AND logique (**&&**). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur false (0), l'autre opérande n'est pas évaluée.
+- Opérande gauche de l’opérateur AND logique ( **&&** ). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur false (0), l'autre opérande n'est pas évaluée.
 
 - Opérande gauche de l'opérateur OR logique (`||`). L'opérande gauche de l'opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur true (différent de zéro), l'autre opérande n'est pas évalué.
 
@@ -29,13 +29,13 @@ La valeur d'un objet peut être modifiée une seule fois par une expression entr
 
 - L'expression dans une instruction d'expression. Les instructions Expression sont composées d'une expression facultative suivie d'un point-virgule (**;**). L'expression est évaluée pour ses effets secondaires, et un point de séquence est ajouté à la suite de cette évaluation.
 
-- L'expression de contrôle d'une instruction de sélection (**if** ou `switch`). L'expression est complètement évaluée et tous les effets secondaires sont terminés avant l'exécution du code dépendant de la sélection.
+- Expression de contrôle dans une instruction de sélection ( **`if`** ou **`switch`** ). L'expression est complètement évaluée et tous les effets secondaires sont terminés avant l'exécution du code dépendant de la sélection.
 
-- Expression de contrôle d'une instruction `while` ou **do**. L'expression est complètement évaluée et tous les effets secondaires sont terminés avant l'exécution des instructions de l'itération suivante de la boucle `while` ou **do**.
+- Expression de contrôle d’une **`while`** **`do`** instruction ou. L’expression est complètement évaluée et tous les effets secondaires sont terminés avant l’exécution des instructions de l’itération suivante de la **`while`** **`do`** boucle ou.
 
-- Chacune des trois expressions d'une instruction **for**. Les expressions sont complètement évaluées et tous les effets secondaires sont terminés avant l'exécution des instructions de l'itération suivante de la boucle **for**.
+- Chacune des trois expressions d’une **`for`** instruction. Les expressions sont complètement évaluées et tous les effets secondaires sont terminés avant l’exécution des instructions de l’itération suivante de la **`for`** boucle.
 
-- L'expression dans une instruction `return`. L'expression est complètement évaluée et tous les effets secondaires sont terminés avant que le contrôle ne retourne à la fonction appelante.
+- Expression dans une **`return`** instruction. L'expression est complètement évaluée et tous les effets secondaires sont terminés avant que le contrôle ne retourne à la fonction appelante.
 
 ## <a name="see-also"></a>Voir aussi
 

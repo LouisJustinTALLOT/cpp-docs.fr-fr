@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821510"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226227"
 ---
 # <a name="math-and-floating-point-support"></a>Prise en charge des fonctions mathématiques et à virgule flottante
 
@@ -21,11 +21,11 @@ La bibliothèque du Runtime C universel (UCRT) propose de nombreuses fonctions d
 
 De nombreuses fonctions de bibliothèque mathématique à virgule flottante ont des implémentations différentes pour des architectures de processeur différentes. Par exemple, l’implémentation de la bibliothèque CRT x86 32 bits peut être différente de celle de la bibliothèque CRT x64 64 bits. De plus, certaines fonctions peuvent avoir plusieurs implémentations pour une architecture de processeur donnée. L’implémentation la plus efficace est sélectionnée de façon dynamique au moment de l’exécution selon les jeux d’instructions pris en charge par le processeur. Par exemple, dans la bibliothèque CRT x86 32 bits, certaines fonctions ont à la fois une implémentation x87 et une implémentation SSE2. Lors d’une exécution sur un processeur qui prend en charge SSE2, l’implémentation SSE2 plus rapide est utilisée. Lors d’une exécution sur un processeur qui ne prend pas en charge SSE2, l’implémentation x87 plus lente est utilisée. Étant donné que les différentes implémentations des fonctions de bibliothèque mathématique peuvent utiliser des instructions de processeur différentes et des algorithmes différents pour produire leurs résultats, les fonctions peuvent produire des résultats différents selon les processeurs. Dans la plupart des cas, les résultats se situent à +/-1 ULP (Unit in the Last Place, unité en dernière position) du résultat correctement arrondi, mais les résultats réels peuvent varier selon les processeurs.
 
-Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ prenaient en charge le type **long double** en tant que type de données à virgule flottante de précision 80 bits. Dans les versions plus récentes de Visual C++, le type de données **long double** est un type de données à virgule flottante de précision 64 bits identique au type **double**. Le compilateur traite **long double** et **double** comme deux types distincts, mais les fonctions **long double** sont identiques à leurs équivalents **double**. La bibliothèque CRT fournit des versions **long double** des fonctions mathématiques à des fins de compatibilité du code source ISO C99, mais notez que la représentation binaire peut différer de celle d’autres compilateurs.
+Les versions 16 bits précédentes de Microsoft C/C++ et Microsoft Visual C++ pris en charge le **`long double`** type en tant que type de données à virgule flottante de précision 80 bits. Dans les versions ultérieures de Visual C++, le **`long double`** type de données est un type de données à virgule flottante de précision 64 bits identique au **`double`** type. Le compilateur traite **`long double`** et **`double`** comme des types distincts, mais les **`long double`** fonctions sont identiques à leurs **`double`** équivalents. La bibliothèque CRT fournit **`long double`** des versions des fonctions mathématiques pour la compatibilité du code source ISO C99, mais notez que la représentation binaire peut différer de celle d’autres compilateurs.
 
 ## <a name="supported-math-and-floating-point-routines"></a>Routines à virgule flottante et mathématiques prises en charge
 
-|Routine|Utiliser|
+|Routine|Utilisation|
 |-|-|
 [abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Calcule la valeur absolue d’un type integer
 [acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Calcule l’arc cosinus
@@ -34,9 +34,9 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 [asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|Calcule l’arc sinus hyperbolique
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Calcule l’arc tangente
 [atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|Calcule l’arc tangente hyperbolique
-[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convertit une chaîne de paramètres régionaux en une valeur **double**
-[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertit une chaîne en une valeur **double**
-[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convertit une chaîne de paramètres régionaux en une valeur **float** ou **long double**
+[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convertit une chaîne spécifique aux paramètres régionaux en**`double`**
+[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertit une chaîne en**`double`**
+[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convertit une chaîne spécifique aux paramètres régionaux en **`float`** ou**`long double`**
 [cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Calcule la racine cubique
 [ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Calcule la valeur plafond
 [_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Calcule l’inverse additif
@@ -45,9 +45,9 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 [_controlfp_s](../c-runtime-library/reference/controlfp-s.md)|Version sécurisée de **_controlfp**
 [copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|Retourne une valeur qui a la grandeur d’un argument et le signe d’un autre
 [cos, cosf, cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|Calcule le sinus
-[cos, cosf, cosl](../c-runtime-library/reference/cosh-coshf-coshl.md)|Calcule le sinus hyperbolique
+[cosh, coshf, coshl](../c-runtime-library/reference/cosh-coshf-coshl.md)|Calcule le sinus hyperbolique
 [div, ldiv, lldiv](../c-runtime-library/reference/div.md)|Calcule le quotient et le reste de deux valeurs entières
-[_ecvt](../c-runtime-library/reference/ecvt.md), [ecvt](../c-runtime-library/reference/posix-ecvt.md)|Convertit une valeur **double** en une chaîne
+[_ecvt](../c-runtime-library/reference/ecvt.md), [ecvt](../c-runtime-library/reference/posix-ecvt.md)|Convertit un **`double`** en chaîne
 [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|Version sécurisée de **_ecvt**
 [erf, erff, erfl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|Calcule la fonction d’erreur
 [erfc, erfcf, erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)|Calcule la fonction d’erreur complémentaire
@@ -91,18 +91,18 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 [isinf](../c-runtime-library/reference/isinf.md)|Détermine si une valeur à virgule flottante est infinie
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Teste une valeur à virgule flottante pour une valeur NaN
 [isnormal](../c-runtime-library/reference/isnormal.md)|Teste si une valeur à virgule flottante est à la fois finie et non subnormale
-[_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcule la fonction de Bessel
+[_j0, _j1 _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcule la fonction de Bessel
 [ldexp, ldexpf, ldexpl](../c-runtime-library/reference/ldexp.md)|Calcule x*2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Calcule le logarithme népérien de la valeur absolue de la fonction gamma
-[llrint, llrintf, llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Arrondit une valeur à virgule flottante à la valeur **long long** la plus proche
-[llround, llroundf, llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Arrondit une valeur à virgule flottante à la valeur **long long** la plus proche
+[llrint, llrintf, llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Arrondit une valeur à virgule flottante à la valeur la plus proche **`long long`**
+[llround, llroundf, llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Arrondit une valeur à virgule flottante à la valeur la plus proche **`long long`**
 [log, logf, logl, log10, log10f, log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|Calcule le logarithme népérien ou de base 10
 [log1p, log1pf, log1pl](../c-runtime-library/reference/log1p-log1pf-log1pl2.md)|Calcule le logarithme népérien de 1+x
 [log2, log2f, log2l](../c-runtime-library/reference/log2-log2f-log2l.md)|Calcule le logarithme de base 2
 [logb, logbf, logbl, _logb, _logbf](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)|Retourne l’exposant d’une valeur à virgule flottante
-[lrint, lrintf, lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Arrondit une valeur à virgule flottante à la valeur **long** la plus proche
+[lrint, lrintf, lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)|Arrondit une valeur à virgule flottante à la valeur la plus proche **`long`**
 [_lrotl, _lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|Fait pivoter une valeur entière vers la gauche ou vers la droite
-[lround, lroundf, lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Arrondit une valeur à virgule flottante à la valeur **long** la plus proche
+[lround, lroundf, lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)|Arrondit une valeur à virgule flottante à la valeur la plus proche **`long`**
 [_matherr](../c-runtime-library/reference/matherr.md)|Gestionnaire d’erreurs mathématiques par défaut
 [__max](../c-runtime-library/reference/max.md)|Macro qui retourne la plus grande de deux valeurs
 [__min](../c-runtime-library/reference/min.md)|Macro qui retourne la plus petite de deux valeurs
@@ -126,14 +126,14 @@ Les précédentes versions 16 bits de Microsoft C/C++ et Microsoft Visual C++ 
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Calcule le sinus hyperbolique
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcule la racine carrée
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Obtient le mot d’état de virgule flottante
-[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Convertit une chaîne en une valeur **float**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Convertit une chaîne en valeur de type **long** **double**
+[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Convertit une chaîne en**`float`**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Convertit une chaîne en**`long double`**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Calcule la tangente
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Calcule la tangente hyperbolique
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Calcule la fonction gamma
 [trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|Tronque la partie fractionnaire
-[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertit une chaîne large en une valeur **double**
-[_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcule la fonction de Bessel
+[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertit une chaîne étendue en**`double`**
+[_y0, _y1 _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcule la fonction de Bessel
 
 ## <a name="see-also"></a>Voir aussi
 

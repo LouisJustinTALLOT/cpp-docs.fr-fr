@@ -1,5 +1,5 @@
 ---
-title: Classe CComFakeCriticalSection
+title: CComFakeCriticalSection, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CComFakeCriticalSection
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5ada0fbed705af34391709653dbd3638fed32bf7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327851"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87226579"
 ---
-# <a name="ccomfakecriticalsection-class"></a>Classe CComFakeCriticalSection
+# <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection, classe
 
-Cette classe fournit les mêmes méthodes que [CComCriticalSection,](../../atl/reference/ccomcriticalsection-class.md) mais ne fournit pas une section critique.
+Cette classe fournit les mêmes méthodes que [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , mais ne fournit pas de section critique.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,24 +34,24 @@ class CComFakeCriticalSection
 
 |Nom|Description|
 |----------|-----------------|
-|[CComFakeCriticalSection::Init](#init)|Ne fait rien puisqu’il n’y a pas de section critique.|
-|[CComFakeCriticalSection::Lock](#lock)|Ne fait rien puisqu’il n’y a pas de section critique.|
-|[CComFakeCriticalSection::Terme](#term)|Ne fait rien puisqu’il n’y a pas de section critique.|
-|[CComFakeCriticalSection::Unlock](#unlock)|Ne fait rien puisqu’il n’y a pas de section critique.|
+|[CComFakeCriticalSection :: init](#init)|Ne fait rien, car il n’existe pas de section critique.|
+|[CComFakeCriticalSection :: Lock](#lock)|Ne fait rien, car il n’existe pas de section critique.|
+|[CComFakeCriticalSection :: term](#term)|Ne fait rien, car il n’existe pas de section critique.|
+|[CComFakeCriticalSection :: Unlock](#unlock)|Ne fait rien, car il n’existe pas de section critique.|
 
 ## <a name="remarks"></a>Notes
 
-`CComFakeCriticalSection`reflète les méthodes trouvées dans [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Toutefois, `CComFakeCriticalSection` ne fournit pas de section critique; par conséquent, ses méthodes ne font rien.
+`CComFakeCriticalSection`reflète les méthodes trouvées dans [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Toutefois, `CComFakeCriticalSection` ne fournit pas de section critique ; par conséquent, ses méthodes ne font rien.
 
-Typiquement, vous `CComFakeCriticalSection` utilisez `typedef` par `AutoCriticalSection` le `CriticalSection`biais d’un nom, soit ou . Lors de l’utilisation [de CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) ou [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), ces `typedef` deux noms de référence `CComFakeCriticalSection`. Lors de l’utilisation [de CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), `CComCriticalSection`ils font référence À [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) et, respectivement.
+En général, vous utilisez `CComFakeCriticalSection` un **`typedef`** nom, `AutoCriticalSection` ou `CriticalSection` . Si vous utilisez [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) ou [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), ces deux **`typedef`** noms font référence `CComFakeCriticalSection` . Lors de l’utilisation de [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), ils référencent [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) et `CComCriticalSection` , respectivement.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcore.h
+**En-tête :** atlcore. h
 
-## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection::Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSection :: init
 
-Ne fait rien puisqu’il n’y a pas de section critique.
+Ne fait rien, car il n’existe pas de section critique.
 
 ```
 HRESULT Init() throw();
@@ -61,9 +61,9 @@ HRESULT Init() throw();
 
 Retourne S_OK.
 
-## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection::Lock
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CComFakeCriticalSection :: Lock
 
-Ne fait rien puisqu’il n’y a pas de section critique.
+Ne fait rien, car il n’existe pas de section critique.
 
 ```
 HRESULT Lock() throw();
@@ -73,9 +73,9 @@ HRESULT Lock() throw();
 
 Retourne S_OK.
 
-## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection::Terme
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CComFakeCriticalSection :: term
 
-Ne fait rien puisqu’il n’y a pas de section critique.
+Ne fait rien, car il n’existe pas de section critique.
 
 ```
 HRESULT Term() throw();
@@ -85,9 +85,9 @@ HRESULT Term() throw();
 
 Retourne S_OK.
 
-## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection::Unlock
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CComFakeCriticalSection :: Unlock
 
-Ne fait rien puisqu’il n’y a pas de section critique.
+Ne fait rien, car il n’existe pas de section critique.
 
 ```
 HRESULT Unlock() throw();

@@ -1,5 +1,5 @@
 ---
-title: 'Déclarateur de référence lvalue : &amp;'
+title: Déclarateur de référence lvalue :&amp;
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 30dd6ba9cb91395f72124cad71908a4e6bcdf7dd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178065"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225980"
 ---
-# <a name="lvalue-reference-declarator-amp"></a>Déclarateur de référence lvalue : &amp;
+# <a name="lvalue-reference-declarator-amp"></a>Déclarateur de référence lvalue :&amp;
 
 Contient l'adresse d'un objet mais se comporte syntaxiquement comme un objet.
 
@@ -30,7 +30,7 @@ Vous pouvez considérer une référence lvalue comme un autre nom d'un objet. Un
 
 Tout objet dont l'adresse peut être convertie en un type pointeur donné peut également être converti en type référence similaire. Par exemple, tout objet dont l'adresse peut être convertie en type `char *` peut également être converti en type `char &`.
 
-Ne confondez pas les déclarations de référence avec l' [opérateur address-of](../cpp/address-of-operator-amp.md). Lorsque l' *identificateur* de `&`est précédé d’un type, tel que **int** ou **char**, l' *identificateur* est déclaré comme une référence au type. Lorsque `&`*identificateur* n’est pas précédé d’un type, l’utilisation est celle de l’opérateur d’adresse.
+Ne confondez pas les déclarations de référence avec l' [opérateur address-of](../cpp/address-of-operator-amp.md). Lorsque l' `&` *identificateur* est précédé d’un type, tel que **`int`** ou, l' **`char`** *identificateur* est déclaré comme une référence au type. Lorsque `&` l' *identificateur* n’est pas précédé d’un type, l’utilisation est celle de l’opérateur d’adresse.
 
 ## <a name="example"></a>Exemple
 
@@ -75,5 +75,5 @@ Bill is 40
 
 [Informations de référence](../cpp/references-cpp.md)<br/>
 [Arguments de fonction de type référence](../cpp/reference-type-function-arguments.md)<br/>
-[Retours de fonction de type référence](../cpp/reference-type-function-returns.md)<br/>
+[Retourne une fonction de type référence](../cpp/reference-type-function-returns.md)<br/>
 [Références aux pointeurs](../cpp/references-to-pointers.md)

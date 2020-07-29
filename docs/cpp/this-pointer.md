@@ -1,43 +1,43 @@
 ---
-title: Pointeur this
-description: Le pointeur this est un pointeur généré par le compilateur vers l’objet actuel dans des fonctions membres non statiques.
+title: 'Pointeur :::no-loc(this):::'
+description: 'Le :::no-loc(this)::: pointeur est un pointeur généré par le compilateur vers l’objet actuel dans des fonctions membres non statiques.'
 ms.date: 01/22/2020
 f1_keywords:
-- this_cpp
+- :::no-loc(this):::_cpp
 helpviewer_keywords:
 - nonstatic member functions [C++]
-- pointers, to class instance
-- this pointer
+- 'pointers, to :::no-loc(class)::: instance'
+- ':::no-loc(this)::: pointer'
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 no-loc:
-- this
-- class
-- struct
-- union
-- sizeof
-- const
-- volatile
-ms.openlocfilehash: 58bba2edd7a457c624b747b5a65d209995852848
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+- ':::no-loc(this):::'
+- ':::no-loc(class):::'
+- ':::no-loc(struct):::'
+- ':::no-loc(union):::'
+- ':::no-loc(sizeof):::'
+- ':::no-loc(const):::'
+- ':::no-loc(volatile):::'
+ms.openlocfilehash: c851beaba7fe1091ffd7827714f90307303058c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518333"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225824"
 ---
-# <a name="opno-locthis-pointer"></a>Pointeur this
+# <a name="no-locthis-pointer"></a>Pointeur :::no-loc(this):::
 
-Le pointeur **this** est un pointeur accessible uniquement dans les fonctions membres non statiques d’un type **class** , **struct** ou **union** . Il pointe vers l'objet pour lequel la fonction membre est appelée. Les fonctions membres statiques n’ont pas de pointeur **this** .
+Le **`:::no-loc(this):::`** pointeur est un pointeur accessible uniquement dans les fonctions membres non statiques d' **`:::no-loc(class):::`** un **`:::no-loc(struct):::`** type, ou **`:::no-loc(union):::`** . Il pointe vers l'objet pour lequel la fonction membre est appelée. Les fonctions membres statiques n’ont pas de **`:::no-loc(this):::`** pointeur.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```cpp
-this
-this->member-identifier
+:::no-loc(this):::
+:::no-loc(this):::->member-identifier
 ```
 
 ## <a name="remarks"></a>Notes
 
-Le pointeur **this** d’un objet ne fait pas partie de l’objet lui-même. Elle n’est pas reflétée dans le résultat d’une instruction **sizeof** sur l’objet. Lorsqu’une fonction membre non statique est appelée pour un objet, le compilateur passe l’adresse de l’objet à la fonction en tant qu’argument masqué. Par exemple, l'appel de fonction suivant :
+Le pointeur d’un objet **`:::no-loc(this):::`** ne fait pas partie de l’objet lui-même. Elle n’est pas reflétée dans le résultat d’une **`:::no-loc(sizeof):::`** instruction sur l’objet. Lorsqu’une fonction membre non statique est appelée pour un objet, le compilateur passe l’adresse de l’objet à la fonction en tant qu’argument masqué. Par exemple, l'appel de fonction suivant :
 
 ```cpp
 myDate.setMonth( 3 );
@@ -49,39 +49,39 @@ peut être interprété comme suit :
 setMonth( &myDate, 3 );
 ```
 
-L’adresse de l’objet est disponible dans la fonction membre comme pointeur de **this** . La plupart des utilisations des pointeurs **this** sont implicites. Il est légal, bien que inutile, d’utiliser un **this** explicite pour faire référence aux membres du class. Par exemple :
+L’adresse de l’objet est disponible dans la fonction membre en tant que **`:::no-loc(this):::`** pointeur. La plupart des **`:::no-loc(this):::`** utilisations de pointeur sont implicites. Il est légal, bien que inutile, d’utiliser un Explicit pour faire **`:::no-loc(this):::`** référence aux membres de :::no-loc(class)::: . Par exemple :
 
 ```cpp
 void Date::setMonth( int mn )
 {
    month = mn;            // These three statements
-   this->month = mn;      // are equivalent
-   (*this).month = mn;
+   :::no-loc(this):::->month = mn;      // are equivalent
+   (*:::no-loc(this):::).month = mn;
 }
 ```
 
-L'expression `*this` est utilisée couramment pour retourner l'objet actuel d'une fonction membre :
+L’expression **`*:::no-loc(this):::`** est couramment utilisée pour retourner l’objet actuel à partir d’une fonction membre :
 
 ```cpp
-return *this;
+return *:::no-loc(this):::;
 ```
 
-Le pointeur **this** est également utilisé pour assurer la protection contre les auto-références :
+Le **`:::no-loc(this):::`** pointeur est également utilisé pour assurer la protection contre les auto-références :
 
 ```cpp
-if (&Object != this) {
+if (&Object != :::no-loc(this):::) {
 // do not execute in cases of self-reference
 ```
 
 > [!NOTE]
-> Étant donné que le pointeur **this** n’est pas modifiable, les assignations au pointeur **this** ne sont pas autorisées. Implémentations antérieures de C++ l’assignation autorisée à **this** .
+> Étant donné que le **`:::no-loc(this):::`** pointeur n’est pas modifiable, les assignations au **`:::no-loc(this):::`** pointeur ne sont pas autorisées. Les implémentations antérieures de C++ permettaient l’assignation à **`:::no-loc(this):::`** .
 
-Parfois, le pointeur **this** est utilisé directement, par exemple pour manipuler des structures de données auto-référentielles, où l’adresse de l’objet actuel est requise.
+Parfois, le **`:::no-loc(this):::`** pointeur est utilisé directement, par exemple pour manipuler les données auto-référentielles :::no-loc(struct)::: ures, où l’adresse de l’objet actuel est requise.
 
 ## <a name="example"></a>Exemple
 
 ```cpp
-// this_pointer.cpp
+// :::no-loc(this):::_pointer.cpp
 // compile with: /EHsc
 
 #include <iostream>
@@ -89,11 +89,11 @@ Parfois, le pointeur **this** est utilisé directement, par exemple pour manipul
 
 using namespace std;
 
-class Buf
+:::no-loc(class)::: Buf
 {
 public:
     Buf( char* szBuffer, size_t sizeOfBuffer );
-    Buf& operator=( const Buf & );
+    Buf& operator=( :::no-loc(const)::: Buf & );
     void Display() { cout << buffer << endl; }
 
 private:
@@ -113,9 +113,9 @@ Buf::Buf( char* szBuffer, size_t sizeOfBuffer )
     }
 }
 
-Buf& Buf::operator=( const Buf &otherbuf )
+Buf& Buf::operator=( :::no-loc(const)::: Buf &otherbuf )
 {
-    if( &otherbuf != this )
+    if( &otherbuf != :::no-loc(this)::: )
     {
         if (buffer)
             delete [] buffer;
@@ -124,7 +124,7 @@ Buf& Buf::operator=( const Buf &otherbuf )
         buffer = new char[sizeOfBuffer];
         strcpy_s( buffer, sizeOfBuffer, otherbuf.buffer );
     }
-    return *this;
+    return *:::no-loc(this):::;
 }
 
 int main()
@@ -148,59 +148,59 @@ my buffer
 your buffer
 ```
 
-## <a name="type-of-the-opno-locthis-pointer"></a>Type du pointeur this
+## <a name="type-of-the-no-locthis-pointer"></a>Type du :::no-loc(this)::: pointeur
 
-Le type du pointeur **this** peut être modifié dans la déclaration de fonction par les mots clés **const** et **volatile** . Pour déclarer une fonction qui a l’un de ces attributs, ajoutez le ou les mots clés après la liste d’arguments de la fonction.
+Le **`:::no-loc(this):::`** type du pointeur peut être modifié dans la déclaration de fonction par **`:::no-loc(const):::`** les **`:::no-loc(volatile):::`** Mots clés et. Pour déclarer une fonction qui a l’un de ces attributs, ajoutez le ou les mots clés après la liste d’arguments de la fonction.
 
 Prenons un exemple :
 
 ```cpp
-// type_of_this_pointer1.cpp
-class Point
+// type_of_:::no-loc(this):::_pointer1.cpp
+:::no-loc(class)::: Point
 {
-    unsigned X() const;
+    unsigned X() :::no-loc(const):::;
 };
 int main()
 {
 }
 ```
 
-Le code précédent déclare une fonction membre, `X`, dans laquelle le pointeur **this** est traité comme un pointeur **const** vers un objet **const** . Des combinaisons d’options *CV-mod-List* peuvent être utilisées, mais elles modifient toujours l’objet désigné par le pointeur **this** , pas le pointeur lui-même. La déclaration suivante déclare la fonction `X`, où le pointeur **this** est un pointeur **const** vers un objet **const** :
+Le code précédent déclare une fonction membre, `X` , dans laquelle le **`:::no-loc(this):::`** pointeur est traité comme un **`:::no-loc(const):::`** pointeur vers un **`:::no-loc(const):::`** objet. Des combinaisons d’options *CV-mod-List* peuvent être utilisées, mais elles modifient toujours l’objet vers lequel pointe le **`:::no-loc(this):::`** pointeur, pas le pointeur lui-même. La déclaration suivante déclare la fonction `X` , où le **`:::no-loc(this):::`** pointeur est un **`:::no-loc(const):::`** pointeur vers un **`:::no-loc(const):::`** objet :
 
 ```cpp
-// type_of_this_pointer2.cpp
-class Point
+// type_of_:::no-loc(this):::_pointer2.cpp
+:::no-loc(class)::: Point
 {
-    unsigned X() const;
+    unsigned X() :::no-loc(const):::;
 };
 int main()
 {
 }
 ```
 
-Le type de **this** dans une fonction membre est décrit par la syntaxe suivante. La *liste CV-qualifier* est déterminée à partir du déclarateur de la fonction membre. Il peut être **const** ou **volatile** (ou les deux). *class-type* est le nom du class:
+Le type de **`:::no-loc(this):::`** dans une fonction membre est décrit par la syntaxe suivante. La *liste CV-qualifier* est déterminée à partir du déclarateur de la fonction membre. Il peut être **`:::no-loc(const):::`** ou **`:::no-loc(volatile):::`** (ou les deux). * :::no-loc(class)::: -type* est le nom du :::no-loc(class)::: :
 
-[*CV-qualifier-List*] *class* **\* const this**
+[*CV-qualifier-List*] * :::no-loc(class)::: -type* ** \* :::no-loc(const)::: :::no-loc(this)::: **
 
-En d’autres termes, le pointeur **this** est toujours un pointeur const. Il ne peut pas être réassigné.  Les qualificateurs **const** ou **volatile** utilisés dans la déclaration de fonction membre s’appliquent à l’instance class vers laquelle pointe le pointeur **this** , dans la portée de cette fonction.
+En d’autres termes, le **`:::no-loc(this):::`** pointeur est toujours un :::no-loc(const)::: pointeur. Il ne peut pas être réassigné.  Les **`:::no-loc(const):::`** **`:::no-loc(volatile):::`** qualificateurs ou utilisés dans la déclaration de fonction membre s’appliquent à l' :::no-loc(class)::: instance vers **`:::no-loc(this):::`** laquelle pointe le pointeur, dans la portée de cette fonction.
 
 Le tableau ci-dessous fournit davantage d'explications sur le fonctionnement de ces modificateurs.
 
-### <a name="semantics-of-opno-locthis-modifiers"></a>Sémantique des modificateurs this
+### <a name="semantics-of-no-locthis-modifiers"></a>Sémantique des :::no-loc(this)::: modificateurs
 
 |Modificateur|Signification|
 |--------------|-------------|
-|**const**|Impossible de modifier les données de membre ; Impossible d’appeler des fonctions membres qui ne sont pas **const** .|
-|**volatile**|Les données de membre sont chargées à partir de la mémoire chaque fois que vous y accédez ; désactive certaines optimisations.|
+|**`:::no-loc(const):::`**|Impossible de modifier les données de membre ; Impossible d’appeler des fonctions membres qui ne le sont pas **`:::no-loc(const):::`** .|
+|**`:::no-loc(volatile):::`**|Les données de membre sont chargées à partir de la mémoire chaque fois que vous y accédez ; désactive certaines optimisations.|
 
-C’est une erreur de passer un objet **const** à une fonction membre qui n’est pas **const** .
+C’est une erreur de passer un **`:::no-loc(const):::`** objet à une fonction membre qui n’est pas **`:::no-loc(const):::`** .
 
-De même, il s’agit également d’une erreur pour passer un objet **volatile** à une fonction membre qui n’est pas **volatile** .
+De même, il s’agit également d’une erreur pour passer un **`:::no-loc(volatile):::`** objet à une fonction membre qui n’est pas **`:::no-loc(volatile):::`** .
 
-Les fonctions membres déclarées comme **const** ne peuvent pas modifier les données de membre ; dans ces fonctions, le pointeur **this** est un pointeur vers un objet **const** .
+Les fonctions membres déclarées comme **`:::no-loc(const):::`** ne peuvent pas modifier les données de membre — dans ces fonctions, le **`:::no-loc(this):::`** pointeur est un pointeur vers un **`:::no-loc(const):::`** objet.
 
 > [!NOTE]
-> Les constructeurs et les destructeurs ne peuvent pas être déclarés en tant que **const** ou **volatile** . Toutefois, elles peuvent être appelées sur des objets **const** ou **volatile** .
+> Les con :::no-loc(struct)::: ors et les :::no-loc(struct)::: ors ne peuvent pas être déclarés en tant que **`:::no-loc(const):::`** ou **`:::no-loc(volatile):::`** . Toutefois, elles peuvent être appelées sur des **`:::no-loc(const):::`** **`:::no-loc(volatile):::`** objets ou.
 
 ## <a name="see-also"></a>Voir aussi
 
