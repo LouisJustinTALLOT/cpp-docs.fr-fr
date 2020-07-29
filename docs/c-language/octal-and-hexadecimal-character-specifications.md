@@ -5,12 +5,12 @@ helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-ms.openlocfilehash: df4d0666a220961f64238bf95dca9e0a08d4dae6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bcd6eb84503b80b1e38be5d134e7506a0f490891
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343366"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229582"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Spécifications de caractères octaux et hexadécimaux
 
@@ -22,7 +22,7 @@ Vous pouvez utiliser uniquement des chiffres de 0 à 7 dans une séquence d'éch
 
 De même, vous devez utiliser au moins un chiffre pour une séquence d'échappement hexadécimale, mais vous pouvez omettre le deuxième et le troisième chiffre. Par conséquent vous pouvez spécifier la séquence d'échappement hexadécimale pour le caractère de retour arrière comme **\x8**, **\x08** ou **\x008**.
 
-La valeur de la séquence d'échappement octale ou hexadécimale doit faire partie de la plage de valeurs représentables pour le type **unsigned char** pour une constante caractère et de type `wchar_t` pour une constante à caractères larges. Consultez [Caractères multioctets et larges](../c-language/multibyte-and-wide-characters.md) pour obtenir des informations sur les constantes à caractères larges.
+La valeur de la séquence d’échappement octale ou hexadécimale doit se trouver dans la plage de valeurs représentables pour le type **`unsigned char`** pour une constante de caractère et **`wchar_t`** un type pour une constante à caractères larges. Consultez [Caractères multioctets et larges](../c-language/multibyte-and-wide-characters.md) pour obtenir des informations sur les constantes à caractères larges.
 
 Contrairement aux constantes octales d'échappement, le nombre de chiffres hexadécimaux d'une séquence d'échappement est illimité. Une séquence d'échappement hexadécimale se termine au premier caractère qui n'est pas un chiffre hexadécimal. Les chiffres hexadécimaux incluant les lettres **a** à **f**, vous devez vous assurer que la séquence d'échappement se termine au chiffre prévu. Pour éviter toute confusion, vous pouvez placer des définitions octales ou hexadécimales de caractère dans une définition de macro :
 

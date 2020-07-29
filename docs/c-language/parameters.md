@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 78ad91ea86d81a3b6d888335ba7b78399a1d2aea
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 57648747bbb50ffe46b199a03563757c331f088a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032068"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229569"
 ---
 # <a name="parameters"></a>Paramètres
 
@@ -25,39 +25,37 @@ Les arguments sont les noms des valeurs passées à une fonction par un appel de
 
 ## <a name="syntax"></a>Syntaxe
 
-*définition de fonction*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
+*`function-definition`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`*<sub>OPT</sub> *`attribute-seq`* <sub>OPT</sub> *`declarator`* *`declaration-list`* <sub>OPT</sub>*`compound-statement`*
 
-/\**attribute-SEQ* est spécifique à Microsoft\*/
+/\**`attribute-seq`* est spécifique à Microsoft\*/
 
-*déclarateur*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>OPT</sub> *direct-declarator*
+*`declarator`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`pointer`*<sub>OPT</sub>*`direct-declarator`*
 
-*direct-declarator*:/\* un déclarateur de fonction\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***Parameter-type-list***)**  / \* New-style declarator      \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***identifier-List*<sub>OPT</sub> **)**  / \* -déclarateur de style obsolète    \*/
+*`direct-declarator`*:/ \* Un déclarateur de fonction\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`parameter-type-list`*  **`)`** /\*Déclarateur de style New\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`direct-declarator`*  **`(`**  *`identifier-list`*<sub>opt</sub> **`)`**  / OPT \* Déclarateur de style obsolète\*/
 
-*Parameter-type-list*:/\* la liste de paramètres\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*liste de paramètres* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*liste de paramètres* **,...**
+*`parameter-type-list`*:/ \* La liste de paramètres\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`, ...`**
 
-*liste de paramètres*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Déclaration de paramètre*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *paramètre-DECLARATION*
+*`parameter-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-declaration`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`,`**  *`parameter-declaration`*
 
-*parameter-declaration* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *abstract-declarator*<sub>opt</sub>
+*`parameter-declaration`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`* *`declarator`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`**`abstract-declarator`* <sub>OPT</sub>
 
-*parameter-type-list* est une séquence de déclarations de paramètre séparée par des virgules. La formule de chaque paramètre dans la liste des paramètres ressemble à ceci :
+*`parameter-type-list`* Est une séquence de déclarations de paramètre séparée par des virgules. La formule de chaque paramètre dans la liste des paramètres ressemble à ceci :
 
-```C
-[register]  type-specifier [declarator]
-```
+> **`register`**<sub>OPT</sub> *`type-specifier`* *`declarator`* <sub>OPT</sub>
 
-Les paramètres de fonction déclarés avec l'attribut **auto** génèrent des erreurs. Les identificateurs des paramètres sont utilisés dans le corps de la fonction pour faire référence aux valeurs passées à la fonction. Vous pouvez nommer les paramètres dans un prototype, mais les noms sont hors de portée à la fin de la déclaration. Par conséquent, des noms de paramètres peuvent être assignés de la même façon ou différemment dans la définition de fonction. Ces identificateurs ne peuvent pas être redéfinis dans le bloc extérieur du corps de la fonction, mais ils peuvent être redéfinis dans les blocs internes et imbriqués comme si la liste des paramètres était un bloc englobant.
+Les paramètres de fonction déclarés avec l' **`auto`** attribut génèrent des erreurs. Les identificateurs des paramètres sont utilisés dans le corps de la fonction pour faire référence aux valeurs passées à la fonction. Vous pouvez nommer les paramètres dans un prototype, mais les noms sont hors de portée à la fin de la déclaration. Cela signifie que les noms de paramètres peuvent être assignés de la même façon ou différemment dans la définition de fonction. Ces identificateurs ne peuvent pas être redéfinis dans le bloc le plus à l’extérieur du corps de la fonction, mais ils peuvent être redéfinis dans les blocs internes et imbriqués comme si la liste des paramètres était un bloc englobant.
 
-Chaque identificateur figurant dans *parameter-type-list* doit être précédé par son spécificateur de type approprié, comme illustré dans cet exemple :
+Chaque identificateur dans *`parameter-type-list`* doit être précédé par son spécificateur de type approprié, comme illustré dans cet exemple :
 
 ```C
 void new( double x, double y, double z )
@@ -66,13 +64,13 @@ void new( double x, double y, double z )
 }
 ```
 
-Si au moins un paramètre apparaît dans la liste de paramètres, la liste peut se terminer par une virgule suivie de trois points (**,...**). Cette construction, appelée « notation de sélection », indique un nombre variable d’arguments à la fonction. (Pour plus d’informations, consultez [appels avec un nombre variable d’arguments](../c-language/calls-with-a-variable-number-of-arguments.md) .) Toutefois, un appel à la fonction doit avoir au moins autant d’arguments qu’il y a de paramètres avant la dernière virgule.
+Si au moins un paramètre apparaît dans la liste de paramètres, la liste peut se terminer par une virgule suivie de trois points ( **`, ...`** ). Cette construction, appelée « notation de sélection », indique un nombre variable d’arguments à la fonction. (Pour plus d’informations, consultez [appels avec un nombre variable d’arguments](../c-language/calls-with-a-variable-number-of-arguments.md).) Toutefois, un appel à la fonction doit avoir au moins autant d’arguments qu’il y a de paramètres avant la dernière virgule.
 
-Si aucun argument ne doit être passé à la fonction, la liste des paramètres est remplacée par le mot clé `void`. Cette utilisation de `void` est distincte de son utilisation comme un spécificateur de type.
+Si aucun argument ne doit être passé à la fonction, la liste des paramètres est remplacée par le mot clé **`void`** . Cette utilisation de **`void`** est distincte de son utilisation comme un spécificateur de type.
 
 L'ordre et le type des paramètres, y compris toute utilisation de la notation de sélection, doivent être identiques dans toutes les déclarations de fonctions (le cas échéant) et dans la définition de fonction. Les types des arguments après les conversions arithmétiques habituelles doivent être compatibles-assignation avec les types de paramètres correspondants. (Consultez [conversions arithmétiques habituelles](../c-language/usual-arithmetic-conversions.md) pour plus d’informations sur les conversions arithmétiques.) Les arguments qui suivent les points de suspension ne sont pas activés. Un paramètre peut avoir n'importe quel type fondamental, structure, union, pointeur ou tableau.
 
-Le compilateur effectue les conversions arithmétiques habituelles indépendamment sur chaque paramètre et sur chaque argument, si nécessaire. Après la conversion, aucun paramètre n'est plus court que `int`, et aucun paramètre n'a le type **float** à moins que le type de paramètre soit explicitement spécifié comme **float** dans le prototype. Cela signifie, par exemple, que la déclaration d'un paramètre comme `char` revient à la déclarer comme `int`.
+Le compilateur effectue les conversions arithmétiques habituelles indépendamment sur chaque paramètre et sur chaque argument, si nécessaire. Après la conversion, aucun paramètre n’est plus petit qu’un **`int`** , et aucun paramètre n’a **`float`** le type, à moins que le type de paramètre soit explicitement spécifié comme **`float`** dans le prototype. Cela signifie, par exemple, que la déclaration d’un paramètre en tant que **`char`** a le même effet que sa déclaration en tant que **`int`** .
 
 ## <a name="see-also"></a>Voir aussi
 

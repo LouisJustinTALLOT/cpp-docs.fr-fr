@@ -7,12 +7,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: 2d2e04572de91b161237d999bb95cfda26256c54
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 2ae73ab4ca91e06e3b6cd41166a8d05ae0857e4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857097"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229699"
 ---
 # <a name="function-body"></a>Corps de fonction
 
@@ -25,12 +25,12 @@ Un *corps de fonction* est une instruction composée contenant les instructions 
 
 /\**attribute-SEQ* est spécifique à Microsoft\*/
 
-*Compound-Statement*:/\* le corps de la fonction\*/<br/>
+*Compound-Statement*:/ \* le corps de la fonction\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>OPT</sub> *Statement-List*<sub>OPT</sub> **}**
 
-Les variables déclarées dans un corps de fonction, appelées *variables locales*, ont une classe de stockage **auto**, sauf indication contraire. Lorsque la fonction est appelée, du stockage est créé pour les variables locales et les initialisations locales sont exécutées. Le contrôle d'exécution passe à la première instruction dans *compound-statement* et continue jusqu'à ce qu'une instruction **return** soit exécutée ou jusqu'à la fin du corps de la fonction. Le contrôle revient ensuite au point auquel la fonction a été appelée.
+Les variables déclarées dans un corps de fonction, appelées « *variables locales*», ont une **`auto`** classe de stockage, sauf indication contraire. Lorsque la fonction est appelée, du stockage est créé pour les variables locales et les initialisations locales sont exécutées. Le contrôle d’exécution passe à la première instruction dans *Compound-Statement* et continue jusqu’à ce qu’une **`return`** instruction soit exécutée ou que la fin du corps de la fonction soit rencontrée. Le contrôle revient ensuite au point auquel la fonction a été appelée.
 
-Une instruction **return** contenant une expression doit être exécutée si la fonction doit retourner une valeur. La valeur renvoyée d'une fonction est non définie si aucune instruction **return** n'est exécutée ou si l'instruction **return** n'inclut pas d'expression.
+Une **`return`** instruction contenant une expression doit être exécutée si la fonction doit retourner une valeur. La valeur de retour d’une fonction n’est pas définie si aucune **`return`** instruction n’est exécutée ou si l' **`return`** instruction n’inclut pas d’expression.
 
 ## <a name="see-also"></a>Voir aussi
 

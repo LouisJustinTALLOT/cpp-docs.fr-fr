@@ -5,12 +5,12 @@ helpviewer_keywords:
 - __asm keyword [C]
 - inline assembler [C]
 ms.assetid: 821acc77-60b1-434c-ba54-2ba930a25ab4
-ms.openlocfilehash: 8fb2a1dd3e87ef452083935e23048d80b4cdc8c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6bff3bfef64b45c8a02bb9ad69d2731ba778525
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233175"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229608"
 ---
 # <a name="inline-assembler-c"></a>Assembleur inline (C)
 
@@ -20,9 +20,9 @@ L'assembleur inline vous permet d'incorporer des instructions en langage assembl
 
 Étant donné que l'assembleur inline n'a pas besoin de code assembleur ni d'étapes de liaison distinctes, il est plus pratique qu'un assembleur distinct. Le code assembleur inline peut utiliser tout nom de fonction ou variable C qui est dans la portée. Il est par conséquent facile de l'intégrer au code C de votre programme. En outre, le code assembleur pouvant être combiné avec des instructions C, il peut exécuter des tâches lourdes ou impossibles en C seul.
 
-Le mot clé `__asm` appelle l'assembleur inline et peut apparaître partout où une instruction C est conforme. Il ne peut pas apparaître de lui-même. Il doit être suivi par une instruction assembleur, un groupe d'instructions entre accolades ou, au minimum, par une paire d'accolades vide. Le terme « bloc `__asm`  » fait ici référence à une instruction ou un groupe d'instructions, que ce dernier soit ou non entouré d'accolades.
+Le **`__asm`** mot clé appelle l’assembleur inline et peut apparaître partout où une instruction C est légale. Il ne peut pas apparaître de lui-même. Il doit être suivi par une instruction assembleur, un groupe d'instructions entre accolades ou, au minimum, par une paire d'accolades vide. Ici, le terme « **`__asm`** bloc » fait référence à toute instruction ou à tout groupe d’instructions, qu’elles soient ou non placées entre accolades.
 
-Le code ci-dessous est un bloc `__asm` simple entre accolades. (Le code est une séquence de prologue de fonction personnalisée.)
+Le code ci-dessous est un **`__asm`** bloc simple entre accolades. (Le code est une séquence de prologue de fonction personnalisée.)
 
 ```
 __asm
@@ -33,7 +33,7 @@ __asm
 }
 ```
 
-Vous pouvez aussi placer `__asm` devant chaque instruction assembleur :
+Vous pouvez également placer **`__asm`** devant chaque instruction d’assembly :
 
 ```
 __asm push ebp
@@ -41,7 +41,7 @@ __asm mov  ebp, esp
 __asm sub  esp, __LOCAL_SIZE
 ```
 
-Dans la mesure où le mot clé `__asm` est un séparateur d'instruction, vous pouvez également placer des instructions assembleur sur la même ligne :
+Étant donné que le **`__asm`** mot clé est un séparateur d’instruction, vous pouvez également placer des instructions d’assembly sur la même ligne :
 
 ```
 __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
@@ -51,4 +51,4 @@ __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs de fonctions](../c-language/function-attributes.md)
+[Attributs de fonction](../c-language/function-attributes.md)

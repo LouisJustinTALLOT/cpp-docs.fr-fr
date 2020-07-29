@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172280"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195575"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Comment : déclarer des types de valeur avec le mot clé interior_ptr (C++/CLI)
 
@@ -69,9 +69,9 @@ int main() {
 
 ### <a name="description"></a>Description
 
-Dans un type valeur, le pointeur **this** correspond à un interior_ptr.
+Dans un type valeur, le **`this`** pointeur prend la valeur d’une interior_ptr.
 
-Dans le corps d’une fonction membre non statique d’un type valeur `V`, **this** est une expression de type `interior_ptr<V>` dont la valeur est l’adresse de l’objet pour lequel la fonction est appelée.
+Dans le corps d’une fonction membre non statique d’un type valeur `V` , **`this`** est une expression de type dont la `interior_ptr<V>` valeur est l’adresse de l’objet pour lequel la fonction est appelée.
 
 ### <a name="code"></a>Code
 
@@ -129,4 +129,4 @@ hello
 
 ## <a name="see-also"></a>Voir aussi
 
-[interior_ptr (C++-CLI)](interior-ptr-cpp-cli.md)
+[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

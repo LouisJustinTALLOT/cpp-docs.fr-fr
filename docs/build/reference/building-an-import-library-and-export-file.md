@@ -25,46 +25,46 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 37c3169b66e1120dbfdb3a69379430e9bc8a1586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cb5224b3edaf84dbcb7c0429044a647fb5ac19a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294785"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229751"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Génération d'une bibliothèque d'importation et d'un fichier d'exportation
 
-Pour générer une bibliothèque d’importation et exportation de fichier, utilisez la syntaxe suivante :
+Pour générer une bibliothèque d’importation et un fichier d’exportation, utilisez la syntaxe suivante :
 
-> **LIB /DEF**[**:**<em>deffile</em>] [*options*] [*objfiles*] [*libraries*]
+> **Lib/def**[**:**<em>deffile</em>] [*options*] [*objfiles*] [*bibliothèques*]
 
-Lorsque l’option /DEF est spécifiée, LIB crée les fichiers de sortie à partir de spécifications d’exportation qui sont passées dans la commande LIB. Il existe trois méthodes pour spécifier des exportations, répertoriées dans l’ordre d’utilisation recommandé :
+Lorsque l’option/DEF est spécifiée, LIB crée les fichiers de sortie à partir des spécifications d’exportation qui sont transmises dans la commande LIB. Il existe trois méthodes pour spécifier des exportations, répertoriées dans l’ordre d’utilisation recommandé :
 
-1. Un **__declspec (dllexport)** définition de la *objfiles* ou *bibliothèques*
+1. Une **`__declspec(dllexport)`** définition dans l’un des *objfiles* ou *bibliothèques*
 
-1. Une spécification de /EXPORT :*nom* sur la ligne de commande LIB
+1. Une spécification de/EXPORT :*Name* sur la ligne de commande lib
 
-1. Une définition dans un **exportations** instruction dans un *deffile*
+1. Définition dans une instruction **exports** dans un *deffile*
 
-Ce sont les mêmes méthodes que vous utilisez pour spécifier des exportations lors de la liaison d’un programme exportateur. Un programme peut utiliser plusieurs méthodes. Vous pouvez spécifier les parties de la commande LIB (par exemple plusieurs *objfiles* ou des spécifications /EXPORT) dans un fichier de commandes dans la commande LIB, tout comme vous pouvez dans une commande de lien.
+Il s’agit des mêmes méthodes que celles utilisées pour spécifier des exportations lors de la liaison d’un programme d’exportation. Un programme peut utiliser plusieurs méthodes. Vous pouvez spécifier des parties de la commande LIB (par exemple, plusieurs spécifications *objfiles* ou/Export) dans un fichier de commandes dans la commande lib, comme vous le feriez dans une commande Link.
 
-Les options suivantes s’appliquent à la création d’une bibliothèque d’importation et exportation de fichier :
+Les options suivantes s’appliquent à la création d’une bibliothèque d’importation et d’un fichier d’exportation :
 
-> **/ OUT :** *importer*
+> **/Out :** *Importer*
 
-Substitue le nom de fichier de sortie par défaut pour le *importer* bibliothèque en cours de création. Lorsque /OUT n’est pas spécifié, le nom par défaut est le nom de base de la bibliothèque dans la commande LIB et l’extension ou le premier fichier objet. lib. Le fichier d’exportation porte le même nom que la bibliothèque d’importation et l’extension. exp.
+Remplace le nom de fichier de sortie par défaut pour la bibliothèque d' *importation* en cours de création. Lorsque/OUT n’est pas spécifié, le nom par défaut est le nom de base du premier fichier objet ou bibliothèque dans la commande LIB et l’extension. lib. Le fichier d’exportation reçoit le même nom de base que la bibliothèque d’importation et l’extension. exp.
 
-> **/EXPORT:** *entryname*\[**=** *internalname*]\[,**\@**<em>ordinal</em>\[, **NONAME**]]\[, **DATA**]
+> **/Export :** *entryname* \[ **=** *InternalName*] \[ , **\@** <em>ordinal</em> \[ , **NoName**]] \[ , **données**]
 
-Exporte une fonction à partir de votre programme afin d’appeler la fonction d’autres programmes. Vous pouvez également exporter des données (à l’aide de la **données** mot clé). Exportations sont généralement définies dans une DLL.
+Exporte une fonction à partir de votre programme pour permettre à d’autres programmes d’appeler la fonction. Vous pouvez également exporter des données (à l’aide du mot clé **Data** ). Les exportations sont généralement définies dans une DLL.
 
-Le *nom d’entrée* est le nom de la fonction ou élément de données tel qu’il doit être utilisé par le programme appelant. Si vous le souhaitez, vous pouvez spécifier le *internalname* en tant que fonction connue dans le programme de définition ; par défaut, *internalname* est identique à *nom d’entrée*. Le *ordinale* spécifie un index dans la table d’exportation dans la plage comprise entre 1 et 65 535, si vous ne spécifiez pas *ordinale*, LIB en assigne un. Le **NONAME** mot clé exporte la fonction uniquement comme ordinal, sans un *nom d’entrée*. Le **données** mot clé est utilisé pour exporter des objets de données uniquement.
+L’argument *entryname* est le nom de la fonction ou de l’élément de données tel qu’il doit être utilisé par le programme appelant. Si vous le souhaitez, vous pouvez spécifier le *InternalName* comme fonction connue dans le programme de définition. par défaut, *InternalName* est identique à *entryname*. L' *ordinal* spécifie un index dans la table d’exportation de la plage comprise entre 1 et 65 535 ; Si vous ne spécifiez pas d' *ordinal*, lib en assigne un. Le mot clé **NoName** exporte la fonction uniquement en tant qu’ordinal, sans *entryname*. Le mot clé **Data** est utilisé pour exporter uniquement les objets de données.
 
-> **/INCLUDE:** *symbol*
+> **/Include :** *symbole*
 
-Ajoute l’objet *symbole* à la table de symboles. Cette option est utile pour forcer l’utilisation d’un objet de bibliothèque qui sinon ne serait pas inclus.
+Ajoute le *symbole* spécifié à la table de symboles. Cette option est utile pour forcer l’utilisation d’un objet de bibliothèque qui, sinon, ne serait pas inclus.
 
-Notez que si vous créez votre bibliothèque d’importation dans une étape préliminaire, avant de créer votre fichier .dll, vous devez passer le même ensemble de fichiers objets lors de la génération du fichier .dll que vous avez passé lors de la création de la bibliothèque d’importation.
+Notez que si vous créez votre bibliothèque d’importation à une étape préliminaire, avant de créer votre fichier. dll, vous devez passer le même ensemble de fichiers objets lors de la génération du fichier. dll, comme vous l’avez passé lors de la génération de la bibliothèque d’importation.
 
 ## <a name="see-also"></a>Voir aussi
 

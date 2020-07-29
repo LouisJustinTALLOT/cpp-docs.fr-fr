@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 875fc3334d326315890396ee02e55b5880e8692e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172072"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195562"
 ---
 # <a name="overview-of-generics-in-ccli"></a>Vue d’ensemble des génériques dans C++/CLI
 
@@ -47,7 +47,7 @@ Une déclaration générique contient un ou plusieurs types inconnus, tels que l
 
 ### <a name="type-arguments"></a>Arguments de type
 
-L’*argument de type* est le type actuel utilisé à la place du paramètre de type lorsque le générique est spécialisé pour un type voire des types spécifiques. Par exemple, **int** est l’argument de type dans `List<int>`. Les types de valeur et les types de handle sont les seuls types autorisés en tant qu’argument de type générique.
+L’*argument de type* est le type actuel utilisé à la place du paramètre de type lorsque le générique est spécialisé pour un type voire des types spécifiques. Par exemple, **`int`** est l’argument de type dans `List<int>` . Les types de valeur et les types de handle sont les seuls types autorisés en tant qu’argument de type générique.
 
 ### <a name="constructed-type"></a>Type construit
 

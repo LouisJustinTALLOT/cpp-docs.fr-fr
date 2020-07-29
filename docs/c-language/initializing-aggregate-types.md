@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62326077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229621"
 ---
 # <a name="initializing-aggregate-types"></a>Initialisation des types d'agrégats
 
@@ -51,7 +51,7 @@ Toutefois, si vous spécifiez la taille et indiquez un nombre erroné d'initiali
 
 **Spécifique à Microsoft**
 
-La taille maximale d'un tableau est définie par **size_t**. Défini dans le fichier d'en-tête STDDEF.H, **size_t** est un `unsigned int` présentant la plage de 0x00000000 à 0x7CFFFFFF.
+La taille maximale d'un tableau est définie par **size_t**. Défini dans le fichier d’en-tête STDDEF. H, **size_t** est un **`unsigned int`** avec une plage comprise entre 0x00000000 et 0x7CFFFFFF.
 
 **FIN spécifique à Microsoft**
 
@@ -119,7 +119,7 @@ triplet nlist[2][3] =  /* THIS CAUSES AN ERROR */
 
 Dans cette construction, la première accolade ouvrante sur la ligne 1 démarre l'initialisation de `nlist[0]`, un tableau de trois structures. Les valeurs 1, 2, et 3 sont assignées aux trois membres de la première structure. Lorsque l'accolade fermante suivante est atteinte (après la valeur 3), l'initialisation de `nlist[0]` est terminée, et les deux structures restantes du tableau de trois structures sont automatiquement initialisées à 0. De même, `{ 4,5,6 }` initialise la première structure dans la deuxième ligne de `nlist`. Les deux structures restantes de `nlist[1]` sont définies à 0. Lorsque le compilateur rencontre la liste d'initialiseurs suivante (`{ 7,8,9 }`), il tente d'initialiser `nlist[2]`. Étant donné que `nlist` ne contient que deux lignes, cette tentative génère une erreur.
 
-Dans l'exemple suivant, les trois membres `int` de `x` sont initialisés à 1, 2 et 3, respectivement.
+Dans cet exemple suivant, les trois **`int`** membres de `x` sont initialisés à 1, 2 et 3, respectivement.
 
 ```C
 struct list

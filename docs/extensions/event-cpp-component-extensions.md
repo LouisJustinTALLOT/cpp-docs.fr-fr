@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8a0674defb0f5e81e0d1417bab5a282cf82b82b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172384"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87195692"
 ---
 # <a name="event--ccli-and-ccx"></a>événement (C++/CLI et C++/CX)
 
@@ -40,8 +40,8 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Paramètres
 
-*modifier*<br/>
-Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont **static** et **virtual**.
+*modificateur*<br/>
+Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont **`static`** et **`virtual`** .
 
 *delegate*<br/>
 [Délégué](delegate-cpp-component-extensions.md) dont la signature doit correspondre au gestionnaire d’événements.
@@ -50,7 +50,7 @@ Modificateur qui peut être utilisé sur la déclaration event ou une méthode d
 Nom de l’événement.
 
 *return_value*<br/>
-Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être **void**.
+Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être **`void`** .
 
 *parameters*<br/>
 (facultatif) Paramètres de la méthode `raise`, qui correspondent à la signature du paramètre *delegate*.
@@ -104,8 +104,8 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Paramètres
 
-*modifier*<br/>
-Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont **static** et **virtual**.
+*modificateur*<br/>
+Modificateur qui peut être utilisé sur la déclaration event ou une méthode d’accesseur d’événement.  Les valeurs possibles sont **`static`** et **`virtual`** .
 
 *delegate*<br/>
 [Délégué](delegate-cpp-component-extensions.md) dont la signature doit correspondre au gestionnaire d’événements.
@@ -114,7 +114,7 @@ Modificateur qui peut être utilisé sur la déclaration event ou une méthode d
 Nom de l’événement.
 
 *return_value*<br/>
-Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être **void**.
+Valeur de retour de la méthode d’accesseur d’événement.  Pour être vérifiable, le type de retour doit être **`void`** .
 
 *parameters*<br/>
 (facultatif) Paramètres de la méthode `raise`, qui correspondent à la signature du paramètre *delegate*.
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-L'exemple de code suivant illustre la logique utilisée pour générer la méthode `raise` d'un événement trivial : si l'événement a un ou plusieurs abonnés, l'appel à la méthode `raise` permet d'appeler implicitement ou explicitement le délégué. Si le type de retour du délégué n’est pas **void** et que le nombre d’abonnés à l’événement s’élève à zéro, la méthode `raise` retourne la valeur par défaut pour le type délégué. En l'absence d'abonnés à l'événement, l'appel à la méthode `raise` entraîne un retour simple et aucune exception n'est levée. Si le type de retour du délégué n’est pas **void**, le type délégué est retourné.
+L'exemple de code suivant illustre la logique utilisée pour générer la méthode `raise` d'un événement trivial : si l'événement a un ou plusieurs abonnés, l'appel à la méthode `raise` permet d'appeler implicitement ou explicitement le délégué. Si le type de retour du délégué n’est pas **`void`** et s’il n’y a aucun abonné aux événements, la `raise` méthode retourne la valeur par défaut pour le type délégué. En l'absence d'abonnés à l'événement, l'appel à la méthode `raise` entraîne un retour simple et aucune exception n'est levée. Si le type de retour du délégué n’est pas **`void`** , le type délégué est retourné.
 
 ```cpp
 // trivial_events.cpp
@@ -272,4 +272,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: e8f62e82ebb7fcc18be5ac7d203df0fb46c9b635
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de775c511701cd0b7cf923f47e33723b30a966e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369857"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186969"
 ---
 # <a name="member-access-control-c"></a>Contrôle d'accès aux membres (C++)
 
-Les contrôles d’accès vous permettent de séparer l’interface [publique](../cpp/public-cpp.md) d’une classe des détails d’implémentation [privés](../cpp/private-cpp.md) et des membres [protégés](../cpp/protected-cpp.md) qui ne sont utilisés que par les classes dérivées. Le spécificateur d'accès s'applique à tous les membres déclarés après lui jusqu'à ce que le spécificateur d'accès suivant soit rencontré.
+Les contrôles d’accès vous permettent de séparer l’interface [publique](../cpp/public-cpp.md) d’une classe des détails d’implémentation [privés](../cpp/private-cpp.md) et des membres [protégés](../cpp/protected-cpp.md) qui sont uniquement utilisés par les classes dérivées. Le spécificateur d'accès s'applique à tous les membres déclarés après lui jusqu'à ce que le spécificateur d'accès suivant soit rencontré.
 
 ```cpp
 class Point
@@ -35,15 +35,15 @@ protected:      // Declare protected function for derived classes only.
 };
 ```
 
-L’accès par défaut est **privé** dans une classe et **public** dans une structure ou un syndicat. Les spécificateurs d'accès dans une classe peuvent être utilisés autant de fois que nécessaire dans n'importe quel ordre. L'allocation du stockage des objets des types de classe est dépendante de l'implémentation, mais les membres ont la garantie d'être assignés successivement aux adresses mémoire supérieures entre les spécificateurs d'accès.
+L’accès par défaut se trouve **`private`** dans une classe, et **`public`** dans un struct ou une Union. Les spécificateurs d'accès dans une classe peuvent être utilisés autant de fois que nécessaire dans n'importe quel ordre. L'allocation du stockage des objets des types de classe est dépendante de l'implémentation, mais les membres ont la garantie d'être assignés successivement aux adresses mémoire supérieures entre les spécificateurs d'accès.
 
 ## <a name="member-access-control"></a>Contrôle d'accès aux membres
 
 |Type d'accès|Signification|
 |--------------------|-------------|
-|[Privé](../cpp/private-cpp.md)|Les membres de la classe **déclarés privés** ne peuvent être utilisés que par les fonctions des membres et les amis (classes ou fonctions) de la classe.|
-|[protected](../cpp/protected-cpp.md)|Les membres de la classe **déclarés protégés** peuvent être utilisés par les fonctions des membres et les amis (classes ou fonctions) de la classe. En outre, ils peuvent être utilisés par des classes dérivées de la classe.|
-|[public](../cpp/public-cpp.md)|Les membres du groupe **déclarés publics** peuvent être utilisés par n’importe quelle fonction.|
+|[priv](../cpp/private-cpp.md)|Les membres de classe déclarés comme **`private`** peuvent être utilisés uniquement par les fonctions membres et les amis (classes ou fonctions) de la classe.|
+|[protected](../cpp/protected-cpp.md)|Les membres de classe déclarés comme **`protected`** peuvent être utilisés par les fonctions membres et les amis (classes ou fonctions) de la classe. En outre, ils peuvent être utilisés par des classes dérivées de la classe.|
+|[public](../cpp/public-cpp.md)|Les membres de classe déclarés comme **`public`** peuvent être utilisés par n’importe quelle fonction.|
 
 Le contrôle d'accès vous empêche d'utiliser des objets à d'autres fins que leur usage prévu. Cette protection est perdue lorsque les conversions de type explicite (casts) sont exécutées.
 
@@ -54,7 +54,7 @@ Le contrôle d'accès vous empêche d'utiliser des objets à d'autres fins que l
 
 Deux facteurs contrôlent les membres d'une classe de base qui sont accessibles dans une classe dérivée. Ces mêmes facteurs contrôlent l'accès aux membres hérités dans la classe dérivée :
 
-- Que la classe dérivée déclare la classe de base à l’aide du spécificateur d’accès **public.**
+- Si la classe dérivée déclare la classe de base à l’aide du **`public`** spécificateur d’accès.
 
 - Quel est l'accès au membre de la classe de base.
 
@@ -116,7 +116,7 @@ Dans `DerivedClass1`, la fonction membre `PublicFunc` est un membre public et `P
 
 Dans `DerivedClass2`, les fonctions `PublicFunc` et `ProtectedFunc` sont considérées comme des membres privés car `BaseClass` est une classe de base privée. À nouveau, `PrivateFunc` est privé pour `BaseClass` et inaccessible à toutes les classes dérivées.
 
-Vous pouvez déclarer une classe dérivée sans spécificateur d'accès de classe de base. Dans un tel cas, la dérivation est considérée comme privée si la déclaration de classe dérivée utilise le mot clé de **classe.** La dérivation est considérée comme publique si la déclaration de classe dérivée utilise le mot clé **struct.** Par exemple, le code suivant :
+Vous pouvez déclarer une classe dérivée sans spécificateur d'accès de classe de base. Dans ce cas, la dérivation est considérée comme privée si la déclaration de classe dérivée utilise le **`class`** mot clé. La dérivation est considérée comme publique si la déclaration de classe dérivée utilise le **`struct`** mot clé. Par exemple, le code suivant :
 
 ```cpp
 class Derived : Base
@@ -144,16 +144,16 @@ struct Derived : public Base
 ...
 ```
 
-Notez que les membres déclarés ayant un accès privé ne sont pas accessibles aux fonctions ou aux classes dérivées à moins que ces fonctions ou classes ne soient déclarées à l’aide de la déclaration **d’ami** dans la classe de base.
+Notez que les membres déclarés comme ayant un accès privé ne sont pas accessibles aux fonctions ou aux classes dérivées, sauf si ces fonctions ou classes sont déclarées à l’aide **`friend`** de la déclaration dans la classe de base.
 
-Un **type d’union** ne peut pas avoir de classe de base.
+Un **`union`** type ne peut pas avoir de classe de base.
 
 > [!NOTE]
-> Lors de la spécifier une classe de base privée, il est conseillé d’utiliser explicitement le mot clé **privé** afin que les utilisateurs de la classe dérivée comprennent l’accès du membre.
+> Quand vous spécifiez une classe de base privée, il est recommandé d’utiliser explicitement le **`private`** mot clé pour que les utilisateurs de la classe dérivée comprennent l’accès au membre.
 
 ## <a name="access-control-and-static-members"></a>Contrôle d'accès et membres statiques
 
-Lorsque vous spécifiez une classe de base comme **privée,** elle ne touche que les membres non indiqués. Les membres publics static sont toujours accessibles dans les classes dérivées. Toutefois, l'accès aux membres de la classe de base à l'aide de pointeurs, de références ou d'objets peut nécessiter une conversion, à laquelle le contrôle d'accès est encore appliqué. Prenons l’exemple suivant :
+Quand vous spécifiez une classe de base en tant que **`private`** , elle affecte uniquement les membres non statiques. Les membres publics static sont toujours accessibles dans les classes dérivées. Toutefois, l'accès aux membres de la classe de base à l'aide de pointeurs, de références ou d'objets peut nécessiter une conversion, à laquelle le contrôle d'accès est encore appliqué. Prenons l’exemple suivant :
 
 ```cpp
 // access_control.cpp
@@ -187,7 +187,7 @@ int Derived2::ShowCount()
 }
 ```
 
-Dans le code précédent, le contrôle d'accès interdit la conversion d'un pointeur vers `Derived2` en un pointeur vers `Base`. Le **pointeur** de ce `Derived2 *`pointeur est implicitement de type . Pour sélectionner `CountOf` la fonction, **cela** doit `Base *`être converti en type . Cette conversion n'est pas autorisée car `Base` est une classe de base indirecte privée à `Derived2`. La conversion en type de classe de base privée est acceptable uniquement pour les pointeurs vers des classes dérivées immédiates. Par conséquent, les pointeurs de type `Derived1 *` peuvent être convertis en type `Base *`.
+Dans le code précédent, le contrôle d'accès interdit la conversion d'un pointeur vers `Derived2` en un pointeur vers `Base`. Le **`this`** pointeur est implicitement de type `Derived2 *` . Pour sélectionner la `CountOf` fonction, **`this`** doit être converti en type `Base *` . Cette conversion n'est pas autorisée car `Base` est une classe de base indirecte privée à `Derived2`. La conversion en type de classe de base privée est acceptable uniquement pour les pointeurs vers des classes dérivées immédiates. Par conséquent, les pointeurs de type `Derived1 *` peuvent être convertis en type `Base *`.
 
 Notez que lorsque vous appelez la fonction `CountOf` explicitement, sans utiliser de pointeur, de référence ou d'objet pour la sélectionner, cela n'implique aucune conversion. Par conséquent, l'appel est autorisé.
 
@@ -195,7 +195,7 @@ Les membres et les amis d'une classe dérivée, `T`, peuvent convertir un pointe
 
 ## <a name="access-to-virtual-functions"></a>Accès aux fonctions virtuelles
 
-Le contrôle d’accès appliqué aux fonctions [virtuelles](../cpp/virtual-cpp.md) est déterminé par le type utilisé pour faire l’appel de fonction. La substitution des déclarations de fonction n'affectent pas le contrôle d'accès pour un type donné. Par exemple :
+Le contrôle d’accès appliqué aux fonctions [virtuelles](../cpp/virtual-cpp.md) est déterminé par le type utilisé pour effectuer l’appel de fonction. La substitution des déclarations de fonction n'affectent pas le contrôle d'accès pour un type donné. Par exemple :
 
 ```cpp
 // access_to_virtual_functions.cpp
@@ -241,4 +241,4 @@ Dans cette figure, un nom déclaré dans la classe `VBase` est toujours accessib
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence linguistique de CMD](../cpp/cpp-language-reference.md)
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)

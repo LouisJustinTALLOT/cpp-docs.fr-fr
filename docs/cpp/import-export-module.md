@@ -9,21 +9,21 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Utiliser les déclarations d’importation et d’exportation pour accéder et publier les types et fonctions définis dans le module spécifié.
-ms.openlocfilehash: a765e9a406660d3c945ef3d70754178b0648458c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+description: Utilisez les déclarations d’importation et d’exportation pour accéder aux types et aux fonctions définies dans le module spécifié et les publier.
+ms.openlocfilehash: 5be1618d7e64f6887cf78bd863d428d6710eaf7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374115"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187190"
 ---
 # <a name="module-import-export"></a>module, importation, exportation
 
-Le **module**, **l’importation**et les déclarations **d’exportation** sont disponibles dans le C 20 et nécessitent le commutateur de compilateur [/expérimental:module](../build/reference/experimental-module.md) avec [/std:c 'latest](../build/reference/std-specify-language-standard-version.md). Pour plus d’informations, voir [Aperçu des modules dans C .](modules-cpp.md)
+Le **module**, l' **importation**et les **`export`** déclarations sont disponibles en c++ 20 et nécessitent le commutateur [/experimental : module](../build/reference/experimental-module.md) compiler avec [/std : C + + latest](../build/reference/std-specify-language-standard-version.md). Pour plus d’informations, consultez [vue d’ensemble des modules en C++](modules-cpp.md).
 
 ## <a name="module"></a>module
 
-Placez une déclaration **de module** au début d’un fichier d’implémentation du module pour spécifier que le contenu du fichier appartient au module désigné.
+Placez une déclaration de **module** au début d’un fichier d’implémentation de module pour spécifier que le contenu du fichier appartient au module nommé.
 
 ```cpp
 module ModuleA;
@@ -31,13 +31,13 @@ module ModuleA;
 
 ## <a name="export"></a>export
 
-Utilisez une déclaration **de module d’exportation** pour le fichier d’interface principal du module, qui doit avoir extension **.ixx**:
+Utilisez une déclaration de **module d’exportation** pour le fichier d’interface principal du module, qui doit avoir l’extension **. IXX**:
 
 ```cpp
 export module ModuleA;
 ```
 
-Dans un fichier d’interface, utilisez le modificateur **d’exportation** sur les noms qui sont destinés à faire partie de l’interface publique :
+Dans un fichier d’interface, utilisez le **`export`** modificateur sur les noms qui sont destinés à faire partie de l’interface publique :
 
 ```cpp
 // ModuleA.ixx
@@ -52,7 +52,7 @@ namespace Bar
 }
 ```
 
-Les noms non exportés ne sont pas visibles au code qui importe le module :
+Les noms non exportés ne sont pas visibles pour le code qui importe le module :
 
 ```cpp
 //MyProgram.cpp
@@ -66,11 +66,11 @@ int main() {
 }
 ```
 
-Le mot clé **d’exportation** peut ne pas apparaître dans un fichier d’implémentation du module. Lorsque **l’exportation** est appliquée à un nom namespace, tous les noms dans l’espace nom sont exportés.
+Le **`export`** mot clé ne peut pas apparaître dans un fichier d’implémentation de module. Lorsque **`export`** est appliqué à un nom d’espace de noms, tous les noms de l’espace de noms sont exportés.
 
 ## <a name="import"></a>importer
 
-Utilisez une déclaration **d’importation** pour rendre les noms d’un module visibles dans votre programme. La déclaration d’importation doit apparaître après la déclaration du module et après toute directive #include, mais avant toute déclaration dans le fichier.
+Utilisez une déclaration d' **importation** pour rendre les noms d’un module visibles dans votre programme. La déclaration d’importation doit apparaître après la déclaration de module et après toutes les directives de #include, mais avant toute déclaration dans le fichier.
 
 ```cpp
 module ModuleA;
@@ -88,7 +88,7 @@ class Baz
 
 ## <a name="remarks"></a>Notes
 
-**L’importation** et le **module** ne sont traités comme des mots clés que lorsqu’ils apparaissent au début d’une ligne logique :
+L' **importation** et le **module** sont traités comme des mots clés uniquement lorsqu’ils apparaissent au début d’une ligne logique :
 
 ```cpp
 
@@ -110,9 +110,9 @@ export import module-name
 int i; module ;
 ```
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
-Dans Microsoft C, **l’importation** et le **module** de jetons sont toujours des identifiants et jamais des mots clés lorsqu’ils sont utilisés comme arguments à une macro.
+Dans Microsoft C++, les jetons **Import** et **module** sont toujours des identificateurs et jamais des mots clés lorsqu’ils sont utilisés comme arguments d’une macro.
 
 ### <a name="example"></a>Exemple
 
