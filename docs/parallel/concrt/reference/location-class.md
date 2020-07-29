@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 7f45ff6d3092bd7c27e81adddca72c9411f752d1
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 848be3131e23ff53f2dec16364b132ee7c218195
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139823"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182692"
 ---
 # <a name="location-class"></a>location, classe
 
@@ -31,25 +31,25 @@ class location;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[location](#ctor)|Surchargé. Construit un objet `location`.|
-|[~ emplacement, destructeur](#dtor)|Détruit un objet `location`.|
+|[~ emplacement, destructeur](#dtor)|Détruit un objet `location` .|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[actif](#current)|Retourne un objet `location` représentant l’emplacement le plus spécifique que le thread appelant exécute.|
-|[from_numa_node](#from_numa_node)|Retourne un objet `location` qui représente un nœud NUMA donné.|
+|[actif](#current)|Retourne un `location` objet représentant l’emplacement le plus spécifique que le thread appelant exécute.|
+|[from_numa_node](#from_numa_node)|Retourne un `location` objet qui représente un nœud NUMA donné.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Détermine si deux objets `location` représentent un emplacement différent.|
-|[operator=](#operator_eq)|Assigne le contenu d’un objet `location` différent à celui-ci.|
-|[operator==](#operator_eq_eq)|Détermine si deux objets `location` représentent le même emplacement.|
+|[opérateur ! =](#operator_neq)|Détermine si deux `location` objets représentent un emplacement différent.|
+|[opérateur =](#operator_eq)|Assigne le contenu d’un autre `location` objet à celui-ci.|
+|[opérateur = =](#operator_eq_eq)|Détermine si deux `location` objets représentent le même emplacement.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -59,19 +59,19 @@ class location;
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="dtor"></a>emplacement ~
+## <a name="location"></a><a name="dtor"></a>emplacement ~
 
-Détruit un objet `location`.
+Détruit un objet `location` .
 
 ```cpp
 ~location();
 ```
 
-## <a name="current"></a>actif
+## <a name="current"></a><a name="current"></a>actif
 
-Retourne un objet `location` représentant l’emplacement le plus spécifique que le thread appelant exécute.
+Retourne un `location` objet représentant l’emplacement le plus spécifique que le thread appelant exécute.
 
 ```cpp
 static location __cdecl current();
@@ -81,9 +81,9 @@ static location __cdecl current();
 
 Emplacement représentant l’emplacement le plus spécifique que le thread appelant exécute.
 
-## <a name="from_numa_node"></a>from_numa_node
+## <a name="from_numa_node"></a><a name="from_numa_node"></a>from_numa_node
 
-Retourne un objet `location` qui représente un nœud NUMA donné.
+Retourne un `location` objet qui représente un nœud NUMA donné.
 
 ```cpp
 static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
@@ -96,9 +96,9 @@ Numéro de nœud NUMA pour lequel créer un emplacement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Emplacement représentant le nœud NUMA spécifié par le paramètre `_NumaNodeNumber`.
+Emplacement représentant le nœud NUMA spécifié par le `_NumaNodeNumber` paramètre.
 
-## <a name="ctor"></a>emplacement
+## <a name="location"></a><a name="ctor"></a>emplacement
 
 Construit un objet `location`.
 
@@ -132,9 +132,9 @@ Facultatif Pointeur de liaison.
 
 Un emplacement construit par défaut représente le système dans son ensemble.
 
-## <a name="operator_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="operator_neq"></a>opérateur ! =
 
-Détermine si deux objets `location` représentent un emplacement différent.
+Détermine si deux `location` objets représentent un emplacement différent.
 
 ```cpp
 bool operator!= (const location& _Rhs) const;
@@ -143,15 +143,15 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="parameters"></a>Paramètres
 
 *_Rhs*<br/>
-`location`d’opérande.
+Opérande `location` .
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les deux emplacements sont différents ; sinon, **false** .
+**`true`** Si les deux emplacements sont différents ; **`false`** sinon,.
 
-## <a name="operator_eq"></a>opérateur =
+## <a name="operator"></a><a name="operator_eq"></a>opérateur =
 
-Assigne le contenu d’un objet `location` différent à celui-ci.
+Assigne le contenu d’un autre `location` objet à celui-ci.
 
 ```cpp
 location& operator= (const location& _Rhs);
@@ -164,9 +164,9 @@ Objet `location` source.
 
 ### <a name="return-value"></a>Valeur de retour
 
-## <a name="operator_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="operator_eq_eq"></a>opérateur = =
 
-Détermine si deux objets `location` représentent le même emplacement.
+Détermine si deux `location` objets représentent le même emplacement.
 
 ```cpp
 bool operator== (const location& _Rhs) const;
@@ -175,12 +175,12 @@ bool operator== (const location& _Rhs) const;
 ### <a name="parameters"></a>Paramètres
 
 *_Rhs*<br/>
-`location`d’opérande.
+Opérande `location` .
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les deux emplacements sont identiques, et **false** dans le cas contraire.
+**`true`** Si les deux emplacements sont identiques, **`false`** sinon.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

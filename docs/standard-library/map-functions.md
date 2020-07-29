@@ -5,16 +5,16 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: e7876b37bfc006eaecf2f1e36273c5ae8689dad4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8cc4a82e08963902f9ba5c21ace759c47bdd0014
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419972"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228217"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt;, fonctions
 
-## <a name="swap_multimap"></a>swap (Map)
+## <a name="swap-map"></a><a name="swap_multimap"></a>swap (Map)
 
 Échange les éléments de deux classes map.
 
@@ -27,21 +27,21 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *droit*
+*Oui*\
 Carte qui fournit les éléments à permuter, ou mappage dont les éléments doivent être échangés avec ceux de la carte de *gauche*.
 
-\ *gauche*
+*gauche*\
 Mappage dont les éléments doivent être échangés avec ceux du mappage de *droite*.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle est un algorithme spécialisé sur la classe de conteneur MAP pour exécuter la fonction membre `left`. [échange](../standard-library/map-class.md#swap)(`right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle, **template** \< **Class t**> **void swap**( **t &** , **t &** ), dans la classe d’algorithme fonctionne par assignation et est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe de conteneur.
+La fonction de modèle est un algorithme spécialisé sur la classe de conteneur MAP pour exécuter la fonction membre `left` .[ échange](../standard-library/map-class.md#swap)( `right` ). Il s’agit d’une instance de l’ordonnancement partiel des modèles de fonctions par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle, **`template`** \< **class T**> **void swap**( **t&**, **t&**), dans la classe d’algorithme fonctionne par assignation et est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide car elle peut fonctionner avec la représentation interne de la classe conteneur.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise la version de modèle de [, consultez l’exemple de code de la fonction membre ](../standard-library/map-class.md#swap)map::swap`swap`.
+Pour obtenir un exemple qui utilise la version de modèle de `swap`, consultez l’exemple de code de la fonction membre [map::swap](../standard-library/map-class.md#swap).
 
-## <a name="swap"></a>échange (Multimap)
+## <a name="swap-multimap"></a><a name="swap"></a>échange (Multimap)
 
 Échange les éléments de deux multimaps.
 
@@ -54,16 +54,16 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *droit*
+*Oui*\
 Multimap qui fournit les éléments à échanger ou Multimap dont les éléments doivent être échangés avec ceux du Multimap à *gauche*.
 
-\ *gauche*
+*gauche*\
 Multimap dont les éléments doivent être échangés avec ceux du *droit*Multimap.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle est un algorithme spécialisé sur la classe de conteneur MAP à exécuter sur la classe de conteneur Multimap pour exécuter la fonction membre `left`. [échange](../standard-library/multimap-class.md#swap) (`right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle, **template** \< **Class t**> **void swap**( **t &** , **t &** ), dans la classe d’algorithme fonctionne par assignation et est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe de conteneur.
+La fonction de modèle est un algorithme spécialisé sur la classe de conteneur MAP pour s’exécuter sur la classe de conteneur Multimap pour exécuter la fonction membre `left` .[ échange](../standard-library/multimap-class.md#swap) ( `right` ). Il s’agit d’une instance de l’ordonnancement partiel des modèles de fonctions par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle, **`template`** \< **class T**> **void swap**( **t&**, **t&**), dans la classe d’algorithme fonctionne par assignation et est une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide car elle peut fonctionner avec la représentation interne de la classe conteneur.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise la version de modèle de [, consultez l’exemple de code de la fonction membre ](../standard-library/multimap-class.md#swap)multimap::swap`swap`.
+Pour obtenir un exemple qui utilise la version de modèle de `swap`, consultez l’exemple de code de la fonction membre [multimap::swap](../standard-library/multimap-class.md#swap).

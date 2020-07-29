@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909268"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189439"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -72,12 +72,12 @@ Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ASIN** retourne un
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|**Non valide**|**_DOMAIN**|
-|± **QNAN**, **IND**|Aucun|**_DOMAIN**|
+|± **QNAN**, **IND**|aucun|**_DOMAIN**|
 |&#124;x&#124;>1|**Non valide**|**_DOMAIN**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ASIN** avec des valeurs **float** et **long** **double** . Dans un programme C, **ASIN** prend toujours et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ASIN** avec **`float`** des **`long double`** valeurs et. Dans un programme C, **ASIN** prend toujours et retourne un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -87,7 +87,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |-------------|---------------------|-|
 |**ASIN**, **ASInf,**, **asinl**|\<math.h>|\<cmath> ou \<math.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Pour plus d’informations, consultez [acos, acosf, acosl](acos-acosf-acosl.md).
 

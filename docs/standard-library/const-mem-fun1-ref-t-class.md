@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: 76fae1ce29cb4c47870e45e8f946f6ff1fea1885
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f9f426b7280872846695e204f2c9843d2622fe19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688174"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228334"
 ---
 # <a name="const_mem_fun1_ref_t-class"></a>const_mem_fun1_ref_t, classe
 
-Classe d’adaptateur qui permet à une fonction membre **const** qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence. Déconseillé dans C++ 11, supprimé en C++ 17.
+Classe d’adaptateur qui permet **`const`** à une fonction membre qui accepte un seul argument d’être appelée comme objet de fonction binaire en cas d’initialisation avec un argument de référence. Déconseillé dans C++ 11, supprimé en C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,13 +31,13 @@ template <class Result, class Type, class Arg>
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *PM*
+*Manuel*\
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-\ *gauche*
-Objet **const** sur lequel la fonction membre *PM* est appelée.
+*gauche*\
+**`const`** Objet sur lequel la fonction membre *PM* est appelée.
 
-\ *droit*
+*Oui*\
 Argument qui est donné à *PM*.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -46,7 +46,7 @@ Fonction binaire adaptable.
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe stocke une copie de *PM*, qui doit être un pointeur vers une fonction membre de la classe `Type`, dans un objet membre privé. Elle définit sa fonction membre `operator()` comme retournant (`left`. \* *PM*) (`right`) **const**.
+Le modèle de classe stocke une copie de *PM*, qui doit être un pointeur vers une fonction membre de classe `Type` , dans un objet membre privé. Elle définit sa fonction membre `operator()` comme retournant ( `left` . \* *PM*) ( `right` ) **`const`** .
 
 ## <a name="example"></a>Exemple
 
