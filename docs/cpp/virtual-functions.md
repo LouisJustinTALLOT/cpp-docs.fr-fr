@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926089"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231037"
 ---
 # <a name="virtual-functions"></a>Fonctions virtuelles
 
@@ -140,9 +140,9 @@ Invoked by Derived
 
 Comme vous pouvez le constater, que la fonction `NameOf` soit appelée via un pointeur vers `Base` ou un pointeur vers `Derived`, c'est la fonction pour `Derived` qui est appelée. La fonction pour `Derived` est appelée car `NameOf` est une fonction virtuelle, et `pBase` et `pDerived` pointent vers un objet de type `Derived`.
 
-Étant donné que les fonctions virtuelles sont appelées uniquement pour les objets de types de classe, vous ne pouvez pas déclarer de fonctions globales ou statiques comme **virtuelles**.
+Étant donné que les fonctions virtuelles sont appelées uniquement pour les objets de type classe, vous ne pouvez pas déclarer de fonctions globales ou statiques comme **`virtual`** .
 
-Le mot clé **Virtual** peut être utilisé lors de la déclaration de fonctions de substitution dans une classe dérivée, mais il n’est pas nécessaire. les substitutions de fonctions virtuelles sont toujours virtuelles.
+Le **`virtual`** mot clé peut être utilisé lors de la déclaration de fonctions de substitution dans une classe dérivée, mais il est inutile ; les substitutions de fonctions virtuelles sont toujours virtuelles.
 
 Les fonctions virtuelles dans une classe de base doivent être définies, sauf si elles sont déclarées à l’aide de *pure-specifier*. (Pour plus d’informations sur les fonctions virtuelles pures, consultez [classes abstraites](../cpp/abstract-classes-cpp.md).)
 

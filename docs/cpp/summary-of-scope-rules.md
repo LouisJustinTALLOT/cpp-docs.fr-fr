@@ -8,12 +8,12 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: 1f8b79c637662d79051b72e6aabefc99c450bdc5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 024a61419129f669485944a427379dd41c385404
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160877"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231063"
 ---
 # <a name="summary-of-scope-rules"></a>Résumé des règles de portée
 
@@ -29,7 +29,7 @@ Un nom d'objet, de fonction ou d'énumérateur est global s'il est placé en deh
 
 - Résolution de portée (`::`)
 
-- Sélection de membres pour les objets et les références ( **.** )
+- Sélection de membres pour les objets et les références (**.**)
 
 - Sélection de membres pour les pointeurs ( **->** )
 
@@ -37,7 +37,7 @@ Un nom d'objet, de fonction ou d'énumérateur est global s'il est placé en deh
 
 Les noms utilisés avec l'opérateur binaire de résolution de portée (`::`) sont appelés des noms qualifiés. Le nom spécifié après l'opérateur binaire de résolution de portée doit être membre de la classe spécifiée à gauche de l'opérateur ou membre d'une ou plusieurs de ses classes de base.
 
-Noms spécifiés après l’opérateur de sélection de membres ( **.** ou **->** ) doit être membre du type de classe de l’objet spécifié à gauche de l’opérateur ou des membres de ses classes de base. Les noms spécifiés à droite de l’opérateur de sélection de membres ( **->** ) peuvent également être des objets d’un autre type de classe, à condition que la partie gauche de **->** soit un objet de classe et que la classe définisse un opérateur de sélection de membres surchargé ( **->** ) qui prend la valeur d’un pointeur vers un autre type de classe. (Cette configuration est décrite plus en détail dans [accès aux membres de classe](../cpp/member-access.md).)
+Noms spécifiés après l’opérateur de sélection de membres (**.** ou **->** ) doit être membre du type de classe de l’objet spécifié à gauche de l’opérateur ou des membres de ses classes de base. Les noms spécifiés à droite de l’opérateur de sélection de membres ( **->** ) peuvent également être des objets d’un autre type de classe, à condition que la partie gauche de **->** soit un objet de classe et que la classe définisse un opérateur de sélection de membres surchargé ( **->** ) qui prend la valeur d’un pointeur vers un autre type de classe. (Cette configuration est décrite plus en détail dans [accès aux membres de classe](../cpp/member-access.md).)
 
 Le compilateur recherche les noms dans l'ordre suivant et s'arrête après avoir trouvé le nom :
 
@@ -57,11 +57,11 @@ Toutefois, vous pouvez apporter des modifications à cet ordre de recherche comm
 
 1. Les noms précédés de `::` forcent la recherche à commencer au niveau de la portée globale.
 
-1. Les noms précédés par les mots clés **Class**, **struct**et **Union** forcent le compilateur à rechercher uniquement les noms de **classes**, de **structures**ou d' **unions** .
+1. Les noms précédés par les **`class`** **`struct`** **`union`** Mots clés, et forcent le compilateur à rechercher uniquement les **`class`** **`struct`** noms, ou **`union`** .
 
-1. Les noms sur le côté gauche de l’opérateur de résolution de portée (`::`) peuvent être uniquement des noms de **classe**, de **struct**, d' **espace de noms**ou d' **Union** .
+1. Les noms sur le côté gauche de l’opérateur de résolution de portée ( `::` ) peuvent être uniquement **`class`** des noms,, **`struct`** **`namespace`** ou **`union`** .
 
-Si le nom fait référence à un membre non statique mais est utilisé dans une fonction membre statique, un message d'erreur est généré. De même, si le nom fait référence à un membre non statique dans une classe englobante, un message d’erreur est généré, car les classes incluses n’ont pas **de classe** englobante.
+Si le nom fait référence à un membre non statique mais est utilisé dans une fonction membre statique, un message d'erreur est généré. De même, si le nom fait référence à un membre non statique dans une classe englobante, un message d’erreur est généré parce que les classes incluses n’ont pas de pointeurs de classe englobante **`this`** .
 
 ## <a name="function-parameter-names"></a>Noms de paramètres de fonction
 

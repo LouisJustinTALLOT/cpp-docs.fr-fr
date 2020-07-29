@@ -9,20 +9,20 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2573f30b2dfee20d12afea2a1072bbdcef46228b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160890"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231076"
 ---
 # <a name="subscripting"></a>Indices
 
-L’opérateur d’indice ( **[]** ), comme l’opérateur d’appel de fonction, est considéré comme un opérateur binaire. L’opérateur d’indice doit être une fonction membre non statique qui accepte un seul argument. Cet argument peut être de tout type et désigne l’indice de tableau souhaité.
+L’opérateur d’indice (**[]**), comme l’opérateur d’appel de fonction, est considéré comme un opérateur binaire. L’opérateur d’indice doit être une fonction membre non statique qui accepte un seul argument. Cet argument peut être de tout type et désigne l’indice de tableau souhaité.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment créer un vecteur de type **int** qui implémente la vérification des limites :
+L’exemple suivant montre comment créer un vecteur de type **`int`** qui implémente la vérification des limites :
 
 ```cpp
 // subscripting.cpp
@@ -97,4 +97,4 @@ Notez que la fonction **Operator []** retourne un type référence. Il s'agit pa
 
 ## <a name="see-also"></a>Voir aussi
 
-[Surcharge d'opérateur](../cpp/operator-overloading.md)
+[Surcharge d’opérateur](../cpp/operator-overloading.md)
