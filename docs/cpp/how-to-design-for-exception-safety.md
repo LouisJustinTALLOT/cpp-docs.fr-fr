@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246514"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187801"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Comment : concevoir la sécurité des exceptions
 
@@ -85,7 +85,7 @@ public:
 
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Utiliser l’idiome RAII pour gérer les ressources
 
-Pour être sécurisé contre les exceptions, une fonction doit garantir que les objets qu’elle a alloués à l’aide de `malloc` ou **New** sont détruits, et que toutes les ressources telles que les handles de fichiers sont fermées ou libérées même si une exception est levée. L’idiome de l' *initialisation des ressources est* la gestion de ces ressources sur la durée de vie des variables automatiques. Lorsqu'une fonction est hors de portée, soit en retournant normalement ou alors suite à une exception, les destructeurs pour toutes les variables automatiques entièrement construites sont appelés. Un objet wrapper RAII tel qu'un pointeur intelligent appelle la fonction appropriée, de suppression ou de fermeture, dans son destructeur. Dans un code protégée contre les exceptions, il est extrêmement important de passer la propriété de chaque ressource immédiatement à un certain type d'objet RAII. Notez que les classes `vector`, `string`, `make_shared`, `fstream`et similaires gèrent l’acquisition de la ressource pour vous.  Toutefois, les constructions de `shared_ptr` `unique_ptr` et traditionnelles sont spéciales, car l’acquisition des ressources est effectuée par l’utilisateur au lieu de l’objet ; par conséquent, ils sont considérés comme des *libérations de ressources* , mais ils peuvent être considérés comme RAII.
+Pour être sécurisé contre les exceptions, une fonction doit garantir que les objets qu’elle a alloués à l’aide de `malloc` ou de **`new`** sont détruits, et que toutes les ressources telles que les handles de fichiers sont fermées ou libérées même si une exception est levée. L’idiome de l' *initialisation des ressources est* la gestion de ces ressources sur la durée de vie des variables automatiques. Lorsqu'une fonction est hors de portée, soit en retournant normalement ou alors suite à une exception, les destructeurs pour toutes les variables automatiques entièrement construites sont appelés. Un objet wrapper RAII tel qu'un pointeur intelligent appelle la fonction appropriée, de suppression ou de fermeture, dans son destructeur. Dans un code protégée contre les exceptions, il est extrêmement important de passer la propriété de chaque ressource immédiatement à un certain type d'objet RAII. Notez que les `vector` `string` classes,, `make_shared` , `fstream` et similaires gèrent l’acquisition de la ressource pour vous.  Toutefois, `unique_ptr` et les `shared_ptr` constructions traditionnelles sont spéciales, car l’acquisition des ressources est effectuée par l’utilisateur au lieu de l’objet ; par conséquent, il s’agit de la destruction de la *version de ressource* , mais il est question de la valeur RAII.
 
 ## <a name="the-three-exception-guarantees"></a>Les trois garanties d’exception
 
@@ -121,5 +121,5 @@ Les types intégrés sont tous sans échec, et les types de la bibliothèque sta
 
 ## <a name="see-also"></a>Voir aussi
 
-[Meilleures C++ pratiques modernes pour les exceptions et la gestion des erreurs](errors-and-exception-handling-modern-cpp.md)<br/>
-[Guide pratique pour établir une interface entre le code exceptionnel et le code non exceptionnel](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Meilleures pratiques C++ modernes pour les exceptions et la gestion des erreurs](errors-and-exception-handling-modern-cpp.md)<br/>
+[Comment : établir une interface entre du code exceptionnel et non exceptionnel](how-to-interface-between-exceptional-and-non-exceptional-code.md)

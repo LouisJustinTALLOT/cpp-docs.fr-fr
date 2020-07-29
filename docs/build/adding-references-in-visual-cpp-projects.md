@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c7facb82054eed4ef28c52830b8a3079eecb7fdc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169953"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229907"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilisation de bibliothèques et de composants
 
@@ -26,7 +26,7 @@ Pour utiliser une bibliothèque que vous avez téléchargée à l’aide du gest
 
 Si votre projet de bibliothèque statique est généré dans la même solution :
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>incluez le ou les fichiers d’en-tête pour la bibliothèque statique à l’aide de guillemets. Dans une solution standard, le chemin d’accès `../<library project name>`commence par. IntelliSense vous aide à le trouver.
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>incluez le ou les fichiers d’en-tête pour la bibliothèque statique à l’aide de guillemets. Dans une solution standard, le chemin d’accès commence par `../<library project name>` . IntelliSense vous aide à le trouver.
 2. Ajoutez une référence au projet de bibliothèque statique. Cliquez avec le bouton droit sur **références** sous le nœud projet d’application dans **Explorateur de solutions** et choisissez **Ajouter une référence**.
 
 Si la bibliothèque statique ne fait pas partie de la solution :
@@ -98,11 +98,11 @@ Les propriétés suivantes sont disponibles sur divers genres de références. E
 
 - **Copier les assemblys satellites locaux (C++/CLI)**
 
-   Spécifie si les assemblys satellites de l'assembly référencé doivent être copiés automatiquement vers l'emplacement cible pendant une génération. Utilisé uniquement si **Copie locale** a la valeur **true**.
+   Spécifie si les assemblys satellites de l'assembly référencé doivent être copiés automatiquement vers l'emplacement cible pendant une génération. Utilisé uniquement si **copie locale** est **`true`** .
 
 - **Sortie de l’assembly de référence**
 
-   Spécifie que cet assembly est utilisé dans le processus de génération. Si la valeur est **true**, l'assembly est utilisé sur la ligne de commande du compilateur durant la génération.
+   Spécifie que cet assembly est utilisé dans le processus de génération. Si **`true`** , l’assembly est utilisé sur la ligne de commande du compilateur pendant la génération.
 
 ### <a name="project-to-project-reference-properties"></a>Propriétés de référence entre projets
 
@@ -158,7 +158,7 @@ Les propriétés suivantes font partie des références d’assembly COM et .NET
 
 - **Nom fort**
 
-   `true` si l'assembly référencé a un nom fort. Un assembly à nom fort est associé à une version unique.
+   **`true`** Si l’assembly référencé a un nom fort. Un assembly à nom fort est associé à une version unique.
 
 - **Version**
 

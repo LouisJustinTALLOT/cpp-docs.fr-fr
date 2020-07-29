@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: 1a4ad8a86b88cdfa98f043bb49ba6eeff8b090c9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8c213a116ff7a7d4218179f0e944ac4f84a75e5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619204"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230270"
 ---
 # <a name="add_volatile-class"></a>add_volatile, classe
 
-Crée un type **volatile** à partir du type spécifié.
+Crée un **`volatile`** type à partir du type spécifié.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,7 +35,7 @@ Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance de `add_volatile<T>` a un **typedef** de membre `type` qui est *t* si *t* est une référence, une fonction ou un type qualifié volatile, sinon **volatile** *T*. L’alias `add_volatile_t` est un raccourci pour accéder au **typedef** de membre `type` .
+Une instance de `add_volatile<T>` a un membre **`typedef`** `type` qui est *t* si *t* est une référence, une fonction ou un type qualifié volatile, sinon **`volatile`** *t*. L’alias `add_volatile_t` est un raccourci pour accéder au membre **`typedef`** `type` .
 
 ## <a name="example"></a>Exemple
 
@@ -59,7 +59,7 @@ int main()
 add_volatile<int> == int
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<type_traits>
 

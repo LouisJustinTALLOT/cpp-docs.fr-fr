@@ -2,16 +2,16 @@
 title: chrono, littéraux
 ms.date: 11/04/2016
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: 28ba8138d41cf1bd72911959f07b0d3c9e5fdc0e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8416580df09a8a466678702cb20ba4ddf37eb28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244903"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230154"
 ---
 # <a name="chrono-literals"></a>chrono, littéraux
 
-(C++14) L’en-tête \<chrono> définit 12 [littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md) pour faciliter l’utilisation des littéraux qui représentent les heures, minutes, secondes, millisecondes, microsecondes et nanosecondes. Chaque littéral défini par l'utilisateur a une intégrale et une surcharge à virgule flottante. Les littéraux sont définis dans l'espace de noms inline literals::chrono_literals qui est automatiquement mis en portée quand std::chrono est dans la portée.
+(C++ 14) L' \<chrono> en-tête définit 12 [littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md) pour faciliter l’utilisation de littéraux qui représentent les heures, minutes, secondes, millisecondes, microsecondes et nanosecondes. Chaque littéral défini par l'utilisateur a une intégrale et une surcharge à virgule flottante. Les littéraux sont définis dans l'espace de noms inline literals::chrono_literals qui est automatiquement mis en portée quand std::chrono est dans la portée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,7 +60,7 @@ inline namespace literals {
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les littéraux qui acceptent un **longue** argument retourne une valeur ou le type correspondant. Les littéraux qui acceptent un argument à virgule flottante retournent un objet [duration](../standard-library/duration-class.md).
+Les littéraux qui acceptent un **`long long`** argument retournent une valeur ou le type correspondant. Les littéraux qui acceptent un argument à virgule flottante retournent un objet [duration](../standard-library/duration-class.md).
 
 ## <a name="example"></a>Exemple
 

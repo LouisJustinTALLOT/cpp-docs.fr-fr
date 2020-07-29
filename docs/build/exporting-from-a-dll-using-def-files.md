@@ -6,16 +6,16 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 6f7d58bcb42edd89527fff41b08a15321722a6cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8fdbb060502f339eb748306eef582d2f296b1f60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078519"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229829"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Exportation à partir d'une DLL à l'aide de fichiers DEF
 
-Un fichier de définition de module ou de fichier DEF (*. def) est un fichier texte contenant une ou plusieurs instructions de module qui décrivent différents attributs d’une DLL. Si vous n’utilisez pas le mot clé **__declspec (dllexport)** pour exporter les fonctions de la dll, la dll requiert un fichier def.
+Un fichier de définition de module ou de fichier DEF (*. def) est un fichier texte contenant une ou plusieurs instructions de module qui décrivent différents attributs d’une DLL. Si vous n’utilisez pas le **`__declspec(dllexport)`** mot clé pour exporter les fonctions de la dll, la dll requiert un fichier def.
 
 Un fichier DEF minimal doit contenir les instructions de définition de module suivantes :
 
@@ -34,7 +34,7 @@ EXPORTS
    Min   @4
 ```
 
-Si vous utilisez l' [Assistant DLL MFC](../mfc/reference/mfc-dll-wizard.md) pour créer une DLL MFC, l’Assistant crée un fichier de définition squelette pour vous et l’ajoute automatiquement à votre projet. Ajoutez les noms des fonctions à exporter dans ce fichier. Pour les dll non-MFC, créez vous-même le fichier DEF et ajoutez-le à votre projet. Accédez ensuite à **Project** > **Propriétés** > du projet**fichier de définition du module** **d’entrée** > de l'**éditeur de liens** > et entrez le nom du fichier def. Répétez cette étape pour chaque configuration et plateforme, ou faites-la tout à la fois en sélectionnant **configuration = toutes les configurations**et **plateforme = toutes les plateformes**.
+Si vous utilisez l' [Assistant DLL MFC](../mfc/reference/mfc-dll-wizard.md) pour créer une DLL MFC, l’Assistant crée un fichier de définition squelette pour vous et l’ajoute automatiquement à votre projet. Ajoutez les noms des fonctions à exporter dans ce fichier. Pour les dll non-MFC, créez vous-même le fichier DEF et ajoutez-le à votre projet. Accédez ensuite à **Project**  >  **Propriétés**  >  **Linker**  >  du projet fichier de définition du module**d’entrée**de l’éditeur de liens  >  **Module Definition File** et entrez le nom du fichier def. Répétez cette étape pour chaque configuration et plateforme, ou faites-la tout à la fois en sélectionnant **configuration = toutes les configurations**et **plateforme = toutes les plateformes**.
 
 Si vous exportez des fonctions dans un fichier C++, vous devez placer les noms décorés dans le fichier DEF ou définir vos fonctions exportées avec une liaison C standard à l’aide de extern "C". Si vous devez placer les noms décorés dans le fichier DEF, vous pouvez les obtenir à l’aide de l’outil [DUMPBIN](../build/reference/dumpbin-reference.md) ou à l’aide de l’option [/Map](../build/reference/map-generate-mapfile.md) de l’éditeur de liens. Notez que les noms décorés produits par le compilateur sont spécifiques au compilateur. Si vous placez les noms décorés produits par le compilateur Microsoft C++ (MSVC) dans un fichier DEF, les applications qui lient à votre DLL doivent également être générées à l’aide de la même version de MSVC afin que les noms décorés dans l’application appelante correspondent aux noms exportés dans le fichier DEF de la DLL.
 
@@ -51,11 +51,11 @@ Si vous générez une [dll d’extension](../build/extension-dlls-overview.md)et
 #define AFX_DATA
 ```
 
-Ces lignes garantissent que les variables MFC utilisées en interne ou ajoutées à vos classes sont exportées (ou importées) à partir de votre DLL d’extension MFC. Par exemple, quand vous dérivez une `DECLARE_DYNAMIC`classe à l’aide de, la macro `CRuntimeClass` se développe pour ajouter une variable membre à votre classe. Le fait de laisser ces quatre lignes peut entraîner la compilation ou le lien de votre DLL de manière incorrecte, ou provoquer une erreur lorsque l’application cliente est liée à la DLL.
+Ces lignes garantissent que les variables MFC utilisées en interne ou ajoutées à vos classes sont exportées (ou importées) à partir de votre DLL d’extension MFC. Par exemple, quand vous dérivez une classe à l’aide de `DECLARE_DYNAMIC` , la macro se développe pour ajouter une `CRuntimeClass` variable membre à votre classe. Le fait de laisser ces quatre lignes peut entraîner la compilation ou le lien de votre DLL de manière incorrecte, ou provoquer une erreur lorsque l’application cliente est liée à la DLL.
 
 Lors de la génération de la DLL, l’éditeur de liens utilise le fichier DEF pour créer un fichier d’exportation (. exp) et un fichier de bibliothèque d’importation (. lib). L’éditeur de liens utilise ensuite le fichier d’exportation pour générer le fichier DLL. Les exécutables qui sont implicitement liés à la DLL sont liés à la bibliothèque d’importation lorsqu’ils sont générés.
 
-Notez que MFC lui-même utilise des fichiers DEF pour exporter des fonctions et des classes à partir de MFCx0. dll.
+Notez que MFC lui-même utilise des fichiers DEF pour exporter des fonctions et des classes à partir de la MFCx0.dll.
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
@@ -69,7 +69,7 @@ Notez que MFC lui-même utilise des fichiers DEF pour exporter des fonctions et 
 
 - [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 
-- [Importer dans une application à l'aide de __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l’aide de __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 
@@ -77,7 +77,7 @@ Notez que MFC lui-même utilise des fichiers DEF pour exporter des fonctions et 
 
 - [fichiers. def](reference/module-definition-dot-def-files.md)
 
-- [Règles pour les instructions de définition de module](reference/rules-for-module-definition-statements.md)
+- [Règles s’appliquant aux instructions de définition de module](reference/rules-for-module-definition-statements.md)
 
 - [Noms décorés](reference/decorated-names.md)
 
@@ -87,4 +87,4 @@ Notez que MFC lui-même utilise des fichiers DEF pour exporter des fonctions et 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exportation à partir d’une DLL](exporting-from-a-dll.md)
+[Exportation à partir d'une DLL](exporting-from-a-dll.md)

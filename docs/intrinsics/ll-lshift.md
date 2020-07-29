@@ -8,16 +8,16 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-ms.openlocfilehash: 158ecbf39320d70b51f1f498a0b689ba58fec363
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 988284b81c9f04ee5d7f09f8a2f173a689f9fb55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221810"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230517"
 ---
 # <a name="__ll_lshift"></a>__ll_lshift
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Déplace la valeur 64 bits fournie à gauche du nombre de bits spécifié.
 
@@ -38,23 +38,23 @@ dans Valeur entière de 64 bits à décaler vers la gauche.
 *nBit*\
 dans Nombre de bits à décaler.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Masque déplacé vers la gauche par `nBit` bits.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__ll_lshift`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 Si vous compilez votre programme pour l’architecture 64 bits et `nBit` que est supérieur à 63, le nombre de bits à décaler est `nBit` modulo 64. Si vous compilez votre programme pour l’architecture 32 bits et `nBit` que est supérieur à 31, le nombre de bits à décaler est `nBit` modulo 32.
 
-Le `ll` dans le nom indique qu’il s’agit d’une `long long` opération`__int64`sur ().
+Le `ll` dans le nom indique qu’il s’agit d’une opération sur **`long long`** ( **`__int64`** ).
 
 ## <a name="example"></a>Exemple
 
@@ -77,16 +77,16 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 10000
 ```
 
 > [!NOTE]
-> Il n’existe aucune version non signée de l’opération de décalage vers la gauche. Cela est dû `__ll_lshift` au fait que utilise déjà un paramètre d’entrée non signé. Contrairement au décalage vers la droite, il n’existe aucune dépendance de signe pour le décalage vers la gauche, car le bit le moins significatif dans le résultat est toujours défini sur zéro, quel que soit le signe de la valeur décalée.
+> Il n’existe aucune version non signée de l’opération de décalage vers la gauche. Cela est dû au fait que `__ll_lshift` utilise déjà un paramètre d’entrée non signé. Contrairement au décalage vers la droite, il n’existe aucune dépendance de signe pour le décalage vers la gauche, car le bit le moins significatif dans le résultat est toujours défini sur zéro, quel que soit le signe de la valeur décalée.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

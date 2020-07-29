@@ -2,12 +2,12 @@
 title: Vue d'ensemble des conventions ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320727"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229764"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Vue d’ensemble des conventions ABI ARM32
 
@@ -201,7 +201,7 @@ La pile par défaut du mode noyau de Windows représente trois pages (12 Ko). V
 
 Les énumérations sont des types d'entier de 32 bits sauf si au moins une valeur de l'énumération nécessite un stockage de double mot de 64 bits. Dans ce cas, l'énumération est promue en un type d'entier de 64 bits.
 
-`wchar_t` est défini comme étant l'équivalent de `unsigned short` pour préserver la compatibilité avec les autres plateformes.
+**`wchar_t`** est défini comme équivalent à afin **`unsigned short`** de préserver la compatibilité avec d’autres plateformes.
 
 ## <a name="stack-walking"></a>Parcours de la pile
 

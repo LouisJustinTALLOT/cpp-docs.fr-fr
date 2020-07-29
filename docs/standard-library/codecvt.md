@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e571c1ca8beef684a40bbf643e83aba3f205fc8e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688280"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230115"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-Définit plusieurs modèles de classe qui décrivent des objets basés sur le modèle de classe [codecvt](../standard-library/codecvt-class.md). Ces objets peuvent servir de [facettes de paramètres régionaux](../standard-library/locale-class.md#facet_class) qui contrôlent les conversions entre une séquence de valeurs de type `Elem` et une séquence de valeurs de type **char**.
+Définit plusieurs modèles de classe qui décrivent des objets basés sur le modèle de classe [codecvt](../standard-library/codecvt-class.md). Ces objets peuvent servir de [facettes de paramètres régionaux](../standard-library/locale-class.md#facet_class) qui contrôlent les conversions entre une séquence de valeurs de type `Elem` et une séquence de valeurs de type **`char`** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,7 +34,7 @@ Les facettes de paramètres régionaux déclarées dans cet en-tête effectuent 
 
 - UTF-16 est codé en Unicode dans le programme sous la forme d’un ou plusieurs entiers 16 bits. (Notez que cela ne répond pas à toutes les exigences d’un codage de caractères larges valide pour C Standard ou C++ Standard. Toutefois, ce codage est largement utilisé sous cette forme.)
 
-Pour les flux d’octets (stockés dans un fichier, transmis sous la forme d’une séquence d’octets ou stockés dans le programme dans un tableau de **char**) :
+Pour les flux d’octets (stockés dans un fichier, transmis sous la forme d’une séquence d’octets ou stockés dans le programme dans un tableau de **`char`** ) :
 
 - UTF-8 est codé en Unicode au sein d’un flux d’octets sous la forme d’un ou plusieurs octets 8 bits avec un ordre d’octet déterministe.
 
@@ -50,15 +50,15 @@ Pour les flux d’octets (stockés dans un fichier, transmis sous la forme d’u
 
 ### <a name="classes"></a>Classes
 
-|Class|Description|
+|Classe|Description|
 |-|-|
 |[codecvt_utf8](codecvt-utf8-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UCS-2 ou UCS-4 et un flux d’octets codé au format UTF-8.|
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UTF-16 et un flux d’octets codé au format UTF-8.|
 |[codecvt_utf16](codecvt-utf16-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UCS-2 ou UCS-4 et un flux d’octets codé au format UTF-16LE ou UTF-16BE.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<codecvt>
+**En-tête :**\<codecvt>
 
 **Espace de noms :** std
 

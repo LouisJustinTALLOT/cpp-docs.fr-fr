@@ -1,19 +1,19 @@
 ---
-title: Créer une calculatrice de console en C++
+title: Créer une calculatrice console en C++
 description: Créer une application console Hello World et une application de calculatrice dans Visual C++
 ms.custom: mvc
 ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b292d5b8e1db7415aed6427f2327788e08a28a20
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 5f448e68878e211969c89f7c4c750e3231d3a9b7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404448"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230582"
 ---
-# <a name="create-a-console-calculator-in-c"></a>Créer une calculatrice de console en C++
+# <a name="create-a-console-calculator-in-c"></a>Créer une calculatrice console en C++
 
 ::: moniker range=">=vs-2019"
 
@@ -75,13 +75,13 @@ Le modèle d’une nouvelle application console Windows crée une application C+
 
 1. Pour générer le projet, choisissez **Générer la solution** dans le menu **Générer**. La fenêtre **Sortie** affiche les résultats de la génération.
 
-   ![Créer le projet](./media/calc-vs2019-build-your-project.png "Créer le projet")
+   ![Générer le projet](./media/calc-vs2019-build-your-project.png "Créer le projet")
 
 1. Pour exécuter le projet, dans la barre de menus, choisissez **Déboguer**, **Démarrer sans débogage**.
 
    ![Démarrer le projet](./media/calc-vs2019-hello-world-console.png "Démarrer le projet")
 
-   Une fenêtre de console s’ouvre, puis exécute votre application. Quand vous démarrez une application console dans Visual Studio, celui-ci exécute votre code, puis affiche le message « Appuyez sur une touche pour fermer cette fenêtre. . ." afin de vous permettre de voir la sortie. Félicitations ! Vous venez de créer votre première application console « Hello, world ! » dans Visual Studio.
+   Une fenêtre de console s’ouvre, puis exécute votre application. Quand vous démarrez une application console dans Visual Studio, celui-ci exécute votre code, puis affiche le message « Appuyez sur une touche pour fermer cette fenêtre. . ." afin de vous permettre de voir la sortie. Félicitations ! Vous venez de créer votre première application console « Hello, world ! » dans Visual Studio.
 
 1. Appuyez sur une touche pour fermer la fenêtre de console et revenir à Visual Studio.
 
@@ -123,7 +123,7 @@ Maintenant, nous allons transformer le code de ce modèle en application de calc
    > Explication du code :
    >
    > - Les instructions `#include` vous permettent de référencer le code situé dans d’autres fichiers. Parfois, vous pouvez voir un nom de fichier entouré par des crochets pointus ( **\<\>** ); d’autres fois, il est entouré de guillemets (**""**). En règle générale, les crochets pointus sont utilisés lors du référencement de la bibliothèque C++ standard. Les guillemets doubles sont utilisés pour les autres fichiers.
-   > - La ligne `using namespace std;` indique au compilateur qu’il doit s’attendre à ce que des éléments de la bibliothèque C++ standard soient utilisés dans ce fichier. Sans cette ligne, chaque mot clé de la bibliothèque devrait être précédé d’un `std::`, pour indiquer sa portée. Par exemple, sans cette ligne, chaque référence à `cout` devrait être écrite ainsi : `std::cout`. L’instruction `using` est ajoutée pour rendre le code plus clair.
+   > - La ligne `using namespace std;` indique au compilateur qu’il doit s’attendre à ce que des éléments de la bibliothèque C++ standard soient utilisés dans ce fichier. Sans cette ligne, chaque mot clé de la bibliothèque devrait être précédé d’un `std::`, pour indiquer sa portée. Par exemple, sans cette ligne, chaque référence à `cout` devrait être écrite ainsi : `std::cout`. L' **`using`** instruction est ajoutée pour rendre le code plus propre.
    > - Le mot clé `cout` est utilisé pour afficher la sortie standard en C++. L' **\<\<** opérateur indique au compilateur d’envoyer tout ce qui se trouve à sa droite à la sortie standard.
    > - Le mot clé **endl** est similaire à la touche Entrée. Il indique la fin de la ligne et déplace le curseur à la ligne suivante. Il est préférable de placer un `\n` à l’intérieur de la chaîne (entre "") pour faire de même, car `endl` vide toujours la mémoire tampon et peut nuire aux performances du programme. Toutefois, comme il s’agit d’une toute petite application, `endl` est utilisé pour une meilleure lisibilité.
    > - Toutes les instructions C++ doivent se terminer par des points-virgules et toutes les applications C++ doivent contenir une fonction `main()`. Cette fonction est exécutée par le programme au démarrage. Pour pouvoir être utilisé, tout le code doit être accessible à partir de `main()`.
@@ -205,7 +205,7 @@ Il est temps d’ajouter une logique mathématique.
    >
    > - La fonction `Calculate` consomme un nombre, un opérateur et un deuxième nombre, puis exécute l’opération demandée sur les nombres.
    > - L’instruction switch vérifie quel opérateur a été fourni et exécute uniquement le cas correspondant à cette opération. Le cas default: peut servir de solution de secours si l’utilisateur tape un opérateur qui n’est pas accepté, pour éviter que le programme ne s’arrête. En règle générale, il est préférable de gérer les entrées d’utilisateur non valides de façon plus élégante, mais cela n’entre pas dans le cadre de ce tutoriel.
-   > - Le mot clé `double` désigne un type de nombre qui prend en charge les décimales. De cette façon, la calculatrice peut gérer à la fois les calculs de décimales et les calculs d’entiers. La fonction `Calculate` doit toujours retourner un tel nombre en raison du `double` situé au tout début du code (qui indique le type de retour de la fonction). C’est pour cette raison que 0.0 est retourné, même dans le cas par défaut.
+   > - Le **`double`** mot clé désigne un type de nombre qui prend en charge les décimales. De cette façon, la calculatrice peut gérer à la fois les calculs de décimales et les calculs d’entiers. La `Calculate` fonction est requise pour toujours retourner un tel nombre en raison de au **`double`** début du code (ce qui indique le type de retour de la fonction), c’est pourquoi nous retournons 0,0 même dans le cas par défaut.
    > - Le fichier .h déclare la fonction *prototype*, qui indique à l’avance au compilateur de quels paramètres il a besoin, et à quel type de retour il doit s’attendre. Le fichier .cpp comprend tous les détails d’implémentation de la fonction.
 
 Si vous générez et que vous exécutez le code à ce stade, il s’arrête néanmoins toujours après avoir demandé quelle opération effectuer. Maintenant, vous allez modifier la fonction `main` pour effectuer des calculs.
@@ -251,7 +251,7 @@ Si vous générez et que vous exécutez le code à ce stade, il s’arrête néa
    > - Dans la mesure où les programmes C++ commencent toujours à la fonction `main()`, nous devons appeler notre autre code. Une instruction `#include` est donc nécessaire.
    > - Certaines variables initiales (`x`, `y`, `oper` et `result`) sont déclarées pour stocker respectivement le premier nombre, le deuxième nombre, l’opérateur et le résultat final. Il est toujours bon de leur donner des valeurs initiales pour éviter un comportement non défini, ce que nous allons faire ici.
    > - La ligne `Calculator c;` déclare un objet nommé « c » comme une instance de la classe `Calculator`. La classe n’est qu’un blueprint du fonctionnement de la calculatrice. C’est l’objet calculatrice qui effectue les calculs.
-   > - L’instruction `while (true)` est une boucle. Le code à l’intérieur de la boucle continue de s’exécuter indéfiniment tant que la condition à l’intérieur de `()` contient la valeur true. Dans la mesure où la condition est simplement listée comme `true`, elle reste toujours vraie. La boucle s’exécute donc indéfiniment. Pour fermer le programme, l’utilisateur doit fermer manuellement la fenêtre de console. Sinon, le programme continuera d’attendre une nouvelle entrée.
+   > - L’instruction `while (true)` est une boucle. Le code à l’intérieur de la boucle continue de s’exécuter indéfiniment tant que la condition à l’intérieur de `()` contient la valeur true. Étant donné que la condition est simplement listée comme **`true`** , elle est toujours vraie, donc la boucle s’exécute indéfiniment. Pour fermer le programme, l’utilisateur doit fermer manuellement la fenêtre de console. Sinon, le programme continuera d’attendre une nouvelle entrée.
    > - Le mot clé `cin` est utilisé pour accepter l’entrée de l’utilisateur. Ce flux d’entrée est suffisamment intelligent pour traiter une ligne de texte entrée dans la fenêtre de console et pour la placer à l’intérieur de chacune des variables listées (dans l’ordre), en supposant que l’entrée utilisateur corresponde à la spécification nécessaire. Vous pouvez modifier cette ligne pour accepter différents types d’entrées (par exemple, plus de deux nombres), cependant la fonction `Calculate()` devra également être mise à jour pour gérer cette situation.
    > - L’expression `c.Calculate(x, oper, y);` appelle la fonction `Calculate` définie précédemment, et fournit les valeurs d’entrée que vous avez tapées. La fonction retourne ensuite un nombre qui est stocké dans `result`.
    > - Enfin, `result` est affiché dans la console pour que l’utilisateur puisse voir le résultat du calcul.
@@ -377,7 +377,7 @@ Nous allons traiter le problème de la division par zéro d’une façon plus ap
 
 ## <a name="the-finished-app"></a>L’application terminée
 
-Félicitations ! Vous venez de terminer le code de l’application de calculatrice, après l’avoir généré et débogué dans Visual Studio.
+Félicitations ! Vous venez de terminer le code de l’application de calculatrice, après l’avoir généré et débogué dans Visual Studio.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -437,13 +437,13 @@ Le modèle d’une nouvelle application console Windows crée une simple applica
 
 1. Pour générer le projet, choisissez **Générer la solution** dans le menu **Générer**. La fenêtre **Sortie** affiche les résultats de la génération.
 
-   ![Créer le projet](./media/calculator-initial-build-output.png "Créer le projet")
+   ![Générer le projet](./media/calculator-initial-build-output.png "Créer le projet")
 
 1. Pour exécuter le projet, dans la barre de menus, choisissez **Déboguer**, **Démarrer sans débogage**.
 
    ![Démarrer le projet](./media/calculator-hello-world-console.png "Démarrer le projet")
 
-   Une fenêtre de console s’ouvre, puis exécute votre application. Lorsque vous démarrez une application console dans Visual Studio, celui-ci exécute votre code, puis affiche le message « Appuyez sur une touche pour continuer . ." afin de vous permettre de voir la sortie. Félicitations ! Vous venez de créer votre première application console « Hello, world ! » dans Visual Studio.
+   Une fenêtre de console s’ouvre, puis exécute votre application. Lorsque vous démarrez une application console dans Visual Studio, celui-ci exécute votre code, puis affiche le message « Appuyez sur une touche pour continuer . ." afin de vous permettre de voir la sortie. Félicitations ! Vous venez de créer votre première application console « Hello, world ! » dans Visual Studio.
 
 1. Appuyez sur une touche pour fermer la fenêtre de console et revenir à Visual Studio.
 
@@ -487,7 +487,7 @@ Maintenant, nous allons transformer le code de ce modèle en application de calc
    >
    > - Les instructions `#include` vous permettent de référencer le code situé dans d’autres fichiers. Parfois, vous pouvez voir un nom de fichier entouré par des crochets pointus ( **\<\>** ); d’autres fois, il est entouré de guillemets (**""**). En règle générale, les crochets pointus sont utilisés lors du référencement de la bibliothèque C++ standard. Les guillemets doubles sont utilisés pour les autres fichiers.
    > - La ligne `#include "pch.h"` (ou `#include "stdafx.h"` dans Visual Studio 2017 et les versions antérieures) référence ce qu’on appelle un « en-tête précompilé ». Ce type d’en-tête est généralement utilisé par les programmeurs professionnels pour améliorer les temps de compilation. Toutefois, leur utilisation sort du cadre de ce tutoriel.
-   > - La ligne `using namespace std;` indique au compilateur qu’il doit s’attendre à ce que des éléments de la bibliothèque C++ standard soient utilisés dans ce fichier. Sans cette ligne, chaque mot clé de la bibliothèque devrait être précédé d’un `std::`, pour indiquer sa portée. Par exemple, sans cette ligne, chaque référence à `cout` devrait être écrite ainsi : `std::cout`. L’instruction `using` est ajoutée pour rendre le code plus clair.
+   > - La ligne `using namespace std;` indique au compilateur qu’il doit s’attendre à ce que des éléments de la bibliothèque C++ standard soient utilisés dans ce fichier. Sans cette ligne, chaque mot clé de la bibliothèque devrait être précédé d’un `std::`, pour indiquer sa portée. Par exemple, sans cette ligne, chaque référence à `cout` devrait être écrite ainsi : `std::cout`. L' **`using`** instruction est ajoutée pour rendre le code plus propre.
    > - Le mot clé `cout` est utilisé pour afficher la sortie standard en C++. L' **\<\<** opérateur indique au compilateur d’envoyer tout ce qui se trouve à sa droite à la sortie standard.
    > - Le mot clé **endl** est similaire à la touche Entrée. Il indique la fin de la ligne et déplace le curseur à la ligne suivante. Il est préférable de placer un `\n` à l’intérieur de la chaîne (entre "") pour faire de même, car `endl` vide toujours la mémoire tampon et peut nuire aux performances du programme. Toutefois, comme il s’agit d’une toute petite application, `endl` est utilisé pour une meilleure lisibilité.
    > - Toutes les instructions C++ doivent se terminer par des points-virgules et toutes les applications C++ doivent contenir une fonction `main()`. Cette fonction est exécutée par le programme au démarrage. Pour pouvoir être utilisé, tout le code doit être accessible à partir de `main()`.
@@ -568,7 +568,7 @@ Il est temps d’ajouter une logique mathématique.
    >
    > - La fonction `Calculate` consomme un nombre, un opérateur et un deuxième nombre, puis exécute l’opération demandée sur les nombres.
    > - L’instruction switch vérifie quel opérateur a été fourni et exécute uniquement le cas correspondant à cette opération. Le cas default: peut servir de solution de secours si l’utilisateur tape un opérateur qui n’est pas accepté, pour éviter que le programme ne s’arrête. En règle générale, il est préférable de gérer les entrées d’utilisateur non valides de façon plus élégante, mais cela n’entre pas dans le cadre de ce tutoriel.
-   > - Le mot clé `double` désigne un type de nombre qui prend en charge les décimales. De cette façon, la calculatrice peut gérer à la fois les calculs de décimales et les calculs d’entiers. La fonction `Calculate` doit toujours retourner un tel nombre en raison du `double` situé au tout début du code (qui indique le type de retour de la fonction). C’est pour cette raison que 0.0 est retourné, même dans le cas par défaut.
+   > - Le **`double`** mot clé désigne un type de nombre qui prend en charge les décimales. De cette façon, la calculatrice peut gérer à la fois les calculs de décimales et les calculs d’entiers. La `Calculate` fonction est requise pour toujours retourner un tel nombre en raison de au **`double`** début du code (ce qui indique le type de retour de la fonction), c’est pourquoi nous retournons 0,0 même dans le cas par défaut.
    > - Le fichier .h déclare la fonction *prototype*, qui indique à l’avance au compilateur de quels paramètres il a besoin, et à quel type de retour il doit s’attendre. Le fichier .cpp comprend tous les détails d’implémentation de la fonction.
 
 Si vous générez et que vous exécutez le code à ce stade, il s’arrête néanmoins toujours après avoir demandé quelle opération effectuer. Maintenant, vous allez modifier la fonction `main` pour effectuer des calculs.
@@ -615,7 +615,7 @@ Si vous générez et que vous exécutez le code à ce stade, il s’arrête néa
    > - Dans la mesure où les programmes C++ commencent toujours à la fonction `main()`, nous devons appeler notre autre code. Une instruction `#include` est donc nécessaire.
    > - Certaines variables initiales (`x`, `y`, `oper` et `result`) sont déclarées pour stocker respectivement le premier nombre, le deuxième nombre, l’opérateur et le résultat final. Il est toujours bon de leur donner des valeurs initiales pour éviter un comportement non défini, ce que nous allons faire ici.
    > - La ligne `Calculator c;` déclare un objet nommé « c » comme une instance de la classe `Calculator`. La classe n’est qu’un blueprint du fonctionnement de la calculatrice. C’est l’objet calculatrice qui effectue les calculs.
-   > - L’instruction `while (true)` est une boucle. Le code à l’intérieur de la boucle continue de s’exécuter indéfiniment tant que la condition à l’intérieur de `()` contient la valeur true. Dans la mesure où la condition est simplement listée comme `true`, elle reste toujours vraie. La boucle s’exécute donc indéfiniment. Pour fermer le programme, l’utilisateur doit fermer manuellement la fenêtre de console. Sinon, le programme continuera d’attendre une nouvelle entrée.
+   > - L’instruction `while (true)` est une boucle. Le code à l’intérieur de la boucle continue de s’exécuter indéfiniment tant que la condition à l’intérieur de `()` contient la valeur true. Étant donné que la condition est simplement listée comme **`true`** , elle est toujours vraie, donc la boucle s’exécute indéfiniment. Pour fermer le programme, l’utilisateur doit fermer manuellement la fenêtre de console. Sinon, le programme continuera d’attendre une nouvelle entrée.
    > - Le mot clé `cin` est utilisé pour accepter l’entrée de l’utilisateur. Ce flux d’entrée est suffisamment intelligent pour traiter une ligne de texte entrée dans la fenêtre de console et pour la placer à l’intérieur de chacune des variables listées (dans l’ordre), en supposant que l’entrée utilisateur corresponde à la spécification nécessaire. Vous pouvez modifier cette ligne pour accepter différents types d’entrées (par exemple, plus de deux nombres), cependant la fonction `Calculate()` devra également être mise à jour pour gérer cette situation.
    > - L’expression `c.Calculate(x, oper, y);` appelle la fonction `Calculate` définie précédemment, et fournit les valeurs d’entrée que vous avez tapées. La fonction retourne ensuite un nombre qui est stocké dans `result`.
    > - Enfin, `result` est affiché dans la console pour que l’utilisateur puisse voir le résultat du calcul.
@@ -748,7 +748,7 @@ Nous allons traiter le problème de la division par zéro d’une façon plus ap
 
 ## <a name="the-finished-app"></a>L’application terminée
 
-Félicitations ! Vous venez de terminer le code de l’application de calculatrice, après l’avoir généré et débogué dans Visual Studio.
+Félicitations ! Vous venez de terminer le code de l’application de calculatrice, après l’avoir généré et débogué dans Visual Studio.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

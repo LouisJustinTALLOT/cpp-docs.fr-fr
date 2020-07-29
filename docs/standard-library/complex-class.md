@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: db2f8b2f889d9454db737cf5b2a39b414f1d67f1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416766"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230089"
 ---
 # <a name="complex-class"></a>complexe, classe
 
-Le modèle de classe décrit un objet qui stocke deux objets de type `Type`, un qui représente la partie réelle d’un nombre complexe et un qui représente la partie imaginaire.
+Le modèle de classe décrit un objet qui stocke deux objets de type `Type` , un qui représente la partie réelle d’un nombre complexe et un qui représente la partie imaginaire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>Notes
 
-Objet de la classe `Type`:
+Objet de classe `Type` :
 
 - A un constructeur public par défaut, un destructeur, un constructeur de copie et un opérateur d’assignation avec un comportement conventionnel.
 
@@ -40,7 +40,7 @@ Objet de la classe `Type`:
 
 En particulier, aucune différence même minime ne peut exister entre la construction de copie et la construction par défaut suivie de l'affectation. Aucune des opérations sur les objets de la classe `Type` ne peut lever des exceptions.
 
-Des spécialisations explicites de modèle de classe complexe existent pour les trois types à virgule flottante. Dans cette implémentation, une valeur de tout autre type `Type` est convertie en **double** pour les calculs réels, avec le résultat **double** affecté à l’objet stocké de type `Type`.
+Des spécialisations explicites de modèle de classe complexe existent pour les trois types à virgule flottante. Dans cette implémentation, une valeur de tout autre type est convertie `Type` en **`double`** pour les calculs réels, le **`double`** résultat étant affecté à l’objet stocké de type `Type` .
 
 ## <a name="members"></a>Membres
 
@@ -48,7 +48,7 @@ Des spécialisations explicites de modèle de classe complexe existent pour les 
 
 |||
 |-|-|
-|[complex](#complex)|Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.|
+|[complexe](#complex)|Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -67,13 +67,13 @@ Des spécialisations explicites de modèle de classe complexe existent pour les 
 
 |||
 |-|-|
-|[operator*=](#op_star_eq)|Multiplie un nombre complexe cible par un facteur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|
-|[operator+=](#op_add_eq)|Ajoute un nombre à un nombre complexe cible, où le nombre ajouté peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.|
-|[operator-=](#operator-_eq)|Soustrait un nombre d’un nombre complexe cible, où le nombre soustrait peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.|
-|[operator/=](#op_div_eq)|Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|
-|[operator=](#op_eq)|Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.|
+|[opérateur * =](#op_star_eq)|Multiplie un nombre complexe cible par un facteur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|
+|[opérateur + =](#op_add_eq)|Ajoute un nombre à un nombre complexe cible, où le nombre ajouté peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.|
+|[opérateur =](#operator-_eq)|Soustrait un nombre d’un nombre complexe cible, où le nombre soustrait peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.|
+|[opérateur/=](#op_div_eq)|Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|
+|[opérateur =](#op_eq)|Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.|
 
-## <a name="complex"></a>complexe
+## <a name="complex"></a><a name="complex"></a>complexe
 
 Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.
 
@@ -100,7 +100,7 @@ Nombre complexe dont la partie réelle et la partie imaginaire sont utilisées p
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise la partie réelle stockée à *\_RealVal* et la partie imaginaire stockée à *\_Imagval*. Le deuxième constructeur initialise la partie réelle stockée à `complexNum.real()` et la partie imaginaire stockée à `complexNum.imag()`.
+Le premier constructeur initialise la partie réelle stockée sur * \_ RealVal* et la partie imaginaire stockée sur * \_ Imagval*. Le deuxième constructeur initialise la partie réelle stockée à `complexNum.real()` et la partie imaginaire stockée à `complexNum.imag()` .
 
 Dans cette implémentation, si un convertisseur ne prend pas en charge les fonctions de modèle membres, le modèle :
 
@@ -157,7 +157,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a>imag
 
 Extrait le composant imaginaire d'un nombre complexe.
 
@@ -169,7 +169,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Paramètres
 
-\ *droit*
+*Oui*\
 Nombre complexe dont la valeur imaginaire doit être extraite.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -211,7 +211,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a>opérateur * =
+## <a name="operator"></a><a name="op_star_eq"></a>opérateur * =
 
 Multiplie un nombre complexe cible par un facteur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.
 
@@ -226,7 +226,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-\ *droit*
+*Oui*\
 Nombre complexe ou nombre du même type que celui du paramètre du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a>opérateur + =
+## <a name="operator"></a><a name="op_add_eq"></a>opérateur + =
 
 Ajoute un nombre à un nombre complexe cible, où le nombre ajouté peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.
 
@@ -311,7 +311,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-\ *droit*
+*Oui*\
 Nombre complexe ou nombre du même type que celui du paramètre du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -399,7 +399,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a>opérateur =
+## <a name="operator-"></a><a name="operator-_eq"></a>opérateur =
 
 Soustrait un nombre d’un nombre complexe cible, où le nombre soustrait peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.
 
@@ -507,7 +507,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>opérateur/=
+## <a name="operator"></a><a name="op_div_eq"></a>opérateur/=
 
 Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.
 
@@ -611,7 +611,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a>opérateur =
 
 Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.
 
@@ -624,7 +624,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Paramètres
 
-\ *droit*
+*Oui*\
 Nombre complexe ou nombre du même type que celui du paramètre du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -689,7 +689,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a>non
+## <a name="real"></a><a name="real"></a>non
 
 Extrait ou définit le composant réel d'un nombre complexe.
 
@@ -701,7 +701,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Paramètres
 
-\ *droit*
+*Oui*\
 Nombre complexe dont la valeur réelle doit être extraite.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -743,7 +743,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a>value_type
 
 Type qui représente le type de données utilisé pour représenter les parties imaginaire et réelle d’un nombre complexe.
 
@@ -753,7 +753,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Notes
 
-`value_type` est un synonyme du paramètre de modèle complexe `Type` de classe.
+`value_type`est un synonyme du paramètre de modèle complexe de classe `Type` .
 
 ### <a name="example"></a>Exemple
 
@@ -782,4 +782,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

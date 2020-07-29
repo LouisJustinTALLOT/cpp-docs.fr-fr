@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 2079e12eccde42fe8c456a7852a029f44ae3cd77
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 1ab25ad26357abe9091d273637f3ae9f77457342
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754402"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230478"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar, classe
 
@@ -59,31 +59,31 @@ class CScrollBar : public CWnd
 
 |Nom|Description|
 |----------|-----------------|
-|[CScrollBar::Créer](#create)|Crée la barre de défilement `CScrollBar` Windows et la fixe à l’objet.|
+|[CScrollBar :: Create](#create)|Crée la barre de défilement Windows et l’attache à l' `CScrollBar` objet.|
 |[CScrollBar::EnableScrollBar](#enablescrollbar)|Active ou désactive une flèche (ou les deux) d'une barre de défilement.|
-|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|Récupère des informations sur la `SCROLLBARINFO` barre de défilement à l’aide d’une structure.|
+|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|Récupère des informations sur la barre de défilement à l’aide d’une `SCROLLBARINFO` structure.|
 |[CScrollBar::GetScrollInfo](#getscrollinfo)|Récupère des informations sur la barre de défilement.|
 |[CScrollBar::GetScrollLimit](#getscrolllimit)|Récupère la limite de la barre de défilement|
 |[CScrollBar::GetScrollPos](#getscrollpos)|Récupère la position actuelle d'une case de défilement.|
-|[CScrollBar::GetScrollRange](#getscrollrange)|Récupère les positions minimales et maximales de barre de défilement pour la barre de défilement donnée.|
+|[CScrollBar::GetScrollRange](#getscrollrange)|Récupère les positions de barre de défilement minimale et maximale actuelles pour la barre de défilement donnée.|
 |[CScrollBar::SetScrollInfo](#setscrollinfo)|Définit les informations sur la barre de défilement.|
-|[CScrollBar::SetScrollPos](#setscrollpos)|Définit la position actuelle d’une boîte de défilement.|
+|[CScrollBar::SetScrollPos](#setscrollpos)|Définit la position actuelle d’une case de défilement.|
 |[CScrollBar::SetScrollRange](#setscrollrange)|Définit les valeurs de position minimale et maximale de la barre de défilement donnée.|
-|[CScrollBar::ShowScrollBar](#showscrollbar)|Affiche ou cache une barre de défilement.|
+|[CScrollBar :: ShowScrollBar](#showscrollbar)|Affiche ou masque une barre de défilement.|
 
 ## <a name="remarks"></a>Notes
 
-Vous créez un contrôle de barre de défilement en deux étapes. Tout d’abord, `CScrollBar` appelez `CScrollBar` le constructeur pour construire l’objet, puis appelez la fonction `CScrollBar` membre [Create](#create) pour créer le contrôle de la barre de défilement Windows et l’attacher à l’objet.
+Vous créez un contrôle de barre de défilement en deux étapes. Tout d’abord, appelez le constructeur `CScrollBar` pour construire l' `CScrollBar` objet, puis appelez la fonction membre [Create](#create) pour créer le contrôle de barre de défilement Windows et l’attacher à l' `CScrollBar` objet.
 
-Si vous `CScrollBar` créez un objet dans une boîte de `CScrollBar` dialogue (via une ressource de dialogue), le est automatiquement détruit lorsque l’utilisateur ferme la boîte de dialogue.
+Si vous créez un `CScrollBar` objet dans une boîte de dialogue (par le biais d’une ressource de boîte de dialogue), le `CScrollBar` est automatiquement détruit lorsque l’utilisateur ferme la boîte de dialogue.
 
-Si vous `CScrollBar` créez un objet à l’intérieur d’une fenêtre, vous devrez peut-être aussi le détruire.
+Si vous créez un `CScrollBar` objet dans une fenêtre, vous devrez peut-être également le détruire.
 
-Si vous `CScrollBar` créez l’objet sur la pile, il est détruit automatiquement. Si vous `CScrollBar` créez l’objet sur le tas en utilisant la **nouvelle** fonction, vous devez appeler **supprimer** sur l’objet pour le détruire lorsque l’utilisateur met fin à la barre de défilement Windows.
+Si vous créez l' `CScrollBar` objet sur la pile, il est détruit automatiquement. Si vous créez l' `CScrollBar` objet sur le tas à l’aide de la **`new`** fonction, vous devez appeler **`delete`** sur l’objet pour le détruire lorsque l’utilisateur met fin à la barre de défilement Windows.
 
-Si vous allouez `CScrollBar` de la mémoire `CScrollBar` dans l’objet, remplacez le destructeur pour disposer des allocations.
+Si vous allouez de la mémoire dans l' `CScrollBar` objet, substituez le `CScrollBar` destructeur pour supprimer les allocations.
 
-Pour obtenir des `CScrollBar`informations connexes sur l’utilisation , voir [Contrôles](../../mfc/controls-mfc.md).
+Pour plus d’informations sur l’utilisation de `CScrollBar` , consultez [contrôles](../../mfc/controls-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -99,9 +99,9 @@ Pour obtenir des `CScrollBar`informations connexes sur l’utilisation , voir [C
 
 **En-tête :** afxwin.h
 
-## <a name="cscrollbarcreate"></a><a name="create"></a>CScrollBar::Créer
+## <a name="cscrollbarcreate"></a><a name="create"></a>CScrollBar :: Create
 
-Crée la barre de défilement `CScrollBar` Windows et la fixe à l’objet.
+Crée la barre de défilement Windows et l’attache à l' `CScrollBar` objet.
 
 ```
 virtual BOOL Create(
@@ -113,17 +113,17 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*dwStyle (en)*<br/>
-Spécifie le style de la barre de défilement. Appliquez n’importe quelle combinaison de styles de [barre de défilement](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) à la barre de défilement.
+*dwStyle*<br/>
+Spécifie le style de la barre de défilement. Applique une combinaison de [styles de barre de défilement](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) à la barre de défilement.
 
-*Rect*<br/>
-Spécifie la taille et la position de la barre de défilement. Peut être `RECT` soit une `CRect` structure ou un objet.
+*rectangulaire*<br/>
+Spécifie la taille et la position de la barre de défilement. Il peut s’agir d’une `RECT` structure ou d’un `CRect` objet.
 
 *pParentWnd*<br/>
-Spécifie la fenêtre parente `CDialog` de la barre de défilement, habituellement un objet. Ce ne doit pas être NULL.
+Spécifie la fenêtre parente de la barre de défilement, généralement un `CDialog` objet. Il ne doit pas être NULL.
 
 *nID*<br/>
-L’ID de commande de la barre de défilement.
+ID de contrôle de la barre de défilement.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -131,17 +131,17 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Vous construisez un `CScrollBar` objet en deux étapes. Tout d’abord, appelez le `CScrollBar` constructeur, qui construit l’objet; puis `Create`appelez , qui crée et initialise la barre de `CScrollBar` défilement Windows associée et la fixe à l’objet.
+Vous construisez un `CScrollBar` objet en deux étapes. Tout d’abord, appelez le constructeur, qui construit l' `CScrollBar` objet, puis appelez `Create` , qui crée et initialise la barre de défilement Windows associée et l’attache à l' `CScrollBar` objet.
 
-Appliquer les [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) suivants sur une barre de défilement :
+Appliquez les [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) suivants à une barre de défilement :
 
 - WS_CHILD toujours
 
-- WS_VISIBLE Habituellement
+- WS_VISIBLE généralement
 
-- WS_DISABLED Rarement
+- WS_DISABLED rarement
 
-- WS_GROUP Pour les contrôles de groupe
+- WS_GROUP des contrôles de groupe
 
 ### <a name="example"></a>Exemple
 
@@ -173,24 +173,24 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 
 ### <a name="parameters"></a>Paramètres
 
-*nArrowFlags (en)*<br/>
-Précise si les flèches de défilement sont activées ou désactivées et quelles flèches sont activées ou désactivées. Ce paramètre peut être l’une des valeurs suivantes :
+*nArrowFlags*<br/>
+Spécifie si les flèches de défilement sont activées ou désactivées et quelles flèches sont activées ou désactivées. Ce paramètre peut prendre l’une des valeurs suivantes :
 
-- ESB_ENABLE_BOTH Permet les deux flèches d’une barre de défilement.
+- ESB_ENABLE_BOTH active les deux flèches d’une barre de défilement.
 
-- ESB_DISABLE_LTUP désactive la flèche gauche d’une barre de défilement horizontal ou la flèche vers le haut d’une barre de défilement vertical.
+- ESB_DISABLE_LTUP désactive la flèche gauche d’une barre de défilement horizontale ou la flèche vers le haut d’une barre de défilement verticale.
 
-- ESB_DISABLE_RTDN désactive la flèche droite d’une barre de défilement horizontal ou la flèche vers le bas d’une barre de défilement vertical.
+- ESB_DISABLE_RTDN désactive la flèche droite d’une barre de défilement horizontale ou la flèche vers le bas d’une barre de défilement verticale.
 
 - ESB_DISABLE_BOTH désactive les deux flèches d’une barre de défilement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nonzero si les flèches sont activées ou désactivées comme spécifié; autrement 0, ce qui indique que les flèches sont déjà dans l’état demandé ou qu’une erreur s’est produite.
+Différent de zéro si les flèches sont activées ou désactivées comme spécifié ; Sinon, 0, ce qui indique que les flèches sont déjà dans l’État demandé ou qu’une erreur s’est produite.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CScrollBar:SetScrollRange](#setscrollrange).
+  Consultez l’exemple de [CScrollBar :: SetScrollRange](#setscrollrange).
 
 ## <a name="cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo
 
@@ -202,16 +202,16 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*pScrollInfo (en anglais)*<br/>
-Un pointeur à la structure [SCROLLBARINFO.](/windows/win32/api/winuser/ns-winuser-scrollbarinfo)
+*pScrollInfo*<br/>
+Pointeur vers la structure [SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) .
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne TRUE sur le succès, FALSE sur l’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction de membre imite la fonctionnalité du [message SBM_SCROLLBARINFO,](/windows/win32/Controls/sbm-getscrollbarinfo) tel que décrit dans le SDK Windows.
+Cette fonction membre émule les fonctionnalités du message [SBM_SCROLLBARINFO](/windows/win32/Controls/sbm-getscrollbarinfo) , comme décrit dans le SDK Windows.
 
 ## <a name="cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a>CScrollBar::GetScrollInfo
 
@@ -226,26 +226,26 @@ BOOL GetScrollInfo(
 ### <a name="parameters"></a>Paramètres
 
 *lpScrollInfo*<br/>
-Un pointeur vers une structure [SCROLLINFO.](/windows/win32/api/winuser/ns-winuser-scrollinfo) Consultez le Windows SDK pour plus d’informations sur cette structure.
+Pointeur vers une structure [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) . Pour plus d’informations sur cette structure, consultez la SDK Windows.
 
-*nMask (nMask)*<br/>
-Spécifie les paramètres de la barre de défilement à récupérer. L’utilisation typique, SIF_ALL, spécifie une combinaison de SIF_PAGE, de SIF_POS, de SIF_TRACKPOS et de SIF_RANGE. Voir `SCROLLINFO` pour plus d’informations sur les valeurs nMask.
+*nMask*<br/>
+Spécifie les paramètres de barre de défilement à récupérer. L’utilisation classique, SIF_ALL, spécifie une combinaison de SIF_PAGE, SIF_POS, SIF_TRACKPOS et SIF_RANGE. `SCROLLINFO`Pour plus d’informations sur les valeurs de nMask, consultez.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le message a récupéré des valeurs, le retour est VRAI. Sinon, c’est FALSE.
+Si le message a récupéré des valeurs, la valeur renvoyée est TRUE. Sinon, la valeur est FALSe.
 
 ### <a name="remarks"></a>Notes
 
 `GetScrollInfo`permet aux applications d’utiliser des positions de défilement 32 bits.
 
-La structure [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) contient des informations sur une barre de défilement, y compris les positions de défilement minimales et maximales, la taille de la page et la position de la boîte de défilement (le pouce). Consultez `SCROLLINFO` le sujet de la structure dans le SDK Windows pour plus d’informations sur la modification de la structure par défaut.
+La structure [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) contient des informations sur une barre de défilement, y compris les positions minimale et maximale de défilement, la taille de la page et la position de la case de défilement (le curseur de défilement). `SCROLLINFO`Pour plus d’informations sur la modification des valeurs par défaut de la structure, consultez la rubrique structure de la SDK Windows.
 
-Les gestionnaires de messages MFC Windows qui indiquent la position de la barre de défilement, [CWnd::OnHScroll, et [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), fournissent seulement 16 bits de données de position. `GetScrollInfo`et `SetScrollInfo` fournir 32 bits de données de position de barre de défilement. Ainsi, une application `GetScrollInfo` peut `CWnd::OnHScroll` appeler `CWnd::OnVScroll` pendant le traitement ou pour obtenir des données de position de barre de défilement 32 bits.
+Les gestionnaires de messages Windows MFC qui indiquent la position de la barre de défilement, [CWnd :: OnHScroll et [CWnd :: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), fournissent uniquement 16 bits de données de position. `GetScrollInfo`et `SetScrollInfo` fournissent 32 bits de données de position de la barre de défilement. Ainsi, une application peut appeler `GetScrollInfo` lors du traitement `CWnd::OnHScroll` `CWnd::OnVScroll` de ou pour obtenir des données de position de la barre de défilement 32 bits.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
+  Consultez l’exemple de [CWnd :: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
 ## <a name="cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a>CScrollBar::GetScrollLimit
 
@@ -257,11 +257,11 @@ int GetScrollLimit();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie la position maximale d’une barre de défilement en cas de succès; sinon 0.
+Spécifie la position maximale d’une barre de défilement en cas de réussite ; Sinon, 0.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
+  Consultez l’exemple de [CWnd :: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
 ## <a name="cscrollbargetscrollpos"></a><a name="getscrollpos"></a>CScrollBar::GetScrollPos
 
@@ -273,19 +273,19 @@ int GetScrollPos() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie la position actuelle de la boîte de parchemin en cas de succès; sinon 0.
+Spécifie la position actuelle de la case de défilement en cas de réussite ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-La position actuelle est une valeur relative qui dépend de la plage de défilement actuelle. Par exemple, si la plage de défilement est de 100 à 200 et que la boîte de défilement est au milieu de la barre, la position actuelle est de 150.
+La position actuelle est une valeur relative qui dépend de la plage de défilement actuelle. Par exemple, si la plage de défilement est comprise entre 100 et 200 et que la case de défilement se trouve au milieu de la barre, la position actuelle est 150.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
+  Consultez l’exemple de [CWnd :: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
 ## <a name="cscrollbargetscrollrange"></a><a name="getscrollrange"></a>CScrollBar::GetScrollRange
 
-Copie les positions minimales et maximales de barre de défilement pour la barre de défilement donnée aux *emplacements spécifiés par lpMinPos* et *lpMaxPos*.
+Copie les positions de barre de défilement minimale et maximale actuelles pour la barre de défilement donnée vers les emplacements spécifiés par *lpMinPos* et *lpMaxPos*.
 
 ```cpp
 void GetScrollRange(
@@ -295,23 +295,23 @@ void GetScrollRange(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpMinPos (en)*<br/>
-Indique la variable d’intégrerie qui doit recevoir la position minimale.
+*lpMinPos*<br/>
+Pointe vers la variable de type entier qui doit recevoir la position minimale.
 
-*lpMaxPos (en)*<br/>
-Indique la variable d’intégrerie qui doit recevoir la position maximale.
+*lpMaxPos*<br/>
+Pointe vers la variable de type entier qui doit recevoir la position maximale.
 
 ### <a name="remarks"></a>Notes
 
-La plage par défaut pour un contrôle de barre de défilement est vide (les deux valeurs sont 0).
+La plage par défaut d’un contrôle de barre de défilement est vide (les deux valeurs sont 0).
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
+  Consultez l’exemple de [CWnd :: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).
 
 ## <a name="cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a>CScrollBar::SetScrollInfo
 
-Définit les informations `SCROLLINFO` que la structure maintient sur une barre de défilement.
+Définit les informations que la `SCROLLINFO` structure gère à propos d’une barre de défilement.
 
 ```
 BOOL SetScrollInfo(
@@ -322,20 +322,20 @@ BOOL SetScrollInfo(
 ### <a name="parameters"></a>Paramètres
 
 *lpScrollInfo*<br/>
-Un pointeur vers une structure [SCROLLINFO.](/windows/win32/api/winuser/ns-winuser-scrollinfo)
+Pointeur vers une structure [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) .
 
-*bRedraw (en)*<br/>
-Précise si la barre de défilement doit être redessinée pour refléter les nouvelles informations. Si *bRedraw* est VRAI, la barre de défilement est redessinée. S’il s’agit de FALSE, il n’est pas redessiné. La barre de défilement est redessinée par défaut.
+*bRedraw*<br/>
+Spécifie si la barre de défilement doit être redessinée pour refléter les nouvelles informations. Si *bRedraw* a la valeur true, la barre de défilement est redessinée. Si la valeur est FALSe, il n’est pas redessiné. Par défaut, la barre de défilement est redessinée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-En cas de succès, le retour est VRAI. Sinon, c’est FALSE.
+En cas de réussite, la valeur renvoyée est TRUE. Sinon, la valeur est FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Vous devez fournir les `SCROLLINFO` valeurs requises par les paramètres de la structure, y compris les valeurs du drapeau.
+Vous devez fournir les valeurs requises par les `SCROLLINFO` paramètres de structure, y compris les valeurs d’indicateur.
 
-La `SCROLLINFO` structure contient des informations sur une barre de défilement, y compris les positions de défilement minimum et maximum, la taille de la page et la position de la boîte de défilement (le pouce). Consultez le sujet de la structure [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) dans le SDK Windows pour plus d’informations sur la modification des défauts de la structure.
+La `SCROLLINFO` structure contient des informations sur une barre de défilement, y compris les positions minimale et maximale de défilement, la taille de la page et la position de la case de défilement (le curseur de défilement). Pour plus d’informations sur la modification des valeurs par défaut de la structure, consultez la rubrique structure [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -343,7 +343,7 @@ La `SCROLLINFO` structure contient des informations sur une barre de défilement
 
 ## <a name="cscrollbarsetscrollpos"></a><a name="setscrollpos"></a>CScrollBar::SetScrollPos
 
-Définit la position actuelle d’une boîte de défilement à celle spécifiée par *nPos* et, si spécifié, redessine la barre de défilement pour refléter la nouvelle position.
+Définit la position actuelle d’une case de défilement à celle spécifiée par *nPos* et, si elle est spécifiée, redessine la barre de défilement pour refléter la nouvelle position.
 
 ```
 int SetScrollPos(
@@ -353,23 +353,23 @@ int SetScrollPos(
 
 ### <a name="parameters"></a>Paramètres
 
-*Osbl*<br/>
-Spécifie la nouvelle position pour la boîte de défilement. Il doit être dans la plage de défilement.
+*nPos*<br/>
+Spécifie la nouvelle position de la case de défilement. Elle doit être comprise dans la plage de défilement.
 
-*bRedraw (en)*<br/>
-Précise si la barre de défilement doit être redessinée pour refléter la nouvelle position. Si *bRedraw* est VRAI, la barre de défilement est redessinée. S’il s’agit de FALSE, il n’est pas redessiné. La barre de défilement est redessinée par défaut.
+*bRedraw*<br/>
+Spécifie si la barre de défilement doit être redessinée pour refléter la nouvelle position. Si *bRedraw* a la valeur true, la barre de défilement est redessinée. Si la valeur est FALSe, il n’est pas redessiné. Par défaut, la barre de défilement est redessinée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie la position précédente de la boîte de parchemin en cas de succès; sinon 0.
+Spécifie la position précédente de la case de défilement en cas de réussite ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Définissez *bRedraw* à FALSE chaque fois que la barre de défilement sera redessinée par un appel ultérieur à une autre fonction pour éviter que la barre de défilement redessinée deux fois dans un court intervalle.
+Affectez à *bRedraw* la valeur false chaque fois que la barre de défilement sera redessinée par un appel ultérieur à une autre fonction pour éviter que la barre de défilement ne soit redessinée deux fois dans un intervalle bref.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CScrollBar:SetScrollRange](#setscrollrange).
+  Consultez l’exemple de [CScrollBar :: SetScrollRange](#setscrollrange).
 
 ## <a name="cscrollbarsetscrollrange"></a><a name="setscrollrange"></a>CScrollBar::SetScrollRange
 
@@ -384,32 +384,32 @@ void SetScrollRange(
 
 ### <a name="parameters"></a>Paramètres
 
-*nMinPos (en)*<br/>
-Spécifie la position de défilement minimum.
+*nMinPos*<br/>
+Spécifie la position de défilement minimale.
 
-*nMaxPos (en)*<br/>
+*nMaxPos*<br/>
 Spécifie la position de défilement maximale.
 
-*bRedraw (en)*<br/>
-Précise si la barre de défilement doit être redessinée pour refléter le changement. Si *bRedraw* est VRAI, la barre de défilement est redessinée; si FALSE, il n’est pas redessiné. Il est redessiné par défaut.
+*bRedraw*<br/>
+Spécifie si la barre de défilement doit être redessinée pour refléter la modification. Si *bRedraw* a la valeur true, la barre de défilement est redessinée ; Si la valeur est FALSe, il n’est pas redessiné. Par défaut, il est redessiné.
 
 ### <a name="remarks"></a>Notes
 
-Définissez *nMinPos* et *nMaxPos* à 0 pour masquer les barres de défilement standard.
+Affectez à *nMinPos* et à *nMaxPos* la valeur 0 pour masquer les barres de défilement standard.
 
-N’appelez pas cette fonction pour masquer une barre de défilement pendant le traitement d’un message de notification scroll-bar.
+N’appelez pas cette fonction pour masquer une barre de défilement lors du traitement d’un message de notification de barre de défilement.
 
-Si un `SetScrollRange` appel pour suivre `SetScrollPos` immédiatement un appel à la `SetScrollPos` fonction membre, définissez *bRedraw* à 0 pour empêcher la barre de défilement d’être redessinée deux fois.
+Si un appel à `SetScrollRange` suit immédiatement un appel à la `SetScrollPos` fonction membre, affectez la valeur *bRedraw* `SetScrollPos` 0 à bRedraw pour empêcher que la barre de défilement ne soit redessinée deux fois.
 
-La différence entre les valeurs spécifiées par *nMinPos* et *nMaxPos* ne doit pas être supérieure à 32 767. La plage par défaut pour un contrôle de barre de défilement est vide *(nMinPos* et *nMaxPos* sont 0).
+La différence entre les valeurs spécifiées par *nMinPos* et *nMaxPos* ne doit pas être supérieure à 32 767. La plage par défaut d’un contrôle de barre de défilement est vide (les *nMinPos* et *nMaxPos* sont 0).
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]
 
-## <a name="cscrollbarshowscrollbar"></a><a name="showscrollbar"></a>CScrollBar::ShowScrollBar
+## <a name="cscrollbarshowscrollbar"></a><a name="showscrollbar"></a>CScrollBar :: ShowScrollBar
 
-Affiche ou cache une barre de défilement.
+Affiche ou masque une barre de défilement.
 
 ```cpp
 void ShowScrollBar(BOOL bShow = TRUE);
@@ -417,25 +417,25 @@ void ShowScrollBar(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bShow (en)*<br/>
-Précise si la barre de défilement est affichée ou cachée. Si ce paramètre est VRAI, la barre de défilement est affichée; sinon il est caché.
+*bShow*<br/>
+Spécifie si la barre de défilement est affichée ou masquée. Si ce paramètre a la valeur TRUE, la barre de défilement est affichée ; dans le cas contraire, elle est masquée.
 
 ### <a name="remarks"></a>Notes
 
-Une application ne doit pas appeler cette fonction pour masquer une barre de défilement pendant le traitement d’un message de notification scroll-bar.
+Une application ne doit pas appeler cette fonction pour masquer une barre de défilement lors du traitement d’un message de notification de barre de défilement.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CScrollBar::Créer](#create).
+  Consultez l’exemple de [CScrollBar :: Create](#create).
 
 ## <a name="see-also"></a>Voir aussi
 
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
-[Classe CButton](../../mfc/reference/cbutton-class.md)<br/>
-[Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CButton, classe](../../mfc/reference/cbutton-class.md)<br/>
+[CComboBox (classe)](../../mfc/reference/ccombobox-class.md)<br/>
+[CEdit, classe](../../mfc/reference/cedit-class.md)<br/>
 [CListBox, classe](../../mfc/reference/clistbox-class.md)<br/>
-[Classe CStatic](../../mfc/reference/cstatic-class.md)<br/>
-[Classe CDialog](../../mfc/reference/cdialog-class.md)
+[CStatic, classe](../../mfc/reference/cstatic-class.md)<br/>
+[CDialog (classe)](../../mfc/reference/cdialog-class.md)

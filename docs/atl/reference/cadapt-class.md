@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: 1bae98663b8dc2b09efeff9139e8d028abcd862e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 2ea8fc8a26642abf593c7f4df3928ff90e66e2b3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168824"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229998"
 ---
 # <a name="cadapt-class"></a>CAdapt, classe
 
@@ -47,7 +47,7 @@ Type adapté.
 
 |Nom|Description|
 |----------|-----------------|
-|[CAdapt :: Operator const T&](#operator_const_t_amp)|Retourne une référence **const** à `m_T`.|
+|[CAdapt :: Operator const T&](#operator_const_t_amp)|Retourne une **`const`** référence à `m_T` .|
 |[CAdapt :: Operator T&](#operator_t_amp)|Retourne une référence à `m_T`.|
 |[CAdapt :: Operator <](#operator_lt)|Compare un objet du type adapté à `m_T`.|
 |[CAdapt :: Operator =](#operator_eq)|Assigne un objet du type adapté à `m_T`.|
@@ -61,9 +61,9 @@ Type adapté.
 
 ## <a name="remarks"></a>Notes
 
-`CAdapt` est un modèle simple qui permet d'inclure dans un wrapper les classes qui redéfinissent l'opérateur d'adresse (`operator &`) afin de retourner un autre élément que l'adresse de l'objet. Parmi ces exemples de classes figurent les classes ATL `CComBSTR`, `CComPtr` et `CComQIPtr`, ainsi que la classe de prise en charge COM du compilateur, `_com_ptr_t`. Ces classes redéfinissent l’opérateur d’adresse pour retourner l’adresse de l’un de leurs membres de données (un BSTR dans le `CComBSTR`cas de, et un pointeur d’interface dans le cas des autres classes).
+`CAdapt` est un modèle simple qui permet d'inclure dans un wrapper les classes qui redéfinissent l'opérateur d'adresse (`operator &`) afin de retourner un autre élément que l'adresse de l'objet. Parmi ces exemples de classes figurent les classes ATL `CComBSTR`, `CComPtr` et `CComQIPtr`, ainsi que la classe de prise en charge COM du compilateur, `_com_ptr_t`. Ces classes redéfinissent l’opérateur d’adresse pour retourner l’adresse de l’un de leurs membres de données (un BSTR dans le cas de `CComBSTR` , et un pointeur d’interface dans le cas des autres classes).
 
-`CAdapt`le rôle principal de est de masquer l’opérateur d’adresse défini par la classe *T*, tout en conservant les caractéristiques de la classe adaptée. `CAdapt`remplit ce rôle en détenant un membre public, [m_T](#m_t), de type *T*et en définissant des opérateurs de conversion, des opérateurs de comparaison et un constructeur de copie pour `CAdapt` permettre aux spécialisations de d’être traitées comme s’il s’agissait d’objets de type *T*.
+`CAdapt`le rôle principal de est de masquer l’opérateur d’adresse défini par la classe *T*, tout en conservant les caractéristiques de la classe adaptée. `CAdapt`remplit ce rôle en détenant un membre public, [m_T](#m_t), de type *T*et en définissant des opérateurs de conversion, des opérateurs de comparaison et un constructeur de copie pour permettre aux spécialisations de d' `CAdapt` être traitées comme s’il s’agissait d’objets de type *T*.
 
 La classe d'adaptateur `CAdapt` est utile, car certaines classes de type conteneur sont censées être capables d'obtenir les adresses des objets contenus via l'opérateur d'adresse. La redéfinition de l’opérateur d’adresse peut confondre cette exigence, généralement en provoquant des erreurs de compilation et en empêchant l’utilisation du type non adapté avec les classes qui s’attendent à ce qu’il fonctionne « tout simplement ». `CAdapt` permet de contourner ces problèmes.
 
@@ -103,11 +103,11 @@ T m_T;
 
 ### <a name="remarks"></a>Notes
 
-Ce membre de données **public** est accessible directement ou indirectement avec l' [opérateur const t&](#operator_const_t_amp) et l' [opérateur t&](#operator_t_amp).
+Ce **`public`** membre de données est accessible directement ou indirectement avec l' [opérateur const t&](#operator_const_t_amp) et l' [opérateur t&](#operator_t_amp).
 
 ## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt :: Operator const T&amp;
 
-Retourne une référence **const** au membre [m_T](#m_t) , ce qui permet de traiter l’objet d’adaptateur comme s’il s’agissait d’un objet de type *T*.
+Retourne une **`const`** référence au membre [m_T](#m_t) , ce qui permet de traiter l’objet d’adaptateur comme s’il s’agissait d’un objet de type *T*.
 
 ```cpp
 operator const T&() const;
@@ -115,7 +115,7 @@ operator const T&() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Référence **const** à `m_T`.
+**`const`** Référence à `m_T` .
 
 ## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt :: Operator T&amp;
 

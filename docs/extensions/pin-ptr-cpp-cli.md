@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9a9144229b75c09a892ddbf5bd592e67c7c2b6d9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172033"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230556"
 ---
 # <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -42,7 +42,7 @@ Un *pointeur épingle* est un pointeur intérieur qui empêche l’objet pointé
 ### <a name="parameters"></a>Paramètres
 
 *cv_qualifier*<br/>
-Qualificateurs **const** ou **volatile**. Par défaut, un pointeur épingle est **volatile**. Bien que n’étant pas une erreur, il est toutefois redondant de déclarer un pointeur épingle comme étant **volatile**.
+**`const`****`volatile`** qualificateurs ou. Par défaut, un pointeur épingle est **`volatile`** . Elle est redondante, mais pas une erreur pour déclarer un pointeur épingle **`volatile`** .
 
 *type*<br/>
 Type d’*initialiseur*.

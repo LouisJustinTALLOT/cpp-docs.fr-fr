@@ -1,40 +1,40 @@
 ---
 title: Avertissement du compilateur (niveau 1) C4530
-description: Guide de référence de l’avertissement de compilateur C4530 de Microsoft C.
+description: Guide de référence de l’avertissement du compilateur Microsoft C++ C4530.
 ms.date: 04/02/2020
 f1_keywords:
 - C4530
 helpviewer_keywords:
 - C4530
 ms.assetid: a04dcdb2-84db-459d-9e5e-4e743887465f
-ms.openlocfilehash: 9de88a4b0b6c7176ff82b68c92d09d9fe75a70b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe0a2b4c8eb881327f3e59d66e7e6941f0a2cad8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369785"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230660"
 ---
 # <a name="compiler-warning-level-1-c4530"></a>Avertissement du compilateur (niveau 1) C4530
 
-> Le gestionnaire d’exception de CMD utilisé, mais la sémantique décompressée n’est pas activée. Spécifier /EHsc
+> Le gestionnaire d’exceptions C++ est utilisé, mais les sémantiques de déroulement ne sont pas activées. Spécifier/EHsc
 
-Le code utilise la manipulation des exceptions CMD, mais [/EHsc](../../build/reference/eh-exception-handling-model.md) n’a pas été inclus dans les options de compilateur.
+Le code utilise la gestion des exceptions C++, mais [/EHsc](../../build/reference/eh-exception-handling-model.md) n’a pas été inclus dans les options du compilateur.
 
 ## <a name="remarks"></a>Notes
 
-Le compilateur **`/EHsc`** nécessite la possibilité de construire le code CMD qui suit la norme CMD pour la manutention des exceptions. La *sémantique de détendez-vous* standard de CMD précise que les objets et les cadres de pile construits entre l’endroit où une exception est projetée et où il est capturé doivent être détruits et leurs ressources récupérées. Ce processus est connu sous le nom *de dénouer la pile*.
+Le compilateur nécessite l' **`/EHsc`** option pour générer du code c++ qui suit la norme c++ pour la gestion des exceptions. La *sémantique de déroulement* C++ standard spécifie que les objets et les frames de pile construits entre l’emplacement où une exception est levée et celui où elle est interceptée doivent être détruits et leurs ressources récupérées. Ce processus est appelé *déroulement de la pile*.
 
-L’option **`/EHsc`** indique au compilateur de générer du code qui appelle les destructeurs sur les objets de stockage automatiques lorsqu’une exception passe à travers le cadre de pile contenant. Les objets *de stockage automatiques* sont des objets répartis sur la pile, tels que les variables locales. C’est ce qu’on appelle le stockage automatique parce qu’il est alloué automatiquement lorsque les fonctions sont appelées, et libéré automatiquement quand ils reviennent. Un *cadre de pile* est les données placées sur la pile lorsqu’une fonction est appelée, avec son stockage automatique.
+L' **`/EHsc`** option indique au compilateur de générer le code qui appelle les destructeurs sur les objets de stockage automatique lorsqu’une exception passe par le frame de pile conteneur. Les objets de *stockage automatiques* sont des objets alloués sur la pile, tels que les variables locales. Elle est appelée stockage automatique, car elle est allouée automatiquement quand les fonctions sont appelées et libérées automatiquement quand elles retournent. Un *Frame de pile* est les données placées sur la pile lorsqu’une fonction est appelée, ainsi que son stockage automatique.
 
-Lorsqu’une exception est lancée, elle peut voyager à travers plusieurs cadres de pile avant qu’elle ne soit prise. Ces cadres de pile doivent être dénoués au fur et à mesure que l’exception passe à travers eux dans l’ordre d’appel inversé. Les objets de stockage automatiques dans chaque cadre de pile doivent être détruits pour récupérer leurs ressources proprement. C’est le même processus de destruction et de récupération qui se produit automatiquement lorsqu’une fonction revient normalement.
+Lorsqu’une exception est levée, elle peut traverser plusieurs frames de pile avant d’être interceptée. Ces frames de pile doivent être déroulés, car l’exception les traverse dans l’ordre d’appel inverse. Les objets de stockage automatiques dans chaque frame de pile doivent être détruits pour récupérer leurs ressources correctement. Il s’agit du même processus de destruction et de récupération qui se produit automatiquement lorsqu’une fonction est retournée normalement.
 
-Lorsque **`/EHsc`** l’option n’est pas activée, les objets de stockage automatiques dans les cadres de pile entre la fonction de lancer et la fonction où l’exception est capturé ne sont pas détruits. Seuls les objets de stockage automatiques créés dans un bloc **d’essai** ou **de capture** sont détruits, ce qui peut conduire à des fuites de ressources importantes et d’autres comportements inattendus.
+Lorsque l' **`/EHsc`** option n’est pas activée, les objets de stockage automatique dans les frames de pile entre la fonction de levée et la fonction dans laquelle l’exception est interceptée ne sont pas détruits. Seuls les objets de stockage automatique créés dans **`try`** un **`catch`** bloc ou sont détruits, ce qui peut entraîner des fuites de ressources importantes et d’autres comportements inattendus.
 
-Si aucune exception ne peut être jetée dans votre exécutable, vous pouvez ignorer cet avertissement en toute sécurité. Certains codes peuvent nécessiter d’autres options de traitement des exceptions. Pour plus d’informations, voir [/EH](../../build/reference/eh-exception-handling-model.md).
+Si aucune exception ne peut être levée dans votre exécutable, vous pouvez ignorer cet avertissement en toute sécurité. Du code peut nécessiter d’autres options de gestion des exceptions. Pour plus d’informations, consultez [/Eh](../../build/reference/eh-exception-handling-model.md).
 
 ## <a name="example"></a>Exemple
 
-L’échantillon suivant génère C4530 :
+L’exemple suivant génère l’C4530 :
 
 ```cpp
 // C4530.cpp
@@ -44,4 +44,4 @@ int main() {
 }
 ```
 
-Compilez l’échantillon pour **`/EHsc`** résoudre l’avertissement.
+Compilez l’exemple avec **`/EHsc`** pour résoudre l’avertissement.

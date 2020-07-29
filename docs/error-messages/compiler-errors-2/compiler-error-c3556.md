@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 50f97c4360080f1271d9decc3b3460c06f3fec0b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230816"
 ---
 # <a name="compiler-error-c3556"></a>Erreur du compilateur C3556
 
 > '*expression*' : argument incorrect pour’decltype'
 
-Le compilateur ne peut pas déduire le type de l’expression qui représente l’argument du spécificateur de type `decltype(`*expression*`)` .
+Le compilateur ne peut pas déduire le type de l’expression qui est l’argument du spécificateur de type d' `decltype(` *expression* `)` .
 
 ## <a name="example"></a>Exemple
 
-Dans l’exemple de code suivant, le compilateur ne peut pas déduire le type de l’argument `myFunction` car `myFunction` est surchargé. Pour résoudre ce problème, vous pouvez utiliser `static_cast` pour créer une instance d’un pointeur vers la fonction surchargée particulière à spécifier dans l’expression `decltype`.
+Dans l’exemple de code suivant, le compilateur ne peut pas déduire le type de l’argument `myFunction` car `myFunction` est surchargé. Pour résoudre ce problème, vous pouvez utiliser **`static_cast`** pour créer une instance d’un pointeur vers la fonction surchargée particulière à spécifier dans l' **`decltype`** expression.
 
 ```cpp
 // C3556.cpp

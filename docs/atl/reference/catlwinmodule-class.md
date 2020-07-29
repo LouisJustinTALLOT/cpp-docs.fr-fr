@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 5cdf13ebbb982ad8184a52dcf1a3e30d71e4e5b0
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 04dc7e5b8c0c5dd21567f23395b4bafd4ae839dc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167706"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229985"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule, classe
 
@@ -74,11 +74,11 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 Pointeur vers la `_AtlCreateWndData` structure à initialiser et à ajouter au module en cours.
 
 *pObject*<br/>
-Pointeur vers **le pointeur this** d’un objet.
+Pointeur vers le pointeur d’un objet **`this`** .
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode appelle [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) qui initialise une structure [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Cette structure stocke le pointeur **This** , utilisé pour obtenir l’instance de la classe dans les procédures de fenêtre.
+Cette méthode appelle [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) qui initialise une structure [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Cette structure stocke le **`this`** pointeur, utilisé pour obtenir l’instance de la classe dans les procédures de fenêtre.
 
 ## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
 
@@ -114,7 +114,7 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la `_AtlCreateWndData` structure précédemment ajoutée avec [CAtlWinModule :: ADDCREATEWNDDATA](#addcreatewnddata), ou null si aucun objet n’est disponible.
+Retourne un pointeur vers la `_AtlCreateWndData` structure précédemment ajoutée avec [CAtlWinModule :: AddCreateWndData](#addcreatewnddata), ou null si aucun objet n’est disponible.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 5014a32386a0a140f0fdc00b23a0ac24a54afcee
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626146"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230491"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Contrôles ActiveX MFC : ajout de propriétés personnalisées
 
@@ -62,7 +62,7 @@ Cette procédure peut également être utilisée pour ajouter d’autres propri�
 
 1. Pour **Type d’implémentation**, cliquez sur **Méthodes Get/Set**.
 
-1. Dans la zone **type de propriété** , sélectionnez **short**.
+1. Dans la zone **type de propriété** , sélectionnez **`short`** .
 
 1. Tapez des noms uniques pour vos fonctions obtenir et définir, ou acceptez les noms par défaut.
 
@@ -97,4 +97,4 @@ Notez que l’Assistant Ajout de propriété ajoute automatiquement un appel, à
 [Contrôles ActiveX MFC](mfc-activex-controls.md)<br/>
 [Contrôles ActiveX MFC : propriétés](mfc-activex-controls-properties.md)<br/>
 [Contrôles ActiveX MFC : méthodes](mfc-activex-controls-methods.md)<br/>
-[COleControl, classe](reference/colecontrol-class.md)
+[Classe COleControl](reference/colecontrol-class.md)

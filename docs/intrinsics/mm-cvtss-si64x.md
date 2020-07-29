@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: 6079ed7846a35ff16355f0341d63430f9846057f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bc6e33da5ac7b25727f6e24c3af6e6a926b29847
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217435"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230504"
 ---
 # <a name="_mm_cvtss_si64x"></a>_mm_cvtss_si64x
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère la version étendue x64 du nombre à virgule flottante simple précision de conversion en une instruction entière 64`cvtss2si`bits ().
+Génère la version étendue x64 du nombre à virgule flottante simple précision de conversion en une instruction entière 64 bits ( `cvtss2si` ).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,24 +30,24 @@ __int64 _mm_cvtss_si64x(
 
 ### <a name="parameters"></a>Paramètres
 
-*value*\
-dans `__m128` Structure contenant des valeurs à virgule flottante.
+*ajoutée*\
+dans **`__m128`** Structure contenant des valeurs à virgule flottante.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Entier 64 bits, résultat de la conversion de la première valeur à virgule flottante en entier.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`_mm_cvtss_si64x`|X64|
+|`_mm_cvtss_si64x`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-Le premier élément de la valeur de structure est converti en entier et retourné. Les bits de contrôle d’arrondi dans MXCSR sont utilisés pour déterminer le comportement d’arrondi. Le mode d’arrondi par défaut est arrondi au plus proche, en arrondissant au nombre pair si la partie décimale est 0,5. Étant donné `__m128` que la structure représente un registre XMM, l’intrinsèque prend une valeur du Registre XMM et l’écrit dans la mémoire système.
+Le premier élément de la valeur de structure est converti en entier et retourné. Les bits de contrôle d’arrondi dans MXCSR sont utilisés pour déterminer le comportement d’arrondi. Le mode d’arrondi par défaut est arrondi au plus proche, en arrondissant au nombre pair si la partie décimale est 0,5. Étant donné que la **`__m128`** structure représente un registre XMM, l’intrinsèque prend une valeur du Registre XMM et l’écrit dans la mémoire système.
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
@@ -85,7 +85,7 @@ int main()
 101
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

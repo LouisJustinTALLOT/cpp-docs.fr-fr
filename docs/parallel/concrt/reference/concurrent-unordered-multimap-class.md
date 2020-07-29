@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: 95cbe57c205948b73f6629f093b7fdfe8f703506
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: fb03d368b7c9cced8961dbd77f22ab6bec40bc0d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143175"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230322"
 ---
 # <a name="concurrent_unordered_multimap-class"></a>concurrent_unordered_multimap, classe
 
@@ -47,28 +47,28 @@ true>>;
 
 ### <a name="parameters"></a>Paramètres
 
-*K*<br/>
+*DK*<br/>
 Type de clé.
 
 *_Element_type*<br/>
 Type mappé.
 
 *_Hasher*<br/>
-Type d'objet de la fonction de hachage. Cet argument est facultatif et sa valeur par défaut est `std::hash<K>`.
+Type d’objet de la fonction de hachage. Cet argument est facultatif et sa valeur par défaut est `std::hash<K>`.
 
 *key_equality*<br/>
 Type d’objet de fonction de comparaison d’égalité. Cet argument est facultatif et sa valeur par défaut est `std::equal_to<K>`.
 
 *_Allocator_type*<br/>
-Type qui représente l’objet allocateur stocké qui encapsule des détails sur l’allocation et la désallocation de mémoire pour le vecteur simultané. Cet argument est facultatif et la valeur par défaut est `std::allocator<std::pair<K`, `_Element_type>>`.
+Type qui représente l’objet allocateur stocké qui encapsule des détails sur l’allocation et la désallocation de mémoire pour le vecteur simultané. Cet argument est facultatif et la valeur par défaut est `std::allocator<std::pair<K` , `_Element_type>>` .
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|`allocator_type`|Type d'un allocateur pour la gestion du stockage.|
+|`allocator_type`|Type d’un allocateur pour la gestion du stockage.|
 |`const_iterator`|Type d'un itérateur constant pour la séquence contrôlée.|
 |`const_local_iterator`|Type d’un itérateur de compartiment constant pour la séquence contrôlée.|
 |`const_pointer`|Type d'un pointeur constant vers un élément.|
@@ -83,33 +83,33 @@ Type qui représente l’objet allocateur stocké qui encapsule des détails sur
 |`pointer`|Type d'un pointeur vers un élément.|
 |`reference`|Type d'une référence à un élément.|
 |`size_type`|Type d'une distance non signée entre deux éléments.|
-|`value_type`|Type d'un élément.|
+|`value_type`|Type d’un élément.|
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[concurrent_unordered_multimap](#ctor)|Surchargé. Construit un Multimap non ordonné simultané.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[hash_function](#hash_function)|Retourne l’objet de fonction de hachage stocké.|
-|[insert](#insert)|Surchargé. Ajoute des éléments à l’objet `concurrent_unordered_multimap`.|
+|[insert](#insert)|Surchargé. Ajoute des éléments à l' `concurrent_unordered_multimap` objet.|
 |[key_eq](#key_eq)|Retourne l’objet de fonction de comparaison d’égalité stocké.|
 |[swap](#swap)|Échange le contenu de deux objets `concurrent_unordered_multimap`. Cette méthode n’est pas sécurisée pour la concurrence.|
-|[unsafe_erase](#unsafe_erase)|Surchargé. Supprime des éléments de la `concurrent_unordered_multimap` aux positions spécifiées. Cette méthode n’est pas sécurisée pour la concurrence.|
+|[unsafe_erase](#unsafe_erase)|Surchargé. Supprime des éléments du `concurrent_unordered_multimap` à des positions spécifiées. Cette méthode n’est pas sécurisée pour la concurrence.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[operator=](#operator_eq)|Surchargé. Assigne le contenu d’un autre objet `concurrent_unordered_multimap` à celui-ci. Cette méthode n’est pas sécurisée pour la concurrence.|
+|[opérateur =](#operator_eq)|Surchargé. Assigne le contenu d’un autre `concurrent_unordered_multimap` objet à celui-ci. Cette méthode n’est pas sécurisée pour la concurrence.|
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations sur la classe `concurrent_unordered_multimap`, consultez [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).
+Pour plus d’informations sur la `concurrent_unordered_multimap` classe, consultez [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -123,9 +123,9 @@ Pour plus d’informations sur la classe `concurrent_unordered_multimap`, consul
 
 **En-tête :** concurrent_unordered_map. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="begin"></a>commencer
+## <a name="begin"></a><a name="begin"></a>commencer
 
 Retourne un itérateur pointant vers le premier élément du conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
@@ -139,7 +139,7 @@ const_iterator begin() const;
 
 Itérateur vers le premier élément du conteneur simultané.
 
-## <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a>cbegin
 
 Retourne un itérateur const pointant vers le premier élément du conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
@@ -151,7 +151,7 @@ const_iterator cbegin() const;
 
 Itérateur const vers le premier élément du conteneur simultané.
 
-## <a name="cend"></a>CEND
+## <a name="cend"></a><a name="cend"></a>CEND
 
 Retourne un itérateur const pointant vers l’emplacement qui suit le dernier élément du conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
@@ -163,7 +163,7 @@ const_iterator cend() const;
 
 Itérateur const vers l’emplacement qui suit le dernier élément du conteneur simultané.
 
-## <a name="clear"></a>effacé
+## <a name="clear"></a><a name="clear"></a>effacé
 
 Efface tous les éléments dans le conteneur simultané. Cette fonction n’est pas sécurisée pour l’accès concurrentiel.
 
@@ -171,7 +171,7 @@ Efface tous les éléments dans le conteneur simultané. Cette fonction n’est 
 void clear();
 ```
 
-## <a name="ctor"></a>concurrent_unordered_multimap
+## <a name="concurrent_unordered_multimap"></a><a name="ctor"></a>concurrent_unordered_multimap
 
 Construit un Multimap non ordonné simultané.
 
@@ -228,7 +228,7 @@ Position du premier élément de la plage d'éléments à copier.
 Position du premier élément au-delà de la plage d'éléments à copier.
 
 *_Umap*<br/>
-Objet `concurrent_unordered_multimap` source à partir duquel copier les éléments.
+Objet source `concurrent_unordered_multimap` à partir duquel copier les éléments.
 
 ### <a name="remarks"></a>Notes
 
@@ -238,13 +238,13 @@ Le premier constructeur spécifie un Multimap initial vide et spécifie explicit
 
 Le deuxième constructeur spécifie un allocateur pour le Multimap non ordonné.
 
-Le troisième constructeur spécifie les valeurs fournies par la plage d’itérateurs [`_Begin`, `_End`).
+Le troisième constructeur spécifie les valeurs fournies par la plage d’itérateurs [ `_Begin` , `_End` ).
 
-Les quatrième et cinquième constructeurs spécifient une copie de la `_Umap`Multimap non ordonnée simultanée.
+Les quatrième et cinquième constructeurs spécifient une copie des Multimap non ordonnés simultanés `_Umap` .
 
-Le dernier constructeur spécifie un déplacement de la `_Umap`Multimap non ordonnée simultanée.
+Le dernier constructeur spécifie un déplacement des Multimap non ordonnés simultanés `_Umap` .
 
-## <a name="count"></a>saut
+## <a name="count"></a><a name="count"></a>saut
 
 Compte le nombre d’éléments qui correspondent à une clé spécifiée. Cette fonction est sécurisée pour l’accès concurrentiel.
 
@@ -261,7 +261,7 @@ Clé à rechercher.
 
 Nombre de fois où la clé apparaît dans le conteneur.
 
-## <a name="empty"></a>vidé
+## <a name="empty"></a><a name="empty"></a>vidé
 
 Vérifie l'absence d'éléments. Cette méthode est sécurisée pour l’accès concurrentiel.
 
@@ -271,13 +271,13 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le conteneur simultané est vide ; sinon, **false** .
+**`true`** Si le conteneur simultané est vide ; **`false`** sinon,.
 
 ### <a name="remarks"></a>Notes
 
 En présence d’insertions simultanées, si le conteneur simultané est vide, peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour ne soit même lue.
 
-## <a name="end"></a>effet
+## <a name="end"></a><a name="end"></a>effet
 
 Retourne un itérateur pointant vers l’emplacement qui suit le dernier élément du conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
@@ -291,7 +291,7 @@ const_iterator end() const;
 
 Itérateur vers l’emplacement qui suit le dernier élément du conteneur simultané.
 
-## <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a>equal_range
 
 Recherche une plage qui correspond à une clé spécifiée. Cette fonction est sécurisée pour l’accès concurrentiel.
 
@@ -318,7 +318,7 @@ Valeur de clé à rechercher.
 
 Il est possible que les insertions simultanées provoquent l’insertion de clés supplémentaires après l’itérateur de début et avant l’itérateur de fin.
 
-## <a name="find"></a>trouver
+## <a name="find"></a><a name="find"></a>trouver
 
 Recherche un élément qui correspond à une clé spécifiée. Cette fonction est sécurisée pour l’accès concurrentiel.
 
@@ -337,7 +337,7 @@ Valeur de clé à rechercher.
 
 Itérateur pointant sur l’emplacement du premier élément qui correspond à la clé fournie, ou l’itérateur `end()` si aucun élément de ce type n’existe.
 
-## <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
 
 Retourne l’objet allocateur stocké pour ce conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
@@ -349,7 +349,7 @@ allocator_type get_allocator() const;
 
 Objet allocateur stocké pour ce conteneur simultané.
 
-## <a name="hash_function"></a>hash_function
+## <a name="hash_function"></a><a name="hash_function"></a>hash_function
 
 Retourne l’objet de fonction de hachage stocké.
 
@@ -361,9 +361,9 @@ hasher hash_function() const;
 
 Objet de fonction de hachage stocké.
 
-## <a name="insert"></a>Insérer
+## <a name="insert"></a><a name="insert"></a>Insérer
 
-Ajoute des éléments à l’objet `concurrent_unordered_multimap`.
+Ajoute des éléments à l' `concurrent_unordered_multimap` objet.
 
 ```cpp
 iterator insert(
@@ -417,13 +417,13 @@ Itérateur pointant vers l’emplacement d’insertion.
 
 La première fonction membre insère l’élément `value` dans la séquence contrôlée, puis retourne l’itérateur qui désigne l’élément inséré.
 
-La deuxième fonction membre retourne Insert (`value`), en utilisant `_Where` comme emplacement de départ dans la séquence contrôlée pour rechercher le point d’insertion.
+La deuxième fonction membre retourne Insert ( `value` ), en utilisant `_Where` comme emplacement de départ dans la séquence contrôlée pour rechercher le point d’insertion.
 
-La troisième fonction membre insère la séquence de valeurs d’éléments à partir de la plage [`first`, `last`).
+La troisième fonction membre insère la séquence de valeurs d’éléments à partir de la plage [ `first` , `last` ).
 
 Les deux dernières fonctions membres se comportent de la même façon que les deux premières, sauf que `value` est utilisé pour construire la valeur insérée.
 
-## <a name="key_eq"></a>key_eq
+## <a name="key_eq"></a><a name="key_eq"></a>key_eq
 
 Retourne l’objet de fonction de comparaison d’égalité stocké.
 
@@ -435,7 +435,7 @@ key_equal key_eq() const;
 
 Objet de fonction de comparaison d’égalité stocké.
 
-## <a name="load_factor"></a>load_factor
+## <a name="load_factor"></a><a name="load_factor"></a>load_factor
 
 Calcule et retourne le facteur de charge actuel du conteneur. Le facteur de charge est le nombre d’éléments dans le conteneur divisé par le nombre de compartiments.
 
@@ -447,7 +447,7 @@ float load_factor() const;
 
 Facteur de charge pour le conteneur.
 
-## <a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a><a name="max_load_factor"></a>max_load_factor
 
 Obtient ou définit le facteur de charge maximal du conteneur. Le facteur de charge maximale est le plus grand nombre d’éléments que ne peut être dans un compartiment avant que le conteneur ne développe sa table interne.
 
@@ -465,7 +465,7 @@ void max_load_factor(float _Newmax);
 
 La première fonction membre retourne le facteur de charge maximale stockée. La deuxième fonction membre ne retourne pas de valeur, mais lève une exception [out_of_range](../../../standard-library/out-of-range-class.md) si le facteur de charge fourni n’est pas valide.
 
-## <a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a>max_size
 
 Retourne la taille maximale du conteneur simultané, déterminée par l’allocateur. Cette méthode est sécurisée pour l’accès concurrentiel.
 
@@ -481,9 +481,9 @@ Nombre maximal d’éléments qui peuvent être insérés dans ce conteneur simu
 
 Cette valeur limite supérieure peut en fait être supérieure à ce que le conteneur peut réellement contenir.
 
-## <a name="operator_eq"></a>opérateur =
+## <a name="operator"></a><a name="operator_eq"></a>opérateur =
 
-Assigne le contenu d’un autre objet `concurrent_unordered_multimap` à celui-ci. Cette méthode n’est pas sécurisée pour la concurrence.
+Assigne le contenu d’un autre `concurrent_unordered_multimap` objet à celui-ci. Cette méthode n’est pas sécurisée pour la concurrence.
 
 ```cpp
 concurrent_unordered_multimap& operator= (const concurrent_unordered_multimap& _Umap);
@@ -498,13 +498,13 @@ Objet `concurrent_unordered_multimap` source.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Référence à cet objet `concurrent_unordered_multimap`.
+Référence à cet `concurrent_unordered_multimap` objet.
 
 ### <a name="remarks"></a>Notes
 
-Après l’effacement des éléments existants dans un Multimap non ordonné simultané, `operator=` copie ou déplace le contenu de `_Umap` dans le Multimap non ordonné simultané.
+Après l’effacement des éléments existants dans un Multimap non ordonné simultané, `operator=` copie ou déplace le contenu de `_Umap` dans le Multimap simultané non ordonné.
 
-## <a name="rehash"></a>rehash
+## <a name="rehash"></a><a name="rehash"></a>rehash
 
 Régénère la table de hachage.
 
@@ -523,7 +523,7 @@ La fonction membre modifie le nombre de compartiments pour qu’il soit au moins
 
 Elle lève une exception [out_of_range](../../../standard-library/out-of-range-class.md) si le nombre de compartiments n’est pas valide (0 ou supérieur au nombre maximal de compartiments).
 
-## <a name="size"></a>corps
+## <a name="size"></a><a name="size"></a>corps
 
 Retourne le nombre d’éléments dans ce conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
@@ -539,7 +539,7 @@ Nombre d’éléments dans le conteneur.
 
 En présence d’insertions simultanées, le nombre d’éléments dans le conteneur simultané peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour soit même lue.
 
-## <a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a>échange
 
 Échange le contenu de deux objets `concurrent_unordered_multimap`. Cette méthode n’est pas sécurisée pour la concurrence.
 
@@ -550,9 +550,9 @@ void swap(concurrent_unordered_multimap& _Umap);
 ### <a name="parameters"></a>Paramètres
 
 *_Umap*<br/>
-Objet `concurrent_unordered_multimap` à utiliser pour l’échange.
+`concurrent_unordered_multimap`Objet à échanger.
 
-## <a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a><a name="unsafe_begin"></a>unsafe_begin
 
 Retourne un itérateur au premier élément de ce conteneur pour un compartiment spécifique.
 
@@ -571,7 +571,7 @@ Index de compartiment.
 
 Itérateur pointant vers le début du compartiment.
 
-## <a name="unsafe_bucket"></a>unsafe_bucket
+## <a name="unsafe_bucket"></a><a name="unsafe_bucket"></a>unsafe_bucket
 
 Retourne l’index de compartiment auquel une clé spécifique est mappée dans ce conteneur.
 
@@ -588,7 +588,7 @@ Clé d’élément recherchée.
 
 Index de compartiment pour la clé dans ce conteneur.
 
-## <a name="unsafe_bucket_count"></a>unsafe_bucket_count
+## <a name="unsafe_bucket_count"></a><a name="unsafe_bucket_count"></a>unsafe_bucket_count
 
 Retourne le nombre actuel de compartiments dans ce conteneur.
 
@@ -600,7 +600,7 @@ size_type unsafe_bucket_count() const;
 
 Nombre actuel de compartiments dans ce conteneur.
 
-## <a name="unsafe_bucket_size"></a>unsafe_bucket_size
+## <a name="unsafe_bucket_size"></a><a name="unsafe_bucket_size"></a>unsafe_bucket_size
 
 Retourne le nombre d’éléments dans un compartiment spécifique de ce conteneur.
 
@@ -617,7 +617,7 @@ Compartiment à rechercher.
 
 Nombre actuel de compartiments dans ce conteneur.
 
-## <a name="unsafe_cbegin"></a>unsafe_cbegin
+## <a name="unsafe_cbegin"></a><a name="unsafe_cbegin"></a>unsafe_cbegin
 
 Retourne un itérateur au premier élément de ce conteneur pour un compartiment spécifique.
 
@@ -634,7 +634,7 @@ Index de compartiment.
 
 Itérateur pointant vers le début du compartiment.
 
-## <a name="unsafe_cend"></a>unsafe_cend
+## <a name="unsafe_cend"></a><a name="unsafe_cend"></a>unsafe_cend
 
 Retourne un itérateur à l’emplacement suivant le dernier élément d’un compartiment spécifique.
 
@@ -651,7 +651,7 @@ Index de compartiment.
 
 Itérateur pointant vers le début du compartiment.
 
-## <a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a><a name="unsafe_end"></a>unsafe_end
 
 Retourne un itérateur au dernier élément de ce conteneur pour un compartiment spécifique.
 
@@ -670,9 +670,9 @@ Index de compartiment.
 
 Itérateur pointant vers la fin du compartiment.
 
-## <a name="unsafe_erase"></a>unsafe_erase
+## <a name="unsafe_erase"></a><a name="unsafe_erase"></a>unsafe_erase
 
-Supprime des éléments de la `concurrent_unordered_multimap` aux positions spécifiées. Cette méthode n’est pas sécurisée pour la concurrence.
+Supprime des éléments du `concurrent_unordered_multimap` à des positions spécifiées. Cette méthode n’est pas sécurisée pour la concurrence.
 
 ```cpp
 iterator unsafe_erase(
@@ -700,15 +700,15 @@ Itérateurs.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Les deux premières fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `concurrent_unordered_multimap::end`() si aucun élément de ce type n’existe. La troisième fonction membre retourne le nombre d’éléments qu’elle supprime.
+Les deux premières fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `concurrent_unordered_multimap::end` () si aucun élément de ce type n’existe. La troisième fonction membre retourne le nombre d’éléments qu’elle supprime.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre supprime l’élément de la séquence contrôlée pointée par `_Where`. La deuxième fonction membre supprime les éléments de la plage [`_Begin`, `_End`).
+La première fonction membre supprime l’élément de la séquence contrôlée pointée par `_Where` . La deuxième fonction membre supprime les éléments de la plage [ `_Begin` , `_End` ).
 
-La troisième fonction membre supprime les éléments de la plage délimitée par `concurrent_unordered_multimap::equal_range`(KVal).
+La troisième fonction membre supprime les éléments de la plage délimitée par `concurrent_unordered_multimap::equal_range` (KVal).
 
-## <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
+## <a name="unsafe_max_bucket_count"></a><a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
 
 Retourne le nombre maximal de compartiments dans ce conteneur.
 
@@ -722,5 +722,5 @@ Nombre maximal de compartiments dans ce conteneur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [Conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md)

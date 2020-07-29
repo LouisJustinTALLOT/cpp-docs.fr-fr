@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: 940eae39222548ec74bda8ccb38e669748ffa74f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ea7341b9c587a764c7366fa7b7c89e4fc67bc7d8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738399"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230855"
 ---
 # <a name="compiler-error-c3490"></a>Erreur du compilateur C3490
 
 impossible de modifier 'var' car il est accessible via un objet const
 
-Une expression lambda déclarée dans une méthode `const` ne peut pas modifier des données membres non mutables.
+Une expression lambda déclarée dans une **`const`** méthode ne peut pas modifier des données membres non mutables.
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-- Supprimez le modificateur `const` de votre déclaration de méthode.
+- Supprimez le **`const`** modificateur de votre déclaration de méthode.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3490, car il modifie la variable membre `_i` dans une méthode `const` :
+L’exemple suivant génère C3490, car il modifie la variable membre `_i` dans une **`const`** méthode :
 
 ```cpp
 // C3490a.cpp
@@ -44,7 +44,7 @@ class C
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant corrige l’erreur C3490 en supprimant le modificateur `const` de la déclaration de méthode :
+L’exemple suivant résout C3490 en supprimant le **`const`** modificateur de la déclaration de méthode :
 
 ```cpp
 // C3490b.cpp

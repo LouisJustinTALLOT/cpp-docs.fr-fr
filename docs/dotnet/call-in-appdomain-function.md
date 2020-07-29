@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988537"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230894"
 ---
 # <a name="call_in_appdomain-function"></a>call_in_appdomain, fonction
 
@@ -39,19 +39,19 @@ RetType call_in_appdomain(
 );
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Paramètres
 
 *appdomainId*<br/>
 AppDomain dans lequel appeler la fonction.
 
 *voidFunc*<br/>
-Pointeur vers une fonction `void` qui accepte N paramètres (0 < = N < = 15).
+Pointeur vers une **`void`** fonction qui accepte N paramètres (0 <= N <= 15).
 
 *nonvoidFunc*<br/>
-Pointeur vers une fonction non`void` qui accepte N paramètres (0 < = N < = 15).
+Pointeur vers une **`void`** fonction qui accepte n paramètres (0 <= n <= 15).
 
-*arg1...argN*<br/>
-Zéro à 15 paramètres à passer à `voidFunc` ou `nonvoidFunc` dans l’autre AppDomain.
+*arg1... argN*<br/>
+Zéro à 15 paramètres à passer à `voidFunc` ou à `nonvoidFunc` l’autre AppDomain.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -59,7 +59,7 @@ Résultat de l’exécution de `voidFunc` ou `nonvoidFunc` dans le domaine d’a
 
 ## <a name="remarks"></a>Notes
 
-Les arguments de la fonction passée à `call_in_appdomain` ne doivent pas être des types CLR.
+Les arguments de la fonction passée à ne `call_in_appdomain` doivent pas être des types CLR.
 
 ## <a name="example"></a>Exemple
 
@@ -116,8 +116,8 @@ default appdomain id = 1
 appDomain1 id = 2
 ```
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
-**Fichier d’en-tête** \<msclr\appdomain.h >
+**Fichier d’en-tête** \<msclr\appdomain.h>
 
 **Espace de noms** msclr,

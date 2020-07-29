@@ -7,16 +7,16 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 6e6b8a286dca8c451e6920e7f25f07829d3b453f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1017fc315a4440350a0190cf4b40e644cda16876
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454214"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87230037"
 ---
-# <a name="enableif-class"></a>enable_if, classe
+# <a name="enable_if-class"></a>enable_if, classe
 
-Crée une instance d’un type pour une résolution de surcharge SFINAE sous certaines conditions. Le typedef `enable_if<Condition,Type>::type` imbriqué existe, et est un synonyme de `Type`, si et seulement si `Condition` a la **valeur true**.
+Crée une instance d’un type pour une résolution de surcharge SFINAE sous certaines conditions. Le typedef imbriqué `enable_if<Condition,Type>::type` existe, et est un synonyme de `Type` , si et seulement si `Condition` est **`true`** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,9 +35,9 @@ Type à instancier si *B* a la valeur true.
 
 ## <a name="remarks"></a>Notes
 
-Si *B* a la valeur `enable_if<B, T>` true, possède un typedef imbriqué nommé «type» qui est un synonyme de *T*.
+Si *B* a la valeur true, `enable_if<B, T>` possède un typedef imbriqué nommé « type » qui est un synonyme de *T*.
 
-Si *B* a la valeur `enable_if<B, T>` false, n’a pas de typedef imbriqué nommé «type».
+Si *B* a la valeur false, `enable_if<B, T>` n’a pas de typedef imbriqué nommé « type ».
 
 Le modèle d'alias suivant est fourni :
 
@@ -50,7 +50,7 @@ En C++, l’échec du remplacement des paramètres de modèle n’est pas une er
 
 Voici quatre exemples de scénarios :
 
-- Scénario 1 : Encapsulation du type de retour d’une fonction:
+- Scénario 1 : Encapsulation du type de retour d'une fonction :
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- Scénario 2 : Ajout d’un paramètre de fonction qui a un argument par défaut:
+- Scénario 2 : Ajout d'un paramètre de fonction qui a un argument par défaut :
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- Scénario 3 : Ajout d’un paramètre de modèle qui a un argument par défaut:
+- Scénario 3 : Ajout d'un paramètre de modèle qui a un argument par défaut :
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- Scénario 4: Si votre fonction a un argument non basé sur un modèle, vous pouvez encapsuler son type:
+- Scénario 4 : Si votre fonction a un argument non basé sur un modèle, vous pouvez encapsuler son type :
 
 ```cpp
     template <typename T>
@@ -92,7 +92,7 @@ s) {// ...
 
 Le scénario 1 ne fonctionne pas avec des constructeurs ni des opérateurs de conversion, car ils n'ont pas de types de retour.
 
-Le scénario 2 laisse le paramètre sans nom. Vous pouvez dire `::type Dummy = BAR`, mais le nom `Dummy` n'est pas pertinent et l'affectation d'un nom risque de déclencher un avertissement de type « paramètre non référencé ». Vous devez choisir un type de paramètre de fonction `FOO` et un argument par défaut `BAR`.  Vous pouvez indiquer **int** et `0`, mais les utilisateurs de votre code pourraient accidentellement passer à la fonction un entier supplémentaire qui serait ignoré. Au lieu de cela, nous vous `void **` recommandons d' `0` utiliser et soit ou **nullptr** , car presque `void **`rien n’est convertible en:
+Le scénario 2 laisse le paramètre sans nom. Vous pouvez dire `::type Dummy = BAR`, mais le nom `Dummy` n'est pas pertinent et l'affectation d'un nom risque de déclencher un avertissement de type « paramètre non référencé ». Vous devez choisir un type de paramètre de fonction `FOO` et un argument par défaut `BAR`.  Vous pouvez indiquer **`int`** et `0` , mais les utilisateurs de votre code pourraient passer accidentellement à la fonction un entier supplémentaire qui serait ignoré. Au lieu de cela, nous vous recommandons `void **` d’utiliser et `0` ou **`nullptr`** , car presque Nothing est convertible en `void **` :
 
 ```cpp
 template <your_stuff>
@@ -127,13 +127,13 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-Dans cet exemple, `make_pair("foo", "bar")` retourne `pair<const char *, const char *>`. La résolution de surcharge doit déterminer l'élément `func()` voulu. `pair<A, B>` a un constructeur de conversion implicite de `pair<X, Y>`.  Cela n'est pas nouveau et figurait déjà dans C++98. Toutefois, dans C++98/03, la signature du constructeur de conversion implicite existe toujours, même s'il s'agit de `pair<int, int>(const pair<const char *, const char *>&)`.  La résolution de surcharge ne se soucie pas du fait qu’une tentative d' `const char *` instanciation de ce constructeur explose littéralement, car n’est pas implicitement convertible en **int**; elle examine uniquement les signatures, avant que les définitions de fonctions ne soient instanciées.  Ainsi, l'exemple de code est ambigu, car des signatures existent pour convertir `pair<const char *, const char *>` à la fois en `pair<int, int>` et `pair<string, string>`.
+Dans cet exemple, `make_pair("foo", "bar")` retourne `pair<const char *, const char *>`. La résolution de surcharge doit déterminer l'élément `func()` voulu. `pair<A, B>` a un constructeur de conversion implicite de `pair<X, Y>`.  Cela n'est pas nouveau et figurait déjà dans C++98. Toutefois, dans C++98/03, la signature du constructeur de conversion implicite existe toujours, même s'il s'agit de `pair<int, int>(const pair<const char *, const char *>&)`.  La résolution de surcharge ne se soucie pas du fait qu’une tentative d’instanciation de ce constructeur explose littéralement, car `const char *` n’est pas implicitement convertible en **`int`** ; elle examine uniquement les signatures, avant que les définitions de fonctions soient instanciées.  Ainsi, l'exemple de code est ambigu, car des signatures existent pour convertir `pair<const char *, const char *>` à la fois en `pair<int, int>` et `pair<string, string>`.
 
 C++11 a résolu cette ambiguïté en utilisant `enable_if` pour garantir que `pair<A, B>(const pair<X, Y>&)` existe **uniquement** quand `const X&` est implicitement convertible en `A` et que `const Y&` est implicitement convertible en `B`.  Cela permet à la résolution de surcharge de déterminer que `pair<const char *, const char *>` n'est pas convertible en `pair<int, int>` et que la surcharge qui accepte `pair<string, string>` est valide.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

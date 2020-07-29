@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: c80bb27761b8de91f7caee5932f28f1ec2ac0e29
-ms.sourcegitcommit: 166039ceea3256c26fb23920b96de4257b8cf149
+ms.openlocfilehash: 55327d53f3f9e8439ba6e008f1b5a6b384722d54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84946646"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229868"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informations de référence sur le schéma CMakeSettings.json
 
@@ -31,7 +31,7 @@ Le `configurations` tableau contient toutes les configurations pour un projet cm
 
 Une `configuration` a les propriétés suivantes :
 
-- `addressSanitizerEnabled`: si `true` compile le programme avec le désinfectant d’adresse (expérimental sur Windows). Sur Linux, compilez avec-FNO-omit-frame-pointer et le niveau d’optimisation du compilateur-OS ou-oo pour obtenir de meilleurs résultats.
+- `addressSanitizerEnabled`: si **`true`** compile le programme avec le désinfectant d’adresse (expérimental sur Windows). Sur Linux, compilez avec-FNO-omit-frame-pointer et le niveau d’optimisation du compilateur-OS ou-oo pour obtenir de meilleurs résultats.
 - `addressSanitizerRuntimeFlags`: indicateurs d’exécution passés à AddressSanitizer via la variable d’environnement ASAN_OPTIONS. Format : Indicateur1 = valeur : Indicateur2 = value2.
 - `buildCommandArgs` : spécifie des commutateurs de build natifs passés à CMake après --build --. Par exemple, si vous passez -v quand vous utilisez le générateur Ninja, cela oblige Ninja à sortir des lignes de commande. Consultez [Arguments de ligne de commande Ninja](#ninja) pour plus d’informations sur les commandes Ninja.
 - `buildRoot` : spécifie le répertoire dans lequel CMake génère les scripts de génération pour le générateur choisi.  Mappe sur **le commutateur-DCMAKE_BINARY_DIR** et spécifie où *CMakeCache.txt* sera créé. Si le dossier n’existe pas, il est créé. Les macros prises en charge incluent `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
@@ -82,7 +82,7 @@ Quand la configuration active spécifie un générateur Visual Studio, MSBuild.e
    ```
 
 - `installRoot` : spécifie le répertoire dans lequel CMake génère les cibles d’installation pour le générateur choisi. Les macros prises en charge incluent `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
-- `inheritEnvironments` : spécifie un ou plusieurs environnements de compilation dont dépend cette configuration. Il peut s’agir de tout environnement personnalisé ou de l’un des environnements prédéfinis. Pour plus d’informations, consultez [Environnements](#environments).
+- `inheritEnvironments` : spécifie un ou plusieurs environnements de compilation dont dépend cette configuration. Il peut s’agir de tout environnement personnalisé ou de l’un des environnements prédéfinis. Pour plus d’informations, consultez [environnements](#environments).
 - `intelliSenseMode` : spécifie le mode utilisé pour le calcul des informations IntelliSense. Possibilités :
 
   - windows-msvc-x86

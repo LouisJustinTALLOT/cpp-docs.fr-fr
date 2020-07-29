@@ -4,26 +4,26 @@ ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: fccc40302ab7bd43b3e6b2f87eef488c7813c9be
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 88dacda9b20f351eb67dde24a8335bdcbba27dd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245607"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187697"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Comment : établir une interface entre du code exceptionnel et non exceptionnel
 
 Cet article explique comment implémenter une gestion cohérente des exceptions dans un module C++, et comment convertir ces exceptions vers et depuis des codes d'erreur aux limites de l'exception.
 
-Parfois, un module C++ doit interagir avec du code qui n'utilise pas d'exceptions (code non exceptionnel). Une telle interface est connue sous le nom de *limite d’exception*. Par exemple, vous pouvez appeler la fonction Win32 `CreateFile` dans votre programme C++. `CreateFile` ne lève pas d’exceptions ; au lieu de cela, elle définit les codes d’erreur qui peuvent être récupérés par la fonction `GetLastError`. Si votre programme C++ est non trivial, vous préférez probablement appliquer une stratégie cohérente de gestion des erreurs basée sur les exceptions. En outre, vous ne souhaitez probablement pas abandonner les exceptions simplement parce que vous interagissez avec du code non-exceptionnel, ni combiner des stratégies de gestion des erreurs basées sur des exceptions et non basées sur des exceptions dans votre module C++.
+Parfois, un module C++ doit interagir avec du code qui n'utilise pas d'exceptions (code non exceptionnel). Une telle interface est connue sous le nom de *limite d’exception*. Par exemple, vous pouvez appeler la fonction Win32 `CreateFile` dans votre programme C++. La fonction `CreateFile` ne lève pas d'exception ; en revanche, elle définit des codes d'erreur qui peuvent être récupérés par la fonction `GetLastError`. Si votre programme C++ est non trivial, vous préférez probablement appliquer une stratégie cohérente de gestion des erreurs basée sur les exceptions. En outre, vous ne souhaitez probablement pas abandonner les exceptions simplement parce que vous interagissez avec du code non-exceptionnel, ni combiner des stratégies de gestion des erreurs basées sur des exceptions et non basées sur des exceptions dans votre module C++.
 
-## <a name="calling-non-exceptional-functions-from-c"></a>Appel de fonctions non exceptionnelles à partir deC++
+## <a name="calling-non-exceptional-functions-from-c"></a>Appel de fonctions non exceptionnelles à partir de C++
 
 Lorsque vous appelez une fonction non exceptionnelle depuis C++, l'idée est d'encapsuler cette fonction dans une fonction C++ qui détecte les erreurs et lève éventuellement une exception. Lorsque vous concevez cette fonction wrapper, choisissez d'abord le type de garantie d'exception à fournir : pas de levée, fort ou de base. Ensuite, créez la fonction de manière à ce que toutes les ressources, par exemple, les handles de fichiers, soient correctement libérées si une exception est levée. En général, cela signifie que vous utilisez des pointeurs intelligents ou des gestionnaires de ressources semblables pour posséder les ressources. Pour plus d’informations sur les considérations relatives à la conception, consultez Guide pratique [pour concevoir la sécurité des exceptions](how-to-design-for-exception-safety.md).
 
 ### <a name="example"></a>Exemple
 
-L'exemple suivant illustre les fonctions C++ qui utilisent les fonctions Win32 `CreateFile` et `ReadFile` en interne pour ouvrir et lire deux fichiers.  La classe `File` est un wrapper RAII (Resource Acquisition Is Initialization) pour les handles de fichiers. Son constructeur détecte un état "fichier introuvable" et lève une exception pour propager l'erreur en haut de la pile des appels du module C++ (dans cet exemple, la fonction `main()`). Si une exception est levée après qu’un objet `File` est entièrement construit, le destructeur appelle automatiquement `CloseHandle` pour libérer le handle de fichiers. (Si vous préférez, vous pouvez utiliser la classe `CHandle` Active Template Library (ATL) dans ce même but, ou un `unique_ptr` avec un effaceur personnalisé.) Les fonctions qui appellent les API Win32 et CRT détectent les erreurs C++ et lèvent des exceptions à l’aide de la fonction `ThrowLastErrorIf` définie localement, qui à son tour utilise la classe `Win32Exception`, dérivée de la classe `runtime_error`. Toutes les fonctions contenues dans cet exemple fournissent une garantie d'exception de type fort ; si une exception est levée à tout moment dans ces fonctions, aucune ressource n'est perdue et aucun état de programme n'est modifié.
+L'exemple suivant illustre les fonctions C++ qui utilisent les fonctions Win32 `CreateFile` et `ReadFile` en interne pour ouvrir et lire deux fichiers.  La classe `File` est un wrapper RAII (Resource Acquisition Is Initialization) pour les handles de fichiers. Son constructeur détecte un état "fichier introuvable" et lève une exception pour propager l'erreur en haut de la pile des appels du module C++ (dans cet exemple, la fonction `main()`). Si une exception est levée après qu’un objet `File` est entièrement construit, le destructeur appelle automatiquement `CloseHandle` pour libérer le handle de fichiers. (Si vous préférez, vous pouvez utiliser la classe Active Template Library (ATL) `CHandle` pour ce même but, ou un `unique_ptr` ensemble avec un effaceur personnalisé.) Les fonctions qui appellent les API Win32 et CRT détectent les erreurs et lèvent des exceptions C++ à l’aide de la fonction définie localement `ThrowLastErrorIf` , qui à son tour utilise la `Win32Exception` classe, dérivée de la `runtime_error` classe. Toutes les fonctions contenues dans cet exemple fournissent une garantie d'exception de type fort ; si une exception est levée à tout moment dans ces fonctions, aucune ressource n'est perdue et aucun état de programme n'est modifié.
 
 ```cpp
 // compile with: /EHsc
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-Lorsque vous convertissez des exceptions en codes d'erreur, un problème potentiel est que les codes d'erreur ne contiennent pas souvent toutes les informations qu'une exception peut stocker. Pour résoudre ce problème, vous pouvez fournir un bloc **catch** pour chaque type d’exception spécifique qui peut être levé, et effectuer la journalisation pour enregistrer les détails de l’exception avant qu’elle ne soit convertie en code d’erreur. Cette approche peut créer un grand nombre de répétitions de code si plusieurs fonctions utilisent le même ensemble de blocs **catch** . Un bon moyen d’éviter la répétition de code consiste à refactoriser ces blocs dans une fonction d’utilitaire privée qui implémente les blocs **try** et **catch** et qui accepte un objet de fonction qui est appelé dans le bloc **try** . Dans chaque fonction publique, passez le code à la fonction utilitaire en tant qu'expression lambda.
+Lorsque vous convertissez des exceptions en codes d'erreur, un problème potentiel est que les codes d'erreur ne contiennent pas souvent toutes les informations qu'une exception peut stocker. Pour résoudre ce problème, vous pouvez fournir un **`catch`** bloc pour chaque type d’exception spécifique qui peut être levé, et effectuer la journalisation pour enregistrer les détails de l’exception avant qu’elle ne soit convertie en code d’erreur. Cette approche peut créer un grand nombre de répétitions de code si plusieurs fonctions utilisent le même ensemble de **`catch`** blocs. Un bon moyen d’éviter la répétition de code consiste à refactoriser ces blocs dans une fonction d’utilitaire privée qui implémente les **`try`** **`catch`** blocs et et accepte un objet de fonction qui est appelé dans le **`try`** bloc. Dans chaque fonction publique, passez le code à la fonction utilitaire en tant qu'expression lambda.
 
 ```cpp
 template<typename Func>
@@ -232,9 +232,9 @@ bool DiffFiles3(const string& file1, const string& file2)
 }
 ```
 
-Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](lambda-expressions-in-cpp.md).
+Pour plus d’informations sur les expressions lambda, consultez [expressions lambda](lambda-expressions-in-cpp.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Meilleures C++ pratiques modernes pour les exceptions et la gestion des erreurs](errors-and-exception-handling-modern-cpp.md)<br/>
-[Guide pratique de conception pour la sécurité des exceptions](how-to-design-for-exception-safety.md)<br/>
+[Meilleures pratiques C++ modernes pour les exceptions et la gestion des erreurs](errors-and-exception-handling-modern-cpp.md)<br/>
+[Comment : concevoir la sécurité des exceptions](how-to-design-for-exception-safety.md)<br/>
