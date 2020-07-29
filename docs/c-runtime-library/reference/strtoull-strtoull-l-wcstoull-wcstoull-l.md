@@ -42,16 +42,16 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-ms.openlocfilehash: 95b64b96de1919e430a8114678cbb3db2d513c78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9664ee4c671796ad8805c19c93d5a5fd289c80ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912426"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87189114"
 ---
 # <a name="strtoull-_strtoull_l-wcstoull-_wcstoull_l"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 
-Convertit les chaînes en valeur entière de type long long non signée.
+Convertit les chaînes en une **`unsigned long long`** valeur entière.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -100,9 +100,9 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions convertit la chaîne d’entrée *strSource* en valeur d' **entier long long** **long** **non signée** .
+Chacune de ces fonctions convertit la chaîne d’entrée *strSource* en **`unsigned long long`** valeur entière.
 
 **strtoull** arrête de lire la chaîne *strSource* au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Il peut s’agir du caractère null de fin ou du premier caractère numérique supérieur ou égal à *base*. Le paramètre de la catégorie **LC_NUMERIC** des paramètres régionaux détermine la reconnaissance du caractère de base dans *strSource*; Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoull** et **wcstoull** utilisent les paramètres régionaux actuels. **_strtoull_l** et **_wcstoull_l** utilisent à la place les paramètres régionaux qui sont passés, mais qui sont identiques dans le cas contraire. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -121,9 +121,9 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 **strtoull** attend que *strSource* pointe vers une chaîne au format suivant :
 
-> [*espace blanc*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*chiffres* &#124; *lettres*]
+> [*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*chiffres* &#124; *lettres*]
 
-Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés. les *chiffres* correspondent à un ou plusieurs chiffres décimaux. les *lettres* sont une ou plusieurs lettres de « a » à « z » (ou de « a » à « z »). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si la *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* a la valeur 0, les caractères initiaux de la chaîne vers laquelle pointe *strSource* sont utilisés pour déterminer la base. Si le premier caractère est « 0 » et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* a la valeur 0 et que le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrête l’analyse. **strtoull** autorise un préfixe de**+** signe plus () ou**-** de signe moins (); un signe moins de début indique que la valeur de retour est négative.
+Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés. les *chiffres* correspondent à un ou plusieurs chiffres décimaux. les *lettres* sont une ou plusieurs lettres de « a » à « z » (ou de « a » à « z »). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si la *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* a la valeur 0, les caractères initiaux de la chaîne vers laquelle pointe *strSource* sont utilisés pour déterminer la base. Si le premier caractère est « 0 » et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* a la valeur 0 et que le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrête l’analyse. **strtoull** autorise un préfixe de signe plus ( **+** ) ou de signe moins ( **-** ); un signe moins de début indique que la valeur de retour est négative.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -136,7 +136,7 @@ Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 
@@ -146,7 +146,7 @@ Consultez l’exemple relatif à [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Fonctions de valeur chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Fonctions de chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

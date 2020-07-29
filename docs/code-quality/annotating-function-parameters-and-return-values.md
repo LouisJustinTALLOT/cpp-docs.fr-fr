@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: d2aa57abc6c0bcc50bcae743a50f86e5de65ab64
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404035"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231258"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>Annotation des paramètres de fonction et des valeurs de retour
 
@@ -167,7 +167,7 @@ Pour les annotations dans le tableau suivant, lorsqu’un paramètre de pointeur
 
      Pointeur vers un tableau, qui est lu par la fonction. Le tableau est de taille `s` et tous les éléments doivent tous être valides.
 
-     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, `char` les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise `wchar_t` .
+     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, **`char`** les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise **`wchar_t`** .
 
 - `_In_reads_z_(s)`
 
@@ -190,7 +190,7 @@ Pour les annotations dans le tableau suivant, lorsqu’un paramètre de pointeur
 
      Dans cet exemple, l’appelant fournit une mémoire tampon d' `size` éléments pour `p1` . `MyStringCopy`rend certains de ces éléments valides. Plus important encore, l' `_Null_terminated_` annotation sur `PWSTR` signifie que `p1` se termine par un caractère NULL dans un État postérieur. De cette façon, le nombre d’éléments valides est toujours bien défini, mais un nombre d’éléments spécifique n’est pas requis.
 
-     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, `char` les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise `wchar_t` .
+     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, **`char`** les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise **`wchar_t`** .
 
 - `_Out_writes_z_(s)`
 
@@ -202,7 +202,7 @@ Pour les annotations dans le tableau suivant, lorsqu’un paramètre de pointeur
 
      Pointeur vers un tableau, qui est à la fois lu et écrit dans la fonction. Il s’agit d' `s` éléments de taille et valides dans un état antérieur et postérieur.
 
-     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, `char` les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise `wchar_t` .
+     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, **`char`** les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise **`wchar_t`** .
 
 - `_Inout_updates_z_(s)`
 
@@ -231,7 +231,7 @@ Pour les annotations dans le tableau suivant, lorsqu’un paramètre de pointeur
 
      Pointeur vers un tableau, qui est lu et écrit par la fonction. Il s’agit d' `s` éléments de taille, qui doivent tous être valides dans un état antérieur, et les `c` éléments doivent être valides dans un État postérieur.
 
-     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, `char` les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise `wchar_t` .
+     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, **`char`** les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise **`wchar_t`** .
 
 - `_Inout_updates_all_(s)`
 
@@ -243,7 +243,7 @@ Pour les annotations dans le tableau suivant, lorsqu’un paramètre de pointeur
 
      En d’autres termes, tous les éléments qui existent dans la mémoire tampon jusqu’à `s` dans le préétat sont valides à l’état antérieur et postérieur.
 
-     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, `char` les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise `wchar_t` .
+     La `_bytes_` variante donne la taille en octets au lieu des éléments. Utilisez cette variante uniquement lorsque la taille ne peut pas être exprimée en tant qu’éléments. Par exemple, **`char`** les chaînes utilisent la `_bytes_` variante uniquement si une fonction similaire utilise **`wchar_t`** .
 
 - `_In_reads_to_ptr_(p)`
 

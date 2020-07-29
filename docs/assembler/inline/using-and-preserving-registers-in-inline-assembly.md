@@ -7,33 +7,33 @@ helpviewer_keywords:
 - registers, inline assembly
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-ms.openlocfilehash: 97db09ac7652c00e9599a6938f4114de080906c0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 99ca0093bb27e859854dfd1ca64addea923e5a5c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318029"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87191506"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>Utilisation et conservation des registres dans un assembly inline
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
-En général, vous ne devez pas supposer qu'un registre aura une valeur donnée lorsqu'un bloc `__asm` commence. La conservation des valeurs de registre n'est pas garantie d'un bloc `__asm` à un autre. Si vous terminez un bloc de code incorporé et que vous en démarrez un autre, vous ne pouvez pas être sûr que les registres dans le second bloc conservent les valeurs du premier bloc. Un bloc `__asm` hérite des valeurs de registre qui résultent du flux d'exécution normal.
+En général, vous ne devez pas supposer qu’un registre aura une valeur donnée au début d’un **`__asm`** bloc. Il n’est pas garanti que les valeurs de registre soient conservées dans des **`__asm`** blocs séparés. Si vous terminez un bloc de code incorporé et que vous en démarrez un autre, vous ne pouvez pas être sûr que les registres dans le second bloc conservent les valeurs du premier bloc. Un **`__asm`** bloc hérite des valeurs de Registre qui résultent du déroulement normal du contrôle.
 
-Si vous utilisez la convention d'appel `__fastcall`, le compilateur passe les arguments de fonction dans les registres plutôt que sur la pile. Cela peut poser des problèmes dans les fonctions avec des blocs `__asm`, car une fonction n'a aucun moyen de déterminer quel paramètre figure dans quel registre. Si la fonction reçoit un paramètre dans EAX et qu'elle stocke immédiatement un autre élément dans EAX, le paramètre d'origine est perdu. En outre, vous devez conserver le registre ECX dans toute fonction déclarée avec `__fastcall`.
+Si vous utilisez la **`__fastcall`** Convention d’appel, le compilateur passe les arguments de fonction dans les registres plutôt que sur la pile. Cela peut créer des problèmes dans les fonctions avec des **`__asm`** blocs, car une fonction n’a aucun moyen de déterminer le paramètre dans lequel inscrire. Si la fonction reçoit un paramètre dans EAX et qu'elle stocke immédiatement un autre élément dans EAX, le paramètre d'origine est perdu. En outre, vous devez conserver le registre ECX dans toutes les fonctions déclarées avec **`__fastcall`** .
 
-Pour éviter ces conflits de registre, n'utilisez pas la convention `__fastcall` pour les fonctions qui contiennent un bloc `__asm`. Si vous spécifiez la convention `__fastcall` globalement avec l'option du compilateur /Gr, déclarez chaque fonction contenant un bloc `__asm` avec `__cdecl` ou `__stdcall`. (L’attribut `__cdecl` indique au compilateur d’utiliser la convention d’appel C pour cette fonction.) Si vous ne compilez pas avec /Gr, `__fastcall` évitez de déclarer la fonction avec l’attribut.
+Pour éviter de tels conflits de registres, n’utilisez pas la **`__fastcall`** Convention pour les fonctions qui contiennent un **`__asm`** bloc. Si vous spécifiez la **`__fastcall`** Convention globalement avec l’option du compilateur/gr, déclarez chaque fonction contenant un **`__asm`** bloc avec **`__cdecl`** ou **`__stdcall`** . (L' **`__cdecl`** attribut indique au compilateur d’utiliser la Convention d’appel C pour cette fonction.) Si vous ne compilez pas avec/gr, évitez de déclarer la fonction avec l' **`__fastcall`** attribut.
 
-Lorsque vous utilisez `__asm` pour écrire le langage assembleur dans des fonctions C/C++, vous n'avez pas besoin de conserver les registres EAX, EBX, ECX, EDX, ESI ou EDI. Par exemple, dans le POWER2. Exemple C dans [Les fonctions d’écriture avec Inline Assembly,](../../assembler/inline/writing-functions-with-inline-assembly.md)la `power2` fonction ne préserve pas la valeur du registre EAX. Cependant, l'utilisation de ces registres affecte la qualité du code, car l'allocateur de registre ne peut pas les utiliser pour stocker des valeurs d'un bloc `__asm` à un autre. Par ailleurs, en utilisant EBX, ESI ou EDI dans du code assembleur inline, vous forcez le compilateur à enregistrer et à restaurer ces registres dans le prologue et l'épilogue de la fonction.
+Lorsque **`__asm`** vous utilisez pour écrire le langage assembleur dans des fonctions C/C++, vous n’avez pas besoin de conserver les registres EAX, EBX, ecx, EDX, ESI ou EDI. Par exemple, dans le POWER2. Exemple C dans l' [écriture de fonctions avec un assembly inline](../../assembler/inline/writing-functions-with-inline-assembly.md), la `power2` fonction ne conserve pas la valeur dans le registre EAX. Toutefois, l’utilisation de ces registres affecte la qualité du code, car l’allocateur de registre ne peut pas les utiliser pour stocker des valeurs entre les **`__asm`** blocs. Par ailleurs, en utilisant EBX, ESI ou EDI dans du code assembleur inline, vous forcez le compilateur à enregistrer et à restaurer ces registres dans le prologue et l'épilogue de la fonction.
 
-Vous devez conserver d'autres registres que vous utilisez (par exemple DS, SS, SP, BP et les registres indicateurs) pour la portée du bloc `__asm`. Vous devez conserver les registres ESP et EBP, à moins d'avoir une bonne raison de les modifier (pour changer de pile, par exemple). Voir aussi [Optimizing Inline Assembly](../../assembler/inline/optimizing-inline-assembly.md).
+Vous devez conserver les autres registres que vous utilisez (tels que les registres DS, SS, SP, BP et indicateurs) pour l’étendue du **`__asm`** bloc. Vous devez conserver les registres ESP et EBP, à moins d'avoir une bonne raison de les modifier (pour changer de pile, par exemple). Voir aussi [optimisation de l’assembly inline](../../assembler/inline/optimizing-inline-assembly.md).
 
-Certains types SSE requièrent l'alignement de pile sur huit octets, ce qui force le compilateur à émettre du code d'alignement de pile dynamique. Pour pouvoir accéder aux variables locales et aux paramètres de fonction après l'alignement, le compilateur tient à jour deux pointeurs de frame.  Si le compilateur effectue l’omission de pointeur de cadre (FPO), il utilisera EBP et ESP.  Si le compilateur n’effectue pas de FPO, il utilisera EBX et EBP. Pour garantir l'exécution correcte du code, ne modifiez pas EBX dans le code asm si la fonctionnalité requiert l'alignement de pile dynamique, car cela peut modifier le pointeur de frame. Déplacez les types alignés sur huit octets hors de la fonction ou évitez d'utiliser EBX.
+Certains types SSE requièrent l'alignement de pile sur huit octets, ce qui force le compilateur à émettre du code d'alignement de pile dynamique. Pour pouvoir accéder aux variables locales et aux paramètres de fonction après l'alignement, le compilateur tient à jour deux pointeurs de frame.  Si le compilateur effectue une omission du pointeur de frame (FPO), il utilise EBP et ESP.  Si le compilateur n’exécute pas FPO, il utilise EBX et EBP. Pour garantir l'exécution correcte du code, ne modifiez pas EBX dans le code asm si la fonctionnalité requiert l'alignement de pile dynamique, car cela peut modifier le pointeur de frame. Déplacez les types alignés sur huit octets hors de la fonction ou évitez d'utiliser EBX.
 
 > [!NOTE]
 > Si votre code assembleur inline modifie l'indicateur de direction à l'aide des instructions STD ou CLD, vous devez restaurer l'indicateur à sa valeur d'origine.
 
-**END Microsoft Spécifique**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
