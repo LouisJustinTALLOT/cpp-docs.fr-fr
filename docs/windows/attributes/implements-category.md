@@ -1,17 +1,17 @@
 ---
-title: implements_category (C++ attribut com)
+title: implements_category (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements_category
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: dd55c7474a0a8a273ddfab212b3ebcaa6e3b4a65
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 067a3a183820b09112217647e20d12b592540613
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166860"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224420"
 ---
 # <a name="implements_category"></a>implements_category
 
@@ -36,7 +36,7 @@ Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou
 
 ## <a name="example"></a>Exemple
 
-Le code suivant spécifie que l’objet suivant implémente la catégorie `Control`.
+Le code suivant spécifie que l’objet suivant implémente la `Control` catégorie.
 
 ```cpp
 // cpp_attr_ref_implements_category.cpp
@@ -57,9 +57,9 @@ class CMyClass {};
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**|
-|**Renouvelable**|Oui|
-|**Attributs requis**|L’une des valeurs suivantes : `coclass`, `progid`ou `vi_progid`|
+|**S’applique à**|**`class`**, **`struct`**|
+|**Repeatable Read**|Oui|
+|**Attributs requis**|L’une des valeurs suivantes : `coclass` , `progid` ou`vi_progid`|
 |**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

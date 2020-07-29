@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954762"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232519"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -75,24 +75,24 @@ Valeur spécifiée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne l’exposant de base 2 de *x* sous la forme d’une valeur **int** signée.
+En cas de réussite, retourne l’exposant de base 2 de *x* en tant que **`signed int`** valeur.
 
-Sinon, retourne une des valeurs suivantes, définies dans \<math.h> :
+Sinon, retourne l’une des valeurs suivantes, définies dans \<math.h> :
 
-|Entrée|Résultat|
+|Entrée|Résultats|
 |-----------|------------|
-|±0|FP_ILOGB0|
-|\+ INF, ± Nan, indéfini|FP_ILOGBNAN|
+|± 0|FP_ILOGB0|
+|+ INF, ± Nan, indéfini|FP_ILOGBNAN|
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **ilogb** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **ilogb** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ilogb** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **ilogb** accepte et retourne toujours un **`double`** .
 
-L’appel de cette fonction est similaire à l’appel de la fonction **logb** équivalente, puis au cast de la valeur de retour en **int**.
+L’appel de cette fonction est similaire à l’appel de la fonction **logb** équivalente, puis au cast de la valeur de retour en **`int`** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
@@ -102,6 +102,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [frexp](frexp.md)<br/>
 [logb, logbf, logbl, _logb, _logbf](logb-logbf-logbl-logb-logbf.md)<br/>

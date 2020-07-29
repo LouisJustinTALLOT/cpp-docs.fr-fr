@@ -1,17 +1,17 @@
 ---
-title: Hidden (C++ attribut com)
+title: Hidden (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e0e3c5cb0355f3bedd8ecee57b034f0d9dde87df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168094"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224433"
 ---
 # <a name="hidden"></a>hidden
 
@@ -25,7 +25,7 @@ Indique que l’élément existe mais qu’il ne doit pas être affiché dans un
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **Hidden** C++ a les mêmes fonctionnalités que l’attribut MIDL [masqué](/windows/win32/Midl/hidden) .
+L’attribut C++ **masqué** a les mêmes fonctionnalités que l’attribut MIDL [masqué](/windows/win32/Midl/hidden) .
 
 ## <a name="example"></a>Exemple
 
@@ -37,9 +37,9 @@ Pour obtenir un exemple d’utilisation de **Hidden**, consultez l’exemple de 
 
 |||
 |-|-|
-|**S'applique à**|**interface**, **classe**, **struct**, méthode, propriété|
-|**Renouvelable**|Non|
-|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou un **struct**)|
+|**S’applique à**|**interface**, **`class`** , **`struct`** , méthode, propriété|
+|**Repeatable Read**|Non|
+|**Attributs requis**|**coclasse** (quand elle est appliquée à **`class`** ou **`struct`** )|
 |**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

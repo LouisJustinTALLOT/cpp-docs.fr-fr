@@ -1,17 +1,17 @@
 ---
-title: helpstringcontext (C++ attribut com)
+title: helpstringcontext (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e6d4a6b4ab2381fc9ebe0f237978c92fe0f656c5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224446"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -30,7 +30,7 @@ Identificateur de contexte d’aide 32 bits dans le fichier **d’aide** .
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **helpstringcontext** C++ a les mêmes fonctionnalités que l’attribut ODL [helpstringcontext](/windows/win32/Midl/helpstringcontext) .
+L’attribut C++ **helpstringcontext** a les mêmes fonctionnalités que l’attribut ODL [helpstringcontext](/windows/win32/Midl/helpstringcontext) .
 
 ## <a name="example"></a>Exemple
 
@@ -54,8 +54,8 @@ __interface IMyI
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **interface**, méthode d’interface|
-|**Renouvelable**|Non|
+|**S’applique à**|**`class`**, **interface**, méthode d’interface|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -67,4 +67,4 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs d’interface](interface-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[module](module-cpp.md)
+[modules](module-cpp.md)

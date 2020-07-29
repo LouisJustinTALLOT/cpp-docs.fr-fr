@@ -1,17 +1,17 @@
 ---
-title: public (C++ attributs) (C++ attribut com)
+title: public (attributs C++) (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: 6912117ad05d6b608c45425ebec27cd49c0e5dc4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5307b96c58492aa06f115ca7a814aa221062e01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214711"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224368"
 ---
 # <a name="public-c-attributes"></a>public (attributs C++)
 
@@ -25,11 +25,11 @@ Garantit qu’un typedef sera placé dans la bibliothèque de types, même s’i
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **public** C++ a les mêmes fonctionnalités que l’attribut MIDL [public](/windows/win32/Midl/public) .
+L' **`public`** attribut C++ a les mêmes fonctionnalités que l’attribut MIDL [public](/windows/win32/Midl/public) .
 
 ## <a name="example"></a>Exemple
 
-Le code suivant illustre l’utilisation de l’attribut **public** :
+Le code suivant illustre l’utilisation de l' **`public`** attribut :
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -51,8 +51,8 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**S'applique à**|**typedef**|
-|**Renouvelable**|Non|
+|**S’applique à**|**`typedef`**|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -61,4 +61,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)

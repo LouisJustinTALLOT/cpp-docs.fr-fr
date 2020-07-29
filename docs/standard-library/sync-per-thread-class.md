@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 2976cdc6671750f0da439e9eb42053518e4af8d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e7f5fb403ef020135e3dd3b85a1ad67cd435b6e8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376546"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224589"
 ---
 # <a name="sync_per_thread-class"></a>sync_per_thread, classe
 
@@ -44,17 +44,17 @@ Les allocateurs qui utilisent `sync_per_thread` peuvent être considérés comme
 
 |Fonction membre|Description|
 |-|-|
-|[Allouer](#allocate)|Alloue un bloc de mémoire.|
-|[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
+|[allocate](#allocate)|Alloue un bloc de mémoire.|
+|[libérer](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<allocators>
+**En-tête :**\<allocators>
 
 **Espace de noms :** stdext
 
-## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread::allocate
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread :: Allocate
 
 Alloue un bloc de mémoire.
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 La fonction membre retourne le résultat d’un appel à `cache::allocate(count)` sur l’objet cache appartenant au thread actuel. Si aucun objet cache n’a été alloué pour le thread actuel, elle commence par en allouer un.
 
-## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::dallocate
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread ::d eallocate
 
 Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.
 
@@ -84,14 +84,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
 |*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre appelle `deallocate` sur l’objet cache appartenant au thread actuel. Si aucun objet cache n’a été alloué pour le thread actuel, elle commence par en allouer un.
 
-## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread::égales
+## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread :: est égal à
 
 Compare l'égalité de deux caches.
 
@@ -108,10 +108,10 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**faux** si aucun objet de cache n’a été attribué pour cet objet ou pour *Autre* dans le thread actuel. Sinon, elle retourne le résultat de l’application de `operator==` aux deux objets caches.
+**`false`** Si aucun objet cache n’a été alloué pour cet objet ou pour d' *autres* dans le thread actuel. Sinon, elle retourne le résultat de l’application de `operator==` aux deux objets caches.
 
 ### <a name="remarks"></a>Notes
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<les allocataires>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

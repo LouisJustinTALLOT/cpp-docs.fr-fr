@@ -45,12 +45,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 41007e08884da6ccac09c7dc98cef12381e4b45a
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506778"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232610"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -81,7 +81,7 @@ long double atan2( long double y, long double x );  // C++ only
 *x*, *y*<br/>
 N’importe quels nombres.
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 **atan** retourne l’arc tangente de *x* dans la plage-π/2 à π/2 radians. **atan2** retourne l’arc tangente de *y* / *x* dans la plage-π à π radians. Si *x* est égal à 0, **atan** retourne 0. Si les deux paramètres de **atan2** sont 0, la fonction retourne 0. Tous les résultats sont en radians.
 
@@ -91,17 +91,17 @@ N’importe quels nombres.
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|aucun|**_DOMAIN**|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction **atan** calcule l’arc tangente (fonction tangente inverse) de *x*. **atan2** calcule l’arc tangente de *y* / *x* (si *x* est égal à 0, **atan2** retourne π/2 Si *y* est positif,-π/2 Si *y* est négatif, ou 0 si *y* est égal à 0.)
 
 **atan** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **atan** et **atan2** qui acceptent des arguments **float** ou **long** **double** . Dans un programme C, **atan** et **atan2** prennent toujours des arguments **double** et retournent un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **atan** et **atan2** qui acceptent **`float`** des **`long double`** arguments ou. Dans un programme C, **atan** et **atan2** prennent toujours **`double`** des arguments et retournent un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|

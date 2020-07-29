@@ -1,17 +1,17 @@
 ---
-title: noncreatable (C++ attribut com)
+title: noncreatable (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c5d51d7c5628a875f036b4e48b03b317490b37ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514568"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224394"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -25,11 +25,11 @@ Définit un objet qui ne peut pas être instancié par lui-même.
 
 ## <a name="remarks"></a>Notes
 
-L' C++ attribut noncreatable a les mêmes fonctionnalités que l’attribut MIDL non [pouvant être créé](/windows/win32/Midl/noncreatable) et est transmis automatiquement au généré. Fichier IDL par le compilateur.
+L’attribut C++ non **pouvant être créé** a les mêmes fonctionnalités que l’attribut MIDL [pouvant être créé](/windows/win32/Midl/noncreatable) et est transmis automatiquement au généré. Fichier IDL par le compilateur.
 
 Lorsque cet attribut est utilisé dans un projet qui utilise ATL, le comportement de l’attribut change. Outre le comportement ci-dessus, l’attribut injecte également la macro [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . Cette macro indique à ATL que l’objet ne peut pas être créé en externe.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // cpp_attr_ref_noncreatable.cpp
@@ -49,16 +49,16 @@ class CMyClass : public A
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**class**, **struct**|
-|**Renouvelable**|Non|
+|**S’applique à**|**`class`**, **`struct`**|
+|**Repeatable Read**|Non|
 |**Attributs requis**|**coclasse**|
-|**Attributs non valides**|Aucun|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

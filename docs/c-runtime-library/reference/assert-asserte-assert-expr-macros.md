@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-ms.openlocfilehash: 26a1439e4de8824edd11af1afd455d2b2c31c088
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d07fbe5de7afdc62f952727660447c5e4f0b78aa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443078"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232636"
 ---
 # <a name="_assert-_asserte-_assert_expr-macros"></a>_ASSERT, _ASSERTE, _ASSERT_EXPR (macros)
 
@@ -60,7 +60,7 @@ Large chaîne à afficher dans le cadre du rapport.
 
 Les macros **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** fournissent une application avec un mécanisme propre et simple pour vérifier les hypothèses pendant le processus de débogage. Elles sont très flexibles, car vous n’avez pas besoin de les placer entre des instructions `#ifdef` pour les empêcher d’être appelées dans une version commerciale d’une application. Cette flexibilité s’obtient grâce à la macro [_DEBUG](../../c-runtime-library/debug.md) . **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** sont disponibles uniquement quand **_DEBUG** est défini au moment de la compilation. Lorsque **_DEBUG** n’est pas défini, les appels à ces macros sont supprimés lors du prétraitement.
 
-**_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** évaluent leur argument *booleanExpression* et, lorsque le résultat est **false** (0), il affiche un message de diagnostic et appelle [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) pour générer un rapport de débogage. La macro **_ASSERT** imprime un message de diagnostic simple, **_ASSERTE** contient une représentation sous forme de chaîne de l’expression qui a échoué dans le message, et **_ASSERT_EXPR** contient la chaîne de *message* dans le message de diagnostic. Ces macros ne font rien lorsque *booleanExpression* a une valeur différente de zéro.
+**_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** évaluent leur argument *booleanExpression* et, lorsque le résultat est **`false`** (0), il affiche un message de diagnostic et appelle [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) pour générer un rapport de débogage. La macro **_ASSERT** imprime un message de diagnostic simple, **_ASSERTE** contient une représentation sous forme de chaîne de l’expression qui a échoué dans le message, et **_ASSERT_EXPR** contient la chaîne de *message* dans le message de diagnostic. Ces macros ne font rien lorsque *booleanExpression* a une valeur différente de zéro.
 
 **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** appeler **_CrtDbgReportW**, ce qui entraîne une sortie en caractères larges. **_ASSERTE** imprime correctement les caractères Unicode dans *booleanExpression* et **_ASSERT_EXPR** affiche les caractères Unicode dans le *message*.
 
@@ -78,9 +78,9 @@ Lorsque la destination est une fenêtre de message de débogage et que l’utili
 
 Pour plus d’informations sur le processus de création de rapports, consultez la fonction [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) . Pour plus d’informations sur la résolution des échecs d’assertion et l’utilisation de ces macros comme mécanisme de gestion des erreurs de débogage consultez [Utilisation de macros pour la vérification et la création de rapports](/visualstudio/debugger/macros-for-reporting).
 
-Outre les macros **_ASSERT** , la macro [Assert](assert-macro-assert-wassert.md) peut être utilisée pour vérifier la logique du programme. Cette macro est disponible dans les versions Debug et Release des bibliothèques. Les macros de débogage [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) sont également disponibles pour générer un rapport de débogage, mais elles n’évaluent pas d’expression. Les macros **_RPT** génèrent un rapport simple. Les macros **_RPTF** incluent le fichier source et le numéro de ligne où la macro de rapport a été appelée dans le rapport généré. Les versions à caractères larges de ces macros sont disponibles ( **_RPTW**, **_RPTFW**). Les versions à caractères larges sont identiques aux versions à caractères étroits, sauf que des chaînes de caractères sont utilisées pour tous les paramètres de chaînes et la sortie.
+Outre les macros **_ASSERT** , la macro [Assert](assert-macro-assert-wassert.md) peut être utilisée pour vérifier la logique du programme. Cette macro est disponible dans les versions Debug et Release des bibliothèques. Les macros de débogage [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) sont également disponibles pour générer un rapport de débogage, mais elles n’évaluent pas d’expression. Les macros **_RPT** génèrent un rapport simple. Les macros **_RPTF** incluent le fichier source et le numéro de ligne où la macro de rapport a été appelée dans le rapport généré. Les versions à caractères larges de ces macros sont disponibles (**_RPTW**, **_RPTFW**). Les versions à caractères larges sont identiques aux versions à caractères étroits, sauf que des chaînes de caractères sont utilisées pour tous les paramètres de chaînes et la sortie.
 
-Bien que **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** soient des macros et qu’elles soient disponibles en incluant \<CRTDBG. h >, l’application doit établir une liaison avec une version Debug de la bibliothèque Runtime C lorsque **_DEBUG** est définie, car ces macros appellent d’autres fonctions d’exécution.
+Bien que **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** soient des macros et qu’elles soient disponibles en incluant \<crtdbg.h> , l’application doit établir une liaison avec une version debug de la bibliothèque Runtime C quand **_DEBUG** est définie, car ces macros appellent d’autres fonctions d’exécution.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -90,7 +90,7 @@ Bien que **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** soient des macros et qu�
 
 ## <a name="example"></a>Exemple
 
-Dans ce programme, des appels sont effectués au **_ASSERT** et **_ASSERTE** macros pour tester la condition `string1 == string2`. Si la condition échoue, ces macros affichent un message de diagnostic. Le groupe de macros **_RPT** et **_RPTF** est également testé dans ce programme, comme alternative à la fonction **printf** .
+Dans ce programme, des appels sont effectués au **_ASSERT** et **_ASSERTE** macros pour tester la condition `string1 == string2` . Si la condition échoue, ces macros affichent un message de diagnostic. Le groupe de macros **_RPT** et **_RPTF** est également testé dans ce programme, comme alternative à la fonction **printf** .
 
 ```C
 // crt_ASSERT_macro.c
@@ -167,5 +167,5 @@ crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2
 ## <a name="see-also"></a>Voir aussi
 
 [Routines de débogage](../../c-runtime-library/debug-routines.md)<br/>
-[assert (macro), _assert, _wassert](assert-macro-assert-wassert.md)<br/>
-[_RPT, _RPTF, _RPTW, _RPTFW, macros](rpt-rptf-rptw-rptfw-macros.md)<br/>
+[Macro Assert, _assert, _wassert](assert-macro-assert-wassert.md)<br/>
+[_RPT, _RPTF, _RPTW, _RPTFW macros](rpt-rptf-rptw-rptfw-macros.md)<br/>

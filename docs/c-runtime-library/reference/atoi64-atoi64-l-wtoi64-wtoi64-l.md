@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232558"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -86,7 +86,7 @@ __int64 _wtoi64_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne à convertir.
 
 *locale*<br/>
@@ -94,13 +94,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne la valeur **__int64** produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0 pour **_atoi64** si l’entrée ne peut pas être convertie en valeur de ce type.
+Chaque fonction retourne la **`__int64`** valeur produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0 pour **_atoi64** si l’entrée ne peut pas être convertie en valeur de ce type.
 
 Dans le cas d’un dépassement de capacité avec de grandes valeurs intégrales positives, **_atoi64** retourne **I64_MAX** et **I64_MIN** dans le cas d’un dépassement de capacité avec de grandes valeurs intégrales négatives.
 
 Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions convertissent une chaîne de caractères en une valeur entière 64 bits.
 
@@ -132,7 +132,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |**_atoi64**, **_atoi64_l**|\<stdlib.h>|
 |**_wtoi64**, **_wtoi64_l**|\<stdlib.h> ou \<wchar.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide des fonctions **_atoi64** .
 

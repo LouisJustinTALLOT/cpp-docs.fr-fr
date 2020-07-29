@@ -27,12 +27,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: 4e699920f37139be40542ba91b3740cd9edef148
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 30d92975d1a3971d29b1758dc23d3a84372288c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917516"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232506"
 ---
 # <a name="malloc"></a>malloc
 
@@ -53,9 +53,9 @@ Octets à allouer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**malloc** retourne un pointeur void vers l’espace alloué, ou **null** si la mémoire disponible est insuffisante. Pour retourner un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour. L’espace de stockage désigné par la valeur de retour est obligatoirement correctement aligné pour le stockage de tout type d’objet dont la spécification d’alignement est inférieure ou égale à celle de l’alignement fondamental. (Dans Visual C++, l’alignement fondamental est l’alignement requis pour un **double**, ou 8 octets. Dans le code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Utilisez [_aligned_malloc](aligned-malloc.md) pour allouer du stockage pour les objets qui ont une exigence d’alignement plus grande (par exemple, les types SSE [__m128](../../cpp/m128.md) et **__m256**, ainsi que `__declspec(align( n ))` les types déclarés à l’aide de où **n** est supérieur à 8). Si la *taille* est égale à 0, **malloc** alloue un élément de longueur zéro dans le tas et retourne un pointeur valide vers cet élément. Vérifiez toujours le retour de **malloc**, même si la quantité de mémoire demandée est faible.
+**malloc** retourne un pointeur void vers l’espace alloué, ou **null** si la mémoire disponible est insuffisante. Pour retourner un pointeur vers un type autre que **`void`** , utilisez un cast de type sur la valeur de retour. L’espace de stockage désigné par la valeur de retour est obligatoirement correctement aligné pour le stockage de tout type d’objet dont la spécification d’alignement est inférieure ou égale à celle de l’alignement fondamental. (Dans Visual C++, l’alignement fondamental est l’alignement requis pour un **`double`** , ou 8 octets. Dans le code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Utilisez [_aligned_malloc](aligned-malloc.md) pour allouer du stockage pour les objets qui ont une exigence d’alignement plus grande, par exemple, les types SSE [__m128](../../cpp/m128.md) et **`__m256`** , et les types qui sont déclarés à l’aide de `__declspec(align( n ))` où **n** est supérieur à 8. Si la *taille* est égale à 0, **malloc** alloue un élément de longueur zéro dans le tas et retourne un pointeur valide vers cet élément. Vérifiez toujours le retour de **malloc**, même si la quantité de mémoire demandée est faible.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **malloc** alloue un bloc de mémoire d’au moins octets de *taille* . Le bloc peut être supérieur à la *taille* en octets en raison de l’espace requis pour les informations d’alignement et de maintenance.
 
@@ -76,11 +76,11 @@ Le code de démarrage utilise **malloc** pour allouer le stockage pour les varia
 |[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
 |[fread](fread.md)|[définit](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-La fonction C++ [_set_new_mode](set-new-mode.md) définit le mode de nouveau gestionnaire pour **malloc**. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l’opérateur **New** lorsqu’il échoue pour la même raison. Pour remplacer la valeur par défaut, `_set_new_mode(1)` appelez au début de votre programme ou liez-la à NEWMODE. OBJ (consultez [options de liaison](../../c-runtime-library/link-options.md)).
+La fonction C++ [_set_new_mode](set-new-mode.md) définit le mode de nouveau gestionnaire pour **malloc**. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l' **`new`** opérateur quand il échoue pour la même raison. Pour remplacer la valeur par défaut, appelez au `_set_new_mode(1)` début de votre programme ou liez-la à NEWMODE. OBJ (consultez [options de liaison](../../c-runtime-library/link-options.md)).
 
 Lorsque l’application est liée à une version de débogage des bibliothèques Runtime C, **malloc** se résout en [_malloc_dbg](malloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Détails du tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**malloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`; Cela signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**malloc** est marqué `__declspec(noalias)` et `__declspec(restrict)` ; cela signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

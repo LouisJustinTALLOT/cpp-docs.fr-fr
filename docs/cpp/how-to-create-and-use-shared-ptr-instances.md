@@ -1,15 +1,15 @@
 ---
-title: 'Comment : créer et utiliser des instances shared_ptr'
+title: 'Procédure : Créer et utiliser des instances shared_ptr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 44d375f72cf409df1e67b72dd76e196051dacf93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245828"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87187957"
 ---
 # <a name="how-to-create-and-use-shared_ptr-instances"></a>Comment : créer et utiliser des instances shared_ptr
 
@@ -70,19 +70,19 @@ int main()
 }
 ```
 
-## <a name="example-1"></a>Exemple 1
+## <a name="example-1"></a>Exemple 1
 
-Quand c’est possible, utilisez la fonction [make_shared](../standard-library/memory-functions.md#make_shared) pour créer un objet `shared_ptr` quand la ressource mémoire est créée pour la première fois. `make_shared` est protégé contre les exceptions. Elle utilise le même appel pour allouer de la mémoire pour le bloc de contrôle et pour la ressource, ce qui réduit la charge liées à la construction. Si vous n’utilisez pas `make_shared`, vous devez utiliser une expression `new` explicite pour créer l’objet avant de le passer au constructeur `shared_ptr`. L'exemple suivant indique différentes façons de déclarer et d'initialiser `shared_ptr` avec un nouvel objet.
+Quand c’est possible, utilisez la fonction [make_shared](../standard-library/memory-functions.md#make_shared) pour créer un objet `shared_ptr` quand la ressource mémoire est créée pour la première fois. `make_shared` est protégé contre les exceptions. Elle utilise le même appel pour allouer de la mémoire pour le bloc de contrôle et pour la ressource, ce qui réduit la charge liées à la construction. Si vous n’utilisez pas `make_shared` , vous devez utiliser une expression explicite **`new`** pour créer l’objet avant de le passer au `shared_ptr` constructeur. L'exemple suivant indique différentes façons de déclarer et d'initialiser `shared_ptr` avec un nouvel objet.
 
 [!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
-## <a name="example-2"></a>Exemple 2
+## <a name="example-2"></a>Exemple 2
 
 L'exemple suivant montre comment déclarer et initialiser les instances `shared_ptr` qui prennent en charge la propriété partagée d'un objet qui a déjà été alloué par un autre `shared_ptr`. Supposons que `sp2` est un `shared_ptr` initialisé.
 
 [!code-cpp[stl_smart_pointers#2](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example-3"></a>Exemple 3
+## <a name="example-3"></a>Exemple 3
 
 `shared_ptr` est également utile dans les conteneurs de la bibliothèque standard C++ quand vous utilisez des algorithmes qui copient des éléments. Vous pouvez encapsuler des éléments dans un `shared_ptr`, puis le copier dans d'autres conteneurs à condition que la mémoire sous-jacente soit valide tant que cela est nécessaire, et pas plus longtemps. L'exemple suivant montre comment utiliser les algorithmes `remove_copy_if` sur des instances `shared_ptr` au sein d'un vecteur.
 
@@ -90,7 +90,7 @@ L'exemple suivant montre comment déclarer et initialiser les instances `shared_
 
 ## <a name="example-4"></a>Exemple 4
 
-Utilisez `dynamic_pointer_cast`, `static_pointer_cast` et `const_pointer_cast`, pour caster un `shared_ptr`. Ces fonctions sont semblables aux opérateurs `dynamic_cast`, `static_cast` et `const_cast`. L'exemple suivant indique comment tester le type dérivé de chaque élément dans un vecteur de `shared_ptr` de classes de base, puis copier les éléments et afficher les informations les concernant.
+Utilisez `dynamic_pointer_cast`, `static_pointer_cast` et `const_pointer_cast`, pour caster un `shared_ptr`. Ces fonctions ressemblent **`dynamic_cast`** aux **`static_cast`** opérateurs, et **`const_cast`** . L'exemple suivant indique comment tester le type dérivé de chaque élément dans un vecteur de `shared_ptr` de classes de base, puis copier les éléments et afficher les informations les concernant.
 
 [!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
@@ -118,4 +118,4 @@ L'exemple suivant montre comment `shared_ptr` surcharge différents opérateurs 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Pointeurs intelligents (C++ moderne)](smart-pointers-modern-cpp.md)
+[Pointeurs intelligents (Modern C++)](smart-pointers-modern-cpp.md)

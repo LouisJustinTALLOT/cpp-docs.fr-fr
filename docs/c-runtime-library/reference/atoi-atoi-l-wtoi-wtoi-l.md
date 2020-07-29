@@ -49,12 +49,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b8be8af9fc56eea0011e5b07c1573dfe848b6c7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 49e8569ceec005680f97faa9bc64783a097db36a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919866"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232571"
 ---
 # <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -81,7 +81,7 @@ int _wtoi_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne à convertir.
 
 *locale*<br/>
@@ -89,11 +89,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne la valeur **int** produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0 pour **atoi** et **_wtoi**, si l’entrée ne peut pas être convertie en valeur de ce type.
+Chaque fonction retourne la **`int`** valeur produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0 pour **atoi** et **_wtoi**, si l’entrée ne peut pas être convertie en valeur de ce type.
 
 Dans le cas d’un dépassement de capacité avec de grandes valeurs intégrales négatives, **LONG_MIN** est retourné. **atoi** et **_wtoi** retournent **INT_MAX** et **INT_MIN** dans ces conditions. Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions convertissent une chaîne de caractères en une valeur entière (**atoi** et **_wtoi**). La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère Null ('\0' ou L'\0') terminant la chaîne.
 
@@ -121,7 +121,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |**atoi**|\<stdlib.h>|
 |**_atoi_l**, **_wtoi** **_wtoi_l**|\<stdlib.h> ou \<wchar.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide des fonctions **atoi** .
 

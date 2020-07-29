@@ -27,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951945"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232467"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -75,10 +75,10 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Pointeur désignant la mémoire tampon.
 
-*c*<br/>
+*secteur*<br/>
 Caractère à rechercher.
 
 *count*<br/>
@@ -90,18 +90,18 @@ En cas de réussite, retourne un pointeur vers le premier emplacement de *c* dan
 
 ## <a name="remarks"></a>Notes
 
-`memchr`et `wmemchr` recherchez la première occurrence de *c* dans les *premiers caractères de* la *mémoire tampon*. Il s’arrête lorsqu’il trouve *c* ou lorsqu’il a vérifié les *premiers caractères.*
+`memchr`et `wmemchr` recherchez la première occurrence de *c* dans les premiers caractères *count* de la *mémoire tampon*. Il s’arrête lorsqu’il trouve *c* ou lorsqu’il a vérifié les *premiers caractères.*
 
-En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. Les \_surcharges\_\_correctes\_de la macro CRT const sont définies si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les C++ deux surcharges C++dans, \_\_définissez le retour de symbole const.
+En C, ces fonctions acceptent un **`const`** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **`const`** retourne un pointeur vers **`const`** ; la version qui accepte un pointeur vers non- **`const`** retourne un pointeur vers non- **`const`** . Les \_ \_ \_ surcharges correctes de la macro CRT const sont \_ définies si les **`const`** versions et non- **`const`** de ces fonctions sont disponibles. Si vous avez besoin du non- **`const`** comportement pour les deux surcharges c++ en c++, définissez le retour de symbole \_ const \_ .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |`memchr`|\<memory.h> ou \<string.h>|
 |`wmemchr`|\<wchar.h>|
 
-Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -138,7 +138,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 String to be searched:

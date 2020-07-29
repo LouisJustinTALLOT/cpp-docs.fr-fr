@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b18479e50d5b35c8de3dfd11eb34d0d21d45f223
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951932"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232454"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -69,7 +69,7 @@ Nombre de caractères à comparer. (Compare les octets pour **memcmp**, les cara
 
 La valeur de retour indique la relation entre les mémoires tampons.
 
-|Valeur de retour|Relation des premiers caractères *Count* de buf1 et buf2|
+|Valeur retournée|Relation des premiers caractères *Count* de buf1 et buf2|
 |------------------|---------------------------------------------------------------|
 |< 0|*Buffer1* inférieur à *buffer2*|
 |0|*Buffer1* identique à *buffer2*|
@@ -77,9 +77,9 @@ La valeur de retour indique la relation entre les mémoires tampons.
 
 ## <a name="remarks"></a>Notes
 
-Compare les premiers caractères *Count* de *Buffer1* et *buffer2* et retourne une valeur qui indique leur relation. Le signe d’une valeur de retour non Nulle est le signe de la différence entre la première paire de valeurs différente dans les mémoires tampons. Les valeurs sont interprétées comme **unsigned** **char** pour **memcmp**et comme **wchar_t** pour **wmemcmp**.
+Compare les premiers caractères *Count* de *Buffer1* et *buffer2* et retourne une valeur qui indique leur relation. Le signe d’une valeur de retour non Nulle est le signe de la différence entre la première paire de valeurs différente dans les mémoires tampons. Les valeurs sont interprétées comme **`unsigned char`** pour **memcmp**et comme **`wchar_t`** pour **wmemcmp**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

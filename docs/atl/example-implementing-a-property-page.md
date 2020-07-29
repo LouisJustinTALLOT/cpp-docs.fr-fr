@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 0b2448e66e3b86e3295cd4b318a268a113f6058b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319581"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224355"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemple : implémentation d’une page de propriétés
 
@@ -51,9 +51,9 @@ Commencez par créer un projet ATL pour un serveur DLL appelé `ATLPages7`. Util
 
 |Élément|Valeur|
 |----------|-----------|
-|Intitulé|TextDocument|
+|Titre|TextDocument|
 |Chaîne doc|VCUE TextDocument Properties|
-|Helpfile|*\<>vierge*|
+|Helpfile|*\<blank>*|
 
 Les valeurs que vous définissez sur cette page de l’Assistant sont envoyées au conteneur de page de propriétés lorsqu’il appelle `IPropertyPage::GetPageInfo`. Ce qu’il advient des chaînes après cette opération dépend du conteneur, mais en général, elles sont utilisées pour identifier votre page pour l’utilisateur. Le titre s’affiche généralement dans un onglet au-dessus de votre page, et la chaîne doc peut être affichée dans une barre d’état ou info-bulle (bien que le frame de propriété standard n’utilise pas cette chaîne du tout).
 
@@ -90,7 +90,7 @@ Maintenant, ajoutez deux instructions `#import` à DocProperties.h afin que le c
 
 [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]
 
-Vous devez également faire référence à la classe de base `IPropertyPageImpl` ; ajoutez le **typedef** suivant à la classe `CDocProperties` :
+Vous devez également faire référence à la `IPropertyPageImpl` classe de base. Ajoutez le code suivant **`typedef`** à la `CDocProperties` classe :
 
 [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]
 

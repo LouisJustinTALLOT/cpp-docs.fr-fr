@@ -34,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: a200aa6e511ab83866fbf1df2beabb827c611c46
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919621"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232649"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -69,19 +69,19 @@ Les fonctions **asinh** retournent le sinus hyperbolique inverse (arc sinus hype
 
 |Entrée|Exception SEH|**_matherr** Titre|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|Aucun|Aucun|
+|± QNAN, IND, INF|aucun|aucun|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Quand vous utilisez C++, vous pouvez appeler des surcharges de **asinh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **asinh** accepte et retourne toujours la valeur **double**.
+Quand vous utilisez C++, vous pouvez appeler des surcharges de **asinh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **asinh** accepte et retourne toujours **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C requis|En-tête C++ requis|
+|Fonction|En-tête C requis|En-tête C++ requis|
 |--------------|--------------|------------------|
-|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath> ou \<Math. h<|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath>ou \< Math. h<|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

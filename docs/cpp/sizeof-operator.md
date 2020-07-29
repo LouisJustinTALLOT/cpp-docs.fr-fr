@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: c9ae581b1b3bea522f2c1557b8be44ee1f32eef1
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 13e181bf84e359d433fbe951b1aa69320a1f0013
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032289"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186293"
 ---
 # <a name="sizeof-operator"></a>sizeof, opérateur
 
-Donne la taille de son opéra en ce qui concerne la taille de **l’omble**de type char .
+Produit la taille de son opérande par rapport à la taille du type **`char`** .
 
 > [!NOTE]
-> Pour plus `sizeof ...` d’informations sur l’opérateur, voir [Ellipsis et modèles variadic](../cpp/ellipses-and-variadic-templates.md).
+> Pour plus d’informations sur l' `sizeof ...` opérateur, consultez les [points de suspension et les modèles variadiques](../cpp/ellipses-and-variadic-templates.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,15 +29,15 @@ sizeof  ( type-name )
 
 ## <a name="remarks"></a>Notes
 
-Le résultat de la **taille de l’opérateur** est de type `size_t`, un type intégral défini dans le fichier \<incluent stddef.h>. Cet opérateur vous permet d'éviter de spécifier les tailles de données dépendantes de l'ordinateur dans vos programmes.
+Le résultat de l' **`sizeof`** opérateur est de type `size_t` , un type intégral défini dans le fichier include \<stddef.h> . Cet opérateur vous permet d'éviter de spécifier les tailles de données dépendantes de l'ordinateur dans vos programmes.
 
-L’opérande à **la taille peut** être l’une des suivantes:
+L’opérande de **`sizeof`** peut être l’un des suivants :
 
-- Un nom de type. Pour utiliser **la taille d’un** nom de type, le nom doit être inclus entre parenthèses.
+- Un nom de type. Pour utiliser **`sizeof`** avec un nom de type, le nom doit être placé entre parenthèses.
 
-- Expression. Lorsqu’il est utilisé avec une expression, **la taille peut** être spécifiée avec ou sans les parenthèses. L'expression n'est pas évaluée.
+- Expression. En cas d’utilisation avec une expression, **`sizeof`** peut être spécifié avec ou sans parenthèses. L'expression n'est pas évaluée.
 
-Lorsque la **taille de l’opérateur** est appliquée à un objet de type **char,** il donne 1. Lorsque la **taille de l’opérateur** est appliquée à un tableau, il donne le nombre total d’octets dans ce tableau, et non la taille du pointeur représenté par l’identifiant de tableau. Pour obtenir la taille du pointeur représenté par l’identifiant de tableau, passez-le comme paramètre à une fonction qui utilise **la taille de**. Par exemple :
+Lorsque l' **`sizeof`** opérateur est appliqué à un objet de type **`char`** , il produit 1. Lorsque l' **`sizeof`** opérateur est appliqué à un tableau, il produit le nombre total d’octets dans ce tableau, et non la taille du pointeur représenté par l’identificateur de tableau. Pour obtenir la taille du pointeur représenté par l’identificateur de tableau, transmettez-le en tant que paramètre à une fonction qui utilise **`sizeof`** . Par exemple :
 
 ## <a name="example"></a>Exemple
 
@@ -71,19 +71,19 @@ The length of Hello, world! is: 14
 The size of the pointer is 4
 ```
 
-Lorsque la **taille de l’opérateur** est appliquée à une **classe,** **struct**, ou type **de syndicat,** le résultat est le nombre d’octets dans un objet de ce type, plus tout rembourrage ajouté pour aligner les membres sur les limites des mots. Le résultat ne correspond pas forcément à la taille calculée en additionnant les exigences en matière de stockage des membres individuels. L’option de compilation [/Zp](../build/reference/zp-struct-member-alignment.md) et le pragma [pack](../preprocessor/pack.md) affectent les limites d’alignement pour les membres.
+Lorsque l' **`sizeof`** opérateur est appliqué à un **`class`** **`struct`** type, ou **`union`** , le résultat est le nombre d’octets dans un objet de ce type, plus tout remplissage ajouté pour aligner les membres sur les limites de mots. Le résultat ne correspond pas forcément à la taille calculée en additionnant les exigences en matière de stockage des membres individuels. L’option de compilateur [/ZP](../build/reference/zp-struct-member-alignment.md) et le pragma [Pack](../preprocessor/pack.md) affectent les limites d’alignement pour les membres.
 
-La **taille de l’opérateur** ne donne jamais 0, même pour une classe vide.
+L' **`sizeof`** opérateur ne génère jamais la valeur 0, même pour une classe vide.
 
-La **taille de l’opérateur** ne peut pas être utilisée avec les opérands suivants :
+L' **`sizeof`** opérateur ne peut pas être utilisé avec les opérandes suivants :
 
-- Fonctions. (Toutefois, **la taille peut** être appliquée aux pointeurs aux fonctions.)
+- Fonctions. (Toutefois, **`sizeof`** peut être appliqué aux pointeurs vers des fonctions.)
 
 - Champ de bits.
 
 - Classes indéfinies.
 
-- Le type **vide**.
+- Type **`void`** .
 
 - Tableaux alloués de manière dynamique.
 
@@ -93,11 +93,11 @@ La **taille de l’opérateur** ne peut pas être utilisée avec les opérands s
 
 - Noms entre parenthèses de types incomplets.
 
-Lorsque la **taille de l’opérateur** est appliquée à une référence, le résultat est le même que si **la taille avait** été appliquée à l’objet lui-même.
+Lorsque l' **`sizeof`** opérateur est appliqué à une référence, le résultat est le même que si **`sizeof`** a été appliqué à l’objet lui-même.
 
-Si un tableau non dimensionné est le dernier élément d’une structure, la **taille de l’opérateur** retourne la taille de la structure sans le tableau.
+Si un tableau non dimensionné est le dernier élément d’une structure, l' **`sizeof`** opérateur retourne la taille de la structure sans le tableau.
 
-La **taille de l’opérateur** est souvent utilisée pour calculer le nombre d’éléments dans un tableau à l’aide d’une expression de la forme :
+L' **`sizeof`** opérateur est souvent utilisé pour calculer le nombre d’éléments dans un tableau à l’aide d’une expression de la forme suivante :
 
 ```cpp
 sizeof array / sizeof array[0]

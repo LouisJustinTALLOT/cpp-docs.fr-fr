@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 54e50da06fbe009184894edc60b6267e372aefc1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9502de7b12394277b01a18caca48a7e783efaf4e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915417"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232480"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
@@ -62,7 +62,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>Paramètres
 
 *WCHAR*<br/>
-Adresse d’un caractère élargi (type **wchar_t**).
+Adresse d’un caractère élargi (type **`wchar_t`** ).
 
 *mbchar*<br/>
 Adresse d'une séquence d'octets (un caractère multioctet).
@@ -77,7 +77,7 @@ Paramètres régionaux à utiliser.
 
 Si **mbchar** n’a pas la **valeur null** et que l’objet qui *mbchar* pointe vers forme un caractère multioctet valide, **mbtowc** retourne la longueur, en octets, du caractère multioctet. Si *mbchar* a la **valeur null** ou que l’objet vers lequel il pointe est un caractère null à caractères larges (L' \ 0 '), la fonction retourne 0. Si l’objet vers lequel pointe *mbchar* ne forme pas un caractère multioctet valide dans les premiers *caractères,* elle retourne-1.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **mbtowc** convertit le *nombre* ou moins d’octets pointés par *mbchar*, si *mbchar* n’est pas **null**, en un caractère élargi correspondant. **mbtowc** stocke le caractère élargi résultant à *WCHAR,* si *WCHAR* n’est pas **null**. **mbtowc** n’examine pas plus de **MB_CUR_MAX** octets. **mbtowc** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux ; **_mbtowc_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: c54490a5625bfa2f9ffc95d616c2d73a7acf98e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916081"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232428"
 ---
 # <a name="_putw"></a>_putw
 
@@ -63,9 +63,9 @@ Retourne la valeur écrite. Une valeur de retour de **EOF** peut indiquer une er
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_putw** écrit une valeur binaire de type **int** à la position actuelle du *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux et n’assume pas l’alignement spécial. **_putw** est principalement destiné à la compatibilité avec les bibliothèques précédentes. Des problèmes de portabilité peuvent survenir avec **_putw** car la taille d’un **int** et l’ordre des octets dans un **int** diffèrent entre les systèmes.
+La fonction **_putw** écrit une valeur binaire de type **`int`** à la position actuelle du *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux et n’assume pas l’alignement spécial. **_putw** est principalement destiné à la compatibilité avec les bibliothèques précédentes. Des problèmes de portabilité peuvent se produire avec **_putw** , car la taille d’un **`int`** et l’ordre des octets dans un **`int`** autre système.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -81,7 +81,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_putw.c

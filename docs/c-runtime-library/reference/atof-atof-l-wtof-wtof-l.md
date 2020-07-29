@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 5200b93a5745dfb8e9b31cd5663452b84cb3058a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909112"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232584"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -86,7 +86,7 @@ double _wtof_l(
 
 ## <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne à convertir.
 
 *locale*<br/>
@@ -94,11 +94,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne la valeur **double** produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0.0 si l’entrée ne peut pas être convertie en valeur de ce type.
+Chaque fonction retourne la **`double`** valeur produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0.0 si l’entrée ne peut pas être convertie en valeur de ce type.
 
 Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions convertissent une chaîne de caractères en valeur à virgule flottante double précision.
 
@@ -127,10 +127,10 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine(s)|En-tête requis|
 |------------------|---------------------|
-|**atof**, **_atof_l**|C : \<math.h> ou \<stdlib.h> C++ : \<cstdlib>, \<stdlib.h>, \<cmath> ou \<math.h>|
-|**_wtof**, **_wtof_l**|C : \<stdlib.h> ou \<wchar.h> C++ : \<cstdlib>, \<stdlib.h> ou \<wchar.h>|
+|**atof**, **_atof_l**|C : \<math.h> ou \<stdlib.h> C++ : \<cstdlib> , \<stdlib.h> \<cmath> ou\<math.h>|
+|**_wtof**, **_wtof_l**|C : \<stdlib.h> ou \<wchar.h> C++ : \<cstdlib> , \<stdlib.h> ou\<wchar.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide des fonctions **atof** et **_atof_l** .
 

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 38e79b547ad49c6f1c0f5a784d710838afdec388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916794"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232441"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -84,15 +84,15 @@ Retourne la valeur de *x*<sup>*y*</sup>. Aucun message d’erreur n’est imprim
 |*x* = = 0,0 et *y* = = 0,0|1|
 |*x* = = 0,0 et *y* < 0|INF|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **Pow** ne reconnaît pas les valeurs à virgule flottante intégrales supérieures à 2<sup>64</sup> (par exemple, 1.0 E100).
 
 **Pow** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ autorisant la surcharge, vous pouvez appeler l’une des différentes surcharges de **Pow**. Dans un programme C, **Pow** prend toujours deux valeurs **doubles** et retourne une valeur **double** .
+C++ autorisant la surcharge, vous pouvez appeler l’une des différentes surcharges de **Pow**. Dans un programme C, **Pow** accepte toujours deux **`double`** valeurs et retourne une **`double`** valeur.
 
-La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre des [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Pour éviter ce problème, effectuez un cast du premier paramètre en **double**, **float**ou **long** **double**.
+La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre des [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Pour éviter ce problème, effectuez un cast du premier paramètre en **`double`** , **`float`** ou **`long double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

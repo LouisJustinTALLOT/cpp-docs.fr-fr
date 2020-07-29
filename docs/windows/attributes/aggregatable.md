@@ -1,17 +1,17 @@
 ---
-title: agrégeables (C++ attribut com)
+title: agrégeables (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregatable
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: d929543f699dcd20471ff9a9b45f54119f82a40a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168523"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224485"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,15 +28,15 @@ Indique que la classe prend en charge l’agrégation.
 *value*<br/>
 Facultatif Paramètre pour indiquer quand l’objet COM peut être agrégé :
 
-- `never` l’objet COM ne peut pas être agrégé.
+- `never`L’objet COM ne peut pas être agrégé.
 
-- `allowed` l’objet COM peut être créé directement ou il peut être agrégé. Il s’agit de la valeur par défaut.
+- `allowed`L’objet COM peut être créé directement ou peut être agrégé. Il s’agit de la valeur par défaut.
 
-- `always` l’objet COM ne peut pas être créé directement et peut uniquement être agrégé. Lorsque vous appelez `CoCreateInstance` pour cet objet, vous devez spécifier l’interface de `IUnknown` de l’objet d’agrégation (le `IUnknown`de contrôle).
+- `always`L’objet COM ne peut pas être créé directement et peut uniquement être agrégé. Lorsque vous appelez `CoCreateInstance` pour cet objet, vous devez spécifier l’interface de l’objet d’agrégation `IUnknown` (le contrôle `IUnknown` ).
 
 ## <a name="remarks"></a>Notes
 
-L' **aggregatable** C++ attribut agrégeables a les mêmes fonctionnalités que l’attribut MIDL [agrégé](/windows/win32/Midl/aggregatable) . Cela signifie que le compilateur passera l’attribut pouvant être **agrégé** par le biais du fichier. idl généré.
+L’attribut C++ pouvant être **agrégé** a les mêmes fonctionnalités que l’attribut MIDL [agrégé](/windows/win32/Midl/aggregatable) . Cela signifie que le compilateur passera l’attribut pouvant être **agrégé** par le biais du fichier. idl généré.
 
 Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliqué, `vi_progid` et `coclass` sont également appliqués.
 
@@ -72,9 +72,9 @@ class CMyClass {};
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**|
-|**Renouvelable**|Non|
-|**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass`, `progid`ou `vi_progid`.|
+|**S’applique à**|**`class`**, **`struct`**|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass` , `progid` ou `vi_progid` .|
 |**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
@@ -83,5 +83,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agrégation](/windows/win32/com/aggregation)
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Agréger](/windows/win32/com/aggregation)

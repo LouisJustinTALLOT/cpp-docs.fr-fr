@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920063"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232597"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -69,18 +69,18 @@ Les fonctions **atanh** retournent la tangente hyperbolique inverse (arc tangent
 
 |Entrée|Exception SEH|**Supertherr** Titre|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|Aucun|Aucun|
-|*X* ≥ 1 ; *x* ≤-1|Aucun|Aucun|
+|± QNAN,IND|aucun|aucun|
+|*X* ≥ 1 ; *x* ≤-1|aucun|aucun|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **atanh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **atanh** prend toujours et retourne **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **atanh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **atanh** accepte et retourne toujours **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> ou \<math.h>|
 
