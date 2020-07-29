@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32d14650450d8047a5bc0e6cf7bb06788c9b3d81
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170577"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221755"
 ---
 # <a name="c-constant-expressions"></a>Expressions constantes C++
 
@@ -35,7 +35,7 @@ Les seuls opérandes autorisés dans les expressions constantes sont :
 
 - Valeurs déclarées comme const qui sont initialisées avec des expressions constantes
 
-- expressions **sizeof**
+- **`sizeof`** manifestations
 
 Les constantes non intégrales doivent être converties (explicitement ou implicitement) en types intégraux pour être autorisées dans une expression constante. Par conséquent, le code suivant est conforme :
 
@@ -44,7 +44,7 @@ const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-Les conversions explicites en types intégraux sont autorisées dans les expressions constantes ; tous les autres types et types dérivés sont illégaux, sauf lorsqu’ils sont utilisés comme opérandes de l’opérateur **sizeof** .
+Les conversions explicites en types intégraux sont autorisées dans les expressions constantes ; tous les autres types et types dérivés sont illégaux, sauf lorsqu’ils sont utilisés comme opérandes de l' **`sizeof`** opérateur.
 
 L'opérateur virgule et les opérateurs d'assignation de virgule ne peuvent pas être utilisés dans les expressions constantes.
 

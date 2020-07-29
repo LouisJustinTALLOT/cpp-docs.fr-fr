@@ -1,28 +1,28 @@
 ---
-title: Attributs typedef, enum, Union et struct (C++ com)
+title: Attributs typedef, enum, Union et struct (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: fdc380cdc207361a145862f87d809a4bcea01c27
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5e9eccd5e4464e92757d6dd78dd0f5187372ea3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214472"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222106"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Attributs Typedef, Enum, Union et Struct
 
-Les attributs suivants s’appliquent aux mots clés [typedef](../../cpp/aliases-and-typedefs-cpp.md), [struct](../../cpp/struct-cpp.md)et [enum](../../cpp/enumerations-cpp.md) C++ .
+Les attributs suivants s’appliquent aux mots clés [typedef](../../cpp/aliases-and-typedefs-cpp.md), [struct](../../cpp/struct-cpp.md)et [enum](../../cpp/enumerations-cpp.md) C++.
 
 ### <a name="typedef"></a>typedef
 
 |Attribut|Description|
 |---------------|-----------------|
-|[case](case-cpp.md)|Utilisé avec l’attribut [switch_type](switch-type.md) dans une **Union**.|
-|[custom](custom-cpp.md)|Vous permet de définir votre propre attribut.|
-|[export](export.md)|Entraîne le placement d’une structure de données dans le fichier. idl.|
+|[études](case-cpp.md)|Utilisé avec l’attribut [switch_type](switch-type.md) dans un **`union`** .|
+|[propre](custom-cpp.md)|Vous permet de définir votre propre attribut.|
+|[exporter](export.md)|Entraîne le placement d’une structure de données dans le fichier. idl.|
 |[first_is](first-is.md)|Spécifie l’index du premier élément de tableau à transmettre.|
 |[helpcontext](helpcontext.md)|Spécifie un ID de contexte qui permet à l’utilisateur d’afficher des informations sur cet élément dans le fichier d’aide.|
 |[helpfile](helpfile.md)|Définit le nom du fichier d’aide d’une bibliothèque de types.|
@@ -40,8 +40,8 @@ Les attributs suivants s’appliquent aux mots clés [typedef](../../cpp/aliases
 
 |Attribut|Description|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|Vous permet de définir votre propre attribut.|
-|[export](export.md)|Entraîne le placement d’une structure de données dans le fichier. idl.|
+|[propre](custom-cpp.md)|Vous permet de définir votre propre attribut.|
+|[exporter](export.md)|Entraîne le placement d’une structure de données dans le fichier. idl.|
 |[uuid](uuid-cpp-attributes.md)|Spécifie l’ID unique d’une classe ou d’une interface.|
 |[v1_enum](v1-enum.md)|Indique que le type énuméré spécifié doit être transmis en tant qu’entité 32 bits, au lieu de la valeur par défaut 16 bits.|
 
@@ -49,8 +49,8 @@ Les attributs suivants s’appliquent aux mots clés [typedef](../../cpp/aliases
 
 |Attribut|Description|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|Vous permet de définir votre propre attribut.|
-|[export](export.md)|Entraîne le placement d’une structure de données dans le fichier. idl.|
+|[propre](custom-cpp.md)|Vous permet de définir votre propre attribut.|
+|[exporter](export.md)|Entraîne le placement d’une structure de données dans le fichier. idl.|
 |[first_is](first-is.md)|Spécifie l’index du premier élément de tableau à transmettre.|
 |[last_is](last-is.md)|Spécifie l’index du dernier élément de tableau à transmettre.|
 |[length_is](length-is.md)|Spécifie le nombre d’éléments de tableau à transmettre.|
@@ -71,24 +71,24 @@ Les attributs suivants s’appliquent aux mots clés [typedef](../../cpp/aliases
 |Attribut|Description|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|Indique que la classe prend en charge l’agrégation.|
-|[aggregates](aggregates.md)|Indique qu’un contrôle agrège la classe cible.|
+|[agrégats](aggregates.md)|Indique qu’un contrôle agrège la classe cible.|
 |[appobject](appobject.md)|Identifie la coclasse sous la forme d’un objet d’application, qui est associé à une application. exe complète, et indique que les fonctions et les propriétés de la coclasse sont globalement disponibles dans cette bibliothèque de types.|
 |[coclasse](coclass.md)|Crée un contrôle ActiveX.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Ajoute une entrée d’interface à une table COM.|
 |[control](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
-|[custom](custom-cpp.md)|Vous permet de définir votre propre attribut.|
+|[propre](custom-cpp.md)|Vous permet de définir votre propre attribut.|
 |[db_column](db-column.md)|Lie une colonne spécifiée à l’ensemble de lignes.|
 |[db_command](db-command.md)|Crée une commande OLE DB.|
 |[db_param](db-param.md)|Associe la variable de membre spécifiée à un paramètre d’entrée ou de sortie et délimite la variable.|
 |[db_source](db-source.md)|Crée une connexion à une source de données.|
 |[db_table](db-table.md)|Ouvre une table OLE DB.|
-|[default](default-cpp.md)|Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.|
+|[valeurs](default-cpp.md)|Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.|
 |[defaultvtable](defaultvtable.md)|Définit une interface comme interface vtable par défaut pour un contrôle.|
 |[event_receiver](event-receiver.md)|Crée un récepteur d’événements.|
 |[event_source](event-source.md)|Crée une source d'événement.|
-|[export](export.md)|Entraîne le placement d’une structure de données dans le fichier. idl.|
+|[exporter](export.md)|Entraîne le placement d’une structure de données dans le fichier. idl.|
 |[first_is](first-is.md)|Spécifie l’index du premier élément de tableau à transmettre.|
-|[hidden](hidden.md)|Indique que l’élément existe mais qu’il ne doit pas être affiché dans un navigateur orienté utilisateur.|
+|[masquer](hidden.md)|Indique que l’élément existe mais qu’il ne doit pas être affiché dans un navigateur orienté utilisateur.|
 |[implements_category](implements-category.md)|Spécifie les catégories de composant implémentées pour la classe.|
 |[last_is](last-is.md)|Spécifie l’index du dernier élément de tableau à transmettre.|
 |[length_is](length-is.md)|Spécifie le nombre d’éléments de tableau à transmettre.|
@@ -96,7 +96,7 @@ Les attributs suivants s’appliquent aux mots clés [typedef](../../cpp/aliases
 |[requires_category](requires-category.md)|Spécifie les catégories de composants nécessaires de la classe cible.|
 |[size_is](size-is.md)|Spécifie la taille de la mémoire allouée aux pointeurs dimensionnés, aux pointeurs dimensionnés aux pointeurs dimensionnés et aux tableaux à une ou plusieurs dimensions.|
 |[source](source-cpp.md)|Sur une classe, spécifie les interfaces sources de l’objet COM pour les points de connexion. Sur une propriété ou une méthode, indique que le membre retourne un objet ou une variante qui est une source d’événements.|
-|[threading](threading-cpp.md)|Spécifie le modèle de thread pour un objet COM.|
+|[Threading](threading-cpp.md)|Spécifie le modèle de thread pour un objet COM.|
 |[unique](unique-cpp.md)|Spécifie un pointeur unique.|
 |[uuid](uuid-cpp-attributes.md)|Spécifie l’ID unique d’une classe ou d’une interface.|
 |[version](version-cpp.md)|Identifie une version particulière parmi plusieurs versions d’une classe.|

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], casting
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
-ms.openlocfilehash: eac274a0207be675b8d13532c3110c6e71bd55c9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 606e8b159bb7bdb7527d33a5211cb33a26913754
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190096"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221820"
 ---
 # <a name="casting-operators"></a>Opérateurs de casting
 
@@ -21,13 +21,13 @@ Il existe plusieurs opérateurs de cast spécifiques au langage C++. Ces opérat
 
 - [static_cast](../cpp/static-cast-operator.md) Utilisé pour la conversion des types des non polymorphes.
 
-- [const_cast](../cpp/const-cast-operator.md) Utilisé pour supprimer les attributs **const**, **volatile**et **__unaligned** .
+- [const_cast](../cpp/const-cast-operator.md) Utilisé pour supprimer les **`const`** **`volatile`** attributs, et **`__unaligned`** .
 
 - [reinterpret_cast](../cpp/reinterpret-cast-operator.md) Utilisé pour la réinterprétation simple de bits.
 
-- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) Utilisé dans C++/CLI pour produire du code MSIL vérifiable.
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) Utilisé en C++/CLI pour produire du code MSIL vérifiable.
 
-Utilisez **const_cast** et **reinterpret_cast** en dernier recours, car ces opérateurs présentent les mêmes dangers que les anciens casts de style. Ils sont néanmoins encore nécessaires pour remplacer complètement les casts de style ancien.
+Utilisez **`const_cast`** et **`reinterpret_cast`** , en dernier recours, puisque ces opérateurs présentent les mêmes dangers que les anciens casts de style. Ils sont néanmoins encore nécessaires pour remplacer complètement les casts de style ancien.
 
 ## <a name="see-also"></a>Voir aussi
 

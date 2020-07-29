@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 44b624995ed274212a2699cb457c91dfa4530f03
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a9e2c55da7278c50d43a63a4cce79d2a21f573c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370639"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233182"
 ---
 # <a name="geometric_distribution-class"></a>geometric_distribution, classe
 
@@ -66,11 +66,11 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType (IntType)*\
-Le type de résultat integer, par défaut à **int**. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
+*IntType*\
+Le type de résultat entier est par défaut **`int`** . Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md) .
 
-*Urng*\
-Le moteur de générateur de nombre aléatoire uniforme. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
+*GÉNÉRATEUR URNG*\
+Moteur de générateur de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Notes
 
@@ -91,7 +91,7 @@ La fonction membre `reset()` ignore toutes les valeurs mises en cache. Ainsi, le
 
 Les fonctions membres `operator()` retournent la valeur générée suivante d’après le moteur URNG, à partir du package de paramètres actuel ou spécifié.
 
-Pour plus d’informations sur les [ \< ](../standard-library/random.md)classes de distribution et leurs membres, voir>aléatoire .
+Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md) .
 
 Pour plus d’informations sur la loi du Khi-deux, consultez l’article de Wolfram MathWorld [Geometric Distribution](https://go.microsoft.com/fwlink/p/?linkid=400529).
 
@@ -205,11 +205,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<random>
+**En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution::geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution :: geometric_distribution
 
 Construit la distribution.
 
@@ -220,7 +220,7 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*P*\
+*p*\
 Paramètre de distribution `p`.
 
 *Parm*\
@@ -228,13 +228,13 @@ Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
-**Condition préalable :**`0.0 < p && p < 1.0`
+**Condition préalable :**`0.0 < p && p < 1.0`
 
 Le premier constructeur construit un objet dont la valeur `p` stockée contient la valeur *p*.
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::param-type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 
@@ -251,7 +251,7 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*P*\
+*p*\
 Paramètre de distribution `p`.
 
 *Oui*\
@@ -259,10 +259,10 @@ Instance `param_type` à comparer.
 
 ### <a name="remarks"></a>Notes
 
-**Condition préalable :**`0.0 < p && p < 1.0`
+**Condition préalable :**`0.0 < p && p < 1.0`
 
 Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<>aléatoires](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

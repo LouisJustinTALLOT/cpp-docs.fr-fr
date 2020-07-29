@@ -33,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941299"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221911"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -85,7 +85,7 @@ Seconde valeur.
 
 Retourne la différence positive entre *x* et *y*:
 
-|Valeur de retour|Scénario|
+|Valeur renvoyée|Scénario|
 |------------------|--------------|
 |x-y|Si x > y|
 |0|Si x <= y|
@@ -102,20 +102,20 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **FDIM** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **FDIM** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **FDIM** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **FDIM** accepte et retourne toujours un **`double`** .
 
-À l’exception de la gestion NaN, cette fonction est `fmax(x - y, 0)`équivalente à.
+À l’exception de la gestion NaN, cette fonction est équivalente à `fmax(x - y, 0)` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**fdim**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
+|**FDIM**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

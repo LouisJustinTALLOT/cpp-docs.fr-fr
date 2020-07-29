@@ -2,12 +2,12 @@
 title: Système de type (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: f4a6ea32681ad033b5db9451682c764f0a6d8959
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404624"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221547"
 ---
 # <a name="type-system-ccx"></a>Système de type (C++/CX)
 
@@ -39,7 +39,7 @@ La visibilité d'un type ou d'une méthode dans les métadonnées dépend des mo
 |-|-|
 |**Publié dans les métadonnées**|**Non publié dans les métadonnées**|
 |public|private|
-|protected|internal|
+|protected|interne|
 |protégé public|protégé privé|
 
 Vous pouvez utiliser l' **Explorateur d'objets** pour afficher le contenu des fichiers .winmd. Les composants Windows Runtime inclus avec Windows se trouvent dans le fichier Windows. winmd. Le fichier default. winmd contient les types fondamentaux utilisés dans C++/CX, et Platform. winmd contient des types supplémentaires de l’espace de noms Platform. Par défaut, ces trois fichiers. winmd sont inclus dans chaque projet C++ pour les applications plateforme Windows universelle.
@@ -63,7 +63,7 @@ Pour plus d’informations, consultez [espaces de noms et visibilité de type](.
 
 L’Windows Runtime définit les types fondamentaux suivants : UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, double, Char16, Boolean et String. C++/CX prend en charge les types numériques fondamentaux dans son espace de noms par défaut sous la forme UInt16, UInt32, UInt64, Int16, Int32, Int64, float32, float64 et char16. Les types Boolean et String sont également définis dans l'espace de noms Platform.
 
-C++/CX définit le UInt8, `unsigned char` qui est équivalent à, qui n’est pas pris en charge dans le Windows Runtime et ne peut pas être utilisé dans les API publiques.
+C++/CX définit le UInt8, **`unsigned char`** qui est équivalent à, qui n’est pas pris en charge dans le Windows Runtime et ne peut pas être utilisé dans les API publiques.
 
 Il est possible de rendre Nullable un type fondamental en l'encapsulant dans une [interface Platform::IBox](../cppcx/platform-ibox-interface.md) . Pour plus d'informations, consultez [Classes de valeur et structures de valeur](../cppcx/value-classes-and-structs-c-cx.md).
 
@@ -71,7 +71,7 @@ Pour plus d'informations sur les types fondamentaux, consultez [Types fondamenta
 
 ### <a name="strings"></a>Chaînes
 
-Une chaîne Windows Runtime est une séquence immuable de caractères UNICODE 16 bits. Une chaîne de Windows Runtime est projetée comme `Platform::String^` . Cette classe fournit des méthodes pour la construction, la manipulation, et la conversion des chaînes vers et à partir de `wchar_t`.
+Une chaîne Windows Runtime est une séquence immuable de caractères UNICODE 16 bits. Une chaîne de Windows Runtime est projetée comme `Platform::String^` . Cette classe fournit des méthodes pour la construction, la manipulation et la conversion de chaînes vers et à partir de **`wchar_t`** .
 
 Pour plus d'informations, consultez [Chaînes](../cppcx/strings-c-cx.md).
 
@@ -133,7 +133,7 @@ Une interface Windows Runtime définit un ensemble de propriétés, méthodes et
 
 Pour plus d'informations, consultez [Interfaces](../cppcx/interfaces-c-cx.md).
 
-### <a name="enums"></a>Enums
+### <a name="enums"></a>Énumérations
 
 Une classe enum dans Windows Runtime ressemble à une énumération délimitée en C++. Le type sous-jacent est int32 sauf si l'attribut [Flags] est appliqué, auquel cas le type sous-jacent est uint32.
 

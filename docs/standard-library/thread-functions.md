@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375839"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232857"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt;, fonctions
 
@@ -57,7 +57,7 @@ Objet [duration](../standard-library/duration-class.md) qui spécifie un interva
 
 ### <a name="remarks"></a>Notes
 
-La fonction bloque le fil d’appel pour au moins le temps spécifié par *Rel_time*. Cette fonction ne lève aucune exception.
+La fonction bloque le thread appelant pendant au moins le temps spécifié par *Rel_time*. Cette fonction ne lève aucune exception.
 
 ## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
@@ -79,9 +79,9 @@ Représente un point dans le temps.
 
 Cette fonction ne lève aucune exception.
 
-## <a name="swap"></a><a name="swap"></a>Swap
+## <a name="swap"></a><a name="swap"></a>échange
 
-Échange les états de deux objets **de fil.**
+Permute les états de deux objets `thread`.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -90,16 +90,16 @@ void swap(thread& Left, thread& Right) noexcept;
 ### <a name="parameters"></a>Paramètres
 
 *Gauche*\
-L’objet **de fil** gauche.
+Objet gauche `thread`.
 
 *Oui*\
-L’objet **de fil** droit.
+Objet droit `thread`.
 
 ### <a name="remarks"></a>Notes
 
 La fonction appelle `Left.swap(Right)`.
 
-## <a name="yield"></a><a name="yield"></a>Rendement
+## <a name="yield"></a><a name="yield"></a>génér
 
 Indique au système d’exploitation d’exécuter d’autres threads, même si le thread actuel continuerait normalement à s’exécuter.
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<>de fil](../standard-library/thread.md)
+[\<thread>](../standard-library/thread.md)

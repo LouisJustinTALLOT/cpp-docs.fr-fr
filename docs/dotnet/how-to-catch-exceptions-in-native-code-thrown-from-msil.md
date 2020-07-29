@@ -6,18 +6,18 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 23adb573a62e93933c487f611c05aed4c08494ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6f2de640a2427bb1ea65d099742967454ca625f6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988271"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221352"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Comment : intercepter des exceptions en code natif levées à partir de MSIL
 
-En code natif, vous pouvez intercepter C++ l’exception native à partir de MSIL.  Vous pouvez intercepter les exceptions CLR avec `__try` et `__except`.
+En code natif, vous pouvez intercepter l’exception C++ native à partir de MSIL.  Vous pouvez intercepter les exceptions CLR avec `__try` et **`__except`** .
 
-Pour plus d’informations, consultez [gestion structurée des exceptionsC++(C/)](../cpp/structured-exception-handling-c-cpp.md) et [meilleures pratiques modernes C++ pour les exceptions et la gestion des erreurs](../cpp/errors-and-exception-handling-modern-cpp.md).
+Pour plus d’informations, consultez [gestion structurée des exceptions (C/c++)](../cpp/structured-exception-handling-c-cpp.md) et [meilleures pratiques C++ modernes pour les exceptions et la gestion des erreurs](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="example"></a>Exemple
 

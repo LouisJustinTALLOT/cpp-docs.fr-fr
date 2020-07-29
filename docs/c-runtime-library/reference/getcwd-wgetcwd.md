@@ -40,12 +40,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 950f4f73912d7bab38363e41c61025d27380bef6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6fb32a593a969f93a934f251f38cd50960440b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915745"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221885"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -70,7 +70,7 @@ wchar_t *_wgetcwd(
 Emplacement de stockage pour le chemin.
 
 *MaxLen*\
-Longueur maximale du chemin d’accès en caractères : **char** pour **_getcwd** et **wchar_t** pour **_wgetcwd**.
+Longueur maximale du chemin d’accès en caractères : **`char`** pour **_getcwd** et **`wchar_t`** pour **_wgetcwd**.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -78,11 +78,11 @@ Retourne un pointeur vers la *mémoire tampon*. Une valeur de retour **null** in
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_getcwd** obtient le chemin d’accès complet du répertoire de travail actuel pour le lecteur par défaut et le stocke au niveau de la *mémoire tampon*. L’argument entier *MaxLen* spécifie la longueur maximale du chemin d’accès. Une erreur se produit si la longueur du chemin d’accès (y compris le caractère null de fin) dépasse *MaxLen*. L’argument de *mémoire tampon* peut avoir la **valeur null**; une mémoire tampon d’une taille d’au moins *MaxLen* (plus uniquement si nécessaire) est allouée automatiquement, à l’aide de **malloc**, pour stocker le chemin d’accès. Cette mémoire tampon peut être libérée ultérieurement en appelant **Free** et en lui passant le **_getcwd** valeur de retour (pointeur vers la mémoire tampon allouée).
 
-**_getcwd** retourne une chaîne qui représente le chemin d’accès du répertoire de travail actuel. Si le répertoire de travail actuel est la racine, la chaîne se termine par`\`une barre oblique inverse (). Si le répertoire de travail actuel est un répertoire autre que la racine, la chaîne se termine par le nom du répertoire, et non pas par une barre oblique inverse.
+**_getcwd** retourne une chaîne qui représente le chemin d’accès du répertoire de travail actuel. Si le répertoire de travail actuel est la racine, la chaîne se termine par une barre oblique inverse ( `\` ). Si le répertoire de travail actuel est un répertoire autre que la racine, la chaîne se termine par le nom du répertoire, et non pas par une barre oblique inverse.
 
 **_wgetcwd** est une version à caractères larges de **_getcwd**; l’argument de *mémoire tampon* et la valeur de retour de **_wgetcwd** sont des chaînes à caractères larges. dans le cas contraire, **_wgetcwd** et **_getcwd** se comportent de la même façon.
 

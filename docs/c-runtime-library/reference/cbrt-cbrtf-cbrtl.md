@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ace9421fa8f93f03b0b9ad7dd698474ec90fdf97
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912108"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221976"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -75,17 +75,17 @@ Les fonctions **CBRT** retournent la racine cubique de *x*.
 
 |Entrée|Exception SEH|**_matherr** Titre|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|Aucun|Aucun|
+|± ∞, QNAN, IND|aucun|aucun|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorise la surcharge, vous pouvez appeler des surcharges de **CBRT** qui acceptent des types **float** ou **long** **double** . Dans un programme C, **CBRT** accepte et retourne toujours la valeur **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **CBRT** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, **CBRT** accepte et retourne toujours **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**CBRT**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
 

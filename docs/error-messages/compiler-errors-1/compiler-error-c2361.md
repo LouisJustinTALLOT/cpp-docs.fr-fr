@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b95c6459c0ff093d22f3e754f2c7fd6564d2b296
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759891"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221196"
 ---
 # <a name="compiler-error-c2361"></a>Erreur du compilateur C2361
 
 l’initialisation de’identifier’est ignorée par l’étiquette’default'
 
-L’initialisation de `identifier` peut être ignorée dans une instruction `switch`. Vous ne pouvez pas sauter une déclaration avec un initialiseur, sauf si la déclaration est placée dans un bloc. (Sauf si elle est déclarée dans un bloc, la variable se trouve dans la portée jusqu’à la fin de l’instruction `switch`.)
+L’initialisation de `identifier` peut être ignorée dans une **`switch`** instruction. Vous ne pouvez pas sauter une déclaration avec un initialiseur, sauf si la déclaration est placée dans un bloc. (Sauf si elle est déclarée dans un bloc, la variable se trouve dans la portée jusqu’à la fin de l' **`switch`** instruction.)
 
 L’exemple suivant génère l’C2361 :
 

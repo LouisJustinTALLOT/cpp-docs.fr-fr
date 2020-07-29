@@ -4,30 +4,30 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: a42caaf07f6ec0c71f63d6a0df8a79fff6f737e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447306"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221443"
 ---
 # <a name="friend-assemblies-c"></a>Assemblys friend (C++)
 
-Pour les runtimes applicables, le *assemblys friend* fonctionnalité de langage rend les types qui sont à portée espace de noms ou portée globale dans un composant d’assembly accessible à un ou plusieurs assemblys clients ou .netmodule.
+Pour les runtimes applicables, la fonctionnalité de langage des *assemblys friend* rend les types situés au niveau de la portée espace de noms ou de la portée globale dans un composant d’assembly accessible à un ou plusieurs assemblys client ou. netmodule.
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
 **Remarques**
 
-(Cette fonctionnalité de langage ne prend pas en charge tous les runtimes.)
+(Cette fonctionnalité de langage n’est pas prise en charge dans tous les runtimes.)
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
 **Remarques**
 
-(Cette fonctionnalité de langage n'est pas pris en charge dans le Windows Runtime.)
+(Cette fonctionnalité de langage n’est pas prise en charge dans Windows Runtime.)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/ZW**
 
@@ -35,23 +35,23 @@ Option du compilateur : **/ZW**
 
 **Remarques**
 
-#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>Pour rendre les types au niveau de la portée espace de noms ou portée globale dans un composant d’assemblage accessibles à un assembly client ou un fichier .netmodule
+#### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>Pour créer des types au niveau de la portée espace de noms ou de la portée globale dans un composant d’assembly accessible à un assembly client ou un. netmodule
 
-1. Dans le composant, spécifiez un attribut d’assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>et passez le nom de l’assembly de client ou d’un fichier .netmodule qui accède à types au niveau de la portée espace de noms ou portée globale dans le composant.  Vous pouvez spécifier plusieurs assemblys clients ou .netmodule en spécifiant les attributs supplémentaires.
+1. Dans le composant, spécifiez un attribut d’assembly <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> et transmettez le nom de l’assembly client ou du. netmodule qui accédera aux types au niveau de la portée de l’espace de noms ou de la portée globale dans le composant.  Vous pouvez spécifier plusieurs assemblys client ou. netmodule en spécifiant des attributs supplémentaires.
 
-1. Dans l’assembly de client ou d’un fichier .netmodule, lorsque vous référencez l’assembly de composant à l’aide de `#using`, transmettez le `as_friend` attribut.  Si vous spécifiez le `as_friend` attribut d’assembly qui ne spécifie pas `InternalsVisibleToAttribute`, une exception runtime est levée si vous essayez d’accéder à un type à la portée espace de noms ou portée globale dans le composant.
+1. Dans l’assembly client ou. netmodule, lorsque vous référencez l’assembly de composant à l’aide de `#using` , transmettez l' **`as_friend`** attribut.  Si vous spécifiez l' **`as_friend`** attribut d’un assembly qui ne spécifie pas `InternalsVisibleToAttribute` , une exception Runtime est levée si vous essayez d’accéder à un type au niveau de la portée de l’espace de noms ou de la portée globale dans le composant.
 
-Une erreur de build se produit si l’assembly qui contient le <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribut n’est pas un nom fort, mais l’assembly client qui utilise le `as_friend` attribut n’existe.
+Une erreur de build se produit si l’assembly qui contient l' <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribut n’a pas de nom fort, mais que l’assembly client qui utilise l' **`as_friend`** attribut.
 
-Bien que les types au niveau de la portée espace de noms et portée globale peuvent être appelées pour un assembly client ou un fichier .netmodule, l’accessibilité des membres est toujours en vigueur.  Par exemple, vous ne pouvez pas accéder à un membre privé.
+Bien que les types au niveau de la portée de l’espace de noms et de la portée globale puissent être connus d’un assembly client ou. netmodule, l’accessibilité des membres est toujours en vigueur.  Par exemple, vous ne pouvez pas accéder à un membre privé.
 
-Accès à tous les types dans un assembly doit être accordé explicitement.  Par exemple, l’assembly C n’a pas accès à tous les types dans l’assembly A Si l’assembly C référence l’assembly B et assembly B a accès à tous les types dans l’assembly A.
+L’accès à tous les types dans un assembly doit être accordé explicitement.  Par exemple, l’assembly C n’a pas accès à tous les types de l’assembly A si l’assembly C fait référence à l’assembly B et que l’assembly B a accès à tous les types de l’assembly A.
 
-Pour plus d’informations sur la signature, autrement dit, comment donner un nom fort à — un assembly qui est généré à l’aide de Microsoft C++ compilateur, consultez [les assemblys de nom fort (signature d’Assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Pour plus d’informations sur la façon de signer, c’est-à-dire comment attribuer un nom fort, à un assembly créé à l’aide du compilateur Microsoft C++, consultez [assemblys de nom fort (signature d’assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Comme alternative à l’aide de la fonctionnalité d’assemblys friend, vous pouvez utiliser <xref:System.Security.Permissions.StrongNameIdentityPermission> pour restreindre l’accès aux types individuels.
+Au lieu d’utiliser la fonctionnalité d’assemblys friend, vous pouvez utiliser <xref:System.Security.Permissions.StrongNameIdentityPermission> pour restreindre l’accès aux types individuels.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/clr**
 
@@ -92,9 +92,9 @@ int main() {
 Class1::Test_Public
 ```
 
-L’exemple de code suivant définit un composant, mais ne spécifie pas un assembly client qui auront accès aux types dans le composant.
+L’exemple de code suivant définit un composant, mais ne spécifie pas un assembly client qui aura accès aux types dans le composant.
 
-Notez que le composant est lié à l’aide de **/ opt : noref**. Cela garantit que les types privés sont émis dans les métadonnées du composant, qui n’est pas requise lorsque la `InternalsVisibleTo` attribut n’est présent. Pour plus d’informations, consultez [/OPT (optimisations)](../build/reference/opt-optimizations.md).
+Notez que le composant est lié à l’aide de **/OPT : NOREF**. Cela garantit que les types privés sont émis dans les métadonnées du composant, ce qui n’est pas obligatoire lorsque l' `InternalsVisibleTo` attribut est présent. Pour plus d’informations, consultez [/OPT (optimisations)](../build/reference/opt-optimizations.md).
 
 ```cpp
 // friend_assemblies_3.cpp
@@ -109,7 +109,7 @@ public:
 };
 ```
 
-L’exemple de code suivant définit un client qui tente d’accéder à un type privé dans un composant qui ne donne pas accès à ses types privés. En raison du comportement du runtime, si vous souhaitez intercepter l’exception, vous devez essayer d’accéder à un type privé dans une fonction d’assistance.
+L’exemple de code suivant définit un client qui tente d’accéder à un type privé dans un composant qui ne donne pas accès à ses types privés. En raison du comportement du runtime, si vous souhaitez intercepter l’exception, vous devez tenter d’accéder à un type privé dans une fonction d’assistance.
 
 ```cpp
 // friend_assemblies_4.cpp
@@ -136,7 +136,7 @@ int main() {
 caught an exception
 ```
 
-L’exemple de code suivant montre comment créer un composant de nom fort qui spécifie un assembly client qui auront accès aux types dans le composant.
+L’exemple de code suivant montre comment créer un composant de nom fort qui spécifie un assembly client qui aura accès aux types dans le composant.
 
 ```cpp
 // friend_assemblies_5.cpp
@@ -155,15 +155,15 @@ public:
 };
 ```
 
-Notez que le composant doit spécifier sa clé publique. Nous vous suggérons d’exécuter les commandes suivantes de manière séquentielle à une invite de commande pour créer une paire de clés et obtenir la clé publique :
+Notez que le composant doit spécifier sa clé publique. Nous vous suggérons d’exécuter les commandes suivantes séquentiellement à une invite de commandes pour créer une paire de clés et obtenir la clé publique :
 
-**sn -d friend_assemblies.snk**
+**SN-d friend_assemblies. snk**
 
-**sn -k friend_assemblies.snk**
+**sn-k friend_assemblies. snk**
 
-**sn -i friend_assemblies.snk friend_assemblies.snk**
+**sn-i friend_assemblies. snk friend_assemblies. snk**
 
-**sn -pc friend_assemblies.snk key.publickey**
+**SN-PC friend_assemblies. snk Key. PublicKey**
 
 **sn -tp key.publickey**
 

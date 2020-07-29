@@ -1,17 +1,17 @@
 ---
-title: HelpFile (C++ attribut com)
+title: HelpFile (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 641823779346bf5417ec0db26b83083fa949e960
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166976"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222119"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -25,12 +25,12 @@ Définit le nom du fichier d’aide d’une bibliothèque de types.
 
 ### <a name="parameters"></a>Paramètres
 
-*filename*<br/>
+*extension*<br/>
 Nom du fichier qui contient les rubriques d’aide.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **HelpFile** C++ a les mêmes fonctionnalités que l’attribut MIDL [HelpFile](/windows/win32/Midl/helpfile) .
+L’attribut C++ **HelpFile** a les mêmes fonctionnalités que l’attribut MIDL [HelpFile](/windows/win32/Midl/helpfile) .
 
 ## <a name="example"></a>Exemple
 
@@ -42,8 +42,8 @@ Consultez l’exemple du [module](module-cpp.md) pour obtenir un exemple d’uti
 
 |||
 |-|-|
-|**S'applique à**|**interface**, **typedef**, **classe**, méthode, **propriété**|
-|**Renouvelable**|Non|
+|**S’applique à**|**interface**, **`typedef`** ,, **`class`** méthode,**`property`**|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -55,6 +55,6 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs d’interface](interface-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)

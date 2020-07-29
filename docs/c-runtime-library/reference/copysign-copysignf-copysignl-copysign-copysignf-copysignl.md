@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 1575f0863b56256513cf6a93cf7b63f3d921af57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942856"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221937"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign, copysignf, copysignl, _copysign, _copysignf, _copysignl
 
@@ -99,16 +99,16 @@ Les fonctions **copysign** retournent une valeur à virgule flottante qui combin
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **copysign** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **copysign** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **copysign** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **copysign** accepte et retourne toujours un **`double`** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_copysign**|\<float.h>|
 |**copysign**, **copysignf**, **copysignl**, **_copysignf**, **_copysignl**|\<math.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

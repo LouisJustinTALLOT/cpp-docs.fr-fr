@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 2ffb307aa3eb6bb8d253129a550c95342ad497bc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 19f92e2aa62adf1ede4c0e6ab1187fd9e4106e68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189466"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221690"
 ---
 # <a name="delete-operator-c"></a>delete, opérateur (C++)
 
@@ -21,12 +21,12 @@ Libère un bloc de mémoire.
 
 ## <a name="syntax"></a>Syntaxe
 
-> [`::`] `delete` *Cast-expression*\
-> [`::`] `delete []` *Cast-expression*
+> [ `::` ] `delete` *expression cast*\
+> [ `::` ] `delete []` *expression cast*
 
 ## <a name="remarks"></a>Notes
 
-L’argument *Cast-expression* doit être un pointeur vers un bloc de mémoire précédemment alloué pour un objet créé avec l' [opérateur New](../cpp/new-operator-cpp.md). L’opérateur **Delete** a un résultat de type **void** et, par conséquent, ne retourne pas de valeur. Par exemple :
+L’argument *Cast-expression* doit être un pointeur vers un bloc de mémoire précédemment alloué pour un objet créé avec l' [opérateur New](../cpp/new-operator-cpp.md). L' **`delete`** opérateur a un résultat de type **`void`** et, par conséquent, ne retourne pas de valeur. Par exemple :
 
 ```cpp
 CDialog* MyDialog = new CDialog;
@@ -34,9 +34,9 @@ CDialog* MyDialog = new CDialog;
 delete MyDialog;
 ```
 
-L’utilisation de **Delete** sur un pointeur vers un objet non alloué avec **New** donne des résultats imprévisibles. Toutefois, vous pouvez utiliser **Delete** sur un pointeur avec la valeur 0. Cette configuration signifie que, lorsque **New** retourne 0 en cas d’échec, la suppression du résultat d’une **nouvelle** opération n’est pas sans incidence. Pour plus d’informations, consultez [les opérateurs New et Delete](../cpp/new-and-delete-operators.md).
+L’utilisation **`delete`** de sur un pointeur vers un objet non alloué avec **`new`** donne des résultats imprévisibles. Toutefois, vous pouvez utiliser **`delete`** sur un pointeur avec la valeur 0. Cette configuration signifie que, lorsque **`new`** retourne 0 en cas d’échec, la suppression du résultat d’une opération ayant échoué **`new`** est sans conséquence. Pour plus d’informations, consultez [les opérateurs New et Delete](../cpp/new-and-delete-operators.md).
 
-Les opérateurs **New** et **Delete** peuvent également être utilisés pour les types intégrés, y compris les tableaux. Si `pointer` fait référence à un tableau, placez les crochets vides (`[]`) avant `pointer`:
+Les **`new`** **`delete`** opérateurs et peuvent également être utilisés pour les types intégrés, y compris les tableaux. Si `pointer` fait référence à un tableau, placez les crochets vides ( `[]` ) avant `pointer` :
 
 ```cpp
 int* set = new int[100];
@@ -44,13 +44,13 @@ int* set = new int[100];
 delete [] set;
 ```
 
-L’utilisation de l’opérateur **Delete** sur un objet libère sa mémoire. Un programme qui déréférence un pointeur après la suppression de l'objet peut avoir des résultats imprévisibles ou se bloquer.
+L’utilisation **`delete`** de l’opérateur sur un objet libère sa mémoire. Un programme qui déréférence un pointeur après la suppression de l'objet peut avoir des résultats imprévisibles ou se bloquer.
 
-Quand la **suppression** est utilisée pour libérer de la mémoire C++ pour un objet de classe, le destructeur de l’objet est appelé avant la libération de la mémoire de l’objet (si l’objet a un destructeur).
+Lorsque **`delete`** est utilisé pour libérer de la mémoire pour un objet de classe C++, le destructeur de l’objet est appelé avant la libération de la mémoire de l’objet (si l’objet a un destructeur).
 
-Si l’opérande de l’opérateur **Delete** est une l-value modifiable, sa valeur n’est pas définie une fois que l’objet a été supprimé.
+Si l’opérande de l' **`delete`** opérateur est une l-value modifiable, sa valeur n’est pas définie une fois que l’objet a été supprimé.
 
-Si l’option de compilateur [/SDL (activer des vérifications de sécurité supplémentaires)](/cpp/build/reference/sdl-enable-additional-security-checks) est spécifiée, l’opérande de l’opérateur **Delete** est défini sur une valeur non valide après la suppression de l’objet.
+Si l’option de compilateur [/SDL (activer des vérifications de sécurité supplémentaires)](/cpp/build/reference/sdl-enable-additional-security-checks) est spécifiée, l’opérande de l' **`delete`** opérateur est défini sur une valeur non valide après la suppression de l’objet.
 
 ## <a name="using-delete"></a>Utilisation de delete
 
@@ -80,20 +80,20 @@ int main()
 }
 ```
 
-Les deux cas suivants produisent des résultats non définis : à l’aide de la forme de tableau de Delete (`delete []`) sur un objet et à l’aide de la forme non tableau de Delete sur un tableau.
+Les deux cas suivants produisent des résultats non définis : à l’aide de la forme de tableau de Delete ( `delete []` ) sur un objet et à l’aide de la forme non tableau de Delete sur un tableau.
 
 ## <a name="example"></a>Exemple
 
-Pour obtenir des exemples d’utilisation de **Delete**, consultez [New, opérateur](../cpp/new-operator-cpp.md).
+Pour obtenir des exemples d’utilisation de **`delete`** , consultez [New, opérateur](../cpp/new-operator-cpp.md).
 
 ## <a name="how-delete-works"></a>Fonctionnement de delete
 
 L’opérateur delete appelle la fonction **operator delete**.
 
-Pour les objets qui ne sont pas de type classe ([classe](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)ou [Union](../cpp/unions.md)), l’opérateur de suppression global est appelé. Pour les objets de type classe, le nom de la fonction de désallocation est résolu dans la portée globale si l’expression de suppression commence par l’opérateur de résolution de portée unaire (`::`). Sinon, l'opérateur delete appelle le destructeur pour un objet avant de désallouer la mémoire (si le pointeur n'est pas null). L'opérateur delete peut être défini pour chaque classe ; si cette définition n'existe pas pour une classe donnée, l'opérateur de suppression global est appelé. Si l'expression de suppression est utilisée pour désallouer un objet de classe dont le type statique a un destructeur virtuel, la fonction de désallocation est résolue par l'intermédiaire du destructeur virtuel du type dynamique de l'objet.
+Pour les objets qui ne sont pas de type classe ([classe](../cpp/class-cpp.md), [struct](../cpp/struct-cpp.md)ou [Union](../cpp/unions.md)), l’opérateur de suppression global est appelé. Pour les objets de type classe, le nom de la fonction de désallocation est résolu dans la portée globale si l’expression de suppression commence par l’opérateur de résolution de portée unaire ( `::` ). Sinon, l'opérateur delete appelle le destructeur pour un objet avant de désallouer la mémoire (si le pointeur n'est pas null). L'opérateur delete peut être défini pour chaque classe ; si cette définition n'existe pas pour une classe donnée, l'opérateur de suppression global est appelé. Si l'expression de suppression est utilisée pour désallouer un objet de classe dont le type statique a un destructeur virtuel, la fonction de désallocation est résolue par l'intermédiaire du destructeur virtuel du type dynamique de l'objet.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Expressions avec opérateurs unaires](../cpp/expressions-with-unary-operators.md)\
-[Mots clés](../cpp/keywords-cpp.md)\
-[new et delete, opérateurs](../cpp/new-and-delete-operators.md)
+[Mot](../cpp/keywords-cpp.md)\
+[Opérateurs New et Delete](../cpp/new-and-delete-operators.md)

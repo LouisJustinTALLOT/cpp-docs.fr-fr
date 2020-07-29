@@ -2,26 +2,26 @@
 title: Exceptions et déroulement de pile en C++
 ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-ms.openlocfilehash: 11657206e86dbc81eb62c1e11b49fd87777f11d8
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: e0dadc90f85caeea359fca4ed0b45868ea77177e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246569"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221560"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Exceptions et déroulement de pile en C++
 
 Dans le mécanisme d'exception C++, le contrôle passe de l'instruction Throw à la première instruction Catch qui peut gérer le type levé. Lorsque l’instruction catch est atteinte, toutes les variables automatiques qui sont dans la portée entre les instructions throw et catch sont détruites dans un processus appelé déroulement de *pile*. L'exécution du déroulement de pile se déroule comme suit :
 
-1. Le contrôle atteint l’instruction **try** par exécution séquentielle normale. La section protégée du bloc **try** est exécutée.
+1. Le contrôle atteint l' **`try`** instruction par exécution séquentielle normale. La section protégée du **`try`** bloc est exécutée.
 
-1. Si aucune exception n’est levée pendant l’exécution de la section protégée, les clauses **catch** qui suivent le bloc **try** ne sont pas exécutées. L’exécution se poursuit à l’instruction qui suit la dernière clause **catch** qui suit le bloc **try** associé.
+1. Si aucune exception n’est levée pendant l’exécution de la section protégée, les **`catch`** clauses qui suivent le **`try`** bloc ne sont pas exécutées. L’exécution se poursuit à l’instruction **`catch`** qui suit la dernière clause qui suit le **`try`** bloc associé.
 
-1. Si une exception est levée pendant l’exécution de la section protégée ou dans une routine que la section protégée appelle directement ou indirectement, un objet exception est créé à partir de l’objet créé par l’opérande **throw** . (Cela implique qu’un constructeur de copie peut être impliqué.) À ce stade, le compilateur recherche une clause **catch** dans un contexte d’exécution plus élevé qui peut gérer une exception du type qui est levé, ou pour un gestionnaire **catch** qui peut gérer tout type d’exception. Les gestionnaires **catch** sont examinés dans l’ordre de leur apparence après le bloc **try** . Si aucun gestionnaire approprié n’est trouvé, le bloc **try** qui englobe dynamiquement suivant est examiné. Ce processus se poursuit jusqu’à ce que le bloc **try** englobant le plus à l’extérieur soit examiné.
+1. Si une exception est levée pendant l’exécution de la section protégée ou dans une routine que la section protégée appelle directement ou indirectement, un objet exception est créé à partir de l’objet créé par l' **`throw`** opérande. (Cela implique qu’un constructeur de copie peut être impliqué.) À ce stade, le compilateur recherche une **`catch`** clause dans un contexte d’exécution plus élevé qui peut gérer une exception du type qui est levé, ou pour un **`catch`** gestionnaire qui peut gérer tout type d’exception. Les **`catch`** gestionnaires sont examinés dans l’ordre de leur apparence après le **`try`** bloc. Si aucun gestionnaire approprié n’est trouvé, le bloc de fermeture dynamique suivant **`try`** est examiné. Ce processus se poursuit jusqu’à ce que le bloc englobant le plus à l’extérieur **`try`** soit examiné.
 
 1. Si aucun gestionnaire correspondant ne parvient à être trouvé, ou si une exception se produit pendant le processus de déroulement mais avant que le gestionnaire n'obtienne le contrôle, la fonction runtime `terminate` prédéfinie est appelée. Si une autre exception se produit après la levée de l'exception mais avant le début du déroulement, la fonction `terminate` est appelée.
 
-1. Si un gestionnaire **catch** correspondant est trouvé et qu’il intercepte par valeur, son paramètre formel est initialisé en copiant l’objet exception. Si l'interception s'effectue par référence, le paramètre est initialisé pour faire référence à l'objet exception. Une fois le paramètre formel initialisé, le processus de déroulement de la pile démarre. Cela implique la destruction de tous les objets automatiques qui ont été entièrement construits, mais qui n’ont pas encore été détruits, entre le début du bloc **try** associé au gestionnaire **catch** et le site de levée de l’exception. La destruction se produit dans l'ordre inverse de la construction. Le gestionnaire **catch** est exécuté et le programme reprend l’exécution après le dernier gestionnaire, c’est-à-dire au niveau de la première instruction ou construction qui n’est pas un gestionnaire **catch** . Le contrôle peut uniquement entrer un gestionnaire **catch** par le biais d’une exception levée, jamais via une instruction **goto** ou une étiquette **case** dans une instruction **switch** .
+1. Si un **`catch`** Gestionnaire correspondant est trouvé et qu’il intercepte par valeur, son paramètre formel est initialisé en copiant l’objet exception. Si l'interception s'effectue par référence, le paramètre est initialisé pour faire référence à l'objet exception. Une fois le paramètre formel initialisé, le processus de déroulement de la pile démarre. Cela implique la destruction de tous les objets automatiques qui ont été entièrement construits, mais qui ne sont pas encore détruits, entre le début du **`try`** bloc associé au **`catch`** Gestionnaire et le site de levée de l’exception. La destruction se produit dans l'ordre inverse de la construction. Le **`catch`** gestionnaire est exécuté et le programme reprend l’exécution après le dernier gestionnaire, c’est-à-dire au niveau de la première instruction ou construction qui n’est pas un **`catch`** Gestionnaire. Le contrôle peut uniquement entrer un **`catch`** Gestionnaire par le biais d’une exception levée, jamais via une **`goto`** instruction ou une **`case`** étiquette dans une **`switch`** instruction.
 
 ## <a name="stack-unwinding-example"></a>Exemple de déroulement de pile
 

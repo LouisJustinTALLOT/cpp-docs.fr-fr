@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 87043315def59bcd7cff706710d988cc0ed37876
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825428"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232779"
 ---
 # <a name="db_command"></a>db_command
 
@@ -26,7 +26,7 @@ Crée une commande OLE DB.
 
 ### <a name="parameters"></a>Paramètres
 
-*commande*<br/>
+*command*<br/>
 Chaîne de commande contenant le texte d’une commande OLE DB. Voici un exemple simple :
 
 ```cpp
@@ -44,7 +44,7 @@ La syntaxe de *command* est la suivante :
 
 Un *bloc de paramètres de liaison* est défini comme suit :
 
-> **(\[ ** *BindType* **]** *szVar1* szVar1 \[, *szVar2* szVar2 \[, *nVar3* nVar3 \[,...]]] **)**
+> **( \[ ** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
 
 où :
 
@@ -52,23 +52,23 @@ où :
 
 - **\[***BindType* **]** est l’une des chaînes suivantes qui ne respectent pas la casse :
 
-  - ** \[db_column]** lie chacune des variables de membre à une colonne dans un ensemble de lignes.
+  - ** \[ db_column]** lie chacune des variables membres à une colonne dans un ensemble de lignes.
 
-  - ** \[BindTo]** (identique à ** \[db_column]**).
+  - ** \[ BindTo]** (identique à ** \[ db_column]**).
 
-  - ** \[dans]** lie les variables de membre en tant que paramètres d’entrée.
+  - ** \[ in]** lie les variables de membre en tant que paramètres d’entrée.
 
-  - ** \[out]** lie les variables de membre en tant que paramètres de sortie.
+  - ** \[ out]** lie les variables de membre en tant que paramètres de sortie.
 
-  - in, out] ** \[** lie les variables de membre en tant que paramètres d’entrée/sortie.
+  - ** \[ dans, out]** lie les variables de membre en tant que paramètres d’entrée/sortie.
 
 - *szVarX*, *nVarX* correspond à une variable membre dans l’étendue actuelle.
 
 - **)** marque la fin du bloc de liaison de données.
 
-Si la chaîne de commande contient un ou plusieurs spécificateurs tels \[que in] \[, out] ou \[in/out], **db_command** génère un mappage de paramètres.
+Si la chaîne de commande contient un ou plusieurs spécificateurs tels que \[ in], \[ out] ou \[ in/out], **db_command** génère un mappage de paramètres.
 
-Si la chaîne de commande contient un ou plusieurs paramètres tels \[que db_column] \[ou BindTo], **db_command** génère un ensemble de lignes et une carte d’accesseur pour traiter ces variables liées. Pour plus d’informations, consultez [db_accessor](db-accessor.md) .
+Si la chaîne de commande contient un ou plusieurs paramètres tels que \[ db_column] ou \[ BindTo], **db_command** génère un ensemble de lignes et une carte d’accesseur pour traiter ces variables liées. Pour plus d’informations, consultez [db_accessor](db-accessor.md) .
 
 > [!NOTE]
 > \[*BindType*] la syntaxe et le paramètre de *liaison* ne sont pas valides lors de l’utilisation de **db_command** au niveau de la classe.
@@ -90,7 +90,7 @@ TCHAR m_state[3] = 'CA';
 Facultatif Nom du handle que vous utilisez pour travailler avec l’ensemble de lignes. Si vous spécifiez *name*, **db_command** génère une classe avec l’objet *name*spécifié, qui peut être utilisée pour parcourir l’ensemble de lignes ou pour exécuter plusieurs requêtes d’action. Si vous ne spécifiez pas *name*, vous ne pouvez pas retourner plusieurs lignes de résultats à l’utilisateur.
 
 *source_name*<br/>
-Facultatif `CSession` Variable ou instance d’une classe à laquelle l' `db_source` attribut est appliqué et sur lequel la commande s’exécute. Voir [db_source](db-source.md).
+Facultatif `CSession`Variable ou instance d’une classe à laquelle l' `db_source` attribut est appliqué et sur lequel la commande s’exécute. Voir [db_source](db-source.md).
 
 **db_command** vérifie que la variable utilisée pour *source_name* est valide. La variable spécifiée doit donc être dans la portée globale ou dans la portée de fonction.
 
@@ -100,9 +100,9 @@ Facultatif Identifie la variable qui recevra le HRESULT de cette commande de bas
 *liaisons*<br/>
 Facultatif Vous permet de séparer les paramètres de liaison de la commande OLE DB.
 
-Si vous spécifiez une valeur pour les *liaisons*, **db_command** analyse la valeur associée et n’analyse pas le \[paramètre *BindType*]. Cette utilisation vous permet d’utiliser la syntaxe du fournisseur OLE DB. Pour désactiver l’analyse, sans paramètres de liaison, `Bindings=""`spécifiez.
+Si vous spécifiez une valeur pour les *liaisons*, **db_command** analyse la valeur associée et n’analyse pas le \[ paramètre *BindType*]. Cette utilisation vous permet d’utiliser la syntaxe du fournisseur OLE DB. Pour désactiver l’analyse, sans paramètres de liaison, spécifiez `Bindings=""` .
 
-Si vous ne spécifiez pas de valeur pour les *liaisons*, **db_command** analyse le bloc de paramètres de liaison, en recherchant'**(**', **\[** suivi de _BindType_**]** entre crochets, suivi d’une ou plusieurs variables membres C++ déclarées précédemment, suivies de'**)**'. Tout le texte entre parenthèses est supprimé de la commande obtenue, et ces paramètres sont utilisés pour construire des liaisons de colonnes et de paramètres pour cette commande.
+Si vous ne spécifiez pas de valeur pour les *liaisons*, **db_command** analyse le bloc de paramètres de liaison, en recherchant'**(**', suivi de **\[** _BindType_**]** entre crochets, suivi d’une ou plusieurs variables membres C++ déclarées précédemment, suivies de'**)**'. Tout le texte entre parenthèses est supprimé de la commande obtenue, et ces paramètres sont utilisés pour construire des liaisons de colonnes et de paramètres pour cette commande.
 
 *bulk_fetch*<br/>
 Facultatif Valeur entière qui spécifie le nombre de lignes à extraire.
@@ -113,17 +113,17 @@ Une valeur supérieure à 1 spécifie l’extraction de lignes en bloc. L’extr
 
 Si *bulk_fetch* est inférieur à 1, `SetRows` retourne la valeur zéro.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **db_command** crée un objet [CCommand](../../data/oledb/ccommand-class.md) , qui est utilisé par un consommateur OLE DB pour exécuter une commande.
 
-Vous pouvez utiliser **db_command** avec une portée de classe ou de fonction. La principale différence est la portée de l’objet `CCommand` . Avec la portée de fonction, les données telles que les liaisons se terminent à la fin de la fonction. Les utilisations de la portée de la classe et de la fonction impliquent la classe `CCommand<>`de modèle de consommateur OLE DB, mais les arguments de modèle diffèrent pour la fonction et les cas de classe. Dans le cas de fonction, les liaisons sont effectuées sur un `Accessor` qui comprend des variables locales, tandis que l’utilisation de `CAccessor`la classe déduira une classe dérivée de comme argument. En cas d’utilisation comme attribut de classe, **db_command** fonctionne conjointement avec **db_column**.
+Vous pouvez utiliser **db_command** avec une portée de classe ou de fonction. La principale différence est la portée de l’objet `CCommand` . Avec la portée de fonction, les données telles que les liaisons se terminent à la fin de la fonction. Les utilisations de la portée de la classe et de la fonction impliquent la classe de modèle de consommateur OLE DB `CCommand<>` , mais les arguments de modèle diffèrent pour la fonction et les cas de classe. Dans le cas de fonction, les liaisons sont effectuées sur un `Accessor` qui comprend des variables locales, tandis que l’utilisation de la classe déduira une `CAccessor` classe dérivée de comme argument. En cas d’utilisation comme attribut de classe, **db_command** fonctionne conjointement avec **db_column**.
 
 Vous pouvez utiliser**db_command** pour exécuter des commandes qui ne retournent pas de jeu de résultats.
 
-Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe \_en accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, \_qui dérive de l’accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
+Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_ accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de l' \_ accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple définit une commande qui sélectionne le prénom et le nom dans une table où la colonne d’état correspond à « CA ». **db_command** crée et lit un ensemble de lignes sur lequel vous pouvez appeler des fonctions générées par un Assistant, telles que [OpenAll et CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), ainsi que des fonctions membres `CRowset` telles que [MoveNext](../../data/oledb/crowset-movenext.md).
 
@@ -163,7 +163,7 @@ struct CAuthors {
 };
 ```
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```cpp
 // db_command.cpp
@@ -193,7 +193,7 @@ int main(int argc, _TCHAR* argv[]) {
 }
 ```
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple utilise `db_source` sur une classe de source de données `CMySource`, et `db_command` sur les classes de commande `CCommand1` et `CCommand2`.
 
@@ -236,13 +236,13 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S’applique à**|**classe**, **struct**, membre, méthode, local|
+|**S’applique à**|**`class`**, **`struct`** , membre, méthode, local|
 |**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|

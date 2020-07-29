@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171409"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221989"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -78,7 +78,7 @@ Les fonctions **ABS**, **Labs**, **LLabs** et **_abs64** retournent la valeur ab
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges d' **ABS** qui acceptent et retournent des valeurs **long**, **long** **long**, **float**, **double**et **long** **double** . Ces surcharges sont définies dans l’en-tête \<cmath>. Dans un programme C, **ABS** prend toujours et retourne un **int**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **ABS** qui acceptent et retournent des valeurs,,, **`long`** **`long long`** **`float`** **`double`** et **`long double`** . Ces surcharges sont définies dans l' \<cmath> en-tête. Dans un programme C, **ABS** prend toujours et retourne un **`int`** .
 
 **Spécifique à Microsoft**: étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide d’un type intégral est supérieure à la plage d’entiers positifs qui peuvent être représentés à l’aide de ce type, il est possible de fournir un argument à ces fonctions qui ne peuvent pas être converties. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, les fonctions **ABS** retournent la valeur d’argument inchangée. Plus précisément, `abs(INT_MIN)` retourne `INT_MIN`, `labs(LONG_MIN)` retourne `LONG_MIN`, `llabs(LLONG_MIN)` retourne `LLONG_MIN`, tandis que `_abs64(_I64_MIN)` retourne `_I64_MIN`. Cela signifie que les fonctions **ABS** ne peuvent pas être utilisées pour garantir une valeur positive.
 
@@ -89,7 +89,7 @@ Les fonctions **ABS**, **Labs**, **LLabs** et **_abs64** retournent la valeur ab
 |**ABS**, **Labs**, **LLabs**|\<math.h> ou \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> ou \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> ou \<stdlib.h>|
 
-Pour utiliser les versions surchargées de **abs** l’ABS C++dans, vous devez inclure l’en-tête \<cmath >.
+Pour utiliser les versions surchargées de **ABS** en C++, vous devez inclure l' \<cmath> en-tête.
 
 ## <a name="example"></a>Exemple
 

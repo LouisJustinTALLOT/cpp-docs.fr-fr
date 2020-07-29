@@ -1,17 +1,17 @@
 ---
-title: Ref (C++ attribut com)
+title: Ref (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: bfb5cc8c785c7f62f29488a9379c2c7ed229cad8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6cf78930b19891832369e9b96c0a761d2752e4a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214589"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232740"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -49,8 +49,8 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**S'applique à**|**typedef**, paramètre d’interface, méthode d’interface|
-|**Renouvelable**|Non|
+|**S’applique à**|**`typedef`**, paramètre d’interface, méthode d’interface|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -59,5 +59,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributs de paramètre](parameter-attributes.md)

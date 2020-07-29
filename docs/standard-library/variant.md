@@ -1,24 +1,24 @@
 ---
-title: '&lt;Type Variant&gt;'
+title: '&lt;variant&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 7a812ccc3c8cb2a660c01ad2b17ea75b5d5c9542
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6074c80b20ae0c69d34768bc16d7aaae16c99579
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268441"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232818"
 ---
-# <a name="ltvariantgt"></a>&lt;Type Variant&gt;
+# <a name="ltvariantgt"></a>&lt;variant&gt;
 
-Un objet variant contienne et gère une valeur. Si la variante conserve une valeur, type de cette valeur doit être un des types d’arguments de modèle données vers un variant. Ces arguments template sont appelés des alternatives.
+Un objet variant contient et gère une valeur. Si le variant contient une valeur, le type de cette valeur doit être l’un des types d’arguments template donnés à la variante. Ces arguments template sont appelés alternatives.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<variante >
+**En-tête :**\<variant>
 
 **Espace de noms :** std
 
@@ -28,39 +28,39 @@ Un objet variant contienne et gère une valeur. Si la variante conserve une vale
 
 |||
 |-|-|
-|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Teste si l’objet variant sur le côté gauche de l’opérateur est égal à l’objet variant sur le côté droit.|
-|[!=, opérateur](../standard-library/forward-list-operators.md#op_neq)|Teste si l’objet variant sur le côté gauche de l’opérateur n’est pas égal à l’objet variant sur le côté droit.|
-|[operator<](../standard-library/forward-list-operators.md#op_lt)|Teste si l’objet variant sur le côté gauche de l’opérateur est inférieur à l’objet variant sur le côté droit.|
-|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Teste si la variante de l’objet sur le côté gauche de l’opérateur est inférieur ou égal à l’objet variant sur le côté droit.|
-|[operator>](../standard-library/forward-list-operators.md#op_gt)|Teste si l’objet variant sur le côté gauche de l’opérateur est supérieur à l’objet variant sur le côté droit.|
-|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Teste si l’objet variant sur le côté gauche de l’opérateur est supérieur ou égal à l’objet variant sur le côté droit.|
+|[opérateur = =](../standard-library/forward-list-operators.md#op_eq_eq)|Teste si l’objet variant situé à gauche de l’opérateur est égal à l’objet variant situé à droite.|
+|[opérateur ! =](../standard-library/forward-list-operators.md#op_neq)|Teste si l’objet variant situé à gauche de l’opérateur n’est pas égal à l’objet variant situé à droite.|
+|[<d’opérateur](../standard-library/forward-list-operators.md#op_lt)|Teste si l’objet variant situé à gauche de l’opérateur est inférieur à l’objet variant situé à droite.|
+|[<opérateur =](../standard-library/forward-list-operators.md#op_lt_eq)|Teste si l’objet variant situé à gauche de l’opérateur est inférieur ou égal à l’objet variant situé à droite.|
+|[>d’opérateur](../standard-library/forward-list-operators.md#op_gt)|Teste si l’objet variant situé à gauche de l’opérateur est supérieur à l’objet variant situé à droite.|
+|[>opérateur =](../standard-library/forward-list-operators.md#op_lt_eq)|Teste si l’objet variant situé à gauche de l’opérateur est supérieur ou égal à l’objet variant situé à droite.|
 
 ### <a name="functions"></a>Fonctions
 
 |||
 |-|-|
-|[get](../standard-library/variant-functions.md#get)|Obtient la variante d’un objet.|
-|[get_if](../standard-library/variant-functions.md#get_if)|Obtient la variante d’un objet s’il existe.|
-|[holds_alternative](../standard-library/variant-functions.md#holds_alternative)|Retourner **true** si une variante existe.|
-|[swap](../standard-library/variant-functions.md#swap)|Échange un **variante**.|
-|[visite](../standard-library/variant-functions.md#visit)|Déplace vers la prochaine **variante**.|
+|[get](../standard-library/variant-functions.md#get)|Obtient le variant d’un objet.|
+|[get_if](../standard-library/variant-functions.md#get_if)|Obtient la variante d’un objet, le cas échéant.|
+|[holds_alternative](../standard-library/variant-functions.md#holds_alternative)|Retourne **`true`** si un variant existe.|
+|[swap](../standard-library/variant-functions.md#swap)|Permute une **variante**.|
+|[consultez](../standard-library/variant-functions.md#visit)|Passe à la **variante**suivante.|
 
 ### <a name="classes"></a>Classes
 
 |||
 |-|-|
-|[bad_variant_access](../standard-library/bad-variant-access-class.md)|Objets levés à accès non valide de rapport à la valeur d’un objet variant.|
-|[Type Variant](../standard-library/variant.md)|Un objet soit contenir une valeur d’un de ses autres types, ou aucune valeur.|
+|[bad_variant_access](../standard-library/bad-variant-access-class.md)|Objets levés pour signaler des accès non valides à la valeur d’un objet variant.|
+|[variant](../standard-library/variant.md)|Objet qui doit contenir une valeur de l’un de ses autres types, ou aucune valeur.|
 
-### <a name="structs"></a>Structs
+### <a name="structs"></a>Structures
 
 |||
 |-|-|
 |[hash](../standard-library/hash-structure.md)||
-|[le modèle Monostate](../standard-library/monostate-structure.md)|Un autre type pour une variante pour rendre la valeur par défaut de type variant constructible.|
+|[monoétat](../standard-library/monostate-structure.md)|Autre type pour un variant pour rendre le type Variant constructible par défaut.|
 |[uses_allocator](../standard-library/uses-allocator-structure.md)||
-|[variant_alternative](../standard-library/variant-alternative-structure.md)|Assiste les objets de type variant.|
-|[variant_size](../standard-library/variant-size-structure.md)|Assiste les objets de type variant.|
+|[variant_alternative](../standard-library/variant-alternative-structure.md)|Aide les objets variants.|
+|[variant_size](../standard-library/variant-size-structure.md)|Aide les objets variants.|
 
 ### <a name="objects"></a>Objets
 

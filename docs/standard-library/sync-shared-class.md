@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 029edea59f29534491232d5d99353ccb093447bd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f1a984d38bed9dd3795164e355c7ccac100ae6b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376535"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232883"
 ---
 # <a name="sync_shared-class"></a>sync_shared, classe
 
@@ -40,17 +40,17 @@ class sync_shared
 
 |Fonction membre|Description|
 |-|-|
-|[Allouer](#allocate)|Alloue un bloc de mémoire.|
-|[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
+|[allocate](#allocate)|Alloue un bloc de mémoire.|
+|[libérer](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<allocators>
+**En-tête :**\<allocators>
 
 **Espace de noms :** stdext
 
-## <a name="sync_sharedallocate"></a><a name="allocate"></a>sync_shared::allocate
+## <a name="sync_sharedallocate"></a><a name="allocate"></a>sync_shared :: Allocate
 
 Alloue un bloc de mémoire.
 
@@ -72,7 +72,7 @@ Un pointeur vers l’objet alloué.
 
 La fonction membre verrouille le mutex, appelle `cache.allocate(count)`, déverrouille le mutex et retourne le résultat de l’appel précédent à `cache.allocate(count)`. `cache` représente l’objet cache actuel.
 
-## <a name="sync_shareddeallocate"></a><a name="deallocate"></a>sync_shared::dallocate
+## <a name="sync_shareddeallocate"></a><a name="deallocate"></a>sync_shared ::d eallocate
 
 Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.
 
@@ -84,14 +84,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
 |*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction membre verrouille le mutex, appelle `cache.deallocate(ptr, count)`, où `cache` représente l’objet cache, puis déverrouille le mutex.
 
-## <a name="sync_sharedequals"></a><a name="equals"></a>sync_shared::égales
+## <a name="sync_sharedequals"></a><a name="equals"></a>sync_shared :: est égal à
 
 Compare l'égalité de deux caches.
 
@@ -108,10 +108,10 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**vrai** si le `cache.equals(Other.cache)`résultat `cache` de , où représente l’objet cache, est **vrai;** autrement, **faux**.
+**`true`** Si le résultat de `cache.equals(Other.cache)` , où `cache` représente l’objet de cache, est **`true`** ; sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<les allocataires>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

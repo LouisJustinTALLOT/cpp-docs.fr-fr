@@ -1,17 +1,17 @@
 ---
-title: db_column (C++ attribut com)
+title: db_column (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_column
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 4ce57443480e35e7a4c7b9e872e41777662ddc20
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b78fb081895b7a3e8f0e266810cd19d1b2792240
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167288"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222145"
 ---
 # <a name="db_column"></a>db_column
 
@@ -26,7 +26,7 @@ Lie une colonne spécifiée à une variable dans l’ensemble de lignes.
 ### <a name="parameters"></a>Paramètres
 
 *ordinal*<br/>
-Numéro de colonne ordinale (`DBCOLUMNINFO` ordinal) ou nom de colonne (chaîne ANSI ou Unicode) correspondant à un champ de l’ensemble de lignes auquel lier des données. Si vous utilisez des nombres, vous pouvez ignorer les ordinaux consécutifs (par exemple : 1, 2, 3, 5). Le nom peut contenir des espaces si le fournisseur OLE DB que vous utilisez le prend en charge. Par exemple, vous pouvez utiliser l’un des formats suivants :
+Numéro de colonne ordinale ( `DBCOLUMNINFO` ordinal) ou nom de colonne (chaîne ANSI ou Unicode) correspondant à un champ de l’ensemble de lignes auquel lier des données. Si vous utilisez des nombres, vous pouvez ignorer les ordinaux consécutifs (par exemple : 1, 2, 3, 5). Le nom peut contenir des espaces si le fournisseur OLE DB que vous utilisez le prend en charge. Par exemple, vous pouvez utiliser l’un des formats suivants :
 
 ```cpp
 [db_column("2")] TCHAR szCity[30];
@@ -37,10 +37,10 @@ Numéro de colonne ordinale (`DBCOLUMNINFO` ordinal) ou nom de colonne (chaîne 
 Facultatif Indicateur de [Type](/previous-versions/windows/desktop/ms711251(v=vs.85)) OLE DB pour l’entrée de colonne.
 
 *precision*<br/>
-Facultatif Précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de l’élément `bPrecision` de la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) .
+Facultatif Précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de l' `bPrecision` élément de la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) .
 
 *scale*<br/>
-Facultatif Échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) .
+Facultatif Échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de l' `bScale` élément de la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) .
 
 *statut*<br/>
 Facultatif Variable membre utilisée pour contenir l’état de cette colonne. L’état indique si la valeur de la colonne est une valeur de données ou une autre valeur, telle que NULL. Pour connaître les valeurs possibles, consultez la section [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
@@ -50,17 +50,17 @@ Facultatif Variable membre utilisée pour contenir la taille de la colonne en oc
 
 ## <a name="remarks"></a>Notes
 
-**db_column** lie la colonne de table spécifiée à une variable dans l’ensemble de lignes. Elle délimite les données membres qui peuvent participer à OLE DB liaison basée sur `IAccessor`. Cet attribut configure le mappage de colonnes normalement défini à l’aide des macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)et [COLUMN_ENTRY](../../data/oledb/column-entry.md). Ils manipulent la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) OLE DB pour lier la colonne spécifiée. Chaque membre que vous marquez avec l’attribut **db_column** occupe une entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut à l’emplacement où vous placez le mappage de colonnes, autrement dit, dans la classe de commande ou de table.
+**db_column** lie la colonne de table spécifiée à une variable dans l’ensemble de lignes. Elle délimite les données membres qui peuvent participer à la `IAccessor` liaison basée sur OLE DB. Cet attribut configure le mappage de colonnes normalement défini à l’aide des macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)et [COLUMN_ENTRY](../../data/oledb/column-entry.md). Ils manipulent la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) OLE DB pour lier la colonne spécifiée. Chaque membre que vous marquez avec l’attribut **db_column** occupe une entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut à l’emplacement où vous placez le mappage de colonnes, autrement dit, dans la classe de commande ou de table.
 
 Utilisez **db_column** conjointement avec les attributs [db_table](db-table.md) ou [db_command](db-command.md) .
 
-Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de \_accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
+Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_ accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de l' \_ accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
 
 Pour obtenir un exemple de cet attribut utilisé dans une application, consultez [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## <a name="example"></a>Exemple
 
-Cet exemple lie une colonne d’une table à un membre de données **long** et spécifie des champs d’État et de longueur.
+Cet exemple lie une colonne d’une table à un **`long`** membre de données et spécifie des champs d’État et de longueur.
 
 ```cpp
 // db_column_1.cpp
@@ -80,7 +80,7 @@ class CProducts {
 
 ## <a name="example"></a>Exemple
 
-Cet exemple lie quatre colonnes à une **longue**, une chaîne de caractères, un horodatage et un entier `DB_NUMERIC`, dans cet ordre.
+Cet exemple lie quatre colonnes à une **`long`** , une chaîne de caractères, un horodatage et un `DB_NUMERIC` entier, dans cet ordre.
 
 ```cpp
 // db_column_2.cpp
@@ -104,8 +104,8 @@ class CProducts {
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**, membre, méthode|
-|**Renouvelable**|Non|
+|**S’applique à**|**`class`**, **`struct`** , membre, méthode|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -113,5 +113,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)<br/>
+[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)

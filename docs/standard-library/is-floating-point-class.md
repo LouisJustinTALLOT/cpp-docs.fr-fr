@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_floating_point class
 - is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
-ms.openlocfilehash: c46b74cc9c1d3c6f3a93925d6df46f46d0151e2d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8da613bca165f68ef2e15e2be6291485a89222de
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452591"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222392"
 ---
-# <a name="isfloatingpoint-class"></a>is_floating_point, classe
+# <a name="is_floating_point-class"></a>is_floating_point, classe
 
 Teste si le type est à virgule flottante.
 
@@ -34,9 +34,9 @@ Type à interroger.
 
 Une instance du prédicat de type a la valeur true si le type *Ty* est un type à virgule flottante ou une `cv-qualified` forme d’un type à virgule flottante. sinon, sa valeur est false.
 
-Un type à virgule flottante est un type **float**, **double**ou **long double**.
+Un type à virgule flottante est un de **`float`** , **`double`** ou **`long double`** .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // std__type_traits__is_floating_point.cpp
@@ -68,13 +68,13 @@ is_floating_point<int> == false
 is_floating_point<float> == true
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[is_integral, classe](../standard-library/is-integral-class.md)
+[Classe is_integral](../standard-library/is-integral-class.md)

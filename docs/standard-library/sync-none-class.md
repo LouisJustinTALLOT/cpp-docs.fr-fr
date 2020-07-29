@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: 046cbca30b6cdef2dc4e7dbbe2791d52384d9f25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4caf2cc2b6aa7494f343d10709f3190cb41631be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376568"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232909"
 ---
 # <a name="sync_none-class"></a>sync_none, classe
 
@@ -40,17 +40,17 @@ class sync_none
 
 |Fonction membre|Description|
 |-|-|
-|[Allouer](#allocate)|Alloue un bloc de mémoire.|
-|[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
+|[allocate](#allocate)|Alloue un bloc de mémoire.|
+|[libérer](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<allocators>
+**En-tête :**\<allocators>
 
 **Espace de noms :** stdext
 
-## <a name="sync_noneallocate"></a><a name="allocate"></a>sync_none::allocate
+## <a name="sync_noneallocate"></a><a name="allocate"></a>sync_none :: Allocate
 
 Alloue un bloc de mémoire.
 
@@ -68,7 +68,7 @@ void *allocate(std::size_t count);
 
 La fonction membre retourne `cache.allocate(count)`, où `cache` est l’objet cache.
 
-## <a name="sync_nonedeallocate"></a><a name="deallocate"></a>sync_none::dallocate
+## <a name="sync_nonedeallocate"></a><a name="deallocate"></a>sync_none ::d eallocate
 
 Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.
 
@@ -80,14 +80,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*Ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
 |*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre appelle `cache.deallocate(ptr, count)`, où `cache` représente l’objet cache.
 
-## <a name="sync_noneequals"></a><a name="equals"></a>sync_none::égales
+## <a name="sync_noneequals"></a><a name="equals"></a>sync_none :: est égal à
 
 Compare l'égalité de deux caches.
 
@@ -104,10 +104,10 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La fonction membre retourne toujours **vrai**.
+La fonction membre retourne toujours **`true`** .
 
 ### <a name="remarks"></a>Notes
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<les allocataires>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

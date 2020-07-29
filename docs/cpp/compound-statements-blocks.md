@@ -8,16 +8,16 @@ helpviewer_keywords:
 - blocks, about blocks
 - compound statements
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
-ms.openlocfilehash: 60d7e88c5ccccac5a1d967a91c8a82dd954d9afc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a06a3d9ce887150ba3333e8e9e874ab337f8b4df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337340"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221807"
 ---
 # <a name="compound-statements-blocks"></a>Instructions composées (blocs)
 
-Une déclaration composée se compose de zéro ou plus de déclarations enfermées dans**des**accolades bouclées ( . Une instruction composée peut être utilisée partout où une instruction est attendue. Les instructions composées sont généralement appelées « blocs ».
+Une instruction composée se compose de zéro ou plusieurs instructions placées entre accolades (**{}**). Une instruction composée peut être utilisée partout où une instruction est attendue. Les instructions composées sont généralement appelées « blocs ».
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,7 +27,7 @@ Une déclaration composée se compose de zéro ou plus de déclarations enfermé
 
 ## <a name="remarks"></a>Notes
 
-L’exemple suivant utilise une déclaration composée comme partie de *l’instruction* **de l’instruction if** (voir [l’énoncé de si](../cpp/if-else-statement-cpp.md) pour plus de détails sur la syntaxe) :
+L’exemple suivant utilise une instruction composée comme partie d' *instruction* de l' **`if`** instruction (pour plus d’informations sur la syntaxe, consultez [l’instruction if](../cpp/if-else-statement-cpp.md) ) :
 
 ```cpp
 if( Amount > 100 )
@@ -42,8 +42,8 @@ else
 ```
 
 > [!NOTE]
-> Étant donné qu’une déclaration est une déclaration, une déclaration peut être l’une des déclarations de la *liste des déclarations*. Par conséquent, les noms déclarés au sein d'une instruction composée, mais pas explicitement déclarés comme statiques, ont une portée locale et (pour les objets) une durée de vie locale. Voir [Scope](../cpp/scope-visual-cpp.md) pour plus de détails sur le traitement des noms à portée locale.
+> Comme une déclaration est une instruction, une déclaration peut être l’une des instructions figurant dans l' *instruction-List*. Par conséquent, les noms déclarés au sein d'une instruction composée, mais pas explicitement déclarés comme statiques, ont une portée locale et (pour les objets) une durée de vie locale. Pour plus d’informations sur le traitement des noms avec une étendue locale, consultez [scope](../cpp/scope-visual-cpp.md) .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Aperçu des déclarations de C](../cpp/overview-of-cpp-statements.md)
+[Vue d’ensemble des instructions C++](../cpp/overview-of-cpp-statements.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7130079ff58820ec5a8893fd248c5b98fc10c93c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456019"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222366"
 ---
-# <a name="isnothrowassignable-class"></a>is_nothrow_assignable, classe
+# <a name="is_nothrow_assignable-class"></a>is_nothrow_assignable, classe
 
-Teste si une valeur de *de type peut* être assignée à *un type et* que l’assignation est connue comme ne levant pas d’exception.
+Teste si une valeur *de de type peut* être assignée à un type et que l’assignation est *connue comme ne* levant pas d’exception.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,11 +34,11 @@ Type de l'objet qui fournit la valeur.
 
 ## <a name="remarks"></a>Notes
 
-L’expression `declval<To>() = declval<From>()` doit être bien formée et le compilateur doit savoir qu’elle ne lève pas d’exception. *From* et *to* doivent tous deux être des types complets, **void**ou des tableaux de limites inconnues.
+L’expression `declval<To>() = declval<From>()` doit être bien formée et le compilateur doit savoir qu’elle ne lève pas d’exception. *From* et *to* doivent tous deux être des types complets, **`void`** , ou des tableaux de limites inconnues.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

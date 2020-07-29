@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-ms.openlocfilehash: 9585a932a34a24769201aaa379525a9b4c181e41
-ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
+ms.openlocfilehash: 5495ac39a98f5c194f19d28ba85a1d59f47dfbb4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920087"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222379"
 ---
 # <a name="is_move_constructible-class"></a>is_move_constructible, classe
 
@@ -26,16 +26,16 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Paramètres
 
-*T* \
+*T*\
 Type à évaluer.
 
 ## <a name="remarks"></a>Notes
 
-Prédicat de type qui prend la **valeur true** si le type *T* peut être construit à l’aide d’une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`. Type *T* qui n’a pas de constructeur de déplacement, mais qui a un constructeur de copie qui accepte un argument `const T&`, satisfait `std::is_move_constructible`.
+Prédicat de type qui prend **`true`** la valeur si le type *T* peut être construit à l’aide d’une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`. Type *T* qui n’a pas de constructeur de déplacement, mais qui a un constructeur de copie qui accepte un `const T&` argument, correspond à `std::is_move_constructible` .
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

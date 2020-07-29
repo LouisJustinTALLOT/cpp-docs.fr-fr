@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b45cdb5c3d4608296cca34ad6a0be6e25b588d28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455619"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222301"
 ---
 # <a name="iterator-struct"></a>iterator, struct
 
-Struct de base vide utilisé pour garantir qu’une classe d’itérateur définie par l’utilisateur fonctionne `iterator_trait`correctement avec les s.
+Struct de base vide utilisé pour garantir qu’une classe d’itérateur définie par l’utilisateur fonctionne correctement avec les `iterator_trait` s.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,20 +47,20 @@ Le struct de modèle sert de type de base pour tous les itérateurs. Il définit
 
 - `reference` (synonyme du paramètre du modèle `Reference`).
 
-Notez que `value_type` ne doit pas être un type de constante `pointer` même si  `Type` les points d’un objet de const et de référence désignent un objet **const** `Type`.
+Notez que ne `value_type` doit pas être un type de constante même si `pointer` les points d’un objet de **`const`** `Type` et de référence désignent un objet de **`const`** `Type` .
 
 ## <a name="example"></a>Exemple
 
 Pour obtenir un exemple montrant comment déclarer et utiliser les types de la classe de base iterator, consultez [iterator_traits](../standard-library/iterator-traits-struct.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<iterator>
+**En-tête :**\<iterator>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [\<iterator>](../standard-library/iterator.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

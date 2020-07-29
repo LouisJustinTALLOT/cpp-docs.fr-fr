@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view opérateurs&gt;'
+title: '&lt;&gt;opérateurs string_view'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 39727177ff0fe88e2fcc105a6cee49711b36de6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076404"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222235"
 ---
-# <a name="ltstring_viewgt-operators"></a>&lt;string_view opérateurs&gt;
+# <a name="ltstring_viewgt-operators"></a>&lt;&gt;opérateurs string_view
 
-Utilisez ces opérateurs pour comparer deux objets string_view, ou un string_view et un autre objet String (par exemple [std :: String](basic-string-class.md)ou **char\*** ) pour lequel une conversion implicite est fournie.
+Utilisez ces opérateurs pour comparer deux objets string_view, ou un string_view et un autre objet String (par exemple [std :: String](basic-string-class.md)ou **char \* **) pour lequel une conversion implicite est fournie.
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|[«», opérateur](#op_sv)|
+|[opérateur ! =](#op_neq)|[and&gt;](#op_gt)|[and&gt;=](#op_gt_eq)|
+|[and&lt;](#op_lt)|[and&lt;&lt;](#op_lt_lt)|[and&lt;=](#op_lt_eq)|
+|[opérateur = =](#op_eq_eq)|[«», opérateur](#op_sv)|
 
 ## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
 
@@ -57,15 +57,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
-\ *droit*
+*Oui*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet situé à gauche de l’opérateur n’est pas vue lexicographique égal à l’objet situé à droite. Sinon, **false**.
+**`true`** Si l’objet situé à gauche de l’opérateur n’est pas vue lexicographique égal à l’objet situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -96,15 +96,15 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
-\ *droit*
+*Oui*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet situé à gauche de l’opérateur est vue lexicographique égal à l’objet situé à droite. Sinon, **false**.
+**`true`** Si l’objet situé à gauche de l’opérateur est vue lexicographique égal à l’objet situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -112,7 +112,7 @@ Une conversion implicite doit exister de *convertible_string_type* au string_vie
 
 La comparaison est basée sur une comparaison lexicographique par paire des séquences de caractères. S’ils ont le même nombre d’éléments et que les éléments sont tous égaux, les deux objets sont égaux.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>, opérateur&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
 
 Teste si l’objet situé à gauche de l’opérateur est inférieur à l’objet situé à droite sidestring_view
 
@@ -135,15 +135,15 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
-\ *droit*
+*Oui*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet situé à gauche de l’opérateur est vue lexicographique inférieur à l’objet situé à droite. Sinon, **false**.
+**`true`** Si l’objet situé à gauche de l’opérateur est vue lexicographique inférieur à l’objet situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -173,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>&lt;d’opérateur =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
 
 Teste si l’objet situé à gauche de l’opérateur est inférieur ou égal à l’objet situé à droite.
 
@@ -196,21 +196,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
-\ *droit*
+*Oui*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet situé à gauche de l’opérateur est vue lexicographique inférieur ou égal à l’objet situé à droite. Sinon, **false**.
+**`true`** Si l’objet situé à gauche de l’opérateur est vue lexicographique inférieur ou égal à l’objet situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-Consultez [&lt;d’opérateur ](#op_lt).
+Consultez [Operator &lt; ](#op_lt).
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>&lt;d’opérateur &lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>and&lt;&lt;
 
 Écrit un string_view dans un flux de sortie.
 
@@ -222,7 +222,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ostr*\
+*OSTR*\
 flux de sortie dans lequel l’écriture est effectuée.
 
 *Str*\
@@ -236,7 +236,7 @@ flux de sortie dans lequel l’écriture est effectuée.
 
 Utilisez cet opérateur pour insérer le contenu d’un string_view dans un flux de sortie, par exemple à l’aide de [std :: cout](iostream.md#cout).
 
-## <a name="operatorgt"></a><a name="op_gt"></a>, opérateur&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
 
 Teste si l’objet situé à gauche de l’opérateur est supérieur à l’objet situé à droite.
 
@@ -259,21 +259,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
-\ *droit*
+*Oui*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet situé à gauche de l’opérateur est vue lexicographique supérieur à l’objet string_view situé à droite ; Sinon, **false**.
+**`true`** Si l’objet situé à gauche de l’opérateur est vue lexicographique supérieur à l’objet string_view situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-Consultez [&lt;d’opérateur ](#op_lt).
+Consultez [Operator &lt; ](#op_lt).
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>&gt;d’opérateur =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
 
 Teste si l’objet situé à gauche de l’opérateur est supérieur ou égal à l’objet situé à droite.
 
@@ -296,23 +296,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
-\ *droit*
+*Oui*\
 Tout type de chaîne convertible ou objet de type `basic_string_view` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet situé à gauche de l’opérateur est vue lexicographique supérieur ou égal à l’objet situé à droite. Sinon, **false**.
+**`true`** Si l’objet situé à gauche de l’opérateur est vue lexicographique supérieur ou égal à l’objet situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-Consultez [&lt;d’opérateur ](#op_lt).
+Consultez [Operator &lt; ](#op_lt).
 
 ## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>opérateur «» (string_view littéral)
 
-Construit un string_view à partir d’un littéral de chaîne. Requiert l’espace de noms `std::literals::string_view_literals`.
+Construit un string_view à partir d’un littéral de chaîne. Requiert un espace de noms `std::literals::string_view_literals` .
 
 ### <a name="example"></a>Exemple
 
@@ -329,4 +329,4 @@ using namespace literals::string_view_literals;
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<string_view >](../standard-library/string-view.md)
+[\<string_view>](../standard-library/string-view.md)

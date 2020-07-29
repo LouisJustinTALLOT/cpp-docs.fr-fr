@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9007f043b64c666d463f46661cfa5f43646e26b7
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ee5cb2c3a05514b4f10f73a2b27199b8e3a5ac4b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506895"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221924"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -66,7 +66,7 @@ long double cos( long double x );  // C++ only
 *x*<br/>
 Angle en radians.
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 Cosinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
@@ -75,13 +75,13 @@ Cosinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à
 |± QNAN, IND|aucun|**_DOMAIN**|
 |FICHIER INF ±|**Non valide**|**_DOMAIN**|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **co** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **COS** prend toujours et retourne une valeur **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **co** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **COS** prend toujours et retourne un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|

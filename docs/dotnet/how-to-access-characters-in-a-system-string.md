@@ -7,22 +7,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a91f82d0377b9065c2927e61e9f2a558a49985f0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988644"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221365"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Comment : accéder aux caractères d'un System::String
 
-Vous pouvez accéder aux caractères d’un objet <xref:System.String> pour les appels haute performance à des fonctions non managées qui acceptent des chaînes `wchar_t*`. La méthode génère un pointeur intérieur vers le premier caractère de l’objet <xref:System.String>. Ce pointeur peut être manipulé directement ou épinglé et passé à une fonction qui attend une chaîne de `wchar_t` ordinaire.
+Vous pouvez accéder aux caractères d’un <xref:System.String> objet pour les appels hautes performances aux fonctions non managées qui acceptent des `wchar_t*` chaînes. La méthode génère un pointeur intérieur vers le premier caractère de l' <xref:System.String> objet. Ce pointeur peut être manipulé directement ou épinglé et passé à une fonction qui attend une **`wchar_t`** chaîne ordinaire.
 
 ## <a name="example"></a>Exemple
 
-`PtrToStringChars` retourne un <xref:System.Char>, qui est un pointeur intérieur (également appelé `byref`). En tant que tel, il est soumis à garbage collection. Vous n’êtes pas obligé d’épingler ce pointeur à moins que vous ne le passiez à une fonction native.
+`PtrToStringChars`retourne un <xref:System.Char> , qui est un pointeur intérieur (également appelé `byref` ). En tant que tel, il est soumis à garbage collection. Vous n’êtes pas obligé d’épingler ce pointeur à moins que vous ne le passiez à une fonction native.
 
-Prenons le code suivant.  L’épinglage n’est pas nécessaire, car `ppchar` est un pointeur intérieur et si le garbage collector déplace la chaîne vers laquelle il pointe, il met également à jour `ppchar`. Sans [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), le code fonctionnera et n’aura pas d’impact sur les performances potentielles causées par l’épinglage.
+Prenons le code suivant.  L’épinglage n’est pas nécessaire, car `ppchar` est un pointeur intérieur et, si le garbage collector déplace la chaîne vers laquelle il pointe, il est également mis à jour `ppchar` . Sans [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), le code fonctionnera et n’aura pas d’impact sur les performances potentielles causées par l’épinglage.
 
 Si vous transmettez `ppchar` à une fonction native, il doit s’agir d’un pointeur épingle ; le garbage collector ne sera pas en mesure de mettre à jour les pointeurs sur le frame de pile non managé.
 

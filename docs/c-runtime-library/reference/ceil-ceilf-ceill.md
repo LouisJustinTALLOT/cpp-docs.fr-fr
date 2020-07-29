@@ -35,12 +35,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 284443f511217be7873a7d7b02562484b32cefca
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221950"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -71,7 +71,7 @@ long double ceill(
 *x*<br/>
 Valeur à virgule flottante.
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 Les fonctions **ceil** retournent une valeur à virgule flottante qui représente le plus petit entier supérieur ou égal à *x*. Aucun retour d'erreur.
 
@@ -81,13 +81,13 @@ Les fonctions **ceil** retournent une valeur à virgule flottante qui représent
 
 **ceil** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorise la surcharge, vous pouvez appeler des surcharges de **ceil** qui acceptent des types **float** ou **long** **double** . Dans un programme C, **ceil** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ceil** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, **ceil** accepte et retourne toujours un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

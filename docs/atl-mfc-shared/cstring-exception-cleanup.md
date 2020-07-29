@@ -5,20 +5,20 @@ helpviewer_keywords:
 - CString objects, exceptions
 - exception handling, cleanup code
 ms.assetid: 28b9ce70-be63-4a0d-92a8-44bbfbc95e83
-ms.openlocfilehash: d131ce8ebe5158d7f3a567580064068742b63707
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48c8f1c0040236a4f7bf27a2d5ad985ae343c03a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236626"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222054"
 ---
 # <a name="cstring-exception-cleanup"></a>Nettoyage des exceptions CString
 
-Dans les versions précédentes de MFC, il était important de nettoyer [CString](../atl-mfc-shared/reference/cstringt-class.md) objets après utilisation. Avec MFC version 3.0 et versions ultérieure, un nettoyage explicite n’est plus nécessaire.
+Dans les versions précédentes de MFC, il était important de nettoyer les objets [CString](../atl-mfc-shared/reference/cstringt-class.md) après utilisation. Avec MFC version 3,0 et versions ultérieures, le nettoyage explicite n’est plus nécessaire.
 
-Sous l’exception C++ mécanisme MFC utilise désormais de gestion, il est inutile à vous soucier de nettoyage après une exception. Pour obtenir une description de la façon C++ « déroule » la pile après une exception est interceptée, consultez [try, catch et throw instructions](../cpp/try-throw-and-catch-statements-cpp.md). Même si vous utilisez la bibliothèque MFC **essayez**/**CATCH** macros au lieu des mots clés C++ **essayez** et **catch**, MFC utilise le C++ mécanisme d’exception en-dessous, donc vous toujours n’avez pas besoin nettoyer explicitement.
+Dans le cadre du mécanisme de gestion des exceptions C++ que MFC utilise, vous n’avez pas à vous soucier du nettoyage après une exception. Pour obtenir une description de la façon dont C++ « déroule » la pile après l’interception d’une exception, consultez [les instructions Try, catch et Throw](../cpp/try-throw-and-catch-statements-cpp.md). Même si vous utilisez les macros **try** / **catch** de MFC au lieu des mots clés c++ **`try`** et que **`catch`** MFC utilise le mécanisme d’exceptions c++, il n’est pas nécessaire de procéder à un nettoyage explicite.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Chaînes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Gestion des exceptions](../mfc/exception-handling-in-mfc.md)

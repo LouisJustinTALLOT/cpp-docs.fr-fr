@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 2a1b3d33534887568c6a55e320e77e0a018cafff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d4511ed7d09ff280d01214a2a177148956580ee5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366319"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221612"
 ---
 # <a name="enumerations-c"></a>Énumérations (C++)
 
 Une énumération est un type défini par l'utilisateur qui se compose d'un jeu de constantes intégrales nommées, appelées énumérateurs.
 
 > [!NOTE]
-> Cet article couvre le type isO Standard CMD Language **enum** type et le type de **classe enum d’étendue** (ou fortement typé) qui est introduit dans le C 11. Pour plus d’informations sur la **classe enum public** ou les types **de classe enum privés** dans C '/CLI et C '/CX, voir [enum classe](../extensions/enum-class-cpp-component-extensions.md).
+> Cet article décrit le type de langage C++ standard ISO **`enum`** et le type de **classe enum** (ou fortement typé) étendu qui est introduit dans C++ 11. Pour plus d’informations sur les types de classe d’énumération **publique** ou d’énumération **privée** en c++/CLI et c++/CX, consultez [enum, classe](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,19 +46,19 @@ enum class C : short;  // ... may have any integral underlying type
 
 ## <a name="parameters"></a>Paramètres
 
-*Identificateur*<br/>
+*identificateur*<br/>
 Nom de type donné à l'énumération.
 
 *type*<br/>
 Type sous-jacent des énumérateurs ; tous les énumérateurs ont le même type sous-jacent. Peut être tout type intégral.
 
-*enum-list*<br/>
-Liste délimitée par des virgules des énumérateurs dans l'énumération. Chaque nom d'énumérateur ou de variable dans la portée doit être unique. Toutefois, les valeurs peuvent être dupliquées. Dans un enum non énagéné, la portée est la portée environnante; dans un enum à portée, la portée est la *liste enum-liste elle-même.*  Dans un enum à portée, la liste peut être vide qui définit en fait un nouveau type intégral.
+*énumération-liste*<br/>
+Liste délimitée par des virgules des énumérateurs dans l'énumération. Chaque nom d'énumérateur ou de variable dans la portée doit être unique. Toutefois, les valeurs peuvent être dupliquées. Dans un enum non délimité, la portée correspond à la portée environnante ; dans une énumération délimitée, l’étendue est la *liste d’énumération* elle-même.  Dans une énumération délimitée, la liste peut être vide, ce qui définit un nouveau type intégral.
 
 *class*<br/>
-En utilisant ce mot clé dans la déclaration, vous spécifiez que l’enum est d’une portée et un *identifiant* doit être fourni. Vous pouvez également utiliser le mot clé **structurant** à la place de la **classe,** car ils sont sémantically équivalent dans ce contexte.
+En utilisant ce mot clé dans la déclaration, vous spécifiez que l’énumération est étendue et un *identificateur* doit être fourni. Vous pouvez également utiliser le **`struct`** mot clé à la place de **`class`** , car ils sont sémantiquement équivalents dans ce contexte.
 
-## <a name="enumerator-scope"></a>Portée de l’enumérateur
+## <a name="enumerator-scope"></a>Portée de l’énumérateur
 
 Une énumération fournit un contexte pour décrire une plage de valeurs qui sont représentées en tant que constantes nommées, également appelées « énumérateurs ». Dans les types d'enum C et C++ d'origine, les énumérateurs non qualifiés sont visibles dans toute la portée dans laquelle l'enum est déclaré. Dans les enums délimités, le nom de l'énumérateur doit être qualifié par le nom du type d'enum. L'exemple suivant illustre cette différence fondamentale entre les deux genres d'enums :
 
@@ -95,7 +95,7 @@ enum Suit { Diamonds = 1, Hearts, Clubs, Spades };
 
 L'énumérateur `Diamonds` reçoit la valeur `1`. Les énumérateurs suivants, si aucune valeur explicite ne leur est assignée, reçoivent la valeur de l'énumérateur précédent incrémentée d'une unité. Dans l'exemple précédent, `Hearts` aurait la valeur 2, `Clubs` aurait la valeur 3, et ainsi de suite.
 
-Chaque enumérateur est traité comme une constante et doit avoir un nom unique dans la portée où **l’enum** est défini (pour les enums nonscopes) ou dans **l’enum** lui-même (pour les enums à portée). Il n'est pas obligatoire que les valeurs fournies aux noms soient uniques. Par exemple, si la déclaration d'un enum non délimité `Suit` est la suivante :
+Chaque énumérateur est traité comme une constante et doit avoir un nom unique dans la portée où **`enum`** est défini (pour les enums non délimités) ou dans le **`enum`** lui-même (pour les énumérations délimitées). Il n'est pas obligatoire que les valeurs fournies aux noms soient uniques. Par exemple, si la déclaration d'un enum non délimité `Suit` est la suivante :
 
 ```cpp
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
@@ -105,7 +105,7 @@ Les valeurs de `Diamonds`, `Hearts`, `Clubs` et `Spades` sont respectivement 5, 
 
 ## <a name="casting-rules"></a>Règles de transtypage
 
-Les constantes enum nonscoped peuvent être implicitement converties **en int,** mais une **int** n’est jamais implicitement convertible en valeur enum. L'exemple suivant montre ce qui se produit si vous essayez d'assigner à `hand` une valeur qui n'est pas un `Suit` :
+Les constantes enum non délimitées peuvent être implicitement converties en **`int`** , mais une **`int`** n’est jamais implicitement convertible en valeur enum. L'exemple suivant montre ce qui se produit si vous essayez d'assigner à `hand` une valeur qui n'est pas un `Suit` :
 
 ```cpp
 int account_num = 135692;
@@ -113,7 +113,7 @@ Suit hand;
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
 ```
 
-Un plâtre est nécessaire pour convertir un **int en** un enumérateur à portée ou nonscope. Toutefois, vous pouvez promouvoir un énumérateur non délimité en valeur entière sans transtypage.
+Un cast est nécessaire pour convertir **`int`** en un énumérateur délimités ou délimités. Toutefois, vous pouvez promouvoir un énumérateur non délimité en valeur entière sans transtypage.
 
 ```cpp
 int account_num = Hearts; //OK if Hearts is in a unscoped enum
@@ -143,15 +143,15 @@ namespace ScopedEnumConversions
 
 Notez que la ligne `hand = account_num;` provoque toujours l'erreur avec les enums non délimités, comme indiqué précédemment. Elle est autorisée avec un transtypage explicite. Toutefois, avec les enums délimités, la tentative de conversion dans l'instruction suivante, `account_num = Suit::Hearts;`, n'est plus autorisée sans transtypage explicite.
 
-## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Enums sans enumérateurs
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Enums sans énumérateurs
 
-**Visual Studio 2017 version 15.3 et plus tard** (disponible avec [/std:c '17](../build/reference/std-specify-language-standard-version.md)): En définissant un enum (régulier ou portée) avec un type sous-jacent explicite et aucun enumérateur, vous pouvez en effet introduire un nouveau type intégral qui n’a pas de conversion implicite à tout autre type. En utilisant ce type au lieu de son type sous-jacent intégré, vous pouvez éliminer le risque d’erreurs subtiles causées par des conversions implicites involontaires.
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : en définissant un enum (normal ou étendu) avec un type sous-jacent explicite et sans énumérateurs, vous pouvez en effet introduire un nouveau type intégral qui n’a pas de conversion implicite vers un autre type. En utilisant ce type au lieu de son type sous-jacent intégré, vous pouvez éliminer le risque d’erreurs subtiles causées par des conversions implicites involontaires.
 
 ```cpp
 enum class byte : unsigned char { };
 ```
 
-Le nouveau type est une copie exacte du type sous-jacent, et a donc la même convention d’appel, ce qui signifie qu’il peut être utilisé à travers LES ATI sans aucune pénalité de performance. Aucune fonte n’est requise lorsque les variables du type sont parascées en utilisant l’initialisation de la liste directe. L’exemple suivant montre comment initialiser les enums sans enumérateurs dans divers contextes :
+Le nouveau type est une copie exacte du type sous-jacent et, par conséquent, a la même convention d’appel, ce qui signifie qu’il peut être utilisé sur les Abi sans aucune altération des performances. Aucune conversion n’est requise lorsque les variables du type sont initialisées à l’aide de l’initialisation directe de la liste. L’exemple suivant montre comment initialiser des enums sans énumérateurs dans différents contextes :
 
 ```cpp
 enum class byte : unsigned char { };
@@ -183,5 +183,5 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Déclarations d'énumération C](../c-language/c-enumeration-declarations.md)<br/>
+[Déclarations d’énumération C](../c-language/c-enumeration-declarations.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)

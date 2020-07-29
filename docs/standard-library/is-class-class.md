@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4122ad2b4adbd0ed290f26428560c569b3754d7d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456651"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222444"
 ---
-# <a name="isclass-class"></a>is_class, classe
+# <a name="is_class-class"></a>is_class, classe
 
 Teste si le type est une classe.
 
@@ -32,9 +32,9 @@ Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est un type défini comme une **classe** ou un **struct**, ou `cv-qualified` une forme de l’un d’eux. sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type défini comme **`class`** ou **`struct`** , ou comme une `cv-qualified` forme de l’un d’eux. sinon, sa valeur est false.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // std__type_traits__is_class.cpp
@@ -63,14 +63,14 @@ is_class<trivial> == true
 is_class<int> == false
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[is_compound, classe](../standard-library/is-compound-class.md)\
-[is_union, classe](../standard-library/is-union-class.md)
+[Classe is_compound](../standard-library/is-compound-class.md)\
+[Classe is_union](../standard-library/is-union-class.md)

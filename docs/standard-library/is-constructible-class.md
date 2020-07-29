@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-ms.openlocfilehash: dc0596ac7a3fc2bcbcbe49f5fa4b20a971e5e445
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a968efa5a867a3fd0e60594784cdb11122a974b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452860"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222405"
 ---
-# <a name="isconstructible-class"></a>is_constructible, classe
+# <a name="is_constructible-class"></a>is_constructible, classe
 
 Teste si un type est constructible quand les types d’arguments spécifiés sont utilisés.
 
@@ -34,11 +34,11 @@ Types d’arguments à faire correspondre dans un constructeur de *T*.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *T* est constructible à l’aide des types d’arguments dans *args*. sinon, sa valeur est false. Le type *T* est constructible si la définition `T t(std::declval<Args>()...);` de la variable est bien formée. *T* et tous les types dans *args* doivent tous deux être des types complets, **void**ou des tableaux de limites inconnues.
+Une instance du prédicat de type a la valeur true si le type *T* est constructible à l’aide des types d’arguments dans *args*. sinon, sa valeur est false. Le type *T* est constructible si la définition de la variable `T t(std::declval<Args>()...);` est bien formée. *T* et tous les types dans *args* doivent tous deux être des types complets, **`void`** , ou des tableaux de limites inconnues.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

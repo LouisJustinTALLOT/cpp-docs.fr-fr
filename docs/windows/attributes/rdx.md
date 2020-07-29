@@ -1,17 +1,17 @@
 ---
-title: RDX (C++ attribut com)
+title: RDX (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5f0981f249653b1068e2fbec3d02d3209d5f935
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214628"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232753"
 ---
 # <a name="rdx"></a>rdx
 
@@ -32,11 +32,11 @@ Nom de la clé à créer ou ouvrir.
 Facultatif Spécifie le champ de valeur à définir. Si un champ de valeur portant ce nom n’existe pas déjà dans la clé, il est ajouté.
 
 *regtype*<br/>
-Type de clé de Registre ajoutée. Il peut s’agir de l’une des valeurs suivantes : `text`, `dword`, `binary`ou `CString`.
+Type de clé de Registre ajoutée. Il peut s’agir de l’une des valeurs suivantes : `text` ,, `dword` `binary` ou `CString` .
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **RDX** C++ crée ou modifie une clé de Registre existante pour un composant com. L’attribut ajoute une macro BEGIN_RDX_MAP à l’objet qui implémente le membre cible. `RegistryDataExchange`, une fonction injectée à la suite de la macro BEGIN_RDX_MAP, peut être utilisée pour transférer des données entre le registre et les membres de données.
+L’attribut C++ **RDX** crée ou modifie une clé de Registre existante pour un composant com. L’attribut ajoute une macro BEGIN_RDX_MAP à l’objet qui implémente le membre cible. `RegistryDataExchange`, une fonction injectée à la suite de la macro BEGIN_RDX_MAP, peut être utilisée pour transférer des données entre le registre et les membres de données.
 
 Cet attribut peut être utilisé conjointement avec les attributs [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) ou d’autres attributs qui impliquent l’un de ces attributs.
 
@@ -46,8 +46,8 @@ Cet attribut peut être utilisé conjointement avec les attributs [coclass](cocl
 
 |||
 |-|-|
-|**S'applique à**|membre de **classe** ou de **struct**|
-|**Renouvelable**|Non|
+|**S’applique à**|**`class`****`struct`** membre ou|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: 79e37d8c464a009e4a5196aeacc8d4a718e355b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f98b5698ff14349abf9300799f00c6d9121bcf65
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370970"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222262"
 ---
 # <a name="max_variable_size-class"></a>max_variable_size, classe
 
@@ -44,18 +44,18 @@ class max_variable_size
 |Fonction membre|Description|
 |-|-|
 |[allocated](#allocated)|Incrémente le nombre de blocs de mémoire alloués.|
-|[deallocated](#deallocated)|Décrémente le nombre de blocs de mémoire alloués.|
-|[Plein](#full)|Retourne une valeur qui indique si davantage de blocs de mémoire doivent être ajoutés à la liste libre.|
-|[Libéré](#released)|Décrémente le nombre de blocs de mémoire dans la liste libre.|
+|[désalloué](#deallocated)|Décrémente le nombre de blocs de mémoire alloués.|
+|[full](#full)|Retourne une valeur qui indique si davantage de blocs de mémoire doivent être ajoutés à la liste libre.|
+|[incluses](#released)|Décrémente le nombre de blocs de mémoire dans la liste libre.|
 |[saved](#saved)|Incrémente le nombre de blocs de mémoire dans la liste libre.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<allocators>
+**En-tête :**\<allocators>
 
 **Espace de noms :** stdext
 
-## <a name="max_variable_sizeallocated"></a><a name="allocated"></a>max_variable_size::allocated
+## <a name="max_variable_sizeallocated"></a><a name="allocated"></a>max_variable_size :: allouée
 
 Incrémente le nombre de blocs de mémoire alloués.
 
@@ -71,9 +71,9 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction de membre ajoute *_Nx* `_Nallocs`à la valeur stockée . Cette fonction de membre est `cache_freelist::allocate` appelée après chaque appel réussi par l’opérateur **nouveau**. L’argument *_Nx* est le nombre de blocs de mémoire dans le morceau alloué par l’opérateur **nouveau**.
+Cette fonction membre ajoute *_Nx* à la valeur stockée `_Nallocs` . Cette fonction membre est appelée après chaque appel réussi par `cache_freelist::allocate` à l’opérateur **`new`** . L’argument *_Nx* est le nombre de blocs de mémoire dans le segment alloué par l’opérateur **`new`** .
 
-## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a>max_variable_size::délolocated
+## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a>max_variable_size ::d eallocated
 
 Décrémente le nombre de blocs de mémoire alloués.
 
@@ -89,9 +89,9 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre soustrait *_Nx* de `_Nallocs`la valeur stockée . Cette fonction de membre est `cache_freelist::deallocate` appelée après chaque appel par l’opérateur **supprimer**. L’argument *_Nx* est le nombre de blocs de mémoire dans le morceau deallocated par l’opérateur **supprimer**.
+La fonction membre soustrait *_Nx* de la valeur stockée `_Nallocs` . Cette fonction membre est appelée après chaque appel par `cache_freelist::deallocate` à l’opérateur **`delete`** . L’argument *_Nx* est le nombre de blocs de mémoire dans le segment libéré par l’opérateur **`delete`** .
 
-## <a name="max_variable_sizefull"></a><a name="full"></a>max_variable_size::plein
+## <a name="max_variable_sizefull"></a><a name="full"></a>max_variable_size :: Full
 
 Retourne une valeur qui indique si davantage de blocs de mémoire doivent être ajoutés à la liste libre.
 
@@ -101,13 +101,13 @@ bool full();
 
 ### <a name="return-value"></a>Valeur de retour
 
-**vrai** `_Nallocs / 16 + 16 <= _Nblocks`si .
+**`true`** Si `_Nallocs / 16 + 16 <= _Nblocks` .
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre est appelée par `cache_freelist::deallocate`. Si l’appel `deallocate` revient **vrai,** met le bloc de mémoire sur la liste libre; s’il retourne `deallocate` faux, les appels **suppriment** l’opérateur pour régler le bloc.
+Cette fonction membre est appelée par `cache_freelist::deallocate`. Si l’appel retourne **`true`** `deallocate` la valeur, place le bloc de mémoire sur la liste libre ; si elle retourne false, `deallocate` appelle l’opérateur **`delete`** pour libérer le bloc.
 
-## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a>max_variable_size::max_variable_size
+## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a>max_variable_size :: max_variable_size
 
 Construit un objet de type `max_variable_size`.
 
@@ -119,7 +119,7 @@ max_variable_size();
 
 Le constructeur initialise les valeurs stockées `_Nblocks` et `_Nallocs` à zéro.
 
-## <a name="max_variable_sizereleased"></a><a name="released"></a>max_variable_size::libéré
+## <a name="max_variable_sizereleased"></a><a name="released"></a>max_variable_size :: relâché
 
 Décrémente le nombre de blocs de mémoire dans la liste libre.
 
@@ -131,7 +131,7 @@ void released();
 
 Cette fonction membre décrémente la valeur stockée `_Nblocks`. La fonction membre `released` de la classe max actuelle est appelée par `cache_freelist::allocate` chaque fois qu’elle supprime un bloc de mémoire de la liste libre.
 
-## <a name="max_variable_sizesaved"></a><a name="saved"></a>max_variable_size::sauvé
+## <a name="max_variable_sizesaved"></a><a name="saved"></a>max_variable_size :: saved
 
 Incrémente le nombre de blocs de mémoire dans la liste libre.
 
@@ -145,4 +145,4 @@ Cette fonction membre incrémente la valeur stockée `_Nblocks`. Cette fonction 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<les allocataires>](../standard-library/allocators-header.md)
+[\<allocators>](../standard-library/allocators-header.md)

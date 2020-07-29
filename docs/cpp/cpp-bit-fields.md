@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170603"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221781"
 ---
 # <a name="c-bit-fields"></a>Champs de bits C++
 
@@ -43,16 +43,16 @@ struct Date {
 
 La disposition de mémoire conceptuelle d'un objet de type `Date` est illustrée dans la figure suivante.
 
-![Disposition de la mémoire d’un objet date](../cpp/media/vc38uq1.png "Graphique Disposition en mémoire d'un objet date") <br/>
+![Graphique Disposition en mémoire d'un objet date](../cpp/media/vc38uq1.png "Graphique Disposition en mémoire d'un objet date") <br/>
 Disposition de la mémoire d'un objet Date
 
-Notez que `nYear` a une longueur de 8 bits et dépasserait la limite de mot du type déclaré, **unsigned** **short**. Par conséquent, il est commencé au début d’un nouveau **unsigned** **short**. Il n'est pas nécessaire que tous les champs de bits tiennent dans un objet du type sous-jacent ; de nouvelles unités de stockage sont allouées en fonction du nombre de bits demandé dans la déclaration.
+Notez que `nYear` est de 8 bits de long et déborderait la limite de mot du type déclaré, **`unsigned short`** . Par conséquent, il est lancé au début d’un nouveau **`unsigned short`** . Il n'est pas nécessaire que tous les champs de bits tiennent dans un objet du type sous-jacent ; de nouvelles unités de stockage sont allouées en fonction du nombre de bits demandé dans la déclaration.
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Le classement des données déclarées comme champs de bits s'étend du bit faible au bit de poids fort, comme illustré dans la figure ci-dessus.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 Si la déclaration d'une structure inclut un champ sans nom de longueur 0, comme indiqué dans l'exemple suivant,
 
@@ -70,12 +70,12 @@ struct Date {
 
 la disposition de la mémoire est ensuite illustrée dans la figure suivante :
 
-![Disposition d’un objet date avec&#45;un champ de bits de longueur zéro](../cpp/media/vc38uq2.png "Disposition d’un objet date avec&#45;un champ de bits de longueur zéro") <br/>
+![Disposition d’un objet date avec un champ de bits de longueur&#45;zéro](../cpp/media/vc38uq2.png "Disposition d’un objet date avec un champ de bits de longueur&#45;zéro") <br/>
 Disposition d'un objet Date avec un champ de bits de longueur 0
 
 Le type sous-jacent d’un champ de bits doit être un type intégral, comme décrit dans [types intégrés](../cpp/fundamental-types-cpp.md).
 
-Si l’initialiseur d’une référence de type `const T&` est une lvalue qui fait référence à un champ de bits de type `T`, la référence n’est pas liée directement au champ de bits. Au lieu de cela, la référence est liée à un temporaire initialisé pour contenir la valeur du champ de bits.
+Si l’initialiseur d’une référence de type `const T&` est une lvalue qui fait référence à un champ de bits de type `T` , la référence n’est pas liée directement au champ de bits. Au lieu de cela, la référence est liée à un temporaire initialisé pour contenir la valeur du champ de bits.
 
 ## <a name="restrictions-on-bit-fields"></a>Restrictions sur les champs de bits
 
@@ -83,7 +83,7 @@ La liste suivante détaille les opérations erronées sur les champs de bits :
 
 - Prise de l'adresse d'un champ de bits.
 
-- Initialisation d’une référence non**const** avec un champ de bits.
+- Initialisation d’une non- **`const`** référence avec un champ de bits.
 
 ## <a name="see-also"></a>Voir aussi
 

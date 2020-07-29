@@ -10,18 +10,18 @@ helpviewer_keywords:
 - dllimport __declspec keyword
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
-ms.openlocfilehash: 0a8d90770552b8b9ab9169378289108d91811216
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f03c945375cbe8c399e604e12f070b5a63d316f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189453"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221651"
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Les attributs de classe de stockage **dllexport** et **DllImport** sont des extensions spécifiques à Microsoft pour le C++ langage C et les langages. Vous pouvez les utiliser pour exporter et importer des fonctions, des données et des objets vers ou depuis une DLL.
+Les **`dllexport`** **`dllimport`** attributs de classe de stockage et sont des extensions spécifiques à Microsoft pour les langages C et C++. Vous pouvez les utiliser pour exporter et importer des fonctions, des données et des objets vers ou depuis une DLL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,15 +32,15 @@ Les attributs de classe de stockage **dllexport** et **DllImport** sont des exte
 
 ## <a name="remarks"></a>Notes
 
-Ces attributs définissent explicitement l'interface de la DLL à son client, qui peut être un fichier exécutable ou une autre DLL. La déclaration de fonctions en tant que **dllexport** élimine la nécessité d’un fichier de définition de module (. def), au moins en ce qui concerne la spécification des fonctions exportées. L’attribut **dllexport** remplace le mot clé **__export** .
+Ces attributs définissent explicitement l'interface de la DLL à son client, qui peut être un fichier exécutable ou une autre DLL. Déclarer des fonctions comme **`dllexport`** élimine la nécessité d’un fichier de définition de module (. def), au moins en ce qui concerne la spécification des fonctions exportées. L' **`dllexport`** attribut remplace le mot clé **__export** .
 
 Si une classe est marquée declspec(dllexport), les spécialisations des modèles de classe dans la hiérarchie de classes sont implicitement marquées comme declspec(dllexport). Cela signifie que les modèles de classe sont instanciés explicitement et que les membres de la classe doivent être définis.
 
-le **dllexport** d’une fonction expose la fonction avec son nom décoré. Pour les fonctions C++, cela inclut l'altération des noms. Pour les fonctions C ou les fonctions déclarées comme `extern "C"`, cela inclut la décoration propre à la plateforme basée sur la convention d’appel. Pour plus d’informations sur la décoration desC++ noms en C/code, consultez [noms décorés](../build/reference/decorated-names.md). Aucune décoration de nom n’est appliquée aux fonctions C exportées ni aux fonctions `extern "C"` C++ à l’aide de la convention d’appel `__cdecl`.
+**`dllexport`** d’une fonction expose la fonction avec son nom décoré. Pour les fonctions C++, cela inclut l'altération des noms. Pour les fonctions C ou les fonctions déclarées comme `extern "C"`, cela inclut la décoration propre à la plateforme basée sur la convention d’appel. Pour plus d’informations sur la décoration de noms dans le code C/C++, consultez [noms décorés](../build/reference/decorated-names.md). Aucune décoration de nom n’est appliquée aux fonctions C exportées ou aux `extern "C"` fonctions C++ à l’aide de la **`__cdecl`** Convention d’appel.
 
-Pour exporter un nom non décoré, vous pouvez établir un lien à l'aide d'un fichier de définition de module (.def) qui définit le nom non décoré dans une section EXPORTS. Pour plus d’informations, consultez [exportations](../build/reference/exports.md). Une autre façon d’exporter un nom non décoré consiste à utiliser une directive `#pragma comment(linker, "/export:alias=decorated_name")` dans le code source.
+Pour exporter un nom non décoré, vous pouvez établir un lien à l'aide d'un fichier de définition de module (.def) qui définit le nom non décoré dans une section EXPORTS. Pour plus d’informations, consultez [exportations](../build/reference/exports.md). Une autre façon d’exporter un nom non décoré consiste à utiliser une `#pragma comment(linker, "/export:alias=decorated_name")` directive dans le code source.
 
-Quand vous déclarez **dllexport** ou **DllImport**, vous devez utiliser la [syntaxe d’attribut étendu](../cpp/declspec.md) et le mot clé **__declspec** .
+Lorsque vous déclarez **`dllexport`** ou **`dllimport`** , vous devez utiliser la [syntaxe d’attribut étendu](../cpp/declspec.md) et le **`__declspec`** mot clé.
 
 ## <a name="example"></a>Exemple
 
@@ -66,13 +66,13 @@ Pour plus d'informations, consultez les pages suivantes :
 
 - [Définitions et déclarations](../cpp/definitions-and-declarations-cpp.md)
 
-- [Définition de fonctions C++ incorporées avec dllexport et dllimport](../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md)
+- [Définition de fonctions inline C++ avec dllexport et dllimport](../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md)
 
 - [Règles générales et limitations](../cpp/general-rules-and-limitations.md)
 
 - [Utilisation de dllimport et dllexport dans les classes C++](../cpp/using-dllimport-and-dllexport-in-cpp-classes.md)
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

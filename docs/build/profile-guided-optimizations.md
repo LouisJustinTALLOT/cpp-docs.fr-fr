@@ -5,12 +5,12 @@ helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: 062f8fb8138446e4a00ba6501d6eeb8571625749
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777316"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232727"
 ---
 # <a name="profile-guided-optimizations"></a>Optimisations guidées par profil
 
@@ -68,7 +68,7 @@ Les optimisations guidées par profil incluent les vérifications et les amélio
 
 - **Disposition des fonctions** : selon le graphique des appels et le comportement de l’appelant/appelé profilé, les fonctions qui ont tendance à se trouver le long du même chemin d’exécution sont placées dans la même section.
 
-- **Optimisation des branches conditionnelles** : avec les sondes de valeur, les optimisations guidées par profil peuvent déterminer si une valeur donnée dans une instruction switch est utilisée plus souvent que d’autres valeurs.  Cette valeur peut ensuite être tirée de l’instruction switch.  Il en va de même pour les `if` instructions... `else` dans lesquelles l’optimiseur peut commander le `if` ... de `else` sorte que le `if` bloc ou soit `else` placé en premier, en fonction du bloc qui est plus souvent true.
+- **Optimisation des branches conditionnelles** : avec les sondes de valeur, les optimisations guidées par profil peuvent déterminer si une valeur donnée dans une instruction switch est utilisée plus souvent que d’autres valeurs.  Cette valeur peut ensuite être tirée de l’instruction switch.  Il en va de même pour les **`if`** instructions... **`else`** dans lesquelles l’optimiseur peut commander le **`if`** ... de **`else`** sorte que le **`if`** bloc ou soit **`else`** placé en premier, en fonction du bloc qui est plus souvent true.
 
 - **Séparation du code mort** : le code qui n’est pas appelé pendant le profilage est déplacé vers une section spéciale qui est ajoutée à la fin de l’ensemble de sections. En fait, cette section est conservée dans les pages les plus fréquemment utilisées.
 

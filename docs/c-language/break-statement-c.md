@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C]
 ms.assetid: 015627c7-0924-49b2-a4d1-c77edf5eae6a
-ms.openlocfilehash: b38ff6c535c142bd15ea09a4d7c80010c3fff31f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46173ceebd7291336c18d36203d1e4dc59ce46d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313361"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222002"
 ---
 # <a name="break-statement-c"></a>break, instruction (C)
 
-L'instruction `break` termine l'exécution de l'instruction `do`, `for`, `switch` ou `while` englobante la plus proche dans laquelle elle figure. Le contrôle est transmis à l'instruction qui suit l'instruction terminée.
+L' **`break`** instruction termine l’exécution de l’instruction,, ou englobante la plus proche **`do`** **`for`** **`switch`** **`while`** dans laquelle elle apparaît. Le contrôle est transmis à l'instruction qui suit l'instruction terminée.
 
 ## <a name="syntax"></a>Syntaxe
 
 *instruction Jump*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**break ;**
 
-L'instruction `break` est fréquemment utilisée pour mettre fin au traitement d'un cas particulier dans une instruction `switch`. L'absence d'une instruction itérative ou `switch` englobante génère une erreur.
+L' **`break`** instruction est fréquemment utilisée pour mettre fin au traitement d’un cas particulier dans **`switch`** une instruction. L’absence d’une instruction itérative englobante **`switch`** génère une erreur.
 
-Dans les instructions imbriquées, l'instruction `break` met un terme uniquement à l'instruction `do`, `for`, `switch` ou `while` qui l'englobe immédiatement. Vous pouvez utiliser une instruction `return` ou `goto` pour transférer le contrôle hors de la structure imbriquée.
+Dans les instructions imbriquées, l' **`break`** instruction met un terme **`do`** uniquement **`for`** à l’instruction,, **`switch`** ou **`while`** qui l’englobe immédiatement. Vous pouvez utiliser une **`return`** **`goto`** instruction ou pour transférer le contrôle à un autre endroit de la structure imbriquée.
 
-L'exemple suivant illustre l'instruction `break` :
+Cet exemple illustre l' **`break`** instruction :
 
 ```
 #include <stdio.h>
@@ -45,4 +45,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Instruction break](../cpp/break-statement-cpp.md)
+[Break (instruction)](../cpp/break-statement-cpp.md)

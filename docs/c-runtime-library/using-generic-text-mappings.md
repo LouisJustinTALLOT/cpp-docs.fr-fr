@@ -27,40 +27,40 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: aa6827607430bf8f0db37997bac0223833fcd171
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747928"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221872"
 ---
 # <a name="using-generic-text-mappings"></a>Utilisation des mappages de texte générique
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Pour simplifier le développement de code pour les marchés internationaux, la bibliothèque Runtime Microsoft fournit des mappages de « texte générique » spécifiques à Microsoft pour de nombreux types de données, routines et autres objets. Ces mappages sont définis dans TCHAR.H. Vous pouvez utiliser ces mappages de noms pour écrire du code générique compilable pour l’un des trois types de jeux de caractères : ASCII (SBCS), MBCS ou Unicode, en fonction d’une constante de manifeste que vous définissez à l’aide d’une instruction `#define`. Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.
+Pour simplifier le développement de code pour les marchés internationaux, la bibliothèque Runtime Microsoft fournit des mappages de « texte générique » spécifiques à Microsoft pour de nombreux types de données, routines et autres objets. Ces mappages sont définis dans TCHAR.H. Vous pouvez utiliser ces mappages de nom pour écrire du code générique qui peut être compilé pour n’importe lequel des trois types de jeux de caractères : ASCII (SBCS), MBCS ou Unicode, en fonction d’une constante manifeste que vous définissez à l’aide d’une instruction `#define`. Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Directives de préprocesseur pour les mappages de texte générique
 
 |#define|Version compilée|Exemple|
 |--------------|----------------------|-------------|
-|`_UNICODE`|Unicode (caractères larges)|`_tcsrev` correspond à `_wcsrev`|
-|`_MBCS`|Caractères multioctets|`_tcsrev` correspond à `_mbsrev`|
-|Aucun (la valeur par défaut : ni `_UNICODE` ni `_MBCS` défini)|SBCS (ASCII)|`_tcsrev` correspond à `strrev`|
+|`_UNICODE`|Unicode (caractères larges)|`_tcsrev` est mappé à `_wcsrev`|
+|`_MBCS`|Caractères multioctets|`_tcsrev` est mappé à `_mbsrev`|
+|Aucun (la valeur par défaut : ni `_UNICODE` ni `_MBCS` défini)|SBCS (ASCII)|`_tcsrev` est mappé à `strrev`|
 
 Par exemple, la fonction de texte générique `_tcsrev`, définie dans TChar.h, est mappée à `mbsrev` si `MBCS` a été défini dans votre programme, ou à `_wcsrev` si `_UNICODE` a été défini. Sinon, `_tcsrev` est mappée à `strrev`.
 
-Le type de données texte générique `_TCHAR`, également défini dans TCHAR.H, correspond au type `char` si `_MBCS` est défini, au type `wchar_t` si `_UNICODE` est défini et au type `char` si aucune constante n’est définie. Les autres mappages de type de données sont fournis dans TCHAR.H pour faciliter la programmation, mais `_TCHAR` est le type le plus utile.
+Type de données de texte générique `_TCHAR` , également défini dans Tchar. H, mappe au type **`char`** si `_MBCS` est défini, au type **`wchar_t`** si `_UNICODE` est défini et au type **`char`** si aucune constante n’est définie. Les autres mappages de type de données sont fournis dans TCHAR.H pour faciliter la programmation, mais `_TCHAR` est le type le plus utile.
 
 ### <a name="generic-text-data-type-mappings"></a>Mappages de types de données de texte générique
 
 |Nom de type de données de texte générique|SBCS (_UNICODE, _MBCS non définis)|_MBCS défini|_UNICODE défini|
 |----------------------------------|--------------------------------------------|--------------------|-----------------------|
-|`_TCHAR`|`char`|`char`|`wchar_t`|
-|`_TINT`|`int`|`int`|`wint_t`|
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
+|`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
+|`_TINT`|**`int`**|**`int`**|`wint_t`|
+|`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
+|`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
+|`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
 |`_T` ou `_TEXT`|Aucun effet (supprimé par le préprocesseur)|Aucun effet (supprimé par le préprocesseur)|`L` (convertit le caractère suivant ou la chaîne suivante en son équivalent Unicode)|
 
 Pour obtenir une liste complète des mappages de texte générique de routines, variables et autres objets, consultez [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md).
@@ -95,7 +95,7 @@ RetVal = strrev(szString);
 
 Par conséquent, vous pouvez écrire, maintenir et compiler un fichier de code source unique à exécuter avec des routines qui sont spécifiques à un des trois types de jeu de caractères.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

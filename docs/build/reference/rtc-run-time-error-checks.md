@@ -25,16 +25,16 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49f0e4bace5f3dd199b58854e838204bd2cd5f3b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318548"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222015"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Vérifications des erreurs au moment de l'exécution)
 
-Utilisé pour activer et désactiver la fonctionnalité de vérifications d’erreur d’exécution, conjointement avec le [runtime_checks](../../preprocessor/runtime-checks.md) pragma.
+Utilisé pour activer et désactiver la fonctionnalité de vérification des erreurs au moment de l’exécution, conjointement avec le pragma [runtime_checks](../../preprocessor/runtime-checks.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,12 +48,12 @@ Utilisé pour activer et désactiver la fonctionnalité de vérifications d’er
 ## <a name="arguments"></a>Arguments
 
 **1**<br/>
-Équivalent de **/RTC**`su`.
+Équivalent de **/RTC** `su` .
 
-**c**<br/>
-Signale le moment où une valeur est affectée à un type de données plus petits et entraîne une perte de données. Par exemple, si une valeur de type `short 0x101` est affectée à une variable de type `char`.
+**secteur**<br/>
+Signale quand une valeur est assignée à un type de données plus petit et entraîne une perte de données. Par exemple, si une valeur de type `short 0x101` est assignée à une variable de type **`char`** .
 
-Cette option signale les situations dans lesquelles vous souhaitez tronquer, par exemple, si vous souhaitez que les huit premiers bits d’un `int` retourné comme un `char`. Étant donné que **/RTC** `c` provoque une erreur si les informations sont perdues suite à l’affectation, vous pouvez masquer les informations nécessaires pour éviter une erreur d’exécution comme résultat de **/RTC** `c`. Exemple :
+Cette option signale les situations dans lesquelles vous envisagez de tronquer, par exemple, si vous souhaitez que les huit premiers bits d’un **`int`** retournés sous forme de **`char`** . Comme **/RTC** `c` provoque une erreur d’exécution si des informations sont perdues à la suite de l’assignation, vous pouvez masquer les informations dont vous avez besoin pour éviter une erreur d’exécution à la suite de **/RTC** `c` . Par exemple :
 
 ```
 #include <crtdbg.h>
@@ -70,19 +70,19 @@ int main() {
 }
 ```
 
-**s**<br/>
-Permet aux vérifications frame de pile erreur d’exécution, comme suit :
+**x**<br/>
+Active la vérification des erreurs au moment de l’exécution du frame de pile, comme suit :
 
-- Initialisation de variables locales à une valeur différente de zéro. Cela permet d’identifier les bogues qui n’apparaissent pas lors de l’exécution en mode débogage. Il est très probable que les variables de pile sera toujours égal à zéro dans une version debug par rapport à une version Release en raison des optimisations du compilateur des variables de pile dans une version Release. Une fois qu’un programme a utilisé une zone de sa pile, il n’est jamais réinitialisé à 0 par le compilateur. Par conséquent, les variables de pile suivantes non initialisées qui se produisent pour utiliser la même zone de pile peuvent retourner des valeurs créés à partir de l’utilisation de cette mémoire de la pile.
+- Initialisation des variables locales à une valeur différente de zéro. Cela permet d’identifier les bogues qui n’apparaissent pas lors de l’exécution en mode débogage. Il est plus probable que les variables de pile soient toujours égales à zéro dans une version Debug par rapport à une version Release en raison des optimisations du compilateur des variables de pile dans une version Release. Une fois qu’un programme a utilisé une zone de sa pile, il n’est jamais réinitialisé à 0 par le compilateur. Par conséquent, les variables de pile non initialisées suivantes qui utilisent la même zone de pile peuvent retourner des valeurs à partir de l’utilisation antérieure de cette mémoire de pile.
 
-- Détection des dépassements et de sous-utilisation des variables locales, tels que des tableaux. **/ RTC** `s` ne détecte pas les dépassements de lors de l’accès mémoire qui résulte de remplissage du compilateur dans une structure. Remplissage peut se produire à l’aide de [aligner](../../cpp/align-cpp.md), [/Zp (alignement des membres de Struct)](zp-struct-member-alignment.md), ou [pack](../../preprocessor/pack.md), ou si vous ordonnez les éléments de la structure de manière à exiger au compilateur d’ajouter une marge intérieure.
+- Détection des dépassements et des sous-exécutions de variables locales telles que les tableaux. **/RTC** `s` ne détecte pas les dépassements lors de l’accès à la mémoire qui résulte du remplissage du compilateur au sein d’une structure. Le remplissage peut être effectué à l’aide de [align](../../cpp/align-cpp.md), [/Zp (alignement des membres de la structure)](zp-struct-member-alignment.md)ou [Pack](../../preprocessor/pack.md), ou si vous ordonnez des éléments de structure de telle sorte que le compilateur doit ajouter un remplissage.
 
-- Vérification de pointeur de pile, qui détecte l’altération de pointeur de pile. Corruption de pointeur de pile peut être dû à une discordance de convention d’appel. Par exemple, à l’aide d’un pointeur de fonction, vous appelez une fonction dans une DLL qui est exportée en tant que [__stdcall](../../cpp/stdcall.md) , mais vous déclarez le pointeur désignant la fonction en tant que [__cdecl](../../cpp/cdecl.md).
+- Vérification du pointeur de pile, qui détecte l’altération du pointeur de pile. La corruption du pointeur de pile peut être due à une incompatibilité de convention d’appel. Par exemple, à l’aide d’un pointeur de fonction, vous appelez une fonction dans une DLL exportée en tant que [__stdcall](../../cpp/stdcall.md) , mais vous déclarez le pointeur vers la fonction comme [__cdecl](../../cpp/cdecl.md).
 
 **u**<br/>
-Signale le moment où une variable est utilisée sans avoir été initialisées. Par exemple, une instruction qui génère `C4701` peut également générer une erreur au moment de l’exécution sous **/RTC**`u`. Toute instruction qui génère [Avertissement du compilateur (niveaux 1 et 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) génère une erreur au moment de l’exécution sous **/RTC**`u`.
+Signale quand une variable est utilisée sans avoir été initialisée. Par exemple, une instruction qui génère `C4701` peut également générer une erreur au moment de l’exécution sous **/RTC** `u` . Toute instruction qui génère un [Avertissement du compilateur (niveau 1 et niveau 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) génère une erreur d’exécution sous **/RTC** `u` .
 
-Toutefois, prenons le fragment de code suivant :
+Toutefois, considérons le fragment de code suivant :
 
 ```cpp
 int a, *b, c;
@@ -91,27 +91,27 @@ b = &a;
 c = a;  // No run-time error with /RTCu
 ```
 
-Si une variable aurait pu être initialisée, elle n’est pas signalée au moment de l’exécution par **/RTC**`u`. Par exemple, une fois une variable alias via un pointeur, le compilateur pas suit la variable et signaler les utilisations non initialisées. En effet, vous pouvez initialiser une variable en tirant son adresse. Le & opérateur fonctionne comme un opérateur d’assignation dans cette situation.
+Si une variable a pu être initialisée, elle ne sera pas signalée au moment de l’exécution par **/RTC** `u` . Par exemple, après qu’une variable a un alias à travers un pointeur, le compilateur n’effectue pas le suivi de la variable et signale des utilisations non initialisées. En effet, vous pouvez initialiser une variable en acceptant son adresse. L’opérateur & fonctionne comme un opérateur d’assignation dans ce cas.
 
 ## <a name="remarks"></a>Notes
 
-Vérifications des erreurs au moment de l’exécution sont un moyen de rechercher des problèmes dans votre code en cours d’exécution. Pour plus d’informations, consultez [Comment : utiliser les vérifications natives à l’exécution](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Les vérifications des erreurs au moment de l’exécution vous permettent de trouver des problèmes dans votre code en cours d’exécution. Pour plus d’informations, consultez [Comment : utiliser les contrôles natifs à l’exécution](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
-Si vous compilez votre programme en ligne de commande à l’aide de la **/RTC** options du compilateur, n’importe quel pragma [optimiser](../../preprocessor/optimize.md) instructions dans votre code échoue en silence. Il s’agit, car les vérifications des erreurs au moment de l’exécution ne sont pas valides dans une version Release (optimisée).
+Si vous compilez votre programme sur la ligne de commande à l’aide de l’une des options du compilateur **/RTC** , les instructions pragma [optimize](../../preprocessor/optimize.md) de votre code échouent silencieusement. Cela est dû au fait que les vérifications des erreurs au moment de l’exécution ne sont pas valides dans une build (optimisée).
 
-Vous devez utiliser **/RTC** pour les builds de développement ; **/RTC** ne doit pas être utilisé pour une version commerciale. **/ RTC** ne peut pas être utilisé avec les optimisations du compilateur ([/O Options (Optimize Code)](o-options-optimize-code.md)). Une image de programme générée avec **/RTC** sera légèrement plus grande et plus lente qu’une image générée avec **/Od** (jusqu'à 5 pour cent plus lent qu’un **/Od** build).
+Vous devez utiliser **/RTC** pour les builds de développement ; **/RTC** ne doit pas être utilisé pour une version commerciale. Impossible d’utiliser **/RTC** avec les optimisations du compilateur ([options/o (optimiser le code)](o-options-optimize-code.md)). Une image de programme générée avec **/RTC** sera légèrement plus grande et légèrement plus lente qu’une image générée avec **/OD** (jusqu’à 5% plus lente qu’une build **/OD** ).
 
-La directive du préprocesseur __MSVC_RUNTIME_CHECKS sera définie lorsque vous utilisez un **/RTC** option ou [/GZ](gz-enable-stack-frame-run-time-error-checking.md).
+La directive de préprocesseur __MSVC_RUNTIME_CHECKS est définie lorsque vous utilisez une option **/RTC** ou [/gz](gz-enable-stack-frame-run-time-error-checking.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
-1. Cliquez sur le **génération de Code** page de propriétés.
+1. Cliquez sur la page de propriétés **génération de code** .
 
-1. Modifiez une ou les deux des propriétés suivantes : **Des vérifications** ou **Type les plus petits cocher**.
+1. Modifiez l’une des propriétés suivantes, ou les deux : vérifications de l' **exécution de base** ou **plus petite vérification du type**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
@@ -121,4 +121,4 @@ La directive du préprocesseur __MSVC_RUNTIME_CHECKS sera définie lorsque vous 
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
 [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
-[Guide pratique pour utiliser les vérifications natives à l’exécution](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[Comment : utiliser les contrôles natifs au moment de l’exécution](/visualstudio/debugger/how-to-use-native-run-time-checks)

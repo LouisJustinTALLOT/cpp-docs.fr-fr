@@ -2,18 +2,18 @@
 title: Définitions et déclarations (C++)
 ms.date: 11/04/2016
 ms.assetid: 56b809c0-e602-4f18-9ca5-cd7a8fbaaf30
-ms.openlocfilehash: 20683f3d2e12f7ffead573cbac46fdd4e106c383
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c35c0adaa1b81e5bf9bfd9e779037bc6068b3174
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189375"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221703"
 ---
 # <a name="definitions-and-declarations-c"></a>Définitions et déclarations (C++)
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-L’interface DLL fait référence à tous les éléments (fonctions et données) qui sont connus pour être exportés par un programme du système. autrement dit, tous les éléments déclarés comme **DllImport** ou **dllexport**. Toutes les déclarations incluses dans l’interface DLL doivent spécifier l’attribut **DllImport** ou **dllexport** . Toutefois, la définition doit spécifier uniquement l’attribut **dllexport** . Par exemple, la définition de fonction suivante génère une erreur de compilation :
+L’interface DLL fait référence à tous les éléments (fonctions et données) qui sont connus pour être exportés par un programme du système. autrement dit, tous les éléments déclarés comme **`dllimport`** ou **`dllexport`** . Toutes les déclarations incluses dans l’interface DLL doivent spécifier l' **`dllimport`** **`dllexport`** attribut ou. Toutefois, la définition doit spécifier uniquement l' **`dllexport`** attribut. Par exemple, la définition de fonction suivante génère une erreur de compilation :
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -34,7 +34,7 @@ Mais voici la syntaxe correcte :
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
-L’utilisation de **dllexport** implique une définition, tandis que **DllImport** implique une déclaration. Vous devez utiliser le mot clé **extern** avec **dllexport** pour forcer une déclaration ; dans le cas contraire, une définition est implicite. Les exemples suivants sont donc corrects :
+L’utilisation de **`dllexport`** implique une définition, tandis que **`dllimport`** implique une déclaration. Vous devez utiliser le **`extern`** mot clé avec **`dllexport`** pour forcer une déclaration ; sinon, une définition est implicite. Les exemples suivants sont donc corrects :
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -65,7 +65,7 @@ void func() {
 }
 ```
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

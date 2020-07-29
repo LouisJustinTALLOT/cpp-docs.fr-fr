@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943216"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221963"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -56,28 +56,28 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 *real*<br/>
 Partie réelle du nombre complexe à construire.
 
-*imaginary*<br/>
+*imaginaire*<br/>
 Partie imaginaire du nombre complexe à construire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Structure **_Dcomplex**, **_Fcomplex**ou **_Lcomplex** qui représente le nombre complexe \* (i*réel*et imaginaire) pour les valeurs du type à virgule flottante spécifié.
+Structure **_Dcomplex**, **_Fcomplex**ou **_Lcomplex** qui représente le nombre complexe (i*réel*, *imaginaire* \* ) pour les valeurs du type à virgule flottante spécifié.
 
 ## <a name="remarks"></a>Notes
 
 Les fonctions **_Cbuild**, **_FCbuild**et **_LCbuild** simplifient la création de types complexes. Utilisez les fonctions [CREAL, crealf, Creall](creal-crealf-creall.md) et [Cimag, cimagf, cimagl](cimag-cimagf-cimagl.md) pour récupérer les portions réelles et imaginaires des nombres complexes représentés.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
+|**_Cbuild**, **_FCbuild** **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Ces fonctions sont spécifiques à Microsoft. Les types **_Dcomplex**, **_Fcomplex**et **_Lcomplex** sont des équivalents spécifiques de Microsoft aux types natifs C99 non implémentés **double _Complex**, **float _Complex**et **long double _Complex**, respectivement. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Ces fonctions sont spécifiques à Microsoft. Les types **_Dcomplex**, **_Fcomplex**et **_Lcomplex** sont des équivalents spécifiques à Microsoft des types natifs C99 non implémentés **`double _Complex`** , **`float _Complex`** et **`long double _Complex`** , respectivement. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
 [_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
 [norm, normf, norml](norm-normf-norml1.md)<br/>

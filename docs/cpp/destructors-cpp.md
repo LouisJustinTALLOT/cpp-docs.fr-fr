@@ -5,18 +5,18 @@ helpviewer_keywords:
 - objects [C++], destroying
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 1e1190f49c7ccf5c312172f265d32a4b855bd878
-ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
+ms.openlocfilehash: 5da7659d2d45bca9efba21be2cd0bf581d539780
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70060136"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221664"
 ---
 # <a name="destructors-c"></a>Destructeurs (C++)
 
-Un destructeur est une fonction membre qui est appelée automatiquement lorsque l’objet est hors de portée ou est supprimé explicitement par un appel à **Delete**. Un destructeur porte le même nom que la classe, précédé d’un tilde (`~`). Par exemple, le destructeur de la classe `String` est déclaré : `~String()`.
+Un destructeur est une fonction membre qui est appelée automatiquement lorsque l’objet est hors de portée ou est détruite explicitement par un appel à **`delete`** . Un destructeur porte le même nom que la classe, précédé d’un tilde ( `~` ). Par exemple, le destructeur de la classe `String` est déclaré : `~String()`.
 
-Si vous ne définissez pas de destructeur, le compilateur fournira un destructeur par défaut; pour de nombreuses classes, cela suffit. Il vous suffit de définir un destructeur personnalisé lorsque la classe stocke des handles vers des ressources système qui doivent être libérées, ou des pointeurs qui possèdent la mémoire à laquelle elles pointent.
+Si vous ne définissez pas de destructeur, le compilateur fournira un destructeur par défaut ; pour de nombreuses classes, cela suffit. Il vous suffit de définir un destructeur personnalisé lorsque la classe stocke des handles vers des ressources système qui doivent être libérées, ou des pointeurs qui possèdent la mémoire à laquelle elles pointent.
 
 Prenons la déclaration suivante d'une classe `String` :
 
@@ -57,7 +57,7 @@ int main() {
 }
 ```
 
-Dans l’exemple précédent, le destructeur `String::~String` utilise l’opérateur **Delete** pour libérer l’espace alloué dynamiquement pour le stockage de texte.
+Dans l’exemple précédent, le destructeur `String::~String` utilise l' **`delete`** opérateur pour libérer l’espace alloué dynamiquement au stockage de texte.
 
 ## <a name="declaring-destructors"></a>Déclarer des destructeurs
 
@@ -67,11 +67,11 @@ Plusieurs règles régissent la déclaration des destructeurs. Les destructeurs�
 
 - n'acceptent pas d'arguments ;
 
-- Ne pas retourner de valeur (ou **void**).
+- Ne pas retourner de valeur (ou **`void`** ).
 
-- Ne peut pas êtredéclaré comme const, **volatile**ou **static**. Toutefois, elles peuvent être appelées pour la destruction d’objets déclaréscomme const, volatile ou **static**.
+- Ne peut pas être déclaré comme **`const`** , **`volatile`** ou **`static`** . Toutefois, elles peuvent être appelées pour la destruction d’objets déclarés comme **`const`** , **`volatile`** ou **`static`** .
 
-- Peut être déclarée comme étant **virtuelle**. En utilisant des destructeurs virtuels, vous pouvez détruire des objets sans connaître leur type (le destructeur correct de l’objet est appelé via le mécanisme de fonction virtuelle). Notez que les destructeurs peuvent également être déclarés en tant que fonctions virtuelles pures pour les classes abstraites.
+- Peut être déclaré comme **`virtual`** . En utilisant des destructeurs virtuels, vous pouvez détruire des objets sans connaître leur type (le destructeur correct de l’objet est appelé via le mécanisme de fonction virtuelle). Notez que les destructeurs peuvent également être déclarés en tant que fonctions virtuelles pures pour les classes abstraites.
 
 ## <a name="using-destructors"></a>Utilisation de destructeurs
 
@@ -79,7 +79,7 @@ Les destructeurs sont appelés lorsque l'un des événements suivants se produit
 
 - Un objet (automatique) local avec portée de bloc passe hors de portée.
 
-- Un objet alloué à l’aide de l’opérateur **New** est explicitement libéré à l’aide de **Delete**.
+- Un objet alloué à l’aide de l' **`new`** opérateur est désalloué explicitement à l’aide de **`delete`** .
 
 - La durée de vie d'un objet temporaire se termine.
 
@@ -89,7 +89,7 @@ Les destructeurs sont appelés lorsque l'un des événements suivants se produit
 
 Les destructeurs peuvent librement appeler des fonctions membres de classe et accéder aux données de membres de classe.
 
-Il existe deux restrictions sur l’utilisation des destructeurs:
+Il existe deux restrictions sur l’utilisation des destructeurs :
 
 - Vous ne pouvez pas prendre son adresse.
 
@@ -147,7 +147,7 @@ B1 dtor
 
 Les destructeurs pour les classes de base virtuelles sont appelés dans l'ordre inverse d'apparition dans un graphique acyclique dirigé (balayage à profondeur prioritaire, de gauche à droite, post-ordre). L'illustration suivante représente un graphique d'héritage.
 
-![Graphique d’héritage qui montre les classes de base virtuelles](../cpp/media/vc392j1.gif "Graphique d’héritage qui montre les classes de base virtuelles") <br/>
+![Graphique d'héritage montrant des classes de base virtuelles](../cpp/media/vc392j1.gif "Graphique d'héritage montrant des classes de base virtuelles") <br/>
 Graphique d'héritage montrant des classes de base virtuelles
 
 L'exemple suivant répertorie les titres des classes représentées dans l'illustration.
@@ -174,21 +174,21 @@ Pour déterminer l'ordre de destruction des classes de base virtuelles d'un obje
 
 1. Balayez le graphique vers le haut et le long du tracé suivant vers la droite.
 
-1. Passez à étape 2.
+1. Passez à l’étape 2.
 
 1. Lorsque le dernier tracé vers le haut est écoulé, notez le nom du nœud actuel.
 
-1. Passez à l'étape 3.
+1. Passez à l’étape 3.
 
 1. Continuez ainsi jusqu'à ce que le nœud inférieur soit de nouveau le nœud actuel.
 
 Par conséquent, pour la classe `E`, l'ordre de destruction est le suivant :
 
-1. Classe `E`de base non virtuelle.
+1. Classe de base non virtuelle `E` .
 
-1. Classe `D`de base non virtuelle.
+1. Classe de base non virtuelle `D` .
 
-1. Classe `C`de base non virtuelle.
+1. Classe de base non virtuelle `C` .
 
 1. Classe de base virtuelle `B`.
 
@@ -213,7 +213,7 @@ Dans l'exemple précédent, le destructeur de `Base2` est appelé avant le destr
 
 ## <a name="explicit-destructor-calls"></a>Appels de destructeur explicites
 
-Appeler un destructeur explicitement est rarement nécessaire. Toutefois, il peut être utile d'effectuer un nettoyage des objets placés à des adresses absolues. Ces objets sont généralement alloués à l’aide d’un opérateur **New** défini par l’utilisateur qui prend un argument de positionnement. L’opérateur **Delete** ne peut pas libérer cette mémoire, car elle n’est pas allouée à partir du magasin gratuit (pour plus d’informations, consultez [les opérateurs New et Delete](../cpp/new-and-delete-operators.md)). Un appel au destructeur, toutefois, permet d'effectuer un nettoyage approprié. Pour appeler explicitement le destructeur pour un objet, `s`, de classe `String`, utilisez l'une des instructions suivantes :
+Appeler un destructeur explicitement est rarement nécessaire. Toutefois, il peut être utile d'effectuer un nettoyage des objets placés à des adresses absolues. Ces objets sont généralement alloués à l’aide d’un opérateur défini par l’utilisateur **`new`** qui prend un argument de positionnement. L' **`delete`** opérateur ne peut pas libérer cette mémoire, car elle n’est pas allouée à partir du magasin gratuit (pour plus d’informations, consultez [les opérateurs New et Delete](../cpp/new-and-delete-operators.md)). Un appel au destructeur, toutefois, permet d'effectuer un nettoyage approprié. Pour appeler explicitement le destructeur pour un objet, `s`, de classe `String`, utilisez l'une des instructions suivantes :
 
 ```cpp
 s.String::~String();     // non-virtual call
@@ -231,7 +231,7 @@ Une classe a besoin d’un destructeur si elle acquiert une ressource, et pour g
 
 Si ces fonctions spéciales ne sont pas définies par l’utilisateur, elles sont définies implicitement par le compilateur. Les constructeurs et les opérateurs d’assignation générés implicitement effectuent une copie superficielle, membre, qui est presque certainement erronée si un objet gère une ressource.
 
-Dans l’exemple suivant, le constructeur de copie généré implicitement crée les pointeurs `str1.text` et `str2.text` fait référence à la même mémoire et, lorsque nous retournons à partir de `copy_strings()`, cette mémoire est supprimée deux fois, ce qui correspond à un comportement indéfini:
+Dans l’exemple suivant, le constructeur de copie généré implicitement crée les pointeurs `str1.text` et `str2.text` fait référence à la même mémoire et, lorsque nous retournons à partir de `copy_strings()` , cette mémoire est supprimée deux fois, ce qui correspond à un comportement indéfini :
 
 ```cpp
 void copy_strings()

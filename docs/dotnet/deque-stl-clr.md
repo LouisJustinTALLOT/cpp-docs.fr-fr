@@ -98,18 +98,18 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-ms.openlocfilehash: 74fb98d99e0aba94c40dce9ad1bcd6af83394231
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 75c83240b9125628fd5121368af547a5266bfb5c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208766"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221495"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
-La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès aléatoire. Vous utilisez le conteneur `deque` pour gérer une séquence d’éléments qui ressemble à un bloc de stockage contigu, mais qui peut croître ou rétrécir à la fin sans avoir besoin de copier les éléments restants. Il peut donc implémenter efficacement un `double-ended queue`. (Par conséquent, le nom.)
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès aléatoire. Vous utilisez le conteneur `deque` pour gérer une séquence d’éléments qui ressemble à un bloc de stockage contigu, mais qui peut croître ou diminuer à la fin sans avoir besoin de copier les éléments restants. Il peut donc implémenter efficacement un `double-ended queue` . (Par conséquent, le nom.)
 
-Dans la description ci-dessous, `GValue` est identique à `Value` sauf si ce dernier est un type REF, auquel cas il est `Value^`.
+Dans la description ci-dessous, `GValue` est identique `Value` à, sauf si ce dernier est un type REF, auquel cas il s’agit de `Value^` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -137,13 +137,13 @@ Type d'un élément dans la séquence contrôlée.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<cliext/deque >
+**En-tête :**\<cliext/deque>
 
 **Espace de noms :** cliext
 
 ## <a name="declarations"></a>Déclarations
 
-|Définition de types|Description|
+|Définition de type|Description|
 |---------------------|-----------------|
 |[deque::const_iterator (STL/CLR)](#const_iterator)|Type d'un itérateur constant pour la séquence contrôlée.|
 |[deque::const_reference (STL/CLR)](#const_reference)|Type d'une référence constante à un élément.|
@@ -157,7 +157,7 @@ Type d'un élément dans la séquence contrôlée.
 |[deque::reference (STL/CLR)](#reference)|Type d'une référence à un élément.|
 |[deque::reverse_iterator (STL/CLR)](#reverse_iterator)|Type d'un itérateur inverse pour la séquence contrôlée.|
 |[deque::size_type (STL/CLR)](#size_type)|Type d'une distance signée entre deux éléments.|
-|[deque::value_type (STL/CLR)](#value_type)|Type d'un élément.|
+|[deque::value_type (STL/CLR)](#value_type)|Type d’un élément.|
 
 |Fonction membre|Description|
 |---------------------|-----------------|
@@ -192,12 +192,12 @@ Type d'un élément dans la séquence contrôlée.
 |--------------|-----------------|
 |[deque::operator!= (STL/CLR)](#op_neq)|Détermine si deux objets `deque` ne sont pas égaux.|
 |[deque::operator(STL/CLR)](#operator)|Accède à un élément à une position spécifiée.|
-|[operator< (deque) (STL/CLR)](#op_lt)|Détermine si un objet `deque` est inférieur à un autre objet `deque`.|
-|[operator<= (deque) (STL/CLR)](#op_lteq)|Détermine si un objet `deque` est inférieur ou égal à un autre objet `deque`.|
-|[operator= (deque) (STL/CLR)](#op_as)|Remplace la séquence contrôlée.|
-|[operator== (deque) (STL/CLR)](#op_eq)|Détermine si un objet `deque` est égal à un autre objet `deque`.|
-|[operator> (deque) (STL/CLR)](#op_gt)|Détermine si un objet `deque` est supérieur à un autre objet `deque`.|
-|[operator>= (deque) (STL/CLR)](#op_gteq)|Détermine si un objet `deque` est supérieur ou égal à un autre objet `deque`.|
+|[< d’opérateur (deque) (STL/CLR)](#op_lt)|Détermine si un `deque` objet est inférieur à un autre `deque` objet.|
+|[operator<= (deque) (STL/CLR)](#op_lteq)|Détermine si un `deque` objet est inférieur ou égal à un autre `deque` objet.|
+|[opérateur = (deque) (STL/CLR)](#op_as)|Remplace la séquence contrôlée.|
+|[opérateur = = (deque) (STL/CLR)](#op_eq)|Détermine si un `deque` objet est égal à un autre `deque` objet.|
+|[> d’opérateur (deque) (STL/CLR)](#op_gt)|Détermine si un `deque` objet est supérieur à un autre `deque` objet.|
+|[opérateur>= (deque) (STL/CLR)](#op_gteq)|Détermine si un `deque` objet est supérieur ou égal à un autre `deque` objet.|
 
 ## <a name="interfaces"></a>Interfaces
 
@@ -209,17 +209,17 @@ Type d'un élément dans la séquence contrôlée.
 |<xref:System.Collections.Generic.IEnumerable%601>|Séquencez les éléments typés.|
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|
 |<xref:System.Collections.Generic.IList%601>|Gérer le groupe ordonné d’éléments typés.|
-|Valeur de < IDeque\>|Conserver le conteneur générique.|
+|Valeur de<IDeque\>|Conserver le conteneur générique.|
 
 ## <a name="remarks"></a>Notes
 
-L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un tableau stocké de handles qui désignent des blocs d’éléments de `Value`. Le tableau s’étend à la demande. La croissance se produit de telle sorte que le coût de l’attente ou de l’ajout d’un nouvel élément est constant et qu’aucun élément restant ne soit perturbé. Vous pouvez également supprimer un élément à la fin en temps constant et sans perturber les éléments restants. Par conséquent, un deque est un bon candidat pour le conteneur sous-jacent pour la file d’attente de classe de modèle [(STL/CLR)](../dotnet/queue-stl-clr.md) ou la pile de classes de modèle [(STL/CLR)](../dotnet/stack-stl-clr.md).
+L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un tableau stocké de handles qui désignent des blocs d' `Value` éléments. Le tableau s’étend à la demande. La croissance se produit de telle sorte que le coût de l’attente ou de l’ajout d’un nouvel élément est constant et qu’aucun élément restant ne soit perturbé. Vous pouvez également supprimer un élément à la fin en temps constant et sans perturber les éléments restants. Par conséquent, un deque est un bon candidat pour le conteneur sous-jacent pour la file d’attente de classe de modèle [(STL/CLR)](../dotnet/queue-stl-clr.md) ou la pile de classes de modèle [(STL/CLR)](../dotnet/stack-stl-clr.md).
 
-Un objet `deque` prend en charge les itérateurs à accès aléatoire, ce qui signifie que vous pouvez faire référence à un élément directement en fonction de sa position numérique, en comptant de zéro pour le premier élément (avant), à [deque :: Size (STL/CLR)](#size)`() - 1` pour le dernier élément (précédent). Cela signifie également qu’un deque est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
+Un `deque` objet prend en charge les itérateurs à accès aléatoire, ce qui signifie que vous pouvez faire référence à un élément directement en fonction de sa position numérique, en comptant de zéro pour le premier élément (avant), à [deque :: Size (STL/CLR)](#size) `() - 1` pour le dernier élément (précédent). Cela signifie également qu’un deque est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
 
 Un itérateur deque stocke un handle vers l’objet deque associé, ainsi que le décalage de l’élément qu’il désigne. Vous pouvez utiliser des itérateurs uniquement avec leurs objets conteneur associés. Le décalage d’un élément deque n’est *pas* nécessairement le même que sa position. Le premier élément inséré a le biais du décalage zéro, l’élément ajouté suivant a le biais 1, mais l’élément ajouté suivant a la valeur Bias-1.
 
-L’insertion ou l’effacement d’éléments à la fin n’altère *pas* la valeur d’un élément stocké à un biais valide. Toutefois, l’insertion ou l’effacement d’un élément intérieur *peut* modifier la valeur de l’élément stocké à un écart donné, de sorte que la valeur désignée par un itérateur peut également changer. (Le conteneur peut devoir copier des éléments vers le haut ou vers le haut pour créer un trou avant une insertion ou pour remplir un trou après une opération d’effacement.) Néanmoins, un itérateur deque reste valide tant que son biais désigne un élément valide. En outre, un itérateur valide reste déréférençable. vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne, tant que son biais n’est pas égal au décalage de l’itérateur retourné par `end()`.
+L’insertion ou l’effacement d’éléments à la fin n’altère *pas* la valeur d’un élément stocké à un biais valide. Toutefois, l’insertion ou l’effacement d’un élément intérieur *peut* modifier la valeur de l’élément stocké à un écart donné, de sorte que la valeur désignée par un itérateur peut également changer. (Le conteneur peut devoir copier des éléments vers le haut ou vers le haut pour créer un trou avant une insertion ou pour remplir un trou après une opération d’effacement.) Néanmoins, un itérateur deque reste valide tant que son biais désigne un élément valide. En outre, un itérateur valide reste déréférençable. vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne, tant que son biais n’est pas égal au décalage pour l’itérateur retourné par `end()` .
 
 L’effacement ou la suppression d’un élément appelle le destructeur pour sa valeur stockée. La destruction du conteneur efface tous les éléments. Ainsi, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne se trouve dans le conteneur. Notez, toutefois, qu’un conteneur de handles ne détruit *pas* ses éléments.
 
@@ -249,17 +249,17 @@ Début de la plage à insérer.
 *last*<br/>
 Fin de la plage à insérer.
 
-*right*<br/>
+*Oui*<br/>
 Énumération à insérer.
 
-*val*<br/>
+*multiples*<br/>
 Valeur de l’élément à insérer.
 
 ### <a name="remarks"></a>Notes
 
 La première fonction membre remplace la séquence contrôlée par une répétition des éléments *Count* de la valeur *Val*. Vous l’utilisez pour remplir le conteneur avec des éléments ayant tous la même valeur.
 
-Si `InIt` est un type entier, la deuxième fonction membre se comporte comme `assign((size_type)first, (value_type)last)`. Dans le cas contraire, elle remplace la séquence contrôlée par la séquence [`first`, `last`). Vous l’utilisez pour faire en sorte que la séquence contrôlée copie une autre séquence.
+Si `InIt` est un type entier, la deuxième fonction membre se comporte de la même façon que `assign((size_type)first, (value_type)last)` . Dans le cas contraire, elle remplace la séquence contrôlée par la séquence [ `first` , `last` ). Vous l’utilisez pour faire en sorte que la séquence contrôlée copie une autre séquence.
 
 La troisième fonction membre remplace la séquence contrôlée par la séquence désignée par le *droit*de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une séquence décrite par un énumérateur.
 
@@ -318,7 +318,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>Paramètres
 
-*pos*<br/>
+*imprim*<br/>
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
@@ -527,7 +527,7 @@ void clear();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [deque :: Erase (STL/CLR)](#erase)`(` [deque :: Begin (STL/CLR)](#begin)`(),` [deque :: end (STL/CLR)](#end)`())`. Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée est vide.
+La fonction membre appelle [deque :: Erase (STL/CLR)](#erase) `(` [deque :: Begin (STL/CLR)](#begin) `(),` [deque :: end (STL/CLR)](#end) `())` . Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -727,10 +727,10 @@ Début de la plage à insérer.
 *last*<br/>
 Fin de la plage à insérer.
 
-*right*<br/>
+*Oui*<br/>
 Objet ou plage à insérer.
 
-*val*<br/>
+*multiples*<br/>
 Valeur de l’élément à insérer.
 
 ### <a name="remarks"></a>Notes
@@ -745,19 +745,19 @@ Le constructeur :
 
 `deque(deque<Value>% right);`
 
-Initialise la séquence contrôlée à l’aide de la séquence [`right.begin()`, `right.end()`). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet deque. Pour plus d’informations sur les itérateurs, consultez [deque :: Begin (STL/CLR)](#begin) et [deque :: end (STL/CLR)](#end).
+Initialise la séquence contrôlée à l’aide de la séquence [ `right.begin()` , `right.end()` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet deque. Pour plus d’informations sur les itérateurs, consultez [deque :: Begin (STL/CLR)](#begin) et [deque :: end (STL/CLR)](#end).
 
 Le constructeur :
 
 `deque(deque<Value>^ right);`
 
-Initialise la séquence contrôlée à l’aide de la séquence [`right->begin()`, `right->end()`). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet deque dont le descripteur est *correct*.
+Initialise la séquence contrôlée à l’aide de la séquence [ `right->begin()` , `right->end()` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet deque dont le descripteur est *correct*.
 
 Le constructeur :
 
 `explicit deque(size_type count);`
 
-Initialise la séquence contrôlée avec les éléments *Count* avec chaque valeur `value_type()`. Vous l’utilisez pour remplir le conteneur avec des éléments qui ont tous la valeur par défaut.
+Initialise la séquence contrôlée avec les éléments *Count* chacun avec la valeur `value_type()` . Vous l’utilisez pour remplir le conteneur avec des éléments qui ont tous la valeur par défaut.
 
 Le constructeur :
 
@@ -771,7 +771,7 @@ Le constructeur :
 
 `deque(InIt first, InIt last);`
 
-Initialise la séquence contrôlée à l’aide de la séquence [`first`, `last`). Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence.
+Initialise la séquence contrôlée à l’aide de la séquence [ `first` , `last` ). Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence.
 
 Le constructeur :
 
@@ -910,7 +910,7 @@ bool empty();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true pour une séquence contrôlée vide. Cela équivaut à [deque :: Size (STL/CLR)](#size)`() == 0`. Vous l’utilisez pour vérifier si le deque est vide.
+La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle équivaut à [deque :: Size (STL/CLR)](#size) `() == 0` . Vous l’utilisez pour vérifier si le deque est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -1033,7 +1033,7 @@ La première fonction membre supprime l’élément de la séquence contrôlée 
 
 La deuxième fonction membre supprime l’élément de la séquence contrôlée dans la plage [`first`, `last`). Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
 
-Les deux fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [deque :: end (STL/CLR)](#end)`()` si aucun élément de ce type n’existe.
+Les deux fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [deque :: end (STL/CLR)](#end) `()` si aucun élément de ce type n’existe.
 
 Lors de l’effacement des éléments, le nombre de copies d’éléments est linéaire dans le nombre d’éléments entre la fin de l’effacement et l’extrémité la plus proche de la séquence. (Lors de l’effacement d’un ou plusieurs éléments à la fin de la séquence, aucune copie d’élément ne se produit.)
 
@@ -1448,10 +1448,10 @@ Début de la plage à insérer.
 *last*<br/>
 Fin de la plage à insérer.
 
-*right*<br/>
+*Oui*<br/>
 Énumération à insérer.
 
-*val*<br/>
+*multiples*<br/>
 Valeur de l’élément à insérer.
 
 *where*<br/>
@@ -1465,11 +1465,11 @@ La première fonction membre insère un élément avec la valeur *Val* et retour
 
 La deuxième fonction membre insère une répétition des éléments *Count* de la valeur *Val*. Vous l’utilisez pour insérer zéro, un ou plusieurs éléments contigus qui sont toutes des copies de la même valeur.
 
-Si `InIt` est un type entier, la troisième fonction membre se comporte comme `insert(where, (size_type)first, (value_type)last)`. Dans le cas contraire, elle insère la séquence [`first`, `last`). Vous l’utilisez pour insérer zéro, un ou plusieurs éléments contigus copiés à partir d’une autre séquence.
+Si `InIt` est un type entier, la troisième fonction membre se comporte comme `insert(where, (size_type)first, (value_type)last)`. Sinon, elle insère la séquence [ `first` , `last` ). Vous l’utilisez pour insérer zéro, un ou plusieurs éléments contigus copiés à partir d’une autre séquence.
 
 La quatrième fonction membre insère la séquence désignée par la *droite*. Vous l’utilisez pour insérer une séquence décrite par un énumérateur.
 
-Lors de l’insertion d’un seul élément, le nombre de copies d’élément est linéaire dans le nombre d’éléments entre le point d’insertion et l’extrémité plus proche de la séquence. (Lors de l’insertion d’un ou plusieurs éléments à la fin de la séquence, aucune copie d’élément ne se produit.) Si `InIt` est un itérateur d’entrée, la troisième fonction membre effectue effectivement une insertion unique pour chaque élément de la séquence. Dans le cas contraire, lors de l’insertion d’éléments `N`, le nombre de copies d’éléments est linéaire en `N` plus le nombre d’éléments entre le point d’insertion et l’extrémité plus proche de la séquence.
+Lors de l’insertion d’un seul élément, le nombre de copies d’élément est linéaire dans le nombre d’éléments entre le point d’insertion et l’extrémité plus proche de la séquence. (Lors de l’insertion d’un ou plusieurs éléments à la fin de la séquence, aucune copie d’élément ne se produit.) Si `InIt` est un itérateur d’entrée, la troisième fonction membre effectue effectivement une insertion unique pour chaque élément de la séquence. Dans le cas contraire, lors de l’insertion `N` d’éléments, le nombre de copies d’éléments est linéaire dans `N` plus le nombre d’éléments entre le point d’insertion et l’extrémité plus proche de la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -1594,15 +1594,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne `!(left == right)`. Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux classes deque sont comparés élément par élément.
+La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux classes deque sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -1661,7 +1661,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>Paramètres
 
-*pos*<br/>
+*imprim*<br/>
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
@@ -1807,7 +1807,7 @@ void push_back(value_type val);
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre insère un élément avec la valeur `val` à la fin de la séquence contrôlée. Vous l’utilisez pour ajouter un autre élément au deque.
+La fonction membre insère un élément avec une valeur `val` à la fin de la séquence contrôlée. Vous l’utilisez pour ajouter un autre élément au deque.
 
 ### <a name="example"></a>Exemple
 
@@ -2057,12 +2057,12 @@ void resize(size_type new_size, value_type val);
 *new_size*<br/>
 Nouvelle taille de la séquence contrôlée.
 
-*val*<br/>
+*multiples*<br/>
 Valeur de l’élément de remplissage.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions membres garantissent que [deque :: Size (STL/CLR)](#size)`()` désormais retourne *NEW_SIZE*. Si la séquence contrôlée doit être plus longue, la première fonction membre ajoute des éléments avec la valeur `value_type()`, tandis que la deuxième fonction membre ajoute des éléments avec la valeur *Val*. Pour rendre la séquence contrôlée plus concise, les deux fonctions membres effacent efficacement le dernier élément [deque :: Size (STL/CLR)](#size)`() -` `new_size` fois. Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée a une taille *NEW_SIZE*, en découpant ou en remplissant la séquence contrôlée actuelle.
+Les fonctions membres garantissent que [deque :: Size (STL/CLR)](#size) `()` retourne désormais *NEW_SIZE*. Si la séquence contrôlée doit être plus longue, la première fonction membre ajoute des éléments avec `value_type()` la valeur, tandis que la deuxième fonction membre ajoute des éléments avec la valeur *Val*. Pour rendre la séquence contrôlée plus concise, les deux fonctions membres effacent efficacement le dernier élément [deque :: Size (STL/CLR)](#size) `() -` `new_size` . Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée a une taille *NEW_SIZE*, en découpant ou en remplissant la séquence contrôlée actuelle.
 
 ### <a name="example"></a>Exemple
 
@@ -2162,7 +2162,7 @@ size_type size();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [deque :: Empty (STL/CLR)](#empty)`()`.
+La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [deque :: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Exemple
 
@@ -2260,12 +2260,12 @@ void swap(deque<Value>% right);
 
 #### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*<br/>
 Conteneur avec lequel échanger le contenu.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange les séquences contrôlées entre `*this` et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
+La fonction membre échange les séquences contrôlées entre **`*this`** et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
 
 ### <a name="example"></a>Exemple
 
@@ -2363,7 +2363,7 @@ a b c
 
 ## <a name="dequevalue_type-stlclr"></a><a name="value_type"></a>deque :: value_type (STL/CLR)
 
-Type d'un élément.
+Type d’un élément.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2406,7 +2406,7 @@ int main()
 a b c
 ```
 
-## <a name="operatorlt-deque-stlclr"></a><a name="op_lt"></a>&lt; d’opérateur (deque) (STL/CLR)
+## <a name="operatorlt-deque-stlclr"></a><a name="op_lt"></a>, opérateur &lt; (deque) (STL/CLR)
 
 Deque inférieur à la comparaison.
 
@@ -2420,15 +2420,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Dans le cas contraire, elle retourne `left->size() < right->size()` vous l’utilisez pour vérifier si *Left* est *ordonné avant le* moment où les deux classes deque sont comparés élément par élément.
+La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, il retourne `left->size() < right->size()` que vous l’utilisez pour vérifier si *right* *Left* est ordonné avant le moment où les deux classes deque sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2475,7 +2475,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-deque-stlclr"></a><a name="op_lteq"></a>opérateur&lt;= (deque) (STL/CLR)
+## <a name="operatorlt-deque-stlclr"></a><a name="op_lteq"></a>opérateur &lt; = (deque) (STL/CLR)
 
 Deque est inférieur ou égal à la comparaison.
 
@@ -2489,15 +2489,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne `!(right < left)`. Vous l’utilisez pour tester si *Left* n’est pas trié après *le* moment où les deux classes deque sont comparés élément par élément.
+La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas trié après *le* moment où les deux classes deque sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2556,12 +2556,12 @@ deque<Value>% operator=(deque<Value>% right);
 
 #### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*<br/>
 Conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre copie *directement* vers l’objet, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
+L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
 ### <a name="example"></a>Exemple
 
@@ -2611,15 +2611,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i`, `left[i] ==` `right[i]`. Vous l’utilisez pour vérifier si *Left* est *ordonné de la même manière que* si les deux classes deque sont comparés élément par élément.
+La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i` , `left[i] ==` `right[i]` . Vous l’utilisez pour vérifier si *Left* est *ordonné de la même manière que* si les deux classes deque sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2666,7 +2666,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-deque-stlclr"></a><a name="op_gt"></a>&gt; d’opérateur (deque) (STL/CLR)
+## <a name="operatorgt-deque-stlclr"></a><a name="op_gt"></a>, opérateur &gt; (deque) (STL/CLR)
 
 Deque supérieur à la comparaison.
 
@@ -2680,15 +2680,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne `right` `<` `left`. Vous l’utilisez pour tester si *Left* est trié après *Right* lorsque les deux classes deque sont comparés élément par élément.
+La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour tester si *Left* est trié après *Right* lorsque les deux classes deque sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2735,7 +2735,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-deque-stlclr"></a><a name="op_gteq"></a>opérateur&gt;= (deque) (STL/CLR)
+## <a name="operatorgt-deque-stlclr"></a><a name="op_gteq"></a>opérateur &gt; = (deque) (STL/CLR)
 
 Deque comparaison supérieure ou égale.
 
@@ -2749,15 +2749,15 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne `!(left` `<` `right)`. Vous l’utilisez pour tester si *Left* n’est pas trié avant *le* moment où les deux classes deque sont comparés élément par élément.
+La fonction opérateur retourne `!(left` `<` `right)` . Vous l’utilisez pour tester si *Left* n’est pas trié avant *le* moment où les deux classes deque sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 

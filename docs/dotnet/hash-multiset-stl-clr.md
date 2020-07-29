@@ -95,18 +95,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
-ms.openlocfilehash: 87315a24f314222f91e6aa0536ca442bf00f012c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8f7858628b16f6ed2364a78186685fabb6d578ea
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208688"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221391"
 ---
 # <a name="hash_multiset-stlclr"></a>hash_multiset (STL/CLR)
 
 La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments disposant d’un accès bidirectionnel. Vous utilisez le conteneur `hash_multiset` pour gérer une séquence d’éléments comme une table de hachage, chaque entrée de table stockant une liste de nœuds liée bidirectionnelle, et chaque nœud qui stocke un élément. La valeur de chaque élément est utilisée comme clé pour le classement de la séquence.
 
-Dans la description ci-dessous, `GValue` est identique à `GKey`, qui est, à son tour, identique à la *clé* , sauf si ce dernier est un type REF, auquel cas il est `Key^`.
+Dans la description ci-dessous, `GValue` est identique à `GKey` , qui, à son tour, est identique à la *clé* , à moins que ce dernier ne soit un type REF, auquel cas il s’agit de `Key^` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -131,13 +131,13 @@ Type du composant clé d'un élément dans la séquence contrôlée.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<cliext/hash_set >
+**En-tête :**\<cliext/hash_set>
 
 **Espace de noms :** cliext
 
 ## <a name="declarations"></a>Déclarations
 
-|Définition de types|Description|
+|Définition de type|Description|
 |---------------------|-----------------|
 |[hash_multiset::const_iterator (STL/CLR)](#const_iterator)|Type d'un itérateur constant pour la séquence contrôlée.|
 |[hash_multiset::const_reference (STL/CLR)](#const_reference)|Type d'une référence constante à un élément.|
@@ -155,7 +155,7 @@ Type du composant clé d'un élément dans la séquence contrôlée.
 |[hash_multiset::reverse_iterator (STL/CLR)](#reverse_iterator)|Type d'un itérateur inverse pour la séquence contrôlée.|
 |[hash_multiset::size_type (STL/CLR)](#size_type)|Type d’une distance (non négative) entre deux éléments.|
 |[hash_multiset::value_compare (STL/CLR)](#value_compare)|Délégué de classement pour deux valeurs d’élément.|
-|[hash_multiset::value_type (STL/CLR)](#value_type)|Type d'un élément.|
+|[hash_multiset::value_type (STL/CLR)](#value_type)|Type d’un élément.|
 
 |Fonction membre|Description|
 |---------------------|-----------------|
@@ -198,39 +198,39 @@ Type du composant clé d'un élément dans la séquence contrôlée.
 |<xref:System.Collections.ICollection>|Conserver le groupe d’éléments.|
 |<xref:System.Collections.Generic.IEnumerable%601>|Séquencez les éléments typés.|
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|
-|IHash\<clé, valeur >|Conserver le conteneur générique.|
+|IHash\<Key, Value>|Conserver le conteneur générique.|
 
 ## <a name="remarks"></a>Notes
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels dans une liste liée bidirectionnelle. Pour accélérer l’accès, l’objet gère également un tableau de longueurs variables de pointeurs dans la liste (table de hachage), en gérant efficacement la liste entière sous la forme d’une séquence de sous-listes ou de compartiments. Elle insère des éléments dans un compartiment qu’elle continue de trier en modifiant les liens entre les nœuds, jamais en copiant le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber les éléments restants.
 
-L’objet trie chaque compartiment qu’il contrôle en appelant un objet délégué stocké de type [hash_set :: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stocké quand vous construisez le hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<=(key_type, key_type)`.
+L’objet trie chaque compartiment qu’il contrôle en appelant un objet délégué stocké de type [hash_set :: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stocké quand vous construisez le hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<=(key_type, key_type)` .
 
-Vous accédez à l’objet délégué stocké en appelant la fonction membre [hash_set :: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Un objet délégué de ce type doit définir un ordre équivalent entre les clés de type [hash_set :: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Autrement dit, pour deux clés `X` et `Y`:
+Vous accédez à l’objet délégué stocké en appelant la fonction membre [hash_set :: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md) `()` . Un objet délégué de ce type doit définir un ordre équivalent entre les clés de type [hash_set :: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Cela signifie, pour deux clés `X` et `Y` :
 
-`key_comp()(X, Y)` retourne le même résultat booléen pour chaque appel.
+`key_comp()(X, Y)`retourne le même résultat booléen pour chaque appel.
 
 Si `key_comp()(X, Y) && key_comp()(Y, X)` a la valeur true, `X` et `Y` sont considérés comme ayant un ordre équivalent.
 
-Toute règle de classement qui se comporte comme `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` ou `operator==(key_type, key_type)` définit le classement eqivalent.
+Toute règle de classement qui se comporte comme `operator<=(key_type, key_type)` , `operator>=(key_type, key_type)` ou `operator==(key_type, key_type)` définit le classement eqivalent.
 
-Notez que le conteneur garantit uniquement que les éléments dont les clés ont un classement équivalent (et le hachage à la même valeur entière) sont adjacents dans un compartiment. Contrairement à la classe de modèle [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md), un objet de la classe de modèle `hash_multiset` ne requiert pas que les clés pour tous les éléments soient uniques. (Au moins deux clés peuvent avoir un classement équivalent.)
+Notez que le conteneur garantit uniquement que les éléments dont les clés ont un classement équivalent (et le hachage à la même valeur entière) sont adjacents dans un compartiment. Contrairement à la classe de modèle [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md), un objet de classe de modèle `hash_multiset` ne requiert pas que les clés pour tous les éléments soient uniques. (Au moins deux clés peuvent avoir un classement équivalent.)
 
-L’objet détermine le compartiment qui doit contenir une clé de tri donnée en appelant un objet délégué stocké de type [hash_set :: Hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Vous accédez à cet objet stocké en appelant la fonction membre [hash_set :: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` pour obtenir une valeur entière qui dépend de la valeur de clé. Vous pouvez spécifier l’objet délégué stocké quand vous construisez le hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la `System::Object::hash_value(key_type)`de la fonction. Cela signifie, pour toutes les clés `X` et `Y`:
+L’objet détermine le compartiment qui doit contenir une clé de tri donnée en appelant un objet délégué stocké de type [hash_set :: Hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Vous accédez à cet objet stocké en appelant la fonction membre [hash_set :: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` pour obtenir une valeur entière qui dépend de la valeur de clé. Vous pouvez spécifier l’objet délégué stocké quand vous construisez le hash_set ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la fonction `System::Object::hash_value(key_type)` . Cela signifie, pour toutes les clés `X` et `Y` :
 
-`hash_delegate()(X)` retourne le même résultat entier lors de chaque appel.
+`hash_delegate()(X)`retourne le même résultat entier pour chaque appel.
 
-Si `X` et `Y` ont un classement équivalent, `hash_delegate()(X)` doit retourner le même résultat entier que `hash_delegate()(Y)`.
+Si `X` et `Y` ont un classement équivalent, `hash_delegate()(X)` doit retourner le même résultat entier que `hash_delegate()(Y)` .
 
 Chaque élément sert à la fois de clé et de valeur. La séquence est représentée de façon à permettre la recherche, l’insertion et la suppression d’un élément arbitraire avec un certain nombre d’opérations indépendantes du nombre d’éléments dans la séquence (temps constant)--au moins dans le meilleur des cas. De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.
 
 Toutefois, si les valeurs hachées ne sont pas distribuées uniformément, une table de hachage peut être dégénérée. Dans l’extrême, pour une fonction de hachage qui retourne toujours la même valeur, la recherche, l’insertion et la suppression sont proportionnelles au nombre d’éléments dans la séquence (temps linéaire). Le conteneur s’efforce de choisir une fonction de hachage raisonnable, une taille de compartiment moyenne et une taille de table de hachage (nombre total de compartiments), mais vous pouvez remplacer tout ou partie de ces choix. Consultez, par exemple, les fonctions [hash_set :: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) et [hash_set :: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
 
-Un hash_multiset prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez effectuer un pas à pas vers des éléments adjacents en fonction d’un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud principal spécial correspond à l’itérateur retourné par [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`. Vous pouvez décrémenter cet itérateur pour atteindre le dernier élément de la séquence contrôlée, le cas échéant. Vous pouvez incrémenter un itérateur de hash_multiset pour atteindre le nœud principal, et il sera alors comparé à `end()`. Toutefois, vous ne pouvez pas déréférencer l’itérateur retourné par `end()`.
+Un hash_multiset prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez effectuer un pas à pas vers des éléments adjacents en fonction d’un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud principal spécial correspond à l’itérateur retourné par [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` . Vous pouvez décrémenter cet itérateur pour atteindre le dernier élément de la séquence contrôlée, le cas échéant. Vous pouvez incrémenter un itérateur de hash_multiset pour atteindre le nœud principal, et il comparera alors égal à `end()` . Toutefois, vous ne pouvez pas déréférencer l’itérateur retourné par `end()` .
 
 Notez que vous ne pouvez pas faire référence à un élément hash_multiset directement en fonction de sa position numérique, qui requiert un itérateur à accès aléatoire.
 
-Un itérateur de hash_multiset stocke un handle vers son nœud de hash_multiset associé, qui à son tour stocke un handle vers son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec leurs objets conteneur associés. Un itérateur de hash_multiset reste valide tant que son nœud de hash_multiset associé est associé à des hash_multiset. En outre, un itérateur valide est déréférençable. vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne, tant qu’il n’est pas égal à `end()`.
+Un itérateur de hash_multiset stocke un handle vers son nœud de hash_multiset associé, qui à son tour stocke un handle vers son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec leurs objets conteneur associés. Un itérateur de hash_multiset reste valide tant que son nœud de hash_multiset associé est associé à des hash_multiset. En outre, un itérateur valide est déréférençable. vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne, tant qu’il n’est pas égal à `end()` .
 
 L’effacement ou la suppression d’un élément appelle le destructeur pour sa valeur stockée. La destruction du conteneur efface tous les éléments. Ainsi, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne se trouve dans le conteneur. Notez, toutefois, qu’un conteneur de handles ne détruit *pas* ses éléments.
 
@@ -370,7 +370,7 @@ void clear();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle efficacement [hash_multiset :: Erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md)`(` [hash_multiset :: Begin (STL/clr)](../dotnet/hash-multiset-begin-stl-clr.md)`(),` [HASH_MULTISET :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`())`. Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée est vide.
+La fonction membre appelle efficacement [hash_multiset :: Erase (STL/CLR)](../dotnet/hash-multiset-erase-stl-clr.md) `(` [hash_multiset :: Begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md) `(),` [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `())` . Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -665,7 +665,7 @@ bool empty();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle équivaut à [hash_multiset :: Size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`. Vous l’utilisez pour tester si le hash_multiset est vide.
+La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle équivaut à [hash_multiset :: Size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md) `() == 0` . Vous l’utilisez pour tester si le hash_multiset est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -771,7 +771,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(` [hash_multiset :: lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)`(key),` [hash_multiset :: upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)`(key))`. Vous l’utilisez pour déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
+La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(` [hash_multiset :: lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md) `(key),` [hash_multiset :: upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md) `(key))` . Vous l’utilisez pour déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -842,9 +842,9 @@ Fin de la plage à effacer.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle*pointe, et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer un seul élément.
+La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle*pointe, et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer un seul élément.
 
-La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage [`first`, `last`) et retourne un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `end()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
+La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage [ `first` , `last` ) et retourne un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `end()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
 
 La troisième fonction membre supprime tout élément de la séquence contrôlée dont la clé a un classement équivalent à la *clé*, et retourne le nombre d’éléments supprimés. Vous l’utilisez pour supprimer et compter tous les éléments qui correspondent à une clé spécifiée.
 
@@ -915,7 +915,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-Si au moins un élément de la séquence contrôlée a un classement équivalent avec la *clé*, la fonction membre retourne un itérateur désignant l’un de ces éléments ; Sinon, elle retourne [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`. Vous l’utilisez pour rechercher un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
+Si au moins un élément de la séquence contrôlée a un classement équivalent avec la *clé*, la fonction membre retourne un itérateur désignant l’un de ces éléments ; Sinon, elle retourne [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` . Vous l’utilisez pour rechercher un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -1263,7 +1263,7 @@ Fin de la plage à insérer.
 *prédit*<br/>
 Prédicat de classement pour la séquence contrôlée.
 
-*right*<br/>
+*Oui*<br/>
 Objet ou plage à insérer.
 
 ### <a name="remarks"></a>Notes
@@ -1272,7 +1272,7 @@ Le constructeur :
 
 `hash_multiset();`
 
-Initialise la séquence contrôlée sans éléments, avec le prédicat de classement par défaut `key_compare()`et avec la fonction de hachage par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de tri par défaut et la fonction de hachage.
+Initialise la séquence contrôlée sans éléments, avec le prédicat de classement par défaut `key_compare()` , et avec la fonction de hachage par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de tri par défaut et la fonction de hachage.
 
 Le constructeur :
 
@@ -1290,31 +1290,31 @@ Le constructeur :
 
 `hash_multiset(hash_multiset<Key>% right);`
 
-Initialise la séquence contrôlée avec la séquence [`right.begin()`, `right.end()`), avec le prédicat de tri par défaut et avec la fonction de hachage par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le hash_multiset objet à *droite*, avec le prédicat de tri par défaut et la fonction de hachage.
+Initialise la séquence contrôlée avec la séquence [ `right.begin()` , `right.end()` ), avec le prédicat de tri par défaut et avec la fonction de hachage par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le hash_multiset objet à *droite*, avec le prédicat de tri par défaut et la fonction de hachage.
 
 Le constructeur :
 
 `hash_multiset(hash_multiset<Key>^ right);`
 
-Initialise la séquence contrôlée avec la séquence [`right->begin()`, `right->end()`), avec le prédicat de tri par défaut et avec la fonction de hachage par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le hash_multiset objet à *droite*, avec le prédicat de tri par défaut et la fonction de hachage.
+Initialise la séquence contrôlée avec la séquence [ `right->begin()` , `right->end()` ), avec le prédicat de tri par défaut et avec la fonction de hachage par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le hash_multiset objet à *droite*, avec le prédicat de tri par défaut et la fonction de hachage.
 
 Le constructeur :
 
 `template<typename InIter> hash_multiset(InIter first, InIter last);`
 
-Initialise la séquence contrôlée avec la séquence [`first`, `last`), avec le prédicat de tri par défaut et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri par défaut et la fonction de hachage.
+Initialise la séquence contrôlée avec la séquence [ `first` , `last` ), avec le prédicat de tri par défaut et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri par défaut et la fonction de hachage.
 
 Le constructeur :
 
 `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred);`
 
-Initialise la séquence contrôlée avec la séquence [`first`, `last`), avec le prédicat de classement *prédit*et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié et la fonction de hachage par défaut.
+Initialise la séquence contrôlée avec la séquence [ `first` , `last` ), avec le prédicat de classement *prédit*et avec la fonction de hachage par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié et la fonction de hachage par défaut.
 
 Le constructeur :
 
 `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-Initialise la séquence contrôlée avec la séquence [`first`, `last`), avec le prédicat de classement *prédit*et avec la fonction de hachage *hashfn*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri et la fonction de hachage spécifiés.
+Initialise la séquence contrôlée avec la séquence [ `first` , `last` ), avec le prédicat de classement *prédit*et avec la fonction de hachage *hashfn*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri et la fonction de hachage spécifiés.
 
 Le constructeur :
 
@@ -1523,10 +1523,10 @@ Début de la plage à insérer.
 *last*<br/>
 Fin de la plage à insérer.
 
-*right*<br/>
+*Oui*<br/>
 Énumération à insérer.
 
-*val*<br/>
+*multiples*<br/>
 Valeur de clé à insérer.
 
 *where*<br/>
@@ -1540,7 +1540,7 @@ La première fonction membre insère un élément avec la valeur *Val*et retourn
 
 La deuxième fonction membre insère un élément avec la valeur *Val*, en utilisant *Where* comme indicateur (pour améliorer les performances) et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique qui peut être adjacent à un élément que vous connaissez.
 
-La troisième fonction membre insère la séquence [`first`, `last`). Vous l’utilisez pour insérer zéro, un ou plusieurs éléments copiés à partir d’une autre séquence.
+La troisième fonction membre insère la séquence [ `first` , `last` ). Vous l’utilisez pour insérer zéro, un ou plusieurs éléments copiés à partir d’une autre séquence.
 
 La quatrième fonction membre insère la séquence désignée par la *droite*. Vous l’utilisez pour insérer une séquence décrite par un énumérateur.
 
@@ -1832,7 +1832,7 @@ float load_factor();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne `(float)`[hash_multiset :: Size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() /` [hash_multiset :: bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)`()`. Vous l’utilisez pour déterminer la taille moyenne des compartiments.
+La fonction membre retourne `(float)` [hash_multiset :: Size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md) `() /` [hash_multiset :: bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md) `()` . Vous l’utilisez pour déterminer la taille moyenne des compartiments.
 
 ### <a name="example"></a>Exemple
 
@@ -1911,7 +1911,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre détermine le premier élément `X` dans la séquence contrôlée qui hache vers le même compartiment que la *clé* et qui a un classement équivalent à la *clé*. Si aucun élément de ce type n’existe, il retourne [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; Sinon, elle retourne un itérateur qui désigne `X`. Vous l’utilisez pour localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre détermine le premier élément `X` de la séquence contrôlée qui hache vers le même compartiment que la *clé* et a un ordonnancement équivalent à la *clé*. Si aucun élément de ce type n’existe, il retourne [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` ; sinon, il retourne un itérateur qui désigne `X` . Vous l’utilisez pour localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -1968,7 +1968,7 @@ Valeur de clé à utiliser.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne un objet `value_type` dont la clé est *clé*. Vous l’utilisez pour composer un objet pouvant être utilisé avec plusieurs autres fonctions membres.
+La fonction membre retourne un `value_type` objet dont la clé est *clé*. Vous l’utilisez pour composer un objet pouvant être utilisé avec plusieurs autres fonctions membres.
 
 ### <a name="example"></a>Exemple
 
@@ -2091,12 +2091,12 @@ hash_multiset<Key>% operator=(hash_multiset<Key>% right);
 
 #### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*<br/>
 Conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre copie *directement* vers l’objet, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
+L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
 ### <a name="example"></a>Exemple
 
@@ -2239,7 +2239,7 @@ void rehash();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre reconstruit la table de hachage, en veillant à ce que [hash_multiset :: load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)`() <=` [hash_multiset :: max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md). Sinon, la taille de la table de hachage augmente uniquement si nécessaire après une insertion. (La taille n’est jamais réduite automatiquement.) Vous l’utilisez pour ajuster la taille de la table de hachage.
+La fonction membre reconstruit la table de hachage, en veillant à ce que [hash_multiset :: load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md) `() <=` [hash_multiset :: max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md). Sinon, la taille de la table de hachage augmente uniquement si nécessaire après une insertion. (La taille n’est jamais réduite automatiquement.) Vous l’utilisez pour ajuster la taille de la table de hachage.
 
 ### <a name="example"></a>Exemple
 
@@ -2404,7 +2404,7 @@ size_type size();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [hash_multiset :: Empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)`()`.
+La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [hash_multiset :: Empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Exemple
 
@@ -2506,12 +2506,12 @@ void swap(hash_multiset<Key>% right);
 
 #### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*<br/>
 Conteneur avec lequel échanger le contenu.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange les séquences contrôlées entre `this` et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
+La fonction membre échange les séquences contrôlées entre **`this`** et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
 
 ### <a name="example"></a>Exemple
 
@@ -2629,7 +2629,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre détermine le dernier élément `X` dans la séquence contrôlée qui hache vers le même compartiment que la *clé* et qui a un classement équivalent à la *clé*. Si aucun élément de ce type n’existe, ou si `X` est le dernier élément de la séquence contrôlée, elle retourne [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; Sinon, elle retourne un itérateur qui désigne le premier élément au-delà de `X`. Vous l’utilisez pour localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre détermine le dernier élément `X` de la séquence contrôlée qui hache vers le même compartiment que la *clé* et a un ordonnancement équivalent à la *clé*. Si aucun élément de ce type n’existe, ou si `X` est le dernier élément de la séquence contrôlée, il retourne [hash_multiset :: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` ; sinon, il retourne un itérateur qui désigne le premier élément au-delà de `X` . Vous l’utilisez pour localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -2760,7 +2760,7 @@ compare(L'b', L'a') = False
 
 ## <a name="hash_multisetvalue_type-stlclr"></a><a name="value_type"></a>hash_multiset :: value_type (STL/CLR)
 
-Type d'un élément.
+Type d’un élément.
 
 ### <a name="syntax"></a>Syntaxe
 
