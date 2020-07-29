@@ -9,37 +9,37 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 14a40bef5b2edba76fc130604414c45eee589bcd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169629"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87193001"
 ---
-# <a name="__asm"></a>__asm
+# `__asm`
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Le mot clé `__asm` appelle l'assembleur inline et peut apparaître partout où une instruction C ou C++ est conforme. Il ne peut pas apparaître de lui-même. Il doit être suivi par une instruction assembleur, un groupe d'instructions entre accolades ou, au minimum, par une paire d'accolades vide. Le terme « bloc `__asm`  » fait ici référence à une instruction ou un groupe d'instructions, que ce dernier soit ou non entouré d'accolades.
+Le **`__asm`** mot clé appelle l’assembleur inline et peut apparaître partout où une instruction C ou C++ est légale. Il ne peut pas apparaître de lui-même. Il doit être suivi par une instruction assembleur, un groupe d'instructions entre accolades ou, au minimum, par une paire d'accolades vide. Ici, le terme « **`__asm`** bloc » fait référence à toute instruction ou à tout groupe d’instructions, qu’elles soient ou non placées entre accolades.
 
 > [!NOTE]
-> La prise en charge du mot clé C++ standard `asm` par Visual C++ se limite au fait que le compilateur ne génère pas d'erreur pour le mot clé. Toutefois, un bloc `asm` ne génère aucun code explicite. Utilisez `__asm` à la place de `asm`.
+> Visual C++ la prise en charge du **`asm`** mot clé C++ standard est limitée au fait que le compilateur ne génère pas d’erreur sur le mot clé. Toutefois, un **`asm`** bloc ne génère pas de code significatif. Utilisez à la **`__asm`** place de **`asm`** .
 
 ## <a name="grammar"></a>Grammaire
 
 *bloc asm*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *-instruction d’assembly* **;** <sub>OPT</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *assembly-instruction-List* **}** **;** <sub>OPT</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__asm`***assembly-instruction* **`;`** <sub>OPT</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__asm {`***assembly-instruction-List* **`}`** **`;`** <sub>OPT</sub>
 
 *assembly-instruction-List*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** <sub>OPT</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-List* **;** <sub>OPT</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **`;`** <sub>OPT</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **`;`** *assembly-instruction-List* **`;`** <sub>OPT</sub>
 
 ## <a name="remarks"></a>Notes
 
-Utilisé sans accolades, le mot clé `__asm` signifie que le reste de la ligne est une instruction en langage assembleur. Utilisé avec les accolades, il signifie que chaque ligne entre accolades est une instruction en langage assembleur. Pour assurer la compatibilité avec les versions antérieures, `_asm` est un synonyme de `__asm`.
+S’il est utilisé sans accolades, le **`__asm`** mot clé signifie que le reste de la ligne est une instruction en langage assembleur. Utilisé avec les accolades, il signifie que chaque ligne entre accolades est une instruction en langage assembleur. Pour la compatibilité avec les versions précédentes, **`_asm`** est un synonyme de **`__asm`** .
 
-Dans la mesure où le mot clé `__asm` est un séparateur d'instruction, vous pouvez placer des instructions assembleur sur la même ligne :
+Étant donné que le **`__asm`** mot clé est un séparateur d’instruction, vous pouvez placer des instructions d’assembly sur la même ligne.
 
 Avant Visual Studio 2005, l’instruction
 
@@ -51,11 +51,11 @@ n’a pas provoqué la génération de code natif lors de la compilation avec **
 
 `__asm int 3` entraîne maintenant la génération de code natif pour la fonction. Si vous souhaitez qu’une fonction génère un point d’arrêt dans votre code et que vous souhaitiez que cette fonction soit compilée en langage MSIL, utilisez [__debugbreak](../../intrinsics/debugbreak.md).
 
-Pour la compatibilité avec les versions précédentes, **_asm** est un synonyme de **__asm** sauf si l’option de compilateur [/za \(désactiver les extensions de langage)](../../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
+Pour la compatibilité avec les versions précédentes, **`_asm`** est un synonyme de, **`__asm`** sauf si l’option de compilateur [/za \( Désactiver les extensions de langage)](../../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
 ## <a name="example"></a>Exemple
 
-Le fragment de code suivant est un simple bloc `__asm` entre accolades :
+Le fragment de code suivant est un simple **`__asm`** bloc entre accolades :
 
 ```cpp
 __asm {
@@ -65,7 +65,7 @@ __asm {
 }
 ```
 
-Vous pouvez aussi placer `__asm` devant chaque instruction assembleur :
+Vous pouvez également placer **`__asm`** devant chaque instruction d’assembly :
 
 ```cpp
 __asm mov al, 2
@@ -73,17 +73,17 @@ __asm mov dx, 0xD007
 __asm out dx, al
 ```
 
-Le mot clé `__asm` étant un séparateur d'instruction, vous pouvez également insérer des instructions assembleur sur la même ligne :
+Étant donné que le **`__asm`** mot clé est un séparateur d’instruction, vous pouvez également placer des instructions d’assembly sur la même ligne :
 
 ```cpp
 __asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al
 ```
 
-Les trois exemples génèrent le même code, mais le premier style (bloc `__asm` placé entre accolades) présente quelques avantages. Les accolades séparent clairement le code de l'assembly du code C ou C++. De plus, elles évitent toute répétition inutile du mot clé `__asm`. Les accolades peuvent également empêcher les ambiguïtés. Pour placer une instruction C ou C++ sur la même ligne qu'un bloc `__asm`, placez le bloc entre accolades. Sans accolades, le compilateur ne peut pas savoir où le code assembleur s'arrête et où les instructions C ou C++ démarrent. Enfin, étant donné que le texte entre accolades a le même format que le texte MASM ordinaire, vous pouvez facilement couper et coller le texte depuis des fichiers sources MASM existants.
+Les trois exemples génèrent le même code, mais le premier style (englobant le **`__asm`** bloc entre accolades) présente des avantages. Les accolades séparent clairement le code assembleur du code C ou C++ et évitent toute répétition inutile du **`__asm`** mot clé. Les accolades peuvent également empêcher les ambiguïtés. Si vous souhaitez placer une instruction C ou C++ sur la même ligne qu’un **`__asm`** bloc, vous devez placer le bloc entre accolades. Sans accolades, le compilateur ne peut pas savoir où le code assembleur s'arrête et où les instructions C ou C++ démarrent. Enfin, étant donné que le texte entre accolades a le même format que le texte MASM ordinaire, vous pouvez facilement couper et coller le texte depuis des fichiers sources MASM existants.
 
-Contrairement aux accolades en C et C++, celles encadrant un bloc `__asm` n'affectent pas la portée de la variable. Vous pouvez également imbriquer les blocs `__asm` ; l'imbrication n'affecte pas la portée de la variable.
+Contrairement aux accolades en C et C++, les accolades englobant un **`__asm`** bloc n’affectent pas la portée de la variable. Vous pouvez également imbriquer des **`__asm`** blocs ; l’imbrication n’affecte pas la portée des variables.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

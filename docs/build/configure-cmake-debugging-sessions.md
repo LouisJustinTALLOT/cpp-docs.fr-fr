@@ -4,12 +4,12 @@ description: Décrit comment utiliser Visual Studio pour configurer les paramèt
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: cc80827458ba7cb61339ec3a36f227747780a47c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630524"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224082"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurer des sessions de débogage CMake
 
@@ -33,7 +33,7 @@ Ensuite, cliquez avec le bouton droit sur un exécutable et sélectionnez **Déb
 
 ## <a name="customize-debugger-settings"></a>Personnaliser les paramètres du débogueur
 
-Vous pouvez personnaliser les paramètres du débogueur pour toute cible CMake exécutable dans votre projet. Ils se trouvent dans un fichier de configuration nommé *Launch. vs. JSON*, situé dans un *`.vs`* dossier à la racine de votre projet. Un fichier de configuration de lancement est utile dans la plupart des scénarios de débogage, car vous pouvez configurer et enregistrer les détails de l’installation du débogage. Il existe trois points d’entrée pour ce fichier :
+Vous pouvez personnaliser les paramètres du débogueur pour toute cible CMake exécutable dans votre projet. Ils se trouvent dans un fichier de configuration appelé *launch.vs.js*, situé dans un *`.vs`* dossier à la racine de votre projet. Un fichier de configuration de lancement est utile dans la plupart des scénarios de débogage, car vous pouvez configurer et enregistrer les détails de l’installation du débogage. Il existe trois points d’entrée pour ce fichier :
 
 - **Menu Déboguer :** Sélectionnez **Déboguer > paramètres de débogage et de lancement pour $ {activeDebugTarget}** dans le menu principal pour personnaliser la configuration de débogage spécifique à votre cible de débogage active. Si aucune cible de débogage n’est sélectionnée, cette option est grisée.
 
@@ -43,15 +43,15 @@ Vous pouvez personnaliser les paramètres du débogueur pour toute cible CMake e
 
 ![Point d’entrée de la vue cibles](media/cmake-targets-add-debug-configuration.png "Point d’entrée de la vue cibles")
 
-- **Racine fichier CMakeLists. txt :** Cliquez avec le bouton droit sur un *fichier CMakeLists. txt* racine et sélectionnez **Ajouter une configuration de débogage** pour ouvrir la boîte de dialogue **Sélectionner un débogueur** . La boîte de dialogue vous permet d’ajouter *n’importe quel* type de configuration de débogage, mais vous devez spécifier manuellement la cible cmake à appeler via la `projectTarget` propriété.
+- **CMakeLists.txt racine :** Cliquez avec le bouton droit sur un *CMakeLists.txt* racine et sélectionnez **Ajouter une configuration de débogage** pour ouvrir la boîte de dialogue **Sélectionner un débogueur** . La boîte de dialogue vous permet d’ajouter *n’importe quel* type de configuration de débogage, mais vous devez spécifier manuellement la cible cmake à appeler via la `projectTarget` propriété.
 
 ![Sélectionner une boîte de dialogue du débogueur](media/cmake-select-a-debugger.png "Sélectionner une boîte de dialogue du débogueur")
 
-Vous pouvez modifier le fichier *Launch. vs. JSON* pour créer des configurations de débogage pour n’importe quel nombre de cibles cmake. Lorsque vous enregistrez le fichier, Visual Studio crée une entrée pour chaque nouvelle configuration dans la liste déroulante **élément de démarrage** .
+Vous pouvez modifier la *launch.vs.jssur* le fichier pour créer des configurations de débogage pour un nombre quelconque de cibles cmake. Lorsque vous enregistrez le fichier, Visual Studio crée une entrée pour chaque nouvelle configuration dans la liste déroulante **élément de démarrage** .
 
-## <a name="reference-keys-in-cmakesettingsjson"></a>Clés de référence dans CMakeSettings. JSON
+## <a name="reference-keys-in-cmakesettingsjson"></a>Clés de référence dans CMakeSettings.jssur
 
-Pour faire référence à une clé dans un fichier *CMakeSettings. JSON* , ajoutez-la au début `cmake.` dans *Launch. vs. JSON*. L’exemple suivant montre un fichier *Launch. vs. JSON* simple qui extrait la valeur de la `remoteCopySources` clé dans le fichier *CMakeSettings. JSON* pour la configuration actuellement sélectionnée :
+Pour faire référence à une clé d’un *CMakeSettings.js* dans un fichier, ajoutez-le au début `cmake.` *launch.vs.js*. L’exemple suivant montre un *launch.vs.jssimple sur* un fichier qui extrait la valeur de la `remoteCopySources` clé dans le fichier *CMakeSettings.js* de la configuration actuellement sélectionnée :
 
 ```json
 {
@@ -69,13 +69,13 @@ Pour faire référence à une clé dans un fichier *CMakeSettings. JSON* , ajout
 }
 ```
 
-Les **variables d’environnement** définies dans *CMakeSettings. JSON* peuvent également être utilisées dans Launch. vs. JSON à l’aide de la syntaxe `${env.VARIABLE_NAME}` . Dans Visual Studio 2019 version 16,4 et versions ultérieures, les cibles de débogage sont automatiquement lancées à l’aide de l’environnement que vous spécifiez dans *CMakeSettings. JSON*. Vous pouvez annuler la définition d’une variable d’environnement en lui affectant la **valeur null**.
+Les **variables d’environnement** définies dans *CMakeSettings.jssur* peuvent également être utilisées dans launch.vs.jsà l’aide de la syntaxe `${env.VARIABLE_NAME}` . Dans Visual Studio 2019 version 16,4 et versions ultérieures, les cibles de débogage sont automatiquement lancées à l’aide de l’environnement que vous spécifiez dans *CMakeSettings.js*. Vous pouvez annuler la définition d’une variable d’environnement en lui affectant la **valeur null**.
 
-## <a name="launchvsjson-reference"></a>Référence Launch. vs. JSON
+## <a name="launchvsjson-reference"></a>Launch.vs.jsà la référence
 
-Il existe de nombreuses propriétés *Launch. vs. JSON* pour prendre en charge tous vos scénarios de débogage. Les propriétés suivantes sont communes à toutes les configurations de débogage, à la fois distantes et locales :
+Il existe *de nombreuxlaunch.vs.jssur* les propriétés pour prendre en charge tous vos scénarios de débogage. Les propriétés suivantes sont communes à toutes les configurations de débogage, à la fois distantes et locales :
 
-- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *Launch. vs. JSON* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
+- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *launch.vs.js* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
 
 - `env`: Variables d’environnement supplémentaires à ajouter à l’aide de la syntaxe suivante :
 
@@ -88,7 +88,7 @@ Il existe de nombreuses propriétés *Launch. vs. JSON* pour prendre en charge t
 
 - `args`: Arguments de ligne de commande passés au programme à déboguer.
 
-## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>Référence Launch. vs. JSON pour les projets distants et WSL
+## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>Launch.vs.jsen référence pour les projets distants et WSL
 
 Dans Visual Studio 2019 version 16,6, nous avons ajouté une nouvelle configuration Debug de `type: cppgdb` pour simplifier le débogage sur les systèmes distants et les WSL. Les anciennes configurations de débogage de `type: cppdbg` sont toujours prises en charge.
 
@@ -96,7 +96,7 @@ Dans Visual Studio 2019 version 16,6, nous avons ajouté une nouvelle configurat
 
 - `name`: Nom convivial permettant d’identifier la configuration dans la liste déroulante **élément de démarrage** .
 - `project`: Spécifie le chemin d’accès relatif au fichier projet. Normalement, vous n’avez pas besoin de modifier ce chemin d’accès lors du débogage d’un projet CMake.
-- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *Launch. vs. JSON* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur cible doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
+- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *launch.vs.js* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur cible doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
 - `debuggerConfiguration`: Indique le jeu de valeurs par défaut de débogage à utiliser. Dans Visual Studio 2019 version 16,6, la seule option valide est `gdb` . Visual Studio 2019 version 16,7 ou ultérieure prend également en charge `gdbserver` .
 - `args`: Arguments de ligne de commande passés au démarrage au programme en cours de débogage.
 - `env`: Autres variables d’environnement passées au programme en cours de débogage. Par exemple : `{"DISPLAY": "0.0"}`.
@@ -121,17 +121,17 @@ Dans Visual Studio 2019 version 16,6, nous avons ajouté une nouvelle configurat
 
 #### <a name="deployment-options"></a>Options de déploiement
 
-Utilisez les options suivantes pour séparer votre ordinateur de build (défini dans CMakeSettings. Json) de votre ordinateur de débogage distant.
+Utilisez les options suivantes pour séparer votre ordinateur de build (défini dans CMakeSettings.js) de votre ordinateur de débogage distant.
 
 - `remoteMachineName`: Ordinateur de débogage distant. Obligatoire uniquement s’il est différent de l’ordinateur de Build. Doit avoir une entrée existante dans le [Gestionnaire de connexions](../linux/connect-to-your-remote-linux-computer.md). Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes existantes.
-- `disableDeploy`: La valeur par défaut est `false` . Indique si la séparation de build/débogage est désactivée. Quand `false` cette option est activée, cette option permet de générer et de déboguer sur deux ordinateurs distincts.
+- `disableDeploy`: La valeur par défaut est **`false`** . Indique si la séparation de build/débogage est désactivée. Quand **`false`** cette option est activée, cette option permet de générer et de déboguer sur deux ordinateurs distincts.
 - `deployDirectory`: Chemin d’accès UNIX complet au répertoire sur `remoteMachineName` lequel l’exécutable est copié.
 - `deploy`: Un tableau de paramètres de déploiement avancés. Vous devez configurer ces paramètres uniquement lorsque vous souhaitez un contrôle plus granulaire du processus de déploiement. Par défaut, seuls les fichiers nécessaires au débogage du processus sont déployés sur l’ordinateur de débogage distant.
   - `sourceMachine`: Ordinateur à partir duquel le fichier ou le répertoire est copié. Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes stockées dans le gestionnaire de connexions. Lors de la génération en mode natif sur WSL, cette option est ignorée.
   - `targetMachine`: Ordinateur sur lequel le fichier ou le répertoire est copié. Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes stockées dans le gestionnaire de connexions.
   - `sourcePath`: Emplacement du fichier ou du répertoire sur `sourceMachine` .
   - `targetPath`: Emplacement du fichier ou du répertoire sur `targetMachine` .
-  - `deploymentType`: Description du type de déploiement. `LocalRemote`et `RemoteRemote` sont pris en charge. `LocalRemote`signifie la copie à partir du système de fichiers local vers le système distant spécifié par `remoteMachineName` dans *Launch. vs. JSON*. `RemoteRemote`signifie la copie à partir du système de génération distant spécifié dans *CMakeSettings. JSON* vers le système distant différent spécifié dans *Launch. vs. JSON*.
+  - `deploymentType`: Description du type de déploiement. `LocalRemote`et `RemoteRemote` sont pris en charge. `LocalRemote`signifie la copie à partir du système de fichiers local vers le système distant spécifié par `remoteMachineName` dans *launch.vs.jssur*. `RemoteRemote`signifie que la copie à partir du système de génération distant spécifié dans *CMakeSettings.jssur* le autre système distant spécifié dans *launch.vs.jssur*.
   - `executable`: Indique si le fichier déployé est un exécutable.
 
 ### <a name="execute-custom-gdb-commands"></a>Exécuter des `gdb` commandes personnalisées
@@ -150,7 +150,7 @@ Les options suivantes peuvent être utilisées lors du débogage sur un système
 
 - `project`: Spécifie le chemin d’accès relatif au fichier projet. Normalement, vous n’avez pas besoin de modifier cette valeur lors du débogage d’un projet CMake.
 
-- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *Launch. vs. JSON* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
+- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *launch.vs.js* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
 
 - `args`: Arguments de ligne de commande passés au démarrage au programme en cours de débogage.
 
@@ -211,7 +211,7 @@ Les options suivantes peuvent être utilisées lors du débogage sur un système
 
 - `visualizerFile`: [Fichier. natvis](/visualstudio/debugger/create-custom-views-of-native-objects) à utiliser lors du débogage de ce processus. Cette option est incompatible avec `gdb` l’impression simple. Définissez également `showDisplayString` lorsque vous définissez cette propriété.
 
-- `showDisplayString`: Valeur booléenne qui active la chaîne d’affichage lorsqu’un `visualizerFile` est spécifié. L’affectation de la valeur à cette option `true` peut entraîner une baisse des performances lors du débogage.
+- `showDisplayString`: Valeur booléenne qui active la chaîne d’affichage lorsqu’un `visualizerFile` est spécifié. L’affectation de la valeur à cette option **`true`** peut entraîner une baisse des performances lors du débogage.
 
 - `setupCommands`: Une ou plusieurs `gdb` commandes à exécuter, pour configurer le débogueur sous-jacent.
 

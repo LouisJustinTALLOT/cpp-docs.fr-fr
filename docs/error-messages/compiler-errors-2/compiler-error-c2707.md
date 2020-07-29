@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: eaac568387138450577ead23f1470c37ad300335
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760437"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225421"
 ---
 # <a name="compiler-error-c2707"></a>Erreur du compilateur C2707
 
@@ -19,11 +19,11 @@ ms.locfileid: "74760437"
 
 Les intrinsèques de gestion des exceptions structurées ne sont pas valides dans certains contextes :
 
-- `_exception_code()` en dehors d’un filtre d’exception ou d’un bloc de `__except`
+- `_exception_code()`en dehors d’un bloc ou d’un filtre d’exception **`__except`**
 
-- `_exception_info()` en dehors d’un filtre d’exception
+- `_exception_info()`en dehors d’un filtre d’exception
 
-- `_abnormal_termination()` en dehors d’un bloc de `__finally`
+- `_abnormal_termination()`en dehors d’un **`__finally`** bloc
 
 Pour résoudre l’erreur, assurez-vous que les fonctions intrinsèques de gestion des exceptions sont placées dans le contexte approprié.
 

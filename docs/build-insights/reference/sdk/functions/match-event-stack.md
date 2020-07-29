@@ -1,6 +1,6 @@
 ---
-title: MatchEventStack (en)
-description: La référence de fonction CMD Build Insights SDK MatchEventStack.
+title: MatchEventStack
+description: Référence de la fonction MatchEventStack du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a223d420e8c48667fbd1c6569f02d0486f597b5e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ae476c402c3ea0cad558ce41a979b4233e0f1dd3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323872"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224121"
 ---
-# <a name="matcheventstack"></a>MatchEventStack (en)
+# <a name="matcheventstack"></a>MatchEventStack
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `MatchEventStack` fonction est utilisée pour correspondre à une pile d’événements par rapport à une hiérarchie d’événements spécifique. Les hiérarchies assorties sont transmises à un gestionnaire pour un traitement ultérieur. Pour en savoir plus sur les événements, les piles d’événements et les hiérarchies, consultez [la table d’événements](../event-table.md).
+La `MatchEventStack` fonction est utilisée pour faire correspondre une pile d’événements à une hiérarchie d’événements spécifique. Les hiérarchies correspondantes sont transférées à un gestionnaire en vue d’un traitement supplémentaire. Pour en savoir plus sur les événements, les piles d’événements et les hiérarchies, consultez [table des événements](../event-table.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,36 +43,36 @@ bool MatchEventStack(
 
 ### <a name="parameters"></a>Paramètres
 
-*TEvent (en)*\
-Le type de parent aîné à correspondre dans la pile d’événements.
+*TEvent*\
+Type du parent eldest à faire correspondre dans la pile des événements.
 
-*Les TEvents*\
-Les autres types que vous souhaitez assortir dans la pile d’événements.
+*TEvents*\
+Types restants que vous souhaitez faire correspondre dans la pile des événements.
 
 *TCallable*\
-Un type `operator()`qui prend en charge . Pour plus d’informations sur les arguments transmis à cet opérateur, consultez la description du paramètre *appelant.*
+Type qui prend en charge `operator()` . Pour plus d’informations sur les arguments passés à cet opérateur, consultez la description du paramètre *pouvant être appelé* .
 
 *TExtraArgs*\
-Les types d’arguments `MatchEventStack`supplémentaires passés à .
+Types des arguments supplémentaires passés à `MatchEventStack` .
 
-*événementStack*\
-La pile d’événements pour correspondre à la hiérarchie de type événement décrit par *TEvent* et *TEvents*.
+*eventStack*\
+Pile d’événements à faire correspondre à la hiérarchie des types d’événements décrite par *TEvent* et *TEvents*.
 
-*Callable*\
-Après avoir réussi à faire correspondre la pile de l’événement `MatchEventStack` avec la hiérarchie de type événement décrit par *TEvent* et *TEvents*, invoque *callable*. Il passe à *appeler* un argument de valeur r pour chaque type dans la hiérarchie d’événements. Le pack de paramètres *extraArgs* est parfaitement transmis dans les paramètres restants de *callable*.
+*pouvant être appelé*\
+En cas de correspondance avec la pile d’événements avec la hiérarchie des types d’événements décrite par *TEvent* et *TEvents*, `MatchEventStack` appelle *Callable*. Il passe à un argument r-value *pouvant être appelé* pour chaque type dans la hiérarchie d’événements. Le Pack de paramètres *extraArgs* est parfait-transféré dans les paramètres restants de *Callable*.
 
 *extraArgs*\
-Les arguments qui obtiennent parfait-avancé à *appeler* avec le type d’événement apparié.
+Les arguments qui sont parfaits parfaits, transférés pour être *appelés* avec le type d’événement correspondant.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur **bool** qui est **vrai** si l’appariement a été réussie, ou **faux** autrement.
+**`bool`** Valeur qui est **`true`** si la correspondance a réussi, ou **`false`** sinon.
 
 ## <a name="remarks"></a>Notes
 
-La dernière épreuve en *cas de matchStack* est toujours \[égalée contre la dernière entrée dans le *TEvent*concatenated , *TEvents...* \] liste de type. Toutes les autres entrées *de TEvent* et *TEvents* peuvent correspondre à n’importe quelle position dans *le casstack* sauf le dernier, à condition qu’ils soient dans le même ordre.
+Le dernier événement dans *eventStack* est toujours mis en correspondance avec la dernière entrée de la liste concaténée \[ *TEvent*, *TEvents...* \] type. Toutes les autres entrées *TEvent* et *TEvents* peuvent correspondre à n’importe quelle position dans *eventStack* , à l’exception de la dernière, à condition qu’elles soient dans le même ordre.
 
-Les types d’événements à utiliser pour les paramètres *TEvent* et *TEvents* sont sélectionnés parmi une liste de classes de *capture*. Pour une liste d’événements et les classes de capture que vous pouvez utiliser pour les assortir, voir [tableau d’événements](../event-table.md).
+Les types d’événements à utiliser pour les paramètres *TEvent* et *TEvents* sont sélectionnés dans une liste de *classes de capture*. Pour obtenir la liste des événements et les classes de capture que vous pouvez utiliser pour les mettre en correspondance, consultez [table des événements](../event-table.md).
 
 ## <a name="example"></a>Exemple
 

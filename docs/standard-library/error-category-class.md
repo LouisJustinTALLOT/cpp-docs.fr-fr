@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 136320ba3be36ec20fc08e0d83b1ce3274ed08ff
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737559"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224875"
 ---
 # <a name="error_category-class"></a>error_category, classe
 
@@ -82,11 +82,11 @@ virtual error_condition default_error_condition(int _Errval) const;
 `_Errval`\
 Valeur de code d’erreur à stocker dans [error_condition](../standard-library/error-condition-class.md).
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Retourne `error_condition(_Errval, *this)`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="equivalent"></a><a name="equivalent"></a>identique
 
@@ -111,11 +111,11 @@ Objet [error_condition](../standard-library/error-condition-class.md) à compare
 *_Code*\
 Objet [error_code](../standard-library/error-code-class.md) à comparer.
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
-**true** si la catégorie et la valeur sont égales ; Sinon, **false**.
+**`true`** Si la catégorie et la valeur sont égales ; Sinon, **`false`** .
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 La première fonction membre retourne `*this == _Cond.category() && _Cond.value() == _Errval`.
 
@@ -140,11 +140,11 @@ virtual string message(error_code::value_type val) const = 0;
 *multiples*\
 Valeur de code d’erreur à décrire.
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
 Retourne un nom descriptif du code d’erreur *Val* pour la catégorie. Si le code d’erreur n’est pas reconnu, retourne `"unknown error"` .
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 ### <a name="name"></a>Nom <a name="name"></a>
 
@@ -154,7 +154,7 @@ Retourne le nom de la catégorie.
 virtual const char *name() const = 0;
 ```
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
 Retourne le nom de la catégorie sous forme de chaîne d’octets terminée par un caractère null.
 
@@ -177,11 +177,11 @@ bool operator==(const error_category& right) const;
 *Oui*\
 Objet dont l’égalité doit être vérifiée.
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
-**true** si les objets sont égaux, **false** si les objets ne sont pas égaux.
+**`true`** Si les objets sont égaux ; **`false`** si les objets ne sont pas égaux.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Cet opérateur membre retourne `this == &right`.
 
@@ -198,11 +198,11 @@ bool operator!=(const error_category& right) const;
 *Oui*\
 Objet dont l’inégalité doit être vérifiée.
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
-**true** si l' `error_category` objet n’est pas égal à l' `error_category` objet passé à *droite*; sinon, **false**.
+**`true`** Si l' `error_category` objet n’est pas égal à l' `error_category` objet passé à *droite*; sinon, **`false`** .
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 L’opérateur membre retourne `(!*this == right)`.
 
@@ -219,11 +219,11 @@ bool operator<(const error_category& right) const;
 *Oui*\
 Objet `error_category` à comparer.
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet `error_category` est inférieur à l’objet `error_category` transmis pour la comparaison ; sinon, **false**.
+**`true`** Si l' `error_category` objet est inférieur à l' `error_category` objet passé pour la comparaison ; Sinon, **`false`** .
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 L’opérateur membre retourne `this < &right`.
 
@@ -241,6 +241,6 @@ Type qui représente la valeur de code d’erreur stockée.
 typedef int value_type;
 ```
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
-Cette définition de type est un synonyme de **int**.
+Cette définition de type est un synonyme de **`int`** .

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: d3aaedf616bf50e18e21b465727f10190fd127b2
-ms.sourcegitcommit: ac5e5edd3e4f31d5dc7df48316cb7649b3f4a41f
+ms.openlocfilehash: 771a2973e0254194d99ddfd46ca7df7d6cc8e5a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872385"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224823"
 ---
 # <a name="locale-class"></a>locale, classe
 
@@ -161,7 +161,7 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 
 |||
 |-|-|
-|[Classic](#classic)|La fonction membre statique retourne un objet de paramètres régionaux qui représente les paramètres régionaux classiques du langage C.|
+|[classique](#classic)|La fonction membre statique retourne un objet de paramètres régionaux qui représente les paramètres régionaux classiques du langage C.|
 |[Généralités](#global)|Réinitialise les paramètres régionaux par défaut du programme.|
 
 ### <a name="operators"></a>Opérateurs
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme d’un type **int** qui peut représenter un groupe d’éléments distincts d’un type de masque de masque local aux paramètres régionaux de classe ou qui peut être utilisé pour représenter l’une des catégories de paramètres régionaux C correspondants. Les éléments sont :
+Le type est un synonyme d’un **`int`** type qui peut représenter un groupe d’éléments distincts d’un type de masque de masque local aux paramètres régionaux de classe ou qui peut être utilisé pour représenter l’une des catégories de paramètres régionaux C correspondants. Les éléments sont :
 
 - `collate`, correspondant à la catégorie C LC_COLLATE
 
@@ -234,7 +234,7 @@ La fonction membre statique retourne un objet de paramètres régionaux qui repr
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Référence aux paramètres régionaux C.
 
@@ -295,7 +295,7 @@ locale combine(const locale& source_locale) const;
 *source_locale*\
 Paramètres régionaux contenant la facette à insérer dans les paramètres régionaux cibles.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 La fonction membre retourne un objet de paramètres régionaux qui remplace ou ajoute à ** \* cette** facette `Facet` indiquée dans *source_locale*.
 
@@ -363,7 +363,7 @@ static locale global(const locale& new_default_locale);
 *new_default_locale*\
 Paramètres régionaux à utiliser comme paramètres régionaux par défaut par le programme.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Paramètres régionaux en vigueur avant la réinitialisation des paramètres régionaux par défaut.
 
@@ -520,7 +520,7 @@ Retourne le nom des paramètres régionaux stocké.
 string name() const;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Chaîne indiquant le nom des paramètres régionaux.
 
@@ -572,9 +572,9 @@ bool operator!=(const locale& right) const;
 *Oui*\
 L’un des paramètres régionaux dont l’inégalité doit être testée.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-Valeur booléenne qui est **true** si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux. La **valeur est false** si les paramètres régionaux sont des copies des mêmes paramètres régionaux.
+Valeur booléenne qui est **`true`** si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux. C’est **`false`** le cas si les paramètres régionaux sont des copies des mêmes paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 
@@ -639,9 +639,9 @@ Première chaîne à comparer.
 *Oui*\
 Deuxième chaîne à comparer.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-- `true`Si *Left* est vue lexicographique inférieur à *Right*; sinon, `false` .
+- **`true`** Si *Left* est vue lexicographique inférieur à *Right*; sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -699,9 +699,9 @@ bool operator==(const locale& right) const;
 *Oui*\
 L’un des paramètres régionaux dont l’égalité doit être testée.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-Valeur booléenne qui est **true** si les paramètres régionaux sont des copies des mêmes paramètres régionaux. La **valeur est false** si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux.
+Valeur booléenne qui est **`true`** si les paramètres régionaux sont des copies des mêmes paramètres régionaux. C’est **`false`** le cas si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 

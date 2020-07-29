@@ -1,5 +1,5 @@
 ---
-title: '&lt;opérateurs&gt; optionnels'
+title: '&lt;opérateurs facultatifs &gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - optional/std::operator!=
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (optional)
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
-ms.openlocfilehash: 9bdef0669f90da7865f7652ff4528e51e584e1a2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c7eca76f71f12e7f7fe0e60c0a4cfe456d54c374
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373631"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224680"
 ---
-# <a name="ltoptionalgt-operators"></a>&lt;opérateurs&gt; optionnels
+# <a name="ltoptionalgt-operators"></a>&lt;opérateurs facultatifs &gt;
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur
+## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est égal à l'objet `optional` situé à droite.
 
@@ -39,13 +39,13 @@ template <class T, class U> constexpr bool operator==(const U&, const optional<T
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+*gauche*\
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 *Oui*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+Objet de type `optional` , `nullopt_t` ou `T` .
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur!
+## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
 
 Teste si l'objet `optional` situé à gauche de l'opérateur n'est pas égal à l'objet `optional` situé à droite.
 
@@ -59,17 +59,17 @@ template <class T, class U> constexpr bool operator!=(const U&, const optional<T
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+*gauche*\
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 *Oui*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction de modèle retourne `!(left == right)`.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Opérateur&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est inférieur à l'objet `optional` situé à droite.
 
@@ -83,17 +83,17 @@ template <class T, class U> constexpr bool operator<(const U&, const optional<T>
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+*gauche*\
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 *Oui*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la liste située à gauche de l’opérateur est inférieure mais pas égale à la liste située à droite de l’opérateur. Sinon, **false**.
+**`true`** Si la liste située à gauche de l’opérateur est inférieure mais pas égale à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Opérateur&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est inférieur ou égal à l'objet `optional` situé à droite.
 
@@ -107,21 +107,21 @@ template <class T, class U> constexpr bool operator<=(const U&, const optional<T
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+*gauche*\
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 *Oui*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la liste située à gauche de l’opérateur est inférieure ou égale à la liste située à droite de l’opérateur. Sinon, **false**.
+**`true`** Si la liste située à gauche de l’opérateur est inférieure ou égale à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction de modèle retourne `!(right < left)`.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Opérateur&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est supérieur à l'objet `optional` situé à droite.
 
@@ -135,21 +135,21 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+*gauche*\
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 *Oui*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la liste située à gauche de l’opérateur est supérieure à la liste située à droite de l’opérateur. Sinon, **false**.
+**`true`** Si la liste située à gauche de l’opérateur est supérieure à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction de modèle retourne `right < left`.
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Opérateur&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
 
 Teste si l'objet `optional` situé à gauche de l'opérateur est supérieur ou égal à l'objet `optional` situé à droite.
 
@@ -163,15 +163,15 @@ template <class T, class U> constexpr bool operator>=(const U&, const optional<T
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+*gauche*\
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 *Oui*\
-Un objet `optional`de `nullopt_t`type, , ou `T`.
+Objet de type `optional` , `nullopt_t` ou `T` .
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet `optional` situé à gauche de l’opérateur est supérieur ou égal à l’objet `optional` situé à droite de l’opérateur ; sinon, **false**.
+**`true`** Si le `optional` à gauche de l’opérateur est supérieur ou égal à l’extrémité `optional` droite de l’opérateur ; sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 

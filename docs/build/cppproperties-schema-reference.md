@@ -1,18 +1,18 @@
 ---
-title: Informations de référence sur CppProperties. JSON
+title: CppProperties.jsà la référence
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: be6db52e1e62244e9f44db8ac86238242ab50ca0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328715"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224056"
 ---
-# <a name="cpppropertiesjson-reference"></a>Informations de référence sur CppProperties. JSON
+# <a name="cpppropertiesjson-reference"></a>CppProperties.jsà la référence
 
-Les projets de dossiers ouverts qui n’utilisent pas CMake peuvent stocker des paramètres de configuration de projet pour IntelliSense dans un fichier *CppProperties. JSON* . (Les projets CMake utilisent un fichier [CMakeSettings. JSON](customize-cmake-settings.md) .) Une configuration se compose de paires nom/valeur et définit #include chemins d’accès, des commutateurs de compilateur et d’autres paramètres. Consultez [ouvrir des projets de dossier pour C++](open-folder-projects-cpp.md) pour plus d’informations sur la façon d’ajouter des configurations dans un projet de dossier ouvert. Les sections suivantes résument les différents paramètres. Pour obtenir une description complète du schéma, accédez à *CppProperties_schema. JSON*, dont le chemin d’accès complet est indiqué en haut de l’éditeur de code lorsque *CppProperties. JSON* est ouvert.
+Les projets de dossiers ouverts qui n’utilisent pas CMake peuvent stocker des paramètres de configuration de projet pour IntelliSense dans un *CppProperties.jssur* un fichier. (Les projets CMake utilisent un [CMakeSettings.jssur le](customize-cmake-settings.md) fichier.) Une configuration se compose de paires nom/valeur et définit #include chemins d’accès, des commutateurs de compilateur et d’autres paramètres. Consultez [ouvrir des projets de dossier pour C++](open-folder-projects-cpp.md) pour plus d’informations sur la façon d’ajouter des configurations dans un projet de dossier ouvert. Les sections suivantes résument les différents paramètres. Pour obtenir une description complète du schéma, accédez à *CppProperties_schema.jssur*, dont le chemin d’accès complet est indiqué en haut de l’éditeur de code lorsque *CppProperties.jssur* est ouvert.
 
 ## <a name="configuration-properties"></a>Propriétés de configuration
 
@@ -28,7 +28,7 @@ Une configuration peut avoir l’une des propriétés suivantes :
 |`forcedInclude`|En-tête à inclure automatiquement dans chaque unité de compilation (correspond à /FI dans MSVC ou -include dans clang)|
 |`undefines`|Liste des macros non définies (correspond à /U dans MSVC)|
 |`intelliSenseMode`|Moteur IntelliSense à utiliser Vous pouvez spécifier l’une des variantes prédéfinies spécifiques à l’architecture pour MSVC, GCC ou Clang.|
-|`environments`|Ensembles de variables définis par l’utilisateur qui se comportent comme des variables d’environnement dans une invite de commandes et sont\< accessibles avec le $ {env. Macro>}.|
+|`environments`|Ensembles de variables définis par l’utilisateur qui se comportent comme des variables d’environnement dans une invite de commandes et sont accessibles avec le $ {env. \<VARIABLE> } macrovirus.|
 
 ### <a name="intellisensemode-values"></a>valeurs intelliSenseMode
 
@@ -62,7 +62,7 @@ Remarque : les valeurs `msvc-x86` et `msvc-x64` sont prises en charge uniquemen
 
 ## <a name="pre-defined-environments"></a>Environnements prédéfinis
 
-Visual Studio fournit les environnements prédéfinis suivants pour Microsoft C++ qui sont mappés aux Invite de commandes développeur correspondants. Lorsque vous héritez de l’un de ces environnements, vous pouvez faire référence à l’une des variables d’environnement `env` à l’aide de la propriété globale avec la\< syntaxe de macro suivante : $ {env. VARIABLE>}.
+Visual Studio fournit les environnements prédéfinis suivants pour Microsoft C++ qui sont mappés aux Invite de commandes développeur correspondants. Lorsque vous héritez de l’un de ces environnements, vous pouvez faire référence à l’une des variables d’environnement à l’aide de la propriété globale `env` avec la syntaxe de macro suivante : $ {env. \<VARIABLE> }.
 
 |Nom de la variable|Description|
 |-----------|-----------------|
@@ -85,11 +85,11 @@ Quand la charge de travail Linux est installée, les environnements suivants son
 
 ## <a name="user-defined-environments"></a><a name="user_defined_environments"></a>Environnements définis par l’utilisateur
 
-Vous pouvez éventuellement utiliser la `environments` propriété pour définir des ensembles de variables dans *CppProperties. JSON* , globalement ou par configuration. Ces variables se comportent comme des variables d’environnement dans le contexte d’un projet de dossier ouvert et sont accessibles à\< l’aide de la fonction $ {env. La syntaxe VARIABLE>} de *Tasks. vs. JSON* et *Launch. vs. JSON* une fois qu’elles sont définies ici. Toutefois, ils ne sont pas nécessairement définis comme des variables d’environnement réelles dans une invite de commandes que Visual Studio utilise en interne.
+Vous pouvez éventuellement utiliser la `environments` propriété pour définir des ensembles de variables dans *CppProperties.js* , soit globalement, soit par configuration. Ces variables se comportent comme des variables d’environnement dans le contexte d’un projet de dossier ouvert et sont accessibles à l’aide de la fonction $ {env. \<VARIABLE> } la syntaxe de *tasks.vs.jssur* et *launch.vs.jssur* après qu’elles ont été définies ici. Toutefois, ils ne sont pas nécessairement définis comme des variables d’environnement réelles dans une invite de commandes que Visual Studio utilise en interne.
 
-**Visual Studio 2019 version 16,4 et versions ultérieures :** Les variables spécifiques à la configuration définies dans *CppProperties. JSON* sont automatiquement récupérées par les cibles de débogage et les `inheritEnvironments`tâches sans avoir besoin de définir. Les cibles de débogage sont lancées automatiquement avec l’environnement que vous spécifiez dans *CppProperties. JSON*.
+**Visual Studio 2019 version 16,4 et versions ultérieures :** Les variables spécifiques à la configuration définies dans *CppProperties.jssur* sont automatiquement récupérées par les cibles de débogage et les tâches sans qu’il soit nécessaire de définir `inheritEnvironments` . Les cibles de débogage sont lancées automatiquement avec l’environnement que vous spécifiez dans *CppProperties.js*.
 
-**Visual Studio 2019 version 16,3 et versions antérieures :** Lorsque vous consommez un environnement, vous devez le spécifier dans la `inheritsEnvironments` propriété même si l’environnement est défini dans le cadre de la même configuration ; la `environment` propriété spécifie le nom de l’environnement. L’exemple suivant montre un exemple de configuration pour l’activation d’IntelliSense pour GCC dans une installation MSYS2. Notez comment la configuration définit et hérite de l' `mingw_64` environnement, et comment la `includePath` propriété peut accéder à `INCLUDE` la variable.
+**Visual Studio 2019 version 16,3 et versions antérieures :** Lorsque vous consommez un environnement, vous devez le spécifier dans la `inheritsEnvironments` propriété même si l’environnement est défini dans le cadre de la même configuration ; la `environment` propriété spécifie le nom de l’environnement. L’exemple suivant montre un exemple de configuration pour l’activation d’IntelliSense pour GCC dans une installation MSYS2. Notez comment la configuration définit et hérite de l' `mingw_64` environnement, et comment la `includePath` propriété peut accéder à la `INCLUDE` variable.
 
 ```json
 "configurations": [
@@ -123,17 +123,17 @@ Lorsque vous définissez une propriété d' **environnement** à l’intérieur 
 
 ## <a name="built-in-macros"></a>Macros intégrées
 
-Vous avez accès aux macros intégrées suivantes dans *CppProperties. JSON*:
+Vous avez accès aux macros intégrées suivantes dans *CppProperties.jssur*:
 
 |||
 |-|-|
 |`${workspaceRoot}`| Chemin d’accès complet au dossier de l’espace de travail|
-|`${projectRoot}`| Le chemin d’accès complet au dossier où *CppProperties. JSON* est placé|
+|`${projectRoot}`| Chemin d’accès complet au dossier dans lequel *CppProperties.js* est placé|
 |`${env.vsInstallDir}`| Le chemin d’accès complet au dossier où l’instance en cours d’exécution de Visual Studio est installée|
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
-Si votre projet contient un dossier include et que vous incluez également *Windows. h* et d’autres en-têtes courants du SDK Windows, vous pouvez mettre à jour votre fichier de configuration *CppProperties. JSON* avec les éléments suivants :
+Si votre projet contient un dossier include et inclut également *Windows. h* et d’autres en-têtes courants de la SDK Windows, vous pouvez mettre à jour votre *CppProperties.jsdans* le fichier de configuration avec les éléments suivants :
 
 ```json
 {
@@ -160,10 +160,10 @@ Si votre projet contient un dossier include et que vous incluez également *Wind
 
 ## <a name="troubleshoot-intellisense-errors"></a>Corriger les erreurs IntelliSense
 
-Si vous ne voyez pas la fonctionnalité IntelliSense que vous attendez, vous pouvez résoudre les problèmes en accédant à **Outils** > **options** > **éditeur** > de texte**C/C++** > **avancé** et en affectant à **activer la journalisation** la **valeur true**. Pour commencer, essayez de définir le **niveau de journalisation** sur 5 et les **filtres de journalisation** sur 8.
+Si vous ne voyez pas la fonctionnalité IntelliSense que vous attendez, vous pouvez résoudre les problèmes en accédant à **Outils**  >  **options**  >  **éditeur de texte**  >  **C/C++**  >  **avancé** et en définissant **activer la journalisation** sur **`true`** . Pour commencer, essayez de définir le **niveau de journalisation** sur 5 et les **filtres de journalisation** sur 8.
 
 ![la journalisation des diagnostics.](media/diagnostic-logging.png)
 
-La sortie est dirigée vers le **fenêtre Sortie** et est visible lorsque vous choisissez **afficher la sortie à partir de : journal des Visual C++**. La sortie contient, entre autres choses, la liste des chemins d’accès include réels que IntelliSense tente d’utiliser. Si les chemins d’accès ne correspondent pas à ceux figurant dans *CppProperties. JSON*, essayez de fermer le dossier et de supprimer le sous-dossier *. vs* qui contient les données de navigation mises en cache.
+La sortie est dirigée vers le **fenêtre Sortie** et est visible lorsque vous choisissez **afficher la sortie à partir de : journal des Visual C++**. La sortie contient, entre autres choses, la liste des chemins d’accès include réels que IntelliSense tente d’utiliser. Si les chemins d’accès ne correspondent pas à ceux de *CppProperties.jssur*, essayez de fermer le dossier et de supprimer le sous-dossier *. vs* qui contient les données de navigation mises en cache.
 
 Pour résoudre les erreurs IntelliSense dues à l’absence de chemins include, ouvrez la **Liste d’erreurs** et filtrez sa sortie sur « IntelliSense uniquement » et sur le code d’erreur E1696 « Impossible d’ouvrir le fichier de code source... ».

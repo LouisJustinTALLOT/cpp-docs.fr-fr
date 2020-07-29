@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2388
 ms.assetid: 764ad2d7-cb04-425f-ba30-70989488c4a4
-ms.openlocfilehash: 21658a659468a6e2a0d911af70eefdaed320446c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 50148f4fb5c3af33d8de8b005f75f491b0540271
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745055"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225499"
 ---
 # <a name="compiler-error-c2388"></a>Erreur du compilateur C2388
 
-'Symbol' : un symbole ne peut pas être déclaré avec __declspec (AppDomain) et \__declspec (processus)
+'Symbol' : un symbole ne peut pas être déclaré avec __declspec (AppDomain) et \_ _declspec (processus)
 
-Les modificateurs de `__declspec` `appdomain` et `process` ne peuvent pas être utilisés sur le même symbole. Le stockage d’une variable existe par processus ou par domaine d’application.
+Les `appdomain` `process` **`__declspec`** modificateurs et ne peuvent pas être utilisés sur le même symbole. Le stockage d’une variable existe par processus ou par domaine d’application.
 
 Pour plus d’informations, consultez [appdomain](../../cpp/appdomain.md) et [process](../../cpp/process.md).
 

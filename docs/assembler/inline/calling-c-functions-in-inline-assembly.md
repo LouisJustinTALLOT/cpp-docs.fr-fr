@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73be1142747dc608d683e6bd847639b9df718a13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169589"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87192624"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Appel des fonctions C dans l'assembly inline
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Un bloc `__asm` peut appeler des fonctions C, y compris des routines de bibliothèques C. L'exemple suivant appelle la routine de bibliothèque `printf` :
+Un **`__asm`** bloc peut appeler des fonctions c, y compris des routines de la bibliothèque c. L'exemple suivant appelle la routine de bibliothèque `printf` :
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -58,7 +58,7 @@ printf( format, hello, world );
 
 l'exemple envoie les pointeurs vers `world`, `hello` et `format`, dans cet ordre-là, puis appelle `printf`.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,6 +1,6 @@
 ---
 title: MatchEventInMemberFunction
-description: La référence de la fonction de construction SDK MatchEventInMemberFunction.
+description: Référence de la fonction MatchEventInMemberFunction du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 522630da16e3f4a1294316d88140f4bc25dca2c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3fdc015b0744cb5d0f98a1c9025343b93489ed9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323897"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224147"
 ---
 # <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `MatchEventInMemberFunction` fonction est utilisée pour faire correspondre un événement par rapport au type décrit par le premier paramètre d’une fonction membre. L’événement apparié est transmis à la fonction membre pour un traitement ultérieur.
+La `MatchEventInMemberFunction` fonction est utilisée pour faire correspondre un événement au type décrit par le premier paramètre d’une fonction membre. L’événement correspondant est transféré à la fonction membre pour un traitement ultérieur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,40 +45,40 @@ bool MatchEventInMemberFunction(
 
 ### <a name="parameters"></a>Paramètres
 
-*TInterface (en)*\
-Le type qui contient la fonction de membre.
+*TInterface*\
+Type qui contient la fonction membre.
 
-*TReturn TReturn*\
-Le type de retour de la fonction membre.
+*TReturn*\
+Type de retour de la fonction membre.
 
-*TEvent (en)*\
-Le type d’événement à égaler.
+*TEvent*\
+Type de l’événement à faire correspondre.
 
 *TExtraParams*\
-Les types de paramètres supplémentaires acceptés par la fonction membre ainsi que le type d’événement pour correspondre.
+Types des paramètres supplémentaires acceptés par la fonction membre avec le type d’événement à faire correspondre.
 
 *TExtraArgs*\
-Les types d’arguments supplémentaires `MatchEventInMemberFunction`qui ont été transmis à .
+Types des arguments supplémentaires passés à `MatchEventInMemberFunction` .
 
-*Événement*\
-L’événement pour correspondre au type d’événement décrit par *TEvent*.
+*événement*\
+Événement à faire correspondre au type d’événement décrit par *TEvent*.
 
-*objetPtr*\
-Un pointeur à un objet sur lequel *le membreFunc* est appelé.
+*objectPtr*\
+Pointeur vers un objet sur lequel *memberFunc* est appelé.
 
-*membreFunc*\
-La fonction membre qui décrit le type d’événement pour correspondre.
+*memberFunc*\
+Fonction membre qui décrit le type d’événement à faire correspondre.
 
 *extraArgs*\
-Les arguments qui obtiennent parfait-transmis à *membreFunc* avec le paramètre de type d’événement.
+Les arguments qui sont parfaits sont transmis à *memberFunc* avec le paramètre de type d’événement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur **bool** qui est **vrai** si l’appariement a été réussie, ou **faux** autrement.
+**`bool`** Valeur qui est **`true`** si la correspondance a réussi, ou **`false`** sinon.
 
 ## <a name="remarks"></a>Notes
 
-Le type d’événement à utiliser pour le paramètre *TEvent* peut être sélectionné à partir d’une liste de classes de *capture*. Pour une liste d’événements et les classes de capture que vous pouvez utiliser pour les assortir, voir [tableau d’événements](../event-table.md).
+Le type d’événement à utiliser pour le paramètre *TEvent* peut être sélectionné dans une liste de *classes de capture*. Pour obtenir la liste des événements et les classes de capture que vous pouvez utiliser pour les mettre en correspondance, consultez [table des événements](../event-table.md).
 
 ## <a name="example"></a>Exemple
 

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectRoot class
 ms.assetid: f8797c38-6e73-4f67-85c2-71654cffa8eb
-ms.openlocfilehash: 9a9ffa1813fb15297d209894050b6bcce6802df2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98868e67fd14899a75f86837034ba540d22039e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259363"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224238"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot, classe
 
-Ce typedef de [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) est mise en modèle sur la valeur par défaut, le modèle du serveur de thread.
+Ce typedef de [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) est mis en modèle sur le modèle de thread par défaut du serveur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,18 +26,18 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 
 ## <a name="remarks"></a>Notes
 
-`CComObjectRoot` est un `typedef` de [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) transformer en modèle sur la valeur par défaut, le modèle du serveur de thread. Par conséquent [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) soit référencera [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) ou [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).
+`CComObjectRoot`est un **`typedef`** de [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) mis en modèle sur le modèle de thread par défaut du serveur. Par conséquent, [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) référence [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) ou [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).
 
-`CComObjectRootEx` gère la gestion du nombre de référence objet pour les objets non regroupées en agrégats et agrégées. Elle contient le nombre de références d’objet si votre objet n’est pas agrégée et conserve le pointeur vers l’inconnu externe si votre objet est en cours d’agrégation. Pour les objets agrégées, `CComObjectRootEx` méthodes peuvent être utilisées pour gérer l’échec de l’objet interne pour construire et à protéger l’objet externe à partir de suppression lors de la publication des interfaces internes ou l’objet interne est supprimé.
+`CComObjectRootEx`gère la gestion du nombre de références d’objet pour les objets non agrégés et agrégés. Il contient le nombre de références de l’objet si votre objet n’est pas agrégé et contient le pointeur vers le externe inconnu si votre objet est en cours d’agrégation. Pour les objets agrégés, les `CComObjectRootEx` méthodes peuvent être utilisées pour gérer l’échec de la construction de l’objet interne et protéger l’objet externe lors de la libération des interfaces internes ou de la suppression de l’objet interne.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcom.h
+**En-tête :** atlcom. h
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComObjectRootEx (classe)](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComAggObject, classe](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComObject, classe](../../atl/reference/ccomobject-class.md)<br/>
-[CComPolyObject, classe](../../atl/reference/ccompolyobject-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[CComPolyObject (classe)](../../atl/reference/ccompolyobject-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

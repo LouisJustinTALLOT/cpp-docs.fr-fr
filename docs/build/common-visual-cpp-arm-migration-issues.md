@@ -2,12 +2,12 @@
 title: Problèmes courants de migration ARM Visual C++
 ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 2c29b4ffa5344b309622314970ce52c47a0ebd05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 889eed2b02362f33446cd9441ef84f406817b01a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328793"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224069"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Problèmes courants de migration ARM Visual C++
 
@@ -23,10 +23,10 @@ Le *comportement défini par l’implémentation* est le comportement que la nor
 
 Le *comportement non spécifié* est le comportement que la norme C++ laisse intentionnellement non déterministe. Bien que le comportement soit considéré comme non déterministe, les appels particuliers du comportement non spécifié sont déterminés par l’implémentation du compilateur. Toutefois, il n’est pas nécessaire pour un fournisseur de compilateur de prédéterminer le résultat ou de garantir un comportement cohérent entre les appels comparables, et il n’existe aucune exigence pour la documentation. Un exemple de comportement non spécifié est l’ordre dans lequel les sous-expressions, qui incluent des arguments pour un appel de fonction, sont évaluées.
 
-D’autres problèmes de migration peuvent être attribués aux différences matérielles entre les architectures ARM et x86 ou x64 qui interagissent différemment avec la norme C++. Par exemple, le modèle de mémoire forte de l’architecture x86 et x64 `volatile`donne à des variables qualifiées des propriétés supplémentaires qui ont été utilisées pour faciliter certains types de communications inter-threads dans le passé. Toutefois, le modèle de mémoire faible de l’architecture ARM ne prend pas en charge cette utilisation et la norme C++ ne l’exige pas.
+D’autres problèmes de migration peuvent être attribués aux différences matérielles entre les architectures ARM et x86 ou x64 qui interagissent différemment avec la norme C++. Par exemple, le modèle de mémoire forte de l’architecture x86 et x64 donne **`volatile`** à des variables qualifiées des propriétés supplémentaires qui ont été utilisées pour faciliter certains types de communications inter-threads dans le passé. Toutefois, le modèle de mémoire faible de l’architecture ARM ne prend pas en charge cette utilisation et la norme C++ ne l’exige pas.
 
 > [!IMPORTANT]
-> Bien `volatile` que obtient certaines propriétés qui peuvent être utilisées pour implémenter des formes limitées de communication inter-threads sur x86 et x64, ces propriétés supplémentaires ne sont pas suffisantes pour implémenter la communication entre les threads en général. La norme C++ recommande l’implémentation de cette communication en utilisant à la place des primitives de synchronisation appropriées.
+> Bien que **`volatile`** obtient certaines propriétés qui peuvent être utilisées pour implémenter des formes limitées de communication inter-threads sur x86 et x64, ces propriétés supplémentaires ne sont pas suffisantes pour implémenter la communication entre les threads en général. La norme C++ recommande l’implémentation de cette communication en utilisant à la place des primitives de synchronisation appropriées.
 
 Étant donné que les différentes plateformes peuvent exprimer différemment ces genres de comportements, le portage de logiciels entre les plateformes peut être difficile et sujet aux bogues s’il dépend du comportement d’une plateforme spécifique. Bien qu’un grand nombre de ces types de comportement puissent être observés et être stables, la confiance est au moins non portable et, dans le cas d’un comportement non défini ou non spécifié, est également une erreur. Même le comportement mentionné dans ce document ne doit pas être basé sur et peut changer dans les compilateurs ou implémentations d’UC futurs.
 
@@ -46,7 +46,7 @@ Ces plateformes diffèrent également dans la façon dont elles gèrent la conve
 
 La conversion à virgule flottante ne peut s’appuyer que si vous savez que la valeur est comprise dans la plage du type entier vers lequel elle est convertie.
 
-### <a name="shift-operator---behavior"></a>Comportement de l'\< \< opérateur de décalage ( >>)
+### <a name="shift-operator---behavior"></a>Comportement de l’opérateur de décalage ( \<\< >>)
 
 Dans l’architecture ARM, une valeur peut être décalée vers la gauche ou vers la droite jusqu’à 255 bits avant que le modèle commence à se répéter. Sur les architectures x86 et x64, le modèle est répété à chaque multiple de 32, sauf si la source du modèle est une variable 64 bits ; dans ce cas, le modèle se répète à chaque multiple de 64 sur x64, et chaque multiple de 256 sur x86, où une implémentation logicielle est employée. Par exemple, pour une variable 32 bits dont la valeur 1 est décalée de gauche à 32 positions, sur ARM, le résultat est 0, sur x86, le résultat est 1 et, sur x64, le résultat est également 1. Toutefois, si la source de la valeur est une variable de 64 bits, le résultat sur les trois plateformes est 4294967296, et la valeur n’est pas entourée de zéro jusqu’à ce qu’elle soit décalée de 64 positions sur x64, ou 256 positions sur ARM et x86.
 
@@ -88,13 +88,13 @@ Cela semble bien défini, mais si `->` et `*` sont des opérateurs surchargés, 
 Handle::acquire(operator->(memory_handle), operator*(p));
 ```
 
-Et s’il existe une dépendance entre `operator->(memory_handle)` et `operator*(p)`, le code peut reposer sur un ordre d’évaluation spécifique, même si le code d’origine semble ne pas être une dépendance possible.
+Et s’il existe une dépendance entre `operator->(memory_handle)` et `operator*(p)` , le code peut reposer sur un ordre d’évaluation spécifique, même si le code d’origine semble ne pas être une dépendance possible.
 
 ### <a name="volatile-keyword-default-behavior"></a>comportement par défaut du mot clé volatile
 
-Le compilateur MSVC prend en charge deux interprétations différentes `volatile` du qualificateur de stockage que vous pouvez spécifier à l’aide de commutateurs du compilateur. Le commutateur [/volatile : ms](reference/volatile-volatile-keyword-interpretation.md) sélectionne la sémantique volatile étendue Microsoft qui garantit un classement fort, comme c’était le cas traditionnellement pour x86 et x64 en raison du modèle de mémoire forte sur ces architectures. Le commutateur [/volatile : ISO](reference/volatile-volatile-keyword-interpretation.md) sélectionne la sémantique volatile standard C++ strict qui ne garantit pas un classement renforcé.
+Le compilateur MSVC prend en charge deux interprétations différentes du **`volatile`** qualificateur de stockage que vous pouvez spécifier à l’aide de commutateurs du compilateur. Le commutateur [/volatile : ms](reference/volatile-volatile-keyword-interpretation.md) sélectionne la sémantique volatile étendue Microsoft qui garantit un classement fort, comme c’était le cas traditionnellement pour x86 et x64 en raison du modèle de mémoire forte sur ces architectures. Le commutateur [/volatile : ISO](reference/volatile-volatile-keyword-interpretation.md) sélectionne la sémantique volatile standard C++ strict qui ne garantit pas un classement renforcé.
 
-Dans l’architecture ARM, la valeur par défaut est **/volatile : ISO** , car les processeurs ARM ont un modèle de mémoire faiblement ordonné, et parce que ARM Software n’a pas de repos sur la sémantique étendue de **/volatile : ms** et n’a généralement pas besoin d’interagir avec le logiciel que fait. Toutefois, il est parfois pratique, voire nécessaire, de compiler un programme ARM pour utiliser la sémantique étendue. Par exemple, il peut s’avérer trop coûteux de déplacer un programme pour utiliser la sémantique ISO C++, ou le logiciel de pilote peut être amené à adhérer à la sémantique traditionnelle pour fonctionner correctement. Dans ce cas, vous pouvez utiliser le commutateur **/volatile : ms** . Toutefois, pour recréer la sémantique volatile traditionnelle sur les cibles ARM, le compilateur doit insérer des barrières de mémoire autour de chaque lecture ou `volatile` écriture d’une variable pour appliquer un ordre renforcé, ce qui peut avoir un impact négatif sur les performances.
+Dans l’architecture ARM, la valeur par défaut est **/volatile : ISO** , car les processeurs ARM ont un modèle de mémoire faiblement ordonné, et parce que ARM Software n’a pas de repos sur la sémantique étendue de **/volatile : ms** et n’a généralement pas besoin d’interagir avec le logiciel que fait. Toutefois, il est parfois pratique, voire nécessaire, de compiler un programme ARM pour utiliser la sémantique étendue. Par exemple, il peut s’avérer trop coûteux de déplacer un programme pour utiliser la sémantique ISO C++, ou le logiciel de pilote peut être amené à adhérer à la sémantique traditionnelle pour fonctionner correctement. Dans ce cas, vous pouvez utiliser le commutateur **/volatile : ms** . Toutefois, pour recréer la sémantique volatile traditionnelle sur les cibles ARM, le compilateur doit insérer des barrières de mémoire autour de chaque lecture ou écriture d’une **`volatile`** variable pour appliquer un ordre renforcé, ce qui peut avoir un impact négatif sur les performances.
 
 Sur les architectures x86 et x64, la valeur par défaut est **/volatile : ms** , car la plupart des logiciels qui ont déjà été créés pour ces architectures à l’aide de MSVC s’appuient sur eux. Quand vous compilez des programmes x86 et x64, vous pouvez spécifier le commutateur **/volatile : ISO** afin d’éviter une dépendance inutile sur la sémantique volatile traditionnelle et de promouvoir la portabilité.
 
