@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 2921fe4e4f10c96a096d30d8f842eecdfd644ca6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615905"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225070"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Suppression de tous les objets d’une collection CObject
 
@@ -38,7 +38,7 @@ Cet article explique comment supprimer des objets dans :
 
 1. Utilisez `GetHeadPosition` et `GetNext` pour parcourir la liste.
 
-1. Utilisez l’opérateur **Delete** pour supprimer chaque objet tel qu’il est trouvé dans l’itération.
+1. Utilisez l' **`delete`** opérateur pour supprimer chaque objet tel qu’il est trouvé dans l’itération.
 
 1. Appelez la fonction `RemoveAll` pour supprimer tous les éléments dans la liste une fois que les objets associés à ces éléments ont été supprimés.
 
@@ -54,7 +54,7 @@ Notez la différence entre supprimer l'élément d'un objet et supprimer l'élé
 
 1. Utilisez `GetSize` et des valeurs d'index entiers pour effectuer une itération au sein du tableau.
 
-1. Utilisez l’opérateur **Delete** pour supprimer chaque élément tel qu’il est trouvé dans l’itération.
+1. Utilisez l' **`delete`** opérateur pour supprimer chaque élément tel qu’il est trouvé dans l’itération.
 
 1. Appelez la fonction `RemoveAll` pour supprimer tous les éléments du tableau après leur suppression.
 
@@ -68,7 +68,7 @@ Comme dans l'exemple de liste ci-dessus, vous pouvez appeler `RemoveAll` pour su
 
 1. Utilisez `GetStartPosition` et `GetNextAssoc` pour effectuer une itération au sein du tableau.
 
-1. Utilisez l’opérateur **Delete** pour supprimer la clé et/ou la valeur de chaque élément cartographique tel qu’il est trouvé dans l’itération.
+1. Utilisez l' **`delete`** opérateur pour supprimer la clé et/ou la valeur de chaque élément cartographique tel qu’il est trouvé dans l’itération.
 
 1. Appelez la fonction `RemoveAll` pour supprimer tous les éléments du mappage après leur suppression.
 

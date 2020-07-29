@@ -1,29 +1,29 @@
 ---
-title: Compilateur avertissement (niveau 4) C4061
+title: Avertissement du compilateur (niveau 4) C4061
 ms.date: 04/05/2019
 f1_keywords:
 - C4061
 helpviewer_keywords:
 - C4061
 ms.assetid: a99cf88e-7941-4519-8b1b-f6889d914b2f
-ms.openlocfilehash: 073e3e9cb1cb5bb6b0f66157c986072227960212
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18c5a51e24af36c5a330e10a66ce3dcc38295fb1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401421"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225278"
 ---
-# <a name="compiler-warning-level-4-c4061"></a>Compilateur avertissement (niveau 4) C4061
+# <a name="compiler-warning-level-4-c4061"></a>Avertissement du compilateur (niveau 4) C4061
 
-> énumérateur '*identificateur*'dans le switch de l’enum'*énumération*' n’est pas géré explicitement par une étiquette case
+> l’énumérateur'*identifier*'dans le commutateur de l’enum'*Enumeration*'n’est pas géré explicitement par une étiquette case
 
-L’énumérateur spécifié *identificateur* n’a aucun handler associé une `switch` instruction qui a un `default` cas. Le cas manquant peut être une supervision, ou il ne peut pas être un problème. Il dépend si l’énumérateur est géré par le cas par défaut ou non. Pour un avertissement connexe sur les énumérateurs inutilisés dans `switch` instructions qui n’ont pas `default` cas, consultez [C4062](compiler-warning-level-4-c4062.md).
+L' *identificateur* d’énumérateur spécifié n’est associé à aucun gestionnaire dans une **`switch`** instruction qui a un **`default`** cas. Il se peut que le cas manquant soit un point de vue ou qu’il ne s’agit pas d’un problème. Elle peut dépendre du fait que l’énumérateur est ou non géré par le cas par défaut. Pour obtenir un avertissement connexe sur les énumérateurs inutilisés dans les **`switch`** instructions qui n’ont pas de **`default`** cas, consultez [C4062](compiler-warning-level-4-c4062.md).
 
-Cet avertissement est désactivé par défaut. Pour plus d’informations sur la façon d’activer des avertissements qui sont désactivés par défaut, consultez [du compilateur avertissements qui sont désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
+Cet avertissement est désactivé par défaut. Pour plus d’informations sur l’activation des avertissements désactivés par défaut, consultez [avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C4061 ; Ajouter un cas de l’énumérateur manquante à corriger :
+L’exemple suivant génère l’C4061 ; Ajoutez un cas pour l’énumérateur manquant à corriger :
 
 ```cpp
 // C4061.cpp
@@ -49,4 +49,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Avertissement du compilateur (niveau 4) C4062](compiler-warning-level-4-c4062.md)
+[Avertissement du compilateur (niveau 4) C4062](compiler-warning-level-4-c4062.md)

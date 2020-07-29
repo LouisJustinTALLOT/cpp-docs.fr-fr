@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358331"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225148"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Descripteur sur l’opérateur objet (^)  (C++/CLI et C++/CX)
 
-Le *déclarant de* `^`poignée (, prononcé « chapeau »), modifie le [spécificateur](../cpp/overview-of-declarators.md) de type pour signifier que l’objet déclaré doit être automatiquement supprimé lorsque le système détermine que l’objet n’est plus accessible.
+Le *déclarateur de handle* ( `^` , prononcé « chapeau »), modifie le [spécificateur](../cpp/overview-of-declarators.md) de type pour signifier que l’objet déclaré doit être supprimé automatiquement lorsque le système détermine que l’objet n’est plus accessible.
 
 ## <a name="accessing-the-declared-object"></a>Accès à l'objet déclaré
 
@@ -38,7 +38,7 @@ Le système utilise le mécanisme de *garbage collector* du CLR pour déterminer
 
 Les pointeurs (`*`) et les références (`&`) C++ natifs n'étant pas des références managées, le garbage collector ne peut pas mettre à jour automatiquement les adresses vers lesquelles ils pointent. Pour résoudre ce problème, utilisez le déclarateur de handle pour spécifier une variable que le garbage collector connaît et peut mettre à jour automatiquement.
 
-Pour plus d’informations, voir [Comment : Déclarer les poignées dans les types autochtones](../dotnet/how-to-declare-handles-in-native-types.md).
+Pour plus d’informations, consultez [Comment : déclarer des handles dans des types natifs](../dotnet/how-to-declare-handles-in-native-types.md).
 
 ### <a name="examples"></a>Exemples
 
@@ -104,7 +104,7 @@ Not a boxed int
 100
 ```
 
-Cet exemple montre que l’idiome C++ commun consistant à utiliser un pointeur de type `void*` pour pointer vers un objet arbitraire est remplacé par `Object^`, qui peut contenir un handle vers toute classe de référence. Il montre également que tous les types, tels que les tableaux et les délégués, peuvent être convertis en handle d'objet.
+Cet exemple montre que l’idiome C++ courant de l’utilisation d’un **`void*`** pointeur pour pointer vers un objet arbitraire est remplacé par `Object^` , qui peut contenir un handle vers n’importe quelle classe de référence. Il montre également que tous les types, tels que les tableaux et les délégués, peuvent être convertis en handle d'objet.
 
 ```cpp
 // mcppv2_handle_3.cpp
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-Cet échantillon montre qu’une référence indigène (`&`) ne peut pas se lier à un membre **int** d’un type géré, car **l’int** pourrait être stocké dans le tas d’ordures collectés, et les références indigènes ne suivent pas le mouvement de l’objet dans le tas géré. La solution consiste à utiliser une variable locale ou à remplacer `&` par `%` afin d'en faire une référence de suivi.
+Cet exemple montre qu’une référence native ( `&` ) ne peut pas être liée à un **`int`** membre d’un type managé, car le **`int`** peut être stocké dans le tas récupéré par le garbage collector, et les références natives n’effectuent pas le suivi du déplacement d’objets dans le tas managé. La solution consiste à utiliser une variable locale ou à remplacer `&` par `%` afin d'en faire une référence de suivi.
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -223,5 +223,5 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Opérateur de référence de suivi](tracking-reference-operator-cpp-component-extensions.md)

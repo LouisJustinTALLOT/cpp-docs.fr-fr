@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: a1954cd3a69233deed053da5b5fdef0dbc183b80
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d445b8ac1d2a8487e9e1ec4f21f63cf5ef071e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141429"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224966"
 ---
 # <a name="combinable-class"></a>combinable, classe
 
@@ -39,25 +39,25 @@ Type de données du résultat fusionné final. Le type doit avoir un constructeu
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[combinable](#ctor)|Surchargé. Construit un nouvel objet `combinable`.|
-|[~ Destructeur combinable](#dtor)|Détruit un objet `combinable`.|
+|[~ Destructeur combinable](#dtor)|Détruit un objet `combinable` .|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[clear](#clear)|Efface tous les résultats de calcul intermédiaires d’une utilisation précédente.|
-|[combine](#combine)|Calcule une valeur finale à partir de l’ensemble de sous-calculs locaux de thread en appelant le functor de combinaison fourni.|
+|[Mixer](#combine)|Calcule une valeur finale à partir de l’ensemble de sous-calculs locaux de thread en appelant le functor de combinaison fourni.|
 |[combine_each](#combine_each)|Calcule une valeur finale à partir de l’ensemble de sous-calculs locaux de thread en appelant le functor de combinaison fourni une fois par sous-calcul local de thread. Le résultat final est accumulé par l’objet de fonction.|
-|[local](#local)|Surchargé. Retourne une référence au sous-calcul thread-Private.|
+|[localisé](#local)|Surchargé. Retourne une référence au sous-calcul thread-Private.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[operator=](#operator_eq)|Assigne à un objet `combinable` à partir d’un autre objet `combinable`.|
+|[opérateur =](#operator_eq)|Assigne à un `combinable` objet à partir d’un autre `combinable` objet.|
 
 ## <a name="remarks"></a>Notes
 
@@ -71,9 +71,9 @@ Pour plus d’informations, consultez [conteneurs et objets parallèles](../../.
 
 **En-tête :** ppl. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="clear"></a>effacé
+## <a name="clear"></a><a name="clear"></a>effacé
 
 Efface tous les résultats de calcul intermédiaires d’une utilisation précédente.
 
@@ -81,7 +81,7 @@ Efface tous les résultats de calcul intermédiaires d’une utilisation précé
 void clear();
 ```
 
-## <a name="ctor"></a>combinable
+## <a name="combinable"></a><a name="ctor"></a>combinable
 
 Construit un nouvel objet `combinable`.
 
@@ -100,28 +100,28 @@ combinable(const combinable& _Copy);
 Type de l’objet functor d’initialisation.
 
 *_FnInitialize*<br/>
-Fonction qui sera appelée pour initialiser chaque nouvelle valeur de thread-Private du type `T`. Il doit prendre en charge un opérateur d’appel de fonction avec la signature `T ()`.
+Fonction qui sera appelée pour initialiser chaque nouvelle valeur de thread-Private du type `T` . Il doit prendre en charge un opérateur d’appel de fonction avec la signature `T ()` .
 
 *_Copy*<br/>
-Objet `combinable` existant à copier dans celui-ci.
+Objet existant `combinable` à copier dans celui-ci.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise de nouveaux éléments avec le constructeur par défaut pour le type `T`.
+Le premier constructeur initialise de nouveaux éléments avec le constructeur par défaut pour le type `T` .
 
-Le deuxième constructeur initialise de nouveaux éléments à l’aide du functor d’initialisation fourni comme paramètre `_FnInitialize`.
+Le deuxième constructeur initialise les nouveaux éléments à l’aide du functor d’initialisation fourni comme `_FnInitialize` paramètre.
 
 Le troisième constructeur est le constructeur de copie.
 
-## <a name="dtor"></a>~ combinable
+## <a name="combinable"></a><a name="dtor"></a>~ combinable
 
-Détruit un objet `combinable`.
+Détruit un objet `combinable` .
 
 ```cpp
 ~combinable();
 ```
 
-## <a name="combine"></a>Mixer
+## <a name="combine"></a><a name="combine"></a>Mixer
 
 Calcule une valeur finale à partir de l’ensemble de sous-calculs locaux de thread en appelant le functor de combinaison fourni.
 
@@ -136,13 +136,13 @@ T combine(_Function _FnCombine) const;
 Type de l’objet de fonction qui sera appelé pour combiner deux sous-calculs locaux de thread.
 
 *_FnCombine*<br/>
-Functor utilisé pour combiner les sous-calculs. Sa signature est `T (T, T)` ou `T (const T&, const T&)`et doit être associative et commutative.
+Functor utilisé pour combiner les sous-calculs. Sa signature est `T (T, T)` ou `T (const T&, const T&)` , et elle doit être associative et commutative.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Résultat final de la combinaison de tous les sous-calculs privés de thread.
 
-## <a name="combine_each"></a>combine_each
+## <a name="combine_each"></a><a name="combine_each"></a>combine_each
 
 Calcule une valeur finale à partir de l’ensemble de sous-calculs locaux de thread en appelant le functor de combinaison fourni une fois par sous-calcul local de thread. Le résultat final est accumulé par l’objet de fonction.
 
@@ -157,9 +157,9 @@ void combine_each(_Function _FnCombine) const;
 Type de l’objet de fonction qui sera appelé pour combiner un sous-calcul local de thread unique.
 
 *_FnCombine*<br/>
-Functor utilisé pour combiner un sous-calcul. Sa signature est `void (T)` ou `void (const T&)`et doit être associative et commutative.
+Functor utilisé pour combiner un sous-calcul. Sa signature est `void (T)` ou `void (const T&)` , et doit être associative et commutative.
 
-## <a name="local"></a>localisé
+## <a name="local"></a><a name="local"></a>localisé
 
 Retourne une référence au sous-calcul thread-Private.
 
@@ -172,15 +172,15 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Paramètres
 
 *_Exists*<br/>
-Référence à une valeur booléenne. La valeur booléenne référencée par cet argument aura la valeur **true** si le sous-calcul existait déjà sur ce thread, et a la valeur **false** s’il s’agit du premier sous-calcul sur ce thread.
+Référence à une valeur booléenne. La valeur booléenne référencée par cet argument sera définie sur **`true`** si le sous-calcul existait déjà sur ce thread, et a la valeur **`false`** s’il s’agissait du premier sous-calcul sur ce thread.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Référence au sous-calcul thread-Private.
 
-## <a name="operator_eq"></a>opérateur =
+## <a name="operator"></a><a name="operator_eq"></a>opérateur =
 
-Assigne à un objet `combinable` à partir d’un autre objet `combinable`.
+Assigne à un `combinable` objet à partir d’un autre `combinable` objet.
 
 ```cpp
 combinable& operator= (const combinable& _Copy);
@@ -189,12 +189,12 @@ combinable& operator= (const combinable& _Copy);
 ### <a name="parameters"></a>Paramètres
 
 *_Copy*<br/>
-Objet `combinable` existant à copier dans celui-ci.
+Objet existant `combinable` à copier dans celui-ci.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Référence à cet objet `combinable`.
+Référence à cet `combinable` objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-ms.openlocfilehash: 9a22bdda407b02b8723b7198d62289d39f62792d
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: a02b69981d3cf1d35a6700261fc5142cfa8ec8e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180966"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225356"
 ---
 # <a name="compiler-warning-level-1-c4750"></a>Avertissement du compilateur (niveau 1) C4750
 
@@ -34,7 +34,7 @@ La fonction'*identifier*'force l’expansion inline de la [`_alloca`](../../c-ru
 
 ## <a name="example"></a>Exemple
 
-L’exemple de code suivant appelle `MyFunction` dans une boucle, et `MyFunction` appelle la fonction `_alloca` . Le modificateur `__forceinline` provoque l’expansion inline de la fonction `_alloca` .
+L’exemple de code suivant appelle `MyFunction` dans une boucle, et `MyFunction` appelle la fonction `_alloca` . Le **`__forceinline`** modificateur provoque l’expansion inline de la `_alloca` fonction.
 
 ```cpp
 // c4750.cpp

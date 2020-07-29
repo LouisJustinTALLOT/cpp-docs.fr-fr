@@ -1,19 +1,19 @@
 ---
-title: Erreur RW2002 du compilateur de ressources
+title: 'Erreur RW2002 du compilateur de ressources '
 ms.date: 11/04/2016
 f1_keywords:
 - RW2002
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31962e3e7e4af63ec07ad569f7f72782b194032c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190688"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225174"
 ---
-# <a name="resource-compiler-error-rw2002"></a>Erreur RW2002 du compilateur de ressources
+# <a name="resource-compiler-error-rw2002"></a>Erreur RW2002 du compilateur de ressources 
 
 Erreur d'analyse
 
@@ -21,7 +21,7 @@ Erreur d'analyse
 
 1. **Type d’accélérateur requis (ASCII ou VIRTKEY)**
 
-   Le champ `type` de l’instruction **ACCELERATORS** doit contenir la valeur ASCII ou VIRTKEY.
+   Le champ de *type* dans l’instruction **Accelerators** doit contenir la valeur ASCII ou VIRTKEY.
 
 1. **BEGIN attendu dans la table d’accélérateurs**
 
@@ -49,7 +49,7 @@ Erreur d'analyse
 
 1. **Caractère de contrôle hors de la plage [^ A-^ Z]**
 
-   Un caractère de contrôle dans l’instruction **ACCELERATORS** n’est pas valide. Le caractère qui suit le signe insertion ( **^** ) doit être compris entre A et Z, inclusif.
+   Un caractère de contrôle dans l’instruction **ACCELERATORS** n’est pas valide. Le caractère qui suit le signe insertion ( **^** ) doit être compris entre A et Z, inclus.
 
 1. **Menus vides non autorisés**
 
@@ -65,11 +65,11 @@ Erreur d'analyse
 
 1. **Virgule attendue dans la table d’accélérateurs**
 
-   Le compilateur de ressources exige une virgule entre les champs `event` et *idvalue* dans l’instruction **ACCELERATORS** .
+   Le compilateur de ressources requiert une virgule entre les champs *Event* et *idValue* dans l’instruction **Accelerators** .
 
 1. **Nom de classe de contrôle ATTENDU**
 
-   Le champ `class` d’une instruction de **contrôle** dans l’instruction **Dialog** doit être de l’un des types suivants : Button, ComboBox, Edit, ListBox, ScrollBar, static ou défini par l’utilisateur. Assurez-vous que la classe est correctement orthographiée.
+   Le champ de *classe* d’une instruction de **contrôle** dans l’instruction **Dialog** doit être de l’un des types suivants : Button, ComboBox, Edit, ListBox, ScrollBar, static ou défini par l’utilisateur. Assurez-vous que la classe est correctement orthographiée.
 
 1. **Nom de type de police ATTENDU**
 
@@ -85,7 +85,7 @@ Erreur d'analyse
 
 1. **Valeur de commande numérique attendue**
 
-   Le compilateur de ressources attendait un champ *idValue* numérique dans l’instruction **Accelerators** . Assurez-vous que vous avez utilisé une constante `#define` pour spécifier la valeur et que la constante est correctement orthographiée.
+   Le compilateur de ressources attendait un champ *idValue* numérique dans l’instruction **Accelerators** . Assurez-vous que vous avez utilisé une `#define` constante pour spécifier la valeur et que la constante est correctement orthographiée.
 
 1. **Constante numérique attendue dans la table de chaînes**
 
@@ -105,19 +105,19 @@ Erreur d'analyse
 
 1. **Commande d’accélérateur de constante ou de chaîne attendue**
 
-   Le compilateur de ressources n’a pas pu déterminer quel type de clé est défini pour l’accélérateur. Le champ `event` de l’instruction **ACCELERATORS** peut ne pas être valide.
+   Le compilateur de ressources n’a pas pu déterminer quel type de clé est défini pour l’accélérateur. Le champ d' *événement* de l’instruction **Accelerators** peut ne pas être valide.
 
 1. **Nombre attendu pour l’ID**
 
-   Nombre attendu pour le champ `id` d’une instruction de contrôle dans l’instruction **Dialog** . Vérifiez que vous disposez d’une instruction Number ou `#define` pour l’ID de contrôle.
+   Nombre attendu pour le champ *ID* d’une instruction de contrôle dans l’instruction **Dialog** . Vérifiez que vous disposez d’un numéro ou `#define` d’une instruction pour l’ID de contrôle.
 
 1. **Chaîne entre guillemets attendue dans la classe Dialog**
 
-   Le champ `class` de l’option CLASS figurant dans l’instruction **DIALOG** doit être un entier ou une chaîne, entre guillemets doubles.
+   Le champ de *classe* de l’option Class de l’instruction **Dialog** doit être un entier ou une chaîne, placé entre guillemets doubles.
 
 1. **Chaîne entre guillemets attendue dans le titre de la boîte de dialogue**
 
-   Le champ `captiontext` de l’option CAPTION figurant dans l’instruction **DIALOG** doit être une chaîne de caractères ASCII placée entre guillemets doubles.
+   Le champ *CaptionText* de l’option Caption de l’instruction **Dialog** doit être une chaîne de caractères ASCII placée entre guillemets doubles.
 
 1. **Fichier introuvable : nom de fichier**
 
@@ -125,15 +125,15 @@ Erreur d'analyse
 
 1. **Les noms de police doivent être des ordinaux**
 
-   Le champ de type de *pointage* de l’instruction font doit être un entier, et non une chaîne.
+   Le champ *pointsize* dans l’instruction FONT doit être un entier, et non une chaîne.
 
 1. **Accélérateur non valide**
 
-   Un champ `event` de l’instruction **ACCELERATORS** n'a pas été reconnu ou sa longueur dépasse deux caractères.
+   Un champ d' *événement* de l’instruction **Accelerators** n’a pas été reconnu ou sa longueur dépasse deux caractères.
 
 1. **Type d’accélérateur non valide (ASCII ou VIRTKEY)**
 
-   Le champ `type` de l’instruction **ACCELERATORS** doit contenir la valeur ASCII ou VIRTKEY.
+   Le champ de *type* dans l’instruction **Accelerators** doit contenir la valeur ASCII ou VIRTKEY.
 
 1. **Caractère de contrôle non valide**
 

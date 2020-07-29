@@ -7,16 +7,16 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 5416a29477651c496d83e6ee215a2cb88ba26e3b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3ce42147693f0c4c180076c627ef88c182745186
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169056"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190999"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>Écriture de fonctions avec un assembly inline
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Si vous écrivez une fonction avec du code assembleur inline, il est facile de transmettre des arguments à cette fonction et de retourner une valeur de celle-ci. Les exemples suivants comparent une fonction d'abord écrite pour un assembleur distinct puis réécrite pour l'assembleur inline. La fonction, appelée `power2`, reçoit deux paramètres, multipliant le premier paramètre par 2 à la puissance du second paramètre. Écrite pour un assembleur distinct, la fonction peut ressembler à ceci :
 
@@ -76,9 +76,9 @@ int power2( int num, int power )
 
 La version inline de la fonction `power2` fait référence à ses arguments par nom et apparaît dans le même fichier source que le reste du programme. Cette version requiert également moins d'instructions assembleur.
 
-Étant donné que la version inline de `power2` n'exécute pas d'instruction `return` C, un avertissement sans incidence est généré si vous effectuez la compilation au niveau d'avertissement 2 ou ultérieur. La fonction ne retourne aucune valeur, mais le compilateur ne peut pas l'indiquer sans instruction `return`. Vous pouvez utiliser [#pragma AVERTISSEMENT](../../preprocessor/warning.md) pour désactiver la génération de cet avertissement.
+Étant donné que la version inline de `power2` n’exécute pas d' **`return`** instruction C, elle provoque un avertissement sans gravité si vous effectuez une compilation au niveau d’avertissement 2 ou supérieur. La fonction ne retourne pas de valeur, mais le compilateur ne peut pas indiquer qu’en l’absence d’une **`return`** instruction. Vous pouvez utiliser [#pragma AVERTISSEMENT](../../preprocessor/warning.md) pour désactiver la génération de cet avertissement.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

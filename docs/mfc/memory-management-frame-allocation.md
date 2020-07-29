@@ -18,12 +18,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 1ecf1c08164d1a760fce62457a6019e767ed2605
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cb66a0c0aea16f7e6831b6a1aff1a125df355210
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626299"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225044"
 ---
 # <a name="memory-management-frame-allocation"></a>Gestion de la mémoire : allocation de frame
 
@@ -33,7 +33,7 @@ Il existe deux principales caractéristiques d'allocations de frame. D'abord, lo
 
 [!code-cpp[NVC_MFC_Utilities#10](codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
 
-Pour les variables de fonction locale, cette transition de portée se produit lorsque la fonction existe, mais l'étendue d'une variable de frame peut être inférieure à la fonction si les accolades imbriquées sont utilisées. La suppression automatique des variables de frame est très importante. Dans le cas de types primitifs simples (tels que **int** ou **Byte**), de tableaux ou de structures de données, la suppression automatique libère simplement la mémoire utilisée par la variable. Dans la mesure où la variable est sortie de l'étendue, elle est de toute façon inaccessible. Dans le cas des objets C++, toutefois, le processus de suppression automatique est un peu plus compliqué.
+Pour les variables de fonction locale, cette transition de portée se produit lorsque la fonction existe, mais l'étendue d'une variable de frame peut être inférieure à la fonction si les accolades imbriquées sont utilisées. La suppression automatique des variables de frame est très importante. Dans le cas de types primitifs simples (tels que **`int`** ou **Byte**), de tableaux ou de structures de données, la suppression automatique libère simplement la mémoire utilisée par la variable. Dans la mesure où la variable est sortie de l'étendue, elle est de toute façon inaccessible. Dans le cas des objets C++, toutefois, le processus de suppression automatique est un peu plus compliqué.
 
 Lorsqu'un objet est défini comme variable de frame, le constructeur est appelé automatiquement au point où la définition est produite. Lorsque l'objet sort de l'étendue, le destructeur est automatiquement appelé avant que la mémoire de l'objet soit diffusée. Ces constructions et destructions automatiques peuvent être très pratiques, mais vous devez connaître les appels automatiques, notamment le destructeur.
 

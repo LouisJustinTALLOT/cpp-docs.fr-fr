@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 6e8c4189e8c895cf41323528c70d9277645d8f9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8031902318a091b0ed5f340b454a14b9df195069
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619071"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225083"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Serveurs Automation : problèmes liés à la durée de vie des objets
 
@@ -20,7 +20,7 @@ Lorsqu'un client Automation crée ou active un élément OLE, le serveur passe a
 
 L’infrastructure conserve un décompte interne du nombre de références à tout objet serveur dérivé de [CCmdTarget](reference/ccmdtarget-class.md). Ce nombre est mis à jour lorsqu’un client Automation ou une autre entité ajoute ou libère une référence à l’objet.
 
-Lorsque le nombre de références devient 0, l’infrastructure appelle la fonction virtuelle [CCmdTarget :: OnFinalRelease](reference/ccmdtarget-class.md#onfinalrelease). L’implémentation par défaut de cette fonction appelle l’opérateur **Delete** pour supprimer cet objet.
+Lorsque le nombre de références devient 0, l’infrastructure appelle la fonction virtuelle [CCmdTarget :: OnFinalRelease](reference/ccmdtarget-class.md#onfinalrelease). L’implémentation par défaut de cette fonction appelle l' **`delete`** opérateur pour supprimer cet objet.
 
 La bibliothèque MFC fournit des fonctionnalités supplémentaires pour contrôler le comportement de l'application lorsque les clients externes contiennent des références aux objets de l'application. En plus de tenir le décompte des références à chaque objet, les serveurs contiennent un compte global des objets actifs. Les fonctions globales [AfxOleLockApp](reference/application-control.md#afxolelockapp) et [AfxOleUnlockApp](reference/application-control.md#afxoleunlockapp) mettent à jour le nombre d’objets actifs de l’application. Si ce nombre est différent de zéro, l'application ne se termine pas lorsque l'utilisateur sélectionne Fermer dans le menu système ou Quitter dans le menu Fichier. En revanche, la fenêtre principale de l'application est masquée (mais pas détruite) jusqu'à ce que toutes les demandes clientes en attente soient traitées. En général, `AfxOleLockApp` et `AfxOleUnlockApp` sont appelés respectivement dans les constructeurs et les destructeurs des classes qui prennent en charge Automation.
 

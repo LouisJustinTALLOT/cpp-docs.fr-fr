@@ -12,16 +12,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 87cc0000f74935990cb5956e0fb3afd44e01532b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624193"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87225031"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Contrôles ActiveX MFC : rubriques avancées
 
-Cet article traite des sujets avancés relatifs au développement de contrôles ActiveX. notamment :
+Cet article traite des sujets avancés relatifs au développement de contrôles ActiveX. À savoir :
 
 - [Utilisation des classes de base de données dans les contrôles ActiveX](#_core_using_database_classes_in_activex_controls)
 
@@ -69,7 +69,7 @@ La procédure suivante ajoute une propriété paramétrable, appelée Array, qui
 
 1. Dans la zone nom de la **propriété** , tapez `Array` .
 
-1. Dans la zone **type de propriété** , sélectionnez **short**.
+1. Dans la zone **type de propriété** , sélectionnez **`short`** .
 
 1. Pour type d' **implémentation** , cliquez sur **méthodes obtenir/définir**.
 
@@ -97,7 +97,7 @@ En outre, l’Assistant Ajout de propriété ajoute les lignes suivantes au mapp
 
 Enfin, les implémentations des `GetArray` fonctions et `SetArray` sont ajoutées à la fin de. Fichier CPP. Dans la plupart des cas, vous allez modifier la fonction obtenir pour retourner la valeur de la propriété. La fonction Set contient généralement le code qui doit s’exécuter avant ou après la modification de la propriété.
 
-Pour que cette propriété soit utile, vous pouvez déclarer une variable de membre de tableau à deux dimensions dans la classe de contrôle, de type **short**, pour stocker les valeurs de la propriété paramétrable. Vous pouvez ensuite modifier la fonction d’extraction pour retourner la valeur stockée au niveau de la ligne et de la colonne appropriées, comme indiqué par les paramètres, et modifier la fonction Set pour mettre à jour la valeur référencée par les paramètres de ligne et de colonne.
+Pour que cette propriété soit utile, vous pouvez déclarer une variable de membre de tableau à deux dimensions dans la classe de contrôle, de type **`short`** , pour stocker des valeurs pour la propriété paramétrable. Vous pouvez ensuite modifier la fonction d’extraction pour retourner la valeur stockée au niveau de la ligne et de la colonne appropriées, comme indiqué par les paramètres, et modifier la fonction Set pour mettre à jour la valeur référencée par les paramètres de ligne et de colonne.
 
 ## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>Gestion des erreurs dans votre contrôle ActiveX
 

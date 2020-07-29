@@ -5,12 +5,12 @@ helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: e7c6096829a1cd45cfdb849a1899d6b4a2d4cb78
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 7ce18b54835b2380d3baee77b00a670351e3279f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141992"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87224914"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Procédure pas à pas : adaptation d’un code existant pour l’utilisation de tâches légères
 
@@ -18,13 +18,13 @@ Cette rubrique montre comment adapter le code existant qui utilise l’API Windo
 
 Une *tâche légère* est une tâche que vous planifiez directement à partir d’un objet [Concurrency :: Scheduler](../../parallel/concrt/reference/scheduler-class.md) ou [Concurrency :: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) . Les tâches légères s’avèrent utiles quand vous adaptez du code existant pour utiliser les fonctionnalités de planification du runtime d’accès concurrentiel.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Avant de commencer cette procédure pas à pas, lisez la rubrique [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre l’utilisation classique de l’API Windows pour créer et exécuter un thread. Cet exemple utilise la fonction [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) pour appeler le `MyThreadFunction` sur un thread séparé.
+L’exemple suivant illustre l’utilisation classique de l’API Windows pour créer et exécuter un thread. Cet exemple utilise la fonction [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) pour appeler le `MyThreadFunction` sur un thread distinct.
 
 ### <a name="initial-code"></a>Code initial
 
@@ -40,19 +40,19 @@ Les étapes suivantes montrent comment adapter l’exemple de code pour utiliser
 
 ### <a name="to-adapt-the-example-to-use-a-lightweight-task"></a>Pour adapter l’exemple afin d’utiliser une tâche légère
 
-1. Ajoutez une directive `#include` pour le fichier d’en-tête concrt. h.
+1. Ajoutez une `#include` directive pour le fichier d’en-tête concrt. h.
 
 [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]
 
-1. Ajoutez une directive `using` pour l’espace de noms `concurrency`.
+1. Ajoutez une **`using`** directive pour l' `concurrency` espace de noms.
 
 [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]
 
-1. Modifiez la déclaration de `MyThreadFunction` pour utiliser la Convention d’appel `__cdecl` et pour retourner `void`.
+1. Modifiez la déclaration de `MyThreadFunction` pour utiliser la **`__cdecl`** Convention d’appel et pour retourner **`void`** .
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
-1. Modifiez la structure `MyData` pour inclure un objet [Concurrency :: Event](../../parallel/concrt/reference/event-class.md) qui signale à l’application principale que la tâche est terminée.
+1. Modifiez la `MyData` structure pour inclure un objet [Concurrency :: Event](../../parallel/concrt/reference/event-class.md) qui signale à l’application principale que la tâche est terminée.
 
 [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]
 
@@ -64,21 +64,21 @@ Les étapes suivantes montrent comment adapter l’exemple de code pour utiliser
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
-1. Supprimez l’appel à `CloseHandle`.
+1. Supprimez l’appel à `CloseHandle` .
 
 1. Modifiez la signature de la définition de `MyThreadFunction` pour qu’elle corresponde à l’étape 3.
 
 [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]
 
-1. À la fin de la fonction `MyThreadFunction`, appelez la méthode [Concurrency :: Event :: Set](reference/event-class.md#set) pour signaler à l’application principale que la tâche est terminée.
+1. À la fin de la `MyThreadFunction` fonction, appelez la méthode [Concurrency :: Event :: Set](reference/event-class.md#set) pour signaler à l’application principale que la tâche est terminée.
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
-1. Supprimez l’instruction `return` de `MyThreadFunction`.
+1. Supprimez l' **`return`** instruction de `MyThreadFunction` .
 
 ### <a name="completed-code"></a>Code terminé
 
-L’exemple complet suivant montre un code qui utilise une tâche légère pour appeler la fonction `MyThreadFunction`.
+L’exemple complet suivant montre un code qui utilise une tâche légère pour appeler la `MyThreadFunction` fonction.
 
 [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]
 

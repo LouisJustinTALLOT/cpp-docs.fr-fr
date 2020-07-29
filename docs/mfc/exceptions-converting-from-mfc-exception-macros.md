@@ -14,18 +14,18 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: 8a936a0af9927aa0dc453a93c98676a77f4ad6dc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e8e7f47b66f4263ed55d73c0aac1fda73d72393c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621762"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87183810"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Exceptions : conversion à partir de macros d'exception MFC
 
 Il s’agit d’une rubrique avancée.
 
-Cet article explique comment convertir le code existant écrit avec des macros Microsoft Foundation Class ( **try**, **catch**, **throw**, etc.) pour utiliser les mots clés de gestion des exceptions C++ **try**, **catch**et **throw**. Les sujets abordés sont les suivants :
+Cet article explique comment convertir le code existant écrit avec des macros Microsoft Foundation Class ( **try**, **catch**, **throw**, etc.) pour utiliser les mots clés de gestion des exceptions C++ **`try`** , **`catch`** et **`throw`** . Les sujets abordés sont les suivants :
 
 - [Avantages de la conversion](#_core_advantages_of_converting)
 
@@ -39,7 +39,7 @@ Les principaux avantages de la conversion sont les suivants :
 
 - Le code qui utilise les mots clés de gestion des exceptions C++ se compile en un légèrement plus petit. EXE ou. DLL.
 
-- Les mots clés de gestion des exceptions C++ sont plus polyvalents : ils peuvent gérer les exceptions de tout type de données qui peut être copié (**int**, **float**, **char**, etc.), alors que les macros ne gèrent que les exceptions de classe `CException` et les classes dérivées de celle-ci.
+- Les mots clés de gestion des exceptions C++ sont plus polyvalents : ils peuvent gérer les exceptions de tout type de données qui peut être copié ( **`int`** , **`float`** , **`char`** , etc.), tandis que les macros gèrent les exceptions uniquement de la classe `CException` et des classes dérivées de celui-ci.
 
 La principale différence entre les macros et les mots clés est que le code qui utilise les macros supprime « automatiquement » une exception interceptée lorsque l’exception est hors de portée. Le code qui utilise les mots clés ne le fait pas, vous devez donc supprimer explicitement une exception interceptée. Pour plus d’informations, consultez l’article [exceptions : interception et suppression d’exceptions](exceptions-catching-and-deleting-exceptions.md).
 
@@ -53,7 +53,7 @@ La syntaxe est également différente. La syntaxe des macros et des mots clés d
 
    Notez la virgule entre le nom de la classe et le nom du pointeur de l’objet.
 
-   La déclaration d’exception pour le mot clé **catch** utilise la syntaxe suivante :
+   La déclaration d’exception pour le **`catch`** mot clé utilise la syntaxe suivante :
 
    **catch (** *exception_type* *exception_name* **)**
 
@@ -63,11 +63,11 @@ La syntaxe est également différente. La syntaxe des macros et des mots clés d
 
    Avec les macros, la macro **catch** (avec ses arguments) commence le premier bloc catch. la macro **AND_CATCH** commence par les blocs catch suivants, et la macro **END_CATCH** met fin à la séquence de blocs catch.
 
-   Avec les mots clés, le mot clé **catch** (avec sa déclaration d’exception) commence chaque bloc catch. Il n’existe aucun équivalent à la macro **END_CATCH** ; le bloc catch se termine par son accolade fermante.
+   Avec les mots clés, le **`catch`** mot clé (avec sa déclaration d’exception) commence chaque bloc catch. Il n’existe aucun équivalent à la macro **END_CATCH** ; le bloc catch se termine par son accolade fermante.
 
 3. Expression Throw :
 
-   Les macros utilisent **THROW_LAST** pour lever à nouveau l’exception actuelle. Le mot clé **throw** , sans argument, a le même effet.
+   Les macros utilisent **THROW_LAST** pour lever à nouveau l’exception actuelle. Le **`throw`** mot clé, sans argument, a le même effet.
 
 ## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>Conversion en cours
 
@@ -77,17 +77,17 @@ La syntaxe est également différente. La syntaxe des macros et des mots clés d
 
 2. Remplacez ou supprimez toutes les occurrences des macros suivantes :
 
-   **Essayez** (remplacez-le par **try**)
+   **Essayez** (remplacez-le par **`try`** )
 
-   **Catch** (le remplacer par **catch**)
+   **Catch** (le remplacer par **`catch`** )
 
-   **AND_CATCH** (remplacez-le par **catch**)
+   **AND_CATCH** (remplacez-le par **`catch`** )
 
    **END_CATCH** (supprimer)
 
-   **Throw** (remplacez-le par **throw**)
+   **Throw** (remplacez-le par **`throw`** )
 
-   **THROW_LAST** (remplacez-le par **throw**)
+   **THROW_LAST** (remplacez-le par **`throw`** )
 
 3. Modifiez les arguments de macro afin qu’ils forment des déclarations d’exception valides.
 
@@ -95,7 +95,7 @@ La syntaxe est également différente. La syntaxe des macros et des mots clés d
 
    [!code-cpp[NVC_MFCExceptions#6](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
-   to
+   par celle-ci :
 
    [!code-cpp[NVC_MFCExceptions#7](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
