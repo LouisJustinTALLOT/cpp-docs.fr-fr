@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3168
 ms.assetid: 4c36fcfb-c351-48ff-b4eb-78d2aa1b4d55
-ms.openlocfilehash: 4f09c7e250b4c2b02ba2db582f92d54336bed673
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a40a79c48b0f437271063e555593464f55fe9837
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761788"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212590"
 ---
 # <a name="compiler-error-c3168"></a>Erreur du compilateur C3168
 
 'type' : type sous-jacent non conforme pour enum
 
-Le type sous-jacent que vous avez spécifié pour le type de `enum` n’est pas valide. Le type sous-jacent doit être C++ un type intégral ou un type CLR correspondant.
+Le type sous-jacent que vous avez spécifié pour le **`enum`** type n’est pas valide. Le type sous-jacent doit être un type C++ intégral ou un type CLR correspondant.
 
 L’exemple suivant génère l’C3168 :
 

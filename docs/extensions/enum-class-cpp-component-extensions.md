@@ -3,12 +3,12 @@ title: classe enum (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182134"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219714"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>classe enum (C++/CLI et C++/CX)
 
@@ -18,7 +18,7 @@ Déclare une énumération dans la portée espace de noms, qui est un type défi
 
 ### <a name="remarks"></a>Notes
 
-Les langages C++/CX et C++/CLI prennent en charge **public enum class** et **private enum class**, qui sont similaires à la classe C++ standard **enum class**, mais avec l’ajout du spécificateur d’accessibilité. Sous **/clr**, le type C++11 **enum class** est autorisé, mais il génère l’avertissement C4472 qui vise à s’assurer que vous voulez bien le type d’énumération ISO et non le type C++/CX et C++/CLI. Pour plus d’informations sur le mot clé C++ **enum** de la norme ISO, consultez [Énumérations](../cpp/enumerations-cpp.md).
+Les langages C++/CX et C++/CLI prennent en charge **public enum class** et **private enum class**, qui sont similaires à la classe C++ standard **enum class**, mais avec l’ajout du spécificateur d’accessibilité. Sous **/clr**, le type C++11 **enum class** est autorisé, mais il génère l’avertissement C4472 qui vise à s’assurer que vous voulez bien le type d’énumération ISO et non le type C++/CX et C++/CLI. Pour plus d’informations sur le mot clé ISO C++ standard **`enum`** , consultez [énumérations](../cpp/enumerations-cpp.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -34,21 +34,21 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Paramètres
 
-*access*<br/>
-Accessibilité de l’énumération, qui peut avoir la valeur **public** ou **private**.
+*accéder*<br/>
+Accessibilité de l’énumération, qui peut être **`public`** ou **`private`** .
 
 *enumeration-identifier*<br/>
 Nom de l’énumération.
 
-*underlying-type*<br/>
+*type sous-jacent*<br/>
 (Facultatif) Type sous-jacent de l’énumération.
 
-(Facultatif, Windows Runtime uniquement) Type sous-jacent de l’énumération, qui peut avoir la valeur **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, ou `uint64`.
+(Facultatif, Windows Runtime uniquement) le type sous-jacent de l’énumération, qui peut être **`bool`** , **`char`** , `char16` , `int16` , `uint16` , **`int`** , `uint32` , `int64` ou `uint64` .
 
 *enumerator-list*<br/>
 Liste délimitée par des virgules de noms d’énumérateurs.
 
-La valeur de chaque énumérateur est une expression constante définie implicitement par le compilateur ou explicitement par la notation, *enumerator*`=`*constant-expression*. Par défaut, la valeur du premier énumérateur est égale à zéro si elle est définie implicitement. La valeur de chaque énumérateur défini implicitement suivant est égale à la valeur de l’énumérateur précédent + 1.
+La valeur de chaque énumérateur est une expression constante qui est définie implicitement par le compilateur, ou explicitement par la notation, *enumerator* `=` *expression constante*d’énumérateur. Par défaut, la valeur du premier énumérateur est égale à zéro si elle est définie implicitement. La valeur de chaque énumérateur défini implicitement suivant est égale à la valeur de l’énumérateur précédent + 1.
 
 *var*<br/>
 (Facultatif) Nom d’une variable du type de l’énumération.
@@ -61,7 +61,7 @@ Notez que le compilateur émet des messages d’erreur si l’expression constan
 
 - Si *underlying-type* a la valeur numeric et qu’un énumérateur spécifie la valeur maximale pour ce type, la valeur de la prochaine énumération définie implicitement ne peut pas être représentée.
 
-- Si *underlying-type* a la valeur **bool** et que plus de deux énumérateurs sont implicitement définis, les énumérateurs qui suivent les deux premiers ne peuvent pas être représentés.
+- Si le *type sous-jacent* est **`bool`** , et que plus de deux énumérateurs sont implicitement définis, les énumérateurs qui suivent les deux premiers ne peuvent pas être représentés.
 
 - Si *underlying-type* a la valeur `char16`et que la valeur d’énumération est comprise entre 0xD800 et 0xDFFF, la valeur peut être représentée. Cependant, la valeur est logiquement incorrecte, car elle représente la moitié d’une paire de substitution Unicode et ne doit pas apparaître de façon isolée.
 
@@ -82,8 +82,8 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Paramètres
 
-*access*<br/>
-Accessibilité de l’énumération. Les valeurs possibles sont **public** et **private**.
+*accéder*<br/>
+Accessibilité de l’énumération. Peut avoir la valeur **`public`** ou **`private`** .
 
 *enumerator-list*<br/>
 Liste délimitée par des virgules des identificateurs (énumérateurs) contenus dans l'énumération.
@@ -92,7 +92,7 @@ Liste délimitée par des virgules des identificateurs (énumérateurs) contenus
 Nom de l’énumération. Les énumérations managées anonymes ne sont pas autorisées.
 
 *type*<br/>
-(Facultatif) Type sous-jacent des *identificateurs*. Il peut correspondre à n’importe quel type scalaire, notamment aux versions signées ou non signées d’**int**, **short**, ou **long**.  Les valeurs **bool** ou **char** sont également autorisées.
+(Facultatif) Type sous-jacent des *identificateurs*. Il peut s’agir de n’importe quel type scalaire, tel que des versions signées ou non signées de **`int`** , **`short`** ou **`long`** .  **`bool`** ou **`char`** est également autorisé.
 
 *var*<br/>
 (Facultatif) Nom d’une variable du type de l’énumération.
@@ -138,7 +138,7 @@ Les énumérateurs d’une énumération standard sont fortement injectés dans 
 
 Dans Visual Studio 2002 et Visual Studio 2003, les énumérateurs étaient faiblement injectés (visibles dans la portée englobante, sauf en présence d’un autre identificateur de même nom).
 
-Si une énumération C++ standard est définie (sans **class** ou **struct**) et que vous compilez avec `/clr`, l’énumération sera compilée en tant qu’énumération managée.  L’énumération conserve la sémantique d’une énumération non managée.  Notez que le compilateur injecte un attribut, `Microsoft::VisualC::NativeEnumAttribute`, pour montrer que le programmeur souhaite faire de l’énumération une énumération native.  Les autres compilateurs considèrent simplement l’énumération standard comme une énumération gérée.
+Si une énumération C++ standard est définie (sans **`class`** ou **`struct`** ), la compilation avec entraîne la compilation de `/clr` l’énumération en tant qu’énumération managée.  L’énumération conserve la sémantique d’une énumération non managée.  Notez que le compilateur injecte un attribut, `Microsoft::VisualC::NativeEnumAttribute`, pour montrer que le programmeur souhaite faire de l’énumération une énumération native.  Les autres compilateurs considèrent simplement l’énumération standard comme une énumération gérée.
 
 Une énumération nommée standard compilée avec `/clr` est visible dans l’assembly en tant qu’énumération managée et peut être utilisée par n’importe quel autre compilateur managé.   En revanche, une énumération standard sans nom n’est pas visible publiquement à partir de l’assembly.
 
@@ -221,4 +221,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: e0ee5cf97170cd9293abcb9039771f8fe23962aa
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525299"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212941"
 ---
 # <a name="updating-rowsets"></a>mettre à jour les jeux de lignes
 
@@ -31,7 +31,7 @@ Les consommateurs peuvent effectuer les types de mises à jour suivants sur les 
 > [!NOTE]
 > L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures. Vous pouvez toujours ajouter la fonctionnalité manuellement. Pour plus d’informations, consultez [Création d’un consommateur sans utiliser l’Assistant](creating-a-consumer-without-using-a-wizard.md).
 
-Quand vous créez un consommateur avec l’**Assistant Consommateur OLE DB ATL**, vous pouvez prendre en charge les opérations de mise à jour en cochant une ou plusieurs des trois cases à cocher **Modifier**, **Insérer**et **Supprimer**. Si vous sélectionnez ces options, l’Assistant modifie le code en conséquence de façon à prendre en charge le type des modifications que vous choisissez. Cependant, si vous n’utilisez pas l’Assistant, vous devez définir les propriétés d’ensemble de lignes suivantes sur `VARIANT_TRUE` pour prendre en charge les mises à jour :
+Lorsque vous créez un consommateur à l’aide de l' **Assistant consommateur d’OLE DB ATL**, vous pouvez prendre en charge les opérations de mise à jour en sélectionnant une ou plusieurs des trois cases à cocher **modifier**, **Insérer**et **supprimer**. Si vous sélectionnez ces options, l’Assistant modifie le code en conséquence de façon à prendre en charge le type des modifications que vous choisissez. Cependant, si vous n’utilisez pas l’Assistant, vous devez définir les propriétés d’ensemble de lignes suivantes sur `VARIANT_TRUE` pour prendre en charge les mises à jour :
 
 - `DBPROPVAL_UP_CHANGE` vous permet de modifier les valeurs des données dans une ligne.
 
@@ -80,9 +80,9 @@ HRESULT hr = product.SetData();
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **false** (valeur par défaut) spécifie que la ligne suivante devient la ligne active (auquel cas elle pointe vers la ligne insérée).
+- **`false`**(valeur par défaut) spécifie que la ligne actuelle est incrémentée à la ligne suivante (auquel cas elle pointe vers la ligne insérée).
 
-- **true** spécifie que la ligne active reste où elle est.
+- **`true`** Spécifie que la ligne actuelle reste à l’emplacement où elle est.
 
 Le code suivant définit les valeurs des membres de données liés aux colonnes du tableau `Products`, puis appelle `Insert` pour insérer une nouvelle ligne avec ces valeurs après la 100e ligne de l’ensemble de lignes. Il est recommandé de définir toutes les valeurs des colonnes afin d’éviter des données non définies dans la nouvelle ligne :
 
@@ -208,6 +208,6 @@ Enfin, une des principales raisons de différer des modifications est la possibi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
+[Utilisation des modèles de consommateurs OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset, classe](../../data/oledb/crowset-class.md)<br/>
 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))<br/>

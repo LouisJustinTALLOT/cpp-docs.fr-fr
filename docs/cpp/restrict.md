@@ -7,40 +7,40 @@ helpviewer_keywords:
 - __declspec keyword [C++], restrict
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
-ms.openlocfilehash: 40c1c05ca72f639829f2d3658497b0e9f3199640
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0108cff3d6b98fd929b7888d2ad718e7b6b3a64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403371"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213253"
 ---
 # <a name="restrict"></a>restrict
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Lorsqu’il est appliqué à une déclaration de fonction ou d’une définition qui retourne un type pointeur, **restreindre** indique au compilateur que la fonction retourne un objet qui n’est pas *alias*, autrement dit, référencé par un autre pointeurs. Cela permet au compilateur d’effectuer des optimisations supplémentaires.
+En cas d’application à une déclaration ou une définition de fonction qui retourne un type pointeur, **`restrict`** indique au compilateur que la fonction retourne un objet qui n’est pas un *alias*, autrement dit, référencé par tout autre pointeur. Cela permet au compilateur d’effectuer des optimisations supplémentaires.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec(restrict)** *pointer_return_type* *function*();
+> **`__declspec(restrict)`***pointer_return_type* *fonction*();
 
 ## <a name="remarks"></a>Notes
 
-Le compilateur propage **__declspec (Restrict)**. Par exemple, la bibliothèque CRT `malloc` fonction a un **__declspec (Restrict)** décoration et par conséquent, le compilateur suppose que les pointeurs initialisés à des emplacements de mémoire par `malloc` ne sont pas un alias par précédemment pointeurs existants.
+Le compilateur se propage **`__declspec(restrict)`** . Par exemple, la `malloc` fonction CRT a une **`__declspec(restrict)`** décoration, et par conséquent, le compilateur suppose que les pointeurs initialisés aux emplacements de mémoire par `malloc` ne sont pas non plus des alias des pointeurs existants.
 
-Le compilateur ne vérifie pas que le pointeur retourné n’est pas réellement un alias. Il est la responsabilité du développeur pour garantir le programme n’attribue pas d’alias à un pointeur marqué avec le **restreindre __declspec** modificateur.
+Le compilateur ne vérifie pas que le pointeur retourné n’est pas réellement un alias. Il incombe au développeur de s’assurer que le programme n’utilise pas l’alias d’un pointeur marqué avec le modificateur **restrict __declspec** .
 
-Pour une sémantique similaire sur les variables, consultez [__restrict](../cpp/extension-restrict.md).
+Pour obtenir une sémantique similaire sur les variables, consultez [__restrict](../cpp/extension-restrict.md).
 
-Pour une autre annotation s’applique aux alias dans une fonction, consultez [__declspec (noalias)](../cpp/noalias.md).
+Pour obtenir une autre annotation qui s’applique aux alias dans une fonction, consultez [__declspec (noalias)](../cpp/noalias.md).
 
-Pour plus d’informations sur la **restreindre** mot clé qui fait partie de C++ AMP, consultez [restreindre (C++ AMP)](../cpp/restrict-cpp-amp.md).
+Pour plus d’informations sur le **`restrict`** mot clé qui fait partie de C++ amp, consultez [restrict (C++ amp)](../cpp/restrict-cpp-amp.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre l’utilisation de **__declspec (Restrict)**.
+L’exemple suivant illustre l’utilisation de **`__declspec(restrict)`** .
 
-Lorsque **__declspec (Restrict)** est appliqué à une fonction que retourne un pointeur, cela indique au compilateur que la mémoire vers laquelle pointée la valeur de retour n’est pas un alias. Dans cet exemple, les pointeurs `mempool` et `memptr` sont globales, le compilateur ne peut pas être sûr que la mémoire, elles font référence à n’est pas un alias. Toutefois, elles sont utilisées dans `ma` et son appelant `init` d’une manière qui retourne la mémoire qui n’est pas référencé dans le cas contraire par le programme, par conséquent, **__decslpec(restrict)** est utilisé pour aider l’optimiseur. Ceci est similaire à la façon dont les en-têtes CRT décorent les fonctions d’allocation comme `malloc` à l’aide de **__declspec (Restrict)** pour indiquer qu’elles retournent toujours de mémoire qui ne peut pas être un alias en pointeurs existants.
+Lorsque **`__declspec(restrict)`** est appliqué à une fonction qui retourne un pointeur, cela indique au compilateur que la mémoire vers laquelle pointe la valeur de retour n’est pas un alias. Dans cet exemple, les pointeurs `mempool` et `memptr` sont globaux, de sorte que le compilateur ne peut pas s’assurer que la mémoire à laquelle ils font référence n’est pas un alias. Toutefois, elles sont utilisées dans `ma` et son appelant `init` d’une manière qui retourne la mémoire qui n’est pas référencée par le programme, donc **__decslpec (restrict)** est utilisé pour aider l’optimiseur. Cela est similaire à la façon dont les en-têtes CRT décorent les fonctions d’allocation comme `malloc` en utilisant **`__declspec(restrict)`** pour indiquer qu’elles retournent toujours la mémoire qui ne peut pas être un alias par des pointeurs existants.
 
 ```C
 // declspec_restrict.c
@@ -109,10 +109,10 @@ int main()
 }
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [__declspec](../cpp/declspec.md)<br/>
-[__declspec(noalias)](../cpp/noalias.md)
+[__declspec (noalias)](../cpp/noalias.md)

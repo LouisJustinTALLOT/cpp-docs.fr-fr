@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword (C++), safebuffers
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
-ms.openlocfilehash: ebdbba130106ea5f9b893a9fd1d8277fd2dabdd4
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 456e84cfba40a4219f44fe1549272621f79d09a2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404689"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213240"
 ---
 # <a name="safebuffers"></a>safebuffers
 
@@ -30,24 +30,24 @@ __declspec( safebuffers )
 
 L’option de compilateur **/GS** force le compilateur à tester les dépassements de mémoire tampon en insérant des vérifications de sécurité sur la pile. Les types de structures de données éligibles pour les vérifications de sécurité sont décrits dans [/GS (vérification de la sécurité de la mémoire tampon)](../build/reference/gs-buffer-security-check.md). Pour plus d’informations sur la détection du dépassement de mémoire tampon, consultez [fonctionnalités de sécurité dans MSVC](https://devblogs.microsoft.com/cppblog/security-features-in-microsoft-visual-c/).
 
-Une révision manuelle du code par un expert ou une analyse externe peut déterminer qu'une fonction est protégée contre un dépassement de mémoire tampon. Dans ce cas, vous pouvez supprimer les vérifications de sécurité pour une fonction en appliquant le mot clé **__declspec (safebuffers)** à la déclaration de fonction.
+Une révision manuelle du code par un expert ou une analyse externe peut déterminer qu'une fonction est protégée contre un dépassement de mémoire tampon. Dans ce cas, vous pouvez supprimer les vérifications de sécurité pour une fonction en appliquant le **`__declspec(safebuffers)`** mot clé à la déclaration de fonction.
 
 > [!CAUTION]
 > Les vérifications de sécurité de la mémoire tampon assurent une protection importante et ont un impact négligeable sur les performances. Par conséquent, nous vous recommandons de ne pas les supprimer, sauf dans la rare éventualité où les performances d'une fonction est un problème critique et où la fonction est réputée pour être sécurisée.
 
 ## <a name="inline-functions"></a>Fonctions inline
 
-Une *fonction principale* peut utiliser un mot clé [inline](inline-functions-cpp.md) pour insérer une copie d’une *fonction secondaire*. Si le mot clé **__declspec (safebuffers)** est appliqué à une fonction, la détection de dépassement de mémoire tampon est supprimée pour cette fonction. Toutefois, l’incorporation affecte le mot clé **__declspec (safebuffers)** des manières suivantes.
+Une *fonction principale* peut utiliser un mot clé [inline](inline-functions-cpp.md) pour insérer une copie d’une *fonction secondaire*. Si le **`__declspec(safebuffers)`** mot clé est appliqué à une fonction, la détection de dépassement de mémoire tampon est supprimée pour cette fonction. Toutefois, l’incorporation affecte le **`__declspec(safebuffers)`** mot clé des manières suivantes.
 
-Supposons que l’option de compilateur **/GS** soit spécifiée pour les deux fonctions, mais la fonction principale spécifie le mot clé **__declspec (safebuffers)** . Les structures de données présentes dans la fonction secondaire lui permettent de faire l'objet de vérifications de sécurité, et la fonction ne supprime pas ces vérifications. Dans ce cas :
+Supposons que l’option de compilateur **/GS** soit spécifiée pour les deux fonctions, mais que la fonction principale spécifie le **`__declspec(safebuffers)`** mot clé. Les structures de données présentes dans la fonction secondaire lui permettent de faire l'objet de vérifications de sécurité, et la fonction ne supprime pas ces vérifications. Dans ce cas :
 
 - Spécifiez le mot clé [__forceinline](inline-functions-cpp.md) sur la fonction secondaire pour forcer le compilateur à incorporer cette fonction indépendamment des optimisations du compilateur.
 
-- Étant donné que la fonction secondaire est éligible pour les vérifications de sécurité, les vérifications de sécurité sont également appliquées à la fonction principale, bien qu’elle spécifie le mot clé **__declspec (safebuffers)** .
+- Étant donné que la fonction secondaire est éligible pour les vérifications de sécurité, les vérifications de sécurité sont également appliquées à la fonction principale même si elle spécifie le **`__declspec(safebuffers)`** mot clé.
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment utiliser le mot clé **__declspec (safebuffers)** .
+Le code suivant montre comment utiliser le **`__declspec(safebuffers)`** mot clé.
 
 ```cpp
 // compile with: /c /GS

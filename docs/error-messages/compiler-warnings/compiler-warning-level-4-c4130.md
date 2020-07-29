@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4130
 ms.assetid: 45e4c7b2-6b51-41c7-ba5e-941aa5c7d3dc
-ms.openlocfilehash: 3bc632bf641fa3944cfd21dc405590c803498d80
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 7b2fbccfd3b124220d6e310c01adace1d3e112c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991565"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219961"
 ---
 # <a name="compiler-warning-level-4-c4130"></a>Avertissement du compilateur (niveau 4) C4130
 
@@ -34,6 +34,6 @@ int main()
 }
 ```
 
-L’ instruction **If** compare la valeur stockée dans le pointeur `pc` à l’adresse de la chaîne « Hello », qui est allouée séparément à chaque occurrence de la chaîne dans le code. L’ instruction **If** ne compare pas la chaîne vers laquelle `pc` pointe avec la chaîne « Hello ».
+L' **`if`** instruction compare la valeur stockée dans le pointeur `pc` à l’adresse de la chaîne « Hello », qui est allouée séparément chaque fois que la chaîne se trouve dans le code. L' **`if`** instruction ne compare pas la chaîne pointée par à `pc` la chaîne « Hello ».
 
 Pour comparer des chaînes, utilisez la fonction `strcmp` .

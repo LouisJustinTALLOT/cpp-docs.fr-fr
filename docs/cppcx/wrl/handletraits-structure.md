@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c04e53789fd737b12ca10ef2c279a05fb43f5925
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371448"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212993"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits (structure)
 
-Définit les caractéristiques communes d’une poignée.
+Définit les caractéristiques communes d’un handle.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,14 +34,14 @@ struct HANDLETraits;
 
 Nom   | Description
 ------ | ---------------------
-`Type` | Un synonyme de HANDLE.
+`Type` | Synonyme de descripteur.
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 Nom                                              | Description
 ------------------------------------------------- | -----------------------------
-[HANDLETraits::Fermer](#close)                     | Ferme la poignée spécifiée.
-[HANDLETraits::GetInvalidValue](#getinvalidvalue) | Représente une poignée invalide.
+[HANDLETraits :: Close](#close)                     | Ferme le handle spécifié.
+[HANDLETraits :: Getinvalidvalue,](#getinvalidvalue) | Représente un handle non valide.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -49,13 +49,13 @@ Nom                                              | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** corewrappers.h
+**En-tête :** corewrappers. h
 
-**Espace nom:** Microsoft::WRL::Wrappers::HandleTraits
+**Espace de noms :** Microsoft :: WRL :: wrappers :: HandleTraits
 
-## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits::Fermer
+## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits :: Close
 
-Ferme la poignée spécifiée.
+Ferme le handle spécifié.
 
 ```cpp
 inline static bool Close(
@@ -66,15 +66,15 @@ inline static bool Close(
 ### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-Le manche à fermer.
+Handle à fermer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**vrai** si poignée *h* fermé avec succès; autrement, **faux**.
+**`true`** Si handle *h* a été fermé avec succès ; Sinon, **`false`** .
 
-## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits :: Getinvalidvalue,
 
-Représente une poignée invalide.
+Représente un handle non valide.
 
 ```cpp
 inline static HANDLE GetInvalidValue();
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne toujours INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE est définie par Windows.)
+Retourne toujours INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE est défini par Windows.)

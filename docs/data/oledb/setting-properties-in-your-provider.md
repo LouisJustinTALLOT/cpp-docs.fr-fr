@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 905a9bb32544dbd7453d46362e100047516d22a8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5d5ac364096ea1a4505b2ead81f25367a9c9458
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209571"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212954"
 ---
 # <a name="setting-properties-in-your-provider"></a>Définition de propriétés dans votre fournisseur
 
@@ -20,7 +20,7 @@ Dans le code du fournisseur généré par l’Assistant, recherchez le mappage d
 
 Dans le mappage des propriétés, ajoutez une macro [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md) . PROPERTY_INFO_ENTRY_EX prend quatre paramètres :
 
-- ID de propriété correspondant à votre propriété. Supprimez les sept premiers caractères (« DBPROP_ ») du début du nom de la propriété. Par exemple, si vous souhaitez ajouter `DBPROP_MAXROWS`, transmettez `MAXROWS` comme premier élément. S’il s’agit d’une propriété personnalisée, transmettez le nom GUID complet (par exemple, `DBMYPROP_MYPROPERTY`).
+- ID de propriété correspondant à votre propriété. Supprimez les sept premiers caractères (« DBPROP_ ») du début du nom de la propriété. Par exemple, si vous souhaitez ajouter `DBPROP_MAXROWS` , transmettez `MAXROWS` en tant que premier élément. S’il s’agit d’une propriété personnalisée, transmettez le nom GUID complet (par exemple, `DBMYPROP_MYPROPERTY` ).
 
 - Type variant de la propriété (dans [OLE DB propriétés](/previous-versions/windows/desktop/ms722734(v=vs.85)) dans le **OLE DB Guide de référence du programmeur**). Entrez le type de VT_ (par exemple, VT_BOOL ou VT_I2) correspondant au type de données.
 
@@ -30,7 +30,7 @@ Dans le mappage des propriétés, ajoutez une macro [PROPERTY_INFO_ENTRY_EX](../
     DBPROPFLAGS_ROWSET | DBPROPFLAGS_READ | DBPROPFLAGS_WRITE
     ```
 
-- Valeur de base de la propriété. Cela peut être `VARIANT_FALSE` pour un type booléen ou zéro pour un type entier, par exemple. La propriété a cette valeur, sauf si elle est modifiée.
+- Valeur de base de la propriété. Il peut s’agir `VARIANT_FALSE` d’un type booléen ou zéro pour un type entier, par exemple. La propriété a cette valeur, sauf si elle est modifiée.
 
     > [!NOTE]
     > Certaines propriétés sont connectées ou chaînées à d’autres propriétés, telles que les signets ou la mise à jour. Lorsqu’un consommateur affecte la valeur true à une propriété, une autre propriété peut également être définie. Les modèles du fournisseur OLE DB prennent en charge ce mode via la méthode [CUtlProps :: OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md).
@@ -39,14 +39,14 @@ Dans le mappage des propriétés, ajoutez une macro [PROPERTY_INFO_ENTRY_EX](../
 
 Les fournisseurs de OLE DB Microsoft ignorent les propriétés de OLE DB suivantes :
 
-- `DBPROP_MAXROWS` fonctionne uniquement pour les fournisseurs en lecture seule (c’est-à-dire, où `DBPROP_IRowsetChange` et `DBPROP_IRowsetUpdate` ont la **valeur false**); Sinon, cette propriété n’est pas prise en charge.
+- `DBPROP_MAXROWS`fonctionne uniquement pour les fournisseurs en lecture seule (c’est-à-dire, où `DBPROP_IRowsetChange` et `DBPROP_IRowsetUpdate` sont **`false`** ); sinon, cette propriété n’est pas prise en charge.
 
-- `DBPROP_MAXPENDINGROWS` est ignoré ; le fournisseur spécifie sa propre limite.
+- `DBPROP_MAXPENDINGROWS`est ignoré ; le fournisseur spécifie sa propre limite.
 
-- `DBPROP_MAXOPENROWS` est ignoré ; le fournisseur spécifie sa propre limite.
+- `DBPROP_MAXOPENROWS`est ignoré ; le fournisseur spécifie sa propre limite.
 
-- `DBPROP_CANHOLDROWS` est ignoré ; le fournisseur spécifie sa propre limite.
+- `DBPROP_CANHOLDROWS`est ignoré ; le fournisseur spécifie sa propre limite.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des modèles du fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Utilisation des modèles de fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

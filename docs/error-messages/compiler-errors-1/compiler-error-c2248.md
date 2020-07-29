@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d35ded4b06423be53911f3efd0b55d75cb979773
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206546"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212811"
 ---
 # <a name="compiler-error-c2248"></a>Erreur du compilateur C2248
 
 '*membre*' : impossible d’accéder au membre'*access_level*'déclaré dans la classe'*classe*'
 
-Les membres d’une classe dérivée ne peuvent pas accéder `private` membres d’une classe de base. Vous ne pouvez pas accéder aux membres `private` ou `protected` des instances de classe.
+Les membres d’une classe dérivée ne peuvent pas accéder aux **`private`** membres d’une classe de base. Vous ne pouvez pas accéder aux **`private`** membres ou à **`protected`** des instances de classe.
 
 ## <a name="example"></a>Exemple
 
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-Un autre problème de conformité qui expose C2248 est l’utilisation d’amis et de spécialisations de modèles. Pour résoudre ce problème, déclarez les fonctions de modèle Friend à l’aide d’une liste de paramètres de modèle vide < > ou des paramètres de modèle spécifiques.
+Un autre problème de conformité qui expose C2248 est l’utilisation d’amis et de spécialisations de modèles. Pour résoudre ce problème, déclarez les fonctions de modèle Friend à l’aide d’une liste de paramètres de modèle vide <> ou de paramètres de modèle spécifiques.
 
 ```cpp
 // C2248_template.cpp

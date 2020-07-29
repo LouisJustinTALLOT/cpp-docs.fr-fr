@@ -28,12 +28,12 @@ helpviewer_keywords:
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-ms.openlocfilehash: 8835a3184300f1c56f1123a09aa48cd34a387c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c6a77dcba06b58191781900d4e24202c6335cfb8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957025"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213565"
 ---
 # <a name="_fpieee_flt"></a>_fpieee_flt
 
@@ -72,22 +72,22 @@ La structure **_FPIEEE_RECORD** , définie dans FPIEEE. h, contient des informat
 
 |Champ _FPIEEE_RECORD|Description|
 |----------------------------|-----------------|
-|**RoundingMode**<br/>**Précision**|Ces champs **unsigned** **int** contiennent des informations sur l’environnement à virgule flottante au moment où l’exception s’est produite.|
-|**Opération**|Ce champ **unsigned** **int** indique le type d’opération qui a provoqué l’interruption. Si le type est une comparaison ( **_FpCodeCompare**), vous pouvez fournir l’une des valeurs **_FPIEEE_COMPARE_RESULT** spéciales (telles que définies dans FPIEEE. h) dans le champ **result. Value** . Le type de conversion ( **_FpCodeConvert**) indique que l’interruption s’est produite pendant une opération de conversion à virgule flottante. Vous pouvez examiner les types de **Operand1** et de **résultats** pour déterminer le type de conversion tenté.|
+|**RoundingMode**<br/>**Précision**|Ces **`unsigned int`** champs contiennent des informations sur l’environnement à virgule flottante au moment où l’exception s’est produite.|
+|**opération**|Ce **`unsigned int`** champ indique le type d’opération qui a provoqué l’interruption. Si le type est une comparaison (**_FpCodeCompare**), vous pouvez fournir l’une des valeurs de **_FPIEEE_COMPARE_RESULT** spéciales (telles que définies dans FPIEEE. h) dans le champ **result. Value** . Le type de conversion (**_FpCodeConvert**) indique que l’interruption s’est produite pendant une opération de conversion à virgule flottante. Vous pouvez examiner les types de **Operand1** et de **résultats** pour déterminer le type de conversion tenté.|
 |**Operand1**<br/>**Operand2**<br/>**Résultat**|Ces structures **_FPIEEE_VALUE** indiquent les types et les valeurs des résultats et des opérandes proposés. Chaque structure contient les champs suivants :<br /><br /> **OperandValid** : Indicateur spécifiant si la valeur de réponse est valide.<br />Type de données **format** de la valeur correspondante. Le type de format peut être retourné même si la valeur correspondante n'est pas valide.<br />**Valeur des données** de résultat ou d’opérande.|
-|**Cause**<br/>**Enable**<br/>**État**|**_FPIEEE_EXCEPTION_FLAGS** contient un champ de bits par type d’exception à virgule flottante. Il existe une correspondance entre ces champs et les arguments utilisés pour masquer les exceptions fournies à [_controlfp](control87-controlfp-control87-2.md). La signification exacte de chaque bit dépend du contexte :<br /><br /> **Cause** -chaque bit défini indique l’exception particulière qui a été levée.<br />**Enable** -chaque bit défini indique que l’exception particulière est actuellement démasquée.<br />**État** : chaque bit défini indique que l’exception particulière est actuellement en attente. Cela comprend les exceptions qui n’ont pas été déclenchées, car elles ont été masquées par _ **controlfp**.|
+|**Cause**<br/>**Activer**<br/>**État**|**_FPIEEE_EXCEPTION_FLAGS** contient un champ de bits par type d’exception à virgule flottante. Il existe une correspondance entre ces champs et les arguments utilisés pour masquer les exceptions fournies à [_controlfp](control87-controlfp-control87-2.md). La signification exacte de chaque bit dépend du contexte :<br /><br /> **Cause** -chaque bit défini indique l’exception particulière qui a été levée.<br />**Enable** -chaque bit défini indique que l’exception particulière est actuellement démasquée.<br />**État** : chaque bit défini indique que l’exception particulière est actuellement en attente. Cela comprend les exceptions qui n’ont pas été déclenchées, car elles ont été masquées par **_controlfp**.|
 
 Les exceptions en attente désactivées sont déclenchées lorsque vous les activez. Cela peut entraîner un comportement indéfini lors de l’utilisation de **_fpieee_flt** comme filtre d’exception. Appelez toujours [_clearfp](clear87-clearfp.md) avant d’activer les exceptions à virgule flottante.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
 |**_fpieee_flt**|\<fpieee.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_fpieee.c
@@ -157,5 +157,5 @@ int main( void )
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87, _controlfp \_ _control87_2](control87-controlfp-control87-2.md)<br/>
 [_controlfp_s](controlfp-s.md)<br/>

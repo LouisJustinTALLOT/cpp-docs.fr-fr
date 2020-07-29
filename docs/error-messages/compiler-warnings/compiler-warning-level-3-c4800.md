@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: 828b38aeb184741af284f2d7722017b24f6255a3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a516be2e6e1966c3249ed21cc6d480ddea8b5ec1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220013"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>Avertissement du compilateur (niveau 4) C4800
 
 ::: moniker range=">= vs-2019"
-Visual Studio 2019 et versions ultérieures :
+Visual Studio 2019 et ultérieur :
 > Conversion implicite de'*type*'en bool. Perte d’informations possible
 ::: moniker-end
 
 C4800 est un avertissement de niveau 3 dans Visual Studio 2015 et versions antérieures :
 > '*type*' : valeur forcée à bool’true’ou’false' (avertissement de performance)
 
-Cet avertissement est généré lorsqu’une valeur est implicitement convertie en type `bool`. En règle générale, ce message est provoqué par l’affectation de variables de `int` à `bool` variables dans lesquelles la variable `int` contient uniquement des valeurs **true** et **false**, et peut être redéclarée comme `bool`de type. Si vous ne pouvez pas réécrire l’expression pour utiliser le type `bool`, vous pouvez ajouter «`!=0`» à l’expression, ce qui donne le type d’expression `bool`. Le cast de l’expression en type `bool` ne désactive pas l’avertissement, ce qui est lié à la conception.
+Cet avertissement est généré lorsqu’une valeur est implicitement convertie en type **`bool`** . En règle générale, ce message est provoqué par **`int`** l’affectation de variables aux **`bool`** variables où la **`int`** variable contient uniquement **`true`** des valeurs et **`false`** , et qui peut être redéclarée en tant que type **`bool`** . Si vous ne pouvez pas réécrire l’expression pour utiliser le type **`bool`** , vous pouvez ajouter « `!=0` » à l’expression, qui donne le type d’expression **`bool`** . Le cast de l’expression en type **`bool`** ne désactive pas l’avertissement, ce qui est lié à la conception.
 
 ::: moniker range=">= vs-2017"
 Cet avertissement n’est pas émis dans Visual Studio 2017.

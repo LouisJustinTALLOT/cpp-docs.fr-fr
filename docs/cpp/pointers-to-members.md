@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 75bd29310d64b0309ac48be053aa43cc0084aa2d
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226092"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213292"
 ---
 # <a name="pointers-to-members"></a>Pointeurs vers membres
 
@@ -25,7 +25,7 @@ Les déclarations de pointeurs vers des membres sont des cas spéciaux de décla
 
    - Spécificateur de classe de stockage facultatif.
 
-   - Spécificateurs **const** et **volatile** facultatifs.
+   - **`const`** Spécificateurs facultatifs et **`volatile`** .
 
    - Spécificateur de type : nom d'un type. Il s’agit du type du membre vers lequel pointer, et non de la classe.
 
@@ -39,7 +39,7 @@ Les déclarations de pointeurs vers des membres sont des cas spéciaux de décla
 
    - __`*`__ Opérateur.
 
-   - Spécificateurs **const** et **volatile** facultatifs.
+   - **`const`** Spécificateurs facultatifs et **`volatile`** .
 
    - Identificateur nommant le pointeur vers le membre.
 
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-Dans l’exemple précédent, `pwCaption` est un pointeur vers n’importe quel membre de `Window` la classe qui est de type `char*` . Le type de `pwCaption` est `char * Window::*`. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.
+Dans l’exemple précédent, `pwCaption` est un pointeur vers n’importe quel membre de `Window` la classe qui est de type **`char*`** . Le type de `pwCaption` est `char * Window::*`. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.
 
 ```cpp
 const char * (Window::* pfnwGC)() = &Window::GetCaption;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 817e74d278aa3d91c65ffeb8ab9ac5844041446e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9914818520fafb707b6821ba827e867b8aea9928
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198963"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220026"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Avertissement du compilateur (niveau 3) C4191
 
@@ -25,11 +25,11 @@ Plusieurs opérations faisant appel à des pointeurs fonction sont considérées
 
 - Types d’argument ou de retour de différentes tailles, catégories de types ou classifications.
 
-- Longueurs des listes d’arguments différentes (sur `__cdecl`, le cast de type n’est effectué que de la liste la plus longue vers la liste la plus courte, même si la plus courte est déclarée varargs).
+- Longueurs de liste d’arguments différente (on **`__cdecl`** , uniquement dans la conversion d’une liste plus longue vers une liste plus petite, même si la valeur est plus petite).
 
-- Pointeur vers des données (autre que **void** <strong>\*</strong>) avec un alias sur un pointeur vers une fonction.
+- Pointeur vers des données (autres que **`void`** <strong>\*</strong> ) aliasés par rapport à un pointeur vers une fonction.
 
-- Toute autre différence de type pouvant conduire à une erreur ou un avertissement sur un `reinterpret_cast`.
+- Toute autre différence de type qui générerait une erreur ou un avertissement sur un **`reinterpret_cast`** .
 
 L’appel de cette fonction par le pointeur résultat peut bloquer votre programme.
 

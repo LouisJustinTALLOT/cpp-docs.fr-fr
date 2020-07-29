@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-ms.openlocfilehash: 44b1031376abd6c50c3b9706089042995994e495
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8c3eeb47ec81f4073452c17f40eb2fec4911989f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177675"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213279"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Opérateurs suffixés d'incrémentation et de décrémentation : ++ et --
 
@@ -44,11 +44,11 @@ Il est important de noter qu’une expression d’incrémentation ou de décrém
 
 Lorsqu'un opérateur suffixé est appliqué à un argument de fonction, il n'est pas garanti que la valeur de cet argument sera incrémentée ou décrémentée avant d'être passée à la fonction.  Pour plus d'informations, reportez-vous à la section 1.9.17 de la norme C++.
 
-L’application de l’opérateur d’incrémentation postfixé à un pointeur vers un tableau d’objets de type **long** ajoute en fait quatre à la représentation interne du pointeur. Ce comportement fait que le pointeur, qui faisait précédemment référence au *n*ème élément du tableau, fait référence à l’élément (*n*+ 1) th.
+L’application de l’opérateur d’incrémentation postfixé à un pointeur vers un tableau d’objets de type **`long`** ajoute en fait quatre à la représentation interne du pointeur. Ce comportement fait que le pointeur, qui faisait précédemment référence au *n*ème élément du tableau, fait référence à l’élément (*n*+ 1) th.
 
-Les opérandes pour les opérateurs d’incrémentation et de décrémentation postfix et suffixe doivent être modifiables (et non **const**) des valeurs arithmétiques ou de type pointeur. Le type du résultat est le même que celui de l' *expression postfix*, mais il n’est plus une l-value.
+Les opérandes pour les opérateurs d’incrémentation et de décrémentation postfix et suffixe doivent être modifiables (pas **`const`** ) des valeurs de l-i de type arithmétique ou pointeur. Le type du résultat est le même que celui de l' *expression postfix*, mais il n’est plus une l-value.
 
-**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : l’opérande d’un opérateur d’incrémentation ou de décrémentation suffixé ne peut pas être de type **bool**.
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : l’opérande d’un opérateur d’incrémentation ou de décrémentation suffixé ne peut pas être de type **`bool`** .
 
 Le code suivant illustre l'opérateur d'incrémentation suffixé :
 

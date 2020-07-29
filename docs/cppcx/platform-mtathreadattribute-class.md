@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 4564def412834ae0586292e8aa533d3b2bd0d679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 700eeae226be48c1f6659d621f2f5c0ed397bb7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152668"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213045"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (classe)
 
@@ -32,29 +32,29 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 |Nom|Description|
 |----------|-----------------|
-|[MTAThreadAttribute constructeur 1](#ctor) constructeur|Initialise une nouvelle instance de la classe.|
+|[MTAThreadAttribute, constructeur 1](#ctor) , constructeur|Initialise une nouvelle instance de la classe.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-L’attribut MTAThreadAttribute hérite [Platform::Object Class](../cppcx/platform-object-class.md). MTAThreadAttribute surcharge ou possède également les membres suivants :
+L’attribut MTAThreadAttribute hérite de la [classe Platform :: Object](../cppcx/platform-object-class.md). MTAThreadAttribute surcharge ou possède également les membres suivants :
 
 |Nom|Description|
 |----------|-----------------|
-|[MTAThreadAttribute::Equals](#equals)|Détermine si l'objet spécifié est identique à l'objet actuel.|
+|[MTAThreadAttribute::Equals](#equals)|Détermine si l'objet spécifié est égal à l'objet actuel.|
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|
-|[MTAThreadAttribute::ToString](#tostring)|Retourne une chaîne qui représente l'objet actuel.|
+|[MTAThreadAttribute::ToString](#tostring)|Retourne une chaîne qui représente l'objet actif.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `Platform`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform
 
-## <a name="ctor"></a> MTAThreadAttribute, constructeur
+## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a>MTAThreadAttribute, constructeur
 
 Initialise une nouvelle instance de la classe MTAThreadAttribute.
 
@@ -64,9 +64,9 @@ Initialise une nouvelle instance de la classe MTAThreadAttribute.
 public:MTAThreadAttribute();
 ```
 
-## <a name="equals"></a> MTAThreadAttribute::Equals
+## <a name="mtathreadattributeequals"></a><a name="equals"></a>MTAThreadAttribute :: Equals
 
-Détermine si l'objet spécifié est identique à l'objet actuel.
+Détermine si l'objet spécifié est égal à l'objet actuel.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -81,9 +81,9 @@ Objet à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les objets sont égaux ; sinon, **false**.
+**`true`** Si les objets sont égaux ; Sinon, **`false`** .
 
-## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
+## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a>MTAThreadAttribute :: GetHashCode
 
 Retourne le code de hachage de cette instance.
 
@@ -97,9 +97,9 @@ public:int GetHashCode();
 
 Code de hachage de cette instance.
 
-## <a name="tostring"></a> MTAThreadAttribute::ToString
+## <a name="mtathreadattributetostring"></a><a name="tostring"></a>MTAThreadAttribute :: ToString
 
-Retourne une chaîne qui représente l'objet actuel.
+Retourne une chaîne qui représente l'objet actif.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -109,8 +109,8 @@ public:String^ ToString();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Chaîne qui représente l'objet actuel.
+Chaîne qui représente l’objet actif.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)
+[Espace de noms de plateforme](platform-namespace-c-cx.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: b9d8218bd5a3151e17b7ac380bb86c85dac3e6a3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4936e09de5ee26356b71b66154071a93e252b6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944730"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213461"
 ---
 # <a name="string-to-numeric-value-functions"></a>Fonctions de valeur chaîne en valeur numérique
 
@@ -47,8 +47,8 @@ Chaque fonction de la famille **strtod** convertit une chaîne terminée par Nul
 |`strtod`|Convertir une chaîne en valeur à virgule flottante double précision|
 |`strtol`|Convertir une chaîne en entier long|
 |`strtoul`|Convertir une chaîne en entier long non signé|
-|`_strtoi64`|Convertir une chaîne en entier `__int64` 64 bits|
-|`_strtoui64`|Convertir une chaîne en entier `__int64` non signé 64 bits|
+|`_strtoi64`|Convertir une chaîne en entier 64 bits **`__int64`**|
+|`_strtoui64`|Convertir une chaîne en entier non signé 64 bits **`__int64`**|
 
 `wcstod`, `wcstol`, `wcstoul` et `_wcstoi64` sont, respectivement, des versions à caractères larges de `strtod`, `strtol`, `strtoul` et `_strtoi64`. L’argument de chaîne de chacune de ces fonctions de caractères larges est une chaîne à caractères larges. Chaque fonction a un comportement identique à celui de son homologue en caractères codés sur un octet.
 
@@ -60,15 +60,15 @@ Si le pointeur fourni par l’utilisateur qui pointe vers un caractère de fin d
 
 `strtod` attend une chaîne au format suivant :
 
-[*espace blanc*] [*signe*] [`digits`] [ **.** `digits`] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*signe*]`digits`]
+[*espace blanc*] [*signe*] [`digits`] [**.**`digits`] [{**d** &#124; **d** &#124; **e** &#124; **e**} [*Sign*] `digits` ]
 
-Un *espace blanc* peut se composer d’espaces et de tabulations, qui sont ignorés ; un *signe* est un signe plus ( **+** ) ou moins ( **-** ) ; et `digits` représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**d**, **D**, **e** ou **E**) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
+Un *espace blanc* peut se composer d’espaces et de tabulations, qui sont ignorés ; un *signe* est un signe plus (**+**) ou moins (**-**) ; et `digits` représente un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**d**, **D**, **e** ou **E**) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
 
 Les fonctions `strtol`, `strtoul`, `_strtoi64` et `_strtoui64` attendent une chaîne au format suivant :
 
-[*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **X** }]] [`digits`]
+[*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [ `digits` ]
 
-Si l’argument de base a une valeur comprise entre 2 et 36, elle est utilisée comme base numérique. Si sa valeur est de 0, les caractères initiaux référencés par le pointeur de fin de conversion sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Sinon, elle est interprétée comme un nombre décimal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. `strtoul` et `_strtoui64` autorise la présence d’un signe plus ( **+** ) ou moins ( **-** ) en guise de préfixe ; la présence d’un signe moins de début indique que le signe de la valeur de retour est négative.
+Si l’argument de base a une valeur comprise entre 2 et 36, elle est utilisée comme base numérique. Si sa valeur est de 0, les caractères initiaux référencés par le pointeur de fin de conversion sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Sinon, elle est interprétée comme un nombre décimal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. `strtoul`et `_strtoui64` autorisent un **+** préfixe de signe plus () ou moins ( **-** ); un signe moins de début indique que la valeur de retour est négative.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie `LC_NUMERIC` des paramètres régionaux. Pour plus d’informations, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis.
 
@@ -95,6 +95,6 @@ Lorsque la valeur retournée par ces fonctions provoque un dépassement de capac
 
 [Conversion de données](../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de caractères multioctets](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Prise en charge de la virgule flottante](../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: 2de019f908942a58b232877fcd9eebc4689d8e22
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fddfc2e3295552414a00692006ab12725dc07d52
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187477"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213110"
 ---
 # <a name="void-c"></a>void (C++)
 
-Lorsqu’il est utilisé en tant que type de retour de fonction, le mot clé **void** spécifie que la fonction ne retourne pas de valeur. Lorsqu’il est utilisé pour la liste de paramètres d’une fonction, **void** spécifie que la fonction n’accepte aucun paramètre. Lorsqu’il est utilisé dans la déclaration d’un pointeur, **void** spécifie que le pointeur est « Universal ».
+Lorsqu’il est utilisé en tant que type de retour de fonction, le **`void`** mot clé spécifie que la fonction ne retourne pas de valeur. Lorsqu’il est utilisé pour la liste de paramètres d’une fonction, **`void`** spécifie que la fonction n’accepte aucun paramètre. En cas d’utilisation dans la déclaration d’un pointeur, **`void`** spécifie que le pointeur est « universel ».
 
-Si le type d’un pointeur est **void\*** , le pointeur peut pointer vers n’importe quelle variable qui n’est pas déclarée avec le mot clé **const** ou **volatile** . Un pointeur d' **\*void** ne peut pas être déréférencé, sauf s’il est casté en un autre type. Un pointeur d' **\*void** peut être converti en un autre type de pointeur de données.
+Si le type d’un pointeur **est \* void**, le pointeur peut pointer vers n’importe quelle variable qui n’est pas déclarée avec le **`const`** **`volatile`** mot clé ou. Un **pointeur \* void** ne peut pas être déréférencé, sauf s’il est casté en un autre type. Un **pointeur \* void** peut être converti en un autre type de pointeur de données.
 
-Un pointeur **void** peut pointer vers une fonction, mais pas vers un membre de C++classe dans.
+Un **`void`** pointeur peut pointer vers une fonction, mais pas vers un membre de classe en C++.
 
-Vous ne pouvez pas déclarer une variable de type **void**.
+Vous ne pouvez pas déclarer une variable de type **`void`** .
 
 ## <a name="example"></a>Exemple
 

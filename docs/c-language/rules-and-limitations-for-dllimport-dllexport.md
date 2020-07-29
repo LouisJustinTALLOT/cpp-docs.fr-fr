@@ -6,20 +6,20 @@ helpviewer_keywords:
 - dllimport attribute [C++], limitations and rules
 - dllexport attribute [C++]
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
-ms.openlocfilehash: cc83a43fd09299710585fa104dbd4dc847036c68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2f121d978962fe7fc03aa453fb0a16650aa2727
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158421"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220871"
 ---
 # <a name="rules-and-limitations-for-dllimportdllexport"></a>Règles et limitations pour dllimport/dllexport
 
 **Spécifique à Microsoft**
 
-- Si vous déclarez une fonction sans l'attribut **dllimport** ou `dllexport`, elle n'est pas considérée comme faisant partie de l'interface DLL. Par conséquent, la définition de la fonction doit être présente dans ce module ou dans un autre module du même programme. Pour que la fonction fasse partie de l'interface DLL, vous devez déclarer la définition de la fonction dans l'autre module en tant que `dllexport`. Sinon, une erreur de l'Éditeur de liens est générée lorsque le client est construit.
+- Si vous déclarez une fonction sans **`dllimport`** l' `dllexport` attribut ou, la fonction n’est pas considérée comme faisant partie de l’interface dll. Par conséquent, la définition de la fonction doit être présente dans ce module ou dans un autre module du même programme. Pour que la fonction fasse partie de l'interface DLL, vous devez déclarer la définition de la fonction dans l'autre module en tant que `dllexport`. Sinon, une erreur de l'Éditeur de liens est générée lorsque le client est construit.
 
-- Si un seul module de votre programme contient des déclarations **dllimport** et `dllexport` pour une même fonction, l'attribut `dllexport` est prioritaire sur l'attribut **dllimport**. Toutefois, un avertissement du compilateur est généré. Par exemple :
+- Si un seul module de votre programme contient **`dllimport`** des `dllexport` déclarations et pour la même fonction, l' `dllexport` attribut est prioritaire sur l' **`dllimport`** attribut. Toutefois, un avertissement du compilateur est généré. Par exemple :
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -31,7 +31,7 @@ ms.locfileid: "62158421"
 
     ```
 
-- Vous ne pouvez pas initialiser un pointeur de données statiques avec l'adresse d'un objet de données déclaré avec l'attribut **dllimport**. Par exemple, le code suivant génère des erreurs :
+- Vous ne pouvez pas initialiser un pointeur de données statiques avec l’adresse d’un objet de données déclaré avec l' **`dllimport`** attribut. Par exemple, le code suivant génère des erreurs :
 
     ```
     #define DllImport   __declspec( dllimport )
@@ -50,7 +50,7 @@ ms.locfileid: "62158421"
 
     ```
 
-- L'initialisation d'un pointeur de fonction statique avec l'adresse d'une fonction déclarée avec **dllimport** définit le pointeur sur l'adresse de la conversion de code d'importation de la DLL (stub de code qui transfère un contrôle à la fonction) plutôt que l'adresse de la fonction. Cette assignation ne génère pas de message d'erreur :
+- L’initialisation d’un pointeur de fonction statique avec l’adresse d’une fonction déclarée avec **`dllimport`** définit le pointeur vers l’adresse du thunk d’importation de dll (un stub de code qui transfère le contrôle à la fonction) plutôt que l’adresse de la fonction. Cette assignation ne génère pas de message d'erreur :
 
     ```
     #define DllImport   __declspec( dllimport )

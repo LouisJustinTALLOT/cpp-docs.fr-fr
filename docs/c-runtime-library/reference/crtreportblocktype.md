@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1fccb66632e832b491832cfac12fb1940bdf0f87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942336"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213591"
 ---
 # <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
@@ -55,7 +55,7 @@ Pointeur désignant un bloc de tas de débogage valide.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Lorsqu’il reçoit un pointeur de tas de débogage valide, la fonction **_CrtReportBlockType** retourne le type de bloc et le sous-type sous la forme d’un **int**. Quand elle reçoit un pointeur non valide, elle retourne -1.
+Lorsqu’il reçoit un pointeur de tas de débogage valide, la fonction **_CrtReportBlockType** retourne le type de bloc et le sous-type sous la forme d’un **`int`** . Quand elle reçoit un pointeur non valide, elle retourne -1.
 
 ## <a name="remarks"></a>Notes
 
@@ -63,13 +63,13 @@ Pour extraire le type et le sous-type retournés par **_CrtReportBlockType**, ut
 
 Pour plus d’informations sur les types de blocs d’allocation et sur leur utilisation, consultez [Types de bloc sur le tas de débogage](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_CrtReportBlockType**|\<crtdbg.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -115,7 +115,7 @@ int main(void)
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
+### <a name="sample-output"></a>Exemple de sortie
 
 ```Output
 Dumper found block at 00314F78: type 4, subtype 3

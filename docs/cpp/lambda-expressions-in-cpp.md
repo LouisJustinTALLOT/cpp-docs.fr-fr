@@ -1,19 +1,19 @@
 ---
-title: Expressions lambda en C++
+title: Expressions lambda en C++
 ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: e206ea8d67bb333065bf43f7f9c2dc373a5a5258
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6fcc26c3ed86c86264773a70ac16501c102e1861
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857487"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213331"
 ---
-# <a name="lambda-expressions-in-c"></a>Expressions lambda en C++
+# <a name="lambda-expressions-in-c"></a>Expressions lambda en C++
 
 En C++ 11 et versions ultérieures, une expression lambda, souvent appelée *lambda*, est un moyen pratique de définir un objet de fonction anonyme (une *fermeture*) juste à l’emplacement où il est appelé ou passé comme argument à une fonction. Les expressions lambda sont généralement utilisées pour encapsuler quelques lignes de code qui sont passées à des algorithmes ou méthodes asynchrones. Cet article explique ce que sont les expressions lambda, les compare à d'autres techniques de programmation, décrit leurs avantages et fournit un exemple simple.
 
@@ -21,7 +21,7 @@ En C++ 11 et versions ultérieures, une expression lambda, souvent appelée *lam
 
 - [Expressions lambda et objets de fonction](lambda-expression-syntax.md)
 - [Utilisation d’expressions lambda](examples-of-lambda-expressions.md)
-- [expressions lambda constexpr](lambda-expressions-constexpr.md)
+- [Expressions lambda constexpr](lambda-expressions-constexpr.md)
 
 ## <a name="parts-of-a-lambda-expression"></a>Éléments d’une expression lambda
 
@@ -43,9 +43,9 @@ void abssort(float* x, unsigned n) {
 
 Cette illustration montre les éléments d'une expression lambda :
 
-![Éléments structurels d’une expression lambda](../cpp/media/lambdaexpsyntax.png "Éléments structurels d'une expression lambda")
+![Éléments structurels d'une expression lambda](../cpp/media/lambdaexpsyntax.png "Éléments structurels d'une expression lambda")
 
-1. *clause de capture* (également appelée *lambda-introducteur* dans la C++ spécification.)
+1. *clause de capture* (également appelée *lambda-introducteur* dans la spécification C++.)
 
 1. *liste de paramètres* Facultatif. (Également appelé *déclarateur lambda*)
 
@@ -63,7 +63,7 @@ Une expression lambda peut introduire de nouvelles variables dans son corps (en 
 
 Une clause de capture vide, `[ ]`, indique que le corps de l’expression lambda n’accède à aucune variable dans la portée englobante.
 
-Vous pouvez utiliser le mode de capture par défaut (*capture-default* dans la syntaxe standard) pour indiquer comment capturer toutes les variables externes référencées dans l’expression lambda : `[&]` signifie que toutes les variables que vous faites référence sont capturées par référence, et `[=]` signifie qu’elles sont capturées par valeur. Vous pouvez utiliser un mode de capture par défaut, puis spécifier le mode opposé explicitement pour des variables spécifiques. Par exemple, si le corps d'une expression lambda accède à la variable externe `total` par référence et à la variable externe `factor` par valeur, les clauses de capture suivantes sont équivalentes :
+Vous pouvez utiliser le mode de capture par défaut (*capture-default* dans la syntaxe standard) pour indiquer comment capturer toutes les variables externes référencées dans l’expression lambda : `[&]` signifie que toutes les variables que vous faites référence à sont capturées par référence et `[=]` signifie qu’elles sont capturées par valeur. Vous pouvez utiliser un mode de capture par défaut, puis spécifier le mode opposé explicitement pour des variables spécifiques. Par exemple, si le corps d'une expression lambda accède à la variable externe `total` par référence et à la variable externe `factor` par valeur, les clauses de capture suivantes sont équivalentes :
 
 ```cpp
 [&total, factor]
@@ -76,7 +76,7 @@ Vous pouvez utiliser le mode de capture par défaut (*capture-default* dans la s
 
 Seules les variables mentionnées dans l’expression lambda sont capturées lors de l’utilisation d’une capture par défaut.
 
-Si une clause de capture comprend un `&`par défaut de capture, aucun `identifier` dans un `capture` de cette clause de capture ne peut avoir la forme `& identifier`. De même, si la clause de capture comprend un `=`par défaut de capture, aucune `capture` de cette clause de capture ne peut avoir la forme `= identifier`. Un identificateur ou **ce** ne peut pas apparaître plusieurs fois dans une clause de capture. Quelques exemples sont illustrés dans l'extrait de code suivant.
+Si une clause de capture comprend une capture (valeur par défaut `&` ), non `identifier` dans une `capture` de cette clause de capture peut avoir la forme `& identifier` . De même, si la clause de capture comprend une capture-default `=` , alors aucune `capture` de cette clause de capture ne peut avoir la forme `= identifier` . Un identificateur ou **`this`** ne peut pas apparaître plusieurs fois dans une clause de capture. Quelques exemples sont illustrés dans l'extrait de code suivant.
 
 ```cpp
 struct S { void f(int i); };
@@ -100,15 +100,15 @@ void f(Args... args) {
 }
 ```
 
-Pour utiliser des expressions lambda dans le corps d’une méthode de classe, transmettez **ce** pointeur à la clause de capture pour permettre l’accès aux méthodes et aux données membres de la classe englobante.
+Pour utiliser des expressions lambda dans le corps d’une méthode de classe, transmettez le **`this`** pointeur à la clause de capture pour permettre l’accès aux méthodes et aux données membres de la classe englobante.
 
-**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : le pointeur **This** peut être capturé par valeur en spécifiant `*this` dans la clause de capture. La capture par valeur signifie que la *fermeture*entière, qui est l’objet de fonction anonyme qui encapulates l’expression lambda, est copiée sur chaque site d’appel où le lambda est appelé. La capture par valeur est utile lorsque l’expression lambda s’exécute en opérations parallèles ou asynchrones, en particulier sur certaines architectures matérielles telles que NUMA.
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : le **`this`** pointeur peut être capturé par valeur en spécifiant **`*this`** dans la clause de capture. La capture par valeur signifie que la *fermeture*entière, qui est l’objet de fonction anonyme qui encapulates l’expression lambda, est copiée sur chaque site d’appel où le lambda est appelé. La capture par valeur est utile lorsque l’expression lambda s’exécute en opérations parallèles ou asynchrones, en particulier sur certaines architectures matérielles telles que NUMA.
 
 Pour obtenir un exemple qui montre comment utiliser des expressions lambda avec des méthodes de classe, consultez « exemple : utilisation d’une expression lambda dans une méthode » dans [exemples d’expressions lambda](../cpp/examples-of-lambda-expressions.md).
 
 Quand vous utilisez une clause de capture, nous vous conseillons de garder les points suivants à l'esprit, en particulier si vous utilisez des expressions lambda avec le multithreading :
 
-- les captures de référence peuvent être utilisées pour modifier les variables externes, contrairement aux captures de valeur. (**mutable** autorise la modification des copies, mais pas les originaux.)
+- les captures de référence peuvent être utilisées pour modifier les variables externes, contrairement aux captures de valeur. ( **`mutable`** permet de modifier les copies, mais pas les originaux.)
 
 - les captures de référence reflètent les mises à jour des variables externes, contrairement aux captures de valeur ;
 
@@ -138,7 +138,7 @@ auto y = [] (int first, int second)
 };
 ```
 
-Dans  **C++ 14**, si le type de paramètre est générique, vous pouvez utiliser le mot clé auto comme spécificateur de type. Cela indique au compilateur de créer l'opérateur d'appel de fonction en tant que modèle. Chaque instance d'auto dans une liste de paramètres est équivalente à un paramètre de type distinct.
+En **C++ 14**, si le type de paramètre est générique, vous pouvez utiliser le **`auto`** mot clé comme spécificateur de type. Cela indique au compilateur de créer l'opérateur d'appel de fonction en tant que modèle. Chaque instance de **`auto`** dans une liste de paramètres équivaut à un paramètre de type distinct.
 
 ```cpp
 auto y = [] (auto first, auto second)
@@ -149,15 +149,15 @@ auto y = [] (auto first, auto second)
 
 Une expression lambda peut accepter une autre expression lambda comme argument. Pour plus d’informations, consultez « Expressions lambda d’ordre supérieur » dans la rubrique [exemples d’expressions lambda](../cpp/examples-of-lambda-expressions.md).
 
-Comme une liste de paramètres est facultative, vous pouvez omettre les parenthèses vides si vous ne passez pas d’arguments à l’expression lambda et que son lambda-déclarateur ne contient pas *de spécification d’exception*, de *type de retour de fin*ou **mutable**.
+Comme une liste de paramètres est facultative, vous pouvez omettre les parenthèses vides si vous ne passez pas d’arguments à l’expression lambda et que son lambda-déclarateur ne contient pas *de spécification d’exception*, de *type de retour de fin*ou **`mutable`** .
 
 ### <a name="mutable-specification"></a>Spécification mutable
 
-En règle générale, l’opérateur d’appel de fonction d’une expression lambda est const par valeur, mais l’utilisation du mot clé **mutable** annule cette opération. Elle ne produit pas de membres de données mutables. La spécification "mutable" permet au corps d’une expression lambda de modifier les variables capturées par valeur. Certains des exemples fournis plus loin dans cet article montrent comment utiliser **mutable**.
+En règle générale, l’opérateur d’appel de fonction d’une expression lambda est const par valeur, mais l’utilisation du **`mutable`** mot clé annule cette opération. Elle ne produit pas de membres de données mutables. La spécification "mutable" permet au corps d’une expression lambda de modifier les variables capturées par valeur. Certains des exemples fournis plus loin dans cet article montrent comment utiliser **`mutable`** .
 
 ### <a name="exception-specification"></a>Spécification d'exception
 
-Vous pouvez utiliser la spécification d’exception `noexcept` pour indiquer que l’expression lambda ne lève pas d’exception. Comme avec les fonctions ordinaires, le C++ compilateur Microsoft génère un avertissement [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) si une expression lambda déclare la spécification d’exception `noexcept` et que le corps lambda lève une exception, comme illustré ici :
+Vous pouvez utiliser la **`noexcept`** spécification d’exception pour indiquer que l’expression lambda ne lève pas d’exceptions. Comme avec les fonctions ordinaires, le compilateur Microsoft C++ génère un avertissement [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) si une expression lambda déclare la **`noexcept`** spécification d’exception et que le corps lambda lève une exception, comme illustré ici :
 
 ```cpp
 // throw_lambda_expression.cpp
@@ -172,9 +172,9 @@ Pour plus d’informations, consultez [spécifications d’exception (throw)](..
 
 ### <a name="return-type"></a>Type de retour
 
-Le type de retour d’une expression lambda est déduit automatiquement. Vous n’êtes pas obligé d’utiliser le mot clé [auto](../cpp/auto-cpp.md) , sauf si vous spécifiez un *type de retour de fin*. Le *type de retour de fin* ressemble à la partie de type de retour d’une méthode ou d’une fonction ordinaire. Toutefois, le type de retour doit suivre la liste de paramètres. Vous devez donc ajouter le mot clé trailing-return-type `->` avant le type de retour.
+Le type de retour d’une expression lambda est déduit automatiquement. Vous n’êtes pas obligé d’utiliser le [`auto`](../cpp/auto-cpp.md) mot clé sauf si vous spécifiez un *type de retour de fin*. Le *type de retour de fin* ressemble à la partie de type de retour d’une méthode ou d’une fonction ordinaire. Toutefois, le type de retour doit suivre la liste de paramètres et vous devez inclure le mot clé de type de retour de fin **`->`** avant le type de retour.
 
-Vous pouvez omettre la partie return-type d'une expression lambda si le corps de l'expression lambda contient une seule instruction return ou que l'expression lambda ne retourne pas de valeur. Si le corps d’une expression lambda contient une seule instruction return, le compilateur déduit le type de retour du type de l’expression de retour. Sinon, le compilateur déduit que le type de retour est **void**. Étudiez les extraits de code suivants qui illustrent ce principe.
+Vous pouvez omettre la partie return-type d'une expression lambda si le corps de l'expression lambda contient une seule instruction return ou que l'expression lambda ne retourne pas de valeur. Si le corps d’une expression lambda contient une seule instruction return, le compilateur déduit le type de retour du type de l’expression de retour. Sinon, le compilateur déduit que le type de retour est **`void`** . Étudiez les extraits de code suivants qui illustrent ce principe.
 
 ```cpp
 auto x1 = [](int i){ return i; }; // OK: return type is int
@@ -190,11 +190,11 @@ Le corps lambda (*Compound-Statement* dans la syntaxe standard) d’une expressi
 
 - Variables capturées dans la portée englobante, comme décrit précédemment.
 
-- Parameters
+- Paramètres
 
 - Variables déclarées localement
 
-- Membres de données de classe, lorsqu' **ils sont** déclarés dans une classe et qu’ils sont capturés
+- Membres de données de classe, lorsqu’ils sont déclarés à l’intérieur d’une classe et **`this`** sont capturés
 
 - Toute variable ayant une durée de stockage statique (par exemple, les variables globales)
 
@@ -220,7 +220,7 @@ int main()
 0
 ```
 
-La variable `n` étant capturée par valeur, sa valeur reste `0` après l'appel à l'expression lambda. La spécification **mutable** permet de modifier `n` dans l’expression lambda.
+La variable `n` étant capturée par valeur, sa valeur reste `0` après l'appel à l'expression lambda. La **`mutable`** spécification permet `n` une modification dans l’expression lambda.
 
 Bien qu’une expression lambda ne puisse capturer que les variables qui ont une durée de stockage automatique, vous pouvez utiliser les variables qui ont une durée de stockage statique dans le corps d’une expression lambda. L'exemple suivant utilise la fonction `generate` et une expression lambda pour assigner une valeur à chaque élément dans un objet `vector`. L'expression lambda modifie la variable statique pour générer la valeur de l'élément suivant.
 
@@ -240,7 +240,7 @@ void fillVector(vector<int>& v)
 
 Pour plus d’informations, consultez [generate](../standard-library/algorithm-functions.md#generate).
 
-L’exemple de code suivant utilise la fonction de l’exemple précédent et ajoute un exemple d’expression lambda qui utilise l’algorithme de la C++ bibliothèque standard `generate_n`. Cette expression lambda affecte un élément d’un objet `vector` à la somme des deux éléments précédents. Le mot clé **mutable** est utilisé afin que le corps de l’expression lambda puisse modifier ses copies des variables externes `x` et `y`, que l’expression lambda capture par valeur. Étant donné que l'expression lambda capture les variables `x` et `y` d'origine par valeur, leurs valeurs restent égales à `1` après l'exécution de l'expression.
+L’exemple de code suivant utilise la fonction de l’exemple précédent et ajoute un exemple d’expression lambda qui utilise l’algorithme de la bibliothèque standard C++ `generate_n` . Cette expression lambda affecte un élément d’un objet `vector` à la somme des deux éléments précédents. Le **`mutable`** mot clé est utilisé pour que le corps de l’expression lambda puisse modifier ses copies des variables externes `x` et `y` , que l’expression lambda capture par valeur. Étant donné que l'expression lambda capture les variables `x` et `y` d'origine par valeur, leurs valeurs restent égales à `1` après l'exécution de l'expression.
 
 ```cpp
 // compile with: /W4 /EHsc
@@ -322,9 +322,9 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 Pour plus d’informations, consultez [generate_n](../standard-library/algorithm-functions.md#generate_n).
 
-## <a name="constexpr-lambda-expressions"></a>Expressions lambda constexpr
+## <a name="constexpr-lambda-expressions"></a>`constexpr`expressions lambda
 
-**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : une expression lambda peut être déclarée comme `constexpr` ou utilisée dans une expression constante lorsque l’initialisation de chaque membre de données qu’elle capture ou introduit est autorisée dans une expression constante.
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ) : une expression lambda peut être déclarée comme **`constexpr`** ou utilisée dans une expression constante lorsque l’initialisation de chaque membre de données qu’elle capture ou introduit est autorisée dans une expression constante.
 
 ```cpp
     int y = 32;
@@ -340,7 +340,7 @@ Pour plus d’informations, consultez [generate_n](../standard-library/algorithm
     }
 ```
 
-Une expression lambda est implicitement `constexpr` si son résultat satisfait aux exigences d’une fonction `constexpr` :
+Une expression lambda est implicitement **`constexpr`** si son résultat satisfait aux exigences d’une **`constexpr`** fonction :
 
 ```cpp
     auto answer = [](int n)
@@ -351,7 +351,7 @@ Une expression lambda est implicitement `constexpr` si son résultat satisfait a
     constexpr int response = answer(10);
 ```
 
-Si une expression lambda est implicitement ou explicitement `constexpr`, la conversion en pointeur fonction produit une fonction `constexpr` :
+Si une expression lambda est implicitement ou explicitement **`constexpr`** , la conversion en pointeur de fonction produit une **`constexpr`** fonction :
 
 ```cpp
     auto Increment = [](int n)
@@ -364,9 +364,9 @@ Si une expression lambda est implicitement ou explicitement `constexpr`, la conv
 
 ## <a name="microsoft-specific"></a>Spécifique à Microsoft
 
-Les expressions lambda ne sont pas prises en charge dans les entités managées common language runtime (CLR) suivantes : **classe ref**, **struct Ref**, **classe value**ou **struct value**.
+Les expressions lambda ne sont pas prises en charge dans les entités managées Common Language Runtime (CLR) suivantes : **`ref class`** , **`ref struct`** , **`value class`** ou **`value struct`** .
 
-Si vous utilisez un modificateur spécifique à Microsoft, tel que [__declspec](../cpp/declspec.md), vous pouvez l’insérer dans une expression lambda immédiatement après l' `parameter-declaration-clause`, par exemple :
+Si vous utilisez un modificateur spécifique à Microsoft tel que [`__declspec`](../cpp/declspec.md) , vous pouvez l’insérer dans une expression lambda immédiatement après, `parameter-declaration-clause` par exemple :
 
 ```cpp
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
@@ -379,6 +379,6 @@ En plus de la fonctionnalité lambda standard C++ 11, Visual Studio prend en cha
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Objets de fonction dans la bibliothèque standard C++](../standard-library/function-objects-in-the-stl.md)<br/>
-[Appel de fonction ](../cpp/function-call-cpp.md)<br/>
-[for_each](../standard-library/algorithm-functions.md#for_each)
+[Objets de fonction dans la bibliothèque C++ standard](../standard-library/function-objects-in-the-stl.md)<br/>
+[Appel de fonction](../cpp/function-call-cpp.md)<br/>
+[`for_each`](../standard-library/algorithm-functions.md#for_each)

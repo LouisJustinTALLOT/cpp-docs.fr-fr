@@ -28,12 +28,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 76243342233ea895b947d4aa4a246b316aa8f405
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 067ce6f347f4b24ad8c85990e70fe4d79305535c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918724"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213630"
 ---
 # <a name="calloc"></a>calloc
 
@@ -58,9 +58,9 @@ Longueur en octets de chaque élément.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**calloc** retourne un pointeur vers l’espace alloué. L’espace de stockage désigné par la valeur de retour est obligatoirement aligné correctement pour le stockage de tout type d’objet. Pour obtenir un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour.
+**calloc** retourne un pointeur vers l’espace alloué. L’espace de stockage désigné par la valeur de retour est obligatoirement aligné correctement pour le stockage de tout type d’objet. Pour obtenir un pointeur vers un type autre que **`void`** , utilisez un cast de type sur la valeur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **calloc** alloue de l’espace de stockage pour un tableau d’éléments *Number* , chacun d’octets de *taille* longueur. Chaque élément est initialisé à 0.
 
@@ -68,7 +68,7 @@ La fonction **calloc** alloue de l’espace de stockage pour un tableau d’él�
 
 Dans l’implémentation Microsoft, si le *nombre* ou la *taille* est égal à zéro, **calloc** retourne un pointeur vers un bloc alloué d’une taille différente de zéro. Une tentative de lecture ou d’écriture dans le pointeur retourné provoque un comportement non défini.
 
-**calloc** utilise la fonction C++ [_set_new_mode](set-new-mode.md) pour définir le *nouveau mode de gestionnaire*. Le nouveau mode de gestionnaire indique si, en cas d’échec, **calloc** doit appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **calloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **calloc** ne parvient pas à allouer de la mémoire, il appelle la routine de nouveau gestionnaire de la même façon que le **nouvel** opérateur quand il échoue pour la même raison. Pour ce faire, appelez
+**calloc** utilise la fonction C++ [_set_new_mode](set-new-mode.md) pour définir le *nouveau mode de gestionnaire*. Le nouveau mode de gestionnaire indique si, en cas d’échec, **calloc** doit appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **calloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **calloc** ne parvient pas à allouer de la mémoire, il appelle la routine de nouveau gestionnaire de la même façon que l' **`new`** opérateur quand il échoue pour la même raison. Pour ce faire, appelez
 
 ```C
 _set_new_mode(1);
@@ -78,7 +78,7 @@ tôt dans votre programme, ou lien avec *NEWMODE. OBJ* (consultez [options de li
 
 Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, **calloc** est résolu en [_calloc_dbg](calloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**calloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**calloc** est marqué `__declspec(noalias)` et `__declspec(restrict)` , ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’est pas un alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2020
 ms.assetid: 486f98ed-6574-4d82-89e3-74b5a61ed419
-ms.openlocfilehash: 01b13aa160c39d71b793d30c6392a35c6a24e118
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d093207ba06a479b49902d5dd50029a5276d1439
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208193"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212915"
 ---
 # <a name="compiler-error-c2020"></a>Erreur du compilateur C2020
 
 'membre' : redéfinition du membre’classe'
 
-Un membre hérité d’une classe ou d’une structure de base est redéfini. Les membres hérités ne peuvent pas être redéfinis, sauf s’ils sont déclarés en tant que `virtual` dans la classe de base.
+Un membre hérité d’une classe ou d’une structure de base est redéfini. Les membres hérités ne peuvent pas être redéfinis à moins d’être déclarés comme **`virtual`** dans la classe de base.

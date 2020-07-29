@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2273
 ms.assetid: 3c682c66-97bf-4a23-a22c-d9a26a92bf95
-ms.openlocfilehash: 9cd46f7a8a0762fcae2bdec15b9b4be6384adb25
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f5780c299eb4da03ece3611ee55062ee7ebcdaae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758682"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212785"
 ---
 # <a name="compiler-error-c2273"></a>Erreur du compilateur C2273
 
 'type' : non conforme à droite de l’opérateur'-> '
 
-Un type apparaît en tant qu’opérande droit d’un opérateur `->`.
+Un type apparaît en tant qu’opérande droit d’un `->` opérateur.
 
-Cette erreur peut être due à une tentative d’accès à une conversion de type défini par l’utilisateur. Utilisez le mot clé `operator` entre-> et `type`.
+Cette erreur peut être due à une tentative d’accès à une conversion de type défini par l’utilisateur. Utilisez le mot clé **`operator`** between-> et `type` .
 
 L’exemple suivant génère l’C2273 :
 

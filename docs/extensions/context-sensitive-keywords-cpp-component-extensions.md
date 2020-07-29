@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182173"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219740"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Mots clés contextuels (C++/CLI et C++/CX)
 
@@ -24,13 +24,13 @@ Les *mots clés contextuels* sont des éléments de langage reconnus uniquement 
 
 Voici une liste de mots clés contextuels :
 
-- [abstract](abstract-cpp-component-extensions.md)
+- [abstraction](abstract-cpp-component-extensions.md)
 
 - [delegate](delegate-cpp-component-extensions.md)
 
 - [event](event-cpp-component-extensions.md)
 
-- [finally](../dotnet/finally.md)
+- [suivie](../dotnet/finally.md)
 
 - [for each, in](../dotnet/for-each-in.md)
 
@@ -38,9 +38,9 @@ Voici une liste de mots clés contextuels :
 
 - `internal`
 
-- [literal](literal-cpp-component-extensions.md)
+- [opérateur](literal-cpp-component-extensions.md)
 
-- [override](override-cpp-component-extensions.md)
+- [remplacer](override-cpp-component-extensions.md)
 
 - [property](property-cpp-component-extensions.md)
 
@@ -72,7 +72,7 @@ Option du compilateur : `/clr`
 
 ### <a name="examples"></a>Exemples
 
-L’exemple de code suivant montre que dans le contexte approprié, le mot clé contextuel **property** peut être utilisé pour définir une propriété et une variable.
+L’exemple de code suivant montre que dans le contexte approprié, le **`property`** mot clé contextuel peut être utilisé pour définir une propriété et une variable.
 
 ```cpp
 // context_sensitive_keywords.cpp
@@ -101,4 +101,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

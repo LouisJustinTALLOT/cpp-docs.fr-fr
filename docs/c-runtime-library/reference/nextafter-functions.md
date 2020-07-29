@@ -59,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: b137fd131536da6b8630b9cadf69238ce48964bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6122fd8921bdb413c4b24128b2428a70ccda0892
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909339"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213513"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -105,11 +105,11 @@ Valeur à virgule flottante d’arrivée.
 
 Retourne la valeur à virgule flottante représentable suivante du type de retour après *x* dans la direction de *y*. Si les valeurs *x* et *y* sont égales, la fonction retourne *y*, converti en type de retour, sans qu’aucune exception ne soit déclenchée. Si *x* n’est pas égal à *y*et que le résultat est une valeur dénormalisée ou zéro, les États d’exception de virgule flottante **FE_UNDERFLOW** et **FE_INEXACT** sont définis, et le résultat correct est retourné. Si *x* ou *y* est un Nan, la valeur de retour est l’une des valeurs NaN d’entrée. Si *x* est fini et que le résultat est infini ou n’est pas représentable dans le type, une valeur Infinite ou Nan correctement signée est retournée, les États d’exception de virgule flottante **FE_OVERFLOW** et **FE_INEXACT** sont définis, et **errno** a la valeur **ERANGE**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les familles de fonctions **nextafter** et **nexttoward** sont équivalentes, à l’exception du type de paramètre de *y*. Si les valeurs *x* et *y* sont égales, la valeur retournée est *y* convertie dans le type de retour.
 
-C++ autorisant la surcharge, si vous incluez \<cmath> vous pouvez appeler des surcharges de **nextafter** et **nexttoward** qui retournent des types **float** et **long** **double** . Dans un programme C, **nextafter** et **nexttoward** retournent toujours **double**.
+C++ autorisant la surcharge, si vous incluez, \<cmath> vous pouvez appeler des surcharges de **nextafter** et **nexttoward** qui retournent **`float`** les **`long double`** types et. Dans un programme C, **nextafter** et **nexttoward** retournent toujours **`double`** .
 
 Les fonctions **_nextafter** et **_nextafterf** sont spécifiques à Microsoft. La fonction **_nextafterf** n’est disponible que lors de la compilation pour x64.
 

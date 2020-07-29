@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: 2b7e492c62047e3b38224637f842d8a7fcbae84f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: daaf92e36550c5479903dec4869b1cb116c0a65a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172592"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219792"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Casts de style C avec /clr (C++/CLI)
 
@@ -34,7 +34,7 @@ Si aucun des casts répertoriés ci-dessus n’est valide, et si le type de l’
 
 Un cast de style C n’est pas recommandé. Lors de la compilation avec [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), utilisez [safe_cast](safe-cast-cpp-component-extensions.md).
 
-L’exemple suivant montre un cast de style C qui est mappé à un **const_cast**.
+L’exemple suivant montre un cast de style C qui est mappé à un **`const_cast`** .
 
 ```cpp
 // cstyle_casts_1.cpp
@@ -60,7 +60,7 @@ int main() {
 }
 ```
 
-L’exemple suivant montre un cast de style C qui est mappé à un **safe_cast** et un **const_cast**.
+L’exemple suivant montre un cast de style C mappé à un **safe_cast** plus **`const_cast`** .
 
 ```cpp
 // cstyle_casts_3.cpp
@@ -81,7 +81,7 @@ int main() {
 }
 ```
 
-L’exemple suivant montre un cast de style C qui est mappé à un **static_cast**.
+L’exemple suivant montre un cast de style C qui est mappé à un **`static_cast`** .
 
 ```cpp
 // cstyle_casts_4.cpp
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-L’exemple suivant montre un cast de style C qui est mappé à un **static_cast** et un **const_cast**.
+L’exemple suivant montre un cast de style C qui est mappé à un **`static_cast`** plus **`const_cast`** .
 
 ```cpp
 // cstyle_casts_5.cpp
@@ -162,4 +162,4 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

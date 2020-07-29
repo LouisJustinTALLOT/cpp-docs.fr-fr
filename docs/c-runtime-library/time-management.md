@@ -7,12 +7,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: 24859a0b35274881b03b960807904ed38b19e354
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 096207465b1be2eba70e95cff2c226924fc91bd7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444592"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213448"
 ---
 # <a name="time-management"></a>Gestion du temps
 
@@ -25,7 +25,7 @@ Les routines **_ftime** et **localtime** utilisent la variable d’environnement
 |Fonction|Utilisation|
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Convertit une heure du type **struct tm** en chaîne de caractères. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|
-|[horloge](../c-runtime-library/reference/clock.md)|Renvoie le temps horloge écoulé pour le processus.|
+|[horloge](../c-runtime-library/reference/clock.md)|Retourne le temps horloge écoulé pour le processus.|
 |[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md), [_ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|Convertit une heure de type **time_t**, **__time32_t** ou **__time64_t** en chaîne de caractères. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|
 |[difftime, _difftime32, _difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|Calcule la différence entre deux heures.|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md),[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|Stocke l’heure système actuelle dans une variable de type **struct _timeb** ou **struct __timeb64**. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|
@@ -42,10 +42,10 @@ Les routines **_ftime** et **localtime** utilisent la variable d’environnement
 |[_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)|Définit l’heure de modification du fichier spécifié en fonction de l’heure actuelle ou de la valeur d’heure stockée dans la structure.|
 
 > [!NOTE]
-> Dans toutes les versions de Microsoft C/C++ à l’exception de Microsoft C/C++ version 7.0, et dans toutes les versions de Visual C++, l’heure actuelle retournée par la fonction time correspond au nombre de secondes écoulées depuis le 1er janvier 1970 à minuit. Dans Microsoft C/C++ version 7.0, l’heure actuelle retournée par **time** est le nombre de secondes écoulées depuis le 31 décembre 1899 à minuit.
+> Dans toutes les versions de Microsoft C/C++ à l’exception de Microsoft C/C++ version 7.0, et dans toutes les versions de Visual C++, l’heure actuelle renvoyée par la fonction time correspond au nombre de secondes écoulées depuis le 1er janvier 1970 à minuit. Dans Microsoft C/C++ version 7.0, l’heure actuelle retournée par **time** est le nombre de secondes écoulées depuis le 31 décembre 1899 à minuit.
 
 > [!NOTE]
-> Dans les versions de C++ Visual et Microsoft CC++ /antérieures à visual Studio 2005, **time_t** était un **long** **int** (32 bits) et ne pouvait donc pas être utilisé pour les dates passées au-3:14:07 delà du 19 janvier 2038, UTC. **time_t** est maintenant équivalent à **__time64_t** par défaut. Toutefois, le fait de définir **_USE_32BIT_TIME_T** remplace **time_t** par **__time32_t** et force de nombreuses fonctions time à appeler les versions qui acceptent la valeur **time_t** 32 bits. Pour plus d’informations, consultez [Types standard](../c-runtime-library/standard-types.md) et les commentaires dans la documentation pour les fonctions de temps individuelles.
+> Dans les versions de Visual C++ et Microsoft C/C++ antérieures à Visual Studio 2005, **time_t** était un **`long int`** (32 bits) et ne pouvait donc pas être utilisé pour les dates antérieures au 3:14:07 19 janvier 2038, heure UTC. **time_t** est maintenant équivalent à **__time64_t** par défaut. Toutefois, le fait de définir **_USE_32BIT_TIME_T** remplace **time_t** par **__time32_t** et force de nombreuses fonctions time à appeler les versions qui acceptent la valeur **time_t** 32 bits. Pour plus d’informations, consultez la rubrique [Types standard](../c-runtime-library/standard-types.md) et les commentaires dans la documentation sur les fonctions time.
 
 ## <a name="see-also"></a>Voir aussi
 

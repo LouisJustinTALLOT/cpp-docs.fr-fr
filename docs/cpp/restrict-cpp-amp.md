@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: b3464b758c6b66cdbd5015ee4b7c9d11eb2209dd
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 31db9e8c6f18879e65596593c10a8b3413c5cea9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404936"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213266"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 Le spécificateur de restriction peut être appliqué aux déclarations de fonctions et lambda. Il applique des restrictions au code dans la fonction et sur le comportement de cette fonction dans les applications qui utilisent le runtime C++ Accelerated Massive Parallelism (C++ AMP).
 
 > [!NOTE]
-> Pour plus d’informations sur le mot clé **restrict** qui fait partie des attributs de classe de stockage **__declspec** , consultez [restreindre](../cpp/restrict.md).
+> Pour plus d’informations sur le **`restrict`** mot clé qui fait partie des **`__declspec`** attributs de classe de stockage, consultez [restreindre](../cpp/restrict.md).
 
-La clause **restrict** prend les formes suivantes :
+La **`restrict`** clause prend les formes suivantes :
 
 |Clause|Description|
 |------------|-----------------|
@@ -31,7 +31,7 @@ La clause **restrict** prend les formes suivantes :
 
 ## <a name="remarks"></a>Notes
 
-Le mot clé **restrict** est un mot clé contextuel. Les spécificateurs de restrictions, `cpu` et `amp`, ne sont pas des mots réservés. La liste des spécificateurs n'est pas extensible. Une fonction qui n’a pas de clause **restrict** est identique à une fonction qui possède la `restrict(cpu)` clause.
+Le **`restrict`** mot clé est un mot clé contextuel. Les spécificateurs de restrictions, `cpu` et `amp`, ne sont pas des mots réservés. La liste des spécificateurs n'est pas extensible. Une fonction qui n’a pas de **`restrict`** clause est identique à une fonction qui possède la `restrict(cpu)` clause.
 
 Une fonction qui possède la clause `restrict(amp)` présente les limitations suivantes :
 
@@ -39,7 +39,7 @@ Une fonction qui possède la clause `restrict(amp)` présente les limitations su
 
 - La fonction doit être en mesure d'être inline.
 
-- La fonction peut déclarer uniquement des variables **int**, **unsigned int**, **float**et **double** , ainsi que des classes et des structures qui contiennent uniquement ces types. **bool** est également autorisé, mais il doit être aligné sur 4 octets si vous l’utilisez dans un type composé.
+- La fonction peut déclarer uniquement des variables,, **`int`** **`unsigned int`** **`float`** et **`double`** , ainsi que des classes et des structures qui contiennent uniquement ces types. **`bool`** est également autorisé, mais il doit être aligné sur 4 octets si vous l’utilisez dans un type composé.
 
 - Les fonctions lambda ne peuvent pas capturer par référence et ne peuvent pas capturer les pointeurs.
 
@@ -61,19 +61,19 @@ Une fonction qui possède la clause `restrict(amp)` présente les limitations su
 
   - pointeurs désignant des pointeurs,
 
-  - instructions **goto** .
+  - **`goto`** publication.
 
   - instructions étiquetées,
 
-  - instructions **try**, **catch**ou **throw** .
+  - **`try`****`catch`** instructions, ou **`throw`** .
 
   - Variables globales.
 
   - variables statiques Utilisez à la place le [mot clé tile_static](../cpp/tile-static-keyword.md) .
 
-  - **dynamic_cast** casts.
+  - **`dynamic_cast`** casts.
 
-  - Opérateur **typeid** .
+  - **`typeid`** Opérateur.
 
   - déclarations asm,
 

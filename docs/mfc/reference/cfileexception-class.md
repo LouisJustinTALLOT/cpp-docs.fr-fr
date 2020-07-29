@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813520"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212447"
 ---
 # <a name="cfileexception-class"></a>CFileException, classe
 
@@ -67,7 +67,7 @@ class CFileException : public CException
 |[CFileException :: m_lOsError](#m_loserror)|Contient le numéro d’erreur du système d’exploitation associé.|
 |[CFileException :: m_strFileName](#m_strfilename)|Contient le nom du fichier pour cette exception.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La `CFileException` classe comprend des membres de données publics qui contiennent le code de cause portable et le numéro d’erreur spécifique au système d’exploitation. La classe fournit également des fonctions membres statiques pour lever des exceptions de fichier et pour retourner des codes de cause à la fois pour les erreurs du système d’exploitation et les erreurs Runtime C.
 
@@ -107,7 +107,7 @@ Raison spécifique au système d’exploitation de l’exception, si elle est di
 *lpszArchiveName*<br/>
 Pointe vers une chaîne contenant le nom de l' `CFile` objet à l’origine de l’exception.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 N’utilisez pas ce constructeur directement, mais appelez plutôt la fonction globale [AfxThrowFileException](exception-processing.md#afxthrowfileexception).
 
@@ -127,11 +127,11 @@ static int PASCAL ErrnoToException(int nErrno);
 *nErrno*<br/>
 Un code d’erreur entier, tel que défini dans le fichier include au moment de l’exécution. Manutention.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur énumérée qui correspond à une valeur d’erreur de la bibliothèque Runtime donnée.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez [CFileException :: m_cause](#m_cause) pour obtenir la liste des valeurs énumérées possibles.
 
@@ -161,11 +161,11 @@ dans Nombre maximal de caractères que la mémoire tampon spécifiée peut conte
 *pnHelpContext*<br/>
 [in, out] Pointeur vers un entier non signé qui reçoit l’ID de contexte d’aide. Si la condition `NULL` est, aucun ID n’est retourné.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 TRUE si la méthode a réussi ; Sinon, FALSe.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si la mémoire tampon spécifiée est trop petite, le message d’erreur est tronqué.
 
@@ -183,9 +183,9 @@ Contient des valeurs définies par un type énuméré `CFileException`.
 int m_cause;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-Ce membre de données est une variable publique de type **int**. Les énumérateurs et leurs significations sont les suivants :
+Ce membre de données est une variable publique de type **`int`** . Voici les énumérateurs et leurs significations :
 
 | Error | Valeur et signification |
 |--|--|
@@ -223,7 +223,7 @@ Contient le code d’erreur du système d’exploitation pour cette exception.
 LONG m_lOsError;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour obtenir la liste des codes d’erreur, consultez le manuel technique de votre système d’exploitation. Ce membre de données est une variable publique de type LONG.
 
@@ -248,7 +248,7 @@ static int PASCAL OsErrorToException(LONG lOsError);
 *lOsError*<br/>
 Code d’erreur spécifique au système d’exploitation.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur énumérée qui correspond à une valeur d’erreur du système d’exploitation donnée.
 

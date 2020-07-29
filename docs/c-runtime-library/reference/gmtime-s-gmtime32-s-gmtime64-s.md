@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916230"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213552"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
@@ -85,20 +85,20 @@ Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un 
 
 |*tmDest*|*sourceTime*|Renvoie|Valeur dans *tmDest*|
 |-----------|------------|------------|--------------------|
-|**NUL**|n'importe laquelle|**EINVAL**|Non modifiée.|
-|Not **null** (pointe vers une mémoire valide)|**NUL**|**EINVAL**|Tous les champs définis sur -1.|
+|**NULL**|n'importe laquelle|**EINVAL**|Non modifiée.|
+|Not **null** (pointe vers une mémoire valide)|**NULL**|**EINVAL**|Tous les champs définis sur -1.|
 |Non **null**|< 0|**EINVAL**|Tous les champs définis sur -1.|
 
 Concernant les deux premières conditions d’erreur, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_gmtime32_s** décompose la valeur *sourceTime* et la stocke dans une structure de type **TM**, définie dans Time. h. L’adresse de la structure est passée dans *tmDest*. La valeur de *sourceTime* est généralement obtenue à partir d’un appel à la fonction [Time](time-time32-time64.md) .
 
 > [!NOTE]
 > L’environnement cible doit tenter de déterminer si l’heure d’été est en vigueur. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis.
 
-Chacun des champs de structure est de type **int**, comme indiqué dans le tableau suivant.
+Chacun des champs de structure est de type **`int`** , comme indiqué dans le tableau suivant.
 
 |Champ|Description|
 |-|-|
@@ -122,7 +122,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|
-|**gmtime_s**, **_gmtime32_s** **_gmtime64_s**|\<time.h>|\<CTime> ou \<Time. h>|
+|**gmtime_s**, **_gmtime32_s** **_gmtime64_s**|\<time.h>|\<ctime> ou \<time.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4714
 ms.assetid: 22c7fd0c-899d-4e9b-95f3-725b2c49fb46
-ms.openlocfilehash: 8ea4212eaddf14546827728b31299063021a959f
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 286a9e6e12643d3dadd070e7c4cf4b2dd350c02c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74989636"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219857"
 ---
 # <a name="compiler-warning-level-4-c4714"></a>Avertissement du compilateur (niveau 4) C4714
 
-fonction’Function’marquée comme __forceinline non inline
+> fonction’Function’marquée comme __forceinline non inline
 
 La fonction donnée a été sélectionnée pour l’expansion Inline, mais le compilateur n’a pas effectué l’incorporation.
 
-Bien que `__forceinline` soit une indication plus forte du compilateur que `__inline`, l’incorporation est toujours effectuée à la discrétion du compilateur, mais aucune heuristique n’est utilisée pour déterminer les avantages de l’incorporation de cette fonction.
+Bien que **`__forceinline`** soit une indication plus forte du compilateur que **`__inline`** , l’incorporation est toujours effectuée à la discrétion du compilateur, mais aucune heuristique n’est utilisée pour déterminer les avantages de l’incorporation de cette fonction.
 
 Dans certains cas, le compilateur n’incorpore pas une fonction particulière pour des raisons mécaniques. Par exemple, le compilateur n’est pas inline :
 
-- Une fonction si elle entraîne la combinaison de SEH et C++ Eh.
+- Une fonction si elle entraînerait la combinaison de SEH et C++ EH.
 
 - Certaines fonctions avec des objets construits par copie passés par valeur quand-GX/EHs/EHa est activé.
 
@@ -33,7 +33,7 @@ Dans certains cas, le compilateur n’incorpore pas une fonction particulière p
 
 - Fonctions avec une liste d’arguments variable.
 
-- Une fonction avec une instruction tryC++ (gestion des exceptions).
+- Une fonction avec une **`try`** instruction (gestion des exceptions C++).
 
 L’exemple suivant génère l’C4714 :
 

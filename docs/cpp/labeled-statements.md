@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a10d071e46c79f49abf7e3eba498fae0487ccdc7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179690"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213357"
 ---
 # <a name="labeled-statements"></a>Instructions étiquetées
 
@@ -56,7 +56,7 @@ int main() {
 
 **Instruction goto**
 
-L’apparence d’une étiquette d' *identificateur* dans le programme source déclare une étiquette. Seule une instruction [goto](../cpp/goto-statement-cpp.md) peut transférer le contrôle à une étiquette d' *identificateur* . Le fragment de code suivant illustre l’utilisation de l’instruction **goto** et d’une étiquette d' *identificateur* :
+L’apparence d’une étiquette d' *identificateur* dans le programme source déclare une étiquette. Seule une instruction [goto](../cpp/goto-statement-cpp.md) peut transférer le contrôle à une étiquette d' *identificateur* . Le fragment de code suivant illustre l’utilisation de l' **`goto`** instruction et d’une étiquette d' *identificateur* :
 
 Une étiquette ne peut pas apparaître seule, mais doit toujours être attachée à une instruction. Si une étiquette doit apparaître seule, placez une instruction null après l'étiquette.
 
@@ -81,7 +81,7 @@ int main() {
 
 **Instruction case**
 
-Les étiquettes qui s’affichent après le mot clé **case** ne peuvent pas également apparaître en dehors d’une instruction **switch** . (Cette restriction s’applique également au mot clé **default** .) Le fragment de code suivant illustre l’utilisation correcte des étiquettes **case** :
+Les étiquettes qui s’affichent après le **`case`** mot clé ne peuvent pas également apparaître en dehors d’une **`switch`** instruction. (Cette restriction s’applique également au **`default`** mot clé.) Le fragment de code suivant illustre l’utilisation correcte des **`case`** étiquettes :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>Étiquettes dans l'instruction case
 
-Les étiquettes qui s’affichent après le mot clé **case** ne peuvent pas également apparaître en dehors d’une instruction **switch** . (Cette restriction s’applique également au mot clé **default** .) Le fragment de code suivant illustre l’utilisation correcte des étiquettes **case** :
+Les étiquettes qui s’affichent après le **`case`** mot clé ne peuvent pas également apparaître en dehors d’une **`switch`** instruction. (Cette restriction s’applique également au **`default`** mot clé.) Le fragment de code suivant illustre l’utilisation correcte des **`case`** étiquettes :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>Étiquettes dans l'instruction goto
 
-L’apparence d’une étiquette d' *identificateur* dans le programme source déclare une étiquette. Seule une instruction [goto](../cpp/goto-statement-cpp.md) peut transférer le contrôle à une étiquette d' *identificateur* . Le fragment de code suivant illustre l’utilisation de l’instruction **goto** et d’une étiquette d' *identificateur* :
+L’apparence d’une étiquette d' *identificateur* dans le programme source déclare une étiquette. Seule une instruction [goto](../cpp/goto-statement-cpp.md) peut transférer le contrôle à une étiquette d' *identificateur* . Le fragment de code suivant illustre l’utilisation de l' **`goto`** instruction et d’une étiquette d' *identificateur* :
 
 Une étiquette ne peut pas apparaître seule, mais doit toujours être attachée à une instruction. Si une étiquette doit apparaître seule, placez une instruction null après l'étiquette.
 
@@ -181,4 +181,4 @@ int main() {
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble des instructions C++](../cpp/overview-of-cpp-statements.md)<br/>
-[switch, instruction (C++)](../cpp/switch-statement-cpp.md)
+[Switch, instruction (C++)](../cpp/switch-statement-cpp.md)

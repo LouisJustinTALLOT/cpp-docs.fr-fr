@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 08c38419dd1ab8166095b1363ad69d816805614d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753335"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212525"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -155,142 +155,142 @@ class CDockablePane : public CPane
 
 |Nom|Description|
 |----------|-----------------|
-|[CDockablePane::CDockablePane](#cdockablepane)|Construit et initialise un objet `CDockablePane`.|
+|[CDockablePane :: CDockablePane](#cdockablepane)|Construit et initialise un objet `CDockablePane`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Attache une vitre à une autre vitre. Cela crée une vitre tabbed.|
-|[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Retourne la taille du rectangle de vitres.|
-|[CDockablePane::CanAcceptMiniFrame](#canacceptminiframe)|Détermine si le mini cadre spécifié peut être amarré à la vitre.|
-|[CDockablePane::CanAcceptPane](#canacceptpane)|Détermine si une autre vitre peut être amarré à la vitre actuelle.|
-|[CDockablePane:CanAutoHide](#canautohide)|Détermine si le volet prend en charge le mode de cache automatique. (Overrides [CBasePane::CanAutoHide](../../mfc/reference/cbasepane-class.md#canautohide).)|
-|[CDockablePane::CanBeAttached](#canbeattached)|Détermine si la vitre actuelle peut être amarré à une autre vitre.|
-|[CDockablePane::ConvertToTabbedDocument](#converttotabbeddocument)|Convertit une ou plusieurs vitres amarables en documents tabbed MDI.|
-|[CDockablePane::CopyState](#copystate)|Copie l’état d’un volet amarré.|
-|[CDockablePane::Créer](#create)|Crée le contrôle Windows et `CDockablePane` le fixe à l’objet.|
-|[CDockablePane::CreateDefaultPaneDivider](#createdefaultpanedivider)|Crée un diviseur par défaut pour la vitre car il est amarré à une fenêtre de cadre.|
-|[CDockablePane::CreateEx](#createex)|Crée le contrôle Windows et `CDockablePane` le fixe à l’objet.|
-|[CDockablePane::CreateTabbedPane](#createtabbedpane)|Crée une vitre tabbed de la vitre actuelle.|
-|[CDockablePane::DockPaneContainer](#dockpanecontainer)|Amarre un récipient à la vitre.|
-|[CDockablePane::DockPaneStandard](#dockpanestandard)|Amarre une vitre à l’aide de l’amarrage de contour (standard).|
-|`CDockablePane::DockToFrameWindow`|Utilisé en interne. Pour amarrer une vitre, utilisez [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) ou [CDockablePane::DockToWindow](#docktowindow).|
-|[CDockablePane::DockToRecentPos](#docktorecentpos)|Docks une vitre à sa position d’amarrage récente stockée.|
-|[CDockablePane::DockToWindow](#docktowindow)|Docks une vitre d’amarrage à une autre vitre d’amarrage.|
-|[CDockablePane::EnableAutohideAll](#enableautohideall)|Permet ou désactive le mode de cache automatique pour cette vitre avec d’autres vitres dans le récipient.|
-|[CDockablePane::EnableGripper](#enablegripper)|Affiche ou cache la légende (gripper).|
-|[CDockablePane::GetAHRestoredRect](#getahrestoredrect)|Spécifie la position de la vitre lorsqu’elle est visible en mode auto-cacher.|
-|[CDockablePane::GetAHSlideMode](#getahslidemode)|Récupère le mode de glissière de cache automatique pour la vitre.|
+|[CDockablePane :: AttachToTabWnd](#attachtotabwnd)|Joint un volet à un autre volet. Cela crée un volet à onglets.|
+|[CDockablePane :: CalcFixedLayout](#calcfixedlayout)|Retourne la taille du rectangle du volet.|
+|[CDockablePane :: CanAcceptMiniFrame](#canacceptminiframe)|Détermine si la mini-frame spécifiée peut être ancrée au volet.|
+|[CDockablePane :: CanAcceptPane](#canacceptpane)|Détermine si un autre volet peut être ancré au volet actuel.|
+|[CDockablePane :: CanAutoHide](#canautohide)|Détermine si le volet prend en charge le mode de masquage automatique. (Substitue [CBasePane :: CanAutoHide](../../mfc/reference/cbasepane-class.md#canautohide).)|
+|[CDockablePane :: CanBeAttached](#canbeattached)|Détermine si le volet actif peut être ancré à un autre volet.|
+|[CDockablePane :: ConvertToTabbedDocument](#converttotabbeddocument)|Convertit un ou plusieurs volets ancrables en documents avec onglet MDI.|
+|[CDockablePane :: CopyState](#copystate)|Copie l’état d’un volet Ancrable.|
+|[CDockablePane :: Create](#create)|Crée le contrôle Windows et l’attache à l' `CDockablePane` objet.|
+|[CDockablePane :: CreateDefaultPaneDivider](#createdefaultpanedivider)|Crée un séparateur par défaut pour le volet tel qu’il est ancré dans une fenêtre frame.|
+|[CDockablePane :: CreateEx](#createex)|Crée le contrôle Windows et l’attache à l' `CDockablePane` objet.|
+|[CDockablePane :: CreateTabbedPane](#createtabbedpane)|Crée un volet à onglets à partir du volet actuel.|
+|[CDockablePane ::D ockPaneContainer](#dockpanecontainer)|Ancre un conteneur au volet.|
+|[CDockablePane ::D ockPaneStandard](#dockpanestandard)|Ancre un volet à l’aide de l’ancrage plan (standard).|
+|`CDockablePane::DockToFrameWindow`|Utilisé en interne. Pour ancrer un volet, utilisez [CPane ::D ockpane](../../mfc/reference/cpane-class.md#dockpane) ou [CDockablePane ::D ocktowindow](#docktowindow).|
+|[CDockablePane ::D ockToRecentPos](#docktorecentpos)|Ancre un volet à sa position d’ancrage récente stockée.|
+|[CDockablePane ::D ockToWindow](#docktowindow)|Ancre un volet d’ancrage à un autre volet d’ancrage.|
+|[CDockablePane :: EnableAutohideAll](#enableautohideall)|Active ou désactive le mode de masquage automatique pour ce volet, ainsi que d’autres volets du conteneur.|
+|[CDockablePane :: EnableGripper](#enablegripper)|Affiche ou masque la légende (pince).|
+|[CDockablePane :: GetAHRestoredRect](#getahrestoredrect)|Spécifie la position du volet lorsqu’il est visible en mode de masquage automatique.|
+|[CDockablePane :: GetAHSlideMode](#getahslidemode)|Récupère le mode de masquage automatique du volet.|
 |`CDockablePane::GetAutoHideButton`|Utilisé en interne.|
 |`CDockablePane::GetAutoHideToolBar`|Utilisé en interne.|
-|[CDockablePane::GetCaptionHeight](#getcaptionheight)|Retourne la hauteur de la légende actuelle.|
-|[CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider)|Retourne le diviseur de vitre par défaut pour le contenant de la vitre.|
-|[CDockablePane::GetDockingStatus](#getdockingstatus)|Détermine la capacité d’amarrage d’une vitre en fonction de l’emplacement du pointeur fourni.|
-|[CDockablePane::GetDragSensitivity](#getdragsensitivity)|Retourne la sensibilité de traînée d’une vitre d’amarrage.|
-|[CDockablePane::GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)|Récupère le pourcentage d’espace qu’une vitre occupe dans son conteneur.|
-|[CDockablePane::GetTabArea](#gettabarea)|Récupère la zone de l’onglet pour la vitre.|
-|[CDockablePane::GetTabbedPaneRTC](#gettabbedpanertc)|Retourne les informations de classe de temps d’exécution au sujet d’une fenêtre tabbed qui est créée quand un autre volet s’amarre à la vitre actuelle.|
-|[CDockablePane::HasAutoHideMode](#hasautohidemode)|Précise si une vitre d’amarrage peut être commutée en mode auto-cacher.|
-|[CDockablePane::HitTest](#hittest)|Spécifie l’emplacement spécifique dans un volet où l’utilisateur clique sur une souris.|
+|[CDockablePane :: GetCaptionHeight](#getcaptionheight)|Retourne la hauteur de la légende actuelle.|
+|[CDockablePane :: GetDefaultPaneDivider](#getdefaultpanedivider)|Retourne le séparateur de volet par défaut pour le conteneur du volet.|
+|[CDockablePane :: GetDockingStatus](#getdockingstatus)|Détermine la possibilité d’ancrage d’un volet en fonction de l’emplacement du pointeur fourni.|
+|[CDockablePane :: GetDragSensitivity](#getdragsensitivity)|Retourne la sensibilité du glissement d’un volet d’ancrage.|
+|[CDockablePane :: GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)|Récupère le pourcentage d’espace occupé par un volet dans son conteneur.|
+|[CDockablePane :: GetTabArea](#gettabarea)|Récupère la zone d’onglet pour le volet.|
+|[CDockablePane :: GetTabbedPaneRTC](#gettabbedpanertc)|Retourne les informations de classe Runtime relatives à une fenêtre à onglets créée lorsqu’un autre volet s’ancre au volet actuel.|
+|[CDockablePane :: HasAutoHideMode](#hasautohidemode)|Spécifie si un volet d’ancrage peut être basculé en mode de masquage automatique.|
+|[CDockablePane :: HitTest](#hittest)|Spécifie l’emplacement spécifique dans un volet où l’utilisateur clique sur une souris.|
 |`CDockablePane::IsAccessibilityCompatible`|Utilisé en interne.|
-|[CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)|Indique si la vitre d’amarrage et toutes les autres vitres du conteneur peuvent être placées en mode auto-cacher.|
-|[CDockablePane::IsAutoHideMode](#isautohidemode)|Détermine si une vitre est en mode auto-cacher.|
+|[CDockablePane :: IsAutohideAllEnabled](#isautohideallenabled)|Indique si le volet d’ancrage et tous les autres volets du conteneur peuvent être placés en mode de masquage automatique.|
+|[CDockablePane :: IsAutoHideMode](#isautohidemode)|Détermine si un volet est en mode de masquage automatique.|
 |`CDockablePane::IsChangeState`|Utilisé en interne.|
-|[CDockablePane::IsDocked](#isdocked)|Détermine si la vitre actuelle est amarré.|
-|[CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode)|Détermine le comportement d’une vitre qui est en mode auto-cacher si `ShowPane`elle est montrée (ou cachée) en appelant .|
-|[CDockablePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Précise si la vitre se trouve dans une fenêtre à ossature multi-fenêtres.|
-|[CDockablePane::IsResizable](#isresizable)|Précise si le volet est resizable.|
-|[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Précise si les onglets sont situés en haut ou en bas de la vitre.|
-|[CDockablePane::IsTracked](#istracked)|Précise si un volet est traîné par l’utilisateur.|
-|[CDockablePane::IsVisible](#isvisible)|Détermine si la vitre actuelle est visible.|
-|[CDockablePane::LoadState](#loadstate)|Utilisé en interne.|
-|[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Appelé par le cadre lorsque le parent d’une vitre a changé. (Overrides [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|
-|[CDockablePane::OnAfterDockDeMiniFrame](#onafterdockfromminiframe)|Appelé par le cadre quand une barre d’amarrage flottante s’amarre à une fenêtre de cadre.|
-|[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Appelé par le cadre lorsque le parent de la vitre est sur le point de changer. (Overrides [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|
-|[CDockablePane::OnBeforeFloat](#onbeforefloat)|Appelé par le cadre quand une vitre est sur le point de flotter. (Overrides [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|
-|[CDockablePane::RemoveDeFefaultPaneDividier](#removefromdefaultpanedividier)|Le cadre appelle cette méthode lorsqu’un volet est désamarré.|
-|[CDockablePane::ReplacePane](#replacepane)|Remplace la vitre par une vitre spécifiée.|
-|[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|Le cadre appelle cette méthode comme un volet est déséialisé pour restaurer le diviseur de vitre par défaut.|
+|[CDockablePane :: IsDocked](#isdocked)|Détermine si le volet actif est ancré.|
+|[CDockablePane :: IsHideInAutoHideMode](#ishideinautohidemode)|Détermine le comportement d’un volet qui est en mode de masquage automatique s’il est affiché (ou masqué) en appelant `ShowPane` .|
+|[CDockablePane :: IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Spécifie si le volet se trouve dans une fenêtre frame à plusieurs volets.|
+|[CDockablePane :: IsResizable](#isresizable)|Spécifie si le volet est redimensionnable.|
+|[CDockablePane :: IsTabLocationBottom](#istablocationbottom)|Spécifie si les onglets sont situés en haut ou en bas du volet.|
+|[CDockablePane :: IsTracked](#istracked)|Spécifie si un volet est déplacé par l’utilisateur.|
+|[CDockablePane :: IsVisible](#isvisible)|Détermine si le volet actif est visible.|
+|[CDockablePane :: LoadState](#loadstate)|Utilisé en interne.|
+|[CDockablePane :: OnAfterChangeParent](#onafterchangeparent)|Appelé par le Framework lorsque le parent d’un volet a changé. (Substitue [CPane :: OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|
+|[CDockablePane :: OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Appelé par l’infrastructure quand une barre d’ancrage flottante s’ancre dans une fenêtre frame.|
+|[CDockablePane :: OnBeforeChangeParent](#onbeforechangeparent)|Appelé par le Framework lorsque le parent du volet est sur le paragraphe de la modification. (Substitue [CPane :: OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|
+|[CDockablePane :: OnBeforeFloat](#onbeforefloat)|Appelé par le Framework quand un volet est sur le paragraphe flottant. (Substitue [CPane :: OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|
+|[CDockablePane :: RemoveFromDefaultPaneDividier](#removefromdefaultpanedividier)|L’infrastructure appelle cette méthode lorsqu’un volet est déconnecté.|
+|[CDockablePane :: ReplacePane](#replacepane)|Remplace le volet par un volet spécifié.|
+|[CDockablePane :: RestoreDefaultPaneDivider](#restoredefaultpanedivider)|L’infrastructure appelle cette méthode lorsqu’un volet est désérialisé pour restaurer le séparateur de volet par défaut.|
 |`CDockablePane::SaveState`|Utilisé en interne.|
-|`CDockablePane::Serialize`|Sérialise la vitre. (Substitue `CBasePane::Serialize`.)|
-|[CDockablePane::SetAutoHideMode](#setautohidemode)|Bascule la vitre d’amarrage entre le mode visible et le mode auto-cacher.|
-|[CDockablePane::SetAutoHideParents](#setautohideparents)|Définit le bouton de cache automatique et la barre d’outils de cache automatique pour la vitre.|
+|`CDockablePane::Serialize`|Sérialise le volet. (Substitue `CBasePane::Serialize`.)|
+|[CDockablePane :: SetAutoHideMode](#setautohidemode)|Bascule le volet d’ancrage entre le mode visible et le mode de masquage automatique.|
+|[CDockablePane :: SetAutoHideParents](#setautohideparents)|Définit le bouton de masquage automatique et la barre d’outils de masquage automatique pour le volet.|
 |`CDockablePane::SetDefaultPaneDivider`|Utilisé en interne.|
-|[CDockablePane::SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|Définit le pourcentage d’espace qu’une vitre occupe dans son récipient.|
+|[CDockablePane :: SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|Définit le pourcentage d’espace occupé par un volet dans son conteneur.|
 |`CDockablePane::SetResizeMode`|Utilisé en interne.|
-|[CDockablePane::SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|Définit le diviseur de vitre par défaut restauré.|
-|[CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)|Définit les informations de classe de temps d’exécution pour une fenêtre tabbed qui est créée lorsque deux volets s’amarrent ensemble.|
-|[CDockablePane::ShowPane](#showpane)|Affiche ou cache une vitre.|
-|[CDockablePane::Slide](#slide)|Affiche ou cache une vitre avec une animation coulissante qui affiche uniquement lorsque la vitre est en mode auto-cacher.|
-|[CDockablePane::ToggleAutoHide](#toggleautohide)|Toggles mode auto-cacher. (Overrides [CPane::ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) .)|
-|[CDockablePane::UndockPane](#undockpane)|Débamarre une vitre de la fenêtre principale ou d’un contenant de fenêtre miniframe.|
-|`CDockablePane::UnSetAutoHideMode`|Utilisé en interne. Pour définir le mode auto-cacher, utilisez [CDockablePane::SetAutoHideMode](#setautohidemode)|
+|[CDockablePane :: SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|Définit le diviseur de volet par défaut restauré.|
+|[CDockablePane :: SetTabbedPaneRTC](#settabbedpanertc)|Définit les informations de classe Runtime pour une fenêtre à onglets qui est créée lorsque deux volets s’ancrent ensemble.|
+|[CDockablePane :: ShowPane](#showpane)|Affiche ou masque un volet.|
+|[CDockablePane :: Slide](#slide)|Affiche ou masque un volet avec une animation glissante qui s’affiche uniquement lorsque le volet est en mode de masquage automatique.|
+|[CDockablePane :: ToggleAutoHide](#toggleautohide)|Active/désactive le mode de masquage automatique. (Substitue [CPane :: ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) .)|
+|[CDockablePane :: UndockPane](#undockpane)|Détache un volet de la fenêtre frame principale ou d’un conteneur de fenêtre Miniframe.|
+|`CDockablePane::UnSetAutoHideMode`|Utilisé en interne. Pour définir le mode de masquage automatique, utilisez [CDockablePane :: SetAutoHideMode](#setautohidemode)|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Détermine si la vitre d’amarrage est cachée (en mode auto-cacher).|
-|[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Détermine quand une vitre d’amarrage automatique doit cesser de glisser.|
-|[CDockablePane::DrawCaption](#drawcaption)|Dessine la légende de la vitre d’amarrage (gripper).|
-|[CDockablePane::OnPressButtons](#onpressbuttons)|Appelé lorsque l’utilisateur appuie sur un bouton de légende autre que les boutons AFX_HTCLOSE et AFX_HTMAXBUTTON.|
-|[CDockablePane::OnSlide](#onslide)|Appelé par le cadre pour rendre l’effet de la glissière de cache automatique lorsque la vitre est montrée ou cachée.|
+|[CDockablePane :: CheckAutoHideCondition](#checkautohidecondition)|Détermine si le volet d’ancrage est masqué (en mode de masquage automatique).|
+|[CDockablePane :: CheckStopSlideCondition](#checkstopslidecondition)|Détermine quand un volet d’ancrage à masquage automatique doit arrêter le glissement.|
+|[CDockablePane ::D rawCaption](#drawcaption)|Dessine la légende du volet d’ancrage (pince).|
+|[CDockablePane :: OnPressButtons](#onpressbuttons)|Appelé lorsque l’utilisateur appuie sur un bouton de légende autre que les boutons AFX_HTCLOSE et AFX_HTMAXBUTTON.|
+|[CDockablePane :: OnSlide](#onslide)|Appelée par l’infrastructure pour restituer l’effet de masquage automatique lorsque le volet est affiché ou masqué.|
 
 ### <a name="data-members"></a>Données membres
 
 |Nom|Description|
 |----------|-----------------|
-|[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Précise si l’animation auto-cacher du volet amarré est désactivée.|
-|[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Détermine le comportement de la vitre lorsque la vitre est en mode auto-cacher.|
-|[CDockablePane::m_nSlideSteps](#m_nslidesteps)|Spécifie la vitesse d’animation de la vitre lorsqu’elle est affichée ou cachée en mode auto-cacher.|
+|[CDockablePane :: m_bDisableAnimation](#m_bdisableanimation)|Spécifie si l’animation à masquage automatique du volet Ancrable est désactivée.|
+|[CDockablePane :: m_bHideInAutoHideMode](#m_bhideinautohidemode)|Détermine le comportement du volet lorsque le volet est en mode de masquage automatique.|
+|[CDockablePane :: m_nSlideSteps](#m_nslidesteps)|Spécifie la vitesse d’animation du volet lorsqu’il est affiché ou masqué en mode de masquage automatique.|
 
 ## <a name="remarks"></a>Notes
 
-`CDockablePane`implémente la fonctionnalité suivante :
+`CDockablePane`implémente les fonctionnalités suivantes :
 
-- Amarrer une vitre à une fenêtre de cadre principale.
+- Ancrage d’un volet à une fenêtre frame principale.
 
-- Passer d’une vitre en mode auto-cacher.
+- Basculement d’un volet pour le mode de masquage automatique.
 
-- Attacher une vitre à une fenêtre tabbed.
+- Attachement d’un volet à une fenêtre à onglets.
 
-- Flottant une vitre dans une fenêtre de miniframe.
+- Flottante d’un volet dans une fenêtre Miniframe.
 
-- Amarrer une vitre à une autre vitre qui flotte dans une fenêtre de miniframe.
+- Ancrage d’un volet à un autre volet flottant dans une fenêtre Miniframe.
 
-- Resizing une vitre.
+- Redimensionnement d’un volet.
 
-- État de chargement et d’économie pour une vitre d’amarrage.
+- Chargement et enregistrement de l’état d’un volet d’ancrage.
 
     > [!NOTE]
-    >  Les informations d’état sont enregistrées au registre Windows.
+    >  Les informations d’État sont enregistrées dans le Registre Windows.
 
-- Création d’une vitre avec ou sans légende. La légende peut avoir une étiquette de texte et elle peut être remplie d’une couleur de gradient.
+- Création d’un volet avec ou sans légende. La légende peut avoir une étiquette de texte et peut être remplie avec une couleur de dégradé.
 
-- Glisser une vitre tout en affichant le contenu de la vitre
+- Glissement d’un volet pendant l’affichage du contenu du volet
 
-- Glisser une vitre tout en affichant un rectangle de traînée.
+- Glissement d’un volet tout en affichant un rectangle de glissement.
 
-Pour utiliser une vitre d’amarrage dans votre `CDockablePane` application, dérivez votre classe de volet de la classe. Soit intégrer l’objet dérivé dans l’objet de fenêtre de cadre principal ou dans un objet de fenêtre qui contrôle l’instance de votre vitre. Appelez ensuite le [CDockablePane: :Créer](#create) la méthode ou la méthode [CDockablePane::CreateEx](#createex) méthode lorsque vous traitez le message WM_CREATE dans la fenêtre du cadre principal. Enfin, configurez l’objet de pane en appelant [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane), ou [CDockablePane::AttachToTabWnd](#attachtotabwnd).
+Pour utiliser un volet d’ancrage dans votre application, dérivez votre classe de volet de la `CDockablePane` classe. Incorporez l’objet dérivé dans l’objet de fenêtre frame principal ou dans un objet Window qui contrôle l’instance de votre volet. Appelez ensuite la méthode [CDockablePane :: Create](#create) ou la méthode [CDockablePane :: CreateEx](#createex) lorsque vous traitez le message d’WM_CREATE dans la fenêtre frame principale. Enfin, configurez l’objet Pane en appelant [CBasePane :: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), [CBasePane ::D ockpane](../../mfc/reference/cbasepane-class.md#dockpane)ou [CDockablePane :: AttachToTabWnd](#attachtotabwnd).
 
 ## <a name="customization-tips"></a>Conseils de personnalisation
 
-Les conseils suivants `CDockablePane` s’appliquent aux objets :
+Les conseils suivants s’appliquent aux `CDockablePane` objets :
 
-- Si vous appelez [CDockablePane::AttachToTabWnd](#attachtotabwnd) pour deux vitres non plaquées et amarrées, un pointeur vers une fenêtre tabbed sera retourné dans le paramètre *ppTabbedControlBar.* Vous pouvez continuer à ajouter des onglets à la fenêtre tabbed en utilisant ce paramètre.
+- Si vous appelez [CDockablePane :: AttachToTabWnd](#attachtotabwnd) pour deux volets ancrables non-avec onglets, un pointeur vers une fenêtre à onglets est retourné dans le paramètre *ppTabbedControlBar* . Vous pouvez continuer à ajouter des onglets à la fenêtre à onglets à l’aide de ce paramètre.
 
-- Le type de volet tabbed qui est créé par [CDockablePane::AttachToTabWnd](#attachtotabwnd) est déterminé par l’objet `CDockablePane` dans le paramètre *pTabControlBarAttachTo.* Vous pouvez appeler [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) pour définir le genre `CDockablePane` de volet tabbed que le créera. Le type par défaut `dwTabbedStyle` est déterminé par le de [CDockablePane::Créer](#create) lorsque vous créez le `CDockablePane`. Si *dwTabbedStyle* est AFX_CBRS_OUTLOOK_TABS le type par défaut est [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md); si *dwTabbedStyle* est AFX_CBRS_REGULAR_TABS le type par défaut est [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md).
+- Le type de volet à onglets créé par [CDockablePane :: AttachToTabWnd](#attachtotabwnd) est déterminé par l' `CDockablePane` objet dans le paramètre *pTabControlBarAttachTo* . Vous pouvez appeler [CDockablePane :: SetTabbedPaneRTC](#settabbedpanertc) pour définir le type de volet à onglets que le `CDockablePane` crée. Le type par défaut est déterminé par le `dwTabbedStyle` de [CDockablePane :: Create](#create) lorsque vous créez pour la première fois `CDockablePane` . Si *dwTabbedStyle* est AFX_CBRS_OUTLOOK_TABS le type par défaut est [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md); Si *dwTabbedStyle* est AFX_CBRS_REGULAR_TABS le type par défaut est [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).
 
-- Si vous voulez amarrer un volet amarré à un autre, appelez la méthode [CDockablePane::DockToWindow.](#docktowindow) La vitre d’origine doit être amarré quelque part avant d’appeler cette méthode.
+- Si vous souhaitez ancrer un volet Ancrable à un autre, appelez la méthode [CDockablePane ::D ocktowindow](#docktowindow) . Le volet d’origine doit être ancré à un endroit avant d’appeler cette méthode.
 
-- Le membre variable [CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode) contrôle comment les vitres dockables se comportent en mode cache automatique lorsque vous appelez [CDockablePane::ShowPane](#showpane). Si cette variable de membre est réglée sur TRUE, les vitres amarables et leurs boutons de cache automatique seront cachés. Sinon, ils glisseront dans et hors.
+- La variable membre [CDockablePane :: m_bHideInAutoHideMode](#m_bhideinautohidemode) contrôle la manière dont les volets Ancrable se comportent en mode de masquage automatique lorsque vous appelez [CDockablePane :: ShowPane](#showpane). Si cette variable membre est définie sur TRUE, les volets ancrables et leurs boutons Masquer automatiquement sont masqués. Dans le cas contraire, ils s’affichent.
 
-- Vous pouvez désactiver l’animation auto-cacher en définissant le [CDockablePane:m_bDisableAnimation](#m_bdisableanimation) variable de membre à VRAI.
+- Vous pouvez désactiver l’animation à masquage automatique en affectant à la variable de membre [CDockablePane :: m_bDisableAnimation](#m_bdisableanimation) la valeur true.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `CDockablePane` configurer un objet `CDockablePane` en utilisant différentes méthodes dans la classe. L’exemple illustre comment activer la fonction de cache automatique pour le volet amarré, activer la légende ou la pince, activer le mode auto-cacher, montrer la vitre et animer une vitre en mode auto-cacher. Cet extrait de code fait partie de [l’échantillon Visual Studio Demo](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment configurer un `CDockablePane` objet à l’aide de diverses méthodes de la `CDockablePane` classe. L’exemple montre comment activer la fonctionnalité Masquer automatiquement tout pour le volet Ancrable, activer la légende ou la pince, activer le mode de masquage automatique, afficher le volet et animer un volet qui est en mode de masquage automatique. Cet extrait de code fait partie de l' [exemple de démonstration Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]
@@ -311,11 +311,11 @@ L’exemple suivant montre comment `CDockablePane` configurer un objet `CDockabl
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxDockablePane.h
+**En-tête :** afxDockablePane. h
 
-## <a name="cdockablepaneattachtotabwnd"></a><a name="attachtotabwnd"></a>CDockablePane::AttachToTabWnd
+## <a name="cdockablepaneattachtotabwnd"></a><a name="attachtotabwnd"></a>CDockablePane :: AttachToTabWnd
 
-Attache la vitre actuelle à une vitre cible, créant une vitre tabbed.
+Joint le volet actif à un volet cible, en créant un volet à onglets.
 
 ```
 virtual CDockablePane* AttachToTabWnd(
@@ -328,46 +328,46 @@ virtual CDockablePane* AttachToTabWnd(
 ### <a name="parameters"></a>Paramètres
 
 *pTabControlBarAttachTo*<br/>
-[dans, dehors] Spécifie la vitre cible à laquelle la vitre actuelle se fixe. Le volet cible doit être un volet amarré.
+[in, out] Spécifie le volet cible auquel le volet actuel est attaché. Le volet cible doit être un volet Ancrable.
 
 *dockMethod*<br/>
-[dans] Spécifie la méthode d’amarrage.
+dans Spécifie la méthode d’ancrage.
 
-*bSetActive (en anglais)*<br/>
-[dans] VRAI pour activer la vitre tabbed après l’opération de fixation; autrement, FALSE.
+*bSetActive*<br/>
+dans TRUE pour activer le volet à onglets après l’opération d’attachement ; Sinon, FALSe.
 
 *ppTabbedControlBar*<br/>
-[out] Contient la vitre tabbed qui résulte de l’opération de fixation.
+à Contient le volet à onglets qui résulte de l’opération d’attachement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur à la vitre actuelle, si ce n’est pas une vitre tabbed; sinon un pointeur à la vitre tabbed qui résulte de l’opération d’attachement. La valeur de retour est NULL si le volet actuel ne peut pas être attaché, ou si une erreur se produit.
+Pointeur vers le volet actif, s’il ne s’agit pas d’un volet à onglets ; Sinon, un pointeur vers le volet à onglets qui résulte de l’opération d’attachement. La valeur de retour est NULL si le volet actif ne peut pas être attaché ou si une erreur se produit.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’une vitre amarable se fixe à une autre vitre à l’aide de cette méthode, ce qui suit :
+Quand un volet Ancrable est attaché à un autre volet à l’aide de cette méthode, les éléments suivants se produisent :
 
-1. Le cadre vérifie si le panoramique cible *pTabControlBarAttachTo* est un volet d’amarrage régulier ou s’il est dérivé de [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md).
+1. L’infrastructure vérifie si le volet cible *pTabControlBarAttachTo* est un volet d’ancrage normal ou s’il est dérivé de [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md).
 
-1. Si la vitre cible est une vitre tabbed, le cadre ajoute la vitre actuelle à elle comme un onglet.
+1. Si le volet cible est un volet à onglets, l’infrastructure lui ajoute le volet actuel sous la forme d’un onglet.
 
-1. Si la vitre cible est une vitre d’amarrage régulière, le cadre crée une vitre tabbed.
+1. Si le volet cible est un volet d’ancrage normal, le Framework crée un volet à onglets.
 
-   - Le cadre `pTabControlBarAttachTo->CreateTabbedPane`appelle . Le style de la nouvelle vitre `m_pTabbedControlBarRTC` tabbed dépend du membre. Par défaut, ce membre est réglé sur la classe runtime de [CTabbedPane](../../mfc/reference/ctabbedpane-class.md). Si vous passez le style AFX_CBRS_OUTLOOK_TABS comme paramètre *dwTabbedStyle* au [CDockablePane::Créer](#create) la méthode, l’objet de classe runtime est réglé à la classe runtime de [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md). Vous pouvez changer ce membre à tout moment pour changer le style de la nouvelle vitre.
+   - Le Framework appelle `pTabControlBarAttachTo->CreateTabbedPane` . Le style du nouveau volet à onglets dépend du `m_pTabbedControlBarRTC` membre. Par défaut, ce membre est défini sur la classe d’exécution de [CTabbedPane](../../mfc/reference/ctabbedpane-class.md). Si vous transmettez le style AFX_CBRS_OUTLOOK_TABS en tant que paramètre *dwTabbedStyle* à la méthode [CDockablePane :: Create](#create) , l’objet de la classe Runtime est défini sur la classe Runtime de [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md). Vous pouvez modifier ce membre à tout moment pour modifier le style du nouveau volet.
 
-   - Lorsque cette méthode crée une vitre tabbed, le cadre remplace le pointeur à *pTabControlBarAttachTo* (si la vitre est amarrée ou flottant dans une fenêtre multi-miniframe) avec un pointeur à la nouvelle vitre tabbed.
+   - Quand cette méthode crée un volet à onglets, le Framework remplace le pointeur vers *pTabControlBarAttachTo* (si le volet est ancré ou flottant dans une fenêtre à plusieurs Miniframe) avec un pointeur vers le nouveau volet à onglets.
 
-   - Le cadre ajoute le *pTabControlBarAttachTo* volet à la vitre tabbed comme premier onglet. Le cadre ajoute ensuite la vitre actuelle comme deuxième onglet.
+   - L’infrastructure ajoute le volet *pTabControlBarAttachTo* au volet à onglets sous la forme du premier onglet. Le Framework ajoute ensuite le volet actuel sous la forme d’un deuxième onglet.
 
-1. Si le volet actuel `CBaseTabbedPane`est dérivé, tous ses onglets sont déplacés à *pTabControlBarAttachTo* et la vitre actuelle est détruite. Par conséquent, soyez prudent lorsque vous appelez cette méthode, parce qu’un pointeur à la vitre actuelle peut être invalide lorsque la méthode revient.
+1. Si le volet actif est dérivé de `CBaseTabbedPane` , tous ses onglets sont déplacés vers *pTabControlBarAttachTo* et le volet actuel est détruit. Par conséquent, soyez prudent lorsque vous appelez cette méthode, car un pointeur vers le volet actif n’est peut-être pas valide lorsque la méthode est retournée.
 
-Si vous attachez une vitre à une autre `dockMethod` lors de la construction d’une disposition d’amarrage, définissez-DM_SHOW.
+Si vous attachez un volet à un autre lors de la création d’une disposition d’ancrage, définissez `dockMethod` sur DM_SHOW.
 
-Vous devez amarrer la première vitre avant d’y attacher une autre vitre.
+Vous devez ancrer le premier volet avant d’y joindre un autre volet.
 
-## <a name="cdockablepanecalcfixedlayout"></a><a name="calcfixedlayout"></a>CDockablePane::CalcFixedLayout
+## <a name="cdockablepanecalcfixedlayout"></a><a name="calcfixedlayout"></a>CDockablePane :: CalcFixedLayout
 
-Retourne la taille du rectangle de vitres.
+Retourne la taille du rectangle du volet.
 
 ```
 virtual CSize CalcFixedLayout(
@@ -380,16 +380,16 @@ virtual CSize CalcFixedLayout(
 *bStretch*<br/>
 [in] Non utilisé.
 
-*bHorz (en)*<br/>
+*bHorz*<br/>
 [in] Non utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `CSize` objet qui contient la taille du rectangle de vitres.
+`CSize`Objet qui contient la taille du rectangle du volet.
 
-## <a name="cdockablepanecanacceptminiframe"></a><a name="canacceptminiframe"></a>CDockablePane::CanAcceptMiniFrame
+## <a name="cdockablepanecanacceptminiframe"></a><a name="canacceptminiframe"></a>CDockablePane :: CanAcceptMiniFrame
 
-Détermine si le mini-cadre spécifié peut être amarré à la vitre.
+Détermine si le mini-frame spécifié peut être ancré dans le volet.
 
 ```
 virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
@@ -398,15 +398,15 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ### <a name="parameters"></a>Paramètres
 
 *pMiniFrame*<br/>
-[dans] Pointeur `CPaneFrameWnd` vers un objet.
+dans Pointeur vers un `CPaneFrameWnd` objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si *pMiniFrame* peut être amarré à la vitre; autrement, FALSE.
+TRUE si *pMiniFrame* peut être ancré au volet ; Sinon, FALSe.
 
-## <a name="cdockablepanecanacceptpane"></a><a name="canacceptpane"></a>CDockablePane::CanAcceptPane
+## <a name="cdockablepanecanacceptpane"></a><a name="canacceptpane"></a>CDockablePane :: CanAcceptPane
 
-Détermine si une autre vitre peut être amarré à la vitre actuelle.
+Détermine si un autre volet peut être ancré au volet actuel.
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -414,24 +414,24 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*pBar (pBar)*<br/>
-[dans] Spécifie la vitre pour s’amarrer à la vitre actuelle.
+*pBar*<br/>
+dans Spécifie le volet à ancrer au volet actif.
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si la vitre spécifiée peut être amarré à cette vitre; autrement, FALSE.
+TRUE si le volet spécifié peut être ancré à ce volet ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Le cadre appelle cette méthode avant qu’une vitre ne soit amarré à la vitre actuelle.
+L’infrastructure appelle cette méthode avant qu’un volet ne soit ancré au volet actuel.
 
-Remplacer cette fonction dans une classe dérivée pour activer ou désactiver l’amarrage à une vitre spécifique.
+Substituez cette fonction dans une classe dérivée pour activer ou désactiver l’ancrage à un volet spécifique.
 
-Par défaut, cette méthode renvoie TRUE si *pBar* ou son parent est de type `CDockablePane`.
+Par défaut, cette méthode retourne la valeur TRUE si *pBar* ou son parent est de type `CDockablePane` .
 
-## <a name="cdockablepanecanautohide"></a><a name="canautohide"></a>CDockablePane:CanAutoHide
+## <a name="cdockablepanecanautohide"></a><a name="canautohide"></a>CDockablePane :: CanAutoHide
 
-Détermine si la vitre peut se cacher automatiquement.
+Détermine si le volet peut se Masquer automatiquement.
 
 ```
 virtual BOOL CanAutoHide() const;
@@ -439,21 +439,21 @@ virtual BOOL CanAutoHide() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si la vitre peut se cacher automatiquement; autrement, FALSE.
+TRUE si le volet peut être masqué automatiquement ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-`CDockablePane::CanAutoHide`revient FALSE dans l’une des situations suivantes :
+`CDockablePane::CanAutoHide`retourne la valeur FALSe dans l’une des situations suivantes :
 
-- La vitre n’a pas de parent.
+- Le volet n’a pas de parent.
 
-- Le gestionnaire d’amarrage ne permet pas aux vitres de se cacher automatiquement.
+- Le gestionnaire d’ancrage n’autorise pas le masquage automatique des volets.
 
-- La vitre n’est pas amarré.
+- Le volet n’est pas ancré.
 
-## <a name="cdockablepanecanbeattached"></a><a name="canbeattached"></a>CDockablePane::CanBeAttached
+## <a name="cdockablepanecanbeattached"></a><a name="canbeattached"></a>CDockablePane :: CanBeAttached
 
-Détermine si la vitre actuelle peut être amarré à une autre vitre.
+Détermine si le volet actif peut être ancré à un autre volet.
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -461,15 +461,15 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si la vitre amarrée peut être amarrée à une autre vitre ou à la fenêtre principale du cadre; autrement, FALSE.
+TRUE si le volet Ancrable peut être ancré à un autre volet ou à la fenêtre frame principale ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, cette méthode renvoie toujours TRUE. Remplacer cette méthode dans une classe dérivée pour activer ou désactiver l’amarrage sans appeler [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Par défaut, cette méthode retourne toujours TRUE. Substituez cette méthode dans une classe dérivée pour activer ou désactiver l’ancrage sans appeler [CBasePane :: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-## <a name="cdockablepanecdockablepane"></a><a name="cdockablepane"></a>CDockablePane::CDockablePane
+## <a name="cdockablepanecdockablepane"></a><a name="cdockablepane"></a>CDockablePane :: CDockablePane
 
-Construit et initialise un objet [CDockablePane.](../../mfc/reference/cdockablepane-class.md)
+Construit et initialise un objet [CDockablePane](../../mfc/reference/cdockablepane-class.md) .
 
 ```
 CDockablePane();
@@ -477,11 +477,11 @@ CDockablePane();
 
 ### <a name="remarks"></a>Notes
 
-Après avoir construit un objet de vitres amarable, appelez [CDockablePane: :Créer](#create) ou [CDockablePane:CreateEx](#createex) pour le créer.
+Après avoir construit un objet de volet Ancrable, appelez [CDockablePane :: Create](#create) ou [CDockablePane :: CreateEx](#createex) pour le créer.
 
-## <a name="cdockablepaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CDockablePane::ConvertToTabbedDocument
+## <a name="cdockablepaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CDockablePane :: ConvertToTabbedDocument
 
-Convertit une ou plusieurs vitres amarables en documents tabbed MDI.
+Convertit un ou plusieurs volets ancrables en documents avec onglet MDI.
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -490,11 +490,11 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bActiveTabOnly*<br/>
-[dans] Lorsque vous `CTabbedPane`convertissez un , spécifiez VRAI pour convertir uniquement l’onglet actif. Spécifiez FALSE pour convertir tous les onglets dans la vitre.
+dans Lorsque vous convertissez un `CTabbedPane` , spécifiez true pour convertir uniquement l’onglet actif. spécifiez false pour convertir tous les onglets dans le volet.
 
-## <a name="cdockablepanecheckautohidecondition"></a><a name="checkautohidecondition"></a>CDockablePane::CheckAutoHideCondition
+## <a name="cdockablepanecheckautohidecondition"></a><a name="checkautohidecondition"></a>CDockablePane :: CheckAutoHideCondition
 
-Détermine si la vitre d’amarrage est cachée (également connue sous le nom de mode autohide).
+Détermine si le volet d’ancrage est masqué (également appelé mode de masquage automatique).
 
 ```
 virtual BOOL CheckAutoHideCondition();
@@ -502,17 +502,17 @@ virtual BOOL CheckAutoHideCondition();
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si l’état de la peau est remplie; autrement, FALSE.
+TRUE si la condition de masquage est remplie ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Le cadre utilise une minuterie pour vérifier périodiquement s’il faut cacher un volet autohide à quai. La méthode retourne VRAI lorsque le volet n’est pas actif, le volet n’est pas resized, et le pointeur de la souris n’est pas sur la vitre.
+L’infrastructure utilise un minuteur pour vérifier régulièrement s’il faut masquer un volet Ancrable masqué automatiquement. La méthode retourne la valeur TRUE lorsque le volet n’est pas actif, que le volet n’est pas redimensionné et que le pointeur de la souris ne se trouve pas sur le volet.
 
-Si toutes les conditions précédentes sont remplies, le cadre appelle [CDockablePane::Slide](#slide) pour cacher la vitre.
+Si toutes les conditions précédentes sont remplies, le Framework appelle [CDockablePane :: Slide](#slide) pour masquer le volet.
 
-## <a name="cdockablepanecheckstopslidecondition"></a><a name="checkstopslidecondition"></a>CDockablePane::CheckStopSlideCondition
+## <a name="cdockablepanecheckstopslidecondition"></a><a name="checkstopslidecondition"></a>CDockablePane :: CheckStopSlideCondition
 
-Détermine quand une vitre d’amarrage automatique doit cesser de glisser.
+Détermine quand un volet d’ancrage de masquage automatique doit arrêter le glissement.
 
 ```
 virtual BOOL CheckStopSlideCondition(BOOL bDirection);
@@ -520,22 +520,22 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 
 ### <a name="parameters"></a>Paramètres
 
-*bDirection (en)*<br/>
-[dans] VRAI si la vitre est visible; FALSE si la vitre est cachée.
+*bDirection*<br/>
+dans TRUE si le volet est visible ; FALSe si le volet est masqué.
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si l’état d’arrêt est atteint; autrement, FALSE.
+TRUE si la condition d’arrêt est remplie ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un volet amarré est réglé en mode autohide, le cadre utilise des effets coulissants pour afficher ou cacher la vitre. Le cadre appelle cette fonction lorsque la vitre glisse. `CheckStopSlideCondition`retourne VRAI lorsque la vitre est entièrement visible ou lorsqu’elle est entièrement cachée.
+Quand un volet Ancrable est défini sur le mode de masquage automatique, le Framework utilise des effets coulissants pour afficher ou masquer le volet. L’infrastructure appelle cette fonction lorsque le volet glisse. `CheckStopSlideCondition`retourne la valeur TRUE lorsque le volet est entièrement visible ou lorsqu’il est entièrement masqué.
 
-Remplacer cette méthode dans une classe dérivée pour implémenter des effets d’autohide personnalisés.
+Substituez cette méthode dans une classe dérivée pour implémenter des effets de masquage automatique personnalisés.
 
-## <a name="cdockablepanecopystate"></a><a name="copystate"></a>CDockablePane::CopyState
+## <a name="cdockablepanecopystate"></a><a name="copystate"></a>CDockablePane :: CopyState
 
-Copie l’état d’un volet amarré.
+Copie l’état d’un volet Ancrable.
 
 ```
 virtual void CopyState(CDockablePane* pOrgBar);
@@ -544,25 +544,25 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ### <a name="parameters"></a>Paramètres
 
 *pOrgBar*<br/>
-[dans] Un pointeur à une vitre amarable.
+dans Pointeur vers un volet Ancrable.
 
 ### <a name="remarks"></a>Notes
 
-`CDockablePane::CopyState`copie l’état de *pOrgBar* à la vitre actuelle en appelant les méthodes suivantes :
+`CDockablePane::CopyState`copie l’état de *pOrgBar* dans le volet actuel en appelant les méthodes suivantes :
 
-- [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)
+- [CPane :: CopyState](../../mfc/reference/cpane-class.md#copystate)
 
-- [CDockablePane::GetAHRestoredRect](#getahrestoredrect)
+- [CDockablePane :: GetAHRestoredRect](#getahrestoredrect)
 
-- [CDockablePane::GetAHSlideMode](#getahslidemode)
+- [CDockablePane :: GetAHSlideMode](#getahslidemode)
 
-- [CDockablePane::GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)
+- [CDockablePane :: GetLastPercentInPaneContainer](#getlastpercentinpanecontainer)
 
-- [CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)
+- [CDockablePane :: IsAutohideAllEnabled](#isautohideallenabled)
 
-## <a name="cdockablepanecreate"></a><a name="create"></a>CDockablePane::Créer
+## <a name="cdockablepanecreate"></a><a name="create"></a>CDockablePane :: Create
 
-Crée le contrôle Windows et le fixe à [l’objet CDockablePane.](../../mfc/reference/cdockablepane-class.md)
+Crée le contrôle Windows et l’attache à l’objet [CDockablePane](../../mfc/reference/cdockablepane-class.md) .
 
 ```
 virtual BOOL Create(
@@ -590,53 +590,53 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Paramètres
 
 *lpszCaption*<br/>
-[dans] Spécifie le nom de la fenêtre.
+dans Spécifie le nom de la fenêtre.
 
 *pParentWnd*<br/>
-[dans, dehors] Spécifie la fenêtre parente.
+[in, out] Spécifie la fenêtre parente.
 
-*Rect*<br/>
-[dans] Spécifie la taille et la position de la fenêtre, dans les coordonnées des clients de *pParentWnd*.
+*rectangulaire*<br/>
+dans Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.
 
-*bHasGripper (En anglais)*<br/>
-[dans] VRAI pour créer la vitre avec une légende; autrement, FALSE.
+*bHasGripper*<br/>
+dans TRUE pour créer le volet avec une légende ; Sinon, FALSe.
 
 *nID*<br/>
-[dans] Spécifie l’identité de la fenêtre de l’enfant. Cette valeur doit être unique si vous voulez enregistrer l’état d’amarrage pour cette vitre d’amarrage.
+dans Spécifie l’ID de la fenêtre enfant. Cette valeur doit être unique si vous souhaitez enregistrer l’état d’ancrage pour ce volet d’ancrage.
 
-*dwStyle (en)*<br/>
-[dans] Spécifie les attributs de style de fenêtre.
+*dwStyle*<br/>
+dans Spécifie les attributs de style de fenêtre.
 
-*dwTabbedStyle (en)*<br/>
-[dans] Spécifie le style tabbed d’une fenêtre tabbed qui est créé lorsque l’utilisateur traîne une vitre sur la légende de cette vitre.
+*dwTabbedStyle*<br/>
+dans Spécifie le style à onglets d’une fenêtre à onglets qui est créée lorsque l’utilisateur fait glisser un volet sur la légende de ce volet.
 
-*dwControlBarStyle (en)*<br/>
-[dans] Spécifie des attributs de style supplémentaires.
+*dwControlBarStyle*<br/>
+dans Spécifie des attributs de style supplémentaires.
 
 *pContext*<br/>
-[dans, dehors] Spécifie le contexte de création de la fenêtre.
+[in, out] Spécifie le contexte de création de la fenêtre.
 
-*lpszWindowName (en)*<br/>
-[dans] Spécifie le nom de la fenêtre.
+*lpszWindowName*<br/>
+dans Spécifie le nom de la fenêtre.
 
-*tailleDefault*<br/>
-[dans] Précise la taille de la fenêtre.
+*sizeDefault*<br/>
+dans Spécifie la taille de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le volet amarable est créé avec succès; autrement, FALSE.
+TRUE si le volet Ancrable est correctement créé ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Crée une vitre Windows et la `CDockablePane` fixe à l’objet.
+Crée un volet Windows et l’attache à l' `CDockablePane` objet.
 
-Si le style de fenêtre *dwStyle* a le drapeau CBRS_FLOAT_MULTI, la fenêtre miniframe peut flotter avec d’autres vitres dans la fenêtre miniframe. Par défaut, les vitres d’amarrage ne peuvent flotter que individuellement.
+Si le style de fenêtre *dwStyle* contient l’indicateur CBRS_FLOAT_MULTI, la fenêtre Miniframe peut flotter avec d’autres volets dans la fenêtre Miniframe. Par défaut, les volets d’ancrage peuvent uniquement flotter individuellement.
 
-Si le paramètre *dwTabbedStyle* a le drapeau AFX_CBRS_OUTLOOK_TABS spécifié, le volet crée des vitres tabbed de style Outlook lorsqu’un autre volet est fixé à ce volet à l’aide de la méthode [CDockablePane::AttachToTabWnd](#attachtotabwnd) méthode. Par défaut, les vitres amarrées créent des vitres tabbed régulières de type [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).
+Si l’indicateur AFX_CBRS_OUTLOOK_TABS est spécifié pour le paramètre *dwTabbedStyle* , le volet crée des volets à onglets de style Outlook lorsqu’un autre volet est attaché à ce volet à l’aide de la méthode [CDockablePane :: AttachToTabWnd](#attachtotabwnd) . Par défaut, les volets ancrables créent des volets à onglets normaux de type [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).
 
-## <a name="cdockablepanecreatedefaultpanedivider"></a><a name="createdefaultpanedivider"></a>CDockablePane::CreateDefaultPaneDivider
+## <a name="cdockablepanecreatedefaultpanedivider"></a><a name="createdefaultpanedivider"></a>CDockablePane :: CreateDefaultPaneDivider
 
-Crée un diviseur par défaut pour la vitre car il est amarré à une fenêtre de cadre.
+Crée un séparateur par défaut pour le volet tel qu’il est ancré dans une fenêtre frame.
 
 ```
 static CPaneDivider* __stdcall CreateDefaultPaneDivider(
@@ -648,32 +648,32 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ### <a name="parameters"></a>Paramètres
 
 *dwAlignment*<br/>
-[dans] Spécifie le côté du cadre principal auquel la vitre est amarré. Si *dwAlignment* contient le drapeau CBRS_ALIGN_LEFT ou CBRS_ALIGN_RIGHT, cette`CPaneDivider::SS_VERT`méthode crée un diviseur vertical ( ) ; sinon, cette méthode crée`CPaneDivider::SS_HORZ`un diviseur horizontal ( ) .
+dans Spécifie le côté du frame principal auquel le volet est ancré. Si *dwAlignment* contient l’indicateur CBRS_ALIGN_LEFT ou CBRS_ALIGN_RIGHT, cette méthode crée un `CPaneDivider::SS_VERT` diviseur vertical (); sinon, cette méthode crée un `CPaneDivider::SS_HORZ` diviseur horizontal ().
 
 *pParent*<br/>
-[dans] Pointeur sur le cadre parent.
+dans Pointeur vers le frame parent.
 
-*pSliderRTC (en)*<br/>
+*pSliderRTC*<br/>
 [in] Non utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Cette méthode renvoie un pointeur au diviseur nouvellement créé, ou NULL si la création de diviseur échoue.
+Cette méthode retourne un pointeur vers le séparateur qui vient d’être créé, ou NULL si la création du séparateur échoue.
 
 ### <a name="remarks"></a>Notes
 
-*dwAlignment* peut être l’une des valeurs suivantes:
+*dwAlignment* peut prendre l’une des valeurs suivantes :
 
 |Valeur|Description|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|La vitre est amarrée au sommet de la zone cliente d’une fenêtre de cadre.|
-|CBRS_ALIGN_BOTTOM|La vitre est amarrée au bas de la zone cliente d’une fenêtre de cadre.|
-|CBRS_ALIGN_LEFT|La vitre est amarrée sur le côté gauche de la zone cliente d’une fenêtre de cadre.|
-|CBRS_ALIGN_RIGHT|La vitre est amarrée sur le côté droit de la zone cliente d’une fenêtre de cadre.|
+|CBRS_ALIGN_TOP|Le volet est ancré en haut de la zone cliente d’une fenêtre frame.|
+|CBRS_ALIGN_BOTTOM|Le volet est ancré au bas de la zone cliente d’une fenêtre frame.|
+|CBRS_ALIGN_LEFT|Le volet est ancré sur le côté gauche de la zone cliente d’une fenêtre frame.|
+|CBRS_ALIGN_RIGHT|Le volet est ancré à droite de la zone cliente d’une fenêtre frame.|
 
-## <a name="cdockablepanecreateex"></a><a name="createex"></a>CDockablePane::CreateEx
+## <a name="cdockablepanecreateex"></a><a name="createex"></a>CDockablePane :: CreateEx
 
-Crée le contrôle Windows et le fixe à [l’objet CDockablePane.](../../mfc/reference/cdockablepane-class.md)
+Crée le contrôle Windows et l’attache à l’objet [CDockablePane](../../mfc/reference/cdockablepane-class.md) .
 
 ```
 virtual BOOL CreateEx(
@@ -692,50 +692,50 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Paramètres
 
 *dwStyleEx*<br/>
-[dans] Spécifie les attributs de style étendu pour la nouvelle fenêtre.
+dans Spécifie les attributs de style étendus pour la nouvelle fenêtre.
 
 *lpszCaption*<br/>
-[dans] Spécifie le nom de la fenêtre.
+dans Spécifie le nom de la fenêtre.
 
 *pParentWnd*<br/>
-[dans, dehors] Spécifie la fenêtre parente.
+[in, out] Spécifie la fenêtre parente.
 
-*Rect*<br/>
-[dans] Spécifie la taille et la position de la fenêtre, dans les coordonnées des clients de *pParentWnd*.
+*rectangulaire*<br/>
+dans Spécifie la taille et la position de la fenêtre, en coordonnées clientes de *pParentWnd*.
 
-*bHasGripper (En anglais)*<br/>
-[dans] VRAI pour créer la vitre avec une légende; autrement, FALSE.
+*bHasGripper*<br/>
+dans TRUE pour créer le volet avec une légende ; Sinon, FALSe.
 
 *nID*<br/>
-[dans] Spécifie l’identité de la fenêtre de l’enfant. Cette valeur doit être unique si vous voulez sauver l’état d’amarrage pour cette vitre d’amarrage.
+dans Spécifie l’ID de la fenêtre enfant. Cette valeur doit être unique si vous souhaitez enregistrer l’état d’ancrage pour ce volet d’ancrage.
 
-*dwStyle (en)*<br/>
-[dans] Spécifie les attributs de style de fenêtre.
+*dwStyle*<br/>
+dans Spécifie les attributs de style de fenêtre.
 
-*dwTabbedStyle (en)*<br/>
-[dans] Spécifie le style tabbed d’une fenêtre tabbed qui est créé lorsque l’utilisateur traîne une vitre sur la légende de cette vitre.
+*dwTabbedStyle*<br/>
+dans Spécifie le style à onglets d’une fenêtre à onglets qui est créée lorsque l’utilisateur fait glisser un volet sur la légende de ce volet.
 
-*dwControlBarStyle (en)*<br/>
-[dans] Spécifie les attributs de style supplémentaires.
+*dwControlBarStyle*<br/>
+dans Spécifie les attributs de style supplémentaires.
 
 *pContext*<br/>
-[dans, dehors] Spécifie le contexte de création de la fenêtre.
+[in, out] Spécifie le contexte de création de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le volet amarable est créé avec succès; autrement, FALSE.
+TRUE si le volet Ancrable est correctement créé ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Crée une vitre Windows et la `CDockablePane` fixe à l’objet.
+Crée un volet Windows et l’attache à l' `CDockablePane` objet.
 
-Si le style de fenêtre *dwStyle* a le drapeau CBRS_FLOAT_MULTI, la fenêtre miniframe peut flotter avec d’autres vitres dans la fenêtre miniframe. Par défaut, les vitres d’amarrage ne peuvent flotter que individuellement.
+Si le style de fenêtre *dwStyle* contient l’indicateur CBRS_FLOAT_MULTI, la fenêtre Miniframe peut flotter avec d’autres volets dans la fenêtre Miniframe. Par défaut, les volets d’ancrage peuvent uniquement flotter individuellement.
 
-Si le paramètre *dwTabbedStyle* a le drapeau AFX_CBRS_OUTLOOK_TABS spécifié, le volet crée des vitres tabbed de style Outlook lorsqu’un autre volet est fixé à ce volet à l’aide de la méthode [CDockablePane::AttachToTabWnd](#attachtotabwnd) méthode. Par défaut, les vitres amarrées créent des vitres tabbed régulières de type [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).
+Si l’indicateur AFX_CBRS_OUTLOOK_TABS est spécifié pour le paramètre *dwTabbedStyle* , le volet crée des volets à onglets de style Outlook lorsqu’un autre volet est attaché à ce volet à l’aide de la méthode [CDockablePane :: AttachToTabWnd](#attachtotabwnd) . Par défaut, les volets ancrables créent des volets à onglets normaux de type [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).
 
-## <a name="cdockablepanecreatetabbedpane"></a><a name="createtabbedpane"></a>CDockablePane::CreateTabbedPane
+## <a name="cdockablepanecreatetabbedpane"></a><a name="createtabbedpane"></a>CDockablePane :: CreateTabbedPane
 
-Crée une vitre tabbed de la vitre actuelle.
+Crée un volet à onglets à partir du volet actuel.
 
 ```
 virtual CTabbedPane* CreateTabbedPane();
@@ -743,19 +743,19 @@ virtual CTabbedPane* CreateTabbedPane();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nouveau volet tabbed, ou NULL si l’opération de création a échoué.
+Le nouveau volet à onglets, ou NULL si l’opération de création a échoué.
 
 ### <a name="remarks"></a>Notes
 
-Le cadre appelle cette méthode lorsqu’elle crée une vitre tabbed pour remplacer cette vitre. Pour plus d’informations, voir [CDockablePane::AttachToTabWnd](#attachtotabwnd).
+L’infrastructure appelle cette méthode quand elle crée un volet à onglets pour remplacer ce volet. Pour plus d’informations, consultez [CDockablePane :: AttachToTabWnd](#attachtotabwnd).
 
-Remplacer cette méthode dans une classe dérivée pour personnaliser la façon dont les vitres tabbed sont créées et paralysées.
+Substituez cette méthode dans une classe dérivée pour personnaliser la façon dont les volets à onglets sont créés et initialisés.
 
-La vitre tabbed est créée en fonction des `m_pTabbedControlBarRTC` informations de classe de temps d’exécution stockées dans le membre, qui est paralés par le [CDockablePane::CreateEx](#createex) méthode.
+Le volet à onglets est créé en fonction des informations de classe d’exécution stockées dans le `m_pTabbedControlBarRTC` membre, qui est initialisé par la méthode [CDockablePane :: CreateEx](#createex) .
 
-## <a name="cdockablepanedockpanecontainer"></a><a name="dockpanecontainer"></a>CDockablePane::DockPaneContainer
+## <a name="cdockablepanedockpanecontainer"></a><a name="dockpanecontainer"></a>CDockablePane ::D ockPaneContainer
 
-Amarre un récipient à la vitre.
+Ancre un conteneur au volet.
 
 ```
 virtual BOOL DockPaneContainer(
@@ -767,32 +767,32 @@ virtual BOOL DockPaneContainer(
 ### <a name="parameters"></a>Paramètres
 
 *barContainerManager*<br/>
-[dans] Une référence au gestionnaire de conteneurs du conteneur qui est amarré.
+dans Référence au gestionnaire de conteneurs du conteneur qui est ancré.
 
 *dwAlignment*<br/>
-[dans] DWORD qui spécifie le côté de la vitre à laquelle le conteneur est amarré.
+dans Valeur DWORD qui spécifie le côté du volet vers lequel le conteneur est ancré.
 
 *dockMethod*<br/>
 [in] Non utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le conteneur a été amarré avec succès à la vitre; autrement, FALSE.
+TRUE si le conteneur a été correctement ancré dans le volet ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-*dwAlignment* peut être l’une des valeurs suivantes:
+*dwAlignment* peut prendre l’une des valeurs suivantes :
 
 |Valeur|Description|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|Le conteneur est amarré au sommet de la vitre.|
-|CBRS_ALIGN_BOTTOM|Le conteneur est amarré au bas de la vitre.|
-|CBRS_ALIGN_LEFT|Le conteneur est amarré à gauche de la vitre.|
-|CBRS_ALIGN_RIGHT|Le conteneur est amarré à droite de la vitre.|
+|CBRS_ALIGN_TOP|Le conteneur est ancré en haut du volet.|
+|CBRS_ALIGN_BOTTOM|Le conteneur est ancré au bas du volet.|
+|CBRS_ALIGN_LEFT|Le conteneur est ancré à gauche du volet.|
+|CBRS_ALIGN_RIGHT|Le conteneur est ancré à droite du volet.|
 
-## <a name="cdockablepanedockpanestandard"></a><a name="dockpanestandard"></a>CDockablePane::DockPaneStandard
+## <a name="cdockablepanedockpanestandard"></a><a name="dockpanestandard"></a>CDockablePane ::D ockPaneStandard
 
-Amarre une vitre à l’aide de l’amarrage de contour (standard).
+Ancre un volet à l’aide de l’ancrage plan (standard).
 
 ```
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
@@ -801,15 +801,15 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="parameters"></a>Paramètres
 
 *bWasDocked*<br/>
-[dans] Lorsque la méthode revient, cette valeur contient TRUE si la vitre a été amarré avec succès; autrement, il contient FALSE.
+dans Lorsque la méthode est retournée, cette valeur contient la valeur TRUE si le volet a été correctement ancré ; dans le cas contraire, elle contient la valeur FALSe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la vitre a été amarrée à une fenêtre tabbed, ou si une fenêtre tabbed a été créée à la suite de l’amarrage, cette méthode renvoie un pointeur à la fenêtre tabbed. Si la vitre a été autrement amarré avec succès, cette méthode renvoie le **pointeur.** Si l’amarrage a échoué, cette méthode renvoie NULL.
+Si le volet a été ancré à une fenêtre à onglets, ou si une fenêtre à onglets a été créée à la suite de l’ancrage, cette méthode retourne un pointeur vers la fenêtre à onglets. Si le volet a été correctement ancré, cette méthode retourne le **`this`** pointeur. En cas d’échec de l’ancrage, cette méthode retourne la valeur NULL.
 
-## <a name="cdockablepanedocktorecentpos"></a><a name="docktorecentpos"></a>CDockablePane::DockToRecentPos
+## <a name="cdockablepanedocktorecentpos"></a><a name="docktorecentpos"></a>CDockablePane ::D ockToRecentPos
 
-Amarre une vitre à sa position d’amarrage stockée.
+Ancre un volet à sa position d’ancrage stockée.
 
 ```
 BOOL CDockablePane::DockToRecentPos();
@@ -817,15 +817,15 @@ BOOL CDockablePane::DockToRecentPos();
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si la vitre est amarré avec succès; autrement, FALSE.
+TRUE si le volet est correctement ancré ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Les vitres dockables stockent des informations d’amarrage récentes dans un objet [CRecentDockSiteInfo.](../../mfc/reference/crecentdocksiteinfo-class.md)
+Les volets ancrables stockent les informations d’ancrage récentes dans un objet [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md) .
 
-## <a name="cdockablepanedocktowindow"></a><a name="docktowindow"></a>CDockablePane::DockToWindow
+## <a name="cdockablepanedocktowindow"></a><a name="docktowindow"></a>CDockablePane ::D ockToWindow
 
-Docks une vitre d’amarrage à une autre vitre d’amarrage.
+Ancre un volet d’ancrage à un autre volet d’ancrage.
 
 ```
 virtual BOOL DockToWindow(
@@ -837,25 +837,25 @@ virtual BOOL DockToWindow(
 ### <a name="parameters"></a>Paramètres
 
 *pTargetWindow*<br/>
-[dans, dehors] Spécifie la vitre amarable pour amarrer cette vitre.
+[in, out] Spécifie le volet Ancrable dans lequel ancrer ce volet.
 
 *dwAlignment*<br/>
-[dans] Spécifie l’alignement d’amarrage pour la vitre. Peut être l’un des CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Défini en afxres.h.)
+dans Spécifie l’alignement de l’ancrage du volet. Il peut s’agir de l’une des CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Défini dans AFXRES. h.)
 
 *lpRect*<br/>
-[dans] Spécifie le rectangle d’amarrage pour la vitre.
+dans Spécifie le rectangle d’ancrage du volet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si la vitre a été amarré avec succès; autrement, FALSE.
+TRUE si le volet a été correctement ancré ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour amarrer une vitre à une autre vitre avec l’alignement spécifié par *dwAlignment*.
+Appelez cette méthode pour ancrer un volet à un autre volet avec l’alignement spécifié par *dwAlignment*.
 
-## <a name="cdockablepanedrawcaption"></a><a name="drawcaption"></a>CDockablePane::DrawCaption
+## <a name="cdockablepanedrawcaption"></a><a name="drawcaption"></a>CDockablePane ::D rawCaption
 
-Dessine la légende (également appelée la pince) d’une vitre d’amarrage.
+Dessine la légende (également appelée pince) d’un volet d’ancrage.
 
 ```
 virtual void DrawCaption(
@@ -865,21 +865,21 @@ virtual void DrawCaption(
 
 ### <a name="parameters"></a>Paramètres
 
-*pDC*<br/>
-[dans] Représente le contexte de l’appareil utilisé pour le dessin.
+*Maîtres*<br/>
+dans Représente le contexte de périphérique (Device Context) utilisé pour le dessin.
 
 *rectCaption*<br/>
-[dans] Spécifie le rectangle de délimitation de la légende du volet.
+dans Spécifie le rectangle englobant de la légende du volet.
 
 ### <a name="remarks"></a>Notes
 
-Le cadre appelle cette méthode pour dessiner la légende d’un volet amarré.
+L’infrastructure appelle cette méthode pour dessiner la légende d’un volet Ancrable.
 
-Remplacer cette méthode dans une classe dérivée pour personnaliser l’apparence de la légende.
+Substituez cette méthode dans une classe dérivée pour personnaliser l’apparence de la légende.
 
-## <a name="cdockablepaneenableautohideall"></a><a name="enableautohideall"></a>CDockablePane::EnableAutohideAll
+## <a name="cdockablepaneenableautohideall"></a><a name="enableautohideall"></a>CDockablePane :: EnableAutohideAll
 
-Permet ou désactive le mode autohide pour ce volet et pour les autres vitres du récipient.
+Active ou désactive le mode de masquage automatique pour ce volet et pour les autres volets du conteneur.
 
 ```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
@@ -888,17 +888,17 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[dans] VRAI pour permettre à l’autohide toute fonctionnalité pour le volet amarré; autrement, FALSE.
+dans TRUE pour activer la fonctionnalité Masquer automatiquement tout pour le volet Ancrable. Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un utilisateur tient la clé **Ctrl** et clique sur le bouton pin pour passer d’un volet en mode autohide, tous les autres volets du même conteneur sont également passés en mode autohide.
+Quand un utilisateur maintient la touche **CTRL enfoncée** et clique sur le bouton épingler pour faire basculer un volet en mode de masquage automatique, tous les autres volets du même conteneur sont également basculés en mode de masquage automatique.
 
-Appelez cette méthode avec un ensemble *bEnable* à FALSE pour désactiver cette fonctionnalité pour une vitre particulière.
+Appelez cette méthode avec *bEnable* défini sur false pour désactiver cette fonctionnalité pour un volet particulier.
 
-## <a name="cdockablepaneenablegripper"></a><a name="enablegripper"></a>CDockablePane::EnableGripper
+## <a name="cdockablepaneenablegripper"></a><a name="enablegripper"></a>CDockablePane :: EnableGripper
 
-Affiche ou cache la légende (aussi appelée la pince).
+Affiche ou masque la légende (également appelée pince).
 
 ```
 virtual void EnableGripper(BOOL bEnable);
@@ -907,17 +907,17 @@ virtual void EnableGripper(BOOL bEnable);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[dans] VRAI pour permettre la légende; autrement, FALSE.
+dans TRUE pour activer la légende ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque le cadre crée des vitres amarrées, ils n’ont pas le style de fenêtre WS_STYLE, même s’ils sont spécifiés. Cela signifie que la légende du volet est une zone non cliente qui est contrôlée par le cadre, mais cette zone diffère de la légende de fenêtre standard.
+Lorsque l’infrastructure crée des volets Ancrable, ils n’ont pas le style de fenêtre WS_STYLE, même s’ils sont spécifiés. Cela signifie que la légende du volet est une zone non cliente qui est contrôlée par l’infrastructure, mais cette zone diffère du titre de fenêtre standard.
 
-Vous pouvez montrer ou cacher la légende à tout moment. Le cadre cache la légende lorsqu’une vitre est ajoutée sous forme d’onglet à une fenêtre tabtée ou lorsqu’une vitre est flottée dans une fenêtre de miniframe.
+Vous pouvez afficher ou masquer la légende à tout moment. L’infrastructure masque la légende lorsqu’un volet est ajouté sous la forme d’un onglet à une fenêtre à onglets ou lorsqu’un volet est dissocié dans une fenêtre Miniframe.
 
-## <a name="cdockablepanegetahrestoredrect"></a><a name="getahrestoredrect"></a>CDockablePane::GetAHRestoredRect
+## <a name="cdockablepanegetahrestoredrect"></a><a name="getahrestoredrect"></a>CDockablePane :: GetAHRestoredRect
 
-Spécifie la position de la vitre en mode auto-cacher.
+Spécifie la position du volet en mode de masquage automatique.
 
 ```
 CRect GetAHRestoredRect() const;
@@ -925,13 +925,13 @@ CRect GetAHRestoredRect() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `CRect` objet qui contient la position de la vitre lorsqu’il est en mode auto-cacher.
+`CRect`Objet qui contient la position du volet lorsqu’il est en mode de masquage automatique.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockablepanegetahslidemode"></a><a name="getahslidemode"></a>CDockablePane::GetAHSlideMode
+## <a name="cdockablepanegetahslidemode"></a><a name="getahslidemode"></a>CDockablePane :: GetAHSlideMode
 
-Récupère le mode de glissière automatique pour la vitre.
+Récupère le mode de masquage automatique du volet.
 
 ```
 virtual UINT GetAHSlideMode() const;
@@ -939,11 +939,11 @@ virtual UINT GetAHSlideMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un UINT qui spécifie le mode de glissière automatique pour la vitre. La valeur de retour peut être AFX_AHSM_MOVE ou AFX_AHSM_STRETCH, mais la mise en œuvre utilise uniquement AFX_AHSM_MOVE.
+UINT qui spécifie le mode de masquage automatique du volet. La valeur de retour peut être AFX_AHSM_MOVE ou AFX_AHSM_STRETCH, mais l’implémentation utilise uniquement AFX_AHSM_MOVE.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockablepanegetcaptionheight"></a><a name="getcaptionheight"></a>CDockablePane::GetCaptionHeight
+## <a name="cdockablepanegetcaptionheight"></a><a name="getcaptionheight"></a>CDockablePane :: GetCaptionHeight
 
 Retourne la hauteur, en pixels, de la légende actuelle.
 
@@ -953,15 +953,15 @@ virtual int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La hauteur de la légende, en pixels.
+Hauteur de la légende, en pixels.
 
 ### <a name="remarks"></a>Notes
 
-La hauteur de la légende est de 0 si la légende a été cachée par le [CDockablePane::EnableGripper](#enablegripper) méthode, ou si le volet n’a pas de légende.
+La hauteur de la légende est 0 si la légende a été masquée par la méthode [CDockablePane :: EnableGripper](#enablegripper) , ou si le volet n’a pas de légende.
 
-## <a name="cdockablepanegetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a>CDockablePane::GetDefaultPaneDivider
+## <a name="cdockablepanegetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a>CDockablePane :: GetDefaultPaneDivider
 
-Retourne le diviseur de vitre par défaut pour le contenant de la vitre.
+Retourne le séparateur de volet par défaut pour le conteneur du volet.
 
 ```
 CPaneDivider* GetDefaultPaneDivider() const;
@@ -969,15 +969,15 @@ CPaneDivider* GetDefaultPaneDivider() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Objet [CPaneDivider](../../mfc/reference/cpanedivider-class.md) valide si le volet amarré est amarré à la fenêtre principale du cadre, ou `NULL` si le volet amarré n’est pas amarré ou s’il flotte.
+Objet [CPaneDivider](../../mfc/reference/cpanedivider-class.md) valide si le volet Ancrable est ancré à la fenêtre frame principale, ou `NULL` si le volet Ancrable n’est pas ancré ou s’il est flottant.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les diviseurs de vitres, voir [CPaneDivider Class](../../mfc/reference/cpanedivider-class.md).
+Pour plus d’informations sur les diviseurs de volets, consultez [CPaneDivider, classe](../../mfc/reference/cpanedivider-class.md).
 
-## <a name="cdockablepanegetdockingstatus"></a><a name="getdockingstatus"></a>CDockablePane::GetDockingStatus
+## <a name="cdockablepanegetdockingstatus"></a><a name="getdockingstatus"></a>CDockablePane :: GetDockingStatus
 
-Détermine la capacité d’amarrage d’une vitre en fonction de l’emplacement du pointeur fourni.
+Détermine la possibilité d’ancrage d’un volet en fonction de l’emplacement du pointeur fourni.
 
 ```
 virtual AFX_CS_STATUS GetDockingStatus(
@@ -987,34 +987,34 @@ virtual AFX_CS_STATUS GetDockingStatus(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pt*<br/>
-[dans] L’emplacement du pointeur dans les coordonnées de l’écran.
+*pt*<br/>
+dans Emplacement du pointeur en coordonnées d’écran.
 
-*nSensibilité*<br/>
-[dans] La distance, en pixels, loin du bord d’un rectangle, le pointeur doit être pour permettre l’amarrage.
+*nSensitivity*<br/>
+dans La distance, en pixels, en dehors du bord d’un rectangle, le pointeur doit être pour activer l’ancrage.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’une des valeurs de statut suivantes :
+L’une des valeurs d’État suivantes :
 
-|AFX_CS_STATUS valeur|Signification|
+|Valeur AFX_CS_STATUS|Signification|
 |---------------------------|-------------|
-|CS_NOTHING|Le pointeur n’est pas au-dessus d’un site de quai. Le cadre n’amarre pas la vitre.|
-|CS_DOCK_IMMEDIATELY|Le pointeur est situé sur le site du quai en mode immédiat (le volet utilise le DT_IMMEDIATE mode d’amarrage). Le cadre amarre la vitre immédiatement.|
-|CS_DELAY_DOCK|Le pointeur est au-dessus d’un site de quai qui est une autre vitre d’amarrage ou est un bord du cadre principal. Le cadre amarre la vitre après un retard. Consultez la section Remarques pour plus d’informations sur ce retard.|
-|CS_DELAY_DOCK_TO_TAB|Le pointeur est situé au-dessus d’un site de quai qui fait amarrer la vitre dans une fenêtre tabbed. Cela se produit lorsque le pointeur est situé sur la légende d’une autre vitre d’amarrage ou sur la zone de l’onglet d’une vitre tabbed.|
+|CS_NOTHING|Le pointeur ne se trouve pas sur un site d’ancrage. Le Framework n’ancre pas le volet.|
+|CS_DOCK_IMMEDIATELY|Le pointeur se trouve sur le site d’ancrage en mode immédiat (le volet utilise le mode d’ancrage DT_IMMEDIATE). L’infrastructure ancre le volet immédiatement.|
+|CS_DELAY_DOCK|Le pointeur se trouve sur un site d’ancrage qui est un autre volet d’ancrage ou est un bord du frame principal. L’infrastructure ancre le volet après un certain délai. Pour plus d’informations sur ce délai, consultez la section Notes.|
+|CS_DELAY_DOCK_TO_TAB|Le pointeur se trouve sur un site d’ancrage qui provoque l’ancrage du volet dans une fenêtre à onglets. Cela se produit lorsque le pointeur se trouve sur la légende d’un autre volet d’ancrage ou sur la zone d’onglet d’un volet à onglets.|
 
 ### <a name="remarks"></a>Notes
 
-Le cadre appelle cette méthode pour gérer l’amarrage d’une vitre flottante.
+L’infrastructure appelle cette méthode pour gérer l’ancrage d’un volet flottant.
 
-Pour les barres d’outils flottantes ou les vitres d’amarrage qui utilisent le mode d’amarrage DT_IMMEDIATE, le cadre retarde la commande du quai pour permettre à l’utilisateur de déplacer la fenêtre hors de la zone cliente du cadre parent avant l’amarrage. La longueur du délai est mesurée en millisecondes et est contrôlée par le [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) membre des données. La valeur par défaut de [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) est de 200. Ce comportement imite le comportement d’amarrage de Microsoft Word 2007.
+Pour les barres d’outils flottantes ou les volets d’ancrage qui utilisent le mode d’ancrage DT_IMMEDIATE, le Framework diffère la commande Dock pour permettre à l’utilisateur de déplacer la fenêtre hors de la zone cliente du frame parent avant l’ancrage. La longueur du délai est mesurée en millisecondes et est contrôlée par le membre de données [CDockingManager :: m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) .. La valeur par défaut de [CDockingManager :: m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock) est 200. Ce comportement émule le comportement d’ancrage de Microsoft Word 2007.
 
-Pour les états d’amarrage retardés (CS_DELAY_DOCK et CS_DELAY_DOCK_TO_TAB), le cadre n’effectue pas l’amarrage jusqu’à ce que l’utilisateur libère le bouton de la souris. Si une vitre utilise le mode d’amarrage DT_STANDARD, le cadre affiche un rectangle à l’emplacement d’amarrage projeté. Si une vitre utilise le mode d’amarrage DT_SMART, le cadre affiche des marqueurs d’amarrage intelligents et des rectangles semi-transparents à l’emplacement d’amarrage projeté. Pour spécifier le mode d’amarrage pour votre volet, appelez la méthode [CBasePane::SetDockingMode.](../../mfc/reference/cbasepane-class.md#setdockingmode) Pour plus d’informations sur l’amarrage intelligent, voir [CDockingManager:GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).
+Pour les États d’ancrage retardés (CS_DELAY_DOCK et CS_DELAY_DOCK_TO_TAB), l’infrastructure n’effectue pas d’ancrage tant que l’utilisateur n’a pas libéré le bouton de la souris. Si un volet utilise le mode d’ancrage DT_STANDARD, l’infrastructure affiche un rectangle à l’emplacement d’ancrage projeté. Si un volet utilise le mode d’ancrage DT_SMART, l’infrastructure affiche des marqueurs d’ancrage intelligents et des rectangles semi-transparents à l’emplacement d’ancrage projeté. Pour spécifier le mode d’ancrage de votre volet, appelez la méthode [CBasePane :: SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) . Pour plus d’informations sur l’ancrage intelligent, consultez [CDockingManager :: GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).
 
-## <a name="cdockablepanegetdragsensitivity"></a><a name="getdragsensitivity"></a>CDockablePane::GetDragSensitivity
+## <a name="cdockablepanegetdragsensitivity"></a><a name="getdragsensitivity"></a>CDockablePane :: GetDragSensitivity
 
-Retourne la sensibilité de traînée d’une vitre d’amarrage.
+Retourne la sensibilité du glissement d’un volet d’ancrage.
 
 ```
 static const CSize& GetDragSensitivity();
@@ -1022,11 +1022,11 @@ static const CSize& GetDragSensitivity();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un objet [CSize](../../atl-mfc-shared/reference/csize-class.md) qui contient la largeur et la hauteur, en pixels, d’un rectangle centré sur un point de traînée. L’opération de traînée ne commence pas jusqu’à ce que le pointeur de la souris se déplace à l’extérieur de ce rectangle.
+Objet [CSize](../../atl-mfc-shared/reference/csize-class.md) qui contient la largeur et la hauteur, en pixels, d’un rectangle centré sur un point de glissement. L’opération glisser ne commence pas tant que le pointeur de la souris ne se déplace pas en dehors de ce rectangle.
 
-## <a name="cdockablepanegetlastpercentinpanecontainer"></a><a name="getlastpercentinpanecontainer"></a>CDockablePane::GetLastPercentInPaneContainer
+## <a name="cdockablepanegetlastpercentinpanecontainer"></a><a name="getlastpercentinpanecontainer"></a>CDockablePane :: GetLastPercentInPaneContainer
 
-Récupère le pourcentage d’espace qu’une vitre occupe dans son conteneur ( [Classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md)).
+Récupère le pourcentage d’espace occupé par un volet dans son conteneur ( [classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md)).
 
 ```
 int GetLastPercentInPaneContainer() const;
@@ -1034,15 +1034,15 @@ int GetLastPercentInPaneContainer() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une *int* qui spécifie le pourcentage d’espace que la vitre occupe dans son récipient.
+*Entier* qui spécifie le pourcentage d’espace occupé par le volet dans son conteneur.
 
 ### <a name="remarks"></a>Notes
 
 Cette méthode est utilisée lorsque le conteneur ajuste sa disposition.
 
-## <a name="cdockablepanegettabarea"></a><a name="gettabarea"></a>CDockablePane::GetTabArea
+## <a name="cdockablepanegettabarea"></a><a name="gettabarea"></a>CDockablePane :: GetTabArea
 
-Récupère la zone de l’onglet pour la vitre.
+Récupère la zone d’onglet pour le volet.
 
 ```
 virtual void GetTabArea(
@@ -1053,18 +1053,18 @@ virtual void GetTabArea(
 ### <a name="parameters"></a>Paramètres
 
 *rectTabAreaTop*<br/>
-[dans] `GetTabArea` remplit cette variable avec la zone de l’onglet si les onglets sont situés en haut de la vitre. Si des onglets sont situés au bas de la vitre, cette variable est remplie d’un rectangle vide.
+[in] `GetTabArea` remplit cette variable avec la zone d’onglet si les onglets sont situés en haut du volet. Si les onglets sont situés en bas du volet, cette variable est remplie avec un rectangle vide.
 
 *rectTabAreaBottom*<br/>
-[dans] `GetTabArea` remplit cette variable avec la zone de l’onglet si les onglets sont situés au bas de la vitre. Si des onglets sont situés en haut de la vitre, cette variable est remplie d’un rectangle vide.
+[in] `GetTabArea` remplit cette variable avec la zone d’onglet si les onglets sont situés en bas du volet. Si les onglets sont situés en haut du volet, cette variable est remplie avec un rectangle vide.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode n’est utilisée que `CDockablePane` dans les classes qui sont dérivées et qui ont des onglets. Pour plus d’informations, voir [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) et [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).
+Cette méthode est utilisée uniquement dans les classes dérivées de `CDockablePane` et ayant des onglets. Pour plus d’informations, consultez [CTabbedPane :: GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) et [CMFCOutlookBar :: GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).
 
-## <a name="cdockablepanegettabbedpanertc"></a><a name="gettabbedpanertc"></a>CDockablePane::GetTabbedPaneRTC
+## <a name="cdockablepanegettabbedpanertc"></a><a name="gettabbedpanertc"></a>CDockablePane :: GetTabbedPaneRTC
 
-Retourne les informations de classe de temps d’exécution au sujet d’une fenêtre tabbed qui est créée quand un autre volet s’amarre à la vitre actuelle.
+Retourne les informations de classe Runtime relatives à une fenêtre à onglets créée lorsqu’un autre volet s’ancre au volet actuel.
 
 ```
 CRuntimeClass* GetTabbedPaneRTC() const;
@@ -1072,17 +1072,17 @@ CRuntimeClass* GetTabbedPaneRTC() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Les informations de classe d’exécution pour le volet amarré.
+Informations de classe d’exécution pour le volet Ancrable.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour récupérer les informations de classe de temps d’exécution pour les vitres tabbed qui sont créés dynamiquement. Cela peut se produire quand un utilisateur traîne un volet à la légende d’un autre volet, ou si vous appelez le [CDockablePane::AttachToTabWnd](#attachtotabwnd) méthode pour créer programmatiquement une vitre tabbed à partir de deux vitres dockable.
+Appelez cette méthode pour récupérer les informations de classe Runtime pour les volets à onglets créés dynamiquement. Cela peut se produire lorsqu’un utilisateur fait glisser un volet vers la légende d’un autre volet, ou si vous appelez la méthode [CDockablePane :: AttachToTabWnd](#attachtotabwnd) pour créer par programmation un volet à onglets à partir de deux volets ancrables.
 
-Vous pouvez définir les informations de classe de temps d’exécution en appelant la méthode [CDockablePane : SetTabbedPaneRTC.](#settabbedpanertc)
+Vous pouvez définir les informations de classe d’exécution en appelant la méthode [CDockablePane :: SetTabbedPaneRTC](#settabbedpanertc) .
 
-## <a name="cdockablepanehasautohidemode"></a><a name="hasautohidemode"></a>CDockablePane::HasAutoHideMode
+## <a name="cdockablepanehasautohidemode"></a><a name="hasautohidemode"></a>CDockablePane :: HasAutoHideMode
 
-Précise si une vitre d’amarrage peut être commutée en mode autohide.
+Spécifie si un volet d’ancrage peut être basculé en mode de masquage automatique.
 
 ```
 virtual BOOL HasAutoHideMode() const;
@@ -1090,15 +1090,15 @@ virtual BOOL HasAutoHideMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le volet amarable peut être commuté en mode autohide; autrement, FALSE.
+TRUE si le volet Ancrable peut être basculé en mode de masquage automatique ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Remplacer cette méthode dans une classe dérivée pour désactiver le mode autohide pour un volet amarré spécifique.
+Substituez cette méthode dans une classe dérivée pour désactiver le mode de masquage automatique pour un volet Ancrable spécifique.
 
-## <a name="cdockablepanehittest"></a><a name="hittest"></a>CDockablePane::HitTest
+## <a name="cdockablepanehittest"></a><a name="hittest"></a>CDockablePane :: HitTest
 
-Spécifie l’emplacement dans une vitre où l’utilisateur clique sur une souris.
+Spécifie l’emplacement dans un volet où l’utilisateur clique sur une souris.
 
 ```
 virtual int HitTest(
@@ -1108,29 +1108,29 @@ virtual int HitTest(
 
 ### <a name="parameters"></a>Paramètres
 
-*Point*<br/>
-[dans] Spécifie le point à tester.
+*point*<br/>
+dans Spécifie le point à tester.
 
-*bDetectCaption (en)*<br/>
-[dans] VRAI si HTCAPTION doit être retourné si le point est sur la légende du volet; autrement, FALSE.
+*bDetectCaption*<br/>
+dans TRUE si HTCAPTION doit être retourné si le point se trouve sur la légende du volet ; Sinon, FALSe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’une des valeurs suivantes :
+Une des valeurs suivantes :
 
-- HTNOWHERE si *le point* n’est pas dans le volet amarré.
+- HTNOWHERE si *point* ne se trouve pas dans le volet Ancrable.
 
-- HTCLIENT si *le point* est dans la zone client de la vitre amarrée.
+- HTCLIENT si *point* se trouve dans la zone cliente du volet Ancrable.
 
-- HTCAPTION si *le point* est dans la zone de légende de la vitre amarrée.
+- HTCAPTION si *point* se trouve dans la zone de légende du volet Ancrable.
 
-- AFX_HTCLOSE si le *point* est sur le bouton proche.
+- AFX_HTCLOSE si *point* est sur le bouton Fermer.
 
-- HTMAXBUTTON si *le point* est sur le bouton broche.
+- HTMAXBUTTON si *point* est sur le bouton épingler.
 
-## <a name="cdockablepaneisautohideallenabled"></a><a name="isautohideallenabled"></a>CDockablePane::IsAutohideAllEnabled
+## <a name="cdockablepaneisautohideallenabled"></a><a name="isautohideallenabled"></a>CDockablePane :: IsAutohideAllEnabled
 
-Indique si la vitre d’amarrage et toutes les autres vitres du conteneur peuvent être commutées en mode autohide.
+Indique si le volet d’ancrage et tous les autres volets du conteneur peuvent être basculés en mode de masquage automatique.
 
 ```
 virtual BOOL IsAutohideAllEnabled() const;
@@ -1138,17 +1138,17 @@ virtual BOOL IsAutohideAllEnabled() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si la vitre amarable, et toutes les autres vitres du conteneur, peuvent être commutées en mode autohide; autrement, FALSE.
+TRUE si le volet Ancrable et tous les autres volets du conteneur peuvent être basculés en mode de masquage automatique ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Un utilisateur permet le mode autohide en cliquant sur le bouton d’amarrage tout en tenant la clé **Ctrl**
+Un utilisateur active le mode de masquage automatique en cliquant sur le bouton pin d’ancrage tout en maintenant la touche **CTRL** enfoncée
 
-Pour activer ou désactiver ce comportement, appelez le [CDockablePane::EnableAutohideAll](#enableautohideall) méthode.
+Pour activer ou désactiver ce comportement, appelez la méthode [CDockablePane :: EnableAutohideAll](#enableautohideall) .
 
-## <a name="cdockablepaneisautohidemode"></a><a name="isautohidemode"></a>CDockablePane::IsAutoHideMode
+## <a name="cdockablepaneisautohidemode"></a><a name="isautohidemode"></a>CDockablePane :: IsAutoHideMode
 
-Détermine si un volet est en mode autohide.
+Détermine si un volet est en mode de masquage automatique.
 
 ```
 virtual BOOL IsAutoHideMode() const;
@@ -1156,11 +1156,11 @@ virtual BOOL IsAutoHideMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le volet amarré est en mode autohide; autrement, FALSE.
+TRUE si le volet Ancrable est en mode de masquage automatique ; Sinon, FALSe.
 
-## <a name="cdockablepaneisdocked"></a><a name="isdocked"></a>CDockablePane::IsDocked
+## <a name="cdockablepaneisdocked"></a><a name="isdocked"></a>CDockablePane :: IsDocked
 
-Détermine si la vitre actuelle est amarré.
+Détermine si le volet actif est ancré.
 
 ```
 virtual BOOL IsDocked() const;
@@ -1168,15 +1168,15 @@ virtual BOOL IsDocked() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le volet amarré n’appartient pas à une fenêtre de miniframe ou s’il flotte dans une fenêtre de miniframe avec une autre vitre. FALSE si la vitre est un enfant d’une fenêtre de miniframe et il n’y a pas d’autres vitres qui appartiennent à la fenêtre de miniframe.
+TRUE si le volet Ancrable n’appartient pas à une fenêtre Miniframe ou s’il est flottant dans une fenêtre Miniframe avec un autre volet. FALSe si le volet est un enfant d’une fenêtre Miniframe et qu’il n’y a pas d’autres volets qui appartiennent à la fenêtre Miniframe.
 
 ### <a name="remarks"></a>Notes
 
-Pour déterminer si la vitre est amarrée à la fenêtre principale du cadre, appelez [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider). Si la méthode renvoie un pointeur non-NULL, la vitre est amarrée à la fenêtre du cadre principal.
+Pour déterminer si le volet est ancré à la fenêtre frame principale, appelez [CDockablePane :: GetDefaultPaneDivider](#getdefaultpanedivider). Si la méthode retourne un pointeur non NULL, le volet est ancré au niveau de la fenêtre frame principale.
 
-## <a name="cdockablepaneishideinautohidemode"></a><a name="ishideinautohidemode"></a>CDockablePane::IsHideInAutoHideMode
+## <a name="cdockablepaneishideinautohidemode"></a><a name="ishideinautohidemode"></a>CDockablePane :: IsHideInAutoHideMode
 
-Détermine le comportement d’un volet qui est en mode autohide si elle est montrée (ou cachée) en appelant [CDockablePane::ShowPane](#showpane).
+Détermine le comportement d’un volet qui est en mode de masquage automatique s’il est affiché (ou masqué) en appelant [CDockablePane :: ShowPane](#showpane).
 
 ```
 virtual BOOL IsHideInAutoHideMode() const;
@@ -1184,19 +1184,19 @@ virtual BOOL IsHideInAutoHideMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le volet amarré doit être caché lorsqu’il est en mode autohide; autrement, FALSE.
+TRUE si le volet Ancrable doit être masqué en mode de masquage automatique ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un volet amarré est en mode autohide, `ShowPane` il se comporte différemment lorsque vous appelez pour vous cacher ou montrer la vitre. Ce comportement est contrôlé par le membre statique [CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode). Si ce membre est VRAI, le volet amarré et sa barre d’outils automatique `ShowPane`connexe ou bouton d’autohide est caché ou affiché lorsque vous appelez . Dans le cas contraire, le volet amarré est activé ou désactivé, et sa barre d’outils automatique connexe ou son bouton d’autohide est toujours visible.
+Lorsqu’un volet Ancrable est en mode de masquage automatique, il se comporte différemment lorsque vous appelez `ShowPane` pour masquer ou afficher le volet. Ce comportement est contrôlé par le membre statique [CDockablePane :: m_bHideInAutoHideMode](#m_bhideinautohidemode). Si ce membre a la valeur TRUE, le volet Ancrable et la barre d’outils Masquer automatiquement ou le bouton Masquer automatiquement associés sont masqués ou affichés lorsque vous appelez `ShowPane` . Dans le cas contraire, le volet Ancrable est activé ou désactivé, et sa barre d’outils Masquer automatiquement ou le bouton Masquer automatiquement associé est toujours visible.
 
-Remplacer cette méthode dans une classe dérivée pour modifier le comportement par défaut des vitres individuelles.
+Substituez cette méthode dans une classe dérivée pour modifier le comportement par défaut des volets individuels.
 
-La valeur `m_bHideInAutoHideMode` par défaut pour est FALSE.
+La valeur par défaut de `m_bHideInAutoHideMode` est false.
 
-## <a name="cdockablepaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>CDockablePane::IsInFloatingMultiPaneFrameWnd
+## <a name="cdockablepaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>CDockablePane :: IsInFloatingMultiPaneFrameWnd
 
-Précise si la vitre se trouve dans une fenêtre à ossature multi-pane ( [classe CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
+Spécifie si le volet se trouve dans une fenêtre frame à plusieurs volets ( [classe CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -1204,13 +1204,13 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si la vitre est dans une fenêtre à ossature multi-volets; autrement, FALSE.
+TRUE si le volet se trouve dans une fenêtre frame à plusieurs volets ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockablepaneisresizable"></a><a name="isresizable"></a>CDockablePane::IsResizable
+## <a name="cdockablepaneisresizable"></a><a name="isresizable"></a>CDockablePane :: IsResizable
 
-Précise si le volet est resizable.
+Spécifie si le volet est redimensionnable.
 
 ```
 virtual BOOL IsResizable() const;
@@ -1218,17 +1218,17 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le volet est resizable; autrement, FALSE.
+TRUE si le volet est redimensionnable ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, les vitres amarables sont resizables. Pour éviter la resizing, remplacez cette méthode dans une classe dérivée et retournez FALSE. Notez qu’une valeur FALSE conduit à un **ASSERT** échoué dans [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane). Utilisez [CDockingManager::AddPane](../../mfc/reference/cdockingmanager-class.md#addpane) au lieu d’amarrer une vitre dans un cadre parent.
+Par défaut, les volets ancrables sont redimensionnables. Pour empêcher le redimensionnement, substituez cette méthode dans une classe dérivée et retournez FALSe. Notez qu’une valeur FALSe provoque l’échec d’une **assertion** dans [CPane ::D ockpane](../../mfc/reference/cpane-class.md#dockpane). Utilisez [CDockingManager :: AddPane](../../mfc/reference/cdockingmanager-class.md#addpane) à la place pour ancrer un volet dans un frame parent.
 
-Les vitres qui ne peuvent pas être redimensionnalisées ne peuvent ni flotter ni entrer en mode auto-cacher et sont toujours situées au bord extérieur du cadre parent.
+Les volets qui ne peuvent pas être redimensionnés ne peuvent ni flotter, ni passer en mode de masquage automatique et se trouvent toujours au bord extérieur du frame parent.
 
-## <a name="cdockablepaneistablocationbottom"></a><a name="istablocationbottom"></a>CDockablePane::IsTabLocationBottom
+## <a name="cdockablepaneistablocationbottom"></a><a name="istablocationbottom"></a>CDockablePane :: IsTabLocationBottom
 
-Précise si les onglets sont situés en haut ou en bas de la vitre.
+Spécifie si les onglets sont situés en haut ou en bas du volet.
 
 ```
 virtual BOOL IsTabLocationBottom() const;
@@ -1236,15 +1236,15 @@ virtual BOOL IsTabLocationBottom() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si les onglets sont situés au bas de la vitre; FALSE si les onglets sont situés en haut de la vitre.
+TRUE si les onglets sont situés en bas du volet ; FALSe si les onglets sont situés en haut du volet.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, voir [CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom).
+Pour plus d’informations, consultez [CTabbedPane :: IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom).
 
-## <a name="cdockablepaneistracked"></a><a name="istracked"></a>CDockablePane::IsTracked
+## <a name="cdockablepaneistracked"></a><a name="istracked"></a>CDockablePane :: IsTracked
 
-Précise si un volet est déplacé par l’utilisateur.
+Spécifie si un volet est déplacé par l’utilisateur.
 
 ```
 BOOL IsTracked() const;
@@ -1252,11 +1252,11 @@ BOOL IsTracked() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si la vitre est déplacée; autrement, FALSE.
+TRUE si le volet est déplacé ; Sinon, FALSe.
 
-## <a name="cdockablepaneisvisible"></a><a name="isvisible"></a>CDockablePane::IsVisible
+## <a name="cdockablepaneisvisible"></a><a name="isvisible"></a>CDockablePane :: IsVisible
 
-Détermine si la vitre actuelle est visible.
+Détermine si le volet actif est visible.
 
 ```
 virtual BOOL IsVisible() const;
@@ -1264,19 +1264,19 @@ virtual BOOL IsVisible() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le volet amarré est visible; autrement, FALSE.
+TRUE si le volet Ancrable est visible ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour déterminer si un volet amarré est visible. Vous pouvez utiliser cette méthode au lieu d’appeler [CWnd::IsWindowVisible](../../mfc/reference/cwnd-class.md#iswindowvisible) ou de tester pour le style WS_VISIBLE. L’état de visibilité retourné dépend si le mode autohide est activé ou désactivé et sur la valeur de la [CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode) propriété.
+Appelez cette méthode pour déterminer si un volet Ancrable est visible. Vous pouvez utiliser cette méthode au lieu d’appeler [CWnd :: IsWindowVisible](../../mfc/reference/cwnd-class.md#iswindowvisible) ou de tester le style de WS_VISIBLE. L’état de visibilité retourné varie selon que le mode de masquage automatique est activé ou désactivé et que la valeur de la propriété [CDockablePane :: IsHideInAutoHideMode](#ishideinautohidemode) est activée.
 
-Si le volet amarré est en `IsHideInAutoHideMode` mode autohide et renvoie FALSE l’état de visibilité est toujours FALSE.
+Si le volet Ancrable est en mode de masquage automatique et `IsHideInAutoHideMode` retourne la valeur false, l’état de visibilité est toujours false.
 
-Si le volet amarré est en `IsHideInAutoHideMode` mode autohide et renvoie VRAI, l’état de visibilité dépend de l’état de visibilité de la barre d’outils d’autohide connexe.
+Si le volet Ancrable est en mode de masquage automatique et `IsHideInAutoHideMode` retourne la valeur true, l’état de visibilité dépend de l’état de visibilité de la barre d’outils Masquer automatiquement associée.
 
-Si le volet amarré n’est pas en mode autohide, l’état de visibilité est déterminé par la [méthode CBasePane::IsVisible.](../../mfc/reference/cbasepane-class.md#isvisible)
+Si le volet Ancrable n’est pas en mode de masquage automatique, l’état de visibilité est déterminé par la méthode [CBasePane :: IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) .
 
-## <a name="---cdockablepaneloadstate"></a>##  <a name="loadstate"></a>CDockablePane::LoadState
+## <a name="---cdockablepaneloadstate"></a>##  <a name="loadstate"></a>CDockablePane :: LoadState
 
 À usage interne uniquement. Pour plus d’informations, consultez le code source situé dans le dossier VC\atlmfc\src\mfc de votre installation Visual Studio.
 
@@ -1288,17 +1288,17 @@ virtual BOOL LoadState(
 );
 ```
 
-## <a name="cdockablepanem_bdisableanimation"></a><a name="m_bdisableanimation"></a>CDockablePane::m_bDisableAnimation
+## <a name="cdockablepanem_bdisableanimation"></a><a name="m_bdisableanimation"></a>CDockablePane :: m_bDisableAnimation
 
-Précise si l’animation automatique du volet amarré est désactivée.
+Spécifie si l’animation de masquage automatique du volet Ancrable est désactivée.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bDisableAnimation;
 ```
 
-## <a name="cdockablepanem_bhideinautohidemode"></a><a name="m_bhideinautohidemode"></a>CDockablePane::m_bHideInAutoHideMode
+## <a name="cdockablepanem_bhideinautohidemode"></a><a name="m_bhideinautohidemode"></a>CDockablePane :: m_bHideInAutoHideMode
 
-Détermine le comportement de la vitre lorsque la vitre est en mode autohide.
+Détermine le comportement du volet lorsque le volet est en mode de masquage automatique.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;
@@ -1306,15 +1306,15 @@ AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;
 
 ### <a name="remarks"></a>Notes
 
-Cette valeur affecte toutes les vitres d’amarrage de l’application.
+Cette valeur affecte tous les volets d’ancrage de l’application.
 
-Si vous définissez ce membre à TRUE, les vitres amarrées sont cachées ou affichées avec leurs barres d’outils et boutons d’autohide connexes lorsque vous appelez [CDockablePane::ShowPane](#showpane).
+Si vous affectez la valeur TRUE à ce membre, les volets ancrables sont masqués ou affichés avec les barres d’outils et boutons de masquage automatique associés quand vous appelez [CDockablePane :: ShowPane](#showpane).
 
-Si vous définissez ce membre à FALSE, les vitres amarrées sont activées ou désactivées lorsque vous appelez [CDockablePane::ShowPane](#showpane).
+Si vous affectez la valeur FALSe à ce membre, les volets ancrables sont activés ou désactivés quand vous appelez [CDockablePane :: ShowPane](#showpane).
 
-## <a name="cdockablepanem_nslidesteps"></a><a name="m_nslidesteps"></a>CDockablePane::m_nSlideSteps
+## <a name="cdockablepanem_nslidesteps"></a><a name="m_nslidesteps"></a>CDockablePane :: m_nSlideSteps
 
-Spécifie la vitesse d’animation du volet lorsqu’elle est en mode autohide.
+Spécifie la vitesse d’animation du volet lorsqu’il est en mode de masquage automatique.
 
 ```
 AFX_IMPORT_DATA static int m_nSlideSteps;
@@ -1324,9 +1324,9 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
 
 Pour un effet d’animation plus rapide, diminuez cette valeur. Pour un effet d’animation plus lent, augmentez cette valeur.
 
-## <a name="cdockablepaneonafterchangeparent"></a><a name="onafterchangeparent"></a>CDockablePane::OnAfterChangeParent
+## <a name="cdockablepaneonafterchangeparent"></a><a name="onafterchangeparent"></a>CDockablePane :: OnAfterChangeParent
 
-Pour plus de détails, consultez le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
+Pour plus d’informations, consultez le code source situé dans le dossier **VC \\ ATLMFC \\ src \\ MFC** de votre installation de Visual Studio.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1334,13 +1334,13 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Paramètres
 
-[dans] *pWndOldParent*<br/>
+dans *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockablepaneonafterdockfromminiframe"></a><a name="onafterdockfromminiframe"></a>CDockablePane::OnAfterDockDeMiniFrame
+## <a name="cdockablepaneonafterdockfromminiframe"></a><a name="onafterdockfromminiframe"></a>CDockablePane :: OnAfterDockFromMiniFrame
 
-Appelé par le cadre quand une barre d’amarrage flottante s’amarre à une fenêtre de cadre.
+Appelé par l’infrastructure quand une barre d’ancrage flottante s’ancre dans une fenêtre frame.
 
 ```
 virtual void OnAfterDockFromMiniFrame();
@@ -1350,9 +1350,9 @@ virtual void OnAfterDockFromMiniFrame();
 
 Par défaut, cette méthode ne fait rien.
 
-## <a name="cdockablepaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>CDockablePane::OnBeforeChangeParent
+## <a name="cdockablepaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>CDockablePane :: OnBeforeChangeParent
 
-Le cadre appelle cette méthode avant qu’elle ne change le parent de la vitre.
+L’infrastructure appelle cette méthode avant de modifier le parent du volet.
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1363,20 +1363,20 @@ virtual void OnBeforeChangeParent(
 ### <a name="parameters"></a>Paramètres
 
 *pWndNewParent*<br/>
-[dans] Un pointeur vers la nouvelle fenêtre parente.
+dans Pointeur vers la nouvelle fenêtre parente.
 
-*bDelay (en)*<br/>
-[dans] BOOL qui précise s’il faut retarder le recalcul de la disposition d’amarrage si le volet est désamarré. Pour plus d’informations, voir [CDockablePane::UndockPane](#undockpane).
+*bDelay*<br/>
+dans Valeur BOOLÉENNE qui spécifie s’il faut différer le recalcul de la disposition d’ancrage si le volet n’est pas ancré. Pour plus d’informations, consultez [CDockablePane :: UndockPane](#undockpane).
 
 ### <a name="remarks"></a>Notes
 
-Si la vitre est amarré et que le nouveau parent n’autorise pas l’amarrage, cette méthode débrène la vitre.
+Si le volet est ancré et que le nouveau parent n’autorise pas l’ancrage, cette méthode détache le volet.
 
-Si la vitre est convertie en document tabbed, cette méthode stocke sa position d’amarrage récente. Le cadre utilise la position d’amarrage récente pour restaurer la position de la vitre lorsqu’elle est convertie en état d’amarrage.
+Si le volet est converti en document à onglets, cette méthode stocke sa position d’ancrage récente. L’infrastructure utilise la position d’ancrage récente pour restaurer la position du volet lorsqu’il est reconverti en état ancré.
 
-## <a name="cdockablepaneonbeforefloat"></a><a name="onbeforefloat"></a>CDockablePane::OnBeforeFloat
+## <a name="cdockablepaneonbeforefloat"></a><a name="onbeforefloat"></a>CDockablePane :: OnBeforeFloat
 
-Le cadre appelle cette méthode avant qu’un volet ne passe à un état flottant.
+L’infrastructure appelle cette méthode avant qu’un volet ne passe à un état flottant.
 
 ```
 virtual BOOL OnBeforeFloat(
@@ -1387,20 +1387,20 @@ virtual BOOL OnBeforeFloat(
 ### <a name="parameters"></a>Paramètres
 
 *rectFloat*<br/>
-[dans] Spécifie la position et la taille de la vitre lorsqu’elle est à l’état flottant.
+dans Spécifie la position et la taille du volet lorsqu’il est dans un état flottant.
 
 *dockMethod*<br/>
-[dans] Spécifie la méthode d’amarrage. Voir [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) pour une liste de valeurs possibles.
+dans Spécifie la méthode d’ancrage. Pour obtenir la liste des valeurs possibles, consultez [CPane ::D ockpane](../../mfc/reference/cpane-class.md#dockpane) .
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si la vitre peut être flottée; autrement, FALSE.
+TRUE si le volet peut être flottant ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée par le cadre quand un volet est sur le point de flotter. Vous pouvez remplacer cette méthode dans une classe dérivée si vous voulez effectuer un traitement avant que la vitre flotte.
+Cette méthode est appelée par le Framework lorsqu’un volet est sur le paragraphe flottant. Vous pouvez substituer cette méthode dans une classe dérivée si vous souhaitez effectuer un traitement avant le détachement du volet.
 
-## <a name="cdockablepaneonpressbuttons"></a><a name="onpressbuttons"></a>CDockablePane::OnPressButtons
+## <a name="cdockablepaneonpressbuttons"></a><a name="onpressbuttons"></a>CDockablePane :: OnPressButtons
 
 Appelé lorsque l’utilisateur appuie sur un bouton de légende autre que les boutons AFX_HTCLOSE et AFX_HTMAXBUTTON.
 
@@ -1411,15 +1411,15 @@ virtual void OnPressButtons(UINT nHit);
 ### <a name="parameters"></a>Paramètres
 
 *nHit*<br/>
-[dans] Ce paramètre n’est pas utilisé.
+dans Ce paramètre n’est pas utilisé.
 
 ### <a name="remarks"></a>Notes
 
-Si vous ajoutez un bouton personnalisé à la légende d’un volet amarré, remplacez cette méthode pour recevoir des notifications lorsqu’un utilisateur appuie sur le bouton.
+Si vous ajoutez un bouton personnalisé à la légende d’un volet Ancrable, substituez cette méthode pour recevoir des notifications lorsqu’un utilisateur appuie sur le bouton.
 
-## <a name="cdockablepaneonslide"></a><a name="onslide"></a>CDockablePane::OnSlide
+## <a name="cdockablepaneonslide"></a><a name="onslide"></a>CDockablePane :: OnSlide
 
-Appelé par le cadre pour animer le volet quand il est en mode autohide.
+Appelé par l’infrastructure pour animer le volet lorsqu’il est en mode de masquage automatique.
 
 ```
 virtual void OnSlide(BOOL bSlideOut);
@@ -1427,16 +1427,16 @@ virtual void OnSlide(BOOL bSlideOut);
 
 ### <a name="parameters"></a>Paramètres
 
-*bSlideOut (en anglais)*<br/>
-[dans] VRAI pour montrer la vitre; FALSE pour cacher la vitre.
+*bSlideOut*<br/>
+dans TRUE pour afficher le volet ; FALSe pour masquer le volet.
 
 ### <a name="remarks"></a>Notes
 
-Remplacer cette méthode dans une classe dérivée pour implémenter des effets d’autohide personnalisés.
+Substituez cette méthode dans une classe dérivée pour implémenter des effets de masquage automatique personnalisés.
 
-## <a name="cdockablepaneremovefromdefaultpanedividier"></a><a name="removefromdefaultpanedividier"></a>CDockablePane::RemoveDeFefaultPaneDividier
+## <a name="cdockablepaneremovefromdefaultpanedividier"></a><a name="removefromdefaultpanedividier"></a>CDockablePane :: RemoveFromDefaultPaneDividier
 
-Le cadre appelle cette méthode lorsqu’un volet est désamarré.
+L’infrastructure appelle cette méthode lorsqu’un volet est déconnecté.
 
 ```cpp
 void RemoveFromDefaultPaneDividier();
@@ -1444,11 +1444,11 @@ void RemoveFromDefaultPaneDividier();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode définit le séparateur de vitre par défaut à NULL et enlève la vitre de son récipient.
+Cette méthode affecte la valeur NULL au séparateur de volet par défaut et supprime le volet de son conteneur.
 
-## <a name="cdockablepanereplacepane"></a><a name="replacepane"></a>CDockablePane::ReplacePane
+## <a name="cdockablepanereplacepane"></a><a name="replacepane"></a>CDockablePane :: ReplacePane
 
-Remplace la vitre par une vitre spécifiée.
+Remplace le volet par un volet spécifié.
 
 ```
 BOOL ReplacePane(
@@ -1459,22 +1459,22 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>Paramètres
 
-*pBarToReplaceAvec*<br/>
-[dans] Un pointeur à une vitre amarable.
+*pBarToReplaceWith*<br/>
+dans Pointeur vers un volet Ancrable.
 
 *dockMethod*<br/>
 [in] Non utilisé.
 
-*bRegisterWithFrame (en)*<br/>
-[dans] Si VRAI, le nouveau volet est enregistré auprès du gestionnaire d’amarrage du parent de l’ancienne vitre. Le nouveau volet est inséré à l’index de l’ancienne vitre dans la liste des vitres qui est maintenue par le gestionnaire d’amarrage.
+*bRegisterWithFrame*<br/>
+dans Si la valeur est TRUE, le nouveau volet est inscrit auprès du gestionnaire d’ancrage du parent de l’ancien volet. Le nouveau volet est inséré au niveau de l’index de l’ancien volet dans la liste des volets gérés par le gestionnaire d’ancrage.
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si le remplacement est réussi; autrement, FALSE.
+TRUE si le remplacement réussit ; Sinon, FALSe.
 
-## <a name="cdockablepanerestoredefaultpanedivider"></a><a name="restoredefaultpanedivider"></a>CDockablePane::RestoreDefaultPaneDivider
+## <a name="cdockablepanerestoredefaultpanedivider"></a><a name="restoredefaultpanedivider"></a>CDockablePane :: RestoreDefaultPaneDivider
 
-Lorsqu’un volet est déséialisé, le cadre appelle cette méthode pour restaurer le diviseur de vitre par défaut.
+Lorsqu’un volet est désérialisé, le Framework appelle cette méthode pour restaurer le séparateur de volet par défaut.
 
 ```cpp
 void RestoreDefaultPaneDivider();
@@ -1482,11 +1482,11 @@ void RestoreDefaultPaneDivider();
 
 ### <a name="remarks"></a>Notes
 
-Le diviseur à volets par défaut restauré remplace le diviseur à vitres par défaut actuel, s’il existe.
+Le diviseur de volet par défaut restauré remplace le séparateur de volet par défaut actuel, s’il existe.
 
-## <a name="cdockablepanesetautohidemode"></a><a name="setautohidemode"></a>CDockablePane::SetAutoHideMode
+## <a name="cdockablepanesetautohidemode"></a><a name="setautohidemode"></a>CDockablePane :: SetAutoHideMode
 
-Bascule la vitre d’amarrage entre le mode visible et l’autohide.
+Bascule le volet d’ancrage entre le mode visible et le mode de masquage automatique.
 
 ```
 virtual CMFCAutoHideBar* SetAutoHideMode(
@@ -1499,30 +1499,30 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ### <a name="parameters"></a>Paramètres
 
 *bMode*<br/>
-[dans] VRAI pour activer le mode autohide; FALSE pour activer le mode d’amarrage régulier.
+dans TRUE pour activer le mode de masquage automatique ; FALSe pour activer le mode d’ancrage normal.
 
 *dwAlignment*<br/>
-[dans] Spécifie l’alignement du volet autohide à créer.
+dans Spécifie l’alignement du volet de masquage automatique à créer.
 
 *pCurrAutoHideBar*<br/>
-[dans, dehors] Un pointeur à la barre d’outils actuelle d’autohide. Sa valeur peut être NULL.
+[in, out] Pointeur vers la barre d’outils de masquage automatique actuelle. Sa valeur peut être NULL.
 
-*bUseTimer (en)*<br/>
-[dans] Précise s’il faut utiliser l’effet d’autohide lorsque l’utilisateur passe le volet en mode autohide ou pour cacher le volet immédiatement.
+*bUseTimer*<br/>
+dans Spécifie s’il faut utiliser l’effet de masquage automatique lorsque l’utilisateur bascule le volet en mode de masquage automatique ou pour masquer immédiatement le volet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La barre d’outils d’autohide qui a été créée à la suite du passage au mode autohide, ou NULL.
+La barre d’outils Masquer automatiquement qui a été créée suite au basculement en mode de masquage automatique ou NULL.
 
 ### <a name="remarks"></a>Notes
 
-Le cadre appelle cette méthode lorsqu’un utilisateur clique sur le bouton pin pour passer du volet amarré en mode autohide ou en mode d’amarrage régulier.
+L’infrastructure appelle cette méthode quand un utilisateur clique sur le bouton épingler pour faire basculer le volet Ancrable en mode de masquage automatique ou en mode d’ancrage normal.
 
-Appelez cette méthode pour passer un volet amarré au mode autohide programmatiquement. La vitre doit être amarrée à la fenêtre du cadre principal ( [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider) doit retourner un pointeur valide au [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).
+Appelez cette méthode pour faire basculer un volet Ancrable pour masquer automatiquement le mode par programme. Le volet doit être ancré à la fenêtre frame principale ( [CDockablePane :: GetDefaultPaneDivider](#getdefaultpanedivider) doit retourner un pointeur valide vers [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).
 
-## <a name="cdockablepanesetautohideparents"></a><a name="setautohideparents"></a>CDockablePane::SetAutoHideParents
+## <a name="cdockablepanesetautohideparents"></a><a name="setautohideparents"></a>CDockablePane :: SetAutoHideParents
 
-Définit le bouton de cache automatique et la barre d’outils de cache automatique pour la vitre.
+Définit le bouton de masquage automatique et la barre d’outils de masquage automatique pour le volet.
 
 ```cpp
 void SetAutoHideParents(
@@ -1533,14 +1533,14 @@ void SetAutoHideParents(
 ### <a name="parameters"></a>Paramètres
 
 *pToolBar*<br/>
-[dans] Pointeur vers une barre d’outils de cache automatique.
+dans Pointeur désignant une barre d’outils à masquage automatique.
 
-*pBtn (pBtn)*<br/>
-[dans] Pointeur sur un bouton de cache automatique.
+*pBtn*<br/>
+dans Pointeur désignant un bouton à masquage automatique.
 
-## <a name="cdockablepanesetlastpercentinpanecontainer"></a><a name="setlastpercentinpanecontainer"></a>CDockablePane::SetLastPercentInPaneContainer
+## <a name="cdockablepanesetlastpercentinpanecontainer"></a><a name="setlastpercentinpanecontainer"></a>CDockablePane :: SetLastPercentInPaneContainer
 
-Définit le pourcentage d’espace qu’une vitre occupe dans son récipient.
+Définit le pourcentage d’espace occupé par un volet dans son conteneur.
 
 ```cpp
 void SetLastPercentInPaneContainer(int n);
@@ -1549,15 +1549,15 @@ void SetLastPercentInPaneContainer(int n);
 ### <a name="parameters"></a>Paramètres
 
 *n*<br/>
-[dans] Une **int** qui spécifie le pourcentage d’espace que la vitre occupe dans son récipient.
+dans **`int`** Qui spécifie le pourcentage d’espace occupé par le volet dans son conteneur.
 
 ### <a name="remarks"></a>Notes
 
-Le cadre ajuste la vitre pour utiliser la nouvelle valeur lorsque la mise en page est recalculée.
+L’infrastructure ajuste le volet pour utiliser la nouvelle valeur lorsque la disposition est recalculée.
 
-## <a name="cdockablepanesetrestoreddefaultpanedivider"></a><a name="setrestoreddefaultpanedivider"></a>CDockablePane::SetRestoredDefaultPaneDivider
+## <a name="cdockablepanesetrestoreddefaultpanedivider"></a><a name="setrestoreddefaultpanedivider"></a>CDockablePane :: SetRestoredDefaultPaneDivider
 
-Définit le diviseur de vitre par défaut restauré.
+Définit le diviseur de volet par défaut restauré.
 
 ```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
@@ -1566,15 +1566,15 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ### <a name="parameters"></a>Paramètres
 
 *hRestoredSlider*<br/>
-[dans] Une poignée à un diviseur de vitres (curseur).
+dans Handle d’un séparateur de volet (Slider).
 
 ### <a name="remarks"></a>Notes
 
-Un diviseur de vitres par défaut restauré est obtenu lorsqu’un volet est déséialisé. Pour plus d’informations, voir [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).
+Un diviseur de volet par défaut restauré est obtenu lorsqu’un volet est désérialisé. Pour plus d’informations, consultez [CDockablePane :: RestoreDefaultPaneDivider](#restoredefaultpanedivider).
 
-## <a name="cdockablepanesettabbedpanertc"></a><a name="settabbedpanertc"></a>CDockablePane::SetTabbedPaneRTC
+## <a name="cdockablepanesettabbedpanertc"></a><a name="settabbedpanertc"></a>CDockablePane :: SetTabbedPaneRTC
 
-Définit les informations de classe de temps d’exécution pour une fenêtre tabbed qui est créée lorsque deux volets s’amarrent ensemble.
+Définit les informations de classe Runtime pour une fenêtre à onglets qui est créée lorsque deux volets s’ancrent ensemble.
 
 ```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
@@ -1582,14 +1582,14 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 
 ### <a name="parameters"></a>Paramètres
 
-*Cfrp*<br/>
-[dans] Les informations de classe d’exécution pour la vitre tabbed.
+*pRTC*<br/>
+dans Informations de classe d’exécution pour le volet à onglets.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour définir les informations de classe de temps d’exécution pour les vitres tabbed qui sont créées dynamiquement. Cela peut se produire quand un utilisateur traîne un volet à la légende d’un autre volet, ou si vous appelez le [CDockablePane::AttachToTabWnd](#attachtotabwnd) méthode pour créer programmatiquement une vitre tabbed à partir de deux vitres dockable.
+Appelez cette méthode pour définir les informations de classe Runtime pour les volets à onglets créés dynamiquement. Cela peut se produire lorsqu’un utilisateur fait glisser un volet vers la légende d’un autre volet, ou si vous appelez la méthode [CDockablePane :: AttachToTabWnd](#attachtotabwnd) pour créer par programmation un volet à onglets à partir de deux volets ancrables.
 
-La classe runtime par défaut est définie selon le paramètre *dwTabbedStyle* de [CDockablePane::Créer](#create) et [CDockablePane::CreateEx](#createex). Pour personnaliser les nouvelles vitres tabbed, dérivez votre classe de l’une des classes suivantes :
+La classe d’exécution par défaut est définie en fonction du paramètre *dwTabbedStyle* de [CDockablePane :: Create](#create) et [CDockablePane :: CreateEx](#createex). Pour personnaliser les nouveaux volets à onglets, dérivez votre classe de l’une des classes suivantes :
 
 - [CBaseTabbedPane, classe](../../mfc/reference/cbasetabbedpane-class.md)
 
@@ -1597,11 +1597,11 @@ La classe runtime par défaut est définie selon le paramètre *dwTabbedStyle* d
 
 - [Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
-Ensuite, appelez cette méthode avec le pointeur à ses informations de classe runtime.
+Ensuite, appelez cette méthode avec le pointeur vers ses informations de classe d’exécution.
 
-## <a name="cdockablepaneshowpane"></a><a name="showpane"></a>CDockablePane::ShowPane
+## <a name="cdockablepaneshowpane"></a><a name="showpane"></a>CDockablePane :: ShowPane
 
-Affiche ou cache une vitre.
+Affiche ou masque un volet.
 
 ```
 virtual void ShowPane(
@@ -1612,22 +1612,22 @@ virtual void ShowPane(
 
 ### <a name="parameters"></a>Paramètres
 
-*bShow (en)*<br/>
-[dans] VRAI pour montrer la vitre; FALSE pour cacher la vitre.
+*bShow*<br/>
+dans TRUE pour afficher le volet ; FALSe pour masquer le volet.
 
-*bDelay (en)*<br/>
-[dans] VRAI pour retarder l’ajustement de la disposition d’amarrage; FALSE pour ajuster immédiatement la disposition d’amarrage.
+*bDelay*<br/>
+dans TRUE pour retarder l’ajustement de la disposition d’ancrage ; FALSe pour ajuster immédiatement la disposition d’ancrage.
 
-*bActivate (en)*<br/>
-[dans] VRAI pour activer la vitre lorsqu’il est indiqué; autrement, FALSE.
+*bActivate*<br/>
+dans TRUE pour activer le volet quand il est affiché ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode au lieu du [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) lors de l’affichage ou la dissimulation de vitres dockables.
+Appelez cette méthode à la place de [CWnd :: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) lors de l’émission ou du masquage des volets Ancrable.
 
-## <a name="cdockablepaneslide"></a><a name="slide"></a>CDockablePane::Slide
+## <a name="cdockablepaneslide"></a><a name="slide"></a>CDockablePane :: Slide
 
-Anime un volet en mode autohide.
+Anime un volet qui est en mode de masquage automatique.
 
 ```
 virtual void Slide(
@@ -1637,21 +1637,21 @@ virtual void Slide(
 
 ### <a name="parameters"></a>Paramètres
 
-*bSlideOut (en anglais)*<br/>
-[dans] VRAI pour montrer la vitre; FALSE pour cacher la vitre.
+*bSlideOut*<br/>
+dans TRUE pour afficher le volet ; FALSe pour masquer le volet.
 
-*bUseTimer (en)*<br/>
-[dans] VRAI pour montrer ou cacher le volet avec l’effet d’autohide; FALSE pour montrer ou cacher la vitre immédiatement.
+*bUseTimer*<br/>
+dans TRUE pour afficher ou masquer le volet avec l’effet masquage automatique ; FALSe pour afficher ou masquer immédiatement le volet.
 
 ### <a name="remarks"></a>Notes
 
-Le cadre appelle cette méthode pour animer un volet qui est en mode autohide.
+L’infrastructure appelle cette méthode pour animer un volet qui est en mode de masquage automatique.
 
-Cette méthode `CDockablePane::m_nSlideDefaultTimeOut` utilise la valeur pour déterminer le temps d’insauthentis en fonction de l’effet de glissement. La valeur par défaut pour le temps d’ins est de 1. Si vous personnalisez l’algorithme d’autohide, modifiez ce membre pour modifier le délai d’arrêt.
+Cette méthode utilise la `CDockablePane::m_nSlideDefaultTimeOut` valeur pour déterminer le délai d’attente pour l’effet de diapositive. La valeur par défaut du délai d’attente est 1. Si vous personnalisez l’algorithme de masquage automatique, modifiez ce membre pour modifier le délai d’attente.
 
-## <a name="cdockablepanetoggleautohide"></a><a name="toggleautohide"></a>CDockablePane::ToggleAutoHide
+## <a name="cdockablepanetoggleautohide"></a><a name="toggleautohide"></a>CDockablePane :: ToggleAutoHide
 
-Bascule le volet entre le mode toujours visible et le mode auto-cacher.
+Bascule le volet entre le mode toujours visible et le mode de masquage automatique.
 
 ```
 virtual void ToggleAutoHide();
@@ -1659,11 +1659,11 @@ virtual void ToggleAutoHide();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode bascule le mode auto-cacher pour le volet en appelant [CDockablePane::SetAutoHideMode](#setautohidemode).
+Cette méthode active ou désactive le mode de masquage automatique pour le volet en appelant [CDockablePane :: SetAutoHideMode](#setautohidemode).
 
-## <a name="cdockablepaneundockpane"></a><a name="undockpane"></a>CDockablePane::UndockPane
+## <a name="cdockablepaneundockpane"></a><a name="undockpane"></a>CDockablePane :: UndockPane
 
-Débamarre une vitre de la fenêtre principale ou d’un contenant de fenêtre miniframe.
+Détache un volet de la fenêtre frame principale ou d’un conteneur de fenêtre Miniframe.
 
 ```
 virtual void UndockPane(BOOL bDelay = FALSE);
@@ -1671,19 +1671,19 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 
 ### <a name="parameters"></a>Paramètres
 
-*bDelay (en)*<br/>
-[dans] VRAI pour retarder le calcul de la disposition d’amarrage; FALSE pour recalculer immédiatement la disposition d’amarrage.
+*bDelay*<br/>
+dans TRUE pour retarder le calcul de la disposition d’ancrage ; FALSe pour recalculer immédiatement la disposition d’ancrage.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour désamarrer une vitre de la fenêtre du cadre principal ou à partir d’un récipient de fenêtre multi-miniframe (une vitre qui flotte dans une seule fenêtre miniframe avec d’autres vitres).
+Appelez cette méthode pour détacher un volet de la fenêtre frame principale ou d’un conteneur de fenêtre à plusieurs Miniframe (un volet flottant dans une fenêtre Miniframe unique avec d’autres volets).
 
-Vous devez dédock un volet avant d’effectuer toute opération externe qui n’est pas effectuée par le [CDockingManager](../../mfc/reference/cdockingmanager-class.md). Par exemple, vous devez défoncé une vitre pour le déplacer programmatiquement d’un endroit à l’autre.
+Vous devez détacher un volet avant d’effectuer une opération externe qui n’est pas effectuée par le [CDockingManager](../../mfc/reference/cdockingmanager-class.md). Par exemple, vous devez détacher un volet pour le déplacer par programme d’un emplacement à un autre.
 
-Le cadre dément automatiquement les vitres avant qu’elles ne soient détruites.
+L’infrastructure détache automatiquement les volets avant qu’ils ne soient détruits.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CPane Class](../../mfc/reference/cpane-class.md)
+[CPane, classe](../../mfc/reference/cpane-class.md)

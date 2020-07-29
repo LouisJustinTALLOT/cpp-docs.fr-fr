@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172476"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219752"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Contraintes sur les paramètres de type générique (C++/CLI)
 
@@ -29,7 +29,7 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>Paramètres
 
-*type-parameter*<br/>
+*paramètre de type*<br/>
 Un des paramètres de type, à limiter.
 
 *constraint list*<br/>
@@ -37,13 +37,13 @@ La *liste de contraintes* est une liste séparée par des virgules répertoriant
 
 La liste peut également inclure une classe. Pour que l'argument de type satisfasse une contrainte de classe de base, il doit être de la même classe que la contrainte ou dériver de la contrainte.
 
-Vous pouvez également spécifier **gcnew()** pour indiquer que l’argument de type doit disposer d’un constructeur public sans paramètre ; ou **ref class** pour indiquer que l’argument de type doit être un type de référence, y compris tout type de classe, d’interface, de délégué ou de tableau ; ou **value class** pour indiquer que l’argument de type doit être un type de valeur. Tout type de valeur, hormis Nullable\<T>, peut être spécifié.
+Vous pouvez également spécifier **gcnew()** pour indiquer que l’argument de type doit disposer d’un constructeur public sans paramètre ; ou **ref class** pour indiquer que l’argument de type doit être un type de référence, y compris tout type de classe, d’interface, de délégué ou de tableau ; ou **value class** pour indiquer que l’argument de type doit être un type de valeur. Tout type valeur, sauf Nullable, \<T> peut être spécifié.
 
 Vous pouvez également spécifier un paramètre générique en tant que contrainte. L’argument de type disponible pour le type que vous contraignez doit être, ou dériver du, type de la contrainte. Il s'agit d'une contrainte de type naked.
 
 ## <a name="remarks"></a>Notes
 
-La clause de contrainte se compose de **where** suivi d’un paramètre de type, de deux points ( **:** ) et de la contrainte, qui spécifie la nature de la restriction sur le paramètre de type. **where** est un mot clé contextuel ; consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations. Séparez par un espace plusieurs clauses de **where**.
+La clause de contrainte se compose de **where** suivi d’un paramètre de type, de deux points (**:**) et de la contrainte, qui spécifie la nature de la restriction sur le paramètre de type. **where** est un mot clé contextuel ; consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations. Séparez par un espace plusieurs clauses de **where**.
 
 Les contraintes sont appliquées aux paramètres de type pour placer des restrictions sur les types qui peuvent être utilisés comme arguments pour un type générique ou une méthode générique.
 
@@ -64,7 +64,7 @@ Cette contrainte exige qu’un argument de type utilisé pour `T` implémente `I
 
 Les méthodes statiques dans la classe de l'argument de type ne peuvent pas être appelées par le paramètre de type ; elles peuvent être appelées uniquement par le type réel désigné.
 
-Une contrainte ne peut pas être un type valeur, y compris les types intégrés tels que **int** ou **double**. Puisque les types de valeur ne peuvent avoir de classes dérivées, seule une classe sera toujours en mesure de satisfaire la contrainte. Dans ce cas, le générique peut être réécrit avec le paramètre de type remplacé par le type de valeur spécifique.
+Une contrainte ne peut pas être un type valeur, y compris des types intégrés tels que **`int`** ou **`double`** . Puisque les types de valeur ne peuvent avoir de classes dérivées, seule une classe sera toujours en mesure de satisfaire la contrainte. Dans ce cas, le générique peut être réécrit avec le paramètre de type remplacé par le type de valeur spécifique.
 
 Les contraintes sont requises dans certains cas puisque la compilation n'autorisera pas l'utilisation des méthodes ou autres fonctionnalités d'un type inconnu à moins que les contraintes n'impliquent que le type inconnu prenne en charge les méthodes ou les interfaces.
 

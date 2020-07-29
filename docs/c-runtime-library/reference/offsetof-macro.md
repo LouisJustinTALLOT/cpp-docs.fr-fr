@@ -22,12 +22,12 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951249"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213500"
 ---
 # <a name="offsetof-macro"></a>offsetof, macro
 
@@ -56,12 +56,12 @@ Nom du membre dans la structure de données parent pour lequel le décalage doit
 
 ## <a name="remarks"></a>Notes
 
-La macro **OffsetOf** retourne le décalage en octets de *MemberName* à partir du début de la structure spécifiée par *structName* en tant que valeur de type **size_t**. Vous pouvez spécifier des types avec le mot clé **struct** .
+La macro **OffsetOf** retourne le décalage en octets de *MemberName* à partir du début de la structure spécifiée par *structName* en tant que valeur de type **size_t**. Vous pouvez spécifier des types avec le **`struct`** mot clé.
 
 > [!NOTE]
 > **OffsetOf** n’est pas une fonction et ne peut pas être décrit à l’aide d’un prototype C.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

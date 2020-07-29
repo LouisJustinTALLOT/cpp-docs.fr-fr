@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b63e8c6986508806cedc8c094a4e8844491dd2fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142596"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219507"
 ---
 # <a name="task_completion_event-class"></a>task_completion_event, classe
 
@@ -40,13 +40,13 @@ Type de résultat de cette classe `task_completion_event`.
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[task_completion_event](#ctor)|Construit un objet `task_completion_event`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[set](#set)|Surchargé. Définit l'événement de fin de tâche.|
 |[set_exception](#set_exception)|Surchargé. Propage une exception à toutes les tâches associées à cet événement.|
@@ -67,9 +67,9 @@ Si l'événement de fin de tâche n'est jamais signalé, toutes les tâches cré
 
 **En-tête :** ppltasks. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="set"></a>définie
+## <a name="set"></a><a name="set"></a>définie
 
 Définit l'événement de fin de tâche.
 
@@ -86,13 +86,13 @@ Résultat avec lequel définir cet événement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La méthode retourne la **valeur true** si elle a réussi à définir l’événement. Elle retourne la **valeur false** si l’événement est déjà défini.
+La méthode retourne **`true`** si elle a réussi à définir l’événement. Elle retourne **`false`** si l’événement est déjà défini.
 
 ### <a name="remarks"></a>Notes
 
-En présence de plusieurs ou appels simultanés à `set`, seul le premier appel aboutira et son résultat (le cas échéant) sera stocké dans l’événement d’achèvement de la tâche. Les jeux restants sont ignorés et la méthode retourne la valeur false. Lorsque vous définissez un événement d’achèvement de tâche, toutes les tâches créées à partir de cet événement se terminent immédiatement, et ses continuations, le cas échéant, sont planifiées. Les objets d’achèvement de tâche qui ont un `_ResultType` autre que **void** passent la valeur à leurs continuations.
+En présence de plusieurs ou appels simultanés à `set` , seul le premier appel aboutira et son résultat (le cas échéant) sera stocké dans l’événement d’achèvement de la tâche. Les jeux restants sont ignorés et la méthode retourne la valeur false. Lorsque vous définissez un événement d’achèvement de tâche, toutes les tâches créées à partir de cet événement se terminent immédiatement, et ses continuations, le cas échéant, sont planifiées. Les objets d’achèvement de tâche qui ont un `_ResultType` autre que **`void`** transmettent la valeur à leurs continuations.
 
-## <a name="set_exception"></a>set_exception
+## <a name="set_exception"></a><a name="set_exception"></a>set_exception
 
 Propage une exception à toutes les tâches associées à cet événement.
 
@@ -116,7 +116,7 @@ Pointeur d’exception à définir.
 
 ### <a name="return-value"></a>Valeur de retour
 
-## <a name="ctor"></a>task_completion_event
+## <a name="task_completion_event"></a><a name="ctor"></a>task_completion_event
 
 Construit un objet `task_completion_event`.
 
@@ -126,4 +126,4 @@ task_completion_event();
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

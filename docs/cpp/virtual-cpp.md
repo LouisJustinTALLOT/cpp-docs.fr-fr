@@ -10,16 +10,16 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: a8948594bade940834e041adc73d56cc7847acc0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3477f77b811d8bec09b63664a05a4e251214aefa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187503"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213123"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
-Le mot clé **Virtual** déclare une fonction virtuelle ou une classe de base virtuelle.
+Le **`virtual`** mot clé déclare une fonction virtuelle ou une classe de base virtuelle.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,7 +37,7 @@ Spécifie le type de retour de la fonction membre virtuelle.
 Déclare une fonction membre.
 
 *Access-specifier*<br/>
-Définit le niveau d’accès à la classe de base, **public**, **protected** ou **Private**. Peut apparaître avant ou après le mot clé **Virtual** .
+Définit le niveau d’accès à la classe de base **`public`** , **`protected`** ou **`private`** . Peut apparaître avant ou après le **`virtual`** mot clé.
 
 *nom de la classe de base*<br/>
 Identifie un type de classe déclaré précédemment.

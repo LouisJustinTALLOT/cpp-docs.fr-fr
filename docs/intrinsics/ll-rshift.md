@@ -8,16 +8,16 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6ae750f1a8825096ee30adb01768d5603ab23a01
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217500"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219662"
 ---
 # <a name="__ll_rshift"></a>__ll_rshift
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Décale une valeur 64 bits spécifiée par le premier paramètre à droite, par un nombre de bits spécifié par le deuxième paramètre.
 
@@ -38,23 +38,23 @@ dans Valeur entière 64 bits à décaler vers la droite.
 *nBit*\
 dans Nombre de bits à décaler, Modulo 64 sur x64 et Modulo 32 sur x86.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Masque décalé par `nBit` bits.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__ll_rshift`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-Si le deuxième paramètre est supérieur à 64 sur x64 (32 sur x86), ce nombre est réalisé en modulo 64 (32 sur x86) pour déterminer le nombre de bits à décaler. Le `ll` préfixe indique qu’il s’agit d' `long long`une opération sur, `__int64`un autre nom pour, le type intégral signé 64 bits.
+Si le deuxième paramètre est supérieur à 64 sur x64 (32 sur x86), ce nombre est réalisé en modulo 64 (32 sur x86) pour déterminer le nombre de bits à décaler. Le `ll` préfixe indique qu’il s’agit d’une opération sur **`long long`** , un autre nom pour **`__int64`** , le type intégral signé 64 bits.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // ll_rshift.cpp
@@ -78,7 +78,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 ffffffffffffff00
@@ -90,7 +90,7 @@ fffffffffffffff0
 > [!NOTE]
 > Si `_ull_rshift` a été utilisé, le MSB de la valeur décalée vers la droite aurait été zéro, donc le résultat souhaité n’aurait pas été obtenu dans le cas d’une valeur négative.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

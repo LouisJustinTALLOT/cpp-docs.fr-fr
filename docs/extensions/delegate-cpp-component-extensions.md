@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172436"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219727"
 ---
 # <a name="delegate--ccli-and-ccx"></a>délégué (C++/CLI et C++/CX)
 
@@ -27,7 +27,7 @@ Le Windows Runtime et le Common Language Runtime prennent en charge les délégu
 
 **delegate** est un mot clé contextuel. Pour plus d’informations, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md).
 
-Vous pouvez détecter, au moment de la compilation, si un type est délégué, avec le trait de type `__is_delegate()`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
+Vous pouvez détecter, au moment de la compilation, si un type est délégué, avec le trait de type `__is_delegate()`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -47,10 +47,10 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Paramètres
 
-*access*<br/>
-(facultatif) L’accessibilité du délégué, qui peut être **public** (valeur par défaut) ou **private**. Le prototype de fonction peut également être qualifié avec les mots clés **const** ou **volatile**.
+*accéder*<br/>
+facultatif Accessibilité du délégué, qui peut être **`public`** (valeur par défaut) ou **`private`** . Le prototype de fonction peut également être qualifié avec **`const`** les **`volatile`** Mots clés ou.
 
-*return-type*<br/>
+*type de retour*<br/>
 Le type de retour du prototype de fonction.
 
 *delegate-type-identifier*<br/>
@@ -81,13 +81,13 @@ function_declaration
 
 ### <a name="parameters"></a>Paramètres
 
-*access*<br/>
+*accéder*<br/>
 (facultatif) L’accessibilité du délégué hors de l’assembly, qui peut être public ou private.  La valeur par défaut est private.  À l’intérieur d’une classe, un délégué peut disposer de n’importe quelle accessibilité.
 
 *function_declaration*<br/>
 La signature de la fonction pouvant être liée au délégué. Le type de retour d’un délégué peut être n’importe quel type managé. Pour des raisons d’interopérabilité, il est recommandé que le type de retour d’un délégué soit un type CLS.
 
-Pour définir un délégué indépendant, le premier paramètre dans *function_declaration* doit être du type du pointeur **this** pour l’objet.
+Pour définir un délégué indépendant, le premier paramètre de *function_declaration* doit être le type du **`this`** pointeur pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -119,7 +119,7 @@ Lorsque vous créez un délégué pour une fonction static ou global, un seul pa
 
 Pour plus d’informations sur les délégués, consultez
 
-- [Guide pratique pour définir et utiliser des délégués (C++-CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+- [Comment : définir et utiliser des délégués (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
 - [Délégués génériques (C++/CLI)](generic-delegates-visual-cpp.md)
 
@@ -202,4 +202,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

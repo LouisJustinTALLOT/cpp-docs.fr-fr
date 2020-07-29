@@ -1,19 +1,19 @@
 ---
-title: 'Procédure pas à pas : Déboguer un projet (C++)'
+title: "Procédure pas à pas : débogage d'un projet (C++)"
 ms.date: 04/25/2019
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: ce792345b045a1e647de6363ca094fb3f3826b73
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400975"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219675"
 ---
-# <a name="walkthrough-debugging-a-project-c"></a>Procédure pas à pas : Déboguer un projet (C++)
+# <a name="walkthrough-debugging-a-project-c"></a>Procédure pas à pas : débogage d'un projet (C++)
 
 Dans cette procédure pas à pas, vous modifiez le programme pour résoudre le problème que vous avez détecté au moment du test du projet.
 
@@ -27,11 +27,11 @@ Dans cette procédure pas à pas, vous modifiez le programme pour résoudre le p
 
 1. Pour voir ce qui se passe quand un objet `Cardgame` est détruit, examinez le destructeur de la classe `Cardgame`.
 
-   Dans la barre de menus, choisissez **Affichage** > **Affichage de classes**.
+   Dans la barre de menus, choisissez **Afficher**  >  **affichage de classes**.
 
    Dans la fenêtre **Affichage de classes**, développez l’arborescence du projet **Game** et sélectionnez la classe **Cardgame** pour afficher les membres de classe et les méthodes.
 
-   Ouvrez le menu contextuel du destructeur **~Cardgame(void)** , puis choisissez **Atteindre la définition**.
+   Ouvrez le menu contextuel du destructeur **~Cardgame(void)**, puis choisissez **Atteindre la définition**.
 
 1. Pour réduire la valeur de `totalParticipants` quand un Cardgame se termine, ajoutez le code suivant entre les accolades du destructeur `Cardgame::~Cardgame`.
 
@@ -41,20 +41,20 @@ Dans cette procédure pas à pas, vous modifiez le programme pour résoudre le p
 
    [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
-1. Dans la barre de menus, choisissez **Générer**  >  **Générer la solution**.
+1. Dans la barre de menus, choisissez **générer**  >  **générer la solution**.
 
-1. Dès que la build est effectuée, exécutez-la en mode débogage en choisissant **Déboguer** > **Démarrer le débogage** dans la barre de menus, ou appuyez sur la touche **F5**. Le programme s’interrompt au premier point d’arrêt.
+1. Une fois la génération terminée, exécutez-la en mode débogage en choisissant **Déboguer**  >  **Démarrer le débogage** dans la barre de menus, ou en appuyant sur la touche **F5** . Le programme s’interrompt au premier point d’arrêt.
 
-1. Pour exécuter pas à pas le programme, dans la barre de menus, choisissez **Déboguer** > **Pas à pas principal**, ou appuyez sur **F10**.
+1. Pour effectuer un pas à pas détaillé dans le programme, dans la barre de menus, choisissez **Déboguer**  >  **pas à pas principal**ou appuyez sur la touche **F10** .
 
-   Notez qu’après l’exécution de chaque constructeur `Cardgame`, la valeur de `totalParticipants` augmente. Quand la fonction `PlayGames` retourne une réponse, chaque fois qu’une instance `Cardgame` est hors de portée et supprimée (et que le destructeur est appelé), `totalParticipants` diminue. Juste avant l’exécution de l’instruction `return`, `totalParticipants` est égal à 0.
+   Notez qu’après l’exécution de chaque constructeur `Cardgame`, la valeur de `totalParticipants` augmente. Quand la fonction `PlayGames` retourne une réponse, chaque fois qu’une instance `Cardgame` est hors de portée et supprimée (et que le destructeur est appelé), `totalParticipants` diminue. Juste avant l' **`return`** exécution de l’instruction, est `totalParticipants` égal à 0.
 
-1. Continuer à exécuter pas à pas le programme jusqu’à la fin, ou laissez-le s’exécuter en choisissant **Déboguer** > **Exécuter** dans la barre de menus, ou appuyez sur **F5**.
+1. Poursuivez l’exécution pas à pas du programme jusqu’à son arrêt, ou laissez-le s’exécuter en choisissant **Déboguer**  >  **exécuter** dans la barre de menus, ou en appuyant sur la touche **F5** .
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-**Précédent :** [Procédure pas à pas : Test d’un projet (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Suivant :** [Procédure pas à pas : Déploiement de votre programme (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
+**Précédent :** [Procédure pas à pas : test d’un projet (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Suivant :** [Procédure pas à pas : déploiement de votre programme (C++)](../ide/walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="see-also"></a>Voir aussi
 

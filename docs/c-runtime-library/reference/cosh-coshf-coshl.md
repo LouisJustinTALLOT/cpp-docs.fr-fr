@@ -33,12 +33,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: e5e313f08fc7e6d00a1cffc9522d3c8a818cd152
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fb171d622d5bc187342054a74e8aa19f83c3c560
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917227"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213604"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -70,12 +70,12 @@ Par défaut, si le résultat est trop grand dans un appel **cosh**, **coshf,** o
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Aucun|**_DOMAIN**|
-|*x* ≥ 7.104760 e + 002|**INEXACT**+**dépassement de capacité** inexact|**SURCHARGE**|
+|± **QNAN**, **IND**|aucun|**_DOMAIN**|
+|*x* ≥ 7.104760 e + 002|**INexact** + **Dépassement de capacité**|**SURCHARGE**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cosh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **cosh** prend toujours et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cosh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **cosh** accepte et retourne toujours un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -87,7 +87,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple dans [Sinh, sinhf,, sinhl](sinh-sinhf-sinhl.md).
 

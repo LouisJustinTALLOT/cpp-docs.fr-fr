@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 4bcc17ada430c1e3b14ef1ef67ea97e863dbdd5d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370685"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220910"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution, classe
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType RealType*\
-Le type de résultat de point flottant, par défaut pour **doubler**. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
+*RealType*\
+Le type de résultat à virgule flottante a comme valeur par défaut **`double`** . Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md) .
 
-*Urng*\
-Le moteur de générateur de nombre aléatoire uniforme. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
+*GÉNÉRATEUR URNG*\
+Moteur de générateur de nombres aléatoires uniformes. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit une distribution qui produit des valeurs d’un type de point flottant spécifié par l’utilisateur, ou le **type double** si aucune n’est fournie, distribuée selon la distribution Gamma. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la loi gamma. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -95,7 +95,7 @@ La fonction membre `reset()` ignore toutes les valeurs mises en cache. Ainsi, le
 
 Les fonctions membres `operator()` retournent la valeur générée suivante d’après le moteur URNG, à partir du package de paramètres actuel ou spécifié.
 
-Pour plus d’informations sur les [ \< ](../standard-library/random.md)classes de distribution et leurs membres, voir>aléatoire .
+Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md) .
 
 Pour plus d’informations sur la loi de Gamma, consultez l’article de Wolfram MathWorld [Gamma Distribution](https://go.microsoft.com/fwlink/p/?linkid=401111).
 
@@ -184,11 +184,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<random>
+**En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution::gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution :: gamma_distribution
 
 Construit la distribution.
 
@@ -199,7 +199,7 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*Alpha*\
+*lettres*\
 Paramètre de distribution `alpha`.
 
 *Bêta*\
@@ -216,7 +216,7 @@ Le premier constructeur construit un objet dont la valeur `alpha` stockée conti
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::param-type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 
@@ -234,7 +234,7 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*Alpha*\
+*lettres*\
 Paramètre de distribution `alpha`.
 
 *Bêta*\
@@ -251,4 +251,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<>aléatoires](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

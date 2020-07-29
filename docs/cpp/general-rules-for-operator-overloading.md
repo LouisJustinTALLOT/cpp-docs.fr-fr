@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-ms.openlocfilehash: 0c8cbea3411acd50be376ae0853a143af57458f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: da0bf04435118c819fc29efd3082d8d312e43006
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188590"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213396"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Règles générales de surcharge d'opérateur
 
@@ -38,9 +38,9 @@ Les règles suivantes limitent le mode d'implémentation des opérateurs surchar
     }
     ```
 
-   L'exemple de code précédent déclare l'opérateur Inférieur à comme fonction membre ; toutefois, les opérateurs d'addition sont déclarés comme fonctions globales qui ont un accès ami. Notez que plusieurs implémentations peuvent être fournies pour un opérateur donné. Dans le cas de l'opérateur d'addition précédent, les deux implémentations sont fournies pour faciliter la commutativité. Il est tout aussi probable que les opérateurs qui ajoutent un `Point` à un `Point`, **int** à un `Point`, etc., peuvent être implémentés.
+   L'exemple de code précédent déclare l'opérateur Inférieur à comme fonction membre ; toutefois, les opérateurs d'addition sont déclarés comme fonctions globales qui ont un accès ami. Notez que plusieurs implémentations peuvent être fournies pour un opérateur donné. Dans le cas de l'opérateur d'addition précédent, les deux implémentations sont fournies pour faciliter la commutativité. Il est tout aussi probable que les opérateurs qui ajoutent un `Point` à un `Point` , **`int`** à un `Point` , etc., peuvent être implémentés.
 
-- Les opérateurs obéissent aux règles de priorité, de regroupement et de nombre d'opérandes dictées par leur utilisation classique avec les types intégrés. Par conséquent, il n’existe aucun moyen d’exprimer le concept « ajouter 2 et 3 à un objet de type `Point`», «2 à ajouter à la coordonnée *x* et 3 à ajouter à la coordonnée *y* .
+- Les opérateurs obéissent aux règles de priorité, de regroupement et de nombre d'opérandes dictées par leur utilisation classique avec les types intégrés. Par conséquent, il n’existe aucun moyen d’exprimer le concept « ajouter 2 et 3 à un objet de type `Point` », « 2 à ajouter à la coordonnée *x* » et 3 à ajouter à la coordonnée *y* .
 
 - Les opérateurs unaires déclarés comme fonctions membres n’acceptent pas d’argument ; s’ils sont déclarés comme fonctions globales, ils en prennent un.
 
@@ -50,7 +50,7 @@ Les règles suivantes limitent le mode d'implémentation des opérateurs surchar
 
 - Les opérateurs surchargés ne peuvent pas avoir d’arguments par défaut.
 
-- Tous les opérateurs surchargés, à l’exception de l’assignation (**Operator =** ), sont hérités par les classes dérivées.
+- Tous les opérateurs surchargés, à l’exception de l’assignation (**Operator =**), sont hérités par les classes dérivées.
 
 - Le premier argument pour les opérateurs surchargés déclarés comme fonctions membres est toujours le type de classe de l’objet pour lequel l’opérateur est appelé (la classe dans laquelle l’opérateur est déclaré ou une classe dérivée de cette classe). Aucune conversion n'est fournie pour le premier argument.
 
@@ -63,11 +63,11 @@ var++;
 ++var;
 ```
 
-On ne peut pas se reposer sur cette identité pour les types de classe qui surchargent des opérateurs. De plus, certaines des exigences implicites dans l’utilisation de ces opérateurs pour les types de base sont allégées pour les opérateurs surchargés. Par exemple, l’opérateur d’addition/assignation, **+=** , requiert que l’opérande gauche soit une l-value lorsqu’il est appliqué à des types de base ; Il n’existe aucune exigence de ce type lorsque l’opérateur est surchargé.
+On ne peut pas se reposer sur cette identité pour les types de classe qui surchargent des opérateurs. De plus, certaines des exigences implicites dans l’utilisation de ces opérateurs pour les types de base sont allégées pour les opérateurs surchargés. Par exemple, l’opérateur d’addition/assignation, **+=** , requiert que l’opérande gauche soit une l-value lorsqu’il est appliqué à des types de base ; il n’existe aucune exigence de ce type lorsque l’opérateur est surchargé.
 
 > [!NOTE]
 > Pour des raisons de cohérence, il est souvent préférable de suivre le modèle des types intégrés lors de la définition des opérateurs surchargés. Si la sémantique d'un opérateur surchargé diffère sensiblement de sa signification dans d'autres contextes, il peut être plus perturbant qu'utile.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Surcharge d'opérateur](../cpp/operator-overloading.md)
+[Surcharge d’opérateur](../cpp/operator-overloading.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 74e215204ef334bb67e8f044622d35f4e76fe401
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187958"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213136"
 ---
 # <a name="unions"></a>Unions
 
 > [!NOTE]
 > Dans C++ 17 et versions ultérieures, la classe **std :: variant** est une alternative de type sécurisé pour les unions.
 
-Une **Union** est un type défini par l’utilisateur dans lequel tous les membres partagent le même emplacement de mémoire. Cela signifie qu'à un moment donné une union ne peut pas contenir plusieurs objets de sa liste de membres. Cela signifie également que, quel que soit le nombre de membres dans une union, elle utilise toujours uniquement assez de mémoire pour stocker le plus grand membre.
+Un **`union`** est un type défini par l’utilisateur dans lequel tous les membres partagent le même emplacement de mémoire. Cela signifie qu'à un moment donné une union ne peut pas contenir plusieurs objets de sa liste de membres. Cela signifie également que, quel que soit le nombre de membres dans une union, elle utilise toujours uniquement assez de mémoire pour stocker le plus grand membre.
 
 Les unions peuvent être utiles pour économiser la mémoire lorsque vous avez un grand nombre d'objets et/ou une mémoire limitée. Toutefois, elles nécessitent une attention particulière pour une utilisation correcte, car vous êtes chargé de vérifier que vous accédez toujours au dernier membre qui a été écrit. Si des types de membres ont un constructeur non trivial, vous devez écrire un code supplémentaire pour construire et détruire ce membre explicitement. Avant d'utiliser une union, déterminez si le problème que vous essayez de résoudre pourrait être mieux exprimé à l'aide d'une classe de base et de classes dérivées.
 
@@ -41,7 +41,7 @@ Membres que l'union peut contenir. Consultez la section Notes.
 
 ## <a name="declaring-a-union"></a>Déclaration d'une union
 
-Commencez la déclaration d’une Union avec le mot clé **Union** et placez la liste des membres entre accolades :
+Commencez la déclaration d’une Union avec le **`union`** mot clé et mettez la liste des membres entre accolades :
 
 ```cpp
 // declaring_a_union.cpp
@@ -633,7 +633,7 @@ int main()
 
 L'union `NumericType` est organisée en mémoire (conceptuellement) comme l'illustre la figure ci-dessous.
 
-![Stockage des données dans une Union de type numérique](../cpp/media/vc38ul1.png "Stockage des données dans une Union NumericType") <br/>
+![Stockage de données d'union de type numérique](../cpp/media/vc38ul1.png "Stockage des données dans une Union NumericType") <br/>
 Stockage de données dans l'union NumericType
 
 ## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>Unions anonymes
@@ -648,9 +648,9 @@ Les noms déclarés dans une union anonyme sont utilisés directement comme les 
 
 Outre les restrictions applicables aux unions nommées, les unions anonymes sont soumises à ces restrictions supplémentaires :
 
-- Ils doivent également être déclarés comme **statiques** s’ils sont déclarés dans la portée de fichier ou d’espace de noms.
+- Ils doivent également être déclarés comme s’ils étaient **`static`** déclarés dans une portée de fichier ou d’espace de noms.
 
-- Ils peuvent avoir uniquement des membres **publics** ; les membres **privés** et **protégés** dans les unions anonymes génèrent des erreurs.
+- Ils peuvent avoir uniquement des **`public`** membres **`private`** et les **`protected`** membres des unions anonymes génèrent des erreurs.
 
 - Ils ne peuvent pas avoir de fonctions membres.
 
@@ -659,4 +659,4 @@ Outre les restrictions applicables aux unions nommées, les unions anonymes sont
 [Classes et structs](../cpp/classes-and-structs-cpp.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [class](../cpp/class-cpp.md)<br/>
-[struct](../cpp/struct-cpp.md)
+[modélis](../cpp/struct-cpp.md)

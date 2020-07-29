@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: fed33c198502b75e824bcaf698227d283f4b85f9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b7b99dae2ffb58123c05a65872e4c71e149ac12c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142752"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219571"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy, classe
 
@@ -32,28 +32,28 @@ class SchedulerPolicy;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[SchedulerPolicy](#ctor)|Surchargé. Construit une nouvelle stratégie de planificateur et la remplit avec des valeurs pour les [clés de stratégie](concurrency-namespace-enums.md) prises en charge par les planificateurs Runtime d’accès concurrentiel et le gestionnaire des ressources.|
 |[~ SchedulerPolicy, destructeur](#dtor)|Détruit une stratégie de planificateur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[GetPolicyValue](#getpolicyvalue)|Récupère la valeur de la clé de stratégie fournie en tant que paramètre `key`.|
-|[SetConcurrencyLimits](#setconcurrencylimits)|Définit simultanément les stratégies `MinConcurrency` et `MaxConcurrency` sur l’objet `SchedulerPolicy`.|
-|[SetPolicyValue](#setpolicyvalue)|Définit la valeur de la clé de stratégie fournie en tant que paramètre `key` et retourne l’ancienne valeur.|
+|[GetPolicyValue](#getpolicyvalue)|Récupère la valeur de la clé de stratégie fournie en tant que `key` paramètre.|
+|[SetConcurrencyLimits](#setconcurrencylimits)|Définit simultanément les `MinConcurrency` `MaxConcurrency` stratégies et sur l' `SchedulerPolicy` objet.|
+|[SetPolicyValue](#setpolicyvalue)|Définit la valeur de la clé de stratégie fournie en tant que `key` paramètre et retourne l’ancienne valeur.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[operator=](#operator_eq)|Affecte la stratégie de planificateur à partir d’une autre stratégie de planificateur.|
+|[opérateur =](#operator_eq)|Affecte la stratégie de planificateur à partir d’une autre stratégie de planificateur.|
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les stratégies qui peuvent être contrôlées à l’aide de la classe `SchedulerPolicy`, consultez [PolicyElementKey,](concurrency-namespace-enums.md).
+Pour plus d’informations sur les stratégies qui peuvent être contrôlées à l’aide de la `SchedulerPolicy` classe, consultez [PolicyElementKey,](concurrency-namespace-enums.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -63,11 +63,11 @@ Pour plus d’informations sur les stratégies qui peuvent être contrôlées à
 
 **En-tête :** concrt. h, concrtrm. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="getpolicyvalue"></a>GetPolicyValue
+## <a name="getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue
 
-Récupère la valeur de la clé de stratégie fournie en tant que paramètre `key`.
+Récupère la valeur de la clé de stratégie fournie en tant que `key` paramètre.
 
 ```cpp
 unsigned int GetPolicyValue(PolicyElementKey key) const;
@@ -80,13 +80,13 @@ Clé de stratégie pour laquelle récupérer une valeur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la clé spécifiée par le paramètre `key` est prise en charge, la valeur de la stratégie pour la clé est castée en `unsigned int`.
+Si la clé spécifiée par le `key` paramètre est prise en charge, la valeur de stratégie pour la clé est castée en **`unsigned int`** .
 
 ### <a name="remarks"></a>Notes
 
 La méthode lève [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) pour une clé de stratégie non valide.
 
-## <a name="operator_eq"></a>opérateur =
+## <a name="operator"></a><a name="operator_eq"></a>opérateur =
 
 Affecte la stratégie de planificateur à partir d’une autre stratégie de planificateur.
 
@@ -105,9 +105,9 @@ Référence à la stratégie du planificateur.
 
 ### <a name="remarks"></a>Notes
 
-Souvent, la méthode la plus pratique pour définir une nouvelle stratégie de planificateur consiste à copier une stratégie existante et à la modifier à l’aide des méthodes `SetPolicyValue` ou `SetConcurrencyLimits`.
+Souvent, la méthode la plus pratique pour définir une nouvelle stratégie de planificateur consiste à copier une stratégie existante et à la modifier à l’aide des `SetPolicyValue` `SetConcurrencyLimits` méthodes ou.
 
-## <a name="ctor"></a>SchedulerPolicy
+## <a name="schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy
 
 Construit une nouvelle stratégie de planificateur et la remplit avec des valeurs pour les [clés de stratégie](concurrency-namespace-enums.md) prises en charge par les planificateurs Runtime d’accès concurrentiel et le gestionnaire des ressources.
 
@@ -125,7 +125,7 @@ SchedulerPolicy(
 ### <a name="parameters"></a>Paramètres
 
 *_PolicyKeyCount*<br/>
-Nombre de paires clé/valeur qui suivent le paramètre `_PolicyKeyCount`.
+Nombre de paires clé/valeur qui suivent le `_PolicyKeyCount` paramètre.
 
 *_SrcPolicy*<br/>
 Stratégie source à copier.
@@ -134,11 +134,11 @@ Stratégie source à copier.
 
 Le premier constructeur crée une nouvelle stratégie de planificateur dans laquelle toutes les stratégies seront initialisées à leurs valeurs par défaut.
 
-Le deuxième constructeur crée une nouvelle stratégie de planificateur qui utilise un style de paramètre nommé d’initialisation. Les valeurs qui suivent le paramètre `_PolicyKeyCount` sont fournies en tant que paires clé/valeur. Toute clé de stratégie qui n’est pas spécifiée dans ce constructeur aura sa valeur par défaut. Ce constructeur peut lever les exceptions [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) ou [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).
+Le deuxième constructeur crée une nouvelle stratégie de planificateur qui utilise un style de paramètre nommé d’initialisation. Les valeurs qui suivent le `_PolicyKeyCount` paramètre sont fournies en tant que paires clé/valeur. Toute clé de stratégie qui n’est pas spécifiée dans ce constructeur aura sa valeur par défaut. Ce constructeur peut lever les exceptions [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) ou [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).
 
-Le troisième constructeur est un constructeur de copie. Souvent, la méthode la plus pratique pour définir une nouvelle stratégie de planificateur consiste à copier une stratégie existante et à la modifier à l’aide des méthodes `SetPolicyValue` ou `SetConcurrencyLimits`.
+Le troisième constructeur est un constructeur de copie. Souvent, la méthode la plus pratique pour définir une nouvelle stratégie de planificateur consiste à copier une stratégie existante et à la modifier à l’aide des `SetPolicyValue` `SetConcurrencyLimits` méthodes ou.
 
-## <a name="dtor"></a>~ SchedulerPolicy
+## <a name="schedulerpolicy"></a><a name="dtor"></a>~ SchedulerPolicy
 
 Détruit une stratégie de planificateur.
 
@@ -146,9 +146,9 @@ Détruit une stratégie de planificateur.
 ~SchedulerPolicy();
 ```
 
-## <a name="setconcurrencylimits"></a>SetConcurrencyLimits
+## <a name="setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits
 
-Définit simultanément les stratégies `MinConcurrency` et `MaxConcurrency` sur l’objet `SchedulerPolicy`.
+Définit simultanément les `MinConcurrency` `MaxConcurrency` stratégies et sur l' `SchedulerPolicy` objet.
 
 ```cpp
 void SetConcurrencyLimits(
@@ -159,20 +159,20 @@ void SetConcurrencyLimits(
 ### <a name="parameters"></a>Paramètres
 
 *_MinConcurrency*<br/>
-Valeur de la clé de stratégie de `MinConcurrency`.
+Valeur de la `MinConcurrency` clé de stratégie.
 
 *_MaxConcurrency*<br/>
-Valeur de la clé de stratégie de `MaxConcurrency`.
+Valeur de la `MaxConcurrency` clé de stratégie.
 
 ### <a name="remarks"></a>Notes
 
-La méthode lève [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) si la valeur spécifiée pour la stratégie de `MinConcurrency` est supérieure à celle spécifiée pour la stratégie de `MaxConcurrency`.
+La méthode lève [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) si la valeur spécifiée pour la `MinConcurrency` stratégie est supérieure à celle spécifiée pour la `MaxConcurrency` stratégie.
 
 La méthode peut également lever [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) pour d’autres valeurs non valides.
 
-## <a name="setpolicyvalue"></a>SetPolicyValue
+## <a name="setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue
 
-Définit la valeur de la clé de stratégie fournie en tant que paramètre `key` et retourne l’ancienne valeur.
+Définit la valeur de la clé de stratégie fournie en tant que `key` paramètre et retourne l’ancienne valeur.
 
 ```cpp
 unsigned int SetPolicyValue(
@@ -190,19 +190,19 @@ Valeur à affecter à la clé de stratégie.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la clé spécifiée par le paramètre `key` est prise en charge, l’ancienne valeur de stratégie pour la clé est convertie en `unsigned int`.
+Si la clé spécifiée par le `key` paramètre est prise en charge, l’ancienne valeur de stratégie pour la clé est castée en **`unsigned int`** .
 
 ### <a name="remarks"></a>Notes
 
-La méthode lève [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) pour une clé de stratégie non valide ou une clé de stratégie dont la valeur ne peut pas être définie par la méthode `SetPolicyValue`.
+La méthode lève [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) pour une clé de stratégie non valide ou une clé de stratégie dont la valeur ne peut pas être définie par la `SetPolicyValue` méthode.
 
-La méthode lève [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) pour une valeur qui n’est pas prise en charge pour la clé spécifiée par le paramètre `key`.
+La méthode lève [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) pour une valeur qui n’est pas prise en charge pour la clé spécifiée par le `key` paramètre.
 
-Notez que cette méthode n’est pas autorisée à définir les stratégies de `MinConcurrency` ou de `MaxConcurrency`. Pour définir ces valeurs, utilisez la méthode [SetConcurrencyLimits](#setconcurrencylimits) .
+Notez que cette méthode n’est pas autorisée à définir `MinConcurrency` les `MaxConcurrency` stratégies ou. Pour définir ces valeurs, utilisez la méthode [SetConcurrencyLimits](#setconcurrencylimits) .
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [PolicyElementKey,](concurrency-namespace-enums.md)<br/>
 [CurrentScheduler, classe](currentscheduler-class.md)<br/>
 [Scheduler, classe](scheduler-class.md)<br/>

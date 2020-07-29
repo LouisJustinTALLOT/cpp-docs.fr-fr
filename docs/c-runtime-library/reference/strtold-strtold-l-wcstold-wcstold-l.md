@@ -35,12 +35,12 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: ba57eed25fd8e1310b9e837c55cb1e1f7ec2b718
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 14d67153eda851edc543e6eb2ad441ef35132ee5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912596"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213487"
 ---
 # <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -82,15 +82,15 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**strtold** retourne la valeur du nombre à virgule flottante sous la forme d’un **double** **long** , sauf lorsque la représentation provoque un dépassement de capacité, dans ce cas, la fonction retourne +/-**HUGE_VALL**. Le signe de **HUGE_VALL** correspond au signe de la valeur qui ne peut pas être représentée. **strtold** retourne 0 si aucune conversion ne peut être effectuée ou si un dépassement de capacité négatif se produit.
+**strtold** retourne la valeur du nombre à virgule flottante sous la forme d’un **`long double`** , sauf lorsque la représentation provoque un dépassement de capacité, dans ce cas, la fonction retourne +/-**HUGE_VALL**. Le signe de **HUGE_VALL** correspond au signe de la valeur qui ne peut pas être représentée. **strtold** retourne 0 si aucune conversion ne peut être effectuée ou si un dépassement de capacité négatif se produit.
 
 **wcstold** retourne des valeurs de façon analogue à **strtold**. Pour les deux fonctions, **errno** a la valeur **ERANGE** si le dépassement de capacité positif ou négatif se produit et que le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Chaque fonction convertit la chaîne d’entrée *strSource* en un **long** **double**. La fonction **strtold** cesse de lire la chaîne *strSource* au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Il peut s’agir du caractère Null de fin. La version à caractères larges de **strtold** est **wcstold**; son argument *strSource* est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
+Chaque fonction convertit la chaîne d’entrée *strSource* en **`long double`** . La fonction **strtold** cesse de lire la chaîne *strSource* au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Il peut s’agir du caractère Null de fin. La version à caractères larges de **strtold** est **wcstold**; son argument *strSource* est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -109,7 +109,7 @@ Si *endptr* n’a pas la **valeur null**, un pointeur vers le caractère qui a a
 
 [*espace blanc*] [*signe*] [*chiffres*] [. *chiffres*] [{**d** &#124; **d** &#124; **e** &#124; **e**} [*signe*]*chiffres*]
 
-Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés ; le *signe* est plus (**+**) ou moins (**-**); et les *chiffres* sont un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**d**, **D**, **e** ou **E**) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
+Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés ; *Sign* est un signe plus ( **+** ) ou moins ( **-** ); et les *chiffres* correspondent à un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**d**, **D**, **e** ou **E**) et éventuellement d’un entier signé. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -157,7 +157,7 @@ string = 3.1415926535898This stopped it
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Fonctions de valeur chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Fonctions de chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
