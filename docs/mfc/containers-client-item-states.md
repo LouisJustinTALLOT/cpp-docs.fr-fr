@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 927211ccec35d8ec26e2f76b971c59b80248ab96
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 660b544a0f061ae2e4435777cdd934367f2e7652
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625989"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228646"
 ---
 # <a name="containers-client-item-states"></a>Conteneurs : états d'élément client
 
@@ -30,7 +30,7 @@ Un élément client passe par plusieurs états lorsqu'il est créé, activé, mo
 
 - *COleClientItem::activeUIState*
 
-Dans l'état vide, un élément client n'est pas encore complètement un élément. De la mémoire lui a été allouée, mais elle n'a pas encore été initialisée avec les données de l'élément OLE. Il s’agit de l’État dans lequel se trouve un élément client lorsqu’il a été créé via un appel à **New** , mais n’a pas encore subi la deuxième étape de la création classique en deux étapes.
+Dans l'état vide, un élément client n'est pas encore complètement un élément. De la mémoire lui a été allouée, mais elle n'a pas encore été initialisée avec les données de l'élément OLE. Il s’agit de l’État dans lequel se trouve un élément client lorsqu’il a été créé via un appel à **`new`** mais n’a pas encore subi la deuxième étape de la création classique en deux étapes.
 
 Dans la deuxième étape, effectuée par le biais d’un appel à `COleClientItem::CreateFromFile` ou d’une autre `CreateFrom` fonction *xxxx* , l’élément est entièrement créé. Les données OLE (d'un fichier ou d'une autre source, telle que le Presse-papiers) ont été associées à l'objet dérivé de `COleClientItem`. Maintenant l'élément se trouve dans l'état chargé.
 
@@ -44,4 +44,4 @@ Lorsqu'un élément a été activé sur place, il ne passe généralement que br
 [Activation](activation-cpp.md)<br/>
 [Conteneurs : notifications d’élément client](containers-client-item-notifications.md)<br/>
 [Dispositifs de suivi](trackers.md)<br/>
-[CRectTracker, classe](reference/crecttracker-class.md)
+[CRectTracker (classe)](reference/crecttracker-class.md)

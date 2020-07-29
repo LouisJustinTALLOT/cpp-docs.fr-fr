@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: 1cd7abbbc43ae56861b3b83451b41933b8b0b4f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: c5423cfb8e2ea1b39001ec512c9c7f460d6a1a19
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693410"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228685"
 ---
 # <a name="add-a-member-function"></a>Ajouter une fonction membre
 
@@ -30,9 +30,9 @@ Dans **l’affichage de classes**, vous pouvez ajouter une fonction membre à n�
 
 1. Cliquez sur le bouton **Terminer** pour générer le code de la fonction membre.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
-- [Assistant Ajout de fonction membre](#add-member-function-wizard)
+- [Assistant Ajout d’une fonction membre](#add-member-function-wizard)
 
 ## <a name="add-member-function-wizard"></a>Assistant Ajout de fonction membre
 
@@ -46,10 +46,10 @@ Une fois que vous avez ajouté la fonction membre avec l’Assistant, vous pouve
 
   | | | |
   |---|---|---|
-  | `char` | `int` | `unsigned int` |
-  | `double` | `long` | `unsigned long` |
-  | `float` | `short` | `void` |
-  | `HRESULT` | `unsigned char` | |
+  | **`char`** | **`int`** | **`unsigned int`** |
+  | **`double`** | **`long`** | **`unsigned long`** |
+  | **`float`** | **`short`** | **`void`** |
+  | `HRESULT` | **`unsigned char`** | |
 
 - **Nom de la fonction**
 
@@ -61,9 +61,9 @@ Une fois que vous avez ajouté la fonction membre avec l’Assistant, vous pouve
 
   | | | |
   |---|---|---|
-  | `char` | `int` | `unsigned char` |
-  | `double` | `long` | `unsigned int` |
-  | `float` | `short` | `unsigned long` |
+  | **`char`** | **`int`** | **`unsigned char`** |
+  | **`double`** | **`long`** | **`unsigned int`** |
+  | **`float`** | **`short`** | **`unsigned long`** |
 
 - **Nom du paramètre**
 
@@ -73,22 +73,22 @@ Une fois que vous avez ajouté la fonction membre avec l’Assistant, vous pouve
 
   Affiche la liste des paramètres que vous avez ajoutés à la fonction membre. Pour ajouter un paramètre à la liste, spécifiez un type et un nom dans les zones **Type de paramètre** et **Nom du paramètre**, puis sélectionnez **Ajouter**. Pour supprimer un paramètre de la liste, sélectionnez-le et sélectionnez **Supprimer**.
 
-- **Accès**
+- **y accéder**
 
-  Définit l’accès à la fonction membre. Les modificateurs d’accès sont des mots clés spécifiant l’accès des autres classes à la fonction membre. Pour plus d’informations sur la spécification de l’accès, consultez [Contrôle d’accès aux membres](../cpp/member-access-control-cpp.md). Le niveau d’accès à la fonction membre est défini par défaut sur `public`.
+  Définit l’accès à la fonction membre. Les modificateurs d’accès sont des mots clés spécifiant l’accès des autres classes à la fonction membre. Pour plus d’informations sur la spécification de l’accès, consultez [Contrôle d’accès aux membres](../cpp/member-access-control-cpp.md). Par défaut, le niveau d’accès à la fonction membre est défini sur **`public`** .
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [private](../cpp/private-cpp.md)
+  - [priv](../cpp/private-cpp.md)
 
   Vérifiez si la nouvelle fonction membre est statique ou virtuelle, et si elle est inline ou pure. Si vous définissez la fonction membre comme pure, la case **Virtual** est cochée et la case **Inline** n’est plus disponible. Par défaut, la fonction membre est non statique et non virtuelle.
 
   | Option | Description |
   |--------|-------------|
-  | [Static](../cpp/storage-classes-cpp.md) |  Spécifie que la fonction agit comme une fonction globale et peut être appelée à l’extérieur de la classe, même sans instanciation de classe. La fonction membre n’a pas accès aux membres non statiques. Une fonction membre spécifiée comme `Static` ne peut pas être virtuelle. |
-  | [Virtual](../cpp/virtual-cpp.md) | Garantit que la fonction membre correcte est appelée pour un objet, quelle que soit l’expression utilisée pour créer l’appel de fonction membre. Une fonction membre spécifiée comme `Virtual` ne peut pas être statique. |
-  | **Pure** | Indique qu’aucune implémentation n’est fournie pour la fonction membre virtuelle déclarée. **Pure** peut être spécifié uniquement sur les fonctions membres virtuelles. Une classe contenant au moins une fonction membre virtuelle pure est considérée comme une classe abstraite. Les classes dérivées de la classe abstraite doivent implémenter la fonction membre virtuelle pure, sinon elles aussi sont des classes abstraites. |
-  | [Inline](../cpp/inline-functions-cpp.md) | Indique au compilateur d’insérer une copie du corps de la fonction membre à chaque emplacement où la fonction membre est appelée. Une fonction membre spécifiée comme **Inline** ne peut pas être pure. |
+  | [Statique](../cpp/storage-classes-cpp.md) |  Spécifie que la fonction agit comme une fonction globale et peut être appelée à l’extérieur de la classe, même sans instanciation de classe. La fonction membre n’a pas accès aux membres non statiques. Une fonction membre spécifiée comme `Static` ne peut pas être virtuelle. |
+  | [Virtuelle](../cpp/virtual-cpp.md) | Garantit que la fonction membre correcte est appelée pour un objet, quelle que soit l’expression utilisée pour créer l’appel de fonction membre. Une fonction membre spécifiée comme `Virtual` ne peut pas être statique. |
+  | **FCP** | Indique qu’aucune implémentation n’est fournie pour la fonction membre virtuelle déclarée. **Pure** peut être spécifié uniquement sur les fonctions membres virtuelles. Une classe contenant au moins une fonction membre virtuelle pure est considérée comme une classe abstraite. Les classes dérivées de la classe abstraite doivent implémenter la fonction membre virtuelle pure, sinon elles aussi sont des classes abstraites. |
+  | [En ligne](../cpp/inline-functions-cpp.md) | Indique au compilateur d’insérer une copie du corps de la fonction membre à chaque emplacement où la fonction membre est appelée. Une fonction membre spécifiée comme **Inline** ne peut pas être pure. |
 
 - **Fichier .cpp**
 
@@ -98,6 +98,6 @@ Une fois que vous avez ajouté la fonction membre avec l’Assistant, vous pouve
 
   Fournit un commentaire dans le fichier d’en-tête pour la fonction membre.
 
-- **Signature de la fonction**
+- **Signature de fonction**
 
   Affiche la fonction membre textuelle à partir du code quand vous sélectionnez **Terminer**. Vous ne pouvez pas modifier le texte dans cette zone. Pour modifier la fonction membre, changez les zones appropriées de l’Assistant.

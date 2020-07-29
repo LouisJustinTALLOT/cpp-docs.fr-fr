@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 36c64a74310c72df38021aebd8abb3ee430da3f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a27d5fb49fe3576ee1f8d906219127d8b630c4e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375892"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228659"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Procédure pas à pas : utilisation de projets et de solutions (C++)
 
@@ -28,7 +28,7 @@ Il est recommandé d’avoir des notions de base du langage C++ et de savoir à 
 
 ## <a name="create-a-project"></a>Création d’un projet
 
-Pour créer un projet, choisissez d'abord un modèle de type de projet. Pour chaque type de projet, Visual Studio définit les paramètres du compilateur et, en fonction du type, génère du code de démarrage que vous pouvez modifier ultérieurement. Les étapes suivantes varient légèrement selon la version de Visual Studio que vous utilisez. Pour voir la documentation de votre version préférée de Visual Studio, utilisez le contrôle du sélecteur **Version.** On le trouve en haut de la table des contenus sur cette page.
+Pour créer un projet, choisissez d'abord un modèle de type de projet. Pour chaque type de projet, Visual Studio définit les paramètres du compilateur et, en fonction du type, génère du code de démarrage que vous pouvez modifier ultérieurement. Les étapes suivantes varient légèrement selon la version de Visual Studio que vous utilisez. Pour consulter la documentation de votre version par défaut de Visual Studio, utilisez le contrôle sélecteur de **version** . Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker range="vs-2019"
 
@@ -54,7 +54,7 @@ Pour créer un projet, choisissez d'abord un modèle de type de projet. Pour cha
 
 ### <a name="to-create-a-project-in-visual-studio-2017"></a>Pour créer un projet dans Visual Studio 2017
 
-1. Sur la barre de menu, choisissez **File** > **New** > **Project**.
+1. Dans la barre de menus, choisissez **fichier** > **nouveau** > **projet**.
 
 1. Dans le volet gauche de la boîte de dialogue **Nouveau projet**, développez **Installés**, puis sélectionnez **Visual C++** s’il n’est pas déjà ouvert.
 
@@ -76,7 +76,7 @@ Pour créer un projet, choisissez d'abord un modèle de type de projet. Pour cha
 
 ### <a name="to-create-a-project-in-visual-studio-2015"></a>Pour créer un projet dans Visual Studio 2015
 
-1. Sur la barre de menu, choisissez **File** > **New** > **Project**.
+1. Dans la barre de menus, choisissez **fichier** > **nouveau** > **projet**.
 
 1. Dans le volet gauche de la boîte de dialogue **Nouveau projet**, développez **Installés**, puis sélectionnez **Visual C++** s’il n’est pas déjà ouvert.
 
@@ -104,9 +104,9 @@ Cette partie de la procédure pas à pas montre comment ajouter une classe au pr
 
 1. Si **l’Explorateur de solutions** n’est pas visible dans Visual Studio, dans la barre de menus, choisissez **Affichage** > **Explorateur de solutions**.
 
-1. Dans **l’Explorateur de solutions**, sélectionnez le projet **Game**. Sur la barre de menu, choisissez **Project** > **Add Class**.
+1. Dans **l’Explorateur de solutions**, sélectionnez le projet **Game**. Dans la barre de menus, choisissez **projet**  >  **Ajouter une classe**.
 
-1. Dans le dialogue **De classe Add,** entrez *Cardgame* dans la case **Nom de classe.** Ne modifiez pas les noms de fichiers et les paramètres par défaut. Choisissez le bouton **OK**.
+1. Dans la boîte de dialogue **Ajouter une classe** , entrez *Cardgame* dans la zone nom de la **classe** . Ne modifiez pas les noms de fichiers et les paramètres par défaut. Choisissez le bouton **OK**.
 
    Visual Studio crée des fichiers et les ajoute à votre projet. Ceux-ci sont visibles dans la fenêtre **Explorateur de solutions**. Les fichiers Cardgame.h et Cardgame.cpp sont ouverts dans l’éditeur.
 
@@ -124,7 +124,7 @@ Cette partie de la procédure pas à pas montre comment ajouter une classe au pr
 
       `Cardgame();`
 
-      Modifiez le constructeur pour qu’il prenne un paramètre de type `int` nommé *players*.
+      Modifiez le constructeur pour qu’il prenne un paramètre de type **`int`** , nommé *Players*.
 
       <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
       `Cardgame(int players);`
@@ -182,7 +182,7 @@ Cette partie de la procédure pas à pas montre comment ajouter une classe au pr
     ```
 
    > [!NOTE]
-   > Vous pouvez utiliser la saisie semi-automatique lorsque vous écrivez du code. Par exemple, si vous entrez ce code au clavier, vous pouvez entrer *pl* ou *tot,* puis appuyez sur **Ctrl**+**Spacebar**. La saisie semi-automatique entre `players` ou `totalParticipants` pour vous.
+   > Vous pouvez utiliser la saisie semi-automatique lorsque vous écrivez du code. Par exemple, si vous entrez ce code au clavier, vous pouvez entrer *pl* *ou de l’ensemble, puis* appuyer sur **CTRL** + **espace**. La saisie semi-automatique entre `players` ou `totalParticipants` pour vous.
 
 ## <a name="add-test-code-to-your-main-function"></a>Ajouter du code de test à votre fonction principale
 
@@ -227,7 +227,7 @@ Ensuite, générez le projet et exécutez l’application.
 
 ### <a name="to-build-and-run-the-project"></a>Pour générer et exécuter le projet
 
-1. Sur la barre de menu, choisissez **Build** > **Build Solution**.
+1. Dans la barre de menus, choisissez **générer**  >  **générer la solution**.
 
    La sortie d’une génération s’affiche dans la fenêtre **Sortie**. Si votre génération réussit, la sortie doit ressembler à ceci :
 
@@ -245,7 +245,7 @@ Ensuite, générez le projet et exécutez l’application.
 
    Si votre génération a échoué, comparez votre code au code présenté dans les étapes précédentes.
 
-1. Pour exécuter le projet, sur la barre de menu, choisissez **Debug** > **Start Without Debugging**. Une fenêtre de console doit s’afficher, et la sortie doit ressembler à ceci :
+1. Pour exécuter le projet, dans la barre de menus, choisissez **Déboguer**  >  **exécuter sans débogage**. Une fenêtre de console doit s’afficher, et la sortie doit ressembler à ceci :
 
     ```Output
     4 players have started a new game.  There are now 4 players in total.
@@ -260,10 +260,10 @@ Félicitations, vous venez de générer une solution et un projet d’applicatio
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-**Précédent :** [Utilisation de l’IDE Visual Studio pour le développement de bureau de C](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Suivant :** [Procédure pas à pas : Construire un projet (CMD)](../ide/walkthrough-building-a-project-cpp.md)
+**Précédent :** [utilisation de l’IDE Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**Étape suivante :** [procédure pas à pas : génération d’un projet (C++)](../ide/walkthrough-building-a-project-cpp.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence linguistique de CMD](../cpp/cpp-language-reference.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)<br/>

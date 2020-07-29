@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79b05fde362a44453aac45aa8dc269c9689ea8fc
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751186"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228672"
 ---
 # <a name="add-a-property"></a>Ajouter une propriété
 
@@ -46,7 +46,7 @@ Les méthodes `Get` et `Put` de la propriété sont affichées sous la forme de 
 
 ## <a name="in-this-section"></a>Contenu de cette section
 
-- [Noms, ajouter assistant de propriété](#names-add-property-wizard)
+- [Noms, Assistant Ajout de propriété](#names-add-property-wizard)
 - [Attributs IDL, Assistant Ajout de propriété](#idl-attributes-add-property-wizard)
 - [Propriétés stock](#stock-properties)
 
@@ -77,7 +77,7 @@ Utilisez cet Assistant pour ajouter une propriété à une interface.
 
 - **Fonction de notification**
 
-  Dispinterfaces MFC uniquement. Disponible uniquement si vous spécifiez **Variable membre** sous **Type d’implémentation**. Définit le nom de la fonction de notification appelée en cas de modification de la propriété. Par défaut, le nom de la `On`fonction de notification est configuré sur *PropertyName*`Changed`. Vous pouvez modifier ce nom.
+  Dispinterfaces MFC uniquement. Disponible uniquement si vous spécifiez **Variable membre** sous **Type d’implémentation**. Définit le nom de la fonction de notification appelée en cas de modification de la propriété. Par défaut, le nom de la fonction de notification est défini sur `On` *PropertyName* `Changed` . Vous pouvez modifier ce nom.
 
 - **Get, fonction**
 
@@ -94,7 +94,7 @@ Utilisez cet Assistant pour ajouter une propriété à une interface.
   |Type d’implémentation|Description|
   |-------------------------|-----------------|
   |**Stock**|Spécifie une implémentation stock pour la propriété sélectionnée dans **Nom de la propriété**. Valeur par défaut. Pour plus d’informations, consultez [Propriétés stock](#stock-properties).<br /><br /> Si vous spécifiez **Stock**, puis **Type de propriété**, **Type de paramètre** et **Nom du paramètre** apparaissent estompés.|
-  |**Variable membre**|Spécifie que la propriété est ajoutée comme variable membre. Vous pouvez ajouter des propriétés personnalisées ou la plupart des propriétés stock comme variables membres. Vous ne pouvez pas spécifier `Text` la variable **membre** pour le `Caption`, `hWnd`, et les propriétés.<br /><br /> Fournit les noms par défaut sous **Nom de la variable** et **Fonction de notification**. Vous pouvez modifier ce nom.|
+  |**Variable membre**|Spécifie que la propriété est ajoutée comme variable membre. Vous pouvez ajouter des propriétés personnalisées ou la plupart des propriétés stock comme variables membres. Vous ne pouvez pas spécifier de **variable membre** pour les `Caption` `hWnd` Propriétés, et `Text` .<br /><br /> Fournit les noms par défaut sous **Nom de la variable** et **Fonction de notification**. Vous pouvez modifier ce nom.|
   |**Méthodes Get/Set**|Spécifie que la propriété est ajoutée comme fonctions `Get`*PropertyName* et `Set`*PropertyName*, par défaut. Ces noms apparaissent sous **Get, fonction** et **Fonction Set**.<br /><br /> Vous pouvez modifier la valeur par défaut de **Type de propriété**, qui transmet une valeur pour la fonction Get. Vous pouvez spécifier des paramètres pour les fonctions `Get` et `Set`.|
 
 - **Get, fonction**
@@ -112,7 +112,7 @@ Utilisez cet Assistant pour ajouter une propriété à une interface.
 
 - **Attributs de paramètres**
 
-  Interfaces ATL uniquement. Définit si le paramètre `in`spécifié `out`par le nom **de Para** est, , les deux, ou aucun.
+  Interfaces ATL uniquement. Définit si le paramètre spécifié par le **nom de paramètre** est `in` , `out` , both ou None.
 
   |Option|Description|
   |------------|-----------------|
@@ -123,11 +123,11 @@ Utilisez cet Assistant pour ajouter une propriété à une interface.
 
   Définit le type de données du paramètre. Sélectionnez le type dans la liste.
 
-- **Nom de paramètre**
+- **Nom du paramètre**
 
   Définit le nom d’un paramètre que vous ajoutez pour la propriété, si celle-ci comporte des paramètres. Dès que vous sélectionnez **Ajouter**, le nom du paramètre s’affiche dans **Liste de paramètres**.
 
-- **Liste des paramètres**
+- **Liste de paramètres**
 
   Affiche la liste des attributs à ajouter à la propriété. Chaque élément de la liste comprend le nom du paramètre, le type du paramètre et les attributs. Utilisez **Ajouter** et **Supprimer** pour mettre à jour la liste.
 
@@ -157,7 +157,7 @@ Utilisez cette page de l’Assistant Ajout de propriété pour spécifier tous l
 
 - `helpstring`
 
-  Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique. Par défaut, il est `property` &nbsp;réglé sur le *nom de propriété&nbsp;*. Consultez [helpstring](/windows/win32/Midl/helpstring) dans les *Informations de référence MIDL*.
+  Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique. Par défaut, il est défini sur le nom de la **`property`** &nbsp; *propriété &nbsp; *. Consultez [helpstring](/windows/win32/Midl/helpstring) dans les *Informations de référence MIDL*.
 
 ### <a name="other-options"></a>Autres options
 

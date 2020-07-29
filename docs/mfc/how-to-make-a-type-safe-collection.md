@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 6ee4603f03ef8a95c218b0fe040e9606aab99ebb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7e6b0a4181607feaf6e92f5d92d95cb055761aa4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620012"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228620"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Comment : définir une collection de type sécurisé
 
@@ -63,7 +63,7 @@ Les opérateurs d’insertion surchargés pour l' `CArchive` appel `CObject::Ser
 
 ## <a name="using-nontemplate-collection-classes"></a><a name="_core_using_nontemplate_collection_classes"></a>Utilisation de classes de collection non basées sur des modèles
 
-MFC gère également des classes de collection introduites avec la version 1.0 de MFC. Ces classes ne sont pas basées sur les modèles. Elles peuvent être utilisées pour contenir des données des types pris en charge `CObject*` ,, `UINT` `DWORD` et `CString` . Vous pouvez utiliser ces collections prédéfinies (comme `CObList`) pour gérer les collections de tous les objets dérivés de `CObject`. MFC fournit également d’autres collections prédéfinies pour contenir des types primitifs tels que `UINT` et des pointeurs void ( `void` *). Toutefois, il est souvent pratique de définir vos propres collections de types cohérents pour stocker des objets de plusieurs classes spécifiques et ses dérivés. Notez que l’utilisation des classes de collection non basées sur des modèles nécessite plus de travail que l’utilisation des classes générées à partir de modèle.
+MFC gère également des classes de collection introduites avec la version 1.0 de MFC. Ces classes ne sont pas basées sur les modèles. Elles peuvent être utilisées pour contenir des données des types pris en charge `CObject*` ,, `UINT` `DWORD` et `CString` . Vous pouvez utiliser ces collections prédéfinies (comme `CObList`) pour gérer les collections de tous les objets dérivés de `CObject`. MFC fournit également d’autres collections prédéfinies pour contenir des types primitifs tels que `UINT` et des pointeurs void ( **`void*`** ). Toutefois, il est souvent pratique de définir vos propres collections de types cohérents pour stocker des objets de plusieurs classes spécifiques et ses dérivés. Notez que l’utilisation des classes de collection non basées sur des modèles nécessite plus de travail que l’utilisation des classes générées à partir de modèle.
 
 Il existe deux manières de créer des collections de types cohérents avec les collections basées sur les modèles :
 

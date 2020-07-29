@@ -1,19 +1,19 @@
 ---
-title: Différences entre CReBar et CReBarCtrl
+title: CReBar comparé à CReBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CReBar class [MFC], vs. CReBarCtrl
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 05decc095e43426044c4487b9aca05268642f915
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d58efa3c0dfb888f0802a84b11ec597dd1267de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620461"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228633"
 ---
-# <a name="crebar-vs-crebarctrl"></a>Différences entre CReBar et CReBarCtrl
+# <a name="crebar-vs-crebarctrl"></a>CReBar comparé à CReBarCtrl
 
 MFC fournit deux classes pour créer des rebarres : [CReBar](reference/crebar-class.md) et [CReBarCtrl](reference/crebarctrl-class.md) (qui encapsulent l’API de contrôle commun Windows). `CReBar`fournit toutes les fonctionnalités du contrôle commun rebar, et gère un grand nombre des paramètres et structures de contrôle communs requis pour vous.
 
@@ -24,7 +24,7 @@ Visual C++ offre deux façons de tirer parti du contrôle commun Rebar.
 - Créez le rebar à l’aide de `CReBar` , puis appelez [CReBar :: GetReBarCtrl](reference/crebar-class.md#getrebarctrl) pour accéder aux `CReBarCtrl` fonctions membres.
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl`est une fonction membre incluse qui effectue un cast du pointeur **This** de l’objet Rebar. Cela signifie qu’au moment de l’exécution, l’appel de fonction n’a pas de surcharge.
+    >  `CReBar::GetReBarCtrl`est une fonction membre incluse qui effectue un cast du **`this`** pointeur de l’objet Rebar. Cela signifie qu’au moment de l’exécution, l’appel de fonction n’a pas de surcharge.
 
 - Créez le rebar à l’aide du constructeur de [CReBarCtrl](reference/crebarctrl-class.md).
 
@@ -33,4 +33,4 @@ L’une ou l’autre des méthodes vous donne accès aux fonctions membres du co
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CReBarCtrl](using-crebarctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7847f71502354189e874d505414b4a45b74ab45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172163"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228698"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>classe d’interface (C++/CLI et C++/CX)
 
@@ -32,13 +32,13 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 ### <a name="parameters"></a>Paramètres
 
 *interface_access*<br/>
-L’accessibilité d’une interface en dehors de l’assembly.  Les valeurs possibles sont **public** et **private**.  **private** est la valeur par défaut. Les interfaces imbriquées ne peuvent pas disposer d’un spécificateur *interface_access*.
+L’accessibilité d’une interface en dehors de l’assembly.  Les valeurs possibles sont **`public`** et **`private`** .  **`private`** est la valeur par défaut. Les interfaces imbriquées ne peuvent pas disposer d’un spécificateur *interface_access*.
 
 *name*<br/>
 Nom de l’interface.
 
 *inherit_access*<br/>
-L’accessibilité de *base_interface*.  La seule accessibilité autorisée pour une interface de base est **public** (la valeur par défaut).
+L’accessibilité de *base_interface*.  La seule accessibilité autorisée pour une interface de base est **`public`** (valeur par défaut).
 
 *base_interface*<br/>
 (Facultatif) Interface de base pour le *nom* de l’interface.
@@ -61,9 +61,9 @@ Pour plus d'informations, consultez les pages suivantes :
 
 Pour plus d’informations sur les autres types CLR, consultez [Classes et structs](classes-and-structs-cpp-component-extensions.md).
 
-Au moment de la compilation, vous pouvez détecter si un type est une interface avec `__is_interface_class(type)`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
+Au moment de la compilation, vous pouvez détecter si un type est une interface avec `__is_interface_class(type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-Dans l’environnement de développement, vous pouvez obtenir l’aide F1 pour ces mots clés en surlignant le mot clé (par exemple, `interface class`) et en appuyant sur F1.
+Dans l’environnement de développement, vous pouvez obtenir de l’aide via la touche F1 sur ces mots clés en mettant en surbrillance le mot clé ( **`interface class`** , par exemple) et en appuyant sur F1.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -220,4 +220,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

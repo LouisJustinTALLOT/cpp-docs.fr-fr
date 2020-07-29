@@ -11,22 +11,22 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: f9f5f62e2326826e3087a8668cd9107da4b85388
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 32ff74be0fd1afb1d8a21d74abb194eaa5e273df
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334999"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87227983"
 ---
 # <a name="c-multiplicative-operators"></a>Opérateurs de multiplication C
 
-Les opérateurs de multiplication effectuent des<strong>\*</strong>opérations de multiplication (**/**), de division (**%**) et de reste ().
+Les opérateurs de multiplication effectuent des opérations de multiplication ( <strong>\*</strong> ), de division ( **/** ) et de reste ( **%** ).
 
 ## <a name="syntax"></a>Syntaxe
 
-multiplicatif *-* &nbsp; &nbsp; &nbsp; &nbsp; *expression :* *cast-expression* *multiplicative-expression* *multiplicative-expression* *cast-expression* *cast-expression* *multiplicative-expression* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>\*</strong> &nbsp;Cast-expression multiplicatif-expression cast-expression cast-expression multiplicative-expression cast-expression cast-expression cast-expression &nbsp; &nbsp; &nbsp; **/** &nbsp; &nbsp; &nbsp; **%**
+multiplicatif *-* expression : cast-expression multiplicatif-expression cast-expression cast-expression multiplicative-expression cast-expression cast-expression cast-expression &nbsp; &nbsp; &nbsp; &nbsp; *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **/** *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **%** *cast-expression*
 
-Les opérandes de l’opérateur de reste**%**() doivent être intégraux. Les opérateurs de multiplication<strong>\*</strong>() et de**/** Division () peuvent prendre des opérandes de type intégral ou flottant ; les types des opérandes peuvent être différents.
+Les opérandes de l’opérateur de reste ( **%** ) doivent être intégraux. Les opérateurs de multiplication ( <strong>\*</strong> ) et de division ( **/** ) peuvent prendre des opérandes de type intégral ou flottant ; les types des opérandes peuvent être différents.
 
 Les opérateurs de multiplication exécutent les conversions arithmétiques courantes sur les opérandes. Le type du résultat est le type des opérandes après conversion.
 
@@ -62,7 +62,7 @@ Cette instruction utilise l'opérateur de multiplication :
 y = x * i;
 ```
 
-Dans ce cas, `x` est multiplié par `i` pour donner la valeur 20,0. Le résultat a le type **double**.
+Dans ce cas, `x` est multiplié par `i` pour donner la valeur 20,0. Le résultat a le **`double`** type.
 
 ```
 n = i / j;

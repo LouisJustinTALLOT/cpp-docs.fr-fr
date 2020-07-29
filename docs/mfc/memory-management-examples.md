@@ -19,12 +19,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-ms.openlocfilehash: ca5056303f77f112e18ef09d606789a5b1c92acd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0568b3abbcd5776eab4d0ab9748bcbcd79c2a84b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626316"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228607"
 ---
 # <a name="memory-management-examples"></a>Gestion de la mémoire : exemples
 
@@ -46,13 +46,13 @@ Cet article explique comment MFC effectue des allocations de frames et des alloc
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>Pour allouer un tableau d’octets (ou un type de données primitif) sur le tas
 
-1. Utilisez l’opérateur **New** avec la syntaxe de tableau indiquée dans cet exemple :
+1. Utilisez l' **`new`** opérateur avec la syntaxe de tableau indiquée dans cet exemple :
 
    [!code-cpp[NVC_MFC_Utilities#2](codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>Pour libérer les tableaux du tas
 
-1. Utilisez l’opérateur **Delete** comme suit :
+1. Utilisez l' **`delete`** opérateur comme suit :
 
    [!code-cpp[NVC_MFC_Utilities#3](codesnippet/cpp/memory-management-examples_3.cpp)]
 
@@ -68,7 +68,7 @@ Cet article explique comment MFC effectue des allocations de frames et des alloc
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>Pour allouer des structures de données sur le tas
 
-1. Utilisez **New** pour allouer des structures de données sur le tas et **Delete** pour les libérer, comme indiqué dans les exemples suivants :
+1. Utilisez **`new`** pour allouer des structures de données sur le tas et les **`delete`** libérer, comme indiqué dans les exemples suivants :
 
    [!code-cpp[NVC_MFC_Utilities#5](codesnippet/cpp/memory-management-examples_5.cpp)]
 
@@ -84,13 +84,13 @@ Cet article explique comment MFC effectue des allocations de frames et des alloc
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>Pour allouer un objet sur le tas
 
-1. Utilisez l’opérateur **New** , qui retourne un pointeur vers l’objet, pour allouer des objets sur le tas. Utilisez l’opérateur **Delete** pour les supprimer.
+1. Utilisez l' **`new`** opérateur, qui retourne un pointeur vers l’objet, pour allouer des objets sur le tas. Utilisez l' **`delete`** opérateur pour les supprimer.
 
    Les exemples de tas et de frame suivants supposent que le `CPerson` constructeur ne prend pas d’arguments.
 
    [!code-cpp[NVC_MFC_Utilities#7](codesnippet/cpp/memory-management-examples_7.cpp)]
 
-   Si l’argument du `CPerson` constructeur est un pointeur vers **char**, l’instruction pour l’allocation de frame est :
+   Si l’argument du `CPerson` constructeur est un pointeur vers **`char`** , l’instruction pour l’allocation de frame est :
 
    [!code-cpp[NVC_MFC_Utilities#8](codesnippet/cpp/memory-management-examples_8.cpp)]
 

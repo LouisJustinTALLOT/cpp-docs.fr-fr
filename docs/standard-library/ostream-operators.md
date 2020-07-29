@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: d8b6f4e0f0b5bca41f8d895415fff4003231ad1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3851003500d37a11a88736cf611b69a2d6b1813c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373605"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228152"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt;, opérateurs
 
 ||
 |-|
-|[Opérateur&lt;&lt;](#op_lt_lt)|
+|[and&lt;&lt;](#op_lt_lt)|
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Opérateur&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>and&lt;&lt;
 
 Écrit différents types dans le flux.
 
@@ -87,7 +87,7 @@ Un caractère.
 Type de l’élément.
 
 *_Ostr*\
-Objet `basic_ostream` .
+Objet `basic_ostream`.
 
 *Str*\
 Chaîne caractère.
@@ -95,7 +95,7 @@ Chaîne caractère.
 *_Tr*\
 Caractéristiques de caractère.
 
-*Val*\
+*multiples*\
 Type
 
 ### <a name="return-value"></a>Valeur de retour
@@ -104,7 +104,7 @@ Flux.
 
 ### <a name="remarks"></a>Notes
 
-La classe `basic_ostream` définit également plusieurs opérateurs d’insertion. Pour plus d’informations, voir [basic_ostream::operator&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
+La classe `basic_ostream` définit également plusieurs opérateurs d’insertion. Pour plus d’informations, consultez [basic_ostream :: &lt; &lt; Operator](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
 
 La fonction de modèle
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-détermine la longueur `traits_type::`N`str`et la [longueur](../standard-library/char-traits-struct.md#length)() de la séquence commençant à *str,* et insère la séquence. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la fonction insère également une répétition de caractères de remplissage -N `_Ostr.width`. La répétition précède la`_Ostr`séquence si ( . [flags](../standard-library/ios-base-class.md#flags) &  drapeaux`adjustfield` ! ' [gauche](../standard-library/ios-functions.md#left). Sinon, la répétition suit la séquence. La fonction renvoie *_Ostr*.
+détermine la longueur N = `traits_type::` [longueur](../standard-library/char-traits-struct.md#length)( `str` ) de la séquence à partir de *Str*, puis insère la séquence. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la fonction insère également une répétition de caractères de remplissage -N `_Ostr.width`. La répétition précède la séquence si ( `_Ostr` . [flags](../standard-library/ios-base-class.md#flags)  &  indicateurs `adjustfield` ! = [gauche](../standard-library/ios-functions.md#left). Sinon, la répétition suit la séquence. La fonction retourne *_Ostr*.
 
 La fonction de modèle
 
@@ -126,7 +126,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-insère l’élément `_Ch`. Si 1 < `_Ostr.width`, la fonction insère également une répétition de caractères de remplissage - 1 `_Ostr.width`. La répétition précède la séquence si `_Ostr.flags & adjustfield != left`. Sinon, la répétition suit la séquence. Il revient *_Ostr*.
+insère l’élément `_Ch`. Si 1 < `_Ostr.width`, la fonction insère également une répétition de caractères de remplissage - 1 `_Ostr.width`. La répétition précède la séquence si `_Ostr.flags & adjustfield != left`. Sinon, la répétition suit la séquence. Elle retourne *_Ostr*.
 
 La fonction de modèle
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-sauf que chaque élément *_Ch* de *str* la séquence commençant à str `Elem` est `_Ostr.`converti en un objet de type en appelant [mis](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[élargissement](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
+Hormis le fait que chaque élément *_Ch* de la séquence commençant à *Str* est converti en un objet de type `Elem` en appelant `_Ostr.` [put](../standard-library/basic-ostream-class.md#put)( `_Ostr.` [Widening](../standard-library/basic-ios-class.md#widen)( `_Ch` )).
 
 La fonction de modèle
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-sauf que *_Ch* est converti en un `Elem` objet `_Ostr.put`de `_Ostr.widen` `_Ch`type en appelant ( ( )).
+Hormis le fait que *_Ch* est converti en un objet de type `Elem` en appelant `_Ostr.put( _Ostr.widen( _Ch ))` .
 
 La fonction de modèle
 
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(Il n’a pas à élargir *_Ch* avant de l’insérer.)
+(Il n’est pas nécessaire d’élargir *_Ch* avant de l’insérer.)
 
 La fonction de modèle
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-retourne `_Ostr` << )`const char *`. `str`
+Retourne `_Ostr << (const char *)str`.
 
 La fonction de modèle
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-retourne `_Ostr` << )`char`. `_Ch`
+Retourne `_Ostr << (char)_Ch`.
 
 La fonction de modèle :
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-retourne `_Ostr` << )`const char *`. `str`
+Retourne `_Ostr << (const char *)str`.
 
 La fonction de modèle :
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-retourne `_Ostr` << )`char`. `_Ch`
+Retourne `_Ostr << (char)_Ch`.
 
 La fonction de modèle :
 
@@ -261,7 +261,7 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```
 
-retourne `_Ostr` `<<` `val` (et convertit une [référence RValue](../cpp/rvalue-reference-declarator-amp-amp.md) à `_Ostr` en lvalue dans le processus).
+retourne `_Ostr << val` (et convertit une [référence RValue](../cpp/rvalue-reference-declarator-amp-amp.md) à `_Ostr` en lvalue dans le processus).
 
 ### <a name="example"></a>Exemple
 
@@ -269,4 +269,4 @@ Consultez [flush](../standard-library/ostream-functions.md#flush) pour obtenir u
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<>ostream](../standard-library/ostream.md)
+[\<ostream>](../standard-library/ostream.md)

@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: e6a8a1545b97976cbe82d1c81b0e70c3dac3a266
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8661f94e0ee35f8d5e2c8caba1fc01bbf4072876
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270801"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87190687"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (Activer la protection du flux de contrôle)
 
@@ -26,7 +26,7 @@ Active la génération par le compilateur de vérifications de sécurité de la 
 
 L'option **/guard:cf** indique au compilateur d'analyser le flux de contrôle pour rechercher les cibles d'appels indirects au moment de la compilation, puis d'insérer du code pour vérifier les cibles au moment de l'exécution. Par défaut, l'option **/guard:cf** est désactivée. Elle doit être explicitement activée. Pour désactiver explicitement cette option, utilisez **/guard:cf-**.
 
-**Visual Studio 2017 et versions ultérieures** : Cette option ajoute gardes pour **basculer** instructions qui génèrent des raccourcis de tables.
+**Visual Studio 2017 et versions ultérieures**: cette option ajoute des protections pour les **`switch`** instructions qui génèrent des tables de saut.
 
 Quand l'option de protection du flux de contrôle **/guard:cf** est activée, le compilateur et l'éditeur de liens incluent d'autres vérifications de sécurité à l'exécution pour détecter les tentatives visant à compromettre votre code. Pendant les phases de compilation et de liaison, tous les appels indirects dans votre code sont analysés pour identifier chaque emplacement auquel le code peut accéder quand il s'exécute correctement. Ces informations sont stockées dans des structures supplémentaires dans les en-têtes de vos fichiers binaires. Le compilateur injecte également une vérification avant chaque appel indirect dans votre code pour garantir que la cible fait partie des emplacements vérifiés. Si la vérification échoue à l'exécution sur un système d'exploitation utilisant la protection du flux de contrôle, le système d'exploitation ferme le programme.
 
@@ -40,7 +40,7 @@ Le code compilé avec l'option **/guard:cf** peut être lié à des bibliothèqu
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez **Propriétés de configuration**, **C/C++**, **Génération de code**.
 
