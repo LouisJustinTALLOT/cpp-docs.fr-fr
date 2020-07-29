@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 5459fdbd445e7823dcc28096a7b7da3c0c5b38cf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617509"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204987"
 ---
 # <a name="allocator-class"></a>allocator, classe
 
@@ -131,7 +131,7 @@ const_pointer address(const_reference val) const;
 *multiples*\
 Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
 Pointeur const ou nonconst vers l’objet trouvé d’une valeur const ou nonconst, respectivement.
 
@@ -199,7 +199,7 @@ Nombre d’éléments pour lesquels la quantité de stockage appropriée doit ê
 *_Hint*\
 Pointeur const pouvant aider l’objet allocateur à satisfaire la demande de stockage en recherchant l’adresse d’un objet alloué avant la demande.
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
 Pointeur vers l’objet alloué ou null si la mémoire n’a pas été allouée.
 
@@ -468,7 +468,7 @@ Valeur avec laquelle l’objet en cours de construction doit être initialisé.
 
 #### <a name="remarks"></a>Notes
 
-La première fonction membre est équivalente à **New** (( `void` \* ) `ptr` ) **type** ( `val` ).
+La première fonction membre est équivalente à `new ((void *) ptr) Type(val)` .
 
 #### <a name="example"></a>Exemple
 
@@ -678,7 +678,7 @@ Retourne le nombre d'éléments de type `Type` qui pourraient être alloués par
 size_type max_size() const;
 ```
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
 Nombre d’éléments pouvant être alloués.
 
@@ -753,7 +753,7 @@ template <class Other>
 *Oui*\
 Objet allocateur à assigner à un autre objet allocateur.
 
-#### <a name="return-value"></a>Valeur renvoyée
+#### <a name="return-value"></a>Valeur de retour
 
 Référence à l’objet allocateur
 
@@ -874,7 +874,7 @@ Type d’élément pour lequel la mémoire est allouée.
 
 Cette structure est utile pour allouer de la mémoire au type qui diffère du type d’élément du conteneur en cours d’implémentation.
 
-Le modèle de classe membre définit le type other. Son seul but est de fournir le nom de type **Allocator** \<_ **Other**> , en fonction de l' **allocateur**de nom de type \< **Type**> .
+Le modèle de classe membre définit le type other. Son seul but est de fournir le nom du type `allocator<_Other>` , en fonction du nom de type `allocator<Type>` .
 
 Par exemple, étant donné un objet Allocator `al` de type `A` , vous pouvez allouer un objet de type `_Other` avec l’expression :
 

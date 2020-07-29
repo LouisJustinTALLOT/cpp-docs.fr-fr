@@ -28,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b56022f39264a200bf6fa550bffa8e5e0ed73cf0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916710"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211617"
 ---
 # <a name="_write"></a>_write
 
@@ -54,7 +54,7 @@ int _write(
 *FD*<br/>
 Descripteur de fichier pour le fichier dans lequel les données sont écrites.
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Données à écrire.
 
 *count*<br/>
@@ -68,9 +68,9 @@ Pour plus d’informations sur ces codes de retour et les autres, consultez [err
 
 Si le fichier est ouvert en mode texte, chaque caractère de saut de ligne est remplacé par une paire retour chariot-saut de ligne dans la sortie. Le remplacement n’affecte pas la valeur de retour.
 
-Lorsque le fichier est ouvert en mode de traduction Unicode, par exemple, *si FD* est ouvert à l’aide de **_open** ou **_sopen** et d’un paramètre de mode qui comprend **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, ou s’il est ouvert à l’aide de **fopen** et d’un paramètre de mode qui inclut **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = utf-8**, ou si le mode est modifié en mode de traduction unicode à l’aide de **_setmode**, la*mémoire tampon* est interprétée comme un pointeur vers un tableau de **wchar_t** qui contient des données **UTF-16** . Toute tentative d'écriture d'une quantité impaire d'octets dans ce mode provoque une erreur de validation de paramètre.
+Lorsque le fichier est ouvert en mode de traduction Unicode, par exemple, si *FD* est ouvert à l’aide de **_open** ou **_sopen** et d’un paramètre de mode qui comprend **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, ou s’il est ouvert à l’aide de **fopen** et d’un paramètre de mode qui inclut **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = utf-8**, ou si le mode est modifié en mode de traduction Unicode à l’aide de **_setmode**, la*mémoire tampon* est interprétée comme un pointeur vers un tableau de **`wchar_t`** qui contient des données **UTF-16** . Toute tentative d'écriture d'une quantité impaire d'octets dans ce mode provoque une erreur de validation de paramètre.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_Write** écrit le *nombre* d’octets de la *mémoire tampon* dans le fichier associé à *FD*. L'opération d'écriture commence à la position actuelle du pointeur de fichier (le cas échéant) associé au fichier donné. Si le fichier est ouvert pour ajout, l'opération commence à la fin actuelle du fichier. Après l’opération d’écriture, le pointeur de fichier est augmenté du nombre d’octets écrits.
 
@@ -146,7 +146,7 @@ Wrote 36 bytes to file.
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

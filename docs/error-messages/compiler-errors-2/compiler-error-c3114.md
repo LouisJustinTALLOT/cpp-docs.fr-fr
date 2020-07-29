@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: 6f548c72a0e95c533ed711fe9f2583a7abd6c500
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 481e0ac5a395b38bc9d1874959b010ecd71f9fb5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760759"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233377"
 ---
 # <a name="compiler-error-c3114"></a>Erreur du compilateur C3114
 
 'argument' : argument d’attribut nommé non valide
 
-Pour qu’un membre de classe d’attributs soit un argument nommé valide, il ne doit pas être marqué `static`, `const`ou `literal`. Si une propriété, la propriété ne doit pas être `static` et doit avoir les accesseurs obtenir et définir.
+Pour qu’un membre de classe d’attributs soit un argument nommé valide, il ne doit pas être marqué **`static`** , **`const`** ou **`literal`** . Si une propriété a la valeur, la propriété ne doit pas être **`static`** et doit avoir les accesseurs obtenir et définir.
 
 Pour plus d’informations, consultez [attributs définis par l’utilisateur](../../extensions/user-defined-attributes-cpp-component-extensions.md)et la [propriété](../../extensions/property-cpp-component-extensions.md) .
 

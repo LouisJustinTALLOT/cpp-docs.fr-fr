@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d751a3487db1d7c0135d4a1ae87cb84d374825fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916448"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218648"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -81,9 +81,9 @@ En cas de réussite, retourne le logarithme népérien de la valeur absolue de l
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lgamma** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **lgamma** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lgamma** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **lgamma** accepte et retourne toujours un **`double`** .
 
 Si x est un nombre rationnel, cette fonction retourne le logarithme de la factorielle de (x-1).
 
@@ -91,7 +91,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
 
@@ -99,5 +99,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [tgamma, tgammaf, tgammal](tgamma-tgammaf-tgammal.md)<br/>

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2180
 ms.assetid: ea71b39e-b977-48a7-b7bd-af68ef5e263b
-ms.openlocfilehash: 5e9444356e536a8369dbcf62cac3c7538d9da5dd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 3794a1ce0fcbe60c06cb3efca45a3081e85c17ce
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301897"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210018"
 ---
 # <a name="compiler-error-c2180"></a>Erreur du compilateur C2180
 
 l'expression de contrôle a le type 'type'
 
-L'expression de contrôle dans une instruction `if`, `while`, `for` ou `do` est une expression convertie vers `void`. Pour résoudre ce problème, remplacez l'expression de contrôle par une expression qui génère un `bool` ou un type pouvant être converti en `bool`.
+L’expression de contrôle dans **`if`** une **`while`** instruction,, **`for`** ou **`do`** est une expression castée en **`void`** . Pour résoudre ce problème, remplacez l’expression de contrôle par une expression qui produit un **`bool`** ou un type qui peut être converti en **`bool`** .
 
 L'exemple suivant génère l'erreur C2180 :
 

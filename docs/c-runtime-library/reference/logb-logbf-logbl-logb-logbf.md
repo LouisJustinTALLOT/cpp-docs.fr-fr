@@ -47,12 +47,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: fe362099c63bbaa533532fd3a1a6567ac0173916
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911400"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218570"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -93,11 +93,11 @@ Valeur à virgule flottante.
 
 **logb** retourne la valeur d’exposant non biaisée de *x* sous la forme d’un entier signé représenté sous la forme d’une valeur à virgule flottante.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **logb** extraient la valeur exponentielle de l’argument à virgule flottante *x*, comme si *x* était représenté avec une plage infinie. Si l’argument *x* est dénormalisé, il est traité comme s’il était normalisé.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **logb** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **logb** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **logb** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **logb** accepte et retourne toujours un **`double`** .
 
 |Entrée|Exception SEH|exception Matherr|
 |-----------|-------------------|-----------------------|

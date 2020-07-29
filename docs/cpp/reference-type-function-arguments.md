@@ -8,12 +8,12 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-ms.openlocfilehash: 2a0bd21023bd1c6bc14b1f587c85960cf1e8b820
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a409efbe2908954d394656cb989ad6b80a9ce22
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244179"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233637"
 ---
 # <a name="reference-type-function-arguments"></a>Arguments de fonction de type référence
 
@@ -67,9 +67,9 @@ int main()
 }
 ```
 
-Le code précédent montre que les membres d’une structure passée par référence sont accessibles à l’aide de l’opérateur de sélection de membre (**.**) au lieu de l’opérateur de sélection de membre de pointeur (**->**).
+Le code précédent montre que les membres d’une structure passée par référence sont accessibles à l’aide de l’opérateur de sélection de membres (**.**) au lieu de l’opérateur de sélection de membre de pointeur ( **->** ).
 
-Bien que les arguments passés comme des types référence observent la syntaxe des types non-pointeur, ils conservent une caractéristique importante de types pointeur : ils sont modifiables, sauf si déclarée en tant que **const**. Comme l'objectif du code précédent n'est pas de modifier l'objet `date`, un prototype de fonction plus approprié est :
+Bien que les arguments passés comme types référence observent la syntaxe des types non-pointeur, ils conservent une caractéristique importante des types pointeur : ils sont modifiables sauf s’ils sont déclarés comme **`const`** . Comme l'objectif du code précédent n'est pas de modifier l'objet `date`, un prototype de fonction plus approprié est :
 
 ```cpp
 long DateOfYear( const Date& date );
@@ -77,8 +77,8 @@ long DateOfYear( const Date& date );
 
 Ce prototype garantit que la fonction `DateOfYear` ne modifiera pas son argument.
 
-Toute fonction prototypée comme acceptant un type référence peut accepter un objet du même type à la place, car il existe une conversion standard de *typename* à *typename* <strong>&</strong>.
+Toute fonction prototypée comme acceptant un type référence peut accepter un objet du même type à sa place, car il existe une conversion standard de *TypeName* en *TypeName* <strong>&</strong> .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Références](../cpp/references-cpp.md)<br/>
+[Informations de référence](../cpp/references-cpp.md)<br/>

@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-ms.openlocfilehash: 72056208ca6d714f788ae325b90786f5be4ab443
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0e0af8596dbc7f48bc3f6b996219ec7c7a57749d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949033"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234027"
 ---
 # <a name="_rtc_numerrors"></a>_RTC_NumErrors
 
-Retourne le nombre total d’erreurs détectées par les vérifications d’erreurs au moment de l’exécution. Vous pouvez utiliser ce nombre comme contrôle dans une boucle **for**, où chaque valeur de la boucle est transmise à [_RTC_GetErrDesc](rtc-geterrdesc.md).
+Retourne le nombre total d’erreurs détectées par les vérifications d’erreurs au moment de l’exécution. Vous pouvez utiliser ce nombre comme contrôle dans une **`for`** boucle, où chaque valeur de la boucle est passée à [_RTC_GetErrDesc](rtc-geterrdesc.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,7 +48,7 @@ int _RTC_NumErrors( void );
 
 Un entier dont la valeur représente le nombre total d’erreurs qui peuvent être détectées par les vérifications d’erreurs au moment de l’exécution de Visual C++.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -63,4 +63,4 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 ## <a name="see-also"></a>Voir aussi
 
 [_RTC_GetErrDesc](rtc-geterrdesc.md)<br/>
-[Vérifications des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)<br/>
+[Vérification des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)<br/>

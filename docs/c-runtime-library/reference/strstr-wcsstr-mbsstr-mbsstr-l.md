@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 1fb6c025ec324fceb1b11dd23ed61500f08b4535
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ac4df470e40b35257495d51c5d2d0efdb9310af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910999"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233988"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -122,7 +122,7 @@ const unsigned char *_mbsstr_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne terminée par Null à trouver.
 
 *strSearch*<br/>
@@ -135,14 +135,14 @@ Paramètres régionaux à utiliser.
 
 Retourne un pointeur désignant la première occurrence de *strSearch* dans *Str*, ou null si *strSearch* n’apparaît pas dans *Str*. Si *strSearch* pointe vers une chaîne de longueur nulle, la fonction retourne *Str*.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La `strstr` fonction retourne un pointeur vers la première occurrence de *strSearch* dans *Str*. La recherche n’inclut pas les caractères Null de fin. `wcsstr` est la version à caractères larges de `strstr` et `_mbsstr` est la version à caractères multioctets. Les arguments et la valeur de retour de `wcsstr` sont des chaînes de caractères larges ; ceux de `_mbsstr` sont des chaînes de caractères multioctets. `_mbsstr` valide ses paramètres. Si *Str* ou *strSearch* a la valeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se `_mbsstr` poursuivre `errno` , affecte à la valeur EINVAL et retourne 0. `strstr` et `wcsstr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+La `strstr` fonction retourne un pointeur vers la première occurrence de *strSearch* dans *Str*. La recherche n’inclut pas les caractères Null de fin. `wcsstr` est la version à caractères larges de `strstr` et `_mbsstr` est la version à caractères multioctets. Les arguments et la valeur de retour de `wcsstr` sont des chaînes de caractères larges ; ceux de `_mbsstr` sont des chaînes de caractères multioctets. `_mbsstr` valide ses paramètres. Si *Str* ou *strSearch* a la valeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, `_mbsstr` affecte à la valeur `errno` EINVAL et retourne 0. `strstr` et `wcsstr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
 > [!IMPORTANT]
 > Ces fonctions peuvent être exposées à un risque lié à un dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être exploités dans le cadre d’une attaque de système, car ils permettent d’exécuter du code arbitraire, ce qui peut entraîner une élévation injustifiée des privilèges. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui accepte un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
+En C, ces fonctions acceptent un **`const`** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **`const`** retourne un pointeur vers **`const`** ; la version qui accepte un pointeur vers non- **`const`** retourne un pointeur vers non- **`const`** . La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les **`const`** versions et non- **`const`** de ces fonctions sont disponibles. Si vous avez besoin du non- **`const`** comportement pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
 
 La valeur de sortie est affectée par le paramètre de catégorie de paramètres régionaux de LC_CTYPE ; Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; les versions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

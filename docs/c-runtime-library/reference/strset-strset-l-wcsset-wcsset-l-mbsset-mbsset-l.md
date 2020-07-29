@@ -67,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 304f0cf5929dcce68402dd2f7dc2ce3b28e36db9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911110"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234001"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -115,7 +115,7 @@ unsigned char *_mbsset_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne se terminant par un caractère Null à définir.
 
 *secteur*<br/>
@@ -128,9 +128,9 @@ Paramètres régionaux à utiliser.
 
 Retourne un pointeur vers la chaîne modifiée.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_strset** définit tous les caractères (à l’exception du caractère null de fin) de *Str* sur *c*, convertis en **char**. **_wcsset** et **_mbsset_l** sont des versions à caractères larges et à caractères multioctets de **_strset**, et les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
+La fonction **_strset** définit tous les caractères (à l’exception du caractère null de fin) de *Str* sur *c*, convertis en **`char`** . **_wcsset** et **_mbsset_l** sont des versions à caractères larges et à caractères multioctets de **_strset**, et les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
 
 **_mbsset** valide ses paramètres. Si *Str* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbsset** retourne la **valeur null** et définit **errno** sur **EINVAL**. **_strset** et **_wcsset** ne valident pas leurs paramètres.
 

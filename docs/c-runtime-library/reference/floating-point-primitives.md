@@ -157,12 +157,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: c103d28dc111af4736bdc299b498b98eccb3af60
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916698"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218679"
 ---
 # <a name="floating-point-primitives"></a>Primitives à virgule flottante
 
@@ -185,11 +185,11 @@ short __cdecl _fdclass(float x);
 *x*<br/>
 Argument de fonction à virgule flottante.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante implémentent les versions C de la macro CRT [fpclassify](fpclassify.md) pour les types à virgule flottante. La classification de l’argument *x* est retournée en tant que l’une de ces constantes, définie dans Math. h :
 
-|Value|Description|
+|Valeur|Description|
 |-----------|-----------------|
 | **FP_NAN** | NaN silencieux, signalant ou indéterminé |
 | **FP_INFINITE** | Infini positif ou négatif |
@@ -214,7 +214,7 @@ int __cdecl _fdsign(float x);
 *x*<br/>
 Argument de fonction à virgule flottante.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante implémentent la macro ou la fonction [signbit,](signbit.md) dans le CRT. Elles retournent une valeur différente de zéro si le bit de signe est défini dans la mantisse (mantisse) de l’argument *x*, et 0 si le bit de signe n’est pas défini.
 
@@ -233,11 +233,11 @@ int __cdecl _fdpcomp(float x, float y);
 *x*, *y*<br/>
 Arguments de fonction à virgule flottante.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante prennent deux arguments, *x* et *y*, et retournent une valeur qui indique leur relation de classement, exprimée sous la forme d’une opération de bits or de ces constantes, définie dans Math. h :
 
-| Value | Description |
+| Valeur | Description |
 |------------|-----------------|
 | **_FP_LT** | *x* peut être considéré comme inférieur à *y* |
 | **_FP_EQ** | *x* peut être considéré comme égal à *y* |
@@ -260,11 +260,11 @@ short __cdecl _fdtest(float* px);
 *pix*<br/>
 Pointeur vers un argument à virgule flottante.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante implémentent les versions C++ de la fonction CRT [fpclassify](fpclassify.md) pour les types à virgule flottante. L’argument *x* est évalué et la classification est retournée en tant que l’une de ces constantes, définie dans Math. h :
 
-|Value|Description|
+|Valeur|Description|
 |-----------|-----------------|
 | **FP_NAN** | NaN silencieux, signalant ou indéterminé |
 | **FP_INFINITE** | Infini positif ou négatif |
@@ -289,10 +289,10 @@ short __cdecl _fd_int(float* px, short exp);
 *pix*<br/>
 Pointeur vers un argument à virgule flottante.
 
-*venir*<br/>
+*exp*<br/>
 Exposant comme type intégral.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante prennent un pointeur vers une valeur à virgule flottante *PX* et une valeur d’exposant *exp*, et suppriment la partie fractionnaire de la valeur à virgule flottante sous l’exposant donné, si possible. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire.
 
@@ -311,10 +311,10 @@ short __cdecl _fdscale(float* px, long exp);
 *pix*<br/>
 Pointeur vers un argument à virgule flottante.
 
-*venir*<br/>
+*exp*<br/>
 Exposant comme type intégral.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante prennent un pointeur vers une valeur à virgule flottante *PX* et une valeur d’exposant *exp*, et ajustent la valeur en *PX* de 2<sup>*exp*</sup>, si possible. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire. Pour la portabilité, préférez les fonctions [ldexp, ldexpf, et ldexpl](ldexp.md) .
 
@@ -336,7 +336,7 @@ Pointeur vers un exposant en tant que type intégral.
 *pix*<br/>
 Pointeur vers un argument à virgule flottante.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante décomposent la valeur à virgule flottante pointée par *PX* dans une mantisse (mantisse) et un exposant, si possible. Le mantisse est mis à l’échelle de telle sorte que la valeur absolue soit supérieure ou égale à 0,5 et inférieure à 1,0. L’exposant est la valeur *n*, où la valeur à virgule flottante d’origine est égale au nombre de mantisse mis à l’échelle 2<sup>*n*</sup>. Cet exposant entier *n* est stocké à l’emplacement désigné par *pexp*. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’une valeur NaN ou d’une valeur d’infini, et sur la valeur de sortie dans le cas contraire. Pour la portabilité, préférez les fonctions [frexp, frexpf,, frexpl](frexp.md) .
 
@@ -358,10 +358,10 @@ Argument de fonction à virgule flottante.
 *pix*<br/>
 Pointeur vers un argument à virgule flottante.
 
-*venir*<br/>
+*exp*<br/>
 Exposant comme type intégral.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante construisent une valeur à virgule flottante à l’emplacement désigné par *PX* égal à *y* * 2<sup>*exp*</sup>. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *y* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire. Pour la portabilité, préférez les fonctions [ldexp, ldexpf, et ldexpl](ldexp.md) .
 
@@ -377,11 +377,11 @@ short __cdecl _fdnorm(unsigned short* ps);
 ### <a name="parameters"></a>Paramètres
 
 *ps*<br/>
-Pointeur vers la représentation au niveau du bit d’une valeur à virgule flottante exprimée sous la forme d’un tableau de type **unsigned** **short**.
+Pointeur vers la représentation au niveau du bit d’une valeur à virgule flottante exprimée sous la forme d’un tableau de **`unsigned short`** .
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante normalisent la partie fractionnaire d’une valeur à virgule flottante dépassée et ajustent la *caractéristique*, ou exposant biais, pour qu’elle corresponde. La valeur est passée en tant que représentation au niveau du bit du type à virgule flottante convertie en un tableau de `_double_val`type `_ldouble_val` **short** **non signé** par le, ou `_float_val` une Union de type punning déclarée dans Math. h. La valeur de retour est le résultat de **fpclassify** sur la valeur à virgule flottante d’entrée s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans le cas contraire.
+Ces primitives à virgule flottante normalisent la partie fractionnaire d’une valeur à virgule flottante dépassée et ajustent la *caractéristique*, ou exposant biais, pour qu’elle corresponde. La valeur est passée en tant que représentation au niveau du bit du type à virgule flottante convertie en un tableau de **`unsigned short`** par le biais de `_double_val` , ou d’une `_ldouble_val` `_float_val` Union punning de type déclarée dans Math. h. La valeur de retour est le résultat de **fpclassify** sur la valeur à virgule flottante d’entrée s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans le cas contraire.
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly _fdpoly
 
@@ -404,9 +404,9 @@ Pointeur vers une table de coefficients de constante pour un polynomial.
 *n*<br/>
 Ordre du polynôme à évaluer.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante retournent l’évaluation de *x* dans le degré polynomial de l’ordre *n* dont les coefficients sont représentés par les valeurs constantes correspondantes dans la *table*. Par exemple, si *table*\[0] = 3,0, *table*\[1] = 4,0, *table*\[2] = 5,0, et *n* = 2, il représente le polynôme 5,0 x<sup>2</sup> + 4.0 x + 3,0. Si ce polynôme est évaluée pour *x* de 2,0, le résultat est 31,0. Ces fonctions ne sont pas utilisées en interne.
+Ces primitives à virgule flottante retournent l’évaluation de *x* dans le degré polynomial de l’ordre *n* dont les coefficients sont représentés par les valeurs constantes correspondantes dans la *table*. Par exemple, si *table* \[ 0] = 3,0, *table* \[ 1] = 4,0, *table* \[ 2] = 5,0, et *n* = 2, il représente le polynôme 5,0 x<sup>2</sup> + 4.0 x + 3,0. Si ce polynôme est évaluée pour *x* de 2,0, le résultat est 31,0. Ces fonctions ne sont pas utilisées en interne.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog _dlog
 
@@ -426,7 +426,7 @@ Argument de fonction à virgule flottante.
 *base_flag*<br/>
 Indicateur qui contrôle la base à utiliser, 0 pour la base *e* et différente de zéro pour base 10.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante retournent le logarithme népérien de *x*, ln (*x*) ou log<sub>*e*</sub>(*x*), lorsque *base_flag* est égal à 0. Ils retournent la base du journal 10 sur *x*ou log<sub>10</sub>(*x*), lorsque *base_flag* est différent de zéro. Ces fonctions ne sont pas utilisées en interne. Pour la portabilité, préférez les fonctions [log, LogF,, logl, log10, log10f, et log10L](log-logf-log10-log10f.md).
 
@@ -446,15 +446,15 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 Argument de fonction à virgule flottante.
 
 *quadrant*<br/>
-Décalage du quadrant de 0, 1, 2 ou 3 à utiliser pour produire `sin`les `cos`résultats `-sin`,, `-cos` et.
+Décalage du quadrant de 0, 1, 2 ou 3 à utiliser pour produire `sin` `cos` `-sin` les résultats,, et `-cos` .
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces primitives à virgule flottante retournent le sinus de décalage *x* par le *quadrant* modulo 4. En effet, elles retournent le sinus, le cosinus, le sinus et le cosinus de *x* lorsque le *quadrant* modulo 4 est respectivement 0, 1, 2 ou 3. Ces fonctions ne sont pas utilisées en interne. Pour la portabilité, préférez les fonctions [Sin, sinf, sinl](sin-sinf-sinl.md), [cos, cosf, et COSL](cos-cosf-cosl.md) .
 
 ## <a name="requirements"></a>Spécifications
 
-En- \<tête : Math. h>
+En-tête : \<math.h>
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -464,7 +464,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf,](isinf.md)<br/>
+[isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

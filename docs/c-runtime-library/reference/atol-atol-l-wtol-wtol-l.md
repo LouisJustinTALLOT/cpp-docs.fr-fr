@@ -51,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 56f2efb4e7282cbcfb6a123f56797e2867d6bb4b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913530"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218726"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -83,7 +83,7 @@ long _wtol_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne à convertir.
 
 *locale*<br/>
@@ -91,11 +91,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne la valeur **longue** produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0L pour **ATOL** si l’entrée ne peut pas être convertie en valeur de ce type.
+Chaque fonction retourne la **`long`** valeur produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0L pour **ATOL** si l’entrée ne peut pas être convertie en valeur de ce type.
 
 Dans le cas d’un dépassement de capacité avec de grandes valeurs intégrales positives, **ATOL** retourne **LONG_MAX**; dans le cas d’un dépassement de capacité avec de grandes valeurs intégrales négatives, **LONG_MIN** est retourné. Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions convertissent une chaîne de caractères en valeur entière longue (**ATOL**).
 
@@ -127,7 +127,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |**atol**|\<stdlib.h>|
 |**_atol_l**, **_wtol** **_wtol_l**|\<stdlib.h> et \<wchar.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide de la fonction **ATOL** .
 

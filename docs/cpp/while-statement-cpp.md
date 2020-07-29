@@ -7,12 +7,12 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 168b1fc20d165c44c3230a8d1094c99b689ddbb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187321"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233546"
 ---
 # <a name="while-statement-c"></a>while, instruction (C++)
 
@@ -27,11 +27,11 @@ while ( expression )
 
 ## <a name="remarks"></a>Notes
 
-Le test d' *expression* a lieu avant chaque exécution de la boucle. par conséquent, une boucle **while** s’exécute zéro, une ou plusieurs fois. l' *expression* doit être d’un type intégral, d’un type pointeur ou d’un type de classe avec une conversion non ambiguë en type intégral ou pointeur.
+Le test d' *expression* a lieu avant chaque exécution de la boucle. par conséquent, une **`while`** boucle s’exécute zéro, une ou plusieurs fois. l' *expression* doit être d’un type intégral, d’un type pointeur ou d’un type de classe avec une conversion non ambiguë en type intégral ou pointeur.
 
-Une boucle **while** peut également se terminer lorsqu’une instruction [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)ou [Return](../cpp/return-statement-cpp.md) est exécutée dans le corps de l’instruction. Utilisez [continue](../cpp/continue-statement-cpp.md) pour terminer l’itération actuelle sans quitter la boucle **while** . **continue** passe le contrôle à l’itération suivante de la boucle **while** .
+Une **`while`** boucle peut également se terminer lorsqu’une instruction [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)ou [Return](../cpp/return-statement-cpp.md) est exécutée dans le corps de l’instruction. Utilisez [continue](../cpp/continue-statement-cpp.md) pour terminer l’itération actuelle sans quitter la **`while`** boucle. **`continue`** passe le contrôle à l’itération suivante de la **`while`** boucle.
 
-Le code suivant utilise une boucle **while** pour supprimer les traits de soulignement à droite d’une chaîne :
+Le code suivant utilise une **`while`** boucle pour supprimer les traits de soulignement à droite d’une chaîne :
 
 ```cpp
 // while_statement.cpp
@@ -64,7 +64,7 @@ La condition d’arrêt est évaluée en haut de la boucle. S’il n’existe au
 
 ## <a name="see-also"></a>Voir aussi
 
-[Instructions d’itération](../cpp/iteration-statements-cpp.md)<br/>
+[Instructions d'itération](../cpp/iteration-statements-cpp.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [do-while, instruction (C++)](../cpp/do-while-statement-cpp.md)<br/>
 [for, instruction (C++)](../cpp/for-statement-cpp.md)<br/>

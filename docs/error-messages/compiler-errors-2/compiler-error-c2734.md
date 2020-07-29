@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2734
 ms.assetid: e53a77b7-825c-42d1-a655-90e1c93b833e
-ms.openlocfilehash: a188948a6d7ea7902b2df548819ffb8c40486dbc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b4952f4705ad94133000fe6d84117cb04a5aa850
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755770"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206820"
 ---
 # <a name="compiler-error-c2734"></a>Erreur du compilateur C2734
 
 'identificateur' : l’objet const doit être initialisé s’il n’est pas externe
 
-L’identificateur est déclaré `const` mais pas initialisé ou `extern`.
+L’identificateur est déclaré **`const`** mais non initialisé ou **`extern`** .
 
 L’exemple suivant génère l’C2734 :
 

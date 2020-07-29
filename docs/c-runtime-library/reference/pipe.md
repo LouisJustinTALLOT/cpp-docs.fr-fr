@@ -30,12 +30,12 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: d3805de6a591169f94926c09a4542ec01f221d1d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 692a891549e0c84d6297b108918d9d7c58495ef7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916840"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234040"
 ---
 # <a name="_pipe"></a>_pipe
 
@@ -57,7 +57,7 @@ int _pipe(
 ### <a name="parameters"></a>Paramètres
 
 *cf*<br/>
-Pointeur vers un tableau de deux **int** pour stocker les descripteurs de fichiers en lecture et en écriture.
+Pointeur vers un tableau de deux **`int`** pour contenir les descripteurs de fichiers en lecture et en écriture.
 
 *psize*<br/>
 Quantité de mémoire à réserver.
@@ -77,11 +77,11 @@ Retourne 0 en cas de réussite. Retourne-1 pour indiquer une erreur. En cas d’
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_pipe** crée un *canal, qui est un canal d'* e/s artificiel utilisé par un programme pour transmettre des informations à d’autres programmes. Un canal s’apparente à un fichier en ce sens qu’il dispose d’un pointeur de fichier, d’un descripteur de fichier ou les deux, et peut être lu ou écrit à l’aide des fonctions d’entrée et de sortie de la bibliothèque standard. Cependant, un canal ne représente pas un fichier ou un appareil déterminé. En effet, il représente un stockage temporaire en mémoire qui est indépendant de la mémoire propre au programme et qui est contrôlé entièrement par le système d’exploitation.
 
-**_pipe** ressemble à **_open** mais ouvre le canal pour la lecture et l’écriture et retourne deux descripteurs de fichiers au lieu d’un. Le programme peut utiliser les deux côtés du canal ou fermer celui dont il n’a pas besoin. Par exemple, le processeur de commande dans Windows crée un canal lorsqu’il exécute une commande telle que **Program1** | **Program2**.
+**_pipe** ressemble à **_open** mais ouvre le canal pour la lecture et l’écriture et retourne deux descripteurs de fichiers au lieu d’un. Le programme peut utiliser les deux côtés du canal ou fermer celui dont il n’a pas besoin. Par exemple, le processeur de commande dans Windows crée un canal lorsqu’il exécute une commande telle que **Program1**  |  **Program2**.
 
 Le descripteur de sortie standard de **Program1** est attaché au descripteur d’écriture du canal. Le descripteur d’entrée standard de **Program2** est attaché au descripteur de lecture du canal. De ce fait, il n’est plus nécessaire de créer des fichiers temporaires pour transmettre des informations à d’autres programmes.
 
@@ -91,7 +91,7 @@ L’argument *psize* spécifie la quantité de mémoire, en octets, à réserver
 
 Dans les programmes multithread, aucun verrouillage n’est effectué. Les descripteurs de fichiers retournés sont récemment ouverts et ne doivent être référencés par aucun thread tant que l’appel de **_pipe** n’est pas terminé.
 
-Pour utiliser la fonction **_pipe** pour la communication entre un processus parent et un processus enfant, chaque processus ne doit avoir qu’un seul descripteur ouvert sur le canal. Les descripteurs doivent être contraires : si le parent a un descripteur de lecture ouvert, l’enfant doit avoir un descripteur d’écriture ouvert. Le moyen le plus simple consiste à effectuer une opération de**|** bits or () sur l’indicateur **_O_NOINHERIT** avec *TextMode*. Ensuite, utilisez **_dup** ou **_dup2** pour créer une copie héritable du descripteur de canal que vous souhaitez passer à l’enfant. Fermez le descripteur d’origine, puis générez le processus enfant. Une fois le retour de l’appel de génération obtenu, fermez le descripteur en double dans le processus parent. Pour plus d’informations, consultez l’exemple 2 plus loin dans ce même article.
+Pour utiliser la fonction **_pipe** pour la communication entre un processus parent et un processus enfant, chaque processus ne doit avoir qu’un seul descripteur ouvert sur le canal. Les descripteurs doivent être contraires : si le parent a un descripteur de lecture ouvert, l’enfant doit avoir un descripteur d’écriture ouvert. Le moyen le plus simple consiste à effectuer une opération de bits or ( **|** ) sur l’indicateur **_O_NOINHERIT** avec *TextMode*. Ensuite, utilisez **_dup** ou **_dup2** pour créer une copie héritable du descripteur de canal que vous souhaitez passer à l’enfant. Fermez le descripteur d’origine, puis générez le processus enfant. Une fois le retour de l’appel de génération obtenu, fermez le descripteur en double dans le processus parent. Pour plus d’informations, consultez l’exemple 2 plus loin dans ce même article.
 
 Dans le système d’exploitation Windows, un canal est détruit dès lors que tous ses descripteurs sont fermés. (Si tous les descripteurs de lecture sur le canal ont été fermés, l’écriture sur le canal génère une erreur.) Toutes les opérations de lecture et d’écriture sur le canal sont en attente jusqu’à ce qu’il y ait suffisamment de données ou d’un espace de mémoire tampon suffisant pour terminer la requête d’e/s.
 
@@ -101,7 +101,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
-|**_pipe**|\<io.h>|\<fcntl.h>,1 \<errno.h>2|
+|**_pipe**|\<io.h>|\<fcntl.h>, 1 \<errno.h> 2|
 
 1 pour les définitions de **_O_BINARY** et de **_O_TEXT** .
 

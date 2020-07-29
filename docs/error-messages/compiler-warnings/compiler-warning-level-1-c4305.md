@@ -5,12 +5,12 @@ f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 567442bc48487e4f7d1f905f871d15f913646e87
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926116"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233286"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Avertissement du compilateur (niveau 1) C4305
 
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-Pour résoudre ce problème, initialisez à l’aide d’une valeur du type correct ou utilisez un cast explicite vers le type approprié. Par exemple, utilisez un littéral à **virgule flottante** tel que 2,71828, f au lieu d’un **double** (type par défaut pour les littéraux à virgule flottante) pour initialiser une variable **float** , ou pour passer à un constructeur qui accepte un argument **float** .
+Pour résoudre ce problème, initialisez à l’aide d’une valeur du type correct ou utilisez un cast explicite vers le type approprié. Par exemple, utilisez un **`float`** littéral tel que 2,71828, f au lieu d’un **`double`** (type par défaut pour les littéraux à virgule flottante) pour initialiser une **`float`** variable, ou pour passer à un constructeur qui accepte un **`float`** argument.

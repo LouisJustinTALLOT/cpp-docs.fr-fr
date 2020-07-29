@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c09832a4f27bff51cbb5bd847a3123e62c9ee8d5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 068bdb2c7c87e8fe7cd3e482f53934de098a6166
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991004"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218089"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>Avertissement du compilateur (niveau 4) C4512
 
@@ -23,13 +23,13 @@ Un opérateur d'assignation pour la classe de base qui n'est pas accessible à l
 
 Pour éviter cet avertissement, spécifiez pour la classe un opérateur d'assignation défini par l'utilisateur.
 
-Le compilateur générera aussi une fonction d'opérateur d'assignation pour une classe qui n'en définit pas. Cet opérateur d'assignation est une copie membre des données membres d'un objet. Comme les éléments de données `const` ne peuvent pas être modifiés après l'initialisation, si la classe contient un élément `const`, l'opérateur d'assignation par défaut ne fonctionne pas. L'avertissement C4512 peut aussi être lié à une déclaration de données membres non statiques de type référence. Si votre intention est de créer un type non reproductible, vous devez aussi empêcher la création d'un constructeur de copie par défaut.
+Le compilateur générera aussi une fonction d'opérateur d'assignation pour une classe qui n'en définit pas. Cet opérateur d'assignation est une copie membre des données membres d'un objet. Étant donné que les **`const`** éléments de données ne peuvent pas être modifiés après l’initialisation, si la classe contient un **`const`** élément, l’opérateur d’assignation par défaut ne fonctionne pas. L'avertissement C4512 peut aussi être lié à une déclaration de données membres non statiques de type référence. Si votre intention est de créer un type non reproductible, vous devez aussi empêcher la création d'un constructeur de copie par défaut.
 
 Vous pouvez résoudre l'avertissement C4512 pour votre code de trois manières différentes :
 
 - Définissez explicitement un opérateur d'assignation pour la classe.
 
-- Supprimez **const** ou l’opérateur de référence de l’élément de données de la classe.
+- Supprimez **`const`** ou l’opérateur de référence de l’élément de données de la classe.
 
 - Utilisez l’instruction #pragma [Warning](../../preprocessor/warning.md) pour supprimer l’avertissement.
 

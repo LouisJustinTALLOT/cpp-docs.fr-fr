@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2280
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
-ms.openlocfilehash: e1ec032878fefdc1992605df5ee1aa13c673d4cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ee5b8105241ee347812a0dcc083a4f1cc7dca49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388902"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87208406"
 ---
 # <a name="compiler-error-c2280"></a>Erreur du compilateur C2280
 
-«*déclaration*' : tentative de référencement d’une fonction supprimée
+'*déclaration*' : tentative de référencement d’une fonction supprimée
 
-Le compilateur a détecté une tentative pour faire référence à un `deleted` (fonction). Cette erreur peut être provoquée par un appel à une fonction membre qui a été marquée explicitement comme `= deleted` dans le code source. Cette erreur peut également être provoquée par un appel à une fonction membre spéciale implicite d’un struct ou une classe qui est automatiquement déclarée et marquée comme `deleted` par le compilateur. Pour plus d’informations sur quand le compilateur génère automatiquement `default` ou `deleted` fonctions membres spéciales, consultez [fonctions membres spéciales](../../cpp/special-member-functions.md).
+Le compilateur a détecté une tentative de référencement d’une `deleted` fonction. Cette erreur peut être causée par un appel à une fonction membre qui a été explicitement marquée comme `= deleted` dans le code source. Cette erreur peut également être causée par un appel à une fonction membre spéciale implicite d’un struct ou d’une classe qui est automatiquement déclarée et marquée comme `deleted` par le compilateur. Pour plus d’informations sur le moment où le compilateur génère automatiquement **`default`** ou des `deleted` fonctions membres spéciales, consultez [fonctions membres spéciales](../../cpp/special-member-functions.md).
 
-## <a name="example-explicitly-deleted-functions"></a>Exemple : Fonctions supprimées explicitement
+## <a name="example-explicitly-deleted-functions"></a>Exemple : fonctions supprimées explicitement
 
-Un appel à une explicitement `deleted` fonction provoque cette erreur. Un explicitement `deleted` fonction membre implique que la classe ou structure est délibérément conçu pour empêcher son utilisation, par conséquent, pour résoudre ce problème, vous devez modifier votre code pour éviter cette situation.
+Un appel à une `deleted` fonction explicite provoque cette erreur. Une `deleted` fonction membre explicite implique que la classe ou le struct est intentionnellement conçu pour empêcher son utilisation. par conséquent, pour résoudre ce problème, vous devez modifier votre code pour l’éviter.
 
 ```cpp
 // C2280_explicit.cpp
@@ -42,9 +42,9 @@ void f() {
 }
 ```
 
-## <a name="example-uninitialized-data-members"></a>Exemple : Membres de données non initialisé
+## <a name="example-uninitialized-data-members"></a>Exemple : membres de données non initialisés
 
-Un membre de données de type de référence non initialisé ou `const` membre de données indique au compilateur de déclarer implicitement une `deleted` constructeur par défaut. Pour résoudre ce problème, initialisez le membre de données lorsqu’il est déclaré.
+Un membre de données ou un membre de données de type référence non initialisé **`const`** fait en sorte que le compilateur déclare implicitement un `deleted` constructeur par défaut. Pour résoudre ce problème, initialisez le membre de données lorsqu’il est déclaré.
 
 ```cpp
 // C2280_uninit.cpp
@@ -58,9 +58,9 @@ struct A {
 } a;    // C2280
 ```
 
-## <a name="example-reference-and-const-data-members"></a>Exemple : Référence et les données membres const
+## <a name="example-reference-and-const-data-members"></a>Exemple : référence et const Data Members
 
-Un `const` ou membre de données de type de référence indique au compilateur de déclarer un `deleted` opérateur d’assignation de copie. Une fois initialisée, ces membres ne peut pas être assignées, donc une simple copie ni déplacement ne peut pas fonctionner. Pour résoudre ce problème, nous vous recommandons de que modifier votre logique afin de supprimer les opérations d’assignation qui provoquent l’erreur.
+Un **`const`** membre de données de type référence ou fait en sorte que le compilateur déclare un `deleted` opérateur d’assignation de copie. Une fois initialisés, ces membres ne peuvent pas être affectés à, de sorte qu’une copie ou un déplacement simple ne peut pas fonctionner. Pour résoudre ce problème, nous vous recommandons de modifier votre logique pour supprimer les opérations d’assignation qui provoquent l’erreur.
 
 ```cpp
 // C2280_ref.cpp
@@ -79,11 +79,11 @@ void f() {
 }
 ```
 
-## <a name="example-movable-deletes-implicit-copy"></a>Exemple : Copie implicite de suppressions mobile
+## <a name="example-movable-deletes-implicit-copy"></a>Exemple : Removable supprime une copie implicite
 
-Si une classe déclare un constructeur de déplacement ou un opérateur d’assignation de déplacement, mais ne déclare pas explicitement un constructeur de copie, le compilateur implicitement déclare un constructeur de copie et définit en tant que `deleted`. De même, si une classe déclare un constructeur de déplacement ou un opérateur d’assignation de déplacement, mais ne déclare pas explicitement un opérateur d’assignation de copie, le compilateur implicitement déclare un opérateur d’assignation de copie et définit en tant que `deleted`. Pour résoudre ce problème, vous devez déclarer explicitement ces membres.
+Si une classe déclare un constructeur de déplacement ou un opérateur d’assignation de déplacement, mais ne déclare pas explicitement un constructeur de copie, le compilateur déclare implicitement un constructeur de copie et le définit comme `deleted` . De même, si une classe déclare un constructeur de déplacement ou un opérateur d’assignation de déplacement, mais ne déclare pas explicitement un opérateur d’assignation de copie, le compilateur déclare implicitement un opérateur d’assignation de copie et le définit en tant que `deleted` . Pour résoudre ce problème, vous devez déclarer explicitement ces membres.
 
-Lorsque vous voyez l’erreur C2280 en lien avec un `unique_ptr`, il est très probablement parce que vous essayez d’appeler son constructeur de copie, qui est un `deleted` (fonction). Par conception, un `unique_ptr` ne peut pas être copié. Utilisez un constructeur de déplacement pour transférer la propriété à la place.
+Quand vous voyez l’erreur C2280 dans la connexion avec un `unique_ptr` , cela est presque certainement dû au fait que vous essayez d’appeler son constructeur de copie, qui est une `deleted` fonction. Par défaut, un `unique_ptr` ne peut pas être copié. Utilisez un constructeur de déplacement pour transférer la propriété à la place.
 
 ```cpp
 // C2280_move.cpp
@@ -108,9 +108,9 @@ void copy(base *p)
 }
 ```
 
-## <a name="example-variant-and-volatile-members"></a>Exemple : Membres de type variants et volatiles
+## <a name="example-variant-and-volatile-members"></a>Exemple : des membres variants et volatiles
 
-Les versions du compilateur avant Visual Studio 2015 Update 2 ont des constructeurs par défaut généré et non conformes et les destructeurs pour les unions anonymes. Ils sont désormais implicitement déclarés en tant que `deleted`. Ces versions autorisaient également non conforme de définition implicite de `default` copier et déplacer des constructeurs et `default` copier et déplacer des opérateurs d’assignation dans les classes et structs qui ont `volatile` variables membres. Le compilateur considère qu’elles aient des constructeurs non triviaux et opérateurs d’assignation maintenant et ne génère pas de `default` implémentations. Lorsqu’une telle classe est membre d’une union ou une union anonyme à l’intérieur d’une classe, les constructeurs de copie et de déplacement et opérateurs d’assignation de copie et déplacement de la classe ou union sont implicitement définis en tant que `deleted`. Pour résoudre ce problème, vous devez déclarer explicitement les fonctions membres spéciales requises.
+Les versions du compilateur antérieures à Visual Studio 2015 Update 2 étaient non conformes et générait des constructeurs et des destructeurs par défaut pour les unions anonymes. Ils sont désormais implicitement déclarés comme `deleted` . Ces versions permettaient également une définition implicite non conforme des **`default`** constructeurs de copie et de déplacement, ainsi **`default`** que des opérateurs d’assignation de copie et de déplacement dans les classes et les structures qui ont des **`volatile`** variables membres. Désormais, le compilateur considère qu’ils ont des constructeurs et des opérateurs d’assignation non triviales, et ne génère pas d' **`default`** implémentations. Quand une telle classe est membre d’une Union ou d’une Union anonyme à l’intérieur d’une classe, les constructeurs de copie et de déplacement et les opérateurs d’assignation de copie et de déplacement de l’Union ou de la classe sont implicitement définis comme `deleted` . Pour résoudre ce problème, vous devez déclarer explicitement les fonctions membres spéciales requises.
 
 ```cpp
 // C2280_variant.cpp
@@ -137,11 +137,11 @@ int main() {
 }
 ```
 
-## <a name="example-indirect-base-members-deleted"></a>Exemple : Membres de base indirectes supprimés
+## <a name="example-indirect-base-members-deleted"></a>Exemple : membres de base indirects supprimés
 
-Les versions du compilateur avant Visual Studio 2015 Update 2 ont été non conformes et autorisaient une classe dérivée à appeler des fonctions d’indirectement dérivée des membres spéciaux `private virtual` classes de base. Le compilateur émet désormais l’erreur du compilateur C2280 lorsqu’un appel est effectué.
+Les versions du compilateur antérieures à Visual Studio 2015 Update 2 étaient non conformes et permettaient à une classe dérivée d’appeler des fonctions membres spéciales de classes de base indirectement dérivées `private virtual` . Le compilateur émet désormais une erreur de compilation C2280 quand un tel appel est effectué.
 
-Dans cet exemple, la classe `top` dérive indirectement de privé virtuel `base`. Dans le code conforme, cela rend les membres de `base` inaccessible à `top`; un objet de type `top` ne peut pas être par défaut construit ou détruit. Pour résoudre ce problème dans le code qui reposait sur l’ancien comportement de compilateur, modifiez la classe intermédiaire à utiliser `protected virtual` dérivation, ou modifier la `top` classe à utiliser la dérivation directe :
+Dans cet exemple, `top` la classe dérive indirectement de la classe virtuelle privée `base` . Dans le code conforme, cela rend les membres `base` inaccessibles à `top` ; un objet de type `top` ne peut pas être construit ou détruit par défaut. Pour résoudre ce problème dans le code qui s’appuyait sur l’ancien comportement du compilateur, modifiez la classe intermédiaire pour utiliser la `protected virtual` dérivation ou modifiez la `top` classe pour qu’elle utilise la dérivation directe :
 
 ```cpp
 // C2280_indirect.cpp

@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212290"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233455"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase, classe
 
-Tous les accesseurs des modèles OLE DB dérivent de cette classe. `CAccessorBase` permet à un ensemble de lignes de gérer plusieurs accesseurs. Il fournit également une liaison pour les paramètres et les colonnes de sortie.
+Tous les accesseurs des modèles OLE DB dérivent de cette classe. `CAccessorBase`permet à un ensemble de lignes de gérer plusieurs accesseurs. Il fournit également une liaison pour les paramètres et les colonnes de sortie.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -122,7 +122,7 @@ dans Nombre de décalage zéro pour l’accesseur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la **valeur true** si l’accesseur est un autoaccesseur. Sinon, elle retourne **False**.
+Retourne **`true`** si l’accesseur est un autoaccesseur. Sinon, elle retourne **`false`** .
 
 ## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase :: ReleaseAccessors
 
@@ -137,7 +137,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>Paramètres
 
 *pUnk*<br/>
-dans Pointeur vers une interface `IUnknown` pour l’objet COM pour lequel les accesseurs ont été créés.
+dans Pointeur vers une `IUnknown` interface pour l’objet com pour lequel les accesseurs ont été créés.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -149,6 +149,6 @@ Appelé à partir de [CAccessorRowset :: Close](../../data/oledb/caccessorrowse
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessorBase, classe](../../data/oledb/caccessorbase-class.md)

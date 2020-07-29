@@ -30,16 +30,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 9ac623c6cb80c774184dcb005e6d1d631c498040
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e76ebd065d323a9ae501ce6a7a5790389c7d5dad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915143"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234209"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
-Convertit un nombre **double** en une chaîne. Il s’agit d’une version de [_ecvt](ecvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Convertit un **`double`** nombre en une chaîne. Il s’agit d’une version de [_ecvt](ecvt.md) assortie des améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -92,16 +92,16 @@ En cas de paramètre non valide, comme indiqué dans le tableau suivant, cette f
 
 |*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|Valeur retournée|Valeur dans la *mémoire tampon*|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
-|**NUL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée.|
+|**NULL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée.|
 |Not **null** (pointe vers une mémoire valide)|<=0|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée.|
-|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**NUL**|n'importe laquelle|**EINVAL**|Non modifiée.|
-|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**NUL**|**EINVAL**|Non modifiée.|
+|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**NULL**|n'importe laquelle|**EINVAL**|Non modifiée.|
+|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**NULL**|**EINVAL**|Non modifiée.|
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
 **_ecvt_s** peut générer une violation d’accès si la *mémoire tampon* ne pointe pas vers une mémoire valide et n’a pas la **valeur null**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_ecvt_s** convertit un nombre à virgule flottante en une chaîne de caractères. Le paramètre *_Value* est le nombre à virgule flottante à convertir. Cette fonction stocke jusqu’à *Count* chiffres de *_Value* sous forme de chaîne et ajoute un caractère null (« \ 0 »). Si le nombre de chiffres dans *_Value* dépasse *_count*, le chiffre de poids faible est arrondi. Si le *nombre* de chiffres est inférieur à, la chaîne est complétée par des zéros.
 
@@ -119,7 +119,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|En-tête facultatif|
+|Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 

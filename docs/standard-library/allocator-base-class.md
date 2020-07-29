@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: b55a7ec92787cb6b3103bf71b65d137d24ffff04
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 452a6bdc0382af4c9d01921c51dbaa0e00ccdcb2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205000"
 ---
 # <a name="allocator_base-class"></a>allocator_base, classe
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |Fonction membre|Description|
 |-|-|
-|[_Charalloc](#charalloc)|Alloue le stockage pour un tableau de type **char**.|
-|[_Chardealloc](#chardealloc)|Libère le stockage pour le tableau contenant des éléments de type **char**.|
+|[_Charalloc](#charalloc)|Alloue le stockage pour un tableau de type **`char`** .|
+|[_Chardealloc](#chardealloc)|Libère le stockage pour le tableau contenant des éléments de type **`char`** .|
 |[address](#address)|Recherche l'adresse d'un objet dont la valeur est spécifiée.|
 |[allocate](#allocate)|Alloue un bloc de mémoire suffisamment grand pour stocker au moins un nombre spécifié d'éléments.|
 |[construct](#construct)|Construit un type d'objet spécifique à une adresse spécifiée qui est initialisée avec une valeur spécifiée.|
@@ -94,7 +94,7 @@ class allocator_base
 |[suppression](#destroy)|Appelle un destructeur d'objets sans libérer la mémoire où l'objet était stocké.|
 |[max_size](#max_size)|Retourne le nombre d’éléments de type *Type* qui pourraient être alloués par un objet de classe allocator avant que la mémoire libre soit complètement utilisée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<allocators>
 
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="allocator_base_charalloc"></a><a name="charalloc"></a>allocator_base :: _Charalloc
 
-Alloue le stockage pour un tableau de type **char**.
+Alloue le stockage pour un tableau de type **`char`** .
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -114,7 +114,7 @@ char *_Charalloc(size_type count);
 |---------------|-----------------|
 |*count*|Nombre d’éléments du tableau à allouer.|
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Un pointeur vers l’objet alloué.
 
@@ -124,7 +124,7 @@ Cette fonction membre est utilisée par les conteneurs quand la compilation s’
 
 ## <a name="allocator_base_chardealloc"></a><a name="chardealloc"></a>allocator_base :: _Chardealloc
 
-Libère le stockage pour le tableau contenant des éléments de type **char**.
+Libère le stockage pour le tableau contenant des éléments de type **`char`** .
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -139,7 +139,7 @@ void _Chardealloc(void* ptr, size_type count);
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre est utilisée par les conteneurs quand la compilation s’effectue avec un compilateur qui ne peut pas compiler rebind. Il implémente `_Chardealloc` pour l’allocateur défini par l’utilisateur en appelant la fonction `deallocate` du filtre de synchronisation. Le pointeur ptr doit avoir été retourné précédemment par un appel à `_Charalloc` pour un objet allocateur dont la valeur est égale à `*this`, en allouant un objet tableau de même taille et de même type. `_Chardealloc` ne lève jamais d’exception.
+Cette fonction membre est utilisée par les conteneurs quand la compilation s’effectue avec un compilateur qui ne peut pas compiler rebind. Il implémente `_Chardealloc` pour l’allocateur défini par l’utilisateur en appelant la fonction `deallocate` du filtre de synchronisation. Le pointeur PTR doit avoir été retourné précédemment par un appel à `_Charalloc` pour un objet allocateur dont la valeur est égale à **`*this`** , en allouant un objet tableau de même taille et de même type. `_Chardealloc` ne lève jamais d’exception.
 
 ## <a name="allocator_baseaddress"></a><a name="address"></a>allocator_base :: Address
 
@@ -156,7 +156,7 @@ const_pointer address(const_reference val);
 *multiples*\
 Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Pointeur const ou nonconst vers l’objet trouvé d’une valeur const ou nonconst, respectivement.
 
@@ -182,7 +182,7 @@ pointer allocate(size_type _Nx);
 |*_Nx*|Nombre d’éléments du tableau à allouer.|
 |*_Hint*|Ce paramètre est ignoré.|
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Un pointeur vers l’objet alloué.
 
@@ -299,7 +299,7 @@ Retourne le nombre d'éléments de type `Type` qui pourraient être alloués par
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Nombre d’éléments pouvant être alloués.
 

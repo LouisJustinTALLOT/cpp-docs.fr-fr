@@ -48,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507038"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218596"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -82,7 +82,7 @@ long double log10( long double x );  // C++ only
 *x*<br/>
 Valeur dont le logarithme doit être recherché.
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 Les fonctions de **journalisation** retournent le logarithme népérien (base *e*) de *x* en cas de réussite. Les fonctions **log10** retournent le logarithme en base 10. Si *x* est négatif, ces fonctions retournent une valeur indéfinie (IND) par défaut. Si *x* est égal à 0, elles retournent l’infini (INF).
 
@@ -94,13 +94,13 @@ Les fonctions de **journalisation** retournent le logarithme népérien (base *e
 
 **log** et **log10** ont une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log** et **log10** qui acceptent et retournent des valeurs **float** ou **long double** . Dans un programme C, **log** et **log10** prennent et retournent toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log** et **log10** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **log** et **log10** acceptent et retournent toujours un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

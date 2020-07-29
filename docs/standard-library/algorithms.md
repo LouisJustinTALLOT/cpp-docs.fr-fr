@@ -8,12 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: 4b49b3c296d3afcbb26af028dc0b4a885444a897
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6532cb56bb70c82525a13ba53efdd6203ebafb12
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617630"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205221"
 ---
 # <a name="algorithms"></a>Algorithmes
 
@@ -33,7 +33,7 @@ Les descriptions des fonctions de modèle d'algorithme emploient plusieurs expre
 
 - Les expressions telles que *x*  -  *Y*, où *x* et *Y* peuvent être des itérateurs autres que des itérateurs à accès aléatoire, sont conçues dans le sens mathématique. La fonction n’évalue pas nécessairement l’opérateur **-** s’il doit déterminer une telle valeur. Cela est également vrai pour les expressions telles que *x*  +  *n* et *x*  -  *n*, où *N* est un type entier.
 
-Plusieurs algorithmes utilisent un prédicat qui effectue une comparaison par paire, par exemple avec `operator==` , pour générer un résultat **bool** . La fonction de prédicat `operator==`, ou tout remplacement, ne doit pas modifier l'un de ses opérandes. Elle doit générer le même résultat **bool** chaque fois qu’elle est évaluée et doit générer le même résultat si une copie de l’un des opérandes est substituée à l’opérande.
+Plusieurs algorithmes utilisent un prédicat qui effectue une comparaison par paire, par exemple avec `operator==` , pour générer un **`bool`** résultat. La fonction de prédicat `operator==`, ou tout remplacement, ne doit pas modifier l'un de ses opérandes. Elle doit générer le même **`bool`** résultat chaque fois qu’elle est évaluée et doit générer le même résultat si une copie de l’un des opérandes est substituée à l’opérande.
 
 Plusieurs algorithmes utilisent un prédicat qui doit imposer un classement faible strict sur des paires d’éléments d’une séquence. Pour le prédicat *prédit*(*X*, *Y*) :
 
@@ -45,9 +45,9 @@ Plusieurs algorithmes utilisent un prédicat qui doit imposer un classement faib
 
 Certains de ces algorithmes utilisent implicitement le prédicat *X* \< *Y*. Other predicates that typically satisfy the strict weak ordering requirement are *X* > *Y*, `less` (*x*, *y*) et `greater` (*x*, *y*). Notez, toutefois, que les prédicats tels que *X* \<= *Y* and *X* > =  *Y* ne répondent pas à cette exigence.
 
-Une séquence d’éléments désignée par des itérateurs dans la plage \[ *First*, *Last*) est une séquence ordonnée par opérateur **<** si, pour chaque *N* dans la \[ plage 0, Last *Last*  -  *First*) et pour chaque *M* dans la plage (*n*, *Last*  -  *First*), le prédicat \! ( \* (*First*  +  *M*) < \* (*First*  +  *N*)) a la valeur true. (Notez que les éléments sont triés par ordre croissant.) La fonction de prédicat `operator<` , ou tout remplacement, ne doit pas modifier l’un de ses opérandes. Elle doit générer le même résultat **bool** chaque fois qu’elle est évaluée et doit générer le même résultat si une copie de l’un des opérandes est substituée à l’opérande. En outre, elle doit imposer un classement faible strict sur les opérandes qu’elle compare.
+Une séquence d’éléments désignée par des itérateurs dans la plage \[ *First*, *Last*) est une séquence ordonnée par opérateur **<** si, pour chaque *N* dans la \[ plage 0, Last *Last*  -  *First*) et pour chaque *M* dans la plage (*n*, *Last*  -  *First*), le prédicat \! ( \* (*First*  +  *M*) < \* (*First*  +  *N*)) a la valeur true. (Notez que les éléments sont triés par ordre croissant.) La fonction de prédicat `operator<` , ou tout remplacement, ne doit pas modifier l’un de ses opérandes. Elle doit générer le même **`bool`** résultat chaque fois qu’elle est évaluée et doit générer le même résultat si une copie de l’un des opérandes est substituée à l’opérande. En outre, elle doit imposer un classement faible strict sur les opérandes qu’elle compare.
 
-Une séquence d’éléments désignée par des itérateurs dans la plage \[ `First` , `Last` ) est un tas ordonné par `operator<` si, pour chaque *N* dans la plage \[ 1, *dernier*  -  *prénom*, le prédicat \! ( \* _First_  <  \* (*First*  +  *N*)) a la valeur true. (Le premier élément est le plus grand.) Sa structure interne est également connue uniquement des fonctions de modèle [make_heap](algorithm-functions.md#make_heap), [pop_heap](algorithm-functions.md#pop_heap)et [push_heap](algorithm-functions.md#push_heap). Comme avec une séquence ordonnée, la fonction de prédicat `operator<` , ou tout remplacement, ne doit pas modifier l’un de ses opérandes et elle doit imposer un classement faible strict sur les opérandes qu’elle compare. Elle doit générer le même résultat **bool** chaque fois qu’elle est évaluée et doit générer le même résultat si une copie de l’un des opérandes est substituée à l’opérande.
+Une séquence d’éléments désignée par des itérateurs dans la plage \[ `First` , `Last` ) est un tas ordonné par `operator<` si, pour chaque *N* dans la plage \[ 1, *dernier*  -  *prénom*, le prédicat \! ( \* _First_  <  \* (*First*  +  *N*)) a la valeur true. (Le premier élément est le plus grand.) Sa structure interne est également connue uniquement des fonctions de modèle [make_heap](algorithm-functions.md#make_heap), [pop_heap](algorithm-functions.md#pop_heap)et [push_heap](algorithm-functions.md#push_heap). Comme avec une séquence ordonnée, la fonction de prédicat `operator<` , ou tout remplacement, ne doit pas modifier l’un de ses opérandes et elle doit imposer un classement faible strict sur les opérandes qu’elle compare. Elle doit générer le même **`bool`** résultat chaque fois qu’elle est évaluée et doit générer le même résultat si une copie de l’un des opérandes est substituée à l’opérande.
 
 Les algorithmes de la bibliothèque C++ standard se trouvent dans les [\<algorithm>](algorithm.md) [\<numeric>](numeric.md) fichiers d’en-tête et.
 

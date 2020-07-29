@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: acf885c923db3fdf91119b29a78d64824384166b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 29458f2d752f1fe59778b752480e268f8243f15e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913503"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234274"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -107,15 +107,15 @@ Pour plus d’informations sur ces codes de retour et les autres, consultez [err
 
 Pour plus d’informations sur les **uintptr_t**, consultez [types standard](../../c-runtime-library/standard-types.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_beginthread** crée un thread qui commence l’exécution d’une routine à *start_address*. La routine à *start_address* doit utiliser la Convention d’appel **__cdecl** (pour le code natif) ou **__clrcall** (pour le code managé) et ne doit pas avoir de valeur de retour. Lorsque le thread retourne de cette routine, il est terminé automatiquement. Pour plus d’informations sur les threads, consultez [Prise en charge du multithreading pour le code plus ancien (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
+La fonction **_beginthread** crée un thread qui commence l’exécution d’une routine à *start_address*. La routine à *start_address* doit utiliser la **`__cdecl`** Convention d’appel (pour le code natif) ou **__clrcall** (pour le code managé) et ne doit pas avoir de valeur de retour. Lorsque le thread retourne de cette routine, il est terminé automatiquement. Pour plus d’informations sur les threads, consultez [Prise en charge du multithreading pour le code plus ancien (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
 **_beginthreadex** ressemble à l’API [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) Win32 plus près que **_beginthread** . **_beginthreadex** diffère de **_beginthread** des manières suivantes :
 
 - **_beginthreadex** a trois paramètres supplémentaires : *initflag*, *Security*et **threadaddr**. Le nouveau thread peut être créé dans un état suspendu, avec une sécurité spécifiée, et il est accessible à l’aide de *thrdaddr*, qui est l’identificateur de thread.
 
-- La routine à *start_address* transmise à **_beginthreadex** doit utiliser la Convention d’appel **__stdcall** (pour le code natif) ou **__clrcall** (pour le code managé) et doit retourner un code de sortie de thread.
+- La routine à *start_address* transmise à **_beginthreadex** doit utiliser la **`__stdcall`** Convention d’appel (pour le code natif) ou **__clrcall** (pour le code managé) et doit retourner un code de sortie de thread.
 
 - **_beginthreadex** retourne 0 en cas d’échec, plutôt que-1L.
 
@@ -157,7 +157,7 @@ Uniquement les versions multithread des [bibliothèques Runtime C](../../c-runti
 
 Pour utiliser **_beginthread** ou **_beginthreadex**, l’application doit être liée à l’une des bibliothèques Runtime C multithread.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 L’exemple suivant utilise **_beginthread** et **_endthread**.
 
@@ -277,7 +277,7 @@ void Bounce( void * parg )
 
 Appuyez sur n'importe quelle touche pour fermer l'exemple d'application.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 L’exemple de code suivant montre comment vous pouvez utiliser le handle de thread retourné par **_beginthreadex** avec l’API de synchronisation [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject). Le thread principal attend que le second thread se termine avant de continuer. Lorsque le deuxième thread appelle **_endthreadex**, il fait passer son objet thread à l’état signalé. Le thread principal peut ainsi continuer à s'exécuter. Cela ne peut pas être fait avec **_beginthread** et **_endthread**, car **_endthread** appelle **CloseHandle**, ce qui détruit l’objet thread avant de pouvoir le définir à l’état signalé.
 

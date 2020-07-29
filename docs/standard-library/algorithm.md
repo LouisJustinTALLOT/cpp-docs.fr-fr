@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: d36ee5ea0d38455b52cb988dc30b13d47be16e53
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a2a48eec2ed75fffd711a8704cb8c896f8ee7242
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623847"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205533"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -49,13 +49,13 @@ Les algorithmes numériques de la bibliothèque standard C++ fournis pour le tra
 |||
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|Recherche deux éléments adjacents qui ont la même valeur ou qui répondent à une condition spécifiée.|
-|[all_of](algorithm-functions.md#all_of)|Retourne la **valeur true** lorsqu’une condition est présente à chaque élément d’une plage donnée.|
-|[any_of](algorithm-functions.md#any_of)|Retourne la **valeur true** lorsqu’une condition est présente au moins une fois dans la plage d’éléments spécifiée.|
+|[all_of](algorithm-functions.md#all_of)|Retourne **`true`** lorsqu’une condition est présente à chaque élément d’une plage donnée.|
+|[any_of](algorithm-functions.md#any_of)|Retourne **`true`** lorsqu’une condition est présente au moins une fois dans la plage d’éléments spécifiée.|
 |[binary_search](algorithm-functions.md#binary_search)|Teste si un élément d’une plage triée est égal à une valeur spécifiée ou équivalent, selon une condition spécifiée par un prédicat binaire.|
 |[bride](algorithm-functions.md#clamp)||
 |[copy](algorithm-functions.md#copy)|Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions, du haut vers le bas.|
 |[copy_backward](algorithm-functions.md#copy_backward)|Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions vers le haut.|
-|[copy_if](algorithm-functions.md#copy_if)|Copier tous les éléments d’une plage donnée qui testent la **valeur true** pour une condition spécifiée|
+|[copy_if](algorithm-functions.md#copy_if)|Copier tous les éléments d’une plage donnée qui testent **`true`** une condition spécifiée|
 |[copy_n](algorithm-functions.md#copy_n)|Copie un nombre spécifié d'éléments.|
 |[count](algorithm-functions.md#count)|Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une valeur spécifiée.|
 |[count_if](algorithm-functions.md#count_if)|Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une condition spécifiée.|
@@ -74,12 +74,12 @@ Les algorithmes numériques de la bibliothèque standard C++ fournis pour le tra
 |[generate_n](algorithm-functions.md#generate_n)|Assigne les valeurs générées par un objet de fonction à un nombre spécifié d'éléments d'une plage, et retourne à la position située juste après la dernière valeur assignée.|
 |[offre](algorithm-functions.md#includes)|Teste si une plage triée contient tous les éléments d’une autre plage triée. Le critère de tri ou d’équivalence entre les éléments peut être spécifié par un prédicat binaire.|
 |[inplace_merge](algorithm-functions.md#inplace_merge)|Regroupe les éléments de deux plages triées consécutives au sein d’une même plage triée. Le critère de tri peut être spécifié par un prédicat binaire.|
-|[is_heap](algorithm-functions.md#is_heap)|Retourne la **valeur true** si les éléments de la plage spécifiée forment un segment de mémoire.|
-|[is_heap_until](algorithm-functions.md#is_heap_until)|Retourne la **valeur true** si la plage spécifiée forme un tas jusqu’au dernier élément.|
-|[is_partitioned](algorithm-functions.md#is_partitioned)|Retourne la **valeur true** si tous les éléments d’une plage donnée qui testent la **valeur true** pour une condition précèdent tous les éléments qui testent **false**.|
+|[is_heap](algorithm-functions.md#is_heap)|Retourne **`true`** si les éléments de la plage spécifiée forment un tas.|
+|[is_heap_until](algorithm-functions.md#is_heap_until)|Retourne **`true`** si la plage spécifiée forme un tas jusqu’au dernier élément.|
+|[is_partitioned](algorithm-functions.md#is_partitioned)|Retourne **`true`** si tous les éléments d’une plage donnée qui testent **`true`** une condition se trouvent avant les éléments qui testent **`false`** .|
 |[is_permutation](algorithm-functions.md#is_permutation)|Détermine si les éléments d'une plage donnée forment une permutation valide.|
-|[is_sorted](algorithm-functions.md#is_sorted)|Retourne la **valeur true** si les éléments de la plage spécifiée sont triés.|
-|[is_sorted_until](algorithm-functions.md#is_sorted_until)|Retourne la **valeur true** si les éléments de la plage spécifiée sont triés.|
+|[is_sorted](algorithm-functions.md#is_sorted)|Retourne **`true`** si les éléments de la plage spécifiée sont triés.|
+|[is_sorted_until](algorithm-functions.md#is_sorted_until)|Retourne **`true`** si les éléments de la plage spécifiée sont triés.|
 |[iter_swap](algorithm-functions.md#iter_swap)|Échange deux valeurs référencées par une paire d'itérateurs spécifiés.|
 |[lexicographical_compare](algorithm-functions.md#lexicographical_compare)|Compare deux séquences, élément par élément, pour déterminer lequel est inférieur à l'autre.|
 |[lower_bound](algorithm-functions.md#lower_bound)|Recherche la position du premier élément d’une plage triée dont la valeur est supérieure ou équivalente à une valeur spécifiée. Le critère de tri peut être spécifié par un prédicat binaire.|
@@ -95,12 +95,12 @@ Les algorithmes numériques de la bibliothèque standard C++ fournis pour le tra
 |[&lt;&gt;déplacement ALG](algorithm-functions.md#alg_move)|Déplace les éléments associés à une plage spécifiée.|
 |[move_backward](algorithm-functions.md#move_backward)|Déplace les éléments d'un itérateur vers un autre. Le déplacement commence par le dernier élément d'une plage spécifiée, et se termine par le premier élément de cette plage.|
 |[next_permutation](algorithm-functions.md#next_permutation)|Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.|
-|[none_of](algorithm-functions.md#none_of)|Retourne la **valeur true** lorsqu’une condition n’est jamais présente parmi les éléments de la plage donnée.|
+|[none_of](algorithm-functions.md#none_of)|Retourne **`true`** lorsqu’une condition n’est jamais présente parmi les éléments d’une plage donnée.|
 |[nth_element](algorithm-functions.md#nth_element)|Partitionne une plage d’éléments, en localisant correctement le *n*ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux et que tous les éléments qui le suivent dans la séquence soient supérieurs ou égaux.|
 |[partial_sort](algorithm-functions.md#partial_sort)|Réorganise un nombre spécifié d’éléments plus petits au sein d’une plage, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|Copie les éléments d’une plage source dans une plage de destination. Les éléments sources sont triés par ordre croissant ou selon un autre prédicat binaire spécifié.|
-|[non](algorithm-functions.md#partition)|Répartit les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas.|
-|[partition_copy](algorithm-functions.md#partition_copy)|Copie les éléments pour lesquels une condition a la **valeur true** pour une destination, et pour laquelle la condition est **false** à une autre. Les éléments doivent provenir d'une plage spécifiée.|
+|[partition](algorithm-functions.md#partition)|Répartit les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas.|
+|[partition_copy](algorithm-functions.md#partition_copy)|Copie les éléments pour lesquels une condition est **`true`** vers une destination et pour laquelle la condition est **`false`** à une autre. Les éléments doivent provenir d'une plage spécifiée.|
 |[partition_point](algorithm-functions.md#partition_point)|Retourne le premier élément d'une plage donnée qui ne répond pas à une condition. Les éléments sont triés de sorte que ceux qui répondent à la condition précèdent ceux qui n'y répondent pas.|
 |[pop_heap](algorithm-functions.md#pop_heap)|Retire le plus grand élément du début du tas et le place à l'avant-dernière position de la plage, puis forme un nouveau tas à partir des éléments restants.|
 |[prev_permutation](algorithm-functions.md#prev_permutation)|Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.|
@@ -114,7 +114,7 @@ Les algorithmes numériques de la bibliothèque standard C++ fournis pour le tra
 |[replace_copy](algorithm-functions.md#replace_copy)|Examine tous les éléments d'une plage source et les remplace s'ils correspondent à une valeur spécifiée, tout en copiant le résultat dans une nouvelle plage de destination.|
 |[replace_copy_if](algorithm-functions.md#replace_copy_if)|Examine tous les éléments d'une plage source et les remplace s'ils répondent à un prédicat, tout en copiant le résultat dans une nouvelle plage de destination.|
 |[replace_if](algorithm-functions.md#replace_if)|Examine tous les éléments d’une plage et les remplace s’ils répondent à un prédicat spécifié.|
-|[TVA](algorithm-functions.md#reverse)|Inverse l'ordre des éléments d'une plage.|
+|[reverse](algorithm-functions.md#reverse)|Inverse l'ordre des éléments d'une plage.|
 |[reverse_copy](algorithm-functions.md#reverse_copy)|Inverse l'ordre des éléments d'une plage source, tout en les copiant dans une plage de destination.|
 |[MUTE](algorithm-functions.md#rotate)|Échange les éléments de deux plages adjacentes.|
 |[rotate_copy](algorithm-functions.md#rotate_copy)|Échange les éléments de deux plages adjacentes au sein d'une plage source et copie le résultat dans une plage de destination.|

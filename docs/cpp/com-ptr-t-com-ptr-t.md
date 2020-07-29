@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 96589d8be56b81e78ea7c474aea24803cc56ab21
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180483"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233793"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Construit un objet **_com_ptr_t** .
 
@@ -139,31 +139,31 @@ explicit _com_ptr_t(
 Pointeur d'interface brut.
 
 *fAddRef*<br/>
-Si la valeur est TRUE, `AddRef` est appelé pour incrémenter le décompte de références du pointeur d’interface encapsulé.
+Si **`true`** , `AddRef` est appelé pour incrémenter le décompte de références du pointeur d’interface encapsulé.
 
-*cp*<br/>
+*CP*<br/>
 Objet **_com_ptr_t** .
 
 *p*<br/>
 Pointeur d’interface brut qui est différent du type de pointeur intelligent de cet objet **_com_ptr_t** .
 
 *varSrc*<br/>
-Objet `_variant_t` .
+Objet `_variant_t`.
 
-*identificateur*<br/>
-`CLSID` d’une coclasse.
+*clsid*<br/>
+`CLSID`D’une coclasse.
 
 *dwClsContext*<br/>
 Contexte d'exécution du code exécutable.
 
 *lpcStr*<br/>
-Chaîne multioctet qui contient un `CLSID` (commençant par « **{** ») ou un `ProgID`.
+Chaîne multioctet qui contient un `CLSID` (commençant par «**{**») ou un `ProgID` .
 
 *pOuter*<br/>
 Externe inconnu pour l' [agrégation](/windows/win32/com/aggregation).
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[_com_ptr_t, classe](../cpp/com-ptr-t-class.md)
+[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

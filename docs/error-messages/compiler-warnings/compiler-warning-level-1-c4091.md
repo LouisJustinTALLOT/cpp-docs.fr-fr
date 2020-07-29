@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 8c373ad1eba07337dc970cb84202370c147560dd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 333f76c2f570832c9d08a7ad666f2540cca37f05
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163908"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233338"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>Avertissement du compilateur (niveau 1) C4091
 
@@ -21,7 +21,7 @@ Le compilateur a détecté une situation dans laquelle l’utilisateur souhaitai
 
 ## <a name="example"></a>Exemple
 
-Un attribut `__declspec` au début d’une déclaration de type défini par l’utilisateur s’applique à la variable de ce type. C4091 indique qu’aucune variable n’est déclarée. L’exemple suivant génère l’C4091.
+Un **`__declspec`** attribut au début d’une déclaration de type défini par l’utilisateur s’applique à la variable de ce type. C4091 indique qu’aucune variable n’est déclarée. L’exemple suivant génère l’C4091.
 
 ```cpp
 // C4091.cpp

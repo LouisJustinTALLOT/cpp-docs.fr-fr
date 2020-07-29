@@ -1,5 +1,5 @@
 ---
-title: Types de données SBCS et MBCS
+title: types de données SBCS et MBCS
 ms.date: 04/11/2018
 f1_keywords:
 - MBCS
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-ms.openlocfilehash: 2d73155e36909efb1a7261f9fe45c2431525437a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 72215b7a3fff638daf02f136e3a107ce8a8a00d5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742910"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233910"
 ---
-# <a name="sbcs-and-mbcs-data-types"></a>Types de données SBCS et MBCS
+# <a name="sbcs-and-mbcs-data-types"></a>types de données SBCS et MBCS
 
-Toute routine de bibliothèque Runtime Microsoft MBCS qui gère un seul caractère multioctet ou un seul octet de caractère multioctet attend un argument `unsigned int` (où 0x00 <= valeur du caractère <= 0xFFFF et 0x00 <= valeur de l’octet <= 0xFF). Une routine MBCS qui gère des octets ou des caractères multioctets dans un contexte de chaîne attend une chaîne de caractères multioctets représentée en tant que pointeur `unsigned char`.
+Toute routine de bibliothèque Runtime Microsoft MBCS qui gère un seul caractère multioctet ou un octet d’un caractère multioctet attend un **`unsigned int`** argument (où 0x00 <= valeur de caractère <= 0xFFFF et 0x00 <= valeur d’octet <= 0xFF). Une routine MBCS qui gère des octets ou des caractères multioctets dans un contexte de chaîne s’attend à ce qu’une chaîne de caractères multioctets soit représentée comme un **`unsigned char`** pointeur.
 
 > [!CAUTION]
-> Chaque octet d’un caractère multioctet peut être représenté dans un **char** 8 bits. Toutefois, un caractère codé sur un octet SBCS ou MBCS de type **char** avec une valeur supérieure à 0x7F est négatif. Quand un tel caractère est converti directement en **int** ou **long**, le compilateur génère un résultat de type signe étendu, ce qui peut donc donner des résultats inattendus.
+> Chaque octet d’un caractère multioctet peut être représenté dans un 8 bits **`char`** . Toutefois, un caractère codé sur un octet SBCS ou MBCS de type **`char`** avec une valeur supérieure à 0x7F est négatif. Quand un tel caractère est converti directement en **`int`** ou a **`long`** , le résultat est étendu par le compilateur et peut donc produire des résultats inattendus.
 
-Ainsi, il est préférable de représenter un octet d’un caractère multi-octet sous forme de `unsigned char` 8 bits. Sinon, pour éviter un résultat négatif, il suffit de convertir un caractère codé sur un octet de type **char** en `unsigned char` avant de le convertir en **int** ou en **long**.
+Par conséquent, il est préférable de représenter un octet d’un caractère multioctet sous forme de 8 bits **`unsigned char`** . Pour éviter un résultat négatif, il suffit de convertir un caractère codé sur un octet de type **`char`** en une valeur **`unsigned char`** avant de le convertir en **`int`** ou **`long`** .
 
-Étant donné que certaines fonctions de gestion des chaînes SBCS acceptent des paramètres **char**<strong>\*</strong> (signés), un avertissement du compilateur d’incompatibilité de type est généré quand **_MBCS** est défini. Il existe trois façons d’éviter cet avertissement, indiquées dans l’ordre de leur efficacité :
+Étant donné que certaines fonctions de gestion de chaînes SBCS acceptent les paramètres (signés) **`char`** <strong>\*</strong> , un avertissement du compilateur d’incompatibilité de type se produit lorsque **_MBCS** est défini. Il existe trois façons d’éviter cet avertissement, indiquées dans l’ordre de leur efficacité :
 
 1. Utilisez les fonctions inline de type sécurisé dans TCHAR.H. Il s'agit du comportement par défaut.
 

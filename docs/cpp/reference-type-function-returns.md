@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188296"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233624"
 ---
 # <a name="reference-type-function-returns"></a>Retours de fonction de type référence
 
@@ -86,7 +86,7 @@ Notez également que, dans main, l'objet Point reste dans la portée et ses memb
 
 Les déclarations des types référence doivent contenir des initialiseurs sauf dans les cas suivants :
 
-- Déclaration **extern** explicite
+- **`extern`** Déclaration explicite
 
 - Déclaration d'une classe membre
 
@@ -108,7 +108,7 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-Dans ce cas, le compilateur émet un avertissement : `warning C4172: returning address of local variable or temporary`. Dans des programmes simples, il est possible qu'occasionnellement aucune violation d'accès ne se produise si la référence est accessible par l'appelant avant le remplacement de l'emplacement de mémoire. C'est le fruit du hasard. Tenez compte de l'avertissement.
+Dans ce cas, le compilateur émet un avertissement : `warning C4172: returning address of local variable or temporary` . Dans des programmes simples, il est possible qu'occasionnellement aucune violation d'accès ne se produise si la référence est accessible par l'appelant avant le remplacement de l'emplacement de mémoire. C'est le fruit du hasard. Tenez compte de l'avertissement.
 
 ## <a name="see-also"></a>Voir aussi
 

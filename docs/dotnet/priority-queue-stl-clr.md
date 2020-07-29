@@ -51,18 +51,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: e21e7ba4dc3a4ed270548506ac1a9e37a2c1a23a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6c5a37cc76f6ac3a3f92cf54b440960d7476daa9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208466"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211033"
 ---
 # <a name="priority_queue-stlclr"></a>priority_queue (STL/CLR)
 
-La classe de modèle décrit un objet qui contrôle une séquence ordonnée d’éléments de longueur variable ayant un accès limité. Vous utilisez l’adaptateur de conteneur `priority_queue` pour gérer un conteneur sous-jacent en tant que file d’attente de priorité.
+La classe de modèle décrit un objet qui contrôle une séquence ordonnée d’éléments de longueur variable ayant un accès limité. Vous utilisez l’adaptateur `priority_queue` de conteneur pour gérer un conteneur sous-jacent en tant que file d’attente de priorité.
 
-Dans la description ci-dessous, `GValue` est identique à la *valeur* , sauf si ce dernier est un type REF, auquel cas il est `Value^`. De même, `GContainer` est le même que le *conteneur* , sauf si ce dernier est un type REF, auquel cas il est `Container^`.
+Dans la description ci-dessous, `GValue` est le même que la *valeur* , sauf si ce dernier est un type REF, auquel cas il s’agit de `Value^` . De même, `GContainer` est le même que le *conteneur* , sauf si ce dernier est un type REF, auquel cas il s’agit de `Container^` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,13 +85,13 @@ Type du conteneur sous-jacent.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<cliext/file d’attente >
+**En-tête :**\<cliext/queue>
 
 **Espace de noms :** cliext
 
 ## <a name="declarations"></a>Déclarations
 
-|Définition de types|Description|
+|Définition de type|Description|
 |---------------------|-----------------|
 |[priority_queue::const_reference (STL/CLR)](#const_reference)|Type d'une référence constante à un élément.|
 |[priority_queue::container_type (STL/CLR)](#container_type)|Type du conteneur sous-jacent.|
@@ -101,7 +101,7 @@ Type du conteneur sous-jacent.
 |[priority_queue::reference (STL/CLR)](#reference)|Type d'une référence à un élément.|
 |[priority_queue::size_type (STL/CLR)](#size_type)|Type d'une distance signée entre deux éléments.|
 |[priority_queue::value_compare (STL/CLR)](#value_compare)|Délégué de classement pour deux éléments.|
-|[priority_queue::value_type (STL/CLR)](#value_type)|Type d'un élément.|
+|[priority_queue::value_type (STL/CLR)](#value_type)|Type d’un élément.|
 
 |Fonction membre|Description|
 |---------------------|-----------------|
@@ -129,25 +129,25 @@ Type du conteneur sous-jacent.
 |Interface|Description|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Dupliquer un objet.|
-|IPriorityQueue\<valeur, conteneur >|Gérer l’adaptateur de conteneur générique.|
+|IPriorityQueue\<Value, Container>|Gérer l’adaptateur de conteneur générique.|
 
 ## <a name="remarks"></a>Notes
 
-L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container`, qui stocke des éléments de `Value` et augmente à la demande. Elle conserve la séquence ordonnée comme un segment de mémoire, avec l’élément dont la priorité est la plus élevée (l’élément supérieur) facilement accessible et amovible. L’objet limite l’accès en envoyant de nouveaux éléments et en dépilant simplement l’élément dont la priorité est la plus élevée, en implémentant une file d’attente de priorité.
+L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container` , qui stocke des `Value` éléments et se développe à la demande. Elle conserve la séquence ordonnée comme un segment de mémoire, avec l’élément dont la priorité est la plus élevée (l’élément supérieur) facilement accessible et amovible. L’objet limite l’accès en envoyant de nouveaux éléments et en dépilant simplement l’élément dont la priorité est la plus élevée, en implémentant une file d’attente de priorité.
 
-L’objet trie la séquence qu’il contrôle en appelant un objet délégué stocké de type [priority_queue :: value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stocké quand vous construisez le priority_queue ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(value_type, value_type)`. Vous accédez à cet objet stocké en appelant la fonction membre [priority_queue :: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.
+L’objet trie la séquence qu’il contrôle en appelant un objet délégué stocké de type [priority_queue :: value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stocké quand vous construisez le priority_queue ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(value_type, value_type)` . Vous accédez à cet objet stocké en appelant la fonction membre [priority_queue :: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md) `()` .
 
-Un tel objet délégué doit imposer un classement faible strict sur les valeurs de type [priority_queue :: Value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). Autrement dit, pour deux clés `X` et `Y`:
+Un tel objet délégué doit imposer un classement faible strict sur les valeurs de type [priority_queue :: Value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). Cela signifie, pour deux clés `X` et `Y` :
 
-`value_comp()(X, Y)` retourne le même résultat booléen pour chaque appel.
+`value_comp()(X, Y)`retourne le même résultat booléen pour chaque appel.
 
 Si `value_comp()(X, Y)` a la valeur true, `value_comp()(Y, X)` doit avoir la valeur false.
 
-Si `value_comp()(X, Y)` a la valeur true, `X` est dit trié avant `Y`.
+Si `value_comp()(X, Y)` a la valeur true, `X` est dit être trié avant `Y` .
 
 Si `!value_comp()(X, Y) && !value_comp()(Y, X)` a la valeur true, `X` et `Y` sont considérés comme ayant un ordre équivalent.
 
-Pour tout élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` a la valeur false. (Pour l’objet délégué par défaut, les clés ne diminuent jamais la valeur.)
+Pour tout élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` est false. (Pour l’objet délégué par défaut, les clés ne diminuent jamais la valeur.)
 
 L’élément dont la priorité est la plus élevée est donc l’un des éléments qui n’est pas ordonné avant tout autre élément.
 
@@ -173,12 +173,12 @@ void assign(priority_queue<Value, Container>% right);
 
 #### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*<br/>
 Adaptateur de conteneur à insérer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre assigne `right.get_container()` au conteneur sous-jacent. Vous l’utilisez pour modifier la totalité du contenu de la file d’attente.
+La fonction membre est assignée `right.get_container()` au conteneur sous-jacent. Vous l’utilisez pour modifier la totalité du contenu de la file d’attente.
 
 ### <a name="example"></a>Exemple
 
@@ -371,7 +371,7 @@ bool empty();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle équivaut à [priority_queue :: Size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`. Vous l’utilisez pour tester si le priority_queue est vide.
+La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle équivaut à [priority_queue :: Size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md) `() == 0` . Vous l’utilisez pour tester si le priority_queue est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -488,7 +488,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké à utiliser avec l’interface générique pour cette classe de conteneur de modèle. (`GValue` est `value_type` ou `value_type^` si `value_type` est un type Ref.)
+Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké à utiliser avec l’interface générique pour cette classe de conteneur de modèle. ( `GValue` a `value_type` la valeur ou `value_type^` si `value_type` est un type Ref.)
 
 ### <a name="example"></a>Exemple
 
@@ -587,12 +587,12 @@ priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% 
 
 #### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*<br/>
 Adaptateur de conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre copie *directement* vers l’objet, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
+L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
 ### <a name="example"></a>Exemple
 
@@ -713,7 +713,7 @@ Fin de la plage à insérer.
 *prédit*<br/>
 Prédicat de classement pour la séquence contrôlée.
 
-*right*<br/>
+*Oui*<br/>
 Objet ou plage à insérer.
 
 ### <a name="remarks"></a>Notes
@@ -728,13 +728,13 @@ Le constructeur :
 
 `priority_queue(priority_queue<Value, Container>% right);`
 
-crée un conteneur encapsulé qui est une copie de `right.get_container()`, avec le prédicat de classement `right.value_comp()`. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet de file d’attente, avec le même prédicat de classement.
+crée un conteneur encapsulé qui est une copie de `right.get_container()` , avec le prédicat de classement `right.value_comp()` . Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet de file d’attente, avec le même prédicat de classement.
 
 Le constructeur :
 
 `priority_queue(priority_queue<Value, Container>^ right);`
 
-crée un conteneur encapsulé qui est une copie de `right->get_container()`, avec le prédicat de classement `right->value_comp()`. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de file d’attente `*right`, avec le même prédicat de classement.
+crée un conteneur encapsulé qui est une copie de `right->get_container()` , avec le prédicat de classement `right->value_comp()` . Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de file d’attente `*right` , avec le même prédicat de classement.
 
 Le constructeur :
 
@@ -752,19 +752,19 @@ Le constructeur :
 
 `template<typename InIt> priority_queue(InIt first, InIt last);`
 
-crée un conteneur encapsulé vide, avec le prédicat de tri par défaut, puis exécute un push de la séquence [`first`, `last`). Vous l’utilisez pour spécifier une séquence contrôlée initiale à partir d’un eqeuence spécifié, avec le prédicat de tri spécifié.
+crée un conteneur encapsulé vide, avec le prédicat de classement par défaut, puis exécute un push de la séquence [ `first` , `last` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale à partir d’un eqeuence spécifié, avec le prédicat de tri spécifié.
 
 Le constructeur :
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`
 
-crée un conteneur encapsulé vide, avec le prédicat de classement *prédit*, puis exécute un push de la séquence [`first`, `last`). Vous l’utilisez pour spécifier une séquence contrôlée initiale à partir d’un seqeuence spécifié, avec le prédicat de tri spécifié.
+crée un conteneur encapsulé vide, avec le prédicat de classement *prédit*, puis exécute un push de la séquence [ `first` , `last` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale à partir d’un seqeuence spécifié, avec le prédicat de tri spécifié.
 
 Le constructeur :
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`
 
-crée un conteneur encapsulé vide, avec le prédicat de classement *prédit*, puis exécute un push de tous les éléments de *CONT* plus la séquence [`first`, `last`). Vous l’utilisez pour spécifier une séquence contrôlée initiale à partir d’un conteneur existant et d’un seqeuence spécifié, avec le prédicat de tri spécifié.
+crée un conteneur encapsulé vide, avec le prédicat de classement *prédit*, puis exécute un push de tous les éléments de *suite* plus la séquence [ `first` , `last` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale à partir d’un conteneur existant et d’un seqeuence spécifié, avec le prédicat de tri spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -966,7 +966,7 @@ size_type size();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [priority_queue :: Empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)`()`.
+La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [priority_queue :: Empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Exemple
 
@@ -1325,7 +1325,7 @@ compare(L'b', L'a') = True
 
 ## <a name="priority_queuevalue_type-stlclr"></a><a name="value_type"></a>priority_queue :: value_type (STL/CLR)
 
-Type d'un élément.
+Type d’un élément.
 
 ### <a name="syntax"></a>Syntaxe
 

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: a7ff3a8eaa3d9d42a5f1a9a7bf277a847aeccfee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d99b895076025aa50028bb4cd21df9e13c98197f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910869"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233962"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -99,9 +99,9 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Chaque fonction convertit la chaîne d’entrée *strSource* en valeur **float**. La fonction **strtof** convertit *strSource* en valeur à précision simple. **strtof** arrête de lire la chaîne *strSource* au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Il peut s’agir du caractère Null de fin. **wcstof** est une version à caractères larges de **strtof**; son argument *strSource* est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
+Chaque fonction convertit la chaîne d’entrée *strSource* en **`float`** . La fonction **strtof** convertit *strSource* en valeur à précision simple. **strtof** arrête de lire la chaîne *strSource* au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Il peut s’agir du caractère Null de fin. **wcstof** est une version à caractères larges de **strtof**; son argument *strSource* est une chaîne de caractères larges. Sinon, ces fonctions se comportent de façon identique.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -120,7 +120,7 @@ Si *endptr* n’a pas la **valeur null**, un pointeur vers le caractère qui a a
 
 [*espace blanc*] [*signe*] [*chiffres*] [__.__ *chiffres*] [{**e** &#124; **e**} [*signe*] *chiffres*]
 
-Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés ; le *signe* est plus (**+**) ou moins (**-**); et les *chiffres* sont un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**e** ou **e**) et d’un entier signé éventuellement. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
+Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés ; *Sign* est un signe plus ( **+** ) ou moins ( **-** ); et les *chiffres* correspondent à un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant le caractère de base, il doit en figurer au moins un après le caractère de base. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**e** ou **e**) et d’un entier signé éventuellement. S’il n’apparaît ni exposant ni caractère de base, il est supposé qu’un caractère de base suit le dernier chiffre dans la chaîne. Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse.
 
 Les versions UCRT de ces fonctions ne prennent pas en charge la conversion des lettres d’exposant de style Fortran (**d** ou **d**). Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
 
@@ -128,8 +128,8 @@ Les versions UCRT de ces fonctions ne prennent pas en charge la conversion des l
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**strtof**, **_strtof_l**|C : \<stdlib.h> C++ : &lt;cstdlib> ou \<stdlib.h>|
-|**wcstof**, **_wcstof_l**|C : \<stdlib.h> ou \<wchar.h> C++ : &lt;cstdlib>, \<stdlib.h> ou \<wchar.h>|
+|**strtof**, **_strtof_l**|C : \<stdlib.h> C++ : &lt; cstdlib> ou\<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C : \<stdlib.h> ou \<wchar.h> C++ : &lt; cstdlib>, \<stdlib.h> ou\<wchar.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -169,7 +169,7 @@ string = 3.14159This stopped it
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Fonctions de valeur chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Fonctions de chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

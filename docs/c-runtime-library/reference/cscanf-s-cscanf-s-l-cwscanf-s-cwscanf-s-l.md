@@ -51,19 +51,19 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-ms.openlocfilehash: be9d2b0af461b25f5c4db37bb084afcf822480ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a869ae4ab1b5f81c4198f620662604b79f19c2ab
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938531"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234235"
 ---
 # <a name="_cscanf_s-_cscanf_s_l-_cwscanf_s-_cwscanf_s_l"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
 Lit les données mises en forme à partir de la console. Ces versions plus sécurisées de [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -107,12 +107,12 @@ Ces fonctions valident leurs paramètres. Si *format* est un pointeur null, ces 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_cscanf_s** lit les données directement à partir de la console dans les emplacements donnés par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable dont le type correspond à un spécificateur de type au *format*. Le format contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que le paramètre *format* pour la fonction [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Alors que **_cscanf_s** retourne normalement le caractère d’entrée, il ne le fait pas si le dernier appel était à **_ungetch**.
+La fonction **_cscanf_s** lit les données directement à partir de la console dans les emplacements donnés par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable dont le type correspond à un spécificateur de type au *format*. Le format contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que le paramètre *format* pour la fonction [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) . Tandis que **_cscanf_s** retourne normalement le caractère d’entrée, il ne le fait pas si le dernier appel devait **_ungetch**.
 
-Comme les autres versions sécurisées des fonctions de la famille **scanf** , **_cscanf_s** et **_cswscanf_s** requièrent des arguments de taille pour les caractères de champ de type **c**, **c**, **s**, **s**et **[** . Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
+Comme les autres versions sécurisées des fonctions de la famille **scanf** , **_cscanf_s** et **_cswscanf_s** requièrent des arguments de taille pour les caractères de champ de type **c**, **c**, **s**, **s**et **[**. Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Le paramètre size est de type **unsigned**, et non **size_t**.
+> Le paramètre de taille est de type **`unsigned`** , et non **size_t**.
 
 Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
@@ -123,14 +123,14 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 |**_tcscanf_s**|**_cscanf_s**|**_cscanf_s**|**_cwscanf_s**|
 |**_tcscanf_s_l**|**_cscanf_s_l**|**_cscanf_s_l**|**_cwscanf_s_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_cscanf_s**, **_cscanf_s_l**|\<conio.h>|
 |**_cwscanf_s**, **_cwscanf_s_l**|\<conio.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -173,7 +173,7 @@ You entered 1 2 3
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

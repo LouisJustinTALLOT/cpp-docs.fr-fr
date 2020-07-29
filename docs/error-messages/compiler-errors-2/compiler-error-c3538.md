@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: d1bd287c6b7e0b07938db55c282c69cd00fd25df
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 290faa1a227920cd46f32a4adf0dd6a6f3687c6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761541"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233364"
 ---
 # <a name="compiler-error-c3538"></a>Erreur du compilateur C3538
 
@@ -21,11 +21,11 @@ Toutes les variables déclarées dans une liste de déclaration ne correspondent
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-1. Assurez-vous que toutes les déclarations `auto` figurant dans la liste déduisent le même type.
+1. Assurez-vous que toutes les **`auto`** déclarations de la liste déduisent vers le même type.
 
 ## <a name="example"></a>Exemple
 
-Les instructions suivantes génèrent l'erreur C3538. Chaque instruction déclare plusieurs variables, mais toutes les utilisations du mot clé `auto` ne déduisent pas le même type.
+Les instructions suivantes génèrent l'erreur C3538. Chaque instruction déclare plusieurs variables, mais chaque utilisation du **`auto`** mot clé n’est pas déduire vers le même type.
 
 ```cpp
 // C3538.cpp
@@ -47,4 +47,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[auto, mot clé](../../cpp/auto-keyword.md)
+[Auto, mot clé](../../cpp/auto-keyword.md)

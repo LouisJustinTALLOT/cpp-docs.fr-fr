@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210767"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218323"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl, classe
 
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `IDBInitializeImpl`.
+Votre classe, dérivée de `IDBInitializeImpl` .
 
 ## <a name="requirements"></a>Spécifications
 
@@ -145,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>Notes
 
-Ces indicateurs spécifient ou indiquent l’état de divers attributs pour l’objet source de données. Contient une ou plusieurs des valeurs d' **énumération** suivantes :
+Ces indicateurs spécifient ou indiquent l’état de divers attributs pour l’objet source de données. Contient une ou plusieurs des valeurs suivantes **`enum`** :
 
 ```cpp
 enum DATASOURCE_FLAGS {
@@ -173,5 +173,5 @@ CUtlPropInfo< T >* m_pCUtlPropInfo;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

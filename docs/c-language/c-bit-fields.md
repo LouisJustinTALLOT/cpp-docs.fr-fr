@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4878a9c8c206851b13484446b436952e655e06db
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326493"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234287"
 ---
 # <a name="c-bit-fields"></a>Champs de bits C
 
@@ -22,9 +22,9 @@ En plus des déclarateurs pour les membres d’une structure ou une union, un d�
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>OPT</sub> **:** *constant-expression*
 
-*expression constante* spécifie la largeur du champ en bits. *type-specifier* pour le `declarator` doit être `unsigned int`, **signed int**, ou `int`, et *constant-expression* doit être une valeur d’entier non négatif. Si la valeur est zéro, la déclaration n’a aucun `declarator`. Les tableaux de champs de bits, pointeurs vers des champs de bits et fonctions qui retournent des champs de bits ne sont pas autorisés. Le `declarator` facultatif désigne le champ de bits. Les champs de bits peuvent uniquement être déclarés comme faisant partie d’une structure. L’opérateur address-of (**&**) ne peut pas être appliqué à des composants de champ de bits.
+*expression constante* spécifie la largeur du champ en bits. Le *type-specifier* pour `declarator` doit être **`unsigned int`** , **`signed int`** , ou **`int`** , et l' *expression constante* doit être une valeur entière non négative. Si la valeur est zéro, la déclaration n’a aucun `declarator`. Les tableaux de champs de bits, pointeurs vers des champs de bits et fonctions qui retournent des champs de bits ne sont pas autorisés. Le `declarator` facultatif désigne le champ de bits. Les champs de bits peuvent uniquement être déclarés comme faisant partie d’une structure. L’opérateur address-of ( **&** ) ne peut pas être appliqué à des composants de champ de bits.
 
-Les champs de bits sans nom ne peuvent pas être référencés et leur contenu lors de l’exécution est imprévisible. Ils peuvent être utilisés comme des champs « factices », à des fins d’alignement. Un champ de bits sans nom dont la largeur est spécifiée comme 0 garantit que le stockage pour le membre suivant dans *struct-declaration-list* démarre sur une limite `int`.
+Les champs de bits sans nom ne peuvent pas être référencés et leur contenu lors de l’exécution est imprévisible. Ils peuvent être utilisés comme des champs « factices », à des fins d’alignement. Un champ de bits sans nom dont la largeur est spécifiée comme 0 garantit que le stockage du membre qui le suit dans *struct-declaration-list* commence sur une **`int`** limite.
 
 Les champs de bits doivent également être suffisamment longs pour contenir le modèle binaire. Par exemple, les deux instructions suivantes ne sont pas autorisées :
 
@@ -51,7 +51,7 @@ Les champs de bits ont la même sémantique que le type entier. Cela signifie qu
 
 **Spécifique à Microsoft**
 
-Les champs de bits définis comme `int` sont considérés comme signés. Une extension Microsoft de la norme ANSI C autorise les types `char` et **long** (**signed** et `unsigned`) pour les champs de bits. Sans champs de bits avec le type de base **long**, **short** ou `char` (**signed** ou `unsigned`) forcent l’alignement sur une limite appropriée pour le type de base.
+Les champs de bits définis comme **`int`** sont traités comme **`signed`** . Une extension Microsoft de la norme C ANSI autorise **`char`** les **`long`** types et (à la fois **`signed`** et **`unsigned`** ) pour les champs de bits. Les champs de bits sans nom avec le type de base **`long`** , **`short`** ou **`char`** ( **`signed`** ou **`unsigned`** ) forcent l’alignement sur une limite appropriée au type de base.
 
 Les champs de bits sont alloués dans un entier du bit de poids le plus faible au bit de poids le plus fort. Dans le code suivant
 

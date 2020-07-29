@@ -7,18 +7,18 @@ helpviewer_keywords:
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-ms.openlocfilehash: 6dec4ee53cd840c47d76ac0579daca710b0eeb68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 81fc3ae7a732171c6bddff9f584976dd747372b4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358408"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233663"
 ---
 # <a name="overview-of-member-functions"></a>Vue d'ensemble des fonctions membres
 
-Les fonctions membres sont statique ou non statique. Le comportement des fonctions statiques des membres diffère des autres fonctions des membres parce que les fonctions statiques des membres n’ont pas **implicitement cet** argument. Les fonctions non statistiques des membres ont **un** pointeur. Les fonctions membres (statique ou non statique) peuvent être définies à l'intérieur ou à l'extérieur de la déclaration de classe.
+Les fonctions membres sont statique ou non statique. Le comportement des fonctions membres statiques diffère des autres fonctions membres, car les fonctions membres statiques n’ont pas d’argument implicite **`this`** . Les fonctions membres non statiques ont un **`this`** pointeur. Les fonctions membres (statique ou non statique) peuvent être définies à l'intérieur ou à l'extérieur de la déclaration de classe.
 
-Si une fonction membre est définie dans une déclaration de classe, elle est traitée comme une fonction inline, et il est inutile de qualifier le nom de fonction avec son nom de classe. Bien que les fonctions définies à l’intérieur des déclarations de classe soient déjà traitées comme des fonctions inlines, vous pouvez utiliser le mot clé **inline** pour documenter le code.
+Si une fonction membre est définie dans une déclaration de classe, elle est traitée comme une fonction inline, et il est inutile de qualifier le nom de fonction avec son nom de classe. Bien que les fonctions définies dans les déclarations de classe soient déjà traitées comme des fonctions inline, vous pouvez utiliser le **`inline`** mot clé pour documenter le code.
 
 Un exemple de déclaration d'une fonction dans une déclaration de classe suit :
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-Si la définition d’une fonction membre n’est en dehors de la déclaration de classe, elle n’est traitée comme une fonction inline que si elle est explicitement déclarée **en ligne**. En outre, le nom de fonction dans la définition doit être qualifié avec son nom de classe par l'opérateur de résolution de portée (`::`).
+Si la définition d’une fonction membre est en dehors de la déclaration de classe, elle est traitée comme une fonction inline uniquement si elle est déclarée explicitement comme **`inline`** . En outre, le nom de fonction dans la définition doit être qualifié avec son nom de classe par l'opérateur de résolution de portée (`::`).
 
 L'exemple suivant est identique à la déclaration précédente de la classe `Account`, sauf que la fonction `Deposit` est définie à l'extérieur de la déclaration de classe :
 

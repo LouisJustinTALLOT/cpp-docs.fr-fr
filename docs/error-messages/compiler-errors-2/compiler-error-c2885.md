@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: e60f3fff2ef61f4d6374072c05a2ad3e64a57031
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9b6b7bb54d5dce48dc6fce517eb0c909b0284da2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760926"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233442"
 ---
 # <a name="compiler-error-c2885"></a>Erreur du compilateur C2885
 
@@ -21,7 +21,7 @@ Vous avez utilisé une déclaration [using](../../cpp/using-declaration.md) de m
 
 ## <a name="example"></a>Exemple
 
-Cette erreur peut être générée en raison du travail de conformité du compilateur pour Visual Studio 2005 : il n’est plus valide d’avoir une déclaration de `using` pour un type imbriqué ; vous devez qualifier explicitement chaque référence que vous apportez au type imbriqué, placer le type dans un espace de noms ou créer un typedef.
+Cette erreur peut être générée en raison du travail de mise en conformité du compilateur pour Visual Studio 2005 : il n’est plus valide d’avoir une **`using`** déclaration à un type imbriqué ; vous devez qualifier explicitement chaque référence que vous apportez au type imbriqué, placer le type dans un espace de noms ou créer un typedef.
 
 L’exemple suivant génère l’C2885.
 
@@ -54,7 +54,7 @@ int main () {
 
 ## <a name="example"></a>Exemple
 
-Si vous utilisez le mot clé `using` avec un membre de C++ classe, vous devez définir ce membre à l’intérieur d’une autre classe (classe dérivée).
+Si vous utilisez le **`using`** mot clé avec un membre de classe, C++ vous oblige à définir ce membre à l’intérieur d’une autre classe (classe dérivée).
 
 L’exemple suivant génère l’C2885.
 

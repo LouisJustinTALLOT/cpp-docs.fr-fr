@@ -47,16 +47,16 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: 7929f5e7d5971278dfe19a0850ccf660751c2acf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ede96e39b596225d13c041468eb6172853959c6a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910893"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233949"
 ---
 # <a name="_strtoi64-_wcstoi64-_strtoi64_l-_wcstoi64_l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
-Convertit une chaîne en valeur **__int64** .
+Convertit une chaîne en **`__int64`** valeur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -109,9 +109,9 @@ Si *strSource* a la **valeur null** ou si la *base* est différente de zéro et 
 
 Pour plus d’informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_strtoi64** convertit *strSource* en **__int64**. Les deux fonctions cessent de lire la chaîne *strSource* au premier caractère qu’elles ne peuvent pas reconnaître dans le cadre d’un nombre. Il peut s’agir du caractère null de fin, ou il peut s’agir du premier caractère numérique supérieur ou égal à *base*. **_wcstoi64** est une version à caractères larges de **_strtoi64**; son argument *strSource* est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
+La fonction **_strtoi64** convertit *strSource* en **`__int64`** . Les deux fonctions cessent de lire la chaîne *strSource* au premier caractère qu’elles ne peuvent pas reconnaître dans le cadre d’un nombre. Il peut s’agir du caractère null de fin, ou il peut s’agir du premier caractère numérique supérieur ou égal à *base*. **_wcstoi64** est une version à caractères larges de **_strtoi64**; son argument *strSource* est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -128,7 +128,7 @@ Si *endptr* n’a pas la **valeur null**, un pointeur vers le caractère qui a a
 
 **_strtoi64** s’attend à ce que *strSource* pointe vers une chaîne au format suivant :
 
-> [*espace blanc*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*chiffres* &#124; *lettres*]
+> [*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*chiffres* &#124; *lettres*]
 
 Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés ; les *chiffres* correspondent à un ou plusieurs chiffres décimaux ; les *lettres* sont une ou plusieurs lettres de « a » à « z » (ou de « a » à « z »).  Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si la *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* a la valeur 0, les caractères initiaux de la chaîne vers laquelle pointe *strSource* sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* a la valeur 0 et que le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrête l’analyse.
 
@@ -147,7 +147,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [localeconv](localeconv.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[Fonctions de valeur chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Fonctions de chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>

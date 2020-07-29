@@ -34,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 078efc2fa5499e23ce7f2fb6f8fc0ffc5123de1e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909546"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234079"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
@@ -64,11 +64,11 @@ Entier à tester.
 
 **isleadbyte** retourne une valeur différente de zéro si l’argument satisfait la condition de test ou 0 dans le cas contraire. Dans les paramètres régionaux « C » et dans les paramètres régionaux SBCS (jeu de caractères codés sur un octet), **isleadbyte** retourne toujours 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La macro **isleadbyte** retourne une valeur différente de zéro si son argument est le premier octet d’un caractère multioctet. **isleadbyte** produit un résultat significatif pour tout argument entier de-1 (**EOF**) à **UCHAR_MAX** (0xFF), inclus.
 
-Le type d’argument attendu de **isleadbyte** est **int**; Si un caractère signé est passé, le compilateur peut le convertir en un entier par extension de signe, ce qui produit des résultats imprévisibles.
+Le type d’argument attendu de **isleadbyte** est **`int`** ; si un caractère signé est passé, le compilateur peut le convertir en un entier par extension de signe, ce qui produit des résultats imprévisibles.
 
 La version de cette fonction avec le suffixe **_L** est identique, sauf qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
 

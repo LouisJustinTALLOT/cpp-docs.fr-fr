@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2592
 ms.assetid: 833a4d7b-66ef-4d4c-ae83-a533c2b0eb07
-ms.openlocfilehash: 914a03772b7c1675f5fee572fe1ca24f469e91f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bcb65addd95364d0755408a96c859182703768ff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177376"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206833"
 ---
 # <a name="compiler-error-c2592"></a>Erreur du compilateur C2592
 
 'classe' : 'base_class_2' est hérité de 'base_class_1' et ne peut pas être spécifié de nouveau
 
-Vous ne pouvez spécifier que les classes de base qui n'héritent pas d'autres classes de base. Dans ce cas, seul `base_class_1` est nécessaire dans la spécification de `class` car `base_class_1` hérite déjà de `base_class_2`.
+Vous ne pouvez spécifier que les classes de base qui n'héritent pas d'autres classes de base. Dans ce cas, seul `base_class_1` est nécessaire dans la spécification de **`class`** , car `base_class_1` hérite déjà `base_class_2` .

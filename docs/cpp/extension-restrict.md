@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-ms.openlocfilehash: 27ac76251456d9a0bf5908ad6d1fc2bee7534e9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6318e6d78f6c4c4bb6827a79d26bca028dfe3f3f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360818"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233741"
 ---
 # <a name="__restrict"></a>__restrict
 
-Comme le **__declspec ( [limiter)](../cpp/restrict.md) ** modificateur, le mot clé **__restrict** indique qu’un symbole n’est pas alias dans la portée actuelle. Le mot clé **__restrict** diffère `__declspec ( restrict )` du modificateur de la manière suivante :
+Comme le modificateur **__declspec ( [restrict](../cpp/restrict.md) )** , le **`__restrict`** mot clé indique qu’un symbole n’a pas d’alias dans la portée actuelle. Le **`__restrict`** mot clé diffère du `__declspec ( restrict )` modificateur des manières suivantes :
 
-- Le mot clé **__restrict** n’est valable `__declspec ( restrict )` que sur les variables et n’est valable que sur les déclarations et définitions des fonctions.
+- Le **`__restrict`** mot clé est valide uniquement sur les variables et `__declspec ( restrict )` n’est valide que sur les déclarations et les définitions de fonctions.
 
-- **__restrict** est similaire à **restreindre** de la spécification C99, mais **__restrict** peuvent être utilisés dans les programmes C ou C.
+- **`__restrict`** est similaire à **`restrict`** la spécification C99, mais **`__restrict`** peut être utilisé dans les programmes C++ ou C.
 
-- Lorsque **__restrict** est utilisé, le compilateur ne propagera pas la propriété sans pseudonyme d’une variable. Autrement dit, si vous attribuez une variable **__restrict** à une variable non **__restrict,** le compilateur permettra toujours à la variable non __restrict d’être alias. Ceci est différent du comportement du mot clé de **restriction** de la spécification C99.
+- Lorsque **`__restrict`** est utilisé, le compilateur ne propage pas la propriété d’absence d’alias d’une variable. Autrement dit, si vous assignez une **`__restrict`** variable à une variable non- **`__restrict`** , le compilateur autorisera toujours l’alias de la variable non-__restrict. Cela diffère du comportement du **`restrict`** mot clé de la spécification C99.
 
 En général, si vous influez sur le comportement d'une fonction entière, il est préférable d'utiliser `__declspec ( restrict )` plutôt que le mot clé.
 
-Pour la compatibilité avec les versions précédentes, **_restrict** est synonyme de __restrict à moins que **l’option** compilateur [/Za \(Désactiver extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
+Pour la compatibilité avec les versions précédentes, **_restrict** est un synonyme de, **`__restrict`** sauf si l’option de compilateur [/za \( Désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
-Dans Visual Studio 2015 et plus tard, **__restrict** peuvent être utilisés sur les références C.
+Dans Visual Studio 2015 et versions ultérieures, **`__restrict`** peut être utilisé sur les références C++.
 
 > [!NOTE]
-> Lorsqu’il est utilisé sur une variable qui a également le mot clé [volatil,](../cpp/volatile-cpp.md) **volatile** aura préséance.
+> En cas d’utilisation sur une variable qui possède également le mot clé [volatile](../cpp/volatile-cpp.md) , **`volatile`** est prioritaire.
 
 ## <a name="example"></a>Exemple
 

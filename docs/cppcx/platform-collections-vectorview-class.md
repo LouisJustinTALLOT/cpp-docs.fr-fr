@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 207f5d517eaae475af1c65a284a3d1ebe50621af
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032224"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218388"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView, classe
 
@@ -35,12 +35,12 @@ template <typename T, typename E>
 *T*<br/>
 Type des éléments contenus dans l'objet `VectorView` .
 
-*E*<br/>
+*Envoyer*<br/>
 Spécifie un prédicat binaire pour tester l'égalité des valeurs de type `T`. La valeur par défaut est `std::equal_to<T>`.
 
 ### <a name="remarks"></a>Notes
 
-La `VectorView` classe implémente le [Windows::Foundation::Collections::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1) interface, et le support pour les itérateurs Standard Template Library.
+La `VectorView` classe implémente l’interface [Windows :: Foundation :: Collections :: \<T> IVectorView](/uwp/api/windows.foundation.collections.ivectorview-1) et la prise en charge des itérateurs de la bibliothèque STL (Standard Template Library).
 
 ### <a name="members"></a>Membres
 
@@ -48,16 +48,16 @@ La `VectorView` classe implémente le [Windows::Foundation::Collections::IVector
 
 |Nom|Description|
 |----------|-----------------|
-|[VectorView::VectorView](#ctor)|Initialise une nouvelle instance de la classe VectorView.|
+|[VectorView :: VectorView](#ctor)|Initialise une nouvelle instance de la classe VectorView.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[VectorView::Première](#first)|Retourne un itérateur qui spécifie le premier élément du VectorView.|
-|[VectorView::GetAt](#getat)|Récupère l'élément du VectorView actuel qui est indiqué par l'index spécifié.|
-|[VectorView::GetMany](#getmany)|Récupère une séquence d'éléments du VectorView actif en commençant à l'index spécifié.|
-|[VectorView::IndexOf](#indexof)|Recherche l'élément spécifié dans l'objet VectorView actuel, et s'il existe, retourne l'index de l'élément.|
+|[VectorView :: First](#first)|Retourne un itérateur qui spécifie le premier élément du VectorView.|
+|[VectorView :: GetAt](#getat)|Récupère l'élément du VectorView actuel qui est indiqué par l'index spécifié.|
+|[VectorView :: Getmany (](#getmany)|Récupère une séquence d'éléments du VectorView actif en commençant à l'index spécifié.|
+|[VectorView :: IndexOf](#indexof)|Recherche l'élément spécifié dans l'objet VectorView actuel, et s'il existe, retourne l'index de l'élément.|
 |[VectorView::Size](#size)|Retourne le nombre d'éléments dans l'objet VectorView actuel.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
@@ -70,7 +70,7 @@ La `VectorView` classe implémente le [Windows::Foundation::Collections::IVector
 
 **Espace de noms :** Platform::Collections
 
-## <a name="vectorviewfirst-method"></a><a name="first"></a>VectorView::Première méthode
+## <a name="vectorviewfirst-method"></a><a name="first"></a>VectorView :: First, méthode
 
 Retourne un itérateur qui spécifie le premier élément du VectorView.
 
@@ -88,9 +88,9 @@ Itérateur qui spécifie le premier élément de l'objet VectorView.
 
 ### <a name="remarks"></a>Notes
 
-Une façon pratique de tenir l’itérateur retourné par First() est d’attribuer la valeur de retour à une variable qui est déclarée avec le mot clé de déduction de type **automatique.** Par exemple : `auto x = myVectorView->First();`.
+Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myVectorView->First();`.
 
-## <a name="vectorviewgetat-method"></a><a name="getat"></a>VectorView::GetAt Méthode
+## <a name="vectorviewgetat-method"></a><a name="getat"></a>VectorView :: GetAt, méthode
 
 Récupère l'élément du VectorView actuel qui est indiqué par l'index spécifié.
 
@@ -110,9 +110,9 @@ Entier non signé de base zéro qui spécifie un élément particulier dans l’
 
 ### <a name="return-value"></a>Valeur de retour
 
-Élément spécifié par le paramètre `index`. Le type d’élément est spécifié par le paramètre du modèle VectorView, *T*.
+Élément spécifié par le paramètre `index`. Le type d’élément est spécifié par le paramètre de modèle VectorView, *T*.
 
-## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>VectorView::GetMany Méthode
+## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>VectorView :: Getmany (, méthode
 
 Récupère une séquence d'éléments du VectorView actif en commençant à l'index spécifié.
 
@@ -138,7 +138,7 @@ Quand cette opération se termine, un tableau d’éléments qui commencent à l
 
 Le nombre d'éléments à récupérer.
 
-## <a name="vectorviewindexof-method"></a><a name="indexof"></a>VectorView::IndexOf Méthode
+## <a name="vectorviewindexof-method"></a><a name="indexof"></a>VectorView :: IndexOf, méthode
 
 Recherche l'élément spécifié dans l'objet VectorView actuel, et s'il existe, retourne l'index de l'élément.
 
@@ -160,13 +160,13 @@ virtual bool IndexOf(
 *index*<br/>
 Index de base zéro de l'élément si le paramètre `value` est détecté ; sinon, 0.
 
-Le paramètre *de l’index* est de 0 si l’élément est le premier élément de l’élément `VectorView` ou si l’élément n’a pas été trouvé. Si la valeur de rendement est **vraie,** l’article a été trouvé et c’est le premier élément; autrement, l’article n’a pas été trouvé.
+Le paramètre d' *index* est 0 si l’élément est le premier élément du `VectorView` ou si l’élément est introuvable. Si la valeur de retour est **`true`** , l’élément a été trouvé et il s’agit du premier élément ; sinon, l’élément est introuvable.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**vrai** si l’élément spécifié est trouvé; autrement, **faux**.
+**`true`** Si l’élément spécifié est trouvé ; Sinon, **`false`** .
 
-## <a name="vectorviewsize-method"></a><a name="size"></a>VectorView::Méthode de taille
+## <a name="vectorviewsize-method"></a><a name="size"></a>VectorView :: Size, méthode
 
 Retourne le nombre d'éléments dans l'objet VectorView actuel.
 
@@ -181,7 +181,7 @@ virtual property unsigned int Size;
 
 Nombre d’éléments dans le VectorView actuel.
 
-## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>VectorView::VectorView Constructeur
+## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>VectorView :: VectorView, constructeur
 
 Initialise une nouvelle instance de la classe VectorView.
 
@@ -241,11 +241,11 @@ VectorView(
 
 ### <a name="parameters"></a>Paramètres
 
-*Init*<br/>
+*Rein*<br/>
 Type d’une collection d’objets utilisée pour initialiser le VectorView actif.
 
-*il*<br/>
-Un [std::initializer_list](../standard-library/initializer-list-class.md) dont les éléments seront utilisés pour initialiser le VectorView.
+*II*<br/>
+[Std :: initializer_list](../standard-library/initializer-list-class.md) dont les éléments sont utilisés pour initialiser le vectorview.
 
 *N*<br/>
 Nombre d’éléments d’une collection d’objets utilisée pour initialiser le VectorView actif.
@@ -256,25 +256,25 @@ Nombre d'éléments du VectorView.
 *value*<br/>
 Valeur utilisée pour initialiser chaque élément du VectorView actif.
 
-*C*<br/>
-Un [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un [std::vector](../standard-library/vector-class.md) qui est utilisé pour initialiser l’actuel VectorView.
+*v*<br/>
+[Lvalues et rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un [std :: Vector](../standard-library/vector-class.md) utilisé pour initialiser le vectorview actuel.
 
-*Ptr*<br/>
+*ptr*<br/>
 Pointeur vers un `std::vector` utilisé pour initialiser le VectorView actif.
 
-*Arr*<br/>
-Une [plate-forme::Array](../cppcx/platform-array-class.md) objet qui est utilisé pour initialiser l’actuel VectorView.
+*arr*<br/>
+Objet [Platform :: Array](../cppcx/platform-array-class.md) utilisé pour initialiser le vectorview actif.
 
-*Un*<br/>
-Un [std::objet de tableau](../standard-library/array-class-stl.md) qui est utilisé pour initialiser l’actuel VectorView.
+*un*<br/>
+Objet [std :: Array](../standard-library/array-class-stl.md) utilisé pour initialiser le vectorview actif.
 
 *first*<br/>
-Premier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type `first` de est passé au moyen de *l’avance parfaite*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Premier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type de `first` est passé au moyen d’un *transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 *last*<br/>
-Dernier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type `last` de est passé au moyen de *l’avance parfaite*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Dernier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type de `last` est passé au moyen d’un *transfert parfait*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace nom de la plate-forme](platform-namespace-c-cx.md)<br/>
+[Espace de noms de plateforme](platform-namespace-c-cx.md)<br/>
 [Création de composants Windows Runtime en C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

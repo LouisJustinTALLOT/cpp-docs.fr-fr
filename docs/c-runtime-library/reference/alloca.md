@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 159f474927b4aaf364ad6972450edbe513a3c0b0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821432"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218739"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -45,14 +45,14 @@ void *_alloca(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *size*<br/>
 Octets à allouer à partir de la pile.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La routine **_alloca** retourne un pointeur **void** vers l’espace alloué, qui est garanti correctement aligné pour le stockage de tout type d’objet. Si la *taille* est égale à 0, **_alloca** alloue un élément de longueur zéro et retourne un pointeur valide vers cet élément.
+La routine **_alloca** retourne un **`void`** pointeur vers l’espace alloué, qui est garanti être correctement aligné pour le stockage de tout type d’objet. Si la *taille* est égale à 0, **_alloca** alloue un élément de longueur zéro et retourne un pointeur valide vers cet élément.
 
 Une exception de dépassement de capacité de pile est générée si l’espace ne peut pas être alloué. L’exception de dépassement de capacité de pile n’est pas une exception C++ ; il s’agit d’une exception structurée. Au lieu d’utiliser la gestion des exceptions C++, vous devez utiliser la [gestion des exceptions structurée](../../cpp/structured-exception-handling-c-cpp.md) (SEH).
 
@@ -62,9 +62,9 @@ Une exception de dépassement de capacité de pile est générée si l’espace 
 
 Il existe des restrictions relatives à l’appel explicite de **_alloca** dans un gestionnaire d’exceptions (Eh). Les routines EH qui s’exécutent sur des processeurs de classe x86 opèrent dans le cadre de leur propre mémoire : elles effectuent leurs tâches dans un espace mémoire qui n’est pas basé sur l’emplacement actuel du pointeur de pile de la fonction englobante. Les implémentations les plus courantes incluent les expressions de gestion des exceptions structurées Windows NT (SEH) et les expressions de clause catch C++. Par conséquent, l’appel explicite de **_alloca** dans l’un des scénarios suivants entraîne l’échec d’un programme pendant le retour à la routine Eh appelante :
 
-- Expression de filtre d’exception SEH Windows NT : `__except ( _alloca() )`
+- Expression de filtre d’exception SEH Windows NT :`__except ( _alloca() )`
 
-- Gestionnaire d’exception finale SEH Windows NT : `__finally { _alloca() }`
+- Gestionnaire d’exceptions Windows NT SEH final :`__finally { _alloca() }`
 
 - Expression de clause catch EH C++
 
@@ -73,9 +73,9 @@ Toutefois, **_alloca** peut être appelée directement à partir d’une routine
 > [!IMPORTANT]
 > Dans Windows XP, si **_alloca** est appelée à l’intérieur d’un bloc try/catch, vous devez appeler [_resetstkoflw](resetstkoflw.md) dans le bloc catch.
 
-Outre les restrictions ci-dessus, lorsque vous utilisez l’option[/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , **_alloca** ne peut pas être utilisé dans les blocs **__except** . Pour plus d’informations, consultez [Restrictions de /clr](../../build/reference/clr-restrictions.md).
+Outre les restrictions ci-dessus, lors de l’utilisation de l’option[/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , **_alloca** ne peut pas être utilisé dans des **`__except`** blocs. Pour plus d’informations, consultez [Restrictions de /clr](../../build/reference/clr-restrictions.md).
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

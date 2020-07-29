@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4311
 ms.assetid: ddc579d0-d051-47bc-915d-71ffb32323c9
-ms.openlocfilehash: 52f8338423b5e3366b85207477b3b1ee5e9c399f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bcb3650ca98922559f23c6c2536c3076cc522ad0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163100"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233273"
 ---
 # <a name="compiler-warning-level-1-c4311"></a>Avertissement du compilateur (niveau 1) C4311
 
 'variable' : troncation de pointeur de 'type' à 'type'
 
-Cet avertissement détecte les problèmes de troncation de pointeur 64 bits. Par exemple, si le code est compilé pour une architecture 64 bits, la valeur d'un pointeur (64 bits) est tronquée si elle est affectée à un `int` (32 bits). Pour plus d’informations, consultez [règles d’utilisation des pointeurs](/windows/win32/WinProg64/rules-for-using-pointers).
+Cet avertissement détecte les problèmes de troncation de pointeur 64 bits. Par exemple, si le code est compilé pour une architecture 64 bits, la valeur d’un pointeur (64 bits) sera tronquée s’il est assigné à un **`int`** (32 bits). Pour plus d’informations, consultez [règles d’utilisation des pointeurs](/windows/win32/WinProg64/rules-for-using-pointers).
 
 Pour plus d’informations sur les causes courantes des C4311 d’avertissement, consultez [Erreurs de compilateur courantes](/windows/win32/WinProg64/common-compiler-errors).
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 8deaa07d984a3840c73e594535ffffc9078d4716
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951318"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234053"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -59,7 +59,7 @@ long double norm( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*z*<br/>
+*Lettre*<br/>
 Nombre complexe.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -68,19 +68,19 @@ Amplitude carrée de *z*.
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **norme** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et qui retournent des valeurs **float** ou **long double** . Dans un programme C, la **norme** prend toujours une valeur **_Dcomplex** et retourne une valeur **double** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **norme** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, la **norme** prend toujours une valeur **_Dcomplex** et retourne une **`double`** valeur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**norm**, **normf**, **norml**|\<complex.h>|\<complex.h>|
+|**normal**, **normf**, **normal**|\<complex.h>|\<complex.h>|
 
-Les types **_Fcomplex**, **_Dcomplex**et **_Lcomplex** sont des équivalents propres à Microsoft des types C99 natifs non implémentés **float _Complex**, **double _Complex**et **long double _Complex**, respectivement.  Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Les types de **_Fcomplex**, **_Dcomplex**et **_Lcomplex** sont des équivalents propres à Microsoft des types C99 natifs, **float _Complex**, **double _Complex**et **long double _Complex**, respectivement.  Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [creal, crealf, creall](creal-crealf-creall.md)<br/>
 [cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
 [conj, conjf, conjl](conj-conjf-conjl.md)<br/>

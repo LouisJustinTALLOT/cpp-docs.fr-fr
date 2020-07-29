@@ -38,12 +38,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 3d73aa32243776215b04303b37a4398bc8c35c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 26ebadf49632b9e312f3d0c0a0788720d3230312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911589"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218609"
 ---
 # <a name="localtime_s-_localtime32_s-_localtime64_s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -82,13 +82,13 @@ Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un 
 
 |*tmDest*|*sourceTime*|Valeur retournée|Valeur dans *tmDest*|Appelle un gestionnaire de paramètres non valides|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**NUL**|n'importe laquelle|**EINVAL**|Non modifiée|Oui|
-|Not **null** (pointe vers une mémoire valide)|**NUL**|**EINVAL**|Tous les champs définis sur -1|Oui|
-|Not **null** (pointe vers une mémoire valide)|inférieur à 0 ou supérieur à **_MAX__TIME64_T**|**EINVAL**|Tous les champs définis sur -1|Non |
+|**NULL**|n'importe laquelle|**EINVAL**|Non modifiée|Oui|
+|Not **null** (pointe vers une mémoire valide)|**NULL**|**EINVAL**|Tous les champs définis sur -1|Oui|
+|Not **null** (pointe vers une mémoire valide)|inférieur à 0 ou supérieur à **_MAX__TIME64_T**|**EINVAL**|Tous les champs définis sur -1|Non|
 
 Concernant les deux premières conditions d’erreur, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **Localtime_s** convertit une heure stockée en tant que valeur [time_t](../../c-runtime-library/standard-types.md) et stocke le résultat dans une structure de type [TM](../../c-runtime-library/standard-types.md). La **time_t** valeur time_t *sourceTime* représente les secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, UTC. Cette valeur est généralement obtenue à partir de la fonction [Time](time-time32-time64.md) .
 
@@ -101,7 +101,7 @@ La fonction **Localtime_s** convertit une heure stockée en tant que valeur [tim
 
 **Localtime_s** est une fonction inline qui prend la valeur **_localtime64_s**et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Si vous procédez ainsi, **Localtime_s** sera évalué à **_localtime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
-Les champs de la structure type [TM](../../c-runtime-library/standard-types.md) stockent les valeurs suivantes, chacune d’elles étant un **int**.
+Les champs de la structure type [TM](../../c-runtime-library/standard-types.md) stockent les valeurs suivantes, chacune d’elles étant un **`int`** .
 
 |Champ|Description|
 |-|-|
@@ -123,7 +123,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|
-|**Localtime_s**, **_localtime32_s** **_localtime64_s**|\<time.h>|\<CTime> ou \<Time. h>|
+|**Localtime_s**, **_localtime32_s** **_localtime64_s**|\<time.h>|\<ctime> ou \<time.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 

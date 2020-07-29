@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 03bd90d2848922ee4153b79432bb76245f749ed6
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 58cb9e72fc11f0120ed4d99fd5086a195244ac31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233975"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -95,7 +95,7 @@ Pointeur désignant le caractère qui arrête l’analyse.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 **strtod** retourne la valeur du nombre à virgule flottante, sauf lorsque la représentation provoque un dépassement de capacité, auquel cas la fonction retourne +/-**HUGE_VAL**. Le signe de **HUGE_VAL** correspond au signe de la valeur qui ne peut pas être représentée. **strtod** retourne `0` si aucune conversion ne peut être effectuée ou si un dépassement de capacité négatif se produit.
 
@@ -106,9 +106,9 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations sur ce code de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-Chaque fonction convertit la chaîne d’entrée *strSource* en valeur **double**. La fonction **strtod** convertit *strSource* en valeur double précision. **strtod** arrête de lire la chaîne *strSource* au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère null de fin. **wcstod** est une version à caractères larges de **strtod**; son argument *strSource* est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
+Chaque fonction convertit la chaîne d’entrée *strSource* en **`double`** . La fonction **strtod** convertit *strSource* en valeur double précision. **strtod** arrête de lire la chaîne *strSource* au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère null de fin. **wcstod** est une version à caractères larges de **strtod**; son argument *strSource* est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

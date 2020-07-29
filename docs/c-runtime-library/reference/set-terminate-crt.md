@@ -28,12 +28,12 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 29b760d8831411142aad052fdef510efb0486747
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 70ed4adb7ceada53205fd69f111c8976fe95c711
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914525"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234014"
 ---
 # <a name="set_terminate-crt"></a>set_terminate (CRT)
 
@@ -54,13 +54,13 @@ Pointeur désignant une fonction d’arrêt que vous écrivez.
 
 Retourne un pointeur vers la fonction précédente inscrite par **set_terminate** afin que la fonction précédente puisse être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **null**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **set_terminate** installe *termFunction* en tant que fonction appelée par **Terminate**. **set_terminate** est utilisé avec la gestion des exceptions C++ et peut être appelé à tout moment dans votre programme avant que l’exception ne soit levée. **arrêter** les appels [abandonnés](abort.md) par défaut. Vous pouvez modifier cette valeur par défaut en écrivant votre propre fonction d’arrêt et en appelant **set_terminate** avec le nom de votre fonction comme argument. **Terminate** appelle la dernière fonction donnée comme argument pour **set_terminate**. Après avoir effectué les tâches de nettoyage souhaitées, *termFunction* doit quitter le programme. Si elle ne se ferme pas (si elle retourne à son appelant), [Abort](abort.md) est appelé.
 
 Dans un environnement multithread, les fonctions d’arrêt sont gérées séparément pour chaque thread. Chaque nouveau thread doit installer sa propre fonction d’arrêt. Par conséquent, chaque thread est responsable de sa propre gestion des arrêts.
 
-Le type de **terminate_function** est défini en Eh. H en tant que pointeur vers une fonction d’arrêt définie par l’utilisateur, *termFunction* qui retourne **void**. Votre fonction personnalisée *termFunction* ne peut pas prendre d’arguments et ne doit pas retourner à son appelant. Si c’est le cas, [Abort](abort.md) est appelé. Une exception ne peut pas être levée à partir de *termFunction*.
+Le type de **terminate_function** est défini en Eh. H en tant que pointeur vers une fonction d’arrêt définie par l’utilisateur, *termFunction* qui retourne **`void`** . Votre fonction personnalisée *termFunction* ne peut pas prendre d’arguments et ne doit pas retourner à son appelant. Si c’est le cas, [Abort](abort.md) est appelé. Une exception ne peut pas être levée à partir de *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -81,7 +81,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [terminate](terminate-crt.md).
 

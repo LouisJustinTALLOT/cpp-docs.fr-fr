@@ -37,12 +37,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 16f4315837873c8d78065ea97a11188bdddedbed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916238"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234105"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime, _gmtime32, _gmtime64
 
@@ -63,7 +63,7 @@ Pointeur désignant la valeur de temps stockée. Le temps est représenté sous 
 
 ## <a name="return-value"></a>Valeur de retour
 
-Pointeur désignant une structure de type [tm](../../c-runtime-library/standard-types.md). Les champs de la structure retournée contiennent la valeur évaluée de l’argument *sourceTime* en UTC plutôt qu’en heure locale. Chacun des champs de structure est de type **int**, comme suit :
+Pointeur désignant une structure de type [tm](../../c-runtime-library/standard-types.md). Les champs de la structure retournée contiennent la valeur évaluée de l’argument *sourceTime* en UTC plutôt qu’en heure locale. Chacun des champs de structure est de type **`int`** , comme suit :
 
 |Champ|Description|
 |-|-|
@@ -85,7 +85,7 @@ Les versions 32 bits et 64 bits de **gmtime**, [mktime](mktime-mktime32-mktime64
 
 Ces fonctions valident leurs paramètres. Si *sourceTime* est un pointeur null ou si la valeur *sourceTime* est négative, ces fonctions appellent un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent la **valeur null** et attribuent à **errno** la valeur **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_gmtime32** décompose la valeur *sourceTime* et la stocke dans une structure allouée de manière statique de type **TM**, définie dans le temps. Manutention. La valeur de *sourceTime* est généralement obtenue à partir d’un appel à la fonction [Time](time-time32-time64.md) .
 
@@ -98,7 +98,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|
-|**gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<CTime> ou \<Time. h>|
+|**gmtime**, **_gmtime32**, **_gmtime64**|\<time.h>|\<ctime> ou \<time.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

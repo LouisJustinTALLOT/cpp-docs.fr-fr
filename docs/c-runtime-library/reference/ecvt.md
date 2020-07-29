@@ -29,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9e02be690b257842c49166e18cf551c540190388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 227010fde5dc5ec82fc13c724c8d5a2f43788a8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915095"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234196"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-Convertit un nombre **double** en une chaîne. Une version plus sécurisée de cette fonction est disponible. Consultez [_ecvt_s](ecvt-s.md).
+Convertit un **`double`** nombre en une chaîne. Une version plus sécurisée de cette fonction est disponible. Consultez [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -69,7 +69,7 @@ Signe du nombre converti.
 
 **_ecvt** retourne un pointeur vers la chaîne de chiffres ; **Null** si une erreur s’est produite.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_ecvt** convertit un nombre à virgule flottante en une chaîne de caractères. Le paramètre de *valeur* est le nombre à virgule flottante à convertir. Cette fonction stocke jusqu’à *Count* chiffres de *valeur* sous forme de chaîne et ajoute un caractère null (' \ 0 '). Si le nombre de chiffres dans la *valeur* dépasse le *nombre*, le chiffre de poids faible est arrondi. Si le *nombre* de chiffres est inférieur à, la chaîne est complétée par des zéros.
 
@@ -87,7 +87,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_ecvt**|\<stdlib.h>|
 

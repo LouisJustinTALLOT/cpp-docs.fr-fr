@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2561
 ms.assetid: 0abe955b-53a6-4a3c-8362-b1a8eb40e8d1
-ms.openlocfilehash: b4a14be9cd32c752e2ab889417494e80b935e31b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9c42a2da662a286f3e6887f6a1dba381687136bf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87206963"
 ---
 # <a name="compiler-error-c2561"></a>Erreur du compilateur C2561
 
 'identificateur' : la fonction doit retourner une valeur
 
-La fonction a été déclarée comme retournant une valeur, mais la définition de fonction ne contient pas d’instruction `return`.
+La fonction a été déclarée comme retournant une valeur, mais la définition de fonction ne contient pas d' **`return`** instruction.
 
 Cette erreur peut être due à un prototype de fonction incorrect :
 
@@ -25,7 +25,7 @@ Cette erreur peut être due à un prototype de fonction incorrect :
 
 1. Vérifiez que toutes les branches possibles de la fonction retournent une valeur du type déclaré dans le prototype.
 
-1. C++les fonctions contenant des routines d’assembly inline qui stockent la valeur de retour dans le registre `AX` peuvent nécessiter une instruction return. Copiez la valeur de `AX` dans une variable temporaire et retournez cette variable à partir de la fonction.
+1. Les fonctions C++ contenant des routines d’assembly inline qui stockent la valeur de retour dans le `AX` Registre peuvent nécessiter une instruction return. Copiez la valeur dans `AX` une variable temporaire et retournez cette variable à partir de la fonction.
 
 L’exemple suivant génère l’C2561 :
 

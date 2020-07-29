@@ -30,16 +30,16 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: 06da25fb38d18691f78973f4e63a8b7b48d98ce1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913956"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218544"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
-Transfère le contrôle à votre mécanisme de gestion des erreurs si l’opérateur **new** ne peut pas allouer de mémoire.
+Transfère le contrôle à votre mécanisme de gestion des erreurs si l' **`new`** opérateur ne parvient pas à allouer de la mémoire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,9 +56,9 @@ Pointeur vers la fonction de gestion de la mémoire fournie par l'application. L
 
 Retourne un pointeur vers la précédente fonction de gestion des exceptions inscrite par **_set_new_handler**, afin que la fonction précédente puisse être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **null**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction de **_Set_new_handler** C++ spécifie une fonction de gestion des exceptions qui gagne le contrôle si l’opérateur **New** ne parvient pas à allouer de la mémoire. Si **New** échoue, le système Runtime appelle automatiquement la fonction de gestion des exceptions qui a été passée comme argument à **_set_new_handler**. **_PNH**, défini dans New. h, est un pointeur vers une fonction qui retourne le type **int** et accepte un argument de type **size_t**. Utilisez **size_t** pour spécifier la quantité d’espace à allouer.
+La fonction de **_Set_new_handler** C++ spécifie une fonction de gestion des exceptions qui gagne le contrôle si l' **`new`** opérateur ne parvient pas à allouer de la mémoire. En cas **`new`** d’échec, le système Runtime appelle automatiquement la fonction de gestion des exceptions qui a été passée comme argument à **_set_new_handler**. **_PNH**, défini dans New. h, est un pointeur vers une fonction qui retourne le type **`int`** et accepte un argument de type **size_t**. Utilisez **size_t** pour spécifier la quantité d’espace à allouer.
 
 Il n'existe pas de gestionnaire par défaut.
 
@@ -95,7 +95,7 @@ Vous pouvez enregistrer la dernière adresse de fonction passée à la fonction 
    // . . .
 ```
 
-La fonction C++ [_set_new_mode](set-new-mode.md) définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par **_set_new_handler**. Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l’opérateur **New** lorsqu’il échoue pour la même raison. Pour substituer la valeur par défaut, appelez :
+La fonction C++ [_set_new_mode](set-new-mode.md) définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par **_set_new_handler**. Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l' **`new`** opérateur quand il échoue pour la même raison. Pour substituer la valeur par défaut, appelez :
 
 ```cpp
 _set_new_mode(1);
@@ -117,7 +117,7 @@ Il existe un seul gestionnaire de **_set_new_handler** pour toutes les dll ou to
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Dans cet exemple, lorsque l'allocation échoue, le contrôle est transféré à MyNewHandler. L'argument passé à MyNewHandler est le nombre d'octets demandés. La valeur retournée par MyNewHandler est un indicateur qui spécifie si l'allocation doit être réexécutée : une valeur autre que zéro indique que l'allocation doit être réexécutée, une valeur zéro indique que l'allocation a échoué.
 

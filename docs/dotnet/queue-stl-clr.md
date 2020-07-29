@@ -57,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208362"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210928"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
-La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un premier accès premier sorti. Vous utilisez l’adaptateur de conteneur `queue` pour gérer un conteneur sous-jacent en tant que file d’attente.
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un premier accès premier sorti. Vous utilisez l’adaptateur `queue` de conteneur pour gérer un conteneur sous-jacent en tant que file d’attente.
 
-Dans la description ci-dessous, `GValue` est identique à la *valeur* , sauf si ce dernier est un type REF, auquel cas il est `Value^`. De même, `GContainer` est le même que le *conteneur* , sauf si ce dernier est un type REF, auquel cas il est `Container^`.
+Dans la description ci-dessous, `GValue` est le même que la *valeur* , sauf si ce dernier est un type REF, auquel cas il s’agit de `Value^` . De même, `GContainer` est le même que le *conteneur* , sauf si ce dernier est un type REF, auquel cas il s’agit de `Container^` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -92,13 +92,13 @@ Type du conteneur sous-jacent.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<cliext/file d’attente >
+**En-tête :**\<cliext/queue>
 
 **Espace de noms :** cliext
 
 ## <a name="declarations"></a>Déclarations
 
-|Définition de types|Description|
+|Définition de type|Description|
 |---------------------|-----------------|
 |[queue::const_reference (STL/CLR)](#const_reference)|Type d'une référence constante à un élément.|
 |[queue::container_type (STL/CLR)](#container_type)|Type du conteneur sous-jacent.|
@@ -107,7 +107,7 @@ Type du conteneur sous-jacent.
 |[queue::generic_value (STL/CLR)](#generic_value)|Type d’un élément pour l’interface générique de l’adaptateur de conteneur.|
 |[queue::reference (STL/CLR)](#reference)|Type d'une référence à un élément.|
 |[queue::size_type (STL/CLR)](#size_type)|Type d'une distance signée entre deux éléments.|
-|[queue::value_type (STL/CLR)](#value_type)|Type d'un élément.|
+|[queue::value_type (STL/CLR)](#value_type)|Type d’un élément.|
 
 |Fonction membre|Description|
 |---------------------|-----------------|
@@ -130,23 +130,23 @@ Type du conteneur sous-jacent.
 |Opérateur|Description|
 |--------------|-----------------|
 |[queue::operator= (STL/CLR)](#op_as)|Remplace la séquence contrôlée.|
-|[operator!= (queue) (STL/CLR)](#op_neq)|Détermine si un objet `queue` n’est pas égal à un autre objet `queue`.|
-|[operator< (queue) (STL/CLR)](#op_lt)|Détermine si un objet `queue` est inférieur à un autre objet `queue`.|
-|[operator<= (queue) (STL/CLR)](#op_lteq)|Détermine si un objet `queue` est inférieur ou égal à un autre objet `queue`.|
-|[operator== (queue) (STL/CLR)](#op_eq)|Détermine si un objet `queue` est égal à un autre objet `queue`.|
-|[operator> (queue) (STL/CLR)](#op_gt)|Détermine si un objet `queue` est supérieur à un autre objet `queue`.|
-|[operator>= (queue) (STL/CLR)](#op_gteq)|Détermine si un objet `queue` est supérieur ou égal à un autre objet `queue`.|
+|[Operator ! = (file d’attente) (STL/CLR)](#op_neq)|Détermine si un `queue` objet n’est pas égal à un autre `queue` objet.|
+|[< d’opérateur (file d’attente) (STL/CLR)](#op_lt)|Détermine si un `queue` objet est inférieur à un autre `queue` objet.|
+|[opérateur<= (file d’attente) (STL/CLR)](#op_lteq)|Détermine si un `queue` objet est inférieur ou égal à un autre `queue` objet.|
+|[opérateur = = (file d’attente) (STL/CLR)](#op_eq)|Détermine si un `queue` objet est égal à un autre `queue` objet.|
+|[> d’opérateur (file d’attente) (STL/CLR)](#op_gt)|Détermine si un `queue` objet est supérieur à un autre `queue` objet.|
+|[operator>= (queue) (STL/CLR)](#op_gteq)|Détermine si un `queue` objet est supérieur ou égal à un autre `queue` objet.|
 
 ## <a name="interfaces"></a>Interfaces
 
 |Interface|Description|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Dupliquer un objet.|
-|IQueue\<valeur, conteneur >|Gérer l’adaptateur de conteneur générique.|
+|IQueue\<Value, Container>|Gérer l’adaptateur de conteneur générique.|
 
 ## <a name="remarks"></a>Notes
 
-L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container`, qui stocke des éléments de `Value` et augmente à la demande. L’objet restreint l’accès au simple push du premier élément et en dépilant le dernier élément, en implémentant une file d’attente First-in First-Out (également appelée file d’attente FIFO ou simplement une file d’attente).
+L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container` , qui stocke des `Value` éléments et se développe à la demande. L’objet restreint l’accès au simple push du premier élément et en dépilant le dernier élément, en implémentant une file d’attente First-in First-Out (également appelée file d’attente FIFO ou simplement une file d’attente).
 
 ## <a name="members"></a>Membres
 
@@ -162,12 +162,12 @@ void assign(queue<Value, Container>% right);
 
 #### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*<br/>
 Adaptateur de conteneur à insérer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre assigne `right.get_container()` au conteneur sous-jacent. Vous l’utilisez pour modifier la totalité du contenu de la file d’attente.
+La fonction membre est assignée `right.get_container()` au conteneur sous-jacent. Vous l’utilisez pour modifier la totalité du contenu de la file d’attente.
 
 ### <a name="example"></a>Exemple
 
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [queue :: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`. Vous l’utilisez pour tester si la file d’attente est vide.
+La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [queue :: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() == 0` . Vous l’utilisez pour tester si la file d’attente est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -685,7 +685,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké à utiliser avec l’interface générique pour cette classe de conteneur de modèle. (`GValue` est `value_type` ou `value_type^` si `value_type` est un type Ref.)
+Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké à utiliser avec l’interface générique pour cette classe de conteneur de modèle. ( `GValue` a `value_type` la valeur ou `value_type^` si `value_type` est un type Ref.)
 
 ### <a name="example"></a>Exemple
 
@@ -784,12 +784,12 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 
 #### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*<br/>
 Adaptateur de conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre copie *directement* vers l’objet, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
+L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
 ### <a name="example"></a>Exemple
 
@@ -930,7 +930,7 @@ explicit queue(container_type% wrapped);
 
 #### <a name="parameters"></a>Paramètres
 
-*right*<br/>
+*Oui*<br/>
 Objet à copier.
 
 *encapsulée*<br/>
@@ -948,13 +948,13 @@ Le constructeur :
 
 `queue(queue<Value, Container>% right);`
 
-crée un conteneur encapsulé qui est une copie de `right.get_container()`. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet de file d’attente.
+crée un conteneur encapsulé qui est une copie de `right.get_container()` . Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet de file d’attente.
 
 Le constructeur :
 
 `queue(queue<Value, Container>^ right);`
 
-crée un conteneur encapsulé qui est une copie de `right->get_container()`. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de file d’attente `*right`.
+crée un conteneur encapsulé qui est une copie de `right->get_container()` . Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de file d’attente `*right` .
 
 Le constructeur :
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [queue :: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.
+La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [queue :: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Exemple
 
@@ -1212,7 +1212,7 @@ a b c
 
 ## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a>queue :: value_type (STL/CLR)
 
-Type d'un élément.
+Type d’un élément.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1270,15 +1270,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne `!(left == right)`. Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux files d’attente sont comparées élément par élément.
+La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux files d’attente sont comparées élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>&lt; d’opérateur (file d’attente) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>opérateur &lt; (file d’attente) (STL/CLR)
 
 File d’attente inférieure à la comparaison.
 
@@ -1341,15 +1341,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Dans le cas contraire, elle retourne `left->`[queue :: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() <` `right->size()` vous l’utilisez pour déterminer si *Left* est *ordonné avant le* moment où les deux files d’attente sont comparées élément par élément.
+La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, elle retourne `left->` [queue :: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` que vous utilisez *left* pour déterminer si Left *right* est ordonné avant le moment où les deux files d’attente sont comparées élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>opérateur&lt;= (file d’attente) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>opérateur &lt; = (file d’attente) (STL/CLR)
 
 Comparaison de la file d’attente inférieure ou égale.
 
@@ -1412,15 +1412,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne `!(right < left)`. Vous l’utilisez pour tester si *Left* n’est pas trié après *le* moment où les deux files d’attente sont comparées élément par élément.
+La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas trié après *le* moment où les deux files d’attente sont comparées élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -1483,15 +1483,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i`, `left[i] ==` `right[i]`. Vous l’utilisez pour tester si *Left* est *ordonné de la même façon que* lorsque les deux files d’attente sont comparées élément par élément.
+La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i` , `left[i] ==` `right[i]` . Vous l’utilisez pour tester si *Left* est *ordonné de la même façon que* lorsque les deux files d’attente sont comparées élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>&gt; d’opérateur (file d’attente) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>opérateur &gt; (file d’attente) (STL/CLR)
 
 File d’attente supérieure à la comparaison.
 
@@ -1554,15 +1554,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne `right` `<` `left`. Vous l’utilisez pour tester si *Left* est trié après *le* moment où les deux files d’attente sont comparées élément par élément.
+La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour tester si *Left* est trié après *le* moment où les deux files d’attente sont comparées élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>opérateur&gt;= (file d’attente) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>opérateur &gt; = (file d’attente) (STL/CLR)
 
 Comparaison de la file d’attente supérieure ou égale.
 
@@ -1625,15 +1625,15 @@ template<typename Value,
 
 #### <a name="parameters"></a>Paramètres
 
-*left*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
-*right*<br/>
+*Oui*<br/>
 Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction operator retourne `!(left < right)`. Vous l’utilisez pour tester si *Left* n’est pas trié *avant le moment où* les deux files d’attente sont comparées élément par élément.
+La fonction opérateur retourne `!(left < right)` . Vous l’utilisez pour tester si *Left* n’est pas trié *avant le moment où* les deux files d’attente sont comparées élément par élément.
 
 ### <a name="example"></a>Exemple
 

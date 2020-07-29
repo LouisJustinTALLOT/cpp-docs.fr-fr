@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 24c6811a755ea242d424c5dd06cdf48c6e9c1b20
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506999"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218678"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -71,7 +71,7 @@ long double floorl(
 *x*<br/>
 Valeur à virgule flottante.
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 Les fonctions **Floor** retournent une valeur à virgule flottante qui représente le plus grand entier inférieur ou égal à *x*. Aucun retour d'erreur.
 
@@ -81,13 +81,13 @@ Les fonctions **Floor** retournent une valeur à virgule flottante qui représen
 
 **Floor** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **plancher** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Floor** prend toujours et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **plancher** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, **Floor** prend toujours et retourne un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

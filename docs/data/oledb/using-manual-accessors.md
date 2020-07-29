@@ -6,12 +6,12 @@ helpviewer_keywords:
 - manual accessors
 - accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-ms.openlocfilehash: a6c0e5236702229a61a828344ba5d0d288898aee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b76c6a2d0af404bc526fee8f511320a58ffd86ec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209324"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218284"
 ---
 # <a name="using-manual-accessors"></a>Utilisation des accesseurs manuels
 
@@ -25,19 +25,19 @@ Il y a quatre choses à faire lors du traitement d’une commande inconnue :
 
 - Vérifier s’il existe plusieurs ensembles de lignes de retour
 
-Pour effectuer ces opérations avec les modèles de consommateur OLE DB, utilisez la classe `CManualAccessor` et procédez comme suit :
+Pour effectuer ces opérations avec les modèles de consommateur OLE DB, utilisez la `CManualAccessor` classe et procédez comme suit :
 
-1. Ouvrez un objet `CCommand` avec `CManualAccessor` en tant que paramètre de modèle.
+1. Ouvrez un `CCommand` objet avec `CManualAccessor` comme paramètre de modèle.
 
     ```cpp
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;
     ```
 
-1. Interrogez la session pour l’interface `IDBSchemaRowset` et utilisez l’ensemble de lignes de paramètres de procédure. Si l’interface `IDBSchemaRowset` n’est pas disponible, interrogez l’interface `ICommandWithParameters`. Pour plus d’informations, appelez `GetParameterInfo`. Si aucune interface n’est disponible, vous pouvez supposer qu’il n’y a aucun paramètre.
+1. Interrogez la session de l' `IDBSchemaRowset` interface et utilisez l’ensemble de lignes de paramètres de procédure. Si l' `IDBSchemaRowset` interface n’est pas disponible, recherchez l' `ICommandWithParameters` interface. Appelez `GetParameterInfo` pour obtenir des informations. Si aucune interface n’est disponible, vous pouvez supposer qu’il n’y a aucun paramètre.
 
 1. Pour chaque paramètre, appelez `AddParameterEntry` pour ajouter les paramètres et les définir.
 
-1. Ouvrez l’ensemble de lignes, mais définissez le paramètre de liaison sur **false**.
+1. Ouvrez l’ensemble de lignes, mais définissez le paramètre de liaison sur **`false`** .
 
 1. Appelez `GetColumnInfo` pour récupérer les colonnes de sortie. Utilisez `AddBindEntry` pour ajouter la colonne de sortie à la liaison.
 

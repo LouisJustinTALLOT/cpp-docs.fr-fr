@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2048
 ms.assetid: 44704726-85fc-42f0-afb9-194df8c4ca7c
-ms.openlocfilehash: 039be85541a7cd3864187433e5b3299bca7d067e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 483e4d706a1c08899e6cd6e1ec561a21ed805014
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740128"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210434"
 ---
 # <a name="compiler-error-c2048"></a>Erreur du compilateur C2048
 
 plusieurs 'default'
 
-Une instruction `switch` contient plusieurs étiquettes `default` . Supprimez l’une des étiquettes `default` pour résoudre l’erreur.
+Une **`switch`** instruction contient plusieurs **`default`** étiquettes. Supprimez l’une des **`default`** étiquettes pour résoudre l’erreur.
 
 L’exemple suivant génère l’erreur C2048 :
 

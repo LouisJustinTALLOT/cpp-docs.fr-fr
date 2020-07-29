@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 9077c448f3b5f1d70d18047b91dcf300e606c91f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d3af2b5629906679db46f6f669084c11a41f7ca
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186543"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233247"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Avertissement du compilateur (niveau 1) C4503
 
@@ -23,7 +23,7 @@ Cet avertissement du compilateur est obsolète et n’est pas généré dans Vis
 
 Le nom décoré était plus long que la limite du compilateur (4096) et a été tronqué. Pour éviter cet avertissement et la troncation, réduisez le nombre d’arguments ou les longueurs de nom des identificateurs utilisés. Un hachage est appliqué aux noms décorés qui sont plus longs que la limite du compilateur et ne sont pas menacés par une collision de noms.
 
-Lors de l’utilisation d’une version antérieure de Visual Studio, cet avertissement peut être émis lorsque votre code contient des modèles spécialisés sur les modèles de façon répétée. Par exemple, une carte de cartes (à partir C++ de la bibliothèque standard). Dans ce cas, vous pouvez faire de vos typedefs un type (un **struct**, par exemple) qui contient le mappage.
+Lors de l’utilisation d’une version antérieure de Visual Studio, cet avertissement peut être émis lorsque votre code contient des modèles spécialisés sur les modèles de façon répétée. Par exemple, une carte de cartes (à partir de la bibliothèque C++ standard). Dans ce cas, vous pouvez donner à vos typedefs un type ( **`struct`** par exemple,) qui contient la carte.
 
 Toutefois, vous pouvez décider de ne pas restructurer votre code.  Il est possible d’expédier une application qui génère des C4503, mais si vous recevez des erreurs de temps de liaison sur un symbole tronqué, il peut être plus difficile de déterminer le type du symbole dans l’erreur. Le débogage peut également être plus difficile ; le débogueur peut avoir difficilement mapper le nom de symbole au nom de type. Toutefois, l’exactitude du programme n’est pas affectée par le nom tronqué.
 

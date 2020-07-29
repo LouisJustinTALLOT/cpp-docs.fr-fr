@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: f981b86ed8f5d3b240d9f02380a603eb4f2605bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623579"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204883"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -80,7 +80,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 alloue des nœuds avec `allocator_chunklist` et le filtre de synchronisation [sync_per_thread](sync-per-thread-class.md).
 
-Un allocateur de blocs est un cache ou un filtre. Un cache est un modèle de classe qui accepte un argument de type std :: size_t. Il définit un allocateur de blocs qui alloue et désalloue des blocs de mémoire de taille unique. Il doit obtenir de la mémoire à l’aide de l’opérateur **New**, mais il n’est pas nécessaire d’effectuer un appel distinct à Operator **New** pour chaque bloc. Il peut, par exemple, sous-allouer la mémoire d’un bloc plus grand ou mettre en cache des blocs désalloués en vue d’une réallocation ultérieure.
+Un allocateur de blocs est un cache ou un filtre. Un cache est un modèle de classe qui accepte un argument de type std :: size_t. Il définit un allocateur de blocs qui alloue et désalloue des blocs de mémoire de taille unique. Il doit obtenir de la mémoire à l’aide de l’opérateur **`new`** , mais il n’est pas nécessaire d’effectuer un appel distinct à Operator **`new`** pour chaque bloc. Il peut, par exemple, sous-allouer la mémoire d’un bloc plus grand ou mettre en cache des blocs désalloués en vue d’une réallocation ultérieure.
 
 Avec un compilateur qui ne peut pas relier la valeur de l’argument std :: size_t utilisé lorsque le modèle a été instancié n’est pas nécessairement la valeur de l’argument _Sz passé aux fonctions membres Allocate et DEALLOCATE d’un cache.
 
@@ -139,7 +139,7 @@ Le modèle de cache `cache_freelist` accepte un argument de classe Max, qui dét
 
 ### <a name="classes"></a>Classes
 
-|Class|Description|
+|Classe|Description|
 |-|-|
 |[allocator_base](allocator-base-class.md)|Définit la classe de base et les fonctions communes nécessaires à la création d’un allocateur défini par l’utilisateur à partir d’un filtre de synchronisation.|
 |[allocator_chunklist](allocator-chunklist-class.md)|Décrit un objet qui gère l’allocation et la libération de stockage pour des objets à l’aide d’un cache de type [cache_chunklist](cache-chunklist-class.md).|
@@ -162,7 +162,7 @@ Le modèle de cache `cache_freelist` accepte un argument de classe Max, qui dét
 |[sync_per_thread](sync-per-thread-class.md)|Décrit un filtre de synchronisation qui fournit un objet de cache distinct pour chaque thread.|
 |[sync_shared](sync-shared-class.md)|Décrit un filtre de synchronisation qui utilise un mutex pour contrôler l’accès à un objet de cache partagé par tous les allocateurs.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<allocators>
 

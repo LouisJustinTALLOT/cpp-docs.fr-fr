@@ -5,24 +5,24 @@ helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: 6ab697e5a090158b034a385e60978cff4a73f488
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 9a5961049cbc54c94cec5b444e2d98f013dda932
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233780"
 ---
 # <a name="compiler-com-support"></a>Prise en charge COM du compilateur
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Le compilateur C++ Microsoft peut lire directement les bibliothèques de types COM (Component Object Model) et traduire le C++ contenu dans le code source qui peut être inclus dans la compilation. Les extensions de langage sont disponibles pour faciliter la programmation COM côté client pour les applications de bureau.
+Le compilateur Microsoft C++ peut lire directement les bibliothèques de types COM (Component Object Model) et traduire le contenu en code source C++ qui peut être inclus dans la compilation. Les extensions de langage sont disponibles pour faciliter la programmation COM côté client pour les applications de bureau.
 
-En utilisant la [directive de préprocesseur #import](../preprocessor/hash-import-directive-cpp.md), le compilateur peut lire une bibliothèque de types et la convertir en C++ un fichier d’en-tête qui décrit les interfaces COM en tant que classes. Un ensemble d'attributs `#import` est disponible pour permettre le contrôle utilisateur du contenu pour les fichiers d'en-tête de la bibliothèque de types obtenus.
+En utilisant la [directive de préprocesseur #import](../preprocessor/hash-import-directive-cpp.md), le compilateur peut lire une bibliothèque de types et la convertir en un fichier d’en-tête C++ qui décrit les interfaces COM en tant que classes. Un ensemble d'attributs `#import` est disponible pour permettre le contrôle utilisateur du contenu pour les fichiers d'en-tête de la bibliothèque de types obtenus.
 
-Vous pouvez utiliser l' [UUID](../cpp/uuid-cpp.md) d’attribut étendu [__declspec](../cpp/declspec.md) pour assigner un identificateur global unique (Guid) à un objet com. Le mot clé [__uuidof](../cpp/uuidof-operator.md) peut être utilisé pour extraire le GUID associé à un objet com. Un autre **__declspec** attribut, [Property](../cpp/property-cpp.md), peut être utilisé pour spécifier les méthodes `get` et `set` pour un membre de données d’un objet com.
+Vous pouvez utiliser l' [UUID](../cpp/uuid-cpp.md) d’attribut étendu [__declspec](../cpp/declspec.md) pour assigner un identificateur global unique (Guid) à un objet com. Le mot clé [__uuidof](../cpp/uuidof-operator.md) peut être utilisé pour extraire le GUID associé à un objet com. Un autre **`__declspec`** attribut, [Property](../cpp/property-cpp.md), peut être utilisé pour spécifier les `get` méthodes et `set` pour un membre de données d’un objet com.
 
-Un ensemble de classes et de fonctions globales de prise en charge COM est fourni pour prendre en charge les types `VARIANT` et `BSTR`, implémenter des pointeurs intelligents et encapsuler l’objet d’erreur levé par `_com_raise_error`:
+Un ensemble de classes et de fonctions globales de prise en charge COM est fourni pour prendre en charge les `VARIANT` `BSTR` types et, implémenter des pointeurs intelligents et encapsuler l’objet d’erreur levé par `_com_raise_error` :
 
 - [Fonctions globales COM du compilateur](../cpp/compiler-com-global-functions.md)
 
@@ -34,9 +34,9 @@ Un ensemble de classes et de fonctions globales de prise en charge COM est fourn
 
 - [_variant_t](../cpp/variant-t-class.md)
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classes du support COM du compilateur](../cpp/compiler-com-support-classes.md)<br/>
+[Classes de prise en charge COM du compilateur](../cpp/compiler-com-support-classes.md)<br/>
 [Fonctions globales COM du compilateur](../cpp/compiler-com-global-functions.md)

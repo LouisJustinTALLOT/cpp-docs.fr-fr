@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-ms.openlocfilehash: 1dc9781bc0cf1bc6c7f879cc3971828983471c6f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd815bf90b135f65072a56911c7c4b0f054fcfec
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757746"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87210070"
 ---
 # <a name="compiler-error-c2071"></a>Erreur du compilateur C2071
 
 'identificateur' : classe de stockage non conforme
 
-`identifier` a été déclaré avec une [classe de stockage](../../c-language/c-storage-classes.md)non valide. Cette erreur peut survenir quand plusieurs classes de stockage sont spécifiées pour un même identificateur ou quand la définition est incompatible avec la déclaration de la classe de stockage.
+`identifier`a été déclaré avec une [classe de stockage](../../c-language/c-storage-classes.md)non valide. Cette erreur peut survenir quand plusieurs classes de stockage sont spécifiées pour un même identificateur ou quand la définition est incompatible avec la déclaration de la classe de stockage.
 
-Pour résoudre ce problème, comprenez la classe de stockage prévue de l’identificateur (par exemple, `static` ou `extern`) et corrigez la déclaration pour qu’elle corresponde.
+Pour résoudre ce problème, comprenez la classe de stockage prévue de l’identificateur (par exemple, **`static`** ou **`extern`** ) et corrigez la déclaration pour qu’elle corresponde.
 
 ## <a name="example"></a>Exemple
 

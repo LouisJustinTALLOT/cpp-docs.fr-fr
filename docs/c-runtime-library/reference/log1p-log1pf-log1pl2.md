@@ -37,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 21bba72b204f975b806e43cdc6d36d8efa173b9b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d599567e38d216e78720a3d6b330310095acdd11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911426"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218583"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -96,11 +96,11 @@ Sinon, peut retourner l’une des valeurs suivantes :
 
 La valeur **errno** est définie sur ERANGE si *x* =-1. La valeur **errno** est définie sur **EDOM** si *x* <-1.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Les fonctions **log1p** peuvent être plus précises que l' `log(x + 1)` utilisation de lorsque *x* est proche de 0.
+Les fonctions **log1p** peuvent être plus précises que l’utilisation de `log(x + 1)` lorsque *x* est proche de 0.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **log1p** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **log1p** accepte et retourne toujours un **`double`** .
 
 Si *x* est un nombre naturel, cette fonction retourne le logarithme de la factorielle de (*x* -1).
 
@@ -108,7 +108,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
 
@@ -116,6 +116,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [log2, log2f, log2l](log2-log2f-log2l.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-ms.openlocfilehash: 4e5d5335717ec77c61069ad08e209f9e1851dc2f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aa55392e9f58caa4292cf5f96ef97f65a53bf913
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205307"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87207951"
 ---
 # <a name="compiler-error-c2441"></a>Erreur du compilateur C2441
 
@@ -23,7 +23,7 @@ Les options de compilateur **/clr : pure** et **/clr : safe** sont déprécié
 
 Par défaut, les variables sont par domaine d’application sous **/clr : pure**. Une variable marquée `__declspec(process)` sous **/clr : pure** est sujette aux erreurs si elle est modifiée dans un domaine d’application et lue dans une autre.
 
-Par conséquent, le compilateur applique les variables par processus `const` sous **/clr : pure**, ce qui les rend accessibles en lecture seule dans tous les domaines d’application.
+Par conséquent, le compilateur applique les variables par processus **`const`** sous **/clr : pure**, ce qui les rend accessibles en lecture seule dans tous les domaines d’application.
 
 Pour plus d’informations, consultez [Process](../../cpp/process.md) et [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 

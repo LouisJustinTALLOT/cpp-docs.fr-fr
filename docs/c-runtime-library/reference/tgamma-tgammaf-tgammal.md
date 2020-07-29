@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912229"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218518"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -97,9 +97,9 @@ Une erreur de plage peut se produire si l’amplitude de *x* est trop grande ou 
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **tgamma** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **tgamma** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **tgamma** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **tgamma** accepte et retourne toujours un **`double`** .
 
 Si x est un nombre naturel, cette fonction retourne la factorielle de (x-1).
 
@@ -107,7 +107,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
 
@@ -115,5 +115,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [lgamma, lgammaf, lgammal](lgamma-lgammaf-lgammal.md)<br/>

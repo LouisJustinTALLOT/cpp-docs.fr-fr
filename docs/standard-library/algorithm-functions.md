@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: c8c550be87eacf81fab994239e07ed2358fad39b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5b83306d34c5e881e679ac4b6f0d7b9c249035cd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617661"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87205572"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 
@@ -329,7 +329,7 @@ They have values of 10 & 20.
 
 ## <a name="all_of"></a><a name="all_of"></a>all_of
 
-Retourne la **valeur true** lorsqu’une condition est présente à chaque élément d’une plage donnée.
+Retourne **`true`** lorsqu’une condition est présente à chaque élément d’une plage donnée.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -358,15 +358,15 @@ Itérateur d’entrée qui indique le début de la recherche d’une condition. 
 Itérateur d’entrée qui indique la fin d’une plage d’éléments dans laquelle rechercher une condition.
 
 *prédit*\
-Condition à vérifier. Il s’agit d’un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément vérifié. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
+Condition à vérifier. Il s’agit d’un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément vérifié. Un prédicat unaire accepte un seul argument et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
-Retourne la **valeur true** si la condition est détectée à chaque élément de la plage indiquée ou si la plage est vide, et **false** dans le cas contraire.
+Retourne **`true`** si la condition est détectée au niveau de chaque élément de la plage indiquée ou si la plage est vide, et dans le **`false`** cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne **true** uniquement si, pour chaque `N` de la plage `[0, last - first)` , le prédicat `pred(*(first + N))` a la **valeur true**.
+La fonction de modèle retourne **`true`** uniquement si, pour chaque `N` dans la plage `[0, last - first)` , le prédicat `pred(*(first + N))` est **`true`** .
 
 ### <a name="example"></a>Exemple
 
@@ -405,7 +405,7 @@ All the elements are even numbers.
 
 ## <a name="any_of"></a><a name="any_of"></a>any_of
 
-Retourne la **valeur true** lorsqu’une condition est présente au moins une fois dans la plage d’éléments spécifiée.
+Retourne **`true`** lorsqu’une condition est présente au moins une fois dans la plage d’éléments spécifiée.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -434,15 +434,15 @@ Itérateur d’entrée qui indique le début de la recherche d’une condition d
 Itérateur d’entrée qui indique la fin d’une plage d’éléments dans laquelle rechercher une condition.
 
 *prédit*\
-Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Le prédicat définit la condition à satisfaire par l’élément vérifié. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
+Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Le prédicat définit la condition à satisfaire par l’élément vérifié. Un prédicat unaire accepte un seul argument et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
-Retourne la **valeur true** si la condition est détectée au moins une fois dans la plage indiquée, **false** si la condition n’est jamais détectée.
+Retourne **`true`** si la condition est détectée au moins une fois dans la plage indiquée, **`false`** si la condition n’est jamais détectée.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne **true** uniquement si, pour une partie `N` de la plage
+La fonction de modèle retourne **`true`** uniquement si, pour une partie `N` de la plage
 
 `[0, last - first)`, le prédicat `pred(*(first + N))` est true.
 
@@ -511,11 +511,11 @@ Itérateur vers l'avant ciblant la position juste après le dernier élément de
 Valeur qui doit correspondre à la valeur de l’élément ou qui doit satisfaire la condition avec la valeur d’élément spécifiée par le prédicat binaire.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
-**true** si un élément se trouve dans la plage qui est égale ou équivalente à la valeur spécifiée ; Sinon, **false**.
+**`true`** Si un élément se trouve dans la plage qui est égale ou équivalente à la valeur spécifiée ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -650,7 +650,7 @@ Limite inférieure des valeurs auxquelles fixer la *valeur* .
 Limite supérieure des valeurs auxquelles fixer la *valeur* .
 
 *prédit*\
-Prédicat utilisé pour comparer la valeur à la *valeur* *inférieure* ou *supérieure*. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** si le premier est dans un sens inférieur à la seconde, et **false**dans le cas contraire.
+Prédicat utilisé pour comparer la valeur à la *valeur* *inférieure* ou *supérieure*. Un prédicat de comparaison prend deux arguments et retourne **`true`** si le premier est dans un sens inférieur à la seconde, et sinon, **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -862,7 +862,7 @@ v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 
 ## <a name="copy_if"></a><a name="copy_if"></a>copy_if
 
-Dans une plage d’éléments, copie les éléments qui ont la **valeur true** pour la condition spécifiée.
+Dans une plage d’éléments, copie les éléments qui correspondent **`true`** à la condition spécifiée.
 
 ```cpp
 template<class InputIterator, class OutputIterator, class UnaryPredicate>
@@ -896,7 +896,7 @@ Itérateur d’entrée qui indique la fin de la plage.
 Itérateur de sortie qui indique la destination des éléments copiés.
 
 *prédit*\
-Condition pour laquelle chaque élément de la plage est vérifié. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Un prédicat unaire accepte un argument et retourne **true** ou **false**.
+Condition pour laquelle chaque élément de la plage est vérifié. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Un prédicat unaire accepte un argument et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -1148,7 +1148,7 @@ Itérateur d'entrée qui traite la position du premier élément de la plage à 
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être compté. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être compté. Un prédicat unaire accepte un seul argument et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -1289,17 +1289,17 @@ Itérateur d'entrée qui traite la position du premier élément de la deuxième
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la deuxième plage à tester.
 
 *prédit*\
-Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
-**true** si et seulement si les plages sont identiques ou équivalentes sous le prédicat binaire en cas de comparaison élément par élément ; sinon, **false**.
+**`true`** Si et seulement si les plages sont identiques ou équivalentes sous le prédicat binaire lorsqu’elles sont comparées élément par élément ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
 La plage dans laquelle s'effectue la recherche doit être valide. Tous les itérateurs doivent pouvoir être déréférencés. Par ailleurs, la dernière position est accessible depuis la première par incrémentation.
 
-Si les deux plages sont de longueur égale, la complexité temporelle de l'algorithme est linéaire quant au nombre d'éléments contenus dans la plage. Dans le cas contraire, la fonction retourne immédiatement **false**.
+Si les deux plages sont de longueur égale, la complexité temporelle de l'algorithme est linéaire quant au nombre d'éléments contenus dans la plage. Sinon, la fonction retourne immédiatement **`false`** .
 
 Ni le `operator==`, ni le prédicat défini par l'utilisateur ne doit obligatoirement imposer une relation d'équivalence qui est symétrique, réflexive et transitive entre ses opérandes.
 
@@ -1367,7 +1367,7 @@ Itérateur vers l'avant ciblant la position juste après le dernier élément de
 Valeur recherchée dans la plage ordonnée.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne **`true`** quand il est satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -1768,7 +1768,7 @@ Itérateur vers l'avant ciblant la position du premier élément de la plage dan
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
 *prédit*\
-Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -1932,7 +1932,7 @@ Itérateur vers l'avant ciblant la position du premier élément de la plage dan
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la correspondance.
 
 *prédit*\
-Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -2070,11 +2070,11 @@ Itérateur d'entrée qui traite la position du premier élément de la plage à 
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté. La signature de *prédit* doit être effectivement `bool pred(const T& arg);` , où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le mot clé **const** s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
+Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire prend un seul argument et retourne **`true`** s’il est satisfait, ou **`false`** s’il n’est pas respecté. La signature de *prédit* doit être effectivement `bool pred(const T& arg);` , où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le **`const`** mot clé s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
 
 ### <a name="return-value"></a>Valeur retournée
 
-Itérateur d’entrée qui fait référence au premier élément de la plage qui répond à la condition spécifiée par le prédicat (le prédicat donne la **valeur true**). Si aucun élément n’est trouvé pour satisfaire le prédicat, retourne *Last*.
+Itérateur d’entrée qui fait référence au premier élément de la plage qui satisfait à la condition spécifiée par le prédicat (le prédicat est obtenu **`true`** ). Si aucun élément n’est trouvé pour satisfaire le prédicat, retourne *Last*.
 
 ### <a name="remarks"></a>Notes
 
@@ -2192,11 +2192,11 @@ Itérateur d'entrée qui traite la position du premier élément de la plage à 
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à ne pas satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté. La signature de *prédit* doit être effectivement `bool pred(const T& arg);` , où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le mot clé **const** s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
+Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à ne pas satisfaire par l’élément recherché. Un prédicat unaire prend un seul argument et retourne **`true`** s’il est satisfait, ou **`false`** s’il n’est pas respecté. La signature de *prédit* doit être effectivement `bool pred(const T& arg);` , où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le **`const`** mot clé s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
 
 ### <a name="return-value"></a>Valeur retournée
 
-Itérateur d’entrée qui fait référence au premier élément de la plage qui ne satisfait pas la condition spécifiée par le prédicat (le prédicat donne la **valeur false**). Si tous les éléments répondent au prédicat (le prédicat donne la **valeur true** à chaque élément), retourne *Last*.
+Itérateur d’entrée qui fait référence au premier élément de la plage qui ne satisfait pas la condition spécifiée par le prédicat (les résultats de prédicat **`false`** ). Si tous les éléments répondent au prédicat (le prédicat donne **`true`** pour chaque élément), retourne *Last*.
 
 ### <a name="remarks"></a>Notes
 
@@ -2598,11 +2598,11 @@ Itérateur d’entrée ciblant la position du premier élément de la deuxième 
 Itérateur d’entrée ciblant la position juste après le dernier élément de la deuxième de deux plages sources triées consécutives à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne **`true`** quand il est satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
-**true** si la première plage triée contient tous les éléments de la deuxième ; sinon, **false**.
+**`true`** Si la première plage triée contient tous les éléments de la deuxième plage triée ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -2816,7 +2816,7 @@ Itérateur bidirectionnel ciblant la position du premier élément de la deuxiè
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la deuxième de deux plages triées consécutives à regrouper en une seule plage et trier.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner la **valeur true** lorsque le premier élément est inférieur au deuxième et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **`true`** lorsque le premier élément est inférieur au deuxième élément et dans le **`false`** cas contraire.
 
 ### <a name="remarks"></a>Notes
 
@@ -2939,7 +2939,7 @@ vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 
 ## <a name="is_heap"></a><a name="is_heap"></a>is_heap
 
-Retourne la **valeur true** si les éléments de la plage spécifiée forment un segment de mémoire.
+Retourne **`true`** si les éléments de la plage spécifiée forment un tas.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -2979,11 +2979,11 @@ Itérateur d’accès aléatoire qui indique le début d’une plage dans laquel
 Itérateur d’accès aléatoire qui indique la fin d’une plage.
 
 *prédit*\
-Condition à vérifier pour ordonner des éléments. Un prédicat de comparaison accepte deux arguments et retourne **true** ou **false**.
+Condition à vérifier pour ordonner des éléments. Un prédicat de comparaison accepte deux arguments et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
-Retourne la **valeur true** si les éléments de la plage spécifiée forment un tas, **false** dans le cas contraire.
+Retourne **`true`** si les éléments de la plage spécifiée forment un tas, **`false`** si ce n’est pas le cas.
 
 ### <a name="remarks"></a>Notes
 
@@ -3049,7 +3049,7 @@ La deuxième fonction de modèle se comporte comme la première, sauf qu’elle 
 
 ## <a name="is_partitioned"></a><a name="is_partitioned"></a>is_partitioned
 
-Retourne la **valeur true** si tous les éléments d’une plage donnée qui testent la **valeur true** pour une condition précèdent tous les éléments qui testent **false**.
+Retourne **`true`** si tous les éléments d’une plage donnée qui testent **`true`** une condition se trouvent avant les éléments qui testent **`false`** .
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -3078,15 +3078,15 @@ Itérateur d’entrée qui indique le début de la recherche d’une condition d
 Itérateur d’entrée qui indique la fin d’une plage.
 
 *prédit*\
-Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
+Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
-Retourne la **valeur true** lorsque tous les éléments d’une plage donnée qui testent la **valeur true** pour une condition sont placés avant les éléments qui testent **false**, et sinon, retourne **false**.
+Retourne **`true`** lorsque tous les éléments d’une plage donnée qui testent **`true`** une condition se trouvent avant les éléments qui testent **`false`** , et sinon, retourne **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne **true** uniquement si tous les éléments de `[first, last)` sont partitionnés par *prédit*; autrement dit, tous les éléments `X` `[first, last)` pour lesquels `pred (X)` est true se produisent avant tous les éléments `Y` pour lesquels `pred (Y)` a la **valeur false**.
+La fonction de modèle retourne **`true`** uniquement si tous les éléments de `[first, last)` sont partitionnés par *prédit*; autrement dit, tous les éléments `X` `[first, last)` pour lesquels `pred (X)` est true se produisent avant tous les éléments `Y` pour lesquels `pred (Y)` est **`false`** .
 
 ## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
 
@@ -3138,17 +3138,17 @@ Itérateur vers l'avant qui fait référence au premier élément d'une deuxièm
 Itérateur vers l'avant qui fait référence à l'élément qui suit le dernier élément d'une deuxième plage, utilisé à des fins de comparaison.
 
 *prédit*\
-Prédicat qui teste l’équivalence et retourne une valeur **booléenne**.
+Prédicat qui teste l’équivalence et retourne un **`bool`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
-**true** lorsque les plages peuvent être réorganisées pour être identiques en fonction du prédicat du comparateur ; Sinon, **false**.
+**`true`** Quand les plages peuvent être réorganisées pour être identiques en fonction du prédicat du comparateur ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
 `is_permutation` a une complexité quadratique dans le pire des cas.
 
-La première fonction de modèle part du principe qu’il existe autant d’éléments dans la plage commençant à *First2* que dans la plage désignée par `[first1, last1)` . S'il y a plus d'éléments dans la deuxième plage, ils sont ignorés ; s'il y en a moins, le comportement est non défini. La troisième fonction de modèle (C++14 et versions ultérieures) ne part pas de ce principe. Les deux renvoient **true** uniquement si, pour chaque élément x dans la plage désignée par, il y a autant d' `[first1, last1)` éléments y dans la même plage pour lesquels x = = y, comme dans la plage commençant à *First2* ou `[first2, last2)` . Ici, `operator==` doit effectuer une comparaison par paire entre ses opérandes.
+La première fonction de modèle part du principe qu’il existe autant d’éléments dans la plage commençant à *First2* que dans la plage désignée par `[first1, last1)` . S'il y a plus d'éléments dans la deuxième plage, ils sont ignorés ; s'il y en a moins, le comportement est non défini. La troisième fonction de modèle (C++14 et versions ultérieures) ne part pas de ce principe. Tous deux retournent **`true`** uniquement si, pour chaque élément x dans la plage désignée par, il y a autant d' `[first1, last1)` éléments y dans la même plage pour lesquels x = = y, comme dans la plage commençant à *First2* ou `[first2, last2)` . Ici, `operator==` doit effectuer une comparaison par paire entre ses opérandes.
 
 Les deuxième et quatrième fonctions avec modèle ont le même comportement, hormis le fait qu'elles remplacent `operator==(X, Y)` par `Pred(X, Y)`. Pour se comporter correctement, le prédicat doit être symétrique, réflexif et transitif.
 
@@ -3210,7 +3210,7 @@ int main()
 
 ## <a name="is_sorted"></a><a name="is_sorted"></a>is_sorted
 
-Retourne la **valeur true** si les éléments de la plage spécifiée sont triés.
+Retourne **`true`** si les éléments de la plage spécifiée sont triés.
 
 ```cpp
 template<class ForwardIterator>
@@ -3250,7 +3250,7 @@ Itérateur vers l’avant qui indique où commence la plage à vérifier.
 Itérateur vers l’avant qui indique la fin d’une plage.
 
 *prédit*\
-Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat de comparaison accepte deux arguments et retourne **true** ou **false**. Il effectue la même tâche que `operator<`.
+Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat de comparaison accepte deux arguments et retourne **`true`** ou **`false`** . Il effectue la même tâche que `operator<`.
 
 ### <a name="remarks"></a>Notes
 
@@ -3262,7 +3262,7 @@ La deuxième fonction de modèle retourne `is_sorted_until( first, last , pred )
 
 Retourne un `ForwardIterator` défini sur le dernier élément qui se trouve dans l’ordre trié d’une plage spécifiée.
 
-La deuxième version vous permet de fournir un objet de fonction de comparaison qui retourne la **valeur true** lorsque deux éléments donnés sont triés, et **false** dans le cas contraire.
+La deuxième version vous permet de fournir un objet de fonction de comparaison qui retourne **`true`** lorsque deux éléments donnés sont triés, et dans le **`false`** cas contraire.
 
 ```cpp
 template<class ForwardIterator>
@@ -3302,7 +3302,7 @@ Itérateur vers l’avant qui indique où commence la plage à vérifier.
 Itérateur vers l’avant qui indique la fin d’une plage.
 
 *prédit*\
-Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat de comparaison accepte deux arguments et retourne **true** ou **false**.
+Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat de comparaison accepte deux arguments et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -3526,11 +3526,11 @@ Itérateur d’entrée ciblant la position du premier élément de la deuxième 
 Itérateur d’entrée ciblant la position juste après le dernier élément de la deuxième plage à comparer.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne **`true`** quand il est satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
-**true** si la première plage est inférieure à la deuxième plage d’un point de vue lexicographique ; sinon **false**.
+**`true`** Si la première plage est vue lexicographique inférieure à la deuxième plage ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -3540,7 +3540,7 @@ Une comparaison lexicographique entre séquences les compare élément par élé
 
 - Aucune inégalité n’est trouvée, mais une séquence a plus d’éléments que l’autre et la séquence la plus courte est considérée comme inférieure à la séquence la plus longue.
 
-- Aucune inégalité n’est trouvée et les séquences ont le même nombre d’éléments. par conséquent, les séquences sont égales et le résultat de la comparaison est **false**.
+- Aucune inégalité n’est trouvée et les séquences ont le même nombre d’éléments. par conséquent, les séquences sont égales et le résultat de la comparaison est **`false`** .
 
 ### <a name="example"></a>Exemple
 
@@ -3668,7 +3668,7 @@ Itérateur vers l'avant ciblant la position juste après le dernier élément de
 Valeur dont la première position ou la première position possible est recherchée dans la plage ordonnée.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -3802,7 +3802,7 @@ Itérateur d’accès aléatoire ciblant la position du premier élément de la 
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à convertir en tas.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="remarks"></a>Notes
 
@@ -3901,7 +3901,7 @@ Le plus grand des deux objets, sauf si aucun n'est plus grand que l'autre ; dan
 
 ### <a name="remarks"></a>Notes
 
-L'algorithme `max` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui opère sur une plage d’éléments, utilisez plutôt [max_element](algorithm-functions.md#max_element). Visual Studio 2017 active **constexpr** sur les surcharges qui prennent un initializer_list.
+L'algorithme `max` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui opère sur une plage d’éléments, utilisez plutôt [max_element](algorithm-functions.md#max_element). Visual Studio 2017 active **`constexpr`** sur les surcharges qui prennent un initializer_list.
 
 ### <a name="example"></a>Exemple
 
@@ -4113,7 +4113,7 @@ Itérateur vers l’avant ciblant la position du premier élément de la plage d
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher l’élément le plus grand.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner la **valeur true** lorsque le premier élément est inférieur au deuxième et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **`true`** lorsque le premier élément est inférieur au deuxième élément et dans le **`false`** cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -4288,7 +4288,7 @@ Itérateur d’entrée ciblant la position située de suite après le dernier é
 Itérateur de sortie ciblant la position du premier élément de la plage de destination quand les deux plages sources doivent être regroupées au sein d’une même plage triée.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **`true`** lorsque le premier élément est inférieur au deuxième élément, et dans le **`false`** cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -4677,7 +4677,7 @@ Itérateur vers l’avant ciblant la position du premier élément de la plage d
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher l’élément le plus petit.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **`true`** lorsque le premier élément est inférieur au deuxième élément, et dans le **`false`** cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -4841,7 +4841,7 @@ Itérateur vers l’avant qui indique le début d’une plage.
 Itérateur vers l’avant qui indique la fin d’une plage.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner la **valeur true** lorsque le premier est inférieur au second, et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **`true`** lorsque le premier est inférieur au second, et dans le **`false`** cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -5003,7 +5003,7 @@ Itérateur d'entrée qui traite la position du premier élément de la deuxième
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la deuxième plage à tester.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui compare les éléments actuels dans chaque plage et détermine s’ils sont équivalents. Retourne **true** si la condition est satisfaite et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui compare les éléments actuels dans chaque plage et détermine s’ils sont équivalents. Elle retourne **`true`** quand elle est satisfaite et **`false`** quand elle n’est pas satisfaite.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -5206,11 +5206,11 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage �
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à permuter.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
-**true** si la permutation lexicographique suivante existe et a remplacé l’ordre d’origine de la plage ; sinon **false**, auquel cas l’ordre est transformé selon la plus petite permutation lexicographique.
+**`true`** Si la permutation suivante vue lexicographique existe et a remplacé le classement d’origine de la plage ; **`false`** dans le cas contraire, le classement est transformé en la permutation la plus petite vue lexicographique.
 
 ### <a name="remarks"></a>Notes
 
@@ -5408,7 +5408,7 @@ Itérateur d’accès aléatoire ciblant la position de l’élément à ordonne
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à partitionner.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat de comparaison prend deux arguments et retourne **`true`** quand il est satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="remarks"></a>Notes
 
@@ -5488,7 +5488,7 @@ int main() {
 
 ## <a name="none_of"></a><a name="none_of"></a>none_of
 
-Retourne la **valeur true** lorsqu’une condition n’est jamais présente parmi les éléments de la plage donnée.
+Retourne **`true`** lorsqu’une condition n’est jamais présente parmi les éléments d’une plage donnée.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -5517,15 +5517,15 @@ Itérateur d’entrée qui indique le début de la recherche d’une condition d
 Itérateur d’entrée qui indique la fin d’une plage d’éléments.
 
 *prédit*\
-Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
+Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition. Un prédicat unaire accepte un seul argument et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
-Retourne la **valeur true** si la condition n’est pas détectée au moins une fois dans la plage indiquée, et **false** si la condition est détectée.
+Retourne **`true`** si la condition n’est pas détectée au moins une fois dans la plage indiquée et **`false`** si la condition est détectée.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne **true** uniquement si, pour certains `N` de la plage `[0, last - first)` , le prédicat `pred(*(first + N))` est toujours **false**.
+La fonction de modèle retourne **`true`** uniquement si, pour une partie `N` de la plage `[0, last - first)` , le prédicat `pred(*(first + N))` est toujours **`false`** .
 
 ## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
 
@@ -5576,7 +5576,7 @@ Itérateur d’accès aléatoire ciblant la position juste après le dernier él
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier partiellement.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="remarks"></a>Notes
 
@@ -5714,7 +5714,7 @@ Itérateur d’accès aléatoire ciblant la position du premier élément de la 
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage de destination triée.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -5833,7 +5833,7 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage �
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à partitionner.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire accepte un seul argument et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -5890,7 +5890,7 @@ int main()
 
 ## <a name="partition_copy"></a><a name="partition_copy"></a>partition_copy
 
-Copie les éléments pour lesquels une condition a la **valeur true** pour une destination, et pour laquelle la condition est **false** à une autre. Les éléments doivent provenir d'une plage spécifiée.
+Copie les éléments pour lesquels une condition est **`true`** vers une destination et pour laquelle la condition est **`false`** à une autre. Les éléments doivent provenir d'une plage spécifiée.
 
 ```cpp
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class UnaryPredicate>
@@ -5929,7 +5929,7 @@ Itérateur de sortie utilisé pour copier des éléments qui retournent la valeu
 Itérateur de sortie utilisé pour copier des éléments qui retournent la valeur false pour une condition testée à l’aide de *prédit*.
 
 *prédit*\
-Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à vérifier. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
+Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à vérifier. Un prédicat unaire accepte un seul argument et retourne **`true`** ou **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -5956,7 +5956,7 @@ ForwardIterator partition_point(
 `ForwardIterator` qui indique la fin d’une plage.
 
 *prédit*\
-Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
+Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **`true`** ou **`false`** .
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -5964,7 +5964,7 @@ Retourne un `ForwardIterator` qui fait référence au premier élément qui ne r
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle recherche le premier itérateur `it` dans `[first, last)` pour lequel `pred(*it)` a la **valeur false**. La séquence doit être classée par *prédit*.
+La fonction de modèle recherche le premier itérateur `it` dans `[first, last)` pour lequel `pred(*it)` est **`false`** . La séquence doit être classée par *prédit*.
 
 ## <a name="pop_heap"></a><a name="pop_heap"></a>pop_heap
 
@@ -5992,7 +5992,7 @@ Itérateur d’accès aléatoire ciblant la position du premier élément du tas
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément du tas.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="remarks"></a>Notes
 
@@ -6101,11 +6101,11 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage �
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à permuter.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
-**true** si le vue lexicographique de permutation précédent existe et a remplacé le classement d’origine de la plage ; Sinon, **false**, auquel cas le classement est transformé en permutation vue lexicographique la plus grande.
+**`true`** Si le vue lexicographique de permutation précédent existe et a remplacé le classement d’origine de la plage ; **`false`** dans le cas contraire, le classement est transformé en la permutation vue lexicographique la plus grande.
 
 ### <a name="remarks"></a>Notes
 
@@ -6276,7 +6276,7 @@ Itérateur d’accès aléatoire ciblant la position du premier élément du tas
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à convertir en tas.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="remarks"></a>Notes
 
@@ -7643,7 +7643,7 @@ Itérateur vers l'avant ciblant la position du premier élément de la plage dan
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la correspondance.
 
 *prédit*\
-Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 *recherche*\
 Recherche qui encapsule le modèle à rechercher et l’algorithme de recherche à utiliser. Pour plus d’informations sur les recherches, consultez [default_searcher](default-searcher-class.md)classe, classe [boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)et [classe boyer_moore_searcher](boyer-moore-searcher-class.md).
@@ -7815,7 +7815,7 @@ Taille de la sous-séquence recherchée.
 Valeur des éléments de la séquence recherchée.
 
 *prédit*\
-Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -7975,7 +7975,7 @@ Itérateur d’entrée ciblant la position située de suite après le dernier é
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant la différence des deux plages sources.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **`true`** lorsque le premier élément est inférieur au deuxième élément et dans le **`false`** cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -8177,7 +8177,7 @@ Itérateur d’entrée ciblant la position située de suite après le dernier é
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant l’intersection des deux plages sources.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **`true`** lorsque le premier élément est inférieur au deuxième élément et dans le **`false`** cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -8375,7 +8375,7 @@ Itérateur d’entrée ciblant la position située de suite après le dernier é
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant la différence symétrique des deux plages sources.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **`true`** lorsque le premier élément est inférieur au deuxième élément et dans le **`false`** cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -8577,7 +8577,7 @@ Itérateur d’entrée ciblant la position située de suite après le dernier é
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant l’union des deux plages sources.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **`true`** lorsque le premier élément est inférieur au deuxième élément et dans le **`false`** cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -8785,7 +8785,7 @@ Itérateur d’accès aléatoire ciblant la position du premier élément de la 
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Ce prédicat binaire accepte deux arguments et retourne **true** si les deux arguments sont dans l’ordre et **false** dans le cas contraire. Cette fonction de comparaison doit imposer un ordre faible strict sur les paires d’éléments de la séquence. Pour plus d’informations, consultez [Algorithmes](algorithms.md).
+Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Ce prédicat binaire accepte deux arguments et retourne **`true`** si les deux arguments sont dans l’ordre et dans le **`false`** cas contraire. Cette fonction de comparaison doit imposer un ordre faible strict sur les paires d’éléments de la séquence. Pour plus d’informations, consultez [Algorithmes](algorithms.md).
 
 ### <a name="remarks"></a>Notes
 
@@ -8889,7 +8889,7 @@ Itérateur d’accès aléatoire ciblant la position du premier élément du tas
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément du tas cible.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne **`true`** quand il est satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="remarks"></a>Notes
 
@@ -8994,7 +8994,7 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage �
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à partitionner.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté.
+Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire prend un seul argument et retourne **`true`** s’il est satisfait, ou **`false`** s’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -9095,7 +9095,7 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage �
 Itérateur bidirectionnel ciblant la position située juste après le dernier élément de la plage à trier.
 
 *prédit*\
-Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="remarks"></a>Notes
 
@@ -9557,7 +9557,7 @@ Itérateur vers l'avant ciblant la position du premier élément de la plage dan
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher des doublons à supprimer.
 
 *prédit*\
-Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -9713,7 +9713,7 @@ Itérateur vers l’avant ciblant la position située de suite après le dernier
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination recevant la copie avec suppression des doublons consécutifs.
 
 *prédit*\
-Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
+Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire prend deux arguments et retourne lorsqu’il est **`true`** satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -9832,7 +9832,7 @@ Position juste après le dernier élément de la plage dans laquelle effectuer l
 Valeur dans la plage ordonnée qui doit être dépassée par la valeur de l’élément ciblé par l’itérateur retourné.
 
 *prédit*\
-Objet de fonction de prédicat de comparaison défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
+Objet de fonction de prédicat de comparaison défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne **`true`** quand il est satisfait et **`false`** lorsqu’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
 

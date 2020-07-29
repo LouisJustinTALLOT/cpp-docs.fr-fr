@@ -9,24 +9,24 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-ms.openlocfilehash: 2353f0861f0f249416d0bb84a7a951b1cb6d64bc
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 8a771b8bfc067966c3c054700538ebf180a5eb23
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857331"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87233611"
 ---
 # <a name="references-c"></a>Références (C++)
 
-Une référence, comme un pointeur, stocke l'adresse d'un objet situé ailleurs dans la mémoire. Contrairement à un pointeur, une référence après son initialisation ne peut pas être définie pour faire référence à un autre objet ni prendre la valeur null. Il existe deux genres de références : les références lvalue qui font référence à une variable nommée et les références rvalue qui font référence à un [objet temporaire](../cpp/temporary-objects.md). L’opérateur & désigne une référence lvalue et l’opérateur & & signifie soit une référence rvalue, soit une référence universelle (rvalue ou lvalue) en fonction du contexte.
+Une référence, comme un pointeur, stocke l'adresse d'un objet situé ailleurs dans la mémoire. Contrairement à un pointeur, une référence après son initialisation ne peut pas être définie pour faire référence à un autre objet ni prendre la valeur null. Il existe deux genres de références : les références lvalue qui font référence à une variable nommée et les références rvalue qui font référence à un [objet temporaire](../cpp/temporary-objects.md). L’opérateur & désigne une référence lvalue et l’opérateur && signifie soit une référence rvalue, soit une référence universelle (rvalue ou lvalue) en fonction du contexte.
 
 Les références peuvent être déclarées à l'aide de la syntaxe suivante :
 
-> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[ **=** *expression*] **;**
+> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *type-Specifiers* \[ *MS-modifier*] expression *déclarateur* \[ **=** *expression*]**;**
 
 Tout déclarateur valide spécifiant une référence peut être utilisé. La syntaxe simplifiée suivante s'applique, sauf si la référence est une référence à un type de fonction ou à un type tableau :
 
-> \[*Storage-Class-Specifiers*] \[*CV-Qualifiers*] *type-specifiers* \[ **&** ou **&&** ] \[*CV-Qualifiers*] *identificateur* **\[=** *expression*] **;**
+> \[*Storage-Class-Specifiers*] \[ *CV-Qualifiers*] *type-Specifiers* \[ **&** ou **&&** ] « \[ *CV-Qualifiers*] expression d' *identificateur* \[ **=** *expression*]**;**
 
 Les références sont déclarées à l'aide de la séquence suivante :
 
@@ -34,7 +34,7 @@ Les références sont déclarées à l'aide de la séquence suivante :
 
    - Spécificateur de classe de stockage facultatif.
 
-   - Qualificateurs **const** et/ou **volatile** facultatifs.
+   - **`const`** Qualificateurs facultatifs et/ou **`volatile`** .
 
    - Spécificateur de type : nom d'un type.
 
@@ -42,11 +42,11 @@ Les références sont déclarées à l'aide de la séquence suivante :
 
    - Modificateur spécifique à Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques à Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-   - Opérateur de **&** ou opérateur de **&&** .
+   - **&** Opérateur ou opérateur **&&** .
 
-   - Qualificateurs **const** et/ou **volatile** facultatifs.
+   - **`const`** Qualificateurs facultatifs et/ou **`volatile`** .
 
-   - Identificateur.
+   - L'identificateur.
 
 1. Initialiseur facultatif.
 
@@ -102,5 +102,5 @@ int main() {
 ## <a name="see-also"></a>Voir aussi
 
 [Arguments de fonction de type référence](../cpp/reference-type-function-arguments.md)<br/>
-[Retours de fonction de type référence](../cpp/reference-type-function-returns.md)<br/>
+[Retourne une fonction de type référence](../cpp/reference-type-function-returns.md)<br/>
 [Références aux pointeurs](../cpp/references-to-pointers.md)

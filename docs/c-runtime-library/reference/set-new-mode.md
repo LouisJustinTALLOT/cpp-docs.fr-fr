@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: f3635d462d2c7438ce985d74ff347120c02c82e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aa21854f6a8c4b58a510b16e824449a53b91f329
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920103"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218531"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -55,9 +55,9 @@ Nouveau mode de gestionnaire pour **malloc**; la valeur valide est 0 ou 1.
 
 Retourne le mode de gestionnaire précédent défini pour **malloc**. Une valeur de retour de 1 indique que, en cas d’échec d’allocation de mémoire, **malloc** a précédemment appelé la nouvelle routine de gestionnaire ; une valeur de retour de 0 indique qu’elle ne l’a pas fait. Si l’argument *newhandlermode* n’est pas égal à 0 ou 1, retourne-1.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction C++ **_set_new_mode** définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l’opérateur **New** lorsqu’il échoue pour la même raison. Pour plus d’informations, voir les opérateurs [new](../../cpp/new-operator-cpp.md) et [delete](../../cpp/delete-operator-cpp.md) dans la *Référence du langage C++*. Pour substituer la valeur par défaut, appelez :
+La fonction C++ **_set_new_mode** définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l' **`new`** opérateur quand il échoue pour la même raison. Pour plus d’informations, voir les opérateurs [new](../../cpp/new-operator-cpp.md) et [delete](../../cpp/delete-operator-cpp.md) dans la *Référence du langage C++*. Pour substituer la valeur par défaut, appelez :
 
 ```cpp
 _set_new_mode(1);
@@ -65,7 +65,7 @@ _set_new_mode(1);
 
 tôt dans votre programme ou lien avec NewMode. obj (consultez [options de lien](../../c-runtime-library/link-options.md)).
 
-Cette fonction valide son paramètre. Si *newhandlermode* a une valeur autre que 0 ou 1, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, <strong>_set_new_mode</strong> retourne-1 et affecte `EINVAL`à **errno** la valeur.
+Cette fonction valide son paramètre. Si *newhandlermode* a une valeur autre que 0 ou 1, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, <strong>_set_new_mode</strong> retourne-1 et affecte à **errno** la valeur `EINVAL` .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
