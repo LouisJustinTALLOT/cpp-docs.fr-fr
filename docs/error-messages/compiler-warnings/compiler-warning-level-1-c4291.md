@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: c1972236e30be4e6ca738b606b00398f5c7860e0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e45856702eef7f24595d10b81f39047d8f9a08b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754858"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221001"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>Avertissement du compilateur (niveau 1) C4291
 
-'déclaration' : aucun opérateur correspondant supprimé trouvé; mémoire ne sera pas libérée si l’initialisation jette une exception
+'declaration' : aucune suppression d’opérateur correspondante trouvée ; la mémoire ne sera pas libérée si l’initialisation lève une exception
 
-Un [nouveau](../../cpp/new-operator-cpp.md) placement est utilisé pour lequel il n’y a pas [de](../../cpp/delete-operator-cpp.md)suppression de placement .
+Un [nouvel](../../cpp/new-operator-cpp.md) emplacement est utilisé pour lequel il n’y a pas de [suppression](../../cpp/delete-operator-cpp.md)de placement.
 
-Lorsque la mémoire est allouée pour un objet avec opérateur **nouveau,** le constructeur de l’objet est appelé. Si le constructeur lance une exception, toute mémoire qui a été allouée à l’objet doit être deallocated. Cela ne peut avoir lieu que si un opérateur **supprime** la fonction qui correspond à l’opérateur **nouveau**.
+Lorsque la mémoire est allouée pour un objet avec **`new`** l’opérateur, le constructeur de l’objet est appelé. Si le constructeur lève une exception, toute mémoire qui a été allouée pour l’objet doit être désallouée. Cela ne peut pas être effectué à moins qu’une fonction d’opérateur **`delete`** qui corresponde à l’opérateur n’existe **`new`** .
 
-Si vous utilisez l’opérateur **nouveau** sans aucun argument supplémentaire et compilez avec [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHs](../../build/reference/eh-exception-handling-model.md), ou /EHa options pour activer la manipulation d’exception, le compilateur générera du code pour appeler l’opérateur **supprimer** si le constructeur jette une exception.
+Si vous utilisez l’opérateur **`new`** sans arguments supplémentaires et que vous compilez avec les options [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHS](../../build/reference/eh-exception-handling-model.md)ou/EHa pour activer la gestion des exceptions, le compilateur génère du code pour appeler **`delete`** l’opérateur si le constructeur lève une exception.
 
-Si vous utilisez le formulaire de placement du **nouvel** opérateur (le formulaire avec des arguments en plus de la taille de l’allocation) et que le constructeur de l’objet fait une exception, le compilateur continuera de générer du code pour appeler l’opérateur **supprimer**; mais il ne le fera que **delete** si une forme de suppression d’opérateur existe correspondant à la forme de placement de l’opérateur **nouveau** qui a alloué la mémoire. Par exemple :
+Si vous utilisez la forme de placement de l' **`new`** opérateur (le formulaire avec les arguments en plus de la taille de l’allocation) et que le constructeur de l’objet lève une exception, le compilateur générera toujours du code pour appeler l’opérateur ; Toutefois, il ne le fera **`delete`** que si une forme de placement d’opérateur **`delete`** correspond à la forme de positionnement de l’opérateur **`new`** qui a alloué la mémoire. Par exemple :
 
 ```cpp
 // C4291.cpp
@@ -74,7 +74,7 @@ int main(void)
 }
 ```
 
-L’exemple ci-dessus génère l’avertissement C4291 parce qu’aucune forme de placement de **suppression** de l’opérateur n’a été définie qui correspond à la forme de placement de l’opérateur **nouveau**. Pour résoudre le problème, insérer le code suivant au-dessus **de la principale**. Notez que tous les paramètres de fonction de **suppression** de l’opérateur surchargé correspondent à ceux de l’opérateur surchargé **nouveau,** à l’exception du premier paramètre.
+L’exemple ci-dessus génère l’avertissement C4291, car aucune forme de placement de **`delete`** l’opérateur n’a été définie et correspond à la forme de placement de l’opérateur **`new`** . Pour résoudre le problème, insérez le code suivant au-dessus de **main**. Notez que tous les paramètres de fonction d’opérateur surchargés **`delete`** correspondent à ceux de l’opérateur surchargé **`new`** , à l’exception du premier paramètre.
 
 ```cpp
 void operator delete(void* pMem, char* pszFilename, int nLine)

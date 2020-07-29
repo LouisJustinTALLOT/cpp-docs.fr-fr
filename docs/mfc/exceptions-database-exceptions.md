@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403723"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217959"
 ---
 # <a name="exceptions-database-exceptions"></a>Exceptions : exceptions de base de données
 
@@ -54,11 +54,11 @@ Des informations supplémentaires sur les erreurs DAO, le type d’objet d’err
 
 ## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>Exemple de gestion des exceptions de base de données
 
-L’exemple suivant tente de construire un objet dérivé de [CRecordset](reference/crecordset-class.md)sur le tas à l’aide de l’opérateur **New** , puis d’ouvrir le jeu d’enregistrements (pour une source de données ODBC). Pour obtenir un exemple similaire pour les classes DAO, consultez « exemple d’exception DAO » ci-dessous.
+L’exemple suivant tente de construire un objet dérivé de [CRecordset](reference/crecordset-class.md)sur le tas avec l' **`new`** opérateur, puis d’ouvrir le jeu d’enregistrements (pour une source de données ODBC). Pour obtenir un exemple similaire pour les classes DAO, consultez « exemple d’exception DAO » ci-dessous.
 
 ### <a name="odbc-exception-example"></a>Exemple d’exception ODBC
 
-La fonction membre [Open](reference/crecordset-class.md#open) peut lever une exception (de type [CDBException](reference/cdbexception-class.md) pour les classes ODBC). ce code entre en parenthèses `Open` avec un bloc **try** . Le bloc **catch** suivant intercepte un `CDBException` . Vous pouvez examiner l’objet exception lui-même, appelé `e` , mais dans ce cas, il suffit de savoir que la tentative de création d’un jeu d’enregistrements a échoué. Le bloc **catch** affiche une boîte de message et nettoie en supprimant l’objet Recordset.
+La fonction membre [Open](reference/crecordset-class.md#open) peut lever une exception (de type [CDBException](reference/cdbexception-class.md) pour les classes ODBC), de sorte que ce code entre l' `Open` appel avec un **`try`** bloc. Le **`catch`** bloc suivant intercepte un `CDBException` . Vous pouvez examiner l’objet exception lui-même, appelé `e` , mais dans ce cas, il suffit de savoir que la tentative de création d’un jeu d’enregistrements a échoué. Le **`catch`** bloc affiche une boîte de message et nettoie en supprimant l’objet Recordset.
 
 [!code-cpp[NVC_MFCDatabase#36](codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 

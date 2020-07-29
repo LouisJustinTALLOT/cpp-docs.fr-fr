@@ -31,14 +31,14 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 59346dfded63aec315304f76c9bed753a4db1224
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682437"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217465"
 ---
-# <a name="sharedptr-class"></a>shared_ptr, classe
+# <a name="shared_ptr-class"></a>shared_ptr, classe
 
 Encapsule un pointeur intelligent contenant des références autour d'un objet alloué dynamiquement.
 
@@ -107,21 +107,21 @@ Certaines fonctions acceptent une liste d'arguments qui définit les propriété
 
 aucun argument : l'objet résultant est un objet `shared_ptr` vide ou un objet `weak_ptr` vide.
 
-`ptr` : un pointeur de type `Other*` vers la ressource à gérer. `T` doit être un type complet. Si la fonction échoue (car le bloc de contrôle ne peut pas être alloué), elle évalue l’expression `delete ptr`.
+`ptr` : un pointeur de type `Other*` vers la ressource à gérer. `T` doit être un type complet. Si la fonction échoue (car le bloc de contrôle ne peut pas être alloué), elle évalue l’expression `delete ptr` .
 
-`ptr, deleter` : un pointeur de type `Other*` vers la ressource à gérer et un suppresseur pour cette ressource. Si la fonction échoue (car le bloc de contrôle ne peut pas être alloué) `deleter(ptr)`, elle appelle, qui doit être bien défini.
+`ptr, deleter` : un pointeur de type `Other*` vers la ressource à gérer et un suppresseur pour cette ressource. Si la fonction échoue (car le bloc de contrôle ne peut pas être alloué), elle appelle `deleter(ptr)` , qui doit être bien défini.
 
-`ptr, deleter, alloc` : un pointeur de type `Other*` vers la ressource à gérer, un suppresseur pour cette ressource et un allocateur pour gérer tout stockage qui doit être alloué et libéré. Si la fonction échoue (car le bloc de contrôle ne peut pas être alloué) `deleter(ptr)`, elle appelle, qui doit être bien défini.
+`ptr, deleter, alloc` : un pointeur de type `Other*` vers la ressource à gérer, un suppresseur pour cette ressource et un allocateur pour gérer tout stockage qui doit être alloué et libéré. Si la fonction échoue (car le bloc de contrôle ne peut pas être alloué), elle appelle `deleter(ptr)` , qui doit être bien défini.
 
 `sp` : un objet `shared_ptr<Other>` propriétaire de la ressource à gérer.
 
 `wp` : un objet `weak_ptr<Other>` qui pointe vers la ressource à gérer.
 
-`ap` : un objet `auto_ptr<Other>` qui contient un pointeur vers la ressource à gérer. Si la fonction est réussie, elle appelle `ap.release()`; sinon, elle `ap` reste inchangée.
+`ap` : un objet `auto_ptr<Other>` qui contient un pointeur vers la ressource à gérer. Si la fonction est réussie, elle appelle `ap.release()` ; sinon, elle reste `ap` inchangée.
 
 Dans tous les cas, le type de pointeur `Other*` doit être convertible en `T*`.
 
-## <a name="thread-safety"></a>Sécurité des threads
+## <a name="thread-safety"></a>Cohérence de thread
 
 Plusieurs threads peuvent lire et écrire différents objets `shared_ptr` simultanément, même quand les objets sont des copies qui partagent la propriété.
 
@@ -132,7 +132,7 @@ Plusieurs threads peuvent lire et écrire différents objets `shared_ptr` simult
 | **Constructeurs** | |
 |[shared_ptr](#shared_ptr)|Construit un objet `shared_ptr`.|
 |[~ shared_ptr](#dtorshared_ptr)|Détruit un `shared_ptr`.|
-| **Typedef** | |
+| **Typedefs** | |
 |[element_type](#element_type)|Type d’un élément.|
 |[weak_type](#weak_type)|Type d’un pointeur faible vers un élément.|
 | **Fonctions membres** | |
@@ -143,12 +143,12 @@ Plusieurs threads peuvent lire et écrire différents objets `shared_ptr` simult
 |[unique](#unique)|Teste si la ressource détenue est unique.|
 |[use_count](#use_count)|Compte le nombre de propriétaires de ressources.|
 | **Opérateurs** | |
-|[operator bool](#op_bool)|Teste si une ressource détenue existe.|
-|[operator*](#op_star)|Obtient la valeur désignée.|
-|[operator=](#op_eq)|Remplace la ressource détenue.|
+|[bool, opérateur](#op_bool)|Teste si une ressource détenue existe.|
+|[and](#op_star)|Obtient la valeur désignée.|
+|[opérateur =](#op_eq)|Remplace la ressource détenue.|
 |[and&gt;](#op_arrow)|Obtient un pointeur vers la valeur désignée.|
 
-## <a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a>element_type
 
 Type d’un élément.
 
@@ -159,7 +159,7 @@ using element_type = remove_extent_t<T>; // C++17
 
 ### <a name="remarks"></a>Notes
 
-Le `element_type` type est un synonyme du paramètre `T`de modèle.
+Le `element_type` type est un synonyme du paramètre de modèle `T` .
 
 ### <a name="example"></a>Exemple
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a>Télécharger
+## <a name="get"></a><a name="get"></a>Télécharger
 
 Obtient l'adresse de la ressource détenue.
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>bool, opérateur
+## <a name="operator-bool"></a><a name="op_bool"></a>bool, opérateur
 
 Teste si une ressource détenue existe.
 
@@ -232,9 +232,9 @@ explicit operator bool() const noexcept;
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur retourne la valeur **true** lorsque `get() != nullptr`, sinon **false**.
+L’opérateur retourne la valeur **`true`** When `get() != nullptr` , sinon **`false`** .
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__shared_ptr_operator_bool.cpp
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="op_star"></a>and
+## <a name="operator"></a><a name="op_star"></a>and
 
 Obtient la valeur désignée.
 
@@ -273,7 +273,7 @@ T& operator*() const noexcept;
 
 L’opérateur d’indirection retourne `*get()`. Par conséquent, le pointeur stocké ne doit pas être Null.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__shared_ptr_operator_st.cpp
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a>opérateur =
 
 Remplace la ressource détenue.
 
@@ -336,9 +336,9 @@ Type de la suppression de l’objet détenu, stocké pour une suppression ultér
 
 ### <a name="remarks"></a>Notes
 
-Tous les opérateurs décrémentent le nombre de références pour la ressource actuellement détenue par `*this` et assignent la propriété de la ressource nommée par la séquence d’opérandes à `*this`. Si le nombre de références atteint zéro, la ressource est libérée. Si un opérateur échoue, il reste `*this` inchangé.
+Les opérateurs décrémentent tous le décompte de références pour la ressource actuellement détenue par **`*this`** et assignent la propriété de la ressource nommée par la séquence d’opérande à **`*this`** . Si le nombre de références atteint zéro, la ressource est libérée. Si un opérateur échoue, il reste **`*this`** inchangé.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__shared_ptr_operator_as.cpp
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="op_arrow"></a>> Operator
+## <a name="operator-"></a><a name="op_arrow"></a>> Operator
 
 Obtient un pointeur vers la valeur désignée.
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a>owner_before
 
 Retourne true si ce `shared_ptr` est classé avant le pointeur fourni (ou est inférieur à celui-ci).
 
@@ -419,13 +419,13 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 ### <a name="parameters"></a>Paramètres
 
 *effectués*\
-Une référence lvalue à un `shared_ptr` ou un. `weak_ptr`
+Une référence lvalue à un `shared_ptr` ou un `weak_ptr` .
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre de modèle retourne la `*this` valeur true si `ptr`est trié avant.
+La fonction membre de modèle retourne la valeur true si **`*this`** est trié avant `ptr` .
 
-## <a name="reset"></a>initialisation
+## <a name="reset"></a><a name="reset"></a>initialisation
 
 Remplacer la ressource détenue.
 
@@ -469,7 +469,7 @@ Allocateur à copier.
 
 ### <a name="remarks"></a>Notes
 
-Tous les opérateurs décrémentent le nombre de références pour la ressource actuellement détenue par `*this` et assignent la propriété de la ressource nommée par la séquence d’opérandes à `*this`. Si le nombre de références atteint zéro, la ressource est libérée. Si un opérateur échoue, il reste `*this` inchangé.
+Les opérateurs décrémentent tous le décompte de références pour la ressource actuellement détenue par **`*this`** et assignent la propriété de la ressource nommée par la séquence d’opérande à **`*this`** . Si le nombre de références atteint zéro, la ressource est libérée. Si un opérateur échoue, il reste **`*this`** inchangé.
 
 ### <a name="example"></a>Exemple
 
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
 
 Construit un objet `shared_ptr`.
 
@@ -621,9 +621,9 @@ Pointeur automatique à copier.
 
 ### <a name="remarks"></a>Notes
 
-Chaque constructeur construit un objet qui possède la ressource nommée par la séquence d’opérandes. Le constructeur `shared_ptr(const weak_ptr<Other>& wp)` lève un objet exception de type [bad_weak_ptr](bad-weak-ptr-class.md) si `wp.expired()`.
+Chaque constructeur construit un objet qui possède la ressource nommée par la séquence d’opérandes. Le constructeur `shared_ptr(const weak_ptr<Other>& wp)` lève un objet exception de type [bad_weak_ptr](bad-weak-ptr-class.md) si `wp.expired()` .
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__shared_ptr_construct.cpp
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
 
 Détruit un `shared_ptr`.
 
@@ -685,7 +685,7 @@ Détruit un `shared_ptr`.
 
 ### <a name="remarks"></a>Notes
 
-Le destructeur décrémente le nombre de références pour la ressource actuellement détenue par `*this`. Si le nombre de références atteint zéro, la ressource est libérée.
+Le destructeur décrémente le nombre de références pour la ressource actuellement détenue par **`*this`** . Si le nombre de références atteint zéro, la ressource est libérée.
 
 ### <a name="example"></a>Exemple
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a>échange
 
 Échange deux objets `shared_ptr`.
 
@@ -737,7 +737,7 @@ Pointeur partagé à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre laisse la ressource détenue à `*this` l’origine par par la suite par le *SP*, et la ressource détenue `*this`à l’origine par le *SP* appartient par la suite. La fonction ne change pas les décomptes de références pour les deux ressources, et ne lève aucune exception.
+La fonction membre laisse la ressource détenue à l’origine par par la **`*this`** suite par le *SP*, et la ressource détenue à l’origine par le *SP* appartient par la suite **`*this`** . La fonction ne change pas les décomptes de références pour les deux ressources, et ne lève aucune exception.
 
 ### <a name="example"></a>Exemple
 
@@ -783,7 +783,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a>unique
+## <a name="unique"></a><a name="unique"></a>unique
 
 Teste si la ressource détenue est unique. Cette fonction a été dépréciée en C++ 17 et supprimée en C++ 20.
 
@@ -793,7 +793,7 @@ bool unique() const noexcept;
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la **valeur true** si `shared_ptr` aucun autre objet ne possède la ressource appartenant `*this`à, sinon **false**.
+La fonction membre retourne **`true`** si aucun autre `shared_ptr` objet ne possède la ressource appartenant à **`*this`** , sinon **`false`** .
 
 ### <a name="example"></a>Exemple
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a>use_count
 
 Compte le nombre de propriétaires de ressources.
 
@@ -832,9 +832,9 @@ long use_count() const noexcept;
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne le nombre d’objets `shared_ptr` qui détiennent la ressource appartenant à `*this`.
+La fonction membre retourne le nombre d' `shared_ptr` objets qui détiennent la ressource détenue par **`*this`** .
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__shared_ptr_use_count.cpp
@@ -861,7 +861,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a>weak_type
 
 Type d’un pointeur faible vers un élément.
 
@@ -875,7 +875,7 @@ La `weak_type` définition a été ajoutée dans c++ 17.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](cpp-standard-library-header-files.md)\
+[Référence des fichiers d’en-tête](cpp-standard-library-header-files.md)\
 [\<memory>](memory.md)\
 [unique_ptr](unique-ptr-class.md)\
-[weak_ptr, classe](weak-ptr-class.md)
+[weak_ptr (classe)](weak-ptr-class.md)

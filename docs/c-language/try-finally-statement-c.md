@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b800daa7689cef769ce3a3b070c957f18e8794c9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349612"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213708"
 ---
 # <a name="try-finally-statement-c"></a>try-finally, instruction (C)
 
@@ -22,9 +22,9 @@ L'instruction `try-finally` est une extension Microsoft du langage C qui permet 
 
 *try-finally-statement*: **__try**  *compound-statement*
 
-**__finally**  *compound-statement*
+**`__finally`**  *Compound-Statement*
 
-L'instruction composée après la clause `__try` est la section protégée. L'instruction composée après la clause `__finally` est le gestionnaire de terminaisons. Le gestionnaire spécifie un jeu d'actions qui s'exécutent lorsque la section protégée est fermée, que la section protégée soit fermée par une exception (fin anormale) ou par un passage standard (fin normale).
+L'instruction composée après la clause `__try` est la section protégée. L’instruction composée après la **`__finally`** clause est le gestionnaire de terminaisons. Le gestionnaire spécifie un jeu d'actions qui s'exécutent lorsque la section protégée est fermée, que la section protégée soit fermée par une exception (fin anormale) ou par un passage standard (fin normale).
 
 Le contrôle atteint une instruction `__try` par exécution séquentielle simple (passage). Lorsque le contrôle pénètre dans l'instruction `__try`, son gestionnaire associé devient actif. L'exécution se déroule comme suit :
 
@@ -32,11 +32,11 @@ Le contrôle atteint une instruction `__try` par exécution séquentielle simple
 
 1. Le gestionnaire de terminaisons est appelé.
 
-1. Lorsque le gestionnaire de terminaisons se termine, l'exécution reprend après l'instruction `__finally`. Quelle que soit la façon dont la section protégée se termine (par exemple, via une instruction `goto` hors du corps protégé ou via une instruction `return`), le gestionnaire de terminaisons est exécuté avant que le flux de contrôle ne sorte de la section protégée.
+1. Une fois le gestionnaire de terminaisons terminé, l’exécution se poursuit après l' **`__finally`** instruction. Quelle que soit la façon dont la section protégée se termine (par exemple, via une **`goto`** instruction hors du corps protégé ou via une **`return`** instruction), le gestionnaire de terminaisons est exécuté avant que le workflow de contrôle ne quitte la section protégée.
 
-Le mot clé `__leave` est valide dans un bloc d'instructions `try-finally`. L'effet exercé par `__leave` est de sauter à la fin du bloc `try-finally`. Le gestionnaire de terminaisons est immédiatement exécuté. Bien qu'une instruction `goto` puisse être utilisée pour obtenir le même résultat, une instruction `goto` provoque le déroulement de pile. L'instruction `__leave` est plus efficace car elle n'implique pas le déroulement de pile.
+Le ** `__leave** keyword is valid within a ` ` statement block. The effect of **` __leave try-finally** est d’accéder à la fin du `try-finally` bloc. Le gestionnaire de terminaisons est immédiatement exécuté. Bien qu’une **`goto`** instruction puisse être utilisée pour obtenir le même résultat, une **`goto`** instruction provoque le déroulement de la pile. L’instruction **' __leave** est plus efficace car elle n’implique pas le déroulement de la pile.
 
-Sortir d'une instruction `try-finally` à l'aide d'une instruction `return` ou d'une fonction runtime `longjmp` est considéré comme une fin anormale. Il est non conforme de sauter dans une instruction `__try`, mais conforme d'en sortir d'une. Toutes les instructions `__finally` actives entre le point de départ et la destination doivent être exécutées. Cela s'appelle un « déroulement local ».
+Le fait de quitter une `try-finally` instruction à l’aide d’une **`return`** instruction ou de la `longjmp` fonction runtime est considéré comme un arrêt anormal. Il est non conforme de sauter dans une instruction `__try`, mais conforme d'en sortir d'une. Toutes les **`__finally`** instructions qui sont actives entre le point de départ et la destination doivent être exécutées. Cela s'appelle un « déroulement local ».
 
 Le gestionnaire de terminaisons n'est pas appelé si un processus est tué tout en exécutant une instruction `try-finally`.
 
@@ -52,4 +52,4 @@ Consultez l'exemple pour [l'instruction try-except](../c-language/try-except-sta
 
 ## <a name="see-also"></a>Voir aussi
 
-[Instruction try-finally](../cpp/try-finally-statement.md)
+[try-finally, instruction](../cpp/try-finally-statement.md)

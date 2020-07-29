@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: b66cf0df998b4e33a9f3425fdf0f260d163f423b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a963f1059eccaddce9ec01cd53a07df668ee46c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944709"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213656"
 ---
 # <a name="_abnormal_termination"></a>_abnormal_termination
 
-Indique si le bloc `__finally` d’une [instruction try-finally](../cpp/try-finally-statement.md) est entré pendant que le système exécute une liste interne des gestionnaires de terminaisons.
+Indique si le **`__finally`** bloc d’une [instruction try-finally](../cpp/try-finally-statement.md) est entré pendant que le système exécute une liste interne de gestionnaires de terminaisons.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +40,13 @@ int   _abnormal_termination(
 
 ## <a name="return-value"></a>Valeur de retour
 
-**true** si le système *déroule* la pile ; sinon, **false**.
+**`true`** Si le système *déroulera* la pile ; Sinon, **`false`** .
 
 ## <a name="remarks"></a>Notes
 
 Il s’agit d’une fonction interne utilisée pour gérer les exceptions de déroulement ; elle n’a pas vocation à être appelée à partir du code utilisateur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -54,4 +54,4 @@ Il s’agit d’une fonction interne utilisée pour gérer les exceptions de dé
 
 ## <a name="see-also"></a>Voir aussi
 
-[Instruction try-finally](../cpp/try-finally-statement.md)
+[try-finally, instruction](../cpp/try-finally-statement.md)

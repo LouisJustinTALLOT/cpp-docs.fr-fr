@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-ms.openlocfilehash: d5edb08278b7b6b9b3eb62e92fc04410f96a8f09
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6e184ba24ad535697a727276a980fd082625e082
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075129"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218050"
 ---
 # <a name="c-runtime-error-r6025"></a>Erreur Runtime C R6025
 
@@ -30,4 +30,4 @@ appel de fonction virtuelle pure
 
 Aucun objet n’a été instancié pour gérer l’appel de fonction virtuelle pure.
 
-Cette erreur est provoquée par l’appel d’une fonction virtuelle dans une classe de base abstraite par le biais d’un pointeur créé par un cast vers le type de la classe dérivée, mais qui est en fait un pointeur vers la classe de base. Cela peut se produire lors de la conversion d’un<strong>\*</strong> **void** en pointeur vers une classe lorsque l'<strong>\*</strong> **void** a été créée pendant la construction de la classe de base.
+Cette erreur est provoquée par l’appel d’une fonction virtuelle dans une classe de base abstraite par le biais d’un pointeur créé par un cast vers le type de la classe dérivée, mais qui est en fait un pointeur vers la classe de base. Cela peut se produire lors de la conversion d’un **`void`** <strong>\*</strong> en pointeur vers une classe lorsque le **`void`** <strong>\*</strong> a été créé pendant la construction de la classe de base.

@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 9c326c337ff210ef9de26b3fd88c0d853832b260
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211865"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216464"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor (classe)
 
@@ -109,7 +109,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête**: atldbcli.h
+**En-tête**: atldbcli. h
 
 ## <a name="members"></a>Membres
 
@@ -199,7 +199,7 @@ dans Nom du paramètre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pour les versions sans modèle, pointe vers la mémoire qui contient les données récupérées à partir de la mémoire tampon. Pour les versions basées sur un modèle, retourne la **valeur true** en cas de réussite ou **false** en cas d’échec.
+Pour les versions sans modèle, pointe vers la mémoire qui contient les données récupérées à partir de la mémoire tampon. Pour les versions basées sur un modèle, retourne **`true`** en cas de réussite ou **`false`** en cas d’échec.
 
 Utilisez `GetParam` pour récupérer des données de paramètre sans chaîne à partir de la mémoire tampon. Utilisez [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) pour récupérer des données de paramètre de chaîne à partir de la mémoire tampon.
 
@@ -234,7 +234,7 @@ bool GetParamIO(DBORDINAL nParam,
 dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé aux valeurs de retour. Le paramètre number est l’index du paramètre en fonction de son ordre dans l’appel de procédure stockée ou SQL. Pour obtenir un exemple, consultez [setParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) .
 
 *pParamIO*<br/>
-Pointeur vers la variable contenant le type de `DBPARAMIO` (entrée ou sortie) du paramètre spécifié. La définition est la suivante :
+Pointeur vers la variable contenant le `DBPARAMIO` type (entrée ou sortie) du paramètre spécifié. La définition est la suivante :
 
 ```cpp
 typedef DWORD DBPARAMIO;
@@ -248,7 +248,7 @@ enum DBPARAMIOENUM {
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la **valeur true** en cas de réussite ou **false** en cas d’échec.
+Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
 ## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor :: GetParamLength
 
@@ -273,7 +273,7 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 
 ### <a name="remarks"></a>Notes
 
-La première substitution retourne la **valeur true en cas** de réussite ou **false** en cas d’échec. Le deuxième remplacement pointe vers la mémoire qui contient la longueur du paramètre.
+La première substitution retourne **`true`** en cas de réussite ou **`false`** d’échec. Le deuxième remplacement pointe vers la mémoire qui contient la longueur du paramètre.
 
 ## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor :: GetParamName
 
@@ -317,7 +317,7 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 
 ### <a name="remarks"></a>Notes
 
-La première substitution retourne la **valeur true en cas** de réussite ou **false** en cas d’échec. Le deuxième remplacement pointe vers la mémoire qui contient l’état du paramètre spécifié.
+La première substitution retourne **`true`** en cas de réussite ou **`false`** d’échec. Le deuxième remplacement pointe vers la mémoire qui contient l’état du paramètre spécifié.
 
 ## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor :: GetParamString
 
@@ -347,7 +347,7 @@ bool GetParamString(DBORDINAL nParam,
 dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé aux valeurs de retour. Le paramètre number est l’index du paramètre en fonction de son ordre dans l’appel de procédure stockée ou SQL. Pour obtenir un exemple, consultez [setParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) .
 
 *strOutput*<br/>
-à Données de chaîne ANSI (`CSimpleStringA`) ou Unicode (`CSimpleStringW`) du paramètre spécifié. Vous devez passer un paramètre de type `CString`, par exemple :
+à `CSimpleStringA`Données de chaîne ANSI () ou Unicode ( `CSimpleStringW` ) du paramètre spécifié. Vous devez passer un paramètre de type `CString` , par exemple :
 
 [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]
 
@@ -359,9 +359,9 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 
 ### <a name="remarks"></a>Notes
 
-Retourne la **valeur true** en cas de réussite ou **false** en cas d’échec.
+Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
-Si *pbuffer* a la valeur null, cette méthode définit la taille de mémoire tampon requise dans la mémoire vers laquelle pointe *pMaxLen* et retourne la **valeur true** sans copier les données.
+Si *pbuffer* a la valeur null, cette méthode définit la taille de mémoire tampon requise dans la mémoire vers laquelle pointe *pMaxLen* et retourne **`true`** sans copier les données.
 
 Cette méthode échoue si le *pbuffer* de mémoire tampon n’est pas assez grand pour contenir la chaîne entière.
 
@@ -388,7 +388,7 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la **valeur true** en cas de réussite ou **false** en cas d’échec.
+Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
 ## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor :: SetParam
 
@@ -429,7 +429,7 @@ dans État de la colonne DBSTATUS. Pour plus d’informations sur les valeurs de
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la **valeur true** en cas de réussite ou **false** en cas d’échec.
+Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
 Utilisez `SetParam` pour définir des données de paramètre sans chaîne dans la mémoire tampon. Utilisez [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) pour définir les données de paramètre de chaîne dans la mémoire tampon.
 
@@ -454,7 +454,7 @@ dans Longueur, en octets, du paramètre spécifié.
 
 ### <a name="remarks"></a>Notes
 
-Retourne la **valeur true** en cas de réussite ou **false** en cas d’échec.
+Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
 ## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor :: SetParamStatus
 
@@ -477,7 +477,7 @@ dans État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les
 
 ### <a name="remarks"></a>Notes
 
-Retourne la **valeur true** en cas de réussite ou **false** en cas d’échec.
+Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
 ## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor :: SetParamString
 
@@ -506,16 +506,16 @@ dans État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les
 
 ### <a name="remarks"></a>Notes
 
-Retourne la **valeur true** en cas de réussite ou **false** en cas d’échec.
+Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
-`SetParamString` échoue si vous tentez de définir une chaîne supérieure à la taille maximale spécifiée pour *pString*.
+`SetParamString`échoue si vous tentez de définir une chaîne supérieure à la taille maximale spécifiée pour *pString*.
 
 Utilisez `SetParamString` pour définir des données de paramètre de chaîne dans la mémoire tampon. Utilisez [setParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour définir des données de paramètre sans chaîne dans la mémoire tampon.
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor, classe](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CManualAccessor, classe](../../data/oledb/cmanualaccessor-class.md)

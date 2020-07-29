@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813507"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217452"
 ---
 # <a name="span-class-c-standard-library"></a>span, classe (bibliothèque standard C++)
 
@@ -86,8 +86,8 @@ class span;
 
 | **Définitions de types** | **Description** |
 |-|-|
-| [const_pointer](#pointer) | Type d’un pointeur vers un `const` élément. |
-| [const_reference](#reference) | Type d’une référence à un `const` élément. |
+| [const_pointer](#pointer) | Type d’un pointeur vers un **`const`** élément. |
+| [const_reference](#reference) | Type d’une référence à un **`const`** élément. |
 | [difference_type](#difference_type) | Type d'une distance signée entre deux éléments. |
 | [element_type](#element_type) | Type d’un élément span. |
 | [répétiteur](#iterator) | Type d’un itérateur pour une étendue. |
@@ -95,9 +95,9 @@ class span;
 | [reference](#reference) | Type d'une référence à un élément. |
 | [reverse_iterator](#reverse_iterator) | Type d’un itérateur inverse pour une étendue. |
 | [size_type](#size_type) | Type pour le résultat de la distance non signée entre deux éléments dans l’étendue. |
-| [value_type](#value_type) | Type d’un élément, sans les `const` `volatile` qualifications. |
+| [value_type](#value_type) | Type d’un élément, sans les **`const`** **`volatile`** qualifications. |
 | **Constructeurs** | **Description** |
-|[répartis](#span)| Construit un `span` .|
+|[répartis](#span)| Construisez un `span`.|
 | **Prise en charge des itérateurs** | **Description** |
 |[commencer](#begin) | Obtient un itérateur pointant vers le premier élément de l’étendue.|
 |[end](#end) | Obtient un itérateur pointant vers la fin de l’étendue. |
@@ -120,7 +120,7 @@ class span;
 |[span :: Operator =](#op_eq)| Remplacez l’étendue.|
 |[span ::, opérateur\[\]](#op_at)| Obtient l’élément à la position spécifiée. |
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Toutes les `span` fonctions membres ont une complexité constante du temps.
 
@@ -142,7 +142,7 @@ Obtient le dernier élément de l’étendue.
 constexpr reference back() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Référence au dernier élément de l’étendue.
 
@@ -175,7 +175,7 @@ Obtient un itérateur pointant sur le premier élément de l’étendue.
 constexpr iterator begin() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur pointant sur le premier élément de l’étendue.
 
@@ -209,7 +209,7 @@ Obtient un pointeur vers le début des données de l’étendue.
 constexpr pointer data() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Pointeur vers le premier élément stocké dans l’étendue.
 
@@ -270,7 +270,7 @@ Type des éléments de l’étendue.
 using element_type = T;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est extrait du paramètre de modèle `T` lors de la création d’une étendue.
 
@@ -304,9 +304,9 @@ Indique si l’étendue contient des éléments.
 constexpr bool empty() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
-Retourne `true` si `this->size() == 0` . Sinon, `false`.
+Retourne **`true`** si `this->size() == 0` . Sinon, **`false`** .
 
 ### <a name="example"></a>Exemple
 
@@ -332,11 +332,11 @@ Obtient un itérateur à la fin de l’étendue.
 constexpr iterator end() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur pointant juste après la fin de l’étendue.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `end` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
@@ -367,11 +367,11 @@ template <size_t count> constexpr auto first() const noexcept;
 Nombre d’éléments à partir de l’avant de cette étendue à placer dans la sous-étendue.  
 Le nombre d’éléments est spécifié en tant que paramètre pour le modèle, ou à la fonction, comme illustré ci-dessous.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Étendue qui contient `count` les éléments de l’avant de cette étendue.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Utilisez la version de modèle de cette fonction si possible pour valider le `count` au moment de la compilation et pour conserver des informations sur l’étendue, car elle retourne une plage d’étendue fixe.
 
@@ -417,7 +417,7 @@ Obtient le premier élément de l’étendue.
 constexpr reference front() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Référence au premier élément de l’étendue.
 
@@ -451,7 +451,7 @@ Type d’un itérateur sur des éléments span.
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Ce type sert d’itérateur sur les éléments d’une étendue.
 
@@ -492,11 +492,11 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 Nombre d’éléments à partir de la fin de cette étendue à placer dans la sous-étendue.
 Le nombre peut être spécifié comme paramètre pour le modèle ou pour la fonction, comme illustré ci-dessous.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Étendue contenant les derniers `count` éléments de cette étendue.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Utilisez la version de modèle de cette fonction si possible pour valider le `count` au moment de la compilation et pour conserver des informations sur l’étendue, car elle retourne une plage d’étendue fixe.
 
@@ -547,7 +547,7 @@ constexpr reference operator[](size_type offset) const;
 *décalage*\
 Élément de base zéro dans l’étendue à laquelle accéder.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Référence à l’élément à l' *offset*de position. Si la position n’est pas valide, le comportement n’est pas défini.
 
@@ -584,11 +584,11 @@ constexpr span& operator=(const span& other) noexcept = default;
 *autres*\
 Étendue à assigner à celui-ci.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 `*this`
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’assignation effectue une copie superficielle du pointeur de données et de la taille. Une copie superficielle est sécurisée, car `span` n’alloue pas de mémoire pour les éléments qu’elle contient.
 
@@ -619,7 +619,7 @@ int main()
 
 ## <a name="spanpointer"></a><a name="pointer"></a> `span::pointer`
 
-Types pour un pointeur et un `const` pointeur vers un élément span.
+Types pour un pointeur et un **`const`** pointeur vers un élément span.
 
 ```cpp
 using pointer = T*;
@@ -663,7 +663,7 @@ Obtient un itérateur inverse pointant vers le dernier élément de cette étend
 constexpr reverse_iterator rbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur pointant vers le début de l’étendue inversée.
 
@@ -693,7 +693,7 @@ int main()
 
 ## <a name="spanreference"></a><a name="reference"></a> `span::reference`
 
-Types pour une référence, et une `const` référence, à un élément span.
+Types pour une référence, et une **`const`** référence, à un élément span.
 
 ```cpp
 using reference = T&;
@@ -736,11 +736,11 @@ Obtenez un itérateur à accès aléatoire qui pointe juste après la fin de l�
 constexpr reverse_iterator rend() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur inverse de l’espace réservé qui suit le dernier élément de l’étendue inversée ; autrement dit, l’espace réservé avant le premier élément de l’étendue non inversée.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `rend`est utilisé avec une étendue inversée comme [span :: end](#end) est utilisé avec une étendue. Utilisez-le pour déterminer si un itérateur inversé a atteint la fin de son étendue.
 
@@ -802,7 +802,7 @@ Obtient le nombre d’éléments dans l’étendue.
 constexpr size_t size() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Nombre d’éléments dans l’étendue.
 
@@ -834,7 +834,7 @@ Obtient la taille des éléments dans l’étendue, en octets.
 constexpr size_type size_bytes() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Nombre d’octets que tous les éléments de l’étendue occupent ; autrement dit, `sizeof(element_type)` multiplié par le nombre d’éléments dans l’étendue.
 
@@ -954,7 +954,7 @@ Effectuez une copie de cette étendue.
 *r*\
 Construit une étendue à partir de cette plage.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Une étendue ne libère pas de stockage pour les éléments de l’étendue, car elle ne possède pas le stockage des objets qu’elle contient.
 
@@ -1011,11 +1011,11 @@ Nombre d’éléments à placer dans la sous-étendue. Si `count` a `dynamic_ext
 *décalage*\
 Emplacement dans cette étendue pour démarrer la sous-étendue.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur retournée
 
 Étendue commençant à `offset` dans cette étendue. Contient des `count` éléments.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Une version de modèle de cette fonction est disponible et vérifie le nombre au moment de la compilation, qui conserve les informations sur l’étendue en retournant une étendue d’étendue fixe.
 
@@ -1058,7 +1058,7 @@ mySpan.subspan<1>: 12
 
 ## <a name="spanvalue_type"></a><a name="value_type"></a> `span::value_type`
 
-Type de l’élément dans l’étendue, sans les `const` `volatile` qualifications ou.
+Type de l’élément dans l’étendue, sans les **`const`** **`volatile`** qualifications ou.
 
 ```cpp
 using value_type = std::remove_cv_t<T>;

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 93ce7b99728d1ce89c8124efd6c74aea7ff66d22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15517425f3d81bc3798df2e42f39ac0b0d32ba31
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320147"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217595"
 ---
 # <a name="recursive_timed_mutex-class"></a>recursive_timed_mutex, classe
 
-Représente un *type de mutex chronométré*. Les objets de ce type permettent d’appliquer une exclusion mutuelle (mutex) en utilisant un blocage limité dans le temps dans un programme. Contrairement aux objets de type [timed_mutex](../standard-library/timed-mutex-class.md), l’effet des appels à des méthodes de verrouillage sur les objets `recursive_timed_mutex` est bien défini.
+Représente un *type Mutex chronométré*. Les objets de ce type permettent d’appliquer une exclusion mutuelle (mutex) en utilisant un blocage limité dans le temps dans un programme. Contrairement aux objets de type [timed_mutex](../standard-library/timed-mutex-class.md), l’effet des appels à des méthodes de verrouillage sur les objets `recursive_timed_mutex` est bien défini.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,25 +42,25 @@ class recursive_timed_mutex;
 |Nom|Description|
 |----------|-----------------|
 |[recursive_timed_mutex](#recursive_timed_mutex)|Construit un objet `recursive_timed_mutex` qui n’est pas verrouillé.|
-|[Destructeur recursive_timed_mutex](#dtorrecursive_timed_mutex_destructor)|Libère les ressources utilisées par l’objet `recursive_timed_mutex`.|
+|[Destructeur ~ recursive_timed_mutex](#dtorrecursive_timed_mutex_destructor)|Libère les ressources utilisées par l’objet `recursive_timed_mutex`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[Verrouillage](#lock)|Bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du `mutex`.|
+|[Lock](#lock)|Bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du `mutex`.|
 |[try_lock](#try_lock)|Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.|
 |[try_lock_for](#try_lock_for)|Tente d’obtenir la propriété du `mutex` pour un intervalle de temps spécifié.|
 |[try_lock_until](#try_lock_until)|Tente d’obtenir la propriété du `mutex` jusqu’à une heure spécifiée.|
-|[Déverrouiller](#unlock)|Libère la propriété du `mutex`.|
+|[bloquer](#unlock)|Libère la propriété du `mutex`.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** \<mutex>
+**En-tête :**\<mutex>
 
 **Espace de noms :** std
 
-## <a name="lock"></a><a name="lock"></a>Verrouillage
+## <a name="lock"></a><a name="lock"></a>Lock
 
 Bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du `mutex`.
 
@@ -72,7 +72,7 @@ void lock();
 
 Si le thread appelant possède déjà le `mutex`, la méthode est retournée immédiatement, et le verrou précédent reste en vigueur.
 
-## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>recursive_timed_mutex Constructeur
+## <a name="recursive_timed_mutex-constructor"></a><a name="recursive_timed_mutex"></a>Constructeur recursive_timed_mutex
 
 Construit un objet `recursive_timed_mutex` qui n’est pas verrouillé.
 
@@ -102,11 +102,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**vrai** si la méthode a `mutex` réussi à obtenir la `mutex`propriété du ou si le fil d’appel possède déjà le ; autrement, **faux**.
+**`true`** Si la méthode a obtenu la propriété du `mutex` ou si le thread appelant possède déjà le `mutex` ; sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-Si le fil d’appel possède déjà le `mutex`, la fonction retourne immédiatement **vrai**, et le verrou précédent reste en vigueur.
+Si le thread appelant possède déjà le `mutex` , la fonction retourne immédiatement **`true`** , et le verrou précédent reste en vigueur.
 
 ## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
 
@@ -124,11 +124,11 @@ Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la
 
 ### <a name="return-value"></a>Valeur de retour
 
-**vrai** si la méthode obtient `mutex` avec succès la propriété `mutex`du ou si le fil d’appel possède déjà le ; autrement, **faux**.
+**`true`** Si la méthode réussit à obtenir la propriété du `mutex` ou si le thread appelant possède déjà le `mutex` ; sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-Si le fil d’appel possède déjà le `mutex`, la méthode retourne immédiatement **vrai**, et le verrou précédent reste en vigueur.
+Si le thread appelant possède déjà le `mutex` , la méthode retourne immédiatement **`true`** , et le verrou précédent reste en vigueur.
 
 ## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
 
@@ -148,13 +148,13 @@ Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente 
 
 ### <a name="return-value"></a>Valeur de retour
 
-**vrai** si la méthode obtient `mutex` avec succès la propriété `mutex`du ou si le fil d’appel possède déjà le ; autrement, **faux**.
+**`true`** Si la méthode réussit à obtenir la propriété du `mutex` ou si le thread appelant possède déjà le `mutex` ; sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-Si le fil d’appel possède déjà le `mutex`, la méthode retourne immédiatement **vrai**, et le verrou précédent reste en vigueur.
+Si le thread appelant possède déjà le `mutex` , la méthode retourne immédiatement **`true`** , et le verrou précédent reste en vigueur.
 
-## <a name="unlock"></a><a name="unlock"></a>Déverrouiller
+## <a name="unlock"></a><a name="unlock"></a>bloquer
 
 Libère la propriété du `mutex`.
 
@@ -170,5 +170,5 @@ Si le thread appelant ne possède pas `mutex`, le comportement est indéfini.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[\<>mutex](../standard-library/mutex.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

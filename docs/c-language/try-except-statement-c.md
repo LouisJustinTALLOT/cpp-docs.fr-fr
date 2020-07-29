@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77b6bea8c7793522f5e1fa47e09a9b4a7e5c0f10
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349744"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218778"
 ---
 # <a name="try-except-statement-c"></a>try-except, instruction (C)
 
@@ -31,21 +31,21 @@ Les exceptions peuvent être basées sur le matériel ou sur le logiciel. Même 
 
 **__except (**  *expression*  **)**  *Compound-Statement*
 
-L'instruction composée après la clause `__try` est la section protégée. L'instruction composée après la clause `__except` constitue le gestionnaire d'exceptions. Le gestionnaire spécifie un ensemble d'actions à exécuter si une exception est levée pendant l'exécution de la section protégée. L'exécution se déroule comme suit :
+L'instruction composée après la clause `__try` est la section protégée. L’instruction composée après la **`__except`** clause est le gestionnaire d’exceptions. Le gestionnaire spécifie un ensemble d'actions à exécuter si une exception est levée pendant l'exécution de la section protégée. L'exécution se déroule comme suit :
 
 1. La section protégée est exécutée.
 
-1. Si aucune exception ne se produit pendant l'exécution de la section protégée, l'exécution se poursuit à l'instruction située après la clause `__except`.
+1. Si aucune exception ne se produit pendant l’exécution de la section protégée, l’exécution se poursuit à l’instruction qui suit la **`__except`** clause.
 
-1. Si une exception est levée pendant l’exécution de la section protégée ou dans toute routine appelée par la section protégée, l’expression `__except` est évaluée et la valeur retournée détermine comment l’exception est gérée. Il existe trois valeurs :
+1. Si une exception se produit pendant l’exécution de la section protégée ou dans une routine appelée par la section protégée, l' **`__except`** expression est évaluée et la valeur retournée détermine comment l’exception est gérée. Il existe trois valeurs :
 
    `EXCEPTION_CONTINUE_SEARCH` L’exception n’est pas reconnue. Poursuivre la recherche d’un gestionnaire dans la pile, en premier pour qu’il contienne des instructions **try-except**, puis pour les gestionnaires avec la priorité la plus élevée suivante.
 
    `EXCEPTION_CONTINUE_EXECUTION` L’exception est reconnue, mais ignorée. Poursuivre l'exécution au point où l'exception s'est produite.
 
-   `EXCEPTION_EXECUTE_HANDLER` L’exception est reconnue. Transférez le contrôle au gestionnaire d'exceptions en exécutant l'instruction composée `__except`, puis continuez l'exécution au point où l'exception s'est produite.
+   `EXCEPTION_EXECUTE_HANDLER` L’exception est reconnue. Transférez le contrôle au gestionnaire d’exceptions en exécutant l' **`__except`** instruction composée, puis continuez l’exécution au point où l’exception s’est produite.
 
-L'expression `__except` étant évaluée comme une expression C, elle est limitée à une valeur unique, l'opérateur d'expression conditionnelle, ou l'opérateur virgule. Si un traitement plus étendu est requis, l'expression peut appeler une routine qui retourne l'une des trois valeurs répertoriées ci-dessus.
+Étant donné que l' **`__except`** expression est évaluée comme une expression C, elle est limitée à une valeur unique, à l’opérateur d’expression conditionnelle ou à l’opérateur virgule. Si un traitement plus étendu est requis, l'expression peut appeler une routine qui retourne l'une des trois valeurs répertoriées ci-dessus.
 
 > [!NOTE]
 > La gestion structurée des exceptions fonctionne avec les fichiers sources C et C++. Toutefois, elle n'est pas conçue spécifiquement pour C++. Vous pouvez vous assurer que votre code est plus portable en utilisant la gestion des exceptions C++. En outre, le mécanisme de gestion des exceptions C++ est beaucoup plus souple, car il peut gérer les exceptions de tout type.
@@ -53,13 +53,13 @@ L'expression `__except` étant évaluée comme une expression C, elle est limit�
 > [!NOTE]
 > Pour les programmes C++, la gestion des exceptions C++ doit être utilisée à la place de la gestion structurée des exceptions. Pour plus d’informations, consultez [Gestion des exceptions](../cpp/exception-handling-in-visual-cpp.md) dans le *Guide de référence du langage C++*.
 
-Chaque routine dans une application peut avoir son propre gestionnaire d'exceptions. L'expression `__except` s'exécute dans la portée du corps `__try`. Cela signifie qu'elle a accès à toutes les variables locales déclarées à cet endroit.
+Chaque routine dans une application peut avoir son propre gestionnaire d'exceptions. L' **`__except`** expression s’exécute dans la portée du `__try` corps. Cela signifie qu'elle a accès à toutes les variables locales déclarées à cet endroit.
 
-Le mot clé `__leave` est valide dans un bloc d’instructions **try-except**. `__leave` a comme conséquence d’accéder à la fin du bloc **try-except**. L'exécution reprend après la fin du gestionnaire d'exceptions. Bien qu'une instruction `goto` puisse être utilisée pour obtenir le même résultat, une instruction `goto` provoque le déroulement de pile. L'instruction `__leave` est plus efficace car elle n'implique pas le déroulement de pile.
+Le ** `__leave** keyword is valid within a **try-except** statement block. The effect of **` __leave** est d’accéder à la fin du bloc **try-except** . L'exécution reprend après la fin du gestionnaire d'exceptions. Bien qu’une **`goto`** instruction puisse être utilisée pour obtenir le même résultat, une **`goto`** instruction provoque le déroulement de la pile. L’instruction **' __leave** est plus efficace car elle n’implique pas le déroulement de la pile.
 
 Le fait de quitter une instruction **try-except** à l’aide de la fonction runtime `longjmp` est considéré comme un arrêt anormal. Il est non conforme de sauter dans une instruction `__try`, mais conforme d'en sortir d'une. Le gestionnaire d’exceptions n’est pas appelé si un processus est tué au milieu de l’exécution d’une instruction **try-except**.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Voici un exemple de gestionnaire d'exceptions et de gestionnaire d'arrêt. Pour plus d’informations sur les gestionnaires d’arrêt, consultez [Instruction try-finally](../c-language/try-finally-statement-c.md).
 

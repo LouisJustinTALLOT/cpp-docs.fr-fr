@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3414a478ec741351f1e1540a214cca38c029749f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291039"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213695"
 ---
 # <a name="union-declarations"></a>Déclarations d'union
 
@@ -24,8 +24,8 @@ Une « déclaration d’union » spécifie un ensemble de valeurs variables et
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-ou-union* *identificateur*
 
 *struct-or-union* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**modélis**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**UE**
+&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *struct-declaration-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -44,14 +44,14 @@ Le contenu d'union est défini comme
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-List*  **,**  *struct-declarator*
 
-Une variable du type **union** stocke l'une des valeurs définies par ce type. Les mêmes règles gouvernent les déclarations de structure et d'union. Les unions peuvent également avoir des champs de bits.
+Une variable de **`union`** type stocke l’une des valeurs définies par ce type. Les mêmes règles gouvernent les déclarations de structure et d'union. Les unions peuvent également avoir des champs de bits.
 
-Les membres des unions ne peuvent pas avoir de type incomplet, de type `void`, ou de type de fonction. Par conséquent les membres ne peuvent pas être une instance de l'union mais peuvent être des pointeurs vers le type d'union déclaré.
+Les membres des unions ne peuvent pas avoir un type, un type ou un type de fonction incomplet **`void`** . Par conséquent les membres ne peuvent pas être une instance de l'union mais peuvent être des pointeurs vers le type d'union déclaré.
 
 Une déclaration de type union est un modèle uniquement. La mémoire n'est pas réservée jusqu'à ce que la variable soit déclarée.
 
 > [!NOTE]
-> Si une union de deux types est déclarée et qu'une valeur est enregistrée, mais que l'union est accessible par l'autre type, les résultats ne sont pas fiables. Par exemple, une union de type **float** et `int` est déclarée. Une valeur de type **float** est stockée, mais le programme y accède ultérieurement en tant que `int`. Dans ce cas, la valeur dépend du stockage interne des valeurs **float**. La valeur entière n'est pas fiable.
+> Si une union de deux types est déclarée et qu'une valeur est enregistrée, mais que l'union est accessible par l'autre type, les résultats ne sont pas fiables. Par exemple, une Union de **`float`** et **`int`** est déclarée. Une **`float`** valeur est stockée, mais le programme accède ultérieurement à la valeur en tant que **`int`** . Dans ce cas, la valeur dépend du stockage interne des **`float`** valeurs. La valeur entière n'est pas fiable.
 
 ## <a name="examples"></a>Exemples
 
@@ -79,7 +79,7 @@ union               /* Defines a two-dimensional */
 } screen[25][80];
 ```
 
-Le tableau `screen` contient 2 000 éléments. Chaque élément du tableau est une union individuelle avec deux membres : `window1` et `screenval`. Le membre `window1` est une structure avec deux membres de champ de bits `icon` et `color`. Le membre `screenval` est `int`. À un moment donné, chaque élément union contient soit `int` représenté par `screenval` soit la structure représentée par `window1`.
+Le tableau `screen` contient 2 000 éléments. Chaque élément du tableau est une union individuelle avec deux membres : `window1` et `screenval`. Le membre `window1` est une structure avec deux membres de champ de bits `icon` et `color`. Le `screenval` membre est un **`int`** . À un moment donné, chaque élément Union contient soit **`int`** représenté par `screenval` soit la structure représentée par `window1` .
 
 **Spécifique à Microsoft**
 

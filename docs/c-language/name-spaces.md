@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-ms.openlocfilehash: 76ad9b797a4f192e8f22f8c040f5a308371a461b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28036219464e96ae20733473dedb4fab63f6de38
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325765"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218817"
 ---
 # <a name="name-spaces"></a>Espaces de noms
 
@@ -26,11 +26,11 @@ Le compilateur configure les « espaces de noms » pour établir une distincti
 
 Cette liste décrit les espaces de noms utilisés dans C.
 
-Étiquettes d’instructions Les étiquettes d’instructions nommées font partie des instructions. Les définitions des étiquettes d’instructions sont toujours suivies par deux-points, mais ne font pas partie des étiquettes **case**. Les utilisations des étiquettes d'instructions suivent toujours immédiatement le mot clé **goto**. Les étiquettes d'instructions ne doivent pas nécessairement être séparées des autres noms ou des noms d'étiquette dans les autres fonctions.
+Étiquettes d’instructions Les étiquettes d’instructions nommées font partie des instructions. Les définitions des étiquettes d’instructions sont toujours suivies d’un signe deux-points, mais ne font pas partie des **`case`** étiquettes. Les utilisations des étiquettes d’instructions sont toujours immédiatement suivies du mot clé **`goto`** . Les étiquettes d'instructions ne doivent pas nécessairement être séparées des autres noms ou des noms d'étiquette dans les autres fonctions.
 
-Étiquettes de structure, d’union et d’énumération Ces étiquettes font partie des spécificateurs de type de structure, d’union et d’énumération et, si elles sont présentes, suivent toujours immédiatement les mots réservés **struct**, **union** ou **enum**. Les noms d’étiquettes doivent être séparés de toutes les autres étiquettes de structure, d’énumération ou d’union avec la même visibilité.
+Balises de structure, d’Union et d’énumération ces balises font partie des spécificateurs de type de structure, d’Union et d’énumération et, si elles sont présentes, suivent toujours immédiatement les mots réservés **`struct`** , **`union`** ou **`enum`** . Les noms d’étiquettes doivent être séparés de toutes les autres étiquettes de structure, d’énumération ou d’union avec la même visibilité.
 
-Membres de structures ou d’unions Les noms de membres sont alloués dans les espaces de noms associés à chaque type de structure et d’union. Autrement dit, le même identificateur peut être un nom de composant dans plusieurs structures ou unions simultanément. Les définitions de noms composants apparaissent toujours dans les spécificateurs de type structure ou union. Les utilisations des noms de composant suivent toujours immédiatement les opérateurs de sélection**->** de membres (et **.**). Le nom d'un membre doit être unique dans la structure ou l'union, mais pas nécessairement distinct d'autres noms du programme, notamment les noms des membres des différentes structures et unions, ou du nom de la structure elle-même.
+Membres de structures ou d’unions Les noms de membres sont alloués dans les espaces de noms associés à chaque type de structure et d’union. Autrement dit, le même identificateur peut être un nom de composant dans plusieurs structures ou unions simultanément. Les définitions de noms composants apparaissent toujours dans les spécificateurs de type structure ou union. Les utilisations des noms de composant suivent toujours immédiatement les opérateurs de sélection de membres ( **->** et **.**). Le nom d'un membre doit être unique dans la structure ou l'union, mais pas nécessairement distinct d'autres noms du programme, notamment les noms des membres des différentes structures et unions, ou du nom de la structure elle-même.
 
 Identificateurs ordinaires Tous les autres noms se trouvent dans un espace de noms qui inclut les variables, les fonctions (dont les paramètres formels et les variables locales) et les constantes d’énumération. Les noms d'identificateurs ont une visibilité imbriquée, vous pouvez donc les redéfinir dans des blocs.
 
@@ -46,7 +46,7 @@ struct student {
    } student;
 ```
 
-Lorsque `student` apparaît après le mot clé **struct**, le compilateur l'identifie comme une balise de structure. Lorsque `student` apparaît après un opérateur de sélection de membres**->** (ou **.**), le nom fait référence au membre de structure. Dans d'autres contextes, `student` désigne la variable de structure. Toutefois, surcharger l’espace de noms d’étiquette n’est pas recommandé car cela masque la signification.
+Lorsque `student` apparaît après le **`struct`** mot clé, le compilateur le reconnaît comme une balise de structure. Lorsque `student` apparaît après un opérateur de sélection de membres ( **->** ou **.**), le nom fait référence au membre de structure. Dans d'autres contextes, `student` désigne la variable de structure. Toutefois, surcharger l’espace de noms d’étiquette n’est pas recommandé car cela masque la signification.
 
 ## <a name="see-also"></a>Voir aussi
 

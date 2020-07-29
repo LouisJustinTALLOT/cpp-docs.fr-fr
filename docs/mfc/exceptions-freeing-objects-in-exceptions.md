@@ -11,12 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: e4fafd12d22f6ff7635380e139f60c110a193d9d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622826"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217933"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Exceptions : libération d'objets dans les exceptions
 
@@ -30,9 +30,9 @@ Les exceptions levées par le Framework ou par votre application interrompent le
 
 Pour ce faire, il existe deux méthodes principales.
 
-- Gérez les exceptions localement à l’aide des mots clés **try** et **catch** , puis Détruisez tous les objets avec une seule instruction.
+- Gérez les exceptions localement à l’aide des **`try`** **`catch`** Mots clés et, puis Détruisez tous les objets avec une seule instruction.
 
-- Détruisez tout objet dans le bloc **catch** avant de lever l’exception en dehors du bloc pour une gestion ultérieure.
+- Détruisez tout objet dans le **`catch`** bloc avant de lever l’exception en dehors du bloc pour une gestion ultérieure.
 
 Ces deux approches sont illustrées ci-dessous en tant que solutions aux exemples problématiques suivants :
 
@@ -50,7 +50,7 @@ Ce nouvel exemple configure un gestionnaire d’exceptions pour intercepter l’
 
 ## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Levée d’exceptions après la destruction d’objets
 
-Une autre façon de gérer les exceptions consiste à les passer au contexte de gestion des exceptions externe suivant. Dans votre bloc **catch** , vous pouvez effectuer un nettoyage de vos objets alloués localement, puis lever l’exception sur pour un traitement supplémentaire.
+Une autre façon de gérer les exceptions consiste à les passer au contexte de gestion des exceptions externe suivant. Dans votre **`catch`** bloc, vous pouvez effectuer un nettoyage de vos objets alloués localement, puis lever l’exception sur pour un traitement supplémentaire.
 
 La fonction de levée peut ou non avoir besoin de libérer des objets de segment de mémoire. Si la fonction libère toujours l’objet segment de mémoire avant de retourner dans le cas normal, la fonction doit également libérer l’objet segment de mémoire avant de lever l’exception. En revanche, si la fonction ne libère pas normalement l’objet avant de retourner dans le cas normal, vous devez décider au cas par cas, si l’objet segment de mémoire doit être libéré.
 

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: 0f833209938ccc09cbc37235788b6f719d4d12d4
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 09817372e818a05c389a083aac5f04e03b1ab0e1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506869"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218947"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (Règles noexcept C++17)
 
-La norme c++ 17 crée `throw()` un alias pour `noexcept` , supprime `throw(` *`type-list`* `)` et `throw(...)` , et autorise l’inclusion de certains types `noexcept` . Cette modification peut entraîner un certain nombre de problèmes de compatibilité source dans le code qui est conforme à C++ 14 ou version antérieure. L' **`/Zc:noexceptTypes`** option spécifie la conformité à la norme c++ 17. **`/Zc:noexceptTypes-`** autorise le comportement C++ 14 et antérieur lorsque le code est compilé en mode C++ 17.
+La norme c++ 17 crée `throw()` un alias pour **`noexcept`** , supprime `throw(` *`type-list`* `)` et `throw(...)` , et autorise l’inclusion de certains types **`noexcept`** . Cette modification peut entraîner un certain nombre de problèmes de compatibilité source dans le code qui est conforme à C++ 14 ou version antérieure. L' **`/Zc:noexceptTypes`** option spécifie la conformité à la norme c++ 17. **`/Zc:noexceptTypes-`** autorise le comportement C++ 14 et antérieur lorsque le code est compilé en mode C++ 17.
 
 ## <a name="syntax"></a>Syntaxe
 
 > **`/Zc:noexceptTypes`**\[**`-`**]
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Lorsque l' **`/Zc:noexceptTypes`** option est spécifiée, le compilateur est conforme à la norme c++ 17 et traite [**`throw()`**](../../cpp/exception-specifications-throw-cpp.md) comme un alias pour [**`noexcept`**](../../cpp/noexcept-cpp.md) , supprime `throw(` *`type-list`* `)` et et `throw(...)` autorise certains types à inclure **`noexcept`** . L' **`/Zc:noexceptTypes`** option est disponible uniquement lorsque [**`/std:c++17`**](std-specify-language-standard-version.md) ou [**`/std:c++latest`**](std-specify-language-standard-version.md) est activé. **`/Zc:noexceptTypes`** est activé par défaut pour se conformer à la norme ISO C++ 17. L' [**`/permissive-`**](permissive-standards-conformance.md) option n’a aucune incidence sur **`/Zc:noexceptTypes`** . Désactivez cette option en spécifiant **`/Zc:noexceptTypes-`** pour revenir au comportement c++ 14 de **`noexcept`** quand **`/std:c++17`** ou **`/std:c++latest`** est spécifié.
 

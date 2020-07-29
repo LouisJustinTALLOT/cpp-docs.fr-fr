@@ -5,49 +5,49 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 9689d511760752903b83b34199fb035c0e7a8d37
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751137"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214046"
 ---
 # <a name="property-pages-mfc"></a>Pages de propriétés (MFC)
 
-Les pages de propriété affichent les valeurs actuelles de propriétés de contrôle OLE spécifiques dans une interface graphique personnalisable pour la visualisation et l’édition en soutenant un mécanisme de cartographie des données basé sur l’échange de données de dialogue (DDX).
+Les pages de propriétés affichent les valeurs actuelles des propriétés de contrôle OLE spécifiques dans une interface graphique personnalisable pour l’affichage et la modification en prenant en charge un mécanisme de mappage de données basé sur l’échange de données de boîtes de dialogue (DDX).
 
-Ce mécanisme de cartographie des données cartographie les commandes de la page de propriété aux propriétés individuelles du contrôle OLE. La valeur de la propriété de contrôle reflète l’état ou le contenu du contrôle de la page de propriété. La cartographie entre les commandes de **DDP_** la page de propriété et les `DoDataExchange` propriétés est spécifiée par DDP_ les appels de fonction dans la fonction membre de la page de propriété. Voici une liste de **fonctions DDP_** qui échangent les données saisies à l’aide de la page de propriété de votre contrôle :
+Ce mécanisme de mappage de données mappe les contrôles de page de propriétés aux propriétés individuelles du contrôle OLE. La valeur de la propriété du contrôle reflète l’État ou le contenu du contrôle de la page de propriétés. Le mappage entre les contrôles et les propriétés de la page de propriétés est spécifié par **DDP_** appels de fonction dans la fonction membre de la page de propriétés `DoDataExchange` . La liste suivante répertorie les fonctions de **DDP_** qui échangent des données à l’aide de la page de propriétés de votre contrôle :
 
-### <a name="property-page-data-transfer"></a>Transfert de données de la page de propriété
+### <a name="property-page-data-transfer"></a>Transfert de données de page de propriétés
 
 |||
 |-|-|
-|[DDP_CBIndex](#ddp_cbindex)|Relie l’index de la chaîne sélectionnée dans une boîte combo avec la propriété d’un contrôle.|
-|[DDP_CBString](#ddp_cbstring)|Relie la chaîne sélectionnée dans une boîte combo avec la propriété d’un contrôle. La chaîne sélectionnée peut commencer par les mêmes lettres que la valeur de la propriété, mais n’a pas besoin de l’assortir entièrement.|
-|[DDP_CBStringExact](#ddp_cbstringexact)|Relie la chaîne sélectionnée dans une boîte combo avec la propriété d’un contrôle. La chaîne sélectionnée et la valeur de chaîne de la propriété doivent correspondre exactement.|
-|[DDP_Check](#ddp_check)|Relie une case à cocher dans la page de propriété du contrôleur avec la propriété d’un contrôle.|
-|[DDP_LBIndex](#ddp_lbindex)|Relie l’index de la chaîne sélectionnée dans une boîte de liste avec la propriété d’un contrôle.|
-|[DDP_LBString](#ddp_lbstring)|Relie la chaîne sélectionnée dans une boîte de liste avec la propriété d’un contrôle. La chaîne sélectionnée peut commencer avec les mêmes lettres que la valeur de la propriété, mais n’a pas besoin de l’égaler entièrement.|
-|[DDP_LBStringExact](#ddp_lbstringexact)|Relie la chaîne sélectionnée dans une boîte de liste avec la propriété d’un contrôle. La chaîne sélectionnée et la valeur de chaîne de la propriété doivent correspondre exactement.|
-|[DDP_PostProcessing](#ddp_postprocessing)|Termine le transfert des valeurs des propriétés de votre contrôle.|
-|[DDP_Radio](#ddp_radio)|Relie un groupe de boutons radio dans la page de propriété du contrôle avec la propriété d’un contrôle.|
-|[DDP_Text](#ddp_text)|Relie un contrôle dans la page de propriété du contrôle avec la propriété d’un contrôle. Cette fonction gère plusieurs types différents de propriétés, telles que **double**, **court**, BSTR, et **long**.|
+|[DDP_CBIndex](#ddp_cbindex)|Lie l’index de la chaîne sélectionnée dans une zone de liste déroulante avec la propriété d’un contrôle.|
+|[DDP_CBString](#ddp_cbstring)|Lie la chaîne sélectionnée dans une zone de liste déroulante à la propriété d’un contrôle. La chaîne sélectionnée peut commencer par les mêmes lettres que la valeur de la propriété, mais elle n’a pas besoin de la faire correspondre entièrement.|
+|[DDP_CBStringExact](#ddp_cbstringexact)|Lie la chaîne sélectionnée dans une zone de liste déroulante à la propriété d’un contrôle. La chaîne sélectionnée et la valeur de chaîne de la propriété doivent correspondre exactement.|
+|[DDP_Check](#ddp_check)|Lie une case à cocher dans la page de propriétés du contrôle à la propriété d’un contrôle.|
+|[DDP_LBIndex](#ddp_lbindex)|Lie l’index de la chaîne sélectionnée dans une zone de liste avec la propriété d’un contrôle.|
+|[DDP_LBString](#ddp_lbstring)|Lie la chaîne sélectionnée dans une zone de liste à la propriété d’un contrôle. La chaîne sélectionnée peut commencer par les mêmes lettres que la valeur de la propriété, mais elle n’a pas besoin d’être entièrement identique.|
+|[DDP_LBStringExact](#ddp_lbstringexact)|Lie la chaîne sélectionnée dans une zone de liste à la propriété d’un contrôle. La chaîne sélectionnée et la valeur de chaîne de la propriété doivent correspondre exactement.|
+|[DDP_PostProcessing](#ddp_postprocessing)|Termine le transfert des valeurs de propriété à partir de votre contrôle.|
+|[DDP_Radio](#ddp_radio)|Lie un groupe de cases d’option dans la page de propriétés du contrôle à la propriété d’un contrôle.|
+|[DDP_Text](#ddp_text)|Lie un contrôle dans la page de propriétés du contrôle à la propriété d’un contrôle. Cette fonction gère plusieurs types de propriétés différents, tels que **`double`** , **`short`** , BSTR et **`long`** .|
 
-Pour plus d’informations sur les `DoDataExchange` pages fonction et propriété, voir l’article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).
+Pour plus d’informations sur la `DoDataExchange` fonction et les pages de propriétés, consultez l’article [contrôles ActiveX : pages de propriétés](../../mfc/mfc-activex-controls-property-pages.md).
 
-Voici une liste de macros utilisées pour créer et gérer les pages de propriété pour un contrôle OLE :
+La liste suivante répertorie les macros utilisées pour créer et gérer les pages de propriétés d’un contrôle OLE :
 
 ### <a name="property-pages"></a>Pages de propriétés
 
 |||
 |-|-|
-|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Commence la liste des numéros d’ID de la page de propriété.|
-|[END_PROPPAGEIDS](#end_proppageids)|Termine la liste des numéros d’adresse.|
-|[PROPPAGEID](#proppageid)|Déclare une page de propriété de la classe de contrôle.|
+|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Commence la liste des ID de page de propriétés.|
+|[END_PROPPAGEIDS](#end_proppageids)|Termine la liste des ID de page de propriétés.|
+|[PROPPAGEID](#proppageid)|Déclare une page de propriétés de la classe de contrôle.|
 
 ## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex
 
-Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété d’intégrage avec l’index de la sélection actuelle dans une boîte de combo sur la page de propriété.
+Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété entière avec l’index de la sélection actuelle dans une zone de liste déroulante de la page de propriétés.
 
 ```cpp
 void AFXAPI DDP_CBIndex(
@@ -59,29 +59,29 @@ void AFXAPI DDP_CBIndex(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 *id*<br/>
-L’ID de ressource du contrôle de la boîte combo associé à la propriété de contrôle spécifiée par *pszPropName*.
+ID de ressource du contrôle de zone de liste déroulante associé à la propriété de contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
-La variable du membre associée au contrôle de la page de propriété spécifiée par *id* et à la propriété spécifiée par *pszPropName*.
+*membre*<br/>
+Variable membre associée au contrôle de page de propriétés spécifié par *ID* et la propriété spécifiée par *pszPropName*.
 
-*pszPropName (en)*<br/>
-Le nom de propriété de la propriété de contrôle à échanger avec le contrôle de la boîte combo spécifié par *id*.
+*pszPropName*<br/>
+Nom de la propriété du contrôle à échanger avec le contrôle de zone de liste déroulante spécifié par *ID*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être `DDX_CBIndex` appelée avant l’appel de fonction correspondant.
+Cette fonction doit être appelée avant l' `DDX_CBIndex` appel de fonction correspondant.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a>DDP_CBString
 
-Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété de chaîne avec la sélection actuelle dans une boîte de combo sur la page de propriété.
+Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété de type chaîne avec la sélection actuelle dans une zone de liste déroulante de la page de propriétés.
 
 ```cpp
 void AFXAPI DDP_CBString(
@@ -93,29 +93,29 @@ void AFXAPI DDP_CBString(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 *id*<br/>
-L’ID de ressource du contrôle de la boîte combo associé à la propriété de contrôle spécifiée par *pszPropName*.
+ID de ressource du contrôle de zone de liste déroulante associé à la propriété de contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
-La variable du membre associée au contrôle de la page de propriété spécifiée par *id* et à la propriété spécifiée par *pszPropName*.
+*membre*<br/>
+Variable membre associée au contrôle de page de propriétés spécifié par *ID* et la propriété spécifiée par *pszPropName*.
 
-*pszPropName (en)*<br/>
-Le nom de propriété de la propriété de contrôle à échanger avec la chaîne de boîte combo spécifié par *id*.
+*pszPropName*<br/>
+Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste déroulante spécifiée par *ID*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être `DDX_CBString` appelée avant l’appel de fonction correspondant.
+Cette fonction doit être appelée avant l' `DDX_CBString` appel de fonction correspondant.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact
 
-Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété à cordes qui correspond exactement à la sélection actuelle dans une boîte combo sur la page de propriété.
+Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété de type chaîne qui correspond exactement à la sélection actuelle dans une zone de liste déroulante de la page de propriétés.
 
 ```cpp
 void AFXAPI DDP_CBStringExact(
@@ -127,29 +127,29 @@ void AFXAPI DDP_CBStringExact(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 *id*<br/>
-L’ID de ressource du contrôle de la boîte combo associé à la propriété de contrôle spécifiée par *pszPropName*.
+ID de ressource du contrôle de zone de liste déroulante associé à la propriété de contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
-La variable du membre associée au contrôle de la page de propriété spécifiée par *id* et à la propriété spécifiée par *pszPropName*.
+*membre*<br/>
+Variable membre associée au contrôle de page de propriétés spécifié par *ID* et la propriété spécifiée par *pszPropName*.
 
-*pszPropName (en)*<br/>
-Le nom de propriété de la propriété de contrôle à échanger avec la chaîne de boîte combo spécifié par *id*.
+*pszPropName*<br/>
+Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste déroulante spécifiée par *ID*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être `DDX_CBStringExact` appelée avant l’appel de fonction correspondant.
+Cette fonction doit être appelée avant l' `DDX_CBStringExact` appel de fonction correspondant.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="ddp_check"></a><a name="ddp_check"></a>DDP_Check
 
-Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur de la propriété avec le contrôle de la boîte de cocher de page de propriété associée.
+Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur de la propriété avec le contrôle de case à cocher de la page de propriétés associée.
 
 ```cpp
 void AFXAPI DDP_Check(
@@ -161,29 +161,29 @@ void AFXAPI DDP_Check(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 *id*<br/>
-L’ID de ressource du contrôle de la case à cocher associé à la propriété de contrôle spécifiée par *pszPropName*.
+ID de ressource du contrôle de case à cocher associé à la propriété de contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
-La variable du membre associée au contrôle de la page de propriété spécifiée par *id* et à la propriété spécifiée par *pszPropName*.
+*membre*<br/>
+Variable membre associée au contrôle de page de propriétés spécifié par *ID* et la propriété spécifiée par *pszPropName*.
 
-*pszPropName (en)*<br/>
-Le nom de propriété de la propriété de contrôle à échanger avec le contrôle de la case à cocher spécifié par *id*.
+*pszPropName*<br/>
+Nom de la propriété du contrôle à échanger avec le contrôle de case à cocher spécifié par *ID*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être `DDX_Check` appelée avant l’appel de fonction correspondant.
+Cette fonction doit être appelée avant l' `DDX_Check` appel de fonction correspondant.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex
 
-Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété d’intégrage avec l’index de la sélection actuelle dans une boîte de liste sur la page de propriété.
+Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété entière avec l’index de la sélection actuelle dans une zone de liste de la page de propriétés.
 
 ```cpp
 void AFXAPI DDP_LBIndex(
@@ -195,29 +195,29 @@ void AFXAPI DDP_LBIndex(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 *id*<br/>
-L’ID de ressource du contrôle de la boîte de liste associé à la propriété de contrôle spécifiée par *pszPropName*.
+ID de ressource du contrôle de zone de liste associé à la propriété de contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
-La variable du membre associée au contrôle de la page de propriété spécifiée par *id* et à la propriété spécifiée par *pszPropName*.
+*membre*<br/>
+Variable membre associée au contrôle de page de propriétés spécifié par *ID* et la propriété spécifiée par *pszPropName*.
 
-*pszPropName (en)*<br/>
-Le nom de propriété de la propriété de contrôle à échanger avec la chaîne de boîte de liste spécifiée par *id*.
+*pszPropName*<br/>
+Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste spécifiée par *ID*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être `DDX_LBIndex` appelée avant l’appel de fonction correspondant.
+Cette fonction doit être appelée avant l' `DDX_LBIndex` appel de fonction correspondant.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a>DDP_LBString
 
-Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété de chaîne avec la sélection actuelle dans une boîte de liste sur la page de propriété.
+Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété de type chaîne avec la sélection actuelle dans une zone de liste de la page de propriétés.
 
 ```cpp
 void AFXAPI DDP_LBString(
@@ -229,29 +229,29 @@ void AFXAPI DDP_LBString(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 *id*<br/>
-L’ID de ressource du contrôle de la boîte de liste associé à la propriété de contrôle spécifiée par *pszPropName*.
+ID de ressource du contrôle de zone de liste associé à la propriété de contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
-La variable du membre associée au contrôle de la page de propriété spécifiée par *id* et à la propriété spécifiée par *pszPropName*.
+*membre*<br/>
+Variable membre associée au contrôle de page de propriétés spécifié par *ID* et la propriété spécifiée par *pszPropName*.
 
-*pszPropName (en)*<br/>
-Le nom de propriété de la propriété de contrôle à échanger avec la chaîne de boîte de liste spécifiée par *id*.
+*pszPropName*<br/>
+Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste spécifiée par *ID*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être `DDX_LBString` appelée avant l’appel de fonction correspondant.
+Cette fonction doit être appelée avant l' `DDX_LBString` appel de fonction correspondant.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact
 
-Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété à cordes qui correspond exactement à la sélection actuelle dans une boîte de liste sur la page de propriété.
+Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété de type chaîne qui correspond exactement à la sélection actuelle dans une zone de liste de la page de propriétés.
 
 ```cpp
 void AFXAPI DDP_LBStringExact(
@@ -263,29 +263,29 @@ void AFXAPI DDP_LBStringExact(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 *id*<br/>
-L’ID de ressource du contrôle de la boîte de liste associé à la propriété de contrôle spécifiée par *pszPropName*.
+ID de ressource du contrôle de zone de liste associé à la propriété de contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
-La variable du membre associée au contrôle de la page de propriété spécifiée par *id* et à la propriété spécifiée par *pszPropName*.
+*membre*<br/>
+Variable membre associée au contrôle de page de propriétés spécifié par *ID* et la propriété spécifiée par *pszPropName*.
 
-*pszPropName (en)*<br/>
-Le nom de propriété de la propriété de contrôle à échanger avec la chaîne de boîte de liste spécifiée par *id*.
+*pszPropName*<br/>
+Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste spécifiée par *ID*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être `DDX_LBStringExact` appelée avant l’appel de fonction correspondant.
+Cette fonction doit être appelée avant l' `DDX_LBStringExact` appel de fonction correspondant.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing
 
-Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété, pour terminer le transfert des valeurs de propriété de la page de propriété à votre contrôle lorsque les valeurs de propriété sont enregistrées.
+Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` , pour terminer le transfert des valeurs de propriété de la page de propriétés à votre contrôle lorsque les valeurs de propriété sont enregistrées.
 
 ```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
@@ -293,22 +293,22 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être appelée une fois toutes les fonctions d’échange de données terminées. Par exemple :
+Cette fonction doit être appelée une fois que toutes les fonctions d’échange de données sont terminées. Par exemple :
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="ddp_radio"></a><a name="ddp_radio"></a>DDP_Radio
 
-Appelez cette fonction dans `DoPropExchange` la fonction de votre contrôle pour synchroniser la valeur de la propriété avec le contrôle de bouton radio de la page de propriété associée.
+Appelez cette fonction dans la fonction de votre contrôle `DoPropExchange` pour synchroniser la valeur de la propriété avec le contrôle de case d’option de la page de propriétés associée.
 
 ```cpp
 void AFXAPI DDP_Radio(
@@ -320,29 +320,29 @@ void AFXAPI DDP_Radio(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 *id*<br/>
-L’ID de ressource du contrôle de bouton radio associé à la propriété de commande spécifiée par *pszPropName*.
+ID de ressource du contrôle de case d’option associé à la propriété de contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
-La variable du membre associée au contrôle de la page de propriété spécifiée par *id* et à la propriété spécifiée par *pszPropName*.
+*membre*<br/>
+Variable membre associée au contrôle de page de propriétés spécifié par *ID* et la propriété spécifiée par *pszPropName*.
 
-*pszPropName (en)*<br/>
-Le nom de propriété de la propriété de contrôle à échanger avec le contrôle du bouton radio spécifié par *id*.
+*pszPropName*<br/>
+Nom de la propriété du contrôle à échanger avec le contrôle de case d’option spécifié par *ID*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être `DDX_Radio` appelée avant l’appel de fonction correspondant.
+Cette fonction doit être appelée avant l' `DDX_Radio` appel de fonction correspondant.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="ddp_text"></a><a name="ddp_text"></a>DDP_Text
 
-Appelez cette fonction dans `DoDataExchange` la fonction de votre contrôle pour synchroniser la valeur de la propriété avec le contrôle de la page de propriété associée.
+Appelez cette fonction dans la fonction de votre contrôle `DoDataExchange` pour synchroniser la valeur de la propriété avec le contrôle de page de propriétés associé.
 
 ```cpp
 void AFXAPI DDP_Text(
@@ -396,29 +396,29 @@ void AFXAPI DDP_Text(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pdx*<br/>
-Pointeur `CDataExchange` vers un objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
+*pDX*<br/>
+Pointeur vers un `CDataExchange` objet. L’infrastructure fournit cet objet pour établir le contexte de l’échange de données, notamment sa direction.
 
 *id*<br/>
-L’ID de ressource du contrôle associé à la propriété de contrôle spécifiée par *pszPropName*.
+ID de ressource du contrôle associé à la propriété de contrôle spécifiée par *pszPropName*.
 
-*Membre*<br/>
-La variable du membre associée au contrôle de la page de propriété spécifiée par *id* et à la propriété spécifiée par *pszPropName*.
+*membre*<br/>
+Variable membre associée au contrôle de page de propriétés spécifié par *ID* et la propriété spécifiée par *pszPropName*.
 
-*pszPropName (en)*<br/>
-Le nom de propriété de la propriété de contrôle à échanger avec le contrôle spécifié par *id*.
+*pszPropName*<br/>
+Nom de la propriété du contrôle à échanger avec le contrôle spécifié par *ID*.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être `DDX_Text` appelée avant l’appel de fonction correspondant.
+Cette fonction doit être appelée avant l' `DDX_Text` appel de fonction correspondant.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="begin_proppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS
 
-Commence la définition de la liste de votre contrôle des numéros de page de propriété.
+Commence la définition de la liste des ID de page de propriétés de votre contrôle.
 
 ```
 BEGIN_PROPPAGEIDS(class_name,  count)
@@ -427,24 +427,24 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="parameters"></a>Paramètres
 
 *class_name*<br/>
-Le nom de la classe de contrôle pour laquelle les pages de propriété sont spécifiées.
+Nom de la classe de contrôle pour laquelle les pages de propriétés sont spécifiées.
 
 *count*<br/>
-Nombre de pages de propriété utilisées par la classe de contrôle.
+Nombre de pages de propriétés utilisées par la classe de contrôle.
 
 ### <a name="remarks"></a>Notes
 
-Dans le fichier d’implémentation (.cpp) qui définit les fonctions des membres pour votre classe, démarrez la liste de page de propriété avec la BEGIN_PROPPAGEIDS macro, puis ajoutez des entrées macro pour chacune de vos pages de propriété, et remplissez la liste de page de propriété avec la macro END_PROPPAGEIDS.
+Dans le fichier d’implémentation (. cpp) qui définit les fonctions membres pour votre classe, démarrez la liste des pages de propriétés avec la macro BEGIN_PROPPAGEIDS, puis ajoutez des entrées de macro pour chacune de vos pages de propriétés, et complétez la liste des pages de propriétés avec la macro END_PROPPAGEIDS.
 
-Pour plus d’informations sur les pages de propriété, voir l’article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).
+Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : pages de propriétés](../../mfc/mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="end_proppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS
 
-Termine la définition de votre liste d’identification de page de propriété.
+Termine la définition de votre liste d’ID de page de propriétés.
 
 ```
 END_PROPPAGEIDS(class_name)
@@ -453,15 +453,15 @@ END_PROPPAGEIDS(class_name)
 ### <a name="parameters"></a>Paramètres
 
 *class_name*<br/>
-Le nom de la classe de contrôle qui possède la page de propriété.
+Nom de la classe de contrôle qui possède la page de propriétés.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="proppageid"></a><a name="proppageid"></a>PROPPAGEID
 
-Ajoute une page de propriété pour une utilisation par votre contrôle OLE.
+Ajoute une page de propriétés à utiliser par votre contrôle OLE.
 
 ```
 PROPPAGEID(clsid)
@@ -470,15 +470,15 @@ PROPPAGEID(clsid)
 ### <a name="parameters"></a>Paramètres
 
 *clsid*<br/>
-L’ID de classe unique d’une page de propriété.
+ID de classe unique d’une page de propriétés.
 
 ### <a name="remarks"></a>Notes
 
-Toutes les macros PROPPAGEID doivent être placées entre les macros BEGIN_PROPPAGEIDS et END_PROPPAGEIDS dans le fichier de mise en œuvre de votre contrôle.
+Toutes les macros PROPPAGEID doivent être placées entre les macros BEGIN_PROPPAGEIDS et END_PROPPAGEIDS dans le fichier d’implémentation de votre contrôle.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** afxctl.h
+  **En-tête** afxctl. h
 
 ## <a name="see-also"></a>Voir aussi
 

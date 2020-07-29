@@ -7,34 +7,34 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: b49c1b6f21dfe5270e40649241812320303ad411
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bfbc27dbcdeeb38c40f5d989bacd65a23198d4f5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370913"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213968"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Accès de type sécurisé aux contrôles avec Assistants Code
 
-Si vous connaissez les fonctionnalités DDX, vous pouvez utiliser la propriété Control dans [l’Assistant Variable De membre Ajouter](../ide/add-member-variable-wizard.md) pour créer un accès sans danger. Cette approche est plus facile que de créer des contrôles sans assistants de code.
+Si vous êtes familiarisé avec les fonctionnalités DDX, vous pouvez utiliser la propriété Control dans l' [Assistant Ajout de variable membre](../ide/add-member-variable-wizard.md) pour créer un accès de type sécurisé. Cette approche est plus facile que de créer des contrôles sans assistants code.
 
-Si vous voulez simplement accéder à la valeur d’un contrôle, DDX le fournit. Si vous voulez faire plus que d’accéder à la valeur d’un contrôle, utilisez l’assistant variable Add Member pour ajouter une variable de membre de la classe appropriée à votre classe de dialogue. Attachez cette variable de membre à la propriété Control.
+Si vous souhaitez simplement accéder à la valeur d’un contrôle, DDX le fournit. Si vous souhaitez faire plus que accéder à la valeur d’un contrôle, utilisez l’Assistant Ajout de variable membre pour ajouter une variable membre de la classe appropriée à votre classe de boîte de dialogue. Attachez cette variable membre à la propriété de contrôle.
 
-Les variables des membres peuvent avoir une propriété de contrôle au lieu d’une propriété de valeur. La propriété Value se réfère au type de données `CString` retournées du contrôle, telles que ou **int**. La propriété Control permet un accès direct au contrôle par l’intermédiaire d’un `CButton` `CEdit`membre de données dont le type est l’une des classes de contrôle de MFC, comme ou .
+Les variables membres peuvent avoir une propriété de contrôle au lieu d’une propriété de valeur. La propriété Value fait référence au type de données retourné par le contrôle, tel que `CString` ou **`int`** . La propriété de contrôle permet un accès direct au contrôle via un membre de données dont le type est l’une des classes de contrôle dans MFC, tel que `CButton` ou `CEdit` .
 
 > [!NOTE]
-> Pour un contrôle donné, vous pouvez, si vous le souhaitez, avoir plusieurs variables de membre avec la propriété De valeur et tout au plus une variable de membre avec la propriété de contrôle. Vous ne pouvez avoir qu’un seul objet MFC cartographié à un contrôle parce que plusieurs objets attachés à un contrôle, ou toute autre fenêtre, conduirait à une ambiguïté dans la carte de message.
+> Pour un contrôle donné, vous pouvez, si vous le souhaitez, avoir plusieurs variables membres avec la propriété Value et au plus une variable membre avec la propriété Control. Vous ne pouvez avoir qu’un seul objet MFC mappé à un contrôle, car plusieurs objets attachés à un contrôle, ou toute autre fenêtre, aboutissent à une ambiguïté dans la table des messages.
 
-Vous pouvez utiliser cet objet pour appeler n’importe quelle fonction de membre pour l’objet de commande. De tels appels affectent le contrôle dans la boîte de dialogue. Par exemple, pour un contrôle de la *m_Checkbox*case à cocher `CButton`représenté par une m_Checkbox variable, du type, vous pouvez appeler :
+Vous pouvez utiliser cet objet pour appeler n’importe quelle fonction membre pour l’objet de contrôle. De tels appels affectent le contrôle dans la boîte de dialogue. Par exemple, pour un contrôle de case à cocher représenté par une variable *m_Checkbox*, de type `CButton` , vous pouvez appeler :
 
 [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]
 
-Ici, la variable du membre *m_Checkbox* sert le `GetMyCheckbox` même but que la fonction membre indiquée dans [Type-Safe Access to Controls Without Code Wizards](../mfc/type-safe-access-to-controls-without-code-wizards.md). Si la case à cocher n’est pas une case à cocher automatique, vous auriez toujours besoin d’un gestionnaire dans votre classe de dialogue pour le message de contrôle-notification BN_CLICKED lorsque le bouton est cliqué.
+Ici, la variable membre *m_Checkbox* remplit le même objectif que la fonction membre `GetMyCheckbox` indiquée dans l’accès de [type sécurisé aux contrôles sans assistants code](../mfc/type-safe-access-to-controls-without-code-wizards.md). Si la case à cocher n’est pas une case à cocher automatique, vous avez toujours besoin d’un gestionnaire dans votre classe de boîte de dialogue pour le BN_CLICKED message de notification de contrôle lorsque l’utilisateur clique sur le bouton.
 
-Pour plus d’informations sur les contrôles, voir [Contrôles](../mfc/controls-mfc.md).
+Pour plus d’informations sur les contrôles, consultez [contrôles](../mfc/controls-mfc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Accès de type-sûr aux contrôles dans une boîte de dialogue](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
+[Accès de type sécurisé aux contrôles dans une boîte de dialogue](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
 [Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>
-[Accès de type sécurisé aux contrôles sans Assistants Code](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+[Accès de type sécurisé aux contrôles sans assistants code](../mfc/type-safe-access-to-controls-without-code-wizards.md)

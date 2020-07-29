@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - demoting integers
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
-ms.openlocfilehash: edfb8f03094c10cf0cf33b0eb799d5d822ac017d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aee0a5041cd37b1fbad785b760b8cefde74eb195
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234403"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218882"
 ---
 # <a name="demotion-of-integers"></a>Rétrogradation des entiers
 
 **ANSI 3.2.1.2** Le résultat de la conversion d’un entier en un entier signé plus court, ou le résultat de la conversion d’un entier non signé en entier signé de longueur égale si la valeur ne peut pas être représentée
 
-Lorsqu’un entier **long** est casté en un **short** ou qu’un **short** est casté en un `char`, les octets moins significatifs sont conservés.
+Lorsqu’un **`long`** entier est casté en **`short`** , ou un **`short`** est casté en un **`char`** , les octets les moins significatifs sont conservés.
 
 Par exemple, cette ligne
 
@@ -31,7 +31,7 @@ char y = (char)0x1234;
 
 assigne la valeur 0x34 à `y`.
 
-Lorsque des variables signées sont converties en variables non signées et vice versa, les modèles binaires restent les mêmes. Par exemple, le cast de -2 (0xFE) en une valeur non signée produit 254 (également 0xFE).
+Lorsque **`signed`** les variables sont converties vers **`unsigned`** et vice versa, les modèles binaires restent les mêmes. Par exemple, Cast-2 (0xFE) en une **`unsigned`** valeur produit 254 (également 0xFE).
 
 ## <a name="see-also"></a>Voir aussi
 

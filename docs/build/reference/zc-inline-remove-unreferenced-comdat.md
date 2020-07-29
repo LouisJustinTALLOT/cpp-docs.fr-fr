@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 42791b2e337fb9a9724a165145e757152b8d679d
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 290252262254521c024d7b0d6355472199d1f55d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518242"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218960"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (supprimer des éléments COMDAT non référencés)
 
@@ -23,15 +23,15 @@ Supprime les données non référencées ou les fonctions qui sont des COMDAT, o
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:inline**[ **-** ]
+> **/Zc : Inline**[ **-** ]
 
 ## <a name="remarks"></a>Notes
 
 Quand **/Zc : Inline** est spécifié, le compilateur n’émet pas d’informations de symbole pour les fonctions ou les données COMDAT non référencées. Ou, pour les données ou les fonctions qui ont uniquement une liaison interne. Cette optimisation simplifie une partie du travail de l’éditeur de liens dans les versions release, ou lorsque vous spécifiez l’option de l’éditeur de liens [/OPT : Ref](opt-optimizations.md) . Cette optimisation du compilateur peut réduire considérablement la taille du fichier. objet améliorer les vitesses de l’éditeur de liens. L’option de compilateur n’est pas activée lorsque vous désactivez les optimisations ([/OD](od-disable-debug.md)). Ou, lorsque vous spécifiez [/GL (optimisation de l’ensemble du programme)](gl-whole-program-optimization.md).
 
-Par défaut, cette option est désactivée ( **/Zc : Inline-** ) dans les générations à partir de la ligne de commande. L’option [/permissive-](permissive-standards-conformance.md) n’active pas **/Zc : Inline**. Dans les projets MSBuild, l’option est définie par **les propriétés de configuration** > **langage** **C/C++**  >  > supprimer le code et la propriété de données non **référencés** , qui est défini sur **Oui** par défaut.
+Par défaut, cette option est désactivée (**/Zc : Inline-**) dans les générations à partir de la ligne de commande. L’option [/permissive-](permissive-standards-conformance.md) n’active pas **/Zc : Inline**. Dans les projets MSBuild, l’option est définie par les **Propriétés de configuration**  >  **langage C/C++**  >  **Language**  >  **supprimer le code et** la propriété de données non référencés, qui est défini sur **Oui** par défaut.
 
-Si **/Zc : Inline** est spécifié, le compilateur applique la condition c++ 11 stipulant que toutes les fonctions déclarées `inline` doivent avoir une définition disponible dans la même unité de traduction si elles sont utilisées. Lorsque l’option n’est pas spécifiée, le compilateur Microsoft autorise le code non conforme qui appelle les fonctions déclarées `inline` même si aucune définition n’est visible. Pour plus d'informations, voir la norme C++11, section 3.2 et section 7.1.2. Cette option du compilateur a été introduite pour la première fois dans Visual Studio 2013 Update 2.
+Si **/Zc : Inline** est spécifié, le compilateur applique la condition c++ 11 stipulant que toutes les fonctions déclarées **`inline`** doivent avoir une définition disponible dans la même unité de traduction si elles sont utilisées. Lorsque l’option n’est pas spécifiée, le compilateur Microsoft autorise le code non conforme qui appelle les fonctions déclarées **`inline`** même si aucune définition n’est visible. Pour plus d'informations, voir la norme C++11, section 3.2 et section 7.1.2. Cette option du compilateur a été introduite pour la première fois dans Visual Studio 2013 Update 2.
 
 Pour utiliser l’option **/Zc : Inline** , mettez à jour le code non conforme.
 
@@ -77,9 +77,9 @@ int main() {
 }
 ```
 
-Quand **/Zc : Inline** est activé, le même code provoque une erreur [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) , car le compilateur n’émet pas de corps de code non inclus pour `Example::inline_call` dans example. obj. Cela amène l’appel non inline dans `main` à faire référence à un symbole externe non défini.
+Quand **/Zc : Inline** est activé, le même code provoque une erreur [LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md) , car le compilateur n’émet pas de corps de code non inclus pour `Example::inline_call` dans example. obj. Cela amène l’appel non inline dans `main` à référencer un symbole externe non défini.
 
-Pour résoudre cette erreur, vous pouvez supprimer le mot clé `inline` de la déclaration de `Example::inline_call`, placer la définition de `Example::inline_call` dans le fichier d'en-tête ou placer l'implémentation de `Example` dans main.cpp. Dans l'exemple suivant, la définition est placée dans le fichier d'en-tête, où elle est visible pour tout appelant qui inclut l'en-tête.
+Pour résoudre cette erreur, vous pouvez supprimer le **`inline`** mot clé de la déclaration de `Example::inline_call` , déplacer la définition de `Example::inline_call` dans le fichier d’en-tête ou déplacer l’implémentation de `Example` dans main. cpp. Dans l'exemple suivant, la définition est placée dans le fichier d'en-tête, où elle est visible pour tout appelant qui inclut l'en-tête.
 
 ```cpp
 // example2.h
@@ -125,7 +125,7 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez les **Propriétés de configuration** > page de propriétés **langue** **CC++ /**  > .
+1. Sélectionnez la page de propriétés de la propriété de **configuration**  >  **C/C++**  >  **Language** .
 
 1. Modifiez la propriété **supprimer le code et les données non référencés** , puis choisissez **OK**.
 

@@ -1,17 +1,17 @@
 ---
-title: HelpString (C++ attribut com)
+title: HelpString (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: d22ecf5a7131a1368abf2b1fbd8261ec6195b51e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 18a8dbea2387224070903aa10c812c9dd079bf96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166963"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217257"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -30,7 +30,7 @@ Texte de la chaîne d’aide.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **helpString** C++ a les mêmes fonctionnalités que l’attribut MIDL de [helpString](/windows/win32/Midl/helpstring) .
+L’attribut C++ **helpString** a les mêmes fonctionnalités que l’attribut MIDL [helpString](/windows/win32/Midl/helpstring) .
 
 ## <a name="example"></a>Exemple
 
@@ -42,8 +42,8 @@ Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemp
 
 |||
 |-|-|
-|**S'applique à**|**interface**, **typedef**, **classe**, méthode, propriété|
-|**Renouvelable**|Non|
+|**S’applique à**|**interface**, **`typedef`** , **`class`** , méthode, propriété|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -55,6 +55,6 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs d’interface](interface-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
 [helpcontext](helpcontext.md)

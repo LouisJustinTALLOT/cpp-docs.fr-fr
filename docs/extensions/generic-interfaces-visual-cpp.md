@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 35dba37f1441144a3f7276388be1f61bebc84139
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182017"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218024"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfaces génériques (C++/CLI)
 
@@ -36,7 +36,7 @@ Pour plus d’informations sur les interfaces, consultez [Classe d’interface](
 (Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et les classes d’attributs, consultez **Attributs**.
 
 *class-key*<br/>
-**class** ou **typename**
+**`class`** ni**`typename`**
 
 *type-parameter-identifier(s)*<br/>
 Liste d’identificateurs séparés par des virgules.
@@ -45,9 +45,9 @@ Liste d’identificateurs séparés par des virgules.
 Prend la forme spécifiée dans [Contraintes sur les paramètres de type générique (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)
 
 *accessibility-modifiers*<br/>
-(Facultatif) Modificateurs d’accessibilité (par exemple, **public, private**).
+Facultatif Modificateurs d’accessibilité (par exemple **, public, privé**).
 
-*identifier*<br/>
+*identificateur*<br/>
 Nom de l’interface.
 
 *base-list*<br/>

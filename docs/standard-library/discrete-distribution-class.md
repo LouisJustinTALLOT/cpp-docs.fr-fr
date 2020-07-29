@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 83d69df399d556025d0f7d4a8ccd714ff43a76ec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 65d5c993efd1cb9c6dd35f11223ed39e026ed7c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368775"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217803"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution, classe
 
@@ -72,8 +72,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType (IntType)*\
-Le type de résultat integer, par défaut à **int**. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
+*IntType*\
+Le type de résultat entier est par défaut **`int`** . Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Notes
 
@@ -88,7 +88,7 @@ Le tableau suivant contient des liens vers des articles sur différents membres�
 
 La fonction de propriété `vector<double> probabilities()` retourne les probabilités individuelles pour chaque entier généré.
 
-Pour plus d’informations sur les [ \< ](../standard-library/random.md)classes de distribution et leurs membres, voir>aléatoire .
+Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md) .
 
 ## <a name="example"></a>Exemple
 
@@ -171,11 +171,11 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<random>
+**En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution::discrete-distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution ::d iscrete_distribution
 
 Construit la distribution.
 
@@ -206,20 +206,20 @@ Premier itérateur dans la liste à partir duquel construire la distribution.
 *lastW*\
 Dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide pour la fin).
 
-*liste de poids*\
+*weightlist*\
 [initializer_list](../cpp/initializers.md) à partir duquel construire la distribution.
 
-*Compter*\
+*saut*\
 Nombre d'éléments dans la plage de distribution. Si `count==0`, équivalent au constructeur par défaut (génère toujours zéro).
 
-*Faible*\
+*entrée*\
 Valeur la plus faible de la plage de distribution.
 
-*Haute*\
+*rapide*\
 Valeur la plus élevée de la plage de distribution.
 
-*poidsfunc*\
-Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de rendement doivent être convertibles pour **doubler.**
+*weightfunc*\
+Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **`double`** .
 
 *Parm*\
 Structure `param_type` utilisée pour construire la distribution.
@@ -230,16 +230,16 @@ Le constructeur par défaut construit un objet dont la valeur de probabilité st
 
 Le constructeur de plage d’itérateurs qui a les paramètres *firstW* et *lastW* construit un objet de distribution à l’aide de valeurs de poids prises dans les itérateurs sur la séquence d’intervalle [*firstW*, *lastW*).
 
-Le constructeur de liste initialisateur qui a un paramètre *de liste de poids* construit un objet de distribution avec des poids de la liste de poids de liste *initialisateur*.
+Le constructeur de liste d’initialiseurs qui a un paramètre *weightlist* construit un objet de distribution avec des pondérations de la liste d’initialiseurs *weightlist*.
 
 Le constructeur qui a les paramètres *ount*, *low*, *igh* et *weightfunc* construit un objet de distribution initialisé selon ces règles :
 
 - Si *count* < 1, **n** = 1 et, par conséquent, est équivalent au constructeur par défaut qui génère toujours zéro.
-- Si *count* > 0, **n** = *count*. Fourni **d** ' (*haut* - *bas*) / **n** est plus grand que zéro, en utilisant **d** sous-ranges uniformes, chaque poids est attribué comme suit: `weight[k] = weightfunc(x)`, où **x** = *faible* + **k** * **d** + **/** 2, pour **k** - 0, ..., **n** - 1.
+- Si *count* > 0, **n** = *count*. Fourni **d** = (*haut*  -  *bas*)/ **n** est supérieur à zéro, à l’aide des sous-plages uniformes **d** , chaque poids est affecté comme suit : `weight[k] = weightfunc(x)` , où **x**  =  *faible*  +  **k**  *  **d**  +  **d** /2, pour **k** = 0,..., **n** -1.
 
 Le constructeur qui a un paramètre `param_type`*parm* construit un objet de distribution qui utilise *parm* comme structure de paramètre stockée.
 
-## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution::param-type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution ::p aram_type
 
 Stocke tous les paramètres de la distribution.
 
@@ -274,20 +274,20 @@ Premier itérateur dans la liste à partir duquel construire la distribution.
 *lastW*\
 Dernier itérateur dans la liste à partir duquel construire la distribution (non compris car les itérateurs utilisent un élément vide pour la fin).
 
-*liste de poids*\
+*weightlist*\
 [initializer_list](../cpp/initializers.md) à partir duquel construire la distribution.
 
-*Compter*\
+*saut*\
 Nombre d'éléments dans la plage de distribution. Si *count* a la valeur 0, il est équivalent au constructeur par défaut (génère toujours zéro).
 
-*Faible*\
+*entrée*\
 Valeur la plus faible de la plage de distribution.
 
-*Haute*\
+*rapide*\
 Valeur la plus élevée de la plage de distribution.
 
-*poidsfunc*\
-Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de rendement doivent être convertibles pour **doubler.**
+*weightfunc*\
+Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **`double`** .
 
 *Oui*\
 Objet `param_type` à comparer à this.
@@ -298,4 +298,4 @@ Ce package de paramètres peut être passé à `operator()` pour générer la va
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<>aléatoires](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

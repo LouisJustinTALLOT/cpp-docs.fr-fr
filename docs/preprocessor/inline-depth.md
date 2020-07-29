@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-ms.openlocfilehash: be57178280e278683b85db1413ff5724b5260aef
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 73540ec19c4ecc18a740dace0d23a37ad43182c0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220985"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219415"
 ---
 # <a name="inline_depth-pragma"></a>inline_depth, pragma
 
@@ -25,7 +25,7 @@ Spécifie la profondeur de recherche heuristique Inline. Les fonctions d’une p
 
 ## <a name="remarks"></a>Notes
 
-Ce pragma contrôle l’incorporation des fonctions marquées [inline](../cpp/inline-functions-cpp.md) et [_ _ Inline,](../cpp/inline-functions-cpp.md)ou Inline automatiquement `/Ob` sous l’option.
+Ce pragma contrôle l’incorporation des fonctions marquées [inline](../cpp/inline-functions-cpp.md) et [__inline](../cpp/inline-functions-cpp.md), ou Inline automatiquement sous l' `/Ob` option.
 
 *n* peut être une valeur comprise entre 0 et 255, où 255 signifie une profondeur illimitée dans le graphique des appels. La valeur 0 empêche l’expansion Inline. Lorsque *n* n’est pas spécifié, la valeur par défaut 254 est utilisée.
 
@@ -33,14 +33,14 @@ Le pragma **inline_depth** contrôle le nombre de fois qu’une série d’appel
 
 Pour utiliser ce pragma, vous devez définir l' `/Ob` option de compilateur sur une valeur supérieure ou égale à 1. La profondeur définie à l'aide de ce pragma entre en vigueur au premier appel de fonction après le pragma.
 
-La profondeur incluse peut être réduite pendant l’expansion, mais elle n’est pas augmentée. Si la profondeur incluse est 6, et Pendant l’expansion, le préprocesseur rencontre un pragma **inline_depth** avec une valeur de 8, la profondeur reste 6.
+La profondeur incluse peut être réduite pendant l’expansion, mais elle n’est pas augmentée. Si la profondeur incluse est 6, et Pendant l’expansion, le préprocesseur rencontre un **inline_depth** pragma avec une valeur de 8, la profondeur reste 6.
 
-Le pragma **inline_depth** n’a aucun effet sur les fonctions `__forceinline`marquées avec.
+Le pragma **inline_depth** n’a aucun effet sur les fonctions marquées avec **`__forceinline`** .
 
 > [!NOTE]
 > Les fonctions récursives peuvent être substituées inline à une profondeur maximale de 16 appels.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[Directives pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [inline_recursion](../preprocessor/inline-recursion.md)

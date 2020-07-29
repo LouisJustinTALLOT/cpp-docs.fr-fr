@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 0445901f935dbf16872dfeca40ca8d9808dd774e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737573"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219350"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 
@@ -162,7 +162,7 @@ class SafeInt;
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La classe `SafeInt` protège contre les dépassements sur les entiers dans les opérations mathématiques. Par exemple, vous pouvez ajouter deux entiers 8 bits, l’un avec une valeur de 200 et l’autre avec une valeur de 100. L’opération mathématique correcte serait 100 + 200 = 300. Toutefois, en raison de la limitation de l’entier 8 bits, le bit supérieur sera perdu et le compilateur retournera 44 (300 - 2<sup>8</sup>) comme résultat. Toute opération dépendant de cette équation mathématique générera un comportement inattendu.
 
@@ -187,7 +187,7 @@ Lorsque vous effectuez une comparaison logique avec un objet SafeInt, la compara
 
 - `((uint)~0) > -1`
 
-La première instruction correspond à **true**, mais la deuxième instruction correspond à `false`. La négation d’opération de bits de 0 est 0xFFFFFFFF. Dans la deuxième instruction, l’opérateur de comparaison par défaut compare 0xFFFFFFFF à 0xFFFFFFFF et les considère comme égaux. L’opérateur de comparaison pour la `SafeInt` classe se rend compte que le deuxième paramètre est négatif, mais que le premier paramètre n’est pas signé. Ainsi, bien que la représentation de bits soit identique, l' `SafeInt` opérateur logique se rend compte que l’entier non signé est supérieur à-1.
+La première instruction correspond à **`true`** , mais la deuxième instruction correspond à **`false`** . La négation d’opération de bits de 0 est 0xFFFFFFFF. Dans la deuxième instruction, l’opérateur de comparaison par défaut compare 0xFFFFFFFF à 0xFFFFFFFF et les considère comme égaux. L’opérateur de comparaison de la classe `SafeInt` se rend compte que le deuxième paramètre est négatif, tandis que le premier paramètre n’est pas signé. Par conséquent, bien que la représentation binaire soit identique, l’opérateur logique `SafeInt` se rend compte que l’entier non signé est supérieur à -1.
 
 Soyez prudent lorsque vous utilisez la classe `SafeInt` avec l’opérateur ternaire `?:`. Examinez la ligne de code suivante.
 
@@ -201,7 +201,7 @@ Le compilateur la convertit ainsi :
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 ```
 
-Si `flag` est `false`, le compilateur lève une exception au lieu d’affecter la valeur -1 à `x`. Par conséquent, pour éviter ce comportement, le code approprié à utiliser est la ligne suivante.
+Si `flag` est **`false`** , le compilateur lève une exception au lieu d’assigner la valeur de-1 à `x` . Par conséquent, pour éviter ce comportement, le code approprié à utiliser est la ligne suivante.
 
 ```cpp
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
@@ -279,7 +279,7 @@ SafeInt (const U& i)
 
 `U`Type des données stockées dans le `SafeInt` . Il peut s’agit d’un type booléen, d’un type de caractère ou d’un type entier. S’il s’agit d’un type entier, il peut être signé ou non signé et être compris entre 8 et 64 bits.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le paramètre d’entrée pour le constructeur, *i* ou *u*, doit être un type booléen, de caractère ou entier. S’il s’agit d’un autre type de paramètre, la `SafeInt` classe appelle [static_assert](../cpp/static-assert.md) pour indiquer un paramètre d’entrée non valide.
 

@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d4ec3036a5c4d42d9d98e91f628416b75e596d12
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: 56719f6919b9329e74c947bc74053562d7743215
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630462"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213942"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tableau de conformité du langage Microsoft C++
 
@@ -136,9 +136,9 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 | &nbsp;&nbsp;[`P1907R1 Inconsistencies with non-type template parameters`](https://wg21.link/P1907R1) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1971R0 US053: Mandate the return type for return_void and return_value to be void`](https://wg21.link/P1971R0) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1971R0 US065: Apply Coroutines issue 24 from P0664R8`](https://wg21.link/P1971R0) | VS 2019 16,6 <sup> [20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Partial |
-| &nbsp;&nbsp;[`P0912R5 Coroutines`](https://wg21.link/P0912R5) | Partial |
-| &nbsp;&nbsp;[`P1103R3 Modules`](https://wg21.link/P1103R3) | Partial |
+| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Partiel |
+| &nbsp;&nbsp;[`P0912R5 Coroutines`](https://wg21.link/P0912R5) | Partiel |
+| &nbsp;&nbsp;[`P1103R3 Modules`](https://wg21.link/P1103R3) | Partiel |
 | &nbsp;&nbsp;[`P1141R2 Yet another approach for constrained declarations`](https://wg21.link/P1141R2) | Partiel |
 | &nbsp;&nbsp;[`P0315R4 Allowing lambdas in unevaluated contexts`](https://wg21.link/P0315R4) | Non |
 | &nbsp;&nbsp;[`P0388R4 Permit conversions to arrays of unknown bound`](https://wg21.link/P0388R4) | Non |
@@ -397,7 +397,7 @@ __VS 2019 16,6__ indique les fonctionnalités prises en charge dans Visual Studi
 
 ### <a name="notes"></a>Notes
 
-<a name="note_A"></a>__En__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) mode, les spécifications d’exceptions dynamiques restent non implémentées et `throw()` sont toujours traitées comme un synonyme de `__declspec(nothrow)` . Dans C++17, la plupart des spécifications d’exceptions dynamiques ont été supprimées par P0003R5, laissant un vestige : `throw()` est déconseillé et doit se comporter comme synonyme de `noexcept`. En [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) mode, MSVC est maintenant conforme à la norme en donnant `throw()` le même comportement que `noexcept` , autrement dit, la mise en œuvre via la terminaison.
+<a name="note_A"></a>__En__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) mode, les spécifications d’exceptions dynamiques restent non implémentées et `throw()` sont toujours traitées comme un synonyme de `__declspec(nothrow)` . En C++ 17, les spécifications d’exceptions dynamiques étaient principalement supprimées par P0003R5, laissant un vestige : `throw()` est déconseillé et doit se comporter comme synonyme de **`noexcept`** . En [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) mode, MSVC est maintenant conforme à la norme en donnant `throw()` le même comportement que **`noexcept`** , autrement dit, la mise en œuvre via la terminaison.
 
 L’option [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) de compilateur demande notre ancien comportement de `__declspec(nothrow)` . Il est probable qu’il sera `throw()` supprimé en c++ 20. Pour faciliter la migration du code en réponse à ces modifications dans la norme et notre implémentation, de nouveaux avertissements du compilateur pour les problèmes de spécification d’exception ont été ajoutés sous [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) et [`/permissive-`](../build/reference/permissive-standards-conformance.md) .
 
@@ -407,7 +407,7 @@ L’option [`/Zc:noexceptTypes`](../build/reference/zc-noexcepttypes.md) de comp
 
 <a name="note_D"></a>__D__ pris en charge sous [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) avec un avertissement suppressible, [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md) .
 
-<a name="note_E"></a>__E__ il s’agit d’une implémentation entièrement nouvelle, incompatible avec la `std::experimental` version précédente, rendue nécessaire par la prise en charge des liens symboliques, des correctifs de bogues et des modifications du comportement requis standard. Actuellement, l’inclusion de \<filesystem> fournit le nouveau `std::filesystem` et le `std::experimental::filesystem` précédent, et l’inclusion de \<experimental/filesystem> fournit uniquement l’ancienne implémentation expérimentale. L’implémentation expérimentale sera supprimée de la prochaine version de rupture avec ABI des bibliothèques.
+<a name="note_E"></a>__E__ il s’agit d’une implémentation entièrement nouvelle, incompatible avec la `std::experimental` version précédente, rendue nécessaire par la prise en charge des liens symboliques, des correctifs de bogues et des modifications du comportement requis standard. Actuellement, y compris \<filesystem> fournit le nouveau `std::filesystem` et le précédent `std::experimental::filesystem` , et inclut \<experimental/filesystem> uniquement l’ancienne implémentation expérimentale. L’implémentation expérimentale sera supprimée de la prochaine version de rupture avec ABI des bibliothèques.
 
 <a name="note_G"></a> __G__ Pris en charge par une fonction intrinsèque du compilateur.
 

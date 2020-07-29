@@ -1,5 +1,5 @@
 ---
-title: agrégats (C++ attribut com)
+title: agrégats (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 08e623d84553f9fcf556c9cf480c1816c7300460
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65a166faa9380272c87af92ebaf8294c0e0b1af3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168497"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217283"
 ---
 # <a name="aggregates"></a>agrégats
 
@@ -28,11 +28,11 @@ Indique que l’objet agrège l’objet spécifié par le CLSID.
 
 ### <a name="parameters"></a>Paramètres
 
-*identificateur*<br/>
+*clsid*<br/>
 Spécifie le CLSID de l’objet qui peut être agrégé.
 
 *variable_name*<br/>
-Nom de la variable à insérer. Cette variable contient la `IUnknown` de l’objet en cours d’agrégation.
+Nom de la variable à insérer. Cette variable contient le `IUnknown` de l’objet en cours d’agrégation.
 
 ## <a name="remarks"></a>Notes
 
@@ -83,9 +83,9 @@ struct CObject : IObject
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**|
-|**Renouvelable**|Oui|
-|**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass`, `progid`ou `vi_progid`.|
+|**S’applique à**|**`class`**, **`struct`**|
+|**Repeatable Read**|Oui|
+|**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass` , `progid` ou `vi_progid` .|
 |**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
@@ -94,7 +94,7 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 [Attributs COM](com-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agrégation](/windows/win32/com/aggregation)<br/>
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Agréger](/windows/win32/com/aggregation)<br/>
 [Ne pouvant faire](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

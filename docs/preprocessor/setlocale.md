@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: 219354595e5c63b2f13211d43bfa517d97413251
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9603c132610e0cfb1e8f955be48271870527105b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218177"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219376"
 ---
 # <a name="setlocale-pragma"></a>setlocale, pragma
 
@@ -29,7 +29,7 @@ Définit les *paramètres régionaux*, le pays, la région et la langue à utili
 
 Les *paramètres régionaux* par défaut sont «».
 
-Les paramètres régionaux «C» mappent chaque caractère de la chaîne à sa valeur en tant que **wchar_t**. Les autres valeurs valides pour `setlocale` sont les entrées trouvées dans la liste des chaînes de [langue](../c-runtime-library/language-strings.md) . Par exemple, vous pouvez spécifier:
+Les paramètres régionaux « C » mappent chaque caractère de la chaîne à sa valeur en tant que **`wchar_t`** . Les autres valeurs valides pour `setlocale` sont les entrées trouvées dans la liste des [chaînes de langue](../c-runtime-library/language-strings.md) . Par exemple, vous pouvez spécifier :
 
 ```cpp
 #pragma setlocale("dutch")
@@ -39,4 +39,4 @@ La possibilité de spécifier une chaîne de langue dépend de la prise en charg
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

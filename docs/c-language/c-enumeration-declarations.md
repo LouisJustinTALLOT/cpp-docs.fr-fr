@@ -9,26 +9,26 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-ms.openlocfilehash: bc238dd0088558233d84f8bbd15d06743e133449
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d917c93ab8ef2e896f3ef09c9d9191dae49116c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326012"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213721"
 ---
 # <a name="c-enumeration-declarations"></a>Déclarations d'énumération C
 
 Une énumération se compose d'un ensemble de constantes entières nommées. Une déclaration de type énumération indique le nom de la balise d'énumération (facultative) et définit l'ensemble des identificateurs d'entiers nommés (appelés « ensemble d'énumération », « constantes d'énumérateur », « énumérateurs » ou « membres »). Une variable avec type énumération stocke une des valeurs de l'ensemble d'énumération défini par ce type.
 
-Les variables de type `enum` peuvent être utilisées dans des expressions d'indexation et comme opérandes de tous les opérateurs arithmétiques et relationnels. Les énumérations offrent une alternative à la directive de préprocesseur `#define` et présentent l'avantage suivant : les valeurs peuvent être générées pour vous et se conformer aux règles normales de portée.
+Les variables de **`enum`** type peuvent être utilisées dans des expressions d’indexation et comme opérandes de tous les opérateurs arithmétiques et relationnels. Les énumérations offrent une alternative à la directive de préprocesseur `#define` et présentent l'avantage suivant : les valeurs peuvent être générées pour vous et se conformer aux règles normales de portée.
 
-En C ANSI, les expressions qui définissent la valeur d'une constante d'énumérateur ont toujours le type `int` ; par conséquent, le stockage associé à une variable d'énumération est celui requis pour une seule valeur `int` unique. Une constante d'énumération ou une valeur de type énuméré peut être utilisée partout où le langage C autorise une expression d'entier.
+En C ANSI, les expressions qui définissent la valeur d’une constante d’énumérateur ont toujours le **`int`** type ; par conséquent, le stockage associé à une variable d’énumération est le stockage requis pour une **`int`** valeur unique. Une constante d'énumération ou une valeur de type énuméré peut être utilisée partout où le langage C autorise une expression d'entier.
 
 ## <a name="syntax"></a>Syntaxe
 
 *enum-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;identificateur d' **énumération** *identifier*<sub>OPT</sub> **{** *Enumerator-List* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identificateur* d' **énumération**
+&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***identificateur*<sub>OPT</sub> **{** *Enumerator-List* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`enum`***identificateur*
 
 L'élément facultatif *identifier* désigne le type énumération défini par *enumerator-list*. Cet identificateur est souvent appelé « étiquette » de l’énumération spécifiée par la liste. Un spécificateur de type de la forme
 
@@ -41,7 +41,7 @@ enum identifier
 
 déclare l'élément *identifier* comme devant être la balise de l'énumération spécifiée par l'élément non terminal *enumerator-list*. L'élément *enumerator-list* définit le « contenu d'énumérateur ». L'élément *enumerator-list* est décrit en détail ci-dessous.
 
-Si la déclaration d’une étiquette est visible, les déclarations suivantes qui utilisent l’étiquette mais omettent l’élément *enumerator-list* spécifient le type énuméré déclaré précédemment. L’étiquette doit faire référence à un type énumération défini, et ce type énumération doit se trouver dans la portée actuelle. Étant donné que le type énumération est défini ailleurs, l'élément *enumerator-list* n'apparaît pas dans cette déclaration. Les déclarations des types dérivés à partir des énumérations et les déclarations de `typedef` pour les types énumération peuvent utiliser la balise d'énumération avant que le type énumération ne soit défini.
+Si la déclaration d’une étiquette est visible, les déclarations suivantes qui utilisent l’étiquette mais omettent l’élément *enumerator-list* spécifient le type énuméré déclaré précédemment. L’étiquette doit faire référence à un type énumération défini, et ce type énumération doit se trouver dans la portée actuelle. Étant donné que le type énumération est défini ailleurs, l'élément *enumerator-list* n'apparaît pas dans cette déclaration. Les déclarations de types dérivées des énumérations et des **`typedef`** déclarations pour les types énumération peuvent utiliser la balise d’énumération avant que le type énumération soit défini.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,14 +51,14 @@ Si la déclaration d’une étiquette est visible, les déclarations suivantes q
 
 *énumérateur*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*énumération-constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*énumération-* **=** constante constante *-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*énumération-constante* **=** *constant-expression*
 
 *énumération-constante*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identificateur*
 
 Chaque élément *enumeration-constant* d'un élément *enumeration-list* désigne une valeur de l'ensemble d'énumération. Par défaut, le premier élément *enumeration-constant* est associé à la valeur 0. L'élément *enumeration-constant* suivant dans la liste est associé à la valeur de (*constant-expression* + 1), sauf si vous l'associez explicitement à une autre valeur. Le nom d'un élément *enumeration-constant* est équivalent à sa valeur.
 
-Vous pouvez utiliser *enumeration-constant = constant-expression* pour remplacer la séquence de valeurs par défaut. Par conséquent, si *enumeration-constant = constant-expression* apparaît dans l'élément *enumerator-list*, l'élément *enumeration-constant* est associé à la valeur indiquée par *constant-expression*. L'élément *constant-expression* doit avoir le type `int` et peut être négatif.
+Vous pouvez utiliser *enumeration-constant = constant-expression* pour remplacer la séquence de valeurs par défaut. Par conséquent, si *enumeration-constant = constant-expression* apparaît dans l'élément *enumerator-list*, l'élément *enumeration-constant* est associé à la valeur indiquée par *constant-expression*. L' *expression constante* doit être de **`int`** type et peut être négative.
 
 Les règles suivantes s'appliquent aux membres d'un ensemble d'énumération :
 

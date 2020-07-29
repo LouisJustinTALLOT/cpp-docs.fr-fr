@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - empty method
 ms.assetid: 2055418d-3c42-4d28-a7db-111586119ed9
-ms.openlocfilehash: 7417a0504435eb5d1391bc170c9b878524ac21c7
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: ee837c058a5a6ed7ca4e8bd55e0b889f3246ee68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257908"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217816"
 ---
 # <a name="container-classempty"></a>Conteneur Class::empty
 
 > [!NOTE]
-> Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans la documentation de Microsoft C++ comme un exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque standard C++](../standard-library/stl-containers.md).
 
-Retourne la valeur **true** pour une séquence contrôlée vide.
+Retourne **`true`** pour une séquence contrôlée vide.
 
 ## <a name="syntax"></a>Syntaxe
 

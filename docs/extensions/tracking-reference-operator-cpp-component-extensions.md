@@ -8,22 +8,22 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 93f56580f35ffc1f6e517905467c3deb92922f5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368237"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218011"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Opérateur de référence de suivi (C++/CLI et C++/CX)
 
-Une *référence de suivi* (`%`) se comporte`&`comme une référence ordinaire de CMD () sauf que lorsqu’un objet est assigné à une référence de suivi, le compte de référence de l’objet est incrémenté.
+Une *référence de suivi* ( `%` ) se comporte comme une référence C++ ordinaire ( `&` ), sauf que lorsqu’un objet est assigné à une référence de suivi, le nombre de références de l’objet est incrémenté.
 
 ## <a name="all-platforms"></a>Toutes les plateformes
 
 Une référence de suivi possède les caractéristiques suivantes.
 
-- L’attribution d’un objet à une référence de suivi entraîne l’incrémentation du nombre de références de l’objet.
+- L’assignation d’un objet à une référence de suivi entraîne l’incrémentation du décompte de références de l’objet.
 
 - Une référence native (`&`) est le résultat obtenu lorsque vous déréférencez un `*`. Une référence de suivi (`%`) est le résultat obtenu lorsque vous déréférencez un `^`. Tant que vous avez une référence `%` à un objet, l’objet reste actif en mémoire.
 
@@ -31,7 +31,7 @@ Une référence de suivi possède les caractéristiques suivantes.
 
 - Les références de suivi sont valides pour les types valeur et les descripteurs (par exemple `String^`).
 
-- Une valeur null ou **nullptr** ne peut pas être assignée à une référence de suivi. Une référence de suivi peut être réassignée à un autre objet valide autant de fois que nécessaire.
+- Une référence de suivi ne peut pas être assignée à une valeur null ou **`nullptr`** . Une référence de suivi peut être réassignée à un autre objet valide autant de fois que nécessaire.
 
 - Une référence de suivi ne peut pas être utilisée comme opérateur de prise d'adresse unaire.
 
@@ -75,7 +75,7 @@ Il est impossible d'avoir une référence C++ native à un objet sur le tas réc
 
 Pour plus d'informations sur les références de suivi en C++/CLI, consultez :
 
-- [Comment : Utiliser des références de suivi dans le CMD/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+- [Comment : utiliser des références de suivi en C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>Exemples
 

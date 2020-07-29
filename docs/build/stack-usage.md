@@ -2,12 +2,12 @@
 title: Utilisation de la pile x64
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: b598c33fbdd56630ca3e5ef0da551f38a73baa26
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b1b1e0a8c30d5e24e81372912d5c488efce14841
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335527"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218934"
 ---
 # <a name="x64-stack-usage"></a>Utilisation de la pile x64
 
@@ -21,11 +21,11 @@ Le prologue d’une fonction est chargé d’allouer l’espace de pile pour les
 
 La zone de paramètres est toujours au bas de la pile (même si `alloca` est utilisé), afin qu’elle soit toujours adjacente à l’adresse de retour pendant tout appel de fonction. Il contient au moins quatre entrées, mais toujours assez d’espace pour contenir tous les paramètres requis par toute fonction qui peut être appelée. Notez que l’espace est toujours alloué pour les paramètres de Registre, même si les paramètres eux-mêmes ne sont jamais hébergés dans la pile ; un appelé est garanti que de l’espace a été alloué pour tous ses paramètres. Les adresses d’hébergement sont requises pour les arguments Register afin qu’une zone contiguë soit disponible si la fonction appelée doit prendre l’adresse de la liste d’arguments (va_list) ou d’un argument individuel. Cette zone fournit également un emplacement pratique pour enregistrer les arguments du registre lors de l’exécution du thunk et en tant qu’option de débogage (par exemple, il rend les arguments faciles à trouver pendant le débogage s’ils sont stockés dans leurs adresses personnelles dans le code de prologue). Même si la fonction appelée a moins de 4 paramètres, ces 4 emplacements de pile sont détenus par la fonction appelée et peuvent être utilisés par la fonction appelée à d’autres fins que l’enregistrement des valeurs de registre de paramètres.  Par conséquent, l’appelant peut ne pas enregistrer les informations dans cette région de la pile à travers un appel de fonction.
 
-Si l’espace est alloué dynamiquement`alloca`() dans une fonction, un registre non volatil doit être utilisé comme pointeur de frame pour marquer la base de la partie fixe de la pile et ce registre doit être enregistré et initialisé dans le prologue. Notez que lorsque `alloca` est utilisé, les appels au même appelé à partir du même appelant peuvent avoir des adresses personnelles différentes pour leurs paramètres de registre.
+Si l’espace est alloué dynamiquement ( `alloca` ) dans une fonction, un registre non volatil doit être utilisé comme pointeur de frame pour marquer la base de la partie fixe de la pile et ce registre doit être enregistré et initialisé dans le prologue. Notez que lorsque `alloca` est utilisé, les appels au même appelé à partir du même appelant peuvent avoir des adresses personnelles différentes pour leurs paramètres de registre.
 
 La pile est toujours alignée sur 16 octets, sauf dans le prologue (par exemple, une fois l’adresse de retour envoyée) et, sauf indication contraire dans les [types de fonction](#function-types) pour une certaine classe de fonctions Frame.
 
-L’exemple suivant illustre la disposition de la pile dans laquelle la fonction A appelle une fonction non-feuille B. le prologue de la fonction a a déjà alloué de l’espace pour tous les paramètres Register et Stack requis par B en bas de la pile. L’appel pousse l’adresse de retour et le prologue de B alloue de l’espace pour ses variables locales, les registres non volatiles et l’espace nécessaire pour appeler des fonctions. Si B utilise `alloca`, l’espace est alloué entre la zone de sauvegarde de la variable locale/non volatile et la zone de la pile des paramètres.
+L’exemple suivant illustre la disposition de la pile dans laquelle la fonction A appelle une fonction non-feuille B. le prologue de la fonction a a déjà alloué de l’espace pour tous les paramètres Register et Stack requis par B en bas de la pile. L’appel pousse l’adresse de retour et le prologue de B alloue de l’espace pour ses variables locales, les registres non volatiles et l’espace nécessaire pour appeler des fonctions. Si B utilise `alloca` , l’espace est alloué entre la zone de sauvegarde de la variable locale/non volatile et la zone de la pile des paramètres.
 
 ![Exemple de conversion AMD](../build/media/vcamd_conv_ex_5.png "Exemple de conversion AMD")
 
@@ -47,9 +47,9 @@ Une fonction feuille n’a pas besoin d’une entrée de table de fonctions. Il 
 
 ## <a name="malloc-alignment"></a>alignement malloc
 
-[malloc](../c-runtime-library/reference/malloc.md) est assuré de retourner de la mémoire qui est correctement alignée pour stocker tout objet ayant un alignement fondamental et pouvant tenir dans la quantité de mémoire allouée. Un alignement *fondamental* est un alignement qui est inférieur ou égal au plus grand alignement pris en charge par l’implémentation sans spécification d’alignement. (Dans Visual C++, il s’agit de l’alignement requis pour un `double`, ou 8 octets. Dans le code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Par exemple, une allocation de quatre octets serait alignée sur une limite qui prend en charge un objet de quatre octets ou plus petit.
+[malloc](../c-runtime-library/reference/malloc.md) est assuré de retourner de la mémoire qui est correctement alignée pour stocker tout objet ayant un alignement fondamental et pouvant tenir dans la quantité de mémoire allouée. Un alignement *fondamental* est un alignement qui est inférieur ou égal au plus grand alignement pris en charge par l’implémentation sans spécification d’alignement. (Dans Visual C++, il s’agit de l’alignement requis pour un **`double`** , ou 8 octets. Dans le code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Par exemple, une allocation de quatre octets serait alignée sur une limite qui prend en charge un objet de quatre octets ou plus petit.
 
-Visual C++ autorise les types qui ont un *alignement étendu*, également connus sous le nom de types *sur-alignés* . Par exemple, les types SSE [__m128](../cpp/m128.md) et `__m256`, et les types déclarés à l' `__declspec(align( n ))` aide `n` de où est supérieur à 8, ont un alignement étendu. L’alignement de la mémoire sur une limite adaptée à un objet qui requiert un alignement étendu n’est `malloc`pas garanti par. Pour allouer de la mémoire pour les types sur-alignés, utilisez [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) et les fonctions associées.
+Visual C++ autorise les types qui ont un *alignement étendu*, également connus sous le nom de types *sur-alignés* . Par exemple, les types SSE [__m128](../cpp/m128.md) et `__m256` , et les types déclarés à l’aide de `__declspec(align( n ))` où `n` est supérieur à 8, ont un alignement étendu. L’alignement de la mémoire sur une limite adaptée à un objet qui requiert un alignement étendu n’est pas garanti par `malloc` . Pour allouer de la mémoire pour les types sur-alignés, utilisez [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) et les fonctions associées.
 
 ## <a name="alloca"></a>alloca
 

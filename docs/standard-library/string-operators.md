@@ -20,22 +20,22 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: fef2eb784eca9c9eabbdcd727b051d5c2a4ccfd2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e63054365f4b29cf474a46dbf7c730f54759792
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376646"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217387"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[opérateur!](#op_neq)|[Opérateur&gt;](#op_gt)|[Opérateur&gt;&gt;](#op_gt_gt)|
-|[Opérateur&gt;=](#op_gt_eq)|[Opérateur&lt;](#op_lt)|[Opérateur&lt;&lt;](#op_lt_lt)|
-|[Opérateur&lt;=](#op_lt_eq)|[opérateur](#op_add)|[opérateur](#op_eq_eq)|
+|[opérateur ! =](#op_neq)|[and&gt;](#op_gt)|[and&gt;&gt;](#op_gt_gt)|
+|[and&gt;=](#op_gt_eq)|[and&lt;](#op_lt)|[and&lt;&lt;](#op_lt_lt)|
+|[and&lt;=](#op_lt_eq)|[opérateur +](#op_add)|[opérateur = =](#op_eq_eq)|
 
-## <a name="operator"></a><a name="op_add"></a>opérateur
+## <a name="operator"></a><a name="op_add"></a>opérateur +
 
 Concatène deux objets string.
 
@@ -103,7 +103,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à concaténer.
 
 *Oui*\
@@ -115,7 +115,7 @@ Chaîne qui est la concaténation des chaînes d'entrée.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions chaque `operator+` surcharge pour concatenate deux objets de modèle de classe [basic_string Classe](../standard-library/basic-string-class.md). Tous effectivement `basic_string< CharType, Traits, Allocator>(Left).append(right)`revenir . Pour plus d’informations, voir [l’annexe](../standard-library/basic-string-class.md#append).
+Les fonctions de chaque surcharge `operator+` pour concaténer deux objets de classe de modèle de classe [basic_string](../standard-library/basic-string-class.md). Tout retourne effectivement `basic_string< CharType, Traits, Allocator>(Left).append(right)` . Pour plus d’informations, consultez [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemple
 
@@ -169,7 +169,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur!
+## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
 
 Teste si l'objet string situé à gauche de l'opérateur n'est pas égal à l'objet string situé à droite.
 
@@ -192,7 +192,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 *Oui*\
@@ -200,7 +200,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet string situé à gauche de l’opérateur n’est pas égal du point de vue lexicographique à l’objet string situé à droite ; sinon, **false**.
+**`true`** Si l’objet String situé à gauche de l’opérateur n’est pas vue lexicographique égal à l’objet String situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -260,7 +260,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur
+## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
 
 Teste si l'objet string situé à gauche de l'opérateur est égal à l'objet string situé à droite.
 
@@ -283,7 +283,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 *Oui*\
@@ -291,7 +291,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet string situé à gauche de l’opérateur est égal du point de vue lexicographique à l’objet string situé à droite ; sinon, **false**.
+**`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique égal à l’objet String situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -351,7 +351,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Opérateur&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
 
 Teste si l'objet string situé à gauche de l'opérateur est inférieur à l'objet string situé à droite.
 
@@ -374,7 +374,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 *Oui*\
@@ -382,7 +382,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet string situé à gauche de l’opérateur est inférieur du point de vue lexicographique à l’objet string situé à droite ; sinon, **false**.
+**`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique inférieur à l’objet String situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -447,7 +447,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Opérateur&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
 
 Teste si l'objet string situé à gauche de l'opérateur est inférieur ou égal à l'objet string situé à droite.
 
@@ -470,7 +470,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 *Oui*\
@@ -478,7 +478,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet string situé à gauche de l’opérateur est inférieur ou égal du point de vue lexicographique à l’objet string situé à droite ; sinon, **false**.
+**`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique inférieur ou égal à l’objet String situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -550,7 +550,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Opérateur&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>and&lt;&lt;
 
 Fonction de modèle qui écrit une chaîne dans le flux de sortie.
 
@@ -571,13 +571,13 @@ Chaîne à entrer dans le flux de sortie.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Écrit la valeur de la chaîne spécifiée au flux de sortie *_Ostr*.
+Écrit la valeur de la chaîne spécifiée dans le flux de sortie *_Ostr*.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle surcharge **l’opérateur<<** pour insérer un *str* d’objet de modèle de classe [basic_string](../standard-library/basic-string-class.md) dans le flux * \_Ostr*. La fonction `_Ostr.write( str.c_str, str.size )`revient effectivement .
+La fonction de modèle surcharge l' **opérateur<<** pour insérer un objet *Str* de la classe template [basic_string](../standard-library/basic-string-class.md) dans le flux * \_ OSTR*. La fonction retourne effectivement la valeur `_Ostr.write( str.c_str, str.size )` .
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Opérateur&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
 
 Teste si l'objet string situé à gauche de l'opérateur est supérieur à l'objet string situé à droite.
 
@@ -600,7 +600,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 *Oui*\
@@ -608,7 +608,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet string situé à gauche de l’opérateur est supérieur du point de vue lexicographique à l’objet string situé à droite ; sinon, **false**.
+**`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique supérieur à l’objet String situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -680,7 +680,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Opérateur&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
 
 Teste si l'objet string situé à gauche de l'opérateur est supérieur ou égal à l'objet string situé à droite.
 
@@ -703,7 +703,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 *Oui*\
@@ -711,7 +711,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet string situé à gauche de l’opérateur est supérieur ou égal du point de vue lexicographique à l’objet string situé à droite ; sinon, **false**.
+**`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique supérieur ou égal à l’objet String situé à droite ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Opérateur&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>and&gt;&gt;
 
 Fonction de modèle qui lit une chaîne à partir d’un flux d’entrée.
 
@@ -804,13 +804,13 @@ La chaîne qui est extraite du flux d’entrée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Lit la valeur de la chaîne spécifiée à partir de *_Istr* et la renvoie à *droite.*
+Lit la valeur de la chaîne spécifiée à partir de *_Istr* et la retourne à *droite*.
 
 ### <a name="remarks"></a>Notes
 
 L’opérateur ignore les espaces blancs de début à moins que l’indicateur `skipws` soit défini. Il lit tous les caractères suivants jusqu’à ce que le caractère suivant soit un espace blanc ou que la fin du fichier soit atteinte.
 
-La fonction de modèle surcharge **l’opérateur>>** pour remplacer la séquence contrôlée par *la droite* par une séquence d’éléments extraits du flux *_Istr*. L’extraction s’arrête :
+La fonction de modèle surcharge l' **opérateur>>** pour remplacer la séquence contrôlée par *Right* par une séquence d’éléments extraits du flux *_Istr*. L’extraction s’arrête :
 
 - À la fin du fichier.
 
@@ -818,9 +818,9 @@ La fonction de modèle surcharge **l’opérateur>>** pour remplacer la séquenc
 
 Une fois que la fonction a extrait `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) éléments.
 
-- Une fois que la fonction a extrait un élément *ch* pour lequel [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) a la valeur true, auquel cas le caractère est replacé.
+- Une fois que la fonction a extrait un élément *ch* pour lequel [use_facet](../standard-library/basic-filebuf-class.md#open) <  **CType** \< **CharType**> > ( `getloc` ). **is**( **CType** \< **CharType**> :: **Space**, *ch*) a la valeur true, auquel cas le caractère est remis.
 
-Si la fonction n’extrait aucun élément, elle appelle [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Dans tous les cas, elle appelle **istr**. **width**(0) et retourne \* **this**.
+Si la fonction n’extrait aucun élément, elle appelle [SetState](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit` ). Dans tous les cas, elle appelle **istr**. **Width**(0) et retourne \* **`this`** .
 
 ### <a name="example"></a>Exemple
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<>de cordes](../standard-library/string.md)
+[\<string>](../standard-library/string.md)

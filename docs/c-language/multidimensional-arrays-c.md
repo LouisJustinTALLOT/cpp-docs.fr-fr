@@ -6,12 +6,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: f94cdff03763f689edbdedffad4ac56abec5ee53
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "62233361"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218830"
 ---
 # <a name="multidimensional-arrays-c"></a>Tableaux multidimensionnels (C)
 
@@ -21,13 +21,13 @@ Une expression d'indice peut également avoir plusieurs indices, comme suit :
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-Les expressions d'indice s'associent de gauche à droite. L’expression d’indice la plus à gauche, *expression1* **[** *Expression2* **]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (<strong>\*</strong>) est appliqué après l’évaluation de la dernière expression de script, sauf si la valeur de pointeur finale traite un type tableau (voir les exemples ci-dessous).
+Les expressions d'indice s'associent de gauche à droite. L’expression d’indice la plus à gauche, *expression1* **[** *Expression2* **]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection ( <strong>\*</strong> ) est appliqué après l’évaluation de la dernière expression de script, sauf si la valeur de pointeur finale traite un type tableau (voir les exemples ci-dessous).
 
 Les expressions à indices multiples font référence à des éléments de tableaux multidimensionnels. Un tableau multidimensionnel est un tableau dont les éléments sont des tableaux. Par exemple, le premier élément d'un tableau tridimensionnel est un tableau à deux dimensions.
 
 ## <a name="examples"></a>Exemples
 
-Pour les exemples suivants, un tableau nommé `prop` est déclaré avec trois éléments, dont chacun est un tableau 4-par-6 de valeurs `int`.
+Pour les exemples suivants, un tableau nommé `prop` est déclaré avec trois éléments, chacun d’eux étant un tableau de 4 par 6 **`int`** .
 
 ```
 int prop[3][4][6];
@@ -40,7 +40,7 @@ Une référence au tableau `prop` ressemble à ceci :
 i = prop[0][0][1];
 ```
 
-L'exemple ci-dessus montre comment faire référence au deuxième élément `int` individuel de `prop`. Les tableaux sont stockés par ligne, le dernier indice variant ainsi plus rapidement. L'expression `prop[0][0][2]` fait référence à l'élément suivant (le troisième), et ainsi de suite.
+L’exemple ci-dessus montre comment faire référence au deuxième **`int`** élément individuel de `prop` . Les tableaux sont stockés par ligne, le dernier indice variant ainsi plus rapidement. L'expression `prop[0][0][2]` fait référence à l'élément suivant (le troisième), et ainsi de suite.
 
 ```
 i = prop[2][1][3];
@@ -48,13 +48,13 @@ i = prop[2][1][3];
 
 Cette instruction est une référence plus complexe à un élément de `prop` individuel. L'expression est évaluée de la manière suivante :
 
-1. Le premier indice, `2`, est multiplié par la taille d'un tableau de 4 par 6 `int` et ajouté à la valeur de pointeur `prop`. Le résultat pointe vers le tableau de 4 par 6 de `prop`.
+1. Le premier indice, `2` , est multiplié par la taille d’un tableau de 4 par 6 **`int`** et ajouté à la valeur du pointeur `prop` . Le résultat pointe vers le tableau de 4 par 6 de `prop`.
 
-1. Le deuxième indice, `1`, est multiplié par la taille du tableau `int` de 6 éléments et ajouté à l'adresse représentée par `prop[2]`.
+1. Le deuxième indice, `1` , est multiplié par la taille du tableau de 6 éléments **`int`** et ajouté à l’adresse représentée par `prop[2]` .
 
-1. Chaque élément du tableau de 6 éléments est une valeur `int`. Donc, l'indice final, `3`, est multiplié par la taille d'un `int` avant d'être ajouté à `prop[2][1]`. Le pointeur résultant traite le quatrième élément du tableau de 6 éléments.
+1. Chaque élément du tableau de 6 éléments est une **`int`** valeur, donc l’indice final, `3` , est multiplié par la taille d’un avant d' **`int`** être ajouté à `prop[2][1]` . Le pointeur résultant traite le quatrième élément du tableau de 6 éléments.
 
-1. L'opérateur d'indirection est appliqué à la valeur du pointeur. Le résultat est l'élément `int` à cette adresse.
+1. L'opérateur d'indirection est appliqué à la valeur du pointeur. Le résultat est l' **`int`** élément à cette adresse.
 
 Les deux exemples suivants présentent des cas où l'opérateur d'indirection n'est pas appliqué.
 

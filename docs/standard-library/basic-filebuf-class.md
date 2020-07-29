@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ae1b6b9460ec58aec319196e3c116bd29c3e80e4
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 7dc244cde3d77ad99add1c35716779a55eac9263
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737507"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219311"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf, classe
 
@@ -66,12 +66,12 @@ class basic_filebuf : public basic_streambuf<Char_T, Tr>
 *TR*\
 Caractéristiques de l’élément de base de la mémoire tampon de fichier (généralement `char_traits<Char_T>` ).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Le modèle de classe décrit une mémoire tampon de flux qui contrôle la transmission d’éléments de type *char_t*, dont les caractéristiques sont déterminées par la classe *TR*, vers et à partir d’une séquence d’éléments stockés dans un fichier externe.
 
 > [!NOTE]
-> Les objets de type `basic_filebuf` sont créés avec une mémoire tampon interne de type __char \* __ , quel que soit le `char_type` spécifié par le paramètre de type *char_t*. Cela signifie qu’une chaîne Unicode (contenant **wchar_t** caractères) sera convertie en chaîne ANSI (contenant des caractères **char** ) avant d’être écrite dans la mémoire tampon interne. Pour stocker des chaînes Unicode dans la mémoire tampon, créez une nouvelle mémoire tampon de type **wchar_t** et définissez-la à l’aide de la [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` méthode. Pour obtenir un exemple qui illustre ce comportement, voir ci-dessous.
+> Les objets de type `basic_filebuf` sont créés avec une mémoire tampon interne de type __char \* __ , quel que soit le `char_type` spécifié par le paramètre de type *char_t*. Cela signifie qu’une chaîne Unicode (contenant des **`wchar_t`** caractères) sera convertie en chaîne ANSI (contenant des **`char`** caractères) avant d’être écrite dans la mémoire tampon interne. Pour stocker des chaînes Unicode dans la mémoire tampon, créez une nouvelle mémoire tampon de type **`wchar_t`** et définissez-la à l’aide de la [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` méthode. Pour obtenir un exemple qui illustre ce comportement, voir ci-dessous.
 
 Un objet de classe `basic_filebuf<Char_T, Tr>` stocke un pointeur de fichier qui désigne l' `FILE` objet qui contrôle le flux associé à un fichier ouvert. Il stocke également des pointeurs vers deux facettes de conversion de fichier utilisables par les fonctions membres protégées [overflow](#overflow) et [underflow](#underflow). Pour plus d’informations, consultez [`basic_filebuf::open`](#open).
 
@@ -243,7 +243,7 @@ basic_filebuf();
 basic_filebuf(basic_filebuf&& right);
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le premier constructeur stocke un pointeur null dans tous les pointeurs contrôlant la mémoire tampon d’entrée et la mémoire tampon de sortie. Il stocke également un pointeur null dans le pointeur de fichier.
 
@@ -265,15 +265,15 @@ Ferme un fichier.
 basic_filebuf<Char_T, Tr> *close();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 La fonction membre retourne un pointeur null si le pointeur de fichier est un pointeur null.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-`close` appelle `fclose(fp)`. Si cette fonction retourne une valeur différente de zéro, la fonction retourne un pointeur null. Sinon, elle retourne **this** pour indiquer que le fichier a été fermé.
+`close` appelle `fclose(fp)`. Si cette fonction retourne une valeur différente de zéro, la fonction retourne un pointeur null. Sinon, elle retourne **`this`** pour indiquer que le fichier a été fermé avec succès.
 
-Pour un flux étendu, si des insertions se sont produites depuis l’ouverture du flux, ou depuis le dernier appel à `streampos` , la fonction appelle [`overflow`](#overflow) . Elle insère également toute séquence nécessaire pour restaurer l’état de conversion initial, en utilisant la facette `fac` de conversion de fichier pour appeler `fac.unshift` si nécessaire. Chaque élément produit `byte` de type **char** est écrit dans le flux associé désigné par le pointeur `fp` de fichier comme s’il s’agissait d’appels successifs du formulaire `fputc(byte, fp)` . Si l’appel à `fac.unshift` ou à une écriture échoue, la fonction échoue.
+Pour un flux étendu, si des insertions se sont produites depuis l’ouverture du flux, ou depuis le dernier appel à `streampos` , la fonction appelle [`overflow`](#overflow) . Elle insère également toute séquence nécessaire pour restaurer l’état de conversion initial, en utilisant la facette `fac` de conversion de fichier pour appeler `fac.unshift` si nécessaire. Chaque élément produit `byte` de type **`char`** est écrit dans le flux associé désigné par le pointeur `fp` de fichier comme s’il s’agissait d’appels successifs du formulaire `fputc(byte, fp)` . Si l’appel à `fac.unshift` ou à une écriture échoue, la fonction échoue.
 
 ### <a name="example"></a>Exemple
 
@@ -340,9 +340,9 @@ Indique si un fichier est ouvert.
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si le pointeur de fichier n’est pas null.
+**`true`** Si le pointeur de fichier n’est pas null.
 
 ### <a name="example"></a>Exemple
 
@@ -411,11 +411,11 @@ Une des énumérations dans [`ios_base::openmode`](../standard-library/ios-base-
 *protéger*\
 La protection d’ouverture de fichier par défaut, équivalente au paramètre *shflag* dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-Si la mémoire tampon est déjà ouverte, ou si le pointeur de fichier est un pointeur null, la fonction retourne un pointeur null. Sinon, elle retourne **this**.
+Si la mémoire tampon est déjà ouverte, ou si le pointeur de fichier est un pointeur null, la fonction retourne un pointeur null. Sinon, elle retourne **`this`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonction utilise un `FILE *` pour sauvegarder `basic_filebuf` comme si vous aviez appelé [`fopen/wfopen`](../c-runtime-library/reference/fopen-wfopen.md) `(filename, strmode)` . `strmode`est déterminé à partir de `mode & ~(` [`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode) `)` :
 
@@ -450,11 +450,11 @@ basic_filebuf& operator=(basic_filebuf&& right);
 *Oui*\
 Référence rvalue à un objet [basic_filebuf](../standard-library/basic-filebuf-class.md).
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Retourne __* This__.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre remplace le contenu de l’objet à l’aide du contenu de *droite*, traité comme une référence rvalue. Pour plus d’informations, consultez [déclarateur de référence rvalue :  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -471,11 +471,11 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 *_Meta*\
 Caractère à insérer dans la mémoire tampon ou `traits_type::eof` .
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Si la fonction ne peut pas être exécutée correctement, elle retourne `traits_type::eof` . Sinon, elle retourne `traits_type::` [`not_eof`](../standard-library/char-traits-struct.md#not_eof) `(_Meta)` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si `_Meta != traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) la valeur est, la fonction membre virtuelle protégée tente d’insérer l’élément `ch = traits_type::` [`to_char_type`](../standard-library/char-traits-struct.md#to_char_type) `(_Meta)` dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
 
@@ -498,11 +498,11 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 *_Meta*\
 Caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Si la fonction ne peut pas être exécutée correctement, elle retourne `traits_type::eof` . Sinon, elle retourne `traits_type::` [`not_eof`](../standard-library/char-traits-struct.md#not_eof) `(_Meta)` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre virtuelle protégée remet un élément dans la mémoire tampon d’entrée, puis en fait l’élément actuel (désigné par le pointeur suivant). Si `_Meta == traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) la valeur est, l’élément à envoyer à nouveau est effectivement celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par `ch = traits_type::` [`to_char_type`](../standard-library/char-traits-struct.md#to_char_type) `(_Meta)` . La fonction peut replacer un élément de différentes manières :
 
@@ -510,7 +510,7 @@ La fonction membre virtuelle protégée remet un élément dans la mémoire tamp
 
 - Si la fonction peut rendre `putback` disponible une position, elle permet de définir le pointeur suivant sur cette position et de la stocker à cette position `ch` .
 
-- Si la fonction peut effectuer un push d’un élément dans le flux d’entrée, elle peut le faire, par exemple en appelant `ungetc` pour un élément de type **char**.
+- Si la fonction peut effectuer un push d’un élément dans le flux d’entrée, elle peut le faire, par exemple en appelant `ungetc` pour un élément de type **`char`** .
 
 ## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>basic_filebuf ::p os_type
 
@@ -542,11 +542,11 @@ Point de départ des opérations de décalage. Consultez [seekdir](../standard-l
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Retourne la nouvelle position ou une position de flux non valide.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés. Pour un objet de classe [`basic_filebuf`](../standard-library/basic-filebuf-class.md) `<Char_T, Tr>` , une position de flux peut être représentée par un objet de type `fpos_t` , qui stocke un décalage et toutes les informations d’État nécessaires pour analyser un flux étendu. Le décalage zéro fait référence au premier élément du flux. (Un objet de type [`pos_type`](../standard-library/basic-streambuf-class.md#pos_type) stocke au moins un `fpos_t` objet.)
 
@@ -572,17 +572,17 @@ Position à rechercher.
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Si le pointeur de fichier `fp` est un pointeur null, la fonction échoue. Sinon, elle tente de modifier la position du flux en appelant `fsetpos(fp, &fposn)` , où `fposn` est l' `fpos_t` objet stocké dans `pos` . Si la fonction réussit, elle retourne `pos`. Sinon, elle retourne une position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre virtuelle protégée tente de modifier les positions actuelles des flux contrôlés. Pour un objet de classe [`basic_filebuf`](../standard-library/basic-filebuf-class.md) `<Char_T, Tr>` , une position de flux peut être représentée par un objet de type `fpos_t` , qui stocke un décalage et toutes les informations d’État nécessaires pour analyser un flux étendu. Le décalage zéro fait référence au premier élément du flux. (Un objet de type `pos_type` stocke au moins un objet `fpos_t`.)
 
 Dans le cas d’un fichier ouvert pour lecture et écriture, les flux d’entrée et de sortie sont positionnés en tandem. Pour basculer entre l’insertion et l’extraction, vous devez appeler [`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) ou [`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) . Les appels à `pubseekoff` (et à `seekoff` ) ont plusieurs limites pour les flux de texte, les flux binaires et les flux larges.
 
-Pour un flux large, si des insertions se sont produites depuis l’ouverture du flux ou depuis le dernier appel à `streampos`, la fonction appelle [overflow](#overflow). Elle insère également toute séquence nécessaire pour restaurer l’état de conversion initial, en utilisant la facette `fac` de conversion de fichier pour appeler `fac.unshift` si nécessaire. Chaque élément produit `byte` de type **char** est écrit dans le flux associé désigné par le pointeur `fp` de fichier comme s’il s’agissait d’appels successifs du formulaire `fputc(byte, fp)` . Si l’appel à `fac.unshift` ou à une écriture échoue, la fonction échoue.
+Pour un flux large, si des insertions se sont produites depuis l’ouverture du flux ou depuis le dernier appel à `streampos`, la fonction appelle [overflow](#overflow). Elle insère également toute séquence nécessaire pour restaurer l’état de conversion initial, en utilisant la facette `fac` de conversion de fichier pour appeler `fac.unshift` si nécessaire. Chaque élément produit `byte` de type **`char`** est écrit dans le flux associé désigné par le pointeur `fp` de fichier comme s’il s’agissait d’appels successifs du formulaire `fputc(byte, fp)` . Si l’appel à `fac.unshift` ou à une écriture échoue, la fonction échoue.
 
 ## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>basic_filebuf :: setbuf
 
@@ -602,13 +602,13 @@ Pointeur vers une mémoire tampon.
 *saut*\
 Taille de la mémoire tampon.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 La fonction membre protégée retourne un zéro si le pointeur de fichier `fp` est un pointeur null.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-`setbuf`appelle `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` pour offrir le tableau d' `count` éléments commençant à *_Buffer* sous la forme d’une mémoire tampon pour le flux. Si cette fonction retourne une valeur différente de zéro, la fonction retourne un pointeur null. Sinon, elle retourne **this** pour signaler la réussite.
+`setbuf`appelle `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` pour offrir le tableau d' `count` éléments commençant à *_Buffer* sous la forme d’une mémoire tampon pour le flux. Si cette fonction retourne une valeur différente de zéro, la fonction retourne un pointeur null. Dans le cas contraire, elle retourne **`this`** pour signaler la réussite.
 
 ## <a name="basic_filebufswap"></a><a name="swap"></a>basic_filebuf :: swap
 
@@ -631,7 +631,7 @@ Tente de synchroniser les flux contrôlés avec n’importe quel flux externe as
 virtual int sync();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Retourne zéro si le pointeur de fichier `fp` est un pointeur null. Dans le cas contraire, elle retourne zéro uniquement si les appels à la fois au [dépassement de capacité](#overflow) et `fflush(fp)` le vidage de la sortie en attente dans le flux.
 
@@ -651,17 +651,17 @@ Extrait l’élément actuel du flux d’entrée.
 virtual int_type underflow();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Si la fonction ne peut pas être exécutée correctement, elle retourne `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) . Sinon, elle retourne `ch` , comme décrit dans la section Notes.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre virtuelle protégée tente d’extraire l’élément actuel du `ch` flux d’entrée et retourne l’élément comme `traits_type::` [`to_int_type`](../standard-library/char-traits-struct.md#to_int_type) `(ch)` . Elle peut le faire de différentes manières :
 
 - Si une position de lecture est disponible, elle prend `ch` comme élément stocké dans la position de lecture et avance le pointeur suivant pour la mémoire tampon d’entrée.
 
-- Il peut lire un ou plusieurs éléments de type **char**, comme dans le cas d’appels successifs du formulaire `fgetc(fp)` , et les convertir en un élément `ch` de type à `Char_T` l’aide de la facette de conversion de fichier `fac` pour appeler `fac.in` si nécessaire. En cas d’échec d’une conversion ou d’une lecture, la fonction échoue.
+- Il peut lire un ou plusieurs éléments de type **`char`** , comme dans le cas d’appels successifs du formulaire `fgetc(fp)` , et les convertir en un élément `ch` de type `Char_T` à l’aide de la facette de conversion de fichier `fac` pour appeler `fac.in` si nécessaire. En cas d’échec d’une conversion ou d’une lecture, la fonction échoue.
 
 ## <a name="see-also"></a>Voir aussi
 

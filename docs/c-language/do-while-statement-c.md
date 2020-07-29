@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4a10b9df9f7276eb8e241d76726bca26f2c0cb75
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438590"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87218869"
 ---
 # <a name="do-while-statement-c"></a>do-while, instruction (C)
 
@@ -19,7 +19,7 @@ L'instruction *do-while* vous permet de répéter une instruction ou une instruc
 
 ## <a name="syntax"></a>Syntaxe
 
-instruction d' *itération*: &nbsp; &nbsp; &nbsp; &nbsp; **do***instruction*do**while (***expression***);**        
+*Iteration-Statement*: &nbsp; &nbsp; &nbsp; &nbsp; **`do`** *Statement***while (***expression***);**        
 
 L'élément *expression* dans une instruction *do-while* est évalué après l'exécution du corps de la boucle. Par conséquent, le corps de la boucle est toujours exécuté au moins une fois.
 
@@ -29,7 +29,7 @@ L'élément *expression* doit être de type arithmétique ou pointeur. L'exécut
 
 1. Ensuite, l'élément *expression* est évalué. Si l'élément *expression* est false, l'instruction *do-while* se termine et le contrôle passe à l'instruction suivante du programme. Si l'élément *expression* est true (différent de zéro), le processus se répète, en commençant à l'étape 1.
 
-L'instruction *do-while* peut également se terminer lorsqu'une instruction **break**, **goto** ou **return** est exécutée dans le corps de l'instruction.
+L’instruction *do-while* peut également se terminer lorsqu’une **`break`** **`goto`** instruction, ou **`return`** est exécutée dans le corps de l’instruction.
 
 Voici un exemple d'instruction *do-while* :
 

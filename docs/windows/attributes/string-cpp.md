@@ -1,21 +1,21 @@
 ---
-title: String (C++ attribut com)
+title: String (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 68708cce2e167c6f40b461d52861fe4ed82be867
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166158"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87213812"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indique que le tableau **char**, **wchar_t**, `byte` (ou équivalent) ou le pointeur vers un tel tableau doit être traité comme une chaîne.
+Indique que le tableau unidimensionnel **`char`** , **`wchar_t`** , `byte` (ou équivalent) ou le pointeur vers ce tableau doit être traité comme une chaîne.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Indique que le tableau **char**, **wchar_t**, `byte` (ou équivalent) ou le poin
 
 ## <a name="remarks"></a>Notes
 
-L’attribut de **chaîne** C++ a les mêmes fonctionnalités que l’attribut MIDL de [chaîne](/windows/win32/Midl/string) .
+L’attribut C++ de **chaîne** a les mêmes fonctionnalités que l’attribut MIDL de [chaîne](/windows/win32/Midl/string) .
 
 ## <a name="example"></a>Exemple
 
@@ -50,8 +50,8 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**S'applique à**|Tableau ou pointeur vers un tableau, un paramètre d’interface, une méthode d’interface|
-|**Renouvelable**|Non|
+|**S’applique à**|Tableau ou pointeur vers un tableau, un paramètre d’interface, une méthode d’interface|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -61,4 +61,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de tableau](array-attributes.md)<br/>
-[export](export.md)
+[exporter](export.md)

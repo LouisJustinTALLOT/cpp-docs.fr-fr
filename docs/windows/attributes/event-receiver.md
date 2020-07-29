@@ -1,5 +1,5 @@
 ---
-title: event_receiver (C++ attribut com)
+title: event_receiver (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: 9653a0b5c756857d92914496b9c5c6f8aee56ebb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fb17eaa5d94636cedd650eb1bfb393d7c09e4fcc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167080"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217270"
 ---
 # <a name="event_receiver"></a>event_receiver
 
@@ -35,7 +35,7 @@ Crée un récepteur d'événements (récepteur).
 *type*<br/>
 Une énumération de l’une des valeurs suivantes :
 
-- `native` pour le code C/C++ code non managé (par défaut pour les classes natives).
+- `native`pour le code C/C++ non managé (par défaut pour les classes natives).
 
 - `com` pour le code COM. Cette valeur nécessite que vous incluiez les fichiers d’en-tête suivants :
 
@@ -46,19 +46,19 @@ Une énumération de l’une des valeurs suivantes :
     ```
 
 *layout_dependent*<br/>
-Spécifiez *layout_dependent* uniquement si `type`=**com**. *layout_dependent* est une valeur booléenne :
+Spécifiez *layout_dependent* uniquement si `type` = **com**. *layout_dependent* est une valeur booléenne :
 
-- **true** signifie que la signature des délégués dans le récepteur d’événements doit correspondre exactement à ceux auxquels ils sont raccordés dans la source de l’événement. Les noms des gestionnaires de récepteur d’événements doivent correspondre aux noms spécifiés dans l’interface de source d’événement appropriée. Vous devez utiliser `coclass` lorsque *layout_dependent* a la **valeur true**. Il est légèrement plus efficace de spécifier **true**.
+- **`true`** signifie que la signature des délégués dans le récepteur d’événements doit correspondre exactement à ceux auxquels ils sont raccordés dans la source de l’événement. Les noms des gestionnaires de récepteur d’événements doivent correspondre aux noms spécifiés dans l’interface de source d’événement appropriée. Vous devez utiliser `coclass` lorsque *layout_dependent* est **`true`** . Il est légèrement plus efficace de spécifier **`true`** .
 
-- **false** (valeur par défaut) signifie que la Convention d’appel et la classe de stockage (virtuelle, statique, etc.) ne doivent pas nécessairement correspondre à la méthode d’événement et aux gestionnaires ; les noms des gestionnaires ne doivent pas non plus correspondre aux noms des méthodes de l’interface source de l’événement.
+- **`false`**(par défaut) signifie que la Convention d’appel et la classe de stockage (virtuelles, statiques et autres) ne doivent pas nécessairement correspondre à la méthode d’événement et aux gestionnaires ; les noms des gestionnaires ne doivent pas non plus correspondre aux noms des méthodes de l’interface source de l’événement.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **event_receiver** C++ spécifie que la classe ou la structure à laquelle il est appliqué est un récepteur d’événements, à C++ l’aide du modèle d’événement unifié visuel.
+L’attribut **event_receiver** C++ spécifie que la classe ou la structure à laquelle il est appliqué est un récepteur d’événements, à l’aide du modèle d’événement unifié Visual C++.
 
-**event_receiver** est utilisé avec l’attribut [event_source](event-source.md) et les mots clés [__hook](../../cpp/hook.md) et [__unhook](../../cpp/unhook.md) . Utilisez `event_source` pour créer des sources d’événements. Utilisez **__hook** dans les méthodes d’un récepteur d’événements pour associer des méthodes de récepteur d’événements (« Hook ») aux événements d’une source d’événement. Utilisez **__unhook** pour les dissocier.
+**event_receiver** est utilisé avec l’attribut [event_source](event-source.md) et les mots clés [__hook](../../cpp/hook.md) et [__unhook](../../cpp/unhook.md) . Utilisez `event_source` pour créer des sources d’événements. Utilisez **`__hook`** dans les méthodes d’un récepteur d’événements pour associer des méthodes de récepteur d’événements (« Hook ») aux événements d’une source d’événement. Utilisez **`__unhook`** pour les dissocier.
 
-*layout_dependent* est spécifié uniquement pour les récepteurs d’événements com (`type`=**com**). La valeur par défaut de *layout_dependent* est **false**.
+*layout_dependent* est spécifié uniquement pour les récepteurs d’événements COM ( `type` = **com**). La valeur par défaut de *layout_dependent* est **`false`** .
 
 > [!NOTE]
 > Une classe ou structure modélisée ne peut pas contenir d'événements.
@@ -69,16 +69,16 @@ L’attribut **event_receiver** C++ spécifie que la classe ou la structure à l
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**|
-|**Renouvelable**|Non|
-|**Attributs requis**|`coclass` lorsque *layout_dependent*=**true**|
+|**S’applique à**|**`class`**, **`struct`**|
+|**Repeatable Read**|Non|
+|**Attributs requis**|`coclass`quand *layout_dependent*=**`true`**|
 |**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs de compilateur](compiler-attributes.md)<br/>
+[Attributs du compilateur](compiler-attributes.md)<br/>
 [event_source](event-source.md)<br/>
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>

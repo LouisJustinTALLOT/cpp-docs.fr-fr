@@ -7,18 +7,18 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6d920a5c59cacb23c7fb155c7ac8e813a9b0e8d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217417"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217985"
 ---
 # <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Émet la version étendue x64 du convertir avec un nombre à virgule flottante simple précision de troncation en une instruction de type`cvttss2si`entier 64 bits ().
+Émet la version étendue x64 du convertir avec un nombre à virgule flottante simple précision de troncation en une instruction de type entier 64 bits ( `cvttss2si` ).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,24 +30,24 @@ __int64 _mm_cvttss_si64x(
 
 ### <a name="parameters"></a>Paramètres
 
-*value*\
-dans `__m128` Structure contenant des valeurs à virgule flottante simple précision.
+*ajoutée*\
+dans **`__m128`** Structure contenant des valeurs à virgule flottante simple précision.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Résultat de la conversion de la première valeur à virgule flottante en entier 64 bits.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`_mm_cvttss_si64x`|X64|
+|`_mm_cvttss_si64x`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-L’intrinsèque diffère uniquement `_mm_cvtss_si64x` de en ce que les conversions inexactes sont tronquées vers zéro. Étant donné `__m128` que la structure représente un registre XMM, l’instruction générée déplace les données d’un registre XMM dans la mémoire système.
+L’intrinsèque diffère `_mm_cvtss_si64x` uniquement de en ce que les conversions inexactes sont tronquées vers zéro. Étant donné que la **`__m128`** structure représente un registre XMM, l’instruction générée déplace les données d’un registre XMM dans la mémoire système.
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
@@ -85,7 +85,7 @@ int main()
 101
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

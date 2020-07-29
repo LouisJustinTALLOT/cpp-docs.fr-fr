@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 0e9bacc56f212e804467d1c6e0159a1749235976
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a8227fcb482267946ea7ba08ee352c43e1ac6f6e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217457"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217998"
 ---
 # <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère la version étendue x64 de l’entier de conversion 64 bits en une instruction de valeur à virgule flottante simple`cvtsi2ss`précision scalaire ().
+Génère la version étendue x64 de l’entier de conversion 64 bits en une instruction de valeur à virgule flottante simple précision scalaire ( `cvtsi2ss` ).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,30 +32,30 @@ __m128 _mm_cvtsi64x_ss(
 ### <a name="parameters"></a>Paramètres
 
 *un*\
-dans `__m128` Structure contenant quatre valeurs à virgule flottante simple précision.
+dans **`__m128`** Structure contenant quatre valeurs à virgule flottante simple précision.
 
 *p*\
 dans Entier 64 bits à convertir en valeur à virgule flottante.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
-`__m128` Structure dont la première valeur à virgule flottante est le résultat de la conversion. Les trois autres valeurs sont copiées sans modification àpartir de.
+**`__m128`** Structure dont la première valeur à virgule flottante est le résultat de la conversion. Les trois autres valeurs sont copiées sans *modification à partir de.*
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`_mm_cvtsi64x_ss`|X64|
+|`_mm_cvtsi64x_ss`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-La `__m128` structure représente un registre XMM, de sorte que l’intrinsèque autorise le déplacement de la valeur *b* de la mémoire système vers un registre XMM.
+La **`__m128`** structure représente un registre XMM, de sorte que l’intrinsèque autorise le déplacement de la valeur *b* de la mémoire système vers un registre XMM.
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // _mm_cvtsi64x_ss.cpp
@@ -87,7 +87,7 @@ int main()
 54.000000 0.000000 0.000000 0.000000
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

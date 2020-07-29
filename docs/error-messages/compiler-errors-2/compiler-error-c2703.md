@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2703
 ms.assetid: 384295c3-643d-47ae-a9a6-865b3036aa84
-ms.openlocfilehash: 7d1f50d7811fd7c54e1236499da36f00add97d70
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 62e03d1edc5806a9babc44eaf2dc388e3ed81de9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757148"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87221105"
 ---
 # <a name="compiler-error-c2703"></a>Erreur du compilateur C2703
 
 instruction __leave non conforme
 
-Une instruction `__leave` doit se trouver à l’intérieur d’un bloc `__try`.
+Bloc * * `__leave** statement must be inside a ` __try.
 
 L’exemple suivant génère l’C2703 :
 

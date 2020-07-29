@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334920"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87219337"
 ---
 # <a name="safeint-functions"></a>SafeInt, fonctions
 
@@ -92,9 +92,9 @@ inline bool SafeAdd (
 *result*<br/>
 [out] Le paramètre dans lequel `SafeAdd` stocke le résultat.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si aucune erreur ne se produit ; **false** si une erreur se produit.
+**`true`** Si aucune erreur ne se produit ; **`false`** si une erreur se produit.
 
 ## <a name="safecast"></a><a name="safecast"></a>SafeCast
 
@@ -116,9 +116,9 @@ inline bool SafeCast (
 *To*<br/>
 [out] Une référence au nouveau type du nombre. Il doit être de type `U`.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si aucune erreur ne se produit ; **false** si une erreur se produit.
+**`true`** Si aucune erreur ne se produit ; **`false`** si une erreur se produit.
 
 ## <a name="safedivide"></a><a name="safedivide"></a>SafeDivide
 
@@ -144,9 +144,9 @@ inline bool SafeDivide (
 *result*<br/>
 [out] Le paramètre dans lequel `SafeDivide` stocke le résultat.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si aucune erreur ne se produit ; **false** si une erreur se produit.
+**`true`** Si aucune erreur ne se produit ; **`false`** si une erreur se produit.
 
 ## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
 
@@ -168,11 +168,11 @@ inline bool SafeEquals (
 *u*<br/>
 [in] Deuxième nombre à comparer. Il doit être de type U.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si *t* et *u* sont égaux ; sinon, **false**.
+**`true`** Si *t* et *u* sont égaux ; Sinon, **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La méthode améliore `==` car `SafeEquals` vous permet de comparer deux types de nombres différents.
 
@@ -196,11 +196,11 @@ inline bool SafeGreaterThan (
 *u*<br/>
 [in] Deuxième nombre à comparer. Il doit être de type `U`.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si *t* est supérieur à *u* ; sinon, **false**.
+**`true`** Si *t* est supérieur à *u*; Sinon, **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `SafeGreaterThan` étend l’opérateur de comparaison régulier en vous permettant de comparer deux types de nombres différents.
 
@@ -224,11 +224,11 @@ inline bool SafeGreaterThanEquals (
 *u*<br/>
 [in] Deuxième nombre à comparer. Il doit être de type `U`.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si *t* est supérieur ou égal à *u* ; sinon, **false**.
+**`true`** Si *t* est supérieur ou égal à *u*; Sinon, **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `SafeGreaterThanEquals` améliore l’opérateur de comparaison standard en vous permettant de comparer deux types de nombres différents.
 
@@ -252,11 +252,11 @@ inline bool SafeLessThan (
 *u*<br/>
 dans Deuxième nombre. Il doit être de type `U`.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si *t* est inférieur à *u* ; sinon, **false**.
+**`true`** Si *t* est inférieur à *u*; Sinon, **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La méthode améliore l’opérateur de comparaison standard car `SafeLessThan` vous permet de comparer deux types de nombres différents.
 
@@ -280,11 +280,11 @@ inline bool SafeLessThanEquals (
 *u*<br/>
 [in] Deuxième nombre à comparer. Il doit être de type `U`.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si *t* est inférieur ou égal à *u* ; sinon, **false**.
+**`true`** Si *t* est inférieur ou égal à *u*; Sinon, **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `SafeLessThanEquals` étend l’opérateur de comparaison régulier en vous permettant de comparer deux types de nombres différents.
 
@@ -312,9 +312,9 @@ inline bool SafeModulus (
 *result*<br/>
 [out] Le paramètre dans lequel `SafeModulus` stocke le résultat.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si aucune erreur ne se produit ; **false** si une erreur se produit.
+**`true`** Si aucune erreur ne se produit ; **`false`** si une erreur se produit.
 
 ## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
 
@@ -340,9 +340,9 @@ inline bool SafeMultiply (
 *result*<br/>
 [out] Le paramètre dans lequel `SafeMultiply` stocke le résultat.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-`true` si aucune erreur ne se produit ; `false` si une erreur se produit.
+**`true`** Si aucune erreur ne se produit ; **`false`** si une erreur se produit.
 
 ## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
 
@@ -364,11 +364,11 @@ inline bool SafeNotEquals (
 *u*<br/>
 [in] Deuxième nombre à comparer. Il doit être de type `U`.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si *t* et *u* ne sont pas égaux ; Sinon, **false**.
+**`true`** Si *t* et *u* ne sont pas égaux ; Sinon, **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La méthode améliore `!=` car `SafeNotEquals` vous permet de comparer deux types de nombres différents.
 
@@ -396,6 +396,6 @@ inline bool SafeSubtract (
 *result*<br/>
 [out] Le paramètre dans lequel `SafeSubtract` stocke le résultat.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si aucune erreur ne se produit ; **false** si une erreur se produit.
+**`true`** Si aucune erreur ne se produit ; **`false`** si une erreur se produit.
