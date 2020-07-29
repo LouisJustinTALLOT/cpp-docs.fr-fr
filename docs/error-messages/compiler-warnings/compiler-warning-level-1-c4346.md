@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 3ab519f612d5272b0562728917cc777f1de86b79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1f731eed2dae2721b13bb2e526992849e217f7f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187243"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223198"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>Avertissement du compilateur (niveau 1) C4346
 
 'nom' : le nom dépendant n’est pas un type
 
-Le mot clé [TypeName](../../cpp/typename.md) est requis si un nom dépendant doit être traité comme un type. Pour le code qui fonctionne de la même façon dans toutes C++les versions de Visual, ajoutez `typename` à la déclaration.
+Le mot clé [TypeName](../../cpp/typename.md) est requis si un nom dépendant doit être traité comme un type. Pour le code qui fonctionne de la même façon dans toutes les versions de Visual C++, ajoutez **`typename`** à la déclaration.
 
 L’exemple suivant génère l’C4346 :
 
@@ -32,7 +32,7 @@ struct C {
 };
 ```
 
-Les exemples suivants illustrent d’autres exemples dans lesquels le mot clé **TypeName** est requis :
+Les exemples suivants montrent d’autres exemples dans lesquels le **`typename`** mot clé est obligatoire :
 
 ```cpp
 // C4346b.cpp

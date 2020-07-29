@@ -2,31 +2,29 @@
 title: Basé sur une plage, instruction (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1197080e2e96e0e5c51bc06e93026567a33c7842
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188348"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223614"
 ---
 # <a name="range-based-for-statement-c"></a>Basé sur une plage, instruction (C++)
 
-Exécute `statement` à plusieurs reprises et séquentiellement pour chaque élément de `expression`.
+S’exécute `statement` de manière répétée et séquentielle pour chaque élément dans `expression` .
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-for ( for-range-declaration : expression )
-   statement
-```
+> **`for (`***for-Range-DECLARATION* **`:`** *expression***`)`**\
+&emsp;*instruction*
 
 ## <a name="remarks"></a>Notes
 
-Utilisez l’instruction **for** basée sur une plage pour construire des boucles qui doivent s’exécuter par le biais d’une « plage », qui est définie comme tout ce que vous pouvez itérer (par exemple C++ , `std::vector`, ou toute autre séquence de bibliothèque standard dont la plage est définie par une `begin()` et `end()`. Le nom qui est déclaré dans la partie `for-range-declaration` est local pour l’instruction **for** et ne peut pas être déclaré de nouveau dans `expression` ou `statement`. Notez que le mot clé [auto](../cpp/auto-cpp.md) est préféré dans la partie `for-range-declaration` de l’instruction.
+Utilisez l’instruction basée sur une plage **`for`** pour construire des boucles qui doivent s’exécuter par le biais d’une *plage*, qui est définie comme tout ce que vous pouvez itérer, par exemple, `std::vector` ou toute autre séquence de bibliothèque standard C++ dont la plage est définie par un `begin()` et un `end()` . Le nom qui est déclaré dans la `for-range-declaration` partie est local à l' **`for`** instruction et ne peut pas être déclaré à nouveau dans `expression` ou `statement` . Notez que le [`auto`](../cpp/auto-cpp.md) mot clé est préféré dans la `for-range-declaration` partie de l’instruction.
 
-**Nouveautés de Visual Studio 2017 :**  Les boucles for basées sur une plage ne requièrent plus que Begin () et end () retournent des objets du même type. Ainsi, end() peut retourner un objet sentinel, à l’image de ceux utilisés par les plages définies selon la proposition Ranges-V3. Pour plus d’informations, consultez [Generalizing the Range-Based For Loop](https://wg21.link/p0184r0) et la [bibliothèque range-v3 sur GitHub](https://github.com/ericniebler/range-v3).
+**Nouveautés de Visual Studio 2017 :**  Les boucles basées sur une plage **`for`** ne requièrent plus cet `begin()` `end()` objet et retournent des objets du même type. Cela permet `end()` à de retourner un objet Sentinel, tel qu’utilisé par les plages définies dans les plages-v3. Pour plus d’informations, consultez [généralisation de la `For` boucle basée sur une plage](https://wg21.link/p0184r0) et la [bibliothèque de plages v3 sur GitHub](https://github.com/ericniebler/range-v3).
 
-Ce code montre comment utiliser **des boucles for** basées sur une plage pour itérer au sein d’un tableau et d’un vecteur :
+Ce code montre comment utiliser des boucles basées sur **`for`** une plage pour itérer au sein d’un tableau et d’un vecteur :
 
 ```cpp
 // range-based-for.cpp
@@ -96,21 +94,21 @@ end of integer array test
 end of vector test
 ```
 
-Une boucle **for** basée sur une plage se termine quand l’une de ces `statement` est exécutée : [break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md) à une instruction étiquetée en dehors de la boucle **for** basée sur une plage. Une instruction [continue](../cpp/continue-statement-cpp.md) dans une boucle **for** basée sur une plage ne termine que l’itération en cours.
+Une boucle basée sur une plage **`for`** se termine quand l’une d’entre elles `statement` est exécutée : [`break`](../cpp/break-statement-cpp.md) , [`return`](../cpp/return-statement-cpp.md) ou [`goto`](../cpp/goto-statement-cpp.md) à une instruction étiquetée en dehors de la boucle basée sur une plage **`for`** . Une [`continue`](../cpp/continue-statement-cpp.md) instruction dans une boucle basée sur une plage **`for`** ne termine que l’itération en cours.
 
-Gardez à l’esprit ces faits sur la plage **pour**:
+Gardez à l’esprit ces faits sur la plage **`for`** :
 
 - Reconnaît automatiquement les tableaux.
 
-- Reconnaît les conteneurs qui ont des `.begin()` et des `.end()`.
+- Reconnaît les conteneurs qui ont `.begin()` et `.end()` .
 
-- Utilise la `begin()` de recherche dépendante d’un argument et `end()` pour toute autre chose.
+- Utilise une recherche dépendante d’un argument `begin()` et `end()` pour toute autre chose.
 
 ## <a name="see-also"></a>Voir aussi
 
-[auto](../cpp/auto-cpp.md)<br/>
-[Instructions d’itération](../cpp/iteration-statements-cpp.md)<br/>
+[`auto`](../cpp/auto-cpp.md)<br/>
+[Instructions d'itération](../cpp/iteration-statements-cpp.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[while, instruction (C++)](../cpp/while-statement-cpp.md)<br/>
-[do-while, instruction (C++)](../cpp/do-while-statement-cpp.md)<br/>
-[for, instruction (C++)](../cpp/for-statement-cpp.md)
+[`while`Instruction (C++)](../cpp/while-statement-cpp.md)<br/>
+[`do-while`Instruction (C++)](../cpp/do-while-statement-cpp.md)<br/>
+[`for`Instruction (C++)](../cpp/for-statement-cpp.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-ms.openlocfilehash: 003ddcf77c30bc2dc5491218dfbf00731517bdeb
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ae2e3c66b3abf22bbefbcb0fcd3292f0a3dbdbe2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452902"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215710"
 ---
-# <a name="iscompound-class"></a>is_compound, classe
+# <a name="is_compound-class"></a>is_compound, classe
 
 Teste si le type spécifié n'est pas fondamental.
 
@@ -32,9 +32,9 @@ Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la **valeur false** si le type de *Ty* est un type fondamental (autrement dit, si [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > a la **valeur true**); sinon, elle a la **valeur true**. Ainsi, le prédicat a la **valeur true** si *Ty* est un type tableau, un type fonction, un pointeur vers **void** ou un objet ou une fonction, une référence, une classe, une Union, une énumération ou un pointeur vers un membre de classe non statique, ou une forme *CV-Qualified* l’une d’entre elles.
+Une instance du prédicat de type contient **`false`** si le type de *Ty* est un type fondamental (autrement dit, si [is_fundamental](../standard-library/is-fundamental-class.md) \<Ty> contient **`true`** ); sinon, il contient **`true`** . Ainsi, le prédicat contient **`true`** si *Ty* est un type tableau, un type de fonction, un pointeur vers **`void`** ou un objet ou une fonction, une référence, une classe, une Union, une énumération ou un pointeur vers un membre de classe non statique, ou une forme *CV-Qualified* de l’un d’eux.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // std__type_traits__is_compound.cpp
@@ -75,13 +75,13 @@ is_compound<void *> == true
 is_compound<int> == false
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[is_class, classe](../standard-library/is-class-class.md)
+[Classe is_class](../standard-library/is-class-class.md)

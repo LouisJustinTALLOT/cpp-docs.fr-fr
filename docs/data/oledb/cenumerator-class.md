@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211794"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214917"
 ---
 # <a name="cenumerator-class"></a>CEnumerator, classe
 
@@ -51,12 +51,12 @@ class CEnumerator :
 |||
 |-|-|
 |[Rechercher](#find)|Recherche des fournisseurs disponibles (sources de données) en recherchant un avec le nom spécifié.|
-|[GetMoniker](#getmoniker)|Récupère l’interface `IMoniker` pour l’enregistrement en cours.|
+|[GetMoniker](#getmoniker)|Récupère l' `IMoniker` interface pour l’enregistrement en cours.|
 |[Ouvrir](#open)|Ouvre l’énumérateur.|
 
 ## <a name="remarks"></a>Notes
 
-Vous pouvez récupérer les données de `ISourcesRowset` indirectement à partir de cette classe.
+Vous pouvez récupérer les `ISourcesRowset` données indirectement à partir de cette classe.
 
 ## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator :: find
 
@@ -75,11 +75,11 @@ dans Nom à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le nom a été trouvé. Dans le cas contraire, la valeur est **false**.
+**`true`** Si le nom a été trouvé. Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-Ce nom est mappé au membre `SOURCES_NAME` de l’interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
+Ce nom est mappé au `SOURCES_NAME` membre de l’interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
 ## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator :: GetMoniker
 
@@ -128,7 +128,7 @@ dans Pointeur vers un moniker pour un énumérateur.
 *pClsid*<br/>
 dans Pointeur vers le `CLSID` d’un énumérateur.
 
-*enumerator*<br/>
+*énumérateur*<br/>
 dans Référence à un énumérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -138,5 +138,5 @@ HRESULT standard.
 ## <a name="see-also"></a>Voir aussi
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

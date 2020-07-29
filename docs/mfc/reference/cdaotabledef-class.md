@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 61e16ef2998f2b807e96368973711dfdb31dcc45
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754692"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223120"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef, classe
 
@@ -95,89 +95,89 @@ class CDaoTableDef : public CObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Construit un objet `CDaoTableDef`.|
+|[CDaoTableDef :: CDaoTableDef](#cdaotabledef)|Construit un objet `CDaoTableDef`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CDaoTableDef::Append](#append)|Ajoute une nouvelle table à la base de données.|
-|[CDaoTableDef::CanUpdate](#canupdate)|Retourne nonzero si le tableau peut être mis à jour (vous pouvez modifier la définition des champs ou des propriétés de table).|
-|[CDaoTableDef::Fermer](#close)|Ferme un tableau ouvert.|
-|[CDaoTableDef::Créer](#create)|Crée une table qui peut être ajoutée à la base de données à [l’aide de l’annexe](#append).|
-|[CDaoTableDef::CreateField](#createfield)|Appelé à créer un champ pour une table.|
-|[CDaoTableDef::CreateIndex](#createindex)|Appelé à créer un index pour une table.|
-|[CDaoTableDef::DeleteField](#deletefield)|Appelé pour supprimer un champ d’une table.|
-|[CDaoTableDef::DeleteIndex](#deleteindex)|Appelé à supprimer un index d’une table.|
-|[CDaoTableDef::GetAttributes](#getattributes)|Retourne une valeur qui indique une `CDaoTableDef` ou plusieurs caractéristiques d’un objet.|
-|[CDaoTableDef::GetConnect](#getconnect)|Retourne une valeur qui fournit des informations sur la source d’un tableau.|
-|[CDaoTableDef::GetDateCreated](#getdatecreated)|Retourne la date et l’heure de la table de base sous-jacente à un `CDaoTableDef` objet a été créée.|
-|[CDaoTableDef::GetDateLastUpdated](#getdatelastupdated)|Retourne la date et l’heure du changement le plus récent apporté à la conception de la table de base.|
-|[CDaoTableDef::GetFieldCount](#getfieldcount)|Retourne une valeur qui représente le nombre de champs dans le tableau.|
-|[CDaoTableDef::GetFieldInfo](#getfieldinfo)|Renvoie des types spécifiques d’informations sur les champs dans le tableau.|
-|[CDaoTableDef::GetIndexCount](#getindexcount)|Retourne le nombre d’index pour le tableau.|
-|[CDaoTableDef::GetIndexInfo](#getindexinfo)|Renvoie des types spécifiques d’informations sur les index pour le tableau.|
-|[CDaoTableDef::GetName](#getname)|Retourne le nom défini par l’utilisateur de la table.|
-|[CDaoTableDef::GetRecordCount](#getrecordcount)|Retourne le nombre d’enregistrements dans le tableau.|
-|[CDaoTableDef::GetSourceTableName](#getsourcetablename)|Retourne une valeur qui spécifie le nom du tableau ci-joint dans la base de données source.|
-|[CDaoTableDef::GetValidationRule](#getvalidationrule)|Retourne une valeur qui valide les données dans un champ tel qu’il est modifié ou ajouté à un tableau.|
-|[CDaoTableDef::GetValidationText](#getvalidationtext)|Retourne une valeur qui spécifie le texte du message que votre application affiche si la valeur d’un objet Field ne satisfait pas à la règle de validation spécifiée.|
-|[CDaoTableDef::IsOpen](#isopen)|Retourne nonzero si la table est ouverte.|
-|[CDaoTableDef::Ouvert](#open)|Ouvre un dépôt existant stocké dans la collection De tableDef de la base de données.|
-|[CDaoTableDef::RefreshLink](#refreshlink)|Mise à jour des informations de connexion pour une table jointe.|
-|[CDaoTableDef::SetAttributes](#setattributes)|Définit une valeur qui indique une `CDaoTableDef` ou plusieurs caractéristiques d’un objet.|
-|[CDaoTableDef::SetConnect](#setconnect)|Définit une valeur qui fournit des informations sur la source d’une table.|
-|[CDaoTableDef::SetName](#setname)|Définit le nom de la table.|
-|[CDaoTableDef::SetSourceTableName](#setsourcetablename)|Définit une valeur qui spécifie le nom d’une table jointe dans la base de données source.|
-|[CDaoTableDef::SetValidationRule](#setvalidationrule)|Définit une valeur qui valide les données dans un champ tel qu’elles sont modifiées ou ajoutées à une table.|
-|[CDaoTableDef::SetValidationText](#setvalidationtext)|Définit une valeur qui spécifie le texte du message que votre application affiche si la valeur d’un objet Field ne satisfait pas à la règle de validation spécifiée.|
+|[CDaoTableDef :: Append](#append)|Ajoute une nouvelle table à la base de données.|
+|[CDaoTableDef :: CanUpdate](#canupdate)|Retourne une valeur différente de zéro si la table peut être mise à jour (vous pouvez modifier la définition des champs ou les propriétés de la table).|
+|[CDaoTableDef :: Close](#close)|Ferme une TableDef ouverte.|
+|[CDaoTableDef :: Create](#create)|Crée une table qui peut être ajoutée à la base de données à l’aide de [Append](#append).|
+|[CDaoTableDef :: CreateField](#createfield)|Appelé pour créer un champ pour une table.|
+|[CDaoTableDef :: CreateIndex](#createindex)|Appelé pour créer un index pour une table.|
+|[CDaoTableDef ::D eleteField](#deletefield)|Appelé pour supprimer un champ d’une table.|
+|[CDaoTableDef ::D eleteIndex](#deleteindex)|Appelé pour supprimer un index d’une table.|
+|[CDaoTableDef :: GetAttributes](#getattributes)|Retourne une valeur qui indique une ou plusieurs caractéristiques d’un `CDaoTableDef` objet.|
+|[CDaoTableDef :: GetConnect](#getconnect)|Retourne une valeur qui fournit des informations sur la source d’une table.|
+|[CDaoTableDef :: GetDateCreated](#getdatecreated)|Retourne la date et l’heure de création de la table de base sous-jacente à un `CDaoTableDef` objet.|
+|[CDaoTableDef :: GetDateLastUpdated](#getdatelastupdated)|Retourne la date et l’heure de la dernière modification apportée à la conception de la table de base.|
+|[CDaoTableDef :: GetFieldCount](#getfieldcount)|Retourne une valeur qui représente le nombre de champs dans la table.|
+|[CDaoTableDef :: GetFieldInfo](#getfieldinfo)|Retourne des types spécifiques d’informations sur les champs de la table.|
+|[CDaoTableDef :: GetIndexCount](#getindexcount)|Retourne le nombre d’index de la table.|
+|[CDaoTableDef :: GetIndexInfo](#getindexinfo)|Retourne des types spécifiques d’informations sur les index de la table.|
+|[CDaoTableDef :: GetName](#getname)|Retourne le nom défini par l’utilisateur de la table.|
+|[CDaoTableDef :: GetRecordCount](#getrecordcount)|Retourne le nombre d’enregistrements dans la table.|
+|[CDaoTableDef :: GetSourceTableName](#getsourcetablename)|Retourne une valeur qui spécifie le nom de la table attachée dans la base de données source.|
+|[CDaoTableDef :: GetValidationRule](#getvalidationrule)|Retourne une valeur qui valide les données d’un champ au fur et à mesure qu’elles sont modifiées ou ajoutées à une table.|
+|[CDaoTableDef :: GetValidationText](#getvalidationtext)|Retourne une valeur qui spécifie le texte du message affiché par votre application si la valeur d’un objet champ ne satisfait pas la règle de validation spécifiée.|
+|[CDaoTableDef :: IsOpen](#isopen)|Retourne une valeur différente de zéro si la table est ouverte.|
+|[CDaoTableDef :: Open](#open)|Ouvre un objet TableDef existant stocké dans la collection TableDef’s de la base de données.|
+|[CDaoTableDef :: RefreshLink](#refreshlink)|Met à jour les informations de connexion pour une table attachée.|
+|[CDaoTableDef :: SetAttributes](#setattributes)|Définit une valeur qui indique une ou plusieurs caractéristiques d’un `CDaoTableDef` objet.|
+|[CDaoTableDef :: SetConnect](#setconnect)|Définit une valeur qui fournit des informations sur la source d’une table.|
+|[CDaoTableDef :: SetName](#setname)|Définit le nom de la table.|
+|[CDaoTableDef :: SetSourceTableName](#setsourcetablename)|Définit une valeur qui spécifie le nom d’une table attachée dans la base de données source.|
+|[CDaoTableDef :: SetValidationRule](#setvalidationrule)|Définit une valeur qui valide les données d’un champ au fur et à mesure qu’elles sont modifiées ou ajoutées à une table.|
+|[CDaoTableDef :: SetValidationText](#setvalidationtext)|Définit une valeur qui spécifie le texte du message affiché par votre application si la valeur d’un objet champ ne satisfait pas la règle de validation spécifiée.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CDaoTableDef::m_pDAOTableDef](#m_pdaotabledef)|Un pointeur à l’interface DAO sous-jacente à l’objet tabledef.|
-|[CDaoTableDef::m_pDatabase](#m_pdatabase)|Base de données source pour ce tableau.|
+|[CDaoTableDef :: m_pDAOTableDef](#m_pdaotabledef)|Pointeur vers l’interface DAO sous-jacente à l’objet TableDef.|
+|[CDaoTableDef :: m_pDatabase](#m_pdatabase)|Base de données source pour cette table.|
 
 ## <a name="remarks"></a>Notes
 
-Chaque objet de base de données DAO conserve une collection, appelée TableDefs, qui contient tous les objets de dépôt DAO enregistrés.
+Chaque objet de base de données DAO gère une collection, appelée TableDefs, qui contient tous les objets TableDef DAO enregistrés.
 
-Vous manipulez une `CDaoTableDef` définition de table à l’aide d’un objet. Vous pouvez par exemple :
+Vous manipulez une définition de table à l’aide d’un `CDaoTableDef` objet. Par exemple, vous pouvez :
 
-- Examinez la structure de champ et d’index de n’importe quelle table locale, jointe ou externe dans une base de données.
+- Examinez la structure de champs et d’index de toute table locale, attachée ou externe dans une base de données.
 
-- Appelez `SetConnect` les `SetSourceTableName` fonctions et les fonctions `RefreshLink` des membres pour les tables jointes et utilisez la fonction membre pour mettre à jour les connexions aux tables jointes.
+- Appelez les `SetConnect` `SetSourceTableName` fonctions membres et pour les tables attachées, et utilisez la `RefreshLink` fonction membre pour mettre à jour les connexions aux tables attachées.
 
-- Appelez `CanUpdate` la fonction membre pour déterminer si vous pouvez modifier les définitions de champ dans le tableau.
+- Appelez la `CanUpdate` fonction membre pour déterminer si vous pouvez modifier les définitions de champ dans la table.
 
-- Obtenez ou définissez `GetValidationRule` des `SetValidationRule`conditions `GetValidationText` de `SetValidationText` validation à l’aide des fonctions et des fonctions des membres.
+- Obtient ou définit des conditions de validation à l’aide de `GetValidationRule` et `SetValidationRule` , et des `GetValidationText` `SetValidationText` fonctions membres et.
 
-- Utilisez `Open` la fonction membre pour créer un objet de type `CDaoRecordset` table, dynaset ou instantané.
+- Utilisez la `Open` fonction membre pour créer un objet de type table, feuille de réponse dynamique ou instantané `CDaoRecordset` .
 
     > [!NOTE]
-    >  Les classes de base de données DAO sont distinctes des classes de base de données MFC basées sur la connectivité open Database (ODBC). Tous les noms de classe de base de données DAO ont le préfixe "CDao". Vous pouvez toujours accéder aux sources de données ODBC avec les classes DAO; les classes DAO offrent généralement des capacités supérieures parce qu’elles sont spécifiques au moteur de base de données Microsoft Jet.
+    >  Les classes de base de données DAO sont distinctes des classes de base de données MFC basées sur Open Database Connectivity (ODBC). Tous les noms de classe de base de données DAO ont le préfixe « CDao ». Vous pouvez toujours accéder aux sources de données ODBC avec les classes DAO. les classes DAO offrent généralement des fonctionnalités supérieures, car elles sont spécifiques au moteur de base de données Microsoft Jet.
 
-### <a name="to-use-tabledef-objects-either-to-work-with-an-existing-table-or-to-create-a-new-table"></a>Utiliser des objets de table pour travailler avec une table existante ou pour créer une nouvelle table
+### <a name="to-use-tabledef-objects-either-to-work-with-an-existing-table-or-to-create-a-new-table"></a>Pour utiliser des objets TableDef pour travailler avec une table existante ou pour créer une nouvelle table
 
-1. Dans tous les cas, construisez d’abord un `CDaoTableDef` objet, fournissant un pointeur à un objet [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) auquel appartient la table.
+1. Dans tous les cas, commencez par construire un `CDaoTableDef` objet, en fournissant un pointeur vers un objet [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) auquel la table appartient.
 
-1. Ensuite, faites ce qui suit, en fonction de ce que vous voulez:
+1. Procédez ensuite comme suit, en fonction de vos choix :
 
-   - Pour utiliser une table enregistrée existante, appelez la fonction de membre [Open](#open) de l’objet de dépôt, en fournissant le nom de la table enregistrée.
+   - Pour utiliser une table enregistrée existante, appelez la fonction membre [Open](#open) de l’objet TableDef, en fournissant le nom de la table enregistrée.
 
-   - Pour créer une nouvelle table, appelez la fonction de membre Create de l’objet [de](#create) dépôt, en fournissant le nom de la table. Appelez [CreateField](#createfield) et [CreateIndex](#createindex) pour ajouter des champs et des index à la table.
+   - Pour créer une nouvelle table, appelez la fonction membre [Create](#create) de l’objet TableDef, en fournissant le nom de la table. Appelez [CreateField](#createfield) et [CreateIndex](#createindex) pour ajouter des champs et des index à la table.
 
-   - Appelez [l’annexe](#append) pour enregistrer la table en l’appendice à la collection TableDefs de la base de données. `Create`met le dépôt dans un état ouvert, donc après avoir appelé `Create` vous n’appelez `Open`pas .
+   - Appelez [Append](#append) pour enregistrer la table en l’ajoutant à la collection TableDefs de la base de données. `Create`place l’objet TableDef dans un état ouvert. ainsi, une fois que `Create` vous avez appelé, vous n’appelez pas `Open` .
 
         > [!TIP]
-        >  La façon la plus simple de créer des tables enregistrées est de les créer et de les stocker dans votre base de données à l’aide de Microsoft Access. Ensuite, vous pouvez les ouvrir et les utiliser dans votre code MFC.
+        >  Le moyen le plus simple de créer des tables enregistrées consiste à les créer et à les stocker dans votre base de données à l’aide de Microsoft Access. Ensuite, vous pouvez les ouvrir et les utiliser dans votre code MFC.
 
-Pour utiliser l’objet tabledef que vous avez `CDaoRecordset` ouvert ou créé, créez et ouvrez un objet, en spécifiant le nom du code de dépôt avec une `dbOpenTable` valeur dans le paramètre *nOpenType.*
+Pour utiliser l’objet TableDef que vous avez ouvert ou créé, créez et ouvrez un `CDaoRecordset` objet, en spécifiant le nom de l’objet TableDef avec une `dbOpenTable` valeur dans le paramètre *nOpenType* .
 
-Pour utiliser un objet tabledef pour créer un `CDaoRecordset` objet, vous créez ou ouvrez généralement un code de table tel que décrit ci-dessus, puis construisez un objet de la composition des enregistrements, en passant un pointeur sur votre objet tabledef lorsque vous appelez [CDaoRecordset : : Ouvrez](../../mfc/reference/cdaorecordset-class.md#open). Le dépôt que vous passez doit être en état d’ouverture. Pour plus d’informations, voir classe [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
+Pour utiliser un objet TableDef pour créer un `CDaoRecordset` objet, vous créez ou ouvrez généralement un objet TableDef comme décrit ci-dessus, puis vous construisez un objet Recordset, en passant un pointeur vers votre objet TableDef quand vous appelez [CDaoRecordset :: Open](../../mfc/reference/cdaorecordset-class.md#open). Le TableDef que vous transmettez doit être dans un état ouvert. Pour plus d’informations, consultez la classe [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-Lorsque vous avez terminé à l’aide d’un objet tabledef, appelez sa fonction de membre [Close](../../mfc/reference/cdaorecordset-class.md#close) ; puis détruire l’objet de dépôt.
+Lorsque vous avez fini d’utiliser un objet TableDef, appelez sa fonction membre [Close](../../mfc/reference/cdaorecordset-class.md#close) ; Détruisez ensuite l’objet TableDef.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -187,11 +187,11 @@ Lorsque vous avez terminé à l’aide d’un objet tabledef, appelez sa fonctio
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxdao.h
+**En-tête :** afxdao. h
 
-## <a name="cdaotabledefappend"></a><a name="append"></a>CDaoTableDef::Append
+## <a name="cdaotabledefappend"></a><a name="append"></a>CDaoTableDef :: Append
 
-Appelez cette fonction de membre après avoir appelé [Create](#create) pour créer un nouvel objet de dépôt pour enregistrer le code de dépôt dans la base de données.
+Appelez cette fonction membre après avoir appelé [Create](#create) pour créer un nouvel objet TableDef afin d’enregistrer l’objet TableDef dans la base de données.
 
 ```
 virtual void Append();
@@ -199,16 +199,16 @@ virtual void Append();
 
 ### <a name="remarks"></a>Notes
 
-La fonction annexe l’objet à la collection TableDefs de la base de données. Vous pouvez utiliser le code de dépôt comme un objet temporaire tout en le définissant en `Append`ne l’appending, mais si vous voulez l’enregistrer et l’utiliser, vous devez appeler .
+La fonction ajoute l’objet à la collection TableDefs de la base de données. Vous pouvez utiliser l’objet TableDef comme un objet temporaire tout en le définissant en l’absence de l’ajouter, mais si vous souhaitez l’enregistrer et l’utiliser, vous devez appeler `Append` .
 
 > [!NOTE]
-> Si vous tentez d’ajouter un code de dépôt anonyme (contenant une corde nulle ou vide), MFC lance une exception.
+> Si vous tentez d’ajouter un objet TableDef sans nom (contenant une chaîne null ou vide), MFC lève une exception.
 
-Pour plus d’informations connexes, consultez le thème « Méthode d’annexe » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « méthode Append » dans l’aide de DAO.
 
-## <a name="cdaotabledefcanupdate"></a><a name="canupdate"></a>CDaoTableDef::CanUpdate
+## <a name="cdaotabledefcanupdate"></a><a name="canupdate"></a>CDaoTableDef :: CanUpdate
 
-Appelez cette fonction de membre pour déterminer `CDaoTableDef` si la définition du tableau sous-jacent à un objet peut être modifiée.
+Appelez cette fonction membre pour déterminer si la définition de la table sous-jacente à un `CDaoTableDef` objet peut être modifiée.
 
 ```
 BOOL CanUpdate();
@@ -216,15 +216,15 @@ BOOL CanUpdate();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nonzero si la structure de table (schéma) peut être modifiée (ajouter ou supprimer les champs et les index), sinon 0.
+Différent de zéro si la structure de table (schéma) peut être modifiée (ajouter ou supprimer des champs et des index); sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, une table `CDaoTableDef` nouvellement créée sous-jacente à `CDaoTableDef` un objet peut être mise à jour, et une table jointe sous-jacente à un objet ne peut pas être mise à jour. Un `CDaoTableDef` objet peut être updatable, même si le recordet résultant n’est pas updatable.
+Par défaut, une table nouvellement créée sous-jacente `CDaoTableDef` à un objet peut être mise à jour et une table attachée sous-jacente `CDaoTableDef` à un objet ne peut pas être mise à jour. Un `CDaoTableDef` objet peut être mis à jour, même si le jeu d’enregistrements résultant ne peut pas être mis à jour.
 
-Pour obtenir des informations connexes, consultez le thème « Propriété Updatable » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété pouvant être mise à jour » dans l’aide de DAO.
 
-## <a name="cdaotabledefcdaotabledef"></a><a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef
+## <a name="cdaotabledefcdaotabledef"></a><a name="cdaotabledef"></a>CDaoTableDef :: CDaoTableDef
 
 Construit un objet `CDaoTableDef`.
 
@@ -234,16 +234,16 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 
 ### <a name="parameters"></a>Paramètres
 
-*base de pData*<br/>
-Un pointeur vers un objet [CDaoDatabase.](../../mfc/reference/cdaodatabase-class.md)
+*pDatabase*<br/>
+Pointeur vers un objet [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) .
 
 ### <a name="remarks"></a>Notes
 
-Après avoir construit l’objet, vous devez appeler la fonction De membre [Créer](#create) ou [ouvrir.](#open) Lorsque vous avez terminé avec l’objet, vous `CDaoTableDef` devez appeler sa fonction de membre [Proche](#close) et détruire l’objet.
+Après avoir construit l’objet, vous devez appeler la fonction membre [Create](#create) ou [Open](#open) . Lorsque vous avez terminé avec l’objet, vous devez appeler sa fonction membre [Close](#close) et détruire l' `CDaoTableDef` objet.
 
-## <a name="cdaotabledefclose"></a><a name="close"></a>CDaoTableDef::Fermer
+## <a name="cdaotabledefclose"></a><a name="close"></a>CDaoTableDef :: Close
 
-Appelez cette fonction de membre pour fermer et libérer l’objet de dépôt.
+Appelez cette fonction membre pour fermer et libérer l’objet TableDef.
 
 ```
 virtual void Close();
@@ -251,15 +251,15 @@ virtual void Close();
 
 ### <a name="remarks"></a>Notes
 
-Habituellement, `Close`après avoir appelé , vous supprimez l’objet tabledef si elle a été allouée avec **de nouveaux**.
+En général, après avoir appelé `Close` , vous supprimez l’objet TableDef s’il a été alloué avec **`new`** .
 
-Vous pouvez [Open](#open) appeler Open `Close`à nouveau après avoir appelé . Cela vous permet de réutiliser l’objet de dépôt.
+Vous pouvez appeler [Open](#open) à nouveau après avoir appelé `Close` . Cela vous permet de réutiliser l’objet TableDef.
 
-Pour obtenir des informations connexes, consultez le thème « Méthode de clôture » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « méthode Close » dans l’aide de DAO.
 
-## <a name="cdaotabledefcreate"></a><a name="create"></a>CDaoTableDef::Créer
+## <a name="cdaotabledefcreate"></a><a name="create"></a>CDaoTableDef :: Create
 
-Appelez cette fonction de membre pour créer une nouvelle table enregistrée.
+Appelez cette fonction membre pour créer une nouvelle table enregistrée.
 
 ```
 virtual void Create(
@@ -271,34 +271,34 @@ virtual void Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszName (en)*<br/>
-Un pointeur à une chaîne contenant le nom de la table.
+*lpszName*<br/>
+Pointeur vers une chaîne contenant le nom de la table.
 
 *lAttributes*<br/>
-Une valeur correspondant aux caractéristiques de la table représentée par l’objet de dépôt. Vous pouvez utiliser le bitwise-OR pour combiner l’une des constantes suivantes:
+Valeur correspondant aux caractéristiques de la table représentée par l’objet TableDef. Vous pouvez utiliser l’opérateur or au niveau du bit pour combiner l’une des constantes suivantes :
 
 |Constant|Description|
 |--------------|-----------------|
 |`dbAttachExclusive`|Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que la table est une table attachée ouverte pour une utilisation exclusive.|
-|`dbAttachSavePWD`|Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que l’identifiant utilisateur et le mot de passe pour la table ci-jointe sont enregistrés avec les informations de connexion.|
+|`dbAttachSavePWD`|Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que l’ID d’utilisateur et le mot de passe de la table attachée sont enregistrés avec les informations de connexion.|
 |`dbSystemObject`|Indique que la table est une table système fournie par le moteur de base de données Microsoft Jet.|
 |`dbHiddenObject`|Indique que la table est une table cachée fournie par le moteur de base de données Microsoft Jet.|
 
 *lpszSrcTable*<br/>
-Un pointeur à une chaîne contenant le nom de table source. Par défaut, cette valeur est parascée sous le titre NULL.
+Pointeur vers une chaîne contenant le nom de la table source. Par défaut, cette valeur est initialisée comme NULL.
 
 *lpszConnect*<br/>
-Un pointeur à une chaîne contenant la chaîne de connexion par défaut. Par défaut, cette valeur est parascée sous le titre NULL.
+Pointeur vers une chaîne contenant la chaîne de connexion par défaut. Par défaut, cette valeur est initialisée comme NULL.
 
 ### <a name="remarks"></a>Notes
 
-Une fois que vous avez nommé le code de dépôt, vous pouvez ensuite appeler [Append](#append) pour enregistrer le code de dépôt dans la collection TableDefs de la base de données. Après `Append`l’appel , le code de dépôt est en état d’ouverture, et vous pouvez l’utiliser pour créer un objet [CDaoRecordset.](../../mfc/reference/cdaorecordset-class.md)
+Une fois que vous avez nommé TableDef, vous pouvez appeler [Append](#append) pour enregistrer l’objet TableDef dans la collection TableDefs de la base de données. Après l’appel de `Append` , l’objet TableDef est dans un état ouvert et vous pouvez l’utiliser pour créer un objet [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) .
 
-Pour plus d’informations connexes, consultez le thème "CreateTableDef Method" dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « méthode CreateTableDef » dans l’aide de DAO.
 
-## <a name="cdaotabledefcreatefield"></a><a name="createfield"></a>CDaoTableDef::CreateField
+## <a name="cdaotabledefcreatefield"></a><a name="createfield"></a>CDaoTableDef :: CreateField
 
-Appelez cette fonction de membre pour ajouter un champ à la table.
+Appelez cette fonction membre pour ajouter un champ à la table.
 
 ```cpp
 void CreateField(
@@ -312,11 +312,11 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszName (en)*<br/>
-Un pointeur à une expression de chaîne spécifiant le nom de ce champ.
+*lpszName*<br/>
+Pointeur vers une expression de chaîne spécifiant le nom de ce champ.
 
 *nType*<br/>
-Une valeur indiquant le type de données du champ. Le paramètre peut être l’une de ces valeurs :
+Valeur indiquant le type de données du champ. Le paramètre peut prendre l’une des valeurs suivantes :
 
 |Type|Taille (en octets)|Description|
 |----------|--------------------|-----------------|
@@ -324,36 +324,36 @@ Une valeur indiquant le type de données du champ. Le paramètre peut être l’
 |`dbByte`|BYTE|
 |`dbInteger`|2|int|
 |`dbLong`|4|long|
-|`dbCurrency`|8|Monnaie ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
+|`dbCurrency`|8|Devise ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|float|
 |`dbDouble`|8|double|
-|`dbDate`|8|Date/Heure ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
+|`dbDate`|8|Date/heure ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Texte ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
-|`dbLongBinary`|0|Long Binaire (objet OLE), [CLongBinary](../../mfc/reference/clongbinary-class.md) ou [CByteArray](../../mfc/reference/cbytearray-class.md)|
+|`dbLongBinary`|0|Long Binary (objet OLE), [CLongBinary](../../mfc/reference/clongbinary-class.md) ou [CByteArray](../../mfc/reference/cbytearray-class.md)|
 |`dbMemo`|0|Mémo ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 
 *lSize*<br/>
-Une valeur qui indique la taille maximale, dans les octets, d’un champ qui contient du texte, ou la taille fixe d’un champ qui contient du texte ou des valeurs numériques. Le *paramètre lSize* est ignoré pour tous les champs, sauf le texte.
+Valeur qui indique la taille maximale, en octets, d’un champ qui contient du texte ou la taille fixe d’un champ qui contient du texte ou des valeurs numériques. Le paramètre *lSize* est ignoré pour tous les champs, sauf les champs de texte.
 
 *lAttributes*<br/>
-Une valeur correspondant aux caractéristiques du champ et qui peut être combinée à l’aide d’un bitwise-OR.
+Valeur correspondant aux caractéristiques du champ et qui peut être combinée à l’aide d’une opération or au niveau du bit.
 
 |Constant|Description|
 |--------------|-----------------|
-|`dbFixedField`|La taille du champ est fixe (par défaut pour les champs Numeric).|
-|`dbVariableField`|La taille du champ est variable (Champs de texte seulement).|
-|`dbAutoIncrField`|La valeur de champ pour les nouveaux enregistrements est automatiquement incrémentée à un intégrant long unique qui ne peut pas être changé. Seulement pris en charge pour les tables de base de données Microsoft Jet.|
+|`dbFixedField`|La taille du champ est fixe (valeur par défaut pour les champs numériques).|
+|`dbVariableField`|La taille de champ est variable (champs de texte uniquement).|
+|`dbAutoIncrField`|La valeur de champ pour les nouveaux enregistrements est automatiquement incrémentée à un entier long unique qui ne peut pas être modifié. Pris en charge uniquement pour les tables de base de données Microsoft Jet.|
 |`dbUpdatableField`|La valeur du champ peut être modifiée.|
-|`dbDescending`|Le champ est trié dans la descente (Z - A ou 100 - 0) commande (ne s’applique qu’à un objet Field dans une collection Fields d’un objet Index). Si vous ometez cette constante, le champ est trié dans l’ordre ascendant (A - Z ou 0 - 100) (par défaut).|
+|`dbDescending`|Le champ est trié par ordre décroissant (Z-A ou 100-0) (s’applique uniquement à un objet de champ dans une collection de champs d’un objet d’index). Si vous omettez cette constante, le champ est trié dans l’ordre croissant (A-Z ou 0-100) (valeur par défaut).|
 
-*Fieldinfo*<br/>
-Une référence à une structure [CDaoFieldInfo.](../../mfc/reference/cdaofieldinfo-structure.md)
+*FieldInfo*<br/>
+Référence à une structure [cdaofieldinfo,](../../mfc/reference/cdaofieldinfo-structure.md) .
 
 ### <a name="remarks"></a>Notes
 
-Un `DAOField` objet (OLE) est créé et annexé `DAOTableDef` à la collection Fields de l’objet (OLE). Outre son utilisation pour l’examen `CDaoFieldInfo` des propriétés de l’objet, vous pouvez également utiliser pour construire un paramètre d’entrée pour créer de nouveaux champs dans un tabledef. La première `CreateField` version de est plus simple à utiliser, mais si vous `CreateField`voulez un `CDaoFieldInfo` contrôle plus fin, vous pouvez utiliser la deuxième version de , qui prend un paramètre.
+Un `DAOField` objet (OLE) est créé et ajouté à la collection de champs de l' `DAOTableDef` objet (OLE). Outre son utilisation pour l’examen des propriétés de l’objet, vous pouvez également utiliser `CDaoFieldInfo` pour construire un paramètre d’entrée pour créer de nouveaux champs dans un objet TableDef. La première version de `CreateField` est plus simple à utiliser, mais si vous souhaitez un contrôle plus fin, vous pouvez utiliser la deuxième version de `CreateField` , qui prend un `CDaoFieldInfo` paramètre.
 
-Si vous utilisez `CreateField` la version `CDaoFieldInfo` de ce qui prend un paramètre, `CDaoFieldInfo` vous devez définir soigneusement chacun des membres suivants de la structure:
+Si vous utilisez la version de `CreateField` qui accepte un `CDaoFieldInfo` paramètre, vous devez définir avec soin chacun des membres suivants de la `CDaoFieldInfo` structure :
 
 - `m_strName`
 
@@ -365,11 +365,11 @@ Si vous utilisez `CreateField` la version `CDaoFieldInfo` de ce qui prend un par
 
 - `m_bAllowZeroLength`
 
-Les membres `CDaoFieldInfo` restants de doivent être réglés à **0**, FALSE, `CDaoException` ou une chaîne vide, le cas échéant pour le membre, ou un peut se produire.
+Les membres restants de `CDaoFieldInfo` doivent avoir la valeur **0**, false ou une chaîne vide, en fonction du membre, ou un `CDaoException` peut se produire.
 
-Pour obtenir des informations connexes, consultez le thème « Méthode CreateField » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « méthode CreateField » dans l’aide de DAO.
 
-## <a name="cdaotabledefcreateindex"></a><a name="createindex"></a>CDaoTableDef::CreateIndex
+## <a name="cdaotabledefcreateindex"></a><a name="createindex"></a>CDaoTableDef :: CreateIndex
 
 Appelez cette fonction pour ajouter un index à une table.
 
@@ -380,27 +380,27 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 ### <a name="parameters"></a>Paramètres
 
 *indexinfo*<br/>
-Une référence à une structure [CDaoIndexInfo.](../../mfc/reference/cdaoindexinfo-structure.md)
+Référence à une structure [cdaoindexinfo,](../../mfc/reference/cdaoindexinfo-structure.md) .
 
 ### <a name="remarks"></a>Notes
 
-Les index spécifient l’ordre des enregistrements consultés à partir des tables de base de données et si les enregistrements en double sont acceptés ou non. Les indices offrent également un accès efficace aux données.
+Les index spécifient l’ordre des enregistrements accessibles à partir des tables de base de données et si les enregistrements en double sont acceptés ou non. Les index offrent également un accès efficace aux données.
 
-Vous n’avez pas à créer des index pour les tables, mais dans de grandes tables non indexées, l’accès à un enregistrement spécifique ou la création d’un ensemble d’enregistrements peut prendre beaucoup de temps. D’autre part, la création d’un trop grand nombre d’index ralentit les mises à jour, les appendices et les suppressions d’opérations au fur et à mesure que tous les index sont automatiquement mis à jour. Considérez ces facteurs lorsque vous décidez quels index créer.
+Vous n’êtes pas obligé de créer des index pour les tables, mais dans les grandes tables non indexées, l’accès à un enregistrement spécifique ou la création d’un jeu d’enregistrements peut prendre beaucoup de temps. D’un autre côté, la création d’un trop grand nombre d’index ralentit les opérations de mise à jour, d’ajout et de suppression, car tous les index sont automatiquement mis à jour. Tenez compte de ces facteurs lorsque vous décidez des index à créer.
 
-Les membres suivants `CDaoIndexInfo` de la structure doivent être définis :
+Les membres suivants de la `CDaoIndexInfo` structure doivent être définis :
 
 - `m_strName`Un nom doit être fourni.
 
-- `m_pFieldInfos`Doit indiquer un `CDaoIndexFieldInfo` éventail de structures.
+- `m_pFieldInfos`Doit pointer vers un tableau de `CDaoIndexFieldInfo` structures.
 
-- `m_nFields`Doit spécifier le nombre `CDaoFieldInfo` de champs dans la gamme de structures.
+- `m_nFields`Vous devez spécifier le nombre de champs dans le tableau de `CDaoFieldInfo` structures.
 
-Les membres restants seront ignorés s’ils sont réglés sur FALSE. En outre, `m_lDistinctCount` le membre est ignoré lors de la création de l’index.
+Les membres restants seront ignorés s’ils sont définis sur FALSe. En outre, le `m_lDistinctCount` membre est ignoré pendant la création de l’index.
 
-## <a name="cdaotabledefdeletefield"></a><a name="deletefield"></a>CDaoTableDef::DeleteField
+## <a name="cdaotabledefdeletefield"></a><a name="deletefield"></a>CDaoTableDef ::D eleteField
 
-Appelez cette fonction de membre pour enlever un champ et le rendre inaccessible.
+Appelez cette fonction membre pour supprimer un champ et le rendre inaccessible.
 
 ```cpp
 void DeleteField(LPCTSTR lpszName);
@@ -409,21 +409,21 @@ void DeleteField(int nIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszName (en)*<br/>
-Un pointeur à une expression de chaîne qui est le nom d’un champ existant.
+*lpszName*<br/>
+Pointeur vers une expression de chaîne qui est le nom d’un champ existant.
 
 *nIndex*<br/>
-L’indice du champ dans la collection Fields à base zéro du tableau, pour la recherche par index.
+Index du champ dans la collection de champs de base zéro de la table, pour la recherche par index.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez utiliser cette fonction de membre sur un nouvel objet qui n’a pas été annexé à la base de données ou lorsque [CanUpdate](#canupdate) renvoie nonzero.
+Vous pouvez utiliser cette fonction membre sur un nouvel objet qui n’a pas été ajouté à la base de données ou lorsque [CanUpdate](#canupdate) retourne une valeur différente de zéro.
 
-Pour obtenir des informations connexes, consultez le thème « Supprimer la méthode » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « méthode Delete » dans l’aide de DAO.
 
-## <a name="cdaotabledefdeleteindex"></a><a name="deleteindex"></a>CDaoTableDef::DeleteIndex
+## <a name="cdaotabledefdeleteindex"></a><a name="deleteindex"></a>CDaoTableDef ::D eleteIndex
 
-Appelez cette fonction de membre pour supprimer un index dans un tableau sous-jacent.
+Appelez cette fonction membre pour supprimer un index dans une table sous-jacente.
 
 ```cpp
 void DeleteIndex(LPCTSTR lpszName);
@@ -432,21 +432,21 @@ void DeleteIndex(int nIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszName (en)*<br/>
-Un pointeur à une expression de chaîne qui est le nom d’un index existant.
+*lpszName*<br/>
+Pointeur vers une expression de chaîne qui est le nom d’un index existant.
 
 *nIndex*<br/>
-L’indice de tableau de l’objet indiciel dans la collection TableDefs à base zéro de la base de données, pour le lookup par index.
+Index de tableau de l’objet index dans la collection TableDefs de base zéro de la base de données, pour la recherche par index.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez utiliser cette fonction de membre sur un nouvel objet qui n’a pas été annexé à la base de données ou lorsque [CanUpdate](#canupdate) renvoie nonzero.
+Vous pouvez utiliser cette fonction membre sur un nouvel objet qui n’a pas été ajouté à la base de données ou lorsque [CanUpdate](#canupdate) retourne une valeur différente de zéro.
 
-Pour obtenir des informations connexes, consultez le thème « Supprimer la méthode » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « méthode Delete » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetattributes"></a><a name="getattributes"></a>CDaoTableDef::GetAttributes
+## <a name="cdaotabledefgetattributes"></a><a name="getattributes"></a>CDaoTableDef :: GetAttributes
 
-Pour `CDaoTableDef` un objet, la valeur de retour spécifie les caractéristiques du tableau représenté par l’objet `CDaoTableDef` et peut être une somme de ces constantes :
+Pour un `CDaoTableDef` objet, la valeur de retour spécifie les caractéristiques de la table représentée par l' `CDaoTableDef` objet et peut être une somme de ces constantes :
 
 ```
 long GetAttributes();
@@ -454,28 +454,28 @@ long GetAttributes();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une valeur qui indique une `CDaoTableDef` ou plusieurs caractéristiques d’un objet.
+Retourne une valeur qui indique une ou plusieurs caractéristiques d’un `CDaoTableDef` objet.
 
 ### <a name="remarks"></a>Notes
 
 |Constant|Description|
 |--------------|-----------------|
 |`dbAttachExclusive`|Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que la table est une table attachée ouverte pour une utilisation exclusive.|
-|`dbAttachSavePWD`|Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que l’identifiant utilisateur et le mot de passe pour la table ci-jointe sont enregistrés avec les informations de connexion.|
+|`dbAttachSavePWD`|Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que l’ID d’utilisateur et le mot de passe de la table attachée sont enregistrés avec les informations de connexion.|
 |`dbSystemObject`|Indique que la table est une table système fournie par le moteur de base de données Microsoft Jet.|
 |`dbHiddenObject`|Indique que la table est une table cachée fournie par le moteur de base de données Microsoft Jet.|
-|`dbAttachedTable`|Indique que la table est une table jointe à partir d’une base de données non-ODBC, comme une base de données Paradox.|
-|`dbAttachedODBC`|Indique que la table est une table jointe à partir d’une base de données ODBC, comme Microsoft SQL Server.|
+|`dbAttachedTable`|Indique que la table est une table attachée à partir d’une base de données non ODBC, telle qu’une base de données Paradox.|
+|`dbAttachedODBC`|Indique que la table est une table attachée à partir d’une base de données ODBC, par exemple Microsoft SQL Server.|
 
-Une table système est une table créée par le moteur de base de données Microsoft Jet pour contenir diverses informations internes.
+Une table système est une table créée par le moteur de base de données Microsoft Jet pour contenir différentes informations internes.
 
-Une table cachée est une table créée pour une utilisation temporaire par le moteur de base de données Microsoft Jet.
+Une table masquée est une table créée pour une utilisation temporaire par le moteur de base de données Microsoft Jet.
 
-Pour obtenir des renseignements connexes, consultez le thème « Propriété d’attributs » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété Attributes » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetconnect"></a><a name="getconnect"></a>CDaoTableDef::GetConnect
+## <a name="cdaotabledefgetconnect"></a><a name="getconnect"></a>CDaoTableDef :: GetConnect
 
-Appelez cette fonction de membre pour obtenir la chaîne de connexion pour une source de données.
+Appelez cette fonction membre pour obtenir la chaîne de connexion d’une source de données.
 
 ```
 CString GetConnect();
@@ -483,25 +483,25 @@ CString GetConnect();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `CString` objet contenant le chemin et le type de base de données pour la table.
+`CString`Objet contenant le chemin d’accès et le type de base de données de la table.
 
 ### <a name="remarks"></a>Notes
 
-Pour `CDaoTableDef` un objet qui représente `CString` une table jointe, l’objet se compose d’une ou deux parties (un spécificateur de type base de données et un chemin vers la base de données).
+Pour un `CDaoTableDef` objet qui représente une table attachée, l' `CString` objet se compose d’une ou de deux parties (un spécificateur de type de base de données et d’un chemin d’accès à la base de données).
 
-Le chemin indiqué dans le tableau ci-dessous est le chemin complet pour l’annuaire contenant les fichiers de base de données et doit être précédé par l’identifiant "DATABASE". Dans certains cas (comme avec les bases de données Microsoft Jet et Microsoft Excel), un nom de fichier spécifique est inclus dans l’argument de la trajectoire de base de données.
+Le chemin d’accès, comme indiqué dans le tableau ci-dessous, est le chemin d’accès complet du répertoire contenant les fichiers de base de données et doit être précédé de l’identificateur « DATABASE = ». Dans certains cas (comme avec les bases de données Microsoft Jet et Microsoft Excel), un nom de fichier spécifique est inclus dans l’argument de chemin d’accès de la base de données.
 
-Le tableau de [CDaoTableDef::SetConnect](#setconnect) affiche les types de bases de données possibles et leurs spécifications et chemins de base de données correspondants :
+La table dans [CDaoTableDef :: SetConnect](#setconnect) affiche les types de bases de données possibles et les spécificateurs et les chemins d’accès de base de données correspondants :
 
-Pour les tables de base de base de base Microsoft Jet, le spécificateur est une chaîne vide ("").
+Pour les tables de base de base de données Microsoft Jet, le spécificateur est une chaîne vide ("").
 
-Si un mot de passe est requis mais non fourni, le conducteur de l’ODBC affiche une boîte de dialogue de connexion la première fois qu’une table est consultée et à nouveau si la connexion est fermée et rouverte. Si une table `dbAttachSavePWD` jointe a l’attribut, l’invite de connexion n’apparaîtra pas lorsque la table est rouverte.
+Si un mot de passe est requis mais n’est pas fourni, le pilote ODBC affiche une boîte de dialogue de connexion la première fois qu’un utilisateur accède à une table, puis de nouveau si la connexion est fermée et rouverte. Si une table attachée possède l' `dbAttachSavePWD` attribut, l’invite de connexion ne s’affiche pas lorsque la table est rouverte.
 
-Pour obtenir des informations connexes, consultez le thème « Connect Property » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « Connect Property » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetdatecreated"></a><a name="getdatecreated"></a>CDaoTableDef::GetDateCreated
+## <a name="cdaotabledefgetdatecreated"></a><a name="getdatecreated"></a>CDaoTableDef :: GetDateCreated
 
-Appelez cette fonction pour déterminer la date `CDaoTableDef` et l’heure de la création du tableau sous-jacent à l’objet.
+Appelez cette fonction pour déterminer la date et l’heure de création de la table sous-jacente à l' `CDaoTableDef` objet.
 
 ```
 COleDateTime GetDateCreated();
@@ -509,17 +509,17 @@ COleDateTime GetDateCreated();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur contenant la date et l’heure `CDaoTableDef` de la création du tableau sous-jacent à l’objet.
+Valeur contenant la date et l’heure de la création de la table sous-jacente à l' `CDaoTableDef` objet.
 
 ### <a name="remarks"></a>Notes
 
-Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la table de base a été créée ou mise à jour pour la dernière fois. Dans un environnement multi-utilisateurs, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichiers pour éviter les écarts; c’est-à-dire que tous les clients devraient utiliser une source de temps « standard » — peut-être à partir d’un seul serveur.
+Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la table de base a été créée ou mise à jour pour la dernière fois. Dans un environnement multi-utilisateur, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichiers afin d’éviter les incohérences. autrement dit, tous les clients doivent utiliser une source de temps « standard », par exemple à partir d’un serveur.
 
-Pour plus d’informations connexes, voir le sujet "DateCreated, LastUpdated Properties" dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « Propriétés DateCreated, LastUpdated » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated
+## <a name="cdaotabledefgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoTableDef :: GetDateLastUpdated
 
-Appelez cette fonction pour déterminer la date `CDaoTableDef` et l’heure à laquelle le tableau sous-jacent à l’objet a été mis à jour pour la dernière fois.
+Appelez cette fonction pour déterminer la date et l’heure de la dernière mise à jour de la table sous-jacente `CDaoTableDef` à l’objet.
 
 ```
 COleDateTime GetDateLastUpdated();
@@ -527,17 +527,17 @@ COleDateTime GetDateLastUpdated();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur qui contient la date `CDaoTableDef` et l’heure du tableau sous-jacent à l’objet a été mise à jour pour la dernière fois.
+Valeur qui contient la date et l’heure de la dernière mise à jour de la table sous-jacente `CDaoTableDef` à l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la table de base a été créée ou mise à jour pour la dernière fois. Dans un environnement multi-utilisateurs, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichiers pour éviter les écarts; c’est-à-dire que tous les clients devraient utiliser une source de temps « standard » — peut-être à partir d’un seul serveur.
+Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la table de base a été créée ou mise à jour pour la dernière fois. Dans un environnement multi-utilisateur, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichiers afin d’éviter les incohérences. autrement dit, tous les clients doivent utiliser une source de temps « standard », par exemple à partir d’un serveur.
 
-Pour plus d’informations connexes, voir le sujet "DateCreated, LastUpdated Properties" dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « Propriétés DateCreated, LastUpdated » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetfieldcount"></a><a name="getfieldcount"></a>CDaoTableDef::GetFieldCount
+## <a name="cdaotabledefgetfieldcount"></a><a name="getfieldcount"></a>CDaoTableDef :: GetFieldCount
 
-Appelez cette fonction de membre pour récupérer le nombre de champs définis dans le tableau.
+Appelez cette fonction membre pour récupérer le nombre de champs définis dans la table.
 
 ```
 short GetFieldCount();
@@ -545,17 +545,17 @@ short GetFieldCount();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre de champs dans le tableau.
+Nombre de champs dans la table.
 
 ### <a name="remarks"></a>Notes
 
-Si sa valeur est de 0, il n’y a pas d’objets dans la collection.
+Si sa valeur est 0, il n’y a pas d’objets dans la collection.
 
-Pour obtenir des renseignements connexes, consultez le thème « Count Property » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété Count » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo
+## <a name="cdaotabledefgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoTableDef :: GetFieldInfo
 
-Appelez cette fonction de membre pour obtenir divers types d’informations sur un champ défini dans le dépôt.
+Appelez cette fonction membre pour obtenir différents genres d’informations sur un champ défini dans l’objet TableDef.
 
 ```cpp
 void GetFieldInfo(
@@ -572,34 +572,34 @@ void GetFieldInfo(
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-L’index de l’objet de champ dans la collection Fields à base zéro du tableau, pour la recherche par index.
+Index de l’objet de champ dans la collection de champs de base zéro de la table, pour la recherche par index.
 
-*Fieldinfo*<br/>
-Une référence à une structure [CDaoFieldInfo.](../../mfc/reference/cdaofieldinfo-structure.md)
+*FieldInfo*<br/>
+Référence à une structure [cdaofieldinfo,](../../mfc/reference/cdaofieldinfo-structure.md) .
 
 *dwInfoOptions*<br/>
-Options qui spécifient les informations sur le champ à récupérer. Les options disponibles sont énumérées ici ainsi que ce qu’elles causent le retour de la fonction :
+Options qui spécifient les informations relatives au champ à récupérer. Les options disponibles sont répertoriées ici, ainsi que ce qu’elles provoquent le retour de la fonction :
 
-- `AFX_DAO_PRIMARY_INFO`(Par défaut) Nom, Type, Taille, Attributs. Utilisez cette option pour des performances les plus rapides.
+- `AFX_DAO_PRIMARY_INFO`Valeurs Nom, type, taille, attributs. Utilisez cette option pour des performances plus rapides.
 
-- `AFX_DAO_SECONDARY_INFO`Informations primaires, plus: Position ordinaire, Requise, Permettre la longueur zéro, Ordonnance de collating, Nom étranger, Champ source, Tableau source
+- `AFX_DAO_SECONDARY_INFO`Informations principales, plus : position ordinale, obligatoire, autoriser la longueur nulle, ordre de classement, nom étranger, champ source, table source
 
-- `AFX_DAO_ALL_INFO`Informations primaires et secondaires, plus : Règle de validation, Texte de validation, Valeur par défaut
+- `AFX_DAO_ALL_INFO`Informations primaires et secondaires, plus : règle de validation, texte de validation, valeur par défaut
 
-*lpszName (en)*<br/>
-Un pointeur au nom de l’objet de champ, pour le lookup par nom. Le nom est une chaîne avec jusqu’à 64 caractères qui nomme uniquement le champ.
+*lpszName*<br/>
+Pointeur vers le nom de l’objet de champ, pour la recherche par nom. Le nom est une chaîne comportant jusqu’à 64 caractères qui renomme le champ de façon unique.
 
 ### <a name="remarks"></a>Notes
 
-Une version de la fonction vous permet de rechercher un champ par index. L’autre version vous permet de rechercher un champ par son nom.
+Une version de la fonction vous permet de rechercher un champ par index. L’autre version vous permet de rechercher un champ par nom.
 
-Pour une description de l’information retournée, voir la structure [CDaoFieldInfo.](../../mfc/reference/cdaofieldinfo-structure.md) Cette structure a des membres qui correspondent aux éléments d’information énumérés ci-dessus dans la description de *dwInfoOptions*. Lorsque vous demandez des informations à un niveau, vous obtenez des informations pour tous les niveaux antérieurs ainsi.
+Pour obtenir une description des informations retournées, consultez la structure [cdaofieldinfo,](../../mfc/reference/cdaofieldinfo-structure.md) . Cette structure a des membres qui correspondent aux éléments d’informations énumérés ci-dessus dans la description de *dwInfoOptions*. Lorsque vous demandez des informations à un niveau, vous recevez également des informations sur les niveaux précédents.
 
-Pour obtenir des renseignements connexes, consultez le thème « Propriété d’attributs » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété Attributes » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetindexcount"></a><a name="getindexcount"></a>CDaoTableDef::GetIndexCount
+## <a name="cdaotabledefgetindexcount"></a><a name="getindexcount"></a>CDaoTableDef :: GetIndexCount
 
-Appelez cette fonction de membre pour obtenir le nombre d’index pour un tableau.
+Appelez cette fonction membre pour obtenir le nombre d’index d’une table.
 
 ```
 short GetIndexCount();
@@ -607,17 +607,17 @@ short GetIndexCount();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre d’index pour le tableau.
+Nombre d’index de la table.
 
 ### <a name="remarks"></a>Notes
 
-Si sa valeur est de 0, il n’y a pas d’indices dans la collection.
+Si sa valeur est 0, il n’y a pas d’index dans la collection.
 
-Pour obtenir des renseignements connexes, consultez le thème « Count Property » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété Count » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetindexinfo"></a><a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo
+## <a name="cdaotabledefgetindexinfo"></a><a name="getindexinfo"></a>CDaoTableDef :: GetIndexInfo
 
-Appelez cette fonction de membre pour obtenir divers types d’informations sur un index défini dans le dépôt.
+Appelez cette fonction membre pour obtenir différents genres d’informations sur un index défini dans l’objet TableDef.
 
 ```cpp
 void GetIndexInfo(
@@ -634,34 +634,34 @@ void GetIndexInfo(
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-L’indice numérique de l’objet Index dans la collection d’indices à base de zéro du tableau, pour la recherche par sa position dans la collection.
+Index numérique de l’objet d’index dans la collection d’index de base zéro de la table, pour la recherche en fonction de sa position dans la collection.
 
 *indexinfo*<br/>
-Une référence à une structure [CDaoIndexInfo.](../../mfc/reference/cdaoindexinfo-structure.md)
+Référence à une structure [cdaoindexinfo,](../../mfc/reference/cdaoindexinfo-structure.md) .
 
 *dwInfoOptions*<br/>
-Options qui spécifient les informations sur l’index à récupérer. Les options disponibles sont énumérées ici ainsi que ce qu’elles causent le retour de la fonction :
+Options qui spécifient les informations relatives à l’index à récupérer. Les options disponibles sont répertoriées ici, ainsi que ce qu’elles provoquent le retour de la fonction :
 
-- `AFX_DAO_PRIMARY_INFO`Nom, Field Info, Fields. Utilisez cette option pour des performances les plus rapides.
+- `AFX_DAO_PRIMARY_INFO`Nom, informations de champ, champs. Utilisez cette option pour des performances plus rapides.
 
-- `AFX_DAO_SECONDARY_INFO`Informations primaires, plus: Primaire, Unique, Clustered, Ignorer Nulls, Requis, Étranger
+- `AFX_DAO_SECONDARY_INFO`Informations principales, plus : principal, unique, cluster, ignorer les valeurs NULL, obligatoire, étranger
 
-- `AFX_DAO_ALL_INFO`Informations primaires et secondaires, plus : Nombre distinct
+- `AFX_DAO_ALL_INFO`Informations primaires et secondaires, plus : nombre distinct
 
-*lpszName (en)*<br/>
-Un pointeur sur le nom de l’objet de l’index, pour le lookup par nom.
+*lpszName*<br/>
+Pointeur vers le nom de l’objet d’index, pour la recherche par nom.
 
 ### <a name="remarks"></a>Notes
 
-Une version de la fonction vous permet de rechercher un index par sa position dans la collection. L’autre version vous permet de rechercher un index par nom.
+Une version de la fonction vous permet de rechercher un index en fonction de sa position dans la collection. L’autre version vous permet de rechercher un index par nom.
 
-Pour une description de l’information retournée, voir la structure [CDaoIndexInfo.](../../mfc/reference/cdaoindexinfo-structure.md) Cette structure a des membres qui correspondent aux éléments d’information énumérés ci-dessus dans la description de *dwInfoOptions*. Lorsque vous demandez des informations à un niveau, vous obtenez des informations pour tous les niveaux antérieurs ainsi.
+Pour obtenir une description des informations retournées, consultez la structure [cdaoindexinfo,](../../mfc/reference/cdaoindexinfo-structure.md) . Cette structure a des membres qui correspondent aux éléments d’informations énumérés ci-dessus dans la description de *dwInfoOptions*. Lorsque vous demandez des informations à un niveau, vous recevez également des informations sur les niveaux précédents.
 
-Pour obtenir des renseignements connexes, consultez le thème « Propriété d’attributs » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété Attributes » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetname"></a><a name="getname"></a>CDaoTableDef::GetName
+## <a name="cdaotabledefgetname"></a><a name="getname"></a>CDaoTableDef :: GetName
 
-Appelez cette fonction de membre pour obtenir le nom défini par l’utilisateur du tableau sous-jacent.
+Appelez cette fonction membre pour obtenir le nom défini par l’utilisateur de la table sous-jacente.
 
 ```
 CString GetName();
@@ -669,17 +669,17 @@ CString GetName();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un nom défini par l’utilisateur pour une table.
+Nom défini par l’utilisateur pour une table.
 
 ### <a name="remarks"></a>Notes
 
-Ce nom commence par une lettre et peut contenir un maximum de 64 caractères. Il peut inclure des nombres et des personnages de souligner, mais ne peut pas inclure la ponctuation ou des espaces.
+Ce nom commence par une lettre et peut contenir jusqu’à 64 caractères. Elle peut inclure des nombres et des traits de soulignement, mais ne peut pas inclure de signes de ponctuation ou d’espace.
 
-Pour obtenir des informations connexes, consultez le thème « Propriété du nom » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété Name » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetrecordcount"></a><a name="getrecordcount"></a>CDaoTableDef::GetRecordCount
+## <a name="cdaotabledefgetrecordcount"></a><a name="getrecordcount"></a>CDaoTableDef :: GetRecordCount
 
-Appelez cette fonction de membre pour savoir `CDaoTableDef` combien d’enregistrements sont dans un objet.
+Appelez cette fonction membre pour connaître le nombre d’enregistrements présents dans un `CDaoTableDef` objet.
 
 ```
 long GetRecordCount();
@@ -687,17 +687,17 @@ long GetRecordCount();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre d’enregistrements consultés dans un objet de dépôt.
+Nombre d’enregistrements accessibles dans un objet TableDef.
 
 ### <a name="remarks"></a>Notes
 
-L’appel pour `GetRecordCount` `CDaoTableDef` un objet de type table reflète le nombre approximatif d’enregistrements dans le tableau et est affecté immédiatement au fur et à mesure que les enregistrements de table sont ajoutés et supprimés. Les transactions annulées apparaîtront dans le cadre du nombre d’enregistrements jusqu’à ce que vous [appeliez CDaoWorkSpace::CompactDatabase](../../mfc/reference/cdaoworkspace-class.md#compactdatabase). Un `CDaoTableDef` objet sans dossier a un nombre record de propriété de 0. Lorsque vous travaillez avec des tables `GetRecordCount` jointes ou des bases de données ODBC, retourne toujours -1.
+L’appel `GetRecordCount` d’un objet de type table `CDaoTableDef` reflète le nombre approximatif d’enregistrements dans la table et est immédiatement affecté au fur et à mesure de l’ajout et de la suppression d’enregistrements de table. Les transactions restaurées apparaissent dans le nombre d’enregistrements tant que vous n’appelez pas [CDaoWorkSpace :: CompactDatabase](../../mfc/reference/cdaoworkspace-class.md#compactdatabase). Un `CDaoTableDef` objet sans enregistrement a une valeur de propriété nombre d’enregistrements égale à 0. Lorsque vous utilisez des tables attachées ou des bases de données ODBC, `GetRecordCount` retourne toujours-1.
 
-Pour obtenir des renseignements connexes, consultez le thème « RecordCount Property » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété RecordCount » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetsourcetablename"></a><a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName
+## <a name="cdaotabledefgetsourcetablename"></a><a name="getsourcetablename"></a>CDaoTableDef :: GetSourceTableName
 
-Appelez cette fonction de membre pour récupérer le nom d’une table jointe dans une base de données source.
+Appelez cette fonction membre pour récupérer le nom d’une table attachée dans une base de données source.
 
 ```
 CString GetSourceTableName();
@@ -705,17 +705,17 @@ CString GetSourceTableName();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `CString` objet qui spécifie le nom source d’une table jointe, ou une chaîne vide si une table de données native.
+`CString`Objet qui spécifie le nom de la source d’une table attachée, ou une chaîne vide si une table de données native.
 
 ### <a name="remarks"></a>Notes
 
-Une table jointe est une table dans une autre base de données liée à une base de données Microsoft Jet. Les données pour les tables jointes restent dans la base de données externe, où elles peuvent être manipulées par d’autres applications.
+Une table attachée est une table d’une autre base de données liée à une base de données Microsoft Jet. Les données des tables attachées restent dans la base de données externe, où elles peuvent être manipulées par d’autres applications.
 
-Pour plus d’informations connexes, consultez le thème "SourceTableName Property" dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété SourceTableName » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetvalidationrule"></a><a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule
+## <a name="cdaotabledefgetvalidationrule"></a><a name="getvalidationrule"></a>CDaoTableDef :: GetValidationRule
 
-Appelez cette fonction de membre pour récupérer la règle de validation pour un dépôt.
+Appelez cette fonction membre pour récupérer la règle de validation d’un objet TableDef.
 
 ```
 CString GetValidationRule();
@@ -723,17 +723,17 @@ CString GetValidationRule();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `CString` objet qui valide les données dans un champ tel qu’il est modifié ou ajouté à une table.
+`CString`Objet qui valide les données d’un champ au fur et à mesure qu’elles sont modifiées ou ajoutées à une table.
 
 ### <a name="remarks"></a>Notes
 
-Les règles de validation sont utilisées dans le cadre des opérations de mise à jour. Si un dépôt contient une règle de validation, les mises à jour de ce formulaire doivent correspondre aux critères prédéterminés avant que les données ne soient modifiées. Si la modification ne correspond pas aux critères, une exception contenant la valeur de [GetValidationText](#getvalidationtext) est lancée. Pour `CDaoTableDef` un objet, il s’agit `CString` d’une lecture uniquement pour une table jointe et de lecture/écriture pour une table de base.
+Les règles de validation sont utilisées dans le cadre des opérations de mise à jour. Si un objet TableDef contient une règle de validation, les mises à jour apportées à cet objet TableDef doivent correspondre à des critères prédéterminés avant que les données ne soient modifiées. Si la modification ne correspond pas aux critères, une exception contenant la valeur de [GetValidationText](#getvalidationtext) est levée. Pour un `CDaoTableDef` objet, il `CString` est en lecture seule pour une table attachée et en lecture/écriture pour une table de base.
 
-Pour plus d’informations, consultez le thème "ValidationRule Property" dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété ValidationRule » dans l’aide de DAO.
 
-## <a name="cdaotabledefgetvalidationtext"></a><a name="getvalidationtext"></a>CDaoTableDef::GetValidationText
+## <a name="cdaotabledefgetvalidationtext"></a><a name="getvalidationtext"></a>CDaoTableDef :: GetValidationText
 
-Appelez cette fonction pour récupérer la chaîne pour afficher lorsqu’un utilisateur sais voit des données qui ne correspondent pas à la règle de validation.
+Appelez cette fonction pour récupérer la chaîne à afficher lorsqu’un utilisateur entre des données qui ne correspondent pas à la règle de validation.
 
 ```
 CString GetValidationText();
@@ -741,17 +741,17 @@ CString GetValidationText();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `CString` objet qui spécifie le texte affiché si l’utilisateur sais voit des données qui ne correspondent pas à la règle de validation.
+`CString`Objet qui spécifie le texte affiché si l’utilisateur entre des données qui ne correspondent pas à la règle de validation.
 
 ### <a name="remarks"></a>Notes
 
-Pour `CDaoTableDef` un objet, il s’agit `CString` d’une lecture uniquement pour une table jointe et de lecture/écriture pour une table de base.
+Pour un `CDaoTableDef` objet, il `CString` est en lecture seule pour une table attachée et en lecture/écriture pour une table de base.
 
-Pour plus d’informations connexes, consultez le thème "ValidationText Property" dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété MessageSiErreur » dans l’aide de DAO.
 
-## <a name="cdaotabledefisopen"></a><a name="isopen"></a>CDaoTableDef::IsOpen
+## <a name="cdaotabledefisopen"></a><a name="isopen"></a>CDaoTableDef :: IsOpen
 
-Appelez cette fonction de `CDaoTableDef` membre pour déterminer si l’objet est actuellement ouvert.
+Appelez cette fonction membre pour déterminer si l' `CDaoTableDef` objet est actuellement ouvert.
 
 ```
 BOOL IsOpen() const;
@@ -759,27 +759,27 @@ BOOL IsOpen() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nonzero si `CDaoTableDef` l’objet est ouvert; sinon 0.
+Différent de zéro si l' `CDaoTableDef` objet est ouvert ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdaotabledefm_pdatabase"></a><a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase
+## <a name="cdaotabledefm_pdatabase"></a><a name="m_pdatabase"></a>CDaoTableDef :: m_pDatabase
 
-Contient un pointeur à l’objet [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) pour cette table.
-
-### <a name="remarks"></a>Notes
-
-## <a name="cdaotabledefm_pdaotabledef"></a><a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef
-
-Contient un pointeur à l’interface OLE pour `CDaoTableDef` l’objet de dépôt DAO sous-jacent à l’objet.
+Contient un pointeur vers l’objet [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) pour cette table.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez ce pointeur si vous avez besoin d’accéder à l’interface DAO directement.
+## <a name="cdaotabledefm_pdaotabledef"></a><a name="m_pdaotabledef"></a>CDaoTableDef :: m_pDAOTableDef
 
-## <a name="cdaotabledefopen"></a><a name="open"></a>CDaoTableDef::Ouvert
+Contient un pointeur vers l’interface OLE pour l’objet TableDef DAO sous-jacent à l' `CDaoTableDef` objet.
 
-Appelez cette fonction de membre pour ouvrir un tableau précédemment enregistré dans la collection de tableDef de la base de données.
+### <a name="remarks"></a>Notes
+
+Utilisez ce pointeur si vous devez accéder directement à l’interface DAO.
+
+## <a name="cdaotabledefopen"></a><a name="open"></a>CDaoTableDef :: Open
+
+Appelez cette fonction membre pour ouvrir un objet TableDef précédemment enregistré dans la collection TableDef’s de la base de données.
 
 ```
 virtual void Open(LPCTSTR lpszName);
@@ -787,14 +787,14 @@ virtual void Open(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszName (en)*<br/>
-Un pointeur à une chaîne qui spécifie un nom de table.
+*lpszName*<br/>
+Pointeur vers une chaîne qui spécifie un nom de table.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdaotabledefrefreshlink"></a><a name="refreshlink"></a>CDaoTableDef::RefreshLink
+## <a name="cdaotabledefrefreshlink"></a><a name="refreshlink"></a>CDaoTableDef :: RefreshLink
 
-Appelez cette fonction de membre pour mettre à jour les informations de connexion pour une table jointe.
+Appelez cette fonction membre pour mettre à jour les informations de connexion pour une table attachée.
 
 ```cpp
 void RefreshLink();
@@ -802,15 +802,15 @@ void RefreshLink();
 
 ### <a name="remarks"></a>Notes
 
-Vous modifiez les informations de connexion pour une `CDaoTableDef` table jointe `RefreshLink` en appelant [SetConnect](#setconnect) sur l’objet correspondant, puis en utilisant la fonction membre pour mettre à jour les informations. Lorsque vous `RefreshLink`appelez, les propriétés de la table ci-jointe ne sont pas modifiées.
+Vous modifiez les informations de connexion d’une table attachée en appelant [SetConnect](#setconnect) sur l' `CDaoTableDef` objet correspondant, puis en utilisant la `RefreshLink` fonction membre pour mettre à jour les informations. Lorsque vous appelez `RefreshLink` , les propriétés de la table attachée ne sont pas modifiées.
 
-Pour forcer l’entrée en vigueur des informations de connexion modifiées, tous les objets [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) ouverts basés sur ce système de dépôt doivent être fermés.
+Pour forcer l’application des informations de connexion modifiées, tous les objets [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) ouverts basés sur ce TableDef doivent être fermés.
 
-Pour obtenir des informations connexes, consultez le thème « Méthode RefreshLink » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « méthode RefreshLink » dans l’aide de DAO.
 
-## <a name="cdaotabledefsetattributes"></a><a name="setattributes"></a>CDaoTableDef::SetAttributes
+## <a name="cdaotabledefsetattributes"></a><a name="setattributes"></a>CDaoTableDef :: SetAttributes
 
-Définit une valeur qui indique une `CDaoTableDef` ou plusieurs caractéristiques d’un objet.
+Définit une valeur qui indique une ou plusieurs caractéristiques d’un `CDaoTableDef` objet.
 
 ```cpp
 void SetAttributes(long lAttributes);
@@ -819,28 +819,28 @@ void SetAttributes(long lAttributes);
 ### <a name="parameters"></a>Paramètres
 
 *lAttributes*<br/>
-Caractéristiques du tableau représentés par l’objet `CDaoTableDef` et peuvent être une somme de ces constantes:
+Les caractéristiques de la table représentée par l' `CDaoTableDef` objet et peuvent être une somme de ces constantes :
 
 |Constant|Description|
 |--------------|-----------------|
 |`dbAttachExclusive`|Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que la table est une table attachée ouverte pour une utilisation exclusive.|
-|`dbAttachSavePWD`|Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que l’identifiant utilisateur et le mot de passe pour la table ci-jointe sont enregistrés avec les informations de connexion.|
+|`dbAttachSavePWD`|Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que l’ID d’utilisateur et le mot de passe de la table attachée sont enregistrés avec les informations de connexion.|
 |`dbSystemObject`|Indique que la table est une table système fournie par le moteur de base de données Microsoft Jet.|
 |`dbHiddenObject`|Indique que la table est une table cachée fournie par le moteur de base de données Microsoft Jet.|
 
 ### <a name="remarks"></a>Notes
 
-Lors de la définition de plusieurs attributs, vous pouvez les combiner en résumant les constantes appropriées à l’aide de l’opérateur bitwise-OR. Le `dbAttachExclusive` réglage sur une table non attachée produit une exception. La combinaison des valeurs suivantes produit également une exception :
+Lors de la définition de plusieurs attributs, vous pouvez les combiner en additionnant les constantes appropriées à l’aide de l’opérateur or au niveau du bit. `dbAttachExclusive`La définition d’une table non attachée génère une exception. La combinaison des valeurs suivantes produit également une exception :
 
 - **dbAttachExclusive &#124; dbAttachedODBC**
 
 - **dbAttachSavePWD &#124; dbAttachedTable**
 
-Pour obtenir des renseignements connexes, consultez le thème « Propriété d’attributs » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété Attributes » dans l’aide de DAO.
 
-## <a name="cdaotabledefsetconnect"></a><a name="setconnect"></a>CDaoTableDef::SetConnect
+## <a name="cdaotabledefsetconnect"></a><a name="setconnect"></a>CDaoTableDef :: SetConnect
 
-Pour `CDaoTableDef` un objet qui représente une table attachée, l’objet de chaîne se compose d’une ou deux parties (un spécificateur de type base de données et un chemin vers la base de données).
+Pour un `CDaoTableDef` objet qui représente une table attachée, l’objet String se compose d’une ou de deux parties (un spécificateur de type de base de données et d’un chemin d’accès à la base de données).
 
 ```cpp
 void SetConnect(LPCTSTR lpszConnect);
@@ -849,50 +849,50 @@ void SetConnect(LPCTSTR lpszConnect);
 ### <a name="parameters"></a>Paramètres
 
 *lpszConnect*<br/>
-Un pointeur à une expression de chaîne qui spécifie des paramètres supplémentaires à passer à ODBC ou les pilotes ISAM installables.
+Pointeur vers une expression de chaîne qui spécifie des paramètres supplémentaires à passer à ODBC ou à des pilotes ISAM installables.
 
 ### <a name="remarks"></a>Notes
 
-Le chemin indiqué dans le tableau ci-dessous est le chemin complet pour l’annuaire contenant les fichiers de base de données et doit être précédé par l’identifiant "DATABASE". Dans certains cas (comme avec les bases de données Microsoft Jet et Microsoft Excel), un nom de fichier spécifique est inclus dans l’argument de la trajectoire de base de données.
+Le chemin d’accès, comme indiqué dans le tableau ci-dessous, est le chemin d’accès complet du répertoire contenant les fichiers de base de données et doit être précédé de l’identificateur « DATABASE = ». Dans certains cas (comme avec les bases de données Microsoft Jet et Microsoft Excel), un nom de fichier spécifique est inclus dans l’argument de chemin d’accès de la base de données.
 
 > [!NOTE]
-> N’incluez pas l’espace blanc autour du signe égal\\dans les déclarations de chemin de la forme "DATABASE’drive: 'path'. Cela se traduira par une exception étant jeté et la connexion défaillante.
+> N’incluez pas d’espace blanc autour des instructions de chemin d’accès de connexion équivalente sous la forme « DATABASE = Drive : \\ \path ». Cela entraîne la levée d’une exception et l’échec de la connexion.
 
-Le tableau suivant montre les types de bases de données possibles et leurs spécifications et chemins de base de données correspondants :
+Le tableau suivant répertorie les types de bases de données possibles et les spécificateurs et les chemins d’accès de base de données correspondants :
 
 |Type de base de données|Spécificateur|Path|
 |-------------------|---------------|----------|
-|Base de données à l’aide du moteur de base de données Jet|"[ `database`];"|" `drive`\\\ :*nom*\\\ *de fichier path*. MDB"|
-|dBASE III|"dBASE III;"|" `drive`\\\ :*chemin*"|
-|dBASE IV|"dBASE IV;"|" `drive`\\\ :*chemin*"|
-|dBASE 5|"dBASE 5.0;"|" `drive`\\\ :*chemin*"|
-|Paradoxe 3.x|"Paradoxe 3.x;"|" `drive`\\\ :*chemin*"|
-|Paradoxe 4.x|"Paradoxe 4.x;"|" `drive`\\\ :*chemin*"|
-|Paradoxe 5.x|"Paradoxe 5.x;"|" `drive`\\\ :*chemin*"|
-|Excel 3.0|"Excel 3.0;"|" `drive`\\\ :*nom*\\\ *de fichier path*. XLS"|
-|Excel 4.0|"Excel 4.0;"|" `drive`\\\ :*nom*\\\ *de fichier path*. XLS"|
-|Excel 5.0 ou Excel 95|"Excel 5.0;"|" `drive`\\\ :*nom*\\\ *de fichier path*. XLS"|
-|Excel 97 Annonces|"Excel 8.0;"|" `drive`\\\ :*nom*\ *de fichier path*. XLS"|
-|IMPORTATION HTML|"IMPORTATION HTML;"|" `drive`\\\ : nom*de fichier de**chemin*\ "|
-|Exportation HTML|"EXPORTATION HTML;"|" `drive`\\\ :*chemin*"|
-|Texte|"Texte;"|"drive:\\'chemin"|
-|ODBC|"ODBC; BASE `database`DE DONNÉESMD ; Utilisateur *UIDMD*; *Mot de passe*PWDMD ; nom de *source de données DSNMD;* LOGINTIMEOUT *SECONDES;*" (Ce n’est peut-être pas une chaîne de connexion complète pour tous les serveurs; c’est juste un exemple. Il est très important de ne pas avoir d’espaces entre les paramètres.)|None|
-|Exchange|"Échange;<br /><br /> DOSSIER MAPILEVELMD *folderpath*;<br /><br /> [TABLETYPEMD 0 &#124; 1 ;]<br /><br /> [PROFIL *PROFILMD profil*;]<br /><br /> [mot *de passe*PWDMD ;]<br /><br /> [BASE `database`DE DONNÉES;]"|*"drive*\\\ :*nom*\\\ *de fichier path*. MDB"|
+|Base de données utilisant le moteur de base de données Jet|"[ `database`];"|" `drive` : \\ \  *chemin d’accès* \\ \  *nom_fichier*. MDB|
+|dBASE III|« dBASE III ; »|« `drive` : \\ \  *chemin*»|
+|dBASE IV|« dBASE IV ; »|« `drive` : \\ \  *chemin*»|
+|dBASE 5|« dBASE 5,0 ; »|« `drive` : \\ \  *chemin*»|
+|Paradox 3. x|« Paradox 3. x ; »|« `drive` : \\ \  *chemin*»|
+|Paradox 4. x|« Paradox 4. x ; »|« `drive` : \\ \  *chemin*»|
+|Paradox 5. x|« Paradox 5. x ; »|« `drive` : \\ \  *chemin*»|
+|Excel 3,0|« Excel 3,0 ; »|" `drive` : \\ \  *chemin d’accès* \\ \  *nom_fichier*. XLS|
+|Excel 4,0|« Excel 4,0 ; »|" `drive` : \\ \  *chemin d’accès* \\ \  *nom_fichier*. XLS|
+|Excel 5,0 ou Excel 95|« Excel 5,0 ; »|" `drive` : \\ \  *chemin d’accès* \\ \  *nom_fichier*. XLS|
+|Excel 97|« Excel 8,0 ; »|" `drive` : \\ \  *chemin d’accès* \  *nom_fichier*. XLS|
+|Importation HTML|« Importation HTML ; »|" `drive` : \\ \  *path* \  *filename*"|
+|Exportation HTML|« Exportation HTML ; »|« `drive` : \\ \  *chemin*»|
+|Texte|« Texte ; »|« lecteur : \\ \path »|
+|ODBC|ODBC BASE de données = `database` ; UID = *User*; PWD = *mot de passe*; DSN = *DataSourceName ;* LOGINTIMEOUT = *secondes ;*» (Il se peut qu’il ne s’agit pas d’une chaîne de connexion complète pour tous les serveurs ; il s’agit simplement d’un exemple. Il est très important de ne pas avoir d’espace entre les paramètres.)|None|
+|Exchange|Échanger<br /><br /> MAPILEVEL = *folderPath*;<br /><br /> [TABLETYPE = {0 &#124; 1};]<br /><br /> [PROFILe = *Profile*;]<br /><br /> [PWD = *mot de passe*;]<br /><br /> [Base de données = `database` ;]»|*«lecteur*: \\ \  *chemin d’accès* \\ \  *nom_fichier*. MDB|
 
 > [!NOTE]
-> Btrieve n’est plus pris en charge à partir de DAO 3.5.
+> Btrieve n’est plus pris en charge à partir de DAO 3,5.
 
-Vous devez utiliser un double\\\\backslash ( ) dans les chaînes de connexion. Si vous avez modifié les propriétés d’une connexion existante à l’aide, `SetConnect`vous devez ensuite appeler [RefreshLink](#refreshlink). Si vous initialisez les `SetConnect`propriétés de `RefreshLink`connexion en utilisant, vous n’avez pas besoin d’appeler, mais si vous choisissez de le faire, d’abord appendice le dépôt.
+Vous devez utiliser une double barre oblique inverse ( \\ \\ ) dans les chaînes de connexion. Si vous avez modifié les propriétés d’une connexion existante à l’aide de `SetConnect` , vous devez appeler [RefreshLink](#refreshlink)par la suite. Si vous initialisez les propriétés de connexion à l’aide `SetConnect` de, vous n’avez pas besoin `RefreshLink` d’appeler, mais si vous le souhaitez, vous devez d’abord ajouter l’objet TableDef.
 
-Si un mot de passe est requis mais non fourni, le conducteur de l’ODBC affiche une boîte de dialogue de connexion la première fois qu’une table est consultée et à nouveau si la connexion est fermée et rouverte.
+Si un mot de passe est requis mais n’est pas fourni, le pilote ODBC affiche une boîte de dialogue de connexion la première fois qu’un utilisateur accède à une table, puis de nouveau si la connexion est fermée et rouverte.
 
-Vous pouvez définir la `CDaoTableDef` chaîne de connexion d’un objet en fournissant un argument source à la `Create` fonction membre. Vous pouvez vérifier le paramètre pour déterminer le type, le chemin, l’identifiant utilisateur, le mot de passe ou la source de données ODBC de la base de données. Pour plus d’informations, consultez la documentation pour le conducteur spécifique.
+Vous pouvez définir la chaîne de connexion d’un `CDaoTableDef` objet en fournissant un argument source à la `Create` fonction membre. Vous pouvez vérifier le paramètre pour déterminer le type, le chemin d’accès, l’ID utilisateur, le mot de passe ou la source de données ODBC de la base de données. Pour plus d’informations, consultez la documentation relative au pilote spécifique.
 
-Pour obtenir des informations connexes, consultez le thème « Connect Property » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « Connect Property » dans l’aide de DAO.
 
-## <a name="cdaotabledefsetname"></a><a name="setname"></a>CDaoTableDef::SetName
+## <a name="cdaotabledefsetname"></a><a name="setname"></a>CDaoTableDef :: SetName
 
-Appelez cette fonction de membre pour définir un nom défini par l’utilisateur pour une table.
+Appelez cette fonction membre pour définir un nom défini par l’utilisateur pour une table.
 
 ```cpp
 void SetName(LPCTSTR lpszName);
@@ -900,18 +900,18 @@ void SetName(LPCTSTR lpszName);
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszName (en)*<br/>
-Un pointeur à une expression de chaîne qui spécifie un nom pour une table.
+*lpszName*<br/>
+Pointeur vers une expression de chaîne qui spécifie un nom pour une table.
 
 ### <a name="remarks"></a>Notes
 
-Le nom doit commencer par une lettre et peut contenir un maximum de 64 caractères. Il peut inclure des nombres et des personnages de souligner, mais ne peut pas inclure la ponctuation ou des espaces.
+Le nom doit commencer par une lettre et peut contenir jusqu’à 64 caractères. Elle peut inclure des nombres et des traits de soulignement, mais ne peut pas inclure de signes de ponctuation ou d’espace.
 
-Pour obtenir des informations connexes, consultez le thème « Propriété du nom » dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété Name » dans l’aide de DAO.
 
-## <a name="cdaotabledefsetsourcetablename"></a><a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName
+## <a name="cdaotabledefsetsourcetablename"></a><a name="setsourcetablename"></a>CDaoTableDef :: SetSourceTableName
 
-Appelez cette fonction de membre pour spécifier le nom d’une table jointe ou le nom du tableau de base sur lequel l’objet `CDaoTableDef` est basé, car il existe dans la source originale des données.
+Appelez cette fonction membre pour spécifier le nom d’une table attachée ou le nom de la table de base sur laquelle l' `CDaoTableDef` objet est basé, tel qu’il existe dans la source d’origine des données.
 
 ```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
@@ -920,17 +920,17 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ### <a name="parameters"></a>Paramètres
 
 *lpszSrcTableName*<br/>
-Un pointeur à une expression de chaîne qui spécifie un nom de table dans la base de données externe. Pour une table de base, le réglage est une ficelle vide ("").
+Pointeur vers une expression de chaîne qui spécifie un nom de table dans la base de données externe. Pour une table de base, le paramètre est une chaîne vide ("").
 
 ### <a name="remarks"></a>Notes
 
-Vous devez alors appeler [RefreshLink](#refreshlink). Ce paramètre de propriété est vide pour une table de base et lu/écrire pour une table jointe ou un objet non joint à une collection.
+Vous devez ensuite appeler [RefreshLink](#refreshlink). Ce paramètre de propriété est vide pour une table de base et en lecture/écriture pour une table attachée ou un objet qui n’est pas ajouté à une collection.
 
-Pour plus d’informations connexes, consultez le thème "SourceTableName Property" dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété SourceTableName » dans l’aide de DAO.
 
-## <a name="cdaotabledefsetvalidationrule"></a><a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule
+## <a name="cdaotabledefsetvalidationrule"></a><a name="setvalidationrule"></a>CDaoTableDef :: SetValidationRule
 
-Appelez cette fonction de membre pour définir une règle de validation pour un dépôt.
+Appelez cette fonction membre pour définir une règle de validation pour un objet TableDef.
 
 ```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
@@ -939,23 +939,23 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
 ### <a name="parameters"></a>Paramètres
 
 *lpszValidationRule*<br/>
-Un pointeur à une expression de chaîne qui valide une opération.
+Pointeur vers une expression de chaîne qui valide une opération.
 
 ### <a name="remarks"></a>Notes
 
-Les règles de validation sont utilisées dans le cadre des opérations de mise à jour. Si un dépôt contient une règle de validation, les mises à jour de ce formulaire doivent correspondre aux critères prédéterminés avant que les données ne soient modifiées. Si la modification ne correspond pas aux critères, une exception contenant le texte de [GetValidationText](#getvalidationtext) s’affiche.
+Les règles de validation sont utilisées dans le cadre des opérations de mise à jour. Si un objet TableDef contient une règle de validation, les mises à jour apportées à cet objet TableDef doivent correspondre à des critères prédéterminés avant que les données ne soient modifiées. Si la modification ne correspond pas aux critères, une exception contenant le texte de [GetValidationText](#getvalidationtext) s’affiche.
 
-La validation n’est prise en charge que pour les bases de données qui utilisent le moteur de base de données Microsoft Jet. L’expression ne peut pas se référer à des fonctions définies par l’utilisateur, des fonctions agrégées de domaine, des fonctions agrégées SQL ou des requêtes. Une règle de `CDaoTableDef` validation pour un objet peut se référer à plusieurs champs dans cet objet.
+La validation est prise en charge uniquement pour les bases de données qui utilisent le moteur de base de données Microsoft Jet. L’expression ne peut pas faire référence à des fonctions définies par l’utilisateur, à des fonctions d’agrégation de domaine, à des fonctions d’agrégation SQL ou à des requêtes. Une règle de validation pour un `CDaoTableDef` objet peut faire référence à plusieurs champs de cet objet.
 
-Par exemple, pour les domaines *nommés hire_date* et *termination_date*, une règle de validation pourrait être :
+Par exemple, pour les champs nommés *hire_date* et *termination_date*, une règle de validation peut être :
 
 [!code-cpp[NVC_MFCDatabase#34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]
 
-Pour plus d’informations, consultez le thème "ValidationRule Property" dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété ValidationRule » dans l’aide de DAO.
 
-## <a name="cdaotabledefsetvalidationtext"></a><a name="setvalidationtext"></a>CDaoTableDef::SetValidationText
+## <a name="cdaotabledefsetvalidationtext"></a><a name="setvalidationtext"></a>CDaoTableDef :: SetValidationText
 
-Appelez cette fonction de membre pour définir le `CDaoTableDef` texte d’exception d’une règle de validation pour un objet avec une table de base sous-jacente supportée par le moteur de base Microsoft Jet.
+Appelez cette fonction membre pour définir le texte d’exception d’une règle de validation pour un `CDaoTableDef` objet avec une table de base sous-jacente prise en charge par le moteur de base de données Microsoft Jet.
 
 ```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
@@ -964,17 +964,17 @@ void SetValidationText(LPCTSTR lpszValidationText);
 ### <a name="parameters"></a>Paramètres
 
 *lpszValidationText*<br/>
-Un pointeur à une expression de chaîne qui spécifie le texte affiché si les données saisies est invalide.
+Pointeur vers une expression de chaîne qui spécifie le texte affiché si les données entrées ne sont pas valides.
 
 ### <a name="remarks"></a>Notes
 
-Vous ne pouvez pas définir le texte de validation d’une table jointe.
+Vous ne pouvez pas définir le texte de validation d’une table attachée.
 
-Pour plus d’informations connexes, consultez le thème "ValidationText Property" dans DAO Help.
+Pour obtenir des informations connexes, consultez la rubrique « propriété MessageSiErreur » dans l’aide de DAO.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe CObject](../../mfc/reference/cobject-class.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CDaoDatabase, classe](../../mfc/reference/cdaodatabase-class.md)<br/>
-[Classe CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)
+[Classe CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)<br/>
+[CDaoRecordset (classe)](../../mfc/reference/cdaorecordset-class.md)

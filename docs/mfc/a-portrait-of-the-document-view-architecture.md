@@ -14,12 +14,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: f0e71c42004b5409eeb6f5e2ddabd33296cf5f49
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8c7bb4add1ebce62147f0bd5403f693cbec87e91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623445"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214189"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portrait de l'architecture document/vue
 
@@ -27,7 +27,7 @@ Les documents et les vues sont associés à une application MFC classique. Les d
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>Obtention de l’accès aux données de document à partir de la vue
 
-La vue accède aux données de son document à l’aide de la fonction [GetDocument](reference/cview-class.md#getdocument) , qui retourne un pointeur vers le document ou en faisant de la classe de vue un C++ `friend` de la classe de document. La vue utilise ensuite son accès aux données pour obtenir les données lorsqu’elle est prête à dessiner ou à la manipuler.
+La vue accède aux données de son document à l’aide de la fonction [GetDocument](reference/cview-class.md#getdocument) , qui retourne un pointeur vers le document ou en faisant de la classe de vue un C++ **`friend`** de la classe de document. La vue utilise ensuite son accès aux données pour obtenir les données lorsqu’elle est prête à dessiner ou à la manipuler.
 
 Par exemple, à partir de la fonction membre [OnDraw](reference/cview-class.md#ondraw) de la vue, la vue utilise `GetDocument` pour obtenir un pointeur de document. Il utilise ensuite ce pointeur pour accéder à un `CString` membre de données dans le document. La vue passe la chaîne à la `TextOut` fonction. Pour afficher le code de cet exemple, consultez [dessin dans une vue](drawing-in-a-view.md).
 

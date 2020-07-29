@@ -5,12 +5,12 @@ ms.date: 07/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 571513c33a40bc13ba4d0bb0d682bfb8cc8d6071
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: e362119ed3c642e2fa07bddd570c2365252d3325
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180862"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223874"
 ---
 # <a name="compiler-options-listed-by-category"></a>Options du compilateur classées par catégorie
 
@@ -24,7 +24,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 | [`/O2`](o1-o2-minimize-size-maximize-speed.md) | Crée un code rapide. |
 | [`/Ob`](ob-inline-function-expansion.md) | Contrôle l'expansion inline. |
 | [`/Od`](od-disable-debug.md) | Désactive l'optimisation. |
-| [`/Og`](og-global-optimizations.md) | Action déconseillée. Utilise des optimisations globales. |
+| [`/Og`](og-global-optimizations.md) | Obsolète. Utilise des optimisations globales. |
 | [`/Oi`](oi-generate-intrinsic-functions.md) | Génère des fonctions intrinsèques. |
 | [`/Os`](os-ot-favor-small-code-favor-fast-code.md) | Favorise la taille du code. |
 | [`/Ot`](os-ot-favor-small-code-favor-fast-code.md) | Favorise la vitesse du code. |
@@ -41,31 +41,31 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 | [`/EH`](eh-exception-handling-model.md) | Spécifie le modèle de gestion des exceptions. |
 | [`/fp`](fp-specify-floating-point-behavior.md) | Spécifie le comportement de virgule flottante. |
 | [`/GA`](ga-optimize-for-windows-application.md) | Optimise pour les applications Windows. |
-| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Utilise la convention d'appel `__cdecl` . (x86 uniquement) |
-| [`/Ge`](ge-enable-stack-probes.md) | Action déconseillée. Active les tests de pile. |
+| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | Utilise la **`__cdecl`** Convention d’appel. (x86 uniquement) |
+| [`/Ge`](ge-enable-stack-probes.md) | Obsolète. Active les tests de pile. |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | Active le regroupement des chaînes. |
 | [`/Gh`](gh-enable-penter-hook-function.md) | Appelle la fonction de raccordement `_penter`. |
 | [`/GH`](gh-enable-pexit-hook-function.md) | Appelle la fonction de raccordement `_pexit`. |
 | [`/GL`](gl-whole-program-optimization.md) | Active l'optimisation de l'ensemble du programme. |
-| [`/Gm`](gm-enable-minimal-rebuild.md) | Action déconseillée. Active la régénération minimale. |
+| [`/Gm`](gm-enable-minimal-rebuild.md) | Obsolète. Active la régénération minimale. |
 | [`/GR`](gr-enable-run-time-type-information.md) | Active les informations de type au moment de l'exécution (RTTI, Run-Time Type Information). |
-| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Utilise la convention d'appel `__fastcall` . (x86 uniquement) |
+| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | Utilise la **`__fastcall`** Convention d’appel. (x86 uniquement) |
 | [`/GS`](gs-buffer-security-check.md) | Vérifie la sécurité des mémoires tampons. |
 | [`/Gs`](gs-control-stack-checking-calls.md) | Gère les tests de pile. |
 | [`/GT`](gt-support-fiber-safe-thread-local-storage.md) | Prend en charge la sécurité des fibres pour les données allouées en utilisant un stockage local des threads de type statique. |
 | [`/guard:cf`](guard-enable-control-flow-guard.md) | Ajoute des vérifications de sécurité de protection du flux de contrôle. |
 | [`/guard:ehcont`](guard-enable-eh-continuation-metadata.md) | Active les métadonnées de continuation EH. |
-| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Utilise la convention d'appel `__vectorcall` . (x86 et x64 uniquement) |
+| [`/Gv`](gd-gr-gv-gz-calling-convention.md) | Utilise la **`__vectorcall`** Convention d’appel. (x86 et x64 uniquement) |
 | [`/Gw`](gw-optimize-global-data.md) | Active l'optimisation globale des données de la totalité du programme. |
-| [`/GX`](gx-enable-exception-handling.md) | Action déconseillée. Active la gestion synchrone des exceptions. Utilisez à la [`/EH`](eh-exception-handling-model.md) place. |
+| [`/GX`](gx-enable-exception-handling.md) | Obsolète. Active la gestion synchrone des exceptions. Utilisez à la [`/EH`](eh-exception-handling-model.md) place. |
 | [`/Gy`](gy-enable-function-level-linking.md) | Active la liaison au niveau des fonctions. |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Action déconseillée. Active les vérifications rapides. (Identique à [`/RTC1`](rtc-run-time-error-checks.md) ) |
-| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Utilise la convention d'appel `__stdcall` . (x86 uniquement) |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Obsolète. Active les vérifications rapides. (Identique à [`/RTC1`](rtc-run-time-error-checks.md) ) |
+| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | Utilise la **`__stdcall`** Convention d’appel. (x86 uniquement) |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | Force l'écriture des paramètres passés dans les registres à leurs emplacements sur la pile lors de l'entrée de la fonction. Cette option du compilateur concerne uniquement les compilateurs x64 (Native et Cross compile). |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | Crée une image corrigeable en mémoire. |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | Génère des fonctions transcendantes rapides. |
-| [`/QIfist`](qifist-suppress-ftol.md) | Action déconseillée. Supprime l'appel de la fonction d'assistance `_ftol` quand la conversion d'un type à virgule flottante vers un type intégral est requise. (x86 uniquement) |
-| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Supprime les commandes `fwait` dans les blocs `try` . |
+| [`/QIfist`](qifist-suppress-ftol.md) | Obsolète. Supprime l'appel de la fonction d'assistance `_ftol` quand la conversion d'un type à virgule flottante vers un type intégral est requise. (x86 uniquement) |
+| [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | Supprime les `fwait` commandes à l’intérieur des **`try`** blocs. |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | Atténue l’impact sur les performances de la mise à jour du microcode Intel CMC vérification du défaut. |
 | [`/Qpar`](qpar-auto-parallelizer.md) | Active la parallélisation automatique des boucles. |
 | [`/Qpar-report`](qpar-report-auto-parallelizer-reporting-level.md) | Active les niveaux de création de rapports pour la parallélisation automatique. |
@@ -114,7 +114,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 
 | Option | Objectif |
 |--|--|
-| [`/constexpr`](constexpr-control-constexpr-evaluation.md) | Contrôle de l’évaluation de **constexpr** au moment de la compilation. |
+| [`/constexpr`](constexpr-control-constexpr-evaluation.md) | Contrôler l' **`constexpr`** évaluation au moment de la compilation. |
 | [`/openmp`](openmp-enable-openmp-2-0-support.md) | Active [`#pragma omp`](../../preprocessor/omp.md) dans le code source. |
 | [`/vd`](vd-disable-construction-displacements.md) | Supprime ou active les membres masqués de la classe `vtordisp` . |
 | [`/vmb`](vmb-vmg-representation-method.md) | Utilise la meilleure base pour les pointeurs vers des membres. |
@@ -125,7 +125,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 | [`/Z7`](z7-zi-zi-debug-information-format.md) | Génère des informations de débogage compatibles C 7,0. |
 | [`/Za`](za-ze-disable-language-extensions.md) | Désactive les extensions de langage C89. |
 | [`/Zc`](zc-conformance.md) | Spécifie le comportement standard sous [`/Ze`](za-ze-disable-language-extensions.md) . |
-| [`/Ze`](za-ze-disable-language-extensions.md) | Action déconseillée. Active les extensions de langage C89. |
+| [`/Ze`](za-ze-disable-language-extensions.md) | Obsolète. Active les extensions de langage C89. |
 | [`/Zf`](zf.md) | Améliore la génération PDB dans les builds parallèles. |
 | [`/ZH`](zh.md) | Spécifie MD5, SHA-1 ou SHA-256 pour les sommes de contrôle dans les informations de débogage. |
 | [`/ZI`](z7-zi-zi-debug-information-format.md) | Inclut des informations de débogage dans une base de données du programme compatible avec Modifier & Continuer. (x86 uniquement) |
@@ -159,12 +159,12 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 | [`/bigobj`](bigobj-increase-number-of-sections-in-dot-obj-file.md) | Augmente le nombre de sections adressables dans un fichier .obj. |
 | [`/c`](c-compile-without-linking.md) | Compile sans liaison. |
 | [`/cgthreads`](cgthreads-code-generation-threads.md) | Spécifie le nombre de threads *cl.exe* à utiliser pour l’optimisation et la génération de code. |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Action déconseillée. Le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Obsolète. Le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 | [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) | Affiche le chemin d’accès complet des fichiers de code source passés à *cl.exe* dans le texte de diagnostic. |
 | [`/FS`](fs-force-synchronous-pdb-writes.md) | Force la sérialisation des écritures dans le fichier PDB par le biais de *MSPDBSRV.EXE*. |
-| [`/H`](h-restrict-length-of-external-names.md) | Action déconseillée. Limite la longueur des noms externes (publics). |
+| [`/H`](h-restrict-length-of-external-names.md) | Obsolète. Limite la longueur des noms externes (publics). |
 | [`/HELP`](help-compiler-command-line-help.md) | Affiche la liste des options du compilateur. |
-| [`/J`](j-default-char-type-is-unsigned.md) | Change le type `char` par défaut. |
+| [`/J`](j-default-char-type-is-unsigned.md) | Modifie le type par défaut **`char`** . |
 | [`/JMC`](jmc.md) | Prend en charge le débogage Uniquement mon code en C++ natif. |
 | [`/kernel`](kernel-create-kernel-mode-binary.md) | Le compilateur et l'éditeur de liens créeront un binaire qui peut être exécuté dans le noyau Windows. |
 | [`/MP`](mp-build-with-multiple-processes.md) | Génère plusieurs fichiers sources simultanément. |
@@ -175,7 +175,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | Spécifie que tous les fichiers sources sont C. |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | Spécifie un fichier source C++. |
 | [`/TP`](tc-tp-tc-tp-specify-source-file-type.md) | Spécifie que tous les fichiers sources sont en C++. |
-| [`/V`](v-version-number.md) | Action déconseillée. Définit la chaîne version. |
+| [`/V`](v-version-number.md) | Obsolète. Définit la chaîne version. |
 | [`/w`](compiler-option-warning-level.md) | Désactive tous les avertissements. |
 | [`/W0`, `/W1`, `/W2`, `/W3`, `/W4`](compiler-option-warning-level.md) | Définit le niveau d’avertissement de sortie. |
 | [`/w1`, `/w2`, `/w3`, `/w4`](compiler-option-warning-level.md) | Définit le niveau de l’avertissement spécifié. |
@@ -187,7 +187,7 @@ Cet article contient une liste par catégorie d'options du compilateur. Pour obt
 | [`/Wv`](compiler-option-warning-level.md) | Désactive les avertissements introduits par les versions ultérieures du compilateur. |
 | [`/WX`](compiler-option-warning-level.md) | Traite les avertissements comme des erreurs. |
 | [`/Yc`](yc-create-precompiled-header-file.md) | Créer un *`.PCH`* fichier. |
-| [`/Yd`](yd-place-debug-information-in-object-file.md) | Action déconseillée. Place des informations de débogage complètes dans tous les fichiers objets. Utilisez à la [`/Zi`](z7-zi-zi-debug-information-format.md) place. |
+| [`/Yd`](yd-place-debug-information-in-object-file.md) | Obsolète. Place des informations de débogage complètes dans tous les fichiers objets. Utilisez à la [`/Zi`](z7-zi-zi-debug-information-format.md) place. |
 | [`/Yl`](yl-inject-pch-reference-for-debug-library.md) | Injecte une référence PCH lors de la création d'une bibliothèque de débogage. |
 | [`/Yu`](yu-use-precompiled-header-file.md) | Utilise un fichier d'en-tête précompilé pendant la génération. |
 | [`/Y-`](y-ignore-precompiled-header-options.md) | Ignore toutes les autres options d'en-tête précompilé pour la génération en cours. |
@@ -214,21 +214,21 @@ Les options expérimentales ne peuvent être prises en charge que par certaines 
 
 | Option | Objectif |
 |--|--|
-| [`/clr:noAssembly`](clr-common-language-runtime-compilation.md) | Action déconseillée. Utilisez à la place [ `/LN` (créer un module MSIL)](ln-create-msil-module.md) . |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Action déconseillée. Le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
-| [`/Fr`](fr-fr-create-dot-sbr-file.md) | Action déconseillée. Crée un fichier d’informations de consultation sans variables locales. |
-| [`/Ge`](ge-enable-stack-probes.md) | Action déconseillée. Active les tests de pile. Activé par défaut. |
-| [`/Gm`](gm-enable-minimal-rebuild.md) | Action déconseillée. Active la régénération minimale. |
-| [`/GX`](gx-enable-exception-handling.md) | Action déconseillée. Active la gestion synchrone des exceptions. Utilisez à la [`/EH`](eh-exception-handling-model.md) place. |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Action déconseillée. Active les vérifications rapides. Utilisez à la [`/RTC1`](rtc-run-time-error-checks.md) place. |
-| [`/H`](h-restrict-length-of-external-names.md) | Action déconseillée. Limite la longueur des noms externes (publics). |
-| [`/Og`](og-global-optimizations.md) | Action déconseillée. Utilise des optimisations globales. |
-| [`/QIfist`](qifist-suppress-ftol.md) | Action déconseillée. Était utilisé pour spécifier le mode de conversion d’un type à virgule flottante en type intégral. |
-| [`/V`](v-version-number.md) | Action déconseillée. Définit la *`.obj`* chaîne de version de fichier. |
+| [`/clr:noAssembly`](clr-common-language-runtime-compilation.md) | Obsolète. Utilisez à la place [ `/LN` (créer un module MSIL)](ln-create-msil-module.md) . |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | Obsolète. Le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+| [`/Fr`](fr-fr-create-dot-sbr-file.md) | Obsolète. Crée un fichier d’informations de consultation sans variables locales. |
+| [`/Ge`](ge-enable-stack-probes.md) | Obsolète. Active les tests de pile. Activé par défaut. |
+| [`/Gm`](gm-enable-minimal-rebuild.md) | Obsolète. Active la régénération minimale. |
+| [`/GX`](gx-enable-exception-handling.md) | Obsolète. Active la gestion synchrone des exceptions. Utilisez à la [`/EH`](eh-exception-handling-model.md) place. |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | Obsolète. Active les vérifications rapides. Utilisez à la [`/RTC1`](rtc-run-time-error-checks.md) place. |
+| [`/H`](h-restrict-length-of-external-names.md) | Obsolète. Limite la longueur des noms externes (publics). |
+| [`/Og`](og-global-optimizations.md) | Obsolète. Utilise des optimisations globales. |
+| [`/QIfist`](qifist-suppress-ftol.md) | Obsolète. Était utilisé pour spécifier le mode de conversion d’un type à virgule flottante en type intégral. |
+| [`/V`](v-version-number.md) | Obsolète. Définit la *`.obj`* chaîne de version de fichier. |
 | [`/Wp64`](wp64-detect-64-bit-portability-issues.md) | Obsolète. Détecte les problèmes de portabilité 64 bits. |
-| [`/Yd`](yd-place-debug-information-in-object-file.md) | Action déconseillée. Place des informations de débogage complètes dans tous les fichiers objets. Utilisez à la [`/Zi`](z7-zi-zi-debug-information-format.md) place. |
-| [`/Zc:forScope-`](zc-forscope-force-conformance-in-for-loop-scope.md) | Action déconseillée. Désactive la conformité dans la portée d’une boucle for. |
-| [`/Ze`](za-ze-disable-language-extensions.md) | Action déconseillée. Active les extensions de langage. |
+| [`/Yd`](yd-place-debug-information-in-object-file.md) | Obsolète. Place des informations de débogage complètes dans tous les fichiers objets. Utilisez à la [`/Zi`](z7-zi-zi-debug-information-format.md) place. |
+| [`/Zc:forScope-`](zc-forscope-force-conformance-in-for-loop-scope.md) | Obsolète. Désactive la conformité dans la portée d’une boucle for. |
+| [`/Ze`](za-ze-disable-language-extensions.md) | Obsolète. Active les extensions de langage. |
 | [`/Zg`](zg-generate-function-prototypes.md) | Supprimé dans Visual Studio 2015. Génère des prototypes de fonction. |
 
 ## <a name="see-also"></a>Voir aussi

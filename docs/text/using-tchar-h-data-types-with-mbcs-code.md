@@ -9,20 +9,20 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 78e5d89e1e87d081e762fab1298eb990b914324c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: dd43c29d77c3351e8f597b474c4756ad3d45ef2b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446595"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215359"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs-code"></a>Utilisation de types de données TCHAR.H avec _MBCS
 
-Lorsque la constante de manifeste `_MBCS` est définie, une routine de texte générique donnée correspond à l’un des types de routines suivants :
+Lorsque la constante `_MBCS` de manifeste est définie, une routine de texte générique donnée correspond à l’un des types de routines suivants :
 
-- Une routine SBCS qui gère correctement les chaînes, caractères et caractères multioctets. Dans ce cas, les arguments de chaîne doivent être de type `char*`. Par exemple, `_tprintf` est mappé sur `printf` ; les arguments de chaîne dans `printf` sont de type `char*`. Si vous utilisez le type de données de texte générique `_TCHAR` pour vos types de chaîne, les types de paramètre formels et réels pour `printf` correspondent car `_TCHAR*` est mappé sur `char*`.
+- Une routine SBCS qui gère correctement les chaînes, caractères et caractères multioctets. Dans ce cas, les arguments de chaîne sont censés être de type **`char*`** . Par exemple, `_tprintf` est mappé à `printf` ; les arguments de chaîne de `printf` sont de type **`char*`** . Si vous utilisez le `_TCHAR` type de données de texte générique pour vos types de chaîne, les types de paramètres formels et réels pour `printf` match, car sont `_TCHAR*` mappés à **`char*`** .
 
-- Une routine spécifique à MBCS. Dans ce cas, les arguments de chaîne doivent être de type `unsigned char*`. Par exemple, `_tcsrev` est mappé sur `_mbsrev`, qui attend et retourne une chaîne de type `unsigned char*`. Si vous utilisez le `_TCHAR` type de données de texte générique pour vos types de chaîne, il y a un conflit de type potentiel, car `_TCHAR` est mappé au type `char`.
+- Une routine spécifique à MBCS. Dans ce cas, les arguments de chaîne doivent être de type `unsigned char*`. Par exemple, `_tcsrev` est mappé sur `_mbsrev`, qui attend et retourne une chaîne de type `unsigned char*`. Si vous utilisez le `_TCHAR` type de données de texte générique pour vos types de chaîne, il y a un conflit de type potentiel, car est `_TCHAR` mappé au type **`char`** .
 
 Voici les trois solutions pour empêcher ce conflit de types (et les avertissements du compilateur C ou erreurs du compilateur C++ qui en découleraient) :
 
@@ -32,7 +32,7 @@ Voici les trois solutions pour empêcher ce conflit de types (et les avertisseme
     char * _tcsrev(char *);
     ```
 
-   Dans le cas par défaut, le prototype de `_tcsrev` est mappé à `_mbsrev` via un thunk dans libc. lib. Cela modifie les types du `_mbsrev` paramètres entrants et la valeur de retour sortante à partir de `_TCHAR*` (autrement dit, `char *`) en `unsigned char *`. Cette méthode garantit la correspondance de type lorsque vous utilisez `_TCHAR`, mais elle est relativement lente en raison de la surcharge de l’appel de fonction.
+   Dans le cas par défaut, le prototype de est `_tcsrev` mappé à `_mbsrev` via un thunk dans libc. lib. Cela modifie les types des `_mbsrev` paramètres entrants et la valeur de retour sortante de `_TCHAR*` (autrement dit, `char *` ) en `unsigned char *` . Cette méthode garantit la correspondance de type lorsque vous utilisez `_TCHAR` , mais elle est relativement lente en raison de la surcharge de l’appel de fonction.
 
 - Utilisez la fonction inline en incorporant l’instruction du préprocesseur suivante dans votre code.
 
@@ -61,8 +61,8 @@ Voici les trois solutions pour empêcher ce conflit de types (et les avertisseme
     #define _tcschr _mbschr
     ```
 
-   Lorsque vous adoptez cette approche, vous devez veiller à utiliser les types de données appropriés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique `_TXCHAR`. `_TXCHAR` est mappée au type **char** dans du code SBCS mais est mappée au type **unsigned char** dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans la référence de la *bibliothèque Runtime*.
+   Lorsque vous adoptez cette approche, vous devez veiller à utiliser les types de données appropriés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique `_TXCHAR`. `_TXCHAR`correspond au type **`char`** dans le code SBCS mais correspond au type **`unsigned char`** dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans la référence de la *bibliothèque Runtime*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md)
+[Mappages de texte générique dans Tchar. h](../text/generic-text-mappings-in-tchar-h.md)

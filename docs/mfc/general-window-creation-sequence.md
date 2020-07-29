@@ -7,18 +7,18 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 63b5e0131642692d9372c148827a583f19114fb9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618757"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223159"
 ---
 # <a name="general-window-creation-sequence"></a>Séquence de création d'une fenêtre générale
 
 Lorsque vous créez une fenêtre de votre choix, telle qu’une fenêtre enfant, l’infrastructure utilise quasiment le même processus que celui décrit dans [création de document/vue](document-view-creation.md).
 
-Toutes les classes de fenêtres fournies par MFC utilisent la [construction en deux étapes](one-stage-and-two-stage-construction-of-objects.md). Autrement dit, au cours d’un appel de l’opérateur **New** c++, le constructeur alloue et initialise un objet c++, mais ne crée pas de fenêtre Windows correspondante. Cette opération est effectuée par la suite en appelant la fonction membre [Create](reference/cwnd-class.md#create) de l’objet Window.
+Toutes les classes de fenêtres fournies par MFC utilisent la [construction en deux étapes](one-stage-and-two-stage-construction-of-objects.md). Autrement dit, au cours d’un appel de l' **`new`** opérateur c++, le constructeur alloue et initialise un objet c++, mais ne crée pas de fenêtre Windows correspondante. Cette opération est effectuée par la suite en appelant la fonction membre [Create](reference/cwnd-class.md#create) de l’objet Window.
 
 La `Create` fonction membre crée la fenêtre Windows et stocke son `HWND` dans la [m_hWnd](reference/cwnd-class.md#m_hwnd)membre de données publiques de l’objet C++. `Create`offre une flexibilité totale sur les paramètres de création. Avant d’appeler `Create` , vous souhaiterez peut-être inscrire une classe de fenêtre avec la fonction globale [AfxRegisterWndClass](reference/application-information-and-management.md#afxregisterwndclass) afin de définir les styles de l’icône et de la classe pour le frame.
 

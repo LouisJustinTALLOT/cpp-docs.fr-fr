@@ -139,12 +139,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: c4ffbf294083131f29ffe957fd0434182fbb8f99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636928"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215164"
 ---
 # <a name="data-type-constants"></a>Constantes de type de données
 
@@ -159,29 +159,29 @@ Ces constantes offrent les plages pour les types de données intégraux. Pour ut
 ```
 
 > [!NOTE]
-> L’option [/J](../build/reference/j-default-char-type-is-unsigned.md) du compilateur remplace le type par défaut **char** par **unsigned**.
+> L' [`/J`](../build/reference/j-default-char-type-is-unsigned.md) option de compilateur remplace le type par défaut par **`char`** **`signed char`** **`unsigned char`** .
 
-|Constante|Value|Description|
+|Constant|Valeur|Description|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|Nombre de bits dans un **char**|
-|**SCHAR_MIN**|(-128)|Valeur **char** signée minimale|
-|**SCHAR_MAX**|127|Valeur **char** signée maximale|
-|**UCHAR_MAX**|255 (0xff)|Valeur **unsigned** **char** maximale|
-|**CHAR_MIN**|(-128) (0 si l’option **/J** est utilisée)|Valeur **char** minimale|
-|**CHAR_MAX**|127 (255 si l’option **/J** est utilisée)|Valeur **char** maximale|
-|**MB_LEN_MAX**|5|Nombre maximal d’octets dans un **char** multioctet|
-|**SHRT_MIN**|-32768|Valeur **short** signée minimale|
-|**SHRT_MAX**|32767|Valeur **short** signée maximale|
-|**USHRT_MAX**|65535 (0xffff)|Valeur **unsigned** **short** maximale|
-|**INT_MIN**|(-2147483647 - 1)|Valeur **int** signée minimale|
-|**INT_MAX**|2147483647|Valeur **int** signée maximale|
-|**UINT_MAX**|4294967295 (0xffffffff)|Valeur **unsigned** **int** maximale|
-|**LONG_MIN**|(-2147483647L - 1)|Valeur **long** signée minimale|
-|**LONG_MAX**|2147483647L|Valeur **long** signée maximale|
-|**ULONG_MAX**|4294967295UL (0xfffffffful)|Valeur **unsigned** **long** maximale|
-|**LLONG_MIN**|(-9223372036854775807LL - 1)|Valeur **long** **long** ou **__int64** signée minimale|
-|**LLONG_MAX**|9223372036854775807LL|Valeur **long** **long** ou **__int64** signée maximale|
-|**ULLONG_MAX**|0xffffffffffffffffull|Valeur **unsigned** **long** **long** maximale|
+|**CHAR_BIT**|8|Nombre de bits dans un**`char`**|
+|**SCHAR_MIN**|(-128)|**`signed char`** Valeur minimale|
+|**SCHAR_MAX**|127|**`signed char`** Valeur maximale|
+|**UCHAR_MAX**|255 (0xff)|**`unsigned char`** Valeur maximale|
+|**CHAR_MIN**|(-128) (0 si l' **`/J`** option est utilisée)|**`char`** Valeur minimale|
+|**CHAR_MAX**|127 (255 si l' **`/J`** option est utilisée)|**`char`** Valeur maximale|
+|**MB_LEN_MAX**|5|Nombre maximal d’octets en multioctets**`char`**|
+|**SHRT_MIN**|-32768|**`signed short`** Valeur minimale|
+|**SHRT_MAX**|32767|**`signed short`** Valeur maximale|
+|**USHRT_MAX**|65535 (0xffff)|**`unsigned short`** Valeur maximale|
+|**INT_MIN**|(-2147483647 - 1)|**`signed int`** Valeur minimale|
+|**INT_MAX**|2147483647|**`signed int`** Valeur maximale|
+|**UINT_MAX**|4294967295 (0xffffffff)|**`unsigned int`** Valeur maximale|
+|**LONG_MIN**|(-2147483647L - 1)|**`signed long`** Valeur minimale|
+|**LONG_MAX**|2147483647L|**`signed long`** Valeur maximale|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|**`unsigned long`** Valeur maximale|
+|**LLONG_MIN**|(-9223372036854775807LL - 1)|**`signed long long`** Valeur minimale ou **`__int64`**|
+|**LLONG_MAX**|9223372036854775807LL|**`signed long long`** Valeur maximale ou **`__int64`**|
+|**ULLONG_MAX**|0xffffffffffffffffull|**`unsigned long long`** Valeur maximale|
 |**_I8_MIN**|(-127i8 - 1)|Valeur 8 bits signée minimale|
 |**_I8_MAX**|127i8|Valeur 8 bits signée maximale|
 |**_UI8_MAX**|0xffui8|Valeur 8 bits non signée maximale|
@@ -202,23 +202,23 @@ Ces constantes offrent les plages pour les types de données intégraux. Pour ut
 
 ## <a name="floating-point-type-constants"></a>Constantes de type à virgule flottante
 
-Les constantes suivantes donnent la plage et autres caractéristiques des types de données **long** **double**, **double** et **float**. Pour utiliser ces constantes, ajoutez l’en-tête float.h dans votre fichier source :
+Les constantes suivantes donnent la plage et d’autres caractéristiques des **`long double`** **`double`** types de **`float`** données, et. Pour utiliser ces constantes, ajoutez l’en-tête float.h dans votre fichier source :
 
 ```C
 #include <float.h>
 ```
 
-|Constante|Value|Description|
+|Constant|Valeur|Description|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|Nombre de chiffres décimaux de précision de l’arrondi|
 |**DBL_DIG**|15|# de chiffres décimaux de précision|
 |**DBL_EPSILON**|2,2204460492503131e-016|Plus petit nombre, comme 1.0 + **DBL_EPSILON** != 1.0|
 |**DBL_HAS_SUBNORM**|1|Le type prend en charge les nombres sous-normalisés (dénormalisés)|
 |**DBL_MANT_DIG**|53|Nombre de bits dans le significande (mantisse)|
-|**DBL_MAX**|1,7976931348623158e+308|Valeur maximale|
+|**DBL_MAX**|1.7976931348623158e+308|Valeur maximale|
 |**DBL_MAX_10_EXP**|308|Exposant décimal maximal|
-|**DBL_MAX_EXP**|1024|Exposant binaire maximal|
-|**DBL_MIN**|2,2250738585072014E-308|Valeur positive normalisée minimale|
+|**DBL_MAX_EXP**|1 024|Exposant binaire maximal|
+|**DBL_MIN**|2.2250738585072014e-308|Valeur positive normalisée minimale|
 |**DBL_MIN_10_EXP**|(-307)|Exposant décimal minimal|
 |**DBL_MIN_EXP**|(-1021)|Exposant binaire minimal|
 |**_DBL_RADIX**|2|Radical d’exposant|
@@ -240,10 +240,10 @@ Les constantes suivantes donnent la plage et autres caractéristiques des types 
 |**LDBL_EPSILON**|2,2204460492503131e-016|Plus petit nombre, comme 1.0 + **LDBL_EPSILON** != 1.0|
 |**LDBL_HAS_SUBNORM**|1|Le type prend en charge les nombres sous-normalisés (dénormalisés)|
 |**LDBL_MANT_DIG**|53|Nombre de bits dans le significande (mantisse)|
-|**LDBL_MAX**|1,7976931348623158e+308|Valeur maximale|
+|**LDBL_MAX**|1.7976931348623158e+308|Valeur maximale|
 |**LDBL_MAX_10_EXP**|308|Exposant décimal maximal|
-|**LDBL_MAX_EXP**|1024|Exposant binaire maximal|
-|**LDBL_MIN**|2,2250738585072014E-308|Valeur positive normalisée minimale|
+|**LDBL_MAX_EXP**|1 024|Exposant binaire maximal|
+|**LDBL_MIN**|2.2250738585072014e-308|Valeur positive normalisée minimale|
 |**LDBL_MIN_10_EXP**|(-307)|Exposant décimal minimal|
 |**LDBL_MIN_EXP**|(-1021)|Exposant binaire minimal|
 |**_LDBL_RADIX**|2|Radical d’exposant|

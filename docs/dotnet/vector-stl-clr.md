@@ -91,18 +91,18 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: c6a001797e90bd7381358abb16612926442e8d9f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a01025732699e755a624d7f67071f575ac52ec96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371823"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214839"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
-La classe de modèle décrit un objet qui contrôle une séquence d’éléments de longueur variable qui a un accès aléatoire. Vous utilisez `vector` le conteneur pour gérer une séquence d’éléments comme un bloc de stockage contigus. Le bloc est mis en œuvre comme un tableau qui se développe sur demande.
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments ayant un accès aléatoire. Vous utilisez le conteneur `vector` pour gérer une séquence d’éléments en tant que bloc de stockage contigu. Le bloc est implémenté en tant que tableau qui croît à la demande.
 
-Dans la description `GValue` ci-dessous, est le même que la *valeur* `Value^`à moins que ce dernier est un type de ref, auquel cas il est .
+Dans la description ci-dessous, `GValue` est le même que la *valeur* , sauf si ce dernier est un type REF, auquel cas il s’agit de `Value^` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -127,22 +127,22 @@ Type d'un élément dans la séquence contrôlée.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** \<cliext/vector>
+**En-tête :**\<cliext/vector>
 
-**Espace nom:** cliext
+**Espace de noms :** cliext
 
 ## <a name="declarations"></a>Déclarations
 
-|Définition de types|Description|
+|Définition de type|Description|
 |---------------------|-----------------|
 |[vector::const_iterator (STL/CLR)](#const_iterator)|Type d'un itérateur constant pour la séquence contrôlée.|
 |[vector::const_reference (STL/CLR)](#const_reference)|Type d'une référence constante à un élément.|
 |[vector::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Type d'un itérateur inserve constant pour la séquence contrôlée.|
 |[vector::difference_type (STL/CLR)](#difference_type)|Type d'une distance signée entre deux éléments.|
-|[vector::generic_container (STL/CLR)](#generic_container)|Le type d’interface générique pour le conteneur.|
-|[vector::generic_iterator (STL/CLR)](#generic_iterator)|Le type d’itérateur pour l’interface générique pour le conteneur.|
-|[vector::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Le type d’itérateur inversé pour l’interface générique pour le conteneur.|
-|[vector::generic_value (STL/CLR)](#generic_value)|Le type d’élément pour l’interface générique pour le conteneur.|
+|[vector::generic_container (STL/CLR)](#generic_container)|Type de l’interface générique pour le conteneur.|
+|[vector::generic_iterator (STL/CLR)](#generic_iterator)|Type d’un itérateur pour l’interface générique pour le conteneur.|
+|[vector::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Type d’un itérateur inverse pour l’interface générique pour le conteneur.|
+|[vector::generic_value (STL/CLR)](#generic_value)|Type d’un élément pour l’interface générique pour le conteneur.|
 |[vector::iterator (STL/CLR)](#iterator)|Type d'un itérateur pour la séquence contrôlée.|
 |[vector::reference (STL/CLR)](#reference)|Type d'une référence à un élément.|
 |[vector::reverse_iterator (STL/CLR)](#reverse_iterator)|Type d'un itérateur inverse pour la séquence contrôlée.|
@@ -163,14 +163,14 @@ Type d'un élément dans la séquence contrôlée.
 |[vector::front (STL/CLR)](#front)|Accède au premier élément.|
 |[vector::insert (STL/CLR)](#insert)|Ajoute des éléments à une position spécifiée.|
 |[vector::pop_back (STL/CLR)](#pop_back)|Supprime le dernier élément.|
-|[vector::push_back (STL/CLR)](#push_back)|Ajoute un nouvel élément.|
+|[vector::push_back (STL/CLR)](#push_back)|Ajoute un nouveau dernier élément.|
 |[vector::rbegin (STL/CLR)](#rbegin)|Désigne le début de la séquence contrôlée inverse.|
 |[vector::rend (STL/CLR)](#rend)|Désigne la fin de la séquence contrôlée inverse.|
-|[vector::reserve (STL/CLR)](#reserve)|Assure une capacité de croissance minimale pour le conteneur.|
+|[vector::reserve (STL/CLR)](#reserve)|Garantit une capacité de croissance minimale pour le conteneur.|
 |[vector::resize (STL/CLR)](#resize)|Change le nombre d'éléments.|
 |[vector::size (STL/CLR)](#size)|Compte le nombre d'éléments.|
 |[vector::swap (STL/CLR)](#swap)|Échange le contenu de deux conteneurs.|
-|[vector::to_array (STL/CLR)](#to_array)|Copie la séquence contrôlée à un nouveau tableau.|
+|[vector::to_array (STL/CLR)](#to_array)|Copie la séquence contrôlée dans un nouveau tableau.|
 |[vector::vector (STL/CLR)](#vector)|Construit un objet conteneur.|
 
 |Propriété|Description|
@@ -182,40 +182,40 @@ Type d'un élément dans la séquence contrôlée.
 |--------------|-----------------|
 |[vector::operator= (STL/CLR)](#op_as)|Remplace la séquence contrôlée.|
 |[vector::operator(STL/CLR)](#op)|Accède à un élément à une position spécifiée.|
-|[opérateur! (vecteur) (STL/CLR)](#op_neq)|Détermine si `vector` un objet n’est pas égal à un autre `vector` objet.|
-|[< (vecteur) (STL/CLR)](#op_lt)|Détermine si `vector` un objet est `vector` inférieur à un autre objet.|
-|[<(vecteur) (STL/CLR)](#op_lteq)|Détermine si `vector` un objet est inférieur ou `vector` égal à un autre objet.|
-|[(vecteur) (STL/CLR)](#op_eq)|Détermine si `vector` un objet est `vector` égal à un autre objet.|
-|[operator> (vector) (STL/CLR)](#op_gt)|Détermine si `vector` un objet est `vector` plus grand qu’un autre objet.|
-|[>(vecteur) (STL/CLR)](#op_gteq)|Détermine si `vector` un objet est supérieur `vector` ou égal à un autre objet.|
+|[Operator ! = (Vector) (STL/CLR)](#op_neq)|Détermine si un `vector` objet n’est pas égal à un autre `vector` objet.|
+|[< d’opérateur (Vector) (STL/CLR)](#op_lt)|Détermine si un `vector` objet est inférieur à un autre `vector` objet.|
+|[Operator<= (Vector) (STL/CLR)](#op_lteq)|Détermine si un `vector` objet est inférieur ou égal à un autre `vector` objet.|
+|[Operator = = (Vector) (STL/CLR)](#op_eq)|Détermine si un `vector` objet est égal à un autre `vector` objet.|
+|[operator> (vector) (STL/CLR)](#op_gt)|Détermine si un `vector` objet est supérieur à un autre `vector` objet.|
+|[Operator>= (Vector) (STL/CLR)](#op_gteq)|Détermine si un `vector` objet est supérieur ou égal à un autre `vector` objet.|
 
 ## <a name="interfaces"></a>Interfaces
 
 |Interface|Description|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Dupliquer un objet.|
-|<xref:System.Collections.IEnumerable>|Séquence à travers les éléments.|
-|<xref:System.Collections.ICollection>|Maintenir le groupe d’éléments.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Séquence à travers des éléments dactylographes.|
-|<xref:System.Collections.Generic.ICollection%601>|Maintenir le groupe d’éléments dactylographes.|
-|<xref:System.Collections.Generic.IList%601>|Maintenir le groupe ordonné d’éléments dactylographes.|
-|Valeur<IVector\>|Maintenir le contenant générique.|
+|<xref:System.Collections.IEnumerable>|Séquencez les éléments.|
+|<xref:System.Collections.ICollection>|Conserver le groupe d’éléments.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Séquencez les éléments typés.|
+|<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|
+|<xref:System.Collections.Generic.IList%601>|Gérer le groupe ordonné d’éléments typés.|
+|Valeur de<IVector\>|Conserver le conteneur générique.|
 
 ## <a name="remarks"></a>Notes
 
-L’objet alloue et libère le stockage pour la séquence qu’il contrôle à travers une gamme stockée d’éléments de *valeur,* qui se développe sur demande. La croissance se produit de telle sorte que le coût de l’amortissement d’un nouvel élément est amorti temps constant. En d’autres termes, le coût de l’ajout d’éléments à la fin n’augmente pas, en moyenne, à mesure que la durée de la séquence contrôlée s’allonge. Ainsi, un vecteur est un bon candidat pour le conteneur sous-jacent pour la pile de classe de modèle [(STL/CLR)](../dotnet/stack-stl-clr.md).
+L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un tableau stocké d’éléments de *valeur* , ce qui augmente à la demande. La croissance se produit de telle sorte que le coût de l’ajout d’un nouvel élément est le temps constant amorti. En d’autres termes, le coût de l’ajout d’éléments à la fin n’augmente pas en moyenne, car la longueur de la séquence contrôlée est plus importante. Par conséquent, un vecteur est un bon candidat pour le conteneur sous-jacent pour la pile de classes de modèle [(STL/CLR)](../dotnet/stack-stl-clr.md).
 
-Un `vector` support d’accès aléatoire aux itérateurs, ce qui signifie que vous pouvez vous référer à `size() - 1` un élément directement compte tenu de sa position numérique, en comptant à partir de zéro pour le premier élément (avant), à pour le dernier élément (arrière). Cela signifie également qu’un vecteur est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
+Un `vector` prend en charge les itérateurs à accès aléatoire, ce qui signifie que vous pouvez faire référence à un élément directement en fonction de sa position numérique, en comptant de zéro pour le premier élément (avant), à `size() - 1` pour le dernier élément (précédent). Cela signifie également qu’un vecteur est un bon candidat pour le conteneur sous-jacent pour la classe de modèle [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).
 
-Un itérateur vectoriel stocke une poignée à son objet vectoriel associé, ainsi que le biais de l’élément qu’il désigne. Vous ne pouvez utiliser des itérateurs qu’avec leurs objets conteneurs associés. Le biais d’un élément vectoriel est le même que sa position.
+Un itérateur Vector stocke un handle vers son objet Vector associé, ainsi que le décalage de l’élément qu’il désigne. Vous pouvez utiliser des itérateurs uniquement avec leurs objets conteneur associés. Le décalage d’un élément de vecteur est le même que sa position.
 
-L’insertion ou l’effacement des éléments peuvent modifier la valeur de l’élément stockée à une position donnée, de sorte que la valeur désignée par un itérateur peut également changer. (Le conteneur peut devoir copier des éléments vers le haut ou vers le bas pour créer un trou avant un insert ou pour remplir un trou après une effacement.) Néanmoins, un itérateur vectoriel reste valable tant `[0, size()]`que son biais est dans la gamme . En outre, un itérateur valide reste reportable -- vous pouvez l’utiliser pour accéder ou modifier la valeur `size()`de l’élément qu’il désigne -- tant que son biais n’est pas égal à .
+L’insertion ou l’effacement d’éléments peut modifier la valeur d’élément stockée à une position donnée, de sorte que la valeur désignée par un itérateur peut également changer. (Le conteneur peut devoir copier des éléments vers le haut ou vers le haut pour créer un trou avant une insertion ou pour remplir un trou après une opération d’effacement.) Néanmoins, un itérateur de vecteur reste valide tant que son décalage se trouve dans la plage `[0, size()]` . En outre, un itérateur valide reste déréférençable. vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne, tant que son biais n’est pas égal à `size()` .
 
-L’effacement ou la suppression d’un élément appelle le destructeur pour sa valeur stockée. La destruction du conteneur efface tous les éléments. Ainsi, un conteneur dont le type d’élément est une classe d’arbitres garantit qu’aucun élément ne surviv au conteneur. Notez, cependant, qu’un conteneur de poignées ne détruit pas ses éléments.
+L’effacement ou la suppression d’un élément appelle le destructeur pour sa valeur stockée. La destruction du conteneur efface tous les éléments. Ainsi, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne se trouve dans le conteneur. Notez, toutefois, qu’un conteneur de handles ne détruit pas ses éléments.
 
 ## <a name="members"></a>Membres
 
-## <a name="vectorassign-stlclr"></a><a name="assign"></a>vecteur::assign (STL/CLR)
+## <a name="vectorassign-stlclr"></a><a name="assign"></a>vector :: assign (STL/CLR)
 
 Remplace tous les éléments.
 
@@ -233,25 +233,25 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *count*<br/>
 Nombre d’éléments à insérer.
 
-*Première*<br/>
+*first*<br/>
 Début de la plage à insérer.
 
-*Dernière*<br/>
+*last*<br/>
 Fin de la plage à insérer.
 
 *Oui*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*multiples*<br/>
 Valeur de l’élément à insérer.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction de membre remplace la séquence contrôlée par une répétition d’éléments de *comptage* de valeur *val*. Vous l’utilisez pour remplir le conteneur avec des éléments ayant tous la même valeur.
+La première fonction membre remplace la séquence contrôlée par une répétition des éléments *Count* de la valeur *Val*. Vous l’utilisez pour remplir le conteneur avec des éléments ayant tous la même valeur.
 
-S’il `InIt` s’agit d’un type d’intégreur, la fonction du deuxième membre se comporte de la même façon que `assign((size_type)first, (value_type)last)`. Sinon, il remplace la séquence contrôlée`first`par `last`la séquence [, ). Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence.
+Si `InIt` est un type entier, la deuxième fonction membre se comporte de la même façon que `assign((size_type)first, (value_type)last)` . Dans le cas contraire, elle remplace la séquence contrôlée par la séquence [ `first` , `last` ). Vous l’utilisez pour faire en sorte que la séquence contrôlée copie une autre séquence.
 
-La troisième fonction de membre remplace la séquence contrôlée par la séquence désignée par le *droit*d’énumérateur . Vous l’utilisez pour faire de la séquence contrôlée une copie d’une séquence décrite par un enumérateur.
+La troisième fonction membre remplace la séquence contrôlée par la séquence désignée par le *droit*de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une séquence décrite par un énumérateur.
 
 ### <a name="example"></a>Exemple
 
@@ -296,7 +296,7 @@ a b
 a b c
 ```
 
-## <a name="vectorat-stlclr"></a><a name="at"></a>vecteur::at (STL/CLR)
+## <a name="vectorat-stlclr"></a><a name="at"></a>vector :: at (STL/CLR)
 
 Accède à un élément à une position spécifiée.
 
@@ -308,12 +308,12 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>Paramètres
 
-*Pos*<br/>
+*imprim*<br/>
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie une référence à l’élément de la séquence contrôlée à *position pos*. Vous l’utilisez pour lire ou écrire un élément dont vous connaissez la position.
+La fonction membre retourne une référence à l’élément de la séquence contrôlée à la position *pos*. Vous l’utilisez pour lire ou écrire un élément dont vous connaissez la position.
 
 ### <a name="example"></a>Exemple
 
@@ -348,7 +348,7 @@ a b c
 a x c
 ```
 
-## <a name="vectorback-stlclr"></a><a name="back"></a>vecteur::dos (STL/CLR)
+## <a name="vectorback-stlclr"></a><a name="back"></a>vector :: Back (STL/CLR)
 
 Accède au dernier élément.
 
@@ -360,7 +360,7 @@ reference back();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie une référence au dernier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour accéder au dernier élément, quand vous savez qu’il existe.
+La fonction membre retourne une référence au dernier élément de la séquence contrôlée, qui ne doit pas être vide. Vous l’utilisez pour accéder au dernier élément, lorsque vous savez qu’il existe.
 
 ### <a name="example"></a>Exemple
 
@@ -399,7 +399,7 @@ back() = c
 a b x
 ```
 
-## <a name="vectorback_item-stlclr"></a><a name="back_item"></a>vecteur::back_item (STL/CLR)
+## <a name="vectorback_item-stlclr"></a><a name="back_item"></a>vector :: back_item (STL/CLR)
 
 Accède au dernier élément.
 
@@ -411,7 +411,7 @@ property value_type back_item;
 
 ### <a name="remarks"></a>Notes
 
-La propriété accède au dernier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour lire ou écrire le dernier élément, quand vous savez qu’il existe.
+La propriété accède au dernier élément de la séquence contrôlée, qui ne doit pas être vide. Vous l’utilisez pour lire ou écrire le dernier élément, lorsque vous savez qu’il existe.
 
 ### <a name="example"></a>Exemple
 
@@ -450,7 +450,7 @@ back_item = c
 a b x
 ```
 
-## <a name="vectorbegin-stlclr"></a><a name="begin"></a>vecteur::commencer (STL/CLR)
+## <a name="vectorbegin-stlclr"></a><a name="begin"></a>vector :: Begin (STL/CLR)
 
 Désigne le début de la séquence contrôlée.
 
@@ -462,7 +462,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un itérateur d’accès aléatoire qui désigne le premier élément de la séquence contrôlée, ou juste au-delà de la fin d’une séquence vide. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur à accès aléatoire qui désigne le premier élément de la séquence contrôlée, ou juste après la fin d’une séquence vide. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -505,7 +505,7 @@ a b c
 x y c
 ```
 
-## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a>vecteur::capacité (STL/CLR)
+## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a>vector :: Capacity (STL/CLR)
 
 Signale la taille de l'espace de stockage alloué pour le conteneur.
 
@@ -517,7 +517,7 @@ size_type capacity();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie le stockage actuellement alloué pour tenir la séquence contrôlée, une valeur au moins aussi grande que [le vecteur : : taille (STL/CLR).](../dotnet/vector-size-stl-clr.md)`()` Vous l’utilisez pour déterminer combien le conteneur peut se développer avant qu’il ne doisse le stockage réaffecté pour la séquence contrôlée.
+La fonction membre retourne le stockage actuellement alloué pour contenir la séquence contrôlée, une valeur au moins aussi grande que [vector :: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` . Vous l’utilisez pour déterminer l’ampleur du conteneur qui peut croître avant de pouvoir réallouer le stockage pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -555,7 +555,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="vectorclear-stlclr"></a><a name="clear"></a>vecteur::clair (STL/CLR)
+## <a name="vectorclear-stlclr"></a><a name="clear"></a>vector :: Clear (STL/CLR)
 
 Supprime tous les éléments.
 
@@ -567,7 +567,7 @@ void clear();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle effectivement [vecteur::effacer (STL/CLR)](../dotnet/vector-erase-stl-clr.md) `(` [vecteur::commencer (STL/CLR)](../dotnet/vector-begin-stl-clr.md) `(),` [vecteur::fin (STL/CLR)](../dotnet/vector-end-stl-clr.md)`())`. Vous l’utilisez pour vous assurer que la séquence contrôlée est vide.
+La fonction membre appelle en réalité [vector :: Erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md) `(` [vector :: Begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md) `(),` [vector :: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `())` . Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -612,7 +612,7 @@ a b
 size() = 0
 ```
 
-## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a>vecteur::const_iterator (STL/CLR)
+## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a>vector :: const_iterator (STL/CLR)
 
 Type d'un itérateur constant pour la séquence contrôlée.
 
@@ -624,7 +624,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de `T2` type non spécifié qui peut servir d’itérateur d’accès aléatoire constant pour la séquence contrôlée.
+Le type décrit un objet de type non spécifié `T2` qui peut servir d’itérateur à accès aléatoire constant pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -653,7 +653,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a>vecteur::const_reference (STL/CLR)
+## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a>vector :: const_reference (STL/CLR)
 
 Type d'une référence constante à un élément.
 
@@ -697,9 +697,9 @@ int main()
 a b c
 ```
 
-## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>vecteur::const_reverse_iterator (STL/CLR)
+## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>vector :: const_reverse_iterator (STL/CLR)
 
-Le type d’un itérateur inverse constant pour la séquence contrôlée.
+Type d’un itérateur inverse constant pour la séquence contrôlée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -709,7 +709,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de `T4` type non spécifié qui peut servir d’itérateur inverse constant pour la séquence contrôlée.
+Le type décrit un objet de type non spécifié `T4` qui peut servir d’itérateur inverse constant pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -739,9 +739,9 @@ int main()
 c b a
 ```
 
-## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a>vecteur ::difference-type (STL/CLR)
+## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a>vector ::d ifference_type (STL/CLR)
 
-Les types d’une distance signée entre deux éléments.
+Types d’une distance signée entre deux éléments.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -793,7 +793,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="vectorempty-stlclr"></a><a name="empty"></a>vecteur::vide (STL/CLR)
+## <a name="vectorempty-stlclr"></a><a name="empty"></a>vector :: Empty (STL/CLR)
 
 Vérifie l'absence d'éléments.
 
@@ -805,7 +805,7 @@ bool empty();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true pour une séquence contrôlée vide. Il est équivalent à [vecteur::taille (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() == 0`. Vous l’utilisez pour vérifier si le vecteur est vide.
+La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [vector :: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() == 0` . Vous l’utilisez pour tester si le vecteur est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -844,7 +844,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="vectorend-stlclr"></a><a name="end"></a>vecteur::fin (STL/CLR)
+## <a name="vectorend-stlclr"></a><a name="end"></a>vector :: end (STL/CLR)
 
 Désigne la fin de la séquence contrôlée.
 
@@ -856,7 +856,7 @@ iterator end();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un itérateur d’accès aléatoire qui pointe juste au-delà de la fin de la séquence contrôlée. Vous l'utilisez pour obtenir un itérateur qui désigne la fin `current` de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur à accès aléatoire qui pointe juste après la fin de la séquence contrôlée. Vous l'utilisez pour obtenir un itérateur qui désigne la fin `current` de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -900,7 +900,7 @@ a b c
 a x y
 ```
 
-## <a name="vectorerase-stlclr"></a><a name="erase"></a>vecteur::effacer (STL/CLR)
+## <a name="vectorerase-stlclr"></a><a name="erase"></a>vector :: Erase (STL/CLR)
 
 Supprime les éléments placés aux positions spécifiées.
 
@@ -913,24 +913,24 @@ iterator erase(iterator first, iterator last);
 
 #### <a name="parameters"></a>Paramètres
 
-*Première*<br/>
-Début de la portée à effacer.
+*first*<br/>
+Début de la plage à effacer.
 
-*Dernière*<br/>
+*last*<br/>
 Fin de la plage à effacer.
 
-*Où*<br/>
+*where*<br/>
 Élément à effacer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction du premier membre supprime l’élément de la séquence contrôlée indiquée par *l’endroit où*. Vous l’utilisez pour supprimer un seul élément.
+La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle*pointe. Vous l’utilisez pour supprimer un seul élément.
 
-La deuxième fonction membre supprime l’élément de la séquence contrôlée dans la plage [`first`, `last`). Vous l’utilisez pour supprimer zéro ou plus d’éléments contigus.
+La deuxième fonction membre supprime l’élément de la séquence contrôlée dans la plage [`first`, `last`). Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
 
-Les deux fonctions membres renvoient un itérateur qui désigne le premier élément restant au-delà de tout élément enlevé, ou [vecteur : : fin (TSL/CLR)](../dotnet/vector-end-stl-clr.md) `()` si aucun élément de ce type n’existe.
+Les deux fonctions membres retournent un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou [vector :: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `()` si aucun élément de ce type n’existe.
 
-Lors de l’effacement des éléments, le nombre d’exemplaires d’élément est linéaire dans le nombre d’éléments entre la fin de l’effacement et la fin plus proche de la séquence. (Lorsque vous effacez un ou plusieurs éléments à chaque extrémité de la séquence, aucune copie d’élément ne se produit.)
+Lors de l’effacement des éléments, le nombre de copies d’éléments est linéaire dans le nombre d’éléments entre la fin de l’effacement et l’extrémité la plus proche de la séquence. (Lors de l’effacement d’un ou plusieurs éléments à la fin de la séquence, aucune copie d’élément ne se produit.)
 
 ### <a name="example"></a>Exemple
 
@@ -979,7 +979,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="vectorfront-stlclr"></a><a name="front"></a>vecteur::front (STL/CLR)
+## <a name="vectorfront-stlclr"></a><a name="front"></a>vector :: Front (STL/CLR)
 
 Accède au premier élément.
 
@@ -991,7 +991,7 @@ reference front();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie une référence au premier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour lire ou écrire le premier élément, quand vous savez qu’il existe.
+La fonction membre retourne une référence au premier élément de la séquence contrôlée, qui ne doit pas être vide. Vous l’utilisez pour lire ou écrire le premier élément, lorsque vous savez qu’il existe.
 
 ### <a name="example"></a>Exemple
 
@@ -1030,7 +1030,7 @@ front() = a
 x b c
 ```
 
-## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a>vecteur::front_item (STL/CLR)
+## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a>vector :: front_item (STL/CLR)
 
 Accède au premier élément.
 
@@ -1042,7 +1042,7 @@ property value_type front_item;
 
 ### <a name="remarks"></a>Notes
 
-La propriété accède au premier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour lire ou écrire le premier élément, quand vous savez qu’il existe.
+La propriété accède au premier élément de la séquence contrôlée, qui ne doit pas être vide. Vous l’utilisez pour lire ou écrire le premier élément, lorsque vous savez qu’il existe.
 
 ### <a name="example"></a>Exemple
 
@@ -1081,9 +1081,9 @@ front_item = a
 x b c
 ```
 
-## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a>vecteur::generic_container (STL/CLR)
+## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a>vector :: generic_container (STL/CLR)
 
-Le type d’interface générique pour le conteneur.
+Type de l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1095,7 +1095,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit l’interface générique pour cette classe de conteneurs de modèle.
+Le type décrit l’interface générique pour cette classe de conteneur de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1147,9 +1147,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>vecteur::generic_iterator (STL/CLR)
+## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>vector :: generic_iterator (STL/CLR)
 
-Le type d’itérateur pour une utilisation avec l’interface générique pour le conteneur.
+Type d’un itérateur à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1161,7 +1161,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un itérateur générique qui peut être utilisé avec l’interface générique pour cette classe de conteneurs de modèle.
+Le type décrit un itérateur générique qui peut être utilisé avec l’interface générique pour cette classe de conteneur de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1205,9 +1205,9 @@ a b c
 a a c
 ```
 
-## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>vecteur::generic_reverse_iterator (STL/CLR)
+## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>vector :: generic_reverse_iterator (STL/CLR)
 
-Le type d’itérateur inversé pour une utilisation avec l’interface générique pour le conteneur.
+Type d’un itérateur inverse à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1218,7 +1218,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un itérateur inverse générique qui peut être utilisé avec l’interface générique pour cette classe de conteneurs de modèle.
+Le type décrit un itérateur inverse générique qui peut être utilisé avec l’interface générique pour cette classe de conteneur de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1262,9 +1262,9 @@ a b c
 a c c
 ```
 
-## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a>vecteur::generic_value (STL/CLR)
+## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a>vector :: generic_value (STL/CLR)
 
-Le type d’élément à utiliser avec l’interface générique pour le conteneur.
+Type d’un élément à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1274,7 +1274,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un `GValue` objet de type qui décrit la valeur de l’élément stocké pour une utilisation avec l’interface générique pour cette classe de conteneurs de modèle.
+Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké à utiliser avec l’interface générique pour cette classe de conteneur de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1318,7 +1318,7 @@ a b c
 a a c
 ```
 
-## <a name="vectorinsert-stlclr"></a><a name="insert"></a>vecteur::insert (STL/CLR)
+## <a name="vectorinsert-stlclr"></a><a name="insert"></a>vector :: Insert (STL/CLR)
 
 Ajoute des éléments à une position spécifiée.
 
@@ -1338,34 +1338,34 @@ void insert(iterator where,
 *count*<br/>
 Nombre d’éléments à insérer.
 
-*Première*<br/>
+*first*<br/>
 Début de la plage à insérer.
 
-*Dernière*<br/>
+*last*<br/>
 Fin de la plage à insérer.
 
 *Oui*<br/>
 Énumération à insérer.
 
-*Val*<br/>
+*multiples*<br/>
 Valeur de l’élément à insérer.
 
-*Où*<br/>
-Où dans le récipient à insérer avant.
+*where*<br/>
+Où insérer dans le conteneur.
 
 ### <a name="remarks"></a>Notes
 
-Chacun des fonctions du membre insère, avant que l’élément ne soit indiqué par *l’endroit où* dans la séquence contrôlée, une séquence spécifiée par les opérandes restantes.
+Chacune des fonctions membres insère, avant l’élément vers *lequel* pointe, dans la séquence contrôlée, une séquence spécifiée par les opérandes restants.
 
-La première fonction de membre insère un élément avec la valeur *val* et renvoie un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un seul élément avant un lieu désigné par un itérateur.
+La première fonction membre insère un élément avec la valeur *Val* et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique avant un emplacement désigné par un itérateur.
 
-La deuxième fonction de membre insère une répétition d’éléments de *comptage* de valeur *val*. Vous l’utilisez pour insérer zéro ou plus d’éléments contigus qui sont tous des copies de la même valeur.
+La deuxième fonction membre insère une répétition des éléments *Count* de la valeur *Val*. Vous l’utilisez pour insérer zéro, un ou plusieurs éléments contigus qui sont toutes des copies de la même valeur.
 
-Si `InIt` est un type entier, la troisième fonction membre se comporte comme `insert(where, (size_type)first, (value_type)last)`. Sinon, il insère`first` `last`la séquence [, ). Vous l’utilisez pour insérer zéro ou plus d’éléments contigus copiés à partir d’une autre séquence.
+Si `InIt` est un type entier, la troisième fonction membre se comporte comme `insert(where, (size_type)first, (value_type)last)`. Sinon, elle insère la séquence [ `first` , `last` ). Vous l’utilisez pour insérer zéro, un ou plusieurs éléments contigus copiés à partir d’une autre séquence.
 
-La fonction de quatrième membre insère la séquence désignée par la *droite*. Vous l’utilisez pour insérer une séquence décrite par un enumérateur.
+La quatrième fonction membre insère la séquence désignée par la *droite*. Vous l’utilisez pour insérer une séquence décrite par un énumérateur.
 
-Lors de l’insertion d’un seul élément, le nombre de copies d’éléments est linéaire dans le nombre d’éléments entre le point d’insertion et l’extrémité plus proche de la séquence. (Lors de l’insertion d’un ou plusieurs éléments à chaque extrémité de la séquence, aucune copie d’élément ne se produit.) S’il `InIt` s’agit d’un itérateur d’entrée, la fonction du troisième membre effectue efficacement une seule insertion pour chaque élément de la séquence. Sinon, lors `N` de l’insertion d’éléments, `N` le nombre de copies d’éléments est linéaire en plus du nombre d’éléments entre le point d’insertion et l’extrémité la plus proche de la séquence.
+Lors de l’insertion d’un seul élément, le nombre de copies d’élément est linéaire dans le nombre d’éléments entre le point d’insertion et l’extrémité plus proche de la séquence. (Lors de l’insertion d’un ou plusieurs éléments à la fin de la séquence, aucune copie d’élément ne se produit.) Si `InIt` est un itérateur d’entrée, la troisième fonction membre effectue effectivement une insertion unique pour chaque élément de la séquence. Dans le cas contraire, lors de l’insertion `N` d’éléments, le nombre de copies d’éléments est linéaire dans `N` plus le nombre d’éléments entre le point d’insertion et l’extrémité plus proche de la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -1427,7 +1427,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="vectoriterator-stlclr"></a><a name="iterator"></a>vecteur::iterator (STL/CLR)
+## <a name="vectoriterator-stlclr"></a><a name="iterator"></a>vector :: iterator (STL/CLR)
 
 Type d'un itérateur pour la séquence contrôlée.
 
@@ -1439,7 +1439,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de `T1` type non spécifié qui peut servir d’itérateur d’accès aléatoire pour la séquence contrôlée.
+Le type décrit un objet de type non spécifié `T1` qui peut servir d’itérateur d’accès aléatoire pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -1476,7 +1476,7 @@ a b c
 x b c
 ```
 
-## <a name="vectoroperator-stlclr"></a><a name="op_as"></a>vecteur ::opérateur(MD) (STL/CLR)
+## <a name="vectoroperator-stlclr"></a><a name="op_as"></a>vector :: Operator = (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -1493,7 +1493,7 @@ Conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre copie *directement* l’objet, puis renvoie `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée à *droite*.
+L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
 ### <a name="example"></a>Exemple
 
@@ -1529,7 +1529,7 @@ a b c
 a b c
 ```
 
-## <a name="vectoroperatorstlclr"></a><a name="op"></a>vecteur::opérateur (STL/CLR)
+## <a name="vectoroperatorstlclr"></a><a name="op"></a>vector :: Operator (STL/CLR)
 
 Accède à un élément à une position spécifiée.
 
@@ -1541,12 +1541,12 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>Paramètres
 
-*Pos*<br/>
+*imprim*<br/>
 Position de l'élément auquel accéder.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre renvoie un référent à l’élément à position *pos*. Vous l’utilisez pour accéder à un élément dont vous connaissez la position.
+L’opérateur membre retourne un referene à l’élément à la position *pos*. Vous l’utilisez pour accéder à un élément dont vous connaissez la position.
 
 ### <a name="example"></a>Exemple
 
@@ -1581,7 +1581,7 @@ a b c
 a x c
 ```
 
-## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a>vecteur ::pop-back (STL/CLR)
+## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a>vector ::p op_back (STL/CLR)
 
 Supprime le dernier élément.
 
@@ -1593,7 +1593,7 @@ void pop_back();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre supprime le dernier élément de la séquence contrôlée, qui doit être non vide. Vous l’utilisez pour raccourcir le vecteur d’un élément à l’arrière.
+La fonction membre supprime le dernier élément de la séquence contrôlée, qui ne doit pas être vide. Vous l’utilisez pour raccourcir le vecteur d’un élément à l’arrière.
 
 ### <a name="example"></a>Exemple
 
@@ -1628,9 +1628,9 @@ a b c
 a b
 ```
 
-## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a>vecteur ::push-back (STL/CLR)
+## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a>vector ::p ush_back (STL/CLR)
 
-Ajoute un nouvel élément.
+Ajoute un nouveau dernier élément.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1640,7 +1640,7 @@ void push_back(value_type val);
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre insère `val` un élément avec une valeur à la fin de la séquence contrôlée. Vous l’utilisez pour ajouter un autre élément au vecteur.
+La fonction membre insère un élément avec une valeur `val` à la fin de la séquence contrôlée. Vous l’utilisez pour ajouter un autre élément au vecteur.
 
 ### <a name="example"></a>Exemple
 
@@ -1668,7 +1668,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a>vecteur::rbegin (STL/CLR)
+## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a>vector :: rbegin (STL/CLR)
 
 Désigne le début de la séquence contrôlée inverse.
 
@@ -1680,7 +1680,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un itérateur inversé qui désigne le dernier élément de la séquence contrôlée, ou juste au-delà du début d’une séquence vide. Par conséquent, il désigne le `beginning` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur inverse qui désigne le dernier élément de la séquence contrôlée, ou juste après le début d’une séquence vide. Par conséquent, il désigne le `beginning` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -1723,7 +1723,7 @@ a b c
 a y x
 ```
 
-## <a name="vectorreference-stlclr"></a><a name="reference"></a>vecteur::référence (STL/CLR)
+## <a name="vectorreference-stlclr"></a><a name="reference"></a>vector :: Reference (STL/CLR)
 
 Type d'une référence à un élément.
 
@@ -1778,7 +1778,7 @@ a b c
 A B C
 ```
 
-## <a name="vectorrend-stlclr"></a><a name="rend"></a>vecteur::rend (STL/CLR)
+## <a name="vectorrend-stlclr"></a><a name="rend"></a>vector :: rend (STL/CLR)
 
 Désigne la fin de la séquence contrôlée inverse.
 
@@ -1790,7 +1790,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un itérateur inversé qui pointe juste au-delà du début de la séquence contrôlée. Par conséquent, il désigne le `end` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne la fin `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur inverse qui pointe juste après le début de la séquence contrôlée. Par conséquent, il désigne le `end` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne la fin `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -1834,9 +1834,9 @@ a b c
 y x c
 ```
 
-## <a name="vectorreserve-stlclr"></a><a name="reserve"></a>vecteur::réserve (STL/CLR)
+## <a name="vectorreserve-stlclr"></a><a name="reserve"></a>vector :: Reserve (STL/CLR)
 
-Assure une capacité de croissance minimale pour le conteneur.
+Garantit une capacité de croissance minimale pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1851,7 +1851,7 @@ Nouvelle capacité minimale du conteneur.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre `capacity()` garantit que désormais les retours au moins *compter*. Vous l’utilisez pour vous assurer que le conteneur n’a pas besoin de réaffecter le stockage pour la séquence contrôlée jusqu’à ce qu’il ait atteint la taille spécifiée.
+La fonction membre garantit que `capacity()` retourne désormais au moins un *nombre*. Vous pouvez l’utiliser pour vous assurer que le conteneur n’a pas besoin de réallouer le stockage pour la séquence contrôlée tant qu’il n’a pas atteint la taille spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -1889,7 +1889,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="vectorresize-stlclr"></a><a name="resize"></a>vecteur::resize (STL/CLR)
+## <a name="vectorresize-stlclr"></a><a name="resize"></a>vector :: Resize (STL/CLR)
 
 Change le nombre d'éléments.
 
@@ -1905,12 +1905,12 @@ void resize(size_type new_size, value_type val);
 *new_size*<br/>
 Nouvelle taille de la séquence contrôlée.
 
-*Val*<br/>
-Valeur de l’élément rembourrage.
+*multiples*<br/>
+Valeur de l’élément de remplissage.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions des membres s’assurent à la fois que [le vecteur::size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` retourne désormais *new_size*. S’il doit rendre la séquence contrôlée plus longue, la `value_type()`fonction du premier membre annexe des éléments avec valeur, tandis que la fonction du deuxième membre annexe des éléments avec la valeur *val*. Pour raccourcir la séquence contrôlée, les deux fonctions membres effacent efficacement le dernier élément vecteur : : temps [de taille (STL/CLR).](../dotnet/vector-size-stl-clr.md) `() -` `new_size` Vous l’utilisez pour vous assurer que la séquence contrôlée a la taille *new_size*, soit en coupant ou en rembourrageant la séquence contrôlée actuelle.
+Les fonctions membres garantissent que [vector :: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()` retourne désormais *NEW_SIZE*. Si la séquence contrôlée doit être plus longue, la première fonction membre ajoute des éléments avec `value_type()` la valeur, tandis que la deuxième fonction membre ajoute des éléments avec la valeur *Val*. Pour rendre la séquence contrôlée plus concise, les deux fonctions membres effacent efficacement le dernier élément [vector :: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() -` `new_size` . Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée a une taille *NEW_SIZE*, en découpant ou en remplissant la séquence contrôlée actuelle.
 
 ### <a name="example"></a>Exemple
 
@@ -1949,7 +1949,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>vecteur::reverse_iterator (STL/CLR)
+## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>vector :: reverse_iterator (STL/CLR)
 
 Type d'un itérateur inverse pour la séquence contrôlée.
 
@@ -1961,7 +1961,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de `T3` type non spécifié qui peut servir d’itérateur inversé pour la séquence contrôlée.
+Le type décrit un objet de type non spécifié `T3` qui peut servir d’itérateur inverse pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -1998,7 +1998,7 @@ c b a
 x b a
 ```
 
-## <a name="vectorsize-stlclr"></a><a name="size"></a>vecteur::taille (STL/CLR)
+## <a name="vectorsize-stlclr"></a><a name="size"></a>vector :: Size (STL/CLR)
 
 Compte le nombre d'éléments.
 
@@ -2010,7 +2010,7 @@ size_type size();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si tout ce qui vous tient à c’est de savoir si la séquence a la taille non zéro, voir [vecteur::vide (STL/CLR)](../dotnet/vector-empty-stl-clr.md)`()`.
+La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [vector :: Empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Exemple
 
@@ -2051,7 +2051,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a>vecteur::size_type (STL/CLR)
+## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a>vector :: size_type (STL/CLR)
 
 Type d'une distance signée entre deux éléments.
 
@@ -2096,7 +2096,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="vectorswap-stlclr"></a><a name="swap"></a>vecteur::swap (STL/CLR)
+## <a name="vectorswap-stlclr"></a><a name="swap"></a>vector :: swap (STL/CLR)
 
 Échange le contenu de deux conteneurs.
 
@@ -2113,7 +2113,7 @@ Conteneur avec lequel échanger le contenu.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange les séquences contrôlées entre `*this` et à *droite*. Il le fait en temps constant et il ne fait aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
+La fonction membre échange les séquences contrôlées entre **`*this`** et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
 
 ### <a name="example"></a>Exemple
 
@@ -2160,9 +2160,9 @@ x x x x x
 a b c
 ```
 
-## <a name="vectorto_array-stlclr"></a><a name="to_array"></a>vecteur::to_array (STL/CLR)
+## <a name="vectorto_array-stlclr"></a><a name="to_array"></a>vector :: to_array (STL/CLR)
 
-Copie la séquence contrôlée à un nouveau tableau.
+Copie la séquence contrôlée dans un nouveau tableau.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2172,7 +2172,7 @@ cli::array<Value>^ to_array();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un tableau contenant la séquence contrôlée. Vous l’utilisez pour obtenir une copie de la séquence contrôlée sous forme de tableau.
+La fonction membre retourne un tableau contenant la séquence contrôlée. Vous l’utilisez pour obtenir une copie de la séquence contrôlée sous forme de tableau.
 
 ### <a name="example"></a>Exemple
 
@@ -2209,7 +2209,7 @@ a b c d
 a b c
 ```
 
-## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a>vecteur::value_type (STL/CLR)
+## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a>vector :: value_type (STL/CLR)
 
 Type d’un élément.
 
@@ -2221,7 +2221,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est synonyme du paramètre de type *Valeur*.
+Le type est un synonyme de la *valeur*de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -2254,7 +2254,7 @@ int main()
 a b c
 ```
 
-## <a name="vectorvector-stlclr"></a><a name="vector"></a>vecteur::vector (STL/CLR)
+## <a name="vectorvector-stlclr"></a><a name="vector"></a>vector :: vector (STL/CLR)
 
 Construit un objet conteneur.
 
@@ -2276,63 +2276,63 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 *count*<br/>
 Nombre d’éléments à insérer.
 
-*Première*<br/>
+*first*<br/>
 Début de la plage à insérer.
 
-*Dernière*<br/>
+*last*<br/>
 Fin de la plage à insérer.
 
 *Oui*<br/>
 Objet ou plage à insérer.
 
-*Val*<br/>
+*multiples*<br/>
 Valeur de l’élément à insérer.
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur:
+Le constructeur :
 
 `vector();`
 
-initialise la séquence contrôlée sans éléments. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide.
+Initialise la séquence contrôlée sans éléments. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide.
 
-Le constructeur:
+Le constructeur :
 
 `vector(vector<Value>% right);`
 
-initialise la séquence contrôlée avec`right.begin()`la `right.end()`séquence [, ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet vectoriel *droit*.
+Initialise la séquence contrôlée à l’aide de la séquence [ `right.begin()` , `right.end()` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet vectoriel.
 
-Le constructeur:
+Le constructeur :
 
 `vector(vector<Value>^ right);`
 
-initialise la séquence contrôlée avec`right->begin()`la `right->end()`séquence [, ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet vectoriel dont la poignée est *droite.*
+Initialise la séquence contrôlée à l’aide de la séquence [ `right->begin()` , `right->end()` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet vectoriel dont le handle est *droit*.
 
-Le constructeur:
+Le constructeur :
 
 `explicit vector(size_type count);`
 
-initialise la séquence contrôlée avec des `value_type()`éléments de *comptage* chacun avec de la valeur . Vous l’utilisez pour remplir le conteneur avec des éléments ayant tous la valeur par défaut.
+Initialise la séquence contrôlée avec les éléments *Count* chacun avec la valeur `value_type()` . Vous l’utilisez pour remplir le conteneur avec des éléments qui ont tous la valeur par défaut.
 
-Le constructeur:
+Le constructeur :
 
 `vector(size_type count, value_type val);`
 
-initialise la séquence contrôlée avec des éléments *de comptage* chacun avec la valeur *val*. Vous l’utilisez pour remplir le conteneur avec des éléments ayant tous la même valeur.
+Initialise la séquence contrôlée avec les éléments *Count* chacun avec la valeur *Val*. Vous l’utilisez pour remplir le conteneur avec des éléments ayant tous la même valeur.
 
-Le constructeur:
+Le constructeur :
 
 `template<typename InIt>`
 
 `vector(InIt first, InIt last);`
 
-initialise la séquence contrôlée avec`first`la `last`séquence [, ). Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence.
+Initialise la séquence contrôlée à l’aide de la séquence [ `first` , `last` ). Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence.
 
-Le constructeur:
+Le constructeur :
 
 `vector(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-initialise la séquence contrôlée avec la séquence désignée par le *droit*d’énumérateur . Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un enumérateur.
+Initialise la séquence contrôlée avec la séquence désignée par le *droit*de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur.
 
 ### <a name="example"></a>Exemple
 
@@ -2399,9 +2399,9 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="operator-vector-stlclr"></a><a name="op_neq"></a>opérateur! (vecteur) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_neq"></a>Operator ! = (Vector) (STL/CLR)
 
-Vector pas comparaison égale.
+Comparaison non égale à Vector.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2413,7 +2413,7 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2421,7 +2421,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction `!(left == right)`opérateur revient . Vous l’utilisez pour vérifier si *la gauche* n’est pas commandée de la même façon que *droite* lorsque les deux vecteurs sont comparés élément par élément.
+La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux vecteurs sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2468,9 +2468,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a>(vecteur)&lt; (STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a>, opérateur ( &lt; Vector) (STL/CLR)
 
-Vecteur moins que la comparaison.
+Vecteur inférieur à la comparaison.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2482,7 +2482,7 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2490,7 +2490,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction opérateur retourne vrai si, pour la position `i` la plus basse pour laquelle `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Sinon, il `left->size() < right->size()` retourne Vous l’utilisez pour tester si *la gauche* est commandée avant *à droite* lorsque les deux vecteurs sont comparés élément par élément.
+La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, il retourne `left->size() < right->size()` que vous l’utilisez pour vérifier si *right* *Left* est ordonné avant le moment où les deux vecteurs sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2537,9 +2537,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a>(vecteur)&lt;(STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a>Operator &lt; = (Vector) (STL/CLR)
 
-Vecteur moins ou comparaison égale.
+Comparaison de vecteurs inférieure ou égale à.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2551,7 +2551,7 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2559,7 +2559,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction `!(right < left)`opérateur revient . Vous l’utilisez pour vérifier si *la gauche* n’est pas commandée après *le droit* lorsque les deux vecteurs sont comparés élément par élément.
+La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas ordonné après *le* moment où les deux vecteurs sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2606,9 +2606,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-vector-stlclr"></a><a name="op_eq"></a>(vecteur) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_eq"></a>Operator = = (Vector) (STL/CLR)
 
-Comparaison égaliser par vecteur.
+Comparaison d’égalité de vecteurs.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2620,7 +2620,7 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2628,7 +2628,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction opérateur retourne vrai seulement si *left* les séquences contrôlées par gauche `i` `left[i] ==` `right[i]`et *droite* ont la même longueur et, pour chaque position , . Vous l’utilisez pour vérifier si *la gauche* est commandée de la même façon que *droite* lorsque les deux vecteurs sont comparés élément par élément.
+La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i` , `left[i] ==` `right[i]` . Vous l’utilisez pour tester si *Left* est *ordonné de la même façon que* lorsque les deux vecteurs sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2675,9 +2675,9 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a>(vecteur)&gt; (STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a>, opérateur ( &gt; Vector) (STL/CLR)
 
-Vecteur plus grand que la comparaison.
+Vecteur supérieur à la comparaison.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2689,7 +2689,7 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2697,7 +2697,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction `right` `<` `left`opérateur revient . Vous l’utilisez pour vérifier si *la gauche* est commandée après *le droit* lorsque les deux vecteurs sont comparés élément par élément.
+La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour tester si *Left* est ordonné après *le* moment où les deux vecteurs sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2744,9 +2744,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a>(vecteur)&gt;(STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a>Operator &gt; = (Vector) (STL/CLR)
 
-Vecteur plus grand que ou égale comparaison.
+Comparaison de vecteurs supérieure ou égale à.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2758,7 +2758,7 @@ template<typename Value>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2766,7 +2766,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction `!(left < right)`opérateur revient . Vous l’utilisez pour vérifier si *la gauche* n’est pas commandée avant *à droite* lorsque les deux vecteurs sont comparés élément par élément.
+La fonction opérateur retourne `!(left < right)` . Vous l’utilisez pour tester si *Left* n’est pas ordonné *avant le moment où* les deux vecteurs sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 

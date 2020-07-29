@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d13b58fc05055ceecb6472003d7682c41c76e23d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457384"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222535"
 ---
-# <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
+# <a name="ltcondition_variablegt"></a>&lt;condition_variable&gt;
 
 Définit les classes [condition_variable](../standard-library/condition-variable-class.md) et [condition_variable_any](../standard-library/condition-variable-any-class.md) servant à créer des objets qui attendent qu’une condition soit true.
 
 Cet en-tête utilise le runtime d’accès concurrentiel (ConcRT) pour pouvoir l’utiliser avec d’autres mécanismes ConcRT. Pour plus d’informations sur ConcRT, consultez [Runtime d’accès concurrentiel](../parallel/concrt/concurrency-runtime.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** \<CONDITION_VARIABLE >
+**En-tête :**\<condition_variable>
 
 **Espace de noms :** std
 
@@ -49,9 +49,9 @@ Les classes `condition_variable_any` et `condition_variable` ont chacune trois m
 
 - `wait_for` attend pendant une valeur `time interval` spécifiée.
 
-Chacune de ces méthodes a deux versions surchargées. L’une se contente d’attendre et peut s’éveiller sans motif. L’autre accepte un argument de modèle supplémentaire qui définit un prédicat. La méthode ne retourne pas de valeur tant que le prédicat n’a pas la **valeur true**.
+Chacune de ces méthodes a deux versions surchargées. L’une se contente d’attendre et peut s’éveiller sans motif. L’autre accepte un argument de modèle supplémentaire qui définit un prédicat. La méthode n’est pas retournée tant que le prédicat n’est pas **`true`** .
 
-Chaque classe a également deux méthodes qui sont utilisées pour notifier une variable de condition que sa condition est **true**.
+Chaque classe a également deux méthodes qui sont utilisées pour notifier une variable de condition que sa condition est **`true`** .
 
 - `notify_one` éveille un des threads en attente de la variable conditionnelle.
 
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[condition_variable, classe](../standard-library/condition-variable-class.md)\
-[condition_variable_any, classe](../standard-library/condition-variable-any-class.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Classe condition_variable](../standard-library/condition-variable-class.md)\
+[Classe condition_variable_any](../standard-library/condition-variable-any-class.md)

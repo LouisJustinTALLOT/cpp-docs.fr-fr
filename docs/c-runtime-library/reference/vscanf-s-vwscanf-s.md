@@ -24,12 +24,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 4d08679d08fb5b212306cbaeec200d16803a85ef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945398"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215099"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s, vwscanf_s
 
@@ -66,14 +66,14 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 La fonction **vscanf_s** lit les données à partir du flux d’entrée standard **stdin** et écrit les données dans les emplacements fournis par la liste d’arguments *arglist* . Chaque argument de la liste doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type au *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-**vwscanf_s** est une version à caractères larges de **vscanf_s**; l’argument *format* de **vwscanf_s** est une chaîne de caractères larges. **vwscanf_s** et **vscanf_s** se comportent de la même manière si le flux est ouvert en mode ANSI. **vscanf_s** ne prend pas en charge l’entrée d’un flux Unicode.
+**vwscanf_s** est une version à caractères larges de **vscanf_s**; l’argument de *format* de **vwscanf_s** est une chaîne de caractères larges. **vwscanf_s** et **vscanf_s** se comportent de la même manière si le flux est ouvert en mode ANSI. **vscanf_s** ne prend pas en charge l’entrée d’un flux Unicode.
 
-Contrairement à **vscanf** et **vwscanf**, **vscanf_s** et **vwscanf_s** requièrent que la taille de la mémoire tampon soit spécifiée pour tous les paramètres d’entrée de type **c**, **c**, **s**, **s**ou jeux de contrôle de chaîne placés dans **[]** . La taille de la mémoire tampon en caractères est passée en tant que paramètre supplémentaire immédiatement après le pointeur vers la mémoire tampon ou la variable. La taille de la mémoire tampon en caractères pour une chaîne **wchar_t** n’est pas la même que la taille en octets.
+Contrairement à **vscanf** et **vwscanf**, **vscanf_s** et **vwscanf_s** requièrent que la taille de la mémoire tampon soit spécifiée pour tous les paramètres d’entrée de type **c**, **c**, **s**, **s**ou jeux de contrôle de chaîne placés dans **[]**. La taille de la mémoire tampon en caractères est passée en tant que paramètre supplémentaire immédiatement après le pointeur vers la mémoire tampon ou la variable. La taille de la mémoire tampon en caractères pour une **`wchar_t`** chaîne n’est pas la même que la taille en octets.
 
 La taille de la mémoire tampon inclut le caractère Null de fin. Vous pouvez utiliser un champ de spécification de largeur pour être certain que le jeton lu tiendra dans la mémoire tampon. Si aucun champ de spécification de largeur n'est utilisé, et si le jeton lu est trop grand pour la mémoire tampon, aucune valeur n'est écrite dans cette mémoire tampon.
 
 > [!NOTE]
-> Le paramètre *Size* est de type **unsigned**, et non **size_t**.
+> Le paramètre de *taille* est de type **`unsigned`** , et non **size_t**.
 
 Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
 
@@ -85,7 +85,7 @@ Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-
 
 Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

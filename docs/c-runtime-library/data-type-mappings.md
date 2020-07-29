@@ -1,5 +1,5 @@
 ---
-title: Mappages de types de données
+title: Mappages de type de données
 ms.date: 11/04/2016
 f1_keywords:
 - _TXCHAR
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: 60dc4329ae4c908b9bd168584c71c42c12634bb2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d77ac4fa9afcd5a6b8f86261c7a3ba466adc64a4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749098"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215151"
 ---
-# <a name="data-type-mappings"></a>Mappages de types de données
+# <a name="data-type-mappings"></a>Mappages de type de données
 
 Ces mappages de types de données sont définis dans TCHAR.H et varient selon que la constante `_UNICODE` ou `_MBCS` a été définie dans votre programme.
 
@@ -44,16 +44,16 @@ Pour plus d’informations, consultez [Utilisation de types de données TCHAR.H 
 
 ### <a name="generic-text-data-type-mappings"></a>Mappages de types de données de texte générique
 
-|Texte générique<br /><br /> nom de type de données|SBCS (_UNICODE,<br /><br /> _MBCS non<br /><br /> définis)|_MBCS<br /><br /> définir|_UNICODE<br /><br /> définir|
+|Texte générique<br /><br /> nom de type de données|SBCS (_UNICODE,<br /><br /> _MBCS non<br /><br /> définis)|_MBCS<br /><br /> défini|_UNICODE<br /><br /> défini|
 |--------------------------------------|----------------------------------------------------|------------------------|---------------------------|
-|`_TCHAR`|`char`|`char`|`wchar_t`|
+|`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
 |`_tfinddata_t`|`_finddata_t`|`_finddata_t`|`_wfinddata_t`|
 |`_tfinddata64_t`|`__finddata64_t`|`__finddata64_t`|`__wfinddata64_t`|
 |`_tfinddatai64_t`|`_finddatai64_t`|`_finddatai64_t`|`_wfinddatai64_t`|
-|`_TINT`|`int`|`int`|`wint_t`|
-|`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|
-|`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|
-|`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|
+|`_TINT`|**`int`**|**`int`**|`wint_t`|
+|`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
+|`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
+|`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
 |`_T` ou `_TEXT`|Aucun effet (supprimé par le préprocesseur)|Aucun effet (supprimé par le préprocesseur)|`L` (convertit le caractère suivant ou la chaîne suivante en son équivalent Unicode)|
 
 ## <a name="see-also"></a>Voir aussi

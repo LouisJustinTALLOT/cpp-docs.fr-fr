@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3495
 ms.assetid: 1fd40cb8-8373-403d-b8a8-f08424a50807
-ms.openlocfilehash: 6fe4286142c90f341925d7e76ca8de6d3b7daa9f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: a67d4d859e3a9dd2241f14a476492df0fd3e6b8d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075006"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223419"
 ---
 # <a name="compiler-error-c3495"></a>Erreur du compilateur C3495
 
 'var' : une capture lambda doit avoir une durée de stockage automatique
 
-Vous ne pouvez pas capturer une variable qui n’a pas de durée de stockage automatique, telle qu’une variable qui est marquée `static` ou `extern`.
+Vous ne pouvez pas capturer une variable qui n’a pas de durée de stockage automatique, telle qu’une variable marquée **`static`** ou **`extern`** .
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-- Ne passez pas une variable `static` ni `extern` à la liste de capture de l’expression lambda.
+- Ne transmettez pas **`static`** de **`extern`** variable ou à la liste de capture de l’expression lambda.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C3495, car la variable `static``n` figure dans la liste de capture d’une expression lambda :
+L’exemple suivant génère C3495, car la **`static`** variable `n` apparaît dans la liste de capture d’une expression lambda :
 
 ```cpp
 // C3495.cpp

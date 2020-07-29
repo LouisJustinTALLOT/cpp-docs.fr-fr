@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: d35ed6ca8dd4c3ea7a149e0fb2085aa8a97b11b4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912379"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215125"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -72,12 +72,12 @@ Les fonctions **Tan** retournent la tangente de *x*. Si *x* est supérieur ou é
 
 |Entrée|Exception SEH|**Supertherr** Titre|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|Aucun|_DOMAIN|
+|± QNAN,IND|aucun|_DOMAIN|
 |FICHIER INF ±|**Non valide**|_DOMAIN|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Tan** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **Tan** prend toujours et retourne **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Tan** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **Tan** accepte et retourne toujours **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

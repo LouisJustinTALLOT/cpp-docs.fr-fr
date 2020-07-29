@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62e8a2026babbfea3cd1583def05a03b4bc4a229
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160682"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223510"
 ---
 # <a name="typename"></a>typename
 
@@ -27,7 +27,7 @@ typename identifier;
 
 Ce mot clé doit être utilisé si un nom dans une définition de modèle est un nom qualifié qui est dépendant d’un argument de modèle. elle est facultative si le nom qualifié n’est pas dépendant. Pour plus d’informations, consultez [modèles et résolution de noms](../cpp/templates-and-name-resolution.md).
 
-**TypeName** peut être utilisé par n’importe quel type n’importe où dans une déclaration ou une définition de modèle. Il n’est pas autorisé dans la liste des classes de base sauf sous forme d’argument template pour une classe de base de modèle.
+**`typename`** peut être utilisé par n’importe quel type n’importe où dans une déclaration ou une définition de modèle. Il n’est pas autorisé dans la liste des classes de base sauf sous forme d’argument template pour une classe de base de modèle.
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-Le mot clé **TypeName** peut également être utilisé à la place de la **classe** dans les listes de paramètres de modèle. Par exemple, les instructions suivantes sont sémantiquement équivalentes :
+Le **`typename`** mot clé peut également être utilisé à la place de **`class`** dans les listes de paramètres de modèle. Par exemple, les instructions suivantes sont sémantiquement équivalentes :
 
 ```cpp
 template<class T1, class T2>...

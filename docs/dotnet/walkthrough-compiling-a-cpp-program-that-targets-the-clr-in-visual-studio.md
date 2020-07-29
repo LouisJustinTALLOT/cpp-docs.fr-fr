@@ -1,6 +1,6 @@
 ---
 title: Compiler un programme C++/CLI qui cible le CLR
-description: Utilisez Microsoft CMD pour créer des programmes et des bibliothèques qui peuvent connecter des programmes CMD et .NET natifs.
+description: Utilisez Microsoft C++ pour créer des programmes et des bibliothèques qui peuvent se connecter à du code C++ natif et à des programmes .NET.
 ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 0d661d9e77211a0e49f8695ad713b607377a236a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 63996af56f03890c9a78e95743367d47416d5d48
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371812"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214826"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Procédure pas à pas : Compilez un programme CMD/CLI qui cible le CLR en studio visuel
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Procédure pas à pas : compilation d’un programme C++/CLI qui cible le CLR dans Visual Studio
 
-En utilisant les programmes CMD/CLI, vous pouvez créer des programmes CMD qui utilisent des classes .NET ainsi que des types CMD natifs. L’IMC est destiné à être utilisé dans les applications de consoles et dans les DL Qui enveloppent le code CMD natif et le rendent accessible à partir de programmes .NET. Pour créer une interface utilisateur Windows basée sur .NET, utilisez C ou Visual Basic.
+En utilisant C++/CLI, vous pouvez créer des programmes C++ qui utilisent des classes .NET ainsi que des types C++ natifs. C++/CLI est destiné à une utilisation dans des applications console et dans des dll qui encapsulent du code C++ natif et le rendent accessible à partir de programmes .NET. Pour créer une interface utilisateur Windows basée sur .NET, utilisez C# ou Visual Basic.
 
-Pour cette procédure, vous pouvez taper votre propre programme CMD ou utiliser l’un des programmes d’échantillons. L’exemple de programme que nous utilisons dans cette procédure crée un fichier texte nommé textfile.txt et l’enregistre dans le répertoire du projet.
+Pour cette procédure, vous pouvez taper votre propre programme C++ ou utiliser l’un des exemples de programmes. L’exemple de programme que nous utilisons dans cette procédure crée un fichier texte nommé textfile.txt et l’enregistre dans le répertoire du projet.
 
 ## <a name="prerequisites"></a>Prérequis
 
 - Une connaissance des notions de base du langage C++.
-- Dans Visual Studio 2017 et plus tard, le support C/CLI est un composant optionnel. Pour l’installer, ouvrez **l’installateur Visual Studio** à partir du menu Windows Start. Assurez-vous que le développement de bureau avec la tuile **CMD** est vérifié, et dans la section composants **facultatifs,** vérifiez également **le support CMD/CLI**.
+- Dans Visual Studio 2017 et versions ultérieures, la prise en charge de C++/CLI est un composant facultatif. Pour l’installer, ouvrez le **Visual Studio installer** à partir du menu Démarrer de Windows. Assurez-vous que la vignette **développement Desktop avec c++** est cochée, et dans la section composants **facultatifs** , vérifiez également la **prise en charge de C++/CLI**.
 
-## <a name="create-a-new-project"></a>Création d'un projet
+## <a name="create-a-new-project"></a>Créer un projet
 
-Les étapes suivantes varient légèrement selon la version de Visual Studio que vous utilisez. Pour voir la documentation de votre version préférée de Visual Studio, utilisez le contrôle du sélecteur **Version.** On le trouve en haut de la table des contenus sur cette page.
+Les étapes suivantes varient légèrement selon la version de Visual Studio que vous utilisez. Pour consulter la documentation de votre version par défaut de Visual Studio, utilisez le contrôle sélecteur de **version** . Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Créer un projet CMD/CLI dans Visual Studio 2019
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Pour créer un projet C++/CLI dans Visual Studio 2019
 
-1. Dans **Solution Explorer**, cliquez à droite sur le dessus pour ouvrir la boîte de dialogue Create a New **Project.**
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le haut pour ouvrir la boîte de dialogue **créer un nouveau projet** .
 
-1. En haut du dialogue, tapez **CLR** dans la boîte de recherche, puis choisissez **CLR Empty Project** dans la liste des résultats.
+1. En haut de la boîte de dialogue, tapez **CLR** dans la zone de recherche, puis choisissez **projet vide CLR** dans la liste des résultats.
 
 1. Choisissez le bouton **Créer** pour créer le projet.
 
@@ -44,7 +44,7 @@ Les étapes suivantes varient légèrement selon la version de Visual Studio que
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Créer un projet CMD/CLI dans Visual Studio 2017
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Pour créer un projet C++/CLI dans Visual Studio 2017
 
 1. Créez un projet. Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Projet**.
 
@@ -58,7 +58,7 @@ Les étapes suivantes varient légèrement selon la version de Visual Studio que
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Créer un projet CMD/CLI dans Visual Studio 2015
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Pour créer un projet C++/CLI dans Visual Studio 2015
 
 1. Créez un projet. Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Projet**.
 
@@ -76,21 +76,21 @@ Les étapes suivantes varient légèrement selon la version de Visual Studio que
 
 1. Ajoutez un nouveau fichier source au projet :
 
-   - Cliquez à droite sur le dossier **Source Files** dans **Solution Explorer**, pointez pour **ajouter**, et cliquez sur **Nouvel article**.
+   - Cliquez avec le bouton droit sur le dossier **fichiers sources** dans **Explorateur de solutions**, pointez sur **Ajouter**, puis cliquez sur **nouvel élément**.
 
    - Cliquez sur **Fichier C++ (.cpp)**, tapez un nom de fichier, puis cliquez **Ajouter**.
 
-   Le fichier **.cpp** apparaît dans le dossier **Source Files** dans **Solution Explorer** et une fenêtre tabbed apparaît là où vous tapez le code que vous voulez dans ce fichier.
+   Le fichier **. cpp** apparaît dans le dossier **fichiers sources** de **Explorateur de solutions** et une fenêtre à onglets s’affiche dans laquelle vous tapez le code souhaité dans ce fichier.
 
 1. Cliquez dans l’onglet nouvellement créé dans Visual Studio et tapez un programme Visual C++ valide, ou copiez et collez l’un des exemples de programmes.
 
    Vous pouvez par exemple utiliser l’exemple de programme [Guide pratique pour écrire un fichier texte (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) (dans le nœud **Gestion de fichiers et E/S** du guide de programmation).
 
-   Si vous avez recours à l’exemple de programme, notez que vous devez utiliser le mot clé `gcnew` à la place de `new` pour créer un objet .NET, et que `gcnew` retourne un handle (`^`) au lieu d’un pointeur (`*`) :
+   Si vous utilisez l’exemple de programme, vous remarquerez que vous utilisez le **`gcnew`** mot clé au lieu de lors de la **`new`** création d’un objet .net et que celui- **`gcnew`** ci retourne un handle ( `^` ) au lieu d’un pointeur ( `*` ) :
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Pour plus d’informations sur la syntaxe C/CLI, voir [Extensions de composants pour les plates-formes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
+   Pour plus d’informations sur la syntaxe C++/CLI, consultez [extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. Dans le menu **Générer**, cliquez sur **Générer la solution**.
 
@@ -109,5 +109,5 @@ Les étapes suivantes varient légèrement selon la version de Visual Studio que
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence linguistique de CMD](../cpp/cpp-language-reference.md)<br/>
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
 [Projets et systèmes de build](../build/projects-and-build-systems-cpp.md)<br/>

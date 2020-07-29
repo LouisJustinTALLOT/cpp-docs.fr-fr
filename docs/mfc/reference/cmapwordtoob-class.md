@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapWordToOb [MFC], RemoveKey
 - CMapWordToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 80d53f195ba98f853c86a4d9c38fa9fcda52da3b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f360760bb5c04400ed77ef49c5968f8e9e7a6e59
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222990"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb, classe
 
@@ -53,7 +53,7 @@ class CMapWordToOb : public CObject
 
 ## <a name="members"></a>Membres
 
-Les fonctions membres de `CMapWordToOb` sont similaires aux fonctions membres de la classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un `CString` ou un pointeur **const** vers un **caractère** comme paramètre de fonction ou valeur de retour, remplacez Word.
+Les fonctions membres de `CMapWordToOb` sont similaires aux fonctions membres de la classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CString` **`const`** pointeur ou vers **`char`** comme paramètre de fonction ou valeur de retour, remplacez Word.
 
 `BOOL CMapWordToOb::Lookup( WORD <key>, CObject*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ par exemple, se traduit par
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMapWordToOb::CMapWordToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Constructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMapWordToOb :: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Retourne le nombre d’éléments de ce plan.|
 |[CMapWordToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Détermine le nombre actuel d’éléments dans la table de hachage.|
@@ -87,19 +87,19 @@ par exemple, se traduit par
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CMapWordToOb :: Operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe Map : la substitution d’opérateur pour `SetAt`.|
+|[CMapWordToOb ::, opérateur \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe Map : substitution d’opérateur pour `SetAt` .|
 
 ## <a name="remarks"></a>Notes
 
-`CMapWordToOb` incorpore la macro IMPLEMENT_SERIAL pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour si un mappage est stocké dans une archive, soit avec l’opérateur d’insertion surchargé ( **<<** ), soit avec la fonction membre `Serialize`.
+`CMapWordToOb`incorpore la macro IMPLEMENT_SERIAL pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour si un mappage est stocké dans une archive, soit avec l’opérateur d’insertion () surchargé, soit **<<** avec la `Serialize` fonction membre.
 
-Si vous avez besoin d’un vidage des éléments individuels d’un `CObject` de texte, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
+Si vous avez besoin d’un vidage d’éléments de mots individuels `CObject` , vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
 
-Quand un objet `CMapWordToOb` est supprimé ou que ses éléments sont supprimés, les pointeurs de `CObject` sont supprimés. Les objets référencés par les pointeurs `CObject` ne sont pas détruits.
+Lorsqu’un `CMapWordToOb` objet est supprimé ou que ses éléments sont supprimés, les `CObject` pointeurs sont supprimés. Les objets référencés par les `CObject` pointeurs ne sont pas détruits.
 
-Pour plus d’informations sur les `CMapWordToOb`, consultez l’article [Collections](../../mfc/collections.md).
+Pour plus d’informations sur `CMapWordToOb` , consultez l’article [Collections](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -113,5 +113,5 @@ Pour plus d’informations sur les `CMapWordToOb`, consultez l’article [Collec
 
 ## <a name="see-also"></a>Voir aussi
 
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

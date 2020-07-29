@@ -1,49 +1,49 @@
 ---
-title: 'Opérateur AND logique : &amp;&amp;'
-ms.date: 11/04/2016
+title: Opérateur AND logique :&amp;&amp;
+description: Syntaxe et utilisation de l’opérateur et logique du langage C++ standard.
+ms.date: 07/23/2020
 f1_keywords:
 - '&&'
+- and_cpp
 helpviewer_keywords:
 - logical AND operator
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-ms.openlocfilehash: b21d91009c455b67af6fae88fceafeeaf8043301
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 431e76a2943c2373d6191f1fbe9f14c54cfaa6c1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179430"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223692"
 ---
-# <a name="logical-and-operator-ampamp"></a>Opérateur AND logique : &amp;&amp;
+# <a name="logical-and-operator-ampamp"></a>Opérateur AND logique :&amp;&amp;
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-expression && expression
-```
+> *expression* **`&&`** *expression*
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur AND logique ( **&&** ) retourne la valeur booléenne true si les deux opérandes ont la valeur true et retourne false dans le cas contraire. Les opérandes sont implicitement convertis en type **bool** avant l’évaluation, et le résultat est de type **bool**. L'opérateur logique présente une associativité de gauche à droite.
+L’opérateur AND logique ( **&&** ) retourne **`true`** si les deux opérandes sont **`true`** et retournent la valeur dans le **`false`** cas contraire. Les opérandes sont implicitement convertis en type **`bool`** avant l’évaluation, et le résultat est de type **`bool`** . L'opérateur logique présente une associativité de gauche à droite.
 
-Les opérandes de l’opérateur logique AND n’ont pas besoin d’être du même type, mais ils doivent être de type intégral ou de type pointeur. Les opérandes sont souvent des expressions relationnelles ou d’égalité.
+Les opérandes de l’opérateur logique AND n’ont pas besoin d’avoir le même type, mais ils doivent avoir un type booléen, intégral ou pointeur. Les opérandes sont souvent des expressions relationnelles ou d’égalité.
 
-Le premier opérande est complètement évalué et tous les effets secondaires sont terminés avant de continuer l'évaluation de l'expression AND logique.
+Le premier opérande est complètement évalué et tous les effets secondaires sont terminés avant que l’évaluation de l’expression AND logique continue.
 
-Le deuxième opérande est évalué uniquement si le premier opérande a la valeur true (une valeur différente de zéro). Cette évaluation élimine l’évaluation inutile du deuxième opérande lorsque l’expression AND logique est false. Vous pouvez utiliser cette évaluation de court-circuit pour empêcher le déréférencement du pointeur NULL, comme indiqué dans l'exemple suivant :
+Le deuxième opérande est évalué uniquement si le premier opérande a la valeur **`true`** (différente de zéro). Cette évaluation élimine l’évaluation inutile du second opérande lorsque l’expression AND logique est **`false`** . Vous pouvez utiliser cette évaluation de court-circuit pour empêcher le déréférencement du pointeur NULL, comme indiqué dans l'exemple suivant :
 
 ```cpp
 char *pch = 0;
-...
+// ...
 (pch) && (*pch = 'a');
 ```
 
-Si `pch` est null (0), le côté droit de l'expression n'est jamais évalué. Par conséquent, l'assignation via un pointeur null est impossible.
+Si `pch` est null (0), le côté droit de l'expression n'est jamais évalué. Cette évaluation de court-circuit rend l’assignation par le biais d’un pointeur null impossible.
 
-## <a name="operator-keyword-for-"></a>Mot clé Operator pour & &
+## <a name="operator-keyword-for-"></a>Mot clé Operator pour &&
 
-L’opérateur **and** est l’équivalent textuel de **&&** . Il existe deux façons d’accéder à l’opérateur **and** dans vos programmes : incluez le fichier d’en-tête `iso646.h`ou compilez avec l’option de compilateur [/za](../build/reference/za-ze-disable-language-extensions.md) (désactivation des extensions de langage).
+C++ spécifie **`and`** comme autre orthographe pour **`&&`** . En C, l’orthographe alternative est fournie sous la forme d’une macro dans l' \<iso646.h> en-tête. En C++, l’orthographe alternative est un mot clé. l’utilisation de \<iso646.h> ou de l’équivalent C++ \<ciso646> est déconseillée. Dans Microsoft C++, l' [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) option du compilateur ou est requise pour activer l’orthographe alternative.
 
 ## <a name="example"></a>Exemple
 
@@ -69,6 +69,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[C++Priorité et associativité des opérateurs intégrés](cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Opérateurs, priorité et associativité C++ intégrés](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Opérateurs logiques C](../c-language/c-logical-operators.md)

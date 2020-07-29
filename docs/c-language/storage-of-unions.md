@@ -6,12 +6,12 @@ helpviewer_keywords:
 - union keyword [C], storage
 - union keyword [C]
 ms.assetid: b33d246a-8d20-41c4-89b2-ab05f1428792
-ms.openlocfilehash: 49b99dc17fd7bdddd8a47e3bfd5913a70a7631a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64e8b5184eeccd4de6d196e40ec464807bec93e7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157921"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211656"
 ---
 # <a name="storage-of-unions"></a>Stockage des unions
 
@@ -25,8 +25,8 @@ union         /* Defines a union named x */
 } x;
 ```
 
-Les membres de l'union `x` sont, dans l'ordre de leur déclaration, un pointeur vers une valeur `char`, une valeur `char` et un tableau de valeurs **float**. Le stockage alloué pour `x` est le stockage requis pour le tableau `f`de 20 éléments, car `f` est le membre le plus long de l'union. Étant donné qu’aucune étiquette n’est associée à l’union, son type est sans nom ou « anonyme ».
+Les membres de l' `x` Union sont, dans l’ordre de leur déclaration, un pointeur vers une **`char`** valeur, une **`char`** valeur et un tableau de **`float`** valeurs. Le stockage alloué pour `x` est le stockage requis pour le tableau `f`de 20 éléments, car `f` est le membre le plus long de l'union. Étant donné qu’aucune étiquette n’est associée à l’union, son type est sans nom ou « anonyme ».
 
 ## <a name="see-also"></a>Voir aussi
 
-[Déclarations d'union](../c-language/union-declarations.md)
+[Déclarations d’Union](../c-language/union-declarations.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 5c0ab3579fcb9633c435305a8b02b0c3f73d7a6f
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 874c4b974348d1bef8c8c3837f46c1c27d6d304b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825702"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215190"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimisations)
 
@@ -30,9 +30,9 @@ Contrôle les optimisations effectuées par LINK pendant une génération.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/OPT :**{**ref** | **NOREF**} \
-> **/OPT :**{**ICF**[**=**_iterations_] | **NOICF**} \
-> **/OPT :**{**LBR** | **NOLBR**}
+> **/OPT :**{**ref**  |  **NOREF**} \
+> **/OPT :**{**ICF**[ **=** _iterations_] | **NOICF**} \
+> **/OPT :**{**LBR**  |  **NOLBR**}
 
 ## <a name="arguments"></a>Arguments
 
@@ -42,22 +42,22 @@ Contrôle les optimisations effectuées par LINK pendant une génération.
 
 Lorsque/OPT : REF est activé, LINK supprime les fonctions et données empaquetées non référencées, appelées *COMDAT*. Cette optimisation porte le nom d'élimination COMDAT transitive. L’option **/OPT : Ref** désactive également la liaison incrémentielle.
 
-Les fonctions inline et les fonctions membres définies dans une déclaration de classe sont toujours des COMDAT. Toutes les fonctions d’un fichier objet sont transformées en COMDAT si elles sont compilées à l’aide de l’option [/Gy](gy-enable-function-level-linking.md) . Pour placer des données **const** dans des COMDAT, vous devez les déclarer `__declspec(selectany)`à l’aide de. Pour plus d’informations sur la façon de spécifier des données pour la suppression ou le repli, consultez [selectany](../../cpp/selectany.md).
+Les fonctions inline et les fonctions membres définies dans une déclaration de classe sont toujours des COMDAT. Toutes les fonctions d’un fichier objet sont transformées en COMDAT si elles sont compilées à l’aide de l’option [/Gy](gy-enable-function-level-linking.md) . Pour placer **`const`** des données dans des COMDAT, vous devez les déclarer à l’aide de `__declspec(selectany)` . Pour plus d’informations sur la façon de spécifier des données pour la suppression ou le repli, consultez [selectany](../../cpp/selectany.md).
 
 Par défaut, **/OPT : Ref** est activé par l’éditeur de liens, sauf si **/OPT : NOREF** ou [/Debug](debug-generate-debug-info.md) est spécifié. Pour remplacer cette valeur par défaut et conserver les COMDAT non référencés dans le programme, spécifiez **/OPT : NOREF**. Vous pouvez utiliser l’option [/include](include-force-symbol-references.md) pour substituer la suppression d’un symbole spécifique.
 
 Si [/Debug](debug-generate-debug-info.md) est spécifié, la valeur par défaut de **/OPT** est **NOREF**, et toutes les fonctions sont conservées dans l’image. Pour remplacer cette valeur par défaut et optimiser une version Debug, spécifiez **/OPT : Ref**. Cela peut réduire la taille de votre fichier exécutable et peut être une optimisation utile même dans les versions Debug. Nous vous recommandons également de spécifier **/OPT : NOICF** pour conserver des fonctions identiques dans les versions Debug. Cela facilite la lecture des traces de la pile et la définition des points d’arrêt dans les fonctions qui seraient pliées ensemble dans le cas contraire.
 
-**ICF**\[**=**_Itérations_ICF] &#124; **NOICF**
+**Pare-feu** \[ **=** _itérations_] &#124; **NOICF**
 
-Utilisez des_itérations_ **ICF**\[**=**] pour effectuer un repli COMDAT identique. Les COMDAT redondants peuvent être supprimés de la sortie de l'éditeur de liens. Le paramètre facultatif *iterations* spécifie le nombre de fois où les symboles doivent être parcourus pour les doublons. Le nombre d’itérations par défaut est 1. Des itérations supplémentaires peuvent permettre de localiser davantage de doublons n’ayant pas été détectés par pliage au cours de l’itération précédente.
+Utilisez **ICF**des \[ **=** _itérations_ICF] pour effectuer un repli COMDAT identique. Les COMDAT redondants peuvent être supprimés de la sortie de l'éditeur de liens. Le paramètre facultatif *iterations* spécifie le nombre de fois où les symboles doivent être parcourus pour les doublons. Le nombre d’itérations par défaut est 1. Des itérations supplémentaires peuvent permettre de localiser davantage de doublons n’ayant pas été détectés par pliage au cours de l’itération précédente.
 
 Par défaut, **/OPT : ICF** est activé par l’éditeur de liens, sauf si **/OPT : NOICF** ou [/Debug](debug-generate-debug-info.md) est spécifié. Pour remplacer cette valeur par défaut et empêcher les COMDAT d’être pliées dans le programme, spécifiez **/OPT : NOICF**.
 
 Dans une version Debug, vous devez spécifier explicitement **/OPT : ICF** pour activer le repli COMDAT. Toutefois, étant donné que **/OPT : ICF** peut fusionner des données ou des fonctions identiques, il peut modifier les noms des fonctions qui apparaissent dans les traces de la pile. Il peut également rendre impossible de définir des points d’arrêt dans certaines fonctions ou d’examiner certaines données du débogueur, et vous permet d’atteindre des fonctions inattendues lorsque vous effectuez un pas à pas détaillé dans votre code. Le comportement du code est identique, mais la présentation du débogueur peut être très déroutante. Par conséquent, nous vous déconseillons d’utiliser **/OPT : ICF** dans les versions Debug, à moins que les avantages d’un code plus réduit compensent ces inconvénients.
 
 > [!NOTE]
-> Comme **/OPT : ICF** peut entraîner l’assignation de la même adresse à des fonctions différentes ou des membres de données en lecture seule (autrement dit, des variables **const** quand elles sont compilées à l’aide de **/Gy**), elle peut arrêter un programme qui dépend d’adresses uniques pour les fonctions ou les membres de données en lecture seule. Pour plus d’informations, consultez l’article [/Gy (Activer la liaison au niveau des fonctions)](gy-enable-function-level-linking.md).
+> Comme **/OPT : ICF** peut entraîner l’assignation de la même adresse à des fonctions différentes ou des membres de données en lecture seule (autrement dit, des **`const`** variables lorsqu’elles sont compilées à l’aide de **/Gy**), elle peut arrêter un programme qui dépend d’adresses uniques pour les fonctions ou les membres de données en lecture seule. Pour plus d’informations, consultez l’article [/Gy (Activer la liaison au niveau des fonctions)](gy-enable-function-level-linking.md).
 
 **LBR** &#124; **NOLBR**
 
@@ -65,7 +65,7 @@ Les options **/OPT : LBR** et **/OPT : NOLBR** s’appliquent uniquement aux b
 
 Par défaut, l’option **/OPT : LBR** est définie lorsque l’édition de liens incrémentielle n’est pas activée. Si vous souhaitez un lien non incrémentiel, mais pas des optimisations de branches longues, spécifiez **/OPT : NOLBR**. L’option **/OPT : LBR** désactive les liens incrémentiels.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 En cas d’utilisation sur la ligne de commande, l’éditeur de liens utilise par défaut **/OPT : REF, ICF, LBR**. Si **/Debug** est spécifié, la valeur par défaut est **/OPT : NOREF, NOICF, NOLBR**.
 
@@ -83,7 +83,7 @@ Les arguments **/OPT** sont souvent définis pour les projets créés à l’aid
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés**optimisation** de l'**éditeur de liens** >  **Propriétés** > de configuration.
+1. Sélectionnez la page de propriétés optimisation de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Optimization** .
 
 1. Modifiez l'une des propriétés suivantes :
 
@@ -95,7 +95,7 @@ Les arguments **/OPT** sont souvent définis pour les projets créés à l’aid
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés**ligne de commande** de l'**éditeur de liens** >  **Propriétés** > de configuration.
+1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Command Line** .
 
 1. Entrez l’option dans **options supplémentaires**:
 

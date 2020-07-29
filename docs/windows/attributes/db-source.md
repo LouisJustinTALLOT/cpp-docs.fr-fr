@@ -1,17 +1,17 @@
 ---
-title: db_source (C++ attribut com)
+title: db_source (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_source
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: 6346a8d6f60313dc17bbcbad062aa888857f0b67
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d328cd7bcfed257b423a440041b6806149736ed0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167275"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215294"
 ---
 # <a name="db_source"></a>db_source
 
@@ -38,19 +38,19 @@ Facultatif Identifie la variable qui recevra le HRESULT de cette commande de bas
 
 **db_source** crée un [CDataSource](../../data/oledb/cdatasource-class.md) et un objet [CSession](../../data/oledb/csession-class.md) , qui représentent ensemble une connexion avec une source de données de consommateur OLE DB.
 
-Quand vous utilisez **db_source** sur une classe, l’objet `CSession` devient membre de la classe.
+Quand vous utilisez **db_source** sur une classe, l' `CSession` objet devient un membre de la classe.
 
-Quand vous utilisez **db_source** dans une méthode, le code injecté est exécuté dans la portée de la méthode, et l’objet `CSession` est créé en tant que variable locale.
+Quand vous utilisez **db_source** dans une méthode, le code injecté est exécuté dans la portée de la méthode, et l' `CSession` objet est créé en tant que variable locale.
 
 **db_source** ajoute des propriétés de source de données à une classe ou dans une méthode. Elle est utilisée conjointement avec `db_command` (qui prend le paramètre de *nom* *db_source* comme paramètre *source_name* ).
 
-Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de \_accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
+Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_ accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de l' \_ accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
 
 Pour obtenir un exemple de cet attribut utilisé dans une application, consultez [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## <a name="example"></a>Exemple
 
-Cet exemple appelle **db_source** sur une classe pour créer une connexion à la source de données `ds` à l’aide de la base de données Northwind. `ds` est un handle pour la source de données, qui peut être utilisé en interne à la classe `CMyCommand`.
+Cet exemple appelle **db_source** sur une classe pour créer une connexion à la source de données à l' `ds` aide de la base de données Northwind. `ds`est un handle pour la source de données, qui peut être utilisé en interne avec la `CMyCommand` classe.
 
 ```cpp
 // db_source_1.cpp
@@ -72,8 +72,8 @@ class CMyCommand {};
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**, membre, méthode, local|
-|**Renouvelable**|Non|
+|**S’applique à**|**`class`**, **`struct`** , membre, méthode, local|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -81,4 +81,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)
+[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)

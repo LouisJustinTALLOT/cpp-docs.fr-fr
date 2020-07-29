@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169745"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223913"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Conventions d'appel, paramètres et type de retour
 
@@ -27,9 +27,9 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>Paramètres
 
 *pidd*<br/>
-Un `const` pointeur vers une `ImgDelayDescr` qui contient les décalages de diverses données liées aux importations, un horodatage pour les informations de liaison et un ensemble d’attributs qui fournissent des informations supplémentaires sur le contenu du descripteur. Actuellement, il n’existe qu’un seul attribut, `dlattrRva`, qui indique que les adresses du descripteur sont des adresses virtuelles relatives. Pour plus d’informations, consultez les déclarations dans *delayimp. h*.
+**`const`** Pointeur vers un `ImgDelayDescr` qui contient les décalages de diverses données liées à l’importation, un horodatage pour les informations de liaison et un ensemble d’attributs qui fournissent des informations supplémentaires sur le contenu du descripteur. Actuellement, il n’existe qu’un seul attribut, `dlattrRva` , qui indique que les adresses du descripteur sont des adresses virtuelles relatives. Pour plus d’informations, consultez les déclarations dans *delayimp. h*.
 
-Pour obtenir la définition de la structure `PCImgDelayDescr`, consultez [définitions de structure et de constante](structure-and-constant-definitions.md).
+Pour obtenir la définition de la `PCImgDelayDescr` structure, consultez [définitions de structure et de constante](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
 Pointeur vers l’emplacement dans la table d’adresses d’importation (IAT) de chargement différé qui est mis à jour avec l’adresse de la fonction importée. La routine d’assistance doit stocker la même valeur qu’elle retourne à cet emplacement.
@@ -50,7 +50,7 @@ Il vous incombe de gérer ces exceptions.
 
 ## <a name="remarks"></a>Notes
 
-La convention d’appel pour la fonction d’assistance est `__stdcall`. Le type de la valeur de retour n’est pas pertinent, donc FARPROC est utilisé. Cette fonction dispose d'une liaison C.
+La Convention d’appel de la fonction d’assistance est **`__stdcall`** . Le type de la valeur de retour n’est pas pertinent, donc FARPROC est utilisé. Cette fonction dispose d'une liaison C.
 
 La valeur de retour de l'assistant de chargement différé doit être stockée dans l'emplacement du pointeur de fonction fourni, à moins que vous vouliez que votre routine d'assistance soit utilisée en tant que hook de notification. Dans ce cas, votre code a la responsabilité de trouver le pointeur de fonction approprié à retourner. Le code thunk que l'éditeur de liens génère prend ensuite cette valeur de retour comme cible réelle de l'importation et y accède directement.
 
@@ -137,4 +137,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation de la fonction d’assistance](understanding-the-helper-function.md)
+[Fonctionnement de la fonction d’assistance](understanding-the-helper-function.md)

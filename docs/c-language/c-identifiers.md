@@ -9,12 +9,12 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d68eb690a19f57555d9d757a2f058692ea1a40c3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325661"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223744"
 ---
 # <a name="c-identifiers"></a>Identificateurs C
 
@@ -34,7 +34,7 @@ int main()
 
 Une fois l'identificateur déclaré, vous pouvez l'utiliser dans les instructions de programme ultérieures pour faire référence à la valeur associée.
 
-Vous pouvez utiliser un type spécial d'identificateur, appelé étiquette d'instruction, dans les instructions `goto`. (Les déclarations sont décrites dans [Déclarations et types](../c-language/declarations-and-types.md). Les étiquettes d'instructions sont décrites dans [Les instructions goto et étiquetées](../c-language/goto-and-labeled-statements-c.md).)
+Un type spécial d’identificateur, appelé étiquette d’instruction, peut être utilisé dans les **`goto`** instructions. (Les déclarations sont décrites dans [Déclarations et types](../c-language/declarations-and-types.md). Les étiquettes d'instructions sont décrites dans [Les instructions goto et étiquetées](../c-language/goto-and-labeled-statements-c.md).)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,7 +50,7 @@ Vous pouvez utiliser un type spécial d'identificateur, appelé étiquette d'ins
 *digit* : un des caractères suivants<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-Le premier caractère d'un nom d'identificateur doit être `nondigit` (autrement dit, ce doit être un trait de soulignement ou une lettre majuscule ou minuscule). ANSI autorise six caractères significatifs dans un nom d'identificateur externe et 31 pour les noms des identificateurs internes (dans une fonction). Les identificateurs externes (ceux déclarés au niveau de la portée globale ou déclarés avec la classe de stockage `extern`) peuvent être soumis à des restrictions d'affectation de noms supplémentaires car ces identificateurs doivent être traités par d'autres logiciels tels que les éditeurs de liens.
+Le premier caractère d'un nom d'identificateur doit être `nondigit` (autrement dit, ce doit être un trait de soulignement ou une lettre majuscule ou minuscule). ANSI autorise six caractères significatifs dans un nom d'identificateur externe et 31 pour les noms des identificateurs internes (dans une fonction). Les identificateurs externes (ceux déclarés au niveau de la portée globale ou déclarés avec la classe de stockage **`extern`** ) peuvent être soumis à des restrictions d’affectation de noms supplémentaires, car ces identificateurs doivent être traités par d’autres logiciels tels que les liens.
 
 **Spécifique à Microsoft**
 

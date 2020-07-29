@@ -10,12 +10,12 @@ helpviewer_keywords:
 - library headers
 - C++ Standard Library, headers
 ms.assetid: a36e889e-1af2-4cd9-a211-bfc7a3fd8e85
-ms.openlocfilehash: 9cc0bb51b159f6668adad05ebd2d386364ae2f81
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a73ebebb4fdde5dd72f148390d004c32b9f4dff7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450072"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215476"
 ---
 # <a name="using-c-library-headers"></a>Utilisation des en-têtes de bibliothèque C++
 
@@ -27,21 +27,21 @@ Vous incluez le contenu d’un en-tête standard en le nommant dans une directiv
 
 Vous pouvez inclure les en-têtes standard dans n’importe quel ordre, un en-tête standard plusieurs fois ou plusieurs en-têtes standard qui définissent une même macro ou un même type. N’incluez pas un en-tête standard au sein d’une déclaration. Ne définissez pas de macros dotées des mêmes noms que les mots clés avant d’inclure un en-tête standard.
 
-Un en-tête de bibliothèque C++ inclut tous les autres en-têtes de bibliothèque C++ dont il a besoin pour définir les types nécessaires. (Incluez toutefois toujours explicitement tous les en-têtes de bibliothèque C++ nécessaires dans une unité de traduction, de peur de vous tromper sur ses dépendances réelles.) Un en-tête C standard n’inclut jamais un autre en-tête standard. Un en-tête standard déclare ou définit uniquement les entités décrites pour lui dans ce document.
+Un en-tête de bibliothèque C++ inclut tous les autres en-têtes de bibliothèque C++ dont il a besoin pour définir les types nécessaires. (Incluez toujours explicitement tous les en-têtes de bibliothèque C++ nécessaires dans une unité de traduction, mais sachez que vous ne savez pas quelles sont les dépendances réelles.) Un en-tête C standard n’intègre jamais un autre en-tête standard. Un en-tête standard déclare ou définit uniquement les entités décrites pour lui dans ce document.
 
 Chaque fonction de la bibliothèque est déclarée dans un en-tête standard. Contrairement au langage C standard, l’en-tête standard ne fournit jamais de macro de masquage du même nom que la fonction qui masque la déclaration de fonction et permet d’obtenir le même effet. Pour plus d’informations sur les macros de masquage, consultez [Conventions de la bibliothèque C++](../standard-library/cpp-library-conventions.md).
 
-Tous les noms autres que l' **opérateur delete** et **operator new** dans les C++ en-têtes de bibliothèque `std` sont définis dans l’espace de noms, ou dans `std` un espace de noms imbriqué dans l’espace de noms. Vous faites référence au nom `cin`, par exemple, en tant que `std::cin`. Notez, cependant, que les noms des macros ne sont pas soumis à la qualification d’espace de noms. Par conséquent, vous écrivez toujours `__STD_COMPLEX` sans qualificateur d’espace de noms.
+Tous les noms autres que **opérateur delete** et **operator new** dans les en-têtes de la bibliothèque C++ sont définis dans l’espace de noms `std` , ou dans un espace de noms imbriqué dans l' `std` espace de noms. Vous faites référence au nom `cin`, par exemple, en tant que `std::cin`. Notez, cependant, que les noms des macros ne sont pas soumis à la qualification d’espace de noms. Par conséquent, vous écrivez toujours `__STD_COMPLEX` sans qualificateur d’espace de noms.
 
-Dans certains environnements de traduction, y C++ compris un en-tête de bibliothèque peut également `std` détourer les noms externes déclarés dans l’espace de noms dans l’espace de noms global, avec des déclarations **using** individuelles pour chacun des noms. Sinon, l’en-tête n’introduit *aucun* nom de bibliothèque dans l’espace de noms actuel.
+Dans certains environnements de traduction, y compris un en-tête de bibliothèque C++ peut également détourer les noms externes déclarés dans l’espace de noms `std` dans l’espace de noms global, avec des **`using`** déclarations individuelles pour chacun des noms. Sinon, l’en-tête n’introduit *aucun* nom de bibliothèque dans l’espace de noms actuel.
 
-La C++ norme exige que les en-têtes standard C déclarent tous les noms `std`externes dans l’espace de noms, puis les relevages dans l’espace de noms global avec des déclarations **using** individuelles pour chacun des noms. Mais, dans certains environnements de traduction, les en-têtes du standard C n’incluent aucune déclaration d’espace de noms, déclarant tous les noms directement dans l’espace de noms global. Par conséquent, la façon la plus portable de traiter les espaces de noms consiste à suivre deux règles :
+La norme C++ exige que les en-têtes standard C déclarent tous les noms externes dans l’espace de noms `std` , puis les relevages dans l’espace de noms global avec des **`using`** déclarations individuelles pour chacun des noms. Mais, dans certains environnements de traduction, les en-têtes du standard C n’incluent aucune déclaration d’espace de noms, déclarant tous les noms directement dans l’espace de noms global. Par conséquent, la façon la plus portable de traiter les espaces de noms consiste à suivre deux règles :
 
-- Pour déclarer sans faute dans l’espace de noms `std` un nom externe traditionnellement déclaré dans \<stdlib.h> par exemple, incluez l’en-tête \<cstdlib>. Sachez que le nom peut également être déclaré dans l’espace de noms global.
+- Pour déclarer de manière fiable dans l’espace de noms `std` un nom externe qui est traditionnellement déclaré dans \<stdlib.h> , par exemple, incluez l’en-tête \<cstdlib> . Sachez que le nom peut également être déclaré dans l’espace de noms global.
 
-- Pour déclarer sans faute dans l’espace de noms global un nom externe déclaré dans \<stdlib.h>, incluez l’en-tête \<stdlib.h> directement. Sachez que le nom peut également être déclaré dans l’espace de noms `std`.
+- Pour déclarer de manière fiable dans l’espace de noms global, un nom externe déclaré dans \<stdlib.h> , incluez directement l’en-tête \<stdlib.h> . Sachez que le nom peut également être déclaré dans l’espace de noms `std`.
 
-Par conséquent, si vous souhaitez appeler `std::abort` pour déclencher un arrêt anormal, vous devez inclure \<cstdlib>. Si vous souhaitez appeler `abort`, vous devez inclure \<stdlib.h>.
+Par conséquent, si vous souhaitez appeler `std::abort` pour provoquer un arrêt anormal, vous devez inclure \<cstdlib> . Si vous souhaitez appeler `abort` , vous devez inclure \<stdlib.h> .
 
 Vous pouvez également écrire la déclaration :
 
@@ -56,4 +56,4 @@ Sauf indication contraire spécifique, vous ne pouvez pas définir les noms dans
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

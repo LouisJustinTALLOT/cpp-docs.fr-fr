@@ -6,18 +6,18 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: ebdfea18e6e8445dd734bf43fb6a4ecf422975e9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cdcdd63e84d4b375c44c2b89bf2d4f3285b0323c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622745"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223185"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceptions : levée d'exceptions à partir de vos propres fonctions
 
 Il est possible d’utiliser le paradigme de gestion des exceptions MFC uniquement pour intercepter les exceptions levées par les fonctions dans MFC ou d’autres bibliothèques. En plus d’intercepter les exceptions levées par le code de bibliothèque, vous pouvez lever des exceptions à partir de votre propre code si vous écrivez des fonctions qui peuvent rencontrer des conditions exceptionnelles.
 
-Lorsqu’une exception est levée, l’exécution de la fonction active est arrêtée et passe directement au bloc **catch** du frame d’exception le plus profond. Le mécanisme d’exception contourne le chemin de sortie normal d’une fonction. Par conséquent, vous devez être sûr de supprimer les blocs de mémoire qui seraient supprimés dans une sortie normale.
+Lorsqu’une exception est levée, l’exécution de la fonction active est arrêtée et passe directement au **`catch`** bloc du frame d’exception le plus profond. Le mécanisme d’exception contourne le chemin de sortie normal d’une fonction. Par conséquent, vous devez être sûr de supprimer les blocs de mémoire qui seraient supprimés dans une sortie normale.
 
 #### <a name="to-throw-an-exception"></a>Pour lever une exception
 

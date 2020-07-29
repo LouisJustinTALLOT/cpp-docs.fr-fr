@@ -1,17 +1,17 @@
 ---
-title: length_is (C++ attribut com)
+title: length_is (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 2f252206f6e364b1a87ee3b7b88b14d0ea19bacb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7e6ab9ec0f6f55ab0be9624b7343b087b41f2a54
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214784"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215242"
 ---
 # <a name="length_is"></a>length_is
 
@@ -30,7 +30,7 @@ Une ou plusieurs expressions en langage C. Les emplacements d’arguments vides 
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **length_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [length_is](/windows/win32/Midl/length-is) .
+L’attribut C++ **length_is** a les mêmes fonctionnalités que l’attribut MIDL [length_is](/windows/win32/Midl/length-is) .
 
 ## <a name="example"></a>Exemple
 
@@ -42,8 +42,8 @@ Consultez [first_is](first-is.md) pour obtenir un exemple de spécification d’
 
 |||
 |-|-|
-|**S'applique à**|Champ dans un **struct** ou une **Union**, un paramètre d’interface, une méthode d’interface|
-|**Renouvelable**|Non|
+|**S’applique à**|Champ dans **`struct`** ou **`union`** , paramètre d’interface, méthode d’interface|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -52,8 +52,8 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)<br/>
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributs de paramètre](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>
 [last_is](last-is.md)<br/>

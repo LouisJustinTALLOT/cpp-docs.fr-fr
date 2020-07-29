@@ -28,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: f402b090409c2eb5dc8db457776140a27f8f820e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3740e4bebcc63f0f664d40b2e048f19c2aa24c99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910474"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215086"
 ---
 # <a name="wctob"></a>wctob
 
@@ -56,9 +56,9 @@ Valeur à traduire.
 
 Si **wctob** convertit correctement un caractère élargi, il retourne sa représentation de caractère multioctet, uniquement si la longueur du caractère multioctet est d’un octet exactement. Si **wctob** rencontre un caractère étendu qu’il ne peut pas convertir en caractère multioctet ou si le caractère multioctet n’est pas exactement d’un octet, il retourne-1.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **wctob** convertit un caractère élargi contenu dans *WCHAR* en caractère multioctet correspondant passé par la valeur **int** de retour, si le caractère multioctet est exactement d’un octet.
+La fonction **wctob** convertit un caractère élargi contenu dans *WCHAR* en caractère multioctet correspondant passé par la valeur de retour **`int`** , si la longueur du caractère multioctet est d’un octet exactement.
 
 Si **wctob** a échoué et qu’aucun caractère multioctet correspondant n’a été trouvé, la fonction affecte à **errno** la valeur **EILSEQ** et retourne-1.
 
@@ -72,7 +72,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme illustre le comportement de la fonction **wcstombs** .
 

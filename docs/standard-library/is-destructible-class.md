@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-ms.openlocfilehash: 80592a6fca274533a798b2f5a2459d336ee2c301
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cd3c54684fe08a77d3a8774cd6a2554db9fb0c9c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452730"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215684"
 ---
-# <a name="isdestructible-class"></a>is_destructible, classe
+# <a name="is_destructible-class"></a>is_destructible, classe
 
 Teste si le type est destructible.
 
@@ -31,11 +31,11 @@ Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *T* est un type destructible. sinon, sa valeur est false. Les types destructibles sont des types référence, des types d’objets et des types pour lesquels, pour un type `U` égal à `remove_all_extents_t<T>` , l’opérande non évalué `std::declval<U&>.~U()` est bien formé. Les autres types, notamment les types incomplets, **void**et les types de fonction, ne sont pas des types destructible.
+Une instance du prédicat de type a la valeur true si le type *T* est un type destructible. sinon, sa valeur est false. Les types destructibles sont des types référence, des types d’objets et des types pour lesquels, pour un type `U` égal à `remove_all_extents_t<T>` , l’opérande non évalué `std::declval<U&>.~U()` est bien formé. Les autres types, notamment les types incomplets, **`void`** , et les types de fonction, ne sont pas des types destructible.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

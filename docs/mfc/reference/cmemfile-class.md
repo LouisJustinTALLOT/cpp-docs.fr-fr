@@ -1,6 +1,7 @@
 ---
-title: Classe CMemFile
-ms.date: 11/04/2016
+title: CMemFile, classe
+description: Décrit les fonctions disponibles dans la classe CMemFile qui vous permettent d’utiliser des fichiers de mémoire.
+ms.date: 07/23/2020
 f1_keywords:
 - CMemFile
 - AFX/CMemFile
@@ -9,7 +10,8 @@ f1_keywords:
 - AFX/CMemFile::Detach
 - AFX/CMemFile::Alloc
 - AFX/CMemFile::Free
-- AFX/CMemFile::GrowFile
+- AFX/CmemFile::GetBufferPtr
+- AFX/CMemFile::GrowFile"
 - AFX/CMemFile::Memcpy
 - AFX/CMemFile::Realloc
 helpviewer_keywords:
@@ -18,20 +20,21 @@ helpviewer_keywords:
 - CMemFile [MFC], Detach
 - CMemFile [MFC], Alloc
 - CMemFile [MFC], Free
+- CMemFile [MFC], GetBufferPtr
 - CMemFile [MFC], GrowFile
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-ms.openlocfilehash: 1bd88ad17bdb047de4c344ab96f3d9aecbe23c31
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: edd1d8b8d3979427602bdb61fc7647aec15d58b5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752634"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222938"
 ---
-# <a name="cmemfile-class"></a>Classe CMemFile
+# <a name="cmemfile-class"></a>CMemFile, classe
 
-La classe [dérivée de CFile](../../mfc/reference/cfile-class.md)qui prend en charge les fichiers mémoire.
+Classe dérivée de [CFile](../../mfc/reference/cfile-class.md)qui prend en charge les fichiers de mémoire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,42 +48,47 @@ class CMemFile : public CFile
 
 |Nom|Description|
 |----------|-----------------|
-|[CMemFile::CMemFile](#cmemfile)|Construit un objet de fichier mémoire.|
+|[CMemFile :: CMemFile](#cmemfile)|Construit un objet de fichier de mémoire.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CMemFile::Attach](#attach)|Attache un bloc de `CMemFile`mémoire à .|
-|[CMemFile::Detach](#detach)|Détache le bloc de `CMemFile` mémoire et renvoie un pointeur au bloc de mémoire détaché.|
+|[CMemFile :: Attach](#attach)|Attache un bloc de mémoire à `CMemFile` .|
+|[CMemFile ::D Etach](#detach)|Détache le bloc de mémoire de `CMemFile` et retourne un pointeur vers le bloc de mémoire détaché.|
+|[CMemFile :: GetBufferPtr](#getbufferptr)|Obtient ou écrit dans la mémoire tampon qui stocke un fichier mémoire.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CMemFile::Alloc](#alloc)|Remplacement pour modifier le comportement d’allocation de mémoire.|
-|[CMemFile::Gratuit](#free)|Remplacer pour modifier le comportement de deallocation de la mémoire.|
-|[CMemFile::GrowFile](#growfile)|Remplacer pour modifier le comportement lors de la culture d’un fichier.|
-|[CMemFile::Memcpy](#memcpy)|Remplacer pour modifier le comportement de copie de mémoire lors de la lecture et l’écriture de fichiers.|
-|[CMemFile::Réalloc](#realloc)|Remplacement pour modifier le comportement de réaffectation de la mémoire.|
+|[CMemFile :: Alloc](#alloc)|Substituez pour modifier le comportement d’allocation de mémoire.|
+|[CMemFile :: Free](#free)|Substituez pour modifier le comportement de désallocation de mémoire.|
+|[CMemFile :: GrowFile](#growfile)|Substituez pour modifier le comportement lors de la croissance d’un fichier.|
+|[CMemFile :: memcpy](#memcpy)|Substituez pour modifier le comportement de copie de mémoire lors de la lecture et de l’écriture de fichiers.|
+|[CMemFile :: realloc](#realloc)|Substituez pour modifier le comportement de réallocation de mémoire.|
 
 ## <a name="remarks"></a>Notes
 
-Ces fichiers mémoire se comportent comme des fichiers disque, sauf que le fichier est stocké dans la RAM plutôt que sur le disque. Un fichier mémoire est utile pour le stockage temporaire rapide ou pour le transfert d’octets bruts ou d’objets sérialisés entre des processus indépendants.
+Ces fichiers de mémoire se comportent comme des fichiers disque, sauf que le fichier est stocké dans la mémoire RAM plutôt que sur le disque. Un fichier de mémoire est utile pour :
 
-`CMemFile`les objets peuvent automatiquement allouer leur propre mémoire `CMemFile` ou vous pouvez attacher votre propre bloc de mémoire à l’objet en appelant [Attach](#attach). Dans les deux cas, la mémoire pour `nGrowBytes`la culture du fichier `nGrowBytes` mémoire est automatiquement allouée par incréments de taille si elle n’est pas nulle.
+- stockage temporaire rapide
+- transfert d’octets bruts entre des processus indépendants
+- transfert d’objets sérialisés entre des processus indépendants
 
-Le bloc mémoire sera automatiquement supprimé `CMemFile` lors de la destruction de `CMemFile` l’objet si la mémoire a été initialement attribuée par l’objet; sinon, vous êtes responsable de traiter la mémoire que vous avez attachée à l’objet.
+`CMemFile`les objets peuvent automatiquement allouer leur propre mémoire. Ou vous pouvez attacher votre propre bloc de mémoire à l' `CMemFile` objet en appelant [Attach](#attach). Dans les deux cas, la mémoire pour augmenter automatiquement le fichier de mémoire est allouée aux `nGrowBytes` incréments par taille si `nGrowBytes` n’est pas égal à zéro.
 
-Vous pouvez accéder au bloc mémoire à travers le `CMemFile` pointeur fourni lorsque vous le détachez de l’objet en appelant [Detach](#detach).
+Le bloc de mémoire est automatiquement supprimé lors de la destruction de l' `CMemFile` objet si la mémoire a été initialement allouée par l' `CMemFile` objet ; sinon, vous êtes chargé de libérer la mémoire que vous avez attachée à l’objet.
 
-L’utilisation la `CMemFile` plus courante `CMemFile` est de créer un objet et de l’utiliser en appelant les fonctions des membres [CFile.](../../mfc/reference/cfile-class.md) Notez que `CMemFile` la création d’un ouvre automatiquement: vous n’appelez pas [CFile::Open](../../mfc/reference/cfile-class.md#open), qui n’est utilisé que pour les fichiers disque. Parce `CMemFile` que n’utilise pas de `CFile::m_hFile` fichier disque, le membre des données n’est pas utilisé.
+Vous pouvez accéder au bloc de mémoire via le pointeur fourni lorsque vous le détachez de l' `CMemFile` objet en appelant [Detach](#detach).
 
-Les `CFile` fonctions membres [Duplicate](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), `CMemFile`et [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) ne sont pas implémentées pour . Si vous appelez ces `CMemFile` fonctions sur un objet, vous obtiendrez un [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+L’utilisation la plus courante de `CMemFile` consiste à créer un `CMemFile` objet et à l’utiliser en appelant les fonctions membres [CFile](../../mfc/reference/cfile-class.md) . La création d’un `CMemFile` s’ouvre automatiquement : vous n’appelez pas [CFile :: Open](../../mfc/reference/cfile-class.md#open), qui est utilisé uniquement pour les fichiers de disque. Étant donné que `CMemFile` n’utilise pas un fichier de disque, le membre de données `CFile::m_hFile` n’est pas utilisé.
 
-`CMemFile`utilise les fonctions de bibliothèque en temps d’exécution [malloc](../../c-runtime-library/reference/malloc.md), [réaffecter](../../c-runtime-library/reference/realloc.md), et [libre](../../c-runtime-library/reference/free.md) d’allouer, réaffecter, et traiter la mémoire; et le [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) intrinsèque pour bloquer la mémoire de copie lors de la lecture et l’écriture. Si vous souhaitez changer ce comportement ou `CMemFile` le comportement lors de `CMemFile` la croissance d’un fichier, dérivez votre propre classe et remplacez les fonctions appropriées.
+Les `CFile` fonctions membres [duplicate](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange)et [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) ne sont pas implémentées pour `CMemFile` . Si vous appelez ces fonctions sur un `CMemFile` objet, vous obtiendrez un [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-Pour plus `CMemFile`d’informations sur , voir les articles [Fichiers dans MFC](../../mfc/files-in-mfc.md) et [Memory Management (MFC)](../../mfc/memory-management.md) et voir [Traitement des fichiers](../../c-runtime-library/file-handling.md) dans la référence de *bibliothèque Run-Time*.
+`CMemFile`utilise les fonctions de la bibliothèque Runtime [malloc](../../c-runtime-library/reference/malloc.md), [realloc](../../c-runtime-library/reference/realloc.md)et Free pour allouer, réallouer et [libérer](../../c-runtime-library/reference/free.md) de la mémoire ; et le [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) intrinsèque pour bloquer la copie de la mémoire lors de la lecture et de l’écriture. Si vous souhaitez modifier ce comportement ou le comportement lorsque `CMemFile` augmente un fichier, dérivez votre propre classe de `CMemFile` et remplacez les fonctions appropriées.
+
+Pour plus d’informations `CMemFile` sur, consultez les [Articles fichiers dans MFC](../../mfc/files-in-mfc.md) et gestion de la [mémoire (MFC)](../../mfc/memory-management.md) et consultez [gestion des fichiers](../../c-runtime-library/file-handling.md) dans la référence de la *bibliothèque Runtime*.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -92,11 +100,11 @@ Pour plus `CMemFile`d’informations sur , voir les articles [Fichiers dans MFC]
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afx.h
+**En-tête :** AFX. h
 
-## <a name="cmemfilealloc"></a><a name="alloc"></a>CMemFile::Alloc
+## <a name="cmemfilealloc"></a><a name="alloc"></a>CMemFile :: Alloc
 
-Cette fonction est `CMemFile` appelée par les fonctions des membres.
+Cette fonction est appelée par les `CMemFile` fonctions membres.
 
 ```
 virtual BYTE* Alloc(SIZE_T nBytes);
@@ -104,22 +112,22 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 
 ### <a name="parameters"></a>Paramètres
 
-*nBytes (en)*<br/>
-Nombre d’octets de mémoire à attribuer.
+*nBytes*<br/>
+Nombre d’octets de mémoire à allouer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le bloc mémoire qui a été attribué, ou NULL si l’allocation a échoué.
+Pointeur vers le bloc de mémoire qui a été alloué, ou NULL en cas d’échec de l’allocation.
 
 ### <a name="remarks"></a>Notes
 
-Remplacer cette fonction pour implémenter l’allocation de mémoire personnalisée. Si vous remplacez cette fonction, vous aurez probablement envie de remplacer [Free](#free) et [Realloc](#realloc) ainsi.
+Substituez cette fonction pour implémenter l’allocation de mémoire personnalisée. Si vous remplacez cette fonction, vous souhaiterez probablement remplacer [gratuitement](#free) et [réallocation](#realloc) .
 
-L’implémentation par défaut utilise la fonction de bibliothèque en temps d’exécution [pour](../../c-runtime-library/reference/malloc.md) allouer la mémoire.
+L’implémentation par défaut utilise la fonction [malloc](../../c-runtime-library/reference/malloc.md) de la bibliothèque Runtime pour allouer de la mémoire.
 
-## <a name="cmemfileattach"></a><a name="attach"></a>CMemFile::Attach
+## <a name="cmemfileattach"></a><a name="attach"></a>CMemFile :: Attach
 
-Appelez cette fonction pour attacher `CMemFile`un bloc de mémoire à .
+Appelez cette fonction pour attacher un bloc de mémoire à `CMemFile` .
 
 ```cpp
 void Attach(
@@ -131,27 +139,27 @@ void Attach(
 ### <a name="parameters"></a>Paramètres
 
 *lpBuffer*<br/>
-Pointeur vers le tampon `CMemFile`à attacher à .
+Pointeur vers la mémoire tampon à attacher `CMemFile` .
 
 *nBufferSize*<br/>
-Un intégrant qui spécifie la taille du tampon dans les octets.
+Entier qui spécifie la taille de la mémoire tampon en octets.
 
-*nGrowBytes (en)*<br/>
-L’augmentation de l’allocation de mémoire dans les octets.
+*nGrowBytes*<br/>
+Incrément d’allocation de mémoire en octets.
 
 ### <a name="remarks"></a>Notes
 
-Cela `CMemFile` provoque d’utiliser le bloc de mémoire comme fichier mémoire.
+Cela entraîne l' `CMemFile` utilisation du bloc de mémoire comme fichier de mémoire.
 
-Si *nGrowBytes* est `CMemFile` 0, définira la longueur du fichier à *nBufferSize*. Cela signifie que les données dans le `CMemFile` bloc mémoire avant qu’elles ne soient jointes seront utilisées comme fichier. Les fichiers mémoire créés de cette manière ne peuvent pas être cultivés.
+Si *nGrowBytes* a la valeur 0, `CMemFile` définit la longueur du fichier sur *nBufferSize*. Cela signifie que les données dans le bloc de mémoire avant d’être attachées à `CMemFile` seront utilisées comme fichier. Les fichiers de mémoire créés de cette manière ne peuvent pas être augmentés.
 
-Étant donné que le fichier ne `CMemFile` peut pas être cultivé, veillez à ne pas provoquer pour tenter de développer le fichier. Par exemple, n’appelez `CMemFile` pas les remplacements de [CFile: Écrivez](../../mfc/reference/cfile-class.md#write) pour écrire au-delà de la fin ou n’appelez pas [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) avec une longueur plus longue que *nBufferSize*.
+Étant donné que le fichier ne peut pas être augmenté, veillez à ne pas `CMemFile` tenter d’augmenter la taille du fichier. Par exemple, n’appelez pas les `CMemFile` substitutions de [CFile : Write](../../mfc/reference/cfile-class.md#write) pour écrire au-delà de la fin ou n’appelez pas [CFile : SetLength](../../mfc/reference/cfile-class.md#setlength) avec une longueur supérieure à *nBufferSize*.
 
-Si *nGrowBytes* est supérieur `CMemFile` à 0, ignorera le contenu du bloc de mémoire que vous avez attaché. Vous devrez écrire le contenu du fichier mémoire `CMemFile` à partir `CFile::Write`de zéro en utilisant la dérogation de . Si vous essayez d’écrire au-delà de la `CMemFile` fin du `CFile::SetLength` `CMemFile` fichier ou de développer le fichier en appelant la dérogation de , augmentera l’allocation de mémoire par incréments de *nGrowBytes*. La croissance de l’allocation de mémoire `Attach` échouera si le bloc de mémoire que vous passez à n’a pas été alloué avec une méthode compatible avec [Alloc](#alloc). Pour être compatible avec `Alloc`la mise en œuvre par défaut de , vous devez allouer la mémoire avec la fonction de bibliothèque en temps d’exécution [malloc](../../c-runtime-library/reference/malloc.md) ou [calloc](../../c-runtime-library/reference/calloc.md).
+Si *nGrowBytes* est supérieur à 0, `CMemFile` ignore le contenu du bloc de mémoire que vous avez attaché. Vous devrez écrire le contenu du fichier de mémoire à partir de zéro à l’aide `CMemFile` de la substitution de `CFile::Write` . Si vous tentez d’écrire au-delà de la fin du fichier ou d’augmenter le fichier en appelant la `CMemFile` substitution de `CFile::SetLength` , `CMemFile` l’allocation de mémoire sera augmentée par incréments de *nGrowBytes*. L’augmentation de l’allocation de mémoire échoue si le bloc de mémoire que vous transmettez `Attach` n’a pas été alloué avec une méthode compatible avec [Alloc](#alloc). Pour être compatible avec l’implémentation par défaut de `Alloc` , vous devez allouer la mémoire avec la fonction de bibliothèque Runtime [malloc](../../c-runtime-library/reference/malloc.md) ou [calloc](../../c-runtime-library/reference/calloc.md).
 
-## <a name="cmemfilecmemfile"></a><a name="cmemfile"></a>CMemFile::CMemFile
+## <a name="cmemfilecmemfile"></a><a name="cmemfile"></a>CMemFile :: CMemFile
 
-La première surcharge ouvre un fichier mémoire vide.
+La première surcharge ouvre un fichier de mémoire vide.
 
 ```
 CMemFile(UINT nGrowBytes = 1024);
@@ -164,27 +172,27 @@ CMemFile(
 
 ### <a name="parameters"></a>Paramètres
 
-*nGrowBytes (en)*<br/>
-L’augmentation de l’allocation de mémoire dans les octets.
+*nGrowBytes*<br/>
+Incrément d’allocation de mémoire en octets.
 
-*lpBuffe*r Pointer à un tampon qui reçoit des informations de la taille *nBufferSize*.
+*lpBuffer* Pointeur vers une mémoire tampon qui reçoit des informations de la taille *nBufferSize*.
 
 *nBufferSize*<br/>
-Un intégrant qui spécifie la taille du tampon de fichier, dans les octets.
+Entier qui spécifie la taille de la mémoire tampon du fichier, en octets.
 
 ### <a name="remarks"></a>Notes
 
-Notez que le fichier est ouvert par le constructeur et que vous ne devriez pas appeler [CFile::Open](../../mfc/reference/cfile-class.md#open).
+Le fichier est ouvert par le constructeur. N’appelez pas [CFile :: Open](../../mfc/reference/cfile-class.md#open).
 
-La deuxième surcharge agit de la même façon que si vous utiliez le premier constructeur et immédiatement appelé [Attach](#attach) avec les mêmes paramètres. Pour plus d'informations, consultez `Attach`.
+La deuxième surcharge agit comme si vous utilisiez le premier constructeur et immédiatement appelé [Attach](#attach) avec les mêmes paramètres. Pour plus d'informations, consultez `Attach`.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]
 
-## <a name="cmemfiledetach"></a><a name="detach"></a>CMemFile::Detach
+## <a name="cmemfiledetach"></a><a name="detach"></a>CMemFile ::D Etach
 
-Appelez cette fonction pour obtenir un pointeur `CMemFile`pour le bloc de mémoire utilisé par .
+Appelez cette fonction pour obtenir un pointeur vers le bloc de mémoire utilisé par `CMemFile` .
 
 ```
 BYTE* Detach();
@@ -192,15 +200,15 @@ BYTE* Detach();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le bloc mémoire qui contient le contenu du fichier mémoire.
+Pointeur vers le bloc de mémoire qui contient le contenu du fichier de mémoire.
 
 ### <a name="remarks"></a>Notes
 
-Appeler cette fonction ferme `CMemFile`également le . Vous pouvez rattacher le `CMemFile` bloc de mémoire en appelant [Attach](#attach). Si vous souhaitez rattacher le fichier et utiliser les données qu’il y a, vous devez appeler `Detach` [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) pour obtenir la longueur du fichier avant d’appeler . Notez que si vous `CMemFile` attachez un bloc de `nGrowBytes` mémoire pour que vous puissiez utiliser ses données (0), alors vous ne serez pas en mesure de développer le fichier mémoire.
+L’appel de cette fonction ferme également `CMemFile` . Vous pouvez rattacher le bloc de mémoire à `CMemFile` en appelant [Attach](#attach). Si vous souhaitez rattacher le fichier et utiliser les données qu’il contient, vous devez appeler [CFile :: GetLength](../../mfc/reference/cfile-class.md#getlength) pour obtenir la longueur du fichier avant d’appeler `Detach` . Si vous attachez un bloc de mémoire à pour pouvoir `CMemFile` utiliser ses données ( `nGrowBytes` = = 0), vous ne pouvez pas augmenter le fichier de mémoire.
 
-## <a name="cmemfilefree"></a><a name="free"></a>CMemFile::Gratuit
+## <a name="cmemfilefree"></a><a name="free"></a>CMemFile :: Free
 
-Cette fonction est `CMemFile` appelée par les fonctions des membres.
+Cette fonction est appelée par les `CMemFile` fonctions membres.
 
 ```
 virtual void Free(BYTE* lpMem);
@@ -208,16 +216,60 @@ virtual void Free(BYTE* lpMem);
 
 ### <a name="parameters"></a>Paramètres
 
-*lpMem (en)*<br/>
-Pointeur à la mémoire à traiter.
+*lpMem*<br/>
+Pointeur vers la mémoire à libérer.
 
 ### <a name="remarks"></a>Notes
 
-Remplacer cette fonction pour implémenter la traite de mémoire personnalisée. Si vous remplacez cette fonction, vous aurez probablement envie de remplacer [Alloc](#alloc) et [Realloc](#realloc) ainsi.
+Substituez cette fonction pour implémenter une désallocation de mémoire personnalisée. Si vous remplacez cette fonction, vous souhaiterez probablement remplacer [Alloc](#alloc) et [realloc](#realloc) également.
 
-## <a name="cmemfilegrowfile"></a><a name="growfile"></a>CMemFile::GrowFile
+## <a name="cmemfilegetbufferptr"></a><a name="getbufferptr"></a>CMemFile :: GetBufferPtr
 
-Cette fonction est appelée `CMemFile` par plusieurs des fonctions membres.
+Obtient ou écrit dans la mémoire tampon qui stocke un fichier mémoire.
+
+```cpp
+virtual UINT GetBufferPtr(
+    UINT nCommand,
+    UINT nCount = 0,
+    void** ppBufStart = NULL,
+    void** ppBufMax = NULL
+);
+```
+
+### <a name="parameters"></a>Paramètres
+
+*nLigne*<br/>
+[BufferCommand](buffercommand-enumeration.md) à effectuer ( `bufferCheck` , `bufferCommit` , `bufferRead` ou `bufferWrite` ).
+
+*nCount*<br/>
+Selon *nLigne*, nombre d’octets dans la mémoire tampon à lire, écrire ou valider. Lors de la lecture à partir de la mémoire tampon, spécifiez-1 pour retourner une mémoire tampon de la position actuelle jusqu’à la fin du fichier.
+
+*ppBufStart*<br/>
+à Début de la mémoire tampon. Doit être `NULL` lorsque *nLigne* est `bufferCommit` .
+
+*ppBufMax*<br/>
+à Fin de la mémoire tampon. Doit être `NULL` lorsque nLigne est `bufferCommit` .
+
+### <a name="return-value"></a>Valeur de retour
+
+| valeur de la *commande* | Valeur retournée |
+|--|--|
+| `buffercheck` | Retourne [bufferDirect](buffercommand-enumeration.md) si la mise en mémoire tampon directe est prise en charge, sinon 0. |
+| `bufferCommit` | Retourne `0`. |
+| `bufferRead` ou `bufferWrite` | Retourne le nombre d’octets dans l’espace de mémoire tampon retourné. *ppBufStart* et *ppBufMax* pointent vers le début et la fin de la mémoire tampon de lecture/écriture.  |
+
+### <a name="remarks"></a>Notes
+
+La position actuelle dans la mémoire tampon ( `m_nPosition` ) est avancée des manières suivantes, en fonction de *nLigne*:
+
+| *nLigne* | position de la mémoire tampon |
+|-|-|
+| `bufferCommit` | La position actuelle avance de la taille de la mémoire tampon validée. |
+| `bufferRead` | La position actuelle avance de la taille de la mémoire tampon de lecture. |
+
+## <a name="cmemfilegrowfile"></a><a name="growfile"></a>CMemFile :: GrowFile
+
+Cette fonction est appelée par plusieurs des `CMemFile` fonctions membres.
 
 ```
 virtual void GrowFile(SIZE_T dwNewLen);
@@ -226,15 +278,15 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ### <a name="parameters"></a>Paramètres
 
 *dwNewLen*<br/>
-Nouvelle taille du fichier mémoire.
+Nouvelle taille du fichier de mémoire.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez le remplacer si vous `CMemFile` voulez changer la façon dont développe son fichier. La implémentation par défaut appelle [Realloc](#realloc) à développer un bloc existant (ou `nGrowBytes` [Alloc](#alloc) pour créer un bloc mémoire), allouant la mémoire dans les multiples de la valeur spécifiée dans le constructeur ou [l’appel d’attache.](#attach)
+Vous pouvez la remplacer si vous souhaitez modifier la façon dont `CMemFile` augmente son fichier. L’implémentation par défaut appelle [realloc](#realloc) pour augmenter un bloc existant (ou [Alloc](#alloc) pour créer un bloc de mémoire), en allouant de la mémoire dans des multiples de la `nGrowBytes` valeur spécifiée dans le constructeur ou l’appel d' [attachement](#attach) .
 
-## <a name="cmemfilememcpy"></a><a name="memcpy"></a>CMemFile::Memcpy
+## <a name="cmemfilememcpy"></a><a name="memcpy"></a>CMemFile :: memcpy
 
-Cette fonction est `CMemFile` appelée par les remplacements de [CFile::Lire](../../mfc/reference/cfile-class.md#read) et [CFile::Écrire](../../mfc/reference/cfile-class.md#write) pour transférer des données à et depuis le fichier mémoire.
+Cette fonction est appelée par les `CMemFile` substitutions de [CFile :: Read](../../mfc/reference/cfile-class.md#read) et [CFile :: Write](../../mfc/reference/cfile-class.md#write) pour transférer des données vers et depuis le fichier de mémoire.
 
 ```
 virtual BYTE* Memcpy(
@@ -248,10 +300,10 @@ virtual BYTE* Memcpy(
 *lpMemTarget*<br/>
 Pointeur vers le bloc de mémoire dans lequel la mémoire source sera copiée.
 
-*lpMemSource (en)*<br/>
+*lpMemSource*<br/>
 Pointeur vers le bloc de mémoire source.
 
-*nBytes (en)*<br/>
+*nBytes*<br/>
 Nombre d'octets à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -260,11 +312,11 @@ Une copie de *lpMemTarget*.
 
 ### <a name="remarks"></a>Notes
 
-Remplacez cette fonction si vous voulez `CMemFile` changer la façon dont ces copies de mémoire.
+Substituez cette fonction si vous souhaitez modifier la façon dont `CMemFile` ces copies de mémoire sont copiées.
 
-## <a name="cmemfilerealloc"></a><a name="realloc"></a>CMemFile::Réalloc
+## <a name="cmemfilerealloc"></a><a name="realloc"></a>CMemFile :: realloc
 
-Cette fonction est `CMemFile` appelée par les fonctions des membres.
+Cette fonction est appelée par les `CMemFile` fonctions membres.
 
 ```
 virtual BYTE* Realloc(
@@ -274,19 +326,19 @@ virtual BYTE* Realloc(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpMem (en)*<br/>
-Un pointeur vers le bloc de mémoire à réaffecter.
+*lpMem*<br/>
+Pointeur vers le bloc de mémoire à réallouer.
 
-*nBytes (en)*<br/>
-Nouvelle taille pour le bloc de mémoire.
+*nBytes*<br/>
+Nouvelle taille du bloc de mémoire.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le bloc de mémoire qui a été réaffecté (et peut-être déplacé), ou NULL si la réaffectation a échoué.
+Pointeur vers le bloc de mémoire qui a été réalloué (et éventuellement déplacé), ou NULL en cas d’échec de la réallocation.
 
 ### <a name="remarks"></a>Notes
 
-Remplacer cette fonction pour implémenter la réaffectation personnalisée de la mémoire. Si vous remplacez cette fonction, vous aurez probablement envie de remplacer [Alloc](#alloc) et [Free](#free) ainsi.
+Substituez cette fonction pour implémenter la réallocation de mémoire personnalisée. Si vous remplacez cette fonction, vous souhaiterez probablement remplacer [Alloc](#alloc) et [Free](#free) également.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4355
 ms.assetid: b819ecab-8a07-42d7-8fa4-1180d51626c0
-ms.openlocfilehash: ddc0d1968ae373ff1e81c98a513e6f84fdb885e1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2725db0e37f8e60f37ec1b534306f516fe10be33
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165325"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223341"
 ---
 # <a name="compiler-warning-c4355"></a>Avertissement du compilateur C4355
 
 'this' : utilisé dans la liste des initialiseurs membre de base
 
-Le pointeur **This** est valide uniquement dans les fonctions membres non statiques. Elle ne peut pas être utilisée dans la liste d’initialiseurs pour une classe de base.
+Le **`this`** pointeur est valide uniquement dans les fonctions membres non statiques. Elle ne peut pas être utilisée dans la liste d’initialiseurs pour une classe de base.
 
-Les constructeurs de classe de base et les constructeurs de membre de classe sont appelés avant **ce** constructeur. En effet, vous avez passé un pointeur vers un objet non construit à un autre constructeur. Si ces autres constructeurs accèdent à des membres ou appellent des fonctions membres, le résultat n’est pas défini. Vous ne devez pas utiliser le pointeur **This** tant que l’ensemble de la construction n’est pas terminé.
+Les constructeurs de classe de base et les constructeurs de membre de classe sont appelés avant le **`this`** constructeur. En effet, vous avez passé un pointeur vers un objet non construit à un autre constructeur. Si ces autres constructeurs accèdent à des membres ou appellent des fonctions membres, le résultat n’est pas défini. Vous ne devez pas utiliser le **`this`** pointeur tant que la construction n’est pas terminée.
 
 Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.
 

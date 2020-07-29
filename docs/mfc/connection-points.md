@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: 1a8fc4742b8bf686edf75f3b98cc283b9bf9881b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c14d8247be2abdf828b88e728bd930691ec6571f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620730"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214150"
 ---
 # <a name="connection-points"></a>Points de connexion
 
@@ -37,7 +37,7 @@ MFC implémente ce modèle dans les classes [CConnectionPoint](reference/cconnec
 
 Pour chaque point de connexion implémenté dans votre classe, vous devez déclarer une partie de la connexion qui implémente le point de connexion. Si vous implémentez un ou plusieurs points de connexion, vous devez également déclarer un seul mappage de connexions dans votre classe. Un mappage de connexions est une table de points de connexion prise en charge par le contrôle ActiveX.
 
-Les exemples suivants illustrent un mappage de connexions simple et un point de connexion. Le premier exemple déclare le mappage de connexions et le point ; le deuxième exemple implémente le mappage et le point. Notez que `CMyClass` doit être une `CCmdTarget` classe dérivée de. Dans le premier exemple, le code est inséré dans la déclaration de classe, sous la section **protégée** :
+Les exemples suivants illustrent un mappage de connexions simple et un point de connexion. Le premier exemple déclare le mappage de connexions et le point ; le deuxième exemple implémente le mappage et le point. Notez que `CMyClass` doit être une `CCmdTarget` classe dérivée de. Dans le premier exemple, le code est inséré dans la déclaration de classe, sous la **`protected`** section :
 
 [!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 

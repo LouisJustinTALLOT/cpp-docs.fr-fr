@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-ms.openlocfilehash: 07b4c6e0821c925e70ce1bce1d910f184d658982
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f09a15fd4c115a764f9bf738a00e1b977786397a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163610"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223302"
 ---
 # <a name="compiler-warning-level-1-c4154"></a>Avertissement du compilateur (niveau 1) C4154
 
 suppression d’une expression de tableau ; conversion en pointeur fournie
 
-Comme vous ne pouvez pas utiliser `delete` sur un tableau, le compilateur convertit le tableau en pointeur.
+Comme vous ne pouvez pas utiliser **`delete`** sur un tableau, le compilateur convertit le tableau en pointeur.
 
 ## <a name="example"></a>Exemple
 

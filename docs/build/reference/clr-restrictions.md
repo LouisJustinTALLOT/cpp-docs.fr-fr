@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: d0318ce2e23f92600d5a78d6472646ec91492152
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 641e83cb85b6282e8c4c82dfed8c4b44fc4a7e8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837373"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223900"
 ---
 # <a name="clr-restrictions"></a>Restrictions de /clr
 
@@ -17,7 +17,7 @@ Notez les restrictions suivantes sur l’utilisation de **/clr** :
 
 - Dans un gestionnaire d’exceptions structurées, il existe des restrictions sur l’utilisation de `_alloca` lors de la compilation avec **/clr**. Pour plus d’informations, consultez [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- L’utilisation de vérifications des erreurs au moment de l’exécution n’est pas valide avec **/clr**. Pour plus d'informations, voir [Procédure : utiliser les vérifications natives à l’exécution](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- L’utilisation de vérifications des erreurs au moment de l’exécution n’est pas valide avec **/clr**. Pour plus d’informations, consultez [Comment : utiliser les contrôles natifs à l'exécution](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Lorsque **/clr** est utilisé pour compiler un programme qui utilise uniquement une syntaxe C++ standard, les instructions suivantes s’appliquent à l’utilisation de l’assembly inline :
 
@@ -37,13 +37,13 @@ Notez les restrictions suivantes sur l’utilisation de **/clr** :
 
 - Les options du compilateur suivantes ne sont pas prises en charge avec **/clr** :
 
-  - **/EHsc** et **/EHs** ( **/clr** implique **/EHa** (consultez [/EH (Modèle de gestion des exceptions)](eh-exception-handling-model.md))
+  - **/EHsc** et **/EHs** (**/clr** implique **/EHa** (consultez [/EH (Modèle de gestion des exceptions)](eh-exception-handling-model.md))
 
   - **/fp:strict** et **/fp:except** (consultez [/fp (Spécifier le comportement de virgule flottante)](fp-specify-floating-point-behavior.md))
 
   - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](gm-enable-minimal-rebuild.md)
+  - [/GM](gm-enable-minimal-rebuild.md)
 
   - [/MT](md-mt-ld-use-run-time-library.md)
 
@@ -55,7 +55,7 @@ Notez les restrictions suivantes sur l’utilisation de **/clr** :
 
 - L’utilisation de **/Zi** avec **/clr** a des effets sur les performances. Pour plus d’informations, consultez [/Zi](z7-zi-zi-debug-information-format.md).
 
-- La transmission d’un caractère large à une routine de sortie .NET Framework sans spécifier également [/Zc:wchar_t](zc-wchar-t-wchar-t-is-native-type.md) ou sans caster le caractère en `__wchar_t` entraîne l’affichage de la sortie comme `unsigned short int`. Par exemple :
+- Le passage d’un caractère élargi à une routine de sortie de .NET Framework sans spécifier également [/Zc : wchar_t](zc-wchar-t-wchar-t-is-native-type.md) ou sans cast du caractère vers **`__wchar_t`** entraînera l’affichage de la sortie en tant que `unsigned short int` . Par exemple :
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
@@ -70,7 +70,7 @@ Notez les restrictions suivantes sur l’utilisation de **/clr** :
 
 - Les fonctions qui prennent un nombre variable d’arguments (varargs) seront générées en tant que fonctions natives. Les types de données managés dans la position d’argument de variable seront marshalés en types natifs. Notez que les types <xref:System.String?displayProperty=fullName> sont en fait des chaînes à caractères larges, mais ils sont marshalés en chaînes de caractères codés sur un octet. Par conséquent, si un spécificateur printf est %S (wchar_t*), il sera marshalé en une chaîne %s à la place.
 
-- Lorsque vous utilisez la macro va_arg, vous pouvez obtenir des résultats inattendus lors de la compilation avec **/clr:pure**. Pour plus d’informations, consultez [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015 et non prises en charge dans Visual Studio 2017 et ultérieur. Le code qui doit être « pur » ou « sécurisé » doit être déplacé vers C#.
+- Lorsque vous utilisez la macro va_arg, vous pouvez obtenir des résultats inattendus lors de la compilation avec **/clr:pure**. Pour plus d’informations, consultez [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md). Les options de compilateur **/clr:pure** et **/clr:safe** sont dépréciées dans Visual Studio 2015 et non prises en charge dans Visual Studio 2017 et ultérieur. Le code qui doit être « pur » ou « sécurisé » doit être porté sur C#.
 
 - Vous ne devez pas appeler, à partir du code managé, des fonctions qui remontent la pile pour obtenir des informations sur les paramètres (arguments de fonction) ; la couche P/Invoke entraîne le placement de ces informations plus bas dans la pile.  Par exemple, ne compilez pas de proxy/stub avec **/clr**.
 
@@ -88,4 +88,4 @@ Notez les restrictions suivantes sur l’utilisation de **/clr** :
 
 ## <a name="see-also"></a>Voir aussi
 
-- [/clr (Compilation pour le Common Language Runtime)](clr-common-language-runtime-compilation.md)
+- [/CLR (compilation pour le Common Language Runtime)](clr-common-language-runtime-compilation.md)

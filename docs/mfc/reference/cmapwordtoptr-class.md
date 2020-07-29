@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapWordToPtr [MFC], RemoveKey
 - CMapWordToPtr [MFC], SetAt
 ms.assetid: b204d87f-6427-43e1-93e3-a4b1bb41099f
-ms.openlocfilehash: 71d79f9f57be2cdfe16c526bd50173a8ec3c5829
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3374b3123e150a4cac127e30bf7e9a6569371b5c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442562"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222977"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr, classe
 
@@ -53,7 +53,7 @@ class CMapWordToPtr : public CObject
 
 ## <a name="members"></a>Membres
 
-Les fonctions membres de `CMapWordToPtr` sont similaires aux fonctions membres de la classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un pointeur de `CObject` en tant que paramètre de fonction ou valeur de retour, substituez un pointeur à **void**. Chaque fois que vous voyez un `CString` ou un pointeur **const** vers un **caractère** comme paramètre de fonction ou valeur de retour, remplacez Word.
+Les fonctions membres de `CMapWordToPtr` sont similaires aux fonctions membres de la classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur sous la forme d’un paramètre de fonction ou d’une valeur de retour, remplacez un pointeur par **`void`** . Partout où vous voyez un `CString` **`const`** pointeur ou vers **`char`** comme paramètre de fonction ou valeur de retour, remplacez Word.
 
 `BOOL CMapWordToPtr::Lookup( WORD <key>, void*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ par exemple, se traduit par
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMapWordToPtr::CMapWordToPtr](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Constructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMapWordToPtr :: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Retourne le nombre d’éléments de ce plan.|
 |[CMapWordToPtr::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Détermine le nombre actuel d’éléments dans la table de hachage.|
@@ -87,19 +87,19 @@ par exemple, se traduit par
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CMapWordToPtr :: Operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe Map : la substitution d’opérateur pour `SetAt`.|
+|[CMapWordToPtr ::, opérateur \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe Map : substitution d’opérateur pour `SetAt` .|
 
 ## <a name="remarks"></a>Notes
 
-`CMapWordToPtr` incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un objet `CDumpContext`. Si vous avez besoin d’un vidage d’éléments cartographiques individuels, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
+`CMapWordToPtr`incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un `CDumpContext` objet. Si vous avez besoin d’un vidage d’éléments cartographiques individuels, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
 
 Les mappages de mots à pointeurs ne peuvent pas être sérialisés.
 
-Quand un objet `CMapWordToPtr` est supprimé ou que ses éléments sont supprimés, les mots et les pointeurs sont supprimés. Les entités référencées par les pointeurs ne sont pas supprimées.
+Lorsqu’un `CMapWordToPtr` objet est supprimé ou que ses éléments sont supprimés, les mots et les pointeurs sont supprimés. Les entités référencées par les pointeurs ne sont pas supprimées.
 
-Pour plus d’informations sur les `CMapWordToPtr`, consultez l’article [Collections](../../mfc/collections.md).
+Pour plus d’informations sur `CMapWordToPtr` , consultez l’article [Collections](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -113,5 +113,5 @@ Pour plus d’informations sur les `CMapWordToPtr`, consultez l’article [Colle
 
 ## <a name="see-also"></a>Voir aussi
 
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

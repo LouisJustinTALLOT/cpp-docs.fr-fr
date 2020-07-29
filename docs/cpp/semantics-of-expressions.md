@@ -7,16 +7,16 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 43bcd98e0dbf14dada2643c0b731d3f6bae863e6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178847"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223601"
 ---
 # <a name="semantics-of-expressions"></a>Sémantique des expressions
 
-Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([Priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) des opérateurs dans les [conventions lexicales](../cpp/lexical-conventions.md), affiche C++ les relations que les opérateurs imposent sur les expressions.)
+Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([Priorité et associativité des opérateurs](../cpp/cpp-built-in-operators-precedence-and-associativity.md) dans les [conventions lexicales](../cpp/lexical-conventions.md), affiche les relations que les opérateurs C++ imposent sur les expressions.)
 
 ## <a name="order-of-evaluation"></a>Ordre d’évaluation
 
@@ -43,7 +43,7 @@ int main()
 54
 ```
 
-![Ordre d’évaluation dans une expression](../cpp/media/vc38zv1.gif "Ordre d'évaluation dans une expression") <br/>
+![Ordre d'évaluation dans une expression](../cpp/media/vc38zv1.gif "Ordre d'évaluation dans une expression") <br/>
 Ordre d’évaluation des expressions
 
 L'ordre dans lequel l'expression affichée dans l'illustration ci-dessus est évaluée est déterminé par la priorité et l'associativité des opérateurs :
@@ -52,11 +52,11 @@ L'ordre dans lequel l'expression affichée dans l'illustration ci-dessus est év
 
 1. L'ajout (+) a la priorité la plus élevée suivante, donc `a` est ajouté au produit de `b` et `c`.
 
-1. Le décalage vers la gauche (< <) a la priorité la plus faible dans l’expression, mais il existe deux occurrences. Étant donné que l'opérateur de décalage vers la gauche groupe de gauche à droite, la sous-expression gauche est évaluée en premier avant la sous-expression droite.
+1. Le décalage vers la gauche (<<) a la priorité la plus faible dans l’expression, mais il existe deux occurrences. Étant donné que l'opérateur de décalage vers la gauche groupe de gauche à droite, la sous-expression gauche est évaluée en premier avant la sous-expression droite.
 
 Lorsque les parenthèses sont utilisées pour grouper les sous-expressions, elles modifient la priorité et également l'ordre dans lequel l'expression est évaluée, comme indiqué dans l'illustration suivante.
 
-![Ordre d’évaluation des expressions avec parenthèses](../cpp/media/vc38zv2.gif "Ordre d'évaluation d'une expression avec parenthèses") <br/>
+![Ordre d'évaluation d'une expression avec parenthèses](../cpp/media/vc38zv2.gif "Ordre d'évaluation d'une expression avec parenthèses") <br/>
 Ordre expression-évaluation avec parenthèses
 
 Les expressions telles qu'elles existent dans l'illustration ci-dessus sont purement évaluées pour leurs effets secondaires, dans ce cas pour transférer des informations au périphérique de sortie standard.
@@ -69,10 +69,10 @@ Le langage C++ spécifie certaines compatibilités lors de la spécification des
 
 |Type attendu|Types autorisés|
 |-------------------|-------------------|
-|*type*|*type* de `const`<br /> *type* de `volatile`<br /> & de *type*<br /> *type* de `const`&<br /> *type* de `volatile`&<br /> *type* de `volatile const`<br /> *type* de `volatile const`&|
-|\* de *type*|\* de *type*<br /> *type* de `const` \*<br /> *type* de `volatile` \*<br /> *type* de `volatile const` \*|
-|*type* de `const`|*type*<br /> *type* de `const`<br />*type* de `const`&|
-|*type* de `volatile`|*type*<br /> *type* de `volatile`<br /> *type* de `volatile`&|
+|*type*|**`const`***type*<br /> **`volatile`***type*<br /> *entrer*&<br /> **`const`***type*&<br /> **`volatile`***type*&<br /> `volatile const`*type*<br /> `volatile const`*type*&|
+|*type*\*|*type*\*<br /> **`const`***type*\*<br /> **`volatile`***type*\*<br /> `volatile const`*type*\*|
+|**`const`***type*|*type*<br /> **`const`***type*<br />**`const`***type*&|
+|**`volatile`***type*|*type*<br /> **`volatile`***type*<br /> **`volatile`***type*&|
 
 Comme les règles précédentes peuvent toujours être utilisées de manière combinée, un pointeur const vers un objet volatile peut être fourni là où un pointeur est attendu.
 
@@ -88,13 +88,13 @@ func( i, ++i );
 
 Le langage C++ ne garantit pas l'ordre dans lequel les arguments d'un appel de fonction sont évalués. Par conséquent, dans l'exemple précédent, `func` peut recevoir comme paramètres les valeurs 7 et 8, ou 8 et 8, selon que les paramètres sont évalués de gauche à droite ou de droite à gauche.
 
-## <a name="c-sequence-points-microsoft-specific"></a>C++points de séquence (spécifiques à Microsoft)
+## <a name="c-sequence-points-microsoft-specific"></a>Points de séquence C++ (spécifiques à Microsoft)
 
 Une expression peut modifier la valeur d'un objet une seule fois entre des points de séquence consécutifs.
 
 La définition de langage C++ ne spécifie pas actuellement les points de séquence. Microsoft C++ utilise les mêmes points de séquence que C ANSI pour toute expression utilisant des opérateurs C et n'impliquent pas les opérateurs surchargés. Lorsque des opérateurs sont surchargés, la sémantique passe de la séquence par l'opérateur à la séquence par l'appel de fonction. Microsoft C++ utilise les points de séquence ci-dessous.
 
-- Opérande gauche de l’opérateur AND logique (& &). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n'existe aucune garantie que l'opérande droite de l'opérateur AND logique sera évalué.
+- Opérande gauche de l’opérateur AND logique (&&). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n'existe aucune garantie que l'opérande droite de l'opérateur AND logique sera évalué.
 
 - Opérande gauche de l’opérateur OR logique (&#124;&#124;). L’opérande gauche de l’opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant de continuer. Il n’existe aucune garantie que l’opérande droite de l’opérateur OR logique sera évalué.
 

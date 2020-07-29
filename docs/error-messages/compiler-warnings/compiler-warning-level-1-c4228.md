@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4228
 ms.assetid: 9301d660-d601-464e-83f5-7ed844a3c6dc
-ms.openlocfilehash: c216143f2b47148f73502c847175201ea9a74fee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3a89d5c0924e6fd12a4ccf8afa957f8908670d49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175894"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223237"
 ---
 # <a name="compiler-warning-level-1-c4228"></a>Avertissement du compilateur (niveau 1) C4228
 
 extension non standard utilisée : les qualificateurs situés après la virgule dans la liste des déclarateurs sont ignorés
 
-L’utilisation de qualificateurs comme **const** ou `volatile` après une virgule lors de la déclaration de variables est une extension Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+L’utilisation de qualificateurs comme **`const`** ou **`volatile`** après une virgule lors de la déclaration de variables est une extension Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="example"></a>Exemple
 

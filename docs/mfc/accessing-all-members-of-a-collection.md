@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: 0d8b5491ee5321171ef358308f3c1548e43953d3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616494"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214176"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Accès à tous les membres d'une collection
 
@@ -42,11 +42,11 @@ Les procédures suivantes montrent comment itérer sur les trois principaux type
 
    Cet exemple utilise un tableau de pointeurs typés qui contient des pointeurs vers des objets `CPerson` . Le tableau est dérivé de la classe `CObArray`, l’une des classes prédéfinies non basées sur un modèle. `GetAt` retourne un pointeur vers un objet `CPerson` . Pour les classes de collection de pointeurs typés (tableaux ou listes), le premier paramètre spécifie la classe de base ; le deuxième paramètre spécifie le type à stocker.
 
-   La `CTypedPtrArray` classe surcharge également l’opérateur **[]** afin que vous puissiez utiliser la syntaxe d’indice de tableau personnalisée pour accéder aux éléments d’un tableau. Une alternative à l’instruction dans le corps de la boucle **for** ci-dessus est
+   La `CTypedPtrArray` classe surcharge également l’opérateur **[]** afin que vous puissiez utiliser la syntaxe d’indice de tableau personnalisée pour accéder aux éléments d’un tableau. Une alternative à l’instruction dans le corps de la **`for`** boucle ci-dessus est
 
    [!code-cpp[NVC_MFCCollections#13](codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-   Cet opérateur existe dans les versions **const** et non**const** . La version **const** , qui est appelée pour les tableaux **const** , peuvent apparaître uniquement à droite d’une instruction d’assignation.
+   Cet opérateur existe dans **`const`** et non dans les **`const`** versions. La **`const`** version, qui est appelée pour les **`const`** tableaux, peut apparaître uniquement à droite d’une instruction d’assignation.
 
 ### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a> Pour itérer une liste
 

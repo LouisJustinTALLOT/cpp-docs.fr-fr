@@ -6,12 +6,12 @@ helpviewer_keywords:
 - streams, custom stream manipulators
 - output streams, custom stream manipulators
 ms.assetid: fa4655a7-d68f-4fea-a26e-73c3ad5c90a5
-ms.openlocfilehash: ddafa6adfb99c889ee525beb6d7bc88ed771d71e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c688ab752415309c0c3d29c6ab93c27babc65f80
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460054"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222496"
 ---
 # <a name="custom-manipulators-with-arguments"></a>Manipulateurs personnalisés avec arguments
 
@@ -19,7 +19,7 @@ Cette section décrit comment créer des manipulateurs de flux de sortie avec un
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Manipulateurs de flux de sortie avec un argument](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) (**int** ou **long**)
+[Manipulateurs de flux de sortie avec un argument](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) ( **`int`** ou **`long`** )
 
 [Autres manipulateurs de flux de sortie à un argument](../standard-library/other-one-argument-output-stream-manipulators.md)
 

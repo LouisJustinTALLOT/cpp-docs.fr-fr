@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9e280e489d5da5d66a48b72b38fe22a6943b7318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912296"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215112"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -70,11 +70,11 @@ Les fonctions **Tanh** retournent la tangente hyperbolique de *x*. Aucun retour 
 
 |Entrée|Exception SEH|**Supertherr** Titre|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|Aucun|_DOMAIN|
+|± QNAN,IND|aucun|_DOMAIN|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Tanh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **Tanh** prend toujours et retourne **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Tanh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **Tanh** accepte et retourne toujours **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
-ms.openlocfilehash: aac308905a01a52a4ce5ee0fa3be03f2f33ac1cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e56ebfadea0d643ac68e2ace722a39587bd01312
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223705"
 ---
 # <a name="goto-statement-c"></a>goto, instruction (C++)
 
-Le **goto** instruction transfère sans condition le contrôle à l’instruction étiquetée par l’identificateur spécifié.
+L' **`goto`** instruction transfère sans condition le contrôle à l’instruction étiquetée par l’identificateur spécifié.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,9 +27,9 @@ goto identifier;
 
 L'instruction étiquetée indiquée par `identifier` doit se trouver dans la fonction actuelle. Tous les noms `identifier` sont membres d'un espace de noms interne et, par conséquent, n'interfèrent pas avec d'autres identificateurs.
 
-Une étiquette d’instruction est uniquement explicite pour un **goto** instruction ; sinon, les étiquettes d’instruction sont ignorés. Les étiquettes ne peuvent pas être redéclarées.
+Une étiquette d’instruction est significative uniquement pour une **`goto`** instruction ; sinon, les étiquettes d’instruction sont ignorées. Les étiquettes ne peuvent pas être redéclarées.
 
-Un **goto** instruction n’est pas autorisée à transférer le contrôle vers un emplacement qui ignore l’initialisation de n’importe quelle variable qui est dans la portée de cet emplacement. L’exemple suivant déclenche C2362 :
+Une **`goto`** instruction n’est pas autorisée à transférer le contrôle vers un emplacement qui ignore l’initialisation d’une variable qui est dans la portée de cet emplacement. L’exemple suivant déclenche C2362 :
 
 ```cpp
 int goto_fn(bool b)
@@ -48,13 +48,13 @@ exit:
 }
 ```
 
-Il est conseillé d’utiliser le **saut**, **continuer**, et **retourner** instructions au lieu du **goto** instruction chaque fois que possibles. Toutefois, étant donné que le **saut** instruction se termine à partir d’un seul niveau d’une boucle, vous devrez peut-être utiliser un **goto** instruction pour quitter une boucle profondément imbriquée.
+Il s’agit d’un bon style de programmation pour utiliser les **`break`** **`continue`** instructions, et **`return`** au lieu de l’instruction dans la mesure du **`goto`** possible. Toutefois, étant donné que l' **`break`** instruction quitte un seul niveau d’une boucle, vous devrez peut-être utiliser une **`goto`** instruction pour quitter une boucle profondément imbriquée.
 
-Pour plus d’informations sur les étiquettes et la **goto** instruction, consultez [instructions étiquetées](../cpp/labeled-statements.md).
+Pour plus d’informations sur les étiquettes et l' **`goto`** instruction, consultez [instructions étiquetées](../cpp/labeled-statements.md).
 
 ## <a name="example"></a>Exemple
 
-Dans cet exemple, un **goto** instruction transfère le contrôle au point étiqueté `stop` lorsque `i` est égal à 3.
+Dans cet exemple, une **`goto`** instruction transfère le contrôle au point étiqueté `stop` lorsque `i` est égal à 3.
 
 ```cpp
 // goto_statement.cpp

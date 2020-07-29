@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417193"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223770"
 ---
 # <a name="x64-software-conventions"></a>Conventions des logiciels x64
 
@@ -18,13 +18,13 @@ Cette section décrit la méthodologie de convention d’appel C++ pour x64, l�
 
 ## <a name="overview-of-x64-calling-conventions"></a>Vue d’ensemble des conventions d’appel x64
 
-Deux différences importantes entre x86 et x64 sont la capacité d’adressage 64 bits et un ensemble plat de registres 16 64 bits pour une utilisation générale. À partir de l’ensemble de registres développé, x64 utilise la Convention d’appel [__fastcall](../cpp/fastcall.md) et un modèle de gestion des exceptions basé sur RISC. La `__fastcall` Convention utilise des registres pour les quatre premiers arguments et le frame de pile pour passer des arguments supplémentaires. Pour plus d’informations sur la Convention d’appel x64, y compris l’utilisation des registres, les paramètres de la pile, les valeurs de retour et le déroulement de la pile, consultez [Convention d’appel x64](x64-calling-convention.md).
+Deux différences importantes entre x86 et x64 sont la capacité d’adressage 64 bits et un ensemble plat de registres 16 64 bits pour une utilisation générale. À partir de l’ensemble de registres développé, x64 utilise la Convention d’appel [__fastcall](../cpp/fastcall.md) et un modèle de gestion des exceptions basé sur RISC. La **`__fastcall`** Convention utilise des registres pour les quatre premiers arguments et le frame de pile pour passer des arguments supplémentaires. Pour plus d’informations sur la Convention d’appel x64, y compris l’utilisation des registres, les paramètres de la pile, les valeurs de retour et le déroulement de la pile, consultez [Convention d’appel x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Activer l’optimisation pour x64
 
 L’option de compilateur suivante vous aide à optimiser votre application pour x64 :
 
-- [/favor (Optimisation pour les particularités d’architecture)](../build/reference/favor-optimize-for-architecture-specifics.md)
+- [/favor (optimiser pour les caractéristiques de l’architecture)](../build/reference/favor-optimize-for-architecture-specifics.md)
 
 ## <a name="types-and-storage"></a>Types et stockage
 
@@ -47,19 +47,19 @@ Bien qu’il soit possible d’accéder aux données avec n’importe quel align
 |||||
 |-|-|-|-|
 |Type scalaire|Type de données C|Taille de stockage (en octets)|Alignement recommandé|
-|**INT8**|**char**|1|Byte|
-|**DESTINÉES**|**unsigned char**|1|Byte|
-|**INT16**|**Résumé**|2|Word|
-|**UINT16**|**unsigned short**|2|Word|
-|**ENTIER**|**entier** **long**|4|Mot|
+|**INT8**|**`char`**|1|Byte|
+|**DESTINÉES**|**`unsigned char`**|1|Byte|
+|**INT16**|**`short`**|2|Word|
+|**UINT16**|**`unsigned short`**|2|Word|
+|**ENTIER**|**`int`**, **`long`**|4|Mot|
 |**UINT32**|**unsigned int, unsigned long**|4|Mot|
-|**INT64**|**__int64**|8|Mot|
+|**INT64**|**`__int64`**|8|Mot|
 |**UINT64**|**unsigned __int64**|8|Mot|
-|**FP32 (simple précision)**|**float**|4|Mot|
-|**FP64 (double précision)**|**double**|8|Mot|
+|**FP32 (simple précision)**|**`float`**|4|Mot|
+|**FP64 (double précision)**|**`double`**|8|Mot|
 |**DIRIGÉ**|__\*__|8|Mot|
-|**__m64**|**__m64 de struct**|8|Mot|
-|**__m128**|**__m128 de struct**|16|Octaword|
+|**`__m64`**|**__m64 de struct**|8|Mot|
+|**`__m128`**|**__m128 de struct**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Agrégats et unions
 
@@ -82,19 +82,19 @@ Le tableau suivant indique l’alignement fortement suggéré pour les membres s
 ||||
 |-|-|-|
 |Type scalaire|Type de données C|Alignement requis|
-|**INT8**|**char**|Byte|
-|**DESTINÉES**|**unsigned char**|Byte|
-|**INT16**|**Résumé**|Word|
-|**UINT16**|**unsigned short**|Word|
-|**ENTIER**|**entier** **long**|Mot|
+|**INT8**|**`char`**|Byte|
+|**DESTINÉES**|**`unsigned char`**|Byte|
+|**INT16**|**`short`**|Word|
+|**UINT16**|**`unsigned short`**|Word|
+|**ENTIER**|**`int`**, **`long`**|Mot|
 |**UINT32**|**unsigned int, unsigned long**|Mot|
-|**INT64**|**__int64**|Mot|
+|**INT64**|**`__int64`**|Mot|
 |**UINT64**|**unsigned __int64**|Mot|
-|**FP32 (simple précision)**|**float**|Mot|
-|**FP64 (double précision)**|**double**|Mot|
+|**FP32 (simple précision)**|**`float`**|Mot|
+|**FP64 (double précision)**|**`double`**|Mot|
 |**DIRIGÉ**|<strong>\*</strong>|Mot|
-|**__m64**|**__m64 de struct**|Mot|
-|**__m128**|**__m128 de struct**|Octaword|
+|**`__m64`**|**__m64 de struct**|Mot|
+|**`__m128`**|**__m128 de struct**|Octaword|
 
 Les règles d’alignement d’agrégat suivantes s’appliquent :
 
@@ -181,7 +181,7 @@ L’utilisation de données non alignées a deux implications.
 
 - Les emplacements non alignés ne peuvent pas être utilisés dans des opérations verrouillées.
 
-Si vous avez besoin d’un alignement plus `__declspec(align(N))` strict, utilisez sur vos déclarations de variable. Cela amène le compilateur à aligner dynamiquement la pile pour répondre à vos spécifications. Toutefois, l’ajustement dynamique de la pile au moment de l’exécution peut ralentir l’exécution de votre application.
+Si vous avez besoin d’un alignement plus strict, utilisez `__declspec(align(N))` sur vos déclarations de variable. Cela amène le compilateur à aligner dynamiquement la pile pour répondre à vos spécifications. Toutefois, l’ajustement dynamique de la pile au moment de l’exécution peut ralentir l’exécution de votre application.
 
 ## <a name="register-usage"></a>Inscrire l’utilisation
 
@@ -206,12 +206,12 @@ Le tableau suivant explique comment chaque registre est utilisé dans les appels
 |RBX|Non volatil|Doit être conservé par l'appelé|
 |RBP|Non volatil|Peut être utilisé comme pointeur de frame ; doit être conservé par l'appelé|
 |RSP|Non volatil|Pointeur de pile|
-|XMM0, YMM0|Volatil|Premier argument FP ; premier argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM1, YMM1|Volatil|Deuxième argument FP ; deuxième argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM2, YMM2|Volatil|Troisième argument FP ; troisième argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM3, YMM3|Volatil|Quatrième argument FP ; quatrième argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM4, YMM4|Volatil|Doit être conservé si nécessaire par l’appelant ; cinquième argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM5, YMM5|Volatil|Doit être conservé si nécessaire par l'appelant ; sixième argument de type vectoriel quand `__vectorcall` est utilisé|
+|XMM0, YMM0|Volatil|Premier argument FP ; premier argument de type vectoriel quand **`__vectorcall`** est utilisé|
+|XMM1, YMM1|Volatil|Deuxième argument FP ; deuxième argument de type vectoriel quand **`__vectorcall`** est utilisé|
+|XMM2, YMM2|Volatil|Troisième argument FP ; troisième argument de type vectoriel quand **`__vectorcall`** est utilisé|
+|XMM3, YMM3|Volatil|Quatrième argument FP ; quatrième argument de type vectoriel quand **`__vectorcall`** est utilisé|
+|XMM4, YMM4|Volatil|Doit être conservé si nécessaire par l’appelant ; cinquième argument de type vectoriel quand **`__vectorcall`** est utilisé|
+|XMM5, YMM5|Volatil|Doit être conservé si nécessaire par l’appelant ; sixième argument de type vectoriel quand **`__vectorcall`** est utilisé|
 |XMM6:XMM15, YMM6:YMM15|Non volatil (XMM), volatil (moitié supérieure de YMM)|Doit être conservé par l’appelé. Les registres YMM doivent être conservés si nécessaire par l'appelant.|
 
 Sur la sortie de la fonction et sur l’entrée de la fonction pour les appels de la bibliothèque Runtime C et les appels système Windows, l’indicateur de direction dans le registre des indicateurs de l’UC est supposé être effacé.

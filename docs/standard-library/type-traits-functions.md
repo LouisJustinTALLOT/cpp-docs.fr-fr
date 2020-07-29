@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: bc25c82629139c5bc2f6fa53d3555068374dca35
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d330a1dcd819dd48713887db789371ed4a8fee35
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367985"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215528"
 ---
 # <a name="lttype_traitsgt-functions"></a>&lt;type_traits&gt;, fonctions
 
@@ -32,7 +32,7 @@ ms.locfileid: "81367985"
 
 ## <a name="is_assignable"></a><a name="is_assignable"></a>is_assignable
 
-Teste si une valeur de type *De* peut être attribuée à un *type To.*
+Teste si une valeur *de type peut* être assignée *à* un type.
 
 ```cpp
 template <class To, class From>
@@ -49,7 +49,7 @@ Type de l'objet qui fournit la valeur.
 
 ### <a name="remarks"></a>Notes
 
-L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. De *From* et *vers* doivent être des types complets, **vides,** ou des tableaux de limite inconnue.
+L’expression non évaluée `declval<To>() = declval<From>()` doit être bien formée. *From* et *to* doivent tous deux être des types complets, **`void`** , ou des tableaux de limites inconnues.
 
 ## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a>is_copy_assignable
 
@@ -67,7 +67,7 @@ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Un exemple du type de prédicat est vrai si le type *Ty* est une classe qui a un opérateur d’affectation de copie, sinon il détient faux. Équivaut à is_assignable\<Ty&, const Ty&>.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un opérateur d’assignation de copie. sinon, sa valeur est false. Équivalent à is_assignable \<Ty&, const Ty&> .
 
 ## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a>is_copy_constructible
 
@@ -85,7 +85,7 @@ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Un exemple du type de prédicat est vrai si le type *Ty* est une classe qui a un constructeur de copie, sinon il détient faux.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un constructeur de copie. sinon, sa valeur est false.
 
 ### <a name="example"></a>Exemple
 
@@ -137,7 +137,7 @@ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Une instance du type de prédicat est vrai si le type *T* est un type de classe qui a un constructeur par défaut, sinon il est faux. Cela est équivalent au prédicat `is_constructible<T>`. Le type *T* doit être un type complet, **un vide**ou un tableau de limite inconnue.
+Une instance du prédicat de type a la valeur true si le type *T* est un type de classe qui a un constructeur par défaut. sinon, sa valeur est false. Cela est équivalent au prédicat `is_constructible<T>`. Le type *T* doit être un type complet, **`void`** , ou un tableau de limite inconnue.
 
 ### <a name="example"></a>Exemple
 
@@ -207,11 +207,11 @@ Type à évaluer
 
 ### <a name="remarks"></a>Notes
 
-Un type prédicat qui évalue à vrai si le type *T* peut être construit en utilisant une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`.
+Prédicat de type qui prend la valeur true si le type *T* peut être construit à l’aide d’une opération de déplacement. Ce prédicat équivaut à `is_constructible<T, T&&>`.
 
 ## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a>is_nothrow_move_assignable
 
-Teste si le type a un opérateur d’assignation par déplacement **nothrow**.
+Teste si le type a un **`nothrow`** opérateur d’assignation de déplacement.
 
 ```cpp
 template <class Ty>
@@ -225,7 +225,7 @@ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Un exemple du prédicat de type est vrai si le type *Ty* a un opérateur d’affectation de déménagement nothrow, sinon il détient faux.
+Une instance du prédicat de type a la valeur true si le type *Ty* contient un opérateur d’assignation de déplacement nothrow. sinon, sa valeur est false.
 
 ## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a>is_nothrow_swappable
 
@@ -267,9 +267,9 @@ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Un exemple du type de prédicat est vrai si le type *T* est une classe qui a un opérateur trivial d’affectation de copie, sinon il est faux.
+Une instance du prédicat de type a la valeur true si le type *T* est une classe qui a un opérateur d’assignation de copie trivial. sinon, sa valeur est false.
 
-Un constructeur d’affectation pour une classe *T* est trivial si elle est implicitement fournie, la classe *T* n’a pas de fonctions virtuelles, la classe *T* n’a pas de bases virtuelles, les classes de tous les membres de données non statiques de type classe ont des opérateurs d’affectation triviales, et les classes de tous les membres de données non statiques de type éventail de classe ont des opérateurs d’affectation triviales.
+Un constructeur d’assignation pour une classe *t* est trivial s’il est fourni implicitement, la classe *t* n’a pas de fonctions virtuelles, la classe *t* n’a aucune base virtuelle, les classes de tous les membres de données non statiques de type classe ont des opérateurs d’assignation trivial, et les classes de tous les membres de données non statiques de type tableau de classe ont des opérateurs d’assignation
 
 ## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a>is_trivially_move_assignable
 
@@ -287,15 +287,15 @@ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Un exemple du type de prédicat est vrai si le type *Ty* est une classe qui a un opérateur d’affectation de déménagement trivial, sinon il détient faux.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un opérateur d’assignation de déplacement trivial. sinon, sa valeur est false.
 
-Un opérateur d’affectation de déménagement pour une classe *Ty* est trivial si :
+Un opérateur d’assignation de déplacement pour une classe *Ty* est trivial si :
 
 il est fourni implicitement ;
 
 la classe *Ty* n’a pas de fonctions virtuelles
 
-la classe *Ty* n’a pas de bases virtuelles
+la classe *Ty* n’a aucune base virtuelle
 
 les classes de tous les membres de données non statiques de type classe possèdent des opérateurs d'assignation de déplacement triviaux ;
 
@@ -317,9 +317,9 @@ Type à interroger.
 
 ### <a name="remarks"></a>Notes
 
-Un exemple du type de prédicat est vrai si le type *Ty* est une classe qui a un constructeur de mouvement trivial, sinon il détient faux.
+Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un constructeur de déplacement trivial. sinon, sa valeur est false.
 
-Un constructeur de déménagement pour une classe *Ty* est trivial si:
+Un constructeur de déplacement pour une classe *Ty* est trivial si :
 
 il est déclaré implicitement ;
 
@@ -327,11 +327,11 @@ ses types de paramètres sont équivalents à ceux d'une déclaration implicite�
 
 la classe *Ty* n’a pas de fonctions virtuelles
 
-la classe *Ty* n’a pas de bases virtuelles
+la classe *Ty* n’a aucune base virtuelle
 
 la classe n'a aucun membre de données non statique volatile ;
 
-toutes les bases directes de la classe *Ty* ont des constructeurs de mouvement trivial
+toutes les bases directes de la classe *Ty* ont des constructeurs de déplacement trivial
 
 les classes de tous les membres de données non statiques de type de classe ont des constructeurs de déplacement triviaux ;
 

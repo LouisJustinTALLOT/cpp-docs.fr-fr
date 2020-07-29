@@ -89,18 +89,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: 38b0a3278efd10ef5cc989a5fc900bf82d377eae
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76f67ad900e975ff084f5760e6830c6a5d229e86
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214882"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
-La classe de modèle décrit un objet qui contrôle une séquence d’éléments de longueur variable qui a un accès bidirectionnel. Vous utilisez `set` le récipient pour gérer une séquence d’éléments comme un arbre (presque) équilibré ordonné de nœuds, chacun stockant un élément.
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments disposant d’un accès bidirectionnel. Vous utilisez le conteneur `set` pour gérer une séquence d’éléments sous la forme d’une arborescence ordonnée (quasi) équilibrée de nœuds, chacun stockant un élément.
 
-Dans la description `GValue` ci-dessous, est le même que `GKey`, qui à son tour est le même que La *clé* à moins que ce dernier est un type d’arbitre, auquel cas il est `Key^`.
+Dans la description ci-dessous, `GValue` est identique à `GKey` , qui, à son tour, est identique à la *clé* , à moins que ce dernier ne soit un type REF, auquel cas il s’agit de `Key^` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -125,106 +125,106 @@ Type du composant clé d'un élément dans la séquence contrôlée.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** \<cliext/set>
+**En-tête :**\<cliext/set>
 
-**Espace nom:** cliext
+**Espace de noms :** cliext
 
 ## <a name="declarations"></a>Déclarations
 
-|Définition de types|Description|
+|Définition de type|Description|
 |---------------------|-----------------|
 |[set::const_iterator (STL/CLR)](#const_iterator)|Type d'un itérateur constant pour la séquence contrôlée.|
 |[set::const_reference (STL/CLR)](#const_reference)|Type d'une référence constante à un élément.|
 |[set::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Type d'un itérateur inserve constant pour la séquence contrôlée.|
-|[set::difference_type (STL/CLR)](#difference_type)|Le type de distance (éventuellement signée) entre deux éléments.|
-|[set::generic_container (STL/CLR)](#generic_container)|Le type d’interface générique pour le conteneur.|
-|[set::generic_iterator (STL/CLR)](#generic_iterator)|Le type d’itérateur pour l’interface générique pour le conteneur.|
-|[set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Le type d’itérateur inversé pour l’interface générique pour le conteneur.|
-|[set::generic_value (STL/CLR)](#generic_value)|Le type d’élément pour l’interface générique pour le conteneur.|
+|[set::difference_type (STL/CLR)](#difference_type)|Type d’une distance (éventuellement signée) entre deux éléments.|
+|[set::generic_container (STL/CLR)](#generic_container)|Type de l’interface générique pour le conteneur.|
+|[set::generic_iterator (STL/CLR)](#generic_iterator)|Type d’un itérateur pour l’interface générique pour le conteneur.|
+|[set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Type d’un itérateur inverse pour l’interface générique pour le conteneur.|
+|[set::generic_value (STL/CLR)](#generic_value)|Type d’un élément pour l’interface générique pour le conteneur.|
 |[set::iterator (STL/CLR)](#iterator)|Type d'un itérateur pour la séquence contrôlée.|
-|[set::key_compare (STL/CLR)](#key_compare)|Le délégué de commande pour deux clés.|
+|[set::key_compare (STL/CLR)](#key_compare)|Délégué de classement de deux clés.|
 |[set::key_type (STL/CLR)](#key_type)|Type d'une clé de tri.|
 |[set::reference (STL/CLR)](#reference)|Type d'une référence à un élément.|
 |[set::reverse_iterator (STL/CLR)](#reverse_iterator)|Type d'un itérateur inverse pour la séquence contrôlée.|
-|[set::size_type (STL/CLR)](#size_type)|Le type de distance (non négative) entre deux éléments.|
-|[set::value_compare (STL/CLR)](#value_compare)|Le délégué de commande pour deux valeurs d’élément.|
+|[set::size_type (STL/CLR)](#size_type)|Type d’une distance (non négative) entre deux éléments.|
+|[set::value_compare (STL/CLR)](#value_compare)|Délégué de classement pour deux valeurs d’élément.|
 |[set::value_type (STL/CLR)](#value_type)|Type d’un élément.|
 
 |Fonction membre|Description|
 |---------------------|-----------------|
 |[set::begin (STL/CLR)](#begin)|Désigne le début de la séquence contrôlée.|
 |[set::clear (STL/CLR)](#clear)|Supprime tous les éléments.|
-|[set::count (STL/CLR)](#count)|Compte les éléments correspondant à une clé spécifiée.|
+|[set::count (STL/CLR)](#count)|Compte les éléments qui correspondent à une clé spécifiée.|
 |[set::empty (STL/CLR)](#empty)|Vérifie l'absence d'éléments.|
 |[set::end (STL/CLR)](#end)|Désigne la fin de la séquence contrôlée.|
 |[set::equal_range (STL/CLR)](#equal_range)|Recherche une plage qui correspond à une clé spécifiée.|
 |[set::erase (STL/CLR)](#erase)|Supprime les éléments placés aux positions spécifiées.|
 |[set::find (STL/CLR)](#find)|Recherche un élément qui correspond à une clé spécifiée.|
 |[set::insert (STL/CLR)](#insert)|Ajoute des éléments.|
-|[set::key_comp (STL/CLR)](#key_comp)|Copie le délégué de commande pour deux clés.|
-|[set::lower_bound (STL/CLR)](#lower_bound)|Trouve le début de la plage qui correspond à une clé spécifiée.|
+|[set::key_comp (STL/CLR)](#key_comp)|Copie le délégué de classement pour deux clés.|
+|[set::lower_bound (STL/CLR)](#lower_bound)|Recherche le début de la plage qui correspond à une clé spécifiée.|
 |[set::make_value (STL/CLR)](#make_value)|Construit un objet de valeur.|
 |[set::rbegin (STL/CLR)](#rbegin)|Désigne le début de la séquence contrôlée inverse.|
 |[set::rend (STL/CLR)](#rend)|Désigne la fin de la séquence contrôlée inverse.|
 |[set::set (STL/CLR)](#set)|Construit un objet conteneur.|
 |[set::size (STL/CLR)](#size)|Compte le nombre d'éléments.|
 |[set::swap (STL/CLR)](#swap)|Échange le contenu de deux conteneurs.|
-|[set::to_array (STL/CLR)](#to_array)|Copie la séquence contrôlée à un nouveau tableau.|
-|[set::upper_bound (STL/CLR)](#upper_bound)|Trouve la fin de la plage qui correspond à une clé spécifiée.|
-|[set::value_comp (STL/CLR)](#value_comp)|Copie le délégué de commande pour deux valeurs d’élément.|
+|[set::to_array (STL/CLR)](#to_array)|Copie la séquence contrôlée dans un nouveau tableau.|
+|[set::upper_bound (STL/CLR)](#upper_bound)|Recherche la fin de la plage qui correspond à une clé spécifiée.|
+|[set::value_comp (STL/CLR)](#value_comp)|Copie le délégué de classement pour deux valeurs d’élément.|
 
 |Opérateur|Description|
 |--------------|-----------------|
 |[set::operator= (STL/CLR)](#op_as)|Remplace la séquence contrôlée.|
-|[opérateur! (ensemble) (STL/CLR)](#op_neq)|Détermine si `set` un objet n’est pas égal à un autre `set` objet.|
-|[< (ensemble) (STL/CLR)](#op_lt)|Détermine si `set` un objet est `set` inférieur à un autre objet.|
-|[<de l’opérateur (ensemble) (STL/CLR)](#op_lteq)|Détermine si `set` un objet est inférieur ou `set` égal à un autre objet.|
-|[operator== (set) (STL/CLR)](#op_eq)|Détermine si `set` un objet est `set` égal à un autre objet.|
-|[> (ensemble) (STL/CLR)](#op_gt)|Détermine si `set` un objet est `set` plus grand qu’un autre objet.|
-|[>de l’opérateur (ensemble) (STL/CLR)](#op_gteq)|Détermine si `set` un objet est supérieur `set` ou égal à un autre objet.|
+|[Operator ! = (Set) (STL/CLR)](#op_neq)|Détermine si un `set` objet n’est pas égal à un autre `set` objet.|
+|[< d’opérateur (Set) (STL/CLR)](#op_lt)|Détermine si un `set` objet est inférieur à un autre `set` objet.|
+|[opérateur<= (Set) (STL/CLR)](#op_lteq)|Détermine si un `set` objet est inférieur ou égal à un autre `set` objet.|
+|[operator== (set) (STL/CLR)](#op_eq)|Détermine si un `set` objet est égal à un autre `set` objet.|
+|[> d’opérateur (Set) (STL/CLR)](#op_gt)|Détermine si un `set` objet est supérieur à un autre `set` objet.|
+|[opérateur>= (Set) (STL/CLR)](#op_gteq)|Détermine si un `set` objet est supérieur ou égal à un autre `set` objet.|
 
 ## <a name="interfaces"></a>Interfaces
 
 |Interface|Description|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Dupliquer un objet.|
-|<xref:System.Collections.IEnumerable>|Séquence à travers les éléments.|
-|<xref:System.Collections.ICollection>|Maintenir le groupe d’éléments.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Séquence à travers des éléments dactylographes.|
-|<xref:System.Collections.Generic.ICollection%601>|Maintenir le groupe d’éléments dactylographes.|
-|Clé\<ITree,> de valeur|Maintenir le contenant générique.|
+|<xref:System.Collections.IEnumerable>|Séquencez les éléments.|
+|<xref:System.Collections.ICollection>|Conserver le groupe d’éléments.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Séquencez les éléments typés.|
+|<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|
+|ITree\<Key, Value>|Conserver le conteneur générique.|
 
 ## <a name="remarks"></a>Notes
 
-L’objet alloue et libère le stockage pour la séquence qu’il contrôle sous forme de nœuds individuels. Il insère des éléments dans un arbre (presque) équilibré qu’il garde ordonné en modifiant les liens entre les nœuds, jamais en copiant le contenu d’un nœud à l’autre. Cela signifie que vous pouvez insérer et supprimer les éléments librement sans déranger les éléments restants.
+L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels. Elle insère des éléments dans une arborescence (quasi) équilibrée qu’elle continue de trier en modifiant les liens entre les nœuds, jamais en copiant le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber les éléments restants.
 
-L’objet commande la séquence qu’il contrôle en appelant un objet délégué stocké de l’ensemble de [type: :key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stocké lorsque vous construisez l’ensemble; si vous ne spécifiez `operator<(key_type, key_type)`aucun objet délégué, la valeur par défaut est la comparaison . Vous accédez à cet objet stocké en appelant l’ensemble de fonction du membre [: :key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.
+L’objet trie la séquence qu’il contrôle en appelant un objet délégué stocké de type [set :: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stocké lors de la construction du jeu ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)` . Vous accédez à cet objet stocké en appelant la fonction membre [set :: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md) `()` .
 
-Un tel objet délégué doit imposer un ordre strict faible sur les touches de type [ensemble::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Cela signifie, pour `X` deux `Y`clés et :
+Un tel objet délégué doit imposer un classement faible strict sur les clés de type [set :: KEY_TYPE (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Cela signifie, pour deux clés `X` et `Y` :
 
-`key_comp()(X, Y)`retourne le même résultat Boolean à chaque appel.
+`key_comp()(X, Y)`retourne le même résultat booléen pour chaque appel.
 
-Si `key_comp()(X, Y)` c’est `key_comp()(Y, X)` vrai, alors doit être faux.
+Si `key_comp()(X, Y)` a la valeur true, `key_comp()(Y, X)` doit avoir la valeur false.
 
-Si `key_comp()(X, Y)` c’est `X` vrai, alors `Y`on dit qu’il est commandé avant .
+Si `key_comp()(X, Y)` a la valeur true, `X` est dit être trié avant `Y` .
 
-Si `!key_comp()(X, Y) && !key_comp()(Y, X)` c’est `X` `Y` vrai, alors et on dit avoir une commande équivalente.
+Si `!key_comp()(X, Y) && !key_comp()(Y, X)` a la valeur true, `X` et `Y` sont considérés comme ayant un ordre équivalent.
 
-Pour tout `X` élément `Y` qui précède dans `key_comp()(Y, X)` la séquence contrôlée, est faux. (Pour l’objet délégué par défaut, les clés ne diminuent jamais en valeur.) Contrairement à l’ensemble de `set` classe de modèle , un objet de classe de modèle ne nécessite pas que les touches pour tous les éléments soient uniques. [set](../dotnet/set-stl-clr.md) (Deux touches ou plus peuvent avoir une commande équivalente.)
+Pour tout élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` est false. (Pour l’objet délégué par défaut, les clés ne diminuent jamais la valeur.) Contrairement au [jeu](../dotnet/set-stl-clr.md)de classes de modèle, un objet de classe de modèle `set` ne requiert pas que les clés pour tous les éléments soient uniques. (Au moins deux clés peuvent avoir un classement équivalent.)
 
-Chaque élément sert à la fois d’ey et de valeur. La séquence est représentée d’une manière qui permet la recherche, l’insertion et la suppression d’un élément arbitraire avec un certain nombre d’opérations proportionnelles au logarithme du nombre d’éléments de la séquence (temps logistique). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.
+Chaque élément sert à la fois de EY et de valeur. La séquence est représentée de façon à permettre la recherche, l’insertion et la suppression d’un élément arbitraire avec un nombre d’opérations proportionnel au logarithme du nombre d’éléments dans la séquence (temps logarithmique). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.
 
-Un ensemble prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez marcher vers des éléments adjacents étant donné un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud de tête spécial correspond à l’itérateur retourné par [set ::fin (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Vous pouvez décroisser cet itérateur pour atteindre le dernier élément de la séquence contrôlée, si présent. Vous pouvez incrémenter un itérateur de set pour atteindre le `end()`nœud de tête, et il sera alors comparer égal à . Mais vous ne pouvez pas déreférencer l’itérateur retourné par `end()`.
+Un jeu prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez effectuer un pas à pas vers des éléments adjacents en fonction d’un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud principal spécial correspond à l’itérateur retourné par [set :: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` . Vous pouvez décrémenter cet itérateur pour atteindre le dernier élément de la séquence contrôlée, le cas échéant. Vous pouvez incrémenter un itérateur de jeu pour atteindre le nœud principal, et il comparera alors égal à `end()` . Toutefois, vous ne pouvez pas déréférencer l’itérateur retourné par `end()` .
 
-Notez que vous ne pouvez pas vous référer à un élément défini directement compte tenu de sa position numérique - qui nécessite un itérateur d’accès aléatoire.
+Notez que vous ne pouvez pas faire référence à un élément d’ensemble directement en fonction de sa position numérique, qui requiert un itérateur à accès aléatoire.
 
-Un itérateur défini stocke une poignée à son nœud établi associé, qui à son tour stocke une poignée à son conteneur associé. Vous ne pouvez utiliser des itérateurs qu’avec leurs objets conteneurs associés. Un itérateur défini reste valide tant que son nœud défini associé est associé à un certain ensemble. En outre, un itérateur valide est reportable - vous pouvez l’utiliser pour accéder ou modifier la valeur `end()`de l’élément qu’il désigne - tant qu’il n’est pas égal à .
+Un itérateur Set stocke un handle vers son nœud Set associé, qui à son tour stocke un handle vers son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec leurs objets conteneur associés. Un itérateur défini reste valide tant que son nœud Set associé est associé à un ensemble. En outre, un itérateur valide est déréférençable. vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne, tant qu’il n’est pas égal à `end()` .
 
-L’effacement ou la suppression d’un élément appelle le destructeur pour sa valeur stockée. La destruction du conteneur efface tous les éléments. Ainsi, un conteneur dont le type d’élément est une classe d’arbitres garantit qu’aucun élément ne surviv au conteneur. Notez, cependant, qu’un conteneur de poignées ne détruit *pas* ses éléments.
+L’effacement ou la suppression d’un élément appelle le destructeur pour sa valeur stockée. La destruction du conteneur efface tous les éléments. Ainsi, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne se trouve dans le conteneur. Notez, toutefois, qu’un conteneur de handles ne détruit *pas* ses éléments.
 
 ## <a name="members"></a>Membres
 
-## <a name="setbegin-stlclr"></a><a name="begin"></a>set::begin (STL/CLR)
+## <a name="setbegin-stlclr"></a><a name="begin"></a>Set :: Begin (STL/CLR)
 
 Désigne le début de la séquence contrôlée.
 
@@ -236,7 +236,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un itérateur bidirectionnel qui désigne le premier élément de la séquence contrôlée, ou juste au-delà de la fin d’une séquence vide. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur bidirectionnel qui désigne le premier élément de la séquence contrôlée, ou juste après la fin d’une séquence vide. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -272,7 +272,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="setclear-stlclr"></a><a name="clear"></a>set::clear (STL/CLR)
+## <a name="setclear-stlclr"></a><a name="clear"></a>Set :: Clear (STL/CLR)
 
 Supprime tous les éléments.
 
@@ -284,7 +284,7 @@ void clear();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle effectivement [l’ensemble : : effacer (STL/CLR)](../dotnet/set-erase-stl-clr.md) `(` [set : : commencer (STL/CLR)](../dotnet/set-begin-stl-clr.md) `(),` set [::end (STL/CLR)](../dotnet/set-end-stl-clr.md)`())`. Vous l’utilisez pour vous assurer que la séquence contrôlée est vide.
+La fonction membre appelle effectivement [set :: Erase (STL/CLR)](../dotnet/set-erase-stl-clr.md) `(` [set :: Begin (STL/CLR)](../dotnet/set-begin-stl-clr.md) `(),` [set :: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `())` . Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -330,7 +330,7 @@ a b
 size() = 0
 ```
 
-## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>set::const_iterator (STL/CLR)
+## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>Set :: const_iterator (STL/CLR)
 
 Type d'un itérateur constant pour la séquence contrôlée.
 
@@ -342,7 +342,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de `T2` type non spécifié qui peut servir d’itérateur bidirectionnel constant pour la séquence contrôlée.
+Le type décrit un objet de type non spécifié `T2` qui peut servir d’itérateur bidirectionnel constant pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -372,7 +372,7 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>set::const_reference (STL/CLR)
+## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>Set :: const_reference (STL/CLR)
 
 Type d'une référence constante à un élément.
 
@@ -417,9 +417,9 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>set::const_reverse_iterator (STL/CLR)
+## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>Set :: const_reverse_iterator (STL/CLR)
 
-Le type d’un itérateur inverse constant pour la séquence contrôlée.
+Type d’un itérateur inverse constant pour la séquence contrôlée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -429,7 +429,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de `T4` type non spécifié qui peut servir d’itérateur inverse constant pour la séquence contrôlée.
+Le type décrit un objet de type non spécifié `T4` qui peut servir d’itérateur inverse constant pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -459,7 +459,7 @@ int main()
 c b a
 ```
 
-## <a name="setcount-stlclr"></a><a name="count"></a>set::count (STL/CLR)
+## <a name="setcount-stlclr"></a><a name="count"></a>Set :: Count (STL/CLR)
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -476,7 +476,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie le nombre d’éléments dans la séquence contrôlée qui ont une commande équivalente avec *clé*. Vous l'utilisez pour déterminer le nombre d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre retourne le nombre d’éléments dans la séquence contrôlée qui ont un classement équivalent avec la *clé*. Vous l'utilisez pour déterminer le nombre d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -512,9 +512,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>set::difference-type (STL/CLR)
+## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>Set ::d ifference_type (STL/CLR)
 
-Les types d’une distance signée entre deux éléments.
+Types d’une distance signée entre deux éléments.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -524,7 +524,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un nombre d’éléments peut-être négatif.
+Le type décrit un nombre d’éléments éventuellement négatifs.
 
 ### <a name="example"></a>Exemple
 
@@ -567,7 +567,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="setempty-stlclr"></a><a name="empty"></a>set::vide (STL/CLR)
+## <a name="setempty-stlclr"></a><a name="empty"></a>Set :: Empty (STL/CLR)
 
 Vérifie l'absence d'éléments.
 
@@ -579,7 +579,7 @@ bool empty();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true pour une séquence contrôlée vide. Il est équivalent à [l’ensemble::size (STL/CLR)](../dotnet/set-size-stl-clr.md)`() == 0`. Vous l’utilisez pour tester si l’ensemble est vide.
+La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle équivaut à [set :: Size (STL/CLR)](../dotnet/set-size-stl-clr.md) `() == 0` . Vous l’utilisez pour tester si le jeu est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -619,7 +619,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="setend-stlclr"></a><a name="end"></a>set::fin (STL/CLR)
+## <a name="setend-stlclr"></a><a name="end"></a>Set :: end (STL/CLR)
 
 Désigne la fin de la séquence contrôlée.
 
@@ -631,7 +631,7 @@ iterator end();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un itérateur bidirectionnel qui pointe juste au-delà de la fin de la séquence contrôlée. Vous l’utilisez pour obtenir un itérateur qui désigne la fin de la séquence contrôlée; son statut ne change pas si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur bidirectionnel qui pointe juste après la fin de la séquence contrôlée. Vous l’utilisez pour obtenir un itérateur qui désigne la fin de la séquence contrôlée ; son état ne change pas si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -668,7 +668,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>set::equal_range (STL/CLR)
+## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>Set :: equal_range (STL/CLR)
 
 Recherche une plage qui correspond à une clé spécifiée.
 
@@ -685,7 +685,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie une `cliext::pair<iterator, iterator>(` paire d’itérateurs [ensemble::lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [ensemble::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)`(key))`. Vous l’utilisez pour déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(` [set :: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [set :: upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md) `(key))` . Vous l’utilisez pour déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -728,7 +728,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="seterase-stlclr"></a><a name="erase"></a>set::erase (STL/CLR)
+## <a name="seterase-stlclr"></a><a name="erase"></a>Set :: Erase (STL/CLR)
 
 Supprime les éléments placés aux positions spécifiées.
 
@@ -742,27 +742,27 @@ size_type erase(key_type key)
 
 #### <a name="parameters"></a>Paramètres
 
-*Première*<br/>
-Début de la portée à effacer.
+*first*<br/>
+Début de la plage à effacer.
 
 *key*<br/>
-Valeur clé à effacer.
+Valeur de clé à effacer.
 
-*Dernière*<br/>
+*last*<br/>
 Fin de la plage à effacer.
 
-*Où*<br/>
+*where*<br/>
 Élément à effacer.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction de membre supprime l’élément de la séquence contrôlée indiquée par *l’endroit où,* et renvoie un itérateur qui désigne le premier élément restant au-delà de l’élément enlevé, ou [ensemble:::fin (STL/ CLR)](../dotnet/set-end-stl-clr.md) `()` si aucun élément de ce genre n’existe. Vous l’utilisez pour supprimer un seul élément.
+La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle*pointe, et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [set :: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer un seul élément.
 
-La deuxième fonction de membre supprime les éléments de`first` `last`la séquence contrôlée dans la plage [, ), et renvoie `end()` un itérateur qui désigne le premier élément restant au-delà de tout élément supprimé, ou si aucun élément de ce genre n’existe. Vous l’utilisez pour supprimer zéro ou plus d’éléments contigus.
+La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage [ `first` , `last` ) et retourne un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `end()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
 
-La fonction du troisième membre supprime tout élément de la séquence contrôlée dont la clé a une commande équivalente à *la clé,* et renvoie un nombre du nombre d’éléments supprimés. Vous l’utilisez pour supprimer et compter tous les éléments qui correspondent à une clé spécifiée.
+La troisième fonction membre supprime tout élément de la séquence contrôlée dont la clé a un classement équivalent à la *clé*, et retourne le nombre d’éléments supprimés. Vous l’utilisez pour supprimer et compter tous les éléments qui correspondent à une clé spécifiée.
 
-Chaque effacement d’élément prend du temps proportionnelle au logarithme du nombre d’éléments dans la séquence contrôlée.
+Chaque effacement d’élément prend du temps proportionnel au logarithme du nombre d’éléments dans la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -812,7 +812,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="setfind-stlclr"></a><a name="find"></a>set::find (STL/CLR)
+## <a name="setfind-stlclr"></a><a name="find"></a>Set :: Find (STL/CLR)
 
 Recherche un élément qui correspond à une clé spécifiée.
 
@@ -829,7 +829,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-Si au moins un élément de la séquence contrôlée a une commande équivalente avec *clé,* la fonction membre renvoie un itérateur désignant l’un de ces éléments; sinon il revient [set::fin (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`. Vous l’utilisez pour localiser un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
+Si au moins un élément de la séquence contrôlée a un classement équivalent avec la *clé*, la fonction membre retourne un itérateur désignant l’un de ces éléments ; dans le cas contraire, elle retourne [set :: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` . Vous l’utilisez pour rechercher un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -868,9 +868,9 @@ find b = b
 find C = False
 ```
 
-## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>set::generic_container (STL/CLR)
+## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>Set :: generic_container (STL/CLR)
 
-Le type d’interface générique pour le conteneur.
+Type de l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -882,7 +882,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit l’interface générique pour cette classe de conteneurs de modèle.
+Le type décrit l’interface générique pour cette classe de conteneur de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -932,9 +932,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>set::generic_iterator (STL/CLR)
+## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>Set :: generic_iterator (STL/CLR)
 
-Le type d’itérateur pour une utilisation avec l’interface générique pour le conteneur.
+Type d’un itérateur à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -946,7 +946,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un itérateur générique qui peut être utilisé avec l’interface générique pour cette classe de conteneurs de modèle.
+Le type décrit un itérateur générique qui peut être utilisé avec l’interface générique pour cette classe de conteneur de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -988,9 +988,9 @@ a b c
 a
 ```
 
-## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>set::generic_reverse_iterator (STL/CLR)
+## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>Set :: generic_reverse_iterator (STL/CLR)
 
-Le type d’itérateur inversé pour une utilisation avec l’interface générique pour le conteneur.
+Type d’un itérateur inverse à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1002,7 +1002,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un itérateur inverse générique qui peut être utilisé avec l’interface générique pour cette classe de conteneurs de modèle.
+Le type décrit un itérateur inverse générique qui peut être utilisé avec l’interface générique pour cette classe de conteneur de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1044,9 +1044,9 @@ a b c
 c
 ```
 
-## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>set::generic_value (STL/CLR)
+## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>Set :: generic_value (STL/CLR)
 
-Le type d’élément à utiliser avec l’interface générique pour le conteneur.
+Type d’un élément à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1056,7 +1056,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un `GValue` objet de type qui décrit la valeur de l’élément stocké pour une utilisation avec l’interface générique pour cette classe de conteneurs de modèle.
+Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké à utiliser avec l’interface générique pour cette classe de conteneur de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1098,7 +1098,7 @@ a b c
 a
 ```
 
-## <a name="setinsert-stlclr"></a><a name="insert"></a>set::insert (STL/CLR)
+## <a name="setinsert-stlclr"></a><a name="insert"></a>Set :: Insert (STL/CLR)
 
 Ajoute des éléments.
 
@@ -1114,34 +1114,34 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 
 #### <a name="parameters"></a>Paramètres
 
-*Première*<br/>
+*first*<br/>
 Début de la plage à insérer.
 
-*Dernière*<br/>
+*last*<br/>
 Fin de la plage à insérer.
 
 *Oui*<br/>
 Énumération à insérer.
 
-*Val*<br/>
-Valeur clé à insérer.
+*multiples*<br/>
+Valeur de clé à insérer.
 
-*Où*<br/>
-Où dans le récipient à insérer (indice seulement).
+*where*<br/>
+Où dans le conteneur à insérer (hint uniquement).
 
 ### <a name="remarks"></a>Notes
 
-Chacune des fonctions du membre insère une séquence spécifiée par les opérandes restantes.
+Chacune des fonctions membres insère une séquence spécifiée par les opérandes restants.
 
-La première fonction de membre s’efforce d’insérer `X`un élément avec la valeur *val*, et retourne une paire de valeurs . S’il `X.second` `X.first` est vrai, désigne l’élément nouvellement inséré; désigne `X.first` autrement un élément avec une commande équivalente qui existe déjà et aucun nouvel élément n’est inséré. Vous l’utilisez pour insérer un seul élément.
+La première fonction membre s’efforce d’insérer un élément avec la valeur *Val*et retourne une paire de valeurs `X` . Si `X.second` a la valeur true, `X.first` désigne l’élément nouvellement inséré ; sinon, `X.first` désigne un élément avec un classement équivalent qui existe déjà et aucun nouvel élément n’est inséré. Vous l’utilisez pour insérer un élément unique.
 
-La deuxième fonction de membre insère un élément avec la valeur *val*, en utilisant *où* comme un indice (pour améliorer les performances), et renvoie un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un seul élément qui pourrait être adjacent à un élément que vous connaissez.
+La deuxième fonction membre insère un élément avec la valeur *Val*, en utilisant *Where* comme indicateur (pour améliorer les performances) et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique qui peut être adjacent à un élément que vous connaissez.
 
-La fonction du troisième membre`first` `last`insère la séquence [, ). Vous l’utilisez pour insérer zéro ou plusieurs éléments copiés à partir d’une autre séquence.
+La troisième fonction membre insère la séquence [ `first` , `last` ). Vous l’utilisez pour insérer zéro, un ou plusieurs éléments copiés à partir d’une autre séquence.
 
-La fonction de quatrième membre insère la séquence désignée par la *droite*. Vous l’utilisez pour insérer une séquence décrite par un enumérateur.
+La quatrième fonction membre insère la séquence désignée par la *droite*. Vous l’utilisez pour insérer une séquence décrite par un énumérateur.
 
-Chaque insertion d’élément prend du temps proportionnelle au logarithme du nombre d’éléments dans la séquence contrôlée. L’insertion peut se produire dans le temps constant amorti, cependant, étant donné un indice qui désigne un élément adjacent au point d’insertion.
+Chaque insertion d’élément prend un temps proportionnel au logarithme du nombre d’éléments dans la séquence contrôlée. L’insertion peut se produire dans le temps constant amorti, en fonction d’une indication qui désigne un élément adjacent au point d’insertion.
 
 ### <a name="example"></a>Exemple
 
@@ -1214,7 +1214,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="setiterator-stlclr"></a><a name="iterator"></a>set::iterator (STL/CLR)
+## <a name="setiterator-stlclr"></a><a name="iterator"></a>Set :: iterator (STL/CLR)
 
 Type d'un itérateur pour la séquence contrôlée.
 
@@ -1226,7 +1226,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de `T1` type non spécifié qui peut servir d’itérateur bidirectionnel pour la séquence contrôlée.
+Le type décrit un objet de type non spécifié `T1` qui peut servir d’itérateur bidirectionnel pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -1256,9 +1256,9 @@ int main()
 a b c
 ```
 
-## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>set::key_comp (STL/CLR)
+## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>Set :: key_comp (STL/CLR)
 
-Copie le délégué de commande pour deux clés.
+Copie le délégué de classement pour deux clés.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1268,7 +1268,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie le délégué de commande utilisé pour commander la séquence contrôlée. Vous l'utilisez pour comparer deux clés.
+La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Vous l'utilisez pour comparer deux clés.
 
 ### <a name="example"></a>Exemple
 
@@ -1315,9 +1315,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>set::key_compare (STL/CLR)
+## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>Set :: key_compare (STL/CLR)
 
-Le délégué de commande pour deux clés.
+Délégué de classement de deux clés.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1328,7 +1328,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme pour le délégué qui détermine l’ordre de ses arguments clés.
+Le type est un synonyme du délégué qui détermine l’ordre de ses arguments de clé.
 
 ### <a name="example"></a>Exemple
 
@@ -1375,7 +1375,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_type-stlclr"></a><a name="key_type"></a>set::key_type (STL/CLR)
+## <a name="setkey_type-stlclr"></a><a name="key_type"></a>Set :: key_type (STL/CLR)
 
 Type d'une clé de tri.
 
@@ -1387,7 +1387,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme pour le paramètre de modèle *Clé*.
+Le type est un synonyme de la *clé*de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1420,9 +1420,9 @@ int main()
 a b c
 ```
 
-## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>set::lower_bound (STL/CLR)
+## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>Set :: lower_bound (STL/CLR)
 
-Trouve le début de la plage qui correspond à une clé spécifiée.
+Recherche le début de la plage qui correspond à une clé spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1437,7 +1437,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre détermine `X` le premier élément de la séquence contrôlée qui a une commande équivalente à *la clé*. S’il n’existe pas de tel élément, il renvoie [le set ::fin (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; sinon il renvoie un itérateur qui désigne `X`. Vous l’utilisez pour localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre détermine le premier élément `X` de la séquence contrôlée qui a un classement équivalent à la *clé*. Si aucun élément de ce type n’existe, il retourne [set :: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` ; sinon, il retourne un itérateur qui désigne `X` . Vous l’utilisez pour localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -1477,7 +1477,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="setmake_value-stlclr"></a><a name="make_value"></a>set::make_value (STL/CLR)
+## <a name="setmake_value-stlclr"></a><a name="make_value"></a>Set :: make_value (STL/CLR)
 
 Construit un objet de valeur.
 
@@ -1490,11 +1490,11 @@ static value_type make_value(key_type key);
 #### <a name="parameters"></a>Paramètres
 
 *key*<br/>
-Valeur clé à utiliser.
+Valeur de clé à utiliser.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre `value_type` renvoie un objet dont la clé est *la clé*. Vous l’utilisez pour composer un objet adapté à une utilisation avec plusieurs autres fonctions de membre.
+La fonction membre retourne un `value_type` objet dont la clé est *clé*. Vous l’utilisez pour composer un objet pouvant être utilisé avec plusieurs autres fonctions membres.
 
 ### <a name="example"></a>Exemple
 
@@ -1523,7 +1523,7 @@ int main()
 a b c
 ```
 
-## <a name="setoperator-stlclr"></a><a name="op_as"></a>ensemble ::opérateur (STL/CLR)
+## <a name="setoperator-stlclr"></a><a name="op_as"></a>Set :: Operator = (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -1540,7 +1540,7 @@ Conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre copie *directement* l’objet, puis renvoie `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée à *droite*.
+L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
 ### <a name="example"></a>Exemple
 
@@ -1578,7 +1578,7 @@ a b c
 a b c
 ```
 
-## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>set::rbegin (STL/CLR)
+## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>Set :: rbegin (STL/CLR)
 
 Désigne le début de la séquence contrôlée inverse.
 
@@ -1590,7 +1590,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un itérateur inversé qui désigne le dernier élément de la séquence contrôlée, ou juste au-delà du début d’une séquence vide. Par conséquent, il désigne le `beginning` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur inverse qui désigne le dernier élément de la séquence contrôlée, ou juste après le début d’une séquence vide. Par conséquent, il désigne le `beginning` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -1626,7 +1626,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="setreference-stlclr"></a><a name="reference"></a>set::référence (STL/CLR)
+## <a name="setreference-stlclr"></a><a name="reference"></a>Set :: Reference (STL/CLR)
 
 Type d'une référence à un élément.
 
@@ -1671,7 +1671,7 @@ int main()
 a b c
 ```
 
-## <a name="setrend-stlclr"></a><a name="rend"></a>set::rend (STL/CLR)
+## <a name="setrend-stlclr"></a><a name="rend"></a>Set :: rend (STL/CLR)
 
 Désigne la fin de la séquence contrôlée inverse.
 
@@ -1683,7 +1683,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un itérateur inversé qui pointe juste au-delà du début de la séquence contrôlée. Par conséquent, il désigne le `end` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne la fin `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur inverse qui pointe juste après le début de la séquence contrôlée. Par conséquent, il désigne le `end` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne la fin `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -1720,7 +1720,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>set::reverse_iterator (STL/CLR)
+## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>Set :: reverse_iterator (STL/CLR)
 
 Type d'un itérateur inverse pour la séquence contrôlée.
 
@@ -1732,7 +1732,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de `T3` type non spécifié qui peut servir d’itérateur inversé pour la séquence contrôlée.
+Le type décrit un objet de type non spécifié `T3` qui peut servir d’itérateur inverse pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -1762,7 +1762,7 @@ int main()
 c b a
 ```
 
-## <a name="setset-stlclr"></a><a name="set"></a>set::set (STL/CLR)
+## <a name="setset-stlclr"></a><a name="set"></a>Set :: Set (STL/CLR)
 
 Construit un objet conteneur.
 
@@ -1785,67 +1785,67 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 #### <a name="parameters"></a>Paramètres
 
-*Première*<br/>
+*first*<br/>
 Début de la plage à insérer.
 
-*Dernière*<br/>
+*last*<br/>
 Fin de la plage à insérer.
 
-*Pred*<br/>
-Commande prédicate pour la séquence contrôlée.
+*prédit*<br/>
+Prédicat de classement pour la séquence contrôlée.
 
 *Oui*<br/>
 Objet ou plage à insérer.
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur:
+Le constructeur :
 
 `set();`
 
-initialise la séquence contrôlée sans éléments, avec la commande `key_compare()`par défaut prédicate . Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec la commande par défaut prédicate.
+Initialise la séquence contrôlée sans éléments, avec le prédicat de classement par défaut `key_compare()` . Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de classement par défaut.
 
-Le constructeur:
+Le constructeur :
 
 `explicit set(key_compare^ pred);`
 
-initialise la séquence contrôlée sans éléments, avec l’ordre *prédicat préd*. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec la commande spécifiée prédicate.
+Initialise la séquence contrôlée sans éléments, avec le prédicat de classement *prédit*. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de tri spécifié.
 
-Le constructeur:
+Le constructeur :
 
 `set(set<Key>% right);`
 
-initialise la séquence contrôlée avec`right.begin()`la `right.end()`séquence [, ), avec la commande par défaut prédicate. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet défini *droit*, avec la commande par défaut prédicate.
+Initialise la séquence contrôlée avec la séquence [ `right.begin()` , `right.end()` ), avec le prédicat de classement par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de jeu de *droite*, avec le prédicat de classement par défaut.
 
-Le constructeur:
+Le constructeur :
 
 `set(set<Key>^ right);`
 
-initialise la séquence contrôlée avec`right->begin()`la `right->end()`séquence [, ), avec la commande par défaut prédicate. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet défini *droit*, avec la commande par défaut prédicate.
+Initialise la séquence contrôlée avec la séquence [ `right->begin()` , `right->end()` ), avec le prédicat de classement par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de jeu de *droite*, avec le prédicat de classement par défaut.
 
-Le constructeur:
+Le constructeur :
 
 `template<typename InIter> set(InIter first, InIter last);`
 
-initialise la séquence contrôlée avec`first`la `last`séquence [, ), avec la commande par défaut prédicate. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec la commande par défaut prédicate.
+Initialise la séquence contrôlée avec la séquence [ `first` , `last` ), avec le prédicat de classement par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de classement par défaut.
 
-Le constructeur:
+Le constructeur :
 
 `template<typename InIter> set(InIter first, InIter last, key_compare^ pred);`
 
-initialise la séquence contrôlée avec`first`la `last`séquence [, ), avec la commande prédicate *préd*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec la commande spécifiée prédicate.
+Initialise la séquence contrôlée avec la séquence [ `first` , `last` ), avec le prédicat de classement *prédit*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié.
 
-Le constructeur:
+Le constructeur :
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-initialise la séquence contrôlée avec la séquence désignée par le *droit*d’énumérateur, avec la commande par défaut prédicate. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un enumérateur, avec la commande par défaut prédicate.
+Initialise la séquence contrôlée avec la séquence désignée par l’énumérateur à *droite*, avec le prédicat de classement par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri par défaut.
 
-Le constructeur:
+Le constructeur :
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-initialise la séquence contrôlée avec la séquence désignée par le *droit*d’énumérateur, avec le prédicat de commande *préd*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un enumérateur, avec la commande spécifiée prédicate.
+Initialise la séquence contrôlée avec la séquence désignée par le *droit*d’énumérateur, avec le prédicat de classement *prédit*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -1933,7 +1933,7 @@ c b a
 a b c
 ```
 
-## <a name="setsize-stlclr"></a><a name="size"></a>ensemble::taille (STL/CLR)
+## <a name="setsize-stlclr"></a><a name="size"></a>Set :: Size (STL/CLR)
 
 Compte le nombre d'éléments.
 
@@ -1945,7 +1945,7 @@ size_type size();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si tout ce qui vous tient à cœur est de savoir si la séquence a la taille non zéro, voir [l’ensemble::vide (STL/CLR)](../dotnet/set-empty-stl-clr.md)`()`.
+La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [set :: Empty (STL/CLR)](../dotnet/set-empty-stl-clr.md) `()` .
 
 ### <a name="example"></a>Exemple
 
@@ -1987,9 +1987,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="setsize_type-stlclr"></a><a name="size_type"></a>set::size_type (STL/CLR)
+## <a name="setsize_type-stlclr"></a><a name="size_type"></a>Set :: size_type (STL/CLR)
 
-Le type de distance signée entre deux éléments.
+Type d’une distance signée entre deux éléments.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2035,7 +2035,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="setswap-stlclr"></a><a name="swap"></a>set::swap (STL/CLR)
+## <a name="setswap-stlclr"></a><a name="swap"></a>Set :: swap (STL/CLR)
 
 Échange le contenu de deux conteneurs.
 
@@ -2052,7 +2052,7 @@ Conteneur avec lequel échanger le contenu.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange les séquences contrôlées entre `this` et à *droite*. Il le fait en temps constant et il ne fait aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
+La fonction membre échange les séquences contrôlées entre **`this`** et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
 
 ### <a name="example"></a>Exemple
 
@@ -2103,9 +2103,9 @@ d e f
 a b c
 ```
 
-## <a name="setto_array-stlclr"></a><a name="to_array"></a>set::to_array (STL/CLR)
+## <a name="setto_array-stlclr"></a><a name="to_array"></a>Set :: to_array (STL/CLR)
 
-Copie la séquence contrôlée à un nouveau tableau.
+Copie la séquence contrôlée dans un nouveau tableau.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2115,7 +2115,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie un tableau contenant la séquence contrôlée. Vous l’utilisez pour obtenir une copie de la séquence contrôlée sous forme de tableau.
+La fonction membre retourne un tableau contenant la séquence contrôlée. Vous l’utilisez pour obtenir une copie de la séquence contrôlée sous forme de tableau.
 
 ### <a name="example"></a>Exemple
 
@@ -2153,9 +2153,9 @@ a b c d
 a b c
 ```
 
-## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>set::upper_bound (STL/CLR)
+## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>Set :: upper_bound (STL/CLR)
 
-Trouve la fin de la plage qui correspond à une clé spécifiée.
+Recherche la fin de la plage qui correspond à une clé spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2170,7 +2170,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre détermine `X` le dernier élément de la séquence contrôlée qui a une commande équivalente à *la clé*. S’il n’existe pas `X` de tel élément, ou s’il s’agit du dernier élément de la séquence contrôlée, il renvoie [le set ::fin (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; sinon il renvoie un itérateur qui `X`désigne le premier élément au-delà . Vous l’utilisez pour localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre détermine le dernier élément `X` de la séquence contrôlée qui a un classement équivalent à la *clé*. Si aucun élément de ce type n’existe, ou si `X` est le dernier élément de la séquence contrôlée, il retourne [set :: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` ; sinon, il retourne un itérateur qui désigne le premier élément au-delà de `X` . Vous l’utilisez pour localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -2210,9 +2210,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>set::value_comp (STL/CLR)
+## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>Set :: value_comp (STL/CLR)
 
-Copie le délégué de commande pour deux valeurs d’élément.
+Copie le délégué de classement pour deux valeurs d’élément.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2222,7 +2222,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre renvoie le délégué de commande utilisé pour commander la séquence contrôlée. Vous l’utilisez pour comparer deux valeurs d’élément.
+La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Vous l’utilisez pour comparer deux valeurs d’éléments.
 
 ### <a name="example"></a>Exemple
 
@@ -2254,9 +2254,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>set::value_compare (STL/CLR)
+## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>Set :: value_compare (STL/CLR)
 
-Le délégué de commande pour deux valeurs d’élément.
+Délégué de classement pour deux valeurs d’élément.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2267,7 +2267,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>Notes
 
-Le type est synonyme pour le délégué qui détermine la commande de ses arguments de valeur.
+Le type est un synonyme du délégué qui détermine l’ordre de ses arguments de valeur.
 
 ### <a name="example"></a>Exemple
 
@@ -2299,7 +2299,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>set::value_type (STL/CLR)
+## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>Set :: value_type (STL/CLR)
 
 Type d’un élément.
 
@@ -2344,9 +2344,9 @@ int main()
 a b c
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_neq"></a>opérateur! (ensemble) (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_neq"></a>Operator ! = (Set) (STL/CLR)
 
-Liste pas comparaison égale.
+Comparaison de liste non équivalente.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2358,7 +2358,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2366,7 +2366,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction `!(left == right)`opérateur revient . Vous l’utilisez pour tester si *la gauche* n’est pas commandée de la même façon que *droite* lorsque les deux ensembles sont comparés élément par élément.
+La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas ordonné de la *même manière que si les* deux jeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2414,7 +2414,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>(ensemble)&lt; (STL/CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>opérateur &lt; (Set) (STL/CLR)
 
 Liste inférieure à la comparaison.
 
@@ -2428,7 +2428,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2436,7 +2436,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction opérateur retourne vrai si, pour la position `i` la plus basse pour laquelle `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Sinon, il `left->size() < right->size()` retourne Vous l’utilisez pour tester si *la gauche* est commandée avant *à droite* lorsque les deux ensembles sont comparés élément par élément.
+La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, il retourne `left->size() < right->size()` que vous l’utilisez pour vérifier si *right* *Left* est ordonné avant le moment où les deux jeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2484,9 +2484,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>(ensemble)&lt;(STL/CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>opérateur &lt; = (Set) (STL/CLR)
 
-Liste moins ou comparaison égale.
+Liste des comparaisons inférieures ou égales.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2498,7 +2498,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2506,7 +2506,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction `!(right < left)`opérateur revient . Vous l’utilisez pour tester si *la gauche* n’est pas commandée après *la droite* lorsque les deux ensembles sont comparés élément par élément.
+La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas trié après *le* moment où les deux jeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2554,9 +2554,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_eq"></a>(ensemble) (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_eq"></a>opérateur = = (Set) (STL/CLR)
 
-Liste comparaison égale.
+Comparaison d’égalité de liste.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2568,7 +2568,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2576,7 +2576,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction opérateur retourne vrai seulement si *left* les séquences contrôlées par gauche `i` `left[i] ==` `right[i]`et *droite* ont la même longueur et, pour chaque position , . Vous l’utilisez pour tester si *la gauche* est commandée de la même façon que *droite* lorsque les deux ensembles sont comparés élément par élément.
+La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i` , `left[i] ==` `right[i]` . Vous l’utilisez pour vérifier si *Left* est *ordonné de la même manière que* si les deux jeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2624,7 +2624,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>(ensemble)&gt; (STL/CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>opérateur &gt; (Set) (STL/CLR)
 
 Liste supérieure à la comparaison.
 
@@ -2638,7 +2638,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2646,7 +2646,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction `right` `<` `left`opérateur revient . Vous l’utilisez pour tester si *la gauche* est commandée après *droite* lorsque les deux ensembles sont comparés élément par élément.
+La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour tester si *Left* est trié après *Right* lorsque les deux jeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2694,9 +2694,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>(ensemble)&gt;(STL/CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>opérateur &gt; = (Set) (STL/CLR)
 
-Liste plus grande que la comparaison plus élevée ou égale.
+Liste de comparaison supérieure ou égale à.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2708,7 +2708,7 @@ template<typename Key>
 
 #### <a name="parameters"></a>Paramètres
 
-*Gauche*<br/>
+*gauche*<br/>
 Conteneur de gauche à comparer.
 
 *Oui*<br/>
@@ -2716,7 +2716,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction `!(left < right)`opérateur revient . Vous l’utilisez pour tester si *la gauche* n’est pas commandée avant *à droite* lorsque les deux ensembles sont comparés élément par élément.
+La fonction opérateur retourne `!(left < right)` . Vous l’utilisez pour tester si *Left* n’est pas trié *avant le moment où* les deux jeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 

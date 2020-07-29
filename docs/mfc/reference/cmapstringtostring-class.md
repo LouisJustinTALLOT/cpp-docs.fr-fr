@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToString [MFC], RemoveKey
 - CMapStringToString [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: 544154569c50369b805ba296aa975849f245d4ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 28422c26ba2ca77657bfcf166592d2bc69169891
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370116"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223003"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString, classe
 
@@ -61,7 +61,7 @@ class CMapStringToString : public CObject
 
 ## <a name="members"></a>Membres
 
-Les fonctions `CMapStringToString` de membre sont similaires aux fonctions de membre de la classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Où que `CObject` vous voyiez un pointeur comme un paramètre de fonction de valeur de retour ou de « sortie », remplacez un pointeur à **l’omble**chevalier. Partout où `CObject` vous voyez un pointeur comme un paramètre de fonction "entrée", remplacez un pointeur à **l’omble**.
+Les fonctions membres de `CMapStringToString` sont similaires aux fonctions membres de la classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur sous la forme d’une valeur de retour ou d’un paramètre de fonction de « sortie », remplacez un pointeur par **`char`** . Partout où vous voyez un `CObject` pointeur en tant que paramètre de fonction « d’entrée », remplacez un pointeur par **`char`** .
 
 `BOOL CMapStringToString::Lookup(LPCTSTR<key>, CString&<rValue>) const;`
 
@@ -73,7 +73,7 @@ par exemple, se traduit par
 
 |Nom|Description|
 |----------|-----------------|
-|[CMapStringToString::CPair](#cpair)|Une structure imbriquée contenant une valeur clé et la valeur de l’objet à chaîne associé.|
+|[CMapStringToString::CPair](#cpair)|Structure imbriquée contenant une valeur de clé et la valeur de l’objet String associé.|
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
@@ -85,38 +85,38 @@ par exemple, se traduit par
 
 |Nom|Description|
 |----------|-----------------|
-|[CMapStringToString::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Retourne le nombre d’éléments dans cette carte.|
-|[CMapStringToString::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Détermine le nombre actuel d’éléments dans le tableau de hachage.|
-|[CMapStringToString::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Obtient le prochain élément pour itérer.|
-|[CMapStringToString::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|Retourne le nombre d’éléments dans cette carte.|
+|[CMapStringToString :: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Retourne le nombre d’éléments de ce plan.|
+|[CMapStringToString::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Détermine le nombre actuel d’éléments dans la table de hachage.|
+|[CMapStringToString::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|Obtient l’élément suivant pour l’itération.|
+|[CMapStringToString :: est à obtenir](../../mfc/reference/cmapstringtoob-class.md#getsize)|Retourne le nombre d’éléments de ce plan.|
 |[CMapStringToString::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|Retourne la position du premier élément.|
 |[CMapStringToString::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|Calcule la valeur de hachage d’une clé spécifiée.|
 |[CMapStringToString::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|Initialise la table de hachage.|
-|[CMapStringToString::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Tests pour l’état de la carte vide (pas d’éléments).|
-|[CMapStringToString::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Recherche vers le haut d’un pointeur vide basé sur la clé de pointeur de vide. La valeur de pointeur, et non l’entité à qui il pointe, est utilisée pour la comparaison de la clé.|
-|[CMapStringToString::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Renvoie une référence à la clé associée à la valeur clé spécifiée.|
-|[CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)|Obtient un pointeur `CString` à la première dans la carte.|
-|[CMapStringToString::PGetNextAssoc](#pgetnextassoc)|Obtient un pointeur `CString` à l’autre pour itérer.|
-|[CMapStringToString::PLookup](#plookup)|Retourne un pointeur à un `CString` dont la valeur correspond à la valeur spécifiée.|
-|[CMapStringToString::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Supprime tous les éléments de cette carte.|
+|[CMapStringToString :: IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|Teste la condition de mappage vide (aucun élément).|
+|[CMapStringToString :: Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Recherche un pointeur void basé sur la clé de pointeur void. La valeur du pointeur, pas l’entité vers laquelle elle pointe, est utilisée pour la comparaison de clés.|
+|[CMapStringToString :: LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|Retourne une référence à la clé associée à la valeur de clé spécifiée.|
+|[CMapStringToString ::P GetFirstAssoc](#pgetfirstassoc)|Obtient un pointeur vers le premier `CString` dans le mappage.|
+|[CMapStringToString ::P GetNextAssoc](#pgetnextassoc)|Obtient un pointeur vers le suivant `CString` pour l’itération.|
+|[CMapStringToString ::P la recherche](#plookup)|Retourne un pointeur vers un `CString` dont la valeur correspond à la valeur spécifiée.|
+|[CMapStringToString :: RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|Supprime tous les éléments de ce mappage.|
 |[CMapStringToString::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|Supprime un élément spécifié par une clé.|
-|[CMapStringToString::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Insère un élément dans la carte; remplace un élément existant si une clé correspondante est trouvée.|
+|[CMapStringToString :: SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|Insère un élément dans la classe Map ; remplace un élément existant si une clé correspondante est trouvée.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CMapStringToString::opérateur \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la `SetAt`carte — substitution de l’opérateur pour .|
+|[CMapStringToString ::, opérateur \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe Map : substitution d’opérateur pour `SetAt` .|
 
 ## <a name="remarks"></a>Notes
 
-`CMapStringToString` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour si une carte est **<<** stockée dans `Serialize` une archive, soit avec l’insertion surchargée () opérateur ou avec la fonction membre.
+`CMapStringToString` incorpore la macro `IMPLEMENT_SERIAL` pour prendre en charge la sérialisation et le vidage de ses éléments. Chaque élément est sérialisé à son tour si un mappage est stocké dans une archive, soit avec l’opérateur d’insertion () surchargé, soit **<<** avec la `Serialize` fonction membre.
 
-Si vous avez besoin `CString` -  `CString` d’un dépotoir d’éléments individuels, vous devez définir la profondeur du contexte de décharge à 1 ou plus.
+Si vous avez besoin d’un vidage d' `CString` -  `CString` éléments individuels, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
 
-Lorsqu’un `CMapStringToString` objet est supprimé ou lorsque ses `CString` éléments sont supprimés, les objets sont supprimés au besoin.
+Lorsqu’un `CMapStringToString` objet est supprimé ou que ses éléments sont supprimés, les `CString` objets sont supprimés, le cas échéant.
 
-Pour plus `CMapStringToString`d’informations sur , voir l’article [Collections](../../mfc/collections.md).
+Pour plus d’informations sur `CMapStringToString` , consultez l’article [Collections](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -126,31 +126,31 @@ Pour plus `CMapStringToString`d’informations sur , voir l’article [Collectio
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxcoll.h
+**En-tête :** afxcoll. h
 
 ## <a name="cmapstringtostringcpair"></a><a name="cpair"></a>CMapStringToString::CPair
 
-Contient une valeur clé et la valeur de l’objet à chaîne associé.
+Contient une valeur de clé et la valeur de l’objet String associé.
 
 ### <a name="remarks"></a>Notes
 
-Il s’agit d’une structure imbriquée au sein de la classe [CMapStringToString](../../mfc/reference/cmapstringtostring-class.md).
+Il s’agit d’une structure imbriquée dans la classe [CMapStringToString](../../mfc/reference/cmapstringtostring-class.md).
 
-La structure est composée de deux champs :
+La structure est composée de deux champs :
 
-- `key`La valeur réelle du type clé.
+- `key`Valeur réelle du type de clé.
 
-- `value`La valeur de l’objet associé.
+- `value`Valeur de l’objet associé.
 
-Il est utilisé pour stocker les valeurs de retour de [CMapStringToString::PLookup](#plookup), [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc), et [CMapStringToString::PGetNextAssoc](#pgetnextassoc).
+Il est utilisé pour stocker les valeurs de retour de [CMapStringToString ::P Lookup](#plookup), [CMapStringToString ::P getfirstassoc](#pgetfirstassoc)et [CMapStringToString ::P GetNextAssoc](#pgetnextassoc).
 
 ### <a name="example"></a>Exemple
 
-  Pour un exemple d’utilisation, voir l’exemple pour [CMapStringToString::PLookup](#plookup).
+  Pour obtenir un exemple d’utilisation, consultez l’exemple pour [CMapStringToString ::P Lookup](#plookup).
 
-## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc
+## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringToString ::P GetFirstAssoc
 
-Retourne la première entrée de l’objet de la carte.
+Retourne la première entrée de l’objet Map.
 
 ```
 const CPair* PGetFirstAssoc() const;
@@ -160,19 +160,19 @@ CPair* PGetFirstAssoc();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur à la première entrée dans la carte; voir [CMapStringToString::CPair](#cpair). Si la carte est vide, la valeur est NULL.
+Pointeur vers la première entrée dans le mappage ; consultez [CMapStringToString :: CPair](#cpair). Si le mappage est vide, la valeur est NULL.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction pour retourner un pointeur le premier élément de l’objet de carte.
+Appelez cette fonction pour retourner un pointeur vers le premier élément de l’objet Map.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]
 
-## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc
+## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringToString ::P GetNextAssoc
 
-Récupère l’élément de carte pointé par *pAssocRec*.
+Récupère l’élément de mappage pointé par *pAssocRec*.
 
 ```
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;
@@ -183,23 +183,23 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="parameters"></a>Paramètres
 
 *pAssoc*<br/>
-Points à une entrée de carte retournée par un précédent [appel PGetNextAssoc](#pgetnextassoc) ou [PGetFirstAssoc.](#pgetfirstassoc)
+Pointe vers une entrée de mappage retournée par un appel [PGetNextAssoc](#pgetnextassoc) ou [PGetFirstAssoc](#pgetfirstassoc) précédent.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur à la prochaine entrée dans la carte; voir [CMapStringToString::CPair](#cpair). Si l’élément est le dernier de la carte, la valeur est NULL.
+Pointeur vers l’entrée suivante dans le mappage ; consultez [CMapStringToString :: CPair](#cpair). Si l’élément est le dernier dans le mappage, la valeur est NULL.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour itérer à travers tous les éléments de la carte. Récupérez le premier élément `PGetFirstAssoc` avec un appel à et puis `PGetNextAssoc`itérer à travers la carte avec des appels successifs à .
+Appelez cette méthode pour itérer au sein de tous les éléments de la classe Map. Récupère le premier élément avec un appel à `PGetFirstAssoc` , puis itère au sein de la carte avec des appels successifs à `PGetNextAssoc` .
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc).
+  Consultez l’exemple pour [CMapStringToString ::P getfirstassoc](#pgetfirstassoc).
 
-## <a name="cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringToString::PLookup
+## <a name="cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringToString ::P la recherche
 
-Recherche la valeur cartographiée à une clé donnée.
+Recherche la valeur mappée à une clé donnée.
 
 ```
 const CPair* PLookup(LPCTSTR key) const;
@@ -210,15 +210,15 @@ CPair* PLookup(LPCTSTR key);
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
-Un pointeur à la clé pour l’élément à rechercher.
+Pointeur vers la clé de l’élément à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur à la clé spécifiée.
+Pointeur vers la clé spécifiée.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour rechercher un élément de carte avec une clé qui correspond exactement à la clé donnée.
+Appelez cette méthode pour rechercher un élément cartographique avec une clé qui correspond exactement à la clé donnée.
 
 ### <a name="example"></a>Exemple
 
@@ -226,6 +226,6 @@ Appelez cette méthode pour rechercher un élément de carte avec une clé qui c
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC Échantillon COLLECT](../../overview/visual-cpp-samples.md)<br/>
-[Classe CObject](../../mfc/reference/cobject-class.md)<br/>
+[Exemple de collecte MFC](../../overview/visual-cpp-samples.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

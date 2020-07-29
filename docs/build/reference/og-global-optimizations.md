@@ -14,16 +14,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 7dde5e97bd8690dc491916de8fb279e80a2c9ed4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180849"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215203"
 ---
 # <a name="og-global-optimizations"></a>`/Og`(Optimisations globales)
 
-Action déconseillée. Fournit des optimisations locales et globales, l’allocation automatique des registres et l’optimisation de la boucle. Nous vous recommandons d’utiliser à la place [ `/O1` (réduire la taille)](o1-o2-minimize-size-maximize-speed.md) ou [ `/O2` (maximiser la vitesse)](o1-o2-minimize-size-maximize-speed.md) .
+Obsolète. Fournit des optimisations locales et globales, l’allocation automatique des registres et l’optimisation de la boucle. Nous vous recommandons d’utiliser à la place [ `/O1` (réduire la taille)](o1-o2-minimize-size-maximize-speed.md) ou [ `/O2` (maximiser la vitesse)](o1-o2-minimize-size-maximize-speed.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,7 +49,7 @@ Les optimisations suivantes sont disponibles sous **`/Og`** :
 
 - Allocation automatique des registres
 
-   Cette optimisation permet au compilateur de stocker les variables et sous-expressions fréquemment utilisées dans les registres. le `register` mot clé est ignoré.
+   Cette optimisation permet au compilateur de stocker les variables et sous-expressions fréquemment utilisées dans les registres. le **`register`** mot clé est ignoré.
 
 - Optimisation de la boucle
 

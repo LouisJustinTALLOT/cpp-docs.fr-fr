@@ -1,5 +1,5 @@
 ---
-title: CMDIChildWnd, classe
+title: CMDIChildWnd (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CMDIChildWnd
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0acd42db19151001d9e292561ef20e469f9e14ea
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754578"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222964"
 ---
-# <a name="cmdichildwnd-class"></a>CMDIChildWnd, classe
+# <a name="cmdichildwnd-class"></a>CMDIChildWnd (classe)
 
 Fournit les fonctionnalités d'une fenêtre enfant d'interface multidocument (MDI) Windows, ainsi que des membres permettant de gérer la fenêtre.
 
@@ -45,53 +45,53 @@ class CMDIChildWnd : public CFrameWnd
 
 |Nom|Description|
 |----------|-----------------|
-|[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Construit un objet `CMDIChildWnd`.|
+|[CMDIChildWnd :: CMDIChildWnd](#cmdichildwnd)|Construit un objet `CMDIChildWnd`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CMDIChildWnd::Créer](#create)|Crée la fenêtre pour enfant `CMDIChildWnd` Windows MDI associée à l’objet.|
-|[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Retourne le cadre MDI parent de la fenêtre du client MDI.|
-|[CMDIChildWnd::MDIActivate](#mdiactivate)|Active cette fenêtre d’enfant MDI.|
-|[CMDIChildWnd::MDIDestroy](#mdidestroy)|Détruit cette fenêtre d’enfant MDI.|
-|[CMDIChildWnd::MDIMaximize](#mdimaximize)|Maximise cette fenêtre d’enfant MDI.|
-|[CMDIChildWnd::MDIRestore](#mdirestore)|Restaure cette fenêtre d’enfant MDI de la taille maximisée ou minimisée.|
-|[CMDIChildWnd::SetHandles](#sethandles)|Définit les poignées pour les ressources de menu et d’accélérateur.|
+|[CMDIChildWnd :: Create](#create)|Crée la fenêtre enfant MDI Windows associée à l' `CMDIChildWnd` objet.|
+|[CMDIChildWnd :: GetMDIFrame](#getmdiframe)|Retourne le frame MDI parent de la fenêtre cliente MDI.|
+|[CMDIChildWnd :: MDIActivate](#mdiactivate)|Active cette fenêtre enfant MDI.|
+|[CMDIChildWnd :: MDIDestroy](#mdidestroy)|Détruit cette fenêtre enfant MDI.|
+|[CMDIChildWnd :: MDIMaximize](#mdimaximize)|Agrandit cette fenêtre enfant MDI.|
+|[CMDIChildWnd :: MDIRestore](#mdirestore)|Restaure cette fenêtre enfant MDI à partir de la taille agrandie ou réduite.|
+|[CMDIChildWnd :: SetHandles](#sethandles)|Définit les descripteurs pour les ressources de menu et d’accélérateur.|
 
 ## <a name="remarks"></a>Notes
 
-Une fenêtre d’enfant MDI ressemble beaucoup à une fenêtre de cadre typique, sauf que la fenêtre de l’enfant MDI apparaît à l’intérieur d’une fenêtre de cadre MDI plutôt que sur le bureau. Une fenêtre pour enfants MDI n’a pas de barre de menu propre, mais partage plutôt le menu de la fenêtre cadre MDI. Le cadre modifie automatiquement le menu de l’image MDI pour représenter la fenêtre d’enfant MDI actuellement active.
+Une fenêtre enfant MDI ressemble à une fenêtre frame classique, à la différence près que la fenêtre enfant MDI apparaît à l’intérieur d’une fenêtre frame MDI plutôt que sur le bureau. Une fenêtre enfant MDI n’a pas de barre de menus propre, mais partage le menu de la fenêtre frame MDI. Le Framework change automatiquement le menu du frame MDI pour représenter la fenêtre enfant MDI active.
 
-Pour créer une fenêtre d’enfant MDI utile `CMDIChildWnd`pour votre application, tirer une classe de . Ajoutez des variables aux membres à la classe dérivée pour stocker des données spécifiques à votre application. Implémentez des fonctions membres de gestionnaire de messages et une table des messages dans la classe dérivée pour préciser ce qu'il advient quand des messages sont dirigés vers la fenêtre.
+Pour créer une fenêtre enfant MDI utile pour votre application, dérivez une classe de `CMDIChildWnd` . Ajoutez des variables membres à la classe dérivée pour stocker des données spécifiques à votre application. Implémentez des fonctions membres de gestionnaire de messages et une table des messages dans la classe dérivée pour préciser ce qu'il advient quand des messages sont dirigés vers la fenêtre.
 
-Il y a trois façons de construire une fenêtre pour enfants MDI :
+Il existe trois façons de construire une fenêtre enfant MDI :
 
-- Construisez-le `Create`directement en utilisant .
+- Construisez-le directement à l’aide de `Create` .
 
-- Construisez-le `LoadFrame`directement en utilisant .
+- Construisez-le directement à l’aide de `LoadFrame` .
 
-- Construisez-le indirectement à l’aide d’un modèle de document.
+- Créez-le indirectement par le biais d’un modèle de document.
 
-Avant d’appeler `Create` ou `LoadFrame`, vous devez construire l’objet de la fenêtre de cadre sur le tas à l’aide du **nouvel** opérateur C. Avant `Create` d’appeler, vous pouvez également enregistrer un cours de fenêtre avec la fonction globale [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) pour définir les styles d’icône et de classe pour le cadre.
+Avant d’appeler `Create` ou `LoadFrame` , vous devez construire l’objet de fenêtre frame sur le tas à l’aide de l' **`new`** opérateur C++. Avant `Create` d’appeler, vous pouvez également inscrire une classe de fenêtre à l’aide de la fonction globale [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) pour définir les styles de l’icône et de la classe du frame.
 
-Utilisez `Create` la fonction du membre pour passer les paramètres de création du cadre comme arguments immédiats.
+Utilisez la `Create` fonction membre pour passer les paramètres de création du frame comme arguments immédiats.
 
-`LoadFrame`nécessite moins `Create`d’arguments que , et récupère plutôt la plupart de ses valeurs par défaut à partir de ressources, y compris la légende du cadre, icône, table d’accélérateur, et le menu. Pour être `LoadFrame`accessible par , toutes ces ressources doivent avoir la même pièce d’identité de ressource (par exemple, IDR_MAINFRAME).
+`LoadFrame`requiert moins d’arguments que `Create` et récupère à la place la plupart de ses valeurs par défaut des ressources, y compris la légende, l’icône, la table d’accélérateur et le menu du frame. Pour être accessible par `LoadFrame` , toutes ces ressources doivent avoir le même ID de ressource (par exemple, IDR_MAINFRAME).
 
-Lorsqu’un `CMDIChildWnd` objet contient des vues et des documents, ils sont créés indirectement par le cadre au lieu directement par le programmeur. L’objet `CDocTemplate` orchestre la création du cadre, la création des vues contenantes et la connexion des vues au document approprié. Les paramètres du `CDocTemplate` constructeur spécifient les `CRuntimeClass` trois classes concernées (document, cadre et vue). Un `CRuntimeClass` objet est utilisé par le cadre pour créer dynamiquement de nouvelles images lorsqu’il est spécifié par l’utilisateur (par exemple, en utilisant la commande Fichier Nouveau ou la nouvelle commande de fenêtre MDI).
+Lorsqu’un `CMDIChildWnd` objet contient des vues et des documents, ceux-ci sont créés indirectement par le Framework plutôt que directement par le programmeur. L' `CDocTemplate` objet orchestre la création du frame, la création des vues conteneur et la connexion des vues au document approprié. Les paramètres du `CDocTemplate` constructeur spécifient le `CRuntimeClass` des trois classes impliquées (document, Frame et vue). Un `CRuntimeClass` objet est utilisé par l’infrastructure pour créer dynamiquement des frames lorsqu’ils sont spécifiés par l’utilisateur (par exemple, à l’aide de la commande fichier nouveau ou de la commande nouvelle fenêtre MDI).
 
-Une classe de fenêtre `CMDIChildWnd` de cadre dérivée doit être déclarée avec DECLARE_DYNCREATE afin que le mécanisme de RUNTIME_CLASS ci-dessus fonctionne correctement.
+Une classe de fenêtre frame dérivée de `CMDIChildWnd` doit être déclarée avec DECLARE_DYNCREATE pour que le mécanisme de RUNTIME_CLASS ci-dessus fonctionne correctement.
 
-La `CMDIChildWnd` classe hérite d’une `CFrameWnd`grande partie de sa mise en œuvre par défaut de . Pour une liste détaillée de ces fonctionnalités, veuillez consulter la description de classe [CFrameWnd.](../../mfc/reference/cframewnd-class.md) La `CMDIChildWnd` classe a les caractéristiques supplémentaires suivantes:
+La `CMDIChildWnd` classe hérite de la majeure partie de son implémentation par défaut de `CFrameWnd` . Pour obtenir une liste détaillée de ces fonctionnalités, reportez-vous à la description de la classe [CFrameWnd](../../mfc/reference/cframewnd-class.md) . La `CMDIChildWnd` classe possède les fonctionnalités supplémentaires suivantes :
 
-- En conjonction `CMultiDocTemplate` avec la `CMDIChildWnd` classe, plusieurs objets du même modèle de document partagent le même menu, économisant les ressources du système Windows.
+- Conjointement avec la `CMultiDocTemplate` classe, plusieurs `CMDIChildWnd` objets du même modèle de document partagent le même menu, ce qui enregistre les ressources système Windows.
 
-- Le menu actuel de la fenêtre pour enfants MDI remplace entièrement le menu de la fenêtre de cadre MDI, et la légende de la fenêtre d’enfant MDI actuellement active est ajoutée à la légende de la fenêtre de cadre MDI. Pour d’autres exemples de fonctions de fenêtre pour enfants MDI `CMDIFrameWnd` qui sont mises en œuvre en conjonction avec une fenêtre de cadre MDI, voir la description de classe.
+- Le menu de la fenêtre enfant MDI active remplace entièrement le menu de la fenêtre frame MDI, et la légende de la fenêtre enfant MDI active est ajoutée à la légende de la fenêtre frame MDI. Pour obtenir d’autres exemples de fonctions de fenêtre enfant MDI implémentées conjointement à une fenêtre frame MDI, consultez la description de la `CMDIFrameWnd` classe.
 
-N’utilisez pas l’opérateur de **suppression** de C POUR détruire une fenêtre de cadre. Utilisez `CWnd::DestroyWindow` à la place. La `CFrameWnd` mise `PostNcDestroy` en œuvre de supprimera l’objet CMD lorsque la fenêtre sera détruite. Lorsque l’utilisateur ferme la fenêtre `OnClose` du `DestroyWindow`cadre, le gestionnaire par défaut appelle .
+N’utilisez pas l' **`delete`** opérateur C++ pour détruire une fenêtre frame. Utilisez `CWnd::DestroyWindow` à la place. L' `CFrameWnd` implémentation de `PostNcDestroy` supprimera l’objet C++ lorsque la fenêtre sera détruite. Lorsque l’utilisateur ferme la fenêtre frame, le gestionnaire par défaut `OnClose` appellera `DestroyWindow` .
 
-Pour plus `CMDIChildWnd`d’informations sur , voir [Frame Windows](../../mfc/frame-windows.md).
+Pour plus d’informations sur `CMDIChildWnd` , consultez [fenêtres Frame](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -109,9 +109,9 @@ Pour plus `CMDIChildWnd`d’informations sur , voir [Frame Windows](../../mfc/fr
 
 **En-tête :** afxwin.h
 
-## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd
+## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd :: CMDIChildWnd
 
-Appelez pour `CMDIChildWnd` construire un objet.
+Appelez pour construire un `CMDIChildWnd` objet.
 
 ```
 CMDIChildWnd();
@@ -123,11 +123,11 @@ Appelez `Create` pour créer la fenêtre visible.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CMDIChildWnd::Créer](#create).
+  Consultez l’exemple pour [CMDIChildWnd :: Create](#create).
 
-## <a name="cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd::Créer
+## <a name="cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd :: Create
 
-Appelez cette fonction de membre pour créer une fenêtre `CMDIChildWnd` d’enfant Windows MDI et l’attacher à l’objet.
+Appelez cette fonction membre pour créer une fenêtre enfant MDI Windows et l’attacher à l' `CMDIChildWnd` objet.
 
 ```
 virtual BOOL Create(
@@ -141,23 +141,23 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszClassName (en)*<br/>
-Indique une chaîne de caractères à durée nulle qui nomme la classe Windows (une structure [WNDCLASS).](/windows/win32/api/winuser/ns-winuser-wndclassw) Le nom de la classe peut être n’importe quel nom enregistré auprès de la fonction globale [AfxRegisterWndClass.](application-information-and-management.md#afxregisterwndclass) Devrait être NULL `CMDIChildWnd`pour une norme .
+*lpszClassName*<br/>
+Pointe vers une chaîne de caractères se terminant par un caractère null qui nomme la classe Windows (structure [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) ). Le nom de la classe peut être n’importe quel nom enregistré avec la fonction globale [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) . Doit être NULL pour une norme `CMDIChildWnd` .
 
-*lpszWindowName (en)*<br/>
-Indique une chaîne de caractères non terminée qui représente le nom de fenêtre. Utilisé comme texte pour la barre de titre.
+*lpszWindowName*<br/>
+Pointe vers une chaîne de caractères se terminant par un caractère null qui représente le nom de la fenêtre. Utilisé comme texte pour la barre de titre.
 
-*dwStyle (en)*<br/>
-Spécifie les attributs de [style](../../mfc/reference/styles-used-by-mfc.md#window-styles) de fenêtre. Le style WS_CHILD est nécessaire.
+*dwStyle*<br/>
+Spécifie les attributs de [style](../../mfc/reference/styles-used-by-mfc.md#window-styles) de fenêtre. Le style de WS_CHILD est obligatoire.
 
-*Rect*<br/>
-Contient la taille et la position de la fenêtre. La `rectDefault` valeur permet à Windows de spécifier la taille et la position de la nouvelle `CMDIChildWnd`.
+*rectangulaire*<br/>
+Contient la taille et la position de la fenêtre. La `rectDefault` valeur permet à Windows de spécifier la taille et la position du nouvel `CMDIChildWnd` .
 
 *pParentWnd*<br/>
-Spécifie le parent de la fenêtre. Si NULL, la fenêtre d’application principale est utilisée.
+Spécifie le parent de la fenêtre. Si la valeur est NULL, la fenêtre principale de l’application est utilisée.
 
 *pContext*<br/>
-Spécifie une structure [CCreateContext.](../../mfc/reference/ccreatecontext-structure.md) Ce paramètre peut être NULL.
+Spécifie une structure [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Ce paramètre peut avoir la valeur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -165,9 +165,9 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-La fenêtre d’image d’enfant MDI actuellement active peut déterminer la légende de la fenêtre de cadre parent. Cette fonctionnalité est désactivée en éteignant le FWS_ADDTOTITLE morceau de style de la fenêtre de cadre enfant.
+La fenêtre frame enfant MDI active actuellement peut déterminer la légende de la fenêtre frame parente. Cette fonctionnalité est désactivée en désactivant le bit de style FWS_ADDTOTITLE de la fenêtre frame enfant.
 
-Le cadre appelle cette fonction de membre en réponse à une commande d’utilisateur pour créer une fenêtre d’enfant, et le cadre utilise le *paramètre pContext* pour connecter correctement la fenêtre de l’enfant à l’application. Lorsque vous `Create`appelez, *pContext* peut être NULL.
+L’infrastructure appelle cette fonction membre en réponse à une commande utilisateur pour créer une fenêtre enfant, et l’infrastructure utilise le paramètre *pContext* pour connecter correctement la fenêtre enfant à l’application. Quand vous appelez `Create` , *pContext* peut avoir la valeur null.
 
 ### <a name="example"></a>Exemple
 
@@ -183,9 +183,9 @@ Exemple 2 :
 
 [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]
 
-## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame
+## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd :: GetMDIFrame
 
-Appelez cette fonction pour retourner le cadre parent MDI.
+Appelez cette fonction pour retourner le frame parent MDI.
 
 ```
 CMDIFrameWnd* GetMDIFrame();
@@ -193,19 +193,19 @@ CMDIFrameWnd* GetMDIFrame();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur à la fenêtre de cadre parent MDI.
+Pointeur vers la fenêtre frame parente MDI.
 
 ### <a name="remarks"></a>Notes
 
-Le cadre retourné est deux `CMDIChildWnd` parents retirés de la et est le parent `CMDIChildWnd` de la fenêtre de type MDICLIENT qui gère l’objet. Appelez la fonction membre [GetParent](../../mfc/reference/cwnd-class.md#getparent) pour renvoyer le parent MDICLIENT immédiat de l’objet `CMDIChildWnd` comme pointeur temporaire. `CWnd`
+Le frame retourné est deux parents supprimés du `CMDIChildWnd` et est le parent de la fenêtre de type MdiClient qui gère l' `CMDIChildWnd` objet. Appelez la fonction membre [GetParent](../../mfc/reference/cwnd-class.md#getparent) pour retourner le `CMDIChildWnd` parent MdiClient immédiat de l’objet comme `CWnd` pointeur temporaire.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
+  Consultez l’exemple pour [CMDIFrameWnd :: MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu).
 
-## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd::MDIActivate
+## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd :: MDIActivate
 
-Appelez cette fonction de membre pour activer une fenêtre d’enfant MDI indépendamment de la fenêtre de cadre MDI.
+Appelez cette fonction membre pour activer une fenêtre enfant MDI indépendamment de la fenêtre frame MDI.
 
 ```cpp
 void MDIActivate();
@@ -213,15 +213,15 @@ void MDIActivate();
 
 ### <a name="remarks"></a>Notes
 
-Lorsque le cadre devient actif, la fenêtre de l’enfant qui a été activée pour la dernière fois sera également activée.
+Lorsque le frame devient actif, la fenêtre enfant qui a été activée pour la dernière fois est également activée.
 
 ### <a name="example"></a>Exemple
 
-  Voir l’exemple pour [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
+  Consultez l’exemple pour [CMDIFrameWnd :: GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup).
 
-## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy
+## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd :: MDIDestroy
 
-Appelez cette fonction de membre pour détruire une fenêtre d’enfant MDI.
+Appelez cette fonction membre pour détruire une fenêtre enfant MDI.
 
 ```cpp
 void MDIDestroy();
@@ -229,15 +229,15 @@ void MDIDestroy();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre enlève le titre de la fenêtre de l’enfant de la fenêtre du cadre et désactive la fenêtre de l’enfant.
+La fonction membre supprime le titre de la fenêtre enfant de la fenêtre frame et désactive la fenêtre enfant.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]
 
-## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize
+## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd :: MDIMaximize
 
-Appelez cette fonction de membre pour maximiser une fenêtre d’enfant MDI.
+Appelez cette fonction membre pour agrandir une fenêtre enfant MDI.
 
 ```cpp
 void MDIMaximize();
@@ -245,15 +245,15 @@ void MDIMaximize();
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’une fenêtre pour enfants est maximisée, Windows la resize pour que sa zone client remplisse la zone cliente de la fenêtre du cadre. Windows place le menu de contrôle de la fenêtre de l’enfant dans la barre de menu du cadre afin que l’utilisateur puisse restaurer ou fermer la fenêtre de l’enfant et ajoute le titre de la fenêtre de l’enfant au titre de la fenêtre de cadre.
+Quand une fenêtre enfant est agrandie, Windows la redimensionne pour que sa zone cliente remplisse la zone cliente de la fenêtre frame. Windows place le menu de contrôle de la fenêtre enfant dans la barre de menus du frame afin que l’utilisateur puisse restaurer ou fermer la fenêtre enfant et ajoute le titre de la fenêtre enfant au titre de la fenêtre frame.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]
 
-## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd::MDIRestore
+## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd :: MDIRestore
 
-Appelez cette fonction de membre pour restaurer une fenêtre d’enfant MDI de taille maximisée ou minimisée.
+Appelez cette fonction membre pour restaurer une fenêtre enfant MDI à partir de la taille agrandie ou réduite.
 
 ```cpp
 void MDIRestore();
@@ -263,9 +263,9 @@ void MDIRestore();
 
 [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]
 
-## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd::SetHandles
+## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd :: SetHandles
 
-Définit les poignées pour les ressources de menu et d’accélérateur.
+Définit les descripteurs pour les ressources de menu et d’accélérateur.
 
 ```cpp
 void SetHandles(
@@ -276,21 +276,21 @@ void SetHandles(
 ### <a name="parameters"></a>Paramètres
 
 *hMenu*<br/>
-Le manche d’une ressource de menu.
+Handle d’une ressource de menu.
 
-*hAccel (en)*<br/>
-Le manche d’une ressource d’accélérateur.
+*hAccel*<br/>
+Handle d’une ressource d’accélérateur.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction pour définir le menu et les ressources d’accélérateur utilisées par l’objet de fenêtre pour enfant MDI.
+Appelez cette fonction pour définir les ressources de menu et d’accélérateur utilisées par l’objet de fenêtre enfant MDI.
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC Échantillon MDI](../../overview/visual-cpp-samples.md)<br/>
-[MFC Échantillon MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
-[Échantillon MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
-[CFrameWnd, classe](../../mfc/reference/cframewnd-class.md)<br/>
+[Exemple MDI MFC](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Exemple MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [CMDIFrameWnd, classe](../../mfc/reference/cmdiframewnd-class.md)

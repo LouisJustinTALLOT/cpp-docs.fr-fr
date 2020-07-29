@@ -3,12 +3,12 @@ title: Microsoft::WRL::Details, espace de noms
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-ms.openlocfilehash: 4e8d2e5a2c7e6655674c4e965cd7222d930dff9a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 50208242d77d7b54951bcb44608f1a20b5147efc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213783"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223471"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details, espace de noms
 
@@ -24,58 +24,58 @@ namespace Microsoft::WRL::Details;
 
 ### <a name="classes"></a>Classes
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[ComPtrRef, classe](comptrref-class.md)|Représente une référence à un objet de type ComPtr\<T >.|
+|[ComPtrRef, classe](comptrref-class.md)|Représente une référence à un objet de type ComPtr \<T> .|
 |[ComPtrRefBase, classe](comptrrefbase-class.md)|Représente la classe de base pour la classe [ComPtrRef](comptrref-class.md) .|
-|[DontUseNewUseMake, classe](dontusenewusemake-class.md)|Empêche l’utilisation de l’opérateur `new` dans `RuntimeClass`. Par conséquent, vous devez utiliser la [fonction Make](make-function.md) à la place.|
+|[DontUseNewUseMake, classe](dontusenewusemake-class.md)|Empêche l’utilisation `new` de l’opérateur dans `RuntimeClass` . Par conséquent, vous devez utiliser la [fonction Make](make-function.md) à la place.|
 |[EventTargetArray, classe](eventtargetarray-class.md)|Représente un tableau de gestionnaires d’événements.|
 |[MakeAllocator, classe](makeallocator-class.md)|Alloue de la mémoire pour une classe activable, avec ou sans prise en charge de la référence faible.|
 |[ModuleBase, classe](modulebase-class.md)|Représente la classe de base des classes de [module](module-class.md) .|
-|[RemoveIUnknown, classe](removeiunknown-class.md)|Rend un type équivalent à un type basé sur `IUnknown`, mais qui a des méthodes de `QueryInterface`, `AddRef`et `Release` non virtuelles.|
+|[Removeiunknown,, classe](removeiunknown-class.md)|Rend un type équivalent à un `IUnknown` type basé sur, mais qui a des `QueryInterface` méthodes, et non virtuelles `AddRef` `Release` .|
 |[WeakReference, classe](weakreference-class.md)|Représente une *référence faible* qui peut être utilisée avec le Windows Runtime ou le com classique. Une référence faible représente un objet qui peut être accessible ou non.|
 
 ### <a name="structures"></a>Structures
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[ArgTraits, structure](argtraits-structure.md)|Déclare une interface de délégué spécifiée et une fonction membre anonyme qui a un nombre spécifié de paramètres.|
+|[ArgTraits (structure)](argtraits-structure.md)|Déclare une interface de délégué spécifiée et une fonction membre anonyme qui a un nombre spécifié de paramètres.|
 |[ArgTraitsHelper, structure](argtraitshelper-structure.md)|Permet de définir les caractéristiques communes des arguments de délégué.|
-|[BoolStruct, structure](boolstruct-structure.md)|Définit si un `ComPtr` gère la durée de vie d’un objet d’une interface. `BoolStruct` est utilisé en interne par l’opérateur [booltype, ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .|
+|[BoolStruct (structure)](boolstruct-structure.md)|Définit si un `ComPtr` gère la durée de vie des objets d’une interface. `BoolStruct`est utilisé en interne par l’opérateur [booltype, ()](comptr-class.md#operator-microsoft-wrl-details-booltype) .|
 |[CreatorMap, structure](creatormap-structure.md)|Contient des informations sur l’initialisation, l’inscription et l’annulation de l’inscription d’objets.|
-|[DerefHelper, structure](derefhelper-structure.md)|Représente un pointeur déréférencé vers le paramètre de modèle `T*`.|
-|[EnableIf, structure](enableif-structure.md)|Définit un membre de données du type spécifié par le deuxième paramètre de modèle si le premier paramètre de modèle prend la valeur `true`.|
-|[FactoryCache, structure](factorycache-structure.md)|Contient l’emplacement d’une fabrique de classe et d’une valeur qui identifie un Windows Runtime inscrit ou un objet de classe COM.|
-|[ImplementsBase, structure](implementsbase-structure.md)|Utilisé pour valider les types de paramètres de modèle dans la [structure Implements](implements-structure.md).|
-|[ImplementsHelper, structure](implementshelper-structure.md)|Aide à implémenter la structure [Implements](implements-structure.md) .|
+|[DerefHelper (structure)](derefhelper-structure.md)|Représente un pointeur déréférencé vers le `T*` paramètre de modèle.|
+|[EnableIf (structure)](enableif-structure.md)|Définit un membre de données du type spécifié par le deuxième paramètre de modèle si le premier paramètre de modèle prend la valeur **`true`** .|
+|[FactoryCache (structure)](factorycache-structure.md)|Contient l’emplacement d’une fabrique de classe et d’une valeur qui identifie un Windows Runtime inscrit ou un objet de classe COM.|
+|[ImplementsBase (structure)](implementsbase-structure.md)|Utilisé pour valider les types de paramètres de modèle dans la [structure Implements](implements-structure.md).|
+|[ImplementsHelper (structure)](implementshelper-structure.md)|Aide à implémenter la structure [Implements](implements-structure.md) .|
 |[InterfaceList, structure](interfacelist-structure.md)|Utilisé pour créer une liste récursive d’interfaces.|
-|[InterfaceListHelper, structure](interfacelisthelper-structure.md)|Génère un type de `InterfaceList` en appliquant de manière récursive les arguments de paramètre de modèle spécifiés.|
+|[InterfaceListHelper (structure)](interfacelisthelper-structure.md)|Génère un `InterfaceList` type en appliquant de manière récursive les arguments de paramètre de modèle spécifiés.|
 |[InterfaceTraits, structure](interfacetraits-structure.md)|Implémente les caractéristiques communes d’une interface.|
-|[InvokeHelper, structure](invokehelper-structure.md)|Fournit une implémentation de la méthode `Invoke()` basée sur le nombre et le type d’arguments spécifiés.|
-|[IsBaseOfStrict, structure](isbaseofstrict-structure.md)|Teste si un type est la base d'un autre.|
-|[IsSame, structure](issame-structure.md)|Teste si un type spécifié est le même qu’un autre type spécifié.|
+|[InvokeHelper (structure)](invokehelper-structure.md)|Fournit une implémentation de la `Invoke()` méthode basée sur le nombre et le type d’arguments spécifiés.|
+|[IsBaseOfStrict (structure)](isbaseofstrict-structure.md)|Teste si un type est la base d'un autre.|
+|[IsSame (structure)](issame-structure.md)|Teste si un type spécifié est le même qu’un autre type spécifié.|
 |[Nil, structure](nil-structure.md)|Utilisé pour indiquer un paramètre de modèle facultatif non spécifié.|
-|[RemoveReference, structure](removereference-structure.md)|Supprime la référence ou la caractéristique de référence rvalue du paramètre de modèle de classe spécifié.|
-|[RuntimeClassBase, structure](runtimeclassbase-structure.md)|Utilisé pour détecter les `RuntimeClass` dans la fonction [Make](make-function.md) .|
-|[RuntimeClassBaseT, structure](runtimeclassbaset-structure.md)|Fournit des méthodes d’assistance pour les opérations de `QueryInterface` et l’obtention des ID d’interface.|
-|[VerifyInheritanceHelper, structure](verifyinheritancehelper-structure.md)|Teste si une interface est dérivée d’une autre interface.|
-|[VerifyInterfaceHelper, structure](verifyinterfacehelper-structure.md)|Vérifie que l’interface spécifiée par le paramètre de modèle répond à certaines exigences.|
+|[RemoveReference (structure)](removereference-structure.md)|Supprime la référence ou la caractéristique de référence rvalue du paramètre de modèle de classe spécifié.|
+|[RuntimeClassBase, structure](runtimeclassbase-structure.md)|Utilisé pour détecter `RuntimeClass` dans la fonction [Make](make-function.md) .|
+|[RuntimeClassBaseT, structure](runtimeclassbaset-structure.md)|Fournit des méthodes d’assistance pour les `QueryInterface` opérations et l’obtention des ID d’interface.|
+|[VerifyInheritanceHelper (structure)](verifyinheritancehelper-structure.md)|Teste si une interface est dérivée d’une autre interface.|
+|[VerifyInterfaceHelper (structure)](verifyinterfacehelper-structure.md)|Vérifie que l’interface spécifiée par le paramètre de modèle répond à certaines exigences.|
 
 ### <a name="enumerations"></a>Énumérations
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[AsyncStatusInternal, énumération](asyncstatusinternal-enumeration.md)|Spécifie un mappage entre les énumérations internes pour l’état des opérations asynchrones et l’énumération `Windows::Foundation::AsyncStatus`.|
+|[AsyncStatusInternal (énumération)](asyncstatusinternal-enumeration.md)|Spécifie un mappage entre les énumérations internes pour l’état des opérations asynchrones et l' `Windows::Foundation::AsyncStatus` énumération.|
 
 ### <a name="functions"></a>Fonctions
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[ActivationFactoryCallback, fonction](activationfactorycallback-function.md)|Obtient la fabrique d’activation pour l’ID d’activation spécifié.|
-|[move, fonction](move-function.md)|Déplace l’argument spécifié d’un emplacement à un autre.|
-|[RaiseException, fonction](raiseexception-function.md)|Lève une exception dans le thread appelant.|
+|[Activationfactorycallback (fonction)](activationfactorycallback-function.md)|Obtient la fabrique d’activation pour l’ID d’activation spécifié.|
+|[Move, fonction](move-function.md)|Déplace l’argument spécifié d’un emplacement à un autre.|
+|[RaiseException fonction)](raiseexception-function.md)|Lève une exception dans le thread appelant.|
 |[Swap, fonction (WRL)](swap-function-wrl.md)|Échange les valeurs des deux arguments spécifiés.|
-|[TerminateMap, fonction](terminatemap-function.md)|Arrête les fabriques de classes dans le module spécifié.|
+|[Terminatemap, fonction)](terminatemap-function.md)|Arrête les fabriques de classes dans le module spécifié.|
 
 ## <a name="requirements"></a>Spécifications
 
@@ -85,5 +85,5 @@ namespace Microsoft::WRL::Details;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL, espace de noms](microsoft-wrl-namespace.md)<br/>
-[Microsoft::WRL::Wrappers, espace de noms](microsoft-wrl-wrappers-namespace.md)
+[Microsoft :: WRL, espace de noms](microsoft-wrl-namespace.md)<br/>
+[Microsoft :: WRL :: wrappers, espace de noms](microsoft-wrl-wrappers-namespace.md)

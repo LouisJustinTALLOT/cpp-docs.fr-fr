@@ -6,18 +6,18 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 04ba56bf4f134ac5e9b906f7f84563c00ffe1b96
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988109"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214865"
 ---
 # <a name="stlclr-containers"></a>STL/CLR, conteneurs
 
-La bibliothèque STL/CLR est constituée de conteneurs similaires à ceux de la C++ bibliothèque standard, mais elle s’exécute dans l’environnement géré de l' .NET Framework. Elle n’est pas mise à jour avec la bibliothèque standard réelle C++ et est conservée pour la prise en charge héritée.
+La bibliothèque STL/CLR est constituée de conteneurs similaires à ceux de la bibliothèque standard C++, mais elle s’exécute dans l’environnement géré de l' .NET Framework. Il n’est pas tenu à jour avec la bibliothèque standard C++ et est conservé pour la prise en charge héritée.
 
-Ce document fournit une vue d'ensemble des conteneurs dans STL/CLR, tels que les conditions requises pour les éléments conteneurs, les types d'éléments que vous pouvez insérer dans des conteneurs, et les problèmes de propriété avec les éléments des conteneurs. Le cas échéant, les différences entre C++ la bibliothèque standard native et STL/CLR sont mentionnées.
+Ce document fournit une vue d'ensemble des conteneurs dans STL/CLR, tels que les conditions requises pour les éléments conteneurs, les types d'éléments que vous pouvez insérer dans des conteneurs, et les problèmes de propriété avec les éléments des conteneurs. Le cas échéant, les différences entre la bibliothèque standard C++ native et STL/CLR sont mentionnées.
 
 ## <a name="requirements-for-container-elements"></a>Exigences pour les éléments de conteneurs
 
@@ -229,7 +229,7 @@ int main()
 
 Vous pouvez également insérer un type de valeur non encapsulé dans un conteneur STL/CLR. Un type valeur unboxed est un type valeur qui n’a pas été *converti* en type référence.
 
-Un élément de type valeur peut être l'un des types de valeurs standard, comme `int`, ou il peut s'agir d'un type défini par l'utilisateur, tel que `value class`. Pour plus d’informations, consultez [classes et structs](../extensions/classes-and-structs-cpp-component-extensions.md) .
+Un élément de type valeur peut être l’un des types de valeur standard, tel qu’un **`int`** , ou il peut être un type valeur défini par l’utilisateur, tel qu’un **`value class`** . Pour plus d’informations, consultez [classes et structs](../extensions/classes-and-structs-cpp-component-extensions.md) .
 
 #### <a name="example"></a>Exemple
 
@@ -312,4 +312,4 @@ Lorsque vous appelez une méthode clear ou erase d'un conteneur de handles d'obj
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

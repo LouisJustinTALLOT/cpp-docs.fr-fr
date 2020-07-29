@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToPtr [MFC], RemoveKey
 - CMapStringToPtr [MFC], SetAt
 ms.assetid: 1ac11143-eb0a-4511-a662-2df0d1d9005b
-ms.openlocfilehash: 0e722b305dad6595eb67b1a235c375d21f674353
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 26a606d5813a68b55d8fc555025ccef270a25766
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442604"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87223016"
 ---
 # <a name="cmapstringtoptr-class"></a>CMapStringToPtr, classe
 
@@ -53,7 +53,7 @@ class CMapStringToPtr : public CObject
 
 ## <a name="members"></a>Membres
 
-Les fonctions membres de `CMapStringToPtr` sont similaires aux fonctions membres de la classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un pointeur de `CObject` en tant que paramètre de fonction ou valeur de retour, substituez un pointeur à **void**.
+Les fonctions membres de `CMapStringToPtr` sont similaires aux fonctions membres de la classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CMapStringToOb` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur sous la forme d’un paramètre de fonction ou d’une valeur de retour, remplacez un pointeur par **`void`** .
 
 `BOOL CMapStringToPtr::Lookup( LPCTSTR <key>, void*& <rValue> ) const;`
 
@@ -63,13 +63,13 @@ par exemple, se traduit par
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMapStringToPtr::CMapStringToPtr](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Constructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CMapStringToPtr :: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Retourne le nombre d’éléments de ce plan.|
 |[CMapStringToPtr::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Détermine le nombre actuel d’éléments dans la table de hachage.|
@@ -87,17 +87,17 @@ par exemple, se traduit par
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CMapStringToPtr :: Operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe Map : la substitution d’opérateur pour `SetAt`.|
+|[CMapStringToPtr ::, opérateur \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Insère un élément dans la classe Map : substitution d’opérateur pour `SetAt` .|
 
 ## <a name="remarks"></a>Notes
 
-`CMapStringToPtr` incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un objet `CDumpContext`. Si vous avez besoin d’un vidage d’éléments cartographiques individuels, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
+`CMapStringToPtr`incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un `CDumpContext` objet. Si vous avez besoin d’un vidage d’éléments cartographiques individuels, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
 
 Les mappages de chaîne à pointeur ne peuvent pas être sérialisés.
 
-Lorsqu’un objet `CMapStringToPtr` est supprimé ou que ses éléments sont supprimés, les objets clés `CString` et les mots sont supprimés.
+Lorsqu’un `CMapStringToPtr` objet est supprimé ou que ses éléments sont supprimés, les `CString` objets clés et les mots sont supprimés.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -111,5 +111,5 @@ Lorsqu’un objet `CMapStringToPtr` est supprimé ou que ses éléments sont sup
 
 ## <a name="see-also"></a>Voir aussi
 
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[CObject (classe)](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

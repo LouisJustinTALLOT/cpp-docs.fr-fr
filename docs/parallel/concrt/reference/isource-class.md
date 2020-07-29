@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: a9ef9990db6376536f2f2a15c053b3b1d4ed12cf
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: df592e965b436ed5a1d60702f9e57088887d5a94
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139316"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87222704"
 ---
 # <a name="isource-class"></a>ISource, classe
 
@@ -43,29 +43,29 @@ Type de données de la charge utile dans les messages produits par le bloc sourc
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|`source_type`|Alias de type pour `T`.|
+|`source_type`|Alias de type pour `T` .|
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[~, Destructeur de ISource](#dtor)|Détruit l’objet `ISource`.|
+|[~, Destructeur de ISource](#dtor)|Détruit l' `ISource` objet.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[valide](#accept)|En cas de substitution dans une classe dérivée, accepte un message qui a été proposé par ce bloc `ISource`, en transférant la propriété à l’appelant.|
-|[acquire_ref](#acquire_ref)|En cas de substitution dans une classe dérivée, acquiert un nombre de références sur ce bloc de `ISource` pour empêcher la suppression.|
-|[Utiliser](#consume)|En cas de substitution dans une classe dérivée, consomme un message précédemment offert par ce `ISource` bloc et correctement réservé par la cible, en transférant la propriété à l’appelant.|
+|[valide](#accept)|En cas de substitution dans une classe dérivée, accepte un message qui a été proposé par ce `ISource` bloc, en transférant la propriété à l’appelant.|
+|[acquire_ref](#acquire_ref)|En cas de substitution dans une classe dérivée, acquiert un décompte de références sur ce `ISource` bloc pour empêcher la suppression.|
+|[occuper](#consume)|En cas de substitution dans une classe dérivée, consomme un message précédemment offert par ce `ISource` bloc et correctement réservé par la cible, en transférant la propriété à l’appelant.|
 |[link_target](#link_target)|En cas de substitution dans une classe dérivée, lie un bloc cible à ce `ISource` bloc.|
-|[release](#release)|En cas de substitution dans une classe dérivée, libère une réservation de message réussie précédente.|
-|[release_ref](#release_ref)|En cas de substitution dans une classe dérivée, libère un nombre de références sur ce bloc de `ISource`.|
-|[reserve](#reserve)|En cas de substitution dans une classe dérivée, réserve un message précédemment offert par ce bloc de `ISource`.|
-|[unlink_target](#unlink_target)|En cas de substitution dans une classe dérivée, dissocie un bloc cible de ce bloc de `ISource`, s’il est trouvé précédemment lié.|
-|[unlink_targets](#unlink_targets)|En cas de substitution dans une classe dérivée, dissocie tous les blocs cibles de ce bloc de `ISource`.|
+|[3/05](#release)|En cas de substitution dans une classe dérivée, libère une réservation de message réussie précédente.|
+|[release_ref](#release_ref)|En cas de substitution dans une classe dérivée, libère un décompte de références sur ce `ISource` bloc.|
+|[reserve](#reserve)|En cas de substitution dans une classe dérivée, réserve un message précédemment offert par ce `ISource` bloc.|
+|[unlink_target](#unlink_target)|En cas de substitution dans une classe dérivée, dissocie un bloc cible de ce `ISource` bloc, s’il est trouvé précédemment lié.|
+|[unlink_targets](#unlink_targets)|En cas de substitution dans une classe dérivée, dissocie tous les blocs cibles de ce `ISource` bloc.|
 
 ## <a name="remarks"></a>Notes
 
@@ -79,11 +79,11 @@ Pour plus d’informations, consultez [blocs de messages asynchrones](../../../p
 
 **En-tête :** agents.h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="accept"></a>valide
+## <a name="accept"></a><a name="accept"></a>valide
 
-En cas de substitution dans une classe dérivée, accepte un message qui a été proposé par ce bloc `ISource`, en transférant la propriété à l’appelant.
+En cas de substitution dans une classe dérivée, accepte un message qui a été proposé par ce `ISource` bloc, en transférant la propriété à l’appelant.
 
 ```cpp
 virtual message<T>* accept(
@@ -94,10 +94,10 @@ virtual message<T>* accept(
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-`runtime_object_identity` de l’objet `message` proposé.
+`runtime_object_identity`De l’objet proposé `message` .
 
 *_PTarget*<br/>
-Pointeur vers le bloc cible qui appelle la méthode `accept`.
+Pointeur vers le bloc cible qui appelle la `accept` méthode.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -105,11 +105,11 @@ Pointeur vers le message dont l’appelant est désormais propriétaire.
 
 ### <a name="remarks"></a>Notes
 
-La méthode `accept` est appelée par une cible lorsqu’un message est proposé par ce bloc de `ISource`. Le pointeur de message retourné peut être différent de celui passé dans la méthode `propagate` du bloc `ITarget`, si cette source décide d’effectuer une copie du message.
+La `accept` méthode est appelée par une cible lorsqu’un message est proposé par ce `ISource` bloc. Le pointeur de message retourné peut être différent de celui passé dans la `propagate` méthode du `ITarget` bloc, si cette source décide d’effectuer une copie du message.
 
-## <a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
 
-En cas de substitution dans une classe dérivée, acquiert un nombre de références sur ce bloc de `ISource` pour empêcher la suppression.
+En cas de substitution dans une classe dérivée, acquiert un décompte de références sur ce `ISource` bloc pour empêcher la suppression.
 
 ```cpp
 virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -122,9 +122,9 @@ Pointeur vers le bloc cible qui appelle cette méthode.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée par un objet `ITarget` qui est lié à cette source pendant la méthode `link_target`.
+Cette méthode est appelée par un `ITarget` objet qui est lié à cette source au cours de la `link_target` méthode.
 
-## <a name="consume"></a>occuper
+## <a name="consume"></a><a name="consume"></a>occuper
 
 En cas de substitution dans une classe dérivée, consomme un message précédemment offert par ce `ISource` bloc et correctement réservé par la cible, en transférant la propriété à l’appelant.
 
@@ -137,28 +137,28 @@ virtual message<T>* consume(
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-`runtime_object_identity` de l’objet `message` réservé.
+`runtime_object_identity`De l’objet réservé `message` .
 
 *_PTarget*<br/>
-Pointeur vers le bloc cible qui appelle la méthode `consume`.
+Pointeur vers le bloc cible qui appelle la `consume` méthode.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’objet `message` dont l’appelant est désormais propriétaire.
+Pointeur vers l' `message` objet dont l’appelant est désormais propriétaire.
 
 ### <a name="remarks"></a>Notes
 
-La méthode `consume` est semblable à `accept`, mais doit toujours être précédée d’un appel à `reserve` qui a retourné la **valeur true**.
+La `consume` méthode est semblable à `accept` , mais doit toujours être précédée d’un appel à `reserve` ce retourné **`true`** .
 
-## <a name="dtor"></a>~ ISource
+## <a name="isource"></a><a name="dtor"></a>~ ISource
 
-Détruit l’objet `ISource`.
+Détruit l' `ISource` objet.
 
 ```cpp
 virtual ~ISource();
 ```
 
-## <a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a>link_target
 
 En cas de substitution dans une classe dérivée, lie un bloc cible à ce `ISource` bloc.
 
@@ -169,9 +169,9 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="parameters"></a>Paramètres
 
 *_PTarget*<br/>
-Pointeur vers le bloc cible qui est lié à ce bloc de `ISource`.
+Pointeur vers le bloc cible qui est lié à ce `ISource` bloc.
 
-## <a name="release"></a>3/05
+## <a name="release"></a><a name="release"></a>3/05
 
 En cas de substitution dans une classe dérivée, libère une réservation de message réussie précédente.
 
@@ -184,14 +184,14 @@ virtual void release(
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-`runtime_object_identity` de l’objet `message` réservé.
+`runtime_object_identity`De l’objet réservé `message` .
 
 *_PTarget*<br/>
-Pointeur vers le bloc cible qui appelle la méthode `release`.
+Pointeur vers le bloc cible qui appelle la `release` méthode.
 
-## <a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a>release_ref
 
-En cas de substitution dans une classe dérivée, libère un nombre de références sur ce bloc de `ISource`.
+En cas de substitution dans une classe dérivée, libère un décompte de références sur ce `ISource` bloc.
 
 ```cpp
 virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -204,11 +204,11 @@ Pointeur vers le bloc cible qui appelle cette méthode.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée par un objet `ITarget` qui n’est pas lié à cette source. Le bloc source est autorisé à libérer toutes les ressources réservées pour le bloc cible.
+Cette méthode est appelée par un `ITarget` objet qui n’est pas lié à cette source. Le bloc source est autorisé à libérer toutes les ressources réservées pour le bloc cible.
 
-## <a name="reserve"></a>réserver
+## <a name="reserve"></a><a name="reserve"></a>réserver
 
-En cas de substitution dans une classe dérivée, réserve un message précédemment offert par ce bloc de `ISource`.
+En cas de substitution dans une classe dérivée, réserve un message précédemment offert par ce `ISource` bloc.
 
 ```cpp
 virtual bool reserve(
@@ -219,22 +219,22 @@ virtual bool reserve(
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-`runtime_object_identity` de l’objet `message` proposé.
+`runtime_object_identity`De l’objet proposé `message` .
 
 *_PTarget*<br/>
-Pointeur vers le bloc cible qui appelle la méthode `reserve`.
+Pointeur vers le bloc cible qui appelle la `reserve` méthode.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le message a été réservé, **false** dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a déjà été réservé ou accepté par une autre cible, la source peut refuser des réservations, et ainsi de suite.
+**`true`** Si le message a été réservé avec succès ; **`false`** sinon,. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a déjà été réservé ou accepté par une autre cible, la source peut refuser des réservations, et ainsi de suite.
 
 ### <a name="remarks"></a>Notes
 
-Une fois que vous avez appelé `reserve`, si elle est réussie, vous devez appeler `consume` ou `release` pour accepter ou abandonner la possession du message, respectivement.
+Après avoir appelé `reserve` , en cas de tentative réussie, vous devez appeler `consume` ou `release` pour accepter ou abandonner la détention du message, respectivement.
 
-## <a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
 
-En cas de substitution dans une classe dérivée, dissocie un bloc cible de ce bloc de `ISource`, s’il est trouvé précédemment lié.
+En cas de substitution dans une classe dérivée, dissocie un bloc cible de ce `ISource` bloc, s’il est trouvé précédemment lié.
 
 ```cpp
 virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
@@ -243,11 +243,11 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="parameters"></a>Paramètres
 
 *_PTarget*<br/>
-Pointeur vers le bloc cible qui est dissocié de ce bloc de `ISource`.
+Pointeur vers le bloc cible qui est dissocié de ce `ISource` bloc.
 
-## <a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
 
-En cas de substitution dans une classe dérivée, dissocie tous les blocs cibles de ce bloc de `ISource`.
+En cas de substitution dans une classe dérivée, dissocie tous les blocs cibles de ce `ISource` bloc.
 
 ```cpp
 virtual void unlink_targets() = 0;
@@ -255,5 +255,5 @@ virtual void unlink_targets() = 0;
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [ITarget, classe](itarget-class.md)

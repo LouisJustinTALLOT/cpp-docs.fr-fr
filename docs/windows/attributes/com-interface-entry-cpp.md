@@ -1,17 +1,17 @@
 ---
-title: com_interface_entry (C++ attribut com)
+title: com_interface_entry (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 06df146ea47428ee782da7a93c2da7097e110324
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168302"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215346"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -47,7 +47,7 @@ Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou
 
 Des utilisations supplémentaires de l’attribut **COM_INTERFACE_ENTRY** peuvent utiliser tous les types de COM_INTERFACE_ENTRY pris en charge.
 
-Cette restriction est nécessaire car ATL utilise la première entrée dans le mappage d’interface comme `IUnknown`d’identité ; par conséquent, l’entrée doit être une interface valide. Par exemple, l’exemple de code suivant n’est pas valide, car la première entrée dans le mappage d’interface ne spécifie pas d’interface COM réelle.
+Cette restriction est nécessaire, car ATL utilise la première entrée dans le mappage d’interface comme identité `IUnknown` ; par conséquent, l’entrée doit être une interface valide. Par exemple, l’exemple de code suivant n’est pas valide, car la première entrée dans le mappage d’interface ne spécifie pas d’interface COM réelle.
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ Cette restriction est nécessaire car ATL utilise la première entrée dans le m
 
 ## <a name="example"></a>Exemple
 
-Le code suivant ajoute deux entrées au mappage d’interface COM existant de `CMyBaseClass`. La première est une interface standard, tandis que la seconde masque l’interface `IDebugTest`.
+Le code suivant ajoute deux entrées au mappage d’interface COM existant de `CMyBaseClass` . La première est une interface standard, tandis que la seconde masque l' `IDebugTest` interface.
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-Le mappage d’objet COM obtenu pour `CMyBaseClass` se présente comme suit :
+Le mappage d’objet COM obtenu pour `CMyBaseClass` est le suivant :
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -109,9 +109,9 @@ END_COM_MAP()
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**|
-|**Renouvelable**|Oui|
-|**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass`, `progid`ou `vi_progid`.|
+|**S’applique à**|**`class`**, **`struct`**|
+|**Repeatable Read**|Oui|
+|**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass` , `progid` ou `vi_progid` .|
 |**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
@@ -120,4 +120,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 [Attributs COM](com-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)
