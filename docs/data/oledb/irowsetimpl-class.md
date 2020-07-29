@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: db12af1aecc094e6c04ab37b5a70a0acd97e39e9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f440bb891c30033962208c3e89648bd05ba3f81b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232142"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl, classe
 
@@ -115,13 +115,13 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `IRowsetImpl`.
+Votre classe, dérivée de `IRowsetImpl` .
 
 *RowsetInterface*<br/>
-Classe dérivée de `IRowsetImpl`.
+Classe dérivée de `IRowsetImpl` .
 
 *RowClass*<br/>
-Unité de stockage pour le `HROW`.
+Unité de stockage pour le `HROW` .
 
 *MapClass*<br/>
 Unité de stockage pour tous les handles de ligne détenus par le fournisseur.
@@ -137,7 +137,7 @@ Unité de stockage pour tous les handles de ligne détenus par le fournisseur.
 |||
 |-|-|
 |[AddRefRows](#addrefrows)|Ajoute un décompte de références à un handle de ligne existant.|
-|[CreateRow](#createrow)|Appelé par [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) pour allouer une nouvelle `HROW`. Non appelé directement par l’utilisateur.|
+|[CreateRow](#createrow)|Appelé par [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) pour allouer un nouveau `HROW` . Non appelé directement par l’utilisateur.|
 |[GetData](#getdata)|Récupère des données de la copie du jeu de lignes de la ligne.|
 |[GetDBStatus](#getdbstatus)|Retourne l’état du champ spécifié.|
 |[GetNextRows](#getnextrows)|Extrait des lignes séquentiellement, en mémorisant la position précédente.|
@@ -180,7 +180,7 @@ Consultez [IRowset :: AddRefRows](/previous-versions/windows/desktop/ms719619(v
 
 ## <a name="irowsetimplcreaterow"></a><a name="createrow"></a>IRowsetImpl :: CreateRow
 
-Méthode d’assistance appelée par [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) pour allouer une nouvelle `HROW`.
+Méthode d’assistance appelée par [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) pour allouer une nouvelle `HROW` .
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -199,7 +199,7 @@ Position du curseur de la ligne en cours de création.
 Référence retournée à l’utilisateur indiquant le nombre de lignes créées.
 
 *rgRows*<br/>
-Tableau d' `HROW`s retourné à l’appelant avec les descripteurs de ligne nouvellement créés.
+Tableau d’objets `HROW` retournés à l’appelant avec les descripteurs de ligne nouvellement créés.
 
 ### <a name="remarks"></a>Notes
 
@@ -221,7 +221,7 @@ STDMETHOD(GetData )(HROW hRow,
 
 Consultez [IRowset :: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-Certains paramètres correspondent à *OLE DB paramètres de référence du programmeur* de différents noms, décrits dans `IRowset::GetData`:
+Certains paramètres correspondent à *OLE DB paramètres de référence du programmeur* de différents noms, qui sont décrits dans `IRowset::GetData` :
 
 |Paramètres du modèle de OLE DB|Paramètres *de référence du programmeur OLE DB*|
 |--------------------------------|------------------------------------------------|
@@ -342,7 +342,7 @@ Consultez [IRowset :: RestartPosition](/previous-versions/windows/desktop/ms712
 
 ### <a name="remarks"></a>Notes
 
-La position de l’ensemble de lignes n’est pas définie tant que `GetNextRow` n’est pas appelé. Vous pouvez vous déplacer vers l’arrière dans un rowet en appelant `RestartPosition` puis en extrayant ou en faisant défiler vers l’arrière.
+La position de l’ensemble de lignes n’est pas définie tant que `GetNextRow` n’est pas appelé. Vous pouvez revenir en arrière dans un rowet en appelant `RestartPosition` , puis en extrayant ou en faisant défiler vers l’arrière.
 
 ## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a>IRowsetImpl :: SetDBStatus
 
@@ -387,7 +387,7 @@ unsigned m_bCanFetchBack:1;
 
 ### <a name="remarks"></a>Notes
 
-Lié à la propriété `DBPROP_CANFETCHBACKWARDS` dans le groupe `DBPROPSET_ROWSET`. Le fournisseur doit prendre en charge `DBPROP_CANFETCHBACKWARDS` pour que `m_bCanFetchBackwards` soit **true**.
+Lié à la `DBPROP_CANFETCHBACKWARDS` propriété dans le `DBPROPSET_ROWSET` groupe. Le fournisseur doit prendre en charge pour que la `DBPROP_CANFETCHBACKWARDS` `m_bCanFetchBackwards` valeur soit **`true`** .
 
 ## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a>IRowsetImpl :: m_bCanScrollBack
 
@@ -401,7 +401,7 @@ unsigned  m_bCanScrollBack:1;
 
 ### <a name="remarks"></a>Notes
 
-Lié à la propriété `DBPROP_CANSCROLLBACKWARDS` dans le groupe `DBPROPSET_ROWSET`. Le fournisseur doit prendre en charge `DBPROP_CANSCROLLBACKWARDS` pour que `m_bCanFetchBackwards` soit **true**.
+Lié à la `DBPROP_CANSCROLLBACKWARDS` propriété dans le `DBPROPSET_ROWSET` groupe. Le fournisseur doit prendre en charge pour que la `DBPROP_CANSCROLLBACKWARDS` `m_bCanFetchBackwards` valeur soit **`true`** .
 
 ## <a name="irowsetimplm_breset"></a><a name="breset"></a>IRowsetImpl :: m_bReset
 
@@ -415,7 +415,7 @@ unsigned m_bReset:1;
 
 ### <a name="remarks"></a>Notes
 
-Si le consommateur appelle [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) avec un `lOffset` négatif ou en *pattes* et `m_bReset` a la valeur true, `GetNextRows` se déplace jusqu’à la fin de l’ensemble de lignes. Si `m_bReset` a la valeur false, le consommateur reçoit un code d’erreur conforme à la spécification OLE DB. L’indicateur `m_bReset` prend la valeur **true** lorsque l’ensemble de lignes est créé pour la première fois et lorsque le consommateur appelle [IRowsetImpl :: RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Elle obtient la valeur **false** lorsque vous appelez `GetNextRows`.
+Si le consommateur appelle [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) avec un négatif `lOffset` ou en *pattes* et `m_bReset` s’il a la valeur true, `GetNextRows` se déplace à la fin de l’ensemble de lignes. Si `m_bReset` a la valeur false, le consommateur reçoit un code d’erreur, en conformité avec la spécification OLE DB. L' `m_bReset` indicateur obtient la valeur **`true`** lorsque l’ensemble de lignes est créé pour la première fois et lorsque le consommateur appelle [IRowsetImpl :: RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Il obtient la valeur **`false`** lorsque vous appelez `GetNextRows` .
 
 ## <a name="irowsetimplm_irowset"></a><a name="irowset"></a>IRowsetImpl :: m_iRowset
 
@@ -429,7 +429,7 @@ DBROWOFFSET m_iRowset;
 
 ## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a>IRowsetImpl :: m_rgRowHandles
 
-Mappage de handles de ligne actuellement contenus par le fournisseur en réponse à `GetNextRows`.
+Mappage de handles de ligne actuellement contenus par le fournisseur en réponse à `GetNextRows` .
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -439,10 +439,10 @@ MapClass m_rgRowHandles;
 
 ### <a name="remarks"></a>Notes
 
-Les handles de ligne sont supprimés en appelant `ReleaseRows`. Consultez la [vue d’ensemble de IRowsetImpl](../../data/oledb/irowsetimpl-class.md) pour la définition de *MapClass*.
+Les handles de ligne sont supprimés en appelant `ReleaseRows` . Consultez la [vue d’ensemble de IRowsetImpl](../../data/oledb/irowsetimpl-class.md) pour la définition de *MapClass*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [CSimpleRow, classe](../../data/oledb/csimplerow-class.md)

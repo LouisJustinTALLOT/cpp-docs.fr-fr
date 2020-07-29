@@ -8,18 +8,18 @@ helpviewer_keywords:
 - operator!, bstr
 - operator !, bstr
 ms.assetid: 6e60b5a5-2d28-4eec-9e12-790da8f1fdd4
-ms.openlocfilehash: 91b15ba757c1a7058b3544127753a98269a8e974
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fc04c7fa7cb4bd6ecad894a1c1e4473572ac651
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181042"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232350"
 ---
 # <a name="_bstr_toperator-"></a>_bstr_t::operator !
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Vérifie si le `BSTR` encapsulé est une chaîne NULL.
+Vérifie si le encapsulé `BSTR` est une chaîne NULL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,10 +29,10 @@ bool operator!( ) const throw( );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Elle retourne TRUE si oui, FALSe dans le cas contraire.
+Elle retourne **`true`** si oui, **`false`** si ce n’est pas le cas.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[_bstr_t, classe](../cpp/bstr-t-class.md)
+[Classe _bstr_t](../cpp/bstr-t-class.md)

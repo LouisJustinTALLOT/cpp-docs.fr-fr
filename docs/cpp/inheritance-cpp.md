@@ -6,12 +6,12 @@ helpviewer_keywords:
 - derived classes [C++], about derived classes
 - classes [C++], derived
 ms.assetid: 3534ca19-d9ed-4a40-be1b-b921ad0e6956
-ms.openlocfilehash: 214900f8f36de0fa90ffcd6ca75f3a4e6e2c0777
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab8425a916eb96f6419c67a76fa401716ad84631
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178252"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232259"
 ---
 # <a name="inheritance--c"></a>Héritage (C++)
 
@@ -33,7 +33,7 @@ class Derived : [virtual] [access-specifier] Base1,
 };
 ```
 
-Après l’étiquette (nom) de la classe, un signe deux-points apparaît, suivi d’une liste de spécifications de base.  Les classes de base ainsi nommées doivent avoir été déclarées précédemment.  Les spécifications de base peuvent contenir un spécificateur d’accès, qui est l’un des mots clés **public**, **protected** ou **Private**.  Ces spécificateurs d'accès apparaissent avant le nom de classe de base et s'appliquent uniquement à cette classe de base.  Ces spécificateurs contrôlent l'autorisation de la classe dérivée à utiliser pour les membres de la classe de base.  Consultez [member-Access Control](../cpp/member-access-control-cpp.md) pour plus d’informations sur l’accès aux membres de la classe de base.  Si le spécificateur d’accès est omis, l’accès à cette base est considéré comme **privé**.  Les spécifications de base peuvent contenir le mot clé **Virtual** pour indiquer l’héritage virtuel.  Ce mot clé peut apparaître avant ou après le spécificateur d'accès, le cas échéant.  Si l'héritage virtuel est utilisé, la classe de base est appelée classe de base virtuelle.
+Après l’étiquette (nom) de la classe, un signe deux-points apparaît, suivi d’une liste de spécifications de base.  Les classes de base ainsi nommées doivent avoir été déclarées précédemment.  Les spécifications de base peuvent contenir un spécificateur d’accès, qui est l’un des mots clés **`public`** , **`protected`** ou **`private`** .  Ces spécificateurs d'accès apparaissent avant le nom de classe de base et s'appliquent uniquement à cette classe de base.  Ces spécificateurs contrôlent l'autorisation de la classe dérivée à utiliser pour les membres de la classe de base.  Consultez [member-Access Control](../cpp/member-access-control-cpp.md) pour plus d’informations sur l’accès aux membres de la classe de base.  Si le spécificateur d’accès est omis, l’accès à cette base est pris en compte **`private`** .  Les spécifications de base peuvent contenir le mot clé **`virtual`** pour indiquer l’héritage virtuel.  Ce mot clé peut apparaître avant ou après le spécificateur d'accès, le cas échéant.  Si l'héritage virtuel est utilisé, la classe de base est appelée classe de base virtuelle.
 
 Plusieurs classes de base peuvent être spécifiées en les séparant par des virgules.  Si une seule classe de base est spécifiée, le modèle d’héritage est un [héritage simple](../cpp/single-inheritance.md). Si plusieurs classes de base sont spécifiées, le modèle d’héritage est appelé [héritage multiple](../cpp/multiple-base-classes.md).
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 44fb8691c296892377686310fbd9b4d9adcd0f80
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179742"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232285"
 ---
 # <a name="function-templates"></a>Modèles de fonctions
 
@@ -28,7 +28,7 @@ int main() {
 }
 ```
 
-Ce code définit une famille de fonctions qui permutent les valeurs des arguments. À partir de ce modèle, vous pouvez générer des fonctions qui échangent les types **int** et **long** , ainsi que les types définis par l’utilisateur. `MySwap` permutera même une classe si le constructeur de copie et l'opérateur d'assignation de cette classe sont correctement définis.
+Ce code définit une famille de fonctions qui permutent les valeurs des arguments. À partir de ce modèle, vous pouvez générer des fonctions qui échangent **`int`** les **`long`** types et, ainsi que les types définis par l’utilisateur. `MySwap` permutera même une classe si le constructeur de copie et l'opérateur d'assignation de cette classe sont correctement définis.
 
 En outre, le modèle de fonction vous empêchera de permuter les objets de types différents, car le compilateur connaît les types des paramètres a et *b* au moment de *la* compilation.
 
@@ -55,11 +55,11 @@ int main(int j) {
 }
 ```
 
-Lorsque l’argument template est spécifié explicitement, les conversions implicites normales sont effectuées pour convertir l’argument de fonction vers le type des paramètres de modèle de fonction correspondants. Dans l’exemple ci-dessus, le compilateur convertit `j` en type **char**.
+Lorsque l’argument template est spécifié explicitement, les conversions implicites normales sont effectuées pour convertir l’argument de fonction vers le type des paramètres de modèle de fonction correspondants. Dans l’exemple ci-dessus, le compilateur est converti `j` en type **`char`** .
 
 ## <a name="see-also"></a>Voir aussi
 
 [Modèles](../cpp/templates-cpp.md)<br/>
-[Instanciation du modèle de fonction](../cpp/function-template-instantiation.md)<br/>
+[Instanciation de modèle de fonction](../cpp/function-template-instantiation.md)<br/>
 [Instanciation explicite](../cpp/explicit-instantiation.md)<br/>
-[Spécialisation explicite de modèles de fonctions](../cpp/explicit-specialization-of-function-templates.md)
+[Spécialisation explicite des modèles de fonction](../cpp/explicit-specialization-of-function-templates.md)

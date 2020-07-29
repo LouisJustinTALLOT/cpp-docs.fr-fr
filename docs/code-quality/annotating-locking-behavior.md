@@ -27,12 +27,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: c9079ac35c4219495b62cd1f4aa2f8ecbbdcf8c9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 371422275b965fd2ce12995b55221a011a4edae6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404022"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232363"
 ---
 # <a name="annotating-locking-behavior"></a>Annotation du comportement de verrouillage
 
@@ -116,7 +116,7 @@ Les verrous intelligents encapsulent généralement les verrous natifs et gèren
 |`_Moves_lock_(target, source)`|Décrit `move constructor` l’opération qui transfère l’état de verrouillage de l' `source` objet vers le `target` . `target`Est considéré comme un objet nouvellement construit, donc tout état qu’il avait avant est perdu et remplacé par l' `source` État. La `source` est également réinitialisée à un état propre sans nombre de verrous ni cible d’alias, mais les alias qui pointent vers celle-ci restent inchangés.|
 |`_Replaces_lock_(target, source)`|Décrit `move assignment operator` la sémantique dans laquelle le verrou cible est libéré avant de transférer l’État à partir de la source. Cela peut être considéré comme une combinaison de `_Moves_lock_(target, source)` précédée de `_Releases_lock_(target)` .|
 |`_Swaps_locks_(left, right)`|Décrit le `swap` comportement standard qui suppose que les objets `left` et `right` échangent leur état. L’État échangé comprend le nombre de verrous et la cible d’alias, le cas échéant. Les alias qui pointent vers `left` les `right` objets et restent inchangés.|
-|`_Detaches_lock_(detached, lock)`|Décrit un scénario dans lequel un type de wrapper de verrou autorise la dissociation avec sa ressource contenue. Cela est similaire à la façon dont `std::unique_ptr` fonctionne avec son pointeur interne : elle permet aux programmeurs d’extraire le pointeur et de conserver son conteneur de pointeur intelligent dans un état propre. Une logique similaire est prise en charge par `std::unique_lock` et peut être implémentée dans des wrappers de verrou personnalisés. Le verrou détaché conserve son état (nombre de verrous et cible d’alias, le cas échéant), tandis que le wrapper est réinitialisé pour contenir zéro nombre de verrous et aucune cible d’alias, tout en conservant ses propres alias. Il n’y a aucune opération sur le nombre de verrous (libération et acquisition). Cette annotation se comporte exactement comme si `_Moves_lock_` sauf que l’argument détaché doit être `return` plutôt que `this` .|
+|`_Detaches_lock_(detached, lock)`|Décrit un scénario dans lequel un type de wrapper de verrou autorise la dissociation avec sa ressource contenue. Cela est similaire à la façon dont `std::unique_ptr` fonctionne avec son pointeur interne : elle permet aux programmeurs d’extraire le pointeur et de conserver son conteneur de pointeur intelligent dans un état propre. Une logique similaire est prise en charge par `std::unique_lock` et peut être implémentée dans des wrappers de verrou personnalisés. Le verrou détaché conserve son état (nombre de verrous et cible d’alias, le cas échéant), tandis que le wrapper est réinitialisé pour contenir zéro nombre de verrous et aucune cible d’alias, tout en conservant ses propres alias. Il n’y a aucune opération sur le nombre de verrous (libération et acquisition). Cette annotation se comporte exactement comme si `_Moves_lock_` sauf que l’argument détaché doit être **`return`** plutôt que **`this`** .|
 
 ## <a name="see-also"></a>Voir aussi
 

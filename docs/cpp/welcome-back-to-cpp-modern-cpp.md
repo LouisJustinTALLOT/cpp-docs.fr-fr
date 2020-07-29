@@ -1,17 +1,17 @@
 ---
-title: Bienvenue dans C++-moderne C++
+title: Re-bienvenue dans C++ - C++ moderne
 description: Décrit les nouveaux idiomes de programmation dans le C++ moderne et leurs raisonnements.
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 76ac17e71368cdeee669b98505778838ef0dfee7
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550795"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232194"
 ---
-# <a name="welcome-back-to-c---modern-c"></a>Bienvenue dans C++-moderne C++
+# <a name="welcome-back-to-c---modern-c"></a>Re-bienvenue dans C++ - C++ moderne
 
 Depuis sa création, C++ est devenu l’un des langages de programmation les plus couramment utilisés au monde. Les programmes C++ bien écrits sont rapides et efficaces. Le langage est plus flexible que d’autres langages : il peut fonctionner aux niveaux d’abstraction les plus élevés et baisser au niveau du silicium. C++ fournit des bibliothèques standard hautement optimisées. Il permet d’accéder aux fonctionnalités matérielles de bas niveau, afin d’optimiser la vitesse et de réduire les besoins en mémoire. En C++, vous pouvez créer un large éventail d’applications. Jeux, pilotes de périphériques et logiciels scientifiques à hautes performances. Programmes incorporés. Applications clientes Windows. Même les bibliothèques et les compilateurs pour d’autres langages de programmation sont écrits en C++.
 
@@ -115,7 +115,7 @@ auto i = m.begin(); // modern C++
 
 ## <a name="range-based-for-loops"></a>Boucles basées sur une plage `for`
 
-L’itération de style C sur les tableaux et les conteneurs est sujette à l’indexation des erreurs et est également fastidieux à taper. Pour éliminer ces erreurs et rendre votre code plus lisible, utilisez des boucles basées sur une plage `for` avec des conteneurs de bibliothèque standard et des tableaux bruts. Pour plus d’informations, consultez [ `for` instruction basée sur une plage](../cpp/range-based-for-statement-cpp.md).
+L’itération de style C sur les tableaux et les conteneurs est sujette à l’indexation des erreurs et est également fastidieux à taper. Pour éliminer ces erreurs et rendre votre code plus lisible, utilisez des boucles basées sur une plage **`for`** avec des conteneurs de bibliothèque standard et des tableaux bruts. Pour plus d’informations, consultez [ `for` instruction basée sur une plage](../cpp/range-based-for-statement-cpp.md).
 
 ```cpp
 #include <iostream>
@@ -200,7 +200,7 @@ Dans la programmation de style C, une fonction peut être passée à une autre f
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-L’expression lambda `[=](int i) { return i > x && i < y; }` peut être lue en tant que fonction qui accepte un argument unique de type `int` et retourne une valeur booléenne qui indique si l’argument est supérieur à `x` et inférieur à `y` . Notez que les variables `x` et `y` du contexte environnant peuvent être utilisés dans l’expression lambda. `[=]`Spécifie que ces variables sont *capturées* par valeur ; en d’autres termes, l’expression lambda a ses propres copies de ces valeurs.
+L’expression lambda `[=](int i) { return i > x && i < y; }` peut être lue en tant que fonction qui accepte un argument unique de type **`int`** et retourne une valeur booléenne qui indique si l’argument est supérieur à `x` et inférieur à `y` . Notez que les variables `x` et `y` du contexte environnant peuvent être utilisés dans l’expression lambda. `[=]`Spécifie que ces variables sont *capturées* par valeur ; en d’autres termes, l’expression lambda a ses propres copies de ces valeurs.
 
 ## <a name="exceptions"></a>Exceptions
 

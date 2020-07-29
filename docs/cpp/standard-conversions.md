@@ -6,12 +6,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 41ad348b7109451f519c44f685cea0a271f71925
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cb4960c2f981b99fbc798098357a0ac65e8ddaa6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161008"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232220"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 
@@ -57,23 +57,23 @@ Le résultat d'une conversion est une l-value uniquement si elle produit un type
 
 Les objets d’un type intégral peuvent être convertis en un autre type intégral plus large, autrement dit un type qui peut représenter un plus grand ensemble de valeurs. Ce type étendu de conversion est appelé *promotion intégrale*. Avec la promotion intégrale, vous pouvez utiliser les types suivants dans une expression partout où un autre type intégral peut être utilisé :
 
-- Objets, littéraux et constantes de type **char** et **short int**
+- Objets, littéraux et constantes de type **`char`** et**`short int`**
 
 - Types d'énumération
 
-- champs de bits **int**
+- **`int`** champs de bits
 
 - Énumérateurs
 
-C++les promotions sont « préservation de la valeur », car la valeur de la promotion est garantie comme étant la même que la valeur avant la promotion. Dans les promotions de préservation de valeurs, les objets de types intégraux plus courts (tels que les champs de bits ou les objets de type **char**) sont promus en type **int** si **int** peut représenter la plage complète du type d’origine. Si **int** ne peut pas représenter la plage complète des valeurs, l’objet est promu en type **unsigned int**.  Bien que cette stratégie soit la même que celle utilisée par le langage C standard, les conversions de conservation de valeur ne préservent pas l' « inscription » de l’objet.
+Les promotions C++ sont « préservation de la valeur », car la valeur de la promotion est garantie comme étant la même que la valeur avant la promotion. Dans les promotions de préservation de valeurs, les objets de types intégraux plus courts (tels que les champs de bits ou les objets de type **`char`** ) sont promus en type **`int`** si **`int`** peut représenter la plage complète du type d’origine. Si **`int`** ne peut pas représenter la plage complète de valeurs, l’objet est promu au type **`unsigned int`** .  Bien que cette stratégie soit la même que celle utilisée par le langage C standard, les conversions de conservation de valeur ne préservent pas l' « inscription » de l’objet.
 
 Les promotions de type conservation-valeur et les promotions qui conservent l'entier non signé produisent normalement les mêmes résultats. Toutefois, ils peuvent produire des résultats différents si l’objet promu apparaît comme suit :
 
-- Opérande de `/`, `%`, `/=`, `%=`, `<`, `<=`, `>`ou `>=`
+- Opérande de `/` ,, `%` , `/=` `%=` ,, `<` , `<=` `>` ou`>=`
 
    Ces opérateurs se basent sur un signe pour déterminer le résultat. Les promotions de préservation de la valeur et de préconservation produisent des résultats différents lorsqu’elles sont appliquées à ces opérandes.
 
-- Opérande gauche de `>>` ou `>>=`
+- Opérande gauche de `>>` ou`>>=`
 
    Ces opérateurs traitent différemment les quantités signées et non signées dans une opération de décalage. Pour les quantités signées, une opération de décalage vers la droite propage le bit de signe dans les positions de bit libérées, tandis que les positions de bit libérées sont remplies de zéros dans des quantités non signées.
 
@@ -81,7 +81,7 @@ Les promotions de type conservation-valeur et les promotions qui conservent l'en
 
 ## <a name="integral-conversions"></a>Conversions intégrales
 
-Les *conversions entières* sont des conversions entre types intégraux. Les types intégraux **sont char**, **short** (ou **short int**), **int**, **long**et **long long**. Ces types peuvent être **qualifiés avec** signed ou **unsigned**, et **unsigned** peut être utilisé comme raccourci pour **unsigned int**.
+Les *conversions entières* sont des conversions entre types intégraux. Les types intégraux sont **`char`** , **`short`** (ou **`short int`** ),, **`int`** **`long`** et **`long long`** . Ces types peuvent être qualifiés avec **`signed`** ou **`unsigned`** , et **`unsigned`** peuvent être utilisés comme raccourcis pour **`unsigned int`** .
 
 ### <a name="signed-to-unsigned"></a>Type signé en type non signé
 
@@ -101,7 +101,7 @@ int main()
 // Output: 65533
 ```
 
-Dans l’exemple précédent, un **short signé**, `i`, est défini et initialisé sur un nombre négatif. L’expression `(u = i)` entraîne la conversion de `i` en valeur **unsigned short** avant l’assignation à `u`.
+Dans l’exemple précédent, un **`signed short`** , `i` , est défini et initialisé à un nombre négatif. L’expression `(u = i)` force `i` à être convertie en **`unsigned short`** avant l’assignation à `u` .
 
 ### <a name="unsigned-to-signed"></a>Type non signé en type signé
 
@@ -121,11 +121,11 @@ cout << (i = u) << "\n";
 //Output: -3
 ```
 
-Dans l’exemple précédent, `u` est un objet entier **short non signé** qui doit être converti en une quantité signée pour évaluer l’expression `(i = u)`. Étant donné que sa valeur ne peut pas être correctement représentée dans un **short signé**, les données sont mal interprétées comme indiqué.
+Dans l’exemple précédent, `u` est un **`unsigned short`** objet intégral qui doit être converti en une quantité signée pour évaluer l’expression `(i = u)` . Comme sa valeur ne peut pas être représentée correctement dans un **`signed short`** , les données sont mal interprétées comme indiqué.
 
 ## <a name="floating-point-conversions"></a>Conversions de nombres à virgule flottante
 
-Un objet de type flottant peut être converti sans risque en type flottant plus précis. Cela permet de ne pas perdre de signification lors de la conversion. Par exemple, les conversions de **float** en **double** ou de **double** en **long double** sont sûres et la valeur est inchangée.
+Un objet de type flottant peut être converti sans risque en type flottant plus précis. Cela permet de ne pas perdre de signification lors de la conversion. Par exemple, les conversions de **`float`** vers **`double`** ou de **`double`** vers **`long double`** sont sécurisées, et la valeur est inchangée.
 
 Un objet de type flottant peut également être converti en un type moins précis, s’il se trouve dans une plage qui peut être représentée par ce type. (Consultez [limites flottantes](../cpp/floating-limits.md) pour les plages de types flottants.) Si la valeur d’origine n’est pas représentable précisément, elle peut être convertie en la valeur représentable supérieure ou inférieure suivante. Le résultat n’est pas défini si aucune valeur de ce type n’existe. Prenons l’exemple suivant :
 
@@ -133,7 +133,7 @@ Un objet de type flottant peut également être converti en un type moins préci
 cout << (float)1E300 << endl;
 ```
 
-La valeur maximale représentable par le type **float** est 3.402823466 E38, un nombre bien plus petit que 1E300. Par conséquent, le nombre est converti en l’infini et le résultat est « INF ».
+La valeur maximale pouvant être représentée par le type **`float`** est 3.402823466 E38, un nombre bien plus petit que 1E300. Par conséquent, le nombre est converti en l’infini et le résultat est « INF ».
 
 ## <a name="conversions-between-integral-and-floating-point-types"></a>Conversions entre types intégraux et à virgule flottante
 
@@ -149,10 +149,10 @@ De nombreux opérateurs binaires (présentés dans [expressions avec des opérat
 
 |Conditions remplies|Conversion|
 |--------------------|----------------|
-|L’un des opérandes est de type **long double**.|L’autre opérande est converti en type **long double**.|
-|La condition précédente n’est pas remplie et l’un des opérandes est de type **double**.|L’autre opérande est converti en type **double**.|
-|Les conditions précédentes ne sont pas remplies et l’un des opérandes est de type **float**.|L’autre opérande est converti en type **float**.|
-|Conditions précédentes non remplies (aucun des opérandes n’est de type flottant).|Les opérandes obtiennent des promotions intégrales comme suit :<br /><br />-Si l’un des opérandes est de type **unsigned long**, l’autre opérande est converti en type **unsigned long**.<br />-Si la condition précédente n’est pas remplie et si l’un des opérandes est de type **long** et l’autre de type **unsigned int**, les deux opérandes sont convertis en type **unsigned long**.<br />-Si les deux conditions précédentes ne sont pas remplies et si l’un des opérandes est de type **long**, l’autre opérande est converti en type **long**.<br />-Si les trois conditions précédentes ne sont pas remplies et si l’un des opérandes est de type **unsigned int**, l’autre opérande est converti en type **unsigned int**.<br />-Si aucune des conditions précédentes n’est remplie, les deux opérandes sont convertis en type **int**.|
+|L’un des opérandes est de type **`long double`** .|L’autre opérande est converti en type **`long double`** .|
+|La condition précédente n’est pas remplie et l’un des opérandes est de type **`double`** .|L’autre opérande est converti en type **`double`** .|
+|Les conditions précédentes ne sont pas remplies et l’un des opérandes est de type **`float`** .|L’autre opérande est converti en type **`float`** .|
+|Conditions précédentes non remplies (aucun des opérandes n’est de type flottant).|Les opérandes obtiennent des promotions intégrales comme suit :<br /><br />-Si l’un des opérandes est de type **`unsigned long`** , l’autre opérande est converti en type **`unsigned long`** .<br />-Si la condition précédente n’est pas remplie et si l’un des opérandes est de type **`long`** et l’autre de type **`unsigned int`** , les deux opérandes sont convertis en type **`unsigned long`** .<br />-Si les deux conditions précédentes ne sont pas remplies et si l’un des opérandes est de type **`long`** , l’autre opérande est converti en type **`long`** .<br />-Si les trois conditions précédentes ne sont pas remplies et si l’un des opérandes est de type **`unsigned int`** , l’autre opérande est converti en type **`unsigned int`** .<br />-Si aucune des conditions précédentes n’est remplie, les deux opérandes sont convertis en type **`int`** .|
 
 Le code suivant illustre les règles de conversion décrites dans le tableau :
 
@@ -173,9 +173,9 @@ int main() {
 }
 ```
 
-Dans l'exemple précédent, la première instruction affiche la multiplication de deux types intégraux, `iVal` et `ulVal`. La condition remplie est qu’aucun opérande n’est de type flottant et qu’un opérande est de type **unsigned int**. Ainsi, l’autre opérande, `iVal`, est converti en type **unsigned int**. Le résultat est ensuite affecté à `dVal`. La condition remplie ici est que l’un des opérandes est de type **double**. par conséquent, le résultat de la valeur **int non signé** de la multiplication est converti en type **double**.
+Dans l'exemple précédent, la première instruction affiche la multiplication de deux types intégraux, `iVal` et `ulVal`. La condition remplie est qu’aucun opérande n’est de type flottant et qu’un opérande est de type **`unsigned int`** . Ainsi, l’autre opérande, `iVal` , est converti en type **`unsigned int`** . Le résultat est ensuite assigné à `dVal` . La condition remplie ici est que l’un des opérandes est de type **`double`** , de sorte que le **`unsigned int`** résultat de la multiplication est converti en type **`double`** .
 
-La deuxième instruction de l’exemple précédent illustre l’ajout d’un **float** et d’un type intégral : `fVal` et `ulVal`. La variable `ulVal` est convertie en type **float** (troisième condition dans le tableau). Le résultat de l’addition est converti en type **double** (deuxième condition dans la table) et affecté à `dVal`.
+La deuxième instruction de l’exemple précédent illustre l’ajout d’un **`float`** et d’un type intégral : `fVal` et `ulVal` . La `ulVal` variable est convertie en type **`float`** (troisième condition dans la table). Le résultat de l’addition est converti en type **`double`** (deuxième condition dans la table) et assigné à `dVal` .
 
 ## <a name="pointer-conversions"></a>Conversions de pointeurs
 
@@ -189,12 +189,12 @@ Dans le premier cas, la classe de base spécifiée est accessible et la conversi
 
 L'accessibilité d'une classe de base dépend du type d'héritage utilisé dans la dérivation. Prenons l'héritage illustré dans l'illustration suivante.
 
-![Graphique d’héritage représentant&#45;l’accessibilité de la classe de base](../cpp/media/vc38xa1.gif "Graphique d’héritage représentant&#45;l’accessibilité de la classe de base") <br/>
+![Graphique d’héritage présentant l’accessibilité de la classe de base&#45;](../cpp/media/vc38xa1.gif "Graphique d’héritage présentant l’accessibilité de la classe de base&#45;") <br/>
 Graphique d'héritage pour l'illustration de l'accessibilité de la classe de base
 
 Le tableau suivant indique l'accessibilité de la classe de base d'après la situation illustrée.
 
-|Type de fonction|Dérivation|Conversion de<br /><br /> B * à un\* légal ?|
+|Type de fonction|Dérivation|Conversion de<br /><br /> B * à une \* Loi ?|
 |----------------------|----------------|-------------------------------------------|
 |Fonction externe (hors portée de classe)|Privé|Non|
 ||Protected|Non|
@@ -210,7 +210,7 @@ Dans le second cas, un pointeur vers une classe peut être converti en pointeur 
 
 Le résultat de cette conversion est un pointeur vers le sous- *objet*, la partie de l’objet qui est complètement décrite par la classe de base.
 
-Le code suivant définit deux classes, `A` et `B`, où `B` est dérivée de `A`. (Pour plus d’informations sur l’héritage, consultez [classes dérivées](../cpp/inheritance-cpp.md).) Il définit ensuite `bObject`, un objet de type `B`et deux pointeurs (`pA` et `pB`) qui pointent vers l’objet.
+Le code suivant définit deux classes, `A` et `B`, où `B` est dérivée de `A`. (Pour plus d’informations sur l’héritage, consultez [classes dérivées](../cpp/inheritance-cpp.md).) Il définit ensuite `bObject` , un objet de type `B` , et deux pointeurs ( `pA` et `pB` ) qui pointent vers l’objet.
 
 ```cpp
 // C2039 expected
@@ -239,24 +239,24 @@ int main()
 }
 ```
 
-Le pointeur `pA` est de type `A *`, ce qui peut être interprété comme suit : « pointeur vers un objet de type `A` ». Les membres de `bObject` (tels que `BComponent` et `BMemberFunc`) sont uniques au type `B` et sont donc inaccessibles par le biais de `pA`. Le pointeur `pA` autorise l'accès uniquement aux caractéristiques (fonctions membres et données) de l'objet définies dans la classe `A`.
+Le pointeur `pA` est de type `A *`, ce qui peut être interprété comme suit : « pointeur vers un objet de type `A` ». Les membres de `bObject` (tels que `BComponent` et `BMemberFunc` ) sont propres au type `B` et sont donc inaccessibles via `pA` . Le pointeur `pA` autorise l'accès uniquement aux caractéristiques (fonctions membres et données) de l'objet définies dans la classe `A`.
 
 ### <a name="pointer-to-function"></a>Pointeur vers fonction
 
-Un pointeur vers une fonction peut être converti en type `void *`, si le type `void *` est suffisamment grand pour contenir ce pointeur.
+Un pointeur vers une fonction peut être converti en type `void *` , si le type `void *` est suffisamment grand pour contenir ce pointeur.
 
 ### <a name="pointer-to-void"></a>Pointeur vers void
 
-Les pointeurs vers le type **void** peuvent être convertis en pointeurs vers tout autre type, mais uniquement avec un cast de type explicite (contrairement à en C). Un pointeur vers n’importe quel type peut être converti implicitement en pointeur vers le type **void**. Un pointeur vers un objet incomplet d’un type peut être converti en pointeur vers **void** (implicitement) et inversement (explicitement). Le résultat de ce type de conversion est égal à la valeur du pointeur d'origine. Un objet est considéré comme incomplet s’il est déclaré, mais il n’y a pas suffisamment d’informations disponibles pour déterminer sa taille ou sa classe de base.
+Les pointeurs vers le type **`void`** peuvent être convertis en pointeurs vers tout autre type, mais uniquement avec un cast de type explicite (contrairement à en C). Un pointeur vers n’importe quel type peut être converti implicitement en un pointeur vers un type **`void`** . Un pointeur vers un objet incomplet d’un type peut être converti en pointeur vers **`void`** (implicitement) et inversement (explicitement). Le résultat de ce type de conversion est égal à la valeur du pointeur d'origine. Un objet est considéré comme incomplet s’il est déclaré, mais il n’y a pas suffisamment d’informations disponibles pour déterminer sa taille ou sa classe de base.
 
-Un pointeur vers un objet qui n’est pas **const** ou **volatile** peut être converti implicitement en un pointeur de type `void *`.
+Pointeur vers un objet qui n’est pas **`const`** ou qui **`volatile`** peut être converti implicitement en un pointeur de type `void *` .
 
 ### <a name="const-and-volatile-pointers"></a>Pointeurs const et volatile
 
-C++ne fournit pas de conversion standard d’un type **const** ou **volatile** en un type qui n’est pas **const** ou **volatile**. Cependant, toute sorte de conversion peut être spécifiée à l'aide de casts de type explicite (y compris les conversions qui ne sont pas sécurisées).
+C++ ne fournit pas de conversion standard d' **`const`** un **`volatile`** type ou en un type qui n’est pas **`const`** ou **`volatile`** . Cependant, toute sorte de conversion peut être spécifiée à l'aide de casts de type explicite (y compris les conversions qui ne sont pas sécurisées).
 
 > [!NOTE]
-> C++les pointeurs vers des membres, à l’exception des pointeurs vers des membres statiques, sont différents des pointeurs normaux et n’ont pas les mêmes conversions standard. Les pointeurs vers des membres statiques sont des pointeurs normaux et ils ont les mêmes conversions que les pointeurs normaux.
+> Les pointeurs C++ vers les membres, à l’exception des pointeurs vers des membres statiques, sont différents des pointeurs normaux et n’ont pas les mêmes conversions standard. Les pointeurs vers des membres statiques sont des pointeurs normaux et ils ont les mêmes conversions que les pointeurs normaux.
 
 ### <a name="null-pointer-conversions"></a>Conversions de pointeurs null
 
@@ -329,4 +329,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[C++Référence du langage](../cpp/cpp-language-reference.md)
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)

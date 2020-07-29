@@ -33,12 +33,12 @@ helpviewer_keywords:
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-ms.openlocfilehash: b0c615c91e562fa45f791d8cc20f39a830013aeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b47d07cbe1e86e3f53d3a562cd5e1b3dca7f4814
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946004"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232389"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -71,30 +71,30 @@ Sinon, peut retourner l’une des valeurs suivantes :
 |Problème|Renvoie|
 |-----------|------------|
 |*x* = ± infini|x|
-|*x* =  ±0|x|
+|*x* = ± 0|x|
 |*x* = Nan|NaN|
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **trunc** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **trunc** prend toujours et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **trunc** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **trunc** prend toujours et retourne un **`double`** .
 
 Comme les valeurs à virgule flottante les plus grandes sont des entiers exacts, cette fonction ne provoque pas de dépassement de capacité. Cependant, vous pouvez causer le dépassement de capacité de la fonction en retournant une valeur sous dans un type entier.
 
 Vous pouvez aussi arrondir vers le bas en convertissant de manière implicite une valeur à virgule flottante en entier ; cependant, cette opération se limite aux valeurs qui peuvent être stockées dans le type cible.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**trunc**, **truncf**, **truncl**|\<math.h>|\<cmath>|
+|**trunc**, **truncf,**, **truncl**|\<math.h>|\<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
