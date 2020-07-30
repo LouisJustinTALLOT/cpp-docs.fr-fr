@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: 87f3440dc71246c3a925ed3d64f8ccf1b2c28cd1
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f51e93475f104f165895c9d7e2733d741af30502
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404279"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389777"
 ---
 # <a name="fatal-error-c1083"></a>Erreur irrécupérable C1083
 
@@ -29,7 +29,7 @@ ne trouve peut-être pas le fichier souhaité. La plupart des fichiers d’en-t�
 
 `#include <algorithm>`
 
-Certains en-têtes de la bibliothèque runtime C sont situés dans un sous-répertoire du répertoire Include standard. Par exemple, pour inclure sys/types. h, vous devez inclure le nom du sous-répertoire sys dans la `#include` directive :
+Certains en-têtes de la bibliothèque runtime C sont situés dans un sous-répertoire du répertoire Include standard. Par exemple, pour inclure *`sys/types.h`* , vous devez inclure le *`sys`* nom du sous-répertoire dans la `#include` directive :
 
 `#include <sys/types.h>`
 
@@ -45,9 +45,9 @@ Si le nom est placé entre crochets pointus,
 
 `#include <stdio.h>`
 
-le compilateur suit un chemin de recherche défini par l’environnement de génération, l’option du compilateur **/i** , l’option du compilateur **/x** et la variable d’environnement **include** . Pour plus d’informations, notamment des détails spécifiques sur l’ordre de recherche utilisé pour rechercher un fichier, consultez [#include directive (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) et [#import directive](../../preprocessor/hash-import-directive-cpp.md).
+le compilateur suit un chemin de recherche défini par l’environnement de génération, l' **`/I`** option de compilateur, l' **`/X`** option de compilateur et la variable d’environnement **include** . Pour plus d’informations, notamment des détails spécifiques sur l’ordre de recherche utilisé pour rechercher un fichier, consultez [#include directive (C/C++)](../../preprocessor/hash-include-directive-c-cpp.md) et [#import directive](../../preprocessor/hash-import-directive-cpp.md).
 
-Si vos fichiers include se trouvent dans un autre répertoire relatif à votre répertoire source et que vous utilisez un chemin d’accès relatif dans vos directives include, vous devez utiliser des guillemets doubles à la place des crochets pointus. Par exemple, si votre fichier d’en-tête MyHeader. h se trouve dans un sous-répertoire des sources de votre projet nommé en-têtes, cet exemple ne parvient pas à trouver le fichier et provoque C1083 :
+Si vos fichiers include se trouvent dans un autre répertoire relatif à votre répertoire source et que vous utilisez un chemin d’accès relatif dans vos directives include, vous devez utiliser des guillemets doubles à la place des crochets pointus. Par exemple, si votre fichier d’en-tête *`myheader.h`* se trouve dans un sous-répertoire de vos sources de projet nommées en-têtes, cet exemple ne parvient pas à trouver le fichier et provoque C1083 :
 
 `#include <headers\myheader.h>`
 
@@ -55,23 +55,23 @@ mais cet exemple fonctionne :
 
 `#include "headers\myheader.h"`
 
-Les chemins d’accès relatifs peuvent également être utilisés avec des répertoires dans le chemin de recherche include. Si vous ajoutez un répertoire à la variable d’environnement **include** ou à votre chemin d’accès aux **répertoires Include** dans Visual Studio, n’ajoutez pas une partie du chemin d’accès aux directives include. Par exemple, si votre en-tête se trouve dans \path\example\headers\myheader.h, et que vous ajoutez \path\example\headers\ à votre chemin d’accès aux **répertoires Include** dans Visual Studio, mais `#include` que votre directive fait référence au fichier en tant que
+Les chemins d’accès relatifs peuvent également être utilisés avec des répertoires dans le chemin de recherche include. Si vous ajoutez un répertoire à la variable d’environnement **include** ou à votre chemin d’accès aux **répertoires Include** dans Visual Studio, n’ajoutez pas une partie du chemin d’accès aux directives include. Par exemple, si votre en-tête se trouve dans *`\path\example\headers\myheader.h`* et que vous ajoutez *`\path\example\headers\`* à votre chemin d’accès aux **répertoires Include** dans Visual Studio, mais que votre `#include` directive fait référence au fichier en tant que
 
 `#include <headers\myheader.h>`
 
-le fichier est introuvable. Utilisez le chemin d’accès correct relatif au répertoire spécifié dans le chemin de recherche include. Dans cet exemple, vous pouvez modifier le chemin de recherche include en \path\example \, ou supprimer le segment Header \ Path de la `#include` directive.
+le fichier est introuvable. Utilisez le chemin d’accès correct relatif au répertoire spécifié dans le chemin de recherche include. Dans cet exemple, vous pouvez modifier le chemin de recherche include en *`\path\example\`* ou supprimer le *`headers\`* segment de chemin d’accès de la `#include` directive.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problèmes de bibliothèque tierce et vcpkg
 
-Si vous voyez cette erreur lorsque vous essayez de configurer une bibliothèque tierce dans le cadre de votre Build, envisagez d’utiliser [vcpkg](../../vcpkg.md), un gestionnaire de package C++, pour installer et générer la bibliothèque. vcpkg prend en charge une liste volumineuse et croissante [de bibliothèques tierces](https://github.com/Microsoft/vcpkg/tree/master/ports), et définit toutes les propriétés de configuration et les dépendances requises pour les builds réussies dans le cadre de votre projet.
+Si vous voyez cette erreur lorsque vous essayez de configurer une bibliothèque tierce dans le cadre de votre Build, envisagez d’utiliser [`vcpkg`](../../vcpkg.md) , un gestionnaire de package C++, pour installer et générer la bibliothèque. vcpkg prend en charge une liste volumineuse et croissante [de bibliothèques tierces](https://github.com/Microsoft/vcpkg/tree/master/ports), et définit toutes les propriétés de configuration et les dépendances requises pour les builds réussies dans le cadre de votre projet.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>Le fichier se trouve dans votre projet, mais pas dans le chemin de recherche include
 
-Même lorsque les fichiers d’en-tête sont répertoriés dans **Explorateur de solutions** dans le cadre d’un projet, les fichiers sont trouvés uniquement par le compilateur lorsqu’ils sont référencés par une `#include` `#import` directive ou dans un fichier source, et se trouvent dans un chemin de recherche include. Différents genres de builds peuvent utiliser différents chemins d’accès de recherche. L’option du compilateur **/x** peut être utilisée pour exclure des répertoires du chemin de recherche include. Cela permet à des builds distinctes d'utiliser des fichiers Include distincts qui portent le même nom, mais qui sont conservés dans des dossiers différents. Il s'agit d'une alternative à la compilation conditionnelle à l'aide de commandes de préprocesseur. Pour plus d’informations sur l’option du compilateur **/x** , consultez [/x (ignorer les chemins d’accès Include standard)](../../build/reference/x-ignore-standard-include-paths.md).
+Même lorsque les fichiers d’en-tête sont répertoriés dans **Explorateur de solutions** dans le cadre d’un projet, les fichiers sont trouvés uniquement par le compilateur lorsqu’ils sont référencés par une `#include` `#import` directive ou dans un fichier source, et se trouvent dans un chemin de recherche include. Différents genres de builds peuvent utiliser différents chemins d’accès de recherche. L' **`/X`** option de compilateur peut être utilisée pour exclure des répertoires du chemin de recherche include. Cela permet à des builds distinctes d'utiliser des fichiers Include distincts qui portent le même nom, mais qui sont conservés dans des dossiers différents. Il s'agit d'une alternative à la compilation conditionnelle à l'aide de commandes de préprocesseur. Pour plus d’informations sur l' **`/X`** option du compilateur, consultez [ `/X` (ignorer les chemins d’accès Include standard)](../../build/reference/x-ignore-standard-include-paths.md).
 
-Pour résoudre ce problème, corrigez le chemin d'accès utilisé par le compilateur pour rechercher le fichier inclus ou importé. Un nouveau projet utilise les chemins de recherche include par défaut. Vous devrez peut-être modifier le chemin de recherche include pour ajouter un répertoire pour votre projet. Si vous compilez sur la ligne de commande, ajoutez le chemin d’accès à la variable d’environnement **include** ou l’option du compilateur **/i** pour spécifier le chemin d’accès au fichier.
+Pour résoudre ce problème, corrigez le chemin d'accès utilisé par le compilateur pour rechercher le fichier inclus ou importé. Un nouveau projet utilise les chemins de recherche include par défaut. Vous devrez peut-être modifier le chemin de recherche include pour ajouter un répertoire pour votre projet. Si vous compilez sur la ligne de commande, ajoutez le chemin d’accès à la variable d’environnement **include** ou l' **`/I`** option du compilateur pour spécifier le chemin d’accès au fichier.
 
-Pour définir le chemin d’accès du répertoire include dans Visual Studio, ouvrez la boîte de dialogue **pages de propriétés** du projet. Dans le volet gauche de la fenêtre **Propriétés de configuration** , sélectionnez **Répertoires VC + +** , puis modifiez la propriété **inclure les répertoires** . Pour plus d’informations sur les répertoires par utilisateur et par projet recherchés par le compilateur dans Visual Studio, consultez la [page de propriétés Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md). Pour plus d’informations sur l’option du compilateur **/i** , consultez [/I (autres répertoires Include)](../../build/reference/i-additional-include-directories.md).
+Pour définir le chemin d’accès du répertoire include dans Visual Studio, ouvrez la boîte de dialogue **pages de propriétés** du projet. Dans le volet gauche de la fenêtre **Propriétés de configuration** , sélectionnez **Répertoires VC + +** , puis modifiez la propriété **inclure les répertoires** . Pour plus d’informations sur les répertoires par utilisateur et par projet recherchés par le compilateur dans Visual Studio, consultez la [page de propriétés Répertoires VC + +](../../build/reference/vcpp-directories-property-page.md). Pour plus d’informations sur l' **`/I`** option du compilateur, consultez [ `/I` (autres répertoires Include)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>L’environnement INCLUDe de la ligne de commande ou LIB n’est pas défini
 
@@ -87,15 +87,15 @@ Une erreur C1083 peut également indiquer que la version incorrecte d'un fichie
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Les en-têtes précompilés ne sont pas encore précompilés
 
-Lorsqu'un projet est configuré pour utiliser des en-têtes précompilés, les fichiers .pch appropriés doivent être créés de manière à ce que les fichiers qui utilisent le contenu d'en-tête puissent être compilés. Par exemple, le fichier *pch. cpp* (*stdafx. cpp* dans Visual Studio 2017 et versions antérieures) est automatiquement créé dans le répertoire du projet pour les nouveaux projets. Compilez d’abord ce fichier pour créer les fichiers d’en-tête précompilés. Dans la conception de processus de génération typique, cette opération est effectuée automatiquement. Pour plus d’informations, consultez [création de fichiers d’en-tête précompilés](../../build/creating-precompiled-header-files.md).
+Lorsqu’un projet est configuré pour utiliser des en-têtes précompilés, les *`.pch`* fichiers appropriés doivent être créés afin que les fichiers qui utilisent le contenu d’en-tête puissent être compilés. Par exemple, le *`pch.cpp`* fichier ( *`stdafx.cpp`* dans Visual Studio 2017 et versions antérieures) est automatiquement créé dans le répertoire du projet pour les nouveaux projets. Compilez d’abord ce fichier pour créer les fichiers d’en-tête précompilés. Dans la conception de processus de génération typique, cette opération est effectuée automatiquement. Pour plus d’informations, consultez [création de fichiers d’en-tête précompilés](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Causes supplémentaires
 
 - Vous avez installé un kit de développement logiciel (SDK) ou une bibliothèque tierce, mais vous n’avez pas ouvert une nouvelle fenêtre d’invite de commandes développeur après l’installation du kit de développement logiciel (SDK) ou de la bibliothèque. Si le kit de développement logiciel (SDK) ou la bibliothèque ajoute des fichiers au chemin d’accès **include** , vous devrez peut-être ouvrir une nouvelle fenêtre d’invite de commandes développeur pour sélectionner ces modifications de variable d’environnement.
 
-- Le fichier utilise du code managé, mais l’option de compilateur **/CLR** n’est pas spécifiée. Pour plus d’informations, consultez [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+- Le fichier utilise du code managé, mais l’option de compilateur **`/clr`** n’est pas spécifiée. Pour plus d’informations, consultez [ `/clr` (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
-- Le fichier est compilé à l’aide d’un autre paramètre d’option de compilateur **/analyze** que celui utilisé pour précompiler les en-têtes. Lorsque les en-têtes d’un projet sont précompilés, tous doivent utiliser les mêmes paramètres **/analyze** . Pour plus d’informations, consultez l’article [/analyze (analyse de code)](../../build/reference/analyze-code-analysis.md).
+- Le fichier est compilé à l’aide d’un autre **`/analyze`** paramètre d’option de compilateur que celui utilisé pour précompiler les en-têtes. Lorsque les en-têtes d’un projet sont précompilés, tous doivent utiliser les mêmes **`/analyze`** paramètres. Pour plus d’informations, consultez [ `/analyze` (analyse du code)](../../build/reference/analyze-code-analysis.md).
 
 - Le fichier ou le répertoire a été créé par le sous-système Windows pour Linux, le respect de la casse par répertoire est activé, et la casse spécifiée d’un chemin d’accès ou d’un fichier ne correspond pas à la casse du chemin d’accès ou du fichier sur le disque.
 

@@ -3,12 +3,12 @@ title: Nouveautés de C++ dans Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: e8202d03517086192ae893caff0602ec86fcb426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226787"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389998"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Nouveautés de C++ dans Visual Studio
 
@@ -513,12 +513,11 @@ Le SDK C++ REST, une API web multiplateforme pour C++, a été mis à jour vers 
 
 Plusieurs opérations C++ qui utilisent le moteur IntelliSense pour la refactorisation et la navigation dans le code s’exécutent beaucoup plus rapidement. Les valeurs suivantes sont basées sur la solution Visual Studio Chromium avec 3 500 projets :
 
-|||
-|-|-|
-|Fonctionnalité|Amélioration des performances|
-|Renommer|x 5,3|
-|Changer la signature |x 4,5|
-|Rechercher toutes les références|x 4,7|
+| Caractéristique | Amélioration des performances |
+|--|--|
+| Renommer | x 5,3 |
+| Changer la signature | x 4,5 |
+| Rechercher toutes les références | x 4,7 |
 
 C++ prend maintenant en charge la fonctionnalité **Atteindre la définition** avec Ctrl+clic, ce qui permet un accès rapide aux définitions à l’aide de la souris. Le visualiseur de structure du pack Productivity Power Tools est également inclus dans le produit par défaut.
 
@@ -667,7 +666,7 @@ Les vérificateurs principaux C++ permettant d’appliquer les [directives princ
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 version 15.7
 
-- Ajout de la prise en charge de [/analyze:ruleset](../build/reference/analyze-code-analysis.md) qui vous permet de spécifier les règles d’analyse de code à exécuter.
+- Prise en charge ajoutée pour [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) , qui vous permet de spécifier les règles d’analyse du code à exécuter.
 - Ajout de la prise en charge de règles C++ Core Guidelines supplémentaires.  Pour plus d’informations, consultez [Using the C++ Core Guidelines checkers](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Tests unitaires dans Visual Studio 2017

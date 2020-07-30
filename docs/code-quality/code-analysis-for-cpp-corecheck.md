@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: 7519706c0a8e23c56f8951647fb16c24d3f1e189
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216685"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389946"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Référence du vérificateur de C++ Core Guidelines
 
-Cette section répertorie les avertissements du vérificateur d’C++ Core Guidelines. Pour plus d’informations sur l’analyse du code, consultez [/Analyze (analyse du code)](/cpp/build/reference/analyze-code-analysis) et [démarrage rapide : analyse du code pour C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+Cette section répertorie les avertissements du vérificateur d’C++ Core Guidelines. Pour plus d’informations sur l’analyse du code, consultez [ `/analyze` (analyse du code)](/cpp/build/reference/analyze-code-analysis) et [démarrage rapide : analyse du code pour C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 > [!NOTE]
 > Certains avertissements appartiennent à plusieurs groupes, et tous les avertissements ne disposent pas d’une rubrique de référence complète.

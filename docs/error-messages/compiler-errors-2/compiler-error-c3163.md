@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: 436fb112758dfdec9997ff7e6dd7ef8f9dcdc66e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 29f810ab1ab1608ab9c0492c9f88b8edfe042168
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761775"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390024"
 ---
 # <a name="compiler-error-c3163"></a>Erreur du compilateur C3163
 
-'Construct' : les attributs ne sont pas cohérents avec la déclaration précédente
+> '*Construct*' : les attributs ne sont pas cohérents avec la déclaration précédente
 
 Le ou les attributs appliqués à une définition sont en conflit avec les attributs qui sont appliqués à une déclaration.
 
 Une façon de résoudre C3163 consiste à éliminer les attributs de la déclaration anticipée. Les attributs d’une déclaration anticipée doivent être inférieurs aux attributs de la définition ou, au plus, égaux.
 
-Une cause possible de l’erreur C3163 implique le langage SAL (Microsoft source code annotation Language). Les macros SAL ne se développent pas, sauf si vous compilez votre projet à l’aide de l’indicateur **/analyze** . Un programme qui se compile correctement sans/Analyze peut lever C3163 si vous tentez de le recompiler avec l’option/Analyze. Pour plus d’informations sur SAL, consultez [Annotations SAL](../../c-runtime-library/sal-annotations.md).
+Une cause possible de l’erreur C3163 implique le langage SAL (Microsoft source code annotation Language). Les macros SAL ne se développent pas, sauf si vous compilez votre projet à l’aide de l' **`/analyze`** indicateur. Programme qui se compile correctement sans **`/analyze`** peut lever C3163 si vous tentez de le recompiler avec l' **`/analyze`** option. Pour plus d’informations sur SAL, consultez [Annotations SAL](../../c-runtime-library/sal-annotations.md).
 
 ## <a name="example"></a>Exemple
 

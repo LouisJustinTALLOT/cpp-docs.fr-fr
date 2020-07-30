@@ -1,21 +1,21 @@
 ---
 title: Utilisation des ensembles de règles pour spécifier les règles C++ à exécuter
-ms.date: 07/13/2020
+ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
+ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373851"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87389816"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Utiliser des ensembles de règles pour spécifier les règles C++ à exécuter
 
-Dans Visual Studio, vous pouvez créer et modifier un *ensemble de règles* personnalisé pour répondre à des besoins de projet spécifiques associés à l’analyse du code. Les ensembles de règles par défaut sont stockés dans `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .
+Dans Visual Studio, vous pouvez créer et modifier un *ensemble de règles* personnalisé pour répondre à des besoins de projet spécifiques associés à l’analyse du code. Les ensembles de règles par défaut sont stockés dans *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* .
 
-**Visual Studio 2017 version 15,7 et versions ultérieures :** Vous pouvez créer des ensembles de règles personnalisés à l’aide de n’importe quel éditeur de texte et les appliquer dans les builds de ligne de commande, quel que soit le système de génération que vous utilisez. Pour plus d’informations, consultez [/analyze : RuleSet](/cpp/build/reference/analyze-code-analysis).
+**Visual Studio 2017 version 15,7 et versions ultérieures :** Vous pouvez créer des ensembles de règles personnalisés à l’aide de n’importe quel éditeur de texte et les appliquer dans les builds de ligne de commande, quel que soit le système de génération que vous utilisez. Pour plus d’informations, consultez [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis).
 
 Pour créer un ensemble de règles C++ personnalisé dans Visual Studio, un projet C/C++ doit être ouvert dans l’IDE de Visual Studio. Vous ouvrez ensuite un ensemble de règles standard dans l’éditeur d’ensembles de règles, puis vous ajoutez ou supprimez des règles spécifiques et, éventuellement, vous modifiez l’action qui se produit lorsque l’analyse du code détermine qu’une règle a été violée.
 
@@ -23,9 +23,11 @@ Pour créer un ensemble de règles personnalisé, enregistrez-le à l’aide d�
 
 ## <a name="to-create-a-custom-rule-from-a-single-existing-rule-set"></a>Pour créer une règle personnalisée à partir d’un seul ensemble de règles existant
 
-1. Dans la Explorateur de solutions, ouvrez le menu contextuel du projet, puis choisissez **Propriétés**.
+::: moniker range="<=vs-2017"
 
-1. Sous l’onglet **Propriétés** , choisissez **analyse du code**.
+1. Dans Explorateur de solutions, ouvrez le menu contextuel du projet, puis choisissez **Propriétés**.
+
+1. Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page **Propriétés de configuration** général de l' > **analyse du code** > **General** .
 
 1. Dans la liste déroulante **ensemble de règles** , effectuez l’une des opérations suivantes :
 
@@ -36,6 +38,25 @@ Pour créer un ensemble de règles personnalisé, enregistrez-le à l’aide d�
    - Choisissez **\<Browse...>** de spécifier un ensemble de règles existant qui ne figure pas dans la liste.
 
 1. Choisissez **ouvrir** pour afficher les règles dans l’éditeur d’ensembles de règles.
+
+::: moniker-end
+::: moniker range=">=vs-2019"
+
+1. Dans Explorateur de solutions, ouvrez le menu contextuel du projet, puis choisissez **Propriétés**.
+
+1. Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page **Propriétés de configuration** > **analyse du code** > **Microsoft** .
+
+1. Dans la liste déroulante **règles actives** , effectuez l’une des opérations suivantes :
+
+   - Choisissez l’ensemble de règles que vous souhaitez personnaliser.
+
+     \- ou -
+
+   - Choisissez **\<Browse...>** de spécifier un ensemble de règles existant qui ne figure pas dans la liste.
+
+1. Choisissez **ouvrir** pour afficher les règles dans l’éditeur d’ensembles de règles.
+
+::: moniker-end
 
 ## <a name="to-modify-a-rule-set-in-the-rule-set-editor"></a>Pour modifier un ensemble de règles dans l’éditeur d’ensembles de règles
 
@@ -77,41 +98,23 @@ Pour créer un ensemble de règles personnalisé, enregistrez-le à l’aide d�
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Pour créer un ensemble de règles dans un éditeur de texte
 
-Vous pouvez créer un ensemble de règles personnalisé dans un éditeur de texte, le stocker dans n’importe quel emplacement avec une `.ruleset` extension et l’appliquer à l’aide de l’option de compilateur [/analyze : RuleSet](/cpp/build/reference/analyze-code-analysis) .
+Vous pouvez créer un ensemble de règles personnalisé dans un éditeur de texte, le stocker dans n’importe quel emplacement avec une *`.ruleset`* extension et l’appliquer à l’aide de l' [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) option du compilateur.
 
 L’exemple suivant montre un fichier d’ensemble de règles de base que vous pouvez utiliser comme point de départ :
 
-::: moniker range="<=vs-2017"
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="15.0">
+<RuleSet Name="New Rule Set" Description="New rules to apply." ToolsVersion="10.0">
   <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
     <Rule Id="C6001" Action="Warning" />
     <Rule Id="C26494" Action="Warning" />
   </Rules>
 </RuleSet>
 ```
-
-::: moniker-end
-
-::: moniker range=">=vs-2019"
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="New Rule Set" Description=" " ToolsVersion="16.0">
-  <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
-    <Rule Id="C6001" Action="Warning" />
-    <Rule Id="C26494" Action="Warning" />
-  </Rules>
-</RuleSet>
-```
-
-::: moniker-end
 
 ## <a name="ruleset-schema"></a>Schéma de l’ensemble de règles
 
-Le schéma RuleSet suivant décrit le schéma XML d’un fichier RuleSet. Le schéma de l’ensemble de règles est stocké dans `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd` . Vous pouvez l’utiliser pour créer vos propres RuleSet par programme ou pour valider si vos ensembles de règles personnalisés respectent le format correct. Pour plus d’informations, consultez [Comment : créer un document XML basé sur un schéma XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
+Le schéma RuleSet suivant décrit le schéma XML d’un fichier RuleSet. Le schéma de l’ensemble de règles est stocké dans *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Vous pouvez l’utiliser pour créer vos propres RuleSet par programme ou pour valider si vos ensembles de règles personnalisés respectent le format correct. Pour plus d’informations, consultez [Comment : créer un document XML basé sur un schéma XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
