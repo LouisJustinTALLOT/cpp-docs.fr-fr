@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e9999d43226cb5daf22ef70af636efd616d41d47
+ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687866"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87470951"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
 Déclare des références anticipées à plusieurs modèles de classe utilisés dans iostreams. Tous ces modèles de classe sont définis dans d’autres en-têtes standard. Vous incluez cet en-tête explicitement uniquement quand vous avez besoin de l’une de ses déclarations, mais pas de sa définition.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 #include <iosfwd>
 ```
 
-## <a name="typedefs"></a>Typedef
+## <a name="typedefs"></a>Typedefs
 
 ```cpp
 typedef T1 streamoff;
 typedef T2 streamsize;
 typedef fpos streampos;
 
-// wchar_t TYPE DEFINITIONS
+// char TYPE DEFINITIONS
 typedef basic_ios<char, char_traits<char>> ios;
 typedef basic_streambuf<char, char_traits<char>> streambuf;
 typedef basic_istream<char, char_traits<char>> istream;
@@ -59,7 +59,6 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
-};
 ```
 
 ## <a name="forward-declarations-and-class-templates"></a>Déclarations anticipées et modèles de classe
@@ -128,7 +127,7 @@ class basic_fstream;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
-[iostreams, conventions](../standard-library/iostreams-conventions.md)
+[Conventions iostreams](../standard-library/iostreams-conventions.md)
