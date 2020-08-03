@@ -1,8 +1,8 @@
 ---
 title: /Yu (Utiliser un fichier d’en-tête précompilé)
-ms.date: 11/04/2016
+ms.date: 07/31/2020
 f1_keywords:
-- /yu
+- /Yu
 helpviewer_keywords:
 - Yu compiler option [C++]
 - /Yu compiler option [C++]
@@ -11,90 +11,86 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cccce39949f23e4ceb72807ecaef3597ab733c4
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316143"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520460"
 ---
-# <a name="yu-use-precompiled-header-file"></a>/Yu (Utiliser un fichier d’en-tête précompilé)
+# <a name="yu-use-precompiled-header-file"></a>`/Yu`(Utiliser le fichier d’en-tête précompilé)
 
-Indique au compilateur d’utiliser un fichier d’en-tête précompilé (.pch) existant dans la compilation actuelle.
+Indique au compilateur d’utiliser un fichier d’en-tête précompilé ( *`.pch`* ) existant dans la compilation actuelle.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-/Yu[filename]
-```
+> **`/Yu`**\[*nom du fichier*]
 
 ## <a name="arguments"></a>Arguments
 
-*filename*<br/>
-Le nom d’un fichier d’en-tête, qui est inclus dans le fichier source en utilisant un **#include** directive de préprocesseur.
+*extension*<br/>
+Nom d’un fichier d’en-tête, qui est inclus dans le fichier source à l’aide d’une `#include` directive de préprocesseur.
 
 ## <a name="remarks"></a>Notes
 
-Le nom du fichier include doit être le même pour les deux le **/Yc** option qui crée l’en-tête précompilé et tout suivantes **/Yu** option indiquant l’utilisation de l’en-tête précompilé.
+Le nom du fichier include doit être le même pour l' **`/Yc`** option qui crée l’en-tête précompilé et pour toute **`/Yu`** option ultérieure qui indique l’utilisation de l’en-tête précompilé.
 
-Pour **/Yc**, `filename` Spécifie le point sur la précompilation s’arrête ; le compilateur précompile tout le code `filename` et le nomme l’en-tête précompilé qui en résulte en utilisant le nom de base du fichier include et une extension de .pch.
+Pour **`/Yc`** , *filename* spécifie le point auquel la précompilation s’arrête ; le compilateur précompile tout le *filename* code par le biais du nom de fichier et nomme l’en-tête précompilé résultant en utilisant le nom de base du fichier include et une extension de *`.pch`* .
 
-Le fichier .pch doit avoir été créé avec **/Yc**.
+Le *`.pch`* fichier doit avoir été créé à l’aide de **`/Yc`** .
 
-Le compilateur traite tout le code qui précède le fichier .h comme étant précompilé. Il ignore Juste après le **#include** directive associée au fichier .h, utilise le code contenu dans le fichier .pch, puis compile tout le code après `filename`.
+Le compilateur traite tout le code qui se trouve avant le fichier. h comme étant précompilé. Elle ignore juste au-delà de la `#include` directive associée au *`.h`* fichier, utilise le code contenu dans le *`.pch`* fichier, puis compile tout le code après *filename*.
 
-Sur la ligne de commande, aucun espace n’est autorisé entre **/Yu** et `filename`.
+Sur la ligne de commande, aucun espace n’est autorisé entre **`/Yu`** et *nom de fichier*.
 
-Lorsque vous spécifiez le **/Yu** option sans un nom de fichier, votre programme source doit contenir un [#pragma hdrstop](../../preprocessor/hdrstop.md) pragma qui spécifie le nom de fichier de l’en-tête précompilé, le fichier .pch. Dans ce cas, le compilateur utilisera l’en-tête précompilé (fichier .pch) nommé par  [ /fp (nom. Fichier PCH)](fp-name-dot-pch-file.md). Le compilateur ignore à l’emplacement de ce pragma, restaure l’état compilé à partir du fichier d’en-tête précompilé spécifié par le pragma, puis compile uniquement le code qui suit le pragma. Si **#pragma hdrstop** ne spécifie pas un nom de fichier, le compilateur recherche un fichier portant un nom dérivé du nom de base du fichier source avec une extension .pch. Vous pouvez également utiliser le **/FP** option pour spécifier un fichier .pch différent.
+Lorsque vous spécifiez l' **`/Yu`** option sans nom de fichier, votre programme source doit contenir un [`#pragma hdrstop`](../../preprocessor/hdrstop.md) pragma qui spécifie le nom de fichier de l’en-tête précompilé, *`.pch`* file. Dans ce cas, le compilateur utilise l’en-tête précompilé ( *`.pch`* fichier) nommé par [`/Fp (Name .pch file)`](fp-name-dot-pch-file.md) . Le compilateur passe à l’emplacement de ce pragma et restaure l’État compilé à partir du fichier d’en-tête précompilé spécifié. Elle compile ensuite uniquement le code qui suit le pragma. Si `#pragma hdrstop` ne spécifie pas de nom de fichier, le compilateur recherche un fichier dont le nom est dérivé du nom de base du fichier source avec une *`.pch`* extension. Vous pouvez également utiliser l' **`/Fp`** option pour spécifier un autre *`.pch`* fichier.
 
-Si vous spécifiez le **/Yu** option sans un nom de fichier et ne parviennent pas à spécifier un **hdrstop** pragma, un message d’erreur est généré et la compilation échoue.
+Si vous spécifiez l' **`/Yu`** option sans nom de fichier et que vous ne parvenez pas à spécifier un `hdrstop` pragma, un message d’erreur est généré et la compilation échoue.
 
-Si le **/Yc** `filename` et **/Yu** `filename` options se produisent sur la même ligne de commande et les deux référencent le même nom de fichier, **/Yc** `filename` prend priorité, la précompilation de tout le code jusqu'à et y compris le fichier nommé. Cette fonctionnalité simplifie l’écriture de makefiles.
+Si les **`/Yc`** options de _nom de_ fichier et de fichier **`/Yu`** _filename_ se produisent sur la même ligne de commande et qu’elles référencent le même nom de fichier, le **`/Yc`** _nom_ de fichier est prioritaire, précompilation de tout le code jusqu’au fichier nommé inclus. Cette fonctionnalité simplifie l’écriture de makefiles.
 
-Étant donné que les fichiers .pch contiennent des informations sur l’environnement de machine, ainsi que des informations d’adresse de mémoire sur le programme, vous devez uniquement utiliser un fichier pch sur l’ordinateur où il a été créé.
+Étant donné que les *`.pch`* fichiers contiennent des informations sur l’environnement de l’ordinateur et les informations d’adresse mémoire sur le programme, vous devez uniquement utiliser un *`.pch`* fichier sur l’ordinateur sur lequel il a été créé.
 
 Pour plus d’informations sur les en-têtes précompilés, consultez :
 
-- [/Y (En-têtes précompilés)](y-precompiled-headers.md)
+- [`/Y`(En-têtes précompilés)](y-precompiled-headers.md)
 
 - [Fichiers d’en-tête précompilés](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Spécifiez [/Yc (créer un fichier d’en-tête précompilé)](yc-create-precompiled-header-file.md) sur un fichier .cpp dans votre projet.
+1. Spécifiez [ `/Yc` (créer un fichier d’en-tête précompilé)](yc-create-precompiled-header-file.md) sur un fichier. cpp de votre projet.
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Cliquez sur le dossier **C/C++** .
+1. Sélectionnez la page de propriétés **Propriétés de configuration**  >  **C/C++**  >  **en-têtes précompilés** C/C++.
 
-1. Cliquez sur le **en-têtes précompilés** page de propriétés.
-
-1. Modifier le **Création/utilisation PCH via fichier** propriété ou le **Création/utilisation d’un en-tête précompilé** propriété.
+1. Modifiez la propriété d' **en-tête précompilé** , la propriété **créer/utiliser PCH par le fichier** ou la propriété d' **en-tête précompilé créer/utiliser** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
-- Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> et <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.
+- Localisez <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> et <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>.
 
-## <a name="examples"></a>Exemples
+## <a name="example"></a>Exemple
 
 Si le code suivant :
 
-```
+```cpp
 #include <afxwin.h>   // Include header for class library
 #include "resource.h" // Include resource definitions
 #include "myapp.h"    // Include information specific to this app
 ...
 ```
 
-est compilé avec la ligne de commande `CL /YuMYAPP.H PROG.CPP`, le compilateur ne traite pas les trois instructions include, mais utilise le code précompilé du fichier MYAPP.pch ainsi l’enregistrement de l’heure impliqués dans les trois fichiers (et tous les fichiers qu’ils peuvent inclure) le prétraitement.
+est compilé à l’aide de la ligne de commande `CL /YuMYAPP.H PROG.CPP` , le compilateur ne traite pas les trois instructions include. Au lieu de cela, il utilise le code précompilé de *`MYAPP.pch`* , ce qui permet de gagner du temps lors du prétraitement des trois fichiers (et de tous les fichiers qu’ils peuvent inclure).
 
-Vous pouvez utiliser le  [ /fp (nom. Fichier PCH)](fp-name-dot-pch-file.md) option avec la **/Yu** option pour spécifier le nom du fichier .pch si le nom est différent de l’argument nom de fichier de **/Yc** ou le nom de base du fichier source, comme dans le suivant :
+Vous pouvez utiliser l' [`/Fp (Name .pch file)`](fp-name-dot-pch-file.md) option avec l' **`/Yu`** option pour spécifier le nom du *`.pch`* fichier si le nom est différent de l’argument de *nom* de fichier à **`/Yc`** ou du nom de base du fichier source, comme dans l’exemple suivant :
 
-```
+```cmd
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
 ```
 
-Cette commande spécifie un fichier d’en-tête précompilé nommé MYPCH.pch. Le compilateur utilise son contenu pour restaurer l’état de tous les fichiers d’en-tête jusqu'à et y compris MYAPP.h précompilé. Le compilateur compile ensuite le code qui se produit après la MYAPP.h **incluent** instruction.
+Cette commande spécifie un fichier d’en-tête précompilé nommé *`MYPCH.pch`* . Le compilateur utilise son contenu pour restaurer l’état précompilé de tous les fichiers d’en-tête jusqu’à et y compris *`MYAPP.h`* . Le compilateur compile ensuite le code qui se produit après la `#include "MYAPP.h"` directive *.
 
 ## <a name="see-also"></a>Voir aussi
 

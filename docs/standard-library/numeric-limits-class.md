@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: fbbeb2fe8d122cd3ca396900ee1b3806e2069b7b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f0b33404f16df59e2cb73023f3539e87080734a1
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202881"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520601"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits (classe)
 
@@ -345,7 +345,7 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 #### <a name="return-value"></a>Valeur de retour
 
-Valeur d’énumération de type **`const`** `float_denorm_style` , indiquant si le type autorise les valeurs dénormalisées.
+Valeur d’énumération de type `const float_denorm_style` , indiquant si le type autorise les valeurs dénormalisées.
 
 #### <a name="remarks"></a>Notes
 

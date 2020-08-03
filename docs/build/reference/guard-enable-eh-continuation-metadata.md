@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - /guard:ehcont
 - /guard:ehcont compiler option
-ms.openlocfilehash: c1b960bf13a6a7b7ff67996c9fa5119075216dae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c5a49d578e626d052aa9d132afbaee5686cb7a7
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190518"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520523"
 ---
 # <a name="guardehcont-enable-eh-continuation-metadata"></a>/guard:ehcont (Activer les métadonnées de continuation EH)
 
@@ -51,9 +51,9 @@ Pour les informations de section SEH trouvées dans les COMDAT, mais non compil�
 
 Si l’éditeur de liens n’est pas en mesure de générer des métadonnées, il émet l’une des erreurs suivantes :
 
-- **`LNK2046`**`: module contains _local_unwind but was not compiled with /guard:ehcont`
+- `LNK2046: module contains _local_unwind but was not compiled with /guard:ehcont`
 
-- **`LNK2047`**`: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
+- `LNK2047: module contains C++ EH or complex EH metadata but was not compiled with /guard:ehcont.`
 
 Pour vérifier si un fichier binaire contient des données EHCONT, recherchez les éléments suivants lors du vidage de la configuration de chargement du fichier binaire :
 

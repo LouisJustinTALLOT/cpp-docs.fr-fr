@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: 063b71100af536a249949a1084ab208b6266fd8d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5939e2b4b0f8054ae5f7db7babd01dbeffc7f359
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222464"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520614"
 ---
 # <a name="hash_map-class"></a>hash_map, classe
 
@@ -1737,11 +1737,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Notes
 
-Le `iterator` défini par hash_map pointe vers des éléments qui sont des objets de [Value_type](#value_type), qui est de type **paire \<const Key, Type> ,** dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
+Le `iterator` défini par hash_map pointe vers des éléments qui sont des objets de [Value_type](#value_type), qui est de type `pair<const Key, Type>` , dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
 
-Pour déréférencer un **itérateur** `Iter` pointant vers un élément d’un multimap, utilisez l' `->` opérateur.
+Pour déréférencer un itérateur nommé `Iter` pointant vers un élément d’un multimap, utilisez l' `->` opérateur.
 
-Pour accéder à la valeur de la clé de l’élément, utilisez `Iter` -> **first**, ce qui équivaut à (\* `Iter`). **tout d’abord**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `Iter` -> **second**, ce qui équivaut à (\* `Iter`). **seconde**.
+Pour accéder à la valeur de la clé pour l’élément, utilisez `Iter->first` , qui est équivalent à `(*Iter).first` . Pour accéder à la valeur de la référence mappée de l’élément, utilisez `Iter->second` , qui est équivalent à `(*Iter).second` .
 
 Un type `iterator` peut être utilisé pour modifier la valeur d’un élément.
 
@@ -1768,7 +1768,7 @@ Retourne l’objet de fonction utilisé par un hash_map pour ordonner ses élém
 
 L’objet stocké définit la fonction membre
 
-**bool operator**( **const Key&** `left`**, const Key&** `right`);
+`bool operator( const Key& left, const Key&right );`
 
 cela retourne **`true`** si `left` précède et n’est pas égal à `right` dans l’ordre de tri.
 

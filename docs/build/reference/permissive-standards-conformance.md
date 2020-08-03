@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36861705acf0328af5c1207c3bf33a098fc3b348
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217205"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520549"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive - (Conformité aux standards)
 
@@ -240,13 +240,13 @@ Dans les versions du compilateur antérieures à Visual Studio 2017 version 15,3
 
 Les erreurs courantes qui peuvent résulter de cette modification sont les suivantes :
 
-- **`error C2593`**`: 'operator ?' is ambiguous`
+- `error C2593: 'operator ?' is ambiguous`
 
-- **`error C2679`**`: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
+- `error C2679: binary '?': no operator found which takes a right-hand operand of type 'B' (or there is no acceptable conversion)`
 
-- **`error C2678`**`: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
+- `error C2678: binary '?': no operator found which takes a left-hand operand of type 'A' (or there is no acceptable conversion)`
 
-- **`error C2446`**`: ':': no conversion from 'B' to 'A'`
+- `error C2446: ':': no conversion from 'B' to 'A'`
 
 Un modèle de code classique qui peut provoquer ce problème est quand une classe C fournit à la fois un constructeur non explicite d’un autre type T et un opérateur de conversion non explicite au type T. Dans ce cas, la conversion du deuxième argument vers le type du troisième argument et la conversion du troisième argument en type du deuxième argument sont des conversions valides. Étant donné que les deux sont valides, elles sont ambiguës en fonction de la norme.
 
