@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 547fdc83f0524c8bfd44754f26ca8c4d21f6a599
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42d640ba456e8327df7a070cb12914b765c07bf5
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204987"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520912"
 ---
 # <a name="allocator-class"></a>allocator, classe
 
@@ -57,7 +57,7 @@ class allocator
 *Entrer*\
 Type d'objet pour lequel le stockage est alloué ou libéré.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Tous les conteneurs de la bibliothèque C++ standard ont un paramètre de modèle dont la valeur par défaut est `allocator` . La construction d'un conteneur avec un allocateur personnalisé permet de contrôler l'allocation et la libération des éléments de ce conteneur.
 
@@ -131,11 +131,11 @@ const_pointer address(const_reference val) const;
 *multiples*\
 Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur const ou nonconst vers l’objet trouvé d’une valeur const ou nonconst, respectivement.
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 Les fonctions membres retournent l’adresse de *Val*, sous la forme que les pointeurs doivent prendre pour les éléments alloués.
 
@@ -199,11 +199,11 @@ Nombre d’éléments pour lesquels la quantité de stockage appropriée doit ê
 *_Hint*\
 Pointeur const pouvant aider l’objet allocateur à satisfaire la demande de stockage en recherchant l’adresse d’un objet alloué avant la demande.
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet alloué ou null si la mémoire n’a pas été allouée.
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 La fonction membre alloue le stockage pour un tableau d’éléments Count de type `Type` , en appelant operator new (*Count*). Retourne un pointeur vers l’objet alloué. L’argument hint permet d’aider certains allocateurs à améliorer la localité de référence. Un choix valide est l’adresse d’un objet précédemment alloué par le même objet allocateur et pas encore désalloué. Si vous ne voulez pas fournir d’argument hint, utilisez plutôt un argument de pointeur null.
 
@@ -259,7 +259,7 @@ template <class Other>
 *Oui*\
 Objet allocateur à copier.
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 Le constructeur n’effectue aucune opération. En général, toutefois, un objet allocateur construit à partir d’un autre objet allocateur doit avoir la même valeur et autoriser l’échange d’allocation et de libération d’objets entre les deux objets allocateur.
 
@@ -334,7 +334,7 @@ Type qui fournit un pointeur constant vers le type d'objet géré par l'allocate
 typedef const value_type *const_pointer;
 ```
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 Le type pointeur décrit un objet `ptr` qui peut désigner, via l’expression `*ptr` , tout objet const qu’un objet de type `allocator` peut allouer.
 
@@ -389,7 +389,7 @@ Type qui fournit une référence constante au type d'objet géré par l'allocate
 typedef const value_type& const_reference;
 ```
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 Le type référence décrit un objet qui peut désigner tout objet const qu’un objet de type `allocator` peut allouer.
 
@@ -466,7 +466,7 @@ Pointeur vers l’emplacement où l’objet doit être construit.
 *multiples*\
 Valeur avec laquelle l’objet en cours de construction doit être initialisé.
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 La première fonction membre est équivalente à `new ((void *) ptr) Type(val)` .
 
@@ -535,7 +535,7 @@ Pointeur vers le premier objet à désallouer dans le stockage.
 *saut*\
 Nombre d’objets à désallouer dans le stockage.
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 La fonction membre libère le stockage pour le tableau d’objets Count de type `Type` en commençant par *ptr*, en appelant `operator delete(ptr)` . Le pointeur *ptr* doit avoir été retourné précédemment par un appel à [allouer](#allocate) pour un objet allocateur dont la valeur est égale à ** \* This**, en allouant un objet tableau de même taille et de même type. `deallocate` ne lève jamais d’exception.
 
@@ -556,9 +556,9 @@ void destroy(pointer ptr);
 *effectués*\
 Pointeur désignant l’adresse de l’objet à détruire.
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
-La fonction membre détruit l’objet désigné par *ptr*, en appelant le type de destructeur `ptr->` **Type**::**~ type**.
+La fonction membre détruit l’objet désigné par *ptr*, en appelant le destructeur `ptr->Type::~Type` .
 
 #### <a name="example"></a>Exemple
 
@@ -617,7 +617,7 @@ Type intégral signé qui peut représenter la différence entre des valeurs de 
 typedef ptrdiff_t difference_type;
 ```
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 Le type d’entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments dans une séquence qu’un objet de type `allocator` peut allouer.
 
@@ -678,7 +678,7 @@ Retourne le nombre d'éléments de type `Type` qui pourraient être alloués par
 size_type max_size() const;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments pouvant être alloués.
 
@@ -753,11 +753,11 @@ template <class Other>
 *Oui*\
 Objet allocateur à assigner à un autre objet allocateur.
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’objet allocateur
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 L’opérateur d’assignation de modèle n’effectue aucune opération. En général, toutefois, un objet allocateur assigné à un autre objet allocateur doit avoir la même valeur et autoriser l’échange d’allocation et de libération d’objets entre les deux objets allocateur.
 
@@ -810,7 +810,7 @@ Type qui fournit un pointeur vers le type d'objet géré par l'allocateur.
 typedef value_type *pointer;
 ```
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 Le type pointeur décrit un objet `ptr` qui peut désigner, par l’expression ** \* ptr**, tout objet qu’un objet de type `allocator` peut allouer.
 
@@ -870,7 +870,7 @@ struct rebind { typedef allocator<_Other> other; };
 *autres*\
 Type d’élément pour lequel la mémoire est allouée.
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 Cette structure est utile pour allouer de la mémoire au type qui diffère du type d’élément du conteneur en cours d’implémentation.
 
@@ -921,7 +921,7 @@ Type qui fournit une référence au type d'objet géré par l'allocateur.
 typedef value_type& reference;
 ```
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 Le type référence décrit un objet qui peut désigner tout objet qu’un objet de type `allocator` peut allouer.
 
@@ -1026,7 +1026,7 @@ Type géré par l'allocateur.
 typedef Type value_type;
 ```
 
-#### <a name="remarks"></a>Notes
+#### <a name="remarks"></a>Remarques
 
 Le type est un synonyme du paramètre de modèle `Type`.
 

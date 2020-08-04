@@ -3,12 +3,12 @@ title: Système de type C++
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: cbe0b4421d2e7727b919dfaf20218b8da03ea871
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49dfccc7f815bb13a23f4a334066fa5a8ba5c00
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228984"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521211"
 ---
 # <a name="c-type-system"></a>Système de type C++
 
@@ -51,30 +51,32 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Types fondamentaux (intégrés)
 
-Contrairement à certains langages, C++ n'a aucun type de base universel dont tous les autres types sont dérivés. Le langage comprend de nombreux *types fondamentaux*, également appelés *types intégrés*. Cela comprend les types numériques tels que **`int`** , **`double`** ,, **`long`** **`bool`** , ainsi que les **`char`** **`wchar_t`** types et pour les caractères ASCII et Unicode, respectivement. La plupart des types fondamentaux (à l’exception **`bool`** de **`double`** **WC `har_t** and related types) all have unsigned versions, which modify the range of values that the variable can store. For example, an **` int `**, which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An **` unsigned int**, qui est également stocké comme 32 bits, peut stocker une valeur comprise entre 0 et 4 294 967 295. Le nombre total de valeurs possibles dans chaque cas est identique ; seule la plage est différente.
+Contrairement à certains langages, C++ n'a aucun type de base universel dont tous les autres types sont dérivés. Le langage comprend de nombreux *types fondamentaux*, également appelés *types intégrés*. Cela comprend les types numériques tels que **`int`** , **`double`** ,, **`long`** **`bool`** , ainsi que les **`char`** **`wchar_t`** types et pour les caractères ASCII et Unicode, respectivement. La plupart des types fondamentaux intégraux (à l’exception de,, **`bool`** **`double`** et des **`wchar_t`** types connexes) ont tous des **`unsigned`** versions, qui modifient la plage de valeurs que la variable peut stocker. Par exemple, un **`int`** , qui stocke un entier signé 32 bits, peut représenter une valeur comprise entre-2 147 483 648 et 2 147 483 647. **`unsigned int`**, Qui est également stocké comme 32 bits, peut stocker une valeur comprise entre 0 et 4 294 967 295. Le nombre total de valeurs possibles dans chaque cas est identique ; seule la plage est différente.
 
 Les types fondamentaux sont identifiés par le compilateur, qui dispose de règles intégrées régissant les opérations que vous pouvez exécuter sur ces types, ainsi que la façon dont ces types peuvent être convertis en d'autres types fondamentaux. Pour obtenir la liste complète des types intégrés et leurs limites numériques et de taille, consultez [types intégrés](../cpp/fundamental-types-cpp.md).
 
-L'illustration suivante montre les tailles relatives des types intégrés :
+L’illustration suivante montre les tailles relatives des types intégrés dans l’implémentation de Microsoft C++ :
 
 ![Taille en octets des&#45;générées dans les types](../cpp/media/built-intypesizes.png "Taille en octets des&#45;générées dans les types")
 
-Le tableau suivant répertorie les types fondamentaux les plus souvent utilisés :
+Le tableau suivant répertorie les types fondamentaux les plus fréquemment utilisés et leurs tailles dans l’implémentation de Microsoft C++ :
 
-|Type|Taille|Comment|
-|----------|----------|-------------|
-|int|4 octets|Choix par défaut pour les valeurs intégrales.|
-|double|8 octets|Choix par défaut pour les valeurs à virgule flottante.|
-|bool|1 octet|Représente des valeurs qui peuvent être true ou false.|
-|char|1 octet|À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE.|
-|wchar_t|2 octets|Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`.|
-|caractère non signé &nbsp;|1 octet|C++ n’a aucun type d’octet intégré.  Utilisez **`unsigned char`** pour représenter une valeur d’octet.|
-|nombre entier non signé|4 octets|Option par défaut pour les bits indicateurs.|
-|long long|8 octets|Représente des valeurs entières très grandes.|
+| Type | Taille | Commentaire |
+|--|--|--|
+| **`int`** | 4 octets | Choix par défaut pour les valeurs intégrales. |
+| **`double`** | 8 octets | Choix par défaut pour les valeurs à virgule flottante. |
+| **`bool`** | 1 octet | Représente des valeurs qui peuvent être true ou false. |
+| **`char`** | 1 octet | À utiliser pour les caractères ASCII dans les chaînes de style C plus anciennes ou les objets std::string qui ne devront jamais être convertis en UNICODE. |
+| **`wchar_t`** | 2 octets | Représente les valeurs à caractères « larges » qui peuvent être encodées au format UNICODE (UTF-16 sur Windows, mais peut varier sur les autres systèmes d'exploitation). Type de caractère utilisé dans les chaînes de type `std::wstring`. |
+| **`unsigned char`** | 1 octet | C++ n’a aucun type d’octet intégré.  Utilisez **`unsigned char`** pour représenter une valeur d’octet. |
+| **`unsigned int`** | 4 octets | Option par défaut pour les bits indicateurs. |
+| **`long long`** | 8 octets | Représente des valeurs entières très grandes. |
+
+D’autres implémentations C++ peuvent utiliser des tailles différentes pour certains types numériques. Pour plus d’informations sur les tailles et les relations de taille requises par la norme C++, consultez [types intégrés](fundamental-types-cpp.md).
 
 ## <a name="the-void-type"></a>Type void
 
-Le **`void`** type est un type spécial ; vous ne pouvez pas déclarer une variable de type **`void`** , mais vous pouvez déclarer une variable de type __void \* __ (pointeur vers **`void`** ), ce qui est parfois nécessaire lors de l’allocation de mémoire brute (non typée). Toutefois, les pointeurs vers **`void`** ne sont pas de type sécurisé et, en général, leur utilisation est fortement déconseillée dans le C++ moderne. Dans une déclaration de fonction, une **`void`** valeur de retour signifie que la fonction ne retourne pas de valeur ; il s’agit d’une utilisation courante et acceptable de **`void`** . Si le langage C nécessitait des fonctions qui ont des paramètres nuls pour déclarer **`void`** dans la liste de paramètres, par exemple, `fou(void)` cette pratique est déconseillée dans le C++ moderne et doit être déclarée `fou()` . Pour plus d’informations, consultez [conversions de types et sécurité de type](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Le **`void`** type est un type spécial ; vous ne pouvez pas déclarer une variable de type **`void`** , mais vous pouvez déclarer une variable de type `void *` (pointeur vers **`void`** ), ce qui est parfois nécessaire lors de l’allocation de mémoire brute (non typée). Toutefois, les pointeurs vers **`void`** ne sont pas de type sécurisé et, en général, leur utilisation est fortement déconseillée dans le C++ moderne. Dans une déclaration de fonction, une **`void`** valeur de retour signifie que la fonction ne retourne pas de valeur ; il s’agit d’une utilisation courante et acceptable de **`void`** . Si le langage C nécessitait des fonctions qui ont des paramètres nuls pour déclarer **`void`** dans la liste de paramètres, par exemple, `fou(void)` cette pratique est déconseillée dans le C++ moderne et doit être déclarée `fou()` . Pour plus d’informations, consultez [conversions de types et sécurité de type](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>qualificateur de type const
 
@@ -155,7 +157,7 @@ Pour plus d’informations sur les pointeurs en général, consultez [pointeurs]
 
 Dans la programmation Win32 classique pour C et C++, la plupart des fonctions utilisent des typedefs et des `#define` macros spécifiques à Windows (définis dans `windef.h` ) pour spécifier les types de paramètres et de valeurs de retour. Ces types de données Windows sont principalement des noms spéciaux (alias) donnés aux types intégrés C/C++. Pour obtenir la liste complète de ces typedefs et définitions de préprocesseur, consultez [types de données Windows](/windows/win32/WinProg/windows-data-types). Certains de ces typedefs, tels que `HRESULT` et `LCID` , sont utiles et descriptifs. D’autres, telles que `INT` , n’ont aucune signification particulière et sont simplement des alias pour les types C++ fondamentaux. D'autres types de données Windows ont des noms qui proviennent de l'époque de la programmation en C et des processeurs 16 bits ; ils n'ont aucune finalité ou signification particulière par rapport au matériel ou aux systèmes d'exploitation modernes. Il existe également des types de données spéciaux associés à la bibliothèque de Windows Runtime, répertoriés en tant que [types de données de base Windows Runtime](/windows/win32/WinRT/base-data-types). En C++ moderne, la règle générale consiste à préférer les types fondamentaux C++ sauf si le type Windows communique une certaine signification supplémentaire sur la manière dont la valeur doit être interprétée.
 
-## <a name="more-information"></a>Plus d’informations
+## <a name="more-information"></a>Informations complémentaires
 
 Pour plus d'informations sur le système de types C++, consultez les rubriques suivantes.
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-ms.openlocfilehash: c88b9e3af5d00a3d2c0b3146783b0babe9d0a01a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 740ae69948a8f1975872f223ba51fb669121a891
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447603"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520886"
 ---
-# <a name="lengtherror-class"></a>length_error, classe
+# <a name="length_error-class"></a>length_error, classe
 
 Classe qui sert de classe de base pour toutes les exceptions levées pour signaler une tentative de génération d'un objet trop long pour être spécifié.
 
@@ -31,7 +31,7 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-La valeur retournée par [what](../standard-library/exception-class.md) est une copie de **message**`.`[data](../standard-library/basic-string-class.md#data).
+La valeur retournée par `what()` est une copie de `message.data()` . Pour plus d’informations, consultez [`what`](../standard-library/exception-class.md) et [`data`](../standard-library/basic-string-class.md#data) .
 
 ## <a name="example"></a>Exemple
 
@@ -77,11 +77,11 @@ Type class std::length_error
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<stdexcept>
+**En-tête :**\<stdexcept>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[logic_error, classe](../standard-library/logic-error-class.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Classe logic_error](../standard-library/logic-error-class.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

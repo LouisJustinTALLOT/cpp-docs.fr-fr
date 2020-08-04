@@ -1,6 +1,6 @@
 ---
-title: /cgthreads (threads de génération de code)
-ms.date: 11/04/2016
+title: /cgthreads (Threads de génération de code)
+ms.date: 07/31/2020
 f1_keywords:
 - /cgthreads
 helpviewer_keywords:
@@ -9,43 +9,46 @@ helpviewer_keywords:
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-ms.openlocfilehash: df353eb255c731478863ed6088cafa1cc38053fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 319a42ab68f02df6019ff283f1039ef3d561c4a0
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294686"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520873"
 ---
-# <a name="cgthreads-code-generation-threads"></a>/cgthreads (threads de génération de code)
+# <a name="cgthreads-code-generation-threads"></a>`/cgthreads`(Threads de génération de code)
 
 Définit le nombre de threads de cl.exe à utiliser pour l'optimisation et la génération de code.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-/cgthreads[1-8]
-```
+> **`/cgthreads1`**\
+> **`/cgthreads2`**\
+> **`/cgthreads3`**\
+> **`/cgthreads4`**\
+> **`/cgthreads5`**\
+> **`/cgthreads6`**\
+> **`/cgthreads7`**\
+> **`/cgthreads8`**
 
 ## <a name="arguments"></a>Arguments
 
-*number*<br/>
-Nombre maximal de threads utilisables par cl.exe, dans la plage de 1 à 8.
+**`cgthreadsN`**\
+Nombre maximal de threads à utiliser pour cl.exe, où *N* est un nombre compris entre 1 et 8.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Le **/cgthreads** option spécifie le nombre maximal de threads cl.exe utilise en parallèle pour l’optimisation et le code des phases de génération de la compilation. Notez qu’il ne peut y avoir aucun espace entre **/cgthreads** et `number` argument. Par défaut, cl.exe utilise quatre threads, comme si **/cgthreads4** ont été spécifiés. Si un plus grand nombre de cœurs de processeur sont disponibles, une valeur `number` plus élevée peut améliorer les durées de génération. Cette option est particulièrement utile lorsqu’il est combiné avec [/GL (Whole Program Optimization)](gl-whole-program-optimization.md).
+L' **`cgthreads`** option spécifie le nombre maximal de threads cl.exe utilise en parallèle pour les phases d’optimisation et de génération de code de la compilation. Notez qu’il ne peut pas y avoir d’espace entre **`cgthreads`** et l’argument *Number* . Par défaut, cl.exe utilise quatre threads, comme si **`/cgthreads4`** a été spécifié. Si davantage de cœurs de processeur sont disponibles, une valeur *numérique* supérieure peut améliorer les temps de génération. Cette option est particulièrement utile quand elle est associée à [ `/GL` (optimisation de l’ensemble du programme)](gl-whole-program-optimization.md).
 
-Vous pouvez spécifier plusieurs niveaux de parallélisme pour une build. Le commutateur de msbuild.exe **/maxcpucount** Spécifie le nombre de processus MSBuild qui peuvent être exécutés en parallèle. Le [/MP (générer avec plusieurs processus)](mp-build-with-multiple-processes.md) indicateur de compilateur spécifie le nombre de processus cl.exe qui compilent simultanément les fichiers sources. Le **/cgthreads** option spécifie le nombre de threads utilisés par chaque processus cl.exe. Le processeur ne pouvant pas exécuter simultanément plus de threads qu'il n'y a de cœurs de processeur, il est inutile de spécifier simultanément des valeurs plus élevées pour toutes ces options et cela peut même être contre-productif. Pour plus d’informations sur la façon de générer des projets en parallèle, consultez [génération parallèle de plusieurs projets](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
+Vous pouvez spécifier plusieurs niveaux de parallélisme pour une build. Le commutateur msbuild.exe **`/maxcpucount`** spécifie le nombre de processus MSBuild qui peuvent être exécutés en parallèle. L’indicateur de compilateur [ `/MP` (générer avec plusieurs processus)](mp-build-with-multiple-processes.md) spécifie le nombre de processus de cl.exe qui compilent simultanément les fichiers sources. L' **`cgthreads`** option spécifie le nombre de threads utilisés par chaque processus de cl.exe. Le processeur ne peut exécuter qu’un nombre de threads en même temps qu’il y a de cœurs de processeur. Il n’est pas utile de spécifier des valeurs plus élevées pour toutes ces options en même temps, et cela peut être contre-productive. Pour plus d’informations sur la façon de générer des projets en parallèle, consultez [génération de plusieurs projets en parallèle](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **propriétés de Configuration**, **C/C++** dossier.
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
 
-1. Sélectionnez le **ligne de commande** page de propriétés.
-
-1. Modifier le **des Options supplémentaires** propriété à inclure **/cgthreads**`N`, où `N` est une valeur comprise entre 1 et 8, puis sélectionnez **OK**.
+1. Modifiez la propriété **options supplémentaires** pour inclure **`cgthreadsN`** , où *`N`* est une valeur comprise entre 1 et 8, puis sélectionnez **OK**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 

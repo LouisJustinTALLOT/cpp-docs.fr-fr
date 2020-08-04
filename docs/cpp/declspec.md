@@ -7,12 +7,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 945202beca6c5deb525bd19886b947331f6f3ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06af67a24b7514b22e34852dc2c6ee3f35daa24e
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228945"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87521120"
 ---
 # `__declspec`
 
@@ -22,15 +22,15 @@ La syntaxe d’attribut étendu pour la spécification des informations de class
 
 ## <a name="grammar"></a>Grammaire
 
-*decl-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *Extended-decl-modifier-Seq*  **`)`**
+*`decl-specifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
 
-*extended-decl-modifier-seq* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *Extended-decl-modifier-SEQ*
+*`extended-decl-modifier-seq`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`*<sub>possibilité</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
-*extended-decl-modifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`align(`** *#* **`)`**<br/>
+*`extended-decl-modifier`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***nombre***`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***segname***`")`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
@@ -46,7 +46,7 @@ La syntaxe d’attribut étendu pour la spécification des informations de class
 &nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get_func_name_ &#124; **`,put=`** _put_func_name_ }**`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{- **`get=`** _Func-Name_ &#124; **`,put=`** _put-Func-Name_ }**`)`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
@@ -58,7 +58,7 @@ Un espace blanc sépare la séquence de modificateur de déclaration. Des exempl
 
 La grammaire des attributs étendus prend en charge les attributs de classe de stockage spécifiques à Microsoft suivants :,,,,,,,,,, [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) [`jitintrinsic`](../cpp/jitintrinsic.md) [`naked`](../cpp/naked-cpp.md) [`noalias`](../cpp/noalias.md) , [`noinline`](../cpp/noinline.md) , [`noreturn`](../cpp/noreturn.md) , [`nothrow`](../cpp/nothrow-cpp.md) , [`novtable`](../cpp/novtable.md) , [`process`](../cpp/process.md) , [`restrict`](../cpp/restrict.md) , [`safebuffers`](../cpp/safebuffers.md) ,, [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) et [`thread`](../cpp/thread.md) . Il prend également en charge ces attributs d’objet COM : [`property`](../cpp/property-cpp.md) et [`uuid`](../cpp/uuid-cpp.md) .
 
-Les attributs de classe de stockage,,,,,,,,, **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** et **`uuid`** sont des propriétés uniquement de la déclaration de l’objet ou de la fonction à laquelle ils sont appliqués. L' **`thread`** attribut affecte uniquement les données et les objets. Les **`naked`** **`spectre`** attributs et affectent uniquement les fonctions. Les **`dllimport`** **`dllexport`** attributs et affectent les fonctions, les données et les objets. Les **`property`** **`selectany`** attributs, et **uu’id** affectent les objets com.
+Les attributs de classe de stockage,,,,,,,,, **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** et **`uuid`** sont des propriétés uniquement de la déclaration de l’objet ou de la fonction à laquelle ils sont appliqués. L' **`thread`** attribut affecte uniquement les données et les objets. Les **`naked`** **`spectre`** attributs et affectent uniquement les fonctions. Les **`dllimport`** **`dllexport`** attributs et affectent les fonctions, les données et les objets. Les **`property`** **`selectany`** attributs, et **`uuid`** affectent les objets com.
 
 Pour la compatibilité avec les versions précédentes, **`_declspec`** est un synonyme de, **`__declspec`** sauf si l’option de compilateur [/za \( Désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 

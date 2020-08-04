@@ -3,39 +3,39 @@ title: for, instruction (C++)
 description: Référence à l’instruction C++ standard for dans Microsoft Visual Studio C++.
 f1_keywords:
 - for_cpp
-ms.date: 04/14/2020
+ms.date: 07/31/2020
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: 16486fd58a9b3fec750ebef6ec6647f9d92bca3b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b32a50e376113f9f9d550d4984d05fc8c675f14d
+ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231180"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520847"
 ---
-# <a name="for-statement-c"></a>for, instruction (C++)
+# <a name="for-statement-c"></a>`for`instruction (C++)
 
-Exécute une instruction à plusieurs reprises jusqu'à ce que la condition soit false. Pour plus d’informations sur l’instruction for basée sur une plage, consultez [instruction for basée sur une plage (C++)](../cpp/range-based-for-statement-cpp.md).
+Exécute une instruction à plusieurs reprises jusqu'à ce que la condition soit false. Pour plus d’informations sur l’instruction basée sur une plage **`for`** , consultez [instruction basée sur une plage `for` (C++)](../cpp/range-based-for-statement-cpp.md).
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
-> **`for (`***init-expression* **`;`** *cond-expression* **`;`** *loop-expression***`)`**\
-> &nbsp;&nbsp;&nbsp;&nbsp;_gestion_**`;`**
+> **`for (`** *`init-expression`* **`;`** *`cond-expression`* **`;`** *`loop-expression`* **`)`**\
+> &emsp;*`statement`*
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Utilisez l' **`for`** instruction pour construire des boucles qui doivent s’exécuter un nombre de fois spécifié.
 
 L' **`for`** instruction se compose de trois parties facultatives, comme indiqué dans le tableau suivant.
 
-### <a name="for-loop-elements"></a>Éléments de boucle For
+### <a name="for-loop-elements"></a>pour les éléments de boucle
 
-|Nom de la syntaxe|Moment de l'exécution|Description|
-|-----------------|-------------------|-----------------|
-|`init-expression`|Avant tout autre élément de l' **`for`** instruction, `init-expression` n’est exécuté qu’une seule fois. Le contrôle passe alors à `cond-expression`.|Souvent employé pour initialiser des index de boucle. Elle peut contenir des expressions ou des déclarations.|
-|`cond-expression`|Avant l'exécution de chaque itération de `statement`, y compris la première itération. `statement` est exécuté uniquement si `cond-expression` a la valeur true (valeur différente de zéro).|Expression qui correspond à un type intégral ou à un type de classe avec une conversion non ambiguë en type intégral. Normalement utilisée pour déterminer les critères d'arrêts de boucles.|
-|`loop-expression`|À la fin de chaque itération de `statement`. `loop-expression` est évalué après l'exécution de `cond-expression`.|Normalement utilisée pour incrémenter les index de boucle.|
+| Nom de la syntaxe | Lors de l’exécution | Description |
+|--|--|--|
+| *`init-expression`* | Avant tout autre élément de l' **`for`** instruction, *`init-expression`* n’est exécuté qu’une seule fois. Le contrôle passe ensuite à *`cond-expression`* . | Souvent employé pour initialiser des index de boucle. Elle peut contenir des expressions ou des déclarations. |
+| *`cond-expression`* | Avant l’exécution de chaque itération de *`statement`* , y compris la première itération. *`statement`* est exécuté uniquement si *`cond-expression`* prend la valeur true (différente de zéro). | Expression qui correspond à un type intégral ou à un type de classe avec une conversion non ambiguë en type intégral. Normalement utilisée pour déterminer les critères d'arrêts de boucles. |
+| *`loop-expression`* | À la fin de chaque itération de *`statement`* . Une fois *`loop-expression`* exécuté, *`cond-expression`* est évalué. | Normalement utilisée pour incrémenter les index de boucle. |
 
 Les exemples suivants illustrent différentes façons d’utiliser l' **`for`** instruction.
 
@@ -60,11 +60,11 @@ int main() {
     while (i < 2){
         cout << i++;
     }
+    // Output: 01
 }
-    // Output: 012
 ```
 
-`init-expression` et `loop-expression` peuvent contenir plusieurs instructions séparées par des virgules. Par exemple :
+*`init-expression`* et *`loop-expression`* peuvent contenir plusieurs instructions séparées par des virgules. Par exemple :
 
 ```cpp
 #include <iostream>
@@ -82,7 +82,7 @@ int main(){
     i + j = 19
 ```
 
-`loop-expression` peut être incrémenté ou décrémenté, ou autrement modifié.
+*`loop-expression`* peut être incrémenté ou décrémenté, ou modifié d’une autre manière.
 
 ```cpp
 #include <iostream>
@@ -99,11 +99,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-Une **`for`** boucle se termine lorsqu’une instruction [break](../cpp/break-statement-cpp.md), [Return](../cpp/return-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md) (vers une instruction étiquetée à l’extérieur de la **`for`** boucle) `statement` est exécutée. Une instruction [continue](../cpp/continue-statement-cpp.md) dans une **`for`** boucle ne termine que l’itération en cours.
+Une **`for`** boucle se termine lorsqu’un [`break`](../cpp/break-statement-cpp.md) , un [retour](../cpp/return-statement-cpp.md)ou [`goto`](../cpp/goto-statement-cpp.md) (à une instruction étiquetée en dehors de la **`for`** boucle) dans *`statement`* est exécuté. Une [`continue`](../cpp/continue-statement-cpp.md) instruction dans une **`for`** boucle ne termine que l’itération en cours.
 
-Si `cond-expression` est omis, il est pris **`true`** en compte et la **`for`** boucle ne se termine pas sans **`break`** , **`return`** ou **`goto`** dans `statement` .
+Si *`cond-expression`* est omis, il est pris **`true`** en compte et la **`for`** boucle ne se termine pas sans **`break`** , **`return`** ou **`goto`** dans *`statement`* .
 
-Bien que les trois champs de l' **`for`** instruction soient normalement utilisés pour l’initialisation, le test de fin et l’incrémentation, ils ne sont pas limités à ces utilisations. Par exemple, le code suivant affiche les nombres 0 à 4. Dans ce cas, `statement` est l'instruction null :
+Bien que les trois champs de l' **`for`** instruction soient normalement utilisés pour l’initialisation, le test de fin et l’incrémentation, ils ne sont pas limités à ces utilisations. Par exemple, le code suivant affiche les nombres 0 à 4. Dans ce cas, *`statement`* est l’instruction null :
 
 ```cpp
 #include <iostream>
@@ -118,7 +118,7 @@ int main()
 }
 ```
 
-## <a name="for-loops-and-the-c-standard"></a>Boucles for et norme C++
+## <a name="for-loops-and-the-c-standard"></a>`for`boucles et la norme C++
 
 La norme C++ indique qu’une variable déclarée dans une **`for`** boucle doit sortir de la portée après la fin de la **`for`** boucle. Par exemple :
 
@@ -149,8 +149,8 @@ Ce comportement reproduit plus fidèlement le comportement standard d’une vari
 
 ## <a name="see-also"></a>Voir aussi
 
-[Instructions d'itération](../cpp/iteration-statements-cpp.md)<br/>
+[Instructions d’itération](../cpp/iteration-statements-cpp.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [while, instruction (C++)](../cpp/while-statement-cpp.md)<br/>
 [do-while, instruction (C++)](../cpp/do-while-statement-cpp.md)<br/>
-[Basé sur une plage, instruction (C++)](../cpp/range-based-for-statement-cpp.md)
+[Instruction for basée sur une plage (C++)](../cpp/range-based-for-statement-cpp.md)
