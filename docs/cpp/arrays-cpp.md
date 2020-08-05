@@ -1,25 +1,25 @@
 ---
 title: Tableaux (C++)
-ms.date: 11/14/2019
+ms.date: 08/03/2020
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: d4689162ea38f67b81c0f78bccba557cb40e78d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb949f9a17a6b751dae40202bf82e6cb321b526b
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226032"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565961"
 ---
 # <a name="arrays-c"></a>Tableaux (C++)
 
-Un tableau est une séquence d’objets du même type qui occupent une zone contiguë de mémoire. Les tableaux de style C traditionnels sont la source de nombreux bogues, mais restent communs, en particulier dans les bases de code plus anciennes. Dans le C++ moderne, nous vous recommandons fortement d’utiliser [std :: Vector](../standard-library/vector-class.md) ou [std :: Array](../standard-library/array-class-stl.md) au lieu des tableaux de style C décrits dans cette section. Ces deux types de bibliothèques standard stockent leurs éléments sous la forme d’un bloc de mémoire contigu, mais offrent une sécurité de type nettement supérieure avec les itérateurs qui pointent vers un emplacement valide dans la séquence. Pour plus d’informations, consultez [conteneurs (Modern C++)](containers-modern-cpp.md).
+Un tableau est une séquence d’objets du même type qui occupent une zone contiguë de mémoire. Les tableaux de style C traditionnels sont la source de nombreux bogues, mais restent communs, en particulier dans les bases de code plus anciennes. Dans le C++ moderne, nous vous recommandons fortement d’utiliser [std :: Vector](../standard-library/vector-class.md) ou [std :: Array](../standard-library/array-class-stl.md) au lieu des tableaux de style C décrits dans cette section. Ces deux types de bibliothèques standard stockent leurs éléments sous la forme d’un bloc de mémoire contigu. Toutefois, ils offrent une plus grande sécurité de type et prennent en charge des itérateurs garantissant qu’ils pointent vers un emplacement valide dans la séquence. Pour plus d’informations, consultez [conteneurs (Modern C++)](containers-modern-cpp.md).
 
 ## <a name="stack-declarations"></a>Déclarations de pile
 
-Dans une déclaration de tableau C++, la taille du tableau est spécifiée après le nom de la variable, et non après le nom de type, comme dans d’autres langages. L’exemple suivant déclare un tableau de 1000 doubles à allouer sur la pile. Le nombre d’éléments doit être fourni sous la forme d’un littéral entier ou d’une expression constante, car le compilateur doit connaître la quantité d’espace de pile à allouer. elle ne peut pas utiliser une valeur calculée au moment de l’exécution. La valeur par défaut 0 est affectée à chaque élément du tableau. Si vous n’affectez pas de valeur par défaut, chaque élément contient initialement les valeurs aléatoires qui se trouvent à cet emplacement.
+Dans une déclaration de tableau C++, la taille du tableau est spécifiée après le nom de la variable, et non après le nom de type, comme dans d’autres langages. L’exemple suivant déclare un tableau de 1000 doubles à allouer sur la pile. Le nombre d’éléments doit être fourni sous la forme d’un littéral entier ou d’une expression constante. Cela est dû au fait que le compilateur doit connaître la quantité d’espace de pile à allouer. elle ne peut pas utiliser une valeur calculée au moment de l’exécution. La valeur par défaut 0 est affectée à chaque élément du tableau. Si vous n’assignez pas de valeur par défaut, chaque élément contient initialement des valeurs aléatoires se trouvant à cet emplacement de mémoire.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ Dans une déclaration de tableau C++, la taille du tableau est spécifiée aprè
     }
 ```
 
-Le premier élément du tableau est l’élément 0, et le dernier élément est l’élément (*n*-1), où *n* est le nombre d’éléments que le tableau peut contenir. Le nombre d’éléments dans la déclaration doit être de type intégral et doit être supérieur à 0. Il vous incombe de vous assurer que votre programme ne transmet jamais une valeur à l’opérateur d’indice qui est supérieur à `(size - 1)` .
+Le premier élément du tableau est l’élément avant toute chose. Le dernier élément est l’élément (*n*-1), où *n* est le nombre d’éléments que le tableau peut contenir. Le nombre d’éléments dans la déclaration doit être de type intégral et doit être supérieur à 0. Il vous incombe de vous assurer que votre programme ne transmet jamais une valeur à l’opérateur d’indice qui est supérieur à `(size - 1)` .
 
-Un tableau de taille zéro est légal uniquement lorsque le tableau est le dernier champ d’un **`struct`** ou **`union`** et lorsque les extensions Microsoft (/Ze) sont activées.
+Un tableau de taille zéro est légal uniquement lorsque le tableau est le dernier champ d’un **`struct`** ou **`union`** et lorsque les extensions Microsoft sont activées ( **`/Za`** ou **`/permissive-`** ne sont pas définies).
 
-Les tableaux basés sur la pile sont plus rapides à allouer et à utiliser que les tableaux basés sur les tas, mais le nombre d’éléments ne peut pas être tellement important qu’il utilise trop de mémoire de pile. Le niveau de dépendance dépend de votre programme. Vous pouvez utiliser les outils de profilage pour déterminer si un tableau est trop grand.
+Les tableaux basés sur la pile sont plus rapides à allouer et à accéder aux tableaux basés sur les tas. Toutefois, l’espace de pile est limité. Le nombre d’éléments de tableau ne peut pas être tellement important qu’il utilise trop de mémoire de pile. Le niveau de dépendance dépend de votre programme. Vous pouvez utiliser les outils de profilage pour déterminer si un tableau est trop grand.
 
 ## <a name="heap-declarations"></a>Déclarations de tas
 
-Si vous avez besoin d’un tableau qui est trop grand pour être alloué sur la pile, ou dont la taille ne peut pas être connue au moment de la compilation, vous pouvez l’allouer sur le tas avec une [nouvelle \[ \] ](new-operator-cpp.md) expression. L’opérateur retourne un pointeur vers le premier élément. Vous pouvez utiliser l’opérateur d’indice avec la variable de pointeur comme avec un tableau basé sur la pile. Vous pouvez également utiliser des [opérations arithmétiques sur les pointeurs](../c-language/pointer-arithmetic.md) pour déplacer le pointeur vers n’importe quel élément arbitraire dans le tableau. Il vous incombe de veiller à ce que :
+Vous pouvez avoir besoin d’un tableau qui est trop grand pour être alloué sur la pile ou dont la taille n’est pas connue au moment de la compilation. Il est possible d’allouer ce tableau sur le tas à l’aide d’une [`new[]`](new-operator-cpp.md) expression. L’opérateur retourne un pointeur vers le premier élément. L’opérateur d’indice fonctionne sur la variable pointeur de la même manière qu’il le fait sur un tableau basé sur la pile. Vous pouvez également utiliser des [opérations arithmétiques sur les pointeurs](../c-language/pointer-arithmetic.md) pour déplacer le pointeur vers n’importe quel élément arbitraire dans le tableau. Il vous incombe de vous assurer que :
 
 - vous conservez toujours une copie de l’adresse du pointeur d’origine afin de pouvoir supprimer la mémoire lorsque vous n’avez plus besoin du tableau.
 - vous ne pouvez pas incrémenter ou décrémenter l’adresse du pointeur au-delà des limites du tableau.
 
-L’exemple suivant montre comment définir un tableau sur le tas au moment de l’exécution et comment accéder aux éléments du tableau à l’aide de l’opérateur d’indice ou de l’arithmétique du pointeur :
+L’exemple suivant montre comment définir un tableau sur le tas au moment de l’exécution. Elle montre comment accéder aux éléments de tableau à l’aide de l’opérateur d’indice et de l’arithmétique de pointeur :
 
 ```cpp
 
@@ -131,7 +131,7 @@ Vous pouvez initialiser un tableau dans une boucle, un élément à la fois ou d
 
 ## <a name="passing-arrays-to-functions"></a>Passage de tableaux à des fonctions
 
-Lorsqu’un tableau est passé à une fonction, il est passé en tant que pointeur vers le premier élément. Cela est vrai pour les tableaux basés sur la pile et sur les tas. Le pointeur ne contient aucune information de taille ou de type supplémentaire. Ce comportement est appelé *atténuation du pointeur*. Quand vous transmettez un tableau à une fonction, vous devez toujours spécifier le nombre d’éléments dans un paramètre séparé. Ce comportement implique également que les éléments de tableau ne sont pas copiés lorsque le tableau est passé à une fonction. Pour empêcher la fonction de modifier les éléments, spécifiez le paramètre en tant que pointeur vers des **`const`** éléments.
+Lorsqu’un tableau est passé à une fonction, il est passé en tant que pointeur vers le premier élément, qu’il s’agisse d’un tableau basé sur une pile ou sur un segment de mémoire. Le pointeur ne contient aucune information de taille ou de type supplémentaire. Ce comportement est appelé *atténuation du pointeur*. Quand vous transmettez un tableau à une fonction, vous devez toujours spécifier le nombre d’éléments dans un paramètre séparé. Ce comportement implique également que les éléments de tableau ne sont pas copiés lorsque le tableau est passé à une fonction. Pour empêcher la fonction de modifier les éléments, spécifiez le paramètre en tant que pointeur vers des **`const`** éléments.
 
 L’exemple suivant montre une fonction qui accepte un tableau et une longueur. Le pointeur pointe vers le tableau d’origine, pas une copie. Étant donné que le paramètre n’est pas **`const`** , la fonction peut modifier les éléments du tableau.
 
@@ -156,7 +156,7 @@ La même fonction peut également être déclarée de cette manière, sans modif
 
 ```cpp
 // Unsized array
-void process(const double p[] const size_t len);
+void process(const double p[], const size_t len);
 
 // Fixed-size array. Length must still be specified explicitly.
 void process(const double p[1000], const size_t len);
@@ -175,7 +175,7 @@ Elle spécifie un tableau de type **`int`** , organisé de manière conceptuelle
 ![Disposition conceptuelle d’un tableau à plusieurs&#45;dimensionnelles](../cpp/media/vc38rc1.gif "Disposition conceptuelle d’un tableau à plusieurs&#45;dimensionnelles") <br/>
 Disposition conceptuelle d'un tableau multidimensionnel
 
-Dans les déclarations de tableaux multidimensionnels qui ont une liste d’initialiseurs (comme décrit dans [initialiseurs](../cpp/initializers.md)), l’expression constante qui spécifie les limites de la première dimension peut être omise. Par exemple :
+Vous pouvez déclarer des tableaux multidimensionnels qui ont une liste d’initialiseurs (comme décrit dans [initialiseurs](../cpp/initializers.md)). Dans ces déclarations, l’expression constante qui spécifie les limites de la première dimension peut être omise. Par exemple :
 
 ```cpp
 // arrays2.cpp
@@ -197,7 +197,7 @@ Les tableaux C++ sont stockés dans l'ordre row-major. L'ordre row-major signifi
 
 ## <a name="example"></a>Exemple
 
-La technique d'omission des spécifications de limites de la première dimension d'un tableau multidimensionnel peut également être utilisée dans les déclarations de fonction comme suit :
+Vous pouvez également omettre la spécification des limites de la première dimension d’un tableau multidimensionnel dans les déclarations de fonction, comme illustré ici :
 
 ```cpp
 // multidimensional_arrays.cpp
@@ -250,11 +250,11 @@ double FindMinToMkt(int Mkt, double myTransportCosts[][cMkts], int mycFacts) {
 The minimum cost to Market 3 is: 17.29
 ```
 
-La fonction `FindMinToMkt` est écrite de telle sorte que l'ajout de nouvelles fabriques ne requiert aucune modification du code, juste une recompilation.
+La fonction `FindMinToMkt` est écrite de telle sorte que l’ajout de nouvelles fabriques ne requiert aucune modification du code, juste une recompilation.
 
 ## <a name="initializing-arrays"></a>Initialisation des tableaux
 
-Si une classe a un constructeur, les tableaux de cette classe sont initialisés par un constructeur. S'il y a moins d'éléments dans la liste d'initialiseurs que les éléments du tableau, le constructeur par défaut est utilisé pour les éléments restants. Si aucun constructeur par défaut n'est défini pour la classe, la liste d'initialiseurs doit être complète (autrement dit, il doit y avoir un initialiseur pour chaque élément du tableau.)
+Les tableaux d’objets qui ont un constructeur de classe sont initialisés par le constructeur. Quand il y a moins d’éléments dans la liste d’initialiseurs que d’éléments dans le tableau, le constructeur par défaut est utilisé pour les éléments restants. Si aucun constructeur par défaut n’est défini pour la classe, la liste d’initialiseurs doit être *terminée*, autrement dit, il doit exister un initialiseur pour chaque élément du tableau.
 
 Prenons la classe `Point` qui définit deux constructeurs :
 
@@ -303,7 +303,7 @@ int main()
 
 ## <a name="accessing-array-elements"></a>Accès aux éléments de tableau
 
-Vous pouvez accéder à des éléments individuels d’un tableau à l’aide de l’opérateur d’indice de tableau ( `[ ]` ). Si un tableau unidimensionnel est utilisé dans une expression qui n’a pas d’indice, le nom du tableau prend la valeur d’un pointeur vers le premier élément du tableau.
+Vous pouvez accéder à des éléments individuels d’un tableau à l’aide de l’opérateur d’indice de tableau ( `[ ]` ). Si vous utilisez le nom d’un tableau unidimensionnel sans indice, il est évalué comme un pointeur vers le premier élément du tableau.
 
 ```cpp
 // using_arrays.cpp
@@ -344,7 +344,7 @@ Comme les autres opérateurs, l’opérateur d’indice ( `[]` ) peut être red�
 
 `*((array_name) + (subscript))`
 
-Comme dans toute addition qui implique des types pointeur, la mise à l'échelle est exécutée automatiquement pour ajuster la taille du type. Par conséquent, la valeur résultante n’est pas *n* octets de l’origine de Array-Name ; au lieu de cela, il s’agit du *n*ième élément du tableau. Pour plus d’informations sur cette conversion, consultez [opérateurs additifs](additive-operators-plus-and.md).
+Comme pour tous les ajouts impliquant des types pointeur, la mise à l’échelle s’effectue automatiquement pour ajuster la taille du type. La valeur résultante n’est pas *n* octets de l’origine de `array_name` ; il s’agit plutôt du *n*ième élément du tableau. Pour plus d’informations sur cette conversion, consultez [opérateurs additifs](additive-operators-plus-and.md).
 
 De même, pour des tableaux multidimensionnels, l'adresse est dérivée à l'aide de la méthode suivante :
 
@@ -359,7 +359,7 @@ char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-Le pointeur `psz` pointe vers le premier élément du tableau `szError1`. Contrairement aux pointeurs, les tableaux ne sont pas des l-value modifiables. Par conséquent, l'assignation suivante n'est pas conforme :
+Le pointeur `psz` pointe vers le premier élément du tableau `szError1`. Contrairement aux pointeurs, les tableaux ne sont pas des valeurs l-value modifiables. C’est pourquoi l’attribution suivante n’est pas conforme :
 
 ```cpp
 szError1 = psz;

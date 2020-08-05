@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 276ac2bce70ce5c4ebf8e22bb1da1ac9914db55e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
+ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87246112"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565948"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv, &gt; fonctions
 
@@ -89,23 +89,23 @@ Pour les conversions à virgule flottante, un masque de bits spécifiant le form
 *précision*\
 Pour les conversions à virgule flottante, nombre de chiffres de précision pour la valeur convertie.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 [To_chars_result](to-chars-result-structure.md) contenant le résultat de la conversion.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions qui prennent un paramètre [chars_format](chars-format-class.md) déterminent le spécificateur de conversion comme s’ils utilisaient `printf()` comme suit : le spécificateur de conversion est `f` si `fmt` est, si est, si est, `chars_format::fixed` `e` `fmt` `chars_format::scientific` `a` (sans « 0x » de début dans le résultat) si `fmt` est `chars_format::hex` , et `g` si `fmt` est `chars_format::general` . La spécification de la notation fixe la plus courte peut toujours aboutir à une sortie longue, car il peut s’agir de la représentation la plus courte possible lorsque la valeur est très grande ou très petite.
+Les fonctions qui prennent un paramètre [chars_format](chars-format-class.md) déterminent le spécificateur de conversion comme s’ils utilisaient `printf()` comme suit : le spécificateur de conversion est `'f'` si `fmt` est, si est, si est, `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` (sans le début `0x` dans le résultat) si `fmt` est `chars_format::hex` et `'g'` si `fmt` est `chars_format::general` . La spécification de la notation fixe la plus courte peut toujours aboutir à une sortie longue, car il peut s’agir de la représentation la plus courte possible lorsque la valeur est très grande ou très petite.
 
-Le tableau suivant décrit le comportement de conversion en fonction de différentes combinaisons de `fmt` `precision` paramètres et. Le terme « aller-retour le plus bref » fait référence à l’écriture du plus petit nombre de chiffres nécessaires pour que l’analyse de cette représentation à l’aide de la `from_chars` fonction correspondante récupère exactement la valeur.
+Le tableau suivant décrit le comportement de conversion en fonction de différentes combinaisons de `fmt` `precision` paramètres et. Le terme « comportement des allers-retours les plus courts » fait référence à l’écriture du plus petit nombre de chiffres nécessaires pour que l’analyse de cette représentation à l’aide de la `from_chars` fonction correspondante récupère exactement la valeur.
 
-| `fmt`et `precision` combinaison | Output |
+| `fmt`et `precision` combinaison | Sortie |
 |--|--|
 |  Aucun | Le cas échéant, la notation fixe ou scientifique est plus petite, en privilégiant les critère.</br>Ce comportement ne peut pas être simulé par une surcharge qui prend le `fmt` paramètre. |
-| `fmt` | Le comportement le plus bref pour le format spécifié, tel que le format scientifique le plus bref. |
-| `fmt` et `precision` | Utilise la précision donnée, le `printf()` style suivant, sans le comportement le plus bref du parcours circulaire. |
+| `fmt` | Le comportement le plus bref des allers-retours pour le format spécifié, tel que le format scientifique le plus bref. |
+| `fmt` et `precision` | Utilise la précision donnée, le `printf()` style suivant, sans le comportement le plus bref des allers-retours. |
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 [To_chars_result](to-chars-result-structure.md) qui contient le résultat de la conversion.
 
@@ -237,7 +237,16 @@ int main()
 }
 ```
 
+## <a name="requirements"></a>Configuration requise
+
+**En-tête :**\<charconv>
+
+**Espace de noms :** std
+
+/std : c++ 17, ou version ultérieure, est requis.
+
 ## <a name="see-also"></a>Voir aussi
 
 [\<charconv>](charconv.md)  
-[Chaîne décimale la plus petite qui effectue des allers-retours](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/)
+[Chaîne décimale la plus petite qui effectue des allers-retours](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
+ [spécificateurs de format printf ()](..\c-runtime-library\format-specification-syntax-printf-and-wprintf-functions.md)
