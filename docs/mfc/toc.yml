@@ -400,7 +400,7 @@
               href: activation-cpp.md
             - name: 'Activation : Verbes'
               href: activation-verbs.md
-        - name: Conteneurs
+        - name: Containers
           expanded: false
           items:
             - name: Conteneurs
@@ -2706,6 +2706,8 @@
           href: reference/afx-messages.md
         - name: Styles de contrôle de barre d'outils
           href: reference/toolbar-control-styles.md
+        - name: 'BufferCommand, énumération'
+          href: reference/buffercommand-enumeration.md
         - name: 'Énumération CMFCImagePaintArea::IMAGE_EDIT_MODE'
           href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
         - name: Énumération UICheckState
