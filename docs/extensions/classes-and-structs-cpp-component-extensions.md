@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 42742d8fadad78702a665e5c53119f022bc00971
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
+ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228724"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807769"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref et struct ref (C++/CLI et C++/CX)
 
@@ -29,13 +29,10 @@ Les extensions **classe ref** ou **struct ref** déclarent une classe ou un stru
 ### <a name="syntax"></a>Syntaxe
 
 ```cpp
-      class_access
-      ref class
-      name
-      modifier :  inherit_accessbase_type {};
-class_accessref structnamemodifier :  inherit_accessbase_type {};
-class_accessvalue classnamemodifier :  inherit_accessbase_type {};
-class_accessvalue structnamemodifier :  inherit_accessbase_type {};
+class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref struct name modifier : inherit_access base_type {};
+class_access value class name modifier : inherit_access base_type {};
+class_access value struct name modifier : inherit_access base_type {};
 ```
 
 ### <a name="parameters"></a>Paramètres
@@ -98,7 +95,7 @@ Quand vous déclarez un objet à l’aide des mots clés **ref class** ou **ref 
 
 Quand vous déclarez un objet à l’aide des mots clés **value class** ou **value struct**, la durée de vie de l’objet déclaré n’est pas contrôlée. L'objet est comme toute autre classe ou tout autre struct C++ standard.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
@@ -117,7 +114,7 @@ Les mots clés **ref class** et **ref struct** indiquent au compilateur que la c
 
 Les mots clés **value class** et **value struct** indiquent au compilateur que la valeur de la classe allouée ou du struct alloué est transmise aux fonctions ou stockée dans les membres.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 
