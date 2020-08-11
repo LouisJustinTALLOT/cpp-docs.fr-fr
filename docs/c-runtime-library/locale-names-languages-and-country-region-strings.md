@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: ae4b695682e00ef2f26287957400344ddd96dff4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 95557c824aafb1092cc7711f19708cd7782683a9
+ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189673"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88087005"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>Chaînes relatives aux noms des paramètres régionaux UCRT, aux langues et au pays/à la région
 
@@ -47,6 +47,12 @@ Spécifiez plusieurs types de catégories, séparés par des points-virgules. Le
 _wsetlocale(LC_ALL, L"de-DE");
 _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 ```
+
+
+## <a name="utf-8-support"></a>Prise en charge d’UTF-8
+
+La prise en charge d’UTF-8 peut être activée à l’aide de la page de codes UTF-8 dans votre chaîne de paramètres régionaux. Pour plus d’informations, consultez la [section `setlocale` prise en charge d’UTF-8](../c-runtime-library/reference/setlocale-wsetlocale.md#utf-8-support) dans.
+
 
 ## <a name="see-also"></a>Voir aussi
 
