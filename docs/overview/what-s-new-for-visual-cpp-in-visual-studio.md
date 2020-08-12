@@ -3,12 +3,12 @@ title: Nouveautés de C++ dans Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389998"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144176"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Nouveautés de C++ dans Visual Studio
 
@@ -513,7 +513,7 @@ Le SDK C++ REST, une API web multiplateforme pour C++, a été mis à jour vers 
 
 Plusieurs opérations C++ qui utilisent le moteur IntelliSense pour la refactorisation et la navigation dans le code s’exécutent beaucoup plus rapidement. Les valeurs suivantes sont basées sur la solution Visual Studio Chromium avec 3 500 projets :
 
-| Caractéristique | Amélioration des performances |
+| Fonctionnalité | Amélioration des performances |
 |--|--|
 | Renommer | x 5,3 |
 | Changer la signature | x 4,5 |
@@ -636,7 +636,7 @@ Vous disposez maintenant de nouvelles options pour l’écriture et l’empaquet
 
 Un modèle de **projet de création de packages d’application Windows ** a été ajouté et facilite considérablement l’empaquetage d’applications de bureau à l’aide de Desktop Bridge. Cette fonctionnalité est disponible sous **Fichier | Nouveau | Projet | Installé | Visual C++ | Plateforme Windows universelle**. Pour plus d’informations, consultez [Empaqueter une application à l’aide de Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
-Lors de l’écriture de nouveau code, vous pouvez désormais utiliser C++/WinRT, une projection de langage C++ standard pour Windows Runtime (WinRT) implémentée uniquement dans les fichiers d’en-tête. Elle vous permet de consommer et de créer des API Windows Runtime à l’aide d’un compilateur C++ conforme aux normes. C++/WinRT est conçu pour offrir aux développeurs C++ un accès idéal à l’API Windows moderne. Pour plus d’informations, consultez [c++/WinRT : moderne c++ pour le Windows Runtime](https://moderncpp.com/).
+Lors de l’écriture de nouveau code, vous pouvez désormais utiliser C++/WinRT, une projection de langage C++ standard pour Windows Runtime (WinRT) implémentée uniquement dans les fichiers d’en-tête. Elle vous permet de consommer et de créer des API Windows Runtime à l’aide d’un compilateur C++ conforme aux normes. C++/WinRT est conçu pour offrir aux développeurs C++ un accès idéal à l’API Windows moderne. Pour plus d’informations, consultez [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/).
 
 À partir de la build 17025 du SDK Windows Insider Preview, C++/WinRT est inclus dans le SDK Windows. Pour plus d’informations, consultez [C++/WinRT is now included the Windows SDK](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/).
 
