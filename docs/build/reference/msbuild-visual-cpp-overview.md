@@ -4,12 +4,12 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c52434fa4b652d52baea70df705920db4ee68a5f
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190492"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610844"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Composants internes MSBuild pour les projets C++
 
@@ -23,15 +23,15 @@ Par défaut, les principaux fichiers de support Visual Studio sont situés dans 
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *version* \\ VCTargets\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ \\ *version* de VC\\
 
   Contient les principaux fichiers cibles (.targets) et fichiers de propriétés (.props) qui sont utilisés par les cibles. Par défaut, la macro $(VCTargetsPath) référence ce répertoire. L’espace réservé *version* fait référence à la version de Visual Studio : V160 pour visual studio 2019, V150 pour visual studio 2017.
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *version* \\ VCTargets \\ \\ *platform* plateformes\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft pour les \\ \\ *version* \\ plateformes de version \\ *platform* Microsoft\\
 
   Contient les fichiers cibles et de propriétés spécifiques à la plateforme qui remplacent les cibles et propriétés dans le répertoire parent. Ce répertoire contient également une DLL qui définit les tâches qui sont utilisées par les cibles dans ce répertoire. L’espace réservé *plateforme* représente le sous-répertoire ARM, Win32 ou x64.
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *version* \\ VCTargets plateformes \\ \\ *plateforme* \\ PlatformToolsets \\ *ensemble d’outils*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *version*plateformes \\ \\ *platform* \\ ensemble d' \\ *Outils* PlatformToolsets\\
 
   Contient les répertoires qui permettent de générer des applications C++ en utilisant l’*ensemble d’outils* spécifié. L’espace réservé *plateforme* représente le sous-répertoire ARM, Win32 ou x64. L’espace réservé d' *ensemble d’outils* représente le sous-répertoire de l’ensemble d’outils.
 

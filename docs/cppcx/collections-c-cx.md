@@ -2,12 +2,12 @@
 title: Collections (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: c8b844cd2500df7ab9069ac1586a352c639e17bd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233507"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610944"
 ---
 # <a name="collections-ccx"></a>Collections (C++/CX)
 
@@ -39,7 +39,7 @@ Quand votre classe doit passer un conteneur de séquence à un autre Windows Run
 > [!IMPORTANT]
 > Si vous passez une séquence dans le cadre de votre propre programme, utilisez `Vector` ou `std::vector` car ils sont plus efficaces que `IVector`. Utilisez `IVector` uniquement lorsque vous passez le conteneur à travers l'ABI.
 >
-> Le système de type Windows Runtime ne prend pas en charge le concept de tableaux en escalier et vous ne pouvez donc pas passer un IVector<Platform :: array \<T>> comme valeur de retour ou paramètre de méthode. Pour passer un tableau en escalier ou une séquence de séquences à travers l'ABI, utilisez `IVector<IVector<T>^>`.
+> Le système de type Windows Runtime ne prend pas en charge le concept de tableaux en escalier et vous ne pouvez donc pas passer un `IVector<Platform::Array<T>>` en tant que valeur de retour ou paramètre de méthode. Pour passer un tableau en escalier ou une séquence de séquences à travers l'ABI, utilisez `IVector<IVector<T>^>`.
 
 `Vector<T>` fournit les méthodes requises pour ajouter, supprimer les éléments et y accéder dans la collection, et il est implicitement convertible en `IVector<T>`. Vous pouvez également utiliser les algorithmes STL sur les instances de `Vector<T>`. L'exemple ci-dessous illustre l'utilisation de base. Les fonctions [begin](../cppcx/begin-function.md) et [end](../cppcx/end-function.md) sont issues ici de l'espace `Platform::Collections` au lieu de l'espace `std` .
 
@@ -121,7 +121,7 @@ Itérateur STL qui satisfait aux spécifications d'un itérateur d'entrée STL.
 Itérateur STL qui répond aux spécifications d'un itérateur à accès aléatoire mutable STL.
 
 [Platform :: Collections :: VectorViewIterator, classe](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
-Itérateur STL qui satisfait aux exigences d’un **`const`** itérateur d’accès aléatoire STL.
+Itérateur STL qui satisfait aux exigences d’un  **`const`** itérateur d’accès aléatoire STL.
 
 ### <a name="begin-and-end-functions"></a>Fonctions begin() et end()
 
@@ -129,7 +129,7 @@ Pour simplifier l’utilisation de la bibliothèque STL pour traiter les `Vector
 
 Le tableau ci-dessous répertorie les itérateurs et fonctions disponibles.
 
-|Iterators|Fonctions|
+|Iterators|Functions|
 |---------------|---------------|
 |[Platform :: Collections :: VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Stocke en interne [Windows :: Foundation :: Collections :: \<T> IVector](/uwp/api/windows.foundation.collections.ivector-1) et int.)|[commencer](../cppcx/begin-function.md) /  [end](../cppcx/end-function.md)([Windows :: Foundation :: Collections :: IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1))|
 |[Platform :: Collections :: VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Stocke en [interne \<T> IVectorView](/uwp/api/windows.foundation.collections.ivectorview-1)^ et int.)|[commencer](../cppcx/begin-function.md) /  [fin](../cppcx/end-function.md) ([IVectorView \<T> ](/uwp/api/windows.foundation.collections.ivectorview-1)^)|

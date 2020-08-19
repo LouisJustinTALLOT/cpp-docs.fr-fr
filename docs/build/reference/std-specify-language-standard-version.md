@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9755194d70774f27af4c5174151588cc03d5f97a
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223822"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610957"
 ---
-# <a name="std-specify-language-standard-version"></a>`/std`(Spécifier la version du langage standard)
+# <a name="std-specify-language-standard-version"></a>`/std` (Spécifier la version du langage standard)
 
 Activez les fonctionnalités du langage C++ prises en charge dans la version spécifiée de la norme du langage C++.
 
@@ -21,17 +21,17 @@ Activez les fonctionnalités du langage C++ prises en charge dans la version sp�
 
 > **`/std:c++14`**\
 > **`/std:c++17`**\
-> **`/std:c++latest`**]
+> **`/std:c++latest`**
 
 ## <a name="remarks"></a>Notes
 
-L' **`/std`** option est disponible dans Visual Studio 2017 et versions ultérieures. Il est utilisé pour contrôler les fonctionnalités standard du langage de programmation ISO C++ spécifiques à la version qui sont activées pendant la compilation de votre code. Cette option vous permet de désactiver la prise en charge de certaines nouvelles fonctionnalités de langage et de bibliothèque : celles qui peuvent endommager votre code existant qui est conforme à une version particulière de la norme du langage. Par défaut, **`/std:c++14`** est spécifié, ce qui désactive les fonctionnalités de la bibliothèque de langue et de la bibliothèque standard qui se trouvent dans les versions ultérieures de la norme du langage C++. Utilisez **`/std:c++17`** pour activer les fonctionnalités et le comportement spécifiques à c++ 17. Pour activer explicitement le compilateur actuellement implémenté et les fonctionnalités de la bibliothèque standard proposées pour la prochaine ébauche standard, utilisez **`/std:c++latest`** . Toutes les fonctionnalités C++ 20 requièrent **`/std:c++latest`** ; lorsque l’implémentation est terminée, une nouvelle **`/std:c++20`** option est activée.
+L' **`/std`** option est disponible dans Visual Studio 2017 et versions ultérieures. Il est utilisé pour contrôler les fonctionnalités standard du langage de programmation ISO C++ spécifiques à la version qui sont activées pendant la compilation de votre code. Cette option vous permet de désactiver la prise en charge de certaines nouvelles fonctionnalités de langage et de bibliothèque : celles qui peuvent endommager votre code existant qui est conforme à une version particulière de la norme du langage. Par défaut, **`/std:c++14`** est spécifié, ce qui désactive les fonctionnalités de la bibliothèque de langue et de la bibliothèque standard qui se trouvent dans les versions ultérieures de la norme du langage C++. Utilisez  **`/std:c++17`** pour activer les fonctionnalités et le comportement spécifiques à c++ 17. Pour activer explicitement le compilateur actuellement implémenté et les fonctionnalités de la bibliothèque standard proposées pour la prochaine ébauche standard, utilisez **`/std:c++latest`** . Toutes les fonctionnalités C++ 20 requièrent **`/std:c++latest`** ; lorsque l’implémentation est terminée, une nouvelle **`/std:c++20`** option est activée.
 
 L’option par défaut **`/std:c++14`** active l’ensemble des fonctionnalités c++ 14 implémentées par le compilateur MSVC. Cette option désactive la prise en charge du compilateur et de la bibliothèque standard pour les fonctionnalités modifiées ou nouvelles dans les versions plus récentes de la norme du langage. Elle ne désactive pas certaines fonctionnalités C++ 17 déjà implémentées dans les versions précédentes du compilateur MSVC. Pour éviter les modifications avec rupture pour les utilisateurs qui ont déjà pris des dépendances sur les fonctionnalités disponibles dans ou avant Visual Studio 2015 Update 2, ces fonctionnalités restent activées lorsque l' **`/std:c++14`** option est spécifiée :
 
 - [Règles pour `auto` avec accolades-init-lists](https://wg21.link/n3922)
 
-- [`typename`dans le modèle template-Parameters](https://wg21.link/n4051)
+- [`typename` dans le modèle template-Parameters](https://wg21.link/n4051)
 
 - [Suppression des trigraphes](https://wg21.link/n4086)
 

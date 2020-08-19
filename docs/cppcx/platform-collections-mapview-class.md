@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 6c50825cb3003c2b1b63a25419ca67742c92b52f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214995"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610892"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView, classe
 
@@ -76,7 +76,7 @@ MapView est une implémentation C++ concrète de l’interface [Windows :: Foun
 
 **Espace de noms :** Platform::Collections
 
-## <a name="mapviewfirst-method"></a><a name="first"></a>MapView :: First, méthode
+## <a name="mapviewfirst-method"></a><a name="first"></a> MapView :: First, méthode
 
 Retourne un itérateur qui spécifie le premier élément de la vue de mappage.
 
@@ -95,7 +95,7 @@ Itérateur qui spécifie le premier élément de la vue cartographique.
 
 Un moyen pratique de contenir l’itérateur retourné par First () consiste à affecter la valeur de retour à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myMapView->First();`.
 
-## <a name="mapviewhaskey-method"></a><a name="haskey"></a>MapView :: Haskey,, méthode
+## <a name="mapviewhaskey-method"></a><a name="haskey"></a> MapView :: Haskey,, méthode
 
 Détermine si le MapView actif contient la clé spécifiée.
 
@@ -115,7 +115,7 @@ Clé utilisée pour rechercher l’élément MapView. Le type de *clé* est Type
 
 **`true`** Si la clé est trouvée ; Sinon, **`false`** .
 
-## <a name="mapviewlookup-method"></a><a name="lookup"></a>MapView :: Lookup, méthode
+## <a name="mapviewlookup-method"></a><a name="lookup"></a> MapView :: Lookup, méthode
 
 Récupère la valeur du type V associé à la clé spécifiée de type K.
 
@@ -134,7 +134,7 @@ Clé utilisée pour trouver un élément dans le MapView. Le type de `key` est T
 
 Valeur associée à `key`. Le type de la valeur de retour est TypeName *V*.
 
-## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>MapView :: MapView, constructeur
+## <a name="mapviewmapview-constructor"></a><a name="ctor"></a> MapView :: MapView, constructeur
 
 Initialise une nouvelle instance de la classe MapView.
 
@@ -175,9 +175,9 @@ Itérateur d'entrée du premier élément d'une plage d'éléments utilisée pou
 Itérateur d'entrée du premier élément qui suit une plage d'éléments utilisée pour initialiser le MapView actif.
 
 *II*<br/>
-[Std :: initializer_list<STD \<K,V> > ::p air](../standard-library/initializer-list-class.md) dont les éléments seront insérés dans MapView.
+[Std :: initializer_list \<std::pair\<K,V> > ](../standard-library/initializer-list-class.md) dont les éléments seront insérés dans MapView.
 
-## <a name="mapviewsize-method"></a><a name="size"></a>MapView :: Size, méthode
+## <a name="mapviewsize-method"></a><a name="size"></a> MapView :: Size, méthode
 
 Retourne le nombre d'éléments dans l'objet MapView actuel.
 
@@ -191,7 +191,7 @@ virtual property unsigned int Size;
 
 Nombre d’éléments dans l’objet MapView actuel.
 
-## <a name="mapviewsplit-method"></a><a name="split"></a>MapView :: Split, méthode
+## <a name="mapviewsplit-method"></a><a name="split"></a> MapView :: Split, méthode
 
 Divise l'objet MapView actif en deux objets MapView. Cette méthode n'est pas opérationnelle.
 
