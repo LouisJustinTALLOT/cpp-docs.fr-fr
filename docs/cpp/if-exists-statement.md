@@ -8,12 +8,12 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: 611fe53b960a7c8f80990240aa4fc8ac4affb606
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6522b1877dd2517032fc140de42671353ce9c357
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187398"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561399"
 ---
 # <a name="__if_exists-statement"></a>__if_exists, instruction
 
@@ -29,10 +29,11 @@ statements
 
 #### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*identificateur*|Identificateur dont vous voulez tester l'existence.|
-|*publication*|Une ou plusieurs instructions à exécuter si l' *identificateur* existe.|
+*identificateur*\
+Identificateur dont vous voulez tester l'existence.
+
+*publication*\
+Une ou plusieurs instructions à exécuter si l' *identificateur* existe.
 
 ## <a name="remarks"></a>Notes
 

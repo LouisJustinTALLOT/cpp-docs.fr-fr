@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: abcc18ee29e2dcb09ca15ae77219ae5dd4d74c65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228932"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561386"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -26,9 +26,8 @@ Le **`decltype`** spécificateur de type produit le type d’une expression spé
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*expression*|Expression. Pour plus d’informations, consultez [expressions](../cpp/expressions-cpp.md).|
+*formule*\
+Expression. Pour plus d’informations, consultez [expressions](../cpp/expressions-cpp.md).
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -204,4 +203,4 @@ static_assert(test2, "PASS2");
 
 Visual Studio 2010 ou versions ultérieures.
 
-`decltype(auto)`requiert Visual Studio 2015 ou une version ultérieure.
+`decltype(auto)` requiert Visual Studio 2015 ou une version ultérieure.

@@ -5,12 +5,12 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 7d22e550c7054c2197163f2edf829ec17a85a145
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d2f928ab3773ed8e0b0afdc0113db2ef5b2a3dd
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204558"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561216"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt;, opérateurs
 
@@ -20,7 +20,7 @@ Il s’agit des fonctions d’opérateur de modèle global définies dans &lt; a
 |-|-|
 |[opérateur ! =](#op_neq)|[opérateur = =](#op_eq_eq)|
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Vérifie l'inégalité entre les objets allocateurs d'une classe spécifiée.
 
@@ -33,10 +33,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*gauche*|Un des objets allocateur dont l’inégalité doit être vérifiée.|
-|*Oui*|Un des objets allocateur dont l’inégalité doit être vérifiée.|
+*gauche*\
+Un des objets allocateur dont l’inégalité doit être vérifiée.
+
+*Oui*\
+Un des objets allocateur dont l’inégalité doit être vérifiée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -46,7 +47,7 @@ bool operator!=(
 
 L’opérateur de modèle retourne `!(left == right)`.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Vérifie l'égalité entre les objets allocateurs d'une classe spécifiée.
 
@@ -59,10 +60,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*gauche*|Un des objets allocateur dont l’égalité doit être vérifiée.|
-|*Oui*|Un des objets allocateur dont l’égalité doit être vérifiée.|
+*gauche*\
+Un des objets allocateur dont l’égalité doit être vérifiée.
+
+*Oui*\
+Un des objets allocateur dont l’égalité doit être vérifiée.
 
 ### <a name="return-value"></a>Valeur de retour
 

@@ -1,5 +1,5 @@
 ---
-title: Classe CAutoHideDockSite
+title: CAutoHideDockSite, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoHideDockSite
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 1f23729ced02a151c6186bdcc72cb8938416be46
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753002"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562010"
 ---
-# <a name="cautohidedocksite-class"></a>Classe CAutoHideDockSite
+# <a name="cautohidedocksite-class"></a>CAutoHideDockSite, classe
 
-Le `CAutoHideDockSite` prolongement de la [classe CDockSite](../../mfc/reference/cdocksite-class.md) pour mettre en œuvre des vitres de quai auto-cacher.
+`CAutoHideDockSite`Étend la [classe CDockSite](../../mfc/reference/cdocksite-class.md) pour implémenter les volets d’ancrage à masquage automatique.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,27 +54,27 @@ class CAutoHideDockSite : public CDockSite
 |||
 |-|-|
 |Nom|Description|
-|`CAutoHideDockSite::AllowShowOnPaneMenu`|Indique si `CAutoHideDockSite` le est affiché sur le menu de la vitre.|
-|[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Détermine si un objet de vitre de base est dérivé de la [classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|
-|[CAutoHideDockSite::DockPane](#dockpane)|Docks une vitre `CAuotHideDockSite` à cet objet.|
-|[CAutoHideDockSite::GetAlignRect](#getalignrect)|Récupère la taille du site du quai dans les coordonnées de l’écran.|
-|[CAutoHideDockSite::RepositionPanes](#repositionpanes)|Redessiner la vitre `CAutoHideDockSite` avec les marges globales et l’espacement des boutons.|
-|[CAutoHideDockSite::SetOffsetLeft](#setoffsetleft)|Définit la marge sur le côté gauche de la barre d’amarrage.|
-|[CAutoHideDockSite::SetOffsetRight](#setoffsetright)|Définit la marge sur le côté droit de la barre d’amarrage.|
-|[CAutoHideDockSite::UnSetAutoHideMode](#unsetautohidemode)|Appelle [CMFCAutoHideBar:UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) pour les `CAutoHideDockSite`objets sur le .|
+|`CAutoHideDockSite::AllowShowOnPaneMenu`|Indique si le `CAutoHideDockSite` est affiché dans le menu du volet.|
+|[CAutoHideDockSite :: CanAcceptPane](#canacceptpane)|Détermine si un objet volet de base est dérivé de la [classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|
+|[CAutoHideDockSite ::D ockPane](#dockpane)|Ancre un volet à cet `CAuotHideDockSite` objet.|
+|[CAutoHideDockSite :: GetAlignRect](#getalignrect)|Récupère la taille du site d’ancrage en coordonnées d’écran.|
+|[CAutoHideDockSite :: RepositionPanes](#repositionpanes)|Redessine le volet sur le `CAutoHideDockSite` avec les marges globales et l’espacement du bouton.|
+|[CAutoHideDockSite :: SetOffsetLeft](#setoffsetleft)|Définit la marge sur le côté gauche de la barre d’ancrage.|
+|[CAutoHideDockSite :: SetOffsetRight](#setoffsetright)|Définit la marge à droite de la barre d’ancrage.|
+|[CAutoHideDockSite :: UnSetAutoHideMode](#unsetautohidemode)|Appelle [CMFCAutoHideBar :: UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) pour les objets sur le `CAutoHideDockSite` .|
 
 ### <a name="data-members"></a>Données membres
 
 |||
 |-|-|
 |Nom|Description|
-|[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Définit la taille de l’espace entre les barres d’outils et le bord de la barre d’amarrage. Cet espace est mesuré à partir du bord gauche ou du bord supérieur, en fonction de l’alignement de l’espace du quai.|
+|[CAutoHideDockSite :: m_nExtraSpace](#m_nextraspace)|Définit la taille de l’espace entre les barres d’outils et le bord de la barre d’ancrage. Cet espace est mesuré à partir du bord gauche ou du bord supérieur, en fonction de l’alignement de l’espace d’ancrage.|
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous appelez [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes), `CAutoHideDockSite` le cadre crée automatiquement un objet. Dans la plupart des cas, vous ne devriez pas avoir à instantané ou utiliser cette classe directement.
+Quand vous appelez [CFrameWndEx :: EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes), l’infrastructure crée automatiquement un `CAutoHideDockSite` objet. Dans la plupart des cas, vous ne devez pas avoir à instancier ou utiliser cette classe directement.
 
-La barre d’amarrage est l’espace entre le côté gauche de la vitre du quai et le côté gauche de la [classe CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md).
+La barre d’ancrage est l’intervalle entre le côté gauche du volet d’ancrage et le côté gauche de la [classe cmfcautohidebutton,](../../mfc/reference/cmfcautohidebutton-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -90,17 +90,17 @@ La barre d’amarrage est l’espace entre le côté gauche de la vitre du quai 
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `CAutoHideDockSite` récupérer `CMFCAutoHideBar` un objet à partir d’un objet, et comment définir les marges gauche et droite de la barre d’amarrage.
+L’exemple suivant montre comment récupérer un `CAutoHideDockSite` objet à partir d' `CMFCAutoHideBar` un objet et comment définir les marges gauche et droite de la barre d’ancrage.
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxautohidedocksite.h
+**En-tête :** afxautohidedocksite. h
 
-## <a name="cautohidedocksitecanacceptpane"></a><a name="canacceptpane"></a>CAutoHideDockSite::CanAcceptPane
+## <a name="cautohidedocksitecanacceptpane"></a><a name="canacceptpane"></a> CAutoHideDockSite :: CanAcceptPane
 
-Détermine si un volet de base est un objet [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) ou dérivé de `CMFCAutoHideBar`.
+Détermine si un volet de base est un objet [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) ou s’il est dérivé de `CMFCAutoHideBar` .
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -108,22 +108,20 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>Paramètres
 
-|||
-|-|-|
-|Paramètre|Description|
-|*pBar (pBar)*|[dans] Le volet de base que le cadre teste.|
+*pBar*\
+dans Volet de base que le Framework teste.
 
 ### <a name="return-value"></a>Valeur de retour
 
-VRAI si *pBar* `CMFCAutoHideBar`est dérivé de ; FALSE autrement.
+TRUE si *pBar* est dérivé de `CMFCAutoHideBar` ; FALSe dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Si un objet de vitre `CMFCAutoHideBar`de base `CAutoHideDockSite`est dérivé, il peut contenir un .
+Si un objet volet de base est dérivé de `CMFCAutoHideBar` , il peut contenir un `CAutoHideDockSite` .
 
-## <a name="cautohidedocksitedockpane"></a><a name="dockpane"></a>CAutoHideDockSite::DockPane
+## <a name="cautohidedocksitedockpane"></a><a name="dockpane"></a> CAutoHideDockSite ::D ockPane
 
-Docks un volet à cet objet [CAutoHideDockSite.](../../mfc/reference/cautohidedocksite-class.md)
+Ancre un volet à cet objet [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) .
 
 ```
 virtual void DockPane(
@@ -134,22 +132,24 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>Paramètres
 
-|||
-|-|-|
-|Paramètre|Description|
-|*Pwnd*|[dans] La vitre que le cadre docks.|
-|*dockMethod*|[dans] Options d’amarrage pour la vitre.|
-|*lpRect*|[dans] Un rectangle qui spécifie les limites de la vitre amarré.|
+*pWnd*\
+dans Volet ancré par le Framework.
+
+*dockMethod*\
+dans Options d’ancrage du volet.
+
+*lpRect*\
+dans Rectangle qui spécifie les limites du volet ancré.
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut n’utilise pas le *paramètre dockMethod*, qui est prévu pour une utilisation future.
+L’implémentation par défaut n’utilise pas le paramètre *dockMethod*, qui est fourni pour une utilisation ultérieure.
 
-Si *lpRect* est NULL, le cadre met la vitre dans l’emplacement par défaut sur le site du quai. Si le site du quai est horizontal, l’emplacement par défaut se trouve à l’extrême gauche du quai. Dans le cas contraire, l’emplacement par défaut se trouve en haut du site du quai.
+Si *lpRect* a la valeur null, le Framework place le volet à l’emplacement par défaut sur le site d’ancrage. Si le site d’ancrage est horizontal, l’emplacement par défaut est à l’extrême gauche du site d’accueil. Dans le cas contraire, l’emplacement par défaut se trouve en haut du site d’ancrage.
 
-## <a name="cautohidedocksitegetalignrect"></a><a name="getalignrect"></a>CAutoHideDockSite::GetAlignRect
+## <a name="cautohidedocksitegetalignrect"></a><a name="getalignrect"></a> CAutoHideDockSite :: GetAlignRect
 
-Récupère la taille du site du quai dans les coordonnées de l’écran.
+Récupère la taille du site d’ancrage en coordonnées d’écran.
 
 ```cpp
 void GetAlignRect(CRect& rect) const;
@@ -157,18 +157,16 @@ void GetAlignRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Paramètres
 
-|||
-|-|-|
-|Paramètre|Description|
-|*Rect*|[dans] Une référence à un rectangle. La méthode stocke la taille du site du quai dans ce rectangle.|
+*rectangulaire*\
+dans Référence à un rectangle. La méthode stocke la taille du site d’ancrage dans ce rectangle.
 
 ### <a name="remarks"></a>Notes
 
-Le rectangle est ajusté pour les marges offset de sorte qu’ils ne sont pas inclus.
+Le rectangle est ajusté pour les marges de décalage afin qu’elles ne soient pas incluses.
 
-## <a name="cautohidedocksitem_nextraspace"></a><a name="m_nextraspace"></a>CAutoHideDockSite::m_nExtraSpace
+## <a name="cautohidedocksitem_nextraspace"></a><a name="m_nextraspace"></a> CAutoHideDockSite :: m_nExtraSpace
 
-La taille de l’espace entre les bords de la [classe CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) et les objets de classe [CMFCAutoHideBar.](../../mfc/reference/cmfcautohidebar-class.md)
+Taille de l’espace entre les bords de la [classe CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) et les objets de la [classe CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) .
 
 ```
 static int m_nExtraSpace;
@@ -176,11 +174,11 @@ static int m_nExtraSpace;
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un `CMFCAutoHideBar` est amarré à un, `CAutoHideDockSite`il ne doit pas occuper l’ensemble du site du quai. Cette variable globale contrôle l’espace supplémentaire entre `CMFCAutoHideBar` la `CAutoHideDockSite` bordure gauche ou supérieure du bord et le bord correspondant. L’utilisation du bord supérieur ou gauche dépend de l’alignement actuel.
+Lorsqu’un `CMFCAutoHideBar` est ancré à un `CAutoHideDockSite` , il ne doit pas occuper l’intégralité du site d’ancrage. Cette variable globale contrôle l’espace supplémentaire entre la bordure gauche ou supérieure de `CMFCAutoHideBar` et le bord correspondant `CAutoHideDockSite` . Le fait que le bord supérieur ou gauche soit utilisé dépend de l’alignement actuel.
 
-## <a name="cautohidedocksitesetoffsetleft"></a><a name="setoffsetleft"></a>CAutoHideDockSite::SetOffsetLeft
+## <a name="cautohidedocksitesetoffsetleft"></a><a name="setoffsetleft"></a> CAutoHideDockSite :: SetOffsetLeft
 
-Définit la marge sur le côté gauche de la barre d’amarrage.
+Définit la marge sur le côté gauche de la barre d’ancrage.
 
 ```cpp
 void SetOffsetLeft(int nOffset);
@@ -188,16 +186,16 @@ void SetOffsetLeft(int nOffset);
 
 ### <a name="parameters"></a>Paramètres
 
-*nOffset (en anglais)*<br/>
-[dans] Le nouveau décalage.
+*nOffset*<br/>
+dans Nouvel offset.
 
 ### <a name="remarks"></a>Notes
 
-Les objets [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) sont positionnés statiquement sur l’objet. `CAutoHideDockSite` Cela signifie que l’utilisateur ne `CMFCAutoHideBar` peut pas modifier manuellement l’emplacement des objets. La `SetOffsetLeft` méthode contrôle l’espacement entre le côté `CMFCAutoHideBar` gauche de la `CAutoHideDockSite`gauche-le plus et le côté gauche de la .
+Les objets [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) sont positionnés de manière statique sur l' `CAutoHideDockSite` objet. Cela signifie que l’utilisateur ne peut pas modifier manuellement l’emplacement des `CMFCAutoHideBar` objets. La `SetOffsetLeft` méthode contrôle l’espacement entre le côté gauche du côté gauche `CMFCAutoHideBar` et le côté gauche du `CAutoHideDockSite` .
 
-## <a name="cautohidedocksitesetoffsetright"></a><a name="setoffsetright"></a>CAutoHideDockSite::SetOffsetRight
+## <a name="cautohidedocksitesetoffsetright"></a><a name="setoffsetright"></a> CAutoHideDockSite :: SetOffsetRight
 
-Définit la marge sur le côté droit de la barre d’amarrage.
+Définit la marge à droite de la barre d’ancrage.
 
 ```cpp
 void SetOffsetRight(int nOffset);
@@ -205,16 +203,16 @@ void SetOffsetRight(int nOffset);
 
 ### <a name="parameters"></a>Paramètres
 
-*nOffset (en anglais)*<br/>
-[dans] Le nouveau décalage.
+*nOffset*<br/>
+dans Nouvel offset.
 
 ### <a name="remarks"></a>Notes
 
-Les objets [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) sont positionnés statiquement sur l’objet. `CAutoHideDockSite` Cela signifie que l’utilisateur ne peut `CMFCAutoHideBar` pas modifier manuellement l’emplacement des objets. La `SetOffsetRight` méthode contrôle l’espacement entre le côté `CMFCAutoHideBar` droit de la `CAutoHideDockSite`partie droite et le côté droit de la .
+Les objets [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) sont positionnés de manière statique sur l' `CAutoHideDockSite` objet. Cela signifie que l’utilisateur ne peut pas modifier manuellement l’emplacement des `CMFCAutoHideBar` objets. La `SetOffsetRight` méthode contrôle l’espacement entre le côté droit du côté droit `CMFCAutoHideBar` et le côté droit du `CAutoHideDockSite` .
 
-## <a name="cautohidedocksiterepositionpanes"></a><a name="repositionpanes"></a>CAutoHideDockSite::RepositionPanes
+## <a name="cautohidedocksiterepositionpanes"></a><a name="repositionpanes"></a> CAutoHideDockSite :: RepositionPanes
 
-Redessaille les vitres sur le [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md).
+Redessine les volets sur le [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md).
 
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -222,18 +220,16 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="parameters"></a>Paramètres
 
-|||
-|-|-|
-|Paramètre|Description|
-|*rectNewClientArea*|[dans] Une valeur réservée.|
+*rectNewClientArea*\
+dans Valeur réservée.
 
 ### <a name="remarks"></a>Notes
 
-La mise en œuvre par défaut n’utilise pas *rectNewClientArea*. Il redessiner les vitres avec les marges globales des barres d’outils et l’espacement des boutons.
+L’implémentation par défaut n’utilise pas *rectNewClientArea*. Il redessine les volets avec les marges et l’espacement de bouton globaux de la barre d’outils.
 
-## <a name="cautohidedocksiteunsetautohidemode"></a><a name="unsetautohidemode"></a>CAutoHideDockSite::UnSetAutoHideMode
+## <a name="cautohidedocksiteunsetautohidemode"></a><a name="unsetautohidemode"></a> CAutoHideDockSite :: UnSetAutoHideMode
 
-Appelle [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) pour les objets sur le site du quai.
+Appelle [CMFCAutoHideBar :: UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) pour les objets sur le site d’ancrage.
 
 ```cpp
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
@@ -241,14 +237,12 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 
 ### <a name="parameters"></a>Paramètres
 
-|||
-|-|-|
-|Paramètre|Description|
-|*pAutoHideToolbar*|[dans] Un pointeur à un volet d’objet [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) situé sur le `CAutoHideDockSite`.|
+*pAutoHideToolbar*\
+dans Pointeur vers un volet objet [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) situé sur le `CAutoHideDockSite` .
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode recherche la ligne qui contient *pAutoHideToolbar*. Il `CMFCAutoHideBar.UnSetAutoHideMode` appelle tous `CMFCAutoHideBar` les objets de cette rangée. Si *pAutoHideToolbar* n’est pas trouvé ou `CMFCAutoHideBar.UnSetAutoHideMode` il `CMFCAutoHideBar` est NULL, cette méthode nécessite tous les objets sur le `CAutoHideDockSite`.
+Cette méthode recherche la ligne qui contient *pAutoHideToolbar*. Elle appelle `CMFCAutoHideBar.UnSetAutoHideMode` pour tous les `CMFCAutoHideBar` objets de cette ligne. Si *pAutoHideToolbar* est introuvable ou qu’il a la valeur null, cette méthode appelle `CMFCAutoHideBar.UnSetAutoHideMode` pour tous les `CMFCAutoHideBar` objets sur le `CAutoHideDockSite` .
 
 ## <a name="see-also"></a>Voir aussi
 

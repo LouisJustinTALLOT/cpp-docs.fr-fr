@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-ms.openlocfilehash: 01d282585133d55ee3f7ec96c212705c2afca9d1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 47b82a198a52a61bd5558bd59a38b1d328fa67b2
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617422"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562582"
 ---
 # <a name="allocator_suballoc-class"></a>allocator_suballoc, classe
 
@@ -27,15 +27,14 @@ class allocator_suballoc;
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*Type*|Type des éléments alloués par l'allocateur.|
+*Entrer*\
+Type des éléments alloués par l'allocateur.
 
 ## <a name="remarks"></a>Notes
 
-La macro [ALLOCATOR_DECL](allocators-functions.md#allocator_decl) transmet cette classe en tant que paramètre *Name* dans l’instruction suivante :`ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+La macro [ALLOCATOR_DECL](allocators-functions.md#allocator_decl) transmet cette classe en tant que paramètre *Name* dans l’instruction suivante : `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<allocators>
 

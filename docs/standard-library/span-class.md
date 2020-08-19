@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217452"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560450"
 ---
 # <a name="span-class-c-standard-library"></a>span, classe (bibliothèque standard C++)
 
@@ -75,10 +75,11 @@ class span;
 
 ### <a name="template-parameters"></a>Paramètres de modèle
 
-|Paramètre|Description|
-|-|-|
-|`T`| Type des éléments de l’étendue. |
-|`Extent`| Nombre d’éléments dans l’étendue, s’ils sont spécifiés au moment de la compilation. Sinon, `std::dynamic_extent` si le nombre d’éléments est spécifié au moment de l’exécution. |
+`T`\
+ Type des éléments de l’étendue.
+
+`Extent`\
+ Nombre d’éléments dans l’étendue, s’ils sont spécifiés au moment de la compilation. Sinon,  `std::dynamic_extent` si le nombre d’éléments est spécifié au moment de l’exécution.
 
 [Guide de déduction](#deduction_guides)
 
@@ -742,7 +743,7 @@ Itérateur inverse de l’espace réservé qui suit le dernier élément de l’
 
 ### <a name="remarks"></a>Notes
 
-`rend`est utilisé avec une étendue inversée comme [span :: end](#end) est utilisé avec une étendue. Utilisez-le pour déterminer si un itérateur inversé a atteint la fin de son étendue.
+`rend` est utilisé avec une étendue inversée comme [span :: end](#end) est utilisé avec une étendue. Utilisez-le pour déterminer si un itérateur inversé a atteint la fin de son étendue.
 
 La valeur retournée par `rend` ne doit pas être déréférencée.
 
@@ -890,7 +891,7 @@ int main()
 
 ## <a name="spanspan"></a><a name="span"></a> `span::span`
 
-`span`constructeurs.
+`span` constructeurs.
 
 ```cpp
 constexpr span() noexcept
@@ -962,7 +963,7 @@ Une étendue ne libère pas de stockage pour les éléments de l’étendue, car
 |---------|---------|
 |`span()` | Construit une étendue vide. Pris en compte uniquement pendant la résolution de surcharge lorsque le paramètre de modèle `Extent` est `0` ou `dynamic_extent` .|
 |`span(It first, size_type count)` | Construit une étendue à partir des premiers `count` éléments de Iterator `first` .  Pris en compte uniquement pendant la résolution de surcharge lorsque le paramètre de modèle `Extent` n’est pas `dynamic_extent` . |
-|`span(It first, End last)` | Construit une étendue à partir des éléments de l’itérateur `first` jusqu’à ce que la fin `last` soit atteinte. Pris en compte uniquement pendant la résolution de surcharge lorsque le paramètre de modèle `Extent` n’est pas `dynamic_extent` . `It`doit être `contiguous_iterator` .  |
+|`span(It first, End last)` | Construit une étendue à partir des éléments de l’itérateur `first` jusqu’à ce que la fin `last` soit atteinte. Pris en compte uniquement pendant la résolution de surcharge lorsque le paramètre de modèle `Extent` n’est pas `dynamic_extent` . `It` doit être `contiguous_iterator` .  |
 |`span(array<T, N>& arr) noexcept;`<br /><br />`span(const array<T, N>& arr) noexcept;`<br /><br />`span(type_identity_t<element_type> (&arr)[N]) noexcept;` |  Construit une étendue à partir d' `N` éléments du tableau spécifié. Pris en compte uniquement pendant la résolution de surcharge lorsque le paramètre `Extent` de modèle est `dynamic_extent` ou est égal à `N` . |
 |`span(R&& r)` |  Construisez une étendue à partir d’une plage. Participe uniquement à la résolution de surcharge si le paramètre de modèle `Extent` n’est pas `dynamic_extent` .|
 |`span(const span& other)` |  Constructeur de copie généré par le compilateur. Une copie superficielle du pointeur de données est sécurisée, car l’étendue n’alloue pas la mémoire pour contenir les éléments. |
@@ -1086,7 +1087,7 @@ int main()
 2
 ```
 
-## <a name="deduction-guides"></a><a name="deduction_guides"></a>Guides de déduction
+## <a name="deduction-guides"></a><a name="deduction_guides"></a> Guides de déduction
 
 Les guides de déduction suivants sont fournis pour span.
 

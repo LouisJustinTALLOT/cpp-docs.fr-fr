@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: f422b171c14695a1207a30419a10d50cdfb5adf0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228126"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560554"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc, classe
 
@@ -32,9 +32,8 @@ class rts_alloc
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*Cache*|Type d'instances de cache contenu dans le tableau. Il peut s’agir de [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+*En*\
+Type d'instances de cache contenu dans le tableau. Il peut s’agir [`cache_chunklist`](../standard-library/cache-chunklist-class.md) de, [`cache_freelist`](../standard-library/cache-freelist-class.md) ou [`cache_suballoc`](../standard-library/cache-suballoc-class.md) .
 
 ## <a name="remarks"></a>Notes
 
@@ -44,7 +43,7 @@ Ce modèle de classe contient plusieurs instances d’allocateur de bloc et dét
 
 |Fonction membre|Description|
 |-|-|
-|[allocate](#allocate)|Alloue un bloc de mémoire.|
+|[lui](#allocate)|Alloue un bloc de mémoire.|
 |[libérer](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
@@ -54,7 +53,7 @@ Ce modèle de classe contient plusieurs instances d’allocateur de bloc et dét
 
 **Espace de noms :** stdext
 
-## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc :: Allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a> rts_alloc :: Allocate
 
 Alloue un bloc de mémoire.
 
@@ -64,9 +63,8 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*count*|Nombre d’éléments du tableau à allouer.|
+*saut*\
+Nombre d’éléments du tableau à allouer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -76,7 +74,7 @@ Un pointeur vers l’objet alloué.
 
 La fonction membre retourne `caches[_IDX].allocate(count)` , où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, il retourne `operator new(count)` . `cache`, qui représente l’objet cache.
 
-## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc ::d eallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc ::d eallocate
 
 Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.
 
@@ -86,16 +84,17 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
-|*count*|Nombre d’objets à désallouer dans le stockage.|
+*effectués*\
+Pointeur vers le premier objet à désallouer dans le stockage.
+
+*saut*\
+Nombre d’objets à désallouer dans le stockage.
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre appelle `caches[_IDX].deallocate(ptr, count)` , où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, il retourne `operator delete(ptr)` .
 
-## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc :: est égal à
+## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc :: est égal à
 
 Compare l'égalité de deux caches.
 
@@ -105,10 +104,11 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*_Cache*|Objet cache associé au filtre.|
-|*_Other*|Objet cache dont l’égalité est à comparer.|
+*_Cache*\
+Objet cache associé au filtre.
+
+*_Other*\
+Objet cache dont l’égalité est à comparer.
 
 ### <a name="remarks"></a>Notes
 

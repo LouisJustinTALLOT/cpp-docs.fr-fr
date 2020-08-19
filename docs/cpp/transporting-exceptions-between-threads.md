@@ -14,12 +14,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: 1b3e6ffa0e98d54b047e18e4c023a8f5173470b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186098"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561360"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transport des exceptions entre les threads
 
@@ -40,12 +40,17 @@ namespace std
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*non spécifié*|Une classe interne non spécifiée utilisée pour implémenter le type `exception_ptr`.|
-|*p*|Un objet `exception_ptr` qui référence une exception.|
-|*Envoyer*|Une classe représentant une exception.|
-|*Envoyer*|Une instance de la classe de paramètre `E`.|
+*non spécifié*\
+Une classe interne non spécifiée utilisée pour implémenter le type `exception_ptr`.
+
+*p*\
+Un objet `exception_ptr` qui référence une exception.
+
+*Envoyer*\
+Une classe représentant une exception.
+
+*Envoyer*\
+Une instance de la classe de paramètre `E`.
 
 ## <a name="return-value"></a>Valeur retournée
 
@@ -90,7 +95,7 @@ Seule la combinaison suivante des options du compilateur et des instructions de 
    > [!IMPORTANT]
    > Nous vous recommandons de spécifier l’option de compilateur **/EHsc** et d’intercepter uniquement les exceptions C++. Vous vous exposez à une menace de sécurité si vous utilisez l’option de compilateur **/EHa** ou **/CLR** et une **`catch`** instruction avec des points de suspension *exception-declaration* ( `catch(...)` ). Vous envisagez probablement d’utiliser l' **`catch`** instruction pour capturer quelques exceptions spécifiques. Toutefois, l'instruction `catch(...)` capture toutes les exceptions C++ et SEH, notamment les exceptions inattendues qui devraient s'avérer irrécupérables. Si vous ignorez ou traitez mal une exception inattendue, le code malveillant peut utiliser cette possibilité pour fragiliser la sécurité de votre programme.
 
-## <a name="usage"></a>Usage
+## <a name="usage"></a>Utilisation
 
 Les sections suivantes décrivent comment transporter des exceptions à l’aide du `exception_ptr` type, et les `current_exception` `rethrow_exception` fonctions, et `make_exception_ptr` .
 

@@ -26,19 +26,19 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1bb617e0f3792f2ac41d59df13d184423d56a9e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948560"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562036"
 ---
 # <a name="_set_error_mode"></a>_set_error_mode
 
 Modifie **__error_mode** pour déterminer un emplacement autre que celui par défaut dans lequel le runtime C écrit un message d’erreur pour une erreur qui peut mettre fin au programme.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,24 +63,24 @@ Contrôle le récepteur de sortie d’erreur en définissant la valeur de **__er
 
 Le paramètre *mode_val* peut être défini sur l’une des valeurs suivantes.
 
-|Paramètre|Description|
+|Valeur|Description|
 |---------------|-----------------|
 |**_OUT_TO_DEFAULT**|Le récepteur d’erreurs est déterminé par **__app_type**.|
 |**_OUT_TO_STDERR**|L'intercepteur d'erreurs est une erreur standard.|
 |**_OUT_TO_MSGBOX**|L'intercepteur d'erreurs est une boîte de message.|
-|**_REPORT_ERRMODE**|Signalez la valeur **__error_mode** actuelle.|
+|**_REPORT_ERRMODE**|Signale la valeur de **__error_mode** actuelle.|
 
 Si la valeur transmise est différente de celles répertoriées, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_set_error_mode** affecte à **errno** la valeur **EINVAL** et retourne-1.
 
 Lorsqu’il est utilisé avec une [assertion](assert-macro-assert-wassert.md), **_set_error_mode** affiche l’instruction failed dans la boîte de dialogue et vous donne la possibilité de choisir le bouton **Ignorer** afin que vous puissiez continuer à exécuter le programme.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_set_error_mode**|\<stdlib.h>|
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_set_error_mode.c
@@ -104,4 +104,4 @@ Please contact the application's support team for more information.
 
 ## <a name="see-also"></a>Voir aussi
 
-[assert (macro), _assert, _wassert](assert-macro-assert-wassert.md)<br/>
+[Macro Assert, _assert, _wassert](assert-macro-assert-wassert.md)<br/>

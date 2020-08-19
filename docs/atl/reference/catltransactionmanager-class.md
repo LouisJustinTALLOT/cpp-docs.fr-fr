@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 968582feccd8ba9252ca009699eef6eae2c5c3d6
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 74afc1a82c12d6138198f5696d300825e06aba1e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167823"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562214"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager, classe
 
@@ -58,7 +58,7 @@ class CAtlTransactionManager;
 
 |Nom|Description|
 |----------|-----------------|
-|[Fermer](#close)|Ferme un handle de transaction.|
+|[Close](#close)|Ferme un handle de transaction.|
 |[Commiter](#commit)|Demande que la transaction soit validée.|
 |[Créer](#create)|Crée le descripteur de transaction.|
 |[CreateFile](#createfile)|Crée ou ouvre un fichier, un flux de fichier ou un répertoire sous la forme d’une opération traitée.|
@@ -72,7 +72,7 @@ class CAtlTransactionManager;
 |[RegCreateKeyEx](#regcreatekeyex)|Crée la clé de Registre spécifiée et l’associe à une transaction. Si la clé existe déjà, la fonction l’ouvre.|
 |[RegDeleteKey](#regdeletekey)|Supprime une sous-clé et ses valeurs de la vue spécifique à la plateforme spécifiée du registre en tant qu’opération traitée.|
 |[RegOpenKeyEx](#regopenkeyex)|Ouvre la clé de Registre spécifiée et l’associe à une transaction.|
-|[Restauration](#rollback)|Demande que la transaction soit restaurée.|
+|[Instruction](#rollback)|Demande que la transaction soit restaurée.|
 |[SetFileAttributes](#setfileattributes)|Définit les attributs d’un fichier ou d’un répertoire en tant qu’opération traitée.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **En-tête :** atltransactionmanager. h
 
-## <a name="catltransactionmanager"></a><a name="dtor"></a>~ CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="dtor"></a>  ~ CAtlTransactionManager
 
 Destructeur CAtlTransactionManager.
 
@@ -104,7 +104,7 @@ virtual ~CAtlTransactionManager();
 
 Dans un traitement normal, la transaction est automatiquement validée et fermée. Si le destructeur est appelé pendant un déroulement d’exception, la transaction est restaurée et fermée.
 
-## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a> CAtlTransactionManager
 
 Constructeur CAtlTransactionManager.
 
@@ -122,7 +122,7 @@ TRUE indique que le gestionnaire de transactions est créé automatiquement dans
 
 ### <a name="remarks"></a>Notes
 
-## <a name="close"></a><a name="close"></a>Plus
+## <a name="close"></a><a name="close"></a> Plus
 
 Ferme le handle de transaction.
 
@@ -138,7 +138,7 @@ TRUE en cas de réussite, sinon FALSE.
 
 Ce wrapper appelle la `CloseHandle` fonction. La méthode est appelée automatiquement dans le destructeur.
 
-## <a name="commit"></a><a name="commit"></a>Valider
+## <a name="commit"></a><a name="commit"></a> Valider
 
 Demande que la transaction soit validée.
 
@@ -154,7 +154,7 @@ TRUE en cas de réussite, sinon FALSE.
 
 Ce wrapper appelle la `CommitTransaction` fonction. La méthode est appelée automatiquement dans le destructeur.
 
-## <a name="create"></a><a name="create"></a>Créés
+## <a name="create"></a><a name="create"></a> Créer
 
 Crée le descripteur de transaction.
 
@@ -170,7 +170,7 @@ TRUE en cas de réussite, sinon FALSE.
 
 Ce wrapper appelle la `CreateTransaction` fonction. Vérifier
 
-## <a name="createfile"></a><a name="createfile"></a>CreateFile
+## <a name="createfile"></a><a name="createfile"></a> CreateFile
 
 Crée ou ouvre un fichier, un flux de fichier ou un répertoire sous la forme d’une opération traitée.
 
@@ -203,7 +203,7 @@ Pointeur vers une structure SECURITY_ATTRIBUTES qui contient un descripteur de s
 Action à effectuer sur les fichiers qui existent et qui n’existent pas. Ce paramètre doit avoir l’une des valeurs suivantes, qui ne peuvent pas être combinées : CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING ou TRUNCATE_EXISTING.
 
 *dwFlagsAndAttributes*<br/>
-Attributs et indicateurs de fichier. Ce paramètre peut inclure n’importe quelle combinaison des attributs de fichier disponibles (FILE_ATTRIBUTE_ *). Tous les autres attributs de fichier remplacent FILE_ATTRIBUTE_NORMAL. Ce paramètre peut également contenir des combinaisons d’indicateurs (\*FILE_FLAG_) pour contrôler le comportement de mise en mémoire tampon, les modes d’accès et d’autres indicateurs spéciaux. Celles-ci sont combinées avec toutes les valeurs de FILE_ATTRIBUTE_\* .
+Attributs et indicateurs de fichier. Ce paramètre peut inclure n’importe quelle combinaison des attributs de fichier disponibles (FILE_ATTRIBUTE_ *). Tous les autres attributs de fichier remplacent FILE_ATTRIBUTE_NORMAL. Ce paramètre peut également contenir des combinaisons d’indicateurs (FILE_FLAG_ \* ) pour contrôler le comportement de mise en mémoire tampon, les modes d’accès et d’autres indicateurs spéciaux. Celles-ci sont combinées avec toutes les valeurs de FILE_ATTRIBUTE_ \* .
 
 *hTemplateFile*<br/>
 Handle valide d’un fichier de modèle avec le droit d’accès GENERIC_READ. Le fichier de modèle fournit des attributs de fichier et des attributs étendus pour le fichier en cours de création. Ce paramètre peut avoir la valeur NULL.
@@ -216,7 +216,7 @@ Retourne un handle qui peut être utilisé pour accéder à l’objet.
 
 Ce wrapper appelle la `CreateFileTransacted` fonction.
 
-## <a name="deletefile"></a><a name="deletefile"></a>DeleteFile
+## <a name="deletefile"></a><a name="deletefile"></a> DeleteFile
 
 Supprime un fichier existant en tant qu’opération traitée.
 
@@ -233,7 +233,7 @@ Nom du fichier à supprimer.
 
 Ce wrapper appelle la `DeleteFileTransacted` fonction.
 
-## <a name="findfirstfile"></a><a name="findfirstfile"></a>FindFirstFile
+## <a name="findfirstfile"></a><a name="findfirstfile"></a> FindFirstFile
 
 Recherche un fichier ou un sous-répertoire dans un répertoire en tant qu’opération traitée.
 
@@ -253,13 +253,13 @@ Pointeur vers la structure WIN32_FIND_DATA qui reçoit des informations sur un f
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction est réussie, la valeur de retour est un handle de recherche utilisé dans un appel `FindNextFile` ultérieur `FindClose`à ou. Si la fonction échoue ou ne parvient pas à trouver des fichiers à partir de la chaîne recherchée dans le paramètre *lpFileName* , la valeur de retour est INVALID_HANDLE_VALUE.
+Si la fonction est réussie, la valeur de retour est un handle de recherche utilisé dans un appel ultérieur à `FindNextFile` ou `FindClose` . Si la fonction échoue ou ne parvient pas à trouver des fichiers à partir de la chaîne recherchée dans le paramètre *lpFileName* , la valeur de retour est INVALID_HANDLE_VALUE.
 
 ### <a name="remarks"></a>Notes
 
 Ce wrapper appelle la `FindFirstFileTransacted` fonction.
 
-## <a name="getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes
+## <a name="getfileattributes"></a><a name="getfileattributes"></a> GetFileAttributes
 
 Récupère les attributs du système de fichiers d’un fichier ou d’un répertoire spécifié en tant qu’opération traitée.
 
@@ -276,7 +276,7 @@ Nom du fichier ou du répertoire.
 
 Ce wrapper appelle la `GetFileAttributesTransacted` fonction.
 
-## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>GetFileAttributesEx
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a> GetFileAttributesEx
 
 Récupère les attributs du système de fichiers d’un fichier ou d’un répertoire spécifié en tant qu’opération traitée.
 
@@ -302,7 +302,7 @@ Pointeur vers une mémoire tampon qui reçoit les informations d’attribut. Le 
 
 Ce wrapper appelle la `GetFileAttributesTransacted` fonction.
 
-## <a name="gethandle"></a><a name="gethandle"></a>GetHandle,
+## <a name="gethandle"></a><a name="gethandle"></a> GetHandle,
 
 Retourne le handle de transaction.
 
@@ -312,11 +312,11 @@ HANDLE GetHandle() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le descripteur de transaction pour une classe. Retourne la `CAtlTransactionManager` valeur null si n’est pas attaché à un handle.
+Retourne le descripteur de transaction pour une classe. Retourne la valeur NULL si `CAtlTransactionManager` n’est pas attaché à un handle.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="isfallback"></a><a name="isfallback"></a>IsFallback
+## <a name="isfallback"></a><a name="isfallback"></a> IsFallback
 
 Détermine si les appels de secours sont activés.
 
@@ -330,7 +330,7 @@ Retourne la valeur TRUE si la classe prend en charge les appels de secours. Sino
 
 ### <a name="remarks"></a>Notes
 
-## <a name="m_bfallback"></a><a name="m_bfallback"></a>m_bFallback
+## <a name="m_bfallback"></a><a name="m_bfallback"></a> m_bFallback
 
 TRUE si le secours est pris en charge ; FALSe dans le cas contraire.
 
@@ -340,7 +340,7 @@ BOOL m_bFallback;
 
 ### <a name="remarks"></a>Notes
 
-## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
+## <a name="m_htransaction"></a><a name="m_htransaction"></a> m_hTransaction
 
 Descripteur de transaction.
 
@@ -350,7 +350,7 @@ HANDLE m_hTransaction;
 
 ### <a name="remarks"></a>Notes
 
-## <a name="movefile"></a><a name="movefile"></a>MoveFile
+## <a name="movefile"></a><a name="movefile"></a> MoveFile
 
 Déplace un fichier existant ou un répertoire, y compris ses enfants, en tant qu’opération traitée.
 
@@ -370,7 +370,7 @@ Nouveau nom du fichier ou du répertoire. Ce nom ne doit pas déjà exister. Un 
 
 Ce wrapper appelle la `MoveFileTransacted` fonction.
 
-## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>RegCreateKeyEx
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a> RegCreateKeyEx
 
 Crée la clé de Registre spécifiée et l’associe à une transaction. Si la clé existe déjà, la fonction l’ouvre.
 
@@ -411,7 +411,7 @@ Masque qui spécifie les droits d’accès pour la clé.
 Pointeur vers une structure SECURITY_ATTRIBUTES qui détermine si le handle retourné peut être hérité par des processus enfants. Si *lpSecurityAttributes* a la valeur null, le handle ne peut pas être hérité.
 
 *phkResult*<br/>
-Pointeur vers une variable qui reçoit un handle vers la clé ouverte ou créée. Si la clé ne fait pas partie des clés de Registre prédéfinies, appelez `RegCloseKey` la fonction une fois que vous avez fini d’utiliser le handle.
+Pointeur vers une variable qui reçoit un handle vers la clé ouverte ou créée. Si la clé ne fait pas partie des clés de Registre prédéfinies, appelez la `RegCloseKey` fonction une fois que vous avez fini d’utiliser le handle.
 
 *lpdwDisposition*<br/>
 Pointeur vers une variable qui reçoit l’une des valeurs de disposition suivantes : REG_CREATED_NEW_KEY ou REG_OPENED_EXISTING_KEY.
@@ -424,7 +424,7 @@ Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la foncti
 
 Ce wrapper appelle la `RegCreateKeyTransacted` fonction.
 
-## <a name="regdeletekey"></a><a name="regdeletekey"></a>RegDeleteKey
+## <a name="regdeletekey"></a><a name="regdeletekey"></a> RegDeleteKey
 
 Supprime une sous-clé et ses valeurs de la vue spécifique à la plateforme spécifiée du registre en tant qu’opération traitée.
 
@@ -434,10 +434,11 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*hKey*|Handle d’une clé de Registre ouverte.|
-|*lpSubKey*|Nom de la clé à supprimer.|
+*hKey*\
+Handle d’une clé de Registre ouverte.
+
+*lpSubKey*\
+Nom de la clé à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -447,7 +448,7 @@ Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la foncti
 
 Ce wrapper appelle la `RegDeleteKeyTransacted` fonction.
 
-## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>RegOpenKeyEx
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a> RegOpenKeyEx
 
 Ouvre la clé de Registre spécifiée et l’associe à une transaction.
 
@@ -475,7 +476,7 @@ Ce paramètre est réservé et doit être égal à zéro.
 Masque qui spécifie les droits d’accès pour la clé.
 
 *phkResult*<br/>
-Pointeur vers une variable qui reçoit un handle vers la clé ouverte ou créée. Si la clé ne fait pas partie des clés de Registre prédéfinies, appelez `RegCloseKey` la fonction une fois que vous avez fini d’utiliser le handle.
+Pointeur vers une variable qui reçoit un handle vers la clé ouverte ou créée. Si la clé ne fait pas partie des clés de Registre prédéfinies, appelez la `RegCloseKey` fonction une fois que vous avez fini d’utiliser le handle.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -485,7 +486,7 @@ Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la foncti
 
 Ce wrapper appelle la `RegOpenKeyTransacted` fonction.
 
-## <a name="rollback"></a><a name="rollback"></a>Instruction
+## <a name="rollback"></a><a name="rollback"></a> Instruction
 
 Demande que la transaction soit restaurée.
 
@@ -501,7 +502,7 @@ TRUE en cas de réussite, sinon FALSE.
 
 Ce wrapper appelle la `RollbackTransaction` fonction.
 
-## <a name="setfileattributes"></a><a name="setfileattributes"></a>SetFileAttributes
+## <a name="setfileattributes"></a><a name="setfileattributes"></a> SetFileAttributes
 
 Définit les attributs d’un fichier ou d’un répertoire en tant qu’opération traitée.
 
