@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: f98b5698ff14349abf9300799f00c6d9121bcf65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 53d2603c82e94710ed687dce4caeec24aeb2f60a
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222262"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561646"
 ---
 # <a name="max_variable_size-class"></a>max_variable_size, classe
 
@@ -55,7 +55,7 @@ class max_variable_size
 
 **Espace de noms :** stdext
 
-## <a name="max_variable_sizeallocated"></a><a name="allocated"></a>max_variable_size :: allouée
+## <a name="max_variable_sizeallocated"></a><a name="allocated"></a> max_variable_size :: allouée
 
 Incrémente le nombre de blocs de mémoire alloués.
 
@@ -65,15 +65,14 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*_Nx*|Valeur d’incrément.|
+*_Nx*\
+Valeur d’incrément.
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction membre ajoute *_Nx* à la valeur stockée `_Nallocs` . Cette fonction membre est appelée après chaque appel réussi par `cache_freelist::allocate` à l’opérateur **`new`** . L’argument *_Nx* est le nombre de blocs de mémoire dans le segment alloué par l’opérateur **`new`** .
 
-## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a>max_variable_size ::d eallocated
+## <a name="max_variable_sizedeallocated"></a><a name="deallocated"></a> max_variable_size ::d eallocated
 
 Décrémente le nombre de blocs de mémoire alloués.
 
@@ -83,15 +82,14 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*_Nx*|Valeur d’incrément.|
+*_Nx*\
+Valeur d’incrément.
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre soustrait *_Nx* de la valeur stockée `_Nallocs` . Cette fonction membre est appelée après chaque appel par `cache_freelist::deallocate` à l’opérateur **`delete`** . L’argument *_Nx* est le nombre de blocs de mémoire dans le segment libéré par l’opérateur **`delete`** .
 
-## <a name="max_variable_sizefull"></a><a name="full"></a>max_variable_size :: Full
+## <a name="max_variable_sizefull"></a><a name="full"></a> max_variable_size :: Full
 
 Retourne une valeur qui indique si davantage de blocs de mémoire doivent être ajoutés à la liste libre.
 
@@ -107,7 +105,7 @@ bool full();
 
 Cette fonction membre est appelée par `cache_freelist::deallocate`. Si l’appel retourne **`true`** `deallocate` la valeur, place le bloc de mémoire sur la liste libre ; si elle retourne false, `deallocate` appelle l’opérateur **`delete`** pour libérer le bloc.
 
-## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a>max_variable_size :: max_variable_size
+## <a name="max_variable_sizemax_variable_size"></a><a name="max_variable_size"></a> max_variable_size :: max_variable_size
 
 Construit un objet de type `max_variable_size`.
 
@@ -119,7 +117,7 @@ max_variable_size();
 
 Le constructeur initialise les valeurs stockées `_Nblocks` et `_Nallocs` à zéro.
 
-## <a name="max_variable_sizereleased"></a><a name="released"></a>max_variable_size :: relâché
+## <a name="max_variable_sizereleased"></a><a name="released"></a> max_variable_size :: relâché
 
 Décrémente le nombre de blocs de mémoire dans la liste libre.
 
@@ -131,7 +129,7 @@ void released();
 
 Cette fonction membre décrémente la valeur stockée `_Nblocks`. La fonction membre `released` de la classe max actuelle est appelée par `cache_freelist::allocate` chaque fois qu’elle supprime un bloc de mémoire de la liste libre.
 
-## <a name="max_variable_sizesaved"></a><a name="saved"></a>max_variable_size :: saved
+## <a name="max_variable_sizesaved"></a><a name="saved"></a> max_variable_size :: saved
 
 Incrémente le nombre de blocs de mémoire dans la liste libre.
 

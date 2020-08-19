@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-ms.openlocfilehash: db285d8f3573ba34e2d0d2a68333ad9c4d19c077
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f30d7c8f322e053e91d9e14db0e7166a6031bd8
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215515"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562504"
 ---
 # <a name="unordered_multimap-class"></a>unordered_multimap, classe
 
@@ -161,13 +161,20 @@ class unordered_multimap;
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|-|-|
-|*Clé*|Type de clé.|
-|*Ty*|Type mappé.|
-|*Hachage*|Type d’objet de la fonction de hachage.|
-|*Prédit*|Type d’objet de fonction de comparaison d’égalité.|
-|*Utilis*|Classe allocator.|
+*Essentiel*\
+Type de clé.
+
+*Ty*\
+Type mappé.
+
+*Format*\
+Type d’objet de la fonction de hachage.
+
+*Prédit*\
+Type d’objet de fonction de comparaison d’égalité.
+
+*Utilis*\
+Classe allocator.
 
 ## <a name="members"></a>Membres
 
@@ -193,7 +200,7 @@ class unordered_multimap;
 |Fonction membre|Description|
 |-|-|
 |[commencer](#begin)|Désigne le début de la séquence contrôlée.|
-|[Compartiment](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
+|[plage](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
 |[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|
 |[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|
 |[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|
@@ -240,7 +247,7 @@ L’objet alloue et libère du stockage pour la séquence qu’il contrôle via 
 
 **Espace de noms :** std
 
-## <a name="unordered_multimapallocator_type"></a><a name="allocator_type"></a>unordered_multimap :: allocator_type
+## <a name="unordered_multimapallocator_type"></a><a name="allocator_type"></a> unordered_multimap :: allocator_type
 
 Type d’un allocateur pour la gestion du stockage.
 
@@ -278,7 +285,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_multimapbegin"></a><a name="begin"></a>unordered_multimap :: Begin
+## <a name="unordered_multimapbegin"></a><a name="begin"></a> unordered_multimap :: Begin
 
 Désigne le début de la séquence contrôlée ou un compartiment.
 
@@ -294,9 +301,8 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|-|-|
-|*nbucket*|Numéro de compartiment.|
+*nbucket*\
+Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
 
@@ -346,7 +352,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_multimapbucket"></a><a name="bucket"></a>unordered_multimap :: compartiment
+## <a name="unordered_multimapbucket"></a><a name="bucket"></a> unordered_multimap :: compartiment
 
 Obtient le numéro du compartiment pour une valeur de clé.
 
@@ -402,7 +408,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_multimapbucket_count"></a><a name="bucket_count"></a>unordered_multimap :: bucket_count
+## <a name="unordered_multimapbucket_count"></a><a name="bucket_count"></a> unordered_multimap :: bucket_count
 
 Obtient le nombre de compartiments.
 
@@ -488,7 +494,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multimapbucket_size"></a><a name="bucket_size"></a>unordered_multimap :: bucket_size
+## <a name="unordered_multimapbucket_size"></a><a name="bucket_size"></a> unordered_multimap :: bucket_size
 
 Obtient la taille d’un compartiment.
 
@@ -544,7 +550,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="unordered_multimapcbegin"></a><a name="cbegin"></a>unordered_multimap :: cbegin
+## <a name="unordered_multimapcbegin"></a><a name="cbegin"></a> unordered_multimap :: cbegin
 
 Retourne un **`const`** itérateur qui traite le premier élément de la plage.
 
@@ -570,7 +576,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="unordered_multimapcend"></a><a name="cend"></a>unordered_multimap :: CEND
+## <a name="unordered_multimapcend"></a><a name="cend"></a> unordered_multimap :: CEND
 
 Retourne un **`const`** itérateur qui traite l’emplacement juste après le dernier élément d’une plage.
 
@@ -598,7 +604,7 @@ auto i2 = Container.cend();
 
 La valeur retournée par `cend` ne doit pas être déréférencée.
 
-## <a name="unordered_multimapclear"></a><a name="clear"></a>unordered_multimap :: Clear
+## <a name="unordered_multimapclear"></a><a name="clear"></a> unordered_multimap :: Clear
 
 Supprime tous les éléments.
 
@@ -665,7 +671,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_multimapconst_iterator"></a><a name="const_iterator"></a>unordered_multimap :: const_iterator
+## <a name="unordered_multimapconst_iterator"></a><a name="const_iterator"></a> unordered_multimap :: const_iterator
 
 Type d'un itérateur constant pour la séquence contrôlée.
 
@@ -708,7 +714,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimapconst_local_iterator"></a><a name="const_local_iterator"></a>unordered_multimap :: const_local_iterator
+## <a name="unordered_multimapconst_local_iterator"></a><a name="const_local_iterator"></a> unordered_multimap :: const_local_iterator
 
 Type d’un itérateur de compartiment constant pour la séquence contrôlée.
 
@@ -756,7 +762,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_multimapconst_pointer"></a><a name="const_pointer"></a>unordered_multimap :: const_pointer
+## <a name="unordered_multimapconst_pointer"></a><a name="const_pointer"></a> unordered_multimap :: const_pointer
 
 Type d'un pointeur constant vers un élément.
 
@@ -802,7 +808,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimapconst_reference"></a><a name="const_reference"></a>unordered_multimap :: const_reference
+## <a name="unordered_multimapconst_reference"></a><a name="const_reference"></a> unordered_multimap :: const_reference
 
 Type d'une référence constante à un élément.
 
@@ -848,7 +854,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimapcount"></a><a name="count"></a>unordered_multimap :: Count
+## <a name="unordered_multimapcount"></a><a name="count"></a> unordered_multimap :: Count
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -903,7 +909,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="unordered_multimapdifference_type"></a><a name="difference_type"></a>unordered_multimap ::d ifference_type
+## <a name="unordered_multimapdifference_type"></a><a name="difference_type"></a> unordered_multimap ::d ifference_type
 
 Type d'une distance signée entre deux éléments.
 
@@ -962,7 +968,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="unordered_multimapemplace"></a><a name="emplace"></a>unordered_multimap :: emplace
+## <a name="unordered_multimapemplace"></a><a name="emplace"></a> unordered_multimap :: emplace
 
 Insère un élément construit sur place (aucune opération de copie ou déplacement n’est effectuée) avec un hint d’emplacement.
 
@@ -973,9 +979,8 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|-|-|
-|*args*|Les arguments transférés pour construire un élément à insérer dans la classe unordered_multimap.|
+*attend*\
+Arguments transmis pour construire un élément à insérer dans `unordered_multimap` .
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -991,7 +996,7 @@ Durant l’insertion, si une exception est levée mais qu’elle ne se produit p
 
 Pour obtenir un exemple de code, consultez [multimap::emplace](../standard-library/multimap-class.md#emplace).
 
-## <a name="unordered_multimapemplace_hint"></a><a name="emplace_hint"></a>unordered_multimap :: emplace_hint
+## <a name="unordered_multimapemplace_hint"></a><a name="emplace_hint"></a> unordered_multimap :: emplace_hint
 
 Insère un élément construit sur place (aucune opération de copie ou déplacement n’est effectuée) avec un hint d’emplacement.
 
@@ -1004,10 +1009,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|-|-|
-|*args*|Les arguments transférés pour construire un élément à insérer dans la classe unordered.|
-|*where*|Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.|
+*attend*\
+Les arguments transférés pour construire un élément à insérer dans la classe unordered.
+
+*Cela*\
+Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1023,7 +1029,7 @@ Le [value_type](../standard-library/map-class.md#value_type) d’un élément es
 
 Pour obtenir un exemple de code, consultez [map::emplace_hint](../standard-library/map-class.md#emplace_hint).
 
-## <a name="unordered_multimapempty"></a><a name="empty"></a>unordered_multimap :: Empty
+## <a name="unordered_multimapempty"></a><a name="empty"></a> unordered_multimap :: Empty
 
 Vérifie l'absence d'éléments.
 
@@ -1090,7 +1096,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_multimapend"></a><a name="end"></a>unordered_multimap :: fin
+## <a name="unordered_multimapend"></a><a name="end"></a> unordered_multimap :: fin
 
 Désigne la fin de la séquence contrôlée.
 
@@ -1106,9 +1112,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|-|-|
-|*nbucket*|Numéro de compartiment.|
+*nbucket*\
+Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
 
@@ -1160,7 +1165,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_multimapequal_range"></a><a name="equal_range"></a>unordered_multimap :: equal_range
+## <a name="unordered_multimapequal_range"></a><a name="equal_range"></a> unordered_multimap :: equal_range
 
 Recherche une plage qui correspond à une clé spécifiée.
 
@@ -1231,7 +1236,7 @@ equal_range('x'):
 equal_range('b'): [b, 2]
 ```
 
-## <a name="unordered_multimaperase"></a><a name="erase"></a>unordered_multimap :: Erase
+## <a name="unordered_multimaperase"></a><a name="erase"></a> unordered_multimap :: Erase
 
 Supprime un élément ou une plage d’éléments dans une classe unordered_multimap aux positions spécifiées ou supprime les éléments qui correspondent à une clé spécifiée.
 
@@ -1271,7 +1276,7 @@ Pour la troisième fonction membre, retourne le nombre d’éléments qui ont é
 
 Pour obtenir un exemple de code, consultez [map::erase](../standard-library/map-class.md#erase).
 
-## <a name="unordered_multimapfind"></a><a name="find"></a>unordered_multimap :: find
+## <a name="unordered_multimapfind"></a><a name="find"></a> unordered_multimap :: find
 
 Recherche un élément qui correspond à une clé spécifiée.
 
@@ -1331,7 +1336,7 @@ find('A') == false
 find('b') == true: [b, 2]
 ```
 
-## <a name="unordered_multimapget_allocator"></a><a name="get_allocator"></a>unordered_multimap :: get_allocator
+## <a name="unordered_multimapget_allocator"></a><a name="get_allocator"></a> unordered_multimap :: get_allocator
 
 Obtient l’objet allocateur stocké.
 
@@ -1369,7 +1374,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="unordered_multimaphash_function"></a><a name="hash"></a>unordered_multimap :: hash_function
+## <a name="unordered_multimaphash_function"></a><a name="hash"></a> unordered_multimap :: hash_function
 
 Obtient l'objet de fonction de hachage stocké.
 
@@ -1407,7 +1412,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_multimaphasher"></a><a name="hasher"></a>unordered_multimap :: Hasher
+## <a name="unordered_multimaphasher"></a><a name="hasher"></a> unordered_multimap :: Hasher
 
 Type de la fonction de hachage.
 
@@ -1445,7 +1450,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="unordered_multimapinsert"></a><a name="insert"></a>unordered_multimap :: Insert
+## <a name="unordered_multimapinsert"></a><a name="insert"></a> unordered_multimap :: Insert
 
 Insère un élément ou une plage d'éléments dans une classe unordered_multimap.
 
@@ -1485,15 +1490,26 @@ IList);
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|-|-|
-|*Val*|Valeur d'un élément à insérer dans la classe unordered_multimap.|
-|*Where*|Emplacement où commencer à rechercher le point d'insertion correct.|
-|*ValTy*|Paramètre de modèle qui spécifie le type d’argument que l’unordered_multimap peut utiliser pour construire un élément de [Value_type](../standard-library/map-class.md#value_type), et parfait-transfère la valeur *Val* en tant qu’argument.|
-|*First*|Position du premier élément à copier.|
-|*Famille*|Position juste au-delà du dernier élément à copier.|
-|*InputIterator*|Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).|
-|*IList*|[Initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.|
+*Multiples*\
+Valeur d'un élément à insérer dans la classe unordered_multimap.
+
+*Cela*\
+Emplacement où commencer à rechercher le point d'insertion correct.
+
+*ValTy*\
+Paramètre de modèle qui spécifie le type d’argument que l’unordered_multimap peut utiliser pour construire un élément de [Value_type](../standard-library/map-class.md#value_type), et parfait-transfère la valeur *Val* en tant qu’argument.
+
+*Premier*\
+Position du premier élément à copier.
+
+*Famille*\
+Position juste au-delà du dernier élément à copier.
+
+*InputIterator*\
+Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).
+
+*IList*\
+[Initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1517,7 +1533,7 @@ Pour l’insertion d’un élément construit sur place (aucune opération de co
 
 Pour obtenir un exemple de code, consultez [multimap::insert](../standard-library/multiset-class.md#insert).
 
-## <a name="unordered_multimapiterator"></a><a name="iterator"></a>unordered_multimap :: Iterator
+## <a name="unordered_multimapiterator"></a><a name="iterator"></a> unordered_multimap :: Iterator
 
 Type d'un itérateur pour la séquence contrôlée.
 
@@ -1560,7 +1576,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimapkey_eq"></a><a name="key_eq"></a>unordered_multimap :: key_eq
+## <a name="unordered_multimapkey_eq"></a><a name="key_eq"></a> unordered_multimap :: key_eq
 
 Obtient l'objet de fonction de comparaison stocké.
 
@@ -1600,7 +1616,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_multimapkey_equal"></a><a name="key_equal"></a>unordered_multimap :: key_equal
+## <a name="unordered_multimapkey_equal"></a><a name="key_equal"></a> unordered_multimap :: key_equal
 
 Type de la fonction de comparaison.
 
@@ -1640,7 +1656,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="unordered_multimapkey_type"></a><a name="key_type"></a>unordered_multimap :: key_type
+## <a name="unordered_multimapkey_type"></a><a name="key_type"></a> unordered_multimap :: key_type
 
 Type d'une clé de tri.
 
@@ -1695,7 +1711,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimapload_factor"></a><a name="load_factor"></a>unordered_multimap :: load_factor
+## <a name="unordered_multimapload_factor"></a><a name="load_factor"></a> unordered_multimap :: load_factor
 
 Compte le nombre moyen d'éléments par compartiment.
 
@@ -1763,7 +1779,7 @@ int main()
     }
 ```
 
-## <a name="unordered_multimaplocal_iterator"></a><a name="local_iterator"></a>unordered_multimap :: local_iterator
+## <a name="unordered_multimaplocal_iterator"></a><a name="local_iterator"></a> unordered_multimap :: local_iterator
 
 Type d'un itérateur de compartiment.
 
@@ -1811,7 +1827,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="unordered_multimapmapped_type"></a><a name="mapped_type"></a>unordered_multimap :: mapped_type
+## <a name="unordered_multimapmapped_type"></a><a name="mapped_type"></a> unordered_multimap :: mapped_type
 
 Type d'une valeur mappée associée à chaque clé.
 
@@ -1866,7 +1882,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimapmax_bucket_count"></a><a name="max_bucket_count"></a>unordered_multimap :: max_bucket_count
+## <a name="unordered_multimapmax_bucket_count"></a><a name="max_bucket_count"></a> unordered_multimap :: max_bucket_count
 
 Obtient le nombre maximal de compartiments.
 
@@ -1952,7 +1968,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multimapmax_load_factor"></a><a name="max_load_factor"></a>unordered_multimap :: max_load_factor
+## <a name="unordered_multimapmax_load_factor"></a><a name="max_load_factor"></a> unordered_multimap :: max_load_factor
 
 Obtient ou définit le nombre maximal d’éléments par compartiment.
 
@@ -2045,7 +2061,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multimapmax_size"></a><a name="max_size"></a>unordered_multimap :: max_size
+## <a name="unordered_multimapmax_size"></a><a name="max_size"></a> unordered_multimap :: max_size
 
 Obtient ou définit la taille maximale de la séquence contrôlée.
 
@@ -2080,7 +2096,7 @@ int main()
 max_size() == 536870911
 ```
 
-## <a name="unordered_multimapoperator"></a><a name="op_eq"></a>unordered_multimap :: Operator =
+## <a name="unordered_multimapoperator"></a><a name="op_eq"></a> unordered_multimap :: Operator =
 
 Copie une table de hachage.
 
@@ -2092,9 +2108,8 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|-|-|
-|*Oui*|unordered_multimap qui est copié dans le unordered_multimap.|
+*Oui*\
+`unordered_multimap`Copié dans le `unordered_multimap` .
 
 ### <a name="remarks"></a>Notes
 
@@ -2137,7 +2152,7 @@ int main( )
    }
 ```
 
-## <a name="unordered_multimappointer"></a><a name="pointer"></a>unordered_multimap ::p ointer
+## <a name="unordered_multimappointer"></a><a name="pointer"></a> unordered_multimap ::p ointer
 
 Type d'un pointeur vers un élément.
 
@@ -2183,7 +2198,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimapreference"></a><a name="reference"></a>unordered_multimap :: référence
+## <a name="unordered_multimapreference"></a><a name="reference"></a> unordered_multimap :: référence
 
 Type d'une référence à un élément.
 
@@ -2229,7 +2244,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimaprehash"></a><a name="rehash"></a>unordered_multimap :: rehash
+## <a name="unordered_multimaprehash"></a><a name="rehash"></a> unordered_multimap :: rehash
 
 Régénère la table de hachage.
 
@@ -2307,7 +2322,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="unordered_multimapsize"></a><a name="size"></a>unordered_multimap :: Size
+## <a name="unordered_multimapsize"></a><a name="size"></a> unordered_multimap :: Size
 
 Compte le nombre d'éléments.
 
@@ -2374,7 +2389,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="unordered_multimapsize_type"></a><a name="size_type"></a>unordered_multimap :: size_type
+## <a name="unordered_multimapsize_type"></a><a name="size_type"></a> unordered_multimap :: size_type
 
 Type d'une distance non signée entre deux éléments.
 
@@ -2410,7 +2425,7 @@ int main()
 size == 0
 ```
 
-## <a name="unordered_multimapswap"></a><a name="swap"></a>unordered_multimap :: swap
+## <a name="unordered_multimapswap"></a><a name="swap"></a> unordered_multimap :: swap
 
 Échange le contenu de deux conteneurs.
 
@@ -2482,7 +2497,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimapunordered_multimap"></a><a name="unordered_multimap"></a>unordered_multimap :: unordered_multimap
+## <a name="unordered_multimapunordered_multimap"></a><a name="unordered_multimap"></a> unordered_multimap :: unordered_multimap
 
 Construit un objet conteneur.
 
@@ -2536,15 +2551,26 @@ unordered_multimap(
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|-|-|
-|*InputIterator*|Type d'itérateur.|
-|*&*|Objet allocateur à stocker.|
-|*Conformes*|Objet de fonction de comparaison à stocker.|
-|*Hachage*|Objet de fonction de hachage à stocker.|
-|*Bucket_count*|Nombre minimal de compartiments.|
-|*Right*|Conteneur à copier.|
-|*IList*|Initializer_list depuis laquelle copier les éléments.|
+*InputIterator*\
+Type d'itérateur.
+
+*&*\
+Objet allocateur à stocker.
+
+*Conformes*\
+Objet de fonction de comparaison à stocker.
+
+*Format*\
+Objet de fonction de hachage à stocker.
+
+*Bucket_count*\
+Nombre minimal de compartiments.
+
+*Oui*\
+Conteneur à copier.
+
+*IList*\
+Initializer_list depuis laquelle copier les éléments.
 
 ### <a name="remarks"></a>Notes
 
@@ -2683,7 +2709,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimapvalue_type"></a><a name="value_type"></a>unordered_multimap :: value_type
+## <a name="unordered_multimapvalue_type"></a><a name="value_type"></a> unordered_multimap :: value_type
 
 Type d’un élément.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: 7819c8c2ebe8a07a76e242ea2ef3c19206ab69be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b91167a331423ccd43ba2158c1a9d8bfce666361
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211994"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562446"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt;, classe
 
@@ -62,11 +62,11 @@ Les opérations qui gèrent le **`bool`** type correspondent aux valeurs dans le
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête**:\<vector>
+**En-tête**: \<vector>
 
 **Espace de noms :** std
 
-## <a name="vectorboolconst_pointer"></a><a name="const_pointer"></a>Vector \<bool> :: const_pointer
+## <a name="vectorboolconst_pointer"></a><a name="const_pointer"></a> Vector \<bool> :: const_pointer
 
 Type qui décrit un objet pouvant servir de pointeur de constante vers un élément booléen de la séquence contenue dans l'objet `vector<bool>`.
 
@@ -74,7 +74,7 @@ Type qui décrit un objet pouvant servir de pointeur de constante vers un élém
 typedef const_iterator const_pointer;
 ```
 
-## <a name="vectorboolconst_reference"></a><a name="const_reference"></a>Vector \<bool> :: const_reference
+## <a name="vectorboolconst_reference"></a><a name="const_reference"></a> Vector \<bool> :: const_reference
 
 Type qui décrit un objet pouvant servir de référence de constante à un élément booléen de la séquence contenue dans l'objet `vector<bool>`.
 
@@ -86,7 +86,7 @@ typedef bool const_reference;
 
 Pour plus d’informations et des exemples de code, consultez [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq).
 
-## <a name="vectorboolflip"></a><a name="flip"></a>Vector \<bool> :: Flip
+## <a name="vectorboolflip"></a><a name="flip"></a> Vector \<bool> :: Flip
 
 Inverse tous les bits d'un `vector<bool>`.
 
@@ -124,7 +124,7 @@ int main()
 }
 ```
 
-## <a name="vectorbooloperator"></a><a name="op_at"></a>Vector \<bool> :: Operator []
+## <a name="vectorbooloperator"></a><a name="op_at"></a> Vector \<bool> :: Operator []
 
 Retourne une référence simulée à l'élément `vector<bool>` à un emplacement spécifié.
 
@@ -136,9 +136,8 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|-|-|
-|*Imprim*|Position de l'élément `vector<bool>`.|
+*Imprim*\
+Position de l'élément `vector<bool>`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -181,7 +180,7 @@ int main()
 }
 ```
 
-## <a name="vectorboolpointer"></a><a name="pointer"></a>Vector \<bool> ::p ointer
+## <a name="vectorboolpointer"></a><a name="pointer"></a> Vector \<bool> ::p ointer
 
 Type qui décrit un objet pouvant servir de pointeur pour un élément booléen de la séquence contenue dans l'objet `vector<bool>`.
 
@@ -189,7 +188,7 @@ Type qui décrit un objet pouvant servir de pointeur pour un élément booléen 
 typedef iterator pointer;
 ```
 
-## <a name="vectorboolreference-class"></a><a name="reference_class"></a>Vector \<bool> :: Reference, classe
+## <a name="vectorboolreference-class"></a><a name="reference_class"></a> Vector \<bool> :: Reference, classe
 
 La `vector<bool>::reference` classe est une classe proxy fournie par la [ \<bool> classe Vector](../standard-library/vector-bool-class.md) à simuler `bool&` .
 
@@ -204,7 +203,7 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use
 ```
 
-### <a name="vectorboolreferenceflip"></a><a name="reference_flip"></a>Vector \<bool> :: Reference :: Flip
+### <a name="vectorboolreferenceflip"></a><a name="reference_flip"></a> Vector \<bool> :: Reference :: Flip
 
 Inverse la valeur booléenne d’un élément de [vecteur \<bool> ](../standard-library/vector-bool-class.md) référencé.
 
@@ -251,7 +250,7 @@ The vector with first element flipped is:
     false false false true true
 ```
 
-### <a name="vectorboolreferenceoperator-bool"></a><a name="reference_operator_bool"></a>Vector \<bool> :: Reference :: operator bool
+### <a name="vectorboolreferenceoperator-bool"></a><a name="reference_operator_bool"></a> Vector \<bool> :: Reference :: operator bool
 
 Fournit une conversion implicite de `vector<bool>::reference` en **`bool`** .
 
@@ -267,7 +266,7 @@ Valeur booléenne de l’élément de l’objet Vector \<bool> .
 
 L'objet `vector<bool>` ne peut pas être modifié par cet opérateur.
 
-### <a name="vectorboolreferenceoperator"></a><a name="reference_operator_eq"></a>Vector \<bool> :: Reference :: Operator =
+### <a name="vectorboolreferenceoperator"></a><a name="reference_operator_eq"></a> Vector \<bool> :: Reference :: Operator =
 
 Assigne une valeur booléenne à un bit, ou la valeur détenue par un élément référencé à un bit.
 
@@ -355,7 +354,7 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false
 ```
 
-## <a name="vectorboolswap"></a><a name="swap"></a>Vector \<bool> :: swap
+## <a name="vectorboolswap"></a><a name="swap"></a> Vector \<bool> :: swap
 
 Fonction membre statique qui échange deux éléments de vecteurs booléens ( `vector<bool>` ) à l’aide de la classe proxy [Vector \<bool> :: Reference](#reference_class).
 

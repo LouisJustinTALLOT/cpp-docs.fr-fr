@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219350"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560958"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 
 Étend les primitifs entiers afin d’éviter les débordements d’entiers et permet de comparer les différents types d’entiers.
 
 > [!NOTE]
-> La dernière version de la bibliothèque SafeInt se trouve à l’emplacement [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) . Pour utiliser la bibliothèque SafeInt, Clonez les référentiel et`#include "SafeInt.hpp"`
+> La dernière version de la bibliothèque SafeInt se trouve à l’emplacement [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) . Pour utiliser la bibliothèque SafeInt, Clonez les référentiel et `#include "SafeInt.hpp"`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,17 +33,23 @@ class SafeInt;
 
 ### <a name="parameters"></a>Paramètres
 
-| Modèle  |  Description |
-|--------|------------|
-| T         |  Le type d’entier ou de paramètre booléen remplacé par `SafeInt`. |
-| E         |  Un type de données énumérées qui définit la stratégie de gestion des erreurs. |
-| U         |  Le type d’entier ou de paramètre booléen pour l’opérande secondaire. |
+*`T`*\
+Le type d’entier ou de paramètre booléen remplacé par `SafeInt`.
 
-| Paramètre  |  Description |
-|---------|-----------------|
-| *rhs*      |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
-| *i*        |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
-| *bits*     |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
+*`E`*\
+Un type de données énumérées qui définit la stratégie de gestion des erreurs.
+
+*`U`*\
+Le type d’entier ou de paramètre booléen pour l’opérande secondaire.
+
+*RHS*\
+[in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes.
+
+*cliqu*\
+[in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes.
+
+*bits*\
+[in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes.
 
 ## <a name="members"></a>Membres
 
@@ -174,7 +180,7 @@ La table des opérateurs dans cette rubrique répertorie les opérateurs mathém
 
 Des opérations de comparaison entre un `SafeInt` et un type intégral peuvent être réalisées dans les deux sens. Par exemple, `SafeInt<int>(x) < y` et `y> SafeInt<int>(x)` sont valides et retournent le même résultat.
 
-De nombreux opérateurs binaires ne prennent pas en charge l’utilisation de deux `SafeInt` types différents. L’opérateur `&` en est un exemple. `SafeInt<T, E> & int`est pris en charge, mais `SafeInt<T, E> & SafeInt<U, E>` n’est pas. Dans ce dernier exemple, le compilateur ne sait pas quel type de paramètre retourner. L’une des solutions à ce problème consiste à effectuer un cast en retour du deuxième paramètre vers le type de base. En utilisant les mêmes paramètres, cela peut être effectué avec `SafeInt<T, E> & (U)SafeInt<U, E>`.
+De nombreux opérateurs binaires ne prennent pas en charge l’utilisation de deux `SafeInt` types différents. L’opérateur `&` en est un exemple. `SafeInt<T, E> & int` est pris en charge, mais `SafeInt<T, E> & SafeInt<U, E>` n’est pas. Dans ce dernier exemple, le compilateur ne sait pas quel type de paramètre retourner. L’une des solutions à ce problème consiste à effectuer un cast en retour du deuxième paramètre vers le type de base. En utilisant les mêmes paramètres, cela peut être effectué avec `SafeInt<T, E> & (U)SafeInt<U, E>`.
 
 > [!NOTE]
 > Pour toutes les opérations au niveau du bit, les deux paramètres doivent être de la même taille. Si les tailles sont différentes, le compilateur générera une exception [ASSERT](../mfc/reference/diagnostic-services.md#assert). Il n’est pas garanti que les résultats de cette opération soient exacts. Pour résoudre ce problème, effectuez un cast du plus petit paramètre jusqu’à ce qu’il ait la même taille que le paramètre de plus grande taille.
@@ -248,7 +254,7 @@ int main()
 
 **Espace de noms :** aucun
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt :: SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a> SafeInt :: SafeInt
 
 Construit un objet `SafeInt`.
 
@@ -277,7 +283,7 @@ SafeInt (const U& i)
 `u`<br/>
 [in] Un `SafeInt` de type U. Le nouvel objet `SafeInt` aura la même valeur que le type *U*, mais sera de type T.
 
-`U`Type des données stockées dans le `SafeInt` . Il peut s’agit d’un type booléen, d’un type de caractère ou d’un type entier. S’il s’agit d’un type entier, il peut être signé ou non signé et être compris entre 8 et 64 bits.
+`U` Type des données stockées dans le `SafeInt` . Il peut s’agit d’un type booléen, d’un type de caractère ou d’un type entier. S’il s’agit d’un type entier, il peut être signé ou non signé et être compris entre 8 et 64 bits.
 
 ### <a name="remarks"></a>Notes
 

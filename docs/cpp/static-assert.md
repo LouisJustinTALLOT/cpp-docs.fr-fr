@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 411c4c386031bd44a0303e6cfeec1fbea7ea2dda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213214"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560632"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -26,12 +26,13 @@ static_assert( constant-expression, string-literal );
 static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-|Paramètre|Description|
-|---------------|-----------------|
-|*constant-expression*|Expression constante intégrale pouvant être convertie en expression booléenne.<br /><br /> Si l’expression évaluée est égale à zéro (false), le paramètre *de littéral de chaîne* est affiché et la compilation échoue avec une erreur. Si l’expression est différente de zéro (true), la **`static_assert`** déclaration n’a aucun effet.|
-|*littéral de chaîne*|Message qui s’affiche si le paramètre *de l’expression constante* est égal à zéro. Le message est une chaîne de caractères dans le [jeu de caractères de base](../c-language/ascii-character-set.md) du compilateur ; autrement dit, il ne s’agit pas de [caractères multioctets ou larges](../c-language/multibyte-and-wide-characters.md).|
+*constant-expression*\
+Expression constante intégrale pouvant être convertie en expression booléenne. Si l’expression évaluée est égale à zéro (false), le paramètre *de littéral de chaîne* est affiché et la compilation échoue avec une erreur. Si l’expression est différente de zéro (true), la **`static_assert`** déclaration n’a aucun effet.
+
+*littéral de chaîne*\
+Message qui s’affiche si le paramètre *de l’expression constante* est égal à zéro. Le message est une chaîne de caractères dans le [jeu de caractères de base](../c-language/ascii-character-set.md) du compilateur ; autrement dit, il ne s’agit pas de [caractères multioctets ou larges](../c-language/multibyte-and-wide-characters.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -47,7 +48,7 @@ Vous pouvez utiliser le **`static_assert`** mot clé au niveau de l’espace de 
 
 Dans l’exemple suivant, la **`static_assert`** déclaration a une portée d’espace de noms. Comme le compilateur connaît la taille du type `void *`, l'expression est évaluée immédiatement.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
@@ -57,7 +58,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 
 Dans l’exemple suivant, la **`static_assert`** déclaration a une portée de classe. **`static_assert`** Vérifie qu’un paramètre de modèle est un type Pod ( *Plain Old Data* ). Le compilateur examine la **`static_assert`** déclaration lorsqu’elle est déclarée, mais n’évalue pas le paramètre de l' *expression constante* tant que le `basic_string` modèle de classe n’est pas instancié dans `main()` .
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```cpp
 #include <type_traits>

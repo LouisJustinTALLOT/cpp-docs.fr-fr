@@ -126,7 +126,7 @@ Type qui inclut les deux objets de fonction, une de comparaison de classes capab
 *Allocateur*\
 Type qui représente l'objet allocateur stocké qui encapsule des informations détaillées sur l'allocation et la désallocation de mémoire de la classe hash_map. Cet argument est facultatif et sa valeur par défaut est Allocator \<pair <const `Key`, `Type`>>.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L'objet hash_map est :
 
@@ -263,7 +263,7 @@ Valeur de clé de l’élément à rechercher.
 
 Référence à la valeur de données de l'élément trouvé.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si la valeur de clé de l’argument est introuvable, la fonction lève un objet de classe [out_of_range Class](../standard-library/out-of-range-class.md).
 
@@ -414,7 +414,7 @@ const_iterator cend() const;
 
 Itérateur bidirectionnel const qui traite l’emplacement suivant le dernier élément d’un [hash_map](../standard-library/hash-map-class.md). Si le `hash_map` est vide, `hash_map::cend == hash_map::begin`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `cend` est utilisé pour déterminer si un itérateur a atteint la fin de son `hash_map`.
 
@@ -461,7 +461,7 @@ Efface tous les éléments d'un hash_map.
 void clear();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -511,7 +511,7 @@ Type qui fournit un itérateur bidirectionnel capable de lire un **`const`** él
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Un type `const_iterator` ne peut pas être utilisé pour changer la valeur d'un élément.
 
@@ -536,7 +536,7 @@ Type qui fournit un pointeur vers un **`const`** élément d’un hash_map.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Un type `const_pointer` ne peut pas être utilisé pour changer la valeur d'un élément.
 
@@ -553,7 +553,7 @@ Type qui fournit une référence à un **`const`** élément stocké dans une ha
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -609,7 +609,7 @@ Type qui fournit un itérateur bidirectionnel capable de lire un **`const`** él
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse)iterator const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Un type `const_reverse_iterator` ne peut pas changer la valeur d’un élément. Il sert à itérer le hash_map dans l’ordre inverse.
 
@@ -643,7 +643,7 @@ Valeur de clé des éléments à mettre en correspondance à partir du hash_map.
 
 1 si le hash_map contient un élément dont la clé de tri correspond à la clé du paramètre ; 0 si le hash_map ne contient pas d'élément avec une clé correspondante.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne le nombre d’éléments *x* dans la plage
 
@@ -710,7 +710,7 @@ const_reverse_iterator crbegin() const;
 
 Itérateur bidirectionnel inversé const qui traite le premier élément d’un [hash_map](../standard-library/hash-map-class.md) inversé ou qui traite ce qui était le dernier élément de l’objet `hash_map` non inversé.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `crbegin` est utilisé avec un hash_map inversé comme [begin](#begin) est utilisé avec un `hash_map`.
 
@@ -762,7 +762,7 @@ const_reverse_iterator crend() const;
 
 Itérateur bidirectionnel inversé const qui traite l’emplacement qui suit le dernier élément d’un [hash_map](../standard-library/hash-map-class.md) inversé (emplacement qui précédait celui du premier élément du `hash_map` non inversé).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `crend` est utilisé avec un `hash_map` inversé comme [hash_map::end](#end) est utilisé avec un `hash_map`.
 
@@ -897,7 +897,7 @@ La fonction membre `emplace` retourne une paire dont le composant booléen retou
 
 Pour accéder au composant itérateur d’une paire `pr` retournée par cette fonction membre, utilisez `pr.first` et, pour le déréférencer, utilisez `*(pr.first)`. Pour accéder au **`bool`** composant d’une paire `pr` retournée par cette fonction membre, utilisez `pr.second` et pour le déréférencer, utilisez `*(pr.second)` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le [hash_map::value_type](#value_type) d’un élément est une paire, si bien que la valeur d’un élément est une paire ordonnée dont le premier composant est égal à la valeur de clé et le deuxième à la valeur de données de l’élément.
 
@@ -956,7 +956,7 @@ Indicateur concernant l’emplacement où commencer à rechercher le point d’i
 
 La fonction membre [hash_multimap::emplace](../standard-library/hash-multimap-class.md#emplace) retourne un itérateur qui pointe vers l’emplacement où le nouvel élément a été inséré dans le `hash_map`, ou vers l’emplacement où se trouve l’élément existant avec un ordonnancement équivalent.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le [hash_map::value_type](#value_type) d’un élément est une paire, si bien que la valeur d’un élément est une paire ordonnée dont le premier composant est égal à la valeur de clé et le deuxième à la valeur de données de l’élément.
 
@@ -1006,7 +1006,7 @@ bool empty() const;
 
 **`true`** Si le hash_map est vide ; **`false`** si la hash_map n’est pas vide.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -1059,7 +1059,7 @@ iterator end();
 
 Itérateur bidirectionnel qui traite l’emplacement suivant le dernier élément d’un hash_map. Si le hash_map est vide, hash_map::end == hash_map::begin.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `end` est utilisé pour déterminer si un itérateur a atteint la fin de son hash_map.
 
@@ -1137,7 +1137,7 @@ Paire d’itérateurs telle que le premier est la [lower_bound](#lower_bound) de
 
 Pour accéder au premier itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **tout d’abord** , et pour déréférencer l’itérateur de la limite inférieure, utilisez \* ( `pr` . **tout d’abord**). Pour accéder au second itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **ensuite** , pour déréférencer l’itérateur de la limite supérieure, utilisez \* ( `pr` . **seconde**).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -1235,7 +1235,7 @@ Pour les deux premières fonctions membres, il s'agit d'un itérateur bidirectio
 
 Pour la troisième fonction membre, retourne le nombre d'éléments qui ont été supprimés du hash_map.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les fonctions membres ne lèvent jamais d'exception.
 
@@ -1346,7 +1346,7 @@ Valeur de clé qui doit correspondre à la clé de tri d’un élément du hash_
 
 Itérateur qui traite l’emplacement d’un élément ayant la clé spécifiée, ou emplacement qui suit le dernier élément du hash_map, si aucune correspondance n’est trouvée pour la clé.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `find` retourne un itérateur qui traite un élément du hash_map dont la clé de tri est équivalente à la clé d’argument sous un prédicat binaire qui induit un classement basé sur une relation d’infériorité.
 
@@ -1418,7 +1418,7 @@ Allocator get_allocator() const;
 
 Allocateur utilisé par le hash_map.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les allocateurs de la classe hash_map spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de la bibliothèque standard C++ sont suffisants pour la plupart des besoins en programmation. L'écriture et l'utilisation de votre propre classe d'allocateur font l'objet d'une rubrique avancée du langage C++.
 
@@ -1550,7 +1550,7 @@ Position du premier élément au-delà de la plage d'éléments à copier.
 *IList*\
 initializer_list
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Tous les constructeurs stockent un type d’objet allocateur qui gère le stockage de mémoire du hash_map et peut être retourné ultérieurement en appelant [get_allocator](#get_allocator). Le paramètre d’allocateur est souvent omis dans les déclarations de classe, et des macros de prétraitement sont utilisées pour substituer des allocateurs de remplacement.
 
@@ -1621,7 +1621,7 @@ La deuxième `insert` fonction membre, la version d’indicateur, retourne un it
 
 Les deux dernières `insert` fonctions membres se comportent de la même façon que les deux premières, sauf qu’elles déplacent la valeur insérée.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le [value_type](../standard-library/map-class.md#value_type) d’un élément est une paire, si bien que la valeur d’un élément est une paire ordonnée dont le premier composant est égal à la valeur de clé et le deuxième à la valeur de données de l’élément.
 
@@ -1748,7 +1748,7 @@ Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tou
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le `iterator` défini par hash_map pointe vers des éléments qui sont des objets de [Value_type](#value_type), qui est de type `pair<const Key, Type>` , dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
 
@@ -1777,7 +1777,7 @@ key_compare key_comp() const;
 
 Retourne l’objet de fonction utilisé par un hash_map pour ordonner ses éléments.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’objet stocké définit la fonction membre
 
@@ -1849,7 +1849,7 @@ Type qui fournit un objet de fonction pouvant comparer deux clés de tri pour d�
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `key_compare` est un synonyme du paramètre de modèle `Traits`.
 
@@ -1870,7 +1870,7 @@ Type qui décrit l’objet de clé de tri qui constitue chaque élément du hash
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `key_type` est un synonyme du paramètre de modèle `Key`.
 
@@ -1904,7 +1904,7 @@ Valeur de clé d’argument à comparer à la clé de tri d’un élément du ha
 
 Si la valeur de retour de `lower_bound` est affectée à un `const_iterator`, l’objet hash_map ne peut pas être changé. Si la valeur de retour de `lower_bound` est assignée à `iterator` , l’objet hash_map peut être modifié.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -1968,7 +1968,7 @@ Type qui représente le type de données stockées dans un hash_map.
 typedef Type mapped_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type `mapped_type` est un synonyme du paramètre de modèle `Type`.
 
@@ -1993,7 +1993,7 @@ size_type max_size() const;
 
 Longueur maximale autorisée du hash_map.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -2039,7 +2039,7 @@ Valeur de clé de l’élément à insérer.
 
 Référence à la valeur de données de l'élément inséré.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si la valeur de clé d’argument est introuvable, elle est insérée avec la valeur par défaut du type de données.
 
@@ -2131,7 +2131,7 @@ hash_map& operator=(hash_map&& right);
 *Oui*\
 [Classe hash_map](../standard-library/hash-map-class.md) copiée dans le `hash_map`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Après l’effacement des éléments existants dans un `hash_map` , `operator=` copie ou déplace le contenu de *droite* dans le `hash_map` .
 
@@ -2184,7 +2184,7 @@ Type qui fournit un pointeur vers un élément d’un hash_map.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::pointer pointer;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Un type `pointer` peut être utilisé pour modifier la valeur d’un élément.
 
@@ -2207,7 +2207,7 @@ reverse_iterator rbegin();
 
 Itérateur bidirectionnel inversé traitant le premier élément d’un hash_map inversé ou traitant ce qui était le dernier élément du hash_map non inversé.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `rbegin` est utilisé avec un hash_map inversé comme [begin](#begin) est utilisé avec un hash_map.
 
@@ -2285,7 +2285,7 @@ Type qui fournit une référence à un élément stocké dans un hash_map.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::reference reference;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -2354,7 +2354,7 @@ reverse_iterator rend();
 
 Itérateur bidirectionnel inversé qui traite l’emplacement qui suit le dernier élément d’un hash_map inversé (emplacement qui précédait celui du premier élément du hash_map non inversé).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `rend` est utilisé avec un hash_map inversé comme [end](#end) est utilisé avec un hash_map.
 
@@ -2438,7 +2438,7 @@ Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tou
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Un type `reverse_iterator` ne peut pas changer la valeur d’un élément. Il sert à itérer le hash_map dans l’ordre inverse.
 
@@ -2467,7 +2467,7 @@ size_type size() const;
 
 Longueur actuelle du hash_map.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -2513,7 +2513,7 @@ Type entier non signé qui peut représenter le nombre d’éléments d’un has
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -2535,7 +2535,7 @@ void swap(hash_map& right);
 *Oui*\
 Argument hash_map qui fournit les éléments à échanger avec le hash_map cible.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre n’invalide aucun pointeur, itérateur ou référence qui désigne des éléments dans les deux hash_maps dont les éléments sont échangés.
 
@@ -2617,7 +2617,7 @@ Valeur de clé d’argument à comparer à la valeur de clé de tri d’un élé
 
 Si la valeur de retour est affectée à un `const_iterator`, l’objet hash_map ne peut pas être changé. Si la valeur de retour est assignée à `iterator` , l’objet hash_map peut être modifié.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
@@ -2686,7 +2686,7 @@ value_compare value_comp() const;
 
 Retourne l’objet de fonction de comparaison utilisé par un hash_map pour ordonner ses éléments.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour un hash_map *m*, si deux éléments *E1* (*K1*, *D1*) et *E2* (*K2*, *D2*) sont des objets de [type Value_type](#value_type), *où K1* et *K2* sont leurs clés de type [KEY_TYPE](#key_type) et *D1* et *D2* sont leurs données de type [mapped_type](#mapped_type), `m.value_comp()(e1, e2)` est équivalent à `m.key_comp()(k1, k2)` . Un objet stocké définit la fonction membre
 
@@ -2750,7 +2750,7 @@ Type qui représente le type d’objet stocké dans un hash_map.
 typedef pair<const Key, Type> value_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `value_type` est déclaré comme étant `pair<const key_type, mapped_type>` et non `pair<key_type, mapped_type>` , car les clés d’un conteneur associatif ne peuvent pas être modifiées à l’aide d’un itérateur ou d’une référence non constante.
 
