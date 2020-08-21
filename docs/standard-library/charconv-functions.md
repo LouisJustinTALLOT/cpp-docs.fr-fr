@@ -1,18 +1,19 @@
 ---
 title: '&lt;charconv, &gt; fonctions'
-ms.date: 07/22/2020
+description: Décrit les <charconv> fonctions de bibliothèque qui convertissent des valeurs entières ou à virgule flottante vers ou à partir de caractères
+ms.date: 08/20/2020
 f1_keywords:
 - charconv/std::to_chars
 - charconv/std::from_chars
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565948"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722152"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv, &gt; fonctions
 
@@ -78,7 +79,7 @@ Pointe vers le début de la mémoire tampon à remplir.
 Pointe un caractère au-delà de la fin de la mémoire tampon à remplir.
 
 *ajoutée*\
-Valeur à convertir. Si `value` est négatif, la représentation commence par `-` .
+La valeur à convertir. Si `value` est négatif, la représentation commence par `-` .
 
 *base*\
 Pour les conversions entières, base à utiliser lors `value` de la conversion en caractères. Doit être compris entre 2 et 36 inclus. Il n’y aura pas de zéro non significatif. Les chiffres de la plage 10.. 35 (inclusives) sont représentés sous forme de caractères minuscules a.. Lettre
@@ -89,7 +90,7 @@ Pour les conversions à virgule flottante, un masque de bits spécifiant le form
 *précision*\
 Pour les conversions à virgule flottante, nombre de chiffres de précision pour la valeur convertie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 [To_chars_result](to-chars-result-structure.md) contenant le résultat de la conversion.
 
@@ -99,15 +100,11 @@ Les fonctions qui prennent un paramètre [chars_format](chars-format-class.md) d
 
 Le tableau suivant décrit le comportement de conversion en fonction de différentes combinaisons de `fmt` `precision` paramètres et. Le terme « comportement des allers-retours les plus courts » fait référence à l’écriture du plus petit nombre de chiffres nécessaires pour que l’analyse de cette représentation à l’aide de la `from_chars` fonction correspondante récupère exactement la valeur.
 
-| `fmt`et `precision` combinaison | Sortie |
+| `fmt` et `precision` combinaison | Sortie |
 |--|--|
 |  Aucun | Le cas échéant, la notation fixe ou scientifique est plus petite, en privilégiant les critère.</br>Ce comportement ne peut pas être simulé par une surcharge qui prend le `fmt` paramètre. |
 | `fmt` | Le comportement le plus bref des allers-retours pour le format spécifié, tel que le format scientifique le plus bref. |
 | `fmt` et `precision` | Utilise la précision donnée, le `printf()` style suivant, sans le comportement le plus bref des allers-retours. |
-
-### <a name="return-value"></a>Valeur de retour
-
-[To_chars_result](to-chars-result-structure.md) qui contient le résultat de la conversion.
 
 ### <a name="example"></a>Exemple
 
@@ -237,7 +234,7 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<charconv>
 
