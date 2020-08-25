@@ -1,17 +1,17 @@
 ---
-title: v1_enum (C++ attribut com)
+title: v1_enum (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 1a189f6f1c5ef9d4ae77df9f1eda3f3671ddaf52
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6529a32b0bfe2de09191e9cced8f6bd98e7ffdcc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166105"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832982"
 ---
 # <a name="v1_enum"></a>v1_enum
 
@@ -25,7 +25,7 @@ Indique que le type énuméré spécifié doit être transmis en tant qu’entit
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **v1_enum** C++ a les mêmes fonctionnalités que l’attribut MIDL [v1_enum](/windows/win32/Midl/v1-enum) .
+L’attribut C++ **v1_enum** a les mêmes fonctionnalités que l’attribut MIDL [v1_enum](/windows/win32/Midl/v1-enum) .
 
 ## <a name="example"></a>Exemple
 
@@ -42,20 +42,18 @@ enum eList {
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Type énuméré|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Type énuméré|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)

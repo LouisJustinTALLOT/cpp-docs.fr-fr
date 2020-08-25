@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::error_condition::clear
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
-ms.openlocfilehash: c63676e7bdf5ce1547b4feae16c7899ace545ad2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1708a3f560f60fe3933406a904d95b4d29890a7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203362"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830772"
 ---
 # <a name="error_condition-class"></a>error_condition, classe
 
@@ -42,19 +42,19 @@ Un objet de type `error_condition` stocke une valeur de code d’erreur et un po
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[error_condition](#error_condition)|Construit un objet de type `error_condition`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[value_type](#value_type)|Type qui représente la valeur de code d’erreur stockée.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[assign](#assign)|Assigne une valeur de code d’erreur et une catégorie à une condition d’erreur.|
 |[category](#category)|Retourne la catégorie de l’erreur.|
@@ -63,15 +63,15 @@ Un objet de type `error_condition` stocke une valeur de code d’erreur et un po
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur = =](#op_eq_eq)|Vérifie l’égalité d’objets `error_condition`.|
 |[opérateur ! =](#op_neq)|Vérifie l’inégalité d’objets `error_condition`.|
-|[<d’opérateur](#op_lt)|Vérifie si l’objet `error_condition` est inférieur à l’objet `error_code` transmis pour la comparaison.|
+|[<d’opérateur ](#op_lt)|Vérifie si l’objet `error_condition` est inférieur à l’objet `error_code` transmis pour la comparaison.|
 |[opérateur =](#op_eq)|Assigne une nouvelle valeur d’énumération à l’objet `error_condition`.|
 |[bool, opérateur](#op_bool)|Convertit une variable de type `error_condition`.|
 
-### <a name="assign"></a><a name="assign"></a>assignés
+### <a name="assign"></a><a name="assign"></a> assignés
 
 Assigne une valeur de code d’erreur et une catégorie à une condition d’erreur.
 
@@ -91,7 +91,7 @@ Catégorie d’erreur à stocker dans `error_code`.
 
 La fonction membre stocke *Val* comme valeur de code d’erreur et un pointeur vers *_Cat*.
 
-### <a name="category"></a><a name="category"></a>catégorie
+### <a name="category"></a><a name="category"></a> catégorie
 
 Retourne la catégorie de l’erreur.
 
@@ -99,13 +99,13 @@ Retourne la catégorie de l’erreur.
 const error_category& category() const;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Référence à la catégorie d’erreur stockée
 
 #### <a name="remarks"></a>Notes
 
-### <a name="clear"></a><a name="clear"></a>effacé
+### <a name="clear"></a><a name="clear"></a> effacé
 
 Efface la valeur de code d’erreur et la catégorie.
 
@@ -117,7 +117,7 @@ clear();
 
 La fonction membre stocke une valeur de code d’erreur égale à zéro et un pointeur vers l’objet [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-### <a name="error_condition"></a><a name="error_condition"></a>error_condition
+### <a name="error_condition"></a><a name="error_condition"></a> error_condition
 
 Construit un objet de type `error_condition`.
 
@@ -151,7 +151,7 @@ Le deuxième constructeur stocke *Val* comme valeur de code d’erreur et un poi
 
 Le troisième constructeur stocke `(value_type)_Errcode` comme valeur de code d’erreur et un pointeur vers [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-### <a name="message"></a><a name="message"></a>Message
+### <a name="message"></a><a name="message"></a> Message
 
 Retourne le nom du code d’erreur.
 
@@ -159,7 +159,7 @@ Retourne le nom du code d’erreur.
 string message() const;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 `string` représentant le nom du code d’erreur.
 
@@ -167,7 +167,7 @@ string message() const;
 
 La fonction membre retourne `category().message(value())`.
 
-### <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+### <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Vérifie l’égalité d’objets `error_condition`.
 
@@ -180,7 +180,7 @@ bool operator==(const error_condition& right) const;
 *Oui*\
 Objet dont l’égalité doit être vérifiée.
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets sont égaux ; **`false`** si les objets ne sont pas égaux.
 
@@ -188,7 +188,7 @@ Objet dont l’égalité doit être vérifiée.
 
 L’opérateur membre retourne `category() == right.category() && value == right.value()`.
 
-### <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+### <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Vérifie l’inégalité d’objets `error_condition`.
 
@@ -201,7 +201,7 @@ bool operator!=(const error_condition& right) const;
 *Oui*\
 Objet dont l’inégalité doit être vérifiée.
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l' `error_condition` objet n’est pas égal à l' `error_condition` objet passé à *droite*; sinon, **`false`** .
 
@@ -209,7 +209,7 @@ Objet dont l’inégalité doit être vérifiée.
 
 L’opérateur membre retourne `!(*this == right)`.
 
-### <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Vérifie si l’objet `error_condition` est inférieur à l’objet `error_code` transmis pour la comparaison.
 
@@ -222,7 +222,7 @@ bool operator<(const error_condition& right) const;
 *Oui*\
 Objet `error_condition` à comparer.
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l' `error_condition` objet est inférieur à l' `error_condition` objet passé pour la comparaison ; Sinon, **`false`** .
 
@@ -230,7 +230,7 @@ Objet `error_condition` à comparer.
 
 L’opérateur membre retourne `category() < right.category() || category() == right.category() && value < right.value()`.
 
-### <a name="operator"></a><a name="op_eq"></a>opérateur =
+### <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Assigne une nouvelle valeur d’énumération à l’objet `error_condition`.
 
@@ -247,7 +247,7 @@ error_condition(_Enum error,
 *_Errcode*\
 Valeur d’énumération à assigner à l’objet `error_condition`.
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’objet `error_condition` auquel la fonction membre assigne la nouvelle valeur d’énumération.
 
@@ -255,7 +255,7 @@ Référence à l’objet `error_condition` auquel la fonction membre assigne la 
 
 L’opérateur membre stocke `(value_type)error` comme valeur de code d’erreur et un pointeur vers [generic_category](../standard-library/system-error-functions.md#generic_category). Elle retourne **`*this`** .
 
-### <a name="operator-bool"></a><a name="op_bool"></a>bool, opérateur
+### <a name="operator-bool"></a><a name="op_bool"></a> bool, opérateur
 
 Convertit une variable de type `error_condition`.
 
@@ -263,7 +263,7 @@ Convertit une variable de type `error_condition`.
 explicit operator bool() const;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Valeur booléenne de l’objet `error_condition`.
 
@@ -279,13 +279,13 @@ Retourne la valeur de code d’erreur stockée.
 value_type value() const;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de code d’erreur stockée de type [value_type](#value_type).
 
 #### <a name="remarks"></a>Notes
 
-### <a name="value_type"></a><a name="value_type"></a>value_type
+### <a name="value_type"></a><a name="value_type"></a> value_type
 
 Type qui représente la valeur de code d’erreur stockée.
 

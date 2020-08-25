@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: de2c6c45e4a91aa4efa0ebacba4019be74e03c72
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560866"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831799"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator, classe
 
@@ -43,25 +43,22 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Construit un objet `CMFCRibbonSeparator`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Ajoute un séparateur à la liste **commandes** de la boîte de dialogue **personnaliser** . (Substitue [CMFCRibbonBaseElement :: AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
 |`CMFCRibbonSeparator::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|
 |`CMFCRibbonSeparator::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associé à ce type de classe.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCRibbonSeparator :: CopyFrom](#copyfrom)|Méthode de copie qui définit les variables de membre d’un séparateur à partir d’un autre objet.|
 |[CMFCRibbonSeparator :: GetRegularSize](#getregularsize)|Retourne la taille d’un séparateur.|
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|Indique s’il s’agit d’un séparateur.|
@@ -94,7 +91,7 @@ Appelez [CMFCRibbonPanel :: AddSeparator](../../mfc/reference/cmfcribbonpanel-c
 
 [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxbaseribbonelement.h
 
@@ -116,7 +113,7 @@ dans Pointeur vers la liste de **commandes** dans laquelle le séparateur est aj
 *bDeep*<br/>
 dans Pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de la chaîne dans la zone de liste spécifiée par *pWndListBox*.
 
@@ -169,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 *Maîtres*<br/>
 dans Pointeur vers un contenu d’appareil.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille du séparateur sur le contexte de périphérique donné.
 
@@ -181,7 +178,7 @@ Indique s’il s’agit d’un séparateur.
 virtual BOOL IsSeparator() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Toujours TRUE pour cette classe.
 
@@ -193,7 +190,7 @@ Indique s’il s’agit d’un taquet de tabulation.
 virtual BOOL IsTabStop() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Toujours FALSe pour cette classe.
 

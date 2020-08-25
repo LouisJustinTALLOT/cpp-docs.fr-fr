@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 2e5d63268413912931c61037f6665d2ceea8f372
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d9bb3cf9c4e34916dad3e435c7f4040dcc5f373
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212046"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831409"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution, classe
 
@@ -78,10 +78,8 @@ Le type de résultat entier est par défaut **`int`** . Pour connaître les type
 
 Le modèle de classe décrit une distribution inclusive qui produit des valeurs d’un type intégral spécifié par l’utilisateur avec une distribution afin que chaque valeur soit également probable. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|
-|`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|
+[uniform_int_distribution](#uniform_int_distribution)\
+[param_type](#param_type)
 
 Le membre de propriété `a()` retourne la limite minimale de la distribution stockée actuellement, tandis que `b()` retourne la limite maximale stockée actuellement. Pour cette classe de distribution, ces valeurs minimales et maximales sont les mêmes que celles retournées par les fonctions de propriété courantes `min()` et `max()`.
 
@@ -173,13 +171,13 @@ Distribution for 200 samples:
    12 :::::::::::::::::
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution :: uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a> uniform_int_distribution :: uniform_int_distribution
 
 Construit la distribution.
 
@@ -208,7 +206,7 @@ Le premier constructeur construit un objet dont la valeur *stockée* contient la
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution ::p aram_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a> uniform_int_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 

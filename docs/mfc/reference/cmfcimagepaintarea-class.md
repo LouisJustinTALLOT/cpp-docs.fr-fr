@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 3d8bfc40c3c9e937ad5acd7228e49877af65204a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: ee960b27651489ac1c196789d41a6c5ee396b260
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562153"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831149"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea, classe
 
@@ -37,17 +37,15 @@ class CMFCImagePaintArea : public CButton
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|Construit un objet `CMFCImagePaintArea`.|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCImagePaintArea::GetMode](#getmode)|Récupère le mode de dessin actuel.|
 |[CMFCImagePaintArea::SetBitmap](#setbitmap)|Définit l’image bitmap pour la zone d’image.|
 |[CMFCImagePaintArea :: SetColor](#setcolor)|Définit la couleur de dessin actuelle.|
@@ -77,7 +75,7 @@ L’exemple suivant montre comment construire un objet de la `CMFCImagePaintArea
 
 [CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afximagepaintarea. h
 
@@ -102,7 +100,7 @@ Récupère le mode de dessin actuel.
 IMAGE_EDIT_MODE GetMode() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) qui spécifie le mode de dessin actuel.
 

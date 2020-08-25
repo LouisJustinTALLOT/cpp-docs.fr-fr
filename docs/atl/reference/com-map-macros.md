@@ -1,5 +1,5 @@
 ---
-title: Com Carte Macros
+title: Macros de mappage COM
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_COM_MAP
@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-ms.openlocfilehash: 191a0ba0aeda6ad18cdac7ba14f7ab5f3b2282f7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 100402e17ca1bee5f338c37f2315fbc4898a713e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326601"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833580"
 ---
-# <a name="com-map-macros"></a>Com Carte Macros
+# <a name="com-map-macros"></a>Macros de mappage COM
 
-Ces macros définissent les cartes d’interface COM.
+Ces macros définissent des mappages d’interface COM.
 
-|||
+|Macro|Description|
 |-|-|
-|[BEGIN_COM_MAP](#begin_com_map)|Marque le début des entrées de carte d’interface COM.|
-|[END_COM_MAP](#end_com_map)|Marque la fin des entrées de carte d’interface COM.|
+|[BEGIN_COM_MAP](#begin_com_map)|Marque le début des entrées de mappage de l’interface COM.|
+|[END_COM_MAP](#end_com_map)|Marque la fin des entrées de mappage de l’interface COM.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête:** atlcom.h
+**En-tête :** atlcom. h
 
-## <a name="begin_com_map"></a><a name="begin_com_map"></a>BEGIN_COM_MAP
+## <a name="begin_com_map"></a><a name="begin_com_map"></a> BEGIN_COM_MAP
 
-La carte COM est le mécanisme qui expose les `QueryInterface`interfaces sur un objet à un client à travers .
+La carte COM est le mécanisme qui expose les interfaces sur un objet à un client via `QueryInterface` .
 
 ```
 BEGIN_COM_MAP(x)
@@ -37,22 +37,22 @@ BEGIN_COM_MAP(x)
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
-[dans] Le nom de l’objet de classe sur laquelle vous exposez les interfaces.
+*x*<br/>
+dans Nom de l’objet de classe sur lequel vous exposez les interfaces.
 
 ### <a name="remarks"></a>Notes
 
-[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) ne renvoie que des indications pour les interfaces dans la carte COM. Démarrez votre carte d’interface avec la macro BEGIN_COM_MAP, ajoutez des entrées pour chacune de vos interfaces avec la [macro COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou l’une de ses variantes, et complétez la carte avec la [macro END_COM_MAP.](#end_com_map)
+[CComObjectRootEx :: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) retourne uniquement des pointeurs pour les interfaces dans le mappage com. Démarrez votre mappage d’interface avec la macro BEGIN_COM_MAP, ajoutez des entrées pour chacune de vos interfaces avec la macro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) ou l’une de ses variantes, puis complétez la carte avec la macro [END_COM_MAP](#end_com_map) .
 
 ### <a name="example"></a>Exemple
 
-De l’échantillon ATL [BEEPER](../../overview/visual-cpp-samples.md) :
+À partir de l’exemple de code [sonore](../../overview/visual-cpp-samples.md) ATL :
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 
-## <a name="end_com_map"></a><a name="end_com_map"></a>END_COM_MAP
+## <a name="end_com_map"></a><a name="end_com_map"></a> END_COM_MAP
 
-Termine la définition de votre carte d’interface COM.
+Termine la définition de votre mappage d’interface COM.
 
 ```
 END_COM_MAP()
@@ -61,4 +61,4 @@ END_COM_MAP()
 ## <a name="see-also"></a>Voir aussi
 
 [Macros](../../atl/reference/atl-macros.md)<br/>
-[COM Map Fonctions globales](../../atl/reference/com-map-global-functions.md)
+[Fonctions globales de mappage COM](../../atl/reference/com-map-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Macros d’objet Snap-In
+title: Macros d’objet de composant logiciel enfichable
 ms.date: 11/04/2016
 f1_keywords:
 - atlsnap/ATL::BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
@@ -11,35 +11,35 @@ f1_keywords:
 - atlsnap/ATL::SNAPINMENUID
 - atlsnap/ATL::SNAPINTOOLBARID_ENTRY
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-ms.openlocfilehash: 6a57cdb3c9b6a4448bc954ff754ac9b18fa0b393
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7e006a17ad480ea79f6aeec224278815c8c3f164
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325858"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835192"
 ---
-# <a name="snap-in-object-macros"></a>Macros d’objet Snap-In
+# <a name="snap-in-object-macros"></a>Macros d’objet de composant logiciel enfichable
 
-Ces macros fournissent un support pour les extensions de snap-in.
+Ces macros assurent la prise en charge des extensions de composant logiciel enfichable.
 
-|||
+|Nom|Description|
 |-|-|
-|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|Marque le début de la carte de classe de données d’extension snap-in pour un objet Snap-In.|
-|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|Marque le début de la carte de la barre d’outils pour un objet Snap-In.|
-|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|Marque la fin de la carte de classe de données d’extension snap-in pour un objet Snap-In.|
-|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|Marque la fin de la carte de la barre d’outils pour un objet Snap-In.|
-|[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Crée un membre de données pour la classe de données de l’extension snap-in.|
-|[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Entre une classe de données d’extension instantanée dans la carte de classe de données d’extension snap-in de l’objet Snap-In.|
-|[SNAPINMENUID](#snapinmenuid)|Déclare l’ID du menu contextuelle utilisé par l’objet Snap-In.|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Entre une barre d’outils dans la carte de la barre d’outils de l’objet Snap-In.|
+|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|Marque le début de la classe de mappage des données d’extension du composant logiciel enfichable pour un objet de composant logiciel enfichable.|
+|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|Marque le début de la carte de barre d’outils pour un objet de composant logiciel enfichable.|
+|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|Marque la fin du mappage de classe de données d’extension de composant logiciel enfichable pour un objet de composant logiciel enfichable.|
+|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|Marque la fin de la carte de la barre d’outils pour un objet de composant logiciel enfichable.|
+|[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Crée un membre de données pour la classe de données de l’extension de composant logiciel enfichable.|
+|[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Entre une classe de données d’extension de composant logiciel enfichable dans le mappage de classes de données d’extension du composant logiciel enfichable.|
+|[SNAPINMENUID](#snapinmenuid)|Déclare l’ID du menu contextuel utilisé par l’objet composant logiciel enfichable.|
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Entre une barre d’outils dans le mappage de barre d’outils de l’objet de composant logiciel enfichable.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête:** atlsnap.h
+**En-tête :** atlsnap. h
 
-## <a name="begin_extension_snapin_nodeinfo_map"></a><a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
+## <a name="begin_extension_snapin_nodeinfo_map"></a><a name="begin_extension_snapin_nodeinfo_map"></a> BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
 
-Marque le début de la carte de classe de données d’extension snap-in.
+Marque le début de la carte des classes de données d’extension du composant logiciel enfichable.
 
 ```
 BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
@@ -47,20 +47,20 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 
 ### <a name="parameters"></a>Paramètres
 
-*Classname*<br/>
-[dans] Le nom de la classe de données d’extension snap-in.
+*NomClasse*<br/>
+dans Nom de la classe de données d’extension du composant logiciel enfichable.
 
 ### <a name="remarks"></a>Notes
 
-Démarrez votre carte d’extension snap-in avec la macro BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP, ajoutez des entrées pour chacun de vos types de données d’extension snap-in avec la macro [EXTENSION_SNAPIN_NODEINFO_ENTRY,](#extension_snapin_nodeinfo_entry) et complétez la carte avec la macro [END_EXTENSION_SNAPIN_NODEINFO_MAP.](#end_extension_snapin_nodeinfo_map)
+Démarrez votre mappage d’extension de composant logiciel enfichable avec la macro BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP, ajoutez des entrées pour chacun de vos types de données d’extension de composant logiciel enfichable avec la macro [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) et complétez la carte avec la macro [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) .
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]
 
-## <a name="begin_snapintoolbarid_map"></a><a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP
+## <a name="begin_snapintoolbarid_map"></a><a name="begin_snapintoolbarid_map"></a> BEGIN_SNAPINTOOLBARID_MAP
 
-Déclare le début de la carte d’identification de la barre d’outils pour l’objet Snap-In.
+Déclare le début de la carte de l’ID de barre d’outils pour l’objet de composant logiciel enfichable.
 
 ```
 BEGIN_SNAPINTOOLBARID_MAP(_class)
@@ -69,15 +69,15 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 ### <a name="parameters"></a>Paramètres
 
 *_class*<br/>
-[dans] Spécifie la classe d’objets Snap-In.
+dans Spécifie la classe d’objet de composant logiciel enfichable.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#106](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]
 
-## <a name="end_extension_snapin_nodeinfo_map"></a><a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP
+## <a name="end_extension_snapin_nodeinfo_map"></a><a name="end_extension_snapin_nodeinfo_map"></a> END_EXTENSION_SNAPIN_NODEINFO_MAP
 
-Marque la fin de la carte de classe de données d’extension snap-in.
+Marque la fin du mappage de classe de données d’extension du composant logiciel enfichable.
 
 ```
 END_EXTENSION_SNAPIN_NODEINFO_MAP()
@@ -85,15 +85,15 @@ END_EXTENSION_SNAPIN_NODEINFO_MAP()
 
 ### <a name="remarks"></a>Notes
 
-Démarrez votre carte d’extension snap-in avec la macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP,](#begin_extension_snapin_nodeinfo_map) ajoutez des entrées pour chacun de vos types de données d’extension snap-in avec la macro [EXTENSION_SNAPIN_NODEINFO_ENTRY,](#extension_snapin_nodeinfo_entry) et complétez la carte avec la macro END_EXTENSION_SNAPIN_NODEINFO_MAP.
+Démarrez votre mappage d’extension de composant logiciel enfichable avec la macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) , ajoutez des entrées pour chacun de vos types de données de composant logiciel enfichable d’extension avec la macro [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) et complétez la carte avec la macro END_EXTENSION_SNAPIN_NODEINFO_MAP.
 
 ### <a name="example"></a>Exemple
 
-Voir l’exemple pour [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
+Consultez l’exemple de [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
 
-## <a name="end_snapintoolbarid_map"></a><a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP
+## <a name="end_snapintoolbarid_map"></a><a name="end_snapintoolbarid_map"></a> END_SNAPINTOOLBARID_MAP
 
-Déclare la fin de la carte d’identification de la barre d’outils pour l’objet Snap-In.
+Déclare la fin de la carte de l’ID de barre d’outils pour l’objet de composant logiciel enfichable.
 
 ```
 END_SNAPINTOOLBARID_MAP( _class )
@@ -102,15 +102,15 @@ END_SNAPINTOOLBARID_MAP( _class )
 ### <a name="parameters"></a>Paramètres
 
 *_class*<br/>
-[dans] Spécifie la classe d’objets Snap-In.
+dans Spécifie la classe d’objet de composant logiciel enfichable.
 
 ### <a name="example"></a>Exemple
 
-Voir l’exemple pour [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
+Consultez l’exemple de [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
 
-## <a name="extension_snapin_dataclass"></a><a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS
+## <a name="extension_snapin_dataclass"></a><a name="extension_snapin_dataclass"></a> EXTENSION_SNAPIN_DATACLASS
 
-Ajoute un membre de données à la classe de données d’extension snap-in pour une classe **dérivée d’ISnapInItemImpl.**
+Ajoute un membre de données à la classe de données d’extension de composant logiciel enfichable pour une classe dérivée de **ISnapInItemImpl**.
 
 ```
 EXTENSION_SNAPIN_DATACLASS(dataClass )
@@ -118,20 +118,20 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 
 ### <a name="parameters"></a>Paramètres
 
-*donnéesClass*<br/>
-[dans] La classe de données de l’extension snap-in.
+*dataClass*<br/>
+dans Classe de données de l’extension de composant logiciel enfichable.
 
 ### <a name="remarks"></a>Notes
 
-Cette classe doit également être saisie dans une carte de classe de données d’extension instantanée. Démarrez votre carte de classe de données d’extension snap-in avec la macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP,](#begin_extension_snapin_nodeinfo_map) ajoutez des entrées pour chacun de vos types de données d’extension snap-in avec la macro [EXTENSION_SNAPIN_NODEINFO_ENTRY,](#extension_snapin_nodeinfo_entry) et complétez la carte avec la macro [END_EXTENSION_SNAPIN_NODEINFO_MAP.](#end_extension_snapin_nodeinfo_map)
+Cette classe doit également être entrée dans un mappage de classes de données d’extension de composant logiciel enfichable. Démarrez votre mappage de classe de données d’extension de composant logiciel enfichable avec la macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) , ajoutez des entrées pour chacun de vos types de données d’extension de composant logiciel enfichable avec la macro [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry) et complétez la carte avec la macro [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) .
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]
 
-## <a name="extension_snapin_nodeinfo_entry"></a><a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY
+## <a name="extension_snapin_nodeinfo_entry"></a><a name="extension_snapin_nodeinfo_entry"></a> EXTENSION_SNAPIN_NODEINFO_ENTRY
 
-Ajoute une classe de données d’extension snap-in à la carte de classe de données d’extension snap-in.
+Ajoute une classe de données d’extension de composant logiciel enfichable au mappage de classe de données d’extension de composant logiciel enfichable.
 
 ```
 EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
@@ -139,20 +139,20 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 
 ### <a name="parameters"></a>Paramètres
 
-*donnéesClass*<br/>
-[dans] La classe de données de l’extension snap-in.
+*dataClass*<br/>
+dans Classe de données de l’extension de composant logiciel enfichable.
 
 ### <a name="remarks"></a>Notes
 
-Démarrez votre carte de classe de données d’extension snap-in avec la macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP,](#begin_extension_snapin_nodeinfo_map) ajoutez des entrées pour chacun de vos types de données d’extension snap-in avec la macro EXTENSION_SNAPIN_NODEINFO_ENTRY, et complétez la carte avec la macro [END_EXTENSION_SNAPIN_NODEINFO_MAP.](#end_extension_snapin_nodeinfo_map)
+Démarrez votre mappage de classe de données d’extension de composant logiciel enfichable avec la macro [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map) , ajoutez des entrées pour chacun de vos types de données d’extension de composant logiciel enfichable avec la macro EXTENSION_SNAPIN_NODEINFO_ENTRY et complétez la carte avec la macro [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map) .
 
 ### <a name="example"></a>Exemple
 
-Voir l’exemple pour [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
+Consultez l’exemple de [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map).
 
-## <a name="snapinmenuid"></a><a name="snapinmenuid"></a>SNAPINMENUID
+## <a name="snapinmenuid"></a><a name="snapinmenuid"></a> SNAPINMENUID
 
-Utilisez cette macro pour déclarer la ressource de menu contextuelle de l’objet Snap-In.
+Utilisez cette macro pour déclarer la ressource de menu contextuel de l’objet de composant logiciel enfichable.
 
 ```
 SNAPINMENUID( id )
@@ -161,11 +161,11 @@ SNAPINMENUID( id )
 ### <a name="parameters"></a>Paramètres
 
 *id*<br/>
-[dans] Identifie le menu contextuelle de l’objet Snap-In.
+dans Identifie le menu contextuel de l’objet de composant logiciel enfichable.
 
-## <a name="snapintoolbarid_entry"></a><a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY
+## <a name="snapintoolbarid_entry"></a><a name="snapintoolbarid_entry"></a> SNAPINTOOLBARID_ENTRY
 
-Utilisez cette macro pour entrer une pièce d’identité de barre d’outils dans la carte d’identification de la barre d’outils de l’objet Snap-In.
+Utilisez cette macro pour entrer un ID de barre d’outils dans le mappage de l’ID de barre d’outils de l’objet de composant logiciel enfichable.
 
 ```
 SNAPINTOOLBARID_ENTRY( id )
@@ -174,15 +174,15 @@ SNAPINTOOLBARID_ENTRY( id )
 ### <a name="parameters"></a>Paramètres
 
 *id*<br/>
-[dans] Identifie le contrôle de la barre d’outils.
+dans Identifie le contrôle ToolBar.
 
 ### <a name="remarks"></a>Notes
 
-La macro [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map) marque le début de la carte d’identification de la barre d’outils; [l’END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map) macro marque la fin.
+La macro [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map) marque le début de la carte de l’ID de barre d’outils ; la macro [END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map) marque la fin.
 
 ### <a name="example"></a>Exemple
 
-Voir l’exemple pour [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
+Consultez l’exemple de [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map).
 
 ## <a name="see-also"></a>Voir aussi
 

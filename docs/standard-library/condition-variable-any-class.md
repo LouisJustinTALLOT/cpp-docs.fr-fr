@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 9187bddef456f131982d39fd64dacea5953b959b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9dc73de515aa8e321dbb28ca4a859b256613fbfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222561"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831475"
 ---
 # <a name="condition_variable_any-class"></a>condition_variable_any, classe
 
@@ -39,13 +39,13 @@ class condition_variable_any;
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[condition_variable_any](#condition_variable_any)|Construit un objet `condition_variable_any`.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[notify_all](#notify_all)|Débloque tous les threads qui attendent l’objet `condition_variable_any`.|
 |[notify_one](#notify_one)|Débloque un des threads qui attendent l’objet `condition_variable_any`.|
@@ -53,7 +53,7 @@ class condition_variable_any;
 |[wait_for](#wait_for)|Bloque un thread et définit un intervalle de temps après lequel le thread est débloqué.|
 |[wait_until](#wait_until)|Bloque un thread et définit un point dans le temps maximal auquel le thread est débloqué.|
 
-## <a name="condition_variable_any"></a><a name="condition_variable_any"></a>condition_variable_any
+## <a name="condition_variable_any"></a><a name="condition_variable_any"></a> condition_variable_any
 
 Construit un objet `condition_variable_any`.
 
@@ -65,7 +65,7 @@ condition_variable_any();
 
 Si la mémoire disponible n’est pas suffisante, le constructeur lève un objet [system_error](../standard-library/system-error-class.md) avec le code d’erreur `not_enough_memory`. Si l’objet ne peut pas être construit, car une autre ressource n’est pas disponible, le constructeur lève un objet `system_error` avec le code d’erreur `resource_unavailable_try_again`.
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 Débloque tous les threads qui attendent l’objet `condition_variable_any`.
 
@@ -73,7 +73,7 @@ Débloque tous les threads qui attendent l’objet `condition_variable_any`.
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 Débloque un des threads qui attendent l’objet `condition_variable_any`.
 
@@ -81,7 +81,7 @@ Débloque un des threads qui attendent l’objet `condition_variable_any`.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>qu'
+## <a name="wait"></a><a name="wait"></a> qu'
 
 Bloque un thread.
 
@@ -112,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 Bloque un thread et définit un intervalle de temps après lequel le thread est débloqué.
 
@@ -135,7 +135,7 @@ Objet `chrono::duration` qui spécifie le délai avant l’éveil du thread.
 *Prédit*\
 Toute expression qui retourne **`true`** ou **`false`** .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première méthode retourne `cv_status::timeout` si l’attente se termine quand *Rel_time* s’est écoulé. Dans le cas contraire, la méthode retourne `cv_status::no_timeout`.
 
@@ -155,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 Bloque un thread et définit un point dans le temps maximal auquel le thread est débloqué.
 
@@ -190,7 +190,7 @@ Objet [chrono::time_point](../standard-library/time-point-class.md).
 *Prédit*\
 Toute expression qui retourne **`true`** ou **`false`** .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Les méthodes qui retournent un `cv_status` type retournent `cv_status::timeout` si l’attente se termine lorsque *Abs_time* s’arrête. Sinon, les méthodes retournent `cv_status::no_timeout`.
 

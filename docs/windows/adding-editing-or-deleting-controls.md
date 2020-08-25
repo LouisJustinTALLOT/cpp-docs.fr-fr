@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 9c1596b66f4387ea1f7ce309a5012ecd0f63d5de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623461"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831682"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Comment : ajouter, modifier ou supprimer des contrôles (C++)
 
@@ -146,7 +146,7 @@ Dans la boîte de dialogue, sélectionnez le contrôle, appuyez sur la touche **
 
 ## <a name="other-issues"></a>Autres problèmes
 
-### <a name="troubleshooting"></a>Dépannage
+### <a name="troubleshooting"></a>Résolution des problèmes
 
 Une fois que vous avez ajouté un contrôle commun ou un contrôle RichEdit à une boîte de dialogue, il n’apparaît pas lorsque vous testez la boîte de dialogue. Ou la boîte de dialogue elle-même ne s’affiche pas. Par exemple :
 
@@ -166,20 +166,38 @@ Une fois que vous avez ajouté un contrôle commun ou un contrôle RichEdit à u
 
 Actuellement, l' **éditeur de boîtes de dialogue** n’ajoute pas automatiquement du code à votre projet lorsque vous faites glisser et déposez les contrôles communs ou RichEdit suivants dans une boîte de dialogue. Visual Studio ne fournit pas non plus d’erreur ou d’avertissement lorsque ce problème se produit. Pour corriger ce problème, ajoutez manuellement le code du contrôle.
 
-||||
-|-|-|-|
-|Contrôle Slider|Contrôle d’arborescence|Sélecteur de date et heure|
-|Contrôle spin|Contrôle Tab|Month Calendar|
-|Contrôle de progression|Contrôle d’animation|Contrôle d’adresse IP|
-|Touche d’accès rapide|Contrôle RichEdit|Zone de liste déroulante étendue|
-|Contrôle de liste|Contrôle Rich Edit 2,0|Contrôle personnalisé|
+:::row:::
+   :::column span="":::
+      Contrôle d’animation \
+      Contrôle personnalisé \
+      Sélecteur de date et heure \
+      Zone de liste déroulante étendue
+   :::column-end:::
+   :::column span="":::
+      Touche d’accès rapide \
+      Contrôle d’adresse IP \
+      Contrôle de liste \
+      Month Calendar
+   :::column-end:::
+   :::column span="":::
+      Contrôle de progression \
+      Contrôle Rich Edit 2,0 \
+      Contrôle RichEdit \
+      Contrôle Slider
+   :::column-end:::
+   :::column span="":::
+      Contrôle spin \
+      Contrôle onglet \
+      Contrôle d’arborescence
+   :::column-end:::
+:::row-end:::
 
 Pour utiliser des contrôles communs dans une boîte de dialogue, vous devez appeler [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) ou `AFXInitCommonControls` avant de créer la boîte de dialogue.
 
 Pour utiliser des contrôles RichEdit, vous devez appeler `LoadLibrary` . Pour plus d’informations, consultez [à propos des contrôles RichEdit](/windows/win32/Controls/about-rich-edit-controls) dans le SDK Windows et [vue d’ensemble du contrôle RichEdit](../mfc/overview-of-the-rich-edit-control.md).
 
 > [!NOTE]
-> Pour utiliser un contrôle RichEdit avec MFC, vous devez d’abord appeler [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) pour charger le contrôle RichEdit 2,0 (Riched20. DLL) ou appelez [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) pour charger l’ancien contrôle RichEdit 1,0 (Riched32. DLL).
+> Pour utiliser un contrôle RichEdit avec MFC, vous devez d’abord appeler [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) pour charger le contrôle RichEdit 2,0 (RICHED20.DLL), ou appeler [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) pour charger l’ancien contrôle RichEdit 1,0 (RICHED32.DLL).
 >
 > Vous pouvez utiliser la classe actuelle [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) avec l’ancien contrôle RichEdit 1,0, mais `CRichEditCtrl` est conçu uniquement pour prendre en charge le contrôle RichEdit 2,0. Étant donné que RichEdit 1,0 et RichEdit 2,0 sont similaires, la plupart des méthodes fonctionnent. Toutefois, il existe des différences entre les contrôles 1,0 et 2,0, donc certaines méthodes peuvent fonctionner de manière incorrecte ou ne pas fonctionner du tout.
 

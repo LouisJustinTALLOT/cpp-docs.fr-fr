@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561321"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834295"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager, classe
 
@@ -53,17 +53,15 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Construit et initialise un objet `CMFCBaseVisualManager`.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCBaseVisualManager ::D rawCheckBox](#drawcheckbox)|Dessine un contrôle de case à cocher en utilisant le thème Windows actuel.|
 |[CMFCBaseVisualManager ::D rawComboBorder](#drawcomboborder)|Dessine une bordure de zone de liste déroulante à l’aide du thème Windows actuel.|
 |[CMFCBaseVisualManager ::D rawComboDropButton](#drawcombodropbutton)|Dessine un bouton déroulant de zone de liste déroulante à l’aide du thème Windows actuel.|
@@ -75,9 +73,8 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Appelle `CloseThemeData` pour tous les handles obtenus dans `UpdateSystemColors` .|
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Appelle `OpenThemeData` pour obtenir des handles pour le dessin de différents contrôles : fenêtres, barres d’outils, boutons, etc.|
 
@@ -93,7 +90,7 @@ Vous n’avez pas besoin d’instancier directement des objets de cette classe.
 
 [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxvisualmanager. h
 
@@ -155,7 +152,7 @@ dans Spécifie si la case à cocher est activée.
 *bPressed*<br/>
 dans Spécifie si la case à cocher est activée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’API de thème est activée ; Sinon, FALSe.
 
@@ -199,7 +196,7 @@ dans Spécifie si la bordure de zone de liste déroulante est déroulée.
 *bIsHighlighted*<br/>
 dans Spécifie si la bordure de zone de liste déroulante est mise en surbrillance.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’API de thème est activée ; Sinon, FALSe.
 
@@ -233,7 +230,7 @@ dans Spécifie si le bouton déroulant de la zone de liste déroulante est suppr
 *bIsHighlighted*\
 dans Spécifie si le bouton déroulant de la zone de liste déroulante est mis en surbrillance.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’API de thème est activée ; Sinon, FALSe.
 
@@ -263,7 +260,7 @@ dans Pointeur vers l’objet de [classe CMFCButton](../../mfc/reference/cmfcbutt
 *uiState*<br/>
 dans Pas. L’État est extrait de *pButton*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’API de thème est activée ; Sinon, FALSe.
 
@@ -301,7 +298,7 @@ dans Spécifie si la case d’option est activée.
 *bPressed*<br/>
 dans Spécifie si la case d’option est activée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’API de thème est activée ; Sinon, FALSe.
 
@@ -351,7 +348,7 @@ dans Couleur du texte de progression. `CMFCBaseVisualManager` ignore ce. La coul
 *bProgressText*<br/>
 dans Spécifie s’il faut afficher le texte de progression.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’API de thème est activée ; Sinon, FALSe.
 
@@ -377,7 +374,7 @@ dans Pointeur vers un volet dont l’arrière-plan doit être dessiné.
 *rectClient*<br/>
 dans Rectangle englobant de la zone à remplir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’API de thème est activée ; Sinon, FALSe.
 
@@ -389,7 +386,7 @@ Obtient le thème Windows actuel.
 virtual WinXpTheme GetStandardWindowsTheme();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur de thème Windows actuellement sélectionnée. Il peut s’agir de l’une des valeurs énumérées suivantes :
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 2a35a7b4d9581a11d889f3e66d0179c553c4fc25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0fe2d0e57c0746f25187028b85157d66ee736ca4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212161"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836424"
 ---
 # <a name="ltnewgt"></a>&lt;nouveau&gt;
 
 Définit plusieurs types et fonctions qui contrôlent l'allocation et la libération de stockage sous contrôle du programme. Définit également des composants pour la création de rapports sur les erreurs de gestion de stockage.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<new>
 
@@ -31,21 +31,21 @@ Certaines des fonctions déclarées dans cet en-tête sont remplaçables. L'impl
 
 ### <a name="objects"></a>Objets
 
-|||
+|Nom|Description|
 |-|-|
 |[nothrow](../standard-library/new-functions.md#nothrow)|Fournit un objet à utiliser comme argument pour les **`nothrow`** versions de **`new`** et **`delete`** .|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[new_handler](../standard-library/new-typedefs.md#new_handler)|Type qui pointe vers une fonction pouvant être utilisée comme gestionnaire new.|
 |[hardware_constructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 |[hardware_destructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
 |[blanchi](../standard-library/new-functions.md#launder)||
@@ -53,7 +53,7 @@ Certaines des fonctions déclarées dans cet en-tête sont remplaçables. L'impl
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur delete](../standard-library/new-operators.md#op_delete)|Fonction appelée par une expression delete pour libérer le stockage pour des objets distincts.|
 |[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Fonction appelée par une expression delete pour libérer le stockage pour un tableau d'objets.|
@@ -62,13 +62,13 @@ Certaines des fonctions déclarées dans cet en-tête sont remplaçables. L'impl
 
 ### <a name="enums"></a>Énumérations
 
-|||
+|Nom|Description|
 |-|-|
 |[align_val_t](../standard-library/new-operators.md#op_align_val_t)||
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe bad_alloc](../standard-library/bad-alloc-class.md)|La classe décrit une exception levée pour indiquer qu'une demande d'allocation n'a pas réussi.|
 |[Classe bad_array_new_length](../standard-library/bad-array-new-length.md)||

@@ -1,17 +1,17 @@
 ---
-title: ID (C++ attribut com)
+title: ID (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f67bf21fbe0040884cba4a54ed8d2a230cb20cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168055"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830551"
 ---
 # <a name="id"></a>id
 
@@ -36,16 +36,14 @@ L’attribut **ID** C++ a les mêmes fonctionnalités que l’attribut MIDL [ID]
 
 Pour obtenir un exemple d’utilisation de l' **ID**, consultez l’exemple de [Bindable](bindable.md) .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Méthode d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Méthode d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
@@ -54,6 +52,6 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
 [Attributs de membre de données](data-member-attributes.md)<br/>
-[defaultvalue](defaultvalue.md)<br/>
+[DefaultValue](defaultvalue.md)<br/>
 [in](in-cpp.md)<br/>
-[out](out-cpp.md)
+[à](out-cpp.md)

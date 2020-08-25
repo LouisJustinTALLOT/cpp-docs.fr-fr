@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 372a1df6500f4d7219c89d8f82425246c2236514
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410172"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831136"
 ---
-# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
+# <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
 
-Spécifie un mode de dessin qui vous permet de modifier une image dans une image de boîte de dialogue Éditeur.
+Spécifie un mode dessin que vous utilisez pour modifier une image dans une boîte de dialogue de l’éditeur d’images.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,25 +33,24 @@ enum IMAGE_EDIT_MODE
 
 ## <a name="members"></a>Membres
 
-|||
-|-|-|
 |Nom|Description|
-|IMAGE_EDIT_MODE_PEN|Utilisé pour dessiner les pixels individuels.|
-|IMAGE_EDIT_MODE_FILL|Utilisé pour remplir toutes les zones adjacentes qui contiennent la couleur à l’emplacement du curseur.|
+|-|-|
+|IMAGE_EDIT_MODE_PEN|Utilisé pour dessiner des pixels individuels.|
+|IMAGE_EDIT_MODE_FILL|Utilisé pour remplir toutes les zones adjacentes contenant la couleur à l’emplacement actuel du curseur.|
 |IMAGE_EDIT_MODE_LINE|Utilisé pour dessiner une ligne.|
 |IMAGE_EDIT_MODE_RECT|Utilisé pour dessiner un rectangle.|
 |IMAGE_EDIT_MODE_ELLIPSE|Utilisé pour dessiner une ellipse.|
-|IMAGE_EDIT_MODE_COLOR|Utilisé pour définir la couleur actuelle à la couleur à l’emplacement du curseur.|
+|IMAGE_EDIT_MODE_COLOR|Utilisé pour définir la couleur actuelle à la couleur à l’emplacement actuel du curseur.|
 
 ### <a name="remarks"></a>Notes
 
-Le `CMFCImagePaintArea` et `CMFCImageEditorDialog` classes utilisent cette énumération pour définir le mode de dessin en cours. Le mode de dessin et de la couleur actuelle sont utilisés pour modifier la zone d’image dans une image de boîte de dialogue Éditeur. Pour plus d’informations sur `CMFCImagePaintArea` et `CMFCImageEditorDialog`, consultez [cmfcimagepaintarea, classe](../../mfc/reference/cmfcimagepaintarea-class.md) et [CMFCImageEditorDialog, classe](../../mfc/reference/cmfcimageeditordialog-class.md).
+Les `CMFCImagePaintArea` `CMFCImageEditorDialog` classes et utilisent cette énumération pour définir le mode de dessin actuel. Le mode dessin et la couleur actuelle sont utilisés pour modifier la zone d’image dans une boîte de dialogue de l’éditeur d’images. Pour plus d’informations sur `CMFCImagePaintArea` et `CMFCImageEditorDialog` , consultez la classe [CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md) et la [classe CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).
 
-Lorsque vous sélectionnez une couleur à partir d’une image en utilisant le mode de dessin IMAGE_EDIT_MODE_COLOR, le framework définit le mode de dessin actuel à IMAGE_EDIT_MODE_PEN.
+Lorsque vous sélectionnez une couleur à partir d’une image à l’aide du mode de dessin IMAGE_EDIT_MODE_COLOR, l’infrastructure définit le mode de dessin actuel sur IMAGE_EDIT_MODE_PEN.
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** afximagepaintarea.h
+**En-tête :** afximagepaintarea. h
 
 ## <a name="see-also"></a>Voir aussi
 

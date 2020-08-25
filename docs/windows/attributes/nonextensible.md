@@ -1,21 +1,21 @@
 ---
-title: unextensible (C++ attribut com)
+title: unextensible (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 01f89c4a06a8e90fd6a539fa5a5a85ebb8067d40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214664"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833034"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Spécifie que l’implémentation de `IDispatch` comprend uniquement les propriétés et les méthodes listées dans la description de l’interface et ne peut pas être étendue avec des membres supplémentaires au moment de l’exécution.
+Spécifie que l' `IDispatch` implémentation de comprend uniquement les propriétés et les méthodes listées dans la description de l’interface et ne peut pas être étendue avec des membres supplémentaires au moment de l’exécution.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Spécifie que l’implémentation de `IDispatch` comprend uniquement les propri�
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **unextensible** C++ a les mêmes fonctionnalités que l’attribut MIDL qui n’est pas [extensible](/windows/win32/Midl/nonextensible) .
+L’attribut C++ qui n’est pas **extensible** a les mêmes fonctionnalités que l’attribut MIDL qui n’est pas [extensible](/windows/win32/Midl/nonextensible) .
 
 L’utilisation de la **préextensibilité** requiert également l’attribut [oleautomation](oleautomation.md) .
 
@@ -48,16 +48,14 @@ __interface IFireTabCtrl
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|**interface**|
-|**Renouvelable**|Non|
-|**Attributs requis**|`dual` et `oleautomation`ou `dispinterface`|
-|**Attributs non valides**|None|
+|**S’applique à**|**interface**|
+|**Repeatable Read**|Non|
+|**Attributs requis**|`dual` et `oleautomation` , ou `dispinterface`|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

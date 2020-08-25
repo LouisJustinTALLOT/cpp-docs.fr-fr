@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: d1a521f8ac0a33dbc59d789e506ac1dd9c906e3e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9160cfd847977f98ac22eecd72632822c751a3aa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562049"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834230"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget, classe
 
@@ -37,16 +37,14 @@ class CMFCTabDropTarget : public COleDropTarget
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |`CMFCTabDropTarget::CMFCTabDropTarget`|Constructeur par défaut.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCTabDropTarget :: OnDragEnter](#ondragenter)|Appelée par l’infrastructure quand l’utilisateur fait glisser un objet dans une fenêtre d’onglets. (Substitue [COleDropTarget :: OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
 |[CMFCTabDropTarget :: OnDragLeave](#ondragleave)|Appelée par l’infrastructure quand l’utilisateur fait glisser un objet en dehors de la fenêtre d’onglets qui a le focus. (Substitue [COleDropTarget :: OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
 |[CMFCTabDropTarget :: OnDragOver](#ondragover)|Appelée par l’infrastructure quand l’utilisateur fait glisser un objet sur la fenêtre d’onglet qui a le focus. (Substitue [COleDropTarget :: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
@@ -75,7 +73,7 @@ L'exemple suivant montre comment construire un objet `CMFCTabDropTarget` et util
 
 [CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxbasetabctrl.h
 
@@ -105,7 +103,7 @@ dans Contient l’état des touches de modification. Il s’agit d’une combina
 *point*\
 dans Emplacement du curseur dans les coordonnées clientes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat obtenu si le déplacement se produit à l’emplacement spécifié par *point*. Il peut s’agir d’un ou plusieurs des éléments suivants :
 
@@ -168,7 +166,7 @@ dans Contient l’état des touches de modification. Il s’agit d’une combina
 *point*\
 dans Emplacement du pointeur de la souris dans les coordonnées clientes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat obtenu si le déplacement se produit à l’emplacement spécifié par *point*. Il peut s’agir d’un ou plusieurs des éléments suivants :
 
@@ -218,7 +216,7 @@ dans Opération de suppression par défaut.
 *point*\
 dans Emplacement du pointeur de la souris dans les coordonnées clientes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Effet d’abandon obtenu. Il peut s’agir d’un ou plusieurs des éléments suivants :
 
@@ -251,7 +249,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 *pOwner*\
 dans Contrôle onglet à inscrire comme cible de déplacement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’inscription a réussi ; Sinon, 0.
 

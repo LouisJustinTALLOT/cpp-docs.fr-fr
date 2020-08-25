@@ -1,5 +1,5 @@
 ---
-title: Macro de conversion de cordes
+title: Macros de conversion de chaînes
 ms.date: 11/04/2016
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -11,24 +11,24 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 8df496b78334d26e7d3664642b2e9d93d6149843
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60cccebf4e1db8369ea5a88f04a37b96838ff49f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835153"
 ---
-# <a name="string-conversion-macros"></a>Macro de conversion de cordes
+# <a name="string-conversion-macros"></a>Macros de conversion de chaînes
 
-Ces macros fournissent des caractéristiques de conversion des chaînes.
+Ces macros fournissent des fonctionnalités de conversion de chaînes.
 
-## <a name="atl-and-mfc-string-conversion-macros"></a><a name="atl_and_mfc_string_conversion_macros"></a>Macro de conversion des cordes ATL et MFC
+## <a name="atl-and-mfc-string-conversion-macros"></a><a name="atl_and_mfc_string_conversion_macros"></a> Macros de conversion de chaînes ATL et MFC
 
-Les macros de conversion de chaînes présentées ici sont valides à la fois pour ATL et pour MFC. Pour plus d’informations sur la conversion des chaînes MFC, voir [TN059: Using MFC MBCS/Unicode Conversion Macros](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) and [MFC Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md).
+Les macros de conversion de chaînes présentées ici sont valides à la fois pour ATL et pour MFC. Pour plus d’informations sur la conversion de chaînes MFC, consultez [TN059 : utilisation de macros de conversion MFC MBCS/Unicode](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) et de [macros et globales MFC](../../mfc/reference/mfc-macros-and-globals.md).
 
-## <a name="devmode-and-textmetric-string-conversion-macros"></a><a name="devmode_and_textmetric_string_conversion_macros"></a>DeVMODE et TEXTMETRIC String Conversion Macros
+## <a name="devmode-and-textmetric-string-conversion-macros"></a><a name="devmode_and_textmetric_string_conversion_macros"></a> Macros de conversion de chaînes DEVMODE et TEXTMETRIC
 
-Ces macros créent une copie d’une structure [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) ou [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) et convertissent les cordes de la nouvelle structure en un nouveau type de chaîne. Les macros allouent la mémoire sur la pile pour la nouvelle structure et retournent un pointeur à la nouvelle structure.
+Ces macros créent une copie d’une structure [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) ou [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) et convertissent les chaînes dans la nouvelle structure en un nouveau type de chaîne. Les macros allouent de la mémoire sur la pile pour la nouvelle structure et retournent un pointeur vers la nouvelle structure.
 
 ```cpp
 MACRONAME( address_of_structure )
@@ -44,31 +44,31 @@ et
 
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]
 
-Dans les noms macro, le type de chaîne dans la structure source est sur la gauche (par exemple, **A**) et le type de chaîne dans la structure de destination est sur la droite (par exemple, **W**). **Un** peuplement pour LPSTR, **OLE** signifie LPOLESTR, **T** signifie LPTSTR, et **W** signifie LPWSTR.
+Dans les noms de macros, le type de chaîne dans la structure source est à gauche (par exemple, **A**) et le type de chaîne dans la structure de destination se trouve à droite (par exemple, **W**). **Signifie LPSTR** , **OLE** signifie LPOLESTR, **T** signifie LPTStr et **W** correspond à LPWStr.
 
-Ainsi, DEVMODEA2W `DEVMODE` copie une structure avec des `DEVMODE` cordes LPSTR dans une structure avec des `TEXTMETRIC` cordes LPWSTR, `TEXTMETRIC` TEXTMETRICOLE2T copie une structure avec des cordes LPOLESTR dans une structure avec des cordes LPTSTR, et ainsi de suite.
+Ainsi, DEVMODEA2W copie une `DEVMODE` structure avec des chaînes LPSTR dans une `DEVMODE` structure avec des chaînes LPWStr, TEXTMETRICOLE2T copie une `TEXTMETRIC` structure avec des chaînes LPOLESTR dans une `TEXTMETRIC` structure avec des chaînes LPTStr, et ainsi de suite.
 
-Les deux chaînes converties `DEVMODE` dans la structure`dmDeviceName`sont le nom`dmFormName`de l’appareil ( ) et le nom de forme ( ). Les `DEVMODE` macros de conversion de`dmSize`chaîne mettent également à jour la taille de la structure ().
+Les deux chaînes converties dans la `DEVMODE` structure sont le nom de l’appareil ( `dmDeviceName` ) et le nom du formulaire ( `dmFormName` ). Les `DEVMODE` macros de conversion de chaînes mettent également à jour la taille de la structure ( `dmSize` ).
 
-Les quatre cordes converties `TEXTMETRIC` dans la structure`tmFirstChar`sont le`tmLastChar`premier personnage (), le dernier personnage (), le caractère par défaut (`tmDefaultChar`), et le caractère de rupture (`tmBreakChar`).
+Les quatre chaînes converties dans la `TEXTMETRIC` structure sont le premier caractère ( `tmFirstChar` ), le dernier caractère ( `tmLastChar` ), le caractère par défaut ( `tmDefaultChar` ) et le caractère de saut de ligne ( `tmBreakChar` ).
 
-Le comportement `DEVMODE` des `TEXTMETRIC` macros de conversion et de chaîne dépend de la directive compilateur en vigueur, le cas échéant. Si les types source et de destination sont les mêmes, aucune conversion n'est effectuée. Les directives compilateur changent **T** et **OLE** comme suit :
+Le comportement des `DEVMODE` `TEXTMETRIC` macros de conversion de chaînes et dépend de la directive de compilateur en vigueur, le cas échéant. Si les types source et de destination sont les mêmes, aucune conversion n'est effectuée. Les directives de compilateur changent **T** et **OLE** comme suit :
 
 |Directive du compilateur appliquée|T devient|OLE devient|
 |----------------------------------|---------------|-----------------|
-|Aucun|**A**|**W**|
-|**\_Unicode**|**W**|**W**|
+|aucun|**A**|**W**|
+|**\_UNICODE**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
-|UNICODE et **OLE2ANSI** ** \_**|**W**|**A**|
+|** \_ Unicode** et **OLE2ANSI**|**W**|**A**|
 
-Le tableau suivant `DEVMODE` `TEXTMETRIC` répertorie les macros de conversion et les chaînes.
+Le tableau suivant répertorie `DEVMODE` les `TEXTMETRIC` macros et les macros de conversion de chaînes.
 
-|||
+|`DEVMODE` macrovirus|`TEXTMETRIC` macrovirus|
 |-|-|
-|DEVMODEA2W|TEXTMETRICA2W TEXTMETRICAW TEXTMETRICAW TEXTMETRICAW|
-|DEVMODEOLE2T|TEXTMETRICOLE2T TEXTMETRICOLE2T TEXTMETRICOLE|
+|DEVMODEA2W|TEXTMETRICA2W|
+|DEVMODEOLE2T|TEXTMETRICOLE2T|
 |DEVMODET2OLE|TEXTMETRICT2OLE|
-|DEVMODEW2A|TEXTMETRICW2A TEXTMETRICW2A|
+|DEVMODEW2A|TEXTMETRICW2A|
 
 ## <a name="see-also"></a>Voir aussi
 

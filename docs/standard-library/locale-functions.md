@@ -34,24 +34,32 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: a1e81fe28976e914f90a441ff97027f411b05738
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91d0b40de557eb2414d6ee685795796c3290177c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224810"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833242"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt;, fonctions
 
-||||
-|-|-|-|
-|[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|
-|[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
-|[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
-|[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[ToLower](#tolower)|[ToUpper](#toupper)|[use_facet](#use_facet)|
+[has_facet](#has_facet)\
+[isalnum](#isalnum)\
+[isalpha](#isalpha)\
+[iscntrl](#iscntrl)\
+[IsDigit](#isdigit)\
+[isgraph](#isgraph)\
+[IsLower](#islower)\
+[isprint](#isprint)\
+[ispunct](#ispunct)\
+[isspace](#isspace)\
+[IsUpper](#isupper)\
+[isxdigit](#isxdigit)\
+[ToLower](#tolower)\
+[ToUpper](#toupper)\
+[use_facet](#use_facet)
 
-## <a name="has_facet"></a><a name="has_facet"></a>has_facet
+## <a name="has_facet"></a><a name="has_facet"></a> has_facet
 
 Teste si une facette particulière est stockée dans des paramètres régionaux spécifiés.
 
@@ -65,7 +73,7 @@ bool has_facet(const locale& Loc);
 *Loc*\
 Paramètres régionaux pour lesquels tester la présence d’une facette.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les paramètres régionaux ont la facette testée pour ; **`false`** si ce n’est pas le cas.
 
@@ -94,7 +102,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a><a name="isalnum"></a>isalnum
+## <a name="isalnum"></a><a name="isalnum"></a> isalnum
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère alphabétique ou numérique.
 
@@ -111,7 +119,7 @@ bool isalnum(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément alphanumérique à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est alphanumérique ; **`false`** si ce n’est pas le cas.
 
@@ -161,7 +169,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a><a name="isalpha"></a>isalpha
+## <a name="isalpha"></a><a name="isalpha"></a> isalpha
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère alphabétique.
 
@@ -178,7 +186,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément alphabétique à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est alphabétique ; **`false`** si ce n’est pas le cas.
 
@@ -226,7 +234,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a><a name="iscntrl"></a>iscntrl
+## <a name="iscntrl"></a><a name="iscntrl"></a> iscntrl
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère de contrôle.
 
@@ -243,7 +251,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est un caractère de contrôle ; **`false`** si ce n’est pas le cas.
 
@@ -291,7 +299,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a><a name="isdigit"></a>IsDigit
+## <a name="isdigit"></a><a name="isdigit"></a> IsDigit
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère numérique.
 
@@ -308,7 +316,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est un caractère numérique ; **`false`** si ce n’est pas le cas.
 
@@ -356,7 +364,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a><a name="isgraph"></a>isgraph
+## <a name="isgraph"></a><a name="isgraph"></a> isgraph
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère alphanumérique ou de ponctuation.
 
@@ -373,7 +381,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est un caractère alphanumérique ou de ponctuation ; **`false`** si ce n’est pas le cas.
 
@@ -421,7 +429,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a><a name="islower"></a>IsLower
+## <a name="islower"></a><a name="islower"></a> IsLower
 
 Teste si un élément figurant dans des paramètres régionaux est en minuscules.
 
@@ -438,7 +446,7 @@ bool islower(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est un caractère minuscule ; **`false`** si ce n’est pas le cas.
 
@@ -486,7 +494,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a><a name="isprint"></a>isprint
+## <a name="isprint"></a><a name="isprint"></a> isprint
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère imprimable.
 
@@ -503,7 +511,7 @@ bool isprint(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est un imprimable ; **`false`** si ce n’est pas le cas.
 
@@ -550,7 +558,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a><a name="ispunct"></a>ispunct
+## <a name="ispunct"></a><a name="ispunct"></a> ispunct
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère de ponctuation.
 
@@ -567,7 +575,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est un caractère de ponctuation ; **`false`** si ce n’est pas le cas.
 
@@ -615,7 +623,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a><a name="isspace"></a>isspace
+## <a name="isspace"></a><a name="isspace"></a> isspace
 
 Teste si un élément figurant dans des paramètres régionaux est un espace blanc.
 
@@ -632,7 +640,7 @@ bool isspace(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est un caractère d’espace blanc ; **`false`** si ce n’est pas le cas.
 
@@ -680,7 +688,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a><a name="isupper"></a>IsUpper
+## <a name="isupper"></a><a name="isupper"></a> IsUpper
 
 Teste si un élément figurant dans des paramètres régionaux est en majuscules.
 
@@ -697,7 +705,7 @@ bool isupper(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est un caractère majuscule ; **`false`** si ce n’est pas le cas.
 
@@ -745,7 +753,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a><a name="isxdigit"></a>isxdigit
+## <a name="isxdigit"></a><a name="isxdigit"></a> isxdigit
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère utilisé pour représenter un nombre hexadécimal.
 
@@ -762,7 +770,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 *Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’élément testé est un caractère utilisé pour représenter un nombre hexadécimal ; **`false`** si ce n’est pas le cas.
 
@@ -812,7 +820,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a><a name="tolower"></a>ToLower
+## <a name="tolower"></a><a name="tolower"></a> ToLower
 
 Convertit un caractère en minuscule.
 
@@ -829,7 +837,7 @@ Caractère à convertir en minuscule.
 *Loc*\
 Paramètres régionaux contenant le caractère à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Caractère converti en minuscules.
 
@@ -861,7 +869,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a><a name="toupper"></a>ToUpper
+## <a name="toupper"></a><a name="toupper"></a> ToUpper
 
 Convertit un caractère en majuscule.
 
@@ -878,7 +886,7 @@ Caractère à convertir en majuscule.
 *Loc*\
 Paramètres régionaux contenant le caractère à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Caractère converti en majuscules.
 
@@ -910,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a><a name="use_facet"></a>use_facet
+## <a name="use_facet"></a><a name="use_facet"></a> use_facet
 
 Retourne une référence à une facette d'un type spécifié stocké dans des paramètres régionaux.
 
@@ -924,7 +932,7 @@ const Facet& use_facet(const locale& Loc);
 *Loc*\
 Paramètres régionaux const contenant le type de facette référencé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à la facette de classe `Facet` contenue dans les paramètres régionaux d’argument.
 

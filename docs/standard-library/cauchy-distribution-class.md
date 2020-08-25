@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 965ad6751938c07a0a62fedc8f65d53f9f6d2b04
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8e35815a702878fde702e772edb21899608e7f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217829"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830798"
 ---
 # <a name="cauchy_distribution-class"></a>cauchy_distribution, classe
 
@@ -80,10 +80,8 @@ Moteur de générateur de nombres aléatoires uniformes. Pour connaître les typ
 
 Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la distribution Cauchy. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|
-|`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|
+[cauchy_distribution](#cauchy_distribution)\
+[param_type](#param_type)
 
 Les fonctions de propriété `a()` et `b()` retournent leurs valeurs respectives pour les paramètres de distribution stockés `a` et `b`.
 
@@ -234,13 +232,13 @@ Distribution for 10 samples:
     10: 35.2531547063
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution :: cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a> cauchy_distribution :: cauchy_distribution
 
 Construit la distribution.
 
@@ -268,7 +266,7 @@ Le premier constructeur construit un objet dont la valeur `a` stockée contient 
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution ::p aram_type
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a> cauchy_distribution ::p aram_type
 
 Stocke tous les paramètres de la distribution.
 

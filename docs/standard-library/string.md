@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 68b1865fd9c45c3782917edba273083dac086548
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212122"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833178"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -50,18 +50,18 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 |[opérateur +](../standard-library/string-operators.md#op_add)|Concatène deux objets string.|
 |[opérateur ! =](../standard-library/string-operators.md#op_neq)|Teste si l'objet string situé à gauche de l'opérateur n'est pas égal à l'objet string situé à droite.|
 |[opérateur = =](../standard-library/string-operators.md#op_eq_eq)|Teste si l'objet string situé à gauche de l'opérateur est égal à l'objet string situé à droite.|
-|[<d’opérateur](../standard-library/string-operators.md#op_lt)|Teste si l'objet string situé à gauche de l'opérateur est inférieur à l'objet string situé à droite.|
+|[<d’opérateur ](../standard-library/string-operators.md#op_lt)|Teste si l'objet string situé à gauche de l'opérateur est inférieur à l'objet string situé à droite.|
 |[<opérateur =](../standard-library/string-operators.md#op_lt_eq)|Teste si l'objet string situé à gauche de l'opérateur est inférieur ou égal à l'objet string situé à droite.|
-|[<d’opérateur\<](../standard-library/string-operators.md#op_lt_lt)|Fonction de modèle qui insère une chaîne dans le flux de sortie.|
-|[>d’opérateur](../standard-library/string-operators.md#op_gt)|Teste si l'objet string situé à gauche de l'opérateur est supérieur à l'objet string situé à droite.|
+|[<d’opérateur \<](../standard-library/string-operators.md#op_lt_lt)|Fonction de modèle qui insère une chaîne dans le flux de sortie.|
+|[>d’opérateur ](../standard-library/string-operators.md#op_gt)|Teste si l'objet string situé à gauche de l'opérateur est supérieur à l'objet string situé à droite.|
 |[>opérateur =](../standard-library/string-operators.md#op_gt_eq)|Teste si l'objet string situé à gauche de l'opérateur est supérieur ou égal à l'objet string situé à droite.|
-|[>>d’opérateur](../standard-library/string-operators.md#op_gt_gt)|Fonction de modèle qui extrait une chaîne du flux d'entrée.|
+|[>>d’opérateur ](../standard-library/string-operators.md#op_gt_gt)|Fonction de modèle qui extrait une chaîne du flux d'entrée.|
 
 ### <a name="specialized-template-functions"></a>Fonctions avec modèle spécialisé
 
-|||
+|Nom|Description|
 |-|-|
-|Hachage|Produit un hachage d’une chaîne.|
+|`hash`|Produit un hachage d’une chaîne.|
 |[swap](../standard-library/string-functions.md#swap)|Échange les tableaux de caractères de deux chaînes.|
 |[stod](../standard-library/string-functions.md#stod)|Convertit une séquence de caractères en **`double`** .|
 |[stof](../standard-library/string-functions.md#stof)|Convertit une séquence de caractères en **`float`** .|
@@ -88,14 +88,14 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 
 ### <a name="specializations"></a>Spécialisations
 
-|||
+|Nom|Description|
 |-|-|
 |[\<char>Struct char_traits](../standard-library/char-traits-char-struct.md)|Struct qui est une spécialisation de la structure de modèle `char_traits` \<CharType> en un élément de type **`char`** .|
 |[char_traits<wchar_t struct>](../standard-library/char-traits-wchar-t-struct.md)|Struct qui est une spécialisation de la structure de modèle `char_traits` \<CharType> en un élément de type **`wchar_t`** .|
 |[char_traits<char16_t struct>](../standard-library/char-traits-char16-t-struct.md)|Struct qui est une spécialisation de la structure de modèle `char_traits` \<CharType> en un élément de type **`char16_t`** .|
 |[char_traits<char32_t struct>](../standard-library/char-traits-char32-t-struct.md)|Struct qui est une spécialisation de la structure de modèle `char_traits` \<CharType> en un élément de type **`char32_t`** .|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 - **En-tête :**\<string>
 

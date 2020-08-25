@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: d328cd7bcfed257b423a440041b6806149736ed0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f17a4ea183a24f7bf4e88137f4536ca082efdf85
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215294"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831383"
 ---
 # <a name="db_source"></a>db_source
 
@@ -50,7 +50,7 @@ Pour obtenir un exemple de cet attribut utilisé dans une application, consultez
 
 ## <a name="example"></a>Exemple
 
-Cet exemple appelle **db_source** sur une classe pour créer une connexion à la source de données à l' `ds` aide de la base de données Northwind. `ds`est un handle pour la source de données, qui peut être utilisé en interne avec la `CMyCommand` classe.
+Cet exemple appelle **db_source** sur une classe pour créer une connexion à la source de données à l' `ds` aide de la base de données Northwind. `ds` est un handle pour la source de données, qui peut être utilisé en interne avec la `CMyCommand` classe.
 
 ```cpp
 // db_source_1.cpp
@@ -66,16 +66,14 @@ Cet exemple appelle **db_source** sur une classe pour créer une connexion à la
 class CMyCommand {};
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`** , membre, méthode, local|
 |**Repeatable Read**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

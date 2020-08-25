@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: eaf070d5a98a05dbe3102afac8317ffd59298ad2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c743b91e40c05a35bd5c4d3c0d2e70ecc645714
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321679"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833931"
 ---
 # <a name="atl-property-page-wizard"></a>Assistant Page de propriétés ATL
 
@@ -30,7 +30,7 @@ Cet Assistant [ajoute une page de propriétés dans un projet ATL](../../atl/ref
 
 À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
 
-## <a name="names"></a>noms
+## <a name="names"></a>Noms
 
 Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à votre projet. À l’exception du champ **Nom court**, tous les autres peuvent être modifiés de manière indépendante. Si vous modifiez le contenu du champ **Nom court**, la modification se reflète dans les noms de tous les autres champs de cette page. Si vous modifiez le nom **Coclasse** dans la section COM, la modification se reflète dans les champs **Type** et **ProgID**. Ce comportement de nommage est conçu pour rendre tous les noms faciles à identifier lors du développement de votre page de propriétés.
 
@@ -41,9 +41,8 @@ Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à 
 
 Fournit des informations pour la classe C++ créée pour implémenter l’objet.
 
-|||
-|-|-|
 |Terme|Définition|
+|-|-|
 |**Nom court**|Définit le nom abrégé de l’objet. Le nom que vous renseignez détermine les noms de la classe et de la **Coclasse**, les noms de fichier (**.cpp** and **.h**), le nom du **Type** et le **ProgID**, sauf si vous modifiez ces champs individuellement.|
 |**Fichier .h**|Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur celui que vous fournissez dans **Nom court**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous sélectionnez un fichier existant, l’Assistant attend que vous cliquiez sur **Terminer** pour l’enregistrer à l’emplacement sélectionné.<br /><br /> L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.|
 |**Classe**|Définit le nom de la classe qui implémente l’objet. Ce nom est basé sur le nom que vous renseignez dans **Nom court**, précédé de « C », préfixe typique d’un nom de classe.|
@@ -54,7 +53,7 @@ Fournit des informations pour la classe C++ créée pour implémenter l’objet.
 
 Fournit des informations sur la fonctionnalité COM de l’objet.
 
-- **CoClasse**
+- **Coclasse**
 
    Définit le nom de la classe du composant qui contient une liste d’interfaces prises en charge par l’objet.
 
@@ -65,7 +64,7 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
 
    Définit la description de l’objet qui s’affiche dans le registre
 
-- **Progid**
+- **ProgID**
 
    Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
 

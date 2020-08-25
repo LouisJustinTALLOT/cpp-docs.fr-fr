@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: f18614f7b156a1757df9dfaac9e4a0ad4f8209eb
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: baa2bca8b2e06fd55591c3a4fa2a9752abbb5355
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404292"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830785"
 ---
 # <a name="ole-background"></a>Arrière-plan OLE
 
@@ -62,11 +62,11 @@ Certaines des rubriques OLE les plus importantes sont traitées dans les article
 
 - [Arrière-plan OLE : conteneurs et serveurs](ole-background-containers-and-servers.md)
 
-- [Arrière-plan OLE : stratégies d'implémentation](ole-background-implementation-strategies.md)
+- [Arrière-plan OLE : stratégies d’implémentation](ole-background-implementation-strategies.md)
 
 - [Arrière-plan OLE : implémentation MFC](ole-background-mfc-implementation.md)
 
-Pour obtenir des informations générales sur OLE introuvables dans les articles ci-dessus, [recherchez OLE](https://docs.microsoft.com/search/?terms=ole) dans Microsoft docs.
+Pour obtenir des informations générales sur OLE introuvables dans les articles ci-dessus, [recherchez OLE](/search/?terms=ole) dans Microsoft docs.
 
 ## <a name="see-also"></a>Voir aussi
 

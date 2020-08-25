@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224043"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835049"
 ---
 # <a name="x64-exception-handling"></a>Gestion d’exceptions x64
 
@@ -24,7 +24,7 @@ Plusieurs structures de données sont requises pour la gestion des exceptions et
 
 La gestion des exceptions basée sur les tables requiert une entrée de table pour toutes les fonctions qui allouent de l’espace de pile ou appellent une autre fonction (par exemple, les fonctions non-feuille). Le format des entrées de la table de fonctions est le suivant :
 
-|||
+|Taille|Valeur|
 |-|-|
 |ULONG|Adresse de début de la fonction|
 |ULONG|Adresse de fin de la fonction|
@@ -36,7 +36,7 @@ La structure de RUNTIME_FUNCTION doit être alignée sur DWORD en mémoire. Tout
 
 La structure d’informations sur les données de déroulement est utilisée pour enregistrer les effets d’une fonction sur le pointeur de pile, et où les registres non volatils sont enregistrés sur la pile :
 
-|||
+|Taille|Valeur|
 |-|-|
 |UBYTE : 3|Version|
 |UBYTE : 5|Indicateurs|
@@ -49,14 +49,14 @@ La structure d’informations sur les données de déroulement est utilisée pou
 
 (1) gestionnaire d’exceptions
 
-|||
+|Taille|Valeur|
 |-|-|
 |ULONG|Adresse du gestionnaire d’exceptions|
 |variable|Données du gestionnaire spécifique à une langue (facultatif)|
 
 (2) informations de déroulement chaînées
 
-|||
+|Taille|Valeur|
 |-|-|
 |ULONG|Adresse de début de la fonction|
 |ULONG|Adresse de fin de la fonction|
@@ -114,7 +114,7 @@ La structure de UNWIND_INFO doit être alignée sur DWORD en mémoire. Voici ce 
 
 Le tableau de codes de déroulement est utilisé pour enregistrer la séquence d’opérations dans le prologue qui affectent les registres non volatils et RSP. Chaque élément de code a le format suivant :
 
-|||
+|Taille|Valeur|
 |-|-|
 |UBYTE|Décalage dans le prologue|
 |UBYTE : 4|Code d’opération de déroulement|
@@ -136,15 +136,15 @@ Pour les OpCodes `UWOP_SAVE_XMM128` et `UWOP_SAVE_XMM128_FAR` , le décalage est
 
 Le code d’opération de déroulement est l’une des valeurs suivantes :
 
-- `UWOP_PUSH_NONVOL`(0) 1 nœud
+- `UWOP_PUSH_NONVOL` (0) 1 nœud
 
   Exécute un push d’un registre entier non volatil, en décrémentant RSP de 8. Les informations sur l’opération sont le numéro du Registre. En raison des contraintes sur les épilogues, `UWOP_PUSH_NONVOL` les codes de déroulement doivent apparaître en premier dans le prologue et en conséquence, en dernier dans le tableau de codes de déroulement. Ce classement relatif s’applique à tous les autres codes de déroulement, à l’exception de `UWOP_PUSH_MACHFRAME` .
 
-- `UWOP_ALLOC_LARGE`(1) 2 ou 3 nœuds
+- `UWOP_ALLOC_LARGE` (1) 2 ou 3 nœuds
 
   Allouez une zone de grande taille sur la pile. Il existe deux formes. Si les informations sur l’opération sont égales à 0, la taille de l’allocation divisée par 8 est enregistrée dans l’emplacement suivant, ce qui permet une allocation allant jusqu’à 512 Ko-8. Si les informations sur l’opération sont égales à 1, la taille non mise à l’échelle de l’allocation est enregistrée dans les deux emplacements suivants au format Little endian, ce qui permet d’allouer jusqu’à 4 Go-8.
 
-- `UWOP_ALLOC_SMALL`(2) 1 nœud
+- `UWOP_ALLOC_SMALL` (2) 1 nœud
 
   Allouez une zone de petite taille sur la pile. La taille de l’allocation est le champ d’informations sur l’opération \* 8 + 8, ce qui permet d’allouer de 8 à 128 octets.
 
@@ -156,31 +156,31 @@ Le code d’opération de déroulement est l’une des valeurs suivantes :
   |136 à 512 Ko-8 octets|`UWOP_ALLOC_LARGE`, informations sur l’opération = 0|
   |512 Ko à 4G-8 octets|`UWOP_ALLOC_LARGE`, informations sur l’opération = 1|
 
-- `UWOP_SET_FPREG`(3) 1 nœud
+- `UWOP_SET_FPREG` (3) 1 nœud
 
   Établissez le Registre du pointeur de frame en affectant au registre un décalage de la RSP actuelle. Le décalage est égal au champ décalage du Registre du frame (mis à l’échelle) dans le UNWIND_INFO \* 16, ce qui permet de décaler de 0 à 240. L’utilisation d’un décalage permet d’établir un pointeur de frame qui pointe vers le milieu de l’allocation de pile fixe, ce qui contribue à la densité de code en permettant à d’autres accès d’utiliser des formes d’instructions courtes. Le champ informations sur l’opération est réservé et ne doit pas être utilisé.
 
-- `UWOP_SAVE_NONVOL`(4) 2 nœuds
+- `UWOP_SAVE_NONVOL` (4) 2 nœuds
 
   Enregistrez un registre entier non volatile sur la pile à l’aide d’un MOV au lieu d’un PUSH. Ce code est principalement utilisé pour l' *encapsulage*, où un registre non volatil est enregistré dans la pile à une position précédemment allouée. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile mis à l’échelle par 8 est enregistré dans l’emplacement du code de l’opération de déroulement suivant, comme décrit dans la remarque ci-dessus.
 
-- `UWOP_SAVE_NONVOL_FAR`(5) 3 nœuds
+- `UWOP_SAVE_NONVOL_FAR` (5) 3 nœuds
 
   Enregistrez un registre entier non volatile sur la pile avec un décalage long, à l’aide d’un MOV au lieu d’un PUSH. Ce code est principalement utilisé pour l' *encapsulage*, où un registre non volatil est enregistré dans la pile à une position précédemment allouée. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile non mis à l’échelle est enregistré dans les deux emplacements de code d’opération de déroulement suivants, comme décrit dans la remarque ci-dessus.
 
-- `UWOP_SAVE_XMM128`(8) 2 nœuds
+- `UWOP_SAVE_XMM128` (8) 2 nœuds
 
   Enregistrez tous les 128 bits d’un registre XMM non volatil sur la pile. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile mis à l’échelle par 16 est enregistré dans l’emplacement suivant.
 
-- `UWOP_SAVE_XMM128_FAR`(9) 3 nœuds
+- `UWOP_SAVE_XMM128_FAR` (9) 3 nœuds
 
   Enregistrez tous les 128 bits d’un registre XMM non volatil sur la pile avec un décalage long. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile non mis à l’échelle est enregistré dans les deux emplacements suivants.
 
-- `UWOP_PUSH_MACHFRAME`(10) 1 nœud
+- `UWOP_PUSH_MACHFRAME` (10) 1 nœud
 
   Exécute un push d’un frame de machine.  Ce code de déroulement est utilisé pour enregistrer l’effet d’une interruption ou d’une exception matérielle. Il existe deux formes. Si les informations sur l’opération sont égales à 0, l’un de ces frames a fait l’objet d’un push sur la pile :
 
-  |||
+  |Emplacement|Valeur|
   |-|-|
   |RSP + 32|SS|
   |RSP + 24|Ancien RSP|
@@ -190,7 +190,7 @@ Le code d’opération de déroulement est l’une des valeurs suivantes :
 
   Si les informations sur l’opération sont égales à 1, cela signifie que l’un de ces frames a fait l’objet d’un push :
 
-  |||
+  |Emplacement|Valeur|
   |-|-|
   |RSP + 40|SS|
   |RSP + 32|Ancien RSP|
@@ -199,7 +199,7 @@ Le code d’opération de déroulement est l’une des valeurs suivantes :
   |RSP + 8|PROTOCOLES|
   |RSP|Code d'erreur|
 
-  Ce code de déroulement apparaît toujours dans un prologue factice, qui n’est jamais réellement exécuté, mais il apparaît à la place avant le point d’entrée réel d’une routine d’interruption, et existe uniquement pour fournir un emplacement pour simuler la transmission de type push d’un frame de machine. `UWOP_PUSH_MACHFRAME`enregistre cette simulation, qui indique que l’ordinateur a effectué cette opération de manière conceptuelle :
+  Ce code de déroulement apparaît toujours dans un prologue factice, qui n’est jamais réellement exécuté, mais il apparaît à la place avant le point d’entrée réel d’une routine d’interruption, et existe uniquement pour fournir un emplacement pour simuler la transmission de type push d’un frame de machine. `UWOP_PUSH_MACHFRAME` enregistre cette simulation, qui indique que l’ordinateur a effectué cette opération de manière conceptuelle :
 
   1. Adresse de retour RIP du haut de la pile dans *temp*
   
@@ -221,7 +221,7 @@ Le code d’opération de déroulement est l’une des valeurs suivantes :
 
 La signification des bits d’informations sur l’opération dépend du code d’opération. Pour encoder un registre à usage général (entier), ce mappage est utilisé :
 
-|||
+|bit|S’inscrire|
 |-|-|
 |0|RAX|
 |1|RCX|

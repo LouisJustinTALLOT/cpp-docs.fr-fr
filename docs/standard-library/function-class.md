@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182497"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831461"
 ---
 # <a name="function-class"></a>function, classe
 
@@ -107,19 +107,19 @@ Un objet `function` vide ne contient pas d’objet pouvant être appelé ou de r
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[function](#function)|Construit un wrapper qui est vide ou stocke un objet pouvant être appelé de type arbitraire avec une signature fixe.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[result_type](#result_type)|Type de retour de l’objet pouvant être appelé stocké.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[assign](#assign)|Assigne un objet pouvant être appelé à cet objet de fonction.|
 |[swap](#swap)|Échange deux objets pouvant être appelés.|
@@ -128,13 +128,13 @@ Un objet `function` vide ne contient pas d’objet pouvant être appelé ou de r
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur non spécifié](#op_unspecified)|Vérifie si l’objet pouvant être appelé stocké existe.|
 |[, opérateur ()](#op_call)|Appelle un objet pouvant être appelé.|
 |[opérateur =](#op_eq)|Remplace l’objet pouvant être appelé stocké.|
 
-## <a name="assign"></a><a name="assign"></a>assignés
+## <a name="assign"></a><a name="assign"></a> assignés
 
 Assigne un objet pouvant être appelé à cet objet de fonction.
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="operator-unspecified"></a><a name="op_unspecified"></a>opérateur non spécifié
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a> opérateur non spécifié
 
 Vérifie si l’objet pouvant être appelé stocké existe.
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="operator"></a><a name="op_call"></a>, opérateur ()
+## <a name="operator"></a><a name="op_call"></a> , opérateur ()
 
 Appelle un objet pouvant être appelé.
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Remplace l’objet pouvant être appelé stocké.
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a><a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 Type de retour de l’objet pouvant être appelé stocké.
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a><a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 Échange deux objets pouvant être appelés.
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a><a name="target"></a>Indicatif
+## <a name="target"></a><a name="target"></a> Indicatif
 
 Vérifie si l’objet pouvant être appelé stocké peut être appelé comme spécifié.
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a><a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a> target_type
 
 Obtient les informations de type sur l'objet pouvant être appelé.
 

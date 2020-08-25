@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2168a1bef5b8eb20a1f59460146559f4fa9f2645
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917484"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831578"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -76,21 +76,20 @@ Pointeur destiné à contenir le nom généré.
 *sizeInChars*<br/>
 Taille de la mémoire tampon en caractères.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Ces deux fonctions retournent 0 en cas de réussite ou un numéro d’erreur en cas d’échec.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|||||
-|-|-|-|-|
-|*Str*|*sizeInChars*|**Valeur de retour**|**Contenu de**  *Str*|
-|**NUL**|n'importe laquelle|**EINVAL**|non modifié|
-|not **null** (pointe vers une mémoire valide)|trop court|**ERANGE**|non modifié|
+| *Str* | *sizeInChars* | **Valeur renvoyée** | **Contenu de** *Str* |
+|--|--|--|--|
+| **NULL** | n'importe laquelle | **EINVAL** | non modifié |
+| not **null** (pointe vers une mémoire valide) | trop court | **ERANGE** | non modifié |
 
 Si *Str* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actuellement. **tmpnam_s** retourne un nom unique dans le répertoire temporaire Windows désigné renvoyé par [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Notez que lorsqu’un nom de fichier est précédé d’une barre oblique inverse et d’aucune information de chemin, comme \fname21, cela indique que le nom est valide pour le répertoire de travail actif.
 
@@ -108,7 +107,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttmpnam_s**|**tmpnam_s**|**tmpnam_s**|**_wtmpnam_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

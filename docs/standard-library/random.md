@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: e52033c68bc5bee21abed0af0e86cbb76000435d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e66ffbfba7a7cc4a7dfebbc2dcc074842de3c1ac
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217647"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831436"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 Définit des fonctions pour la génération de nombres aléatoires, ce qui permet la création de nombres aléatoires distribués de manière uniforme.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête**:\<random>
+**En-tête**: \<random>
 
 **Espace de noms :** std
 
@@ -225,9 +225,8 @@ Les sections suivantes répertorient les générateurs URNG fournis dans l'en-t�
 
 #### <a name="non-deterministic-generator"></a><a name="rd"></a> Générateur non déterministe
 
-|||
-|-|-|
-|[Classe random_device](../standard-library/random-device-class.md)|Génère une séquence aléatoire non déterministe, sécurisée par chiffrement à l'aide d'un appareil externe. Généralement utilisé pour amorcer un moteur. Performances faibles, très haute qualité. Pour plus d’informations, consultez la [section Notes](#comments).|
+[Classe random_device](../standard-library/random-device-class.md)\
+Génère une séquence aléatoire non déterministe, sécurisée par chiffrement à l'aide d'un appareil externe. Généralement utilisé pour amorcer un moteur. Performances faibles, très haute qualité. Pour plus d’informations, consultez la [section Notes](#comments).
 
 #### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> Typedefs de moteur avec paramètres prédéfinis
 
@@ -281,7 +280,7 @@ Pour l'instanciation des moteurs et adaptateurs de moteurs. Pour plus d’inform
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24`moteur RANLUX 24 bits (Martin Lüscher et Fred James, 1994).
+- `ranlux24` moteur RANLUX 24 bits (Martin Lüscher et Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
@@ -293,7 +292,7 @@ Pour l'instanciation des moteurs et adaptateurs de moteurs. Pour plus d’inform
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48`moteur RANLUX de 48 bits (Martin Lüscher et Fred James, 1994).
+- `ranlux48` moteur RANLUX de 48 bits (Martin Lüscher et Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
@@ -309,7 +308,7 @@ Pour l'instanciation des moteurs et adaptateurs de moteurs. Pour plus d’inform
 
 Les modèles de moteurs sont utilisés comme générateurs URNG autonomes ou comme moteurs de base passés aux [adaptateurs de moteurs](#engadapt). En général, ils sont instanciés avec un [typedef de moteur prédéfini](#typedefs) et passés à une [distribution](#distributions). Pour plus d’informations, consultez la section [Moteurs et distributions](#engdist).
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)|Génère une séquence aléatoire en utilisant l'algorithme congruentiel linéaire. Moteur le plus simple avec la qualité la plus basse.|
 |[Classe mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)|Génère une séquence aléatoire en utilisant l'algorithme twister de Mersenne. Moteur le plus complexe avec la qualité la plus élevée, à l'exception de la classe random_device. Performances très élevées.|
@@ -319,7 +318,7 @@ Les modèles de moteurs sont utilisés comme générateurs URNG autonomes ou com
 
 Les adaptateurs de moteurs sont des modèles qui adaptent d'autres moteurs (de base). En général, ils sont instanciés avec un [typedef de moteur prédéfini](#typedefs) et passés à une [distribution](#distributions). Pour plus d’informations, consultez la section [Moteurs et distributions](#engdist).
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe discard_block_engine](../standard-library/discard-block-engine-class.md)|Génère une séquence aléatoire en ignorant les valeurs retournées par son moteur de base.|
 |[Classe independent_bits_engine](../standard-library/independent-bits-engine-class.md)|Génère une séquence aléatoire avec un nombre spécifié de bits en recompressant les bits des valeurs retournées par son moteur de base.|
@@ -333,7 +332,7 @@ Les sections suivantes répertorient les distributions fournies dans l'en-tête 
 
 #### <a name="uniform-distributions"></a>Distributions uniformes
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe uniform_int_distribution](../standard-library/uniform-int-distribution-class.md)|Produit une distribution de valeurs entières uniforme dans une plage de l’intervalle fermé \[[a, b] (inclusive-inclusive).|
 |[Classe uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)|Produit une distribution de valeurs (à virgule flottante) réelles uniforme dans une plage de l’intervalle demi-ouvert [a, b) (inclusive-exclusive).|
@@ -343,7 +342,7 @@ Les sections suivantes répertorient les distributions fournies dans l'en-tête 
 
 #### <a name="bernoulli-distributions"></a>Distributions de Bernoulli
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produit une distribution de Bernoulli de **`bool`** valeurs.|
 |[Classe binomial_distribution](../standard-library/binomial-distribution-class.md)|Produit une distribution binomiale de valeurs entières.|
@@ -354,7 +353,7 @@ Les sections suivantes répertorient les distributions fournies dans l'en-tête 
 
 #### <a name="normal-distributions"></a>Distributions normales
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe cauchy_distribution](../standard-library/cauchy-distribution-class.md)|Produit une distribution suivant une loi de Cauchy de valeurs (à virgule flottante) réelles.|
 |[Classe chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Produit une distribution suivant la loi unilatérale du Khi-deux de valeurs (à virgule flottante) réelles.|
@@ -367,7 +366,7 @@ Les sections suivantes répertorient les distributions fournies dans l'en-tête 
 
 #### <a name="poisson-distributions"></a>Probabilités de variables aléatoires suivant une loi de Poisson
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe exponential_distribution](../standard-library/exponential-distribution-class.md)|Produit une distribution exponentielle de valeurs (à virgule flottante) réelles.|
 |[Classe extreme_value_distribution](../standard-library/extreme-value-distribution-class.md)|Produit une distribution suivant la loi d'extremum de valeurs (à virgule flottante) réelles.|
@@ -379,7 +378,7 @@ Les sections suivantes répertorient les distributions fournies dans l'en-tête 
 
 #### <a name="sampling-distributions"></a>Distributions d'échantillonnages
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe discrete_distribution](../standard-library/discrete-distribution-class.md)|Produit une distribution d'entiers discrète.|
 |[Classe piecewise_constant_distribution](../standard-library/piecewise-constant-distribution-class.md)|Produit une distribution constante par morceaux de valeurs (à virgule flottante) réelles.|
@@ -391,7 +390,7 @@ Les sections suivantes répertorient les distributions fournies dans l'en-tête 
 
 Cette section répertorie les fonctions utilitaires générales fournies dans l'en-tête \<random>.
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe seed_seq](../standard-library/seed-seq-class.md)|Génère une séquence de valeurs initiales brouillée non tronquée. Utilisée pour éviter la réplication de flux de variantes aléatoires. Utile quand de nombreux générateurs URNG sont instanciés à partir de moteurs.|
 
@@ -399,22 +398,22 @@ Cette section répertorie les fonctions utilitaires générales fournies dans l'
 
 Cette section répertorie les opérateurs fournis dans l'en-tête \<random>.
 
-|||
+|Nom|Description|
 |-|-|
 |`operator==`|Teste si le générateur URNG situé à gauche de l'opérateur est égal au moteur situé à droite.|
 |`operator!=`|Teste si le générateur URNG situé à gauche de l'opérateur n'est pas égal au moteur situé à droite.|
 |`operator<<`|Écrit des informations d'état dans un flux.|
 |`operator>>`|Extrait des informations d'état d'un flux.|
 
-## <a name="engines-and-distributions"></a><a name="engdist"></a>Moteurs et distributions
+## <a name="engines-and-distributions"></a><a name="engdist"></a> Moteurs et distributions
 
 Reportez-vous aux sections suivantes pour plus d’informations sur chacune de ces catégories de modèle de classe définies dans \<random> . Ces deux catégories de modèle de classe acceptent un type comme argument et utilisent des noms de paramètres de modèle partagés pour décrire les propriétés du type qui sont autorisées en tant que type d’argument réel, comme suit :
 
-- `IntType`indique un,,,,,, **`short`** **`int`** **`long`** **`long long`** **`unsigned short`** **`unsigned int`** **`unsigned long`** ou **`unsigned long long`** .
+- `IntType` indique un,,,,,, **`short`** **`int`** **`long`** **`long long`** **`unsigned short`** **`unsigned int`** **`unsigned long`** ou **`unsigned long long`** .
 
-- `UIntType`indique **`unsigned short`** , **`unsigned int`** , **`unsigned long`** ou **`unsigned long long`** .
+- `UIntType` indique **`unsigned short`** , **`unsigned int`** , **`unsigned long`** ou **`unsigned long long`** .
 
-- `RealType`indique un **`float`** , **`double`** ou **`long double`** .
+- `RealType` indique un **`float`** , **`double`** ou **`long double`** .
 
 ### <a name="engines"></a>Moteurs
 
@@ -440,7 +439,7 @@ Chaque moteur et chaque adaptateur de moteur possèdent les membres suivants :
 
 - Constructeur explicite avec argument `seed_seq& seq` qui crée un générateur amorcé comme par un appel à `seed(seq)`.
 
-- `void discard(unsigned long long count)`appelle efficacement `operator()` `count` des heures et ignore chaque valeur.
+- `void discard(unsigned long long count)` appelle efficacement `operator()` `count` des heures et ignore chaque valeur.
 
 En outre, les **adaptateurs de moteurs** prennent en charge ces membres (`Engine` est le premier paramètre de modèle d’un adaptateur de moteur, désignant le type de moteur de base) :
 

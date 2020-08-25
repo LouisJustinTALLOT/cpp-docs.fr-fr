@@ -70,12 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: f0b33404f16df59e2cb73023f3539e87080734a1
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: eb2ee9bc6bc887ff6739c3da1bf2566dbdcbc016
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520601"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830681"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits (classe)
 
@@ -101,7 +101,7 @@ Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. U
 
 ## <a name="static-functions-and-constants"></a>Fonctions statiques et constantes
 
-|||
+|Nom|Description|
 |-|-|
 |[denorm_min](#denorm_min)|Retourne la plus petite valeur dénormalisée différente de zéro.|
 |[chiffres](#digits)|Retourne le nombre de chiffres de base que le type peut représenter sans perte de précision.|
@@ -120,7 +120,7 @@ Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. U
 |[is_modulo](#is_modulo)|Teste si un type a une représentation du modulo.|
 |[is_signed](#is_signed)|Teste si un type a une représentation signée.|
 |[is_specialized](#is_specialized)|Teste si un type a une spécialisation explicite définie dans le modèle de classe `numeric_limits` .|
-|[lowest](#lowest)|Retourne la plus grande valeur finie négative.|
+|[dernier](#lowest)|Retourne la plus grande valeur finie négative.|
 |[max](#max)|Retourne la valeur finie maximale pour un type.|
 |[max_digits10](#max_digits10)|Retourne le nombre de chiffres décimaux requis pour garantir que deux valeurs distinctes du type ont des représentations décimales distinctes.|
 |[max_exponent](#max_exponent)|Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.|
@@ -136,7 +136,7 @@ Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. U
 |[tinyness_before](#tinyness_before)|Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.|
 |[traps](#traps)|Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.|
 
-### <a name="denorm_min"></a><a name="denorm_min"></a>denorm_min
+### <a name="denorm_min"></a><a name="denorm_min"></a> denorm_min
 
 Retourne la plus petite valeur dénormalisée différente de zéro.
 
@@ -144,7 +144,7 @@ Retourne la plus petite valeur dénormalisée différente de zéro.
 static constexpr Type denorm_min() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Plus petite valeur dénormalisée différente de zéro.
 
@@ -195,7 +195,7 @@ for long double objects is: 4.94066e-324
 0
 ```
 
-### <a name="digits"></a><a name="digits"></a>chiffres
+### <a name="digits"></a><a name="digits"></a> chiffres
 
 Retourne le nombre de chiffres de base que le type peut représenter sans perte de précision.
 
@@ -203,7 +203,7 @@ Retourne le nombre de chiffres de base que le type peut représenter sans perte 
 static constexpr int digits = 0;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de chiffres de base que le type peut représenter sans perte de précision.
 
@@ -239,7 +239,7 @@ int main( )
 63
 ```
 
-### <a name="digits10"></a><a name="digits10"></a>digits10
+### <a name="digits10"></a><a name="digits10"></a> digits10
 
 Retourne le nombre de chiffres décimaux que le type peut représenter sans perte de précision.
 
@@ -247,7 +247,7 @@ Retourne le nombre de chiffres décimaux que le type peut représenter sans pert
 static constexpr int digits10 = 0;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de chiffres décimaux que le type peut représenter sans perte de précision.
 
@@ -283,7 +283,7 @@ int main( )
 The float is; 100000000
 ```
 
-### <a name="epsilon"></a><a name="epsilon"></a>Epsilon
+### <a name="epsilon"></a><a name="epsilon"></a> Epsilon
 
 La fonction retourne la différence entre 1 et la plus petite valeur supérieure à 1 qui peut être représentée pour le type de données.
 
@@ -291,7 +291,7 @@ La fonction retourne la différence entre 1 et la plus petite valeur supérieur
 static constexpr Type epsilon() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Différence entre 1 et la plus petite valeur supérieure à 1 pouvant être représentée pour le type de données.
 
@@ -335,7 +335,7 @@ The difference between 1 and the smallest value greater than 1
 for long double objects is: 2.22045e-016
 ```
 
-### <a name="has_denorm"></a><a name="has_denorm"></a>has_denorm
+### <a name="has_denorm"></a><a name="has_denorm"></a> has_denorm
 
 Teste si un type autorise les valeurs dénormalisées.
 
@@ -343,7 +343,7 @@ Teste si un type autorise les valeurs dénormalisées.
 static constexpr float_denorm_style has_denorm = denorm_absent;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Valeur d’énumération de type `const float_denorm_style` , indiquant si le type autorise les valeurs dénormalisées.
 
@@ -381,7 +381,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0
 ```
 
-### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a>has_denorm_loss
+### <a name="has_denorm_loss"></a><a name="has_denorm_loss"></a> has_denorm_loss
 
 Teste si une perte de précision est détectée comme une perte de dénormalisation et non pas comme un résultat inexact.
 
@@ -389,7 +389,7 @@ Teste si une perte de précision est détectée comme une perte de dénormalisat
 static constexpr bool has_denorm_loss = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la perte de précision est détectée comme une perte de dénormalisation ; dans le **`false`** cas contraire.
 
@@ -427,7 +427,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0
 ```
 
-### <a name="has_infinity"></a><a name="has_infinity"></a>has_infinity
+### <a name="has_infinity"></a><a name="has_infinity"></a> has_infinity
 
 Teste si un type a une représentation pour l'infini positif.
 
@@ -435,7 +435,7 @@ Teste si un type a une représentation pour l'infini positif.
 static constexpr bool has_infinity = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le type a une représentation pour l’infini positif ; dans le **`false`** cas contraire.
 
@@ -473,7 +473,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0
 ```
 
-### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a>has_quiet_NaN
+### <a name="has_quiet_nan"></a><a name="has_quiet_nan"></a> has_quiet_NaN
 
 Teste si un type a une représentation pour un NaN (n'est pas un nombre) silencieux, qui ne fait pas de signalement.
 
@@ -481,7 +481,7 @@ Teste si un type a une représentation pour un NaN (n'est pas un nombre) silenci
 static constexpr bool has_quiet_NaN = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le **type** a une représentation pour une Nan calme ; dans le **`false`** cas contraire.
 
@@ -519,7 +519,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0
 ```
 
-### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a>has_signaling_NaN
+### <a name="has_signaling_nan"></a><a name="has_signaling_nan"></a> has_signaling_NaN
 
 Teste si un type a une représentation pour signaler un NaN (n'est pas un nombre).
 
@@ -527,7 +527,7 @@ Teste si un type a une représentation pour signaler un NaN (n'est pas un nombre
 static constexpr bool has_signaling_NaN = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le type a une représentation pour un NAN de signalisation ; dans le **`false`** cas contraire.
 
@@ -565,7 +565,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0
 ```
 
-### <a name="infinity"></a><a name="infinity"></a>l’infini
+### <a name="infinity"></a><a name="infinity"></a> l’infini
 
 Représentation de l’infini positif pour un type, si elle est disponible.
 
@@ -573,7 +573,7 @@ Représentation de l’infini positif pour un type, si elle est disponible.
 static constexpr Type infinity() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Représentation de l’infini positif pour un type, si elle est disponible.
 
@@ -619,7 +619,7 @@ The representation of infinity for type double is: inf
 The representation of infinity for type long double is: inf
 ```
 
-### <a name="is_bounded"></a><a name="is_bounded"></a>is_bounded
+### <a name="is_bounded"></a><a name="is_bounded"></a> is_bounded
 
 Teste si l'ensemble des valeurs qu'un type peut représenter est fini.
 
@@ -627,7 +627,7 @@ Teste si l'ensemble des valeurs qu'un type peut représenter est fini.
 static constexpr bool is_bounded = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le type a un ensemble délimité de valeurs pouvant être représentées ; dans le **`false`** cas contraire.
 
@@ -673,7 +673,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1
 ```
 
-### <a name="is_exact"></a><a name="is_exact"></a>is_exact
+### <a name="is_exact"></a><a name="is_exact"></a> is_exact
 
 Teste si les calculs effectués sur un type ne comportent pas d'erreurs d'arrondi.
 
@@ -681,7 +681,7 @@ Teste si les calculs effectués sur un type ne comportent pas d'erreurs d'arrond
 static constexpr bool is_exact = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les calculs ne sont pas exempts d’erreurs d’arrondi ; dans le **`false`** cas contraire.
 
@@ -727,7 +727,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1
 ```
 
-### <a name="is_iec559"></a><a name="is_iec559"></a>is_iec559
+### <a name="is_iec559"></a><a name="is_iec559"></a> is_iec559
 
 Teste si un type est conforme aux normes IEC 559.
 
@@ -735,7 +735,7 @@ Teste si un type est conforme aux normes IEC 559.
 static constexpr bool is_iec559 = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le type est conforme aux normes IEC 559 ; dans le **`false`** cas contraire.
 
@@ -777,7 +777,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0
 ```
 
-### <a name="is_integer"></a><a name="is_integer"></a>is_integer
+### <a name="is_integer"></a><a name="is_integer"></a> is_integer
 
 Teste si un type a une représentation des entiers.
 
@@ -785,7 +785,7 @@ Teste si un type a une représentation des entiers.
 static constexpr bool is_integer = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le type a une représentation entière ; dans le **`false`** cas contraire.
 
@@ -827,7 +827,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1
 ```
 
-### <a name="is_modulo"></a><a name="is_modulo"></a>is_modulo
+### <a name="is_modulo"></a><a name="is_modulo"></a> is_modulo
 
 Teste si un **type** a une représentation modulo.
 
@@ -835,7 +835,7 @@ Teste si un **type** a une représentation modulo.
 static constexpr bool is_modulo = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le type a une représentation modulo ; dans le **`false`** cas contraire.
 
@@ -877,7 +877,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1
 ```
 
-### <a name="is_signed"></a><a name="is_signed"></a>is_signed
+### <a name="is_signed"></a><a name="is_signed"></a> is_signed
 
 Teste si un type a une représentation signée.
 
@@ -885,7 +885,7 @@ Teste si un type a une représentation signée.
 static constexpr bool is_signed = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le type a une représentation signée ; dans le **`false`** cas contraire.
 
@@ -927,7 +927,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0
 ```
 
-### <a name="is_specialized"></a><a name="is_specialized"></a>is_specialized
+### <a name="is_specialized"></a><a name="is_specialized"></a> is_specialized
 
 Teste si un type a une spécialisation explicite définie dans le modèle de classe `numeric_limits` .
 
@@ -935,7 +935,7 @@ Teste si un type a une spécialisation explicite définie dans le modèle de cla
 static constexpr bool is_specialized = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le type a une spécialisation explicite définie dans le modèle de classe ; dans le **`false`** cas contraire.
 
@@ -981,7 +981,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0
 ```
 
-### <a name="lowest"></a><a name="lowest"></a>dernier
+### <a name="lowest"></a><a name="lowest"></a> dernier
 
 Retourne la plus grande valeur finie négative.
 
@@ -989,7 +989,7 @@ Retourne la plus grande valeur finie négative.
 static constexpr Type lowest() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la plus grande valeur finie négative.
 
@@ -997,7 +997,7 @@ Retourne la plus grande valeur finie négative.
 
 Retourne la plus grande valeur finie négative pour le type (en général, `min()` pour les types entiers et `-max()` pour les types à virgule flottante). La valeur de retour est significative si `is_bounded` est **`true`** .
 
-### <a name="max"></a><a name="max"></a>Max
+### <a name="max"></a><a name="max"></a> Max
 
 Retourne la valeur finie maximale pour un type.
 
@@ -1005,7 +1005,7 @@ Retourne la valeur finie maximale pour un type.
 static constexpr Type max() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Valeur finie maximale pour un type.
 
@@ -1039,7 +1039,7 @@ int main() {
 }
 ```
 
-### <a name="max_digits10"></a><a name="max_digits10"></a>max_digits10
+### <a name="max_digits10"></a><a name="max_digits10"></a> max_digits10
 
 Retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux valeurs distinctes du type ont des représentations décimales distinctes.
 
@@ -1047,7 +1047,7 @@ Retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux va
 static constexpr int max_digits10 = 0;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux valeurs distinctes du type ont des représentations décimales distinctes.
 
@@ -1055,7 +1055,7 @@ Retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux va
 
 Le membre stocke retourne le nombre de chiffres décimaux nécessaires pour s'assurer que deux valeurs distinctes du type ont des représentations décimales distinctes.
 
-### <a name="max_exponent"></a><a name="max_exponent"></a>max_exponent
+### <a name="max_exponent"></a><a name="max_exponent"></a> max_exponent
 
 Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.
 
@@ -1063,7 +1063,7 @@ Retourne l'exposant entier positif maximal que le type à virgule flottante peut
 static constexpr int max_exponent = 0;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Exposant de base entier maximal qui peut être représenté par le type.
 
@@ -1101,7 +1101,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024
 ```
 
-### <a name="max_exponent10"></a><a name="max_exponent10"></a>max_exponent10
+### <a name="max_exponent10"></a><a name="max_exponent10"></a> max_exponent10
 
 Retourne l'exposant entier positif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.
 
@@ -1109,7 +1109,7 @@ Retourne l'exposant entier positif maximal que le type à virgule flottante peut
 static constexpr int max_exponent10 = 0;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Exposant entier maximal de base 10 qui peut être représenté par le type.
 
@@ -1155,7 +1155,7 @@ Retourne la valeur normalisée minimale pour un type.
 static constexpr Type min() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Valeur normalisée minimale pour le type.
 
@@ -1197,7 +1197,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768
 ```
 
-### <a name="min_exponent"></a><a name="min_exponent"></a>min_exponent
+### <a name="min_exponent"></a><a name="min_exponent"></a> min_exponent
 
 Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand un nombre exprimé dans une base de base (radix) est élevé à cette puissance.
 
@@ -1205,7 +1205,7 @@ Retourne l'exposant entier négatif maximal que le type à virgule flottante peu
 static constexpr int min_exponent = 0;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Exposant de base entier minimal qui peut être représenté par le type.
 
@@ -1243,7 +1243,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021
 ```
 
-### <a name="min_exponent10"></a><a name="min_exponent10"></a>min_exponent10
+### <a name="min_exponent10"></a><a name="min_exponent10"></a> min_exponent10
 
 Retourne l'exposant entier négatif maximal que le type à virgule flottante peut représenter sous la forme d'une valeur finie quand une base 10 est élevée à cette puissance.
 
@@ -1251,7 +1251,7 @@ Retourne l'exposant entier négatif maximal que le type à virgule flottante peu
 static constexpr int min_exponent10 = 0;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Exposant entier minimal de base 10 qui peut être représenté par le type.
 
@@ -1289,7 +1289,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307
 ```
 
-### <a name="quiet_nan"></a><a name="quiet_nan"></a>quiet_NaN
+### <a name="quiet_nan"></a><a name="quiet_nan"></a> quiet_NaN
 
 Retourne la représentation d'un NaN (n'est pas un nombre) silencieux pour le type.
 
@@ -1297,7 +1297,7 @@ Retourne la représentation d'un NaN (n'est pas un nombre) silencieux pour le ty
 static constexpr Type quiet_NaN() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Représentation d’un NaN silencieux pour le type.
 
@@ -1335,7 +1335,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN
 ```
 
-### <a name="radix"></a><a name="radix"></a>dicaux
+### <a name="radix"></a><a name="radix"></a> dicaux
 
 Retourne la base entière, appelée base (radix), utilisée pour la représentation d'un type.
 
@@ -1343,7 +1343,7 @@ Retourne la base entière, appelée base (radix), utilisée pour la représentat
 static constexpr int radix = 0;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Base entière utilisée pour la représentation du type.
 
@@ -1381,7 +1381,7 @@ The base for type int is:  2
 The base for type long double is:  2
 ```
 
-### <a name="round_error"></a><a name="round_error"></a>round_error
+### <a name="round_error"></a><a name="round_error"></a> round_error
 
 Retourne l'erreur d'arrondi maximale pour le type.
 
@@ -1389,7 +1389,7 @@ Retourne l'erreur d'arrondi maximale pour le type.
 static constexpr Type round_error() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Erreur d’arrondi maximale pour le type.
 
@@ -1423,7 +1423,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5
 ```
 
-### <a name="round_style"></a><a name="round_style"></a>round_style
+### <a name="round_style"></a><a name="round_style"></a> round_style
 
 Retourne une valeur qui décrit les différentes méthodes qu'une implémentation peut choisir pour arrondir une valeur à virgule flottante en valeur entière.
 
@@ -1431,7 +1431,7 @@ Retourne une valeur qui décrit les différentes méthodes qu'une implémentatio
 static constexpr float_round_style round_style = round_toward_zero;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Valeur retournée par l’énumération `float_round_style` qui décrit le style d’arrondi.
 
@@ -1470,7 +1470,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0
 ```
 
-### <a name="signaling_nan"></a><a name="signaling_nan"></a>signaling_NaN
+### <a name="signaling_nan"></a><a name="signaling_nan"></a> signaling_NaN
 
 Retourne la représentation d'un NaN (n'est pas un nombre) avec signalement pour le type.
 
@@ -1478,7 +1478,7 @@ Retourne la représentation d'un NaN (n'est pas un nombre) avec signalement pour
 static constexpr Type signaling_NaN() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Représentation d’un NaN avec signalement pour le type.
 
@@ -1510,7 +1510,7 @@ int main( )
 }
 ```
 
-### <a name="tinyness_before"></a><a name="tinyness_before"></a>tinyness_before
+### <a name="tinyness_before"></a><a name="tinyness_before"></a> tinyness_before
 
 Teste si un type peut déterminer qu'une valeur est trop petite pour être représentée sous la forme d'une valeur normalisée avant d'être arrondie.
 
@@ -1518,7 +1518,7 @@ Teste si un type peut déterminer qu'une valeur est trop petite pour être repr�
 static constexpr bool tinyness_before = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le type peut détecter des valeurs minuscules avant l’arrondi ; **`false`** si ce n’est pas possible.
 
@@ -1560,7 +1560,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0
 ```
 
-### <a name="traps"></a><a name="traps"></a>interruptions
+### <a name="traps"></a><a name="traps"></a> interruptions
 
 Teste si les interceptions qui signalent des exceptions arithmétiques sont implémentées pour un type.
 
@@ -1568,7 +1568,7 @@ Teste si les interceptions qui signalent des exceptions arithmétiques sont impl
 static constexpr bool traps = false;
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le recouvrement est implémenté pour le type ; **`false`** si ce n’est pas le cas.
 

@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 2c6487370bfa4d3af6c9c7c40b7f83a252c2e01d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222574"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831500"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 Définit le modèle de classe `complex` de conteneur et ses modèles de prise en charge.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête**:\<complex>
+**En-tête**: \<complex>
 
 **Espace de noms :** std
 
@@ -70,9 +70,9 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 
 ## <a name="members"></a>Membres
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[absolue](../standard-library/complex-functions.md#abs)|Calcule le module d'un nombre complexe.|
 |[ACOS](../standard-library/complex-functions.md#acos)||
@@ -98,24 +98,24 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 |[Sinh](../standard-library/complex-functions.md#sinh)|Retourne le sinus hyperbolique d'un nombre complexe.|
 |[racine](../standard-library/complex-functions.md#sqrt)|Retourne la racine carrée d'un nombre complexe.|
 |[Tan](../standard-library/complex-functions.md#tan)|Retourne la tangente d'un nombre complexe.|
-|[Tanh](../standard-library/complex-functions.md#tanh)|Retourne la tangente hyperbolique d'un nombre complexe.|
+|[tanh](../standard-library/complex-functions.md#tanh)|Retourne la tangente hyperbolique d'un nombre complexe.|
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur ! =](../standard-library/complex-operators.md#op_neq)|Vérifie l'inégalité entre deux nombres complexes, l'un d'entre eux ou les deux pouvant appartenir au sous-ensemble du type pour les parties réelles et imaginaires.|
 |[and](../standard-library/complex-operators.md#op_star)|Multiplie deux nombres complexes, l'un d'entre eux ou les deux pouvant appartenir au sous-ensemble du type pour les parties réelles et imaginaires.|
 |[opérateur +](../standard-library/complex-operators.md#op_add)|Additionne deux nombres complexes, l'un d'entre eux ou les deux pouvant appartenir au sous-ensemble du type pour les parties réelles et imaginaires.|
 |[and](../standard-library/complex-operators.md#operator-)|Soustrait deux nombres complexes, l'un d'entre eux ou les deux pouvant appartenir au sous-ensemble du type pour les parties réelles et imaginaires.|
 |[and](../standard-library/complex-operators.md#op_div)|Divise deux nombres complexes, l'un d'entre eux ou les deux pouvant appartenir au sous-ensemble du type pour les parties réelles et imaginaires.|
-|[<d’opérateur\<](../standard-library/complex-operators.md#op_lt_lt)|Fonction de modèle qui insère un nombre complexe dans le flux de sortie.|
+|[<d’opérateur \<](../standard-library/complex-operators.md#op_lt_lt)|Fonction de modèle qui insère un nombre complexe dans le flux de sortie.|
 |[opérateur = =](../standard-library/complex-operators.md#op_eq_eq)|Vérifie l'égalité entre deux nombres complexes, l'un d'entre eux ou les deux pouvant appartenir au sous-ensemble du type pour les parties réelles et imaginaires.|
-|[>>d’opérateur](../standard-library/complex-operators.md#op_gt_gt)|Fonction de modèle qui extrait un nombre complexe du flux d'entrée.|
+|[>>d’opérateur ](../standard-library/complex-operators.md#op_gt_gt)|Fonction de modèle qui extrait un nombre complexe du flux d'entrée.|
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nom|Description|
 |-|-|
 |[complexe\<double>](../standard-library/complex-double.md)|Le modèle de classe explicitement spécialisé décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **`double`** , où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
 |[complexe\<float>](../standard-library/complex-float.md)|Le modèle de classe explicitement spécialisé décrit un objet qui stocke une paire ordonnée d’objets, tous deux de type **`float`** , où le premier représente la partie réelle d’un nombre complexe et le second représente la partie imaginaire.|
@@ -126,7 +126,7 @@ Sauf indication contraire, les fonctions qui peuvent retourner plusieurs valeurs
 
 L' \<complex> en-tête définit les [littéraux définis par l’utilisateur](../cpp/user-defined-literals-cpp.md) suivants qui créent un nombre complexe avec la partie réelle égale à zéro et la partie imaginaire étant la valeur du paramètre d’entrée.
 
-|||
+|Déclaration|Description|
 |-|-|
 |`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|Retourne : `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|Retourne : `complex<double>{0.0, static_cast<double>(d)}`.|

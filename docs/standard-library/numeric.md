@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: 5862ddd812308c7bf81a5029249caf7e9b4a1168
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ee1e26d3f174d21ab1ad2c847d292ad075cc0f71
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453554"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830590"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 
@@ -19,21 +19,21 @@ Définit les fonctions de modèle de conteneur qui exécutent des algorithmes po
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête**: \<Numeric >
+**En-tête**: \<numeric>
 
 **Espace de noms :** std
 
 ## <a name="remarks"></a>Notes
 
-Les algorithmes numériques sont similaires aux algorithmes sous [\<algorithm>](algorithm.md) dans la bibliothèque standard C++ . Ils peuvent traiter de nombreuses structures de données. Cela comprend les classes de conteneur de la bibliothèque standard C++ (par exemple, [vector](../standard-library/vector-class.md) et [list](../standard-library/list-class.md)), ainsi que les structures de données et les tableaux d’éléments définis par programmation qui répondent aux exigences d’un algorithme en particulier. Ces algorithmes atteignent ce niveau de généralité en parcourant les éléments d'un conteneur indirectement, via des itérateurs. Les algorithmes traitent les plages d'itérateurs qui sont généralement spécifiées par leur position de début ou de fin. Les plages référencées doivent être valides, c'est-à-dire que tous les pointeurs de ces plages doivent pouvoir être déréférencés et se trouver dans les séquences de chaque plage. La dernière position doit être accessible depuis la première au moyen d'une incrémentation.
+Les algorithmes numériques ressemblent aux algorithmes de la bibliothèque C++ standard dans [\<algorithm>](algorithm.md) et peuvent fonctionner sur diverses structures de données. Cela comprend les classes de conteneur de la bibliothèque standard C++ (par exemple, [vector](../standard-library/vector-class.md) et [list](../standard-library/list-class.md)), ainsi que les structures de données et les tableaux d’éléments définis par programmation qui répondent aux exigences d’un algorithme en particulier. Ces algorithmes atteignent ce niveau de généralité en parcourant les éléments d'un conteneur indirectement, via des itérateurs. Les algorithmes traitent les plages d'itérateurs qui sont généralement spécifiées par leur position de début ou de fin. Les plages référencées doivent être valides, c'est-à-dire que tous les pointeurs de ces plages doivent pouvoir être déréférencés et se trouver dans les séquences de chaque plage. La dernière position doit être accessible depuis la première au moyen d'une incrémentation.
 
 Les algorithmes étendent les actions prises en charge par les opérations et les fonctions membres de chaque conteneur de la bibliothèque standard C++, et permettent l’interaction simultanée avec différents types d’objets conteneurs.
 
 ## <a name="members"></a>Membres
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|Calcule la somme de tous les éléments d'une plage spécifiée (y compris une valeur initiale) en calculant des sommes partielles successives, ou calcule le résultat de résultats partiels consécutifs qui sont obtenus en utilisant une opération binaire spécifiée au lieu de l'opération de somme.|
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|Détermine les différences successives entre chaque élément et son prédécesseur au sein d'une plage d'entrée et génère les résultats dans une plage de destination, ou calcule le résultat d'une procédure généralisée dans laquelle l'opération de différence est remplacée par une autre opération binaire spécifiée.|
@@ -41,7 +41,7 @@ Les algorithmes étendent les actions prises en charge par les opérations et le
 |[GCD](../standard-library/numeric-functions.md#gcd)||
 |[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|Calcule la somme du produit d'éléments de deux plages et l'ajoute à une valeur initiale spécifiée, ou calcule le résultat d'une procédure généralisée dans laquelle les opérations de somme et de produit sont remplacées par d'autres opérations binaires spécifiées.|
-|[iota](../standard-library/numeric-functions.md#iota)|Stocke une valeur de départ, en commençant par le premier élément et en remplissant avec des incréments successifs de la valeur (`value++`) de chaque élément de l'intervalle `[first, last)`.|
+|[culbut](../standard-library/numeric-functions.md#iota)|Stocke une valeur de départ, en commençant par le premier élément et en remplissant avec des incréments successifs de la valeur (`value++`) de chaque élément de l'intervalle `[first, last)`.|
 |[LCM](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Calcule une série de sommes dans une plage d’entrée à partir du premier élément jusqu’à l’élément numéro *i*, puis stocke le résultat de chaque somme dans l’élément numéro *i* d’une plage de destination, ou calcule le résultat d’une procédure généralisée où l’opération de somme est remplacée par une autre opération binaire spécifiée.|
 |[abaisse](../standard-library/numeric-functions.md#reduce)||
@@ -51,6 +51,6 @@ Les algorithmes étendent les actions prises en charge par les opérations et le
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

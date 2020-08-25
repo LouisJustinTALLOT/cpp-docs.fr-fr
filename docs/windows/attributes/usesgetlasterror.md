@@ -1,17 +1,17 @@
 ---
-title: usesgetlasterror (C++ attribut com)
+title: usesgetlasterror (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: f58929db01a1710e811a973c0559ad29b242b4eb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e3d3c292554350d85296971a9bd3620909ef47c7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166131"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831630"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -25,22 +25,20 @@ Indique à l’appelant qu’en cas d’erreur lors de l’appel de cette foncti
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **usesgetlasterror** C++ a les mêmes fonctionnalités que l’attribut MIDL [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) .
+L’attribut C++ **usesgetlasterror** a les mêmes fonctionnalités que l’attribut MIDL [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) .
 
 ## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de **usesgetlasterror**, consultez l’exemple de [idl_module](idl-module.md) .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|attribut de **module**|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|attribut de **module**|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

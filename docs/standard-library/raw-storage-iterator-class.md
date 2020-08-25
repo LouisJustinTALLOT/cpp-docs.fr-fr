@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 062a3db5c28bc463d6346a26cf1385adecd41183
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e5423d3b0801570167e1e0424aad18b9e8f74e7c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217634"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831422"
 ---
 # <a name="raw_storage_iterator-class"></a>raw_storage_iterator, classe
 
@@ -46,26 +46,26 @@ Cette classe d'adaptateur est utilisée quand il est nécessaire de séparer l'a
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Construit un itérateur de stockage brut avec un itérateur de sortie sous-jacent spécifié.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[element_type](#element_type)|Fournit un type qui décrit un élément à stocker dans un itérateur de stockage brut.|
 |[iter_type](#iter_type)|Fournit un type qui décrit un itérateur sous-jacent à un itérateur de stockage brut.|
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[and](#op_star)|Opérateur de déréférencement utilisé pour implémenter l’expression d’itérateur de sortie \* `ii`  =  `x` .|
 |[opérateur =](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de stockage brut \* `i`  =  `x` pour le stockage en mémoire.|
 |[opérateur + +](#op_add_add)|Opérateurs de préincrémentation et de postincrémentation pour les itérateurs de stockage brut.|
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Fournit un type qui décrit un élément à stocker dans un itérateur de stockage brut.
 
@@ -77,7 +77,7 @@ typedef Type element_type;
 
 Le type est un synonyme du paramètre de modèle de classe raw_storage_iterator `Type` .
 
-### <a name="iter_type"></a><a name="iter_type"></a>iter_type
+### <a name="iter_type"></a><a name="iter_type"></a> iter_type
 
 Fournit un type qui décrit un itérateur sous-jacent à un itérateur de stockage brut.
 
@@ -89,7 +89,7 @@ typedef ForwardIterator iter_type;
 
 Le type est un synonyme du paramètre de modèle `ForwardIterator`.
 
-### <a name="operator"></a><a name="op_star"></a>and\*
+### <a name="operator"></a><a name="op_star"></a> and\*
 
 Opérateur de déréférencement utilisé pour implémenter l’expression d’itérateur de stockage brut \* *II*  =  *x*.
 
@@ -97,7 +97,7 @@ Opérateur de déréférencement utilisé pour implémenter l’expression d’i
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’itérateur de stockage brut
 
@@ -157,7 +157,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>opérateur =
+### <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Opérateur d’assignation utilisé pour implémenter l’expression d’itérateur de stockage brut \* *i*  =  *x* pour le stockage en mémoire.
 
@@ -171,7 +171,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 *multiples*\
 Valeur de l’objet de type `Type` à insérer dans la mémoire.
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 L’opérateur stocke `val` dans la mémoire, puis retourne une référence à l’itérateur de stockage brut.
 
@@ -231,7 +231,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="operator"></a><a name="op_add_add"></a>opérateur + +
+### <a name="operator"></a><a name="op_add_add"></a> opérateur + +
 
 Opérateurs de préincrémentation et de postincrémentation pour les itérateurs de stockage brut.
 
@@ -241,7 +241,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur de stockage brut ou référence à un itérateur de stockage brut.
 
@@ -288,7 +288,7 @@ array 3 = 6
 array 4 = 8
 ```
 
-### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a>raw_storage_iterator
+### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a> raw_storage_iterator
 
 Construit un itérateur de stockage brut avec un itérateur de sortie sous-jacent spécifié.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 15026746f2af55b9cc153cce19cf00475e5c5d77
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561100"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834275"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount, classe
 
@@ -41,17 +41,15 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Constructeur par défaut.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Incrémente d’une unité le compteur associé à la commande donnée.|
 |[CMFCCmdUsageCount :: GetCount](#getcount)|Récupère le nombre d’utilisations associées à l’ID de commande donné.|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Détermine si cet objet a collecté la quantité minimale de données de suivi.|
@@ -62,9 +60,8 @@ class CMFCCmdUsageCount : public CObject
 
 ### <a name="data-members"></a>Données membres
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |`m_CmdUsage`|`CMap`Objet qui mappe des commandes à leur nombre d’utilisations.|
 |`m_nMinUsagePercentage`|Pourcentage d’utilisation minimal pour une commande à utiliser fréquemment.|
 |`m_nStartCount`|Le compteur de démarrage utilisé pour déterminer si cet objet a collecté la quantité minimale de données de suivi.|
@@ -82,7 +79,7 @@ Vous pouvez conserver `CMFCCmdUsageCount` les données de classe entre les exéc
 
 [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmdusagecount. h
 
@@ -124,7 +121,7 @@ UINT GetCount(UINT uiCmd) const;
 *uiCmd*\
 dans ID du compteur de commandes à récupérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’utilisations associées à l’ID de commande donné.
 
@@ -136,7 +133,7 @@ Détermine si cet objet a reçu la quantité minimale de données de suivi.
 BOOL HasEnoughInformation() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si cet objet a reçu la quantité minimale de données de suivi ; Sinon, 0.
 
@@ -159,7 +156,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 *uiCmd*\
 dans Spécifie la commande à vérifier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la commande est fréquemment utilisée ; Sinon, 0.
 
@@ -218,7 +215,7 @@ dans Nouveau nombre initial de toutes les commandes suivies.
 *nMinUsagePercentage*\
 dans Nouveau pourcentage d’utilisation minimal.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode a la valeur FALSe si le paramètre *nMinUsagePercentage* est supérieur ou égal à 100.
 

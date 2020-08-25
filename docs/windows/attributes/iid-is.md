@@ -1,17 +1,17 @@
 ---
-title: iid_is (C++ attribut com)
+title: iid_is (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a8fe8c7481cd251baff65293607733573f46ea6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167990"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832215"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -30,7 +30,7 @@ Expression de langage C qui spécifie un IID d’une interface COM vers laquelle
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **iid_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [iid_is](/windows/win32/Midl/iid-is) .
+L’attribut C++ **iid_is** a les mêmes fonctionnalités que l’attribut MIDL [iid_is](/windows/win32/Midl/iid-is) .
 
 ## <a name="example"></a>Exemple
 
@@ -51,20 +51,18 @@ __interface IFireTabCtrl : IDispatch
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Paramètre d’interface, membre de données|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Paramètre d’interface, membre de données|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)
+[Attributs de paramètre](parameter-attributes.md)

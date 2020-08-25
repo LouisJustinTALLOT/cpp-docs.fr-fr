@@ -1,17 +1,17 @@
 ---
-title: immediatebind (C++ attribut com)
+title: immediatebind (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.immediatebind
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: d0fb85a3f5642bc5fffcad29892ca15bb13a1ce0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5241a6972ea0444a980e3e868c44e7e0c15dc64
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166912"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833047"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -25,22 +25,20 @@ Indique que la base de données sera immédiatement notifiée de toutes les modi
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **immediatebind** C++ a les mêmes fonctionnalités que l’attribut MIDL [immediatebind](/windows/win32/Midl/immediatebind) .
+L’attribut C++ **immediatebind** a les mêmes fonctionnalités que l’attribut MIDL [immediatebind](/windows/win32/Midl/immediatebind) .
 
 ## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de **immediatebind**, consultez [Bindable](bindable.md) .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Méthode d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Méthode d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

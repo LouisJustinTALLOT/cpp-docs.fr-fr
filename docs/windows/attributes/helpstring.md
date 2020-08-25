@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 18a8dbea2387224070903aa10c812c9dd079bf96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 57f7a5bfd5bd0e7a6509797ec34e88531304ec92
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217257"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831032"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -36,16 +36,14 @@ L’attribut C++ **helpString** a les mêmes fonctionnalités que l’attribut M
 
 Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemple d’utilisation de **helpString**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**interface**, **`typedef`** , **`class`** , méthode, propriété|
 |**Repeatable Read**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
