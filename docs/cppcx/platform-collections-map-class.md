@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610905"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839138"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map, classe
 
@@ -90,16 +90,15 @@ Pour plus d’informations, consultez [Collections](../cppcx/collections-c-cx.md
 
 ### <a name="events"></a>Événements
 
-|||
-|-|-|
-|Nom|Description|
-|[Map :: MapChanged](#mapchanged) , événement|Se produit lorsque l'objet Map est modifié.|
+| Nom | Description |
+|--|--|
+| [Map :: MapChanged](#mapchanged) , événement | Se produit lorsque l'objet Map est modifié. |
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `Map`
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** collection.h
 
@@ -163,7 +162,7 @@ bool HasKey(K key);
 *key*<br/>
 Clé utilisée pour rechercher l’élément Map. Le type de *clé* est TypeName *K*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la clé est trouvée ; Sinon, **`false`** .
 
@@ -185,7 +184,7 @@ Partie de clé de la paire clé-valeur. Le type de *clé* est TypeName *K*.
 *value*<br/>
 Partie de valeur de la paire clé-valeur. Le type de *valeur* est TypeName *V*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la clé d’un élément existant dans le mappage actuel correspond à la *clé* et que la partie valeur de cet élément est définie sur *valeur*. **`false`** Si aucun élément existant dans le mappage actuel ne correspond à la *clé* et que les paramètres de *clé* et de *valeur* sont définis dans une paire clé-valeur, puis ajoutés au mappage en cours.
 
@@ -204,7 +203,7 @@ V Lookup(K key);
 *key*<br/>
 Clé utilisée pour trouver un élément dans le Map. Le type de *clé* est TypeName *K*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur associée à la *clé*. Le type de la valeur de retour est TypeName *V*.
 

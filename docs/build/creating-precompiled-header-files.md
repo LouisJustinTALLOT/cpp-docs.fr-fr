@@ -7,16 +7,16 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 158301ec3caacced1663892071b17ef2b8f8e741
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c68de0ee8e6376731254adf965fb9a81f10f2861
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328669"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838852"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
 
-Lorsque vous créez un projet dans Visual Studio, un *fichier d’en-tête précompilé* nommé *pch. h* est ajouté au projet. (Dans Visual Studio 2017 et versions antérieures, le fichier était appelé *stdafx. h*.) L’objectif du fichier est d’accélérer le processus de génération. Tous les fichiers d’en-tête stables, par exemple les `<vector>`en-têtes de bibliothèque standard tels que, doivent être inclus ici. L’en-tête précompilé est compilé uniquement quand celui-ci, ou les fichiers qu’il contient, sont modifiés. Si vous apportez uniquement des modifications dans le code source de votre projet, la génération ignorera la compilation pour l’en-tête précompilé.
+Lorsque vous créez un projet dans Visual Studio, un *fichier d’en-tête précompilé* nommé *pch. h* est ajouté au projet. (Dans Visual Studio 2017 et versions antérieures, le fichier était appelé *stdafx. h*.) L’objectif du fichier est d’accélérer le processus de génération. Tous les fichiers d’en-tête stables, par exemple les en-têtes de bibliothèque standard tels que `<vector>` , doivent être inclus ici. L’en-tête précompilé est compilé uniquement quand celui-ci, ou les fichiers qu’il contient, sont modifiés. Si vous apportez uniquement des modifications dans le code source de votre projet, la génération ignorera la compilation pour l’en-tête précompilé.
 
 Les options du compilateur pour les en-têtes précompilés sont [/y](reference/y-precompiled-headers.md). Dans les pages de propriétés du projet, les options se trouvent sous **Propriétés de Configuration > C/C++ > en-têtes précompilés**. Vous pouvez choisir de ne pas utiliser d’en-têtes précompilés, et vous pouvez spécifier le nom du fichier d’en-tête, ainsi que le nom et le chemin d’accès du fichier de sortie.
 
@@ -87,26 +87,58 @@ Lorsque vous spécifiez l’option utiliser le fichier d’en-tête précompilé
 
 ### <a name="pragma-consistency"></a>Cohérence des pragmas
 
-Les pragmas traités lors de la création d’un fichier PCH affectent généralement le fichier avec lequel le fichier PCH est utilisé par la suite. Les `comment` pragmas `message` et n’affectent pas le reste de la compilation.
+Les pragmas traités lors de la création d’un fichier PCH affectent généralement le fichier avec lequel le fichier PCH est utilisé par la suite. Les `comment` `message` Pragmas et n’affectent pas le reste de la compilation.
 
 Ces pragmas affectent uniquement le code dans le fichier PCH ; ils n’affectent pas le code qui utilise par la suite le fichier PCH :
 
-||||
-|-|-|-|
-|`comment`|`page`|`subtitle`|
-|`linesize`|`pagesize`|`title`|
-|`message`|`skip`||
+:::row:::
+   :::column span="":::
+      `comment`\
+      `linesize`
+   :::column-end:::
+   :::column span="":::
+      `message`\
+      `page`
+   :::column-end:::
+   :::column span="":::
+      `pagesize`\
+      `skip`
+   :::column-end:::
+   :::column span="":::
+      `subtitle`\
+      `title`
+   :::column-end:::
+:::row-end:::
 
 Ces pragmas sont conservés dans le cadre d’un en-tête précompilé et affectent le reste d’une compilation qui utilise l’en-tête précompilé :
 
-||||
-|-|-|-|
-|`alloc_text`|`include_alias`|`pack`|
-|`auto_inline`|`init_seg`|`pointers_to_members`|
-|`check_stack`|`inline_depth`|`setlocale`|
-|`code_seg`|`inline_recursion`|`vtordisp`|
-|`data_seg`|`intrinsic`|`warning`|
-|`function`|`optimize`||
+:::row:::
+   :::column span="":::
+      `alloc_text`\
+      `auto_inline`\
+      `check_stack`\
+      `code_seg`\
+      `data_seg`
+   :::column-end:::
+   :::column span="":::
+      `function`\
+      `include_alias`\
+      `init_seg`\
+      `inline_depth`
+   :::column-end:::
+   :::column span="":::
+      `inline_recursion`\
+      `intrinsic`\
+      `optimize`\
+      `pack`
+   :::column-end:::
+   :::column span="":::
+      `pointers_to_members`\
+      `setlocale`\
+      `vtordisp`\
+      `warning`
+   :::column-end:::
+:::row-end:::
 
 ## <a name="consistency-rules-for-yc-and-yu"></a>Règles de cohérence pour /Yc et /Yu
 
@@ -154,7 +186,7 @@ En poursuivant le diagramme, APPLIB. obj représente le code de prise en charge 
 
 MYAPP. obj représente votre application finale. Il est créé à partir de MYAPP. cpp, les fichiers listés dans la macro UNSTABLEHDRS et le code précompilé de l’en-tête précompilé.
 
-Enfin, le fichier exécutable (MYAPP. EXE) est créé en liant les fichiers listés dans la macro ne comportaient (APPLIB. objet MYAPP. obj).
+Enfin, le fichier exécutable (MYAPP.EXE) est créé en liant les fichiers listés dans la macro ne comportaient (APPLIB. objet MYAPP. obj).
 
 ## <a name="sample-makefile-for-pch"></a>Exemple de makefile pour PCH
 

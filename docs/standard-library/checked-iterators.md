@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: f5a31843386d2246f5d74eae1f40b93f0ae35c90
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452140"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845690"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -25,12 +25,12 @@ Les itérateurs vérifiés garantissent que les limites de votre conteneur ne so
 
 Pour plus d’informations sur désactivation des avertissements générés par les itérateurs vérifiés, consultez [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-Vous pouvez utiliser la macro de préprocesseur [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) pour activer ou désactiver la fonctionnalité des itérateurs vérifiés. Si _ITERATOR_DEBUG_LEVEL est défini sur 1 ou 2, une utilisation risquée des itérateurs provoque une erreur d’exécution et le programme est arrêté. S'il est défini sur 0, les itérateurs vérifiés sont désactivés. Par défaut, la valeur de _ITERATOR_DEBUG_LEVEL est 0 pour les versions release et 2 pour les versions Debug.
+Vous pouvez utiliser la macro de préprocesseur [ \_ \_ \_ au niveau du débogage itérateur](../standard-library/iterator-debug-level.md) pour activer ou désactiver la fonctionnalité d’itérateurs vérifiés. Si _ITERATOR_DEBUG_LEVEL est défini sur 1 ou 2, une utilisation risquée des itérateurs provoque une erreur d’exécution et le programme est arrêté. S'il est défini sur 0, les itérateurs vérifiés sont désactivés. Par défaut, la valeur de _ITERATOR_DEBUG_LEVEL est 0 pour les versions release et 2 pour les versions Debug.
 
 > [!IMPORTANT]
 > Une documentation et un code source plus anciens peuvent faire référence à la macro [_SECURE_SCL](../standard-library/secure-scl.md). Utilisez _ITERATOR_DEBUG_LEVEL pour contrôler _SECURE_SCL. Pour plus d’informations, consultez [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
-Lorsque _ITERATOR_DEBUG_LEVEL est défini sur 1 ou 2, ces contrôles d’itérateur sont effectués:
+Lorsque _ITERATOR_DEBUG_LEVEL est défini sur 1 ou 2, ces contrôles d’itérateur sont effectués :
 
 - Tous les itérateurs standard (par exemple, [vector::iterator](../standard-library/vector-class.md#iterator)) sont vérifiés.
 
@@ -40,13 +40,28 @@ Lorsque _ITERATOR_DEBUG_LEVEL est défini sur 1 ou 2, ces contrôles d’itérat
 
 - Les fonctions suivantes génèrent une erreur d’exécution si un accès est hors des limites du conteneur :
 
-|||||
-|-|-|-|-|
-|[basic_string::operator\[\]](../standard-library/basic-string-class.md#op_at)|[bitset::operator\[\]](../standard-library/bitset-class.md#op_at)|[back](../standard-library/deque-class.md#back)|[front](../standard-library/deque-class.md#front)|
-|[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[back](../standard-library/list-class.md#back)|[front](../standard-library/list-class.md#front)|[back](../standard-library/queue-class.md#back)|
-|[front](../standard-library/queue-class.md#front)|[vector::operator\[\]](../standard-library/vector-class.md#op_at)|[back](../standard-library/vector-class.md#back)|[front](../standard-library/vector-class.md#front)|
+:::row:::
+   :::column span="":::
+      &emsp;&emsp;[`basic_string::operator[]`](../standard-library/basic-string-class.md#op_at)\
+      &emsp;&emsp;[`bitset::operator[]`](../standard-library/bitset-class.md#op_at)\
+      &emsp;&emsp;[`deque::back`](../standard-library/deque-class.md#back)\
+      &emsp;&emsp;[`deque::front`](../standard-library/deque-class.md#front)
+   :::column-end:::
+   :::column span="":::
+      [`deque::operator[]`](../standard-library/deque-class.md#op_at)\
+      [`list::back`](../standard-library/list-class.md#back)\
+      [`list::front`](../standard-library/list-class.md#front)\
+      [`queue::back`](../standard-library/queue-class.md#back)
+   :::column-end:::
+   :::column span="":::
+      [`queue::front`](../standard-library/queue-class.md#front)\
+      [`vector::back`](../standard-library/vector-class.md#back)\
+      [`vector::front`](../standard-library/vector-class.md#front)\
+      [`vector::operator[]`](../standard-library/vector-class.md#op_at)
+   :::column-end:::
+:::row-end:::
 
-Lorsque _ITERATOR_DEBUG_LEVEL est défini sur 0:
+Lorsque _ITERATOR_DEBUG_LEVEL est défini sur 0 :
 
 - Tous les itérateurs standard sont non vérifiés. Les itérateurs peuvent être déplacés au delà des limites du conteneur, ce qui entraîne un comportement indéfini.
 
@@ -60,7 +75,7 @@ Les adaptateurs d’itérateur qui prennent en charge des itérateurs vérifiés
 
 ## <a name="example"></a>Exemple
 
-Quand vous compilez à l’aide de _ITERATOR_DEBUG_LEVEL avec la valeur 1 ou 2, une erreur d’exécution se produit si vous tentez d’accéder à un élément situé en dehors des limites du conteneur à l’aide de l’opérateur d’indexation de certaines classes.
+Quand vous compilez à l’aide de _ITERATOR_DEBUG_LEVEL défini sur 1 ou 2, une erreur d’exécution se produit si vous tentez d’accéder à un élément situé en dehors des limites du conteneur à l’aide de l’opérateur d’indexation de certaines classes.
 
 ```cpp
 // checked_iterators_1.cpp
@@ -89,7 +104,7 @@ Ce programme affiche « 67 », puis une boîte de dialogue d’échec d’asse
 
 ## <a name="example"></a>Exemple
 
-De même, quand vous compilez à l’aide de _ITERATOR_DEBUG_LEVEL avec la valeur 1 ou 2, une erreur d’exécution se produit si vous tentez `back` d’accéder à un élément à l’aide `front` de ou dans les classes de conteneur lorsque le conteneur est vide.
+De même, quand vous compilez à l’aide de _ITERATOR_DEBUG_LEVEL défini sur 1 ou 2, une erreur d’exécution se produit si vous tentez d’accéder à un élément à l’aide de `front` ou `back` dans les classes de conteneur lorsque le conteneur est vide.
 
 ```cpp
 // checked_iterators_2.cpp
@@ -220,4 +235,4 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Prise en charge de l’itérateur de débogage](../standard-library/debug-iterator-support.md)
+[Prise en charge des itérateurs de débogage](../standard-library/debug-iterator-support.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 12f7af195f2282955cb16c1f38d4e512ca0f86cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232792"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838878"
 ---
 # <a name="coclass"></a>coclasse
 
@@ -53,15 +53,15 @@ Enfin, toute interface double qui n’est pas définie à l’aide d’un IDL in
 
 L’attribut **coclass** rend également les fonctions suivantes disponibles par le biais du code injecté, ou dans le cas de `GetObjectCLSID` , en tant que méthode statique dans la classe de base `CComCoClass` :
 
-- `UpdateRegistry`inscrit les fabriques de classes de la classe cible.
+- `UpdateRegistry` inscrit les fabriques de classes de la classe cible.
 
 - `GetObjectCLSID`, qui est lié à l’inscription, peut également être utilisé pour obtenir le CLSID de la classe cible.
 
-- `GetObjectFriendlyName`par défaut, retourne une chaîne au format " \<*target class name*> `Object` ". Si cette fonction est déjà présente, elle n’est pas ajoutée. Ajoutez cette fonction à la classe cible pour retourner un nom plus convivial que celui généré automatiquement.
+- `GetObjectFriendlyName` par défaut, retourne une chaîne au format " \<*target class name*> `Object` ". Si cette fonction est déjà présente, elle n’est pas ajoutée. Ajoutez cette fonction à la classe cible pour retourner un nom plus convivial que celui généré automatiquement.
 
 - `GetProgID`, qui est lié à l’inscription, retourne la chaîne spécifiée avec l’attribut [ProgID](progid.md) .
 
-- `GetVersionIndependentProgID`a la même fonctionnalité que `GetProgID` , mais retourne la chaîne spécifiée avec [vi_progid](vi-progid.md).
+- `GetVersionIndependentProgID` a la même fonctionnalité que `GetProgID` , mais retourne la chaîne spécifiée avec [vi_progid](vi-progid.md).
 
 Les modifications suivantes, qui sont liées au mappage COM, sont apportées à la classe cible :
 
@@ -125,16 +125,14 @@ public:
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

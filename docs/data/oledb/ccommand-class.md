@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 73b02f0ffb9d9b98a17933cc3b17c8627121e3ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228919"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838436"
 ---
 # <a name="ccommand-class"></a>CCommand, classe
 
@@ -78,12 +78,12 @@ class CCommand :
 Type de classe d’accesseur (par exemple `CDynamicParameterAccessor` , `CDynamicStringAccessor` ou `CEnumeratorAccessor` ) que vous souhaitez que la commande utilise. La valeur par défaut est `CNoAccessor` , qui spécifie que la classe ne prend pas en charge les paramètres ou les colonnes de sortie.
 
 *TRowset*<br/>
-Type de classe d’ensemble de lignes (tel que `CArrayRowset` ou `CNoRowset` ) que la commande doit utiliser. Par défaut, il s’agit de `CRowset`.
+Type de classe d’ensemble de lignes (tel que `CArrayRowset` ou `CNoRowset` ) que la commande doit utiliser. La valeur par défaut est `CRowset`.
 
 *TMultiple*<br/>
 Pour utiliser une commande OLE DB qui peut retourner plusieurs résultats, spécifiez [CMultipleResults](../../data/oledb/cmultipleresults-class.md). Sinon, utilisez [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Pour plus d’informations, consultez [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85)).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -91,7 +91,7 @@ Pour utiliser une commande OLE DB qui peut retourner plusieurs résultats, spéc
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[Close](#close)|Ferme la commande active.|
 |[GetNextResult](#getnextresult)|Extrait le résultat suivant lors de l’utilisation de plusieurs jeux de résultats.|
@@ -99,7 +99,7 @@ Pour utiliser une commande OLE DB qui peut retourner plusieurs résultats, spéc
 
 ### <a name="inherited-methods"></a>Méthodes héritées
 
-|||
+| Nom | Description |
 |-|-|
 |[Créer](#create)|Crée une nouvelle commande pour la session spécifiée, puis définit le texte de la commande.|
 |[CreateCommand](#createcommand)|Crée une nouvelle commande.|
@@ -117,7 +117,7 @@ La classe d’accesseur que vous utilisez détermine la méthode de liaison des 
 
 Notez que vous ne pouvez pas utiliser de procédures stockées avec le fournisseur de OLE DB pour jet, car ce fournisseur ne prend pas en charge les procédures stockées (seules les constantes sont autorisées dans les chaînes de requête).
 
-## <a name="ccommandclose"></a><a name="close"></a>CCommand :: Close
+## <a name="ccommandclose"></a><a name="close"></a> CCommand :: Close
 
 Libère l’ensemble de lignes d’accesseur associé à la commande.
 
@@ -141,7 +141,7 @@ L’exemple suivant montre comment vous pouvez appeler `Close` et `ReleaseComman
 
 [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]
 
-## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a>CCommand :: GetNextResult
+## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a> CCommand :: GetNextResult
 
 Récupère le jeu de résultats suivant, s’il est disponible.
 
@@ -160,7 +160,7 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 *bBind*<br/>
 dans Spécifie si la commande doit être liée automatiquement après son exécution. La valeur par défaut est **`true`** , ce qui entraîne la liaison automatique de la commande. La définition de *bBind* **`false`** empêche la liaison automatique de la commande afin que vous puissiez la lier manuellement. (La liaison manuelle présente un intérêt particulier pour les utilisateurs OLAP.)
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -170,7 +170,7 @@ Si un jeu de résultats a été récupéré précédemment, cette fonction libè
 
 Vous devez appeler cette fonction uniquement si vous avez spécifié plusieurs résultats en définissant le `CCommand` paramètre de modèle *TMultiple* = `CMultipleResults` .
 
-## <a name="ccommandopen"></a><a name="open"></a>CCommand :: Open
+## <a name="ccommandopen"></a><a name="open"></a> CCommand :: Open
 
 Exécute et éventuellement lie la commande.
 
@@ -239,7 +239,7 @@ dans Spécifie si la commande doit être liée automatiquement après son exécu
 *ulPropSets*<br/>
 dans Nombre de structures [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passées dans l’argument *pPropSet* .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -256,9 +256,9 @@ La troisième forme de `Open` permet à la chaîne de commande d’être null, e
 Utilisez la quatrième forme de `Open` lorsque vous avez déjà créé une commande et que vous souhaitez effectuer une seule [préparation](../../data/oledb/ccommand-prepare.md) et plusieurs exécutions.
 
 > [!NOTE]
-> `Open`appelle `Execute` , qui à son tour appelle `GetNextResult` .
+> `Open` appelle `Execute` , qui à son tour appelle `GetNextResult` .
 
-## <a name="ccommandcreate"></a><a name="create"></a>CCommand :: Create
+## <a name="ccommandcreate"></a><a name="create"></a> CCommand :: Create
 
 Appelle [CCommand :: CreateCommand](../../data/oledb/ccommand-createcommand.md) pour créer une commande pour la session spécifiée, puis appelle [ICommandText :: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) pour spécifier le texte de la commande.
 
@@ -288,7 +288,7 @@ dans Pointeur vers le texte ANSI de la chaîne de commande.
 *guidCommand*<br/>
 dans GUID qui spécifie la syntaxe et les règles générales que le fournisseur doit utiliser pour analyser le texte de la commande. Pour obtenir une description des dialectes, consultez [ICommandText :: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -296,7 +296,7 @@ HRESULT standard.
 
 La première forme de `Create` prend une chaîne de commande Unicode. La seconde forme de `Create` prend une chaîne de commande ANSI (fournie pour la compatibilité descendante avec les applications ANSI existantes).
 
-## <a name="ccommandcreatecommand"></a><a name="createcommand"></a>CCommand :: CreateCommand
+## <a name="ccommandcreatecommand"></a><a name="createcommand"></a> CCommand :: CreateCommand
 
 Crée une nouvelle commande.
 
@@ -309,9 +309,9 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 #### <a name="parameters"></a>Paramètres
 
 *session*<br/>
-dans `CSession`Objet à associer à la nouvelle commande.
+dans `CSession` Objet à associer à la nouvelle commande.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -319,7 +319,7 @@ HRESULT standard.
 
 Cette méthode crée une commande à l’aide de l’objet de session spécifié.
 
-## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a>CCommand :: GetParameterInfo
+## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a> CCommand :: GetParameterInfo
 
 Obtient une liste des paramètres de la commande, leurs noms et leurs types.
 
@@ -335,11 +335,11 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 
 Consultez [ICommandWithParameters :: GetParameterInfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
-## <a name="ccommandprepare"></a><a name="prepare"></a>CCommand ::P reparenthèse
+## <a name="ccommandprepare"></a><a name="prepare"></a> CCommand ::P reparenthèse
 
 Valide et optimise la commande actuelle.
 
@@ -354,7 +354,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 *cExpectedRuns*<br/>
 dans Nombre de fois où vous prévoyez d’exécuter la commande.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -362,7 +362,7 @@ HRESULT standard.
 
 Cette méthode encapsule la méthode OLE DB [ICommandPrepare ::P](/previous-versions/windows/desktop/ms718370(v=vs.85))restante.
 
-## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a>CCommand :: ReleaseCommand
+## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a> CCommand :: ReleaseCommand
 
 Libère l’accesseur de paramètre, puis libère la commande elle-même.
 
@@ -374,9 +374,9 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Notes
 
-`ReleaseCommand`est utilisé conjointement avec `Close` . Pour plus d’informations sur l’utilisation, consultez [Close](../../data/oledb/ccommand-close.md) .
+`ReleaseCommand` est utilisé conjointement avec `Close` . Pour plus d’informations sur l’utilisation, consultez [Close](../../data/oledb/ccommand-close.md) .
 
-## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a>CCommand :: SetParameterInfo
+## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand :: SetParameterInfo
 
 Spécifie le type natif de chaque paramètre de commande.
 
@@ -392,11 +392,11 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 
 Consultez [ICommandWithParameters :: SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
-## <a name="ccommandunprepare"></a><a name="unprepare"></a>CCommand :: Unprepare
+## <a name="ccommandunprepare"></a><a name="unprepare"></a> CCommand :: Unprepare
 
 Ignore le plan d’exécution de la commande en cours.
 

@@ -1,17 +1,17 @@
 ---
-title: pouvant être liéC++ (attribut com)
+title: Binder (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167353"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838969"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,7 +25,7 @@ Indique que la propriété prend en charge la liaison de données.
 
 ## <a name="remarks"></a>Notes
 
-L' C++ attribut **pouvant être lié** a les mêmes fonctionnalités que l’attribut MIDL [pouvant être lié](/windows/win32/Midl/bindable) . Vous pouvez l’utiliser sur les propriétés définies avec les attributs [propget](propget.md), [propput](propput.md)ou [PROPPUTREF](propputref.md) , ou vous pouvez définir manuellement une méthode pouvant être liée.
+L’attribut C++ **pouvant être lié** a les mêmes fonctionnalités que l’attribut MIDL [pouvant être lié](/windows/win32/Midl/bindable) . Vous pouvez l’utiliser sur les propriétés définies avec les attributs [propget](propget.md), [propput](propput.md)ou [PROPPUTREF](propputref.md) , ou vous pouvez définir manuellement une méthode pouvant être liée.
 
 Les exemples MFC suivants illustrent l’utilisation de **bindables**:
 
@@ -58,16 +58,14 @@ __interface IPropDemo : IDispatch {
 [ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Méthode d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Méthode d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 06e9508ae09f9c7581648b45098f497fda785013
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 39362deaa770b39eea964f1e4e58186dd5923b7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470795"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846028"
 ---
 # <a name="vc-directories-property-page-windows"></a>Répertoires VC++, page de propriétés (Windows)
 
@@ -74,7 +74,7 @@ Pour définir vos propres macros, deux options s’offrent à vous :
 
 - Définissez des macros utilisateur dans un fichier .props. Pour plus d’informations, consultez [Macros des pages de propriétés](../working-with-project-properties.md).
 
-Pour plus d’informations, consultez ces billets de blog : [VC++ Directories](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories), [Inherited Properties and Property Sheets](https://docs.microsoft.com/cpp/build/project-property-inheritance) et [Visual Studio 2010 C++ Project Upgrade Guide](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
+Pour plus d’informations, consultez [héritage des propriétés dans les projets Visual Studio](../project-property-inheritance.md)et les billets de blog suivants : [Répertoires VC + +](/archive/blogs/vsproject/vc-directories), [Guide de mise à niveau des projets C++ Visual Studio 2010](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Types de répertoires
 

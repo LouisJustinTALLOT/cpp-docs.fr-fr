@@ -66,16 +66,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: d3d82ea09b7ed2c1cbaf325906b4f9b480e1eb4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4013e40c364593676ebb099804304ffb2adb42c1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359337"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838475"
 ---
 # <a name="cbookmark-class"></a>CBookmark, classe
 
-Détient une valeur de signet dans son tampon.
+Contient une valeur de signet dans sa mémoire tampon.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,10 +89,10 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="parameters"></a>Paramètres
 
-*nSize (en)*<br/>
-La taille du tampon de signet dans les octets. Lorsque *nSize* est nul, le tampon de signets sera créé dynamiquement au moment de l’exécution.
+*nSize*<br/>
+Taille de la mémoire tampon du signet, en octets. Lorsque *nSize* est égal à zéro, la mémoire tampon du signet est créée dynamiquement au moment de l’exécution.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -100,24 +100,24 @@ La taille du tampon de signet dans les octets. Lorsque *nSize* est nul, le tampo
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
-|[CBookmark (en)](#cbookmark)|Le constructeur|
-|[GetBuffer](#getbuffer)|Récupère le pointeur vers le tampon.|
-|[GetSize](#getsize)|Récupère la taille du tampon dans les octets.|
-|[SetBookmark SetBookmark SetBookmark SetBook](#setbookmark)|Définit la valeur du signet.|
+|[CBookmark](#cbookmark)|Le constructeur|
+|[GetBuffer](#getbuffer)|Récupère le pointeur vers la mémoire tampon.|
+|[GetSize](#getsize)|Récupère la taille de la mémoire tampon en octets.|
+|[SetBookmark](#setbookmark)|Définit la valeur du signet.|
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+| Nom | Description |
 |-|-|
-|[opérateur](#operator)|Assigne `CBookmark` une classe à une autre.|
+|[opérateur =](#operator)|Assigne une `CBookmark` classe à une autre.|
 
 ## <a name="remarks"></a>Notes
 
-`CBookmark<0>`est une spécialisation `CBookmark`de modèle de ; son tampon est créé dynamiquement au moment de l’exécution.
+`CBookmark<0>` est une spécialisation de modèle de `CBookmark` ; sa mémoire tampon est créée dynamiquement au moment de l’exécution.
 
-## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark::CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a> CBookmark :: CBookmark
 
 Constructeur.
 
@@ -130,19 +130,19 @@ CBookmark(DBLENGTH nSize);
 
 #### <a name="parameters"></a>Paramètres
 
-*nSize (en)*<br/>
-[dans] Taille du tampon de signet dans les octets.
+*nSize*<br/>
+dans Taille de la mémoire tampon du signet, en octets.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction définit le tampon à NULL et la taille du tampon à 0. La deuxième fonction définit la taille du tampon à *nSize*, et le tampon à un tableau d’octet de *octets nSize.*
+La première fonction affecte la valeur NULL à la mémoire tampon et la taille de la mémoire tampon à 0. La deuxième fonction définit la taille de la mémoire tampon sur *nSize*et la mémoire tampon sur un tableau d’octets *nSize* octets.
 
 > [!NOTE]
-> Cette fonction n’est disponible que dans `CBookmark<0>`.
+> Cette fonction est uniquement disponible dans `CBookmark<0>` .
 
-## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark::GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a> CBookmark :: GetBuffer
 
-Récupère le pointeur sur le tampon de signet.
+Récupère le pointeur vers la mémoire tampon de signet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -152,11 +152,11 @@ virtual BYTE* GetBuffer() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le tampon de signet.
+Pointeur vers la mémoire tampon de signet.
 
-## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark::GetSize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a> CBookmark :: dela
 
-Récupère la taille du tampon de signet.
+Récupère la taille de la mémoire tampon du signet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -168,9 +168,9 @@ virtual DBLENGTH GetSize() const throw();
 
 Taille de la mémoire tampon en octets.
 
-## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark::SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a> CBookmark :: SetBookmark
 
-Copie la valeur de signet référencée par *pBuffer* au `CBookmark` tampon et définit la taille du tampon à *nSize*.
+Copie la valeur de signet référencée par *pbuffer* dans la `CBookmark` mémoire tampon et définit la taille de la mémoire tampon sur *nSize*.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -180,23 +180,23 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 #### <a name="parameters"></a>Paramètres
 
-*nSize (en)*<br/>
-[dans] La taille du tampon de signet.
+*nSize*<br/>
+dans Taille de la mémoire tampon du signet.
 
 *pBuffer*<br/>
-[dans] Un pointeur vers le tableau byte contenant la valeur de signet.
+dans Pointeur vers le tableau d’octets contenant la valeur de signet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un HRESULT standard.
+HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction n’est disponible que dans `CBookmark<0>`.
+Cette fonction est uniquement disponible dans `CBookmark<0>` .
 
-## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark::opérateur
+## <a name="cbookmarkoperator-"></a><a name="operator"></a> CBookmark :: Operator =
 
-Assigne `CBookmark` un objet à un autre.
+Assigne un `CBookmark` objet à un autre.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -206,9 +206,9 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 ### <a name="remarks"></a>Notes
 
-Cet opérateur n’est nécessaire que dans `CBookmark<0>`.
+Cet opérateur est nécessaire uniquement dans `CBookmark<0>` .
 
 ## <a name="see-also"></a>Voir aussi
 
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB Consumer Templates Référence](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

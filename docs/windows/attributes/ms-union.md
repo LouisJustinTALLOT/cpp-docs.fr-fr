@@ -1,17 +1,17 @@
 ---
-title: ms_union (C++ attribut com)
+title: ms_union (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae99a996cd7969da27f38ad3532f0472f389ee3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166638"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838839"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -25,7 +25,7 @@ Contrôle l’alignement de la représentation des données réseau des unions q
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **ms_union** C++ a les mêmes fonctionnalités que l’attribut MIDL [ms_union](/windows/win32/Midl/ms-union-attrib) .
+L’attribut C++ **ms_union** a les mêmes fonctionnalités que l’attribut MIDL [ms_union](/windows/win32/Midl/ms-union-attrib) .
 
 ## <a name="example"></a>Exemple
 
@@ -54,15 +54,13 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Unions qui ne sont pas encapsulées|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
+|**S’applique à**|Unions qui ne sont pas encapsulées|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
 |**Attributs non valides**|`dispinterface`|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
@@ -70,4 +68,4 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)

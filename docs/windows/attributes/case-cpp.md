@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: 23330b7b220873725dc566df947f3f3596160029
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e1d3c113c42be99a8475c5a667b7ea6ed9583d92
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232805"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838904"
 ---
 # <a name="case-c"></a>cas (C++)
 
@@ -63,16 +63,14 @@ struct SizedValue2 {
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S’applique à**|Membre d’un **`class`** ou**`struct`**|
+|**S’applique à**|Membre d’un **`class`** ou **`struct`**|
 |**Repeatable Read**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

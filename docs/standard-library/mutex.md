@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: e17488023d8de6eb5d341c719be8f1b36c14ffcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228178"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838547"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -18,7 +18,7 @@ Incluez l’en-tête standard \<mutex> pour définir les classes `mutex` , `recu
 > [!WARNING]
 > À compter de Visual Studio 2015, les types de synchronisation de la bibliothèque standard C++ sont basés sur les primitives de synchronisation Windows et n’utilisent plus ConcRT (sauf si la plateforme cible est Windows XP). Les types définis dans \<mutex> ne doivent pas être utilisés avec des fonctions ou types concrt.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<mutex>
 
@@ -51,7 +51,7 @@ Un type mutex est également appelé *type verrouillable*. S’il ne fournit pas
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe lock_guard](../standard-library/lock-guard-class.md)|Représente un modèle qui peut être instancié pour créer un objet dont le destructeur déverrouille un `mutex`.|
 |[Mutex, classe (bibliothèque standard C++)](../standard-library/mutex-class-stl.md)|Représente un type mutex. Utilisez les objets de ce type pour appliquer une exclusion mutuelle (mutex) dans un programme.|
@@ -61,9 +61,9 @@ Un type mutex est également appelé *type verrouillable*. S’il ne fournit pas
 |[Classe timed_mutex](../standard-library/timed-mutex-class.md)|Représente un type mutex limité dans le temps. Utilisez les objets de ce type pour appliquer une exclusion mutuelle (mutex) dont le blocage est limité dans le temps au sein d'un programme.|
 |[Classe unique_lock](../standard-library/unique-lock-class.md)|Représente un modèle qui peut être instancié pour créer des objets qui gèrent le verrouillage et le déverrouillage d'un `mutex`.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|Fournit un mécanisme permettant d'appeler un objet spécifique pouvant être appelé une seule fois durant l'exécution.|
 |[Lock](../standard-library/mutex-functions.md#lock)|Tente de verrouiller tous les arguments sans interblocage.|
@@ -72,7 +72,7 @@ Un type mutex est également appelé *type verrouillable*. S’il ne fournit pas
 
 ### <a name="structs"></a>Structures
 
-|||
+|Nom|Description|
 |-|-|
 |[adopt_lock_t, structure](../standard-library/adopt-lock-t-structure.md)|Représente un type utilisé pour définir `adopt_lock`.|
 |[defer_lock_t, structure](../standard-library/defer-lock-t-structure.md)|Représente un type qui définit un objet `defer_lock` permettant de sélectionner l'un des constructeurs surchargés de `unique_lock`.|
@@ -81,7 +81,7 @@ Un type mutex est également appelé *type verrouillable*. S’il ne fournit pas
 
 ### <a name="variables"></a>Variables
 
-|||
+|Nom|Description|
 |-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Représente un objet pouvant être passé aux constructeurs pour `lock_guard` et `unique_lock` afin d'indiquer que l'objet mutex qui est également passé au constructeur est verrouillé.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Représente un objet pouvant être passé au constructeur pour `unique_lock`, afin d'indiquer que le constructeur ne doit pas verrouiller l'objet mutex qui lui est également passé.|

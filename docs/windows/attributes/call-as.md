@@ -1,17 +1,17 @@
 ---
-title: call_as (C++ attribut com)
+title: call_as (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ae620ed6f2b01cc52e4a9c76217f044db925f11
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167330"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838918"
 ---
 # <a name="call_as"></a>call_as
 
@@ -30,11 +30,11 @@ Fonction locale que vous souhaitez appeler lorsqu’une fonction distante est ap
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **call_as** C++ a les mêmes fonctionnalités que l’attribut MIDL [call_as](/windows/win32/Midl/call-as) .
+L’attribut C++ **call_as** a les mêmes fonctionnalités que l’attribut MIDL [call_as](/windows/win32/Midl/call-as) .
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment utiliser **call_as** pour mapper une fonction qui n’est pas accessible à distance (`f1`) à une fonction accessible à distance (`Remf1`) :
+Le code suivant montre comment vous pouvez utiliser **call_as** pour mapper une fonction qui n’est pas accessible à distance ( `f1` ) à une fonction accessible à distance ( `Remf1` ) :
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -48,16 +48,14 @@ __interface IMInterface {
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Méthode d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Méthode d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
@@ -65,4 +63,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[local](local-cpp.md)
+[localisé](local-cpp.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 4755cfcf98c9eadbd944e06a56f86ca89a33b0a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c47ec86e80b50bb2b313a2c84a3f375681e2870
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223770"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838826"
 ---
 # <a name="x64-software-conventions"></a>Conventions des logiciels x64
 
@@ -44,22 +44,21 @@ Bien qu’il soit possible d’accéder aux données avec n’importe quel align
 
 - Octaword-128 bits
 
-|||||
-|-|-|-|-|
 |Type scalaire|Type de données C|Taille de stockage (en octets)|Alignement recommandé|
-|**INT8**|**`char`**|1|Byte|
-|**DESTINÉES**|**`unsigned char`**|1|Byte|
-|**INT16**|**`short`**|2|Word|
-|**UINT16**|**`unsigned short`**|2|Word|
-|**ENTIER**|**`int`**, **`long`**|4|Mot|
-|**UINT32**|**unsigned int, unsigned long**|4|Mot|
-|**INT64**|**`__int64`**|8|Mot|
-|**UINT64**|**unsigned __int64**|8|Mot|
-|**FP32 (simple précision)**|**`float`**|4|Mot|
-|**FP64 (double précision)**|**`double`**|8|Mot|
-|**DIRIGÉ**|__\*__|8|Mot|
-|**`__m64`**|**__m64 de struct**|8|Mot|
-|**`__m128`**|**__m128 de struct**|16|Octaword|
+|-|-|-|-|
+|**`INT8`**|**`char`**|1|Byte|
+|**`UINT8`**|**`unsigned char`**|1|Byte|
+|**`INT16`**|**`short`**|2|Word|
+|**`UINT16`**|**`unsigned short`**|2|Word|
+|**`INT32`**|**`int`**, **`long`**|4|Mot|
+|**`UINT32`**|**`unsigned int`**, **`unsigned long`**|4|Mot|
+|**`INT64`**|**`__int64`**|8|Mot|
+|**`UINT64`**|**`unsigned __int64`**|8|Mot|
+|**`FP32`** (simple précision)|**`float`**|4|Mot|
+|**`FP64`** (double précision)|**`double`**|8|Mot|
+|**`POINTER`**|__\*__|8|Mot|
+|**`__m64`**|**`struct __m64`**|8|Mot|
+|**`__m128`**|**`struct __m128`**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Agrégats et unions
 
@@ -79,22 +78,21 @@ D’autres types, tels que des tableaux, des structs et des unions, ont des exig
 
 Le tableau suivant indique l’alignement fortement suggéré pour les membres scalaires des unions et des structures.
 
-||||
-|-|-|-|
 |Type scalaire|Type de données C|Alignement requis|
-|**INT8**|**`char`**|Byte|
-|**DESTINÉES**|**`unsigned char`**|Byte|
-|**INT16**|**`short`**|Word|
-|**UINT16**|**`unsigned short`**|Word|
-|**ENTIER**|**`int`**, **`long`**|Mot|
-|**UINT32**|**unsigned int, unsigned long**|Mot|
-|**INT64**|**`__int64`**|Mot|
-|**UINT64**|**unsigned __int64**|Mot|
-|**FP32 (simple précision)**|**`float`**|Mot|
-|**FP64 (double précision)**|**`double`**|Mot|
-|**DIRIGÉ**|<strong>\*</strong>|Mot|
-|**`__m64`**|**__m64 de struct**|Mot|
-|**`__m128`**|**__m128 de struct**|Octaword|
+|-|-|-|
+|**`INT8`**|**`char`**|Byte|
+|**`UINT8`**|**`unsigned char`**|Byte|
+|**`INT16`**|**`short`**|Word|
+|**`UINT16`**|**`unsigned short`**|Word|
+|**`INT32`**|**`int`**, **`long`**|Mot|
+|**`UINT32`**|**`unsigned int`**, **`unsigned long`**|Mot|
+|**`INT64`**|**`__int64`**|Mot|
+|**`UINT64`**|**`unsigned __int64`**|Mot|
+|**`FP32`** (simple précision)|**`float`**|Mot|
+|**`FP64`** (double précision)|**`double`**|Mot|
+|**`POINTER`**|<strong>\*</strong>|Mot|
+|**`__m64`**|**`struct __m64`**|Mot|
+|**`__m128`**|**`struct __m128`**|Octaword|
 
 Les règles d’alignement d’agrégat suivantes s’appliquent :
 
@@ -191,9 +189,8 @@ L’architecture x64 fournit pour 16 registres à usage général (ci-après app
 
 Le tableau suivant explique comment chaque registre est utilisé dans les appels de fonction :
 
-||||
+|S’inscrire|Statut|Utilisation|
 |-|-|-|
-|Inscrire|Statut|Utilisation|
 |RAX|Volatil|Registre des valeurs de retour|
 |RCX|Volatil|Premier argument entier|
 |RDX|Volatil|Deuxième argument entier|

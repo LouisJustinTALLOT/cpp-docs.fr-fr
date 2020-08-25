@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1fe8e59c85e0c6b00bff4de639267a44c6ae369e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229894"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838800"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Utiliser l’ensemble d’outils Microsoft C++ à partir de la ligne de commande
 
@@ -137,7 +137,7 @@ Cet argument facultatif spécifie l’architecture hôte et cible à utiliser. S
 
 |*architecture*|Compilateur|Architecture de l’ordinateur hôte|Architecture (cible) de sortie de build|
 |----------------------------|--------------|----------------------------------|-------------------------------|
-|**systèmes**|natif 32 bits x86|x86, x64|x86|
+|**x86**|natif 32 bits x86|x86, x64|x86|
 |**x86\_amd64** ou **x86\_x64**|x64 sur x86 croisé|x86, x64|x64|
 |**x86_arm**|ARM sur x86 croisé|x86, x64|ARM|
 |**x86_arm64**|ARM64 sur x86 croisé|x86, x64|ARM64|
@@ -172,7 +172,7 @@ Utilisez **-vcvars_ver = 14.1 x. yyyyy** pour spécifier une version spécifique
 
 Utilisez **-vcvars_ver = 14.0** pour spécifier l’ensemble d’outils du compilateur Visual Studio 2015.
 
-#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a>Pour configurer l’environnement de génération dans une fenêtre d’invite de commandes existante
+#### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a> Pour configurer l’environnement de génération dans une fenêtre d’invite de commandes existante
 
 1. À l’invite de commandes, utilisez la commande CD pour accéder au répertoire d’installation de Visual Studio. Ensuite, réutilisez CD pour accéder au sous-répertoire qui contient les fichiers de commandes propres à la configuration. Pour Visual Studio 2019 et Visual Studio 2017, utilisez le sous-répertoire de * \\ \\ Build auxiliaire VC* . Pour Visual Studio 2015, utilisez le sous-répertoire *VC* .
 
@@ -237,7 +237,7 @@ Utilisez l'éditeur de liens (link.exe) pour lier les bibliothèques et les fich
 [NMAKE](reference/nmake-reference.md)<br/>
 Utilisez NMAKE (nmake.exe) sur Windows pour générer des projets C++ basés sur un makefile traditionnel.
 
-Lorsque vous générez sur la ligne de commande, la commande F1 n’est pas disponible pour l’aide instantanée. Au lieu de cela, vous pouvez utiliser un moteur de recherche pour obtenir des informations sur les avertissements, les erreurs et les messages. Vous pouvez également télécharger et utiliser les fichiers d’aide hors connexion. Pour utiliser la recherche dans [docs.Microsoft.com](https://docs.microsoft.com/cpp/), entrez votre requête dans la zone de recherche en haut de l’article.
+Lorsque vous générez sur la ligne de commande, la commande F1 n’est pas disponible pour l’aide instantanée. Au lieu de cela, vous pouvez utiliser un moteur de recherche pour obtenir des informations sur les avertissements, les erreurs et les messages. Vous pouvez également télécharger et utiliser les fichiers d’aide hors connexion. Pour utiliser la recherche dans docs.microsoft.com, entrez votre requête dans la zone de recherche en haut de l’article.
 
 ## <a name="command-line-project-management-tools"></a>Outils de gestion de projet en ligne de commande
 

@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: f6b5182fdc451217e2f61642f96e77f679c45d37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216503"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838345"
 ---
 # <a name="cdatasource-class"></a>CDataSource, classe
 
@@ -73,7 +73,7 @@ Correspond à un objet de source de données OLE DB, qui représente une connexi
 class CDataSource
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -81,7 +81,7 @@ class CDataSource
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[Close](#close)|Ferme la connexion.|
 |[GetInitializationString](#getinitializationstring)|Récupère la chaîne d’initialisation de la source de données qui est actuellement ouverte.|
@@ -99,7 +99,7 @@ Une ou plusieurs sessions de base de données peuvent être créées pour une se
 
 Pour obtenir un exemple d’utilisation de `CDataSource` , consultez l’exemple [CatDB](../../overview/visual-cpp-samples.md) .
 
-## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource :: Close
+## <a name="cdatasourceclose"></a><a name="close"></a> CDataSource :: Close
 
 Ferme la connexion en relâchant le `m_spInit` pointeur.
 
@@ -109,7 +109,7 @@ Ferme la connexion en relâchant le `m_spInit` pointeur.
 void Close() throw();
 ```
 
-## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a>CDataSource :: GetInitializationString
+## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a> CDataSource :: GetInitializationString
 
 Récupère la chaîne d’initialisation d’une source de données qui est actuellement ouverte.
 
@@ -128,7 +128,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 *bIncludePassword*<br/>
 [in] **`true`** Si la chaîne contient un mot de passe ; Sinon, **`false`** .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -136,7 +136,7 @@ HRESULT standard.
 
 La chaîne d’initialisation résultante peut être utilisée pour rouvrir ultérieurement cette connexion à la source de données.
 
-## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a>CDataSource :: GetProperties
+## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a> CDataSource :: GetProperties
 
 Retourne les informations de propriété demandées pour l’objet de source de données connecté.
 
@@ -153,7 +153,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 Consultez [IDBProperties :: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -161,7 +161,7 @@ HRESULT standard.
 
 Pour obtenir une seule propriété, utilisez [GetProperty](../../data/oledb/cdatasource-getproperty.md).
 
-## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a>CDataSource :: GetProperty
+## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource :: GetProperty
 
 Retourne la valeur d’une propriété spécifiée pour l’objet de source de données connecté.
 
@@ -184,7 +184,7 @@ dans ID de propriété de la propriété à retourner.
 *pVariant*<br/>
 à Pointeur vers le variant où `GetProperty` retourne la valeur de la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -192,7 +192,7 @@ HRESULT standard.
 
 Pour afficher plusieurs propriétés, utilisez [GetProperties](../../data/oledb/cdatasource-getproperties.md).
 
-## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource :: Open
+## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource :: Open
 
 Ouvre une connexion à une source de données à l’aide d’un `CLSID` `ProgID` `CEnumerator` moniker, ou ou invite l’utilisateur à utiliser une boîte de dialogue de localisateur.
 
@@ -240,7 +240,7 @@ HRESULT Open(LPCSTR szProgID,
 #### <a name="parameters"></a>Paramètres
 
 *clsid*<br/>
-dans `CLSID`Du fournisseur de données.
+dans `CLSID` Du fournisseur de données.
 
 *pPropSet*<br/>
 dans Pointeur vers un tableau de structures [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) contenant des propriétés et des valeurs à définir. Consultez [jeux de propriétés et groupes de propriétés](/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* dans le SDK Windows.
@@ -272,7 +272,7 @@ dans Objet [CEnumerator](../../data/oledb/cenumerator-class.md) utilisé pour ob
 *dwPromptOptions*<br/>
 [in] Détermine le style de la boîte de dialogue de recherche à afficher. Consultez Msdasc.h pour connaître les valeurs possibles.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -288,7 +288,7 @@ Le code suivant montre comment ouvrir une source de données Jet 4.0 avec les m
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a>CDataSource :: OpenFromFileName
+## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a> CDataSource :: OpenFromFileName
 
 Ouvre une source de données à partir d'un fichier spécifié par le nom de fichier fourni par l'utilisateur.
 
@@ -305,7 +305,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 
 Pour plus d’informations sur les fichiers de liaison de données (fichiers. udl), consultez [vue d’ensemble](/previous-versions/windows/desktop/ms718102(v=vs.85)) de l’API de liaison de données dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -313,7 +313,7 @@ HRESULT standard.
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez la référence OLE DB dans le [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a>CDataSource :: OpenFromInitializationString
+## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a> CDataSource :: OpenFromInitializationString
 
 Ouvre une source de données spécifiée par la chaîne d’initialisation fournie par l’utilisateur.
 
@@ -334,7 +334,7 @@ dans Si cet argument a la valeur **`true`** , `OpenFromInitializationString` aff
 
 La valeur par défaut est **`false`** , qui spécifie que l’utilisateur n’est jamais invité (définit DBPROP_INIT_PROMPT pour DBPROMPT_NOPROMPT).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -342,7 +342,7 @@ HRESULT standard.
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc.
 
-## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a>CDataSource :: OpenWithPromptFileName
+## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a> CDataSource :: OpenWithPromptFileName
 
 Cette méthode présente une invite à l'utilisateur sous la forme d'une boîte de dialogue, puis ouvre une source de données correspondant au fichier spécifié par l'utilisateur.
 
@@ -365,7 +365,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 *szInitialDirectory*<br/>
 [in] Répertoire initial à afficher dans la boîte de dialogue de recherche.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -373,7 +373,7 @@ HRESULT standard.
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez la référence OLE DB dans le [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a>CDataSource :: OpenWithServiceComponents
+## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a> CDataSource :: OpenWithServiceComponents
 
 Ouvre un objet source de données à l'aide des composants de service d'oledb32.dll.
 
@@ -392,7 +392,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 #### <a name="parameters"></a>Paramètres
 
 *clsid*<br/>
-dans `CLSID`D’un fournisseur de données.
+dans `CLSID` D’un fournisseur de données.
 
 *szProgID*<br/>
 [in] ID de programme d'un fournisseur de données.
@@ -403,7 +403,7 @@ dans Pointeur vers un tableau de structures [DBPROPSET](/previous-versions/windo
 *ulPropSets*<br/>
 dans Nombre de structures [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passées dans l’argument *pPropSet* . Si la valeur est égale à zéro, le fournisseur ignore *pPropset*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 

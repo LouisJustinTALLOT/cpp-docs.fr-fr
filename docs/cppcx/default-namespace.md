@@ -2,16 +2,16 @@
 title: espace de noms par défaut
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5696730bcef08ad11be4a2b689e95eb3c13e11eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740517"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845703"
 ---
 # <a name="default-namespace"></a>espace de noms par défaut
 
-L' `default` espace de noms portée les types intégrés qui sont pris en charge C++par/CX.
+L' `default` espace de noms portée les types intégrés qui sont pris en charge par C++/CX.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,12 +23,12 @@ namespace default;
 
 Tous les types intégrés héritent des membres suivants.
 
-|||
-|-|-|
-|[default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md)|Détermine si l'objet spécifié est identique à l'objet actuel.|
-|[default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|Retourne le code de hachage de cette instance.|
-|[default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md)|Retourne une chaîne qui représente le type actuel.|
-|[default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md)|Retourne une chaîne qui représente le type actuel.|
+| Nom | Description |
+|--|--|
+| [default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md) | Détermine si l'objet spécifié est égal à l'objet actuel. |
+| [default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md) | Retourne le code de hachage de cette instance. |
+| [default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md) | Retourne une chaîne qui représente le type actuel. |
+| [default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md) | Retourne une chaîne qui représente le type actuel. |
 
 ### <a name="built-in-types"></a>Types intégrés
 
@@ -43,12 +43,12 @@ Tous les types intégrés héritent des membres suivants.
 |`int8`|Valeur numérique signée 8 bits.|
 |`uint16`|Entier non signé 16 bits.|
 |`uint32`|Entier non signé 32 bits.|
-|`uint64`|Entier non signé 64 bits.|
+|`uint64`|Entier 64 bits non signé.|
 |`uint8`|Valeur numérique non signée 8 bits.|
 
 ### <a name="requirements"></a>Configuration requise
 
-**En-tête :** vccorlib.h
+**En-tête** : vccorlib.h
 
 ## <a name="see-also"></a>Voir aussi
 

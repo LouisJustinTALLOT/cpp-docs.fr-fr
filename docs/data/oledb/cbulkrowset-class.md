@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c1c7bc381d30f701bad123807689b08ea47f65d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212121"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838462"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset, classe
 
@@ -118,7 +118,7 @@ class CBulkRowset : public CRowset<TAccessor>
 *TAccessor*<br/>
 Classe d’accesseur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -126,7 +126,7 @@ Classe d’accesseur.
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[AddRefRows](#addrefrows)|Incrémente le décompte de références.|
 |[CBulkRowset](#cbulkrowset)|Constructeur.|
@@ -136,16 +136,16 @@ Classe d’accesseur.
 |[MovePrev](#moveprev)|Passe à la ligne précédente.|
 |[MoveToBookmark](#movetobookmark)|Extrait la ligne marquée par un signet ou la ligne à un décalage spécifié à partir de ce signet.|
 |[MoveToRatio](#movetoratio)|Extrait des lignes à partir d’une position fractionnaire dans l’ensemble de lignes.|
-|[ReleaseRows](#releaserows)|Affecte à la ligne actuelle (`m_nCurrentRow`) la valeur zéro et libère toutes les lignes.|
+|[ReleaseRows](#releaserows)|Définit la ligne actuelle ( `m_nCurrentRow` ) à zéro et libère toutes les lignes.|
 |[SetRows](#setrows)|Définit le nombre de handles de ligne à récupérer par un appel.|
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre l’utilisation de la classe `CBulkRowset`.
+L’exemple suivant illustre l’utilisation de la `CBulkRowset` classe.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset :: AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a> CBulkRowset :: AddRefRows
 
 Appelle [IRowset :: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) pour incrémenter le décompte de références pour toutes les lignes récupérées actuellement de l’ensemble de lignes en bloc.
 
@@ -159,9 +159,9 @@ HRESULT AddRefRows() throw();
 
 HRESULT standard.
 
-## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset :: CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a> CBulkRowset :: CBulkRowset
 
-Crée un objet `CBulkRowset` et définit le nombre de lignes par défaut sur 10.
+Crée un nouvel `CBulkRowset` objet et définit le nombre de lignes par défaut sur 10.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -169,7 +169,7 @@ Crée un objet `CBulkRowset` et définit le nombre de lignes par défaut sur 10.
 CBulkRowset();
 ```
 
-## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset :: MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a> CBulkRowset :: MoveFirst
 
 Récupère la première ligne de données.
 
@@ -183,7 +183,7 @@ HRESULT MoveFirst() throw();
 
 HRESULT standard.
 
-## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset :: MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a> CBulkRowset :: MoveLast
 
 Passe à la dernière ligne.
 
@@ -197,7 +197,7 @@ HRESULT MoveLast() throw();
 
 HRESULT standard.
 
-## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset :: MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a> CBulkRowset :: MoveNext
 
 Récupère la ligne de données suivante.
 
@@ -211,7 +211,7 @@ HRESULT MoveNext() throw();
 
 HRESULT standard. Lorsque la fin de l’ensemble de lignes a été atteinte, retourne DB_S_ENDOFROWSET.
 
-## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset :: MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a> CBulkRowset :: MovePrev
 
 Passe à la ligne précédente.
 
@@ -225,7 +225,7 @@ HRESULT MovePrev() throw();
 
 HRESULT standard.
 
-## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset :: MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a> CBulkRowset :: MoveToBookmark
 
 Extrait la ligne marquée par un signet ou la ligne à un décalage spécifié (*lSkip*) à partir de ce signet.
 
@@ -238,17 +238,17 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Paramètres
 
-*Signet*<br/>
+*bookmark*<br/>
 dans Signet marquant l’emplacement à partir duquel vous souhaitez extraire des données.
 
 *lSkip*<br/>
 dans Nombre de lignes du signet à la ligne cible. Si *lSkip* est égal à zéro, la première ligne extraite est la ligne avec signet. Si *lSkip* est 1, la première ligne extraite est la ligne qui suit la ligne marquée par un signet. Si *lSkip* est-1, la première ligne extraite est la ligne avant la ligne avec signet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Consultez [IRowset :: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset :: MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a> CBulkRowset :: MoveToRatio
 
 Extrait des lignes à partir d’une position fractionnaire dans l’ensemble de lignes.
 
@@ -267,19 +267,19 @@ dans Numérateur utilisé pour déterminer la position fractionnaire à partir d
 *nDenominator*<br/>
 dans Dénominateur utilisé pour déterminer la position fractionnaire à partir de laquelle récupérer des données.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-`MoveToRatio` extrait les lignes approximativement en fonction de la formule suivante :
+`MoveToRatio` Récupère les lignes approximativement en fonction de la formule suivante :
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule dépend du fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll :: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
+Où `RowsetSize` est la taille de l’ensemble de lignes, mesurée en lignes. La précision de cette formule dépend du fournisseur spécifique. Pour plus d’informations, consultez [IRowsetScroll :: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset :: ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a> CBulkRowset :: ReleaseRows
 
 Appelle [IRowset :: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) pour décrémenter le décompte de références pour toutes les lignes récupérées actuellement de l’ensemble de lignes en bloc.
 
@@ -293,7 +293,7 @@ HRESULT ReleaseRows() throw();
 
 HRESULT standard.
 
-## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset :: SetRows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a> CBulkRowset :: SetRows
 
 Définit le nombre de handles de ligne récupérés par chaque appel.
 
@@ -314,5 +314,5 @@ Si vous appelez cette fonction, elle doit être avant l’ouverture de l’ensem
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

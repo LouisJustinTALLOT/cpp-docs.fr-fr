@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 217690e09ed595bb9fa9572693bf774259c42412
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: efa90acd169aeb8739b0bf97a5ab27026cc80cc6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219025"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831981"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Prise en charge des jeux de caractères Unicode et MBCS (Multibyte Character Set)
 
@@ -33,17 +33,38 @@ L’ensemble de la bibliothèque de classes MFC est activé de manière conditio
 
 Ces fichiers de bibliothèque, de débogueur et de DLL sont utilisés pour prendre en charge Unicode dans MFC :
 
-|||||
-|-|-|-|-|
-|UAFXCW. LIB|UAFXCW. PDBONLY|UAFXCWD. LIB|UAFXCWD. PDBONLY|
-|MFC*version*U. lib|MFC*version*U. pdb|*Version* MFCU.DLL|UD de*version*MFC. LIB|
-|UD de*version*MFC. PDBONLY|*Version* MFCUD.DLL|MFCS*version*U. lib|MFCS*version*U. pdb|
-|MFCS*version*ud. LIB|MFCS*version*ud. PDBONLY|MFCM*version*U. lib|MFCM*version*U. pdb|
-|*Version* de MFCMU.DLL|MFCM*version*ud. LIB|MFCM*version*ud. PDBONLY|*Version* de MFCMUD.DLL|
+:::row:::
+   :::column span="":::
+      MFC*version*U. lib \
+      UD de*version*MFC. LIB
+      MFCM*version*U. lib \
+      MFCM*version*ud. LIB
+      MFCS*version*U. lib \
+      MFCS*version*ud. LIB
+      UAFXCW. LIB
+      UAFXCWD. LIB
+   :::column-end:::
+   :::column span="":::
+      MFC*version*U. pdb \
+      UD de*version*MFC. Pdbonly
+      MFCM*version*U. pdb \
+      MFCM*version*ud. Pdbonly
+      MFCS*version*U. pdb \
+      MFCS*version*ud. Pdbonly
+      UAFXCW. Pdbonly
+      UAFXCWD. PDBONLY
+   :::column-end:::
+   :::column span="":::
+      *Version* MFCU.DLL \
+      *Version* MFCUD.DLL \
+      *Version* MFCMU.DLL \
+      *Version* de MFCMUD.DLL
+   :::column-end:::
+:::row-end:::
 
 (*version* représente le numéro de version du fichier ; par exemple, « 140 » correspond à la version 14,0.)
 
-`CString`est basé sur le type de données TCHAR. Si le symbole _UNICODE est défini pour une génération de votre programme, TCHAR est défini en tant que type **`wchar_t`** , un type d’encodage de caractères de 16 bits. Dans le cas contraire, TCHAR est défini comme **`char`** , l’encodage de caractères standard de 8 bits. Par conséquent, sous Unicode, un `CString` est composé de caractères 16 bits. Sans Unicode, elle est composée de caractères de type **`char`** .
+`CString` est basé sur le type de données TCHAR. Si le symbole _UNICODE est défini pour une génération de votre programme, TCHAR est défini en tant que type **`wchar_t`** , un type d’encodage de caractères de 16 bits. Dans le cas contraire, TCHAR est défini comme **`char`** , l’encodage de caractères standard de 8 bits. Par conséquent, sous Unicode, un `CString` est composé de caractères 16 bits. Sans Unicode, elle est composée de caractères de type **`char`** .
 
 Pour effectuer la programmation Unicode de votre application, vous devez également :
 
@@ -59,9 +80,9 @@ Pour effectuer la programmation Unicode de votre application, vous devez égalem
 
   - Utilisez LPTSTR là où vous utiliseriez **`char`** <strong>\*</strong> .
 
-  - Utilisez LPCTSTR là où vous utiliserez **const char** <strong>\*</strong> . `CString`fournit à l’opérateur LPCTSTR la conversion entre `CString` et LPCTSTR.
+  - Utilisez LPCTSTR là où vous utiliseriez **`const char`** <strong>\*</strong> . `CString` fournit à l’opérateur LPCTSTR la conversion entre `CString` et LPCTSTR.
 
-`CString`fournit également des constructeurs, des opérateurs d’assignation et des opérateurs de comparaison compatibles Unicode.
+`CString` fournit également des constructeurs, des opérateurs d’assignation et des opérateurs de comparaison compatibles Unicode.
 
 La [référence](../c-runtime-library/c-run-time-library-reference.md) de la bibliothèque Runtime définit les versions portables de toutes ses fonctions de gestion de chaînes. Pour plus d’informations, consultez l' [internationalisation](../c-runtime-library/internationalization.md)de la catégorie.
 
@@ -78,9 +99,9 @@ Sous DBCS, une chaîne donnée peut contenir tous les caractères ANSI codés su
 > [!NOTE]
 > La sérialisation de chaînes Unicode dans MFC peut lire des chaînes Unicode et MBCS, quelle que soit la version de l’application que vous exécutez. Vos fichiers de données sont portables entre les versions Unicode et MBCS de votre programme.
 
-`CString`les fonctions membres utilisent des versions spéciales « texte générique » des fonctions runtime C qu’elles appellent, ou elles utilisent des fonctions compatibles Unicode. Par exemple, si une fonction appelle `CString` généralement `strcmp` , elle appelle la fonction de texte générique correspondante à la `_tcscmp` place. Selon la façon dont les symboles _MBCS et _UNICODE sont définis, `_tcscmp` correspond à ce qui suit :
+`CString` les fonctions membres utilisent des versions spéciales « texte générique » des fonctions runtime C qu’elles appellent, ou elles utilisent des fonctions compatibles Unicode. Par exemple, si une fonction appelle `CString` généralement `strcmp` , elle appelle la fonction de texte générique correspondante à la `_tcscmp` place. Selon la façon dont les symboles _MBCS et _UNICODE sont définis, `_tcscmp` correspond à ce qui suit :
 
-|||
+|symboles|Fonction|
 |-|-|
 |_MBCS défini|`_mbscmp`|
 |_UNICODE défini|`wcscmp`|
