@@ -5,10 +5,10 @@ ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
 ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 08/24/2020
 ms.locfileid: "87232194"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>Re-bienvenue dans C++ - C++ moderne
@@ -52,7 +52,7 @@ Dans la mesure du possible, utilisez un pointeur intelligent lors de l’allocat
 
 Les chaînes de style C représentent une autre source importante de bogues. À l’aide [ `std::string` de et `std::wstring` ](../standard-library/basic-string-class.md)de, vous pouvez éliminer pratiquement toutes les erreurs associées aux chaînes de style C. Vous bénéficiez également de l’avantage des fonctions membres pour la recherche, l’ajout, le préattente, etc. Les deux sont hautement optimisés pour la vitesse. Lors du passage d’une chaîne à une fonction qui requiert uniquement un accès en lecture seule, en C++ 17, vous pouvez utiliser [`std::string_view`](../standard-library/basic-string-view-class.md) pour un gain de performances encore plus important.
 
-## <a name="stdvector-and-other-standard-library-containers"></a>`std::vector`et d’autres conteneurs de bibliothèque standard
+## <a name="stdvector-and-other-standard-library-containers"></a>`std::vector` et d’autres conteneurs de bibliothèque standard
 
 Les conteneurs de la bibliothèque standard suivent tous le principe du RAII. Ils fournissent des itérateurs pour un parcours sécurisé des éléments. De plus, ils sont hautement optimisés pour les performances et ont été soigneusement testés pour l’exactitude. À l’aide de ces conteneurs, vous éliminez les risques de bogues ou d’inefficacités qui peuvent être introduits dans des structures de données personnalisées. Au lieu de tableaux bruts, utilisez [`vector`](../standard-library/vector-class.md) en tant que conteneur séquentiel en C++.
 
@@ -104,7 +104,7 @@ sort( v.begin(), v.end(), comp );
 auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
-## <a name="auto-instead-of-explicit-type-names"></a>`auto`au lieu de noms de types explicites
+## <a name="auto-instead-of-explicit-type-names"></a>`auto` au lieu de noms de types explicites
 
 C++ 11 a introduit le [`auto`](auto-cpp.md) mot clé à utiliser dans les déclarations de variable, de fonction et de modèle. **`auto`** indique au compilateur de déduire le type de l’objet afin que vous n’ayez pas à le taper explicitement. **`auto`** est particulièrement utile lorsque le type déduit est un modèle imbriqué :
 
@@ -139,7 +139,7 @@ int main()
 }
 ```
 
-## <a name="constexpr-expressions-instead-of-macros"></a>`constexpr`expressions au lieu de macros
+## <a name="constexpr-expressions-instead-of-macros"></a>`constexpr` expressions au lieu de macros
 
 Les macros en C et C++ sont des jetons traités par le préprocesseur avant la compilation. Chaque instance d’un jeton de macro est remplacée par la valeur ou l’expression définie avant la compilation du fichier. Les macros sont couramment utilisées dans la programmation de style C pour définir des valeurs constantes au moment de la compilation. Toutefois, les macros sont sujettes aux erreurs et difficiles à déboguer. Dans le C++ moderne, vous devez préférer [`constexpr`](constexpr-cpp.md) les variables pour les constantes au moment de la compilation :
 
@@ -150,7 +150,7 @@ constexpr int size = 10; // modern C++
 
 ### <a name="uniform-initialization"></a>Initialisation uniforme
 
-Dans le C++ moderne, vous pouvez utiliser l’initialisation des accolades pour n’importe quel type. Cette forme d’initialisation est particulièrement pratique lors de l’initialisation de tableaux, de vecteurs ou d’autres conteneurs. Dans l’exemple suivant, `v2` est initialisé avec trois instances de `S` . `v3`est initialisé avec trois instances de `S` qui sont elles-mêmes initialisées à l’aide d’accolades. Le compilateur déduit le type de chaque élément en fonction du type déclaré de `v3` .
+Dans le C++ moderne, vous pouvez utiliser l’initialisation des accolades pour n’importe quel type. Cette forme d’initialisation est particulièrement pratique lors de l’initialisation de tableaux, de vecteurs ou d’autres conteneurs. Dans l’exemple suivant, `v2` est initialisé avec trois instances de `S` . `v3` est initialisé avec trois instances de `S` qui sont elles-mêmes initialisées à l’aide d’accolades. Le compilateur déduit le type de chaque élément en fonction du type déclaré de `v3` .
 
 ```cpp
 #include <vector>
@@ -210,7 +210,7 @@ Le C++ moderne met en évidence les exceptions plutôt que les codes d’erreur 
 
 Utilisez la structure de la bibliothèque standard C++ [`std::atomic`](../standard-library/atomic-structure.md) et les types associés pour les mécanismes de communication entre threads.
 
-## <a name="stdvariant-c17"></a>`std::variant`(C++ 17)
+## <a name="stdvariant-c17"></a>`std::variant` (C++ 17)
 
 Les unions sont couramment utilisées dans la programmation de style C pour économiser la mémoire en permettant aux membres de types différents d’occuper le même emplacement de mémoire. Toutefois, les unions ne sont pas de type sécurisé et sont sujettes à des erreurs de programmation. C++ 17 introduit la [`std::variant`](../standard-library/variant-class.md) classe comme une alternative plus robuste et plus sûre aux unions. La [`std::visit`](../standard-library/variant-functions.md#visit) fonction peut être utilisée pour accéder aux membres d’un `variant` type de façon sécurisée.
 
