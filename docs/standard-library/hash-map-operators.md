@@ -5,24 +5,24 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: 6c0ec796265f462fe386962c0b2e8288f41da628
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b0884cacb11299f96d539c8c83a1fc9fa2840d16
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222431"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844390"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt;, opérateurs
 
-|||
-|-|-|
-|[opérateur ! =](#op_neq)|[opérateur ! = (Multimap)](#op_neq_mm)|
-|[opérateur = =](#op_eq_eq)|[opérateur = = (Multimap)](#op_eq_eq_mm)|
+[opérateur ! =](#op_neq)\
+[opérateur ! = (Multimap)](#op_neq_mm)\
+[opérateur = =](#op_eq_eq)\
+[opérateur = = (Multimap)](#op_eq_eq_mm)
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](unordered-map-class.md).
+> Cette API est obsolète. L’alternative est [unordered_map, classe](unordered-map-class.md).
 
 Vérifie si l’objet hash_map situé à gauche de l’opérateur n’est pas égal à l’objet hash_map situé à droite.
 
@@ -33,12 +33,12 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `hash_map`.
+Objet de type `hash_map`.
 
 *Oui*\
-Objet de type `hash_map`.
+Objet de type `hash_map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les hash_maps ne sont pas égales ; **`false`** si les hash_maps sont égales.
 
@@ -88,10 +88,10 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](unordered-map-class.md).
+> Cette API est obsolète. L’alternative est [unordered_map, classe](unordered-map-class.md).
 
 Vérifie si l’objet hash_map situé à gauche de l’opérateur est égal à l’objet hash_map situé à droite.
 
@@ -102,12 +102,12 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `hash_map`.
+Objet de type `hash_map`.
 
 *Oui*\
-Objet de type `hash_map`.
+Objet de type `hash_map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le hash_map situé à gauche de l’opérateur est égal au hash_map situé à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -155,10 +155,10 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>opérateur ! = (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a> opérateur ! = (hash_multimap)
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multimap Class](unordered-multimap-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multimap Class](unordered-multimap-class.md).
 
 Vérifie si l’objet hash_multimap situé à gauche de l’opérateur n’est pas égal à l’objet hash_multimap situé à droite.
 
@@ -169,12 +169,12 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `hash_multimap`.
+Objet de type `hash_multimap`.
 
 *Oui*\
-Objet de type `hash_multimap`.
+Objet de type `hash_multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les hash_multimaps ne sont pas égales ; **`false`** si les hash_multimaps sont égales.
 
@@ -222,10 +222,10 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>opérateur = = (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a> opérateur = = (hash_multimap)
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multimap Class](unordered-multimap-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multimap Class](unordered-multimap-class.md).
 
 Vérifie si l’objet hash_multimap situé à gauche de l’opérateur est égal à l’objet hash_multimap situé à droite.
 
@@ -236,12 +236,12 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `hash_multimap`.
+Objet de type `hash_multimap`.
 
 *Oui*\
-Objet de type `hash_multimap`.
+Objet de type `hash_multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le hash_multimap situé à gauche de l’opérateur est égal au hash_multimap situé à droite de l’opérateur ; Sinon, **`false`** .
 

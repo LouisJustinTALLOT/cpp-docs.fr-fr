@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 9689d511760752903b83b34199fb035c0e7a8d37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9a04395aec8c2eb968e5cefaf410643a1ce03e32
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214046"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843584"
 ---
 # <a name="property-pages-mfc"></a>Pages de propriétés (MFC)
 
@@ -20,7 +20,7 @@ Ce mécanisme de mappage de données mappe les contrôles de page de propriété
 
 ### <a name="property-page-data-transfer"></a>Transfert de données de page de propriétés
 
-|||
+|Nom|Description|
 |-|-|
 |[DDP_CBIndex](#ddp_cbindex)|Lie l’index de la chaîne sélectionnée dans une zone de liste déroulante avec la propriété d’un contrôle.|
 |[DDP_CBString](#ddp_cbstring)|Lie la chaîne sélectionnée dans une zone de liste déroulante à la propriété d’un contrôle. La chaîne sélectionnée peut commencer par les mêmes lettres que la valeur de la propriété, mais elle n’a pas besoin de la faire correspondre entièrement.|
@@ -39,13 +39,13 @@ La liste suivante répertorie les macros utilisées pour créer et gérer les pa
 
 ### <a name="property-pages"></a>Pages de propriétés
 
-|||
+|Nom|Description|
 |-|-|
 |[BEGIN_PROPPAGEIDS](#begin_proppageids)|Commence la liste des ID de page de propriétés.|
 |[END_PROPPAGEIDS](#end_proppageids)|Termine la liste des ID de page de propriétés.|
 |[PROPPAGEID](#proppageid)|Déclare une page de propriétés de la classe de contrôle.|
 
-## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex
+## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a> DDP_CBIndex
 
 Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété entière avec l’index de la sélection actuelle dans une zone de liste déroulante de la page de propriétés.
 
@@ -75,11 +75,11 @@ Nom de la propriété du contrôle à échanger avec le contrôle de zone de lis
 
 Cette fonction doit être appelée avant l' `DDX_CBIndex` appel de fonction correspondant.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a>DDP_CBString
+## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a> DDP_CBString
 
 Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété de type chaîne avec la sélection actuelle dans une zone de liste déroulante de la page de propriétés.
 
@@ -109,11 +109,11 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_CBString` appel de fonction correspondant.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact
+## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a> DDP_CBStringExact
 
 Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété de type chaîne qui correspond exactement à la sélection actuelle dans une zone de liste déroulante de la page de propriétés.
 
@@ -143,11 +143,11 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_CBStringExact` appel de fonction correspondant.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="ddp_check"></a><a name="ddp_check"></a>DDP_Check
+## <a name="ddp_check"></a><a name="ddp_check"></a> DDP_Check
 
 Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur de la propriété avec le contrôle de case à cocher de la page de propriétés associée.
 
@@ -177,11 +177,11 @@ Nom de la propriété du contrôle à échanger avec le contrôle de case à coc
 
 Cette fonction doit être appelée avant l' `DDX_Check` appel de fonction correspondant.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex
+## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a> DDP_LBIndex
 
 Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété entière avec l’index de la sélection actuelle dans une zone de liste de la page de propriétés.
 
@@ -211,11 +211,11 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_LBIndex` appel de fonction correspondant.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a>DDP_LBString
+## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a> DDP_LBString
 
 Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété de type chaîne avec la sélection actuelle dans une zone de liste de la page de propriétés.
 
@@ -245,11 +245,11 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_LBString` appel de fonction correspondant.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact
+## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a> DDP_LBStringExact
 
 Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` pour synchroniser la valeur d’une propriété de type chaîne qui correspond exactement à la sélection actuelle dans une zone de liste de la page de propriétés.
 
@@ -279,11 +279,11 @@ Nom de la propriété du contrôle à échanger avec la chaîne de zone de liste
 
 Cette fonction doit être appelée avant l' `DDX_LBStringExact` appel de fonction correspondant.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing
+## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a> DDP_PostProcessing
 
 Appelez cette fonction dans la fonction de votre page de propriétés `DoDataExchange` , pour terminer le transfert des valeurs de propriété de la page de propriétés à votre contrôle lorsque les valeurs de propriété sont enregistrées.
 
@@ -302,11 +302,11 @@ Cette fonction doit être appelée une fois que toutes les fonctions d’échang
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="ddp_radio"></a><a name="ddp_radio"></a>DDP_Radio
+## <a name="ddp_radio"></a><a name="ddp_radio"></a> DDP_Radio
 
 Appelez cette fonction dans la fonction de votre contrôle `DoPropExchange` pour synchroniser la valeur de la propriété avec le contrôle de case d’option de la page de propriétés associée.
 
@@ -336,11 +336,11 @@ Nom de la propriété du contrôle à échanger avec le contrôle de case d’op
 
 Cette fonction doit être appelée avant l' `DDX_Radio` appel de fonction correspondant.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="ddp_text"></a><a name="ddp_text"></a>DDP_Text
+## <a name="ddp_text"></a><a name="ddp_text"></a> DDP_Text
 
 Appelez cette fonction dans la fonction de votre contrôle `DoDataExchange` pour synchroniser la valeur de la propriété avec le contrôle de page de propriétés associé.
 
@@ -412,11 +412,11 @@ Nom de la propriété du contrôle à échanger avec le contrôle spécifié par
 
 Cette fonction doit être appelée avant l' `DDX_Text` appel de fonction correspondant.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="begin_proppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS
+## <a name="begin_proppageids"></a><a name="begin_proppageids"></a> BEGIN_PROPPAGEIDS
 
 Commence la définition de la liste des ID de page de propriétés de votre contrôle.
 
@@ -438,11 +438,11 @@ Dans le fichier d’implémentation (. cpp) qui définit les fonctions membres p
 
 Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : pages de propriétés](../../mfc/mfc-activex-controls-property-pages.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="end_proppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS
+## <a name="end_proppageids"></a><a name="end_proppageids"></a> END_PROPPAGEIDS
 
 Termine la définition de votre liste d’ID de page de propriétés.
 
@@ -455,11 +455,11 @@ END_PROPPAGEIDS(class_name)
 *class_name*<br/>
 Nom de la classe de contrôle qui possède la page de propriétés.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="proppageid"></a><a name="proppageid"></a>PROPPAGEID
+## <a name="proppageid"></a><a name="proppageid"></a> PROPPAGEID
 
 Ajoute une page de propriétés à utiliser par votre contrôle OLE.
 
@@ -476,7 +476,7 @@ ID de classe unique d’une page de propriétés.
 
 Toutes les macros PROPPAGEID doivent être placées entre les macros BEGIN_PROPPAGEIDS et END_PROPPAGEIDS dans le fichier d’implémentation de votre contrôle.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 

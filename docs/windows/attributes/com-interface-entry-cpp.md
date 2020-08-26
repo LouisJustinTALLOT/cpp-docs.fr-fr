@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 06df146ea47428ee782da7a93c2da7097e110324
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8339afb97df57f5080629dfed08823c5c091c5a3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215346"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844117"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -103,16 +103,14 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Oui|
 |**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass` , `progid` ou `vi_progid` .|
-|**Attributs non valides**|None|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

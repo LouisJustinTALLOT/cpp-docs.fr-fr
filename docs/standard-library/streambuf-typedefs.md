@@ -5,20 +5,19 @@ f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 3c5dbefba8e2106c6e3e678002bce26fffd26a62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f08c08de0d6449714f953f5a65fadd2e0279ed44
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215619"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843194"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt;, typedefs
 
-|||
-|-|-|
-|[streambuf](#streambuf)|[wstreambuf](#wstreambuf)|
+[streambuf](#streambuf)\
+[wstreambuf](#wstreambuf)
 
-## <a name="streambuf"></a><a name="streambuf"></a>streambuf
+## <a name="streambuf"></a><a name="streambuf"></a> streambuf
 
 Spécialisation de `basic_streambuf` qui utilise **`char`** comme paramètres de modèle.
 
@@ -30,7 +29,7 @@ typedef basic_streambuf<char, char_traits<char>> streambuf;
 
 Le type est un synonyme du modèle de classe [basic_streambuf](../standard-library/basic-streambuf-class.md), spécialisé pour les éléments de type **`char`** avec des caractéristiques de caractère par défaut.
 
-## <a name="wstreambuf"></a><a name="wstreambuf"></a>wstreambuf (
+## <a name="wstreambuf"></a><a name="wstreambuf"></a> wstreambuf (
 
 Spécialisation de `basic_streambuf` qui utilise **`wchar_t`** comme paramètres de modèle.
 

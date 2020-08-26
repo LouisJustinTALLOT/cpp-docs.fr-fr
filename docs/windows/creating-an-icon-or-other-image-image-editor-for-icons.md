@@ -79,12 +79,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 931d84f16b46ea8fe21ecc0a63d20dac958ce960
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a331e310f031462c903546a2896317aae0c0d719
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160436"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843363"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Comment : créer une icône ou une autre image
 
@@ -94,7 +94,7 @@ Vous pouvez créer une image, une image bitmap, une icône, un curseur ou une ba
 
 Les icônes et curseurs sont des ressources graphiques qui peuvent contenir plusieurs images de différentes tailles et modèles de couleurs pour différents types de périphériques d’affichage. Un curseur a également une zone réactive, l’emplacement utilisé par Windows pour suivre sa position. Les icônes et les curseurs sont créés et modifiés à l’aide de l' **éditeur d’images**, comme les bitmaps et autres images.
 
-Lorsque vous créez une icône ou un curseur, l' **éditeur d’images** crée d’abord une image d’un type standard. Cette image est remplie initialement avec la couleur d’écran (transparente). Si l’image est un curseur, la zone réactive est initialement l’angle supérieur gauche avec les coordonnées `0,0`.
+Lorsque vous créez une icône ou un curseur, l' **éditeur d’images** crée d’abord une image d’un type standard. Cette image est remplie initialement avec la couleur d’écran (transparente). Si l’image est un curseur, la zone réactive est initialement l’angle supérieur gauche avec des coordonnées `0,0` .
 
 Par défaut, l' **éditeur d’images** prend en charge la création d’images supplémentaires pour les périphériques répertoriés dans le tableau suivant. Vous pouvez créer des images pour d’autres périphériques en tapant les paramètres de largeur, de hauteur et de nombre de couleurs dans la boîte de dialogue **image personnalisée** .
 
@@ -125,18 +125,33 @@ Lorsque vous ouvrez la ressource icône ou curseur dans l' [éditeur d’images]
 > [!NOTE]
 > Si votre projet ne contient pas déjà un fichier. RC, consultez [création d’un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
 
-La boîte de dialogue **nouveau type d’image&gt; d’appareil &lt;** vous permet de créer une nouvelle image d’appareil d’un type spécifié. Pour ouvrir la boîte de dialogue **nouvelle image du > de l’appareil \<** , accédez à **image** du menu > **nouveau type d’image**. Les propriétés suivantes sont incluses : **type d’image cible** et **personnalisé**.
+La boîte de dialogue **nouveau &lt; type d' &gt; image d’appareil** vous permet de créer une nouvelle image d’appareil d’un type spécifié. Pour ouvrir la boîte de dialogue **nouvelle \<Device> image** , accédez à **image**du menu  >  **nouveau type d’image**. Les propriétés suivantes sont incluses : **type d’image cible** et **personnalisé**.
 
 La propriété **type d’image cible** répertorie les types d’images disponibles dans lesquels vous sélectionnez le type d’image que vous souhaitez ouvrir :
 
-||||
-|-|-|-|
-|-16 x 16, 16 couleurs|-48 x 48, 16 couleurs|-96 x 96, 16 couleurs|
-|-16 x 16, 256 couleurs|-48 x 48, 256 couleurs|-96 x 96, 256 couleurs|
-|-16 x 16, monochrome|-48 x 48, monochrome|-96 x 96, monochrome|
-|-32 x 32, 16 couleurs|-64 x 64, 16 couleurs||
-|-32 x 32, 256 couleurs|-64 x 64, 256 couleurs||
-|-32 x 32, monochrome|-64 x 64, monochrome||
+:::row:::
+   :::column span="":::
+      16 x 16, 16 couleurs \
+      32 x 32, 16 couleurs \
+      48 x 48, 16 couleurs \
+      64 x 64, 16 couleurs \
+      96 x 96, 16 couleurs
+   :::column-end:::
+   :::column span="":::
+      16 x 16, 256 couleurs \
+      32 x 32, 256 couleurs \
+      48 x 48, 256 couleurs \
+      64 x 64, 256 couleurs \
+      96 x 96, 256 couleurs
+   :::column-end:::
+   :::column span="":::
+      16 x 16, monochrome \
+      32 x 32, monochrome \
+      48 x 48, monochrome \
+      64 x 64, monochrome \
+      96 x 96, monochrome
+   :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > Les images existantes ne seront pas affichées dans cette liste.
@@ -151,7 +166,7 @@ La boîte de dialogue **image personnalisée** vous permet de créer une image a
 |**Height**|Offre un espace vous permettant d’entrer la hauteur de l’image personnalisée en pixels (1-512, limite de 2048).|
 |**Couleurs**|Offre un espace vous permettant de choisir le nombre de couleurs pour l’image personnalisée : 2, 16 ou 256.|
 
-Utilisez la boîte de dialogue Ouvrir l’image de l'&gt; de l' **appareil &lt;** pour ouvrir des images de périphérique dans des C++ projets. Elle répertorie les images d’appareil existantes dans la ressource actuelle (les images qui font partie de la ressource actuelle). La propriété incluse est la suivante :
+Utilisez la boîte de dialogue **ouvrir l' &lt; &gt; image** de l’appareil pour ouvrir des images de périphérique dans des projets C++. Elle répertorie les images d’appareil existantes dans la ressource actuelle (les images qui font partie de la ressource actuelle). La propriété incluse est la suivante :
 
 |Propriété|Description|
 |---|---|
@@ -167,26 +182,26 @@ Utilisez la boîte de dialogue Ouvrir l’image de l'&gt; de l' **appareil &lt;*
 
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Pour ajouter une image pour un autre périphérique d’affichage
 
-1. Accédez à l' **image** du menu > **nouvelle image**de l’appareil, ou cliquez avec le bouton droit dans le volet de l' **éditeur d’images** et choisissez **nouvelle image**de l’appareil.
+1. Accédez à **image**  >  du menu**nouvelle image**de l’appareil, ou cliquez avec le bouton droit dans le volet de l' **éditeur d’images** et choisissez **nouvelle image**de l’appareil.
 
 1. Sélectionnez le type d’image que vous souhaitez ajouter. Vous pouvez également sélectionner **personnalisé** pour créer une icône dont la taille n’est pas disponible dans la liste par défaut.
 
 ### <a name="to-copy-a-device-image"></a>Pour copier une image d’appareil
 
-1. Accédez à l' **image** du menu > **ouvrir l’image** de l’appareil et choisissez une image dans la liste images actuelles. Par exemple, choisissez la version 32 × 32, 16 couleurs d’une icône.
+1. Accédez à **image**  >  du menu**ouvrir l’image** de l’appareil et choisissez une image dans la liste images actuelles. Par exemple, choisissez la version 32 × 32, 16 couleurs d’une icône.
 
-1. Copiez l’image de l’icône actuellement affichée (**Ctrl**+**C**).
+1. Copiez l’image de l’icône actuellement affichée (**CTRL** + **C**).
 
 1. Ouvrez une image différente de l’icône dans une autre fenêtre de l' **éditeur d’images** . Par exemple, ouvrez la version 16 x 16, 16 couleurs de l’icône.
 
-1. Collez l’image d’icône (**Ctrl**+**V**) d’une fenêtre de l' **éditeur d’images** à l’autre. Si vous collez une plus grande taille dans une taille plus petite, vous pouvez utiliser les poignées d’icône pour redimensionner l’image.
+1. Collez l’image d’icône (**CTRL** + **V**) d’une fenêtre de l' **éditeur d’images** à l’autre. Si vous collez une plus grande taille dans une taille plus petite, vous pouvez utiliser les poignées d’icône pour redimensionner l’image.
 
 ### <a name="to-delete-a-device-image"></a>Pour supprimer une image d’appareil
 
-Lorsque l’image de l’icône s’affiche dans l' **éditeur d’images**, accédez à l' **image** du menu > supprimer l’image de l' **appareil**. Lorsque vous supprimez la dernière image d’icône de la ressource, la ressource est également supprimée.
+Lorsque l’image de l’icône s’affiche dans l' **éditeur d’images**, accédez à **image**du menu supprimer l’image de l'  >  **appareil**. Lorsque vous supprimez la dernière image d’icône de la ressource, la ressource est également supprimée.
 
 > [!NOTE]
-> Lorsque vous appuyez sur la touche **Suppr** , les images et les couleurs que vous avez dessinées sur une icône sont supprimées, mais l’icône est conservée et vous pouvez maintenant la reconcevoir. Si vous appuyez sur la touche **Suppr** par erreur, appuyez sur **CTRL**+**Z** pour annuler l’action.
+> Lorsque vous appuyez sur la touche **Suppr** , les images et les couleurs que vous avez dessinées sur une icône sont supprimées, mais l’icône est conservée et vous pouvez maintenant la reconcevoir. Si vous appuyez sur la touche **Suppr** par erreur, appuyez sur **CTRL** + **Z** pour annuler l’action.
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Pour créer des régions transparentes ou inversées dans des images d’appareil
 
@@ -195,7 +210,7 @@ Dans l' [éditeur d’images](../windows/image-editor-for-icons.md), l’icône 
 L’écran et les couleurs inversées que vous appliquez aux icônes et aux curseurs se forment et colorent l’image dérivée ou affectent les régions inversées. Les couleurs indiquent les parties de l’image qui ont ces attributs. Vous pouvez modifier les couleurs qui représentent les attributs de couleur d’écran et de couleur inverse lors de la modification. Ces modifications n’affectent pas l’apparence de l’icône ou du curseur dans votre application.
 
 > [!NOTE]
-> Les boîtes de dialogue et les commandes de menu qui s’affichent peuvent être différentes de celles décrites dans l’**aide**, en fonction de vos paramètres actifs ou de l’édition utilisée. Pour modifier vos paramètres, accédez à **Outils** de menu > **paramètres d’importation et d’exportation**. Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Les boîtes de dialogue et les commandes de menu affichées peuvent différer de celles décrites dans **l’aide** en fonction de vos paramètres actifs ou de l’édition. Pour modifier vos paramètres, accédez à **Outils**de menu  >  **Importer et exporter les paramètres**. Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 #### <a name="to-create-transparent-or-inverse-regions"></a>Pour créer des régions transparentes ou inversées
 
@@ -224,7 +239,7 @@ L’écran et les couleurs inversées que vous appliquez aux icônes et aux curs
 
 1. Dans la [boîte de dialogue Insérer une ressource](../windows/add-resource-dialog-box.md), sélectionnez **icône** ou **curseur** , puis choisissez **nouveau**.
 
-1. Accédez à **image** du menu > **nouvelle image** de l’appareil et sélectionnez le style d’image 256 en couleurs de votre choix.
+1. Accédez à **image**  >  du menu**nouvelle image** de l’appareil et sélectionnez le style d’image 256 de couleur de votre choix.
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Pour choisir une couleur dans la palette de couleurs 256 pour les grandes icônes
 
@@ -237,11 +252,11 @@ Pour dessiner avec une sélection à partir de la palette de couleurs 256, vous 
    La couleur sélectionnée devient la couleur actuelle dans la palette de **couleurs** de la fenêtre **couleurs** .
 
    > [!NOTE]
-   > La palette initiale utilisée pour les images de couleur 256 correspond à la palette retournée par l’API Windows `CreateHalftonePalette`. Toutes les icônes destinées au shell Windows doivent utiliser cette palette pour empêcher le scintillement lors de la réalisation de la palette.
+   > La palette initiale utilisée pour les images de couleur 256 correspond à la palette retournée par l' `CreateHalftonePalette` API Windows. Toutes les icônes destinées au shell Windows doivent utiliser cette palette pour empêcher le scintillement lors de la réalisation de la palette.
 
 ### <a name="to-set-a-cursors-hot-spot"></a>Pour définir la zone réactive d’un curseur
 
-La zone réactive d’un curseur est le point auquel Windows fait référence pour suivre la position du curseur. Par défaut, la zone réactive est définie sur l’angle supérieur gauche du curseur, avec des coordonnées `0,0`. La propriété **hotspot** dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) affiche les coordonnées de la zone réactive.
+La zone réactive d’un curseur est le point auquel Windows fait référence pour suivre la position du curseur. Par défaut, la zone réactive est définie sur l’angle supérieur gauche du curseur avec des coordonnées `0,0` . La propriété **hotspot** dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) affiche les coordonnées de la zone réactive.
 
 1. Dans la [barre d’outils de l’éditeur d’images](../windows/toolbar-image-editor-for-icons.md), choisissez l’outil **définir la zone réactive** .
 
@@ -256,17 +271,17 @@ Lorsque vous créez une image bitmap, l’image est créée au format bitmap (. 
 > [!NOTE]
 > Ce processus ne s’applique pas aux icônes et aux curseurs.
 
-1. Accédez au menu **fichier** > **ouvrir**, puis sélectionnez **fichier**.
+1. Accédez à menu **fichier**  >  **ouvrir**, puis sélectionnez **fichier**.
 
-1. Dans la boîte de **dialogue nouveau fichier**, choisissez le dossier  **C++ visuel** , puis sélectionnez **fichier bitmap (. bmp)** dans la zone **modèles** et sélectionnez **ouvrir**.
+1. Dans la boîte de **dialogue nouveau fichier**, choisissez le dossier **Visual C++** , puis sélectionnez **fichier bitmap (. bmp)** dans la zone **modèles** et sélectionnez **ouvrir**.
 
    Le bitmap s’ouvre dans l' **éditeur d’images**.
 
 1. Apportez les modifications nécessaires à votre nouvelle image bitmap.
 
-1. Une fois l’image bitmap ouverte dans l' **éditeur d’images**, accédez à menu **fichier** > **Enregistrez *nom_fichier*. bmp sous**.
+1. Une fois l’image bitmap ouverte dans l' **éditeur d’images**, accédez à menu **fichier**  >  **Enregistrer *NomFichier*. bmp sous**.
 
-1. Dans la boîte de dialogue **enregistrer le fichier sous** , tapez le nom que vous souhaitez attribuer au fichier et l’extension qui dénote le format de fichier souhaité dans la zone **nom de fichier** . Par exemple, *MyFile. gif*.
+1. Dans la boîte de dialogue **enregistrer le fichier sous** , tapez le nom que vous souhaitez attribuer au fichier et l’extension qui dénote le format de fichier souhaité dans la zone **nom de fichier** . Par exemple, *myfile.gif*.
 
    > [!NOTE]
    > Vous devez créer ou ouvrir la bitmap en dehors de votre projet afin de l’enregistrer dans un autre format de fichier. Si vous le créez ou l’ouvrez dans votre projet, la commande **Enregistrer sous** n’est pas disponible. Pour plus d’informations, consultez [affichage des ressources dans un fichier de script de ressources en dehors d’un projet (autonome)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
@@ -279,13 +294,13 @@ Vous pouvez ouvrir des images GIF ou JPEG dans l' **éditeur d’images** et les
 
 1. Ouvrez l’image dans l' **éditeur d’images**.
 
-1. Accédez au menu **fichier** > **enregistrer le *nom* de fichier sous**.
+1. Accédez à **fichier**menu  >  **enregistrer le *nom* de fichier sous**.
 
 1. Dans la boîte de dialogue **enregistrer le fichier sous** , dans la zone **nom de fichier** , tapez le nom de fichier et l’extension qui désignent le format souhaité.
 
 1. Sélectionnez **Enregistrer**.
 
-### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Pour ajouter une nouvelle ressource image à un C++ projet non managé
+### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Pour ajouter une nouvelle ressource image à un projet C++ non managé
 
 1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* , puis choisissez **Insérer une ressource**. Si vous disposez déjà d’une ressource d’image dans votre fichier *. RC* , par exemple un curseur, vous pouvez simplement cliquer avec le bouton droit sur le dossier **curseur** et sélectionner **Insérer un curseur**.
 
@@ -305,9 +320,9 @@ Vous pouvez ouvrir des images GIF ou JPEG dans l' **éditeur d’images** et les
 
    La ressource est ajoutée à votre projet dans **Explorateur de solutions** et la ressource s’ouvre dans l' [éditeur d’images](../windows/image-editor-for-icons.md). Vous pouvez maintenant utiliser tous les outils disponibles dans l' **éditeur d’images** pour modifier votre image. Pour plus d’informations sur l’ajout d’images à un projet managé, consultez [chargement d’une image au moment du design](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-None
+Aucun
 
 ## <a name="see-also"></a>Voir aussi
 

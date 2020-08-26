@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: f28a850c365bc9a75d8e5b100e5e5cc0a1c5dc10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b28b7ee0038e4f828f43fcc3f0d49a2d9e092315
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404562"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844039"
 ---
 # <a name="ftmbase-class"></a>FtmBase (classe)
 
@@ -80,13 +80,13 @@ Pour plus d’informations, consultez [RuntimeClass, classe](runtimeclass-class.
 
 `FtmBase`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** FTM. h
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase :: Createglobalinterfacetable,
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a> FtmBase :: Createglobalinterfacetable,
 
 Crée une table d’interface globale (GIT).
 
@@ -101,15 +101,15 @@ static HRESULT CreateGlobalInterfaceTable(
 *git*<br/>
 Lorsque cette opération est terminée, il s’agit d’un pointeur vers une table d’interface globale.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [`IGlobalInterfaceTable`](https://docs.microsoft.com/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
+Pour plus d’informations, consultez [`IGlobalInterfaceTable`](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable).
 
-## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase ::D isconnectObject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a> FtmBase ::D isconnectObject
 
 Libère toutes les connexions externes à un objet de force. Le serveur de l’objet appelle l’implémentation de cette méthode de l’objet avant de s’arrêter.
 
@@ -124,11 +124,11 @@ STDMETHODIMP DisconnectObject(
 *dwReserved*<br/>
 Réservé pour une future utilisation ; doit être nul.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
-## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase :: FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a> FtmBase :: FtmBase
 
 Initialise une nouvelle instance de la classe `FtmBase`.
 
@@ -136,7 +136,7 @@ Initialise une nouvelle instance de la classe `FtmBase`.
 FtmBase();
 ```
 
-## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase :: GetMarshalSizeMax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a> FtmBase :: GetMarshalSizeMax
 
 Obtient la limite supérieure du nombre d’octets nécessaires pour marshaler le pointeur d’interface spécifié sur l’objet spécifié.
 
@@ -175,11 +175,11 @@ Indicateur précisant si les données à marshaler doivent être retransmises au
 *pSize*<br/>
 Lorsque cette opération est terminée, pointeur vers la limite supérieure de la quantité de données à écrire dans le flux de marshaling.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de réussite ; Sinon, E_FAIL ou E_NOINTERFACE.
 
-## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase :: GetUnmarshalClass
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a> FtmBase :: GetUnmarshalClass
 
 Obtient le CLSID utilisé par COM pour localiser la DLL contenant le code pour le proxy correspondant. COM charge cette DLL pour créer une instance non initialisée du proxy.
 
@@ -217,11 +217,11 @@ Lorsque cette opération est terminée, pointeur vers le CLSID à utiliser pour 
 
 *pCid*
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de réussite ; Sinon, S_FALSE.
 
-## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase :: MarshalInterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a> FtmBase :: MarshalInterface
 
 Écrit dans un flux les données requises pour initialiser un objet proxy dans un processus client.
 
@@ -260,7 +260,7 @@ Réservé pour une future utilisation ; doit être nul.
 *mshlflags*<br/>
 Spécifie si les données à marshaler doivent être retransmises au processus client (cas typique) ou écrites dans une table globale, où elles peuvent être récupérées par plusieurs clients.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK le pointeur d’interface a été marshalé avec succès.
 
@@ -270,7 +270,7 @@ STG_E_MEDIUMFULL le flux est plein.
 
 E_FAIL l’opération a échoué.
 
-## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase :: marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a> FtmBase :: marshaller_
 
 Contient une référence au marshaleur libre de threads.
 
@@ -278,7 +278,7 @@ Contient une référence au marshaleur libre de threads.
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase :: ReleaseMarshalData,
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a> FtmBase :: ReleaseMarshalData,
 
 Détruit un paquet de données marshalé.
 
@@ -293,11 +293,11 @@ STDMETHODIMP ReleaseMarshalData(
 *pStm*<br/>
 Pointeur vers un flux qui contient le paquet de données à détruire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
-## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase :: UnmarshalInterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a> FtmBase :: UnmarshalInterface
 
 Initialise un proxy nouvellement créé et retourne un pointeur d’interface vers ce proxy.
 
@@ -320,6 +320,6 @@ Référence à l’identificateur de l’interface à démarshaler.
 *ppv*<br/>
 Lorsque cette opération est terminée, il s’agit de l’adresse d’une variable pointeur qui reçoit le pointeur d’interface demandé dans *riid*. Si cette opération réussit, **PPV* contient le pointeur d’interface demandé de l’interface à démarshaler.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de réussite ; Sinon, E_NOINTERFACE ou E_FAIL.

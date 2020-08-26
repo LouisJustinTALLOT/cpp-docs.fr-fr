@@ -2,12 +2,12 @@
 title: Effectuer un cast (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: a51e02b59b2f7229193987f993edbccfb56b779d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e51f9e100be2096494e10aca38232dbd1576f40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233520"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843480"
 ---
 # <a name="casting-ccx"></a>Effectuer un cast (C++/CX)
 
@@ -108,16 +108,16 @@ Si vous utilisez **`reinterpret_cast`** pour effectuer une conversion à partir 
 
 Le tableau suivant récapitule les cas dans lesquels il est possible d’utiliser en toute sécurité **`reinterpret_cast`** . Dans tous les cas, le cast est sécurisé dans les deux sens.
 
-|||
-|-|-|
-|`HSTRING`|`String^`|
-|`HSTRING*`|`String^*`|
-|`IInspectable*`|`Object^`|
-|`IInspectable**`|`Object^*`|
-|`IInspectable-derived-type*`|`same-interface-from-winmd^`|
-|`IInspectable-derived-type**`|`same-interface-from-winmd^*`|
-|`IDefault-interface-of-RuntimeClass*`|`same-RefClass-from-winmd^`|
-|`IDefault-interface-of-RuntimeClass**`|`same-RefClass-from-winmd^*`|
+| Cast de, casté en | Cast en, Cast à partir de |
+|--|--|
+| `HSTRING` | `String^` |
+| `HSTRING*` | `String^*` |
+| `IInspectable*` | `Object^` |
+| `IInspectable**` | `Object^*` |
+| `IInspectable-derived-type*` | `same-interface-from-winmd^` |
+| `IInspectable-derived-type**` | `same-interface-from-winmd^*` |
+| `IDefault-interface-of-RuntimeClass*` | `same-RefClass-from-winmd^` |
+| `IDefault-interface-of-RuntimeClass**` | `same-RefClass-from-winmd^*` |
 
 ## <a name="see-also"></a>Voir aussi
 

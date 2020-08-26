@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 6c2c5d0d9b5b4193cc68421a6bd44755ca9bfc1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63a82e3b05100f273be04a8718f2ecbb1510f06f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214007"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844507"
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 
@@ -27,7 +27,7 @@ Pour plus d’informations sur ces services d’objets au moment de l’exécuti
 
 ### <a name="run-time-object-model-services-macros"></a>Macros des services du modèle objet au moment de l'exécution
 
-|||
+|Nom|Description|
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|Permet d'accéder aux informations sur la classe d'exécution (doit être utilisé dans la déclaration de classe).|
 |[DECLARE_DYNCREATE](#declare_dyncreate)|Permet la création dynamique et l'accès aux informations sur la classe d'exécution (doit être utilisé dans la déclaration de classe).|
@@ -43,7 +43,7 @@ La bibliothèque MFC fournit deux macros spécifiques à OLE.
 
 ### <a name="dynamic-creation-of-ole-objects"></a>Création dynamique des objets OLE
 
-|||
+|Nom|Description|
 |-|-|
 |[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|Détermine si la bibliothèque de contrôles communs implémente l’API spécifiée.|
 |[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|Détermine si la bibliothèque de contrôles communs implémente l’API spécifiée.|
@@ -54,7 +54,7 @@ La bibliothèque MFC fournit deux macros spécifiques à OLE.
 |[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|Implémente les `GetUserTypeNameID` `GetMiscStatus` fonctions membres et de votre classe de contrôle.|
 |[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|Cette macro ou [IMPLEMENT_OLECREATE](#implement_olecreate) doit apparaître dans le fichier d’implémentation pour toute classe qui utilise `DECLARE_OLECREATE` . |
 
-## <a name="afx_comctl32_if_exists"></a><a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+## <a name="afx_comctl32_if_exists"></a><a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
 
 Détermine si la bibliothèque de contrôles communs implémente l’API spécifiée.
 
@@ -66,18 +66,18 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="parameters"></a>Paramètres
 
-*proc*<br/>
+*processeur*<br/>
 Pointeur vers une chaîne se terminant par un caractère null qui contient le nom de la fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit figurer dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.
 
 ### <a name="remarks"></a>Notes
 
 Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs est la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 afxcomctl32. h, afxcomctl32. inl
 
-## <a name="afx_comctl32_if_exists2"></a><a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+## <a name="afx_comctl32_if_exists2"></a><a name="afx_comctl32_if_exists2"></a> AFX_COMCTL32_IF_EXISTS2
 
 Détermine si la bibliothèque de contrôles communs implémente l’API spécifiée (il s’agit de la version Unicode de [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).
 
@@ -89,18 +89,18 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="parameters"></a>Paramètres
 
-*proc*<br/>
+*processeur*<br/>
 Pointeur vers une chaîne se terminant par un caractère null qui contient le nom de la fonction, ou spécifie la valeur ordinale de la fonction. Si ce paramètre est une valeur ordinale, il doit figurer dans le mot de poids faible ; le mot de poids fort doit être égal à zéro. Ce paramètre doit être au format Unicode.
 
 ### <a name="remarks"></a>Notes
 
 Utilisez cette macro pour déterminer si la bibliothèque de contrôles communs est la fonction spécifiée par *proc* (au lieu d’appeler [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress). Cette macro est la version Unicode de AFX_COMCTL32_IF_EXISTS.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 afxcomctl32. h, afxcomctl32. inl
 
-## <a name="declare_dynamic"></a><a name="declare_dynamic"></a>DECLARE_DYNAMIC
+## <a name="declare_dynamic"></a><a name="declare_dynamic"></a> DECLARE_DYNAMIC
 
 Ajoute la possibilité d’accéder aux informations d’exécution relatives à la classe d’un objet lors de la dérivation d’une classe de `CObject` .
 
@@ -127,11 +127,11 @@ Pour plus d’informations sur la macro DECLARE_DYNAMIC, consultez [rubriques re
 
 Consultez l’exemple de [IMPLEMENT_DYNAMIC](#implement_dynamic).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
-## <a name="declare_dyncreate"></a><a name="declare_dyncreate"></a>DECLARE_DYNCREATE
+## <a name="declare_dyncreate"></a><a name="declare_dyncreate"></a> DECLARE_DYNCREATE
 
 Permet de créer des objets de `CObject` classes dérivées de manière dynamique au moment de l’exécution.
 
@@ -161,11 +161,11 @@ Pour plus d’informations sur la macro DECLARE_DYNCREATE, consultez [rubriques 
 
 Consultez l’exemple de [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
-## <a name="declare_olectltype"></a><a name="declare_olectltype"></a>DECLARE_OLECTLTYPE
+## <a name="declare_olectltype"></a><a name="declare_olectltype"></a> DECLARE_OLECTLTYPE
 
 Déclare les `GetUserTypeNameID` `GetMiscStatus` fonctions membres et de votre classe de contrôle.
 
@@ -182,13 +182,13 @@ Nom de la classe de contrôle.
 
 ### <a name="remarks"></a>Notes
 
-`GetUserTypeNameID`et `GetMiscStatus` sont des fonctions virtuelles pures, déclarées dans `COleControl` . Étant donné que ces fonctions sont virtuelles pures, elles doivent être remplacées dans votre classe de contrôle. En plus de DECLARE_OLECTLTYPE, vous devez ajouter la macro IMPLEMENT_OLECTLTYPE à votre déclaration de classe de contrôle.
+`GetUserTypeNameID` et `GetMiscStatus` sont des fonctions virtuelles pures, déclarées dans `COleControl` . Étant donné que ces fonctions sont virtuelles pures, elles doivent être remplacées dans votre classe de contrôle. En plus de DECLARE_OLECTLTYPE, vous devez ajouter la macro IMPLEMENT_OLECTLTYPE à votre déclaration de classe de contrôle.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl. h
 
-## <a name="declare_proppageids"></a><a name="declare_proppageids"></a>DECLARE_PROPPAGEIDS
+## <a name="declare_proppageids"></a><a name="declare_proppageids"></a> DECLARE_PROPPAGEIDS
 
 Déclare que le contrôle OLE fournit une liste de pages de propriétés pour afficher ses propriétés.
 
@@ -209,11 +209,11 @@ Utilisez la `DECLARE_PROPPAGEIDS` macro à la fin de votre déclaration de class
 
 Pour plus d’informations sur les pages de propriétés, consultez l’article [contrôles ActiveX : pages de propriétés](../mfc-activex-controls-property-pages.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl. h
 
-## <a name="declare_serial"></a><a name="declare_serial"></a>DECLARE_SERIAL
+## <a name="declare_serial"></a><a name="declare_serial"></a> DECLARE_SERIAL
 
 Génère le code d’en-tête C++ nécessaire pour une `CObject` classe dérivée de qui peut être sérialisée.
 
@@ -246,11 +246,11 @@ Pour plus d’informations sur la macro DECLARE_SERIAL, consultez [rubriques rel
 
 [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
-## <a name="implement_dynamic"></a><a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC
+## <a name="implement_dynamic"></a><a name="implement_dynamic"></a> IMPLEMENT_DYNAMIC
 
 Génère le code C++ nécessaire pour une `CObject` classe dérivée dynamique avec un accès au moment de l’exécution au nom et à la position de la classe dans la hiérarchie.
 
@@ -278,11 +278,11 @@ Pour plus d’informations, consultez [rubriques relatives aux classes CObject](
 
 [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
-## <a name="implement_dyncreate"></a><a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE
+## <a name="implement_dyncreate"></a><a name="implement_dyncreate"></a> IMPLEMENT_DYNCREATE
 
 Permet de créer des objets de `CObject` classes dérivées de manière dynamique au moment de l’exécution lorsqu’ils sont utilisés avec la macro DECLARE_DYNCREATE.
 
@@ -314,11 +314,11 @@ Notez que cette définition de macro appellera le constructeur par défaut pour 
 
 [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
-## <a name="implement_olecreate_flags"></a><a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+## <a name="implement_olecreate_flags"></a><a name="implement_olecreate_flags"></a> IMPLEMENT_OLECREATE_FLAGS
 
 Cette macro ou [IMPLEMENT_OLECREATE](#implement_olecreate) doit apparaître dans le fichier d’implémentation pour toute classe qui utilise DECLARE_OLECREATE.
 
@@ -340,9 +340,9 @@ Nom de l’objet exposé à d’autres applications (entre guillemets).
 *nFlags*<br/>
 Contient un ou plusieurs des indicateurs suivants :
 
-- `afxRegInsertable`Permet d’afficher le contrôle dans la boîte de dialogue Insérer un objet pour les objets OLE.
-- `afxRegApartmentThreading`Définit le modèle de thread dans le registre sur ThreadingModel = Apartment.
-- `afxRegFreeThreading`Définit le modèle de thread dans le registre sur ThreadingModel = Free.
+- `afxRegInsertable` Permet d’afficher le contrôle dans la boîte de dialogue Insérer un objet pour les objets OLE.
+- `afxRegApartmentThreading` Définit le modèle de thread dans le registre sur ThreadingModel = Apartment.
+- `afxRegFreeThreading` Définit le modèle de thread dans le registre sur ThreadingModel = Free.
 
 Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` définir ThreadingModel = les deux. Pour plus d’informations sur l’inscription du modèle de thread, consultez [InprocServer32](/windows/win32/com/inprocserver32) dans le SDK Windows.
 
@@ -357,11 +357,11 @@ Le nom externe est l’identificateur exposé à d’autres applications. Les ap
 
 L’ID de classe OLE est un identificateur 128 bits unique pour l’objet. Il se compose d' **`long`** un, de deux **mots**et de **huit octets**, représentés par *l*, *W1*, *W2*et *B1* à *B8* dans la description de la syntaxe. L’Assistant Application et les assistants code créent des ID de classe OLE uniques pour vous en fonction des besoins.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdisp.h
 
-## <a name="implement_olectltype"></a><a name="implement_olectltype"></a>IMPLEMENT_OLECTLTYPE
+## <a name="implement_olectltype"></a><a name="implement_olectltype"></a> IMPLEMENT_OLECTLTYPE
 
 Implémente les `GetUserTypeNameID` `GetMiscStatus` fonctions membres et de votre classe de contrôle.
 
@@ -386,16 +386,16 @@ ID de ressource d’une chaîne contenant le nom externe du contrôle.
 
 En plus de IMPLEMENT_OLECTLTYPE, vous devez ajouter la macro DECLARE_OLECTLTYPE à votre déclaration de classe de contrôle.
 
-La `GetUserTypeNameID` fonction membre retourne la chaîne de ressource qui identifie votre classe de contrôle. `GetMiscStatus`retourne les bits OLEMISC pour votre contrôle. Cette énumération spécifie une collection de paramètres décrivant diverses caractéristiques de votre contrôle. Pour obtenir une description complète des paramètres OLEMISC, consultez [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) dans la SDK Windows.
+La `GetUserTypeNameID` fonction membre retourne la chaîne de ressource qui identifie votre classe de contrôle. `GetMiscStatus` retourne les bits OLEMISC pour votre contrôle. Cette énumération spécifie une collection de paramètres décrivant diverses caractéristiques de votre contrôle. Pour obtenir une description complète des paramètres OLEMISC, consultez [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) dans la SDK Windows.
 
 > [!NOTE]
 > Les paramètres par défaut utilisés par le ControlWizard ActiveX sont : OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE et OLEMISC_RECOMPOSEONRESIZE.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxctl. h
 
-## <a name="implement_serial"></a><a name="implement_serial"></a>IMPLEMENT_SERIAL
+## <a name="implement_serial"></a><a name="implement_serial"></a> IMPLEMENT_SERIAL
 
 Génère le code C++ nécessaire pour une `CObject` classe dérivée dynamique avec un accès au moment de l’exécution au nom et à la position de la classe dans la hiérarchie.
 
@@ -428,11 +428,11 @@ Pour plus d’informations, consultez les rubriques de la [classe CObject](../..
 
 [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
-## <a name="runtime_class"></a><a name="runtime_class"></a>RUNTIME_CLASS
+## <a name="runtime_class"></a><a name="runtime_class"></a> RUNTIME_CLASS
 
 Obtient la structure de la classe Runtime à partir du nom d’une classe C++.
 
@@ -455,11 +455,11 @@ Pour plus d’informations, consultez [rubriques relatives aux classes CObject](
 
 [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
-## <a name="declare_olecreate"></a><a name="declare_olecreate"></a>DECLARE_OLECREATE
+## <a name="declare_olecreate"></a><a name="declare_olecreate"></a> DECLARE_OLECREATE
 
 Permet de créer des objets de `CCmdTarget` classes dérivées de à l’aide d’OLE Automation.
 
@@ -480,11 +480,11 @@ Ajoutez la macro DECLARE_OLECREATE dans le module. h pour la classe, puis inclue
 
 Si DECLARE_OLECREATE est inclus dans la déclaration de classe, IMPLEMENT_OLECREATE doit être inclus dans l’implémentation de la classe. Une déclaration de classe utilisant DECLARE_OLECREATE doit également utiliser DECLARE_DYNCREATE ou DECLARE_SERIAL.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp. h
 
-## <a name="implement_olecreate"></a><a name="implement_olecreate"></a>IMPLEMENT_OLECREATE
+## <a name="implement_olecreate"></a><a name="implement_olecreate"></a> IMPLEMENT_OLECREATE
 
 Cette macro ou [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) doit apparaître dans le fichier d’implémentation pour toute classe qui utilise `DECLARE_OLECREATE` .
 
@@ -511,7 +511,7 @@ Le nom externe est l’identificateur exposé à d’autres applications. Les ap
 
 L’ID de classe OLE est un identificateur 128 bits unique pour l’objet. Il se compose d' **`long`** un, de deux **mots**et de **huit octets**, représentés par *l*, *W1*, *W2*et *B1* à *B8* dans la description de la syntaxe. L’Assistant Application et les assistants code créent des ID de classe OLE uniques pour vous en fonction des besoins.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête**: afxdisp. h
 

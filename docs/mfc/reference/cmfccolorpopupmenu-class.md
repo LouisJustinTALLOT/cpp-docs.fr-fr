@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: d668a7bd2b5226de906ca146c7b7e882b97f4640
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 2964f250b25ad6c77c70e8f10cd92cca0c7d11da
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560983"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844559"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu, classe
 
@@ -35,17 +35,15 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Construit un objet `CMFCColorPopupMenu`.|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Crée une barre de couleur détachable et Ancrable. (Substitue [CMFCPopupMenu :: CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Retourne le [cmfcpopupmenubar,](../../mfc/reference/cmfcpopupmenubar-class.md) incorporé dans le menu contextuel. (Substitue [CMFCPopupMenu :: GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
 |`CMFCColorPopupMenu::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associé à ce type de classe.|
@@ -53,9 +51,8 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ### <a name="data-members"></a>Données membres
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |`m_bEnabledInCustomizeMode`|Valeur booléenne qui détermine s’il faut afficher la barre de couleurs.|
 |`m_wndColorBar`|`CMFCColorBar`Objet qui fournit la sélection de couleurs.|
 
@@ -81,7 +78,7 @@ Pour plus d’informations sur `CMFCColorBar` , consultez [CMFCColorBar, classe]
 
 [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcolorpopupmenu. h
 
@@ -205,7 +202,7 @@ dans ID de commande de la barre détachée.
 *lpszName*\
 dans Texte de la fenêtre de la barre détachée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le nouvel objet de barre de contrôle de déchirage.
 
@@ -221,7 +218,7 @@ Retourne le [cmfcpopupmenubar,](../../mfc/reference/cmfcpopupmenubar-class.md) i
 virtual CMFCPopupMenuBar* GetMenuBar();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le incorporé `CMFCPopupMenuBar` .
 

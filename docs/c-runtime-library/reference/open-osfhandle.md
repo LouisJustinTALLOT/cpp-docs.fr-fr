@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: 9fbe4a4079fcbb8414e09d0f7dd814a3957e0822
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d0f86c2588eed506bc9b8408e01bccdb6d1aad9d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910670"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844065"
 ---
 # <a name="_open_osfhandle"></a>_open_osfhandle
 
@@ -57,28 +57,28 @@ Descripteur de fichier du système d’exploitation.
 *flags*<br/>
 Types d’opération autorisés.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, **_open_osfhandle** retourne un descripteur de fichier Runtime C. Sinon, retourne -1.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_open_osfhandle** alloue un descripteur de fichier Runtime C. Il associe ce descripteur de fichier au descripteur de fichier du système d’exploitation spécifié par *osfhandle*. Pour éviter un avertissement du compilateur, castez l’argument *osfhandle* de **HANDLE** en **intptr_t**. L’argument *flags* est une expression d’entier formée à partir d’une ou plusieurs des constantes de manifeste définies dans \<fcntl.h>. Vous pouvez utiliser l’opérateur or au niveau du bit ( **&#124;** ) pour combiner deux ou plusieurs constantes manifestes pour former l’argument *Flags* .
+La fonction **_open_osfhandle** alloue un descripteur de fichier Runtime C. Il associe ce descripteur de fichier au descripteur de fichier du système d’exploitation spécifié par *osfhandle*. Pour éviter un avertissement du compilateur, castez l’argument *osfhandle* de **HANDLE** en **intptr_t**. L’argument *Flags* est une expression d’entier formée à partir d’une ou plusieurs des constantes manifestes définies dans \<fcntl.h> . Vous pouvez utiliser l’opérateur or au niveau du bit ( **&#124;** ) pour combiner deux ou plusieurs constantes manifestes pour former l’argument *Flags* .
 
-Les constantes de manifeste sont définies dans \<fcntl.h> :
+Ces constantes manifestes sont définies dans \<fcntl.h> :
 
-|||
-|-|-|
-| **\_O\_Append** | Positionne un pointeur de fichier à la fin du fichier avant chaque opération d’écriture. |
-| **\_O\_RDONLY** | Ouvre le fichier pour un accès en lecture uniquement. |
-| **\_O\_Text** | Ouvre le fichier en mode texte (traduit). |
-| **\_O\_WTEXT** | Ouvre le fichier en mode Unicode (UTF-16 traduit). |
+| Constant | Description |
+|--|--|
+| **\_O \_ Append** | Positionne un pointeur de fichier à la fin du fichier avant chaque opération d’écriture. |
+| **\_O \_ RDONLY** | Ouvre le fichier pour un accès en lecture uniquement. |
+| **\_O \_ Text** | Ouvre le fichier en mode texte (traduit). |
+| **\_O \_ WTEXT** | Ouvre le fichier en mode Unicode (UTF-16 traduit). |
 
 L’appel de **_open_osfhandle** transfère la propriété du handle de fichier Win32 au descripteur de fichier. Pour fermer un fichier ouvert avec **_open_osfhandle**, appelez [\_close](close.md). Le handle de fichier du système d’exploitation sous-jacent est également fermé par un appel à **_close**. N’appelez pas la fonction Win32 **CloseHandle** sur le handle d’origine. Si le descripteur de fichier appartient à un **fichier &#42;** flux, un appel à [fclose](fclose-fcloseall.md) ferme le descripteur de fichier et le handle sous-jacent. Dans ce cas, n’appelez pas **_close** sur le descripteur de fichier ou **CloseHandle** sur le handle d’origine.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

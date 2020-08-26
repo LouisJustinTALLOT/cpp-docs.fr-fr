@@ -5,20 +5,19 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 2d2f928ab3773ed8e0b0afdc0113db2ef5b2a3dd
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 969c9f8e05a9fafad4d3a1102060e2b3d4d0eb2e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561216"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844780"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt;, opérateurs
 
 Il s’agit des fonctions d’opérateur de modèle global définies dans &lt; allocators &gt; . Pour les fonctions d’opérateur de membre de classe, consultez la documentation de la classe.
 
-|||
-|-|-|
-|[opérateur ! =](#op_neq)|[opérateur = =](#op_eq_eq)|
+[opérateur ! =](#op_neq)\
+[opérateur = =](#op_eq_eq)
 
 ## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
@@ -39,7 +38,7 @@ Un des objets allocateur dont l’inégalité doit être vérifiée.
 *Oui*\
 Un des objets allocateur dont l’inégalité doit être vérifiée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets allocateur ne sont pas égaux ; **`false`** si les objets allocateur sont égaux.
 
@@ -66,7 +65,7 @@ Un des objets allocateur dont l’égalité doit être vérifiée.
 *Oui*\
 Un des objets allocateur dont l’égalité doit être vérifiée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets allocateur sont égaux ; **`false`** si les objets allocateurs ne sont pas égaux.
 

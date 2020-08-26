@@ -1,21 +1,21 @@
 ---
-title: idl_quote (C++ attribut com)
+title: idl_quote (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d0aa80f64593ed347720b84e4059a0c32dce4be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168027"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844234"
 ---
 # <a name="idl_quote"></a>idl_quote
 
-Vous permet d’utiliser des constructions IDL qui ne sont pas prises en charge dans la version C++ actuelle de Visual et de les transmettre au fichier. idl généré.
+Vous permet d’utiliser des constructions IDL qui ne sont pas prises en charge dans la version actuelle de Visual C++ et de les transmettre au fichier. idl généré.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,11 +26,11 @@ Vous permet d’utiliser des constructions IDL qui ne sont pas prises en charge 
 ### <a name="parameters"></a>Paramètres
 
 *text*<br/>
-Nom de l’attribut que vous souhaitez que C++ le compilateur Microsoft passe au fichier. idl généré sans retourner d’erreur du compilateur.
+Nom de l’attribut que vous souhaitez que le compilateur Microsoft C++ passe au fichier. idl généré sans retourner d’erreur du compilateur.
 
 ## <a name="remarks"></a>Notes
 
-Si l’attribut **idl_quote** C++ est utilisé en tant qu’attribut autonome (avec un point-virgule après le crochet fermant), le *texte* est placé dans le fichier. idl fusionné tel quel. Si **idl_quote** est utilisé sur un symbole, le *texte* est placé dans le bloc d’attributs pour ce symbole.
+Si l’attribut C++ **idl_quote** est utilisé en tant qu’attribut autonome (avec un point-virgule après le crochet fermant), le *texte* est placé dans le fichier. idl fusionné tel quel. Si **idl_quote** est utilisé sur un symbole, le *texte* est placé dans le bloc d’attributs pour ce symbole.
 
 ## <a name="example"></a>Exemple
 
@@ -69,18 +69,16 @@ __interface IStatic{
 };
 ```
 
-Ce code provoque l’insertion de `MYFLOT` et `MYDUB` et l’entrée de *texte* dans le fichier. idl généré. Le paramètre *Name* force le *texte* à être placé avant tout ce qui référence le *nom* dans le fichier. idl généré. Le paramètre *Dependencies* force les définitions de liste de dépendances à être placées avant le *texte* dans le fichier. idl généré.
+Ce code provoque l’insertion de `MYFLOT` et de `MYDUB` l’entrée de *texte* dans le fichier. idl généré. Le paramètre *Name* force le *texte* à être placé avant tout ce qui référence le *nom* dans le fichier. idl généré. Le paramètre *Dependencies* force les définitions de liste de dépendances à être placées avant le *texte* dans le fichier. idl généré.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|N'importe où|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|N'importe où|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

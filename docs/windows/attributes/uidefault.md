@@ -1,17 +1,17 @@
 ---
-title: UIDefault (C++ attribut com)
+title: UIDefault (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: 55e88ab4dfaaa4157a99c4dc523f205370f78c46
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 70f54c9d3e6aaa46aef08d109e8682989e382120
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214459"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843064"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -25,7 +25,7 @@ Indique que le membre des informations de type est le membre par défaut à affi
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **UIDefault** C++ a les mêmes fonctionnalités que l’attribut MIDL [UIDefault](/windows/win32/Midl/uidefault) .
+L’attribut C++ **UIDefault** a les mêmes fonctionnalités que l’attribut MIDL [UIDefault](/windows/win32/Midl/uidefault) .
 
 ## <a name="example"></a>Exemple
 
@@ -48,16 +48,14 @@ __interface ICustom{
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Méthode d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Méthode d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

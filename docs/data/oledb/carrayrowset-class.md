@@ -42,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212262"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843246"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset, classe
 
@@ -67,7 +67,7 @@ class CArrayRowset :
 *TAccessor*<br/>
 Type de classe d’accesseur que vous souhaitez que l’ensemble de lignes utilise.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -75,24 +75,24 @@ Type de classe d’accesseur que vous souhaitez que l’ensemble de lignes utili
 
 ### <a name="methods"></a>Méthodes
 
-|||
-|-|-|
-|[CArrayRowset](#carrayrowset)|Constructeur.|
-|[Instantané](#snapshot)|Lit la totalité de l’ensemble de lignes en mémoire.|
+| Nom | Description |
+|--|--|
+| [CArrayRowset](#carrayrowset) | Constructeur. |
+| [Instantané](#snapshot) | Lit la totalité de l’ensemble de lignes en mémoire. |
 
 ### <a name="operators"></a>Opérateurs
 
-|||
-|-|-|
-|[And&#91;&#93;](#operator)|Accède à un élément de l’ensemble de lignes.|
+| Nom | Description |
+|--|--|
+| [&#91;&#93;d’opérateur ](#operator) | Accède à un élément de l’ensemble de lignes. |
 
 ### <a name="data-members"></a>Données membres
 
-|||
-|-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|Nombre de lignes déjà lues.|
+| Nom | Description |
+|--|--|
+| [CArrayRowset::m_nRowsRead](#nrowsread) | Nombre de lignes déjà lues. |
 
-## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset :: CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a> CArrayRowset :: CArrayRowset
 
 Crée un objet `CArrayRowset`.
 
@@ -107,7 +107,7 @@ CArrayRowset(int nMax = 100000);
 *nMax*<br/>
 dans Nombre maximal de lignes dans l’ensemble de lignes.
 
-## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset :: Snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a> CArrayRowset :: Snapshot
 
 Lit la totalité de l’ensemble de lignes en mémoire, en créant une image ou un instantané de celui-ci.
 
@@ -117,7 +117,7 @@ Lit la totalité de l’ensemble de lignes en mémoire, en créant une image ou 
 HRESULT Snapshot() throw();
 ```
 
-## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset :: Operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a> CArrayRowset :: Operator
 
 Fournit une syntaxe de type tableau pour accéder à une ligne de l’ensemble de lignes.
 
@@ -135,7 +135,7 @@ Paramètre basé sur un modèle qui spécifie le type d’accesseur stocké dans
 *nRow*<br/>
 dans Numéro de la ligne (élément de tableau) à laquelle vous souhaitez accéder.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Contenu de la ligne demandée.
 
@@ -143,7 +143,7 @@ Contenu de la ligne demandée.
 
 Si *nRow* dépasse le nombre de lignes dans l’ensemble de lignes, une exception est levée.
 
-## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset :: m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a> CArrayRowset :: m_nRowsRead
 
 Contient le nombre de lignes de l’ensemble de lignes qui ont déjà été lues.
 
@@ -155,6 +155,6 @@ ULONG m_nRowsRead;
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset, classe](../../data/oledb/crowset-class.md)

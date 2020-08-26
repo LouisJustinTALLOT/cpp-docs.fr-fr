@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 95557c824aafb1092cc7711f19708cd7782683a9
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: 704da410ee6386027a7528c0c73a89ef31557a77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88087005"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842947"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>Chaînes relatives aux noms des paramètres régionaux UCRT, aux langues et au pays/à la région
 
@@ -26,7 +26,7 @@ L’argument *paramètres régionaux* des fonctions [setlocale, \_wsetlocale](..
 &nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| NULL
 
-Le formulaire *locale-name* est une chaîne courte à la norme IETF, par exemple, `en-US` pour l’anglais (États-Unis) ou `bs-Cyrl-BA` pour le bosniaque (cyrillique, Bosnie-Herzégovine). Ces formulaires sont préférables. Pour obtenir la liste des noms de paramètres régionaux pris en charge par la version du système d’exploitation Windows, consultez la colonne **balise de langue** du tableau de l' [annexe a : comportement du produit](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) dans \[ MS-LCID] : référence LCID (Language code identifier) Windows. Cette ressource répertorie le langage, le script, et les parties régionales des noms de paramètres régionaux pris en charge. Pour plus d’informations sur les noms de paramètres régionaux pris en charge dont les ordres de tri ne sont pas définis par défaut, consultez la colonne **Locale name** dans la rubrique [Sort Order Identifiers](/windows/win32/Intl/sort-order-identifiers). Sous Windows 10 ou version ultérieure, les noms de paramètres régionaux qui correspondent aux balises de langue [BCP-47](https://tools.ietf.org/html/bcp47) valides sont autorisés. Par exemple, `jp-US` est une balise BCP-47 valide, mais elle ne correspond en fait qu’à `US` pour la fonctionnalité des paramètres régionaux.
+Le formulaire *locale-name* est une chaîne courte à la norme IETF, par exemple, `en-US` pour l’anglais (États-Unis) ou `bs-Cyrl-BA` pour le bosniaque (cyrillique, Bosnie-Herzégovine). Ces formulaires sont préférables. Pour obtenir la liste des noms de paramètres régionaux pris en charge par la version du système d’exploitation Windows, consultez la colonne **balise de langue** du tableau de l' [annexe a : comportement du produit](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) dans \[ MS-LCID] : référence LCID (Language code identifier) Windows. Cette ressource répertorie le langage, le script, et les parties régionales des noms de paramètres régionaux pris en charge. Pour plus d’informations sur les noms de paramètres régionaux pris en charge dont les ordres de tri ne sont pas définis par défaut, consultez la colonne **Locale name** dans la rubrique [Sort Order Identifiers](/windows/win32/Intl/sort-order-identifiers). Sous Windows 10 ou version ultérieure, les noms de paramètres régionaux qui correspondent aux balises de langue [BCP-47](https://tools.ietf.org/html/bcp47) valides sont autorisés. Par exemple, `jp-US` est une balise BCP-47 valide, mais elle ne correspond en fait qu’à `US` pour la fonctionnalité des paramètres régionaux.
 
 *language* \[ **\_** _Pays/région de_langue \[ __.__ *page de codes*]] le formulaire est stocké dans les paramètres régionaux d’une catégorie quand une chaîne de langue, une chaîne de langue, une chaîne de langue et de pays ou de région est utilisée pour créer les paramètres régionaux. L’ensemble de chaînes de langage prises en charge est décrit dans [Language Strings](../c-runtime-library/language-strings.md) et la liste de chaînes de pays/région prises en charge est répertoriée dans [Country/Region Strings](../c-runtime-library/country-region-strings.md). Si le langage spécifié n'est pas associé au pays ou à la région spécifiés, la langue par défaut pour le pays ou la région spécifiés est stockée dans les paramètres régionaux. Nous ne recommandons pas cette forme pour les chaînes de paramètres régionaux incorporées dans le code ou sérialisées dans le stockage, car ces chaînes sont plus susceptibles d'être modifiées par une mise à niveau du système d'exploitation que par la forme de nom des paramètres régionaux.
 

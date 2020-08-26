@@ -1,5 +1,5 @@
 ---
-title: bad_any_cast, classe
+title: Classe bad_any_cast
 ms.date: 04/04/2019
 f1_keywords:
 - any/std::bad_any_cast
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - any/std::bad_any_cast
 - any/std::bad_any_cast::what
-ms.openlocfilehash: 5172281d1918a8b4ac33bcf412bf4be82b04ef56
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b47ca4f615c6f317f17ce64e8388ae5d698185ea
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268681"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844585"
 ---
-# <a name="badanycast-class"></a>bad_any_cast, classe
+# <a name="bad_any_cast-class"></a>Classe bad_any_cast
 
-Objets levées par un échec `any_cast`.
+Objets levés par un échec `any_cast` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,13 +24,13 @@ Objets levées par un échec `any_cast`.
 class bad_any_cast
 ```
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
-|||
+|Nom|Description|
 |-|-|
-|[what](#what)|Retourne le type.|
+|[données](#what)|Retourne le type.|
 
-## <a name="what"></a> ce que
+## <a name="what"></a><a name="what"></a> données
 
 Retourne le type.
 

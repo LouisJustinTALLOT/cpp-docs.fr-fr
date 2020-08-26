@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: d4bdd1524f71bfba33e9090058fce26763a862bf
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 07b369e8c47419db31bed3e49e159e3e7925d5ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561126"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844533"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage, classe
 
@@ -29,16 +29,14 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|Constructeur par défaut.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |`CMFCCustomColorsPropertyPage::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|
 |`CMFCCustomColorsPropertyPage::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associé à ce type de classe.|
 |[CMFCCustomColorsPropertyPage :: Setup](#setup)|Définit les composants de couleur de la page de propriétés.|
@@ -67,7 +65,7 @@ L’exemple suivant montre comment construire un `CMFCCustomColorsPropertyPage` 
 
 [CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcustomcolorspropertypage. h
 

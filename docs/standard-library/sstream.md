@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 6edb38e6f6c818415e9e0813b359e8e0ea6ca099
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 31a445fcc7deb5e5bade5437058cb36e28dacd40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560294"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844325"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -95,7 +95,7 @@ Les objets de type `char *` peuvent utiliser la fonctionnalité dans [\<strstrea
 
 ### <a name="manipulators"></a>Manipulateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[swap](../standard-library/sstream-functions.md#sstream_swap)|Échange les valeurs entre deux objets `sstream`.|
 
@@ -108,7 +108,7 @@ Les objets de type `char *` peuvent utiliser la fonctionnalité dans [\<strstrea
 |[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **TR**, `Alloc`>, avec des éléments de type `Elem` , dont les caractéristiques sont déterminées par la classe `Tr` , et dont les éléments sont alloués par un allocateur de classe `Alloc` .|
 |[basic_stringstream](../standard-library/basic-stringstream-class.md)|Décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets encodés à l’aide d’une mémoire tampon de flux de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **TR**, `Alloc`>, avec des éléments de type `Elem` , dont les caractéristiques sont déterminées par la classe `Tr` , et dont les éléments sont alloués par un allocateur de classe `Alloc` .|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 - **En-tête :**\<sstream>
 

@@ -9,23 +9,25 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d799bd584f45e93668c1ac2a753c82f41220773
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364913"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844663"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt;, opérateurs
 
-Le \<tableau>'en-tête comprend ces fonctions de modèle de comparaison non-membre de **tableau.**
+L' \<array> en-tête comprend ces fonctions de modèle de comparaison de non-membre de **tableau** .
 
-||||
-|-|-|-|
-|[opérateur!](#op_neq)|[Opérateur&gt;](#op_gt)|[Opérateur&gt;=](#op_gt_eq)|
-|[Opérateur&lt;](#op_lt)|[Opérateur&lt;=](#op_lt_eq)|[opérateur](#op_eq_eq)|
+[opérateur ! =](#op_neq)\
+[and&gt;](#op_gt)\
+[and&gt;=](#op_gt_eq)\
+[and&lt;](#op_lt)\
+[and&lt;=](#op_lt_eq)\
+[opérateur = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur!
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Comparaison de tableaux, non égal à.
 
@@ -41,10 +43,10 @@ bool operator!=(
 *Ty*\
 Type d’un élément.
 
-*Â¡n*\
+*N*\
 Taille du tableau.
 
-*Gauche*\
+*gauche*\
 Conteneur de gauche à comparer.
 
 *Oui*\
@@ -98,7 +100,7 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>Opérateur&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Comparaison de tableaux, inférieur à.
 
@@ -114,10 +116,10 @@ bool operator<(
 *Ty*\
 Type d’un élément.
 
-*Â¡n*\
+*N*\
 Taille du tableau.
 
-*Gauche*\
+*gauche*\
 Conteneur de gauche à comparer.
 
 *Oui*\
@@ -125,7 +127,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction modèle `operator<` surcharge pour comparer deux objets de classe template [array Classe](../standard-library/array-class-stl.md). La fonction retourne `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+La fonction de modèle surcharge `operator<` pour comparer deux objets de [classe de tableau](../standard-library/array-class-stl.md)de modèles de classe. La fonction retourne `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Exemple
 
@@ -171,7 +173,7 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>Opérateur&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> and&lt;=
 
 Comparaison de tableaux, inférieur ou égal à.
 
@@ -187,10 +189,10 @@ bool operator<=(
 *Ty*\
 Type d’un élément.
 
-*Â¡n*\
+*N*\
 Taille du tableau.
 
-*Gauche*\
+*gauche*\
 Conteneur de gauche à comparer.
 
 *Oui*\
@@ -244,7 +246,7 @@ true
 false
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Comparaison de tableaux, égal à.
 
@@ -260,10 +262,10 @@ bool operator==(
 *Ty*\
 Type d’un élément.
 
-*Â¡n*\
+*N*\
 Taille du tableau.
 
-*Gauche*\
+*gauche*\
 Conteneur de gauche à comparer.
 
 *Oui*\
@@ -271,7 +273,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction modèle `operator==` surcharge pour comparer deux objets de classe template [array Classe](../standard-library/array-class-stl.md). La fonction retourne `equal(left.begin(), left.end(), right.begin())`.
+La fonction de modèle surcharge `operator==` pour comparer deux objets de [classe de tableau](../standard-library/array-class-stl.md)de modèles de classe. La fonction retourne `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Exemple
 
@@ -317,7 +319,7 @@ true
 false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>Opérateur&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 
 Comparaison de tableaux, supérieur à.
 
@@ -333,10 +335,10 @@ bool operator>(
 *Ty*\
 Type d’un élément.
 
-*Â¡n*\
+*N*\
 Taille du tableau.
 
-*Gauche*\
+*gauche*\
 Conteneur de gauche à comparer.
 
 *Oui*\
@@ -390,7 +392,7 @@ false
 true
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>Opérateur&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> and&gt;=
 
 Comparaison de tableaux, supérieur ou égal à.
 
@@ -406,10 +408,10 @@ bool operator>=(
 *Ty*\
 Type d’un élément.
 
-*Â¡n*\
+*N*\
 Taille du tableau.
 
-*Gauche*\
+*gauche*\
 Conteneur de gauche à comparer.
 
 *Oui*\
@@ -465,4 +467,4 @@ false
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<tableau>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

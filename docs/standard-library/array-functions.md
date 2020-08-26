@@ -10,22 +10,21 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3389ba769d6b61a363e8cbfcf5f6a4e9ec679469
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364937"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844702"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt;, fonctions
 
-Le \<tableau> en-tête comprend deux fonctions non membres, `get` et `swap`, qui fonctionnent sur des objets de **tableau.**
+L' \<array> en-tête comprend deux fonctions non membres, `get` et `swap` , qui opèrent sur des objets de **tableau** .
 
-|||
-|-|-|
-|[get](#get)|[swap](#swap)|
+[Télécharger](#get)\
+[swap](#swap)
 
-## <a name="get"></a><a name="get"></a>Avoir
+## <a name="get"></a><a name="get"></a> Télécharger
 
 Retourne une référence à l’élément spécifié du tableau.
 
@@ -48,10 +47,10 @@ Décalage de l’élément.
 *T*\
 Type d’un élément.
 
-*Â¡n*\
+*N*\
 Nombre d’éléments dans le tableau.
 
-*Arr*\
+*arr*\
 Tableau dans lequel opérer la sélection.
 
 ### <a name="example"></a>Exemple
@@ -86,9 +85,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a><a name="swap"></a>Swap
+## <a name="swap"></a><a name="swap"></a> échange
 
-Une spécialisation de modèle `std::swap` non-membre de cela échange deux objets **de tableau.**
+Une spécialisation de modèle non membre de `std::swap` qui échange deux objets de **tableau** .
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -100,10 +99,10 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 *Ty*\
 Type d’un élément.
 
-*Â¡n*\
+*N*\
 Taille du tableau.
 
-*Gauche*\
+*gauche*\
 Premier tableau à échanger.
 
 *Oui*\
@@ -161,4 +160,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<tableau>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

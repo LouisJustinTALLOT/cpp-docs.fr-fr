@@ -5,12 +5,12 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 0471bad0793779d0bc13a2bee41957381f56389f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5468f3d4b730cc0b81a6ab814d495b061d292f20
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214020"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843571"
 ---
 # <a name="registering-ole-controls"></a>Inscription des contrôles OLE
 
@@ -20,7 +20,7 @@ Les fonctions suivantes vous permettent d’ajouter et de supprimer la classe, l
 
 ### <a name="registering-ole-controls"></a>Inscription des contrôles OLE
 
-|||
+|Nom|Description|
 |-|-|
 |[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Ajoute la classe du contrôle à la base de données d’inscription.|
 |[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Ajoute une page de propriétés de contrôle à la base de données d’inscription.|
@@ -28,9 +28,9 @@ Les fonctions suivantes vous permettent d’ajouter et de supprimer la classe, l
 |[AfxOleUnregisterClass](#afxoleunregisterclass)|Supprime une classe de contrôle ou une classe de page de propriétés de la base de données d’inscription.|
 |[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Supprime la bibliothèque de types du contrôle de la base de données d’inscription.|
 
-`AfxOleRegisterTypeLib`est généralement appelé dans l’implémentation d’une DLL de contrôle de `DllRegisterServer` . De même, `AfxOleUnregisterTypeLib` est appelé par `DllUnregisterServer` . `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass` , et `AfxOleUnregisterClass` sont généralement appelés par la `UpdateRegistry` fonction membre de la fabrique de classes ou de la page de propriétés d’un contrôle.
+`AfxOleRegisterTypeLib` est généralement appelé dans l’implémentation d’une DLL de contrôle de `DllRegisterServer` . De même, `AfxOleUnregisterTypeLib` est appelé par `DllUnregisterServer` . `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass` , et `AfxOleUnregisterClass` sont généralement appelés par la `UpdateRegistry` fonction membre de la fabrique de classes ou de la page de propriétés d’un contrôle.
 
-## <a name="afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass
+## <a name="afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a> AfxOleRegisterControlClass
 
 Inscrit la classe de contrôle avec la base de données d’inscription Windows.
 
@@ -68,11 +68,11 @@ ID de ressource de la bitmap utilisée pour représenter le contrôle OLE dans u
 *nRegFlags*<br/>
 Contient un ou plusieurs des indicateurs suivants :
 
-- `afxRegInsertable`Permet d’afficher le contrôle dans la boîte de dialogue Insérer un objet pour les objets OLE.
+- `afxRegInsertable` Permet d’afficher le contrôle dans la boîte de dialogue Insérer un objet pour les objets OLE.
 
-- `afxRegApartmentThreading`Définit le modèle de thread dans le registre sur ThreadingModel = Apartment.
+- `afxRegApartmentThreading` Définit le modèle de thread dans le registre sur ThreadingModel = Apartment.
 
-- `afxRegFreeThreading`Définit le modèle de thread dans le registre sur ThreadingModel = Free.
+- `afxRegFreeThreading` Définit le modèle de thread dans le registre sur ThreadingModel = Free.
 
    Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` définir ThreadingModel = les deux. Pour plus d’informations sur l’inscription du modèle de thread, consultez [InprocServer32](/windows/win32/com/inprocserver32) dans le SDK Windows.
 
@@ -129,13 +129,13 @@ Numéro de version principale de la classe de contrôle.
 *wVerMinor*<br/>
 Numéro de version mineure de la classe de contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la classe de contrôle a été inscrite ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cela permet au contrôle d’être utilisé par des conteneurs qui prennent en charge le contrôle OLE. `AfxOleRegisterControlClass`met à jour le Registre avec le nom et l’emplacement du contrôle sur le système et définit également le modèle de thread que le contrôle prend en charge dans le registre. Pour plus d’informations, consultez la [note technique 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « cloisonnement-Model Threading in OLE Controls », et [à propos des processus et des threads](/windows/win32/ProcThread/about-processes-and-threads) dans le SDK Windows.
+Cela permet au contrôle d’être utilisé par des conteneurs qui prennent en charge le contrôle OLE. `AfxOleRegisterControlClass` met à jour le Registre avec le nom et l’emplacement du contrôle sur le système et définit également le modèle de thread que le contrôle prend en charge dans le registre. Pour plus d’informations, consultez la [note technique 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « cloisonnement-Model Threading in OLE Controls », et [à propos des processus et des threads](/windows/win32/ProcThread/about-processes-and-threads) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -147,11 +147,11 @@ L’exemple ci-dessus montre comment `AfxOleRegisterControlClass` est appelé av
 
 Le contrôle s’affiche dans la boîte de dialogue Insérer un objet pour les conteneurs activés et prend en charge le modèle de cloisonnement. Les contrôles de type Apartment doivent s’assurer que les données de classe statiques sont protégées par des verrous, de sorte que si un contrôle dans un cloisonnement accède aux données statiques, il n’est pas désactivé par le planificateur avant qu’il ne soit terminé, et une autre instance de la même classe commence à utiliser les mêmes données statiques. Tous les accès aux données statiques sont entourés d’un code de section critique.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass
+## <a name="afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a> AfxOleRegisterPropertyPageClass
 
 Inscrit la classe de page de propriétés avec la base de données d’inscription Windows.
 
@@ -177,24 +177,24 @@ ID de ressource de la chaîne qui contient un nom lisible par l’utilisateur po
 *nRegFlags*<br/>
 Peut contenir l’indicateur :
 
-- `afxRegApartmentThreading`Définit le modèle de thread dans le registre sur ThreadingModel = Apartment.
+- `afxRegApartmentThreading` Définit le modèle de thread dans le registre sur ThreadingModel = Apartment.
 
 > [!NOTE]
 > Dans les versions MFC antérieures à MFC 4,2, le **`int`** paramètre *nRegFlags* n’était pas disponible. Notez également que l' `afxRegInsertable` indicateur n’est pas une option valide pour les pages de propriétés et déclenchera une assertion dans MFC si elle est définie
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la classe de contrôle a été inscrite ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cela permet à la page de propriétés d’être utilisée par les conteneurs qui prennent en charge le contrôle OLE. `AfxOleRegisterPropertyPageClass`met à jour le Registre avec le nom de la page de propriétés et son emplacement sur le système, et définit également le modèle de thread que le contrôle prend en charge dans le registre. Pour plus d’informations, consultez la [note technique 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « cloisonnement-Model Threading in OLE Controls », et [à propos des processus et des threads](/windows/win32/ProcThread/about-processes-and-threads) dans le SDK Windows.
+Cela permet à la page de propriétés d’être utilisée par les conteneurs qui prennent en charge le contrôle OLE. `AfxOleRegisterPropertyPageClass` met à jour le Registre avec le nom de la page de propriétés et son emplacement sur le système, et définit également le modèle de thread que le contrôle prend en charge dans le registre. Pour plus d’informations, consultez la [note technique 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), « cloisonnement-Model Threading in OLE Controls », et [à propos des processus et des threads](/windows/win32/ProcThread/about-processes-and-threads) dans le SDK Windows.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib
+## <a name="afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a> AfxOleRegisterTypeLib
 
 Inscrit la bibliothèque de types avec la base de données d’inscription Windows et permet à la bibliothèque de types d’être utilisée par d’autres conteneurs qui prennent en charge le contrôle OLE.
 
@@ -220,7 +220,7 @@ Pointe vers le nom de fichier facultatif d’une bibliothèque de types localis�
 *pszHelpDir*<br/>
 Nom du répertoire dans lequel se trouve le fichier d’aide de la bibliothèque de types. Si la valeur est NULL, le fichier d’aide est supposé être dans le même répertoire que la bibliothèque de types elle-même.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la bibliothèque de types a été inscrite ; Sinon, 0.
 
@@ -234,11 +234,11 @@ Cette fonction met à jour le Registre avec le nom de la bibliothèque de types 
 
 [!code-cpp[NVC_MFCAutomation#8](../../mfc/codesnippet/cpp/registering-ole-controls_4.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp. h
 
-## <a name="afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a>AfxOleUnregisterClass
+## <a name="afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a> AfxOleUnregisterClass
 
 Supprime l’entrée de classe de contrôle ou de page de propriétés de la base de données d’inscription Windows.
 
@@ -254,15 +254,15 @@ ID de classe unique de la page de propriétés ou de contrôle.
 *pszProgID*<br/>
 ID de programme unique de la page de propriétés ou de contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’inscription de la classe de contrôle ou de page de propriétés a été correctement annulée ; Sinon, 0.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxctl. h
 
-## <a name="afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib
+## <a name="afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a> AfxOleUnregisterTypeLib
 
 Appelez cette fonction pour supprimer l’entrée de la bibliothèque de types de la base de données d’inscription Windows.
 
@@ -275,7 +275,7 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 *tlID*<br/>
 ID unique de la bibliothèque de types.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’inscription de la bibliothèque de types a été correctement annulée ; Sinon, 0.
 
@@ -283,7 +283,7 @@ Différent de zéro si l’inscription de la bibliothèque de types a été corr
 
 [!code-cpp[NVC_MFCAxCtl#13](../../mfc/reference/codesnippet/cpp/registering-ole-controls_5.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdisp. h
 

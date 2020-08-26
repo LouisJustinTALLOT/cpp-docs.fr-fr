@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233481"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843285"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset, classe
 
@@ -54,7 +54,7 @@ Classe d’accesseur.
 *TRowset*<br/>
 Classe d’ensemble de lignes.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -62,19 +62,19 @@ Classe d’ensemble de lignes.
 
 ### <a name="methods"></a>Méthodes
 
-|||
-|-|-|
-|[Établis](#bind)|Crée des liaisons (utilisé lorsque `bBind` est spécifié comme **`false`** dans [CCommand :: Open](../../data/oledb/ccommand-open.md)).|
-|[CAccessorRowset,](#caccessorrowset)|Constructeur.|
-|[Close](#close)|Ferme l’ensemble de lignes et tous les accesseurs.|
-|[FreeRecordMemory](#freerecordmemory)|Libère toutes les colonnes de l’enregistrement actif qui doivent être libérées.|
-|[GetColumnInfo](#getcolumninfo)|Implémente [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
+| Nom | Description |
+|--|--|
+| [Établis](#bind) | Crée des liaisons (utilisé lorsque `bBind` est spécifié comme **`false`** dans [CCommand :: Open](../../data/oledb/ccommand-open.md)). |
+| [CAccessorRowset,](#caccessorrowset) | Constructeur. |
+| [Close](#close) | Ferme l’ensemble de lignes et tous les accesseurs. |
+| [FreeRecordMemory](#freerecordmemory) | Libère toutes les colonnes de l’enregistrement actif qui doivent être libérées. |
+| [GetColumnInfo](#getcolumninfo) | Implémente [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)). |
 
 ## <a name="remarks"></a>Notes
 
 `TAccessor`La classe gère l’accesseur. La classe *TRowset* gère l’ensemble de lignes.
 
-## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset :: bind
+## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset :: bind
 
 Crée les liaisons si vous avez spécifié `bBind` comme **`false`** dans [CCommand :: Open](../../data/oledb/ccommand-open.md).
 
@@ -88,7 +88,7 @@ HRESULT Bind();
 
 HRESULT standard.
 
-## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset :: CAccessorRowset
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a> CAccessorRowset :: CAccessorRowset
 
 Initialise l'objet `CAccessorRowset`.
 
@@ -98,7 +98,7 @@ Initialise l'objet `CAccessorRowset`.
 CAccessorRowset();
 ```
 
-## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset :: Close
+## <a name="caccessorrowsetclose"></a><a name="close"></a> CAccessorRowset :: Close
 
 Libère les accesseurs actifs et l’ensemble de lignes.
 
@@ -112,7 +112,7 @@ void Close();
 
 Libère toute mémoire associée.
 
-## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset :: FreeRecordMemory
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a> CAccessorRowset :: FreeRecordMemory
 
 Libère toutes les colonnes de l’enregistrement actif qui doivent être libérées.
 
@@ -122,7 +122,7 @@ Libère toutes les colonnes de l’enregistrement actif qui doivent être libér
 void FreeRecordMemory();
 ```
 
-## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset :: GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a> CAccessorRowset :: GetColumnInfo
 
 Obtient les informations de colonne à partir de l’ensemble de lignes ouvert.
 
@@ -141,7 +141,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 Consultez [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 

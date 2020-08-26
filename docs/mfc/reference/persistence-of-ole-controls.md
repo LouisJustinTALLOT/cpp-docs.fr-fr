@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: a99757854e23708f86822906c7ef9023701ea06b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3ef5a1f465cc478b429b9fa41d6478f22030a8a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214059"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843610"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistance des contrôles OLE
 
@@ -18,7 +18,7 @@ L’une des fonctionnalités des contrôles OLE est la persistance des propriét
 
 ### <a name="persistence-of-ole-controls"></a>Persistance des contrôles OLE
 
-|||
+|Nom|Description|
 |-|-|
 |[PX_Blob](#px_blob)|Échange une propriété de contrôle qui stocke des données BLOB (Binary Large Object).|
 |[PX_Bool](#px_bool)|Échange une propriété de contrôle de type **bool**.|
@@ -39,7 +39,7 @@ L’une des fonctionnalités des contrôles OLE est la persistance des propriét
 
 En outre, la `AfxOleTypeMatchGuid` fonction globale est fournie pour tester une correspondance entre un TYPEDESC et un GUID donné.
 
-## <a name="px_blob"></a><a name="px_blob"></a>PX_Blob
+## <a name="px_blob"></a><a name="px_blob"></a> PX_Blob
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété qui stocke des données BLOB (Binary Large Object).
 
@@ -65,7 +65,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *hBlobDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -81,7 +81,7 @@ Les handles *hBlob* et *hBlobDefault* font référence à un bloc de mémoire qu
 
 Notez que `PX_Blob` alloue de la mémoire à l’aide de l’API [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) de Windows lors du chargement des propriétés de type BLOB. Vous êtes chargé de libérer cette mémoire. Par conséquent, le destructeur de votre contrôle doit appeler [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) sur n’importe quelle poignée de propriété de type BLOB pour libérer de la mémoire allouée à votre contrôle.
 
-## <a name="px_bool"></a><a name="px_bool"></a>PX_Bool
+## <a name="px_bool"></a><a name="px_bool"></a> PX_Bool
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type bool.
 
@@ -112,7 +112,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *bDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -120,7 +120,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété sera lue ou écrite dans la variable référencée par *bValue*, selon le cas. Si *bDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_color"></a><a name="px_color"></a>PX_Color
+## <a name="px_color"></a><a name="px_color"></a> PX_Color
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type OLE_COLOR.
 
@@ -151,7 +151,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *clrDefault*<br/>
 Valeur par défaut de la propriété, telle que définie par le développeur de contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -159,7 +159,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété sera lue ou écrite dans la variable référencée par *clrValue*, selon le cas. Si *clrDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_currency"></a><a name="px_currency"></a>PX_Currency
+## <a name="px_currency"></a><a name="px_currency"></a> PX_Currency
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type **Currency**.
 
@@ -190,7 +190,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *cyDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -198,7 +198,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété sera lue ou écrite dans la variable référencée par *cyValue*, selon le cas. Si *cyDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_datapath"></a><a name="px_datapath"></a>PX_DataPath
+## <a name="px_datapath"></a><a name="px_datapath"></a> PX_DataPath
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de chemin d’accès aux données de type [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).
 
@@ -224,7 +224,7 @@ Nom de la propriété en cours d’échange.
 *dataPathProperty*<br/>
 Référence à la variable dans laquelle la propriété est stockée (généralement une variable de membre de votre classe).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -232,7 +232,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 Les propriétés du chemin d’accès aux données implémentent des propriétés de contrôle asynchrone. La valeur de la propriété sera lue ou écrite dans la variable référencée par *dataPathProperty*, selon le cas.
 
-## <a name="px_double"></a><a name="px_double"></a>PX_Double
+## <a name="px_double"></a><a name="px_double"></a> PX_Double
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type **`double`** .
 
@@ -263,7 +263,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *doubleDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -271,7 +271,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue à partir de la variable référencée par *DoubleValue*, ou écrite dans celle-ci, selon le cas. Si *doubleDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_font"></a><a name="px_font"></a>PX_Font
+## <a name="px_font"></a><a name="px_font"></a> PX_Font
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type font.
 
@@ -301,7 +301,7 @@ Pointeur vers une `FONTDESC` structure contenant les valeurs à utiliser pour in
 *pFontDispAmbient*<br/>
 Pointeur vers l' `IFontDisp` interface d’une police à utiliser pour initialiser l’État par défaut de la propriété font.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -309,7 +309,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue ou écrite dans `font` , une `CFontHolder` référence, le cas échéant. Si *pFontDesc* et *pFontDispAmbient* sont spécifiés, ils sont utilisés pour initialiser la valeur par défaut de la propriété, si nécessaire. Ces valeurs sont utilisées si, pour une raison quelconque, le processus de sérialisation du contrôle échoue. En général, vous transmettez NULL pour *pFontDesc* et la valeur ambiante retournée par `COleControl::AmbientFont` pour *pFontDispAmbient*. Notez que l’objet font retourné par `COleControl::AmbientFont` doit être libéré par un appel à la `IFontDisp::Release` fonction membre.
 
-## <a name="px_float"></a><a name="px_float"></a>PX_Float
+## <a name="px_float"></a><a name="px_float"></a> PX_Float
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type **`float`** .
 
@@ -340,7 +340,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *floatDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -348,7 +348,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue à partir de la variable référencée par *floatValue*, ou écrite dans celle-ci, selon le cas. Si *floatDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_iunknown"></a><a name="px_iunknown"></a>PX_IUnknown
+## <a name="px_iunknown"></a><a name="px_iunknown"></a> PX_IUnknown
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété représentée par un objet ayant une `IUnknown` interface dérivée de.
 
@@ -378,7 +378,7 @@ ID d’interface indiquant quelle interface de l’objet de propriété est util
 *pUnkDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -386,7 +386,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue à partir de la variable référencée par *punk*, ou écrite dans celle-ci, selon le cas. Si *pUnkDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_long"></a><a name="px_long"></a>PX_Long
+## <a name="px_long"></a><a name="px_long"></a> PX_Long
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type **`long`** .
 
@@ -417,7 +417,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *lDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -425,7 +425,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue à partir de la variable référencée par *lValue*, ou écrite dans celle-ci, selon le cas. Si *lDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_picture"></a><a name="px_picture"></a>PX_Picture
+## <a name="px_picture"></a><a name="px_picture"></a> PX_Picture
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété Picture de votre contrôle.
 
@@ -456,7 +456,7 @@ Référence à un objet [CPictureHolder](../../mfc/reference/cpictureholder-clas
 *pictDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -464,7 +464,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue à partir de la variable référencée par *PICT*, ou écrite dans celle-ci, selon le cas. Si *pictDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_short"></a><a name="px_short"></a>PX_Short
+## <a name="px_short"></a><a name="px_short"></a> PX_Short
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type **`short`** .
 
@@ -495,7 +495,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *sDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -503,7 +503,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue à partir de la variable référencée par *sValue*, ou écrite dans celle-ci, selon le cas. Si *sDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_ulong"></a><a name="px_ulong"></a>PX_ULong
+## <a name="px_ulong"></a><a name="px_ulong"></a> PX_ULong
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type **ULong**.
 
@@ -534,7 +534,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *ulDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -542,7 +542,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue ou écrite dans la variable référencée par *ulValue*, selon le cas. Si *ulDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_ushort"></a><a name="px_ushort"></a>PX_UShort
+## <a name="px_ushort"></a><a name="px_ushort"></a> PX_UShort
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type **`unsigned short`** .
 
@@ -573,7 +573,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *usDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -581,7 +581,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue à partir de la variable référencée par *usValue*, ou écrite dans celle-ci, selon le cas. Si *usDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="pxstring"></a><a name="px_string"></a>PXstring
+## <a name="pxstring"></a><a name="px_string"></a> PXstring
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour sérialiser ou initialiser une propriété de type chaîne de caractères.
 
@@ -612,7 +612,7 @@ Référence à la variable dans laquelle la propriété est stockée (générale
 *strDefault*<br/>
 Valeur par défaut pour la propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
@@ -620,7 +620,7 @@ Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 La valeur de la propriété est lue à partir de la variable référencée par *strValue*, ou écrite dans celle-ci, selon le cas. Si *strDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, le processus de sérialisation du contrôle échoue.
 
-## <a name="px_vbxfontconvert"></a><a name="px_vbxfontconvert"></a>PX_VBXFontConvert
+## <a name="px_vbxfontconvert"></a><a name="px_vbxfontconvert"></a> PX_VBXFontConvert
 
 Appelez cette fonction dans la fonction membre de votre contrôle `DoPropExchange` pour initialiser une propriété font en convertissant les propriétés relatives à la police d’un contrôle VBX.
 
@@ -638,15 +638,15 @@ Pointeur vers l’objet [CPropExchange](../../mfc/reference/cpropexchange-class.
 *son*<br/>
 Propriété font du contrôle OLE qui contiendra les propriétés de police VBX converties.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction doit être utilisée uniquement par un contrôle OLE conçu comme un remplacement direct d’un contrôle VBX. Lorsque l’environnement de développement Visual Basic convertit un formulaire contenant un contrôle VBX pour utiliser le contrôle OLE de remplacement correspondant, il appelle la `IDataObject::SetData` fonction du contrôle, en passant un jeu de propriétés qui contient les données de propriété du contrôle VBX. Cette opération provoque à son tour l’appel de la `DoPropExchange` fonction du contrôle. `DoPropExchange`peut appeler `PX_VBXFontConvert` pour convertir les propriétés relatives à la police du contrôle VBX (par exemple, « FontName », « FontSize », etc.) en composants correspondants de la propriété font du contrôle OLE.
+Cette fonction doit être utilisée uniquement par un contrôle OLE conçu comme un remplacement direct d’un contrôle VBX. Lorsque l’environnement de développement Visual Basic convertit un formulaire contenant un contrôle VBX pour utiliser le contrôle OLE de remplacement correspondant, il appelle la `IDataObject::SetData` fonction du contrôle, en passant un jeu de propriétés qui contient les données de propriété du contrôle VBX. Cette opération provoque à son tour l’appel de la `DoPropExchange` fonction du contrôle. `DoPropExchange` peut appeler `PX_VBXFontConvert` pour convertir les propriétés relatives à la police du contrôle VBX (par exemple, « FontName », « FontSize », etc.) en composants correspondants de la propriété font du contrôle OLE.
 
-`PX_VBXFontConvert`doit être appelé uniquement lorsque le contrôle est en cours de conversion à partir d’une application de formulaire VBX. Par exemple :
+`PX_VBXFontConvert` doit être appelé uniquement lorsque le contrôle est en cours de conversion à partir d’une application de formulaire VBX. Par exemple :
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]

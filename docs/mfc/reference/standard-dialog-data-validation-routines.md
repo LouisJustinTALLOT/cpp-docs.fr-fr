@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 2511e2ec6dbd4e27c0e12e35bdc1cd671bf72eaa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 19d1858d67802a7c464a9be783e4c1fb96fe3fae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213981"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844481"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Routines de validation des données de boîte de dialogue standard
 
@@ -20,7 +20,7 @@ Cette rubrique répertorie les routines de validation de données de boîte de d
 
 ### <a name="ddv-functions"></a>Fonctions DDV
 
-|||
+|Nom|Description|
 |-|-|
 |[DDV_MaxChars](#ddv_maxchars)|Vérifie que le nombre de caractères dans une valeur de contrôle donnée ne dépasse pas un maximum donné.|
 |[DDV_MinMaxByte](#ddv_minmaxbyte)|Vérifie qu’une valeur de contrôle donnée ne dépasse pas une plage d' **octets** donnée.|
@@ -38,7 +38,7 @@ Cette rubrique répertorie les routines de validation de données de boîte de d
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Vérifie si une valeur de contrôle donnée est comprise entre deux valeurs spécifiées.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Vérifie qu’une valeur de contrôle donnée ne dépasse pas une plage de **ULONGLONG** donnée.|
 
-## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a>DDV_MaxChars
+## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a> DDV_MaxChars
 
 Appelez `DDV_MaxChars` pour vérifier que la quantité de caractères dans le contrôle associé à *value* ne dépasse pas *nChars*.
 
@@ -64,11 +64,11 @@ Nombre maximal de caractères autorisés.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a>DDV_MinMaxByte
+## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a> DDV_MinMaxByte
 
 Appelez `DDV_MinMaxByte` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -98,11 +98,11 @@ Valeur maximale (de type BYTE) autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime
+## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a> DDV_MinMaxDateTime
 
 Appelez `DDV_MinMaxDateTime` pour vérifier que la valeur de date/heure dans le contrôle de sélecteur de date et heure ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) associé à *refValue* est comprise entre *refMinRange* et *refMaxRange*.
 
@@ -138,11 +138,11 @@ Valeur de date/heure maximale autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble
+## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a> DDV_MinMaxDouble
 
 Appelez `DDV_MinMaxDouble` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -172,11 +172,11 @@ Valeur maximale autorisée (de type **`double`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a>DDV_MinMaxDWord
+## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a> DDV_MinMaxDWord
 
 Appelez `DDV_MinMaxDWord` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -206,11 +206,11 @@ Valeur maximale autorisée (de type DWORD).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat
+## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a> DDV_MinMaxFloat
 
 Appelez `DDV_MinMaxFloat` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -240,11 +240,11 @@ Valeur maximale autorisée (de type **`float`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a>DDV_MinMaxInt
+## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a> DDV_MinMaxInt
 
 Appelez `DDV_MinMaxInt` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -274,11 +274,11 @@ Valeur maximale autorisée (de type **`int`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a>DDV_MinMaxLong
+## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a> DDV_MinMaxLong
 
 Appelez `DDV_MinMaxLong` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -308,11 +308,11 @@ Valeur maximale autorisée (de type **`long`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong
+## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a> DDV_MinMaxLongLong
 
 Appelez `DDV_MinMaxLongLong` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -342,11 +342,11 @@ Valeur maximale (de type LONGLONG) autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth
+## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a> DDV_MinMaxMonth
 
 Appelez `DDV_MinMaxMonth` pour vérifier que la valeur de date/heure dans le contrôle Month Calendar ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) associé à *RefValue* se situe entre *refMinRange* et *refMaxRange*.
 
@@ -382,11 +382,11 @@ Valeur de date/heure maximale autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a>DDV_MinMaxShort
+## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a> DDV_MinMaxShort
 
 Appelez `DDV_MinMaxShort` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -416,11 +416,11 @@ Valeur maximale autorisée (de type **`short`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a>DDV_MinMaxSlider
+## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a> DDV_MinMaxSlider
 
 Appelez `DDV_MinMaxSlider` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -450,11 +450,11 @@ Valeur maximale autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md). Pour plus d’informations sur les contrôles Slider, consultez [utilisation de CSliderCtrl](../../mfc/using-csliderctrl.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a>DDV_MinMaxUInt
+## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a> DDV_MinMaxUInt
 
 Appelez `DDV_MinMaxUInt` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -484,11 +484,11 @@ Valeur maximale autorisée (de type UINT).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
-## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong
+## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a> DDV_MinMaxULongLong
 
 Appelez `DDV_MinMaxULongLong` pour vérifier que la valeur du contrôle associé à *value* est comprise entre *minVal* et *MaxVal*.
 
@@ -518,7 +518,7 @@ Valeur maximale (de type ULONGLONG) autorisée.
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdd_. h
 
@@ -554,7 +554,7 @@ Valeur maximale autorisée (de type **`unsigned`** ).
 
 Pour plus d’informations sur DDV, consultez [échange et validation de données de boîtes de dialogue](../dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdd_. h
 
