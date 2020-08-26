@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562010"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841634"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite, classe
 
@@ -43,7 +43,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
+| Nom | Description |
 |-|-|
 |Nom|Description|
 |`CAutoHideDockSite::CAutoHideDockSite`|Construit un objet `CAutoHideDockSite`.|
@@ -51,7 +51,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
+| Nom | Description |
 |-|-|
 |Nom|Description|
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|Indique si le `CAutoHideDockSite` est affiché dans le menu du volet.|
@@ -65,7 +65,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="data-members"></a>Données membres
 
-|||
+| Nom | Description |
 |-|-|
 |Nom|Description|
 |[CAutoHideDockSite :: m_nExtraSpace](#m_nextraspace)|Définit la taille de l’espace entre les barres d’outils et le bord de la barre d’ancrage. Cet espace est mesuré à partir du bord gauche ou du bord supérieur, en fonction de l’alignement de l’espace d’ancrage.|
@@ -94,7 +94,7 @@ L’exemple suivant montre comment récupérer un `CAutoHideDockSite` objet à p
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxautohidedocksite. h
 
@@ -111,7 +111,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 *pBar*\
 dans Volet de base que le Framework teste.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si *pBar* est dérivé de `CMFCAutoHideBar` ; FALSe dans le cas contraire.
 

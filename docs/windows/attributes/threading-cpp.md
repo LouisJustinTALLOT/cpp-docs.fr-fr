@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: e08d25df07ad881c8843953d01d9074c815ddb85
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f83dca442b6508207a4123fa918fc5078bdf664
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193066"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840815"
 ---
 # <a name="threading-c"></a>thread (C++)
 
@@ -28,15 +28,15 @@ Spécifie le modèle de thread pour un objet COM.
 *model*<br/>
 Facultatif L’un des modèles de thread suivants :
 
-- `apartment`(thread cloisonné)
+- `apartment` (thread cloisonné)
 
-- `neutral`(Composants .NET Framework sans interface utilisateur)
+- `neutral` (Composants .NET Framework sans interface utilisateur)
 
-- `single`(thread simple)
+- `single` (thread simple)
 
-- `free`(Threading libre)
+- `free` (Threading libre)
 
-- `both`(cloisonnement et threads libres)
+- `both` (cloisonnement et threads libres)
 
 La valeur par défaut est `apartment`.
 
@@ -52,16 +52,14 @@ L’attribut de **thread** protège également l’accès à une [event_source](
 
 Pour obtenir un exemple d’utilisation de **Threading**, consultez l’exemple [sous licence](licensed.md) .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Non|
 |**Attributs requis**|**coclasse**|
-|**Attributs non valides**|None|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

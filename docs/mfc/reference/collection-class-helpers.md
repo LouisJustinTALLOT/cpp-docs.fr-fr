@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 02bc5c5a7c1766c97d9a834c8b6b4dfb2a26ae82
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b142cde12a9795f217559f875eef7fcec3b0f2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231791"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841426"
 ---
 # <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 
@@ -23,7 +23,7 @@ L’bibliothèque MFC (Microsoft Foundation Class) fournit les fonctions globale
 
 ### <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 
-|||
+|Nom|Description|
 |-|-|
 |[CompareElements](#compareelements)|Indique si les éléments sont identiques.|
 |[CopyElements](#copyelements)|Copie les éléments d’un tableau à un autre.|
@@ -31,7 +31,7 @@ L’bibliothèque MFC (Microsoft Foundation Class) fournit les fonctions globale
 |[HashKey](#hashkey)|Calcule une clé de hachage.|
 |[SerializeElements](#serializeelements)|Stocke ou récupère des éléments dans une archive.|
 
-## <a name="compareelements"></a><a name="compareelements"></a>CompareElements
+## <a name="compareelements"></a><a name="compareelements"></a> CompareElements
 
 Appelé directement par [CList :: find] (CList-Class. MD # not_found. MD # clist__find et indirectement par [cmap__lookup](cmap-class.md#lookup) et [cmap__operator &#91;&#93;](cmap-class.md#operator_at).
 
@@ -57,7 +57,7 @@ Type du deuxième élément à comparer.
 *pElement2*<br/>
 Pointeur vers le deuxième élément à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’objet pointé par *pElement1* est égal à l’objet pointé par *pElement2*; Sinon, 0.
 
@@ -69,11 +69,11 @@ L’implémentation par défaut retourne le résultat de la comparaison de * \* 
 
 Le langage C++ définit l’opérateur de comparaison ( `==` ) pour les types simples ( **`char`** , **`int`** , **`float`** , etc.), mais ne définit pas un opérateur de comparaison pour les classes et les structures. Si vous souhaitez utiliser `CompareElements` ou pour instancier l’une des classes de collection qui l’utilise, vous devez définir l’opérateur de comparaison ou la surcharge `CompareElements` avec une version qui retourne les valeurs appropriées.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
    **En-tête :** afxtempl.h
 
-## <a name="copyelements"></a><a name="copyelements"></a>CopyElements
+## <a name="copyelements"></a><a name="copyelements"></a> CopyElements
 
 Cette fonction est appelée directement par [CArray :: Append](carray-class.md#append) et [CArray :: Copy](carray-class.md#copy).
 
@@ -105,11 +105,11 @@ L’implémentation par défaut utilise l’opérateur d’assignation simple ( 
 
 Pour plus d’informations sur l’implémentation de cette fonction et d’autres fonctions d’assistance, consultez l’article [Collections : comment créer une collection de type sécurisé](../how-to-make-a-type-safe-collection.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxtempl. h
 
-## <a name="dumpelements"></a><a name="dumpelements"></a>DumpElements
+## <a name="dumpelements"></a><a name="dumpelements"></a> DumpElements
 
 Fournit une sortie de diagnostic orientée flux sous forme de texte pour les éléments de votre collection en cas de substitution.
 
@@ -141,11 +141,11 @@ Les `CArray::Dump` `CList::Dump` fonctions, et `CMap::Dump` appellent This si la
 
 L'implémentation par défaut n'exécute aucune opération. Si les éléments de votre collection sont dérivés de `CObject` , votre substitution effectue généralement une itération au sein des éléments de la collection, `Dump` en appelant pour chaque élément à son tour.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxtempl. h
 
-## <a name="hashkey"></a><a name="hashkey"></a>HashKey
+## <a name="hashkey"></a><a name="hashkey"></a> HashKey
 
 Calcule une valeur de hachage pour la clé donnée.
 
@@ -162,7 +162,7 @@ Paramètre de modèle qui spécifie le type de données utilisé pour accéder a
 *key*<br/>
 Clé dont la valeur de hachage doit être calculée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de hachage de la clé.
 
@@ -183,11 +183,11 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxtempl. h
 
-## <a name="serializeelements"></a><a name="serializeelements"></a>SerializeElements
+## <a name="serializeelements"></a><a name="serializeelements"></a> SerializeElements
 
 [CArray](carray-class.md), [CList](clist-class.md)et [CMAP](cmap-class.md) appellent cette fonction pour sérialiser des éléments.
 
@@ -220,7 +220,7 @@ Pour plus d’informations sur l’implémentation de cette fonction et d’autr
 
 Consultez l’exemple dans l’article [Collections : comment créer une collection de type sécurisé](../how-to-make-a-type-safe-collection.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxtempl. h
 

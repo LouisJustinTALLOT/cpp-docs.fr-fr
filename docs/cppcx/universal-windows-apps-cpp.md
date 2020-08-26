@@ -3,12 +3,12 @@ title: Applications de plateforme Windows universelle (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: overview
-ms.openlocfilehash: 25b89d2d9cb99e05145e60f9c9b1a6324fbbeb39
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 45d02a5ab923ee46da97d78a1e5ceb2f4313352a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404598"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841672"
 ---
 # <a name="universal-windows-apps-c"></a>Applications de plateforme Windows universelle (C++)
 
@@ -22,13 +22,20 @@ Vous pouvez utiliser le convertisseur d’application Desktop Bridge pour empaqu
 
 ## <a name="uwp-apps-that-use-ccx"></a>Applications UWP utilisant C++/CX
 
-|||
-|-|-|
-|[Informations de référence sur le langage C++/CX](visual-c-language-reference-c-cx.md)|Décrit l’ensemble des extensions qui simplifient la consommation C++ des API Windows Runtime et activent la gestion des erreurs basée sur les exceptions.|
-|[Génération d’applications et de bibliothèques (C++/CX)](building-apps-and-libraries-c-cx.md)|Décrit comment créer des DLL et des bibliothèques statiques qui sont accessibles à partir d’une application ou d’un composant C++/CX.|
-|[Didacticiel : créer une application UWP « Hello, World » en C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Une procédure pas à pas qui présente les concepts de base du développement d’applications UWP en C++/CX. |
-|[Création de composants Windows Runtime en C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Décrit comment créer des dll que d’autres applications et composants UWP peuvent consommer.|
-|[Programmation de jeux UWP](/windows/uwp/gaming/)|Décrit comment utiliser DirectX et C++/CX pour créer des jeux.|
+[Informations de référence sur le langage C++/CX](visual-c-language-reference-c-cx.md)\
+Décrit l’ensemble des extensions qui simplifient la consommation C++ des API Windows Runtime et activent la gestion des erreurs basée sur les exceptions.
+
+[Génération d’applications et de bibliothèques (C++/CX)](building-apps-and-libraries-c-cx.md)\
+Décrit comment créer des DLL et des bibliothèques statiques qui sont accessibles à partir d’une application ou d’un composant C++/CX.
+
+[Didacticiel : créer une application UWP « Hello, World » en C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)\
+Une procédure pas à pas qui présente les concepts de base du développement d’applications UWP en C++/CX.
+
+[Création de composants Windows Runtime en C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)\
+Décrit comment créer des dll que d’autres applications et composants UWP peuvent consommer.
+
+[Programmation de jeux UWP](/windows/uwp/gaming/)\
+Décrit comment utiliser DirectX et C++/CX pour créer des jeux.
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Applications UWP qui utilisent la bibliothèque de modèles C++ Windows Runtime (WRL)
 

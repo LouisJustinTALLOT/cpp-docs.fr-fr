@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: e9e2d8f0bea26579fa40cf0e5d8d053b913ef318
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e18e874473925c0198b8645162546c9abe13b3ef
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217231"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842349"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -36,16 +36,14 @@ Liste séparée par des virgules de la dispinterface qui sera membre de la cocla
 
 Par défaut, seules les interfaces COM qui sont des classes de base de `coclass` sont ajoutées à la coclasse IDL. **Implements** vous permet de forcer d’autres interfaces comme des `coclass` membres IDL.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Oui|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

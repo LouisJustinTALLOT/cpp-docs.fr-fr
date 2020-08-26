@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: a391a77ea65a203a7eddde12046c5df89a77194a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b1eeba2fced21f5a38799db7fc4af259e03bc266
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447165"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841842"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
@@ -19,7 +19,7 @@ Définit un modèle `tuple` dont les instances détiennent des objets de types v
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<tuple>
+**En-tête :**\<tuple>
 
 **Espace de noms :** std
 
@@ -27,39 +27,39 @@ Définit un modèle `tuple` dont les instances détiennent des objets de types v
 
 ### <a name="classes-and-structs"></a>Classes et structs
 
-|||
+|Nom|Description|
 |-|-|
-|[tuple, classe](../standard-library/tuple-class.md)|Encapsule une séquence d’éléments de longueur fixe.|
-|[tuple_element, classe](../standard-library/tuple-element-class-tuple.md)|Encapsule le type d'un élément `tuple`.|
-|[tuple_size, classe](../standard-library/tuple-size-class-tuple.md)|Encapsule le nombre d'éléments `tuple`.|
+|[Tuple (classe)](../standard-library/tuple-class.md)|Encapsule une séquence d’éléments de longueur fixe.|
+|[Classe tuple_element](../standard-library/tuple-element-class-tuple.md)|Encapsule le type d'un élément `tuple`.|
+|[Classe tuple_size](../standard-library/tuple-size-class-tuple.md)|Encapsule le nombre d’éléments `tuple` .|
 |[uses_allocator](../standard-library/uses-allocator-structure.md)||
 
 ### <a name="objects"></a>Objets
 
-|||
+|Nom|Description|
 |-|-|
 |[tuple_element_t](../standard-library/tuple-functions.md#tuple_element_t)||
 |[tuple_size_v](../standard-library/tuple-functions.md#tuple_size_v)||
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
-|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparaison d' `tuple` objets, EQUAL.|
-|[!=, opérateur](../standard-library/tuple-operators.md#op_neq)|Comparaison d' `tuple` objets, non égal à.|
-|[operator<](../standard-library/tuple-operators.md#op_lt)|Comparaison d' `tuple` objets, inférieur à.|
-|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparaison d' `tuple` objets, inférieur ou égal à.|
-|[operator>](../standard-library/tuple-operators.md#op_gt)|Comparaison d' `tuple` objets, supérieur à.|
-|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparaison d' `tuple` objets, supérieur ou égal à.|
+|[opérateur = =](../standard-library/tuple-operators.md#op_eq_eq)|Comparaison d' `tuple` objets, EQUAL.|
+|[opérateur ! =](../standard-library/tuple-operators.md#op_neq)|Comparaison d' `tuple` objets, non égal à.|
+|[<d’opérateur ](../standard-library/tuple-operators.md#op_lt)|Comparaison d' `tuple` objets, inférieur à.|
+|[<opérateur =](../standard-library/tuple-operators.md#op_lt_eq)|Comparaison d' `tuple` objets, inférieur ou égal à.|
+|[>d’opérateur ](../standard-library/tuple-operators.md#op_gt)|Comparaison d' `tuple` objets, supérieur à.|
+|[>opérateur =](../standard-library/tuple-operators.md#op_gt_eq)|Comparaison d' `tuple` objets, supérieur ou égal à.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
-|[apply](../standard-library/tuple-functions.md#apply)|Appelle une fonction avec un tuple.|
+|[appliqu](../standard-library/tuple-functions.md#apply)|Appelle une fonction avec un tuple.|
 |[forward_as_tuple](../standard-library/tuple-functions.md#forward)|Construit un tuple de références.|
 |[get](../standard-library/tuple-functions.md#get)|Obtient un élément auprès d'un objet `tuple`.|
-|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|Raccourci pour créer un `tuple`.|
+|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|Raccourci pour créer un `tuple` .|
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Crée un `tuple` à partir des valeurs de l’élément.|
 |[swap](../standard-library/tuple-functions.md#swap)||
 |[tie](../standard-library/tuple-functions.md#tie)|Crée un `tuple` à partir des références d’élément.|

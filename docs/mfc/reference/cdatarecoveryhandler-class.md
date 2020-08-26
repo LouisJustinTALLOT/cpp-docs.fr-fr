@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: c796f24ad37b3bae11314e2885bf25e25f85aba6
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561971"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842921"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler, classe
 
@@ -83,13 +83,13 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[CDataRecoveryHandler::CDataRecoveryHandler](#cdatarecoveryhandler)|Construit un objet `CDataRecoveryHandler`.|
 
 ### <a name="methods"></a>Méthodes
 
-|||
+|Nom|Description|
 |-|-|
 |[CDataRecoveryHandler::AutosaveAllDocumentInfo](#autosavealldocumentinfo)|Enregistre de façon automatique chaque fichier enregistré avec la `CDataRecoveryHandler` classe.|
 |[CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo)|Enregistre automatique le document spécifié.|
@@ -121,7 +121,7 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="data-members"></a>Données membres
 
-|||
+|Nom|Description|
 |-|-|
 |m_bRestoringPreviousOpenDocs|Indique si le gestionnaire de récupération de données ouvre à nouveau les documents précédemment ouverts.|
 |m_bSaveDocumentInfoOnIdle|Indique si le gestionnaire de récupération de données enregistre les documents à la prochaine boucle inactive.|
@@ -148,7 +148,7 @@ Avant de pouvoir utiliser un `CDataRecoveryHandler` objet, vous devez appeler [C
 
 Étant donné que la `CDataRecoveryHandler` classe est étroitement connectée au gestionnaire de redémarrage, `CDataRecoveryHandler` dépend du paramètre global `m_dwRestartManagerSupportFlags` . Ce paramètre détermine les autorisations dont dispose le gestionnaire de redémarrage et comment il interagit avec votre application. Pour incorporer le gestionnaire de redémarrage dans une application existante, vous devez assigner `m_dwRestartManagerSupportFlags` la valeur appropriée dans le constructeur de votre application principale. Pour plus d’informations sur l’utilisation du gestionnaire de redémarrage, consultez [Comment : ajouter la prise en charge du gestionnaire de redémarrage](../../mfc/how-to-add-restart-manager-support.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdatarecovery. h
 
@@ -160,7 +160,7 @@ Enregistre de façon automatique chaque fichier enregistré avec la `CDataRecove
 virtual BOOL AutosaveAllDocumentInfo();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si `CDataRecoveryHandler` tous les documents sont enregistrés ; FALSe si un document n’a pas été enregistré.
 
@@ -188,7 +188,7 @@ dans Pointeur vers le `CDocument` à enregistrer.
 *bResetModifiedFlag*\
 dans TRUE indique que le `CDataRecoveryHandler` *pDocument* doit être modifié ; La valeur FALSe indique que le Framework considère que *pDocument* n’est pas modifié. Pour plus d’informations sur l’effet de cet indicateur, consultez la section Notes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si les indicateurs appropriés sont définis et que *pDocument* est un `CDocument` objet valide.
 
@@ -238,7 +238,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 *pDocument*\
 dans Pointeur vers un `CDocument` . Cette méthode crée les informations de document pour ce `CDocument` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’implémentation par défaut retourne la valeur TRUE.
 
@@ -256,7 +256,7 @@ Supprime tous les fichiers enregistrés en cours.
 virtual BOOL DeleteAllAutosavedFiles();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’implémentation par défaut retourne toujours la valeur TRUE.
 
@@ -273,7 +273,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 *strAutosavedFile*\
 dans Chaîne qui contient le nom du fichier enregistré de façon automatique.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’implémentation par défaut retourne toujours TRUE.
 
@@ -294,7 +294,7 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 *strDocumentName*<br/>
 dans Chaîne qui contient le nom du document. `GenerateAutosaveFileName` utilise ce nom de document pour générer un nom de fichier d’enregistrement automatique correspondant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nom du fichier d’enregistrement automatique généré à partir de *strDocumentName*.
 
@@ -310,7 +310,7 @@ Retourne l’intervalle entre les tentatives d’enregistrement automatique.
 virtual int GetAutosaveInterval() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de millisecondes entre les tentatives d’enregistrement automatique.
 
@@ -322,7 +322,7 @@ Retourne le chemin d’accès des fichiers enregistrés de façon automatique.
 virtual CString GetAutosavePath() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Emplacement de stockage des documents enregistrés.
 
@@ -339,7 +339,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 *pDocument*\
 dans Pointeur vers un `CDocument` . `GetDocumentListName` Récupère le nom du document à partir de ce `CDocument` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nom du document à partir de *pDocument*.
 
@@ -360,7 +360,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 *pDocument*\
 dans Pointeur vers un `CDocument` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Titre normal pour le document spécifié.
 
@@ -381,7 +381,7 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 *strDocumentTitle*<br/>
 dans Titre normal du document.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Titre du document récupéré.
 
@@ -397,7 +397,7 @@ Récupère l’identificateur de redémarrage unique pour l’application.
 virtual CString GetRestartIdentifier() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur de redémarrage unique.
 
@@ -415,7 +415,7 @@ Indique si `CDataRecoveryHandler` effectue un enregistrement automatique sur la 
 virtual BOOL GetSaveDocumentInfoOnIdle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE indique les `CDataRecoveryHandler` sauvegardes automatique sur la boucle active en cours ; FALSe indique qu’il ne l’est pas.
 
@@ -427,7 +427,7 @@ Indique si le gestionnaire de redémarrage a entraîné la fermeture de l’appl
 virtual BOOL GetShutdownByRestartManager() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE indique que le gestionnaire de redémarrage a entraîné la fermeture de l’application ; FALSe indique qu’il ne l’a pas fait.
 
@@ -439,7 +439,7 @@ Initialise la `CDataRecoveryHandler`.
 virtual BOOL Initialize();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’initialisation est réussie ; Sinon, FALSe.
 
@@ -473,7 +473,7 @@ Charge la liste des documents ouverts à partir du Registre.
 virtual BOOL ReadOpenDocumentList();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE indique que `ReadOpenDocumentList` a chargé les informations d’au moins un document à partir du Registre ; La valeur FALSe indique qu’aucune information de document n’a été chargée.
 
@@ -496,7 +496,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 *pDocument*\
 dans Pointeur vers le document à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si *pDocument* a été supprimé de la liste ; FALSe si une erreur s’est produite.
 
@@ -516,7 +516,7 @@ Ouvre les documents précédemment ouverts.
 virtual BOOL ReopenPreviousDocuments();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si au moins un document a été ouvert ; Sinon, FALSe.
 
@@ -536,7 +536,7 @@ Restaure les documents enregistrés de façon automatique en fonction de l’ent
 virtual BOOL RestoreAutosavedDocuments();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode restaure correctement les documents.
 
@@ -554,7 +554,7 @@ Enregistre la liste actuelle des documents ouverts dans le Registre Windows.
 virtual BOOL SaveOpenDocumentList();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE s’il n’y a aucun document ouvert à enregistrer ou s’il a été enregistré avec succès. FALSe s’il existe des documents à enregistrer dans le registre, mais ils n’ont pas été enregistrés, car une erreur s’est produite.
 
@@ -654,7 +654,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 *pDocument*\
 dans Pointeur vers le document enregistré.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode a supprimé le document enregistré et mis à jour les informations du document ; FALSe si une erreur s’est produite.
 

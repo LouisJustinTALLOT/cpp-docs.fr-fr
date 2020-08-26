@@ -5,38 +5,38 @@ f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
 - amp_graphics/concurrency::graphics::filter_mode
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-ms.openlocfilehash: b099b7856d9ff5409311faed641c1d70eb6e4b2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eba785efdbcb6ea18f29768cfb8c22e90ca3ff65
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376361"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841257"
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Concurrency::graphics, énumérations de l’espace de noms
 
-|||
+|Nom|Description|
 |-|-|
-|[_mode Énumération](#address_mode)|[filter_mode, énumération](#filter_mode)|
+|[Énumération _mode](#address_mode)|[filter_mode, énumération](#filter_mode)|
 
-## <a name="address_mode-enumeration"></a><a name="address_mode"></a>address_mode Énumération
+## <a name="address_mode-enumeration"></a><a name="address_mode"></a> Énumération address_mode
 
-Utilisation de type de recensement pour désigner les modes d’adresse pris en charge pour l’échantillonnage de texture.
+Type d’énumération utilisé pour désigner les modes d’adresse pris en charge pour l’échantillonnage de texture.
 
 ```cpp
 enum address_mode;
 ```
 
-## <a name="filter_mode-enumeration"></a><a name="filter_mode"></a>filter_mode Énumération
+## <a name="filter_mode-enumeration"></a><a name="filter_mode"></a> Énumération filter_mode
 
-Utilisation de type de recensement pour désigner les modes de filtre pris en charge pour l’échantillonnage de texture.
+Type d’énumération utilisé pour désigner les modes de filtre pris en charge pour l’échantillonnage de texture.
 
 ```cpp
 enum filter_mode;
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête:** amp_graphics.h **Namespace:** Concurrency::graphiques
+**En-tête :** amp_graphics. h **espace de noms :** Concurrency :: Graphics
 
 ## <a name="see-also"></a>Voir aussi
 

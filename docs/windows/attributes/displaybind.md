@@ -1,17 +1,17 @@
 ---
-title: displaybind (C++ attribut com)
+title: displaybind (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.displaybind
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 9ca5c84e859d395d71b7f37a34b1158800bceed7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5c870aefbc73893b5bf14edec384a93fe0b057b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168250"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841660"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -25,22 +25,20 @@ Indique une propriété qui doit être affichée à l’utilisateur comme pouvan
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **displaybind** C++ a les mêmes fonctionnalités que l’attribut MIDL [displaybind](/windows/win32/Midl/displaybind) .
+L’attribut C++ **displaybind** a les mêmes fonctionnalités que l’attribut MIDL [displaybind](/windows/win32/Midl/displaybind) .
 
 ## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de **displaybind**, consultez l’exemple de [Bindable](bindable.md) .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Méthode d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Méthode d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

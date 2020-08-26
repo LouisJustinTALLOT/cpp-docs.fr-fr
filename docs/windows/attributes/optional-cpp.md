@@ -1,17 +1,17 @@
 ---
-title: facultatif (C++ attribut com)
+title: facultatif (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31e2dbac988cdbac8aca2d01a70177825d764a5b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214654"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842167"
 ---
 # <a name="optional-c"></a>facultatif (C++)
 
@@ -25,7 +25,7 @@ Spécifie un paramètre facultatif pour une fonction membre.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **facultatif** C++ a les mêmes fonctionnalités que l’attribut MIDL [facultatif](/windows/win32/Midl/optional) .
+L’attribut C++ **facultatif** a les mêmes fonctionnalités que l’attribut MIDL [facultatif](/windows/win32/Midl/optional) .
 
 ## <a name="example"></a>Exemple
 
@@ -44,20 +44,18 @@ __interface IFireTabCtrl : IDispatch
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Paramètre d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Paramètre d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)
+[Attributs de paramètre](parameter-attributes.md)

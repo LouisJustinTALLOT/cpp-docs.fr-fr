@@ -17,12 +17,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: e9953e967d1c94ae56dfc1063fb0deafa342631c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d26671b8c3d983e7f1c3fd559d8aa2029e3162fe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738730"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841140"
 ---
 # <a name="signal-constants"></a>signal, constantes
 
@@ -32,11 +32,11 @@ ms.locfileid: "57738730"
 #include <signal.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’argument `sig` doit être une des constantes manifestes répertoriées ci-dessous (définies dans SIGNAL.H).
 
-|||
+|Constant|Description|
 |-|-|
 |SIGABRT|Arrêt anormal. L’action par défaut termine le programme appelant avec le code de sortie 3.  |
 |SIGABRT_COMPAT|Identique à SIGABRT. Pour la compatibilité avec les autres plateformes.  |
@@ -50,5 +50,5 @@ L’argument `sig` doit être une des constantes manifestes répertoriées ci-de
 ## <a name="see-also"></a>Voir aussi
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
-[raise](../c-runtime-library/reference/raise.md)<br/>
+[génère](../c-runtime-library/reference/raise.md)<br/>
 [Constantes globales](../c-runtime-library/global-constants.md)

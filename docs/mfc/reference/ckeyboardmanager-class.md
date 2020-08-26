@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: a2d2ae8133310f3a93b6eefc30c67045a47cd94f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561464"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841491"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager, classe
 
@@ -51,16 +51,14 @@ class CKeyboardManager : public CObject
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CKeyboardManager :: CKeyboardManager](#ckeyboardmanager)|Construit un objet `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CKeyboardManager :: CleanUp](#cleanup)|Efface les tables de touches de raccourci.|
 |[CKeyboardManager :: FindDefaultAccelerator](#finddefaultaccelerator)|Récupère la touche de raccourci par défaut pour la commande et la fenêtre spécifiées.|
 |[CKeyboardManager :: IsKeyHandled](#iskeyhandled)|Détermine si une clé est gérée par la table d’accélérateurs.|
@@ -91,7 +89,7 @@ L’exemple suivant montre comment récupérer un pointeur vers un `CKeyboardMan
 
 [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxkeyboardmanager. h
 
@@ -147,7 +145,7 @@ dans Pointeur vers une fenêtre frame.
 *bIsDefaultFrame*<br/>
 dans Spécifie si la fenêtre frame est la fenêtre frame par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le raccourci est trouvé ; Sinon, 0.
 
@@ -181,7 +179,7 @@ dans Fenêtre frame. Cette méthode détermine si une touche de raccourci est g�
 *bIsDefaultFrame*\
 dans Paramètre booléen qui indique si *pWndFrame* est la fenêtre frame par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la touche de raccourci est gérée. FALSe si la clé n’est pas gérée ou si *pWndFrame* a la valeur null.
 
@@ -202,7 +200,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 *nChar*\
 dans Caractère vérifié par cette méthode.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le caractère est imprimable, zéro si ce n’est pas le cas.
 
@@ -218,7 +216,7 @@ Indique si les menus affichent toutes les touches de raccourci associées aux co
 static BOOL IsShowAllAccelerators();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’application répertorie toutes les touches de raccourci pour les commandes de menu ; 0 si l’application affiche uniquement les touches de raccourci par défaut.
 
@@ -244,7 +242,7 @@ dans Chemin d’accès au registre où les `CKeyboardManager` données sont enre
 *pDefaultFrame*<br/>
 dans Pointeur vers une fenêtre frame à utiliser comme fenêtre par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’État a été chargé avec succès ou 0 dans le cas contraire.
 
@@ -284,7 +282,7 @@ dans Chemin d’accès du Registre pour l’enregistrement de l' `CKeyboardManag
 *pDefaultFrame*<br/>
 dans Pointeur vers une fenêtre frame qui devient la fenêtre par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’état du gestionnaire de clavier a été enregistré avec succès, ou 0 dans le cas contraire.
 
@@ -331,7 +329,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 *nChar*<br/>
 dans Caractère à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Caractère qui est le registre supérieur du paramètre d’entrée.
 
@@ -369,7 +367,7 @@ dans Pointeur vers la fenêtre frame par défaut.
 *hAccelNew*<br/>
 dans Handle vers le nouveau tableau de raccourcis.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la méthode réussit ; Sinon, 0.
 

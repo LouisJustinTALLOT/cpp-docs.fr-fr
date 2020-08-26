@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42c94daf331fd9a17e050067e4c4e495af180b0c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201958"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841699"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -43,22 +43,44 @@ using add_const_t = typename add_const<T>::type;
 
 Il s’agit des alias fournis pour les `type` membres :
 
-||||
-|-|-|-|
-| add_const_t | add_cv_t | add_lvalue_reference_t |
-| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
-| aligned_storage_t | aligned_union_t | common_type_t |
-| conditional_t | decay_t | enable_if_t |
-| invoke_result_t | make_signed_t | make_unsigned_t |
-| remove_all_extents_t | remove_const_t | remove_cv_t |
-| remove_extent_t | remove_pointer_t | remove_reference_t |
-| remove_volatile_t | result_of_t | underlying_type_t |
+:::row:::
+   :::column:::
+      `add_const_t`\
+      `add_cv_t`\
+      `add_lvalue_reference_t`\
+      `add_pointer_t`\
+      `add_rvalue_reference_t`\
+      `add_volatile_t`\
+      `aligned_storage_t`\
+      `aligned_union_t`\
+   :::column-end:::
+   :::column:::
+      `common_type_t`\
+      `conditional_t`\
+      `decay_t`\
+      `enable_if_t`\
+      `invoke_result_t`\
+      `make_signed_t`\
+      `make_unsigned_t`\
+      `remove_all_extents_t`\
+   :::column-end:::
+   :::column:::
+      `remove_const_t`\
+      `remove_cv_t`\
+      `remove_extent_t`\
+      `remove_pointer_t`\
+      `remove_reference_t`\
+      `remove_volatile_t`\
+      `result_of_t`\
+      `underlying_type_t`\
+   :::column-end:::
+:::row-end:::
 
 ### <a name="classes"></a>Classes
 
 Typedefs et classe d’assistance
 
-|||
+|Nom|Description|
 |-|-|
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Crée une constante intégrale à partir d’un type et d’une valeur.|
 |[true_type](../standard-library/type-traits-typedefs.md#true_type)|Contient une constante intégrale avec la valeur true.|
@@ -66,7 +88,7 @@ Typedefs et classe d’assistance
 
 Catégories de type principal
 
-|||
+|Nom|Description|
 |-|-|
 |[is_void](../standard-library/is-void-class.md)|Teste si le type est **`void`** .|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Teste si le type est `std::nullptr_t`.|
@@ -85,7 +107,7 @@ Catégories de type principal
 
 Catégories de type composite
 
-|||
+|Nom|Description|
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Teste si le type est une référence.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Teste si le type est arithmétique.|
@@ -97,7 +119,7 @@ Catégories de type composite
 
 Propriétés type
 
-|||
+|Nom|Description|
 |-|-|
 |[is_const](../standard-library/is-const-class.md)|Teste si le type est **`const`** .|
 |[is_volatile](../standard-library/is-volatile-class.md)|Teste si le type est **`volatile`** .|
@@ -150,7 +172,7 @@ Propriétés type
 
 Requêtes de propriétés de type
 
-|||
+|Nom|Description|
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|Obtient l’alignement d’un type.|
 |[moteurs](../standard-library/rank-class.md)|Obtient le nombre de dimensions de tableau.|
@@ -158,7 +180,7 @@ Requêtes de propriétés de type
 
 Relations de types
 
-|||
+|Nom|Description|
 |-|-|
 |[is_same](../standard-library/is-same-class.md)|Teste si deux types sont identiques.|
 |[is_base_of](../standard-library/is-base-of-class.md)|Teste si un type est une base d’un autre.|
@@ -166,7 +188,7 @@ Relations de types
 
 Modifications const-volatile
 
-|||
+|Nom|Description|
 |-|-|
 |[add_const](../standard-library/add-const-class.md)|Produit un **`const`** type à partir d’un type.|
 |[add_volatile](../standard-library/add-volatile-class.md)|Produit un **`volatile`** type à partir d’un type.|
@@ -177,7 +199,7 @@ Modifications const-volatile
 
 Modifications de référence
 
-|||
+|Nom|Description|
 |-|-|
 |[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|Génère une référence vers un type à partir d’un type.|
 |[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|Génère une référence rvalue vers un type à partir d’un type.|
@@ -185,28 +207,28 @@ Modifications de référence
 
 Modifications de signe
 
-|||
+|Nom|Description|
 |-|-|
 |[make_signed](../standard-library/make-signed-class.md)|Génère le type si signé, ou le plus petit type signé supérieur ou égal en taille au type.|
 |[make_unsigned](../standard-library/make-unsigned-class.md)|Génère le type si non signé, ou le plus petit type non signé supérieur ou égal en taille au type.|
 
 Modifications de tableau
 
-|||
+|Nom|Description|
 |-|-|
 |[remove_all_extents](../standard-library/remove-all-extents-class.md)|Génère un type non-tableau à partir d’un type tableau.|
 |[remove_extent](../standard-library/remove-extent-class.md)|Génère le type d’élément à partir d’un type tableau.|
 
 Modifications de pointeur
 
-|||
+|Nom|Description|
 |-|-|
 |[add_pointer](../standard-library/add-pointer-class.md)|Génère un pointeur vers un type à partir d’un type.|
 |[remove_pointer](../standard-library/remove-pointer-class.md)|Génère un type à partir d’un pointeur vers un type.|
 
 Autres transformations
 
-|||
+|Nom|Description|
 |-|-|
 |[aligned_storage](../standard-library/aligned-storage-class.md)|Alloue la mémoire non initialisée pour un type aligné.|
 |[aligned_union](../standard-library/aligned-union-class.md)|Alloue la mémoire non initialisée pour une union alignée avec un constructeur ou un destructeur non trivial.|
@@ -220,7 +242,7 @@ Autres transformations
 
 Caractéristiques de l’opérateur logique
 
-|||
+|Nom|Description|
 |-|-|
 |[conjonction](../standard-library/conjunction-class.md)||
 |[disjonction](../standard-library/disjunction-class.md)||

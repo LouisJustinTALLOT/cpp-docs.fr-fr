@@ -2,12 +2,12 @@
 title: 2. Directives
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: c3aadcf34e013c66dec81ca4b09dce4144294ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b2649a65efd3368cf8a4d2649a424b1a539f1ef
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228399"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841972"
 ---
 # <a name="2-directives"></a>2. Directives
 
@@ -21,7 +21,7 @@ La syntaxe d’une directive OpenMP est formellement spécifiée par la grammair
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-Chaque directive commence par `#pragma omp` , afin de réduire le risque de conflit avec d’autres directives pragma (non OpenMP ou d’extensions fournisseur pour OpenMP) portant le même nom. Le reste de la directive suit les conventions des normes C et C++ pour les directives de compilateur. En particulier, les espaces blancs peuvent être utilisés avant et après `#` , et parfois des espaces blancs doivent être utilisés pour séparer les mots dans une directive. Les jetons de prétraitement qui suivent le `#pragma omp` sont soumis au remplacement de macros.
+Chaque directive commence par  `#pragma omp` , afin de réduire le risque de conflit avec d’autres directives pragma (non OpenMP ou d’extensions fournisseur pour OpenMP) portant le même nom. Le reste de la directive suit les conventions des normes C et C++ pour les directives de compilateur. En particulier, les espaces blancs peuvent être utilisés avant et après `#` , et parfois des espaces blancs doivent être utilisés pour séparer les mots dans une directive. Les jetons de prétraitement qui suivent le `#pragma omp` sont soumis au remplacement de macros.
 
 Les directives respectent la casse. L’ordre dans lequel les clauses apparaissent dans les directives n’est pas significatif. Les clauses sur les directives peuvent être répétées selon les besoins, conformément aux restrictions indiquées dans la description de chaque clause. Si *variable-List* apparaît dans une clause, elle doit spécifier uniquement des variables. Un seul *nom de directive* peut être spécifié par directive.  Par exemple, la directive suivante n’est pas autorisée :
 
@@ -191,12 +191,12 @@ La `schedule` clause spécifie comment les itérations de la `for` boucle sont r
 
 Table 2-1 : `schedule` valeurs de *type* de clause
 
-|||
+|Valeur|Description|
 |-|-|
-|statique|Lorsque `schedule(static,` *chunk_size* `)` est spécifié, les itérations sont divisées en segments d’une taille spécifiée par *chunk_size*. Les segments sont attribués de manière statique aux threads de l’équipe en mode tourniquet (Round Robin) dans l’ordre du numéro de thread. Quand aucun *chunk_size* n’est spécifié, l’espace d’itération est divisé en segments dont la taille est approximativement égale, avec un segment affecté à chaque thread.|
+|static|Lorsque `schedule(static,` *chunk_size* `)` est spécifié, les itérations sont divisées en segments d’une taille spécifiée par *chunk_size*. Les segments sont attribués de manière statique aux threads de l’équipe en mode tourniquet (Round Robin) dans l’ordre du numéro de thread. Quand aucun *chunk_size* n’est spécifié, l’espace d’itération est divisé en segments dont la taille est approximativement égale, avec un segment affecté à chaque thread.|
 |dynamique|Lorsque `schedule(dynamic,` *chunk_size* `)` est spécifié, les itérations sont divisées en une série de segments, chacun contenant *chunk_size* itérations. Chaque segment est assigné à un thread qui attend une attribution. Le thread exécute le segment des itérations, puis attend la prochaine affectation, jusqu’à ce qu’il ne reste aucun segment à assigner. Le dernier segment à affecter peut avoir un plus petit nombre d’itérations. Quand aucun *chunk_size* n’est spécifié, la valeur par défaut est 1.|
 |guider|Lorsque `schedule(guided,` *chunk_size* `)` est spécifié, les itérations sont assignées aux threads dans des segments avec des tailles décroissantes. Quand un thread termine son bloc d’itérations affecté, il reçoit dynamiquement un autre bloc, jusqu’à ce qu’il ne reste aucun élément. Pour un *chunk_size* de 1, la taille de chaque segment est approximativement le nombre d’itérations non assignées divisé par le nombre de threads. Ces tailles diminuent presque de façon exponentielle jusqu’à 1. Pour un *chunk_size* avec la valeur *k* supérieure à 1, les tailles diminuent presque de façon exponentielle jusqu’à *k*, sauf que le dernier segment peut avoir moins de *k* itérations. Quand aucun *chunk_size* n’est spécifié, la valeur par défaut est 1.|
-|runtime|Lorsque `schedule(runtime)` est spécifié, la décision relative à la planification est différée jusqu’au moment de l’exécution. Le *type* et la taille de la planification des segments peuvent être choisis au moment de l’exécution en définissant la variable d’environnement `OMP_SCHEDULE` . Si cette variable d’environnement n’est pas définie, la planification résultante est définie par l’implémentation. Lorsque `schedule(runtime)` est spécifié, *chunk_size* ne doit pas être spécifié.|
+|runtime|Lorsque `schedule(runtime)` est spécifié, la décision relative à la planification est différée jusqu’au moment de l’exécution. Le *type* et la taille de la planification des segments peuvent être choisis au moment de l’exécution en définissant la variable d’environnement `OMP_SCHEDULE` . Si cette variable d’environnement n’est pas définie, la planification résultante est définie par l’implémentation. Lorsque  `schedule(runtime)` est spécifié, *chunk_size* ne doit pas être spécifié.|
 
 En l’absence d’une clause définie de manière explicite `schedule` , la valeur par défaut `schedule` est définie par l’implémentation.
 
@@ -462,21 +462,21 @@ Si les objets qui nécessitent une synchronisation peuvent tous être désignés
 Une `flush` directive sans *liste de variables* synchronise tous les objets partagés, à l’exception des objets inaccessibles avec une durée de stockage automatique. (Cela peut avoir plus de surcharge qu’un `flush` avec une *liste de variables*.) Une `flush` directive sans *liste de variables* est implicite pour les directives suivantes :
 
 - `barrier`
-- À l’entrée et à la sortie de`critical`
-- À l’entrée et à la sortie de`ordered`
-- À l’entrée et à la sortie de`parallel`
-- À la sortie de`for`
-- À la sortie de`sections`
-- À la sortie de`single`
-- À l’entrée et à la sortie de`parallel for`
-- À l’entrée et à la sortie de`parallel sections`
+- À l’entrée et à la sortie de `critical`
+- À l’entrée et à la sortie de `ordered`
+- À l’entrée et à la sortie de `parallel`
+- À la sortie de `for`
+- À la sortie de `sections`
+- À la sortie de `single`
+- À l’entrée et à la sortie de `parallel for`
+- À l’entrée et à la sortie de `parallel sections`
 
 La directive n’est pas impliquée si une `nowait` clause est présente. Il convient de noter que la `flush` directive n’est pas implicite pour les éléments suivants :
 
-- À l’entrée à`for`
-- À l’entrée ou à la sortie de`master`
-- À l’entrée à`sections`
-- À l’entrée à`single`
+- À l’entrée à `for`
+- À l’entrée ou à la sortie de `master`
+- À l’entrée à `sections`
+- À l’entrée à `single`
 
 Une référence qui accède à la valeur d’un objet avec un type qualifié volatil se comporte comme s’il existait une `flush` directive spécifiant cet objet au point de séquence précédent. Une référence qui modifie la valeur d’un objet avec un type qualifié volatil se comporte comme s’il existait une `flush` directive spécifiant cet objet au point de séquence suivant.
 
@@ -601,7 +601,7 @@ Les sections suivantes décrivent les clauses d’attributs de partage de donné
 - [firstprivate](#2722-firstprivate)
 - [lastprivate](#2723-lastprivate)
 - [partagé](#2724-shared)
-- [valeurs](#2725-default)
+- [default](#2725-default)
 - [applicables](#2726-reduction)
 - [copyin](#2727-copyin)
 - [copyprivate](#2728-copyprivate)
@@ -717,7 +717,7 @@ Une réduction est généralement spécifiée pour une instruction de l’une de
 
 - *x* `=` *x* *op* *expr*
 - *x* *binop* `=` *expr*
-- *x* `=` *expr* *op* *x* (sauf en cas de soustraction)
+- *x* `=` *expr* *op* *x*  (sauf en cas de soustraction)
 - *x*`++`
 - `++` *x*
 - *x*`--`
@@ -860,14 +860,14 @@ L’imbrication dynamique de directives doit respecter les règles suivantes :
 
 - `for``sections` `single` les directives, et qui se lient à la même `parallel` ne peuvent pas être imbriquées les unes dans les autres.
 
-- `critical`les directives portant le même nom ne peuvent pas être imbriquées les unes dans les autres. Notez que cette restriction n’est pas suffisante pour empêcher l’interblocage.
+- `critical` les directives portant le même nom ne peuvent pas être imbriquées les unes dans les autres. Notez que cette restriction n’est pas suffisante pour empêcher l’interblocage.
 
 - `for`les `sections` directives, et `single` ne sont pas autorisées dans l’étendue dynamique des `critical` `ordered` régions, et `master` si les directives sont liées au même `parallel` que les régions.
 
-- `barrier`les directives ne sont pas autorisées dans l’étendue dynamique des régions,,,, `for` `ordered` `sections` `single` `master` et `critical` si les directives sont liées au même `parallel` que les régions.
+- `barrier` les directives ne sont pas autorisées dans l’étendue dynamique des régions,,,, `for` `ordered` `sections` `single` `master` et `critical` si les directives sont liées au même `parallel` que les régions.
 
-- `master`les directives ne sont pas autorisées dans l’étendue dynamique des `for` `sections` directives, et `single` si les `master` directives sont liées au même `parallel` que les directives de partage de travail.
+- `master` les directives ne sont pas autorisées dans l’étendue dynamique des `for` `sections` directives, et `single` si les `master` directives sont liées au même `parallel` que les directives de partage de travail.
 
-- `ordered`les directives ne sont pas autorisées dans l’étendue dynamique des `critical` régions si les directives sont liées au même `parallel` que les régions.
+- `ordered` les directives ne sont pas autorisées dans l’étendue dynamique des `critical` régions si les directives sont liées au même `parallel` que les régions.
 
 - Toute directive autorisée lorsqu’elle est exécutée dynamiquement à l’intérieur d’une région parallèle est également autorisée lorsqu’elle est exécutée en dehors d’une région parallèle. Lorsqu’elle est exécutée dynamiquement en dehors d’une région parallèle spécifiée par l’utilisateur, la directive est exécutée par une équipe composée uniquement du thread principal.

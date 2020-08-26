@@ -1,24 +1,24 @@
 ---
-title: '&lt;optional&gt;'
+title: '&lt;facultatif&gt;'
 ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: bce31811c98d351f3c561b3136d41f7ed23d13e0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 31a3d9aad539e45bb835331a4ef63690d0e16f49
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687259"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842674"
 ---
-# <a name="ltoptionalgt"></a>&lt;optional&gt;
+# <a name="ltoptionalgt"></a>&lt;facultatif&gt;
 
-Définit le modèle de classe de conteneur `optional` et plusieurs modèles de prise en charge.
+Définit le modèle de classe `optional` de conteneur et plusieurs modèles de prise en charge.
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<optional >
+**En-tête :**\<optional>
 
 **Espace de noms :** std
 
@@ -26,39 +26,39 @@ Définit le modèle de classe de conteneur `optional` et plusieurs modèles de p
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
-|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Teste si un objet est égal à un autre objet.|
-|[!=, opérateur](../standard-library/optional-operators.md#op_neq)|Teste si un objet n’est pas égal à un autre objet.|
-|[operator<](../standard-library/optional-operators.md#op_lt)|Teste si l’objet situé à gauche est inférieur à l’objet situé à droite.|
-|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|Teste si l’objet situé à gauche est inférieur ou égal à l’objet situé à droite.|
-|[operator>](../standard-library/optional-operators.md#op_gt)|Teste si l’objet situé à gauche est supérieur à l’objet situé à droite.|
-|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Teste si l’objet situé à gauche est supérieur ou égal à l’objet situé à droite.|
+|[opérateur = =](../standard-library/optional-operators.md#op_eq_eq)|Teste si un objet est égal à un autre objet.|
+|[opérateur ! =](../standard-library/optional-operators.md#op_neq)|Teste si un objet n’est pas égal à un autre objet.|
+|[<d’opérateur ](../standard-library/optional-operators.md#op_lt)|Teste si l’objet situé à gauche est inférieur à l’objet situé à droite.|
+|[<opérateur =](../standard-library/optional-operators.md#op_lt_eq)|Teste si l’objet situé à gauche est inférieur ou égal à l’objet situé à droite.|
+|[>d’opérateur ](../standard-library/optional-operators.md#op_gt)|Teste si l’objet situé à gauche est supérieur à l’objet situé à droite.|
+|[>opérateur =](../standard-library/optional-operators.md#op_lt_eq)|Teste si l’objet situé à gauche est supérieur ou égal à l’objet situé à droite.|
 
 > [!NOTE]
-> Outre les comparaisons relationnelles, les opérateurs \<optional > prennent également en charge la comparaison avec **nullopt** et `T`.
+> Outre les comparaisons relationnelles, \<optional> les opérateurs prennent également en charge la comparaison avec **nullopt** et `T` .
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Rend un objet facultatif.|
-|[swap](../standard-library/optional-functions.md#swap)|Échange les valeurs contenues de deux objets `optional`.|
+|[swap](../standard-library/optional-functions.md#swap)|Échange les valeurs contenues de deux `optional` objets.|
 
 ### <a name="classes-and-structs"></a>Classes et structs
 
-|||
+|Nom|Description|
 |-|-|
-|hash|Retourne un hachage de l’objet contenu.|
-|[classe facultative](../standard-library/optional-class.md)|Décrit un objet qui peut ou non contenir une valeur.|
+|Hachage|Retourne un hachage de l’objet contenu.|
+|[optional, classe](../standard-library/optional-class.md)|Décrit un objet qui peut ou non contenir une valeur.|
 |[struct nullopt_t](../standard-library/nullopt-t-structure.md)|Décrit un objet qui ne contient pas de valeur.|
-|[bad_optional_access, classe](../standard-library/bad-optional-access-class.md)|Décrit un objet levé en tant qu’exception pour signaler une tentative d’accès à une valeur absente.|
+|[classe bad_optional_access](../standard-library/bad-optional-access-class.md)|Décrit un objet levé en tant qu’exception pour signaler une tentative d’accès à une valeur absente.|
 
 ### <a name="objects"></a>Objets
 
-|||
+|Nom|Description|
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)|Une instance de `nullopt_t` pour les comparaisons.|
+|[nullopt](../standard-library/optional-functions.md#nullopt)|Instance de `nullopt_t` pour les comparaisons.|
 
 ## <a name="see-also"></a>Voir aussi
 

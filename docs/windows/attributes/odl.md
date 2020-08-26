@@ -1,17 +1,17 @@
 ---
-title: ODL (C++ attribut com)
+title: ODL (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: 2627be876f0c46bb7d72c2c6b825cf76e24b1eb1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a2f3c58e40dc14d256ca694bb1266aed13dc9620
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214732"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842817"
 ---
 # <a name="odl"></a>odl
 
@@ -25,7 +25,7 @@ Identifie une interface en tant qu’interface ODL (Object Description Language)
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **ODL** C++ a les mêmes fonctionnalités que l’attribut MIDL [ODL](/windows/win32/Midl/odl) .
+L’attribut C++ **ODL** a les mêmes fonctionnalités que l’attribut MIDL [ODL](/windows/win32/Midl/odl) .
 
 ## <a name="example"></a>Exemple
 
@@ -49,16 +49,14 @@ public:
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|**interface**|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|**interface**|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

@@ -5,22 +5,21 @@ f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 776f715f72d2e3b6b3841856323a52953e9c5344
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e767c6b3e02564d89be48f47e8bf7718600af961
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376338"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841244"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics, fonctions de l’espace de noms
 
-|||
-|-|-|
-|[Copie](#copy)|[copy_async](#copy_async)|
+[reprographie](#copy)\
+[copy_async](#copy_async)
 
-## <a name="copy-function-concurrencygraphics-namespace"></a><a name="copy"></a>fonction de copie (Concurrency::graphics Namespace)
+## <a name="copy-function-concurrencygraphics-namespace"></a><a name="copy"></a> Copy, fonction (Concurrency :: Graphics, espace de noms)
 
-Copiez une texture source dans un tampon de destination, ou copie un tampon source dans un tampon de destination. La forme générale de `copy(src, dest)`cette fonction est .
+Copie une texture source dans une mémoire tampon de destination, ou copie une mémoire tampon source dans une mémoire tampon de destination. La forme générale de cette fonction est `copy(src, dest)` .
 
 ```cpp
 template <
@@ -119,47 +118,47 @@ void copy (
 ### <a name="parameters"></a>Paramètres
 
 *_Copy_extent*<br/>
-L’étendue de la section texture à copier.
+Étendue de la section de texture à copier.
 
 *_Dst*<br/>
 Objet cible de la copie.
 
 *_Dst_byte_size*<br/>
-Le nombre d’octets dans la destination.
+Nombre d’octets dans la destination.
 
 *_Dst_type*<br/>
-Le type de l’objet de destination.
+Type de l’objet de destination.
 
 *_Dst_offset*<br/>
-Le décalage dans la destination à laquelle commencer à copier.
+Offset dans la destination à partir duquel commencer la copie.
 
-*InputIterator (en)*<br/>
+*InputIterator*<br/>
 Type de l'itérateur d'entrée.
 
-*Iterator De sortie*<br/>
-Le type de l’itérateur de sortie.
+*OutputIterator*<br/>
+Type de l’itérateur de sortie.
 
 *_Src*<br/>
-Pour s’opposer à copier.
+À l’objet à copier.
 
 *_Src_byte_size*<br/>
-Le nombre d’octets dans la source.
+Nombre d’octets dans la source.
 
 *_Src_type*<br/>
-Le type de l’objet source.
+Type de l’objet source.
 
 *_Src_offset*<br/>
-Le décalage dans la source à partir de laquelle commencer à copier.
+Offset dans la source à partir duquel commencer la copie.
 
 *first*<br/>
-Un itérateur de début dans le récipient source.
+Itérateur de début dans le conteneur source.
 
 *last*<br/>
-Un itérateur de fin dans le récipient source.
+Itérateur de fin dans le conteneur source.
 
-## <a name="copy_async-function-concurrencygraphics-namespace"></a><a name="copy_async"></a>copy_async Function (Concurrency::graphics Namespace)
+## <a name="copy_async-function-concurrencygraphics-namespace"></a><a name="copy_async"></a> copy_async, fonction (Concurrency :: Graphics, espace de noms)
 
-Copie asynchronement une texture source dans un tampon de destination, ou copie un tampon source dans un tampon de destination, puis renvoie un objet [completion_future](completion-future-class.md) qui peut être attendu. Les données ne peuvent pas être copiées lorsque le code fonctionne sur un accélérateur. La forme générale de `copy(src, dest)`cette fonction est .
+Copie de façon asynchrone une texture source dans une mémoire tampon de destination, ou copie une mémoire tampon source dans une mémoire tampon de destination, puis retourne un objet [completion_future](completion-future-class.md) qui peut être attendu. Les données ne peuvent pas être copiées lorsque le code s’exécute sur un accélérateur. La forme générale de cette fonction est `copy(src, dest)` .
 
 ```cpp
 template<
@@ -254,49 +253,49 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 ### <a name="parameters"></a>Paramètres
 
 *_Copy_extent*<br/>
-L’étendue de la section texture à copier.
+Étendue de la section de texture à copier.
 
 *_Dst*<br/>
 Objet cible de la copie.
 
 *_Dst_byte_size*<br/>
-Le nombre d’octets dans la destination.
+Nombre d’octets dans la destination.
 
 *_Dst_type*<br/>
-Le type de l’objet de destination.
+Type de l’objet de destination.
 
 *_Dst_offset*<br/>
-Le décalage dans la destination à laquelle commencer à copier.
+Offset dans la destination à partir duquel commencer la copie.
 
-*InputIterator (en)*<br/>
+*InputIterator*<br/>
 Type de l'itérateur d'entrée.
 
-*Iterator De sortie*<br/>
-Le type de l’itérateur de sortie.
+*OutputIterator*<br/>
+Type de l’itérateur de sortie.
 
 *_Src*<br/>
-Pour s’opposer à copier.
+À l’objet à copier.
 
 *_Src_byte_size*<br/>
-Le nombre d’octets dans la source.
+Nombre d’octets dans la source.
 
 *_Src_type*<br/>
-Le type de l’objet source.
+Type de l’objet source.
 
 *_Src_offset*<br/>
-Le décalage dans la source à partir de laquelle commencer à copier.
+Offset dans la source à partir duquel commencer la copie.
 
 *first*<br/>
-Un itérateur de début dans le récipient source.
+Itérateur de début dans le conteneur source.
 
 *last*<br/>
-Un itérateur de fin dans le récipient source.
+Itérateur de fin dans le conteneur source.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête:** amp_graphics.h
+**En-tête :** amp_graphics. h
 
-**Espace nom:** Concordrency::graphiques
+**Espace de noms :** Concurrency :: Graphics
 
 ## <a name="see-also"></a>Voir aussi
 

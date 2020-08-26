@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: d0b9faf0bd11892c05e25e981e8cd729cb623dd4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219324"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842453"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Guide de développement C++ pour les canaux côté exécution spéculative
 
@@ -21,7 +21,7 @@ Cet article contient des conseils pour les développeurs qui aident à identifie
 
 L’aide fournie dans cet article est liée aux classes de vulnérabilités représentées par :
 
-1. CVE-2017-5753, également appelé spectre variant 1. Cette classe de vulnérabilité matérielle est liée aux canaux secondaires qui peuvent survenir en raison d’une exécution spéculative qui se produit à la suite d’une prédiction incorrecte de branche conditionnelle. Le compilateur Microsoft C++ dans Visual Studio 2017 (à partir de la version 15.5.5) inclut la prise en charge du `/Qspectre` commutateur qui fournit une atténuation au moment de la compilation pour un ensemble limité de modèles de codage potentiellement vulnérables associés à CVE-2017-5753. Le `/Qspectre` commutateur est également disponible dans Visual Studio 2015 Update 3 à [KB 4338871](https://support.microsoft.com/help/4338871). La documentation de l’indicateur [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) fournit plus d’informations sur ses effets et son utilisation.
+1. CVE-2017-5753, également appelé spectre variant 1. Cette classe de vulnérabilité matérielle est liée aux canaux secondaires qui peuvent survenir en raison d’une exécution spéculative qui se produit à la suite d’une prédiction incorrecte de branche conditionnelle. Le compilateur Microsoft C++ dans Visual Studio 2017 (à partir de la version 15.5.5) inclut la prise en charge du `/Qspectre` commutateur qui fournit une atténuation au moment de la compilation pour un ensemble limité de modèles de codage potentiellement vulnérables associés à CVE-2017-5753. Le `/Qspectre` commutateur est également disponible dans Visual Studio 2015 Update 3 à [KB 4338871](https://support.microsoft.com/help/4338871). La documentation de l' [`/Qspectre`](../build/reference/qspectre.md) indicateur fournit des informations supplémentaires sur ses effets et son utilisation.
 
 2. CVE-2018-3639, également appelé « [contournement de la Banque spéculative » (SSB)](https://aka.ms/sescsrdssb). Cette classe de vulnérabilité matérielle est liée aux canaux secondaires qui peuvent survenir en raison de l’exécution spéculative d’une charge à l’avance d’un magasin dépendant suite à une prédiction d’accès à la mémoire.
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Il convient de noter que ces deux exemples impliquent une modification spéculative des pointeurs de branche indirecte alloués par la pile. Il est possible que la modification spéculative puisse également se produire pour les variables globales, la mémoire allouée par tas et même la mémoire en lecture seule sur certains processeurs. Pour la mémoire allouée par la pile, le compilateur Microsoft C++ prend des mesures pour compliquer la modification spéculative des cibles de branche indirectes allouées par la pile, par exemple en réordonnant les variables locales de telle sorte que les tampons soient placés adjacents à un cookie de sécurité dans le cadre de la fonctionnalité de sécurité du compilateur [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) .
+Il convient de noter que ces deux exemples impliquent une modification spéculative des pointeurs de branche indirecte alloués par la pile. Il est possible que la modification spéculative puisse également se produire pour les variables globales, la mémoire allouée par tas et même la mémoire en lecture seule sur certains processeurs. Pour la mémoire allouée par la pile, le compilateur Microsoft C++ prend des mesures pour compliquer la modification spéculative des cibles de branche indirectes allouées par la pile, par exemple en réordonnant les variables locales de telle sorte que les tampons soient placés adjacents à un cookie de sécurité dans le cadre de la [`/GS`](../build/reference/gs-buffer-security-check.md) fonctionnalité de sécurité du compilateur.
 
 ## <a name="speculative-type-confusion"></a>Confusion de type spéculatif
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barrière de spéculation via l’instrumentation au moment du compilateur
 
-Le compilateur Microsoft C++ dans Visual Studio 2017 (à partir de la version 15.5.5) prend en charge le `/Qspectre` commutateur qui insère automatiquement une barrière de spéculation pour un ensemble limité de modèles de codage potentiellement vulnérables liés à CVE-2017-5753. La documentation de l’indicateur [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) fournit plus d’informations sur ses effets et son utilisation. Il est important de noter que cet indicateur ne couvre pas tous les modèles de codage potentiellement vulnérables et que les développeurs ne doivent pas s’en servir comme solution de contournement complète pour cette classe de vulnérabilités.
+Le compilateur Microsoft C++ dans Visual Studio 2017 (à partir de la version 15.5.5) prend en charge le `/Qspectre` commutateur qui insère automatiquement une barrière de spéculation pour un ensemble limité de modèles de codage potentiellement vulnérables liés à CVE-2017-5753. La documentation de l' [`/Qspectre`](../build/reference/qspectre.md) indicateur fournit des informations supplémentaires sur ses effets et son utilisation. Il est important de noter que cet indicateur ne couvre pas tous les modèles de codage potentiellement vulnérables et que les développeurs ne doivent pas s’en servir comme solution de contournement complète pour cette classe de vulnérabilités.
 
 ### <a name="masking-array-indices"></a>Masquage d’index de tableau
 

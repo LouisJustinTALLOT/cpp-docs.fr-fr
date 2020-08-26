@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920303"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842115"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -58,18 +58,18 @@ Nombre maximal d'octets à examiner.
 *mbstate*<br/>
 Pointeur vers l’état de décalage actuel de l’octet initial de *Str*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Une des valeurs suivantes :
 
-|||
-|-|-|
-0|Le *nombre* suivant ou un nombre d’octets inférieur termine le caractère multioctet qui représente le caractère null étendu.
-1 pour *compter*, inclusive|Le *nombre* suivant ou un nombre d’octets inférieur termine un caractère multioctet valide. La valeur retournée est le nombre d'octets qui terminent le caractère multioctet.
-(size_t)(-2)|Les octets *suivants contribuent* à un caractère multioctet incomplet mais potentiellement valide, et tous les octets de *nombre* ont été traités.
-(size_t)(-1)|Une erreur d'encodage s'est produite. Le *nombre* suivant ou un nombre d’octets inférieur ne contribue pas à un caractère multioctet complet et valide. Dans ce cas, **errno** a la valeur EILSEQ et l’état de conversion dans *mbstate* n’est pas spécifié.
+| Value | Description |
+|--|--|
+| 0 | Le *nombre* suivant ou un nombre d’octets inférieur termine le caractère multioctet qui représente le caractère null étendu. |
+| 1 pour *compter*, inclusive | Le *nombre* suivant ou un nombre d’octets inférieur termine un caractère multioctet valide. La valeur retournée est le nombre d'octets qui terminent le caractère multioctet. |
+| (size_t)(-2) | Les octets *suivants contribuent* à un caractère multioctet incomplet mais potentiellement valide, et tous les octets de *nombre* ont été traités. |
+| (size_t)(-1) | Une erreur d'encodage s'est produite. Le *nombre* suivant ou un nombre d’octets inférieur ne contribue pas à un caractère multioctet complet et valide. Dans ce cas, **errno** a la valeur EILSEQ et l’état de conversion dans *mbstate* n’est pas spécifié. |
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **mbrlen** inspecte *le nombre d’octets à* partir de l’octet pointé par *Str* pour déterminer le nombre d’octets nécessaires pour terminer le caractère multioctet suivant, y compris les séquences de décalage. Il est équivalent à l’appel `mbrtowc(NULL, str, count, &mbstate)` où *mbstate* est un objet **mbstate_t** fourni par l’utilisateur ou un objet interne statique fourni par la bibliothèque.
 
@@ -85,7 +85,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |Non applicable|Non applicable|**mbrlen**|Non applicable|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -93,7 +93,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple montre comment l’interprétation des caractères multioctets dépend de la page de codes actuelle et montre la capacité de reprise de **mbrlen**.
 

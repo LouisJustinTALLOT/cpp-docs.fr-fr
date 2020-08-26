@@ -1,19 +1,19 @@
 ---
-title: Déclarateur de référence rvalue :&amp;&amp;
+title: 'Déclarateur de référence rvalue : &amp;&amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 65eec84447043b89ff94b77b7aed22b1b06f58e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 953aafe79115ad32a172c878eb910dd06b81e3f4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227099"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842037"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Déclarateur de référence rvalue :&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Déclarateur de référence rvalue : &amp;&amp;
 
 Contient une référence à une expression rvalue.
 
@@ -391,13 +391,12 @@ Cette version de la fonction `print_type_and_value` transfère ensuite son param
 
 Le tableau suivant résume les règles de réduction de référence pour la déduction du type d'argument template :
 
-|||
-|-|-|
-|Type développé|Type réduit|
-|`T& &`|`T&`|
-|`T& &&`|`T&`|
-|`T&& &`|`T&`|
-|`T&& &&`|`T&&`|
+| Type développé | Type réduit |
+|--|--|
+| `T& &` | `T&` |
+| `T& &&` | `T&` |
+| `T&& &` | `T&` |
+| `T&& &&` | `T&&` |
 
 La déduction d’argument template est un élément important de l’implémentation du transfert parfait. La section Transfert parfait, présentée plus haut dans cette rubrique, décrit le transfert parfait plus en détail.
 

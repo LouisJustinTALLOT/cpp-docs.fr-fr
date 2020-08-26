@@ -7,59 +7,59 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 18df18379fbee8271ba5cf851b04210f1dfddf57
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898855"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841881"
 ---
 # <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Incluez l’en-tête \<system_error > pour définir la `system_error` de la classe d’exception et les modèles associés pour le traitement des erreurs système de bas niveau.
+Incluez l’en-tête \<system_error> pour définir la classe d’exception `system_error` et les modèles associés pour le traitement des erreurs système de bas niveau.
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<system_error>
+**En-tête :**\<system_error>
 
 **Espace de noms :** std
 
 ## <a name="members"></a>Membres
 
-### <a name="objects"></a>Objets du
+### <a name="objects"></a>Objets
 
-|||
+|Nom|Description|
 |-|-|
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|Représente la catégorie des erreurs génériques.|
 |[is_error_code_enum_v](../standard-library/system-error-functions.md#is_error_code_enum_v)||
 |[is_error_condition_enum_v](../standard-library/system-error-functions.md#is_error_condition_enum_v)||
 |[system_category](../standard-library/system-error-functions.md#system_category)|Représente la catégorie des erreurs provoquées par des dépassements de capacité du système de bas niveau.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Elle crée un objet `error_code`.|
 |[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Elle crée un objet `error_condition`.|
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
-|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Teste si l’objet situé à gauche de l’opérateur est égal à l’objet situé à droite.|
-|[!=, opérateur](../standard-library/system-error-operators.md#op_neq)|Teste si l’objet situé à gauche de l’opérateur n’est pas égal à l’objet situé à droite.|
-|[operator<](../standard-library/system-error-operators.md#op_lt)|Vérifie si un objet est inférieur à l'objet passé en vue de leur comparaison.|
-|[operator<<](../standard-library/system-error-operators.md#op_ostream)||
+|[opérateur = =](../standard-library/system-error-operators.md#op_eq_eq)|Teste si l’objet situé à gauche de l’opérateur est égal à l’objet situé à droite.|
+|[opérateur ! =](../standard-library/system-error-operators.md#op_neq)|Teste si l’objet situé à gauche de l’opérateur n’est pas égal à l’objet situé à droite.|
+|[<d’opérateur ](../standard-library/system-error-operators.md#op_lt)|Vérifie si un objet est inférieur à l'objet passé en vue de leur comparaison.|
+|[<<d’opérateur ](../standard-library/system-error-operators.md#op_ostream)||
 
 ### <a name="enums"></a>Énumérations
 
-|||
+|Nom|Description|
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|Fournit des noms symboliques pour toutes les macros de code d’erreur définies par POSIX dans `<errno.h>`.|
+|[errc](../standard-library/system-error-enums.md#errc)|Fournit des noms symboliques pour toutes les macros de code d’erreur définies par POSIX dans `<errno.h>` .|
 
 ### <a name="classes-and-structs"></a>Classes et structs
 
-|||
+|Nom|Description|
 |-|-|
 |[error_category](../standard-library/error-category-class.md)|Représente la base commune abstraite d’objets qui décrit une catégorie des codes d’erreur.|
 |[error_code](../standard-library/error-code-class.md)|Représente les erreurs système de bas niveau spécifiques de l’implémentation.|

@@ -12,21 +12,21 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419706"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842635"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt;, fonctions
 
-Il s’agit des fonctions de modèle globales définies dans &lt;&gt;ostream. Pour les fonctions membres, consultez la documentation relative à la [classe basic_ostream](basic-ostream-class.md) .
+Il s’agit des fonctions de modèle globales définies dans &lt; ostream &gt; . Pour les fonctions membres, consultez la documentation relative à la [classe basic_ostream](basic-ostream-class.md) .
 
-||||
-|-|-|-|
-|[endl](#endl)|[ends](#ends)|[flush](#flush)|
-|[swap](#swap)|
+[Endl](#endl)\
+[fins](#ends)\
+[postconsommation](#flush)\
+[swap](#swap)
 
 ## <a name="endl"></a>endl
 
@@ -40,16 +40,16 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *elem*
+*Elem*\
 Type de l’élément.
 
-*Ostr*\
+*OSTR*\
 Objet de type **basic_ostream**.
 
-*Tr*\
-Caractéristiques du caractère.
+*TR*\
+Caractéristiques de caractère.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet de type **basic_ostream**.
 
@@ -87,18 +87,18 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *elem*
+*Elem*\
 Type de l’élément.
 
-*Ostr*\
-Objet de type `basic_ostream`.
+*OSTR*\
+Objet de type `basic_ostream`.
 
-*Tr*\
-Caractéristiques du caractère.
+*TR*\
+Caractéristiques de caractère.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Objet de type `basic_ostream`.
+Objet de type `basic_ostream`.
 
 ### <a name="remarks"></a>Notes
 
@@ -136,18 +136,18 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *elem*
+*Elem*\
 Type de l’élément.
 
-*Ostr*\
-Objet de type `basic_ostream`.
+*OSTR*\
+Objet de type `basic_ostream`.
 
-*Tr*\
-Caractéristiques du caractère.
+*TR*\
+Caractéristiques de caractère.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Objet de type `basic_ostream`.
+Objet de type `basic_ostream`.
 
 ### <a name="remarks"></a>Notes
 
@@ -184,16 +184,16 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *elem*
+*Elem*\
 Type de l’élément.
 
-*Tr*\
-Caractéristiques du caractère.
+*TR*\
+Caractéristiques de caractère.
 
-\ *gauche*
+*gauche*\
 Référence lvalue à un objet `basic_ostream`.
 
-\ *droit*
+*Oui*\
 Référence lvalue à un objet `basic_ostream`.
 
 ### <a name="remarks"></a>Notes

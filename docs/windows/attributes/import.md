@@ -1,19 +1,19 @@
 ---
-title: Import (C++ attribut com)
+title: Import (attribut COM C++)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.import
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: f2a0aa9a68c081e83a7a5278aa37a7fddac85416
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b146bdad7d870b534c371a4396993202cc83a4b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166834"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842310"
 ---
-# <a name="import"></a>importation
+# <a name="import"></a>importer
 
 Spécifie un autre fichier. idl,. ODL ou d’en-tête contenant les définitions que vous souhaitez référencer à partir de votre IDL principal.
 
@@ -32,9 +32,9 @@ Nom d’un fichier. idl que vous souhaitez importer dans la bibliothèque de typ
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **Import** C++ entraîne la placement d’une instruction `#import` sous l’instruction `import "docobj.idl"` dans le fichier. idl généré. L’attribut **Import** a les mêmes fonctionnalités que l’attribut MIDL [Import](/windows/win32/Midl/import) .
+L’attribut **Import** C++ provoque l' `#import` placement d’une instruction sous l' `import "docobj.idl"` instruction dans le fichier. idl généré. L’attribut **Import** a les mêmes fonctionnalités que l’attribut MIDL [Import](/windows/win32/Midl/import) .
 
-L’attribut d' **importation** place uniquement le fichier spécifié dans le fichier. idl qui sera généré par votre projet. l’attribut d' **importation** ne vous permet pas d’appeler des constructions dans le fichier spécifié à partir du code source de votre projet.  Pour appeler des constructions dans le fichier spécifié à partir du code source dans votre projet, utilisez [#import](../../preprocessor/hash-import-directive-cpp.md) et l’attribut `embedded_idl` ou vous pouvez inclure le fichier. h pour le *idl_file*, si un fichier. h existe.
+L’attribut d' **importation** place uniquement le fichier spécifié dans le fichier. idl qui sera généré par votre projet. l’attribut d' **importation** ne vous permet pas d’appeler des constructions dans le fichier spécifié à partir du code source de votre projet.  Pour appeler des constructions dans le fichier spécifié à partir du code source dans votre projet, utilisez [#import](../../preprocessor/hash-import-directive-cpp.md) et l' `embedded_idl` attribut ou vous pouvez inclure le fichier. h pour l' *idl_file*, si un fichier. h existe.
 
 ## <a name="example"></a>Exemple
 
@@ -60,16 +60,14 @@ library MyLib {
 ...
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|N'importe où|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|N'importe où|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
@@ -79,5 +77,5 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs autonomes](stand-alone-attributes.md)<br/>
 [importidl](importidl.md)<br/>
 [importlib](importlib.md)<br/>
-[include](include-cpp.md)<br/>
-[includelib](includelib-cpp.md)
+[inclusion](include-cpp.md)<br/>
+[includelib (](includelib-cpp.md)

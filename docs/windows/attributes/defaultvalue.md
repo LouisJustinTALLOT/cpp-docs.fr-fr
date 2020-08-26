@@ -1,17 +1,17 @@
 ---
-title: DefaultValue (C++ attribut com)
+title: DefaultValue (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b6a50bd7156eb9d6873e5ef08f6d75508fa3e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214840"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841686"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -30,7 +30,7 @@ Valeur par défaut du paramètre.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **DefaultValue** C++ a les mêmes fonctionnalités que l’attribut MIDL [DefaultValue](/windows/win32/Midl/defaultvalue) .
+L’attribut C++ **DefaultValue** a les mêmes fonctionnalités que l’attribut MIDL [DefaultValue](/windows/win32/Midl/defaultvalue) .
 
 ## <a name="example"></a>Exemple
 
@@ -54,24 +54,22 @@ __interface IFireTabCtrl : IDispatch {
 [ module(name="ATLFIRELib", uuid="479B29E1-9A2C-11D0-B696-00A0C903487A",    version="1.0", helpstring="ATLFire 1.0 Type Library") ];
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Paramètre d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Paramètre d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)<br/>
-[out](out-cpp.md)<br/>
+[Attributs de paramètre](parameter-attributes.md)<br/>
+[à](out-cpp.md)<br/>
 [retval](retval.md)<br/>
 [in](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>

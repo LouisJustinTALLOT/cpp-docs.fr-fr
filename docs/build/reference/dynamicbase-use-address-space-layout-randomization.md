@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 9af502d65dd81efdedc6b80951f11d68f766cb31
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373708"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842622"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Utiliser la randomisation du format d'espace d'adresse)
 
@@ -46,4 +46,4 @@ Par défaut, **/DynamicBase** est activé. Pour désactiver cette option, utilis
 - [Informations de référence sur l’éditeur de liens MSVC](linking.md)
 - [Options de l’éditeur de liens MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Défenses de la sécurité logicielle ISV Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))
+- [Défenses de la sécurité logicielle ISV Windows](/previous-versions/bb430720(v=msdn.10))
