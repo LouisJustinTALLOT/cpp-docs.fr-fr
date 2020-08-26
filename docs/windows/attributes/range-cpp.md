@@ -1,17 +1,17 @@
 ---
-title: Plage (C++ attribut com)
+title: Range (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214615"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839476"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,10 +25,10 @@ Spécifie une plage de valeurs autorisées pour les arguments ou les champs dont
 
 ### <a name="parameters"></a>Paramètres
 
-*low*<br/>
+*entrée*<br/>
 Valeur de plage inférieure.
 
-*high*<br/>
+*rapide*<br/>
 Valeur de plage supérieure.
 
 ## <a name="remarks"></a>Notes
@@ -51,16 +51,14 @@ __interface ICustom {
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Méthode d’interface, paramètre d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Méthode d’interface, paramètre d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
@@ -68,5 +66,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de méthode](method-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)<br/>
+[Attributs de paramètre](parameter-attributes.md)<br/>
 [Attributs de membre de données](data-member-attributes.md)

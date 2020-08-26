@@ -5,18 +5,18 @@ f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 6074c80b20ae0c69d34768bc16d7aaae16c99579
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232818"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835660"
 ---
 # <a name="ltvariantgt"></a>&lt;variant&gt;
 
 Un objet variant contient et gère une valeur. Si le variant contient une valeur, le type de cette valeur doit être l’un des types d’arguments template donnés à la variante. Ces arguments template sont appelés alternatives.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<variant>
 
@@ -26,18 +26,18 @@ Un objet variant contient et gère une valeur. Si le variant contient une valeur
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur = =](../standard-library/forward-list-operators.md#op_eq_eq)|Teste si l’objet variant situé à gauche de l’opérateur est égal à l’objet variant situé à droite.|
 |[opérateur ! =](../standard-library/forward-list-operators.md#op_neq)|Teste si l’objet variant situé à gauche de l’opérateur n’est pas égal à l’objet variant situé à droite.|
-|[<d’opérateur](../standard-library/forward-list-operators.md#op_lt)|Teste si l’objet variant situé à gauche de l’opérateur est inférieur à l’objet variant situé à droite.|
+|[<d’opérateur ](../standard-library/forward-list-operators.md#op_lt)|Teste si l’objet variant situé à gauche de l’opérateur est inférieur à l’objet variant situé à droite.|
 |[<opérateur =](../standard-library/forward-list-operators.md#op_lt_eq)|Teste si l’objet variant situé à gauche de l’opérateur est inférieur ou égal à l’objet variant situé à droite.|
-|[>d’opérateur](../standard-library/forward-list-operators.md#op_gt)|Teste si l’objet variant situé à gauche de l’opérateur est supérieur à l’objet variant situé à droite.|
+|[>d’opérateur ](../standard-library/forward-list-operators.md#op_gt)|Teste si l’objet variant situé à gauche de l’opérateur est supérieur à l’objet variant situé à droite.|
 |[>opérateur =](../standard-library/forward-list-operators.md#op_lt_eq)|Teste si l’objet variant situé à gauche de l’opérateur est supérieur ou égal à l’objet variant situé à droite.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[get](../standard-library/variant-functions.md#get)|Obtient le variant d’un objet.|
 |[get_if](../standard-library/variant-functions.md#get_if)|Obtient la variante d’un objet, le cas échéant.|
@@ -47,14 +47,14 @@ Un objet variant contient et gère une valeur. Si le variant contient une valeur
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nom|Description|
 |-|-|
 |[bad_variant_access](../standard-library/bad-variant-access-class.md)|Objets levés pour signaler des accès non valides à la valeur d’un objet variant.|
 |[variant](../standard-library/variant.md)|Objet qui doit contenir une valeur de l’un de ses autres types, ou aucune valeur.|
 
 ### <a name="structs"></a>Structures
 
-|||
+|Nom|Description|
 |-|-|
 |[hash](../standard-library/hash-structure.md)||
 |[monoétat](../standard-library/monostate-structure.md)|Autre type pour un variant pour rendre le type Variant constructible par défaut.|
@@ -64,7 +64,7 @@ Un objet variant contient et gère une valeur. Si le variant contient une valeur
 
 ### <a name="objects"></a>Objets
 
-|||
+|Nom|Description|
 |-|-|
 |[variant_npos](../standard-library/variant-functions.md#variant_npos)||
 

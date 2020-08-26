@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: 6b9830ac2b6f1eacedd1b59184292f2148087093
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 356278b316912bdb81f1c43bbf2034f00ec3d785
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210859"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845612"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl, classe
 
@@ -62,12 +62,12 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 Classe d’objet Rowset ou Command.
 
 *BindType*<br/>
-Unité de stockage pour les informations de liaison. La valeur par défaut est la structure `ATLBINDINGS` (consultez Atldb. h).
+Unité de stockage pour les informations de liaison. La valeur par défaut est la `ATLBINDINGS` structure (consultez Atldb. h).
 
 *BindingVector*<br/>
-Unité de stockage pour les informations de colonne. La valeur par défaut est [CAtlMap](../../atl/reference/catlmap-class.md) où l’élément Key est une valeur hAccessor et l’élément value est un pointeur vers une structure `BindType`.
+Unité de stockage pour les informations de colonne. La valeur par défaut est [CAtlMap](../../atl/reference/catlmap-class.md) où l’élément Key est une valeur hAccessor et l’élément value est un pointeur vers une `BindType` structure.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -75,13 +75,13 @@ Unité de stockage pour les informations de colonne. La valeur par défaut est [
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[IAccessorImpl](#iaccessorimpl)|Constructeur.|
 
 ### <a name="interface-methods"></a>Méthodes d'interface
 
-|||
+| Nom | Description |
 |-|-|
 |[AddRefAccessor](#addrefaccessor)|Ajoute un décompte de références à un accesseur existant.|
 |[CreateAccessor](#createaccessor)|Crée un accesseur à partir d'un jeu de liaisons.|
@@ -90,9 +90,9 @@ Unité de stockage pour les informations de colonne. La valeur par défaut est [
 
 ## <a name="remarks"></a>Notes
 
-Cela est obligatoire sur les ensembles de lignes et les commandes. OLE DB exige que les fournisseurs implémentent un HACCESSOR, qui est une balise d’un tableau de structures [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) . Les HACCESSORs fournis par `IAccessorImpl` sont des adresses des structures `BindType`. Par défaut, `BindType` est défini en tant que `ATLBINDINGS` dans la définition de modèle de `IAccessorImpl`. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son tableau `DBBINDING`, ainsi qu’un nombre de références et des indicateurs d’accesseur.
+Cela est obligatoire sur les ensembles de lignes et les commandes. OLE DB exige que les fournisseurs implémentent un HACCESSOR, qui est une balise d’un tableau de structures [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) . Les HACCESSORs fournis par `IAccessorImpl` sont des adresses des `BindType` structures. Par défaut, `BindType` est défini en tant `ATLBINDINGS` que `IAccessorImpl` définition de modèle dans. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son `DBBINDING` tableau, ainsi qu’un décompte de références et des indicateurs d’accesseur.
 
-## <a name="iaccessorimpliaccessorimpl"></a><a name="iaccessorimpl"></a>IAccessorImpl :: IAccessorImpl
+## <a name="iaccessorimpliaccessorimpl"></a><a name="iaccessorimpl"></a> IAccessorImpl :: IAccessorImpl
 
 Constructeur.
 
@@ -102,7 +102,7 @@ Constructeur.
 IAccessorImpl();
 ```
 
-## <a name="iaccessorimpladdrefaccessor"></a><a name="addrefaccessor"></a>IAccessorImpl :: AddRefAccessor
+## <a name="iaccessorimpladdrefaccessor"></a><a name="addrefaccessor"></a> IAccessorImpl :: AddRefAccessor
 
 Ajoute un décompte de références à un accesseur existant.
 
@@ -117,7 +117,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 Consultez [IAccessor :: AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="iaccessorimplcreateaccessor"></a><a name="createaccessor"></a>IAccessorImpl :: CreateAccessor
+## <a name="iaccessorimplcreateaccessor"></a><a name="createaccessor"></a> IAccessorImpl :: CreateAccessor
 
 Crée un accesseur à partir d'un jeu de liaisons.
 
@@ -136,7 +136,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 Consultez [IAccessor :: CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="iaccessorimplgetbindings"></a><a name="getbindings"></a>IAccessorImpl :: GetBindings
+## <a name="iaccessorimplgetbindings"></a><a name="getbindings"></a> IAccessorImpl :: GetBindings
 
 Retourne les liaisons de colonnes de base à partir du consommateur dans un accesseur.
 
@@ -153,7 +153,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 Consultez [IAccessor :: GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="iaccessorimplreleaseaccessor"></a><a name="releaseaccessor"></a>IAccessorImpl :: ReleaseAccessor
+## <a name="iaccessorimplreleaseaccessor"></a><a name="releaseaccessor"></a> IAccessorImpl :: ReleaseAccessor
 
 Libère un accesseur.
 
@@ -170,5 +170,5 @@ Consultez [IAccessor :: ReleaseAccessor](/previous-versions/windows/desktop/ms7
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

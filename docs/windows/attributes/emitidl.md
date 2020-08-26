@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 4ddf71c385414a28c2b616b359a93a637abc24aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 32362f287320e69d1680cbe07ca050143b507514
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222132"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846327"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ Une de ces valeurs possibles : **`true`** , **`false`** , `forced` , `restricte
 
 - Si `forced` , remplace un `restricted` attribut suivant, qui requiert qu’un fichier ait un `module` attribut s’il existe des attributs IDL dans le fichier.
 
-- `push`vous permet d’enregistrer les paramètres **emitidl** actuels dans une pile **emitidl** interne et `pop` vous permet de définir **emitidl** sur la valeur qui se trouve en haut de la pile **emitidl** interne.
+- `push` vous permet d’enregistrer les paramètres **emitidl** actuels dans une pile **emitidl** interne et `pop` vous permet de définir **emitidl** sur la valeur qui se trouve en haut de la pile **emitidl** interne.
 
 `defaultimports=`*valeur booléenne* \( facultatif
 
@@ -52,16 +52,14 @@ Il est possible d’avoir plusieurs attributs **emitidl** dans un fichier de cod
 
 Chaque fois que le compilateur rencontre un nouveau fichier, **emitidl** est implicitement défini sur **`true`** .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|N'importe où|
 |**Repeatable Read**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

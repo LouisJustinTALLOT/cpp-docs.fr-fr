@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403866"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837786"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset : liaison dynamique de colonnes de données (ODBC)
 
@@ -92,12 +92,12 @@ La liaison dynamique des colonnes ajoutées au moment de l’exécution exige d�
 
 Les quatre listes que vous avez besoin d’utiliser sont présentées dans le tableau suivant.
 
-|||
-|-|-|
-|**Current-Table-Columns**| (Liste 1 dans l’illustration) Liste des colonnes figurant actuellement dans la table sur la source de données. Cette liste peut correspondre à la liste des colonnes actuellement liées dans le recordset.|
-|**Bound-Recordset-Columns**| (Liste 2 dans l’illustration) Liste des colonnes liées dans votre recordset. Ces colonnes ont déjà des instructions RFX dans votre fonction `DoFieldExchange`.|
-|**Colonnes-To-Bind-Dynamically**| (Liste 3 dans l’illustration) Liste des colonnes figurant dans la table mais pas dans votre recordset. Il s’agit des colonnes que vous voulez lier dynamiquement.|
-|**Dynamic-Column-Values**| (Liste 4 dans l’illustration) Liste contenant le stockage pour les valeurs récupérées dans les colonnes que vous liez dynamiquement. Les éléments de cette liste correspondent un par un à ceux de la liste Columns-to-Bind-Dynamically.|
+| List | Description |
+|--|--|
+| **Current-Table-Columns** | (Liste 1 dans l’illustration) Liste des colonnes figurant actuellement dans la table sur la source de données. Cette liste peut correspondre à la liste des colonnes actuellement liées dans le recordset. |
+| **Bound-Recordset-Columns** | (Liste 2 dans l’illustration) Liste des colonnes liées dans votre recordset. Ces colonnes ont déjà des instructions RFX dans votre fonction `DoFieldExchange`. |
+| **Colonnes-To-Bind-Dynamically** | (Liste 3 dans l’illustration) Liste des colonnes figurant dans la table mais pas dans votre recordset. Il s’agit des colonnes que vous voulez lier dynamiquement. |
+| **Dynamic-Column-Values** | (Liste 4 dans l’illustration) Liste contenant le stockage pour les valeurs récupérées dans les colonnes que vous liez dynamiquement. Les éléments de cette liste correspondent un par un à ceux de la liste Columns-to-Bind-Dynamically. |
 
 ### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> Création de vos listes
 

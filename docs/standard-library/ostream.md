@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 37642cbcbe57fba54f071a8fc94af53c97684a36
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffcb6c7b2f95b0b62659f6080c9ed0d1f111237c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228139"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846392"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -34,7 +34,7 @@ Définit le modèle de classe [basic_ostream](../standard-library/basic-ostream-
 
 ### <a name="manipulators"></a>Manipulateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[endl](../standard-library/ostream-functions.md#endl)|Met fin à une ligne et vide la mémoire tampon.|
 |[fins](../standard-library/ostream-functions.md#ends)|Met fin à une chaîne.|
@@ -45,7 +45,7 @@ Définit le modèle de classe [basic_ostream](../standard-library/basic-ostream-
 
 |Opérateur|Description|
 |-|-|
-|[<<d’opérateur](../standard-library/ostream-operators.md#op_lt_lt)|Écrit différents types dans le flux.|
+|[<<d’opérateur ](../standard-library/ostream-operators.md#op_lt_lt)|Écrit différents types dans le flux.|
 
 ### <a name="classes"></a>Classes
 

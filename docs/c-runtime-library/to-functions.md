@@ -23,21 +23,20 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301689"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836076"
 ---
 # <a name="to-functions"></a>to, fonctions
 
 Chaque fonction **to** et sa macro associée, le cas échéant, convertissent un caractère unique en un autre caractère.
 
-|||
-|-|-|
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
-|[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+[__toascii](../c-runtime-library/reference/toascii-toascii.md)\
+[ToLower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)\
+[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)
 
 ## <a name="remarks"></a>Notes
 
@@ -67,7 +66,7 @@ Les routines `_tolower` et `_toupper` :
 
 - sont des versions indépendantes des paramètres régionaux et beaucoup plus rapides de `tolower` et **toupper** ;
 
-- peuvent être utilisées uniquement quand **isascii (** `c` **)** et **isupper (** `c` **)** ou **islower (** `c` **)** , respectivement, sont différents de zéro ;
+- Peut être utilisé uniquement lorsque **isascii (** `c` **)** et **IsUpper (** `c` **)** ou **IsLower (** `c` **)**, respectivement, sont non nuls.
 
 - produisent des résultats inattendus si `c` n’est pas une lettre ASCII de la casse appropriée à la conversion.
 
@@ -119,4 +118,4 @@ sOME OF these LETTERS ARE cAPITALS.
 
 [Conversion de données](../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../c-runtime-library/locale.md)<br/>
-[is, isw, routines](../c-runtime-library/is-isw-routines.md)
+[is, ISW, routines](../c-runtime-library/is-isw-routines.md)

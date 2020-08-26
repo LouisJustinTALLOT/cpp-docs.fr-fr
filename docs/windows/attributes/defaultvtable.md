@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 2da0d8070f961f1ae0fc075585eb28881f712fb4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6b1d6960a065bf2df46852d3df1ca53d4239f1bc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215255"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839489"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -62,16 +62,14 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Non|
 |**Attributs requis**|**coclasse**|
-|**Attributs non valides**|None|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

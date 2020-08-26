@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 182db37a2a42ec91066b58903c873d3e9c8289f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216490"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838255"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet, classe
 
@@ -49,7 +49,7 @@ Hérite de la `DBPROPSET` structure et ajoute un constructeur qui initialise les
 class CDBPropSet : public tagDBPROPSET
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -57,7 +57,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[AddProperty](#addproperty)|Ajoute une propriété au jeu de propriétés.|
 |[CDBPropSet](#cdbpropset)|Constructeur.|
@@ -65,7 +65,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+| Nom | Description |
 |-|-|
 |[opérateur =](#op_equal)|Assigne le contenu d’une propriété définie à une autre.|
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 Les fournisseurs de OLE DB et les consommateurs utilisent `DBPROPSET` des structures pour passer des tableaux de `DBPROP` structures. Chaque `DBPROP` structure représente une propriété unique qui peut être définie.
 
-## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet :: AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a> CDBPropSet :: AddProperty
 
 Ajoute une propriété au jeu de propriétés.
 
@@ -106,7 +106,7 @@ dans Variant utilisé pour initialiser la valeur de la propriété de la `DBPROP
 dans Chaîne utilisée pour initialiser la valeur de la propriété de la `DBPROP` structure ajoutée au jeu de propriétés.
 
 *bValue*<br/>
-dans `BYTE`Valeur booléenne ou utilisée pour initialiser la valeur de la propriété de la `DBPROP` structure ajoutée au jeu de propriétés.
+dans `BYTE` Valeur booléenne ou utilisée pour initialiser la valeur de la propriété de la `DBPROP` structure ajoutée au jeu de propriétés.
 
 *nValeur*<br/>
 dans Valeur entière utilisée pour initialiser la valeur de la propriété de la `DBPROP` structure ajoutée au jeu de propriétés.
@@ -120,11 +120,11 @@ dans Valeur à virgule flottante double précision utilisée pour initialiser la
 *cyValue*<br/>
 dans Valeur de devise CY utilisée pour initialiser la valeur de la propriété de la `DBPROP` structure ajoutée au jeu de propriétés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la propriété a été correctement ajoutée. Sinon, **`false`** .
 
-## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet :: CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a> CDBPropSet :: CDBPropSet
 
 Constructeur. Initialise les `rgProperties` champs, `cProperties` et `guidPropertySet` de la structure [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
@@ -146,7 +146,7 @@ dans GUID utilisé pour initialiser le `guidPropertySet` champ.
 *propset*<br/>
 dans Autre `CDBPropSet` objet pour la construction de copie.
 
-## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet :: SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a> CDBPropSet :: SetGUID
 
 Définit le `guidPropertySet` champ dans la `DBPROPSET` structure.
 
@@ -165,7 +165,7 @@ dans GUID utilisé pour définir le `guidPropertySet` champ de la structure [DBP
 
 Ce champ peut également être défini par le [constructeur](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet :: Operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet :: Operator =
 
 Assigne le contenu d’une propriété à un autre jeu de propriétés.
 

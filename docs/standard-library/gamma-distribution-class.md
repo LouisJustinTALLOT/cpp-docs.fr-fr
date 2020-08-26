@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 37b4661cf14fe4302d50557472ce03c120eb2741
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220910"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837922"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution, classe
 
@@ -80,10 +80,8 @@ Moteur de générateur de nombres aléatoires uniformes. Pour connaître les typ
 
 Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la loi gamma. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
+[gamma_distribution](#gamma_distribution)\
+[param_type](#param_type)
 
 Les fonctions de propriété `alpha()` et `beta()` retournent leurs valeurs respectives pour les paramètres de distribution stockés *alpha* et *beta*.
 
@@ -182,13 +180,13 @@ Distribution for 10 samples:
     10: 2.1201210996
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution :: gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a> gamma_distribution :: gamma_distribution
 
 Construit la distribution.
 
@@ -216,7 +214,7 @@ Le premier constructeur construit un objet dont la valeur `alpha` stockée conti
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution ::p aram_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a> gamma_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 

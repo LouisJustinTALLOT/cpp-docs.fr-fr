@@ -6,18 +6,18 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: ae79b4c1a4021b32f631c694b376d2202b345415
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f69dddcb8b6a9a390f80ab4d0112e19c4e8d32e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165923"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835647"
 ---
 # <a name="win32-predefined-symbols"></a>Symboles Win32 prédéfinis
 
 Ces symboles sont définis dans les fichiers d’en-tête Win32 et prennent en charge les fonctions et actions de l’application Windows standard. Ces symboles sont utilisés principalement avec les éléments d’interface utilisateur communs. Lorsque vous utilisez des contrôles dans les éditeurs de ressources, ces symboles s’affichent dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) associé aux contrôles communs. Par exemple, si votre barre d’outils doit afficher l’icône de l’application, l’icône sera associée au IDI_SMALL de symboles dans la fenêtre des **Propriétés** .
 
-|||
+|Nom|Description|
 |-|-|
 |IDABORT|régulation Boîte de dialogue, bouton abandonner|
 |IDC_STATIC|régulation Texte statique dans une boîte de dialogue|
@@ -34,12 +34,12 @@ Ces symboles sont définis dans les fichiers d’en-tête Win32 et prennent en c
 |IDS_APP_TITLE|chaîne Nom de l’application actuelle|
 |IDYES|régulation Boîte de dialogue, bouton Oui|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)<br/>
+[ID de symboles prédéfinis](../windows/predefined-symbol-ids.md)<br/>
 [Symboles MFC prédéfinis](../windows/mfc-predefined-symbols.md)<br/>
 [Symboles ATL prédéfinis](../windows/atl-predefined-symbols.md)<br/>

@@ -29,29 +29,29 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 472200d6941867387d99ab52c08a70467f802f62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219116"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838085"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt;, fonctions
 
 Ces fonctions sont dépréciées dans C++ 11 et supprimées dans C++ 17 :
 
-||||
-|-|-|-|
-|[bind1st](#bind1st) |[bind2nd](#bind2nd)|[mem_fun](#mem_fun)|
-|[mem_fun_ref](#mem_fun_ref)|[ptr_fun](#ptr_fun)||
+[bind1st](#bind1st)\
+[bind2nd](#bind2nd)\
+[mem_fun](#mem_fun)\
+[mem_fun_ref](#mem_fun_ref)\
+[ptr_fun](#ptr_fun)
 
 Ces fonctions sont dépréciées dans C++ 17 :
 
-|||
-|-|-|
-|[not1](#not1)|[not2](#not2)|
+[not1](#not1)\
+[not2](#not2)
 
-## <a name="bind"></a><a name="bind"></a>établis
+## <a name="bind"></a><a name="bind"></a> établis
 
 Lie des arguments à un objet pouvant être appelé.
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a><a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a> bind1st
 
 Fonction de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire. Elle lie le premier argument de la fonction binaire à une valeur spécifiée. Déconseillé dans C++ 11, supprimé en C++ 17.
 
@@ -169,7 +169,7 @@ Objet de fonction binaire à convertir en un objet de fonction unaire.
 *gauche*\
 Valeur à laquelle le premier argument de l’objet de fonction binaire doit être lié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet de fonction unaire qui résulte de la liaison du premier argument de l’objet de fonction binaire à la valeur *restante*.
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a> bind2nd
 
 Fonction de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire. Elle lie le deuxième argument de la fonction binaire à une valeur spécifiée. Déconseillé dans C++ 11, supprimé en C++ 17.
 
@@ -263,7 +263,7 @@ Objet de fonction binaire à convertir en un objet de fonction unaire.
 *Oui*\
 Valeur à laquelle le deuxième argument de l’objet de fonction binaire doit être lié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet de fonction unaire qui résulte de la liaison du deuxième argument de l’objet de fonction binaire à *Right*.
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a><a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a> bit_and
 
 Objet de fonction prédéfini qui effectue une opération de bits AND (binaire `operator&` ) sur ses arguments.
 
@@ -373,7 +373,7 @@ Opérande gauche de l’opération AND au niveau du bit. Le modèle non spécial
 *Oui*\
 Opérande droit de l’opération AND au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left & Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator&`.
 
@@ -381,7 +381,7 @@ Résultat de `Left & Right`. Le modèle spécialisé effectue un transfert parfa
 
 Le foncteur `bit_and` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator&` binaire.
 
-## <a name="bit_not"></a><a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a> bit_not
 
 Objet de fonction prédéfini qui effectue une opération de complément de bits (NOT) (unaire `operator~` ) sur son argument. Ajouté en C++ 14.
 
@@ -409,7 +409,7 @@ Type prenant en charge un `operator~` unaire.
 *Oui*\
 Opérande de l’opération de complément au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait d’un argument de référence lvalue ou rvalue de *type*déduit.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `~ Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator~`.
 
@@ -417,7 +417,7 @@ Résultat de `~ Right`. Le modèle spécialisé effectue un transfert parfait du
 
 Le foncteur `bit_not` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator~` binaire.
 
-## <a name="bit_or"></a><a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a> bit_or
 
 Objet de fonction prédéfini qui effectue une opération or au niveau du bit ( `operator|` ) sur ses arguments.
 
@@ -450,7 +450,7 @@ Opérande gauche de l’opération OR au niveau du bit. Le modèle non spéciali
 *Oui*\
 Opérande droit de l’opération OR au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left | Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator|`.
 
@@ -458,7 +458,7 @@ Résultat de `Left | Right`. Le modèle spécialisé effectue un transfert parfa
 
 Le foncteur `bit_or` est limité aux types intégraux pour les types de données de base ou aux types définis par l'utilisateur qui implémentent `operator|`.
 
-## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a> bit_xor
 
 Objet de fonction prédéfini qui effectue une opération de bits XOR (binaire `operator^` ) sur ses arguments.
 
@@ -491,7 +491,7 @@ Opérande gauche de l’opération XOR au niveau du bit. Le modèle non spécial
 *Oui*\
 Opérande droit de l’opération XOR au niveau du bit. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left ^ Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator^`.
 
@@ -499,7 +499,7 @@ Résultat de `Left ^ Right`. Le modèle spécialisé effectue un transfert parfa
 
 Le foncteur `bit_xor` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator^` binaire.
 
-## <a name="cref"></a><a name="cref"></a>CREF
+## <a name="cref"></a><a name="cref"></a> CREF
 
 Construit un `reference_wrapper` const à partir d'un argument.
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a><a name="invoke"></a>déclenché
+## <a name="invoke"></a><a name="invoke"></a> déclenché
 
 Appelle tout objet pouvant être appelé avec les arguments donnés. Ajouté en C++ 17.
 
@@ -588,15 +588,15 @@ Appelle l’objet appelé *FN* à l’aide des *arguments*Parameters. En réalit
 
 - `(t1.*f)(t2, ..., tN)` quand `f` est un pointeur vers une fonction membre de classe `T` et `t1` est un objet de type `T` ou une référence à un objet de type `T` ou une référence à un objet d'un type dérivé de `T`. Autrement dit, lorsque `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` a la valeur true.
 
-- `(t1.get().*f)(t2, ..., tN)`quand `f` est un pointeur vers une fonction membre de classe `T` et `std::decay_t<decltype(t1)>` est une spécialisation de `std::reference_wrapper` .
+- `(t1.get().*f)(t2, ..., tN)` quand `f` est un pointeur vers une fonction membre de classe `T` et `std::decay_t<decltype(t1)>` est une spécialisation de `std::reference_wrapper` .
 
-- `((*t1).*f)(t2, ..., tN)`quand `f` est un pointeur vers une fonction membre de classe `T` et `t1` n’est pas l’un des types précédents.
+- `((*t1).*f)(t2, ..., tN)` quand `f` est un pointeur vers une fonction membre de classe `T` et `t1` n’est pas l’un des types précédents.
 
 - `t1.*f` quand N == 1 et `f` est un pointeur vers des données de membre d'une classe `T` et `t1` est un objet de type `T` ou une référence à un objet de type `T` ou une référence à un objet d'un type dérivé de `T`.  Autrement dit, lorsque `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` a la valeur true.
 
-- `t1.get().*f`quand N = = 1 et `f` est un pointeur vers les données de membre d’une classe `T` et `std::decay_t<decltype(t1)>` est une spécialisation de `std::reference_wrapper` .
+- `t1.get().*f` quand N = = 1 et `f` est un pointeur vers les données de membre d’une classe `T` et `std::decay_t<decltype(t1)>` est une spécialisation de `std::reference_wrapper` .
 
-- `(*t1).*f`quand N = = 1 et `f` est un pointeur vers les données de membre d’une classe `T` et `t1` n’est pas l’un des types précédents.
+- `(*t1).*f` quand N = = 1 et `f` est un pointeur vers les données de membre d’une classe `T` et `t1` n’est pas l’un des types précédents.
 
 - `f(t1, t2, ..., tN)` dans tous les autres cas.
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a> mem_fn
 
 Génère un wrapper d'appel simple.
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a> mem_fun
 
 Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de pointeur. Déconseillé dans C++ 11 pour la [mem_fn](#mem_fn) et la [liaison](#bind), et supprimé en c++ 17.
 
@@ -762,7 +762,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 *pMem*\
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Ou **non_const** objet de fonction de type `mem_fun_t` ou `mem_fun1_t` .
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a> mem_fun_ref
 
 Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objet de fonction pour des fonctions membres en cas d’initialisation avec des arguments de référence. Déconseillé dans C++ 11, supprimé en C++ 17.
 
@@ -849,7 +849,7 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) cons
 *pMem*\
 Pointeur vers la fonction membre de la classe `Type` à convertir en objet de fonction.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** `non_const` Objet de fonction ou de type `mem_fun_ref_t` ou `mem_fun1_ref_t` .
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a><a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a> not1
 
 Retourne le complément d’un prédicat unaire. Déconseillé pour [not_fn](#not_fn) en c++ 17.
 
@@ -945,7 +945,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 *prédicat*\
 Prédicat unaire à rendre négatif.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Prédicat unaire qui est la négation du prédicat unaire modifié.
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a><a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a> not2
 
 Retourne le complément d’un prédicat binaire. Déconseillé pour [not_fn](#not_fn) en c++ 17.
 
@@ -1017,7 +1017,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 *Func*\
 Prédicat binaire à rendre négatif.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Prédicat binaire qui est la négation du prédicat binaire modifié.
 
@@ -1079,9 +1079,9 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a><a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a> not_fn
 
-Le `not_fn` modèle de fonction prend un objet pouvant être appelé et retourne un objet pouvant être appelé. Lorsque l’objet pouvant être appelé retourné est appelé par la suite avec certains arguments, il passe à l’objet pouvant être appelé d’origine et nie logiquement le résultat. Il conserve le comportement de la qualification const et de la catégorie valeur de l’objet pouvant être appelé encapsulé. `not_fn`est nouveau dans c++ 17 et remplace les,, et déconseillés `std::not1` `std::not2` `std::unary_negate` `std::binary_negate` .
+Le `not_fn` modèle de fonction prend un objet pouvant être appelé et retourne un objet pouvant être appelé. Lorsque l’objet pouvant être appelé retourné est appelé par la suite avec certains arguments, il passe à l’objet pouvant être appelé d’origine et nie logiquement le résultat. Il conserve le comportement de la qualification const et de la catégorie valeur de l’objet pouvant être appelé encapsulé. `not_fn` est nouveau dans c++ 17 et remplace les,, et déconseillés `std::not1` `std::not2` `std::unary_negate` `std::binary_negate` .
 
 ```cpp
 template <class Callable>
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a> ptr_fun
 
 Fonctions de modèle d’assistance utilisées pour convertir des pointeurs de fonction unaires et binaires, respectivement, en fonctions adaptables unaires et binaires. Déconseillé dans C++ 11, supprimé en C++ 17.
 
@@ -1196,7 +1196,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 *pFunc*\
 Pointeur de fonction unaire ou binaire à convertir en fonction adaptable.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction de modèle retourne la fonction unaire [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)  < `Arg` , **result**> ( \* `pfunc` ).
 
@@ -1210,7 +1210,7 @@ Un pointeur de fonction est un objet de fonction. Il peut être passé à n’im
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a><a name="ref"></a>Réf
+## <a name="ref"></a><a name="ref"></a> Réf
 
 Construit un `reference_wrapper` à partir d'un argument.
 
@@ -1222,7 +1222,7 @@ template <class Ty>
     reference_wrapper<Ty> ref(reference_wrapper<Ty>& arg);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une référence à `arg`; spécifiquement, `reference_wrapper<Ty>(arg)`.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a><a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 Échange deux objets `function`.
 

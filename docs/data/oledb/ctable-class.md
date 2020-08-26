@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a967ef8fa2832afd56442ae4f988ba080d0b2872
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211144"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845638"
 ---
 # <a name="ctable-class"></a>CTable, classe
 
@@ -41,7 +41,7 @@ Classe d’accesseur.
 *TRowset*<br/>
 Classe d’ensemble de lignes.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -49,7 +49,7 @@ Classe d’ensemble de lignes.
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[Ouvrir](#open)|Ouvre la table.|
 
@@ -57,7 +57,7 @@ Classe d’ensemble de lignes.
 
 Pour plus d’informations sur l’exécution d’une commande pour accéder à un ensemble de lignes, consultez la page [CCommand](../../data/oledb/ccommand-class.md) .
 
-## <a name="ctableopen"></a><a name="open"></a>CTable :: Open
+## <a name="ctableopen"></a><a name="open"></a> CTable :: Open
 
 Ouvre la table.
 
@@ -92,7 +92,7 @@ dans Nom de la table à ouvrir, passé comme chaîne Unicode.
 dans Nom de la table à ouvrir, passé comme chaîne ANSI.
 
 *dbid*<br/>
-dans `DBID` de la table à ouvrir.
+dans `DBID` De la table à ouvrir.
 
 *pPropSet*<br/>
 dans Pointeur vers un tableau de structures [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) contenant des propriétés et des valeurs à définir. Consultez [jeux de propriétés et groupes de propriétés](/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* dans le SDK Windows. La valeur par défaut NULL ne spécifie aucune propriété.
@@ -100,7 +100,7 @@ dans Pointeur vers un tableau de structures [DBPROPSET](/previous-versions/windo
 *ulPropSets*<br/>
 dans Nombre de structures [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) passées dans l’argument *pPropSet* .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -110,5 +110,5 @@ Pour plus d’informations, consultez [IOpenRowset :: OpenRowset](/previous-ver
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

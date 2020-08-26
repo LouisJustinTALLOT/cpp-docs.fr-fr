@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: f238c0b5b2a3988f08d910f605415bbe6403ea3d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0b4baa4671a013699e51a9ab28c002a680dfcd61
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211822"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838137"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor, classe
 
@@ -52,7 +52,7 @@ Utilisé par [CEnumerator](../../data/oledb/cenumerator-class.md) pour accéder 
 class CEnumeratorAccessor
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -60,7 +60,7 @@ class CEnumeratorAccessor
 
 ### <a name="data-members"></a>Données membres
 
-|||
+| Nom | Description |
 |-|-|
 |[m_bIsParent](#bisparent)|Variable qui indique si l’énumérateur est un énumérateur parent, si la ligne est un énumérateur.|
 |[m_nType](#ntype)|Variable qui indique si la ligne décrit une source de données ou un énumérateur.|
@@ -72,7 +72,7 @@ class CEnumeratorAccessor
 
 Cet ensemble de lignes se compose des sources de données et des énumérateurs visibles à partir de l’énumérateur actuel.
 
-## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a>CEnumeratorAccessor :: m_bIsParent
+## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a> CEnumeratorAccessor :: m_bIsParent
 
 Variable qui indique si l’énumérateur est un énumérateur parent, si la ligne est un énumérateur.
 
@@ -86,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 Pour plus d’informations, consultez [ISourcesRowset :: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) dans le *Guide de référence du programmeur de OLE DB* .
 
-## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a>CEnumeratorAccessor :: m_nType
+## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a> CEnumeratorAccessor :: m_nType
 
 Variable qui indique si la ligne décrit une source de données ou un énumérateur.
 
@@ -100,7 +100,7 @@ USHORT m_nType;
 
 Pour plus d’informations, consultez [ISourcesRowset :: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) dans le *Guide de référence du programmeur de OLE DB* .
 
-## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a>CEnumeratorAccessor :: m_szDescription
+## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a> CEnumeratorAccessor :: m_szDescription
 
 Description de la source de données ou de l’énumérateur.
 
@@ -114,7 +114,7 @@ WCHAR m_szDescription[129];
 
 Pour plus d’informations, consultez [ISourcesRowset :: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) dans le *Guide de référence du programmeur de OLE DB* .
 
-## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a>CEnumeratorAccessor :: m_szName
+## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a> CEnumeratorAccessor :: m_szName
 
 Nom de la source de données ou de l’énumérateur.
 
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 
 Pour plus d’informations, consultez [ISourcesRowset :: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) dans le *Guide de référence du programmeur de OLE DB* .
 
-## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a>CEnumeratorAccessor :: m_szParseName
+## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a> CEnumeratorAccessor :: m_szParseName
 
 Chaîne à passer à [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) pour obtenir un moniker de la source de données ou de l’énumérateur.
 
@@ -144,5 +144,5 @@ Pour plus d’informations, consultez [ISourcesRowset :: GetSourcesRowset](/pre
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

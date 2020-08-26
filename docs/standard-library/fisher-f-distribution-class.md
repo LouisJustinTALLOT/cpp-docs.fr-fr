@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 0401d2e9b5849bdd9f00628107a142606f5f6933
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f8c60b5f4523caf19e432ff853d49ad57fd277a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219129"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835803"
 ---
 # <a name="fisher_f_distribution-class"></a>fisher_f_distribution, classe
 
@@ -79,10 +79,8 @@ Moteur de générateur de nombres aléatoires uniformes. Pour connaître les typ
 
 Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la distribution F de Fisher. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|
+[fisher_f_distribution](#fisher_f_distribution)\
+[param_type](#param_type)
 
 Les fonctions de propriété `m()` et `n()` retournent les valeurs des paramètres de distribution stockés `m` et `n`, respectivement.
 
@@ -157,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>Sortie
 
 Première exécution :
 
@@ -231,13 +229,13 @@ Distribution for 10 samples:
     10: 3.4363333954
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution :: fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a> fisher_f_distribution :: fisher_f_distribution
 
 Construit la distribution.
 
@@ -265,7 +263,7 @@ Le premier constructeur construit un objet dont la valeur `m` stockée contient 
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution ::p aram_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a> fisher_f_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 

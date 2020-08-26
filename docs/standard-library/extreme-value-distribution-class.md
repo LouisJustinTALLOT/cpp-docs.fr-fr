@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 865fac1f1452e30b64a0ada9b115186916ff491c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b086638d02afb929d18daad76716a12704585108
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212343"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835894"
 ---
 # <a name="extreme_value_distribution-class"></a>extreme_value_distribution, classe
 
@@ -81,10 +81,8 @@ Moteur du générateur de nombres aléatoires. Pour connaître les types possibl
 
 Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la distribution de valeurs extrêmes. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|
-|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|
+[extreme_value_distribution](#extreme_value_distribution)\
+[param_type](#param_type)
 
 Les fonctions de propriété `a()` et `b()` retournent leurs valeurs respectives pour les paramètres de distribution stockés `a` et `b`.
 
@@ -175,13 +173,13 @@ Distribution for 10 samples:
     10: 2.0568757061
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution :: extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a> extreme_value_distribution :: extreme_value_distribution
 
 Construit la distribution.
 
@@ -209,7 +207,7 @@ Le premier constructeur construit un objet dont la valeur `a` stockée contient 
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution ::p aram_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a> extreme_value_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 

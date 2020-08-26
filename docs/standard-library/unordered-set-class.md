@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 9a19567b5878853d1fdfa86948ff1eeb37794089
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5eb8a6902324ee069ff275e77b97703ba6ba3356
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215502"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839515"
 ---
 # <a name="unordered_set-class"></a>unordered_set, classe
 
@@ -174,7 +174,7 @@ Classe allocator.
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[allocator_type](#allocator_type)|Type d’un allocateur pour la gestion du stockage.|
 |[const_iterator](#const_iterator)|Type d'un itérateur constant pour la séquence contrôlée.|
@@ -192,12 +192,12 @@ Classe allocator.
 |[size_type](#size_type)|Type d'une distance non signée entre deux éléments.|
 |[value_type](#value_type)|Type d’un élément.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[commencer](#begin)|Désigne le début de la séquence contrôlée.|
-|[Compartiment](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
+|[plage](#bucket)|Obtient le numéro du compartiment pour une valeur de clé.|
 |[bucket_count](#bucket_count)|Obtient le nombre de compartiments.|
 |[bucket_size](#bucket_size)|Obtient la taille d'un compartiment.|
 |[cbegin](#cbegin)|Désigne le début de la séquence contrôlée.|
@@ -226,7 +226,7 @@ Classe allocator.
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[unordered_set :: Operator =](#op_eq)|Copie une table de hachage.|
 
@@ -240,7 +240,7 @@ L'ordre réel des éléments de la séquence contrôlée dépend de la fonction 
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un objet allocateur stocké de type [unordered_set :: allocator_type](#allocator_type). Un tel objet allocateur doit avoir la même interface externe qu’un objet de type `allocator` . Notez que l'objet allocateur stocké n'est pas copié lorsque l'objet conteneur est assigné.
 
-## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a>unordered_set :: allocator_type
+## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a> unordered_set :: allocator_type
 
 Type d’un allocateur pour la gestion du stockage.
 
@@ -278,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a><a name="begin"></a>commencer
+## <a name="begin"></a><a name="begin"></a> commencer
 
 Désigne le début de la séquence contrôlée ou un compartiment.
 
@@ -357,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a><a name="bucket"></a>plage
+## <a name="bucket"></a><a name="bucket"></a> plage
 
 Obtient le numéro du compartiment pour une valeur de clé.
 
@@ -412,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a><a name="bucket_count"></a>bucket_count
+## <a name="bucket_count"></a><a name="bucket_count"></a> bucket_count
 
 Obtient le nombre de compartiments.
 
@@ -497,7 +497,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a><a name="bucket_size"></a>bucket_size
+## <a name="bucket_size"></a><a name="bucket_size"></a> bucket_size
 
 Obtient la taille d’un compartiment.
 
@@ -552,7 +552,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Retourne un **`const`** itérateur qui traite le premier élément de la plage.
 
@@ -560,7 +560,7 @@ Retourne un **`const`** itérateur qui traite le premier élément de la plage.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Itérateur d’accès en avant qui pointe vers le premier élément de la plage, ou vers l’emplacement situé juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()` ).
 
@@ -578,7 +578,7 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>CEND
+## <a name="cend"></a><a name="cend"></a> CEND
 
 Retourne un **`const`** itérateur qui traite l’emplacement juste après le dernier élément d’une plage.
 
@@ -586,7 +586,7 @@ Retourne un **`const`** itérateur qui traite l’emplacement juste après le de
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Itérateur d’accès en avant qui pointe juste après la fin de la plage.
 
@@ -606,7 +606,7 @@ auto i2 = Container.cend();
 
 La valeur retournée par `cend` ne doit pas être déréférencée.
 
-## <a name="clear"></a><a name="clear"></a>effacé
+## <a name="clear"></a><a name="clear"></a> effacé
 
 Supprime tous les éléments.
 
@@ -670,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Type d'un itérateur constant pour la séquence contrôlée.
 
@@ -712,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a><a name="const_local_iterator"></a>const_local_iterator
+## <a name="const_local_iterator"></a><a name="const_local_iterator"></a> const_local_iterator
 
 Type d’un itérateur de compartiment constant pour la séquence contrôlée.
 
@@ -759,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Type d'un pointeur constant vers un élément.
 
@@ -804,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Type d'une référence constante à un élément.
 
@@ -849,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a><a name="count"></a>saut
+## <a name="count"></a><a name="count"></a> saut
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -903,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Type d'une distance signée entre deux éléments.
 
@@ -959,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Insère un élément construit sur place (aucune opération de copie ou déplacement n’est effectuée).
 
@@ -975,7 +975,7 @@ Args&&... args);
 *attend*\
 Arguments transférés pour construire un élément à insérer dans la classe unordered_set, sauf si elle contient déjà un élément dont la valeur est ordonnée de façon équivalente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un `pair` dont **`bool`** le composant retourne la valeur true si une insertion a été effectuée et false si l' `unordered_set` élément contient déjà un élément dont la clé avait une valeur équivalente dans le classement, et dont le composant itérateur retourne l’adresse où un nouvel élément a été inséré ou l’emplacement où l’élément se trouvait déjà.
 
@@ -989,7 +989,7 @@ Durant l’insertion, si une exception est levée mais qu’elle ne se produit p
 
 Pour obtenir un exemple de code, consultez [set :: emplace](../standard-library/set-class.md#emplace).
 
-## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
+## <a name="emplace_hint"></a><a name="emplace_hint"></a> emplace_hint
 
 Insère un élément construit sur place (aucune opération de copie ou déplacement n’est effectuée) avec un hint d’emplacement.
 
@@ -1008,7 +1008,7 @@ Arguments transférés pour construire un élément à insérer dans la classe u
 *Cela*\
 Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur vers l’élément qui vient d’être inséré.
 
@@ -1022,7 +1022,7 @@ Durant l’insertion, si une exception est levée mais qu’elle ne se produit p
 
 Pour obtenir un exemple de code, consultez [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a><a name="empty"></a>vidé
+## <a name="empty"></a><a name="empty"></a> vidé
 
 Vérifie l'absence d'éléments.
 
@@ -1086,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a><a name="end"></a>effet
+## <a name="end"></a><a name="end"></a> effet
 
 Désigne la fin de la séquence contrôlée.
 
@@ -1154,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 Recherche une plage qui correspond à une clé spécifiée.
 
@@ -1222,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a><a name="erase"></a>effacer
+## <a name="erase"></a><a name="erase"></a> effacer
 
 Supprime un élément ou une plage d’éléments dans une classe unordered_set aux positions spécifiées ou supprime les éléments qui correspondent à une clé spécifiée.
 
@@ -1248,7 +1248,7 @@ Position juste après le dernier élément à supprimer.
 *Essentiel*\
 Valeur de clé des éléments à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour les deux premières fonctions membres, un itérateur bidirectionnel qui désigne le premier élément restant après tous les éléments supprimés, ou un élément à la fin de la classe unordered_set si aucun élément de ce type n’existe.
 
@@ -1258,7 +1258,7 @@ Pour la troisième fonction membre, retourne le nombre d’éléments qui ont é
 
 Pour obtenir un exemple de code, consultez [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a><a name="find"></a>trouver
+## <a name="find"></a><a name="find"></a> trouver
 
 Recherche un élément qui correspond à une clé spécifiée.
 
@@ -1317,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Obtient l’objet allocateur stocké.
 
@@ -1355,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash_function"></a><a name="hash"></a>hash_function
+## <a name="hash_function"></a><a name="hash"></a> hash_function
 
 Obtient l'objet de fonction de hachage stocké.
 
@@ -1393,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a><a name="hasher"></a>Hasher
+## <a name="hasher"></a><a name="hasher"></a> Hasher
 
 Type de la fonction de hachage.
 
@@ -1431,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a><a name="insert"></a>Insérer
+## <a name="insert"></a><a name="insert"></a> Insérer
 
 Insère un élément ou une plage d'éléments dans une classe unordered_set.
 
@@ -1481,7 +1481,7 @@ Argument de fonction de modèle qui remplit les conditions requises par un [ité
 *IList*\
 [Initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions membres à un élément, (1) et (2), retournent une [paire](../standard-library/pair-structure.md) dont **`bool`** le composant a la valeur true si une insertion a été effectuée, et false si le unordered_set contient déjà un élément dont la clé avait une valeur équivalente dans le classement. Le composant itérateur de la paire de valeur de retour pointe sur l’élément qui vient d’être inséré si le **`bool`** composant a la valeur true ou sur l’élément existant si le **`bool`** composant a la valeur false.
 
@@ -1505,7 +1505,7 @@ Pour plus d’informations sur l’insertion d’un élément construit sur plac
 
 Pour obtenir un exemple de code, consultez [set :: Insert](../standard-library/set-class.md#insert).
 
-## <a name="iterator"></a><a name="iterator"></a>répétiteur
+## <a name="iterator"></a><a name="iterator"></a> répétiteur
 
 Type qui fournit un [itérateur vers l’avant](../standard-library/forward-iterator-tag-struct.md) constant capable de lire des éléments dans un unordered_set.
 
@@ -1517,7 +1517,7 @@ typedef implementation-defined iterator;
 
 Consultez l’exemple de [Begin](../standard-library/set-class.md#begin) pour obtenir un exemple de la façon de déclarer et d’utiliser un**itérateur**.
 
-## <a name="key_eq"></a><a name="key_eq"></a>key_eq
+## <a name="key_eq"></a><a name="key_eq"></a> key_eq
 
 Obtient l'objet de fonction de comparaison stocké.
 
@@ -1557,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a><a name="key_equal"></a>key_equal
+## <a name="key_equal"></a><a name="key_equal"></a> key_equal
 
 Type de la fonction de comparaison.
 
@@ -1597,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a><a name="key_type"></a>key_type
+## <a name="key_type"></a><a name="key_type"></a> key_type
 
 Type d'une clé de tri.
 
@@ -1649,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a><a name="load_factor"></a>load_factor
+## <a name="load_factor"></a><a name="load_factor"></a> load_factor
 
 Compte le nombre moyen d'éléments par compartiment.
 
@@ -1734,7 +1734,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a><a name="local_iterator"></a>local_iterator
+## <a name="local_iterator"></a><a name="local_iterator"></a> local_iterator
 
 Type d'un itérateur de compartiment.
 
@@ -1781,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a><a name="max_bucket_count"></a>max_bucket_count
+## <a name="max_bucket_count"></a><a name="max_bucket_count"></a> max_bucket_count
 
 Obtient le nombre maximal de compartiments.
 
@@ -1866,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a><a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a><a name="max_load_factor"></a> max_load_factor
 
 Obtient ou définit le nombre maximal d’éléments par compartiment.
 
@@ -1958,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Obtient ou définit la taille maximale de la séquence contrôlée.
 
@@ -1993,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Copie une table de hachage.
 
@@ -2095,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a><a name="reference"></a>faire
+## <a name="reference"></a><a name="reference"></a> faire
 
 Type d'une référence à un élément.
 
@@ -2141,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a><a name="rehash"></a>rehash
+## <a name="rehash"></a><a name="rehash"></a> rehash
 
 Régénère la table de hachage.
 
@@ -2218,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a><a name="size"></a>corps
+## <a name="size"></a><a name="size"></a> corps
 
 Compte le nombre d'éléments.
 
@@ -2283,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Type d'une distance non signée entre deux éléments.
 
@@ -2319,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a><a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 Échange le contenu de deux conteneurs.
 
@@ -2388,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a><a name="unordered_set"></a>unordered_set
+## <a name="unordered_set"></a><a name="unordered_set"></a> unordered_set
 
 Construit un objet conteneur.
 
@@ -2472,7 +2472,7 @@ L’objet de fonction de comparaison est l’argument *COMP*, s’il est présen
 
 L’objet Allocator est l’argument *al*, s’il est présent ; dans le cas contraire, il s’agit de `Alloc()` .
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Type d’un élément.
 

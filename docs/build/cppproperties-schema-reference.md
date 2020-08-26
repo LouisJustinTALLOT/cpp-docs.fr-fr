@@ -3,12 +3,12 @@ title: CppProperties.jsà la référence
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224056"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837903"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.jsà la référence
 
@@ -18,7 +18,7 @@ Les projets de dossiers ouverts qui n’utilisent pas CMake peuvent stocker des 
 
 Une configuration peut avoir l’une des propriétés suivantes :
 
-|||
+|Nom|Description|
 |-|-|
 |`inheritEnvironments`| Spécifie les environnements qui s’appliquent à cette configuration.|
 |`name`|Nom de configuration qui s’affichera dans la liste déroulante de configuration C++|
@@ -83,7 +83,7 @@ Quand la charge de travail Linux est installée, les environnements suivants son
 |linux_x64|Cibler Linux x64 à distance|
 |linux_arm|Cibler Linux ARM à distance|
 
-## <a name="user-defined-environments"></a><a name="user_defined_environments"></a>Environnements définis par l’utilisateur
+## <a name="user-defined-environments"></a><a name="user_defined_environments"></a> Environnements définis par l’utilisateur
 
 Vous pouvez éventuellement utiliser la `environments` propriété pour définir des ensembles de variables dans *CppProperties.js* , soit globalement, soit par configuration. Ces variables se comportent comme des variables d’environnement dans le contexte d’un projet de dossier ouvert et sont accessibles à l’aide de la fonction $ {env. \<VARIABLE> } la syntaxe de *tasks.vs.jssur* et *launch.vs.jssur* après qu’elles ont été définies ici. Toutefois, ils ne sont pas nécessairement définis comme des variables d’environnement réelles dans une invite de commandes que Visual Studio utilise en interne.
 
@@ -125,7 +125,7 @@ Lorsque vous définissez une propriété d' **environnement** à l’intérieur 
 
 Vous avez accès aux macros intégrées suivantes dans *CppProperties.jssur*:
 
-|||
+|Macro|Description|
 |-|-|
 |`${workspaceRoot}`| Chemin d’accès complet au dossier de l’espace de travail|
 |`${projectRoot}`| Chemin d’accès complet au dossier dans lequel *CppProperties.js* est placé|

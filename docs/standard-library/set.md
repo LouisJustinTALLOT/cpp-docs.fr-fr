@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 4ac5c0bbf94c4d17389efb424d2e12b84717c4a9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686457"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846223"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
 Définit l’ensemble de modèles de classe de conteneur et le multiensemble et leurs modèles de prise en charge.
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<set>
+**En-tête :**\<set>
 
 **Espace de noms :** std
 
 > [!NOTE]
-> La bibliothèque de > \<set utilise également l’instruction `#include <initializer_list>`.
+> La \<set> bibliothèque utilise également l' `#include <initializer_list>` instruction.
 
 ## <a name="members"></a>Membres
 
@@ -32,12 +32,12 @@ Définit l’ensemble de modèles de classe de conteneur et le multiensemble et 
 
 |Version set|Version multiset|Description|
 |-|-|-|
-|[operator!= (set)](../standard-library/set-operators.md#op_neq)|[operator!= (multiset)](../standard-library/set-operators.md#op_neq)|Teste si l'objet set ou multiset situé à gauche de l'opérateur n'est pas égal à l'objet set ou multiset situé à droite.|
-|[operator< (set)](../standard-library/set-operators.md#op_lt)|[operator< (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est inférieur à l'objet set ou multiset situé à droite.|
-|[operator<= (set)](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est inférieur ou égal à l'objet set ou multiset situé à droite.|
-|[operator== (set)](../standard-library/set-operators.md#op_eq_eq)|[operator== (multiset)](../standard-library/set-operators.md#op_eq_eq_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est égal à l'objet set ou multiset situé à droite.|
-|[operator> (set)](../standard-library/set-operators.md#op_gt)|[operator> (multiset)](../standard-library/set-operators.md#op_gt_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est supérieur à l'objet set ou multiset situé à droite.|
-|[operator>= (set)](../standard-library/set-operators.md#op_gt_eq)|[operator>= (multiset)](../standard-library/set-operators.md#op_gt_eq_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est supérieur ou égal à l'objet set ou multiset situé à droite.|
+|[opérateur ! = (Set)](../standard-library/set-operators.md#op_neq)|[Operator ! = (multiensemble)](../standard-library/set-operators.md#op_neq)|Teste si l'objet set ou multiset situé à gauche de l'opérateur n'est pas égal à l'objet set ou multiset situé à droite.|
+|[< d’opérateur (Set)](../standard-library/set-operators.md#op_lt)|[< d’opérateur (multijeu)](../standard-library/set-operators.md#op_lt_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est inférieur à l'objet set ou multiset situé à droite.|
+|[<opérateur = (Set)](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est inférieur ou égal à l'objet set ou multiset situé à droite.|
+|[opérateur = = (Set)](../standard-library/set-operators.md#op_eq_eq)|[opérateur = = (multiensemble)](../standard-library/set-operators.md#op_eq_eq_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est égal à l'objet set ou multiset situé à droite.|
+|[> d’opérateur (Set)](../standard-library/set-operators.md#op_gt)|[> d’opérateur (multijeu)](../standard-library/set-operators.md#op_gt_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est supérieur à l'objet set ou multiset situé à droite.|
+|[>opérateur = (Set)](../standard-library/set-operators.md#op_gt_eq)|[>opérateur = (multiensemble)](../standard-library/set-operators.md#op_gt_eq_multiset)|Teste si l'objet set ou multiset situé à gauche de l'opérateur est supérieur ou égal à l'objet set ou multiset situé à droite.|
 
 ### <a name="specialized-template-functions"></a>Fonctions avec modèle spécialisé
 
@@ -47,13 +47,13 @@ Définit l’ensemble de modèles de classe de conteneur et le multiensemble et 
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nom|Description|
 |-|-|
-|[set, classe](../standard-library/set-class.md)|Sert au stockage et à la récupération des données d’une collection dans laquelle les valeurs des éléments contenus sont uniques et servent de valeurs de clés en fonction desquelles les données sont automatiquement triées.|
-|[multiset, classe](../standard-library/multiset-class.md)|Sert au stockage et à la récupération des données d’une collection dans laquelle les valeurs des éléments contenus n’ont pas besoin d’être uniques et servent de valeurs de clés en fonction desquelles les données sont automatiquement triées.|
+|[Set, classe](../standard-library/set-class.md)|Sert au stockage et à la récupération des données d’une collection dans laquelle les valeurs des éléments contenus sont uniques et servent de valeurs de clés en fonction desquelles les données sont automatiquement triées.|
+|[multiensemble (classe)](../standard-library/multiset-class.md)|Sert au stockage et à la récupération des données d’une collection dans laquelle les valeurs des éléments contenus n’ont pas besoin d’être uniques et servent de valeurs de clés en fonction desquelles les données sont automatiquement triées.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 1627ba411fd201c84daee534ea134be2dba73376
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1533e8238b40f6ca5dc6faaef35a65db9020defd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193651"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835967"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
 Définit plusieurs types et fonctions relatifs à la gestion des exceptions. La gestion des exceptions est utilisée dans les situations dans lesquelles le système peut récupérer d'une erreur. Elle permet au contrôle d'être retourné au programme depuis une fonction. L'ajout de la gestion des exceptions a pour but d'augmenter la robustesse du programme et de récupérer d'une erreur de façon appropriée.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<exception>
 
@@ -27,15 +27,15 @@ Définit plusieurs types et fonctions relatifs à la gestion des exceptions. La 
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)|Type qui décrit un pointeur vers une exception.|
 |[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|Type qui décrit un pointeur vers une fonction pouvant être utilisée comme un `terminate_handler`.|
 |[unexpected_handler](../standard-library/exception-typedefs.md#unexpected_handler)|Type qui décrit un pointeur vers une fonction pouvant être utilisée comme un `unexpected_handler`.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[current_exception](../standard-library/exception-functions.md#current_exception)|Obtient un pointeur vers l'exception actuelle.|
 |[get_terminate](../standard-library/exception-functions.md#get_terminate)|Obtient la fonction `terminate_handler` actuelle.|
@@ -52,7 +52,7 @@ Définit plusieurs types et fonctions relatifs à la gestion des exceptions. La 
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nom|Description|
 |-|-|
 |[Classe bad_exception](../standard-library/bad-exception-class.md)|La classe décrit une exception pouvant être levée depuis un `unexpected_handler`.|
 |[Classe d’exception](../standard-library/exception-class.md)|La classe sert de classe de base pour toutes les exceptions levées par certaines expressions et par la bibliothèque C++ Standard.|

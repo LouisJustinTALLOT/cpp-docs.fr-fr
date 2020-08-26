@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217465"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846210"
 ---
 # <a name="shared_ptr-class"></a>shared_ptr, classe
 
@@ -127,7 +127,7 @@ Plusieurs threads peuvent lire et écrire différents objets `shared_ptr` simult
 
 ## <a name="members"></a>Membres
 
-|||
+|Nom|Description|
 |-|-|
 | **Constructeurs** | |
 |[shared_ptr](#shared_ptr)|Construit un objet `shared_ptr`.|
@@ -148,7 +148,7 @@ Plusieurs threads peuvent lire et écrire différents objets `shared_ptr` simult
 |[opérateur =](#op_eq)|Remplace la ressource détenue.|
 |[and&gt;](#op_arrow)|Obtient un pointeur vers la valeur désignée.|
 
-## <a name="element_type"></a><a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a> element_type
 
 Type d’un élément.
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a><a name="get"></a>Télécharger
+## <a name="get"></a><a name="get"></a> Télécharger
 
 Obtient l'adresse de la ressource détenue.
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>bool, opérateur
+## <a name="operator-bool"></a><a name="op_bool"></a> bool, opérateur
 
 Teste si une ressource détenue existe.
 
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_star"></a>and
+## <a name="operator"></a><a name="op_star"></a> and
 
 Obtient la valeur désignée.
 
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Remplace la ressource détenue.
 
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="operator-"></a><a name="op_arrow"></a>> Operator
+## <a name="operator-"></a><a name="op_arrow"></a> > Operator
 
 Obtient un pointeur vers la valeur désignée.
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> owner_before
 
 Retourne true si ce `shared_ptr` est classé avant le pointeur fourni (ou est inférieur à celui-ci).
 
@@ -425,7 +425,7 @@ Une référence lvalue à un `shared_ptr` ou un `weak_ptr` .
 
 La fonction membre de modèle retourne la valeur true si **`*this`** est trié avant `ptr` .
 
-## <a name="reset"></a><a name="reset"></a>initialisation
+## <a name="reset"></a><a name="reset"></a> initialisation
 
 Remplacer la ressource détenue.
 
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a> shared_ptr
 
 Construit un objet `shared_ptr`.
 
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a> ~ shared_ptr
 
 Détruit un `shared_ptr`.
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a><a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 Échange deux objets `shared_ptr`.
 
@@ -783,7 +783,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a><a name="unique"></a>unique
+## <a name="unique"></a><a name="unique"></a> unique
 
 Teste si la ressource détenue est unique. Cette fonction a été dépréciée en C++ 17 et supprimée en C++ 20.
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a><a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a> use_count
 
 Compte le nombre de propriétaires de ressources.
 
@@ -861,7 +861,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a><a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a> weak_type
 
 Type d’un pointeur faible vers un élément.
 

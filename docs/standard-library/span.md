@@ -5,12 +5,12 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813533"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846184"
 ---
 # <a name="ltspangt"></a>&lt;répartis&gt;
 
@@ -44,7 +44,7 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<span>
 
@@ -56,27 +56,27 @@ int main()
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nom|Description|
 |-|:-|
 |[répartis](span-class.md)| Fournit une vue sur une séquence contiguë d’objets. |
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|:-|
 |[opérateur =](span-class.md#op_eq)| Affectation d’étendue |
 |[and\[\]](span-class.md#op_at)| Accès aux éléments |
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| Obtient les octets en lecture seule sous-jacents de l’étendue. |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | Obtient les octets sous-jacents de l’étendue. |
 
 ### <a name="constants"></a>Constantes
 
-|||
+|Nom|Description|
 |-|:-|
 | **dynamic_extent** | Indique que la taille de l’étendue est déterminée au moment de l’exécution plutôt qu’au moment de la compilation. Lorsque le nombre d’éléments dans l’étendue est connu au moment de la compilation, il est spécifié en tant que `Extent` paramètre de modèle. Si le nombre n’est pas connu jusqu’à l’exécution, spécifiez à la `dynamic_extent` place. |
 

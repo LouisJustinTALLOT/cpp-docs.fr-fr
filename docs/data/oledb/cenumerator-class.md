@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214917"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838150"
 ---
 # <a name="cenumerator-class"></a>CEnumerator, classe
 
@@ -40,7 +40,7 @@ class CEnumerator :
    public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -48,7 +48,7 @@ class CEnumerator :
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[Rechercher](#find)|Recherche des fournisseurs disponibles (sources de données) en recherchant un avec le nom spécifié.|
 |[GetMoniker](#getmoniker)|Récupère l' `IMoniker` interface pour l’enregistrement en cours.|
@@ -58,7 +58,7 @@ class CEnumerator :
 
 Vous pouvez récupérer les `ISourcesRowset` données indirectement à partir de cette classe.
 
-## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator :: find
+## <a name="cenumeratorfind"></a><a name="find"></a> CEnumerator :: find
 
 Recherche un nom spécifié parmi les fournisseurs disponibles.
 
@@ -73,7 +73,7 @@ bool Find(TCHAR* szSearchName) throw();
 *szSearchName*<br/>
 dans Nom à rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le nom a été trouvé. Sinon, **`false`** .
 
@@ -81,7 +81,7 @@ dans Nom à rechercher.
 
 Ce nom est mappé au `SOURCES_NAME` membre de l’interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
-## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator :: GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a> CEnumerator :: GetMoniker
 
 Analyse le nom complet pour extraire le composant de la chaîne qui peut être converti en moniker.
 
@@ -102,11 +102,11 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 *lpszDisplayName*<br/>
 dans Nom complet à analyser.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
-## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator :: Open
+## <a name="cenumeratoropen"></a><a name="open"></a> CEnumerator :: Open
 
 Lie le moniker de l’énumérateur, s’il est spécifié, puis récupère l’ensemble de lignes de l’énumérateur en appelant [ISourcesRowset :: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
@@ -131,7 +131,7 @@ dans Pointeur vers le `CLSID` d’un énumérateur.
 *énumérateur*<br/>
 dans Référence à un énumérateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 

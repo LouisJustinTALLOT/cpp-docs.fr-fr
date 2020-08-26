@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 65d5c993efd1cb9c6dd35f11223ed39e026ed7c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217803"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846275"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution, classe
 
@@ -81,10 +81,8 @@ Cette distribution d'échantillonnage présente des intervalles de largeur unifo
 
 Le tableau suivant contient des liens vers des articles sur différents membres :
 
-|||
-|-|-|
-|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|
-|`discrete_distribution::operator()`|[param_type](#param_type)|
+[discrete_distribution](#discrete_distribution)\
+[param_type](#param_type)
 
 La fonction de propriété `vector<double> probabilities()` retourne les probabilités individuelles pour chaque entier généré.
 
@@ -169,13 +167,13 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution ::d iscrete_distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a> discrete_distribution ::d iscrete_distribution
 
 Construit la distribution.
 
@@ -239,7 +237,7 @@ Le constructeur qui a les paramètres *ount*, *low*, *igh* et *weightfunc* const
 
 Le constructeur qui a un paramètre `param_type`*parm* construit un objet de distribution qui utilise *parm* comme structure de paramètre stockée.
 
-## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution ::p aram_type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a> discrete_distribution ::p aram_type
 
 Stocke tous les paramètres de la distribution.
 

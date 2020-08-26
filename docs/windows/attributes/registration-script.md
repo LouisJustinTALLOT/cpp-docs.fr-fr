@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 53b5cb0cb36d9d6627f16f99cbb0d142af8cee6d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8a57f0b3d0925d1e1096a31734fa4c9d666c5743
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217218"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846080"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -57,16 +57,14 @@ __interface IFace {};
 class CMyClass:public IFace {};
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Non|
 |**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass` , `progid` ou `vi_progid` .|
-|**Attributs non valides**|None|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

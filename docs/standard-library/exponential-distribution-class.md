@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: db176bef55455c0553e5865e268c4e4e8fed089d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dbb8425047d9076343922dfbcf5c6162b6054c3b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212356"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835907"
 ---
 # <a name="exponential_distribution-class"></a>exponential_distribution, classe
 
@@ -77,10 +77,8 @@ Moteur du générateur de nombres aléatoires. Pour connaître les types possibl
 
 Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la distribution exponentielle. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
-|`exponential_distribution::operator()`||[param_type](#param_type)|
+[exponential_distribution](#exponential_distribution)\
+[param_type](#param_type)
 
 La fonction membre de propriété `lambda()` retourne la valeur du paramètre de distribution stocké `lambda`.
 
@@ -165,13 +163,13 @@ Distribution for 10 samples:
     10: 2.1201210996
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution :: exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a> exponential_distribution :: exponential_distribution
 
 Construit la distribution.
 
@@ -196,7 +194,7 @@ Le premier constructeur construit un objet dont la valeur `lambda` stockée cont
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution ::p aram_type
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a> exponential_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 

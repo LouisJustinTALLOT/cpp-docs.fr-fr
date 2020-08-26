@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: de9aafe5b04b949112c44be09ac36bede7e7f660
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216464"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838176"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor (classe)
 
@@ -107,7 +107,7 @@ Semblable à [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) mais
 class CDynamicParameterAccessor : public CDynamicAccessor
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête**: atldbcli. h
 
@@ -115,7 +115,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[CDynamicParameterAccessor](#cdynamicparameteraccessor)|Constructeur.|
 |[GetParam](#getparam)|Récupère les données du paramètre en mémoire tampon.|
@@ -139,7 +139,7 @@ Les informations sur les paramètres sont stockées dans une mémoire tampon cr�
 
 Pour obtenir un exemple montrant comment utiliser cette classe pour exécuter une SQL Server procédure stockée et obtenir les valeurs de paramètre de sortie, consultez l’exemple de code [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) dans le référentiel [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) sur GitHub.
 
-## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a>CDynamicParameterAccessor :: CDynamicParameterAccessor
+## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor :: CDynamicParameterAccessor
 
 Constructeur.
 
@@ -165,7 +165,7 @@ Taille maximale d’objet BLOB en octets ; les données de colonne sur cette va
 
 Pour plus d’informations sur la gestion des objets BLOB, consultez le constructeur [CDynamicAccessor :: CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) .
 
-## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a>CDynamicParameterAccessor :: GetParam
+## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a> CDynamicParameterAccessor :: GetParam
 
 Récupère les données qui ne sont pas de type chaîne pour un paramètre spécifié à partir de la mémoire tampon de paramètres.
 
@@ -197,13 +197,13 @@ dans Nom du paramètre.
 *pData*<br/>
 à Pointeur vers la mémoire qui contient les données récupérées de la mémoire tampon.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour les versions sans modèle, pointe vers la mémoire qui contient les données récupérées à partir de la mémoire tampon. Pour les versions basées sur un modèle, retourne **`true`** en cas de réussite ou **`false`** en cas d’échec.
 
 Utilisez `GetParam` pour récupérer des données de paramètre sans chaîne à partir de la mémoire tampon. Utilisez [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) pour récupérer des données de paramètre de chaîne à partir de la mémoire tampon.
 
-## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a>CDynamicParameterAccessor :: GetParamCount
+## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a> CDynamicParameterAccessor :: GetParamCount
 
 Récupère le nombre de paramètres stockés dans la mémoire tampon.
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 Le nombre de paramètres.
 
-## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a>CDynamicParameterAccessor :: GetParamIO
+## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a> CDynamicParameterAccessor :: GetParamIO
 
 Détermine si le paramètre spécifié est un paramètre d’entrée ou de sortie.
 
@@ -246,11 +246,11 @@ enum DBPARAMIOENUM {
 };
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
-## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor :: GetParamLength
+## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a> CDynamicParameterAccessor :: GetParamLength
 
 Récupère la longueur du paramètre spécifié stocké en mémoire tampon.
 
@@ -275,7 +275,7 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 
 La première substitution retourne **`true`** en cas de réussite ou **`false`** d’échec. Le deuxième remplacement pointe vers la mémoire qui contient la longueur du paramètre.
 
-## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor :: GetParamName
+## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a> CDynamicParameterAccessor :: GetParamName
 
 Récupère le nom du paramètre spécifié.
 
@@ -290,11 +290,11 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 *nParam*<br/>
 dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé aux valeurs de retour. Le paramètre number est l’index du paramètre en fonction de son ordre dans l’appel de procédure stockée ou SQL. Pour obtenir un exemple, consultez [setParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nom du paramètre spécifié.
 
-## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a>CDynamicParameterAccessor :: GetParamStatus
+## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a> CDynamicParameterAccessor :: GetParamStatus
 
 Récupère l’état du paramètre spécifié stocké en mémoire tampon.
 
@@ -319,7 +319,7 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 
 La première substitution retourne **`true`** en cas de réussite ou **`false`** d’échec. Le deuxième remplacement pointe vers la mémoire qui contient l’état du paramètre spécifié.
 
-## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor :: GetParamString
+## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a> CDynamicParameterAccessor :: GetParamString
 
 Récupère les données de chaîne du paramètre spécifié stocké en mémoire tampon.
 
@@ -367,7 +367,7 @@ Cette méthode échoue si le *pbuffer* de mémoire tampon n’est pas assez gran
 
 Utilisez `GetParamString` pour récupérer des données de paramètre de chaîne à partir de la mémoire tampon. Utilisez [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) pour récupérer des données de paramètre sans chaîne à partir de la mémoire tampon.
 
-## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a>CDynamicParameterAccessor :: GetParamType
+## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a> CDynamicParameterAccessor :: GetParamType
 
 Récupère le type de données d’un paramètre spécifique.
 
@@ -386,11 +386,11 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 *pType*<br/>
 à Pointeur vers la variable contenant le type de données du paramètre spécifié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
-## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor :: SetParam
+## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a> CDynamicParameterAccessor :: SetParam
 
 Définit la mémoire tampon des paramètres à l’aide des données (non-chaîne) spécifiées.
 
@@ -427,13 +427,13 @@ dans Pointeur vers la mémoire qui contient les données à écrire dans la mém
 *statut*<br/>
 dans État de la colonne DBSTATUS. Pour plus d’informations sur les valeurs de DBSTATUS, consultez l' [État](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*ou recherchez DBSTATUS dans OleDb. h.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
 Utilisez `SetParam` pour définir des données de paramètre sans chaîne dans la mémoire tampon. Utilisez [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) pour définir les données de paramètre de chaîne dans la mémoire tampon.
 
-## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a>CDynamicParameterAccessor :: SetParamLength
+## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a> CDynamicParameterAccessor :: SetParamLength
 
 Définit la longueur du paramètre spécifié stocké en mémoire tampon.
 
@@ -456,7 +456,7 @@ dans Longueur, en octets, du paramètre spécifié.
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
-## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor :: SetParamStatus
+## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a> CDynamicParameterAccessor :: SetParamStatus
 
 Définit l’état du paramètre spécifié stocké en mémoire tampon.
 
@@ -479,7 +479,7 @@ dans État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
-## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor :: SetParamString
+## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a> CDynamicParameterAccessor :: SetParamString
 
 Définit les données de chaîne du paramètre spécifié stocké en mémoire tampon.
 
@@ -508,7 +508,7 @@ dans État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
-`SetParamString`échoue si vous tentez de définir une chaîne supérieure à la taille maximale spécifiée pour *pString*.
+`SetParamString` échoue si vous tentez de définir une chaîne supérieure à la taille maximale spécifiée pour *pString*.
 
 Utilisez `SetParamString` pour définir des données de paramètre de chaîne dans la mémoire tampon. Utilisez [setParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) pour définir des données de paramètre sans chaîne dans la mémoire tampon.
 

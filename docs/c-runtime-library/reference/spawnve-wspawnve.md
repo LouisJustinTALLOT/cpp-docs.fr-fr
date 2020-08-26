@@ -36,12 +36,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: f57d959e9aaefe1f86c110d3c3e945abf6d268da
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dc6a6195987c1d5b323a86671de09dc28df84665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916039"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836115"
 ---
 # <a name="_spawnve-_wspawnve"></a>_spawnve, _wspawnve
 
@@ -81,11 +81,11 @@ Tableau de pointeurs vers les arguments. L’argument *argv*[0] est généraleme
 *envp*<br/>
 Tableau de pointeurs vers les paramètres d'environnement.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour d’un **_spawnve** ou d’un **_wspawnve** synchrone (**_P_WAIT** spécifié pour le *mode*) est l’état de sortie du nouveau processus. La valeur de retour d’une **_spawnve** ou d’un **_wspawnve** asynchrone (**_P_NOWAIT** ou **_P_NOWAITO** spécifié pour le *mode*) est le handle de processus. L'état de sortie est 0 si le processus s'est terminé normalement. Vous pouvez définir l’état de sortie à une valeur différente de zéro si le processus généré appelle spécifiquement la routine de **sortie** avec un argument différent de zéro. Si le nouveau processus ne définissait pas explicitement un état de sortie positif, un état de sortie positif indique une sortie anormale avec arrêt ou interruption. Une valeur de retour de-1 indique une erreur (le nouveau processus n’est pas démarré). Dans ce cas, **errno** est défini sur l’une des valeurs suivantes.
 
-|||
+| Valeur | Description |
 |-|-|
 | **E2BIG** | La liste des arguments dépasse 1024 octets. |
 | **EINVAL** | l’argument *mode* n’est pas valide. |
@@ -95,7 +95,7 @@ La valeur de retour d’un **_spawnve** ou d’un **_wspawnve** synchrone (**_P_
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions crée et exécute un nouveau processus, passant un tableau de pointeurs vers des arguments de ligne de commande et un tableau de pointeurs vers des paramètres d’environnement.
 
@@ -103,16 +103,16 @@ Ces fonctions valident leurs paramètres. Si *CmdName* ou *argv* est un pointeur
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**_spawnve**|\<stdio.h > ou \<process.h >|
+|**_spawnve**|\<stdio.h> ou \<process.h>|
 |**_wspawnve**|\<stdio.h> ou \<wchar.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple dans [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md).
 

@@ -4,18 +4,18 @@ description: Descriptions résumées des exemples disponibles dans le référent
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56e9cfe72e58a12fb381c88616496820908006c8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226761"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846366"
 ---
 # <a name="visual-studio-c-samples"></a>Exemples Visual Studio C++
 
 Des exemples pour Visual Studio C++ sont disponibles sur le Web. Microsoft a produit de nombreux exemples C++ qui illustrent différentes fonctionnalités sur plusieurs technologies. Voici quelques-uns des endroits où trouver des exemples supplémentaires :
 
-- [Exemples de Microsoft Docs-C++](https://docs.microsoft.com/samples/browse/?term=c%2B%2B)
+- [Exemples de Microsoft Docs-C++](/samples/browse/?term=c%2B%2B)
 
 - [Exemples Windows sur GitHub](https://microsoft.github.io/windows/)
 
@@ -25,7 +25,7 @@ Des exemples pour Visual Studio C++ sont disponibles sur le Web. Microsoft a pro
 
 - [Exemples de code ADO](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
-- [Exemples de développement de matériel pour Windows](https://docs.microsoft.com/samples/browse/?products=windows-wdk)
+- [Exemples de développement de matériel pour Windows](/samples/browse/?products=windows-wdk)
 
 ## <a name="archived-c-samples-on-github"></a>Exemples C++ archivés sur GitHub
 
@@ -40,7 +40,7 @@ Visual Studio inclut l’exemple de code C++ dans les versions précédentes. L�
 | Nom d’exemple | Description |
 |--|--|
 | [ActiveDoc](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Montre comment implémenter un serveur de documents actifs. |
-| [Async](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Télécharge des données de façon asynchrone à partir d'une URL. |
+| [Asynchrone](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Télécharge des données de façon asynchrone à partir d'une URL. |
 | [ATLButton](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Crée un bouton qui s'affiche avec trois bitmaps différentes en fonction de son état. |
 | [ATLDuck](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Illustre l'utilisation de points de connexion avec des contrôles ATL. |
 | [ATLSecurity](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Montre comment utiliser les classes de sécurité ATL pour examiner les paramètres de sécurité. |
@@ -194,7 +194,7 @@ Visual Studio inclut l’exemple de code C++ dans les versions précédentes. L�
 
 | Nom d’exemple | Description |
 |--|--|
-| [Collect](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Illustre des classes de collection basées sur des modèles C++ MFC et des classes de collection prégénérées standard. |
+| [Rassembler](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Illustre des classes de collection basées sur des modèles C++ MFC et des classes de collection prégénérées standard. |
 | [Dernier](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Application OpenGL utilisant les contextes de périphérique (Device Context) MFC avec les contextes de ressources de OpenGL. |
 | [DLLHusk](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Partage de la version DLL de la bibliothèque Foundation Class avec une application et une DLL personnalisée. |
 | [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | DLL régulière qui peut être liée statiquement ou dynamiquement à la bibliothèque MFC (Microsoft Foundation Class). |

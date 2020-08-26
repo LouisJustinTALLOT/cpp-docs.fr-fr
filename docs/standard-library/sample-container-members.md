@@ -4,23 +4,23 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 21d3660661e3987d1b9477bb6298373033946c06
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228113"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846262"
 ---
 # <a name="sample-container-members"></a>sample container, membres
 
 > [!NOTE]
 > Cette rubrique se trouve dans la documentation de Microsoft C++ comme un exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque standard C++](../standard-library/stl-containers.md).
 
-## <a name="reference"></a>Informations de référence
+## <a name="reference"></a>Référence
 
 ## <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[const_iterator](../standard-library/container-class-const-iterator.md)|Décrit un objet pouvant servir d’itérateur constant pour la séquence contrôlée.|
 |[const_reference](../standard-library/container-class-const-reference.md)|Décrit un objet pouvant servir de référence constante à un élément de la séquence contrôlée.|
@@ -34,7 +34,7 @@ ms.locfileid: "87228113"
 
 ## <a name="member-functions"></a>Fonctions de membre
 
-|||
+|Nom|Description|
 |-|-|
 |[commencer](../standard-library/container-class-begin.md)|Retourne un itérateur qui pointe vers le premier élément de la séquence (ou juste après la fin d’une séquence vide).|
 |[clear](../standard-library/container-class-clear.md)|Appelle [erase](../standard-library/container-class-erase.md)( [begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)).|

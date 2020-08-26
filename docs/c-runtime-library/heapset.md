@@ -25,12 +25,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5bf27ac8287e785b1c799565781842db54edee4d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351275"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837825"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -49,14 +49,14 @@ int _heapset(
 
 #### <a name="parameters"></a>Paramètres
 
-*Remplir*<br/>
+*complète*<br/>
 Caractère de remplissage.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 `_heapset` retourne une des constantes manifestes entières suivantes définies dans Malloc.h.
 
-|||
+|Valeur|Description|
 |-|-|
 | `_HEAPBADBEGIN`  | Informations d’en-tête initiales non valides ou introuvables.  |
 | `_HEAPBADNODE`  | Tas endommagé ou nœud incorrect trouvé.  |
@@ -71,7 +71,7 @@ La fonction `_heapset` affiche les emplacements de mémoire disponible ou les n�
 
 `_heapset` vérifie la cohérence minimale sur le tas, puis définit chaque octet des entrées libres du tas sur la valeur `fill` . Cette valeur connue indique les emplacements de mémoire du tas qui contiennent des nœuds libres et ceux qui contiennent des données qui ont été écrites accidentellement dans de la mémoire libérée. Si le système d’exploitation ne prend pas en charge `_heapset`(par exemple Windows 98), la fonction resururne `_HEAPOK` et définit `errno` sur `ENOSYS`.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

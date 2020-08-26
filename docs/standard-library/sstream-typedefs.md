@@ -11,22 +11,25 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: a549b413a58e138cda279cd6f3f3e2afc68c6aa6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9236f652cad85d0bbe9a3a15139ac0dc04937273
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217426"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846132"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt;, typedefs
 
-||||
-|-|-|-|
-|[istringstream](#istringstream)|[ostringstream](#ostringstream)|[stringbuf](#stringbuf)|
-|[StringStream](#stringstream)|[wistringstream](#wistringstream)|[wostringstream](#wostringstream)|
-|[wstringbuf](#wstringbuf)|[wstringstream](#wstringstream)|
+[istringstream](#istringstream)\
+[ostringstream](#ostringstream)\
+[stringbuf](#stringbuf)\
+[StringStream](#stringstream)\
+[wistringstream](#wistringstream)\
+[wostringstream](#wostringstream)\
+[wstringbuf](#wstringbuf)\
+[wstringstream](#wstringstream)
 
-## <a name="istringstream"></a><a name="istringstream"></a>istringstream
+## <a name="istringstream"></a><a name="istringstream"></a> istringstream
 
 Crée un type `basic_istringstream` spécialisé sur un **`char`** paramètre de modèle.
 
@@ -38,7 +41,7 @@ typedef basic_istringstream<char> istringstream;
 
 Le type est un synonyme du modèle de classe [basic_istringstream](../standard-library/basic-istringstream-class.md), spécialisé pour les éléments de type **`char`** .
 
-## <a name="ostringstream"></a><a name="ostringstream"></a>ostringstream
+## <a name="ostringstream"></a><a name="ostringstream"></a> ostringstream
 
 Crée un type `basic_ostringstream` spécialisé sur un **`char`** paramètre de modèle.
 
@@ -50,7 +53,7 @@ typedef basic_ostringstream<char> ostringstream;
 
 Le type est un synonyme du modèle de classe [basic_ostringstream](../standard-library/basic-ostringstream-class.md), spécialisé pour les éléments de type **`char`** .
 
-## <a name="stringbuf"></a><a name="stringbuf"></a>stringbuf
+## <a name="stringbuf"></a><a name="stringbuf"></a> stringbuf
 
 Crée un type `basic_stringbuf` spécialisé sur un **`char`** paramètre de modèle.
 
@@ -62,7 +65,7 @@ typedef basic_stringbuf<char> stringbuf;
 
 Le type est un synonyme du modèle de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md), spécialisé pour les éléments de type **`char`** .
 
-## <a name="stringstream"></a><a name="stringstream"></a>StringStream
+## <a name="stringstream"></a><a name="stringstream"></a> StringStream
 
 Crée un type `basic_stringstream` spécialisé sur un **`char`** paramètre de modèle.
 
@@ -74,7 +77,7 @@ typedef basic_stringstream<char> stringstream;
 
 Le type est un synonyme du modèle de classe [basic_stringstream](../standard-library/basic-stringstream-class.md), spécialisé pour les éléments de type **`char`** .
 
-## <a name="wistringstream"></a><a name="wistringstream"></a>wistringstream
+## <a name="wistringstream"></a><a name="wistringstream"></a> wistringstream
 
 Crée un type `basic_istringstream` spécialisé sur un **`wchar_t`** paramètre de modèle.
 
@@ -86,7 +89,7 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 Le type est un synonyme du modèle de classe [basic_istringstream](../standard-library/basic-istringstream-class.md), spécialisé pour les éléments de type **`wchar_t`** .
 
-## <a name="wostringstream"></a><a name="wostringstream"></a>wostringstream
+## <a name="wostringstream"></a><a name="wostringstream"></a> wostringstream
 
 Crée un type `basic_ostringstream` spécialisé sur un **`wchar_t`** paramètre de modèle.
 
@@ -98,7 +101,7 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 Le type est un synonyme du modèle de classe [basic_ostringstream](../standard-library/basic-ostringstream-class.md), spécialisé pour les éléments de type **`wchar_t`** .
 
-## <a name="wstringbuf"></a><a name="wstringbuf"></a>wstringbuf
+## <a name="wstringbuf"></a><a name="wstringbuf"></a> wstringbuf
 
 Crée un type `basic_stringbuf` spécialisé sur un **`wchar_t`** paramètre de modèle.
 
@@ -110,7 +113,7 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 Le type est un synonyme du modèle de classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md), spécialisé pour les éléments de type **`wchar_t`** .
 
-## <a name="wstringstream"></a><a name="wstringstream"></a>wstringstream
+## <a name="wstringstream"></a><a name="wstringstream"></a> wstringstream
 
 Crée un type `basic_stringstream` spécialisé sur un **`wchar_t`** paramètre de modèle.
 

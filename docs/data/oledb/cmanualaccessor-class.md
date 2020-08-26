@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211846"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838098"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor, classe
 
@@ -47,7 +47,7 @@ Représente un type d’accesseur conçu pour une utilisation avancée.
 class CManualAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbcli.h
 
@@ -55,7 +55,7 @@ class CManualAccessor : public CAccessorBase
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[AddBindEntry](#addbindentry)|Ajoute une entrée de liaison aux colonnes de sortie.|
 |[AddParameterEntry](#addparameterentry)|Ajoute une entrée de paramètre à l’accesseur de paramètre.|
@@ -64,9 +64,9 @@ class CManualAccessor : public CAccessorBase
 
 ## <a name="remarks"></a>Notes
 
-À l’aide de `CManualAccessor`, vous pouvez spécifier la liaison de paramètre et de colonne de sortie par des appels de fonction au moment de l’exécution.
+À l’aide `CManualAccessor` de, vous pouvez spécifier la liaison de paramètre et de colonne de sortie par des appels de fonction au moment de l’exécution.
 
-## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor :: AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a> CManualAccessor :: AddBindEntry
 
 Ajoute une entrée de liaison aux colonnes de sortie.
 
@@ -104,9 +104,9 @@ dans Pointeur vers la variable à lier à l’état de colonne, si nécessaire.
 
 ### <a name="remarks"></a>Notes
 
-Pour utiliser cette fonction, vous devez d’abord appeler [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Vous ne pouvez pas ajouter plus d’entrées que le nombre de colonnes spécifié dans `CreateAccessor`.
+Pour utiliser cette fonction, vous devez d’abord appeler [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Vous ne pouvez pas ajouter plus d’entrées que le nombre de colonnes spécifié dans `CreateAccessor` .
 
-## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor :: AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor :: AddParameterEntry
 
 Ajoute une entrée de paramètre aux structures d’entrée de paramètre.
 
@@ -150,7 +150,7 @@ dans Spécifie si le paramètre auquel la liaison est associée est un paramètr
 
 Pour utiliser cette fonction, vous devez d’abord appeler [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
-## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor :: CreateAccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor :: CreateAccessor
 
 Alloue de la mémoire pour les structures de liaison de colonne et initialise les membres de données de colonne.
 
@@ -173,15 +173,15 @@ dans Pointeur vers la mémoire tampon dans laquelle les colonnes de sortie sont 
 *nBufferSize*<br/>
 dans Taille de la mémoire tampon en octets.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’une des valeurs HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction avant d’appeler la fonction `CManualAccessor::AddBindEntry`.
+Appelez cette fonction avant d’appeler la `CManualAccessor::AddBindEntry` fonction.
 
-## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor :: CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a> CManualAccessor :: CreateParameterAccessor
 
 Alloue de la mémoire pour les structures de liaison de paramètre et initialise les membres de données de paramètre.
 
@@ -204,7 +204,7 @@ dans Pointeur vers la mémoire tampon dans laquelle les colonnes d’entrée son
 *nBufferSize*<br/>
 dans Taille de la mémoire tampon en octets.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’une des valeurs HRESULT standard.
 
@@ -215,8 +215,8 @@ Vous devez appeler cette fonction avant d’appeler [AddParameterEntry](../../da
 ## <a name="see-also"></a>Voir aussi
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor, classe](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)
+[CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)

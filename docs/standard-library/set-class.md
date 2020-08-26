@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 80e7c2258fc1fbeabeb8174df18d5cb46aa682bb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e879e7ffd9f674769e32548195f5017e27e64576
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560527"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846236"
 ---
 # <a name="set-class"></a>set, classe
 
@@ -145,13 +145,13 @@ L’itérateur fourni par la classe set est un itérateur bidirectionnel. Toutef
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[set](#set)|Construit une classe set vide ou une copie de l'ensemble ou d'une partie d'une autre classe set.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[allocator_type](#allocator_type)|Type qui représente la classe `allocator` pour l'objet set.|
 |[const_iterator](#const_iterator)|Type qui fournit un itérateur bidirectionnel capable de lire un **`const`** élément du jeu.|
@@ -169,9 +169,9 @@ L’itérateur fourni par la classe set est un itérateur bidirectionnel. Toutef
 |[value_compare](#value_compare)|Type qui fournit un objet de fonction pouvant comparer deux éléments comme clés de tri pour déterminer leur ordre relatif dans la classe set.|
 |[value_type](#value_type)|Ce type décrit un objet stocké en tant qu'élément d'une classe set en sa capacité en tant que valeur.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[commencer](#begin)|Retourne un itérateur qui traite le premier élément d'une classe set.|
 |[cbegin](#cbegin)|Retourne un itérateur const qui traite le premier élément d'une classe set.|
@@ -201,7 +201,7 @@ L’itérateur fourni par la classe set est un itérateur bidirectionnel. Toutef
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur =](#op_eq)|Remplace les éléments d'une classe set par une copie d'une autre classe set.|
 
@@ -235,7 +235,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel qui traite le premier élément dans le set ou l’emplacement qui suit un set vide.
 
@@ -290,7 +290,7 @@ Retourne un **`const`** itérateur qui traite le premier élément de la plage.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Itérateur d’accès bidirectionnel qui pointe vers le premier élément de la plage, ou vers l’emplacement situé juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()` ).
 
@@ -316,7 +316,7 @@ Retourne un **`const`** itérateur qui traite l’emplacement juste après le de
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Itérateur d’accès bidirectionnel qui pointe juste après la fin de la plage.
 
@@ -474,7 +474,7 @@ size_type count(const Key& key) const;
 *essentiel*\
 Clé des éléments à mettre en correspondance à partir de l'ensemble.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 1 si la classe set contient un élément dont la clé de tri correspond à la clé de paramètre. 0 si la classe set ne contient pas d'élément avec une clé correspondante.
 
@@ -527,7 +527,7 @@ Retourne un itérateur const qui traite le premier élément d'un ensemble inver
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite le premier élément dans un set inversé ou qui traite ce qui était le dernier élément dans le set non inversé.
 
@@ -573,7 +573,7 @@ Retourne un itérateur const qui traite l'emplacement qui suit le dernier élém
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite l’emplacement qui suit le dernier élément d’un set inversé (emplacement ayant précédé celui du premier élément du set non inversé).
 
@@ -698,7 +698,7 @@ emplace(
 *attend*\
 Arguments transmis pour construire un élément à insérer dans le set, sauf s’il contient déjà un élément dont la valeur est classée de façon équivalente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [Paire](../standard-library/pair-structure.md) dont le composant bool retourne la valeur true si une insertion a été effectuée, ou la valeur false si la classe map contenait déjà un élément de valeur équivalente dans le classement. Le composant itérateur de la paire de la valeur de retour retourne l’adresse où un nouvel élément a été inséré (si le composant bool a la valeur true) ou l’adresse où l’élément se trouvait déjà (si le composant bool a la valeur false).
 
@@ -781,7 +781,7 @@ Arguments transmis pour construire un élément à insérer dans le set, sauf si
 *Cela*\
 Emplacement où commencer à rechercher le point d'insertion correct. (Si ce point précède immédiatement *, l'* insertion peut se produire dans le temps constant amorti plutôt que dans le temps logarithmique.)
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur vers l’élément qui vient d’être inséré.
 
@@ -845,7 +845,7 @@ Vérifie si une classe set est vide.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le jeu est vide ; **`false`** si le jeu n’est pas vide.
 
@@ -890,7 +890,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur de type past-the-end. Si l'ensemble est vide, puis `set::end() == set::begin()`.
 
@@ -917,7 +917,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *essentiel*\
 Clé d’argument à comparer à la clé de tri d’un élément du set dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paire d’itérateurs telle que le premier est la [lower_bound](#lower_bound) de la clé et le second est la [upper_bound](#upper_bound) de la clé.
 
@@ -1011,7 +1011,7 @@ Position juste après le dernier élément à supprimer.
 *Essentiel*\
 Valeur de clé des éléments à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour les deux premières fonctions membres, itérateur bidirectionnel qui désigne le premier élément restant après tous les éléments supprimés, ou élément à la fin du set si aucun élément de ce type n’existe.
 
@@ -1110,7 +1110,7 @@ const_iterator find(const Key& key) const;
 *essentiel*\
 Valeur de clé qui doit correspondre à la clé de tri d'un élément de l'ensemble dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur qui fait référence à l'emplacement d'un élément ayant la clé spécifiée, ou emplacement qui suit le dernier élément de l'ensemble (`set::end()`), si aucune correspondance n'est trouvée pour la clé.
 
@@ -1189,7 +1189,7 @@ Retourne une copie de l’objet allocateur utilisé pour construire le set.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Allocateur utilisé par le set pour gérer la mémoire, qui est le paramètre de modèle `Allocator`.
 
@@ -1316,7 +1316,7 @@ Argument de fonction de modèle qui remplit les conditions requises par un [ité
 *IList*\
 [Initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions membres à un élément, (1) et (2), retournent une [paire](../standard-library/pair-structure.md) dont **`bool`** le composant a la valeur true si une insertion a été effectuée, et false si le jeu contient déjà un élément de valeur équivalente dans le classement. Le composant itérateur de la paire de valeur de retour pointe sur l’élément qui vient d’être inséré si le **`bool`** composant a la valeur true ou sur l’élément existant si le **`bool`** composant a la valeur false.
 
@@ -1456,7 +1456,7 @@ Récupère une copie de l'objet de comparaison utilisé pour trier les clés au 
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’objet de fonction utilisé par un set pour trier ses éléments, qui est le paramètre de modèle `Traits`.
 
@@ -1578,7 +1578,7 @@ iterator lower_bound(const Key& key);
 *essentiel*\
 Clé d’argument à comparer à la clé de tri d’un élément du set dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur ou `const_iterator` qui traite l’emplacement d’un élément dans un set ayant une clé supérieure ou égale à la clé d’argument, ou qui traite l’emplacement suivant le dernier élément dans le set si aucune correspondance n’est trouvée pour la clé.
 
@@ -1639,7 +1639,7 @@ Retourne la longueur maximale de la classe set.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur maximale autorisée du set.
 
@@ -1747,7 +1747,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé qui traite le premier élément dans un set inversé ou qui traite ce qui était le dernier élément dans le set non inversé.
 
@@ -1859,7 +1859,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé qui traite l’emplacement qui suit le dernier élément d’un set inversé (emplacement ayant précédé celui du premier élément du set non inversé).
 
@@ -2145,7 +2145,7 @@ Retourne le nombre d'éléments figurant dans le jeu.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur actuelle du set.
 
@@ -2273,7 +2273,7 @@ iterator upper_bound(const Key& key);
 *essentiel*\
 Clé d’argument à comparer à la clé de tri d’un élément du set dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `iterator`Ou `const_iterator` qui traite l’emplacement d’un élément dans un ensemble qui a une clé supérieure à la clé d’argument, ou qui traite l’emplacement qui suit le dernier élément du jeu si aucune correspondance n’est trouvée pour la clé.
 
@@ -2334,7 +2334,7 @@ Récupère une copie de l'objet de comparaison utilisé pour trier les valeurs d
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’objet de fonction utilisé par un set pour trier ses éléments, qui est le paramètre de modèle `Traits`.
 
