@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: d99dae9d8e7eca96c736a33621f0b544f1962f0f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62bab0fbde364406f35edb959abb6e55a9125504
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560892"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840737"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame, classe
 
@@ -37,17 +37,15 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|Constructeur par défaut.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|||
-|-|-|
 |Nom|Description|
+|-|-|
 |[CMFCDropDownFrame :: Create](#create)|Crée un objet `CMFCDropDownFrame`.|
 |`CMFCDropDownFrame::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|
 |[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Récupère la barre de menus parente du frame de liste déroulante.|
@@ -82,7 +80,7 @@ L’exemple suivant montre comment récupérer un pointeur vers un `CMFCDropDown
 
 [CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxdropdowntoolbar.h
 
@@ -112,7 +110,7 @@ dans Coordonnée d’écran verticale pour l’emplacement du cadre vers le dess
 *pWndOriginToolbar*\
 dans La barre d’outils qui contient les boutons déroulants que cette méthode utilise pour remplir le nouvel objet de frame de liste déroulante.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le frame de liste déroulante a été créé avec succès ; Sinon, FALSe.
 
@@ -130,7 +128,7 @@ Récupère la barre de menus parente du frame de liste déroulante.
 CMFCMenuBar* GetParentMenuBar() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la barre de menus parente du frame déroulant, ou NULL si le frame n’a pas de parent.
 
@@ -146,7 +144,7 @@ Récupère le menu contextuel parent du frame de liste déroulante.
 CMFCDropDownFrame* GetParentPopupMenu() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le menu déroulant parent du frame de liste déroulante, ou NULL si le frame n’a pas de parent.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: e571c1ca8beef684a40bbf643e83aba3f205fc8e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec403bd02df0b937269acc71ddf87e1942bb4c5c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230115"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836593"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
@@ -44,7 +44,7 @@ Pour les flux d’octets (stockés dans un fichier, transmis sous la forme d’u
 
 ### <a name="enumerations"></a>Énumérations
 
-|||
+|Nom|Description|
 |-|-|
 |[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|Spécifie des informations de configuration pour les facettes de paramètres régionaux.|
 
@@ -56,7 +56,7 @@ Pour les flux d’octets (stockés dans un fichier, transmis sous la forme d’u
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UTF-16 et un flux d’octets codé au format UTF-8.|
 |[codecvt_utf16](codecvt-utf16-class.md)|Représente une facette de paramètres régionaux qui effectue la conversion entre des caractères larges codés au format UCS-2 ou UCS-4 et un flux d’octets codé au format UTF-16LE ou UTF-16BE.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<codecvt>
 

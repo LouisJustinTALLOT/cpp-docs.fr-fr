@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 20f558099c02d7de8a20b3cf631812b44a742a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 48ed687ff67208109b5a2acf400d98491b4c769a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210403"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836141"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl, classe
 
@@ -35,12 +35,12 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Classe dérivée de `IRowsetIdentityImpl`.
+Classe dérivée de `IRowsetIdentityImpl` .
 
 *RowClass*<br/>
-Unité de stockage pour le `HROW`.
+Unité de stockage du `HROW` .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -48,11 +48,11 @@ Unité de stockage pour le `HROW`.
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[IsSameRow](#issamerow)|Compare deux handles de ligne pour voir s’ils font référence à la même ligne.|
 
-## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a>Irowsetidentityimpl, :: IsSameRow
+## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a> Irowsetidentityimpl, :: IsSameRow
 
 Compare deux handles de ligne pour voir s’ils font référence à la même ligne.
 
@@ -69,9 +69,9 @@ Consultez [IRowsetIdentity :: IsSameRow](/previous-versions/windows/desktop/ms7
 
 ### <a name="remarks"></a>Notes
 
-Pour comparer des handles de ligne, cette méthode effectue un cast des handles de `HROW` en `RowClass` membres et appelle `memcmp` sur les pointeurs.
+Pour comparer des handles de ligne, cette méthode effectue un cast des `HROW` Handles vers les `RowClass` membres et appelle `memcmp` sur les pointeurs.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

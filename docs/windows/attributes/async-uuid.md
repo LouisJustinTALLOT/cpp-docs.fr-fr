@@ -1,17 +1,17 @@
 ---
-title: async_uuid (C++ attribut com)
+title: async_uuid (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 537bd6d645532d9d5d20b740125c66f3953239bc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cb0abdcedc26c5ffe197e52d5da4fbad1ec516d2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168458"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836242"
 ---
 # <a name="async_uuid"></a>async_uuid
 
@@ -30,7 +30,7 @@ UUID qui identifie la version de l’interface.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **async_uuid** C++ a les mêmes fonctionnalités que l’attribut MIDL [async_uuid](/windows/win32/Midl/async-uuid) .
+L’attribut C++ **async_uuid** a les mêmes fonctionnalités que l’attribut MIDL [async_uuid](/windows/win32/Midl/async-uuid) .
 
 ## <a name="example"></a>Exemple
 
@@ -46,15 +46,13 @@ __interface ICustom {
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|`interface`|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
+|**S’applique à**|`interface`|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
 |**Attributs non valides**|**Dual**, **dispinterface**|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224485"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836372"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,11 +28,11 @@ Indique que la classe prend en charge l’agrégation.
 *value*<br/>
 Facultatif Paramètre pour indiquer quand l’objet COM peut être agrégé :
 
-- `never`L’objet COM ne peut pas être agrégé.
+- `never` L’objet COM ne peut pas être agrégé.
 
-- `allowed`L’objet COM peut être créé directement ou peut être agrégé. Il s’agit de la valeur par défaut.
+- `allowed` L’objet COM peut être créé directement ou peut être agrégé. Il s'agit de la valeur par défaut.
 
-- `always`L’objet COM ne peut pas être créé directement et peut uniquement être agrégé. Lorsque vous appelez `CoCreateInstance` pour cet objet, vous devez spécifier l’interface de l’objet d’agrégation `IUnknown` (le contrôle `IUnknown` ).
+- `always` L’objet COM ne peut pas être créé directement et peut uniquement être agrégé. Lorsque vous appelez `CoCreateInstance` pour cet objet, vous devez spécifier l’interface de l’objet d’agrégation `IUnknown` (le contrôle `IUnknown` ).
 
 ## <a name="remarks"></a>Notes
 
@@ -44,7 +44,7 @@ Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou
 
 Si vous utilisez cet attribut dans un projet qui utilise ATL, le comportement de l’attribut change. Outre le comportement décrit précédemment, l’attribut ajoute également l’une des macros suivantes à la classe cible :
 
-|Valeur du paramètre|Macro insérée|
+|Valeur de paramètre|Macro insérée|
 |---------------------|--------------------|
 |`Never`|[DECLARE_NOT_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|
 |`Allowed`|[DECLARE_POLY_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|
@@ -66,16 +66,14 @@ Si vous utilisez cet attribut dans un projet qui utilise ATL, le comportement de
 class CMyClass {};
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Non|
 |**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass` , `progid` ou `vi_progid` .|
-|**Attributs non valides**|None|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
@@ -84,4 +82,4 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Agréger](/windows/win32/com/aggregation)
+[Agrégation](/windows/win32/com/aggregation)

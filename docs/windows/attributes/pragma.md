@@ -1,17 +1,17 @@
 ---
-title: pragma (C++ attribut com)
+title: pragma (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 56b1aa4bf445095b86a1ea6792bfc78f45266e9a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5683a6f52eccf9eae7c29010849a148e506b286
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166482"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836167"
 ---
 # <a name="pragma"></a>pragma
 
@@ -48,16 +48,14 @@ __interface A
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|N'importe où|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|N'importe où|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

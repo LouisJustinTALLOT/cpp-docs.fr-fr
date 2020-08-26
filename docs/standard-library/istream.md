@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 37399bb50f195c683b52eea4c8fadf8679d62852
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233091"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846457"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -36,7 +36,7 @@ Définit le modèle de classe basic_istream, qui sert d’intermédiaire pour le
 
 ### <a name="manipulators"></a>Manipulateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[Web](../standard-library/istream-functions.md#ws)|Ignore l'espace blanc dans le flux.|
 |[swap](../standard-library/istream-functions.md#istream_swap)|Échange deux objets de flux.|
@@ -45,7 +45,7 @@ Définit le modèle de classe basic_istream, qui sert d’intermédiaire pour le
 
 |Opérateur|Description|
 |-|-|
-|[>>d’opérateur](../standard-library/istream-operators.md#op_gt_gt)|Extrait des chaînes et des caractères à partir du flux.|
+|[>>d’opérateur ](../standard-library/istream-operators.md#op_gt_gt)|Extrait des chaînes et des caractères à partir du flux.|
 
 ### <a name="classes"></a>Classes
 

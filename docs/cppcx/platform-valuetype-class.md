@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4ce34fa3f197424833d34bdb866712d412e69c3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182949"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846548"
 ---
 # <a name="platformvaluetype-class"></a>Classe Platform::ValueType
 
@@ -26,9 +26,9 @@ public ref class ValueType : Object
 
 ## <a name="public-methods"></a>Méthodes publiques
 
-|||
-|-|-|
-|[ValueType::ToString](#tostring)|Retourne une représentation sous forme de chaîne de l’objet. Héritée de [Platform::Object](../cppcx/platform-object-class.md).|
+| Nom | Description |
+|--|--|
+| [ValueType :: ToString](#tostring) | Retourne une représentation de l'objet sous forme de chaîne. Héritée de [Platform :: Object](../cppcx/platform-object-class.md). |
 
 ### <a name="remarks"></a>Notes
 
@@ -36,17 +36,17 @@ La classe ValueType est utilisée pour construire des types valeur. ValueType es
 
 ### <a name="requirements"></a>Configuration requise
 
-**Prise en charge minimale du client :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
-## <a name="tostring"></a> ValueType::ToString, méthode
+## <a name="valuetypetostring-method"></a><a name="tostring"></a> ValueType :: ToString, méthode
 
-Retourne une représentation sous forme de chaîne de l’objet.
+Retourne une représentation de l'objet sous forme de chaîne.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -56,8 +56,8 @@ Platform::String ToString();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Platform::String qui représente la valeur.
+Platform :: String qui représente la valeur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)

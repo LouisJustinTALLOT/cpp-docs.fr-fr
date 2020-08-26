@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 4ce2d8060c7218226340a591c6295a573f99dad8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8134f334b0143a360fd3e02c04bca7a65ce67ce0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619767"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836385"
 ---
 # <a name="atl-predefined-symbols"></a>Symboles ATL prédéfinis
 
@@ -18,7 +18,7 @@ Ces symboles sont définis dans les fichiers d’en-tête ATL, mais ils prennent
 
 Lorsque vous utilisez des boîtes de dialogue et des contrôles dans l' [éditeur de boîtes de dialogue](dialog-editor.md), ces symboles s’affichent dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) associé aux contrôles communs. Par exemple, si votre boîte de dialogue comporte un bouton **Annuler** , cette commande est associée au symbole IDCANCEL dans la fenêtre **Propriétés** .
 
-|||
+|Nom|Description|
 |-|-|
 |IDABORT|régulation Boîte de dialogue, bouton abandonner|
 |IDC_STATIC|régulation Contrôle statique|

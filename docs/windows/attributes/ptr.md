@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 9e45cd529562fe238f96f98cf7f91e15df34270a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c01fe93d8c4092b3a4754b0c70ff161d66dfe49f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224381"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839866"
 ---
 # <a name="ptr"></a>ptr
 
@@ -31,16 +31,14 @@ L’attribut C++ **ptr** a les mêmes fonctionnalités que l’attribut MIDL [pt
 
 Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemple d’utilisation de **ptr**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S’applique à**|Paramètre d’interface, méthode d’interface,**`typedef`**|
+|**S’applique à**|Paramètre d’interface, méthode d’interface, **`typedef`**|
 |**Repeatable Read**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

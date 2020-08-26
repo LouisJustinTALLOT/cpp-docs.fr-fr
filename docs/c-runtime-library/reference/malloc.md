@@ -27,12 +27,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: 30d92975d1a3971d29b1758dc23d3a84372288c9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a093dbdbc4849b1c2f3d86e85a5e2b25a7b988e2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232506"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836658"
 ---
 # <a name="malloc"></a>malloc
 
@@ -51,7 +51,7 @@ void *malloc(
 *size*<br/>
 Octets à allouer.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **malloc** retourne un pointeur void vers l’espace alloué, ou **null** si la mémoire disponible est insuffisante. Pour retourner un pointeur vers un type autre que **`void`** , utilisez un cast de type sur la valeur de retour. L’espace de stockage désigné par la valeur de retour est obligatoirement correctement aligné pour le stockage de tout type d’objet dont la spécification d’alignement est inférieure ou égale à celle de l’alignement fondamental. (Dans Visual C++, l’alignement fondamental est l’alignement requis pour un **`double`** , ou 8 octets. Dans le code qui cible les plateformes 64 bits, il s’agit de 16 octets.) Utilisez [_aligned_malloc](aligned-malloc.md) pour allouer du stockage pour les objets qui ont une exigence d’alignement plus grande, par exemple, les types SSE [__m128](../../cpp/m128.md) et **`__m256`** , et les types qui sont déclarés à l’aide de `__declspec(align( n ))` où **n** est supérieur à 8. Si la *taille* est égale à 0, **malloc** alloue un élément de longueur zéro dans le tas et retourne un pointeur valide vers cet élément. Vérifiez toujours le retour de **malloc**, même si la quantité de mémoire demandée est faible.
 
@@ -63,18 +63,54 @@ La fonction **malloc** alloue un bloc de mémoire d’au moins octets de *taille
 
 Le code de démarrage utilise **malloc** pour allouer le stockage pour les variables **_environ**, *envp*et *argv* . Les fonctions suivantes et leurs équivalents à caractères larges appellent également **malloc**.
 
-|||||
-|-|-|-|-|
-|[calloc](calloc.md)|[fscanf](fscanf-fscanf-l-fwscanf-fwscanf-l.md)|[_getw](getw.md)|[setvbuf](setvbuf.md)|
-|[_exec, fonctions](../../c-runtime-library/exec-wexec-functions.md)|[fseek](fseek-fseeki64.md)|[_popen](popen-wpopen.md)|[fonctions _spawn](../../c-runtime-library/spawn-wspawn-functions.md)|
-|[fgetc](fgetc-fgetwc.md)|[fsetpos](fsetpos.md)|[printf](printf-printf-l-wprintf-wprintf-l.md)|[_strdup](strdup-wcsdup-mbsdup.md)|
-|[_fgetchar](fgetc-fgetwc.md)|[_fullpath](fullpath-wfullpath.md)|[putc](putc-putwc.md)|[système](system-wsystem.md)|
-|[fgets](fgets-fgetws.md)|[fwrite](fwrite.md)|[putchar](putc-putwc.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-|[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[getc](getc-getwc.md)|[_putenv](putenv-wputenv.md)|[ungetc](ungetc-ungetwc.md)|
-|[fputc](fputc-fputwc.md)|[GetChar](getc-getwc.md)|[puts](puts-putws.md)|[vfprintf](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|
-|[_fputchar](fputc-fputwc.md)|[_getcwd](getcwd-wgetcwd.md)|[_putw](putw.md)|[vprintf](vprintf-vprintf-l-vwprintf-vwprintf-l.md)|
-|[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
-|[fread](fread.md)|[définit](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
+:::row:::
+   :::column span="":::
+      [calloc](calloc.md)\
+      [fonctions _exec](../../c-runtime-library/exec-wexec-functions.md)\
+      [fgetc](fgetc-fgetwc.md)\
+      [_fgetchar](fgetc-fgetwc.md)\
+      [fgets](fgets-fgetws.md)\
+      [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
+      [fputc](fputc-fputwc.md)\
+      [_fputchar](fputc-fputwc.md)\
+      [fputs](fputs-fputws.md)\
+      [fread](fread.md)
+   :::column-end:::
+   :::column span="":::
+      [fscanf](fscanf-fscanf-l-fwscanf-fwscanf-l.md)\
+      [fseek](fseek-fseeki64.md)\
+      [fsetpos](fsetpos.md)\
+      [_fullpath](fullpath-wfullpath.md)\
+      [fwrite](fwrite.md)\
+      [GETC](getc-getwc.md)\
+      [GetChar](getc-getwc.md)\
+      [_getcwd](getcwd-wgetcwd.md)\
+      [_getdcwd](getcwd-wgetcwd.md)\
+      [définit](../../c-runtime-library/gets-getws.md)
+   :::column-end:::
+   :::column span="":::
+      [_getw](getw.md)\
+      [_popen](popen-wpopen.md)\
+      [printf](printf-printf-l-wprintf-wprintf-l.md)\
+      [putc](putc-putwc.md)\
+      [putchar](putc-putwc.md)\
+      [_putenv](putenv-wputenv.md)\
+      [tour](puts-putws.md)\
+      [_putw](putw.md)\
+      [scanf](scanf-scanf-l-wscanf-wscanf-l.md)
+   :::column-end:::
+   :::column span="":::
+      [_searchenv](searchenv-wsearchenv.md)\
+      [setvbuf](setvbuf.md)\
+      [fonctions _spawn](../../c-runtime-library/spawn-wspawn-functions.md)\
+      [_strdup](strdup-wcsdup-mbsdup.md)\
+      [requise](system-wsystem.md)\
+      [_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)\
+      [ungetc](ungetc-ungetwc.md)\
+      [vfprintf](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)\
+      [vprintf](vprintf-vprintf-l-vwprintf-vwprintf-l.md)
+   :::column-end:::
+:::row-end:::
 
 La fonction C++ [_set_new_mode](set-new-mode.md) définit le mode de nouveau gestionnaire pour **malloc**. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, quand **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l' **`new`** opérateur quand il échoue pour la même raison. Pour remplacer la valeur par défaut, appelez au `_set_new_mode(1)` début de votre programme ou liez-la à NEWMODE. OBJ (consultez [options de liaison](../../c-runtime-library/link-options.md)).
 
@@ -84,7 +120,7 @@ Lorsque l’application est liée à une version de débogage des bibliothèques
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

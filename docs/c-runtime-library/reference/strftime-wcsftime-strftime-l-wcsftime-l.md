@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215138"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846574"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -101,7 +101,7 @@ structure de données **TM** .
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **strftime** retourne le nombre de caractères placés dans *strDest* et **wcsftime** retourne le nombre correspondant de caractères larges.
 
@@ -127,9 +127,8 @@ L’argument *format* se compose d’un ou de plusieurs codes. comme dans **prin
 
 Les fonctions **strftime** prennent en charge les codes de mise en forme suivants :
 
-|||
-|-|-|
 |Code|Chaîne de remplacement|
+|-|-|
 |**% a**|Nom abrégé du jour de la semaine dans les paramètres régionaux|
 |**% A**|Nom complet du jour de la semaine dans les paramètres régionaux|
 |**% b**|Nom du mois abrégé dans les paramètres régionaux|
@@ -172,7 +171,7 @@ Comme dans la fonction **printf** , l' **#** indicateur peut préfixer tout code
 
 |Code du format|Signification|
 |-----------------|-------------|
-|**% #a**, **% #A**, **% #b**, **% #B**, **% #g**, **% #G**, **%**#h, **% #n**, **% #p**, **%**#t, **% #u**, **% #w**, **% #X**, **%**#z, **% #Z**,**%#%**|**#** l’indicateur est ignoré.|
+|**% #a**, **% #A**, **% #b**, **% #B**, **% #g**, **% #G**, **%**#h, **% #n**, **% #p**, **%**#t, **% #u**, **% #w**, **% #X**, **%**#z, **% #Z**, **%#%**|**#** l’indicateur est ignoré.|
 |**% #c**|Représentation de la date et de l’heure longues, adaptée aux paramètres régionaux. Par exemple : « Mardi 14 mars 1995, 12:41:29 ».|
 |**% #x**|Représentation de date longue, adaptée aux paramètres régionaux. Par exemple : « Mardi 14 mars 1995 ».|
 |**% #d**, **% #D**, **% #e**, **% #F**, **% #H**, **% #I**, **% #j**, **% #m**, **% #M**, **%**#r, **% #R**, **%**#S, **%#T**% #T, **%**#U, **% #V**,% **#W**, **%**#y, **%** #Y|Supprimer les zéros ou les espaces non significatifs (le cas échéant).|
@@ -182,7 +181,7 @@ L’année ISO 8601 semaine et semaine générée par **% V**, **% g**et **% g**
 > [!NOTE]
 > Lors de l’utilisation de l’une des `strftime` fonctions avec un `tm` pointeur retourné par `gmtime` , les valeurs imprimées via les `%Z` spécificateurs et ne sont `%z` pas exactes. Cela est dû au fait que le `tm` struct tel que spécifié par la norme C ne contient pas les informations relatives au nom et au décalage du fuseau horaire. Au lieu de cela, les informations de fuseau horaire sont renseignées via les variables globales [ `_timezone` et `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

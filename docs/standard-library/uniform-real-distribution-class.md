@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: fc003ebe9301c3648b47c796910d20096e7ef23d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ba2ec419e524ca571120fe82c7cbf63c1a97eaaa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217361"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839593"
 ---
 # <a name="uniform_real_distribution-class"></a>uniform_real_distribution, classe
 
@@ -78,10 +78,8 @@ Le type de résultat à virgule flottante a comme valeur par défaut **`double`*
 
 Le modèle de classe décrit une distribution inclusive et exclusive qui produit des valeurs d’un type à virgule flottante intégral spécifié par l’utilisateur avec une distribution afin que chaque valeur soit également probable. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
-|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
+[uniform_real_distribution](#uniform_real_distribution)\
+[param_type](#param_type)|
 
 Le membre de propriété `a()` retourne la limite minimale de la distribution stockée actuellement, tandis que `b()` retourne la limite maximale stockée actuellement. Pour cette classe de distribution, ces valeurs minimales et maximales sont les mêmes que celles retournées par les fonctions de propriété courantes `min()` et `max()` décrites dans la [\<random>](../standard-library/random.md) rubrique.
 
@@ -172,13 +170,13 @@ Distribution for 10 samples:
          10: 0.8795716566
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution :: uniform_real_distribution
+## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a> uniform_real_distribution :: uniform_real_distribution
 
 Construit la distribution.
 
@@ -206,7 +204,7 @@ Le premier constructeur construit un objet dont la valeur *stockée* contient la
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution ::p aram_type
+## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a> uniform_real_distribution ::p aram_type
 
 Stocke tous les paramètres de la distribution.
 

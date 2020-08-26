@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 5a96ffd15bb28022b3000252307c75b3383ac59c
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 821fb1637306c70d850f12fc1b954860557f47f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373747"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840438"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Comment : intégrer les outils personnalisés dans les propriétés du projet
 
@@ -17,7 +17,7 @@ Vous pouvez ajouter des options d’outils personnalisés à la fenêtre **Pages
 
 La section **Propriétés de configuration** de la fenêtre **Pages de propriétés** affiche des groupes de paramètres appelés *règles*. Chaque règle contient les paramètres d’un outil ou d’un groupe de fonctionnalités. Par exemple, la règle **Éditeur de liens** contient les paramètres de l’outil Éditeur de liens. Les paramètres d’une règle peuvent être subdivisés en *catégories*.
 
-Ce document explique comment créer un fichier dans un répertoire défini qui contient les propriétés de votre outil personnalisé de telle sorte que ces propriétés soient chargées au démarrage de Visual Studio. Pour savoir comment modifier le fichier, consultez [Platform Extensibilty Part 2](https://docs.microsoft.com/archive/blogs/vsproject/platform-extensibility-part-2) sur le blog Visual Studio Project Team.
+Ce document explique comment créer un fichier dans un répertoire défini qui contient les propriétés de votre outil personnalisé de telle sorte que ces propriétés soient chargées au démarrage de Visual Studio. Pour savoir comment modifier le fichier, consultez [Platform Extensibilty Part 2](/archive/blogs/vsproject/platform-extensibility-part-2) sur le blog Visual Studio Project Team.
 
 ### <a name="to-add-or-change-project-properties"></a>Pour ajouter ou modifier des propriétés de projet
 

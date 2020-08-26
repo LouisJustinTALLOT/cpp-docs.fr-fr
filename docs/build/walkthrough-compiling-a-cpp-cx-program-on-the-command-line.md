@@ -2,19 +2,19 @@
 title: "Procédure pas à pas : compilation d'un programme C++/CX sur la ligne de commande"
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 456373fc9009920b734243f6a6c1af3d2c0301d4
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 8dcd27ca8fff826f33ee8bd752cd32f2d44d3691
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373682"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836710"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Procédure pas à pas : compilation d'un programme C++/CX sur la ligne de commande
 
 > [!NOTE]
 > Pour les nouveaux composants et applications UWP, nous vous recommandons d’utiliser [c++/WinRT](/windows/uwp/cpp-and-winrt-apis/), une projection de langage c++ 17 standard pour les API Windows Runtime. C++/WinRT est disponible dans le kit de développement logiciel (SDK) Windows 10 à partir de la version 1803. C++/WinRT est implémenté entièrement dans les fichiers d’en-tête et est conçu pour vous fournir un accès de première classe à l’API Windows moderne.
 
-Le compilateur Microsoft C++ (MSVC) prend en charge les extensions de composant C++ (C++/CX), qui dispose de types et d’opérateurs supplémentaires pour cibler le modèle de programmation Windows Runtime. Vous pouvez utiliser C++/CX pour générer des applications pour plateforme Windows universelle (UWP) et Windows Desktop. Pour plus d’informations, consultez [la visite guidée de C++/CX](https://docs.microsoft.com/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx) et des [extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
+Le compilateur Microsoft C++ (MSVC) prend en charge les extensions de composant C++ (C++/CX), qui dispose de types et d’opérateurs supplémentaires pour cibler le modèle de programmation Windows Runtime. Vous pouvez utiliser C++/CX pour générer des applications pour plateforme Windows universelle (UWP) et Windows Desktop. Pour plus d’informations, consultez [la visite guidée de C++/CX](/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx) et des [extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md).
 
 Dans cette procédure pas à pas, vous allez créer un programme C++/CX élémentaire à l'aide d'un éditeur de texte, puis le compiler sur la ligne de commande. (Vous pouvez utiliser votre propre programme C++/CX au lieu de taper le programme illustré, ou vous pouvez utiliser un exemple de code C++/CX tiré d'un autre article d'aide. Cette technique est utile pour générer et tester de petits modules qui n’ont pas d’éléments d’interface utilisateur.)
 

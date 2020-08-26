@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920266"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846587"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -69,28 +69,28 @@ Chemin du répertoire ou du fichier.
 *mode*<br/>
 Attribut de lecture/écriture.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chaque fonction retourne 0 si le fichier a le mode donné. La fonction retourne-1 si le fichier nommé n’existe pas ou s’il n’a pas le mode donné ; dans ce cas, `errno` est défini comme indiqué dans le tableau suivant.
 
-|||
-|-|-|
-`EACCES`|Accès refusé : le paramètre d’autorisation du fichier n’autorise pas l’accès spécifié.
-`ENOENT`|Chemin ou nom de fichier introuvable.
-`EINVAL`|Paramètre non valide.
+| Valeur | Description |
+|--|--|
+| `EACCES` | Accès refusé : le paramètre d’autorisation du fichier n’autorise pas l’accès spécifié. |
+| `ENOENT` | Chemin ou nom de fichier introuvable. |
+| `EINVAL` | Paramètre non valide. |
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Lorsqu’elle est utilisée avec des fichiers, la fonction **_access** détermine si le fichier ou le répertoire spécifié existe et possède les attributs spécifiés par la valeur de *mode*. En cas d’utilisation avec des répertoires, **_access** détermine uniquement si le répertoire spécifié existe ; dans les systèmes d’exploitation Windows 2000 et versions ultérieures, tous les répertoires disposent d’un accès en lecture et en écriture.
 
 |valeur du *mode*|Test réalisé sur le fichier|
 |------------------|---------------------|
 |00|Existence uniquement|
-|02|En écriture seule|
+|02|Écriture seule|
 |04|Lecture seule|
-|06|Opérations de lecture et d’écriture|
+|06|Lecture et écriture|
 
 Cette fonction vérifie uniquement si le fichier et le répertoire sont en lecture seule ou non ; elle ne vérifie pas les paramètres de sécurité du système de fichiers. Pour cela, vous avez besoin d’un jeton d’accès. Pour plus d’informations sur la sécurité du système de fichiers, consultez [Access Tokens](/windows/win32/SecAuthZ/access-tokens) (Jetons d’accès). Il existe une classe ATL pour fournir cette fonctionnalité ; consultez [CAccessToken, classe](../../atl/reference/caccesstoken-class.md).
 
@@ -106,14 +106,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_taccess`|**_access**|**_access**|**_waccess**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> ou \<io.h>|\<errno.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 L’exemple suivant utilise **_access** pour vérifier le fichier nommé crt_ACCESS. C pour voir s’il existe et si l’écriture est autorisée.
 

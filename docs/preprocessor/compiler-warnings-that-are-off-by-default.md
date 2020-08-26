@@ -5,16 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
-ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
+ms.openlocfilehash: 3727777c6abd3ae5ba19f147e2b6fbe559251813
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712679"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836607"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
 
-Le compilateur prend en charge les avertissements qui sont désactivés par défaut, car la plupart des développeurs ne les trouvent pas utiles. Dans certains cas, ils signalent un choix stylistique ou des idiomes courants dans du code plus ancien. D’autres avertissements concernent l’utilisation d’une extension Microsoft pour le langage. Certains avertissements indiquent une zone dans laquelle les programmeurs font souvent des hypothèses incorrectes, ce qui peut entraîner un comportement inattendu ou non défini. Si tous ces avertissements sont activés, certains d’entre eux peuvent apparaître plusieurs fois dans les en-têtes de bibliothèque. Les bibliothèques Runtime C et les C++ bibliothèques standard sont destinées à émettre aucun avertissement uniquement au niveau d’avertissement [/W4](../build/reference/compiler-option-warning-level.md).
+Le compilateur prend en charge les avertissements qui sont désactivés par défaut, car la plupart des développeurs ne les trouvent pas utiles. Dans certains cas, ils signalent un choix stylistique ou des idiomes courants dans du code plus ancien. D’autres avertissements concernent l’utilisation d’une extension Microsoft pour le langage. Certains avertissements indiquent une zone dans laquelle les programmeurs font souvent des hypothèses incorrectes, ce qui peut entraîner un comportement inattendu ou non défini. Si tous ces avertissements sont activés, certains d’entre eux peuvent apparaître plusieurs fois dans les en-têtes de bibliothèque. Les bibliothèques Runtime C et les bibliothèques C++ standard sont destinées à émettre aucun avertissement uniquement au niveau d’avertissement [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Activer les avertissements qui sont désactivés par défaut
 
@@ -40,7 +40,7 @@ Vous pouvez activer les avertissements qui sont normalement désactivés par dé
 
 Les avertissements suivants sont désactivés par défaut dans Visual Studio 2015 et versions ultérieures :
 
-|||
+|Avertissement|Message|
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (niveau 4)|l’énumérateur'*identificateur*'dans un switch de l’enum'*énumération*'n’est pas géré explicitement par une étiquette case|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (niveau 4)|l’énumérateur'*identificateur*'dans un switch de l’enum'*énumération*'n’est pas géré|
@@ -64,7 +64,7 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |C4370 (niveau 3)|la disposition de classe a été modifiée à partir d'une version précédente du compilateur en raison d'une meilleure compression|
 |[C4371](../error-messages/compiler-warnings/c4371.md) (niveau 3)|'*className*' : la disposition de la classe peut avoir été modifiée à partir d’une version précédente du compilateur en raison d’une meilleure compression du membre'*member*'|
 |C4388 (niveau 4)|incompatibilité signed/unsigned|
-|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (niveau 2)|'*fonction*' : la signature de fonction contient le type'*type*'; C++ les objets ne sont pas sûrs à passer entre le code pur et le code mixte ou natif|
+|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (niveau 2)|'*fonction*' : la signature de fonction contient le type'*type*'; Les objets C++ ne sont pas sûrs à passer entre le code pur et le code mixte ou natif|
 |C4426 (niveau 1)|indicateurs d’optimisation modifiés après l’ajout de l’en-tête, peut être dû à #pragma optimize () <sup>14,1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (niveau 4)|'*classe1*' : la disposition des objets sous/VD2 sera modifiée en raison de la base virtuelle'*Class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (niveau 4)|l’dynamic_cast de la base virtuelle «*classe1*» à «*Class2*» peut échouer dans certains contextes|
@@ -99,16 +99,16 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (niveau 4)|'classe dérivée' : l'opérateur d'assignation n'a pas pu être généré parce qu'un opérateur d'assignation de la classe de base est inaccessible|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (niveau 1)|digrammes non pris en charge avec -Ze. Séquence de caractères'*digramme*'non interprétée comme jeton de remplacement pour'*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (niveau 3)|'*instance*' : la construction d’un objet static local n’est pas thread-safe|
-| C4643 (niveau 4) | La déclaration anticipée'*identifier*'dans l’espace de noms std n’est C++ pas autorisée par la norme. <sup>15.8</sup> |
+| C4643 (niveau 4) | La déclaration anticipée'*identifier*'dans l’espace de noms std n’est pas autorisée par la norme C++. <sup>15.8</sup> |
 |C4647 (niveau 3)|changement de comportement : __is_pod (*type*) a une valeur différente dans les versions précédentes|
-|C4654 (niveau 4)|Le code placé avant l’inclusion de la ligne d’en-tête précompilé sera ignoré. Ajoutez du code à l’en-tête précompilé. <sup>14.1</sup>|
+|C4654 (niveau 4)|Le code placé avant l’inclusion de la ligne d’en-tête précompilé sera ignoré. Ajoutez du code à l’en-tête précompilé. <sup>14,1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (niveau 4)|'*symbol*'n’est pas défini en tant que macro de préprocesseur, remplaçant par' 0 'pour'*directives*'|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (niveau 4)|'*symbol*' : aucun attribut de paramètre directionnel spécifié, [in] par défaut|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (niveau 3)|'*type défini par l’utilisateur*' : changement de comportement possible, modification de la Convention d’appel de retour UDT|
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (niveau 1)|'*fonction*' : la signature d’un membre non privé contient un type natif privé d’assembly'*NATIVE_TYPE*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (niveau 4)|'*fonction*' : fonction non inline|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (niveau 3)|stockage de résultat flottant 32 bits en mémoire, perte possible de performances|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l’accès volatile de'*expression*'est soumis au paramètre/volatile :&#124;\<ISO MS >; envisagez d’utiliser __iso_volatile_load fonctions intrinsèques/Store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|l’accès volatile de'*expression*'est soumis à/volatile : \<iso&#124;ms> Setting ; envisagez d’utiliser __iso_volatile_load fonctions intrinsèques/Store|
 |C4749 (niveau 4)|pris en charge de manière conditionnelle : OffsetOf appliqué au type de disposition non standard'*type*'|
 |C4767 (niveau 4)|le nom de section'*symbol*'comporte plus de 8 caractères et sera tronqué par l’éditeur de liens|
 |C4768 (niveau 3)|__declspec attributs avant la spécification de la liaison sont ignorés|
@@ -139,15 +139,15 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |C5025 (niveau 4)|'*type*' : l’opérateur d’assignation de déplacement a été implicitement défini comme étant supprimé|
 |C5026 (niveau 1 et niveau 4)|'*type*' : le constructeur de déplacement a été implicitement défini comme étant supprimé|
 |C5027 (niveau 1 et niveau 4)|'*type*' : l’opérateur d’assignation de déplacement a été implicitement défini comme étant supprimé|
-|C5029 (niveau 4)|extension non standard utilisée : les attributs d' C++ alignement dans s’appliquent aux variables, aux données membres et aux types de balises uniquement|
+|C5029 (niveau 4)|extension non standard utilisée : les attributs d’alignement en C++ s’appliquent aux variables, aux données membres et aux types de balises uniquement|
 |C5031 (niveau 4)|#pragma avertissement (POP) : incompatibilité probable, état d’avertissement envoyé dans un autre fichier <sup>14,1</sup>|
 |C5032 (niveau 4)|alerte de #pragma détectée (push) sans avertissement de #pragma correspondant (POP) <sup>14,1</sup>|
 |C5034|l’utilisation de «*intrinsic*» intrinsèque entraîne la compilation de la fonction function *-Name* en tant que code invité <sup>15,3</sup>|
 |C5035|l’utilisation de la fonctionnalité «*fonctionnalité*» entraîne la compilation de la fonction function *-Name* en tant que code invité <sup>15,3</sup>|
 |C5036 (niveau 1)|conversion du pointeur de fonction VarArgs lors de la compilation avec/Hybrid : x86arm64, '*type1*'en'*type2*' <sup>15,3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (niveau 4)|le membre de données'*membre1*'sera initialisé après le membre de données'*membre2*' <sup>15,3</sup>|
-|C5039 (niveau 4)|'*fonction*' : pointeur ou référence à une fonction de déclenchement potentiellement passée à une fonction C extern sous-EHC. Un comportement non défini peut se produire si cette fonction lève une exception. <sup>15.5</sup>|
-|C5042 (niveau 3)|'*fonction*' : les déclarations de fonction au niveau de la portée de bloc ne peuvent pas C++être spécifiées’inline’en standard ; supprimer le spécificateur’inline' <sup>15,5</sup>|
+|C5039 (niveau 4)|'*fonction*' : pointeur ou référence à une fonction de déclenchement potentiellement passée à une fonction C extern sous-EHC. Un comportement non défini peut se produire si cette fonction lève une exception. <sup>15,5</sup>|
+|C5042 (niveau 3)|'*fonction*' : les déclarations de fonction au niveau de la portée de bloc ne peuvent pas être spécifiées’inline’en C++ standard ; supprimer le spécificateur’inline' <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Le compilateur insère l’atténuation spectre pour la charge de mémoire si le commutateur/Qspectre spécifié <sup>15,7</sup>|
 
 <sup>14,1</sup> cet avertissement est disponible à partir de Visual Studio 2015 Update 1. \
@@ -157,13 +157,13 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 <sup>15,7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,7. \
 <sup>15,8</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,8. \
 <sup>16,0</sup> cet avertissement est disponible à partir de Visual Studio 2019 RTM. \
-<sup></sup> Autorisation Cet avertissement est désactivé, sauf si l’option du compilateur [/permissive-](../build/reference/permissive-standards-conformance.md) est définie.
+<sup>Perm</sup> Autorisation Cet avertissement est désactivé, sauf si l’option du compilateur [/permissive-](../build/reference/permissive-standards-conformance.md) est définie.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avertissements désactivés par défaut dans les versions antérieures
 
 Ces avertissements ont été désactivés par défaut dans les versions du compilateur antérieures à Visual Studio 2015 :
 
-|||
+|Avertissement|Message|
 |-|-|
 |[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md) (niveau 2)|'*conversion*' : troncation de'*type1*'en'*type2*'|
 |[C4311](../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md) (niveau 1)|'*variable*' : troncation de pointeur de'*type*'à'*type*'|
@@ -172,7 +172,7 @@ Ces avertissements ont été désactivés par défaut dans les versions du compi
 
 Cet avertissement était désactivé par défaut dans les versions du compilateur antérieures à Visual Studio 2012 :
 
-|||
+|Avertissement|Message|
 |-|-|
 |[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (niveau 4)|spécificateur de type manquant - int est pris en compte par défaut. Remarque : C ne prend plus en charge int par défaut|
 

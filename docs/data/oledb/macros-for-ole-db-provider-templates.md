@@ -50,60 +50,60 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 5d29b2548102b056a21ebfccb037af3a766788ba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53ea92c2eece31829a7554c0f9accf2e56d727a9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369807"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840724"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros pour les modèles du fournisseur OLE DB
 
-Les macros OLE DB Templates Provider offrent des fonctionnalités dans les catégories suivantes :
+Les macros du fournisseur de modèles OLE DB offrent des fonctionnalités dans les catégories suivantes :
 
-## <a name="property-set-map-macros"></a>Macros de carte de jeu de propriété
+## <a name="property-set-map-macros"></a>Macros de mappage de jeu de propriétés
 
-|||
+| Nom | Description |
 |-|-|
-|[BEGIN_PROPERTY_SET](#begin_property_set)|Marque le début d’un ensemble de propriétés.|
-|[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|Marque le début d’un ensemble de propriétés.|
-|[BEGIN_PROPSET_MAP](#begin_propset_map)|Marque le début d’un ensemble de propriété qui peut être caché ou défini en dehors de la portée du fournisseur.|
-|[CHAIN_PROPERTY_SET](#chain_property_set)|Chaînes de groupes immobiliers ensemble.|
-|[END_PROPERTY_SET](#end_property_set)|Marque la fin d’un ensemble de propriétés.|
-|[END_PROPSET_MAP](#end_propset_map)|Marque la fin d’une carte de propriété définie.|
-|[PROPERTY_INFO_ENTRY](#property_info_entry)|Définit une propriété spécifique dans une propriété définie à une valeur par défaut.|
-|[PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)|Définit une propriété spécifique dans une propriété définie à une valeur fournie par vous. Vous permet également de définir des drapeaux et des options.|
-|[PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)|Définit une propriété spécifique dans une propriété définie à une valeur fournie par vous.|
+|[BEGIN_PROPERTY_SET](#begin_property_set)|Marque le début d’un jeu de propriétés.|
+|[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|Marque le début d’un jeu de propriétés.|
+|[BEGIN_PROPSET_MAP](#begin_propset_map)|Marque le début d’un jeu de propriétés qui peut être masqué ou défini en dehors de l’étendue du fournisseur.|
+|[CHAIN_PROPERTY_SET](#chain_property_set)|Chaîne des groupes de propriétés.|
+|[END_PROPERTY_SET](#end_property_set)|Marque la fin d’un jeu de propriétés.|
+|[END_PROPSET_MAP](#end_propset_map)|Marque la fin d’un mappage de jeu de propriétés.|
+|[PROPERTY_INFO_ENTRY](#property_info_entry)|Affecte à une propriété spécifique d’une propriété une valeur par défaut.|
+|[PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)|Définit une propriété spécifique dans une propriété définie sur une valeur que vous avez fournie. Vous permet également de définir des indicateurs et des options.|
+|[PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)|Définit une propriété spécifique dans une propriété définie sur une valeur que vous avez fournie.|
 
-## <a name="column-map-macros"></a>Macros de carte de colonne
+## <a name="column-map-macros"></a>Macros de mappage de colonnes
 
-|||
+| Nom | Description |
 |-|-|
-|[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|Marque le début des entrées de carte de colonne fournisseur.|
-|[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|Marque la fin des entrées de carte de colonne du fournisseur.|
+|[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|Marque le début des entrées de mappage de colonne du fournisseur.|
+|[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|Marque la fin des entrées de mappage de colonne du fournisseur.|
 |[PROVIDER_COLUMN_ENTRY](#provider_column_entry)|Représente une colonne spécifique prise en charge par le fournisseur.|
-|[PROVIDER_COLUMN_ENTRY_FIXED](#provider_column_entry_fixed)|Représente une colonne spécifique prise en charge par le fournisseur. Vous pouvez spécifier le type de données de colonne.|
-|[PROVIDER_COLUMN_ENTRY_GN](#provider_column_entry_gn)|Représente une colonne spécifique prise en charge par le fournisseur. Vous pouvez spécifier la taille, le type de données, la précision, l’échelle et le schéma guidage de schémas de la colonne.|
+|[PROVIDER_COLUMN_ENTRY_FIXED](#provider_column_entry_fixed)|Représente une colonne spécifique prise en charge par le fournisseur. Vous pouvez spécifier le type de données de la colonne.|
+|[PROVIDER_COLUMN_ENTRY_GN](#provider_column_entry_gn)|Représente une colonne spécifique prise en charge par le fournisseur. Vous pouvez spécifier la taille de la colonne, le type de données, la précision, l’échelle et le GUID de l’ensemble de lignes de schéma.|
 |[PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length)|Représente une colonne spécifique prise en charge par le fournisseur. Vous pouvez spécifier la taille de la colonne.|
 |[PROVIDER_COLUMN_ENTRY_STR](#provider_column_entry_str)|Représente une colonne spécifique prise en charge par le fournisseur. Il suppose que le type de colonne est une chaîne.|
-|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](#provider_column_entry_type_length)|Représente une colonne spécifique prise en charge par le fournisseur. Comme PROVIDER_COLUMN_ENTRY_LENGTH, mais vous permet également de spécifier le type de données de la colonne ainsi que la taille.|
+|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](#provider_column_entry_type_length)|Représente une colonne spécifique prise en charge par le fournisseur. Comme PROVIDER_COLUMN_ENTRY_LENGTH, mais vous permet également de spécifier le type de données de la colonne, ainsi que la taille.|
 |[PROVIDER_COLUMN_ENTRY_WSTR](#provider_column_entry_wstr)|Représente une colonne spécifique prise en charge par le fournisseur. Il suppose que le type de colonne est une chaîne de caractères Unicode.|
 
-## <a name="schema-rowset-macros"></a>Schema Rowset Macros
+## <a name="schema-rowset-macros"></a>Macros d’ensemble de lignes de schéma
 
-|||
+| Nom | Description |
 |-|-|
-|[BEGIN_SCHEMA_MAP](#begin_schema_map)|Marque le début d’une carte schéma.|
-|[END_SCHEMA_MAP](#end_schema_map)|Marque la fin d’une carte de schéma.|
+|[BEGIN_SCHEMA_MAP](#begin_schema_map)|Marque le début d’un mappage de schéma.|
+|[END_SCHEMA_MAP](#end_schema_map)|Marque la fin d’un mappage de schéma.|
 |[SCHEMA_ENTRY](#schema_entry)|Associe un GUID à une classe.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
-### <a name="begin_property_set"></a><a name="begin_property_set"></a>BEGIN_PROPERTY_SET
+### <a name="begin_property_set"></a><a name="begin_property_set"></a> BEGIN_PROPERTY_SET
 
-Marque le début d’une propriété située dans une carte de propriété définie.
+Marque le début d’un jeu de propriétés dans un mappage de jeu de propriétés.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -113,16 +113,16 @@ BEGIN_PROPERTY_SET(guid)
 
 #### <a name="parameters"></a>Paramètres
 
-*Guid*<br/>
-[dans] La propriété GUID.
+*guid*<br/>
+dans GUID de la propriété.
 
 #### <a name="example"></a>Exemple
 
 Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a>BEGIN_PROPERTY_SET_EX
+### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
 
-Marque le début d’une propriété située dans une carte de propriété définie.
+Marque le début d’un jeu de propriétés dans un mappage de jeu de propriétés.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -132,19 +132,19 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 
 #### <a name="parameters"></a>Paramètres
 
-*Guid*<br/>
-[dans] La propriété GUID.
+*guid*<br/>
+dans GUID de la propriété.
 
-*Drapeaux*<br/>
-[dans] UPROPSET_HIDDEN pour les ensembles de propriété que vous ne souhaitez pas exposer, ou UPROPSET_PASSTHROUGH pour un fournisseur exposant des propriétés définies en dehors de la portée du fournisseur.
+*flags*<br/>
+dans UPROPSET_HIDDEN pour les jeux de propriétés que vous ne souhaitez pas exposer, ou UPROPSET_PASSTHROUGH pour un fournisseur exposant des propriétés définies en dehors de l’étendue du fournisseur.
 
 #### <a name="example"></a>Exemple
 
 Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="begin_propset_map"></a><a name="begin_propset_map"></a>BEGIN_PROPSET_MAP
+### <a name="begin_propset_map"></a><a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
 
-Marque le début des entrées de carte définies par propriété.
+Marque le début des entrées de mappage du jeu de propriétés.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -155,9 +155,9 @@ BEGIN_PROPSET_MAP(Class)
 #### <a name="parameters"></a>Paramètres
 
 *Classe*<br/>
-[dans] La classe dans laquelle cet ensemble de propriété est spécifié. Un ensemble de propriété peut être spécifié dans les objets OLE DB suivants :
+dans Classe dans laquelle ce jeu de propriétés est spécifié. Un jeu de propriétés peut être spécifié dans les objets OLE DB suivants :
 
-- [Objets source de données](/previous-versions/windows/desktop/ms721278(v=vs.85))
+- [Objets de source de données](/previous-versions/windows/desktop/ms721278(v=vs.85))
 
 - [Objets de session](/previous-versions/windows/desktop/ms711572(v=vs.85))
 
@@ -165,13 +165,13 @@ BEGIN_PROPSET_MAP(Class)
 
 #### <a name="example"></a>Exemple
 
-Voici un exemple de carte de propriété :
+Voici un exemple de mappage de jeu de propriétés :
 
 [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]
 
-### <a name="chain_property_set"></a><a name="chain_property_set"></a>CHAIN_PROPERTY_SET
+### <a name="chain_property_set"></a><a name="chain_property_set"></a> CHAIN_PROPERTY_SET
 
-Cette macro-chaîne de groupes immobiliers ensemble.
+Cette macro chaîne des groupes de propriétés.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -181,19 +181,19 @@ CHAIN_PROPERTY_SET(ChainClass)
 
 #### <a name="parameters"></a>Paramètres
 
-*Classe Chaîne*<br/>
-[dans] Le nom de la classe à la chaîne des propriétés pour. Il s’agit d’une classe générée par l’ASSISTANT de projet ATL qui contient déjà une carte (comme une session, une commande ou une classe d’objets source de données).
+*ChainClass*<br/>
+dans Nom de la classe pour laquelle les propriétés doivent être chaînées. Il s’agit d’une classe générée par l’Assistant Projet ATL qui contient déjà un mappage (par exemple, une session, une commande ou une classe d’objet de source de données).
 
 #### <a name="remarks"></a>Notes
 
-Vous pouvez enchaîner un ensemble de propriété d’une autre classe à votre propre classe, puis accéder aux propriétés directement à partir de votre classe.
+Vous pouvez chaîner un jeu de propriétés d’une autre classe à votre propre classe, puis accéder aux propriétés directement à partir de votre classe.
 
 > [!CAUTION]
-> Utilisez cette macro avec parcimonie. Une mauvaise utilisation peut faire échouer les tests de conformité OLE DB.
+> Utilisez cette macro avec modération. Une utilisation incorrecte peut provoquer l’échec des tests de conformité de OLE DB par un consommateur.
 
-### <a name="end_property_set"></a><a name="end_property_set"></a>END_PROPERTY_SET
+### <a name="end_property_set"></a><a name="end_property_set"></a> END_PROPERTY_SET
 
-Marque la fin d’un ensemble de propriétés.
+Marque la fin d’un jeu de propriétés.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -203,16 +203,16 @@ END_PROPERTY_SET(guid)
 
 #### <a name="parameters"></a>Paramètres
 
-*Guid*<br/>
-[dans] La propriété GUID.
+*guid*<br/>
+dans GUID de la propriété.
 
 #### <a name="example"></a>Exemple
 
 Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="end_propset_map"></a><a name="end_propset_map"></a>END_PROPSET_MAP
+### <a name="end_propset_map"></a><a name="end_propset_map"></a> END_PROPSET_MAP
 
-Marque la fin des entrées de carte définies par propriété.
+Marque la fin des entrées de mappage du jeu de propriétés.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -224,7 +224,7 @@ END_PROPSET_MAP()
 
 Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="property_info_entry"></a><a name="property_info_entry"></a>PROPERTY_INFO_ENTRY
+### <a name="property_info_entry"></a><a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
 
 Représente une propriété spécifique dans un jeu de propriétés.
 
@@ -241,13 +241,13 @@ PROPERTY_INFO_ENTRY(dwPropID)
 
 #### <a name="remarks"></a>Notes
 
-Cette macro attribue à la propriété de type `DWORD` une valeur par défaut définie dans ATLDB.H. Pour attribuer à la propriété une valeur de votre choix, utilisez [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Pour définir `VARTYPE` le et [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) pour la propriété en même temps, utilisez [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+Cette macro attribue à la propriété de type `DWORD` une valeur par défaut définie dans ATLDB.H. Pour attribuer à la propriété une valeur de votre choix, utilisez [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Pour définir `VARTYPE` en même temps les [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) et pour la propriété, utilisez [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
 
 #### <a name="example"></a>Exemple
 
 Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a>PROPERTY_INFO_ENTRY_EX
+### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
 
 Représente une propriété spécifique dans un jeu de propriétés.
 
@@ -263,7 +263,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 [in] Valeur [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) qui peut être utilisée en combinaison avec le GUID du jeu de propriétés pour identifier une propriété.
 
 *vt*<br/>
-[in] `VARTYPE` de cette entrée de propriété. (Défini en wtypes.h)
+[in] `VARTYPE` de cette entrée de propriété. (Défini dans Wtypes. h)
 
 *dwFlags*<br/>
 [in] Valeur [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) décrivant cette entrée de propriété.
@@ -271,8 +271,8 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 *value*<br/>
 [in] Valeur de propriété de type `DWORD`.
 
-*Options*<br/>
-DBPROPOPTIONS_REQUIRED ou DBPROPOPTIONS_SETIFCHEAP. Normalement, un fournisseur n’a pas besoin de définir des *options* puisqu’il est défini par le consommateur.
+*options*<br/>
+DBPROPOPTIONS_REQUIRED ou DBPROPOPTIONS_SETIFCHEAP. Normalement, un fournisseur n’a pas besoin de définir d' *options* , car il est défini par le consommateur.
 
 #### <a name="remarks"></a>Notes
 
@@ -282,7 +282,7 @@ Avec cette macro, vous pouvez spécifier directement la valeur de propriété de
 
 Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a>PROPERTY_INFO_ENTRY_VALUE
+### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
 
 Représente une propriété spécifique dans un jeu de propriétés.
 
@@ -302,15 +302,15 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 
 #### <a name="remarks"></a>Notes
 
-Avec cette macro, vous pouvez spécifier directement la valeur de la propriété de type `DWORD`. Définir la propriété à la valeur par défaut définie dans ATLDB. H, utiliser [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Pour définir la valeur, les drapeaux et les options pour la propriété, utilisez [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+Avec cette macro, vous pouvez spécifier directement la valeur de propriété de type `DWORD` . Pour affecter à la propriété la valeur par défaut définie dans ATLDB. H, utilisez [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Pour définir la valeur, les indicateurs et les options de la propriété, utilisez [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
 
 #### <a name="example"></a>Exemple
 
 Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a>BEGIN_PROVIDER_COLUMN_MAP
+### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
 
-Marque le début des entrées de carte de colonne fournisseur.
+Marque le début des entrées de mappage de colonne du fournisseur.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -320,18 +320,18 @@ BEGIN_PROVIDER_COLUMN_MAP(theClass)
 
 #### <a name="parameters"></a>Paramètres
 
-*la Classe*<br/>
-[dans] Le nom de la classe à laquelle cette carte appartient.
+*Les*<br/>
+dans Nom de la classe à laquelle ce mappage appartient.
 
 #### <a name="example"></a>Exemple
 
-Voici une carte de colonne de fournisseur d’échantillons :
+Voici un exemple de mappage de colonne de fournisseur :
 
 [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]
 
-### <a name="end_provider_column_map"></a><a name="end_provider_column_map"></a>END_PROVIDER_COLUMN_MAP
+### <a name="end_provider_column_map"></a><a name="end_provider_column_map"></a> END_PROVIDER_COLUMN_MAP
 
-Marque la fin des entrées de carte de colonne du fournisseur.
+Marque la fin des entrées de mappage de colonne du fournisseur.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -341,9 +341,9 @@ END_PROVIDER_COLUMN_MAP()
 
 #### <a name="example"></a>Exemple
 
-Voir [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry"></a><a name="provider_column_entry"></a>PROVIDER_COLUMN_ENTRY
+### <a name="provider_column_entry"></a><a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -356,15 +356,15 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 #### <a name="parameters"></a>Paramètres
 
 *name*<br/>
-[dans] Le nom de la colonne.
+dans Nom de la colonne.
 
-*Ordinal*<br/>
-[dans] Le numéro de colonne. Sauf si la colonne est une colonne De signet, le numéro de colonne ne doit pas être 0.
+*formations*<br/>
+dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signets, le numéro de colonne ne doit pas être égal à 0.
 
-*Membre*<br/>
-[dans] La variable `dataClass` du membre correspondant à la colonne.
+*membre*<br/>
+dans Variable membre dans `dataClass` correspondant à la colonne.
 
-### <a name="provider_column_entry_fixed"></a><a name="provider_column_entry_fixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
+### <a name="provider_column_entry_fixed"></a><a name="provider_column_entry_fixed"></a> PROVIDER_COLUMN_ENTRY_FIXED
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -377,26 +377,26 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 #### <a name="parameters"></a>Paramètres
 
 *name*<br/>
-[dans] Le nom de la colonne.
+dans Nom de la colonne.
 
-*Ordinal*<br/>
-[dans] Le numéro de colonne. Sauf si la colonne est une colonne De signet, le numéro de colonne ne doit pas être 0.
+*formations*<br/>
+dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signets, le numéro de colonne ne doit pas être égal à 0.
 
-*dbtype*<br/>
-[dans] Le type de données dans [DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85)).
+*DbType*<br/>
+dans Type de données dans [DbType](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
-*Membre*<br/>
-[dans] La variable `dataClass` du membre dans ce qui stocke les données.
+*membre*<br/>
+dans Variable membre dans `dataClass` qui stocke les données.
 
 #### <a name="remarks"></a>Notes
 
-Vous permet de spécifier le type de données de colonne.
+Vous permet de spécifier le type de données de la colonne.
 
 #### <a name="example"></a>Exemple
 
-Voir [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a>PROVIDER_COLUMN_ENTRY_GN
+### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -409,34 +409,34 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 #### <a name="parameters"></a>Paramètres
 
 *name*<br/>
-[dans] Le nom de la colonne.
+dans Nom de la colonne.
 
-*Ordinal*<br/>
-[dans] Le numéro de colonne. Sauf si la colonne est une colonne De signet, le numéro de colonne ne doit pas être 0.
+*formations*<br/>
+dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signets, le numéro de colonne ne doit pas être égal à 0.
 
-*Drapeaux*<br/>
-[dans] Précise comment les données sont retournées. Voir `dwFlags` la description dans [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).
+*flags*<br/>
+dans Spécifie la façon dont les données sont retournées. Consultez la `dwFlags` Description dans [structures DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *colSize*<br/>
-[dans] La taille de la colonne.
+dans Taille de la colonne.
 
-*dbtype*<br/>
-[dans] Indique le type de données de la valeur. Voir `wType` la description dans [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).
+*DbType*<br/>
+dans Indique le type de données de la valeur. Consultez la `wType` Description dans [structures DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Précision*<br/>
-[dans] Indique la précision à utiliser lors de l’obtention de données si *dbType* est DBTYPE_NUMERIC ou DBTYPE_DECIMAL. Voir `bPrecision` la description dans [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).
+*precision*<br/>
+dans Indique la précision à utiliser lors de l’obtention de données si *DbType* est DBTYPE_NUMERIC ou DBTYPE_DECIMAL. Consultez la `bPrecision` Description dans [structures DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Échelle*<br/>
-[dans] Indique l’échelle à utiliser lors de l’obtention de données si dbType est DBTYPE_NUMERIC ou DBTYPE_DECIMAL. Voir `bScale` la description dans [DBBINDING Structures](/previous-versions/windows/desktop/ms716845(v=vs.85)).
+*scale*<br/>
+dans Indique l’échelle à utiliser lors de l’obtention de données si dbType est DBTYPE_NUMERIC ou DBTYPE_DECIMAL. Consultez la `bScale` Description dans [structures DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Guid*<br/>
-Un schéma encastré GUID. Voir [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans la *référence du programmeur OLE DB* pour une liste de rames de schémas et leurs GUIDs.
+*guid*<br/>
+GUID d’ensemble de lignes de schéma. Pour obtenir la liste des ensembles de lignes de schéma et leurs GUID, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* .
 
 #### <a name="remarks"></a>Notes
 
-Vous permet de spécifier la taille, le type de données, la précision, l’échelle et le schéma guidage de schémas de la colonne.
+Vous permet de spécifier la taille de la colonne, le type de données, la précision, l’échelle et le GUID de l’ensemble de lignes de schéma.
 
-### <a name="provider_column_entry_length"></a><a name="provider_column_entry_length"></a>PROVIDER_COLUMN_ENTRY_LENGTH
+### <a name="provider_column_entry_length"></a><a name="provider_column_entry_length"></a> PROVIDER_COLUMN_ENTRY_LENGTH
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -449,16 +449,16 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 #### <a name="parameters"></a>Paramètres
 
 *name*<br/>
-[dans] Le nom de la colonne.
+dans Nom de la colonne.
 
-*Ordinal*<br/>
-[dans] Le numéro de colonne. Sauf si la colonne est une colonne De signet, le numéro de colonne ne doit pas être 0.
+*formations*<br/>
+dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signets, le numéro de colonne ne doit pas être égal à 0.
 
-*Taille*<br/>
-[dans] La taille de la colonne dans les octets.
+*size*<br/>
+dans Taille de la colonne en octets.
 
-*Membre*<br/>
-[dans] La variable `dataClass` de membre dans ce stocke les données de colonne.
+*membre*<br/>
+dans Variable membre dans `dataClass` qui stocke les données de la colonne.
 
 #### <a name="remarks"></a>Notes
 
@@ -466,9 +466,9 @@ Vous permet de spécifier la taille de la colonne.
 
 #### <a name="example"></a>Exemple
 
-Voir [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a>PROVIDER_COLUMN_ENTRY_STR
+### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -481,13 +481,13 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 #### <a name="parameters"></a>Paramètres
 
 *name*<br/>
-[dans] Le nom de la colonne.
+dans Nom de la colonne.
 
-*Ordinal*<br/>
-[dans] Le numéro de colonne. Sauf si la colonne est une colonne De signet, le numéro de colonne ne doit pas être 0.
+*formations*<br/>
+dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signets, le numéro de colonne ne doit pas être égal à 0.
 
-*Membre*<br/>
-[dans] La variable du membre dans la classe de données qui stocke les données.
+*membre*<br/>
+dans Variable membre dans la classe de données qui stocke les données.
 
 #### <a name="remarks"></a>Notes
 
@@ -495,9 +495,9 @@ Utilisez cette macro lorsque les données de la colonne sont supposées être [D
 
 #### <a name="example"></a>Exemple
 
-Voir [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
+Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -510,25 +510,25 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 #### <a name="parameters"></a>Paramètres
 
 *name*<br/>
-[dans] Le nom de la colonne.
+dans Nom de la colonne.
 
-*Ordinal*<br/>
-[dans] Le numéro de colonne. Sauf si la colonne est une colonne De signet, le numéro de colonne ne doit pas être 0.
+*formations*<br/>
+dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signets, le numéro de colonne ne doit pas être égal à 0.
 
-*dbtype*<br/>
-[dans] Le type de données dans [DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85)).
+*DbType*<br/>
+dans Type de données dans [DbType](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
-*Taille*<br/>
-[dans] La taille de la colonne dans les octets.
+*size*<br/>
+dans Taille de la colonne en octets.
 
-*Membre*<br/>
-[dans] La variable du membre dans la classe de données qui stocke les données.
+*membre*<br/>
+dans Variable membre dans la classe de données qui stocke les données.
 
 #### <a name="remarks"></a>Notes
 
-Semblable à [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) mais vous permet également de spécifier le type de données de la colonne ainsi que la taille.
+Semblable à [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , mais vous permet également de spécifier le type de données de la colonne, ainsi que la taille.
 
-### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
+### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -541,21 +541,21 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 #### <a name="parameters"></a>Paramètres
 
 *name*<br/>
-[dans] Le nom de la colonne.
+dans Nom de la colonne.
 
-*Ordinal*<br/>
-[dans] Le numéro de colonne. Sauf si la colonne est une colonne De signet, le numéro de colonne ne doit pas être 0.
+*formations*<br/>
+dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signets, le numéro de colonne ne doit pas être égal à 0.
 
-*Membre*<br/>
-[dans] La variable du membre dans la classe de données qui stocke les données.
+*membre*<br/>
+dans Variable membre dans la classe de données qui stocke les données.
 
 #### <a name="remarks"></a>Notes
 
-Utilisez cette macro lorsque les données de colonne est une chaîne de caractère Unicode non terminée, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
+Utilisez cette macro lorsque les données de la colonne sont une chaîne de caractères Unicode terminée par un caractère null, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
-### <a name="begin_schema_map"></a><a name="begin_schema_map"></a>BEGIN_SCHEMA_MAP
+### <a name="begin_schema_map"></a><a name="begin_schema_map"></a> BEGIN_SCHEMA_MAP
 
-Dénote le début d’une carte de schéma.
+Indique le début d’un mappage de schéma.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -565,16 +565,16 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 
 #### <a name="parameters"></a>Paramètres
 
-*Classe Schema*<br/>
-La classe qui contient le MAP. Typiquement, ce sera la classe de session.
+*SchemaClass*<br/>
+Classe qui contient le mappage. En général, il s’agit de la classe session.
 
 #### <a name="remarks"></a>Notes
 
-Voir [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le Windows SDK pour plus d’informations sur les rames de schémas.
+Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le SDK Windows.
 
-### <a name="end_schema_map"></a><a name="end_schema_map"></a>END_SCHEMA_MAP
+### <a name="end_schema_map"></a><a name="end_schema_map"></a> END_SCHEMA_MAP
 
-Dénote la fin de la carte du schéma.
+Indique la fin du mappage de schéma.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -584,9 +584,9 @@ END_SCHEMA_MAP()
 
 #### <a name="remarks"></a>Notes
 
-Pour plus d’informations, voir [IDBSchemaRowsetImpl Class](../../data/oledb/idbschemarowsetimpl-class.md).
+Pour plus d’informations, consultez la [classe IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md).
 
-### <a name="schema_entry"></a><a name="schema_entry"></a>SCHEMA_ENTRY
+### <a name="schema_entry"></a><a name="schema_entry"></a> SCHEMA_ENTRY
 
 Associe un GUID à une classe.
 
@@ -599,15 +599,15 @@ SCHEMA_ENTRY(guid,
 
 #### <a name="parameters"></a>Paramètres
 
-*Guid*<br/>
-Un schéma encastré GUID. Voir [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans la *référence du programmeur OLE DB* pour une liste de rames de schémas et leurs GUIDs.
+*guid*<br/>
+GUID d’ensemble de lignes de schéma. Pour obtenir la liste des ensembles de lignes de schéma et leurs GUID, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* .
 
-*RowsetClass (en anglais)*<br/>
-La classe qui sera créée pour représenter le schéma.
+*rowsetClass*<br/>
+Classe qui sera créée pour représenter l’ensemble de lignes de schéma.
 
 #### <a name="remarks"></a>Notes
 
-[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) peut alors interroger la carte pour une liste de GUIDs, ou il peut créer un jeu de ligne si elle est donnée un GUID. Le schéma de `IDBSchemaRowsetImpl` jeu crée est `CRowsetImpl`similaire à une classe `Execute` dérivée de la norme, sauf qu’il doit fournir une méthode qui a la signature suivante:
+[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) peut ensuite interroger le mappage pour obtenir une liste de GUID, ou il peut créer un ensemble de lignes s’il reçoit un GUID. L’ensemble de lignes de schéma `IDBSchemaRowsetImpl` créé est semblable à une `CRowsetImpl` classe dérivée standard, sauf qu’il doit fournir une `Execute` méthode ayant la signature suivante :
 
 ```cpp
 HRESULT Execute (LONG* pcRowsAffected,
@@ -615,7 +615,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);
 ```
 
-Cette `Execute` fonction remplit les données du rowset. L’ASSISTANT de projet ATL crée, comme décrit dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans la *référence du programmeur OLE DB*, trois premiers ensembles de schémas dans le projet pour chacun des trois schémas obligatoires OLE DB :
+Cette `Execute` fonction remplit les données de l’ensemble de lignes. L’Assistant Projet ATL crée, comme décrit dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*, trois ensembles de lignes de schéma initiaux dans le projet pour chacun des trois schémas de OLE DB obligatoires :
 
 - DBSCHEMA_TABLES
 
@@ -623,12 +623,12 @@ Cette `Execute` fonction remplit les données du rowset. L’ASSISTANT de projet
 
 - DBSCHEMA_PROVIDER_TYPES
 
-L’assistant ajoute également trois entrées correspondantes dans la carte du schéma. Voir [Création d’un fournisseur de gabarit OLE DB](../../data/oledb/creating-an-ole-db-provider.md) pour plus d’informations sur l’utilisation de l’assistant pour créer un fournisseur.
+L’Assistant ajoute également trois entrées correspondantes dans le mappage de schéma. Pour plus d’informations sur l’utilisation de l’Assistant pour créer un fournisseur, consultez [création d’un fournisseur de modèles OLE DB](../../data/oledb/creating-an-ole-db-provider.md) .
 
 ## <a name="see-also"></a>Voir aussi
 
 [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>
-[OLE DB Provider Templates Référence](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[Macros pour OLE DB Provider Templates](../../data/oledb/macros-for-ole-db-provider-templates.md)
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Création d’un fournisseur de OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>
+[Référence des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Macros pour les modèles de fournisseur OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)

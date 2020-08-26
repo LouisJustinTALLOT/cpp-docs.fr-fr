@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: cf72aabce58237f470d536c02727f442404db030
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210442"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840386"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
 
@@ -48,12 +48,12 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `IRowsetInfoImpl`.
+Votre classe, dérivée de `IRowsetInfoImpl` .
 
 *PropClass*<br/>
 Classe de propriété définissable par l’utilisateur qui A par défaut la valeur *T*.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** altdb. h
 
@@ -61,7 +61,7 @@ Classe de propriété définissable par l’utilisateur qui A par défaut la val
 
 ### <a name="interface-methods"></a>Méthodes d'interface
 
-|||
+| Nom | Description |
 |-|-|
 |[GetProperties](#getproperties)|Retourne les paramètres actuels de toutes les propriétés prises en charge par le jeu de lignes.|
 |[GetReferencedRowset](#getreferencedrowset)|Retourne un pointeur d’interface vers l’ensemble de lignes auquel un signet s’applique.|
@@ -71,9 +71,9 @@ Classe de propriété définissable par l’utilisateur qui A par défaut la val
 
 Interface obligatoire sur les ensembles de lignes. Cette classe implémente les propriétés de l’ensemble de lignes à l’aide du [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md) défini dans votre classe de commande. Bien que la classe d’ensemble de lignes semble utiliser les jeux de propriétés de la classe de commande, l’ensemble de lignes est fourni avec sa propre copie des propriétés au moment de l’exécution, lorsqu’il est créé par un objet de commande ou de session.
 
-## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>IRowsetInfoImpl :: GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl :: GetProperties
 
-Retourne les paramètres actuels des propriétés dans le groupe de `DBPROPSET_ROWSET`.
+Retourne les paramètres actuels des propriétés du `DBPROPSET_ROWSET` groupe.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -88,7 +88,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 Consultez [IRowsetInfo :: GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl :: GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a> IRowsetInfoImpl :: GetReferencedRowset
 
 Retourne un pointeur d’interface vers l’ensemble de lignes auquel un signet s’applique.
 
@@ -104,7 +104,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 Consultez [IRowsetInfo :: GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*. Le paramètre *iOrdinal* doit être une colonne de signets.
 
-## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl :: GetSpecification
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a> IRowsetInfoImpl :: GetSpecification
 
 Retourne un pointeur d'interface sur l'objet (commande ou session) qui a créé ce jeu de lignes.
 
@@ -125,5 +125,5 @@ Utilisez cette méthode avec [igetdatasourceimpl,](../../data/oledb/igetdatasour
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

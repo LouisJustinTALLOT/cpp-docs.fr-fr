@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: 8b8e433b5ea1283fb60273a2fd21106c65867c0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb63451c8789f7d390e2387ed8fadae23d1c7a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230257"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846522"
 ---
 # <a name="bernoulli_distribution-class"></a>bernoulli_distribution, classe
 
@@ -73,10 +73,8 @@ Moteur de générateur de nombres aléatoires uniformes. Pour connaître les typ
 
 La classe décrit une distribution qui produit des valeurs de type **`bool`** , distribuées selon la fonction de probabilité discrète de distribution de Bernoulli. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|
-|`bernoulli_distribution::operator()`||[param_type](#param_type)|
+[bernoulli_distribution](#bernoulli_distribution)\
+[param_type](#param_type)
 
 Le membre de propriété `p()` retourne la valeur du paramètre de distribution actuellement stocké `p`.
 
@@ -152,13 +150,13 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 true :::::::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution :: bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a> bernoulli_distribution :: bernoulli_distribution
 
 Construit la distribution.
 
@@ -183,7 +181,7 @@ Le premier constructeur construit un objet dont la valeur `p` stockée contient 
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution ::p aram_type
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a> bernoulli_distribution ::p aram_type
 
 Contient les paramètres de la distribution.
 

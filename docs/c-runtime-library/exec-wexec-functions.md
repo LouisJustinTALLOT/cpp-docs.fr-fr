@@ -56,23 +56,33 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecfcf88b09a4383fc050e9737a0ffe7203f9a050
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351663"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839723"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec, _wexec, fonctions
 
 Chaque fonction dans cette famille charge et exécute un nouveau processus :
 
-|||
-|-|-|
-|[_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)|
-|[_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)|
-|[_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|
-|[_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|
+:::row:::
+   :::column span="":::
+      [_execl, _wexecl](../c-runtime-library/reference/execl-wexecl.md)\
+      [_execv, _wexecv](../c-runtime-library/reference/execv-wexecv.md)\
+      [_execle, _wexecle](../c-runtime-library/reference/execle-wexecle.md)
+   :::column-end:::
+   :::column span="":::
+      [_execve, _wexecve](../c-runtime-library/reference/execve-wexecve.md)\
+      [_execlp, _wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)\
+      [_execvp, _wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)
+   :::column-end:::
+   :::column span="":::
+      [_execlpe, _wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)\
+      [_execvpe, _wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)
+   :::column-end:::
+:::row-end:::
 
 La lettre à la fin du nom de fonction détermine la variance.
 
@@ -118,7 +128,7 @@ Les appels de fonctions `_execl`, `_execle`, `_execlp` et `_execlpe` sont géné
 
 Les appels de fonctions `_execv`, `_execve`, `_execvp` et `_execvpe` sont utiles quand le nombre de paramètres du nouveau processus est variable. Les pointeurs vers les paramètres sont passés comme tableau, `argv`. Le paramètre `argv`[0] est généralement un pointeur vers `cmdname`. Les paramètres `argv`[1] à `argv`[`n`] pointent vers les chaînes de caractères qui forment la nouvelle liste de paramètres. Le paramètre `argv`[`n`+1] doit être un pointeur **NULL** pour marquer la fin de la liste de paramètres.
 
-Les fichiers qui sont ouverts quand un appel de fonction `_exec` est effectué restent ouverts dans le nouveau processus. Dans les appels de fonctions `_execl`, `_execlp`, `_execv` et `_execvp`, le nouveau processus hérite de l'environnement du processus appelant. Les appels de fonctions `_execle`, `_execlpe`, `_execve` et `_execvpe` modifient l'environnement du nouveau processus en passant une liste de paramètres d'environnement via le paramètre `envp`. `envp` est un tableau de pointeurs de caractères, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère Null définissant une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Remarquez `value` que n’est pas enfermé dans des marques de citation double.) Le dernier élément `envp` du tableau doit être **NULL**. Quand `envp` a la valeur **NULL**, le nouveau processus hérite des paramètres d’environnement du processus appelant.
+Les fichiers qui sont ouverts quand un appel de fonction `_exec` est effectué restent ouverts dans le nouveau processus. Dans les appels de fonctions `_execl`, `_execlp`, `_execv` et `_execvp`, le nouveau processus hérite de l'environnement du processus appelant. Les appels de fonctions `_execle`, `_execlpe`, `_execve` et `_execvpe` modifient l'environnement du nouveau processus en passant une liste de paramètres d'environnement via le paramètre `envp`. `envp` est un tableau de pointeurs de caractères, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère Null définissant une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Notez que `value` n’est pas placé entre guillemets doubles.) Le dernier élément du `envp` tableau doit être **null**. Quand `envp` a la valeur **NULL**, le nouveau processus hérite des paramètres d’environnement du processus appelant.
 
 Un programme exécuté avec l'une des fonctions `_exec` est toujours chargé en mémoire comme si le champ d'allocation maximale dans l'en-tête du fichier .exe du programme avait pris la valeur par défaut 0xFFFFH.
 
@@ -232,16 +242,16 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** process.h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle des processus et de l’environnement](../c-runtime-library/process-and-environment-control.md)<br/>
+[Contrôle de processus et d’environnement](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[_spawn, fonctions _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn fonctions](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

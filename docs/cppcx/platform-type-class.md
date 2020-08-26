@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 2c73967d287ade86e2657af70592845d2cc2085e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185032"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846561"
 ---
 # <a name="platformtype-class"></a>Platform::Type (classe)
 
@@ -33,25 +33,25 @@ La `Type` classe est utile dans les applications qui doivent diriger le traiteme
 
 ## <a name="public-methods"></a>Méthodes publiques
 
-|||
-|-|-|
-|[Type::GetTypeCode Method](#gettypecode)|Retourne une valeur [Platform::TypeCode Enumeration](../cppcx/platform-typecode-enumeration.md) pour l'objet.|
-|[Type :: ToString, méthode](#tostring)|Retourne le nom du type tel que spécifié dans ses métadonnées.|
+| Nom | Description |
+|--|--|
+| [Type::GetTypeCode Method](#gettypecode) | Retourne une valeur [Platform::TypeCode Enumeration](../cppcx/platform-typecode-enumeration.md) pour l'objet. |
+| [Type :: ToString, méthode](#tostring) | Retourne le nom du type tel que spécifié dans ses métadonnées. |
 
 ## <a name="public-properties"></a>Propriétés publiques
 
-|||
-|-|-|
-|[Type :: FullName](#fullname)|Retourne une [classe Platform::String](../cppcx/platform-string-class.md)^ qui représente le nom complet du type et utilise . (point) en tant que séparateur, et non :: (double deux-points), par exemple `MyNamespace.MyClass` .|
+| Nom | Description |
+|--|--|
+| [Type :: FullName](#fullname) | Retourne une [classe Platform::String](../cppcx/platform-string-class.md)^ qui représente le nom complet du type et utilise . (point) en tant que séparateur, et non :: (double deux-points), par exemple `MyNamespace.MyClass` . |
 
 ## <a name="conversion-operators"></a>Opérateurs de conversion
 
-|||
-|-|-|
-|[Type d’opérateur ^](../cppcx/operator-type-hat.md)|Permet de convertir `Windows::UI::Xaml::Interop::TypeName` en `Platform::Type`.|
-|[Windows::UI::Xaml::Interop::TypeName, opérateur](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Permet de convertir `Platform::Type` en `Windows::UI::Xaml::Interop::TypeName`.|
+| Nom | Description |
+|--|--|
+| [Type d’opérateur ^](../cppcx/operator-type-hat.md) | Permet de convertir `Windows::UI::Xaml::Interop::TypeName` en `Platform::Type`. |
+| [Windows::UI::Xaml::Interop::TypeName, opérateur](../cppcx/operator-windows-ui-xaml-interop-typename.md) | Permet de convertir `Platform::Type` en `Windows::UI::Xaml::Interop::TypeName`. |
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **Client minimal pris en charge :** Windows 8
 
@@ -61,7 +61,7 @@ La `Type` classe est utile dans les applications qui doivent diriger le traiteme
 
 **Métadonnées :** Platform. winmd
 
-## <a name="typefullname-property"></a><a name="fullname"></a>Type :: FullName, propriété
+## <a name="typefullname-property"></a><a name="fullname"></a> Type :: FullName, propriété
 
 Récupère le nom qualifié complet du type actuel dans le formulaire `Namespace.Type` .
 
@@ -88,7 +88,7 @@ MainPage::MainPage()
 }
 ```
 
-## <a name="typegettypecode-method"></a><a name="gettypecode"></a>Type :: GetTypeCode, méthode
+## <a name="typegettypecode-method"></a><a name="gettypecode"></a> Type :: GetTypeCode, méthode
 
 Récupère une catégorie de type numérique de types intégrés.
 
@@ -106,7 +106,7 @@ L’un des valeurs énumérées Platform::TypeCode.
 
 L’équivalent de la méthode membre GetTypeCode () est la **`typeid`** propriété.
 
-## <a name="typetostring-method"></a><a name="tostring"></a>Type :: ToString, méthode
+## <a name="typetostring-method"></a><a name="tostring"></a> Type :: ToString, méthode
 
 Récupère le nom du type.
 
@@ -122,4 +122,4 @@ Nom du type tel que spécifié dans ses métadonnées.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)

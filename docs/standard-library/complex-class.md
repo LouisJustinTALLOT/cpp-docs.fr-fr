@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db2f8b2f889d9454db737cf5b2a39b414f1d67f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c7e2ca2c14ed0ac5f561fab446f6cd2dcc19649d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230089"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836542"
 ---
 # <a name="complex-class"></a>complexe, classe
 
@@ -46,26 +46,26 @@ Des spécialisations explicites de modèle de classe complexe existent pour les 
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[complexe](#complex)|Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[value_type](#value_type)|Type qui représente le type de données utilisé pour représenter les parties imaginaire et réelle d’un nombre complexe.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[imag](#imag)|Extrait le composant imaginaire d'un nombre complexe.|
 |[real](#real)|Extrait le composant réel d'un nombre complexe.|
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur * =](#op_star_eq)|Multiplie un nombre complexe cible par un facteur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|
 |[opérateur + =](#op_add_eq)|Ajoute un nombre à un nombre complexe cible, où le nombre ajouté peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.|
@@ -73,7 +73,7 @@ Des spécialisations explicites de modèle de classe complexe existent pour les 
 |[opérateur/=](#op_div_eq)|Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|
 |[opérateur =](#op_eq)|Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.|
 
-## <a name="complex"></a><a name="complex"></a>complexe
+## <a name="complex"></a><a name="complex"></a> complexe
 
 Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.
 
@@ -157,7 +157,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a><a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a> imag
 
 Extrait le composant imaginaire d'un nombre complexe.
 
@@ -172,7 +172,7 @@ T imag(const T& right);
 *Oui*\
 Nombre complexe dont la valeur imaginaire doit être extraite.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Partie imaginaire du nombre complexe.
 
@@ -211,7 +211,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="operator"></a><a name="op_star_eq"></a>opérateur * =
+## <a name="operator"></a><a name="op_star_eq"></a> opérateur * =
 
 Multiplie un nombre complexe cible par un facteur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.
 
@@ -229,7 +229,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 *Oui*\
 Nombre complexe ou nombre du même type que celui du paramètre du nombre complexe cible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre complexe qui a été multiplié par le nombre spécifié comme paramètre.
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-## <a name="operator"></a><a name="op_add_eq"></a>opérateur + =
+## <a name="operator"></a><a name="op_add_eq"></a> opérateur + =
 
 Ajoute un nombre à un nombre complexe cible, où le nombre ajouté peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.
 
@@ -314,7 +314,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 *Oui*\
 Nombre complexe ou nombre du même type que celui du paramètre du nombre complexe cible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre complexe auquel le nombre spécifié comme paramètre est ajouté.
 
@@ -399,7 +399,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a><a name="operator-_eq"></a>opérateur =
+## <a name="operator-"></a><a name="operator-_eq"></a> opérateur =
 
 Soustrait un nombre d’un nombre complexe cible, où le nombre soustrait peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est ajouté.
 
@@ -420,7 +420,7 @@ Nombre complexe à soustraire du nombre complexe cible.
 *_RealPart*\
 Nombre réel à soustraire du nombre complexe cible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre complexe duquel le nombre spécifié comme paramètre est soustrait.
 
@@ -507,7 +507,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="operator"></a><a name="op_div_eq"></a>opérateur/=
+## <a name="operator"></a><a name="op_div_eq"></a> opérateur/=
 
 Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.
 
@@ -528,7 +528,7 @@ Nombre complexe à soustraire du nombre complexe cible.
 *_RealPart*\
 Nombre réel à soustraire du nombre complexe cible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre complexe qui a été divisé par le nombre spécifié comme paramètre.
 
@@ -611,7 +611,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.
 
@@ -627,7 +627,7 @@ complex<Type>& operator=(const Type& right);
 *Oui*\
 Nombre complexe ou nombre du même type que celui du paramètre du nombre complexe cible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre complexe auquel le nombre spécifié comme paramètre a été assigné.
 
@@ -689,7 +689,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a><a name="real"></a>non
+## <a name="real"></a><a name="real"></a> non
 
 Extrait ou définit le composant réel d'un nombre complexe.
 
@@ -704,7 +704,7 @@ T real(const T& right);
 *Oui*\
 Nombre complexe dont la valeur réelle doit être extraite.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Partie réelle du nombre complexe.
 
@@ -743,7 +743,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Type qui représente le type de données utilisé pour représenter les parties imaginaire et réelle d’un nombre complexe.
 
@@ -753,7 +753,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Notes
 
-`value_type`est un synonyme du paramètre de modèle complexe de classe `Type` .
+`value_type` est un synonyme du paramètre de modèle complexe de classe `Type` .
 
 ### <a name="example"></a>Exemple
 

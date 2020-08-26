@@ -7,21 +7,21 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: 1e162dc9fb784bda5b4b9834d083012cf76ed6e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c66a4349a016eb8428a8aa8eb260a78b4bac9efb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217712"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846470"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;istream&gt;, typedefs
 
-||||
-|-|-|-|
-|[iostream](#iostream)|[IStream](#istream)|[wiostream](#wiostream)|
-|[wistream](#wistream)|
+[iostream](#iostream)\
+[IStream](#istream)\
+[wiostream](#wiostream)\
+[wistream](#wistream)
 
-## <a name="iostream"></a><a name="iostream"></a>iostream
+## <a name="iostream"></a><a name="iostream"></a> iostream
 
 Type `basic_iostream` spécialisé sur **`char`** .
 
@@ -33,7 +33,7 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 
 Le type est un synonyme du modèle de classe [basic_iostream](../standard-library/basic-iostream-class.md), spécialisé pour les éléments de type **`char`** avec des caractéristiques de caractère par défaut.
 
-## <a name="istream"></a><a name="istream"></a>IStream
+## <a name="istream"></a><a name="istream"></a> IStream
 
 Type `basic_istream` spécialisé sur **`char`** .
 
@@ -45,7 +45,7 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 Le type est un synonyme du modèle de classe [basic_istream](../standard-library/basic-istream-class.md), spécialisé pour les éléments de type **`char`** avec des caractéristiques de caractère par défaut.
 
-## <a name="wiostream"></a><a name="wiostream"></a>wiostream
+## <a name="wiostream"></a><a name="wiostream"></a> wiostream
 
 Type `basic_iostream` spécialisé sur **`wchar_t`** .
 
@@ -57,7 +57,7 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 
 Le type est un synonyme du modèle de classe [basic_iostream](../standard-library/basic-iostream-class.md), spécialisé pour les éléments de type **`wchar_t`** avec des caractéristiques de caractère par défaut.
 
-## <a name="wistream"></a><a name="wistream"></a>wistream
+## <a name="wistream"></a><a name="wistream"></a> wistream
 
 Type `basic_istream` spécialisé sur **`wchar_t`** .
 

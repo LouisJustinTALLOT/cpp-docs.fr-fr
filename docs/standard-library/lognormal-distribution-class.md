@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bf6cb4a620243f35886835e996eb34bc7b0e6960
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28ecadfce3e52d9541358d8aa9f68b2e0857661b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224784"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839606"
 ---
 # <a name="lognormal_distribution-class"></a>lognormal_distribution, classe
 
@@ -75,10 +75,8 @@ Le type de résultat à virgule flottante a comme valeur par défaut **`double`*
 
 Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la distribution normale du journal. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|
+[lognormal_distribution](#lognormal_distribution)\
+[param_type](#param_type)
 
 Les fonctions de propriété `m()` et `s()` retournent les valeurs des paramètres de distribution stockés *m* et *s*, respectivement.
 
@@ -178,13 +176,13 @@ Distribution for 10 samples:
     10: 5.4406507912
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution :: lognormal_distribution
+## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a> lognormal_distribution :: lognormal_distribution
 
 Construit la distribution.
 
@@ -212,7 +210,7 @@ Le premier constructeur construit un objet dont la valeur `m` stockée contient 
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution ::p aram_type
+## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a> lognormal_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 

@@ -2,12 +2,12 @@
 title: Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231635"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839671"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 
@@ -98,9 +98,8 @@ Les projets qui utilisent cette option posent un problème lors de la mise à ni
 
 Le tableau suivant présente les bibliothèques dont le contenu a changé à compter de Visual Studio 2015. Pour effectuer une mise à niveau, vous devez ajouter les nouveaux noms de bibliothèques de la deuxième colonne dans les bibliothèques de la première colonne. Certaines de ces bibliothèques sont des bibliothèques d’importation, mais cela ne devrait pas avoir d’importance.
 
-|||
-|-|-|
 |Si vous utilisiez :|Vous devez utiliser ces bibliothèques :|
+|-|-|
 |LIBCMT.lib|libucrt.lib, libvcruntime.lib|
 |libcmtd.lib|libucrtd.lib, libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib, ucrt.lib, vcruntime.lib|

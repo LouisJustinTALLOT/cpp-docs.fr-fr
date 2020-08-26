@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: d0bba986889dfbd17fddcd0c6985c082f6f74c29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3054a29bd1bc82861461851d4403a7095ac1fcbd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230244"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846509"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution, classe
 
@@ -81,10 +81,8 @@ Moteur de générateur de nombres aléatoires uniformes. Pour connaître les typ
 
 Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou du type **`int`** si aucun n’est fourni, distribuées selon la fonction de probabilité discrète de distribution binomiale. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
+[binomial_distribution](#binomial_distribution)\
+[param_type](#param_type)
 
 Les membres de propriété `t()` et `p()` retournent les valeurs de paramètres de distribution actuellement stockées *t* et *p* , respectivement.
 
@@ -225,13 +223,13 @@ Histogram for 100 samples:
     21 :
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution :: binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a> binomial_distribution :: binomial_distribution
 
 Construit la distribution.
 
@@ -259,7 +257,7 @@ Le premier constructeur construit un objet dont la valeur *p* stockée contient 
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution ::p aram_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a> binomial_distribution ::p aram_type
 
 Stocke tous les paramètres de la distribution.
 

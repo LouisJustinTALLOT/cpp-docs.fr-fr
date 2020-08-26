@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: a86c0c1a0b70613c6e7749c78f58f6dfb3602d4d
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 0b951fc76635f67115f4a832ed316d66b6de7497
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376282"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836697"
 ---
 # <a name="translation-mode-constants"></a>Constantes de mode de traduction
 
@@ -32,13 +32,13 @@ ms.locfileid: "68376282"
 #include <fcntl.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les constantes manifestes `_O_BINARY` et `_O_TEXT` déterminent le mode de traduction des fichiers (`_open` et `_sopen`) ou le mode de traduction des flux (`_setmode`).
 
-Les valeurs autorisées sont :
+Les valeurs autorisées sont les suivantes :
 
-|||
+|Valeur|Description|
 |-|-|
 `_O_TEXT`  | Ouvre un fichier en mode texte (traduit). Les combinaisons retour chariot/saut de ligne sont traduites en un seul saut de ligne en entrée. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts pour la lecture, et pour la lecture et l’écriture, `fopen` recherche un Ctrl+Z à la fin du fichier et le supprime, si possible. En effet, l’utilisation des fonctions `fseek` et `ftell` pour se déplacer dans un fichier qui se termine par un Ctrl+Z peut provoquer un comportement incorrect de `fseek` vers la fin du fichier.
 `_O_BINARY`  | Ouvre un fichier en mode binaire (non traduit). Les traductions ci-dessus sont supprimées.

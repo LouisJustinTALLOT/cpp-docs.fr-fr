@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 138011ec4ccf6c010f002d61cdb8ae8b0bac1796
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0fed268b6c3f318b3e308f90e94862fdf969e3fa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212148"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836398"
 ---
 # <a name="normal_distribution-class"></a>normal_distribution, classe
 
@@ -78,10 +78,8 @@ Le type de résultat à virgule flottante a comme valeur par défaut **`double`*
 
 Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la distribution normale. Le tableau suivant contient des liens vers des articles sur différents membres.
 
-||||
-|-|-|-|
-|[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
-|`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
+[normal_distribution](#normal_distribution)\
+[param_type](#param_type)
 
 Les fonctions `mean()` de propriété et `stddev()` retournent respectivement les valeurs des paramètres de distribution stockés *Mean* et *STDDEV* .
 
@@ -181,13 +179,13 @@ Distribution for 10 samples:
     10: 2.7821317338
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a>normal_distribution :: normal_distribution
+## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a> normal_distribution :: normal_distribution
 
 Construit la distribution.
 
@@ -215,7 +213,7 @@ Le premier constructeur construit un objet dont la valeur `mean` stockée contie
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="normal_distributionparam_type"></a><a name="param_type"></a>normal_distribution ::p aram_type
+## <a name="normal_distributionparam_type"></a><a name="param_type"></a> normal_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 

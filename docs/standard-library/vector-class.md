@@ -87,12 +87,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 71b55b4af44a641846ca7b8706bee420887950c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6cc8378fee72304bb909c3baacc305d446474bfa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224563"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840035"
 ---
 # <a name="vector-class"></a>vector (classe)
 
@@ -127,13 +127,13 @@ La [ \<bool> classe de référence Vector](../standard-library/vector-bool-class
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[graphiques](#vector)|Construit un vecteur de taille spécifique ou contenant des éléments de valeurs spécifiques, ou contenant un objet `allocator` spécifique, ou comme copie d'un autre vecteur.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[allocator_type](#allocator_type)|Type qui représente la classe `allocator` pour l'objet vector.|
 |[const_iterator](#const_iterator)|Type qui fournit un itérateur à accès aléatoire capable de lire un **`const`** élément dans un vecteur.|
@@ -148,9 +148,9 @@ La [ \<bool> classe de référence Vector](../standard-library/vector-bool-class
 |[size_type](#size_type)|Type qui compte le nombre d'éléments dans un vecteur.|
 |[value_type](#value_type)|Type représentant le type de données stockées dans un vecteur.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[assign](#assign)|Efface un tableau et copie les éléments spécifiés dans le vecteur vide.|
 |[at](#at)|Retourne une référence à l'élément à un emplacement spécifié dans le vecteur.|
@@ -184,12 +184,12 @@ La [ \<bool> classe de référence Vector](../standard-library/vector-bool-class
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[operator&#91;&#93;](#op_at)|Retourne une référence à l'élément de vecteur à un emplacement spécifié.|
 |[opérateur =](#op_eq)|Remplace les éléments du vecteur par une copie d'un autre vecteur.|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 Type représentant la classe allocator pour l'objet vecteur.
 
@@ -205,7 +205,7 @@ typedef Allocator allocator_type;
 
 Consultez l’exemple de [get_allocator](#get_allocator) pour obtenir un exemple qui utilise `allocator_type`.
 
-## <a name="assign"></a><a name="assign"></a>assignés
+## <a name="assign"></a><a name="assign"></a> assignés
 
 Efface un tableau et copie les éléments spécifiés dans le vecteur vide.
 
@@ -285,7 +285,7 @@ int main()
 }
 ```
 
-## <a name="at"></a><a name="at"></a>à
+## <a name="at"></a><a name="at"></a> à
 
 Retourne une référence à l'élément à un emplacement spécifié dans le vecteur.
 
@@ -300,7 +300,7 @@ const_reference at(size_type position) const;
 *endroit*\
 Valeur de l'indice ou de la position de l'élément à référencer dans le vecteur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’élément en indice dans l’argument. Si la *position* est supérieure à la taille du vecteur, `at` lève une exception.
 
@@ -336,7 +336,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a><a name="back"></a>Précédent
+## <a name="back"></a><a name="back"></a> Précédent
 
 Retourne une référence au dernier élément du vecteur.
 
@@ -346,7 +346,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Dernier élément du vecteur. Si le vecteur est vide, la valeur de retour n'est pas définie.
 
@@ -380,7 +380,7 @@ int main() {
 }
 ```
 
-## <a name="begin"></a><a name="begin"></a>commencer
+## <a name="begin"></a><a name="begin"></a> commencer
 
 Retourne un itérateur à accès aléatoire pointant vers le premier élément dans le vecteur.
 
@@ -390,7 +390,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur à accès aléatoire qui traite le premier élément dans l’objet `vector` ou l’emplacement suivant un objet `vector` vide. Comparez toujours la valeur retournée avec [vector :: end](#end) pour vous assurer qu’elle est valide.
 
@@ -443,7 +443,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="capacity"></a><a name="capacity"></a>maximale
+## <a name="capacity"></a><a name="capacity"></a> maximale
 
 Retourne le nombre d'éléments que le vecteur peut contenir sans avoir à allouer plus de stockage.
 
@@ -451,7 +451,7 @@ Retourne le nombre d'éléments que le vecteur peut contenir sans avoir à allou
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur actuelle du stockage alloué pour le vecteur.
 
@@ -487,7 +487,7 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Retourne un **`const`** itérateur qui traite le premier élément de la plage.
 
@@ -495,7 +495,7 @@ Retourne un **`const`** itérateur qui traite le premier élément de la plage.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Itérateur à accès aléatoire qui pointe vers le premier élément de la plage, ou vers l’emplacement situé juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()` ).
 
@@ -513,7 +513,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>CEND
+## <a name="cend"></a><a name="cend"></a> CEND
 
 Retourne un **`const`** itérateur qui traite l’emplacement juste après le dernier élément d’une plage.
 
@@ -521,7 +521,7 @@ Retourne un **`const`** itérateur qui traite l’emplacement juste après le de
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Itérateur à accès aléatoire qui pointe juste après la fin de la plage.
 
@@ -541,7 +541,7 @@ auto i2 = Container.cend();
 
 La valeur retournée par `cend` ne doit pas être déréférencée. Utilisez-le uniquement pour les comparaisons.
 
-## <a name="clear"></a><a name="clear"></a>effacé
+## <a name="clear"></a><a name="clear"></a> effacé
 
 Supprime les éléments du vecteur.
 
@@ -577,7 +577,7 @@ The size of v1 is 3
 The size of v1 after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Type qui fournit un itérateur à accès aléatoire capable de lire un **`const`** élément dans un vecteur.
 
@@ -593,7 +593,7 @@ Un type `const_iterator` ne peut pas être utilisé pour modifier la valeur d’
 
 Consultez l’exemple [back](#back) illustrant l’utilisation de `const_iterator`.
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Type qui fournit un pointeur vers un **`const`** élément d’un vecteur.
 
@@ -607,7 +607,7 @@ Un type `const_pointer` ne peut pas être utilisé pour modifier la valeur d’u
 
 Un [itérateur](#iterator) est généralement utilisé pour fournir un accès à un élément de vecteur.
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Type qui fournit une référence à un **`const`** élément stocké dans un vecteur. Elle est utilisée pour la lecture et l’exécution d' **`const`** opérations.
 
@@ -651,7 +651,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Type qui fournit un itérateur à accès aléatoire capable de lire un **`const`** élément du vecteur.
 
@@ -667,7 +667,7 @@ Un type `const_reverse_iterator` ne peut pas modifier la valeur d’un élément
 
 Consultez [rbegin](#rbegin) pour obtenir un exemple montrant comment déclarer et utiliser un itérateur.
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 Retourne un itérateur const qui pointe vers le premier élément d'un vecteur inversé.
 
@@ -675,7 +675,7 @@ Retourne un itérateur const qui pointe vers le premier élément d'un vecteur i
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un itérateur const inverse à accès aléatoire qui traite le premier élément d’un objet [vector](../standard-library/vector-class.md) inversé (ou qui traite ce qui était le dernier élément de l’objet `vector` non inversé).
 
@@ -716,7 +716,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 Retourne un itérateur const qui traite l’emplacement qui suit le dernier élément d’un vecteur inversé.
 
@@ -724,7 +724,7 @@ Retourne un itérateur const qui traite l’emplacement qui suit le dernier él�
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur const inverse à accès aléatoire qui traite l’emplacement qui suit le dernier élément d’un objet [vector](../standard-library/vector-class.md) inversé (emplacement qui précédait le premier élément dans l’objet `vector` non inversé).
 
@@ -775,7 +775,7 @@ const_pointer data() const;
 pointer data();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le premier élément de l’objet [vector](../standard-library/vector-class.md) ou vers l’emplacement suivant un objet `vector` vide.
 
@@ -821,7 +821,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Type qui fournit la différence entre deux itérateurs qui font référence aux éléments d'un même vecteur.
 
@@ -878,7 +878,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Insère un élément construit sur place à la position spécifiée dans le vecteur.
 
@@ -897,7 +897,7 @@ Position dans l’objet [vector](../standard-library/vector-class.md) où le pre
 *attend*\
 Arguments de constructeur. Selon les arguments fournis, la fonction déduit la surcharge de constructeur à appeler.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction retourne un itérateur qui pointe vers la position où le nouvel élément a été inséré dans le `vector`.
 
@@ -947,7 +947,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
 
 Ajoute un élément construit sur place à la fin du vecteur.
 
@@ -977,7 +977,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a><a name="empty"></a>vidé
+## <a name="empty"></a><a name="empty"></a> vidé
 
 Teste si le vecteur est vide.
 
@@ -985,7 +985,7 @@ Teste si le vecteur est vide.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le vecteur est vide ; **`false`** si le vecteur n’est pas vide.
 
@@ -1015,7 +1015,7 @@ int main( )
 The vector is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a>effet
+## <a name="end"></a><a name="end"></a> effet
 
 Retourne l'itérateur past-the-end.
 
@@ -1025,7 +1025,7 @@ iterator end();
 const_iterator end() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur past-the-end du vecteur. Si le vecteur est vide, alors `vector::end() == vector::begin()` .
 
@@ -1059,7 +1059,7 @@ int main( )
 2
 ```
 
-## <a name="erase"></a><a name="erase"></a>effacer
+## <a name="erase"></a><a name="erase"></a> effacer
 
 Supprime un élément ou une plage d'éléments aux positions spécifiées dans le vecteur.
 
@@ -1083,7 +1083,7 @@ Position du premier élément supprimé du vecteur.
 *famille*\
 Position juste après le dernier élément supprimé du vecteur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou pointeur vers la fin du vecteur si aucun élément de ce genre n'existe.
 
@@ -1132,7 +1132,7 @@ v1 = 20 30 40 50
 v1 = 20 50
 ```
 
-## <a name="front"></a><a name="front"></a>frontal
+## <a name="front"></a><a name="front"></a> frontal
 
 Retourne une référence au premier élément du vecteur.
 
@@ -1142,7 +1142,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au premier élément du vecteur. Si le vecteur est vide, la valeur de retour n'est pas définie.
 
@@ -1178,7 +1178,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Retourne une copie de l’objet allocateur utilisé pour construire le vecteur.
 
@@ -1186,7 +1186,7 @@ Retourne une copie de l’objet allocateur utilisé pour construire le vecteur.
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Allocateur utilisé par le vecteur.
 
@@ -1217,7 +1217,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>Insérer
+## <a name="insert"></a><a name="insert"></a> Insérer
 
 Insère un élément, un nombre d’éléments ou une plage d’éléments dans le vecteur à une position spécifiée.
 
@@ -1259,7 +1259,7 @@ Position du premier élément de la plage d'éléments à copier.
 *famille*\
 Position du premier élément au-delà de la plage d'éléments à copier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Les deux premières fonctions `insert` retournent un itérateur qui pointe vers la position où le nouvel élément a été inséré dans le vecteur.
 
@@ -1331,7 +1331,7 @@ v1 = 10 50 50 40 50 50 50 50 20 30
 vv1[0] = 10 50 50 40 50 50 50 50 20 30
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>répétiteur
+## <a name="iterator"></a><a name="iterator"></a> répétiteur
 
 Type qui fournit un itérateur à accès aléatoire pour lire ou modifier un élément dans un vecteur.
 
@@ -1347,7 +1347,7 @@ Vous pouvez utiliser un type **iterator** pour changer la valeur d’un élémen
 
 Consultez l’exemple de [begin](#begin).
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Retourne la longueur maximale autorisée du vecteur.
 
@@ -1355,7 +1355,7 @@ Retourne la longueur maximale autorisée du vecteur.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur maximale autorisée du vecteur.
 
@@ -1378,7 +1378,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a>[], opérateur
+## <a name="operator"></a><a name="op_at"></a> [], opérateur
 
 Retourne une référence à l'élément de vecteur à un emplacement spécifié.
 
@@ -1393,7 +1393,7 @@ const_reference operator[](size_type position) const;
 *endroit*\
 Position de l'élément de vecteur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la position spécifiée est supérieure ou égale à la taille du conteneur, le résultat est non défini.
 
@@ -1424,7 +1424,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Remplace les éléments du vecteur par une copie d'un autre vecteur.
 
@@ -1526,7 +1526,7 @@ int main( )
 44
 ```
 
-## <a name="pop_back"></a><a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> pop_back
 
 Supprime l'élément à la fin du vecteur.
 
@@ -1538,7 +1538,7 @@ void pop_back();
 
 Pour obtenir un exemple de code, consultez [vector::push_back()](#push_back).
 
-## <a name="push_back"></a><a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a> push_back
 
 Ajoute un élément à la fin du vecteur.
 
@@ -1593,7 +1593,7 @@ int main()
 }
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 Retourne un itérateur pointant vers le premier élément d'un vecteur inverse.
 
@@ -1602,7 +1602,7 @@ reverse_iterator rbegin();
 const_reverse_iterator rbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un itérateur inverse à accès aléatoire qui traite le premier élément d’un vecteur inversé (ou qui traite ce qui était le dernier élément du vecteur non inversé).
 
@@ -1643,7 +1643,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="reference"></a><a name="reference"></a>faire
+## <a name="reference"></a><a name="reference"></a> faire
 
 Type qui fournit une référence à un élément stocké dans un vecteur.
 
@@ -1655,7 +1655,7 @@ typedef typename Allocator::reference reference;
 
 Consultez [at](#at) pour obtenir un exemple d’utilisation de **reference** dans la classe vector.
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 Retourne un itérateur qui traite l’emplacement suivant le dernier élément d’un vecteur inversé.
 
@@ -1664,7 +1664,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur inverse à accès aléatoire qui traite l’emplacement qui suit le dernier élément d’un vecteur inversé (emplacement qui précédait le premier élément dans le vecteur non inversé).
 
@@ -1705,7 +1705,7 @@ int main( )
 1
 ```
 
-## <a name="reserve"></a><a name="reserve"></a>réserver
+## <a name="reserve"></a><a name="reserve"></a> réserver
 
 Réserve une taille de stockage minimale pour un vecteur, en allouant plus d'espace si nécessaire.
 
@@ -1746,7 +1746,7 @@ Current capacity of v1 = 1
 Current capacity of v1 = 20
 ```
 
-## <a name="resize"></a><a name="resize"></a>redimensionner
+## <a name="resize"></a><a name="resize"></a> redimensionner
 
 Spécifie une nouvelle taille pour un vecteur.
 
@@ -1875,7 +1875,7 @@ int main()
 }
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 Type qui fournit un itérateur à accès aléatoire pouvant lire ou modifier un élément d'un vecteur inversé.
 
@@ -1891,7 +1891,7 @@ Un type `reverse_iterator` est utilisé pour itérer le vecteur dans l'ordre inv
 
 Consultez l’exemple pour [rbegin](#rbegin).
 
-## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a> shrink_to_fit
 
 Ignore la capacité excédentaire.
 
@@ -1931,7 +1931,7 @@ Current capacity of v1 = 20
 Current capacity of v1 = 1
 ```
 
-## <a name="size"></a><a name="size"></a>corps
+## <a name="size"></a><a name="size"></a> corps
 
 Retourne le nombre d'éléments figurant dans le vecteur.
 
@@ -1939,7 +1939,7 @@ Retourne le nombre d'éléments figurant dans le vecteur.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur actuelle du vecteur.
 
@@ -1972,7 +1972,7 @@ Vector length is 1.
 Vector length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Type qui compte le nombre d'éléments dans un vecteur.
 
@@ -1984,7 +1984,7 @@ typedef typename Allocator::size_type size_type;
 
 Consultez l’exemple de [capacity](#capacity).
 
-## <a name="swap"></a><a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 Échange les éléments de deux vecteurs.
 
@@ -2044,7 +2044,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Type représentant le type de données stockées dans un vecteur.
 
@@ -2077,7 +2077,7 @@ int main( )
 44
 ```
 
-## <a name="vector"></a><a name="vector"></a>graphiques
+## <a name="vector"></a><a name="vector"></a> graphiques
 
 Construit un vecteur. Les surcharges construisent un vecteur d’une taille spécifique ou avec des éléments d’une valeur spécifique. Ou, sous la forme d’une copie de tout ou partie d’un autre vecteur. Certaines surcharges vous permettent également de spécifier l’allocateur à utiliser.
 

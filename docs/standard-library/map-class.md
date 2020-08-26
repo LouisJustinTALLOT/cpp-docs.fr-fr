@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: 6166c5f1d90ab795cce39eaa1ce22f025f700d81
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eba66debca3d866dadaba41a54549757ee05b861
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224771"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846444"
 ---
 # <a name="map-class"></a>map, classe
 
@@ -160,13 +160,13 @@ La classe map trie les éléments qu’elle contrôle en appelant un objet de fo
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
-|[canal](#map)|Construit une liste de taille spécifique ou contenant des éléments de valeurs spécifiques, ou contenant un `allocator` spécifique ou comme copie d'une autre classe map.|
+|[map](#map)|Construit une liste de taille spécifique ou contenant des éléments de valeurs spécifiques, ou contenant un `allocator` spécifique ou comme copie d'une autre classe map.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[allocator_type](#allocator_type)|Typedef pour la classe `allocator` de l'objet map.|
 |[const_iterator](#const_iterator)|Typedef pour un itérateur bidirectionnel qui peut lire un **`const`** élément dans la classe Map.|
@@ -217,12 +217,12 @@ La classe map trie les éléments qu’elle contrôle en appelant un objet de fo
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[operator&#91;&#93;](#op_at)|Insère un élément dans une classe map avec une valeur de clé spécifiée.|
 |[opérateur =](#op_eq)|Remplace les éléments d'une classe map par une copie d'une autre classe map.|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 Type qui représente la classe allocator pour l’objet map.
 
@@ -234,7 +234,7 @@ typedef Allocator allocator_type;
 
 Pour obtenir un exemple qui utilise `allocator_type`, consultez l’exemple de [get_allocator](#get_allocator).
 
-## <a name="at"></a><a name="at"></a>à
+## <a name="at"></a><a name="at"></a> à
 
 Recherche un élément avec une valeur de clé spécifiée.
 
@@ -249,7 +249,7 @@ const Type& at(const Key& key) const;
 clé * \
 Valeur de clé à rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à la valeur de données de l'élément trouvé.
 
@@ -283,7 +283,7 @@ int main()
     }
 ```
 
-## <a name="begin"></a><a name="begin"></a>commencer
+## <a name="begin"></a><a name="begin"></a> commencer
 
 Retourne un itérateur traitant le premier élément de la classe map.
 
@@ -293,7 +293,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel traitant le premier élément de la classe map ou l’emplacement qui suit une classe map vide.
 
@@ -338,7 +338,7 @@ The first element of m1 is 0
 The first element of m1 is now 1
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 Retourne un **`const`** itérateur qui traite l’emplacement juste après le dernier élément d’une plage.
 
@@ -346,7 +346,7 @@ Retourne un **`const`** itérateur qui traite l’emplacement juste après le de
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Itérateur bidirectionnel qui traite le premier élément de la plage, ou l’emplacement situé juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()` ).
 
@@ -364,7 +364,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>CEND
+## <a name="cend"></a><a name="cend"></a> CEND
 
 Retourne un **`const`** itérateur qui traite l’emplacement juste après le dernier élément d’une plage.
 
@@ -372,7 +372,7 @@ Retourne un **`const`** itérateur qui traite l’emplacement juste après le de
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Itérateur d’accès bidirectionnel qui pointe juste après la fin de la plage.
 
@@ -392,7 +392,7 @@ auto i2 = Container.cend();
 
 La valeur retournée par `cend` ne doit pas être déréférencée.
 
-## <a name="clear"></a><a name="clear"></a>effacé
+## <a name="clear"></a><a name="clear"></a> effacé
 
 Efface tous les éléments d'une classe map.
 
@@ -436,7 +436,7 @@ The size of the map is initially 2.
 The size of the map after clearing is 0.
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Type qui fournit un itérateur bidirectionnel capable de lire un **`const`** élément dans la classe Map.
 
@@ -460,7 +460,7 @@ Pour accéder à la valeur de la référence mappée de l’élément, utilisez 
 
 Consultez l’exemple de [begin](#begin) pour obtenir un exemple qui utilise `const_iterator`.
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Type qui fournit un pointeur vers un **`const`** élément d’une classe Map.
 
@@ -474,7 +474,7 @@ Un type `const_pointer` ne peut pas être utilisé pour changer la valeur d'un �
 
 Dans la plupart des cas, vous devez utiliser un [iterator](#iterator) pour accéder aux éléments dans un objet map.
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 Type qui fournit une référence à un **`const`** élément stocké dans une classe Map pour la lecture et l’exécution d' **`const`** opérations.
 
@@ -524,7 +524,7 @@ The key of first element in the map is 1.
 The data value of first element in the map is 10.
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Type qui fournit un itérateur bidirectionnel capable de lire un **`const`** élément de la classe Map.
 
@@ -548,7 +548,7 @@ Pour accéder à la valeur de la référence mappée de l’élément, utilisez 
 
 Pour savoir comment déclarer et utiliser `const_reverse_iterator`, consultez l’exemple [rend](#rend).
 
-## <a name="count"></a><a name="count"></a>saut
+## <a name="count"></a><a name="count"></a> saut
 
 Retourne le nombre d'éléments d'une classe map dont la clé correspond à une clé spécifiée par un paramètre.
 
@@ -561,7 +561,7 @@ size_type count(const Key& key) const;
 *essentiel*\
 Valeur de clé des éléments à mettre en correspondance à partir de la classe map.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 1 si la classe map contient un élément dont la clé de tri correspond à la clé du paramètre ; 0 si la classe map ne contient pas d'élément avec une clé correspondante.
 
@@ -569,7 +569,7 @@ Valeur de clé des éléments à mettre en correspondance à partir de la classe
 
 La fonction membre retourne le nombre d’éléments *x* dans la plage
 
-\[lower_bound (*clé*), upper_bound (*clé*))
+\[ lower_bound (*clé*), upper_bound (*clé*))
 
 qui est 0 ou 1 dans le cas de map, qui est un conteneur associatif unique.
 
@@ -616,7 +616,7 @@ The number of elements in m1 with a sort key of 2 is: 1.
 The number of elements in m1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 Retourne un itérateur const qui traite le premier élément d’une classe map inversée.
 
@@ -624,7 +624,7 @@ Retourne un itérateur const qui traite le premier élément d’une classe map 
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite le premier élément d’une classe [map](../standard-library/map-class.md) inversée, ou qui traite ce qui était le dernier élément de la classe `map` non inversée.
 
@@ -666,7 +666,7 @@ int main( )
 The first element of the reversed map m1 is 3.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 Retourne un itérateur const qui traite l’emplacement qui suit le dernier élément d’une classe map inversée.
 
@@ -674,7 +674,7 @@ Retourne un itérateur const qui traite l’emplacement qui suit le dernier él�
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite l’emplacement qui suit le dernier élément d’une classe [map](../standard-library/map-class.md) inversée (emplacement qui précédait le premier élément de la classe `map` non inversée).
 
@@ -719,7 +719,7 @@ int main( )
 The last element of the reversed map m1 is 1.
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 Type entier signé qui peut être utilisé pour représenter le nombre d’éléments d’une classe map au sein d’une plage, parmi les éléments pointés par les itérateurs.
 
@@ -775,7 +775,7 @@ int main( )
 The number of elements in the map m1 is: 4.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 Insère un élément construit sur place (sans opération de copie ni de déplacement) dans une classe map.
 
@@ -791,7 +791,7 @@ emplace(
 *attend*\
 Arguments transmis pour construire un élément à insérer dans la classe map, sauf si elle contient déjà un élément dont la valeur est ordonnée de façon équivalente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [Paire](../standard-library/pair-structure.md) dont **`bool`** le composant a la valeur true si une insertion a été effectuée, et false si la classe Map contenait déjà un élément de valeur équivalente dans le classement. Le composant itérateur de la paire de valeur de retour pointe sur l’élément qui vient d’être inséré si le **`bool`** composant a la valeur true ou sur l’élément existant si le **`bool`** composant a la valeur false.
 
@@ -861,7 +861,7 @@ int main()
 }
 ```
 
-## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
+## <a name="emplace_hint"></a><a name="emplace_hint"></a> emplace_hint
 
 Insère un élément construit sur place (aucune opération de copie ou déplacement n’est effectuée) avec un hint d’emplacement.
 
@@ -880,7 +880,7 @@ Arguments transmis pour construire un élément à insérer dans la classe map, 
 *Cela*\
 Emplacement où commencer à rechercher le point d'insertion correct. (Si ce point précède immédiatement *, l'* insertion peut se produire dans le temps constant amorti plutôt que dans le temps logarithmique.)
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur vers l’élément qui vient d’être inséré.
 
@@ -938,7 +938,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a><a name="empty"></a>vidé
+## <a name="empty"></a><a name="empty"></a> vidé
 
 Teste si une classe map est vide.
 
@@ -946,7 +946,7 @@ Teste si une classe map est vide.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le mappage est vide ; **`false`** si le mappage n’est pas vide.
 
@@ -983,7 +983,7 @@ The map m1 is not empty.
 The map m2 is empty.
 ```
 
-## <a name="end"></a><a name="end"></a>effet
+## <a name="end"></a><a name="end"></a> effet
 
 Retourne l'itérateur past-the-end.
 
@@ -993,19 +993,19 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur de type past-the-end. Si la classe map est vide, `map::end() == map::begin()`.
 
 ### <a name="remarks"></a>Notes
 
-`end`est utilisé pour déterminer si un itérateur a dépassé la fin de son mappage.
+`end` est utilisé pour déterminer si un itérateur a dépassé la fin de son mappage.
 
 La valeur retournée par `end` ne doit pas être déréférencée.
 
 Pour obtenir un exemple de code, consultez [map::find](#find).
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 Retourne une paire d’itérateurs qui représentent la [lower_bound](#lower_bound) et la [upper_bound](#upper_bound) de la clé.
 
@@ -1020,7 +1020,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *essentiel*\
 Valeur de clé d’argument à comparer à la clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour accéder au premier itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **tout d’abord**, et pour déréférencer l’itérateur de la limite inférieure, utilisez \* ( `pr` . **tout d’abord**). Pour accéder au second itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **Deuxièmement**, et pour déréférencer l’itérateur de la limite supérieure, utilisez \* ( `pr` . **seconde**).
 
@@ -1084,7 +1084,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The map m1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a><a name="erase"></a>effacer
+## <a name="erase"></a><a name="erase"></a> effacer
 
 Supprime des positions spécifiées un élément ou une plage d’éléments compris dans une classe map, ou supprime les éléments qui correspondent à une clé spécifiée.
 
@@ -1114,7 +1114,7 @@ Position juste après le dernier élément à supprimer.
 *Essentiel*\
 Valeur de clé des éléments à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour les deux premières fonctions membres, itérateur bidirectionnel qui désigne le premier élément restant après que tous les éléments ont été supprimés ou élément à la fin de la classe map si aucun élément de ce type n’existe.
 
@@ -1200,7 +1200,7 @@ int main()
 }
 ```
 
-## <a name="find"></a><a name="find"></a>trouver
+## <a name="find"></a><a name="find"></a> trouver
 
 Retourne un itérateur qui fait référence à l'emplacement d'un élément dans un mappage ayant une clé équivalente à la clé spécifiée.
 
@@ -1215,7 +1215,7 @@ const_iterator find(const Key& key) const;
 *essentiel*\
 Valeur de clé qui doit correspondre à la clé de tri d'un élément du mappage dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur qui fait référence à l'emplacement d'un élément ayant la clé spécifiée, ou emplacement qui suit le dernier élément du mappage (`map::end()`), si aucune correspondance n'est trouvée pour la clé.
 
@@ -1287,7 +1287,7 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 Retourne une copie de l’objet allocateur utilisé pour construire la classe map.
 
@@ -1295,7 +1295,7 @@ Retourne une copie de l’objet allocateur utilisé pour construire la classe ma
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Allocateur utilisé par la classe map.
 
@@ -1357,7 +1357,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>Insérer
+## <a name="insert"></a><a name="insert"></a> Insérer
 
 Insère un élément ou une plage d'éléments dans une classe map.
 
@@ -1418,7 +1418,7 @@ Argument de fonction de modèle qui remplit les conditions requises par un [ité
 *IList*\
 [Initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions membres à un élément, (1) et (2), retournent une [paire](../standard-library/pair-structure.md) dont **`bool`** le composant a la valeur true si une insertion a été effectuée, et false si la classe Map contenait déjà un élément dont la clé avait une valeur équivalente dans le classement. Le composant itérateur de la paire de valeur de retour pointe sur l’élément qui vient d’être inséré si le **`bool`** composant a la valeur true ou sur l’élément existant si le **`bool`** composant a la valeur false.
 
@@ -1538,7 +1538,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>répétiteur
+## <a name="iterator"></a><a name="iterator"></a> répétiteur
 
 Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tout élément d’une classe map.
 
@@ -1558,7 +1558,7 @@ Pour accéder à la valeur de la clé pour l’élément, utilisez `Iter->first`
 
 Consultez l’exemple de [Begin](#begin) pour obtenir un exemple de la façon de déclarer et d’utiliser `iterator` .
 
-## <a name="key_comp"></a><a name="key_comp"></a>key_comp
+## <a name="key_comp"></a><a name="key_comp"></a> key_comp
 
 Récupère une copie de l’objet de comparaison utilisé pour trier les clés au sein d’une classe map.
 
@@ -1566,7 +1566,7 @@ Récupère une copie de l’objet de comparaison utilisé pour trier les clés a
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’objet de fonction utilisé par une classe map pour ordonner ses éléments.
 
@@ -1629,7 +1629,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```
 
-## <a name="key_compare"></a><a name="key_compare"></a>key_compare
+## <a name="key_compare"></a><a name="key_compare"></a> key_compare
 
 Type qui fournit un objet de fonction pouvant comparer deux clés de tri pour déterminer l’ordre relatif de deux éléments dans la classe map.
 
@@ -1639,7 +1639,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Notes
 
-`key_compare`est un synonyme des *caractéristiques*de paramètre de modèle.
+`key_compare` est un synonyme des *caractéristiques*de paramètre de modèle.
 
 Pour plus d’informations sur les *caractéristiques* , consultez la rubrique [Map, classe](../standard-library/map-class.md) .
 
@@ -1647,7 +1647,7 @@ Pour plus d’informations sur les *caractéristiques* , consultez la rubrique [
 
 Pour découvrir comment déclarer et utiliser `key_compare`, consultez l’exemple relatif à [key_comp](#key_comp).
 
-## <a name="key_type"></a><a name="key_type"></a>key_type
+## <a name="key_type"></a><a name="key_type"></a> key_type
 
 Type qui décrit la clé de tri stockée dans chaque élément de la classe map.
 
@@ -1657,7 +1657,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Notes
 
-`key_type`est un synonyme de la *clé*de paramètre de modèle.
+`key_type` est un synonyme de la *clé*de paramètre de modèle.
 
 Pour plus d’informations sur la *clé*, consultez la section Notes de la rubrique de la [classe Map](../standard-library/map-class.md) .
 
@@ -1665,7 +1665,7 @@ Pour plus d’informations sur la *clé*, consultez la section Notes de la rubri
 
 Pour découvrir comment déclarer et utiliser `key_type`, consultez l’exemple relatif à [value_type](#value_type).
 
-## <a name="lower_bound"></a><a name="lower_bound"></a>lower_bound
+## <a name="lower_bound"></a><a name="lower_bound"></a> lower_bound
 
 Retourne un itérateur pointant vers le premier élément d’une classe map qui a une valeur de clé supérieure ou égale à celle d’une clé spécifiée.
 
@@ -1680,7 +1680,7 @@ const_iterator lower_bound(const Key& key) const;
 *essentiel*\
 Valeur de clé d’argument à comparer à la clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `iterator`Ou `const_iterator` qui traite l’emplacement d’un élément dans une classe Map qui a une clé supérieure ou égale à la clé d’argument, ou qui traite l’emplacement qui suit le dernier élément de la classe Map si aucune correspondance n’est trouvée pour la clé.
 
@@ -1736,7 +1736,7 @@ The map m1 doesn't have an element with a key of 4.
 The element of m1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="map"></a><a name="map"></a>canal
+## <a name="map"></a><a name="map"></a> canal
 
 Construit une classe map vide ou une copie de l’ensemble, ou d’une partie d’une autre classe map.
 
@@ -1941,7 +1941,7 @@ int main()
 }
 ```
 
-## <a name="mapped_type"></a><a name="mapped_type"></a>mapped_type
+## <a name="mapped_type"></a><a name="mapped_type"></a> mapped_type
 
 Type qui représente le type de données stocké dans une classe map.
 
@@ -1959,7 +1959,7 @@ Pour plus d’informations sur le *type* , consultez la rubrique [Map, classe](.
 
 Pour découvrir comment déclarer et utiliser `mapped_type`, consultez l’exemple relatif à [value_type](#value_type).
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 Retourne la longueur maximale de la classe map.
 
@@ -1967,7 +1967,7 @@ Retourne la longueur maximale de la classe map.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur maximale autorisée de la classe map.
 
@@ -1992,7 +1992,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a>[], opérateur
+## <a name="operator"></a><a name="op_at"></a> [], opérateur
 
 Insère un élément dans une classe map avec une valeur de clé spécifiée.
 
@@ -2007,7 +2007,7 @@ Type& operator[](Key&& key);
 *essentiel*\
 Valeur de clé de l’élément à insérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à la valeur de données de l'élément inséré.
 
@@ -2015,7 +2015,7 @@ Référence à la valeur de données de l'élément inséré.
 
 Si la valeur de clé d’argument est introuvable, elle est insérée avec la valeur par défaut du type de données.
 
-`operator[]`peut être utilisé pour insérer des éléments dans une classe Map `m` à l’aide de `m[key] = DataValue;` où `DataValue` est la valeur du `mapped_type` de l’élément avec une valeur de clé de *clé*.
+`operator[]` peut être utilisé pour insérer des éléments dans une classe Map `m` à l’aide de `m[key] = DataValue;` où `DataValue` est la valeur du `mapped_type` de l’élément avec une valeur de clé de *clé*.
 
 Lorsque vous utilisez `operator[]` pour insérer des éléments, la référence retournée n'indique pas si l'insertion va modifier un élément existant ou en créer un nouveau. Vous pouvez utiliser les fonctions membres [find](#find) et [insert](#insert) pour déterminer si un élément avec une clé spécifiée était déjà présent avant l’insertion.
 
@@ -2090,7 +2090,7 @@ c2[move(str)] == 0
 c2["abc"] == 1
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Remplace les éléments d'une classe map par une copie d'une autre classe map.
 
@@ -2159,7 +2159,7 @@ Un type `pointer` peut être utilisé pour modifier la valeur d’un élément.
 
 Dans la plupart des cas, vous devez utiliser un [iterator](#iterator) pour accéder aux éléments dans un objet map.
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 Retourne un itérateur qui traite le premier élément d’une classe map inversée.
 
@@ -2169,7 +2169,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé qui traite le premier élément d’une classe map inversée ou qui traite ce qui était le dernier élément de la classe map non inversée.
 
@@ -2239,7 +2239,7 @@ The reversed map is: 3 2 1 .
 After the erasure, the first element in the reversed map is 2.
 ```
 
-## <a name="reference"></a><a name="reference"></a>faire
+## <a name="reference"></a><a name="reference"></a> faire
 
 Type qui fournit une référence à un élément stocké dans une classe map.
 
@@ -2296,7 +2296,7 @@ The data value of first element in the map is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 Retourne un itérateur qui traite l’emplacement suivant le dernier élément d’une classe map inversée.
 
@@ -2306,7 +2306,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé qui traite l’emplacement qui suit le dernier élément d’une classe map inversée (emplacement qui précédait le premier élément de la classe map non inversée).
 
@@ -2380,7 +2380,7 @@ The reversed map is: 3 2 1 .
 After the erasure, the last element in the reversed map is 2.
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tout élément d’une classe map inversée.
 
@@ -2402,7 +2402,7 @@ Pour accéder à la valeur de la clé de l’élément, utilisez `rIter` -> **fi
 
 Pour découvrir comment déclarer et utiliser `reverse_iterator`, consultez l’exemple relatif à [rbegin](#rbegin).
 
-## <a name="size"></a><a name="size"></a>corps
+## <a name="size"></a><a name="size"></a> corps
 
 Retourne le nombre d'éléments d'une classe map.
 
@@ -2410,7 +2410,7 @@ Retourne le nombre d'éléments d'une classe map.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur actuelle du map.
 
@@ -2446,7 +2446,7 @@ The map length is 1.
 The map length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Type entier non signé qui peut représenter le nombre d’éléments d’une classe map.
 
@@ -2458,7 +2458,7 @@ typedef typename allocator_type::size_type size_type;
 
 Pour savoir comment déclarer et utiliser `size_type`, consultez l’exemple [size](#size).
 
-## <a name="swap"></a><a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 Échange les éléments de deux classes map.
 
@@ -2528,7 +2528,7 @@ After swapping with m2, map m1 is: 100 200.
 After swapping with m3, map m1 is: 300.
 ```
 
-## <a name="upper_bound"></a><a name="upper_bound"></a>upper_bound
+## <a name="upper_bound"></a><a name="upper_bound"></a> upper_bound
 
 Retourne un itérateur pointant vers le premier élément d’une classe map qui a une valeur de clé supérieure à celle d’une clé spécifiée.
 
@@ -2543,7 +2543,7 @@ const_iterator upper_bound(const Key& key) const;
 *essentiel*\
 Valeur de clé d’argument à comparer à la valeur de clé de tri d’un élément de la classe map dans laquelle la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `iterator`Ou `const_iterator` qui traite l’emplacement d’un élément dans une classe Map qui a une clé supérieure à la clé d’argument, ou qui traite l’emplacement qui suit le dernier élément de la classe Map si aucune correspondance n’est trouvée pour la clé.
 
@@ -2600,7 +2600,7 @@ The 1st element of m1 with a key greater than
 that of the initial element of m1 is: 20.
 ```
 
-## <a name="value_comp"></a><a name="value_comp"></a>value_comp
+## <a name="value_comp"></a><a name="value_comp"></a> value_comp
 
 La fonction membre retourne un objet de fonction qui détermine l’ordre des éléments d’une classe map en comparant leurs valeurs de clés.
 
@@ -2608,7 +2608,7 @@ La fonction membre retourne un objet de fonction qui détermine l’ordre des é
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’objet de fonction de comparaison utilisé par une classe map pour ordonner ses éléments.
 
@@ -2668,7 +2668,7 @@ The element ( 1,10 ) precedes the element ( 2,5 ).
 The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Type de l’objet stocké comme élément dans une classe map.
 

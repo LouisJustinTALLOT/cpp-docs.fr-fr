@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 9fc2903180a055c18c6f3779b1da55ee347d2535
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a9eda80fbabf939b9e3a5f8a0ef5b76e46656740
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230426"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840256"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procédure pas à pas : mise à jour de l’application Scribble MFC (partie 1)
 
@@ -26,7 +26,7 @@ Cette procédure pas à pas modifie l’exemple MFC Scribble 1,0 qui vous permet
 
 [Exemple MFC scribble 1,0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Pour obtenir de l’aide sur la conversion vers Visual Studio 2017 ou version ultérieure, consultez [Guide du Portage : Scribble MFC](../porting/porting-guide-mfc-scribble.md).
 
-## <a name="sections"></a><a name="top"></a>Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
 Cette partie de la procédure pas à pas contient les sections suivantes :
 
@@ -42,7 +42,7 @@ Cette partie de la procédure pas à pas contient les sections suivantes :
 
 - [Définition de l’apparence de l’application](#setlook)
 
-## <a name="replacing-the-base-classes"></a><a name="replaceclass"></a>Remplacement des classes de base
+## <a name="replacing-the-base-classes"></a><a name="replaceclass"></a> Remplacement des classes de base
 
 Pour convertir une application qui prend en charge un menu en une application qui prend en charge un ruban, vous devez dériver les classes application, fenêtre frame et Toolbar des classes de base mises à jour. (Nous vous suggérons de ne pas modifier l’exemple SCRIBBLE d’origine. Au lieu de cela, nettoyez le projet Scribble, copiez-le dans un autre répertoire, puis modifiez la copie.)
 
@@ -103,11 +103,11 @@ Pour convertir une application qui prend en charge un menu en une application qu
 
 1. Enregistrez les modifications, puis générez et exécutez l’application.
 
-## <a name="adding-bitmaps-to-the-project"></a><a name="addbitmap"></a>Ajout de bitmaps au projet
+## <a name="adding-bitmaps-to-the-project"></a><a name="addbitmap"></a> Ajout de bitmaps au projet
 
 Les quatre étapes suivantes de cette procédure pas à pas requièrent des ressources bitmap. Vous pouvez récupérer les bitmaps appropriées de différentes manières :
 
-- Utilisez les [éditeurs de ressources](../windows/resource-editors.md) pour inventer vos propres bitmaps. Ou utilisez les éditeurs de ressources pour assembler des bitmaps à partir des images. png (Portable Network Graphics) qui sont incluses dans Visual Studio et qui peuvent être téléchargées à partir de la [bibliothèque d’images Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Utilisez les [éditeurs de ressources](../windows/resource-editors.md) pour inventer vos propres bitmaps. Ou utilisez les éditeurs de ressources pour assembler des bitmaps à partir des images. png (Portable Network Graphics) qui sont incluses dans Visual Studio et qui peuvent être téléchargées à partir de la [bibliothèque d’images Visual Studio](/visualstudio/designers/the-visual-studio-image-library).
 
     Toutefois, l’interface utilisateur du **ruban** requiert que certaines bitmaps prennent en charge les images transparentes. Les bitmaps transparentes utilisent des pixels de 32 bits, où 24 bits spécifient les composants rouge, vert et bleu de la couleur, et 8 bits définissent un *canal alpha* qui spécifie la transparence de la couleur. Les éditeurs de ressources actuels peuvent afficher, mais pas modifier les bitmaps avec des pixels de 32 bits. Par conséquent, utilisez un éditeur d’images externes plutôt que les éditeurs de ressources pour manipuler les bitmaps transparentes.
 
@@ -153,7 +153,7 @@ Cette procédure pas à pas copie les fichiers de ressources de l’exemple cré
    > [!NOTE]
    > Étant donné que nous avons uniquement besoin des quatre premières images 16x16 (16x64), vous pouvez éventuellement rogner la largeur de la partie droite de cette image bitmap de 128 à 64.
 
-## <a name="adding-a-ribbon-resource-to-the-project"></a><a name="addribbon"></a>Ajout d’une ressource de ruban au projet
+## <a name="adding-a-ribbon-resource-to-the-project"></a><a name="addribbon"></a> Ajout d’une ressource de ruban au projet
 
 Lorsque vous convertissez une application qui utilise des menus vers une application qui utilise un ruban, vous n’êtes pas obligé de supprimer ou de désactiver les menus existants. Créez simplement une ressource de ruban, ajoutez des boutons de ruban, puis associez les nouveaux boutons aux éléments de menu existants. Bien que les menus ne soient plus visibles, les messages de la barre du ruban sont acheminés via les menus et les raccourcis des menus continuent de fonctionner.
 
@@ -206,7 +206,7 @@ Un ruban se compose du bouton d' **application** , qui est le grand bouton sur l
 
    1. Vous avez modifié les **boutons**. Cliquez sur **Fermer** pour quitter l' **éditeur d’éléments**.
 
-## <a name="creating-an-instance-of-the-ribbon-bar"></a><a name="createinstance"></a>Création d’une instance de la barre du ruban
+## <a name="creating-an-instance-of-the-ribbon-bar"></a><a name="createinstance"></a> Création d’une instance de la barre du ruban
 
 Les étapes suivantes montrent comment créer une instance de la barre du ruban au démarrage de votre application. Pour ajouter une barre de ruban à une application, déclarez la barre du ruban dans le fichier MainFrm. h. Ensuite, dans le fichier MainFrm. cpp, écrivez le code permettant de charger la ressource du ruban.
 
@@ -230,7 +230,7 @@ Les étapes suivantes montrent comment créer une instance de la barre du ruban 
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
     ```
 
-## <a name="customizing-the-ribbon-resource"></a><a name="addcategory"></a>Personnalisation de la ressource du ruban
+## <a name="customizing-the-ribbon-resource"></a><a name="addcategory"></a> Personnalisation de la ressource du ruban
 
 Maintenant que vous avez créé le bouton **application** , vous pouvez ajouter des éléments au ruban.
 
@@ -247,7 +247,7 @@ Maintenant que vous avez créé le bouton **application** , vous pouvez ajouter 
 
 1. Enregistrez les modifications, puis générez et exécutez l’application. L’application Scribble doit être affichée et elle doit avoir une barre de ruban en haut de la fenêtre au lieu d’une barre de menus. La barre du ruban doit avoir une catégorie, une **page d’habitation**et une **page d’hébergement** avec un panneau, **modifier**. Les boutons du ruban que vous avez ajoutés doivent être associés aux gestionnaires d’événements existants et les boutons **ouvrir**, **Fermer**, **Enregistrer**, **Imprimer**et **Effacer tout** doivent fonctionner comme prévu.
 
-## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a>Définition de l’apparence de l’application
+## <a name="setting-the-look-of-the-application"></a><a name="setlook"></a> Définition de l’apparence de l’application
 
 Un *Gestionnaire visuel* est un objet global qui contrôle tout le dessin pour une application. Étant donné que l’application Scribble d’origine utilise le style de l’interface utilisateur d’Office 2000, l’application peut paraître vieux. Vous pouvez réinitialiser l’application pour qu’elle utilise le gestionnaire visuel Office 2007 pour qu’elle ressemble à une application Office 2007.
 

@@ -7,18 +7,18 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202959"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836463"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
 Définit une classe, un opérateur et plusieurs modèles qui aident à allouer et libérer des objets.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<memory>
 
@@ -26,12 +26,12 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 
 ## <a name="members"></a>Membres
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[AddressOf](../standard-library/memory-functions.md#addressof)|Obtient l'adresse exacte d'un objet.|
-|[droite](../standard-library/memory-functions.md#align)|Retourne un pointeur vers une plage d'une taille donnée, en fonction de l'alignement et de l'adresse de départ.|
+|[align](../standard-library/memory-functions.md#align)|Retourne un pointeur vers une plage d'une taille donnée, en fonction de l'alignement et de l'adresse de départ.|
 |[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Crée un `shared_ptr` objet aux objets qui sont alloués et construits pour un type donné avec un allocateur spécifié.|
 |[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
 |[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
@@ -77,19 +77,19 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur ! =](../standard-library/memory-operators.md#op_neq)|Vérifie l'inégalité entre les objets allocateurs d'une classe spécifiée.|
 |[opérateur = =](../standard-library/memory-operators.md#op_eq_eq)|Vérifie l'égalité entre les objets allocateurs d'une classe spécifiée.|
 |[>opérateur =](../standard-library/memory-operators.md#op_gt_eq)|Vérifie si un objet allocateur est supérieur ou égal à un second objet allocateur d'une classe donnée.|
-|[<d’opérateur](../standard-library/memory-operators.md#op_lt)|Vérifie si un objet est inférieur à un second objet d'une classe donnée.|
+|[<d’opérateur ](../standard-library/memory-operators.md#op_lt)|Vérifie si un objet est inférieur à un second objet d'une classe donnée.|
 |[and\<=](../standard-library/memory-operators.md#op_gt_eq)|Vérifie si un objet est inférieur ou égal à un second objet d'une classe donnée.|
-|[>d’opérateur](../standard-library/memory-operators.md#op_gt)|Vérifie si un objet est supérieur à un second objet d'une classe donnée.|
-|[<<d’opérateur](../standard-library/memory-operators.md#op_lt_lt)|Outil d'insertion `shared_ptr`.|
+|[>d’opérateur ](../standard-library/memory-operators.md#op_gt)|Vérifie si un objet est supérieur à un second objet d'une classe donnée.|
+|[<<d’opérateur ](../standard-library/memory-operators.md#op_lt_lt)|Outil d'insertion `shared_ptr`.|
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nom|Description|
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Le modèle de classe décrit un objet qui gère l’allocation et la libération de stockage pour des tableaux d’objets de type **type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Décrit un objet qui détermine toutes les informations qui sont requises par un conteneur activé par allocateur.|
@@ -104,7 +104,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 
 ### <a name="structures"></a>Structures
 
-|||
+|Nom|Description|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
@@ -114,7 +114,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 
 ### <a name="specializations"></a>Spécialisations
 
-|||
+|Nom|Description|
 |-|-|
 |[allocator\<void>](../standard-library/allocator-void-class.md)|Spécialisation de l’allocateur de modèle de classe en type **`void`** , définissant uniquement les types de membres qui ont un sens dans ce contexte spécialisé.|
 
