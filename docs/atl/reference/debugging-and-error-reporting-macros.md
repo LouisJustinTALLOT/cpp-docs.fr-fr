@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 14c9298758e9d55445affaf5a65c81910a9ab151
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224225"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833476"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et de rapport d’erreurs
 
 Ces macros fournissent des fonctionnalités de débogage et de suivi utiles.
 
-|||
+|Nom|Description|
 |-|-|
 |[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Écrit, dans la fenêtre sortie, les fuites d’interface détectées quand `_Module.Term` est appelé.|
 |[_ATL_DEBUG_QI](#_atl_debug_qi)|Écrit tous les appels à dans `QueryInterface` la fenêtre sortie.|
@@ -32,7 +32,7 @@ Ces macros fournissent des fonctionnalités de débogage et de suivi utiles.
 |[ATLTRACE](#atltrace)|Signale les avertissements à un périphérique de sortie, tel que la fenêtre du débogueur, en fonction des indicateurs et des niveaux indiqués. Inclus pour la compatibilité descendante.|
 |[ATLTRACE2](#atltrace2)|Signale les avertissements à un périphérique de sortie, tel que la fenêtre du débogueur, en fonction des indicateurs et des niveaux indiqués.|
 
-## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
+## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a> _ATL_DEBUG_INTERFACES
 
 Définissez cette macro avant d’inclure des fichiers d’en-tête ATL pour suivre tous les `AddRef` `Release` appels et sur les interfaces de vos composants dans la fenêtre sortie.
 
@@ -63,7 +63,7 @@ Les informations fournies ici correspondent directement aux informations fournie
 > [!NOTE]
 > Les _ATL_DEBUG_INTERFACES peuvent être utilisés dans les versions commerciales.
 
-## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
+## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a> _ATL_DEBUG_QI
 
 Écrit tous les appels à dans `QueryInterface` la fenêtre sortie.
 
@@ -77,7 +77,7 @@ En cas d’échec d’un appel à `QueryInterface` , la fenêtre sortie affiche�
 
 *nom de l’interface* - `failed`
 
-## <a name="atlassert"></a><a name="atlassert"></a>ATLASSERT
+## <a name="atlassert"></a><a name="atlassert"></a> ATLASSERT
 
 La macro ATLASSERT effectue les mêmes fonctionnalités que la macro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) trouvée dans la bibliothèque Runtime C.
 
@@ -94,11 +94,11 @@ Expression (pointeurs inclus) qui prend une valeur différente de zéro ou 0.
 
 Dans les versions Debug, ATLASSERT évalue *booleanExpression* et génère un rapport de débogage lorsque le résultat est false.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldef. h
 
-## <a name="atlensure"></a><a name="atlensure"></a>ATLENSURE
+## <a name="atlensure"></a><a name="atlensure"></a> ATLENSURE
 
 Cette macro est utilisée pour valider les paramètres passés à une fonction.
 
@@ -131,11 +131,11 @@ La différence entre ATLENSURE et ATLASSERT est que ATLENSURE lève une exceptio
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
-## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a>ATLTRACENOTIMPL
+## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a> ATLTRACENOTIMPL
 
 Dans les versions Debug d’ATL, envoie la chaîne « *funcname* n’est pas implémentée » au périphérique de vidage et retourne E_NOTIMPL.
 
@@ -156,11 +156,11 @@ Dans les versions release, retourne simplement E_NOTIMPL.
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** ATLTRACE. h
 
-## <a name="atltrace"></a><a name="atltrace"></a>ATLTRACE
+## <a name="atltrace"></a><a name="atltrace"></a> ATLTRACE
 
 Signale les avertissements à un périphérique de sortie, tel que la fenêtre du débogueur, en fonction des indicateurs et des niveaux indiqués. Inclus pour la compatibilité descendante.
 
@@ -191,7 +191,7 @@ dans Chaîne mise en forme à envoyer au périphérique de vidage.
 
 Consultez [ATLTRACE2](#atltrace2) pour obtenir une description de ATLTRACE. ATLTRACE et ATLTRACE2 ont le même comportement, ATLTRACE est inclus à des fins de compatibilité descendante.
 
-## <a name="atltrace2"></a><a name="atltrace2"></a>ATLTRACE2
+## <a name="atltrace2"></a><a name="atltrace2"></a> ATLTRACE2
 
 Signale les avertissements à un périphérique de sortie, tel que la fenêtre du débogueur, en fonction des indicateurs et des niveaux indiqués.
 

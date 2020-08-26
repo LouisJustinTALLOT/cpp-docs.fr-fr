@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 5928a9bf8af12b2ce15a386871b845ef86cc7a2d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168764"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833840"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -55,7 +55,7 @@ Code utilisé pour copier ou déplacer des éléments.
 
 ### <a name="methods"></a>Méthodes
 
-|||
+|Fonction|Description|
 |-|-|
 |[Ajouter](#add)|Appelez cette méthode pour ajouter un élément à l’objet tableau.|
 |[Append](#append)|Appelez cette méthode pour ajouter le contenu d’un tableau à la fin d’un autre.|
@@ -78,32 +78,32 @@ Code utilisé pour copier ou déplacer des éléments.
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Opérateur|Description|
 |-|-|
-|[ &#91;&#93;d’opérateur](#operator_at)|Appelez cet opérateur pour retourner une référence à un élément dans le tableau.|
+|[ &#91;&#93;d’opérateur ](#operator_at)|Appelez cet opérateur pour retourner une référence à un élément dans le tableau.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Typedef|Description|
 |-|-|
 |[INARGTYPE](#inargtype)|Type de données à utiliser pour ajouter des éléments au tableau.|
 |[OUTARGTYPE](#outargtype)|Type de données à utiliser pour récupérer des éléments du tableau.|
 
 ## <a name="remarks"></a>Notes
 
-`CAtlArray`fournit des méthodes pour créer et gérer un tableau d’éléments d’un type défini par l’utilisateur. Bien qu’elles soient similaires aux tableaux C standard `CAtlArray` , l’objet peut se réduire et croître de manière dynamique selon les besoins. L’index de tableau commence toujours à la position 0, et la limite supérieure peut être fixe ou autorisée à se développer au fur et à mesure que de nouveaux éléments sont ajoutés.
+`CAtlArray` fournit des méthodes pour créer et gérer un tableau d’éléments d’un type défini par l’utilisateur. Bien qu’elles soient similaires aux tableaux C standard, l' `CAtlArray` objet peut se réduire et croître de manière dynamique selon les besoins. L’index de tableau commence toujours à la position 0, et la limite supérieure peut être fixe ou autorisée à se développer au fur et à mesure que de nouveaux éléments sont ajoutés.
 
 Pour les tableaux comportant un petit nombre d’éléments, la classe ATL [CSimpleArray](../../atl/reference/csimplearray-class.md) peut être utilisée.
 
-`CAtlArray`est étroitement lié à la classe `CArray` de MFC et fonctionnera dans un projet MFC, mais sans prise en charge de la sérialisation.
+`CAtlArray` est étroitement lié à la classe de MFC `CArray` et fonctionnera dans un projet MFC, mais sans prise en charge de la sérialisation.
 
 Pour plus d’informations, consultez [classes de collection ATL](../../atl/atl-collection-classes.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atlcoll. h
 
-## <a name="catlarrayadd"></a><a name="add"></a>CAtlArray :: Add
+## <a name="catlarrayadd"></a><a name="add"></a> CAtlArray :: Add
 
 Appelez cette méthode pour ajouter un élément à l’objet tableau.
 
@@ -117,7 +117,7 @@ size_t Add();
 *appartient*<br/>
 Élément à ajouter au tableau.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’index de l’élément ajouté.
 
@@ -129,7 +129,7 @@ Le nouvel élément est ajouté à la fin du tableau. Si aucun élément n’est
 
 [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]
 
-## <a name="catlarrayappend"></a><a name="append"></a>CAtlArray :: Append
+## <a name="catlarrayappend"></a><a name="append"></a> CAtlArray :: Append
 
 Appelez cette méthode pour ajouter le contenu d’un tableau à la fin d’un autre.
 
@@ -142,7 +142,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 *aSrc*<br/>
 Tableau à ajouter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’index du premier élément ajouté.
 
@@ -158,7 +158,7 @@ Dans les versions Debug, un ATLASSERT est déclenché si l' `CAtlArray` argument
 
 [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]
 
-## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a>CAtlArray :: AssertValid
+## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a> CAtlArray :: AssertValid
 
 Appelez cette méthode pour confirmer que l’objet tableau est valide.
 
@@ -174,7 +174,7 @@ Si l’objet tableau n’est pas valide, ATLASSERT lèvera une assertion. Cette 
 
 [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="catlarray"></a>CAtlArray :: CAtlArray
+## <a name="catlarraycatlarray"></a><a name="catlarray"></a> CAtlArray :: CAtlArray
 
 Constructeur.
 
@@ -190,7 +190,7 @@ Initialise l’objet tableau.
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="dtor"></a>CAtlArray :: ~ CAtlArray
+## <a name="catlarraycatlarray"></a><a name="dtor"></a> CAtlArray :: ~ CAtlArray
 
 Destructeur.
 
@@ -202,7 +202,7 @@ Destructeur.
 
 Libère toutes les ressources utilisées par l’objet de tableau.
 
-## <a name="catlarraycopy"></a><a name="copy"></a>CAtlArray :: Copy
+## <a name="catlarraycopy"></a><a name="copy"></a> CAtlArray :: Copy
 
 Appelez cette méthode pour copier les éléments d’un tableau dans un autre.
 
@@ -221,16 +221,16 @@ Appelez cette méthode pour remplacer les éléments d’un tableau par les él�
 
 Si le contenu existant du tableau doit être conservé, utilisez [CAtlArray :: Append](#append) à la place.
 
-Dans les versions Debug, un ATLASSERT est déclenché si l’objet `CAtlArray` existant n’est pas valide ou si *aSrc* fait référence au même objet. Dans les versions release, les arguments non valides peuvent entraîner un comportement imprévisible.
+Dans les versions Debug, un ATLASSERT est déclenché si l' `CAtlArray` objet existant n’est pas valide ou si *aSrc* fait référence au même objet. Dans les versions release, les arguments non valides peuvent entraîner un comportement imprévisible.
 
 > [!NOTE]
-> `CAtlArray::Copy`ne prend pas en charge les tableaux constitués d’éléments créés avec la classe [CAutoPtr](../../atl/reference/cautoptr-class.md) .
+> `CAtlArray::Copy` ne prend pas en charge les tableaux constitués d’éléments créés avec la classe [CAutoPtr](../../atl/reference/cautoptr-class.md) .
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]
 
-## <a name="catlarrayfreeextra"></a><a name="freeextra"></a>CAtlArray :: FreeExtra
+## <a name="catlarrayfreeextra"></a><a name="freeextra"></a> CAtlArray :: FreeExtra
 
 Appelez cette méthode pour supprimer tous les éléments vides du tableau.
 
@@ -244,7 +244,7 @@ Tous les éléments vides sont supprimés, mais la taille et la limite supérieu
 
 Dans les versions Debug, un ATLASSERT est déclenché si l’objet CAtlArray n’est pas valide ou si le tableau dépasse sa taille maximale.
 
-## <a name="catlarraygetat"></a><a name="getat"></a>CAtlArray :: GetAt
+## <a name="catlarraygetat"></a><a name="getat"></a> CAtlArray :: GetAt
 
 Appelez cette méthode pour récupérer un élément unique de l’objet de tableau.
 
@@ -258,7 +258,7 @@ E& GetAt(size_t iElement) throw();
 *iElement*<br/>
 Valeur d’index de l’élément de tableau à retourner.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une référence à l’élément de tableau requis.
 
@@ -270,7 +270,7 @@ Dans les versions Debug, un ATLASSERT est déclenché si *IElement* dépasse le 
 
 [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]
 
-## <a name="catlarraygetcount"></a><a name="getcount"></a>CAtlArray :: GetCount
+## <a name="catlarraygetcount"></a><a name="getcount"></a> CAtlArray :: GetCount
 
 Appelez cette méthode pour retourner le nombre d’éléments stockés dans le tableau.
 
@@ -278,19 +278,19 @@ Appelez cette méthode pour retourner le nombre d’éléments stockés dans le 
 size_t GetCount() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre d’éléments stockés dans le tableau.
 
 ### <a name="remarks"></a>Notes
 
-Comme le premier élément du tableau est à la position 0, la valeur retournée `GetCount` par est toujours égale à 1 par rapport à l’index le plus grand.
+Comme le premier élément du tableau est à la position 0, la valeur retournée par `GetCount` est toujours égale à 1 par rapport à l’index le plus grand.
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple pour [CAtlArray :: GetAt](#getat).
 
-## <a name="catlarraygetdata"></a><a name="getdata"></a>CAtlArray :: GetData
+## <a name="catlarraygetdata"></a><a name="getdata"></a> CAtlArray :: GetData
 
 Appelez cette méthode pour retourner un pointeur vers le premier élément du tableau.
 
@@ -299,7 +299,7 @@ E* GetData() throw();
 const E* GetData() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers l’emplacement de mémoire qui stocke le premier élément dans le tableau. Si aucun élément n’est disponible, la valeur NULL est retournée.
 
@@ -307,7 +307,7 @@ Retourne un pointeur vers l’emplacement de mémoire qui stocke le premier él�
 
 [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]
 
-## <a name="catlarrayinargtype"></a><a name="inargtype"></a>CAtlArray :: INARGTYPE
+## <a name="catlarrayinargtype"></a><a name="inargtype"></a> CAtlArray :: INARGTYPE
 
 Type de données à utiliser pour ajouter des éléments au tableau.
 
@@ -315,7 +315,7 @@ Type de données à utiliser pour ajouter des éléments au tableau.
 typedef ETraits::INARGTYPE INARGTYPE;
 ```
 
-## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a>CAtlArray :: InsertArrayAt
+## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a> CAtlArray :: InsertArrayAt
 
 Appelez cette méthode pour insérer un tableau dans un autre.
 
@@ -338,13 +338,13 @@ Les éléments du tableau *paNew* sont copiés dans l’objet tableau, en commen
 Dans les versions Debug, un ATLASSERT est déclenché si l' `CAtlArray` objet n’est pas valide ou si le pointeur *paNew* a une valeur null ou n’est pas valide.
 
 > [!NOTE]
-> `CAtlArray::InsertArrayAt`ne prend pas en charge les tableaux constitués d’éléments créés avec la classe [CAutoPtr](../../atl/reference/cautoptr-class.md) .
+> `CAtlArray::InsertArrayAt` ne prend pas en charge les tableaux constitués d’éléments créés avec la classe [CAutoPtr](../../atl/reference/cautoptr-class.md) .
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]
 
-## <a name="catlarrayinsertat"></a><a name="insertat"></a>CAtlArray :: InsertAt
+## <a name="catlarrayinsertat"></a><a name="insertat"></a> CAtlArray :: InsertAt
 
 Appelez cette méthode pour insérer un nouvel élément (ou plusieurs copies d’un élément) dans l’objet tableau.
 
@@ -373,7 +373,7 @@ Dans les versions Debug, un ATLASSERT est déclenché si l' `CAtlArray` objet n�
 
 [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]
 
-## <a name="catlarrayisempty"></a><a name="isempty"></a>CAtlArray :: IsEmpty
+## <a name="catlarrayisempty"></a><a name="isempty"></a> CAtlArray :: IsEmpty
 
 Appelez cette méthode pour tester si le tableau est vide.
 
@@ -381,7 +381,7 @@ Appelez cette méthode pour tester si le tableau est vide.
 bool IsEmpty() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true si le tableau est vide ; sinon, false.
 
@@ -393,7 +393,7 @@ Le tableau est dit vide s’il ne contient aucun élément. Par conséquent, mê
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-## <a name="catlarrayoperator-"></a><a name="operator_at"></a>CAtlArray :: Operator []
+## <a name="catlarrayoperator-"></a><a name="operator_at"></a> CAtlArray :: Operator []
 
 Appelez cet opérateur pour retourner une référence à un élément dans le tableau.
 
@@ -407,7 +407,7 @@ const E& operator[](size_t ielement) const throw();
 *iElement*<br/>
 Valeur d’index de l’élément de tableau à retourner.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une référence à l’élément de tableau requis.
 
@@ -417,7 +417,7 @@ Exécute une fonction similaire à [CAtlArray :: GetAt](#getat). Contrairement 
 
 Dans les versions Debug, un ATLASSERT est déclenché si *IElement* dépasse le nombre total d’éléments dans le tableau. Dans les versions commerciales, un paramètre non valide peut provoquer des résultats imprévisibles.
 
-## <a name="catlarrayoutargtype"></a><a name="outargtype"></a>CAtlArray :: OUTARGTYPE
+## <a name="catlarrayoutargtype"></a><a name="outargtype"></a> CAtlArray :: OUTARGTYPE
 
 Type de données à utiliser pour récupérer des éléments du tableau.
 
@@ -425,7 +425,7 @@ Type de données à utiliser pour récupérer des éléments du tableau.
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```
 
-## <a name="catlarrayremoveall"></a><a name="removeall"></a>CAtlArray :: RemoveAll
+## <a name="catlarrayremoveall"></a><a name="removeall"></a> CAtlArray :: RemoveAll
 
 Appelez cette méthode pour supprimer tous les éléments de l’objet tableau.
 
@@ -443,7 +443,7 @@ Cette méthode appelle [CAtlArray :: SetCount](#setcount) pour redimensionner l
 
 Consultez l’exemple pour [CAtlArray :: IsEmpty](#isempty).
 
-## <a name="catlarrayremoveat"></a><a name="removeat"></a>CAtlArray :: RemoveAt
+## <a name="catlarrayremoveat"></a><a name="removeat"></a> CAtlArray :: RemoveAt
 
 Appelez cette méthode pour supprimer un ou plusieurs éléments du tableau.
 
@@ -469,7 +469,7 @@ Dans les versions Debug, un ATLASSERT est déclenché si l' `CAtlArray` objet n�
 
 [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]
 
-## <a name="catlarraysetat"></a><a name="setat"></a>CAtlArray :: SetAt
+## <a name="catlarraysetat"></a><a name="setat"></a> CAtlArray :: SetAt
 
 Appelez cette méthode pour définir la valeur d’un élément dans l’objet tableau.
 
@@ -493,7 +493,7 @@ Dans les versions Debug, un ATLASSERT est déclenché si *IElement* dépasse le 
 
 Consultez l’exemple pour [CAtlArray :: GetAt](#getat).
 
-## <a name="catlarraysetcount"></a><a name="setcount"></a>CAtlArray :: SetCount
+## <a name="catlarraysetcount"></a><a name="setcount"></a> CAtlArray :: SetCount
 
 Appelez cette méthode pour définir la taille de l’objet tableau.
 
@@ -509,7 +509,7 @@ Taille requise du tableau.
 *nGrowBy*<br/>
 Valeur utilisée pour déterminer la taille de la mémoire tampon. La valeur-1 provoque l’utilisation d’une valeur calculée en interne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true si le tableau est correctement redimensionné ; sinon, false.
 
@@ -523,7 +523,7 @@ Utilisez cette méthode pour définir la taille du tableau avant de l’utiliser
 
 Consultez l’exemple pour [CAtlArray :: GetData](#getdata).
 
-## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a>CAtlArray :: SetAtGrow
+## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a> CAtlArray :: SetAtGrow
 
 Appelez cette méthode pour définir la valeur d’un élément dans l’objet de tableau, en développant le tableau selon les besoins.
 

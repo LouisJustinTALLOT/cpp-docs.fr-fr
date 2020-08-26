@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 1f2c8cce234910fbf69a35c8f8ef2fb0fe2a41c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e652b18b723e2a58c1f4673baf180a14db93477
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203871"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834776"
 ---
 # <a name="auto_ptr-class"></a>auto_ptr, classe
 
@@ -71,19 +71,19 @@ Vous pouvez passer un objet `auto_ptr<Type>` par valeur en tant qu'argument à u
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[auto_ptr](#auto_ptr)|Constructeur des objets de type `auto_ptr`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[element_type](#element_type)|Le type est un synonyme du paramètre de modèle `Type`.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[get](#get)|La fonction membre retourne le pointeur stocké `myptr`.|
 |[3/05](#release)|Le membre remplace le pointeur stocké `myptr` par un pointeur null et il retourne le pointeur stocké précédemment.|
@@ -91,15 +91,15 @@ Vous pouvez passer un objet `auto_ptr<Type>` par valeur en tant qu'argument à u
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur =](#op_eq)|Opérateur d'assignation qui transfère la propriété d'un objet `auto_ptr` à un autre.|
 |[and](#op_star)|Opérateur de déréférencement pour les objets de type `auto_ptr`.|
-|[>Operator](#op_arrow)|Opérateur pour autoriser l'accès aux membres.|
+|[>Operator ](#op_arrow)|Opérateur pour autoriser l'accès aux membres.|
 |[opérateur auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Effectue un cast d'un type de `auto_ptr` vers un autre type de `auto_ptr`.|
 |[opérateur auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Effectue un cast d'un `auto_ptr` vers un `auto_ptr_ref`.|
 
-### <a name="auto_ptr"></a><a name="auto_ptr"></a>auto_ptr
+### <a name="auto_ptr"></a><a name="auto_ptr"></a> auto_ptr
 
 Constructeur des objets de type `auto_ptr`.
 
@@ -126,7 +126,7 @@ L’objet `auto_ptr` doit être copié par le constructeur.
 
 Le premier constructeur stocke *ptr* dans `myptr` , le pointeur stocké vers l’objet alloué. Le deuxième constructeur transfère la propriété du pointeur stocké à *droite*, en stockant *Right*. [version](#release) de `myptr` .
 
-Le troisième constructeur se comporte de la même façon que le second, sauf qu’il stocke `right` . `ref`. `release`dans `myptr` , où `ref` est la référence stockée dans `right` .
+Le troisième constructeur se comporte de la même façon que le second, sauf qu’il stocke `right` . `ref`. `release` dans `myptr` , où `ref` est la référence stockée dans `right` .
 
 Le constructeur de modèle se comporte de la même façon que le deuxième constructeur, à condition qu’un pointeur vers `Other` puisse être converti implicitement en pointeur vers `Type` .
 
@@ -189,7 +189,7 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 Le type est un synonyme du paramètre de modèle `Type`.
 
@@ -197,7 +197,7 @@ Le type est un synonyme du paramètre de modèle `Type`.
 typedef Type element  _type;
 ```
 
-### <a name="get"></a><a name="get"></a>Télécharger
+### <a name="get"></a><a name="get"></a> Télécharger
 
 La fonction membre retourne le pointeur stocké `myptr`.
 
@@ -205,7 +205,7 @@ La fonction membre retourne le pointeur stocké `myptr`.
 Type *get() const throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur stocké `myptr` .
 
@@ -256,7 +256,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>opérateur =
+### <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Opérateur d'assignation qui transfère la propriété d'un objet `auto_ptr` à un autre.
 
@@ -270,9 +270,9 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 #### <a name="parameters"></a>Paramètres
 
 *Oui*\
-Objet de type `auto_ptr`.
+Objet de type `auto_ptr`.
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Référence à un objet de type `auto_ptr<Type>`.
 
@@ -284,7 +284,7 @@ L’assignation évalue l’expression `delete myptr` , mais uniquement si le po
 
 Pour obtenir un exemple d’utilisation de l’opérateur membre, consultez [auto_ptr](#auto_ptr).
 
-### <a name="operator"></a><a name="op_star"></a>and
+### <a name="operator"></a><a name="op_star"></a> and
 
 Opérateur de déréférencement pour les objets de type `auto_ptr`.
 
@@ -292,7 +292,7 @@ Opérateur de déréférencement pour les objets de type `auto_ptr`.
 Type& operator*() const throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Référence à un objet de type `Type` dont le pointeur est propriétaire.
 
@@ -304,7 +304,7 @@ L’opérateur d’indirection retourne `*`[get](#get). Par conséquent, le poin
 
 Pour obtenir un exemple d’utilisation de la fonction membre, consultez [auto_ptr](#auto_ptr).
 
-### <a name="operator-gt"></a><a name="op_arrow"></a>and&gt;
+### <a name="operator-gt"></a><a name="op_arrow"></a> and&gt;
 
 Opérateur pour autoriser l'accès aux membres.
 
@@ -312,7 +312,7 @@ Opérateur pour autoriser l'accès aux membres.
 Type * operator->() const throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Membre de l’objet qui `auto_ptr` possède.
 
@@ -324,7 +324,7 @@ L' [opérateur de sélection retourne](#get) `( )` la valeur, afin que le membre
 
 Pour obtenir un exemple d’utilisation de la fonction membre, consultez [auto_ptr](#auto_ptr).
 
-### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a>opérateur auto_ptr &lt; autres&gt;
+### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a> opérateur auto_ptr &lt; autres&gt;
 
 Effectue un cast d'un type de `auto_ptr` vers un autre type de `auto_ptr`.
 
@@ -333,7 +333,7 @@ template <class Other>
 operator auto _ptr<Other>() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 L’opérateur de conversion de type retourne `auto_ptr` \< **Other**> ( ** \* This**).
 
@@ -354,7 +354,7 @@ int main()
 }
 ```
 
-### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a>opérateur auto_ptr_ref &lt; autres&gt;
+### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a> opérateur auto_ptr_ref &lt; autres&gt;
 
 Effectue un cast d'un `auto_ptr` vers un `auto_ptr_ref`.
 
@@ -363,7 +363,7 @@ template <class Other>
 operator auto _ptr  _ref<Other>() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 L’opérateur de cast de type retourne **auto_ptr_ref** \< **Other**> ( ** \* This**).
 
@@ -415,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-### <a name="release"></a><a name="release"></a>3/05
+### <a name="release"></a><a name="release"></a> 3/05
 
 Le membre remplace le pointeur stocké `myptr` par un pointeur null et il retourne le pointeur stocké précédemment.
 
@@ -423,7 +423,7 @@ Le membre remplace le pointeur stocké `myptr` par un pointeur null et il retour
 Type *release() throw();
 ```
 
-#### <a name="return-value"></a>Valeur de retour
+#### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur stocké précédemment.
 
@@ -477,7 +477,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="reset"></a><a name="reset"></a>initialisation
+### <a name="reset"></a><a name="reset"></a> initialisation
 
 La fonction membre évalue l’expression `delete myptr` , mais uniquement si la valeur de pointeur stocké `myptr` change à la suite d’un appel de fonction. Elle remplace ensuite le pointeur stocké par `ptr`.
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 6764e37b994ed76d27f88e3bdc8ec137d5e2f600
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59911d8a61a05de9ec92f4152b2835da3cf82f7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232987"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832722"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution, classe
 
@@ -89,10 +89,8 @@ Cette distribution d'échantillonnage présente des intervalles de largeur varia
 
 Le tableau suivant contient des liens vers des articles sur différents membres :
 
-||||
-|-|-|-|
-|[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|
-|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|
+[piecewise_constant_distribution](#piecewise_constant_distribution)\
+[param_type](#param_type)
 
 La fonction de propriété `intervals()` retourne un `vector<result_type>` avec l'ensemble d'intervalles stockés de la distribution.
 
@@ -212,13 +210,13 @@ Distribution for 100 samples:
     14-15 ::::::::
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution ::p iecewise_constant_distribution
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a> piecewise_constant_distribution ::p iecewise_constant_distribution
 
 Construit la distribution.
 
@@ -318,7 +316,7 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 construit un objet de distribution à l’aide de *param* comme structure de paramètre stockée.
 
-## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution ::p aram_type
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a> piecewise_constant_distribution ::p aram_type
 
 Stocke tous les paramètres de la distribution.
 

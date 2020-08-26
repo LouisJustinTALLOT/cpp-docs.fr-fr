@@ -1,5 +1,5 @@
 ---
-title: IAxWinHostWindow Interface
+title: Interface IAxWinHostWindow
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindow
@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: ebecc611660a788ce59bb11beb95bd60eacaf01b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 44681b94e0bd1dfd757ebfa19f83074785dd95f5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330000"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833372"
 ---
-# <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow Interface
+# <a name="iaxwinhostwindow-interface"></a>Interface IAxWinHostWindow
 
 Cette interface fournit des méthodes pour manipuler un contrôle et son objet hôte.
 
@@ -37,31 +37,31 @@ interface IAxWinHostWindow : IUnknown
 
 ### <a name="methods"></a>Méthodes
 
-|||
+|Nom|Description|
 |-|-|
-|[AttachControl (en)](#attachcontrol)|Attache un contrôle existant à l’objet hôte.|
-|[CreateControl](#createcontrol)|Crée un contrôle et le fixe à l’objet hôte.|
-|[CreateControlEx](#createcontrolex)|Crée un contrôle, l’attache à l’objet hôte et installe en option un gestionnaire d’événements.|
-|[QueryControl](#querycontrol)|Retourne un pointeur d’interface au contrôle hébergé.|
-|[SetExternalDispatch SetExternalDispatch SetExternalDispatch SetEx](#setexternaldispatch)|Définit l’interface externe. `IDispatch`|
-|[SetExternalUIHandler SetExternalUIHandler SetExternalUIHandler SetEx](#setexternaluihandler)|Définit l’interface externe. `IDocHostUIHandlerDispatch`|
+|[AttachControl](#attachcontrol)|Attache un contrôle existant à l’objet hôte.|
+|[CreateControl](#createcontrol)|Crée un contrôle et l’attache à l’objet hôte.|
+|[CreateControlEx](#createcontrolex)|Crée un contrôle, l’attache à l’objet hôte et configure éventuellement un gestionnaire d’événements.|
+|[QueryControl](#querycontrol)|Retourne un pointeur d’interface vers le contrôle hébergé.|
+|[SetExternalDispatch](#setexternaldispatch)|Définit l' `IDispatch` interface externe.|
+|[SetExternalUIHandler](#setexternaluihandler)|Définit l' `IDocHostUIHandlerDispatch` interface externe.|
 
 ## <a name="remarks"></a>Notes
 
-Cette interface est exposée par les objets d’hébergement de contrôle ActiveX d’ATL. Appelez les méthodes de cette interface pour créer et/ou attacher un contrôle à l’objet hôte, pour obtenir une interface à partir d’un contrôle hébergé, ou pour définir le dispinterface externe ou le gestionnaire d’interface utilisateur pour une utilisation lors de l’hébergement du navigateur Web.
+Cette interface est exposée par les objets hébergeant le contrôle ActiveX de l’ATL. Appelez les méthodes sur cette interface pour créer et/ou attacher un contrôle à l’objet hôte, pour obtenir une interface à partir d’un contrôle hébergé ou pour définir la dispinterface externe ou le gestionnaire d’interface utilisateur à utiliser lors de l’hébergement du navigateur Web.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-La définition de cette interface est disponible sous forme d’IDL ou de C, comme indiqué ci-dessous.
+La définition de cette interface est disponible en tant que IDL ou C++, comme indiqué ci-dessous.
 
 |Type de définition|Fichier|
 |---------------------|----------|
-|Idl|ATLIFace.idl|
-|C++|ATLIFace.h (également inclus dans ATLBase.h)|
+|MIDL|ATLIFace. idl|
+|C++|ATLIFace. h (également inclus dans ATLBase. h)|
 
-## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>IAxWinHostWindow::AttachControl
+## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a> IAxWinHostWindow::AttachControl
 
-Attache un contrôle existant (et précédemment initialisé) à l’objet hôte à l’aide de la fenêtre identifiée par *hWnd*.
+Joint un contrôle existant (et précédemment initialisé) à l’objet hôte à l’aide de la fenêtre identifiée par *HWND*.
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -69,19 +69,19 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnkControl (en)*<br/>
-[dans] Un pointeur `IUnknown` à l’interface du contrôle à attacher à l’objet hôte.
+*pUnkControl*<br/>
+dans Pointeur vers l' `IUnknown` interface du contrôle à attacher à l’objet hôte.
 
 *hWnd*<br/>
-[dans] Une poignée à la fenêtre à utiliser pour l’hébergement.
+dans Handle de la fenêtre à utiliser pour l’hébergement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
-## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>IAxWinHostWindow::CreateControl
+## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a> IAxWinHostWindow :: CreateControl
 
-Crée un contrôle, l’initialise, et l’héberge dans la fenêtre identifiée par *hWnd*.
+Crée un contrôle, l’initialise et l’héberge dans la fenêtre identifiée par *HWND*.
 
 ```
 STDMETHOD(CreateControl)(
@@ -92,30 +92,30 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpTricsData (en)*<br/>
-[dans] Une chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), ProgID, URL, ou HTML brut (préfixé par **MSHTML:**).
+*lpTricsData*<br/>
+dans Chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), ProgID, URL ou HTML brut (préfixé par **MSHTML :**).
 
 *hWnd*<br/>
-[dans] Une poignée à la fenêtre à utiliser pour l’hébergement.
+dans Handle de la fenêtre à utiliser pour l’hébergement.
 
 *pStream*<br/>
-[dans] Un pointeur d’interface pour un flux contenant des données d’initialisation pour le contrôle. Sa valeur peut être NULL.
+dans Pointeur d’interface pour un flux contenant des données d’initialisation pour le contrôle. Sa valeur peut être NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette fenêtre sera sous-classée par l’objet hôte exposant cette interface afin que les messages puissent être réfléchis au contrôle et que d’autres fonctionnalités de conteneur fonctionneront.
+Cette fenêtre sera sous-classée par l’objet hôte exposant cette interface afin que les messages puissent être reflétés dans le contrôle et que d’autres fonctionnalités de conteneur fonctionnent.
 
-Appeler cette méthode équivaut à appeler [IAxWinHostWindow::CreateControlEx](#createcontrolex).
+L’appel de cette méthode équivaut à appeler [IAxWinHostWindow :: CreateControlEx](#createcontrolex).
 
-Pour créer un contrôle ActiveX sous licence, voir [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
+Pour créer un contrôle ActiveX sous licence, consultez [IAxWinHostWindowLic :: CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
 
-## <a name="iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx
+## <a name="iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a> IAxWinHostWindow::CreateControlEx
 
-Crée un contrôle ActiveX, l’initialise, et l’héberge dans la fenêtre spécifiée, similaire à [IAxWinHostWindow::CreateControl](#createcontrol).
+Crée un contrôle ActiveX, l’initialise et l’héberge dans la fenêtre spécifiée, similaire à [IAxWinHostWindow :: CreateControl](#createcontrol).
 
 ```
 STDMETHOD(CreateControlEx)(
@@ -129,35 +129,35 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpTricsData (en)*<br/>
-[dans] Une chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), ProgID, URL, ou HTML brut (préfixé avec **MSHTML:**).
+*lpTricsData*<br/>
+dans Chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), ProgID, URL ou HTML brut (avec le préfixe **MSHTML :**).
 
 *hWnd*<br/>
-[dans] Une poignée à la fenêtre à utiliser pour l’hébergement.
+dans Handle de la fenêtre à utiliser pour l’hébergement.
 
 *pStream*<br/>
-[dans] Un pointeur d’interface pour un flux contenant des données d’initialisation pour le contrôle. Sa valeur peut être NULL.
+dans Pointeur d’interface pour un flux contenant des données d’initialisation pour le contrôle. Sa valeur peut être NULL.
 
 *ppUnk*<br/>
-[out] L’adresse d’un pointeur qui recevra l’interface `IUnknown` du contrôle créé. Sa valeur peut être NULL.
+à Adresse d’un pointeur qui recevra l' `IUnknown` interface du contrôle créé. Sa valeur peut être NULL.
 
 *riidAdvise*<br/>
-[dans] L’identifiant d’interface d’une interface sortante sur l’objet contenu. Peut être IID_NULL.
+dans Identificateur d’interface d’une interface sortante sur l’objet contenu. Peut être IID_NULL.
 
-*punkAdvise (en)*<br/>
-[dans] Un pointeur `IUnknown` à l’interface de l’objet de l’évier `iidSink`à connecter au point de connexion sur l’objet contenu spécifié par .
+*punkAdvise*<br/>
+dans Pointeur vers l' `IUnknown` interface de l’objet récepteur à connecter au point de connexion sur l’objet contenu spécifié par `iidSink` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Contrairement `CreateControl` à `CreateControlEx` la méthode, vous permet également de recevoir un pointeur d’interface pour le contrôle nouvellement créé et mettre en place un évier d’événement pour recevoir des événements tirés par le contrôle.
+Contrairement à la `CreateControl` méthode, `CreateControlEx` vous permet également de recevoir un pointeur d’interface vers le contrôle nouvellement créé et de configurer un récepteur d’événements pour recevoir des événements déclenchés par le contrôle.
 
-Pour créer un contrôle ActiveX sous licence, voir [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
+Pour créer un contrôle ActiveX sous licence, consultez [IAxWinHostWindowLic :: CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
 
-## <a name="iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>IAxWinHostWindow::QueryControl
+## <a name="iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a> IAxWinHostWindow::QueryControl
 
 Retourne le pointeur d’interface spécifié fourni par le contrôle hébergé.
 
@@ -170,18 +170,18 @@ STDMETHOD(QueryControl)(
 ### <a name="parameters"></a>Paramètres
 
 *riid*<br/>
-[dans] L’ID d’une interface sur le contrôle demandé.
+dans ID d’une interface sur le contrôle demandé.
 
 *ppvObject*<br/>
-[out] L’adresse d’un pointeur qui recevra l’interface spécifiée du contrôle créé.
+à Adresse d’un pointeur qui recevra l’interface spécifiée du contrôle créé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
-## <a name="iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch
+## <a name="iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a> IAxWinHostWindow::SetExternalDispatch
 
-Définit le dispinterface externe, qui est disponible pour les contrôles contenus par le [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) méthode.
+Définit la dispinterface externe, qui est disponible pour les contrôles contenus par le biais de la méthode [IDocHostUIHandlerDispatch :: GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) .
 
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -190,15 +190,15 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="parameters"></a>Paramètres
 
 *pDisp*<br/>
-[dans] Un pointeur `IDispatch` à une interface.
+dans Pointeur vers une `IDispatch` interface.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
-## <a name="iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler
+## <a name="iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a> IAxWinHostWindow::SetExternalUIHandler
 
-Appelez cette fonction pour définir l’interface externe [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) pour l’objet. `CAxWindow`
+Appelez cette fonction pour définir l’interface [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) externe de l' `CAxWindow` objet.
 
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -207,18 +207,18 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="parameters"></a>Paramètres
 
 *pDisp*<br/>
-[dans] Un pointeur `IDocHostUIHandlerDispatch` à une interface.
+dans Pointeur vers une `IDocHostUIHandlerDispatch` interface.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est utilisée par les contrôles (tels que le contrôle du `IDocHostUIHandlerDispatch` navigateur Web) qui interrogent le site de l’hôte pour l’interface.
+Cette fonction est utilisée par les contrôles (tels que le contrôle de navigateur Web) qui interrogent le site de l’hôte pour l' `IDocHostUIHandlerDispatch` interface.
 
 ## <a name="see-also"></a>Voir aussi
 
-[IAxWinAmbientDispatch Interface](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[Interface IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)

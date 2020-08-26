@@ -16,18 +16,18 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: d8c9538c9f3d889360c0527ba538e9e091df0755
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 90b80aaa34456677f2d7c2dd5717ae6837f4523f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229959"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833567"
 ---
 # <a name="compiler-options-macros"></a>Macros d’options du compilateur
 
 Ces macros contrôlent des fonctionnalités de compilateur spécifiques.
 
-|||
+|Macro|Description|
 |-|-|
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Symbole qui active des erreurs dans les projets convertis à partir de versions précédentes d’ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Définissez si un ou plusieurs de vos objets utilisent le thread cloisonné.|
@@ -41,7 +41,7 @@ Ces macros contrôlent des fonctionnalités de compilateur spécifiques.
 |[ATL_NOINLINE](#atl_noinline)|Un symbole qui indique qu’une fonction ne doit pas être Inline.|
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Définissez si tous vos objets utilisent le modèle de thread unique.|
 
-## <a name="_atl_all_warnings"></a><a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS
+## <a name="_atl_all_warnings"></a><a name="_atl_all_warnings"></a> _ATL_ALL_WARNINGS
 
 Symbole qui active des erreurs dans les projets convertis à partir de versions précédentes d’ATL.
 
@@ -77,7 +77,7 @@ Si cette `#define` valeur est ajoutée, les en-têtes ATL sont vigilants pour co
 
 Les nouveaux projets sont `#define` définis dans *pch. h* (*stdafx. h* dans Visual Studio 2017 et versions antérieures) par défaut.
 
-## <a name="_atl_apartment_threaded"></a><a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED
+## <a name="_atl_apartment_threaded"></a><a name="_atl_apartment_threaded"></a> _ATL_APARTMENT_THREADED
 
 Définissez si un ou plusieurs de vos objets utilisent le thread cloisonné.
 
@@ -89,7 +89,7 @@ _ATL_APARTMENT_THREADED
 
 Spécifie le thread cloisonné. Consultez [spécification du modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md) pour d’autres options de Threading, et [options, Assistant objet simple ATL](../../atl/reference/options-atl-simple-object-wizard.md) pour obtenir une description des modèles de thread disponibles pour un objet ATL.
 
-## <a name="_atl_cstring_explicit_constructors"></a><a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS
+## <a name="_atl_cstring_explicit_constructors"></a><a name="_atl_cstring_explicit_constructors"></a> _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 Rend certains `CString` constructeurs explicites, ce qui évite les conversions non intentionnelles.
 
@@ -103,7 +103,7 @@ Quand ce constructeur est défini, tous les constructeurs CString qui acceptent 
 
 En utilisant la macro _T sur tous les arguments de chaîne de constructeur, vous pouvez définir _ATL_CSTRING_EXPLICIT_CONSTRUCTORS et éviter les erreurs de compilation, que _UNICODE soit défini ou non.
 
-## <a name="_atl_enable_ptm_warning"></a><a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING
+## <a name="_atl_enable_ptm_warning"></a><a name="_atl_enable_ptm_warning"></a> _ATL_ENABLE_PTM_WARNING
 
 Définissez cette macro afin de forcer l’utilisation de la syntaxe conforme à la norme ANSI C++ pour les fonctions de pointeur vers membre. L’utilisation de cette macro entraîne la génération de l’erreur du compilateur C4867 quand une syntaxe non standard est utilisée pour initialiser un pointeur vers une fonction membre.
 
@@ -127,7 +127,7 @@ Doit être remplacé par :
 
 Pour les macros cartographiques, ajoutez le caractère « & ». Vous ne devez pas rajouter le caractère dans votre code.
 
-## <a name="_atl_free_threaded"></a><a name="_atl_free_threaded"></a>_ATL_FREE_THREADED
+## <a name="_atl_free_threaded"></a><a name="_atl_free_threaded"></a> _ATL_FREE_THREADED
 
 Définissez si un ou plusieurs de vos objets utilisent le Threading libre ou neutre.
 
@@ -139,7 +139,7 @@ _ATL_FREE_THREADED
 
 Spécifie le Threading libre. Le Threading libre est équivalent à un modèle multithread cloisonné. Consultez [spécification du modèle de thread du projet](../../atl/specifying-the-threading-model-for-a-project-atl.md) pour d’autres options de Threading, et [options, Assistant objet simple ATL](../../atl/reference/options-atl-simple-object-wizard.md) pour obtenir une description des modèles de thread disponibles pour un objet ATL.
 
-## <a name="_atl_multi_threaded"></a><a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED
+## <a name="_atl_multi_threaded"></a><a name="_atl_multi_threaded"></a> _ATL_MULTI_THREADED
 
 Symbole qui indique que le projet aura des objets marqués comme étant à la fois, libres ou neutres.
 
@@ -151,7 +151,7 @@ _ATL_MULTI_THREADED
 
 Si ce symbole est défini, ATL extrait du code qui synchronisera correctement l’accès aux données globales. Le nouveau code doit utiliser la macro équivalente [_ATL_FREE_THREADED](#_atl_free_threaded) à la place.
 
-## <a name="_atl_no_automatic_namespace"></a><a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE
+## <a name="_atl_no_automatic_namespace"></a><a name="_atl_no_automatic_namespace"></a> _ATL_NO_AUTOMATIC_NAMESPACE
 
 Symbole qui empêche l’utilisation par défaut de l’espace de noms comme ATL.
 
@@ -163,7 +163,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 
 Si ce symbole n’est pas défini, y compris atlbase. h effectue **l’utilisation d’un espace de noms ATL** par défaut, ce qui peut entraîner des conflits de noms. Pour éviter cela, définissez ce symbole.
 
-## <a name="_atl_no_com_support"></a><a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT
+## <a name="_atl_no_com_support"></a><a name="_atl_no_com_support"></a> _ATL_NO_COM_SUPPORT
 
 Symbole qui empêche le code lié à COM d’être compilé avec votre projet.
 
@@ -171,7 +171,7 @@ Symbole qui empêche le code lié à COM d’être compilé avec votre projet.
 _ATL_NO_COM_SUPPORT
 ```
 
-## <a name="atl_no_vtable"></a><a name="atl_no_vtable"></a>ATL_NO_VTABLE
+## <a name="atl_no_vtable"></a><a name="atl_no_vtable"></a> ATL_NO_VTABLE
 
 Symbole qui empêche l’initialisation du pointeur vtable dans le constructeur et le destructeur de la classe.
 
@@ -187,7 +187,7 @@ Si le pointeur vtable ne peut pas être initialisé dans le constructeur et le d
 
 [!code-cpp[NVC_ATL_COM#53](../../atl/codesnippet/cpp/compiler-options-macros_4.h)]
 
-## <a name="atl_noinline"></a><a name="atl_noinline"></a>ATL_NOINLINE
+## <a name="atl_noinline"></a><a name="atl_noinline"></a> ATL_NOINLINE
 
 Symbole qui indique qu’une fonction ne doit pas être Inline.
 
@@ -208,7 +208,7 @@ Fonction qui ne doit pas être Inline.
 
 Utilisez ce symbole si vous souhaitez vous assurer qu’une fonction n’est pas Inline par le compilateur, même si elle doit être déclarée comme Inline pour pouvoir être placée dans un fichier d’en-tête. Développe à **`__declspec(noinline)`** .
 
-## <a name="_atl_single_threaded"></a><a name="_atl_single_threaded"></a>_ATL_SINGLE_THREADED
+## <a name="_atl_single_threaded"></a><a name="_atl_single_threaded"></a> _ATL_SINGLE_THREADED
 
 Définir si tous vos objets utilisent le modèle de thread unique
 

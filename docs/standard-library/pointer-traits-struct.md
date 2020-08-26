@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1ed8d61a52c11ab48fe6f762ff342ea88d107b14
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687136"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832696"
 ---
 # <a name="pointer_traits-struct"></a>pointer_traits, struct
 
-Fournit les informations nécessaires à un objet de type `allocator_traits` pour décrire un allocateur avec le type pointeur `Ptr`.
+Fournit les informations nécessaires à un objet de type `allocator_traits` pour décrire un allocateur avec le type pointeur `Ptr` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,9 +50,9 @@ struct Ptr
 
 ## <a name="members"></a>Membres
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |`typedef T2 difference_type`|Le type `T2` est `Ptr::difference_type` si ce type existe. Sinon, le type est `ptrdiff_t`. Si `Ptr` est un pointeur brut, le type est `ptrdiff_t`.|
 |`typedef T1 element_type`|Le type `T1` est `Ptr::element_type` si ce type existe. Sinon, le type est `Ty`. Si `Ptr` est un pointeur brut, le type est `Ty`.|
@@ -60,17 +60,17 @@ struct Ptr
 
 ### <a name="structs"></a>Structures
 
-|||
+|Nom|Description|
 |-|-|
 |`rebind`|Tente de convertir le type de pointeur sous-jacent en un type spécifié.|
 
 ### <a name="methods"></a>Méthodes
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|Convertit une référence arbitraire à un objet de la classe `Ptr`.|
 
-### <a name="pointer_to"></a>pointer_to
+### <a name="pointer_to"></a><a name="pointer_to"></a> pointer_to
 
 Méthode statique qui retourne `Ptr::pointer_to(obj)`, si cette fonction existe. Sinon, il n’est pas possible de convertir une référence arbitraire à un objet de la classe `Ptr`. Si `Ptr` est un pointeur brut, cette méthode retourne `addressof(obj)`.
 

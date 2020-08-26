@@ -6,16 +6,16 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 5029227078ac0af9ebdd0c74522a7b0ae8ea4d42
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0351cd0fad1d0fc838c75d3cdbd809a04b0fb393
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228516"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832293"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Utilisation des &lt; &lt; opérateurs CArchive et &gt; &gt;
 
-`CArchive`fournit \< and > des opérateurs de <> pour l’écriture et la lecture de types de données simples, ainsi que de `CObject` s vers et à partir d’un fichier.
+`CArchive` fournit \< and > des opérateurs de <> pour l’écriture et la lecture de types de données simples, ainsi que de `CObject` s vers et à partir d’un fichier.
 
 #### <a name="to-store-an-object-in-a-file-via-an-archive"></a>Pour stocker un objet dans un fichier via une archive
 
@@ -39,21 +39,40 @@ Le modèle de code ci-dessus est exactement le même que celui créé par AppWiz
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-La bibliothèque définit les **<\<** and **>>** opérateurs pour `CArchive` comme premier opérande et les types de données et de classe suivants comme second opérande :
+La bibliothèque définit **`<<`** les **`>>`** opérateurs et pour `CArchive` comme premier opérande, ainsi que les types de données et les types de classe suivants comme second opérande :
 
-||||
-|-|-|-|
-|`CObject*`|**Taille** et`CSize`|**`float`**|
-|**AUTOMATIQUE**|`CString`|**Pointer** et`CPoint`|
-|`DWORD`|**POIDS**|`RECT` et `CRect`|
-|**Double**|**LONG**|`CTime` et `CTimeSpan`|
-|`Int`|**COleCurrency**|`COleVariant`|
-|`COleDateTime`|`COleDateTimeSpan`||
+:::row:::
+   :::column span="":::
+      `BYTE`\
+      `CObject*`\
+      `COleCurrency`\
+      `COleDateTime`\
+      `COleDateTimeSpan`
+   :::column-end:::
+   :::column span="":::
+      `COleVariant`\
+      `CString`\
+      `CTime` et `CTimeSpan`\
+      `Double`
+   :::column-end:::
+   :::column span="":::
+      `DWORD`\
+      `Float`\
+      `Int`\
+      `LONG`
+   :::column-end:::
+   :::column span="":::
+      `POINT` et `CPoint`\
+      `RECT` et `CRect`\
+      `SIZE` et `CSize`\
+      `WORD`
+   :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > Le stockage et le chargement des `CObject` s via une archive nécessitent une attention particulière. Pour plus d’informations, consultez [stockage et chargement de CObjects via une archive](../mfc/storing-and-loading-cobjects-via-an-archive.md).
 
-Les opérateurs de **<\<** and **> > CArchive** retournent toujours une référence à l' `CArchive` objet, qui est le premier opérande. Cela vous permet de chaîner les opérateurs, comme illustré ci-dessous :
+Les `CArchive` **`<<`** **`>>`** opérateurs et retournent toujours une référence à l' `CArchive` objet, qui est le premier opérande. Cela vous permet de chaîner les opérateurs, comme illustré ci-dessous :
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 

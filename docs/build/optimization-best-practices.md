@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 7b1cea29a782f291f1e85f7a143730825958d91b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229777"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833346"
 ---
 # <a name="optimization-best-practices"></a>Bonnes pratiques d’optimisation
 
@@ -40,7 +40,7 @@ Il est également vivement recommandé de générer des symboles de débogage, m
 
 L' **`/Op`** option de compilateur a été supprimée, et les quatre options de compilateur suivantes traitant des optimisations à virgule flottante ont été ajoutées :
 
-|||
+|Option|Description|
 |-|-|
 |**`/fp:precise`**|Il s’agit de la recommandation par défaut qui doit être utilisée dans la plupart des cas.|
 |**`/fp:fast`**|Recommandé si les performances sont d’une importance capitale, par exemple dans les jeux. Cela entraînera des performances plus rapides.|
@@ -53,7 +53,7 @@ Pour plus d’informations, consultez [ `/fp` (spécifier le comportement de vir
 
 Dans cette section, nous allons examiner deux declspecet qui peuvent être utilisés dans les programmes pour améliorer `__declspec(restrict)` les performances : et `__declspec(noalias)` .
 
-Le `restrict` declspec ne peut être appliqué qu’aux déclarations de fonctions qui retournent un pointeur, telles que`__declspec(restrict) void *malloc(size_t size);`
+Le `restrict` declspec ne peut être appliqué qu’aux déclarations de fonctions qui retournent un pointeur, telles que `__declspec(restrict) void *malloc(size_t size);`
 
 Le `restrict` declspec est utilisé sur les fonctions qui retournent des pointeurs sans alias. Ce mot clé est utilisé pour l’implémentation de la bibliothèque Runtime C de, `malloc` car il ne retourne jamais de valeur de pointeur qui est déjà utilisée dans le programme en cours (sauf si vous effectuez une opération non conforme, par exemple en utilisant la mémoire après qu’elle a été libérée).
 
@@ -87,7 +87,7 @@ Pour plus d’informations, consultez [`optimize`](../preprocessor/optimize.md).
 
 L’incorporation est l’une des optimisations les plus importantes effectuées par le compilateur, et ici nous parlerons de quelques pragmas qui permettent de modifier ce comportement.
 
-`#pragma inline_recursion`est utile pour spécifier si vous souhaitez que l’application soit en mesure d’incorporer un appel récursif. Par défaut, il est désactivé. Pour une récurrence superficielle des petites fonctions, vous pouvez activer cette fonction. Pour plus d’informations, consultez [`inline_recursion`](../preprocessor/inline-recursion.md).
+`#pragma inline_recursion` est utile pour spécifier si vous souhaitez que l’application soit en mesure d’incorporer un appel récursif. Par défaut, il est désactivé. Pour une récurrence superficielle des petites fonctions, vous pouvez activer cette fonction. Pour plus d’informations, consultez [`inline_recursion`](../preprocessor/inline-recursion.md).
 
 Un autre pragma utile pour limiter la profondeur d’incorporation est `#pragma inline_depth` . Cela est généralement utile dans les situations où vous essayez de limiter la taille d’un programme ou d’une fonction. Pour plus d’informations, consultez [`inline_depth`](../preprocessor/inline-depth.md).
 

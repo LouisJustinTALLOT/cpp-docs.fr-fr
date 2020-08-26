@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: b78fb081895b7a3e8f0e266810cd19d1b2792240
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98f546a243016fa85f6d71159ab2fc0a7963bae3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222145"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833113"
 ---
 # <a name="db_column"></a>db_column
 
@@ -25,7 +25,7 @@ Lie une colonne spécifiée à une variable dans l’ensemble de lignes.
 
 ### <a name="parameters"></a>Paramètres
 
-*ordinal*<br/>
+*formations*<br/>
 Numéro de colonne ordinale ( `DBCOLUMNINFO` ordinal) ou nom de colonne (chaîne ANSI ou Unicode) correspondant à un champ de l’ensemble de lignes auquel lier des données. Si vous utilisez des nombres, vous pouvez ignorer les ordinaux consécutifs (par exemple : 1, 2, 3, 5). Le nom peut contenir des espaces si le fournisseur OLE DB que vous utilisez le prend en charge. Par exemple, vous pouvez utiliser l’un des formats suivants :
 
 ```cpp
@@ -98,16 +98,14 @@ class CProducts {
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`** , membre, méthode|
 |**Repeatable Read**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

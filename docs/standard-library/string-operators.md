@@ -20,22 +20,26 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 0e63054365f4b29cf474a46dbf7c730f54759792
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217387"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832540"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;, opérateurs
 
-||||
-|-|-|-|
-|[opérateur ! =](#op_neq)|[and&gt;](#op_gt)|[and&gt;&gt;](#op_gt_gt)|
-|[and&gt;=](#op_gt_eq)|[and&lt;](#op_lt)|[and&lt;&lt;](#op_lt_lt)|
-|[and&lt;=](#op_lt_eq)|[opérateur +](#op_add)|[opérateur = =](#op_eq_eq)|
+[opérateur ! =](#op_neq)\
+[and&gt;](#op_gt)\
+[and&gt;&gt;](#op_gt_gt)\
+[and&gt;=](#op_gt_eq)\
+[and&lt;](#op_lt)\
+[and&lt;&lt;](#op_lt_lt)\
+[and&lt;=](#op_lt_eq)\
+[opérateur +](#op_add)\
+[opérateur = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_add"></a>opérateur +
+## <a name="operator"></a><a name="op_add"></a> opérateur +
 
 Concatène deux objets string.
 
@@ -109,7 +113,7 @@ Chaîne de style C ou objet de type `basic_string` à concaténer.
 *Oui*\
 Chaîne de style C ou objet de type `basic_string` à concaténer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Chaîne qui est la concaténation des chaînes d'entrée.
 
@@ -169,7 +173,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Teste si l'objet string situé à gauche de l'opérateur n'est pas égal à l'objet string situé à droite.
 
@@ -198,7 +202,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 *Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet String situé à gauche de l’opérateur n’est pas vue lexicographique égal à l’objet String situé à droite ; Sinon, **`false`** .
 
@@ -260,7 +264,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Teste si l'objet string situé à gauche de l'opérateur est égal à l'objet string situé à droite.
 
@@ -289,7 +293,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 *Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique égal à l’objet String situé à droite ; Sinon, **`false`** .
 
@@ -351,7 +355,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Teste si l'objet string situé à gauche de l'opérateur est inférieur à l'objet string situé à droite.
 
@@ -380,7 +384,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 *Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique inférieur à l’objet String situé à droite ; Sinon, **`false`** .
 
@@ -447,7 +451,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> and&lt;=
 
 Teste si l'objet string situé à gauche de l'opérateur est inférieur ou égal à l'objet string situé à droite.
 
@@ -476,7 +480,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 *Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique inférieur ou égal à l’objet String situé à droite ; Sinon, **`false`** .
 
@@ -550,7 +554,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>and&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> and&lt;&lt;
 
 Fonction de modèle qui écrit une chaîne dans le flux de sortie.
 
@@ -569,7 +573,7 @@ Flux de sortie dans lequel s’effectue l’écriture.
 *Str*\
 Chaîne à entrer dans le flux de sortie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Écrit la valeur de la chaîne spécifiée dans le flux de sortie *_Ostr*.
 
@@ -577,7 +581,7 @@ Chaîne à entrer dans le flux de sortie.
 
 La fonction de modèle surcharge l' **opérateur<<** pour insérer un objet *Str* de la classe template [basic_string](../standard-library/basic-string-class.md) dans le flux * \_ OSTR*. La fonction retourne effectivement la valeur `_Ostr.write( str.c_str, str.size )` .
 
-## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 
 Teste si l'objet string situé à gauche de l'opérateur est supérieur à l'objet string situé à droite.
 
@@ -606,7 +610,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 *Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique supérieur à l’objet String situé à droite ; Sinon, **`false`** .
 
@@ -680,7 +684,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> and&gt;=
 
 Teste si l'objet string situé à gauche de l'opérateur est supérieur ou égal à l'objet string situé à droite.
 
@@ -709,7 +713,7 @@ Chaîne de style C ou objet de type `basic_string` à comparer.
 *Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet String situé à gauche de l’opérateur est vue lexicographique supérieur ou égal à l’objet String situé à droite ; Sinon, **`false`** .
 
@@ -783,7 +787,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>and&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> and&gt;&gt;
 
 Fonction de modèle qui lit une chaîne à partir d’un flux d’entrée.
 
@@ -802,7 +806,7 @@ Le flux d’entrée utilisé pour extraire la séquence.
 *Oui*\
 La chaîne qui est extraite du flux d’entrée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Lit la valeur de la chaîne spécifiée à partir de *_Istr* et la retourne à *droite*.
 

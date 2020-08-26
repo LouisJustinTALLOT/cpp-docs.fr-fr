@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource management, C++ classes
 - resources [C++], management
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
-ms.openlocfilehash: 0113412fb86f7e0b326f4fa48462f8073f7754cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fd88bf359cbc3221a8f2a259d031bdbd6b581f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384833"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835010"
 ---
 # <a name="resource-management-classes"></a>Classes de gestion des ressources
 
@@ -22,10 +22,11 @@ Ces classes fournissent une gestion automatique des classes managées.
 
 ## <a name="in-this-section"></a>Dans cette section
 
-|||
-|-|-|
-|[auto_gcroot](../dotnet/auto-gcroot.md)|Incorpore un handle virtuel dans un type natif.|
-|[auto_handle](../dotnet/auto-handle.md)|Incorpore un handle virtuel dans un type managé.|
+[auto_gcroot](../dotnet/auto-gcroot.md)\
+Incorpore un handle virtuel dans un type natif.
+
+[auto_handle](../dotnet/auto-handle.md)\
+Incorpore un handle virtuel dans un type managé.
 
 ## <a name="see-also"></a>Voir aussi
 

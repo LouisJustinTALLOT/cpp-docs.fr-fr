@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 331ca298507e0ebecac0376f660feefdafd9d99d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232935"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832605"
 ---
 # <a name="queue-class"></a>queue, classe
 
@@ -68,21 +68,21 @@ Il y a trois types d’adaptateurs de conteneur définis dans la bibliothèque s
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[mis](#queue)|Construit un objet `queue` qui est vide ou qui est une copie de l'objet conteneur de base.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[container_type](#container_type)|Type qui fournit le conteneur de base à adapter par l’objet `queue`.|
 |[size_type](#size_type)|Type entier non signé qui peut représenter le nombre d'éléments dans un `queue`.|
 |[value_type](#value_type)|Type qui représente le type d'objet stocké en tant qu'élément dans un objet `queue`.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[Précédent](#back)|Retourne une référence au dernier élément (ajouté le plus récemment) à l’arrière de l’objet `queue`.|
 |[empty](#empty)|Vérifie si l'objet `queue` est vide.|
@@ -91,7 +91,7 @@ Il y a trois types d’adaptateurs de conteneur définis dans la bibliothèque s
 |[push](#push)|Ajoute un élément à l’arrière de l’objet `queue`.|
 |[size](#size)|Retourne le nombre d'éléments d'un `queue`.|
 
-## <a name="back"></a><a name="back"></a>Précédent
+## <a name="back"></a><a name="back"></a> Précédent
 
 Retourne une référence au dernier élément (ajouté le plus récemment) à l’arrière de l’objet queue.
 
@@ -101,7 +101,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Dernier élément de l’objet queue. Si l’objet queue est vide, la valeur de retour n’est pas définie.
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 Type qui fournit le conteneur de base à adapter.
 
@@ -155,7 +155,7 @@ Pour plus d’informations sur `Container`, consultez la section Notes de la rub
 
 Pour savoir comment déclarer et utiliser `container_type`, consultez l’exemple [queue](#queue).
 
-## <a name="empty"></a><a name="empty"></a>vidé
+## <a name="empty"></a><a name="empty"></a> vidé
 
 Teste si un objet queue est vide.
 
@@ -163,7 +163,7 @@ Teste si un objet queue est vide.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la file d’attente est vide ; **`false`** si la file d’attente n’est pas vide.
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a><a name="front"></a>frontal
+## <a name="front"></a><a name="front"></a> frontal
 
 Retourne une référence au premier élément à l’avant de l’objet queue.
 
@@ -211,7 +211,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Premier élément de l’objet queue. Si l’objet queue est vide, la valeur de retour n’est pas définie.
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a><a name="pop"></a>roulant
+## <a name="pop"></a><a name="pop"></a> roulant
 
 Supprime un élément à l’avant de l’objet queue.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>souleve
+## <a name="push"></a><a name="push"></a> souleve
 
 Ajoute un élément à l’arrière de l’objet queue.
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a><a name="size"></a>corps
+## <a name="size"></a><a name="size"></a> corps
 
 Retourne le nombre d’éléments figurant dans l’objet queue.
 
@@ -433,7 +433,7 @@ Retourne le nombre d’éléments figurant dans l’objet queue.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur actuelle de l’objet queue.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 Type entier non signé qui peut représenter le nombre d’éléments dans un objet queue.
 
@@ -482,7 +482,7 @@ Le type est un synonyme du `size_type` pour le conteneur de base adapté par la 
 
 Pour savoir comment déclarer et utiliser `size_type`, consultez l’exemple [queue::front](#front).
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 Type qui représente le type d’objet stocké comme élément dans une classe queue.
 
