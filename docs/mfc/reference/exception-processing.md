@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 08be9bd03b20c4bc6fc8f7b0ea63d628b34d033e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d6a1c30ca0811085124a5fb5994c5f35d412ae7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222782"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837185"
 ---
 # <a name="exception-processing"></a>Traitement des exceptions
 
@@ -36,7 +36,7 @@ Pour obtenir des exemples et des informations supplémentaires, consultez l’ar
 
 ### <a name="exception-macros"></a>Macros d’exception
 
-|||
+|Nom|Description|
 |-|-|
 |[Essayez](#try)|Désigne un bloc de code pour le traitement des exceptions.|
 |[CEPTION](#catch)|Désigne un bloc de code pour intercepter une exception à partir du bloc **try** précédent.|
@@ -50,7 +50,7 @@ Pour obtenir des exemples et des informations supplémentaires, consultez l’ar
 
 ### <a name="exception-throwing-functions"></a>Fonctions de levée d’exception
 
-|||
+|Nom|Description|
 |-|-|
 |[AfxThrowArchiveException](#afxthrowarchiveexception)|Lève une exception d’archive.|
 |[AfxThrowFileException](#afxthrowfileexception)|Lève une exception de fichier.|
@@ -64,7 +64,7 @@ MFC fournit deux fonctions de levée d’exception spécifiquement pour les exce
 
 ### <a name="ole-exception-functions"></a>Fonctions d’exception OLE
 
-|||
+|Nom|Description|
 |-|-|
 |[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|Lève une exception dans une fonction OLE Automation.|
 |[AfxThrowOleException](#afxthrowoleexception)|Lève une exception OLE.|
@@ -73,7 +73,7 @@ Pour prendre en charge les exceptions de base de données, les classes de base d
 
 ### <a name="dao-exception-functions"></a>Fonctions d’exception DAO
 
-|||
+|Nom|Description|
 |-|-|
 |[AfxThrowDAOException](#afxthrowdaoexception)|Lève une [CDaoException](../../mfc/reference/cdaoexception-class.md) à partir de votre propre code.|
 |[AfxThrowDBException](#afxthrowdbexception)|Lève une [CDBException](../../mfc/reference/cdbexception-class.md) à partir de votre propre code.|
@@ -82,11 +82,11 @@ MFC fournit la fonction d’arrêt suivante :
 
 ### <a name="termination-functions"></a>Fonctions d’arrêt
 
-|||
+|Nom|Description|
 |-|-|
 |[AfxAbort](#afxabort)|Appelé pour terminer une application lorsqu’une erreur irrécupérable se produit.|
 
-## <a name="try"></a><a name="try"></a>Essayez
+## <a name="try"></a><a name="try"></a> Essayez
 
 Configure un bloc **try** .
 
@@ -104,11 +104,11 @@ Pour plus d’informations, consultez l’article [exceptions](../../mfc/excepti
 
 Consultez l’exemple pour [catch](#catch).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 En-tête : afx.h
 
-## <a name="catch"></a><a name="catch"></a>CEPTION
+## <a name="catch"></a><a name="catch"></a> CEPTION
 
 Définit un bloc de code qui intercepte le premier type d’exception levée dans le bloc **try** précédent.
 
@@ -141,7 +141,7 @@ Pour plus d’informations sur les exceptions et la macro CATCH, consultez l’a
 
 [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]
 
-## <a name="catch_all"></a><a name="catch_all"></a>CATCH_ALL
+## <a name="catch_all"></a><a name="catch_all"></a> CATCH_ALL
 
 Définit un bloc de code qui intercepte tous les types d’exception levées dans le bloc **try** précédent.
 
@@ -167,11 +167,11 @@ Pour plus d’informations sur les exceptions, consultez l’article [exceptions
 
 Consultez l’exemple pour [CFile :: Abort](../../mfc/reference/cfile-class.md#abort).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="and_catch"></a><a name="and_catch"></a>AND_CATCH
+## <a name="and_catch"></a><a name="and_catch"></a> AND_CATCH
 
 Définit un bloc de code pour intercepter les types d’exception supplémentaires levés dans un bloc **try** précédent.
 
@@ -200,11 +200,11 @@ Le code de traitement des exceptions peut interroger l’objet exception, le cas
 
 Consultez l’exemple pour [catch](#catch).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="and_catch_all"></a><a name="and_catch_all"></a>AND_CATCH_ALL
+## <a name="and_catch_all"></a><a name="and_catch_all"></a> AND_CATCH_ALL
 
 Définit un bloc de code pour intercepter les types d’exception supplémentaires levés dans un bloc **try** précédent.
 
@@ -226,11 +226,11 @@ Le code de traitement des exceptions peut interroger l’objet exception, le cas
 > [!NOTE]
 > Le bloc **AND_CATCH_ALL** est défini en tant que portée C++ (délimitée par des accolades). Si vous déclarez des variables dans cette portée, n’oubliez pas qu’elles sont accessibles uniquement au sein de cette étendue.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="end_catch"></a><a name="end_catch"></a>END_CATCH
+## <a name="end_catch"></a><a name="end_catch"></a> END_CATCH
 
 Marque la fin du dernier bloc **catch** ou **AND_CATCH** .
 
@@ -242,11 +242,11 @@ END_CATCH
 
 Pour plus d’informations sur la macro END_CATCH, consultez l’article [exceptions](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="end_catch_all"></a><a name="end_catch_all"></a>END_CATCH_ALL
+## <a name="end_catch_all"></a><a name="end_catch_all"></a> END_CATCH_ALL
 
 Marque la fin du dernier bloc **CATCH_ALL88** ou **AND_CATCH_ALL** .
 
@@ -254,11 +254,11 @@ Marque la fin du dernier bloc **CATCH_ALL88** ou **AND_CATCH_ALL** .
 END_CATCH_ALL
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="throw-mfc"></a><a name="throw"></a>THROW (MFC)
+## <a name="throw-mfc"></a><a name="throw"></a> THROW (MFC)
 
 Lève l’exception spécifiée.
 
@@ -277,11 +277,11 @@ Pointe vers un objet d’exception dérivé de `CException` .
 
 Pour plus d’informations, consultez l’article [exceptions](../../mfc/exception-handling-in-mfc.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="throw_last"></a><a name="throw_last"></a>THROW_LAST
+## <a name="throw_last"></a><a name="throw_last"></a> THROW_LAST
 
 Renvoie l’exception au bloc **catch** externe suivant.
 
@@ -299,11 +299,11 @@ Pour plus d’informations, consultez l’article [exceptions](../../mfc/excepti
 
 Consultez l’exemple pour [CFile :: Abort](../../mfc/reference/cfile-class.md#abort).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a>AfxThrowArchiveException
+## <a name="afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a> AfxThrowArchiveException
 
 Lève une exception d’archive.
 
@@ -319,11 +319,11 @@ Spécifie un entier qui indique la raison de l’exception. Pour obtenir la list
 *lpszArchiveName*<br/>
 Pointe vers une chaîne contenant le nom de l' `CArchive` objet qui a provoqué l’exception (le cas échéant).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="afxthrowfileexception"></a><a name="afxthrowfileexception"></a>AfxThrowFileException
+## <a name="afxthrowfileexception"></a><a name="afxthrowfileexception"></a> AfxThrowFileException
 
 Lève une exception de fichier.
 
@@ -349,11 +349,11 @@ Pointe vers une chaîne contenant le nom du fichier qui a provoqué l’exceptio
 
 Vous êtes responsable de la détermination de la cause en fonction du code d’erreur du système d’exploitation.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="afxthrowinvalidargexception"></a><a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a><a name="afxthrowinvalidargexception"></a> AfxThrowInvalidArgException
 
 Lève une exception d’argument non valide.
 
@@ -367,11 +367,11 @@ void AfxThrowInvalidArgException( );
 
 Cette fonction est appelée lorsque des arguments non valides sont utilisés.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** AFX. h
 
-## <a name="afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a>AfxThrowMemoryException
+## <a name="afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a> AfxThrowMemoryException
 
 Lève une exception de mémoire.
 
@@ -383,11 +383,11 @@ void AfxThrowMemoryException();
 
 Appelez cette fonction si les appels aux allocateurs de mémoire système sous-jacents (tels que **malloc** et la fonction Windows [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) ) échouent. Vous n’avez pas besoin de l’appeler pour **`new`** , car **`new`** lèvera automatiquement une exception de mémoire en cas d’échec de l’allocation de mémoire.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException
+## <a name="afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a> AfxThrowNotSupportedException
 
 Lève une exception qui est le résultat d’une demande d’une fonctionnalité non prise en charge.
 
@@ -395,11 +395,11 @@ Lève une exception qui est le résultat d’une demande d’une fonctionnalité
 void AfxThrowNotSupportedException();
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a>AfxThrowResourceException
+## <a name="afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a> AfxThrowResourceException
 
 Lève une exception de ressource.
 
@@ -411,11 +411,11 @@ void  AfxThrowResourceException();
 
 Cette fonction est normalement appelée lorsqu’une ressource Windows ne peut pas être chargée.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="afxthrowuserexception"></a><a name="afxthrowuserexception"></a>AfxThrowUserException
+## <a name="afxthrowuserexception"></a><a name="afxthrowuserexception"></a> AfxThrowUserException
 
 Lève une exception pour arrêter une opération de l’utilisateur final.
 
@@ -427,11 +427,11 @@ void AfxThrowUserException();
 
 Cette fonction est normalement appelée juste après que `AfxMessageBox` a signalé une erreur à l’utilisateur.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException
+## <a name="afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a> AfxThrowOleDispatchException
 
 Utilisez cette fonction pour lever une exception dans une fonction OLE Automation.
 
@@ -469,11 +469,11 @@ Les informations fournies à cette fonction peuvent être affichées par l’app
 
 [!code-cpp[NVC_MFCExceptions#25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="afxthrowoleexception"></a><a name="afxthrowoleexception"></a>AfxThrowOleException
+## <a name="afxthrowoleexception"></a><a name="afxthrowoleexception"></a> AfxThrowOleException
 
 Crée un objet de type `COleException` et lève une exception.
 
@@ -494,11 +494,11 @@ Handle d’un code de résultat qui indique la raison de l’exception.
 
 La version qui accepte un HRESULT comme argument convertit ce code de résultat en SCODE correspondant. Pour plus d’informations sur HRESULT et SCODE, consultez [structure of com Error Codes](/windows/win32/com/structure-of-com-error-codes) in the SDK Windows.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** afxdao. h
 
-## <a name="afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a>AfxThrowDaoException
+## <a name="afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a> AfxThrowDaoException
 
 Appelez cette fonction pour lever une exception de type [CDaoException](../../mfc/reference/cdaoexception-class.md) à partir de votre propre code.
 
@@ -522,11 +522,11 @@ Le Framework appelle également `AfxThrowDaoException` . Dans votre appel, vous 
 
 Pour plus d’informations sur les exceptions liées aux classes DAO MFC, consultez `CDaoException` la classe dans ce livre et l’article [exceptions : base de données exceptions](../../mfc/exceptions-database-exceptions.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFXDB. h
 
-## <a name="afxthrowdbexception"></a><a name="afxthrowdbexception"></a>AfxThrowDBException
+## <a name="afxthrowdbexception"></a><a name="afxthrowdbexception"></a> AfxThrowDBException
 
 Appelez cette fonction pour lever une exception de type `CDBException` à partir de votre propre code.
 
@@ -554,11 +554,11 @@ Le Framework appelle `AfxThrowDBException` lorsqu’il reçoit un RETCODE ODBC �
 
 Pour plus d’informations sur les valeurs RETCODE définies par ODBC, consultez le chapitre 8, « récupération des informations d’État et d’erreur », dans le SDK Windows. Pour plus d’informations sur les extensions MFC à ces codes, consultez la classe [CDBException](../../mfc/reference/cdbexception-class.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 
-## <a name="afxabort"></a><a name="afxabort"></a>AfxAbort
+## <a name="afxabort"></a><a name="afxabort"></a> AfxAbort
 
 Fonction d’arrêt par défaut fournie par MFC.
 
@@ -568,13 +568,13 @@ void  AfxAbort();
 
 ### <a name="remarks"></a>Notes
 
-`AfxAbort`est appelé en interne par les fonctions membres MFC lorsqu’il y a une erreur irrécupérable, telle qu’une exception non interceptée qui ne peut pas être gérée. Vous pouvez appeler `AfxAbort` dans les rares cas où vous rencontrez une erreur catastrophique à partir de laquelle vous ne pouvez pas effectuer de récupération.
+`AfxAbort` est appelé en interne par les fonctions membres MFC lorsqu’il y a une erreur irrécupérable, telle qu’une exception non interceptée qui ne peut pas être gérée. Vous pouvez appeler `AfxAbort` dans les rares cas où vous rencontrez une erreur catastrophique à partir de laquelle vous ne pouvez pas effectuer de récupération.
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple pour [catch](#catch).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
   **En-tête** AFX. h
 

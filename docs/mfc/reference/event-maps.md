@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef8ee6b87bdeb9d5da9f34d303e0c0fda89443c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222795"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837344"
 ---
 # <a name="event-maps"></a>Tables d'événements
 
@@ -29,7 +29,7 @@ Pour prendre en charge les tables d'événements, MFC fournit les macros suivant
 
 ### <a name="event-map-declaration-and-demarcation"></a>Déclaration et démarcation de table d'événements
 
-|||
+|Nom|Description|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|Indique qu'une table d'événements est utilisée dans une classe pour faire correspondre les événements des fonctions de déclenchement d'événement (doit être utilisée dans la déclaration de classe).|
 |[BEGIN_EVENT_MAP](#begin_event_map)|Démarre la définition d'une table d'événements (doit être utilisée dans l'implémentation de classe).|
@@ -37,19 +37,19 @@ Pour prendre en charge les tables d'événements, MFC fournit les macros suivant
 
 ### <a name="event-mapping-macros"></a>Macros de mappage d'événements
 
-|||
+|Nom|Description|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|Indique que la fonction de déclenchement d'événement déclenche l'événement spécifié.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|Indique que la fonction de déclenchement d'événement déclenche l'événement spécifié, avec un ID de distribution indiqué.|
 
 ### <a name="message-mapping-macros"></a>Macros de mappage des messages
 
-|||
+|Nom|Description|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|Désigne un verbe personnalisé géré par le contrôle OLE.|
 |[ON_STDOLEVERB](#on_stdoleverb)|Remplace un mappage de verbe standard du contrôle OLE.|
 
-## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a> DECLARE_EVENT_MAP
 
 Chaque `COleControl` classe dérivée de votre programme peut fournir une table des événements pour spécifier les événements que votre contrôle doit déclencher.
 
@@ -63,11 +63,11 @@ Utilisez la macro DECLARE_EVENT_MAP à la fin de votre déclaration de classe. E
 
 Pour plus d’informations sur les tables d’événements, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête** afxctl. h
 
-## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a> BEGIN_EVENT_MAP
 
 Commence la définition de votre table d’événements.
 
@@ -89,11 +89,11 @@ Dans le fichier d’implémentation (. cpp) qui définit les fonctions membres p
 
 Pour plus d’informations sur les tables d’événements et la macro BEGIN_EVENT_MAP, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête** afxctl. h
 
-## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a> END_EVENT_MAP
 
 Utilisez la macro END_EVENT_MAP pour terminer la définition de votre table d’événements.
 
@@ -101,11 +101,11 @@ Utilisez la macro END_EVENT_MAP pour terminer la définition de votre table d’
 END_EVENT_MAP()
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête** afxctl. h
 
-## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a> EVENT_CUSTOM
 
 Définit une entrée de table d’événements pour un événement personnalisé.
 
@@ -167,11 +167,11 @@ Les `VTS_` constantes et leurs significations sont les suivantes :
 > [!NOTE]
 > Des constantes variant supplémentaires ont été définies pour tous les types variant, à l’exception de VTS_FONT et VTS_PICTURE, qui fournissent un pointeur vers la constante de données Variant. Ces constantes sont nommées à l’aide de la `VTS_Pconstantname` Convention. Par exemple, VTS_PCOLOR est un pointeur vers une constante VTS_COLOR.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête** afxctl. h
 
-## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
 Définit une fonction de déclenchement d’événements pour un événement personnalisé appartenant à l’ID de dispatch spécifié par *DISPID*.
 
@@ -207,11 +207,11 @@ spécifie une liste contenant un entier 32 bits représentant une valeur de coul
 
 Pour obtenir la liste des `VTS_` constantes, consultez [EVENT_CUSTOM](#event_custom).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête** afxctl. h
 
-## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a> ON_OLEVERB
 
 Cette macro définit une entrée de la table des messages qui mappe un verbe personnalisé à une fonction membre spécifique de votre contrôle.
 
@@ -242,11 +242,11 @@ BOOL memberFxn(
 
 Les valeurs des paramètres *lpMsg*, *hwndParent*et *lpRect* sont extraites des paramètres correspondants de la `IOleObject::DoVerb` fonction membre.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête** AFXOLE. h
 
-## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a> ON_STDOLEVERB
 
 Utilisez cette macro pour remplacer le comportement par défaut d’un verbe standard.
 
@@ -268,7 +268,7 @@ L’index de verbe standard est de la forme `OLEIVERB_` , suivi d’une action. 
 
 Pour obtenir une description du prototype de fonction à utiliser comme paramètre *memberFxn* , consultez [ON_OLEVERB](#on_oleverb) .
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête** AFXOLE. h
 

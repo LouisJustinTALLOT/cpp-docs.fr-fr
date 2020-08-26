@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 59ff0d1a9538bd43cc2164306e6a37a3b307067d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212265"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845482"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 Définit plusieurs types et fonctions de base pour l'opération d'iostreams. Cet en-tête est généralement inclus pour vous par un autre en-tête iostream ; vous l'incluez rarement directement.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête**:\<ios>
+**En-tête**: \<ios>
 
 **Espace de noms :** std
 
@@ -43,7 +43,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[libéré](../standard-library/ios-typedefs.md#ios)|Prend en charge la classe ios de l'ancienne bibliothèque iostream.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Prend en charge les opérations internes.|
@@ -54,7 +54,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="manipulators"></a>Manipulateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|Spécifie que les variables de type [bool](../cpp/bool-cpp.md) apparaissent comme **`true`** ou **`false`** dans le flux.|
 |[decembre](../standard-library/ios-functions.md#dec)|Indique que les variables de type entier sont affichées en notation de base 10.|
@@ -62,7 +62,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[des](../standard-library/ios-functions.md#fixed)|Indique qu'un nombre à virgule flottante est affiché en notation décimale fixe.|
 |[hex](../standard-library/ios-functions.md#hex)|Indique que les variables de type entier sont affichées en notation de base 16.|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
-|[intérieurs](../standard-library/ios-functions.md#internal)|Aligne à gauche le signe d'un nombre et aligne à droite le nombre.|
+|[internal](../standard-library/ios-functions.md#internal)|Aligne à gauche le signe d'un nombre et aligne à droite le nombre.|
 |[gauche](../standard-library/ios-functions.md#left)|Fait en sorte que le texte qui n'est pas aussi large que la largeur de sortie apparaisse dans le flux aligné avec la marge de gauche.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Indique que les variables de type [bool](../cpp/bool-cpp.md) apparaissent comme 1 ou 0 dans le flux.|
 |[noshowbase](../standard-library/ios-functions.md#noshowbase)|Désactive l'indication de la base de notation dans laquelle un nombre est affiché.|
@@ -83,7 +83,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="error-reporting"></a>Rapport d'erreurs
 
-|||
+|Nom|Description|
 |-|-|
 |[io_errc](../standard-library/ios-functions.md#io_errc)||
 |[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
@@ -93,7 +93,7 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
 ### <a name="classes"></a>Classes
 
-|||
+|Nom|Description|
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|Le modèle de classe décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et les flux de sortie (de modèle de classe [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres du modèle.|
 |[fpos](../standard-library/fpos-class.md)|Le modèle de classe décrit un objet qui peut stocker toutes les informations nécessaires à la restauration d’un indicateur de position de fichier arbitraire dans n’importe quel flux.|

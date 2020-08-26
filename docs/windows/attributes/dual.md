@@ -1,17 +1,17 @@
 ---
-title: double (C++ attribut com)
+title: double (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168211"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845404"
 ---
 # <a name="dual"></a>dual
 
@@ -25,7 +25,7 @@ Place une interface dans le fichier. idl en tant qu’interface double.
 
 ## <a name="remarks"></a>Notes
 
-Lorsque l’attribut **double** C++ précède une interface, il fait en sorte que l’interface soit placée dans le bloc de bibliothèque dans le fichier. idl généré.
+Lorsque l’attribut C++ **double** précède une interface, il fait en sorte que l’interface soit placée dans le bloc de bibliothèque dans le fichier. idl généré.
 
 ## <a name="example"></a>Exemple
 
@@ -53,15 +53,13 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|**interface**|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
+|**S’applique à**|**interface**|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
 |**Attributs non valides**|`dispinterface`|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
@@ -70,7 +68,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs par utilisation](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[propre](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

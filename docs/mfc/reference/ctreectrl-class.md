@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e193af8cb5c92f4a3f1ca7381783d90102e0764f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561815"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837617"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -293,7 +293,7 @@ Pour plus d’informations sur l’utilisation de `CTreeCtrl` , consultez :
 
 `CTreeCtrl`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxcmn.h
 
@@ -323,7 +323,7 @@ Spécifie la fenêtre parente du contrôle Tree View, généralement `CDialog` .
 *nID*<br/>
 Spécifie l’ID du contrôle d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’initialisation a réussi ; Sinon, 0.
 
@@ -369,7 +369,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 *nID*<br/>
 ID de la fenêtre enfant du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, 0.
 
@@ -390,7 +390,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 *hItem*<br/>
 Handle de l’élément d’arborescence à faire glisser.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la liste d’images à laquelle la bitmap glissante a été ajoutée, en cas de réussite ; Sinon, NULL.
 
@@ -418,7 +418,7 @@ Appelez cette fonction pour supprimer tous les éléments du contrôle TreeView.
 BOOL DeleteAllItems();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -439,7 +439,7 @@ BOOL DeleteItem(HTREEITEM hItem);
 *hItem*<br/>
 Handle de l’élément d’arborescence à supprimer. Si *hitem* a la valeur TVI_ROOT, tous les éléments sont supprimés du contrôle Tree View.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -460,7 +460,7 @@ CEdit* EditLabel(HTREEITEM hItem);
 *hItem*<br/>
 Handle de l’élément d’arborescence à modifier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, pointeur vers l' `CEdit` objet qui est utilisé pour modifier le texte de l’élément ; sinon, null.
 
@@ -485,7 +485,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 *fCancelWithoutSave*\
 dans TRUE pour abandonner les modifications apportées à l’élément d’affichage d’arborescence avant de conclure la modification, ou FALSe pour enregistrer les modifications apportées à l’élément d’arborescence avant de conclure l’opération.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -506,7 +506,7 @@ BOOL EnsureVisible(HTREEITEM hItem);
 *hItem*<br/>
 Handle de l’élément d’arborescence en cours de rendu visible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si le système a fait défiler les éléments du contrôle Tree-View pour s’assurer que l’élément spécifié est visible. Dans le cas contraire, la valeur de retour est FALSe.
 
@@ -544,7 +544,7 @@ Indicateur qui spécifie le type d’action à entreprendre. Cet indicateur peut
 
 - TVE_TOGGLE réduit la liste si elle est actuellement développée ou la développe si elle est actuellement réduite.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -560,7 +560,7 @@ Cette fonction membre implémente le comportement de la [TVM_GETBKCOLOR](/window
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui représente la couleur d’arrière-plan de la fenêtre actuelle pour le contrôle. Si cette valeur est-1, le contrôle utilise la couleur de la fenêtre système. Dans ce cas, vous pouvez utiliser `::GetSysColor(COLOR_WINDOW)` pour récupérer la couleur système actuelle utilisée par le contrôle.
 
@@ -581,7 +581,7 @@ BOOL GetCheck(HTREEITEM hItem) const;
 *hItem*<br/>
 HTREEITEM sur lequel les informations d’État doivent être reçues.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’élément de contrôle d’arborescence est activé ; Sinon, 0.
 
@@ -602,7 +602,7 @@ HTREEITEM GetChildItem(HTREEITEM hItem) const;
 *hItem*<br/>
 Handle d’un élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément enfant en cas de réussite ; Sinon, NULL.
 
@@ -618,7 +618,7 @@ Appelez cette fonction pour récupérer le nombre d’éléments dans un contrô
 UINT GetCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments dans le contrôle TreeView.
 
@@ -634,7 +634,7 @@ Appelez cette fonction pour récupérer l’élément qui est la cible d’une o
 HTREEITEM GetDropHilightItem() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément supprimé en cas de réussite ; Sinon, NULL.
 
@@ -650,7 +650,7 @@ Appelez cette fonction pour récupérer le handle du contrôle d’édition util
 CEdit* GetEditControl() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le contrôle d’édition utilisé pour modifier le texte de l’élément, en cas de réussite ; Sinon, NULL.
 
@@ -666,7 +666,7 @@ Récupère les styles étendus que le contrôle d’arborescence actuel utilise.
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur qui contient une combinaison au niveau du bit (ou) des styles étendus du contrôle d’arborescence actuel. Pour plus d’informations, consultez [styles étendus de contrôle d’arborescence](/windows/win32/Controls/tree-view-control-window-extended-styles).
 
@@ -682,7 +682,7 @@ Appelez cette fonction pour récupérer le premier élément visible du contrôl
 HTREEITEM GetFirstVisibleItem() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle du premier élément visible ; Sinon, NULL.
 
@@ -707,7 +707,7 @@ Type de liste d’images à récupérer. La liste d’images peut prendre l’un
 
 - TVSIL_STATE récupère la liste d’images d’État, qui contient les images pour les éléments d’arborescence qui sont dans un état défini par l’utilisateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la liste d’images du contrôle en cas de réussite ; Sinon, NULL.
 
@@ -729,7 +729,7 @@ Appelez cette fonction pour récupérer la quantité, en pixels, que les éléme
 UINT GetIndent() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Quantité de mise en retrait mesurée en pixels.
 
@@ -745,7 +745,7 @@ Cette fonction membre implémente le comportement de la [TVM_GETINSERTMARKCOLOR]
 COLORREF GetInsertMarkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui contient la couleur de la marque d’insertion actuelle.
 
@@ -766,7 +766,7 @@ BOOL GetItem(TVITEM* pItem) const;
 *pItem*<br/>
 Pointeur vers une structure [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) , comme décrit dans la SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -787,7 +787,7 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 *hItem*<br/>
 Handle de l’élément dont les données doivent être récupérées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur spécifique à l’application de taille pointeur associée à l’élément spécifié par *hitem*.
 
@@ -808,7 +808,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 *hItem*\
 dans Handle vers un élément de contrôle d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’image à afficher lorsque l’élément spécifié est dans l’état développé.
 
@@ -824,7 +824,7 @@ Cette fonction membre implémente le comportement de la [TVM_GETITEMHEIGHT](/win
 SHORT GetItemHeight() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur de l’élément, en pixels.
 
@@ -854,7 +854,7 @@ Entier qui reçoit l’index de l’image de l’élément dans la liste d’ima
 *nSelectedImage*<br/>
 Entier qui reçoit l’index de l’image sélectionnée de l’élément dans la liste d’images du contrôle TreeView.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -890,7 +890,7 @@ dans Identificateur du composant. Doit être défini sur TVGIPR_BUTTON.
 *lpRect*\
 à Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) . Si cette méthode réussit, la structure reçoit les coordonnées du rectangle du composant spécifié par *hitem* et *NLA*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -934,7 +934,7 @@ Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui
 *bTextOnly*<br/>
 Si ce paramètre est différent de zéro, le rectangle englobant comprend uniquement le texte de l’élément. Dans le cas contraire, elle comprend la ligne entière occupée par l’élément dans le contrôle TreeView.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’élément est visible, avec le rectangle englobant contenu dans *lpRect*. Sinon, 0 avec *lpRect* non initialisé.
 
@@ -960,7 +960,7 @@ Handle de l’élément dont l’État doit être récupéré.
 *nStateMask*<br/>
 Masque indiquant un ou plusieurs États à récupérer. Pour plus d’informations sur les valeurs possibles pour *nStateMask*, consultez la discussion sur les `state` `stateMask` membres et de la structure [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 UINT qui contient l’opérateur or au niveau du bit des valeurs spécifiées par nStateMask. Pour plus d’informations sur les valeurs possibles, consultez [CTreeCtrl :: GetItem](#getitem). Pour rechercher la valeur d’un état spécifique, effectuez une opération and au niveau du bit de la valeur d’État et de la valeur de retour, comme indiqué dans l’exemple suivant.
 
@@ -981,7 +981,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 *hItem*\
 dans Handle vers un élément de contrôle d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 État étendu de l’élément. Pour plus d’informations, consultez le `uStateEx` membre de la structure [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .
 
@@ -1002,7 +1002,7 @@ CString GetItemText(HTREEITEM hItem) const;
 *hItem*<br/>
 Handle de l’élément dont le texte doit être récupéré.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `CString`Objet contenant le texte de l’élément.
 
@@ -1018,7 +1018,7 @@ Récupère le dernier élément de nœud non développé dans le contrôle d’a
 HTREEITEM GetLastVisibleItem() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers le dernier élément de nœud non développé si la méthode réussit ; Sinon, NULL.
 
@@ -1046,7 +1046,7 @@ Cette fonction membre implémente le comportement de la [TVM_GETLINECOLOR](/wind
 COLORREF GetLineColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur de la ligne active.
 
@@ -1094,7 +1094,7 @@ Indicateur qui spécifie le type de relation à *hitem*. Cet indicateur peut pre
 
 - TVGN_ROOT récupère le premier élément enfant de l’élément racine dont l’élément spécifié fait partie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément suivant en cas de réussite ; Sinon, NULL.
 
@@ -1121,7 +1121,7 @@ HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
 *hItem*<br/>
 Handle d’un élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément frère suivant ; Sinon, NULL.
 
@@ -1142,7 +1142,7 @@ HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
 *hItem*<br/>
 Handle d’un élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément visible suivant ; Sinon, NULL.
 
@@ -1163,7 +1163,7 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 *hItem*<br/>
 Handle d’un élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément parent ; Sinon, NULL.
 
@@ -1188,7 +1188,7 @@ HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
 *hItem*<br/>
 Handle d’un élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle du frère précédent ; Sinon, NULL.
 
@@ -1209,7 +1209,7 @@ HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
 *hItem*<br/>
 Handle d’un élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément visible précédent ; Sinon, NULL.
 
@@ -1225,7 +1225,7 @@ Appelez cette fonction pour récupérer l’élément racine du contrôle TreeVi
 HTREEITEM GetRootItem() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément racine ; Sinon, NULL.
 
@@ -1241,7 +1241,7 @@ Appelez cette fonction membre pour récupérer la durée de défilement maximale
 UINT GetScrollTime() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Durée maximale de défilement, en millisecondes.
 
@@ -1257,7 +1257,7 @@ Récupère le nombre d’éléments sélectionnés dans le contrôle d’afficha
 UINT GetSelectedCount();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments sélectionnés.
 
@@ -1273,7 +1273,7 @@ Appelez cette fonction pour récupérer l’élément actuellement sélectionné
 HTREEITEM GetSelectedItem() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément sélectionné ; Sinon, NULL.
 
@@ -1289,7 +1289,7 @@ Cette fonction membre implémente le comportement de la [TVM_GETTEXTCOLOR](/wind
 COLORREF GetTextColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui représente la couleur de texte actuelle. Si cette valeur est-1, le contrôle utilise la couleur système pour la couleur du texte.
 
@@ -1305,7 +1305,7 @@ Cette fonction membre implémente le comportement de la [TVM_GETTOOLTIPS](/windo
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) à utiliser par le contrôle d’arborescence. Si la fonction membre [Create](#create) utilise le style TVS_NOTOOLTIPS, aucune info-bulle n’est utilisée et la valeur null est retournée.
 
@@ -1325,7 +1325,7 @@ Appelez cette fonction pour récupérer le nombre d’éléments visibles dans u
 UINT GetVisibleCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments visibles dans le contrôle TreeView ; sinon-1.
 
@@ -1356,7 +1356,7 @@ Pointeur vers un entier qui reçoit des informations sur les résultats du test 
 *pHitTestInfo*<br/>
 Adresse d’une structure [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo) qui contient la position à laquelle effectuer un test de positionnement et qui reçoit des informations sur les résultats du test de positionnement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de l’élément d’arborescence qui occupe le point spécifié ou NULL si aucun élément n’occupe le point.
 
@@ -1364,9 +1364,8 @@ Handle de l’élément d’arborescence qui occupe le point spécifié ou NULL 
 
 Lorsque cette fonction est appelée, le paramètre *PT* spécifie les coordonnées du point à tester. La fonction retourne le handle de l’élément au point spécifié ou NULL si aucun élément n’occupe le point. En outre, le paramètre *pFlags* contient une valeur qui indique l’emplacement du point spécifié. Les valeurs possibles sont les suivantes :
 
-|||
+|Valeur|Description|
 |-|-|
-|Valeur|Signification|
 |TVHT_ABOVE|Au-dessus de la zone cliente.|
 |TVHT_BELOW|Sous la zone cliente.|
 |TVHT_NOWHERE|Dans la zone cliente, mais sous le dernier élément.|
@@ -1379,7 +1378,6 @@ Lorsque cette fonction est appelée, le paramètre *PT* spécifie les coordonné
 |TVHT_ONITEMSTATEICON|Sur l’icône d’État pour un élément d’arborescence qui est dans un état défini par l’utilisateur.|
 |TVHT_TOLEFT|À gauche de la zone cliente.|
 |TVHT_TORIGHT|À droite de la zone cliente.|
-|||
 
 ### <a name="example"></a>Exemple
 
@@ -1448,7 +1446,7 @@ Handle du parent de l’élément inséré.
 *hInsertAfter*<br/>
 Handle de l’élément après lequel le nouvel élément doit être inséré.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle du nouvel élément en cas de réussite ; Sinon, NULL.
 
@@ -1473,7 +1471,7 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 *hItem*<br/>
 Handle d’un élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’élément d’arborescence spécifié par *hitem* a des éléments enfants ; 0 dans le cas contraire.
 
@@ -1498,7 +1496,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 *uAccId*\
 dans Identificateur d’accessibilité pour un élément dans l’élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’un élément d’arborescence ( `HTREEITEM` ) qui correspond au paramètre *uAccId* . Pour plus d’informations, consultez le membre *hitem* de la structure [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .
 
@@ -1533,7 +1531,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 *hItem*\
 dans Handle d’un élément d’arborescence dans le contrôle. Pour plus d’informations, consultez le membre *hitem* de la structure [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur d’accessibilité qui correspond au paramètre *hitem* .
 
@@ -1579,7 +1577,7 @@ Type d’action à effectuer. Ce paramètre peut prendre l’une des valeurs sui
 
 - TVGN_FIRSTVISIBLE fait défiler verticalement l’affichage de l’arborescence afin que l’élément donné soit le premier élément visible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1604,7 +1602,7 @@ BOOL SelectDropTarget(HTREEITEM hItem);
 *hItem*<br/>
 Handle d’un élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1625,7 +1623,7 @@ BOOL SelectItem(HTREEITEM hItem);
 *hItem*<br/>
 Handle d’un élément d’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1650,7 +1648,7 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 *hItem*<br/>
 Handle de l’élément d’arborescence à définir comme premier élément visible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1680,7 +1678,7 @@ dans Nombre de pixels par seconde à faire défiler.
 *uUpdateTime*\
 dans Intervalle de temps entre les mises à jour du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne toujours la valeur TRUE.
 
@@ -1715,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 *Language*<br/>
 Valeur COLORREF qui contient la nouvelle couleur d’arrière-plan. Si cette valeur est-1, le contrôle revient à l’utilisation de la couleur système pour la couleur d’arrière-plan.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui représente la couleur de texte actuelle. Si cette valeur est-1, le contrôle utilise la couleur système pour la couleur du texte.
 
@@ -1741,7 +1739,7 @@ HTREEITEM pour recevoir la modification de l’état d’activation.
 *Consultez*<br/>
 Indique si l’élément de contrôle d’arborescence doit être activé ou désactivé. Par défaut, `SetCheck` définit l’élément à vérifier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1777,7 +1775,7 @@ dans Masque de bits qui spécifie les styles du contrôle d’arborescence actue
 *dwExStyles*\
 dans Masque de bits qui spécifie les styles du contrôle d’affichage d’arborescence actuel à définir ou à décocher. Pour définir une combinaison de styles, spécifiez une combinaison au niveau du bit (ou) des styles décrits dans [les styles étendus de contrôle d’arborescence](/windows/win32/Controls/tree-view-control-window-extended-styles). Pour effacer un ensemble de styles, spécifiez zéro.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur qui contient les styles de contrôle étendu précédents.
 
@@ -1821,7 +1819,7 @@ Type de liste d’images à définir. La liste d’images peut prendre l’une d
 
 - TVSIL_STATE définit la liste d’images d’État, qui contient les images pour les éléments d’arborescence qui sont dans un état défini par l’utilisateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la liste d’images précédente, le cas échéant ; Sinon, NULL.
 
@@ -1864,7 +1862,7 @@ HTREEITEM qui spécifie à quel élément la marque d’insertion sera placée. 
 *fAfter*<br/>
 Valeur BOOLÉENNE qui spécifie si la marque d’insertion est placée avant ou après l’élément spécifié. Si cet argument est différent de zéro, la marque d’insertion sera placée après l’élément. Si cet argument est égal à zéro, la marque d’insertion sera placée avant l’élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1885,7 +1883,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 *clrNew*<br/>
 Valeur COLORREF qui contient la nouvelle couleur de la marque d’insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui contient la couleur de la marque d’insertion précédente.
 
@@ -1940,7 +1938,7 @@ Spécifie les États à définir. Consultez le membre `stateMask` de la structur
 *lParam*<br/>
 Valeur spécifique à l’application de taille pointeur associée à l’élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1972,7 +1970,7 @@ Handle de l’élément dont les données doivent être récupérées.
 *dwData*<br/>
 Valeur spécifique à l’application de taille pointeur associée à l’élément spécifié par *hitem*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1998,7 +1996,7 @@ dans Handle vers un élément de contrôle d’arborescence.
 *iExpandedImage*\
 dans Index de l’image à afficher lorsque l’élément spécifié est dans l’état développé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -2031,7 +2029,7 @@ SHORT SetItemHeight(SHORT cyHeight);
 *cyHeight*<br/>
 Spécifie la nouvelle hauteur de chaque élément de l’arborescence, en pixels. Si cet argument est inférieur à la hauteur des images, il prend la valeur de la hauteur des images. Si cet argument n’est pas pair, il sera arrondi à la valeur paire la plus proche. Si cet argument a la valeur-1, le contrôle revient à l’utilisation de sa hauteur d’élément par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur précédente des éléments, en pixels.
 
@@ -2061,7 +2059,7 @@ Index de l’image de l’élément dans la liste d’images du contrôle TreeVi
 *nSelectedImage*<br/>
 Index de l’image sélectionnée de l’élément dans la liste d’images du contrôle TreeView.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -2099,7 +2097,7 @@ Spécifie de nouveaux États pour l’élément.
 *nStateMask*<br/>
 Spécifie les États à modifier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -2129,7 +2127,7 @@ dans Handle vers un élément de contrôle d’arborescence.
 *uStateEx*\
 dans État étendu de l’élément. Pour plus d’informations, consultez le `uStateEx` membre de la structure [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -2167,7 +2165,7 @@ Handle de l’élément dont le texte doit être défini.
 *lpszItem*<br/>
 Adresse d’une chaîne contenant le nouveau texte de l’élément
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -2188,7 +2186,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 *clrNew*<br/>
 Nouvelle couleur de ligne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur de ligne précédente.
 
@@ -2213,7 +2211,7 @@ UINT SetScrollTime(UINT uScrollTime);
 *uScrollTime*<br/>
 Nouvelle durée maximale de défilement, en millisecondes. Si cette valeur est inférieure à 100, elle est arrondie à 100.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Temps de défilement maximal précédent, en millisecondes.
 
@@ -2234,7 +2232,7 @@ COLORREF SetTextColor(COLORREF clr);
 *Language*<br/>
 Valeur COLORREF qui contient la nouvelle couleur de texte. Si cet argument a la valeur-1, le contrôle revient à l’utilisation de la couleur système pour la couleur du texte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui représente la couleur de texte précédente. Si cette valeur est-1, le contrôle utilisait la couleur système pour la couleur du texte.
 
@@ -2255,7 +2253,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 *pWndTip*<br/>
 Pointeur vers un objet [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) que le contrôle d’arborescence utilisera.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) contenant l’info-bulle précédemment utilisée par le contrôle, ou null si aucune info-bulle n’a été précédemment utilisée.
 
@@ -2299,7 +2297,7 @@ BOOL SortChildren(HTREEITEM hItem);
 *hItem*<br/>
 Handle de l’élément parent dont les éléments enfants doivent être triés. Si *hitem* a la valeur null, le tri se poursuit à partir de la racine de l’arborescence.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -2324,7 +2322,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 *pSort*<br/>
 Pointeur vers une structure [TVSORTCB](/windows/win32/api/commctrl/ns-commctrl-tvsortcb) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 

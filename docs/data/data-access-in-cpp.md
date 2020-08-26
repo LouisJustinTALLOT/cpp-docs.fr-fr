@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 42c36259b14a7f0341e383bb3a7f2760bab165aa
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a5421ff05fdbad7d78066bb95410aafe69bfaa51
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538593"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836944"
 ---
 # <a name="data-access-in-visual-c"></a>Accès aux données dans Visual C++
 
 Pratiquement tous les produits de base de données, SQL et NoSQL, fournissent une interface pour les applications C++ natives. L’interface standard du secteur est ODBC, qui est prise en charge par tous les principaux produits de base de données SQL et de nombreux produits NoSQL. Pour les produits non-Microsoft, contactez le fournisseur pour plus d’informations. Des bibliothèques tierces avec différents contrats de licence sont également disponibles.
 
-Depuis 2011, Microsoft s’est aligné sur ODBC en tant que standard pour les applications natives se connectant aux bases de données Microsoft SQL Server, localement et dans le cloud. Pour plus d’informations, consultez [Programmation de l’accès aux données \(MFC-ATL\)](data-access-programming-mfc-atl.md). Les bibliothèques C++/CLI peuvent utiliser les pilotes ODBC natifs ou ADO.NET. Pour plus d’informations, consultez [accès aux données à l’aide de ADO.net (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) et [accès aux données dans Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio).
+Depuis 2011, Microsoft s’est aligné sur ODBC en tant que standard pour les applications natives se connectant aux bases de données Microsoft SQL Server, localement et dans le cloud. Pour plus d’informations, consultez [Programmation de l’accès aux données \(MFC-ATL\)](data-access-programming-mfc-atl.md). Les bibliothèques C++/CLI peuvent utiliser les pilotes ODBC natifs ou ADO.NET. Pour plus d’informations, consultez [accès aux données à l’aide de ADO.net (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) et [accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -43,16 +43,16 @@ Le service [Stockage Azure](/azure/storage/common/storage-introduction) est une 
 [Pilote ODBC pour SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
 Le dernier pilote ODBC fournit un accès robuste aux données de Microsoft SQL Server et Microsoft Azure SQL Database pour les applications C/C++. Fournit la prise en charge des fonctionnalités comme Always Encrypted, Azure Active Directory et les groupes de disponibilité AlwaysOn. Également disponible pour Mac OS et Linux.
 
-[OLE DB Driver pour SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+[OLE DB Driver pour SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
 Le dernier pilote OLE DB est une API d’accès aux données autonome qui prend en charge Microsoft SQL Server et Microsoft Azure SQL Database.
 
 [Centre de développement Microsoft Azure C et C++](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure facilite la création d’applications C++ avec plus de souplesse, de scalabilité et de fiabilité à l’aide des outils que vous aimez.
 
-[Utilisation du stockage d'objets blob à partir de C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+[Utilisation du stockage d'objets blob à partir de C++](/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Le stockage d’objets blob Azure est un service qui stocke des données non structurées dans le cloud en tant qu’objets/blobs. Ce service peut stocker tout type de données texte ou binaires, par exemple, un document, un fichier multimédia ou un programme d’installation d’application. Le stockage d’objets blob est également appelé Stockage Blob.
 
-[Guide de référence du programmeur ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+[Guide de référence du programmeur ODBC](/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 L’interface ODBC est conçue pour une utilisation avec le langage de programmation C. L’utilisation de l’interface ODBC s’étend sur trois domaines : les instructions SQL, les appels de fonctions ODBC et la programmation en C.
 
 ## <a name="see-also"></a>Voir aussi

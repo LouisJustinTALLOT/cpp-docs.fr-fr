@@ -2,12 +2,12 @@
 title: Système de type (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221547"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845144"
 ---
 # <a name="type-system-ccx"></a>Système de type (C++/CX)
 
@@ -35,12 +35,11 @@ Les métadonnées du fichier .winmd représentent la surface publiée de votre c
 
 La visibilité d'un type ou d'une méthode dans les métadonnées dépend des modificateurs d'accessibilité qui lui sont appliqués. Pour être visible, un type doit être déclaré dans un espace de noms et comme public. Une ref class non publique est autorisée comme type d'assistance interne dans votre code mais elle n'est pas visible dans les métadonnées. Même dans une classe ref, les membres ne sont pas tous nécessairement visibles. Le tableau suivant répertorie la relation entre les spécificateurs d’accès C++ dans une classe ref publique et Windows Runtime la visibilité des métadonnées :
 
-|||
-|-|-|
-|**Publié dans les métadonnées**|**Non publié dans les métadonnées**|
-|public|private|
-|protected|interne|
-|protégé public|protégé privé|
+| Publié dans les métadonnées | Non publié dans les métadonnées |
+|--|--|
+| public | private |
+| protected | internal |
+| protégé public | protégé privé |
 
 Vous pouvez utiliser l' **Explorateur d'objets** pour afficher le contenu des fichiers .winmd. Les composants Windows Runtime inclus avec Windows se trouvent dans le fichier Windows. winmd. Le fichier default. winmd contient les types fondamentaux utilisés dans C++/CX, et Platform. winmd contient des types supplémentaires de l’espace de noms Platform. Par défaut, ces trois fichiers. winmd sont inclus dans chaque projet C++ pour les applications plateforme Windows universelle.
 
@@ -157,7 +156,7 @@ Un événement est un membre public d'une classe ou structure ref dont le type e
 
 Pour plus d’informations, consultez [Événements](../cppcx/events-c-cx.md).
 
-### <a name="casting"></a>Cast
+### <a name="casting"></a>Transtypage
 
 C++/CX prend en charge les opérateurs de cast C++ standard [static_cast](../cpp/static-cast-operator.md), [dynamic_cast](../cpp/dynamic-cast-operator.md)et [reinterpret_cast](../cpp/reinterpret-cast-operator.md), ainsi que l'opérateur **safe_cast** propre à C++/CX.
 

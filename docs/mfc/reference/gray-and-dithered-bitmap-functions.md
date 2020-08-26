@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 57f163fd36c0f25508d94a84495fcaf1956e277d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751483"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837201"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>fonctions d'image bitmap tramée et grise
 
@@ -24,7 +24,7 @@ MFC propose deux fonctions qui permettent de donner à une image bitmap l’appa
 
 ![Comparaison des versions d'icônes grises et d'origine](../../mfc/reference/media/vcgraybitmap.gif "Comparaison des versions d'icônes grises et d'origine")
 
-|||
+|Nom|Description|
 |-|-|
 |[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Dessine une version grise d’une image bitmap.|
 |[AfxGetGrayBitmap](#afxgetgraybitmap)|Copie une version grise d’une image bitmap.|
@@ -35,12 +35,12 @@ MFC propose également deux fonctions qui permettent de remplacer l’arrière-p
 
 ![Comparaison des versions d'icônes dégradées et d'origine](../../mfc/reference/media/vcditheredbitmap.gif "Comparaison des versions d'icônes dégradées et d'origine")
 
-|||
+|Nom|Description|
 |-|-|
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Dessine une image bitmap avec un arrière-plan tramé.|
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Copie une image bitmap avec un arrière-plan tramé.|
 
-## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap AfxDrawGrayBitmap
+## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a> AfxDrawGrayBitmap
 
 Dessine une version grise d’une image bitmap.
 
@@ -55,7 +55,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 ### <a name="parameters"></a>Paramètres
 
-*pDC*<br/>
+*Maîtres*<br/>
 Pointe vers le contrôleur de domaine de destination.
 
 *x*<br/>
@@ -64,7 +64,7 @@ Coordonnée x de destination.
 *y*<br/>
 Coordonnée y de destination.
 
-*rSrc (rSrc)*<br/>
+*rSrc*<br/>
 Image bitmap source.
 
 *crBackground*<br/>
@@ -80,11 +80,11 @@ Une image bitmap dessinée avec `AfxDrawGrayBitmap` a l’apparence d’un contr
 
 [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
-## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGetGrayBitmap AfxGetGrayBitmap
+## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a> AfxGetGrayBitmap
 
 Copie une version grise d’une image bitmap.
 
@@ -97,7 +97,7 @@ void AFXAPI AfxGetGrayBitmap(
 
 ### <a name="parameters"></a>Paramètres
 
-*rSrc (rSrc)*<br/>
+*rSrc*<br/>
 Image bitmap source.
 
 *pDest*<br/>
@@ -116,13 +116,13 @@ Une image bitmap copiée avec `AfxGetGrayBitmap` a l’apparence d’un contrôl
 
 [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
-## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap
+## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a> AfxDrawDitheredBitmap
 
-Dessine une bitmap, remplaçant son arrière-plan par un modèle dithered (checker).
+Dessine une bitmap, en remplaçant son arrière-plan par un modèle tramé (vérificateur).
 
 ```cpp
 void AFXAPI AfxDrawDitheredBitmap(
@@ -136,7 +136,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 ### <a name="parameters"></a>Paramètres
 
-*pDC*<br/>
+*Maîtres*<br/>
 Pointe vers le contrôleur de domaine de destination.
 
 *x*<br/>
@@ -145,18 +145,18 @@ Coordonnée x de destination.
 *y*<br/>
 Coordonnée y de destination.
 
-*rSrc (rSrc)*<br/>
+*rSrc*<br/>
 Image bitmap source.
 
 *cr1*<br/>
-Une des deux couleurs de l’éthher, typiquement blanc.
+L’une des deux couleurs de tramage, généralement en blanc.
 
-*cr2*<br/>
-L’autre couleur dither, typiquement gris clair (COLOR_MENU).
+*CR2*<br/>
+Autre couleur de tramage, en général gris clair (COLOR_MENU).
 
 ### <a name="remarks"></a>Notes
 
-Le bitmap source est dessiné sur la destination DC avec un modèle à carreaux bicolores (*cr1* et *cr2)* remplaçant l’arrière-plan de la bitmap. L’arrière-plan de la bitmap source est défini comme ses pixels blancs et tous les pixels correspondant à la couleur du pixel dans le coin supérieur gauche de la bitmap.
+Le bitmap source est dessiné sur le DC de destination avec un modèle à damier à deux couleurs (*CR1* et *CR2*) qui remplace l’arrière-plan de la bitmap. L’arrière-plan de la bitmap source est défini comme ses pixels blancs et tous les pixels correspondant à la couleur du pixel dans le coin supérieur gauche de l’image bitmap.
 
 ![Comparaison des versions d'icônes dégradées et d'origine](../../mfc/reference/media/vcditheredbitmap.gif "Comparaison des versions d'icônes dégradées et d'origine")
 
@@ -164,13 +164,13 @@ Le bitmap source est dessiné sur la destination DC avec un modèle à carreaux 
 
 [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
-## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap
+## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a> AfxGetDitheredBitmap
 
-Copies d’une bitmap, remplaçant son arrière-plan par un modèle dithered (checker).
+Copie une image bitmap, en remplaçant son arrière-plan par un modèle tramé (vérificateur).
 
 ```cpp
 void AFXAPI AfxGetDitheredBitmap(
@@ -182,21 +182,21 @@ void AFXAPI AfxGetDitheredBitmap(
 
 ### <a name="parameters"></a>Paramètres
 
-*rSrc (rSrc)*<br/>
+*rSrc*<br/>
 Image bitmap source.
 
 *pDest*<br/>
 Image bitmap de destination.
 
 *cr1*<br/>
-Une des deux couleurs de l’éthher, typiquement blanc.
+L’une des deux couleurs de tramage, généralement en blanc.
 
-*cr2*<br/>
-L’autre couleur dither, typiquement gris clair (COLOR_MENU).
+*CR2*<br/>
+Autre couleur de tramage, en général gris clair (COLOR_MENU).
 
 ### <a name="remarks"></a>Notes
 
-La bitmap source est copiée à la bitmap de destination avec un modèle à carreaux de deux couleurs (*cr1* et *cr2)* remplaçant l’arrière-plan de la bitmap source. L’arrière-plan de la bitmap source est défini comme ses pixels blancs et tous les pixels correspondant à la couleur du pixel dans le coin supérieur gauche de la bitmap.
+La bitmap source est copiée dans le bitmap de destination avec un modèle à damier à deux couleurs (*CR1* et *CR2*) qui remplace l’arrière-plan de la bitmap source. L’arrière-plan de la bitmap source est défini comme ses pixels blancs et tous les pixels correspondant à la couleur du pixel dans le coin supérieur gauche de l’image bitmap.
 
 ![Comparaison des versions d'icônes dégradées et d'origine](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
 
@@ -204,7 +204,7 @@ La bitmap source est copiée à la bitmap de destination avec un modèle à carr
 
 [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 

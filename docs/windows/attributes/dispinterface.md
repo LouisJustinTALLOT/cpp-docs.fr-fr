@@ -1,17 +1,17 @@
 ---
-title: dispinterface (C++ attribut com)
+title: dispinterface (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 66567b0a1b043136e0a754e3a52bbdd7c463e178
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dd2a0883418ff79af53285d3cf51dba7601a363c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168237"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845391"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -42,15 +42,13 @@ n’est pas valide pour l’attribut **dispinterface** .
 
 Pour obtenir un exemple montrant comment utiliser [dispinterface](bindable.md) , consultez l’exemple de **bindable**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|**interface**|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
+|**S’applique à**|**interface**|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
 |**Attributs non valides**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
@@ -61,6 +59,6 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs par utilisation](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
 [dual](dual.md)<br/>
-[custom](custom-cpp.md)<br/>
+[propre](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

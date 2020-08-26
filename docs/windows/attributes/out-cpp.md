@@ -1,17 +1,17 @@
 ---
-title: out (C++ attribut com)
+title: out (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b99e520a11c2e8110d2e63fa85ddb1dd444e56e6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214661"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837097"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -31,22 +31,20 @@ L’attribut C++ **out** a les mêmes fonctionnalités que l’attribut MIDL [ou
 
 Consultez l’exemple pour [bindable](bindable.md) pour obtenir un exemple d’utilisation de **out**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|Paramètre d’interface|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|Paramètre d’interface|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)<br/>
-[defaultvalue](defaultvalue.md)<br/>
+[Attributs de paramètre](parameter-attributes.md)<br/>
+[DefaultValue](defaultvalue.md)<br/>
 [id](id.md)

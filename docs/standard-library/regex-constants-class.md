@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331963"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845053"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants, espace de noms
 
@@ -107,19 +107,19 @@ namespace regex_constants {
 
 L'espace de noms `regex_constants` inclut plusieurs types d'indicateurs et les valeurs qui leur sont associées.
 
-|||
+|Nom|Description|
 |-|-|
 |[error_type](#error_type)|Indicateurs pour signaler les erreurs de syntaxe des expressions régulières.|
 |[match_flag_type](#match_flag_type)|Indicateurs des options de correspondance d’expression régulière.|
 |[syntax_option_type](#syntax_option_type)|Indicateurs pour la sélection des options de syntaxe.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<regex>
+**En-tête :**\<regex>
 
 **Espace de noms :** std
 
-## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a> regex_constants :: error_type
 
 Indicateurs pour signaler les erreurs de syntaxe des expressions régulières.
 
@@ -180,7 +180,7 @@ Le type est un type énuméré qui décrit un objet pouvant stocker des indicate
 
 `error_backref` : l’expression contient une référence arrière non valide
 
-## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a> regex_constants :: match_flag_type
 
 Indicateurs des options de correspondance d’expression régulière.
 
@@ -238,7 +238,7 @@ Indicateurs de format :
 
 `format_first_only` : ne pas rechercher de correspondances après la première
 
-## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a> regex_constants :: syntax_option_type
 
 Indicateurs pour la sélection des options de syntaxe.
 
@@ -292,9 +292,9 @@ Modificateurs de syntaxe :
 
 [\<regex>](../standard-library/regex.md)\
 [Classe regex_error](../standard-library/regex-error-class.md)\
-[\<regex> fonctions](../standard-library/regex-functions.md)\
+[\<regex> Mission](../standard-library/regex-functions.md)\
 [Classe regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<regex> opérateurs](../standard-library/regex-operators.md)\
+[\<regex> Operator](../standard-library/regex-operators.md)\
 [Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [Classe regex_traits](../standard-library/regex-traits-class.md)\
-[\<regex> dactylographes](../standard-library/regex-typedefs.md)
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

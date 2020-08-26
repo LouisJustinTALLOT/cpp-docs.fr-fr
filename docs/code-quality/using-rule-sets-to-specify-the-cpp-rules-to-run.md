@@ -4,12 +4,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389816"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845157"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Utiliser des ensembles de règles pour spécifier les règles C++ à exécuter
 
@@ -114,7 +114,7 @@ L’exemple suivant montre un fichier d’ensemble de règles de base que vous p
 
 ## <a name="ruleset-schema"></a>Schéma de l’ensemble de règles
 
-Le schéma RuleSet suivant décrit le schéma XML d’un fichier RuleSet. Le schéma de l’ensemble de règles est stocké dans *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Vous pouvez l’utiliser pour créer vos propres RuleSet par programme ou pour valider si vos ensembles de règles personnalisés respectent le format correct. Pour plus d’informations, consultez [Comment : créer un document XML basé sur un schéma XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
+Le schéma RuleSet suivant décrit le schéma XML d’un fichier RuleSet. Le schéma de l’ensemble de règles est stocké dans *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . Vous pouvez l’utiliser pour créer vos propres RuleSet par programme ou pour valider si vos ensembles de règles personnalisés respectent le format correct. Pour plus d’informations, consultez [Comment : créer un document XML basé sur un schéma XSD](/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

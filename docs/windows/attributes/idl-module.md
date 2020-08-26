@@ -1,17 +1,17 @@
 ---
-title: idl_module (C++ attribut com)
+title: idl_module (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 651d2e133d7ef08fce48feded1b7a5aff458adb1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168042"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845222"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -44,10 +44,10 @@ Facultatif ID d’une rubrique d’aide dans un fichier. hlp ou. chm.
 *helpcontext*<br/>
 Facultatif ID d’aide pour cette bibliothèque de types.
 
-*hidden*<br/>
+*masquer*<br/>
 Facultatif Paramètre qui empêche l’affichage de la bibliothèque. Pour plus d’informations, consultez l’attribut MIDL [hidden](/windows/win32/Midl/hidden) .
 
-*restricted*<br/>
+*sensible*<br/>
 Facultatif Les membres de la bibliothèque ne peuvent pas être appelés de façon arbitraire. Pour plus d’informations, consultez l’attribut MIDL [restricted](/windows/win32/Midl/restricted) .
 
 *Déclaration de fonction*<br/>
@@ -76,16 +76,14 @@ Le code suivant illustre l’utilisation de l’attribut **idl_module** :
 void FuncName(int i);
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
-|**S'applique à**|N'importe où|
-|**Renouvelable**|Non|
-|**Attributs requis**|None|
-|**Attributs non valides**|None|
+|**S’applique à**|N'importe où|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Aucun|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
@@ -93,4 +91,4 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs autonomes](stand-alone-attributes.md)<br/>
-[entry](entry.md)
+[mention](entry.md)

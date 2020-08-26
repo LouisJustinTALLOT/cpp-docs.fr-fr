@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: a7231b01cd341bbc04bcccd3c2198d1a76dd5e39
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bea90020c3ec570149e11db95ff6d6f8fd0a5507
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232766"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845300"
 ---
 # <a name="event_source"></a>event_source
 
@@ -58,16 +58,14 @@ L’attribut C++ **event_source** indique que la classe ou structure à laquelle
 > [!NOTE]
 > Une classe ou structure modélisée ne peut pas contenir d'événements.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Non|
-|**Attributs requis**|**coclasse** lorsque`type`=`com`|
-|**Attributs non valides**|None|
+|**Attributs requis**|**coclasse** lorsque `type`=`com`|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

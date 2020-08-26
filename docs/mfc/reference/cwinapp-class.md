@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 515307bd79059c22b5b40cd8b47ce8809ede8f04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560853"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837604"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -315,7 +315,7 @@ class CWinApp : public CWinThread
 |[CWinApp :: m_nCmdShow](#m_ncmdshow)|Spécifie le mode d’affichage initial de la fenêtre.|
 |[CWinApp :: m_pActiveWnd](#m_pactivewnd)|Pointeur vers la fenêtre principale de l’application conteneur lorsqu’un serveur OLE est actif sur place.|
 |[CWinApp :: m_pszAppID](#m_pszappid)|ID du modèle utilisateur de l’application.|
-|[CWinApp :: m_pszAppName](#m_pszappname)|Spécifie le nom de l'application.|
+|[CWinApp :: m_pszAppName](#m_pszappname)|Spécifie le nom de l’application.|
 |[CWinApp :: m_pszExeName](#m_pszexename)|Nom du module de l’application.|
 |[CWinApp :: m_pszHelpFilePath](#m_pszhelpfilepath)|Chemin d’accès au fichier d’aide de l’application.|
 |[CWinApp :: m_pszProfileName](#m_pszprofilename)|De l’application. Nom de fichier INI.|
@@ -369,7 +369,7 @@ Le `m_hPrevInstance` membre de données n’existe plus. Pour déterminer si une
 
 `CWinApp`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -430,7 +430,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 *lpvParam*<br/>
 [in] Réservé pour une future utilisation.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 0 si cette méthode réussit ; valeur différente de zéro si une erreur se produit.
 
@@ -472,7 +472,7 @@ BOOL CreatePrinterDC(CDC& dc);
 *métafichier*<br/>
 Référence à un contexte de périphérique d’impression.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le contexte de périphérique d’impression est correctement créé ; Sinon, 0.
 
@@ -525,7 +525,7 @@ Nom de la clé de Registre à supprimer.
 *pTM*<br/>
 Pointeur vers l’objet CAtlTransactionManager.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
@@ -555,7 +555,7 @@ Adresse du texte dans la boîte de message.
 *nIDPrompt*<br/>
 Index d’une chaîne de contexte d’aide.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne les mêmes valeurs que `AfxMessageBox` .
 
@@ -610,7 +610,7 @@ Le modèle de thread de la fabrique D2D et les ressources qu’il crée.
 *writeFactoryType*<br/>
 Valeur qui spécifie si l’objet de fabrique d’écriture sera partagé ou isolé
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si la prise en charge D2D a été activée, FALSe dans le cas contraire
 
@@ -653,7 +653,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 *bEnable*<br/>
 Spécifie si l’interaction avec la barre des tâches Windows 7 doit être activée (TRUE) ou désactivée (FALSe).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si l’interaction de la barre des tâches peut être activée ou désactivée.
 
@@ -669,7 +669,7 @@ Appelée par l’infrastructure à partir de la `Run` fonction membre pour quitt
 virtual int ExitInstance();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Code de sortie de l’application ; 0 indique l’absence d’erreurs, et les valeurs supérieures à 0 indiquent une erreur. Cette valeur est utilisée comme valeur de retour de `WinMain` .
 
@@ -691,7 +691,7 @@ Récupère le paramètre d’entrée pour la méthode de récupération de l’a
 virtual LPVOID GetApplicationRecoveryParameter();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre d’entrée par défaut pour la méthode de récupération d’application.
 
@@ -709,7 +709,7 @@ Retourne la durée pendant laquelle le gestionnaire de redémarrage attend que l
 virtual DWORD GetApplicationRecoveryPingInterval();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Durée en millisecondes.
 
@@ -727,7 +727,7 @@ Retourne les indicateurs du gestionnaire de redémarrage.
 virtual DWORD GetApplicationRestartFlags();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indicateurs du gestionnaire de redémarrage. L’implémentation par défaut retourne 0.
 
@@ -760,7 +760,7 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 *pTM*<br/>
 Pointeur vers un `CAtlTransactionManager` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Clé d’application si la fonction est réussie ; Sinon, NULL.
 
@@ -774,7 +774,7 @@ Obtient le gestionnaire de récupération de données pour cette instance de l�
 virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Gestionnaire de récupération de données pour cette instance de l’application.
 
@@ -794,7 +794,7 @@ Obtient la position du premier modèle de document dans l’application.
 POSITION GetFirstDocTemplatePosition() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de POSITION qui peut être utilisée pour la récupération de l’itération ou du pointeur d’objet ; NULL si la liste est vide.
 
@@ -810,7 +810,7 @@ Récupère le type d’aide utilisé par l’application.
 AFX_HELP_TYPE GetHelpMode();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Type d’aide utilisé par l’application. Pour plus d’informations, consultez [CWinApp :: m_eHelpType](#m_ehelptype) .
 
@@ -827,7 +827,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 *imprim*<br/>
 Référence à une valeur de POSITION retournée par un appel précédent à `GetNextDocTemplate` ou [GetFirstDocTemplatePosition](#getfirstdoctemplateposition). La valeur est mise à jour à la position suivante par cet appel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) .
 
@@ -852,7 +852,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 *pPrintDlg*<br/>
 Pointeur vers une structure [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -890,7 +890,7 @@ Pointe vers un pointeur qui reçoit l’adresse des données.
 *pBytes*<br/>
 Pointe vers un UINT qui recevra la taille des données (en octets).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -932,7 +932,7 @@ Pointe vers une chaîne se terminant par un caractère null qui contient l’ent
 *nDefault*<br/>
 Spécifie la valeur par défaut à retourner si l’infrastructure ne peut pas trouver l’entrée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur entière de la chaîne qui suit l’entrée spécifiée si la fonction réussit. La valeur de retour est la valeur du paramètre *nDefault* si la fonction ne trouve pas l’entrée. La valeur de retour est 0 si la valeur qui correspond à l’entrée spécifiée n’est pas un entier.
 
@@ -973,7 +973,7 @@ Pointe vers une chaîne se terminant par un caractère null qui contient l’ent
 *lpszDefault*<br/>
 Pointe vers la valeur de chaîne par défaut pour l’entrée donnée si l’entrée est introuvable dans le fichier d’initialisation.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour est la chaîne du de l’application. Fichier INI ou *lpszDefault* si la chaîne est introuvable. La longueur de chaîne maximale prise en charge par l’infrastructure est _MAX_PATH. Si *lpszDefault* a la valeur null, la valeur de retour est une chaîne vide.
 
@@ -1006,7 +1006,7 @@ Nom de la clé à obtenir.
 *pTM*<br/>
 Pointeur vers un `CAtlTransactionManager` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Clé de section si la fonction est réussie ; Sinon, NULL.
 
@@ -1052,7 +1052,7 @@ Windows permet l’exécution de plusieurs copies du même programme en même te
 virtual BOOL InitInstance();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’initialisation réussit ; Sinon, 0.
 
@@ -1077,7 +1077,7 @@ Indique si l’interaction de la barre des tâches Windows 7 est activée.
 virtual BOOL IsTaskbarInteractionEnabled();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si `EnableTaskbarInteraction` a été appelé et si le système d’exploitation est Windows 7 ou une version ultérieure.
 
@@ -1101,7 +1101,7 @@ Pointe vers une chaîne se terminant par un caractère null qui contient le nom 
 *nIDResource*<br/>
 ID de la ressource curseur. Pour obtenir la liste des ressources, consultez [LoadCursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers un curseur en cas de réussite ; Sinon, NULL.
 
@@ -1131,7 +1131,7 @@ Pointe vers une chaîne se terminant par un caractère null qui contient le nom 
 *nIDResource*<br/>
 Numéro d’identification de la ressource icône.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’une icône en cas de réussite ; Sinon, NULL.
 
@@ -1157,7 +1157,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 *nIDCursor*<br/>
 Identificateur de constante de manifeste **OCR_** qui spécifie un curseur Windows prédéfini. Vous devez disposer de `#define OEMRESOURCE` avant `#include \<afxwin.h>` pour accéder aux constantes de **OCR_** dans Windows. Manutention.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers un curseur en cas de réussite ; Sinon, NULL.
 
@@ -1184,7 +1184,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 *nIDIcon*<br/>
 Identificateur de constante de manifeste **OIC_** qui spécifie une icône Windows prédéfinie. Vous devez disposer de `#define OEMRESOURCE` avant `#include \<afxwin.h>` pour accéder aux constantes de **OIC_** dans Windows. Manutention.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’une icône en cas de réussite ; Sinon, NULL.
 
@@ -1229,7 +1229,7 @@ Identificateur de constante de manifeste **IDC_** qui spécifie un curseur Windo
 
 - IDC_SIZENS flèche verticale à deux pointes
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers un curseur en cas de réussite ; Sinon, NULL.
 
@@ -1254,7 +1254,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 *lpszIconName*<br/>
 Identificateur de constante de manifeste qui spécifie une icône Windows prédéfinie. Ces identificateurs sont définis dans WINDOWS. Manutention. Pour obtenir la liste des valeurs prédéfinies possibles et leurs descriptions, consultez le paramètre *lpIconName* dans [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’une icône en cas de réussite ; Sinon, NULL.
 
@@ -1303,9 +1303,8 @@ DWORD m_dwRestartManagerSupportFlags;
 
 Pour activer le gestionnaire de redémarrage, définissez `m_dwRestartManagerSupportFlags` sur le comportement de votre choix. Le tableau suivant répertorie les indicateurs qui sont disponibles.
 
-|||
-|-|-|
 |Indicateur|Description|
+|-|-|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|L’application est inscrite à l’aide de [CWinApp :: RegisterWithRestartManager](#registerwithrestartmanager). Le gestionnaire de redémarrage est responsable du redémarrage de l’application si elle se termine de manière inattendue.|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|L’application est inscrite auprès du gestionnaire de redémarrage et le gestionnaire de redémarrage appelle la fonction de rappel de récupération lorsqu’il redémarre l’application. La fonction de rappel de récupération par défaut est [CWinApp :: ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|L’enregistrement automatique est activé et le gestionnaire de redémarrage enregistre tous les documents ouverts lorsque l’application redémarre.|
@@ -1424,7 +1423,7 @@ Le gestionnaire de récupération de données d’une application surveille les 
 
 ## <a name="cwinappm_pszappname"></a><a name="m_pszappname"></a> CWinApp :: m_pszAppName
 
-Spécifie le nom de l'application.
+Spécifie le nom de l’application.
 
 ```
 LPCTSTR m_pszAppName;
@@ -1551,7 +1550,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 *lpszCommand*<br/>
 Pointe vers une chaîne de commande DDE reçue par l’application.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la commande est gérée ; Sinon, 0.
 
@@ -1690,7 +1689,7 @@ virtual BOOL OnIdle(LONG lCount);
 *lCount*<br/>
 Un compteur est incrémenté chaque fois `OnIdle` que la file d’attente de messages de l’application est vide. Ce nombre est réinitialisé à 0 chaque fois qu’un nouveau message est traité. Vous pouvez utiliser le paramètre *lCount* pour déterminer la durée relative pendant laquelle l’application a été inactive sans traiter un message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro pour obtenir un temps de traitement plus inactif. 0 si aucune durée d’inactivité n’est nécessaire.
 
@@ -1741,7 +1740,7 @@ dans Nom du fichier à ouvrir.
 *bAddToMRU*<br/>
 dans TRUE indique que le document est l’un des fichiers les plus récents ; FALSe indique que le document ne fait pas partie des fichiers les plus récents.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un en `CDocument` cas de réussite ; sinon, null.
 
@@ -1795,7 +1794,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 Pointeur vers une structure [MSG](/windows/win32/api/winuser/ns-winuser-msg) qui contient le message à traiter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si le message a été entièrement traité dans `PreTranslateMessage` et ne doit pas être traité plus en détail. Zéro si le message doit être traité normalement.
 
@@ -1817,7 +1816,7 @@ Spécifie un code de raccordement. Cette fonction membre utilise le code pour d�
 *lpMsg*<br/>
 Pointeur vers un tructure de [message](/windows/win32/api/winuser/ns-winuser-msg)Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le message est traité ; Sinon, 0.
 
@@ -1840,7 +1839,7 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 *rCmdInfo*<br/>
 Référence à un objet [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si la commande de l’interpréteur de commandes est traitée avec succès. Si la valeur est 0, retourne FALSe de [InitInstance](#initinstance).
 
@@ -1888,7 +1887,7 @@ Pointeur vers une exception non interceptée.
 *pMsg*<br/>
 Tructure [MSG](/windows/win32/api/winuser/ns-winuser-msg)qui contient des informations sur le message Windows à l’origine de la levée d’une exception par l’infrastructure.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur qui doit être retournée à Windows. En règle générale, il s’agit de 0L pour les messages Windows, 1L (TRUE) pour les messages de commande.
 
@@ -1908,7 +1907,7 @@ Effectue toutes les tâches d’inscription non gérées par `RegisterShellFileT
 virtual BOOL Register();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro en cas de réussite ; sinon, 0.
 
@@ -1970,7 +1969,7 @@ dans Chaîne unique qui identifie cette instance du gestionnaire de redémarrage
 dans Chaîne qui contient tous les arguments supplémentaires de la ligne de commande.
 
 *dwRestartFlags*\
-dans Indicateurs facultatifs pour le gestionnaire de redémarrage. Pour plus d'informations, consultez la section Notes.
+dans Indicateurs facultatifs pour le gestionnaire de redémarrage. Pour plus d'informations, consultez la section Remarques.
 
 *pRecoveryCallback*\
 dans Fonction de rappel de récupération. Cette fonction doit accepter un paramètre LPVOID comme entrée et retourner une valeur DWORD. La fonction de rappel de récupération par défaut est `CWinApp::ApplicationRecoveryCallback` .
@@ -1984,7 +1983,7 @@ dans Durée pendant laquelle le gestionnaire de redémarrage attend que la fonct
 *dwCallbackFlags*\
 dans Indicateurs passés à la fonction de rappel de récupération. Réservé à un usage ultérieur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si la méthode réussit ; Sinon, code d’erreur.
 
@@ -2016,7 +2015,7 @@ Détermine si le gestionnaire de redémarrages ouvre à nouveau les fichiers qui
 virtual BOOL ReopenPreviousFilesAtRestart() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE indique que le gestionnaire de redémarrage ouvre à nouveau les fichiers précédemment ouverts ; FALSe indique que le gestionnaire de redémarrage ne le fait pas.
 
@@ -2028,7 +2027,7 @@ Gère le redémarrage de l’application initié par le gestionnaire de redémar
 virtual BOOL CWinApp::RestartInstance();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le gestionnaire de récupération de données ouvre les documents précédemment ouverts ; FALSe si le gestionnaire de récupération de données contient une erreur ou s’il n’y a pas de documents précédemment ouverts.
 
@@ -2046,7 +2045,7 @@ Détermine si le gestionnaire de redémarrage restaure les fichiers enregistrés
 virtual BOOL RestoreAutosavedFilesAtRestart() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur TRUE indique que le gestionnaire de redémarrage restaure les fichiers enregistrés de façon automatique. FALSe indique que le gestionnaire de redémarrage ne le fait pas.
 
@@ -2058,7 +2057,7 @@ Fournit une boucle de messages par défaut.
 virtual int Run();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`int`** Valeur retournée par `WinMain` .
 
@@ -2076,7 +2075,7 @@ Appelez cette fonction pour déterminer si l’option « **/Automation**» ou «
 BOOL RunAutomated();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’option a été trouvée ; Sinon, 0.
 
@@ -2092,7 +2091,7 @@ Appelez cette fonction pour déterminer si l’option « **/Embedding**» ou « 
 BOOL RunEmbedded();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’option a été trouvée ; Sinon, 0.
 
@@ -2108,7 +2107,7 @@ Appelé par le Framework pour enregistrer tous les documents lorsque la fenêtre
 virtual BOOL SaveAllModified();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’application est arrêtée en toute sécurité ; 0 s’il n’est pas sûr de mettre fin à l’application.
 
@@ -2190,7 +2189,7 @@ Détermine si le gestionnaire de redémarrage récupère une application qui s�
 virtual BOOL SupportsApplicationRecovery() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE indique que le gestionnaire de redémarrage récupère l’application ; FALSe indique que le gestionnaire de redémarrage ne le fait pas.
 
@@ -2202,7 +2201,7 @@ Détermine si le gestionnaire de redémarrage enregistre les documents ouverts d
 virtual BOOL SupportsAutosaveAtInterval() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur TRUE indique que le gestionnaire de redémarrage enregistre les documents ouverts. FALSe indique que le gestionnaire de redémarrage ne le fait pas.
 
@@ -2214,7 +2213,7 @@ Détermine si le gestionnaire de redémarrage enregistre tous les documents ouve
 virtual BOOL SupportsAutosaveAtRestart() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur TRUE indique que le gestionnaire de redémarrage enregistre les documents ouverts lorsque l’application redémarre ; FALSe indique que le gestionnaire de redémarrage ne le fait pas.
 
@@ -2226,7 +2225,7 @@ Détermine si l’application prend en charge le gestionnaire de redémarrage.
 virtual BOOL SupportsRestartManager() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE indique que l’application prend en charge le gestionnaire de redémarrage ; FALSe indique que l’application ne le fait pas.
 
@@ -2238,7 +2237,7 @@ Annule l’inscription de tous les fichiers enregistrés par l’objet applicati
 virtual BOOL Unregister();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro en cas de réussite ; sinon, 0.
 
@@ -2310,7 +2309,7 @@ Pointe vers les données à écrire.
 *nBytes*<br/>
 Contient le nombre d’octets à écrire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -2344,7 +2343,7 @@ Pointe vers une chaîne se terminant par un caractère null qui contient l’ent
 *nValeur*<br/>
 Contient la valeur à écrire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -2378,7 +2377,7 @@ Pointe vers une chaîne se terminant par un caractère null qui contient l’ent
 *lpszValue*<br/>
 Pointe vers la chaîne à écrire. Si ce paramètre a la valeur NULL, l’entrée spécifiée par le paramètre *lpszEntry* est supprimée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 

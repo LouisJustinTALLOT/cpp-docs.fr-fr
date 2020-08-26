@@ -1,17 +1,17 @@
 ---
-title: Tags recommandés pour les commentaires de documentation (commentaires de documentation CMD)
+title: Balises recommandées pour les commentaires de documentation (commentaires de documentation C++)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 1648d0eb019a3aad25641d7f6a7edd1ba26acf7e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f41e450215e2bce02dbaf66910fc2fc1a131a99
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336172"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836853"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>Balises recommandées pour les commentaires de documentation
 
-Le compilateur MSVC traitera les commentaires de documentation dans votre code et crée un fichier .xdc pour chaque compiland, et xdcmake.exe traitera les fichiers .xdc à un fichier .xml. Le traitement du fichier .xml pour créer une documentation est un détail qui doit être implémenté sur votre site.
+Le compilateur MSVC traitera les commentaires de documentation dans votre code et créera un fichier. XDC pour chaque compiland, et xdcmake.exe traitera les fichiers. XDC dans un fichier. Xml. Le traitement du fichier .xml pour créer une documentation est un détail qui doit être implémenté sur votre site.
 
 Les balises sont traitées sur des constructions telles que les types et les membres de type.
 
@@ -22,19 +22,27 @@ Les balises doivent immédiatement précéder les types ou membres.
 
 Le compilateur traite toute balise représentant du code XML correct. Les balises suivantes fournissent les fonctionnalités couramment utilisées dans la documentation utilisateur :
 
-||||
-|-|-|-|
-|[\<c>](c-visual-cpp.md)|[\<>de code](code-visual-cpp.md)|[\<exemple>](example-visual-cpp.md)|
-|exception>1 [ \< ](exception-visual-cpp.md)|comprennent>1 [ \< ](include-visual-cpp.md)|[\<liste>](list-visual-cpp.md)|
-|[\<para>](para-visual-cpp.md)|param>1 [ \< ](param-visual-cpp.md)|paramref>1 [ \< ](paramref-visual-cpp.md)|
-|autorisation>1 [ \< ](permission-visual-cpp.md)|[\<remarques>](remarks-visual-cpp.md)|[\<retourne>](returns-visual-cpp.md)|
-|voir>1 [ \< ](see-visual-cpp.md)|seealso>1 [ \< ](seealso-visual-cpp.md)|[\<>résumé](summary-visual-cpp.md)|
-|[\<>de valeur](value-visual-cpp.md)|||
+[`<c>`](c-visual-cpp.md)
+[`<code>`](code-visual-cpp.md)
+[`<example>`](example-visual-cpp.md)
+[`<exception>`](exception-visual-cpp.md)<sup>1</sup> 
+ 1 [`<include>`](include-visual-cpp.md) <sup>1</sup> 
+ [`<list>`](list-visual-cpp.md) 1 
+ [`<para>`](para-visual-cpp.md) 
+ [`<param>`](param-visual-cpp.md) <sup>1</sup> 
+ 1 [`<paramref>`](paramref-visual-cpp.md) <sup>1</sup> 
+ 1 [`<permission>`](permission-visual-cpp.md) <sup>1</sup> 
+ [`<remarks>`](remarks-visual-cpp.md) 1 
+ [`<returns>`](returns-visual-cpp.md) 
+ [`<see>`](see-visual-cpp.md) <sup>1</sup> 
+ 1 [`<seealso>`](seealso-visual-cpp.md) <sup>1</sup>
+[`<summary>`](summary-visual-cpp.md)
+[`<value>`](value-visual-cpp.md)
 
 1. Le compilateur vérifie la syntaxe.
 
-Dans la version actuelle, le compilateur `<paramref>`MSVC ne prend pas en charge , une balise qui est pris en charge par d’autres compilateurs Visual Studio. Visual C++ peut prendre en charge `<paramref>` dans une version ultérieure.
+Dans la version actuelle, le compilateur MSVC ne prend pas en charge `<paramref>` , une balise prise en charge par d’autres compilateurs Visual Studio. Visual C++ peut prendre en charge `<paramref>` dans une version ultérieure.
 
 ## <a name="see-also"></a>Voir aussi
 
-[XML Documentation](xml-documentation-visual-cpp.md)
+[Documentation XML](xml-documentation-visual-cpp.md)

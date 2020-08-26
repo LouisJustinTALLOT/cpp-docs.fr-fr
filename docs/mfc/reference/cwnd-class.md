@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: aaeee501ef9c05fb19ac7561f7ff7567bae18793
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62298872def1a6e0e262c5339d323b83ad9bbc3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562556"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837643"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -1295,7 +1295,7 @@ Pour plus d’informations sur l’utilisation de `CWnd` , consultez [fenêtres 
 
 `CWnd`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -1312,7 +1312,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 *varChild*<br/>
 Spécifie si l’action par défaut à appeler est celle de l’objet ou l’un des éléments enfants de l’objet. Ce paramètre peut être CHILDID_SELF (pour exécuter l’action par défaut de l’objet) ou un ID enfant (pour exécuter l’action par défaut de l’un des éléments enfants de l’objet).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) dans la SDK Windows.
 
@@ -1344,7 +1344,7 @@ Coordonnée Y du point à tester (en unités d’écran).
 *pvarChild*<br/>
 Reçoit des informations identifiant l’objet au point spécifié par *xLeft* et *yTop*. Consultez *pvarID* dans [IAccessible :: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) dans la SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez **valeurs de retour** dans `IAccessible::accHitTest` dans le SDK Windows.
 
@@ -1386,7 +1386,7 @@ Reçoit la hauteur de l’objet (en unités d’écran).
 *varChild*<br/>
 Spécifie si l’emplacement à récupérer est celui de l’objet ou l’un des éléments enfants de l’objet. Ce paramètre peut être CHILDID_SELF (pour obtenir des informations sur l’objet) ou un ID enfant (pour obtenir des informations sur l’élément enfant de l’objet).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez **valeurs de retour** dans `IAccessible::accLocation` dans le SDK Windows.
 
@@ -1418,7 +1418,7 @@ Spécifie l’objet de départ. Consultez *varStart* dans `IAccessible::accNavig
 *pvarEndUpAt*<br/>
 Reçoit des informations sur l’objet d’interface utilisateur de destination. Consultez *pvarEnd* dans `IAccessible::accNavigate` dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez **valeurs de retour** dans `IAccessible::accNavigate` dans le SDK Windows.
 
@@ -1448,7 +1448,7 @@ Spécifie comment modifier la sélection actuelle ou le focus. Consultez *flagsS
 *varChild*<br/>
 Spécifie l’objet à sélectionner. Ce paramètre peut être CHILDID_SELF (pour sélectionner l’objet lui-même) ou un ID enfant (pour sélectionner l’un des enfants de l’objet).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez **valeurs de retour** dans `IAccessible::accSelect` dans le SDK Windows.
 
@@ -1478,7 +1478,7 @@ Spécifie le temps nécessaire à la lecture de l’animation, en millisecondes.
 *dwFlags*<br/>
 Spécifie le type d’animation. Pour obtenir la liste complète des valeurs possibles, consultez [AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction est réussie ; Sinon, 0.
 
@@ -1494,7 +1494,7 @@ Réorganise toutes les fenêtres enfants réduites (sous forme d'icônes).
 UINT ArrangeIconicWindows();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur d’une ligne d’icônes si la fonction réussit ; Sinon, 0.
 
@@ -1521,7 +1521,7 @@ BOOL Attach(HWND hWndNew);
 *hWndNew*<br/>
 Spécifie un handle vers une fenêtre Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1556,7 +1556,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 *lpPaint*<br/>
 Pointe vers la structure [PAINTSTRUCT,](/windows/win32/api/winuser/ns-winuser-paintstruct) qui doit recevoir des informations de peinture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie le contexte de périphérique pour `CWnd` . Le pointeur peut être temporaire et ne doit pas être stocké au-delà de l’étendue de [EndPaint](#endpaint).
 
@@ -1738,7 +1738,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 *hWndNext*<br/>
 Identifie la fenêtre qui suit `CWnd` dans la chaîne du presse-papiers.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1825,7 +1825,7 @@ Spécifie les fenêtres enfants à ignorer. Ce paramètre peut être une combina
 |CWP_SKIPDISABLED|Ignorer les fenêtres enfants désactivées|
 |CWP_SKIPTRANSPARENT|Ignorer les fenêtres enfants transparentes|
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre enfant qui contient le point. La valeur est NULL si le point donné se trouve en dehors de la zone cliente. Si le point se trouve dans la zone cliente mais qu’il n’est pas contenu dans une fenêtre enfant, `CWnd` est retourné.
 
@@ -1885,7 +1885,7 @@ Cette fonction membre est appelée par [RunModalLoop](#runmodalloop) pour déter
 virtual BOOL ContinueModal();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la boucle modale doit être poursuivie ; 0 lorsque [EndModalLoop](#endmodalloop) est appelé.
 
@@ -1931,7 +1931,7 @@ dans ID de la fenêtre.
 *pContext*<br/>
 dans Pointeur vers une structure [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) utilisée pour personnaliser l’architecture document-vue pour l’application.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode a réussi ; Sinon, FALSe.
 
@@ -2083,7 +2083,7 @@ Données de clé de licence facultatives. Ces données sont nécessaires uniquem
 *clsid*<br/>
 ID de classe unique du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -2180,7 +2180,7 @@ Pour une fenêtre enfant, pointeur vers la fenêtre parente ; Sinon, pointeur v
 *nID*<br/>
 Pour une fenêtre enfant, l’ID de la fenêtre ; Sinon, ID d’un menu pour la fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode a réussi ; Sinon, FALSe.
 
@@ -2291,7 +2291,7 @@ Appelle la procédure de fenêtre par défaut.
 LRESULT Default();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Dépend du message envoyé.
 
@@ -2325,7 +2325,7 @@ Spécifie des informations supplémentaires dépendantes du message.
 *lParam*<br/>
 Spécifie des informations supplémentaires dépendantes du message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Dépend du message envoyé.
 
@@ -2357,7 +2357,7 @@ Détruit la fenêtre Windows attachée à l' `CWnd` objet.
 virtual BOOL DestroyWindow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fenêtre est détruite ; Sinon, 0.
 
@@ -2387,7 +2387,7 @@ Détache un handle Windows d'un objet `CWnd` et retourne le handle.
 HWND Detach();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HWND de l’objet Windows.
 
@@ -2439,7 +2439,7 @@ Spécifie les attributs des fichiers à afficher. Il peut s’agir de n’import
 
 - DDL_EXCLUSIVE bit exclusif. Si le bit exclusif est défini, seuls les fichiers du type spécifié sont répertoriés ; Sinon, les fichiers normaux et les fichiers du type spécifié sont répertoriés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
@@ -2507,7 +2507,7 @@ Spécifie les attributs de fichier DOS des fichiers à afficher. Il peut s’agi
 
 - DDL_EXCLUSIVE bit exclusif. Si le bit exclusif est défini, seuls les fichiers du type spécifié sont répertoriés ; Sinon, les fichiers normaux et les fichiers du type spécifié sont répertoriés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie le résultat de la fonction. La valeur est différente de zéro si une liste a été créée, même une liste vide. Une valeur de retour de 0 signifie que la chaîne d’entrée ne contenait pas de chemin de recherche valide.
 
@@ -2549,7 +2549,7 @@ Pointe vers une mémoire tampon qui doit recevoir la sélection actuelle dans la
 *nIDListBox*<br/>
 Spécifie l’ID d’entier d’une zone de liste dans la boîte de dialogue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -2581,7 +2581,7 @@ Pointe vers une mémoire tampon qui doit recevoir le chemin d’accès sélectio
 *nIDComboBox*<br/>
 Spécifie l’ID d’entier de la zone de liste déroulante dans la boîte de dialogue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -2654,7 +2654,7 @@ BOOL DragDetect(POINT pt) const;
 *pt*<br/>
 Position initiale de la souris, en coordonnées d’écran. La fonction détermine les coordonnées du rectangle de glissement à l’aide de ce point.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si l’utilisateur a déplacé la souris en dehors du rectangle de glissement tout en maintenant le bouton gauche enfoncé, la valeur de retour est différente de zéro.
 
@@ -2686,7 +2686,7 @@ Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) sp�
 *lprcTo*<br/>
 Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) spécifiant l’emplacement et la taille de la fenêtre restaurée
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction est réussie ; Sinon, 0.
 
@@ -2716,7 +2716,7 @@ Pointeur vers une structure RECT qui spécifie le rectangle englobant pour le ti
 *uFlags*<br/>
 Spécifie les options de dessin. Pour obtenir la liste complète des valeurs, consultez [DrawCaption](/windows/win32/api/winuser/nf-winuser-drawcaption).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction est réussie ; Sinon, 0.
 
@@ -2819,7 +2819,7 @@ Spécifie si les flèches de barre de défilement sont activées ou désactivée
 
 - ESB_DISABLE_BOTH désactive les deux flèches d’une barre de défilement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si les flèches sont activées ou désactivées comme spécifié. Dans le cas contraire, la valeur est 0, ce qui indique que les flèches sont déjà dans l’État demandé ou qu’une erreur s’est produite.
 
@@ -2858,7 +2858,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 *bEnable*<br/>
 Spécifie si le contrôle d’info-bulle est activé ou désactivé. TRUE active le contrôle ; FALSe désactive le contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si les info-bulles sont activées ; Sinon, FALSe.
 
@@ -2894,7 +2894,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 *bEnable*<br/>
 Spécifie si les info-bulles de suivi sont activées ou désactivées. Si ce paramètre a la valeur TRUE, les info-bulles de suivi sont activées. Si ce paramètre a la valeur FALSe, les conseils de l’outil de suivi sont désactivés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indique l’état avant l' `EnableWindow` appel de la fonction membre. La valeur de retour est différente de zéro si la fenêtre a été précédemment désactivée. La valeur de retour est 0 si la fenêtre a été activée précédemment ou si une erreur s’est produite.
 
@@ -2915,7 +2915,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 *bEnable*<br/>
 Spécifie si la fenêtre donnée doit être activée ou désactivée. Si ce paramètre a la valeur TRUE, la fenêtre est activée. Si ce paramètre a la valeur FALSe, la fenêtre est désactivée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indique l’état avant l' `EnableWindow` appel de la fonction membre. La valeur de retour est différente de zéro si la fenêtre a été précédemment désactivée. La valeur de retour est 0 si la fenêtre a été activée précédemment ou si une erreur s’est produite.
 
@@ -3002,7 +3002,7 @@ Pointeur vers une chaîne se terminant par un caractère null qui spécifie le n
 *lpResource*<br/>
 Pointeur vers une ressource.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si une ressource de boîte de dialogue est exécutée ; Sinon, FALSe.
 
@@ -3047,7 +3047,7 @@ Pointe vers une chaîne se terminant par un caractère null qui spécifie le nom
 *lpszWindowName*<br/>
 Pointe vers une chaîne se terminant par un caractère null qui spécifie le nom de la fenêtre (titre de la fenêtre). Si *lpWindowName* a la valeur null, tous les noms de fenêtre correspondent.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre qui a le nom de classe et le nom de fenêtre spécifiés. La valeur est NULL si aucune fenêtre de ce type n’est trouvée.
 
@@ -3087,7 +3087,7 @@ Pointeur vers une chaîne se terminant par un caractère null qui spécifie le n
 *lpszWindow*<br/>
 Pointeur vers une chaîne se terminant par un caractère null qui spécifie le nom de la fenêtre (titre de la fenêtre). Si ce paramètre a la valeur NULL, tous les noms de fenêtre correspondent.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction est réussie, la valeur de retour est un pointeur vers l’objet de fenêtre ayant la classe et les noms de fenêtres spécifiés. Si la fonction échoue, la valeur de retour est NULL.
 
@@ -3108,7 +3108,7 @@ BOOL FlashWindow(BOOL bInvert);
 *bInvert*<br/>
 Spécifie si la `CWnd` doit être flashée ou retournée à son état d’origine. `CWnd`Est flashé d’un État à l’autre si *bInvert* a la valeur true. Si *bInvert* a la valeur false, la fenêtre est retournée à son état d’origine (actif ou inactif).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fenêtre était active avant l’appel à la `FlashWindow` fonction membre ; sinon, 0.
 
@@ -3148,7 +3148,7 @@ Spécifie le nombre de fois où la fenêtre doit clignoter.
 *dwTimeout*<br/>
 Spécifie la vitesse, en millisecondes, à laquelle la fenêtre sera éclairée. Si *dwTimeout* est égal à zéro, la fonction utilise la fréquence de clignotement du curseur par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour spécifie l’état de la fenêtre avant l’appel à la `FlashWindowEx` fonction. Si le titre de la fenêtre a été dessiné comme actif avant l’appel, la valeur de retour est différente de zéro. Sinon, la valeur de retour est zéro.
 
@@ -3169,7 +3169,7 @@ static CWnd* PASCAL FromHandle(HWND hWnd);
 *hWnd*<br/>
 HWND d’une fenêtre Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers un objet `CWnd` quand un handle de fenêtre lui est fourni. Si aucun objet `CWnd` n'est attaché au handle, un objet `CWnd` temporaire est créé et attaché.
 
@@ -3188,7 +3188,7 @@ static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 *hWnd*<br/>
 HWND d’une fenêtre Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet `CWnd`.
 
@@ -3216,7 +3216,7 @@ Identifie l’enfant dont l' `IDispatch` interface doit être récupérée.
 *ppdispChild*<br/>
 Reçoit l’adresse de l’interface de l’objet enfant `IDispatch` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) dans le SDK Windows.
 
@@ -3241,7 +3241,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 *pcountChildren*<br/>
 Reçoit le nombre d’enfants.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) dans le SDK Windows.
 
@@ -3271,7 +3271,7 @@ Spécifie si l’action par défaut à récupérer est celle de l’objet ou l�
 *pszDefaultAction*<br/>
 Adresse d’un BSTR qui reçoit une chaîne localisée décrivant l’action par défaut pour l’objet spécifié, ou NULL si cet objet n’a pas d’action par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) dans le SDK Windows.
 
@@ -3301,7 +3301,7 @@ Spécifie si la description à récupérer est celle de l’objet ou l’un des 
 *pszDescription*<br/>
 Adresse d’un BSTR qui reçoit une chaîne localisée décrivant l’objet spécifié, ou NULL si aucune description n’est disponible pour cet objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) dans le SDK Windows.
 
@@ -3326,7 +3326,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 *pvarChild*<br/>
 Reçoit des informations sur l’objet qui a le focus. Consultez *pvarID* dans [IAccessible :: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez **valeurs de retour** dans `IAccessible::get_accFocus` dans le SDK Windows.
 
@@ -3356,7 +3356,7 @@ Spécifie si les informations d’aide à récupérer sont celles de l’objet o
 *pszHelp*<br/>
 Adresse d’un BSTR qui reçoit la chaîne localisée contenant les informations d’aide pour l’objet spécifié, ou NULL si aucune information d’aide n’est disponible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) dans le SDK Windows.
 
@@ -3390,7 +3390,7 @@ Spécifie si la rubrique d’aide à récupérer est celle de l’objet ou l’u
 *pidTopic*<br/>
 Identifie la rubrique du fichier d’aide associée à l’objet spécifié. Consultez *pidTopic* dans [IAccessible :: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez **valeurs de retour** dans `IAccessible::get_accHelpTopic` dans le SDK Windows.
 
@@ -3420,7 +3420,7 @@ Spécifie si le raccourci clavier à récupérer est celui de l’objet ou l’u
 *pszKeyboardShortcut*<br/>
 Adresse d’un BSTR qui reçoit une chaîne localisée identifiant le raccourci clavier, ou NULL si aucun raccourci clavier n’est associé à l’objet spécifié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) dans le SDK Windows.
 
@@ -3450,7 +3450,7 @@ Spécifie si le nom à récupérer est celui de l’objet ou l’un des élémen
 *pszName*<br/>
 Adresse d’un BSTR qui reçoit une chaîne contenant le nom de l’objet spécifié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) dans le SDK Windows.
 
@@ -3475,7 +3475,7 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 *ppdispParent*<br/>
 Reçoit l’adresse de l’interface de l’objet parent `IDispatch` . La variable a la valeur NULL s’il n’existe aucun parent, ou si l’enfant ne peut pas accéder à son parent.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) dans le SDK Windows.
 
@@ -3505,7 +3505,7 @@ Spécifie si les informations de rôle à récupérer sont celles de l’objet o
 *pvarRole*<br/>
 Reçoit les informations de rôle. Consultez *pvarRole* dans [IAccessible :: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez **valeurs de retour** dans `IAccessible::get_accRole` dans le SDK Windows.
 
@@ -3530,7 +3530,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 *pvarChildren*<br/>
 Reçoit des informations sur les enfants sélectionnés. Consultez *pvarChildren* dans [IAccessible :: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez **valeurs de retour** dans `IAccessible::get_accSelection` dans le SDK Windows.
 
@@ -3560,7 +3560,7 @@ Spécifie si les informations d’État à récupérer sont celles de l’objet 
 *pvarState*<br/>
 Reçoit des informations sur l’état de l’objet. Consultez *pvarState* dans [IAccessible :: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez **valeurs de retour** dans `IAccessible::get_accState` dans le SDK Windows.
 
@@ -3590,7 +3590,7 @@ Spécifie si les informations de valeur à récupérer sont celles de l’objet 
 *pszValue*<br/>
 Adresse du BSTR qui reçoit une chaîne localisée contenant la valeur actuelle de l’objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, code d’erreur COM en cas d’échec. Consultez les **valeurs de retour** dans [IAccessible :: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) dans le SDK Windows.
 
@@ -3610,7 +3610,7 @@ Récupère un pointeur vers la fenêtre active.
 static CWnd* PASCAL GetActiveWindow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fenêtre active ou NULL si aucune fenêtre n’était active au moment de l’appel. Le pointeur peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
@@ -3631,7 +3631,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 *gaFlags*<br/>
 Spécifie l’ancêtre à récupérer. Pour obtenir la liste complète des valeurs possibles, consultez [GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction est réussie, la valeur de retour est un pointeur vers l’objet de fenêtre ancêtre. Si la fonction échoue, la valeur de retour est NULL.
 
@@ -3647,7 +3647,7 @@ Récupère la fenêtre qui a la capture de la souris.
 static CWnd* PASCAL GetCapture();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre qui a la capture de la souris. La valeur est NULL si aucune fenêtre n’a la capture de la souris.
 
@@ -3665,7 +3665,7 @@ Récupère les coordonnées clientes de la position actuelle du signe insertion 
 static CPoint PASCAL GetCaretPos();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) contenant les coordonnées de la position du signe insertion.
 
@@ -3691,7 +3691,7 @@ Spécifie l’identificateur entier de la première case d’option dans le grou
 *nIDLastButton*<br/>
 Spécifie l’identificateur entier de la dernière case d’option du groupe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ID de la case d’option cochée, ou 0 si aucun élément n’est sélectionné.
 
@@ -3724,7 +3724,7 @@ Récupère le propriétaire actuel du presse-papiers.
 static CWnd* PASCAL GetClipboardOwner();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre qui possède le presse-papiers si la fonction réussit. Dans le cas contraire, la valeur est NULL.
 
@@ -3742,7 +3742,7 @@ Récupère la première fenêtre dans la chaîne du presse-papiers.
 static CWnd* PASCAL GetClipboardViewer();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre actuellement responsable de l’affichage du presse-papiers en cas de réussite ; Sinon, NULL (par exemple, s’il n’y a pas de visionneuse).
 
@@ -3756,7 +3756,7 @@ Appelez cette fonction membre pour récupérer un pointeur vers un contrôle OLE
 LPUNKNOWN GetControlUnknown();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’interface [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) du contrôle OLE représenté par cet `CWnd` objet. Si cet objet ne représente pas un contrôle OLE, la valeur de retour est NULL.
 
@@ -3778,7 +3778,7 @@ Retourne un pointeur vers le message actuellement traité par cette fenêtre. Do
 static const MSG* PASCAL GetCurrentMessage();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers la structure [MSG](/windows/win32/api/winuser/ns-winuser-msg) qui contient le message que la fenêtre est en train de traiter. Doit être appelé uniquement lorsque dans un gestionnaire **de**<em>messages</em> sur.
 
@@ -3794,7 +3794,7 @@ Récupère un pointeur vers un contexte de périphérique, de classe ou privé c
 CDC* GetDC();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie le contexte de périphérique pour la `CWnd` zone cliente en cas de réussite ; sinon, la valeur de retour est null. Le pointeur peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
@@ -3840,7 +3840,7 @@ Peut avoir l’une des valeurs prédéfinies suivantes :
 
 - DCX_WINDOW retourne un contexte de périphérique qui correspond au rectangle de la fenêtre plutôt qu’au rectangle client.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Contexte de périphérique pour la fenêtre spécifiée si la fonction réussit ; Sinon, NULL.
 
@@ -3866,7 +3866,7 @@ Récupère la cible de rendu du contexte de périphérique pour la fenêtre `CWn
 CDCRenderTarget* GetDCRenderTarget();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Cible de rendu du contexte de périphérique pour la fenêtre spécifiée si la fonction aboutit ; dans le cas contraire, NULL.
 
@@ -3890,7 +3890,7 @@ Spécifie l’identificateur du contrôle ou de la fenêtre enfant à récupére
 *bOnlyPerm*<br/>
 Spécifie si la fenêtre à retourner peut être temporaire. Si la valeur est TRUE, seule une fenêtre permanente peut être retournée ; Si la valeur est FALSe, la fonction peut retourner une fenêtre temporaire. Pour plus d’informations sur les fenêtres temporaires, consultez la [note technique 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un `CWnd` objet, ou null si aucune fenêtre enfant n’est trouvée.
 
@@ -3906,7 +3906,7 @@ Retourne la fenêtre du bureau Windows.
 static CWnd* PASCAL GetDesktopWindow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre du bureau Windows. Ce pointeur peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
@@ -3922,7 +3922,7 @@ Retourne la valeur de la fenêtre ou de l’ID du contrôle d’une fenêtre enf
 int GetDlgCtrlID() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur numérique de la `CWnd` fenêtre enfant si la fonction réussit ; sinon, 0.
 
@@ -3954,7 +3954,7 @@ Spécifie l’identificateur du contrôle ou de la fenêtre enfant à récupére
 *phWnd*<br/>
 Pointeur vers une fenêtre enfant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le contrôle ou la fenêtre enfant donné (e). Si aucun contrôle avec l’ID d’entier fourni par le paramètre *nid* n’existe, la valeur est null.
 
@@ -3990,7 +3990,7 @@ Pointe vers la variable booléenne qui doit recevoir l’indicateur traduit.
 *bSigned*<br/>
 Spécifie si la valeur à récupérer est signée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie la valeur traduite du texte de l’élément de boîte de dialogue. Étant donné que 0 est une valeur de retour valide, *lpTrans* doit être utilisé pour détecter les erreurs. Si vous souhaitez une valeur de retour signée, effectuez un cast de celle-ci en **`int`** type.
 
@@ -4035,7 +4035,7 @@ Spécifie la longueur maximale (en caractères) de la chaîne à copier sur *lpS
 *rString*<br/>
 Référence à un [CString](../../atl-mfc-shared/reference/cstringt-class.md).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie le nombre réel de caractères copiés dans la mémoire tampon, à l’exclusion du caractère null de fin. La valeur est 0 si aucun texte n’est copié.
 
@@ -4051,7 +4051,7 @@ Appelez cette fonction membre pour récupérer un pointeur vers le curseur sous-
 IUnknown* GetDSCCursor();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un curseur qui est défini par un contrôle de source de données. MFC prend en charge `AddRef` l’appel de pour le pointeur.
 
@@ -4071,7 +4071,7 @@ Récupère un pointeur vers l'objet de gestionnaire de disposition dynamique.
 CMFCDynamicLayout* GetDynamicLayout();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur désignant l'objet de gestionnaire de disposition dynamique ou NULL si la disposition dynamique n'est pas activée.
 
@@ -4087,7 +4087,7 @@ Retourne le style étendu de la fenêtre.
 DWORD GetExStyle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Style étendu de la fenêtre. Pour plus d’informations sur les styles de fenêtre étendus utilisés dans MFC, consultez [styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
@@ -4099,7 +4099,7 @@ Récupère un pointeur vers `CWnd` qui a actuellement le focus d’entrée.
 static CWnd* PASCAL GetFocus();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la fenêtre qui a le focus actuel, ou NULL s’il n’y a aucune fenêtre Focus.
 
@@ -4113,7 +4113,7 @@ Envoie le message WM_GETFONT à la fenêtre pour récupérer la police actuelle.
 CFont* GetFont() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CFont](../../mfc/reference/cfont-class.md) attaché à la police actuelle pour la fenêtre.
 
@@ -4129,7 +4129,7 @@ Retourne un pointeur vers la fenêtre de premier plan (la fenêtre qui est actue
 static CWnd* PASCAL GetForegroundWindow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la fenêtre de premier plan. Il peut s’agir d’un `CWnd` objet temporaire.
 
@@ -4150,7 +4150,7 @@ HICON GetIcon(BOOL bBigIcon) const;
 *bBigIcon*<br/>
 Spécifie une icône de 32 pixel par 32 pixels si la valeur est TRUE ; spécifie une icône de 16 pixels par 16 pixels si la valeur est FALSe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d'une icône. En cas d’échec, retourne NULL.
 
@@ -4162,7 +4162,7 @@ Identifie la dernière fenêtre contextuelle détenue par `CWnd` à avoir été 
 CWnd* GetLastActivePopup() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre contextuelle la plus récemment active. La valeur de retour sera la fenêtre elle-même si l’une des conditions suivantes est remplie :
 
@@ -4200,7 +4200,7 @@ Pointeur vers un octet qui reçoit la valeur alpha utilisée pour décrire l’o
 *pdwFlags*<br/>
 Pointeur vers une valeur DWORD qui reçoit un indicateur de superposition. La valeur peut être NULL si l’argument n’est pas nécessaire. Pour obtenir la liste complète des valeurs possibles, consultez [GetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction est réussie ; Sinon, 0.
 
@@ -4216,7 +4216,7 @@ Récupère un pointeur vers le menu de cette fenêtre.
 CMenu* GetMenu() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie le menu. La valeur est NULL si n' `CWnd` a aucun menu. La valeur de retour n’est pas définie si `CWnd` est une fenêtre enfant.
 
@@ -4252,7 +4252,7 @@ Spécifie l’élément pour lequel des informations doivent être récupérées
 *pmbi*<br/>
 Pointeur vers une structure [MENUBARINFO](/windows/win32/api/winuser/ns-winuser-menubarinfo) qui reçoit les informations.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction est réussie ; Sinon, 0.
 
@@ -4284,7 +4284,7 @@ Spécifie comment la fonction doit effectuer une recherche dans le groupe de con
 *pCurSiteOrWnd*<br/>
 Identifie le `COleControlSiteOrWnd` contrôle. Pour plus d’informations sur `COleControlSiteOrWnd` , consultez la **section Notes**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le contrôle précédent ou suivant dans le groupe si la fonction membre est réussie.
 
@@ -4330,7 +4330,7 @@ Identifie le `COleControlSiteOrWnd` contrôle. Pour plus d’informations sur `C
 *bPrevious*<br/>
 Spécifie comment la fonction doit effectuer une recherche dans la boîte de dialogue. Si la valeur est TRUE, la fonction recherche le contrôle précédent dans la boîte de dialogue ; Si la valeur est FALSe, elle recherche le contrôle suivant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le contrôle précédent ou suivant qui a le style WS_TABSTOP, si la fonction membre est réussie.
 
@@ -4351,7 +4351,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 *Tous*<br/>
 Spécifie si la fonction retourne un pointeur vers la fenêtre suivante ou la fenêtre précédente. Il peut s’agir de GW_HWNDNEXT, qui retourne la fenêtre qui suit l' `CWnd` objet dans la liste du gestionnaire de fenêtres, ou GW_HWNDPREV, qui retourne la fenêtre précédente dans la liste du gestionnaire de fenêtrage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre suivante (ou précédente) dans la liste du gestionnaire de fenêtres si la fonction membre est réussie.
 
@@ -4384,7 +4384,7 @@ Récupère le handle de la fenêtre dans laquelle le presse-papiers est actuelle
 static CWnd* PASCAL GetOpenClipboardWindow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de la fenêtre qui a actuellement le presse-papiers ouvert si la fonction réussit ; Sinon, NULL.
 
@@ -4396,7 +4396,7 @@ Récupère un pointeur vers le propriétaire de la fenêtre.
 CWnd* GetOwner() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet `CWnd`.
 
@@ -4414,7 +4414,7 @@ Appelez cette fonction pour obtenir un pointeur vers la fenêtre parente d’une
 CWnd* GetParent() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Consultez la section valeurs de retour de [GetParent](/windows/win32/api/winuser/nf-winuser-getparent) dans la SDK Windows.
 
@@ -4430,7 +4430,7 @@ Appelez cette fonction membre pour récupérer la fenêtre frame parente.
 CFrameWnd* GetParentFrame() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers une fenêtre frame en cas de réussite ; Sinon, NULL.
 
@@ -4446,7 +4446,7 @@ Appelez cette fonction membre pour obtenir un pointeur vers la fenêtre parente 
 CWnd* GetParentOwner() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet `CWnd`. Si aucun objet `CWnd` n'est attaché au handle, un objet `CWnd` temporaire est créé et attaché. Le pointeur peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
@@ -4495,7 +4495,7 @@ Obtient une cible de rendu associée à cette fenêtre.
 CHwndRenderTarget* GetRenderTarget();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la cible de rendu ou NULL.
 
@@ -4507,7 +4507,7 @@ Retourne `m_hWnd` , ou null si le **`this`** pointeur est null.
 HWND GetSafeHwnd() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le handle de fenêtre pour une fenêtre. Retourne la valeur NULL si `CWnd` n’est pas attaché à une fenêtre ou s’il est utilisé avec un `CWnd` pointeur null.
 
@@ -4533,7 +4533,7 @@ Pointeur vers une fenêtre parente `CWnd` . Peut être NULL.
 *pWndTop*<br/>
 Pointeur vers la fenêtre qui est actuellement en haut. Peut être NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le propriétaire sécurisé de la fenêtre donnée.
 
@@ -4561,7 +4561,7 @@ Spécifie le type de barre de défilement. Le paramètre peut prendre l’une de
 
 - SB_VERT récupère la position de la barre de défilement verticale.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Contrôle de barre de défilement frère, ou NULL si aucun n’est défini.
 
@@ -4587,7 +4587,7 @@ Spécifie l’objet menu. Pour obtenir la liste des valeurs possibles, consultez
 *psbi*<br/>
 Pointeur vers une structure [SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) qui reçoit les informations.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction est réussie ; Sinon, 0.
 
@@ -4623,7 +4623,7 @@ Pointeur vers une structure [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-s
 *nMask*<br/>
 Spécifie les paramètres de barre de défilement à récupérer. La valeur par défaut spécifie une combinaison de SIF_PAGE, SIF_POS, SIF_TRACKPOS et SIF_RANGE. `SCROLLINFO`Pour plus d’informations sur les valeurs de *nMask* , consultez.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le message a récupéré des valeurs, la valeur renvoyée est TRUE. Sinon, la valeur est FALSe.
 
@@ -4652,7 +4652,7 @@ Spécifie le type de barre de défilement. Le paramètre peut prendre l’une de
 
 - SB_VERT récupère la limite de défilement de la barre de défilement verticale.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie la position maximale d’une barre de défilement en cas de réussite ; Sinon, 0.
 
@@ -4673,7 +4673,7 @@ Spécifie la barre de défilement à examiner. Le paramètre peut prendre l’un
 
 - SB_VERT récupère la position de la barre de défilement verticale.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie la position actuelle de la case de défilement dans la barre de défilement en cas de réussite ; Sinon, 0.
 
@@ -4721,7 +4721,7 @@ Retourne le style de fenêtre actif.
 DWORD GetStyle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Style de la fenêtre. Pour plus d’informations sur les styles de fenêtre utilisés dans MFC, consultez [styles de fenêtre](styles-used-by-mfc.md#window-styles).
 
@@ -4738,7 +4738,7 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 *bRevert*<br/>
 Spécifie l’action à entreprendre. Si *bRevert* a la valeur false, `GetSystemMenu` retourne un handle vers une copie du menu de contrôle en cours d’utilisation. Cette copie est initialement identique au menu de contrôle, mais elle peut être modifiée. Si *bRevert* a la valeur true, `GetSystemMenu` rétablit l’État par défaut du menu de contrôle. Le menu de contrôle précédent, éventuellement modifié, est détruit. La valeur de retour n’est pas définie dans ce cas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie une copie du menu de contrôle si *bRevert* a la valeur false. Si *bRevert* a la valeur true, la valeur de retour n’est pas définie.
 
@@ -4783,7 +4783,7 @@ Appelez cette fonction membre pour récupérer la fenêtre frame de niveau supé
 CFrameWnd* GetTopLevelFrame() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre frame de niveau supérieur de la fenêtre.
 
@@ -4801,7 +4801,7 @@ Appelez cette fonction membre pour récupérer la fenêtre de niveau supérieur.
 CWnd* GetTopLevelOwner() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre de niveau supérieur. Le pointeur retourné peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
@@ -4817,7 +4817,7 @@ Appelez cette fonction membre pour récupérer le parent de niveau supérieur de
 CWnd* GetTopLevelParent() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre parente de niveau supérieur de la fenêtre.
 
@@ -4835,7 +4835,7 @@ Recherche la fenêtre enfant de niveau supérieur qui appartient à `CWnd` .
 CWnd* GetTopWindow() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie la fenêtre enfant de niveau supérieur dans une `CWnd` liste liée de fenêtres enfants. S’il n’existe aucune fenêtre enfant, la valeur est NULL.
 
@@ -4865,7 +4865,7 @@ Affectez la valeur NULL à ce paramètre pour déterminer si une région de mise
 *bErase*<br/>
 Spécifie si l’arrière-plan dans la région de mise à jour doit être effacé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie l’état de la région de mise à jour. La valeur est différente de zéro si la région de mise à jour n’est pas vide. Sinon, 0.
 
@@ -4899,7 +4899,7 @@ Identifie la région de mise à jour.
 *bErase*<br/>
 Spécifie si l’arrière-plan sera effacé et que les zones non clientes des fenêtres enfants seront dessinées. Si la valeur est FALSe, aucun dessin n’est effectué.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie un indicateur de type entier abrégé qui indique le type de la région résultante. La valeur peut prendre l’une des valeurs suivantes :
 
@@ -4942,7 +4942,7 @@ Spécifie la relation entre `CWnd` et la fenêtre retournée. Elle peut prendre 
 
 - GW_OWNER identifie le `CWnd` propriétaire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le pointeur retourné peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
@@ -4954,7 +4954,7 @@ Appelez cette fonction membre pour récupérer l’identificateur de contexte d�
 DWORD GetWindowContextHelpId() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur du contexte d’aide. Retourne 0 si la fenêtre n’en a pas.
 
@@ -4966,7 +4966,7 @@ Appelez cette fonction membre pour récupérer le nombre de fenêtres enfants as
 long GetWindowedChildCount();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de fenêtres enfants associées à l' `CWnd` objet.
 
@@ -4978,7 +4978,7 @@ Récupère le contexte d’affichage de la totalité de la fenêtre, y compris l
 CDC* GetWindowDC();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identifie le contexte d’affichage de la fenêtre donnée si la fonction réussit ; Sinon, NULL.
 
@@ -5021,7 +5021,7 @@ Récupère le nombre de fenêtres enfants sans fenêtre associées.
 long GetWindowlessChildCount();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de fenêtres enfants sans fenêtre associées à l' `CWnd` objet.
 
@@ -5038,7 +5038,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 *lpwndpl*<br/>
 Pointe vers la `WINDOWPLACEMENT` structure qui reçoit les informations d’affichage de l’État et de la position.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
@@ -5076,7 +5076,7 @@ int GetWindowRgn(HRGN hRgn)const;
 *hRgn*<br/>
 Handle d’une région de fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour spécifie le type de la zone obtenue par la fonction. Ce peut être l’une des valeurs suivantes :
 
@@ -5120,7 +5120,7 @@ Spécifie le nombre maximal de caractères à copier dans la mémoire tampon, y 
 *rString*<br/>
 Objet [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui doit recevoir la chaîne copiée du titre de la fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie la longueur, en caractères, de la chaîne copiée, à l’exclusion du caractère null de fin. La valeur est 0 si n' `CWnd` a pas de légende ou si la légende est vide.
 
@@ -5142,7 +5142,7 @@ Retourne la longueur du titre de la légende de l' `CWnd` objet.
 int GetWindowTextLength() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie la longueur du texte en caractères, à l’exclusion de tout caractère de fin null. La valeur est 0 si aucun texte de ce type n’existe.
 
@@ -5200,7 +5200,7 @@ Spécifie si l’élément de menu est mis en surbrillance ou si la sélection e
 
 - MF_UNHILITE supprime la mise en surbrillance de l’élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie si l’élément de menu a été mis en surbrillance. Différent de zéro si l’élément a été mis en surbrillance ; Sinon, 0.
 
@@ -5379,7 +5379,7 @@ BOOL IsChild(const CWnd* pWnd) const;
 *pWnd*<br/>
 Identifie la fenêtre à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie le résultat de la fonction. La valeur est différente de zéro si la fenêtre identifiée par *pwnd* est une fenêtre enfant de `CWnd` ; sinon, 0.
 
@@ -5395,7 +5395,7 @@ Détermine si la prise en charge de D2D est activée.
 BOOL IsD2DSupportEnabled();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la fonctionnalité est activée ; Sinon, FALSe.
 
@@ -5412,7 +5412,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 *lpMsg*<br/>
 Pointe vers une structure [MSG](/windows/win32/api/winuser/ns-winuser-msg) qui contient le message à vérifier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie si la fonction membre a traité le message donné. La valeur est différente de zéro si le message a été traité ; Sinon, 0. Si la valeur renvoyée est 0, appelez la fonction membre [CWnd ::P retranslatemessage](#pretranslatemessage) de la classe de base pour traiter le message. Dans une substitution de la `CWnd::PreTranslateMessage` fonction membre, le code ressemble à ceci :
 
@@ -5437,7 +5437,7 @@ UINT IsDlgButtonChecked(int nIDButton) const;
 *nIDButton*<br/>
 Spécifie l’identificateur entier du contrôle bouton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le contrôle donné est activé, et 0 s’il n’est pas activé. Seules les cases d’option et les cases à cocher peuvent être vérifiées. Pour les boutons à trois États, la valeur de retour peut être 2 si le bouton est indéterminé. Cette fonction membre retourne 0 pour un PushButton.
 
@@ -5453,7 +5453,7 @@ Détermine si la disposition dynamique est activée dans cette fenêtre. Si la d
 BOOL IsDynamicLayoutEnabled() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la disposition dynamique est activée ; sinon, FALSE.
 
@@ -5467,7 +5467,7 @@ Spécifie si `CWnd` est réduit (sous forme).
 BOOL IsIconic() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si `CWnd` est réduit ; sinon, 0.
 
@@ -5483,7 +5483,7 @@ Spécifie si `CWnd` intègre une prise en charge de l'interface tactile.
 BOOL IsTouchWindow() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si `CWnd` a une prise en charge tactile ; sinon, false.
 
@@ -5497,7 +5497,7 @@ Spécifie si `CWnd` est activé pour l’entrée de souris et de clavier.
 BOOL IsWindowEnabled() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si `CWnd` est activé ; sinon, 0.
 
@@ -5513,7 +5513,7 @@ Détermine l’état de visibilité de la fenêtre donnée.
 BOOL IsWindowVisible() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si `CWnd` est visible (possède le bit de style [WS_VISIBLE](styles-used-by-mfc.md#window-styles) défini et la fenêtre parente est visible). Étant donné que la valeur de retour reflète l’état du bit de style WS_VISIBLE, la valeur de retour peut être différente de zéro même si `CWnd` est totalement masquée par d’autres fenêtres.
 
@@ -5535,7 +5535,7 @@ Détermine si `CWnd` a été agrandi.
 BOOL IsZoomed() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si `CWnd` est agrandi ; sinon, 0.
 
@@ -5552,7 +5552,7 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 *nIDEvent*<br/>
 Valeur de l’événement du minuteur passé à [SetTimer](#settimer).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie le résultat de la fonction. La valeur est différente de zéro si l’événement a été supprimé. La valeur est 0 si la `KillTimer` fonction membre n’a pas pu trouver l’événement du minuteur spécifié.
 
@@ -5577,7 +5577,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 *lpszResourceName*<br/>
 Nom de la ressource qui contient les informations de disposition dynamique souhaitées pour cette fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si la fonction aboutit. Elle est de 0 si une défaillance se produit.
 
@@ -5593,7 +5593,7 @@ Désactive le dessin dans la fenêtre spécifiée.
 BOOL LockWindowUpdate();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si la fonction aboutit. La valeur est 0 si une défaillance se produit ou si la `LockWindowUpdate` fonction a été utilisée pour verrouiller une autre fenêtre.
 
@@ -5670,7 +5670,7 @@ Pointe vers un `CString` objet ou une chaîne se terminant par un caractère nul
 *nType*<br/>
 Spécifie le contenu et le comportement de la boîte de message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Cette méthode utilise la fonction [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) telle que définie dans la SDK Windows. Cette méthode retourne le résultat de l’appel de cette fonction.
 
@@ -5680,7 +5680,7 @@ Utilisez la fonction globale [AfxMessageBox](../../mfc/reference/cstring-formatt
 
 L’exemple suivant montre les différentes icônes système qui peuvent être utilisées dans une boîte de message :
 
-|||
+|Icône|Macro|
 |-|-|
 |![Icône d’arrêt &#40;x&#41;](../../mfc/reference/media/vc364f1.gif "Icône d’arrêt &#40;x&#41;")|MB_ICONHAND, MB_ICONSTOP et MB_ICONERROR|
 |![Icône d’aide &#40; ? &#41;](../../mfc/reference/media/vc364f2.gif "Icône d’aide &#40; ? &#41;")|MB_ICONQUESTION|
@@ -5711,9 +5711,9 @@ Spécifie les styles de fenêtre à supprimer lors de la modification de style.
 Spécifie les styles de fenêtre à ajouter lors de la modification de style.
 
 *nFlags*<br/>
-Indicateurs à passer à [SetWindowPos](#setwindowpos), ou zéro si ne `SetWindowPos` doit pas être appelé. La valeur par défaut est 0. Consultez la section Notes pour obtenir la liste des indicateurs prédéfinis.
+Indicateurs à passer à [SetWindowPos](#setwindowpos), ou zéro si ne `SetWindowPos` doit pas être appelé. La valeur par défaut est zéro. Consultez la section Notes pour obtenir la liste des indicateurs prédéfinis.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le style a été correctement modifié ; Sinon, 0.
 
@@ -5760,9 +5760,9 @@ Spécifie les styles étendus à supprimer lors de la modification de style.
 Spécifie les styles étendus à ajouter pendant la modification du style.
 
 *nFlags*<br/>
-Indicateurs à passer à [SetWindowPos](#setwindowpos), ou zéro si ne `SetWindowPos` doit pas être appelé. La valeur par défaut est 0. Consultez la section Notes pour obtenir la liste des indicateurs prédéfinis.
+Indicateurs à passer à [SetWindowPos](#setwindowpos), ou zéro si ne `SetWindowPos` doit pas être appelé. La valeur par défaut est zéro. Consultez la section Notes pour obtenir la liste des indicateurs prédéfinis.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le style a été correctement modifié ; Sinon, 0.
 
@@ -5941,7 +5941,7 @@ ID de dispatch de la propriété ambiante demandée.
 *pvar*<br/>
 Pointeur vers une structure allouée par `VARIANT` l’appelant, par l’intermédiaire de laquelle la valeur de la propriété ambiante sera retournée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété ambiante est prise en charge ; FALSe dans le cas contraire.
 
@@ -6169,7 +6169,7 @@ Spécifie un pointeur vers la zone de liste. Il peut être temporaire.
 *nIndex*<br/>
 Spécifie l’emplacement actuel du signe insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’infrastructure appelle cette fonction membre pour spécifier l’action effectuée par l’application en réponse à l’appel. Une valeur de retour de-2 indique que l’application a géré tous les aspects de la sélection de l’élément et ne souhaite aucune action supplémentaire de la zone de liste. Une valeur de retour de-1 indique que la zone de liste doit exécuter l’action par défaut en réponse à la séquence de touches. Une valeur de retour supérieure ou égale à 0 spécifie l’index de base zéro d’un élément dans la zone de liste et indique que la zone de liste doit exécuter l’action par défaut pour la frappe sur l’élément donné.
 
@@ -6212,7 +6212,7 @@ Numéro de message Windows envoyé à une fenêtre parente.
 *pLResult*<br/>
 Pointeur vers une valeur à retourner à partir de la procédure de fenêtre du parent. Ce pointeur sera NULL si aucune valeur de retour n’est attendue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si cette fenêtre est chargée de gérer le message envoyé à son parent ; Sinon, 0.
 
@@ -6287,7 +6287,7 @@ Le mot de poids faible de *wParam* identifie l’ID de commande de l’élément
 *lParam*<br/>
 Identifie le contrôle qui envoie le message si le message provient d’un contrôle. Dans le cas contraire, *lParam* a la valeur 0.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une application retourne une valeur différente de zéro si elle traite ce message ; Sinon, 0.
 
@@ -6340,7 +6340,7 @@ Identificateur du contrôle qui a envoyé le message de WM_COMPAREITEM.
 *lpCompareItemStruct*<br/>
 Contient un pointeur long vers une structure de données [compareitemstruct,](/windows/win32/api/winuser/ns-winuser-compareitemstruct) qui contient les identificateurs et les données fournies par l’application pour deux éléments dans la zone de liste ou de liste déroulante.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indique la position relative des deux éléments. Il peut s’agir de l’une des valeurs suivantes :
 
@@ -6418,7 +6418,7 @@ Pointeur vers un `CWnd` objet qui envoie les données.
 *pCopyDataStruct*<br/>
 Pointeur vers une structure [COPYDATASTRUCT](/windows/win32/api/winuser/ns-winuser-copydatastruct) qui contient les données envoyées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si l’application réceptrice accepte correctement les données. Sinon, retourne FALSe.
 
@@ -6448,7 +6448,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 *lpCreateStruct*<br/>
 Pointe vers une structure [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) qui contient des informations sur l' `CWnd` objet en cours de création.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `OnCreate` doit retourner 0 pour poursuivre la création de l' `CWnd` objet. Si l’application retourne-1, la fenêtre sera détruite.
 
@@ -6499,7 +6499,7 @@ Contient l’une des valeurs suivantes, en spécifiant le type de contrôle :
 
 - Contrôle statique CTLCOLOR_STATIC
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `OnCtlColor` doit retourner un handle au pinceau qui doit être utilisé pour peindre l’arrière-plan du contrôle.
 
@@ -6899,7 +6899,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 *Maîtres*<br/>
 Spécifie l’objet de contexte de périphérique.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si elle efface l’arrière-plan ; Sinon, 0.
 
@@ -6975,7 +6975,7 @@ Appelé pour un contrôle afin de lui permettre de traiter lui-même une entrée
 afx_msg UINT OnGetDlgCode();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une ou plusieurs des valeurs suivantes, indiquant le type d’entrée traité par l’application :
 
@@ -7078,7 +7078,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 *lpHelpInfo*<br/>
 Pointeur vers une structure [HELPINFO](/windows/win32/api/winuser/ns-winuser-helpinfo) qui contient des informations sur l’élément de menu, le contrôle, la boîte de dialogue ou la fenêtre pour laquelle l’aide est demandée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si une fenêtre a le focus clavier ou si un menu est actif dans une fenêtre. Si aucune fenêtre n’a le focus clavier, retourne FALSe.
 
@@ -7768,7 +7768,7 @@ Contient l’indicateur MF_POPUP si le menu est un menu contextuel. Elle contien
 *pMenu*<br/>
 Contient un pointeur vers le sélectionné `CMenu` . Le pointeur peut être temporaire et ne doit pas être stocké.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le mot de poids fort de la valeur de retour doit contenir l’un des codes de commande suivants :
 
@@ -7805,9 +7805,9 @@ dans Position d’index de l’élément de menu au début de l’opération gli
 *pMenu*\
 dans Pointeur vers l’objet [CMenu](../../mfc/reference/cmenu-class.md) qui contient l’élément de menu.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-|Valeur de retour|Signification|
+|Valeur renvoyée|Signification|
 |------------------|-------------|
 |MND_CONTINUE|Le menu doit rester actif. Si la souris est relâchée, elle doit être ignorée.|
 |MND_ENDMENU|Le menu doit être terminé.|
@@ -7832,9 +7832,9 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 *pMenu*\
 dans Pointeur vers une structure [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) qui contient des informations sur le menu glisser-déplacer sur lequel se trouve le curseur de la souris.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-|Valeur de retour|Signification|
+|Valeur renvoyée|Signification|
 |------------------|-------------|
 |MNGO_NOERROR|Un pointeur d’interface qui prend en charge les opérations de glisser-déplacer est retourné dans le `pvObj` membre de la structure [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) . À l’heure actuelle, seule l’interface [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) est prise en charge.|
 |MNGO_NOINTERFACE|Aucune interface de glisser-déplacer n’est prise en charge.|
@@ -7940,7 +7940,7 @@ Spécifie le code [de zone de test de positionnement](#onnchittest) . Un test de
 *message*<br/>
 Spécifie le numéro du message de la souris.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie s’il faut activer la `CWnd` et s’il faut ignorer l’événement de souris. Il doit s’agir de l’une des valeurs suivantes :
 
@@ -8113,7 +8113,7 @@ Indique que la distance a pivoté. La valeur *zDelta* est exprimée en multiples
 *pt*<br/>
 Spécifie la coordonnée x et y du curseur. Ces coordonnées sont toujours relatives à l’angle supérieur gauche de l’écran.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le défilement de la roulette de la souris est activé ; Sinon, 0.
 
@@ -8189,7 +8189,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 *bActive*<br/>
 Spécifie quand une barre de légende ou une icône doit être modifiée pour indiquer un état actif ou inactif. Le paramètre *bActive* a la valeur true si une légende ou une icône active doit être dessinée. Elle a la valeur FALSe pour une légende ou une icône inactive.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si Windows doit continuer avec le traitement par défaut ; 0 pour empêcher la désactivation de la barre de légende ou de l’icône.
 
@@ -8244,7 +8244,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 *lpCreateStruct*<br/>
 Pointe vers la structure de données [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) pour `CWnd` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la zone non cliente est créée. Elle est égale à 0 si une erreur se produit ; `Create` dans ce cas, la fonction retourne un **échec** .
 
@@ -8280,7 +8280,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 *point*<br/>
 Contient les coordonnées x et y du curseur. Ces coordonnées sont toujours des coordonnées d’écran.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une des valeurs énumérées de test de positionnement de la souris. Consultez [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) pour obtenir la liste des valeurs.
 
@@ -8735,7 +8735,7 @@ Pointeur vers une structure de message de notification ( `NMHDR` ) qui contient 
 *pResult*<br/>
 Pointeur vers une variable LRESULT dans laquelle stocker le code de résultat si le message est géré.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une application retourne une valeur différente de zéro si elle traite ce message ; Sinon, 0.
 
@@ -8934,7 +8934,7 @@ dans Événement de gestion de l’alimentation.
 *nEventData*\
 dans Données spécifiques à l’événement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si l’événement est une demande, retourne TRUE pour accorder la demande ou BROADCAST_QUERY_DENY pour refuser la demande.
 
@@ -8955,7 +8955,7 @@ L’infrastructure appelle cette fonction membre par une fenêtre réduite (sous
 afx_msg HCURSOR OnQueryDragIcon();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de mot double qui contient un curseur ou une poignée d’icône dans le mot de poids faible. Le curseur ou l’icône doit être compatible avec la résolution du pilote d’affichage. Si l’application retourne la valeur NULL, le système affiche le curseur par défaut. La valeur de retour par défaut est NULL.
 
@@ -8971,7 +8971,7 @@ L’infrastructure appelle cette fonction membre lorsque l’utilisateur choisit
 afx_msg BOOL OnQueryEndSession();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si une application peut être arrêtée facilement ; Sinon, 0.
 
@@ -8987,7 +8987,7 @@ L’infrastructure appelle cette fonction membre lorsque l' `CWnd` objet est sur
 afx_msg BOOL OnQueryNewPalette();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le `CWnd` réalise sa palette logique ; sinon, 0.
 
@@ -8999,7 +8999,7 @@ L’infrastructure appelle cette fonction membre lorsque l' `CWnd` objet est ré
 afx_msg BOOL OnQueryOpen();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’icône peut être ouverte, ou 0 pour empêcher l’ouverture de l’icône.
 
@@ -9015,7 +9015,7 @@ Appelé pour récupérer l'état de l'interface utilisateur (IU) pour une fenêt
 afx_msg UINT OnQueryUIState();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour est NULL si les indicateurs de focus et les accélérateurs de clavier sont visibles. Dans le cas contraire, la valeur de retour peut être une ou plusieurs des valeurs suivantes :
 
@@ -9172,7 +9172,7 @@ Position horizontale du pointeur.
 *lParam*<br/>
 Position verticale du pointeur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Non significatif pour l’instant. Toujours zéro.
 
@@ -9268,7 +9268,7 @@ Spécifie le code [de zone de test de positionnement](#onnchittest) . Le test de
 *message*<br/>
 Spécifie le numéro du message de la souris.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro pour arrêter un traitement supplémentaire, ou 0 pour continuer.
 
@@ -9914,7 +9914,7 @@ Pointeur vers une structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-t
 
 - *lpszText* = LPSTR_TEXTCALLBACK pointeur vers la chaîne qui doit être affichée dans la fenêtre spécifiée
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le contrôle ToolTip a été trouvé, l’ID du contrôle de fenêtre. Si le contrôle ToolTip est introuvable,-1.
 
@@ -9954,7 +9954,7 @@ Nombre total d’entrées tactiles.
 *pInput*<br/>
 Pointeur vers la structure TOUCHINPUT.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’application traite les entrées tactiles Windows ; Sinon, FALSe.
 
@@ -9978,7 +9978,7 @@ Nombre total d’entrées tactiles Windows.
 *pInputs*<br/>
 Tableau de TOUCHINPUT.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’application traite les entrées tactiles Windows ; Sinon, FALSe.
 
@@ -10118,7 +10118,7 @@ Spécifie un pointeur vers la zone de liste. Le pointeur peut être temporaire e
 *nIndex*<br/>
 Spécifie l’emplacement actuel du signe insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie l’action exécutée par l’application en réponse au message. Une valeur de retour de-2 indique que l’application a géré tous les aspects de la sélection de l’élément et ne nécessite aucune action supplémentaire de la zone de liste. Une valeur de retour de-1 indique que la zone de liste doit exécuter l’action par défaut en réponse à la séquence de touches. Une valeur de retour supérieure ou égale à 0 spécifie l’index de base zéro d’un élément dans la zone de liste et indique que la zone de liste doit exécuter l’action par défaut pour la frappe sur l’élément donné.
 
@@ -10337,7 +10337,7 @@ Spécifie des informations supplémentaires dépendantes du message.
 *pResult*<br/>
 Valeur de retour de [WindowProc](#windowproc). Dépend du message ; peut avoir la valeur NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le message a été géré ; Sinon, FALSe.
 
@@ -10478,7 +10478,7 @@ Ouvre le Presse-papiers.
 BOOL OpenClipboard();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le presse-papiers est ouvert via `CWnd` , ou 0 si le presse-papiers est ouvert dans une autre application ou fenêtre.
 
@@ -10513,7 +10513,7 @@ BOOL operator!=(const CWnd& wnd) const;
 *wnd*<br/>
 Référence à un objet `CWnd`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si elle est égale ; Sinon, 0.
 
@@ -10530,7 +10530,7 @@ BOOL operator==(const CWnd& wnd) const;
 *wnd*<br/>
 Référence à un objet `CWnd`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si elle est égale ; Sinon, 0.
 
@@ -10547,7 +10547,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 *Maîtres*<br/>
 Contexte de périphérique sur lequel dessiner les contrôles sans fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si un conteneur de contrôles et les contrôles sans fenêtre sont correctement dessinés ; sinon, FALSe.
 
@@ -10573,7 +10573,7 @@ Spécifie des informations supplémentaires sur les messages. Le contenu de ce p
 *lParam*<br/>
 Spécifie des informations supplémentaires sur les messages. Le contenu de ce paramètre dépend du message en cours de publication.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le message est publié ; Sinon, 0.
 
@@ -10612,7 +10612,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 *c*<br/>
 Structure [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la création de la fenêtre doit se poursuivre ; 0 pour indiquer l’échec de la création.
 
@@ -10660,7 +10660,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 Pointe vers une structure [MSG](/windows/win32/api/winuser/ns-winuser-msg) qui contient le message à traiter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le message a été traduit et ne doit pas être distribué ; 0 si le message n’a pas été traduit et doit être distribué.
 
@@ -10758,7 +10758,7 @@ Pointeur vers le contexte de périphérique à imprimer.
 *nFlags*<br/>
 Spécifie les options de dessin. Pour obtenir la liste des valeurs possibles, consultez [PrintWindow](/windows/win32/api/winuser/nf-winuser-printwindow).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction est réussie ; Sinon, 0.
 
@@ -10818,7 +10818,7 @@ Par défaut, les fenêtres affectées par la `RedrawWindow` fonction varient sel
 
 - RDW_NOCHILDREN exclut les fenêtres enfants, le cas échéant, de l’opération de redessin.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fenêtre a été correctement redessinée ; Sinon, 0.
 
@@ -10852,7 +10852,7 @@ Spécifie des informations supplémentaires dépendantes du message.
 *pResult*<br/>
 Résultat généré par la fenêtre enfant à retourner par la fenêtre parente. Sa valeur peut être NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le message a été réfléchi ; Sinon, FALSe.
 
@@ -10882,7 +10882,7 @@ Handle d’une fenêtre enfant.
 *pResult*<br/>
 Résultat généré par la fenêtre enfant à retourner par la fenêtre parente. Sa valeur peut être NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le message a été géré ; Sinon, 0.
 
@@ -10905,7 +10905,7 @@ int ReleaseDC(CDC* pDC);
 *Maîtres*<br/>
 Identifie le contexte de périphérique à libérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -10981,7 +10981,7 @@ Spécifie le message Windows à envoyer. Il peut s'agir de l'une des valeurs sui
 
 - MLF_SHOWONIDLE afficher la fenêtre lorsque la file d’attente de messages devient inactive.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie la valeur du paramètre *nrésultat* passé à la fonction membre [EndModalLoop](#endmodalloop) , qui est ensuite utilisée pour terminer la boucle modale.
 
@@ -11093,7 +11093,7 @@ Peut avoir l'une des valeurs suivantes :
 
 - SW_SCROLLCHILDREN fait défiler toutes les fenêtres enfants qui croisent le rectangle désigné par *lpRectScroll* du nombre de pixels spécifiés dans *DX* et *dy*. Windows envoie un message [WM_MOVE](/windows/win32/winmsg/wm-move) à toutes les fenêtres enfants qui croisent *lpRectScroll*, même s’ils ne se déplacent pas. Le signe insertion est repositionné lors du défilement d’une fenêtre enfant et le rectangle de curseur croise le rectangle de défilement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour est SIMPLEREGION (région invalidée rectangulaire), COMPLEXREGION (région invalidée non rectangulaire, rectangles superposés) ou NULLREGION (aucune région invalidée) si la fonction réussit ; Sinon, la valeur de retour est ERROR.
 
@@ -11122,7 +11122,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 *pResult*<br/>
 Résultat généré par la fenêtre enfant à retourner par la fenêtre parente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fenêtre enfant a géré le message envoyé à son parent ; Sinon, 0.
 
@@ -11158,7 +11158,7 @@ Spécifie des informations supplémentaires dépendantes du message.
 *lParam*<br/>
 Spécifie des informations supplémentaires dépendantes du message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie la valeur retournée par la procédure de fenêtre du contrôle, ou 0 si le contrôle est introuvable.
 
@@ -11194,7 +11194,7 @@ Spécifie des informations supplémentaires dépendantes du message.
 *lParam*<br/>
 Spécifie des informations supplémentaires dépendantes du message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat du traitement du message ; sa valeur dépend du message envoyé.
 
@@ -11268,7 +11268,7 @@ Spécifie des informations supplémentaires dépendantes du message.
 *lParam*<br/>
 Spécifie des informations supplémentaires dépendantes du message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
@@ -11284,7 +11284,7 @@ Crée `CWnd` la fenêtre active.
 CWnd* SetActiveWindow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Fenêtre précédemment active.
 
@@ -11302,7 +11302,7 @@ Entraîne l’envoi de toutes les entrées de souris suivantes à l' `CWnd` obje
 CWnd* SetCapture();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet fenêtre qui a précédemment reçu l’entrée de la souris. La valeur est NULL s’il n’existe aucune fenêtre de ce type. Le pointeur retourné peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
@@ -11343,7 +11343,7 @@ Ajoute cette fenêtre à la chaîne de fenêtres qui sont notifiées (au moyen d
 HWND SetClipboardViewer();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers la fenêtre suivante dans la chaîne de la visionneuse du presse-papiers en cas de réussite. Les applications doivent enregistrer ce handle (il peut être stocké en tant que variable membre) et l’utiliser lors de la réponse aux messages de la chaîne de la visionneuse du presse-papiers.
 
@@ -11368,7 +11368,7 @@ int SetDlgCtrlID(int nID);
 *nID*<br/>
 Nouvelle valeur à définir pour l’identificateur du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur précédent de la fenêtre, en cas de réussite ; Sinon, 0.
 
@@ -11440,7 +11440,7 @@ Place le thread créé par la fenêtre au premier plan et active la fenêtre.
 BOOL SetForegroundWindow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
@@ -11460,7 +11460,7 @@ Revendique le focus d'entrée.
 CWnd* SetFocus();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet de fenêtre qui avait précédemment le focus d’entrée. La valeur est NULL s’il n’existe aucune fenêtre de ce type. Le pointeur retourné peut être temporaire et ne doit pas être stocké.
 
@@ -11512,7 +11512,7 @@ Handle d’une icône précédente.
 *bBigIcon*<br/>
 Spécifie une icône de 32 pixel par 32 pixels si la valeur est TRUE ; spécifie une icône de 16 pixels par 16 pixels si la valeur est FALSe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d'une icône.
 
@@ -11546,7 +11546,7 @@ Valeur alpha utilisée pour décrire l’opacité de la fenêtre superposée. Po
 *dwFlags*<br/>
 Spécifie une action à effectuer. Ce paramètre peut être une ou plusieurs des valeurs suivantes. Pour obtenir la liste des valeurs possibles, consultez [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction est réussie ; Sinon, 0.
 
@@ -11567,7 +11567,7 @@ BOOL SetMenu(CMenu* pMenu);
 *pMenu*<br/>
 Identifie le nouveau menu. Si ce paramètre a la valeur NULL, le menu actuel est supprimé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le menu est modifié ; Sinon, 0.
 
@@ -11615,7 +11615,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 *pWndNewParent*<br/>
 Identifie la nouvelle fenêtre parente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet de fenêtre parente précédent en cas de réussite. Le pointeur retourné peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
@@ -11700,7 +11700,7 @@ Pointeur vers une structure [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-s
 *bRedraw*<br/>
 Spécifie si la barre de défilement doit être redessinée pour refléter la nouvelle position. Si *bRedraw* a la valeur true, la barre de défilement est redessinée. Si la valeur est FALSe, il n’est pas redessiné. Par défaut, la barre de défilement est redessinée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, la valeur renvoyée est TRUE. Sinon, la valeur est FALSe.
 
@@ -11739,7 +11739,7 @@ Spécifie la nouvelle position de la case de défilement. Elle doit être compri
 *bRedraw*<br/>
 Spécifie si la barre de défilement doit être repeinte pour refléter la nouvelle position de la case de défilement. Si ce paramètre a la valeur TRUE, la barre de défilement est redessinée ; Si la valeur est FALSe, la barre de défilement n’est pas repeinte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position précédente de la case de défilement.
 
@@ -11812,7 +11812,7 @@ Spécifie la valeur du délai d’attente, ou l’intervalle, en millisecondes.
 *lpfnTimer*<br/>
 Spécifie l’adresse de la fonction de `TimerProc` rappel fournie par l’application qui traite les messages de [WM_TIMER](/windows/win32/winmsg/wm-timer) . Si ce paramètre a la valeur NULL, les messages d’WM_TIMER sont placés dans la file d’attente de messages de l’application et gérés par l' `CWnd` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Identificateur de la minuterie du nouveau minuteur si la fonction réussit. Cette valeur peut ou ne peut pas être égale à la valeur transmise par le biais du paramètre *nIDEvent* . Une application doit toujours passer la valeur de retour à la fonction membre [KillTimer](#killtimer) pour arrêter la minuterie. Valeur différente de zéro en cas de réussite ; Sinon, 0.
 
@@ -11849,7 +11849,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 *dwContextHelpId*<br/>
 Identificateur du contexte d’aide.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
@@ -11874,7 +11874,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 *lpwndpl*<br/>
 Pointe vers une structure [WINDOWPLACEMENT](/windows/win32/api/winuser/ns-winuser-windowplacement) qui spécifie le nouvel affichage de l’État et des positions.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
@@ -11948,7 +11948,7 @@ Spécifie les options de dimensionnement et de positionnement. Ce paramètre peu
 
 - SWP_SHOWWINDOW affiche la fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction réussit ; Sinon, 0.
 
@@ -12002,7 +12002,7 @@ Handle vers une région.
 *bRedraw*<br/>
 Si la valeur est TRUE, le système d’exploitation redessine la fenêtre après avoir défini la région ; Sinon, ce n’est pas le cas. En règle générale, affectez la valeur TRUE à *bRedraw* si la fenêtre est visible. Si la valeur est TRUE, le système envoie les messages WM_WINDOWPOSCHANGING et WM_WINDOWPOSCHANGED à la fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction est réussie, la valeur de retour est différente de zéro. Si la fonction échoue, la valeur de retour est égale à zéro.
 
@@ -12135,7 +12135,7 @@ Spécifie comment doit `CWnd` être affiché. Il doit s’agir de l’une des va
 
 - SW_SHOWNORMAL s’active et affiche la fenêtre. Si la fenêtre est réduite ou agrandie, Windows la restaure à sa taille et à sa position d’origine.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fenêtre était visible auparavant ; 0 si le `CWnd` a été précédemment masqué.
 
@@ -12165,7 +12165,7 @@ ID du contrôle.
 *pParent*<br/>
 Parent du contrôle (généralement une boîte de dialogue).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
@@ -12192,7 +12192,7 @@ BOOL SubclassWindow(HWND hWnd);
 *hWnd*<br/>
 Handle de la fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une valeur différente de zéro si la fonction réussit ; sinon, 0.
 
@@ -12229,7 +12229,7 @@ Appelez cette fonction membre pour `WndProc` rétablir sa valeur d’origine et 
 HWND UnsubclassWindow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers la fenêtre unsubclassed.
 
@@ -12250,7 +12250,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 *bSaveAndValidate*<br/>
 Indicateur qui signale si la boîte de dialogue est en cours d’initialisation (FALSe) ou si les données sont en cours de récupération (TRUE).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’opération réussit ; Sinon, 0. Si *bSaveAndValidat*a la valeur true, une valeur de retour différente de zéro signifie que les données ont été validées avec succès.
 
@@ -12330,7 +12330,7 @@ Pointeur vers une structure [BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-
 *dwFlags*<br/>
 Spécifie une action à effectuer. Ce paramètre peut être une ou plusieurs des valeurs suivantes. Pour obtenir la liste des valeurs possibles, consultez [UpdateLayeredWindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la fonction est réussie ; Sinon, 0.
 
@@ -12405,7 +12405,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 *point*<br/>
 Spécifie un objet [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) ou une structure de données de [point](/windows/win32/api/windef/ns-windef-point) qui définit le point à vérifier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet de fenêtre dans lequel se trouve le point. La valeur est NULL si aucune fenêtre n’existe au point donné. Le pointeur retourné peut être temporaire et ne doit pas être stocké pour une utilisation ultérieure.
 
@@ -12435,7 +12435,7 @@ Fournit des informations supplémentaires utilisées dans le traitement du messa
 *lParam*<br/>
 Fournit des informations supplémentaires utilisées dans le traitement du message. La valeur du paramètre dépend du message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour dépend du message.
 
@@ -12483,7 +12483,7 @@ TRUE indique que la prise en charge de Windows Touch Register ; FALSe dans le c
 *ulFlags*<br/>
 Jeu d’indicateurs de bits qui spécifient des modifications facultatives. Ce champ peut contenir 0 ou l’une des valeurs suivantes : TWF_FINETOUCH, TWF_WANTPALM.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite, sinon FALSE.
 

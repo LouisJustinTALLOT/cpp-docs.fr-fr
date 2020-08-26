@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218323"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845534"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl, classe
 
@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 *T*<br/>
 Votre classe, dérivée de `IDBInitializeImpl` .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -69,20 +69,20 @@ Votre classe, dérivée de `IDBInitializeImpl` .
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[IDBInitializeImpl](#idbinitializeimpl)|Constructeur.|
 
 ### <a name="interface-methods"></a>Méthodes d'interface
 
-|||
+| Nom | Description |
 |-|-|
-|[Initialize](#initialize)|Démarre le fournisseur.|
+|[Initialiser](#initialize)|Démarre le fournisseur.|
 |[Annuler l’initialisation](#uninitialize)|Arrête le fournisseur.|
 
 ### <a name="data-members"></a>Données membres
 
-|||
+| Nom | Description |
 |-|-|
 |[m_dwStatus](#dwstatus)|Indicateurs de source de données.|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|Pointeur vers l’implémentation des informations de propriétés de la base de données.|
@@ -91,7 +91,7 @@ Votre classe, dérivée de `IDBInitializeImpl` .
 
 Interface obligatoire sur les objets de source de données et l’interface facultative sur les énumérateurs.
 
-## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl :: IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a> IDBInitializeImpl :: IDBInitializeImpl
 
 Constructeur.
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 Initialise tous les membres de données.
 
-## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl :: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a> IDBInitializeImpl :: Initialize
 
 Initialise l’objet source de données en préparant sa prise en charge des propriétés.
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 Consultez [IDBInitialize :: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) dans le *OLE DB Guide de référence du programmeur*.
 
-## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl :: Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a> IDBInitializeImpl :: Uninitialize
 
 Place l’objet source de données dans un État non initialisé en libérant des ressources internes telles que la prise en charge des propriétés.
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 Consultez [IDBInitialize :: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl :: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a> IDBInitializeImpl :: m_dwStatus
 
 Indicateurs de source de données.
 
@@ -155,13 +155,13 @@ enum DATASOURCE_FLAGS {
 };
 ```
 
-|||
+| Valeur | Description |
 |-|-|
 |`DSF_MASK_INIT`|Masque pour activer la restauration de l’état non initialisé.|
 |`DSF_PERSIST_DIRTY`|Définit si l’objet source de données nécessite une persistance (autrement dit, si des modifications ont été apportées).|
 |`DSF_INITIALIZED`|Définit si la source de données a été initialisée.|
 
-## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl :: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a> IDBInitializeImpl :: m_pCUtlPropInfo
 
 Pointeur vers l’objet d’implémentation pour les informations sur les propriétés de base de données.
 

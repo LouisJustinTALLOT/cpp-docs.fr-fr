@@ -14,21 +14,22 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232857"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845040"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt;, fonctions
 
-||||
-|-|-|-|
-|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+[get_id](#get_id)\
+[sleep_for](#sleep_for)\
+[sleep_until](#sleep_until)\
+[échange](#swap)\
+[yield](#yield)
 
-## <a name="get_id"></a><a name="get_id"></a>get_id
+## <a name="get_id"></a><a name="get_id"></a> get_id
 
 Identifie de façon unique le thread d’exécution en cours.
 
@@ -36,11 +37,11 @@ Identifie de façon unique le thread d’exécution en cours.
 thread::id this_thread::get_id() noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un objet de type [thread::id](../standard-library/thread-class.md) qui identifie de façon unique le thread d’exécution en cours.
 
-## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a> sleep_for
 
 Bloque le thread appelant.
 
@@ -59,7 +60,7 @@ Objet [duration](../standard-library/duration-class.md) qui spécifie un interva
 
 La fonction bloque le thread appelant pendant au moins le temps spécifié par *Rel_time*. Cette fonction ne lève aucune exception.
 
-## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a> sleep_until
 
 Bloque le thread appelant au moins jusqu’à l’heure spécifiée.
 
@@ -79,7 +80,7 @@ Représente un point dans le temps.
 
 Cette fonction ne lève aucune exception.
 
-## <a name="swap"></a><a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 Permute les états de deux objets `thread`.
 
@@ -99,7 +100,7 @@ Objet droit `thread`.
 
 La fonction appelle `Left.swap(Right)`.
 
-## <a name="yield"></a><a name="yield"></a>génér
+## <a name="yield"></a><a name="yield"></a> génér
 
 Indique au système d’exploitation d’exécuter d’autres threads, même si le thread actuel continuerait normalement à s’exécuter.
 

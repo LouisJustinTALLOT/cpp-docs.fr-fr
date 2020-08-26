@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c66710fe31b5a657a4976bea7f0aa52aac3e3825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404058"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837084"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
@@ -81,7 +81,7 @@ Numéro de port.
 *data_byte, data_word*\
 Valeurs de sortie.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions retournent la sortie des données. Il n’y a pas d’erreur de retour.
 
@@ -91,11 +91,11 @@ Les fonctions `_outp`, `_outpw`et `_outpd` écrivent respectivement un octet, un
 
 Comme ces fonctions écrivent directement sur un port d’e/s, elles ne peuvent pas être utilisées dans le code Windows en mode utilisateur.
 
-Pour plus d’informations sur l’utilisation des ports d’e/s dans le système d’exploitation Windows, consultez [communications en série](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
+Pour plus d’informations sur l’utilisation des ports d’e/s dans le système d’exploitation Windows, consultez [communications en série](/previous-versions/ff802693(v=msdn.10)).
 
 Les `outp` `outpw` noms et sont des noms plus anciens et déconseillés pour les `_outp` `_outpw` fonctions et. Pour plus d’informations, consultez [noms de fonctions POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

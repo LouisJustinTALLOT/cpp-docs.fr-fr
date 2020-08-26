@@ -26,12 +26,12 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 39aa3f5e89746d48057e0e8efe6fe62b1c2d8921
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 05e902e09c51012bd456751fb701ce2508a2fc16
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210867"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845599"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl, classe
 
@@ -49,9 +49,9 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, dérivée de `IColumnsInfoImpl`.
+Votre classe, dérivée de `IColumnsInfoImpl` .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -59,16 +59,16 @@ Votre classe, dérivée de `IColumnsInfoImpl`.
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|Retourne les métadonnées de colonne exigées par la plupart des consommateurs.|
 |[MapColumnIDs](#mapcolumnids)|Retourne un tableau des numéros des colonnes dans un jeu de lignes identifiées par les ID de colonne spécifiés.|
 
 ## <a name="remarks"></a>Notes
 
-Interface obligatoire sur les ensembles de lignes et les commandes. Pour modifier le comportement de l’implémentation `IColumnsInfo` de votre fournisseur, vous devez modifier le mappage de colonnes du fournisseur.
+Interface obligatoire sur les ensembles de lignes et les commandes. Pour modifier le comportement de l’implémentation de votre fournisseur `IColumnsInfo` , vous devez modifier le mappage de colonnes du fournisseur.
 
-## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a>Icolumnsinfoimpl, :: GetColumnInfo
+## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a> Icolumnsinfoimpl, :: GetColumnInfo
 
 Retourne les métadonnées de colonne exigées par la plupart des consommateurs.
 
@@ -84,7 +84,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 Consultez [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a>Icolumnsinfoimpl, :: MapColumnIDs
+## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a> Icolumnsinfoimpl, :: MapColumnIDs
 
 Retourne un tableau des numéros des colonnes dans un jeu de lignes identifiées par les ID de colonne spécifiés.
 
@@ -102,5 +102,5 @@ Consultez [IColumnsInfo :: MapColumnIDs](/previous-versions/windows/desktop/ms7
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

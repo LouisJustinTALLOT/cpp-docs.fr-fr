@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912395"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844975"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -62,14 +62,14 @@ int _wsystem(
 
 ### <a name="parameters"></a>Paramètres
 
-*.*<br/>
+*command*<br/>
 Commande à exécuter.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si la *commande* a la valeur **null** et que l’interpréteur de commande est trouvé, retourne une valeur différente de zéro. Si l’interpréteur de commande est introuvable, retourne 0 et définit **errno** sur **ENOENT**. Si la *commande* n’est pas **null**, **System** retourne la valeur retournée par l’interpréteur de commande. Elle retourne la valeur 0 uniquement si l'interpréteur de commande retourne la valeur 0. Une valeur de retour de-1 indique une erreur et **errno** est défini sur l’une des valeurs suivantes :
 
-|||
+| Valeur | Description |
 |-|-|
 | **E2BIG** | La liste d’arguments (qui est dépendante du système) est trop grande. |
 | **ENOENT** | L'interpréteur de commande est introuvable. |
@@ -78,9 +78,9 @@ Si la *commande* a la valeur **null** et que l’interpréteur de commande est t
 
 Pour plus d’informations sur ces codes de retour, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **système** passe la *commande* à l’interpréteur de commande, qui exécute la chaîne en tant que commande du système d’exploitation. le **système** utilise les variables d’environnement **COMSPEC** et **path** pour localiser le fichier de l’interpréteur de commandes cmd. exe. Si la *commande* a la **valeur null**, la fonction vérifie simplement si l’interpréteur de commandes existe.
+La fonction **système** passe la *commande* à l’interpréteur de commande, qui exécute la chaîne en tant que commande du système d’exploitation. le **système** utilise les variables d’environnement **COMSPEC** et **path** pour localiser le fichier de l’interpréteur de commandes CMD.exe. Si la *commande* a la **valeur null**, la fonction vérifie simplement si l’interpréteur de commandes existe.
 
 Vous devez explicitement vider, en utilisant [fflush](fflush.md) ou [_flushall](flushall.md), ou fermer un flux avant d’appeler **System**.
 
@@ -94,7 +94,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsystem**|**système**|**système**|**_wsystem**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -103,7 +103,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple utilise le **système** pour taper un fichier texte.
 
@@ -125,7 +125,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>Sortie
 
 ```Output
 Line one.

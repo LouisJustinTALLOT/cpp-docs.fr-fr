@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 23548df6718b9397db8521b2bebc6e8389859dcd
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610697"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837758"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -44,9 +44,9 @@ Consultez la [classe Platform :: WriteOnlyArray](../cppcx/platform-writeonlyarr
 
 ### <a name="properties"></a>Propriétés
 
-|||
-|-|-|
-|[Array :: value](#value)|Récupère un handle vers le tableau actuel.|
+| Nom | Description |
+|--|--|
+| [Array :: value](#value) | Récupère un handle vers le tableau actuel. |
 
 ### <a name="remarks"></a>Notes
 
@@ -58,7 +58,7 @@ Pour plus d’informations sur le moment et la façon d’utiliser Platform :: 
 
 Cette classe est définie dans l'en-tête vccorlib.h, qui est inclus automatiquement par le compilateur. Elle est visible dans IntelliSense, mais pas dans l’Explorateur d’objets, car il ne s’agit pas d’un type public défini dans Platform. winmd.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : **/ZW**
 
@@ -103,7 +103,7 @@ T& get(unsigned int index)  const;
 *index*<br/>
 Index de base zéro qui identifie un élément du tableau. L’index minimal est 0 et l’index maximal est la valeur spécifiée par le `size` paramètre dans le [constructeur de tableau](#ctor).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Élément de tableau spécifié par le paramètre `index`.
 

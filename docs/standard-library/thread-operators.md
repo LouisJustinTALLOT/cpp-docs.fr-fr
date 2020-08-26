@@ -18,22 +18,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215567"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845027"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt;, opérateurs
 
-||||
-|-|-|-|
-|[opérateur ! =](#op_neq)|[and&gt;](#op_gt)|[and&gt;=](#op_gt_eq)|
-|[and&lt;](#op_lt)|[and&lt;&lt;](#op_lt_lt)|[and&lt;=](#op_lt_eq)|
-|[opérateur = =](#op_eq_eq)|
+[opérateur ! =](#op_neq)\
+[and&gt;](#op_gt)\
+[and&gt;=](#op_gt_eq)\
+[and&lt;](#op_lt)\
+[and&lt;&lt;](#op_lt_lt)\
+[and&lt;=](#op_lt_eq)\
+[opérateur = =](#op_eq_eq)
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> and&gt;=
 
 Détermine si un objet `thread::id` est supérieur ou égal à un autre.
 
@@ -51,7 +53,7 @@ Objet gauche `thread::id`.
 *Oui*\
 Objet droit `thread::id`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `!(Left < Right)`
 
@@ -59,7 +61,7 @@ Objet droit `thread::id`.
 
 Cette fonction ne lève aucune exception.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 
 Détermine si un objet `thread::id` est supérieur à un autre.
 
@@ -77,7 +79,7 @@ Objet gauche `thread::id`.
 *Oui*\
 Objet droit `thread::id`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `Right < Left`
 
@@ -85,7 +87,7 @@ Objet droit `thread::id`.
 
 Cette fonction ne lève aucune exception.
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> and&lt;=
 
 Détermine si un objet `thread::id` est inférieur ou égal à un autre.
 
@@ -103,7 +105,7 @@ Objet gauche `thread::id`.
 *Oui*\
 Objet droit `thread::id`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `!(Right < Left)`
 
@@ -111,7 +113,7 @@ Objet droit `thread::id`.
 
 Cette fonction ne lève aucune exception.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Détermine si un objet `thread::id` est inférieur à un autre.
 
@@ -129,7 +131,7 @@ Objet gauche `thread::id`.
 *Oui*\
 Objet droit `thread::id`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la *partie gauche* précède *le classement* total ; Sinon, **`false`** .
 
@@ -139,7 +141,7 @@ L’opérateur définit un classement total sur tous les objets `thread::id`. Ce
 
 Cette fonction ne lève aucune exception.
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Compare deux objets `thread::id` pour déterminer s'ils sont différents.
 
@@ -157,7 +159,7 @@ Objet gauche `thread::id`.
 *Oui*\
 Objet droit `thread::id`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `!(Left == Right)`
 
@@ -165,7 +167,7 @@ Objet droit `thread::id`.
 
 Cette fonction ne lève aucune exception.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Compare deux objets `thread::id` pour déterminer s’ils sont égaux.
 
@@ -183,7 +185,7 @@ Objet gauche `thread::id`.
 *Oui*\
 Objet droit `thread::id`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les deux objets représentent le même thread d’exécution ou si aucun objet ne représente un thread d’exécution ; Sinon, **`false`** .
 
@@ -191,7 +193,7 @@ Objet droit `thread::id`.
 
 Cette fonction ne lève aucune exception.
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>and&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> and&lt;&lt;
 
 Insère une représentation textuelle d’un objet `thread::id` dans un flux.
 
@@ -209,7 +211,7 @@ Objet [basic_ostream](../standard-library/basic-ostream-class.md).
 *Identifi*\
 Objet `thread::id`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 *OSTR*.
 

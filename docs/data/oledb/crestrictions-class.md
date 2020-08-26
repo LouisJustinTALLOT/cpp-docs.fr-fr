@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a380f1ba00dcc444099f186071b7d55c9db71291
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220442"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844962"
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
 
@@ -43,7 +43,7 @@ Nombre de colonnes de restriction pour l’ensemble de lignes de schéma.
 *pguid*<br/>
 Pointeur vers le GUID du schéma.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldbsch. h
 
@@ -51,11 +51,11 @@ Pointeur vers le GUID du schéma.
 
 ### <a name="methods"></a>Méthodes
 
-|||
+| Nom | Description |
 |-|-|
 |[Ouvrir](#open)|Retourne un jeu de résultats en fonction des restrictions fournies par l’utilisateur.|
 
-## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions :: Open
+## <a name="crestrictionsopen"></a><a name="open"></a> CRestrictions :: Open
 
 Retourne un jeu de résultats en fonction des restrictions fournies par l’utilisateur.
 
@@ -84,7 +84,7 @@ dans Spécifie les restrictions sur l’ensemble de lignes de schéma.
 *bBind*<br/>
 dans Spécifie s’il faut lier automatiquement le mappage de colonnes. La valeur par défaut est **`true`** , ce qui entraîne la liaison automatique du mappage de colonnes. La définition de *bBind* **`false`** empêche la liaison automatique de la carte de colonnes afin que vous puissiez la lier manuellement. (La liaison manuelle présente un intérêt particulier pour les utilisateurs OLAP.)
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’une des valeurs HRESULT standard.
 

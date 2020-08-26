@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: cff1ca374c9489cb9c5df0dad153c4bf7a4cbc9e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aeeca008499ca43cdcebd008390e5cb6c5a9e63c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210780"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845521"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl, classe
 
@@ -39,7 +39,7 @@ VOTRE CLASSE, DÉRIVÉE DE
 *SessionClass*<br/>
 Objet de session.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -47,7 +47,7 @@ Objet de session.
 
 ### <a name="interface-methods"></a>Méthodes d'interface
 
-|||
+| Nom | Description |
 |-|-|
 |[CreateSession](#createsession)|Crée une nouvelle session à partir de l’objet source de données et retourne l’interface demandée sur la session nouvellement créée.|
 
@@ -55,7 +55,7 @@ Objet de session.
 
 Interface obligatoire sur les objets de source de données.
 
-## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a>Idbcreatesessionimpl, :: CreateSession
+## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a> Idbcreatesessionimpl, :: CreateSession
 
 Crée une nouvelle session à partir de l’objet source de données et retourne l’interface demandée sur la session nouvellement créée.
 
@@ -73,5 +73,5 @@ Consultez [méthode IDBCreateSession :: CreateSession](/previous-versions/windo
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

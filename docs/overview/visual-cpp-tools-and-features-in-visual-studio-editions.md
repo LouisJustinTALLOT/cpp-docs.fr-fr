@@ -4,18 +4,18 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366799"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845352"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Outils et fonctionnalités C++ dans les éditions de Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sauf indication contraire, toutes les fonctionnalités sont disponibles dans toutes les éditions: Visual Studio Community, Visual Studio Professional, et Visual Studio Enterprise. Certaines fonctionnalités nécessitent des charges de travail ou des composants facultatifs spécifiques que vous pouvez installer avec Visual Studio Installer.
+Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sauf indication contraire, toutes les fonctionnalités sont disponibles dans toutes les éditions : Communauté Visual Studio, Visual Studio Professional et Visual Studio Enterprise. Certaines fonctionnalités nécessitent des charges de travail ou des composants facultatifs spécifiques que vous pouvez installer avec Visual Studio Installer.
 
 ## <a name="platforms"></a>Plateformes
 
@@ -38,7 +38,7 @@ Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sa
 
 Visual Studio comprend les charges de travail suivantes pour le développement C++. Vous pouvez les installer toutes ou une partie, ainsi que d’autres charges de travail telles que Développement .NET Desktop, Développement Python, Développement Azure, Développement d’extension Visual Studio et autres.
 
-### <a name="desktop-development-with-c"></a>Développement Desktop en C++
+### <a name="desktop-development-with-c"></a>Développement Desktop avec C++
 
 Inclus :
 
@@ -80,7 +80,7 @@ Composants facultatifs :
 - Outils C++ CMake pour Linux
 - Outils de développement incorporé et IoT
 
-### <a name="universal-windows-platform-development"></a>Développement de la plateforme universelle Windows
+### <a name="universal-windows-platform-development"></a>Développement pour la plateforme Windows universelle
 
 Inclus :
 
@@ -204,7 +204,7 @@ Bureau Windows :
 
 Plateforme Windows universelle (C++/CX) :
 
-- Applications vide
+- Application vide
 - Application DirectX 11 et XAML
 - DirectX 11 App
 - Application DirectX 12
@@ -212,7 +212,7 @@ Plateforme Windows universelle (C++/CX) :
 - DLL
 - Composant Windows Runtime
 - Bibliothèque statique
-- Projet de création de packages d’application Windows
+- Projet de création de package d’application Windows
 
 Linux :
 
@@ -247,7 +247,7 @@ Linux :
 - Débogage managé
 - Utilisation du GPU
 - Utilisation de la mémoire
-- Débogage à distance
+- Remote Debugging
 - Débogage SQL
 - Analyse statique du code
 
@@ -258,7 +258,7 @@ Linux :
 - Concepteur/éditeur HTML
 - Éditeur XML
 - Éditeur de code source
-- Caractéristiques de productivité : Refactoring, moteur EDG IntelliSense, Formatage de code CMD
+- Fonctionnalités de productivité : refactorisation, moteur IntelliSense EDG, mise en forme du code C++
 - Concepteur Windows Forms
 - Concepteur de données
 - Éditeur de ressources natives (fichiers .rc)
@@ -274,7 +274,7 @@ Linux :
 
 - Concepteur de données
 - Objets de données
-- Services web
+- Services Web
 - Explorateur de serveurs
 
 ## <a name="automation-and-extensibility"></a>Automatisation et extensibilité
@@ -304,7 +304,7 @@ Linux :
 ## <a name="see-also"></a>Voir aussi
 
 [Installer Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Quoi de neuf dans Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Nouveautés de Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Types de projets C++ dans Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end
@@ -315,9 +315,8 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 
 ## <a name="platforms"></a>Plateformes
 
-||||||
+|Plate-forme|Visual Studio Express pour Windows 10|Visual Studio Express pour Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |-|-|-|-|-|
-|Plateforme|Visual Studio Express pour Windows 10|Visual Studio Express pour Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |Windows Desktop||X|X|X|
 |Plateforme Windows universelle ((téléphone, tablette, PC, Xbox, IoT et HoloLens))|X||X|X|
 |Linux|X|X|
@@ -354,9 +353,9 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Modèles XAML pour UWP, Windows 8.1, Windows Phone 8.0|X||X|X|
 |Applications Direct3D|X||X|X|
 |DLL (Windows universel)|X||X|X|
-|Bibliothèque statique (Windows universel)|X||X|X|
+|Bibliothèque statique (Universal Windows)|X||X|X|
 |Composant Windows Runtime|X||X|X|
-|Application de tests unitaires (Windows universel)|X||X|X|
+|Application de test unitaire (Windows universel)|X||X|X|
 |Projet ATL|||X|X|
 |Bibliothèque de classes (CLR)||X|X|X|
 |Application console CLR||X|X|X|
@@ -403,7 +402,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Débogage managé||X|X|X|
 |Utilisation du GPU|X||X|X|
 |Utilisation de la mémoire|X||X|X|
-|Débogage à distance|X|X|X|X|
+|Remote Debugging|X|X|X|X|
 |Débogage SQL|||X|X|
 |Analyse statique du code|Limité|Limité|X|X|
 
@@ -430,7 +429,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Concepteur de données|||X|X|
 |Objets de données|||X|X|
-|Services web|||X|X|
+|Services Web|||X|X|
 |Explorateur de serveurs|||X|X|
 
 ## <a name="build-and-project-systems"></a>Systèmes de génération et de projet
@@ -457,9 +456,8 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 
 ## <a name="application-lifecycle-management-tools"></a>Outils de gestion du cycle de vie des applications
 
-||||||
-|-|-|-|-|-|
 |Outil|Visual Studio Express pour Windows|Visual Studio Express pour Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
+|-|-|-|-|-|
 |Tests unitaires (infrastructure native)|X|X|X|X|
 |Tests unitaires (infrastructure managée)||X|X|X|
 |Couverture du code||||X|
@@ -472,7 +470,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 ## <a name="see-also"></a>Voir aussi
 
 [Installer Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Quoi de neuf dans Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Nouveautés de Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Types de projets C++ dans Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end

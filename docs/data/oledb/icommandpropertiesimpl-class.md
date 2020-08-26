@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210806"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845573"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl, classe
 
@@ -41,7 +41,7 @@ Votre classe, dérivée de
 *PropClass*<br/>
 Votre classe de propriétés.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** atldb.h
 
@@ -49,7 +49,7 @@ Votre classe de propriétés.
 
 ### <a name="interface-methods"></a>Méthodes d'interface
 
-|||
+| Nom | Description |
 |-|-|
 |[GetProperties](#getproperties)|Retourne la liste des propriétés dans le groupe de propriétés rowset actuellement demandé pour l’ensemble de lignes.|
 |[SetProperties](#setproperties)|Définit des propriétés dans le groupe de propriétés rowset.|
@@ -58,7 +58,7 @@ Votre classe de propriétés.
 
 Cela est obligatoire sur les commandes. L’implémentation est fournie par une fonction statique définie par la macro [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) .
 
-## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>Icommandpropertiesimpl, :: GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> Icommandpropertiesimpl, :: GetProperties
 
 Retourne tous les jeux de propriétés demandés à l’aide du mappage des propriétés de la commande.
 
@@ -77,9 +77,9 @@ Consultez [ICommandProperties :: GetProperties](/previous-versions/windows/desk
 
 ### <a name="remarks"></a>Notes
 
-Consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>Icommandpropertiesimpl, :: SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> Icommandpropertiesimpl, :: SetProperties
 
 Définit les propriétés de l’objet de commande.
 
@@ -96,5 +96,5 @@ Consultez [ICommandProperties :: SetProperties](/previous-versions/windows/desk
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

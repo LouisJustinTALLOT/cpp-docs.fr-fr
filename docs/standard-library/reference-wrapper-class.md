@@ -18,14 +18,14 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240270"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845066"
 ---
-# <a name="referencewrapper-class"></a>reference_wrapper, classe
+# <a name="reference_wrapper-class"></a>reference_wrapper, classe
 
 Encapsule une référence.
 
@@ -59,31 +59,31 @@ Les fonctions d’assistance [std::ref](functional-functions.md#ref) et [std::cr
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Construit un objet `reference_wrapper`.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[result_type](#result_type)|Type de résultat faible de la référence encapsulée.|
 |[type](#type)|Type de la référence encapsulée.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[get](#get)|Obtient la référence encapsulée.|
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
-|[operator Ty&amp;](#op_ty_amp)|Obtient un pointeur vers la référence encapsulée.|
-|[operator()](#op_call)|Appelle la référence encapsulée.|
+|[Ty, opérateur&amp;](#op_ty_amp)|Obtient un pointeur vers la référence encapsulée.|
+|[, opérateur ()](#op_call)|Appelle la référence encapsulée.|
 
-## <a name="get"></a> Télécharger
+## <a name="get"></a><a name="get"></a> Télécharger
 
 Obtient la référence encapsulée.
 
@@ -122,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a> operator Ty&amp;
+## <a name="operator-tyamp"></a><a name="op_ty_amp"></a> Ty, opérateur&amp;
 
 Obtient la référence incluse dans un wrapper.
 
@@ -158,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a> operator()
+## <a name="operator"></a><a name="op_call"></a> , opérateur ()
 
 Appelle la référence encapsulée.
 
@@ -169,17 +169,17 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Paramètres
 
-*Types*\
+*Modes*\
 Types de la liste d’arguments.
 
-*args*\
+*attend*\
 Liste d’arguments.
 
 ### <a name="remarks"></a>Notes
 
 Le membre de modèle `operator()` retourne `std::invoke(get(), std::forward<Types>(args)...)`.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__functional__reference_wrapper_operator_call.cpp
@@ -204,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a> reference_wrapper
+## <a name="reference_wrapper"></a><a name="reference_wrapper"></a> reference_wrapper
 
 Construit un objet `reference_wrapper`.
 
@@ -217,7 +217,7 @@ reference_wrapper(Ty& val) noexcept;
 *Ty*\
 Type à inclure dans un wrapper.
 
-*Val*\
+*multiples*\
 Valeur à inclure dans un wrapper.
 
 ### <a name="remarks"></a>Notes
@@ -255,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a> RESULT_TYPE
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 Type de résultat faible de la référence encapsulée.
 
@@ -267,7 +267,7 @@ typedef R result_type;
 
 Le typedef `result_type` est un synonyme pour le type de résultat faible d’une fonction incluse dans un wrapper. Ce typedef est significatif uniquement pour les types de fonction.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__functional__reference_wrapper_result_type.cpp
@@ -294,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a> Type
+## <a name="type"></a>Type<a name="type"></a>
 
 Type de la référence encapsulée.
 

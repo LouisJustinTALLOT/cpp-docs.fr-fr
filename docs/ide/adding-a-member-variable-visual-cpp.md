@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215996"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845131"
 ---
 # <a name="add-a-member-variable"></a>Ajouter une variable membre
 
@@ -80,13 +80,15 @@ Cet Assistant ajoute une déclaration de variable membre au fichier d’en-tête
 
     Pour plus d’informations sur les types, consultez [types fondamentaux](../cpp/fundamental-types-cpp.md).
 
-    |||
-    |-|-|
-    |**`char`**|**`short`**|
-    |**`double`**|**`unsigned char`**|
-    |**`float`**|**`unsigned int`**|
-    |**`int`**|**`unsigned long`**|
-    |**`long`**||
+    - **`char`**
+    - **`double`**
+    - **`float`**
+    - **`int`**
+    - **`long`**
+    - **`short`**
+    - **`unsigned char`**
+    - **`unsigned int`**
+    - **`unsigned long`**
 
   - Si vous ajoutez une variable membre pour un contrôle de boîte de dialogue, cette zone est renseignée avec le type de l’objet retourné pour un contrôle ou une valeur. Si vous sélectionnez **Contrôle**, **Type de variable** spécifie la classe de base du contrôle que vous sélectionnez dans la zone **ID de contrôle**. Si le contrôle de boîte de dialogue peut contenir une valeur et si vous sélectionnez **Valeur**, **Type de variable** spécifie le type approprié pour la valeur que le contrôle peut contenir. Pour plus d’informations, consultez [Contrôles de boîtes de dialogue et types de variables](#dialog-box-controls-and-variable-types).
 
@@ -100,7 +102,7 @@ Cet Assistant ajoute une déclaration de variable membre au fichier d’en-tête
 
   Indique que la variable membre gère un contrôle dans une boîte de dialogue avec prise en charge de [l’échange de données et de la validation des données](../mfc/dialog-data-exchange-and-validation.md). Pour plus d’informations, consultez [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange). Cette option est disponible seulement pour les variables membres ajoutées à des classes dérivées de [CDialog](../mfc/reference/cdialog-class.md). Cochez cette case pour activer les options **ID de contrôle** et **Type de contrôle**.
 
-- **ID de contrôle**
+- **ID du contrôle**
 
   Définit l’ID pour la variable de contrôle que vous ajoutez. Dans la liste, sélectionnez l’ID pour le type de contrôle pour lequel vous ajoutez la variable membre. La liste est active seulement quand la case **Variable de contrôle** est cochée, et elle est limité aux ID des contrôles déjà ajoutés à la boîte de dialogue. Par exemple, pour le bouton **OK** standard, l’ID de contrôle est **IDOK**.
 

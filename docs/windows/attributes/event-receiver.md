@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: fb17eaa5d94636cedd650eb1bfb393d7c09e4fcc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7280729a9ae3a054468e1f11bdcc4a563b32effe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217270"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845287"
 ---
 # <a name="event_receiver"></a>event_receiver
 
@@ -35,7 +35,7 @@ Crée un récepteur d'événements (récepteur).
 *type*<br/>
 Une énumération de l’une des valeurs suivantes :
 
-- `native`pour le code C/C++ non managé (par défaut pour les classes natives).
+- `native` pour le code C/C++ non managé (par défaut pour les classes natives).
 
 - `com` pour le code COM. Cette valeur nécessite que vous incluiez les fichiers d’en-tête suivants :
 
@@ -50,7 +50,7 @@ Spécifiez *layout_dependent* uniquement si `type` = **com**. *layout_dependent*
 
 - **`true`** signifie que la signature des délégués dans le récepteur d’événements doit correspondre exactement à ceux auxquels ils sont raccordés dans la source de l’événement. Les noms des gestionnaires de récepteur d’événements doivent correspondre aux noms spécifiés dans l’interface de source d’événement appropriée. Vous devez utiliser `coclass` lorsque *layout_dependent* est **`true`** . Il est légèrement plus efficace de spécifier **`true`** .
 
-- **`false`**(par défaut) signifie que la Convention d’appel et la classe de stockage (virtuelles, statiques et autres) ne doivent pas nécessairement correspondre à la méthode d’événement et aux gestionnaires ; les noms des gestionnaires ne doivent pas non plus correspondre aux noms des méthodes de l’interface source de l’événement.
+- **`false`** (par défaut) signifie que la Convention d’appel et la classe de stockage (virtuelles, statiques et autres) ne doivent pas nécessairement correspondre à la méthode d’événement et aux gestionnaires ; les noms des gestionnaires ne doivent pas non plus correspondre aux noms des méthodes de l’interface source de l’événement.
 
 ## <a name="remarks"></a>Notes
 
@@ -63,16 +63,14 @@ L’attribut **event_receiver** C++ spécifie que la classe ou la structure à l
 > [!NOTE]
 > Une classe ou structure modélisée ne peut pas contenir d'événements.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-### <a name="attribute-context"></a>Contexte d'attribut
-
-|||
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Non|
-|**Attributs requis**|`coclass`quand *layout_dependent*=**`true`**|
-|**Attributs non valides**|None|
+|**Attributs requis**|`coclass` quand *layout_dependent*=**`true`**|
+|**Attributs non valides**|Aucun|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

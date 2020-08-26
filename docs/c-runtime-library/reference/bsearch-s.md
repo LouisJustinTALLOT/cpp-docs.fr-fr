@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913393"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845170"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -54,13 +54,13 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*key*\
+*essentiel*\
 Pointeur vers la clé à rechercher.
 
 *base*\
 Pointeur vers la base des données de recherche.
 
-*number*\
+*certain*\
 Nombre d'éléments.
 
 *Largeur*\
@@ -72,7 +72,7 @@ Fonction de rappel qui compare deux éléments. Le premier argument est le point
 *contexte*\
 Pointeur vers un objet accessible dans la fonction de comparaison.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
 **bsearch_s** retourne un pointeur vers une occurrence de la *clé* dans le tableau désigné par *base*. Si la *clé* est introuvable, la fonction retourne la **valeur null**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
 
@@ -80,15 +80,14 @@ Si des paramètres non valides sont passés à la fonction, elle appelle le gest
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|||||||
+|*key*|*base*|*compar*|*number*|*width*|**`errno`**|
 |-|-|-|-|-|-|
-|*key*|*base*|*compar*|*number*|*width*|**errno**|
-|**NUL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|
-|n'importe laquelle|**NUL**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL**|
+|**NULL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|**NULL**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL**|
 |n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|= 0|**EINVAL**|
-|n'importe laquelle|n'importe laquelle|**NUL**|an|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|n'importe laquelle|**NULL**|an|n'importe laquelle|**EINVAL**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **bsearch_s** effectue une recherche binaire d’un tableau trié d’éléments Number, chacun d’un *nombre* d’octets de *largeur* . La valeur de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche, et *Key* est la valeur recherchée. Le paramètre de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne l’une des valeurs suivantes en spécifiant leur relation :
 
@@ -102,7 +101,7 @@ Le pointeur de *contexte* peut être utile si la structure de données recherch�
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -110,7 +109,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme trie un tableau de chaînes avec [qsort_s](qsort-s.md) et utilise ensuite bsearch_s pour rechercher le mot « cat ».
 

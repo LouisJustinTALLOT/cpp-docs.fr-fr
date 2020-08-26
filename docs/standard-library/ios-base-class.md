@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: e66b3bd9f5e8058a4724746ba9ec5abd14cdae3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: da7c8eee2653a34035f39fe272378ae63165bfc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222460"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845495"
 ---
 # <a name="ios_base-class"></a>ios_base, classe
 
@@ -139,13 +139,13 @@ Un objet de la classe ios_base stocke également les informations d’état de f
 
 ### <a name="constructors"></a>Constructeurs
 
-|||
+|Nom|Description|
 |-|-|
 |[ios_base](#ios_base)|Construit des objets `ios_base`.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Nom|Description|
 |-|-|
 |[event_callback](#event_callback)|Décrit une fonction passée à [register_call](#register_callback).|
 |[`fmtflags`](#fmtflags)|Constantes pour spécifier l'apparence de la sortie.|
@@ -155,13 +155,13 @@ Un objet de la classe ios_base stocke également les informations d’état de f
 
 ### <a name="enums"></a>Énumérations
 
-|||
+|Nom|Description|
 |-|-|
 |[event](#event)|Spécifie des types d'événements.|
 
 ### <a name="constants"></a>Constantes
 
-|||
+|Nom|Description|
 |-|-|
 |[adjustfield](#fmtflags)|Masque de bits défini comme `internal` &#124; `left` &#124; `right`.|
 |[app](#openmode)|Spécifie qu'une recherche doit être effectuée jusqu'à la fin d'un flux avant chaque insertion.|
@@ -181,7 +181,7 @@ Un objet de la classe ios_base stocke également les informations d’état de f
 |[goodbit](#iostate)|Tous les bits d'état sont effacés.|
 |[hex](#fmtflags)|Spécifie l'insertion ou l'extraction de valeurs entières au format hexadécimal.|
 |[in](#openmode)|Spécifie l'extraction à partir d'un flux.|
-|[intérieurs](#fmtflags)|Complète jusqu'à une largeur de champ en insérant des caractères de remplissage à un point interne dans un champ numérique généré.|
+|[internal](#fmtflags)|Complète jusqu'à une largeur de champ en insérant des caractères de remplissage à un point interne dans un champ numérique généré.|
 |[gauche](#fmtflags)|Spécifie la justification à gauche.|
 |[personnalisation](#fmtflags)|Spécifie l'insertion ou l'extraction de valeurs entières au format octal.|
 |[à](#openmode)|Spécifie l'insertion dans un flux.|
@@ -195,15 +195,15 @@ Un objet de la classe ios_base stocke également les informations d’état de f
 |[unitbuf](#fmtflags)|Provoque le vidage de la sortie après chaque insertion.|
 |[uppercase](#fmtflags)|Spécifie l'insertion d'équivalents majuscules des lettres minuscules dans certaines insertions.|
 
-### <a name="functions"></a>Fonctions
+### <a name="functions"></a>Functions
 
-|||
+|Nom|Description|
 |-|-|
 |[toute](#failure)|La classe membre sert de classe de base pour toutes les exceptions levées par la fonction membre [Clear](../standard-library/basic-ios-class.md#clear) dans le modèle de classe [basic_ios](../standard-library/basic-ios-class.md).|
 |[flags](#flags)|Définit ou retourne les valeurs de l'indicateur actuel.|
 |[getloc](#getloc)|Retourne l’objet des paramètres régionaux stockés.|
 |[imbue](#imbue)|Change les paramètres régionaux.|
-|[Rein](#init)|Crée les objets standard lors de la `iostream` construction.|
+|[Init](#init)|Crée les objets standard lors de la `iostream` construction.|
 |[iword](#iword)|Affecte une valeur à stocker comme `iword`.|
 |[precision](#precision)|Spécifie le nombre de chiffres à afficher dans un nombre à virgule flottante.|
 |[pword](#pword)|Affecte une valeur à stocker comme `pword`.|
@@ -216,11 +216,11 @@ Un objet de la classe ios_base stocke également les informations d’état de f
 
 ### <a name="operators"></a>Opérateurs
 
-|||
+|Nom|Description|
 |-|-|
 |[opérateur =](#op_eq)|Opérateur d'affectation pour les objets `ios_base`.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<ios>
 
@@ -251,7 +251,7 @@ Le type est un type énuméré qui décrit un objet capable de stocker l’évé
 
 Pour obtenir un exemple, consultez [register_callback](#register_callback).
 
-## <a name="event_callback"></a><a name="event_callback"></a>event_callback
+## <a name="event_callback"></a><a name="event_callback"></a> event_callback
 
 Décrit une fonction passée à [register_call](#register_callback).
 
@@ -281,7 +281,7 @@ Ce type décrit un pointeur vers une fonction qui peut être inscrite avec [regi
 
 Pour obtenir un exemple qui utilise `event_callback`, consultez [register_call](#register_callback).
 
-## <a name="failure"></a><a name="failure"></a>toute
+## <a name="failure"></a><a name="failure"></a> toute
 
 La classe `failure` définit la classe de base pour les types de tous les objets levés comme exceptions, par des fonctions de la bibliothèque `iostreams`, pour signaler les erreurs détectées pendant les opérations de mise en mémoire tampon de flux.
 
@@ -333,7 +333,7 @@ int main ( )
 Caught an exception: ios_base::failbit set
 ```
 
-## <a name="flags"></a><a name="flags"></a>père
+## <a name="flags"></a><a name="flags"></a> père
 
 Définit ou retourne les valeurs de l'indicateur actuel.
 
@@ -347,7 +347,7 @@ fmtflags flags(fmtflags fmtfl);
 *fmtfl*\
 Nouveau paramètre `fmtflags`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre `fmtflags` précédent ou actif.
 
@@ -379,7 +379,7 @@ int main ( )
 16896
 ```
 
-## <a name="fmtflags"></a><a name="fmtflags"></a>fmtflags
+## <a name="fmtflags"></a><a name="fmtflags"></a> fmtflags
 
 Constantes pour spécifier l'apparence de la sortie.
 
@@ -455,7 +455,7 @@ Les valeurs suivantes sont également utiles :
 
 Pour obtenir des exemples de fonctions qui modifient ces indicateurs de format, consultez [\<iomanip>](../standard-library/iomanip.md) .
 
-## <a name="getloc"></a><a name="getloc"></a>getloc
+## <a name="getloc"></a><a name="getloc"></a> getloc
 
 Retourne l’objet des paramètres régionaux stockés.
 
@@ -463,7 +463,7 @@ Retourne l’objet des paramètres régionaux stockés.
 locale getloc() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet de paramètres régionaux stocké.
 
@@ -485,7 +485,7 @@ int main( )
 C
 ```
 
-## <a name="imbue"></a><a name="imbue"></a>imbue
+## <a name="imbue"></a><a name="imbue"></a> imbue
 
 Change les paramètres régionaux.
 
@@ -498,7 +498,7 @@ locale imbue(const locale& _Loc);
 *_Loc*\
 Nouveaux paramètres régionaux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètres régionaux précédents.
 
@@ -510,7 +510,7 @@ La fonction membre stocke *_Loc* dans l’objet de paramètres régionaux, puis 
 
 Pour obtenir un exemple, consultez [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue).
 
-## <a name="init"></a><a name="init"></a>Rein
+## <a name="init"></a><a name="init"></a> Rein
 
 Crée les objets standard lors de la `iostream` construction.
 
@@ -522,7 +522,7 @@ class Init { };
 
 La classe imbriquée décrit un objet dont la construction garantit que les `iostream` objets standard sont construits correctement, même avant l’exécution d’un constructeur pour un objet statique arbitraire.
 
-## <a name="ios_base"></a><a name="ios_base"></a>ios_base
+## <a name="ios_base"></a><a name="ios_base"></a> ios_base
 
 Construit des objets ios_base.
 
@@ -534,7 +534,7 @@ ios_base();
 
 Le constructeur (protégé) ne fait rien. Un appel ultérieur à `basic_ios::` [init](../standard-library/basic-ios-class.md#init) doit initialiser l’objet avant qu’il puisse être détruit en toute sécurité. Ainsi, la seule utilisation sécurisée pour la classe ios_base est comme une classe de base pour le modèle de classe [basic_ios](../standard-library/basic-ios-class.md).
 
-## <a name="iostate"></a><a name="iostate"></a>iostate
+## <a name="iostate"></a><a name="iostate"></a> iostate
 
 Type des constantes qui décrivent l’état d’un flux.
 
@@ -562,7 +562,7 @@ Le type est un type de masque de bits qui décrit un objet pouvant stocker des i
 
 En outre, une valeur utile est `goodbit` , où aucun des bits mentionnés précédemment n’est défini (la valeur `goodbit` est garantie comme étant égale à zéro).
 
-## <a name="iword"></a><a name="iword"></a>iword
+## <a name="iword"></a><a name="iword"></a> iword
 
 Affecte une valeur à stocker comme `iword`.
 
@@ -587,7 +587,7 @@ Pour obtenir un index unique, à utiliser sur tous les objets de type `ios_base`
 
 [`xalloc`](#xalloc)Pour obtenir un exemple d’utilisation de `iword` , consultez.
 
-## <a name="openmode"></a><a name="openmode"></a>OpenMode
+## <a name="openmode"></a><a name="openmode"></a> OpenMode
 
 Décrit comment interagir avec un flux.
 
@@ -637,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Opérateur d’affectation pour les objets ios_base.
 
@@ -648,9 +648,9 @@ ios_base& operator=(const ios_base& right);
 ### <a name="parameters"></a>Paramètres
 
 *Oui*\
-Objet de type `ios_base`.
+Objet de type `ios_base`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet qui est affecté.
 
@@ -660,7 +660,7 @@ L’opérateur copie les informations de mise en forme stockées, ce qui crée u
 
 Cet opérateur est utilisé uniquement par les classes dérivées de `ios_base`.
 
-## <a name="precision"></a><a name="precision"></a>précision
+## <a name="precision"></a><a name="precision"></a> précision
 
 Spécifie le nombre de chiffres à afficher dans un nombre à virgule flottante.
 
@@ -674,7 +674,7 @@ streamsize precision(streamsize _Prec);
 *_Prec*\
 Nombre de chiffres significatifs à afficher, ou nombre de chiffres après la virgule décimale dans la notation fixe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre retourne la [précision d’affichage](../standard-library/ios-base-class.md) stockée. La deuxième fonction membre stocke *_Prec* dans la précision d’affichage et retourne sa valeur stockée précédente.
 
@@ -706,7 +706,7 @@ int main( )
 31.312
 ```
 
-## <a name="pword"></a><a name="pword"></a>pWord
+## <a name="pword"></a><a name="pword"></a> pWord
 
 Affecte une valeur à stocker comme `pword`.
 
@@ -731,7 +731,7 @@ Pour obtenir un index unique, à utiliser sur tous les objets de type `ios_base`
 
 [`xalloc`](#xalloc)Pour obtenir un exemple d’utilisation de `pword` , consultez.
 
-## <a name="register_callback"></a><a name="register_callback"></a>register_callback
+## <a name="register_callback"></a><a name="register_callback"></a> register_callback
 
 Spécifie une fonction de rappel.
 
@@ -839,7 +839,7 @@ in callback2
 an erase event
 ```
 
-## <a name="seekdir"></a><a name="seekdir"></a>seekdir
+## <a name="seekdir"></a><a name="seekdir"></a> seekdir
 
 Spécifie le point de départ pour les opérations de décalage.
 
@@ -888,7 +888,7 @@ int main ( )
 }
 ```
 
-## <a name="setf"></a><a name="setf"></a>SETF
+## <a name="setf"></a><a name="setf"></a> SETF
 
 Définit les indicateurs spécifiés.
 
@@ -910,7 +910,7 @@ Indicateurs à activer.
 *_Unset*\
 Indicateurs à désactiver.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Indicateurs de format précédents
 
@@ -942,7 +942,7 @@ int main( )
 }
 ```
 
-## <a name="sync_with_stdio"></a><a name="sync_with_stdio"></a>sync_with_stdio
+## <a name="sync_with_stdio"></a><a name="sync_with_stdio"></a> sync_with_stdio
 
 Garantit que `iostream` et les opérations de la bibliothèque Runtime C se produisent dans l’ordre dans lequel elles apparaissent dans le code source.
 
@@ -957,7 +957,7 @@ static bool sync_with_stdio(
 *_Sync*\
 Indique si tous les flux sont synchronisés avec `stdio` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre précédent pour cette fonction.
 
@@ -965,7 +965,7 @@ Paramètre précédent pour cette fonction.
 
 La fonction membre statique stocke un `stdio` indicateur de synchronisation, qui est initialement **`true`** . **`true`** Dans ce cas, cet indicateur garantit que les opérations sur le même fichier sont correctement synchronisées entre les [`iostreams`](../standard-library/iostreams-conventions.md) fonctions et celles définies dans la bibliothèque standard C++. Dans le cas contraire, la synchronisation peut être garantie ou non, mais les performances peuvent être améliorées. La fonction stocke *_Sync* dans l' `stdio` indicateur de synchronisation et retourne sa valeur stockée précédente. Vous pouvez l’appeler de façon fiable uniquement avant d’effectuer des opérations sur les flux standard.
 
-## <a name="unsetf"></a><a name="unsetf"></a>unsetf
+## <a name="unsetf"></a><a name="unsetf"></a> unsetf
 
 Désactive les indicateurs spécifiés.
 
@@ -988,7 +988,7 @@ La fonction membre appelle efficacement [Flags](#flags)( `~` *_Mask* **indicateu
 
 Pour obtenir un exemple d’utilisation de, consultez [ios_base :: SETF](#setf) `unsetf` .
 
-## <a name="width"></a><a name="width"></a>Largeur
+## <a name="width"></a><a name="width"></a> Largeur
 
 Définit la longueur du flux de sortie.
 
@@ -1004,7 +1004,7 @@ streamsize width(
 *_Wide*\
 Taille du flux de sortie souhaitée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre de largeur actuel.
 
@@ -1033,7 +1033,7 @@ int main( ) {
 0
 ```
 
-## <a name="xalloc"></a><a name="xalloc"></a>xalloc
+## <a name="xalloc"></a><a name="xalloc"></a> xalloc
 
 Spécifie qu’une variable fait partie du flux.
 
@@ -1041,7 +1041,7 @@ Spécifie qu’une variable fait partie du flux.
 static int xalloc( );
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre statique retourne une valeur statique stockée, qu’elle incrémente à chaque appel.
 
