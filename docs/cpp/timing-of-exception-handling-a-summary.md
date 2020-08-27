@@ -1,6 +1,7 @@
 ---
-title: 'Calendrier du traitement des exceptions : Un résumé'
-ms.date: 05/07/2019
+title: 'Synchronisation de la gestion des exceptions : Un résumé'
+description: Le minutage et l’ordre d’exécution de la gestion des exceptions dans Microsoft C++.
+ms.date: 08/24/2020
 helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 17d1c250a98afc2b86c198735602df7d80118bd4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ce501d8d74b6f0f7ca92e193c39f8ce58a66053
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316593"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898356"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Calendrier du traitement des exceptions : Un résumé
+# <a name="timing-of-exception-handling-a-summary"></a>Synchronisation de la gestion des exceptions : Un résumé
 
-Un gestionnaire de terminaison est exécuté, peu importe la façon dont le bloc **de déclaration __try** est terminé. Les causes incluent sauter hors du bloc `longjmp` **__try,** une déclaration qui transfère le contrôle hors du bloc, et le dénouement de la pile en raison de la manipulation d’exception.
+Un gestionnaire de terminaisons est exécuté, quelle que soit la façon dont le **`__try`** bloc d’instructions est terminé. Les causes incluent le saut hors du **`__try`** bloc, une `longjmp` instruction qui transfère le contrôle hors du bloc et le déroulement de la pile en raison de la gestion des exceptions.
 
 > [!NOTE]
-> Le compilateur Microsoft CMD prend `setjmp` en `longjmp` charge deux formes et déclarations. La version rapide ignore la gestion du bloc de fin mais est plus efficace. Pour utiliser cette version, \<inclure le fichier setjmp.h>. L'autre version prend en charge la gestion du bloc de fin, comme il est décrit dans le paragraphe précédent. Pour utiliser cette version, \<inclure le fichier setjmpex.h>. L'augmentation des performances de la version rapide dépend de la configuration matérielle.
+> Le compilateur Microsoft C++ prend en charge deux formes `setjmp` d' `longjmp` instructions et. La version rapide ignore la gestion du bloc de fin mais est plus efficace. Pour utiliser cette version, incluez le fichier \<setjmp.h> . L'autre version prend en charge la gestion du bloc de fin, comme il est décrit dans le paragraphe précédent. Pour utiliser cette version, incluez le fichier \<setjmpex.h> . L'augmentation des performances de la version rapide dépend de la configuration matérielle.
 
 Le système d'exploitation exécute tous les gestionnaires de terminaisons dans l'ordre approprié avant que tout autre code soit exécuté, notamment le corps d'un gestionnaire d'exceptions.
 
@@ -31,15 +32,15 @@ Lorsque la cause de l'interruption est une exception, le système doit d'abord e
 
 1. une exception est levée.
 
-1. Le système examine la hiérarchie des gestionnaires d'exceptions actifs et applique le filtre du gestionnaire avec la priorité la plus élevée. C'est le gestionnaire d'exceptions dernièrement installé et le plus profondément imbriqué en termes de blocs et d'appels de fonction.
+1. Le système examine la hiérarchie des gestionnaires d’exceptions actifs et exécute le filtre du gestionnaire avec la priorité la plus élevée. C’est le gestionnaire d’exceptions le plus récemment installé et le plus profondément imbriqué, en passant par les blocs et les appels de fonction.
 
-1. Si ce filtre passe la main (retourne 0), le processus se poursuit jusqu'à ce qu'il trouve un filtre qui ne passe pas la main.
+1. Si ce filtre passe le contrôle (retourne 0), le processus se poursuit jusqu’à ce qu’un filtre qui ne passe pas le contrôle soit trouvé.
 
-1. Si ce filtre renvoie -1, l’exécution se poursuit là où l’exception a été soulevée, et aucune résiliation n’a lieu.
+1. Si ce filtre retourne-1, l’exécution continue là où l’exception a été levée et aucun arrêt n’a lieu.
 
 1. Si le filtre retourne 1, les événements suivants se produisent :
 
-   - Le système déroule la pile, effaçant tous les frames de pile entre le code en cours d'exécution (où l'exception a été levée) et le frame de pile qui contient le gestionnaire d'exceptions qui prend la main.
+   - Le système déroule la pile : il efface tous les frames de pile entre l’endroit où l’exception a été levée et le frame de pile qui contient le gestionnaire d’exceptions.
 
    - Au fur et à mesure que la pile est déroulée, chaque gestionnaire de terminaisons figurant sur la pile est exécuté.
 
@@ -49,5 +50,5 @@ Lorsque la cause de l'interruption est une exception, le système doit d'abord e
 
 ## <a name="see-also"></a>Voir aussi
 
-[Rédaction d’un gestionnaire de terminaison](../cpp/writing-a-termination-handler.md)<br/>
+[Écriture d’un gestionnaire des arrêts](../cpp/writing-a-termination-handler.md)<br/>
 [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

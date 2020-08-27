@@ -1,16 +1,17 @@
 ---
 title: Gestion d’exceptions x64
+description: Vue d’ensemble des conventions de gestion des exceptions de Microsoft C++ sur x64.
 ms.date: 10/14/2019
 helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1c55ecf8755e208b2f47acdfda185123ee0255e2
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835049"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898562"
 ---
 # <a name="x64-exception-handling"></a>Gestion d’exceptions x64
 
@@ -305,7 +306,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** est la valeur de RIP dans cette fonction. Cette valeur est soit une adresse d’exception, soit l’adresse à laquelle le contrôle a quitté la fonction d’établissement. Le RIP est utilisé pour déterminer si le contrôle se trouve dans une construction protégée à l’intérieur de cette fonction, par exemple un `__try` bloc pour `__try` / **`__except`** ou `__try` / **`__finally`** .
+**ControlPc** est la valeur de RIP dans cette fonction. Cette valeur est soit une adresse d’exception, soit l’adresse à laquelle le contrôle a quitté la fonction d’établissement. Le RIP est utilisé pour déterminer si le contrôle se trouve dans une construction protégée à l’intérieur de cette fonction, par exemple un **`__try`** bloc pour **`__try`** / **`__except`** ou **`__try`** / **`__finally`** .
 
 **ImageBase** est la base d’image (adresse de chargement) du module contenant cette fonction, à ajouter aux offsets 32 bits utilisés dans l’entrée de fonction et les informations de déroulement pour enregistrer les adresses relatives.
 

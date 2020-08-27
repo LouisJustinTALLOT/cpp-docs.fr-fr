@@ -1,23 +1,24 @@
 ---
 title: Erreur du compilateur C2702
-ms.date: 11/04/2016
+description: Décrit l’erreur C2702 du compilateur Microsoft C/C++.
+ms.date: 08/25/2020
 f1_keywords:
 - C2702
 helpviewer_keywords:
 - C2702
 ms.assetid: 6def15d4-9a8d-43e7-ae35-42d7cb57c27e
-ms.openlocfilehash: eb8a19bf5d29a2a0c69dc27e9b22f76df63ce8e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83210f6ab261a5ae6dd7320182c3f4c3539ff4d1
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216074"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898423"
 ---
 # <a name="compiler-error-c2702"></a>Erreur du compilateur C2702
 
-__except peut ne pas apparaître dans le bloc de fin
+> `__except` peut ne pas apparaître dans le bloc de fin
 
-Un gestionnaire d’exceptions ( `__try` / **`__except`** ) ne peut pas être imbriqué à l’intérieur d’un **`__finally`** bloc.
+Un gestionnaire d’exceptions ( **`__try`** / **`__except`** ) ne peut pas être imbriqué à l’intérieur d’un **`__finally`** bloc.
 
 L’exemple suivant génère l’C2702 :
 

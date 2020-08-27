@@ -3,12 +3,12 @@ title: Cloud et programmation Web dans Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.topic: overview
-ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 675502e9ae50c9e69ad4555502000d128d5d4cbe
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274645"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898672"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Cloud et programmation Web dans Visual C++
 
@@ -30,7 +30,7 @@ En C++, vous disposez de plusieurs options de connexion web et cloud.
 
 - [OneDrive et SharePoint dans Microsoft Graph](https://dev.onedrive.com/README.htm)
 
-  L’API OneDrive fournit un ensemble de services HTTP pour connecter votre application à des fichiers et des dossiers dans Office 365 et SharePoint Server 2016.
+  L’API OneDrive fournit un ensemble de services HTTP pour connecter votre application à des fichiers et des dossiers dans Microsoft 365 et SharePoint Server 2016.
 
 ## <a name="windows-and-cross-platform-networking-apis"></a>API réseau Windows et multiplateformes
 
@@ -51,7 +51,7 @@ En C++, vous disposez de plusieurs options de connexion web et cloud.
 
 - [Interface IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  Fournit une interface COM native que vous pouvez utiliser dans les applications Windows Runtime ou les applications Windows Desktop pour vous connecter à Internet via HTTP, et émettre des commandes GET et PUT, et d’autres commandes HTTP. Pour plus d’informations, consultez [Procédure pas à pas : Connexion à l’aide de tâches et de requêtes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
+  Fournit une interface COM native que vous pouvez utiliser dans les applications Windows Runtime ou les applications Windows Desktop pour vous connecter à Internet via HTTP, et émettre des commandes GET et PUT, et d’autres commandes HTTP. Pour plus d’informations, consultez [procédure pas à pas : connexion à l’aide de tâches et de requêtes http XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
 - [Windows Internet (WinInet)](/windows/win32/WinInet/portal)
 
