@@ -1,12 +1,12 @@
 ---
 title: Vue d’ensemble des conventions ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: bfe55513ffd24175dbe62efc6d5afcfd82f71e4c
+ms.sourcegitcommit: 7f378314c5692d897ead10b7f6c96d4cb2abd266
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303263"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972671"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI ARM64
 
@@ -157,7 +157,7 @@ Pour chaque argument de la liste, la première règle de correspondance de la li
 
 Pour chaque argument de la liste, les règles suivantes sont appliquées tour à tour jusqu’à ce que l’argument ait été alloué. Quand un argument est assigné à un registre, les bits inutilisés dans le registre ont une valeur non spécifiée. Si un argument est assigné à un emplacement de pile, les octets de remplissage inutilisés ont une valeur non spécifiée.
 
-1. Si l’argument est un type de vecteur à virgule flottante simple, double ou quadruple précision, et que le NSRN est inférieur à 8, l’argument est alloué aux bits les moins significatifs du Registre v\[NSRN]. Le NSRN est incrémenté d’une unité. L’argument a maintenant été alloué.
+1. Si l’argument est un type de vecteur à virgule flottante simple, double ou quadruple précision, et que le NSRN est inférieur à 8, l’argument est alloué aux bits les moins significatifs du Registre v \[ NSRN]. Le NSRN est incrémenté d’une unité. L’argument a maintenant été alloué.
 
 1. Si l’argument est un HFA ou un HVA, et qu’il y a suffisamment de registres à virgule flottante et SIMD non alloués (NSRN + nombre de membres ≤ 8), l’argument est alloué aux registres SIMD et à virgule flottante, un registre par membre de HFA ou HVA. Le NSRN est incrémenté par le nombre de registres utilisés. L’argument a maintenant été alloué.
 
@@ -169,13 +169,13 @@ Pour chaque argument de la liste, les règles suivantes sont appliquées tour à
 
 1. Si l’argument est un HFA, un HVA, un type à virgule flottante demi-, simple, double ou quadruple précision ou un type de vecteur Short, l’argument est copié dans la mémoire au niveau du adresse NSAA ajusté. L’adresse NSAA est incrémentée de la taille de l’argument. L’argument a maintenant été alloué.
 
-1. Si l’argument est un type intégral ou pointeur, la taille de l’argument est inférieure ou égale à 8 octets, et NGRN est inférieur à 8, l’argument est copié vers les bits les moins significatifs dans x\[NGRN]. Le NGRN est incrémenté d’une unité. L’argument a maintenant été alloué.
+1. Si l’argument est un type intégral ou pointeur, la taille de l’argument est inférieure ou égale à 8 octets, et NGRN est inférieur à 8, l’argument est copié vers les bits les moins significatifs dans x \[ NGRN]. Le NGRN est incrémenté d’une unité. L’argument a maintenant été alloué.
 
 1. Si l’argument a un alignement de 16, le NGRN est arrondi au nombre pair suivant.
 
-1. Si l’argument est un type intégral, que la taille de l’argument est égale à 16 et que NGRN est inférieur à 7, l’argument est copié dans x\[NGRN] et x\[NGRN + 1]. x\[NGRN] doit contenir le double mot adressé à la limite inférieure de la représentation de la mémoire de l’argument. Le NGRN est incrémenté de deux. L’argument a maintenant été alloué.
+1. Si l’argument est un type intégral, que la taille de l’argument est égale à 16 et que NGRN est inférieur à 7, l’argument est copié dans x \[ NGRN] et x \[ NGRN + 1]. x \[ NGRN] doit contenir le double mot adressé à la limite inférieure de la représentation de la mémoire de l’argument. Le NGRN est incrémenté de deux. L’argument a maintenant été alloué.
 
-1. Si l’argument est un type composite et que la taille dans les mots doubles de l’argument n’est pas supérieure à 8 NGRN, l’argument est copié dans des registres à usage général consécutifs, à partir\[de x NGRN]. L’argument est passé comme s’il avait été chargé dans les registres à partir d’une adresse alignée sur deux mots, avec une séquence appropriée d’instructions LDR qui chargent des registres consécutifs à partir de la mémoire. Le contenu des parties inutilisées des registres n’est pas spécifié par cette norme. Le NGRN est incrémenté par le nombre de registres utilisés. L’argument a maintenant été alloué.
+1. Si l’argument est un type composite et que la taille dans les mots doubles de l’argument n’est pas supérieure à 8 NGRN, l’argument est copié dans des registres à usage général consécutifs, à partir de x \[ NGRN]. L’argument est passé comme s’il avait été chargé dans les registres à partir d’une adresse alignée sur deux mots, avec une séquence appropriée d’instructions LDR qui chargent des registres consécutifs à partir de la mémoire. Le contenu des parties inutilisées des registres n’est pas spécifié par cette norme. Le NGRN est incrémenté par le nombre de registres utilisés. L’argument a maintenant été alloué.
 
 1. NGRN a la valeur 8.
 
@@ -205,13 +205,13 @@ Les valeurs à virgule flottante sont retournées dans S0, D0 ou v0, selon le ca
 
 Les valeurs HFA et HVA sont retournées dans S0-S3, D0-D3 ou v0-v3, selon le cas.
 
-Les types retournés par valeur sont gérés différemment selon qu’ils ont certaines propriétés. Types qui ont toutes ces propriétés,
+Les types retournés par valeur sont gérés différemment selon qu’ils ont certaines propriétés et que la fonction est une fonction membre non statique. Types qui ont toutes ces propriétés,
 
 - elles sont *agrégées* par la définition de la norme c++ 14, c’est-à-dire qu’elles n’ont pas de constructeurs fournis par l’utilisateur, de membres de données non statiques privés ou protégés, aucune classe de base et aucune fonction virtuelle.
 - ils ont un opérateur d’assignation de copie trivial et
 - ils ont un destructeur trivial,
 
-Utilisez le style de retour suivant :
+et sont retournés par des fonctions non membres ou des fonctions membres statiques, utilisez le style de retour suivant :
 
 - Les types inférieurs ou égaux à 8 octets sont retournés en x0.
 - Les types inférieurs ou égaux à 16 octets sont retournés en x0 et x1, avec x0 contenant les 8 octets d’ordre inférieur.
@@ -225,7 +225,7 @@ Tous les autres types utilisent la Convention suivante :
 
 À la suite du ABI présenté par ARM, la pile doit rester alignée sur 16 octets à tout moment. AArch64 contient une fonctionnalité matérielle qui génère des erreurs d’alignement de la pile chaque fois que le SP n’est pas aligné sur 16 octets et qu’un chargement ou un magasin relatif à un SP est effectué. Windows s’exécute avec cette fonctionnalité activée à tout moment.
 
-Les fonctions qui allouent 4 Ko ou plus de pile doivent s’assurer que chaque page avant la dernière page est touchée dans l’ordre. Cette action garantit qu’aucun code ne peut « effectuer une «Bond » sur» les pages de garde utilisées par Windows pour développer la pile. En général, le toucher est effectué `__chkstk` par l’assistance, qui a une convention d’appel personnalisée qui passe l’allocation de pile totale divisée par 16 dans x15.
+Les fonctions qui allouent 4 Ko ou plus de pile doivent s’assurer que chaque page avant la dernière page est touchée dans l’ordre. Cette action garantit qu’aucun code ne peut « effectuer une «Bond » sur» les pages de garde utilisées par Windows pour développer la pile. En général, le toucher est effectué par l' `__chkstk` assistance, qui a une convention d’appel personnalisée qui passe l’allocation de pile totale divisée par 16 dans x15.
 
 ## <a name="red-zone"></a>Zone rouge
 
@@ -245,13 +245,13 @@ Le déroulement au cours de la gestion des exceptions est assisté par l’utili
 
 Le interface EABI ARM spécifie également un modèle de déroulement d’exception qui utilise des codes de déroulement. Toutefois, la spécification présentée est insuffisante pour le déroulement dans Windows, qui doit gérer les cas où l’ordinateur se trouve au milieu d’un prologue ou d’un épilogue de fonction.
 
-Le code généré dynamiquement doit être décrit avec des tables de fonctions dynamiques `RtlAddFunctionTable` via et des fonctions associées, afin que le code généré puisse participer à la gestion des exceptions.
+Le code généré dynamiquement doit être décrit avec des tables de fonctions dynamiques via `RtlAddFunctionTable` et des fonctions associées, afin que le code généré puisse participer à la gestion des exceptions.
 
 ## <a name="cycle-counter"></a>Compteur de cycles
 
-Tous les processeurs ARMv8 sont requis pour prendre en charge un registre de compteur de cycle, un registre 64 bits que Windows configure pour être lisible à n’importe quel niveau d’exception, y compris le mode utilisateur. Elle est accessible via le registre de PMCCNTR_EL0 spécial, à l’aide de l’opcode MSR dans le code `_ReadStatusReg` assembleur, ou de l’intrinsèque dans le code C/C++.
+Tous les processeurs ARMv8 sont requis pour prendre en charge un registre de compteur de cycle, un registre 64 bits que Windows configure pour être lisible à n’importe quel niveau d’exception, y compris le mode utilisateur. Elle est accessible via le registre de PMCCNTR_EL0 spécial, à l’aide de l’opcode MSR dans le code assembleur, ou de l' `_ReadStatusReg` intrinsèque dans le code C/C++.
 
-Le compteur de cycle ici est un compteur de cycle réel, et non une horloge murale. La fréquence de comptage varie en fonction de la fréquence du processeur. Si vous estimez que vous devez connaître la fréquence du compteur de cycles, vous ne devriez pas utiliser le compteur de cycle. Au lieu de cela, vous souhaitez mesurer l’heure de l’horloge, pour `QueryPerformanceCounter`laquelle vous devez utiliser.
+Le compteur de cycle ici est un compteur de cycle réel, et non une horloge murale. La fréquence de comptage varie en fonction de la fréquence du processeur. Si vous estimez que vous devez connaître la fréquence du compteur de cycles, vous ne devriez pas utiliser le compteur de cycle. Au lieu de cela, vous souhaitez mesurer l’heure de l’horloge, pour laquelle vous devez utiliser `QueryPerformanceCounter` .
 
 ## <a name="see-also"></a>Voir aussi
 
