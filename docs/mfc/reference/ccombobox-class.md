@@ -1,6 +1,7 @@
 ---
 title: CComboBox (classe)
-ms.date: 11/04/2016
+description: Référence d’API pour la classe de zone de liste déroulante Windows MFC CComboBox
+ms.date: 08/27/2020
 f1_keywords:
 - CComboBox
 - AFXWIN/CComboBox
@@ -108,12 +109,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 515a079ca4f6c3896733bbebec424f63455fb979
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561672"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062183"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -188,7 +189,7 @@ class CComboBox : public CWnd
 |[CComboBox :: SetTopIndex](#settopindex)|Indique à la partie de zone de liste de la zone de liste déroulante d’afficher l’élément avec l’index spécifié en haut.|
 |[CComboBox :: ShowDropDown](#showdropdown)|Affiche ou masque la zone de liste d’une zone de liste déroulante qui a le style CBS_DROPDOWN ou CBS_DROPDOWNLIST.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Une zone de liste déroulante se compose d’une zone de liste associée à un contrôle statique ou à un contrôle d’édition. La partie de la zone de liste du contrôle peut être affichée à tout moment ou ne peut être déroulante que lorsque l’utilisateur sélectionne la flèche déroulante à côté du contrôle.
 
@@ -258,7 +259,7 @@ Si vous incorporez un `CComboBox` objet dans un autre objet de fenêtre, vous n�
 
 `CComboBox`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
@@ -279,7 +280,7 @@ Pointe vers la chaîne terminée par le caractère null qui doit être ajoutée.
 
 Si la valeur de retour est supérieure ou égale à 0, il s’agit de l’index de base zéro de la chaîne dans la zone de liste. La valeur de retour est CB_ERR si une erreur se produit ; la valeur de retour est CB_ERRSPACE si l’espace disponible est insuffisant pour stocker la nouvelle chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si la zone de liste n’a pas été créée avec le style [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , la chaîne est ajoutée à la fin de la liste. Dans le cas contraire, la chaîne est insérée dans la liste et la liste est triée.
 
@@ -312,7 +313,7 @@ Supprime (efface) la sélection actuelle, le cas échéant, dans le contrôle d�
 void Clear();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Pour supprimer la sélection actuelle et placer le contenu supprimé dans le presse-papiers, utilisez la fonction membre [Cut](#cut) .
 
@@ -337,7 +338,7 @@ Pointeur long vers une structure [compareitemstruct,](/windows/win32/api/winuser
 
 Indique la position relative des deux éléments décrits dans la `COMPAREITEMSTRUCT` structure. Il peut s’agir de l’une des valeurs suivantes :
 
-|Valeur|Signification|
+|Value|Signification|
 |-----------|-------------|
 |- 1|L’élément 1 est trié avant l’élément 2.|
 |0|Les éléments 1 et 2 sont triés de la même façon.|
@@ -345,7 +346,7 @@ Indique la position relative des deux éléments décrits dans la `COMPAREITEMST
 
 Consultez [CWnd :: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) pour obtenir une description de `COMPAREITEMSTRUCT` .
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Par défaut, cette fonction membre ne fait rien. Si vous créez une zone de liste déroulante owner-draw avec le style LBS_SORT, vous devez substituer cette fonction membre pour aider l’infrastructure à trier les nouveaux éléments ajoutés à la zone de liste.
 
@@ -395,7 +396,7 @@ Spécifie l’ID de contrôle de la zone de liste déroulante.
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Vous construisez un `CComboBox` objet en deux étapes. Tout d’abord, appelez le constructeur, puis appelez `Create` , qui crée la zone de liste déroulante Windows et l’attache à l' `CComboBox` objet.
 
@@ -431,7 +432,7 @@ Supprime (coupe) la sélection actuelle, le cas échéant, dans le contrôle d�
 void Cut();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Pour supprimer la sélection actuelle sans placer le texte supprimé dans le presse-papiers, appelez la fonction membre [Clear](#clear) .
 
@@ -452,7 +453,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 *lpDeleteItemStruct*<br/>
 Pointeur long vers une structure Windows [deleteitemstruct,](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) qui contient des informations sur l’élément supprimé. Consultez [CWnd :: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) pour obtenir une description de cette structure.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’implémentation par défaut de cette fonction est sans effet. Substituez cette fonction pour redessiner la zone de liste déroulante en fonction des besoins.
 
@@ -477,7 +478,7 @@ Spécifie l’index de la chaîne à supprimer.
 
 Si la valeur de retour est supérieure ou égale à 0, il s’agit du nombre de chaînes restantes dans la liste. La valeur de retour est CB_ERR si *nIndex* spécifie un index supérieur au nombre d’éléments de la liste.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Tous les éléments suivants *nIndex* descendent d’une position. Par exemple, si une zone de liste déroulante contient deux éléments, le fait de supprimer le premier élément entraînera l’élément restant dans la première position. *nIndex*= 0 pour l’élément à la première position.
 
@@ -523,7 +524,7 @@ Pointe vers une chaîne de spécification de fichier. La chaîne peut contenir d
 
 Si la valeur de retour est supérieure ou égale à 0, il s’agit de l’index de base zéro du dernier nom de fichier ajouté à la liste. La valeur de retour est CB_ERR si une erreur se produit ; la valeur de retour est CB_ERRSPACE si l’espace disponible est insuffisant pour stocker les nouvelles chaînes.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction n’est pas prise en charge par le `ComboBoxEx` contrôle Windows. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](/windows/win32/Controls/comboboxex-controls) dans le SDK Windows.
 
@@ -544,7 +545,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 Pointeur vers une structure [drawitemstruct,](/windows/win32/api/winuser/ns-winuser-drawitemstruct) qui contient des informations sur le type de dessin requis.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le `itemAction` membre de la `DRAWITEMSTRUCT` structure définit l’action de dessin à effectuer. Consultez [CWnd :: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) pour obtenir une description de cette structure.
 
@@ -576,7 +577,7 @@ Pointe vers la chaîne terminée par le caractère null qui contient le préfixe
 
 Si la valeur de retour est supérieure ou égale à 0, il s’agit de l’index de base zéro de l’élément correspondant. Elle est CB_ERR si la recherche a échoué.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction n’est pas prise en charge par le `ComboBoxEx` contrôle Windows. Pour plus d’informations sur ce contrôle, consultez [contrôles ComboBoxEx](/windows/win32/Controls/comboboxex-controls) dans le SDK Windows.
 
@@ -606,7 +607,7 @@ Pointe vers la chaîne terminée par le caractère null à rechercher. Cette cha
 
 Index de base zéro de l’élément correspondant, ou CB_ERR si la recherche a échoué.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si la zone de liste déroulante a été créée avec un style owner-draw, mais sans le style [CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , `FindStringExact` tente de faire correspondre la valeur du mot double à la valeur de *lpszFind*.
 
@@ -631,7 +632,7 @@ Pointeur vers la structure [COMBOBOXINFO](/windows/win32/api/winuser/ns-winuser-
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre émule les fonctionnalités du message [CB_GETCOMBOBOXINFO](/windows/win32/Controls/cb-getcomboboxinfo) , comme décrit dans le SDK Windows.
 
@@ -679,7 +680,7 @@ Dans la première surcharge, objet [CString](../../atl-mfc-shared/using-cstring.
 
 Dans la deuxième surcharge, TRUE si cette méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le texte de la pile est une invite qui s’affiche dans la zone d’entrée du contrôle de zone de liste déroulante. Le texte de la file d’attente s’affiche jusqu’à ce que l’utilisateur fournisse une entrée.
 
@@ -697,7 +698,7 @@ int GetCurSel() const;
 
 Index de base zéro de l’élément actuellement sélectionné dans la zone de liste d’une zone de liste déroulante, ou CB_ERR si aucun élément n’est sélectionné.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `GetCurSel` retourne un index dans la liste.
 
@@ -750,7 +751,7 @@ int GetDroppedWidth() const;
 
 En cas de réussite, largeur minimale autorisée, en pixels ; Sinon, CB_ERR.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction s’applique uniquement aux zones de liste modifiable avec le style [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
@@ -788,7 +789,7 @@ BOOL GetExtendedUI() const;
 
 Différent de zéro si la zone de liste déroulante possède l’interface utilisateur étendue ; Sinon, 0.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’interface utilisateur étendue peut être identifiée des façons suivantes :
 
@@ -814,7 +815,7 @@ UINT GetHorizontalExtent() const;
 
 Largeur de défilement de la partie de zone de liste de la zone de liste déroulante, en pixels.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cela s’applique uniquement si la partie de la zone de liste de la zone de liste déroulante comporte une barre de défilement horizontale.
 
@@ -839,7 +840,7 @@ Contient l’index de base zéro d’un élément dans la zone de liste de la zo
 
 Valeur 32 bits associée à l’élément, ou CB_ERR si une erreur se produit.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La valeur 32 bits peut être définie avec le paramètre *dwItemData* d’un appel de fonction membre [SetItemData](#setitemdata) . Utilisez la `GetItemDataPtr` fonction membre si la valeur 32 bits à récupérer est un pointeur ( **`void`** <strong>\*</strong> ).
 
@@ -918,9 +919,10 @@ Référence à un `CString`.
 
 Longueur (en octets) de la chaîne, à l’exclusion du caractère null de fin. Si *nIndex* ne spécifie pas d’index valide, la valeur de retour est CB_ERR.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-La deuxième forme de cette fonction membre remplit un `CString` objet avec le texte de l’élément.
+La deuxième forme de cette fonction membre remplit un `CString` objet avec le texte de l’élément. \
+Si *nIndex* n’est pas valide, cette fonction lève une `E_INVALIDARG` exception (code d’erreur : `-2147024809` , `0x80070057` ).
 
 ### <a name="example"></a>Exemple
 
@@ -959,7 +961,7 @@ LCID GetLocale() const;
 
 Valeur de l’identificateur de paramètres régionaux (LCID) pour les chaînes de la zone de liste déroulante.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les paramètres régionaux sont utilisés, par exemple, pour déterminer l’ordre de tri des chaînes dans une zone de liste déroulante triée.
 
@@ -979,7 +981,7 @@ int GetMinVisible() const;
 
 Nombre minimal d’éléments visibles dans la liste déroulante actuelle.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [CB_GETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) , qui est décrit dans le SDK Windows.
 
@@ -995,7 +997,7 @@ int GetTopIndex() const;
 
 Index de base zéro du premier élément visible dans la partie de zone de liste de la zone de liste déroulante en cas de réussite, CB_ERR sinon.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Initialement, l’élément 0 se trouve en haut de la zone de liste, mais si vous faites défiler la zone de liste, un autre élément peut se trouver en haut.
 
@@ -1025,7 +1027,7 @@ Spécifie la quantité de mémoire, en octets, à allouer pour les chaînes d’
 
 En cas de réussite, le nombre maximal d’éléments que la partie de la zone de liste de la zone de liste déroulante peut stocker avant qu’une réallocation de mémoire soit nécessaire, sinon CB_ERRSPACE, ce qui signifie que la mémoire disponible est insuffisante.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Appelez cette fonction avant d’ajouter un grand nombre d’éléments à la partie de la zone de liste du `CComboBox` .
 
@@ -1059,7 +1061,7 @@ Pointe vers la chaîne terminée par le caractère null qui doit être insérée
 
 Index de base zéro de la position à laquelle la chaîne a été insérée. La valeur de retour est CB_ERR si une erreur se produit. La valeur de retour est CB_ERRSPACE si l’espace disponible est insuffisant pour stocker la nouvelle chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Contrairement à la fonction membre [AddString](#addstring) , la fonction membre `InsertString` n’entraîne pas le tri d’une liste associée au style [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
@@ -1087,7 +1089,7 @@ Spécifie la longueur (en octets) du texte que l’utilisateur peut entrer. Si c
 
 Valeur différente de zéro en cas de réussite. Si elle est appelée pour une zone de liste déroulante avec le style [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou pour une zone de liste déroulante sans contrôle d’édition, la valeur de retour est CB_ERR.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si la zone de liste déroulante n’a pas le style [CBS_AUTOHSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles), la définition de la limite du texte sur une valeur supérieure à la taille du contrôle d’édition n’aura aucun effet.
 
@@ -1110,7 +1112,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 *lpMeasureItemStruct*<br/>
 Pointeur long vers une structure [measureitemstruct,](/windows/win32/api/winuser/ns-winuser-measureitemstruct) .
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Par défaut, cette fonction membre ne fait rien. Substituez cette fonction membre et remplissez la `MEASUREITEMSTRUCT` structure pour informer les fenêtres des dimensions de la zone de liste dans la zone de liste déroulante. Si la zone de liste déroulante est créée avec le style [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , l’infrastructure appelle cette fonction membre pour chaque élément de la zone de liste. Dans le cas contraire, ce membre n’est appelé qu’une seule fois.
 
@@ -1130,7 +1132,7 @@ Insère les données du presse-papiers dans le contrôle d’édition de la zone
 void Paste();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les données sont insérées uniquement si le presse-papiers contient des données au format CF_TEXT.
 
@@ -1172,7 +1174,7 @@ Pointe vers la chaîne terminée par le caractère null qui contient le préfixe
 
 Index de base zéro de l’élément sélectionné si la chaîne a été trouvée. En cas d’échec de la recherche, la valeur de retour est CB_ERR et la sélection actuelle n’est pas modifiée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Une chaîne est sélectionnée uniquement si ses caractères initiaux (à partir du point de départ) correspondent aux caractères de la chaîne de préfixe.
 
@@ -1199,7 +1201,7 @@ dans Pointeur vers une mémoire tampon se terminant par un caractère null qui c
 
 TRUE si la méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le texte de la pile est une invite qui s’affiche dans la zone d’entrée du contrôle de zone de liste déroulante. Le texte de la file d’attente s’affiche jusqu’à ce que l’utilisateur fournisse une entrée.
 
@@ -1234,7 +1236,7 @@ Spécifie l’index de base zéro de la chaîne à sélectionner. Si-1, toute s�
 
 Index de base zéro de l’élément sélectionné si le message a réussi. La valeur de retour est CB_ERR si *nsélectionner* est supérieur au nombre d’éléments dans la liste ou si *nsélectionner* est défini sur-1, ce qui efface la sélection.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si nécessaire, la zone de liste fait défiler la chaîne dans la vue (si la zone de liste est visible). Le texte du contrôle d’édition de la zone de liste déroulante est modifié afin de refléter la nouvelle sélection. Toute sélection précédente dans la zone de liste est supprimée.
 
@@ -1259,7 +1261,7 @@ Largeur minimale autorisée de la partie de zone de liste de la zone de liste d�
 
 En cas de réussite, nouvelle largeur de la zone de liste, sinon CB_ERR.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction s’applique uniquement aux zones de liste modifiable avec le style [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
@@ -1291,7 +1293,7 @@ Spécifie la position de fin. Si la position de fin a la valeur-1, tout le texte
 
 Différent de zéro si la fonction membre est réussie ; Sinon, 0. Elle est CB_ERR si `CComboBox` a le style [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou n’a pas de zone de liste.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les positions sont de base zéro. Pour sélectionner le premier caractère du contrôle d’édition, vous spécifiez une position de départ de 0. La position de fin correspond au caractère situé juste après le dernier caractère à sélectionner. Par exemple, pour sélectionner les quatre premiers caractères du contrôle d’édition, vous devez utiliser une position de départ de 0 et une position de fin de 4.
 
@@ -1319,7 +1321,7 @@ Spécifie si la zone de liste déroulante doit utiliser l’interface utilisateu
 
 CB_OKAY si l’opération réussit, ou CB_ERR si une erreur se produit.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’interface utilisateur étendue peut être identifiée des façons suivantes :
 
@@ -1346,7 +1348,7 @@ void SetHorizontalExtent(UINT nExtent);
 *nExtent*<br/>
 Spécifie le nombre de pixels par lequel la partie de la zone de liste de la zone de liste déroulante peut faire défiler horizontalement.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si la largeur de la zone de liste est inférieure à cette valeur, la barre de défilement horizontale défile horizontalement les éléments de la zone de liste. Si la largeur de la zone de liste est supérieure ou égale à cette valeur, la barre de défilement horizontale est masquée ou, si la zone de liste déroulante a le style [CBS_DISABLENOSCROLL](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) , elle est désactivée.
 
@@ -1376,7 +1378,7 @@ Contient la nouvelle valeur à associer à l’élément.
 
 CB_ERR si une erreur se produit.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Utilisez la `SetItemDataPtr` fonction membre si l’élément 32 bits doit être un pointeur.
 
@@ -1406,7 +1408,7 @@ Contient le pointeur à associer à l’élément.
 
 CB_ERR si une erreur se produit.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Ce pointeur reste valide pour la durée de vie de la zone de liste déroulante, même si la position relative de l’élément dans la zone de liste déroulante peut changer à mesure que des éléments sont ajoutés ou supprimés. Par conséquent, l’index de l’élément dans la zone peut changer, mais le pointeur reste fiable.
 
@@ -1440,7 +1442,7 @@ Spécifie la hauteur, en pixels, du composant de zone de liste déroulante ident
 
 CB_ERR si l’index ou la hauteur n’est pas valide ; Sinon, 0.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La hauteur de la partie de contrôle d’édition (ou de texte statique) de la zone de liste déroulante est définie indépendamment de la hauteur des éléments de liste. Une application doit s’assurer que la hauteur de la partie de contrôle de modification (ou de texte statique) n’est pas inférieure à la hauteur d’un élément de zone de liste particulier.
 
@@ -1465,7 +1467,7 @@ Nouvelle valeur de l’identificateur de paramètres régionaux (LCID) à défin
 
 Valeur précédente de l’identificateur de paramètres régionaux (LCID) pour cette zone de liste déroulante.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si `SetLocale` n’est pas appelé, les paramètres régionaux par défaut sont obtenus à partir du système. Les paramètres régionaux par défaut du système peuvent être modifiés à l’aide de l’application régionale (ou internationale) du panneau de configuration.
 
@@ -1490,7 +1492,7 @@ dans Spécifie le nombre minimal d’éléments visibles.
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode envoie le message [CB_SETMINVISIBLE](/windows/win32/Controls/cb-setminvisible) , qui est décrit dans le SDK Windows.
 
@@ -1523,7 +1525,7 @@ Spécifie l’index de base zéro de l’élément de zone de liste.
 
 Zéro en cas de réussite, ou CB_ERR si une erreur se produit.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le système fait défiler la zone de liste jusqu’à ce que l’élément spécifié par *nIndex* apparaisse en haut de la zone de liste ou que la plage de défilement maximale ait été atteinte.
 
@@ -1544,7 +1546,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 *bShowIt*<br/>
 Spécifie si la zone de liste déroulante doit être affichée ou masquée. La valeur TRUE affiche la zone de liste. La valeur FALSe masque la zone de liste.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Par défaut, une zone de liste déroulante de ce style affiche la zone de liste.
 
