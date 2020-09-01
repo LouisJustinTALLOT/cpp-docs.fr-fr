@@ -1,17 +1,17 @@
 ---
 title: /CETCOMPAT (compatible avec la pile cachée de l’heure de l’est)
-ms.date: 06/30/2020
+ms.date: 09/01/2020
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 35078ac9e6177e34562db14b30f4ef8f987d98bc
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7de7c2007c29769cb3ac8f89d07de8b00bf44c26
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813561"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281823"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (compatible avec la pile cachée de l’heure de l’est)
 
@@ -27,7 +27,7 @@ Spécifie s’il faut marquer une image exécutable comme étant compatible avec
 **`NO`**<br/>
 Spécifie que le fichier exécutable ne doit pas être marqué comme compatible avec la pile Shadow de CET.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La technologie de mise en application du workflow de contrôle (CET) est une fonctionnalité de processeur d’ordinateur qui fournit des fonctionnalités permettant de se défendre contre les attaques par programme malveillant basées sur la programmation orientée retour (ROP). Pour plus d’informations, consultez [Intel Control-Flow application Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
@@ -45,7 +45,7 @@ L' **`/CETCOMPAT`** option est disponible à partir de Visual Studio 2019.
 
 1. Sélectionnez la propriété **compatible avec la pile Shadow de cet** .
 
-1. Dans le contrôle de liste déroulante, choisissez **`Yes (/CETCOMPAT)`** d’activer les métadonnées de continuation Eh ou **`No (/CETCOMPAT:NO)`** de les désactiver.
+1. Dans le contrôle de liste déroulante, choisissez **`Yes (/CETCOMPAT)`** de marquer le binaire comme étant compatible avec la pile Shadow, ou **`No (/CETCOMPAT:NO)`** de le marquer comme non compatible.
 
 Dans les versions précédentes de Visual Studio 2019 :
 
@@ -53,7 +53,7 @@ Dans les versions précédentes de Visual Studio 2019 :
 
 1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Command Line** .
 
-1. Dans le contrôle d’édition **options supplémentaires** , ajoutez *`/CETCOMPAT`* pour activer les métadonnées de continuation Eh ou *`/CETCOMPAT:NO`* pour le désactiver explicitement.
+1. Dans le contrôle d’édition **options supplémentaires** , ajoutez *`/CETCOMPAT`* pour marquer le binaire comme étant compatible avec la pile Shadowy, ou *`/CETCOMPAT:NO`* pour le marquer explicitement comme non compatible.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

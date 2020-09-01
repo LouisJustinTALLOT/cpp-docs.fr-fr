@@ -1,7 +1,7 @@
 ---
 title: Options de l’éditeur de liens MSVC
 description: Liste des options prises en charge par l’éditeur de liens Microsoft LINK.
-ms.date: 02/09/2020
+ms.date: 09/01/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 0d85361b8d4b5896d9ed7beae0d310fe28dc98e9
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257544"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281794"
 ---
 # <a name="linker-options"></a>Options de l’éditeur de liens
 
@@ -23,11 +23,11 @@ LINK.exe lie des bibliothèques et des fichiers objets COFF (Common Object File 
 
 Le tableau ci-dessous répertorie les options pour LINK.exe. Pour plus d’informations sur LINK, consultez :
 
-- [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)
+- [Options de liaison contrôlées par le compilateur](compiler-controlled-link-options.md)
 
-- [Fichiers d’entrée LINK](link-input-files.md)
+- [Fichiers d’entrée de lien](link-input-files.md)
 
-- [Sortie LINK](link-output.md)
+- [Sortie de lien](link-output.md)
 
 - [Mots réservés](reserved-words.md)
 
@@ -49,6 +49,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)|Spécifie qu’un module MSIL (Microsoft Intermediate Language) doit être importé dans l’assembly.|
 |[/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)|Incorpore un fichier de ressources managé dans un assembly.|
 |[/BASE](base-base-address.md)|Définit une adresse de base pour le programme.|
+|[/CETCOMPAT](cetcompat.md)|Marque le binaire comme étant compatible avec la pile cachée.|
 |[/CGTHREADS](cgthreads-compiler-threads.md)|Définit le nombre de threads de cl.exe à utiliser pour l’optimisation et la génération de code quand la génération de code durant l’édition de liens est spécifiée.|
 |[/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md)|Définit le type (IJW, pure ou sécurisée) d’une image CLR.|
 |[/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Préserve le dernier code d’erreur des fonctions qui sont appelées via le mécanisme P/Invoke.|
@@ -67,21 +68,21 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Spécifie s’il faut générer une image exécutable qui est redéfinie au moment du chargement à l’aide de la fonctionnalité de randomisation du format d’espace d’adresse (ASLR).|
 |[/ENTRY](entry-entry-point-symbol.md)|Définit l’adresse de départ.|
 |[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| Action déconseillée. Le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
-|[/EXPORT](export-exports-a-function.md)|Exporte une fonction.|
+|[/Export.](export-exports-a-function.md)|Exporte une fonction.|
 |[/FILEALIGN](filealign.md)|Aligne les sections dans le fichier de sortie sur les multiples d’une valeur spécifiée.|
 |[/FIXED](fixed-fixed-base-address.md)|Crée un programme qui peut être chargé uniquement à son adresse de base préférée.|
 |[/FORCE](force-force-file-output.md)|Force un lien à se terminer même avec des symboles non résolus ou des symboles définis plusieurs fois.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Crée une image qui peut être corrigée en mémoire.|
-|[/ GENPROFILE, /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Ces deux options spécifient la génération d’un fichier *`.pgd`* par l’éditeur de liens pour prendre en charge l’optimisation guidée par profil (PGO). /GENPROFILE et /FASTGENPROFILE utilisent des paramètres par défaut différents.|
+|[/ GENPROFILE, /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Ces deux options spécifient la génération d’un *`.pgd`* fichier par l’éditeur de liens pour prendre en charge l’optimisation guidée par profil (PGO). /GENPROFILE et /FASTGENPROFILE utilisent des paramètres par défaut différents.|
 |[/GUARD](guard-enable-guard-checks.md)|Active la protection du flux de contrôle.|
 |[/HEAP](heap-set-heap-size.md)|Définit la taille du tas, en octets.|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|Spécifie la prise en charge de la fonctionnalité de randomisation du format d’espace d’adresse (ASLR) 64 bits de forte entropie.|
-|[/IDLOUT](idlout-name-midl-output-files.md)|Spécifie le nom du fichier de *`.idl`* et d’autres fichiers de sortie MIDL.|
+|[/IDLOUT](idlout-name-midl-output-files.md)|Spécifie le nom du *`.idl`* fichier et d’autres fichiers de sortie MIDL.|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|Supprime la sortie des avertissements spécifiés de l’éditeur de liens.|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Empêche le traitement des informations d’attribut dans un fichier *`.idl`* .|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Empêche le traitement des informations d’attribut dans un *`.idl`* fichier.|
 |[/IMPLIB](implib-name-import-library.md)|Remplace le nom par défaut de la bibliothèque d’importation.|
 |[/INCLUDE](include-force-symbol-references.md)|Force les références de symboles.|
-|[/INCREMENTAL](incremental-link-incrementally.md)|Contrôle l’édition de liens incrémentiels.|
+|[Lier](incremental-link-incrementally.md)|Contrôle l’édition de liens incrémentiels.|
 |[/INTEGRITYCHECK](integritycheck-require-signature-check.md)|Spécifie que le module requiert une vérification de signature au moment du chargement.|
 |[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)|Spécifie un conteneur de clé pour signer un assembly.|
 |[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)|Spécifie une clé ou une paire de clés pour signer un assembly.|
@@ -92,7 +93,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/LTCG](ltcg-link-time-code-generation.md)|Spécifie la génération du code durant l’édition de liens.|
 |[/MACHINE](machine-specify-target-platform.md)|Spécifie la plateforme cible.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Crée un fichier manifeste côte à côte et l’incorpore éventuellement dans le fichier binaire.|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Spécifie une section de > \<dependentAssembly dans le fichier manifeste.|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Spécifie une \<dependentAssembly> section dans le fichier manifeste.|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|Modifie le nom par défaut du fichier manifeste.|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|Spécifie un fichier d’entrée de manifeste pour que l’éditeur de liens le traite et l’incorpore dans le fichier binaire. Vous pouvez utiliser cette option plusieurs fois pour spécifier plusieurs fichiers d’entrée de manifeste.|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|Spécifie si les informations de contrôle de compte d’utilisateur sont incorporées dans le manifeste du programme.|
@@ -112,19 +113,19 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/PDB](pdb-use-program-database.md)|Crée un fichier PDB.|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Utilise un autre emplacement pour enregistrer un fichier PDB.|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Crée un fichier PDB qui n’a pas de symboles privés.|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Spécifie un fichier de *`.pgd`* pour les optimisations guidées par profil.|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Spécifie un *`.pgd`* fichier pour les optimisations guidées par profil.|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Obsolète** Crée une build instrumentée PGO thread-safe.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Génère un fichier de sortie utilisable avec le profileur Outils d’analyse des performances.|
-|[/RELEASE](release-set-the-checksum.md)|Définit la somme de contrôle dans l’en-tête *`.exe`* .|
+|[/RELEASE](release-set-the-checksum.md)|Définit la somme de contrôle dans l' *`.exe`* en-tête.|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Spécifie que l’image contiendra une table de gestionnaires d’exceptions sécurisés.|
 |[/SECTION](section-specify-section-attributes.md)|Remplace les attributs d’une section.|
 |[/SOURCELINK](sourcelink.md)|Spécifie un fichier SourceLink à ajouter au fichier PDB.|
 |[/STACK](stack-stack-allocations.md)|Définit la taille de la pile, en octets.|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Attache un programme stub MS-DOS à un programme Win32.|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Indique au système d’exploitation comment exécuter le fichier *`.exe`* .|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Indique au système d’exploitation comment exécuter le *`.exe`* fichier.|
 |[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|Indique au système d’exploitation de copier la sortie de l’éditeur de liens dans un fichier d’échange avant de l’exécuter.|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Spécifie l’ID de ressource de la bibliothèque de types générée par l’éditeur de liens.|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Spécifie le nom du fichier de *`.tlb`* et d’autres fichiers de sortie MIDL.|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Spécifie le nom du *`.tlb`* fichier et d’autres fichiers de sortie MIDL.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Crée une application conçue spécifiquement pour s’exécuter sous Terminal Server.|
 |[/USEPROFILE](useprofile.md)|Utilise les données d’apprentissage de l’optimisation guidée par profil pour créer une image optimisée.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Imprime les messages de progression de l’éditeur de liens.|
@@ -141,5 +142,5 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence à la génération C/C++](c-cpp-building-reference.md)\
+[Informations de référence sur la génération C/C++](c-cpp-building-reference.md)\
 [Informations de référence sur l’éditeur de liens MSVC](linking.md)
