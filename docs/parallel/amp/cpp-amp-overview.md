@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
+ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222756"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427723"
 ---
 # <a name="c-amp-overview"></a>Présentation de C++ AMP
 
@@ -229,7 +229,7 @@ Le tableau suivant récapitule les similitudes et les différences entre les `ar
 |-----------------|-----------------|-----------------------|
 |Quand le rang est déterminé|Au moment de la compilation.|Au moment de la compilation.|
 |Lorsque l’étendue est déterminée|Au moment de l’exécution.|Au moment de l’exécution.|
-|Graphique à base de formes|Rectangulaire.|Rectangulaire.|
+|Forme|Rectangulaire.|Rectangulaire.|
 |Stockage des données|Est un conteneur de données.|Est un wrapper de données.|
 |Copier|Copie complète et explicite au niveau de la définition.|Copie implicite lorsque la fonction noyau y accède.|
 |Récupération de données|En recopiant les données du tableau dans un objet sur le thread de l’UC.|En accédant directement à l' `array_view` objet ou en appelant la [méthode array_view :: Synchronize](reference/array-view-class.md#synchronize) pour continuer à accéder aux données sur le conteneur d’origine.|
@@ -238,7 +238,7 @@ Le tableau suivant récapitule les similitudes et les différences entre les `ar
 
 La mémoire partagée est une mémoire accessible à la fois par l’UC et l’accélérateur. L’utilisation de la mémoire partagée permet d’éliminer ou de réduire considérablement la surcharge liée à la copie de données entre l’UC et l’accélérateur. Bien que la mémoire soit partagée, elle ne peut pas être accessible simultanément à la fois par l’UC et l’accélérateur, ce qui entraîne un comportement indéfini.
 
-`array`les objets peuvent être utilisés pour spécifier un contrôle affiné de l’utilisation de la mémoire partagée si l’accélérateur associé le prend en charge. Le fait qu’un accélérateur prenne en charge la mémoire partagée est déterminé par la propriété [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) de l’accélérateur, qui retourne **`true`** lorsque la mémoire partagée est prise en charge. Si la mémoire partagée est prise en charge, l' [énumération access_type](reference/concurrency-namespace-enums-amp.md#access_type) par défaut pour les allocations de mémoire sur l’accélérateur est déterminée par la `default_cpu_access_type` propriété. Par défaut, `array` les `array_view` objets et prennent la même valeur `access_type` que le principal associé `accelerator` .
+`array` les objets peuvent être utilisés pour spécifier un contrôle affiné de l’utilisation de la mémoire partagée si l’accélérateur associé le prend en charge. Le fait qu’un accélérateur prenne en charge la mémoire partagée est déterminé par la propriété [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) de l’accélérateur, qui retourne **`true`** lorsque la mémoire partagée est prise en charge. Si la mémoire partagée est prise en charge, l' [énumération access_type](reference/concurrency-namespace-enums-amp.md#access_type) par défaut pour les allocations de mémoire sur l’accélérateur est déterminée par la `default_cpu_access_type` propriété. Par défaut, `array` les `array_view` objets et prennent la même valeur `access_type` que le principal associé `accelerator` .
 
 En définissant la propriété de [membre de données Array :: cpu_access_type](reference/array-class.md#cpu_access_type) d’un `array` explicitement, vous pouvez exercer un contrôle affiné sur la façon dont la mémoire partagée est utilisée, afin que vous puissiez optimiser l’application pour les caractéristiques de performances du matériel, en fonction des modèles d’accès mémoire de ses noyaux de calcul. Un `array_view` reflète le même que celui `cpu_access_type` `array` auquel il est associé ; ou, si le array_view est construit sans source de données, son `access_type` reflète l’environnement qui l’amène d’abord à allouer du stockage. Autrement dit, s’il est accédé pour la première fois par l’hôte (UC), il se comporte comme s’il avait été créé sur une source de données de processeur et partage le `access_type` du `accelerator_view` associé par capture ; Toutefois, s’il est d’abord accessible par un `accelerator_view` , il se comporte comme s’il avait été créé `array` sur un créé sur ce `accelerator_view` et partage le `array` `access_type` .
 
@@ -508,4 +508,4 @@ Le modulo et la Division des entiers non signés offrent de meilleures performan
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Syntaxe d’expression lambda](../../cpp/lambda-expression-syntax.md)<br/>
 [Référence (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[Blog sur la programmation parallèle en code natif](https://go.microsoft.com/fwlink/p/?linkid=238472)
+[Blog sur la programmation parallèle en code natif](/archive/blogs/nativeconcurrency/)
