@@ -1,6 +1,7 @@
 ---
 title: cos, cosf, cosl
-ms.date: 6/5/2020
+description: Informations de référence sur les API pour cos, cosf, et COSL ; qui calcule la valeur de cosinus d’un nombre à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - cos
 - cosf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: ee5cb2c3a05514b4f10f73a2b27199b8e3a5ac4b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b0e723708076067cf4d2ed896542ac08406a87ee
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221924"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556799"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -54,19 +55,18 @@ Calcule le cosinus.
 double cos( double x );
 float cosf( float x );
 long double cosl( long double x );
-```
+#define cos(X) // Requires C11 or higher
 
-```cpp
 float cos( float x );  // C++ only
 long double cos( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Angle en radians.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Cosinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
@@ -77,7 +77,9 @@ Cosinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **co** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **COS** prend toujours et retourne un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **co** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **COS** prend toujours et retourne un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `cos()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -86,6 +88,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|
 |**COS**, **cosh**, **cosf,**|\<math.h>|\<cmath> ou \<math.h>|
+|**Co () (macro)** | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

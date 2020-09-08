@@ -1,5 +1,6 @@
 ---
 title: modf, modff, modfl
+description: Informations de référence sur les API pour modf,, modff, et modfl ; qui fractionnent une valeur à virgule flottante en une partie fractionnaire et une partie entière.
 ms.date: 4/2/2020
 api_name:
 - modff
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0d3522079acc8a9d2c8409b1cad78e7f50a7f788
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216867"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556760"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -68,9 +69,9 @@ Valeur à virgule flottante.
 *IntPtr*<br/>
 Pointeur désignant la partie entière stockée.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Cette fonction retourne la partie fractionnaire signée de *x*. Aucun retour d'erreur.
+Cette fonction retourne la partie fractionnaire signée de *x*. Il n’y a pas d’erreur de retour.
 
 ## <a name="remarks"></a>Notes
 
@@ -86,7 +87,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**modf,**, **modff,**, **modfl**|Secteur\<math.h><br /><br /> C++ : \<cmath> ou\<math.h>|
+|**modf,**, **modff,**, **modfl**|Secteur \<math.h><br /><br /> C++ : \<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

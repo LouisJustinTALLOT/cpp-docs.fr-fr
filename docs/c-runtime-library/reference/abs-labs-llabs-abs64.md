@@ -1,5 +1,6 @@
 ---
 title: abs, labs, llabs, _abs64
+description: Informations de référence sur les API pour ABS, Labs, LLabs et _abs64 ; qui calcule la valeur absolue d’une valeur.
 ms.date: 04/05/2018
 api_name:
 - abs
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4527950e4f5577b9285d12309742accb64b9a24a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221989"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556747"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -69,12 +70,12 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*n*<br/>
+*n*\
 Valeur numérique.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions **ABS**, **Labs**, **LLabs** et **_abs64** retournent la valeur absolue du paramètre *n*. Aucun retour d'erreur.
+Les fonctions **ABS**, **Labs**, **LLabs**et **_abs64** retournent la valeur absolue du paramètre *n*. Il n’y a pas d’erreur de retour.
 
 ## <a name="remarks"></a>Notes
 

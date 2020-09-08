@@ -1,6 +1,7 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 6/5/2020
+description: Informations de référence sur l’API pour SQRT, sqrtf, et sqrt ; qui calcule la racine carrée d’un nombre à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - sqrtl
 - sqrtf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17526b4e4a7eca5d36c01069dbe975bb035d1f58
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229361"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556773"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -66,20 +67,23 @@ float sqrtf(
 long double sqrtl(
    long double x
 );
+#define sqrt(x) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante non négative
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sqrt** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, **sqrt** accepte et retourne toujours **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sqrt** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **sqrt** prend et retourne toujours **`double`** .
+
+Si vous utilisez la \<tgmath.h> `sqrt()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions **sqrt** retournent la racine carrée de *x*. Par défaut, si *x* est négatif, **sqrt** retourne une valeur NaN indéfinie.
 
@@ -91,9 +95,10 @@ Les fonctions **sqrt** retournent la racine carrée de *x*. Par défaut, si *x* 
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**sqrt**, **sqrtf,**, **sqrt**|\<math.h>|\<cmath>|
+|**sqrt () (macro)** | \<tgmath.h> ||
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
