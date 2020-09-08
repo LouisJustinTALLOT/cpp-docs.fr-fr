@@ -1,6 +1,7 @@
 ---
 title: fmax, fmaxf, fmaxl
-ms.date: 04/05/2018
+description: Informations de référence sur les API pour Fmax, fmaxf, et fmaxl ; qui détermine la plus grande de deux valeurs numériques.
+ms.date: 9/1/2020
 api_name:
 - fmax
 - fmaxf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-ms.openlocfilehash: 27b495e9344ca7e2e3e061b19fee696ce2bdceb2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4f38db64b30598e7cfb4eb4d0f57dccf257dabc5
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957119"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556682"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 
@@ -71,17 +72,19 @@ long double fmaxl(
    long double x,
    long double y
 );
+
+#define fmax(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Première valeur à comparer.
 
-*y*<br/>
+*y*\
 Deuxième valeur à comparer.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne le plus grand de *x* ou *y*. La valeur retournée est exacte et ne dépend d’aucune forme d’arrondi.
 
@@ -97,17 +100,20 @@ Cette fonction n’utilise pas les erreurs spécifiées dans [_matherr](matherr.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de fmax qui acceptent et retournent des types double long et à virgule flottante. Dans un programme C, fmax accepte et retourne toujours un double.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de Fmax qui acceptent et retournent des `float` `long double` types et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, `fmax` prend et retourne toujours un double.
 
-## <a name="requirements"></a>Configuration requise
+Si vous utilisez la \<tgmath.h> `fmax()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
-|Fonction|En-tête C|En-tête C++|
+## <a name="requirements"></a>Spécifications
+
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**fmax**, **fmaxf**, **fmaxl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Fmax**, **fmaxf,**, **fmaxl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Fmax** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [fmin, fminf, fminl](fmin-fminf-fminl.md)<br/>

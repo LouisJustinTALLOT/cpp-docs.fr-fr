@@ -1,6 +1,7 @@
 ---
 title: round, roundf, roundl
-ms.date: 4/2/2020
+description: Informations de référence sur l’API pour Round, roundf, et Roundy ; qui arrondit une valeur à virgule flottante à l’entier le plus proche.
+ms.date: 9/1/2020
 api_name:
 - round
 - roundl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a7e47dd3a528e45abc8247a64bf5c4d81164e95
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226175"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556643"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -63,16 +64,17 @@ float roundf(
 long double roundl(
    long double x
 );
+#define round(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante à arrondir.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions **Round** retournent une valeur à virgule flottante qui représente l’entier le plus proche de *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
+Les fonctions **Round** retournent une valeur à virgule flottante qui représente l’entier le plus proche de *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Il n’y a pas d’erreur de retour.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
@@ -80,7 +82,9 @@ Les fonctions **Round** retournent une valeur à virgule flottante qui représen
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges d’une **séquence** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, **Round** prend toujours et retourne un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges d’une **séquence** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **Round** prend toujours et retourne un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `round()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -89,6 +93,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**Round**, **roundf,**, **arrondi**|\<math.h>|
+|**Round** , macro | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

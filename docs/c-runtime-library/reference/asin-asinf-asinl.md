@@ -1,6 +1,7 @@
 ---
 title: asin, asinf, asinl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour Asin, ASInf, et asinl ; qui calcule l’arc sinus d’une valeur à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - asinf
 - asinl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7167debcfb605ab05720d9441943439ea9982324
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189439"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556656"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -51,19 +52,18 @@ Calcule l’arc sinus.
 double asin( double x );
 float asinf ( float x );
 long double asinl( long double x );
-```
+#define asin(X) // Requires C11 or higher
 
-```cpp
 float asin( float x );  // C++ only
 long double asin( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur dont l’arc sinus doit être calculé.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La fonction **ASIN** retourne l’arc sinus (fonction sinus inverse) de *x* dans la plage-π/2 à π/2 radians.
 
@@ -77,7 +77,9 @@ Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ASIN** retourne un
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ASIN** avec **`float`** des **`long double`** valeurs et. Dans un programme C, **ASIN** prend toujours et retourne un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ASIN** avec **`float`** des **`long double`** valeurs et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **ASIN** prend toujours et retourne un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `asin()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -86,6 +88,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
 |**ASIN**, **ASInf,**, **asinl**|\<math.h>|\<cmath> ou \<math.h>|
+|**ASIN () (macro)** | \<tgmath.h> ||
 
 ## <a name="example"></a>Exemple
 

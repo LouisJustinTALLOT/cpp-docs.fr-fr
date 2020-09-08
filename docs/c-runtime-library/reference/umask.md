@@ -1,5 +1,6 @@
 ---
 title: _umask
+description: Informations de référence sur l’API pour _umask ; qui définit le masque d’autorisation de fichier par défaut.
 ms.date: 4/2/2020
 api_name:
 - _umask
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 84735374a936e47691df82247f0202ecfcd86d9d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3735ecd7ba194009945d3717982d7828ecee3c1e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913845"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554927"
 ---
 # <a name="_umask"></a>_umask
 
-Définit le masque d’autorisation de fichier par défaut. Une version plus sécurisée de cette fonction est disponible. Consultez [_umask_s](umask-s.md).
+Définit le masque d’autorisation de fichier par défaut. Pour obtenir une version plus sécurisée de cette fonction, consultez [_umask_s](umask-s.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,11 +54,11 @@ int _umask( int pmode );
 *pmode*<br/>
 Paramètre d’autorisation par défaut.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-**_umask** retourne la valeur précédente de *PMODE*. Aucun retour d'erreur.
+**_umask** retourne la valeur précédente de *PMODE*. Il n’y a pas d’erreur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_umask** définit le masque d’autorisation de fichier du processus actuel sur le mode spécifié par *PMODE*. Le masque d’autorisation de fichier modifie le paramètre d’autorisation des nouveaux fichiers créés par **_creat**, **_open**ou **_sopen**. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.
 
@@ -119,7 +120,7 @@ Oldmask = 0x0000
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion de fichiers](../../c-runtime-library/file-handling.md)<br/>
-[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

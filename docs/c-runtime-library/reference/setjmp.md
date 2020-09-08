@@ -1,5 +1,6 @@
 ---
 title: setjmp
+description: Référence d’API pour setjmp ; qui enregistre l’état actuel du programme.
 ms.date: 08/14/2018
 api_name:
 - setjmp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-ms.openlocfilehash: beaf56a03c1bd157257d604bfd0ebefb219d0225
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3ea08e5379433e313e08870f735322b7d985aa64
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226149"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555603"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -50,9 +51,9 @@ int setjmp(
 *env*<br/>
 Variable dans laquelle l’environnement est stocké.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Retourne la valeur 0 après l’enregistrement de l’environnement de pile. Si **setjmp** retourne à la suite d’un `longjmp` appel, elle retourne l’argument de *valeur* de `longjmp` , ou si l’argument de *valeur* de `longjmp` est 0, **setjmp** retourne 1. Aucun retour d'erreur.
+Retourne la valeur 0 après l’enregistrement de l’environnement de pile. Si **setjmp** retourne à la suite d’un `longjmp` appel, elle retourne l’argument de *valeur* de `longjmp` , ou si l’argument de *valeur* de `longjmp` est 0, **setjmp** retourne 1. Il n’y a pas d’erreur de retour.
 
 ## <a name="remarks"></a>Notes
 

@@ -1,5 +1,6 @@
 ---
 title: clog, clogf, clogl
+description: Informations de référence sur les API pour le colmatage, clogf et le colmatage ; qui récupère le logarithme népérien d’un nombre complexe, avec une coupure de branche le long de l’axe réel négatif.
 ms.date: 11/04/2016
 api_name:
 - clog
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 255f83a93c5c7a0c724fad143f028c2832be3173
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942923"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555070"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
@@ -66,10 +67,10 @@ _Lcomplex clogl(
 
 ### <a name="parameters"></a>Paramètres
 
-*z*<br/>
+*Lettre*\
 Base du logarithme.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Logarithme népérien de *z*. Le résultat est illimité le long de l’axe réel et dans l’intervalle [-Iπ, + Iπ] le long de l’axe imaginaire.
 
@@ -85,19 +86,19 @@ Les valeurs de retour possibles sont :
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges d' **encombrements** qui prennent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, le **colmatage** accepte et retourne toujours une valeur **_Dcomplex** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **encombrements** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, le **colmatage** accepte et retourne toujours une valeur **_Dcomplex** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**clog**,               **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+|**obstruer**,               **clogf**, **obstruer**|\<complex.h>|\<ccomplex>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [cexp, cexpf, cexpl](cexp-cexpf-cexpl.md)<br/>
 [cpow, cpowf, cpowl](cpow-cpowf-cpowl.md)<br/>
 [clog10, clog10f, clog10l](clog10-clog10f-clog10l.md)<br/>

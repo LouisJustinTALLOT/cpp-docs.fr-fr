@@ -36,16 +36,16 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: aafcd633b2ee04c9ced1520d4ecd1520475d0fea
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825827"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556474"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>INP, _inp, inpw, _inpw, _inpd
 
-Entrées, à partir d’un port, d'`inp`un `_inp`octet (,),`inpw`d' `_inpw`un mot (,) ou d'`_inpd`un mot double ().
+Entrées, à partir d’un port, d’un octet ( `inp` , `_inp` ), d’un mot ( `inpw` , `_inpw` ) ou d’un mot double ( `_inpd` ).
 
 > [!IMPORTANT]
 > Ces fonctions sont obsolètes. À compter de Visual Studio 2015, ils ne sont pas disponibles dans le CRT. \
@@ -70,19 +70,19 @@ unsigned long _inpd(
 *importer*\
 Numéro du port d’E/S.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions retournent l’octet, le mot ou le mot double lu à partir du `port`. Aucun retour d'erreur.
+Les fonctions retournent l’octet, le mot ou le mot double lu à partir du `port`. Il n’y a pas d’erreur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions `_inp`, `_inpw`et `_inpd` lisent respectivement un octet, un mot et un mot double sur le port d’entrée spécifié. La valeur d’entrée peut être tout entier court non signé dans la plage 0 - 65 535.
 
 Étant donné que ces fonctions lisent directement à partir d’un port d’E/S, elles ne peuvent pas être utilisées dans le code utilisateur.
 
-Les `inp` noms `inpw` et sont des noms plus anciens et déconseillés pour les `_inp` fonctions et `_inpw` . Pour plus d’informations, consultez [noms de fonctions POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+Les `inp` `inpw` noms et sont des noms plus anciens et déconseillés pour les `_inp` `_inpw` fonctions et. Pour plus d’informations, consultez [noms de fonctions POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

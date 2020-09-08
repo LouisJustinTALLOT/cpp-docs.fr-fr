@@ -1,5 +1,6 @@
 ---
 title: _lrotl, _lrotr
+description: 'Informations de référence sur les API pour _lrotl et _lrotr ; qui effectue la rotation des bits vers la gauche (_lrotl) ou vers la droite (_lrotr). '
 ms.date: 04/04/2018
 api_name:
 - _lrotl
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ccd14f7aa6ba3c1278063593aecee20c6789110d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953029"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555005"
 ---
 # <a name="_lrotl-_lrotr"></a>_lrotl, _lrotr
 
-Fait pivoter les bits vers la gauche ( **_lrotl**) ou vers la droite ( **_lrotr**).
+Fait pivoter les bits vers la gauche (**_lrotl**) ou vers la droite (**_lrotr**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,28 +56,28 @@ unsigned long _lrotr( unsigned long value, int shift );
 ### <a name="parameters"></a>Paramètres
 
 *value*<br/>
-Valeur à faire pivoter.
+Valeur à soumettre à un décalage circulaire.
 
 *shift*<br/>
 Nombre de bits de décalage à appliquer à *value*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les deux fonctions retournent la valeur soumise à un décalage circulaire. Aucun retour d'erreur.
+Les deux fonctions retournent la valeur soumise à un décalage circulaire. Il n’y a pas d’erreur de retour.
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **_lrotl** et **_lrotr** font pivoter la *valeur* par *décalage* bits. **_lrotl** fait pivoter la valeur restante, vers des bits plus significatifs. **_lrotr** fait pivoter la valeur vers la droite, vers les bits moins significatifs. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
+Les fonctions **_lrotl** et **_lrotr** pivotent la *valeur* par *décalage* bits. **_lrotl** fait pivoter la valeur restante, vers des bits plus significatifs. **_lrotr** fait pivoter la valeur vers la droite, vers les bits moins significatifs. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_lrotl**, **_lrotr**|\<stdlib.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_lrot.c

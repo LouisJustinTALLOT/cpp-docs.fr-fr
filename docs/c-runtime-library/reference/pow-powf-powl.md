@@ -1,6 +1,7 @@
 ---
 title: pow, powf, powl
-ms.date: 4/2/2020
+description: Informations de référence sur l’API pour Pow, powf, et POWL ; qui calcule l’élévation à une puissance.
+ms.date: 08/31/2020
 api_name:
 - powl
 - pow
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 58d23f53de8dc5323fe0818611bccb647984fd9b
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232441"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555759"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -56,9 +57,8 @@ Calcule *x* élevé à la puissance de *y*.
 double pow( double x, double y );
 float powf( float x, float y );
 long double powl( long double x, long double y );
-```
+define pow(X, Y) // Requires C11 or higher 
 
-```cpp
 double pow( double x, int y );  // C++ only
 float pow( float x, float y );  // C++ only
 float pow( float x, int y );  // C++ only
@@ -68,13 +68,13 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Base.
 
-*y*<br/>
+*y*\
 Exposant.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur de *x*<sup>*y*</sup>. Aucun message d’erreur n’est imprimé en cas de dépassement de capacité positif ou négatif.
 
@@ -90,7 +90,9 @@ Retourne la valeur de *x*<sup>*y*</sup>. Aucun message d’erreur n’est imprim
 
 **Pow** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ autorisant la surcharge, vous pouvez appeler l’une des différentes surcharges de **Pow**. Dans un programme C, **Pow** accepte toujours deux **`double`** valeurs et retourne une **`double`** valeur.
+C++ autorisant la surcharge, vous pouvez appeler l’une des différentes surcharges de **Pow**. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **Pow** prend toujours deux **`double`** valeurs et retourne une **`double`** valeur.
+
+Si vous utilisez la \<tgmath.h> `pow()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre des [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Pour éviter ce problème, effectuez un cast du premier paramètre en **`double`** , **`float`** ou **`long double`** .
 
@@ -101,6 +103,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|
 |**Pow**, **powf,**, **POWL**|\<math.h>|\<math.h> ou \<cmath>|
+|**Pow** , macro | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

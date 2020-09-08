@@ -1,5 +1,6 @@
 ---
 title: cexp, cexpf, cexpl
+description: Informations de référence sur les API pour cexp, cexpf et cexpl ; qui calcule la valeur exponentielle de base e d’un nombre complexe.
 ms.date: 11/04/2016
 api_name:
 - cexp
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-ms.openlocfilehash: 0dd6c9deddfe93cf044985f93b2129695d0770f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 66f7b687e8da12473abef4dbc44831e175956ac0
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943170"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555213"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
@@ -50,37 +51,35 @@ Calcule la valeur exponentielle de base e d’un nombre complexe.
 _Dcomplex cexp( _Dcomplex z );
 _Fcomplex cexpf( _Fcomplex z );
 _Lcomplex cexpl( _Lcomplex z );
-```
 
-```cpp
 _Fcomplex cexp( _Fcomplex z );  // C++ only
 _Lcomplex cexp( _Lcomplex z );  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*z*<br/>
+*Lettre*\
 Nombre complexe qui représente l’exposant.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Valeur de **e** élevée à la puissance de *z*.
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **cexp** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **cexp** accepte et retourne toujours une valeur **_Dcomplex** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cexp** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **cexp** accepte et retourne toujours une valeur **_Dcomplex** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
 |**cexp**, **cexpf**, **cexpl**|\<complex.h>|\<complex.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
-[cpow, cpowf, cpowl](cpow-cpowf-cpowl.md)<br/>
-[clog10, clog10f, clog10l](clog10-clog10f-clog10l.md)<br/>
-[clog, clogf, clogl](clog-clogf-clogl.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)\
+[cpow, cpowf, cpowl](cpow-cpowf-cpowl.md)\
+[clog10, clog10f, clog10l](clog10-clog10f-clog10l.md)\
+[clog, clogf, clogl](clog-clogf-clogl.md)

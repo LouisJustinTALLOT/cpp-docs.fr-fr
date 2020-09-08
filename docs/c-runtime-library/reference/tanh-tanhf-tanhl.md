@@ -1,6 +1,7 @@
 ---
 title: tanh, tanhf, tanhl
-ms.date: 4/2/2020
+description: Informations de référence sur l’API pour Tanh, tanhf, et tanhl ; qui calcule la tangente hyperbolique d’une valeur à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - tanh
 - tanhf
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 9e280e489d5da5d66a48b72b38fe22a6943b7318
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5fa93f56ebec5e8aa06c7317534adb12ae9e68e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215112"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556578"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -52,6 +53,7 @@ Calcule la tangente hyperbolique.
 double tanh( double x );
 float tanhf( float x );
 long double tanhl( long double x );
+#define tanh(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -61,12 +63,12 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Angle en radians.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions **Tanh** retournent la tangente hyperbolique de *x*. Aucun retour d'erreur.
+Les fonctions **Tanh** retournent la tangente hyperbolique de *x*. Il n’y a pas d’erreur de retour.
 
 |Entrée|Exception SEH|**Supertherr** Titre|
 |-----------|-------------------|-------------------------|
@@ -74,7 +76,9 @@ Les fonctions **Tanh** retournent la tangente hyperbolique de *x*. Aucun retour 
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Tanh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **Tanh** accepte et retourne toujours **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Tanh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **Tanh** prend et retourne toujours **`double`** .
+
+Si vous utilisez la \<tgmath.h> `tanh()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -83,6 +87,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis (C)|En-tête requis (C)|
 |-------------|---------------------|-|
 |**Tanh**, **tanhf,**, **tanhl**|\<math.h>|\<cmath> ou \<math.h>|
+|**tanh () (macro)** | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

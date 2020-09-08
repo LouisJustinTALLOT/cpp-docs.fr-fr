@@ -1,5 +1,6 @@
 ---
 title: imaxabs
+description: Référence d’API pour imaxabs, qui calcule la valeur absolue d’un entier de toute taille.
 ms.date: 04/05/2018
 api_name:
 - imaxabs
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 599e8a0cb20f24bda24201be40fa1acc0ade993c
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954689"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555499"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -46,16 +47,16 @@ intmax_t imaxabs(
 ### <a name="parameters"></a>Paramètres
 
 *n*<br/>
-Valeur entière.
+Valeur de type entier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-La fonction **imaxabs** retourne la valeur absolue de l’argument. Aucun retour d'erreur.
+La fonction **imaxabs** retourne la valeur absolue de l’argument. Il n’y a pas d’erreur de retour.
 
 > [!NOTE]
 > Étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide de **intmax_t** est supérieure à la plage d’entiers positifs qui peuvent être représentés, il est possible de fournir un argument à **imaxabs** qui ne peut pas être converti. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, le comportement de **imaxabs** n’est pas défini.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

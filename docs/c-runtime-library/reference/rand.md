@@ -1,5 +1,6 @@
 ---
 title: rand
+description: Référence d’API pour Rand, qui génère un nombre Pseudo-aléatoire à l’aide d’un algorithme bien connu et entièrement reproductible.
 ms.date: 4/2/2020
 api_name:
 - rand
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 50c4f921c81ecad00abb19e6ce50158d450b170e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919525"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555330"
 ---
 # <a name="rand"></a>rand
 
-Génère un nombre Pseudo-aléatoire à l’aide d’un algorithme bien connu et entièrement reproductible. Une version plus sécurisée par programmation de cette fonction est disponible. consultez [rand_s](rand-s.md). Les nombres générés par **Rand** ne sont pas sécurisés par chiffrement. Pour plus de génération de nombres aléatoires sécurisés par chiffrement, utilisez [rand_s](rand-s.md) ou les fonctions déclarées dans la bibliothèque standard C++ dans des [ \<>aléatoires ](../../standard-library/random.md).
+Génère un nombre Pseudo-aléatoire à l’aide d’un algorithme bien connu et entièrement reproductible. Une version plus sécurisée par programmation de cette fonction est disponible. consultez [rand_s](rand-s.md). Les nombres générés par **Rand** ne sont pas sécurisés par chiffrement. Pour plus de génération de nombres aléatoires sécurisés par chiffrement, utilisez [rand_s](rand-s.md) ou les fonctions déclarées dans la bibliothèque standard C++ dans [\<random>](../../standard-library/random.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,13 +51,13 @@ int rand( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**Rand** retourne un nombre Pseudo-aléatoire, comme décrit ci-dessus. Aucun retour d'erreur.
+**Rand** retourne un nombre Pseudo-aléatoire, comme décrit ci-dessus. Il n’y a pas d’erreur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **Rand** retourne un entier Pseudo-aléatoire compris entre 0 et **RAND_MAX** (32767). Utilisez la fonction [srand](srand.md) pour amorcer le générateur de nombres pseudo-aléatoires avant d’appeler **Rand**.
 
-La fonction **Rand** génère une séquence connue et ne convient pas pour une utilisation en tant que fonction de chiffrement. Pour plus de génération de nombres aléatoires sécurisés par chiffrement, utilisez [rand_s](rand-s.md) ou les fonctions déclarées dans la bibliothèque standard C++ dans des [ \<>aléatoires ](../../standard-library/random.md). Pour plus d’informations sur les problèmes avec **Rand** et \<sur la façon dont les> aléatoires corrigent ces lacunes, consultez cette vidéo intitulée [Rand, jugé dangereux](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+La fonction **Rand** génère une séquence connue et ne convient pas pour une utilisation en tant que fonction de chiffrement. Pour plus de génération de nombres aléatoires sécurisés par chiffrement, utilisez [rand_s](rand-s.md) ou les fonctions déclarées dans la bibliothèque standard C++ dans [\<random>](../../standard-library/random.md) . Pour plus d’informations sur les problèmes avec **Rand** et sur la manière dont ces erreurs sont \<random> abordées, consultez cette vidéo intitulée [Rand, jugé dangereux](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

@@ -1,5 +1,6 @@
 ---
 title: _getche, _getwche
+description: Informations de référence sur les API pour _getche et _getwche ; qui obtient un caractère de la console avec ECHO.
 ms.date: 4/2/2020
 api_name:
 - _getwche
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: dd8c72d4c8d6eedb2485fc23e09e9118ab6d45ac
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 228251a34c3f9829f2ef7c39561af4118649e158
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910832"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556067"
 ---
 # <a name="_getche-_getwche"></a>_getche, _getwche
 
@@ -58,9 +59,9 @@ wint_t _getwche( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le caractère lu. Aucun retour d'erreur.
+Retourne le caractère lu. Il n’y a pas d’erreur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **_getche** et **_getwche** lisent un caractère unique à partir de la console avec ECHO, ce qui signifie que le caractère s’affiche sur la console. Aucune de ces fonctions ne peut être utilisée pour lire Ctrl+C. Pour la lecture d’une touche de fonction ou de direction, chaque fonction doit être appelée deux fois ; le premier appel retourne 0 ou 0xE0, tandis que le second retourne le code de la touche.
 

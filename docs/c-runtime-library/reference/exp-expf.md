@@ -1,6 +1,7 @@
 ---
 title: exp, expf, expl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour exp, expf, et expl ; qui calcule l’exponentiel.
+ms.date: 08/31/2020
 api_name:
 - expf
 - expl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44652e5d06d842bd2eb2e280409a1e55fc66f582
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234170"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555889"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,20 +65,21 @@ float expf(
 long double expl(
    long double x
 );
+#define exp(z) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante pour exponentiate le logarithme népérien de base *e* par.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions **exp** retournent la valeur exponentielle du paramètre à virgule flottante, *x*, en cas de réussite. Autrement dit, le résultat est *e*<sup>*x*</sup>, où *e* est la base du logarithme népérien. En cas de dépassement de capacité, la fonction retourne INF (infini) et en négatif, **exp** retourne 0.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± NaN quiet, indéterminé|None|_DOMAIN|
+|± NaN quiet, indéterminé|Aucun|_DOMAIN|
 |± Infini|NON VALIDE|_DOMAIN|
 |x ≥ 7,097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7,083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
@@ -86,15 +88,18 @@ La fonction **exp** a une implémentation qui utilise SSE2 (streaming SIMD Exten
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **exp** qui acceptent un **`float`** **`long double`** argument ou. Dans un programme C, **exp** accepte et retourne toujours un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **exp** qui acceptent un **`float`** **`long double`** argument ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **exp** accepte et retourne toujours un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `exp()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C requis|En-tête C++ requis|
+|Function|En-tête C requis|En-tête C++ requis|
 |--------------|---------------------|---|
 |**exp**, **expf,**, **expl**|\<math.h>|\<cmath> ou \<math.h>|
+|**exp** (macro)| \<tgmath.h> || 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,6 @@
 ---
 title: _fileno
+description: Informations de référence sur l’API pour _fileno ; qui obtient le descripteur de fichier associé à un flux.
 ms.date: 4/2/2020
 api_name:
 - _fileno
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c07f446cc3c5c29fb102a74b2b095957589eab46
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919479"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554849"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -53,16 +54,16 @@ int _fileno(
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-**_fileno** retourne le descripteur de fichier. Aucun retour d'erreur. Le résultat n’est pas défini si *Stream* ne spécifie pas de fichier ouvert. Si Stream a la **valeur null**, **_fileno** appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et définit **errno** sur **EINVAL**.
+**_fileno** retourne le descripteur de fichier. Il n’y a pas d’erreur de retour. Le résultat n’est pas défini si *Stream* ne spécifie pas de fichier ouvert. Si Stream a la **valeur null**, **_fileno** appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et définit **errno** sur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
 > Si **stdout** ou **stderr** n’est pas associé à un flux de sortie (par exemple, dans une application Windows sans fenêtre de console), le descripteur de fichier retourné est-2. Dans les versions précédentes, le descripteur de fichier retourné était -1. Cette modification permet aux applications de distinguer cette condition d’une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La routine **_fileno** retourne le descripteur de fichier actuellement associé au *flux*. Cette routine est implémentée en tant que fonction et que macro. Pour plus d’informations sur le choix de l’implémentation, consultez [Choix entre fonctions et macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 

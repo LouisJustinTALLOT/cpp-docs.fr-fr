@@ -1,6 +1,7 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour lround, lroundf, lroundl, llround, llroundf et llroundl ; qui arrondit une valeur à virgule flottante à l’entier le plus proche.
+ms.date: 9/1/2020
 api_name:
 - llround
 - llroundf
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c5db62da7cdba58fdc58e8acbfe3aff0e2c386d6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216893"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555317"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -90,16 +91,17 @@ long long llroundf(
 long long llroundl(
    long double x
 );
+#define lround(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante à arrondir.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions **lround** et **llround** retournent l’entier ou le plus proche **`long`** **`long long`** à *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
+Les fonctions **lround** et **llround** retournent l’entier ou le plus proche **`long`** **`long long`** à *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Il n’y a pas d’erreur de retour.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
@@ -107,7 +109,9 @@ Les fonctions **lround** et **llround** retournent l’entier ou le plus proche 
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lround** ou **llround** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, **lround** et **llround** prennent toujours et retournent un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lround** ou **llround** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **lround** et **llround** prennent toujours et retournent un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `lround()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -116,6 +120,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<math.h>|
+|**lround** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

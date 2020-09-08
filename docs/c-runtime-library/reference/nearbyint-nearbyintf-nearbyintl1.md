@@ -1,6 +1,7 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour nearbyint, nearbyintf et nearbyintl ; qui arrondit la valeur à virgule flottante spécifiée à un entier et retourne cette valeur dans un format à virgule flottante.
+ms.date: 9/1/2020
 api_name:
 - nearbyint
 - nearbyintf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9717559518032c6f1f2126c7ded7cb90603bce64
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216854"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556383"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -54,19 +55,18 @@ Arrondit la valeur à virgule flottante spécifiée en un entier et retourne cet
 double nearbyint( double x );
 float nearbyintf( float x );
 long double nearbyintl( long double x );
-```
+#define nearbyint( X ) // Requires C11 or higher
 
-```cpp
 float nearbyint( float x ); //C++ only
 long double nearbyint( long double x ); //C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à arrondir.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne *x*, arrondi à l’entier le plus proche, en utilisant le format d’arrondi actuel comme indiqué par [fegetround](fegetround-fesetround2.md). Sinon, la fonction peut retourner l’une des valeurs suivantes :
 
@@ -84,15 +84,18 @@ La principale différence entre cette fonction et l' [Imprimer](rint-rintf-rintl
 
 Étant donné que les valeurs à virgule flottante maximales sont des entiers exacts, cette fonction ne provoque jamais de dépassement par elle-même. Cependant, la sortie peut dépasser la valeur de retour, selon la version de la fonction que vous utilisez.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **nearbyint** qui acceptent et retournent des **`float`** **`long double`** paramètres ou. Dans un programme C, **nearbyint** accepte toujours deux valeurs de type double et retourne une valeur double.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **nearbyint** qui acceptent et retournent des **`float`** **`long double`** paramètres ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **nearbyint** prend toujours deux valeurs doubles et retourne une valeur double.
+
+Si vous utilisez la \<tgmath.h> `nearbyint()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**nearbyint**, **nearbyintf**, **nearbyintl**|\<math.h>|\<cmath> ou \<math.h>|
+|**nearbyint** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

@@ -1,6 +1,7 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
-ms.date: 6/5/2020
+description: Référence d’API pour Atan, atanf,, atanl, atan2, atan2f, et atan2l ; qui calcule l’arc tangente d’une valeur à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - atan2f
 - atan2l
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: ad6bed621a0f1b5dd686909e4bf579e915662079
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f1d33aac86d94ab3731dd5cf5b124af99ccb3f2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232610"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555629"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -62,15 +63,15 @@ Calcule l’arc tangente de **x** (**atan**, **atanf,** et **atanl**) ou l’arc
 double atan( double x );
 float atanf( float x );
 long double atanl( long double x );
+#define atan(X) // Requires C11 or higher
+
+float atan( float x );  // C++ only
+long double atan( long double x );  // C++ only
 
 double atan2( double y, double x );
 float atan2f( float y, float x );
 long double atan2l( long double y, long double x );
-```
-
-```cpp
-float atan( float x );  // C++ only
-long double atan( long double x );  // C++ only
+#define atan2(Y, X) // Requires C11 or higher
 
 float atan2( float y, float x );  // C++ only
 long double atan2( long double y, long double x );  // C++ only
@@ -78,10 +79,10 @@ long double atan2( long double y, long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*, *y*<br/>
+*x*, *y*\
 N’importe quels nombres.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **atan** retourne l’arc tangente de *x* dans la plage-π/2 à π/2 radians. **atan2** retourne l’arc tangente de *y* / *x* dans la plage-π à π radians. Si *x* est égal à 0, **atan** retourne 0. Si les deux paramètres de **atan2** sont 0, la fonction retourne 0. Tous les résultats sont en radians.
 
@@ -95,9 +96,11 @@ N’importe quels nombres.
 
 La fonction **atan** calcule l’arc tangente (fonction tangente inverse) de *x*. **atan2** calcule l’arc tangente de *y* / *x* (si *x* est égal à 0, **atan2** retourne π/2 Si *y* est positif,-π/2 Si *y* est négatif, ou 0 si *y* est égal à 0.)
 
+Si vous utilisez la \<tgmath.h> `atan()` `atan2()` macro ou, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
+
 **atan** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **atan** et **atan2** qui acceptent **`float`** des **`long double`** arguments ou. Dans un programme C, **atan** et **atan2** prennent toujours **`double`** des arguments et retournent un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **atan** et **atan2** qui acceptent **`float`** des **`long double`** arguments ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **atan** et **atan2** prennent toujours **`double`** des arguments et retournent un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -106,6 +109,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
 |**atan**, **atan2**, **atanf,**, **atan2f,**, **atanl**, **atan2l**|\<math.h>|\<cmath> ou \<math.h>|
+|**ATAN ()**, macros **atan2** | \<tgmath.h> ||
 
 ## <a name="example"></a>Exemple
 

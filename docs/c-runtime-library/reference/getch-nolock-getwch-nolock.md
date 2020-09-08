@@ -1,5 +1,6 @@
 ---
 title: _getch_nolock, _getwch_nolock
+description: Informations de référence sur les API pour _getch_nolock et _getwch_nolock ; qui récupèrent un caractère de la console sans écho et sans verrouiller le thread.
 ms.date: 4/2/2020
 api_name:
 - _getwch_nolock
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: 81a3b49287902ac0aaa4d635553cbbaac81ac356
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 36a50f215a9250b23d4dc25db2e1f1c764a085ce
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920346"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555031"
 ---
 # <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock, _getwch_nolock
 
@@ -63,9 +64,9 @@ wint_t _getwch_nolock( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le caractère lu. Aucun retour d'erreur.
+Retourne le caractère lu. Il n’y a pas d’erreur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 les **_getch_nolock** et les **_getwch_nolock** sont identiques à **_getch** et **_getchw** , sauf qu’ils ne sont pas protégés contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 

@@ -1,5 +1,6 @@
 ---
 title: _getpid
+description: Référence d’API pour _getpid, qui obtient l’identification du processus.
 ms.date: 11/04/2016
 api_name:
 - _getpid
@@ -26,19 +27,19 @@ helpviewer_keywords:
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-ms.openlocfilehash: b0848e5eb01f39c009fcdc650ea551f18e23c6fb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc2de8e0b6e87d04bd9ae29ce3a945c048af00e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954999"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556487"
 ---
 # <a name="_getpid"></a>_getpid
 
 Obtient l’identification du processus.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,19 +49,19 @@ int _getpid( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne l’ID de processus obtenu auprès du système. Aucun retour d'erreur.
+Retourne l’ID de processus obtenu auprès du système. Il n’y a pas d’erreur de retour.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_getpid** obtient l’ID de processus du système. L’ID de processus identifie de façon univoque le processus appelant.
+La fonction **_getpid** obtient l’ID de processus à partir du système. L’ID de processus identifie de façon univoque le processus appelant.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_getpid**|\<process.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

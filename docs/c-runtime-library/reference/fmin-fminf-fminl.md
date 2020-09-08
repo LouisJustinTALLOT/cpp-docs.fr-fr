@@ -1,6 +1,7 @@
 ---
 title: fmin, fminf, fminl
-ms.date: 04/05/2018
+description: Informations de référence sur les API pour fmin,, fminf, et fminl ; qui détermine la plus petite de deux valeurs.
+ms.date: 9/1/2020
 api_name:
 - fmin
 - fminf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a070835d809c6adcb5b7bfd57b5373886b348ca
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216984"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556708"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -71,17 +72,19 @@ long double fminl(
    long double x,
    long double y
 );
+
+#define fmin(x) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Première valeur à comparer.
 
-*y*<br/>
+*y*\
 Deuxième valeur à comparer.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne la valeur la plus petite de *x* ou *y*.
 
@@ -95,13 +98,16 @@ La fonction ne provoque pas l’appel de [_matherr](matherr.md) , provoque des e
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **fmin,** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **fmin,** accepte et retourne toujours un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **fmin,** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **fmin,** accepte et retourne toujours un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `fmin()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**fmin,**, **fminf,**, **fminl**|Secteur\<math.h><br />C++ : \<math.h> ou\<cmath>|
+|**fmin,**, **fminf,**, **fminl**|Secteur \<math.h><br />C++ : \<math.h> ou \<cmath>|
+|**fmin,** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

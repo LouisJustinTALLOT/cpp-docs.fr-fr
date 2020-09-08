@@ -1,6 +1,7 @@
 ---
 title: log2, log2f, log2l
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour log2, log2f, et log2l ; qui détermine le logarithme binaire (base 2) de la valeur spécifiée.
+ms.date: 9/1/2020
 api_name:
 - log2
 - log2l
@@ -26,12 +27,12 @@ api_type:
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 37319560891dbd64030495750aaf347d9dedd7e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911413"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555356"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -59,14 +60,16 @@ float log2f(
 long double log2l(
    long double x
 );
+
+#define log2(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur dont le logarithme base 2 doit être déterminé.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne la valeur retournée log2 *x*.
 
@@ -84,9 +87,9 @@ Sinon, peut retourner l’une des valeurs suivantes :
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Si x est un entier, cette fonction retourne essentiellement l’index de base zéro du bit le plus significatif 1 de *x*.
+Si *x* est un entier, cette fonction retourne essentiellement l’index de base zéro du bit le plus significatif 1 de *x*.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -95,11 +98,12 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**log2**, **log2f,**, **log2l**|\<math.h>|\<cmath>|
+|**log2** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

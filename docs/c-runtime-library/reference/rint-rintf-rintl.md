@@ -1,6 +1,7 @@
 ---
 title: rint, rintf, rintl
-ms.date: 4/2/2020
+description: Informations de référence sur l’API pour Primer, rintf et rintl ; qui arrondit une valeur à virgule flottante à l’entier le plus proche dans le format à virgule flottante.
+ms.date: 9/1/2020
 api_name:
 - rintf
 - rintl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 009f56de506b50f81502a2aad7632244b069d09a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ed1fa279694d3df75db5963e5a571d58299e415
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216763"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555343"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -51,21 +52,20 @@ Arrondit une valeur à virgule flottante à l'entier le plus proche dans un form
 double rint( double x );
 float rintf( float x );
 long double rintl( long double x );
-```
+#define rint(X) // Requires C11 or higher
 
-```cpp
 float rint( float x );  // C++ only
 long double rint( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante à arrondir.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions **Primer** retournent une valeur à virgule flottante qui représente l’entier le plus proche de *x*. Les valeurs à mi-chemin sont arrondies en fonction du paramètre actuel du mode d’arrondi à virgule flottante, comme les fonctions **nearbyint** . Contrairement aux fonctions **nearbyint** , les fonctions d' **Imprimer** peuvent déclencher l’exception de virgule flottante **FE_INEXACT** si le résultat est différent de la valeur de l’argument. Aucun retour d'erreur.
+Les fonctions **Primer** retournent une valeur à virgule flottante qui représente l’entier le plus proche de *x*. Les valeurs à mi-chemin sont arrondies en fonction du paramètre actuel du mode d’arrondi à virgule flottante, comme les fonctions **nearbyint** . Contrairement aux fonctions **nearbyint** , les fonctions d' **Imprimer** peuvent déclencher l’exception de virgule flottante **FE_INEXACT** si le résultat est différent de la valeur de l’argument. Il n’y a pas d’erreur de retour.
 
 |Entrée|Exception SEH|**_matherr** Titre|
 |-----------|-------------------|--------------------------|
@@ -74,15 +74,18 @@ Les fonctions **Primer** retournent une valeur à virgule flottante qui représe
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **Imprimer** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, **Primer** accepte et retourne toujours un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **Imprimer** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **Primer** accepte et retourne toujours un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `rint()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**Primer**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**Imprimer** la macro | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

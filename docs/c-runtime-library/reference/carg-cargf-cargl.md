@@ -1,6 +1,7 @@
 ---
 title: carg, cargf, cargl
-ms.date: 11/04/2016
+description: Informations de référence sur les API pour carg, cargf et cargl ; qui récupère l’argument d’un nombre complexe, avec une coupure de branche le long de l’axe réel négatif.
+ms.date: 9/2/2020
 api_name:
 - carg
 - cargf
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: 883710ad4538fb9081ad0c8cfaa169380ddbaf55
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 907694904b260c44dde84724c739c62dfe46dbde
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213617"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555811"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
-Récupère l’argument d’un nombre complexe, avec une coupure sur l’axe des réels négatifs.
+Récupère l’argument d’un nombre complexe, avec une coupure de branche le long de l’axe réel négatif.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,26 +63,30 @@ float cargf(
 long double cargl(
    _Lcomplex z
 );
+#define carg(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Lettre*<br/>
+*Lettre*\
 Nombre complexe.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Argument (également appelé phase) de *z*. Le résultat est dans l’intervalle [-π, + π].
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **carg** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **carg** prend toujours une valeur **_Dcomplex** et retourne une **`double`** valeur.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **carg** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **carg** prend toujours une valeur **_Dcomplex** et retourne une **`double`** valeur.
+
+Si vous utilisez la \<tgmath.h> `carg()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
 |**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
+|**carg** macro) | \<tgmath.h> ||
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 

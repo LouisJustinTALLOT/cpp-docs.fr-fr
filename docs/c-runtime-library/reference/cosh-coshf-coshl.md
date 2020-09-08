@@ -1,6 +1,7 @@
 ---
 title: cosh, coshf, coshl
-ms.date: 4/2/2020
+description: Informations de référence sur l’API pour cosh, coshf, et COSL ; qui calcule le cosinus hyperbolique d’une valeur à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - cosh
 - coshf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: fb171d622d5bc187342054a74e8aa19f83c3c560
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ea4a5b77850e196c29519ac49b589a0c2b6c9a7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213604"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555525"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -50,19 +51,18 @@ Calcule le cosinus hyperbolique.
 double cosh( double x );
 float coshf( float x );
 long double coshl( long double x );
-```
+#define cosh(X) // Requires C11 or higher
 
-```cpp
 float cosh( float x );  // C++ only
 long double cosh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Angle en radians.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Cosinus hyperbolique de *x*.
 
@@ -75,7 +75,9 @@ Par défaut, si le résultat est trop grand dans un appel **cosh**, **coshf,** o
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cosh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **cosh** accepte et retourne toujours un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **cosh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **cosh** prend et retourne toujours un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `cosh()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -84,6 +86,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
 |**coshf,**, **COSL**, **COSL**|\<math.h>|\<cmath> ou \<math.h>|
+|**coshf, () (macro)** | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

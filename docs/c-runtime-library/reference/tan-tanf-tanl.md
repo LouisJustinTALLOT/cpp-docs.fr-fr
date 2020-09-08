@@ -1,6 +1,7 @@
 ---
 title: tan, tanf, tanl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour Tan, Tanf, et tanl ; qui calcule la tangente d’une valeur à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - tan
 - tanf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8137bf4cbce59083e8e7c09557400fbff4f6b1df
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215125"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556539"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -54,6 +55,7 @@ Calcule la tangente.
 double tan( double x );
 float tanf( float x );
 long double tanl( long double x );
+#define tan(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,10 +65,10 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Angle en radians.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions **Tan** retournent la tangente de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
@@ -77,7 +79,9 @@ Les fonctions **Tan** retournent la tangente de *x*. Si *x* est supérieur ou é
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Tan** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **Tan** accepte et retourne toujours **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Tan** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **Tan** prend et retourne toujours **`double`** .
+
+Si vous utilisez la \<tgmath.h> `tan()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -86,6 +90,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
 |**Tan**, **Tanf,**, **tanl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Tan (),** macro | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,6 @@
 ---
 title: _getch, _getwch
+description: Informations de référence sur les API pour _getch et _getwch ; qui obtient un caractère de la console sans Echo.
 ms.date: 4/2/2020
 api_name:
 - _getch
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 1c62bd0793fef0683007fe21df0fc0c2acdf1357
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 39954cdbe507baad05055770df5db8859737b9d1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919630"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555851"
 ---
 # <a name="_getch-_getwch"></a>_getch, _getwch
 
@@ -58,9 +59,9 @@ wint_t _getwch( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le caractère lu. Aucun retour d'erreur.
+Retourne le caractère lu. Il n’y a pas d’erreur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **_getch** et **_getwch** lisent un caractère unique à partir de la console sans renvoyer le caractère. Aucune de ces fonctions ne peut être utilisée pour lire Ctrl+C. Pour la lecture d’une touche de fonction ou de direction, chaque fonction doit être appelée deux fois ; le premier appel retourne 0 ou 0xE0, tandis que le second retourne le code de la touche.
 

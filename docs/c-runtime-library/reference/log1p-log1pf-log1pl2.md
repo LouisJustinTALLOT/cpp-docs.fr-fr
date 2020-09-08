@@ -1,6 +1,7 @@
 ---
 title: log1p, log1pf, log1pl2
-ms.date: 4/2/2020
+description: Informations de référence sur l’API pour log1p, log1pf, log1pl2 ; qui calcule le logarithme népérien de 1 plus la valeur spécifiée.
+ms.date: 9/1/2020
 api_name:
 - log1p
 - log1pf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: d599567e38d216e78720a3d6b330310095acdd11
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8858d761428d4dad6e3fe836b82041ae92f1827a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218583"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556228"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -54,6 +55,14 @@ Calcule le logarithme népérien de 1 plus la valeur spécifiée.
 double log1p(
    double x
 );
+float log1pf(
+   float x
+);
+long double log1pl(
+   long double x
+);
+
+#define log1p(X) // Requires C11 or higher
 
 float log1p(
    float x
@@ -62,22 +71,14 @@ float log1p(
 long double log1p(
    long double x
 ); //C++ only
-
-float log1pf(
-   float x
-);
-
-long double log1pl(
-   long double x
-);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Argument à virgule flottante.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne le logarithme naturel (base-*e*) de (*x* + 1).
 
@@ -100,7 +101,9 @@ La valeur **errno** est définie sur ERANGE si *x* =-1. La valeur **errno** est 
 
 Les fonctions **log1p** peuvent être plus précises que l’utilisation de `log(x + 1)` lorsque *x* est proche de 0.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **log1p** accepte et retourne toujours un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **log1p** accepte et retourne toujours un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `log1p()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Si *x* est un nombre naturel, cette fonction retourne le logarithme de la factorielle de (*x* -1).
 
@@ -108,14 +111,15 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
+|**log1p** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
-[log2, log2f, log2l](log2-log2f-log2l.md)<br/>
-[log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)\
+[Log2, log2f,, log2l](log2-log2f-log2l.md)\
+[log, logf, log10, log10f](log-logf-log10-log10f.md)

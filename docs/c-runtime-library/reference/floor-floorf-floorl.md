@@ -1,6 +1,7 @@
 ---
 title: floor, floorf, floorl
-ms.date: 6/5/2020
+description: Informations de référence sur les API pour Floor, floorf, et Floor- qui calcule le plancher d’une valeur.
+ms.date: 9/1/2020
 api_name:
 - floorf
 - floorl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6af047d3da891270ab6a596dfc3ebef0941a91cf
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218678"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556734"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -64,16 +65,17 @@ float floorf(
 long double floorl(
    long double x
 );
+#define floor(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions **Floor** retournent une valeur à virgule flottante qui représente le plus grand entier inférieur ou égal à *x*. Aucun retour d'erreur.
+Les fonctions **Floor** retournent une valeur à virgule flottante qui représente le plus grand entier inférieur ou égal à *x*. Il n’y a pas d’erreur de retour.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
@@ -83,15 +85,18 @@ Les fonctions **Floor** retournent une valeur à virgule flottante qui représen
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **plancher** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, **Floor** prend toujours et retourne un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **plancher** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **Floor** prend toujours et retourne un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `floor()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis|
+|Function|En-tête requis|
 |--------------|---------------------|
 |**plancher**, **floorf,**, **plancher**|\<math.h>|
+|**Floor** (macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

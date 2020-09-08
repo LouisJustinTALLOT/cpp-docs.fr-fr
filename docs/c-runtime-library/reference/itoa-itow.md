@@ -1,5 +1,6 @@
 ---
 title: _itoa, _itow fonctions
+description: Informations de référence sur les API pour _itoa et _itow ; qui convertissent un entier en chaîne.
 ms.date: 4/2/2020
 api_name:
 - itoa
@@ -113,16 +114,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c8d64dcc1efdb9371feb98d8674a7a2c41c7ab3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843493"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555461"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-Convertit un entier en chaîne. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [_itoa_s, _itow_s Functions](itoa-s-itow-s.md).
+Convertit un entier en chaîne. Des versions plus sécurisées de ces fonctions sont disponibles, consultez [_itoa_s, _itow_s Functions](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -193,7 +194,7 @@ Longueur de la mémoire tampon en unités du type de caractère. Ce paramètre e
 
 ## <a name="return-value"></a>Valeur renvoyée
 
-Chacune de ces fonctions retourne un pointeur vers la *mémoire tampon*. Aucun retour d'erreur.
+Chacune de ces fonctions retourne un pointeur vers la *mémoire tampon*. Il n’y a pas d’erreur de retour.
 
 ## <a name="remarks"></a>Notes
 
@@ -231,7 +232,7 @@ Pour vous aider à créer des mémoires tampons sécurisées pour les conversion
 
 Pour utiliser l’une de ces macros dans une fonction de conversion de chaînes, déclarez votre mémoire tampon de conversion du type de caractère approprié et utilisez la valeur de macro pour le type entier et base comme dimension de mémoire tampon. Ce tableau répertorie les macros appropriées pour chaque fonction pour les bases répertoriées :
 
-|Functions|radix|Macros|
+|Fonctions|radix|Macros|
 |-|-|-|
 |**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
@@ -261,7 +262,7 @@ int main()
 |**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
 |**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

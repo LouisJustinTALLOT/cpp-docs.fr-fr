@@ -1,6 +1,7 @@
 ---
 title: lgamma, lgammaf, lgammal
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour lgamma, lgammaf et lgammal ; qui détermine le logarithme népérien de la valeur absolue de la fonction gamma de la valeur spécifiée.
+ms.date: 9/1/2020
 api_name:
 - lgamma
 - lgammaf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: d751a3487db1d7c0135d4a1ae87cb84d374825fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 202250f3575f61fcef1cf29a687b8fdf36e6db33
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218648"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555395"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -54,19 +55,18 @@ Détermine le logarithme népérien de la valeur absolue de la fonction gamma de
 double lgamma( double x );
 float lgammaf( float x );
 long double lgammal( long double x );
-```
+#define lgammal(X) // Requires C11 or higher
 
-```cpp
 float lgamma( float x ); //C++ only
 long double lgamma( long double x ); //C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à calculer.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne le logarithme népérien de la valeur absolue de la fonction gamma de *x*.
 
@@ -83,7 +83,9 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lgamma** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **lgamma** accepte et retourne toujours un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lgamma** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **lgamma** accepte et retourne toujours un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `lgamma()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Si x est un nombre rationnel, cette fonction retourne le logarithme de la factorielle de (x-1).
 
@@ -91,9 +93,10 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
+|**lgamma** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

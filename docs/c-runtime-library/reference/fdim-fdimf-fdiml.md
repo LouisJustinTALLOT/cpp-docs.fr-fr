@@ -1,6 +1,7 @@
 ---
 title: fdim, fdimf, fdiml
-ms.date: 04/05/2018
+description: Informations de référence sur les API pour FDIM, fdimf et fdiml ; qui détermine la différence positive entre deux valeurs.
+ms.date: 9/1/2020
 api_name:
 - fdim
 - fdimf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 406fc5cfe543aa0865760df9ff780c62e78510fc
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221911"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554784"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -71,17 +72,19 @@ long double fdiml(
    long double x,
    long double y
 );
+
+#define fdim(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Première valeur.
 
-*y*<br/>
+*y*\
 Seconde valeur.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne la différence positive entre *x* et *y*:
 
@@ -102,15 +105,18 @@ Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **FDIM** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **FDIM** accepte et retourne toujours un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **FDIM** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **FDIM** accepte et retourne toujours un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `fdim()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 À l’exception de la gestion NaN, cette fonction est équivalente à `fmax(x - y, 0)` .
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**FDIM**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
+|**FDIM** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

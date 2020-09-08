@@ -1,6 +1,7 @@
 ---
 title: creal, crealf, creall
-ms.date: 03/30/2018
+description: Informations de référence sur l’API pour CREAL, crealf, Creall ; qui récupère la partie réelle d’un nombre complexe.
+ms.date: 9/2/2020
 api_name:
 - creal
 - crealf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: 14d7bc25e514a217a6ab1160d41895ce2473b409
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f375bbe8813ba67130f8b56d8e2c99d5b734764
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189348"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555928"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -50,9 +51,8 @@ Récupère la partie réelle d’un nombre complexe.
 double creal( _Dcomplex z );
 float crealf( _Fcomplex z );
 long double creall( _Lcomplex z );
-```
+#define creal(X) // Requires C11 or higher
 
-```cpp
 float creal( _Fcomplex z );  // C++ only
 long double creal( _Lcomplex z );  // C++ only
 ```
@@ -62,19 +62,22 @@ long double creal( _Lcomplex z );  // C++ only
 *Lettre*<br/>
 Nombre complexe.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La partie réelle de *z*.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **CREAL** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **CREAL** prend toujours une valeur **_Dcomplex** et retourne une **`double`** valeur.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **CREAL** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **CREAL** prend toujours une valeur **_Dcomplex** et retourne une **`double`** valeur.
+
+Si vous utilisez la \<tgmath.h> `creal()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
 |**CREAL**, **crealf**, **Creall**|\<complex.h>|\<ccomplex>|
+|**CREAL** macro) | \<tgmath.h> ||
 
 Les types de **_Fcomplex**, **_Dcomplex**et **_Lcomplex** sont des équivalents propres à Microsoft des types C99 natifs, **float _Complex**, **double _Complex**et **long double _Complex**, respectivement. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 

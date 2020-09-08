@@ -1,5 +1,6 @@
 ---
 title: ctan, ctanf, ctanl
+description: Informations de référence sur les API pour CTAN, ctanf et ctanl ; qui récupère la tangente d’un nombre complexe.
 ms.date: 11/04/2016
 api_name:
 - ctan
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-ms.openlocfilehash: 3d1275f795ae68777515e833a19f2b90f4fedf93
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74fa33a6bf6b99e8606094aff3845fdfd79d48a2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938447"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555902"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -66,33 +67,33 @@ _Lcomplex ctanl(
 
 ### <a name="parameters"></a>Paramètres
 
-*z*<br/>
+*Lettre*\
 Nombre complexe qui représente l’angle, en radians.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Tangente de *z*.
 
-|Entrée|Exception SEH|_ **matherr** Titre|
+|Entrée|Exception SEH|**_matherr** Titre|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|none|_DOMAIN|
-|± ∞ (**tan**, **tanf**)|INVALID|_DOMAIN|
+|± ∞, QNAN, IND|aucun|_DOMAIN|
+|± ∞ (**Tan**, **Tanf,**)|NON VALIDE|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **CTAN** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **CTAN** accepte et retourne toujours une valeur **_Dcomplex** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **CTAN** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **CTAN** accepte et retourne toujours une valeur **_Dcomplex** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**ctan**,               **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**CTAN**,  **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan, catanf, catanl](catan-catanf-catanl.md)<br/>

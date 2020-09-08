@@ -1,6 +1,7 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
-ms.date: 6/5/2020
+description: Informations de référence sur les API pour log, LogF,, logl, log10, log10f, et log10L ; qui calculent des logarithmes.
+ms.date: 9/1/2020
 api_name:
 - log10f
 - logf
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f308281705170308ec83e4a5efd9c7825ba47591
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218596"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556280"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -62,27 +63,27 @@ Calcule le logarithme.
 ## <a name="syntax"></a>Syntaxe
 
 ```C
-double log( double x );
-float logf( float x );
-long double logl( double x );
-double log10( double x );
-float log10f ( float x );
-long double log10l( double x );
-```
+double log(double x);
+float logf(float x);
+long double logl(double x);
+double log10(double x);
+float log10f (float x);
+long double log10l(double x);
+#define log(X) // Requires C11 or higher
+#define log10(X) // Requires C11 or higher
 
-```cpp
-float log( float x );  // C++ only
-long double log( long double x );  // C++ only
-float log10( float x );  // C++ only
-long double log10( long double x );  // C++ only
+float log(float x);  // C++ only
+long double log(long double x);  // C++ only
+float log10(float x);  // C++ only
+long double log10(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur dont le logarithme doit être recherché.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions de **journalisation** retournent le logarithme népérien (base *e*) de *x* en cas de réussite. Les fonctions **log10** retournent le logarithme en base 10. Si *x* est négatif, ces fonctions retournent une valeur indéfinie (IND) par défaut. Si *x* est égal à 0, elles retournent l’infini (INF).
 
@@ -96,7 +97,9 @@ Les fonctions de **journalisation** retournent le logarithme népérien (base *e
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log** et **log10** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **log** et **log10** acceptent et retournent toujours un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log** et **log10** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **log** et **log10** acceptent et retournent toujours un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `log()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -105,6 +108,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**log**, **LogF,**, **logl**, **log10**, **log10f,**, **log10L**|\<math.h>|
+|macro de **Journal** | \<tgmath.h> |
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

@@ -1,6 +1,7 @@
 ---
 title: fabs, fabsf, fabsl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour FABS, fabsf et fabsl ; qui calcule la valeur absolue d’une valeur à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - fabsf
 - fabs
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a819172fc94224ff4c51c8fc342b142ffbe05ae7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234118"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554836"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -66,16 +67,18 @@ float fabsf(
 long double fabsl(
    long double x
 );
+
+#define fabs(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions **FABS** retournent la valeur absolue de l’argument *x*. Aucun retour d'erreur.
+Les fonctions **FABS** retournent la valeur absolue de l’argument *x*. Il n’y a pas d’erreur de retour.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
@@ -83,15 +86,18 @@ Les fonctions **FABS** retournent la valeur absolue de l’argument *x*. Aucun r
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **FABS** si vous incluez l' \<cmath> en-tête. Dans un programme C, **FABS** accepte et retourne toujours un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **FABS** si vous incluez l' \<cmath> en-tête. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **FABS** accepte et retourne toujours un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `fabs()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C requis|En-tête C++ requis|
+|Function|En-tête C requis|En-tête C++ requis|
 |--------------|-----------------------|---------------------------|
 |**FABS**, **fabsf**, **fabsl**|\<math.h>|\<cmath> ou \<math.h>|
+|**FABS** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

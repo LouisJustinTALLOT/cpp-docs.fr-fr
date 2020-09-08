@@ -1,6 +1,7 @@
 ---
 title: sinh, sinhf, sinhl
-ms.date: 4/2/2020
+description: Référence d’API pour le calcul du sinus hyperbolique d’une valeur à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - sinh
 - sinhl
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: ea7051fc086a254dabcf7fcd59f6a70e8fa0c0cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a8c9c4195eab66a46230e7a3baf6194e17c4519
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229413"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556175"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -54,32 +55,33 @@ Calcule le sinus hyperbolique.
 double sinh(double x);
 float sinhf(float x);
 long double sinhl(long double x);
-```
+#define sinh(x) // Requires C11 or higher
 
-```cpp
 float sinh(float x);  // C++ only
 long double sinh(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Angle en radians.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions **sinh** retournent le sinus hyperbolique de *x*. Par défaut, si le résultat est trop grand, **sinh** définit **errno** sur **ERANGE** et retourne ±**HUGE_VAL**.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|None|_DOMAIN|
+|± QNAN,IND|Aucun|_DOMAIN|
 |&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sinh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **sinh** prend et retourne toujours **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sinh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **sinh** prend et retourne toujours **`double`** .
+
+Si vous utilisez la \<tgmath.h> `sinh()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -88,6 +90,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|
 |**sinh**, **sinhf,**, **sinhl**|\<math.h>|\<cmath> ou \<math.h>|
+|**sinh () (macro)** | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

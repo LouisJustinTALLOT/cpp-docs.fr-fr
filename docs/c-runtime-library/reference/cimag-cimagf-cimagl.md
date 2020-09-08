@@ -1,6 +1,7 @@
 ---
 title: cimag, cimagf, cimagl
-ms.date: 11/04/2016
+description: Informations de référence sur les API pour Cimag, cimagf et cimagl ; qui récupère la partie imaginaire d’un nombre complexe.
+ms.date: 9/2/2020
 api_name:
 - cimag
 - cimagf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: af7d15ee1b5dfd863025565bf8827199f7492841
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 41631a161a47e247b12a39e312a3f40084c8f22f
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232545"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555838"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -50,31 +51,33 @@ Récupère la partie imaginaire d’un nombre complexe.
 double cimag( _Dcomplex z );
 float cimagf( _Fcomplex z );
 long double cimagl( _Lcomplex z );
-```
+#define cimag(X) // Requires C11 or higher
 
-```cpp
-float cimag( _Fcomplex z );  // C++
-long double cimag( _Lcomplex z );  // C++
+float cimag( _Fcomplex z );  // C++ only
+long double cimag( _Lcomplex z );  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Lettre*<br/>
+*Lettre*\
 Nombre complexe.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Partie imaginaire de *z*.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Cimag** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **Cimag** prend toujours une valeur **_Dcomplex** et retourne une **`double`** valeur.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Cimag** qui acceptent des valeurs **_Fcomplex** ou **_Lcomplex** , et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **Cimag** prend toujours une valeur **_Dcomplex** et retourne une **`double`** valeur.
+
+Si vous utilisez la \<tgmath.h> `cimag()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
 |**Cimag**, **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
+|**Cimag** macro) | \<tgmath.h> ||
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 

@@ -1,5 +1,6 @@
 ---
 title: _chgsign, _chgsignf, _chgsignl
+description: Informations de référence sur les API pour _chgsign, _chgsignf et _chgsignl ; qui inverse le signe d’un argument à virgule flottante.
 ms.date: 04/05/2018
 api_name:
 - _chgsignl
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-ms.openlocfilehash: 17c8cc05efbcf2ab338d6032eded4ba13ec6197a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc934f3c2d22cc36abe5f31f7d64e0674ccdd3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943125"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555200"
 ---
 # <a name="_chgsign-_chgsignf-_chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 
@@ -62,18 +63,18 @@ long double _chgsignl(
 *x*<br/>
 Valeur à virgule flottante à modifier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions **_chgsign** retournent une valeur qui est égale à l’argument à virgule flottante *x*, mais avec son signe inversé. Aucun retour d'erreur.
+Les fonctions **_chgsign** retournent une valeur qui est égale à l’argument à virgule flottante *x*, mais avec son signe inversé. Il n’y a pas d’erreur de retour.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_chgsign**|\<float.h>|
 |**_chgsignf**, **_chgsignl**|\<math.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,6 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
+description: Informations de référence sur les API pour _rotl, _rotl64, _rotr et _rotr64 ; qui effectue la rotation des bits vers la gauche (_rotl) ou vers la droite (_rotr).
 ms.date: 04/05/2018
 api_name:
 - _rotr64
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2fb6b2674ed7d50cff63ae45f22af63b0120597
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949146"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556591"
 ---
 # <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Fait pivoter les bits vers la gauche ( **_rotl**) ou vers la droite ( **_rotr**).
+Fait pivoter les bits vers la gauche (**_rotl**) ou vers la droite (**_rotr**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,27 +80,27 @@ unsigned __int64 _rotr64(
 ### <a name="parameters"></a>Paramètres
 
 *value*<br/>
-Valeur à faire pivoter.
+Valeur à soumettre à un décalage circulaire.
 
 *shift*<br/>
 Nombre de bits de décalage.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Valeur ayant fait l'objet d'une rotation. Aucun retour d'erreur.
+Valeur ayant fait l'objet d'une rotation. Il n’y a pas d’erreur de retour.
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **_rotl** et **_rotr** font pivoter la *valeur* non signée par *décalage* de bits. **_rotl** fait pivoter la valeur vers la gauche. **_rotr** fait pivoter la valeur vers la droite. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
+Les fonctions **_rotl** et **_rotr** font pivoter la *valeur* non signée par *décalage* bits. **_rotl** fait pivoter la valeur vers la gauche. **_rotr** fait pivoter la valeur vers la droite. Les deux fonctions enveloppent les bits ayant fait l’objet d’une rotation d’un bout à l’autre de *value*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_rotl**, **_rotl64**|\<stdlib.h>|
 |**_rotr**, **_rotr64**|\<stdlib.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -132,7 +133,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 0xfd93 rotated left three times is 0x7ec98

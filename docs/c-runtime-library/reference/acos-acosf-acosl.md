@@ -1,6 +1,7 @@
 ---
 title: acos, acosf, acosl
-ms.date: 4/2/2020
+description: Référence d’API pour `acos` , `acosf` et, `acosl` qui calcule l’arc cosinus d’une valeur à virgule flottante.
+ms.date: 08/31/2020
 api_name:
 - acosf
 - acos
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eeee51cea2a81882ee1ed8b014312ee9f9095dc6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220767"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555096"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -53,19 +54,18 @@ Calcule l’arc cosinus.
 double acos( double x );
 float acosf( float x );
 long double acosl( long double x );
-```
+#define acos(X) // Requires C11 or higher
 
-```cpp
 float acos( float x );   // C++ only
 long double acos( long double x );   // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur comprise entre-1 et 1, pour laquelle calculer l’arccosinus (cosinus inverse).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La fonction **ACOS** retourne l’arc cosinus de *x* dans la plage de 0 à π radians.
 
@@ -79,7 +79,9 @@ Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ACOS** retourne un
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ACOS** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **ACOS** prend toujours et retourne un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ACOS** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **ACOS** prend toujours et retourne un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `acos()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -88,6 +90,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
 |**ACOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**ACOS () (macro)** | \<tgmath.h> ||
 
 ## <a name="example"></a>Exemple
 

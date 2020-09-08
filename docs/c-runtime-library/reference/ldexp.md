@@ -1,6 +1,7 @@
 ---
 title: ldexp, ldexpf, ldexpl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour ldexp, ldexpf, et ldexpl ; qui multiplie un nombre à virgule flottante par une puissance intégrale de deux.
+ms.date: 9/1/2020
 api_name:
 - ldexp
 - ldexpf
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: bbd1742cdace30d5bc3bd5e9d592bb24a86f917f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6ce6bcbc8adbc62e8d8598b97a6f77e04fee1511
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216919"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555447"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -57,14 +58,6 @@ double ldexp(
    double x,
    int exp
 );
-float ldexp(
-   float x,
-   int exp
-);  // C++ only
-long double ldexp(
-   long double x,
-   int exp
-);  // C++ only
 float ldexpf(
    float x,
    int exp
@@ -73,17 +66,27 @@ long double ldexpl(
    long double x,
    int exp
 );
+#define ldexp(X, INT) // Requires C11 or higher
+
+float ldexp(
+   float x,
+   int exp
+);  // C++ only
+long double ldexp(
+   long double x,
+   int exp
+);  // C++ only
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante.
 
-*exp*<br/>
+*venir*\
 Exposant entier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions **ldexp** retournent la valeur de *x* \* 2<sup>*exp*</sup> en cas de réussite. En cas de dépassement de capacité et selon le signe de *x*, **ldexp** retourne +/- **HUGE_VAL**; la valeur **errno** est définie sur **ERANGE**.
 
@@ -91,7 +94,9 @@ Pour plus d’informations sur **errno** et les valeurs de retour possibles des 
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ldexp** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, **ldexp** prend toujours un **`double`** et un **`int`** et retourne un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ldexp** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **ldexp** prend toujours un **`double`** et un **`int`** et retourne un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `ldexp()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -100,6 +105,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
 |**ldexp**, **ldexpf,**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp** macro) | \<tgmath.h> ||
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 

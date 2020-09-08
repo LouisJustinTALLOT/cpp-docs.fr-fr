@@ -1,6 +1,7 @@
 ---
 title: remquo, remquof, remquol
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour remquo, remquof et remquol ; qui calcule le reste de deux valeurs entières et stocke une valeur entière avec le signe et l’amplitude approximative du quotient dans un emplacement spécifié dans un paramètre.
+ms.date: 9/1/2020
 api_name:
 - remquof
 - remquo
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d99204ad9a80c6320869cbb72aee905981a5224d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216789"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554966"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -51,25 +52,24 @@ Calcule le reste de deux valeurs entières et stocke une valeur entière avec le
 double remquo( double numer, double denom, int* quo );
 float remquof( float numer, float denom, int* quo );
 long double remquol( long double numer, long double denom, int* quo );
-```
+#define remquo(X, Y, INT_PTR) // Requires C11 or higher
 
-```cpp
 float remquo( float numer, float denom, int* quo ); /* C++ only */
 long double remquo( long double numer, long double denom, int* quo ); /* C++ only */
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*univoque*<br/>
+*univoque*\
 Numérateur.
 
-*denom*<br/>
+*denom*\
 Dénominateur.
 
-*devenu*<br/>
+*devenu*\
 Pointeur désignant un entier pour stocker une valeur qui a le signe et la grandeur approximative du quotient.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **remquo** retourne le reste à virgule flottante de *x*  /  *y*. Si la valeur de *y* est 0,0, **remquo** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
@@ -77,15 +77,18 @@ Pointeur désignant un entier pour stocker une valeur qui a le signe et la grand
 
 La fonction **remquo** calcule le reste à virgule flottante *f* de *x*  /  *y* , de telle sorte que *x*  =  *i* \* *y*  +  *f*, où *i* est un entier, *f* a le même signe que *x*, et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **remquo** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **remquo** accepte toujours deux **`double`** arguments et retourne un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **remquo** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **remquo** accepte toujours deux **`double`** arguments et retourne un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `remquo()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis (C)|En-tête requis (C++)|
+|Function|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------|-|
 |**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> ou \<math.h>|
+|**remquo** macro) | \<tgmath.h> ||
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 

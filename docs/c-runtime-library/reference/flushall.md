@@ -1,5 +1,6 @@
 ---
 title: _flushall
+description: Informations de référence sur l’API pour _flushall ; qui vide tous les flux et efface toutes les mémoires tampons.
 ms.date: 4/2/2020
 api_name:
 - _flushall
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-ms.openlocfilehash: 1a53eeedd5dfa0f9c01fa5883a9db33e26e3ea17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c93dddea50c182b86bd4d09ae9f214e87491e830
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911624"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556721"
 ---
 # <a name="_flushall"></a>_flushall
 
@@ -48,9 +49,9 @@ int _flushall( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_flushall** retourne le nombre de flux ouverts (entrée et sortie). Aucun retour d'erreur.
+**_flushall** retourne le nombre de flux ouverts (entrée et sortie). Il n’y a pas d’erreur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, la fonction **_flushall** écrit dans les fichiers appropriés le contenu de toutes les mémoires tampons associées aux flux de sortie ouverts. Le contenu de toutes les mémoires tampons associées aux flux d’entrée ouverts est effacé. (Ces mémoires tampons sont normalement gérées par le système d’exploitation, qui détermine à quel moment les données doivent être automatiquement écrites sur le disque : quand une mémoire tampon est saturée, quand un flux est fermé ou quand un programme se termine normalement sans fermer les flux.)
 

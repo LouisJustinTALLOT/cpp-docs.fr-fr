@@ -1,6 +1,7 @@
 ---
 title: cbrt, cbrtf, cbrtl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour CBRT, cbrtf et cbrtl ; qui calculent la racine d’un cube
+ms.date: 9/1/2020
 api_name:
 - cbrt
 - cbrtf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: ace9421fa8f93f03b0b9ad7dd698474ec90fdf97
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c63a3cb0c8acdec8ef66999994ab1f3c5ea21d47
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221976"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555304"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -62,14 +63,15 @@ float cbrtf(
 long double cbrtl(
    long double x
 );
+#define cbrt(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions **CBRT** retournent la racine cubique de *x*.
 
@@ -79,15 +81,18 @@ Les fonctions **CBRT** retournent la racine cubique de *x*.
 
 ## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **CBRT** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, **CBRT** accepte et retourne toujours **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **CBRT** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **CBRT** accepte et retourne toujours **`double`** .
+
+Si vous utilisez la \<tgmath.h> `cbrt()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**CBRT**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
+|**CBRT** macro) | \<tgmath.h> ||
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

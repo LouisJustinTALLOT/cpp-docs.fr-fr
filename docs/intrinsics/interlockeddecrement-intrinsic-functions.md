@@ -1,6 +1,7 @@
 ---
 title: _InterlockedDecrement fonctions intrinsèques
-ms.date: 09/02/2019
+description: Fonctions intrinsèques du compilateur Microsoft C/C++ pour la décrémentation verrouillée.
+ms.date: 09/03/2020
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,78 +45,76 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b3ca624ba54f70750ecc303fb44f4fa242b4edc2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857916"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556332"
 ---
-# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement fonctions intrinsèques
+# <a name="_interlockeddecrement-intrinsic-functions"></a>`_InterlockedDecrement` fonctions intrinsèques
 
-**Section spécifique de Microsoft**
-
-Fournit la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) .
+Fournit la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) . Les `_InterlockedDecrement` fonctions intrinsèques sont **spécifiques à Microsoft**.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```C
 long _InterlockedDecrement(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_acq(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_rel(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_nf(
-   long * lpAddend
+   long volatile * lpAddend
 );
 short _InterlockedDecrement16(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_acq(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_rel(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_nf(
-   short * lpAddend
+   short volatile * lpAddend
 );
 __int64 _InterlockedDecrement64(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_acq(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_rel(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_nf(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *lpAddend*\
-[in, out] Pointeur vers la variable à décrémenter.
+[in, out] Pointeur volatil vers la variable à décrémenter.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour est la valeur décrémentée résultante.
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_InterlockedDecrement`, `_InterlockedDecrement16`|x86, ARM, x64, ARM64|
 |`_InterlockedDecrement64`|ARM, x64, ARM64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
-**Fichier d’en-tête** \<Intro. h >
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -123,7 +122,7 @@ Il existe plusieurs variantes de `_InterlockedDecrement` qui varient selon les t
 
 La fonction `_InterlockedDecrement` opère sur des valeurs entières de 32 bits, `_InterlockedDecrement16` sur des valeurs entières de 16 bits et `_InterlockedDecrement64` sur des valeurs entières de 64 bits.
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques avec un suffixe `_nf` (« no cloture ») n’agissent pas comme une barrière de mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques avec un `_nf` suffixe (« no cloture ») n’agissent pas comme une barrière de mémoire.
 
 La variable vers laquelle pointe le paramètre `lpAddend` doit être alignée sur une limite de 32 bits. Dans le cas contraire, cette fonction échoue sur les systèmes x86 multiprocesseurs et les systèmes autres que x86. Pour plus d’informations, consultez [Aligner](../cpp/align-cpp.md).
 
@@ -197,10 +196,8 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
-**Fin de la section spécifique de Microsoft**
-
 ## <a name="see-also"></a>Voir aussi
 
 [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
-[Mots clés](../cpp/keywords-cpp.md)\
+[Mot](../cpp/keywords-cpp.md)\
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -1,6 +1,7 @@
 ---
 title: frexp, frexpf, frexpl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour frexp, frexpf, et frexpl ; qui obtient la mantisse et l’exposant d’un nombre à virgule flottante.
+ms.date: 9/1/2020
 api_name:
 - frexp
 - _o_frexp
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 34d8877d4b8372a33fb5f0f6095a7027cae50555
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a23de4160abcfab2518125bfa0fd35a389901674
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220702"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555746"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
 
@@ -58,6 +59,10 @@ long double frexpl(
    long double x,
    int * expptr
 );
+#define frexpl(X, INT_PTR) // Requires C11 or higher
+```
+
+```cpp
 float frexp(
    float x,
    int * expptr
@@ -70,13 +75,13 @@ long double frexp(
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante.
 
-*expptr*<br/>
+*expptr*\
 Pointeur désignant l’exposant entier stocké.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **frexp** retourne la mantisse. Si *x* est égal à 0, la fonction retourne 0 pour la mantisse et l’exposant. Si *expptr* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne 0.
 
@@ -84,15 +89,18 @@ Pointeur désignant l’exposant entier stocké.
 
 La fonction **frexp** décompose la valeur à virgule flottante (*x*) en une mantisse (*m*) et un exposant (*n*), de sorte que la valeur absolue de *m* est supérieure ou égale à 0,5 et inférieure à 1,0, et *x*  =  *m* * 2<sup>*n*</sup>. L’exposant entier *n* est stocké à l’emplacement désigné par *expptr*.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **frexp**. Dans un programme C, **frexp** prend toujours un **`double`** et un **`int`** pointeur et retourne un **`double`** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **frexp**. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **frexp** prend toujours un **`double`** et un **`int`** pointeur et retourne un **`double`** .
+
+Si vous utilisez la \<tgmath.h> `frexp()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis|
+|Function|En-tête requis|
 |--------------|---------------------|
 |**frexp**, **frexpf,**, **frexpl**|\<math.h>|
+|**frexp** macro) | \<tgmath.h> |
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

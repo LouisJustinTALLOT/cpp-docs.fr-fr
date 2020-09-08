@@ -1,6 +1,6 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
-description: Informations de référence sur l’API pour snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_, qui écrivent des données mises en forme dans une chaîne.
+description: Informations de référence sur les API pour snprintf, _snprintf, _snprintf_l, _snwprintf et _snwprintf_; qui écrivent des données mises en forme dans une chaîne.
 ms.date: 08/27/2020
 api_name:
 - _snwprintf
@@ -52,12 +52,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: b4d8865d5297afe3d48f2bb48cc85a0d10535dfd
-ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
+ms.openlocfilehash: 9a851f08e50d11d3716ea59e00e5e9028b6cd6d5
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062196"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556110"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -149,7 +149,7 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations, consultez [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Laissez **Len** la longueur de la chaîne de données mise en forme, à l’exclusion de la valeur null de fin. **Len** et **Count** sont tous deux le nombre de caractères pour **snprintf** et **_snprintf**, et le nombre de caractères larges pour **_snwprintf**.
 
@@ -165,7 +165,7 @@ Si la *mémoire tampon* est un pointeur null et que le *nombre* est différent d
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction **snprintf** et la famille **_snprintf** de fonctions formatent et stockent le *nombre* de caractères maximum dans la *mémoire tampon*. La fonction **snprintf** stocke toujours un caractère null de fin et tronque la sortie si nécessaire. La famille **_snprintf** des fonctions ajoute uniquement un caractère null de fin si la longueur de la chaîne mise en forme est strictement inférieure à *Count* caractères. Chaque *argument* (le cas échéant) est converti et est généré en fonction de la spécification de format correspondante au *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que l’argument *format* pour [printf](printf-printf-l-wprintf-wprintf-l.md). Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
@@ -187,7 +187,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_sntprintf**|**_snprintf**|**_snprintf**|**_snwprintf**|
 |**_sntprintf_l**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

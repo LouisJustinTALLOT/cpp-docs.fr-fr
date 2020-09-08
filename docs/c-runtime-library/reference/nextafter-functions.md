@@ -1,6 +1,7 @@
 ---
 title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
-ms.date: 4/2/2020
+description: Informations de référence sur les API pour nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf et nexttowardl ; qui retournent la valeur à virgule flottante représentable suivante.
+ms.date: 9/1/2020
 api_name:
 - nextafterf
 - _nextafterf
@@ -59,12 +60,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 6122fd8921bdb413c4b24128b2428a70ccda0892
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cdcfb1a1d0bf1523a0252d779dba603ce1814b14
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213513"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555824"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -80,12 +81,14 @@ long double nextafterl( long double x, long double y );
 double _nextafter( double x, double y );
 float _nextafterf( float x, float y ); /* x64 only */
 
+#define nextafter(X, Y) // Requires C11 or higher
+
 double nexttoward( double x, long double y );
 float nexttowardf( float x, long double y );
 long double nexttowardl( long double x, long double y );
-```
 
-```cpp
+#define nexttoward(X, Y) // Requires C11 or higher
+
 float nextafter( float x, float y ); /* C++ only, requires <cmath> */
 long double nextafter( long double x, long double y ); /* C++ only, requires <cmath> */
 
@@ -95,13 +98,13 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*x*\
 Valeur à virgule flottante de départ.
 
-*y*<br/>
+*y*\
 Valeur à virgule flottante d’arrivée.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur à virgule flottante représentable suivante du type de retour après *x* dans la direction de *y*. Si les valeurs *x* et *y* sont égales, la fonction retourne *y*, converti en type de retour, sans qu’aucune exception ne soit déclenchée. Si *x* n’est pas égal à *y*et que le résultat est une valeur dénormalisée ou zéro, les États d’exception de virgule flottante **FE_UNDERFLOW** et **FE_INEXACT** sont définis, et le résultat correct est retourné. Si *x* ou *y* est un Nan, la valeur de retour est l’une des valeurs NaN d’entrée. Si *x* est fini et que le résultat est infini ou n’est pas représentable dans le type, une valeur Infinite ou Nan correctement signée est retournée, les États d’exception de virgule flottante **FE_OVERFLOW** et **FE_INEXACT** sont définis, et **errno** a la valeur **ERANGE**.
 
@@ -109,7 +112,9 @@ Retourne la valeur à virgule flottante représentable suivante du type de retou
 
 Les familles de fonctions **nextafter** et **nexttoward** sont équivalentes, à l’exception du type de paramètre de *y*. Si les valeurs *x* et *y* sont égales, la valeur retournée est *y* convertie dans le type de retour.
 
-C++ autorisant la surcharge, si vous incluez, \<cmath> vous pouvez appeler des surcharges de **nextafter** et **nexttoward** qui retournent **`float`** les **`long double`** types et. Dans un programme C, **nextafter** et **nexttoward** retournent toujours **`double`** .
+C++ autorisant la surcharge, si vous incluez, \<cmath> vous pouvez appeler des surcharges de **nextafter** et **nexttoward** qui retournent **`float`** les **`long double`** types et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **nextafter** et **nexttoward** retournent toujours **`double`** .
+
+Si vous utilisez la \<tgmath.h> `nextafter()` `nexttoward()` macro ou, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
 Les fonctions **_nextafter** et **_nextafterf** sont spécifiques à Microsoft. La fonction **_nextafterf** n’est disponible que lors de la compilation pour x64.
 
@@ -121,10 +126,11 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |-------------|---------------------------|-------------------------------|
 |**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<math.h>|\<math.h> ou \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> ou \<cfloat>|
+|**nextafter** macro,  **nexttoward** macro| \<tgmath.h> ||
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)\
+[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)
