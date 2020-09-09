@@ -1,26 +1,28 @@
 ---
-title: Importation de données à l'aide de __declspec(dllimport)
-ms.date: 11/04/2016
+title: Importation de données à l’aide de __declspec(dllimport)
+description: Comment utiliser __declspec (dllimport) pour importer des données de DLL.
+ms.date: 09/03/2020
 helpviewer_keywords:
 - importing data [C++]
 - dllimport attribute [C++], data imports
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
-ms.openlocfilehash: 341912b53301c3a11df4285167d66c8c1493d2fd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb9850306d6e73b88e2926a6f068ae21f8d32530
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223991"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609119"
 ---
-# <a name="importing-data-using-__declspecdllimport"></a>Importation de données à l'aide de __declspec(dllimport)
+# <a name="importing-data-using-__declspecdllimport"></a>Importation de données à l’aide de `__declspec(dllimport)`
 
 Dans le cas de données, l’utilisation de **`__declspec(dllimport)`** est un élément pratique qui supprime une couche d’indirection. Lorsque vous importez des données à partir d’une DLL, vous devez toujours passer par la table d’adresses d’importation. Avant **`__declspec(dllimport)`** , cela signifiait qu’il fallait se souvenir d’effectuer un niveau supplémentaire d’indirection lors de l’accès aux données exportées à partir de la dll :
 
-```
+```C
 // project.h
-#ifdef _DLL   // If accessing the data from inside the DLL
+// Define PROJECT_EXPORTS when building your DLL
+#ifdef PROJECT_EXPORTS   // If accessing the data from inside the DLL
    ULONG ulDataInDll;
 
 #else         // If accessing the data from outside the DLL
@@ -30,7 +32,7 @@ Dans le cas de données, l’utilisation de **`__declspec(dllimport)`** est un �
 
 Vous exportez ensuite les données dans votre. Fichier DEF :
 
-```
+```DEF
 // project.def
 LIBRARY project
 EXPORTS
@@ -39,7 +41,7 @@ EXPORTS
 
 et y accéder en dehors de la DLL :
 
-```
+```C
 if (*ulDataInDll == 0L)
 {
    // Do stuff here
@@ -50,8 +52,15 @@ Quand vous marquez les données en tant que **`__declspec(dllimport)`** , le com
 
 Pour exporter les données automatiquement à partir de la DLL, utilisez la déclaration suivante :
 
-```
-__declspec(dllexport) ULONG ulDataInDLL;
+```C
+// project.h
+// Define PROJECT_EXPORTS when building your DLL
+#ifdef PROJECT_EXPORTS   // If accessing the data from inside the DLL
+   __declspec(dllexport) ULONG ulDataInDLL;
+
+#else         // If accessing the data from outside the DLL
+   __declspec(dllimport) ULONG ulDataInDLL;
+#endif
 ```
 
 ## <a name="see-also"></a>Voir aussi

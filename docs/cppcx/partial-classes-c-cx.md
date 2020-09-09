@@ -1,31 +1,32 @@
 ---
 title: Classes partielles (C++/CX)
+description: Comment déclarer et utiliser des classes partielles en C++/CX.
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70225069c948a50b38ac3642113cf940c86cf8da
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185461"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609071"
 ---
 # <a name="partial-classes-ccx"></a>Classes partielles (C++/CX)
 
-Une classe partielle est une construction qui prend en charge les scénarios dans lesquels vous modifiez une partie d'une définition de classe et un logiciel de génération de code automatique, par exemple le concepteur XAML, modifie également le code de la même classe. L'utilisation d'une classe partielle vous permet d'empêcher le concepteur de remplacer votre code. Dans un projet Visual Studio, le modificateur `partial` est appliqué automatiquement au fichier généré.
+Une classe partielle est une construction qui prend en charge les scénarios dans lesquels vous modifiez une partie d'une définition de classe et un logiciel de génération de code automatique, par exemple le concepteur XAML, modifie également le code de la même classe. L'utilisation d'une classe partielle vous permet d'empêcher le concepteur de remplacer votre code. Dans un projet Visual Studio, le **`partial`** modificateur est appliqué automatiquement au fichier généré.
 
 ## <a name="syntax"></a>Syntaxe
 
-Pour définir une classe partielle, utilisez le mot clé `partial` immédiatement avant la clé-classe de ce qui devrait être une définition de classe normale. Un mot clé comme `partial ref class` est un mot clé contextuel qui contient des espaces blancs. Les définitions partielles sont prises en charge dans les constructions ci-dessous.
+Pour définir une classe partielle, utilisez le **`partial`** mot clé immédiatement avant la clé-classe de ce qui serait autrement une définition de classe normale. Un mot clé comme **`partial ref class`** est un mot clé contextuel qui contient des espaces blancs. Les définitions partielles sont prises en charge dans les constructions ci-dessous.
 
-- **`class`** ni**`struct`**
+- **`class`** ni **`struct`**
 
-- **`ref class`** ni**`ref struct`**
+- **`ref class`** ni **`ref struct`**
 
-- **`value class`** ni**`value struct`**
+- **`value class`** ni **`value struct`**
 
-- **`enum`** ni**`enum class`**
+- **`enum`** ni **`enum class`**
 
-- `ref interface`, **`interface class`** , **`interface struct`** ou **' __interface**
+- **`ref interface`**, **`interface class`** , **`interface struct`** ou **`__interface`**
 
 - **`union`**
 
@@ -33,9 +34,9 @@ Cet exemple illustre une partie **`ref class`** :
 
 [!code-cpp[cx_partial#01](../cppcx/codesnippet/CPP/partialclassexample/class1.h#01)]
 
-## <a name="contents"></a>Contenu
+## <a name="contents"></a>Contents
 
-Une définition de classe partielle peut contenir tout ce que la définition de classe complète peut contenir si le mot clé `partial` a été omis. Sauf une exception, cela inclut toutes les constructions valides, telles que les classes de base, les données membres, les fonctions de membre, les énumérations, les déclarations Friend et les attributs. Les définitions inline des données membres statiques sont autorisées.
+Une définition de classe partielle peut contenir tout ce que la définition de classe complète peut contenir si le **`partial`** mot clé a été omis. Sauf une exception, cela inclut toutes les constructions valides, telles que les classes de base, les données membres, les fonctions de membre, les énumérations, les déclarations Friend et les attributs. Les définitions inline des données membres statiques sont autorisées.
 
 L'unique exception est l'accessibilité de la classe. Par exemple, l'instruction `public partial class MyInvalidClass {/* ... */};` est une erreur. Aucun spécificateur d'accès utilisé dans une définition de classe partielle pour MyInvalidClass n'affecte l'accessibilité par défaut dans une définition de classe partielle ou complète suivante pour MyInvalidClass.
 
@@ -45,13 +46,13 @@ Le fragment de code suivant illustre cette accessibilité. Dans la première cla
 
 ## <a name="declaration"></a>Déclaration
 
-Une définition partielle d’une classe telle que *MyClass* n’est qu’une déclaration de MyClass. Autrement dit, elle présente uniquement le nom *MyClass*. *MyClass* ne peut pas être utilisé d’une manière qui requiert une définition de classe, par exemple en connaissant la taille de *MyClass* ou à l’aide d’une base ou d’un membre de *MyClass*. *MyClass* est considéré comme étant défini uniquement lorsque le compilateur rencontre une définition non partielle de *MyClass*.
+Une définition partielle d’une classe telle que `MyClass` n’est qu’une déclaration de MyClass. Autrement dit, il introduit uniquement le nom `MyClass` . `MyClass` ne peut pas être utilisé d’une manière qui requiert une définition de classe, par exemple, en connaissant la taille de `MyClass` ou à l’aide d’une base ou d’un membre de `MyClass` . `MyClass` est considéré comme étant défini uniquement lorsque le compilateur rencontre une définition non partielle de `MyClass` .
 
-L'exemple ci-dessous illustre le comportement de déclaration d'une classe partielle. Après la déclaration #1, *MyClass* peut être utilisé comme s’il était écrit en tant que déclaration anticipée `ref class MyClass;`. La déclaration n°2 équivaut à la déclaration n°1. La déclaration n°3 est valide car il s'agit d'une déclaration anticipée d'une classe. Mais la déclaration n°4 n'est pas valide car
+L'exemple ci-dessous illustre le comportement de déclaration d'une classe partielle. Après la #1 de déclaration, `MyClass` peut être utilisé comme s’il avait été écrit en tant que déclaration anticipée `ref class MyClass;` . La déclaration n°2 équivaut à la déclaration n°1. La déclaration n°3 est valide car il s'agit d'une déclaration anticipée d'une classe. Mais la déclaration n°4 n'est pas valide car
 
-*MyClass* n’est pas entièrement défini.
+`MyClass`n'est pas entièrement défini.
 
-La déclaration #5 n’utilise pas le mot clé `partial` et elle définit complètement *MyClass*. Par conséquent, la déclaration #6 est valide.
+La déclaration #5 n’utilise pas le **`partial`** mot clé, et la déclaration est entièrement définie `MyClass` . Par conséquent, la déclaration #6 est valide.
 
 [!code-cpp[Cx_partial#03](../cppcx/codesnippet/CPP/partialclassexample/class1.h#03)]
 
@@ -59,7 +60,7 @@ La déclaration #5 n’utilise pas le mot clé `partial` et elle définit compl�
 
 Il peut y avoir zéro définition de classe partielle ou plus pour chaque définition de classe complète.
 
-Chaque définition de classe partielle d'une classe doit précéder lexicalement la seule définition complète de cette classe, mais ne doit pas précéder les déclarations anticipées de cette classe. S'il n'existe aucune définition complète de la classe, les déclarations de classe partielles ne peuvent être que des déclarations anticipées.
+Chaque définition de classe partielle d’une classe doit précéder lexicalement la seule définition complète de cette classe, mais ne doit pas précéder les déclarations anticipées de la classe. S'il n'existe aucune définition complète de la classe, les déclarations de classe partielles ne peuvent être que des déclarations anticipées.
 
 Toutes les clés de classe telles que **`class`** et **`struct`** doivent correspondre. Par exemple, c’est une erreur de coder `partial class X {}; struct X {};`.
 
@@ -85,11 +86,11 @@ Une classe partielle ne peut pas être un modèle.
 
 Une classe partielle ne peut pas s'étendre au-delà d'une unité de traduction.
 
-Le `partial` mot clé est pris en charge uniquement en association avec le mot **`ref class`** clé ou le **`value class`** mot clé.
+Le **`partial`** mot clé est pris en charge uniquement en association avec le mot **`ref class`** clé ou le **`value class`** mot clé.
 
 ### <a name="examples"></a>Exemples
 
-L'exemple suivant définit la classe `Address` pour deux fichiers de code. Le concepteur modifie `Address.details.h` et vous modifiez `Address.h`. Seule la définition de classe contenue dans le premier fichier utilise le mot clé `partial` .
+L'exemple suivant définit la classe `Address` pour deux fichiers de code. Le concepteur modifie `Address.details.h` et vous modifiez `Address.h`. Seule la définition de classe dans le premier fichier utilise le **`partial`** mot clé.
 
 [!code-cpp[cx_partial#07](../cppcx/codesnippet/CPP/partialclassexample/address.details.h#07)]
 

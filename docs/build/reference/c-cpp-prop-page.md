@@ -1,15 +1,15 @@
 ---
 title: Propriétés de projet C/C++ (Visual Studio)
 description: Guide de référence des propriétés des pages de propriétés du projet Microsoft C/C++ de Visual Studio.
-ms.date: 07/08/2020
+ms.date: 09/03/2020
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: d1ade2959351d6e60b1d80554bbfa34074dda725
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a96400e27b48b734d4002d9cef13fd52f9ccc7a5
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229738"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609166"
 ---
 # <a name="cc-property-pages"></a>Pages de propriétés C/C++
 
@@ -78,7 +78,7 @@ Traite les avertissements du compilateur comme des erreurs. Pour un nouveau proj
 
 ### <a name="warning-version"></a>Version de l’avertissement
 
-Masquer les avertissements introduits après une version spécifique du compilateur. Définit [`/Wv:xx`\[`.yy`\[`.zzzzz`\]\]](wx-treat-linker-warnings-as-errors.md) .
+Masquer les avertissements introduits après une version spécifique du compilateur. Définit [`/Wv:xx[.yy[.zzzzz]]`](wx-treat-linker-warnings-as-errors.md) .
 
 ### <a name="diagnostics-format"></a>Format des diagnostics
 
@@ -102,15 +102,15 @@ Compilation multiprocesseur.
 
 ### <a name="optimization"></a>Optimization
 
-Sélectionnez l’option d’optimisation du code ; Choisissez personnalisé pour utiliser des options d’optimisation spécifiques. Définit [/OD](od-disable-debug.md), [/O1,/O2](o-options-optimize-code.md).
+Sélectionnez l’option d’optimisation du code ; Choisissez personnalisé pour utiliser des options d’optimisation spécifiques. Définit [`/Od`](od-disable-debug.md) , [ `/O1` , `/O2` ](o-options-optimize-code.md).
 
 #### <a name="choices"></a>Choices
 
 - **Personnalisé** : optimisation personnalisée.
 - **Désactivé** : désactive l’optimisation.
-- **Optimisation maximale (privilégier la taille)** -équivalent à**`/Os /Oy /Ob2 /Gs /GF /Gy`**
-- **Optimisation maximale (privilégier la vitesse)** -équivalent à**`/Oi /Ot /Oy /Ob2 /Gs /GF /Gy`**
-- **Optimisations (favoriser la vitesse)** -équivalent à**`/Oi /Ot /Oy /Ob2`**
+- **Optimisation maximale (privilégier la taille)** -équivalent à **`/Os /Oy /Ob2 /Gs /GF /Gy`**
+- **Optimisation maximale (privilégier la vitesse)** -équivalent à **`/Oi /Ot /Oy /Ob2 /Gs /GF /Gy`**
+- **Optimisations (favoriser la vitesse)** -équivalent à **`/Oi /Ot /Oy /Ob2`**
 
 ### <a name="inline-function-expansion"></a>Expansion des fonctions inline
 
@@ -133,8 +133,8 @@ S’il faut favoriser la taille du code ou la vitesse du code ; L’optimisatio
 
 #### <a name="choices"></a>Choices
 
-- **Privilégiez le petit** code en privilégiant le code. Réduit la taille des fichiers exe et des dll en demandant au compilateur de privilégier la taille par rapport à la vitesse.
-- **Privilégiez** le code rapide en privilégiant le code. Optimise la vitesse des fichiers exe et des dll en demandant au compilateur de privilégier la vitesse par rapport à la taille. (Il s’agit de la valeur par défaut.)
+- **Privilégiez le code petit** -réduit la taille des fichiers exe et des dll en demandant au compilateur de privilégier la taille par rapport à la vitesse.
+- **Favoriser** la rapidité du code : optimise la vitesse des fichiers exe et des dll en demandant au compilateur de favoriser la vitesse par rapport à la taille. (Il s’agit de la valeur par défaut.)
 - **Aucune optimisation de taille** et de vitesse.
 
 ### <a name="omit-frame-pointers"></a>Omettre les pointeurs de frame
@@ -147,7 +147,7 @@ Active l’optimisation de l’espace mémoire lors de l’utilisation des fibre
 
 ### <a name="whole-program-optimization"></a>Optimisation de l'ensemble du programme
 
-Active les optimisations intermodules en différant la génération du code pour qu'elle se produise au moment de la liaison. Requiert l’option de l’éditeur de liens « génération du code durant l’édition de liens ». Définit [`/GL`](gl-whole-program-optimization.md) .
+Active les optimisations intermodules en différant la génération du code pour qu'elle se produise au moment de la liaison. Requiert l’option de l’éditeur de liens lors de la **génération de code durant**l’édition de liens. Définit [`/GL`](gl-whole-program-optimization.md) .
 
 ## <a name="cc-preprocessor-properties"></a>Propriétés du préprocesseur C/C++
 
@@ -177,7 +177,7 @@ Prétraiter sans directives #line.
 
 ### <a name="keep-comments"></a>Conserver les commentaires
 
-Supprime la bande de commentaires du code source ; requiert la définition d’une des options’prétraitement'. Définit [`/C`](c-preserve-comments-during-preprocessing.md) .
+Supprime la bande de commentaires du code source ; requiert la définition d’au moins l’une des options de **prétraitement** . Définit [`/C`](c-preserve-comments-during-preprocessing.md) .
 
 ## <a name="cc-code-generation-properties"></a>Propriétés de génération du code C/C++
 
@@ -212,7 +212,7 @@ Activez les vérifications des erreurs d’exécution de base, incompatibles ave
 
 - **Frames de pile** -active la vérification des erreurs au moment de l’exécution du frame de pile.
 - **Variables non initialisées** : signale quand une variable est utilisée sans avoir été initialisée.
-- **Both (/RTC1, EQUIV. to/RTCsu)** -équivalent de/RTCsu.
+- **Both (/RTC1, EQUIV. to/RTCsu)** -équivalent de **`/RTCsu`** .
 - **Default** : vérifications de l’exécution par défaut.
 
 ### <a name="runtime-library"></a>Bibliothèque Runtime
@@ -223,8 +223,8 @@ Spécifiez la bibliothèque Runtime pour la liaison. Définit [ `/MT` , `/MTd` ,
 
 - **Multithread-fait** en sorte que votre application utilise la version statique multithread de la bibliothèque Runtime.
 - **Débogage multithread** -Définit _DEBUG et _MT. Cette option indique également au compilateur de placer le nom de bibliothèque *LIBCMTD. lib* dans le *`.obj`* fichier afin que l’éditeur de liens utilise *LIBCMTD. lib* pour résoudre les symboles externes.
-- **Dll** multithread-fait en sorte que votre application utilise la version multithread propre à la dll de la bibliothèque Runtime. Définit _MT et _DLL et indique au compilateur de placer le nom de la bibliothèque *Msvcrt. lib* dans le *`.obj`* fichier.
-- **Dll de débogage** multithread-Définit _DEBUG, _MT et _DLL et fait en sorte que votre application utilise la version de débogage multithread et la dll de la bibliothèque Runtime. Il indique également au compilateur de placer le nom de la bibliothèque *msvcrtd. lib* dans le *`.obj`* fichier.
+- **Dll** multithread-fait en sorte que votre application utilise la version multithread propre à la dll de la bibliothèque Runtime. Définit `_MT` et `_DLL` et indique au compilateur de placer le nom de la bibliothèque *Msvcrt. lib* dans le *`.obj`* fichier.
+- **Dll de débogage** multithread-définit `_DEBUG` , `_MT` et, `_DLL` et fait en sorte que votre application utilise la version de débogage MULTITHREAD et spécifique à la dll de la bibliothèque Runtime. Il indique également au compilateur de placer le nom de la bibliothèque *msvcrtd. lib* dans le *`.obj`* fichier.
 
 ### <a name="struct-member-alignment"></a>Alignement des membres de la structure
 
@@ -259,7 +259,7 @@ La vérification de la sécurité de Guard permet de détecter les tentatives de
 
 ### <a name="enable-function-level-linking"></a>Activer la liaison au niveau des fonctions
 
-Permet au compilateur d’empaqueter des fonctions individuelles sous la forme de fonctions empaquetées (COMDATs). Requis avec l’option Modifier et Continuer. Définit [/Gy](gy-enable-function-level-linking.md).
+Permet au compilateur d’empaqueter des fonctions individuelles sous la forme de fonctions empaquetées (COMDATs). Requis avec l’option Modifier et Continuer. Définit [`/Gy`](gy-enable-function-level-linking.md) .
 
 ### <a name="enable-parallel-code-generation"></a>Activer la génération de code parallèle
 
@@ -267,15 +267,15 @@ Permet au compilateur de générer du code parallèle pour les boucles identifi�
 
 ### <a name="enable-enhanced-instruction-set"></a>Activer le jeu d’instructions amélioré
 
-Activez l’utilisation des instructions disponibles sur les processeurs qui prennent en charge les jeux d’instructions améliorés. Par exemple, les améliorations de SSE, SSE2, AVX et AVX2 apportées à IA-32. Et, les améliorations AVX et AVX2 pour x64. Actuellement **`/arch:SSE`** et **`/arch:SSE2`** sont disponibles uniquement lors de la création de pour l’architecture x86. Si aucune option n’est spécifiée, le compilateur utilise les instructions trouvées sur les processeurs qui prennent en charge SSE2. L’utilisation d’instructions améliorées peut être désactivée avec **`/arch:IA32`** . Pour plus d’informations, [`/arch (x86)`](arch-x86.md) consultez [`/arch (x64)`](arch-x64.md) et [`/arch (ARM)`](arch-arm.md) .
+Activez l’utilisation des instructions disponibles sur les processeurs qui prennent en charge les jeux d’instructions améliorés. Par exemple, les améliorations de SSE, SSE2, AVX et AVX2 apportées à IA-32. Et, les améliorations AVX et AVX2 pour x64. Actuellement **`/arch:SSE`** et **`/arch:SSE2`** sont disponibles uniquement lors de la création de pour l’architecture x86. Si aucune option n’est spécifiée, le compilateur utilise les instructions trouvées sur les processeurs qui prennent en charge SSE2. L’utilisation d’instructions améliorées peut être désactivée avec **`/arch:IA32`** . Pour plus d’informations, consultez [`/arch (x86)`](arch-x86.md) , [`/arch (x64)`](arch-x64.md) et [`/arch (ARM)`](arch-arm.md) .
 
 #### <a name="choices"></a>Choices
 
-- **Extensions streaming SIMD** : extensions streaming SIMD. Paramétr**`/arch:SSE`**
-- **Streaming SIMD Extensions 2** -extension streaming SIMD 2. Paramétr**`/arch:SSE2`**
-- **Advanced Vector Extensions** : Advanced Vector Extensions. Paramétr**`/arch:AVX`**
-- **Advanced Vector Extensions 2** : Advanced Vector Extensions 2. Paramétr**`/arch:AVX2`**
-- **Aucune instruction améliorée** -aucune instruction améliorée. Paramétr**`/arch:IA32`**
+- **Extensions streaming SIMD** : extensions streaming SIMD. Paramétr  **`/arch:SSE`**
+- **Streaming SIMD Extensions 2** -extension streaming SIMD 2. Paramétr  **`/arch:SSE2`**
+- **Advanced Vector Extensions** : Advanced Vector Extensions. Paramétr  **`/arch:AVX`**
+- **Advanced Vector Extensions 2** : Advanced Vector Extensions 2. Paramétr  **`/arch:AVX2`**
+- **Aucune instruction améliorée** -aucune instruction améliorée. Paramétr  **`/arch:IA32`**
 - **Non défini** -non défini.
 
 ### <a name="floating-point-model"></a>Modèle à virgule flottante
@@ -290,11 +290,11 @@ Définit le modèle de virgule flottante. Définit [ `/fp:precise` , `/fp:strict
 
 ### <a name="enable-floating-point-exceptions"></a>Activer les exceptions à virgule flottante
 
-Modèle de virgule flottante fiable. Les exceptions seront déclenchées immédiatement après leur déclenchement. Définit [/FP : except](fp-specify-floating-point-behavior.md).
+Modèle de virgule flottante fiable. Les exceptions seront déclenchées immédiatement après leur déclenchement. Définit [`/fp:except`](fp-specify-floating-point-behavior.md) .
 
 ### <a name="create-hotpatchable-image"></a>Créer une image corrigeable en mémoire
 
-Lorsque la mise à jour à chaud est activée, le compilateur s’assure que la première instruction de chaque fonction est de deux octets, comme requis pour la mise à jour corrective à chaud. Définit [/hotpatch](hotpatch-create-hotpatchable-image.md).
+Lorsque la mise à jour à chaud est activée, le compilateur s’assure que la première instruction de chaque fonction est de deux octets, comme requis pour la mise à jour corrective à chaud. Définit [`/hotpatch`](hotpatch-create-hotpatchable-image.md) .
 
 ### <a name="spectre-mitigation"></a>Atténuation de spectre
 
@@ -317,11 +317,11 @@ Active ou supprime le mode de conformité. Définit [`/permissive-`](permissive-
 
 ### <a name="treat-wchar_t-as-built-in-type"></a>Traiter wchar_t comme type intégré
 
-Lorsqu’il est spécifié, le type **`wchar_t`** devient un type natif qui est mappé à **`__wchar_t`** de la même façon que **`short`** **`__int16`** . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md)est activé par défaut.
+Lorsqu’il est spécifié, le type **`wchar_t`** devient un type natif qui est mappé à **`__wchar_t`** de la même façon que **`short`** **`__int16`** . [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md) est activé par défaut.
 
 ### <a name="force-conformance-in-for-loop-scope"></a>Conformité forcée dans la portée de la boucle for
 
-Utilisé pour implémenter le comportement C++ standard pour les boucles for de l’instruction for avec les extensions Microsoft. Définit [ `/Za` `/Ze` (désactive les extensions de langage)](za-ze-disable-language-extensions.md). [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md)est activé par défaut.
+Implémente le comportement C++ standard pour l' `for` instruction effectue une boucle avec les extensions Microsoft. Définit [ `/Za` `/Ze` (désactive les extensions de langage)](za-ze-disable-language-extensions.md). [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md) est activé par défaut.
 
 ### <a name="remove-unreferenced-code-and-data"></a>Supprimer le code et les données non référencés
 
@@ -329,11 +329,11 @@ Lorsqu’il est spécifié, le compilateur ne génère plus d’informations de 
 
 ### <a name="enforce-type-conversion-rules"></a>Appliquer les règles de conversion de type
 
-Utilisé pour identifier un type de référence rvalue à la suite d’une opération de conversion par la norme C++ 11.
+Utilisé pour identifier un type de référence rvalue à la suite d’une opération de conversion en fonction de la norme C++ 11.
 
 ### <a name="enable-run-time-type-information"></a>Activer les informations de type au moment de l’exécution
 
-Ajoute le code permettant de vérifier les types d’objet C++ à l’exécution (informations de type au moment de l’exécution). Définit [ `/GR` , `/GR-` ](gr-enable-run-time-type-information.md).
+Ajoute du code pour la vérification des types d’objet C++ au moment de l’exécution (*informations sur le type d’exécution*, ou RTTI). Définit [ `/GR` , `/GR-` ](gr-enable-run-time-type-information.md).
 
 ### <a name="open-mp-support"></a>Prise en charge des PACKs d’ouverture
 
@@ -362,8 +362,8 @@ Active la création ou l’utilisation d’un en-tête précompilé pendant la g
 
 #### <a name="choices"></a>Choices
 
-- **Créer** : indique au compilateur de créer un fichier d’en-tête précompilé (. pch) qui représente l’état de la compilation à un moment donné.
-- **Use** -indique au compilateur d’utiliser un fichier d’en-tête précompilé (. pch) existant dans la compilation actuelle.
+- **Créer** -indique au compilateur de créer un fichier d’en-tête précompilé ( *`.pch`* ) qui représente l’état de la compilation à un moment donné.
+- **Use** -indique au compilateur d’utiliser un fichier d’en-tête précompilé ( *`.pch`* ) existant dans la compilation actuelle.
 - **N’utilise pas les en-têtes précompilés** , sans utiliser les en-têtes précompilés.
 
 ### <a name="precompiled-header-file"></a>Fichier d’en-tête précompilé
@@ -387,10 +387,10 @@ Spécifie le contenu du fichier de sortie linguistique de l’assembly. Définit
 #### <a name="choices"></a>Choices
 
 - **Aucune liste** -aucune liste.
-- **Listing assembleur uniquement** -code assembleur ;*`.asm`*
-- **Assembly avec** l’ordinateur de code machine et le code assembleur ;*`.cod`*
-- **Assembly avec code source** source et code assembleur ;*`.asm`*
-- **Assembly, code machine et** assembly source, code machine et code source ;*`.cod`*
+- **Listing assembleur uniquement** -code assembleur ; *`.asm`*
+- **Assembly avec** l’ordinateur de code machine et le code assembleur ; *`.cod`*
+- **Assembly avec code source** source et code assembleur ; *`.asm`*
+- **Assembly, code machine et** assembly source, code machine et code source ; *`.cod`*
 
 ### <a name="use-unicode-for-assembler-listing"></a>Utiliser Unicode pour la liste des assembleurs
 
@@ -434,10 +434,10 @@ Sélectionnez la Convention d’appel par défaut pour votre application (peut �
 
 #### <a name="choices"></a>Choices
 
-- **`__cdecl`**-Spécifie la **`__cdecl`** Convention d’appel pour toutes les fonctions, à l’exception des fonctions membres C++ et des fonctions marquées **`__stdcall`** ou **`__fastcall`** .
-- **`__fastcall`**-Spécifie la **`__fastcall`** Convention d’appel pour toutes les fonctions, à l’exception des fonctions membres C++ et des fonctions marquées **`__cdecl`** ou **`__stdcall`** . Toutes les **`__fastcall`** fonctions doivent avoir des prototypes.
-- **`__stdcall`**-Spécifie la **`__stdcall`** Convention d’appel pour toutes les fonctions, à l’exception des fonctions membres C++ et des fonctions marquées **`__cdecl`** ou **`__fastcall`** . Toutes les **`__stdcall`** fonctions doivent avoir des prototypes.
-- **`__vectorcall`**-Spécifie la **`__vectorcall`** Convention d’appel pour toutes les fonctions, à l’exception des fonctions membres C++ et des fonctions marquées **`__cdecl`** , **`__fastcall`** ou **`__stdcall`** . Toutes les **`__vectorcall`** fonctions doivent avoir des prototypes.
+- **`__cdecl`** -Spécifie la **`__cdecl`** Convention d’appel pour toutes les fonctions, à l’exception des fonctions membres C++ et des fonctions marquées **`__stdcall`** ou **`__fastcall`** .
+- **`__fastcall`** -Spécifie la **`__fastcall`** Convention d’appel pour toutes les fonctions, à l’exception des fonctions membres C++ et des fonctions marquées **`__cdecl`** ou **`__stdcall`** . Toutes les **`__fastcall`** fonctions doivent avoir des prototypes.
+- **`__stdcall`** -Spécifie la **`__stdcall`** Convention d’appel pour toutes les fonctions, à l’exception des fonctions membres C++ et des fonctions marquées **`__cdecl`** ou **`__fastcall`** . Toutes les **`__stdcall`** fonctions doivent avoir des prototypes.
+- **`__vectorcall`** -Spécifie la **`__vectorcall`** Convention d’appel pour toutes les fonctions, à l’exception des fonctions membres C++ et des fonctions marquées **`__cdecl`** , **`__fastcall`** ou **`__stdcall`** . Toutes les **`__vectorcall`** fonctions doivent avoir des prototypes.
 
 ### <a name="compile-as"></a>Compiler en
 
