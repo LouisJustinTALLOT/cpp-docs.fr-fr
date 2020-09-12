@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: f06e181a4fe6683adb0cc63c016cbd879f2fc574
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281807"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039808"
 ---
 # <a name="ltbitgt-functions"></a>&lt;fonctions de bits &gt;
 
@@ -74,7 +74,7 @@ Type de la valeur à convertir.
 *De*\
 Valeur à convertir.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 Objet de type `To`.
 
@@ -101,7 +101,7 @@ float f = inf
 std::bit_cat<int>(f) = 7f800000
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le code de bas niveau doit souvent interpréter un objet d’un type comme un autre type. L’objet réinterprété a la même représentation de bit que l’original, mais il s’agit d’un type différent.
 
@@ -111,7 +111,7 @@ Au lieu d’utiliser `reinterpret_cast` , ou `memcpy()` , `bit_cast()` est un me
 
 Cette surcharge participe uniquement à la résolution de surcharge dans les cas suivants :
 -  `sizeof(To) == sizeof(From)`
-- `To` et `From` sont [is_trivially_copyable](https://docs.microsoft.com/cpp/standard-library/is-trivially-copyable-class?view=vs-2019`).
+- `To` et `From` sont [is_trivially_copyable](is-trivially-copyable-class.md).
 
 Ce modèle de fonction est `constexpr` si et seulement si `To` , et `From` les types de leurs sous-objets sont :
 - n’est pas un type d’Union ou de pointeur
@@ -133,7 +133,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
  Puissance la plus petite de deux supérieure ou égale à `value` .
 
@@ -165,7 +165,7 @@ bit_ceil(0b0100) = 0b0100
 bit_ceil(0b0101) = 0b1000
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -183,7 +183,7 @@ template< class T >
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 La plus grande puissance de deux qui n’est pas supérieure à `value` . \
 Si `value` est égal à zéro, retourne zéro.
@@ -216,7 +216,7 @@ bit_floor(0b0100) = 0b0100
 bit_floor(0b0101) = 0b0100
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -236,7 +236,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 Nombre de bits nécessaires pour représenter `value` . \
 Si `value` est égal à zéro, retourne zéro.
@@ -270,7 +270,7 @@ bit_width(7) = 3
 bit_width(8) = 4
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -288,7 +288,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 Nombre de bits nuls consécutifs, à partir du bit le plus significatif. \
 Si `value` est égal à zéro, nombre de bits dans le type de `value` .
@@ -323,7 +323,7 @@ countl_zero(0b01000000) = 1
 countl_zero(0b10000000) = 0
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -341,7 +341,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 Nombre de bits consécutifs définis sur un, à partir du bit le plus significatif.
 
@@ -376,7 +376,7 @@ countl_one(0b11111110) = 7
 countl_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -394,7 +394,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 Nombre de bits nuls consécutifs, à partir du bit le moins significatif. \
 Si `value` est égal à zéro, nombre de bits dans le type de `value` .
@@ -430,7 +430,7 @@ countr_zero(0b01000000) = 6
 countr_zero(0b10000000) = 7
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -448,7 +448,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 Nombre de bits consécutifs définis sur un, à partir du bit le moins significatif.
 
@@ -483,7 +483,7 @@ countr_one(0b01111111) = 7
 countr_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -501,7 +501,7 @@ template <class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 `true` Si `value` a un seul jeu de bits, ce qui signifie également qu' `value` il s’agit d’une puissance de deux. Sinon, `false`.
 
@@ -537,7 +537,7 @@ has_single_bit(0b1000) = true
 has_single_bit(0b1001) = false
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -555,7 +555,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 Nombre de bits défini sur un dans `value` .
 
@@ -596,7 +596,7 @@ popcount(0b1110) = 3
 popcount(0b1111) = 4
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -617,7 +617,7 @@ Valeur entière non signée à faire pivoter.
 *x*\
 Nombre de rotations gauches à effectuer.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 Résultat de rotation `value` gauche, `s` heures.
 Si `s` est égal à zéro, retourne `value` . \
@@ -658,7 +658,7 @@ rotl(0b10000000, 1) = 0b00000001
 rotl(0b00000001,-1) = 0b10000000
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -679,7 +679,7 @@ Valeur entière non signée à faire pivoter.
 *x*\
 Nombre de rotations appropriées à effectuer.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur de retour
 
 Résultat de rotation de `value` droite, d' `s` heures.
 Si `s` est égal à zéro, retourne `value` . \
@@ -720,7 +720,7 @@ rotr(0b00000001, 1) = 0b10000000
 rotr(0b10000000,-1) = 0b00000001
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction de modèle participe uniquement à la résolution de surcharge si `T` est un type entier non signé. Par exemple :,,,, `unsigned int` `unsigned long` `unsigned short` `unsigned char` et ainsi de suite.
 
@@ -730,7 +730,7 @@ Cette fonction de modèle participe uniquement à la résolution de surcharge si
 
 **Espace de noms :** std
 
-`/std:c++latest` est obligatoire
+[/std : c + + latest](../build/reference/std-specify-language-standard-version.md) est requis.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: f85f9b397ef3ab5bd070be1f4c81845405b14020
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a8ae885bbbf00ae916505bf5df646b32268a17a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234378"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040910"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Spécifier le comportement de virgule flottante)
 
@@ -43,11 +43,11 @@ Si votre code à virgule flottante ne dépend pas de l’ordre des opérations e
 
 #### <a name="strict"></a>strict
 
-`/fp:strict`a un comportement semblable à `/fp:precise` , autrement dit, le compilateur conserve les propriétés d’arrondi et de classement de la source de code à virgule flottante lorsqu’il génère et optimise le code de l’objet pour l’ordinateur cible, et observe la norme lors du traitement des valeurs spéciales. En outre, le programme peut accéder à l’environnement à virgule flottante ou le modifier en toute sécurité au moment de l’exécution.
+`/fp:strict` a un comportement semblable à `/fp:precise` , autrement dit, le compilateur conserve les propriétés d’arrondi et de classement de la source de code à virgule flottante lorsqu’il génère et optimise le code de l’objet pour l’ordinateur cible, et observe la norme lors du traitement des valeurs spéciales. En outre, le programme peut accéder à l’environnement à virgule flottante ou le modifier en toute sécurité au moment de l’exécution.
 
 Sous `/fp:strict` , le compilateur génère du code qui permet au programme de masquer en toute sécurité des exceptions de virgule flottante, de lire ou d’écrire des registres d’État à virgule flottante ou de modifier les modes d’arrondi. Il arrondit à la précision du code source à quatre points spécifiques pendant l’évaluation de l’expression : aux assignations, à conversions, lorsqu’un argument à virgule flottante est passé à un appel de fonction, et lorsqu’une valeur à virgule flottante est retournée à partir d’un appel de fonction. Les calculs intermédiaires peuvent être effectués au niveau de la précision de l’ordinateur. Conversions peut être utilisé pour arrondir explicitement des calculs intermédiaires. Le compilateur n’effectue pas de transformations algébriques sur les expressions à virgule flottante, telles que la réassociation ou la distribution, sauf si la transformation est garantie pour produire un résultat identique au niveau du bit. Les expressions qui impliquent des valeurs spéciales (NaN, + Infinity,-Infinity,-0,0) sont traitées conformément aux spécifications IEEE-754. Par exemple, `x != x` prend la valeur **`true`** si x est NaN. Les contractions à virgule flottante ne sont pas générées sous `/fp:strict` .
 
-`/fp:strict`le calcul est plus coûteux que `/fp:precise` parce que le compilateur doit insérer des instructions supplémentaires pour intercepter les exceptions et autoriser les programmes à accéder ou à modifier l’environnement à virgule flottante au moment de l’exécution. Si votre code n’utilise pas cette fonctionnalité, mais requiert le classement et l’arrondi du code source, ou s’appuie sur des valeurs spéciales, utilisez `/fp:precise` . Sinon, envisagez d’utiliser `/fp:fast` , qui peut produire du code plus rapide et plus petit.
+`/fp:strict` le calcul est plus coûteux que `/fp:precise` parce que le compilateur doit insérer des instructions supplémentaires pour intercepter les exceptions et autoriser les programmes à accéder ou à modifier l’environnement à virgule flottante au moment de l’exécution. Si votre code n’utilise pas cette fonctionnalité, mais requiert le classement et l’arrondi du code source, ou s’appuie sur des valeurs spéciales, utilisez `/fp:precise` . Sinon, envisagez d’utiliser `/fp:fast` , qui peut produire du code plus rapide et plus petit.
 
 #### <a name="fast"></a>fast
 
@@ -55,7 +55,7 @@ L' `/fp:fast` option permet au compilateur de réorganiser, combiner ou simplifi
 
 Sous `/fp:fast` , le compilateur génère du code destiné à s’exécuter dans l’environnement à virgule flottante par défaut et suppose que l’environnement à virgule flottante n’est pas accessible ou modifié au moment de l’exécution. Autrement dit, il suppose que le code ne masque pas les exceptions à virgule flottante, ne lit ou n’écrit pas les registres d’État à virgule flottante, ni ne modifie les modes d’arrondi.
 
-`/fp:fast`est destiné aux programmes qui ne nécessitent pas un classement et un arrondi de code source stricts des expressions à virgule flottante, et ne s’appuient pas sur les règles standard pour gérer des valeurs spéciales telles que NaN. Si votre code à virgule flottante requiert la préservation du classement et de l’arrondi du code source, ou s’appuie sur le comportement standard des valeurs spéciales, utilisez [/FP : precise](#precise). Si votre code accède à l’environnement à virgule flottante ou le modifie pour modifier les modes d’arrondi, afficher les exceptions à virgule flottante ou vérifier l’état de la virgule flottante, utilisez [/FP : strict](#strict).
+`/fp:fast` est destiné aux programmes qui ne nécessitent pas un classement et un arrondi de code source stricts des expressions à virgule flottante, et ne s’appuient pas sur les règles standard pour gérer des valeurs spéciales telles que NaN. Si votre code à virgule flottante requiert la préservation du classement et de l’arrondi du code source, ou s’appuie sur le comportement standard des valeurs spéciales, utilisez [/FP : precise](#precise). Si votre code accède à l’environnement à virgule flottante ou le modifie pour modifier les modes d’arrondi, afficher les exceptions à virgule flottante ou vérifier l’état de la virgule flottante, utilisez [/FP : strict](#strict).
 
 #### <a name="except"></a>mais
 
@@ -63,7 +63,7 @@ L' `/fp:except` option génère du code pour s’assurer que toutes les exceptio
 
 Notez que `/fp:except` ne permet pas d’effectuer des exceptions à virgule flottante en soi, mais il est requis pour que les programmes activent les exceptions de virgule flottante. Pour plus d’informations sur l’activation des exceptions de virgule flottante, consultez [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) .
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Plusieurs `/fp` options peuvent être spécifiées dans la même ligne de commande du compilateur. Une seule des `/fp:strict` `/fp:fast` options, et `/fp:precise` peut être appliquée à la fois. Si plusieurs de ces options sont spécifiées sur la ligne de commande, l’option la plus récente est prioritaire et le compilateur génère un avertissement. Les `/fp:strict` options et ne `/fp:except` sont pas compatibles avec `/clr` .
 
@@ -73,11 +73,11 @@ L’option [/za](za-ze-disable-language-extensions.md) (compatibilité ANSI) n�
 
 Le compilateur fournit trois directives pragma pour remplacer le comportement à virgule flottante spécifié sur la ligne de commande : [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md)et [fp_contract](../../preprocessor/fp-contract.md). Vous pouvez utiliser ces directives pour contrôler le comportement à virgule flottante au niveau de la fonction, et non dans une fonction. Notez que ces directives ne correspondent pas directement aux `/fp` options. Ce tableau montre comment les `/fp` directives de pragma et les options sont mappées entre elles. Pour plus d’informations, consultez la documentation relative aux options individuelles et aux directives pragma.
 
-||float_control (précision)|float_control (sauf)|fenv_access|fp_contract|
+| Option | float_control (précision) | float_control (sauf) | fenv_access | fp_contract |
 |-|-|-|-|-|
-|`/fp:fast`|arrêt|arrêt|arrêt|sur|
-|`/fp:precise`|sur|arrêt|arrêt|sur|
-|`/fp:strict`|sur|sur|sur|arrêt|
+|`/fp:fast`|arrêt|arrêt|arrêt|on|
+|`/fp:precise`|sur|arrêt|arrêt|on|
+|`/fp:strict`|on|on|sur|arrêt|
 
 ### <a name="the-default-floating-point-environment"></a>Environnement à virgule flottante par défaut
 

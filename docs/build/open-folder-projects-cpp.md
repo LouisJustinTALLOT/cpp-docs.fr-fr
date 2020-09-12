@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d9f59817a499f4d529363c88adc57154268c0bc
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229803"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039584"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Prise en charge de la fonctionnalité Dossier ouvert pour les systèmes de génération C++ dans Visual Studio
 
@@ -31,7 +31,7 @@ CMake est intégré à l’IDE de Visual Studio en tant que composant de la char
 
 Pour utiliser l’IDE de Visual Studio avec un système de génération ou un ensemble d’outils du compilateur qui n’est pas directement pris en charge à partir du menu principal, sélectionnez **fichier | Ouvrir | Ou appuyez** sur **Ctrl + Maj + Alt + O**. Accédez au dossier qui contient vos fichiers de code source. Pour générer le projet, configurer IntelliSense et définir des paramètres de débogage, vous ajoutez trois fichiers JSON :
 
-| | |
+| Fichier | Description |
 |-|-|
 |CppProperties.json|Spécifiez les informations de configuration personnalisées pour la navigation. Si nécessaire, créez ce fichier dans votre dossier de projet racine. (Non utilisé dans les projets CMake.)|
 |tasks.vs.json|Spécifiez les commandes de génération personnalisées. Accessible via l’option **Configurer les tâches** du menu contextuel de l’**Explorateur de solutions**.|
@@ -179,7 +179,7 @@ Pour plus d’informations, consultez [Informations de référence sur le schém
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurer les paramètres de débogage avec launch.vs.json
 
-Pour personnaliser les arguments de ligne de commande et les instructions de débogage de votre programme, cliquez avec le bouton droit sur le fichier exécutable dans **Explorateur de solutions** et sélectionnez **paramètres de débogage et de lancement**. Cela ouvre unlaunch.vs.jsexistant *sur le* fichier, ou s’il n’en existe aucun, il crée un nouveau fichier avec un ensemble de paramètres de lancement minimal. Tout d’abord, vous avez le choix du type de session de débogage que vous souhaitez configurer. Pour déboguer un projet MinGw-W64, nous choisissons le **lancement de C/C++ pour MinGw/Cygwin (GDB)**. Cela permet de créer une configuration de lancement pour l’utilisation de *gdb.exe* avec certaines hypothèses sur les valeurs par défaut. L’une de ces valeurs par défaut est `MINGW_PREFIX` . Vous pouvez substituer le chemin d’accès littéral (comme indiqué ci-dessous) ou vous pouvez définir une `MINGW_PREFIX` propriété dans *CppProperties.jssur*:
+Pour personnaliser les arguments de ligne de commande et les instructions de débogage de votre programme, cliquez avec le bouton droit sur le fichier exécutable dans **Explorateur de solutions** et sélectionnez **paramètres de débogage et de lancement**. Cela ouvre unlaunch.vs.jsexistant * sur le* fichier, ou s’il n’en existe aucun, il crée un nouveau fichier avec un ensemble de paramètres de lancement minimal. Tout d’abord, vous avez le choix du type de session de débogage que vous souhaitez configurer. Pour déboguer un projet MinGw-W64, nous choisissons le **lancement de C/C++ pour MinGw/Cygwin (GDB)**. Cela permet de créer une configuration de lancement pour l’utilisation de *gdb.exe* avec certaines hypothèses sur les valeurs par défaut. L’une de ces valeurs par défaut est `MINGW_PREFIX` . Vous pouvez substituer le chemin d’accès littéral (comme indiqué ci-dessous) ou vous pouvez définir une `MINGW_PREFIX` propriété dans *CppProperties.jssur*:
 
 ```json
 {

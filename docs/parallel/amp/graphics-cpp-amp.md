@@ -2,12 +2,12 @@
 title: Graphiques (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f68766c2c38b74df6e57aaa52419baf5d1151a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182809"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041456"
 ---
 # <a name="graphics-c-amp"></a>Graphiques (C++ AMP)
 
@@ -27,7 +27,7 @@ Les `norm` `unorm` types et sont des types scalaires qui limitent la plage de **
 
 La bibliothèque de vecteurs courts fournit certaines fonctionnalités du [type de vecteur](https://go.microsoft.com/fwlink/p/?linkid=248500) défini en HLSL et est généralement utilisée pour définir des texels. Un vecteur court est une structure de données contenant une à quatre valeurs du même type. Les types pris en charge sont,,,, **`double`** **`float`** **`int`** `norm` `uint` et `unorm` . Les noms des types sont affichés dans le tableau suivant. Pour chaque type, il existe également un correspondant **`typedef`** qui n’a pas de trait de soulignement dans le nom. Les types qui ont les traits de soulignement se trouvent dans l' [espace de noms Concurrency :: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Les types qui n’ont pas de traits de soulignement se trouvent dans l' [espace de noms Concurrency :: Graphics ::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) afin qu’ils soient clairement séparés des types fondamentaux nommés de la même façon, tels que **`__int8`** et **`__int16`** .
 
-||Length 2|Longueur 3|Longueur 4|
+|Type|Length 2|Longueur 3|Longueur 4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
@@ -342,7 +342,7 @@ Notez comment une vue de texture dont le type d'élément est non const avec un 
 
 Le type d'élément d'une `texture_view` (son attribut const/non const et aussi le nombre de composants qu'il comporte) joue également un rôle pour déterminer si la vue prend en charge l'échantillonnage, et comment les niveaux de mipmap sont accessibles :
 
-|Type|Components|Lire|Write|échantillonnage|Accès aux mipmaps|
+|Type|Composants|Lire|Write|échantillonnage|Accès aux mipmaps|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N>|1, 2, 4|Oui|Non (1)|Oui|Oui, indexable. La plage est déterminée à l'instanciation.|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|Oui<br /><br /> Non (2)|Oui<br /><br /> Oui|Non (1)<br /><br /> Non (1)|Oui, un niveau. Le niveau est déterminé à l'instanciation.<br /><br /> Oui, un niveau. Le niveau est déterminé à l'instanciation.|

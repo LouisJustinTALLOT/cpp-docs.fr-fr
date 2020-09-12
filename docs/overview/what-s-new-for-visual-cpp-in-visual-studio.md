@@ -1,20 +1,21 @@
 ---
 title: Nouveautés de C++ dans Visual Studio
+description: Les nouvelles fonctionnalités et les correctifs du compilateur et des outils Microsoft C/C++ dans Visual Studio.
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
-ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
+ms.openlocfilehash: 1a0fc228b6c91b1e529db6676c1a1193f5db99e1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88144176"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041677"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Nouveautés de C++ dans Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 comprend un grand nombre de mises à jour et de correctifs de l’environnement Microsoft C++. Nous avons résolu plusieurs bogues et problèmes dans le compilateur et les outils. Beaucoup de ces problèmes ont été soumis par des clients via les options [Signaler un problème](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019) et [Faire une suggestion](https://developercommunity.visualstudio.com/spaces/62/index.html) sous **Envoyer des commentaires**. Merci d’avoir signalé ces bogues. Pour plus d’informations sur l’ensemble des nouveautés de Visual Studio, visitez [Nouveautés de Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2017, consultez [Nouveautés de C++ dans Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2015 et versions antérieures, consultez [Nouveautés de Visual C++ entre 2003 et 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+Visual Studio 2019 comprend un grand nombre de mises à jour et de correctifs de l’environnement Microsoft C++. Nous avons résolu plusieurs bogues et problèmes dans le compilateur et les outils. Beaucoup de ces problèmes ont été soumis par des clients via les options [Signaler un problème](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) et [Faire une suggestion](https://developercommunity.visualstudio.com/spaces/62/index.html) sous **Envoyer des commentaires**. Merci d’avoir signalé ces bogues. Pour plus d’informations sur l’ensemble des nouveautés de Visual Studio, visitez [Nouveautés de Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2017, consultez [Nouveautés de C++ dans Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2015 et versions antérieures, consultez [Nouveautés de Visual C++ entre 2003 et 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
 
 ## <a name="c-compiler"></a>compilateur C++
 
@@ -46,7 +47,7 @@ Analyse améliorée avec `/Qspectre` afin de fournir une aide à l’atténuatio
 
 - Ajout de la prise en charge de base de la vectorisation SIMD OpenMP. Vous pouvez l’activer à l’aide du nouveau commutateur du compilateur **`/openmp:experimental`** . Cette option permet la vectorisation potentielle des boucles annotées avec `#pragma omp simd`. La vectorisation n’est pas garantie, et les boucles annotées mais pas vectorisées génèrent un avertissement. Aucune clause SIMD n’est prise en charge ; elles sont ignorées et un avertissement est émis.
 
-- Ajout d’un nouveau commutateur de ligne de commande inline **`/Ob3`** , qui est une version plus agressive de **`/Ob2`** . **`/O2`**(optimiser le binaire pour la vitesse) implique toujours **`/Ob2`** par défaut. Si vous constatez que le compilateur n’est pas Inline assez agressivement, envisagez de passer **`/O2 -Ob3`** .
+- Ajout d’un nouveau commutateur de ligne de commande inline **`/Ob3`** , qui est une version plus agressive de **`/Ob2`** . **`/O2`** (optimiser le binaire pour la vitesse) implique toujours **`/Ob2`** par défaut. Si vous constatez que le compilateur n’est pas Inline assez agressivement, envisagez de passer **`/O2 -Ob3`** .
 
 - Nous avons ajouté la prise en charge des fonctions intrinsèques SVML (Short Vector Math Library). Ces fonctions calculent les vecteurs équivalents 128 bits, 256 bits ou 512 bits. Nous les avons ajoutés pour prendre en charge la vectorisation manuelle des boucles avec des appels aux fonctions de bibliothèque mathématique, et certaines autres opérations telles que la Division d’entier. Pour obtenir les définitions des fonctions prises en charge, consultez le [Guide des intrinsèques Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#!=undefined&techs=SVML).
 
@@ -231,7 +232,7 @@ Le composant expérimental Clang/C2 a été supprimé. Utilisez l’ensemble d�
 
 - Nouveaux correctifs rapides pour des vérifications de variables non initialisées. Pour en savoir plus, voir [Nouveaux correctifs rapides d’analyse de code pour la mémoire non initialisée (C6001) et les avertissements d’utilisation avant init (C26494)](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/).
 
-## <a name="unit-testing"></a>Test unitaire
+## <a name="unit-testing"></a>Test des unités
 
 Le modèle de projet de test C++ managé n’est plus disponible. Vous pouvez continuer à utiliser le framework de test C++ managé dans vos projets existants. Pour les nouveaux tests unitaires, utilisez un des frameworks de test natifs pour lesquels Visual Studio fournit des modèles (MSTest, Google Test) ou le modèle de projet de test C# managé.
 
@@ -239,7 +240,7 @@ Le modèle de projet de test C++ managé n’est plus disponible. Vous pouvez co
 
 ::: moniker range="=vs-2017"
 
-Visual Studio 2017 comprend un grand nombre de mises à jour et de correctifs de l’environnement C++. Nous avons corrigé plus de 250 bogues et signalé des problèmes dans le compilateur et les outils. Un grand nombre d’entre eux ont été envoyés par les clients par le biais du [rapport un problème et fournissent des options de suggestion](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017) sous **Envoyer des commentaires**. Merci d’avoir signalé ces bogues. Pour plus d’informations sur l’ensemble des nouveautés de Visual Studio, visitez [Nouveautés de Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2019, consultez [Nouveautés de C++ dans Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2015 et versions antérieures, consultez [Nouveautés de Visual C++ entre 2003 et 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
+Visual Studio 2017 comprend un grand nombre de mises à jour et de correctifs de l’environnement C++. Nous avons corrigé plus de 250 bogues et signalé des problèmes dans le compilateur et les outils. Un grand nombre d’entre eux ont été envoyés par les clients par le biais du [rapport un problème et fournissent des options de suggestion](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) sous **Envoyer des commentaires**. Merci d’avoir signalé ces bogues. Pour plus d’informations sur l’ensemble des nouveautés de Visual Studio, visitez [Nouveautés de Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2019, consultez [Nouveautés de C++ dans Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2015 et versions antérieures, consultez [Nouveautés de Visual C++ entre 2003 et 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015).
 
 ## <a name="visual-studio-2017-c-compiler"></a>Compilateur C++ Visual Studio 2017
 
@@ -257,7 +258,7 @@ L’ensemble d’outils du compilateur MSVC dans Visual Studio version 15.7 est 
 
 ##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 version 15.8
 
-Le [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) commutateur du compilateur active le nouveau préprocesseur MSVC expérimental qui finit par se conformer à toutes les normes C et C++ applicables. Pour plus d’informations, consultez [vue d’ensemble du préprocesseur expérimental MSVC](../preprocessor/preprocessor-experimental-overview.md).
+Le [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) commutateur du compilateur active le nouveau préprocesseur MSVC expérimental qui finit par se conformer à toutes les normes C et C++ applicables. Pour plus d’informations, consultez [vue d’ensemble du nouveau préprocesseur MSVC](../preprocessor/preprocessor-experimental-overview.md).
 
 ### <a name="new-compiler-options"></a>Nouvelles options du compilateur
 
@@ -273,7 +274,7 @@ Le [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.m
 
 - [ `/std:c++14` et `/std:c++latest` ](../build/reference/std-specify-language-standard-version.md): ces options du compilateur vous permettent de vous abonner à des versions spécifiques du langage de programmation ISO C++ dans un projet. La plupart des nouvelles fonctionnalités standard sont protégées par l' **`/std:c++latest`** option.
 
-- [`/std:c++17`](../build/reference/std-specify-language-standard-version.md)active l’ensemble des fonctionnalités C++ 17 implémentées par le compilateur. Cette option désactive la prise en charge du compilateur et de la bibliothèque standard pour les fonctionnalités après C++ 17 : celles qui sont modifiées ou nouvelles dans les versions ultérieures du brouillon de travail, ainsi que les mises à jour de défauts de la norme C++. Pour activer ces fonctionnalités, utilisez **`/std:c++latest`** .
+- [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) active l’ensemble des fonctionnalités C++ 17 implémentées par le compilateur. Cette option désactive la prise en charge du compilateur et de la bibliothèque standard pour les fonctionnalités après C++ 17 : celles qui sont modifiées ou nouvelles dans les versions ultérieures du brouillon de travail, ainsi que les mises à jour de défauts de la norme C++. Pour activer ces fonctionnalités, utilisez **`/std:c++latest`** .
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen, sécurité, diagnostics et gestion des versions
 
@@ -328,7 +329,7 @@ Il existe d’autres améliorations de la bibliothèque standard dans Visual Stu
 - Les `for_each_n()` `generate_n()` `search_n()` algorithmes, et n’ont pas pu être compilés précédemment si l’argument de longueur n’était pas un type intégral. Ils tentent désormais de convertir les longueurs non intégrales en itérateurs `difference_type` .
 - `normal_distribution<float>` n’émet plus d’avertissements dans la bibliothèque standard à propos des conversions restrictives de double en float.
 - Correction de certaines opérations `basic_string` qui utilisaient `npos` au lieu de `max_size()` lors de la vérification du dépassement de la taille maximale.
-- `condition_variable::wait_for(lock, relative_time, predicate)`attend l’heure relative entière s’il y avait une sortie parasite. À présent, il attend uniquement un seul intervalle de l’heure relative.
+- `condition_variable::wait_for(lock, relative_time, predicate)` attend l’heure relative entière s’il y avait une sortie parasite. À présent, il attend uniquement un seul intervalle de l’heure relative.
 - `future::get()` invalide désormais `future`, conformément au standard.
 - `iterator_traits<void *>` constituait une erreur matérielle, car il tentait de former `void&` ; il devient désormais une structure vide sans erreur pour permettre l’utilisation de `iterator_traits` dans les conditions SFINAE « is iterator ».
 - Certains avertissements signalés par Clang **-wsystem-headers** ont été corrigés.
@@ -340,7 +341,7 @@ Il existe d’autres améliorations de la bibliothèque standard dans Visual Stu
 - La bibliothèque standard applique désormais un `value_type` d’allocateur correspondant (en mode C++17) avec une hachure d’échappement de refus.
 - Correction de certaines conditions où self-range-insert dans `basic_string` désorganisait le contenu des chaînes. (Remarque : self-range-insert dans vectors est toujours interdit par la norme.)
 - `basic_string::shrink_to_fit()` n’est plus affecté par le `propagate_on_container_swap` de l’allocateur.
-- `std::decay`gère désormais des types de fonctions abominable, autrement dit des types de fonction CV, Ref-Qualified, ou les deux.
+- `std::decay` gère désormais des types de fonctions abominable, autrement dit des types de fonction CV, Ref-Qualified, ou les deux.
 - Modification des directives include pour utiliser la casse appropriée et des barres obliques, et améliorer la portabilité.
 - Correction de l’avertissement C4061 « L’énumérateur *énumérateur* dans le switch de l’énumération *énumération* n’est pas géré explicitement par une étiquette case ». Cet avertissement est désactivé par défaut et a été résolu en tant qu’exception à la stratégie générale de la bibliothèque standard pour les avertissements. (La bibliothèque standard est **`/W4`** propre, mais ne tente pas d’être **`/Wall`** nettoyée. De nombreux avertissements désactivés par défaut sont rarement bruyants et ne sont pas destinés à être utilisés régulièrement.)
 - Amélioration des vérifications du débogage de `std::list`. Les itérateurs de liste vérifient désormais `operator->()`, et `list::unique()` marque maintenant les itérateurs comme non validés.
@@ -348,13 +349,13 @@ Il existe d’autres améliorations de la bibliothèque standard dans Visual Stu
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
-- `std::partition`appelle maintenant le prédicat `N` au lieu de `N + 1` Times, comme le requiert la norme.
+- `std::partition` appelle maintenant le prédicat `N` au lieu de `N + 1` Times, comme le requiert la norme.
 - Les tentatives pour éviter les statiques magic dans la version 15.3 ont été résolues dans la version 15.5.
 - `std::atomic<T>` ne nécessite plus que `T` soit constructible par défaut.
 - Les algorithmes de tas qui prennent un temps logarithmique se comportent différemment quand le débogage d’itérateur est activé. Ils n’effectuent plus d’assertion de temps linéaire indiquant que l’entrée est en fait un tas.
 - `__declspec(allocator)` est maintenant protégé pour C1XX uniquement, afin d’éviter la génération d’avertissements par Clang qui ne comprend pas ce declspec.
 - `basic_string::npos` est maintenant disponible comme constante au moment de la compilation.
-- `std::allocator`en mode C++ 17 gère désormais correctement l’allocation des types sur-alignés, autrement dit des types dont l’alignement est supérieur à `max_align_t` , sauf s’ils sont désactivés par **`/Zc:alignedNew-`** .  Par exemple, des vecteurs d’objets avec un alignement de 16 ou de 32 octets sont désormais correctement alignés pour les instructions SSE et AVX.
+- `std::allocator` en mode C++ 17 gère désormais correctement l’allocation des types sur-alignés, autrement dit des types dont l’alignement est supérieur à `max_align_t` , sauf s’ils sont désactivés par **`/Zc:alignedNew-`** .  Par exemple, des vecteurs d’objets avec un alignement de 16 ou de 32 octets sont désormais correctement alignés pour les instructions SSE et AVX.
 
 ### <a name="conformance-improvements"></a>Améliorations de la conformité
 
@@ -414,7 +415,7 @@ Pour plus d’informations, consultez [table de conformité du langage Microsoft
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 version 15.7
 
 - La prise en charge des algorithmes parallèles n’est plus expérimentale
-- Une nouvelle implémentation de\<filesystem>
+- Une nouvelle implémentation de \<filesystem>
 - Conversions de chaînes élémentaires (état partiel)
 - `std::launder()`
 - `std::byte`
@@ -431,7 +432,7 @@ Pour plus d’informations, consultez [table de conformité du langage Microsoft
 - Modification des surcharges `basic_string::find(char)` pour appeler `traits::find` une seule fois. Auparavant, cela était implémenté comme une recherche de chaîne générale d’une chaîne de longueur 1.
 - `basic_string::operator==` vérifie désormais la taille de la chaîne avant de comparer le contenu des chaînes.
 - Suppression du couplage des contrôles dans `basic_string`, qui rendait difficile l’analyse par l’optimiseur du compilateur. Pour toutes les chaînes courtes, l’appel de `reserve` a toujours un coût non nul pour ne rien faire.
-- `std::vector`a été repensée pour l’exactitude et les performances : l’utilisation d’alias pendant les opérations Insert et emplace est maintenant correctement gérée comme requis par la norme, la garantie d’exception forte est désormais fournie quand elle est requise par la norme via `move_if_noexcept()` et d’autres logiques, et INSERT et emplace effectuent moins d’opérations d’éléments.
+- `std::vector` a été repensée pour l’exactitude et les performances : l’utilisation d’alias pendant les opérations Insert et emplace est maintenant correctement gérée comme requis par la norme, la garantie d’exception forte est désormais fournie quand elle est requise par la norme via `move_if_noexcept()` et d’autres logiques, et INSERT et emplace effectuent moins d’opérations d’éléments.
 - La bibliothèque C++ standard évite désormais de déréférencer les pointeurs fantômes Null.
 - Amélioration des performances de `weak_ptr::lock()`.
 - Pour augmenter le débit du compilateur, les en-têtes de la bibliothèque C++ standard évitent désormais d’inclure des déclarations de fonctions intrinsèques de compilateur inutiles.
@@ -444,7 +445,7 @@ Pour plus d’informations, consultez [table de conformité du langage Microsoft
 - Modification de `std::try_lock()` pour l’utilisation de l’expansion de package à la place de la récurrence.
 - Amélioration de l’algorithme de prévention de blocage `std::lock()` pour l’utilisation d’opérations `lock()` au lieu d’effectuer une rotation sur `try_lock()` pour tous les verrous.
 - Activation de l’optimisation de la valeur de retour nommée dans `system_category::message()`.
-- `conjunction`et `disjunction` maintenant instancier `N + 1` des types, plutôt que des `2N + 2` types.
+- `conjunction` et `disjunction` maintenant instancier `N + 1` des types, plutôt que des `2N + 2` types.
 - `std::function` n’instancie plus le mécanisme de prise en charge des allocateurs pour chaque type-erased pouvant être appelé, améliorant le débit et réduisant la taille des fichiers .obj dans les programmes qui passent beaucoup d’expressions lambda distinctes à `std::function`.
 - `allocator_traits<std::allocator>` contient des opérations `std::allocator` incorporées manuellement, ce qui réduit la taille du code dans le code qui interagit avec `std::allocator` via `allocator_traits` uniquement (autrement dit, dans la plupart du code).
 - L’interface d’allocateur minimale C++11 est désormais gérée directement par l’allocateur appelant de la bibliothèque standard `allocator_traits`, au lieu d’inclure l’allocateur dans une classe interne `_Wrap_alloc`. Ce changement réduit la taille du code généré pour la prise en charge de l’allocateur, améliore la capacité de l’optimiseur à traiter les conteneurs de la bibliothèque standard dans certains cas, et fournit une meilleure expérience de débogage (car vous voyez désormais votre type d’allocateur, au lieu de `_Wrap_alloc<your_allocator_type>` dans le débogueur).
@@ -648,7 +649,7 @@ L’ensemble d’outils Clang/C2 fourni avec Visual Studio 2017 prend désormais
 
 Les vérificateurs principaux C++ permettant d’appliquer les [directives principales C++](https://github.com/isocpp/CppCoreGuidelines) sont désormais distribués avec Visual Studio. Activez les contrôleurs dans la page extensions de l' **analyse du code** des pages de propriétés du projet. Les extensions sont alors incluses lorsque vous exécutez l’analyse du code. Pour plus d’informations, consultez [Using the C++ Core Guidelines checkers](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
-![CppCoreCheck](media/CppCoreCheck.png "Page de propriétés CppCoreCheck")
+![Montre comment utiliser la page de propriétés analyse du code pour sélectionner des ensembles de règles C++ Core Check.](media/CppCoreCheck.png "Page de propriétés CppCoreCheck")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 version 15.3
 
@@ -696,7 +697,7 @@ Outils Visual Studio Graphics Diagnostics : vous pouvez les utiliser pour enreg
 
 - **Recherche et filtrage dans la table des objets :** fournit un moyen rapide et facile de trouver les ressources que vous recherchez.
 
-  ![Recherche](media/search.png)
+  ![Affiche l’emplacement des contrôles de filtre et de recherche dans la fenêtre table des objets.](media/search.png)
 
 - **Historique des ressources :** cette nouvelle vue offre une façon simplifiée d’afficher tout l’historique des modifications d’une ressource utilisée pendant le rendu d’un frame capturé. Pour appeler l’historique d’une ressource, cliquez sur l’icône d’horloge en regard de n’importe quel lien hypertexte de ressource.
 
@@ -740,8 +741,8 @@ Pour obtenir la liste complète des nouveautés jusqu’à Visual Studio 2015, 
 
 Pour plus d’informations sur les nouveautés de Visual Studio 2015, consultez les notes de publication. Elles sont liées à partir de [l’historique des notes de publication de Visual Studio 2015](/visualstudio/releasenotes/vs2015-version-history).
 
-Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2019, consultez [Nouveautés de C++ dans Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019).
+Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2019, consultez [Nouveautés de c++ dans Visual studio 2019](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true).
 
-Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2017, consultez [Nouveautés de C++ dans Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017).
+Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2017, consultez [Nouveautés de C++ dans Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true).
 
 ::: moniker-end

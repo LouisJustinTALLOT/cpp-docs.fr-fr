@@ -1,6 +1,6 @@
 ---
-title: structure FRONT_END_FILE_DATA
-description: La référence de structure de construction SDK FRONT_END_FILE_DATA de CMD Build Insights.
+title: Structure FRONT_END_FILE_DATA
+description: Le kit de développement logiciel (SDK) C++ Build Insights FRONT_END_FILE_DATA référence de la structure.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7fb6b6fff4f309a3539a290f279d1e31cb1ed76b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2519bfd478776f54cee59ba08b83ea00b96beff
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325549"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041755"
 ---
-# <a name="front_end_file_data-structure"></a>structure FRONT_END_FILE_DATA
+# <a name="front_end_file_data-structure"></a>Structure FRONT_END_FILE_DATA
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `FRONT_END_FILE_DATA` structure décrit le traitement d’un fichier par l’extrémité avant du compilateur.
+La `FRONT_END_FILE_DATA` structure décrit le traitement d’un fichier par le compilateur frontal.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,8 +39,8 @@ typedef struct FRONT_END_FILE_DATA_TAG
 
 ## <a name="members"></a>Membres
 
-|  |  |
+| Nom | Description |
 |--|--|
-| `Path` | Le chemin absolu du fichier, codé dans UTF-8. |
+| `Path` | Le chemin d’accès absolu du fichier, encodé au format UTF-8. |
 
 ::: moniker-end

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: c5423cfb8e2ea1b39001ec512c9c7f460d6a1a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228685"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040780"
 ---
 # <a name="add-a-member-function"></a>Ajouter une fonction membre
 
@@ -44,12 +44,25 @@ Une fois que vous avez ajouté la fonction membre avec l’Assistant, vous pouve
 
   Définit le type de retour pour la fonction membre que vous ajoutez. Vous pouvez fournir votre propre type de retour ou le sélectionner dans la liste des types disponibles. Pour plus d’informations sur les types, consultez [Types fondamentaux](../cpp/fundamental-types-cpp.md).
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned int`** |
-  | **`double`** | **`long`** | **`unsigned long`** |
-  | **`float`** | **`short`** | **`void`** |
-  | `HRESULT` | **`unsigned char`** | |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**\
+      **`int`**
+   :::column-end:::
+   :::column span="":::
+      **`long`**\
+      **`short`**\
+      **`unsigned char`**\
+      **`unsigned int`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned long`**\
+      **`void`**\
+      `HRESULT`
+   :::column-end:::
+:::row-end:::
 
 - **Nom de la fonction**
 
@@ -59,11 +72,23 @@ Une fois que vous avez ajouté la fonction membre avec l’Assistant, vous pouve
 
   Définit le type de paramètre que vous ajoutez pour la fonction membre, si elle possède des paramètres. Vous pouvez fournir votre propre type de paramètre ou le sélectionner dans la liste des types disponibles.
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned char`** |
-  | **`double`** | **`long`** | **`unsigned int`** |
-  | **`float`** | **`short`** | **`unsigned long`** |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**
+   :::column-end:::
+   :::column span="":::
+      **`int`**\
+      **`long`**\
+      **`short`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned char`**\
+      **`unsigned int`**\
+      **`unsigned long`**
+   :::column-end:::
+:::row-end:::
 
 - **Nom du paramètre**
 
@@ -79,7 +104,7 @@ Une fois que vous avez ajouté la fonction membre avec l’Assistant, vous pouve
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [priv](../cpp/private-cpp.md)
+  - [private](../cpp/private-cpp.md)
 
   Vérifiez si la nouvelle fonction membre est statique ou virtuelle, et si elle est inline ou pure. Si vous définissez la fonction membre comme pure, la case **Virtual** est cochée et la case **Inline** n’est plus disponible. Par défaut, la fonction membre est non statique et non virtuelle.
 

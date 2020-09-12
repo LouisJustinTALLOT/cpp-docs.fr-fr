@@ -2,16 +2,16 @@
 title: Déconseiller des types et des membres (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 6d61b00690cc087c3baced6d96d0b6c8d73b5850
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740498"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040325"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Déconseiller des types et des membres (C++/CX)
 
-Dans C++/CX, la désapprobation de types et de membres de Windows Runtime pour les producteurs et les consommateurs à l’aide de l’attribut [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) est prise en charge. Si vous consommez une API à laquelle cet attribut a été appliqué, vous recevez un message d'avertissement au moment de la compilation qui indique que l'API est déconseillée et recommande l'utilisation d'une autre API. Dans vos propres types et méthodes publics, vous pouvez appliquer cet attribut et fournir votre message personnalisé.
+En C++/CX, la désapprobation de types et de membres de Windows Runtime pour les producteurs et les consommateurs à l’aide de l’attribut [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) est prise en charge. Si vous consommez une API à laquelle cet attribut a été appliqué, vous recevez un message d'avertissement au moment de la compilation qui indique que l'API est déconseillée et recommande l'utilisation d'une autre API. Dans vos propres types et méthodes publics, vous pouvez appliquer cet attribut et fournir votre message personnalisé.
 
 > [!CAUTION]
 > L’attribut [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) est destiné à être utilisé uniquement avec les types de Windows Runtime. Pour les classes et les membres C++ standard, utilisez [__declspec(deprecated)](../cpp/deprecated-cpp.md).
@@ -39,23 +39,27 @@ public:
 
 Le tableau suivant répertorie les constructions auxquelles l'attribut Deprecated peut être appliqué :
 
-| |
-|-|
-|Contrôle XAML|
-|délégué|
-|événement|
-|champ enum|
-|enum|
-|struct|
-|method|
-|class|
-|interface|
-|propriété|
-|champ struct|
-|constructeur paramétrable|
+:::row:::
+   :::column span="":::
+      type
+      disposer
+      variables
+      champ enum \
+      événement
+      interface
+   :::column-end:::
+   :::column span="":::
+      méthode
+      constructeur paramétrable \
+      property\
+      modélis
+      champ de struct \
+      Contrôle XAML
+   :::column-end:::
+:::row-end:::
 
 ## <a name="see-also"></a>Voir aussi
 
-[Système de type](../cppcx/type-system-c-cx.md)<br/>
+[Système de types](../cppcx/type-system-c-cx.md)<br/>
 [Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)
+[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 578c590bdb4223f173e0249c18d0eea4e78a18db
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 73b308fdc426be9b403b808d4e638b4f5c1e9149
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220475"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040728"
 ---
 # <a name="component-pragma"></a>component, pragma
 
@@ -21,13 +21,13 @@ Contrôle la collection d’informations de navigation ou d’informations de d�
 
 ## <a name="syntax"></a>Syntaxe
 
-> **composant #pragma (navigateur,** { **on** | **off** } [ **,** **References** [ **,** *Name* ]] **)**  \
-> **composant #pragma (minrebuild,** { **on** | **off** } **)**  \
-> **composant #pragma (MinTypeInfo,** { **on** | **off** } **)**
+> **composant #pragma (navigateur,** { **on** \| **off** } \[ **,** **références** \[ **,** *Name* ]] **)** \
+> **composant #pragma (minrebuild,** { **on** \| **off** } **)** \
+> **composant #pragma (MinTypeInfo,** { **on** \| **off** } **)**
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-### <a name="browser"></a>Visiteur
+### <a name="browser"></a>Browser
 
 Vous pouvez désactiver ou activer la collecte, et spécifier des noms particuliers à ignorer lors de la collecte d'informations.
 
@@ -42,7 +42,7 @@ arrête la collecte d'informations de consultation par le compilateur.
 > [!NOTE]
 > Pour activer la collecte des informations de consultation avec ce pragma, vous [devez d’abord activer les informations de consultation](../build/reference/building-browse-information-files-overview.md).
 
-L' option References peut être utilisée avec ou sans l’argument *Name* . L’utilisation de **références** sans *nom* active ou désactive la collecte des références (d’autres informations de consultation continuent à être collectées, cependant). Par exemple :
+L’option **References** peut être utilisée avec ou sans l’argument *Name* . L’utilisation de **références** sans *nom* active ou désactive la collecte des références (d’autres informations de consultation continuent à être collectées, cependant). Par exemple :
 
 ```cpp
 #pragma component(browser, off, references)
@@ -64,7 +64,7 @@ ignore les références à la valeur DWORD à partir de ce point. Vous pouvez r�
 
 Il s’agit de la seule façon de reprendre la collecte des références au *nom*. vous devez activer explicitement le *nom* que vous avez désactivé.
 
-Pour empêcher le préprocesseur d’étendre le *nom* (par exemple, en développant null à 0), placez des guillemets autour de lui:
+Pour empêcher le préprocesseur d’étendre le *nom* (par exemple, en développant null à 0), placez des guillemets autour de lui :
 
 ```cpp
 #pragma component(browser, off, references, "NULL")
@@ -72,7 +72,7 @@ Pour empêcher le préprocesseur d’étendre le *nom* (par exemple, en dévelop
 
 ### <a name="minimal-rebuild"></a>Régénération minimale
 
-La fonctionnalité [/GM (activer la régénération minimale)](../build/reference/gm-enable-minimal-rebuild.md) déconseillée requiert que le compilateur C++ crée et stocke des informations de dépendance de classe, qui prennent de l’espace disque. Pour économiser de l’espace disque, vous `#pragma component( minrebuild, off )` pouvez utiliser chaque fois que vous n’avez pas besoin de collecter des informations de dépendance, par exemple, dans des fichiers d’en-tête immuables. Insérez `#pragma component( minrebuild, on )` après des classes immuables pour réactiver la collection de dépendances.
+La fonctionnalité [/GM (activer la régénération minimale)](../build/reference/gm-enable-minimal-rebuild.md) déconseillée requiert que le compilateur crée et stocke les informations de dépendance de la classe C++, ce qui prend de l’espace disque. Pour économiser de l’espace disque, vous pouvez utiliser `#pragma component( minrebuild, off )` chaque fois que vous n’avez pas besoin de collecter des informations de dépendance, par exemple, dans des fichiers d’en-tête immuables. Insérez `#pragma component( minrebuild, on )` après des classes immuables pour réactiver la collection de dépendances.
 
 ### <a name="reduce-type-information"></a>Réduire les informations de type
 
@@ -82,8 +82,8 @@ L' `mintypeinfo` option réduit les informations de débogage pour la région sp
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information
 ```
 
-Pour plus d’informations, consultez l’option de compilateur [/GM (activer la régénération minimale)](../build/reference/gm-enable-minimal-rebuild.md) .
+Pour plus d’informations, consultez l’option de compilateur [/GM (activer la régénération minimale)](../build/reference/gm-enable-minimal-rebuild.md)  .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

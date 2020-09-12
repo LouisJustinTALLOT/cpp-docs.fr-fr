@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 02a8e8d80616623693fff04aca02355c505b4c3b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166782"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041924"
 ---
 # <a name="float_control-pragma"></a>float_control, pragma
 
@@ -23,33 +23,33 @@ Spécifie le comportement de virgule flottante d'une fonction.
 ## <a name="syntax"></a>Syntaxe
 
 > **#pragma float_control**\
-> **#pragma float_control (precise,** { **on** | **off** } [ **, push** ] **)** \
-> **#pragma float_control (sauf,** { **on** | **off** } [ **, push** ] **)** \
-> **#pragma float_control (** { **Push** | **pop** } **)**
+> **#pragma float_control (precise,** { **on**  |  **off** } [ **, push** ] **)**\
+> **#pragma float_control (sauf,** { **on**  |  **off** } [ **, push** ] **)**\
+> **#pragma float_control (** { **Push**  |  **pop** } **)**
 
 ## <a name="options"></a>Options
 
-**precise**, **on** | **off**, **Push**\
+**precise** **,**  |  **off**, **Push**\
 Spécifie si la sémantique à virgule flottante exacte doit être activée (**on**) ou désactivée (**off**). Pour plus d’informations sur les différences avec l’option de compilateur **/FP : precise** , consultez la section Notes. Le jeton **Push** facultatif exécute un push du paramètre actuel pour **float_control** sur la pile interne du compilateur.
 
-**à l’exception** **de** | **off**, **Envoyer**\
+**sauf**, **on**  |  **off**, **Push**\
 Spécifie si la sémantique d’exceptions de virgule flottante doit être activée (**on**) ou désactivée (**off**). Le jeton **Push** facultatif exécute un push du paramètre actuel pour **float_control** sur la pile interne du compilateur.
 
 **except** ne peut avoir la valeur **on** que si **precise** a également la valeur **on**.
 
-\ **Push**
+**souleve**\
 Exécute un push du paramètre de **float_control** actuel sur la pile interne du compilateur.
 
-\ **pop**
+**roulant**\
 Supprime le paramètre de **float_control** du haut de la pile interne du compilateur et définit le nouveau paramètre de **float_control** .
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Le pragma **float_control** n’a pas le même comportement que l’option de compilateur [/FP](../build/reference/fp-specify-floating-point-behavior.md) . Le pragma **float_control** régit uniquement une partie du comportement à virgule flottante. Elle doit être associée à [fp_contract](../preprocessor/fp-contract.md) et [fenv_access](../preprocessor/fenv-access.md) des pragmas pour recréer les options du compilateur **/FP** . Le tableau suivant présente les paramètres de pragma équivalents pour chaque option du compilateur :
 
-| | float_control (précis, \*) | float_control (sauf, \*) | fp_contract (\*) | fenv_access (\*) |
+| Option | float_control (précision, \* ) | float_control (sauf, \* ) | fp_contract ( \* ) | fenv_access ( \* ) |
 |-|-|-|-|-|
-| /FP : strict             | sur  | sur  | arrêt | sur  |
+| /FP : strict             | on  | sur  | arrêt | on  |
 | /FP : precise            | sur  | arrêt | sur  | arrêt |
 | /FP : Fast               | arrêt | arrêt | sur  | arrêt |
 

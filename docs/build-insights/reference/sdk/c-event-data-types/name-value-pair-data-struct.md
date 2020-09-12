@@ -1,6 +1,6 @@
 ---
-title: structure NAME_VALUE_PAIR_DATA
-description: La référence de structure de construction SDK NAME_VALUE_PAIR_DATA de CMD Build Insights.
+title: Structure NAME_VALUE_PAIR_DATA
+description: Le kit de développement logiciel (SDK) C++ Build Insights NAME_VALUE_PAIR_DATA référence de la structure.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4a0bf8e8ba32d94d30a56d0ef26ca4ed0c9b0711
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 384ed0340cd8de09101e2fe3e62e1a75f25e2bc1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325354"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041690"
 ---
-# <a name="name_value_pair_data-structure"></a>structure NAME_VALUE_PAIR_DATA
+# <a name="name_value_pair_data-structure"></a>Structure NAME_VALUE_PAIR_DATA
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `NAME_VALUE_PAIR_DATA` structure décrit un nom et une paire de valeur.
+La `NAME_VALUE_PAIR_DATA` structure décrit une paire nom/valeur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,9 +39,9 @@ typedef struct NAME_VALUE_PAIR_DATA_TAG
 
 ## <a name="members"></a>Membres
 
-|  |  |
+| Nom | Description |
 |--|--|
 | `Name` | Nom. |
-| `Value` | Valeur. |
+| `Value` | La valeur. |
 
 ::: moniker-end

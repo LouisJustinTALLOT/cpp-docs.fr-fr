@@ -1,6 +1,6 @@
 ---
-title: structure FILE_DATA
-description: La référence de structure de construction SDK FILE_DATA de CMD Build Insights.
+title: Structure FILE_DATA
+description: Le kit de développement logiciel (SDK) C++ Build Insights FILE_DATA référence de la structure.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6b7b0129c54fa4b1d5285bafb38761da45bab4e5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b5f793df0340005665a8f4ab42e9793f51f3aa0c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325588"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041807"
 ---
-# <a name="file_data-structure"></a>structure FILE_DATA
+# <a name="file_data-structure"></a>Structure FILE_DATA
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -40,9 +40,9 @@ typedef struct FILE_DATA_TAG
 
 ## <a name="members"></a>Membres
 
-|  |  |
+| Nom | Description |
 |--|--|
-| `Path` | Le chemin absolu du fichier |
-| `TypeCode` | Un code décrivant le type de fichier. Pour plus d’informations, voir [FILE_TYPE_CODE](file-type-code-enum.md). |
+| `Path` | Chemin d’accès absolu du fichier |
+| `TypeCode` | Code décrivant le type du fichier. Pour plus d’informations, consultez [FILE_TYPE_CODE](file-type-code-enum.md). |
 
 ::: moniker-end

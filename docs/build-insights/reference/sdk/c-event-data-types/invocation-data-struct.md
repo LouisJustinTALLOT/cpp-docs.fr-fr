@@ -1,6 +1,6 @@
 ---
-title: structure INVOCATION_DATA
-description: La référence de structure de construction SDK INVOCATION_DATA de CMD Build Insights.
+title: Structure INVOCATION_DATA
+description: Le kit de développement logiciel (SDK) C++ Build Insights INVOCATION_DATA référence de la structure.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4e1f428facac413d7a4a5c059452dd8cdb07be4c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48b4c28d3c01d61a31343894312a54ba2ab17a70
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325486"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041638"
 ---
-# <a name="invocation_data-structure"></a>structure INVOCATION_DATA
+# <a name="invocation_data-structure"></a>Structure INVOCATION_DATA
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `INVOCATION_DATA` structure décrit une invocation compilateur ou linker.
+La `INVOCATION_DATA` structure décrit un appel du compilateur ou de l’éditeur de liens.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,12 +45,12 @@ typedef struct INVOCATION_DATA_TAG
 
 ## <a name="members"></a>Membres
 
-|  |  |
+| Nom | Description |
 |--|--|
-| `MSVCToolCode` | Un code qui identifie le type d’invocation. Pour plus d’informations, voir [MSVC_TOOL_CODE](msvc-tool-code-enum.md). |
-| `ToolVersion` | Un objet qui stocke la version de l’outil invoqué comme un groupe de valeurs intégrales. |
-| `ToolVersionString` | Décrit la version de l’outil invoqué sous forme de texte. |
-| `WorkingDirectory` | Le répertoire à partir duquel l’invocation a été faite. |
-| `ToolPath` | Le chemin absolu de l’outil invoqué. |
+| `MSVCToolCode` | Code qui identifie le type de l’appel. Pour plus d’informations, consultez [MSVC_TOOL_CODE](msvc-tool-code-enum.md). |
+| `ToolVersion` | Objet qui stocke la version de l’outil appelé sous la forme d’un groupe de valeurs intégrales. |
+| `ToolVersionString` | Décrit la version sous forme de texte de l’outil appelé. |
+| `WorkingDirectory` | Répertoire à partir duquel l’appel a été effectué. |
+| `ToolPath` | Chemin d’accès absolu de l’outil appelé. |
 
 ::: moniker-end

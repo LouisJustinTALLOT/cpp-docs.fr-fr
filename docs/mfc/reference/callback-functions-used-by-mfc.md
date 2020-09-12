@@ -7,28 +7,26 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 19c0bd3a0685abe36c020a5dda930f5683a4baa9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 553e87320828590c9e1e9204b54622f2f1ca6d80
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183433"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040884"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
 
 Trois fonctions de rappel s’affichent dans le bibliothèque MFC (Microsoft Foundation Class). Ces fonctions de rappel sont passées à [CDC :: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC :: GrayString](../../mfc/reference/cdc-class.md#graystring)et [CDC :: SETABORTPROC](../../mfc/reference/cdc-class.md#setabortproc). Notez que toutes les fonctions de rappel doivent intercepter les exceptions MFC avant de retourner à Windows, car les exceptions ne peuvent pas être levées au-delà des limites de rappel. Pour plus d’informations sur les exceptions, consultez l’article [exceptions](../../mfc/exception-handling-in-mfc.md).
 
-|Nom||
-|----------|-----------------|
-|[Fonction de rappel pour CDC::EnumObjects](#enum_objects)||
-|[Fonction de rappel pour CDC::GrayString](#graystring)||
-|[Fonction de rappel pour CDC::SetAbortProc](#setabortproc)||
+[Fonction de rappel pour CDC :: EnumObjects](#enum_objects)\
+[Fonction de rappel pour CDC :: GrayString](#graystring)\
+[Fonction de rappel pour CDC::SetAbortProc](#setabortproc)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** afxwin.h
 
-## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a>Fonction de rappel pour CDC :: EnumObjects
+## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a> Fonction de rappel pour CDC :: EnumObjects
 
 Le nom *ObjectFunc* est un espace réservé pour le nom de la fonction fournie par l’application.
 
@@ -52,11 +50,11 @@ Pointe vers les données fournies par l’application passées à la `EnumObject
 
 La fonction de rappel retourne un **`int`** . La valeur de ce retour est définie par l’utilisateur. Si la fonction de rappel retourne 0, `EnumObjects` arrête l’énumération tôt.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le nom réel doit être exporté.
 
-## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a>Fonction de rappel pour CDC :: GrayString
+## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a> Fonction de rappel pour CDC :: GrayString
 
 *OutputFunc* est un espace réservé pour le nom de la fonction de rappel fournie par l’application.
 
@@ -84,11 +82,11 @@ Spécifie le nombre de caractères à afficher en sortie.
 
 La valeur de retour de la fonction de rappel doit être TRUE pour indiquer la réussite ; dans le cas contraire, la valeur est FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction de rappel (*OutputFunc*) doit dessiner une image par rapport aux coordonnées (0,0) au lieu de (*x*, *y*).
 
-## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a>Fonction de rappel pour CDC :: SetAbortProc
+## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a> Fonction de rappel pour CDC :: SetAbortProc
 
 Le nom *AbortFunc* est un espace réservé pour le nom de la fonction fournie par l’application.
 
@@ -112,7 +110,7 @@ Spécifie si une erreur s’est produite. La valeur est 0 si aucune erreur n’e
 
 La valeur de retour de la fonction de gestionnaire d’abandon est différente de zéro si le travail d’impression doit continuer, et 0 s’il est annulé.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le nom réel doit être exporté comme décrit dans la section Notes de [CDC :: SETABORTPROC](../../mfc/reference/cdc-class.md#setabortproc).
 

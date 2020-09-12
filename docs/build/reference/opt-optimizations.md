@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 874c4b974348d1bef8c8c3837f46c1c27d6d304b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f576d971425a67fc533bb417583173617615e3b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215190"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040403"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimisations)
 
@@ -30,9 +30,9 @@ Contrôle les optimisations effectuées par LINK pendant une génération.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/OPT :**{**ref**  |  **NOREF**} \
-> **/OPT :**{**ICF**[ **=** _iterations_] | **NOICF**} \
-> **/OPT :**{**LBR**  |  **NOLBR**}
+> **/OPT :**{**ref** \| **NOREF**} \
+> **/OPT :**{**ICF** \[ **=** _iterations_] \| **NOICF**} \
+> **/OPT :**{**LBR** \| **NOLBR**}
 
 ## <a name="arguments"></a>Arguments
 
@@ -65,7 +65,7 @@ Les options **/OPT : LBR** et **/OPT : NOLBR** s’appliquent uniquement aux b
 
 Par défaut, l’option **/OPT : LBR** est définie lorsque l’édition de liens incrémentielle n’est pas activée. Si vous souhaitez un lien non incrémentiel, mais pas des optimisations de branches longues, spécifiez **/OPT : NOLBR**. L’option **/OPT : LBR** désactive les liens incrémentiels.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 En cas d’utilisation sur la ligne de commande, l’éditeur de liens utilise par défaut **/OPT : REF, ICF, LBR**. Si **/Debug** est spécifié, la valeur par défaut est **/OPT : NOREF, NOICF, NOLBR**.
 

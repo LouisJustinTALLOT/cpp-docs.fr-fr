@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520925"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042054"
 ---
 # <a name="pair-structure"></a>pair, structure
 
@@ -68,19 +68,20 @@ Valeur initialisant le second élément de `pair`.
 *Oui*\
 Paire dont les valeurs doivent être utilisées pour initialiser les éléments d'une autre paire.
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
-Le premier constructeur (par défaut) Initialise le premier élément de la paire à la valeur par défaut de type `T1` et le second élément à la valeur par défaut de type `T2` .
+Le premier constructeur (par défaut) Initialise le premier élément de la paire à la valeur par défaut de type `T1` et le second élément à la valeur par défaut de type `T2` .  Elle est définie si les deux types sont par défaut constructible.
 
-Le deuxième constructeur initialise le premier élément de la paire à *val1* et le second à *val2.*
+Le deuxième constructeur initialise le premier élément de la paire à *val1* et le second à *val2.*  Elle est définie si les deux types sont Copy-constructible.
 
-Le troisième constructeur (modèle) initialise le premier élément de la paire à `Right`. **first**, et le second à `Right`. **seconde**.
+Le troisième constructeur (modèle) Initialise le premier élément de la paire à `Right` . **premier** et deuxième à `Right` . **seconde**.  Il est défini si les deux types de la paire sont constructible à partir des types de valeur fournis.
 
-Le quatrième constructeur initialise le premier élément de la paire à *val1* et le second à *val2* à l’aide du [déclarateur de référence rvalue :  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+
+Le quatrième constructeur initialise le premier élément de la paire à *val1* et le second à *val2* à l’aide du [déclarateur de référence rvalue :  &&](../cpp/rvalue-reference-declarator-amp-amp.md).  Il est défini si les deux types de la paire sont constructible à partir des types de valeur fournis.
 
 ## <a name="remarks"></a>Remarques
 
-La structure de modèle stocke une paire d’objets de type `T1` et `T2` , respectivement. Le type `first_type` est le même que le paramètre de modèle `T1` et le type `second_type` est le même que le paramètre de modèle `T2` . `T1`et `T2` chaque besoin doit fournir uniquement un constructeur par défaut, un constructeur à argument unique et un destructeur. Tous les membres du type `pair` sont publics, car le type est déclaré comme un **`struct`** plutôt que comme un **`class`** . Les deux utilisations les plus courantes pour une paire sont en tant que types de retour pour des fonctions qui retournent deux valeurs et en tant qu’éléments pour les classes de conteneurs associatifs ([classe map](../standard-library/map-class.md) et [classe multimap](../standard-library/multimap-class.md)) qui ont à la fois une clé et un type de valeur associés à chaque élément. Ce dernier répond à la configuration requise pour un conteneur associatif de paires et a un type de valeur de la forme `pair< const key_type, mapped_type >` .
+La structure de modèle stocke une paire d’objets de type `T1` et `T2` , respectivement. Le type `first_type` est le même que le paramètre de modèle `T1` et le type `second_type` est le même que le paramètre de modèle `T2` . `T1` et `T2` chaque besoin doit fournir uniquement un constructeur par défaut, un constructeur à argument unique et un destructeur. Tous les membres du type `pair` sont publics, car le type est déclaré comme un **`struct`** plutôt que comme un **`class`** . Les deux utilisations les plus courantes pour une paire sont en tant que types de retour pour des fonctions qui retournent deux valeurs et en tant qu’éléments pour les classes de conteneurs associatifs ([classe map](../standard-library/map-class.md) et [classe multimap](../standard-library/multimap-class.md)) qui ont à la fois une clé et un type de valeur associés à chaque élément. Ce dernier répond à la configuration requise pour un conteneur associatif de paires et a un type de valeur de la forme `pair< const key_type, mapped_type >` .
 
 ## <a name="example"></a>Exemple
 

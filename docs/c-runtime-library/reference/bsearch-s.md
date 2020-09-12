@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 348638b2a6b5a97491d9929b22a983b43794da9a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845170"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041625"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -80,14 +80,14 @@ Si des paramètres non valides sont passés à la fonction, elle appelle le gest
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|*key*|*base*|*compar*|*number*|*width*|**`errno`**|
+|*key*|*base*|*compar*|*number*|*width*|**`errno`** ajoutée|
 |-|-|-|-|-|-|
 |**NULL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|
 |n'importe laquelle|**NULL**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL**|
 |n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|= 0|**EINVAL**|
 |n'importe laquelle|n'importe laquelle|**NULL**|an|n'importe laquelle|**EINVAL**|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La fonction **bsearch_s** effectue une recherche binaire d’un tableau trié d’éléments Number, chacun d’un *nombre* d’octets de *largeur* . La valeur de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche, et *Key* est la valeur recherchée. Le paramètre de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne l’une des valeurs suivantes en spécifiant leur relation :
 

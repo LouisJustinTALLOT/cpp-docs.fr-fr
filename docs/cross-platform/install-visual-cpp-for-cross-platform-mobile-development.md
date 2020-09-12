@@ -2,12 +2,12 @@
 title: Installer le développement mobile multiplateforme avec C++
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: 935e427710d55120055be476a5cfb5fbcf73641b
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 6a573b0f7ba261b97af9de24e67f733acac0532f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609179"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041950"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>Installer le développement mobile multiplateforme avec C++
 
@@ -15,7 +15,7 @@ Vous pouvez utiliser C++ dans Visual Studio pour créer des applications de bure
 
 Cet article explique comment installer les outils et les logiciels tiers requis pour développer des applications multiplateformes en C++ à l’aide de Visual Studio. Pour une vue d’ensemble, consultez [Visual C++ multiplateforme mobile](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 ::: moniker range="vs-2017"
 
@@ -60,7 +60,7 @@ Le Visual Studio Installer comprend un **développement mobile avec** une charge
 - Les outils de développement iOS c++ sont requis pour générer du code C++ qui cible la plateforme iOS.
 
 > [!NOTE]
-> Si vous utilisez Visual Studio 2015, consultez [Installer Visual C++ pour le développement mobile multiplateforme (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015)
+> Si vous utilisez Visual Studio 2015, consultez [Installer Visual C++ pour le développement mobile multiplateforme (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015&preserve-view=true)
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>Installer la charge de travail Développement mobile en C++
 

@@ -1,16 +1,17 @@
 ---
 title: '&lt;répartis&gt;'
+description: Référence d’API pour l’espace de noms de la bibliothèque STL (Standard Template Library), qui fournit une vue légère sur une séquence contiguë d’objets.
 ms.date: 05/28/2020
 f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f4c6b141dfea6464e58d06e221a39a693469d31c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846184"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039870"
 ---
 # <a name="ltspangt"></a>&lt;répartis&gt;
 
@@ -50,7 +51,7 @@ int main()
 
 **Espace de noms :** std
 
-**Option du compilateur :** /std : c + + latest
+**Option du compilateur :** [/std : c + + latest](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="members"></a>Membres
 
@@ -67,7 +68,7 @@ int main()
 |[opérateur =](span-class.md#op_eq)| Affectation d’étendue |
 |[and\[\]](span-class.md#op_at)| Accès aux éléments |
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|:-|

@@ -1,6 +1,6 @@
 ---
-title: structure FUNCTION_DATA
-description: La référence de structure de construction SDK FUNCTION_DATA de CMD Build Insights.
+title: Structure FUNCTION_DATA
+description: Le kit de développement logiciel (SDK) C++ Build Insights FUNCTION_DATA référence de la structure.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ec715192e3480932d351cdb4be1443c329a4868b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1034ce01bba6422d0c47fc34b308cafcc113e32b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325542"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041742"
 ---
-# <a name="function_data-structure"></a>structure FUNCTION_DATA
+# <a name="function_data-structure"></a>Structure FUNCTION_DATA
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -39,8 +39,8 @@ typedef struct FUNCTION_DATA_TAG
 
 ## <a name="members"></a>Membres
 
-|  |  |
+| Nom | Description |
 |--|--|
-| `Name` | Le nom de la fonction, codé dans UTF-8. |
+| `Name` | Nom de la fonction, encodé au format UTF-8. |
 
 ::: moniker-end

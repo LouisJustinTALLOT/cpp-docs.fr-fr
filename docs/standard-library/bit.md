@@ -6,12 +6,12 @@ f1_keywords:
 - <bit>
 helpviewer_keywords:
 - bit header
-ms.openlocfilehash: 7a87071d30756714e19c971281f642ce16f09d61
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: 5652d0af767520710ee08b1827e0df27c477ee6d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194547"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040052"
 ---
 # <a name="ltbitgt"></a>&lt;bit&gt;
 
@@ -19,13 +19,13 @@ Définit des fonctions pour accéder, manipuler et traiter des bits et des séqu
 
 Par exemple, il existe des fonctions permettant de faire pivoter des bits, de rechercher le nombre de bits définis ou désactivés consécutifs, de voir si un nombre est une puissance intégrale de deux, de rechercher le plus petit nombre de bits pour représenter un nombre, et ainsi de suite.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<bit>
 
 **Espace de noms :** std
 
-`/std:c++latest` est obligatoire
+[/std : c + + latest](../build/reference/std-specify-language-standard-version.md) est requis.
 
 ## <a name="members"></a>Membres
 

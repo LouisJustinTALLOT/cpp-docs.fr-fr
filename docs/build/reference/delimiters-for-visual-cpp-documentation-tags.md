@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: a5a0534ba74cc9b125e94d4ece133c2449700a67
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: e8e312eacb46d82270d7ca1782b04d06012b207d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446543"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041534"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Délimiteurs pour les étiquettes de documentation Visual C++
 
@@ -17,9 +17,9 @@ L’utilisation de balises de documentation exige des délimiteurs, qui indiquen
 
 Vous pouvez utiliser les genres de délimiteurs ci-dessous avec les balises de documentation XML :
 
-| | |
+| Délimiteur | Description |
 |-|-|
-| `///` | C’est la forme qui est indiquée dans les exemples de documentation et utilisée par Visual Studio C++ modèles de projet.  |
+| `///` | Il s’agit de la forme qui est présentée dans les exemples de documentation et utilisée par les modèles de projet Visual Studio C++.  |
 | `/** */`  | Ce sont des délimiteurs multilignes.  |
 
 Des règles de mise en forme s’appliquent quand vous utilisez les délimiteurs `/** */` :
@@ -30,7 +30,7 @@ Des règles de mise en forme s’appliquent quand vous utilisez les délimiteurs
 
 - Pour les lignes qui suivent celle qui commence par le délimiteur `/**`, le compilateur recherche un modèle commun au début de chaque ligne qui consiste en un espace blanc facultatif et un astérisque (`*`) suivi d’autres espaces blancs facultatifs. Si le compilateur trouve un ensemble commun de caractères au début de chaque ligne, il ignore ce modèle pour toutes les lignes qui suivent le délimiteur `/**`, jusqu’à la ligne (en l’incluant éventuellement) qui contient le délimiteur `*/`.
 
-Voici quelques exemples :
+Exemples :
 
 - La seule partie du commentaire suivant qui sera traitée est la ligne qui commence par `<summary>`. Les deux formats de balise suivants produisent les mêmes commentaires :
 

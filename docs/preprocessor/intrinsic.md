@@ -9,12 +9,12 @@ helpviewer_keywords:
 - intrinsic pragma
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-ms.openlocfilehash: 31f4ebc2fdd4c5c984160d441b4e0a723c686a46
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 45a5a13f3bda3657b93e1a89e7a842a4465b01d5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180953"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041105"
 ---
 # <a name="intrinsic-pragma"></a>`intrinsic` pragma
 
@@ -24,7 +24,7 @@ Spécifie que les appels aux fonctions spécifiées dans la liste d'arguments du
 
 > **`#pragma intrinsic(`** *`function1`* [**`,`** _`function2`_ ... ] **`)`**
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Le **`intrinsic`** pragma indique au compilateur qu’une fonction a un comportement connu. Le compilateur peut appeler cette fonction sans remplacer l'appel de fonction par des instructions inline, si cela entraîne de meilleures performances.
 
@@ -32,14 +32,37 @@ Les fonctions de bibliothèque avec des formes intrinsèques sont répertoriées
 
 Les fonctions suivantes ont des formes intrinsèques, et les formulaires intrinsèques sont utilisés lorsque vous spécifiez [`/Oi`](../build/reference/oi-generate-intrinsic-functions.md) :
 
-|  |  |  |  |
-|--|--|--|--|
-| [`_disable`](../intrinsics/disable.md) | [`_outp`](../c-runtime-library/outp-outpw-outpd.md) | [`fabs`](../c-runtime-library/reference/fabs-fabsf-fabsl.md) | [`strcmp`](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md) |
-| [`_enable`](../intrinsics/enable.md) | [`_outpw`](../c-runtime-library/outp-outpw-outpd.md) | [`labs`](../c-runtime-library/reference/abs-labs-llabs-abs64.md) | [`strcpy`](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) |
-| [`_inp`](../c-runtime-library/inp-inpw-inpd.md) | [`_rotl`](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md) | [`memcmp`](../c-runtime-library/reference/memcmp-wmemcmp.md) | [`strlen`](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md) |
-| [`_inpw`](../c-runtime-library/inp-inpw-inpd.md) | [`_rotr`](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md) | [`memcpy`](../c-runtime-library/reference/memcpy-wmemcpy.md) |  |
-| [`_lrotl`](../c-runtime-library/reference/lrotl-lrotr.md) | [`_strset`](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) | [`memset`](../c-runtime-library/reference/memset-wmemset.md) |  |
-| [`_lrotr`](../c-runtime-library/reference/lrotl-lrotr.md) | [`abs`](../c-runtime-library/reference/abs-labs-llabs-abs64.md) | [`strcat`](../c-runtime-library/reference/strcat-wcscat-mbscat.md) |  |
+:::row:::
+   :::column span="":::
+      [`abs`](../c-runtime-library/reference/abs-labs-llabs-abs64.md)\
+      [`_disable`](../intrinsics/disable.md)\
+      [`_enable`](../intrinsics/enable.md)\
+      [`fabs`](../c-runtime-library/reference/fabs-fabsf-fabsl.md)\
+      [`_inp`](../c-runtime-library/inp-inpw-inpd.md)\
+      [`_inpw`](../c-runtime-library/inp-inpw-inpd.md)\
+   :::column-end:::
+   :::column span="":::
+      [`labs`](../c-runtime-library/reference/abs-labs-llabs-abs64.md)\
+      [`_lrotl`](../c-runtime-library/reference/lrotl-lrotr.md)\
+      [`_lrotr`](../c-runtime-library/reference/lrotl-lrotr.md)\
+      [`memcmp`](../c-runtime-library/reference/memcmp-wmemcmp.md)\
+      [`memcpy`](../c-runtime-library/reference/memcpy-wmemcpy.md)\
+   :::column-end:::
+   :::column span="":::
+      [`memset`](../c-runtime-library/reference/memset-wmemset.md)\
+      [`_outp`](../c-runtime-library/outp-outpw-outpd.md)\
+      [`_outpw`](../c-runtime-library/outp-outpw-outpd.md)\
+      [`_rotl`](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)\
+      [`_rotr`](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)\
+   :::column-end:::
+   :::column span="":::
+      [`strcat`](../c-runtime-library/reference/strcat-wcscat-mbscat.md)\
+      [`strcmp`](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)\
+      [`strcpy`](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)\
+      [`strlen`](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
+      [`_strset`](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)\
+   :::column-end:::
+:::row-end:::
 
 Les programmes qui utilisent des fonctions intrinsèques sont plus rapides, car ils n’ont pas la surcharge des appels de fonction. Toutefois, ils peuvent être plus volumineux en raison du code supplémentaire généré.
 
@@ -68,18 +91,45 @@ int main() {
 
 Ces fonctions à virgule flottante n’ont pas de véritables formes intrinsèques. Au lieu de cela, elles ont des versions qui passent directement des arguments au processeur à virgule flottante, plutôt que de les pousser sur la pile :
 
-|  |  |  |  |
-|--|--|--|--|
-| [`acos`](../c-runtime-library/reference/acos-acosf-acosl.md) | [`cosh`](../c-runtime-library/reference/cosh-coshf-coshl.md) | [`pow`](../c-runtime-library/reference/pow-powf-powl.md) | [`tanh`](../c-runtime-library/reference/tanh-tanhf-tanhl.md) |
-| [`asin`](../c-runtime-library/reference/asin-asinf-asinl.md) | [`fmod`](../c-runtime-library/reference/fmod-fmodf.md) | [`sinh`](../c-runtime-library/reference/sinh-sinhf-sinhl.md) |  |
+:::row:::
+   :::column span="":::
+      [`acos`](../c-runtime-library/reference/acos-acosf-acosl.md)\
+      [`asin`](../c-runtime-library/reference/asin-asinf-asinl.md)\
+   :::column-end:::
+   :::column span="":::
+      [`cosh`](../c-runtime-library/reference/cosh-coshf-coshl.md)\
+      [`fmod`](../c-runtime-library/reference/fmod-fmodf.md)\
+   :::column-end:::
+   :::column span="":::
+      [`pow`](../c-runtime-library/reference/pow-powf-powl.md)\
+      [`sinh`](../c-runtime-library/reference/sinh-sinhf-sinhl.md)\
+   :::column-end:::
+   :::column span="":::
+      [`tanh`](../c-runtime-library/reference/tanh-tanhf-tanhl.md)\
+   :::column-end:::
+:::row-end:::
 
 Ces fonctions à virgule flottante ont des véritables formes intrinsèques lorsque vous spécifiez [`/Oi`](../build/reference/oi-generate-intrinsic-functions.md) et [`/fp:fast`](../build/reference/fp-specify-floating-point-behavior.md) (ou toute autre option qui comprend **`/Oi`** : [`/Ox`](../build/reference/ox-full-optimization.md) , [`/O1`](../build/reference/o1-o2-minimize-size-maximize-speed.md) et [`/O2`](../build/reference/o1-o2-minimize-size-maximize-speed.md) ) :
 
-|  |  |  |  |
-|--|--|--|--|
-| [`atan`](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md) | [`exp`](../c-runtime-library/reference/exp-expf.md) | [`log10`](../c-runtime-library/reference/log-logf-log10-log10f.md) | [`sqrt`](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md) |
-| [`atan2`](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md) | [`log`](../c-runtime-library/reference/log-logf-log10-log10f.md) | [`sin`](../c-runtime-library/reference/sin-sinf-sinl.md) | [`tan`](../c-runtime-library/reference/tan-tanf-tanl.md) |
-| [`cos`](../c-runtime-library/reference/cos-cosf-cosl.md) |  |  |  |
+:::row:::
+   :::column span="":::
+      [`atan`](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)\
+      [`atan2`](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)\
+      [`cos`](../c-runtime-library/reference/cos-cosf-cosl.md)\
+   :::column-end:::
+   :::column span="":::
+      [`exp`](../c-runtime-library/reference/exp-expf.md)\
+      [`log`](../c-runtime-library/reference/log-logf-log10-log10f.md)\
+   :::column-end:::
+   :::column span="":::
+      [`log10`](../c-runtime-library/reference/log-logf-log10-log10f.md)\
+      [`sin`](../c-runtime-library/reference/sin-sinf-sinl.md)\
+   :::column-end:::
+   :::column span="":::
+      [`sqrt`](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)\
+      [`tan`](../c-runtime-library/reference/tan-tanf-tanl.md)\
+   :::column-end:::
+:::row-end:::
 
 Vous pouvez utiliser [`/fp:strict`](../build/reference/fp-specify-floating-point-behavior.md) ou [`/Za`](../build/reference/za-ze-disable-language-extensions.md) pour remplacer la génération d’options à virgule flottante intrinsèques vraies. Dans ce cas, les fonctions sont générées en tant que routines de bibliothèque qui passent directement des arguments au processeur de calcul en virgule flottante au lieu de leur appliquer une transmission de type push sur la pile du programme.
 

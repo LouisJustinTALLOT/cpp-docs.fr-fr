@@ -3,12 +3,12 @@ title: Fonctions CRT non prises en charge dans les applications de la plateforme
 description: Guide de référence des fonctions CRT non prises en charge dans les applications plateforme Windows universelle.
 ms.date: 04/16/2020
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-ms.openlocfilehash: cfe5fbc1ce505c255e074dda2c3a240b46754eee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 793283a5c20f04e58de22fcfca5ede1926de369c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845716"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041833"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle
 
@@ -18,7 +18,7 @@ Le tableau suivant répertorie les fonctions CRT qui ne sont pas disponibles lor
 
 ## <a name="unsupported-crt-functions"></a>Fonctions CRT non prises en charge
 
-|Fonction|Description|Solution de contournement|
+| Fonction | Description | Solution de contournement |
 |-|-|-|
 |`_beep` `_sleep` `_seterrormode`|Ces fonctions sont obsolètes dans les versions précédentes de CRT. En outre, les API Win32 correspondantes ne sont pas disponibles pour les applications UWP.|Aucune solution de contournement.|
 |`chdir` `_chdrive` `getcwd`|Ces fonctions sont obsolètes ou ne sont pas thread-safe.|Utilisez `_chdir` , `_getcwd` et les fonctions associées.|
@@ -33,12 +33,12 @@ Le tableau suivant répertorie les fonctions CRT qui ne sont pas disponibles lor
 |`_getsystime` `_setsystime`|Il s’agit d’API obsolètes dans les versions précédentes de CRT. En outre, un utilisateur ne peut pas définir l’heure système dans une application UWP en raison d’un manque d’autorisations.|Pour obtenir uniquement l’heure système, utilisez l’API Win32 `GetSystemTime`. Impossible de définir l’heure système.|
 |`_environ``_putenv` `_putenv_s` `_searchenv` `_searchenv_s` `_dupenv_s` `_wputenv` `_wputenv_s` `_wsearchenv` getenv `_wdupenv_s` `_wenviron` getenv_s `_wgetenv` putenv `_wgetenv_s` `_wsearchenv_s``tzset`|Les variables d’environnement ne sont pas disponibles pour les applications UWP.|Aucune solution de contournement. Pour définir le fuseau horaire, utilisez `_tzset` .|
 |`_loaddll` `_getdllprocaddr` `_unloaddll`|Il s’agit de fonctions obsolètes dans les versions précédentes de CRT. En outre, un utilisateur ne peut pas charger les dll, à l’exception de celles figurant dans le même package d’application.|Utilisez les API Win32 `LoadPackagedLibrary`, `GetProcAddress`et `FreeLibrary` pour charger et utiliser les DLL packagées.|
-|`_wexecl``_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe`' 'Spawn ` ` spawnle ` ` spawnlp ` ` spawnlpe ` ` spawnv ` ` spawnve ` ` ` ` ` ` spawnvp spawnvpe|La fonctionnalité n’est pas disponible dans les applications UWP. Une application UWP ne peut pas appeler une autre application UWP ou une application de bureau.|Aucune solution de contournement.|
+|`_wexecl` `_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe` `spawnl` `spawnle` `spawnlp` `spawnlpe` `spawnv` `spawnve` `spawnvp` `spawnvpe` `system`|La fonctionnalité n’est pas disponible dans les applications UWP. Une application UWP ne peut pas appeler une autre application UWP ou une application de bureau.|Aucune solution de contournement.|
 |`_heapwalk` `_heapadd` `_heapchk` `_heapset` `_heapused`|Ces fonctions sont généralement utilisées avec le tas. Toutefois, les API Win32 correspondantes ne sont pas prises en charge dans les applications UWP. De plus, les applications ne peuvent plus créer ou utiliser les tas privés.|Aucune solution de contournement. Toutefois, `_heapwalk` est disponible dans DEBUG CRT, à des fins de débogage uniquement. Ces fonctions ne peuvent pas être utilisées dans les applications qui sont téléchargées sur le Microsoft Store.|
 
 Les fonctions suivantes sont disponibles dans le CRT pour les applications UWP. Toutefois, utilisez-les uniquement lorsque vous ne pouvez pas utiliser les API Win32 ou Windows Runtime correspondantes, par exemple lorsque vous déployez des bases de code volumineuses :
 
-|Functions|Solution de contournement|
+| Fonctions | Solution de contournement |
 |-|-|
 |Fonctions de chaîne simple octet : par exemple, `strcat`, `strcpy`, `strlwr`, et ainsi de suite.|Rendez vos applications UWP strictement Unicode, car toutes les API Win32 et les API Windows Runtime exposées utilisent uniquement des jeux de caractères Unicode.  Les fonctions sur un octet ont été laissées pour le portage de bases de code volumineuses, mais elles doivent être évitées. Les fonctions de caractères larges correspondantes doivent être utilisées à la place lorsque cela est possible.|
 |Fonctions d’E/S de flux ou d’E/S de fichier de bas niveau, par exemple, `fopen`, `open`et ainsi de suite.|Ces fonctions sont synchrones, ce qui n’est pas recommandé pour les applications UWP. Dans vos applications UWP, utilisez des API asynchrones pour ouvrir, lire et écrire dans des fichiers afin d’éviter le verrouillage du thread d’interface utilisateur. Ces API sont, par exemple, celles de la classe `Windows::Storage::FileIO` .|
@@ -47,7 +47,7 @@ Les fonctions suivantes sont disponibles dans le CRT pour les applications UWP. 
 
 Les API mentionnées précédemment et les API suivantes ne sont pas disponibles dans les applications du Windows 8. x Store et les applications Windows Phone 8. x.
 
-|Functions|Description|Solution de contournement|
+| Fonctions | Description | Solution de contournement |
 |-|-|-|
 |`_beginthread` `_beginthreadex` `_endthread` `_endthreadex`|Les API Win32 de thread ne sont pas disponibles dans les applications du Windows 8.x Store.|Utilisez `Windows Runtime Windows::System::Threading::ThreadPool` ou `concurrency::task` à la place.|
 |`_chdir` `_wchdir` `_getcwd` `_getdcwd` `_wgetcwd` `_wgetdcwd`|Le concept d’un répertoire de travail ne s’applique pas aux applications du Windows 8.x Store.|Utilisez plutôt des chemins complets.|

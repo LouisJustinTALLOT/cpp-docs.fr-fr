@@ -1,6 +1,6 @@
 ---
-title: structure EVENT_COLLECTION_DATA
-description: La référence de structure de construction SDK EVENT_COLLECTION_DATA de CMD Build Insights.
+title: Structure EVENT_COLLECTION_DATA
+description: Le kit de développement logiciel (SDK) C++ Build Insights EVENT_COLLECTION_DATA référence de la structure.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 88ba39ede8c86f47c2e6458332ae005eddc06fda
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58be46d31af154bfe7ecef5c440092eaafdcbb0f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325690"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039597"
 ---
-# <a name="event_collection_data-structure"></a>structure EVENT_COLLECTION_DATA
+# <a name="event_collection_data-structure"></a>Structure EVENT_COLLECTION_DATA
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `EVENT_COLLECTION_DATA` structure décrit un éventail d’éléments [EVENT_DATA.](event-data-struct.md)
+La `EVENT_COLLECTION_DATA` structure décrit un tableau d’éléments [EVENT_DATA](event-data-struct.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,9 +40,9 @@ typedef struct EVENT_COLLECTION_DATA_TAG
 
 ## <a name="members"></a>Membres
 
-|  |  |
+| Nom | Description |
 |--|--|
-| `Count` | Le nombre `EVENT_DATA` d’éléments dans le tableau. |
-| `Elements` | Pointeur vers `EVENT_DATA` le premier élément du tableau. |
+| `Count` | Nombre d' `EVENT_DATA` éléments dans le tableau. |
+| `Elements` | Pointeur vers le premier `EVENT_DATA` élément du tableau. |
 
 ::: moniker-end

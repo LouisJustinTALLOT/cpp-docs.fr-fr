@@ -1,6 +1,6 @@
 ---
-title: structure TRACE_INFO_DATA
-description: La référence de structure de construction SDK TRACE_INFO_DATA de CMD Build Insights.
+title: Structure TRACE_INFO_DATA
+description: Le kit de développement logiciel (SDK) C++ Build Insights TRACE_INFO_DATA référence de la structure.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 70ae17a376f79cad7a669d81e482f551afd0ec62
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 38683ff2c5c5165b5fe2a1969ccf80fbfca3693f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325277"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040455"
 ---
-# <a name="trace_info_data-structure"></a>structure TRACE_INFO_DATA
+# <a name="trace_info_data-structure"></a>Structure TRACE_INFO_DATA
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `TRACE_INFO_DATA` structure décrit une trace analysée ou relstruée.
+La `TRACE_INFO_DATA` structure décrit une trace qui est analysée ou rejournalisée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,15 +42,15 @@ typedef struct TRACE_INFO_DATA_TAG
 
 ## <a name="members"></a>Membres
 
-|  |  |
+| Nom | Description |
 |--|--|
-| `LogicalProcessorCount` | Le nombre de processeurs logiques sur la machine où la trace a été recueillie. |
-| `TickFrequency` | Le nombre de tiques par seconde à utiliser lors de l’évaluation d’une durée mesurée en tiques. |
-| `StartTimestamp` | Ce champ est réglé à une valeur de tique capturée au moment où la trace a été commencée. |
-| `StopTimestamp` | Ce champ est réglé à une valeur de tique capturée au moment où la trace a été arrêtée. |
+| `LogicalProcessorCount` | Nombre de processeurs logiques sur l’ordinateur où la trace a été collectée. |
+| `TickFrequency` | Nombre de graduations par seconde à utiliser lors de l’évaluation d’une durée mesurée en graduations. |
+| `StartTimestamp` | Ce champ est défini sur une valeur de graduation capturée au moment du démarrage de la trace. |
+| `StopTimestamp` | Ce champ est défini sur une valeur de graduation capturée au moment de l’arrêt de la trace. |
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Soustrayez `StartTimestamp` `StopTimestamp` pour obtenir le nombre de tiques écoulées pendant toute la trace. Utilisez `TickFrequency` pour convertir la valeur résultante en une unité de temps. Par exemple qui convertit les tiques en unités temporelles, voir [EVENT_DATA](event-data-struct.md).
+Soustrait `StartTimestamp` de `StopTimestamp` pour obtenir le nombre de cycles écoulés pendant l’intégralité de la trace. Utilisez `TickFrequency` pour convertir la valeur obtenue en unité de temps. Pour obtenir un exemple qui convertit des graduations en unités de temps, consultez [EVENT_DATA](event-data-struct.md).
 
 ::: moniker-end

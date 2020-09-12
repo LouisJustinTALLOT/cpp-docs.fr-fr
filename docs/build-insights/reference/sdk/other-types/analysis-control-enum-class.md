@@ -1,6 +1,6 @@
 ---
-title: AnalyseContrôle enum classe
-description: La référence enum de build Insights SDK.
+title: Classe d’énumération AnalysisControl
+description: Référence de l’énumération AnalysisControl du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: e9431f878390127f2cefbe8f0ee42ca509e147de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7b7fc0ce404f414b3ec07449bdc110d578fa101
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323642"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042015"
 ---
-# <a name="analysiscontrol-enum-class"></a>AnalyseContrôle enum classe
+# <a name="analysiscontrol-enum-class"></a>Classe d’énumération AnalysisControl
 
 ::: moniker range="<=vs-2015"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La `AnalysisControl` classe enum est utilisée pour contrôler le flux d’une session d’analyse ou de relogging. Retournez `AnalysisControl` un code d’une fonction de membre [IAnalyzer](ianalyzer-class.md) ou [IRelogger](irelogger-class.md) pour contrôler ce qui devrait se passer ensuite.
+La `AnalysisControl` classe enum est utilisée pour contrôler le déroulement d’une session d’analyse ou de rejournalisation. Retournez un `AnalysisControl` code à partir d’une fonction membre [IAnalyzer](ianalyzer-class.md) ou [IRelogger](irelogger-class.md) pour contrôler ce qui doit se passer ensuite.
 
 ## <a name="members"></a>Membres
 
-|  |  |
+| Nom | Description |
 |--|--|
-| `BLOCK` | Empêche l’événement actuel de se propager davantage dans le groupe d’analyseur ou de rélogger. |
-| `CANCEL` | Annuler l’analyse en cours ou la session de relogging. |
-| `CONTINUE` | Poursuivez l’analyse actuelle ou reloggingez la session normalement. Propagez l’événement actuel au prochain membre du groupe d’analyseur ou de relogger. |
-| `FAILURE` | Annuler l’analyse en cours ou la session de relogging et signaler une erreur. |
+| `BLOCK` | Empêche l’événement actuel de se propager plus loin dans l’analyseur ou le groupe de rejournalisation. |
+| `CANCEL` | Annulez la session d’analyse ou de rejournalisation en cours. |
+| `CONTINUE` | Poursuivez normalement la session d’analyse ou de rejournalisation actuelle. Propage l’événement actuel au membre de l’analyseur ou du groupe de rejournalisation suivant. |
+| `FAILURE` | Annulez l’analyse actuelle ou la session de rejournalisation et signalez une erreur. |
 
 ::: moniker-end

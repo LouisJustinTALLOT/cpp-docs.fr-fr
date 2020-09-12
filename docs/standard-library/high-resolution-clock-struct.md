@@ -12,14 +12,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a79cb91a6b0e6ca633540fd37f7a0e1ece53b712
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 341cae04742d72fdcc7483e74977bf413854df82
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845782"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039649"
 ---
-# <a name="steady_clock-struct"></a>steady_clock, struct
+# <a name="high_resolution_clock-struct"></a>struct high_resolution_clock
 
 Représente une horloge de *high_resolution* .
 
@@ -40,7 +40,7 @@ class high_resolution_clock
 |`rep`|Synonyme de **`long long`** , type utilisé pour représenter le nombre de battements d’horloge dans l’instanciation contenue de `duration` .|
 |`time_point`|Synonyme de `chrono::time_point<high_resolution_clock>`.|
 
-## <a name="functions"></a>Functions
+## <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

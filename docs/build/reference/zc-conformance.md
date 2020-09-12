@@ -1,20 +1,21 @@
 ---
 title: /Zc (Conformité)
-ms.date: 03/06/2018
+description: Les options du compilateur de conformité/ZC activent ou désactivent la prise en charge de la conformité ou du comportement à compatibilité descendante.
+ms.date: 09/10/2020
 helpviewer_keywords:
 - /Zc compiler options [C++]
 - -Zc compiler options [C++]
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 6d6d3b7736fd1775372a3b2093c53e177db5099e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13e06cd75f1ee684c2ee1ad6239aeb77b805675e
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234352"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041521"
 ---
-# <a name="zc-conformance"></a>`/Zc`Conformité
+# <a name="zc-conformance"></a>`/Zc` Conformité
 
 Vous pouvez utiliser les **`/Zc`** Options du compilateur pour spécifier le comportement du compilateur standard ou spécifique à Microsoft.
 
@@ -22,7 +23,7 @@ Vous pouvez utiliser les **`/Zc`** Options du compilateur pour spécifier le com
 
 > **`/Zc:`**_option_{,_option_}
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Lorsque Visual Studio a implémenté une extension en C ou C++ qui n’est pas compatible avec la norme, vous pouvez utiliser une **`/Zc`** option de conformité pour spécifier un comportement conforme ou spécifique à Microsoft. Pour certaines options, le comportement spécifique à Microsoft est la valeur par défaut, pour empêcher les modifications importantes à grande échelle du code existant. Dans d’autres cas, la valeur par défaut est le comportement standard, où les améliorations de la sécurité, des performances ou de la compatibilité l’emportent sur les coûts des modifications avec rupture. Le paramètre par défaut de chaque option de conformité peut changer dans les versions plus récentes de Visual Studio. Pour plus d’informations sur chaque option de conformité, consultez la rubrique relative à l’option spécifique. L' [`/permissive-`](permissive-standards-conformance.md) option de compilateur définit implicitement les options de conformité qui ne sont pas définies par défaut sur leur paramètre conforme.
 
@@ -38,6 +39,7 @@ Voici les **`/Zc`** Options du compilateur :
 | [`/ZcimplicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | Activez implicite **`noexcept`** sur les fonctions requises (activé par défaut). |
 | [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | Supprimez la fonction ou les données non référencées si elle est COMDAT ou si elle a uniquement une liaison interne (désactivée par défaut). |
 | [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | Appliquer les règles C++ 17 **`noexcept`** (activé par défaut dans c++ 17 ou version ultérieure). |
+| [`/Zc:preprocessor`](zc-preprocessor.md) | Utilisez le nouveau préprocesseur conforme (désactivé par défaut, sauf dans C11/C17). |
 | [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) | Un type temporaire UDT ne sera pas lié à une référence lvalue non const (désactivé par défaut). |
 | [`/Zc:rvalueCast`](zc-rvaluecast-enforce-type-conversion-rules.md) | Appliquer les règles de conversion de type explicite C++ standard (désactivées par défaut). |
 | [`/Zc:sizedDealloc`](zc-sizeddealloc-enable-global-sized-dealloc-functions.md) | Activez les fonctions de désallocation dimensionnées globales de C++ 14 (activé par défaut). |

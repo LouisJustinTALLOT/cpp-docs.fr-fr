@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: d074646a333090138c916bc4d3b7a2e072731b3d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a962c00d23c41d97087e705d395b601afc7b1910
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228412"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042041"
 ---
 # <a name="scheduler-policies"></a>Stratégies de planificateur
 
@@ -26,17 +26,17 @@ Quand vous utilisez la méthode [Concurrency :: CurrentScheduler :: Create](re
 
 L’énumération [Concurrency ::P olicyelementkey](reference/concurrency-namespace-enums.md#policyelementkey) définit les clés de stratégie associées au planificateur de tâches. Le tableau suivant décrit les clés de stratégie et la valeur par défaut que le runtime utilise pour chacun d’eux.
 
-|Clé de stratégie|Description|Valeur par défaut|
-|----------------|-----------------|-------------------|
-|`SchedulerKind`|Valeur [Concurrency :: SchedulerType,](reference/concurrency-namespace-enums.md#schedulertype) qui spécifie le type de threads à utiliser pour planifier des tâches.|`ThreadScheduler`(utiliser des threads normaux). Il s’agit de la seule valeur valide pour cette clé.|
-|`MaxConcurrency`|**`unsigned int`** Valeur qui spécifie le nombre maximal de ressources d’accès concurrentiel que le planificateur utilise.|[concurrence :: MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
-|`MinConcurrency`|**`unsigned int`** Valeur qui spécifie le nombre minimal de ressources d’accès concurrentiel utilisées par le planificateur.|`1`|
-|`TargetOversubscriptionFactor`|**`unsigned int`** Valeur qui spécifie le nombre de threads à allouer à chaque ressource de traitement.|`1`|
-|`LocalContextCacheSize`|**`unsigned int`** Valeur qui spécifie le nombre maximal de contextes qui peuvent être mis en cache dans la file d’attente locale de chaque processeur virtuel.|`8`|
-|`ContextStackSize`|**`unsigned int`** Valeur qui spécifie la taille de la pile, en kilo-octets, à réserver pour chaque contexte.|`0`(utiliser la taille de pile par défaut)|
-|`ContextPriority`|**`int`** Valeur qui spécifie la priorité de thread de chaque contexte. Il peut s’agir de n’importe quelle valeur que vous pouvez passer à [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) ou `INHERIT_THREAD_PRIORITY` .|`THREAD_PRIORITY_NORMAL`|
-
-|`SchedulingProtocol`| Valeur [Concurrency :: SchedulingProtocolType,](reference/concurrency-namespace-enums.md#schedulingprotocoltype) qui spécifie l’algorithme de planification à utiliser. | `EnhanceScheduleGroupLocality` | |`DynamicProgressFeedback`| Valeur d' [accès concurrentiel ::D ynamicprogressfeedbacktype](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) qui spécifie s’il faut rééquilibrer les ressources en fonction des informations de progression basées sur les statistiques.<br /><br /> **Remarque** Ne définissez pas cette stratégie sur `ProgressFeedbackDisabled` , car elle est réservée à une utilisation par le Runtime. |`ProgressFeedbackEnabled`|
+| Clé de stratégie | Description | Valeur par défaut |
+|--|--|--|
+| `SchedulerKind` | Valeur [Concurrency :: SchedulerType,](reference/concurrency-namespace-enums.md#schedulertype) qui spécifie le type de threads à utiliser pour planifier des tâches. | `ThreadScheduler` (utiliser des threads normaux). Il s’agit de la seule valeur valide pour cette clé. |
+| `MaxConcurrency` | **`unsigned int`** Valeur qui spécifie le nombre maximal de ressources d’accès concurrentiel que le planificateur utilise. | [concurrence :: MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources) |
+| `MinConcurrency` | **`unsigned int`** Valeur qui spécifie le nombre minimal de ressources d’accès concurrentiel utilisées par le planificateur. | `1` |
+| `TargetOversubscriptionFactor` | **`unsigned int`** Valeur qui spécifie le nombre de threads à allouer à chaque ressource de traitement. | `1` |
+| `LocalContextCacheSize` | **`unsigned int`** Valeur qui spécifie le nombre maximal de contextes qui peuvent être mis en cache dans la file d’attente locale de chaque processeur virtuel. | `8` |
+| `ContextStackSize` | **`unsigned int`** Valeur qui spécifie la taille de la pile, en kilo-octets, à réserver pour chaque contexte. | `0` (utiliser la taille de pile par défaut) |
+| `ContextPriority` | **`int`** Valeur qui spécifie la priorité de thread de chaque contexte. Il peut s’agir de n’importe quelle valeur que vous pouvez passer à [SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) ou `INHERIT_THREAD_PRIORITY` . | `THREAD_PRIORITY_NORMAL` |
+| `SchedulingProtocol` | Valeur [Concurrency :: SchedulingProtocolType,](reference/concurrency-namespace-enums.md#schedulingprotocoltype) qui spécifie l’algorithme de planification à utiliser. | `EnhanceScheduleGroupLocality` |
+| `DynamicProgressFeedback` | Valeur d' [accès concurrentiel ::D ynamicprogressfeedbacktype](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) qui spécifie s’il faut rééquilibrer les ressources en fonction des informations de progression basées sur les statistiques.<br /><br /> **Remarque** N’affectez pas la valeur à cette stratégie `ProgressFeedbackDisabled` , car elle est réservée à une utilisation par le Runtime. | `ProgressFeedbackEnabled` |
 
 Chaque planificateur utilise sa propre stratégie lors de la planification des tâches. Les stratégies associées à un planificateur n’affectent pas le comportement d’un autre planificateur. En outre, vous ne pouvez pas modifier la stratégie du planificateur après avoir créé l' `Scheduler` objet.
 

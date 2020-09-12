@@ -1,19 +1,19 @@
 ---
-title: de l’énumération endian
+title: endian enum
 description: Énumération utilisée pour spécifier le endianness des types scalaires
 ms.date: 08/27/2020
 f1_keywords:
 - bit/std::endian
 helpviewer_keywords:
 - std::endian
-ms.openlocfilehash: 78df181e20d0e5d72508bd0fc86118528a312d6b
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: b535bc009fbdc0b047444a6bc2ca36eed7a6d1cb
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194544"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040078"
 ---
-# <a name="endian-enum"></a>de l’énumération endian
+# <a name="endian-enum"></a>endian enum
 
 Indique le endianness de tous les types scalaires.
 
@@ -38,13 +38,13 @@ enum class endian {
 
 Tous les types scalaires natifs sont Little endian pour les plateformes qui Microsoft Visual C++ cibles (x86, x64, ARM, ARM64).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<bit>
 
 **Espace de noms :** std
 
-`/std:c++latest` est obligatoire
+[/std : c + + latest](../build/reference/std-specify-language-standard-version.md) est requis.
 
 ## <a name="see-also"></a>Voir aussi
 

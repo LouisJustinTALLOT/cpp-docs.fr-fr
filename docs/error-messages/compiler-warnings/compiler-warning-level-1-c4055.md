@@ -1,25 +1,25 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4052
+title: Avertissement du compilateur (niveau 1) C4055
 ms.date: 11/04/2016
 f1_keywords:
 - C4055
 helpviewer_keywords:
 - C4055
 ms.assetid: f9955421-16ab-46e5-8f9d-bf1639a519ef
-ms.openlocfilehash: e9fcb4356d993d86b622fd49c4a75d587554f7c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47883f60c3205125a8ee88b804c1d622b3ba0b41
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388603"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041027"
 ---
 # <a name="compiler-warning-level-1-c4055"></a>Avertissement du compilateur (niveau 1) C4055
 
-> «*conversion*' : du pointeur donnée '*type1*'en pointeur de fonction'*type2*»
+> '*conversion*' : du pointeur de données'*type1*'vers le pointeur fonction'*type2*'
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-**Obsolète :** Cet avertissement n’est pas généré par Visual Studio 2017 et versions ultérieures.
+**Obsolète :** Cet avertissement n’est pas généré par Visual Studio 2017 et les versions ultérieures.
 
 Un pointeur donnée est converti (peut-être de façon incorrecte) en un pointeur fonction. Il s’agit d’un avertissement de niveau 1 sous /Za et d’un avertissement de niveau 4 sous /Ze.
 

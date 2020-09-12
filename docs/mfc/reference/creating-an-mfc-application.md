@@ -6,18 +6,18 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: f0d0287c9914bbefc2c5659e5f5d4386ab566c1a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 115ca6b4ab32482707cffd08ef575c93b2f3bfa9
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215135"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040091"
 ---
 # <a name="creating-an-mfc-application"></a>Création d'une application MFC
 
 Une application MFC est une application exécutable pour Windows qui se base sur la bibliothèque MFC (Microsoft Foundation Class). Les exécutables MFC se décomposent généralement en cinq types : les applications Windows standard, les boîtes de dialogue, les applications basées sur les formulaires, les applications de style Explorateur et les applications de style navigateur Web. Pour plus d'informations, consultez les pages suivantes :
 
-- [Utilisation des classes pour écrire des applications Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
+- [Utilisation des classes pour l'écriture d'applications Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
 
 - [Création et affichage de boîtes de dialogue](../../mfc/creating-and-displaying-dialog-boxes.md)
 
@@ -25,7 +25,7 @@ Une application MFC est une application exécutable pour Windows qui se base sur
 
 - [Création d’une application MFC de style Explorateur de fichiers](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)
 
-- [Création d’une application MFC de style navigateur web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
+- [Création d’une application MFC de style navigateur Web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
 
 L'Assistant Application MFC génère les classes et fichiers appropriés pour n'importe lequel de ces types d'applications, en fonction des options sélectionnées dans l'Assistant.
 
@@ -42,7 +42,7 @@ Le moyen le plus simple de créer une application MFC consiste à utiliser l’A
 
 Pour plus d’informations, consultez [création d’une application MFC basée sur les formulaires](creating-a-forms-based-mfc-application.md).
 
-![Assistant Application MFC](media/mfc-app-wizard.png)
+![Assistant Application MFC Visual Studio 2019](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Pour créer une application console MFC
 
@@ -53,7 +53,7 @@ Une application console MFC est un programme de ligne de commande qui utilise de
 1. Modifiez le nom du projet si nécessaire, puis appuyez sur **suivant** pour ouvrir l' **Assistant du bureau Windows**.
 1. Cochez la case **en-têtes MFC** et définissez d’autres valeurs en fonction des besoins, puis cliquez sur **Terminer**.
 
-![Assistant Application MFC](media/windows-desktop-wizard.png)
+![Boîte de dialogue projet de bureau Windows de Visual Studio 2019](media/windows-desktop-wizard.png)
 
 ::: moniker-end
 
@@ -62,25 +62,25 @@ Une application console MFC est un programme de ligne de commande qui utilise de
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Pour créer un formulaire MFC ou une application basée sur une boîte de dialogue
 
 1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
-1. Sous les modèles **installés** , choisissez **Visual C++**  > **MFC/ATL**. Si vous ne les voyez pas, utilisez la Visual Studio Installer pour les ajouter.
+1. Sous les modèles **installés** , choisissez **Visual C++**  >  **MFC/ATL**. Si vous ne les voyez pas, utilisez la Visual Studio Installer pour les ajouter.
 1. Choisissez **application MFC** dans le volet central.
 1. Modifiez les valeurs de configuration en fonction des besoins, puis cliquez sur **Terminer**.
 
 Pour plus d’informations, consultez [création d’une application MFC basée sur les formulaires](creating-a-forms-based-mfc-application.md).
 
-![Assistant Application MFC](media/mfc-app-wizard.png)
+![Assistant Application MFC Visual Studio 2017](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Pour créer une application console MFC
 
 Une application console MFC est un programme de ligne de commande qui utilise des bibliothèques MFC, mais qui s’exécute dans la fenêtre de console.
 
 1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
-1. Sous les modèles **installés** , choisissez **Visual C++**  > **Bureau Windows**.
+1. Sous les modèles **installés** , choisissez **Visual C++** > **Bureau Windows**.
 1. Choisissez **Windows Desktop Wizard** dans le volet central.
 1. Modifiez le nom du projet en fonction des besoins, puis appuyez sur **OK** pour ouvrir l' **Assistant du bureau Windows**.
 1. Cochez la case **en-têtes MFC** et définissez d’autres valeurs en fonction des besoins, puis cliquez sur **Terminer**.
 
-![Assistant Application MFC](media/windows-desktop-wizard-2017.png)
+![Boîte de dialogue projet de bureau Windows de Visual Studio 2017](media/windows-desktop-wizard-2017.png)
 
 ::: moniker-end
 
@@ -89,20 +89,20 @@ Une application console MFC est un programme de ligne de commande qui utilise de
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Pour créer un formulaire MFC ou une application basée sur une boîte de dialogue
 
 1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
-1. Sous les modèles **installés** , choisissez **Visual C++**  > **MFC**.
+1. Sous les modèles **installés** , choisissez **Visual C++** > **MFC**.
 1. Choisissez **application MFC** dans le volet central.
 1. Cliquez sur **suivant** pour démarrer l' **Assistant Application MFC**.
 
 Pour plus d’informations, consultez [création d’une application MFC basée sur les formulaires](creating-a-forms-based-mfc-application.md).
 
-![Assistant Application MFC](media/mfc-app-wizard-2015.png)
+![Assistant Application MFC Visual Studio 2015](media/mfc-app-wizard-2015.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>Pour créer une application console MFC
 
 Une application console MFC est un programme de ligne de commande qui utilise des bibliothèques MFC, mais qui s’exécute dans la fenêtre de console.
 
 1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
-1. Sous les modèles **installés** , choisissez **Visual C++**  > **Win32**.
+1. Sous les modèles **installés** , choisissez **Visual C++** > **Win32**.
 1. Choisissez **application console Win32** dans le volet central.
 1. Modifiez le nom du projet si nécessaire, puis cliquez sur **OK**.
 1. Dans la deuxième page de l’Assistant, activez la case à cocher **Ajouter des en-têtes communs pour MFC** et définissez d’autres valeurs si nécessaire, puis cliquez sur **Terminer**.
