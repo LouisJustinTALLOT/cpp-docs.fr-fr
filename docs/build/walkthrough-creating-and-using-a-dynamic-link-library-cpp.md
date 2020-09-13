@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 37dc59dfb77af9fff240c0d44b21de84b17d073b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: adca441a1b1b4e5e7b7efa44c4a292a8f1ddec35
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127840"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042197"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procédure pas à pas : création et utilisation de votre propre bibliothèque de liens dynamiques (C++)
 
@@ -30,7 +30,7 @@ Cette procédure pas à pas couvre les tâches suivantes :
 
 - Utilisez les fonctions et variables importées à partir de la DLL dans l’application console.
 
-- Téléchargez l’application terminée.
+- Exécutez l’application terminée.
 
 À l’instar d’une bibliothèque liée de manière statique, une DLL _exporte_ des variables, des fonctions et des ressources par nom. Une application cliente _importe_ les noms pour utiliser ces variables, fonctions et ressources. Contrairement à une bibliothèque liée statiquement, Windows connecte les importations dans votre application aux exportations dans une DLL au moment du chargement ou au moment de l’exécution, au lieu de les connecter au moment de la liaison. Windows requiert des informations supplémentaires qui ne font pas partie du modèle de compilation standard C++ pour établir ces connexions. Le compilateur MSVC implémente certaines extensions spécifiques dans C++ pour fournir ces informations supplémentaires. Nous allons expliquer ces extensions au fur et à mesure.
 
@@ -48,13 +48,13 @@ Pour obtenir des liens vers d’autres informations sur les DLL, consultez [Cré
 
 - Une copie de Visual Studio. Pour plus d’informations sur le téléchargement et l’installation de Visual Studio, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio). Lorsque vous exécutez le programme d’installation, assurez-vous que la charge de travail **développement Desktop en C++** est activée. Ne vous inquiétez pas si vous n’avez pas installé cette charge de travail en même temps que Visual Studio. Vous pouvez réexécuter le programme d’installation et l’installer maintenant.
 
-   ![Développement Desktop en C++](media/desktop-development-with-cpp.png "Développement Desktop en C++")
+   ![Développement Desktop en C++](media/desktop-development-with-cpp.png "Développement Desktop en C++")
 
 ::: moniker-end
 
 ::: moniker range="vs-2015"
 
-- Une copie de Visual Studio. Pour plus d’informations sur le téléchargement et l’installation de Visual Studio 2015, consultez [installer Visual studio 2015](/visualstudio/install/install-visual-studio-2015?view=vs-2015). Utilisez une installation **personnalisée** pour installer le compilateur et les outils C++, car ils ne sont pas installés par défaut.
+- Une copie de Visual Studio. Pour plus d’informations sur le téléchargement et l’installation de Visual Studio 2015, consultez [installer Visual studio 2015](/visualstudio/install/install-visual-studio-2015?view=vs-2015&preserve-view=true). Utilisez une installation **personnalisée** pour installer le compilateur et les outils C++, car ils ne sont pas installés par défaut.
 
 ::: moniker-end
 
@@ -101,7 +101,7 @@ Lorsque la solution est créée, vous pouvez voir les fichiers projet et source 
 
 1. Dans la barre de menus, choisissez **Fichier** > **Nouveau** > **Projet** pour ouvrir la boîte de dialogue **Nouveau projet**.
 
-1. Dans le volet gauche de la boîte de dialogue **nouveau projet** , sélectionnez **installé** > **Visual C++** > **Bureau Windows**. Dans le volet central, sélectionnez **bibliothèque de liens dynamiques (dll)**. Entrez *MathLibrary* dans la zone **nom** pour spécifier un nom pour le projet. Laissez les valeurs d' **emplacement** et de **nom de solution** par défaut. Définissez la **solution** pour **créer une nouvelle solution**. Cochez la case **créer le répertoire pour la solution** si elle est décochée.
+1. Dans le volet gauche de la boîte de dialogue **nouveau projet** , sélectionnez **installé**  >  **Visual C++**  >  **Bureau Windows**. Dans le volet central, sélectionnez **bibliothèque de liens dynamiques (dll)**. Entrez *MathLibrary* dans la zone **nom** pour spécifier un nom pour le projet. Laissez les valeurs d' **emplacement** et de **nom de solution** par défaut. Définissez la **solution** pour **créer une nouvelle solution**. Cochez la case **créer le répertoire pour la solution** si elle est décochée.
 
    ![Nommer le projet MathLibrary](media/mathlibrary-new-project-name-159.png "Nommer le projet MathLibrary")
 
@@ -143,7 +143,7 @@ Pour l’instant, cette DLL ne fait pas grand-chose. Ensuite, vous allez créer 
 
 ### <a name="to-add-a-header-file-to-the-dll"></a>Pour ajouter un fichier d’en-tête à la DLL
 
-1. Pour créer un fichier d’en-tête pour vos fonctions, dans la barre de menus, choisissez **projet** > **Ajouter un nouvel élément**.
+1. Pour créer un fichier d’en-tête pour vos fonctions, dans la barre de menus, choisissez **projet**  >  **Ajouter un nouvel élément**.
 
 1. Dans le volet gauche de la boîte de dialogue **Ajouter un nouvel élément**, sélectionnez **Visual C++**. Dans le volet central, sélectionnez **Fichier d’en-tête (.h)**. Spécifiez *MathLibrary. h* comme nom pour le fichier d’en-tête.
 
@@ -202,7 +202,7 @@ Lorsque le macro **MATHLIBRARY&#95;EXPORTS** est défini, le macro **MATHLIBRARY
 
 ::: moniker range=">=vs-2019"
 
-1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **fichiers sources** et choisissez **Ajouter** > **un nouvel élément**. Créez un nouveau fichier. cpp appelé *MathLibrary. cpp*, de la même façon que vous avez ajouté un nouveau fichier d’en-tête à l’étape précédente.
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **fichiers sources** et choisissez **Ajouter**  >  **un nouvel élément**. Créez un nouveau fichier. cpp appelé *MathLibrary. cpp*, de la même façon que vous avez ajouté un nouveau fichier d’en-tête à l’étape précédente.
 
 1. Dans la fenêtre de l’éditeur, sélectionnez l’onglet **MathLibrary.cpp** s’il est déjà ouvert. Si ce n’est pas le cas, dans **Explorateur de solutions**, double-cliquez sur **MathLibrary. cpp** dans le dossier **fichiers sources** du projet **MathLibrary** pour l’ouvrir.
 
@@ -336,7 +336,7 @@ Lorsque le macro **MATHLIBRARY&#95;EXPORTS** est défini, le macro **MATHLIBRARY
 
 ::: moniker-end
 
-Pour vérifier que tout fonctionne à ce stade, compilez la bibliothèque de liens dynamiques. Pour compiler, choisissez **générer** > **générer la solution** dans la barre de menus. La DLL et la sortie de compilateur associée sont placées dans un dossier appelé *Debug* juste sous le dossier de la solution. Si vous créez une version Release, la sortie est placée dans un dossier appelé *Release*. Le résultat suivant doit ressembler à ce qui suit :
+Pour vérifier que tout fonctionne à ce stade, compilez la bibliothèque de liens dynamiques. Pour compiler, choisissez **générer**  >  **générer la solution** dans la barre de menus. La DLL et la sortie de compilateur associée sont placées dans un dossier appelé *Debug* juste sous le dossier de la solution. Si vous créez une version Release, la sortie est placée dans un dossier appelé *Release*. Le résultat suivant doit ressembler à ce qui suit :
 
 ::: moniker range=">=vs-2019"
 
@@ -457,7 +457,7 @@ Ensuite, pour appeler les fonctions MathLibrary dans votre code source, votre pr
 
 1. Dans la zone de liste déroulante **configuration** , sélectionnez **toutes les configurations** si elle n’est pas déjà sélectionnée.
 
-1. Dans le volet gauche, sélectionnez **Propriétés** > de configuration**C/C++** > **général**.
+1. Dans le volet gauche, sélectionnez **Propriétés de configuration**  >  **C/C++**  >  **général**.
 
 1. Dans le volet des propriétés, sélectionnez le contrôle de la liste déroulante en regard de la zone d’édition pour **Autres répertoires Include**, puis choisissez **Modifier**.
 
@@ -515,7 +515,7 @@ Pour résoudre ce problème, vous pouvez copier le fichier de bibliothèque dire
 
 1. Dans la zone de liste déroulante **configuration** , sélectionnez **toutes les configurations** si elle n’est pas déjà sélectionnée. Elle garantit que toutes les modifications de propriété s’appliquent aux versions Debug et Release.
 
-1. Dans le volet gauche, sélectionnez **Propriétés** > de configuration**entrée**de l'**éditeur de liens** > . Dans le volet des propriétés, sélectionnez le contrôle de la liste déroulante en regard de la zone d’édition pour les **Dépendances supplémentaires**, puis choisissez **Modifier**.
+1. Dans le volet gauche, sélectionnez **Propriétés de configuration**entrée de l'  >  **éditeur de liens**  >  **Input**. Dans le volet des propriétés, sélectionnez le contrôle de la liste déroulante en regard de la zone d’édition pour les **Dépendances supplémentaires**, puis choisissez **Modifier**.
 
    ![Modifier la propriété dépendances supplémentaires](media/mathclient-additional-dependencies-property.png "Modifier la propriété dépendances supplémentaires")
 
@@ -525,7 +525,7 @@ Pour résoudre ce problème, vous pouvez copier le fichier de bibliothèque dire
 
 1. Choisissez **OK** pour revenir à la boîte de dialogue **Pages de propriétés**.
 
-1. Dans le volet gauche, sélectionnez **Propriétés** > de configuration**éditeur de liens** > **général**. Dans le volet des propriétés, sélectionnez le contrôle de la liste déroulante en regard de la zone d’édition pour **Répertoires de bibliothèques supplémentaires**, puis choisissez **Modifier**.
+1. Dans le volet gauche, sélectionnez **Propriétés de configuration**  >  **éditeur de liens**  >  **général**. Dans le volet des propriétés, sélectionnez le contrôle de la liste déroulante en regard de la zone d’édition pour **Répertoires de bibliothèques supplémentaires**, puis choisissez **Modifier**.
 
    ![Modifier la propriété répertoires de bibliothèque supplémentaires](media/mathclient-additional-library-directories-property.png "Modifier la propriété répertoires de bibliothèque supplémentaires")
 
@@ -551,7 +551,7 @@ Une façon d’éviter ce problème consiste à copier la DLL dans le répertoir
 
 1. Dans la zone de liste déroulante **configuration** , sélectionnez **toutes les configurations** si elle n’est pas déjà sélectionnée.
 
-1. Dans le volet gauche, sélectionnez **Propriétés** > de configuration**événements de build événements** > **après génération**.
+1. Dans le volet gauche, sélectionnez **Propriétés de configuration**  >  **événements de build événements**  >  **après génération**.
 
 1. Dans le volet des propriétés, sélectionnez le contrôle d’édition dans le champ **ligne de commande** . Si vous avez suivi les instructions pour placer votre projet client dans une solution distincte du projet DLL, entrez la commande suivante :
 
@@ -563,7 +563,7 @@ Une façon d’éviter ce problème consiste à copier la DLL dans le répertoir
 
 1. Choisissez le bouton **OK** pour enregistrer les changements que vous avez apportés aux propriétés du projet.
 
-Maintenant, votre application cliente a tout ce dont il a besoin pour générer et exécuter. Générez l’application en choisissant **générer** > **générer la solution** dans la barre de menus. La fenêtre **sortie** dans Visual Studio doit avoir un aspect similaire à l’exemple suivant, en fonction de votre version de Visual Studio :
+Maintenant, votre application cliente a tout ce dont il a besoin pour générer et exécuter. Générez l’application en choisissant **générer**  >  **générer la solution** dans la barre de menus. La fenêtre **sortie** dans Visual Studio doit avoir un aspect similaire à l’exemple suivant, en fonction de votre version de Visual Studio :
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------
@@ -573,7 +573,7 @@ Maintenant, votre application cliente a tout ce dont il a besoin pour générer 
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-Félicitations, vous avez créé une application qui appelle des fonctions dans votre DLL. Exécutez maintenant votre application pour voir ce qu’elle fait. Dans la barre de menus, choisissez **Déboguer** > **exécuter sans débogage**. Visual Studio ouvre une fenêtre de commande dans laquelle le programme doit exécuter. La dernière partie de la sortie doit avoir cette forme :
+Félicitations, vous avez créé une application qui appelle des fonctions dans votre DLL. Exécutez maintenant votre application pour voir ce qu’elle fait. Dans la barre de menus, choisissez **Déboguer**  >  **exécuter sans débogage**. Visual Studio ouvre une fenêtre de commande dans laquelle le programme doit exécuter. La dernière partie de la sortie doit avoir cette forme :
 
 ![Démarrer l’application cliente sans débogage](media/mathclient-run-without-debugging.png "Démarrer l’application cliente sans débogage")
 

@@ -1,20 +1,20 @@
 ---
-title: '&lt;> d’exceptionC++ (commentaires de documentation)'
+title: '&lt;> d’exception (commentaires de documentation C++)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: d56e0ce7c892cfd9fd909b5268043d77929bd43c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7e4b2276ecf5f4f4c4c05b389eb98a0f572f8027
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439863"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042106"
 ---
-# <a name="ltexceptiongt"></a>&lt;exception&gt;
+# <a name="ltexceptiongt-tag"></a>&lt;&gt;balise d’exception
 
-La balise \<exception> vous permet de spécifier quelles exceptions peuvent être levées. Cette balise est appliquée à une définition de méthode.
+La \<exception> balise vous permet de spécifier les exceptions qui peuvent être levées. Cette balise est appliquée à une définition de méthode.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,21 +24,21 @@ La balise \<exception> vous permet de spécifier quelles exceptions peuvent êtr
 
 #### <a name="parameters"></a>Paramètres
 
-*member*<br/>
+*membre*<br/>
 Référence à une exception qui est disponible à partir de l’environnement de compilation actuel. À l’aide des règles de recherche de nom, le compilateur vérifie que l’exception donnée existe et traduit `member` en nom d’élément canonique dans le fichier XML de sortie.  Le compilateur émet un avertissement s'il ne trouve pas `member`.
 
 Mettez le nom entre guillemets simples ou doubles.
 
-Pour plus d’informations sur la création d’une référence cref à un type générique, consultez [\<see>](see-visual-cpp.md).
+Pour plus d’informations sur la création d’une référence cref à un type générique, consultez [\<see>](see-visual-cpp.md) .
 
 *description*<br/>
 Une description.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation dans un fichier.
 
-Le compilateur MSVC tente de résoudre les références CREF en une seule passe via les commentaires de documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue. Pour plus d’informations, consultez [\<seealso>](seealso-visual-cpp.md).
+Le compilateur MSVC tente de résoudre les références CREF en une seule passe via les commentaires de documentation.  Par conséquent, si lorsque vous utilisez les règles de recherche C++, un symbole est introuvable par le compilateur, la référence est marquée comme non résolue. [\<seealso>](seealso-visual-cpp.md)Pour plus d’informations, consultez.
 
 ## <a name="example"></a>Exemple
 

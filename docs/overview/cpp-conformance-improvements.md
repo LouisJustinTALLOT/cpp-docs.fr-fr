@@ -3,12 +3,12 @@ title: Améliorations de la conformité de C++
 ms.date: 08/04/2020
 description: Microsoft C++ dans Visual Studio arrive progressivement à une conformité totale avec la norme du langage C ++20.
 ms.technology: cpp-language
-ms.openlocfilehash: a28281eb7b47dcfc633467c96e520c7e97e26777
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841387"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042119"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Améliorations de la conformité de C++ dans Visual Studio
 
@@ -744,7 +744,7 @@ int main() {
 
 ### <a name="preprocessor-output-preserves-newlines"></a>La sortie du préprocesseur préserve les nouvelles lignes
 
-Le préprocesseur expérimental préserve désormais les nouvelles lignes et l’espace blanc lors de l’utilisation de **`/P`** ou **`/E`** de **`/experimental:preprocessor`** . Cette modification peut être désactivée à l’aide de **`/d1experimental:preprocessor:oldWhitespace`** .
+Le préprocesseur expérimental préserve désormais les nouvelles lignes et l’espace blanc lors de l’utilisation de **`/P`** ou **`/E`** de **`/experimental:preprocessor`** .
 
 Étant donné cet exemple de source,
 

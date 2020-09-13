@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: 7c47ec86e80b50bb2b313a2c84a3f375681e2870
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 94c44e4ee142249fefcc966febc471ce940ab86a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838826"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042171"
 ---
 # <a name="x64-software-conventions"></a>Conventions des logiciels x64
 
@@ -149,7 +149,7 @@ _declspec(align(4)) struct {
 }
 ```
 
-![Présentation de la structure de l’exemple 2 de conversion AMD](../build/media/vcamd_conv_ex_3_block.png "Présentation de la structure de l’exemple 2 de conversion AMD")
+![Présentation de la structure de l’exemple 3 de conversion AMD](../build/media/vcamd_conv_ex_3_block.png "Présentation de la structure de l’exemple 3 de conversion AMD")
 
 #### <a name="example-4"></a>Exemple 4
 
@@ -163,7 +163,7 @@ _declspec(align(8)) union {
 }
 ```
 
-![Exemple de conversion AMD 4 Union layouit](../build/media/vcamd_conv_ex_4_block.png "Exemple de conversion AMD 4 Union layouit")
+![Disposition d’Union de l’exemple de conversion AMD 4](../build/media/vcamd_conv_ex_4_block.png "Disposition d’Union de l’exemple de conversion AMD 4")
 
 ### <a name="bitfields"></a>Champs de bits
 
