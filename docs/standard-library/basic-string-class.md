@@ -1,6 +1,7 @@
 ---
 title: basic_string, classe
-ms.date: 11/12/2019
+description: Référence d’API pour la `basic_string` classe, qui est la classe de chaîne C++ standard.
+ms.date: 9/10/2020
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -57,6 +58,8 @@ f1_keywords:
 - xstring/std::basic_string::shrink_to_fit
 - xstring/std::basic_string::size
 - xstring/std::basic_string::substr
+- xstring/std::basic_string::ends_with
+- xstring/std::basic_string::starts_with
 - xstring/std::basic_string::swap
 helpviewer_keywords:
 - std::basic_string [C++]
@@ -113,15 +116,17 @@ helpviewer_keywords:
 - std::basic_string [C++], rfind
 - std::basic_string [C++], shrink_to_fit
 - std::basic_string [C++], size
+- std::basic_string [C++], starts_with
+- std::basic_string [C++], ends_with
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 519d95d82e239084871489cfe8a825752cf6d9f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9012fc8203bf8b54e87e2c21f47f2ef6ef764c2d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219194"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040309"
 ---
 # <a name="basic_string-class"></a>basic_string, classe
 
@@ -185,13 +190,14 @@ Type qui représente l'objet allocateur stocké qui contient des informations su
 |[cend](#cend)|Retourne un itérateur const qui traite l'emplacement situé après le dernier élément d'une chaîne.|
 |[clear](#clear)|Efface tous les éléments d'une chaîne.|
 |[compar](#compare)|Compare une chaîne à une chaîne spécifique pour déterminer si les deux chaînes sont équivalentes, ou si l'une est inférieure à l'autre d'un point de vue lexicographique.|
-|[copy](#copy)|Copie tout au plus un nombre spécifique de caractères d'une position indexée dans une chaîne source vers un tableau de caractères cible. Obsolète. Utilisez [basic_string::_Copy_s](#copy_s) à la place.|
+|[copy](#copy)|Copie tout au plus un nombre spécifique de caractères d'une position indexée dans une chaîne source vers un tableau de caractères cible. Action déconseillée. Utilisez [basic_string::_Copy_s](#copy_s) à la place.|
 |[crbegin](#crbegin)|Retourne un itérateur const qui traite le premier élément d'une chaîne inversée.|
 |[crend](#crend)|Retourne un itérateur const qui traite l'emplacement qui suit le dernier élément d'une chaîne inversée.|
 |[_Copy_s](#copy_s)|Copie tout au plus un nombre spécifique de caractères d'une position indexée dans une chaîne source vers un tableau de caractères cible.|
 |[data](#data)|Convertit le contenu d'une chaîne en tableau de caractères.|
 |[empty](#empty)|Effectue un test pour déterminer si la chaîne contient des caractères.|
 |[end](#end)|Retourne un itérateur qui traite l'emplacement qui suit le dernier élément d'une chaîne.|
+|[ends_with](#ends_with)<sup>c++ 20</sup>|Vérifie si la chaîne se termine par le suffixe spécifié.|
 |[erase](#erase)|Supprime un élément ou une plage d'éléments dans une chaîne à partir de l'emplacement spécifié.|
 |[find](#find)|Recherche une chaîne vers l'avant pour trouver la première occurrence d'une sous-chaîne qui correspond à une séquence spécifique de caractères.|
 |[find_first_not_of](#find_first_not_of)|Recherche dans une chaîne le premier caractère qui n’est pas un élément d’une chaîne spécifiée.|
@@ -213,6 +219,7 @@ Type qui représente l'objet allocateur stocké qui contient des informations su
 |[rfind](#rfind)|Recherche une chaîne vers l'arrière pour trouver la première occurrence d'une sous-chaîne qui correspond à une séquence spécifique de caractères.|
 |[shrink_to_fit](#shrink_to_fit)|Ignore la capacité excédentaire de la chaîne.|
 |[size](#size)|Retourne le nombre actuel d'éléments contenus dans une chaîne.|
+|[starts_with](#starts_with)<sup>c++ 20</sup>|Vérifie si la chaîne commence par le préfixe spécifié.|
 |[substr](#substr)|Copie une sous-chaîne d'un certain nombre de caractères dans une chaîne qui commence à la position spécifiée.|
 |[swap](#swap)|Échange le contenu de deux chaînes.|
 
@@ -224,19 +231,19 @@ Type qui représente l'objet allocateur stocké qui contient des informations su
 |[opérateur =](#op_eq)|Assigne de nouvelles valeurs de caractère au contenu d'une chaîne.|
 |[operator&#91;&#93;](#op_at)|Fournit une référence au caractère situé à l'index spécifié dans une chaîne.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Si une fonction doit générer une séquence supérieure à [max_size](#max_size) éléments, la fonction signale une erreur de longueur en levant un objet de type [length_error](../standard-library/length-error-class.md).
 
 Les références, les pointeurs et les itérateurs qui désignent des éléments de la séquence contrôlée peuvent devenir non valides après tout appel à une fonction qui modifie la séquence contrôlée, ou après le premier appel à une **`const`** fonction non membre.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<string>
 
 **Espace de noms :** std
 
-## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a>basic_string :: allocator_type
+## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a> basic_string :: allocator_type
 
 Type qui représente la classe allocator d’un objet string.
 
@@ -244,7 +251,7 @@ Type qui représente la classe allocator d’un objet string.
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type est un synonyme du paramètre de modèle `Allocator`.
 
@@ -267,7 +274,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringappend"></a><a name="append"></a>basic_string :: Append
+## <a name="basic_stringappend"></a><a name="append"></a> basic_string :: Append
 
 Ajoute des caractères à la fin d'une chaîne.
 
@@ -332,9 +339,9 @@ Itérateur d’entrée, const_pointer ou const_iterator, qui cible la position j
 
 Référence à l’objet string ajouté avec les caractères transmis par la fonction membre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Les caractères peuvent être ajoutés à une chaîne à l’aide de l' [opérateur + =](#op_add_eq) ou des fonctions membres `append` ou [push_back](#push_back). `operator+=`Ajoute des valeurs à argument unique tandis que la fonction membre à plusieurs arguments `append` permet de spécifier une partie spécifique d’une chaîne pour l’ajout de.
+Les caractères peuvent être ajoutés à une chaîne à l’aide de l' [opérateur + =](#op_add_eq) ou des fonctions membres `append` ou [push_back](#push_back). `operator+=` Ajoute des valeurs à argument unique tandis que la fonction membre à plusieurs arguments `append` permet de spécifier une partie spécifique d’une chaîne pour l’ajout de.
 
 ### <a name="example"></a>Exemple
 
@@ -428,7 +435,7 @@ The string str2f is: Wide World
 The appended string str1 is: Hello World.
 ```
 
-## <a name="basic_stringassign"></a><a name="assign"></a>basic_string :: assign
+## <a name="basic_stringassign"></a><a name="assign"></a> basic_string :: assign
 
 Assigne de nouvelles valeurs de caractère au contenu d'une chaîne.
 
@@ -493,7 +500,7 @@ Position à laquelle les nouveaux caractères commencent à être assignés.
 
 Référence à l’objet string auquel la fonction membre assigne les nouveaux caractères.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les chaînes peuvent recevoir de nouvelles valeurs de caractère. La nouvelle valeur peut être une chaîne et une chaîne C, ou un caractère unique. L' [opérateur =](#op_eq) peut être utilisé si la nouvelle valeur peut être décrite par un seul paramètre ; dans le cas contraire, la fonction membre `assign` , qui a plusieurs paramètres, peut être utilisée pour spécifier la partie de la chaîne qui doit être assignée à une chaîne cible.
 
@@ -589,7 +596,7 @@ The string str2f is: Wide World
 The string str1 assigned a range of string str2f is: World.
 ```
 
-## <a name="basic_stringat"></a><a name="at"></a>basic_string :: à
+## <a name="basic_stringat"></a><a name="at"></a> basic_string :: à
 
 Fournit une référence au caractère situé à l'index spécifié dans une chaîne.
 
@@ -608,7 +615,7 @@ Index de la position de l’élément à référencer.
 
 Référence au caractère de la chaîne à la position spécifiée par l’index de paramètre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le premier élément de la chaîne a un index égal à zéro et les éléments suivants sont indexés consécutivement par les entiers positifs, de sorte qu’une chaîne de longueur *n* a un *n*ième élément indexé par le nombre *n-* 1.
 
@@ -657,7 +664,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringback"></a><a name="back"></a>basic_string :: Back
+## <a name="basic_stringback"></a><a name="back"></a> basic_string :: Back
 
 Retourne une référence au dernier élément de la chaîne.
 
@@ -671,9 +678,9 @@ reference back();
 
 Référence au dernier élément de la chaîne, qui doit être non vide.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-## <a name="basic_stringbasic_string"></a><a name="basic_string"></a>basic_string :: basic_string
+## <a name="basic_stringbasic_string"></a><a name="basic_string"></a> basic_string :: basic_string
 
 Construit une chaîne vide, initialisée par des caractères spécifiques ou qui représente une copie complète ou partielle d'un autre objet String ou d'une autre chaîne de style C (non terminée par la valeur null).
 
@@ -775,7 +782,7 @@ Itérateur d'entrée, const_pointer ou const_iterator qui traite la position de 
 
 Référence à l'objet String qui est construit par les constructeurs.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Tous les constructeurs stockent un [basic_string::allocator_type](#allocator_type) et initialisent la séquence contrôlée. L'objet allocateur est l'argument `al`, s'il est présent. Pour le constructeur de copie, il s’agit de `right.` [basic_string :: get_allocator](#get_allocator) `()` . Sinon, l’allocateur est `Alloc()` .
 
@@ -830,7 +837,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringbegin"></a><a name="begin"></a>basic_string :: Begin
+## <a name="basic_stringbegin"></a><a name="begin"></a> basic_string :: Begin
 
 Retourne un itérateur qui traite le premier élément de la chaîne.
 
@@ -880,7 +887,7 @@ int main( ) {
 }
 ```
 
-## <a name="basic_stringc_str"></a><a name="c_str"></a>basic_string :: c_str
+## <a name="basic_stringc_str"></a><a name="c_str"></a> basic_string :: c_str
 
 Convertit le contenu d’une chaîne en chaîne de style C se terminant par un caractère null.
 
@@ -892,7 +899,7 @@ const value_type *c_str() const;
 
 Pointeur vers la version de style C de la chaîne d’appel.  La valeur du pointeur n’est pas valide après l’appel d’une fonction non const, y compris le destructeur, dans la classe basic_string de l’objet.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les objets de type chaîne appartenant au modèle de classe basic_string ne \<char> sont pas nécessairement terminés par null. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de la chaîne comme tout autre caractère. Il existe une conversion automatique de **const char** <strong>\*</strong> en chaînes, mais la classe String ne fournit pas de conversion automatique des chaînes de style C en objets de type **basic_string \<char> **.
 
@@ -944,7 +951,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringcapacity"></a><a name="capacity"></a>basic_string :: Capacity
+## <a name="basic_stringcapacity"></a><a name="capacity"></a> basic_string :: Capacity
 
 Retourne le plus grand nombre d'éléments qui peuvent être stockés dans une chaîne sans augmenter l'allocation de mémoire de la chaîne.
 
@@ -956,7 +963,7 @@ size_type capacity() const;
 
 Taille du stockage actuellement alloué dans la mémoire pour contenir la chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre retourne le stockage actuellement alloué pour contenir la séquence contrôlée, une valeur au moins aussi grande que [size](#size).
 
@@ -1014,7 +1021,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringcbegin"></a><a name="cbegin"></a>basic_string :: cbegin
+## <a name="basic_stringcbegin"></a><a name="cbegin"></a> basic_string :: cbegin
 
 Retourne un **`const`** itérateur qui traite le premier élément de la plage.
 
@@ -1026,7 +1033,7 @@ const_iterator cbegin() const;
 
 **`const`** Itérateur à accès aléatoire qui pointe vers le premier élément de la plage, ou vers l’emplacement situé juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
@@ -1040,7 +1047,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="basic_stringcend"></a><a name="cend"></a>basic_string :: CEND
+## <a name="basic_stringcend"></a><a name="cend"></a> basic_string :: CEND
 
 Retourne un **`const`** itérateur qui traite l’emplacement juste après le dernier élément d’une plage.
 
@@ -1052,7 +1059,7 @@ const_iterator cend() const;
 
 **`const`** Itérateur à accès aléatoire qui pointe juste après la fin de la plage.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
@@ -1068,7 +1075,7 @@ auto i2 = Container.cend();
 
 La valeur retournée par `cend` ne doit pas être déréférencée.
 
-## <a name="basic_stringclear"></a><a name="clear"></a>basic_string :: Clear
+## <a name="basic_stringclear"></a><a name="clear"></a> basic_string :: Clear
 
 Efface tous les éléments d'une chaîne.
 
@@ -1076,7 +1083,7 @@ Efface tous les éléments d'une chaîne.
 void clear();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La chaîne sur laquelle la fonction membre est appelée est vide.
 
@@ -1119,7 +1126,7 @@ The modified string str1 is:
 Nothing printed above because the string str1 is empty.
 ```
 
-## <a name="basic_stringcompare"></a><a name="compare"></a>basic_string :: compare
+## <a name="basic_stringcompare"></a><a name="compare"></a> basic_string :: compare
 
 Effectue une comparaison sensible à la casse entre une chaîne et une chaîne spécifiée pour déterminer si les deux chaînes sont équivalentes ou si l’une est inférieure à l’autre d’un point de vue lexicographique.
 
@@ -1181,7 +1188,7 @@ Chaîne C à comparer à la chaîne d’opérande.
 
 Valeur négative si la chaîne d’opérande est inférieure à la chaîne de paramètre ; zéro si les deux chaînes sont égales ; ou valeur positive si la chaîne d’opérande est supérieure à la chaîne de paramètre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les `compare` fonctions membres comparent la totalité ou une partie du paramètre et des chaînes d’opérande en fonction de ce qui est utilisé.
 
@@ -1380,7 +1387,7 @@ The 3 characters from position 2 of the operand string are equal to
 the first 3 characters of the parameter C-string.
 ```
 
-## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a>basic_string :: const_iterator
+## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a> basic_string :: const_iterator
 
 Type qui fournit un itérateur à accès aléatoire qui peut accéder à un **`const`** élément dans la chaîne et le lire.
 
@@ -1388,7 +1395,7 @@ Type qui fournit un itérateur à accès aléatoire qui peut accéder à un **`c
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `const_iterator` ne peut pas être utilisé pour modifier la valeur d’un caractère et est utilisé pour itérer sur une chaîne vers l’avant.
 
@@ -1396,7 +1403,7 @@ Un type `const_iterator` ne peut pas être utilisé pour modifier la valeur d’
 
 Pour savoir comment déclarer et utiliser `const_iterator`, consultez l’exemple relatif à [begin](#begin).
 
-## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a>basic_string :: const_pointer
+## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a> basic_string :: const_pointer
 
 Type qui fournit un pointeur vers un **`const`** élément d’une chaîne.
 
@@ -1404,7 +1411,7 @@ Type qui fournit un pointeur vers un **`const`** élément d’une chaîne.
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type est un synonyme de `allocator_type::const_pointer`.
 
@@ -1436,7 +1443,7 @@ The string pstr1a is: In Here.
 The C-string cstr1c is: Out There.
 ```
 
-## <a name="basic_stringconst_reference"></a><a name="const_reference"></a>basic_string :: const_reference
+## <a name="basic_stringconst_reference"></a><a name="const_reference"></a> basic_string :: const_reference
 
 Type qui fournit une référence à un **`const`** élément stocké dans une chaîne pour la lecture et l’exécution d' **`const`** opérations.
 
@@ -1444,7 +1451,7 @@ Type qui fournit une référence à un **`const`** élément stocké dans une ch
 typedef typename allocator_type::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `const_reference` ne peut pas être utilisé pour changer la valeur d'un élément.
 
@@ -1454,7 +1461,7 @@ Le type est un synonyme de `allocator_type::const_reference`. Pour String `type`
 
 Pour savoir comment déclarer et utiliser `const_reference`, consultez l’exemple relatif à [at](#at).
 
-## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>basic_string :: const_reverse_iterator
+## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> basic_string :: const_reverse_iterator
 
 Type qui fournit un itérateur à accès aléatoire capable de lire un **`const`** élément de la chaîne.
 
@@ -1462,7 +1469,7 @@ Type qui fournit un itérateur à accès aléatoire capable de lire un **`const`
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `const_reverse_iterator` ne peut pas changer la valeur d’un caractère. Il sert à itérer sur une chaîne dans l’ordre inverse.
 
@@ -1470,7 +1477,7 @@ Un type `const_reverse_iterator` ne peut pas changer la valeur d’un caractère
 
 Pour savoir comment déclarer et utiliser `const_reverse_iterator`, consultez l’exemple relatif à [rbegin](#rbegin).
 
-## <a name="basic_stringcopy"></a><a name="copy"></a>basic_string :: copier
+## <a name="basic_stringcopy"></a><a name="copy"></a> basic_string :: copier
 
 Copie tout au plus un nombre spécifique de caractères d'une position indexée dans une chaîne source vers un tableau de caractères cible.
 
@@ -1497,7 +1504,7 @@ Position de début dans la chaîne source à partir de laquelle les copies doive
 
 Nombre de caractères réellement copiés.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un caractère NULL n’est pas ajouté à la fin de la copie.
 
@@ -1550,7 +1557,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringcrbegin"></a><a name="crbegin"></a>basic_string :: crbegin
+## <a name="basic_stringcrbegin"></a><a name="crbegin"></a> basic_string :: crbegin
 
 Retourne un itérateur const qui traite le premier élément d'une chaîne inversée.
 
@@ -1562,7 +1569,7 @@ const_reverse_iterator crbegin() const;
 
 Itérateur inverse qui pointe juste après la fin de la chaîne. La position désigne le début de la chaîne inverse.
 
-## <a name="basic_stringcrend"></a><a name="crend"></a>basic_string :: crend
+## <a name="basic_stringcrend"></a><a name="crend"></a> basic_string :: crend
 
 Retourne un itérateur const qui traite l'emplacement qui suit le dernier élément d'une chaîne inversée.
 
@@ -1574,9 +1581,9 @@ const_reverse_iterator crend() const;
 
 Itérateur inversé const qui traite l'emplacement qui suit le dernier élément d'une chaîne inversée (emplacement qui précédait celui du premier élément de la chaîne non inversée).
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-## <a name="basic_string_copy_s"></a><a name="copy_s"></a>basic_string :: _Copy_s
+## <a name="basic_string_copy_s"></a><a name="copy_s"></a> basic_string :: _Copy_s
 
 Copie tout au plus un nombre spécifique de caractères d'une position indexée dans une chaîne source vers un tableau de caractères cible.
 
@@ -1605,7 +1612,7 @@ Position de début dans la chaîne source à partir de laquelle les copies doive
 
 Nombre de caractères réellement copiés.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un caractère NULL n’est pas ajouté à la fin de la copie.
 
@@ -1656,7 +1663,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringdata"></a><a name="data"></a>basic_string ::d ATA
+## <a name="basic_stringdata"></a><a name="data"></a> basic_string ::d ATA
 
 Convertit le contenu d’une chaîne en tableau de caractères se terminant par le caractère null.
 
@@ -1669,7 +1676,7 @@ value_type *data() noexcept;
 
 Pointeur vers le premier élément du tableau terminé par le caractère null qui contient le contenu de la chaîne. Pour une chaîne vide, le pointeur pointe vers un caractère null unique égal à `value_type()` .
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Pointeur retourné par `data` points dans une plage valide `[data(), data() + size()]` . Chaque élément de la plage correspond aux données actuelles de la chaîne. Autrement dit, pour chaque décalage valide *n* dans la plage, `data() + n == addressof(operator[](n))` .
 
@@ -1725,7 +1732,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringdifference_type"></a><a name="difference_type"></a>basic_string ::d ifference_type
+## <a name="basic_stringdifference_type"></a><a name="difference_type"></a> basic_string ::d ifference_type
 
 Type qui fournit la différence entre deux itérateurs qui font référence aux éléments d'une même chaîne.
 
@@ -1733,7 +1740,7 @@ Type qui fournit la différence entre deux itérateurs qui font référence aux 
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée.
 
@@ -1773,7 +1780,7 @@ The last character i is at position: 8.
 The difference is: 6.
 ```
 
-## <a name="basic_stringempty"></a><a name="empty"></a>basic_string :: Empty
+## <a name="basic_stringempty"></a><a name="empty"></a> basic_string :: Empty
 
 Vérifie si la chaîne contient ou non des caractères.
 
@@ -1785,7 +1792,7 @@ bool empty() const;
 
 **`true`** Si l’objet String ne contient pas de caractères ; **`false`** si elle comporte au moins un caractère.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre est équivalente à [size](#size) == 0.
 
@@ -1821,7 +1828,7 @@ int main() {
 }
 ```
 
-## <a name="basic_stringend"></a><a name="end"></a>basic_string :: fin
+## <a name="basic_stringend"></a><a name="end"></a> basic_string :: fin
 
 Retourne un itérateur qui traite l'emplacement qui suit le dernier élément d'une chaîne.
 
@@ -1835,9 +1842,9 @@ iterator end();
 
 Retourne un itérateur d’accès aléatoire qui cible l’emplacement situé après le dernier élément d’une chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-`end`est souvent utilisé pour tester si un itérateur a atteint la fin de sa chaîne. La valeur retournée par `end` ne doit pas être déréférencée.
+`end` est souvent utilisé pour tester si un itérateur a atteint la fin de sa chaîne. La valeur retournée par `end` ne doit pas être déréférencée.
 
 Si la valeur de retour de `end` est assignée à un `const_iterator`, l’objet de chaîne ne peut pas être modifié. Si la valeur de retour de `end` est assignée à `iterator` , l’objet String peut être modifié.
 
@@ -1869,7 +1876,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
-*str1_Iter = 'T';
+   *str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1894,7 +1901,67 @@ The modified string str1 is now: No way ouT.
 The string str2 is empty.
 ```
 
-## <a name="basic_stringerase"></a><a name="erase"></a>basic_string :: Erase
+## <a name="basic_stringends_with"></a><a name="ends_with"></a> basic_string :: ends_with
+
+Vérifiez si la chaîne se termine par le suffixe spécifié.
+
+```cpp
+bool ends_with(const CharType c) const noexcept;
+bool ends_with(const CharType* const x) const noexcept;
+bool ends_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*secteur*\
+Suffixe à un seul caractère à rechercher.
+
+*Ed*\
+Vue de chaîne contenant le suffixe à rechercher. \
+Vous pouvez passer un `std::basic_string` , qui convertit en vue de chaîne.
+
+*x*\
+Chaîne de caractères se terminant par un caractère null qui contient le suffixe à rechercher.
+
+### <a name="return-value"></a>Valeur de retour
+
+`true` Si la chaîne se termine par le suffixe spécifié ; `false` sinon,.
+
+### <a name="remarks"></a>Remarques
+
+`ends_with()` est nouveau dans C++ 20. Pour l’utiliser, spécifiez l’option de compilateur [/std : c + + latest](../build/reference/std-specify-language-standard-version.md) .
+
+Consultez [starts_with](#starts_with) pour vérifier si une chaîne commence par le préfixe spécifié.
+
+### <a name="example"></a>Exemple
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::basic_string<char> str = "abcdefg";
+
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'
+    std::cout << str.ends_with('g') << '\n';
+    std::cout << str.ends_with("eFg") << '\n';
+
+    std::basic_string<char> str2 = "efg";
+    std::cout << str.ends_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+true
+false
+true
+```
+
+## <a name="basic_stringerase"></a><a name="erase"></a> basic_string :: Erase
 
 Supprime un élément ou une plage d'éléments dans une chaîne à partir de l'emplacement spécifié.
 
@@ -1932,7 +1999,7 @@ Nombre d’éléments qui seront supprimés s’il y en a autant dans la plage d
 
 Pour les deux premières fonctions membres, un itérateur qui cible le premier caractère après le dernier caractère supprimé par la fonction membre. Pour la troisième fonction membre, une référence à l’objet de chaîne à partir duquel les éléments ont été effacés.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La troisième fonction membre retourne ** \* This**.
 
@@ -1997,7 +2064,7 @@ The original string object str3 is: Hello computer.
 The modified string object str3m is: Hello .
 ```
 
-## <a name="basic_stringfind"></a><a name="find"></a>basic_string :: find
+## <a name="basic_stringfind"></a><a name="find"></a> basic_string :: find
 
 Recherche une chaîne vers l'avant pour trouver la première occurrence d'une sous-chaîne qui correspond à une séquence spécifique de caractères.
 
@@ -2172,7 +2239,7 @@ the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
-## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a>basic_string :: find_first_not_of
+## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a> basic_string :: find_first_not_of
 
 Recherche dans une chaîne le premier caractère qui n’est pas un élément d’une chaîne spécifiée.
 
@@ -2360,7 +2427,7 @@ The index of the 1st non occurrence of an element of '12' in str4 after
 the 0th position is: 2
 ```
 
-## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a>basic_string :: find_first_of
+## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a> basic_string :: find_first_of
 
 Recherche dans une chaîne le premier caractère qui correspond à un élément de la chaîne spécifiée.
 
@@ -2547,7 +2614,7 @@ The index of the 1st occurrence of an element of 'a2' in str4 after
 the 0th position is: 1
 ```
 
-## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a>basic_string :: find_last_not_of
+## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a> basic_string :: find_last_not_of
 
 Recherche dans une chaîne le dernier caractère qui n’est pas un élément d’une chaîne spécifiée.
 
@@ -2736,7 +2803,7 @@ The index of the last occurrence of an element not in '12'
 in str4 before the end position is: 10
 ```
 
-## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a>basic_string :: find_last_of
+## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a> basic_string :: find_last_of
 
 Recherche dans une chaîne le dernier caractère qui correspond à un élément de la chaîne spécifiée.
 
@@ -2910,7 +2977,7 @@ The index of the last occurrence of an element of 'a2' in str4 before
 the 0th position is: 9
 ```
 
-## <a name="basic_stringfront"></a><a name="front"></a>basic_string :: front
+## <a name="basic_stringfront"></a><a name="front"></a> basic_string :: front
 
 Retourne une référence au premier élément d'une chaîne.
 
@@ -2924,9 +2991,9 @@ reference front();
 
 Référence au premier élément de la chaîne, qui doit être non vide.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a>basic_string :: get_allocator
+## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a> basic_string :: get_allocator
 
 Retourne une copie de l’objet allocateur utilisé pour construire la chaîne.
 
@@ -2938,7 +3005,7 @@ allocator_type get_allocator() const;
 
 Allocateur utilisé par la chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre retourne l’objet d’allocateur stocké.
 
@@ -2969,7 +3036,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringinsert"></a><a name="insert"></a>basic_string :: Insert
+## <a name="basic_stringinsert"></a><a name="insert"></a> basic_string :: Insert
 
 Insère un élément, un certain nombre d'éléments ou une plage d'éléments dans la chaîne à la position spécifiée.
 
@@ -3148,7 +3215,7 @@ The string with a character inserted from a range is: ABCDefgHIJ
 The string with a character inserted from a range is: ABCDeeeHIJ
 ```
 
-## <a name="basic_stringiterator"></a><a name="iterator"></a>basic_string :: Iterator
+## <a name="basic_stringiterator"></a><a name="iterator"></a> basic_string :: Iterator
 
 Type qui fournit un itérateur à accès aléatoire qui peut accéder à un **`const`** élément dans la chaîne et le lire.
 
@@ -3156,7 +3223,7 @@ Type qui fournit un itérateur à accès aléatoire qui peut accéder à un **`c
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `iterator` peut être utilisé pour modifier la valeur d’un caractère et est utilisé pour itérer au sein d’une chaîne vers l’avant.
 
@@ -3164,7 +3231,7 @@ Un type `iterator` peut être utilisé pour modifier la valeur d’un caractère
 
 Pour savoir comment déclarer et utiliser `iterator`, consultez l’exemple relatif à [begin](#begin).
 
-## <a name="basic_stringlength"></a><a name="length"></a>basic_string :: length
+## <a name="basic_stringlength"></a><a name="length"></a> basic_string :: length
 
 Retourne le nombre actuel d'éléments contenus dans une chaîne.
 
@@ -3172,7 +3239,7 @@ Retourne le nombre actuel d'éléments contenus dans une chaîne.
 size_type length() const;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre est identique à [size](#size).
 
@@ -3230,7 +3297,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringmax_size"></a><a name="max_size"></a>basic_string :: max_size
+## <a name="basic_stringmax_size"></a><a name="max_size"></a> basic_string :: max_size
 
 Retourne le nombre maximal de caractères qu'une chaîne peut contenir.
 
@@ -3242,7 +3309,7 @@ size_type max_size() const;
 
 Nombre maximal de caractères qu’une chaîne peut contenir.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Une exception de type [classe length_error](../standard-library/length-error-class.md) est levée quand une opération produit une chaîne d’une longueur supérieure à la taille maximale.
 
@@ -3300,7 +3367,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringnpos"></a><a name="npos"></a>basic_string :: NPOs
+## <a name="basic_stringnpos"></a><a name="npos"></a> basic_string :: NPOs
 
 Valeur intégrale non signée initialisée à-1 qui indique « introuvable » ou « tous les caractères restants » quand une fonction de recherche échoue.
 
@@ -3308,7 +3375,7 @@ Valeur intégrale non signée initialisée à-1 qui indique « introuvable » 
 static const size_type npos = -1;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Lorsque la valeur de retour doit être vérifiée pour la `npos` valeur, elle peut ne pas fonctionner, sauf si la valeur de retour est de type [size_type](#size_type) et non **`int`** ou **`unsigned`** .
 
@@ -3316,7 +3383,7 @@ Lorsque la valeur de retour doit être vérifiée pour la `npos` valeur, elle pe
 
 Consultez l’exemple relatif à [find](#find) pour savoir comment déclarer et utiliser `npos`.
 
-## <a name="basic_stringoperator"></a><a name="op_add_eq"></a>basic_string :: Operator + =
+## <a name="basic_stringoperator"></a><a name="op_add_eq"></a> basic_string :: Operator + =
 
 Ajoute des caractères à une chaîne.
 
@@ -3346,7 +3413,7 @@ Caractères de la chaîne à ajouter.
 
 Référence à l’objet string ajouté avec les caractères transmis par la fonction membre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les caractères peuvent être ajoutés à une chaîne à l’aide de `operator+=`, ou des fonctions membres [append](#append) ou [push_back](#push_back). `operator+=` ajoute des valeurs à argument unique tandis que la fonction membre append à plusieurs arguments permet de spécifier une partie spécifique d’une chaîne à ajouter.
 
@@ -3405,7 +3472,7 @@ The appended string str1d is: Hello Wide .
 The doubly appended strig str1 is: Hello Wide World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_eq"></a>basic_string :: Operator =
+## <a name="basic_stringoperator"></a><a name="op_eq"></a> basic_string :: Operator =
 
 Assigne de nouvelles valeurs de caractère au contenu d'une chaîne.
 
@@ -3438,7 +3505,7 @@ Chaîne source dont les caractères doivent être assignés à la chaîne cible.
 
 Référence à l’objet string auquel la fonction membre assigne les nouveaux caractères.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les chaînes peuvent recevoir de nouvelles valeurs de caractère. La nouvelle valeur peut être une chaîne et une chaîne C, ou un caractère unique. `operator=` peut être utilisé si la nouvelle valeur peut être décrite par un seul paramètre ; sinon la fonction membre [assign](#assign), qui possède plusieurs paramètres, peut être utilisée pour spécifier la partie de la chaîne qui doit être assignée à une chaîne cible.
 
@@ -3499,7 +3566,7 @@ The string str3c is: World.
 The string str1 reassigned with string str3c is: World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_at"></a>basic_string :: Operator []
+## <a name="basic_stringoperator"></a><a name="op_at"></a> basic_string :: Operator []
 
 Fournit une référence au caractère situé à l'index spécifié dans une chaîne.
 
@@ -3517,13 +3584,13 @@ Index de la position de l’élément à référencer.
 
 Référence au caractère de la chaîne à la position spécifiée par l’index de paramètre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le premier élément de la chaîne a un index égal à zéro et les éléments suivants sont indexés consécutivement par les entiers positifs, de sorte qu’une chaîne de longueur *n* a son *n*-ième élément indexé par le nombre *n* - 1.
 
 `operator[]` est plus rapide que la fonction membre [at](#at) pour fournir un accès en lecture et en écriture aux éléments d’une chaîne.
 
-`operator[]`ne vérifie pas si l’index passé comme paramètre est valide, mais que la fonction membre `at` ne doit pas être utilisée dans la validité. Un index non valide (un index inférieur à zéro ou supérieur ou égal à la taille de la chaîne) passé à la fonction membre `at` lève une exception de [classe out_of_range](../standard-library/out-of-range-class.md) . Un index non valide passé à `operator[]` entraîne un comportement indéfini, mais l’index égal à la longueur de la chaîne est un index valide pour les chaînes const, et l’opérateur retourne le caractère null quand il reçoit cet index.
+`operator[]` ne vérifie pas si l’index passé comme paramètre est valide, mais que la fonction membre `at` ne doit pas être utilisée dans la validité. Un index non valide (un index inférieur à zéro ou supérieur ou égal à la taille de la chaîne) passé à la fonction membre `at` lève une exception de [classe out_of_range](../standard-library/out-of-range-class.md) . Un index non valide passé à `operator[]` entraîne un comportement indéfini, mais l’index égal à la longueur de la chaîne est un index valide pour les chaînes const, et l’opérateur retourne le caractère null quand il reçoit cet index.
 
 La référence retournée peut être invalidée par des réallocations de chaînes ou des modifications pour les chaînes non- **`const`** .
 
@@ -3568,7 +3635,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringpointer"></a><a name="pointer"></a>basic_string ::p ointer
+## <a name="basic_stringpointer"></a><a name="pointer"></a> basic_string ::p ointer
 
 Type qui fournit un pointeur vers un élément caractère d'une chaîne ou d'un tableau de caractères.
 
@@ -3576,7 +3643,7 @@ Type qui fournit un pointeur vers un élément caractère d'une chaîne ou d'un 
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type est un synonyme de `allocator_type::pointer`.
 
@@ -3605,7 +3672,7 @@ The string pstr1a is: In Here.
 The C-string cstr1b is: Out There.
 ```
 
-## <a name="basic_stringpop_back"></a><a name="pop_back"></a>basic_string ::p op_back
+## <a name="basic_stringpop_back"></a><a name="pop_back"></a> basic_string ::p op_back
 
 Efface le dernier élément de la chaîne.
 
@@ -3613,11 +3680,11 @@ Efface le dernier élément de la chaîne.
 void pop_back();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre appelle `erase(size() - 1)` pour effacer le dernier élément de la séquence, qui ne doit pas être vide.
 
-## <a name="basic_stringpush_back"></a><a name="push_back"></a>basic_string ::p ush_back
+## <a name="basic_stringpush_back"></a><a name="push_back"></a> basic_string ::p ush_back
 
 Ajoute un élément à la fin de la chaîne.
 
@@ -3630,7 +3697,7 @@ void push_back(value_type char_value);
 *char_value*\
 Caractère à ajouter à la fin de la chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre appelle effectivement [Insert](#insert)( [end](#end), *char_value* ).
 
@@ -3672,7 +3739,7 @@ The last character-letter of the modified str1 is now: c
 The modified string str1 is: abc
 ```
 
-## <a name="basic_stringrbegin"></a><a name="rbegin"></a>basic_string :: rbegin
+## <a name="basic_stringrbegin"></a><a name="rbegin"></a> basic_string :: rbegin
 
 Retourne un itérateur au premier élément d'une chaîne inversée.
 
@@ -3686,7 +3753,7 @@ reverse_iterator rbegin();
 
 Retourne un itérateur d’accès aléatoire vers le premier élément d’une chaîne inversée, qui cible le dernier élément de la chaîne non inversée correspondante.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `rbegin` est utilisé avec une chaîne inversée, de la même façon que [begin](#begin) est utilisé avec une chaîne.
 
@@ -3748,7 +3815,7 @@ AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreference"></a><a name="reference"></a>basic_string :: référence
+## <a name="basic_stringreference"></a><a name="reference"></a> basic_string :: référence
 
 Type qui fournit une référence à un élément stocké dans une chaîne.
 
@@ -3756,7 +3823,7 @@ Type qui fournit une référence à un élément stocké dans une chaîne.
 typedef typename allocator_type::reference reference;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `reference` peut être utilisé pour modifier la valeur d’un élément.
 
@@ -3768,7 +3835,7 @@ Pour `string` le type, son équivalent à `chr&` .
 
 Pour savoir comment déclarer et utiliser `reference`, consultez l’exemple relatif à [at](#at).
 
-## <a name="basic_stringrend"></a><a name="rend"></a>basic_string :: rend
+## <a name="basic_stringrend"></a><a name="rend"></a> basic_string :: rend
 
 Retourne un itérateur qui cible l’emplacement suivant le dernier élément d’une chaîne inversée.
 
@@ -3782,7 +3849,7 @@ reverse_iterator rend();
 
 Retourne un itérateur d’accès aléatoire qui cible l’emplacement suivant le dernier élément d’une chaîne inversée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `rend` est utilisé avec une chaîne inversée, de la même façon que [end](#end) est utilisé avec une chaîne.
 
@@ -3846,7 +3913,7 @@ ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreplace"></a><a name="replace"></a>basic_string :: replace
+## <a name="basic_stringreplace"></a><a name="replace"></a> basic_string :: replace
 
 Remplace les éléments d'une chaîne à la position spécifiée par des caractères spécifiques ou des caractères copiés à partir d'autres plages, chaînes ou chaînes de style C.
 
@@ -4143,7 +4210,7 @@ The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
 is the string: OPPOOOO.
 ```
 
-## <a name="basic_stringreserve"></a><a name="reserve"></a>basic_string :: Reserve
+## <a name="basic_stringreserve"></a><a name="reserve"></a> basic_string :: Reserve
 
 Définit la capacité de la chaîne en fonction d'un nombre au moins aussi grand que le nombre spécifié.
 
@@ -4156,7 +4223,7 @@ void reserve(size_type count = 0);
 *saut*\
 Nombre de caractères pour lequel la mémoire est réservée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Il est important d’avoir une capacité suffisante, car les réallocations sont chronophages et invalident toutes les références, pointeurs et itérateurs qui référencent les caractères d’une chaîne.
 
@@ -4233,7 +4300,7 @@ The current size of string str1 is: 11.
 The reduced capacity of string str1 is: 47.
 ```
 
-## <a name="basic_stringresize"></a><a name="resize"></a>basic_string :: Resize
+## <a name="basic_stringresize"></a><a name="resize"></a> basic_string :: Resize
 
 Spécifie une nouvelle taille pour une chaîne, en ajoutant ou en effaçant des éléments selon les besoins.
 
@@ -4254,7 +4321,7 @@ Nouvelle taille de la chaîne.
 *char_value*\
 Valeur avec laquelle les caractères ajoutés sont initialisés si des éléments supplémentaires sont nécessaires.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si la taille obtenue dépasse le nombre maximal de caractères, le formulaire lève `length_error`.
 
@@ -4343,7 +4410,7 @@ The current size of downsized string str1 is: 5.
 The capacity of downsized string str1 is: 47.
 ```
 
-## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a>basic_string :: reverse_iterator
+## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a> basic_string :: reverse_iterator
 
 Type qui fournit une référence à un élément stocké dans une chaîne.
 
@@ -4351,7 +4418,7 @@ Type qui fournit une référence à un élément stocké dans une chaîne.
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `reverse_iterator` peut servir à changer la valeur d’un caractère. Il sert à itérer au sein d’une chaîne dans l’ordre inverse.
 
@@ -4359,7 +4426,7 @@ Un type `reverse_iterator` peut servir à changer la valeur d’un caractère. I
 
 Pour savoir comment déclarer et utiliser `reverse_iterator`, consultez l’exemple relatif à [rbegin](#rbegin).
 
-## <a name="basic_stringrfind"></a><a name="rfind"></a>basic_string :: RFind
+## <a name="basic_stringrfind"></a><a name="rfind"></a> basic_string :: RFind
 
 Recherche une chaîne vers l'arrière pour trouver la première occurrence d'une sous-chaîne qui correspond à une séquence spécifique de caractères.
 
@@ -4534,7 +4601,7 @@ The substring 'clear' was not found in str4 before the 15th position.
 The index of the 1st element of 'clear' in str4 is: 17
 ```
 
-## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a>basic_string :: shrink_to_fit
+## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a> basic_string :: shrink_to_fit
 
 Ignore la capacité excédentaire de la chaîne.
 
@@ -4542,11 +4609,11 @@ Ignore la capacité excédentaire de la chaîne.
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre élimine tout stockage inutile dans le conteneur.
 
-## <a name="basic_stringsize"></a><a name="size"></a>basic_string :: Size
+## <a name="basic_stringsize"></a><a name="size"></a> basic_string :: Size
 
 Retourne le nombre actuel d'éléments contenus dans une chaîne.
 
@@ -4612,7 +4679,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringsize_type"></a><a name="size_type"></a>basic_string :: size_type
+## <a name="basic_stringsize_type"></a><a name="size_type"></a> basic_string :: size_type
 
 Type entier non signé qui peut représenter le nombre d’éléments et d’index dans une chaîne.
 
@@ -4620,7 +4687,7 @@ Type entier non signé qui peut représenter le nombre d’éléments et d’ind
 typedef typename allocator_type::size_type size_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 elle est équivalente à `allocator_type::size_type` .
 
@@ -4655,7 +4722,67 @@ The current size of string str1 is: 11.
 The capacity of string str1 is: 15.
 ```
 
-## <a name="basic_stringsubstr"></a><a name="substr"></a>basic_string :: substr
+## <a name="basic_stringstarts_with"></a><a name="starts_with"></a> basic_string :: starts_with
+
+Vérifiez si la chaîne commence par le préfixe spécifié.
+
+```cpp
+bool starts_with(const CharType c) const noexcept;
+bool starts_with(const CharType* const x) const noexcept;
+bool starts_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*secteur*\
+Préfixe à caractère unique à rechercher.
+
+*Ed*\
+Vue de chaîne contenant le préfixe à rechercher. \
+Vous pouvez passer un `std::basic_string` , qui convertit en vue de chaîne.
+
+*x*\
+Chaîne de caractères se terminant par un caractère null qui contient le préfixe à rechercher.
+
+### <a name="return-value"></a>Valeur de retour
+
+`true` Si la chaîne commence par le préfixe spécifié ; `false` sinon,.
+
+### <a name="remarks"></a>Remarques
+
+`starts_with()` est nouveau dans C++ 20. Pour l’utiliser, spécifiez l’option de compilateur [/std : c + + latest](../build/reference/std-specify-language-standard-version.md) .
+
+Consultez [ends_with](#ends_with) pour voir si une chaîne se termine par le suffixe spécifié.
+
+### <a name="example"></a>Exemple
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::basic_string<char> str = "abcdefg";
+
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'     
+    std::cout << str.starts_with('b') << '\n';
+    std::cout << str.starts_with("aBc") << '\n';
+
+    std::basic_string<char> str2 = "abc";
+    std::cout << str.starts_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+false
+false
+true
+```
+
+## <a name="basic_stringsubstr"></a><a name="substr"></a> basic_string :: substr
 
 Copie une sous-chaîne d'un certain nombre de caractères dans une chaîne qui commence à la position spécifiée.
 
@@ -4714,7 +4841,7 @@ Heterological paradoxes are persistent.
 which is the entire original string.
 ```
 
-## <a name="basic_stringswap"></a><a name="swap"></a>basic_string :: swap
+## <a name="basic_stringswap"></a><a name="swap"></a> basic_string :: swap
 
 Échange le contenu de deux chaînes.
 
@@ -4728,7 +4855,7 @@ void swap(
 *Str*\
 Chaîne source dont les éléments doivent être échangés avec ceux de la chaîne de destination.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si les chaînes échangées ont le même objet allocateur, la fonction membre `swap` :
 
@@ -4775,7 +4902,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="basic_stringtraits_type"></a><a name="traits_type"></a>basic_string :: traits_type
+## <a name="basic_stringtraits_type"></a><a name="traits_type"></a> basic_string :: traits_type
 
 Type pour les caractéristiques de caractère des éléments stockés dans une chaîne.
 
@@ -4783,7 +4910,7 @@ Type pour les caractéristiques de caractère des éléments stockés dans une c
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type est un synonyme du deuxième paramètre de modèle `Traits` .
 
@@ -4793,7 +4920,7 @@ Pour `string` le type, il est équivalent **à \<char> char_traits**.
 
 Consultez l’exemple relatif à [copy](../standard-library/char-traits-struct.md#copy) pour savoir comment déclarer et utiliser `traits_type`.
 
-## <a name="basic_stringvalue_type"></a><a name="value_type"></a>basic_string :: value_type
+## <a name="basic_stringvalue_type"></a><a name="value_type"></a> basic_string :: value_type
 
 Type qui représente le type des caractères stockés dans une chaîne.
 
@@ -4801,7 +4928,7 @@ Type qui représente le type des caractères stockés dans une chaîne.
 typedef typename allocator_type::value_type value_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Elle est équivalente à `traits_type::char_type` et équivaut à **`char`** pour les objets de type `string` .
 

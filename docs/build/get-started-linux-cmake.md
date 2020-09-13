@@ -3,16 +3,16 @@ title: Créer des projets multiplateformes C++ dans Visual Studio
 description: Comment installer, compiler et déboguer un projet CMake Open source C++ dans Visual Studio qui cible à la fois Linux et Windows.
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: aac536f488cf22adf5aa835c9fe5b884fc5d7298
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328741"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040481"
 ---
-# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Didacticiel : créer des projets multiplateformes C++ dans Visual Studio
+# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutoriel : Créer des projets multiplateformes C++ dans Visual Studio
 
-Le développement en C et C++ dans Visual Studio ne cible plus seulement les environnements Windows. Ce didacticiel montre comment utiliser le développement multiplateforme de Visual Studio pour C++ sur Windows et Linux. Il est basé sur CMake, vous n’avez donc pas à créer ni générer de projets Visual Studio. Lorsque vous ouvrez un dossier qui contient un fichier fichier CMakeLists. txt, Visual Studio configure automatiquement les paramètres IntelliSense et de Build. Vous pouvez rapidement commencer à modifier, générer et déboguer votre code localement sur Windows. Ensuite, basculez votre configuration pour faire de même sur Linux, tout cela à partir de Visual Studio.
+Le développement en C et C++ dans Visual Studio ne cible plus seulement les environnements Windows. Ce didacticiel montre comment utiliser le développement multiplateforme de Visual Studio pour C++ sur Windows et Linux. Il est basé sur CMake, vous n’avez donc pas à créer ni générer de projets Visual Studio. Lorsque vous ouvrez un dossier qui contient un fichier CMakeLists.txt, Visual Studio configure automatiquement les paramètres IntelliSense et de Build. Vous pouvez rapidement commencer à modifier, générer et déboguer votre code localement sur Windows. Ensuite, basculez votre configuration pour faire de même sur Linux, tout cela à partir de Visual Studio.
 
 Dans ce tutoriel, vous allez apprendre à :
 
@@ -61,7 +61,7 @@ Ce didacticiel utilise le kit de développement logiciel (SDK) physique des puce
 git clone https://github.com/bulletphysics/bullet3.git
 ```
 
-1. Dans le menu principal de Visual Studio, choisissez **fichier > ouvrir > cmake**. Accédez au fichier fichier CMakeLists. txt à la racine du référentiel bullet3 que vous venez de télécharger.
+1. Dans le menu principal de Visual Studio, choisissez **fichier > ouvrir > cmake**. Accédez au fichier CMakeLists.txt à la racine du référentiel bullet3 que vous venez de télécharger.
 
     ![Menu Fichier > Ouvrir > CMake dans Visual Studio](media/cmake-open-cmake.png)
 
@@ -99,7 +99,7 @@ Quand vous ouvrez un dossier qui utilise CMake, Visual Studio génère automatiq
 
 ## <a name="add-an-explicit-windows-x64-debug-configuration"></a>Ajouter une configuration x64-Debug explicite pour Windows
 
-Visual Studio crée une configuration par défaut de **débogage x64** pour Windows. Les configurations indiquent à Visual Studio quelle plateforme cible utiliser pour CMake. La configuration par défaut n’est pas représentée sur le disque. Quand vous ajoutez explicitement une configuration, Visual Studio crée un fichier appelé *CMakeSettings. JSON*. Elle est remplie avec des paramètres pour toutes les configurations que vous spécifiez.
+Visual Studio crée une configuration par défaut de **débogage x64** pour Windows. Les configurations indiquent à Visual Studio quelle plateforme cible utiliser pour CMake. La configuration par défaut n’est pas représentée sur le disque. Quand vous ajoutez explicitement une configuration, Visual Studio crée un fichier appelé *CMakeSettings.jssur*. Elle est remplie avec des paramètres pour toutes les configurations que vous spécifiez.
 
 1. Ajoutez une nouvelle configuration. Ouvrez la liste déroulante **configuration** dans la barre d’outils, puis sélectionnez **gérer les configurations**.
 
@@ -109,7 +109,7 @@ Visual Studio crée une configuration par défaut de **débogage x64** pour Wind
 
    ![Boîte de dialogue Ajouter la configuration à CMakeSettings](media/cmake-bullet3-add-configuration-x64-debug.png)
 
-   Cette boîte de dialogue affiche toutes les configurations incluses dans Visual Studio, ainsi que toutes les configurations personnalisées que vous créez. Si vous souhaitez continuer à utiliser une configuration de **débogage x64** , celle-ci doit être la première que vous ajoutez. Sélectionnez **x64-Debug**, puis cliquez sur le bouton **Sélectionner** . Visual Studio crée le fichier CMakeSettings. JSON avec une configuration pour **x64-Debug**et l’enregistre sur le disque. Vous pouvez utiliser un nom de votre choix pour vos configurations en changeant le paramètre de nom directement dans CMakeSettings.json.
+   Cette boîte de dialogue affiche toutes les configurations incluses dans Visual Studio, ainsi que toutes les configurations personnalisées que vous créez. Si vous souhaitez continuer à utiliser une configuration de **débogage x64** , celle-ci doit être la première que vous ajoutez. Sélectionnez **x64-Debug**, puis cliquez sur le bouton **Sélectionner** . Visual Studio crée le CMakeSettings.jssur le fichier avec une configuration pour **x64-Debug**et l’enregistre sur le disque. Vous pouvez utiliser un nom de votre choix pour vos configurations en changeant le paramètre de nom directement dans CMakeSettings.json.
 
 ## <a name="set-a-breakpoint-build-and-run-on-windows"></a>Définir un point d’arrêt, générer et exécuter sur Windows
 
@@ -121,17 +121,17 @@ Dans cette étape, nous allons déboguer un exemple de programme qui utilise la 
 
 1. Définissez un point d’arrêt qui atteint le moment où vous cliquez dans l’application en cours d’exécution. L’événement de clic est géré dans une méthode au sein d’une classe d’assistance. Pour y accéder rapidement :
 
-   1. Sélectionnez `CommonRigidBodyBase` la dérivée `BasicExample` du struct. Il se trouve autour de la ligne 30.
+   1. Sélectionnez `CommonRigidBodyBase` la `BasicExample` dérivée du struct. Il se trouve autour de la ligne 30.
 
    1. Cliquez avec le bouton droit et choisissez **Atteindre la définition**. Vous êtes maintenant dans l’en-tête CommonRigidBodyBase. h.
 
-   1. Dans la vue du navigateur au-dessus de votre source, vous devez voir que `CommonRigidBodyBase`vous êtes dans le. À droite, vous pouvez sélectionner les membres à examiner. Ouvrez la liste déroulante et `mouseButtonCallback` sélectionnez cette option pour accéder à la définition de la fonction dans l’en-tête.
+   1. Dans la vue du navigateur au-dessus de votre source, vous devez voir que vous êtes dans le `CommonRigidBodyBase` . À droite, vous pouvez sélectionner les membres à examiner. Ouvrez la liste déroulante et sélectionnez cette option `mouseButtonCallback` pour accéder à la définition de la fonction dans l’en-tête.
 
       ![Barre d’outils de la liste des membres Visual Studio](media/cmake-bullet3-member-list-toolbar.png)
 
 1. Ajoutez un point d’arrêt sur la première ligne dans cette fonction. Elle est atteinte lorsque vous cliquez sur un bouton de la souris dans la fenêtre de l’application, quand elle est exécutée sous le débogueur Visual Studio.
 
-1. Pour lancer l’application, sélectionnez la liste déroulante lancer dans la barre d’outils. C’est celle avec l’icône de lecture verte qui indique « sélectionner un élément de démarrage ». Dans la liste déroulante, sélectionnez AppBasicExampleGui. exe. Le nom de l’exécutable figure maintenant sur le bouton de lancement :
+1. Pour lancer l’application, sélectionnez la liste déroulante lancer dans la barre d’outils. C’est celle avec l’icône de lecture verte qui indique « sélectionner un élément de démarrage ». Dans la liste déroulante, sélectionnez AppBasicExampleGui.exe. Le nom de l’exécutable figure maintenant sur le bouton de lancement :
 
    ![Liste déroulante de lancement avec « Sélectionner un élément de démarrage » dans la barre d’outils Visual Studio](media/cmake-bullet3-launch-button.png)
 
@@ -143,7 +143,7 @@ Dans cette étape, nous allons déboguer un exemple de programme qui utilise la 
 
 ## <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>Ajouter une configuration Linux et se connecter à la machine distante
 
-1. Ajoutez une configuration Linux. Cliquez avec le bouton droit sur le fichier CMakeSettings.json dans la vue de l’**Explorateur de solutions**, puis sélectionnez **Ajouter une configuration**. Comme précédemment, la boîte de dialogue Ajouter la configuration à CMakeSettings s’affiche. Sélectionnez **Linux-déboguer** cette fois-ci, puis enregistrez le fichier CMakeSettings. JSON (Ctrl + s).
+1. Ajoutez une configuration Linux. Cliquez avec le bouton droit sur le fichier CMakeSettings.json dans la vue de l’**Explorateur de solutions**, puis sélectionnez **Ajouter une configuration**. Comme précédemment, la boîte de dialogue Ajouter la configuration à CMakeSettings s’affiche. Sélectionnez **Linux-déboguer** cette fois-ci, puis enregistrez le CMakeSettings.jsdans le fichier (Ctrl + s).
 
 1. Sélectionnez **Linux-Debug** dans la liste déroulante Configuration.
 
@@ -155,21 +155,21 @@ Dans cette étape, nous allons déboguer un exemple de programme qui utilise la 
 
    Si vous avez déjà ajouté une connexion à distance, vous pouvez ouvrir cette fenêtre en accédant à **outils > Options > gestionnaire de connexions inter-plateforme >**.
 
-1. Fournissez les [informations de connexion à votre machine Linux](/cpp/linux/connect-to-your-remote-linux-computer) , puis choisissez **se connecter**. Visual Studio ajoute cet ordinateur à CMakeSettings. JSON comme connexion par défaut pour **Linux-Debug**. Il extrait également les en-têtes de votre ordinateur distant, ce [qui vous permet d’utiliser IntelliSense spécifique à cette connexion à distance](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense). Ensuite, Visual Studio envoie vos fichiers à la machine distante et génère le cache CMake sur le système distant. Ces étapes peuvent prendre un certain temps, en fonction de la vitesse de votre réseau et de la puissance de votre machine distante. Vous savez qu’il est terminé lorsque le message « extraction des informations cibles effectuées » s’affiche dans la fenêtre sortie de CMake.
+1. Fournissez les [informations de connexion à votre machine Linux](../linux/connect-to-your-remote-linux-computer.md) , puis choisissez **se connecter**. Visual Studio ajoute cet ordinateur à CMakeSettings.jssur en tant que connexion par défaut pour **Linux-Debug**. Il extrait également les en-têtes de votre ordinateur distant, ce [qui vous permet d’utiliser IntelliSense spécifique à cette connexion à distance](../linux/configure-a-linux-project.md#remote_intellisense). Ensuite, Visual Studio envoie vos fichiers à la machine distante et génère le cache CMake sur le système distant. Ces étapes peuvent prendre un certain temps, en fonction de la vitesse de votre réseau et de la puissance de votre machine distante. Vous savez qu’il est terminé lorsque le message « extraction des informations cibles effectuées » s’affiche dans la fenêtre sortie de CMake.
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Définir un point d’arrêt, générer et exécuter sur Linux
 
 Étant donné qu’il s’agit d’une application de bureau, vous devez fournir des informations de configuration supplémentaires à la configuration de débogage.
 
-1. Dans l’affichage CMake targets, cliquez avec le bouton droit sur AppBasicExampleGui et choisissez **paramètres de débogage et de lancement** pour ouvrir le fichier Launch. vs. JSON qui se trouve dans le sous-dossier Hidden **. vs** . Ce fichier est propre à votre environnement de développement local. Vous pouvez le déplacer à la racine de votre projet si vous souhaitez le vérifier et le partager avec votre équipe. Dans ce fichier, une configuration a été ajoutée pour AppBasicExampleGui. Ces paramètres par défaut fonctionnent dans la plupart des cas, mais pas ici. Étant donné qu’il s’agit d’une application de bureau, vous devez fournir des informations supplémentaires pour lancer le programme et le voir sur votre machine Linux.
+1. Dans la vue CMake targets, cliquez avec le bouton droit sur AppBasicExampleGui et choisissez **paramètres de débogage et de lancement** pour ouvrir la launch.vs.jssur le fichier qui se trouve dans le sous-dossier Hidden **. vs** . Ce fichier est propre à votre environnement de développement local. Vous pouvez le déplacer à la racine de votre projet si vous souhaitez le vérifier et le partager avec votre équipe. Dans ce fichier, une configuration a été ajoutée pour AppBasicExampleGui. Ces paramètres par défaut fonctionnent dans la plupart des cas, mais pas ici. Étant donné qu’il s’agit d’une application de bureau, vous devez fournir des informations supplémentaires pour lancer le programme et le voir sur votre machine Linux.
 
-1. Pour trouver la valeur de la variable `DISPLAY` d’environnement sur votre machine Linux, exécutez la commande suivante :
+1. Pour trouver la valeur de la variable d’environnement `DISPLAY` sur votre machine Linux, exécutez la commande suivante :
 
    ```cmd
    echo $DISPLAY
    ```
 
-   Dans la configuration de AppBasicExampleGui, il existe un tableau de paramètres, « pipeArgs ». Elle contient une ligne : « $ {debuggerCommand} ». Il s’agit de la commande qui lance gdb sur la machine distante. Visual Studio doit exporter l’affichage dans ce contexte avant l’exécution de cette commande. Par exemple, si la valeur de votre affichage est `:1`, modifiez cette ligne comme suit :
+   Dans la configuration de AppBasicExampleGui, il existe un tableau de paramètres, « pipeArgs ». Elle contient une ligne : « $ {debuggerCommand} ». Il s’agit de la commande qui lance gdb sur la machine distante. Visual Studio doit exporter l’affichage dans ce contexte avant l’exécution de cette commande. Par exemple, si la valeur de votre affichage est `:1` , modifiez cette ligne comme suit :
 
    ```cmd
    "export DISPLAY=:1;${debuggerCommand}",
@@ -177,7 +177,7 @@ Dans cette étape, nous allons déboguer un exemple de programme qui utilise la 
 
 1. Lancez et déboguez votre application. Ouvrez la liste déroulante **Sélectionner l’élément de démarrage** dans la barre d’outils, puis choisissez **AppBasicExampleGui**. Ensuite, choisissez l’icône de lecture verte dans la barre d’outils ou appuyez sur **F5**. L’application et ses dépendances sont générées sur l’ordinateur Linux distant, puis lancées avec le débogueur Visual Studio attaché. Sur votre machine Linux distante, vous devez voir apparaître une fenêtre d’application.
 
-1. Déplacez votre souris dans la fenêtre de l’application, puis cliquez sur un bouton. Le point d’arrêt est atteint. L’exécution du programme s’interrompt, Visual Studio revient au premier plan et vous voyez votre point d’arrêt. Vous devez également voir une fenêtre de console Linux s’ouvrir dans Visual Studio. La fenêtre fournit la sortie de l’ordinateur Linux distant et peut également accepter une entrée pour `stdin`. Comme n’importe quelle fenêtre Visual Studio, vous pouvez l’ancrer là où vous préférez la voir. Sa position est conservée dans les sessions ultérieures.
+1. Déplacez votre souris dans la fenêtre de l’application, puis cliquez sur un bouton. Le point d’arrêt est atteint. L’exécution du programme s’interrompt, Visual Studio revient au premier plan et vous voyez votre point d’arrêt. Vous devez également voir une fenêtre de console Linux s’ouvrir dans Visual Studio. La fenêtre fournit la sortie de l’ordinateur Linux distant et peut également accepter une entrée pour `stdin` . Comme n’importe quelle fenêtre Visual Studio, vous pouvez l’ancrer là où vous préférez la voir. Sa position est conservée dans les sessions ultérieures.
 
    ![Fenêtre de console Linux dans Visual Studio](media/cmake-bullet3-linux-console.png)
 
@@ -198,8 +198,8 @@ Consultez les rubriques suivantes pour en savoir plus sur la configuration et le
 > [!div class="nextstepaction"]
 > [Projets CMake dans Visual Studio](cmake-projects-in-visual-studio.md)<br/><br/>
 > [Configurer un projet CMake Linux](../linux/cmake-linux-project.md)<br/><br/>
-> [Se connecter à votre ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/><br/>
-> [Personnaliser les paramètres de génération CMake](customize-cmake-settings.md)<br/><br/>
+> [Se connecter à un ordinateur Linux distant](../linux/connect-to-your-remote-linux-computer.md)<br/><br/>
+> [Personnaliser des paramètres de génération CMake](customize-cmake-settings.md)<br/><br/>
 > [Configurer des sessions de débogage CMake](configure-cmake-debugging-sessions.md)<br/><br/>
 > [Déployer, exécuter et déboguer un projet Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/><br/>
 > [Informations de référence sur la configuration prédéfinie de CMake](cmake-predefined-configuration-reference.md)

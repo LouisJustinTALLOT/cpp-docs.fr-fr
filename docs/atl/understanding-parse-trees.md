@@ -4,47 +4,47 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: de2cea9b0e7b7c62236f708f9aa8217eaa5df51d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: ff74ff879e757a569232ff19244d3f7598063465
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168694"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040286"
 ---
 # <a name="understanding-parse-trees"></a>Comprendre les arborescences d’analyse
 
 Vous pouvez définir un ou plusieurs arbres d’analyse dans le script de votre registraire, où chaque arborescence d’analyse se présente sous la forme suivante :
 
-> \<clé racine> {\<expression de Registre>} +
+> \<root key>{\<registry expression>}+
 
 où :
 
-> \<> de la clé racine :: = HKEY_CLASSES_ROOT | HKEY_CURRENT_USER | \
-> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_LOCAL_MACHINE | HKEY_USERS | \
-> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA | \
-> &nbsp;&nbsp;&nbsp;&nbsp;HKEY_CURRENT_CONFIG | HKCR | HKCU | \
-> &nbsp;&nbsp;&nbsp;&nbsp;HKLM | HKU | HKPD | HKDD | HKCC
+> \<root key> :: = HKEY_CLASSES_ROOT \| HKEY_CURRENT_USER \|\
+> &emsp;HKEY_LOCAL_MACHINE \| HKEY_USERS \|\
+> &emsp;HKEY_PERFORMANCE_DATA \| HKEY_DYN_DATA \|\
+> &emsp;HKEY_CURRENT_CONFIG \| HKCR de HKCR \|\|\
+> &emsp;HKLM \| HKU \| HKPD \| HKDD \| HKCC
 
-> \<expression de Registre> :: \<= Add Key> | \<Supprimer la clé>
+> \<registry expression>::= \<Add Key> \|\<Delete Key>
 
-> \<Ajout de clé> :: =**[ForceRemove** | **NoRemove** | **Val**]\<nom de clé\<> [valeur de clé>\<] [{Add Key>}]
+> \<Add Key>:: = \[ **ForceRemove** \| **NoRemove** \| **Val**] \<Key Name> [ \<Key Value> ] [{ \<Add Key> }]
 
-> \<Supprimer la clé> :: = **supprimer**\<le nom de la clé>
+> \<Delete Key> :: = **Supprimer**\<Key Name>
 
-> \<Nom de clé> :: = **'**\<alphanumérique>+**'**
+> \<Key Name> ::= **'**\<AlphaNumeric>+**'**
 
-> \<Alphanumérique> :: = *n’importe quel caractère non null, c.-à-d. ASCII 0*
+> \<AlphaNumeric> :: = *n’importe quel caractère non null, c.-à-d. ASCII 0*
 
-> \<Valeur de clé> :: \<= type de \<clé>nom de clé>
+> \<Key Value> ::= \<Key Type>\<Key Name>
 
-> \<Type de clé> :: = **s** | **d**
+> \<Key Type> :: = **s** \| **d**
 
-> \<Valeur de clé> :: = **'**\<>alphanumériques **'**
+> \<Key Value> ::= **'**\<AlphaNumeric>**'**
 
 > [!NOTE]
-> `HKEY_CLASSES_ROOT`et `HKCR` sont équivalents ; `HKEY_CURRENT_USER` et `HKCU` sont équivalents ; et ainsi de suite.
+> `HKEY_CLASSES_ROOT` et `HKCR` sont équivalents ; `HKEY_CURRENT_USER` et `HKCU` sont équivalents, et ainsi de suite.
 
-Une arborescence d’analyse peut ajouter plusieurs clés et sous-clés \<à la clé racine>. Dans ce cas, elle garde le handle d’une sous-clé ouverte jusqu’à ce que l’analyseur ait terminé d’analyser toutes ses sous-clés. Cette approche est plus efficace que l’utilisation d’une seule clé à la fois, comme illustré dans l’exemple suivant :
+Une arborescence d’analyse peut ajouter plusieurs clés et sous-clés à \<root key> . Dans ce cas, elle garde le handle d’une sous-clé ouverte jusqu’à ce que l’analyseur ait terminé d’analyser toutes ses sous-clés. Cette approche est plus efficace que l’utilisation d’une seule clé à la fois, comme illustré dans l’exemple suivant :
 
 ```rgs
 HKEY_CLASSES_ROOT
@@ -59,7 +59,7 @@ HKEY_CLASSES_ROOT
 }
 ```
 
-Ici, le Bureau d’enregistrement s’ouvre pour `HKEY_CLASSES_ROOT\MyVeryOwnKey`la première fois (crée). Il voit ensuite que `MyVeryOwnKey` a une sous-clé. Au lieu de fermer la clé `MyVeryOwnKey`à, le Bureau d’enregistrement conserve le descripteur et `HasASubKey` l’ouvre (crée) à l’aide de ce handle parent. (Le registre système peut être plus lent quand aucun descripteur parent n’est ouvert.) Par conséquent, `HKEY_CLASSES_ROOT\MyVeryOwnKey` l’ouverture, `HasASubKey` puis `MyVeryOwnKey` l’ouverture avec en tant que parent `MyVeryOwnKey`est plus `MyVeryOwnKey`rapide que l’ouverture `MyVeryOwnKey\HasASubKey`, la fermeture, puis l’ouverture.
+Ici, le Bureau d’enregistrement s’ouvre pour la première fois (crée) `HKEY_CLASSES_ROOT\MyVeryOwnKey` . Il voit ensuite que `MyVeryOwnKey` a une sous-clé. Au lieu de fermer la clé à `MyVeryOwnKey` , le Bureau d’enregistrement conserve le descripteur et l’ouvre (crée) `HasASubKey` à l’aide de ce handle parent. (Le registre système peut être plus lent quand aucun descripteur parent n’est ouvert.) Par conséquent, l’ouverture, puis l' `HKEY_CLASSES_ROOT\MyVeryOwnKey` ouverture `HasASubKey` avec `MyVeryOwnKey` en tant que parent est plus rapide que l’ouverture `MyVeryOwnKey` , la fermeture `MyVeryOwnKey` , puis l’ouverture `MyVeryOwnKey\HasASubKey` .
 
 ## <a name="see-also"></a>Voir aussi
 
