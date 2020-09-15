@@ -1,21 +1,22 @@
 ---
-title: 'Procédure pas à pas : compiler un programme C sur la ligne de commande'
+title: 'Procédure pas à pas : Compiler un programme C sur la ligne de commande'
+description: Procédure pas à pas qui montre comment créer un programme Hello World style C simple.
 ms.custom: conceptual
-ms.date: 04/25/2019
+ms.date: 9/10/2020
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d807fa75b32b515c2222fec9ea9d070266303e33
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335264"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075606"
 ---
-# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Procédure pas à pas : compiler un programme C sur la ligne de commande
+# <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Procédure pas à pas : Compiler un programme C sur la ligne de commande
 
 Visual C++ inclut un compilateur C que vous pouvez utiliser pour créer toutes sortes de programmes, des programmes de console de base aux applications de bureau Windows complètes, aux applications mobiles, etc.
 
@@ -66,7 +67,7 @@ Si vous utilisez une autre version de Windows, recherchez dans le menu Démarrer
 
 ::: moniker-end
 
-Ensuite, vérifiez que l’invite de commandes développeur Visual C++ est correctement configurée. Dans la fenêtre d’invite de commandes `cl` , entrez et vérifiez que la sortie ressemble à ceci :
+Ensuite, vérifiez que l’invite de commandes développeur Visual C++ est correctement configurée. Dans la fenêtre d’invite de commandes, entrez `cl` et vérifiez que la sortie ressemble à ceci :
 
 ```Output
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -81,14 +82,14 @@ Il peut y avoir des différences au niveau du répertoire actuel ou des numéros
 > [!NOTE]
 > Si vous recevez une erreur telle que « Cl » n’est pas reconnu en tant que commande interne ou externe, programme exécutable ou fichier de commandes, «erreur C1034 ou LNK1104 d’erreur lors de l’exécution de la commande **CL** , vous n’utilisez pas d’invite de commandes développeur ou un problème avec votre installation de Visual C++. Vous devez corriger ce problème avant de pouvoir continuer.
 
-Si vous ne trouvez pas le raccourci d’invite de commandes développeur ou si vous recevez un message d’erreur `cl`lorsque vous entrez, votre installation de Visual C++ peut avoir un problème. Si vous utilisez Visual Studio 2017 ou une version ultérieure, essayez de réinstaller la charge de travail **développement Desktop en C++** dans le programme d’installation de Visual Studio. Pour plus d’informations, consultez [installer la prise en charge de C++ dans Visual Studio](vscpp-step-0-installation.md). Ou réinstallez les outils de génération à partir de la page de [téléchargements de Visual Studio](https://visualstudio.microsoft.com/downloads/) . N’passez pas à la section suivante jusqu’à ce que cela fonctionne. Pour plus d’informations sur l’installation et le dépannage de Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
+Si vous ne trouvez pas le raccourci d’invite de commandes développeur ou si vous recevez un message d’erreur lorsque vous entrez `cl` , votre installation de Visual C++ peut avoir un problème. Si vous utilisez Visual Studio 2017 ou une version ultérieure, essayez de réinstaller la charge de travail **développement Desktop en C++** dans le programme d’installation de Visual Studio. Pour plus d’informations, consultez [installer la prise en charge de C++ dans Visual Studio](vscpp-step-0-installation.md). Ou réinstallez les outils de génération à partir de la page de [téléchargements de Visual Studio](https://visualstudio.microsoft.com/downloads/) . N’passez pas à la section suivante jusqu’à ce que cela fonctionne. Pour plus d’informations sur l’installation et le dépannage de Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
 
 > [!NOTE]
 > Selon la version de Windows sur l’ordinateur et la configuration de la sécurité du système, vous devrez peut-être cliquer avec le bouton droit pour ouvrir le menu contextuel du raccourci d’invite de commandes développeur, puis choisir **exécuter en tant qu’administrateur** pour générer et exécuter correctement le programme que vous créez en suivant cette procédure pas à pas.
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Créer un fichier source C et le compiler sur la ligne de commande
 
-1. Dans la fenêtre d’invite de commandes développeur `cd c:\` , entrez pour modifier le répertoire de travail actuel à la racine de votre lecteur C :. Ensuite, entrez `md c:\simple` pour créer un répertoire, puis entrez `cd c:\simple` pour passer à ce répertoire. Ce répertoire contiendra votre fichier source et le programme compilé.
+1. Dans la fenêtre d’invite de commandes développeur, entrez `cd c:\` pour modifier le répertoire de travail actuel à la racine de votre lecteur C :. Ensuite, entrez `md c:\simple` pour créer un répertoire, puis entrez `cd c:\simple` pour passer à ce répertoire. Ce répertoire contiendra votre fichier source et le programme compilé.
 
 1. Entrez `notepad simple.c` à l’invite de commandes développeur. Dans la boîte de dialogue d’alerte du bloc-notes qui s’affiche, choisissez **Oui** pour créer un nouveau fichier simple. c dans votre répertoire de travail.
 
@@ -104,7 +105,7 @@ Si vous ne trouvez pas le raccourci d’invite de commandes développeur ou si v
     }
     ```
 
-1. Dans la barre de menus du bloc-notes, choisissez **fichier** > **Enregistrer** pour enregistrer simple. c dans votre répertoire de travail.
+1. Dans la barre de menus du bloc-notes, choisissez **fichier**  >  **Enregistrer** pour enregistrer simple. c dans votre répertoire de travail.
 
 1. Revenez à la fenêtre d’invite de commandes développeur. Entrez `dir` à l’invite de commandes pour répertorier le contenu du répertoire c:\simple. Vous devez voir le fichier source simple. c dans la liste des répertoires, qui ressemble à ceci :
 
@@ -127,7 +128,7 @@ Si vous ne trouvez pas le raccourci d’invite de commandes développeur ou si v
 
 1. Pour compiler votre programme, entrez `cl simple.c` à l’invite de commandes développeur.
 
-   Vous pouvez voir le nom du programme exécutable, simple. exe, dans les lignes d’informations de sortie affichées par le compilateur :
+   Vous pouvez voir le nom du programme exécutable, simple.exe, dans les lignes d’informations de sortie que le compilateur affiche :
 
     ```Output
     c:\simple>cl simple.c
@@ -166,7 +167,7 @@ Vous pouvez utiliser les étapes de cette procédure pas à pas pour générer v
 
 `cl file1.c file2.c file3.c`
 
-Le compilateur génère un programme appelé fichier1. exe. Pour modifier le nom en Program1. exe, ajoutez une option [/out](reference/out-output-file-name.md) de l’éditeur de liens :
+Le compilateur génère un programme appelé file1.exe. Pour modifier le nom en program1.exe, ajoutez une option [/out](reference/out-output-file-name.md) de l’éditeur de liens :
 
 `cl file1.c file2.c file3.c /link /out:program1.exe`
 
@@ -174,13 +175,13 @@ Et pour intercepter automatiquement d’autres erreurs de programmation, nous vo
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-Le compilateur, cl. exe, offre de nombreuses autres options que vous pouvez appliquer pour générer, optimiser, déboguer et analyser votre code. Pour obtenir une liste rapide, `cl /?` entrez à l’invite de commandes développeur. Vous pouvez également compiler et lier séparément et appliquer des options de l’éditeur de liens dans des scénarios de génération plus complexes. Pour plus d’informations sur les options du compilateur et de l’éditeur de liens et sur son utilisation, consultez Référence de la [génération C/C++](reference/c-cpp-building-reference.md).
+Le compilateur, cl.exe, offre de nombreuses autres options que vous pouvez appliquer pour générer, optimiser, déboguer et analyser votre code. Pour obtenir une liste rapide, entrez `cl /?` à l’invite de commandes développeur. Vous pouvez également compiler et lier séparément et appliquer des options de l’éditeur de liens dans des scénarios de génération plus complexes. Pour plus d’informations sur les options du compilateur et de l’éditeur de liens et sur son utilisation, consultez Référence de la  [génération C/C++](reference/c-cpp-building-reference.md).
 
 Vous pouvez utiliser NMAKE et les Makefiles, ou les fichiers projet et MSBuild pour configurer et générer des projets plus complexes sur la ligne de commande. Pour plus d’informations sur l’utilisation de ces outils, consultez la [Référence NMAKE](reference/nmake-reference.md) et [MSBuild](msbuild-visual-cpp.md).
 
 Les langages C et C++ sont similaires, mais pas identiques. Le compilateur Microsoft C/C++ (MSVC) utilise une règle simple pour déterminer le langage à utiliser lors de la compilation de votre code. Par défaut, le compilateur MSVC traite tous les fichiers qui se terminent par. c en tant que code source C, et tous les fichiers se terminant par. cpp comme code source C++. Pour forcer le compilateur à traiter tous les fichiers comme étant non tributaires de l’extension de nom de fichier, utilisez l’option du compilateur [/TC](reference/tc-tp-tc-tp-specify-source-file-type.md) .
 
-MSVC est compatible avec la norme ISO C99, mais n’est pas strictement conforme. Dans la plupart des cas, le code C portable se compile et s’exécute comme prévu. Visual C++ ne prend pas en charge la plupart des modifications apportées à ISO C11. Certaines fonctions de bibliothèque et certains noms de fonction POSIX sont déconseillés par MSVC. Les fonctions sont prises en charge, mais les noms préférés ont changé. Pour plus d’informations, consultez [fonctionnalités de sécurité dans le CRT](../c-runtime-library/security-features-in-the-crt.md) et [Avertissement du compilateur (niveau 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+MSVC est compatible avec la norme ISO C99, mais n’est pas strictement conforme. Dans la plupart des cas, le code C portable se compile et s’exécute comme prévu. Visual C++ prend en charge les modifications apportées à ISO C11/C17. Pour compiler avec la prise en charge de C11/C17, utilisez l’indicateur de compilateur `/std:c11` ou `/std:c17` . Certaines fonctions de bibliothèque et certains noms de fonction POSIX sont déconseillés par MSVC. Les fonctions sont prises en charge, mais les noms préférés ont changé. Pour plus d’informations, consultez [fonctionnalités de sécurité dans le CRT](../c-runtime-library/security-features-in-the-crt.md) et [Avertissement du compilateur (niveau 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Voir aussi
 

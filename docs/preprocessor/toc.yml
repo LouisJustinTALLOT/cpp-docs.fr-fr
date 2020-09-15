@@ -5,7 +5,7 @@
   items:
     - name: Préprocesseur
       href: ../preprocessor/preprocessor.md
-    - name: Vue d’ensemble d’un préprocesseur expérimental
+    - name: Vue d’ensemble du nouveau préprocesseur
       href: ../preprocessor/preprocessor-experimental-overview.md
     - name: Phases de traduction
       href: ../preprocessor/phases-of-translation.md
@@ -35,7 +35,7 @@
               href: ../preprocessor/auto-search.md
             - name: embedded_idl
               href: ../preprocessor/embedded-idl.md
-            - name: 'exclude (#import)'
+            - name: exclude (#import)
               href: ../preprocessor/exclude-hash-import.md
             - name: high_method_prefix
               href: ../preprocessor/high-method-prefix.md
@@ -73,7 +73,7 @@
               href: ../preprocessor/raw-native-types.md
             - name: raw_property_prefixes
               href: ../preprocessor/raw-property-prefixes.md
-            - name: 'rename (#import)'
+            - name: rename (#import)
               href: ../preprocessor/rename-hash-import.md
             - name: rename_namespace
               href: ../preprocessor/rename-namespace.md
@@ -96,11 +96,11 @@
       items:
         - name: Opérateurs de préprocesseur
           href: ../preprocessor/preprocessor-operators.md
-        - name: 'Opérateur d’enchaînement (#)'
+        - name: Opérateur d’enchaînement (#)
           href: ../preprocessor/stringizing-operator-hash.md
-        - name: 'Opérateur charizing (#@)'
+        - name: Opérateur charizing (#@)
           href: ../preprocessor/charizing-operator-hash-at.md
-        - name: 'Opérateur de collage de jeton (##)'
+        - name: Opérateur de collage de jeton (##)
           href: ../preprocessor/token-pasting-operator-hash-hash.md
     - name: Macros de préprocesseur (C/C++)
       expanded: false

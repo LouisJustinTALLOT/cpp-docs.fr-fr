@@ -1,5 +1,6 @@
 ---
 title: vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
+description: Informations de référence sur les API pour vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf et _vsnwprintf_l ; qui écrivent la sortie mise en forme à l’aide d’un pointeur vers une liste d’arguments.
 ms.date: 06/24/2020
 api_name:
 - _vsnprintf
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 63a2cd2e6287f9fe960cd60d799f4518b47572ae
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737582"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075762"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -142,7 +143,7 @@ int _vsnwprintf_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage pour la sortie.
 
 *count*<br/>
@@ -159,7 +160,7 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 La fonction **vsnprintf** retourne le nombre de caractères écrits, sans compter le caractère null de fin. Si la taille de la mémoire tampon spécifiée par *Count* n’est pas suffisamment grande pour contenir la sortie spécifiée par *format* et *argptr*, la valeur de retour de **vsnprintf** est le nombre de caractères qui seraient écrits, sans compter le caractère null, si *Count* était suffisamment grand. Si la valeur de retour est supérieure à *Count* -1, la sortie a été tronquée. La valeur de retour -1 indique qu’une erreur de codage s’est produite.
 
@@ -171,7 +172,7 @@ La valeur retournée par toutes ces fonctions n’inclut pas le caractère null 
 - Si *Count* est égal à zéro mais que *buffer* n’est pas **null**, rien n’est écrit et la fonction retourne `-1` .
 - Si *format* a la **valeur null**ou *si buffer* a la **valeur null** et que *Count* n’est pas égal à zéro, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, met en forme les données et écrit jusqu’à *Count* caractères dans la mémoire vers laquelle pointe la *mémoire tampon*. La fonction **vsnprintf** écrit toujours une marque de fin null, même si elle tronque la sortie. Quand vous utilisez **_vsnprintf** et **_vsnwprintf**, la mémoire tampon se termine par un caractère NULL uniquement s’il y a de la place à la fin (autrement dit, si le nombre de caractères à écrire est inférieur à *Count*).
 
@@ -196,7 +197,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
 |**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------------|-------------------------------|
@@ -205,7 +206,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 
 Les fonctions **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** et **_vsnwprintf_l** sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_vsnwprintf.c
