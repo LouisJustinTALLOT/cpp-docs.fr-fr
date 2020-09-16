@@ -583,6 +583,8 @@
                   href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
                 - name: /H (Limiter la longueur des noms externes)
                   href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /headerUnit (Utiliser l’unité d’en-tête IFC)
+                  href: ../build/reference/headerunit.md
                 - name: /HELP (Aide du compilateur relative à la ligne de commande)
                   href: ../build/reference/help-compiler-command-line-help.md
                 - name: /Homeparams (Copier les paramètres des registres vers la pile)
@@ -603,6 +605,10 @@
                   href: ../build/reference/ln-create-msil-module.md
                 - name: '/MD, /MT, /LD (Utiliser la bibliothèque Runtime)'
                   href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: '/module:exportHeader (Créer des unités d’en-tête)'
+                  href: ../build/reference/module-exportheader.md
+                - name: '/module:reference (Utiliser le module nommé IFC)'
+                  href: ../build/reference/module-reference.md
                 - name: /MP (Générer avec plusieurs processus)
                   href: ../build/reference/mp-build-with-multiple-processes.md
                 - name: /nologo (Suppression de la bannière de démarrage) (C/C++)
@@ -675,6 +681,8 @@
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: '/Tc, /Tp, /TC, /TP (Spécifier le type de fichier source)'
                   href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: /translateInclude (Traduire les directives include en directives import)
+                  href: ../build/reference/translateinclude.md
                 - name: '/U, /u (Annuler la définition de symboles)'
                   href: ../build/reference/u-u-undefine-symbols.md
                 - name: /utf-8 (Définir les jeux de caractères sources et exécutables sur UTF-8)
