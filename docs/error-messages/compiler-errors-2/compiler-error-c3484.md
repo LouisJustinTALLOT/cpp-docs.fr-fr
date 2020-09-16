@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3484
 ms.assetid: 2fe847fa-f6ee-4978-bc1d-b6dc6ae906ac
-ms.openlocfilehash: c9895a3e5a8ae7e941fccde2da85fedfb3d2c6dd
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ded4a183f69e4903afb4c9dfeae22f7751ef76ad
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743118"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686278"
 ---
 # <a name="compiler-error-c3484"></a>Erreur du compilateur C3484
 
@@ -23,7 +23,7 @@ Vous devez indiquer `->` avant le type de retour d’une expression lambda.
 
 - Indiquez `->` avant le type de retour.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’erreur C3484 :
 
@@ -35,8 +35,6 @@ int main()
    return []() . int { return 42; }(); // C3484
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant résout l’erreur C3484 en fournissant `->` avant le type de retour de l’expression lambda :
 

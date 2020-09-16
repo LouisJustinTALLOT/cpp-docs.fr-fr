@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd9c40ef90715e9beca43a114dba475ab29b5e78
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758487"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686036"
 ---
 # <a name="compiler-error-c3918"></a>Erreur du compilateur C3918
 
@@ -19,7 +19,7 @@ l’utilisation de’Member’doit être un membre de données
 
 C3918 peut se produire pour plusieurs raisons liées aux événements.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 C3918 peut se produire parce qu’un membre de classe est requis dans le contexte actuel. L’exemple suivant génère l’C3918.
 
@@ -40,8 +40,6 @@ public:
    }
 };
 ```
-
-## <a name="example"></a>Exemple
 
 C3918 est également provoquée si vous tentez de vérifier un événement trivial pour null (le nom de l’événement ne fournira plus d’accès direct au délégué du magasin de stockage pour l’événement).
 
@@ -65,8 +63,6 @@ ref struct EventSource : public IEFace {
    }
 };
 ```
-
-## <a name="example"></a>Exemple
 
 C3918 peut également se produire si vous vous êtes incorrectement abonné à un événement. L’exemple suivant génère l’C3918.
 

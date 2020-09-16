@@ -2,12 +2,12 @@
 title: Configurer des projets Linux pour utiliser Address Sanitizer
 description: Décrit comment configurer des projets Linux C++ dans Visual Studio pour utiliser Address Sanitizer.
 ms.date: 06/07/2019
-ms.openlocfilehash: 80e9ab46c948f2062391ae723c3425c435bd4507
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364310"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686663"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Configurer des projets Linux pour utiliser Address Sanitizer
 
@@ -33,13 +33,13 @@ Vous pouvez également voir la sortie ASan complète (y compris l’endroit où 
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Activer ASan pour les projets Linux basés sur MSBuild
 
 > [!NOTE]
-> À partir de Visual Studio 2019 version 16.4, AddressSanitizer pour les projets Linux est activé via **Configuration Properties** > **C/C'** > **Enable Address Sanitizer**.
+> À compter de Visual Studio 2019 version 16,4, AddressSanitizer pour les projets Linux est activé via les **Propriétés de configuration**  >  **C/C++** activer l’extension de l'  >  **adresse**.
 
-Pour activer ASan pour les projets Linux basés sur MSBuild, cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **propriétés**. Ensuite, naviguez vers **Configuration Properties** > **C/C.** > **Sanitizers**. Activé par le biais d’indicateurs de compilateur et d’éditeur de liens, ASan requiert que votre projet soit recompilé pour fonctionner.
+Pour activer ASan pour les projets Linux basés sur MSBuild, cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **propriétés**. Ensuite, accédez à **Propriétés de configuration**  >  **C/C++**  >  **désinfecteurs**C/C++. Activé par le biais d’indicateurs de compilateur et d’éditeur de liens, ASan requiert que votre projet soit recompilé pour fonctionner.
 
 ![Activer ASan pour un projet MSBuild](media/msbuild-asan-prop-page.png)
 
-Vous pouvez passer des drapeaux de runtime ASan en option en naviguant vers **Configuration Properties** > **Debugging** > **AddressSanitizer Runtime Flags**. Cliquez sur la flèche vers le bas pour ajouter ou supprimer des indicateurs.
+Vous pouvez passer des indicateurs d’exécution ASan facultatifs en accédant à **Propriétés de configuration**  >  **débogage**  >  **AddressSanitizer Runtime Flags**. Cliquez sur la flèche vers le bas pour ajouter ou supprimer des indicateurs.
 
 ![Configurer les indicateurs d’exécution ASan](media/msbuild-asan-runtime-flags.png)
 
@@ -49,11 +49,11 @@ Pour activer ASan pour CMake, cliquez avec le bouton droit sur le fichier CMakeL
 
 Vérifiez qu’une configuration Linux (par exemple, **Linux-Debug**) est sélectionnée dans le volet gauche de la boîte de dialogue :
 
-![Configuration Linux-Debug](media/linux-debug-configuration.png)
+![Capture d’écran du volet gauche avec le débogage Linux listé comme l’une des options de configuration.](media/linux-debug-configuration.png)
 
 Les options d’ASan se trouvent sous **Général**. Entrez les indicateurs de runtime ASan au format « indicateur=valeur », en les séparant par des points-virgules.
 
-![Configuration Linux-Debug](media/cmake-settings-asan-options.png)
+![Capture d’écran de l’option d’activation du nettoyage d’adresse montrant certains indicateurs d’heure d’exécution du nettoyage d’adresse.](media/cmake-settings-asan-options.png)
 
 ## <a name="install-the-asan-debug-symbols"></a>Installer les symboles de débogage ASan
 

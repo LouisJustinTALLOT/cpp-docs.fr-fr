@@ -5,12 +5,12 @@ ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 07e88da9a8a3712e1d37e319c29fd25aebce8ea7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 333bb6ce1f3ea0db6b07d70ddd60d4a4be337abd
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749309"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686507"
 ---
 # <a name="create-a-c-console-app-project"></a>Créer un projet d’application console C++
 
@@ -32,7 +32,7 @@ Visual Studio organise le code des applications dans des *projets*, et vos proje
 
 1. Dans la boîte de dialogue **configurer votre nouveau projet** , entrez *HelloWorld* dans la zone d’édition **nom du projet** . Choisissez **créer** pour créer le projet.
 
-   ![Nommer et créer le projet](media/vs2019-configure-new-project-hello-world.png "Nommer et créer le projet")
+   ![Capture d’écran de la boîte de dialogue Configurer votre nouveau projet avec Hello World tapé dans le champ de texte Nom du projet.](media/vs2019-configure-new-project-hello-world.png "Nommer et créer le projet")
 
    Visual Studio crée un nouveau projet. Vous pouvez ajouter et modifier votre code source. Par défaut, le modèle application console remplit votre code source avec une application « Hello World » :
 
@@ -52,7 +52,7 @@ Visual Studio organise le code des applications dans des *projets*, et vos proje
 
 1. Dans la boîte de dialogue **nouveau projet** , sélectionnez **installé > Visual C++** s’il n’est pas déjà sélectionné, puis choisissez le modèle de **projet vide** . Dans le champ **nom** , entrez *HelloWorld*. Choisissez **OK** pour créer le projet.
 
-   ![Nommer et créer le projet](media/vscpp-concierge-project-name-callouts.png "Nommer et créer le projet")
+   ![Capture d’écran de la boîte de dialogue Nouveau projet avec installé > Visual C plus plus sélectionné et appelé, l’option de projet vide appelée out et Hellow World tape dans la zone de texte nom.](media/vscpp-concierge-project-name-callouts.png "Nommer et créer le projet")
 
 Visual Studio crée un projet vide. Il est prêt à être spécialisé pour le type d’application que vous souhaitez créer et pour ajouter vos fichiers de code source. Ce sera votre prochaine tâche.
 
@@ -149,7 +149,7 @@ Si vous ne voyez pas l' **éditeur de liens** listé sous **Propriétés de conf
 
 Le contrôle dropdown n’apparaît pas dans la zone de modification de la propriété du **sous-système** tant que vous n’avez pas sélectionné la propriété. Cliquez dans la zone d’édition pour la sélectionner. Vous pouvez aussi appuyer sur la touche **Tab** pour parcourir les contrôles de boîte de dialogue jusqu’à ce que le **sous-système** soit mis en surbrillance. Choisissez le contrôle dropdown ou appuyez sur **Alt + Pg. suiv** pour l’ouvrir.
 
-[Retour](#make-your-project-a-console-app)
+[Revenir](#make-your-project-a-console-app)
 
 ### <a name="add-a-source-code-file-issues"></a>Ajouter un fichier de code source : problèmes
 

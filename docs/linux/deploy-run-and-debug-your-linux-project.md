@@ -3,14 +3,14 @@ title: Déployer, exécuter et déboguer votre projet C++ MSBuild Linux dans Vis
 description: Décrit comment compiler, exécuter et déboguer du code sur la cible distante à partir d’un projet Linux C++ dans Visual Studio.
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 55e066201e99245db4c63902c51223047e40e687
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4200e30b445f4a09fc60083db0067996c96ea953
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043887"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686702"
 ---
-# <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Déployer, exécuter et déboguer votre projet MSBuild Linux
+# <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Déployer, exécuter et déboguer votre projet Linux MSBuild
 
 ::: moniker range="vs-2015"
 La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur. Pour consulter la documentation de ces versions, définissez la liste déroulante **version** située au-dessus de la table des matières dans **Visual Studio 2017** ou **Visual Studio 2019**.
@@ -38,7 +38,7 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 
    GDB est utilisé pour déboguer les applications exécutées sur Linux. Lors du débogage sur un système distant (pas WSL), GDB peut s’exécuter dans deux modes différents, que vous pouvez sélectionner à partir de l’option **Mode de débogage** dans la page de propriétés **Débogage** du projet :
 
-   ![Options GDB](media/vs2019-debugger-settings.png)
+   ![Capture d’écran de la boîte de dialogue pages de propriétés de l’application console Linux de Visual Studio 2019 avec les propriétés de configuration > le débogage sélectionné et le mode de débogage mis en surbrillance avec G B D sélectionné et mis en surbrillance dans la liste déroulante.](media/vs2019-debugger-settings.png)
 
    ::: moniker-end
 
@@ -46,7 +46,7 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 
    GDB est utilisé pour déboguer les applications exécutées sur Linux. GDB peut s’exécuter dans deux modes différents, que vous pouvez sélectionner à partir de l’option **Mode de débogage** dans la page de propriétés **Débogage** du projet :
 
-   ![Options GDB](media/vs2017-debugger-settings.png)
+   ![Capture d’écran de la boîte de dialogue pages de propriétés de l’application console Linux de Visual Studio 2017 avec les propriétés de configuration > le débogage sélectionné et le mode de débogage mis en surbrillance avec G B D sélectionné et mis en surbrillance dans la liste déroulante.](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
 
@@ -92,7 +92,7 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 ## <a name="configure-other-debugging-options-msbuild-projects"></a>Configurer d’autres options de débogage (projets MSBuild)
 
 - Vous pouvez passer les arguments de ligne de commande à l’exécutable en utilisant l’élément **Arguments de programme** dans la page de propriétés **Débogage** du projet.
-- Vous pouvez exporter la `DISPLAY` variable d’environnement à l’aide de la **commande de prélancement** dans les pages de propriétés de**débogage** du projet. Par exemple : `export DISPLAY=:0.0`
+- Vous pouvez exporter la `DISPLAY` variable d’environnement à l’aide de la **commande de prélancement** dans les pages de propriétés de**débogage** du projet. Par exemple : `export DISPLAY=:0.0`
 
    ![Arguments de programme](media/settings_programarguments.png)
 
@@ -123,7 +123,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a>Spécifier des ordinateurs différents pour la génération et le débogage dans des projets Linux basés sur MSBuild
+## <a name="specify-different-machines-for-building-and-debugging-in-msbuild-based-linux-projects"></a><a name="separate_build_debug"></a> Spécifier des ordinateurs différents pour la génération et le débogage dans des projets Linux basés sur MSBuild
 
 Dans Visual Studio 2019 version 16,1, vous pouvez séparer votre ordinateur de build distant de votre ordinateur de débogage distant pour les projets Linux basés sur MSBuild et les projets CMake qui ciblent un ordinateur Linux distant. Par exemple, vous pouvez maintenant utiliser la compilation croisée sur x64 et déployer sur un appareil ARM lors du ciblage de scénarios IoT.
 

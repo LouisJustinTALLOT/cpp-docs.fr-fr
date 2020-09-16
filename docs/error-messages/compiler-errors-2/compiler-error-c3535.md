@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 60ffd5d8decd5c9065ca55cfed34383278359f3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 673fe6a8b5eb6dfcd9caa841b18d5b47fb7858bf
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228789"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686088"
 ---
 # <a name="compiler-error-c3535"></a>Erreur du compilateur C3535
 
@@ -27,7 +27,7 @@ Le type de la variable déclarée par le **`auto`** mot clé ne peut pas être d
 
 1. Assurez-vous que si la déclaration est un pointeur vers un type, l’expression d’initialisation est un type pointeur.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant donne C3535 parce que l’expression d’initialisation prend la valeur **`void`** .
 
@@ -42,8 +42,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemple
-
 L’exemple suivant donne C3535 parce que l’instruction déclare la variable `x` en tant que pointeur vers un type déduit, mais le type de l’expression d’initialiseur est double. Par conséquent, le compilateur ne peut pas déduire le type de la variable.
 
 ```cpp
@@ -55,8 +53,6 @@ int main()
    return 0;
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant donne C3535, car `p` la variable déclare un pointeur vers un type déduit, mais l’expression d’initialisation n’est pas un type pointeur.
 

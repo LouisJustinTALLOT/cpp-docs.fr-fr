@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 980beb21325e78baa9c6f3691f7b814c5266b79a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228711"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686611"
 ---
 # <a name="generic-delegates-ccli"></a>Délégués génériques (C++/CLI)
 
@@ -50,7 +50,7 @@ Nom du délégué.
 *formal-parameters*<br/>
 (Facultatif) Liste des paramètres du délégué.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Les paramètres de type de délégué sont spécifiés à l’emplacement où un objet délégué est créé. Le délégué et la méthode associée doivent avoir la même signature. L’exemple suivant est une déclaration de délégué générique.
 
@@ -60,8 +60,6 @@ Les paramètres de type de délégué sont spécifiés à l’emplacement où un
 generic <class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant montre que
 
@@ -104,8 +102,6 @@ int main() {
       gcnew GenDelegate<int>(&MyClass::MyStaticMethod<int>);
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant déclare un délégué générique `GenDelegate<ItemType>`, puis l’instancie en l’associant à la méthode `MyMethod` qui utilise le paramètre de type `ItemType`. Deux instances du délégué (un entier et un double) sont créées et appelées.
 

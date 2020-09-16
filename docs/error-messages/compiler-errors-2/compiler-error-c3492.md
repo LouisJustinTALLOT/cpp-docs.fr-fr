@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bdaeb8797eb71b205f737d08e74430f161cb8caa
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738308"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686546"
 ---
 # <a name="compiler-error-c3492"></a>Erreur du compilateur C3492
 
@@ -23,7 +23,7 @@ Vous ne pouvez pas capturer un membre d’une union sans nom.
 
 - Donnez un nom à l’union et passez la structure d’union complète à la liste de capture de l’expression lambda.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’erreur C3492, car il capture un membre d’une union anonyme :
 
@@ -42,8 +42,6 @@ int main()
    [&x](char ch) { x = ch; }(ch); // C3492
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant résout l’erreur C3492 en nommant l’union et en passant la structure d’union complète à la liste de capture de l’expression lambda :
 

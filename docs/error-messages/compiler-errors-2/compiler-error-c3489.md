@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3b192a14a39b7c0c9d264bda8073c54f0f395924
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738412"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685764"
 ---
 # <a name="compiler-error-c3489"></a>Erreur du compilateur C3489
 
@@ -29,7 +29,7 @@ Quand vous spécifiez que le mode de capture par défaut d’une expression lamb
 
 - Passez la variable par référence à la clause de capture. (Cela peut modifier le comportement de l’expression lambda.)
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’erreur C3489 car la variable `n` apparaît par valeur dans la clause de capture d’une expression lambda dont le mode par défaut est par valeur :
 
@@ -42,8 +42,6 @@ int main()
    [=, n]() { return n; } (); // C3489
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant illustre quatre résolutions possibles de l’erreur C3489 :
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b1abfc4e2798f973951a24ea27f35b2dcf6cca7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190155"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686317"
 ---
 # <a name="cast-operator-"></a>Opérateur de cast : ()
 
@@ -28,7 +28,7 @@ Toute expression unaire est considérée comme une expression de cast.
 
 Le compilateur traite *cast-expression* comme le type *type-name* après la réalisation d'un cast de type. Les casts peuvent être utilisés pour convertir des objets de tout type scalaire vers ou depuis tout autre type scalaire. Les casts de types explicites sont contraints par les mêmes règles qui déterminent les effets des conversions implicites. Les restrictions supplémentaires sur les casts peuvent résulter des tailles réelles ou de la représentation des types spécifiques.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 ```cpp
 // expre_CastOperator.cpp
@@ -47,8 +47,6 @@ int main()
     cout << "i = " << i << endl;
 }
 ```
-
-## <a name="example"></a>Exemple
 
 ```cpp
 // expre_CastOperator2.cpp
@@ -122,6 +120,6 @@ Raw Bytes after cast:   Exciting
 
 [Expressions avec opérateurs unaires](../cpp/expressions-with-unary-operators.md)<br/>
 [Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Opérateur de conversion de type explicite](../cpp/explicit-type-conversion-operator-parens.md)<br/>
-[Opérateurs de casting](../cpp/casting-operators.md)<br/>
+[Opérateur de conversion de type explicite : ()](../cpp/explicit-type-conversion-operator-parens.md)<br/>
+[Opérateurs de cast](../cpp/casting-operators.md)<br/>
 [Opérateurs de cast](../c-language/cast-operators.md)

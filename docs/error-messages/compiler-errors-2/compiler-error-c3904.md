@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 1861810f4598fa81d1b7662a57651b1648de1317
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b2c5737a4442761cbaa84b532907e579eddb423d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749046"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686063"
 ---
 # <a name="compiler-error-c3904"></a>Erreur du compilateur C3904
 
 'property_accessor' : vous devez spécifier un ou plusieurs paramètres de nombre
 
-Vérifiez le nombre de paramètres de votre `get` et `set` méthodes par rapport aux dimensions des propriétés.
+Vérifiez le nombre de paramètres dans vos `get` `set` méthodes et par rapport aux dimensions des propriétés.
 
-- Le nombre de paramètres de la méthode `get` doit être égal au nombre de dimensions de la propriété ou être égal à zéro pour les propriétés non indexées.
+- Le nombre de paramètres de la `get` méthode doit être égal au nombre de dimensions de la propriété ou être égal à zéro pour les propriétés non indexées.
 
-- Le nombre de paramètres de la méthode `set` doit être supérieur au nombre de dimensions de la propriété.
+- Le nombre de paramètres de la `set` méthode doit être supérieur au nombre de dimensions de la propriété.
 
 Pour plus d'informations, consultez [property](../../extensions/property-cpp-component-extensions.md).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C3904.
 
@@ -46,8 +46,6 @@ ref class X {
    };
 };
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’C3904.
 

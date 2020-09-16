@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 30fc510272afc90ae37b583e807d10c3374df052
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562127"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686585"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 
@@ -66,13 +66,11 @@ L’illustration suivante représente une boîte de dialogue qui contient un con
 
 ![Dialogue avec contrôle de l'adresse réseau et info-bulle.](../../mfc/reference/media/cnetaddctrl.png "Dialogue avec contrôle de l'adresse réseau et info-bulle.")
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple de code suivant est une partie d’une boîte de dialogue qui valide une adresse réseau. Les gestionnaires d’événements pour trois cases d’option spécifient que l’adresse réseau peut être l’un des trois types d’adresses. L’utilisateur entre une adresse dans la zone de texte du contrôle réseau, puis appuie sur un bouton pour valider l’adresse. Si l’adresse est valide, un message de réussite s’affiche. dans le cas contraire, le message d’erreur info-bulle prédéfini s’affiche.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]
-
-## <a name="example"></a>Exemple
 
 L’exemple de code suivant du fichier d’en-tête de boîte de dialogue définit les variables [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) et [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) requises par la méthode [CNetAddressCtrl :: GetAddress](#getaddress) .
 

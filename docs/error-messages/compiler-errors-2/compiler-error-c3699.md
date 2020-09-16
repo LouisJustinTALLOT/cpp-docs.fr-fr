@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d313168e8033395da1749e000e52421939f77af4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758032"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686650"
 ---
 # <a name="compiler-error-c3699"></a>Erreur du compilateur C3699
 
 'operator' : impossible d’utiliser cette indirection sur le type’type'
 
-Une tentative d’utilisation d’une indirection n’est pas autorisée sur `type`.
+Une tentative d’utilisation de l’indirection n’est pas autorisée sur `type` .
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C3699.
 
@@ -34,9 +34,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
-Une propriété triviale ne peut pas avoir de type référence. Pour plus d'informations, voir [property](../../extensions/property-cpp-component-extensions.md) . L’exemple suivant génère l’C3699.
+Une propriété triviale ne peut pas avoir de type référence. Pour plus d’informations, consultez [property](../../extensions/property-cpp-component-extensions.md) . L’exemple suivant génère l’C3699.
 
 ```cpp
 // C3699_b.cpp
@@ -46,8 +44,6 @@ ref struct C {
    property System::String ^ y;   // OK
 };
 ```
-
-## <a name="example"></a>Exemple
 
 L’équivalent d’une syntaxe « pointeur vers pointeur » est un handle vers une référence de suivi. L’exemple suivant génère l’C3699.
 

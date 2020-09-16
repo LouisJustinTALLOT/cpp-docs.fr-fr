@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-ms.openlocfilehash: e462d24f2eb54718ba73617146aab96bb14a66df
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 69af2bd2c22fdb1188cf0b7119791e451e80f966
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990907"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686494"
 ---
 # <a name="linker-tools-error-lnk1312"></a>Erreur des outils Éditeur de liens LNK1312
 
@@ -19,7 +19,7 @@ fichier non valide ou endommagé : impossible d’importer l’assembly
 
 Lors de la génération d’un assembly, un fichier autre qu’un module ou un assembly compilé avec **/CLR** a été passé à l’option de l’éditeur de liens **/ASSEMBLYMODULE** .  Si vous avez passé un fichier objet à **/ASSEMBLYMODULE**, il vous suffit de passer l’objet directement à l’éditeur de liens, plutôt qu’à **/ASSEMBLYMODULE**.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant a créé le fichier. obj.
 
@@ -31,8 +31,6 @@ public:
    int i;
 };
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’LNK1312.
 

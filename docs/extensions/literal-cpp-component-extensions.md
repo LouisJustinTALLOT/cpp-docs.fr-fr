@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214254"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686728"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI et C++/CX)
 
@@ -49,7 +49,7 @@ Pour plus d’informations, consultez [Static](../cpp/storage-classes-cpp.md) et
 
 **literal** est un mot clé contextuel. Pour plus d’informations, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Cet exemple montre qu’une variable **littérale** implique **`static`** .
 
@@ -64,8 +64,6 @@ int main() {
    int value = X::i;
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant montre l’effet de la variable literal sur les métadonnées :
 
@@ -87,8 +85,6 @@ Notez la différence entre `sc` et `lit` dans les métadonnées : la directive `
 ```
 .field public static literal int32 lit = int32(0x0000000A)
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant, créé dans C#, référence les métadonnées créées dans l’exemple précédent et présente l’effet des variables **literal** et **static const** :
 

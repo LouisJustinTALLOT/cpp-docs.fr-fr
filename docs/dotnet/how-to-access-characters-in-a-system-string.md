@@ -7,20 +7,20 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: a91f82d0377b9065c2927e61e9f2a558a49985f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb62eb0fecbee202e4d01635a60da565241822ee
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221365"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686793"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Comment : accéder aux caractères d'un System::String
 
 Vous pouvez accéder aux caractères d’un <xref:System.String> objet pour les appels hautes performances aux fonctions non managées qui acceptent des `wchar_t*` chaînes. La méthode génère un pointeur intérieur vers le premier caractère de l' <xref:System.String> objet. Ce pointeur peut être manipulé directement ou épinglé et passé à une fonction qui attend une **`wchar_t`** chaîne ordinaire.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
-`PtrToStringChars`retourne un <xref:System.Char> , qui est un pointeur intérieur (également appelé `byref` ). En tant que tel, il est soumis à garbage collection. Vous n’êtes pas obligé d’épingler ce pointeur à moins que vous ne le passiez à une fonction native.
+`PtrToStringChars` retourne un <xref:System.Char> , qui est un pointeur intérieur (également appelé `byref` ). En tant que tel, il est soumis à garbage collection. Vous n’êtes pas obligé d’épingler ce pointeur à moins que vous ne le passiez à une fonction native.
 
 Prenons le code suivant.  L’épinglage n’est pas nécessaire, car `ppchar` est un pointeur intérieur et, si le garbage collector déplace la chaîne vers laquelle il pointe, il est également mis à jour `ppchar` . Sans [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), le code fonctionnera et n’aura pas d’impact sur les performances potentielles causées par l’épinglage.
 
@@ -45,8 +45,6 @@ int main() {
 ```Output
 abcdefg
 ```
-
-## <a name="example"></a>Exemple
 
 Cet exemple montre où l’épinglage est nécessaire.
 
@@ -74,8 +72,6 @@ int main() {
 ```Output
 7
 ```
-
-## <a name="example"></a>Exemple
 
 Un pointeur intérieur a toutes les propriétés d’un pointeur C++ natif. Par exemple, vous pouvez l’utiliser pour parcourir une structure de données liées et effectuer des insertions et des suppressions à l’aide d’un seul pointeur :
 

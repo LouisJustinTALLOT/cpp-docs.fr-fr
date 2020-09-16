@@ -3,12 +3,12 @@ title: Configurer un projet C++ MSBuild Linux dans Visual Studio
 ms.date: 08/06/2020
 description: Configurez un projet Linux basé sur MSBuild dans Visual Studio afin de pouvoir le générer.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043861"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685954"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Configurer un projet C++ MSBuild Linux dans Visual Studio
 
@@ -110,13 +110,13 @@ Pour gérer votre cache d’en-têtes, accédez à **Outils > Options, Multiplat
 
 ::: moniker range="vs-2017"
 
-![IntelliSense pour les en-têtes distants](media/remote-header-intellisense.png)
+![Capture d’écran montrant la boîte de dialogue Options avec Cross Platform > gestionnaire de connexions > en-têtes distants gestionnaire IntelliSense sélectionné.](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-![IntelliSense pour les en-têtes distants](media/connection-manager-vs2019.png)
+![Capture d’écran montrant la boîte de dialogue Options avec Cross Platform > gestionnaire de connexions sélectionné.](media/connection-manager-vs2019.png)
 
 Vous pouvez activer la journalisation pour faciliter la résolution des problèmes :
 
@@ -124,7 +124,7 @@ Vous pouvez activer la journalisation pour faciliter la résolution des problèm
 
 ::: moniker-end
 
-## <a name="linux-target-locale"></a><a name="locale"></a>Paramètres régionaux cibles Linux
+## <a name="linux-target-locale"></a><a name="locale"></a> Paramètres régionaux cibles Linux
 
 Les paramètres de langue de Visual Studio ne sont pas propagés aux cibles Linux, car Visual Studio ne gère pas ou ne configure pas les packages installés. Les messages affichés dans la fenêtre **sortie** , tels que les erreurs de build, s’affichent à l’aide de la langue et des paramètres régionaux de la cible Linux. Vous devez configurer vos cibles Linux pour les paramètres régionaux souhaités.
 

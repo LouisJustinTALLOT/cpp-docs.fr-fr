@@ -6,22 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: e0feb1cb7131b4388c87213a85ff1c921f636e1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10064784e1124ac365475f00b3577d22f5e7f3f1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162034"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686520"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>Avertissement du compilateur (niveau 2) C4250
 
 'classe1 ' : hérite de’Class2 :: Member’via la dominance
 
-Deux membres ou plus portent le même nom. Celui de `class2` est hérité, car il s’agit d’une classe de base pour les autres classes qui contenaient ce membre.
+Deux membres ou plus portent le même nom. Celui de l’élément `class2` est hérité, car il s’agit d’une classe de base pour les autres classes qui contenaient ce membre.
 
 Pour supprimer C4250, utilisez le pragma [Warning](../../preprocessor/warning.md) .
 
 Étant donné qu’une classe de base virtuelle est partagée entre plusieurs classes dérivées, un nom dans une classe dérivée domine un nom dans une classe de base. Par exemple, étant donné la hiérarchie de classes suivante, il existe deux définitions de Func héritées dans Diamond : l’instance VBC :: Func () via la classe faible et la classe dominant :: Func () via la classe dominante. Un appel non qualifié de Func () via un objet de classe Diamond appelle toujours l’instance de Domin :: Func ().  Si la classe faible devait introduire une instance de Func (), aucune définition ne dominerait et l’appel serait marqué comme ambigu.
+
+## <a name="examples"></a>Exemples
 
 ```cpp
 // C4250.cpp
@@ -44,8 +46,6 @@ int main() {
    d.func();   // C4250
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’C4250.
 
@@ -77,8 +77,6 @@ int main() {
    cout << eObject.operator int() << endl;
 }
 ```
-
-## <a name="example"></a>Exemple
 
 Cet exemple présente une situation plus complexe. L’exemple suivant génère l’C4250.
 

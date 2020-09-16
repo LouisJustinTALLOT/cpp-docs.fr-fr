@@ -4,12 +4,12 @@ description: Utilisez l’éditeur de code C++ dans Visual Studio pour mettre e
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 43c4529ae0c5ac5a8c4fae2ae402ed3c6e222c37
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: bf34bf39bc41841be72c9400ec63c501d7aa56a3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206217"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686330"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Modifier et refactoriser du code C++ dans Visual Studio
 
@@ -98,17 +98,17 @@ Pour certains types d’erreurs ainsi que les modèles de codage courants, l’�
 
 Dans l’exemple suivant, un `vector` a été déclaré, mais aucune définition n’a été trouvée. L’éditeur suggère donc d’inclure le fichier d’en-tête nécessaire :
 
-![Correction rapide du&#43;&#43; C](../ide/media/quick-fix-for-header-cpp.png "Correctif rapide C++")
+![Capture d’écran montrant les tildes d’erreur et la correction rapide offerte par l’éditeur.](../ide/media/quick-fix-for-header-cpp.png "Correctif rapide C++")
 
 L’éditeur propose également des correctifs rapides pour certaines opportunités de refactorisation. Par exemple, si vous déclarez une classe dans un fichier d’en-tête, Visual Studio suggère de créer une définition pour celle-ci dans un fichier .cpp distinct.
 
-![Correction rapide du&#43;&#43; C](../ide/media/quick-fix.png "Correctif rapide C++")
+![Capture d’écran montrant la correction rapide avec l’option créer une définition de l’itérateur de routage de canal dans les canaux point C P P en surbrillance.](../ide/media/quick-fix.png "Correctif rapide C++")
 
-## <a name="change-tracking"></a>Suivi des modifications
+## <a name="change-tracking"></a>Change tracking
 
 Chaque fois que vous apportez une modification à un fichier, une barre jaune s’affiche sur la gauche pour indiquer que des modifications non enregistrées ont été effectuées. Quand vous enregistrez le fichier, la barre devient verte. Les barres verte et jaune sont conservées tant que le document est ouvert dans l’éditeur. Elles représentent les modifications qui ont été apportées depuis la dernière ouverture du document.
 
-![Suivi des modifications du&#43;&#43; C](../ide/media/change-tracking-cpp.png "Suivi des modifications")
+![Suivi des modifications du&#43;&#43; C](../ide/media/change-tracking-cpp.png "Change tracking")
 
 ## <a name="move-code"></a>Déplacer du code
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 98f546a243016fa85f6d71159ab2fc0a7963bae3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833113"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686481"
 ---
 # <a name="db_column"></a>db_column
 
@@ -58,7 +58,7 @@ Lorsque le fournisseur d’attributs du consommateur applique cet attribut à un
 
 Pour obtenir un exemple de cet attribut utilisé dans une application, consultez [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Cet exemple lie une colonne d’une table à un **`long`** membre de données et spécifie des champs d’État et de longueur.
 
@@ -78,8 +78,6 @@ class CProducts {
 };
 ```
 
-## <a name="example"></a>Exemple
-
 Cet exemple lie quatre colonnes à une **`long`** , une chaîne de caractères, un horodatage et un `DB_NUMERIC` entier, dans cet ordre.
 
 ```cpp
@@ -98,9 +96,9 @@ class CProducts {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-| Contexte d’attribut | Valeur |
+| Contexte d’attribut | Value |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`** , membre, méthode|
 |**Repeatable Read**|Non|

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: e18e874473925c0198b8645162546c9abe13b3ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842349"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686741"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -36,9 +36,9 @@ Liste séparée par des virgules de la dispinterface qui sera membre de la cocla
 
 Par défaut, seules les interfaces COM qui sont des classes de base de `coclass` sont ajoutées à la coclasse IDL. **Implements** vous permet de forcer d’autres interfaces comme des `coclass` membres IDL.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-| Contexte d’attribut | Valeur |
+| Contexte d’attribut | Value |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
 |**Repeatable Read**|Oui|
@@ -47,7 +47,7 @@ Par défaut, seules les interfaces COM qui sont des classes de base de `coclass`
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant se trouve en trois parties : un fichier. idl et son fichier. h associé, et un fichier C++.
 
@@ -96,8 +96,6 @@ library odod
    };
 }
 ```
-
-## <a name="example"></a>Exemple
 
 Et le fichier. h suivant, qui doit également être disponible pour le compilateur.
 
@@ -376,8 +374,6 @@ CBar;
 #endif
 #endif
 ```
-
-## <a name="example"></a>Exemple
 
 Dans le programme suivant, sans implémente, `IBar1` , `IBar2` et ne se trouve `ISna` pas dans le `coclass` dans le IDL généré.
 

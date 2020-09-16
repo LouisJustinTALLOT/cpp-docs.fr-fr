@@ -3,12 +3,12 @@ title: Créer un projet C++ MSBuild Linux dans Visual Studio
 ms.date: 08/04/2020
 description: Créez un nouveau projet Linux basé sur MSBuild dans Visual Studio.
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 86d8b8fd2abe8970b5146d4ab08dc4251b5562d5
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 559a868ebdea7e3b835a82c31849d0e2fdeaa6c9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043848"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686689"
 ---
 # <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>Créer un projet C++ MSBuild Linux dans Visual Studio
 
@@ -31,7 +31,7 @@ Pour créer un projet Linux dans Visual Studio 2017, procédez comme suit :
 1. Sélectionnez **Fichier > Nouveau projet** dans Visual Studio, ou appuyez sur **Ctrl+Maj+N**.
 1. Sélectionnez le nœud **Visual C++ > Multiplateforme > Linux**, puis le type de projet à créer. Entrez un **Nom** et un **Emplacement**, puis choisissez **OK**.
 
-   ![Nouveau projet Linux](media/newproject.png)
+   ![Capture d’écran montrant la boîte de dialogue Nouveau projet avec Visual C plus > multiplateforme > Linux sélectionné, tous les types de projets appelés et les zones de texte nom et emplacement également appelées.](media/newproject.png)
 
    | Type de projet | Description |
    | ------------ | --- |
@@ -61,7 +61,7 @@ Pour créer un projet Linux dans Visual Studio 2019, procédez comme suit :
 1. Sélectionnez **Fichier > Nouveau projet** dans Visual Studio, ou appuyez sur **Ctrl+Maj+N**.
 1. Définissez le **Langage** sur **C++** et recherchez « Linux ». Sélectionnez le type de projet à créer, puis choisissez **Suivant**. Entrez un **Nom** et un **Emplacement**, puis choisissez **Créer**.
 
-   ![Nouveau projet Linux](media/newproject-vs2019.png)
+   ![Capture d’écran de la boîte de dialogue Ajouter un nouveau projet avec Linux tapé dans la zone de texte Rechercher.](media/newproject-vs2019.png)
 
    | Type de projet | Description |
    | ------------ | --- |
@@ -72,6 +72,6 @@ Pour créer un projet Linux dans Visual Studio 2019, procédez comme suit :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurer un projet MSBuild Linux](configure-a-linux-project.md)
+[Configurer un projet Linux MSBuild](configure-a-linux-project.md)
 
 ::: moniker-end

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a39c625e63936700661790023a983fa39eeda369
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738425"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685790"
 ---
 # <a name="compiler-error-c3488"></a>Erreur du compilateur C3488
 
@@ -29,7 +29,7 @@ Quand vous spécifiez que le mode de capture par défaut d’une expression lamb
 
 - Passez la variable par valeur à la clause de capture. (Cela peut modifier le comportement de l’expression lambda.)
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’erreur C3488, car une référence à la variable `n` apparaît dans la clause de capture d’une expression lambda dont le mode par défaut est par référence :
 
@@ -42,8 +42,6 @@ int main()
    [&, &n]() { return n; } (); // C3488
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant illustre quatre résolutions possibles de l’erreur C3488 :
 

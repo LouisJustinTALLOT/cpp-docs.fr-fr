@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
-ms.openlocfilehash: 50585904f125dcb572043b568978d65eb1c61e80
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 80e9a80d822a9da0e9ae388991f3dbc78bfca0db
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758084"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686715"
 ---
 # <a name="compiler-error-c3673"></a>Erreur du compilateur C3673
 
 'type' : la classe n’a pas de constructeur de copie
 
-Un constructeur défini par l’utilisateur est nécessaire pour copier des objets de types référence CLR. Pour plus d’informations, consultez [ C++ sémantique de pile pour les types référence](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Un constructeur défini par l’utilisateur est nécessaire pour copier des objets de types référence CLR. Pour plus d’informations, consultez [sémantique de pile C++ pour les types référence](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C3673.
 
@@ -38,8 +38,6 @@ int main() {
    R s = r;   // C3673
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’C3673.
 

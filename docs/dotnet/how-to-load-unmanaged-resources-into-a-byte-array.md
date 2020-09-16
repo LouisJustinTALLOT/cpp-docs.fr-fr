@@ -7,20 +7,20 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: b2b98ff3c4bbd857e3f5d861c1e0e8e2bd2f357b
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988204"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685803"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Comment : charger des ressources non managées dans un tableau d'octets
 
-This topic discusses several ways to load unmanaged resources into a <xref:System.Byte> array.
+Cette rubrique décrit plusieurs façons de charger des ressources non managées dans un <xref:System.Byte> tableau.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
-If you know the size of your unmanaged resource, you can preallocate a CLR array and then load the resource into the array using a pointer to the array block of the CLR array.
+Si vous connaissez la taille de votre ressource non managée, vous pouvez préallouer un tableau CLR, puis charger la ressource dans le tableau à l’aide d’un pointeur vers le bloc de tableau du tableau CLR.
 
 ```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
@@ -54,9 +54,7 @@ int main() {
 0123456789
 ```
 
-## <a name="example"></a>Exemple
-
-This sample shows how to copy data from an unmanaged memory block to a managed array.
+Cet exemple montre comment copier des données d’un bloc de mémoire non managé vers un tableau managé.
 
 ```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
