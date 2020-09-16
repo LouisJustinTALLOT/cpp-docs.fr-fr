@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: f0bd8f3a96555cc29d06f74fb44a73bbed32889b
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 72eada34c6a64a8b4591afbee03b686f3da3ee11
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825576"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685409"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Nom de fichier EXE)
 
@@ -31,7 +31,7 @@ Spécifie un nom et un répertoire pour le fichier. exe ou la DLL créée par le
 *chemin*<br/>
 Le chemin d’accès relatif ou absolu et le nom de fichier de base, ou le chemin d’accès relatif ou absolu à un répertoire, ou le nom de fichier de base à utiliser pour l’exécutable généré.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 L’option **/Fe** vous permet de spécifier le répertoire de sortie, le nom de l’exécutable de sortie, ou les deux, pour le fichier exécutable généré. Si *pathname* se termine par un séparateur de chemin d’accès (**&#92;**), il est supposé spécifier uniquement le répertoire de sortie. Dans le cas contraire, le dernier composant de *pathname* est utilisé comme nom de base du fichier de sortie, tandis que le reste du *chemin d’accès* spécifie le répertoire de sortie. Si *pathname* n’a pas de séparateurs de chemin d’accès, il est supposé spécifier le nom du fichier de sortie dans le répertoire actif. Le *chemin* d’accès doit être placé entre guillemets doubles (**"**) s’il contient des caractères qui ne peuvent pas être dans un chemin d’accès abrégé, tels que des espaces, des caractères étendus ou des composants de chemin d’accès comportant plus de huit caractères.
 
@@ -43,7 +43,7 @@ Si vous spécifiez l’option [/c (compiler sans liaison)](c-compile-without-lin
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Ouvrez la page de propriétés**général** de l'**éditeur de liens** >  **Propriétés** > de configuration.
+1. Ouvrez la page de propriétés général de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **General** .
 
 1. Modifiez la propriété **fichier de sortie** . Choisissez **OK** pour enregistrer vos modifications.
 
@@ -51,15 +51,13 @@ Si vous spécifiez l’option [/c (compiler sans liaison)](c-compile-without-lin
 
 - Consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>.
 
-## <a name="example"></a> Exemple
+## <a name="examples"></a>Exemples
 
-La ligne de commande suivante compile et lie tous les fichiers sources C dans le répertoire actif. Le fichier exécutable obtenu est nommé PROCESS. exe et est créé dans le répertoire « C:\Users\User Name\repos\My Project\bin ».
+La ligne de commande suivante compile et lie tous les fichiers sources C dans le répertoire actif. Le fichier exécutable obtenu est nommé PROCESS.exe et est créé dans le répertoire « C:\Users\User Name\repos\My Project\bin ».
 
 ```
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 ```
-
-## <a name="example"></a> Exemple
 
 La ligne de commande suivante crée un fichier exécutable dans `C:\BIN` avec le même nom de base que le premier fichier source dans le répertoire actif :
 
@@ -72,4 +70,4 @@ CL /FeC:\BIN\ *.C
 [Options du fichier de sortie (/F)](output-file-f-options.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
 [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
-[Spécification du nom de chemin](specifying-the-pathname.md)<br/>
+[Spécification du chemin d’accès](specifying-the-pathname.md)<br/>

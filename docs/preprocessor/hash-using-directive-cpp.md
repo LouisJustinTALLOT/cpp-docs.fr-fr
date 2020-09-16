@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 0da255957e92a570750da2687bf1444df2e6ab13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0245eb15219585421be83def0258415ab4b573b6
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219428"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684259"
 ---
 # <a name="using-directive-ccli"></a>#using, directive (C++/CLI)
 
@@ -72,7 +72,7 @@ Le compilateur recherche des références le long du chemin suivant :
 
 - Répertoires sur la variable d'environnement LIBPATH.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Vous pouvez générer un assembly qui fait référence à un deuxième assembly qui lui-même fait référence à un troisième assembly. Vous devez uniquement référencer explicitement le troisième assembly du premier assembly si vous utilisez explicitement l’un de ses types.
 
@@ -81,8 +81,6 @@ Vous pouvez générer un assembly qui fait référence à un deuxième assembly 
 // compile with: /clr /LD
 public ref class A {};
 ```
-
-## <a name="example"></a>Exemple
 
 ```cpp
 // using_assembly_B.cpp
@@ -94,8 +92,6 @@ public:
    void Test() {}
 };
 ```
-
-## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, le compilateur ne signale pas une erreur de référencement des *using_assembly_A.dll*, car le programme n’utilise pas les types définis dans *using_assembly_A. cpp*.
 

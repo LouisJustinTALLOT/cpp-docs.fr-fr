@@ -6,18 +6,18 @@ helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a9ff21390f8a5d7b20c8c36e596f80140ccb9a39
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988231"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683947"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>Comment : modifier la classe de référence dans une fonction native
 
 Vous pouvez passer une classe de référence avec un tableau CLR à une fonction native et modifier la classe à l’aide des services PInvoke.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Compilez la bibliothèque Native suivante.
 
@@ -46,8 +46,6 @@ extern "C"  {
     }
 };
 ```
-
-## <a name="example"></a>Exemple
 
 Compilez l’assembly suivant.
 

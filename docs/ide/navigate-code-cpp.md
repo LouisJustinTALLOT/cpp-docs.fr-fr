@@ -2,12 +2,12 @@
 title: Naviguer dans le code C++ dans Visual Studio
 description: Utilisez les différents outils dans Visual Studio pour naviguer dans votre codebase C++.
 ms.date: 05/28/2019
-ms.openlocfilehash: 932694db70019924557259d4defe802b53ef0f89
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: cc13326dee14e952c78e521344a6244249179cb8
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079078"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683492"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Naviguer dans le code C++ dans Visual Studio
 
@@ -17,7 +17,7 @@ Visual Studio fournit une suite d’outils qui vous permettent de naviguer dans 
 
 Cliquez avec le bouton de droite sur une directive `#include`, puis sélectionnez **Atteindre le document**. Ou sélectionnez **F12** avec le curseur sur cette ligne pour ouvrir le fichier.
 
-![C&#43; &#43; aller à l’option de menu document](../ide/media/go-to-document.png "Atteindre le document")
+![C&#43;&#43; option de menu accéder au document](../ide/media/go-to-document.png "Atteindre le document")
 
 ## <a name="toggle-headercode-file"></a>Afficher ou masquer l’en-tête / le fichier de code
 
@@ -27,20 +27,20 @@ Vous pouvez basculer entre un fichier d’en-tête et son fichier source corresp
 
 Vous pouvez accéder à la définition d’un symbole de code en cliquant avec le bouton de droite dans l’éditeur et en sélectionnant **Atteindre la définition** ou en sélectionnant **F12**. Vous pouvez accéder à une déclaration de la même façon en cliquant avec le bouton de droite pour ouvrir le menu contextuel ou en sélectionnant **Ctrl+F12**.
 
-![&#43; &#43;](../ide/media/go-to-def.png "Atteindre la définition")
+![C&#43;&#43; accéder à la définition](../ide/media/go-to-def.png "Atteindre la définition")
 
 ## <a name="go-to"></a>Atteindre
 
 **Atteindre** fait référence à un ensemble de fonctionnalités de navigation qui fournissent chacune un type de résultat spécifique basé sur des filtres que vous spécifiez.
 
-Vous pouvez ouvrir **Atteindre** avec **Ctrl+,** . Cette action crée une zone de recherche au-dessus du document en cours de modification.
+Vous pouvez ouvrir **Atteindre** avec **Ctrl+,**. Cette action crée une zone de recherche au-dessus du document en cours de modification.
 
-![&#43; Atteindre&#43;](../ide/media/go-to-cpp.png "Atteindre")
+![C&#43;&#43; accéder à](../ide/media/go-to-cpp.png "Atteindre")
 
 **Atteindre** inclut les filtres de recherche suivants :
 
 - **Atteindre la ligne** (**CTRL + G**) : accède rapidement à une autre ligne dans le document actif.
-- **Atteindre tout** (**CTRL +,** ) ou (**Ctrl + T**) : les résultats de la recherche incluent tout ce qui suit.
+- **Atteindre tout** (**CTRL +,**) ou (**Ctrl + T**) : les résultats de la recherche incluent tout ce qui suit.
 - **Atteindre le fichier** (**CTRL 1, F**) : recherchez des fichiers dans votre solution.
 - **Atteindre le type** (**CTRL 1, T**) : les résultats de la recherche sont les suivants :
   - Classes, structs et énumérations.
@@ -68,11 +68,11 @@ Pour appliquer un filtre de texte, commencez votre requête de recherche par le 
 
 L’exemple suivant montre les résultats issus d’une opération *Atteindre les fichiers* utilisant le filtre « f » :
 
-![&#43; &#43;](../ide/media/vs2017-go-to-results.png "Accéder au menu")
+![Capture d’écran du menu atteindre les fichiers.](../ide/media/vs2017-go-to-results.png "Accéder au menu")
 
 Pour afficher la liste des filtres de texte, tapez un caractère  ? suivi d’un espace. Vous pouvez également accéder aux commandes **Atteindre** avec le menu **Edition**. C’est une autre façon de mémoriser les principaux raccourcis clavier **Atteindre**.
 
-![&#43; &#43;](../ide/media/go-to-menu-cpp.png "Accéder au menu")
+![Capture d’écran du menu atteindre.](../ide/media/go-to-menu-cpp.png "Accéder au menu")
 
 ## <a name="find-or-find-in-files"></a>Rechercher ou Rechercher dans les fichiers
 
@@ -80,15 +80,15 @@ Vous pouvez exécuter une recherche de texte pour quoi que ce soit dans votre so
 
 **Rechercher** peut être étendue à une sélection, au document actuel, à tous les documents ouverts, au projet actuel ou à l’ensemble de la solution. Vous pouvez utiliser des expressions régulières ainsi que du texte brut. En outre, la recherche met en évidence toutes les correspondances automatiquement dans l’IDE.
 
-![Recherche&#43; &#43; C](../ide/media/find-cpp.png "Rechercher")
+![Recherche de&#43;&#43; C](../ide/media/find-cpp.png "Rechercher")
 
 La fonctionnalité **Rechercher dans les fichiers** est une version plus puissante de la fonctionnalité **Rechercher** qui affiche les résultats dans la fenêtre **Résultats de la recherche**. Vous pouvez, entre autres, effectuer une recherche dans des dépendances de code externes et filtrer par types de fichiers.
 
-![C&#43; &#43; chercher dans les fichiers](../ide/media/find-in-files-cpp.png "Rechercher dans les fichiers")
+![Capture d’écran de la fenêtre Rechercher et remplacer montrant la page Rechercher dans les fichiers.](../ide/media/find-in-files-cpp.png "Rechercher dans les fichiers")
 
 Vous pouvez organiser les résultats de **Rechercher dans les fichiers** dans deux fenêtres. Vous pouvez rassembler les résultats de plusieurs recherches. Sélectionnez un résultat pour accéder à l’emplacement concerné dans le fichier.
 
-![C&#43; &#43; chercher dans les fichiers](../ide/media/vs2017-find-in-files-results.png "Rechercher dans les fichiers")
+![Capture d’écran montrant un résultat de recherche Rechercher dans le fichier.](../ide/media/vs2017-find-in-files-results.png "Rechercher dans les fichiers")
 
 Pour plus d’informations, consultez [Rechercher dans les fichiers](/visualstudio/ide/find-in-files) dans la documentation de Visual Studio.
 
@@ -96,7 +96,7 @@ Pour plus d’informations, consultez [Rechercher dans les fichiers](/visualstud
 
 Pour rechercher toutes les utilisations d’un symbole dans votre codebase, placez le signe insertion dans ou juste après le symbole, puis cliquez avec le bouton de droite et sélectionnez **Rechercher toutes les références**. Vous pouvez filtrer, trier ou regrouper les résultats de différentes manières. Les résultats se remplissent de façon incrémentielle. Ils sont classés en tant que lectures ou écritures pour vous aider à voir ce que contient votre solution, par opposition aux en-têtes système ou aux autres bibliothèques.
 
-![C&#43; &#43; Rechercher toutes les références](../ide/media/find-all-references-results-cpp.png "Rechercher toutes les références")
+![C&#43;&#43; Rechercher toutes les références](../ide/media/find-all-references-results-cpp.png "Rechercher toutes les références")
 
 Vous regroupez les résultats en fonction des catégories suivantes :
 
@@ -110,7 +110,7 @@ Vous regroupez les résultats en fonction des catégories suivantes :
 
 Pour filtrer les résultats, placez le curseur sur une colonne, puis sélectionnez l’icône de filtre qui s’affiche. Vous pouvez filtrer les résultats de la première colonne pour masquer des éléments que vous ne souhaitez peut-être pas voir, tels que les références de chaîne et de commentaire.
 
-![C&#43; &#43; Rechercher tous les filtres de références](../ide/media/find-all-references-filters-cpp.png "Rechercher tous les filtres de références")
+![C&#43;&#43; Rechercher tous les filtres de références](../ide/media/find-all-references-filters-cpp.png "Rechercher tous les filtres de références")
 
 - **Résultats confirmés**: références de code réelles au symbole recherché. Par exemple, la recherche d’une fonction membre appelée `Size` retourne toutes les références à `Size` qui correspondent à la portée de la classe définissant `Size`.
 
@@ -126,7 +126,7 @@ Vous pouvez trier les résultats en fonction de n’importe quelle colonne en la
 
 Vous pouvez accéder à la définition d’un type dans un fichier ou à des membres de type, à l’aide de la **Barre de navigation** située au-dessus de la fenêtre de l’éditeur.
 
-![Barre&#43; &#43; de navigation C](../ide/media/navbar-cpp.png "Barre de navigation")
+![Barre de navigation&#43;&#43; C](../ide/media/navbar-cpp.png "Barre de navigation")
 
 ## <a name="see-also"></a>Voir aussi
 

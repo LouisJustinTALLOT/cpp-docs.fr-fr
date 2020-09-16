@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 81f3c2abc41673e6e4c9e3f59ff1dd515e1cf365
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988100"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685423"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>Avertissement des outils Éditeur de liens LNK4248
 
@@ -25,13 +25,13 @@ Dans ce cas, l’éditeur de liens fournira la définition de type natif dans le
 
 Toutefois, si une déclaration de type Forward est un type CLR, la définition de type natif de l’éditeur de liens peut ne pas être correcte
 
-Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Pour plus d’informations, consultez [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
 1. Indiquez la définition du type dans le module MSIL.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’LNK4248. Définissez le struct A à résoudre.
 
@@ -47,8 +47,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
 L’exemple suivant présente une définition anticipée d’un type.
 
 ```cpp
@@ -63,8 +61,6 @@ int main() {
    return valueA(a);
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’LNK4248.
 

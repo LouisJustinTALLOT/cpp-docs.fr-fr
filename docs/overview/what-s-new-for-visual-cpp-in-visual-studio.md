@@ -4,12 +4,12 @@ description: Les nouvelles fonctionnalités et les correctifs du compilateur et 
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 1a0fc228b6c91b1e529db6676c1a1193f5db99e1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a21bb8f8c629b3d9c8c765958d6a52891c90898a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041677"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684743"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Nouveautés de C++ dans Visual Studio
 
@@ -232,7 +232,7 @@ Le composant expérimental Clang/C2 a été supprimé. Utilisez l’ensemble d�
 
 - Nouveaux correctifs rapides pour des vérifications de variables non initialisées. Pour en savoir plus, voir [Nouveaux correctifs rapides d’analyse de code pour la mémoire non initialisée (C6001) et les avertissements d’utilisation avant init (C26494)](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/).
 
-## <a name="unit-testing"></a>Test des unités
+## <a name="unit-testing"></a>Test unitaire
 
 Le modèle de projet de test C++ managé n’est plus disponible. Vous pouvez continuer à utiliser le framework de test C++ managé dans vos projets existants. Pour les nouveaux tests unitaires, utilisez un des frameworks de test natifs pour lesquels Visual Studio fournit des modèles (MSTest, Google Test) ou le modèle de projet de test C# managé.
 
@@ -649,7 +649,7 @@ L’ensemble d’outils Clang/C2 fourni avec Visual Studio 2017 prend désormais
 
 Les vérificateurs principaux C++ permettant d’appliquer les [directives principales C++](https://github.com/isocpp/CppCoreGuidelines) sont désormais distribués avec Visual Studio. Activez les contrôleurs dans la page extensions de l' **analyse du code** des pages de propriétés du projet. Les extensions sont alors incluses lorsque vous exécutez l’analyse du code. Pour plus d’informations, consultez [Using the C++ Core Guidelines checkers](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
-![Montre comment utiliser la page de propriétés analyse du code pour sélectionner des ensembles de règles C++ Core Check.](media/CppCoreCheck.png "Page de propriétés CppCoreCheck")
+![Capture d’écran de la boîte de dialogue pages de propriétés qui affiche les propriétés de configuration > l’analyse du code > général sélectionnée et un certain nombre de contrôles principaux figurant dans la section exécuter cet ensemble de règles.](media/CppCoreCheck.png "Page de propriétés CppCoreCheck")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 version 15.3
 
@@ -697,7 +697,7 @@ Outils Visual Studio Graphics Diagnostics : vous pouvez les utiliser pour enreg
 
 - **Recherche et filtrage dans la table des objets :** fournit un moyen rapide et facile de trouver les ressources que vous recherchez.
 
-  ![Affiche l’emplacement des contrôles de filtre et de recherche dans la fenêtre table des objets.](media/search.png)
+  ![Capture d’écran de la section table objet avec la liste déroulante type et la zone de texte Rechercher appelée out.](media/search.png)
 
 - **Historique des ressources :** cette nouvelle vue offre une façon simplifiée d’afficher tout l’historique des modifications d’une ressource utilisée pendant le rendu d’un frame capturé. Pour appeler l’historique d’une ressource, cliquez sur l’icône d’horloge en regard de n’importe quel lien hypertexte de ressource.
 

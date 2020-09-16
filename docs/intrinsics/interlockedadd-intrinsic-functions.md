@@ -26,16 +26,16 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: efe1444273f17c8f0544d2c51b98923169032e61
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217726"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683895"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>_InterlockedAdd fonctions intrinsèques
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Ces fonctions effectuent un ajout atomique, ce qui garantit que l’opération se termine correctement lorsque plusieurs threads ont accès à une variable partagée.
 
@@ -79,18 +79,18 @@ __int64 _InterlockedAdd64_rel(
 ### <a name="parameters"></a>Paramètres
 
 *Addend*\
-[in, out] Pointeur vers l’entier à ajouter à; remplacé par le résultat de l’addition.
+[in, out] Pointeur vers l’entier à ajouter à ; remplacé par le résultat de l’addition.
 
-*Ajoutée*\
+*Value*\
 dans Valeur à ajouter.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Ces deux fonctions renvoient le résultat de l'addition.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_InterlockedAdd`|ARM, ARM64|
 |`_InterlockedAdd_acq`|ARM, ARM64|
@@ -101,15 +101,15 @@ Ces deux fonctions renvoient le résultat de l'addition.
 |`_InterlockedAdd64_nf`|ARM, ARM64|
 |`_InterlockedAdd64_rel`|ARM, ARM64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-Les versions de ces fonctions avec le suffixe `_acq` ou `_rel` effectuent une addition verrouillée respectant la sémantique acquire ou release. L’acquisition de la *sémantique* signifie que le résultat de l’opération est rendu visible par tous les threads et processeurs avant les lectures et écritures de mémoire ultérieures. Elle est utile lors de l'entrée d'une section critique. La *sémantique Release* signifie que toutes les lectures et écritures en mémoire sont forcées à être rendues visibles à tous les threads et les processeurs avant que le résultat de l’opération soit rendu visible. Elle est utile quand vous quittez une section critique. Les intrinsèques avec un `_nf` suffixe («no cloture») n’agissent pas comme une barrière de mémoire.
+Les versions de ces fonctions avec le suffixe `_acq` ou `_rel` effectuent une addition verrouillée respectant la sémantique acquire ou release. L’acquisition de la *sémantique* signifie que le résultat de l’opération est rendu visible par tous les threads et processeurs avant les lectures et écritures de mémoire ultérieures. Elle est utile lors de l'entrée d'une section critique. La *sémantique Release* signifie que toutes les lectures et écritures en mémoire sont forcées à être rendues visibles à tous les threads et les processeurs avant que le résultat de l’opération soit rendu visible. Elle est utile quand vous quittez une section critique. Les intrinsèques avec un `_nf` suffixe (« no cloture ») n’agissent pas comme une barrière de mémoire.
 
 Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 ```cpp
 // interlockedadd.cpp
@@ -130,13 +130,11 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 0xffffff00 0xff0000 0xffffff00
 ```
-
-## <a name="example"></a>Exemple
 
 ```cpp
 // interlockedadd64.cpp
@@ -160,14 +158,14 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

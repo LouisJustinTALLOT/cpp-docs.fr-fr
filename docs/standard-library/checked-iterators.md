@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2327638208f30908cd3429ae656ce569f5821195
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845690"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684901"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -73,7 +73,7 @@ Un itérateur vérifié fait référence à un itérateur qui appelle `invalid_p
 
 Les adaptateurs d’itérateur qui prennent en charge des itérateurs vérifiés sont la [classe checked_array_iterator](../standard-library/checked-array-iterator-class.md) et la [classe unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Quand vous compilez à l’aide de _ITERATOR_DEBUG_LEVEL défini sur 1 ou 2, une erreur d’exécution se produit si vous tentez d’accéder à un élément situé en dehors des limites du conteneur à l’aide de l’opérateur d’indexation de certaines classes.
 
@@ -102,8 +102,6 @@ int main()
 
 Ce programme affiche « 67 », puis une boîte de dialogue d’échec d’assertion avec des informations supplémentaires sur l’erreur.
 
-## <a name="example"></a>Exemple
-
 De même, quand vous compilez à l’aide de _ITERATOR_DEBUG_LEVEL défini sur 1 ou 2, une erreur d’exécution se produit si vous tentez d’accéder à un élément à l’aide de `front` ou `back` dans les classes de conteneur lorsque le conteneur est vide.
 
 ```cpp
@@ -125,8 +123,6 @@ int main()
 ```
 
 Ce programme affiche une boîte de dialogue d’échec d’assertion avec des informations supplémentaires sur l’erreur.
-
-## <a name="example"></a>Exemple
 
 Le code suivant illustre différents scénarios de cas d'usage d'itérateur avec des commentaires sur chacun d'eux. Par défaut, _ITERATOR_DEBUG_LEVEL a la valeur 2 dans les versions Debug et la valeur 0 dans les versions commerciales.
 

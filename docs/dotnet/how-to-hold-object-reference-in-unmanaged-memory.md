@@ -8,18 +8,18 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 13d5bd37a0f5e0b065aecb8c5b264fb70685363f
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988209"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684506"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Comment : stocker la référence d'un objet dans une mémoire non managée
 
-You can use gcroot.h, which wraps <xref:System.Runtime.InteropServices.GCHandle>, to hold a CLR object reference in unmanaged memory. Alternatively, you can use `GCHandle` directly.
+Vous pouvez utiliser gcroot. h, qui encapsule <xref:System.Runtime.InteropServices.GCHandle> , pour contenir une référence d’objet CLR dans la mémoire non managée. Vous pouvez également utiliser `GCHandle` directement.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 ```cpp
 // hold_object_reference.cpp
@@ -55,9 +55,7 @@ int main() {
 StringWrapper::x == ManagedString
 ```
 
-## <a name="example"></a>Exemple
-
-`GCHandle` gives you a means to hold a managed object reference in unmanaged memory.  You use the <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> method to create an opaque handle to a managed object and <xref:System.Runtime.InteropServices.GCHandle.Free%2A> to release it. Also, the <xref:System.Runtime.InteropServices.GCHandle.Target%2A> method allows you to obtain the object reference back from the handle in managed code.
+`GCHandle` vous donne un moyen de conserver une référence d’objet managé dans la mémoire non managée.  Vous utilisez la <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> méthode pour créer un handle opaque vers un objet managé et <xref:System.Runtime.InteropServices.GCHandle.Free%2A> pour le libérer. En outre, la <xref:System.Runtime.InteropServices.GCHandle.Target%2A> méthode vous permet d’obtenir la référence d’objet à partir du handle dans du code managé.
 
 ```cpp
 // hold_object_reference_2.cpp

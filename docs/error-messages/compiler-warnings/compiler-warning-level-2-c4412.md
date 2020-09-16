@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 601b99eec4625e9b598ece4cbb74d0039ad04bf0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 79b4ac95fbac344ff86922b84870e01c6681ed69
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161787"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684991"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Avertissement du compilateur (niveau 2) C4412
 
-> '*fonction*' : la signature de fonction contient le type'*type*'; C++ les objets ne sont pas sûrs à passer entre le code pur et le code mixte ou natif.
+> '*fonction*' : la signature de fonction contient le type'*type*'; Les objets C++ ne sont pas sûrs à passer entre le code pur et le code mixte ou natif.
 
 ## <a name="remarks"></a>Notes
 
-L’option de compilateur **/clr : pure** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017. Si vous avez du code qui doit être pur, nous vous recommandons de le porter à C#.
+L’option de compilateur **/clr : pure** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017. Si vous avez du code qui doit être pur, nous vous recommandons de le porter vers C#.
 
 Le compilateur a détecté une situation potentiellement dangereuse qui pourrait entraîner une erreur d’exécution : un appel est effectué à partir d’un module de sécurité de l’exécution **/clr : pure** vers une fonction qui a été importée via dllimport et la signature de la fonction contient un type non sécurisé. Un type n’est pas sécurisé s’il contient une fonction membre ou a un membre de données qui est un type non sécurisé ou une indirection vers un type unsafe.
 
-Cela est risqué en raison de la différence entre les conventions d’appel par défaut entre le code pur et le code natif (ou natif et managé mixte). Quand vous importez (via `dllimport`) une fonction dans un module de la fonctionnalité **/clr : pure** , assurez-vous que les déclarations de chaque type dans la signature sont identiques à celles du compiland qui exporte la fonction (ce qui est particulièrement attentif aux différences dans les conventions d’appel implicites).
+Cela est risqué en raison de la différence entre les conventions d’appel par défaut entre le code pur et le code natif (ou natif et managé mixte). Quand vous importez (via `dllimport` ) une fonction dans un module de la fonctionnalité **/clr : pure** , assurez-vous que les déclarations de chaque type dans la signature sont identiques à celles du compiland qui exporte la fonction (ce qui est particulièrement attentif aux différences dans les conventions d’appel implicites).
 
 Une fonction membre virtuelle est particulièrement sujette à des résultats inattendus.  Toutefois, même une fonction non virtuelle doit être testée pour s’assurer que vous disposez des résultats corrects. Si vous êtes sûr que vous obtenez les résultats corrects, vous pouvez ignorer cet avertissement.
 
@@ -31,7 +31,7 @@ C4412 est désactivé par défaut. Pour plus d’informations, consultez [averti
 
 Pour résoudre cet avertissement, supprimez toutes les fonctions du type.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C4412.
 
@@ -59,9 +59,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
-L’exemple suivant est un fichier d’en-tête qui déclare deux types. Le type de `Unsafe` n’est pas sécurisé, car il a une fonction membre.
+L’exemple suivant est un fichier d’en-tête qui déclare deux types. Le `Unsafe` type n’est pas sécurisé, car il a une fonction membre.
 
 ```cpp
 // C4412.h
@@ -79,8 +77,6 @@ struct Safe {
 };
 ```
 
-## <a name="example"></a>Exemple
-
 Cet exemple exporte des fonctions avec les types définis dans le fichier d’en-tête.
 
 ```cpp
@@ -96,9 +92,7 @@ __declspec(dllexport) Unsafe * __cdecl func() { return new Unsafe; }
 __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 ```
 
-## <a name="example"></a>Exemple
-
-La Convention d’appel par défaut dans une compilation **/clr : pure** est différente d’une compilation native.  Quand C4412. h est inclus, `Test` prend par défaut la valeur `__clrcall`. Si vous compilez et exécutez ce programme (n’utilisez pas **/c**), le programme lèvera une exception.
+La Convention d’appel par défaut dans une compilation **/clr : pure** est différente d’une compilation native.  Quand C4412. h est inclus, la `Test` valeur par défaut est `__clrcall` . Si vous compilez et exécutez ce programme (n’utilisez pas **/c**), le programme lèvera une exception.
 
 L’exemple suivant génère l’C4412.
 

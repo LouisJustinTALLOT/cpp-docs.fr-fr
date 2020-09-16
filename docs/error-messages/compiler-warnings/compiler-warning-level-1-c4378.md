@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: be3cdaac79c60143648985c1782df76422a1fc98
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 20897ba27350835b4b896c5afd89790331c59220
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162827"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685604"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Avertissement du compilateur (niveau 1) C4378
 
 Doit obtenir les pointeurs de fonction pour exécuter des initialiseurs ; Prenons l’exemple de System :: ModuleHandle :: ResolveMethodHandle
 
-Sous **/CLR**, les symboles d’initialiseur contiennent des jetons de fonction, et non des pointeurs de fonctions.  Vous devez convertir des jetons en pointeurs à l’aide de <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+Sous **/CLR**, les symboles d’initialiseur contiennent des jetons de fonction, et non des pointeurs de fonctions.  Vous devez convertir des jetons en pointeurs à l’aide de <xref:System.ModuleHandle.ResolveMethodHandle%2A> .
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C4378.
 
@@ -62,8 +62,6 @@ int main () {
    InitializeObjects();
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant montre comment résoudre C4378.
 

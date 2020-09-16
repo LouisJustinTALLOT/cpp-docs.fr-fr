@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 36278615631d017db1d1c2fc4eecf8c1612892de
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1e089c45598a53ff337e389feb2a6983a2997041
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518398"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684623"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Avertissement du compilateur (niveau 1) C4789
 
@@ -42,9 +42,9 @@ Visual C++ peut générer cet avertissement pour un chemin d’accès de code qu
 #pragma warning( pop )
 ```
 
-Cet idiome empêche le C++ visuel de générer l’avertissement pour ce bloc de code spécifique. `#pragma warning(push)` conserve l'état existant avant que `#pragma warning(disable: 4789)` le modifie. `#pragma warning(pop)` restaure l'état de type push et supprime les effets de `#pragma warning(disable:4789)`. Pour plus d’informations sur C++ la directive de préprocesseur `#pragma`, consultez directives [Warning](../../preprocessor/warning.md) et [Pragma et le mot clé __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Cet idiome empêche Visual C++ de générer l’avertissement pour ce bloc de code spécifique. `#pragma warning(push)` conserve l'état existant avant que `#pragma warning(disable: 4789)` le modifie. `#pragma warning(pop)` restaure l'état de type push et supprime les effets de `#pragma warning(disable:4789)`. Pour plus d’informations sur la directive de préprocesseur C++ `#pragma` , consultez directives [Warning](../../preprocessor/warning.md) et [pragma et le mot clé __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L'exemple suivant génère l'erreur C4789.
 
@@ -67,8 +67,6 @@ int main()
     memcpy(&c, &w, sizeof(wchar_t));
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L'exemple suivant génère également l'erreur C4789.
 

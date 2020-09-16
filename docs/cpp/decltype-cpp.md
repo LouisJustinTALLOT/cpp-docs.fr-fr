@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561386"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683479"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -56,7 +56,7 @@ const A* a = new A();
 
 Examinez ensuite les types retournés par les quatre **`decltype`** instructions dans le tableau suivant.
 
-|.|Type|Notes|
+|Instruction|Type|Notes|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|[Référence rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) à un **`const int`** .|
 |`decltype(var);`|**`int`**|Type de la variable `var`.|
@@ -100,7 +100,7 @@ Les fonctions de transfert encapsulent les appels à d'autres fonctions. Consid�
 
 Dans ce scénario, vous ne pouvez pas écrire une expression de type appropriée sans le **`decltype`** spécificateur de type. Le **`decltype`** spécificateur de type active les fonctions de transfert génériques, car il ne perd pas les informations requises pour déterminer si une fonction retourne un type référence. Pour obtenir un exemple de code d'une fonction de transfert, consultez l'exemple de la fonction de modèle `myFunc` précédent.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L'exemple de code suivant déclare le type de retour spécifié à la fin de la fonction de modèle `Plus()`. La `Plus` fonction traite ses deux opérandes avec la **`operator+`** surcharge. Par conséquent, l’interprétation de l’opérateur plus ( **`+`** ) et du type de retour de la `Plus` fonction dépend des types des arguments de la fonction.
 
@@ -173,8 +173,6 @@ Plus(dx, dy) = 13.5
 Hello, world!
 x3.Dump() = 42
 ```
-
-## <a name="example"></a>Exemple
 
 **Visual Studio 2017 et versions ultérieures :** Le compilateur analyse les **`decltype`** arguments quand les modèles sont déclarés au lieu d’être instanciés. Par conséquent, si une spécialisation non dépendante est trouvée dans l' **`decltype`** argument, elle ne sera pas reportée à l’instanciation et sera traitée immédiatement et toutes les erreurs résultantes seront diagnostiquées à ce moment-là.
 

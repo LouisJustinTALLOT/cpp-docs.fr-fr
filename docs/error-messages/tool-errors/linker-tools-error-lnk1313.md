@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 03ff61a1f3501b3ea106138e957a657ed064e645
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194861"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683440"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Erreur des outils Éditeur de liens LNK1313
 
@@ -23,7 +23,7 @@ La version actuelle de Visual C++ ne prend pas en charge la liaison de fichiers.
 
 L’option de compilateur **/clr : pure** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 ```cpp
 // LNK1313.cpp
@@ -32,16 +32,12 @@ L’option de compilateur **/clr : pure** est déconseillée dans visual studio
 int main() {}
 ```
 
-## <a name="example"></a>Exemple
-
 ```cpp
 // LNK1313_b.cpp
 // compile with: /c /clr
 // an IJW module
 void test(){}
 ```
-
-## <a name="example"></a>Exemple
 
 L'exemple suivant génère l'erreur LNK1313.
 

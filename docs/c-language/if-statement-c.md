@@ -11,12 +11,12 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-ms.openlocfilehash: 67cdae033c3c8669c8bc7ae1d2e3584ef68498f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe92d3f2927cd6c5b3df16850e2925fc42055d0
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227840"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684142"
 ---
 # <a name="if-statement-c"></a>if, instruction (C)
 
@@ -34,7 +34,7 @@ Dans la première forme de la syntaxe, si l'élément *expression* est true (dif
 
 Voici quelques exemples de l' **`if`** instruction :
 
-```
+```C
 if ( i > 0 )
     y = x / i;
 else
@@ -48,7 +48,7 @@ Dans cet exemple, l'instruction `y = x/i;` est exécutée si `i` est supérieur 
 
 Lorsque vous imbriquez **`if`** des instructions et des **`else`** clauses, utilisez des accolades pour regrouper les instructions et les clauses dans des instructions composées qui clarifient votre intention. Si aucune accolade n’est présente, le compilateur résout les ambiguïtés en associant chacune **`else`** à la plus proche **`if`** qui n’a pas de **`else`** .
 
-```
+```C
 if ( i > 0 )           /* Without braces */
     if ( j > i )
         x = j;
@@ -58,7 +58,7 @@ if ( i > 0 )           /* Without braces */
 
 La **`else`** clause est associée à l' **`if`** instruction interne dans cet exemple. Si `i` est inférieur ou égal à 0, aucune valeur n'est assignée à `x`.
 
-```
+```C
 if ( i > 0 )
 {                      /* With braces */
     if ( j > i )

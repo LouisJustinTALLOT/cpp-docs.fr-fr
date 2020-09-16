@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-ms.openlocfilehash: b83845f0ed0efeee6485780c7e4f828e40473e9e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6db814e405c0b13cdf40fc81a1f23c6d59fd5f00
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186697"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684662"
 ---
 # <a name="compiler-warning-level-1-c4488"></a>Avertissement du compilateur (niveau 1) C4488
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186697"
 
 Une classe doit implémenter tous les membres d’une interface dont elle hérite directement. Un membre implémenté doit avoir une accessibilité publique et doit être marqué comme virtuel.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 C4488 peut se produire si un membre implémenté n’est pas public. L’exemple suivant génère l’C4488.
 
@@ -39,8 +39,6 @@ public:
    virtual void f1() {}
 };
 ```
-
-## <a name="example"></a>Exemple
 
 C4488 peut se produire si un membre implémenté n’est pas marqué comme Virtual. L’exemple suivant génère l’C4488.
 

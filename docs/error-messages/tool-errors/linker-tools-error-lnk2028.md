@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-ms.openlocfilehash: ef9e3eae655a4fbee1c3da74f6036e5fb22434b1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 29aaed167f750186d956589e9daa0d21c441149e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194614"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684195"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Erreur des outils Éditeur de liens LNK2028
 
@@ -23,7 +23,7 @@ Lorsque vous tentez d’importer une fonction native dans une image pure, n’ou
 
 L’option de compilateur **/clr : pure** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Cet exemple de code génère un composant avec une fonction exportée, native, dont la Convention d’appel est implicitement [__cdecl](../../cpp/cdecl.md).
 
@@ -34,8 +34,6 @@ __declspec(dllexport) int func() {
    return 3;
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant crée un client pur qui utilise la fonction native. Toutefois, la Convention d’appel sous **/clr : pure** est [__clrcall](../../cpp/clrcall.md). L’exemple suivant génère l’LNK2028.
 

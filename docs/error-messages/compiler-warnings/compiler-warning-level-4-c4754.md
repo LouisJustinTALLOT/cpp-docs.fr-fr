@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85c99feee72d94f50ec19394cf8aec7a3c9811bc
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198131"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684978"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avertissement du compilateur (niveau 4) C4754
 
@@ -21,7 +21,7 @@ L'avertissement C4754 est généré, car le résultat de la comparaison est tou
 
 Les règles de conversion d'entier sont complexes, et il existe de nombreuses pièges subtils. Comme alternative à la résolution de chaque AVERTISSEMENT C4754, vous pouvez mettre à jour le code pour utiliser la [bibliothèque SafeInt](../../safeint/safeint-library.md).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Cet exemple génère C4754 :
 
@@ -58,8 +58,6 @@ Pour éliminer l'avertissement, il est possible de modifier l'instruction d'assi
 unsigned long long x =
    (unsigned long long)a + (unsigned long long)b;
 ```
-
-## <a name="example"></a>Exemple
 
 L'exemple suivant génère également l'avertissement C4754.
 

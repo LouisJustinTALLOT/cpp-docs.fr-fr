@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
-ms.openlocfilehash: 5423a5525f9bef4d949bfee2de058fe19d0ec181
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f1c71cb3cd6a99d4ed9960032813e7cebca7591
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220039"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685077"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>Avertissement du compilateur (niveau 1) C4364
 
@@ -21,7 +21,7 @@ Une `#using` directive a été répétée pour un fichier de métadonnées donn�
 
 Pour plus d’informations, consultez [assemblys friend (C++)](../../dotnet/friend-assemblies-cpp.md).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant crée un composant.
 
@@ -30,8 +30,6 @@ L’exemple suivant crée un composant.
 // compile with: /clr /LD
 ref class A {};
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’C4364.
 

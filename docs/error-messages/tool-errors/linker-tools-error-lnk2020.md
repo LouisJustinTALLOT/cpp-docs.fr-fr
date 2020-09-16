@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-ms.openlocfilehash: 9c6be2548e277af08f1069a70b26cd761db835bc
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6fd4859e4f8cad657de57e8039bd647e5e2b99a9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988761"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684636"
 ---
 # <a name="linker-tools-error-lnk2020"></a>Erreur des outils Éditeur de liens LNK2020
 
@@ -25,7 +25,7 @@ Pour résoudre ce problème :
 
 - Incluez le fichier objet ou la bibliothèque dans lequel la fonction ou les données manquantes sont déjà définies.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’LNK2020.
 
@@ -43,8 +43,6 @@ ref struct B {
    static int f() { return 0; }
 };
 ```
-
-## <a name="example"></a>Exemple
 
 LNK2020 se produira également si vous créez une variable d’un type de modèle managé, mais que vous n’instanciez pas également le type.
 

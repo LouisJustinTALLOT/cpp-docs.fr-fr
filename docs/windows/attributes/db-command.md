@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831370"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684584"
 ---
 # <a name="db_command"></a>db_command
 
@@ -123,7 +123,7 @@ Vous pouvez utiliser**db_command** pour exécuter des commandes qui ne retournen
 
 Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_ accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de l' \_ accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Cet exemple définit une commande qui sélectionne le prénom et le nom dans une table où la colonne d’état correspond à « CA ». **db_command** crée et lit un ensemble de lignes sur lequel vous pouvez appeler des fonctions générées par un Assistant, telles que [OpenAll et CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), ainsi que des fonctions membres `CRowset` telles que [MoveNext](../../data/oledb/crowset-movenext.md).
 
@@ -163,8 +163,6 @@ struct CAuthors {
 };
 ```
 
-## <a name="example"></a>Exemple
-
 ```cpp
 // db_command.cpp
 // compile with: /c
@@ -192,8 +190,6 @@ int main(int argc, _TCHAR* argv[]) {
    CoUninitialize();
 }
 ```
-
-## <a name="example"></a>Exemple
 
 Cet exemple utilise `db_source` sur une classe de source de données `CMySource`, et `db_command` sur les classes de commande `CCommand1` et `CCommand2`.
 
@@ -236,9 +232,9 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-| Contexte d’attribut | Valeur |
+| Contexte d’attribut | Value |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`** , membre, méthode, local|
 |**Repeatable Read**|Non|

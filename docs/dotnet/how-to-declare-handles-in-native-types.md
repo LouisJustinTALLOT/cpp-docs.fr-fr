@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 1aca21402122a0c8641a7e57ace2a3477ff96f01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: deba9804b9c5c278b3ffcef2923bc8f89fefa676
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221339"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684532"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>Comment : déclarer des handles dans les types natifs
 
@@ -24,7 +24,7 @@ Le `gcroot` modèle est implémenté à l’aide des fonctionnalités de la clas
 
 Le runtime maintiendra une association entre le handle et l’objet CLR, qu’il référence. Lorsque l’objet CLR est déplacé avec le tas récupéré par le garbage collector, le handle retourne la nouvelle adresse de l’objet. Une variable ne doit pas être épinglée avant d’être assignée à un `gcroot` modèle.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Cet exemple montre comment créer un `gcroot` objet sur la pile native.
 
@@ -50,8 +50,6 @@ int main() {
 ```Output
 hello
 ```
-
-## <a name="example"></a>Exemple
 
 Cet exemple montre comment créer un `gcroot` objet sur le tas natif.
 
@@ -80,8 +78,6 @@ int main() {
 ```Output
 hello
 ```
-
-## <a name="example"></a>Exemple
 
 Cet exemple montre comment utiliser `gcroot` pour stocker des références à des types valeur (et non des types référence) dans un type natif à l’aide `gcroot` de sur le type boxed.
 

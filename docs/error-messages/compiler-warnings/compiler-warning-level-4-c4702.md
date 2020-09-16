@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: 5e46bfef925f999ed7f04b5bbe7c88800209ed14
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a2d1f6f4bdc20a35638274e2099c00428f4f6ddf
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990647"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684285"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>Avertissement du compilateur (niveau 4) C4702
 
@@ -21,7 +21,7 @@ Cet avertissement est le résultat du travail de conformité du compilateur pour
 
 Pour le code qui est valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de Visual C++, supprimez le code inaccessible ou assurez-vous que tout le code source est accessible par un workflow d’exécution.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C4702.
 
@@ -35,8 +35,6 @@ int main() {
    printf_s("I won't print.\n");   // C4702 unreachable
 }
 ```
-
-## <a name="example"></a>Exemple
 
 Lors de la compilation avec **/GX**, **/EHC**, **/EHsc**ou **/EHac** et à l’aide de fonctions c extern, le code peut devenir inaccessible car les fonctions c externes sont supposées ne pas lever, donc le bloc catch n’est pas accessible.  Si vous estimez que cet avertissement n’est pas valide, car une fonction peut lever une exception, compilez avec **/EHa** ou **/EHS**, en fonction de l’exception levée.
 

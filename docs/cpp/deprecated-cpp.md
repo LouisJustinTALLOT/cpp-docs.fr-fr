@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 243c75f4726927c54989c33c1738e38938aa5f64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44cb33bae43b32b12dda95423aec5484f61aa596
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221677"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683414"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
@@ -28,7 +28,7 @@ Avec les exceptions indiquées ci-dessous, la **`deprecated`** déclaration offr
 
 Si le compilateur rencontre l’utilisation d’un identificateur déconseillé ou de l' [`[[deprecated]]`](attributes.md) attribut standard, un avertissement [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) est levé.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L'exemple suivant montre comment marquer des fonctions comme déconseillés, et comment spécifier un message à afficher au moment de la compilation, lorsque la fonction déconseillée est utilisée.
 
@@ -48,8 +48,6 @@ int main() {
    func3(1);   // C4996
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L'exemple suivant montre comment marquer des classes comme déconseillés, et comment spécifier un message à afficher au moment de la compilation, lorsque la classe déconseillée est utilisée.
 
