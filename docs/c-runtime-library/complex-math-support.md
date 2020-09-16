@@ -1,5 +1,6 @@
 ---
 title: Prise en charge des fonctions mathématiques complexes C
+description: Décrit la prise en charge des mathématiques complexes en langage C dans la bibliothèque Microsoft C Runtime (CRT)
 ms.date: 05/14/2019
 f1_keywords:
 - c.complex
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0616f846030e5d5260b5d781884387614e12051d
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215177"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569540"
 ---
 # <a name="c-complex-math-support"></a>Prise en charge des fonctions mathématiques complexes C
 
@@ -28,9 +29,9 @@ L’implémentation Microsoft de l’en-tête complex.h définit ces types comme
 
 |Type standard|Type Microsoft|
 |-|-|
-|**`float complex`** ni**`float _Complex`**|**_Fcomplex**|
-|**`double complex`** ni**`double _Complex`**|**_Dcomplex**|
-|**`long double complex`** ni**`long double _Complex`**|**_Lcomplex**|
+|**`float complex`** ni **`float _Complex`**|**_Fcomplex**|
+|**`double complex`** ni **`double _Complex`**|**_Dcomplex**|
+|**`long double complex`** ni **`long double _Complex`**|**_Lcomplex**|
 
 L’en-tête math.h définit un type distinct, **struct _complex**, utilisé pour la fonction [_cabs](../c-runtime-library/reference/cabs.md). Le type **struct _complex** n’est pas utilisé par les fonctions de calculs complexes équivalentes [cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
@@ -99,4 +100,5 @@ Comme les nombres complexes ne sont pas un type natif dans le compilateur Micros
 
 ## <a name="see-also"></a>Voir aussi
 
-[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Maths de type générique](tgmath.md)\
+[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)

@@ -1,6 +1,7 @@
 ---
 title: Prise en charge des fonctions mathématiques et à virgule flottante
-ms.date: 01/31/2019
+description: Décrit la prise en charge de la virgule flottante dans la bibliothèque Microsoft Universal C Runtime Library (UCRT)
+ms.date: 9/14/2020
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,16 +9,18 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226227"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569595"
 ---
 # <a name="math-and-floating-point-support"></a>Prise en charge des fonctions mathématiques et à virgule flottante
 
 La bibliothèque du Runtime C universel (UCRT) propose de nombreuses fonctions de bibliothèque mathématique à virgule flottante, notamment toutes celles exigées par la norme ISO C99. Les fonctions à virgule flottante sont implémentées pour équilibrer le niveau de performance avec exactitude. Étant donné que la production du résultat correctement arrondi peut atteindre un coût prohibitif, ces fonctions sont conçues pour produire efficacement une approximation précise du résultat correctement arrondi. Dans la plupart des cas, le résultat produit se situe à +/-1 ULP (Unit in the Last Place, unité en dernière position) du résultat correctement arrondi, même si parfois, le niveau d’imprécision peut être plus grand.
+
+Pour la norme ISO C standard 11 (C11) et les versions ultérieures, l' \<tgmath.h> en-tête, en plus d’inclure \<math.h> et \<complex.h> , fournit des macros qui appellent une fonction mathématique correspondante en fonction des types de paramètres. Pour plus d’informations [, consultez Math type-Generic](tgmath.md) .
 
 De nombreuses fonctions de bibliothèque mathématique à virgule flottante ont des implémentations différentes pour des architectures de processeur différentes. Par exemple, l’implémentation de la bibliothèque CRT x86 32 bits peut être différente de celle de la bibliothèque CRT x64 64 bits. De plus, certaines fonctions peuvent avoir plusieurs implémentations pour une architecture de processeur donnée. L’implémentation la plus efficace est sélectionnée de façon dynamique au moment de l’exécution selon les jeux d’instructions pris en charge par le processeur. Par exemple, dans la bibliothèque CRT x86 32 bits, certaines fonctions ont à la fois une implémentation x87 et une implémentation SSE2. Lors d’une exécution sur un processeur qui prend en charge SSE2, l’implémentation SSE2 plus rapide est utilisée. Lors d’une exécution sur un processeur qui ne prend pas en charge SSE2, l’implémentation x87 plus lente est utilisée. Étant donné que les différentes implémentations des fonctions de bibliothèque mathématique peuvent utiliser des instructions de processeur différentes et des algorithmes différents pour produire leurs résultats, les fonctions peuvent produire des résultats différents selon les processeurs. Dans la plupart des cas, les résultats se situent à +/-1 ULP (Unit in the Last Place, unité en dernière position) du résultat correctement arrondi, mais les résultats réels peuvent varier selon les processeurs.
 
@@ -25,7 +28,7 @@ Les versions 16 bits précédentes de Microsoft C/C++ et Microsoft Visual C++ pr
 
 ## <a name="supported-math-and-floating-point-routines"></a>Routines à virgule flottante et mathématiques prises en charge
 
-|Routine|Utilisation|
+|Routine|Utiliser|
 |-|-|
 [abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Calcule la valeur absolue d’un type integer
 [acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Calcule l’arc cosinus
@@ -34,9 +37,9 @@ Les versions 16 bits précédentes de Microsoft C/C++ et Microsoft Visual C++ pr
 [asinh, asinhf, asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|Calcule l’arc sinus hyperbolique
 [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|Calcule l’arc tangente
 [atanh, atanhf, atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|Calcule l’arc tangente hyperbolique
-[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convertit une chaîne spécifique aux paramètres régionaux en**`double`**
-[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertit une chaîne en**`double`**
-[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convertit une chaîne spécifique aux paramètres régionaux en **`float`** ou**`long double`**
+[_atodbl, _atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convertit une chaîne spécifique aux paramètres régionaux en **`double`**
+[atof, _atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertit une chaîne en **`double`**
+[_atoflt, _atoflt_l, _atoldbl, _atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|Convertit une chaîne spécifique aux paramètres régionaux en **`float`** ou **`long double`**
 [cbrt, cbrtf, cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|Calcule la racine cubique
 [ceil, ceilf, ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|Calcule la valeur plafond
 [_chgsign, _chgsignf, _chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|Calcule l’inverse additif
@@ -88,7 +91,7 @@ Les versions 16 bits précédentes de Microsoft C/C++ et Microsoft Visual C++ pr
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Calcule le quotient et le reste de deux valeurs entières
 [isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Détermine si une valeur est finie
 [isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Compare l’ordre de deux valeurs à virgule flottante
-[isinf](../c-runtime-library/reference/isinf.md)|Détermine si une valeur à virgule flottante est infinie
+[isinf,](../c-runtime-library/reference/isinf.md)|Détermine si une valeur à virgule flottante est infinie
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Teste une valeur à virgule flottante pour une valeur NaN
 [isnormal](../c-runtime-library/reference/isnormal.md)|Teste si une valeur à virgule flottante est à la fois finie et non subnormale
 [_j0, _j1 _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcule la fonction de Bessel
@@ -126,16 +129,16 @@ Les versions 16 bits précédentes de Microsoft C/C++ et Microsoft Visual C++ pr
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Calcule le sinus hyperbolique
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcule la racine carrée
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Obtient le mot d’état de virgule flottante
-[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Convertit une chaîne en**`float`**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Convertit une chaîne en**`long double`**
+[strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Convertit une chaîne en **`float`**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Convertit une chaîne en **`long double`**
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Calcule la tangente
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Calcule la tangente hyperbolique
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Calcule la fonction gamma
 [trunc, truncf, truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|Tronque la partie fractionnaire
-[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertit une chaîne étendue en**`double`**
+[_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Convertit une chaîne étendue en **`double`**
 [_y0, _y1 _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcule la fonction de Bessel
 
 ## <a name="see-also"></a>Voir aussi
 
-[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[Primitives à virgule flottante](../c-runtime-library/reference/floating-point-primitives.md)<br/>
+[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)\
+[Primitives à virgule flottante](../c-runtime-library/reference/floating-point-primitives.md)
