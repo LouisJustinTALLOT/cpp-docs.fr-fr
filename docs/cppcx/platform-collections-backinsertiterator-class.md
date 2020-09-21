@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 56393fd522ecd0e2f161dfa5b9fe8230563c0f65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5c82a776a537d469d42a16bd4f425e7bb2c13aa
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223484"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742929"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator, classe
 
@@ -61,11 +61,11 @@ La classe BackInsertIterator implémente les règles requises par la [back_inser
 
 **Espace de noms :** Platform::Collections
 
-## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a>BackInsertIterator :: BackInsertIterator, constructeur
+## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a> BackInsertIterator :: BackInsertIterator, constructeur
 
 Initialise une nouvelle instance de la classe `BackInsertIterator`.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```
 explicit BackInsertIterator(
@@ -81,11 +81,11 @@ Objet IVector \<T> .
 
 Un `BackInsertIterator` insère des éléments après le dernier élément de l'objet spécifié par le paramètre `v`.
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a>BackInsertIterator :: Operator =, opérateur
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a> BackInsertIterator :: Operator =, opérateur
 
 Ajoute l'objet spécifié à la fin de la collection séquentielle en cours.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```
 BackInsertIterator& operator=( const T& t);
@@ -100,11 +100,11 @@ Objet à ajouter à la collection actuelle.
 
 Référence au BackInsertIterator actif.
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a>BackInsertIterator :: Operator *, opérateur
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a> BackInsertIterator :: Operator *, opérateur
 
 Extrait une référence au BackInsertIterator actif.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```
 BackInsertIterator& operator*();
@@ -118,11 +118,11 @@ Référence au BackInsertIterator actif.
 
 Cet opérateur retourne une référence au BackInsertIterator actif, et non à un élément dans la collection actuelle.
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a>BackInsertIterator :: Operator + +, opérateur
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a> BackInsertIterator :: Operator + +, opérateur
 
 Retourne une référence au BackInsertIterator actif. L'itérateur est pas modifié.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```
 BackInsertIterator& operator++();

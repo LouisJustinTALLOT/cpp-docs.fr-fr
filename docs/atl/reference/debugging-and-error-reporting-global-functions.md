@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: b4af5dd3839672152c53c902b73c1ea51b7feb6b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835466"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742786"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Fonctions globales de débogage et de rapport d’erreurs
 
@@ -39,7 +39,7 @@ HRESULT AtlHresultFromLastError();
 
 `AtlHresultFromLastError` appelle `GetLastError` pour obtenir la dernière erreur et retourne l’erreur après l’avoir convertie en HRESULT à l’aide de la macro HRESULT_FROM_WIN32.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcomcli. h
 
@@ -63,7 +63,7 @@ Convertit un code d’erreur Win32 en HRESULT, à l’aide de la macro HRESULT_F
 > [!NOTE]
 > Au lieu d’utiliser `HRESULT_FROM_WIN32(GetLastError())` , utilisez la fonction [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcomcli. h
 
@@ -119,7 +119,7 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
+*identificateur*<br/>
 dans CLSID de l’objet qui signale l’erreur.
 
 *lpszDesc*<br/>
@@ -143,7 +143,7 @@ dans Chemin d’accès et nom du fichier d’aide décrivant l’erreur.
 *hInst*<br/>
 dans Handle de la ressource. Par défaut, ce paramètre est `__AtlBaseModuleModule::GetResourceInstance` , où `__AtlBaseModuleModule` est l’instance globale de [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) ou une classe dérivée de celle-ci.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Si le paramètre *hres* est différent de zéro, retourne la valeur de *hres*. Si *hres* est égal à zéro, les quatre premières versions de `AtlReportError` retournent DISP_E_EXCEPTION. Les deux dernières versions renvoient le résultat de la macro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.
 
@@ -158,7 +158,7 @@ La chaîne *lpszDesc* est utilisée comme description textuelle de l’erreur. L
 > [!CAUTION]
 > N’utilisez pas `AtlReportError` dans les gestionnaires catch C++. Certaines substitutions de ces fonctions utilisent les macros de conversion de chaînes ATL en interne, qui à leur tour utilisent la `_alloca` fonction en interne. L’utilisation `AtlReportError` de dans un gestionnaire catch c++ peut provoquer des exceptions dans les gestionnaires catch c++.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 
@@ -195,7 +195,7 @@ Pour les projets ATL, il est possible de fournir votre propre implémentation de
 
 [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-## <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atldef. h
 
@@ -217,7 +217,7 @@ Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet ATL, la fonction lève 
 
 Si _ATL_NO_EXCEPTIONS est défini, la fonction provoque un échec d’assertion au lieu de lever une exception.
 
-## <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atldef. h
 

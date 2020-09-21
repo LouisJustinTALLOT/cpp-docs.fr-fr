@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 839002a614b54990fdc9180fa06737ff43039a4a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d39270b7bf05e820ea376a40310abeb8add2c5ad
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226933"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742955"
 ---
 # <a name="platformagile-class"></a>Platform::Agile, classe
 
@@ -82,11 +82,11 @@ La classe `Agile<T>` est une classe C++ native standard qui nécessite `agile.h`
 
 **En-tête :** agile.h
 
-## <a name="agileagile-constructor"></a><a name="ctor"></a>Agile :: agile, constructeur
+## <a name="agileagile-constructor"></a><a name="ctor"></a> Agile :: agile, constructeur
 
 Initialise une nouvelle instance de la classe Agile.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 Agile();
@@ -107,11 +107,11 @@ Dans la deuxième version de ce constructeur, objet utilisé pour initialiser un
 
 La première version de ce constructeur est le constructeur par défaut. La deuxième version initialise la classe d'instance Agile de l'objet spécifié par le paramètre `object`. La troisième version est le constructeur de copie. La quatrième version est le constructeur de déplacement. Ce constructeur ne peut pas lever d'exceptions.
 
-## <a name="agileagile-destructor"></a><a name="dtor"></a>Agile :: ~ agile, destructeur
+## <a name="agileagile-destructor"></a><a name="dtor"></a> Agile :: ~ agile, destructeur
 
 Détruit l'instance actuelle de la classe Agile.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 ~Agile();
@@ -121,11 +121,11 @@ Détruit l'instance actuelle de la classe Agile.
 
 Ce destructeur libère aussi l’objet représenté par l’objet Agile actuel.
 
-## <a name="agileget-method"></a><a name="get"></a>Agile :: obten, méthode
+## <a name="agileget-method"></a><a name="get"></a> Agile :: obten, méthode
 
 Retourne un handle vers l’objet représenté par l’objet Agile actif.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 T^ Get() const;
@@ -135,13 +135,13 @@ T^ Get() const;
 
 Handle vers l’objet représenté par l’objet Agile actif.
 
-Le type de la valeur de retour est en réalité un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à l’assigner à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple, `auto x = myAgileTvariable->Get();`.
+Le type de la valeur de retour est en réalité un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à l’assigner à une variable déclarée avec le **`auto`** mot clé de déduction de type. Par exemple : `auto x = myAgileTvariable->Get();`.
 
-## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a>Agile :: Getaddressof,, méthode
+## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a> Agile :: Getaddressof,, méthode
 
 Réinitialise l’objet Agile actif, puis retourne l’adresse d’un handle vers un objet de type `T`.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 T^* GetAddressOf() throw();
@@ -160,11 +160,11 @@ Adresse d’un handle vers un objet de type `T`.
 
 Cette opération libère la représentation actuelle d’un objet de type `T`, le cas échéant, réinitialise les membres de données de l’objet Agile, acquiert le contexte de thread actuel, puis retourne l’adresse d’une variable handle-to-object qui peut représenter un objet non agile. Pour faire en sorte qu’une instance de classe agile représente un objet, utilisez l’opérateur d’assignation ([agile :: Operator =](#operator-assign)) pour assigner l’objet à l’instance de classe agile.
 
-## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a>Agile :: Getaddressofforinout,, méthode
+## <a name="agilegetaddressofforinout-method"></a><a name="getaddressofforinout"></a> Agile :: Getaddressofforinout,, méthode
 
 Retourne l'adresse d'un handle vers l'objet représenté par l'objet Agile actif.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 T^* GetAddressOfForInOut()  throw();
@@ -183,11 +183,11 @@ Adresse d'un handle vers l'objet représenté par l'objet Agile actif.
 
 Cette opération acquiert le contexte de thread actuel et retourne l'adresse d'un handle vers l'objet sous-jacent.
 
-## <a name="agilerelease-method"></a><a name="release"></a>Agile :: Release, méthode
+## <a name="agilerelease-method"></a><a name="release"></a> Agile :: Release, méthode
 
 Ignore l'objet et le contexte sous-jacent de l'objet Agile actif.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 void Release() throw();
@@ -197,11 +197,11 @@ void Release() throw();
 
 L'objet et le contexte sous-jacent de l'objet Agile actif sont ignorés, s'ils existent, et la valeur de l'objet Agile est alors définie sur null.
 
-## <a name="agileoperator-gt-operator"></a><a name="operator-arrow"></a>Agile :: Operator-, &gt; opérateur
+## <a name="agileoperator-gt-operator"></a><a name="operator-arrow"></a> Agile :: Operator-, &gt; opérateur
 
 Récupère un handle vers l’objet représenté par l’objet Agile actif.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 T^ operator->() const throw();
@@ -213,11 +213,11 @@ Handle vers l’objet représenté par l’objet Agile actif.
 
 Cet opérateur retourne un type interne non divulgué. Un moyen pratique de contenir la valeur de retour consiste à l’assigner à une variable déclarée avec le **`auto`** mot clé de déduction de type.
 
-## <a name="agileoperator-operator"></a><a name="operator-assign"></a>Agile :: Operator =, opérateur
+## <a name="agileoperator-operator"></a><a name="operator-assign"></a> Agile :: Operator =, opérateur
 
 Assigne l'objet spécifié à l'objet Agile actuel.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 Agile<T> operator=( T^ object ) throw();

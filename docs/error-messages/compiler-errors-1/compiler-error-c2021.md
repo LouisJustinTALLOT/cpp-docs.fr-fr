@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2021
 ms.assetid: 064f32e2-3794-48d5-9767-991003dcb36a
-ms.openlocfilehash: 24463abcf123fda285356c86e3394d7274f2f6c8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 97d1776bb3b29b3691ae31bb060410a83d581e2d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751038"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743293"
 ---
 # <a name="compiler-error-c2021"></a>Erreur du compilateur C2021
 
@@ -19,7 +19,7 @@ valeur d’exposant attendue, non 'caractère'
 
 Le caractère utilisé comme exposant d’une constante à virgule flottante n’est pas un nombre valide. Veillez à utiliser un exposant qui se trouve dans la plage.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C2021 :
 
@@ -27,8 +27,6 @@ L’exemple suivant génère l’C2021 :
 // C2021.cpp
 float test1=1.175494351E;   // C2021
 ```
-
-## <a name="example"></a>Exemple
 
 Solution possible :
 

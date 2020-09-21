@@ -1,6 +1,6 @@
 ---
 title: /ERRORREPORT (Signaler les erreurs internes de l’Éditeur de liens)
-description: Guide de référence des options de ligne de commande Microsoft NMAKE.
+description: En savoir plus sur l’utilisation de/ERRORREPORT.
 ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 5e919d4f7eb59524b9145c8e3e59613e60aef1d2
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 7d16904da8490018235278347f23e37339739415
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257687"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742734"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Signaler les erreurs internes de l'Éditeur de liens)
 
@@ -23,17 +23,17 @@ L’option **/errorreport** est déconseillée. À compter de Windows Vista, le 
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Errorreport :** \[ **aucune** \| **invite** \| **file d’attente** \| **Envoyer** ]
+> **/Errorreport :** \[ **aucun** \| **invite** \| **file d’attente** \| **envoi** ]
 
 ## <a name="remarks"></a>Notes
 
 Les arguments **/errorreport** sont remplacés par les paramètres de service rapport d’erreurs Windows. L’éditeur de liens envoie automatiquement des rapports d’erreurs internes à Microsoft, si la création de rapports est activée par Rapport d’erreurs Windows. Aucun rapport n’est envoyé s’il est désactivé par Rapport d’erreurs Windows.
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Ouvrez **Propriétés de Configuration** > **éditeur de liens** > page de propriétés **avancé** .
+1. Ouvrez la page de propriétés avancé de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Advanced** .
 
 1. Modifiez la propriété **rapport d’erreurs** .
 
@@ -43,5 +43,5 @@ Les arguments **/errorreport** sont remplacés par les paramètres de service ra
 
 ## <a name="see-also"></a>Voir aussi
 
-\ de référence de l' [éditeur de liens MSVC](linking.md)
+[Référence de l’éditeur de liens MSVC](linking.md)\
 [Options de l’éditeur de liens MSVC](linker-options.md)

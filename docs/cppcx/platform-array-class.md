@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4903c18f981c87c418a6ab08595816ce22a7413c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837758"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742942"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -58,7 +58,7 @@ Pour plus d’informations sur le moment et la façon d’utiliser Platform :: 
 
 Cette classe est définie dans l'en-tête vccorlib.h, qui est inclus automatiquement par le compilateur. Elle est visible dans IntelliSense, mais pas dans l’Explorateur d’objets, car il ne s’agit pas d’un type public défini dans Platform. winmd.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/ZW**
 
@@ -66,7 +66,7 @@ Option du compilateur : **/ZW**
 
 Initialise un tableau unidimensionnel et modifiable de types spécifiés par le paramètre de modèle de classe, *T*.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 Array(unsigned int size);
@@ -92,7 +92,7 @@ Pour plus d’informations sur la création d’instances de Platform :: Array,
 
 Extrait une référence à l'élément de tableau à la position d'index spécifiée.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 T& get(unsigned int index)  const;
@@ -103,7 +103,7 @@ T& get(unsigned int index)  const;
 *index*<br/>
 Index de base zéro qui identifie un élément du tableau. L’index minimal est 0 et l’index maximal est la valeur spécifiée par le `size` paramètre dans le [constructeur de tableau](#ctor).
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Élément de tableau spécifié par le paramètre `index`.
 
@@ -111,7 +111,7 @@ Index de base zéro qui identifie un élément du tableau. L’index minimal est
 
 Récupère un handle vers le tableau actuel.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 property Array^ Value;

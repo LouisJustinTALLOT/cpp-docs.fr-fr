@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ed645535300e0a7c4d27f8bed43d3143bae7e97a
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757616"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742864"
 ---
 # <a name="compiler-error-c3225"></a>Erreur du compilateur C3225
 
@@ -19,9 +19,9 @@ l’argument de type générique pour’arg’ne peut pas être’type', il doit
 
 L’argument de type générique n’est pas du type correct.
 
-Pour plus d’informations, consultez la page [Génériques](../../extensions/generics-cpp-component-extensions.md).
+Pour plus d’informations, consultez [Génériques](../../extensions/generics-cpp-component-extensions.md).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 Vous ne pouvez pas instancier un type générique avec un type natif. L’exemple suivant génère l’C3225.
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
-L’exemple suivant crée un composant à C#l’aide de. Notez que la contrainte spécifie que le type générique peut uniquement être instancié avec un type valeur.
+L’exemple suivant crée un composant à l’aide de C#. Notez que la contrainte spécifie que le type générique peut uniquement être instancié avec un type valeur.
 
 ```
 // C3225_b.cs
@@ -52,9 +50,7 @@ L’exemple suivant crée un composant à C#l’aide de. Notez que la contrainte
 public class MyList<T> where T: struct {}
 ```
 
-## <a name="example"></a>Exemple
-
-Cet exemple consomme le C#composant créé et viole la contrainte selon laquelle myList peut uniquement être instancié avec un type valeur autre que <xref:System.Nullable>. L’exemple suivant génère l’C3225.
+Cet exemple utilise le composant créé par C# et viole la contrainte selon laquelle MyList ne peut être instancié qu’avec un type valeur autre que <xref:System.Nullable> . L’exemple suivant génère l’C3225.
 
 ```cpp
 // C3225_c.cpp

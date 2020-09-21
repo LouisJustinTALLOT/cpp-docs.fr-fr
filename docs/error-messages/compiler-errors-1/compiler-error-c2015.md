@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2015
 ms.assetid: 8f40af0a-3a5a-4d6a-8ed7-125966e6bfed
-ms.openlocfilehash: 83b78336d74037b9f9f52da8327479f506db1ffc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5453009e1c2bd091ed3507f3c43bd7fcecd33abc
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751066"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743098"
 ---
 # <a name="compiler-error-c2015"></a>Erreur du compilateur C2015
 
@@ -21,7 +21,7 @@ Une constante caractère contient plus de deux caractères. La limite est un car
 
 Une séquence d’échappement, telle que \t, est convertie en un seul caractère.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C2015 :
 
@@ -32,8 +32,6 @@ L’exemple suivant génère l’C2015 :
 char test1 = 'error';   // C2015
 char test2 = 'e';   // OK
 ```
-
-## <a name="example"></a>Exemple
 
 C2015 peut également se produire lors de l’utilisation d’une extension Microsoft, de constantes caractère converties en entiers.  L’exemple suivant génère l’C2015 :
 

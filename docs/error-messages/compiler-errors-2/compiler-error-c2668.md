@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6b0539e7c794852f7e4b28d60f4b402a020bed1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177155"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743202"
 ---
 # <a name="compiler-error-c2668"></a>Erreur du compilateur C2668
 
@@ -19,9 +19,9 @@ ms.locfileid: "80177155"
 
 L’appel de fonction surchargé spécifié n’a pas pu être résolu. Vous pouvez effectuer un cast explicite d’un ou plusieurs des paramètres réels.
 
-Vous pouvez également recevoir cette erreur par le biais de l’utilisation d’un modèle. Si, dans la même classe, vous avez une fonction membre standard et une fonction membre basée sur un modèle avec la même signature, le modèle doit être en premier. Il s’agit d’une limitation de l’implémentation actuelle C++de Visual.
+Vous pouvez également recevoir cette erreur par le biais de l’utilisation d’un modèle. Si, dans la même classe, vous avez une fonction membre standard et une fonction membre basée sur un modèle avec la même signature, le modèle doit être en premier. Il s’agit d’une limitation de l’implémentation actuelle de Visual C++.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C2668 :
 
@@ -40,8 +40,6 @@ int main() {
    func( (X)d, (X)d );   // OK, uses func( X, X )
 }
 ```
-
-## <a name="example"></a>Exemple
 
 Une autre façon de résoudre cette erreur consiste à [utiliser une déclaration using](../../cpp/using-declaration.md):
 
@@ -84,8 +82,6 @@ class MyTestCase : public AppTestCase {
 };
 ```
 
-## <a name="example"></a>Exemple
-
 Cette erreur peut également être générée en raison du travail de conformité du compilateur pour Visual Studio .NET 2003 : conversion ambiguë sur un cast de constante 0.
 
 La conversion sur un cast à l’aide de la constante 0 est ambiguë puisque int requiert une conversion de long et de void *. Pour résoudre cette erreur, effectuez un cast de 0 vers le type exact du paramètre de fonction pour lequel il est utilisé afin qu’aucune conversion ne doive avoir lieu (ce code sera valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de Visual C++).
@@ -108,8 +104,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
 Cette erreur peut se produire parce que la bibliothèque CRT a désormais des formes float et double de toutes les fonctions mathématiques.
 
 ```cpp
@@ -123,8 +117,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
 Cette erreur peut se produire car Pow (int, int) a été supprimé de Math. h dans le CRT.
 
 ```cpp
@@ -135,8 +127,6 @@ int main() {
    pow((double)9,9);   // OK
 }
 ```
-
-## <a name="example"></a>Exemple
 
 Ce code réussit dans Visual Studio 2015 mais échoue dans Visual Studio 2017 et versions ultérieures avec C2668. Dans Visual Studio 2015, le compilateur traitait à tort copy-list-initialization de la même façon que l’instruction copy-initialization ordinaire ; il envisageait uniquement de convertir les constructeurs pour résoudre la surcharge.
 

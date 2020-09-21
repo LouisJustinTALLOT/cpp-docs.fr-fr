@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 1b999875aa1c7ef34065c0a36046c634308075f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94e56581f6583fa69e46d4deb3d82663a65cd1d1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218193"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743189"
 ---
 # <a name="compiler-error-c2676"></a>Erreur du compilateur C2676
 
@@ -19,7 +19,7 @@ ms.locfileid: "87218193"
 
 Pour utiliser l'opérateur, vous devez le surcharger pour le type spécifié ou définir une conversion vers un type pour lequel l'opérateur est défini.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C2676.
 
@@ -50,8 +50,6 @@ int main() {
                // and then the builtin-operator==(int, int)
 }
 ```
-
-## <a name="example"></a>Exemple
 
 C2676 peut également se produire si vous tentez d’effectuer une opération arithmétique de pointeur sur le **`this`** pointeur d’un type référence.
 

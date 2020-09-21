@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30af5fcf5d4f58143e657d84e743ef09a34e268
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560632"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742968"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -44,21 +44,21 @@ Le compilateur examine la **`static_assert`** déclaration à la recherche d’e
 
 Vous pouvez utiliser le **`static_assert`** mot clé au niveau de l’espace de noms, de la classe ou de la portée de bloc. (Techniquement, le **`static_assert`** mot clé est une déclaration, même s’il n’introduit pas de nouveau nom dans votre programme, car il peut être utilisé au niveau de la portée espace de noms.)
 
-## <a name="description"></a>Description
+## <a name="description-of-static_assert-with-namespace-scope"></a>Description de static_assert avec la portée espace de noms
 
 Dans l’exemple suivant, la **`static_assert`** déclaration a une portée d’espace de noms. Comme le compilateur connaît la taille du type `void *`, l'expression est évaluée immédiatement.
 
-## <a name="example"></a>Exemple
+## <a name="example-of-static_assert-with-namespace-scope"></a>Exemple de static_assert avec une portée espace de noms
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description"></a>Description
+## <a name="description-of-static_assert-with-class-scope"></a>Description de static_assert avec la portée de classe
 
 Dans l’exemple suivant, la **`static_assert`** déclaration a une portée de classe. **`static_assert`** Vérifie qu’un paramètre de modèle est un type Pod ( *Plain Old Data* ). Le compilateur examine la **`static_assert`** déclaration lorsqu’elle est déclarée, mais n’évalue pas le paramètre de l' *expression constante* tant que le `basic_string` modèle de classe n’est pas instancié dans `main()` .
 
-## <a name="example"></a>Exemple
+## <a name="example-of-static_assert-with-class-scope"></a>Exemple de static_assert avec la portée de classe
 
 ```cpp
 #include <type_traits>

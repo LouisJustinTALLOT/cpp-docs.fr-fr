@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: c1a790902af92d72eb73be7fc2321762ab01fd8c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ff9dc9861643afa364db4b6364fa5e7bb33e8c8c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214761"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742617"
 ---
 # <a name="compiler-error-c2146"></a>Erreur du compilateur C2146
 
@@ -25,7 +25,7 @@ Le compilateur attendait `token` et a été trouvé à la `identifier` place.  C
 
 Cette erreur peut être due à une erreur typographique. L’erreur [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) précède généralement cette erreur.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C2146.
 
@@ -43,8 +43,6 @@ int main() {
    int t x;   // C2146 : missing semicolon before 'x'
 }
 ```
-
-## <a name="example"></a>Exemple
 
 Cette erreur peut également être générée en raison du travail de conformité du compilateur pour Visual Studio .NET 2003 : **`typename`** mot clé manquant.
 
@@ -68,8 +66,6 @@ X<T>::Y func() { }   // C2146
 template <typename T>
 typename X<T>::Y func() { }
 ```
-
-## <a name="example"></a>Exemple
 
 Vous verrez également cette erreur en raison du travail de conformité du compilateur pour Visual Studio .NET 2003 : les spécialisations explicites ne trouvent plus de paramètres de modèle à partir du modèle principal.
 

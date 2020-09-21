@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 9349de8c42bbed72384ea2b61b39bdea82172f9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221430"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743306"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -126,7 +126,7 @@ Incluez l’en-tête STL/CLR `<cliext/functional>` pour définir le nombre de cl
 
 ## <a name="members"></a>Membres
 
-## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
+## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a> binary_delegate (STL/CLR)
 
 La classe genereic décrit un délégué à deux arguments. Vous l’utilisez pour spécifier un délégué en termes de types d’arguments et de retours.
 
@@ -202,7 +202,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
+## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
 
 La classe genereic décrit un délégué à deux arguments qui retourne **`void`** . Vous l’utilisez pour spécifier un délégué en termes de son argument.
 
@@ -272,7 +272,7 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a>binary_negate (STL/CLR)
+## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a> binary_negate (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne le NOT logique de son functor à deux arguments stocké. Vous l’utilisez pour spécifier un objet de fonction en termes de functor stocké.
 
@@ -305,7 +305,7 @@ public:
 *Amusez-vous*<br/>
 Type de l’functor stocké.
 
-## <a name="member-functions"></a>Fonctions de membre
+### <a name="member-functions"></a>Fonctions de membre
 
 |Définition de type|Description|
 |---------------------|-----------------|
@@ -386,7 +386,7 @@ int main()
 1 0
 ```
 
-## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st (STL/CLR)
+## <a name="bind1st-stlclr"></a><a name="bind1st"></a> bind1st (STL/CLR)
 
 Génère un `binder1st` pour un argument et un functor.
 
@@ -467,7 +467,7 @@ int main()
 -1 0
 ```
 
-## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd (STL/CLR)
+## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a> bind2nd (STL/CLR)
 
 Génère un `binder2nd` pour un argument et un functor.
 
@@ -548,7 +548,7 @@ int main()
 0 -1
 ```
 
-## <a name="binder1st-stlclr"></a><a name="binder1st"></a>binder1st, (STL/CLR)
+## <a name="binder1st-stlclr"></a><a name="binder1st"></a> binder1st, (STL/CLR)
 
 La classe de modèle décrit un functor à un argument qui, lorsqu’il est appelé, retourne son functor à deux arguments stocké appelé avec son premier argument stocké et le deuxième argument fourni. Vous l’utilisez pour spécifier un objet de fonction en termes de functor stocké.
 
@@ -653,7 +653,7 @@ int main()
 -1 0
 ```
 
-## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a>binder2nd, (STL/CLR)
+## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a> binder2nd, (STL/CLR)
 
 La classe de modèle décrit un functor à un argument qui, lorsqu’il est appelé, retourne son functor à deux arguments stocké appelé avec le premier argument fourni et son deuxième argument stocké. Vous l’utilisez pour spécifier un objet de fonction en termes de functor stocké.
 
@@ -685,7 +685,7 @@ public:
 *Amusez-vous*<br/>
 Type de l’functor stocké.
 
-## <a name="member-functions"></a>Fonctions de membre
+### <a name="member-functions"></a>Fonctions de membre
 
 |Définition de type|Description|
 |---------------------|-----------------|
@@ -758,7 +758,7 @@ int main()
 0 -1
 ```
 
-## <a name="divides-stlclr"></a><a name="divides"></a>divisions (STL/CLR)
+## <a name="divides-stlclr"></a><a name="divides"></a> divisions (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne le premier argument divisé par le second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -859,7 +859,7 @@ int main()
 2 3
 ```
 
-## <a name="equal_to-stlclr"></a><a name="equal_to"></a>equal_to (STL/CLR)
+## <a name="equal_to-stlclr"></a><a name="equal_to"></a> equal_to (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne true uniquement si le premier argument est égal au second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -960,7 +960,7 @@ int main()
 1 0
 ```
 
-## <a name="greater-stlclr"></a><a name="greater"></a>supérieur (STL/CLR)
+## <a name="greater-stlclr"></a><a name="greater"></a> supérieur (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne true uniquement si le premier argument est supérieur au second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1061,7 +1061,7 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a>greater_equal (STL/CLR)
+## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a> greater_equal (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne true uniquement si le premier argument est supérieur ou égal au second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1162,7 +1162,7 @@ int main()
 1 0
 ```
 
-## <a name="less-stlclr"></a><a name="less"></a>inférieur (STL/CLR)
+## <a name="less-stlclr"></a><a name="less"></a> inférieur (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne true uniquement si le premier argument est inférieur au second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1263,7 +1263,7 @@ int main()
 0 1
 ```
 
-## <a name="less_equal-stlclr"></a><a name="less_equal"></a>less_equal (STL/CLR)
+## <a name="less_equal-stlclr"></a><a name="less_equal"></a> less_equal (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne true uniquement si le premier argument est inférieur ou égal au second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1364,7 +1364,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_and-stlclr"></a><a name="logical_and"></a>logical_and (STL/CLR)
+## <a name="logical_and-stlclr"></a><a name="logical_and"></a> logical_and (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne true uniquement si le premier argument et le deuxième test ont la valeur true. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1465,7 +1465,7 @@ int main()
 1 0
 ```
 
-## <a name="logical_not-stlclr"></a><a name="logical_not"></a>logical_not (STL/CLR)
+## <a name="logical_not-stlclr"></a><a name="logical_not"></a> logical_not (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne true uniquement si son argument effectue un test avec la valeur false. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1555,7 +1555,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_or-stlclr"></a><a name="logical_or"></a>logical_or (STL/CLR)
+## <a name="logical_or-stlclr"></a><a name="logical_or"></a> logical_or (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne la valeur true uniquement si le premier argument ou le deuxième test a la valeur true. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1656,7 +1656,7 @@ int main()
 1 0
 ```
 
-## <a name="minus-stlclr"></a><a name="minus"></a>moins (STL/CLR)
+## <a name="minus-stlclr"></a><a name="minus"></a> moins (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne le premier argument moins le second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1757,7 +1757,7 @@ int main()
 2 2
 ```
 
-## <a name="modulus-stlclr"></a><a name="modulus"></a>modulo (STL/CLR)
+## <a name="modulus-stlclr"></a><a name="modulus"></a> modulo (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne le premier argument modulo la seconde. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1858,7 +1858,7 @@ int main()
 1 0
 ```
 
-## <a name="multiplies-stlclr"></a><a name="multiplies"></a>multiplié (STL/CLR)
+## <a name="multiplies-stlclr"></a><a name="multiplies"></a> multiplié (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne le premier argument Times the second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate-stlclr"></a><a name="negate"></a>négation (STL/CLR)
+## <a name="negate-stlclr"></a><a name="negate"></a> négation (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne son argument négatif. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -2049,7 +2049,7 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a>not_equal_to (STL/CLR)
+## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a> not_equal_to (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne true uniquement si le premier argument n’est pas égal au second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -2150,7 +2150,7 @@ int main()
 0 1
 ```
 
-## <a name="not1-stlclr"></a><a name="not1"></a>not1 (STL/CLR)
+## <a name="not1-stlclr"></a><a name="not1"></a> not1 (STL/CLR)
 
 Génère un `unary_negate` pour un functor.
 
@@ -2222,7 +2222,7 @@ int main()
 1 0
 ```
 
-## <a name="not2-stlclr"></a><a name="not2"></a>not2 (STL/CLR)
+## <a name="not2-stlclr"></a><a name="not2"></a> not2 (STL/CLR)
 
 Génère un `binary_negate` pour un functor.
 
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus-stlclr"></a><a name="plus"></a>plus (STL/CLR)
+## <a name="plus-stlclr"></a><a name="plus"></a> plus (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne le premier argument plus le second. Vous l’utilisez pour spécifier un objet de fonction en termes de type d’argument.
 
@@ -2404,7 +2404,7 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a>unary_delegate (STL/CLR)
+## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a> unary_delegate (STL/CLR)
 
 La classe genereic décrit un délégué à un argument. Vous l’utilisez pour spécifier un délégué en termes de types d’arguments et de retours.
 
@@ -2470,7 +2470,7 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
+## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
 
 La classe genereic décrit un délégué à un argument qui retourne **`void`** . Vous l’utilisez pour spécifier un délégué en termes de type d’argument.
 
@@ -2533,7 +2533,7 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a>unary_negate (STL/CLR)
+## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a> unary_negate (STL/CLR)
 
 La classe de modèle décrit un functor qui, lorsqu’il est appelé, retourne le non logique de son functor à un argument stocké. Vous l’utilisez pour spécifier un objet de fonction en termes de functor stocké.
 

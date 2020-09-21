@@ -1,6 +1,6 @@
 ---
 title: Structure TRACING_SESSION_STATISTICS
-description: Le kit de développement logiciel (SDK) C++ Build Insights TRACING_SESSION_OPTIONS référence de la structure.
+description: En savoir plus sur le kit de développement logiciel (SDK) C++ Build Insights TRACING_SESSION_STATISTICS référence de la structure.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5f6126fb469dc13b814b91942fe9f7bc480ba3f1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c1db302d9e816591624f0fc63633351d32684097
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041183"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742760"
 ---
 # <a name="tracing_session_statistics-structure"></a>Structure TRACING_SESSION_STATISTICS
 
@@ -49,7 +49,7 @@ typedef struct TRACING_SESSION_STATISTICS_TAG
 | `SystemEventsLost` | Nombre d’événements système qui ont été supprimés. |
 | `SystemBuffersLost` | Nombre de mémoires tampons d’événements système qui ont été supprimées. |
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Cette structure est remplie lors de l’appel des fonctions suivantes :
 

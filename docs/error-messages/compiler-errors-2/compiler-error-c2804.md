@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2804
 ms.assetid: b066e563-cca4-450c-8ba7-3b0d7a89f3ea
-ms.openlocfilehash: 62af8cca5131a5cb21df45f09c55ee5beb3fc718
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bdd1b4155d30dd2513d87ac217ca20ca7baabd8a
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760645"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743163"
 ---
 # <a name="compiler-error-c2804"></a>Erreur du compilateur C2804
 
@@ -19,7 +19,7 @@ trop de paramètres pour l'opérateur binaire 'operator opérateur'
 
 La fonction membre de l'opérateur binaire surchargé est déclarée avec plusieurs paramètres. Le paramètre de premier opérande d'une fonction membre d'opérateur binaire, dont le type est le type englobant de l'opérateur, est implicite.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L'exemple suivant génère l'erreur C2804 et montre comment la corriger.
 
@@ -37,8 +37,6 @@ int main() {
    x += y;   // equivalent to x.operator+=(y)
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L'exemple suivant génère l'erreur C2804 et montre comment la corriger.
 

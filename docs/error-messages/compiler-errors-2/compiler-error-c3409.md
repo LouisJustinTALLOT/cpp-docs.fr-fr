@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 0bf8b918f254c05bfe57034e25611c8dc17a783a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 360fedc6cadf275704a790c257c42ac8bde7873d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231960"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742058"
 ---
 # <a name="compiler-error-c3409"></a>Erreur du compilateur C3409
 
@@ -35,7 +35,7 @@ Le compilateur peut générer cette erreur quand vous utilisez des crochets dans
 
    Pour plus d’informations sur la syntaxe d’expression lambda, consultez [syntaxe d’expression lambda](../../cpp/lambda-expression-syntax.md).
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C3409.
 
@@ -53,8 +53,6 @@ __interface x {};
 [coclass, uuid("00000000-0000-0000-0000-000000000001")]
 class b : public x {};
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère C3409, car une expression lambda utilise la **`mutable`** spécification, mais ne fournit pas de liste de paramètres. Le compilateur ne peut pas déterminer si les crochets font partie de la définition d’une expression lambda ou d’un bloc d’attributs.
 

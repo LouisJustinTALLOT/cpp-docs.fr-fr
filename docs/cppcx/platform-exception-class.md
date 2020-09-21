@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 4604769d9d1bc5fa848d15459327dc87d82f7016
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bfdd8b3df720073e6b4a19cdb5b34db23e659fd0
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363782"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741967"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 
@@ -37,7 +37,7 @@ La classe `Exception` comporte également les types de membres ci-dessous.
 
 |Membre|Description|
 |------------|-----------------|
-|[Exception::Exception](#ctor)|Initialise une nouvelle instance de la classe `Exception`.|
+|[Exception :: exception](#ctor)|Initialise une nouvelle instance de la classe `Exception`.|
 
 ### <a name="methods"></a>Méthodes
 
@@ -45,7 +45,7 @@ La classe `Exception` hérite des méthodes `Equals()`, `Finalize()`,`GetHashCod
 
 |Membre|Description|
 |------------|-----------------|
-|[Exception::CreateException](#createexception)|Crée une exception qui représente la valeur HRESULT spécifiée.|
+|[Exception :: CreateException](#createexception)|Crée une exception qui représente la valeur HRESULT spécifiée.|
 
 ### <a name="properties"></a>Propriétés
 
@@ -53,20 +53,20 @@ La classe Exception comporte aussi les propriétés ci-dessous.
 
 |Membre|Description|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|HRESULT qui correspond à l'exception.|
-|[Exception::Message](#message)|Message qui décrit l'exception. Cette valeur est en lecture seule et ne peut pas être modifiée après la construction d' `Exception` .|
+|[Exception :: HResult](#hresult)|HRESULT qui correspond à l'exception.|
+|[Exception :: message](#message)|Message qui décrit l'exception. Cette valeur est en lecture seule et ne peut pas être modifiée après la construction d' `Exception` .|
 
 ### <a name="requirements"></a>Spécifications
 
-**Client pris en charge au minimum :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimum :** Serveur Windows 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
 **Espace de noms :** Platform
 
-**Métadonnées:** platform.winmd
+**Métadonnées :** Platform. winmd
 
-## <a name="exceptioncreateexception-method"></a><a name="createexception"></a>Exception::Créer la méthode d’origine
+## <a name="exceptioncreateexception-method"></a><a name="createexception"></a> Exception :: CreateException, méthode
 
 Crée Platform::Exception^ à partir d'une valeur HRESULT spécifique.
 
@@ -79,10 +79,10 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Paramètres
 
-*Hr*<br/>
-Valeur HRESULT que vous obtenez généralement à partir d'un appel à une méthode COM. Si la valeur est de 0, ce qui est égal à S_OK, cette méthode jette [Plate-forme::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) parce que les méthodes COM qui réussissent ne devraient pas jeter des exceptions.
+*heure(s)*<br/>
+Valeur HRESULT que vous obtenez généralement à partir d'un appel à une méthode COM. Si la valeur est 0, ce qui est égal à S_OK, cette méthode lève [Platform :: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) , car les méthodes com qui ont été correctement exécutées ne doivent pas lever d’exceptions.
 
-*Message*<br/>
+*message*<br/>
 Chaîne qui décrit l'erreur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -93,9 +93,9 @@ Exception qui représente l'erreur HRESULT.
 
 Utilisez cette méthode pour créer une exception à partir d'une valeur HRESULT retournée, par exemple, à partir d'un appel à une méthode d'interface COM. Utilisez la surcharge qui accepte un paramètre String^ pour fournir un message personnalisé.
 
-Il est fortement recommandé d’utiliser CreateException pour créer une exception fortement typée plutôt que de créer une [plate-forme::COMException](../cppcx/platform-comexception-class.md) qui contient simplement le HRESULT.
+Il est fortement recommandé d’utiliser CreateException pour créer une exception fortement typée au lieu de créer une [plateforme :: COMException](../cppcx/platform-comexception-class.md) qui contient simplement HRESULT.
 
-## <a name="exceptionexception-constructor"></a><a name="ctor"></a>Exception::Constructeur d’exception
+## <a name="exceptionexception-constructor"></a><a name="ctor"></a> Exception :: exception, constructeur
 
 Initialise une nouvelle instance de la classe Exception.
 
@@ -108,13 +108,13 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Paramètres
 
-*Hresult*<br/>
+*signé*<br/>
 Erreur HRESULT qui est représentée par l'exception.
 
-*Message*<br/>
+*message*<br/>
 Message spécifié par l'utilisateur, tel que le texte normatif, qui est associé à l'exception. En général, préférez la deuxième surcharge afin de fournir un message descriptif aussi précis que possible en indiquant comment et pourquoi l'erreur s'est produite.
 
-## <a name="exceptionhresult-property"></a><a name="hresult"></a>Exception::Propriété HResult
+## <a name="exceptionhresult-property"></a><a name="hresult"></a> Exception :: HResult, propriété
 
 HRESULT qui correspond à l'exception.
 
@@ -125,7 +125,7 @@ public:
     property int HResult { int get(); }
 ```
 
-## <a name="property-value"></a>Valeur de propriété
+### <a name="property-value"></a>Valeur de propriété
 
 Valeur HRESULT.
 
@@ -133,7 +133,7 @@ Valeur HRESULT.
 
 La plupart des exceptions démarrent sous forme d'erreurs COM, qui sont retournées en tant que valeurs HRESULT. C++/CX convertit ces valeurs en objets Platform::Exception^, et cette propriété stocke la valeur du code d'erreur d'origine.
 
-## <a name="exceptionmessage-property"></a><a name="message"></a>Exception::Message Propriété
+## <a name="exceptionmessage-property"></a><a name="message"></a> Exception :: message, propriété
 
 Message qui décrit l'erreur.
 
@@ -143,14 +143,14 @@ Message qui décrit l'erreur.
 public:property String^ Message;
 ```
 
-## <a name="property-value"></a>Valeur de propriété
+### <a name="property-value"></a>Valeur de propriété
 
 Dans les exceptions qui proviennent de Windows Runtime, il s'agit d'une description de l'erreur fournie par le système.
 
 ### <a name="remarks"></a>Notes
 
-Dans Windows 8, cette propriété est lue uniquement parce que les exceptions dans cette version du Windows Runtime ne sont transportées à travers l’ABI que sous le titre HRESULTS. Dans Windows 8.1, les informations sur l'exception traversent ABI. Par ailleurs, vous pouvez fournir un message personnalisé accessible par programmation à d'autres composants. Pour plus d’informations, voir [Exceptions (C/CX)](../cppcx/exceptions-c-cx.md).
+Dans Windows 8, cette propriété est en lecture seule, car les exceptions de cette version du Windows Runtime sont transportées dans le ABI uniquement en tant que HRESULT. Dans Windows 8.1, les informations sur l'exception traversent ABI. Par ailleurs, vous pouvez fournir un message personnalisé accessible par programmation à d'autres composants. Pour plus d’informations, consultez [exceptions (C++/CX)](../cppcx/exceptions-c-cx.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)

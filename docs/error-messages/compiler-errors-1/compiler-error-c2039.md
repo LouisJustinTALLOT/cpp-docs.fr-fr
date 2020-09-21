@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
-ms.openlocfilehash: 67c64de676c624369fb5a8bc07b9b5de4833fe7f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6dc79db11f08ce00cdb86e930173c052cd5187ed
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757681"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742682"
 ---
 # <a name="compiler-error-c2039"></a>Erreur du compilateur C2039
 
@@ -19,7 +19,7 @@ ms.locfileid: "74757681"
 
 Le code appelle ou fait référence à un membre d’une structure, d’une classe ou d’une Union de manière incorrecte.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C2039.
 
@@ -35,8 +35,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
 L’exemple suivant génère l’C2039.
 
 ```cpp
@@ -49,8 +47,6 @@ int main() {
    Console::WriteLine( "{0}", DateTime::Now::get());   // OK
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’C2039.
 
@@ -68,9 +64,7 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK
 ```
 
-## <a name="example"></a>Exemple
-
-C2039 peut également se produire si vous tentez d’accéder à un indexeur par défaut de manière incorrecte. L’exemple suivant définit un composant créé dans C#.
+C2039 peut également se produire si vous tentez d’accéder à un indexeur par défaut de manière incorrecte. L’exemple suivant définit un composant créé en C#.
 
 ```
 // C2039_d.cs
@@ -84,8 +78,6 @@ public class B {
    }
 };
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’C2039.
 
@@ -103,8 +95,6 @@ int main() {
    Console::WriteLine(n);
 }
 ```
-
-## <a name="example"></a>Exemple
 
 C2039 peut également se produire si vous utilisez des génériques. L’exemple suivant génère l’C2039.
 
@@ -128,8 +118,6 @@ int main() {
    f(gcnew R());
 }
 ```
-
-## <a name="example"></a>Exemple
 
 C2039 peut se produire lorsque vous essayez de libérer des ressources managées ou non managées. Pour plus d’informations, consultez [destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 

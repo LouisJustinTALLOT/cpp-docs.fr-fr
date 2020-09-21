@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 179cdc6379fd26f5acd436d5ca6cacc08df8dce3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756056"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743241"
 ---
 # <a name="compiler-error-c2660"></a>Erreur du compilateur C2660
 
@@ -23,9 +23,9 @@ C2660 peut se produire si vous appelez accidentellement une fonction API Windows
 
 - Ajustez l’appel de fonction pour qu’il soit conforme au format de l’appel de fonction membre.
 
-- Utilisez l’opérateur de résolution de portée (`::`) pour indiquer au compilateur de rechercher le nom de la fonction dans l’espace de noms global.
+- Utilisez l’opérateur de résolution de portée ( `::` ) pour indiquer au compilateur de rechercher le nom de la fonction dans l’espace de noms global.
 
-## <a name="example"></a>Exemple
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C2660.
 
@@ -38,8 +38,6 @@ int main() {
    func( 1, 0 );   // OK
 }
 ```
-
-## <a name="example"></a>Exemple
 
 C2660 peut également se produire si vous tentez d’appeler directement la méthode dispose d’un type managé. Pour plus d’informations, consultez [destructeurs et finaliseurs](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). L’exemple suivant génère l’C2660.
 
@@ -60,8 +58,6 @@ int main() {
    stateTimer->~Timer();   // OK
 }
 ```
-
-## <a name="example"></a>Exemple
 
 C2660 se produit si une classe dérivée masque une fonction.
 
@@ -92,8 +88,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
 C2660 peut se produire si vous appelez une propriété indexée de manière incorrecte.
 
 ```cpp
@@ -117,8 +111,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
 C2660 peut se produire si vous appelez une propriété indexée de manière incorrecte.
 
 ```cpp
@@ -139,8 +131,6 @@ int main() {
    int x2 = a[3,5];   // OK
 }
 ```
-
-## <a name="example"></a>Exemple
 
 C2660 peut se produire si vous définissez un nouvel opérateur dans une classe de modèle, mais que l’opérateur New crée un objet dont le type est différent du type englobant.
 

@@ -6,18 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ebe41a4c4aa090e609d3352635d4e1fc06e22454
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755991"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743215"
 ---
 # <a name="compiler-error-c2666"></a>Erreur du compilateur C2666
 
 'identificateur' : les surcharges numériques ont des conversions similaires
 
 Une fonction ou un opérateur surchargé est ambigu.   Les listes de paramètres formels peuvent être trop similaires pour que le compilateur puisse résoudre l’ambiguïté.  Pour résoudre cette erreur, effectuez un cast explicite d’un ou plusieurs des paramètres réels.
+
+## <a name="examples"></a>Exemples
 
 L’exemple suivant génère l’C2666 :
 
@@ -41,11 +43,9 @@ Cette erreur peut également être générée en raison du travail de conformit�
 
 - la conversion de qualification n’est pas la même que la conversion d’identité
 
-Pour les opérateurs binaires \<, >, \<= et > =, un paramètre passé est désormais implicitement converti en type de l’opérande si le type du paramètre définit un opérateur de conversion défini par l’utilisateur à convertir en type de l’opérande. Il existe désormais un potentiel d’ambiguïté.
+Pour les opérateurs binaires \<, > , \<=, and > =, un paramètre passé est désormais implicitement converti en type de l’opérande si le type du paramètre définit un opérateur de conversion défini par l’utilisateur à convertir en type de l’opérande. Il existe désormais un potentiel d’ambiguïté.
 
-Pour le code qui est valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de Visual C++, appelez l’opérateur de classe explicitement à l’aide de la syntaxe de fonction.
-
-## <a name="example"></a>Exemple
+Pour obtenir un code valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de Visual C++, appelez l’opérateur de classe explicitement à l’aide de la syntaxe de fonction.
 
 ```cpp
 // C2666b.cpp
@@ -101,8 +101,6 @@ int main()
         printf_s("str1.operator char*() < str2\n");
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’exemple suivant génère l’C2666
 

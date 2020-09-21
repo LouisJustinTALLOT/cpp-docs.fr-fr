@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 2bf1a1001f661b1ba972e7a5e699276591dda08a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7889009fe2de3c5256d6caf6cb5afa8792919c4
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216958"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743059"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -143,7 +143,7 @@ Outre les valeurs précédentes, les caractères suivants peuvent être ajoutés
 |modificateur de *mode*|Mode de traduction|
 |-|-|
 | **t** | Ouvrir en mode texte (traduit). |
-| **p** | Ouvrir en mode binaire (non traduit); les traductions qui impliquent des caractères de retour chariot et de saut de ligne sont supprimées. |
+| **b** | Ouvrir en mode binaire (non traduit); les traductions qui impliquent des caractères de retour chariot et de saut de ligne sont supprimées. |
 
 En mode texte, CTRL + Z est interprété comme un caractère EOF en entrée. Dans les fichiers ouverts en lecture/écriture à l’aide de **« a + »**, **fopen** recherche un Ctrl + Z à la fin du fichier et le supprime, si possible. Cela est dû au fait que l’utilisation de [fseek](fseek-fseeki64.md) et **ftell** pour se déplacer dans un fichier qui se termine par Ctrl + Z peut provoquer un comportement incorrect de [fseek](fseek-fseeki64.md) près de la fin du fichier.
 
@@ -157,7 +157,8 @@ Les options suivantes peuvent être ajoutées au *mode* pour spécifier des comp
 
 |modificateur de *mode*|Comportement|
 |-|-|
-| **secteur** | Activez l’indicateur de validation pour le *nom* de fichier associé afin que le contenu de la mémoire tampon de fichier soit écrit directement sur le disque si **fflush** ou **_flushall** est appelé. |
+| **x** | Force la fonction à échouer si le *nom de fichier* existe déjà. Peut uniquement être utilisé avec les spécificateurs « w » ou « w + ». |
+| **c** | Activez l’indicateur de validation pour le *nom* de fichier associé afin que le contenu de la mémoire tampon de fichier soit écrit directement sur le disque si **fflush** ou **_flushall** est appelé. |
 | **n** | Réinitialiser l’indicateur de validation pour le *nom de fichier* associé sur « no-commit ». Il s’agit de la valeur par défaut. Substitue également l'indicateur de validation global si vous liez votre programme avec COMMODE.OBJ. La valeur par défaut de l’indicateur de validation globale est « no-commit », sauf si vous liez explicitement votre programme avec COMMODE.OBJ (consultez [Link Options](../../c-runtime-library/link-options.md)). |
 | **N** | Indique que le fichier n'est pas hérité par les processus enfants. |
 | **S** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque. |
@@ -176,10 +177,11 @@ Les caractères valides pour la chaîne de *mode* utilisée dans **fopen** et **
 |**r +**|**\_O \_ RDWR**|
 |**w**|** \_ O \_ WRONLY** (généralement ** \_ o \_ WRONLY** &#124; ** \_ o \_ Creating** &#124; ** \_ o \_ trunc**)|
 |**w +**|** \_ O \_ RDWR** (généralement ** \_ o \_ RDWR** &#124; ** \_ o \_ Creating** &#124; ** \_ o \_ trunc**)|
-|**p**|**\_\_binaire O**|
+|**b**|**\_\_binaire O**|
 |**t**|**\_O \_ Text**|
-|**secteur**|None|
-|**n**|None|
+|**x**|**\_O \_ hors**|
+|**c**|Aucun|
+|**n**|Aucun|
 |**S**|**\_O \_ séquentiel**|
 |**R**|**\_O \_ aléatoire**|
 |**T**|**\_O \_ SHORTLIVED**|
