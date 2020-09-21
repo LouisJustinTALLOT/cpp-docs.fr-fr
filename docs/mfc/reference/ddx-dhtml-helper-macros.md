@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: 6158bffceda7ac83b79b6ff8bd7fce0378759819
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eeea85872422edcf421ba2fe254c8f03c093fe3c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837461"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743449"
 ---
 # <a name="ddx_dhtml-helper-macros"></a>Macros d’assistance DDX_DHtml
 
@@ -41,7 +41,7 @@ Les macros d’assistance DDX_DHtml permettent d’accéder facilement aux propr
 |[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Définit ou récupère l’URL du frame associé.|
 |[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Définit ou récupère l’URL du frame associé.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdhtml. h
 
@@ -67,7 +67,7 @@ Valeur que vous avez spécifiée pour le paramètre ID du contrôle HTML.
 *var*<br/>
 Valeur en cours d’échange.
 
-## <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes
 
 Cette macro appelle la fonction [CDHtmlDialog ::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) à l’aide de l’ID de distribution DISPID_IHTMLANCHORELEMENT_HREF.
 
@@ -93,7 +93,7 @@ Valeur que vous avez spécifiée pour le paramètre ID du contrôle HTML.
 *var*<br/>
 Valeur en cours d’échange.
 
-## <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes
 
 Cette macro appelle la fonction [CDHtmlDialog ::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) à l’aide de l’ID de distribution DISPID_IHTMLANCHORELEMENT_TARGET.
 
@@ -119,7 +119,7 @@ Valeur que vous avez spécifiée pour le paramètre ID du contrôle HTML.
 *var*<br/>
 Valeur en cours d’échange.
 
-## <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes
 
 Cette macro appelle la fonction [CDHtmlDialog ::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) à l’aide de l’ID de distribution DISPID_IHTMLELEMENT_INNERHTML.
 
@@ -145,7 +145,7 @@ Valeur que vous avez spécifiée pour le paramètre ID du contrôle HTML.
 *var*<br/>
 Valeur en cours d’échange.
 
-## <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes
 
 Cette macro appelle la fonction [CDHtmlDialog ::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) à l’aide de l’ID de distribution DISPID_IHTMLELEMENT_INNERTEXT.
 
@@ -171,7 +171,7 @@ Valeur que vous avez spécifiée pour le paramètre ID du contrôle HTML.
 *var*<br/>
 Valeur en cours d’échange. Consultez la *valeur* dans [CDHtmlDialog ::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).
 
-## <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes
 
 Cette macro ne fonctionnera que si elle est exécutée sur des contrôles qui ont une propriété de valeur. Les contrôles qui ont une propriété de valeur incluent les zones d’édition, les zones de liste et les zones de liste déroulante.
 
@@ -199,7 +199,7 @@ Valeur que vous avez spécifiée pour le paramètre ID du contrôle HTML.
 *var*<br/>
 Valeur en cours d’échange.
 
-## <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes
 
 Cette macro appelle la fonction [CDHtmlDialog ::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) à l’aide de l’ID de distribution DISPID_IHTMLFRAMEBASE_SRC.
 
@@ -225,7 +225,7 @@ Valeur que vous avez spécifiée pour le paramètre ID du contrôle HTML.
 *var*<br/>
 Valeur en cours d’échange.
 
-## <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes
 
 Cette macro appelle la fonction [CDHtmlDialog ::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) à l’aide de l’ID de distribution DISPID_IHTMLFRAMEBASE_SRC.
 
@@ -251,7 +251,7 @@ Valeur que vous avez spécifiée pour le paramètre ID du contrôle HTML.
 *var*<br/>
 Valeur en cours d’échange.
 
-## <a name="remarks"></a>Notes
+### <a name="remarks"></a>Notes
 
 Lorsque vous utilisez la macro DDX_DHtml_Img_Src pour récupérer la propriété SRC d’un élément IMAGE, l’objet image Internet Explorer retourne l’URL entièrement échappée pour la source de l’image. Par exemple, si vous utilisez la macro DDX_DHtml_Img_Src pour définir la propriété SRC d’un élément IMAGE sur la chaîne « une image intéressante », quand vous récupérez cette propriété, Internet Explorer retourne la chaîne « res://d:\myapplication\myapp.exe/some%20interesting%20picture. ».
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 75b2ba62182a33137b433c836b4acf7c9e1fc231
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 74c5032338b3f4cf30bdb75bdf070cee7b67ce58
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87207977"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742110"
 ---
 # <a name="compiler-error-c2440"></a>Erreur du compilateur C2440
 
@@ -19,9 +19,11 @@ ms.locfileid: "87207977"
 
 Le compilateur ne peut pas effectuer un cast de `type1` en `type2` .
 
-## <a name="example"></a>Exemple
+L’erreur C2440 peut être provoquée si vous tentez d’initialiser un non const **`char*`** (ou `wchar_t*` ) à l’aide d’un littéral de chaîne dans du code C++, lorsque l’option de conformité du compilateur [/Zc : strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) est définie. En C, le type d’un littéral de chaîne est un tableau de **`char`** , mais en C++, il s’agit d’un tableau de `const char` .
 
-L’erreur C2440 peut être provoquée si vous tentez d’initialiser un non const **`char*`** (ou `wchar_t*` ) à l’aide d’un littéral de chaîne dans du code C++, lorsque l’option de conformité du compilateur [/Zc : strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) est définie. En C, le type d’un littéral de chaîne est un tableau de **`char`** , mais en C++, il s’agit d’un tableau de `const char` . Cet exemple génère l’C2440 :
+## <a name="examples"></a>Exemples
+
+Cet exemple génère l’C2440 :
 
 ```cpp
 // C2440s.cpp
@@ -37,8 +39,6 @@ int main() {
    const char* s2 = "tests"; // OK
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’C2440 peut également être provoquée si vous tentez de convertir un pointeur en membre en void *. L’exemple suivant génère l’C2440 :
 
@@ -61,8 +61,6 @@ public:
 };
 ```
 
-## <a name="example"></a>Exemple
-
 L’exception C2440 peut également être provoquée si vous tentez d’effectuer un cast à partir d’un type qui est uniquement en avant déclaré mais pas défini. Cet exemple génère l’C2440 :
 
 ```cpp
@@ -75,8 +73,6 @@ Base * func(Derived * d) {
     return static_cast<Base *>(d); // error C2440: 'static_cast' : cannot convert from 'Derived *' to 'Base *'
 }
 ```
-
-## <a name="example"></a>Exemple
 
 Les erreurs C2440 sur les lignes 15 et 16 de l’exemple suivant sont qualifiées avec le `Incompatible calling conventions for UDT return value` message. Un *UDT* est un type défini par l’utilisateur, tel qu’une classe, un struct ou une Union. Ces types d’erreurs d’incompatibilité sont dus au fait que la Convention d’appel d’un UDT spécifié dans le type de retour d’une déclaration anticipée est en conflit avec la Convention d’appel réelle de l’UDT et lorsqu’un pointeur de fonction est impliqué.
 
@@ -126,8 +122,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
 L’C2440 peut également se produire si vous assignez zéro à un pointeur intérieur :
 
 ```cpp
@@ -140,8 +134,6 @@ int main() {
    ipi = nullptr;   // OK
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’erreur C2440 peut également se produire pour une utilisation incorrecte d’une conversion définie par l’utilisateur. Par exemple, lorsqu’un opérateur de conversion a été défini en tant que **`explicit`** , le compilateur ne peut pas l’utiliser dans une conversion implicite. Pour plus d’informations sur les conversions définies par l’utilisateur, consultez [conversions définies par l’utilisateur (C++/CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). Cet exemple génère l’C2440 :
 
@@ -165,8 +157,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
 L’C2440 peut également se produire si vous essayez de créer une instance d’un tableau de Visual C++ dont le type est un <xref:System.Array> .  Pour plus d’informations, consultez [Tableaux](../../extensions/arrays-cpp-component-extensions.md).  L’exemple suivant génère l’C2440 :
 
 ```cpp
@@ -180,8 +170,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
-
 L’option C2440 peut également se produire en raison de modifications apportées à la fonctionnalité attributs.  L’exemple suivant génère l’C2440.
 
 ```cpp
@@ -191,8 +179,6 @@ L’option C2440 peut également se produire en raison de modifications apporté
 // try the following line instead
 // [ module(name="PropDemoLib", version="1.0") ];
 ```
-
-## <a name="example"></a>Exemple
 
 Le compilateur Microsoft C++ n’autorise plus le cast de l' [opérateur const_cast](../../cpp/const-cast-operator.md) lorsque le code source qui utilise la programmation **/CLR** est compilé.
 
@@ -212,8 +198,6 @@ int main() {
    d = dynamic_cast<Derived^>(b);   // OK
 }
 ```
-
-## <a name="example"></a>Exemple
 
 L’C2440 peut se produire en raison de modifications de conformité au compilateur dans Visual Studio 2015 Update 3. Auparavant, le compilateur traitait de manière incorrecte certaines expressions distinctes en tant que type identique lors de l’identification d’une correspondance de modèle pour une **`static_cast`** opération. À présent, le compilateur distingue correctement les types, et le code qui s’est appuyé sur le **`static_cast`** comportement précédent est rompu. Pour résoudre ce problème, modifiez l’argument de modèle pour qu’il corresponde au type de paramètre de modèle, ou utilisez un **`reinterpret_cast`** cast de style C ou.
 
@@ -239,8 +223,6 @@ int main()
 
 This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in <atlcom.h>.
 ```
-
-## <a name="example"></a>Exemple
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
@@ -278,8 +260,6 @@ int main()
     const A& a2{ 1 };
 }
 ```
-
-## <a name="example"></a>Exemple
 
 ### <a name="cv-qualifiers-in-class-construction"></a>Qualificateurs cv dans la construction de la classe
 
