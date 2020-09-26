@@ -1,5 +1,5 @@
 ---
-title: Éditeur de barresC++d’outils ()
+title: Éditeur de barres d’outils (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.toolbar.F1
@@ -50,33 +50,33 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: ca7f031cbdcfc3378a0917e84b257fd7212563e1
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514692"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353023"
 ---
-# <a name="toolbar-editor-c"></a>Éditeur de barresC++d’outils ()
+# <a name="toolbar-editor-c"></a>Éditeur de barres d’outils (C++)
 
 L' **éditeur de barres d'** outils vous permet de créer des ressources de barre d’outils et de convertir des bitmaps en ressources de barre d’outils. L' **éditeur de barres d’outils** utilise un affichage graphique pour afficher une barre d’outils et des boutons qui ressemblent à la façon dont ils s’affichent dans une application finie.
 
 La fenêtre de l' **éditeur de barres d’outils** affiche deux vues d’une image de bouton, identique à la fenêtre de l' **éditeur d’images** . Une barre de fractionnement sépare les deux volets et vous pouvez faire glisser la barre de fractionnement d’un côté à l’autre pour modifier les tailles relatives des volets. Le volet actif affiche une bordure de sélection et au-dessus des deux affichages de l’image est la barre d’outils objet.
 
-![Éditeur de barre d’outils](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")<br/>
+![Éditeur de barres d’outils](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")<br/>
 **Éditeur de barres d’outils**
 
 L' **éditeur de barres d’outils** est similaire à l' **éditeur d’images** dans les fonctionnalités, et les éléments de menu, les outils graphiques et la grille bitmap entre les deux sont les mêmes. Il existe une commande de menu dans le menu **image** pour basculer entre l' **éditeur de barres d’outils** et l' **éditeur d’images**. Pour plus d’informations sur l’utilisation de la barre d’outils **graphiques** , la palette de **couleurs** ou le menu **image** , consultez [éditeur d’images](../windows/image-editor-for-icons.md).
 
-Vous pouvez créer une nouvelle barre d’outils C++ dans un projet en convertissant une bitmap. Le graphique de la bitmap est converti en images de bouton pour une barre d’outils. En règle générale, la bitmap contient plusieurs images de bouton sur une seule bitmap, avec une image pour chaque bouton. Les images peuvent avoir n’importe quelle taille, car la valeur par défaut est de 16 pixels de largeur et la hauteur de l’image. Vous pouvez spécifier la taille des images de bouton dans la boîte de dialogue **nouvelle ressource de barre d’outils** lorsque vous choisissez **éditeur de barres d'** outils dans le menu **image** et dans l' **éditeur d’images**.
+Vous pouvez créer une nouvelle barre d’outils dans un projet C++ en convertissant une bitmap. Le graphique de la bitmap est converti en images de bouton pour une barre d’outils. En règle générale, la bitmap contient plusieurs images de bouton sur une seule bitmap, avec une image pour chaque bouton. Les images peuvent avoir n’importe quelle taille, car la valeur par défaut est de 16 pixels de largeur et la hauteur de l’image. Vous pouvez spécifier la taille des images de bouton dans la boîte de dialogue **nouvelle ressource de barre d’outils** lorsque vous choisissez **éditeur de barres d'** outils dans le menu **image** et dans l' **éditeur d’images**.
 
-La boîte de dialogue **nouvelle ressource de barre d’outils** vous permet de spécifier la largeur et la hauteur des boutons que vous ajoutez à une C++ ressource de barre d’outils dans un projet. La valeur par défaut est 16 × 15 pixels.
+La boîte de dialogue **nouvelle ressource de barre d’outils** vous permet de spécifier la largeur et la hauteur des boutons que vous ajoutez à une ressource de barre d’outils dans un projet C++. La valeur par défaut est 16 × 15 pixels.
 
 Une image bitmap utilisée pour créer une barre d’outils a une largeur maximale de 2048. par conséquent, si vous définissez la **largeur du bouton** sur *512*, vous ne pouvez avoir que quatre boutons. Si vous définissez la largeur sur *513*, vous ne pouvez avoir que trois boutons.
 
 La boîte **de dialogue nouvelle ressource de barre d’outils** présente les propriétés suivantes :
 
-|Propriété|Description|
+|Property|Description|
 |---|---------------|
 |**Largeur du bouton**|Offre un espace vous permettant d’entrer la largeur des boutons de la barre d’outils que vous convertissez d’une ressource bitmap en ressource de barre d’outils.|
 |**Hauteur du bouton**|Offre un espace vous permettant d’entrer la hauteur des boutons de la barre d’outils que vous convertissez d’une ressource bitmap en ressource de barre d’outils.|
@@ -88,16 +88,16 @@ Par défaut, un bouton nouveau ou vide s’affiche à l’extrémité droite de 
 
 Un bouton de barre d’outils a les propriétés suivantes :
 
-|Propriété|Description|
+|Property|Description|
 |--------------|-----------------|
-|**ID**|Définit l’ID du bouton. La liste déroulante répertorie les noms d' **ID** courants.|
+|**Identifiant**|Définit l’ID du bouton. La liste déroulante répertorie les noms d' **ID** courants.|
 |**Width**|Définit la largeur du bouton. 16 pixels recommandés.|
 |**Height**|Définit la hauteur du bouton. La hauteur d’un bouton modifie la hauteur de tous les boutons de la barre d’outils. 15 pixels sont recommandés.|
-|**Invite**|Définit le message affiché dans la barre d’État. L’ajout de *\n* et d’un nom ajoute une **info-bulle** à ce bouton de barre d’outils. Pour plus d’informations, consultez [création d’une info-bulle](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+|**Demander**|Définit le message affiché dans la barre d’État. L’ajout de *\n* et d’un nom ajoute une **info-bulle** à ce bouton de barre d’outils. Pour plus d’informations, consultez [pour créer une info-bulle pour un bouton de barre d’outils](#to-create-a-tool-tip-for-a-toolbar-button).|
 
 **Width** et **Height** s’appliquent à tous les boutons. Une image bitmap utilisée pour créer une barre d’outils a une largeur maximale de 2048. par conséquent, si vous définissez la largeur du bouton sur *512*, vous ne pouvez avoir que quatre boutons et si vous définissez la largeur sur *513*, vous ne pouvez avoir que trois boutons.
 
-## <a name="how-to"></a>Comment
+## <a name="how-to"></a>Procédure
 
 L' **éditeur de barres d’outils** vous permet d’activer les éléments suivants :
 
@@ -113,7 +113,7 @@ L' **éditeur de barres d’outils** vous permet d’activer les éléments suiv
 
 1. Ouvrez une ressource bitmap existante dans l' [éditeur d’images](../windows/image-editor-for-icons.md). Si l’image bitmap n’est pas déjà dans votre fichier *. RC* , cliquez avec le bouton droit sur le fichier *. RC* et choisissez **Importer**, puis accédez à l’image bitmap que vous souhaitez ajouter à votre fichier *. RC* et sélectionnez **ouvrir**.
 
-1. Accédez à l' **image** de menu > **éditeur de barres d’outils**.
+1. Accédez à l' **Image**  >  **éditeur de barre d’outils**image de menu.
 
    La boîte **de dialogue nouvelle ressource de barre d’outils** s’affiche. Vous pouvez modifier la largeur et la hauteur des images d’icône pour qu’elles correspondent à la bitmap. L’image de la barre d’outils est ensuite affichée dans l' **éditeur de barres d’outils**.
 
@@ -134,7 +134,7 @@ L' **éditeur de barres d’outils** vous permet d’activer les éléments suiv
 
    - Attribuez un ID au bouton vide à l’extrémité droite de la barre d’outils. Pour ce faire, vous pouvez modifier la propriété **ID** dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Par exemple, il se peut que vous souhaitiez attribuer à un bouton de barre d’outils le même ID qu’une option de menu. Dans ce cas, utilisez la zone de liste déroulante pour sélectionner l' **ID** de l’option de menu.
 
-   - Sélectionnez le bouton vide à l’extrémité droite de la barre d’outils dans le volet **d’affichage de la barre d’outils** et commencez le dessin. Un ID de commande de bouton par défaut est affecté (ID_BUTTON\<n >).
+   - Sélectionnez le bouton vide à l’extrémité droite de la barre d’outils dans le volet **d’affichage de la barre d’outils** et commencez le dessin. Un ID de commande de bouton par défaut est affecté (ID_BUTTON \<n> ).
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Pour ajouter une image à une barre d’outils sous forme de bouton
 
@@ -145,11 +145,11 @@ L' **éditeur de barres d’outils** vous permet d’activer les éléments suiv
    > [!NOTE]
    > Si vous ouvrez l’image dans Visual Studio, elle s’ouvre dans l' **éditeur d’images**. Vous pouvez également ouvrir l’image dans d’autres programmes graphiques.
 
-1. Accédez au menu **modifier** > **copier**.
+1. Accédez au menu **modifier**la  >  **copie**.
 
 1. Basculez vers votre barre d’outils en sélectionnant son onglet en haut de la fenêtre source.
 
-1. Accédez au menu **modifier** > **coller**.
+1. Accédez au menu **Edition**  >  **coller**.
 
    L’image s’affiche dans la barre d’outils en tant que nouveau bouton.
 
@@ -175,7 +175,7 @@ Dans le volet **d’affichage de la barre d’outils** , faites glisser le bouto
 
 #### <a name="to-change-the-properties-of-a-toolbar-button"></a>Pour modifier les propriétés d’un bouton de barre d’outils
 
-1. Dans un C++ projet, sélectionnez le bouton de la barre d’outils.
+1. Dans un projet C++, sélectionnez le bouton de barre d’outils.
 
 1. Tapez le nouvel ID dans la propriété **ID** de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), ou utilisez la liste déroulante pour sélectionner un nouvel **ID**.
 
@@ -183,26 +183,26 @@ Dans le volet **d’affichage de la barre d’outils** , faites glisser le bouto
 
 1. Sélectionnez le bouton de barre d’outils.
 
-1. Dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), dans le champ **invite** , ajoutez une description du bouton pour la barre d’État et après le message, ajoutez `\n` et le nom de l’info-bulle.
+1. Dans le champ **invite** de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), ajoutez une description du bouton pour la barre d’État et après le message, ajoutez `\n` et le nom de l’info-bulle.
 
 Par exemple, pour afficher l’info-bulle du bouton **Imprimer** dans **WordPad**:
 
 1. Ouvrez **WordPad**.
 
-1. Placez le pointeur de la souris sur le bouton **Imprimer** de la barre d’outils et notez le mot `Print` maintenant est flottant sous le pointeur de la souris.
+1. Placez le pointeur de la souris sur le bouton **Imprimer** de la barre d’outils et notez que le mot `Print` est maintenant flottant sous le pointeur de la souris.
 
-1. Examinez la barre d’État en bas de la fenêtre **WordPad** et Notez qu’elle affiche maintenant le texte `Prints the active document`.
+1. Examinez la barre d’État en bas de la fenêtre **WordPad** et Notez qu’elle affiche maintenant le texte `Prints the active document` .
 
 `Print` est le nom de l’info-bulle et `Prints the active document` est la description du bouton pour la barre d’État.
 
-Si vous souhaitez utiliser cet effet à l’aide de l' **éditeur de barres d’outils**, définissez la propriété **invite** sur `Prints the active document\nPrint`.
+Si vous souhaitez utiliser cet effet à l’aide de l' **éditeur de barres d’outils**, affectez à la propriété **prompt** la valeur `Prints the active document\nPrint` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 MFC ou ATL
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeurs de ressources](../windows/resource-editors.md)
-[menus et autres ressources](/windows/win32/menurc/resources)<br/>
+[Éditeurs](../windows/resource-editors.md) 
+ de ressources [Menus et autres ressources](/windows/win32/menurc/resources)<br/>
 [propriétés d’un bouton de barre d’outils](../windows/toolbar-button-properties.md)<br/>

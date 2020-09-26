@@ -7,24 +7,24 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: bd4c9eede16ed086020dd8f12d90876e50a0a341
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8bc611442e98e467a174ebd52ea3c540cf72975f
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319200"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352685"
 ---
 # <a name="atl-simple-object-wizard"></a>Assistant Objet simple ATL
 
-Cet assistant insère dans le projet un objet COM minimal. Utilisez cette page de l’assistant pour spécifier les noms qui identifient la classe et les fichiers CMD pour votre objet et sa fonctionnalité COM.
+Cet Assistant insère dans le projet un objet COM minimal. Utilisez cette page de l’Assistant pour spécifier les noms qui identifient la classe et les fichiers C++ pour votre objet et ses fonctionnalités COM.
 
-Utilisez la page [Options](../../atl/reference/options-atl-simple-object-wizard.md) de cet assistant pour spécifier le modèle de threading de l’objet, son support d’agrégation, et s’il prend en charge les interfaces doubles et l’automatisation. Vous pouvez également indiquer la prise en charge de l’interface d’information d’erreur, des points de connexion, du support Internet Explorer et du marshaling libre.
+Utilisez la page [options](../../atl/reference/options-atl-simple-object-wizard.md) de cet Assistant pour spécifier le modèle de thread de l’objet, sa prise en charge de l’agrégation et s’il prend en charge les interfaces doubles et l’automatisation. Vous pouvez également indiquer la prise en charge de l’interface d’informations d’erreur, des points de connexion, de la prise en charge d’Internet Explorer et du marshaling à threads libres.
 
 ## <a name="remarks"></a>Notes
 
 À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
 
-## <a name="names"></a>noms
+## <a name="names"></a>Noms
 
 Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à votre projet. À l’exception du champ **Nom court**, tous les autres peuvent être modifiés de manière indépendante. Si vous modifiez le contenu du champ **Nom court**, la modification se reflète dans les noms de tous les autres champs de cette page. Si vous modifiez le nom **CoClasse** dans la section COM, la modification se reflète dans les champs **Type** et **ProgID**. Toutefois, le nom dans le champ **Interface** n’est pas modifié. Ce comportement de nommage est conçu pour rendre tous les noms faciles à identifier lors du développement de votre contrôle.
 
@@ -63,18 +63,18 @@ Fournit des informations pour la classe C++ créée pour l’objet.
 
    Par défaut, tous les objets que vous ajoutez après avoir défini cette option sont désignés comme attribués (la case est cochée). Vous pouvez effacer ce champ pour y ajouter un objet qui n’utilise pas d’attributs.
 
-   Consultez [Paramètre d’application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [Mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
+   Pour plus d’informations, consultez Paramètres de l' [application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [mécanismes de base des attributs](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) .
 
 ## <a name="com"></a>COM
 
 Fournit des informations sur la fonctionnalité COM de l’objet.
 
-- **CoClasse**
+- **Coclasse**
 
    Définit le nom de la classe du composant qui contient une liste d’interfaces prises en charge par l’objet.
 
    > [!NOTE]
-   > Si vous créez votre projet à l’aide d’attributs, ou si vous indiquez sur cette page `coclass` d’assistant que l’objet utilise des attributs, vous ne pouvez pas modifier cette option parce qu’ATL n’inclut pas l’attribut.
+   > Si vous créez votre projet à l’aide d’attributs ou si vous indiquez sur cette page de l’Assistant que l’objet utilise des attributs, vous ne pouvez pas modifier cette option, car ATL n’inclut pas l' `coclass` attribut.
 
 - **Type**
 
@@ -84,7 +84,7 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
 
    Définit l’interface que vous créez pour votre objet. Cette interface contient vos méthodes personnalisées.
 
-- **Progid**
+- **ProgID**
 
    Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
 

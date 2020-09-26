@@ -4,18 +4,18 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ASP components, creating in ATL
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: a78beeab663ef1b467cdec32ca51132e8134a9b2
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 3e29d049c50f0410daf16b4bd1322676fd499fd2
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707049"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352672"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Assistant Composant ASP ATL
 
 ::: moniker range="vs-2019"
 
-Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+Cet Assistant n’est pas disponible dans Visual Studio 2019 et ultérieur.
 
 ::: moniker-end
 
@@ -25,7 +25,7 @@ Cet Assistant insère un composant Active Server Pages (ASP) dans le projet. Le 
 
 À l’aide de cet Assistant, vous pouvez spécifier le modèle de thread du composant et sa prise en charge d’agrégation. Vous pouvez également indiquer la prise en charge de l’interface d’informations d’erreur, des points de connexion et du marshaling à threads libres.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
 
@@ -65,15 +65,15 @@ Fournit des informations pour la classe C++ créée pour l’objet.
 
    Si vous sélectionnez cette option pour un projet ATL qui ne prend pas en charge les attributs, l’Assistant vous invite à spécifier si vous souhaitez ajouter la prise en charge d’attributs au projet.
 
-   Par défaut, pour les projets sans attributs, tous les objets que vous ajoutez après avoir défini cette option sont désignés comme ayant des attributs (la case est cochée). Vous pouvez décocher cette case pour y ajouter un objet qui n’utilise pas d’attributs.
+   Par défaut, pour les projets sans attributs, tous les objets que vous ajoutez après avoir défini cette option sont désignés comme ayant des attributs (la case est cochée). Vous pouvez effacer ce champ pour y ajouter un objet qui n’utilise pas d’attributs.
 
-   Consultez [Paramètre d’application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [Mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
+   Pour plus d’informations, consultez Paramètres de l' [application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [mécanismes de base des attributs](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) .
 
 ### <a name="com"></a>COM
 
 Fournit des informations sur la fonctionnalité COM de l’objet.
 
-- **CoClasse**
+- **Coclasse**
 
    Définit le nom de la classe du composant qui contient une liste d’interfaces prises en charge par l’objet. Si votre projet ou cet objet utilise des attributs, vous ne pouvez pas modifier cette option, car ATL n’inclut pas l’attribut **CoClasse**.
 
@@ -93,4 +93,4 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ajout d’un composant ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
+[Composant ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)

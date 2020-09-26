@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 467925baf59598d743650d4f98d210f789f2b179
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833554"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353114"
 ---
 # <a name="composite-control-global-functions"></a>Fonctions globales de contrôle composite
 
@@ -48,7 +48,7 @@ Ces fonctions prennent en charge la création de boîtes de dialogue, ainsi que 
 |[AtlAxWinTerm](#atlaxwinterm)|Désinitialise le code d’hébergement pour les objets AxWin.|
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Retourne des informations sur l’interface source par défaut d’un objet.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlhost. h
 
@@ -82,7 +82,7 @@ dans Pointe vers la procédure de la boîte de dialogue. Pour plus d’informati
 *dwInitParam*<br/>
 dans Spécifie la valeur à passer à la boîte de dialogue dans le paramètre *lParam* du message de WM_INITDIALOG.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs HRESULT standard.
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Pour plus d’informations sur la modification des scripts de ressources, consultez [Comment : ouvrir un fichier de script de ressources au format texte](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Pour plus d’informations sur le contrôle des instructions de définition de ressource, consultez [paramètres de contrôle communs](/windows/win32/menurc/common-control-parameters) sous SDK Windows : SDK Tools.
+Pour plus d’informations sur la modification des scripts de ressources, consultez [Comment : créer des ressources](../../windows/how-to-create-a-resource-script-file.md). Pour plus d’informations sur le contrôle des instructions de définition de ressource, consultez [paramètres de contrôle communs](/windows/win32/menurc/common-control-parameters) sous SDK Windows : SDK Tools.
 
 Pour plus d’informations sur les boîtes de dialogue en général, reportez-vous à [DialogBox](/windows/win32/api/winuser/nf-winuser-dialogboxw) et [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) dans le SDK Windows.
 
@@ -129,7 +129,7 @@ dans Pointe vers la procédure de la boîte de dialogue. Pour plus d’informati
 *dwInitParam*<br/>
 dans Spécifie la valeur à passer à la boîte de dialogue dans le paramètre *lParam* du message de WM_INITDIALOG.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs HRESULT standard.
 
@@ -178,7 +178,7 @@ dans Pointeur vers un flux utilisé pour initialiser les propriétés du contrô
 *ppUnkContainer*<br/>
 à Adresse d’un pointeur qui recevra le `IUnknown` du conteneur. Sa valeur peut être NULL.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs HRESULT standard.
 
@@ -239,7 +239,7 @@ Identificateur d’interface d’une interface sortante sur l’objet contenu.
 *punkSink*<br/>
 Pointeur vers l' `IUnknown` interface de l’objet récepteur à connecter au point de connexion spécifié par *iidSink* sur l’objet contenu après la création réussie de l’objet contenu.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs HRESULT standard.
 
@@ -292,13 +292,13 @@ Adresse d’un pointeur qui recevra le `IUnknown` du conteneur. Sa valeur peut �
 *bstrLic*<br/>
 BSTR contenant la licence du contrôle.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs HRESULT standard.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
-Pour obtenir un exemple d’utilisation de, consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `AtlAxCreateControlLic` .
+Pour obtenir un exemple d’utilisation de, consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `AtlAxCreateControlLic` .
 
 ## <a name="atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a> AtlAxCreateControlLicEx
 
@@ -355,7 +355,7 @@ Pointeur vers l' `IUnknown` interface de l’objet récepteur à connecter au po
 *bstrLic*<br/>
 BSTR contenant la licence du contrôle.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs HRESULT standard.
 
@@ -363,9 +363,9 @@ L’une des valeurs HRESULT standard.
 
 `AtlAxCreateControlLicEx` est semblable à [AtlAxCreateControlLic](#atlaxcreatecontrollic) , mais vous permet également de recevoir un pointeur d’interface vers le contrôle nouvellement créé et de configurer un récepteur d’événements pour recevoir des événements déclenchés par le contrôle.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
-Pour obtenir un exemple d’utilisation de, consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) `AtlAxCreateControlLicEx` .
+Pour obtenir un exemple d’utilisation de, consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `AtlAxCreateControlLicEx` .
 
 ## <a name="atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a> AtlAxAttachControl
 
@@ -389,7 +389,7 @@ dans Handle de la fenêtre qui hébergera le contrôle.
 *ppUnkContainer*<br/>
 à Pointeur vers un pointeur vers le `IUnknown` de l’objet conteneur.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs HRESULT standard.
 
@@ -416,7 +416,7 @@ dans Handle de la fenêtre qui héberge le contrôle.
 *p*<br/>
 à `IUnknown` Du conteneur du contrôle.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs HRESULT standard.
 
@@ -436,7 +436,7 @@ dans Handle de la fenêtre qui héberge le contrôle.
 *p*<br/>
 à `IUnknown` Du contrôle hébergé.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs HRESULT standard.
 
@@ -456,7 +456,7 @@ dans Pointeur vers l' `IUnknown` interface de l’enfant.
 *punkParent*<br/>
 dans Pointeur vers l' `IUnknown` interface du parent.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -468,7 +468,7 @@ Cette fonction initialise le code d’hébergement du contrôle de la bibliothè
 ATLAPI_(BOOL) AtlAxWinInit();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Différent de zéro si l’initialisation du code d’hébergement du contrôle a réussi ; Sinon, FALSe.
 
@@ -484,7 +484,7 @@ Cette fonction annule l’initialisation du code d’hébergement du contrôle A
 inline BOOL AtlAxWinTerm();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Retourne toujours la valeur TRUE.
 
@@ -524,7 +524,7 @@ dans Pointeur vers l’objet pour lequel les informations doivent être retourn�
 *pdwMinor*<br/>
 à Pointeur vers le numéro de version secondaire de la bibliothèque de types contenant la définition de l’interface source.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -535,7 +535,7 @@ Valeur HRESULT standard.
 > [!NOTE]
 > Pour que cette fonction récupère correctement les informations demandées, l’objet représenté par *punkObj* doit implémenter `IDispatch` (et retourner des informations de type via `IDispatch::GetTypeInfo` ) plus il doit également implémenter `IProvideClassInfo2` ou `IPersist` . Les informations de type de l’interface source doivent se trouver dans la même bibliothèque de types que les informations de type pour `IDispatch` .
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 L’exemple ci-dessous montre comment vous pouvez définir une classe de récepteur d’événements, `CEasySink` , qui réduit le nombre d’arguments de modèle que vous pouvez passer à `IDispEventImpl` la classe Bare Essentials. `EasyAdvise` et `EasyUnadvise` utilisent `AtlGetObjectSourceInterface` pour initialiser les membres [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) avant d’appeler [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) ou [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).
 

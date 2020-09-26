@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 38906579a449941d6dad767afa97a32d63fe3445
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf90adbdbc739a2dd26d8e59ab38e56aef3bd312
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231271"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352932"
 ---
 # <a name="standard-types"></a>Types standard
 
@@ -173,7 +173,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 
 ### <a name="fixed-width-integral-types-stdinth"></a>Types intégraux de largeur fixe (stdint.h)
 
-|Nom|Type intégré équivalent|
+|Name|Type intégré équivalent|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|signed char, unsigned char|
 |int16\_t, uint16\_t|short, unsigned short|
@@ -199,22 +199,22 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Une définition de type pour une fonction de rappel qui sera appelée dans [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> Les paramètres de cette fonction sont : le type de rapport, le message de sortie et la valeur de retour de la fonction de rappel.|CRTDBG.H|
 |`dev_t`, `_dev_t` entier court ou entier non signé|Représente les handles du périphérique.|SYS\TYPES.H|
 |Structure `_diskfree_t`|Contient des informations à propos d'un lecteur de disque. Utilisé par [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H et DIRECT.H|
-|Structures `div_t`, `ldiv_t` et `lldiv_t`|Stockent les valeurs retournées par [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) et [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivement.|STDLIB.H|
+|Structures `div_t`, `ldiv_t` et `lldiv_t`|Stockent les valeurs retournées par [div](reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) et [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivement.|STDLIB.H|
 |Entier `errno_t`|Utilisé pour un type de résultat ou un paramètre de fonction qui traite les codes d'erreur de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Structure `_exception`|Stocke les informations sur l'erreur pour [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
 |`_EXCEPTION_POINTERS`|Contient un enregistrement d'exception. Pour plus d'informations, consultez [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
 |Structure `FILE`|Stocke les informations sur l'état actuel du flux ; utilisé dans toutes les opérations d'E/S de flux.|STDIO.H|
 |Structures `_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t`, `__wfinddata64i32_t`|Stockent les informations d'attribut de fichier retournées par [_findfirst, _wfindfirst, and related functions](../c-runtime-library/reference/findfirst-functions.md) and [_findnext, _wfindnext et les fonctions liées](../c-runtime-library/reference/findnext-functions.md). Pour plus d'informations sur les membres de structures, consultez [Fonctions _find, _wfind](../c-runtime-library/filename-search-functions.md).|IO.H, WCHAR.H|
 |Structure `_FPIEEE_RECORD`|Contient des informations concernant l'exception à virgule flottante IEEE ; passé au gestionnaire d'interruptions défini par l'utilisateur par [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md).|FPIEEE.H|
-|`fpos_t`(entier long, **`__int64`** , ou structure, selon la plateforme cible)|Utilisé par [fgetpos](../c-runtime-library/reference/fgetpos.md) et [fsetpos](../c-runtime-library/reference/fsetpos.md) pour enregistrer des informations afin de spécifier de manière unique chaque position dans un fichier.|STDIO.H|
+|`fpos_t` (entier long, **`__int64`** , ou structure, selon la plateforme cible)|Utilisé par [fgetpos](../c-runtime-library/reference/fgetpos.md) et [fsetpos](../c-runtime-library/reference/fsetpos.md) pour enregistrer des informations afin de spécifier de manière unique chaque position dans un fichier.|STDIO.H|
 |`_fsize_t` (entier long non signé)|Utilisé pour représenter la taille d'un fichier.|IO.H,<br /><br /> WCHAR.H|
 |Structure `_HEAPINFO`|Contient des informations sur l'entrée suivante du tas pour [_heapwalk](../c-runtime-library/reference/heapwalk.md).|MALLOC.H|
 |`_HFILE` (void \*)|Handle de fichiers du système d'exploitation.|CRTDBG.H|
 |`imaxdiv_t`|Type de valeur retournée par la fonction [imaxdiv](../c-runtime-library/reference/imaxdiv.md), contenant le quotient et le reste.|inttypes.h|
 |`ino_t`, `_ino_t` (court non signé)|Pour retourner les informations d'état.|WCHAR.H|
 |`intmax_t`|Un type d'entier signé capable de représenter toute valeur d'un type d'entier signé.|stdint.h|
-|`intptr_t`(entier long ou **`__int64`** , selon la plateforme cible)|Stocke un pointeur (ou le HANDLE) sur des plateformes Win32 et Win64.|STDDEF.H et d'autres fichiers Include|
-|`jmp_buf` tableau|Utilisé par [setjmp](../c-runtime-library/reference/setjmp.md) et [longjmp](../c-runtime-library/reference/longjmp.md) pour enregistrer et restaurer l'environnement de programme.|SETJMP.H|
+|`intptr_t` (entier long ou **`__int64`** , selon la plateforme cible)|Stocke un pointeur (ou le HANDLE) sur des plateformes Win32 et Win64.|STDDEF.H et d'autres fichiers Include|
+|Tableau `jmp_buf`|Utilisé par [setjmp](../c-runtime-library/reference/setjmp.md) et [longjmp](../c-runtime-library/reference/longjmp.md) pour enregistrer et restaurer l'environnement de programme.|SETJMP.H|
 |Structure `lconv`|Contient des règles de mise en forme des valeurs numériques dans plusieurs pays ou régions. Utilisé par [localeconv](../c-runtime-library/reference/localeconv.md).|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (long double ou tableau de caractères non signé)|Utilisé pour représenter une valeur longue double.|STDLIB.H|
 |Structure `_locale_t`|Stocke les valeurs actuelles de paramètres régionaux ; utilisé dans toutes les bibliothèques spécifiques du moteur d'exécution C de paramètres régionaux.|CRTDEFS.H|
@@ -222,7 +222,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 |Entier long `off_t`, `_off_t`|Représente la valeur d'offset du fichier .|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> Pointeur `_onexit_m_t`|Retourné par [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md).|STDLIB.H|
 |Pointeur de fonction `_PNH`|Type d’argument pour [_set_new_handler](../c-runtime-library/reference/set-new-handler.md).|NEW.H|
-|`ptrdiff_t`(entier long ou **`__int64`** , selon la plateforme cible)|Résultat de la soustraction de deux pointeurs.|CRTDEFS.H|
+|`ptrdiff_t` (entier long ou **`__int64`** , selon la plateforme cible)|Résultat de la soustraction de deux pointeurs.|CRTDEFS.H|
 |`_purecall_handler`,<br /><br /> `_purecall_handler_m`|Une définition de type pour une fonction de rappel qui est appelée lorsqu'une fonction virtuelle pure est appelée. Utilisé par [_get_purecall_handler, _set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md). Une fonction `_purecall_handler` doit avoir un type de retour void.|STDLIB.H|
 |Définition de type `_RTC_error_fn`|Une définition de type pour une fonction qui gérera les vérifications des erreurs d'exécution. Utilisé dans [_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md).|RTCAPI.H|
 |Définition de type `_RTC_error_fnW`|Une définition de type pour une fonction qui gérera les vérifications des erreurs d'exécution. Utilisé dans [_RTC_SetErrorFuncW](../c-runtime-library/reference/rtc-seterrorfuncw.md).|RTCAPI.H|
@@ -242,7 +242,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 |Structure `__timeb64`|Utilisé par [_ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md) et [_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md) pour stocker l'heure système actuelle.|SYS\TIMEB.H|
 |Structure `tm`|Utilisé par [asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md), [gmtime, _gmtime32, _gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md), [gmtime_s, _gmtime32_s, _gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md), [localtime, _localtime32, _localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md), [localtime_s, _localtime32_s, _localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md), [mktime, _mktime32, _mktime64](../c-runtime-library/reference/mktime-mktime32-mktime64.md) et [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour stocker et récupérer les informations d'heure.|TIME.H|
 |`uintmax_t`|Un type d'entier non signé capable de représenter toute valeur d'un type d'entier non signé.|stdint.h|
-|`uintptr_t`(entier long ou **`__int64`** , selon la plateforme cible)|Entier non signé ou une version unsigned__int64 de `intptr_t`.|STDDEF.H et d'autres fichiers Include|
+|`uintptr_t` (entier long ou **`__int64`** , selon la plateforme cible)|Entier non signé ou une version unsigned__int64 de `intptr_t`.|STDDEF.H et d'autres fichiers Include|
 |`unexpected_function`|Une définition de type pour une fonction de rappel qui est appelée lorsque [inattendue](../c-runtime-library/reference/unexpected-crt.md) est appelé. Utilisé par [set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md).|EH.H|
 |Structure `_utimbuf`|Stocke les heures d'accès et de modification des fichiers utilisées par [_utime, _wutime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) et [_futime, _futime32, _futime64](../c-runtime-library/reference/futime-futime32-futime64.md) pour modifier les dates de modification des fichiers.|SYS\UTIME.H|
 |Structure `_utimbuf32`|Stocke les heures d'accès et de modification des fichiers utilisées par [_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) et [_futime, _utime32, _utime64](../c-runtime-library/reference/futime-futime32-futime64.md) pour modifier les dates de modification des fichiers.|SYS\UTIME.H|

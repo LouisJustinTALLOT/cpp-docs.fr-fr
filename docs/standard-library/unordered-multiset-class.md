@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 8252ecc7051c1bad2ca1e7683ea32206dd0f10f4
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0730f4eb6ba8e625c2c40cecddc4f689ec775d17
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042028"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352776"
 ---
 # <a name="unordered_multiset-class"></a>unordered_multiset, classe
 
@@ -227,7 +227,7 @@ Classe allocator.
 |-|-|
 |[unordered_multiset :: Operator =](#op_eq)|Copie une table de hachage.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’objet trie la séquence qu’il contrôle en appelant deux objets stockés, un objet de fonction de comparaison de type [unordered_multiset::key_equal](#key_equal) et un objet de fonction de hachage de type [unordered_multiset::hasher](#hasher). Pour accéder au premier objet stocké, appelez la fonction membre [unordered_multiset :: key_eq](#key_eq) `()` ; et vous accédez au deuxième objet stocké en appelant la fonction membre [unordered_multiset :: hash_function](#hash) `()` . Pour toutes les valeurs `X` et `Y` de type `Key`, l'appel `key_eq()(X, Y)` retourne true uniquement si les valeurs des deux arguments ont un classement équivalent. L'appel `hash_function()(keyval)` génère une distribution des valeurs de type `size_t`. Contrairement à la [classe de unordered_set](../standard-library/unordered-set-class.md)de modèle de classe, un objet de type `unordered_multiset` ne garantit pas que `key_eq()(X, Y)` a toujours la valeur false pour deux éléments quelconques de la séquence contrôlée. Il n'est pas nécessaire que les clés soient uniques.
 
@@ -237,7 +237,7 @@ L'ordre réel des éléments de la séquence contrôlée dépend de la fonction 
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un objet allocateur stocké de type [unordered_multiset::allocator_type](#allocator_type). Un tel objet allocateur doit avoir la même interface externe qu’un objet de type `allocator` . Notez que l'objet allocateur stocké n'est pas copié lorsque l'objet conteneur est assigné.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<unordered_set>
 
@@ -251,11 +251,11 @@ Type d’un allocateur pour la gestion du stockage.
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme du paramètre de modèle `Alloc`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_allocator_type.cpp
@@ -300,11 +300,11 @@ const_local_iterator begin(size_type nbucket) const;
 *nbucket*\
 Numéro de compartiment.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les deux premières fonctions membres retournent un itérateur vers l'avant qui pointe vers le premier élément de la séquence (ou juste après la fin d'une séquence vide). Les deux dernières fonctions membres retournent un itérateur vers l’avant qui pointe vers le premier élément d’un compartiment *nbucket* (ou juste après la fin d’un compartiment vide).
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_begin.cpp
@@ -361,11 +361,11 @@ size_type bucket(const Key& keyval) const;
 *keyval*\
 Valeur de clé à mapper.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne le numéro de compartiment correspondant actuellement à la valeur de clé `keyval`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_bucket.cpp
@@ -412,11 +412,11 @@ Obtient le nombre de compartiments.
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne le nombre actuel de comportements.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_bucket_count.cpp
@@ -502,11 +502,11 @@ size_type bucket_size(size_type nbucket) const;
 *nbucket*\
 Numéro de compartiment.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les fonctions membres retournent la taille du compartiment numéro *nbucket*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_bucket_size.cpp
@@ -557,7 +557,7 @@ const_iterator cbegin() const;
 
 **`const`** Itérateur d’accès en avant qui pointe vers le premier élément de la plage, ou vers l’emplacement situé juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()` ).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
@@ -583,7 +583,7 @@ const_iterator cend() const;
 
 **`const`** Itérateur d’accès en avant qui pointe juste après la fin de la plage.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
@@ -607,11 +607,11 @@ Supprime tous les éléments.
 void clear();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre appelle [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_clear.cpp
@@ -674,11 +674,11 @@ Type d'un itérateur constant pour la séquence contrôlée.
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type décrit un objet pouvant servir d'itérateur vers l'avant constant pour la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T1`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_const_iterator.cpp
@@ -717,11 +717,11 @@ Type d’un itérateur de compartiment constant pour la séquence contrôlée.
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type décrit un objet pouvant servir d’itérateur de constante vers l’avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l'implémentation `T5`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_const_local_iterator.cpp
@@ -765,11 +765,11 @@ Type d'un pointeur constant vers un élément.
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type décrit un objet pouvant servir de pointeur constant à un élément de la séquence contrôlée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_const_pointer.cpp
@@ -811,11 +811,11 @@ Type d'une référence constante à un élément.
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type décrit un objet pouvant servir de référence constante à un élément de la séquence contrôlée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_const_reference.cpp
@@ -870,13 +870,13 @@ Valeur de clé de l’élément à rechercher.
 
 `true` Si l’élément est trouvé dans le conteneur ; `false` sinon,.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `contains()` est nouveau dans C++ 20. Pour l’utiliser, spécifiez l’option de compilateur [/std : c + + latest](../build/reference/std-specify-language-standard-version.md) .
 
 `template<class K> bool contains(const K& key) const` participe uniquement à la résolution de surcharge si `key_compare` est transparent.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // Requires /std:c++latest
@@ -913,11 +913,11 @@ size_type count(const Key& keyval) const;
 *keyval*\
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne le nombre d’éléments de la plage délimitée par [unordered_multiset :: equal_range](#equal_range) `(keyval)` .
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_count.cpp
@@ -963,11 +963,11 @@ Type d'une distance signée entre deux éléments.
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T3`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_difference_type.cpp
@@ -1032,7 +1032,7 @@ Les arguments transférés pour construire un élément à insérer dans la clas
 
 Itérateur vers l’élément qui vient d’être inséré.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Aucune référence aux éléments de conteneur n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.
 
@@ -1063,7 +1063,7 @@ Indicateur concernant l’emplacement où commencer à rechercher le point d’i
 
 Itérateur vers l’élément qui vient d’être inséré.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Aucune référence aux éléments de conteneur n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.
 
@@ -1079,11 +1079,11 @@ Vérifie l'absence d'éléments.
 bool empty() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne la valeur true pour une séquence contrôlée vide.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_empty.cpp
@@ -1154,11 +1154,11 @@ const_local_iterator end(size_type nbucket) const;
 *nbucket*\
 Numéro de compartiment.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les deux premières fonctions membres retournent un itérateur vers l'avant qui pointe juste après la fin de la séquence. Les deux dernières fonctions membres retournent un itérateur vers l’avant qui pointe juste après la fin du compartiment *nbucket*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_end.cpp
@@ -1221,11 +1221,11 @@ std::pair<const_iterator, const_iterator>
 *keyval*\
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne une paire d’itérateurs `X` qui `[X.first, X.second)` délimite uniquement les éléments de la séquence contrôlée qui ont un classement équivalent avec *keyVal*. Si aucun de ces éléments n’existe, les deux itérateurs sont `end()`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_equal_range.cpp
@@ -1309,7 +1309,7 @@ Pour les deux premières fonctions membres, un itérateur bidirectionnel qui dé
 
 Pour la troisième fonction membre, retourne le nombre d’éléments qui ont été supprimés de la classe unordered_multiset.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour obtenir un exemple de code, consultez [set::erase](../standard-library/set-class.md#erase).
 
@@ -1326,11 +1326,11 @@ const_iterator find(const Key& keyval) const;
 *keyval*\
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [unordered_multiset :: equal_range](#equal_range) `(keyval).first` .
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_find.cpp
@@ -1381,11 +1381,11 @@ Obtient l’objet allocateur stocké.
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne l’objet d’allocateur stocké.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_get_allocator.cpp
@@ -1419,11 +1419,11 @@ Obtient l'objet de fonction de hachage stocké.
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne l’objet de fonction de hachage stocké.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_hash_function.cpp
@@ -1457,11 +1457,11 @@ Type de la fonction de hachage.
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme du paramètre de modèle `Hash`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_hasher.cpp
@@ -1554,7 +1554,7 @@ Les fonctions membres d'insertion à un élément, (1) et (2), retournent un it�
 
 Les fonctions membres à un élément avec indicateur, (3) et (4), retournent un itérateur qui pointe vers l'emplacement où le nouvel élément a été inséré dans la classe unordered_multiset.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Aucun pointeur ou référence n'est invalidé par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.
 
@@ -1578,7 +1578,7 @@ Type qui fournit un [itérateur vers l’avant](../standard-library/forward-iter
 typedef implementation-defined iterator;
 ```
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 Consultez l’exemple [begin](../standard-library/multiset-class.md#begin) pour savoir comment déclarer et utiliser **iterator**.
 
@@ -1590,11 +1590,11 @@ Obtient l'objet de fonction de comparaison stocké.
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne l’objet de fonction de comparaison stocké.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_key_eq.cpp
@@ -1630,11 +1630,11 @@ Type de la fonction de comparaison.
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme du paramètre de modèle `Pred`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_key_equal.cpp
@@ -1670,11 +1670,11 @@ Type d'une clé de tri.
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme du paramètre de modèle `Key`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_key_type.cpp
@@ -1724,11 +1724,11 @@ Compte le nombre moyen d'éléments par compartiment.
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne `(float)` [unordered_multiset :: Size](#size) `() / (float)` [unordered_multiset :: bucket_count](#bucket_count) `()` , le nombre moyen d’éléments par compartiment.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_load_factor.cpp
@@ -1792,11 +1792,11 @@ Type d'un itérateur de compartiment.
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type décrit un objet pouvant servir d'itérateur vers l'avant pour un compartiment. Il est décrit ici comme un synonyme du type défini par l'implémentation `T4`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_local_iterator.cpp
@@ -1840,11 +1840,11 @@ Obtient le nombre maximal de compartiments.
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne le nombre maximal de compartiments actuellement autorisés.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_max_bucket_count.cpp
@@ -1933,11 +1933,11 @@ void max_load_factor(float factor);
 *factorisés*\
 Nouveau facteur de charge maximale.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première fonction membre retourne le facteur de charge maximale stockée. La deuxième fonction membre remplace le facteur de charge maximale stocké par *Factor*.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_max_load_factor.cpp
@@ -2019,11 +2019,11 @@ Obtient ou définit la taille maximale de la séquence contrôlée.
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne la longueur de la séquence la plus longue que l’objet peut contrôler.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_max_size.cpp
@@ -2061,11 +2061,11 @@ unordered_multiset& operator=(unordered_multiset&& right);
 *Oui*\
 Objet [unordered_multiset](../standard-library/unordered-multiset-class.md) copié dans l’objet `unordered_multiset`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Après l’effacement des éléments existants dans un `unordered_multiset` , `operator=` copie ou déplace le contenu de *droite* dans le `unordered_multiset` .
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // unordered_multiset_operator_as.cpp
@@ -2110,11 +2110,11 @@ Type d'un pointeur vers un élément.
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type décrit un objet pouvant servir de pointeur vers un élément de la séquence contrôlée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_pointer.cpp
@@ -2157,11 +2157,11 @@ Type d'une référence à un élément.
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type décrit un objet qui peut servir de référence à un élément de la séquence contrôlée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_reference.cpp
@@ -2209,11 +2209,11 @@ void rehash(size_type nbuckets);
 *nbuckets*\
 Nombre de compartiments demandés.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre modifie le nombre de compartiments pour qu’elle soit au moins *nbuckets* et reconstruit la table de hachage en fonction des besoins.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_rehash.cpp
@@ -2282,11 +2282,11 @@ Compte le nombre d'éléments.
 size_type size() const;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne la longueur de la séquence contrôlée.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_size.cpp
@@ -2349,11 +2349,11 @@ Type d'une distance non signée entre deux éléments.
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type d'entier non signé décrit un objet qui peut représenter la longueur de n'importe quelle séquence contrôlée. Il est décrit ici comme un synonyme du type défini par l'implémentation `T2`.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_size_type.cpp
@@ -2390,11 +2390,11 @@ void swap(unordered_multiset& right);
 *Oui*\
 Conteneur avec lequel faire l’échange.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre échange les séquences contrôlées entre **`*this`** et *Right*. Si [unordered_multiset :: get_allocator](#get_allocator) `() == right.get_allocator()` , elle le fait en temps constant, elle lève une exception uniquement en raison de la copie de l’objet de traits stocké de type `Tr` , et n’invalide aucune référence, pointeur ou itérateur qui désignent des éléments dans les deux séquences contrôlées. Sinon, elle effectue un nombre d’affectations d’éléments et d’appels de constructeurs proportionnel au nombre d’éléments dans les deux séquences contrôlées.
 
-### <a name="example"></a>Exemple
+### <a name="example"></a> Exemple
 
 ```cpp
 // std__unordered_set__unordered_multiset_swap.cpp
@@ -2524,7 +2524,7 @@ Conteneur à copier.
 *IList*\
 initializer_list depuis laquelle effectuer la copie.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le premier constructeur spécifie une copie de la séquence contrôlée par *Right*. Le deuxième constructeur spécifie une séquence vide contrôlée. Le troisième constructeur insère la séquence de valeurs d'éléments `[First, Last)`. Le quatrième constructeur spécifie une copie de la séquence en se déplaçant vers la *droite*.
 
@@ -2546,7 +2546,7 @@ Type d’un élément.
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Ce type décrit un élément de la séquence contrôlée.
 
@@ -2595,6 +2595,6 @@ int main()
 ## <a name="see-also"></a>Voir aussi
 
 [<unordered_set>](../standard-library/unordered-set.md)\
-[Recipie](../cpp/containers-modern-cpp.md)\
+[Recipie](./stl-containers.md)\
 [Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

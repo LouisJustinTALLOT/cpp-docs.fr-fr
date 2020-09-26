@@ -4,12 +4,12 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 9ac2fdea1a8fc8dcf2b03059455c3141daf86aa8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8db094dd14e63c08fbe8514f245c1777922224cf
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179651"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352711"
 ---
 # <a name="lambda-expression-syntax"></a>Syntaxe d’expression lambda
 
@@ -17,7 +17,7 @@ Cet article décrit la syntaxe et les éléments structuraux des expressions lam
 
 ## <a name="function-objects-vs-lambdas"></a>Comparaison des objets de fonction et des expressions lambda
 
-Lorsque vous écrivez du code, vous utilisez probablement des pointeurs de fonction et des objets de fonction pour résoudre les problèmes et effectuer des calculs, en particulier quand vous utilisez [ C++ des algorithmes de bibliothèque standard](../cpp/algorithms-modern-cpp.md). Les pointeurs de fonction et les objets de fonction présentent chacun des avantages et des inconvénients. Par exemple, les pointeurs de fonction possèdent une charge mémoire syntaxique minimale, mais leur état n'est pas conservé au sein d'une portée. Les objets de fonction, quant à eux, peuvent conserver leur état, mais ils nécessitent la charge mémoire syntaxique d'une définition de classe.
+Lorsque vous écrivez du code, vous utilisez probablement des pointeurs de fonction et des objets de fonction pour résoudre les problèmes et effectuer des calculs, en particulier quand vous utilisez des [algorithmes de bibliothèque standard C++](../standard-library/algorithms.md). Les pointeurs de fonction et les objets de fonction présentent chacun des avantages et des inconvénients. Par exemple, les pointeurs de fonction possèdent une charge mémoire syntaxique minimale, mais leur état n'est pas conservé au sein d'une portée. Les objets de fonction, quant à eux, peuvent conserver leur état, mais ils nécessitent la charge mémoire syntaxique d'une définition de classe.
 
 Une expression lambda combine les avantages des pointeurs et des objets de fonction, tout en évitant leurs inconvénients. Tout comme les objets de fonction, les expressions lambda sont flexibles et peuvent conserver leur état. Toutefois, contrairement aux objets de fonction, leur syntaxe compacte ne requiert pas de définition de classe explicite. Grâce aux expressions lambda, votre code est moins encombré et moins sujet aux erreurs que le code nécessaire pour un objet de fonction équivalent.
 
@@ -83,9 +83,9 @@ Dans l’exemple, le troisième argument de la fonction **for_each** est une exp
 
 ## <a name="example-2-using-a-function-object"></a>Exemple 2 : Utilisation d'un objet de fonction
 
-Il arrive qu'une expression lambda soit trop complexe pour être utilisée autrement que dans l'exemple précédent. L’exemple suivant utilise un objet de fonction au lieu d’une expression lambda, ainsi que la fonction **for_each** , pour produire les mêmes résultats que l’exemple 1. Les deux exemples indiquent le nombre de chiffres pairs dans un objet `vector`. Pour conserver l'état de l'opération, la classe `FunctorClass` enregistre la variable `m_evenCount` par référence comme variable membre. Pour effectuer cette opération, `FunctorClass` implémente l’opérateur d’appel de fonction, **Operator ()** . Le compilateur C++ Microsoft génère du code dont la taille et les performances sont comparables à celles du code lambda de l’exemple 1. Pour un problème simple comme celui de cet article, la plus simple des expressions lambda convient probablement mieux qu'un objet de fonction. Toutefois, si vous pensez que les fonctionnalités peuvent nécessiter une expansion significative à l'avenir, il serait plus judicieux d'utiliser un objet de fonction afin que la maintenance du code soit facilitée.
+Il arrive qu'une expression lambda soit trop complexe pour être utilisée autrement que dans l'exemple précédent. L’exemple suivant utilise un objet de fonction au lieu d’une expression lambda, ainsi que la fonction **for_each** , pour produire les mêmes résultats que l’exemple 1. Les deux exemples indiquent le nombre de chiffres pairs dans un objet `vector`. Pour conserver l'état de l'opération, la classe `FunctorClass` enregistre la variable `m_evenCount` par référence comme variable membre. Pour effectuer cette opération, `FunctorClass` implémente l’opérateur d’appel de fonction, **Operator ()**. Le compilateur Microsoft C++ génère du code dont la taille et les performances sont comparables à celles du code lambda de l’exemple 1. Pour un problème simple comme celui de cet article, la plus simple des expressions lambda convient probablement mieux qu'un objet de fonction. Toutefois, si vous pensez que les fonctionnalités peuvent nécessiter une expansion significative à l'avenir, il serait plus judicieux d'utiliser un objet de fonction afin que la maintenance du code soit facilitée.
 
-Pour plus d’informations sur l' **opérateur ()** , consultez [appel de fonction](../cpp/function-call-cpp.md). Pour plus d’informations sur la fonction **for_each** , consultez [for_each](../standard-library/algorithm-functions.md#for_each).
+Pour plus d’informations sur l' **opérateur ()**, consultez [appel de fonction](../cpp/function-call-cpp.md). Pour plus d’informations sur la fonction **for_each** , consultez [for_each](../standard-library/algorithm-functions.md#for_each).
 
 ### <a name="code"></a>Code
 
@@ -161,9 +161,9 @@ There are 4 even numbers in the vector.
 
 [Expressions lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Exemples d’expressions lambda](../cpp/examples-of-lambda-expressions.md)<br/>
-[generate](../standard-library/algorithm-functions.md#generate)<br/>
+[automatiquement](../standard-library/algorithm-functions.md#generate)<br/>
 [generate_n](../standard-library/algorithm-functions.md#generate_n)<br/>
 [for_each](../standard-library/algorithm-functions.md#for_each)<br/>
 [Spécifications d’exception (throw)](../cpp/exception-specifications-throw-cpp.md)<br/>
-[Avertissement du compilateur (niveau 1) C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)<br/>
-[Modificateurs propres à Microsoft](../cpp/microsoft-specific-modifiers.md)
+[Avertissement du compilateur (niveau 1) C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)<br/>
+[Modificateurs spécifiques à Microsoft](../cpp/microsoft-specific-modifiers.md)

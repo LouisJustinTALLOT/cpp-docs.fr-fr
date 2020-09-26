@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b1fea925c5f6d657e398933b5fb26cf09c28055
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321691"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353153"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistant Composant COM+ 1.0 ATL
 
@@ -29,7 +29,7 @@ Vous pouvez spécifier si l’objet prend en charge les interfaces doubles et Au
 
 À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
 
-## <a name="names"></a>noms
+## <a name="names"></a>Noms
 
 Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à votre projet. À l’exception du champ **Nom court**, tous les autres champs peuvent être modifiés indépendamment des autres. Si vous modifiez le contenu du champ **Nom court**, la modification se reflète dans les noms de tous les autres champs de cette page. Si vous modifiez le nom **CoClasse** dans la section COM, la modification se reflète dans les champs **Type** et **ProgID**. Toutefois, le nom dans le champ **Interface** n’est pas modifié. Ce comportement de nommage est conçu pour rendre tous les noms faciles à identifier lors du développement de votre contrôle.
 
@@ -61,13 +61,13 @@ Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à 
 
    Tous les objets que vous ajoutez après avoir défini cette option sont désignés comme ayant des attributs par défaut (la case est cochée). Vous pouvez effacer ce champ pour y ajouter un objet qui n’utilise pas d’attributs.
 
-   Consultez [Paramètre d’application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [Mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
+   Pour plus d’informations, consultez Paramètres de l' [application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [mécanismes de base des attributs](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) .
 
 ### <a name="com"></a>COM
 
 Fournit des informations sur la fonctionnalité COM de l’objet.
 
-- **CoClasse**
+- **Coclasse**
 
    Définit le nom de la classe du composant qui contient une liste d’interfaces prises en charge par l’objet.
 
@@ -82,7 +82,7 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
 
    Définit l’interface que vous créez pour votre objet. Cette interface contient vos méthodes personnalisées.
 
-- **Progid**
+- **ProgID**
 
    Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
 

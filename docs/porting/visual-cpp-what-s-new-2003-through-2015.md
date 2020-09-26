@@ -2,12 +2,12 @@
 title: Nouveautés de Visual C++ entre 2003 et 2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 8c73cf5fbd35c747f648ad2475a9ad49162a58d9
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: eb76e5455f053717859d0ac571b9d1110d11c33b
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389933"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352633"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -32,7 +32,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - [Améliorations de la conformité dans Visual Studio 2015 Update 3](#VS_Update3)
 
-### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Améliorations de la conformité dans Visual Studio 2015
+### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a> Améliorations de la conformité dans Visual Studio 2015
 
 - **/Zc:forScope- option**
 
@@ -510,7 +510,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Dans Visual Studio 2013 et Visual Studio 2015, le compilateur génère un constructeur de copie pour une classe, si celle-ci a un constructeur de déplacement défini par l’utilisateur mais aucun constructeur de copie personnalisé. Dans Dev14, ce constructeur de copie généré implicitement est également marqué « = delete ».
 
-### <a name="conformance-improvements-in-visual-studio-2015-update-1"></a><a name="VS_Update1"></a>Améliorations de la conformité dans Visual Studio 2015 Update 1
+### <a name="conformance-improvements-in-visual-studio-2015-update-1"></a><a name="VS_Update1"></a> Améliorations de la conformité dans Visual Studio 2015 Update 1
 
 - **Classes de base virtuelles privées et héritage indirecte**
 
@@ -1013,7 +1013,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     }
    ```
 
-### <a name="conformance-improvements-in-visual-studio-2015-update-2"></a><a name="VS_Update2"></a>Améliorations de la conformité dans Visual Studio 2015 Update 2
+### <a name="conformance-improvements-in-visual-studio-2015-update-2"></a><a name="VS_Update2"></a> Améliorations de la conformité dans Visual Studio 2015 Update 2
 
 - **Des erreurs et avertissements supplémentaires peuvent être générés en raison de la prise en charge partielle de l’expression SFINAE.**
 
@@ -1273,13 +1273,13 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Pour corriger le code écrit de cette manière, vous devrez peut-être déplacer les définitions d’opérateur du fichier d’en-tête vers le fichier source correspondant.
 
-### <a name="conformance-improvements-in-visual-studio-2015-update-3"></a><a name="VS_Update3"></a>Améliorations de la conformité dans Visual Studio 2015 Update 3
+### <a name="conformance-improvements-in-visual-studio-2015-update-3"></a><a name="VS_Update3"></a> Améliorations de la conformité dans Visual Studio 2015 Update 3
 
 - **std::is_convertable détecte désormais l’auto-affectation** (bibliothèque standard) Les versions précédentes du trait de type `std::is_convertable` ne détectent pas correctement l’auto-affectation d’un type de classe quand son constructeur de copie est supprimé ou privé. Désormais, `std::is_convertable<>::value` est correctement défini sur **`false`** lorsqu’il est appliqué à un type de classe avec un constructeur de copie supprimé ou privé.
 
    Aucun diagnostic du compilateur n’est associé à cette modification.
 
-   Exemple
+    Exemple
 
    ```cpp
     #include <type_traits>
@@ -1552,8 +1552,8 @@ Prise en charge des fonctionnalités C++14 suivantes :
 - « Foncteurs d’opérateurs transparents » less<>, greater<>, plus<>, multiplies<>, et ainsi de suite.
 - make_unique\<T>(args...) et make_unique<T[]>(n)
 - Fonctions non membres cbegin()/cend(), rbegin()/rend() et crbegin()/crend().
-- \<atomic>a reçu de nombreuses améliorations en matière de performances.
-- \<type_traits>a reçu une stabilisation majeure et des correctifs de code.
+- \<atomic> a reçu de nombreuses améliorations en matière de performances.
+- \<type_traits> a reçu une stabilisation majeure et des correctifs de code.
 
 ### <a name="breaking-changes"></a>Dernières modifications
 
@@ -1790,7 +1790,7 @@ La couverture du code a été mise à jour pour instrumenter dynamiquement des b
 **Mots clés nullptr et __nullptr.** MSVC vous permet d’utiliser le **`nullptr`** mot clé avec du code natif ou avec du code managé. Le **`nullptr`** mot clé indique qu’un handle d’objet, un pointeur intérieur ou un type de pointeur natif ne pointe pas vers un objet. Le compilateur interprète **`nullptr`** comme étant du code managé lorsque vous utilisez l' `/clr` option de compilateur, et le code natif lorsque vous n’utilisez pas l' `/clr` option.
 Le mot clé **__nullptr** spécifique à Microsoft a la même signification que **`nullptr`** , mais il s’applique uniquement au code natif. Si vous compilez du code C/C++ natif à l’aide de l' `/clr` option de compilateur, le compilateur ne peut pas déterminer si le **`nullptr`** mot clé est un terme natif ou managé. Pour que vos intentions soient claires pour le compilateur, utilisez le mot clé nullptr pour spécifier le terme managé et **__nullptr** pour spécifier le terme natif.
 
-**`/Zc:trigraphs`Option du compilateur.** Par défaut, la prise en charge des trigraphes est désactivée. Utilisez l' **`/Zc:trigraphs`** option du compilateur pour activer la prise en charge des trigraphes.
+**`/Zc:trigraphs` Option du compilateur.** Par défaut, la prise en charge des trigraphes est désactivée. Utilisez l' **`/Zc:trigraphs`** option du compilateur pour activer la prise en charge des trigraphes.
 Un trigraphe se compose de deux points d’interrogation consécutifs (??) suivis d’un troisième caractère unique. Le compilateur remplace un trigraphe par le caractère de ponctuation correspondant. Par exemple, le compilateur remplace le trigraphe ??= par # (signe dièse). Utilisez des trigraphes dans les fichiers sources C qui utilisent un jeu de caractères ne contenant pas certains caractères de ponctuation.
 
 **Nouvelle option d’optimisation guidée par profil.** PogoSafeMode est une nouvelle option d’optimisation guidée par profil qui vous permet de spécifier s’il faut utiliser le mode sans échec ou le mode rapide quand vous optimisez votre application. Le mode sans échec est thread-safe, mais il est plus lent que le mode rapide. Le mode rapide est le comportement par défaut.
@@ -1878,7 +1878,7 @@ En raison de cette séparation des tâches, les fonctionnalités de navigation t
 
 **Assistant classe MFC.** Visual C++ 2010 rétablit l’outil Assistant classe MFC très apprécié. L’Assistant Classe MFC est un moyen pratique d’ajouter des classes, des messages et des variables à un projet sans avoir à modifier manuellement des ensembles de fichiers sources.
 
-**Assistant contrôle ATL.** L’Assistant Contrôle ATL ne remplit plus automatiquement le champ `ProgID`. Si un contrôle ATL n’a pas de `ProgID`, les autres outils risquent de ne pas fonctionner avec lui. La boîte de dialogue **Insérer un contrôle ActiveX** est un exemple d’outil pour lequel les contrôles doivent avoir un `ProgID`. Pour plus d’informations sur cette boîte de dialogue, consultez **Insérer un contrôle ActiveX, boîte de dialogue**.
+**Assistant contrôle ATL.** L’Assistant Contrôle ATL ne remplit plus automatiquement le champ `ProgID`. Si un contrôle ATL n’a pas de `ProgID`, les autres outils risquent de ne pas fonctionner avec lui. La boîte de dialogue **Insérer un contrôle ActiveX** est un exemple d’outil pour lequel les contrôles doivent avoir un `ProgID`. Pour plus d’informations sur la boîte de dialogue, consultez [Insérer des contrôles ActiveX](../windows/adding-editing-or-deleting-controls.md#insert-activex-controls).
 
 ### <a name="microsoft-macro-assembler-reference"></a>Référence de Microsoft Macro Assembler
 
@@ -2052,7 +2052,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 - Le modificateur `restrictdeclspec` a été ajouté.
 - **`__thiscall`** est désormais un mot clé.
 - **`__unaligned`** le mot clé est maintenant documenté.
-- **`volatile`**(C++) a mis à jour le comportement en ce qui concerne les optimisations.
+- **`volatile`** (C++) a mis à jour le comportement en ce qui concerne les optimisations.
 
 ### <a name="new-preprocessor-features"></a>Nouvelles fonctionnalités du préprocesseur
 
@@ -2185,7 +2185,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 - Dans la rubrique relative à chaque fonction, une section sur les équivalents .NET Framework a été ajoutée.
 - Plusieurs fonctions de chaîne peuvent désormais tronquer les chaînes au lieu de retourner un échec d’exécution quand les mémoires tampons de sortie sont trop petites. Consultez **_TRUNCATE**.
 - `_set_se_translator` nécessite désormais l’utilisation de l’option de compilateur `/EHa`.
-- `fpos_t`est maintenant **`__int64`** sous `/Za` (pour le code C) et quand __STDC__ est défini manuellement (pour le code C++). Il s’agissait d’un **`struct`** .
+- `fpos_t` est maintenant **`__int64`** sous `/Za` (pour le code C) et quand __STDC__ est défini manuellement (pour le code C++). Il s’agissait d’un **`struct`** .
 - _CRT_DISABLE_PERFCRIT_LOCKS peuvent améliorer les performances d’E/S de programmes monothread.
 - Les noms POSIX ont été dépréciés en faveur des noms conformes à ISO C++ (par exemple, utilisez `_getch` plutôt que `getch`).
 - De nouveaux fichiers .obj d’options de lien sont disponibles en mode pur.

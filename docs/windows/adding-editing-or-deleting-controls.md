@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831682"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352750"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Comment : ajouter, modifier ou supprimer des contrôles (C++)
 
@@ -146,7 +146,7 @@ Dans la boîte de dialogue, sélectionnez le contrôle, appuyez sur la touche **
 
 ## <a name="other-issues"></a>Autres problèmes
 
-### <a name="troubleshooting"></a>Résolution des problèmes
+### <a name="troubleshooting"></a>Dépannage
 
 Une fois que vous avez ajouté un contrôle commun ou un contrôle RichEdit à une boîte de dialogue, il n’apparaît pas lorsque vous testez la boîte de dialogue. Ou la boîte de dialogue elle-même ne s’affiche pas. Par exemple :
 
@@ -201,13 +201,13 @@ Pour utiliser des contrôles RichEdit, vous devez appeler `LoadLibrary` . Pour p
 >
 > Vous pouvez utiliser la classe actuelle [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) avec l’ancien contrôle RichEdit 1,0, mais `CRichEditCtrl` est conçu uniquement pour prendre en charge le contrôle RichEdit 2,0. Étant donné que RichEdit 1,0 et RichEdit 2,0 sont similaires, la plupart des méthodes fonctionnent. Toutefois, il existe des différences entre les contrôles 1,0 et 2,0, donc certaines méthodes peuvent fonctionner de manière incorrecte ou ne pas fonctionner du tout.
 
-### <a name="activex-controls"></a>Contrôles ActiveX
+## <a name="insert-activex-controls"></a>Insérer des contrôles ActiveX
 
 Avec Visual Studio, vous pouvez insérer des contrôles ActiveX dans votre boîte de dialogue. Pour plus d’informations, consultez [contrôles ActiveX MFC](../mfc/mfc-activex-controls.md) et [conteneurs de contrôles ActiveX](../mfc/activex-control-containers.md).
 
 La boîte de dialogue **Insérer un contrôle ActiveX** vous permet d’insérer des contrôles ActiveX dans votre boîte de dialogue tout en utilisant l' [éditeur de boîtes de dialogue](dialog-editor.md). Cette boîte de dialogue contient les propriétés suivantes :
 
-|Propriété|Description|
+|Property|Description|
 |---|---|
 |**Contrôle ActiveX**|Affiche la liste des contrôles ActiveX.<br/><br/>L’insertion d’un contrôle à partir de cette boîte de dialogue ne génère pas de classe wrapper. Si vous avez besoin d’une classe wrapper, utilisez [affichage de classes](/visualstudio/ide/viewing-the-structure-of-code) pour en créer une, consultez [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md).<br/><br/>Si un contrôle ActiveX n’apparaît pas dans cette boîte de dialogue, essayez d’installer le contrôle conformément aux instructions du fournisseur.|
 |**Chemin d’accès**|Affiche le fichier dans lequel le contrôle ActiveX est trouvé.|
@@ -215,7 +215,7 @@ La boîte de dialogue **Insérer un contrôle ActiveX** vous permet d’insérer
 > [!CAUTION]
 > Il se peut que la distribution de tous les contrôles ActiveX sur votre système ne soit pas autorisée juridiquement. Reportez-vous au contrat de licence du logiciel qui a installé les contrôles ou contactez l’éditeur du logiciel.
 
-#### <a name="to-add-an-activex-control"></a>Pour ajouter un contrôle ActiveX
+### <a name="to-add-an-activex-control"></a>Pour ajouter un contrôle ActiveX
 
 1. Ouvrez une boîte de dialogue dans l' **éditeur de boîtes de dialogue**.
 
@@ -230,7 +230,7 @@ La boîte de dialogue **Insérer un contrôle ActiveX** vous permet d’insérer
 > [!TIP]
 > Vous pouvez utiliser le menu contextuel de l' **éditeur de boîtes de dialogue** pour ajouter rapidement des contrôles ActiveX inscrits à une boîte de dialogue ou essayer d’ajouter des contrôles ActiveX à la fenêtre **boîte à outils** pour y accéder facilement.
 
-#### <a name="to-edit-properties-for-an-activex-control"></a>Pour modifier les propriétés d’un contrôle ActiveX
+### <a name="to-edit-properties-for-an-activex-control"></a>Pour modifier les propriétés d’un contrôle ActiveX
 
 Les contrôles ActiveX fournis par des fournisseurs indépendants peuvent être dotés de leurs propres propriétés et caractéristiques. Ces propriétés sont affichées dans la fenêtre **Propriétés** . Toutes les pages de propriétés créées par les enregistreurs du contrôle ActiveX s’affichent dans la boîte de dialogue **pages de propriétés** . (Pour afficher la **page de propriétés** d’un contrôle ActiveX spécifique, sélectionnez le bouton **page de propriétés** dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window)).
 
@@ -241,7 +241,7 @@ Les contrôles ActiveX fournis par des fournisseurs indépendants peuvent être 
 > [!NOTE]
 > Cette procédure s’applique à l’utilisation de la page de propriétés pour modifier les contrôles ActiveX. Vous pouvez également parcourir et modifier les propriétés ActiveX dans la nouvelle fenêtre **Propriétés** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

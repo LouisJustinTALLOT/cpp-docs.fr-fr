@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: fdd8a4be8830dc4b2ac1a559194828a4d2f56ab0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c98ff1fd44b73b3f204e9b952836c387f7f21146
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623484"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353088"
 ---
 # <a name="accelerator-editor-c"></a>Éditeur d’accélérateurs (C++)
 
@@ -69,10 +69,10 @@ La propriété de **modificateur** définit des combinaisons de touches de contr
 
 Les éléments suivants sont des entrées légales pour la propriété de **modificateur** dans la table d’accélérateurs :
 
-   |Valeur|Description|
+   |Value|Description|
    |-----------|-----------------|
    |**Aucun**|L’utilisateur appuie uniquement sur la valeur de **clé** .<br/><br/>Cette valeur est utilisée le plus efficacement avec les valeurs ASCII/ANSI 001 à 026, qui est interprétée comme ^ A à ^ Z (**Ctrl + A** à **Ctrl + Z**).|
-   |**Alt**|L’utilisateur doit appuyer sur **ALT** avant la valeur de la **clé** .|
+   |**Appuyez**|L’utilisateur doit appuyer sur **ALT** avant la valeur de la **clé** .|
    |**Clavier**|L’utilisateur doit appuyer sur **CTRL** avant la valeur de **clé** , non valide avec le type ASCII.|
    |**Majuscule**|L’utilisateur doit appuyer sur **MAJ** avant la valeur de **clé** .|
    |**Ctrl + Alt**|L’utilisateur doit appuyer sur **CTRL** et **ALT** avant la valeur de **clé** , non valide avec le type ASCII.|
@@ -84,7 +84,7 @@ La propriété **Key** définit la clé réelle à utiliser comme accélérateur
 
 Les éléments suivants sont des entrées légales pour la propriété de **clé** dans la table d’accélérateurs :
 
-   |Valeur|Description|
+   |Value|Description|
    |-----------|-----------------|
    |Entier compris entre 0 et 255 au format décimal.|La valeur détermine si la valeur est traitée comme ASCII ou ANSI comme suit :<br/><br/>   -Les nombres à un chiffre sont toujours interprétés comme la clé correspondante, plutôt que comme valeurs ASCII ou ANSI.<br/>   -Les valeurs comprises entre 1 et 26, quand elles sont précédées de zéros, sont interprétées comme ^ A à ^ Z, ce qui représente la valeur ASCII des lettres de l’alphabet quand vous appuyez sur la touche **CTRL** enfoncée.<br/>   -Les valeurs de 27-32 sont toujours interprétées comme des valeurs décimales à trois chiffres de 027 à 032.<br/>   -Les valeurs comprises entre 033 et 255, qu’elles soient précédées de 0 ou non, sont interprétées comme des valeurs ANSI.|
    |Caractère de clavier unique.|Les lettres A à Z ou les nombres 0-9 peuvent être des valeurs de clé virtuelle ou ASCII. Tout autre caractère est ASCII uniquement.|
@@ -184,9 +184,9 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 1. Accédez à la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) et tapez les valeurs que vous souhaitez que tous les accélérateurs sélectionnés partagent.
 
 > [!NOTE]
-> Chaque valeur de modificateur apparaît sous la forme d’une propriété booléenne dans la fenêtre **Propriétés** . Si vous modifiez une valeur de [modificateur](../windows/accelerator-modifier-property.md) dans la fenêtre **Propriétés** , la table d’accélérateurs traite le nouveau modificateur comme un ajout à tous les modificateurs qui étaient auparavant. Pour cette raison, si vous définissez des valeurs de modificateur, vous devez les définir toutes pour vous assurer que chaque accélérateur partage les mêmes paramètres de **modificateur** .
+> Chaque valeur de modificateur apparaît sous la forme d’une propriété booléenne dans la fenêtre **Propriétés** . Si vous modifiez une valeur de modificateur dans la fenêtre **Propriétés** , la table d’accélérateurs traite le nouveau modificateur comme un ajout à tous les modificateurs qui étaient auparavant. Pour cette raison, si vous définissez des valeurs de modificateur, vous devez les définir toutes pour vous assurer que chaque accélérateur partage les mêmes paramètres de **modificateur** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

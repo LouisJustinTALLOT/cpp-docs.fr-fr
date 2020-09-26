@@ -4,12 +4,12 @@ description: Décrit les nouveaux idiomes de programmation dans le C++ moderne e
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: 05c1fe80086e5b98d3f8a9c66c6759fddab39fa0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "87232194"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353049"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>Re-bienvenue dans C++ - C++ moderne
 
@@ -75,7 +75,7 @@ Lorsque vous avez besoin de l’optimisation des performances, envisagez d’uti
 
 - Conteneurs associatifs non ordonnés, tels que [`unordered_map`](../standard-library/unordered-map-class.md) . Celles-ci ont une surcharge par élément réduite et une recherche à temps constant, mais elles peuvent être plus difficiles à utiliser correctement et efficacement.
 
-- Trié `vector` . Pour plus d’informations, consultez [Algorithmes](../cpp/algorithms-modern-cpp.md).
+- Trié `vector` . Pour plus d’informations, consultez [Algorithmes](../standard-library/algorithms.md).
 
 N’utilisez pas de tableaux de style C. Pour les API plus anciennes qui nécessitent un accès direct aux données, utilisez plutôt des méthodes d’accesseur `f(vec.data(), vec.size());` . Pour plus d’informations sur les conteneurs, consultez [conteneurs de bibliothèque standard C++](../standard-library/stl-containers.md).
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: f052c39424fc2ee6f43f249e3034be7c464d016c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3359c17996eb78c3249abc83ff2d439381f209fe
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833385"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352984"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>Interface IAxWinAmbientDispatchEx
 
@@ -46,9 +46,9 @@ Cette interface est exposée par les objets hébergeant le contrôle ActiveX de 
 
 Si vous établissez une liaison à ATL90.dll, **AxHost** chargera les informations de type à partir de la bibliothèque de types dans la dll.
 
-Pour plus d’informations, consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
+Pour plus d’informations, consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La définition de cette interface est disponible dans plusieurs formulaires, comme indiqué dans le tableau suivant.
 
@@ -71,7 +71,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 *pDispatch*<br/>
 Pointeur vers la nouvelle interface.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 

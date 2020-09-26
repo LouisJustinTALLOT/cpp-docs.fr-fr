@@ -6,16 +6,16 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: cb949f9a17a6b751dae40202bf82e6cb321b526b
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: 6d002f2baa6657c13ffc603e74828ab60585d3a9
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565961"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352789"
 ---
 # <a name="arrays-c"></a>Tableaux (C++)
 
-Un tableau est une séquence d’objets du même type qui occupent une zone contiguë de mémoire. Les tableaux de style C traditionnels sont la source de nombreux bogues, mais restent communs, en particulier dans les bases de code plus anciennes. Dans le C++ moderne, nous vous recommandons fortement d’utiliser [std :: Vector](../standard-library/vector-class.md) ou [std :: Array](../standard-library/array-class-stl.md) au lieu des tableaux de style C décrits dans cette section. Ces deux types de bibliothèques standard stockent leurs éléments sous la forme d’un bloc de mémoire contigu. Toutefois, ils offrent une plus grande sécurité de type et prennent en charge des itérateurs garantissant qu’ils pointent vers un emplacement valide dans la séquence. Pour plus d’informations, consultez [conteneurs (Modern C++)](containers-modern-cpp.md).
+Un tableau est une séquence d’objets du même type qui occupent une zone contiguë de mémoire. Les tableaux de style C traditionnels sont la source de nombreux bogues, mais restent communs, en particulier dans les bases de code plus anciennes. Dans le C++ moderne, nous vous recommandons fortement d’utiliser [std :: Vector](../standard-library/vector-class.md) ou [std :: Array](../standard-library/array-class-stl.md) au lieu des tableaux de style C décrits dans cette section. Ces deux types de bibliothèques standard stockent leurs éléments sous la forme d’un bloc de mémoire contigu. Toutefois, ils offrent une plus grande sécurité de type et prennent en charge des itérateurs garantissant qu’ils pointent vers un emplacement valide dans la séquence. Pour plus d’informations, consultez [conteneurs](../standard-library/stl-containers.md).
 
 ## <a name="stack-declarations"></a>Déclarations de pile
 
@@ -195,7 +195,7 @@ L’utilisation de l’opérateur d’indirection (*) sur un type de tableau mul
 
 Les tableaux C++ sont stockés dans l'ordre row-major. L'ordre row-major signifie que le dernier indice varie le plus rapidement.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Vous pouvez également omettre la spécification des limites de la première dimension d’un tableau multidimensionnel dans les déclarations de fonction, comme illustré ici :
 

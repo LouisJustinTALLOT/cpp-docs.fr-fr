@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: a53481a57676b5b4a253a3501d3536e5115907a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dbd682451ca5499aef4b16b3b51feba8411bdd12
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833411"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352958"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interface IAxWinAmbientDispatch
 
@@ -98,9 +98,9 @@ Cette interface est exposée par les objets hébergeant le contrôle ActiveX de 
 
 Si vous établissez une liaison à ATL90.dll, **AxHost** chargera les informations de type à partir de la TypeLib dans la dll.
 
-Pour plus d’informations, consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) .
+Pour plus d’informations, consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La définition de cette interface est disponible dans plusieurs formulaires, comme indiqué dans le tableau ci-dessous.
 
@@ -123,7 +123,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 *pbAllowContextMenu*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -144,7 +144,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 *pbAllowShowUI*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -165,7 +165,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 *pbAllowWindowless*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -186,7 +186,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 *pclrBackground*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -207,7 +207,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 *pbDisplayAsDefault*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -228,7 +228,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 *pdwDocHostDoubleClickFlags*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -249,7 +249,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 *pdwDocHostFlags*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -270,7 +270,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 *pFont*<br/>
 à Adresse d’un `IFontDisp` pointeur d’interface utilisé pour recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -291,7 +291,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 *pclrForeground*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -312,7 +312,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 *plcidLocaleID*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -335,7 +335,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 *pbMessageReflect*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -356,7 +356,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 *pbstrOptionKeyPath*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -373,7 +373,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 *pbShowGrabHandles*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -394,7 +394,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 *pbShowHatching*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -415,7 +415,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 *pbUserMode*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -436,7 +436,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 *bAllowContextMenu*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -457,7 +457,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 *bAllowShowUI*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -478,7 +478,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 *bAllowWindowless*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -499,7 +499,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 *clrBackground*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -520,7 +520,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 *bDisplayAsDefault*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -541,7 +541,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 *dwDocHostDoubleClickFlags*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -562,7 +562,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 *dwDocHostFlags*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -583,7 +583,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 *pFont*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -604,7 +604,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 *clrForeground*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -625,7 +625,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 *lcidLocaleID*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -646,7 +646,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 *bMessageReflect*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -667,7 +667,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 *bstrOptionKeyPath*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
@@ -684,7 +684,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 *bUserMode*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
