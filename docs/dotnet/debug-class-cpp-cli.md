@@ -6,26 +6,26 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 3a262a0d2ef429cb94f4648eb7c7180e7b130279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393777"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414150"
 ---
 # <a name="debug-class-ccli"></a>Classe de débogage (C++/CLI)
 
-Lorsque vous utilisez <xref:System.Diagnostics.Debug> dans une application Visual C++, le comportement ne change pas entre un débogage et une version Release.
+Lors de l’utilisation <xref:System.Diagnostics.Debug> de dans une application Visual C++, le comportement ne change pas entre une version Debug et une version Release.
 
 ## <a name="remarks"></a>Notes
 
-Le comportement pour <xref:System.Diagnostics.Trace> est identique au comportement de la classe Debug, mais dépend du symbole TRACE défini. Cela signifie que vous devez `#ifdef` n’importe quel code liées à la Trace pour éviter tout comportement de débogage dans une version Release.
+Le comportement de <xref:System.Diagnostics.Trace> est identique à celui de la classe Debug, mais dépend de la trace Symbol définie. Cela signifie que vous devez disposer `#ifdef` d’un code lié à la trace pour empêcher le comportement de débogage dans une version Release.
 
-## <a name="example"></a>Exemple
+## <a name="example-always-executes-output-statements"></a>Exemple : exécute toujours les instructions OUTPUT
 
 ### <a name="description"></a>Description
 
-L’exemple suivant exécute toujours les instructions de sortie, quelle que soit la compilation s’effectue avec **/DDEBUG** ou **/DTRACE**.
+L’exemple suivant exécute toujours les instructions de sortie, que vous compiliiez avec **/DDEBUG** ou **/DTrace**.
 
 ### <a name="code"></a>Code
 
@@ -58,11 +58,11 @@ Hello World.
 test
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-use-ifdef-and-endif-directives"></a>Exemple : utiliser des directives #ifdef et #endif
 
 ### <a name="description"></a>Description
 
-Pour obtenir le comportement attendu (autrement dit, pas de sortie « test » imprimée pour une version Release), vous devez utiliser le `#ifdef` et `#endif` directives. L’exemple de code précédent est modifié ci-dessous pour illustrer ce correctif :
+Pour obtenir le comportement attendu (autrement dit, aucune sortie « test » imprimée pour une version Release), vous devez utiliser les `#ifdef` `#endif` directives et. L’exemple de code précédent est modifié ci-dessous pour illustrer ce correctif :
 
 ### <a name="code"></a>Code
 
@@ -93,4 +93,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

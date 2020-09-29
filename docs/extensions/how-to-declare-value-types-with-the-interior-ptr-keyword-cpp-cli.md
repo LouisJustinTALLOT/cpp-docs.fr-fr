@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5d17f3621271faa03e30e24f259d8d7cebbb491
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195575"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414488"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Comment : déclarer des types de valeur avec le mot clé interior_ptr (C++/CLI)
 
@@ -20,7 +20,7 @@ Un **interior_ptr** peut être utilisé avec un type valeur.
 > [!IMPORTANT]
 > Cette fonctionnalité de langage est prise en charge par l’option du compilateur `/clr`, mais pas par l’option du compilateur `/ZW`.
 
-## <a name="example"></a>Exemple
+## <a name="example-interior_ptr-with-value-type"></a>Exemple : interior_ptr avec le type valeur
 
 ### <a name="description"></a>Description
 
@@ -65,7 +65,7 @@ int main() {
 3
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-this-pointer"></a>Exemple : ce pointeur
 
 ### <a name="description"></a>Description
 
@@ -87,7 +87,7 @@ value struct V {
 };
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-address-of-operator"></a>Exemple : opérateur d’adresse
 
 ### <a name="description"></a>Description
 

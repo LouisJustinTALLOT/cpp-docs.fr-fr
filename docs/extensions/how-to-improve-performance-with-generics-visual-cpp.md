@@ -1,5 +1,5 @@
 ---
-title: 'Comment : améliorer les performances avec des génériques (C++/CLI)'
+title: Guide pratique pour améliorer les performances avec des génériques (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 039c5b069351249e51d961d9d1757ed6b09ef99c
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181939"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414163"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>Comment : améliorer les performances avec des génériques (C++/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Guide pratique pour améliorer les performances avec des génériques (C++/CLI)
 
 Avec les génériques, vous pouvez créer du code réutilisable basé sur un paramètre de type. Le type réel du paramètre de type est différé jusqu’à ce qu’il soit appelé par le code client. Pour plus d’informations sur les types génériques, consultez [Generics](generics-cpp-component-extensions.md).
 
 Cet article explique comment les génériques permettent d’augmenter les performances d’une application qui utilise des collections.
 
-## <a name="example"></a>Exemple
+## <a name="example-two-main-drawbacks-of-net-framework-collections"></a>Exemple : deux inconvénients principaux des regroupements de .NET Framework
 
 .NET Framework est livré avec de nombreuses classes de collection dans l’espace de noms <xref:System.Collections?displayProperty=fullName>. La plupart de ces collections fonctionnent sur des objets de type <xref:System.Object?displayProperty=fullName>. Ainsi, les collections peuvent stocker tous les types, étant donné que tous les types dans le .NET Framework, y compris les types valeur, dérivent de <xref:System.Object?displayProperty=fullName>. Cependant, il existe deux inconvénients à cette approche.
 
@@ -78,7 +78,7 @@ Popped a String: Seven
 Popped an int: 7
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-benefit-of-using-generic-collection"></a>Exemple : avantage de l’utilisation de la collection générique
 
 Le nouvel espace de noms <xref:System.Collections.Generic?displayProperty=fullName> contient la plupart des collections qui se trouvent dans l’espace de noms <xref:System.Collections?displayProperty=fullName>, mais celles-ci ont été modifiées pour accepter les paramètres de type générique. Cela permet d’éliminer les deux inconvénients des collections non génériques : la conversion boxing et unboxing des types valeur et l’incapacité de spécifier les types à stocker dans les collections. Les opérations sur les deux collections sont identiques ; elles diffèrent uniquement dans la façon dont elles sont instanciées.
 

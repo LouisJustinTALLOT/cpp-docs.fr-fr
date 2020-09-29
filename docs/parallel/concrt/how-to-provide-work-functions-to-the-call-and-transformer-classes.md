@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: cecb8b2e6ab3f3ac8b010007018b76e6f58e0ed8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b629d0e0e11388e212c56b8e1f6bea290368c884
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205884"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414345"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Comment : fournir des fonctions de travail aux classes call et transformer
 
@@ -21,7 +21,7 @@ Le premier exemple montre comment passer une expression lambda à un `call` obje
 
 À titre d’illustration, chaque exemple de cette rubrique utilise la `call` classe. Pour obtenir un exemple qui utilise la `transformer` classe, consultez [How to : Use transformer in a data pipeline](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
-## <a name="example"></a>Exemple
+## <a name="example-call-class"></a>Exemple : classe Call
 
 L’exemple suivant illustre une méthode courante pour utiliser la `call` classe. Cet exemple passe une fonction lambda au `call` constructeur.
 
@@ -33,13 +33,13 @@ Cet exemple produit la sortie suivante.
 13 squared is 169.
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-call-class-with-function-object"></a>Exemple : appeler une classe avec un objet de fonction
 
 L’exemple suivant ressemble au précédent, à la différence qu’il utilise la `call` classe avec un objet de fonction (functor).
 
 [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]
 
-## <a name="example"></a>Exemple
+## <a name="example-functions-to-bind-call-object"></a>Exemple : fonctions permettant de lier l’objet d’appel
 
 L’exemple suivant ressemble au précédent, à ceci près qu’il utilise les fonctions [std :: bind1st](../../standard-library/functional-functions.md#bind1st) et [std :: mem_fun](../../standard-library/functional-functions.md#mem_fun) pour lier un `call` objet à une méthode de classe.
 

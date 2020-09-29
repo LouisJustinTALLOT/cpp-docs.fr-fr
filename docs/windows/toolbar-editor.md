@@ -1,6 +1,7 @@
 ---
 title: Éditeur de barres d’outils (C++)
-ms.date: 02/14/2019
+description: Utilisez l’éditeur de barres d’outils de Visual Studio pour créer des ressources de barre d’outils et convertir des bitmaps en ressources de barre d’outils.
+ms.date: 09/26/2020
 f1_keywords:
 - vc.editors.toolbar.F1
 - vc.editors.toolbar
@@ -50,29 +51,29 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: ca7f031cbdcfc3378a0917e84b257fd7212563e1
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 042bfafb1e55d45145306a8c388e1e3559fa9a33
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353023"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413799"
 ---
 # <a name="toolbar-editor-c"></a>Éditeur de barres d’outils (C++)
 
-L' **éditeur de barres d'** outils vous permet de créer des ressources de barre d’outils et de convertir des bitmaps en ressources de barre d’outils. L' **éditeur de barres d’outils** utilise un affichage graphique pour afficher une barre d’outils et des boutons qui ressemblent à la façon dont ils s’affichent dans une application finie.
+L' **éditeur de barres d'** outils vous permet de créer des ressources de barre d’outils et de convertir des bitmaps en ressources de barre d’outils. L' **éditeur de barres d’outils** utilise un affichage graphique. Il affiche une barre d’outils et des boutons qui ressemblent à la façon dont ils s’affichent dans une application finie.
 
-La fenêtre de l' **éditeur de barres d’outils** affiche deux vues d’une image de bouton, identique à la fenêtre de l' **éditeur d’images** . Une barre de fractionnement sépare les deux volets et vous pouvez faire glisser la barre de fractionnement d’un côté à l’autre pour modifier les tailles relatives des volets. Le volet actif affiche une bordure de sélection et au-dessus des deux affichages de l’image est la barre d’outils objet.
+La fenêtre de l' **éditeur de barres d’outils** affiche deux vues d’une image de bouton, identique à la fenêtre de l' **éditeur d’images** . Une barre de fractionnement sépare les deux volets. Pour modifier les tailles relatives des volets, vous pouvez faire glisser la barre de fractionnement d’un côté à l’autre. Le volet actif affiche une bordure de sélection et au-dessus des deux affichages de l’image est la barre d’outils objet.
 
 ![Éditeur de barres d’outils](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")<br/>
 **Éditeur de barres d’outils**
 
-L' **éditeur de barres d’outils** est similaire à l' **éditeur d’images** dans les fonctionnalités, et les éléments de menu, les outils graphiques et la grille bitmap entre les deux sont les mêmes. Il existe une commande de menu dans le menu **image** pour basculer entre l' **éditeur de barres d’outils** et l' **éditeur d’images**. Pour plus d’informations sur l’utilisation de la barre d’outils **graphiques** , la palette de **couleurs** ou le menu **image** , consultez [éditeur d’images](../windows/image-editor-for-icons.md).
+L' **éditeur de barres d’outils** est semblable à l' **éditeur d’images** dans fonctionnalité. Les éléments de menu, les outils graphiques et la grille bitmap entre les deux sont les mêmes. Il existe une commande de menu dans le menu **image** pour basculer entre l' **éditeur de barres d’outils** et l' **éditeur d’images**. Pour plus d’informations sur l’utilisation de la barre d’outils **graphiques** , la palette de **couleurs** ou le menu **image** , consultez [éditeur d’images](../windows/image-editor-for-icons.md).
 
-Vous pouvez créer une nouvelle barre d’outils dans un projet C++ en convertissant une bitmap. Le graphique de la bitmap est converti en images de bouton pour une barre d’outils. En règle générale, la bitmap contient plusieurs images de bouton sur une seule bitmap, avec une image pour chaque bouton. Les images peuvent avoir n’importe quelle taille, car la valeur par défaut est de 16 pixels de largeur et la hauteur de l’image. Vous pouvez spécifier la taille des images de bouton dans la boîte de dialogue **nouvelle ressource de barre d’outils** lorsque vous choisissez **éditeur de barres d'** outils dans le menu **image** et dans l' **éditeur d’images**.
+Vous pouvez créer une nouvelle barre d’outils dans un projet C++ en convertissant une bitmap. Le graphique de la bitmap est converti en images de bouton pour une barre d’outils. En règle générale, la bitmap contient plusieurs images de bouton sur une seule bitmap, avec une image pour chaque bouton. Les images peuvent avoir n’importe quelle taille, car la valeur par défaut est de 16 pixels de largeur et la hauteur de l’image. Vous pouvez spécifier la taille des images de bouton dans la boîte de dialogue **nouvelle ressource de barre d’outils** . Pour spécifier des tailles, choisissez **éditeur de barres d’outils** dans le menu **image** , dans l' **éditeur d’images**.
 
 La boîte de dialogue **nouvelle ressource de barre d’outils** vous permet de spécifier la largeur et la hauteur des boutons que vous ajoutez à une ressource de barre d’outils dans un projet C++. La valeur par défaut est 16 × 15 pixels.
 
-Une image bitmap utilisée pour créer une barre d’outils a une largeur maximale de 2048. par conséquent, si vous définissez la **largeur du bouton** sur *512*, vous ne pouvez avoir que quatre boutons. Si vous définissez la largeur sur *513*, vous ne pouvez avoir que trois boutons.
+Une bitmap utilisée pour créer une barre d’outils a une largeur maximale de 2048. Si vous définissez la **largeur du bouton** sur *512*, vous ne pouvez avoir que quatre boutons. Et, si vous définissez la largeur sur *513*, vous ne pouvez avoir que trois boutons.
 
 La boîte **de dialogue nouvelle ressource de barre d’outils** présente les propriétés suivantes :
 
@@ -84,7 +85,7 @@ La boîte **de dialogue nouvelle ressource de barre d’outils** présente les p
 > [!NOTE]
 > Les images sont rognées à la largeur et à la hauteur spécifiées, et les couleurs sont ajustées pour utiliser les couleurs de barre d’outils standard (16 couleurs).
 
-Par défaut, un bouton nouveau ou vide s’affiche à l’extrémité droite de la barre d’outils. Vous pouvez déplacer ce bouton avant de le modifier. Lorsque vous créez un nouveau bouton, un autre bouton vide apparaît à droite du bouton modifié. Lorsque vous enregistrez une barre d’outils, le bouton vide n’est pas enregistré.
+Par défaut, une barre d’outils affiche un bouton nouveau ou vide à l’extrémité droite de la barre d’outils. Vous pouvez déplacer ce bouton avant de le modifier. Lorsque vous créez un nouveau bouton, un autre bouton vide apparaît à droite du bouton modifié. Le bouton vide n’est pas enregistré lorsque vous enregistrez une barre d’outils.
 
 Un bouton de barre d’outils a les propriétés suivantes :
 
@@ -95,7 +96,7 @@ Un bouton de barre d’outils a les propriétés suivantes :
 |**Height**|Définit la hauteur du bouton. La hauteur d’un bouton modifie la hauteur de tous les boutons de la barre d’outils. 15 pixels sont recommandés.|
 |**Demander**|Définit le message affiché dans la barre d’État. L’ajout de *\n* et d’un nom ajoute une **info-bulle** à ce bouton de barre d’outils. Pour plus d’informations, consultez [pour créer une info-bulle pour un bouton de barre d’outils](#to-create-a-tool-tip-for-a-toolbar-button).|
 
-**Width** et **Height** s’appliquent à tous les boutons. Une image bitmap utilisée pour créer une barre d’outils a une largeur maximale de 2048. par conséquent, si vous définissez la largeur du bouton sur *512*, vous ne pouvez avoir que quatre boutons et si vous définissez la largeur sur *513*, vous ne pouvez avoir que trois boutons.
+**Width** et **Height** s’appliquent à tous les boutons. Une bitmap utilisée pour créer une barre d’outils a une largeur maximale de 2048. Cela signifie que si vous définissez la largeur du bouton sur *512*, vous ne pouvez avoir que quatre boutons. Si vous définissez la largeur sur *513*, vous ne pouvez avoir que trois boutons.
 
 ## <a name="how-to"></a>Procédure
 
@@ -111,7 +112,7 @@ L' **éditeur de barres d’outils** vous permet d’activer les éléments suiv
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Pour convertir des bitmaps en ressources de barre d’outils
 
-1. Ouvrez une ressource bitmap existante dans l' [éditeur d’images](../windows/image-editor-for-icons.md). Si l’image bitmap n’est pas déjà dans votre fichier *. RC* , cliquez avec le bouton droit sur le fichier *. RC* et choisissez **Importer**, puis accédez à l’image bitmap que vous souhaitez ajouter à votre fichier *. RC* et sélectionnez **ouvrir**.
+1. Ouvrez une ressource bitmap existante dans l' [éditeur d’images](../windows/image-editor-for-icons.md). Si l’image bitmap n’est pas déjà dans votre fichier *. RC* , cliquez avec le bouton droit sur le fichier *. RC* , puis choisissez **Importer**. Ensuite, accédez à l’image bitmap que vous souhaitez ajouter à votre fichier *. RC* , puis sélectionnez **ouvrir**.
 
 1. Accédez à l' **Image**  >  **éditeur de barre d’outils**image de menu.
 
@@ -157,18 +158,18 @@ L' **éditeur de barres d’outils** vous permet d’activer les éléments suiv
 
 Dans le volet **d’affichage de la barre d’outils** , faites glisser le bouton que vous souhaitez déplacer vers son nouvel emplacement dans la barre d’outils.
 
-- Pour copier des boutons d’une barre d’outils, maintenez la touche **CTRL** enfoncée et, dans le volet **d’affichage de la barre d’outils** , faites glisser le bouton vers son nouvel emplacement dans la barre d’outils ou vers un emplacement sur une autre barre d’outils.
+- Pour copier des boutons d’une barre d’outils, maintenez la touche **CTRL** enfoncée. Dans le volet **d’affichage de la barre d’outils** , faites glisser le bouton vers son nouvel emplacement dans la barre d’outils. Ou faites-le glisser vers un emplacement sur une autre barre d’outils.
 
 - Pour supprimer un bouton de barre d’outils, cliquez sur le bouton de barre d’outils et faites-le glisser en dehors de la barre d’outils.
 
-- Pour insérer ou supprimer un espace entre les boutons d’une barre d’outils, vous pouvez les faire glisser vers l’autre ou vers l’extérieur dans la barre d’outils.
+- Pour insérer ou supprimer un espace entre les boutons d’une barre d’outils, faites-les glisser à partir de ou vers l’autre dans la barre d’outils.
 
 |Action|Étape|
 |------|------|
 |Pour insérer un espace avant un bouton qui n’est pas suivi d’un espace|Faites glisser le bouton vers la droite ou vers le dessous jusqu’à ce qu’il chevauche le bouton suivant à mi-chemin.|
 |Pour insérer un espace avant un bouton qui est suivi d’un espace et pour conserver l’espace de fin|Faites glisser le bouton jusqu’à ce que le bord droit ou inférieur touche simplement le bouton suivant ou le chevauche.|
 |Pour insérer un espace avant un bouton qui est suivi d’un espace et pour fermer l’espace suivant|Faites glisser le bouton vers la droite ou vers le dessous jusqu’à ce qu’il chevauche le bouton suivant à mi-chemin.|
-|Pour supprimer un espace entre les boutons d’une barre d’outils|Faites glisser le bouton d’un côté de l’espace vers le bouton situé à l’autre extrémité de l’espace jusqu’à ce qu’il chevauche le bouton suivant à mi-chemin.|
+|Pour supprimer un espace entre les boutons d’une barre d’outils|Sélectionnez le bouton d’un côté de l’espace. Faites-le glisser vers le bouton situé à l’autre extrémité de l’espace jusqu’à ce qu’il chevauche le bouton suivant à mi-chemin.|
 
 > [!NOTE]
 > S’il n’y a pas d’espace sur le côté du bouton que vous faites glisser et que vous faites glisser le bouton à mi-chemin après le bouton adjacent, l' **éditeur de barre d’outils** insère un espace sur le côté opposé du bouton que vous faites glisser.
@@ -203,6 +204,5 @@ MFC ou ATL
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeurs](../windows/resource-editors.md) 
- de ressources [Menus et autres ressources](/windows/win32/menurc/resources)<br/>
-[propriétés d’un bouton de barre d’outils](../windows/toolbar-button-properties.md)<br/>
+[Éditeurs de ressources](../windows/resource-editors.md)\
+[Menus et autres ressources](/windows/win32/menurc/resources)

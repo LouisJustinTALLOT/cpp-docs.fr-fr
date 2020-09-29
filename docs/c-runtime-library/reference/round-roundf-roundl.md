@@ -1,7 +1,7 @@
 ---
 title: round, roundf, roundl
-description: Informations de référence sur l’API pour Round, roundf, et Roundy ; qui arrondit une valeur à virgule flottante à l’entier le plus proche.
-ms.date: 9/1/2020
+description: Informations de référence sur l’API pour Round, roundf, et Roundy ; qui arrondit une valeur à virgule flottante à la valeur entière la plus proche.
+ms.date: 09/25/2020
 api_name:
 - round
 - roundl
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 0a7e47dd3a528e45abc8247a64bf5c4d81164e95
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 381ae4464b23cb929e0511e6d2c228602f06a249
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556643"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413851"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
-Arrondit une valeur à virgule flottante à l’entier le plus proche.
+Arrondit une valeur à virgule flottante à la valeur entière la plus proche.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -100,46 +100,60 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ## <a name="example"></a>Exemple
 
 ```C
-// crt_round.c
-// Build with: cl /W3 /Tc crt_round.c
-// This example displays the rounded results of
-// the floating-point values 2.499999, -2.499999,
-// 2.8, -2.8, 2.5 and -2.5.
+// Build with: cl /W3 /Tc
+// This example displays the rounded
+// results of floating-point values
 
 #include <math.h>
 #include <stdio.h>
 
-int main( void )
+int main()
 {
-   double x = 2.499999;
-   float y = 2.8f;
-   long double z = 2.5;
+    printf("===== Round a float\n\n");
+    float floatValue = 2.4999999f; // float stores a value close to, but not exactly equal to, the initializer below. floatValue will contain 2.5 because it is the closest single precision value
+    printf("roundf(%.1000g) is %.1000g\n", floatValue, roundf(floatValue));
+    printf("roundf(%.1000g) is %.1000g\n", -floatValue, roundf(-floatValue));
 
-   printf("round(%f) is %.0f\n", x, round(x));
-   printf("round(%f) is %.0f\n", -x, round(-x));
-   printf("roundf(%f) is %.0f\n", y, roundf(y));
-   printf("roundf(%f) is %.0f\n", -y, roundf(-y));
-   printf("roundl(%Lf) is %.0Lf\n", z, roundl(z));
-   printf("roundl(%Lf) is %.0Lf\n", -z, roundl(-z));
+    // double stores a value close to, but not exactly equal to, the initializer below. The closest double value is just slightly larger.
+    double doubleValue = 2.4999999;
+    printf("\n===== Round a double\n\n");
+    printf("round(%.1000g) is %.1000g\n", doubleValue, round(doubleValue));
+    printf("round(%.1000g) is %.1000g\n", -doubleValue, round(-doubleValue));
+
+    // long double stores a value close to, but not exactly equal to, the initializer below. The closest long double value is just slightly larger.
+    long double longDoubleValue = 2.4999999L;
+    printf("\n===== Round a long double\n\n");
+    printf("roundl(%.1000g) is %.1000g\n", longDoubleValue, roundl(longDoubleValue));
+    printf("roundl(%.1000g) is %.1000g\n", -longDoubleValue, roundl(-longDoubleValue));
+
+    return 0;
 }
 ```
 
 ```Output
-round(2.499999) is 2
-round(-2.499999) is -2
-roundf(2.800000) is 3
-roundf(-2.800000) is -3
-roundl(2.500000) is 3
-roundl(-2.500000) is -3
+===== Round a float
+
+roundf(2.5) is 3
+roundf(-2.5) is -3
+
+===== Round a double
+
+round(2.499999900000000163657887242152355611324310302734375) is 2
+round(-2.499999900000000163657887242152355611324310302734375) is -2
+
+===== Round a long double
+
+roundl(2.499999900000000163657887242152355611324310302734375) is 2
+roundl(-2.499999900000000163657887242152355611324310302734375) is -2
 ```
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
-[floor, floorf, floorl](floor-floorf-floorl.md)<br/>
-[fmod, fmodf](fmod-fmodf.md)<br/>
-[lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
-[lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
-[nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
-[rint, rintf, rintl](rint-rintf-rintl.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)\
+[ceil, ceilf,, ceill](ceil-ceilf-ceill.md)\
+[plancher, floorf,, plancher](floor-floorf-floorl.md)\
+[fmod, fmodf,](fmod-fmodf.md)\
+[lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)\
+[lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)\
+[nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)\
+[Primer, rintf, rintl](rint-rintf-rintl.md)\

@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 303fa73f09220b2139d681bf3109fd843299a900
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bea22a0d9fdc5c1ddbd9da2af7078228a6315e80
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172410"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414137"
 ---
 # <a name="consuming-generics-ccli"></a>Utilisation de génériques (C++/CLI)
 
 Les génériques créés dans un langage .NET (ou UWP) peuvent être utilisés dans d’autres langages. Contrairement aux modèles, une classe générique dans un assembly compilé reste générique. Par conséquent, le type générique peut être instancié dans un autre assembly, et même dans un langage autre que celui de l’assembly dans lequel le type générique a été défini.
 
-## <a name="example"></a>Exemple
+## <a name="example-generic-class-defined-in-c"></a>Exemple : classe générique définie en C #
 
 ### <a name="description"></a>Description
 
@@ -80,7 +80,7 @@ public class CircularList<ItemType> {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-consume-assembly-authored-in-c"></a>Exemple : utilisation d’un assembly créé en C #
 
 ### <a name="description"></a>Description
 

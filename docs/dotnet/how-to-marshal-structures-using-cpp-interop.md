@@ -9,22 +9,22 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-ms.openlocfilehash: a77745c9a60c9759f8b3b2df91bcbc4cb507533b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 8ca53761647c1f3d5ea059ddf381cb334cd2a993
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988171"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413838"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Comment : marshaler des structures à l’aide de l’interopérabilité C++
 
-Cette rubrique présente une facette de C++ l’interopérabilité visuelle. Pour plus d’informations, [consultez C++ utilisation de l’interopérabilité (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Cette rubrique présente une facette de Visual C++ interopérabilité. Pour plus d’informations, consultez [utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 Les exemples de code suivants utilisent les directives de #pragma [managées et non managées](../preprocessor/managed-unmanaged.md) pour implémenter des fonctions managées et non managées dans le même fichier, mais ces fonctions interagissent de la même manière si elles sont définies dans des fichiers distincts. Les fichiers contenant uniquement des fonctions non managées n’ont pas besoin d’être compilés avec [/clr (compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).
 
-## <a name="example"></a>Exemple
+## <a name="example-pass-structure-from-managed-to-unmanaged-function"></a>Exemple : passer la structure d’une fonction managée à une fonction non managée
 
-L’exemple suivant illustre le passage d’une structure d’une fonction managée à une fonction non managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient uniquement des types de données intrinsèques simples (voir les [types blittables et non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez Guide pratique [pour marshaler des C++ pointeurs incorporés à l’aide de l’interopérabilité](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+L’exemple suivant illustre le passage d’une structure d’une fonction managée à une fonction non managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient uniquement des types de données intrinsèques simples (voir les [types blittables et non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez Guide pratique [pour marshaler des pointeurs incorporés à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```cpp
 // PassStruct1.cpp
@@ -80,9 +80,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-pass-structure-from-unmanaged-to-managed-function"></a>Exemple : passer la structure d’une fonction non managée à une fonction managée
 
-L’exemple suivant illustre le passage d’une structure d’une fonction non managée à une fonction managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient uniquement des types de données intrinsèques simples (voir les [types blittables et non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez Guide pratique [pour marshaler des C++ pointeurs incorporés à l’aide de l’interopérabilité](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
+L’exemple suivant illustre le passage d’une structure d’une fonction non managée à une fonction managée, à la fois par valeur et par référence. Étant donné que la structure de cet exemple contient uniquement des types de données intrinsèques simples (voir les [types blittables et non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types)), aucun marshaling spécial n’est requis. Pour marshaler des structures non blittables, telles que celles qui contiennent des pointeurs, consultez Guide pratique [pour marshaler des pointeurs incorporés à l’aide de l’interopérabilité C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
 ```cpp
 // PassStruct2.cpp

@@ -1,6 +1,7 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 06/09/2020
+description: Fonctionne avec des améliorations de sécurité pour obtenir un message d’erreur système ou imprimer un message d’erreur fourni par l’utilisateur.
+ms.date: 09/25/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 4e594a37425714ef521c083785120e2262225b19
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664324"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414618"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -80,6 +81,9 @@ errno_t __wcserror_s(
    size_t sizeInWords,
    const wchar_t *strErrMsg
 );
+```
+
+```cpp
 template <size_t size>
 errno_t strerror_s(
    char (&buffer)[size],
@@ -104,33 +108,35 @@ errno_t __wcserror_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*\
 Mémoire tampon devant contenir la chaîne d’erreur.
 
-*sizeInBytes*<br/>
+*sizeInBytes*\
 Nombre d'octets dans la mémoire tampon.
 
-*sizeInWords*<br/>
+*sizeInWords*\
 Nombre de mots dans la mémoire tampon.
 
-*ErrNum*<br/>
+*ErrNum*\
 Numéro d’erreur.
 
-*strErrMsg*<br/>
+*strErrMsg*\
 Message fourni par l'utilisateur.
 
 ## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
-### <a name="error-condtions"></a>Conditions d’erreur
+### <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*sizeInBytes/sizeInWords*|*strErrMsg*|Contenu de la *mémoire tampon*|
+|*mémoire tampon*|*sizeInBytes/sizeInWords*|*strErrMsg*|Contenu de la *mémoire tampon*|
 |--------------|------------------------|-----------------|--------------------------|
 |**NULL**|n'importe laquelle|n'importe laquelle|n/a|
 |n'importe laquelle|0|n'importe laquelle|non modifié|
 
 ## <a name="remarks"></a>Notes
+
+La fonction **strerror_s** est thread-safe.
 
 La fonction **strerror_s** mappe *ErrNum* à une chaîne de message d’erreur, en retournant la chaîne dans la *mémoire tampon*. **_strerror_s** ne prend pas le numéro d’erreur ; elle utilise la valeur actuelle de **errno** pour déterminer le message approprié. Ni **strerror_s** ni **_strerror_s** n’imprime réellement le message : pour cela, vous devez appeler une fonction de sortie telle que [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
@@ -142,7 +148,7 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-Si *strErrMsg* a la **valeur null**, **_strerror_s** retourne une chaîne dans *buffer* contenant le message d’erreur système pour le dernier appel de bibliothèque qui a généré une erreur. La chaîne de message d'erreur se termine par le caractère de saut de ligne ('\n'). Si *strErrMsg* n’est pas égal à **null**, **_strerror_s** retourne une chaîne dans la *mémoire tampon* contenant (dans l’ordre) votre message de chaîne, un signe deux-points, un espace, le message d’erreur système pour le dernier appel de bibliothèque générant une erreur et un caractère de saut de ligne. La longueur maximale de votre message de type chaîne est de 94 caractères.
+Si *strErrMsg* a la **valeur null**, **_strerror_s** retourne une chaîne dans *buffer* qui contient le message d’erreur système pour le dernier appel de bibliothèque qui a généré une erreur. La chaîne de message d'erreur se termine par le caractère de saut de ligne ('\n'). Si *strErrMsg* n’est pas égal à **null**, **_strerror_s** retourne une chaîne dans *buffer* qui contient (dans l’ordre) votre message de chaîne, un signe deux-points, un espace, le message d’erreur système pour le dernier appel de bibliothèque qui a généré une erreur et un caractère de saut de ligne. La longueur maximale de votre message de type chaîne est de 94 caractères.
 
 Ces fonctions tronquent le message d’erreur si sa longueur dépasse la taille de la mémoire tampon-1. La chaîne résultante dans la *mémoire tampon* sera toujours terminée par un caractère null.
 
@@ -152,7 +158,7 @@ Le numéro d’erreur réel pour **_strerror_s** est stocké dans la variable [e
 
 Ces fonctions valident leurs paramètres. Si buffer a la **valeur null** ou si le paramètre size a la valeur 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, les fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL**.
 
-**_strerror_s**, **_wcserror_s**et **__wcserror_s** ne font pas partie de la définition ANSI, mais sont des extensions Microsoft. Ne les utilisez pas là où la portabilité est souhaitée ; pour la compatibilité ANSI, utilisez **strerror_s** à la place.
+**_strerror_s**, **_wcserror_s**et **__wcserror_s** ne font pas partie de la définition ANSI, mais plutôt des extensions Microsoft. Ne les utilisez pas là où la portabilité est souhaitée ; pour la compatibilité ANSI, utilisez **strerror_s** à la place.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
@@ -166,7 +172,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -181,7 +187,7 @@ Consultez l’exemple relatif à [perror](perror-wperror.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[clearerr](clearerr.md)<br/>
-[ferror](ferror.md)<br/>
-[perror, _wperror](perror-wperror.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)\
+[clearerr](clearerr.md)\
+[ferror](ferror.md)\
+[perror, _wperror](perror-wperror.md)

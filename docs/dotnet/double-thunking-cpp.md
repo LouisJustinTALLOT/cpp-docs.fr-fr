@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 6b2d3b4415b81dc5a9b7d0e36c154d9ee74b98ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f0fc5567baaa0c4f3fea410770963adf51e8366
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221482"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414007"
 ---
 # <a name="double-thunking-c"></a>Double conversion de code (thunking) (C++)
 
@@ -29,7 +29,7 @@ De même, si vous exportez ([dllexport, DllImport](../cpp/dllexport-dllimport.md
 
 Le compilateur a été mis à jour pour réduire le double médiateur inutile. Par exemple, toute fonction avec un type managé dans la signature (y compris le type de retour) sera implicitement marquée comme `__clrcall` .
 
-## <a name="example"></a>Exemple
+## <a name="example-double-thunking"></a>Exemple : double médiateur
 
 ### <a name="description"></a>Description
 
@@ -87,7 +87,7 @@ after calling struct S
 __thiscall T::~T(void)
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-effect-of-double-thunking"></a>Exemple : effet du double médiateur
 
 ### <a name="description"></a>Description
 

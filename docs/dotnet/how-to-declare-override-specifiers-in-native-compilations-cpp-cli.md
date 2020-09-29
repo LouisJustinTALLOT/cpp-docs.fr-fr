@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: c5ed413f403fb12f116633c0e39f9e7b32b2e9f8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92bdc41cf9ebe2389f2d22dab211029899283266
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221326"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414592"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Comment : déclarer des spécificateurs de substitution dans les compilations natives (C++/CLI)
 
@@ -18,7 +18,7 @@ les compilations [sealed](../extensions/sealed-cpp-component-extensions.md), [ab
 > [!NOTE]
 > Le langage ISO C++ 11 standard a l’identificateur de [remplacement](../cpp/override-specifier.md) et l’identificateur [final](../cpp/final-specifier.md) , et les deux sont pris en charge dans Visual Studio use `final` au lieu de **`sealed`** dans le code qui est destiné à être compilé en mode natif uniquement.
 
-## <a name="example"></a>Exemple
+## <a name="example-sealed-is-valid"></a>Exemple : sealed est valide
 
 ### <a name="description"></a>Description
 
@@ -47,7 +47,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-override-is-valid"></a>Exemple : la substitution est valide
 
 ### <a name="description"></a>Description
 
@@ -69,7 +69,7 @@ public:
 };
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-abstract-is-valid"></a>Exemple : Abstract est valide
 
 ### <a name="description"></a>Description
 

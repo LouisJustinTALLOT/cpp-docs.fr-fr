@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 071ea72a2aa03dcf16eb0f09e121eba4514e5828
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216386"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414605"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Comment : étendre la bibliothèque de marshaling
 
@@ -102,7 +102,7 @@ namespace msclr {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-extend-marshaling-library"></a>Exemple : étendre une bibliothèque de marshaling
 
 L’exemple suivant étend la bibliothèque de marshaling avec une conversion qui ne requiert pas de contexte. Dans cet exemple, le code convertit les informations sur les employés d’un type de données natif en un type de données managé.
 
@@ -164,7 +164,7 @@ Managed address: 123 Main Street
 Managed zip code: 98111
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-convert-employee-information"></a>Exemple : convertir des informations sur les employés
 
 L’exemple suivant convertit les informations sur les employés d’un type de données managé en un type de données natif. Cette conversion requiert un contexte de marshaling.
 

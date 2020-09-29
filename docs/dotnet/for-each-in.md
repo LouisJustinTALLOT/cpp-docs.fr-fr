@@ -1,6 +1,7 @@
 ---
 title: for each, in
-ms.date: 11/04/2016
+description: C++/CLI pour chaque, dans la description de l’instruction et des exemples.
+ms.date: 09/25/2020
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
@@ -10,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: f1f5523eb22bd8a839da9b3f73dd6c3718b4fd63
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7f228a773dfcbe791e26ea3e1bd8cfba7f3ab028
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825789"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413917"
 ---
 # <a name="for-each-in"></a>for each, in
 
-Itère dans un tableau ou une collection. Ce mot clé non standard est disponible dans C++/CLI et les projets natifs C++. Toutefois, son utilisation n'est pas recommandée. Envisagez d’utiliser à la place une [instruction for standard basée sur une plage (C++)](../cpp/range-based-for-statement-cpp.md) .
+Itère dans un tableau ou une collection. Ce mot clé non standard est disponible dans C++/CLI et les projets natifs C++. Toutefois, son utilisation n’est pas recommandée. Envisagez d’utiliser à la place une [instruction for standard basée sur une plage (C++)](../cpp/range-based-for-statement-cpp.md) .
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
@@ -43,31 +44,21 @@ Expression ou collection de tableaux. L'élément de collection doit pouvoir êt
 *publication*<br/>
 Une ou plusieurs instructions à exécuter.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
-L’instruction `for each` permet d’itérer au sein d’une collection. Vous pouvez modifier les éléments d'une collection, mais vous ne pouvez ni ajouter ni supprimer des éléments.
+L’instruction `for each` permet d’itérer au sein d’une collection. Vous pouvez modifier les éléments d’une collection, mais vous ne pouvez pas ajouter ou supprimer des éléments.
 
 Les *instructions* sont exécutées pour chaque élément du tableau ou de la collection. Une fois l'itération terminée pour tous les éléments de la collection, le contrôle est transféré à l'instruction placée après le bloc `for each`.
 
-`for each`et `in` sont des [Mots clés contextuels](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
-
-Pour plus d’informations :
-
-- [Itération au sein d’une collection de bibliothèque standard C++ en utilisant for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)
-
-- [Guide pratique pour itérer au sein des tableaux avec for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)
-
-- [Guide pratique pour itérer au sein d’une collection générique en utilisant for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)
-
-- [Guide pratique pour itérer au sein d’une collection définie par l’utilisateur en utilisant for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)
+`for each` et `in` sont des [Mots clés contextuels](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/ZW**
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Cet exemple montre comment utiliser `for each` pour itérer au sein d'une chaîne.
 
@@ -97,8 +88,6 @@ int main() {
 }
 ```
 
-**Sortie**
-
 ```Output
 abcd
 
@@ -107,20 +96,20 @@ Testing
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-**Remarques**
+### <a name="remarks"></a>Notes
 
 La syntaxe CLR est identique à la syntaxe **All runtimes** , sauf dans les cas suivants.
 
 *expression*<br/>
 Collection ou expression de tableau managé. L’élément de collection doit être tel que le compilateur peut le convertir <xref:System.Object> en type d' *identificateur* .
 
-*l’expression* prend la valeur d’un type qui <xref:System.Collections.IEnumerable>implémente <xref:System.Collections.Generic.IEnumerable%601>, ou un type qui définit `GetEnumerator` une méthode qui retourne un type qui implémente <xref:System.Collections.IEnumerator> ou déclare toutes les méthodes définies dans `IEnumerator`.
+l' *expression* prend la valeur d’un type qui implémente <xref:System.Collections.IEnumerable> , <xref:System.Collections.Generic.IEnumerable%601> ou un type qui définit une `GetEnumerator` méthode qui retourne un type qui implémente <xref:System.Collections.IEnumerator> ou déclare toutes les méthodes définies dans `IEnumerator` .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/clr**
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Cet exemple montre comment utiliser `for each` pour itérer au sein d'une chaîne.
 
@@ -149,8 +138,6 @@ int main() {
 }
 ```
 
-**Sortie**
-
 ```Output
 abcd
 
@@ -159,4 +146,5 @@ Testing
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md)\
+[Instruction for basée sur une plage (C++)](../cpp/range-based-for-statement-cpp.md)

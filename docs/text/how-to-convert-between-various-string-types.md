@@ -7,20 +7,18 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: e7d8239f49e527ead0a2e9dfbcca5e7e55f8c766
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 068665c594f2fbeb531be21ded7ef16f3f5c1ef3
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224498"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414514"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Comment : effectuer une conversion entre différents types de chaînes
 
 Cette rubrique montre comment convertir différents types de chaîne Visual C++ en d’autres chaînes. Les types de chaînes couverts incluent `char *` , `wchar_t*` , [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md)et <xref:System.String?displayProperty=fullName> . Dans tous les cas, une copie de la chaîne est effectuée lors de la conversion vers le nouveau type. Toute modification apportée à la nouvelle chaîne n’affecte pas la chaîne d’origine, et vice versa.
 
-## <a name="converting-from-char-"></a>Conversion à partir de char\*
-
-## <a name="example"></a>Exemple
+## <a name="example-convert-from-char-"></a>Exemple : Convert from char *
 
 ### <a name="description"></a>Description
 
@@ -119,9 +117,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchar_t-"></a>Conversion à partir de wchar_t\*
-
-## <a name="example"></a>Exemple
+## <a name="example-convert-from-wchar_t-"></a>Exemple : Convert from wchar_t *
 
 ### <a name="description"></a>Description
 
@@ -243,9 +239,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-_bstr_t"></a>Conversion à partir de _bstr_t
-
-## <a name="example"></a>Exemple
+## <a name="example-convert-from-_bstr_t"></a>Exemple : Convert from _bstr_t
 
 ### <a name="description"></a>Description
 
@@ -343,9 +337,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-ccombstr"></a>Convertir à partir de CComBSTR
-
-## <a name="example"></a>Exemple
+## <a name="example-convert-from-ccombstr"></a>Exemple : Convert à partir de CComBSTR
 
 ### <a name="description"></a>Description
 
@@ -453,15 +445,13 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-cstring"></a>Conversion à partir de CString
-
-## <a name="example"></a>Exemple
+## <a name="example-convert-from-cstring"></a>Exemple : Convert from CString
 
 ### <a name="description"></a>Description
 
-Cet exemple montre comment effectuer une conversion d’un `CString` vers les autres types de chaînes listés ci-dessus. `CString`est basé sur le type de données TCHAR qui, à son tour, varie selon que le symbole `_UNICODE` est défini ou non. Si `_UNICODE` n’est pas défini, `TCHAR` est défini comme étant char et `CString` contient une chaîne de caractères multioctets ; si `_UNICODE` est défini, `TCHAR` est défini comme **`wchar_t`** et `CString` contient une chaîne de caractères larges.
+Cet exemple montre comment effectuer une conversion d’un `CString` vers les autres types de chaînes listés ci-dessus. `CString` est basé sur le type de données TCHAR qui, à son tour, varie selon que le symbole `_UNICODE` est défini ou non. Si `_UNICODE` n’est pas défini, `TCHAR` est défini comme étant char et `CString` contient une chaîne de caractères multioctets ; si `_UNICODE` est défini, `TCHAR` est défini comme **`wchar_t`** et `CString` contient une chaîne de caractères larges.
 
-`CStringA`est la version de chaîne multioctet toujours de `CString` , `CStringW` est la version à chaîne de caractères larges uniquement. Ni `CStringA` ni n' `CStringW` utilisent `_UNICODE` pour déterminer comment ils doivent être compilés. `CStringA`et `CStringW` sont utilisés dans cet exemple pour clarifier les différences mineures dans l’allocation de la taille de la mémoire tampon et la gestion de la sortie.
+`CStringA` est la version de chaîne multioctet toujours de `CString` , `CStringW` est la version à chaîne de caractères larges uniquement. Ni `CStringA` ni n' `CStringW` utilisent `_UNICODE` pour déterminer comment ils doivent être compilés. `CStringA` et `CStringW` sont utilisés dans cet exemple pour clarifier les différences mineures dans l’allocation de la taille de la mémoire tampon et la gestion de la sortie.
 
 ### <a name="code"></a>Code
 
@@ -597,9 +587,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-basic_string"></a>Conversion à partir de basic_string
-
-## <a name="example"></a>Exemple
+## <a name="example-convert-from-basic_string"></a>Exemple : Convert from basic_string
 
 ### <a name="description"></a>Description
 
@@ -693,9 +681,7 @@ Hello, World! (CStringW)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-systemstring"></a>Conversion à partir de System :: String
-
-## <a name="example"></a>Exemple
+## <a name="example-convert-from-systemstring"></a>Exemple : Convert from System :: String
 
 ### <a name="description"></a>Description
 
