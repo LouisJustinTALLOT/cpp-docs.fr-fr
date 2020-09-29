@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225109"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500379"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI et C++/CX)
 
@@ -45,11 +45,11 @@ Platform::Type^ type = T::typeid;
 *T*<br/>
 Un nom de type.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Dans C++/CX, typeid retourne une classe [Platform::Type](../cppcx/platform-type-class.md) qui est construite à partir des informations sur le type de runtime.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
@@ -66,7 +66,7 @@ type::typeid
 *type*<br/>
 Le nom d’un type (déclarateur abstrait) dont vous souhaitez l’objet `System::Type`.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 **`typeid`** est utilisé pour obtenir le <xref:System.Type> pour un type au moment de la compilation.
 
@@ -74,11 +74,11 @@ Le nom d’un type (déclarateur abstrait) dont vous souhaitez l’objet `System
 
 **`typeid`** doit être en mesure d’évaluer un nom de type (type) au moment de la compilation, tandis que GetType évalue le type à retourner au moment de l’exécution.
 
-**`typeid`** peut prendre un nom de type natif ou common language runtime alias pour le nom de type natif ; Pour plus d’informations, consultez [.NET Framework équivalents aux types natifs c++ (c++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) .
+**`typeid`** peut prendre un nom de type natif ou common language runtime alias pour le nom de type natif ; Pour plus d’informations, consultez [.NET Framework équivalents aux types natifs c++ (c++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet) .
 
 **`typeid`** fonctionne également avec les types natifs, même s’il retourne toujours un `System::Type` .  Pour obtenir une structure type_info, utilisez [ `typeid` Operator](../cpp/typeid-operator.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 

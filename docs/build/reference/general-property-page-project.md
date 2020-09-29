@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: bb301f63bfd1e6839d7893cdc03d61e021409666
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166756"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500069"
 ---
 # <a name="general-property-page-project"></a>Général, page de propriétés (Projet)
 
 ::: moniker range=">=vs-2019"
 
-Cette rubrique s’applique aux projets Visual Studio pour Windows. Pour les projets Linux, consultez les informations de référence sur les [pages de propriétés Linux C++ ](../../linux/prop-pages-linux.md). Pour les projets CMake, consultez [projets cmake dans Visual Studio](../cmake-projects-in-visual-studio.md). Pour les projets Android, consultez [Propriétés générales du projet C++(Android)](/cpp/cross-platform/general-android-prop-page). Pour les projets Makefile Android, consultez [Propriétés générales du projet C++ (Makefile Android)](/cpp/cross-platform/general-makefile-android-prop-page) .
+Cette rubrique s’applique aux projets Visual Studio pour Windows. Pour les projets Linux, consultez Référence de la [page de propriétés C++ Linux](../../linux/prop-pages-linux.md). Pour les projets CMake, consultez [projets cmake dans Visual Studio](../cmake-projects-in-visual-studio.md). Pour les projets Android, consultez [Propriétés générales du projet (Android C++)](../../cross-platform/general-android-prop-page.md). Pour les projets Makefile Android, consultez [Propriétés générales du projet (Makefile Android C++)](../../cross-platform/general-makefile-android-prop-page.md)
 
 Lorsque vous cliquez avec le bouton droit sur un nœud de projet dans Explorateur de solutions, puis sélectionnez **Propriétés**, la page de propriétés **général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche les propriétés suivantes :
 
@@ -90,11 +90,11 @@ Lorsque vous cliquez avec le bouton droit sur un nœud de projet dans Explorateu
 
    Vous pouvez installer l’ensemble d’outils de plateforme Windows XP inclus dans Visual Studio pour utiliser la version actuelle des bibliothèques afin de générer des projets Windows XP et Windows 2003 Server. Pour plus d’informations sur l’obtention et l’utilisation de cet ensemble d’outils de plateforme, consultez [Configuration des programmes pour Windows XP](../configuring-programs-for-windows-xp.md). Pour plus d’informations sur la modification de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- **Ensemble d’outils de plateforme**
+- **Ensemble d'outils de plateforme**
 
-   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Les projets C++ Visual Studio peuvent cibler l’ensemble d’outils par défaut installé par Visual Studio, ou l’un des ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, y compris les ensembles d’outils qui créent des exécutables pouvant s’exécuter sous Windows XP. Pour obtenir des informations sur le changement de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Les projets Visual Studio C++ peuvent cibler l’ensemble d’outils par défaut installé par Visual Studio, ou l’un des ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, y compris les ensembles d’outils qui créent des exécutables pouvant s’exécuter sous Windows XP. Pour obtenir des informations sur le changement de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- **C++Norme du langage**
+- **Norme du langage C++**
 
    Spécifie la norme de langue à utiliser. La valeur par défaut est/std : c++ 14. Spécifiez/std : c++ 17 pour utiliser les fonctionnalités C++ 17 ou/std : c++ + latest pour utiliser C++ 20 ou d’autres fonctionnalités expérimentales. Pour plus d’informations, consultez [/STD (spécifier la version du langage standard)](std-specify-language-standard-version.md) .
 
@@ -118,7 +118,7 @@ Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bout
 
    Spécifie la version la plus basse de la plateforme sur laquelle le projet peut s'exécuter. Cette propriété s’affiche uniquement si le type de projet le prend en charge. Si votre application peut tirer parti des fonctionnalités offertes par une nouvelle version du Kit SDK Windows tout en pouvant s'exécuter sur des versions antérieures sans ces fonctionnalités (éventuellement avec une perte de fonctionnalité), la valeur de ces deux propriétés peut être différente. Dans ce cas, votre code doit vérifier au moment de l'exécution la version de la plateforme sur laquelle il s'exécute et ne pas essayer d'utiliser des fonctionnalités qui ne sont pas disponibles dans les versions antérieures de la plateforme.
 
-   Le C++ système de projet n’applique pas cette option. Elle est fournie par souci de cohérence avec d'autres langages, tels que C# et JavaScript, et comme guide pour toute personne qui utilise votre projet. Visual C++ ne génère pas d'erreur si vous utilisez une fonctionnalité qui n'est pas disponible dans la version minimale.
+   Le système de projet C++ n’applique pas cette option. Elle est fournie par souci de cohérence avec d'autres langages, tels que C# et JavaScript, et comme guide pour toute personne qui utilise votre projet. Visual C++ ne génère pas d'erreur si vous utilisez une fonctionnalité qui n'est pas disponible dans la version minimale.
 
 - **Version de SDK Windows (Visual Studio 2017)**
 
@@ -160,9 +160,9 @@ Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bout
 
    Vous pouvez utiliser des macros de projet pour modifier l'emplacement du répertoire. Consultez [les macros courantes pour les propriétés et les commandes de génération](common-macros-for-build-commands-and-properties.md).
 
-- **Ensemble d’outils de plateforme**
+- **Ensemble d'outils de plateforme**
 
-   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Les projets C++ Visual Studio peuvent cibler l’ensemble d’outils par défaut installé par Visual Studio, ou l’un des ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, y compris les ensembles d’outils qui créent des exécutables pouvant s’exécuter sous Windows XP. Pour obtenir des informations sur le changement de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Les projets Visual Studio C++ peuvent cibler l’ensemble d’outils par défaut installé par Visual Studio, ou l’un des ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, y compris les ensembles d’outils qui créent des exécutables pouvant s’exécuter sous Windows XP. Pour obtenir des informations sur le changement de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Activer la build incrémentielle managée**
 
@@ -220,7 +220,7 @@ Les propriétés de la section Paramètres par défaut du projet représentent l
 
    Dans les projets managés, spécifie la version du .NET Framework à cibler.
 
-- **Optimisation de l’ensemble du programme**
+- **Optimisation de l'ensemble du programme**
 
    Spécifie l’option du compilateur [/GL](gl-whole-program-optimization.md) et l’option de l’éditeur de liens [/LTCG](ltcg-link-time-code-generation.md). Par défaut, cette option est désactivée pour les configurations Debug, et activée pour les configurations Retail.
 
@@ -232,4 +232,4 @@ Les propriétés de la section Paramètres par défaut du projet représentent l
 
 ## <a name="see-also"></a>Voir aussi
 
-[C++Référence de la page de propriétés du projet](property-pages-visual-cpp.md)
+[Informations de référence sur les pages de propriétés de projet C++](property-pages-visual-cpp.md)

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: 15ec81fb4fafd7850162a1feab28e72d469aff91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06418bc1a331a5c77653087434a5cc621f92e7d7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87206001"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498556"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Comment : convertir une boucle OpenMP qui a recours à une variable de réduction pour utiliser le runtime d’accès concurrentiel
 
-Cet exemple montre comment convertir une boucle OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../../parallel/openmp/reference/for-openmp.md) qui utilise la clause [reduction](../../parallel/openmp/reference/reduction.md) pour utiliser l’Runtime d’accès concurrentiel.
+Cet exemple montre comment convertir une boucle OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../openmp/reference/openmp-directives.md#for-openmp) qui utilise la clause [reduction](../openmp/reference/openmp-clauses.md#reduction) pour utiliser l’Runtime d’accès concurrentiel.
 
 La `reduction` clause OpenMP vous permet de spécifier une ou plusieurs variables privées du thread qui sont soumises à une opération de réduction à la fin de la région parallèle. OpenMP prédéfinit un ensemble d’opérateurs de réduction. Chaque variable de réduction doit être scalaire (par exemple, **`int`** , **`long`** et **`float`** ). OpenMP définit également plusieurs restrictions sur la façon dont les variables de réduction sont utilisées dans une région parallèle.
 

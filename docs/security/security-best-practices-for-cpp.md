@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 12b2db55a393928683e65c8faca49595fbbebc51
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 63c5567cf1b06d52aa4b458a9ca127039e5c5daf
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389959"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499594"
 ---
 # <a name="security-best-practices-for-c"></a>Meilleures pratiques de sécurité pour C++
 
@@ -23,21 +23,21 @@ Cet article contient des informations sur les outils et les pratiques de sécuri
 
 Ces fonctionnalités de sécurité sont intégrées au compilateur et à l’éditeur de liens Microsoft C++ :
 
-[`/guard`(Activer la protection du contrôle de Workflow)](../build/reference/guard-enable-control-flow-guard.md)<br/>
+[`/guard` (Activer la protection du contrôle de Workflow)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 Indique au compilateur d’analyser le workflow pour les cibles d’appel indirect au moment de la compilation, puis d’insérer du code pour vérifier les cibles au moment de l’exécution.
 
-[`/GS`(Vérification de sécurité de la mémoire tampon)](../build/reference/gs-buffer-security-check.md)<br/>
+[`/GS` (Vérification de sécurité de la mémoire tampon)](../build/reference/gs-buffer-security-check.md)<br/>
 Indique au compilateur d'insérer du code de détection de débordement dans les fonctions qui courent le risque d'être exploitées. Quand un débordement est détecté, l'exécution est arrêtée. Cette option est activée par défaut.
 
-[`/SAFESEH`(L’image a des gestionnaires d’exceptions sécurisés)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
+[`/SAFESEH` (L’image a des gestionnaires d’exceptions sécurisés)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
 Indique à l'éditeur de liens d'inclure dans l'image de sortie une table contenant l'adresse de chaque gestionnaire d'exceptions. Au moment de l'exécution, le système d'exploitation utilise cette table pour s'assurer que seuls les gestionnaires d'exceptions légitimes sont exécutés. Cela contribue à empêcher l'exécution de gestionnaires d'exceptions introduits par une attaque malveillante au moment de l'exécution. Par défaut, cette option est désactivée.
 
 [`/NXCOMPAT`](../build/reference/nxcompat.md), [ `/NXCOMPAT` (Compatible avec la prévention de l’exécution des données)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) ces options du compilateur et de l’éditeur de liens activent la compatibilité avec la prévention de l’exécution des données (DEP). PED protège l'UC contre l'exécution de pages ne contenant pas de code.
 
-[`/analyze`(Analyse du code)](../build/reference/analyze-code-analysis.md)<br/>
-Cette option du compilateur active l'analyse du code, qui signale les problèmes de sécurité potentiels, tels que le dépassement de la mémoire tampon, la mémoire non initialisée, le déréférencement de pointeur null et les fuites de mémoire. Par défaut, cette option est désactivée. Pour plus d’informations, consultez [vue d’ensemble de l’analyse du code pour C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+[`/analyze` (Analyse du code)](../build/reference/analyze-code-analysis.md)<br/>
+Cette option du compilateur active l'analyse du code, qui signale les problèmes de sécurité potentiels, tels que le dépassement de la mémoire tampon, la mémoire non initialisée, le déréférencement de pointeur null et les fuites de mémoire. Par défaut, cette option est désactivée. Pour plus d’informations, consultez [vue d’ensemble de l’analyse du code pour C/C++](../code-quality/code-analysis-for-c-cpp-overview.md).
 
-[`/DYNAMICBASE`(Utiliser la randomisation du format d’espace d’adresse)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
+[`/DYNAMICBASE` (Utiliser la randomisation du format d’espace d’adresse)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 Cette option de l'éditeur de liens permet de générer une image exécutable qui peut être chargée à différents emplacements dans la mémoire au début de l'exécution. Cette option rend également l'emplacement de la pile en mémoire beaucoup moins prévisible.
 
 ## <a name="security-enhanced-crt"></a>Sécurité CRT améliorée

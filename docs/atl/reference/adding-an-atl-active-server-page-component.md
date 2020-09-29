@@ -2,12 +2,12 @@
 title: Ajout d’un composant ATL ASP
 ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: a84eeb20f047097e3dbb3c7f3bb5f5a12b069bcb
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0180077de7ab96cb75736d34e112731e47b9589b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075306"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499357"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Ajout d’un composant ATL ASP
 
@@ -19,7 +19,7 @@ L’Assistant Composant ATL ASP (Active Template Library) n’est pas disponible
 
 ::: moniker range="<=vs-2017"
 
-Pour ajouter un objet ATL à votre projet, celui-ci doit avoir été créé en tant qu’application ATL COM ou en tant qu’application MFC contenant la prise en charge d’ATL. Vous pouvez utiliser l’[Assistant Projet ATL](../../atl/reference/atl-project-wizard.md) pour créer une application ATL, vous pouvez sélectionner **Ajouter la prise en charge ATL à MFC** dans la boîte de dialogue [Ajouter une classe](../../ide/add-class-dialog-box.md) ou vous pouvez [ajouter un objet ATL à votre application MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) pour implémenter la prise en charge d’ATL dans une application MFC.
+Pour ajouter un objet ATL à votre projet, celui-ci doit avoir été créé en tant qu’application ATL COM ou en tant qu’application MFC contenant la prise en charge d’ATL. Vous pouvez utiliser l’[Assistant Projet ATL](../../atl/reference/atl-project-wizard.md) pour créer une application ATL, vous pouvez sélectionner **Ajouter la prise en charge ATL à MFC** dans la boîte de dialogue [Ajouter une classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) ou vous pouvez [ajouter un objet ATL à votre application MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) pour implémenter la prise en charge d’ATL dans une application MFC.
 
 Les composants ASP font partie de l’architecture Internet Information Services, qui fournit les fonctionnalités de développement web avancées suivantes :
 
@@ -35,7 +35,7 @@ Les composants ASP font partie de l’architecture Internet Information Services
 
 1. Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une classe**.
 
-1. Dans la boîte de dialogue [Ajouter une classe](../../ide/add-class-dialog-box.md), dans le volet **Modèles**, cliquez sur **Composant ATL ASP**, puis sur **Ouvrir** pour afficher l’[Assistant Composant ATL ASP](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. Dans la boîte de dialogue [Ajouter une classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box), dans le volet **Modèles**, cliquez sur **Composant ATL ASP**, puis sur **Ouvrir** pour afficher l’[Assistant Composant ATL ASP](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ::: moniker-end
 

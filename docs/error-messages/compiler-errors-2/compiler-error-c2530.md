@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2530
 ms.assetid: b790a312-48df-4a6a-9e27-be2c5f32f16c
-ms.openlocfilehash: 0816fcb4d9e2a3e6588dfcf937383fed7ab11395
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4eca5579f6bf132452a813d8dd99193df5f76b92
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737125"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500545"
 ---
 # <a name="compiler-error-c2530"></a>Erreur du compilateur C2530
 
@@ -19,7 +19,7 @@ ms.locfileid: "74737125"
 
 Vous devez initialiser une référence lorsqu’elle a été déclarée, sauf si elle est déjà déclarée :
 
-- Avec le mot clé [extern](../../cpp/using-extern-to-specify-linkage.md).
+- Avec le mot clé [extern](../../cpp/extern-cpp.md).
 
 - En tant que membre d’une classe, d’une structure ou d’une Union (et il est initialisé dans le constructeur).
 

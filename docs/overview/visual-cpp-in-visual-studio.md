@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: cde4bf73548df2dd7f65e20aa39fa7275dd7e11b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108430"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500157"
 ---
 # <a name="c-in-visual-studio"></a>C++ dans Visual Studio
 
@@ -79,10 +79,10 @@ Guide pratique pour créer et configurer des projets Visual Studio C++, des proj
 [Écriture et refactorisation du code C++](../ide/writing-and-refactoring-code-cpp.md)<br/>
 Comment utiliser les fonctionnalités de productivité dans l’éditeur C++ pour refactoriser, parcourir, comprendre et écrire du code.
 
-[Débogage de code natif](/visualstudio/debugger/debugging-native-code)<br/>
+[Débogage du code natif](/visualstudio/debugger/debugging-native-code)<br/>
 Utiliser le débogueur Visual Studio avec des projets C++.
 
-[Vue d’ensemble de l’analyse du code C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Vue d’ensemble de l’analyse du code C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)<br/>
 Utilisez des annotations SAL ou les vérificateurs C++ Core Guidelines pour effectuer une analyse statique.
 
 [Écrire des tests unitaires pour C/C++ dans Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -134,7 +134,7 @@ En savoir plus sur l’utilisation de différents formats et encodages de texte 
 
 Les sections suivantes fournissent des informations sur les différentes bibliothèques C et C++ incluses dans Visual Studio.
 
-[Informations de référence sur la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Référence de la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Inclut des solutions alternatives optimisées en matière de sécurité pour les fonctions connues pour poser des problèmes de sécurité.
 
 [Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -152,7 +152,7 @@ Algorithmes asynchrones et parallèles qui s’exécutent sur le processeur.
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Algorithmes massivement parallèles qui s’exécutent sur le GPU.
 
-[Bibliothèque de modèles Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Bibliothèque de modèles Windows Runtime (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)<br/>
 Applications et composants de plateforme Windows universelle (UWP).
 
 [Programmation .NET avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
@@ -176,5 +176,5 @@ Découvrez comment obtenir de l’aide, consigner des bogues et envoyer des sugg
 ## <a name="see-also"></a>Voir aussi
 
 - [Référence du langage C](../c-language/c-language-reference.md)
-- [Informations de référence sur la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)
+- [Référence de la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)
 - [Intrinsèques du compilateur et langage assembleur](../intrinsics/compiler-intrinsics-and-assembly-language.md)

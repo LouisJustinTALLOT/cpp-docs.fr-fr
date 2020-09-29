@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: f5e289c330c83ac0c630a5b1f8f97b8c65fc7efb
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a4a754bbee08e93e2db9af50f98d7603fabcd8d4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686442"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498502"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Comment : convertir un conteneur STL/CLR en collection .NET
 
@@ -20,7 +20,7 @@ Cette rubrique montre comment convertir des conteneurs STL/CLR en leurs collecti
 
 1. Appliquez l'une des méthodes suivantes :
 
-   - Pour convertir une partie d’un conteneur, appelez la fonction [make_collection](../dotnet/make-collection-stl-clr.md) et passez l’itérateur Begin et l’itérateur de fin du conteneur STL/CLR à copier dans la collection .net. Cette fonction de modèle prend un itérateur STL/CLR comme argument de modèle. Le premier exemple illustre cette méthode.
+   - Pour convertir une partie d’un conteneur, appelez la fonction [make_collection](./adapter-stl-clr.md#make_collection) et passez l’itérateur Begin et l’itérateur de fin du conteneur STL/CLR à copier dans la collection .net. Cette fonction de modèle prend un itérateur STL/CLR comme argument de modèle. Le premier exemple illustre cette méthode.
 
    - Pour convertir un conteneur entier, effectuez un cast du conteneur en une interface de collection .NET ou une collection d’interfaces appropriée. Le deuxième exemple illustre cette méthode.
 
@@ -113,4 +113,4 @@ Key: 74.00 Value: 74
 
 [Informations de référence sur la bibliothèque STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [Comment : effectuer une conversion à partir d’une collection .NET vers un conteneur STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
-[range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)
+[range_adapter (STL/CLR)](./adapter-stl-clr.md#range_adapter)

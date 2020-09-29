@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: 2adbadecacb41a8e92cd36f55da9b376b4e1b006
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c1c9fa5a6df4cbb1c18e5d5406bdde0197d155b2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227515"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498821"
 ---
 # <a name="__event"></a>__event
 
@@ -77,7 +77,7 @@ Pour obtenir un exemple de code [, consultez Gestion des événements dans com](
 
 Pour plus d’informations sur le codage des événements dans la nouvelle syntaxe, consultez [Event](../extensions/event-cpp-component-extensions.md).
 
-Les événements managés sont des méthodes ou des données membres. En cas d’utilisation avec un événement, le type de retour d’un délégué doit être conforme à la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Le type de retour du gestionnaire d'événements doit correspondre à celui du délégué. Pour plus d’informations sur les délégués, consultez [délégués et événements](../dotnet/delegates-and-events.md). Si un événement managé est un membre de données, son type doit être un pointeur vers un délégué.
+Les événements managés sont des méthodes ou des données membres. En cas d’utilisation avec un événement, le type de retour d’un délégué doit être conforme à la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Le type de retour du gestionnaire d'événements doit correspondre à celui du délégué. Pour plus d’informations sur les délégués, consultez [délégués et événements](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md). Si un événement managé est un membre de données, son type doit être un pointeur vers un délégué.
 
 Dans .NET Framework, vous pouvez traiter un membre de données comme s'il s'agissait d'une méthode (autrement dit, la méthode `Invoke` de son délégué correspondant). Vous devez prédéfinir le type délégué pour déclarer un membre de données d'événement managé. En revanche, une méthode d'événement managé définit implicitement le délégué managé correspondant, s'il n'est pas déjà défini. Par exemple, vous pouvez déclarer une valeur d'événement telle que `OnClick` comme événement de la manière suivante :
 

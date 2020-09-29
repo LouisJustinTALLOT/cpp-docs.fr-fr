@@ -12,18 +12,18 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 643d8428e3760926832429db5a4425e078ed776b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: e970872e89132aed52190b8688f2cdaccab5ea6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389790"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500083"
 ---
-# <a name="analyze-code-analysis"></a>`/analyze`(Analyse du code)
+# <a name="analyze-code-analysis"></a>`/analyze` (Analyse du code)
 
 Active l'analyse du code et les options de contrôle.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ::: moniker range=">=vs-2017"
 
@@ -84,14 +84,14 @@ Active le plug-in PREfast spécifié dans le cadre des exécutions de l’analys
 
 ::: moniker range="<=vs-2017"
 
-LocalEspC.dll est le plug-in qui implémente les contrôles d’analyse du code liés à l’accès concurrentiel dans la plage d’avertissements C261XX. Par exemple, [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
+LocalEspC.dll est le plug-in qui implémente les contrôles d’analyse du code liés à l’accès concurrentiel dans la plage d’avertissements C261XX. Par exemple, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
-Pour exécuter LocalEspC.dll, utilisez cette option du compilateur :**`/analyze:plugin LocalEspC.dll`**
+Pour exécuter LocalEspC.dll, utilisez cette option du compilateur : **`/analyze:plugin LocalEspC.dll`**
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-ConcurrencyCheck.dll implémente les contrôles d’analyse du code liés à l’accès concurrentiel dans la plage d’avertissements C261XX. Par exemple, [C26100](/cpp/code-quality/c26100), [C26101](/cpp/code-quality/c26101),..., [C26167](/cpp/code-quality/c26167).
+ConcurrencyCheck.dll implémente les contrôles d’analyse du code liés à l’accès concurrentiel dans la plage d’avertissements C261XX. Par exemple, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
 Pour exécuter ConcurrencyCheck.dll, exécutez d’abord cette commande à partir d’une invite de commandes développeur :
 
@@ -136,14 +136,14 @@ L’exemple d’ensemble de règles personnalisé suivant indique au moteur de r
 ::: moniker-end
 
 **`/analyze:stacksize`***nombre*\
-Le paramètre *Number* utilisé avec cette option spécifie la taille, en octets, du frame de pile pour lequel l’avertissement [C6262](/cpp/code-quality/c6262) est généré. L’espace avant le *nombre* est facultatif. Si ce paramètre n’est pas spécifié, la taille du frame de pile est de 16 Ko par défaut.
+Le paramètre *Number* utilisé avec cette option spécifie la taille, en octets, du frame de pile pour lequel l’avertissement [C6262](../../code-quality/c6262.md) est généré. L’espace avant le *nombre* est facultatif. Si ce paramètre n’est pas spécifié, la taille du frame de pile est de 16 Ko par défaut.
 
 **`/analyze:WX-`**\
 Les avertissements d’analyse du code ne sont pas traités comme des erreurs quand vous compilez à l’aide de **`/WX`** . Pour plus d’informations, consultez [ `/WX` (niveau d’avertissement)](compiler-option-warning-level.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Pour plus d’informations, consultez [vue d’ensemble de l’analyse du code pour c/c++](/cpp/code-quality/code-analysis-for-c-cpp-overview) et [analyse du code pour les avertissements c/c++](/cpp/code-quality/code-analysis-for-c-cpp-warnings).
+Pour plus d’informations, consultez [vue d’ensemble de l’analyse du code pour c/c++](../../code-quality/code-analysis-for-c-cpp-overview.md) et [analyse du code pour les avertissements c/c++](../../code-quality/code-analysis-for-c-cpp-warnings.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 

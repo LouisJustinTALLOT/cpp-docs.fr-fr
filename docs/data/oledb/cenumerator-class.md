@@ -22,18 +22,18 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dfc358c06179d50cbf6442863fd2ed2c533cd00a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838150"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498537"
 ---
 # <a name="cenumerator-class"></a>CEnumerator, classe
 
 Utilise un objet énumérateur OLE DB, qui expose l’interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) pour retourner un ensemble de lignes décrivant toutes les sources de données et les énumérateurs.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CEnumerator :
@@ -54,7 +54,7 @@ class CEnumerator :
 |[GetMoniker](#getmoniker)|Récupère l' `IMoniker` interface pour l’enregistrement en cours.|
 |[Ouvrir](#open)|Ouvre l’énumérateur.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Vous pouvez récupérer les `ISourcesRowset` données indirectement à partir de cette classe.
 
@@ -77,7 +77,7 @@ dans Nom à rechercher.
 
 **`true`** Si le nom a été trouvé. Sinon, **`false`** .
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Ce nom est mappé au `SOURCES_NAME` membre de l’interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
@@ -97,7 +97,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 #### <a name="parameters"></a>Paramètres
 
 *ppMoniker*<br/>
-à Moniker analysé à partir du nom complet ([CEnumeratorAccessor :: m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) de la ligne actuelle.
+à Moniker analysé à partir du nom complet ([CEnumeratorAccessor :: m_szParseName](./cenumeratoraccessor-class.md#szparsename)) de la ligne actuelle.
 
 *lpszDisplayName*<br/>
 dans Nom complet à analyser.

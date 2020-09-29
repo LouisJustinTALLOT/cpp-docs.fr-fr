@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 6475bc3703ce1bd7cf6103f4be8c12edc36e98b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1dfa0b5e2dd65567b965be756ff171a3df75370a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226006"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499828"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -40,7 +40,7 @@ Spécifications de modèle facultatives. Pour plus d’informations, consultez [
 *MS-decl-spec*<br/>
 Spécification de classe de stockage facultative. Pour plus d’informations, reportez-vous au mot clé [__declspec](../cpp/declspec.md) .
 
-*Référence*<br/>
+*étiquette*<br/>
 Nom de type donné à la classe. La balise devient un mot réservé dans l’étendue de la classe. La balise est facultative. En cas d’omission, une classe anonyme est définie. Pour plus d’informations, consultez [types de classes anonymes](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
@@ -50,9 +50,9 @@ Liste facultative des classes ou structures dont cette classe dérivera ses memb
 Liste des membres de la classe. Pour plus d’informations, consultez [vue d’ensemble des membres de classe](../cpp/class-member-overview.md) .
 
 *declarators*<br/>
-Liste des déclarateurs spécifiant les noms d’une ou plusieurs instances du type de classe. Les déclarateurs peuvent inclure des listes d’initialiseurs si toutes les données membres de la classe sont **`public`** . Cela est plus courant dans les structures, dont les membres de données sont **`public`** par défaut, que dans les classes. Pour plus d’informations, consultez [vue d’ensemble des déclarateurs](../cpp/overview-of-declarators.md) .
+Liste des déclarateurs spécifiant les noms d’une ou plusieurs instances du type de classe. Les déclarateurs peuvent inclure des listes d’initialiseurs si toutes les données membres de la classe sont **`public`** . Cela est plus courant dans les structures, dont les membres de données sont **`public`** par défaut, que dans les classes. Pour plus d’informations, consultez [vue d’ensemble des déclarateurs](./declarations-and-definitions-cpp.md) .
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Pour plus d’informations sur les classes en général, reportez-vous à l’une des rubriques suivantes :
 

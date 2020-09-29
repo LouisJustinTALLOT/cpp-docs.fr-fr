@@ -35,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 381ae4464b23cb929e0511e6d2c228602f06a249
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 2e51eb375ab814119dcf34d85c7f5aff11559784
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413851"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499175"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -80,7 +80,7 @@ Les fonctions **Round** retournent une valeur à virgule flottante qui représen
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|aucun|**_DOMAIN**|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 C++ autorisant la surcharge, vous pouvez appeler des surcharges d’une **séquence** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **Round** prend toujours et retourne un **`double`** .
 
@@ -88,7 +88,7 @@ Si vous utilisez la \<tgmath.h> `round()` macro, le type de l’argument déterm
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -156,4 +156,4 @@ roundl(-2.499999900000000163657887242152355611324310302734375) is -2
 [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)\
 [lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)\
 [nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)\
-[Primer, rintf, rintl](rint-rintf-rintl.md)\
+[rint, rintf, rintl](rint-rintf-rintl.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b1bf4f85ccf7a0bb2d77bfb96c512349f581f193
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6acd60d430f13906d11e9a9b3e7c5655ee94badb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832449"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499306"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Ajout d’objets et de contrôles à un projet ATL
 
@@ -42,7 +42,7 @@ Vous pouvez utiliser l’un des Assistants de code ATL pour ajouter un objet ou
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud du projet, puis cliquez sur **Ajouter** dans le menu contextuel. Cliquez sur **Ajouter une classe**.
 
-   La boîte de dialogue [Ajouter une classe](../../ide/add-class-dialog-box.md) s’affiche.
+   La boîte de dialogue [Ajouter une classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) s’affiche.
 
 1. Sélectionnez le dossier **ATL** situé dans le volet **Catégories**, puis sélectionnez un objet à insérer dans le volet **Modèles**. Cliquez sur **Ouvrir**. L’Assistant Code de l’objet sélectionné s’affiche.
 

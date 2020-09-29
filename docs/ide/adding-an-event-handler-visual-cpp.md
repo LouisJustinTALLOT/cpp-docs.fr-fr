@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 0d852991c29281a7ecf912bd3d764d9916ef10f7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b1928de1aacb9c66c9f784f4eee41ce2c444b820
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447505"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499641"
 ---
 # <a name="add-an-event-handler"></a>Ajouter un gestionnaire d’événements
 
@@ -38,7 +38,7 @@ Vous pouvez ajouter un événement à la classe implémentant la boîte de dialo
 
    Si le type de message sélectionné possède déjà un gestionnaire d’événements pour la classe sélectionnée, **Ajouter et modifier** n’est pas disponible contrairement à **Modifier le code**. Sélectionnez **Modifier le code** pour ouvrir l’éditeur de texte à l’emplacement de la fonction existante.
 
-Une autre solution consiste à ajouter les gestionnaires d’événements à partir de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Pour plus d’informations, consultez [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Une autre solution consiste à ajouter les gestionnaires d’événements à partir de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Pour plus d’informations, consultez [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-editing-or-deleting-controls.md).
 
 ## <a name="in-this-section"></a>Contenu de cette section
 
@@ -46,7 +46,7 @@ Une autre solution consiste à ajouter les gestionnaires d’événements à par
 
 ## <a name="event-handler-wizard"></a>Assistant Gestionnaire d’événements
 
-Cet Assistant ajoute un gestionnaire d’événements pour un contrôle de boîte de dialogue à la classe de votre choix. Si vous ajoutez un gestionnaire d’événements à partir de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), vous pouvez l’ajouter uniquement à la classe qui implémente la boîte de dialogue. Pour plus d’informations, consultez [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md).
+Cet Assistant ajoute un gestionnaire d’événements pour un contrôle de boîte de dialogue à la classe de votre choix. Si vous ajoutez un gestionnaire d’événements à partir de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), vous pouvez l’ajouter uniquement à la classe qui implémente la boîte de dialogue. Pour plus d’informations, consultez [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-editing-or-deleting-controls.md).
 
 - **Nom de la commande**
 

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd74dd4562a3c4a8bff2c58d5f1d801f5dd06fd8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224355"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499614"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemple : implémentation d’une page de propriétés
 
@@ -133,7 +133,7 @@ Lorsque les utilisateurs souhaitent appliquer leurs modifications aux objets, le
 
 Pour afficher cette page, vous devez créer un objet d’assistance simple. L’objet d’assistance offrira une méthode qui simplifie l’API `OleCreatePropertyFrame` pour l’affichage d’une page unique connectée à un objet unique. Cette assistance sera conçue de façon à pouvoir être utilisée dans Visual Basic.
 
-Utilisez la [boîte de dialogue Ajouter une classe](../ide/add-class-dialog-box.md) et [l’Assistant Objet simple ATL](../atl/reference/atl-simple-object-wizard.md) pour générer une nouvelle classe, et utilisez `Helper` comme nom court. Une fois la classe créée, ajoutez une méthode comme indiqué dans le tableau ci-dessous.
+Utilisez la [boîte de dialogue Ajouter une classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) et [l’Assistant Objet simple ATL](../atl/reference/atl-simple-object-wizard.md) pour générer une nouvelle classe, et utilisez `Helper` comme nom court. Une fois la classe créée, ajoutez une méthode comme indiqué dans le tableau ci-dessous.
 
 |Élément|Valeur|
 |----------|-----------|

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: 380a96eedb8a70965197c4a5ce0c5199bc268db5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ca2ee42d48d8fe9f66025b8f0d5eeb493fc91d10
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141813"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498458"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Comment : convertir une boucle OpenMP qui a recours à la gestion des exceptions pour utiliser le runtime d'accès concurrentiel
 
-Cet exemple montre comment convertir une boucle OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../../parallel/openmp/reference/for-openmp.md) qui effectue la gestion des exceptions pour utiliser le mécanisme de gestion des exceptions Runtime d’accès concurrentiel.
+Cet exemple montre comment convertir une boucle OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../openmp/reference/openmp-directives.md#for-openmp) qui effectue la gestion des exceptions pour utiliser le mécanisme de gestion des exceptions Runtime d’accès concurrentiel.
 
 Dans OpenMP, une exception levée dans une région parallèle doit être interceptée et gérée dans la même région par le même thread. Une exception qui échappe la région parallèle est interceptée par le gestionnaire d’exceptions non gérées, qui met fin au processus par défaut.
 
@@ -22,7 +22,7 @@ Dans le runtime d’accès concurrentiel, quand vous levez une exception dans le
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre comment gérer les exceptions dans une région de `parallel` OpenMP et dans un appel à `parallel_for`. La fonction `do_work` effectue une demande d’allocation de mémoire qui échoue et, par conséquent, lève une exception de type [std :: bad_alloc](../../standard-library/bad-alloc-class.md). Dans la version qui utilise OpenMP, le thread qui lève l’exception doit également l’intercepter. En d’autres termes, chaque itération d’une boucle parallèle OpenMP doit gérer l’exception. Dans la version qui utilise le runtime d’accès concurrentiel, le thread principal intercepte une exception qui est levée par un autre thread.
+Cet exemple montre comment gérer les exceptions dans une `parallel` région OpenMP et dans un appel à `parallel_for` . La `do_work` fonction effectue une demande d’allocation de mémoire qui ne fonctionne pas et, par conséquent, lève une exception de type [std :: bad_alloc](../../standard-library/bad-alloc-class.md). Dans la version qui utilise OpenMP, le thread qui lève l’exception doit également l’intercepter. En d’autres termes, chaque itération d’une boucle parallèle OpenMP doit gérer l’exception. Dans la version qui utilise le runtime d’accès concurrentiel, le thread principal intercepte une exception qui est levée par un autre thread.
 
 [!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that-uses-exception-handling_1.cpp)]
 
@@ -44,22 +44,22 @@ Using the Concurrency Runtime...
 An error of type 'class std::bad_alloc' occurred.
 ```
 
-Dans la version de cet exemple qui utilise OpenMP, l’exception se produit dans et est gérée par chaque itération de la boucle. Dans la version qui utilise le runtime d’accès concurrentiel, le runtime stocke l’exception, arrête toutes les tâches actives, ignore toutes les tâches qui n’ont pas encore démarré et marshale l’exception au contexte qui appelle `parallel_for`.
+Dans la version de cet exemple qui utilise OpenMP, l’exception se produit dans et est gérée par chaque itération de la boucle. Dans la version qui utilise le runtime d’accès concurrentiel, le runtime stocke l’exception, arrête toutes les tâches actives, ignore toutes les tâches qui n’ont pas encore démarré et marshale l’exception au contexte qui appelle `parallel_for` .
 
 Si vous avez besoin que la version qui utilise OpenMP se termine après l’exception, vous pouvez utiliser un indicateur booléen pour signaler à d’autres itérations de boucle que l’erreur s’est produite. Comme dans l’exemple de la rubrique [Comment : convertir une boucle OpenMP qui utilise l’annulation pour utiliser l’Runtime d’accès concurrentiel](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md), les itérations de boucle suivantes ne font rien si l’indicateur est défini. À l’inverse, si vous avez besoin que la boucle qui utilise le runtime d’accès concurrentiel se poursuive après l’exception, gérez l’exception dans le corps de la boucle parallèle elle-même.
 
 Les autres composants de la runtime d’accès concurrentiel, tels que les agents asynchrones et les tâches légères, ne transportent pas d’exceptions. Au lieu de cela, les exceptions non gérées sont interceptées par le gestionnaire d’exceptions non gérées, qui met fin au processus par défaut. Pour plus d’informations sur la gestion des exceptions, consultez [gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-Pour plus d’informations sur les `parallel_for` et d’autres algorithmes parallèles, consultez [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md).
+Pour plus d’informations sur `parallel_for` et d’autres algorithmes parallèles, consultez [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `concrt-omp-exceptions.cpp` puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
+Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `concrt-omp-exceptions.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-> **CL. exe/EHsc/OpenMP concrt-omp-exceptions. cpp**
+> **cl.exe/EHsc/OpenMP concrt-omp-exceptions. cpp**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Migration d’OpenMP au runtime d’accès concurrentiel](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
+[Migration d'OpenMP au runtime d'accès concurrentiel](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md)

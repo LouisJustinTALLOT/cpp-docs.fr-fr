@@ -2,12 +2,12 @@
 title: Ajout d’un composant ATL COM+ 1.0
 ms.date: 05/09/2019
 ms.assetid: c6c95e64-9ee4-4a6e-8804-5930202ce1b9
-ms.openlocfilehash: 843563e324e5e01af3c38896f268efc06c9a6222
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0d25c4d1a68d553025f015644304f3a888be3882
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075321"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499330"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Ajout d’un composant ATL COM+ 1.0
 
@@ -27,7 +27,7 @@ Cet Assistant ajoute à votre projet un objet qui prend en charge les services C
 
 1. Dans le menu contextuel, cliquez sur **Ajouter**, puis cliquez sur **Ajouter une classe**.
 
-1. Dans la boîte de dialogue [Ajouter une classe](../../ide/add-class-dialog-box.md), dans le volet **Modèles**, cliquez sur **Composant ATL COM+ 1.0**, puis sur **Ouvrir** pour afficher l’[Assistant Composant ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
+1. Dans la boîte de dialogue [Ajouter une classe](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box), dans le volet **Modèles**, cliquez sur **Composant ATL COM+ 1.0**, puis sur **Ouvrir** pour afficher l’[Assistant Composant ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
 
 ## <a name="see-also"></a>Voir aussi
 

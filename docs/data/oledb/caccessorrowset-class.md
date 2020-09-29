@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843285"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498721"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset, classe
 
@@ -64,19 +64,19 @@ Classe d’ensemble de lignes.
 
 | Nom | Description |
 |--|--|
-| [Établis](#bind) | Crée des liaisons (utilisé lorsque `bBind` est spécifié comme **`false`** dans [CCommand :: Open](../../data/oledb/ccommand-open.md)). |
+| [Établis](#bind) | Crée des liaisons (utilisé lorsque `bBind` est spécifié comme **`false`** dans [CCommand :: Open](./ccommand-class.md#open)). |
 | [CAccessorRowset,](#caccessorrowset) | Constructeur. |
 | [Close](#close) | Ferme l’ensemble de lignes et tous les accesseurs. |
 | [FreeRecordMemory](#freerecordmemory) | Libère toutes les colonnes de l’enregistrement actif qui doivent être libérées. |
 | [GetColumnInfo](#getcolumninfo) | Implémente [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)). |
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 `TAccessor`La classe gère l’accesseur. La classe *TRowset* gère l’ensemble de lignes.
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset :: bind
 
-Crée les liaisons si vous avez spécifié `bBind` comme **`false`** dans [CCommand :: Open](../../data/oledb/ccommand-open.md).
+Crée les liaisons si vous avez spécifié `bBind` comme **`false`** dans [CCommand :: Open](./ccommand-class.md#open).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -92,7 +92,7 @@ HRESULT standard.
 
 Initialise l'objet `CAccessorRowset`.
 
-### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntax
 
 ```cpp
 CAccessorRowset();
@@ -116,7 +116,7 @@ Libère toute mémoire associée.
 
 Libère toutes les colonnes de l’enregistrement actif qui doivent être libérées.
 
-### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntax
 
 ```cpp
 void FreeRecordMemory();
@@ -145,7 +145,7 @@ Consultez [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms
 
 HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’utilisateur doit libérer les informations de colonne retournées et la mémoire tampon de chaîne. Utilisez la deuxième version de cette méthode lorsque vous utilisez [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) et que vous devez substituer les liaisons.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - add class from ActiveX control wizard [C++]
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
-ms.openlocfilehash: 1d91d98082a5c5d6d45bfa31e81c59e8925aa2c2
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: d63f73e17e47f2cabb8f1a55c71325ec7068a2c8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694216"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500375"
 ---
 # <a name="add-a-class-from-an-activex-control"></a>Ajouter une classe à partir d’un contrôle ActiveX
 
@@ -34,7 +34,7 @@ Un contrôle ActiveX est un composant logiciel réutilisable qui repose sur le m
 
 1. Dans le menu contextuel, choisissez **Ajouter**, puis **Ajouter une classe**.
 
-1. Dans la boîte de dialogue [Ajouter une classe](../ide/add-class-dialog-box.md), dans le volet **Modèles**, choisissez **Classe MFC à partir du contrôle ActiveX**, puis **Ouvrir** pour afficher l’[Assistant Ajout d’une classe à partir d’un contrôle ActiveX](#add-class-from-activex-control-wizard).
+1. Dans la boîte de dialogue [Ajouter une classe](./adding-a-class-visual-cpp.md#add-class-dialog-box), dans le volet **Modèles**, choisissez **Classe MFC à partir du contrôle ActiveX**, puis **Ouvrir** pour afficher l’[Assistant Ajout d’une classe à partir d’un contrôle ActiveX](#add-class-from-activex-control-wizard).
 
 Dans l’Assistant, vous pouvez ajouter plusieurs interfaces dans un contrôle ActiveX. Vous pouvez également créer des classes à partir de plusieurs contrôles ActiveX dans une même session d’Assistant.
 
@@ -42,9 +42,9 @@ Vous pouvez ajouter des classes à partir des contrôles ActiveX inscrits dans v
 
 L’Assistant crée une classe MFC, dérivée de [CWnd](../mfc/reference/cwnd-class.md) ou de [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md), pour chaque interface que vous ajoutez à partir du contrôle ActiveX sélectionné.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
-- [Assistant Ajout d’une classe à partir d’un contrôle ActiveX](#add-class-from-activex-control-wizard)
+- [Assistant Ajouter une classe à partir d’un contrôle ActiveX](#add-class-from-activex-control-wizard)
 
 ## <a name="add-class-from-activex-control-wizard"></a>Assistant Ajout d’une classe à partir d’un contrôle ActiveX
 
@@ -56,8 +56,8 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’un contrôle Ac
 
   |Option|Description|
   |------------|-----------------|
-  |**Registry**|La bibliothèque de types est inscrite dans le système. Les bibliothèques de types inscrites sont répertoriées dans **Contrôles ActiveX disponibles**.|
-  |**Fichier**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais elle est stockée dans un fichier. Spécifiez l’emplacement du fichier dans **Emplacement**.|
+  |**Registre**|La bibliothèque de types est inscrite dans le système. Les bibliothèques de types inscrites sont répertoriées dans **Contrôles ActiveX disponibles**.|
+  |**File**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais elle est stockée dans un fichier. Spécifiez l’emplacement du fichier dans **Emplacement**.|
 
 - **Contrôles ActiveX disponibles**
 
@@ -84,9 +84,9 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’un contrôle Ac
 
 - **Classes générées**
 
-  Spécifie les noms de classe à générer à partir des interfaces ajoutées à l’aide du bouton **>** ou **>>**. Vous pouvez cocher cette case pour sélectionner une classe, puis utiliser les touches Haut et Bas pour faire défiler la liste. Quand vous sélectionnez **Terminer**, vous pouvez afficher chaque nom de classe générée dans la zone **Classe** et chaque nom de fichier généré dans la zone **Fichier .h**. Vous ne pouvez sélectionner qu’une seule classe à la fois dans cette zone.
+  Spécifie les noms de classes à générer à partir des interfaces ajoutées à l’aide du **>** **>>** bouton ou. Vous pouvez cocher cette case pour sélectionner une classe, puis utiliser les touches Haut et Bas pour faire défiler la liste. Quand vous sélectionnez **Terminer**, vous pouvez afficher chaque nom de classe générée dans la zone **Classe** et chaque nom de fichier généré dans la zone **Fichier .h**. Vous ne pouvez sélectionner qu’une seule classe à la fois dans cette zone.
 
-  Pour supprimer une classe, sélectionnez-la dans cette liste et sélectionnez **<**. Vous n’avez pas besoin de sélectionner une classe dans la zone **Classes générées** pour supprimer toutes les classes. En sélectionnant **<<**, vous supprimez toutes les classes dans la zone **Classes générées**.
+  Vous pouvez supprimer une classe en la sélectionnant dans cette liste et en sélectionnant **<** . Vous n’avez pas besoin de sélectionner une classe dans la zone **Classes générées** pour supprimer toutes les classes. En sélectionnant **<<** , vous supprimez toutes les classes dans la zone **classes générées** .
 
 - **Classe**
 

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ed0e4ab7bce52d4dee54e7f9149edae535445d65
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446873"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498573"
 ---
 # <a name="swap-function-auto_handle"></a>swap, fonction (auto_handle)
 
-Échange des objets entre une `auto_handle` et une autre.
+Échange des objets entre un `auto_handle` et un autre.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ void swap(
 #### <a name="parameters"></a>Paramètres
 
 *_left*<br/>
-`auto_handle`.
+Élément `auto_handle`.
 
 *_right*<br/>
 Autre `auto_handle`.
@@ -61,13 +61,13 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**Fichier d’en-tête** \<msclr, \ auto_handle. h >
+**Fichier d’en-tête** \<msclr\auto_handle.h>
 
 **Espace de noms** msclr,
 
 ## <a name="see-also"></a>Voir aussi
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
-[auto_handle::swap](../dotnet/auto-handle-swap.md)
+[auto_handle::swap](./auto-handle-class.md#swap)
