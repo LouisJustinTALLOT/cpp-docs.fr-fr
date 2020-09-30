@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3049
 ms.assetid: 6ddf54f6-2c30-4d04-b637-98c6c922c533
-ms.openlocfilehash: 994940b8d8b8cf7905ec635aef95c7d8069592d2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 21ff04e76c5a58f2ac673d1c4cace16cda388669
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761297"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501610"
 ---
 # <a name="compiler-error-c3049"></a>Erreur du compilateur C3049
 
 'arg' : argument non valide dans la clause 'default' OpenMP
 
-Une valeur incorrecte a été passée à une clause [default](../../parallel/openmp/reference/default-openmp.md) .
+Une valeur incorrecte a été passée à une clause [default](../../parallel/openmp/reference/openmp-clauses.md#default-openmp) .
 
 L’exemple suivant génère l’erreur C3049 :
 

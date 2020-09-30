@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 360fedc6cadf275704a790c257c42ac8bde7873d
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: d3800998ded1758ab1de92af689d9d4613c2c61e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742058"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502328"
 ---
 # <a name="compiler-error-c3409"></a>Erreur du compilateur C3409
 
 > bloc d’attributs vide non autorisé
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Les crochets ont été interprétés par le compilateur comme un bloc d' [attributs](../../windows/attributes-alphabetical-reference.md) , mais aucun attribut n’a été trouvé.
+Les crochets ont été interprétés par le compilateur comme un bloc d' [attributs](../../windows/attributes/attributes-alphabetical-reference.md) , mais aucun attribut n’a été trouvé.
 
 Le compilateur peut générer cette erreur quand vous utilisez des crochets dans le cadre de la définition d’une expression lambda. Cette erreur se produit lorsque le compilateur ne peut pas déterminer si les crochets font partie de la définition d’une expression lambda ou d’un bloc d’attributs. Pour plus d’informations sur les expressions lambda, consultez [expressions lambda](../../cpp/lambda-expressions-in-cpp.md).
 
@@ -67,6 +67,6 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
+[attribute](../../windows/attributes/attributes-alphabetical-reference.md)<br/>
 [Expressions lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Syntaxe d’expression lambda](../../cpp/lambda-expression-syntax.md)

@@ -57,12 +57,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d5c1d30704838cdb69516d68d328c90a094a08e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87210928"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502381"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -90,7 +90,7 @@ Type d'un élément dans la séquence contrôlée.
 *Conteneur*<br/>
 Type du conteneur sous-jacent.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<cliext/queue>
 
@@ -144,13 +144,13 @@ Type du conteneur sous-jacent.
 |<xref:System.ICloneable>|Dupliquer un objet.|
 |IQueue\<Value, Container>|Gérer l’adaptateur de conteneur générique.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un conteneur sous-jacent, de type `Container` , qui stocke des `Value` éléments et se développe à la demande. L’objet restreint l’accès au simple push du premier élément et en dépilant le dernier élément, en implémentant une file d’attente First-in First-Out (également appelée file d’attente FIFO ou simplement une file d’attente).
 
 ## <a name="members"></a>Membres
 
-## <a name="queueassign-stlclr"></a><a name="assign"></a>queue :: assign (STL/CLR)
+## <a name="queueassign-stlclr"></a><a name="assign"></a> queue :: assign (STL/CLR)
 
 Remplace tous les éléments.
 
@@ -165,7 +165,7 @@ void assign(queue<Value, Container>% right);
 *Oui*<br/>
 Adaptateur de conteneur à insérer.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre est assignée `right.get_container()` au conteneur sous-jacent. Vous l’utilisez pour modifier la totalité du contenu de la file d’attente.
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="queueback-stlclr"></a><a name="back"></a>queue :: Back (STL/CLR)
+## <a name="queueback-stlclr"></a><a name="back"></a> queue :: Back (STL/CLR)
 
 Accède au dernier élément.
 
@@ -256,7 +256,7 @@ back() = c
 a b x
 ```
 
-## <a name="queueback_item-stlclr"></a><a name="back_item"></a>queue :: back_item (STL/CLR)
+## <a name="queueback_item-stlclr"></a><a name="back_item"></a> queue :: back_item (STL/CLR)
 
 Accède au dernier élément.
 
@@ -308,7 +308,7 @@ back_item = c
 a b x
 ```
 
-## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a>queue :: const_reference (STL/CLR)
+## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a> queue :: const_reference (STL/CLR)
 
 Type d'une référence constante à un élément.
 
@@ -352,7 +352,7 @@ int main()
 a b c
 ```
 
-## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a>queue :: container_type (STL/CLR)
+## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a> queue :: container_type (STL/CLR)
 
 Type du conteneur sous-jacent.
 
@@ -394,7 +394,7 @@ int main()
 a b c
 ```
 
-## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a>file d’attente ::d ifference_type (STL/CLR)
+## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a> file d’attente ::d ifference_type (STL/CLR)
 
 Types d’une distance signée entre deux éléments.
 
@@ -452,7 +452,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="queueempty-stlclr"></a><a name="empty"></a>queue :: Empty (STL/CLR)
+## <a name="queueempty-stlclr"></a><a name="empty"></a> queue :: Empty (STL/CLR)
 
 Vérifie l'absence d'éléments.
 
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [queue :: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() == 0` . Vous l’utilisez pour tester si la file d’attente est vide.
+La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à [queue :: Size (STL/CLR)](#size) `() == 0` . Vous l’utilisez pour tester si la file d’attente est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -506,7 +506,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="queuefront-stlclr"></a><a name="front"></a>queue :: Front (STL/CLR)
+## <a name="queuefront-stlclr"></a><a name="front"></a> queue :: Front (STL/CLR)
 
 Accède au premier élément.
 
@@ -558,7 +558,7 @@ front() = a
 x b c
 ```
 
-## <a name="queuefront_item-stlclr"></a><a name="front_item"></a>queue :: front_item (STL/CLR)
+## <a name="queuefront_item-stlclr"></a><a name="front_item"></a> queue :: front_item (STL/CLR)
 
 Accède au premier élément.
 
@@ -610,7 +610,7 @@ front_item = a
 x b c
 ```
 
-## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a>queue :: generic_container (STL/CLR)
+## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a> queue :: generic_container (STL/CLR)
 
 Type de l’interface générique pour l’adaptateur de conteneur.
 
@@ -673,7 +673,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a>queue :: generic_value (STL/CLR)
+## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a> queue :: generic_value (STL/CLR)
 
 Type d’un élément à utiliser avec l’interface générique pour le conteneur.
 
@@ -731,7 +731,7 @@ a b c
 a b c
 ```
 
-## <a name="queueget_container-stlclr"></a><a name="get_container"></a>queue :: get_container (STL/CLR)
+## <a name="queueget_container-stlclr"></a><a name="get_container"></a> queue :: get_container (STL/CLR)
 
 Accède au conteneur sous-jacent.
 
@@ -772,7 +772,7 @@ int main()
 a b c
 ```
 
-## <a name="queueoperator-stlclr"></a><a name="op_as"></a>queue :: Operator = (STL/CLR)
+## <a name="queueoperator-stlclr"></a><a name="op_as"></a> queue :: Operator = (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -787,7 +787,7 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 *Oui*<br/>
 Adaptateur de conteneur à copier.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
@@ -826,7 +826,7 @@ a b c
 a b c
 ```
 
-## <a name="queuepop-stlclr"></a><a name="pop"></a>file d’attente ::p op (STL/CLR)
+## <a name="queuepop-stlclr"></a><a name="pop"></a> file d’attente ::p op (STL/CLR)
 
 Supprime le dernier élément.
 
@@ -874,7 +874,7 @@ a b c
 b c
 ```
 
-## <a name="queuepush-stlclr"></a><a name="push"></a>file d’attente ::p par émission (STL/CLR)
+## <a name="queuepush-stlclr"></a><a name="push"></a> file d’attente ::p par émission (STL/CLR)
 
 Ajoute un nouveau dernier élément.
 
@@ -915,7 +915,7 @@ int main()
 a b c
 ```
 
-## <a name="queuequeue-stlclr"></a><a name="queue"></a>queue :: queue (STL/CLR)
+## <a name="queuequeue-stlclr"></a><a name="queue"></a> queue :: queue (STL/CLR)
 
 Construit un objet adaptateur de conteneur.
 
@@ -936,7 +936,7 @@ Objet à copier.
 *encapsulée*<br/>
 Conteneur encapsulé à utiliser.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le constructeur :
 
@@ -1008,7 +1008,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="queuereference-stlclr"></a><a name="reference"></a>queue :: Reference (STL/CLR)
+## <a name="queuereference-stlclr"></a><a name="reference"></a> queue :: Reference (STL/CLR)
 
 Type d'une référence à un élément.
 
@@ -1057,7 +1057,7 @@ a b c
 a b x
 ```
 
-## <a name="queuesize-stlclr"></a><a name="size"></a>queue :: Size (STL/CLR)
+## <a name="queuesize-stlclr"></a><a name="size"></a> queue :: Size (STL/CLR)
 
 Compte le nombre d'éléments.
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [queue :: Empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md) `()` .
+La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez [queue :: Empty (STL/CLR)](#empty) `()` .
 
 ### <a name="example"></a>Exemple
 
@@ -1111,7 +1111,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="queuesize_type-stlclr"></a><a name="size_type"></a>queue :: size_type (STL/CLR)
+## <a name="queuesize_type-stlclr"></a><a name="size_type"></a> queue :: size_type (STL/CLR)
 
 Type d’une distance signée entre deux éléments.
 
@@ -1160,7 +1160,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="queueto_array-stlclr"></a><a name="to_array"></a>queue :: to_array (STL/CLR)
+## <a name="queueto_array-stlclr"></a><a name="to_array"></a> queue :: to_array (STL/CLR)
 
 Copie la séquence contrôlée dans un nouveau tableau.
 
@@ -1210,7 +1210,7 @@ a b c d
 a b c
 ```
 
-## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a>queue :: value_type (STL/CLR)
+## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a> queue :: value_type (STL/CLR)
 
 Type d’un élément.
 
@@ -1255,7 +1255,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_neq"></a>Operator ! = (file d’attente) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_neq"></a> Operator ! = (file d’attente) (STL/CLR)
 
 Comparaison n’est pas égale à la file d’attente.
 
@@ -1276,7 +1276,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux files d’attente sont comparées élément par élément.
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>opérateur &lt; (file d’attente) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a> opérateur &lt; (file d’attente) (STL/CLR)
 
 File d’attente inférieure à la comparaison.
 
@@ -1347,9 +1347,9 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, elle retourne `left->` [queue :: Size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()` que vous utilisez *left* pour déterminer si Left *right* est ordonné avant le moment où les deux files d’attente sont comparées élément par élément.
+La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, elle retourne `left->` [queue :: Size (STL/CLR)](#size) `() <` `right->size()` que vous utilisez *left* pour déterminer si Left *right* est ordonné avant le moment où les deux files d’attente sont comparées élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>opérateur &lt; = (file d’attente) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a> opérateur &lt; = (file d’attente) (STL/CLR)
 
 Comparaison de la file d’attente inférieure ou égale.
 
@@ -1418,7 +1418,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas trié après *le* moment où les deux files d’attente sont comparées élément par élément.
 
@@ -1468,7 +1468,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_eq"></a>opérateur = = (file d’attente) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_eq"></a> opérateur = = (file d’attente) (STL/CLR)
 
 Comparaison égale à la file d’attente.
 
@@ -1489,7 +1489,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i` , `left[i] ==` `right[i]` . Vous l’utilisez pour tester si *Left* est *ordonné de la même façon que* lorsque les deux files d’attente sont comparées élément par élément.
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>opérateur &gt; (file d’attente) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a> opérateur &gt; (file d’attente) (STL/CLR)
 
 File d’attente supérieure à la comparaison.
 
@@ -1560,7 +1560,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour tester si *Left* est trié après *le* moment où les deux files d’attente sont comparées élément par élément.
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>opérateur &gt; = (file d’attente) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a> opérateur &gt; = (file d’attente) (STL/CLR)
 
 Comparaison de la file d’attente supérieure ou égale.
 
@@ -1631,7 +1631,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction opérateur retourne `!(left < right)` . Vous l’utilisez pour tester si *Left* n’est pas trié *avant le moment où* les deux files d’attente sont comparées élément par élément.
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3eee52004e1418b3e756a78c8c2a04040d0bd7ff
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210975"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501852"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Liaison dynamique des colonnes dans votre fournisseur
 
@@ -23,7 +23,7 @@ Assurez-vous que vous avez vraiment besoin d’une liaison de colonne dynamique.
 
 ## <a name="to-implement-dynamic-column-binding"></a>Pour implémenter une liaison de colonne dynamique
 
-1. Supprimez les `PROVIDER_COLUMN_MAP`s de votre code.
+1. Supprimez tous les `PROVIDER_COLUMN_MAP` s de votre code.
 
 1. Dans l’enregistrement utilisateur (votre structure), ajoutez la déclaration suivante :
 
@@ -31,9 +31,9 @@ Assurez-vous que vous avez vraiment besoin d’une liaison de colonne dynamique.
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. Implémentez la fonction `GetColumnInfo`. Cette fonction définit la manière dont les informations sont stockées. Vous devrez peut-être obtenir des propriétés ou d’autres informations pour cette fonction. Vous souhaiterez peut-être créer une macro, similaire à la macro [COLUMN_ENTRY](../../data/oledb/column-entry.md) , pour ajouter vos propres informations.
+1. Implémentez la `GetColumnInfo` fonction. Cette fonction définit la manière dont les informations sont stockées. Vous devrez peut-être obtenir des propriétés ou d’autres informations pour cette fonction. Vous souhaiterez peut-être créer une macro, similaire à la macro [COLUMN_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry) , pour ajouter vos propres informations.
 
-   L’exemple suivant illustre une fonction `GetColumnInfo`.
+   L’exemple suivant illustre une `GetColumnInfo` fonction.
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero
@@ -88,4 +88,4 @@ Assurez-vous que vous avez vraiment besoin d’une liaison de colonne dynamique.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des modèles du fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Utilisation des modèles de fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

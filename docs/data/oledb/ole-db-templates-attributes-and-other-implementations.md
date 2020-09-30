@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 722bfdf02dc89e061351fd2a87b5d019db10da6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 217db304c7d0b5723b7af383e07290f160cc9465
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209883"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500922"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modèles, attributs et autres implémentations OLE DB
 
@@ -41,11 +41,11 @@ Pour plus d’informations, vous pouvez :
 
 ## <a name="ole-db-attributes"></a>Attributs OLE DB
 
-Les [attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md) offrent un moyen pratique de créer des OLE DB consommateurs. Les attributs OLE DB injectent du code basé sur les [modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) pour créer des consommateurs et des fournisseurs OLE DB. Si vous devez spécifier une fonctionnalité qui n’est pas prise en charge par les attributs, vous pouvez utiliser les modèles de OLE DB conjointement aux attributs dans votre code.
+Les [attributs du consommateur OLE DB](../../windows/attributes/ole-db-consumer-attributes.md) offrent un moyen pratique de créer des OLE DB consommateurs. Les attributs OLE DB injectent du code basé sur les [modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) pour créer des consommateurs et des fournisseurs OLE DB. Si vous devez spécifier une fonctionnalité qui n’est pas prise en charge par les attributs, vous pouvez utiliser les modèles de OLE DB conjointement aux attributs dans votre code.
 
 ## <a name="mfc-ole-db-classes"></a>Classes de OLE DB MFC
 
-La bibliothèque MFC a une classe, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), qui affiche des enregistrements de base de données dans des contrôles. La vue est une vue de formulaire directement connectée à un objet `CRowset` et affiche les champs de l’objet `CRowset` dans les contrôles du modèle de boîte de dialogue. Il fournit également une implémentation par défaut pour passer au premier enregistrement, suivant, précédent ou dernier, ainsi qu’une interface pour la mise à jour de l’enregistrement actuellement affiché. Pour plus d’informations, consultez `COleDBRecordView`.
+La bibliothèque MFC a une classe, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), qui affiche des enregistrements de base de données dans des contrôles. La vue est une vue de formulaire directement connectée à un `CRowset` objet et affiche les champs de l' `CRowset` objet dans les contrôles du modèle de boîte de dialogue. Il fournit également une implémentation par défaut pour passer au premier enregistrement, suivant, précédent ou dernier, ainsi qu’une interface pour la mise à jour de l’enregistrement actuellement affiché. Pour plus d'informations, consultez `COleDBRecordView`.
 
 ## <a name="ole-db-sdk-interfaces"></a>Interfaces du kit de développement logiciel OLE DB
 
@@ -53,5 +53,5 @@ Dans les cas où les modèles de OLE DB ne prennent pas en charge OLE DB fonctio
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation OLE DB](../../data/oledb/ole-db-programming.md)<br/>
-[Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)
+[Programmation OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)

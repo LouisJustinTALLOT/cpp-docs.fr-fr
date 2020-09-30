@@ -31,18 +31,18 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838293"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502504"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet, classe
 
-Hérite de la `DBPROPIDSET` structure et ajoute un constructeur qui initialise les champs clés ainsi que la méthode d’accès [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .
+Hérite de la `DBPROPIDSET` structure et ajoute un constructeur qui initialise les champs clés ainsi que la méthode d’accès [AddPropertyID](#addpropertyid) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CDBPropIDSet : public tagDBPROPIDSET
@@ -68,7 +68,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |-|-|
 |[opérateur =](#op_equal)|Attribue le contenu d’un ensemble d’ID de propriété à un autre.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 OLE DB consommateurs utilisent des `DBPROPIDSET` structures pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans une structure [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) unique appartiennent à un jeu de propriétés.
 
@@ -124,9 +124,9 @@ void SetGUID(const GUID& guid) throw();
 *guid*<br/>
 dans GUID utilisé pour définir le `guidPropertySet` champ de la structure [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Ce champ peut également être défini par le [constructeur](../../data/oledb/cdbpropidset-cdbpropidset.md) . Appelez cette fonction si vous utilisez le constructeur par défaut pour cette classe.
+Ce champ peut également être défini par le [constructeur](#cdbpropidset) . Appelez cette fonction si vous utilisez le constructeur par défaut pour cette classe.
 
 ## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> CDBPropIDSet :: Operator =
 

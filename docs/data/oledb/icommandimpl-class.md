@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845586"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501831"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl, classe
 
@@ -102,7 +102,7 @@ Interface de commande. La valeur par défaut est `ICommand`.
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|Indique si la commande doit être annulée lors de l’exécution de.|
 |[m_bIsExecuting](#bisexecuting)|Indique si la commande est en cours d’exécution.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Interface obligatoire sur l’objet de commande.
 
@@ -124,7 +124,7 @@ Consultez [ICommand :: Cancel](/previous-versions/windows/desktop/ms714402(v=vs
 
 Annule l’exécution de la commande actuelle.
 
-### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT CancelExecution();
@@ -132,7 +132,7 @@ HRESULT CancelExecution();
 
 ## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl :: CreateRowset
 
-Appelée par [Execute](../../data/oledb/icommandimpl-execute.md) pour créer un ensemble de lignes unique.
+Appelée par [Execute](#execute) pour créer un ensemble de lignes unique.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -173,7 +173,7 @@ Correspond à *pcRowsAffected* dans `ICommand::Execute` .
 
 Valeur HRESULT standard. `ICommand::Execute`Pour obtenir la liste des valeurs standard, consultez.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Pour créer plusieurs ensembles de lignes, ou pour fournir vos propres conditions de création de jeux de lignes différents, placez les différents appels à `CreateRowset` à partir de `Execute` .
 
@@ -197,11 +197,11 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 Consultez [ICommand :: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’interface sortante demandée sera une interface acquise à partir de l’objet rowset créé par cette fonction.
 
-`Execute` appelle [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Remplacez l’implémentation par défaut pour créer plusieurs ensembles de lignes ou pour fournir vos propres conditions pour la création de différents ensembles de lignes.
+`Execute` appelle [CreateRowset](#createrowset). Remplacez l’implémentation par défaut pour créer plusieurs ensembles de lignes ou pour fournir vos propres conditions pour la création de différents ensembles de lignes.
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl :: GetDBSession
 
@@ -218,7 +218,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 Consultez [ICommand :: GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Utile pour la récupération des propriétés de la session.
 
@@ -226,7 +226,7 @@ Utile pour la récupération des propriétés de la session.
 
 Constructeur.
 
-### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntax
 
 ```cpp
 ICommandImpl();

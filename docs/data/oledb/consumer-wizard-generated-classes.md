@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 86da5081fbe63728b062879838ac3ffe78504ccc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 80a43446f0367acb89a04fdaa8198b5cff5a6697
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211482"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500973"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes de consommateur générées par l’Assistant
 
@@ -150,7 +150,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>Classes d'enregistrement utilisateur injectées par les attributs
 
-Si vous créez un consommateur OLE DB en utilisant les attributs de base de données ([db_command](../../windows/db-command.md) ou [db_table](../../windows/db-table.md)), les attributs injectent une classe d’enregistrement utilisateur dont le nom prend la forme « _*NomClasse*Accessor ». Par exemple, si vous avez nommé votre classe de commande `COrders`, la classe d’enregistrement utilisateur s’intitule `_COrdersAccessor`. Bien que la classe d’enregistrement utilisateur s’affiche dans **Affichage de classes**, double-cliquer dessus vous redirige vers la classe de commande ou de table dans le fichier d’en-tête. Dans ce cas, vous ne pouvez voir la déclaration réelle de la classe d’enregistrement utilisateur qu’en affichant le code injecté par les attributs.
+Si vous créez un consommateur OLE DB en utilisant les attributs de base de données ([db_command](../../windows/attributes/db-command.md) ou [db_table](../../windows/attributes/db-table.md)), les attributs injectent une classe d’enregistrement utilisateur dont le nom prend la forme « _*NomClasse*Accessor ». Par exemple, si vous avez nommé votre classe de commande `COrders`, la classe d’enregistrement utilisateur s’intitule `_COrdersAccessor`. Bien que la classe d’enregistrement utilisateur s’affiche dans **Affichage de classes**, double-cliquer dessus vous redirige vers la classe de commande ou de table dans le fichier d’en-tête. Dans ce cas, vous ne pouvez voir la déclaration réelle de la classe d’enregistrement utilisateur qu’en affichant le code injecté par les attributs.
 
 Vous pouvez rencontrer des complications si vous ajoutez ou substituez des méthodes dans des consommateurs avec attributs. Par exemple, vous pouvez décider d’ajouter un constructeur `_COrdersAccessor` à la déclaration `COrders` . Or, en réalité, le constructeur est ajouté à la classe `COrdersAccessor` injectée. Un constructeur de ce type peut initialiser les colonnes/paramètres, mais vous ne pouvez pas créer un constructeur de copie de cette façon, car il ne peut pas instancier directement l’objet `COrdersAccessor`. Si vous avez besoin d’un constructeur (ou autre méthode) directement dans la classe `COrders`, il est recommandé de définir une nouvelle classe dérivant de `COrders` et d’y ajouter les méthodes nécessaires.
 
@@ -190,4 +190,4 @@ Pour plus d’informations sur l’affichage de code injecté, consultez [Débog
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Création d’un consommateur OLE DB à l’aide d’un Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

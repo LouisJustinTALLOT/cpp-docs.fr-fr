@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-ms.openlocfilehash: 99540214d1b903c66d350145c08ab657d12ef8f7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9de2db002d7f06e797531c09af0a021c402eec7d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616757"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502273"
 ---
 # <a name="dialog-data-validation"></a>Validation de données de boîtes de dialogue
 
@@ -22,10 +22,10 @@ Vous pouvez spécifier la validation en plus de l’échange de données en appe
 
 Vous pouvez également définir vos propres routines DDX et DDV personnalisées. Pour plus d’informations sur cet aspect et d’autres aspects de DDX et DDV, consultez la [note technique MFC 26](tn026-ddx-and-ddv-routines.md).
 
-L' [Assistant Ajout de variable membre](../ide/add-member-variable-wizard.md) écrira tous les appels DDX et DDV dans le mappage de données pour vous.
+L' [Assistant Ajout de variable membre](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) écrira tous les appels DDX et DDV dans le mappage de données pour vous.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Échange et validation de données de boîtes de dialogue](dialog-data-exchange-and-validation.md)<br/>
+[Échange et validation des données de boîte de dialogue](dialog-data-exchange-and-validation.md)<br/>
 [Utilisation des boîtes de dialogue dans MFC](life-cycle-of-a-dialog-box.md)<br/>
 [Échange de données de boîtes de dialogue](dialog-data-exchange.md)

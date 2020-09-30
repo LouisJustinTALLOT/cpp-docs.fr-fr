@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: f5abef4db2f9c6d375428c0b0fd313198ce6283f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 017959c5809d324af6ab13247fd093a6df280dab
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621228"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502205"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Contrôles ActiveX MFC : implémentation des propriétés avancées
 
@@ -24,7 +24,7 @@ Cet article décrit les rubriques relatives à l’implémentation des propriét
 
 - [Renvoi de codes d’erreur à partir d’une propriété](#_core_returning_error_codes_from_a_property)
 
-## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a>Propriétés en lecture seule et en écriture seule
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Propriétés en lecture seule et en écriture seule
 
 L’Assistant Ajout de propriété fournit une méthode simple et rapide pour implémenter les propriétés en lecture seule ou en écriture seule pour le contrôle.
 
@@ -38,7 +38,7 @@ L’Assistant Ajout de propriété fournit une méthode simple et rapide pour im
 
 1. Dans le menu contextuel, cliquez sur **Ajouter** , puis sur **Ajouter une propriété**.
 
-   L' [Assistant Ajouter une propriété](../ide/names-add-property-wizard.md)s’ouvre.
+   L' [Assistant Ajouter une propriété](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard)s’ouvre.
 
 1. Dans la zone nom de la **propriété** , tapez le nom de votre propriété.
 
@@ -60,14 +60,14 @@ Si vous souhaitez qu’une propriété soit en lecture seule ou en écriture seu
 
 Cet exemple de code appelle `SetNotSupported` si le `m_bReadOnlyMode` membre de données a la **valeur true**. Si la valeur est **false**, la propriété est définie sur la nouvelle valeur.
 
-## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a>Renvoi de codes d’erreur à partir d’une propriété
+## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a> Renvoi de codes d’erreur à partir d’une propriété
 
 Pour indiquer qu’une erreur s’est produite lors de la tentative d’obtenir ou de définir une propriété, utilisez la `COleControl::ThrowError` fonction, qui prend un SCODE (code d’État) comme paramètre. Vous pouvez utiliser un SCODE prédéfini ou définir l’un de vos propres. Pour obtenir la liste des SCODEs prédéfinis et des instructions permettant de définir des SCODEs personnalisés, consultez [gestion des erreurs dans votre contrôle ActiveX](mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : Rubriques avancées.
 
 Les fonctions d’assistance existent pour les SCODEs prédéfinis les plus courants, tels que [COleControl :: SetNotSupported](reference/colecontrol-class.md#setnotsupported), [COleControl :: GetNotSupported](reference/colecontrol-class.md#getnotsupported)et [COleControl :: SetNotPermitted](reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
-> `ThrowError`est destiné à être utilisé uniquement comme moyen de retourner une erreur à partir d’une fonction d’extraction ou de définition d’une propriété ou d’une méthode Automation. Il s’agit de la seule fois où le gestionnaire d’exceptions approprié sera présent sur la pile.
+> `ThrowError` est destiné à être utilisé uniquement comme moyen de retourner une erreur à partir d’une fonction d’extraction ou de définition d’une propriété ou d’une méthode Automation. Il s’agit de la seule fois où le gestionnaire d’exceptions approprié sera présent sur la pile.
 
 Pour plus d’informations sur la création de rapports d’exceptions dans d’autres zones du code, consultez [COleControl :: FireError (](reference/colecontrol-class.md#fireerror) et la section [gestion des erreurs dans votre contrôle ActiveX](mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : Rubriques avancées.
 
@@ -76,4 +76,4 @@ Pour plus d’informations sur la création de rapports d’exceptions dans d’
 [Contrôles ActiveX MFC](mfc-activex-controls.md)<br/>
 [Contrôles ActiveX MFC : propriétés](mfc-activex-controls-properties.md)<br/>
 [Contrôles ActiveX MFC : méthodes](mfc-activex-controls-methods.md)<br/>
-[COleControl, classe](reference/colecontrol-class.md)
+[Classe COleControl](reference/colecontrol-class.md)

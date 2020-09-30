@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65add1fe0d47253cd8d7ae7a273286d712ce9db2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211456"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500656"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Création d'un consommateur sans utiliser l'Assistant
 
@@ -17,7 +17,7 @@ L’exemple suivant suppose que vous ajoutez la prise en charge du consommateur 
 
 Pour ajouter la prise en charge du consommateur OLE DB sans utiliser l’**Assistant Consommateur OLE DB ATL**:
 
-- Dans votre fichier *pch. h* , ajoutez les instructions `#include` suivantes :
+- Dans votre fichier *pch. h* , ajoutez les `#include` instructions suivantes :
 
     ```cpp
     #include <atlbase.h>
@@ -46,7 +46,7 @@ Par programmation, un consommateur exécute généralement la séquence d’opé
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- Appelez [CDataSource::Open](../../data/oledb/cdatasource-open.md) ou une de ses variantes.
+- Appelez [CDataSource::Open](./cdatasource-class.md#open) ou une de ses variantes.
 
 - Ouvrez une connexion à la source de données, ouvrez la session puis ouvrez et initialisez l’ensemble de lignes (s’il s’agit d’une commande, exécutez-la aussi) :
 
@@ -68,7 +68,7 @@ Par programmation, un consommateur exécute généralement la séquence d’opé
     ds.Close();
     ```
 
-   Si vous utilisez une commande, il est conseillé d’appeler `ReleaseCommand` après `Close`. L’exemple de code dans [CCommand::Close](../../data/oledb/ccommand-close.md) montre comment appeler `Close` et `ReleaseCommand`.
+   Si vous utilisez une commande, il est conseillé d’appeler `ReleaseCommand` après `Close`. L’exemple de code dans [CCommand::Close](./ccommand-class.md#close) montre comment appeler `Close` et `ReleaseCommand`.
 
 - Appelez `CoUnInitialize` pour annuler l’initialisation de COM. Il est appelé dans le code principal.
 

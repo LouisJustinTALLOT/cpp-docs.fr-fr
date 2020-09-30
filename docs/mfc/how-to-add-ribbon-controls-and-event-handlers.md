@@ -5,12 +5,12 @@ helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 560524c36dbf57faec3b4b6372cade047f9fe7de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d6382c8ebf73fe7a26b3950cc1965b229c22dbb7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618484"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501231"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Comment : ajouter des contrôles de ruban et des gestionnaires d'événements
 
@@ -30,7 +30,7 @@ Dans cette rubrique, vous allez ouvrir le concepteur de ruban, ajouter un bouton
 
 1. Cliquez avec le bouton droit sur le bouton, puis cliquez sur **Ajouter un gestionnaire d’événements**.
 
-1. Dans l' **Assistant gestionnaire d’événements**, confirmez les paramètres par défaut et cliquez sur **Ajouter et modifier**. Pour plus d’informations, consultez [Assistant gestionnaire d’événements](../ide/event-handler-wizard.md).
+1. Dans l' **Assistant gestionnaire d’événements**, confirmez les paramètres par défaut et cliquez sur **Ajouter et modifier**. Pour plus d’informations, consultez [Assistant gestionnaire d’événements](../ide/adding-an-event-handler-visual-cpp.md#event-handler-wizard).
 
 1. Dans l’éditeur de code, ajoutez le code suivant à la fonction du gestionnaire :
 

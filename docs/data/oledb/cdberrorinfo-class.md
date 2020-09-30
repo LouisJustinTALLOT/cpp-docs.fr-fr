@@ -38,18 +38,18 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 5c26a3f1e8b5589afebd72c7b722ab9ed9e4229d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d8fa41b3a06acb8f28334658f2494295593b99be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838306"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502512"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo, classe
 
 Prend en charge OLE DB le traitement des erreurs à l’aide de l’interface OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CDBErrorInfo
@@ -72,9 +72,9 @@ class CDBErrorInfo
 |[GetErrorParameters](#geterrorparameters)|Appelle [IErrorRecords :: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) pour retourner les paramètres d’erreur.|
 |[GetErrorRecords](#geterrorrecords)|Obtient les enregistrements d’erreur pour l’objet spécifié.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Cette interface retourne un ou plusieurs enregistrements d’erreur à l’utilisateur. Appelez [CDBErrorInfo :: GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) en premier, pour obtenir le nombre d’enregistrements d’erreur. Appelez ensuite l’une des fonctions d’accès, telles que [CDBErrorInfo :: GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), pour récupérer les informations d’erreur pour chaque enregistrement.
+Cette interface retourne un ou plusieurs enregistrements d’erreur à l’utilisateur. Appelez [CDBErrorInfo :: GetErrorRecords](#geterrorrecords) en premier, pour obtenir le nombre d’enregistrements d’erreur. Appelez ensuite l’une des fonctions d’accès, telles que [CDBErrorInfo :: GetAllErrorInfo](#getallerrorinfo), pour récupérer les informations d’erreur pour chaque enregistrement.
 
 ## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a> CDBErrorInfo :: GetAllErrorInfo
 
@@ -118,7 +118,7 @@ dans ID de paramètres régionaux pour les informations d’erreur à retourner.
 
 S_OK, en cas de réussite. Consultez [IErrorRecords :: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* pour les autres valeurs de retour.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La valeur de sortie de *pbstrDescription* est obtenue en interne en appelant `IErrorInfo::GetDescription` , qui définit la valeur sur null si les paramètres régionaux ne sont pas pris en charge, ou si les deux conditions suivantes sont vraies :
 
@@ -231,7 +231,7 @@ dans IID de l’interface associée à l’erreur.
 
 HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Utilisez la première forme de la fonction si vous souhaitez vérifier l’interface à partir de laquelle obtenir les informations d’erreur. Dans le cas contraire, utilisez le deuxième formulaire.
 

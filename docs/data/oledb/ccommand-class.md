@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838436"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501005"
 ---
 # <a name="ccommand-class"></a>CCommand, classe
 
@@ -109,7 +109,7 @@ Pour utiliser une commande OLE DB qui peut retourner plusieurs résultats, spéc
 |[SetParameterInfo](#setparameterinfo)|Spécifie le type natif de chaque paramètre de commande.|
 |[Unprepare](#unprepare)|Ignore le plan d’exécution de la commande en cours.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Utilisez cette classe lorsque vous devez effectuer une opération basée sur des paramètres ou exécuter une commande. Si vous avez simplement besoin d’ouvrir un ensemble de lignes simple, utilisez [CTable](../../data/oledb/ctable-class.md) à la place.
 
@@ -131,7 +131,7 @@ void Close();
 
 Une commande utilise un ensemble de lignes, un accesseur de jeu de résultats et (éventuellement) un accesseur de paramètre (à la différence des tables, qui ne prennent pas en charge les paramètres et n’ont pas besoin d’un accesseur de paramètre).
 
-Quand vous exécutez une commande, vous devez appeler `Close` et [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) après la commande.
+Quand vous exécutez une commande, vous devez appeler `Close` et [ReleaseCommand](#releasecommand) après la commande.
 
 Lorsque vous souhaitez exécuter la même commande à plusieurs reprises, vous devez libérer chaque accesseur du jeu de résultats en appelant `Close` avant d’appeler `Execute` . À la fin de la série, vous devez libérer l’accesseur de paramètre en appelant `ReleaseCommand` . Un autre scénario courant consiste à appeler une procédure stockée qui a des paramètres de sortie. Sur de nombreux fournisseurs (tels que le fournisseur OLE DB pour SQL Server), les valeurs des paramètres de sortie ne sont pas accessibles tant que vous n’avez pas fermé l’accesseur du jeu de résultats. Appelez `Close` pour fermer l’ensemble de lignes et l’accesseur de jeu de résultats retournés, mais pas l’accesseur de paramètre, ce qui vous permet de récupérer les valeurs des paramètres de sortie.
 
@@ -164,7 +164,7 @@ dans Spécifie si la commande doit être liée automatiquement après son exécu
 
 HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si un jeu de résultats a été récupéré précédemment, cette fonction libère le jeu de résultats précédent et dissocie les colonnes. Si *bBind* est **`true`** , il lie les nouvelles colonnes.
 
@@ -213,7 +213,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 dans Session dans laquelle exécuter la commande.
 
 *wszCommand*<br/>
-dans Commande à exécuter, transmise en tant que chaîne Unicode. Peut avoir la valeur NULL lors de l’utilisation `CAccessor` de, auquel cas la commande est Récupérée de la valeur passée à la macro [DEFINE_COMMAND](../../data/oledb/define-command.md) . Pour plus d’informations, consultez [ICommand :: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* .
+dans Commande à exécuter, transmise en tant que chaîne Unicode. Peut avoir la valeur NULL lors de l’utilisation `CAccessor` de, auquel cas la commande est Récupérée de la valeur passée à la macro [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) . Pour plus d’informations, consultez [ICommand :: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* .
 
 *szCommand*<br/>
 dans Identique à *wszCommand* , sauf que ce paramètre prend une chaîne de commande ANSI. La quatrième forme de cette méthode peut prendre une valeur NULL. Pour plus d’informations, consultez « Remarques » plus loin dans cette rubrique.
@@ -243,7 +243,7 @@ dans Nombre de structures [DBPROPSET](/previous-versions/windows/desktop/ms71436
 
 HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les trois premières formes de `Open` prendre une session, de créer une commande et d’exécuter la commande, en liant les paramètres si nécessaire.
 
@@ -253,14 +253,14 @@ La seconde forme de `Open` prend une chaîne de commande ANSI et aucune valeur p
 
 La troisième forme de `Open` permet à la chaîne de commande d’être null, en raison de type **`int`** avec une valeur par défaut null. Elle est fournie pour appeler `Open(session, NULL);` ou `Open(session);` , car null est de type **`int`** . Cette version requiert et déclare que le **`int`** paramètre est null.
 
-Utilisez la quatrième forme de `Open` lorsque vous avez déjà créé une commande et que vous souhaitez effectuer une seule [préparation](../../data/oledb/ccommand-prepare.md) et plusieurs exécutions.
+Utilisez la quatrième forme de `Open` lorsque vous avez déjà créé une commande et que vous souhaitez effectuer une seule [préparation](#prepare) et plusieurs exécutions.
 
 > [!NOTE]
 > `Open` appelle `Execute` , qui à son tour appelle `GetNextResult` .
 
 ## <a name="ccommandcreate"></a><a name="create"></a> CCommand :: Create
 
-Appelle [CCommand :: CreateCommand](../../data/oledb/ccommand-createcommand.md) pour créer une commande pour la session spécifiée, puis appelle [ICommandText :: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) pour spécifier le texte de la commande.
+Appelle [CCommand :: CreateCommand](#createcommand) pour créer une commande pour la session spécifiée, puis appelle [ICommandText :: SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) pour spécifier le texte de la commande.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -292,7 +292,7 @@ dans GUID qui spécifie la syntaxe et les règles générales que le fournisseur
 
 HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La première forme de `Create` prend une chaîne de commande Unicode. La seconde forme de `Create` prend une chaîne de commande ANSI (fournie pour la compatibilité descendante avec les applications ANSI existantes).
 
@@ -315,7 +315,7 @@ dans `CSession` Objet à associer à la nouvelle commande.
 
 HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode crée une commande à l’aide de l’objet de session spécifié.
 
@@ -358,7 +358,7 @@ dans Nombre de fois où vous prévoyez d’exécuter la commande.
 
 HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode encapsule la méthode OLE DB [ICommandPrepare ::P](/previous-versions/windows/desktop/ms718370(v=vs.85))restante.
 
@@ -374,7 +374,7 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>Notes
 
-`ReleaseCommand` est utilisé conjointement avec `Close` . Pour plus d’informations sur l’utilisation, consultez [Close](../../data/oledb/ccommand-close.md) .
+`ReleaseCommand` est utilisé conjointement avec `Close` . Pour plus d’informations sur l’utilisation, consultez [Close](#close) .
 
 ## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand :: SetParameterInfo
 
@@ -410,7 +410,7 @@ HRESULT CCommandBase::Unprepare() throw();
 
 HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette méthode encapsule la méthode OLE DB [ICommandPrepare :: Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85)).
 

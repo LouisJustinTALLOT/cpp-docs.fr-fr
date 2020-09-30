@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 814be57caafed117a1403105d46326ac53682578
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182238"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500885"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Tableaux (C++/CLI et C++/CX)
 
@@ -32,15 +32,15 @@ Contrairement au C++ standard, l’indice n’est pas synonyme de pointeur arith
 
 Pour plus d’informations sur les tableaux, consultez :
 
-- [Guide pratique pour utiliser des tableaux dans C++-CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Comment : utiliser des tableaux en C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
-- [Listes d’arguments de variable (...) (C++-CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
+- [Listes d’arguments de variable (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
 Les tableaux sont des membres de l’espace de noms `Platform`. Les tableaux peuvent uniquement être unidimensionnels.
 
-### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntax
 
 Le premier exemple de syntaxe utilise le mot clé d’agrégation **ref new** pour allouer un tableau. Le deuxième exemple déclare un tableau local.
 
@@ -52,16 +52,16 @@ Le premier exemple de syntaxe utilise le mot clé d’agrégation **ref new** po
     {initialization-list [,...]}
 ```
 
-*qualifiers*<br/>
-(Facultatif) Un ou plusieurs des spécificateurs de classe de stockage suivants : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
+*qualificateurs*<br/>
+(Facultatif) Un ou plusieurs des spécificateurs de classe de stockage suivants : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/extern-cpp.md), [static](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*type tableau*<br/>
 Le type de la variable de tableau. Les types valides sont les classes Windows Runtime et les types fondamentaux, les classes et les structs de référence, les classes et les structs de valeur, ainsi que les pointeurs natifs (`type*`).
 
-*rank*<br/>
+*moteurs*<br/>
 (Facultatif) Nombre de dimensions du tableau. Doit être égal à 1.
 
-*identifier*<br/>
+*identificateur*<br/>
 Nom de la variable de tableau.
 
 *initialization-type*<br/>
@@ -70,11 +70,11 @@ Le type des valeurs qui initialisent le tableau. En règle générale, *array-ty
 *initialization-list*<br/>
 (Facultatif) Une liste délimitée par des virgules de valeurs entre accolades qui initialisent les éléments du tableau. Par exemple, si *rank-size-list* est de `(3)`, ce qui déclare un tableau unidimensionnel de 3 éléments, *initialization-list* peut valoir `{1,2,3}`.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Vous pouvez détecter au moment de la compilation si un type est un tableau de références comptées à l’aide de `__is_ref_array(type)`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
+Vous pouvez détecter au moment de la compilation si un type est un tableau de références comptées à l’aide de `__is_ref_array(type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
@@ -96,7 +96,7 @@ int main() {
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntax
 
 Le premier exemple de syntaxe utilise le mot clé **gcnew** pour allouer un tableau. Le deuxième exemple déclare un tableau local.
 
@@ -108,16 +108,16 @@ Le premier exemple de syntaxe utilise le mot clé **gcnew** pour allouer un tabl
     {initialization-list [,...]}
 ```
 
-*qualifiers*<br/>
-(Facultatif) Un ou plusieurs des spécificateurs de classe de stockage suivants : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
+*qualificateurs*<br/>
+(Facultatif) Un ou plusieurs des spécificateurs de classe de stockage suivants : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/extern-cpp.md), [static](../cpp/static-members-cpp.md).
 
-*array-type*<br/>
+*type tableau*<br/>
 Le type de la variable de tableau. Les types valides sont les classes Windows Runtime et les types fondamentaux, les classes et les structs de référence, les classes et les structs de valeur, les pointeurs natifs (`type*`), ainsi que les types POD (Plain old data).
 
-*rank*<br/>
+*moteurs*<br/>
 (Facultatif) Nombre de dimensions du tableau. La valeur par défaut est 1 ; la valeur maximale est 32. Chaque dimension du tableau est elle-même un tableau.
 
-*identifier*<br/>
+*identificateur*<br/>
 Nom de la variable de tableau.
 
 *initialization-type*<br/>
@@ -131,7 +131,7 @@ Une liste délimitée par des virgules de la taille de chaque dimension du table
 
 Par exemple, si *rank-size-list* est de `(3)`, ce qui déclare un tableau unidimensionnel de 3 éléments, *initialization-list* peut valoir `{1,2,3}`. Si *rank-size-list* a la valeur `(3,2,4)`, ce qui déclare un tableau tridimensionnel de 3 éléments dans la première dimension, 2 éléments dans la seconde et 4 éléments dans la troisième, *initialization-list* peut valoir `{{1,2,3},{0,0},{-5,10,-21,99}}`.)
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 **array** appartient à l’espace de noms [Plateforme, valeurs par défaut et espaces de noms CLI](platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
@@ -141,11 +141,11 @@ Tous les tableaux managés héritent de `System::Array`. Toute méthode ou propr
 
 Lorsque vous allouez un tableau dont le type d’élément est un pointeur vers une classe managée, les éléments sont initialisés à 0.
 
-Lorsque vous allouez un tableau dont le type élément est un type valeur `V`, le constructeur par défaut `V` est appliqué à chaque élément du tableau. Pour plus d’informations, consultez [Équivalents .NET Framework des types natifs C++ (C++-CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
+Lorsque vous allouez un tableau dont le type élément est un type valeur `V`, le constructeur par défaut `V` est appliqué à chaque élément du tableau. Pour plus d’informations, consultez [Équivalents .NET Framework des types natifs C++ (C++-CLI)](../dotnet/managed-types-cpp-cli.md#dotnet).
 
-Au moment de la compilation, vous pouvez détecter si un type est un tableau common language runtime (CLR) grâce à `__is_ref_array(type)`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
+Au moment de la compilation, vous pouvez détecter si un type est un tableau common language runtime (CLR) grâce à `__is_ref_array(type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 
@@ -170,4 +170,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

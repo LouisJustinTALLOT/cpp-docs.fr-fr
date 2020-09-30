@@ -3,12 +3,12 @@ title: Pointeurs intelligents (C++ moderne)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: 698843ced3235d9622af3610a5209669407e9e05
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e511cc513cdb35b06b976ce022c5e4edea35040b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186137"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500678"
 ---
 # <a name="smart-pointers-modern-c"></a>Pointeurs intelligents (C++ moderne)
 
@@ -16,7 +16,7 @@ Dans la programmation C++ moderne, la bibliothèque standard comprend des *point
 
 ## <a name="uses-for-smart-pointers"></a>Utilisations pour les pointeurs intelligents
 
-Les pointeurs intelligents sont définis dans l' `std` espace de noms dans le [\<memory>](../standard-library/memory.md) fichier d’en-tête. Ils sont essentiels au [RAII](objects-own-resources-raii.md) ou à l' *acquisition des ressources est* l’idiome de programmation d’initialisation. L'objectif principal de cet idiome est de garantir que l'acquisition des ressources se produit en même temps que l'initialisation de l'objet, afin que toutes les ressources de l'objet soient créées et préparées en une seule ligne de code. En pratique, le grand principe de RAII est de donner la propriété de toute ressource allouée par tas, par exemple la mémoire allouée dynamiquement ou les handles d'objet système, à un objet alloué par la pile dont le destructeur contient le code de suppression ou de libération de la ressource ainsi que le code de nettoyage associé.
+Les pointeurs intelligents sont définis dans l' `std` espace de noms dans le [\<memory>](../standard-library/memory.md) fichier d’en-tête. Ils sont essentiels au [RAII](./object-lifetime-and-resource-management-modern-cpp.md) ou à l' *acquisition des ressources est* l’idiome de programmation d’initialisation. L'objectif principal de cet idiome est de garantir que l'acquisition des ressources se produit en même temps que l'initialisation de l'objet, afin que toutes les ressources de l'objet soient créées et préparées en une seule ligne de code. En pratique, le grand principe de RAII est de donner la propriété de toute ressource allouée par tas, par exemple la mémoire allouée dynamiquement ou les handles d'objet système, à un objet alloué par la pile dont le destructeur contient le code de suppression ou de libération de la ressource ainsi que le code de nettoyage associé.
 
 Dans la plupart des cas, lorsque vous initialisez un pointeur brut ou un handle de ressource pour pointer vers une ressource réelle, passez immédiatement le pointeur à un pointeur intelligent. En C++ moderne, les pointeurs bruts sont utilisés uniquement dans les petits blocs de code à portée limitée, les boucles ou les fonctions d'assistance lorsque les performances sont essentielles et qu'il n'existe aucune chance de confusion en matière de propriété.
 
@@ -68,7 +68,7 @@ La section suivante résume les différents genres de pointeurs intelligents dis
 Utilisez ces pointeurs intelligents comme premier choix pour encapsuler les pointeurs vers les objets C++ anciens ordinaires (POCO).
 
 - `unique_ptr`<br/>
-   Autorise exactement un propriétaire du pointeur sous-jacent. À utiliser comme option par défaut pour POCO à moins que vous ne soyez certain d'avoir besoin de `shared_ptr`. Peut être déplacé vers un nouveau propriétaire, mais pas copié ou partagé. Remplace `auto_ptr`, qui est déconseillé. Comparez à `boost::scoped_ptr`. `unique_ptr`est petit et efficace ; la taille est un pointeur et prend en charge les références rvalue pour une insertion et une récupération rapides à partir des collections de la bibliothèque standard C++. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances unique_ptr](how-to-create-and-use-unique-ptr-instances.md) et des [unique_ptr classe](../standard-library/unique-ptr-class.md).
+   Autorise exactement un propriétaire du pointeur sous-jacent. À utiliser comme option par défaut pour POCO à moins que vous ne soyez certain d'avoir besoin de `shared_ptr`. Peut être déplacé vers un nouveau propriétaire, mais pas copié ou partagé. Remplace `auto_ptr`, qui est déconseillé. Comparez à `boost::scoped_ptr`. `unique_ptr` est petit et efficace ; la taille est un pointeur et prend en charge les références rvalue pour une insertion et une récupération rapides à partir des collections de la bibliothèque standard C++. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances unique_ptr](how-to-create-and-use-unique-ptr-instances.md) et des [unique_ptr classe](../standard-library/unique-ptr-class.md).
 
 - `shared_ptr`<br/>
    Pointeur intelligent de références comptabilisées. À utiliser lorsque vous souhaitez affecter un pointeur brut à plusieurs propriétaires, par exemple, lorsque vous retournez la copie d'un pointeur à partir d'un conteneur, mais que vous souhaitez conserver l'original. Le pointeur brut n'est pas supprimé tant que tous les propriétaires `shared_ptr` ne sont pas hors de portée ou n'ont pas abandonné la propriété. La taille contient deux pointeurs ; un pour l'objet et un pour le bloc de contrôle partagé qui contient le nombre de références. Fichier d'en-tête : `<memory>`. Pour plus d’informations, consultez [Comment : créer et utiliser des Instances shared_ptr](how-to-create-and-use-shared-ptr-instances.md) et des [shared_ptr classe](../standard-library/shared-ptr-class.md).

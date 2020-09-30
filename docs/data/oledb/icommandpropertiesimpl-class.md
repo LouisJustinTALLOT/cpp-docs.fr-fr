@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bd4dd73c79085a2c2d85a5dbacbfd20bc920108e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845573"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501765"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl, classe
 
@@ -54,9 +54,9 @@ Votre classe de propriétés.
 |[GetProperties](#getproperties)|Retourne la liste des propriétés dans le groupe de propriétés rowset actuellement demandé pour l’ensemble de lignes.|
 |[SetProperties](#setproperties)|Définit des propriétés dans le groupe de propriétés rowset.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Cela est obligatoire sur les commandes. L’implémentation est fournie par une fonction statique définie par la macro [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) .
+Cela est obligatoire sur les commandes. L’implémentation est fournie par une fonction statique définie par la macro [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) .
 
 ## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> Icommandpropertiesimpl, :: GetProperties
 
@@ -75,9 +75,9 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 Consultez [ICommandProperties :: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Voir [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+Voir [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map).
 
 ## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> Icommandpropertiesimpl, :: SetProperties
 

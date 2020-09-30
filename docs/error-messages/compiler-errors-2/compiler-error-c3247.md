@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3247
 ms.assetid: f9a2bbb5-3fce-40bf-9fd3-835a5f164dbb
-ms.openlocfilehash: 81dc5d5e54551aff49adad2ada2eb25f57a37ec2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c1b8aaddac32af4e0936ce7d45fbc59c3835dda2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754379"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501379"
 ---
 # <a name="compiler-error-c3247"></a>Erreur du compilateur C3247
 
 'classe1' : une coclasse ne peut pas hériter d’une autre coclasse 'classe2'
 
-Une classe marquée avec l’attribut [coclass](../../windows/coclass.md) ne peut pas hériter d’une classe marquée avec l’attribut `coclass` .
+Une classe marquée avec l’attribut [coclass](../../windows/attributes/coclass.md) ne peut pas hériter d’une classe marquée avec l’attribut `coclass` .
 
 L’exemple suivant génère l’erreur C3247 :
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3057
 ms.assetid: b0b2ba88-9c74-4bec-bf60-8fc72eade34c
-ms.openlocfilehash: da7742a8268adfd2345c0606e2f60dae4e58887c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2086f5eb7edfa533e9275a7302471707c38a2a3f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761140"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501586"
 ---
 # <a name="compiler-error-c3057"></a>Erreur du compilateur C3057
 
 'symbol' : l’initialisation dynamique des symboles 'threadprivate' n’est pas prise en charge actuellement
 
-La valeur initialisée d’un symbole utilisé dans une clause [threadprivate](../../parallel/openmp/reference/threadprivate.md) doit être connue au moment de la compilation.
+La valeur initialisée d’un symbole utilisé dans une clause [threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) doit être connue au moment de la compilation.
 
 L’exemple suivant génère l’erreur C3057 :
 
