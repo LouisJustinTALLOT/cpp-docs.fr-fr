@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5910e72b10d5b849d203d088564d79d0f80a7961
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684584"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504592"
 ---
 # <a name="db_command"></a>db_command
 
@@ -113,7 +113,7 @@ Une valeur supérieure à 1 spécifie l’extraction de lignes en bloc. L’extr
 
 Si *bulk_fetch* est inférieur à 1, `SetRows` retourne la valeur zéro.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 **db_command** crée un objet [CCommand](../../data/oledb/ccommand-class.md) , qui est utilisé par un consommateur OLE DB pour exécuter une commande.
 
@@ -125,7 +125,7 @@ Lorsque le fournisseur d’attributs du consommateur applique cet attribut à un
 
 ## <a name="examples"></a>Exemples
 
-Cet exemple définit une commande qui sélectionne le prénom et le nom dans une table où la colonne d’état correspond à « CA ». **db_command** crée et lit un ensemble de lignes sur lequel vous pouvez appeler des fonctions générées par un Assistant, telles que [OpenAll et CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), ainsi que des fonctions membres `CRowset` telles que [MoveNext](../../data/oledb/crowset-movenext.md).
+Cet exemple définit une commande qui sélectionne le prénom et le nom dans une table où la colonne d’état correspond à « CA ». **db_command** crée et lit un ensemble de lignes sur lequel vous pouvez appeler des fonctions générées par un Assistant, telles que [OpenAll et CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), ainsi que des fonctions membres `CRowset` telles que [MoveNext](../../data/oledb/crowset-class.md#movenext).
 
 Notez que ce code vous oblige à fournir votre propre chaîne de connexion qui se connecte à la base de données pubs. Pour plus d’informations sur la façon de procéder dans l’environnement de développement, consultez [procédure : se connecter à une base de données et parcourir les objets existants](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) et [ajouter de nouvelles connexions](/visualstudio/data-tools/add-new-connections).
 
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 | Contexte d’attribut | Value |
 |-|-|

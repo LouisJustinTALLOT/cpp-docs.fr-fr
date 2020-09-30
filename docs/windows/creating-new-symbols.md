@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 1c69e8878885acd80c285691fb0861a476af03ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 008d2ab420034e628251c08222bf2e9f723deab1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160513"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504509"
 ---
 # <a name="how-to-create-symbols-c"></a>Comment : créer des symboles (C++)
 
@@ -39,14 +39,14 @@ La boîte de dialogue contient les propriétés suivantes :
 
 |Propriété|Description|
 |--------------------------|------------------------------------------|
-|**Nom**|Affiche le nom du symbole.<br/><br/>Pour plus d’informations, consultez [restrictions relatives au nom de symbole](../windows/symbol-name-restrictions.md).|
-|**Valeur**|Affiche la valeur numérique du symbole.<br/><br/>Pour plus d’informations, consultez [restrictions relatives aux valeurs de symboles](../windows/symbol-value-restrictions.md).|
+|**Nom**|Affiche le nom du symbole.<br/><br/>Pour plus d’informations, consultez [restrictions relatives au nom de symbole](./changing-a-symbol-or-symbol-name-id.md).|
+|**Valeur**|Affiche la valeur numérique du symbole.<br/><br/>Pour plus d’informations, consultez [restrictions relatives aux valeurs de symboles](./changing-a-symbol-or-symbol-name-id.md).|
 |**En cours d’utilisation**|En cas de sélection, indique que le symbole est utilisé par une ou plusieurs ressources.<br/><br/>La ou les ressources sont répertoriées dans la zone **utilisé par** .|
 |**Afficher les symboles en lecture seule**|En cas de sélection, affiche les ressources en lecture seule.<br/><br/>Par défaut, la boîte de dialogue **symboles des ressources** affiche uniquement les ressources modifiables dans votre fichier de script de ressources. Toutefois, si cette option est sélectionnée, les ressources modifiables s’affichent en gras et les ressources en lecture seule s’affichent en texte brut.|
-|**Utilisé par**|Affiche la ou les ressources à l'aide du symbole sélectionné dans la liste des symboles.<br/><br/>Pour accéder à l’éditeur d’une ressource donnée, sélectionnez la ressource dans la zone **utilisé par** , puis choisissez **afficher l’utilisation**.|
+|**Utilisée par**|Affiche la ou les ressources à l'aide du symbole sélectionné dans la liste des symboles.<br/><br/>Pour accéder à l’éditeur d’une ressource donnée, sélectionnez la ressource dans la zone **utilisé par** , puis choisissez **afficher l’utilisation**.|
 |**Nouveau**|Ouvre la boîte de dialogue **nouveau symbole** qui vous permet de définir le nom et, si nécessaire, une valeur pour un nouvel identificateur de ressource symbolique.|
-|**Modification**|Ouvre la boîte de dialogue **modifier le symbole** qui vous permet de modifier le nom ou la valeur d’un symbole.<br/><br/>Si le symbole est destiné à un contrôle ou une ressource en cours d'utilisation, il ne peut être modifié qu'à partir de l'éditeur de ressources correspondant. Pour plus d’informations, consultez [gérer les symboles](../windows/changing-unassigned-symbols.md).|
-|**Afficher l’utilisation**|Ouvre la ressource qui contient le symbole dans l'éditeur de ressources correspondant.|
+|**Changement**|Ouvre la boîte de dialogue **modifier le symbole** qui vous permet de modifier le nom ou la valeur d’un symbole.<br/><br/>Si le symbole est destiné à un contrôle ou une ressource en cours d'utilisation, il ne peut être modifié qu'à partir de l'éditeur de ressources correspondant. Pour plus d’informations, consultez [gérer les symboles](./changing-a-symbol-or-symbol-name-id.md).|
+|**Afficher l'utilisation**|Ouvre la ressource qui contient le symbole dans l'éditeur de ressources correspondant.|
 
 ## <a name="create-symbols"></a>Créer des symboles
 
@@ -82,12 +82,12 @@ Lorsque vous parcourez les symboles des **ressources**, vous pouvez avoir besoin
 
    La ressource s'affiche dans la fenêtre d'éditeur appropriée.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
 [Comment : gérer des symboles](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
-[ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)<br/>
+[ID de symboles prédéfinis](../windows/predefined-symbol-ids.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 91b6365334b977957ff6bd6c25278d4088961a2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59d81c0b835171132ebf29739a4e130191a87769
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222067"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504453"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Comment : définir l’accès aux contrôles et les valeurs (C++)
 
@@ -103,14 +103,14 @@ Vous pouvez ajouter des valeurs à un contrôle zone de liste déroulante tant q
 
 1. Appuyez sur **entrée** lorsque vous avez fini d’ajouter des valeurs.
 
-Pour plus d’informations sur l’agrandissement de la partie déroulante d’une zone de liste déroulante, consultez [définition de la taille de la zone de liste déroulante et de sa liste déroulante](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).
+Pour plus d’informations sur l’agrandissement de la partie déroulante d’une zone de liste déroulante, consultez [définition de la taille de la zone de liste déroulante et de sa liste déroulante](./arrangement-of-controls-on-dialog-boxes.md).
 
 > [!NOTE]
 > Vous ne pouvez pas ajouter de valeurs aux projets Win32 à l’aide de cette procédure (la propriété de **données** est grisée pour les projets Win32). Étant donné que les projets Win32 n’ont pas de bibliothèques qui ajoutent cette fonctionnalité, vous devez ajouter par programme des valeurs à une zone de liste déroulante avec un projet Win32.
 
 ### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Pour tester l’apparence des valeurs dans une zone de liste déroulante
 
-1. Après avoir entré les valeurs dans la propriété **données** , sélectionnez le bouton **test** dans la [barre d’outils](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)de l’éditeur de boîtes de dialogue.
+1. Après avoir entré les valeurs dans la propriété **données** , sélectionnez le bouton **test** dans la [barre d’outils](./dialog-editor.md)de l’éditeur de boîtes de dialogue.
 
 1. Essayez de faire défiler la liste des valeurs entières. Les valeurs apparaissent exactement telles qu’elles sont tapées dans la propriété **données** de la fenêtre **Propriétés** . Il n’y a aucune vérification de l’orthographe ou de la casse.
 
@@ -118,7 +118,7 @@ Pour plus d’informations sur l’agrandissement de la partie déroulante d’u
 
 ## <a name="radio-button-values"></a>Valeurs des cases d’option
 
-Lorsque vous ajoutez des cases d’option à une boîte de dialogue, traitez-les comme un groupe en définissant une propriété de **groupe** dans la fenêtre **Propriétés** du premier bouton du groupe. Un ID de contrôle pour cette case d’option apparaît alors dans [Assistant Ajout de variable membre](../ide/add-member-variable-wizard.md), ce qui vous permet d’ajouter une variable membre pour le groupe de cases d’option.
+Lorsque vous ajoutez des cases d’option à une boîte de dialogue, traitez-les comme un groupe en définissant une propriété de **groupe** dans la fenêtre **Propriétés** du premier bouton du groupe. Un ID de contrôle pour cette case d’option apparaît alors dans [Assistant Ajout de variable membre](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard), ce qui vous permet d’ajouter une variable membre pour le groupe de cases d’option.
 
 Vous pouvez avoir plusieurs groupes de cases d’option dans une boîte de dialogue. Ajoutez chaque groupe à l’aide de la procédure suivante.
 
@@ -139,7 +139,7 @@ Vous pouvez avoir plusieurs groupes de cases d’option dans une boîte de dialo
 
 1. Cliquez avec le bouton droit sur le premier contrôle de case d’option dans l’ordre de tabulation (le contrôle dominant et celui dont la propriété **Group** a la valeur **true**), puis choisissez **Ajouter une variable**.
 
-1. Dans l’ [Assistant Ajout de variable membre](../ide/add-member-variable-wizard.md), cochez la case **Variable de contrôle** , puis sélectionnez la case d’option **Valeur** .
+1. Dans l’ [Assistant Ajout de variable membre](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard), cochez la case **Variable de contrôle** , puis sélectionnez la case d’option **Valeur** .
 
    - Dans la zone **Nom de la variable** , tapez un nom pour la nouvelle variable membre.
 
@@ -147,7 +147,7 @@ Vous pouvez avoir plusieurs groupes de cases d’option dans une boîte de dialo
 
    Vous pouvez maintenant modifier votre code pour spécifier la case d’option qui doit apparaître sélectionnée. Par exemple, `m_radioBox1 = 0;` sélectionne la première case d’option du groupe.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

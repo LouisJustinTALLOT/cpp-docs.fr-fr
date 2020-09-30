@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 955cce012ac30c3413d7d458e263643d0aefa711
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 078d702232cde49a4666551a8d9fcbb320173450
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615349"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503530"
 ---
 # <a name="binary-editor-c"></a>Éditeur binaire (C++)
 
@@ -116,14 +116,14 @@ Vous pouvez créer une ressource personnalisée ou une ressource de données en 
 
 1. Sélectionnez **OK** pour enregistrer vos modifications.
 
-Une autre façon de créer une ressource personnalisée consiste à importer un fichier externe en tant que ressource personnalisée, consultez [How to : Manage Resources](../windows/how-to-import-and-export-resources.md).
+Une autre façon de créer une ressource personnalisée consiste à importer un fichier externe en tant que ressource personnalisée, consultez [How to : Manage Resources](./how-to-copy-resources.md).
 
 > [!NOTE]
 > La création de nouvelles ressources personnalisées ou de données requiert Win32.
 
 ## <a name="requirements"></a>Configuration requise
 
-None
+Aucun
 
 ## <a name="see-also"></a>Voir aussi
 

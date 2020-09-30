@@ -1,5 +1,5 @@
 ---
-title: Éditeur d’images pour lesC++icônes ()
+title: Éditeur d’images pour les icônes (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
@@ -39,14 +39,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 47798b5d628484482dffdc963d6e8c7a809f42ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bb028833aa0e9f0615ec7575dbe41feb173efedb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168014"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504388"
 ---
-# <a name="image-editor-for-icons-c"></a>Éditeur d’images pour lesC++icônes ()
+# <a name="image-editor-for-icons-c"></a>Éditeur d’images pour les icônes (C++)
 
 Lorsque vous sélectionnez un fichier image (par exemple,. ico,. bmp,. png) dans **Explorateur de solutions**, l’image s’ouvre dans l' **éditeur d’images** de la même façon que les fichiers de code s’ouvrent dans l’éditeur de **code**. Quand un onglet **éditeur d’images** est actif, vous voyez des barres d’outils avec de nombreux outils pour la création et la modification d’images. Outre les bitmaps, les icônes et les curseurs, vous pouvez modifier des images au format GIF ou JPEG en utilisant les commandes du menu **image** et les outils de la barre d’outils de l' **éditeur d’images** .
 
@@ -57,7 +57,7 @@ Les ressources graphiques sont les images que vous définissez pour votre applic
 
 Vous pouvez également utiliser l' **éditeur d’images** et l' [Éditeur binaire](binary-editor.md) pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
 
-Outre la création de nouvelles ressources graphiques, vous pouvez [importer des images existantes](../windows/how-to-copy-resources.md#import-and-export-resources) pour les modifier, puis les ajouter à votre projet. Vous pouvez également ouvrir et modifier des images qui ne font pas partie d’un projet pour la [modification d’images autonomes](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+Outre la création de nouvelles ressources graphiques, vous pouvez [importer des images existantes](../windows/how-to-copy-resources.md#import-and-export-resources) pour les modifier, puis les ajouter à votre projet. Vous pouvez également ouvrir et modifier des images qui ne font pas partie d’un projet pour la [modification d’images autonomes](./selecting-an-area-of-an-image-image-editor-for-icons.md).
 
 Pour plus d’informations sur l' **éditeur d’images**, consultez Comment [créer une icône ou une autre image](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [modifier une image](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [utiliser un outil de dessin](../windows/using-a-drawing-tool-image-editor-for-icons.md), [travailler avec des couleurs](../windows/working-with-color-image-editor-for-icons.md)et des [touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md).
 
@@ -81,10 +81,10 @@ Le menu **image** , qui s’affiche uniquement lorsque l' **éditeur d’images*
 |**Charger la palette**|Ouvre la boîte de dialogue **charger la palette de couleurs** , qui vous permet de charger les couleurs de la palette précédemment enregistrées dans un fichier. PAL.|
 |**Enregistrer la palette**|Enregistre les couleurs de la palette dans un fichier. PAL.|
 |**Dessin opaque**|Lorsque cette option est sélectionnée, la sélection actuelle est opaque.<br/><br/>Lorsque cette option est désactivée, la sélection actuelle est transparente.|
-|**Éditeur de barres d’outils**|Ouvre la [boîte de dialogue nouvelle ressource de barre d’outils](../windows/new-toolbar-resource-dialog-box.md).|
+|**Éditeur de barres d’outils**|Ouvre la [boîte de dialogue nouvelle ressource de barre d’outils](./toolbar-editor.md).|
 |**Paramètres de la grille**|Ouvre la boîte de dialogue Paramètres de la **grille** dans laquelle vous pouvez spécifier des grilles pour votre image.|
-|**Nouveau type d’image**|Ouvre la [boîte de dialogue nouveau type d’image du > de l’appareil \<](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Une seule ressource icône peut contenir plusieurs images de différentes tailles et les fenêtres peuvent utiliser la taille d’icône appropriée en fonction de l’affichage. Un nouveau type d’appareil ne modifie pas la taille de l’icône, mais crée plutôt une nouvelle image dans l’icône. S’applique uniquement aux icônes et aux curseurs.|
-|**Type d’image icône/curseur actuel**|Ouvre un sous-menu qui répertorie les neuf premières images de curseur ou d’icône disponibles. La dernière commande du sous-menu, **plus**, ouvre la boîte de [dialogue ouvrir l’image > de l’appareil \<](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Nouveau type d’image**|Ouvre la [ \<Device> boîte de dialogue nouveau type d’image](./creating-an-icon-or-other-image-image-editor-for-icons.md).<br/><br/>Une seule ressource icône peut contenir plusieurs images de différentes tailles et les fenêtres peuvent utiliser la taille d’icône appropriée en fonction de l’affichage. Un nouveau type d’appareil ne modifie pas la taille de l’icône, mais crée plutôt une nouvelle image dans l’icône. S’applique uniquement aux icônes et aux curseurs.|
+|**Type d’image icône/curseur actuel**|Ouvre un sous-menu qui répertorie les neuf premières images de curseur ou d’icône disponibles. La dernière commande du sous-menu, **plus**, ouvre la boîte de [dialogue Ouvrir l' \<Device> image](./creating-an-icon-or-other-image-image-editor-for-icons.md).|
 |**Supprimer le type d’image**|Supprime l’image d’appareil sélectionnée.|
 |**outils**|Lance un sous-menu qui contient tous les outils disponibles à partir de la barre d’outils de l' **éditeur d’images** .|
 
@@ -97,13 +97,13 @@ La boîte de dialogue Paramètres de la **grille** vous permet de spécifier les
 |**Width**|Spécifie la largeur de chaque bloc de mosaïques.<br/><br/>Cette propriété est utile lors du dessin de bitmaps contenant plusieurs images disposées à intervalles réguliers.|
 |**Height**|Spécifie la hauteur de chaque bloc de mosaïques.<br/><br/>Cette propriété est utile lors du dessin de bitmaps contenant plusieurs images disposées à intervalles réguliers.|
 
-## <a name="toolbar"></a>Barre d'outils
+## <a name="toolbar"></a>Barre d’outils
 
 La barre d’outils de l' **éditeur d’images** contient des outils de dessin, de peinture, d’entrée de texte, d’effacement et de manipulation de vues. Il contient également un sélecteur d’options, avec lequel vous pouvez sélectionner des options pour utiliser chaque outil. Par exemple, vous pouvez choisir parmi différentes largeurs de pinceau, facteurs d’agrandissement et styles de ligne.
 
-Tous les outils disponibles dans la barre d’outils de l' **éditeur d’images** sont également disponibles à partir de l' **image** de menu > **Outils**. Pour utiliser la barre d’outils de l' **éditeur d’images** et le sélecteur d' **options** , sélectionnez l’outil ou l’option de votre choix.
+Tous les outils disponibles dans la barre d’outils de l' **éditeur d’images** sont également disponibles dans les outils d' **image**de menu  >  **Tools**. Pour utiliser la barre d’outils de l' **éditeur d’images** et le sélecteur d' **options** , sélectionnez l’outil ou l’option de votre choix.
 
-![Barre d’outils Éditeur d’images](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
+![Barre d'outils Éditeur d'images](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Barre d’outils **éditeur d’images**
 
 > [!TIP]
@@ -111,7 +111,7 @@ Barre d’outils **éditeur d’images**
 
 Étant donné que la plupart des outils de dessin sont disponibles à partir du [clavier](../windows/accelerator-keys-image-editor-for-icons.md), il est parfois utile de masquer la barre d’outils de l' **éditeur d’images** .
 
-- Pour afficher ou masquer la barre d’outils de l' **éditeur d’images** , accédez à la **vue** menu > les **barres d’outils** et choisissez **éditeur d’images**.
+- Pour afficher ou masquer la barre d’outils de l' **éditeur d’images** , accédez à menu **Afficher**les  >  **barres d’outils** et choisissez **éditeur d’images**.
 
 > [!NOTE]
 > Les éléments de cette barre d’outils s’affichent non disponibles lorsqu’un fichier image du projet ou de la solution en cours n’est pas ouvert dans l' **éditeur d’images**.
@@ -120,14 +120,14 @@ Barre d’outils **éditeur d’images**
 
 Le sélecteur d' **options** vous permet de spécifier la largeur d’une ligne, d’un trait de pinceau et bien plus encore. L’icône sur le bouton de sélection de l' **option** change en fonction de l’outil que vous avez sélectionné.
 
-![Sélecteur&#45;de forme de dessin dans la barre d’outils de l’éditeur d’images](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
+![Dessin&#45;sélecteur de forme dans la barre d’outils de l’éditeur d’images](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")<br/>
 Sélecteur d' **option** dans la barre d’outils de l' **éditeur d’images**
 
 ### <a name="text-tool"></a>Outil texte
 
 Utilisez la boîte de dialogue **outil texte** pour ajouter du texte à une ressource curseur, bitmap ou icône.
 
-Pour accéder à cette boîte de dialogue, ouvrez l' **éditeur d’images** et accédez à l' **image** de menu > **Outils**, puis sélectionnez la commande **outil texte** .
+Pour accéder à cette boîte de dialogue, ouvrez l' **éditeur d’images** et accédez au menu Outils d' **image**  >  **Tools**, puis sélectionnez la commande **outil texte** .
 
 > [!TIP]
 > Vous pouvez cliquer avec le bouton droit sur la boîte de dialogue **outil texte** pour accéder à un menu contextuel par défaut qui contient une liste de commandes Windows standard.
@@ -148,13 +148,13 @@ Pour accéder à cette boîte de dialogue, sélectionnez le bouton **police** da
 
 Voici un exemple qui montre comment ajouter du texte à une icône dans une application Windows et comment manipuler la police de votre texte.
 
-1. Créez une C++ application Windows Forms. Pour plus d’informations, consultez [Comment : créer des Applications Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Un fichier *app. ico* est ajouté à votre projet par défaut.
+1. Créez une application Windows Forms C++. Pour plus d’informations, consultez [Comment : créer des Applications Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Un fichier *app. ico* est ajouté à votre projet par défaut.
 
 1. Dans **Explorateur de solutions**, double-cliquez sur le fichier *app. ico*. L' **éditeur d’images** s’ouvre.
 
-1. Accédez à l' **image** de menu > **Outils** et sélectionnez **outil texte**.
+1. Accédez à menu **Image**  >  **Outils** d’image et sélectionnez **outil texte**.
 
-1. Dans la boîte de dialogue **outil texte** , *C++* tapez dans la zone de texte vide. Ce texte s’affiche dans une zone redimensionnable située dans l’angle supérieur gauche d' *app. ico* dans l' **éditeur d’images**.
+1. Dans la boîte de dialogue **outil texte** , tapez *C++* dans la zone de texte vide. Ce texte s’affiche dans une zone redimensionnable située dans l’angle supérieur gauche d' *app. ico* dans l' **éditeur d’images**.
 
 1. Dans l' **éditeur d’images**, faites glisser la zone redimensionnable jusqu’au centre de *app. ico* pour améliorer la lisibilité de votre texte.
 
@@ -206,13 +206,13 @@ Par défaut, l' **éditeur d’images** affiche la vue dans le volet gauche à l
 
 Pour tous les volets de l' **éditeur d’images** dont le facteur d’agrandissement est supérieur ou égal à 4, vous pouvez afficher une grille qui délimite les pixels individuels dans l’image.
 
-1. Accédez à **image** du menu > paramètres de la **grille**.
+1. Accédez au menu paramètres de grille de l' **image**  >  **Grid Settings**.
 
 1. Activez la case à cocher **grille en pixels** pour afficher la grille, ou désactivez la case à cocher pour masquer la grille.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-None
+Aucun
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-ms.openlocfilehash: e81ea442578e69bdd28301eba8f70561f6aa76c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5c00a35e375d133fbd3a6ed7fe3591e4b0cd54b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230543"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503132"
 ---
 # <a name="add-a-generic-c-class"></a>Ajouter une classe C++ générique
 
@@ -25,7 +25,7 @@ Vous pouvez ajouter une classe C++ générique via **l’affichage de classes**.
 
 1. Dans **Affichage de classes**, cliquez avec le bouton droit sur le projet auquel vous voulez ajouter la nouvelle classe, choisissez **Ajouter**, puis **Classe**.
 
-1. Dans la boîte de dialogue [Ajouter une classe](../ide/add-class-dialog-box.md), dans le volet Modèles, sélectionnez **Classe C++**. Sélectionnez **Ajouter** pour afficher l’[Assistant Classe C++ générique](#generic-c-class-wizard).
+1. Dans la boîte de dialogue [Ajouter une classe](./adding-a-class-visual-cpp.md#add-class-dialog-box), dans le volet Modèles, sélectionnez **Classe C++**. Sélectionnez **Ajouter** pour afficher l’[Assistant Classe C++ générique](#generic-c-class-wizard).
 
 1. Dans l’Assistant, indiquez le nom de la classe, puis définissez les paramètres ou acceptez les valeurs par défaut.
 

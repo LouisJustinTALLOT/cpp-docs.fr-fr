@@ -7,22 +7,22 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: 7546ab6d81137a2abb053cd18f0d5d74913c3b00
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: db5a8892bcc11538c3ff883a0e9a3a27db0ee14f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211903"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502797"
 ---
-# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>`/Zc:externConstexpr`(Activer les variables extern constexpr)
+# <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>`/Zc:externConstexpr` (Activer les variables extern constexpr)
 
 L' **`/Zc:externConstexpr`** option du compilateur indique au compilateur qu’il doit se conformer à la norme C++ et autoriser la liaison externe pour les **`constexpr`** variables. Par défaut, Visual Studio fournit toujours une **`constexpr`** liaison interne variable, même si vous spécifiez le **`extern`** mot clé.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 > **`/Zc:externConstexpr`**[**`-`**]
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 L' **`/Zc:externConstexpr`** option de compilateur force le compilateur à appliquer une liaison externe aux variables déclarées à l’aide de `extern constexpr` . Dans les versions antérieures de Visual Studio, et par défaut, ou si **`/Zc:externConstexpr-`** est spécifié, Visual Studio applique la liaison interne aux **`constexpr`** variables même si le **`extern`** mot clé est utilisé. L' **`/Zc:externConstexpr`** option est disponible à partir de Visual Studio 2017 Update 15,6. et est désactivé par défaut. L' [`/permissive-`](permissive-standards-conformance.md) option n’est pas activée **`/Zc:externConstexpr`** .
 
@@ -38,5 +38,5 @@ Si un fichier d’en-tête contient une variable déclarée `extern constexpr` ,
 
 ## <a name="see-also"></a>Voir aussi
 
-[`/Zc`Conformité](zc-conformance.md)<br/>
-[`auto`Mot](../../cpp/auto-keyword.md)
+[`/Zc` Conformité](zc-conformance.md)<br/>
+[`auto` Mot](../../cpp/auto-cpp.md)

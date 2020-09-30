@@ -4,18 +4,18 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: cc96b5ed931713ca64a0582ca1cc18a8526ea8af
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616683"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504272"
 ---
 # <a name="active-template-library-atl-concepts"></a>Concepts ATL (Active Template Library)
 
 La bibliothèque ATL (Active Template Library) est un ensemble de classes C++ basées sur un modèle qui vous permettent de créer des objets COM (Component Object Model) petits et rapides. Elle assure une prise en charge spéciale des principales fonctionnalités COM, telles que les implémentations stock, interfaces doubles, interfaces d’énumérateur COM standard, points de connexion, interfaces détachables et contrôles ActiveX.
 
-Si vous faites beaucoup de programmation ATL, vous voudrez en savoir plus sur les attributs COM et .NET, qui sont conçus pour simplifier la programmation COM. Pour plus d’informations, consultez [Programmation par attributs](../windows/attributed-programming-concepts.md). (Les attributs COM et .NET ne doivent pas être confondus avec la fonctionnalité \[\[attribute]] de la norme C++.)
+Si vous faites beaucoup de programmation ATL, vous voudrez en savoir plus sur les attributs COM et .NET, qui sont conçus pour simplifier la programmation COM. Pour plus d’informations, consultez [Programmation par attributs](../windows/attributes/cpp-attributes-com-net.md). (Les attributs COM et .NET ne doivent pas être confondus avec la fonctionnalité \[\[attribute]] de la norme C++.)
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -55,7 +55,7 @@ Fournit des détails sur l’option de l’Assistant Objet simple ATL qui permet
 [Spécification du modèle de thread du projet](specifying-the-threading-model-for-a-project-atl.md)<br/>
 Décrit les macros qui sont disponibles pour contrôler les performances d’exécution liées au threading dans votre projet.
 
-[Module ATL, classes](atl-module-classes.md)<br/>
+[Classes de module ATL](atl-module-classes.md)<br/>
 Décrit les classes de module nouvelles dans ATL 7.0. Les classes de module implémentent la fonctionnalité de base requise par ATL.
 
 [Services ATL](atl-services.md)<br/>
@@ -70,7 +70,7 @@ Décrit comment utiliser des tableaux et des mappages dans ATL.
 [Composant de registre ATL (inscription)](atl-registry-component-registrar.md)<br/>
 Traite les paramètres remplaçables et la syntaxe de script ATL. Il explique également comment configurer un lien statique vers l’organisme d’enregistrement.
 
-[Programmation avec ATL et le code C Run-Time](programming-with-atl-and-c-run-time-code.md)<br/>
+[Programmation à l’aide du code ATL et Runtime C](programming-with-atl-and-c-run-time-code.md)<br/>
 Décrit les avantages de la liaison de manière statique ou dynamique à la bibliothèque Runtime C (CRT).
 
 [Programmation avec CComBSTR](programming-with-ccombstr-atl.md)<br/>
@@ -96,7 +96,7 @@ Contient des informations sur l’Assistant Projet ATL.
 [Assistant Contrôle ATL](reference/atl-control-wizard.md)<br/>
 Explique comment ajouter des classes.
 
-[Programmation par attributs](../windows/attributed-programming-concepts.md)<br/>
+[Programmation par attributs](../windows/attributes/cpp-attributes-com-net.md)<br/>
 Fournit une vue d’ensemble sur l’utilisation d’attributs pour simplifier la programmation COM et une liste de liens vers des rubriques plus détaillées.
 
 [Vue d’ensemble de la classe ATL](atl-class-overview.md)<br/>

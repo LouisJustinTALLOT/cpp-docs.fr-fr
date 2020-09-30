@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - _Analysis_assume
 ms.assetid: 51205d97-4084-4cf4-a5ed-3eeaf67deb1b
-ms.openlocfilehash: 00577e6cc5ebd30e38e4fb7204b93c3ecf3fe112
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: f427afdcab07b41430a5d4b5fc7f300aa671e30b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418738"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503295"
 ---
 # <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>Comment : spécifier des informations de code supplémentaires à l’aide de _Analysis_assume
 
-Vous pouvez fournir des indications sur l’outil d’analyse du code pourC++ C/code qui aide le processus d’analyse et réduire les avertissements. Pour fournir des informations supplémentaires, utilisez la fonction suivante :
+Vous pouvez fournir des indications à l’outil d’analyse du code pour le code C/C++ qui aide le processus d’analyse et à réduire les avertissements. Pour fournir des informations supplémentaires, utilisez la fonction suivante :
 
 `_Analysis_assume(`  `expr`  `)`
 
-`expr`-toute expression supposée avoir la valeur true.
+`expr` -toute expression supposée avoir la valeur true.
 
 L’outil d’analyse du code suppose que la condition représentée par l’expression est vraie au point où la fonction apparaît et reste true jusqu’à ce que l’expression soit modifiée, par exemple, en l’assignant à une variable.
 
@@ -54,4 +54,4 @@ void test()
 
 ## <a name="see-also"></a>Voir aussi
 
-- [__assume](/cpp/intrinsics/assume)
+- [__assume](../intrinsics/assume.md)

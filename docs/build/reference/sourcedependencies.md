@@ -1,5 +1,5 @@
 ---
-title: /sourceDependencies (dépendances au niveau de la source du rapport)
+title: /sourceDependencies (Report source-level dependencies)
 description: Guide de référence de l’option de compilateur/sourceDependencies dans Microsoft C++.
 ms.date: 07/29/2020
 f1_keywords:
@@ -7,18 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - /sourceDependencies compiler option
 - /sourceDependencies
-ms.openlocfilehash: 3198353ea7569c426a556522d6b931fe23c7f12c
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 0c1866812435c777f6f1fd7ed7f9db788a8cf031
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87528071"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502841"
 ---
-# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies`(Dépendances au niveau de la source du rapport)
+# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies` (Dépendances au niveau de la source du rapport)
 
 Indique au compilateur de générer un fichier JSON qui détaille les dépendances au niveau de la source consommées pendant la compilation.
 
 Le fichier JSON contient une liste des dépendances sources, notamment :
+
 - Fichiers d’en-tête (en-têtes transitifs et inclus directement).
 - PCH utilisé (si **`/Yu`** est spécifié).
 - Les modules importés et les unités d’en-tête importés (à la fois les modules transitives et les unités d’en-tête).

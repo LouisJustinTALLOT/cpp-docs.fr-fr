@@ -30,18 +30,18 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838098"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504104"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor, classe
 
 Représente un type d’accesseur conçu pour une utilisation avancée.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CManualAccessor : public CAccessorBase
@@ -62,7 +62,7 @@ class CManualAccessor : public CAccessorBase
 |[CreateAccessor](#createaccessor)|Alloue de la mémoire pour les structures de liaison de colonne et initialise les membres de données de colonne.|
 |[CreateParameterAccessor](#createparameteraccessor)|Alloue de la mémoire pour les structures de liaison de paramètre et initialise les membres de données de paramètre.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 À l’aide `CManualAccessor` de, vous pouvez spécifier la liaison de paramètre et de colonne de sortie par des appels de fonction au moment de l’exécution.
 
@@ -102,9 +102,9 @@ dans Pointeur vers la longueur de champ, si nécessaire.
 *pStatus*<br/>
 dans Pointeur vers la variable à lier à l’état de colonne, si nécessaire.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Pour utiliser cette fonction, vous devez d’abord appeler [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Vous ne pouvez pas ajouter plus d’entrées que le nombre de colonnes spécifié dans `CreateAccessor` .
+Pour utiliser cette fonction, vous devez d’abord appeler [CreateAccessor](#createaccessor). Vous ne pouvez pas ajouter plus d’entrées que le nombre de colonnes spécifié dans `CreateAccessor` .
 
 ## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor :: AddParameterEntry
 
@@ -146,9 +146,9 @@ dans Pointeur vers la variable à lier à l’état de colonne, si nécessaire.
 *Affectez à eParamIO*<br/>
 dans Spécifie si le paramètre auquel la liaison est associée est un paramètre d’entrée, d’entrée/sortie ou de sortie.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Pour utiliser cette fonction, vous devez d’abord appeler [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
+Pour utiliser cette fonction, vous devez d’abord appeler [CreateParameterAccessor](#createparameteraccessor).
 
 ## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor :: CreateAccessor
 
@@ -165,7 +165,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>Paramètres
 
 *nBindEntries*<br/>
-dans Nombre de colonnes. Ce nombre doit correspondre au nombre d’appels à la fonction [CManualAccessor :: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) .
+dans Nombre de colonnes. Ce nombre doit correspondre au nombre d’appels à la fonction [CManualAccessor :: AddBindEntry](#addbindentry) .
 
 *pBuffer*<br/>
 dans Pointeur vers la mémoire tampon dans laquelle les colonnes de sortie sont stockées.
@@ -177,7 +177,7 @@ dans Taille de la mémoire tampon en octets.
 
 L’une des valeurs HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Appelez cette fonction avant d’appeler la `CManualAccessor::AddBindEntry` fonction.
 
@@ -208,9 +208,9 @@ dans Taille de la mémoire tampon en octets.
 
 L’une des valeurs HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Vous devez appeler cette fonction avant d’appeler [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
+Vous devez appeler cette fonction avant d’appeler [AddParameterEntry](#addparameterentry).
 
 ## <a name="see-also"></a>Voir aussi
 

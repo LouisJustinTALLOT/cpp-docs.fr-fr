@@ -79,16 +79,16 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: a331e310f031462c903546a2896317aae0c0d719
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bbaa008d8dac74588fc15bfebbc7cb2611260349
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843363"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504562"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Comment : créer une icône ou une autre image
 
-Vous pouvez créer une image, une image bitmap, une icône, un curseur ou une barre d’outils, puis utiliser l' **éditeur d’images** pour personnaliser son apparence. Vous pouvez également créer une nouvelle bitmap basée sur un [modèle de ressource](../windows/how-to-use-resource-templates.md).
+Vous pouvez créer une image, une image bitmap, une icône, un curseur ou une barre d’outils, puis utiliser l' **éditeur d’images** pour personnaliser son apparence. Vous pouvez également créer une nouvelle bitmap basée sur un [modèle de ressource](./how-to-create-a-resource-script-file.md).
 
 ## <a name="icons-and-cursors-image-resources-for-display-devices"></a>Icônes et curseurs : ressources image pour les périphériques d'affichage
 
@@ -176,7 +176,7 @@ Utilisez la boîte de dialogue **ouvrir l' &lt; &gt; image** de l’appareil pou
 
 1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* , puis choisissez **Insérer une ressource**. Si vous disposez déjà d’une ressource d’image dans votre fichier *. RC* , par exemple un curseur, vous pouvez cliquer avec le bouton droit sur le dossier de **curseur** et sélectionner **Insérer un curseur**.
 
-1. Dans la [boîte de dialogue Insérer une ressource](../windows/add-resource-dialog-box.md), sélectionnez **icône** ou **curseur** , puis choisissez **nouveau**. Pour les icônes, cette action crée une ressource icône avec une icône 32 × 32, 16 couleurs. Pour les curseurs, une image 32 × 32, monochrome (2 couleurs) est créée.
+1. Dans la [boîte de dialogue Insérer une ressource](./how-to-create-a-resource-script-file.md), sélectionnez **icône** ou **curseur** , puis choisissez **nouveau**. Pour les icônes, cette action crée une ressource icône avec une icône 32 × 32, 16 couleurs. Pour les curseurs, une image 32 × 32, monochrome (2 couleurs) est créée.
 
    Si un signe plus ( **+** ) s’affiche en regard du type de ressource image dans la boîte de dialogue **Insérer une ressource** , cela signifie que les modèles de barre d’outils sont disponibles. Sélectionnez le signe plus (+) pour développer la liste des modèles, sélectionnez un modèle, puis choisissez **nouveau**.
 
@@ -205,7 +205,7 @@ Lorsque l’image de l’icône s’affiche dans l' **éditeur d’images**, acc
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>Pour créer des régions transparentes ou inversées dans des images d’appareil
 
-Dans l' [éditeur d’images](../windows/image-editor-for-icons.md), l’icône initiale ou l’image de curseur a un attribut transparent. Bien que les images d’icône et de curseur soient rectangulaires, beaucoup ne s’affichent pas, car les parties de l’image sont transparentes et l’image sous-jacente de l’écran s’affiche à travers l’icône ou le curseur. Lorsque vous faites glisser une icône, certaines parties de l’image peuvent apparaître dans une couleur inversée. Vous créez cet effet en définissant la couleur de l’écran et la couleur inverse dans la [fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md).
+Dans l' [éditeur d’images](../windows/image-editor-for-icons.md), l’icône initiale ou l’image de curseur a un attribut transparent. Bien que les images d’icône et de curseur soient rectangulaires, beaucoup ne s’affichent pas, car les parties de l’image sont transparentes et l’image sous-jacente de l’écran s’affiche à travers l’icône ou le curseur. Lorsque vous faites glisser une icône, certaines parties de l’image peuvent apparaître dans une couleur inversée. Vous créez cet effet en définissant la couleur de l’écran et la couleur inverse dans la [fenêtre couleurs](./image-editor-for-icons.md).
 
 L’écran et les couleurs inversées que vous appliquez aux icônes et aux curseurs se forment et colorent l’image dérivée ou affectent les régions inversées. Les couleurs indiquent les parties de l’image qui ont ces attributs. Vous pouvez modifier les couleurs qui représentent les attributs de couleur d’écran et de couleur inverse lors de la modification. Ces modifications n’affectent pas l’apparence de l’icône ou du curseur dans votre application.
 
@@ -227,7 +227,7 @@ L’écran et les couleurs inversées que vous appliquez aux icônes et aux curs
    La couleur complémentaire est affectée automatiquement à l’autre sélecteur.
 
    > [!TIP]
-   > Si vous double-cliquez sur la **couleur d’écran** ou le sélecteur **de couleurs inversées** , la [boîte de dialogue Sélecteur de couleurs personnalisé](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) s’affiche.
+   > Si vous double-cliquez sur la **couleur d’écran** ou le sélecteur **de couleurs inversées** , la [boîte de dialogue Sélecteur de couleurs personnalisé](./image-editor-for-icons.md) s’affiche.
 
 ### <a name="use-the-256-color-palette"></a>Utilisez la palette de couleurs 256
 
@@ -237,13 +237,13 @@ L’écran et les couleurs inversées que vous appliquez aux icônes et aux curs
 
 1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* , puis choisissez **Insérer une ressource**. Si vous disposez déjà d’une ressource d’image dans votre fichier *. RC* , par exemple un curseur, vous pouvez cliquer avec le bouton droit sur le dossier de **curseur** et sélectionner **Insérer un curseur**.
 
-1. Dans la [boîte de dialogue Insérer une ressource](../windows/add-resource-dialog-box.md), sélectionnez **icône** ou **curseur** , puis choisissez **nouveau**.
+1. Dans la [boîte de dialogue Insérer une ressource](./how-to-create-a-resource-script-file.md), sélectionnez **icône** ou **curseur** , puis choisissez **nouveau**.
 
 1. Accédez à **image**  >  du menu**nouvelle image** de l’appareil et sélectionnez le style d’image 256 de couleur de votre choix.
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>Pour choisir une couleur dans la palette de couleurs 256 pour les grandes icônes
 
-Pour dessiner avec une sélection à partir de la palette de couleurs 256, vous devez sélectionner les couleurs de la palette **couleurs** dans la [fenêtre couleurs](../windows/colors-window-image-editor-for-icons.md).
+Pour dessiner avec une sélection à partir de la palette de couleurs 256, vous devez sélectionner les couleurs de la palette **couleurs** dans la [fenêtre couleurs](./image-editor-for-icons.md).
 
 1. Sélectionnez la grande icône ou le curseur, ou créez une nouvelle icône ou un curseur de grande taille.
 
@@ -258,7 +258,7 @@ Pour dessiner avec une sélection à partir de la palette de couleurs 256, vous 
 
 La zone réactive d’un curseur est le point auquel Windows fait référence pour suivre la position du curseur. Par défaut, la zone réactive est définie sur l’angle supérieur gauche du curseur avec des coordonnées `0,0` . La propriété **hotspot** dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) affiche les coordonnées de la zone réactive.
 
-1. Dans la [barre d’outils de l’éditeur d’images](../windows/toolbar-image-editor-for-icons.md), choisissez l’outil **définir la zone réactive** .
+1. Dans la [barre d’outils de l’éditeur d’images](./image-editor-for-icons.md), choisissez l’outil **définir la zone réactive** .
 
 1. Sélectionnez le pixel que vous souhaitez affecter comme zone réactive du curseur.
 
@@ -284,13 +284,13 @@ Lorsque vous créez une image bitmap, l’image est créée au format bitmap (. 
 1. Dans la boîte de dialogue **enregistrer le fichier sous** , tapez le nom que vous souhaitez attribuer au fichier et l’extension qui dénote le format de fichier souhaité dans la zone **nom de fichier** . Par exemple, *myfile.gif*.
 
    > [!NOTE]
-   > Vous devez créer ou ouvrir la bitmap en dehors de votre projet afin de l’enregistrer dans un autre format de fichier. Si vous le créez ou l’ouvrez dans votre projet, la commande **Enregistrer sous** n’est pas disponible. Pour plus d’informations, consultez [affichage des ressources dans un fichier de script de ressources en dehors d’un projet (autonome)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+   > Vous devez créer ou ouvrir la bitmap en dehors de votre projet afin de l’enregistrer dans un autre format de fichier. Si vous le créez ou l’ouvrez dans votre projet, la commande **Enregistrer sous** n’est pas disponible. Pour plus d’informations, consultez [affichage des ressources dans un fichier de script de ressources en dehors d’un projet (autonome)](./how-to-create-a-resource-script-file.md).
 
 1. Sélectionnez **Enregistrer**.
 
 ### <a name="to-convert-an-image-from-one-format-to-another"></a>Pour convertir une image d’un format à un autre
 
-Vous pouvez ouvrir des images GIF ou JPEG dans l' **éditeur d’images** et les enregistrer en tant que bitmaps. En outre, vous pouvez ouvrir un fichier bitmap et l’enregistrer au format GIF ou JPEG. Les images que vous utilisez n’ont pas besoin de faire partie d’un projet pour être modifiées dans l’environnement de développement (consultez [modification d’images autonomes](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).
+Vous pouvez ouvrir des images GIF ou JPEG dans l' **éditeur d’images** et les enregistrer en tant que bitmaps. En outre, vous pouvez ouvrir un fichier bitmap et l’enregistrer au format GIF ou JPEG. Les images que vous utilisez n’ont pas besoin de faire partie d’un projet pour être modifiées dans l’environnement de développement (consultez [modification d’images autonomes](./selecting-an-area-of-an-image-image-editor-for-icons.md)).
 
 1. Ouvrez l’image dans l' **éditeur d’images**.
 
@@ -304,7 +304,7 @@ Vous pouvez ouvrir des images GIF ou JPEG dans l' **éditeur d’images** et les
 
 1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* , puis choisissez **Insérer une ressource**. Si vous disposez déjà d’une ressource d’image dans votre fichier *. RC* , par exemple un curseur, vous pouvez simplement cliquer avec le bouton droit sur le dossier **curseur** et sélectionner **Insérer un curseur**.
 
-1. Dans la [boîte de dialogue Insérer une ressource](../windows/add-resource-dialog-box.md), sélectionnez le type de ressource d’image que vous souhaitez créer (**bitmap**, par exemple), puis choisissez **nouveau**.
+1. Dans la [boîte de dialogue Insérer une ressource](./how-to-create-a-resource-script-file.md), sélectionnez le type de ressource d’image que vous souhaitez créer (**bitmap**, par exemple), puis choisissez **nouveau**.
 
    Si un signe plus ( **+** ) s’affiche en regard du type de ressource image dans la boîte de dialogue **Insérer une ressource** , cela signifie que les modèles de barre d’outils sont disponibles. Sélectionnez le signe plus (+) pour développer la liste des modèles, sélectionnez un modèle, puis choisissez **nouveau**.
 
@@ -332,7 +332,7 @@ Aucun
 [Comment : utiliser la couleur](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Touches accélérateur](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
-[Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>
-[Creating New Toolbars](../windows/creating-new-toolbars.md)<br/>
+[Converting Bitmaps to Toolbars](./toolbar-editor.md)<br/>
+[Creating New Toolbars](./toolbar-editor.md)<br/>
 [Icons](/windows/win32/menurc/icons)<br/>
 [Cursors](/windows/win32/menurc/cursors)<br/>-->

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 559838201e3d1c425b6b1bf7f3650d9635c44c97
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833138"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503551"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -31,9 +31,9 @@ Spécifie le numéro d’accesseur (un index entier de base zéro). Vous devez s
 *Auto*<br/>
 Valeur booléenne qui spécifie si l’accesseur est récupéré automatiquement (TRUE) ou non (FALSe).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-**db_accessor** définit l’accesseur OLE DB sous-jacent pour les `db_column` attributs et suivants `db_param` dans la même classe ou fonction. **db_accessor** est utilisable au niveau du membre et est utilisé pour regrouper les `db_column` attributs qui participent à la `IAccessor` liaison basée sur OLE DB. Il est utilisé conjointement avec les `db_table` `db_command` attributs ou. L’appel de cet attribut est semblable à l’appel des macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
+**db_accessor** définit l’accesseur OLE DB sous-jacent pour les `db_column` attributs et suivants `db_param` dans la même classe ou fonction. **db_accessor** est utilisable au niveau du membre et est utilisé pour regrouper les `db_column` attributs qui participent à la `IAccessor` liaison basée sur OLE DB. Il est utilisé conjointement avec les `db_table` `db_command` attributs ou. L’appel de cet attribut est semblable à l’appel des macros [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) et [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) .
 
 **db_accessor** génère un ensemble de lignes et le lie aux mappages d’accesseur correspondants. Si vous n’appelez pas **db_accessor**, l’accesseur 0 est généré automatiquement, et toutes les liaisons de colonne sont mappées à ce bloc d’accesseur.
 
@@ -67,7 +67,7 @@ public:
 
 ## <a name="requirements"></a>Configuration requise
 
-| Contexte d’attribut | Valeur |
+| Contexte d’attribut | Value |
 |-|-|
 |**S’applique à**|Blocs d’attributs|
 |**Repeatable Read**|Non|

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 805fffcc6cafe92df91af6b01bb53240a0d70f51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: af1ca2d63abcb112bfe1e7d7538dbf70fb817ae5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230491"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503882"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Contrôles ActiveX MFC : ajout de propriétés personnalisées
 
@@ -40,7 +40,7 @@ Les propriétés personnalisées sont disponibles dans quatre types d’impléme
 
    L’implémentation paramétrée est prise en charge par l’Assistant Ajout de propriété. Une propriété paramétrable (parfois appelée un tableau de propriétés) peut être utilisée pour accéder à un ensemble de valeurs par le biais d’une seule propriété de votre contrôle. La macro d’entrée de la table de dispatch pour cette implémentation est DISP_PROPERTY_PARAM. Pour plus d’informations sur l’implémentation de ce type, consultez [implémentation d’une propriété paramétrable](mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : Rubriques avancées.
 
-## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a>Utilisation de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée
+## <a name="using-the-add-property-wizard-to-add-a-custom-property"></a><a name="_core_using_classwizard_to_add_a_custom_property"></a> Utilisation de l’Assistant Ajout de propriété pour ajouter une propriété personnalisée
 
 La procédure suivante montre comment ajouter une propriété personnalisée, CircleOffset, qui utilise l’implémentation des méthodes obtenir/Set. La propriété personnalisée CircleOffset permet à l’utilisateur du contrôle de décaler le cercle à partir du centre du rectangle englobant du contrôle. La procédure d’ajout de propriétés personnalisées avec une implémentation autre que les méthodes d’obtenir/définir est très similaire.
 
@@ -56,7 +56,7 @@ Cette procédure peut également être utilisée pour ajouter d’autres propri�
 
 1. Dans le menu contextuel, cliquez sur **Ajouter** , puis sur **Ajouter une propriété**.
 
-   L' [Assistant Ajouter une propriété](../ide/names-add-property-wizard.md)s’ouvre.
+   L' [Assistant Ajouter une propriété](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard)s’ouvre.
 
 1. Dans la zone nom de la **propriété** , tapez *CircleOffset*.
 
@@ -68,7 +68,7 @@ Cette procédure peut également être utilisée pour ajouter d’autres propri�
 
 1. Cliquez sur **Terminer**.
 
-## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a>Modifications de l’Assistant Ajout de propriété pour les propriétés personnalisées
+## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a> Modifications de l’Assistant Ajout de propriété pour les propriétés personnalisées
 
 Lorsque vous ajoutez la propriété personnalisée CircleOffset, l’Assistant Ajout de propriété apporte des modifications à l’en-tête (. H) et l’implémentation (. CPP) de la classe de contrôle.
 

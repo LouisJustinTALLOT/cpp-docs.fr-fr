@@ -35,12 +35,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: 5527b7c46b728a4a009a56fca3fea52bf5ef9bf3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 88618a5b1184ce9774a58f575a3fbff2d5e63ba4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214420"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504430"
 ---
 # <a name="how-to-create-resources-c"></a>Comment : créer des ressources (C++)
 
@@ -69,9 +69,9 @@ Avant de créer et d’ajouter de nouvelles ressources à votre projet, vous dev
    > [!NOTE]
    > Ne confondez pas le dossier du projet avec le dossier de solution dans **Explorateur de solutions**. Si vous placez le focus sur le dossier de **solution** , vous n’aurez pas les mêmes choix **Ajouter un nouvel élément** .
 
-1. Dans le menu, accédez à **projet** > **Ajouter un nouvel élément**.
+1. Dans le menu, accédez à **projet**  >  **Ajouter un nouvel élément**.
 
-1. Sélectionnez le **dossier C++ visuel** et choisissez **fichier de ressources (. RC)** dans le volet droit.
+1. Sélectionnez le dossier **Visual C++** et choisissez **fichier de ressources (. RC)** dans le volet droit.
 
 1. Donnez un nom à votre fichier de script de ressources dans la zone de texte **nom** , puis sélectionnez **ouvrir**.
 
@@ -82,7 +82,7 @@ Vous pouvez afficher les ressources dans un fichier de script de ressources sans
 > [!NOTE]
 > Certaines commandes ne sont disponibles que si le fichier est ouvert en mode autonome, ce qui signifie qu’en dehors d’un projet sans avoir chargé au préalable le projet. Par exemple, pour utiliser la commande **Enregistrer sous** et enregistrer un fichier avec un format ou un nom de fichier différent, le fichier doit être ouvert en mode autonome.
 
-- Pour ouvrir un fichier de script de ressources en dehors d’un projet, dans le menu, accédez à **fichier** > **ouvrir**, puis choisissez **fichier**. Accédez au fichier de script de ressources, mettez en surbrillance le fichier, puis choisissez **ouvrir**.
+- Pour ouvrir un fichier de script de ressources en dehors d’un projet, dans le menu, accédez à **fichier**  >  **ouvrir**, puis choisissez **fichier**. Accédez au fichier de script de ressources, mettez en surbrillance le fichier, puis choisissez **ouvrir**.
 
     > [!NOTE]
     > Il peut arriver que vous souhaitiez afficher le contenu du fichier de script de ressources de votre projet sans utiliser les éditeurs de ressources pour ouvrir une ressource. Par exemple, vous souhaitez rechercher une chaîne dans toutes les boîtes de dialogue du fichier de ressources sans avoir à ouvrir chacune d'elles séparément. Vous pouvez facilement ouvrir le fichier de ressources au format texte pour afficher toutes les ressources qu’il contient et effectuer des opérations globales prises en charge par l’éditeur de texte.
@@ -92,7 +92,7 @@ Vous pouvez afficher les ressources dans un fichier de script de ressources sans
 - Pour ouvrir plusieurs scripts de ressources, suivez la même étape ci-dessus pour chaque fichier que vous souhaitez ouvrir, par exemple, *source1. RC* et *source2. RC*. Ensuite, lorsque les deux fichiers. RC sont ouverts dans des fenêtres de documents distincts, utilisez le menu **fenêtre** ou cliquez avec le bouton droit sur l’un des fichiers, puis choisissez **nouveau groupe d’onglets horizontal** ou **nouveau groupe d’onglets vertical**. Les fenêtres sont maintenant en mosaïque afin que vous puissiez les afficher simultanément.
 
 > [!TIP]
-> Vous pouvez ouvrir les fichiers de script de ressources en cliquant avec le bouton droit sur le fichier. rc dans **Explorateur de solutions**, en sélectionnant **Ouvrir avec** et en choisissant l' **éditeur de code source (texte)** .
+> Vous pouvez ouvrir les fichiers de script de ressources en cliquant avec le bouton droit sur le fichier. rc dans **Explorateur de solutions**, en sélectionnant **Ouvrir avec** et en choisissant l' **éditeur de code source (texte)**.
 
 Lorsque vous générez une application MFC (Microsoft Foundation Class) pour Windows à l’aide de l' [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’Assistant génère un ensemble de fichiers de base, y compris un fichier de script de ressources (. RC), qui contient les fonctionnalités de base de MFC. Toutefois, ces fonctionnalités spécifiques à MFC ne sont pas disponibles lors de la modification d’un fichier. RC pour les applications Windows qui ne sont pas basées sur MFC. Cela comprend les assistants code, les chaînes d’invite de menu, le contenu de liste pour les contrôles de zone de liste déroulante et l’hébergement de contrôles ActiveX.
 
@@ -108,59 +108,59 @@ Vous pouvez créer une ressource en tant que nouvelle ressource par défaut, ce 
 Utilisez la fenêtre **affichage des ressources** pour afficher les fichiers de ressources inclus dans vos projets. Le développement du dossier supérieur, par exemple *Projet1. RC*, montre les types de ressources dans ce fichier. Développez chaque type de ressource pour afficher les ressources individuelles de ce type.
 
 > [!TIP]
-> Pour ouvrir la fenêtre **affichage des ressources** , accédez à la **vue** menu > **autres > Windows** **Affichage des ressources** ou appuyez sur **CTRL**+**MAJ**+**E**.
+> Pour ouvrir la fenêtre **affichage des ressources** , accédez à menu **Afficher**  >  **autres fenêtres**  >  **affichage des ressources** ou appuyez sur **CTRL** + **MAJ** + **E**.
 
 Vous pouvez également cliquer avec le bouton droit sur la fenêtre de **affichage des ressources** pour ouvrir un menu contextuel de commandes ou double-cliquer sur la barre de titre pour ancrer et détacher la fenêtre. Cliquez avec le bouton droit sur la barre de titre pour les commandes qui contrôlent le comportement de la fenêtre. Pour plus d’informations, consultez [gestion de Windows](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
-La **affichage des ressources** Windows comprend la boîte de dialogue **Ajouter une ressource** avec les propriétés suivantes pour ajouter des C++ ressources à un projet d’application de bureau Windows :
+La **affichage des ressources** Windows comprend la boîte de dialogue **Ajouter une ressource** avec les propriétés suivantes pour ajouter des ressources à un projet d’application de bureau Windows C++ :
 
 | Propriété | Description |
 |---|---|
-| **Type de ressource** | Spécifiez le type de ressource que vous souhaitez créer.<br/><br/>Vous pouvez développer les catégories de ressources curseur et boîte de dialogue pour afficher des ressources supplémentaires, qui se trouvent dans *. \Microsoft Visual Studio \<version\>\VC\VCResourceTemplates\\< LCID\>\mfc.RCT*. Si vous devez ajouter des fichiers. RCT, placez-les ici ou spécifiez un autre [chemin d’accès include](../windows/how-to-specify-include-directories-for-resources.md). Les ressources affichées au niveau supérieur dans le contrôle d’arborescence sont les ressources par défaut fournies par Visual Studio. Les ressources des fichiers. RCT apparaissent au deuxième niveau sous la catégorie appropriée. Il n’existe pas de limite prédéfinie pour le nombre de fichiers. RCT que vous pouvez ajouter.<br/><br/> |
+| **Type de ressource** | Spécifiez le type de ressource que vous souhaitez créer.<br/><br/>Vous pouvez développer les catégories de ressources curseur et boîte de dialogue pour afficher des ressources supplémentaires, qui se trouvent dans *. \Microsoft Visual Studio \<version\> \VC\VCResourceTemplates \\<LCID \> \mfc.RCT*. Si vous devez ajouter des fichiers. RCT, placez-les ici ou spécifiez un autre [chemin d’accès include](./how-to-include-resources-at-compile-time.md). Les ressources affichées au niveau supérieur dans le contrôle d’arborescence sont les ressources par défaut fournies par Visual Studio. Les ressources des fichiers. RCT apparaissent au deuxième niveau sous la catégorie appropriée. Il n’existe pas de limite prédéfinie pour le nombre de fichiers. RCT que vous pouvez ajouter.<br/><br/> |
 | **Nouveau** | Créez une ressource en fonction du type sélectionné dans la zone **type de ressource** et ouvrez la ressource dans l’éditeur approprié.<br/><br/>Par exemple, si vous créez une ressource de boîte de dialogue, celle-ci ouvre la ressource dans l' [éditeur de boîtes de dialogue](../windows/dialog-editor.md). |
 | **Importer** | Ouvrez la boîte de dialogue **Importer** pour accéder à la ressource que vous souhaitez importer dans votre projet actuel.<br/><br/>Vous pouvez importer une image bitmap, une icône, un curseur, du code HTML, du son (. WAV) ou un fichier de ressources personnalisé. |
-| **Personnalisée** | Ouvrez la boîte de dialogue **nouvelle ressource personnalisée** pour créer une ressource personnalisée.<br/><br/>Inclut également une propriété de **type de ressource** qui fournit une zone de texte vous permettant d’entrer le nom du type de ressource personnalisé. Le C++ visuel met automatiquement en majuscule le nom lorsque vous quittez. Les ressources personnalisées sont uniquement modifiées dans l' [Éditeur binaire](../windows/binary-editor.md). |
+| **Personnalisée** | Ouvrez la boîte de dialogue **nouvelle ressource personnalisée** pour créer une ressource personnalisée.<br/><br/>Inclut également une propriété de **type de ressource** qui fournit une zone de texte vous permettant d’entrer le nom du type de ressource personnalisé. Visual C++ met automatiquement en majuscule le nom lorsque vous quittez. Les ressources personnalisées sont uniquement modifiées dans l' [Éditeur binaire](../windows/binary-editor.md). |
 
-Lorsque vous créez une ressource, Visual C++ lui attribue un nom unique, par exemple, `IDD_Dialog1`. Vous pouvez personnaliser cet ID de ressource en modifiant les propriétés de la ressource dans l’éditeur de ressources associé ou dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
+Lorsque vous créez une ressource, Visual C++ lui attribue un nom unique, par exemple, `IDD_Dialog1` . Vous pouvez personnaliser cet ID de ressource en modifiant les propriétés de la ressource dans l’éditeur de ressources associé ou dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
 
 > [!NOTE]
-> Ne spécifiez pas un nom de ressource ou un ID qui est réservé par Visual Studio. Les noms réservés sont `DESIGNINFO`, `HWB`et `TEXTINCLUDE`, et l’ID réservé est `255`.
+> Ne spécifiez pas un nom de ressource ou un ID qui est réservé par Visual Studio. Les noms réservés sont `DESIGNINFO` , et `HWB` `TEXTINCLUDE` , et l’ID réservé est `255` .
 
 ### <a name="to-create-a-resource"></a>Pour créer une ressource
 
-- Dans **affichage des ressources**, sélectionnez votre fichier. RC, puis utilisez **modifier** > **Ajouter une ressource** et choisissez le type de ressource à ajouter à votre projet.
+- Dans **affichage des ressources**, sélectionnez votre fichier. RC, puis utilisez **modifier**  >  **Ajouter une ressource** et choisissez le type de ressource à ajouter à votre projet.
 
    > [!TIP]
    > Vous pouvez également cliquer avec le bouton droit sur le fichier. rc dans **affichage des ressources** et choisir **Ajouter une ressource** dans le menu contextuel.
 
-- Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le dossier du projet, sélectionnez **Ajouter** > **Ajouter une ressource** , puis choisissez le type de ressource à ajouter à votre projet.
+- Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le dossier du projet, sélectionnez **Ajouter**  >  **Ajouter une ressource** , puis choisissez le type de ressource à ajouter à votre projet.
 
    > [!NOTE]
    > Si vous ne disposez pas déjà d’un fichier. rc dans votre projet, cette étape en crée un. Vous pouvez ensuite répéter cette étape pour ajouter des types de ressource spécifiques au nouveau fichier .rc.
 
-- Dans [affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), cliquez avec le bouton droit sur la classe, sélectionnez **Ajouter** > **Ajouter une ressource** , puis choisissez le type de ressource à ajouter à votre projet.
+- Dans [affichage de classes](/visualstudio/ide/viewing-the-structure-of-code), cliquez avec le bouton droit sur la classe, sélectionnez **Ajouter**  >  **Ajouter une ressource** , puis choisissez le type de ressource à ajouter à votre projet.
 
-- Utilisez le **projet** de menu > **Ajouter une ressource**.
+- Utilisez le menu **projet**  >  **Ajouter une ressource**.
 
-## <a name="use-resource-templates"></a>Utiliser des modèles de ressources
+## <a name="use-resource-templates"></a>utiliser des modèles de ressources
 
 Un modèle de ressource est une ressource personnalisée que vous avez enregistrée en tant que fichier. RCT. Un modèle de ressource sert alors de point de départ pour la création de ressources. Les modèles de ressources vous permet de gagner du temps lors du développement de ressources supplémentaires ou de groupes de ressources qui partagent des fonctionnalités, telles que des contrôles standard ou des éléments répétés. Par exemple, si vous souhaitez inclure un bouton d’aide avec une icône de logo de société dans plusieurs boîtes de dialogue, créez un modèle de boîte de dialogue et personnalisez-le avec le bouton aide et le logo.
 
 Après la personnalisation d’un modèle de ressource, enregistrez vos modifications dans le dossier de modèles ou l’emplacement spécifié dans le chemin d’accès include, afin que le nouveau modèle de ressource apparaisse sous son type de ressource dans la boîte de dialogue **Ajouter une ressource** . Vous pouvez maintenant utiliser le nouveau modèle de ressource aussi souvent que nécessaire.
 
 > [!NOTE]
-> L'éditeur de ressources fournit automatiquement un ID de ressource unique. Vous pouvez modifier les propriétés de la [ressource](../windows/changing-the-properties-of-a-resource.md) en fonction des besoins.
+> L'éditeur de ressources fournit automatiquement un ID de ressource unique. Vous pouvez modifier les propriétés de la [ressource](./resource-editors.md) en fonction des besoins.
 
 > [!NOTE]
-> Placez les fichiers modèles spécifiques à une langue dans les sous-répertoires du répertoire principal du modèle. Par exemple, les fichiers de modèles en anglais sont placés dans *..\\< répertoire de modèles de ressources\>\ 1033*.
+> Placez les fichiers modèles spécifiques à une langue dans les sous-répertoires du répertoire principal du modèle. Par exemple, les fichiers de modèles en anglais sont placés dans *.. \\<répertoire de modèles de ressources \> \ 1033*.
 >
-> Visual Studio recherche de nouveaux fichiers. RCT dans *\Program Files\Microsoft Visual studio \<version\>\VC\VCResourceTemplates*, *\Program Files\Microsoft Visual Studio \<version > \VC\VCRESOURCETEMPLATES\\< LCID\>* (comme LCID de 1033 pour l’anglais) ou n’importe où sur le [chemin d’accès include](../windows/how-to-specify-include-directories-for-resources.md). Si vous préférez stocker vos fichiers. RCT dans un autre emplacement, vous devez ajouter l’emplacement au chemin d’accès include.
+> Visual Studio recherche de nouveaux fichiers. RCT dans *\Program Files\Microsoft Visual Studio \<version\> \VC\VCResourceTemplates*, *\Program files\microsoft Visual Studio \<version> \VC\VCResourceTemplates \\<LCID \> * (comme un LCID de 1033 pour l’anglais) ou n’importe où sur le [chemin d’accès include](./how-to-include-resources-at-compile-time.md). Si vous préférez stocker vos fichiers. RCT dans un autre emplacement, vous devez ajouter l’emplacement au chemin d’accès include.
 
 ### <a name="to-create-and-use-a-resource-template"></a>Pour créer et utiliser un modèle de ressource
 
-1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur votre projet et sélectionnez **Ajouter** > **Ajouter un nouvel élément**.
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur votre projet, puis sélectionnez **Ajouter**  >  **Ajouter un nouvel élément**.
 
-1. Dans le volet **modèles :** , sélectionnez **fichier de modèle de ressource (. RCT)** .
+1. Dans le volet **modèles :** , sélectionnez **fichier de modèle de ressource (. RCT)**.
 
 1. Indiquez un nom et un emplacement pour votre nouveau fichier *. RCT* , puis choisissez **ouvrir**.
 
@@ -180,9 +180,9 @@ Après la personnalisation d’un modèle de ressource, enregistrez vos modifica
 
 ### <a name="to-convert-an-existing-resource-file-to-a-template"></a>Pour convertir un fichier de ressources existant en modèle
 
-Une fois le fichier de script de ressources ouvert, dans le menu, accédez à **fichier** > **Enregistrer \<*nom*de fichier > sous**. Spécifiez un emplacement, puis choisissez **OK**.
+Une fois le fichier de script de ressources ouvert, dans le menu, accédez à **fichier**  >  **Enregistrer \<*filename*> sous**. Spécifiez un emplacement, puis choisissez **OK**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
@@ -190,4 +190,4 @@ Win32
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Comment : gérer les ressources](../windows/how-to-copy-resources.md)<br/>
-[Guide pratique pour inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Comment : inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)<br/>

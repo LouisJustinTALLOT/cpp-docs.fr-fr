@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8927ef0e34f2c2b12722d453e0dde6f7357eb33
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225148"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503146"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Descripteur sur l’opérateur objet (^)  (C++/CLI et C++/CX)
 
-Le *déclarateur de handle* ( `^` , prononcé « chapeau »), modifie le [spécificateur](../cpp/overview-of-declarators.md) de type pour signifier que l’objet déclaré doit être supprimé automatiquement lorsque le système détermine que l’objet n’est plus accessible.
+Le *déclarateur de handle* ( `^` , prononcé « chapeau »), modifie le [spécificateur](../cpp/declarations-and-definitions-cpp.md) de type pour signifier que l’objet déclaré doit être supprimé automatiquement lorsque le système détermine que l’objet n’est plus accessible.
 
 ## <a name="accessing-the-declared-object"></a>Accès à l'objet déclaré
 
@@ -28,7 +28,7 @@ L'avantage du déclarateur de handle est que dans COM vous devez gérer explicit
 
 Pour plus d’informations sur la façon d’instancier un objet, consultez [ref new](ref-new-gcnew-cpp-component-extensions.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/ZW`
 
@@ -217,7 +217,7 @@ int main() {
 }
 ```
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 

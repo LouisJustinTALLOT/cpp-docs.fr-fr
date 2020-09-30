@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 01b1f4a1d021dee6d1d7afbf55bbd13211af247d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c729fa183a03860de012e64d110f3b3ac7e7e8d0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686598"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503655"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procédure pas à pas : créer une application de bureau Windows traditionnelle (C++)
 
@@ -29,7 +29,7 @@ L’API Windows (également appelée API Win32, Windows Desktop API et Windows A
 
 - Une copie de Visual Studio. Pour plus d’informations sur le téléchargement et l’installation de Visual Studio, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio). Lorsque vous exécutez le programme d’installation, assurez-vous que la charge de travail **développement Desktop en C++** est activée. Ne vous inquiétez pas si vous n’avez pas installé cette charge de travail en même temps que Visual Studio. Vous pouvez réexécuter le programme d’installation et l’installer maintenant.
 
-   ![Développement Desktop en C++](../build/media/desktop-development-with-cpp.png "Développement Desktop en C++")
+   ![Développement Desktop en C++](../build/media/desktop-development-with-cpp.png "Développement Desktop avec C++")
 
 - Une compréhension des principes fondamentaux de l’utilisation de l’IDE Visual Studio. Si vous avez déjà utilisé des applications de bureau Windows, vous n’aurez probablement aucun mal à suivre. Pour une introduction, consultez [Visite guidée des fonctionnalités de l’IDE Visual Studio](/visualstudio/ide/visual-studio-ide).
 
@@ -141,7 +141,7 @@ Ensuite, vous apprendrez à créer le code d’une application de bureau Windows
    Pour plus d’informations sur les paramètres et la valeur de retour de cette fonction, consultez [point d’entrée WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Quels sont les mots supplémentaires, tels que `CALLBACK` , ou `HINSTANCE` `_In_` ? L’API Windows traditionnelle utilise des typedefs et des macros de préprocesseur pour résumer les détails des types et du code spécifique à la plateforme, comme les conventions d’appel, les **`__declspec`** déclarations et les pragmas de compilateur. Dans Visual Studio, vous pouvez utiliser la fonctionnalité [Info Express](/visualstudio/ide/using-intellisense#quick-info) IntelliSense pour voir ce que les typedefs et les macros définissent. Pointez votre souris sur le mot qui vous intéresse, ou sélectionnez-le et appuyez sur **CTRL** + **K**, **CTRL** + **I** pour une petite fenêtre contextuelle contenant la définition. Pour plus d’informations, consultez [Utilisation d’IntelliSense](/visualstudio/ide/using-intellisense). Les paramètres et les types de retour utilisent souvent des *Annotations SAL* pour vous aider à intercepter les erreurs de programmation. Pour plus d’informations, consultez [utilisation d’annotations SAL pour réduire les défauts du code C/C++](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Quels sont les mots supplémentaires, tels que `CALLBACK` , ou `HINSTANCE` `_In_` ? L’API Windows traditionnelle utilise des typedefs et des macros de préprocesseur pour résumer les détails des types et du code spécifique à la plateforme, comme les conventions d’appel, les **`__declspec`** déclarations et les pragmas de compilateur. Dans Visual Studio, vous pouvez utiliser la fonctionnalité [Info Express](/visualstudio/ide/using-intellisense#quick-info) IntelliSense pour voir ce que les typedefs et les macros définissent. Pointez votre souris sur le mot qui vous intéresse, ou sélectionnez-le et appuyez sur **CTRL** + **K**, **CTRL** + **I** pour une petite fenêtre contextuelle contenant la définition. Pour plus d’informations, consultez [Utilisation d’IntelliSense](/visualstudio/ide/using-intellisense). Les paramètres et les types de retour utilisent souvent des *Annotations SAL* pour vous aider à intercepter les erreurs de programmation. Pour plus d’informations, consultez [utilisation d’annotations SAL pour réduire les défauts du code C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
 
 1. Les programmes de bureau Windows nécessitent &lt; Windows. h>. &lt;Tchar. h> définit la `TCHAR` macro, qui se résout finalement en **`wchar_t`** si le symbole Unicode est défini dans votre projet ; sinon, elle est résolue en **`char`** .  Si vous générez toujours avec UNICODE activé, vous n’avez pas besoin de TCHAR et pouvez simplement utiliser **`wchar_t`** directement.
 
@@ -592,4 +592,4 @@ Félicitations ! Vous avez terminé cette procédure pas à pas et créé une ap
 
 ## <a name="see-also"></a>Voir aussi
 
-[Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md)
+[Applications de bureau Windows](./desktop-applications-visual-cpp.md)

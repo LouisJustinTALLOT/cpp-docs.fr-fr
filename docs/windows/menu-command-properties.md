@@ -1,5 +1,5 @@
 ---
-title: Commandes de menuC++()
+title: Commandes de menu (C++)
 ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
@@ -17,31 +17,31 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 33b1260d088008a94d935f7e4fd7c18b0dd249e3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a950e7d0156d1b952782fddcdff26718fcf0e291
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167938"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504324"
 ---
-# <a name="menu-commands-c"></a>Commandes de menuC++()
+# <a name="menu-commands-c"></a>Commandes de menu (C++)
 
 Les informations ci-dessous sont organisées en fonction des propriétés de **menu** qui s’affichent dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) lorsque vous sélectionnez une commande de menu. Elles sont répertoriées par ordre alphabétique, mais la fenêtre **Propriétés** vous permet également d’afficher ces propriétés par catégorie.
 
 |Propriété|Description|
 |--------------|-----------------|
-|**Break**|Peut prendre l'une des valeurs suivantes :<br/>  - **aucun**: aucun arrêt. Il s’agit de la valeur par défaut.<br/>  - **Colonne**: pour les menus statiques, cette valeur permet de placer la commande de menu sur une nouvelle ligne.<br/>      Pour les menus contextuels, cette valeur permet de placer la commande de menu dans une nouvelle colonne sans ligne de démarcation entre les colonnes.<br/>      Cette propriété affecte l'apparence du menu uniquement au moment de l'exécution, pas dans l'éditeur de menus.<br />   **barre**de - : identique à la **colonne** , à l’exception de, pour les menus contextuels, cette valeur sépare la nouvelle colonne de l’ancienne colonne par une ligne verticale.<br/>      La définition de cette propriété affecte l’apparence du menu uniquement au moment de l’exécution, pas dans l' **éditeur de menus**.|
-|**Légende**|Texte qui indique la commande de menu (nom du menu). Pour que l'une des lettres de la légende d'une commande de menu devienne une touche mnémonique, faites-la précéder d'une esperluette (&).|
-|**Activé**|Si la **valeur est true**, la commande de menu est initialement activée. Type : **bool**. Valeur par défaut : **False**.|
+|**Saut**|Peut prendre l'une des valeurs suivantes :<br/>  - **Aucun**: aucun arrêt. Il s’agit de la valeur par défaut.<br/>  - **Colonne**: pour les menus statiques, cette valeur place la commande de menu sur une nouvelle ligne.<br/>      Pour les menus contextuels, cette valeur permet de placer la commande de menu dans une nouvelle colonne sans ligne de démarcation entre les colonnes.<br/>      Cette propriété affecte l'apparence du menu uniquement au moment de l'exécution, pas dans l'éditeur de menus.<br />   - **Barre**: identique à **colonne** , à l’exception de, pour les menus contextuels, cette valeur sépare la nouvelle colonne de l’ancienne colonne par une ligne verticale.<br/>      La définition de cette propriété affecte l’apparence du menu uniquement au moment de l’exécution, pas dans l' **éditeur de menus**.|
+|**Caption**|Texte qui indique la commande de menu (nom du menu). Pour que l'une des lettres de la légende d'une commande de menu devienne une touche mnémonique, faites-la précéder d'une esperluette (&).|
+|**Activée**|Si la **valeur est true**, la commande de menu est initialement activée. Type : **bool**. Valeur par défaut : **false**.|
 |**Activé**|Si la valeur est **False**, l'élément de menu est désactivé.|
-|**Grisé**|Si la **valeur est true**, la commande de menu est initialement grisée et inactive. Type : **bool**. Valeur par défaut : **False**.|
-|**Aide**|Aligne l'élément de menu à droite. Valeur par défaut : **False**.<br/><br/>Par exemple, la commande de menu **? (Aide)** est toujours sur la droite dans toutes les applications Windows. Si vous affectez cette propriété à un élément de menu, celui-ci s'affiche à l'extrémité droite et à la fin du menu. S'applique aux éléments de niveau supérieur.|
+|**Grisé**|Si la **valeur est true**, la commande de menu est initialement grisée et inactive. Type : **bool**. Valeur par défaut : **false**.|
+|**Aide**|Aligne l'élément de menu à droite. Valeur par défaut : **false**.<br/><br/>Par exemple, la commande de menu **? (Aide)** est toujours sur la droite dans toutes les applications Windows. Si vous affectez cette propriété à un élément de menu, celui-ci s'affiche à l'extrémité droite et à la fin du menu. S'applique aux éléments de niveau supérieur.|
 |**Identifiant**|Symbole défini dans le fichier d'en-tête. Type : **symbole**, **entier**ou **chaîne entre guillemets**.<br/><br/>Vous pouvez utiliser n'importe quel symbole couramment disponible dans les éditeurs, même si la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) ne fournit pas de liste déroulante pour sélectionner des éléments.|
 |**Popup**|Si la **valeur est true**, la commande de menu est un menu contextuel. Type : **bool**. Valeur par défaut : **true** pour les menus de niveau supérieur dans une barre de menus, sinon **false**.|
-|**Prompt**|Contient le texte qui s'affiche dans la barre d'état quand cette commande de menu est mise en surbrillance. Le texte est placé dans la table de chaînes avec le même identificateur que la commande de menu.<br/><br/>Cette propriété est disponible pour tous les types de projet, mais les fonctionnalités d'exécution sont spécifiques à MFC.|
-|**Justification de droite à gauche**|Aligne à droite la commande de menu dans la barre de menus au moment de l'exécution. Type : **bool**. Valeur par défaut : **False**.|
+|**Demander**|Contient le texte qui s'affiche dans la barre d'état quand cette commande de menu est mise en surbrillance. Le texte est placé dans la table de chaînes avec le même identificateur que la commande de menu.<br/><br/>Cette propriété est disponible pour tous les types de projet, mais les fonctionnalités d'exécution sont spécifiques à MFC.|
+|**Justification de droite à gauche**|Aligne à droite la commande de menu dans la barre de menus au moment de l'exécution. Type : **bool**. Valeur par défaut : **false**.|
 |**Ordre de droite à gauche**|Permet d'afficher les commandes de menu de droite à gauche quand l'interface est localisée dans une langue qui se lit de droite à gauche, par exemple l'hébreu ou l'arabe.|
-|**Separator**|Si la **valeur est true**, la commande de menu est un séparateur. Type : **bool**. Valeur par défaut : **False**.|
+|**Séparateur**|Si la **valeur est true**, la commande de menu est un séparateur. Type : **bool**. Valeur par défaut : **false**.|
 
 ## <a name="associate-menu-commands"></a>Associer des commandes de menu
 
@@ -57,7 +57,7 @@ Bien souvent, vous souhaitez qu’une commande de menu et une combinaison de tou
 
    - Tapez le nom de la touche de modification (**CTRL**, **ALT**ou **MAJ**) suivi d’un signe plus ( **+** ) et du nom, de la lettre ou du symbole de la touche supplémentaire.
 
-   Par exemple, pour affecter **Ctrl**+**O** à la commande **ouvrir** du menu **fichier** , vous modifiez la **légende** de la commande de menu pour qu’elle ressemble au texte suivant :
+   Par exemple, pour affecter **CTRL** + **O** à la commande **ouvrir** du menu **fichier** , vous modifiez la **légende** de la commande de menu pour qu’elle ressemble au texte suivant :
 
    ```
    &Open...\tCtrl+O
@@ -65,24 +65,24 @@ Bien souvent, vous souhaitez qu’une commande de menu et une combinaison de tou
 
    La commande de menu dans l' **éditeur de menus** est mise à jour pour refléter la nouvelle légende à mesure que vous la tapez.
 
-1. [Créez l’entrée de table d’accélérateurs](../windows/adding-an-entry-to-an-accelerator-table.md) dans l’éditeur d’ **accélérateurs** et attribuez-lui le même identificateur que la commande de menu. Utilisez une combinaison de touches facile à mémoriser.
+1. [Créez l’entrée de table d’accélérateurs](./accelerator-editor.md) dans l’éditeur d’ **accélérateurs** et attribuez-lui le même identificateur que la commande de menu. Utilisez une combinaison de touches facile à mémoriser.
 
 Votre application MFC peut afficher un texte descriptif pour chacune des commandes de menu qu’un utilisateur peut sélectionner. Affichez le texte descriptif en affectant une chaîne de texte à chaque commande de menu à l’aide de la propriété **prompt** de la fenêtre **Propriétés** . Si vous avez une chaîne dans la [table de chaînes](../windows/string-editor.md) dont l'ID est identique à la commande, une application MFC affiche automatiquement cette ressource de chaîne dans la barre d'état de l'application en cours d'exécution quand un utilisateur pointe sur un élément de menu.
 
 - Pour associer une commande de menu à une chaîne de texte de barre d’État dans les applications MFC, dans l' **éditeur de menus**, sélectionnez la commande de menu. Dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window), tapez le texte de barre d'état associé dans la zone **Invite** .
 
-Dans un C++ projet, vous pouvez affecter une touche d’accès (un mnémonique qui permet à l’utilisateur de sélectionner le menu à l’aide du clavier) à vos menus et commandes de menu.
+Dans un projet C++, vous pouvez affecter une touche d’accès (un mnémonique qui permet à l’utilisateur de sélectionner le menu à l’aide du clavier) à vos menus et commandes de menu.
 
-- Pour affecter une touche d’accès rapide (raccourci) à une commande de menu, tapez une esperluette (`&`) devant une lettre dans le nom de menu ou le nom de commande pour spécifier cette lettre comme clé d’accès correspondante.
+- Pour affecter une touche d’accès rapide (raccourci) à une commande de menu, tapez une esperluette ( `&` ) devant une lettre dans le nom de menu ou le nom de commande pour spécifier cette lettre comme clé d’accès correspondante.
 
-   Par exemple, « & fichier » définit **Alt**+**F** comme touche de raccourci pour le menu **fichier** dans les applications écrites pour Microsoft Windows.
+   Par exemple, « &fichier » définit **ALT** + **F** comme touche de raccourci pour le menu **fichier** dans les applications écrites pour Microsoft Windows.
 
    L’élément de menu fournit un indice visuel signalant qu’une touche de raccourci est affectée à l’une de lettres. La lettre qui suit que le symbole & apparaît soulignée (en fonction du système d’exploitation).
 
 > [!NOTE]
 > Assurez-vous que toutes les clés d’accès d’un menu sont uniques en cliquant avec le bouton droit sur le menu et en choisissant **vérifier les mnémoniques**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

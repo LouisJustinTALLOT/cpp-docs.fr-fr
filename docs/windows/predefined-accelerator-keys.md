@@ -8,12 +8,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: beb4e878138da3dc2905c86e18fedc658d7ceecf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4f838caa8ca9e4a996fa4cb8018d663c6c7aecea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215148"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504294"
 ---
 # <a name="accelerator-keys-c"></a>Touches accélérateur (C++)
 
@@ -55,15 +55,15 @@ Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent
 |VK_OEM_1|Windows Pour le clavier américain standard, la touche **;:**|
 |VK_OEM_102|Windows La touche de crochet angulaire ou la touche de barre oblique inverse sur le clavier RT 102-Key|
 |VK_OEM_2|Windows Pour le clavier américain standard, le **/ ?** key|
-|VK_OEM_3|Windows Pour le clavier américain standard, la touche **`~**|
+|VK_OEM_3|Windows Pour le clavier américain standard, la **`~** clé|
 |VK_OEM_4|Windows Pour le clavier américain standard, la **[{** Key|
-|VK_OEM_5|Windows Pour le clavier américain standard, la **touche &#124;\\**|
+|VK_OEM_5|Windows Pour le clavier américain standard, la touche ** \\&#124;**|
 |VK_OEM_6|Windows Pour le clavier standard américain, la touche **]}**|
 |VK_OEM_7|Windows Pour le clavier standard américain, la touche « apostrophe/guillemet »|
 |VK_OEM_COMMA|Windows Pour n’importe quel pays/région, la touche **,**|
-|VK_OEM_MINUS|Windows Pour n’importe quel pays/région, la clé de **-**|
+|VK_OEM_MINUS|Windows Pour n’importe quel pays/région, la **-** clé|
 |VK_OEM_PERIOD|Windows Pour n’importe quel pays/région, le **.** key|
-|VK_OEM_PLUS|Windows Pour n’importe quel pays/région, la clé de **+**|
+|VK_OEM_PLUS|Windows Pour n’importe quel pays/région, la **+** clé|
 |VK_PACKET|Windows Utilisé pour passer des caractères Unicode comme s’il s’agissait de séquences de touches.|
 |VK_RCONTROL|Touche **CTRL de droite**|
 |VK_RMENU|Touche de **menu de droite**|
@@ -77,9 +77,9 @@ Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent
 
 ## <a name="accelerator-key-association"></a>Association de touches accélérateur
 
-Bien souvent, vous souhaitez qu'un élément de menu et une combinaison de touches du clavier permettent d'exécuter la même commande de programme. Vous pouvez effectuer cette action en affectant le même identificateur de ressource (ID) à l’élément de menu et à une entrée dans la table d’accélérateurs de votre application. Vous modifiez ensuite la légende de l'élément de menu pour afficher le nom de l'accélérateur. Pour plus d’informations sur les éléments de menu et les touches d’accès rapide, consultez [commandes de menu](../windows/associating-a-menu-command-with-an-accelerator-key.md).
+Bien souvent, vous souhaitez qu'un élément de menu et une combinaison de touches du clavier permettent d'exécuter la même commande de programme. Vous pouvez effectuer cette action en affectant le même identificateur de ressource (ID) à l’élément de menu et à une entrée dans la table d’accélérateurs de votre application. Vous modifiez ensuite la légende de l'élément de menu pour afficher le nom de l'accélérateur. Pour plus d’informations sur les éléments de menu et les touches d’accès rapide, consultez [commandes de menu](./menu-command-properties.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

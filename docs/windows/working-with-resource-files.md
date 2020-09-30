@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3e387a1cefb6577760a34c7957d4f5019b1d49ef
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165884"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502911"
 ---
 # <a name="working-with-resource-files"></a>Utilisation des fichiers de ressources
 
 > [!WARNING]
 > Cette section concerne les applications de bureau Windows écrites en C++.
 >
-> Pour plus d’informations sur les ressources des applications C++plateforme Windows universelle écrites dans, consultez [définition des ressources d’application](/windows/uwp/app-resources/), C++ou ajout de ressources aux projets/CLI (managés), consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le Guide du développeur .NET Framework.
+> Pour plus d’informations sur les ressources dans plateforme Windows universelle les applications écrites en C++, consultez [définition des ressources d’application](/windows/uwp/app-resources/)ou ajout de ressources aux projets c++/CLI (managé), consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le Guide du développeur .NET Framework.
 
 Les ressources peuvent être composées d’un large éventail d’éléments, par exemple :
 
@@ -41,7 +41,7 @@ Pour globaliser et localiser des ressources dans des applications gérées, cons
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 Décrit les fichiers de ressources et la façon dont ils sont utilisés dans les applications de bureau Windows. Fournit également des liens vers des articles qui décrivent comment utiliser des fichiers de ressources.
 
-[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
+[Identificateurs de ressource (symboles)](../windows/symbols-resource-identifiers.md)<br/>
 Décrit les symboles et fournit des informations sur l'utilisation de la boîte de dialogue **Symboles des ressources** pour gérer les symboles dans vos projets.
 
 [Éditeurs de ressources](../windows/resource-editors.md)<br/>
@@ -57,5 +57,5 @@ Propose des liens vers des informations sur l'utilisation de l'ensemble de docum
 
 ## <a name="see-also"></a>Voir aussi
 
-[Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md)<br/>
+[Applications de bureau Windows](./desktop-applications-visual-cpp.md)<br/>
 [Menus et autres ressources](/windows/win32/menurc/resources)

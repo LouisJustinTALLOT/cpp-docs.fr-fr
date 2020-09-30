@@ -16,12 +16,12 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-ms.openlocfilehash: e5f5b75057985dc769c8f1ab84765d628dc42fcc
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: f128c9722138f453c72ca97b09cc1a69a737dbf6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040300"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504198"
 ---
 # <a name="code-analysis-for-cc-overview"></a>Vue d’ensemble de l’analyse du code C/C++
 
@@ -45,7 +45,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>support #pragma
 
-Vous pouvez utiliser la `#pragma` directive pour traiter les avertissements comme des erreurs, activer ou désactiver les avertissements et supprimer les avertissements pour les lignes de code individuelles. Pour plus d’informations, consultez [Directives pragma et mot clé __Pragma](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
+Vous pouvez utiliser la `#pragma` directive pour traiter les avertissements comme des erreurs, activer ou désactiver les avertissements et supprimer les avertissements pour les lignes de code individuelles. Pour plus d’informations, consultez [Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="annotation-support"></a>Prise en charge des annotations
 

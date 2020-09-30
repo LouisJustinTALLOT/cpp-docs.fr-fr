@@ -3,12 +3,12 @@ title: Applications de bureau (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: f8e3dd386aee835ff383ba7567a5c320f206476e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404959"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504435"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau (Visual C++)
 
@@ -36,20 +36,20 @@ Toute application de bureau en C++ peut utiliser C Runtime (CRT) et des classes 
 
 ## <a name="in-this-section"></a>Contenu de cette section
 
-|Intitulé|Description|
+|Titre|Description|
 |-----------|-----------------|
-|[Application console Windows en C++](console-applications-in-visual-cpp.md)|Contient des informations sur les applications console. Une application console Win32 (ou Win64) n’a aucune fenêtre et aucune boucle de message. Elle s'exécute dans la fenêtre de console et l'entrée et la sortie sont gérées via la ligne de commande.|
+|[Application console Windows en C++](./overview-of-windows-programming-in-cpp.md)|Contient des informations sur les applications console. Une application console Win32 (ou Win64) n’a aucune fenêtre et aucune boucle de message. Elle s'exécute dans la fenêtre de console et l'entrée et la sortie sont gérées via la ligne de commande.|
 |[Procédure pas à pas : création d’applications de bureau Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Créer une application de bureau Windows simple.|
-|[Création d’une application de bureau Windows vide](creating-an-empty-windows-desktop-application.md)|Comment créer un projet de bureau Windows qui n’a pas de fichiers par défaut.|
-|[Ajout de fichiers à des applications Win32 vides](adding-files-to-an-empty-win32-applications.md)|Comment ajouter des fichiers à un projet vide.|
+|[Création d’une application de bureau Windows vide](./overview-of-windows-programming-in-cpp.md)|Comment créer un projet de bureau Windows qui n’a pas de fichiers par défaut.|
+|[Ajout de fichiers à des applications Win32 vides](./overview-of-windows-programming-in-cpp.md)|Comment ajouter des fichiers à un projet vide.|
 |[Utilisation des fichiers de ressources](working-with-resource-files.md)|Comment ajouter des images, des icônes, des tables de chaînes et d’autres ressources à une application de bureau.|
 |[Ressources pour la création d'un jeu à l'aide de DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création de jeux en C++.|
-|[Procédure pas à pas : création et utilisation d'une bibliothèque statique](walkthrough-creating-and-using-a-static-library-cpp.md)|Comment créer un fichier binaire. lib.|
+|[Procédure pas à pas : création et utilisation d'une bibliothèque statique](../build/walkthrough-creating-and-using-a-static-library-cpp.md)|Comment créer un fichier binaire. lib.|
 |[Comment : utiliser le kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
 
-## <a name="related-articles"></a>Articles associés
+## <a name="related-articles"></a>Articles connexes
 
-|Intitulé|Description|
+|Titre|Description|
 |-----------|-----------------|
 |[Développement Windows](/windows/win32/index)|Contient des informations sur l'API Windows et COM. (Certaines API Windows et DLL tierces sont implémentées comme objets COM.)|
 |[Hilo : développement d’applications C++ pour Windows 7](/previous-versions/msdn10/ff708696(v=msdn.10))|Explique comment créer une application de bureau Windows cliente enrichie, qui utilise l’animation Windows et Direct2D pour créer une interface utilisateur de type carrousel.  Ce didacticiel n’a pas été mis à jour depuis Windows 7, mais il fournit toujours une introduction complète à la programmation Win32.|

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686481"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503544"
 ---
 # <a name="db_column"></a>db_column
 
@@ -48,9 +48,9 @@ Facultatif Variable membre utilisée pour contenir l’état de cette colonne. L
 *length*<br/>
 Facultatif Variable membre utilisée pour contenir la taille de la colonne en octets.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-**db_column** lie la colonne de table spécifiée à une variable dans l’ensemble de lignes. Elle délimite les données membres qui peuvent participer à la `IAccessor` liaison basée sur OLE DB. Cet attribut configure le mappage de colonnes normalement défini à l’aide des macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)et [COLUMN_ENTRY](../../data/oledb/column-entry.md). Ils manipulent la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) OLE DB pour lier la colonne spécifiée. Chaque membre que vous marquez avec l’attribut **db_column** occupe une entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut à l’emplacement où vous placez le mappage de colonnes, autrement dit, dans la classe de commande ou de table.
+**db_column** lie la colonne de table spécifiée à une variable dans l’ensemble de lignes. Elle délimite les données membres qui peuvent participer à la `IAccessor` liaison basée sur OLE DB. Cet attribut configure le mappage de colonnes normalement défini à l’aide des macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map), [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)et [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry). Ils manipulent la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) OLE DB pour lier la colonne spécifiée. Chaque membre que vous marquez avec l’attribut **db_column** occupe une entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut à l’emplacement où vous placez le mappage de colonnes, autrement dit, dans la classe de commande ou de table.
 
 Utilisez **db_column** conjointement avec les attributs [db_table](db-table.md) ou [db_command](db-command.md) .
 
@@ -96,7 +96,7 @@ class CProducts {
 };
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 | Contexte d’attribut | Value |
 |-|-|

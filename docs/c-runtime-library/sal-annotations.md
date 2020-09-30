@@ -47,19 +47,19 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: 77b934010b7f76b556a4c7ba9826fbedfc36b95e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 64f1ef513f34f11f2569f0afb854a0e2762082b6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415846"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503478"
 ---
 # <a name="sal-annotations"></a>Annotations SAL
 
 Si vous examinez les fichiers d'en-tête de bibliothèque, vous remarquerez peut-être des annotations inhabituelles, comme `_In_z` et `_Out_z_cap_(_Size)`. Voici des exemples de la langue d'annotation de code source Microsoft (SEL), qui fournit un ensemble d'annotations pour décrire comment une fonction utilise les paramètres, par exemple, les hypothèses qu'elle fait sur eux et les garanties qu'elle effectue sur le finissage. Le fichier d’en-tête \<sal.h> définit les annotations.
 
-Pour plus d’informations sur l’utilisation d’annotations SAL dans Visual Studio, consultez [Utilisation d’annotations SAL pour réduire les défauts du code C/C++](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+Pour plus d’informations sur l’utilisation d’annotations SAL dans Visual Studio, consultez [Utilisation d’annotations SAL pour réduire les défauts du code C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+[Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)

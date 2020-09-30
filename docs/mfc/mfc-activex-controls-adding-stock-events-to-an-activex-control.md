@@ -42,28 +42,28 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: a97c08baaf3c11b0436e52bb4fd4ac380999d69a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e63e63b914b9db64139b9b81a2c749a78ac4a58f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615589"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503850"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Contrôles ActiveX MFC : ajout d'événements stock à un contrôle ActiveX
 
-Les événements stock diffèrent des événements personnalisés en ce qu’ils sont déclenchés automatiquement par la classe [COleControl](reference/colecontrol-class.md). `COleControl`contient des fonctions membres prédéfinies qui déclenchent des événements résultant d’actions courantes. Certaines actions courantes implémentées par `COleControl` incluent des clics simples et doubles sur le contrôle, des événements de clavier et des modifications de l’état des boutons de la souris. Les entrées de la table des événements pour les événements stock sont toujours précédées du préfixe EVENT_STOCK.
+Les événements stock diffèrent des événements personnalisés en ce qu’ils sont déclenchés automatiquement par la classe [COleControl](reference/colecontrol-class.md). `COleControl` contient des fonctions membres prédéfinies qui déclenchent des événements résultant d’actions courantes. Certaines actions courantes implémentées par `COleControl` incluent des clics simples et doubles sur le contrôle, des événements de clavier et des modifications de l’état des boutons de la souris. Les entrées de la table des événements pour les événements stock sont toujours précédées du préfixe EVENT_STOCK.
 
-## <a name="stock-events-supported-by-the-add-event-wizard"></a><a name="_core_stock_events_supported_by_classwizard"></a>Événements stock pris en charge par l’Assistant Ajout d’événement
+## <a name="stock-events-supported-by-the-add-event-wizard"></a><a name="_core_stock_events_supported_by_classwizard"></a> Événements stock pris en charge par l’Assistant Ajout d’événement
 
-La `COleControl` classe fournit dix événements boursiers, listés dans le tableau suivant. Vous pouvez spécifier les événements que vous souhaitez dans votre contrôle à l’aide de l' [Assistant Ajout d’événement](../ide/add-event-wizard.md).
+La `COleControl` classe fournit dix événements boursiers, listés dans le tableau suivant. Vous pouvez spécifier les événements que vous souhaitez dans votre contrôle à l’aide de l' [Assistant Ajout d’événement](../ide/adding-an-event-visual-cpp.md#add-event-wizard).
 
 ### <a name="stock-events"></a>Événements stock
 
 |Événement|Déclenchement de la fonction|Commentaires|
 |-----------|---------------------|--------------|
-|Cliquez sur |**void FireClick ()**|Déclenché lorsque le contrôle capture la souris, tout message **BUTTONUP** (à gauche, au milieu ou à droite) est reçu et le bouton est relâché au-dessus du contrôle. Les événements action MouseDown et MouseUp se produisent avant cet événement.<br /><br /> Entrée de la table des événements : **EVENT_STOCK_CLICK ()**|
+|Cliquez|**void FireClick ()**|Déclenché lorsque le contrôle capture la souris, tout message **BUTTONUP** (à gauche, au milieu ou à droite) est reçu et le bouton est relâché au-dessus du contrôle. Les événements action MouseDown et MouseUp se produisent avant cet événement.<br /><br /> Entrée de la table des événements : **EVENT_STOCK_CLICK ()**|
 |Double|**void FireDblClick ()**|Semblable à Click, mais déclenché lors de la réception d’un message **BUTTONDBLCLK** .<br /><br /> Entrée de la table des événements : **EVENT_STOCK_DBLCLICK ()**|
-|Error|**void FireError ((SCODE***SCODE* **, LPCSTR** `lpszDescription` **, uint** `nHelpID` **= 0)**        |Déclenché lorsqu’une erreur se produit dans votre contrôle ActiveX en dehors de la portée d’un appel de méthode ou d’un accès à une propriété.<br /><br /> Entrée de la table des événements : **EVENT_STOCK_ERROREVENT ()**|
+|Erreur|**void FireError ((SCODE***SCODE* **, LPCSTR** `lpszDescription` **, uint** `nHelpID` **= 0)**        |Déclenché lorsqu’une erreur se produit dans votre contrôle ActiveX en dehors de la portée d’un appel de méthode ou d’un accès à une propriété.<br /><br /> Entrée de la table des événements : **EVENT_STOCK_ERROREVENT ()**|
 |KeyDown|**void FireKeyDown (Short** `nChar` **, Short** `nShiftState` **)**      |Déclenché lors de la réception d’un `WM_SYSKEYDOWN` `WM_KEYDOWN` message ou.<br /><br /> Entrée de la table des événements : **EVENT_STOCK_KEYDOWN ()**|
 |KeyPress|**void FireKeyPress (Short** <strong>\*</strong> `pnChar` **)**    |Déclenché lors de la réception d’un `WM_CHAR` message.<br /><br /> Entrée de la table des événements : **EVENT_STOCK_KEYPRESS ()**|
 |KeyUp|**void FireKeyUp (Short** `nChar` **, Short** `nShiftState` **)**      |Déclenché lors de la réception d’un `WM_SYSKEYUP` `WM_KEYUP` message ou.<br /><br /> Entrée de la table des événements : **EVENT_STOCK_KEYUP ()**|
@@ -72,7 +72,7 @@ La `COleControl` classe fournit dix événements boursiers, listés dans le tabl
 |Lâché|**void FireMouseUp (Short** `nButton` **, Short** `nShiftState` **, float***x* **, float***y***)**          |Déclenché en cas de réception d’un **BUTTONUP** (gauche, du milieu ou de droite). La capture de la souris est libérée avant que cet événement soit déclenché.<br /><br /> Entrée de la table des événements : **EVENT_STOCK_MOUSEUP ()**|
 |ReadyStateChange|**void FireReadyStateChange ()**|Déclenché lorsqu’un contrôle passe à l’état prêt suivant en raison de la quantité de données reçues.<br /><br /> Entrée de la table des événements : **EVENT_STOCK_READYSTATECHANGE ()**|
 
-## <a name="adding-a-stock-event-using-the-add-event-wizard"></a><a name="_core_adding_a_stock_event_using_classwizard"></a>Ajout d’un événement stock à l’aide de l’Assistant Ajout d’événement
+## <a name="adding-a-stock-event-using-the-add-event-wizard"></a><a name="_core_adding_a_stock_event_using_classwizard"></a> Ajout d’un événement stock à l’aide de l’Assistant Ajout d’événement
 
 L’ajout d’événements stock requiert moins de travail que l’ajout d’événements personnalisés, car le déclenchement de l’événement réel est géré automatiquement par la classe de base, `COleControl` . La procédure suivante ajoute un événement stock à un contrôle qui a été développé à l’aide de l' [Assistant contrôle ActiveX MFC](reference/mfc-activex-control-wizard.md). L’événement, appelé KeyPress, se déclenche lorsqu’une touche est enfoncée et que le contrôle est actif. Cette procédure peut également être utilisée pour ajouter d’autres événements boursiers. Remplacez le nom de l’événement stock sélectionné par Appuyez sur.
 
@@ -90,7 +90,7 @@ L’ajout d’événements stock requiert moins de travail que l’ajout d’év
 
 1. Cliquez sur **Terminer**.
 
-## <a name="add-event-wizard-changes-for-stock-events"></a><a name="_core_classwizard_changes_for_stock_events"></a>Modifications de l’Assistant Ajout d’événement pour les événements stock
+## <a name="add-event-wizard-changes-for-stock-events"></a><a name="_core_classwizard_changes_for_stock_events"></a> Modifications de l’Assistant Ajout d’événement pour les événements stock
 
 Étant donné que les événements stock sont gérés par la classe de base du contrôle, l’Assistant Ajout d’événement ne modifie en aucune façon votre déclaration de classe. Il ajoute l’événement à la table d’événements du contrôle et crée une entrée dans son. Fichier IDL. La ligne suivante est ajoutée à la table des événements du contrôle, située dans l’implémentation de la classe du contrôle (. CPP) :
 
@@ -108,4 +108,4 @@ Cette ligne associe l’événement KeyPress à son ID de dispatch standard et p
 
 [Contrôles ActiveX MFC](mfc-activex-controls.md)<br/>
 [Contrôles ActiveX MFC : méthodes](mfc-activex-controls-methods.md)<br/>
-[COleControl, classe](reference/colecontrol-class.md)
+[Classe COleControl](reference/colecontrol-class.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-ms.openlocfilehash: 5db0f709bceca82d8d3af2c3220fb61d98c1ba8e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7ccb3d846982bbf9a52a7267549f6481b5a1bd9b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757252"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503954"
 ---
 # <a name="compiler-error-c3763"></a>Erreur du compilateur C3763
 
 'type' : 'retval’et’out’ne peuvent figurer que sur un type pointeur de données
 
-Les attributs [out](../../windows/out-cpp.md) ou [retVal](../../windows/retval.md) peuvent uniquement apparaître sur les paramètres de type pointer. Supprimez l’attribut ou définissez le paramètre de type pointeur.
+Les attributs [out](../../windows/attributes/out-cpp.md) ou [retVal](../../windows/attributes/retval.md) peuvent uniquement apparaître sur les paramètres de type pointer. Supprimez l’attribut ou définissez le paramètre de type pointeur.
 
 L’exemple suivant génère l’C3763 :
 

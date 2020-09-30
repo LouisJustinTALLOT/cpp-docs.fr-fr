@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 20e7f5855b771caf23217e5c17db50a890e28113
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0cda21b1650fa660175248c15560a7ab0b251d07
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223848"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504241"
 ---
 # <a name="decorated-names"></a>Noms décorés
 
@@ -22,7 +22,7 @@ Les conventions d’affectation de noms décorées ont changé dans les différe
 > [!NOTE]
 > Les bibliothèques créées avec Visual Studio 2015 peuvent être consommées par les applications générées avec Visual Studio 2017 ou Visual Studio 2019.
 
-## <a name="using-decorated-names"></a><a name="Using"></a>Utilisation de noms décorés
+## <a name="using-decorated-names"></a><a name="Using"></a> Utilisation de noms décorés
 
 Normalement, vous n'êtes pas tenu de connaître le nom décoré pour écrire du code pouvant être compilé et créer des liens avec succès. Les noms décorés sont un détail d'implémentation interne au compilateur et à l'éditeur de liens. Les outils peuvent habituellement gérer le nom dans sa forme non décorée. Cependant, un nom décoré est parfois nécessaire lorsque vous spécifiez un nom de fonction à l'éditeur de liens et à d'autres outils. Par exemple, pour faire correspondre des fonctions C++ surchargées, des membres d'espaces de noms, des constructeurs de classe, des destructeurs et des fonctions membres spéciales, vous devez spécifier le nom décoré. Pour plus d'informations sur les indicateurs d'option et d'autres situations qui nécessitent des noms décorés, consultez la documentation pour les outils et les options que vous utilisez.
 
@@ -30,7 +30,7 @@ Si vous modifiez le nom de la fonction, la classe, la convention d'appel, le typ
 
 La décoration des noms est également importante lors de la liaison à du code écrit dans d'autres langages de programmation ou à l'aide d'autres compilateurs. Des compilateurs différents utilisent des conventions différentes de décoration des noms. Quand votre fichier exécutable est lié à du code écrit dans un autre langage, il convient d’apporter un soin particulier pour mettre en correspondance les noms exportés et importés et les conventions d’appel. Le code de langage assembleur doit utiliser les noms décorés MSVC et les conventions d’appel pour créer un lien vers le code source écrit à l’aide de MSVC.
 
-## <a name="format-of-a-c-decorated-name"></a><a name="Format"></a>Format d’un nom décoré C++
+## <a name="format-of-a-c-decorated-name"></a><a name="Format"></a> Format d’un nom décoré C++
 
 Un nom décoré pour une fonction C++ contient les informations suivantes :
 
@@ -53,7 +53,7 @@ Les noms de fonction et de classe sont encodés dans le nom décoré. Le reste d
 |`int a(char){int i=3;return i;};`|`?a@@YAHD@Z`|
 |`void __stdcall b::c(float){};`|`?c@b@@AAGXM@Z`|
 
-## <a name="format-of-a-c-decorated-name"></a><a name="FormatC"></a>Format d’un nom décoré C
+## <a name="format-of-a-c-decorated-name"></a><a name="FormatC"></a> Format d’un nom décoré C
 
 La forme de la décoration pour une fonction C dépend de la convention d’appel utilisée dans sa déclaration, comme l’indique le tableau suivant. Il s'agit également du format de décoration utilisé quand le code C++ est déclaré comme doté d'une liaison `extern "C"`. La Convention d’appel par défaut est **`__cdecl`** . Notez que dans un environnement 64 bits, les fonctions ne sont pas décorées.
 
@@ -64,7 +64,7 @@ La forme de la décoration pour une fonction C dépend de la convention d’app
 |**`__fastcall`**|Signes de début et de fin ( **`@`** ) suivis d’un nombre décimal représentant le nombre d’octets dans la liste de paramètres|
 |**`__vectorcall`**|Deux signes arobase ( **`@@`** ) suivis d’un nombre décimal d’octets dans la liste de paramètres|
 
-## <a name="viewing-decorated-names"></a><a name="Viewing"></a>Affichage des noms décorés
+## <a name="viewing-decorated-names"></a><a name="Viewing"></a> Affichage des noms décorés
 
 Vous pouvez obtenir la forme décorée du nom d'un symbole après avoir compilé le fichier source qui contient la définition ou le prototype des données, de l'objet ou de la fonction. Pour examiner les noms décorés dans votre programme, vous pouvez utiliser l'une des méthodes suivantes :
 
@@ -82,7 +82,7 @@ Vous pouvez obtenir la forme décorée du nom d'un symbole après avoir compilé
 
 2. Pour trouver la forme décorée d'un symbole, recherchez le nom non décoré entre parenthèses. Le nom décoré se trouve sur la même ligne, après un caractère de barre verticale (&#124;) et avant le nom non décoré.
 
-## <a name="viewing-undecorated-names"></a><a name="Undecorated"></a>Affichage des noms non décorés
+## <a name="viewing-undecorated-names"></a><a name="Undecorated"></a> Affichage des noms non décorés
 
 Vous pouvez utiliser undname.exe pour convertir un nom décoré vers sa forme non décorée. Cet exemple montre comment cela fonctionne :
 
@@ -98,4 +98,4 @@ is :- "private: void __thiscall a::func1(int)"
 ## <a name="see-also"></a>Voir aussi
 
 [Outils de génération MSVC supplémentaires](c-cpp-build-tools.md)<br/>
-[Utilisation d’extern pour spécifier la liaison](../../cpp/using-extern-to-specify-linkage.md)
+[Utilisation d’extern pour spécifier la liaison](../../cpp/extern-cpp.md)
