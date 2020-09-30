@@ -5,18 +5,18 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-ms.openlocfilehash: f4d4d8d1b2dbf60d0b4674229043c981d874292d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: adde6decc086b883c50e52d12e388197e185fb39
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141820"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505943"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Comment : convertir une boucle OpenMP qui a recours à l’annulation pour utiliser le runtime d’accès concurrentiel
 
 Certaines boucles parallèles ne requièrent pas l’exécution de toutes les itérations. Par exemple, un algorithme qui recherche une valeur peut se terminer une fois la valeur trouvée. OpenMP ne fournit pas de mécanisme permettant d’annuler une boucle parallèle. Toutefois, vous pouvez utiliser une valeur booléenne, ou indicateur, pour permettre à une itération de la boucle d’indiquer que la solution a été trouvée. Le runtime d’accès concurrentiel fournit des fonctionnalités qui permettent à une tâche d’annuler d’autres tâches qui n’ont pas encore démarré.
 
-Cet exemple montre comment convertir une boucle OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../../parallel/openmp/reference/for-openmp.md) qui ne nécessite pas l’exécution de toutes les itérations pour utiliser le mécanisme d’annulation Runtime d’accès concurrentiel.
+Cet exemple montre comment convertir une boucle OpenMP [Parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../openmp/reference/openmp-directives.md#for-openmp) qui ne nécessite pas l’exécution de toutes les itérations pour utiliser le mécanisme d’annulation Runtime d’accès concurrentiel.
 
 ## <a name="example"></a>Exemple
 
@@ -33,22 +33,22 @@ Using the Concurrency Runtime...
 9114046 is in the array.
 ```
 
-Dans la version de qui utilise OpenMP, toutes les itérations de la boucle s’exécutent, même lorsque l’indicateur est défini. En outre, si une tâche doit avoir des tâches enfants, l’indicateur doit également être disponible pour que ces tâches enfants puissent communiquer l’annulation. Dans le runtime d’accès concurrentiel, lorsqu’un groupe de tâches est annulé, le runtime annule l’intégralité de l’arborescence du travail, y compris les tâches enfants. L’algorithme [Concurrency ::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) utilise des tâches pour effectuer le travail. Par conséquent, lorsqu’une itération de la boucle annule la tâche racine, l’arborescence entière du calcul est également annulée. Lorsqu’une arborescence de travail est annulée, le runtime ne démarre pas de nouvelles tâches. Toutefois, le runtime autorise l’achèvement des tâches qui ont déjà commencé. Par conséquent, dans le cas de l’algorithme `parallel_for_each`, les itérations de la boucle active peuvent nettoyer leurs ressources.
+Dans la version de qui utilise OpenMP, toutes les itérations de la boucle s’exécutent, même lorsque l’indicateur est défini. En outre, si une tâche doit avoir des tâches enfants, l’indicateur doit également être disponible pour que ces tâches enfants puissent communiquer l’annulation. Dans le runtime d’accès concurrentiel, lorsqu’un groupe de tâches est annulé, le runtime annule l’intégralité de l’arborescence du travail, y compris les tâches enfants. L’algorithme [Concurrency ::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) utilise des tâches pour effectuer le travail. Par conséquent, lorsqu’une itération de la boucle annule la tâche racine, l’arborescence entière du calcul est également annulée. Lorsqu’une arborescence de travail est annulée, le runtime ne démarre pas de nouvelles tâches. Toutefois, le runtime autorise l’achèvement des tâches qui ont déjà commencé. Par conséquent, dans le cas de l' `parallel_for_each` algorithme, les itérations de la boucle active peuvent nettoyer leurs ressources.
 
 Dans les deux versions de cet exemple, si le tableau contient plus d’une copie de la valeur à rechercher, plusieurs itérations de boucle peuvent définir simultanément le résultat et annuler l’opération globale. Vous pouvez utiliser une primitive de synchronisation, telle qu’une section critique, si votre problème requiert qu’une seule tâche effectue un travail lorsqu’une condition est remplie.
 
 Vous pouvez également utiliser la gestion des exceptions pour annuler les tâches qui utilisent la bibliothèque de modèles parallèles. Pour plus d’informations sur l’annulation, consultez [annulation dans la bibliothèque de modèles parallèles](cancellation-in-the-ppl.md).
 
-Pour plus d’informations sur les `parallel_for_each` et d’autres algorithmes parallèles, consultez [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md).
+Pour plus d’informations sur `parallel_for_each` et d’autres algorithmes parallèles, consultez [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md).
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `concrt-omp-parallel-any-of.cpp` puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
+Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `concrt-omp-parallel-any-of.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-> **CL. exe/EHsc/OpenMP concrt-omp-parallel-any-of. cpp**
+> **cl.exe/EHsc/OpenMP concrt-omp-parallel-any-of. cpp**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Migration d’OpenMP au runtime d’accès concurrentiel](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
+[Migration d'OpenMP au runtime d'accès concurrentiel](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Annulation dans la bibliothèque de modèles parallèles](cancellation-in-the-ppl.md)<br/>
 [Algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md)

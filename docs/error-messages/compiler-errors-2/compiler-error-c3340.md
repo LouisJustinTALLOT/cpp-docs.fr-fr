@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3340
 ms.assetid: 23b12298-b92a-4717-8380-f165c998cb8a
-ms.openlocfilehash: f4010870b84cbe2b8004eea24ab7735839b8c82b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: aa52170f2f2a2e1fa8019a451c1322a4b1d8eac3
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753586"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506817"
 ---
 # <a name="compiler-error-c3340"></a>Erreur du compilateur C3340
 
 'interface' : une interface ne peut être à la fois 'restricted' et 'default' dans la coclasse 'classe'
 
-Les attributs [restricted](../../windows/restricted.md) et [default](../../windows/default-cpp.md) s’excluent mutuellement.
+Les attributs [restricted](../../windows/attributes/restricted.md) et [default](../../windows/attributes/default-cpp.md) s’excluent mutuellement.
 
 L’exemple suivant génère l’erreur C3340 :
 

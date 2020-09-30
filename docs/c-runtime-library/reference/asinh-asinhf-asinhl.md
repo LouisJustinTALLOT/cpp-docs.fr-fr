@@ -35,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: face2eb5f7c6220e1a4369ae0aa11514a918d21c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556786"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505612"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -71,18 +71,17 @@ Les fonctions **asinh** retournent le sinus hyperbolique inverse (arc sinus hype
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|aucun|aucun|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Quand vous utilisez C++, vous pouvez appeler des surcharges de **asinh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, à moins que vous n’utilisiez la \<tgmath.h> macro pour appeler cette fonction, **asinh** accepte et retourne toujours **`double`** .
 
 Si vous utilisez la \<tgmath.h> `asinh()` macro, le type de l’argument détermine la version de la fonction qui est sélectionnée. Pour plus d’informations [, consultez Math type-Generic](../../c-runtime-library/tgmath.md) .
 
-
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-|Function|En-tête C requis|En-tête C++ requis|
+|Fonction|En-tête C requis|En-tête C++ requis|
 |--------------|--------------|------------------|
 |**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath> ou \<math.h>|
 |**asinh () (macro)** | \<tgmath.h> ||

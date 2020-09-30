@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 89b28ae396322859596b99ba56a28375e9c9d6d5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb32ceaf71d0a1c121b6e01e4b49f1db79a84d79
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232025"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506494"
 ---
 # <a name="compiler-error-c3020"></a>Erreur du compilateur C3020
 
@@ -38,7 +38,7 @@ int main() {
 }
 ```
 
-Une variable déclarée avec [lastprivate](../../parallel/openmp/reference/lastprivate.md) ne peut pas être utilisée en tant qu’index à l’intérieur d’une boucle parallélisée.
+Une variable déclarée avec [lastprivate](../../parallel/openmp/reference/openmp-clauses.md#lastprivate) ne peut pas être utilisée en tant qu’index à l’intérieur d’une boucle parallélisée.
 
 L’exemple suivant donnera C3020 pour le deuxième lastprivate, car ce lastprivate déclenchera une écriture sur idx_a dans la boucle for la plus extérieure. Le premier lastprivate ne génère pas d’erreur, car ce lastprivate déclenche une écriture sur idx_a en dehors de la boucle for la plus externe (techniquement, à la fin de la dernière itération). L’exemple suivant génère l’C3020.
 

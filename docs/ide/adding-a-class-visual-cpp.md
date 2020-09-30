@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-ms.openlocfilehash: fa53c2af5cd3e81c2d4877ef255430eac9525aad
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: b1c64505a63b8720ed7aee855f2bbbbdb9134e28
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182679"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505983"
 ---
 # <a name="add-a-class"></a>Ajouter une classe
 
@@ -24,14 +24,14 @@ Quand vous ajoutez une classe, vous devez spécifier un nom différent de celui 
 
 Si la convention de nommage de votre projet exige que vous utilisiez un nom existant, il vous suffit de modifier la casse d’une ou de plusieurs lettres du nom, car C++ respecte la casse. Par exemple, bien que vous ne puissiez pas nommer une classe `CDocument`, vous pouvez la nommer `cdocument`.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 - [Quel genre de classe voulez-vous ajouter ?](#what-kind-of-class-do-you-want-to-add)
 - [Boîte de dialogue Ajouter une classe](#add-class-dialog-box)
 
 ## <a name="what-kind-of-class-do-you-want-to-add"></a>Quel genre de classe voulez-vous ajouter ?
 
-Dans la boîte de dialogue **Ajouter une classe**, quand vous développez le nœud **Visual C++** dans le volet gauche, plusieurs groupes de modèles installés sont affichés. Il s’agit notamment des groupes **CLR**, **ATL**, **MFC** et **C++** . Quand vous sélectionnez un groupe, la liste des modèles disponibles dans ce groupe s’affiche dans le volet central. Chaque modèle contient les fichiers et le code source requis pour une classe.
+Dans la boîte de dialogue **Ajouter une classe**, quand vous développez le nœud **Visual C++** dans le volet gauche, plusieurs groupes de modèles installés sont affichés. Il s’agit notamment des groupes **CLR**, **ATL**, **MFC** et **C++**. Quand vous sélectionnez un groupe, la liste des modèles disponibles dans ce groupe s’affiche dans le volet central. Chaque modèle contient les fichiers et le code source requis pour une classe.
 
 Pour générer une classe, sélectionnez un modèle dans le volet central, tapez un nom pour la classe dans la zone **Nom**, puis sélectionnez **Ajouter**. Cette opération entraîne l’affichage de **l’Assistant Ajouter une classe** qui vous permet de spécifier les options relatives à la classe.
 
@@ -56,7 +56,7 @@ La boîte de dialogue **Ajouter une classe** contient des modèles qui vous perm
 
 - Créer automatiquement votre classe en ajoutant les fichiers appropriés et le code source à votre projet.
 
-Vous pouvez accéder à la boîte de dialogue **Ajouter une classe** à partir du menu **Projet** , de **l’Explorateur de solutions**, ou de l’ [Affichage de classes](/visualstudio/ide/viewing-the-structure-of-code).
+Vous pouvez accéder à la boîte de dialogue **Ajouter une classe** à partir du menu **Projet**, de **l’Explorateur de solutions** ou de l’[Affichage de classes](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 > Quand vous essayez d’ajouter une classe qui ne convient pas à votre projet actuel, vous recevez un message d’erreur. Sélectionnez **OK** pour revenir à la boîte de dialogue **Ajouter une classe**.
@@ -80,9 +80,9 @@ Il existe quatre catégories de modèles **Ajouter une classe** : .NET, ATL, MFC
 |Modèle|Assistant|
 |--------------|------------|
 |Ajouter la prise en charge ATL à MFC|Non disponible|
-|Contrôle ATL|[Assistant Contrôle ATL](../atl/reference/atl-control-wizard.md)|
+|Contrôle ATL|[Assistant contrôle ATL](../atl/reference/atl-control-wizard.md)|
 |Boîte de dialogue ATL|[Assistant Boîte de dialogue ATL](../atl/reference/atl-dialog-wizard.md)|
-|Objet simple ATL|[Assistant Objet simple ATL](../atl/reference/atl-simple-object-wizard.md)|
+|Objet simple ATL|[Assistant objet simple ATL](../atl/reference/atl-simple-object-wizard.md)|
 |Fournisseur d’événements WMI|Assistant Fournisseur d’événements WMI|
 |Fournisseur d’instances WMI|Assistant Fournisseur d’instances WMI|
 
@@ -90,10 +90,10 @@ Il existe quatre catégories de modèles **Ajouter une classe** : .NET, ATL, MFC
 
 |Modèle|Assistant|
 |--------------|------------|
-|Classe MFC|[Assistant Ajouter une classe MFC](../mfc/reference/mfc-add-class-wizard.md)|
+|Classe MFC|[Assistant Ajout de classes MFC](../mfc/reference/mfc-add-class-wizard.md)|
 
 #### <a name="generic-classes"></a>Classes génériques
 
 |Modèle|Assistant|
 |--------------|------------|
-|Classe C++ générique|[Assistant Classe C++ générique](../ide/generic-cpp-class-wizard.md)|
+|Classe C++ générique|[Assistant classe C++ générique](./adding-a-generic-cpp-class.md#generic-c-class-wizard)|

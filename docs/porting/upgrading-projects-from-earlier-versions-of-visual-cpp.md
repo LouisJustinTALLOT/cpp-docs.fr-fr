@@ -1,19 +1,19 @@
 ---
-title: Mettre C++ à niveau des projets à partir de versions antérieures de Visual Studio
+title: Mettre à niveau des projets C++ à partir de versions antérieures de Visual Studio
 description: Découvrez comment mettre à niveau des projets Microsoft C++ à partir de versions antérieures de Visual Studio.
 ms.date: 01/21/2020
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 7a4ab98c196d601bc458fe33bb1e2cb45ac30088
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416108"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505888"
 ---
-# <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Mettre C++ à niveau des projets à partir de versions antérieures de Visual Studio
+# <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Mettre à niveau des projets C++ à partir de versions antérieures de Visual Studio
 
 Pour mettre à niveau un projet créé dans une version antérieure de Visual Studio, il vous suffit d’ouvrir le projet dans la dernière version de Visual Studio. Visual Studio propose de mettre à niveau le projet vers le schéma actuel.
 
@@ -23,7 +23,7 @@ Si vous choisissez **Oui**, le projet est mis à niveau sur place. Elle ne peut 
 
 ## <a name="upgrade-reports"></a>Mettre à niveau des rapports
 
-Lorsque vous mettez à niveau un projet, vous recevez un rapport de mise à niveau. Le rapport est également enregistré dans le dossier de votre projet sous le UpgradeLog. htm. Le rapport de mise à niveau affiche un résumé des problèmes détectés lors de la conversion. Elle répertorie des informations sur les modifications apportées, notamment :
+Lorsque vous mettez à niveau un projet, vous recevez un rapport de mise à niveau. Le rapport est également enregistré dans votre dossier de projet en tant que UpgradeLog.htm. Le rapport de mise à niveau affiche un résumé des problèmes détectés lors de la conversion. Elle répertorie des informations sur les modifications apportées, notamment :
 
 - Propriétés du projet.
 
@@ -41,15 +41,15 @@ Lorsque vous mettez à niveau un projet, vous recevez un rapport de mise à nive
 
 - Erreurs d’exécution ou résultats inattendus en raison de changements de comportement.
 
-- Erreurs qui ont été introduites dans les outils. Si vous rencontrez un problème, signalez-le à C++ l’équipe Visual via vos canaux de support habituels ou à l’aide de la page [communauté des développeurs Visual Studio C++ ](https://developercommunity.visualstudio.com/spaces/62/index.html) .
+- Erreurs qui ont été introduites dans les outils. Si vous rencontrez un problème, signalez-le à l’équipe Visual C++ par le biais de vos canaux de support habituels ou à l’aide de la page [communauté des développeurs Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html) .
 
 Certains projets et solutions mis à niveau peuvent être générés correctement sans modification. Toutefois, la plupart des projets nécessitent probablement des modifications des paramètres du projet et du code source. Il n’existe pas de méthode correcte pour résoudre ces problèmes, mais nous vous recommandons d’utiliser une approche progressive. Avant de commencer, consultez [vue d’ensemble des problèmes de mise à niveau potentiels](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) pour plus d’informations sur de nombreux types d’erreurs courantes.
 
-1. Définissez l’ensemble d’outils C++ de plateforme, le langage standard et la version de SDK Windows (le cas échéant) sur les versions préférées. ( **Propriétés** de la > de**projet** > **Propriétés de configuration** > **général**)
+1. Définissez l’ensemble d’outils de plateforme, la norme du langage C++ et la version de SDK Windows (le cas échéant) sur les versions préférées. (**Projet**  >  **Propriétés**  >  de **Propriétés**  >  de configuration **Général**)
 
-1. Si vous avez un grand nombre d’erreurs, vous pouvez désactiver temporairement certaines options lorsque vous les corrigez. Pour désactiver l’option [/permissive-](../build/reference/permissive-standards-conformance.md) , utilisez les **Propriétés** de **projet** >  > **Propriétés de configuration** > **langage** **C/C++**  > . Pour désactiver l’option [d’analyse du code](/cpp/code-quality/code-analysis-for-c-cpp-overview) , utilisez les **Propriétés** de > de **projet** > **Propriétés de configuration** > l’analyse du **code**.
+1. Si vous avez un grand nombre d’erreurs, vous pouvez désactiver temporairement certaines options lorsque vous les corrigez. Pour désactiver l’option [/permissive-](../build/reference/permissive-standards-conformance.md) , utilisez les propriétés de **projet**  >  **Properties**  >  **configuration**du  >  **langage C/C++**  >  **Language**. Pour désactiver l’option d' [analyse du code](../code-quality/code-analysis-for-c-cpp-overview.md) , utilisez propriétés de **projet**  >  **Properties**  >  **Propriétés de configuration**  >  **analyse du code**.
 
-1. Vérifiez que toutes les dépendances sont présentes et que les chemins d’accès include ou les emplacements de bibliothèque sont corrects. ( **Propriétés** du**projet** >  > **Propriétés de configuration** > **Répertoires VC + +** )
+1. Vérifiez que toutes les dépendances sont présentes et que les chemins d’accès include ou les emplacements de bibliothèque sont corrects. (**Projet**  >  **Propriétés**  >  de **Propriétés**  >  de configuration **Répertoires VC + +**)
 
 1. Identifiez et corrigez les erreurs causées par des références aux API qui n’existent plus.
 
@@ -59,24 +59,24 @@ Certains projets et solutions mis à niveau peuvent être générés correctemen
 
 1. Activez l’analyse du code pour identifier les problèmes potentiels ou les modèles de codage obsolètes qui ne sont plus considérés comme acceptables. Si l’analyse du code signale de nombreuses erreurs, vous pouvez désactiver certains des avertissements pour vous concentrer en priorité sur les plus importants. L’IDE peut aider à résoudre des problèmes rapides pour certains types de problèmes.
 
-1. Pensez à d’autres opportunités pour la modernisation du code. Par exemple, remplacez les structures de données personnalisées et les algorithmes C++ par des algorithmes de la bibliothèque standard, ou augmentez la bibliothèque open source. En utilisant des fonctionnalités standard, vous facilitez la gestion du code par d’autres personnes. Vous pouvez être certain que ce code a été correctement testé et revu par de nombreux experts du Comité des normes et de la C++ communauté plus large.
+1. Pensez à d’autres opportunités pour la modernisation du code. Par exemple, remplacez les structures de données personnalisées et les algorithmes par des algorithmes de la bibliothèque C++ standard ou augmentez la bibliothèque open source. En utilisant des fonctionnalités standard, vous facilitez la gestion du code par d’autres personnes. Vous pouvez être certain que ce code a été correctement testé et revu par de nombreux experts sur le Comité des normes et la communauté C++ plus large.
 
-Pour les erreurs difficiles à corriger, essayez de rechercher ou de publier une question sur Stack Overflow [ C++ ](https://developercommunity.visualstudio.com/spaces/62/index.html)ou la communauté des développeurs.
+Pour les erreurs difficiles à corriger, essayez de rechercher ou de publier une question sur Stack Overflow ou la [communauté de développeurs C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
 
 ## <a name="in-this-section"></a>Contenu de cette section
 
 [Vue d’ensemble des problèmes de mise à niveau potentiels](overview-of-potential-upgrade-issues-visual-cpp.md)\
-[Mettez à niveau votre code vers la\ Universal CRT](upgrade-your-code-to-the-universal-crt.md)
-[Mettre à jour winver et _WIN32_WINNT](modifying-winver-and-win32-winnt.md)\
+[Mettre à niveau votre code vers le CRT universel](upgrade-your-code-to-the-universal-crt.md)\
+[Mettre à jour WINVER et _WIN32_WINNT](modifying-winver-and-win32-winnt.md)\
 [Corriger vos dépendances sur les éléments internes de bibliothèque](fix-your-dependencies-on-library-internals.md)\
 [Problèmes de migration à virgule flottante](floating-point-migration-issues.md)\
-[fonctionnalités dépréciées dans Visual Studio 2019\ C++ ](features-deprecated-in-visual-studio.md)
-[VCBUILD et\ MSBuild](build-system-changes.md)
-[Bibliothèques tierces de port](porting-third-party-libraries.md)
+[Fonctionnalités C++ dépréciées dans Visual Studio 2019](features-deprecated-in-visual-studio.md)\
+[VCBuild et MSBuild](build-system-changes.md)\
+[Portage de bibliothèques de tiers](porting-third-party-libraries.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Nouveautés de Visual C++ Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
-[Historique C++ des modifications visuelles 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\
+[Nouveautés de Visual C++ dans Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
+[Historique des modifications de Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\
 [Comportement non standard](../cpp/nonstandard-behavior.md)\
-[Applications de données de port](../data/data-access-programming-mfc-atl.md)
+[Portage d’applications de données](../data/data-access-programming-mfc-atl.md)

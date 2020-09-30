@@ -3,16 +3,16 @@ title: launch.vs.jssur la référence de schéma (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841985"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505665"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.jssur la référence de schéma (C++)
 
-Utilisez le fichier *launch.vs.js* pour configurer les paramètres de débogage. Pour créer le fichier. Cliquez avec le bouton droit sur un fichier exécutable dans **Explorateur de solutions** et choisissez **paramètres de débogage et de lancement**. Choisissez l’option qui correspond le mieux à votre projet, puis utilisez les propriétés suivantes pour modifier la configuration en fonction des besoins. Pour plus d’informations sur le débogage des projets CMake, consultez [configurer des sessions de débogage cmake](/cpp/build/configure-cmake-debugging-sessions).
+Utilisez le fichier *launch.vs.js* pour configurer les paramètres de débogage. Pour créer le fichier. Cliquez avec le bouton droit sur un fichier exécutable dans **Explorateur de solutions** et choisissez **paramètres de débogage et de lancement**. Choisissez l’option qui correspond le mieux à votre projet, puis utilisez les propriétés suivantes pour modifier la configuration en fonction des besoins. Pour plus d’informations sur le débogage des projets CMake, consultez [configurer des sessions de débogage cmake](./configure-cmake-debugging-sessions.md).
 
 ## <a name="default-properties"></a>Propriétés par défaut
 

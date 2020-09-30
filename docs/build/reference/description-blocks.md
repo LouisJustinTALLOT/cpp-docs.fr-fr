@@ -1,22 +1,22 @@
 ---
 title: Blocs de description
-description: NMAKE utilise des blocs de description pour associer des cibles, des dépendances et des commandes dans un makefile.
+description: NMAKE utilise des blocs de description pour associer des cibles, des dépendances et des commandes dans un Makefile.
 ms.date: 10/29/2019
 helpviewer_keywords:
 - description blocks
 - NMAKE program, description blocks
 - blocks, description
 ms.assetid: 1321f228-d389-40ac-b0cd-4f6e9293602b
-ms.openlocfilehash: e4e80b59d3d30b3b34c55b40d337ef5c078e6404
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f7bf3a26eadde91471e8b45ec26e0abea906244
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322265"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506592"
 ---
 # <a name="description-blocks"></a>Blocs de description
 
-Les blocs de description forment le noyau d’un makefile. Ils décrivent les *cibles,* ou les fichiers à créer, et leurs *dépendances,* les fichiers nécessaires pour créer les cibles. Un bloc de description peut inclure des *commandes,* qui décrivent comment créer les cibles à partir des dépendances. Un bloc de description est une ligne de dépendance, suivi en option par un bloc de commandes :
+Les blocs de description forment le cœur d’un Makefile. Ils décrivent les *cibles*, ou les fichiers à créer, ainsi que leurs *dépendances*, les fichiers nécessaires à la création des cibles. Un bloc de description peut inclure des *commandes*qui décrivent comment créer les cibles à partir des dépendances. Un bloc de description est une ligne de dépendance, éventuellement suivie d’un bloc de commandes :
 
 ```makefile
 targets... : dependents...
@@ -25,34 +25,34 @@ targets... : dependents...
 
 ## <a name="dependency-lines"></a>Lignes de dépendance
 
-Une *ligne de dépendance* spécifie une ou plusieurs cibles, et zéro ou plus dépendant. Si une cible n’existe pas ou a un temps plus tôt qu’une personne à charge, NMAKE exécute les commandes dans le bloc de commande. NMAKE exécute également le bloc de commande si la cible est un [pseudotarget](pseudotargets.md). Voici un exemple de ligne de dépendance :
+Une *ligne de dépendance* spécifie une ou plusieurs cibles, et zéro, un ou plusieurs dépendants. Si une cible n’existe pas ou a un horodatage antérieur à un dépendant, NMAKE exécute les commandes dans le bloc de commande. NMAKE exécute également le bloc de commande si la cible est une [pseudocible](#pseudotargets). Voici un exemple de ligne de dépendance :
 
 ```makefile
 hi_bye.exe : hello.obj goodbye.obj helper.lib
 ```
 
-Dans cette ligne `hi_bye.exe` de dépendance, est la cible. Ses dépendances `hello.obj`sont `goodbye.obj`, `helper.lib`, et . La ligne de dépendance dit NMAKE `goodbye.obj`de `helper.lib` construire la `hi_bye.exe`cible chaque fois que `hello.obj`, , ou a changé plus récemment que .
+Dans cette ligne de dépendance, `hi_bye.exe` est la cible. Ses dépendances sont `hello.obj` , `goodbye.obj` et `helper.lib` . La ligne de dépendance indique à NMAKE de générer la cible chaque fois que `hello.obj` , `goodbye.obj` ou `helper.lib` a changé plus récemment que `hi_bye.exe` .
 
-Une cible doit être au début de la ligne. Il ne peut pas être en retrait avec des espaces ou des onglets. Utilisez un`:`côlon ( ) pour séparer les cibles des personnes à charge. Les espaces ou onglets sont autorisés`:`entre les cibles, le séparateur du côlon (), et les personnes à charge. Pour diviser la ligne de dépendance,`\`utilisez une barre oblique inverse () après une cible ou une personne à charge.
+Une cible doit se trouver au début de la ligne. Il ne peut pas être mis en retrait avec des espaces ou des tabulations. Utilisez un signe deux-points ( `:` ) pour séparer les cibles des dépendants. Des espaces ou des tabulations sont autorisés entre les cibles, le séparateur deux-points ( `:` ) et les dépendants. Pour fractionner la ligne de dépendance, utilisez une barre oblique inverse ( `\` ) après une cible ou un dépendant.
 
-Avant d’exécuter les blocs de commande, NMAKE scanne toutes les dépendances et toutes les règles d’inférence applicables pour construire un *arbre de dépendance.* Un arbre de dépendance spécifie les étapes nécessaires pour mettre à jour complètement la cible. NMAKE vérifie de façon récursive si une personne à charge est elle-même une cible dans une autre liste de dépendance. Après avoir construit l’arbre de dépendance, NMAKE vérifie les horodatages. Si les personnes à charge dans l’arbre sont plus nouvelles que la cible, NMAKE construit la cible.
+Avant d’exécuter des blocs de commande, NMAKE analyse toutes les dépendances et toutes les règles d’inférence applicables pour générer une *arborescence des dépendances*. Une arborescence des dépendances spécifie les étapes nécessaires à la mise à jour complète de la cible. NMAKE vérifie de manière récursive si un dépendant est lui-même une cible dans une autre liste de dépendances. Une fois l’arborescence des dépendances générée, NMAKE vérifie les horodatages. Si des dépendances dans l’arborescence sont plus récentes que la cible, NMAKE génère la cible.
 
-## <a name="targets"></a><a name="targets"></a>Cibles
+## <a name="targets"></a><a name="targets"></a> Compilé
 
-La section cibles d’une ligne de dépendance spécifie une ou plusieurs cibles. Une cible peut être n’importe quel nom de fichier valide, nom d’annuaire, ou [pseudotarget.](pseudotargets.md) Séparez plusieurs cibles en utilisant un ou plusieurs espaces ou onglets. Les cibles ne sont pas sensibles aux cas. Les chemins sont autorisés avec des noms de fichiers. Une cible et son chemin ne peuvent pas dépasser 256 caractères. Si la cible qui précède le côlon est un seul caractère, utilisez un espace de séparation. Sinon, NMAKE interprète la combinaison lettre-colon comme un spécificateur d’entraînement.
+La section cibles d’une ligne de dépendance spécifie une ou plusieurs cibles. Une cible peut être un nom de fichier, un nom de répertoire ou une [pseudocible](#pseudotargets)valide. Séparez plusieurs cibles à l’aide d’un ou plusieurs espaces ou tabulations. Les cibles ne respectent pas la casse. Les chemins d’accès sont autorisés avec les noms de fichiers. Une cible et son chemin d’accès ne peuvent pas dépasser 256 caractères. Si la cible qui précède le signe deux-points est un caractère unique, utilisez un espace de séparation. Dans le cas contraire, NMAKE interprète la combinaison de lettres-points comme un spécificateur de lecteur.
 
-### <a name="multiple-targets"></a><a name="multiple-targets"></a>Cibles multiples
+### <a name="multiple-targets"></a><a name="multiple-targets"></a> Plusieurs cibles
 
-NMAKE évalue plusieurs cibles dans une seule dépendance comme si chacune d’entre elles était spécifiée dans un bloc de description distinct.
+NMAKE évalue plusieurs cibles dans une seule dépendance comme si chacune était spécifiée dans un bloc de description distinct.
 
-Par exemple, cette règle :
+Par exemple, cette règle :
 
 ```makefile
 bounce.exe leap.exe : jump.obj
    echo Building...
 ```
 
-est évalué comme:
+est évaluée comme suit :
 
 ```makefile
 bounce.exe : jump.obj
@@ -62,7 +62,7 @@ leap.exe : jump.obj
    echo Building...
 ```
 
-### <a name="cumulative-dependencies"></a><a name="cumulative-dependencies"></a>Dépendances cumulatives
+### <a name="cumulative-dependencies"></a><a name="cumulative-dependencies"></a> Dépendances cumulatives
 
 Les dépendances sont cumulatives dans un bloc de description, si une cible est répétée.
 
@@ -74,14 +74,14 @@ bounce.exe : up.obj
    echo Building bounce.exe...
 ```
 
-est évalué comme:
+est évaluée comme suit :
 
 ```makefile
 bounce.exe : jump.obj up.obj
    echo Building bounce.exe...
 ```
 
-Lorsque vous avez plusieurs cibles dans plusieurs lignes de dépendance dans un bloc de description unique, NMAKE les évalue comme si chacune d’entre elles était spécifiée dans un bloc de description distinct. Cependant, seules les cibles de la dernière ligne de dépendance utilisent le bloc de commandes. NMAKE tente d’utiliser une règle d’inférence pour les autres cibles.
+Lorsque vous avez plusieurs cibles dans plusieurs lignes de dépendance dans un bloc de description unique, NMAKE les évalue comme si chacune était spécifiée dans un bloc de description distinct. Toutefois, seules les cibles de la dernière ligne de dépendance utilisent le bloc de commandes. NMAKE tente d’utiliser une règle d’inférence pour les autres cibles.
 
 Par exemple, cet ensemble de règles,
 
@@ -91,7 +91,7 @@ bounce.exe climb.exe : up.obj
    echo Building bounce.exe...
 ```
 
-est évalué comme:
+est évaluée comme suit :
 
 ```makefile
 leap.exe : jump.obj
@@ -104,9 +104,9 @@ climb.exe : up.obj
    echo Building bounce.exe...
 ```
 
-### <a name="targets-in-multiple-description-blocks"></a><a name="targets-in-multiple-description-blocks"></a>Cibles dans plusieurs blocs de description
+### <a name="targets-in-multiple-description-blocks"></a><a name="targets-in-multiple-description-blocks"></a> Cibles dans plusieurs blocs de description
 
-Pour mettre à jour une cible dans plus d’un bloc de description à l’aide de commandes différentes, spécifiez deux colons consécutifs (::) entre les cibles et les personnes à charge.
+Pour mettre à jour une cible dans plusieurs blocs de description à l’aide de commandes différentes, spécifiez deux signes deux-points consécutifs ( ::) entre les cibles et les dépendants.
 
 ```makefile
 target.lib :: one.asm two.asm three.asm
@@ -117,9 +117,9 @@ target.lib :: four.c five.c
     lib target four.obj five.obj
 ```
 
-### <a name="dependency-side-effects"></a><a name="dependency-side-effects"></a>Effets secondaires de dépendance
+### <a name="dependency-side-effects"></a><a name="dependency-side-effects"></a> Effets secondaires des dépendances
 
-Vous pouvez spécifier une cible avec un côlon (:) dans deux lignes de dépendance à des endroits différents. Si les commandes apparaissent après une seule des lignes, NMAKE interprète les dépendances comme si les lignes étaient adjacentes ou combinées. Il n’invoque pas une règle d’inférence pour la dépendance qui n’a pas de commandes. Au lieu de cela, NMAKE suppose que les dépendances appartiennent à un bloc de description, et exécute les commandes spécifiées avec l’autre dépendance. Considérez cet ensemble de règles :
+Vous pouvez spécifier une cible avec un signe deux-points ( :) dans deux lignes de dépendance à différents emplacements. Si les commandes apparaissent après une seule des lignes, NMAKE interprète les dépendances comme si les lignes étaient adjacentes ou combinées. Elle n’appelle pas de règle d’inférence pour la dépendance qui n’a pas de commande. NMAKE suppose à la place que les dépendances appartiennent à un bloc de description et exécute les commandes spécifiées avec l’autre dépendance. Tenez compte de cet ensemble de règles :
 
 ```makefile
 bounce.exe : jump.obj
@@ -128,14 +128,14 @@ bounce.exe : jump.obj
 bounce.exe : up.obj
 ```
 
-est évalué comme:
+est évaluée comme suit :
 
 ```makefile
 bounce.exe : jump.obj up.obj
    echo Building bounce.exe...
 ```
 
-Cet effet ne se produit pas`::`si un double côlon ( ) est utilisé. Par exemple, cet ensemble de règles :
+Cet effet ne se produit pas si un double deux-points ( `::` ) est utilisé. Par exemple, cet ensemble de règles :
 
 ```makefile
 bounce.exe :: jump.obj
@@ -144,7 +144,7 @@ bounce.exe :: jump.obj
 bounce.exe :: up.obj
 ```
 
-est évalué comme:
+est évaluée comme suit :
 
 ```makefile
 bounce.exe : jump.obj
@@ -154,24 +154,24 @@ bounce.exe : up.obj
 # invokes an inference rule
 ```
 
-### <a name="pseudotargets"></a><a name="pseudotargets"></a>Pseudotargets
+### <a name="pseudotargets"></a><a name="pseudotargets"></a> Pseudocibles
 
-Un *pseudotarget* est une étiquette utilisée à la place d’un nom de fichier dans une ligne de dépendance. Il est interprété comme un fichier qui n’existe pas, et est donc obsolète. NMAKE suppose que le chrono d’un pseudotarget est le même que le plus récent de tous ses dépendants. S’il n’a pas de personnes à charge, le temps actuel est supposé. Si un pseudotarget est utilisé comme cible, ses commandes sont toujours exécutées. Un pseudotarget utilisé comme dépendant doit également apparaître comme une cible dans une autre dépendance. Cependant, cette dépendance n’a pas besoin d’avoir un bloc de commandes.
+Une *pseudocible* est une étiquette utilisée à la place d’un nom de fichier dans une ligne de dépendance. Elle est interprétée comme un fichier qui n’existe pas et, par conséquent, est obsolète. NMAKE suppose que l’horodateur d’une pseudocible est le même que le plus récent de tous ses dépendants. S’il n’a pas de dépendants, l’heure actuelle est utilisée. Si une pseudocible est utilisée en tant que cible, ses commandes sont toujours exécutées. Une pseudocible utilisée comme dépendant doit également apparaître en tant que cible dans une autre dépendance. Toutefois, cette dépendance n’a pas besoin d’un bloc de commandes.
 
-Les noms pseudotarget suivent les règles de syntaxe du nom de fichier pour les cibles. Toutefois, si le nom n’a pas d’extension, il peut dépasser la limite de 8 caractères pour les noms de fichiers, et peut être jusqu’à 256 caractères de long.
+Les noms de pseudocible suivent les règles de syntaxe des noms de fichiers pour les cibles. Toutefois, si le nom n’a pas d’extension, il peut dépasser la limite de 8 caractères pour les noms de fichiers et peut comporter jusqu’à 256 caractères.
 
-Les pseudo-groupes sont utiles lorsque vous voulez que NMAKE construise automatiquement plus d’une cible. NMAKE ne construit que des cibles spécifiées sur la ligne de commande. Ou, si aucune cible de ligne de commande n’est spécifiée, elle ne construit que la première cible dans la première dépendance dans le makefile. Vous pouvez dire à NMAKE de construire plusieurs cibles sans les énumérer individuellement sur la ligne de commande. Écrivez un bloc de description avec une dépendance contenant un pseudotarget, et la liste des cibles que vous voulez construire comme ses personnes à charge. Ensuite, placez ce bloc de description d’abord dans le makefile, ou spécifier le pseudotarget sur la ligne de commande NMAKE.
+Les pseudocibles sont utiles lorsque vous souhaitez que NMAKE crée plusieurs cibles automatiquement. NMAKE génère uniquement les cibles spécifiées sur la ligne de commande. Ou, si aucune cible de ligne de commande n’est spécifiée, elle génère uniquement la première cible de la première dépendance dans le Makefile. Vous pouvez demander à NMAKE de générer plusieurs cibles sans les répertorier individuellement sur la ligne de commande. Écrivez un bloc de description avec une dépendance contenant une pseudocible, puis répertoriez les cibles que vous souhaitez générer comme dépendants. Ensuite, placez ce bloc de description en premier dans le Makefile ou spécifiez l’pseudocible sur la ligne de commande NMAKE.
 
-Dans cet exemple, UPDATE est un pseudotarget.
+Dans cet exemple, la mise à jour est une pseudocible.
 
 ```makefile
 UPDATE : *.*
 !COPY $** c:\product\release
 ```
 
-Lorsque UPDATE est évalué, NMAKE copie tous les fichiers de l’annuaire actuel au lecteur et au répertoire spécifiés.
+Quand la mise à jour est évaluée, NMAKE copie tous les fichiers du répertoire actif dans le lecteur et le répertoire spécifiés.
 
-Dans le makefile suivant, `all` le pseudotarget construit à la fois `project1.exe` et `project2.exe` si l’une ou l’autre `all` ou pas de cible est spécifiée sur la ligne de commande. Le pseudotarget `setenv` modifie la variable `.exe` de l’environnement LIB avant que les fichiers ne soient mis à jour :
+Dans le Makefile suivant, l’pseudocible `all` crée à la fois `project1.exe` et `project2.exe` si `all` aucune cible n’est spécifiée sur la ligne de commande. La pseudocible `setenv` modifie la variable d’environnement lib avant la `.exe` mise à jour des fichiers :
 
 ```makefile
 all : setenv project1.exe project2.exe
@@ -186,31 +186,31 @@ setenv :
     set LIB=\project\lib
 ```
 
-## <a name="dependents"></a><a name="dependents"></a>Dépendants
+## <a name="dependents"></a><a name="dependents"></a> Dépendants
 
-Dans une ligne de dépendance, spécifiez zéro ou plus dépendant après le côlon (`:`) ou double côlon (`::`), en utilisant n’importe quel nom de fichier valide ou [pseudotarget](pseudotargets.md). Séparer plusieurs personnes à charge en utilisant un ou plusieurs espaces ou onglets. Les personnes à charge ne sont pas sensibles aux cas. Les chemins sont autorisés avec des noms de fichiers.
+Dans une ligne de dépendance, spécifiez zéro ou plusieurs dépendants après le signe deux-points ( `:` ) ou le double deux-points ( `::` ), à l’aide de n’importe quel nom de fichier ou de [pseudocible](#pseudotargets)valide. Séparez plusieurs dépendants à l’aide d’un ou plusieurs espaces ou tabulations. Les dépendants ne respectent pas la casse. Les chemins d’accès sont autorisés avec les noms de fichiers.
 
-### <a name="inferred-dependents"></a><a name="inferred-dependents"></a>Personnes à charge déduites
+### <a name="inferred-dependents"></a><a name="inferred-dependents"></a> Dépendants inférés
 
-Avec les personnes à charge que vous énumérez explicitement dans la ligne de dépendance, NMAKE peut supposer une *personne à charge déduite*. Une personne à charge déduite est dérivée d’une règle d’inférence et est évaluée avant les personnes à charge explicites. Lorsqu’une personne à charge déduite est dépassée par rapport à sa cible, NMAKE invoque le bloc de commande pour la dépendance. Si une personne à charge déduite n’existe pas, ou est obsolète par rapport à ses propres personnes à charge, NMAKE met à jour d’abord la personne à charge déduite. Pour plus d’informations sur les personnes à charge déduites, voir [règles d’inférence](inference-rules.md).
+En plus des dépendants que vous répertoriez explicitement dans la ligne de dépendance, NMAKE peut supposer une dépendance *déduite*. Un dépendant inféré est dérivé d’une règle d’inférence et est évalué avant les dépendants explicites. Lorsqu’un dépendant inféré est obsolète par rapport à sa cible, NMAKE appelle le bloc de commande pour la dépendance. Si une fonction dépendante déduite n’existe pas ou est obsolète par rapport à ses propres dépendants, NMAKE met d’abord à jour la fonction dépendante déduite. Pour plus d’informations sur les dépendants inférés, consultez [règles d’inférence](inference-rules.md).
 
-### <a name="search-paths-for-dependents"></a><a name="search-paths-for-dependents"></a>Rechercher des chemins pour les personnes à charge
+### <a name="search-paths-for-dependents"></a><a name="search-paths-for-dependents"></a> Chemins de recherche des dépendants
 
-Vous pouvez spécifier un chemin de recherche facultatif pour chaque personne à charge. Voici la syntaxe pour spécifier un ensemble d’annuaires à rechercher :
+Vous pouvez spécifier un chemin de recherche facultatif pour chaque dépendant. Voici la syntaxe pour spécifier un ensemble de répertoires dans lesquels effectuer la recherche :
 
-> **-**_répertoire_\[**;** _répertoire_...] **-**_dépendant_
+> **{**_répertoire_ \[ **;** _répertoire_...] **}**_dépendant_
 
-Enfermer les noms d’annuaire dans les accolades (`{ }`). Séparer plusieurs répertoires avec un`;`point-virgule (). Aucun espace ou onglet n’est autorisé. NMAKE recherche le dépendant d’abord dans l’annuaire actuel, puis dans la liste des répertoires dans l’ordre spécifié. Vous pouvez utiliser une macro pour spécifier une partie ou la totalité d’un chemin de recherche. Seule la personne à charge spécifiée utilise ce chemin de recherche.
+Placez les noms de répertoire entre accolades ( `{ }` ). Séparez plusieurs répertoires par un point-virgule ( `;` ). Aucun espace ou tabulation n’est autorisé. NMAKE recherche le premier dépendant dans le répertoire actif, puis dans la liste des répertoires dans l’ordre spécifié. Vous pouvez utiliser une macro pour spécifier tout ou partie d’un chemin de recherche. Seul le dépendant spécifié utilise ce chemin de recherche.
 
-#### <a name="directory-search-path-example"></a>Exemple de parcours de recherche d’annuaire
+#### <a name="directory-search-path-example"></a>Exemple de chemin de recherche de répertoire
 
-Cette ligne de dépendance montre comment créer une spécification d’annuaire pour une recherche :
+Cette ligne de dépendance indique comment créer une spécification de répertoire pour une recherche :
 
 ```makefile
 reverse.exe : {\src\omega;e:\repo\backwards}retro.obj
 ```
 
-La `reverse.exe` cible a `retro.obj`une personne à charge, . La liste ci-jointe spécifie deux répertoires. NMAKE recherche `retro.obj` d’abord dans l’annuaire actuel. S’il n’est pas là, `\src\omega` NMAKE `e:\repo\backwards` recherche l’annuaire, puis l’annuaire.
+La cible `reverse.exe` a un dépendant, `retro.obj` . La liste entre accolades spécifie deux répertoires. NMAKE recherche d' `retro.obj` abord dans le répertoire actif. Si ce n’est pas le cas, NMAKE effectue une recherche dans l' `\src\omega` annuaire, puis dans le `e:\repo\backwards` répertoire.
 
 ## <a name="see-also"></a>Voir aussi
 

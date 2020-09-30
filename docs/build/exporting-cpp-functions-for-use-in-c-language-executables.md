@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-ms.openlocfilehash: a694b77e3730ab82ec1698076cc66729ff115cdc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38b13c1fc9c57354ba8160f6dbe0df6546fe7b5f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195232"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506599"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Exportation de fonctions C++ à utiliser dans des exécutables en langage C
 
@@ -36,7 +36,7 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 - [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 
-- [Importer dans une application à l'aide de __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l’aide de __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)
 
@@ -44,8 +44,8 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 - [Noms décorés](reference/decorated-names.md)
 
-- [Utilisation d’extern pour spécifier la liaison](../cpp/using-extern-to-specify-linkage.md)
+- [Utilisation d’extern pour spécifier la liaison](../cpp/extern-cpp.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exportation à partir d’une DLL](exporting-from-a-dll.md)
+[Exportation à partir d'une DLL](exporting-from-a-dll.md)

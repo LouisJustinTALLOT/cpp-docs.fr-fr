@@ -40,12 +40,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 58d23f53de8dc5323fe0818611bccb647984fd9b
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 8fb6679e2b509274b4ea60c410a81b54df866416
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555759"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505567"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -57,7 +57,7 @@ Calcule *x* élevé à la puissance de *y*.
 double pow( double x, double y );
 float powf( float x, float y );
 long double powl( long double x, long double y );
-define pow(X, Y) // Requires C11 or higher 
+define pow(X, Y) // Requires C11 or higher
 
 double pow( double x, int y );  // C++ only
 float pow( float x, float y );  // C++ only
@@ -84,7 +84,7 @@ Retourne la valeur de *x*<sup>*y*</sup>. Aucun message d’erreur n’est imprim
 |*x* = = 0,0 et *y* = = 0,0|1|
 |*x* = = 0,0 et *y* < 0|INF|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 **Pow** ne reconnaît pas les valeurs à virgule flottante intégrales supérieures à 2<sup>64</sup> (par exemple, 1.0 E100).
 
@@ -98,7 +98,7 @@ La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette sur
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
-ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
+ms.openlocfilehash: 5a791b5d0be218a49be28930c191de3eb4acf4be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89933825"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505538"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -107,7 +107,7 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations sur ce code de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Chaque fonction convertit la chaîne d’entrée *strSource* en **`double`** . La fonction **strtod** convertit *strSource* en valeur double précision. **strtod** arrête de lire la chaîne *strSource* au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère null de fin. **wcstod** est une version à caractères larges de **strtod**; son argument *strSource* est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 
@@ -135,9 +135,9 @@ les *chiffres* correspondent à un ou plusieurs chiffres décimaux. \
 *base* est le caractère de point de base, soit un point (.) dans les paramètres régionaux « C » par défaut, soit la valeur spécifique aux paramètres régionaux si les paramètres régionaux actuels sont différents ou lorsque les *paramètres régionaux* sont spécifiés.
  Une *séquence* est une séquence de caractères alphanumériques ou de traits de soulignement.
 
-Dans les formes numériques décimales et hexadécimales, si aucun chiffre n’apparaît avant le caractère de point de base, au moins un doit apparaître après le caractère de point de base. 
+Dans les formes numériques décimales et hexadécimales, si aucun chiffre n’apparaît avant le caractère de point de base, au moins un doit apparaître après le caractère de point de base.
 
-Dans la forme décimale, les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**e** ou **e**) et d’un entier signé éventuellement. 
+Dans la forme décimale, les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**e** ou **e**) et d’un entier signé éventuellement.
 
 Au format hexadécimal, les chiffres hexadécimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**p** ou **p**) et d’un entier décimal éventuellement signé qui représente l’exposant comme une puissance de 2.
 
@@ -147,7 +147,7 @@ La casse est ignorée dans les formulaires **INF** et **Nan** . Le premier carac
 
 Les versions UCRT de ces fonctions ne prennent pas en charge la conversion des lettres d’exposant de style Fortran (**d** ou **d**). Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code. Les versions UCRT prennent en charge les chaînes hexadécimales et les allers-retours des valeurs INF et NAN, qui n’étaient pas prises en charge dans les versions antérieures. Cela peut également entraîner des modifications avec rupture dans votre code. Par exemple, la chaîne « 0x1A » est interprétée par **strtod** comme 0,0 dans les versions précédentes, mais comme 26,0 dans la version de UCRT.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|

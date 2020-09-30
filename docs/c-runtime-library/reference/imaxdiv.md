@@ -24,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954635"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505634"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -46,19 +46,19 @@ imaxdiv_t imaxdiv(
 
 ### <a name="parameters"></a>Paramètres
 
-*numer*<br/>
+*univoque*<br/>
 Numérateur.
 
 *denom*<br/>
 Dénominateur.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **imaxdiv** appelé avec des arguments de type [intmax_t](../../c-runtime-library/standard-types.md) retourne une structure de type [imaxdiv_t](../../c-runtime-library/standard-types.md) qui comprend le quotient et le reste.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-La fonction **imaxdiv** divise le *chiffre* par *denom* et calcule donc le quotient et le reste. La structure **imaxdiv_t** contient le quotient, **intmax_t** **quote**et le reste, **intmax_t** **REM**. Le signe du quotient est identique à celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
+La fonction **imaxdiv** divise le *chiffre* par *denom* et calcule donc le quotient et le reste. La structure **imaxdiv_t** contient le quotient, **intmax_t** **quote**et le reste, **intmax_t** **REM**. Le signe du quotient est le même que celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
 
 ## <a name="requirements"></a>Configuration requise
 
@@ -68,7 +68,7 @@ La fonction **imaxdiv** divise le *chiffre* par *denom* et calcule donc le quoti
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_imaxdiv.c
@@ -107,4 +107,4 @@ results in a quotient of 1079252848505, and a remainder of 5170
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
+[ldiv, lldiv](./div.md)<br/>

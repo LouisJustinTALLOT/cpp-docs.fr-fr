@@ -2,12 +2,12 @@
 title: Modificateurs propres à Microsoft
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: 2d65c0fe99895949d537ccf4368df2add3ff91ad
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 2f56220ba15027a522264b91366cab9cf0b65d21
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857422"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506534"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificateurs propres à Microsoft
 
@@ -15,7 +15,7 @@ Cette section décrit les extensions C++ spécifiques à Microsoft dans les doma
 
 - [Adressage basé](based-addressing.md), pratique consistant à utiliser un pointeur comme base à partir de laquelle d’autres pointeurs peuvent être décalés
 
-- [Conventions d’appel de fonction](calling-conventions.md)
+- [Conventions d'appel de fonction](calling-conventions.md)
 
 - Attributs étendus de classe de stockage déclarés avec le mot clé [__declspec](declspec.md)
 
@@ -23,7 +23,7 @@ Cette section décrit les extensions C++ spécifiques à Microsoft dans les doma
 
 ## <a name="microsoft-specific-keywords"></a>mots clés spécifiques à Microsoft
 
-Un grand nombre des mots clés spécifiques à Microsoft peuvent être utilisés pour modifier des déclarateurs afin de former des types dérivés. Pour plus d’informations sur les déclarateurs, consultez [déclarateurs](overview-of-declarators.md).
+Un grand nombre des mots clés spécifiques à Microsoft peuvent être utilisés pour modifier des déclarateurs afin de former des types dérivés. Pour plus d’informations sur les déclarateurs, consultez [déclarateurs](./declarations-and-definitions-cpp.md).
 
 |Mot clé|Signification|Utilisé pour former des types dérivés ?|
 |-------------|-------------|---------------------------------|

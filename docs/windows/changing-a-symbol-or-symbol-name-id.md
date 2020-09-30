@@ -35,18 +35,18 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: a6d2661a3467365482ea12bdfff53f730165faa0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 67a5c801c13038e7215473edecc2d41a8f7086e0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623065"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505723"
 ---
 # <a name="how-to-manage-symbols"></a>Comment : gérer des symboles
 
 Lorsque vous créez une ressource ou un objet de ressource, l’environnement de développement lui assigne un nom de symbole par défaut, par exemple `IDD_DIALOG1` . Vous pouvez utiliser la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) pour modifier le nom de symbole par défaut ou pour modifier le nom d’un symbole déjà associé à une ressource.
 
-Pour les symboles associés à une ressource unique, vous pouvez également utiliser la fenêtre **Propriétés** pour modifier la valeur du symbole. Vous pouvez utiliser la [boîte de dialogue symboles des ressources](../windows/resource-symbols-dialog-box.md) pour modifier la valeur des symboles qui ne sont pas actuellement assignés à une ressource.
+Pour les symboles associés à une ressource unique, vous pouvez également utiliser la fenêtre **Propriétés** pour modifier la valeur du symbole. Vous pouvez utiliser la [boîte de dialogue symboles des ressources](./creating-new-symbols.md) pour modifier la valeur des symboles qui ne sont pas actuellement assignés à une ressource.
 
 Normalement, toutes les définitions de symbole sont enregistrées dans `Resource.h` . Toutefois, vous devrez peut-être changer ce nom de fichier Include pour pouvoir, par exemple, utiliser plusieurs fichiers de ressources dans le même répertoire.
 
@@ -74,7 +74,7 @@ Les restrictions relatives aux noms de symboles sont les suivantes :
 
 Les noms de symboles comportent des préfixes descriptifs qui indiquent le genre de ressource ou d'objet qu'ils représentent. Ces préfixes descriptifs commencent par la combinaison de texte ID. La bibliothèque MFC (Microsoft Foundation Class) utilise les conventions d’affectation des noms de symboles indiquées dans le tableau suivant :
 
-|Category|Préfixe|Utilisation|
+|Category|Préfixe|Utilisez|
 |--------------|------------|---------|
 |Ressources|IDR_, IDD_, IDC_, IDI_, IDB_|Accélérateur ou menu (et ressources associées ou personnalisées), boîte de dialogue, curseur, icône, bitmap|
 |Éléments de menu|ID_|Élément de menu|
@@ -92,7 +92,7 @@ Les noms de symboles comportent des préfixes descriptifs qui indiquent le genre
    Si vous tapez un nouveau nom de symbole, une valeur lui est automatiquement affectée.
 
 > [!NOTE]
-> Vous pouvez utiliser la [boîte de dialogue symboles des ressources](../windows/resource-symbols-dialog-box.md) pour modifier les noms des symboles qui ne sont pas actuellement assignés à une ressource.
+> Vous pouvez utiliser la [boîte de dialogue symboles des ressources](./creating-new-symbols.md) pour modifier les noms des symboles qui ne sont pas actuellement assignés à une ressource.
 
 ## <a name="symbol-value-restrictions"></a>Restrictions relatives à la valeur d'un symbole
 
@@ -141,7 +141,7 @@ Certaines limitations des valeurs de symbole sont les suivantes :
 
 ## <a name="change-or-delete-symbols"></a>Modifier ou supprimer des symboles
 
-Dans la [boîte de dialogue symboles des ressources](../windows/resource-symbols-dialog-box.md), vous pouvez modifier ou supprimer des symboles existants qui ne sont pas déjà attribués à une ressource ou un objet.
+Dans la [boîte de dialogue symboles des ressources](./creating-new-symbols.md), vous pouvez modifier ou supprimer des symboles existants qui ne sont pas déjà attribués à une ressource ou un objet.
 
 ### <a name="to-change-an-unassigned-symbol"></a>Pour modifier un symbole non assigné
 
@@ -161,7 +161,7 @@ Dans la boîte de dialogue **symboles des ressources** , sélectionnez le symbol
 
 ## <a name="include-symbols"></a>Inclure les symboles
 
-La première fois que l'environnement de développement lit un fichier de ressources créé par une autre application, il marque tous les fichiers d'en-tête inclus en lecture seule. Bien que vous puissiez utiliser la [boîte de dialogue Include des ressources](../windows/resource-includes-dialog-box.md) pour ajouter d’autres fichiers d’en-tête de symbole en lecture seule.
+La première fois que l'environnement de développement lit un fichier de ressources créé par une autre application, il marque tous les fichiers d'en-tête inclus en lecture seule. Bien que vous puissiez utiliser la [boîte de dialogue Include des ressources](./how-to-include-resources-at-compile-time.md) pour ajouter d’autres fichiers d’en-tête de symbole en lecture seule.
 
 Si vous envisagez de partager des fichiers de symboles entre plusieurs projets, vous pouvez utiliser les définitions de symbole en lecture seule.
 
@@ -185,7 +185,7 @@ L'environnement interprète correctement ces symboles calculés tant que les con
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Pour inclure des symboles partagés (en lecture seule) dans votre fichier de ressources
 
-1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* , puis sélectionnez [include des ressources](../windows/resource-includes-dialog-box.md).
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* , puis sélectionnez [include des ressources](./how-to-include-resources-at-compile-time.md).
 
 1. Dans la zone **directives de symbole en lecture seule** , utilisez la `#include` directive du compilateur pour spécifier le fichier dans lequel vous souhaitez conserver les symboles en lecture seule.
 
@@ -204,7 +204,7 @@ L'environnement interprète correctement ces symboles calculés tant que les con
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Pour changer le nom du fichier d'en-tête de symbole de ressource
 
-1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* et choisissez [include des ressources](../windows/resource-includes-dialog-box.md).
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* et choisissez [include des ressources](./how-to-include-resources-at-compile-time.md).
 
 1. Dans la zone **fichier d’en-tête de symbole** , tapez le nouveau nom du fichier include.
 

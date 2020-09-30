@@ -8,38 +8,38 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: 994f81524001a80d1cf0dd3783b9de742d61e84d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a828351a9e789228143d43d4c0a756abda879989
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365846"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506681"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Déclaration d'une variable basée sur votre nouvelle classe de contrôle
 
-Une fois que vous avez créé une classe de contrôle MFC, vous pouvez déclarer une variable basée sur elle. Pour fournir un contexte pour la nouvelle variable, vous devez ouvrir l’éditeur de dialogue et modifier la boîte de dialogue dans laquelle vous souhaitez utiliser votre contrôle réutilisable. En outre, la boîte de dialogue doit déjà avoir une classe qui lui est associée. Pour plus d’informations sur l’utilisation de l’éditeur de dialogue, voir [Dialog Editor](../../windows/dialog-editor.md).
+Une fois que vous avez créé une classe de contrôle MFC, vous pouvez déclarer une variable en fonction de celle-ci. Pour fournir un contexte pour la nouvelle variable, vous devez ouvrir l’éditeur de boîtes de dialogue et modifier la boîte de dialogue dans laquelle vous souhaitez utiliser votre contrôle réutilisable. En outre, une classe doit déjà être associée à la boîte de dialogue. Pour plus d’informations sur l’utilisation de l’éditeur de boîtes de dialogue, consultez [éditeur de boîtes de dialogue](../../windows/dialog-editor.md).
 
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Déclarer une variable en fonction de votre classe réutilisable
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Pour déclarer une variable en fonction de votre classe réutilisable
 
-1. Lors de l’édition de la boîte de dialogue, faites glisser un contrôle du même type que la classe de base de votre nouveau contrôle à partir de la barre d’outils Controls sur la boîte de dialogue.
+1. Lors de la modification de la boîte de dialogue, faites glisser un contrôle du même type que la classe de base de votre nouveau contrôle à partir de la barre d’outils contrôles vers la boîte de dialogue.
 
-1. Placez le pointeur de la souris sur le contrôle abandonné.
+1. Placez le pointeur de la souris sur le contrôle déplacé.
 
-1. Tout en appuyant sur la touche CTRL, cliquez double sur le contrôle.
+1. Tout en appuyant sur la touche CTRL, double-cliquez sur le contrôle.
 
-   La boîte de dialogue [Variable Add Member](../../ide/add-member-variable-wizard.md) apparaît.
+   La boîte de dialogue [Ajouter une variable membre](../../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) s’affiche.
 
-1. Dans la boîte **d’accès,** sélectionnez l’accès correct pour votre contrôle.
+1. Dans la zone **accès** , sélectionnez l’accès approprié pour votre contrôle.
 
-1. Cliquez sur la case à cocher **variable Control.**
+1. Activez la case à cocher **variable de contrôle** .
 
-1. Dans la boîte **à noms variable,** tapez un nom.
+1. Dans la zone nom de la **variable** , tapez un nom.
 
-1. Sous **catégorie**, cliquez sur **Contrôle**.
+1. Sous **catégorie**, cliquez sur **contrôle**.
 
-1. Dans la liste **d’identification de contrôle,** choisissez le contrôle que vous avez ajouté. La liste **de type variable** doit afficher le type variable correct, et la boîte de type **Contrôle** doit afficher le type de contrôle correct.
+1. Dans la liste **ID de contrôle** , sélectionnez le contrôle que vous avez ajouté. La liste des **types de variables** doit afficher le type de variable correct, et la zone **type de contrôle** doit afficher le type de contrôle approprié.
 
-1. Dans la boîte **commentaire,** ajoutez n’importe quel commentaire que vous souhaitez apparaître dans votre code.
+1. Dans la zone **Commentaire** , ajoutez tous les commentaires que vous souhaitez voir apparaître dans votre code.
 
 1. Cliquez sur **OK**.
 

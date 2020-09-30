@@ -1,5 +1,5 @@
 ---
-title: Contrôles de boîte deC++dialogue () | Microsoft Docs
+title: Contrôles de boîte de dialogue (C++) | Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: c79021387de2c8bc8f7f106a93797b7efb07d6df
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 449e60e968916f7741422ca2766375ad29afd062
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160409"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505708"
 ---
-# <a name="dialog-box-controls-c"></a>Contrôles de boîte deC++dialogue ()
+# <a name="dialog-box-controls-c"></a>Contrôles de boîte de dialogue (C++)
 
 Vous pouvez ajouter des contrôles à une boîte de dialogue à l’aide de l’onglet **éditeur de boîtes de dialogue** de la [fenêtre boîte à outils](/visualstudio/ide/reference/toolbox) , qui vous permet de choisir le contrôle souhaité et de le faire glisser dans la boîte de dialogue. Par défaut, la fenêtre **boîte à outils** a la valeur Masquer automatiquement. Il apparaît sous la forme d’un onglet dans la marge gauche de votre solution lorsque l' **éditeur de boîtes de dialogue** est ouvert. Toutefois, vous pouvez épingler la fenêtre **boîte à outils** à la position en sélectionnant le bouton **Masquer automatiquement** dans le coin supérieur droit de la fenêtre. Pour plus d’informations sur la façon de contrôler le comportement de cette fenêtre, consultez [gestion des fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
@@ -39,36 +39,36 @@ Les contrôles standard disponibles dans la **boîte à outils** avec des évén
 |Nom du contrôle|Événement par défaut|
 |---|---|
 |[Contrôle Button](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Contrôle Check Box](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Contrôle de zone de liste déroulante](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Modifier le contrôle](../mfc/reference/cedit-class.md)|EN_CHANGE|
+|[Contrôle Check Box ](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Contrôle Combo Box](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
+|[Contrôle Edit](../mfc/reference/cedit-class.md)|EN_CHANGE|
 |Contrôle Group box|(non applicable)|
 |[Contrôle zone de liste](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Contrôle de case d’option](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Contrôle de texte statique](../mfc/reference/cstatic-class.md)|(non applicable)|
-|[Contrôle image](../mfc/reference/cpictureholder-class.md)|(non applicable)|
-|[Contrôle Rich Edit 2,0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
+|[Contrôle Radio Button](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Contrôle Static Text](../mfc/reference/cstatic-class.md)|(non applicable)|
+|[Contrôle Picture](../mfc/reference/cpictureholder-class.md)|(non applicable)|
+|[Contrôle Rich Edit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
 |[Contrôle de barre de défilement](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
-> Pour plus d’informations sur l’utilisation du contrôle **richedit 1,0** avec MFC, consultez [utilisation du contrôle RichEdit 1,0 avec MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) et des [exemples de contrôles](../mfc/rich-edit-control-examples.md)RichEdit.
+> Pour plus d’informations sur l’utilisation du contrôle **richedit 1,0** avec MFC, consultez [utilisation du contrôle RichEdit 1,0 avec MFC](./adding-editing-or-deleting-controls.md) et des [exemples de contrôles](../mfc/rich-edit-control-examples.md)RichEdit.
 
 Les [contrôles communs Windows](../mfc/controls-mfc.md) disponibles dans la **boîte à outils** pour offrir des fonctionnalités améliorées sont les suivants :
 
 |Nom du contrôle|Événement par défaut|
 |---|---|
-|[Contrôle Slider](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Contrôle spin](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Contrôle de progression](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Contrôle de touche d’accès rapide](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Contrôle de liste](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Contrôle d’arborescence](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
+|[Contrôle de curseur](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Contrôle Spin](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
+|[Contrôle Progress](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
+|[Contrôle Hot Key](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
+|[Contrôle List](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
+|[Contrôle Tree](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
 |[Contrôle Tab](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Contrôle d’animation](../mfc/using-an-animation-control.md)|ACN_START|
+|[Contrôle Animation](../mfc/using-an-animation-control.md)|ACN_START|
 |[Contrôle de sélecteur de date et heure](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Month Calendar (contrôle)](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[Contrôle Month Calendar](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
 |[Contrôle d’adresse IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Contrôle de zone de liste déroulante étendue](../mfc/creating-an-extended-combo-box-control.md)||
+|[Contrôle Extended Combo Box](../mfc/creating-an-extended-combo-box-control.md)||
 |Contrôle personnalisé|TTN_GETDISPINFO|
 
 ## <a name="custom-controls"></a>Contrôles personnalisés
@@ -78,7 +78,7 @@ L' **éditeur de boîtes de dialogue** vous permet d’utiliser des contrôles u
 > [!NOTE]
 > Dans ce sens, les contrôles personnalisés ne doivent pas être confondus avec les contrôles ActiveX. Les contrôles ActiveX étaient parfois appelés contrôles personnalisés OLE. En outre, ne confondez pas ces contrôles avec les contrôles owner-drawn dans Windows.
 
-Cette fonctionnalité est conçue pour vous permettre d’utiliser des contrôles autres que ceux fournis par Windows. Au moment de l’exécution, le contrôle est associé à une classe de fenêtre (et non C++ à une classe). Une méthode plus courante pour accomplir la même tâche consiste à installer n’importe quel contrôle, tel qu’un contrôle statique, dans votre boîte de dialogue. Ensuite, au moment de l’exécution, dans la fonction [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) , supprimez ce contrôle et remplacez-le par votre propre contrôle personnalisé.
+Cette fonctionnalité est conçue pour vous permettre d’utiliser des contrôles autres que ceux fournis par Windows. Au moment de l’exécution, le contrôle est associé à une classe de fenêtre (et non à une classe C++). Une méthode plus courante pour accomplir la même tâche consiste à installer n’importe quel contrôle, tel qu’un contrôle statique, dans votre boîte de dialogue. Ensuite, au moment de l’exécution, dans la fonction [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) , supprimez ce contrôle et remplacez-le par votre propre contrôle personnalisé.
 
 > [!NOTE]
 > Il s’agit d’une ancienne technique. Aujourd’hui, il est recommandé dans la plupart des cas d’écrire un contrôle ActiveX ou une sous-classe un contrôle commun Windows.
@@ -95,7 +95,7 @@ Pour ces contrôles personnalisés, vous êtes limité à :
 
 - Définition du style étendu.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
@@ -104,6 +104,6 @@ Win32
 [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)
 
 <!--
-[Adding Event Handlers for Dialog Box Controls](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
-[Dialog Box Controls and Variable Types](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Adding Event Handlers for Dialog Box Controls](./adding-editing-or-deleting-controls.md)<br/>
+[Dialog Box Controls and Variable Types](../ide/adding-a-member-variable-visual-cpp.md#dialog-box-controls-and-variable-types)<br/>
 [Controls](../mfc/controls-mfc.md)<br/>-->

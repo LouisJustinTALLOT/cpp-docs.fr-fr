@@ -14,14 +14,14 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: 7dde5e97bd8690dc491916de8fb279e80a2c9ed4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d5baf4967f4f4f945540d2a7baef399974d2d42
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215203"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506578"
 ---
-# <a name="og-global-optimizations"></a>`/Og`(Optimisations globales)
+# <a name="og-global-optimizations"></a>`/Og` (Optimisations globales)
 
 Obsolète. Fournit des optimisations locales et globales, l’allocation automatique des registres et l’optimisation de la boucle. Nous vous recommandons d’utiliser à la place [ `/O1` (réduire la taille)](o1-o2-minimize-size-maximize-speed.md) ou [ `/O2` (maximiser la vitesse)](o1-o2-minimize-size-maximize-speed.md) .
 
@@ -77,7 +77,7 @@ Les optimisations suivantes sont disponibles sous **`/Og`** :
    > [!NOTE]
    > Vous pouvez activer ou désactiver l’optimisation globale sur une base fonction par fonction à l’aide du `optimize` pragma avec l' `g` option.
 
-Pour obtenir des informations connexes, consultez [ `/Oi` (générer des fonctions intrinsèques)](oi-generate-intrinsic-functions.md) et [ `/Ox ` (activer la plupart des optimisations de vitesse)](ox-full-optimization.md).
+Pour obtenir des informations connexes, consultez [ `/Oi` (générer des fonctions intrinsèques)](oi-generate-intrinsic-functions.md) et [ `/Ox` (activer la plupart des optimisations de vitesse)](ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 

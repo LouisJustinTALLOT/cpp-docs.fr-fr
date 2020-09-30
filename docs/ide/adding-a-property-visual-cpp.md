@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63985643973782ea2b4240a338d66cb5cc2195dc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228672"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504689"
 ---
 # <a name="add-a-property"></a>Ajouter une propriété
 
@@ -93,7 +93,7 @@ Utilisez cet Assistant pour ajouter une propriété à une interface.
 
   |Type d’implémentation|Description|
   |-------------------------|-----------------|
-  |**Stock**|Spécifie une implémentation stock pour la propriété sélectionnée dans **Nom de la propriété**. Valeur par défaut. Pour plus d’informations, consultez [Propriétés stock](#stock-properties).<br /><br /> Si vous spécifiez **Stock**, puis **Type de propriété**, **Type de paramètre** et **Nom du paramètre** apparaissent estompés.|
+  |**Boursier**|Spécifie une implémentation stock pour la propriété sélectionnée dans **Nom de la propriété**. Valeur par défaut. Pour plus d’informations, consultez [Propriétés stock](#stock-properties).<br /><br /> Si vous spécifiez **Stock**, puis **Type de propriété**, **Type de paramètre** et **Nom du paramètre** apparaissent estompés.|
   |**Variable membre**|Spécifie que la propriété est ajoutée comme variable membre. Vous pouvez ajouter des propriétés personnalisées ou la plupart des propriétés stock comme variables membres. Vous ne pouvez pas spécifier de **variable membre** pour les `Caption` `hWnd` Propriétés, et `Text` .<br /><br /> Fournit les noms par défaut sous **Nom de la variable** et **Fonction de notification**. Vous pouvez modifier ce nom.|
   |**Méthodes Get/Set**|Spécifie que la propriété est ajoutée comme fonctions `Get`*PropertyName* et `Set`*PropertyName*, par défaut. Ces noms apparaissent sous **Get, fonction** et **Fonction Set**.<br /><br /> Vous pouvez modifier la valeur par défaut de **Type de propriété**, qui transmet une valeur pour la fonction Get. Vous pouvez spécifier des paramètres pour les fonctions `Get` et `Set`.|
 
@@ -107,8 +107,8 @@ Utilisez cet Assistant pour ajouter une propriété à une interface.
 
   |Option|Description|
   |------------|-----------------|
-  |**PropPut**|La fonction [PropPut](../windows/propput.md) retourne une copie de l’objet. Cette option par défaut est la manière la plus courante de rendre la propriété accessible en écriture.|
-  |**PropPutRef**|La fonction [PropPutRef](../windows/propputref.md) retourne une référence à l’objet et non la copie de l’objet lui-même. Utilisez de préférence cette option pour les objets, tels que les structures ou les tableaux volumineux, qui peuvent créer une charge de travail importante à l’initialisation.|
+  |**PropPut**|La fonction [PropPut](../windows/attributes/propput.md) retourne une copie de l’objet. Cette option par défaut est la manière la plus courante de rendre la propriété accessible en écriture.|
+  |**PropPutRef**|La fonction [PropPutRef](../windows/attributes/propputref.md) retourne une référence à l’objet et non la copie de l’objet lui-même. Utilisez de préférence cette option pour les objets, tels que les structures ou les tableaux volumineux, qui peuvent créer une charge de travail importante à l’initialisation.|
 
 - **Attributs de paramètres**
 
@@ -179,7 +179,7 @@ Les options ne sont pas toutes disponibles pour tous les types de propriété.
 
 ## <a name="stock-properties"></a>Propriétés stock
 
-Si vous ajoutez une propriété à une dispinterface MFC à l’aide de l’[Assistant Ajout de propriété](#idl-attributes-add-property-wizard), vous pouvez choisir une propriété stock dans la liste **Nom de la propriété** de la page [Noms](../ide/names-add-property-wizard.md) de l’Assistant. Ces propriétés sont les suivantes :
+Si vous ajoutez une propriété à une dispinterface MFC à l’aide de l’[Assistant Ajout de propriété](#idl-attributes-add-property-wizard), vous pouvez choisir une propriété stock dans la liste **Nom de la propriété** de la page [Noms](#names-add-property-wizard) de l’Assistant. Ces propriétés sont les suivantes :
 
 |Nom de la propriété|Description|
 |-------------------|-----------------|

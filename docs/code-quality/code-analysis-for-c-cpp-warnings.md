@@ -13,16 +13,16 @@ helpviewer_keywords:
 - native code analysis
 - warnings, C/C++ analysis
 ms.assetid: 28f3fda6-35e8-485b-9755-1991aaccec3f
-ms.openlocfilehash: 5562df8b6f0cfba6799e208acb9c1c223fb53e5e
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 7982be29ba458a040239387b65d46c7b240cb7b7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389972"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504855"
 ---
 # <a name="code-analysis-for-cc-warnings"></a>Analyse du code pour les avertissements C/C++
 
-Cette section répertorie les avertissements d’analyse du code C/C++, à l’exception de ceux qui sont déclenchés par les [contrôleurs de C++ Core Guidelines](code-analysis-for-cpp-corecheck.md). Pour plus d’informations sur l’analyse du code, consultez [ `/analyze` (analyse du code)](/cpp/build/reference/analyze-code-analysis) et [démarrage rapide : analyse du code pour C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+Cette section répertorie les avertissements d’analyse du code C/C++, à l’exception de ceux qui sont déclenchés par les [contrôleurs de C++ Core Guidelines](code-analysis-for-cpp-corecheck.md). Pour plus d’informations sur l’analyse du code, consultez [ `/analyze` (analyse du code)](../build/reference/analyze-code-analysis.md) et [démarrage rapide : analyse du code pour C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 ## <a name="see-also"></a>Voir aussi
 
