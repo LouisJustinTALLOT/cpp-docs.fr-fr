@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 991cce4cfa6810f35c2ccb3ec1ed45adf2d849ac
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988119"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508686"
 ---
 # <a name="lock_when-enum"></a>lock_when, Enum
 
@@ -30,7 +30,7 @@ enum lock_when {
 
 ## <a name="remarks"></a>Notes
 
-Lorsqu’elle est passée à [Lock :: Lock](../dotnet/lock-lock.md), `lock_later` spécifie que le verrou ne doit pas être pris maintenant.
+En cas de transmission à [Lock :: Lock](./lock-class.md#lock), `lock_later` spécifie que le verrou ne doit pas être pris maintenant.
 
 ## <a name="example"></a>Exemple
 
@@ -122,12 +122,12 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Configuration requise
 
-**Fichier d’en-tête** \<msclr\lock.h >
+**Fichier d’en-tête** \<msclr\lock.h>
 
 **Espace de noms** msclr,
 
 ## <a name="see-also"></a>Voir aussi
 
-[lock](../dotnet/lock.md)
+[Lock](../dotnet/lock.md)

@@ -1,5 +1,5 @@
 ---
-title: Gestion de fichiers et e / S (C++ / c++ / CLI)
+title: Gestion de fichiers et e/s (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1cfdc4239506f22368753d8c37765e550d9b835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324998"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508935"
 ---
 # <a name="file-handling-and-io-ccli"></a>Gestion de fichiers et E/S (C++/CLI)
 
-Illustre diverses opérations de fichier à l’aide de .NET Framework.
+Illustre diverses opérations sur les fichiers à l’aide du .NET Framework.
 
-Les rubriques suivantes illustrent l’utilisation des classes définies dans le <xref:System.IO> espace de noms pour effectuer diverses opérations sur les fichiers.
+Les rubriques suivantes illustrent l’utilisation des classes définies dans l' <xref:System.IO> espace de noms pour effectuer diverses opérations sur les fichiers.
 
-## <a name="enumerate"></a> Énumérer les fichiers dans un répertoire
+## <a name="enumerate-files-in-a-directory"></a><a name="enumerate"></a> Énumérer les fichiers dans un répertoire
 
-L’exemple de code suivant montre comment récupérer une liste des fichiers dans un répertoire. En outre, les sous-répertoires sont énumérés. Le code suivant exemple utilise le <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> et <xref:System.IO.Directory.GetDirectories%2A> méthodes pour afficher le contenu du répertoire C:\Windows.
+L’exemple de code suivant montre comment récupérer une liste des fichiers dans un répertoire. En outre, les sous-répertoires sont énumérés. L’exemple de code suivant utilise les <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetDirectories%2A> méthodes et pour afficher le contenu du répertoire C:\Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -66,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="monitor"></a> Modifications de système de fichiers de moniteur
+## <a name="monitor-file-system-changes"></a><a name="monitor"></a> Surveiller les modifications du système de fichiers
 
-Le code suivant exemple utilise <xref:System.IO.FileSystemWatcher> pour enregistrer les événements correspondant aux fichiers créés, modifiés, supprimés ou renommés. Au lieu d’appeler régulièrement un répertoire pour les modifications apportées aux fichiers, vous pouvez utiliser la <xref:System.IO.FileSystemWatcher> classe afin de déclencher des événements lorsqu’une modification est détectée.
+L’exemple de code suivant utilise <xref:System.IO.FileSystemWatcher> pour s’inscrire aux événements correspondant aux fichiers créés, modifiés, supprimés ou renommés. Au lieu d’interroger régulièrement un répertoire pour rechercher les modifications apportées aux fichiers, vous pouvez utiliser la <xref:System.IO.FileSystemWatcher> classe pour déclencher des événements lorsqu’une modification est détectée.
 
 ### <a name="example"></a>Exemple
 
@@ -132,11 +132,11 @@ int main()
 }
 ```
 
-## <a name="read_binary"></a> Lire un fichier binaire
+## <a name="read-a-binary-file"></a><a name="read_binary"></a> Lire un fichier binaire
 
-L’exemple de code suivant montre comment lire des données binaires à partir d’un fichier, à l’aide de deux classes à partir de la <xref:System.IO?displayProperty=fullName> espace de noms : <xref:System.IO.FileStream> et <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> représente le fichier réel. <xref:System.IO.BinaryReader> Fournit une interface pour le flux de données qui autorise l’accès binaire.
+L’exemple de code suivant montre comment lire des données binaires à partir d’un fichier, en utilisant deux classes de l' <xref:System.IO?displayProperty=fullName> espace de noms : <xref:System.IO.FileStream> et <xref:System.IO.BinaryReader> . <xref:System.IO.FileStream> représente le fichier réel. <xref:System.IO.BinaryReader> fournit une interface au flux qui autorise l’accès binaire.
 
-L’exemple de code lit un fichier nommé data.bin et contient des entiers au format binaire. Pour plus d’informations sur ce type de fichier, consultez [Comment : Écrire un fichier binaire (C++ / c++ / CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
+L’exemple de code lit un fichier nommé Data. bin et contient des entiers au format binaire. Pour plus d’informations sur ce type de fichier, consultez Guide pratique [pour écrire un fichier binaire (C++/CLI)](#write_binary).
 
 ### <a name="example"></a>Exemple
 
@@ -173,11 +173,11 @@ int main()
 }
 ```
 
-## <a name="read_text"></a> Lire un fichier texte
+## <a name="read-a-text-file"></a><a name="read_text"></a> Lire un fichier texte
 
-L’exemple de code suivant montre comment ouvrir et lire une fichier texte une ligne à la fois, à l’aide de la <xref:System.IO.StreamReader> classe qui est définie dans le <xref:System.IO?displayProperty=fullName> espace de noms. Une instance de cette classe est utilisée pour ouvrir un fichier texte, puis le <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> méthode est utilisée pour récupérer chaque ligne.
+L’exemple de code suivant montre comment ouvrir et lire un fichier texte ligne par ligne à l’aide de la <xref:System.IO.StreamReader> classe définie dans l' <xref:System.IO?displayProperty=fullName> espace de noms. Une instance de cette classe est utilisée pour ouvrir un fichier texte, puis la <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> méthode est utilisée pour récupérer chaque ligne.
 
-Cet exemple de code lit un fichier nommé textfile.txt et qui contienne du texte. Pour plus d’informations sur ce type de fichier, consultez [Comment : Écrire un fichier texte (C++ / c++ / CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
+Cet exemple de code lit un fichier nommé textfile.txt et contient du texte. Pour plus d’informations sur ce type de fichier, consultez Guide pratique [pour écrire un fichier texte (C++/CLI)](#write_text).
 
 ### <a name="example"></a>Exemple
 
@@ -216,11 +216,11 @@ int main()
 }
 ```
 
-## <a name="retrieve"></a> Récupérer des informations de fichier
+## <a name="retrieve-file-information"></a><a name="retrieve"></a> Récupérer les informations de fichier
 
-L’exemple de code suivant montre la <xref:System.IO.FileInfo> classe. Lorsque vous avez le nom d’un fichier, vous pouvez utiliser cette classe pour récupérer des informations sur le fichier comme la taille du fichier, répertoire, nom complet et date et l’heure de la création et de la dernière modification.
+L’exemple de code suivant illustre la <xref:System.IO.FileInfo> classe. Quand vous avez le nom d’un fichier, vous pouvez utiliser cette classe pour récupérer des informations sur le fichier, telles que la taille du fichier, le répertoire, le nom complet, la date et l’heure de création et la dernière modification.
 
-Ce code récupère les informations de fichier Notepad.exe.
+Ce code récupère les informations de fichier pour Notepad.exe.
 
 ### <a name="example"></a>Exemple
 
@@ -257,11 +257,11 @@ int main()
 }
 ```
 
-## <a name="write_binary"></a> Écrire un fichier binaire
+## <a name="write-a-binary-file"></a><a name="write_binary"></a> Écrire un fichier binaire
 
-L’exemple de code suivant illustre l’écriture des données binaires dans un fichier. Deux classes à partir de la <xref:System.IO> espace de noms sont utilisés : <xref:System.IO.FileStream> et <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> représente le fichier réel, tandis que <xref:System.IO.BinaryWriter> fournit une interface pour le flux de données qui autorise l’accès binaire.
+L’exemple de code suivant illustre l’écriture de données binaires dans un fichier. Deux classes de l' <xref:System.IO> espace de noms sont utilisées : <xref:System.IO.FileStream> et <xref:System.IO.BinaryWriter> . <xref:System.IO.FileStream> représente le fichier réel, tandis que <xref:System.IO.BinaryWriter> fournit une interface au flux qui autorise l’accès binaire.
 
-L’exemple de code suivant écrit un fichier contenant des entiers au format binaire. Ce fichier peut être lu par le code dans [Comment : Lire un fichier binaire (C++ / c++ / CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+L’exemple de code suivant écrit un fichier contenant des entiers au format binaire. Ce fichier peut être lu à l’aide du code de la rubrique [Comment : lire un fichier binaire (C++/CLI)](#read_binary).
 
 ### <a name="example"></a>Exemple
 
@@ -300,11 +300,11 @@ int main()
 }
 ```
 
-## <a name="write_text"></a> Écrire un fichier texte
+## <a name="write-a-text-file"></a><a name="write_text"></a> Écrire un fichier texte
 
-L’exemple de code suivant montre comment créer un fichier texte et écrire du texte à l’aide de la <xref:System.IO.StreamWriter> (classe), qui est défini dans le <xref:System.IO> espace de noms. Le <xref:System.IO.StreamWriter> constructeur prend le nom du fichier doit être créé. Si le fichier existe, il est remplacé (à moins que vous passiez True comme deuxième <xref:System.IO.StringWriter> argument du constructeur).
+L’exemple de code suivant montre comment créer un fichier texte et y écrire du texte à l’aide de la <xref:System.IO.StreamWriter> classe, qui est définie dans l' <xref:System.IO> espace de noms. Le <xref:System.IO.StreamWriter> constructeur prend le nom du fichier à créer. Si le fichier existe, il est remplacé (sauf si vous transmettez true comme deuxième <xref:System.IO.StringWriter> argument du constructeur).
 
-Le fichier est classé à l’aide de la <xref:System.IO.StreamWriter.Write%2A> et <xref:System.IO.TextWriter.WriteLine%2A> fonctions.
+Le fichier est ensuite classé à l’aide des <xref:System.IO.StreamWriter.Write%2A> <xref:System.IO.TextWriter.WriteLine%2A> fonctions et.
 
 ### <a name="example"></a>Exemple
 
@@ -334,6 +334,6 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
-[Fichier et flux de données E/S](/dotnet/standard/io/index)<br/>
+[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[E/s de fichier et de flux](/dotnet/standard/io/index)<br/>
 [Espace de noms System.IO](/dotnet/api/system.io)

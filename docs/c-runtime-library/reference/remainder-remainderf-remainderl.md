@@ -35,12 +35,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: ef2b326bef2288b52dba8988749e030ff0b46077
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 288d6b0d373a5b318a139b030181c671e2c01048
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556007"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507582"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -70,7 +70,7 @@ Dénominateur.
 
 Reste à virgule flottante de *x*  /  *y*. Si la valeur de *y* est 0,0, la fonction **Remainder** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Les fonctions **restantes** calculent le reste à virgule flottante *r* de *x*  /  *y* , de telle sorte que *x*  =  *n* \* *o*  +  *r*, où *n*est l’entier le plus proche dans la valeur de *x*  /  *y* et *n*, même chaque fois que &#124; *n*  -  *x*  /  *y* &#124; = 1/2. Lorsque *r* = 0, *r* a le même signe que *x*.
 
@@ -80,9 +80,9 @@ Si vous utilisez la \<tgmath.h> `remainder()` macro, le type de l’argument dé
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-|Function|En-tête requis (C)|En-tête requis (C++)|
+|Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------|-|
 |**reste**, **remainderf**, **restante**|\<math.h>|\<cmath> ou \<math.h>|
 |**reste** , macro | \<tgmath.h> ||
@@ -114,7 +114,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)\
-[ldiv, lldiv](ldiv-lldiv.md)\
+[ldiv, lldiv](./div.md)\
 [imaxdiv](imaxdiv.md)\
 [fmod, fmodf,](fmod-fmodf.md)\
 [remquo, remquof, remquol](remquo-remquof-remquol.md)

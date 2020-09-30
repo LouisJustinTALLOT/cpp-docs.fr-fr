@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 857bb3ea9e66ca0be155413faea23c0aba2abc9e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d3497a19ab14dcc9f14dc0419eb65ea033135b6e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622207"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508858"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Boîtes de dialogue modales et non modales
 
@@ -30,7 +30,7 @@ La création d’une boîte de dialogue pour votre programme requiert les étape
 
 1. Créer une classe de dialogue.
 
-1. Connectez les [contrôles de la ressource de boîte de dialogue aux gestionnaires de messages](../windows/adding-event-handlers-for-dialog-box-controls.md) dans la classe dialog.
+1. Connectez les [contrôles de la ressource de boîte de dialogue aux gestionnaires de messages](../windows/adding-editing-or-deleting-controls.md) dans la classe dialog.
 
 1. Ajoutez des membres de données associés aux contrôles de la boîte de dialogue et spécifiez les [validations](dialog-data-validation.md) d' [échange de données](dialog-data-exchange.md) de boîtes de dialogue et de boîtes de dialogue pour les contrôles.
 

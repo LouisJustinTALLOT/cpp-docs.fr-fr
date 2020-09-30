@@ -34,18 +34,18 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841075"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507231"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow, classe
 
 Fournit une implémentation par défaut pour le handle de ligne, qui est utilisé dans la classe [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) .
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 ```cpp
 class CSimpleRow
@@ -73,15 +73,15 @@ class CSimpleRow
 |[m_dwRef](#dwref)|Décompte de références à un handle de ligne existant.|
 |[m_iRowset](#irowset)|Index de l’ensemble de lignes représentant le curseur.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Un descripteur de ligne est logiquement une étiquette unique pour une ligne de résultats. `IRowsetImpl` crée un nouveau `CSimpleRow` pour chaque ligne demandée dans [IRowsetImpl :: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` peut également être remplacé par votre propre implémentation du handle de ligne, car il s’agit d’un argument de modèle par défaut pour `IRowsetImpl` . La seule exigence de remplacer cette classe est d’avoir la classe de remplacement qui fournit un constructeur qui accepte un paramètre unique de type **long**.
+Un descripteur de ligne est logiquement une étiquette unique pour une ligne de résultats. `IRowsetImpl` crée un nouveau `CSimpleRow` pour chaque ligne demandée dans [IRowsetImpl :: GetNextRows](./irowsetimpl-class.md#getnextrows). `CSimpleRow` peut également être remplacé par votre propre implémentation du handle de ligne, car il s’agit d’un argument de modèle par défaut pour `IRowsetImpl` . La seule exigence de remplacer cette classe est d’avoir la classe de remplacement qui fournit un constructeur qui accepte un paramètre unique de type **long**.
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow :: AddRefRow
 
 Ajoute un décompte de références à un handle de ligne existant de manière thread-safe.
 
-### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntax
 
 ```cpp
 DWORD AddRefRow();
@@ -121,15 +121,15 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 *iRowsetCur*<br/>
 dans Index de l’ensemble de lignes actif.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Définit [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) sur *iRowsetCur*.
+Définit [m_iRowset](#irowset) sur *iRowsetCur*.
 
 ## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow :: ReleaseRow
 
 Libère les lignes de manière thread-safe.
 
-### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntax
 
 ```cpp
 DWORD ReleaseRow();
@@ -139,7 +139,7 @@ DWORD ReleaseRow();
 
 Décompte de références à un handle de ligne existant.
 
-### <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntax
 
 ```cpp
 DWORD m_dwRef;

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3170
 ms.assetid: ca9a59d6-7df3-42f0-b028-c09d0af3ac2a
-ms.openlocfilehash: e2d74a637e2902fcf636b49068882f32aa706f94
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c4eb4a2551312791d05c8badb66af0070e74b630
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761762"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508321"
 ---
 # <a name="compiler-error-c3170"></a>Erreur du compilateur C3170
 
 Impossible d’avoir des identificateurs de module différents dans un projet
 
-des attributs de [module](../../windows/module-cpp.md) avec des noms différents ont été trouvés dans deux des fichiers d’une compilation. Un seul attribut `module` unique peut être spécifié par compilation.
+des attributs de [module](../../windows/attributes/module-cpp.md) avec des noms différents ont été trouvés dans deux des fichiers d’une compilation. Un seul `module` attribut unique peut être spécifié par compilation.
 
-Des attributs de `module` identiques peuvent être spécifiés dans plusieurs fichiers de code source.
+Des `module` attributs identiques peuvent être spécifiés dans plusieurs fichiers de code source.
 
 Par exemple, si les attributs de module suivants ont été trouvés :
 

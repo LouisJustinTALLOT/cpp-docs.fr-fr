@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 5f247a99d3f04a15ebd54718a46dae8512a580d6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d0092cf107159f4c84b431f5eeae130df64dc835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231115"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507456"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -38,7 +38,7 @@ Spécifications de modèle facultatives. Pour plus d’informations, consultez [
 *MS-decl-spec*<br/>
 Spécification de classe de stockage facultative. Pour plus d’informations, reportez-vous au mot clé [__declspec](../cpp/declspec.md) .
 
-*Référence*<br/>
+*étiquette*<br/>
 Nom de type donné à la structure. La balise devient un mot réservé dans la portée de la structure. La balise est facultative. Si elle est omise, une structure anonyme est définie. Pour plus d’informations, consultez [types de classes anonymes](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
@@ -48,9 +48,9 @@ Liste facultative des classes ou structures dont dérivent les membres de cette 
 Liste des membres de structure. Pour plus d’informations, consultez [vue d’ensemble des membres de classe](../cpp/class-member-overview.md) . La seule différence ici est que **`struct`** est utilisé à la place de **`class`** .
 
 *declarators*<br/>
-Liste des déclarateurs spécifiant les noms de la structure. Les listes des déclarateurs déclarent une ou plusieurs instances du type structure. Les déclarateurs peuvent inclure des listes d’initialiseurs si toutes les données membres de la structure sont **`public`** . Les listes d’initialiseurs sont courantes dans les structures, car les membres de données sont **`public`** par défaut.  Pour plus d’informations, consultez [vue d’ensemble des déclarateurs](../cpp/overview-of-declarators.md) .
+Liste des déclarateurs spécifiant les noms de la structure. Les listes des déclarateurs déclarent une ou plusieurs instances du type structure. Les déclarateurs peuvent inclure des listes d’initialiseurs si toutes les données membres de la structure sont **`public`** . Les listes d’initialiseurs sont courantes dans les structures, car les membres de données sont **`public`** par défaut.  Pour plus d’informations, consultez [vue d’ensemble des déclarateurs](./declarations-and-definitions-cpp.md) .
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Un type structure est un type composite défini par l'utilisateur. Il comprend des champs ou des membres qui peuvent avoir différents types.
 

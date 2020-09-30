@@ -7,19 +7,20 @@ helpviewer_keywords:
 - compatibility, C runtime libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: d6562be0abde8e9d51260b2d230f225ed159c199
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 711d5b3c95269413a0d94f568d3e3cb7b7dff721
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075748"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506871"
 ---
 # <a name="compatibility"></a>Compatibilité
 
 La bibliothèque Runtime C universel (UCRT) prend en charge la majeure partie de la bibliothèque standard C requise pour la conformité C++. Il implémente la bibliothèque C99 (ISO/IEC 9899:1999), à quelques exceptions près :
-- compatibilité de type stricte dans \<complex.h> . 
+
+- compatibilité de type stricte dans \<complex.h> .
 - `aligned_alloc`, qui n’est probablement pas implémenté, car le système d’exploitation Windows ne prend pas en charge les allocations alignées. Utilisez plutôt le non standard `_aligned_malloc` .
--  `strerrorlen_s`
+- `strerrorlen_s`
 - prise en charge atomique dans \<stdatomic.h>
 - prise en charge des threads dans \<threads.h>
 
@@ -35,11 +36,11 @@ Certaines fonctions de la bibliothèque C standard ont un historique d’utilisa
 
 ## <a name="related-articles"></a>Articles connexes
 
-|Intitulé|Description|
+|Titre|Description|
 |-----------|-----------------|
 |[Applications UWP, Windows Runtime et Runtime C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Décrit le moment où les routines UCRT ne sont pas compatibles avec les applications Windows universelles ou les applications de Microsoft Store.|
 |[Conformité ANSI C](../c-runtime-library/ansi-c-compliance.md)|Décrit l’affectation de noms dans la bibliothèque UCRT conforme à la norme.|
-|[UNIX](../c-runtime-library/unix.md)|Fournit des instructions pour le portage de programmes vers UNIX.|
+|[ENVIRONNEMENTS](../c-runtime-library/unix.md)|Fournit des instructions pour le portage de programmes vers UNIX.|
 |[Plateformes Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Répertorie les systèmes d'exploitation qui offrent une prise en charge CRT.|
 |[Compatibilité descendante](../c-runtime-library/backward-compatibility.md)|Explique comment mapper les anciens noms CRT aux nouveaux.|
 |[Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)|Offre une vue d'ensemble des fichiers de bibliothèque CRT (.lib) et les options de compilateur associées.|

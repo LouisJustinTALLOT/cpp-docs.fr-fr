@@ -1,55 +1,55 @@
 ---
-title: 'Référence: commandes de vcperf'
-description: Référence pour l’utilitaire de commande vcperf.exe.
+title: 'Référence : commandes vcperf'
+description: Référence pour l’utilitaire de ligne de commande vcperf.exe.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9d3b0a9dbdfe922dc87f91006441e1f65d54c8a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c251d93ce7e9e7325a7146f5697150344cb02d96
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323249"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508821"
 ---
-# <a name="reference-vcperf-commands"></a>Référence: commandes de vcperf
+# <a name="reference-vcperf-commands"></a>Référence : commandes vcperf
 
 ::: moniker range="<=vs-2017"
 
-Les outils build Insights sont disponibles dans Visual Studio 2019. Pour voir la documentation de cette version, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Les outils C++ Build Insights sont disponibles dans Visual Studio 2019. Pour afficher la documentation de cette version, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-Cet article répertorie et décrit les commandes disponibles en *vcperf.exe*, et comment les utiliser.
+Cet article répertorie et décrit les commandes disponibles dans *vcperf.exe*, et explique comment les utiliser.
 
-## <a name="commands-to-start-and-stop-traces"></a>Commandes de commencer et d’arrêter les traces
+## <a name="commands-to-start-and-stop-traces"></a>Commandes pour démarrer et arrêter des traces
 
-*IMPORTANT : les commandes suivantes exigent toutes des privilèges administratifs.*
+*IMPORTANT : les commandes suivantes nécessitent toutes des privilèges d’administrateur.*
 
 | Option           | Arguments et description |
 |------------------|---------------------------|
 | `/start`         | `[/nocpusampling]` `<sessionName>` |
-|                  | Dit *vcperf.exe* de commencer une trace sous le nom de session donné. Il ne peut y avoir qu’une seule session active à la fois sur une machine donnée. <br/><br/> Si `/nocpusampling` l’option est *spécifiée, vcperf.exe* ne recueille pas d’échantillons de processeur. Il empêche l’utilisation de la vue d’utilisation du processeur (échantillonné) dans Windows Performance Analyzer, mais rend les traces collectées plus petites. <br/><br/> Une fois le tracé commencé, *vcperf.exe* revient immédiatement. Les événements sont collectés à l’échelle du système pour tous les processus fonctionnant sur la machine. Cela signifie que vous n’avez pas besoin de construire votre projet à partir de la même invite de commande que celui que vous avez utilisé pour exécuter *vcperf.exe*. Par exemple, vous pouvez construire votre projet à partir de Visual Studio. |
+|                  | Indique à *vcperf.exe* de démarrer une trace sous le nom de session donné. Il ne peut y avoir qu’une seule session active à la fois sur un ordinateur donné. <br/><br/> Si l' `/nocpusampling` option est spécifiée, *vcperf.exe* ne collecte pas les échantillons de l’UC. Il empêche l’utilisation de la vue utilisation de l’UC (échantillonnée) dans l’analyseur de performances Windows, mais rend les traces collectées plus petites. <br/><br/> Une fois le suivi démarré, *vcperf.exe* est retourné immédiatement. Les événements sont collectés à l’ensemble du système pour tous les processus en cours d’exécution sur l’ordinateur. Cela signifie que vous n’avez pas besoin de générer votre projet à partir de la même invite de commandes que celle que vous avez utilisée pour exécuter *vcperf.exe*. Par exemple, vous pouvez générer votre projet à partir de Visual Studio. |
 | `/stop`          | `<sessionName>` `<outputFile.etl>` |
-|                  | Arrête la trace identifiée par le nom de la session donnée. Exécute une étape post-traitement sur la trace pour générer un fichier visible dans Windows Performance Analyzer (WPA). Pour obtenir la meilleure expérience de visionnement, utilisez une version de WPA qui inclut l’add-in build Insights. Pour plus d’informations, voir [Démarrer avec CMD Build Insights](/cpp/build-insights/get-started-with-cpp-build-insights). Le `<outputFile.etl>` paramètre précise où enregistrer le fichier de sortie. |
+|                  | Arrête la trace identifiée par le nom de session donné. Exécute une étape de suivi du traitement sur la trace pour générer un fichier affichable dans Windows Performance Analyzer (WPA). Pour une expérience d’affichage optimale, utilisez une version de WPA qui comprend le complément C++ Build Insights. Pour plus d’informations, consultez [prise en main de C++ Build Insights](../get-started-with-cpp-build-insights.md). Le `<outputFile.etl>` paramètre spécifie l’emplacement où enregistrer le fichier de sortie. |
 | `/stopnoanalyze` | `<sessionName>` `<rawOutputFile.etl>` |
-|                  | Arrête la trace identifiée par le nom de la session donnée et écrit les données brutes non traitées dans le fichier de sortie spécifié. Le fichier qui en résulte n’est pas destiné à être consulté dans WPA. <br/><br/> L’étape post-traitement `/stop` impliquée dans la commande peut parfois être longue. Vous pouvez `/stopnoanalyze` utiliser la commande pour retarder cette étape post-traitement. Utilisez `/analyze` la commande lorsque vous êtes prêt à produire un fichier visible dans Windows Performance Analyzer. |
+|                  | Arrête la trace identifiée par le nom de session donné et écrit les données brutes non traitées dans le fichier de sortie spécifié. Le fichier résultant n’est pas destiné à être affiché dans WPA. <br/><br/> L’étape de validation impliquée dans la `/stop` commande peut parfois être longue. Vous pouvez utiliser la `/stopnoanalyze` commande pour différer cette étape de publication. Utilisez la `/analyze` commande lorsque vous êtes prêt à créer un fichier affichable dans Windows Performance Analyzer. |
 
 ## <a name="miscellaneous-commands"></a>Commandes diverses
 
 | Option     | Arguments et description |
 |------------|---------------------------|
 | `/analyze` | `<rawInputFile.etl> <outputFile.etl>` |
-|            | Accepte un fichier de traces brutes produit par la `/stopnoanalyze` commande. Exécute une étape post-traitement sur cette trace pour générer un fichier visible dans Windows Performance Analyzer. Pour obtenir la meilleure expérience de visionnement, utilisez une version de WPA qui inclut l’add-in build Insights. Pour plus d’informations, voir [Démarrer avec CMD Build Insights](/cpp/build-insights/get-started-with-cpp-build-insights). |
+|            | Accepte un fichier de trace brut produit par la `/stopnoanalyze` commande. Exécute une étape de suivi sur ce suivi pour générer un fichier affichable dans l’analyseur de performances Windows. Pour une expérience d’affichage optimale, utilisez une version de WPA qui comprend le complément C++ Build Insights. Pour plus d’informations, consultez [prise en main de C++ Build Insights](../get-started-with-cpp-build-insights.md). |
 
 ## <a name="see-also"></a>Voir aussi
 
-[Commencez avec les aperçus de construction de CMD](/cpp/build-insights/get-started-with-cpp-build-insights)\
-[Tutorial: Windows Performance Analyzer basics](/cpp/build-insights/tutorials/wpa-basics)\
-[Référence: Vues d’analyseur de performance Windows](wpa-views.md)\
+[Prise en main de C++ Build Insights](../get-started-with-cpp-build-insights.md)\
+[Didacticiel : notions de base de l’analyseur de performances Windows](../tutorials/wpa-basics.md)\
+[Référence : vues de l’analyseur de performances Windows](wpa-views.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

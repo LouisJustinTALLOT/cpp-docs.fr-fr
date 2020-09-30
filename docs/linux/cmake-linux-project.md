@@ -3,12 +3,12 @@ title: Créer un projet Linux CMake dans Visual Studio
 description: Comment créer un projet CMake Linux dans Visual Studio
 ms.date: 08/06/2020
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 1b622bcd2af49ee51f7546be4c7a6d804c3102d0
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 5753dbb37c11686becb3e141261284b68468a3bc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043822"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507956"
 ---
 # <a name="create-a-cmake-linux-project-in-visual-studio"></a>Créer un projet Linux CMake dans Visual Studio
 
@@ -67,6 +67,7 @@ Pour vous aider à mieux comprendre, modifier et créer vos scripts CMake dans V
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
+
 ## <a name="open-a-cmake-project-folder"></a>Ouvrir un dossier de projet CMake
 
 Lorsque vous ouvrez un dossier qui contient un projet CMake existant, Visual Studio utilise des variables dans le cache CMake pour configurer automatiquement IntelliSense et les builds. Les paramètres de configuration locale et de débogage sont stockés dans des fichiers JSON. Vous pouvez éventuellement partager ces fichiers avec d’autres personnes qui utilisent Visual Studio.

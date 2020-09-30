@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225616"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508654"
 ---
 # <a name="lock-class"></a>lock, classe
 
@@ -33,7 +33,7 @@ ref class lock;
 
 ## <a name="remarks"></a>Notes
 
-`lock`est disponible uniquement pour les objets CLR et peut uniquement être utilisé dans le code CLR.
+`lock` est disponible uniquement pour les objets CLR et peut uniquement être utilisé dans le code CLR.
 
 En interne, la classe Lock utilise <xref:System.Threading.Monitor> pour synchroniser l’accès. Pour plus d’informations, consultez l’article référencé.
 
@@ -63,13 +63,13 @@ En interne, la classe Lock utilise <xref:System.Threading.Monitor> pour synchron
 |[lock::operator==](#operator-equality)|Opérateur d’égalité.|
 |[Lock :: Operator ! =](#operator-inequality)|Opérateur d’inégalité.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **Fichier d’en-tête** \<msclr\lock.h>
 
 **Espace de noms** msclr,
 
-## <a name="locklock"></a><a name="lock"></a>verrou :: Lock
+## <a name="locklock"></a><a name="lock"></a> verrou :: Lock
 
 Construit un `lock` objet, en attendant éventuellement d’acquérir le verrou définitivement, pendant un laps de temps spécifié, ou pas du tout.
 
@@ -103,15 +103,15 @@ Valeur du délai d’attente en millisecondes ou <xref:System.TimeSpan> .
 
 Lève une exception <xref:System.ApplicationException> si l’acquisition de verrous ne se produit pas avant le délai d’attente.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les trois premières formes du constructeur essaient d’acquérir un verrou dans le délai d' `_object` attente spécifié (ou <xref:System.Threading.Timeout.Infinite> si aucun n’est spécifié).
 
-La quatrième forme du constructeur n’acquiert pas de verrou sur `_object` . `lock_later`est un membre de l' [énumération lock_when](../dotnet/lock-when-enum.md). Utilisez [Lock :: Acquire](../dotnet/lock-acquire.md) ou [lock :: try_acquire](../dotnet/lock-try-acquire.md) pour acquérir le verrou dans ce cas.
+La quatrième forme du constructeur n’acquiert pas de verrou sur `_object` . `lock_later` est un membre de l' [énumération lock_when](../dotnet/lock-when-enum.md). Utilisez [Lock :: Acquire](#acquire) ou [lock :: try_acquire](#try-acquire) pour acquérir le verrou dans ce cas.
 
 Le verrou est libéré automatiquement lorsque le destructeur est appelé.
 
-`_object`ne peut pas être <xref:System.Threading.ReaderWriterLock> .  Si c’est le cas, une erreur de compilation se produit.
+`_object` ne peut pas être <xref:System.Threading.ReaderWriterLock> .  Si c’est le cas, une erreur de compilation se produit.
 
 ### <a name="example"></a>Exemple
 
@@ -203,7 +203,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>verrou :: ~ Lock
+## <a name="locklock"></a><a name="tilde-lock"></a> verrou :: ~ Lock
 
 Détruit un `lock` objet.
 
@@ -211,9 +211,9 @@ Détruit un `lock` objet.
 ~lock();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Le destructeur appelle [Lock :: Release](../dotnet/lock-release.md).
+Le destructeur appelle [Lock :: Release](#release).
 
 ### <a name="example"></a>Exemple
 
@@ -305,7 +305,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>Lock :: Acquire
+## <a name="lockacquire"></a><a name="acquire"></a> Lock :: Acquire
 
 Acquiert un verrou sur un objet, en attendant éventuellement acquérir le verrou indéfiniment, pendant un laps de temps spécifié, ou pas du tout.
 
@@ -328,7 +328,7 @@ Valeur de délai d’attente en millisecondes ou en tant que <xref:System.TimeSp
 
 Lève une exception <xref:System.ApplicationException> si l’acquisition de verrous ne se produit pas avant le délai d’attente.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si une valeur de délai d’attente n’est pas fournie, le délai d’attente par défaut est <xref:System.Threading.Timeout.Infinite> .
 
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>Lock :: is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a> Lock :: is_locked
 
 Indique si un verrou est maintenu.
 
@@ -432,7 +432,7 @@ Indique si un verrou est maintenu.
 bool is_locked();
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si un verrou est maintenu ; **`false`** sinon,.
 
@@ -527,7 +527,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>Lock ::, opérateur bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a> Lock ::, opérateur bool
 
 Opérateur à utiliser `lock` dans une expression conditionnelle.
 
@@ -535,11 +535,11 @@ Opérateur à utiliser `lock` dans une expression conditionnelle.
 operator bool();
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si un verrou est maintenu ; **`false`** sinon,.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cet opérateur convertit en fait `_detail_class::_safe_bool` la valeur qui est plus sûre que **`bool`** parce qu’il ne peut pas être converti en type intégral.
 
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>Lock :: Release
+## <a name="lockrelease"></a><a name="release"></a> Lock :: Release
 
 Libère un verrou.
 
@@ -642,7 +642,7 @@ Libère un verrou.
 void release();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si aucun verrou n’est maintenu, `release` ne fait rien.
 
@@ -738,7 +738,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>Lock :: try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a> Lock :: try_acquire
 
 Acquiert un verrou sur un objet, en attente d’un laps de temps spécifié et en retournant un **`bool`** pour signaler la réussite de l’acquisition au lieu de lever une exception.
 
@@ -756,11 +756,11 @@ bool try_acquire(
 *_timeout*<br/>
 Valeur de délai d’attente en millisecondes ou en tant que <xref:System.TimeSpan> .
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le verrou a été acquis ; **`false`** sinon,.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si un verrou a déjà été acquis, cette fonction ne fait rien.
 
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>Lock :: Operator = =
+## <a name="lockoperator"></a><a name="operator-equality"></a> Lock :: Operator = =
 
 Opérateur d’égalité.
 
@@ -869,7 +869,7 @@ template<class T> bool operator==(
 *t*<br/>
 Objet dont l'égalité doit être comparée.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne **`true`** si `t` est identique à l’objet du verrou ; **`false`** sinon,.
 
@@ -897,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>Lock :: Operator ! =
+## <a name="lockoperator"></a><a name="operator-inequality"></a> Lock :: Operator ! =
 
 Opérateur d’inégalité.
 
@@ -912,7 +912,7 @@ template<class T> bool operator!=(
 *t*<br/>
 Objet à comparer pour déterminer s’il est inégal.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne **`true`** si `t` diffère de l’objet du verrou ; **`false`** sinon,.
 

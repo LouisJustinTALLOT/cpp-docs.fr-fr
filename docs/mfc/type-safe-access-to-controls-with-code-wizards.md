@@ -7,16 +7,16 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: bfbc27dbcdeeb38c40f5d989bacd65a23198d4f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ee7c49f75dcdc2b6c32f2b391ace7260b46d197b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213968"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507896"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Accès de type sécurisé aux contrôles avec Assistants Code
 
-Si vous êtes familiarisé avec les fonctionnalités DDX, vous pouvez utiliser la propriété Control dans l' [Assistant Ajout de variable membre](../ide/add-member-variable-wizard.md) pour créer un accès de type sécurisé. Cette approche est plus facile que de créer des contrôles sans assistants code.
+Si vous êtes familiarisé avec les fonctionnalités DDX, vous pouvez utiliser la propriété Control dans l' [Assistant Ajout de variable membre](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) pour créer un accès de type sécurisé. Cette approche est plus facile que de créer des contrôles sans assistants code.
 
 Si vous souhaitez simplement accéder à la valeur d’un contrôle, DDX le fournit. Si vous souhaitez faire plus que accéder à la valeur d’un contrôle, utilisez l’Assistant Ajout de variable membre pour ajouter une variable membre de la classe appropriée à votre classe de boîte de dialogue. Attachez cette variable membre à la propriété de contrôle.
 

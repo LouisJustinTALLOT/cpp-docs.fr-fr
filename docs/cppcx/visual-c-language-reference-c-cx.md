@@ -2,16 +2,16 @@
 title: Informations de référence sur le langage C++/CX
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 4f3816280630a6a061eb037a33367ef4e9d90375
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f28270ace3965a3cf89e250a873af14e48390708
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403853"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507418"
 ---
 # <a name="ccx-language-reference"></a>Informations de référence sur le langage C++/CX
 
-C++/CX est un ensemble d’extensions du langage C++ qui permet de créer des applications Windows et des composants de Windows Runtime dans un idiome aussi proche que possible du C++ moderne. Utilisez C++/CX pour écrire des applications et des composants Windows en code natif qui interagissent facilement avec Visual C#, Visual Basic et JavaScript, ainsi que d’autres langages qui prennent en charge le Windows Runtime. Dans ces cas rares qui requièrent un accès direct aux interfaces COM brutes ou du code non exceptionnel, vous pouvez utiliser le [Windows Runtime C++ Template Library (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
+C++/CX est un ensemble d’extensions du langage C++ qui permet de créer des applications Windows et des composants de Windows Runtime dans un idiome aussi proche que possible du C++ moderne. Utilisez C++/CX pour écrire des applications et des composants Windows en code natif qui interagissent facilement avec Visual C#, Visual Basic et JavaScript, ainsi que d’autres langages qui prennent en charge le Windows Runtime. Dans ces cas rares qui requièrent un accès direct aux interfaces COM brutes ou du code non exceptionnel, vous pouvez utiliser le [Windows Runtime C++ Template Library (WRL)](./wrl/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
 > **/WinRT est l’alternative recommandée à C++/CX. [ C++](/windows/uwp/cpp-and-winrt-apis/index)** Il s’agit d’une nouvelle projection standard du langage C++ 17 pour les API Windows Runtime, disponible dans le dernier Kit de développement logiciel (SDK) Windows 10 à partir de la version 1803. C++/WinRT est entièrement implémenté dans les fichiers d’en-tête et conçu pour vous fournir un accès de première classe à l’API Windows moderne.

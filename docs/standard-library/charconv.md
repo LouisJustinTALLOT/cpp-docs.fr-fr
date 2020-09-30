@@ -5,12 +5,12 @@ f1_keywords:
 - <charconv>
 helpviewer_keywords:
 - charconv header
-ms.openlocfilehash: 59807749105512e0eb61acfdf60ef463febbc3a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9dfb8e18a8f7fd367ec4f6b52b1a0af74b3f939
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87246107"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507714"
 ---
 # <a name="ltcharconvgt"></a>&lt;charconv&gt;
 
@@ -27,7 +27,7 @@ Voici quelques-uns des avantages de l’utilisation de la `<charconv>` biblioth�
 - Les conversions ne sont pas sensibles au mode d’arrondi du Runtime.
 - Les conversions ne prennent pas en charge les paramètres régionaux. Ils impriment et analysent toujours les points décimaux comme'. 'jamais comme', 'pour les paramètres régionaux qui utilisent des virgules.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<charconv>
 
@@ -55,4 +55,3 @@ Voici quelques-uns des avantages de l’utilisation de la `<charconv>` biblioth�
 ## <a name="see-also"></a>Voir aussi
 
 [Informations de référence sur les fichiers d’en-tête](cpp-standard-library-header-files.md)
-

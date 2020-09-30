@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3171
 ms.assetid: 1ce26997-7ef1-4c9f-84da-003ea1a4251e
-ms.openlocfilehash: a3af19fa6b4f4def9bb42325f648109cfafcdaef
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 14f0cedc5448005a29d74f05ae3e68e74eb5cf1c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761749"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508301"
 ---
 # <a name="compiler-error-c3171"></a>Erreur du compilateur C3171
 
 'module' : impossible de spécifier des attributs de module différents dans un projet
 
-les attributs de [module](../../windows/module-cpp.md) avec différentes listes de paramètres ont été trouvés dans deux des fichiers d’une compilation. Un seul attribut `module` unique peut être spécifié par compilation.
+les attributs de [module](../../windows/attributes/module-cpp.md) avec différentes listes de paramètres ont été trouvés dans deux des fichiers d’une compilation. Un seul `module` attribut unique peut être spécifié par compilation.
 
-Des attributs de `module` identiques peuvent être spécifiés dans plusieurs fichiers de code source.
+Des `module` attributs identiques peuvent être spécifiés dans plusieurs fichiers de code source.
 
-Par exemple, si les attributs `module` suivants ont été trouvés :
+Par exemple, si les `module` attributs suivants ont été trouvés :
 
 ```cpp
 // C3171.cpp

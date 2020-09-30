@@ -42,18 +42,18 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: be2923c98ed1b92d4aeb2692591abcaf9f13c5ec
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352750"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508832"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Comment : ajouter, modifier ou supprimer des contrôles (C++)
 
 À l’aide de l' **éditeur de boîtes de dialogue**, vous pouvez ajouter, redimensionner, modifier et supprimer des contrôles dans les boîtes de dialogue. Vous pouvez également modifier les propriétés d’un contrôle, telles que son ID, ou bien son affichage initial au moment de l’exécution.
 
-L’onglet **éditeur de boîtes de dialogue** s’affiche dans la [fenêtre boîte à outils](/visualstudio/ide/reference/toolbox) lorsque vous travaillez dans l' **éditeur de boîtes de dialogue**. Vous pouvez également personnaliser la fenêtre **boîte à outils** pour une utilisation plus facile. Pour plus d’informations, consultez [utilisation de la boîte à outils](/visualstudio/ide/using-the-toolbox) et [afficher ou masquer la fenêtre boîte à outils](showing-or-hiding-the-dialog-editor-toolbar.md).
+L’onglet **éditeur de boîtes de dialogue** s’affiche dans la [fenêtre boîte à outils](/visualstudio/ide/reference/toolbox) lorsque vous travaillez dans l' **éditeur de boîtes de dialogue**. Vous pouvez également personnaliser la fenêtre **boîte à outils** pour une utilisation plus facile. Pour plus d’informations, consultez [utilisation de la boîte à outils](/visualstudio/ide/using-the-toolbox) et [afficher ou masquer la fenêtre boîte à outils](./dialog-editor.md).
 
 > [!TIP]
 > Lorsque vous utilisez l' **éditeur de boîtes de dialogue**, dans de nombreux cas, vous pouvez sélectionner le bouton droit de la souris pour afficher un menu contextuel des commandes fréquemment utilisées.
@@ -94,7 +94,7 @@ L’onglet **éditeur de boîtes de dialogue** s’affiche dans la [fenêtre bo�
 1. Relâchez le bouton de la souris. Le contrôle se règle sur la boîte de dialogue dans la taille que vous avez spécifiée.
 
 > [!TIP]
-> Vous pouvez redimensionner le contrôle après l’avoir déposé dans la boîte de dialogue en déplaçant les poignées de redimensionnement sur la bordure du contrôle. Pour plus d’informations, consultez [dimensionnement de contrôles individuels](../windows/sizing-individual-controls.md).
+> Vous pouvez redimensionner le contrôle après l’avoir déposé dans la boîte de dialogue en déplaçant les poignées de redimensionnement sur la bordure du contrôle. Pour plus d’informations, consultez [dimensionnement de contrôles individuels](./arrangement-of-controls-on-dialog-boxes.md).
 
 ### <a name="to-add-a-custom-control"></a>Pour ajouter un contrôle personnalisé
 
@@ -129,7 +129,7 @@ Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue. Sél
 
 1. Tout en appuyant sur la touche **CTRL** , double-cliquez sur le contrôle de boîte de dialogue.
 
-   L' [Assistant Ajout de variable membre](../ide/add-member-variable-wizard.md) s’affiche.
+   L' [Assistant Ajout de variable membre](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard) s’affiche.
 
 1. Tapez les informations appropriées dans l’Assistant **Ajout de variable membre** . Pour plus d’informations, consultez [échange de données de boîtes de dialogue](../mfc/dialog-data-exchange.md).
 
@@ -146,7 +146,7 @@ Dans la boîte de dialogue, sélectionnez le contrôle, appuyez sur la touche **
 
 ## <a name="other-issues"></a>Autres problèmes
 
-### <a name="troubleshooting"></a>Dépannage
+### <a name="troubleshooting"></a>Résolution des problèmes
 
 Une fois que vous avez ajouté un contrôle commun ou un contrôle RichEdit à une boîte de dialogue, il n’apparaît pas lorsque vous testez la boîte de dialogue. Ou la boîte de dialogue elle-même ne s’affiche pas. Par exemple :
 
@@ -207,7 +207,7 @@ Avec Visual Studio, vous pouvez insérer des contrôles ActiveX dans votre boît
 
 La boîte de dialogue **Insérer un contrôle ActiveX** vous permet d’insérer des contrôles ActiveX dans votre boîte de dialogue tout en utilisant l' [éditeur de boîtes de dialogue](dialog-editor.md). Cette boîte de dialogue contient les propriétés suivantes :
 
-|Property|Description|
+|Propriété|Description|
 |---|---|
 |**Contrôle ActiveX**|Affiche la liste des contrôles ActiveX.<br/><br/>L’insertion d’un contrôle à partir de cette boîte de dialogue ne génère pas de classe wrapper. Si vous avez besoin d’une classe wrapper, utilisez [affichage de classes](/visualstudio/ide/viewing-the-structure-of-code) pour en créer une, consultez [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md).<br/><br/>Si un contrôle ActiveX n’apparaît pas dans cette boîte de dialogue, essayez d’installer le contrôle conformément aux instructions du fournisseur.|
 |**Chemin d’accès**|Affiche le fichier dans lequel le contrôle ActiveX est trouvé.|
@@ -241,7 +241,7 @@ Les contrôles ActiveX fournis par des fournisseurs indépendants peuvent être 
 > [!NOTE]
 > Cette procédure s’applique à l’utilisation de la page de propriétés pour modifier les contrôles ActiveX. Vous pouvez également parcourir et modifier les propriétés ActiveX dans la nouvelle fenêtre **Propriétés** .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

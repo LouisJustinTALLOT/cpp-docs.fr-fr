@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 449fc2ddabc2bcf5b9b9f130a5e6816cdf4bc98d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2d4473e3682a6e00e0eef61cb73d7450976bcc0c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685513"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507733"
 ---
 # <a name="tutorial-windows-performance-analyzer-basics"></a>Didacticiel : notions de base de l’analyseur de performances Windows
 
@@ -59,8 +59,8 @@ Cette image montre un exemple de graphique à barres d’un appel de lien. Nous 
 ## <a name="see-also"></a>Voir aussi
 
 [Didacticiel : vcperf et analyseur de performances Windows](vcperf-and-wpa.md)\
-[Référence : commandes vcperf](/cpp/build-insights/reference/vcperf-commands)\
-[Référence : vues de l’analyseur de performances Windows](/cpp/build-insights/reference/wpa-views)\
+[Référence : commandes vcperf](../reference/vcperf-commands.md)\
+[Référence : vues de l’analyseur de performances Windows](../reference/wpa-views.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

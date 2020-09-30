@@ -4,18 +4,18 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f9876a2ce164d0a129ba21405ec61fdcbbd8de91
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845157"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507476"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Utiliser des ensembles de règles pour spécifier les règles C++ à exécuter
 
 Dans Visual Studio, vous pouvez créer et modifier un *ensemble de règles* personnalisé pour répondre à des besoins de projet spécifiques associés à l’analyse du code. Les ensembles de règles par défaut sont stockés dans *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* .
 
-**Visual Studio 2017 version 15,7 et versions ultérieures :** Vous pouvez créer des ensembles de règles personnalisés à l’aide de n’importe quel éditeur de texte et les appliquer dans les builds de ligne de commande, quel que soit le système de génération que vous utilisez. Pour plus d’informations, consultez [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis).
+**Visual Studio 2017 version 15,7 et versions ultérieures :** Vous pouvez créer des ensembles de règles personnalisés à l’aide de n’importe quel éditeur de texte et les appliquer dans les builds de ligne de commande, quel que soit le système de génération que vous utilisez. Pour plus d’informations, consultez [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md).
 
 Pour créer un ensemble de règles C++ personnalisé dans Visual Studio, un projet C/C++ doit être ouvert dans l’IDE de Visual Studio. Vous ouvrez ensuite un ensemble de règles standard dans l’éditeur d’ensembles de règles, puis vous ajoutez ou supprimez des règles spécifiques et, éventuellement, vous modifiez l’action qui se produit lorsque l’analyse du code détermine qu’une règle a été violée.
 
@@ -98,7 +98,7 @@ Pour créer un ensemble de règles personnalisé, enregistrez-le à l’aide d�
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Pour créer un ensemble de règles dans un éditeur de texte
 
-Vous pouvez créer un ensemble de règles personnalisé dans un éditeur de texte, le stocker dans n’importe quel emplacement avec une *`.ruleset`* extension et l’appliquer à l’aide de l' [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) option du compilateur.
+Vous pouvez créer un ensemble de règles personnalisé dans un éditeur de texte, le stocker dans n’importe quel emplacement avec une *`.ruleset`* extension et l’appliquer à l’aide de l' [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) option du compilateur.
 
 L’exemple suivant montre un fichier d’ensemble de règles de base que vous pouvez utiliser comme point de départ :
 
