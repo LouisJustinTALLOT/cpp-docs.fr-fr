@@ -1,18 +1,20 @@
 ---
 title: Performances des bibliothèques multithread
+description: Vue d’ensemble de la façon d’optimiser les performances à partir des bibliothèques multithread du runtime C de Microsoft.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - threading [C++], performance
 - libraries, multithreaded
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: edfbbf3055e9023c74cf0e154577d4b1853f557b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748359"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590197"
 ---
 # <a name="multithreaded-libraries-performance"></a>Performances des bibliothèques multithread
 
@@ -36,4 +38,4 @@ Les performances des bibliothèques multithread ont été améliorées et sont p
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+[Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)

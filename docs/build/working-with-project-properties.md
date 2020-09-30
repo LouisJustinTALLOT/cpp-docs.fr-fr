@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 17b54311670f78cda78403c273cfbf57d43e84da
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3ee6b21cc1bcb8e33bc76d2efab58808bfc0aa2b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042184"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589872"
 ---
 # <a name="set-compiler-and-build-properties"></a>Définir des propriétés de build et de compilateur
 
@@ -117,7 +117,7 @@ Effectuer une recherche uniquement dans les valeurs (la sous-chaîne ne respecte
 
 ## <a name="set-environment-variables-for-a-build"></a>Définir des variables d’environnement pour une build
 
-Le compilateur MSVC (cl.exe) reconnaît certaines variables d’environnement, plus spécifiquement LIB, LIBPATH, PATH et INCLUDe. Lorsque vous générez avec l’IDE, les propriétés définies dans la page de propriétés de la page de propriétés [Répertoires VC + +](reference/vcpp-directories-property-page.md) sont utilisées pour définir ces variables d’environnement. Si les valeurs LIB, LIBPATH et INCLUDE ont déjà été définies, par exemple par une invite de commandes développeur, elles sont remplacées par les valeurs des propriétés MSBuild correspondantes. La génération ajoute ensuite la valeur de la propriété de répertoires d'exécutables Répertoires VC++ à PATH. Vous pouvez définir une variable d’environnement définie par l’utilisateur en définissant une macro définie par l’utilisateur, puis en activant la case à cocher **définir cette macro en tant que variable d’environnement dans l’environnement de génération**.
+Le compilateur MSVC (cl.exe) reconnaît certaines variables d’environnement, plus spécifiquement LIB, LIBPATH, PATH et INCLUDe. Lorsque vous générez avec l’IDE, les propriétés définies dans la page de propriétés de la page de propriétés [Répertoires VC + +](reference/vcpp-directories-property-page.md) sont utilisées pour définir ces variables d’environnement. Si les valeurs LIB, LIBPATH et INCLUDE ont déjà été définies, par exemple par une invite de commandes développeur, elles sont remplacées par les valeurs des propriétés MSBuild correspondantes. La génération ajoute ensuite la valeur de la propriété de répertoires d'exécutables Répertoires VC++ à PATH. Vous pouvez définir une variable d’environnement définie par l’utilisateur en créant une macro définie par l’utilisateur, puis en activant la case à cocher **définir cette macro en tant que variable d’environnement dans l’environnement de génération**.
 
 ## <a name="set-environment-variables-for-a-debugging-session"></a>Définir des variables d’environnement pour une session de débogage
 
@@ -125,7 +125,7 @@ Dans le volet gauche de la boîte de dialogue **pages de propriétés** du proje
 
 Dans le volet droit, modifiez les paramètres de projet **environnement** ou fusion de l' **environnement** , puis choisissez le bouton **OK** .
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 [Partager ou réutiliser les paramètres de projet Visual Studio](create-reusable-property-configurations.md)<br/>
 Comment créer un fichier. props avec des paramètres de build personnalisés qui peuvent être partagés ou réutilisés.

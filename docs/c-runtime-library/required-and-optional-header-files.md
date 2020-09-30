@@ -1,18 +1,20 @@
 ---
 title: Fichiers d'en-tête requis et facultatifs
+description: Quand utiliser les fichiers d’en-tête requis et facultatifs de la bibliothèque Runtime C Microsoft.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - c.headers
 helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-ms.openlocfilehash: 8d1547ae7dd3b6adb33271e93e85022f04859886
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 79a45aaba5e2872b23e70f3fd276d6f3cae11167
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211604"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589807"
 ---
 # <a name="required-and-optional-header-files"></a>Fichiers d'en-tête requis et facultatifs
 

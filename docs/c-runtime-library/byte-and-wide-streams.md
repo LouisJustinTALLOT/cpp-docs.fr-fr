@@ -1,18 +1,20 @@
 ---
 title: Flux d'octets et flux larges
+description: Vue d’ensemble des flux d’octets dans la bibliothèque Runtime C de Microsoft.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - Byte and Wide Streams
 helpviewer_keywords:
 - byte streams
 - wide streams
 ms.assetid: 61ef0587-4cbc-4eb8-aae5-4c298dbbc6f9
-ms.openlocfilehash: 67de6b609b3e0546d539ef9c37f12db1067546ad
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 38949206e65ff84836b9a3e83b78723adfe30582
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739366"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590275"
 ---
 # <a name="byte-and-wide-streams"></a>Flux d'octets et flux larges
 

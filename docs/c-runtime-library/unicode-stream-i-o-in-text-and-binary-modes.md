@@ -1,5 +1,7 @@
 ---
 title: E/S de flux Unicode en modes texte et binaire
+description: Description des conversions de caractères avec les e/s de flux Unicode.
+ms.topic: conceptual
 ms.date: 11/04/2016
 helpviewer_keywords:
 - stream I/O routines
@@ -7,12 +9,12 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: b41818bbb625a8c875771e86e3d82b74f4291e9f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9c4ef7da54463021f9487849df0235ae289e38fa
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444502"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590236"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>E/S de flux Unicode en modes texte et binaire
 

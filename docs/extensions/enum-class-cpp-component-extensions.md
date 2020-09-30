@@ -3,12 +3,12 @@ title: classe enum (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219714"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590314"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>classe enum (C++/CLI et C++/CX)
 
@@ -59,13 +59,13 @@ Pour plus d’informations et d’exemples, consultez [Énumérations](../cppcx/
 
 Notez que le compilateur émet des messages d’erreur si l’expression constante qui définit la valeur d’un énumérateur ne peut pas être représentée par *underlying-type*.  Cependant, le compilateur ne signale pas d’erreur pour une valeur non appropriée pour le type sous-jacent. Par exemple :
 
-- Si *underlying-type* a la valeur numeric et qu’un énumérateur spécifie la valeur maximale pour ce type, la valeur de la prochaine énumération définie implicitement ne peut pas être représentée.
+- Si le *type sous-jacent* est numérique et qu’un énumérateur spécifie la valeur maximale pour ce type, la valeur de l’énumération implicitement définie suivante ne peut pas être représentée.
 
 - Si le *type sous-jacent* est **`bool`** , et que plus de deux énumérateurs sont implicitement définis, les énumérateurs qui suivent les deux premiers ne peuvent pas être représentés.
 
 - Si *underlying-type* a la valeur `char16`et que la valeur d’énumération est comprise entre 0xD800 et 0xDFFF, la valeur peut être représentée. Cependant, la valeur est logiquement incorrecte, car elle représente la moitié d’une paire de substitution Unicode et ne doit pas apparaître de façon isolée.
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Exigences
 
 Option du compilateur : `/ZW`
 
@@ -174,7 +174,7 @@ Pour plus d’informations sur les énumérations CLR, consultez :
 
 - [Type sous-jacent d’une énumération](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)
 
-### <a name="requirements"></a>Spécifications
+### <a name="requirements"></a>Exigences
 
 Option du compilateur : `/clr`
 

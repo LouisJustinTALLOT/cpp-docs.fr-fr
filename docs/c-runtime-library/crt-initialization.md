@@ -1,25 +1,27 @@
 ---
 title: Initialisation du CRT
+description: Décrit comment le CRT Initialise l’état global dans le code natif.
+ms.topic: conceptual
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 25f1e2a7e5b7d91c729bb45bd79ba9a8720cead1
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446688"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589768"
 ---
 # <a name="crt-initialization"></a>Initialisation du CRT
 
-Cette rubrique décrit comment la bibliothèque CRT initialise les états globaux dans le code natif.
+Cette rubrique décrit comment le CRT Initialise l’état global dans le code natif.
 
 Par défaut, l’éditeur de liens inclut la bibliothèque CRT, qui fournit son propre code de démarrage. Ce code de démarrage initialise la bibliothèque CRT, appelle les initialiseurs globaux, puis appelle la fonction `main` fournie par l’utilisateur pour les applications console.
 
 ## <a name="initializing-a-global-object"></a>Initialisation d’un objet global
 
-Examinons le code ci-dessous.
+Considérez le code suivant :
 
 ```
 int func(void)
@@ -37,11 +39,11 @@ int main()
 
 Selon la norme C/C++, `func()` doit être appelé avant l’exécution de `main()`. Mais qui l’appelle ?
 
-Une façon de déterminer cela consiste à définir un point d’arrêt dans `func()`, de déboguer l’application et d’examiner la pile. Cela est possible, car le code source de la bibliothèque CRT est inclus avec Visual Studio.
+Une façon de déterminer l’appelant consiste à définir un point d’arrêt dans `func()` , à déboguer l’application et à examiner la pile. Cela est possible, car le code source de la bibliothèque CRT est inclus avec Visual Studio.
 
-Lorsque vous parcourez les fonctions sur la pile, vous constaterez que la bibliothèque CRT effectue une boucle dans une liste de pointeurs de fonction et appelle chacun de ces fonctions lorsqu’il les rencontre. Ces fonctions sont similaires à `func()` ou aux constructeurs pour les instances de classe.
+Lorsque vous parcourez les fonctions sur la pile, vous verrez que le CRT appelle une liste de pointeurs de fonction. Ces fonctions sont similaires aux `func()` constructeurs ou aux instances de classe.
 
-La bibliothèque CRT obtient la liste des pointeurs de fonction du compilateur Microsoft C++. Lorsque le compilateur détecte un initialiseur global, il génère un initialiseur dynamique dans la section `.CRT$XCU` (où `CRT` est le nom de section et `XCU` est le nom du groupe). Pour obtenir une liste de ces initialiseurs dynamiques, exécutez la commande **dumpbin /all main.obj**, puis recherchez la section `.CRT$XCU` (lorsque main.cpp est compilé dans un fichier C++, et non un fichier C). Il sera semblable à ce qui suit :
+La bibliothèque CRT obtient la liste des pointeurs de fonction du compilateur Microsoft C++. Quand le compilateur voit un initialiseur global, il génère un initialiseur dynamique dans la `.CRT$XCU` section où `CRT` est le nom de la section et `XCU` est le nom du groupe. Pour obtenir une liste d’initialiseurs dynamiques, exécutez la commande **DUMPBIN/all main. obj**, puis recherchez la `.CRT$XCU` section. Cela s’applique lorsque main. cpp est compilé en tant que fichier C++, et non en tant que fichier C. Elle est similaire à l’exemple suivant :
 
 ```
 SECTION HEADER #6
@@ -63,10 +65,10 @@ RAW DATA #6
   00000000: 00 00 00 00                                      ....
 
 RELOCATIONS #6
-                                                Symbol    Symbol
+                                               Symbol    Symbol
 Offset    Type              Applied To         Index     Name
---------  ----------------  -----------------  --------  ------
-00000000  DIR32                      00000000         C  ??__Egi@@YAXXZ (void __cdecl `dynamic initializer for 'gi''(void))
+--------  ----------------  -----------------  --------  -------
+00000000  DIR32             00000000           C         ??__Egi@@YAXXZ (void __cdecl `dynamic initializer for 'gi''(void))
 ```
 
 La bibliothèque CRT définit deux pointeurs :
@@ -75,11 +77,11 @@ La bibliothèque CRT définit deux pointeurs :
 
 - `__xc_z` dans `.CRT$XCZ`
 
-Les deux groupes n’ont pas d’autres symboles définis à l’exception de `__xc_a` et `__xc_z`.
+Aucun groupe n’a d’autres symboles définis à l’exception `__xc_a` de et `__xc_z` .
 
 Maintenant, lorsque l’éditeur de liens lit différents groupes `.CRT`, il les regroupe dans une section et les trie par ordre alphabétique. Cela signifie que les initialiseurs globaux définis par l’utilisateur (que le compilateur Microsoft C++ place dans `.CRT$XCU`) viendront toujours après `.CRT$XCA` et avant `.CRT$XCZ`.
 
-La section ressemble à ce qui suit :
+La section doit ressembler à l’exemple suivant :
 
 ```
 .CRT$XCA
@@ -91,8 +93,8 @@ La section ressemble à ce qui suit :
             __xc_z
 ```
 
-Par conséquent, la bibliothèque CRT utilise à la fois `__xc_a` et `__xc_z` pour déterminer le début et la fin de la liste d’initialiseurs globaux en raison de la façon de laquelle ils sont disposés en mémoire une fois que l’image est chargée.
+Par conséquent, la bibliothèque CRT utilise `__xc_a` à la fois et `__xc_z` pour déterminer le début et la fin de la liste des initialiseurs globaux en raison de la façon dont ils sont disposés en mémoire après le chargement de l’image.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+[Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)

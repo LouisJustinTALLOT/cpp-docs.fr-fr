@@ -2,18 +2,19 @@
 title: Recommandations relatives au choix entre une fonction et une macro
 description: Explique les différences entre l’utilisation des macros et des fonctions dans la bibliothèque Microsoft C Runtime (CRT).
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - c.functions
 helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-ms.openlocfilehash: 67dafc0a9a2c2904fcdd30d5e0177251af8a190a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8791baf8e8645e0044ff180485ac7935b8ffa3f5
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500729"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589703"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Recommandations relatives au choix entre une fonction et une macro
 

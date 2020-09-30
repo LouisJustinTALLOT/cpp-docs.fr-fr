@@ -1,17 +1,19 @@
 ---
 title: Utilisation de types de données TCHAR.H avec _MBCS
+description: Vue d’ensemble de la façon dont les routines de texte Microsoft C Runtime sont mappées lorsque vous utilisez TCHAR. H types de données avec la constante multioctets _MBCS.
+ms.topic: conceptual
 ms.date: 11/04/2016
 helpviewer_keywords:
 - TCHAR.H data types
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: d1aab0c21a348e4b1a6e85a7adb7f7f8ea1587b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 001f745c03e4e0c0090e40c00c5394397028659f
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87188633"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589950"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs"></a>Utilisation de types de données TCHAR.H avec _MBCS
 
@@ -31,7 +33,7 @@ Voici les trois solutions pour empêcher ce conflit de types (et les avertisseme
    char *_tcsrev(char *);
    ```
 
-   Dans le cas par défaut, le prototype de **_tcsrev** est mappé à **_mbsrev** via un thunk dans LIBC.LIB. Cela transforme les types des paramètres entrants **_mbsrev** et la valeur sortante de **_TCHAR &#42;** (comme **char &#42;**) en **unsigned char &#42;**. Cette méthode garantit la correspondance de types lorsque vous utilisez **_TCHAR**, mais elle est relativement lente en raison de la surcharge d’appels de fonction.
+   Dans le cas par défaut, le prototype de **_tcsrev** est mappé à **_mbsrev** via un thunk dans LIBC.LIB. Cela transforme les types des paramètres entrants **_mbsrev** et la valeur sortante de **_TCHAR &#42;** (comme **char &#42;**) en **unsigned char &#42;**. Cette méthode garantit la correspondance de type lorsque vous utilisez **_TCHAR**, mais elle est relativement lente en raison de la surcharge de l’appel de fonction.
 
 - Utilisez la fonction inline en incorporant l’instruction du préprocesseur suivante dans votre code.
 
@@ -54,17 +56,17 @@ Voici les trois solutions pour empêcher ce conflit de types (et les avertisseme
    #define _MB_MAP_DIRECT
    ```
 
-   Cette approche constitue une alternative rapide si vous ne souhaitez pas utiliser le comportement par défaut ou que vous ne pouvez pas utiliser l’incorporation. La routine de texte générique est alors mappée par une macro directement sur la version MBCS de la routine, comme dans l’exemple suivant de TCHAR.H.
+   Cette approche offre une alternative rapide si vous ne souhaitez pas utiliser le comportement par défaut ou si vous ne pouvez pas utiliser l’incorporation. Une macro mappe la routine de texte générique à la version MBCS de la routine, comme dans l’exemple suivant de TCHAR. H.
 
    ```C
    #define _tcschr _mbschr
    ```
 
-Lorsque vous adoptez cette approche, vous devez veiller à vous assurer que les types de données appropriés sont utilisés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique **_TXCHAR**. **_TXCHAR** est mappée au type **`char`** dans le code SBCS mais est mappée au type **`unsigned char`** dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md).
+Lorsque vous adoptez cette approche, veillez à vous assurer que les types de données appropriés sont utilisés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique **_TXCHAR**. **_TXCHAR** est mappée au type **`char`** dans le code SBCS mais est mappée au type **`unsigned char`** dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md).
 
 **FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Internationalisation](../c-runtime-library/internationalization.md)<br/>
-[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Internationalisation](../c-runtime-library/internationalization.md)\
+[Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)

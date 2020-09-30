@@ -1,6 +1,8 @@
 ---
 title: Conformité ANSI C
+description: Vue d’ensemble des conventions d’affectation de noms Microsoft C Runtime pour la conformité ANSI C.
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - Ansi
 helpviewer_keywords:
@@ -13,12 +15,12 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-ms.openlocfilehash: 7a4462e84ec01bd236849c6aed024b636b315243
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 39a3f9299be7dbef4783faa8e6d08fe6ad8461f5
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742822"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590301"
 ---
 # <a name="ansi-c-compliance"></a>Conformité ANSI C
 

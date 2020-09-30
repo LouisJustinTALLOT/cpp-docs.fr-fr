@@ -1,6 +1,8 @@
 ---
 title: Fonctionnalités de sécurité dans le CRT
-ms.date: 11/04/2016
+description: Vue d’ensemble des fonctions CRT sécurisées dans le runtime C de Microsoft.
+ms.date: 09/29/2020
+ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
@@ -24,28 +26,28 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 963f5510350aa3be25586811889189d28a5f7b66
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361010"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589885"
 ---
 # <a name="security-features-in-the-crt"></a>Fonctionnalités de sécurité dans le CRT
 
 De nombreuses anciennes fonctions CRT ont de nouvelles versions plus sécurisées. Si une fonction sécurisée existe, l'ancienne version moins sécurisée est marquée comme déconseillée et la nouvelle version a le suffixe `_s` ("sécurisé").
 
-Dans ce contexte, le terme "déconseillé" signifie simplement que l'utilisation d'une fonction n'est pas recommandée ; il n'indique pas que la fonction est programmée pour être supprimée du CRT.
+Dans ce contexte, « déconseillé » signifie que l’utilisation de la fonction n’est pas recommandée. Cela ne signifie pas que la fonction est planifiée pour être supprimée du CRT.
 
-Les fonctions sécurisées n'empêchent pas ni ne corrigent les erreurs de sécurité ; en revanche, elles interceptent les erreurs lorsqu'elles se produisent. Elles effectuent des contrôles supplémentaires pour les conditions d'erreur et, en cas d'erreur, elles appellent un gestionnaire d'erreurs (consultez [Validation de paramètres](../c-runtime-library/parameter-validation.md)).
+Les fonctions sécurisées n’empêchent pas ni ne corrigent les erreurs de sécurité. Au lieu de cela, ils interceptent les erreurs lorsqu’ils se produisent. Elles effectuent des vérifications supplémentaires pour les conditions d’erreur. En cas d’erreur, elles appellent un gestionnaire d’erreurs (consultez [validation de paramètre](../c-runtime-library/parameter-validation.md)).
 
-Par exemple, la fonction `strcpy` n'a aucun moyen de déterminer si la chaîne qu'elle copie est trop volumineuse pour sa mémoire tampon de destination. Toutefois, sa fonction sécurisée équivalente, `strcpy_s`, prend la taille de la mémoire tampon comme paramètre, ce qui lui permet de déterminer si un dépassement de mémoire tampon se produit. Si vous utilisez la fonction `strcpy_s` pour copier onze caractères dans une mémoire tampon de dix caractères, il s'agit d'une erreur de votre part. La fonction `strcpy_s` ne peut pas corriger votre erreur, mais elle peut la détecter et vous en informer en appelant le gestionnaire de paramètre non valide.
+Par exemple, la `strcpy` fonction ne peut pas déterminer si la chaîne qu’elle copie est trop grande pour la mémoire tampon de destination. Son équivalent sécurisé, `strcpy_s` , prend la taille de la mémoire tampon en tant que paramètre. Il peut ainsi déterminer si un dépassement de mémoire tampon se produit. Si vous utilisez `strcpy_s` pour copier 11 caractères dans une mémoire tampon de 10 caractères, il s’agit d’une erreur de votre part, vous `strcpy_s` ne pouvez pas corriger votre erreur. Mais il peut détecter votre erreur et vous en informer en appelant le gestionnaire de paramètre non valide.
 
 ## <a name="eliminating-deprecation-warnings"></a>Suppression des avertissements de désapprobation
 
-Il existe plusieurs façons de supprimer les avertissements de désapprobation pour les anciennes fonctions moins sécurisées. La méthode la plus simple est de définir `_CRT_SECURE_NO_WARNINGS` ou d'utiliser le pragma [warning](../preprocessor/warning.md). Les deux options désactivent les avertissements de désapprobation, mais bien évidemment, les problèmes de sécurité à l'origine des avertissements existent toujours. Il est préférable de laisser les avertissements de désapprobation activés et de tirer parti des nouvelles fonctionnalités de sécurité CRT.
+Il existe plusieurs façons de supprimer les avertissements de désapprobation pour les anciennes fonctions moins sécurisées. La méthode la plus simple est de définir `_CRT_SECURE_NO_WARNINGS` ou d'utiliser le pragma [warning](../preprocessor/warning.md). Désactivez les avertissements de désapprobation, mais les problèmes de sécurité qui ont provoqué les avertissements existent toujours. Il est préférable de conserver les avertissements de désapprobation activés et de tirer parti des nouvelles fonctionnalités de sécurité CRT.
 
-En C++, la méthode la plus simple est d'utiliser [Sécuriser les surcharges de modèle](../c-runtime-library/secure-template-overloads.md), qui dans de nombreux cas supprime les avertissements de désapprobation en remplaçant les appels aux fonctions déconseillées par des appels aux nouvelles versions sécurisées de ces fonctions. Par exemple, prenez l'appel déconseillé à `strcpy` :
+En C++, le moyen le plus simple de le faire consiste à utiliser des [surcharges de modèle sécurisées](../c-runtime-library/secure-template-overloads.md). Cela élimine les avertissements de désapprobation, dans de nombreux cas, en remplaçant les appels aux fonctions déconseillées par des appels à des versions sécurisées de ces fonctions. Par exemple, prenez l'appel déconseillé à `strcpy` :
 
 ```
 char szBuf[10];
@@ -60,25 +62,23 @@ Une autre source d'avertissements de désapprobation, sans rapport avec la sécu
 
 ## <a name="additional-security-features"></a>Fonctionnalités de sécurité supplémentaires
 
-Voici quelques-unes des fonctions de sécurité :
+Voici quelques-unes des fonctionnalités de sécurité :
 
-- `Parameter Validation`. Les paramètres passés aux fonctions CRT sont validés, dans les fonctions sécurisées et dans de nombreuses versions préexistantes de ces fonctions. Ces validations sont :
+- `Parameter Validation`. Les fonctions sécurisées, ainsi que la plupart de leurs équivalents non sécurisés, valident les paramètres. La validation peut inclure :
 
-  - Vérifier les valeurs **NULL** passées aux fonctions.
-
+  - Vérification de la présence de valeurs **null** .
   - Vérifier la validité des valeurs énumérées.
-
   - Vérifier que les valeurs intégrales sont comprises dans des plages valides.
 
 - Pour plus d’informations, consultez [Validation de paramètre](../c-runtime-library/parameter-validation.md).
 
-- Un gestionnaire de paramètres non valides est également accessible au développeur. Lorsqu'un paramètre non valide est détecté, au lieu de déclarer et de quitter l'application, le CRT fournit un moyen de vérifier ces problèmes avec la fonction [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+- Un gestionnaire de paramètres non valides est également accessible au développeur. Lorsqu’une fonction rencontre un paramètre non valide, au lieu de déclarer et de quitter l’application, le CRT vous permet de vérifier ces problèmes via [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-- `Sized Buffers`. Les fonctions sécurisées requièrent que la taille de la mémoire tampon soit passée à une fonction qui écrit dans une mémoire tampon. Les versions sécurisées valident que la mémoire tampon est assez large avant d'y écrire, ce qui permet d'éviter de graves erreurs de dépassement de mémoire tampon qui peuvent autoriser l'exécution de code malveillant. Ces fonctions retournent généralement le type de code d'erreur `errno` et appellent le gestionnaire de paramètre non valide si la taille de la mémoire tampon est trop petite. Les fonctions qui lisent les mémoires tampons d'entrée, telles que `gets`, ont des versions sécurisées qui nécessitent que vous spécifiez une taille maximale.
+- `Sized Buffers`. Vous devez passer la taille de la mémoire tampon à toute fonction sécurisée qui écrit dans une mémoire tampon. Les versions sécurisées valident que la mémoire tampon est suffisamment grande pour pouvoir y écrire. Ce qui permet d’éviter les erreurs de dépassement de mémoire tampon dangereuses qui pourraient permettre l’exécution de code malveillant. Ces fonctions retournent généralement un `errno` code d’erreur et appellent le gestionnaire de paramètre non valide si la taille de la mémoire tampon est trop petite. Les fonctions qui lisent les mémoires tampons d'entrée, telles que `gets`, ont des versions sécurisées qui nécessitent que vous spécifiez une taille maximale.
 
-- `Null termination`. Certaines fonctions qui laissent des chaines potentiellement non terminées ont des versions sécurisées qui garantissent que ces chaînes se terminent correctement par null.
+- `Null termination`. Certaines fonctions qui ont quitté des chaînes potentiellement non terminées ont des versions sécurisées qui garantissent que les chaînes se terminent correctement par un caractère null.
 
-- `Enhanced error reporting`. Les fonctions sécurisées retournent des codes d'erreur contenant plus d'informations sur les erreurs que dans les fonctions préexistantes. Les fonctions sécurisées et de nombreuses fonctions préexistantes définissent désormais `errno` et retournent souvent le type de code `errno`, pour fournir un meilleur rapport d'erreurs.
+- `Enhanced error reporting`. Les fonctions sécurisées retournent des codes d’erreur avec davantage d’informations d’erreur que celles disponibles avec les fonctions préexistantes. Les fonctions sécurisées et de nombreuses fonctions préexistantes sont désormais définies `errno` et retournent souvent un `errno` type de code, pour fournir un meilleur rapport d’erreurs.
 
 - `Filesystem security`. Les API d'E/S de fichier sécurisées prennent en charge par défaut l'accès sécurisé aux fichiers.
 
@@ -88,6 +88,6 @@ Voici quelques-unes des fonctions de sécurité :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Validation des paramètres](../c-runtime-library/parameter-validation.md)<br/>
-[Surcharges de modèle sécurisées](../c-runtime-library/secure-template-overloads.md)<br/>
-[Caractéristiques de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+[Validation de paramètre](../c-runtime-library/parameter-validation.md)<br/>
+[Sécuriser les surcharges de modèle](../c-runtime-library/secure-template-overloads.md)<br/>
+[Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)

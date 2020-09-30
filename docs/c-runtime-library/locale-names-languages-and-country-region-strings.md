@@ -1,5 +1,7 @@
 ---
 title: Noms des paramètres régionaux, langues et chaînes de pays-régions
+description: Vue d’ensemble de l’utilisation des chaînes de paramètres régionaux du CRT universel Microsoft, de la langue et du pays et de la région.
+ms.topic: conceptual
 ms.date: 12/10/2018
 helpviewer_keywords:
 - country/region strings
@@ -8,12 +10,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: c7695b3e51eac44853dc89a0f2a683192562cea2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fabb3cd584af6f6e19e2ac3444c76bede299dc8d
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505621"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589924"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>Chaînes relatives aux noms des paramètres régionaux UCRT, aux langues et au pays/à la région
 

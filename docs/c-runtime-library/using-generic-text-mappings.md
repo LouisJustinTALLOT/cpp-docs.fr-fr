@@ -1,5 +1,7 @@
 ---
 title: Utilisation des mappages de texte générique
+description: Présentation des mappages spécifiques à Microsoft pour les types de données, les routines et d’autres objets du runtime C.
+ms.topic: conceptual
 ms.date: 11/04/2016
 f1_keywords:
 - _UNICODE
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - UNICODE constant
 - _T type
 ms.assetid: 2848121c-e51f-4b9b-a2e6-833ece4b0cb3
-ms.openlocfilehash: f8616e0ff660b299544ed3c2f0a12feb4dbfe66b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea3b1eef413a0d9f52e81795c04424d533b83504
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221872"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590106"
 ---
 # <a name="using-generic-text-mappings"></a>Utilisation des mappages de texte générique
 
@@ -42,7 +44,7 @@ Pour simplifier le développement de code pour les marchés internationaux, la b
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Directives de préprocesseur pour les mappages de texte générique
 
-|#define|Version compilée|Exemple|
+|#define|Version compilée| Exemple|
 |--------------|----------------------|-------------|
 |`_UNICODE`|Unicode (caractères larges)|`_tcsrev` est mappé à `_wcsrev`|
 |`_MBCS`|Caractères multioctets|`_tcsrev` est mappé à `_mbsrev`|

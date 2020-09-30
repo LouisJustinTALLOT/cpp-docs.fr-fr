@@ -1,17 +1,18 @@
 ---
-title: Maths de type générique
+title: Mathématiques de type générique
 description: Décrit les macros dans <tgmath. h> qui facilitent l’écriture de code C qui appelle la fonction mathématique appropriée, en fonction du type d’argument.
+ms.topic: conceptual
 ms.date: 9/3/2020
 helpviewer_keywords:
 - CRT tgmath.h
-ms.openlocfilehash: 8994edcaa05247a16d90b47bca8ec26fca27cda7
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 98c786d91963973ad9384cea2fe6563d1e3174ac
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557636"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590223"
 ---
-# <a name="type-generic-math"></a>Maths de type générique
+# <a name="type-generic-math"></a>Mathématiques de type générique
 
 Pour la norme ISO C standard 11 (C11) et les versions ultérieures, l' \<tgmath.h> en-tête, en plus d’inclure \<math.h> et \<complex.h> , fournit des macros qui appellent une fonction mathématique correspondante en fonction des types de paramètres.
 
@@ -88,7 +89,7 @@ Le tableau suivant répertorie les macros disponibles dans \<tgmath.h> et leur d
 `cimag` | - | - | - | [cimagf](reference/cimag-cimagf-cimagl.md) | [cimag](reference/cimag-cimagf-cimagl.md) | [cimagl](reference/cimag-cimagf-cimagl.md) |
 `cproj` | - | - | - | [cprojf](reference/cproj-cprojf-cprojl.md) | [cproj](reference/cproj-cprojf-cprojl.md) | [cprojl](reference/cproj-cprojf-cprojl.md) |
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Exigences
 
 [std : c++ 11](../build/reference/std-specify-language-standard-version.md) ou version ultérieure est requis.
 

@@ -1,16 +1,18 @@
 ---
 title: Fichiers et flux
+description: Vue d’ensemble des fichiers et des flux dans la bibliothèque Runtime C de Microsoft.
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - files [C++]
 - streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
-ms.openlocfilehash: ea11ea76ade8a68c2d8a92e08d3652035c996d3d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 39133cfdb4784c42561a159d6d176bcbd23644af
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750791"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589963"
 ---
 # <a name="files-and-streams"></a>Fichiers et flux
 
@@ -26,7 +28,7 @@ Les deux derniers éléments sont des fichiers interactifs. Les fichiers sont g�
 
 Pour pouvoir exécuter un grand nombre d'opérations sur un fichier, celui-ci doit être ouvert. L'ouverture d'un fichier l'associe à un flux, une structure de données dans la bibliothèque C standard qui ne tient pas compte de nombreuses différences entre les fichiers de différents types. La bibliothèque gère l'état de chaque flux dans un objet de type FILE.
 
-L'environnement cible ouvre trois fichiers avant le démarrage du programme. Vous pouvez ouvrir un fichier en appelant la fonction de bibliothèque [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) avec deux arguments. (La fonction `fopen` a été déconseillée, utilisez [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) à la place.) Le premier argument est un nom de fichier. Le deuxième argument est une chaîne C, qui indique :
+L'environnement cible ouvre trois fichiers avant le démarrage du programme. Vous pouvez ouvrir un fichier en appelant la fonction de bibliothèque [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) avec deux arguments. (La `fopen` fonction a été dépréciée, utilisez [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) à la place.) Le premier argument est un nom de fichier. Le deuxième argument est une chaîne C, qui indique :
 
 - Si vous prévoyez de lire les données du fichier, d'y écrire des données ou les deux.
 
