@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-ms.openlocfilehash: d22f8a25bc7bb58f72346a15edb51f062c44e1b4
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: faee3ea47a6d96b09729d9d4b5bfa21584096d31
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509461"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509463"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Simplification de l'accès aux données à l'aide d'attributs de base de données
 
@@ -28,26 +28,26 @@ Pour illustrer l’utilisation des attributs de base de données, les sections s
 
 En comparant les deux fichiers, vous pouvez voir combien il est plus simple d’utiliser des attributs. Parmi les différences, citons les suivantes :
 
-- À l’aide d’attributs, il vous suffit de déclarer une classe : `CAuthors`, tandis que avec les modèles, vous devez déclarer deux : `CAuthorsNoAttrAccessor` et `CAuthorsNoAttr`.
+- À l’aide d’attributs, il vous suffit de déclarer une classe : `CAuthors` , tandis que avec des modèles, vous devez déclarer deux : `CAuthorsNoAttrAccessor` et `CAuthorsNoAttr` .
 
-- L’appel de `db_source` dans la version avec attributs est équivalent à l’appel de `OpenDataSource()` dans la déclaration de modèle.
+- L' `db_source` appel dans la version avec attributs est équivalent à l' `OpenDataSource()` appel dans la déclaration de modèle.
 
-- L’appel de `db_table` dans la version avec attributs est équivalent à la déclaration de modèle suivante :
+- L' `db_table` appel dans la version avec attributs est équivalent à la déclaration de modèle suivante :
 
     ```cpp
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>
     ```
 
-- Les appels de `db_column` dans la version avec attributs sont équivalents au mappage de colonnes (consultez `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) dans la déclaration de modèle.
+- Les `db_column` appels dans la version avec attributs sont équivalents au mappage de colonnes (consultez `BEGIN_COLUMN_MAP ... END_COLUMN_MAP` ) dans la déclaration de modèle.
 
-Les attributs injectent une déclaration de classe d’enregistrement utilisateur pour vous. La classe d’enregistrement utilisateur est égale à `CAuthorsNoAttrAccessor` dans la déclaration de modèle. Si votre classe de table est `CAuthors`, la classe d’enregistrement utilisateur injectée est nommée `CAuthorsAccessor`et vous pouvez uniquement afficher sa déclaration dans le code injecté. Pour plus d’informations, consultez « classes d’enregistrement utilisateur injectées par les attributs » dans [enregistrements utilisateur](../../data/oledb/user-records.md).
+Les attributs injectent une déclaration de classe d’enregistrement utilisateur pour vous. La classe d’enregistrement utilisateur est égale à `CAuthorsNoAttrAccessor` dans la déclaration de modèle. Si votre classe de table est `CAuthors` , la classe d’enregistrement utilisateur injectée est nommée `CAuthorsAccessor` et vous pouvez uniquement afficher sa déclaration dans le code injecté. Pour plus d’informations, consultez « classes d’enregistrement utilisateur injectées par les attributs » dans [enregistrements utilisateur](../../data/oledb/user-records.md).
 
-Dans le code avec attributs et dans le code basé sur un modèle, vous devez définir les propriétés de l’ensemble de lignes à l’aide de `CDBPropSet::AddProperty`.
+Dans le code avec attributs et dans le code basé sur un modèle, vous devez définir les propriétés de l’ensemble de lignes à l’aide de `CDBPropSet::AddProperty` .
 
-Pour plus d’informations sur les attributs décrits dans cette rubrique, consultez [OLE DB les attributs du consommateur](../../windows/ole-db-consumer-attributes.md).
+Pour plus d’informations sur les attributs décrits dans cette rubrique, consultez [OLE DB les attributs du consommateur](../../windows/attributes/ole-db-consumer-attributes.md).
 
 > [!NOTE]
-> Les instructions de `include` suivantes sont requises pour compiler les exemples ci-dessous :
+> Les `include` instructions suivantes sont requises pour compiler les exemples ci-dessous :
 
 > ```cpp
 > #include <atlbase.h>
@@ -57,7 +57,7 @@ Pour plus d’informations sur les attributs décrits dans cette rubrique, consu
 
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Déclaration de table et d’accesseur à l’aide d’attributs
 
-Le code suivant appelle `db_source` et `db_table` sur la classe de table. `db_source` spécifie la source de données et la connexion à utiliser. `db_table` injecte le code de modèle approprié pour déclarer une classe de table. `db_column` spécifier le mappage de colonnes et injecter la déclaration d’accesseur. Vous pouvez utiliser OLE DB attributs de consommateur dans tout projet qui prend en charge ATL.
+Le code suivant appelle `db_source` et `db_table` sur la classe de table. `db_source` spécifie la source de données et la connexion à utiliser. `db_table` injecte le code de modèle approprié pour déclarer une classe de table. `db_column` Spécifiez le mappage de colonnes et injectez la déclaration d’accesseur. Vous pouvez utiliser OLE DB attributs de consommateur dans tout projet qui prend en charge ATL.
 
 Voici la déclaration de table et d’accesseur à l’aide d’attributs :
 
@@ -202,4 +202,4 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md)
+[Attributs du consommateur OLE DB](../../windows/attributes/ole-db-consumer-attributes.md)

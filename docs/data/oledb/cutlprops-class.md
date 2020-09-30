@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845664"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509085"
 ---
 # <a name="cutlprops-class"></a>CUtlProps, classe
 
@@ -68,13 +68,13 @@ Classe qui contient `BEGIN_PROPSET_MAP` .
 |[OnPropertyChanged](#onpropertychanged)|Appelée après la définition d’une propriété pour gérer les propriétés chaînées.|
 |[SetPropValue](#setpropvalue)|Définit une propriété dans un jeu de propriétés.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La plupart de cette classe est un détail d’implémentation.
 
-`CUtlProps` contient deux membres pour définir des propriétés en interne : [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) et [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` contient deux membres pour définir des propriétés en interne : [GetPropValue](#getpropvalue) et [SetPropValue](#setpropvalue).
 
-Pour plus d’informations sur les macros utilisées dans un mappage de jeu de propriétés, consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) et [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
+Pour plus d’informations sur les macros utilisées dans un mappage de jeu de propriétés, consultez [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) et [END_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#end_propset_map).
 
 ## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps :: GetPropValue
 
@@ -126,7 +126,7 @@ L’ID de propriété et la nouvelle valeur dans une structure [DBPROP](/previou
 
 HRESULT standard. La valeur de retour par défaut est S_OK.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si vous souhaitez exécuter des routines de validation sur une valeur que vous allez utiliser pour définir une propriété, vous devez remplacer cette fonction. Par exemple, vous pouvez valider DBPROP_AUTH_PASSWORD par rapport à une table de mots de passe pour déterminer une valeur valide.
 
@@ -145,7 +145,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 *riid*<br/>
 dans IID de l’interface demandée. Pour plus d’informations, consultez la description du paramètre *riid* de `ICommand::Execute` dans le *Guide de référence du programmeur OLE DB* (dans le *Kit de développement logiciel (SDK) MDAC*).
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `OnInterfaceRequested` gère les demandes de consommateur pour une interface facultative lorsqu’un consommateur appelle une méthode sur l’une des interfaces de création d’objet (telles que `IDBCreateSession` ,, `IDBCreateCommand` `IOpenRowset` ou `ICommand` ). Elle définit la propriété OLE DB correspondante pour l’interface demandée. Par exemple, si le consommateur demande `IID_IRowsetLocate` , `OnInterfaceRequested` définit l' `DBPROP_IRowsetLocate` interface. Cela maintient l’état correct lors de la création de l’ensemble de lignes.
 
@@ -163,7 +163,7 @@ Si un consommateur ouvre un objet et demande une interface facultative, le fourn
 
 - `IRowsetScroll`
 
-Si vous souhaitez gérer d’autres interfaces, remplacez cette fonction dans la source de données, la session, la commande ou la classe rowset pour traiter les fonctions. Votre remplacement doit passer par les interfaces de propriétés set/obten normales pour s’assurer que les propriétés de définition définissent également toutes les propriétés chaînées (consultez [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
+Si vous souhaitez gérer d’autres interfaces, remplacez cette fonction dans la source de données, la session, la commande ou la classe rowset pour traiter les fonctions. Votre remplacement doit passer par les interfaces de propriétés set/obten normales pour s’assurer que les propriétés de définition définissent également toutes les propriétés chaînées (consultez [OnPropertyChanged](#onpropertychanged)).
 
 ## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps :: OnPropertyChanged
 
@@ -188,7 +188,7 @@ L’ID de propriété et la nouvelle valeur dans une structure [DBPROP](/previou
 
 HRESULT standard. La valeur de retour par défaut est S_OK.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si vous souhaitez gérer les propriétés chaînées, telles que les signets ou les mises à jour dont les valeurs sont dépendantes de la valeur d’une autre propriété, vous devez substituer cette fonction.
 

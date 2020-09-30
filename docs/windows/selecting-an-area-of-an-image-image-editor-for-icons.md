@@ -39,21 +39,21 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 9324e3dc5c6691a7b50f137da1fad446b416e968
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ecfd69594c05c210743e0c22c804a4713a8229ef
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167847"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509635"
 ---
 # <a name="how-to-edit-an-image"></a>Comment : modifier une image
 
 Vous pouvez utiliser les outils de sélection pour définir une zone d’une image que vous souhaitez couper, copier, effacer, redimensionner, inverser ou déplacer. Avec l’outil Sélection d’un **rectangle** , vous pouvez définir et sélectionner une zone rectangulaire de l’image. Avec l’outil **sélection irrégulière** , vous pouvez dessiner un contour à main levée de la zone que vous souhaitez sélectionner pour une opération couper, copier ou autre.
 
 > [!NOTE]
-> Consultez les outils **sélection de rectangles** et **sélection irrégulière** illustrés dans la [barre d’outils Éditeur d’images](../windows/toolbar-image-editor-for-icons.md) ou affichez les info-bulles associées à chaque bouton de la barre d’outils de l’éditeur d' **images** .
+> Consultez les outils **sélection de rectangles** et **sélection irrégulière** illustrés dans la [barre d’outils Éditeur d’images](./image-editor-for-icons.md) ou affichez les info-bulles associées à chaque bouton de la barre d’outils de l’éditeur d' **images** .
 
-Vous pouvez également créer un pinceau personnalisé à partir d’une sélection. Pour plus d’informations, consultez [création d’un pinceau personnalisé](../windows/creating-a-custom-brush-image-editor-for-icons.md).
+Vous pouvez également créer un pinceau personnalisé à partir d’une sélection. Pour plus d’informations, consultez [création d’un pinceau personnalisé](./using-a-drawing-tool-image-editor-for-icons.md).
 
 ## <a name="how-to"></a>Procédure
 
@@ -61,7 +61,7 @@ Pour modifier une image, consultez Comment :
 
 ### <a name="to-select-an-image"></a>Pour sélectionner une image
 
-1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à l' **image** de menu > **Outils** et choisissez l’outil de sélection de votre choix.
+1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à menu **Image**  >  **Outils** image et choisissez l’outil de sélection de votre choix.
 
 1. Déplacez le point d’insertion dans un coin de la zone d’image que vous souhaitez sélectionner. Les réticules apparaissent lorsque le point d’insertion se trouve sur l’image.
 
@@ -81,7 +81,7 @@ En outre, vous pouvez redimensionner la sélection, qu’elle comprenne la total
 
 #### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>Pour couper la sélection actuelle et la déplacer dans le presse-papiers
 
-Accédez au menu **modifier** > **couper**.
+Accédez au menu **modifier**  >  **couper**.
 
 #### <a name="to-copy-the-selection"></a>Pour copier la sélection
 
@@ -93,7 +93,7 @@ Accédez au menu **modifier** > **couper**.
 
 #### <a name="to-paste-the-clipboard-contents-into-an-image"></a>Pour coller le contenu du presse-papiers dans une image
 
-1. Accédez au menu **modifier** > **coller**.
+1. Accédez au menu **Edition**  >  **coller**.
 
    Le contenu du presse-papiers, entouré de la bordure de sélection, s’affiche dans l’angle supérieur gauche du volet.
 
@@ -103,7 +103,7 @@ Accédez au menu **modifier** > **couper**.
 
 #### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>Pour supprimer la sélection actuelle sans la déplacer dans le presse-papiers
 
-Accédez au menu **modifier** > **supprimer**.
+Accédez au menu **modifier**  >  **supprimer**.
 
    La zone d’origine de la sélection est remplie avec la couleur d’arrière-plan actuelle.
 
@@ -118,17 +118,17 @@ Accédez au menu **modifier** > **supprimer**.
 
 1. Pour ancrer la sélection dans l’image à son nouvel emplacement, sélectionnez à l’extérieur de la bordure de sélection.
 
-Pour plus d’informations sur le dessin avec une sélection, consultez [création d’un pinceau personnalisé](../windows/creating-a-custom-brush-image-editor-for-icons.md).
+Pour plus d’informations sur le dessin avec une sélection, consultez [création d’un pinceau personnalisé](./using-a-drawing-tool-image-editor-for-icons.md).
 
 ### <a name="to-flip-an-image"></a>Pour retourner une image
 
 Vous pouvez retourner ou faire pivoter une image pour créer une image miroir de l’original, faire pivoter l’image ou la faire pivoter vers la droite de 90 degrés à la fois.
 
-- Pour retourner l’image horizontalement (image miroir), accédez à l' **image** de menu > **retourner horizontalement**.
+- Pour retourner l’image horizontalement (image miroir), accédez à **image**menu  >  **retourner horizontalement**.
 
-- Pour retourner l’image verticalement (tourner à l’envers), accédez à **image** du menu > **Retourner verticalement**.
+- Pour retourner l’image verticalement (tourner à l’envers), accédez à menu **image**  >  **miroir verticale**.
 
-- Pour faire pivoter l’image de 90 degrés, accédez à l' **image** de menu > **pivoter de 90 degrés**.
+- Pour faire pivoter l’image de 90 degrés, accédez à menu **image**  >  **rotation 90 degrés**.
 
    > [!NOTE]
    > Vous pouvez également utiliser les [touches accélérateur (raccourci)](../windows/accelerator-keys-image-editor-for-icons.md) pour ces commandes ou accéder aux commandes à partir du menu contextuel (sélectionnez à l’extérieur de l’image dans l' **éditeur d’images**).
@@ -143,11 +143,11 @@ Lorsque la sélection comprend la totalité de l’image, l' **éditeur d’imag
 
 Il existe deux mécanismes pour redimensionner une image : les poignées de redimensionnement et le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous faites glisser les poignées de redimensionnement pour modifier la taille de tout ou partie d’une image. Les poignées de redimensionnement que vous pouvez faire glisser sont solides. Vous ne pouvez pas faire glisser des poignées qui sont vides. Utilisez la fenêtre **Propriétés** pour redimensionner l’intégralité de l’image, et non une partie sélectionnée.
 
-![Descripteurs de dimensionnement sur une bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
+![Poignées de dimensionnement d'une image bitmap](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
 Poignées de redimensionnement
 
 > [!NOTE]
-> Si vous avez sélectionné l’option **grille mosaïque** dans la [boîte de dialogue Paramètres](../windows/grid-settings-dialog-box-image-editor-for-icons.md)de la grille, le redimensionnement s’aligne sur la ligne de grille mosaïque suivante. Si seule l’option **grille de pixels** est sélectionnée (paramètre par défaut), le redimensionnement s’aligne sur le pixel suivant disponible.
+> Si vous avez sélectionné l’option **grille mosaïque** dans la [boîte de dialogue Paramètres](./image-editor-for-icons.md)de la grille, le redimensionnement s’aligne sur la ligne de grille mosaïque suivante. Si seule l’option **grille de pixels** est sélectionnée (paramètre par défaut), le redimensionnement s’aligne sur le pixel suivant disponible.
 
 #### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Pour redimensionner l’intégralité d’une image à l’aide de la fenêtre Propriétés
 
@@ -190,7 +190,7 @@ Normalement, l' **éditeur d’images** rogne ou agrandit une image lorsque vous
 
 Vous pouvez ouvrir et modifier des images dans l’environnement de développement comme vous le feriez dans n’importe quelle application graphique, par exemple en ouvrant une image bitmap pour une modification autonome. Les images que vous utilisez n’ont pas besoin de faire partie d’un projet Visual Studio.
 
-1. Accédez à **fichier** de menu > **ouvrir**.
+1. Accédez à **fichier**menu  >  **ouvrir**.
 
 1. Dans la zone **types de fichiers** , sélectionnez **tous les fichiers**.
 
@@ -207,16 +207,16 @@ Vous pouvez définir ou modifier les propriétés d’une image à l’aide de l
    |Propriété|Description|
    |--------------|-----------------|
    |**Couleurs**|Spécifie le modèle de couleurs de l’image. Sélectionnez **monochrome**, **16**ou **256**, ou **couleurs vraies**.<br/><br/>Si vous avez déjà dessiné l’image avec une palette de 16 couleurs, la sélection de **monochrome** provoque des substitutions de noir et blanc pour les couleurs de l’image. Le contraste n’est pas toujours géré : par exemple, les zones adjacentes de rouge et de vert sont toutes deux converties en noir.|
-   |**Nom du fichier**|Spécifie le nom du fichier image.<br/><br/>Par défaut, Visual Studio assigne un nom de fichier de base créé en supprimant les quatre premiers caractères (« IDB_ ») de l’identificateur de ressource par défaut (IDB_BITMAP1) et en ajoutant l’extension appropriée. Dans cet exemple, le nom de fichier de l’image serait *bitmap1. bmp*. Vous pouvez le renommer *MYBITMAP1. bmp*.|
+   |**Nom du fichier**|Spécifie le nom du fichier image.<br/><br/>Par défaut, Visual Studio assigne un nom de fichier de base créé en supprimant les quatre premiers caractères (« IDB_ ») de l’identificateur de ressource par défaut (IDB_BITMAP1) et en ajoutant l’extension appropriée. Dans cet exemple, le nom de fichier de l’image serait *BITMAP1.bmp*. Vous pouvez le renommer *MYBITMAP1.bmp*.|
    |**Height**|Définit la hauteur de l’image (en pixels). La valeur par défaut est 48.<br/><br/>L’image est rognée ou un espace vide est ajouté sous l’image existante.|
    |**Identifiant**|Définit l’identificateur de la ressource.<br/><br/>Pour une image, Microsoft Visual Studio, par défaut, affecte l’identificateur disponible suivant dans une série : IDB_BITMAP1, IDB_BITMAP2, etc. Des noms similaires sont utilisés pour les icônes et les curseurs.|
-   |**Palette**|Modifie les propriétés de couleur.<br/><br/>Double-cliquez pour sélectionner une couleur et afficher la [boîte de dialogue Sélecteur de couleurs personnalisées](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Définissez la couleur en tapant des valeurs RVB ou TSL dans les zones de texte appropriées.|
+   |**Palette**|Modifie les propriétés de couleur.<br/><br/>Double-cliquez pour sélectionner une couleur et afficher la [boîte de dialogue Sélecteur de couleurs personnalisées](./image-editor-for-icons.md). Définissez la couleur en tapant des valeurs RVB ou TSL dans les zones de texte appropriées.|
    |**SaveCompressed**|Indique si l’image est dans un format compressé. Cette propriété est en lecture seule.<br/><br/>Visual Studio ne vous permet pas d’enregistrer des images dans un format compressé. par conséquent, pour toutes les images créées dans Visual Studio, cette propriété a la **valeur false**. Si vous ouvrez une image compressée (créée dans un autre programme) dans Visual Studio, cette propriété a la **valeur true**. Si vous enregistrez une image compressée à l’aide de Visual Studio, elle sera décompressée et cette propriété reviendra à la **valeur false**.|
    |**Width**|Définit la largeur de l’image (en pixels). La valeur par défaut pour les bitmaps est 48.<br/><br/>L’image est rognée ou un espace vide est ajouté à droite de l’image existante.|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-None
+Aucun
 
 ## <a name="see-also"></a>Voir aussi
 

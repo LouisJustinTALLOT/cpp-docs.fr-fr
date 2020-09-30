@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d664f32226498326ffb092f1d3248fbdbf614d50
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844832"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509763"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl, classe
 
@@ -53,9 +53,9 @@ Classe de propriété définissable par l’utilisateur qui A par défaut la val
 |[GetProperties](#getproperties)|Retourne la liste des propriétés dans le groupe de propriétés de session qui sont actuellement définies sur la session.|
 |[SetProperties](#setproperties)|Définit les propriétés du groupe de propriétés de session.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Interface obligatoire sur les sessions. Cette classe implémente les propriétés de session en appelant une fonction statique définie par le [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md). Le mappage de jeu de propriétés doit être spécifié dans votre classe de session.
+Interface obligatoire sur les sessions. Cette classe implémente les propriétés de session en appelant une fonction statique définie par le [mappage de jeu de propriétés](./macros-for-ole-db-provider-templates.md#begin_propset_map). Le mappage de jeu de propriétés doit être spécifié dans votre classe de session.
 
 ## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> Isessionpropertiesimpl, :: GetProperties
 

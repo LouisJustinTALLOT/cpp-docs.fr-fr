@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: f51e93475f104f165895c9d7e2733d741af30502
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 57ae8f2d0b7f02732032151f86617498e5201c61
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389777"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509748"
 ---
 # <a name="fatal-error-c1083"></a>Erreur irrécupérable C1083
 
@@ -63,7 +63,7 @@ le fichier est introuvable. Utilisez le chemin d’accès correct relatif au ré
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problèmes de bibliothèque tierce et vcpkg
 
-Si vous voyez cette erreur lorsque vous essayez de configurer une bibliothèque tierce dans le cadre de votre Build, envisagez d’utiliser [`vcpkg`](../../vcpkg.md) , un gestionnaire de package C++, pour installer et générer la bibliothèque. vcpkg prend en charge une liste volumineuse et croissante [de bibliothèques tierces](https://github.com/Microsoft/vcpkg/tree/master/ports), et définit toutes les propriétés de configuration et les dépendances requises pour les builds réussies dans le cadre de votre projet.
+Si vous voyez cette erreur lorsque vous essayez de configurer une bibliothèque tierce dans le cadre de votre Build, envisagez d’utiliser [`vcpkg`](../../build/vcpkg.md) , un gestionnaire de package C++, pour installer et générer la bibliothèque. vcpkg prend en charge une liste volumineuse et croissante [de bibliothèques tierces](https://github.com/Microsoft/vcpkg/tree/master/ports), et définit toutes les propriétés de configuration et les dépendances requises pour les builds réussies dans le cadre de votre projet.
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>Le fichier se trouve dans votre projet, mais pas dans le chemin de recherche include
 

@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: ab0bf802221bcf3f93469f27f29f86c95877a407
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 651eac8c630636455dd1ffa04fdd02b71fa3cf62
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365335"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509703"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Ajout de fonctionnalités à l’aide des Assistants Code (C++)
 
@@ -28,19 +28,19 @@ Après avoir créé un projet, vous pouvez changer ses fonctionnalités ou en aj
 - Classe MFC à partir d’une bibliothèque de types.
 
 > [!NOTE]
-> Vous pouvez y ajouter des gestionnaires de messages et des messages cartographiques et leur remplacer les fonctions virtuelles MFC à l’aide du [MFC Class Wizard](../mfc/reference/mfc-class-wizard.md).
+> Vous pouvez ajouter des gestionnaires de messages et y mapper des messages et remplacer des fonctions virtuelles MFC à l’aide de l' [Assistant classe MFC](../mfc/reference/mfc-class-wizard.md).
 
 ## <a name="accessing-c-code-wizards"></a>Accès aux Assistants de code C++
 
 Vous pouvez accéder aux Assistants de code C++ à partir de trois emplacements :
 
-- Dans le menu **Projet**, utilisez la commande **Ajouter un nouvel élément** pour ouvrir la boîte de dialogue `Add New Item`. Celle-ci vous permet d’ajouter de nouveaux fichiers à votre projet. Utilisez la commande **Ajouter une classe** pour afficher la boîte de dialogue [Ajouter une classe](../ide/add-class-dialog-box.md). Celle-ci ouvre des Assistants pour chaque type de classe que vous ajoutez à votre projet. Pour les classes MFC, utilisez le [MFC Class Wizard](../mfc/reference/mfc-class-wizard.md). Utilisez la commande **Ajouter une ressource** pour afficher la boîte de dialogue [Ajouter une ressource](../windows/add-resource-dialog-box.md). Celle-ci vous permet de créer ou de sélectionner une ressource à ajouter à votre projet.
+- Dans le menu **Projet**, utilisez la commande **Ajouter un nouvel élément** pour ouvrir la boîte de dialogue `Add New Item`. Celle-ci vous permet d’ajouter de nouveaux fichiers à votre projet. Utilisez la commande **Ajouter une classe** pour afficher la boîte de dialogue [Ajouter une classe](./adding-a-class-visual-cpp.md#add-class-dialog-box). Celle-ci ouvre des Assistants pour chaque type de classe que vous ajoutez à votre projet. Pour les classes MFC, utilisez l' [Assistant classe MFC](../mfc/reference/mfc-class-wizard.md). Utilisez la commande **Ajouter une ressource** pour afficher la boîte de dialogue [Ajouter une ressource](../windows/how-to-create-a-resource-script-file.md). Celle-ci vous permet de créer ou de sélectionner une ressource à ajouter à votre projet.
 
    Si vous mettez en surbrillance une classe ou une interface de votre projet dans Affichage de classes, le menu **Projet** affiche également les commandes suivantes :
 
   - **Implémenter l’interface** (à partir d’une classe de contrôle uniquement)
 
-  - **Ajouter la fonction**
+  - **Ajouter une fonction**
 
   - **Ajouter une variable**
 
@@ -69,8 +69,8 @@ Vous pouvez accéder aux Assistants de code C++ à partir de trois emplacements
    |Méthode utilisée pour accéder à l’Assistant de code|Description|
    |-----------------------------|-----------------|
    |Ajouter un nouvel élément|Les Assistants Code dans Ajouter un nouvel élément ajoutent des fichiers sources à votre projet. Si nécessaire, des répertoires supplémentaires sont créés aux emplacements dans lesquels le moteur de génération de projet s’attend à trouver les fichiers. Parmi les Assistants Code disponibles à partir de l’icône Ajouter un élément, citons les suivants :<br /><br />- Ajouter des fichiers sources C++ (.cpp, .h, .idl, .rc, .srf, .def, .rgs).<br />- Ajouter des fichiers de développement web (.html, .asp, .css, .xml).<br />- Ajouter des fichiers d’utilitaire et de ressources (.bmp, .cur, .ico, .rct, .sql, .txt).<br /><br />Ces Assistants Code ne sollicitent généralement pas d’informations, mais ils ajoutent un fichier à votre arborescence de développement. Vous pouvez renommer le fichier dans la fenêtre des propriétés.|
-   |Explorateur de solutions|Les Assistants Code disponibles dans l’Explorateur de solutions varient selon l’endroit où se trouve le focus du curseur quand vous cliquez avec le bouton droit sur un élément. Si l’option **Ajouter** n’apparaît pas quand vous cliquez avec le bouton droit sur un élément, déplacez le curseur d’un niveau vers le haut dans l’arborescence de développement et réessayez. Les Assistants Code placent toujours le code supplémentaire à l’emplacement approprié dans l’arborescence de développement, quel que soit l’endroit où se trouve le curseur. Parmi les Assistants Code disponibles dans l’Explorateur de solutions, citons les suivants :<br /><br />- Ajouter classe (ouvre la boîte de dialogue **Add Class** contenant les nouveaux assistants de code).<br />- Ajouter une ressource (Nouveau, Importer ou Personnaliser).<br />- Ajouter une référence web.|
-   |Affichage de classes|Les Assistants Code disponibles dans Affichage de classes varient selon l’endroit où se trouve le focus du curseur quand vous cliquez avec le bouton droit sur un élément. Si l’option **Ajouter** n’apparaît pas quand vous cliquez avec le bouton droit sur un élément, déplacez le curseur d’un niveau vers le haut dans l’arborescence de classes et réessayez. Les Assistants Code placent toujours le code supplémentaire à l’emplacement approprié dans l’arborescence de développement, quel que soit l’endroit où se trouve le curseur. Parmi les Assistants Code disponibles dans Affichage de classes, citons les suivants :<br /><br />- [Ajouter une fonction membre](../ide/adding-a-member-function-visual-cpp.md).<br />- [Ajouter une variable membre](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Ajouter une classe](../ide/adding-a-class-visual-cpp.md).<br />- [Implémenter l’interface](../ide/implement-interface-wizard.md) (à partir d’une classe de contrôle uniquement)<br />- [Ajouter le point de connexion](../ide/implement-connection-point-wizard.md) (classe ATL seulement)<br />- [Ajouter une méthode](../ide/add-method-wizard.md) (à partir d’une interface uniquement)<br />- [Ajouter une propriété](../ide/names-add-property-wizard.md) (à partir d’une interface uniquement)<br />- [Ajouter un événement](../ide/add-event-wizard.md) (à partir d’une classe de contrôle uniquement)<br /><br />Si vous sélectionnez Ajouter une classe, la boîte de dialogue **Ajouter une classe** s’ouvre. Celle-ci vous donne accès à tous les nouveaux Assistants Code Ajouter une classe.|
+   |Explorateur de solutions|Les Assistants Code disponibles dans l’Explorateur de solutions varient selon l’endroit où se trouve le focus du curseur quand vous cliquez avec le bouton droit sur un élément. Si l’option **Ajouter** n’apparaît pas quand vous cliquez avec le bouton droit sur un élément, déplacez le curseur d’un niveau vers le haut dans l’arborescence de développement et réessayez. Les Assistants Code placent toujours le code supplémentaire à l’emplacement approprié dans l’arborescence de développement, quel que soit l’endroit où se trouve le curseur. Parmi les Assistants Code disponibles dans l’Explorateur de solutions, citons les suivants :<br /><br />-Add Class (ouvre la boîte de dialogue **Ajouter une classe** qui contient les nouveaux Assistants Code).<br />- Ajouter une ressource (Nouveau, Importer ou Personnaliser).<br />- Ajouter une référence web.|
+   |Affichage de classes|Les Assistants Code disponibles dans Affichage de classes varient selon l’endroit où se trouve le focus du curseur quand vous cliquez avec le bouton droit sur un élément. Si l’option **Ajouter** n’apparaît pas quand vous cliquez avec le bouton droit sur un élément, déplacez le curseur d’un niveau vers le haut dans l’arborescence de classes et réessayez. Les Assistants Code placent toujours le code supplémentaire à l’emplacement approprié dans l’arborescence de développement, quel que soit l’endroit où se trouve le curseur. Parmi les Assistants Code disponibles dans Affichage de classes, citons les suivants :<br /><br />- [Ajouter une fonction membre](../ide/adding-a-member-function-visual-cpp.md).<br />- [Ajouter une variable membre](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Ajouter une classe](../ide/adding-a-class-visual-cpp.md).<br />- [Implémenter l’interface](./implementing-an-interface-visual-cpp.md#implement-interface-wizard) (à partir d’une classe de contrôle uniquement)<br />- [Ajouter un point de connexion](./implementing-a-connection-point-visual-cpp.md#implement-connection-point-wizard) (classe ATL uniquement)<br />- [Ajouter une méthode](./adding-a-method-visual-cpp.md#add-method-wizard) (à partir d’une interface uniquement)<br />- [Ajouter une propriété](./adding-a-property-visual-cpp.md#names-add-property-wizard) (à partir d’une interface uniquement)<br />- [Ajouter un événement](./adding-an-event-visual-cpp.md#add-event-wizard) (à partir d’une classe de contrôle uniquement)<br /><br />Si vous sélectionnez Ajouter une classe, la boîte de dialogue **Ajouter une classe** s’ouvre. Celle-ci vous donne accès à tous les nouveaux Assistants Code Ajouter une classe.|
 
 ## <a name="see-also"></a>Voir aussi
 

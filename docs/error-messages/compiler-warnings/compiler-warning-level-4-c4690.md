@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4690
 ms.assetid: 080a0ea1-458b-477b-a37a-4a34c94709ff
-ms.openlocfilehash: c7facdde54b44ba2ce07db0447b251d7014f76c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de996128c68ebf96b4a00f6206cbaf54d97ca275
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324582"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509974"
 ---
 # <a name="compiler-warning-level-4-c4690"></a>Avertissement du compilateur (niveau 4) C4690
 
-> \[ emitidl (pop)] : plus de POP que de push
+> \[ emitidl (POP)] : plus de pop que de push
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-L’attribut [emitidl](../../windows/emitidl.md) a fait l’objet d’un pop de plus que les push.
+L’attribut [emitidl](../../windows/attributes/emitidl.md) a fait l’objet d’un pop de plus que les push.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4690. Pour résoudre ce problème, assurez-vous que l’attribut est dépilé exactement comme autant de fois qu’elle est envoyée.
+L’exemple suivant génère l’erreur C4690. Pour résoudre ce problème, assurez-vous que l’attribut est dépilé exactement autant de fois qu’il est envoyé.
 
 ```cpp
 // C4690.cpp

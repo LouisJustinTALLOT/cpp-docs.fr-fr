@@ -25,12 +25,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843298"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509116"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase, classe
 
@@ -70,7 +70,7 @@ void Close();
 
 ### <a name="remarks"></a>Notes
 
-Vous devez d’abord appeler [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) .
+Vous devez d’abord appeler [ReleaseAccessors](#release) .
 
 ## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase :: GetHAccessor
 
@@ -143,9 +143,9 @@ dans Pointeur vers une `IUnknown` interface pour l’objet com pour lequel les a
 
 HRESULT standard.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Appelé à partir de [CAccessorRowset :: Close](../../data/oledb/caccessorrowset-close.md).
+Appelé à partir de [CAccessorRowset :: Close](./caccessorrowset-class.md#close).
 
 ## <a name="see-also"></a>Voir aussi
 

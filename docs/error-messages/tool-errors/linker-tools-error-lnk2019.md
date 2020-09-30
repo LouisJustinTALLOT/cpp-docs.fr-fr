@@ -9,35 +9,35 @@ helpviewer_keywords:
 - LNK2019
 - _check_commonlanguageruntime_version
 no-loc:
-- ':::no-loc(main):::'
-- ':::no-loc(WinMain):::'
-- ':::no-loc(wmain):::'
-- ':::no-loc(wWinMain):::'
-- ':::no-loc(__cdecl):::'
-- ':::no-loc(__stdcall):::'
-- ':::no-loc(__fastcall):::'
-- ':::no-loc(__vectorcall):::'
-- ':::no-loc(extern):::'
-- ':::no-loc(static):::'
-- ':::no-loc(const):::'
-- ':::no-loc(ARCH):::'
-- ':::no-loc(AVX2):::'
-- ':::no-loc(wchar_t):::'
-- ':::no-loc(VERBOSE):::'
-- ':::no-loc(EXPORTS):::'
-- ':::no-loc(SYMBOLS):::'
-- ':::no-loc(DUMPBIN):::'
-- ':::no-loc(UNDNAME):::'
-ms.openlocfilehash: b83ed3663e6b199e0f3384f6d30cb1c87c0e52c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+- main
+- WinMain
+- wmain
+- wWinMain
+- __cdecl
+- __stdcall
+- __fastcall
+- __vectorcall
+- extern
+- static
+- const
+- ARCH
+- AVX2
+- wchar_t
+- VERBOSE
+- EXPORTS
+- SYMBOLS
+- DUMPBIN
+- UNDNAME
+ms.openlocfilehash: d09e232b934761d138fee7324c462c915d919959
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219805"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509734"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Erreur des outils Éditeur de liens LNK2019
 
-> :::no-loc(extern):::symbole al non résolu'*symbol*'référencé dans la fonction'*Function*'
+> externsymbole al non résolu'*symbol*'référencé dans la fonction'*Function*'
 
 Le code compilé pour la *fonction* effectue une référence ou un appel au *symbole*, mais l’éditeur de liens ne peut pas trouver la définition du symbole dans les bibliothèques ou les fichiers objets à lier.
 
@@ -45,7 +45,7 @@ Ce message d’erreur est suivi de l’erreur irrécupérable [LNK1120](../../er
 
 ## <a name="possible-causes"></a>Causes possibles
 
-Il existe de nombreuses façons d’effectuer cette erreur. Tous impliquent une référence à une fonction ou une variable que l’éditeur de liens n’a pas pu *résoudre*, ou trouver une définition pour. Le compilateur peut identifier le moment où un symbole n’est pas *déclaré*, mais il ne peut pas déterminer quand le symbole n’est pas *défini*. Cela est dû au fait que la définition peut se trouver dans un fichier source ou une bibliothèque différent (e). Si un symbole est référencé mais jamais défini, l’éditeur de liens génère une erreur de symbole al non résolue :::no-loc(extern)::: .
+Il existe de nombreuses façons d’effectuer cette erreur. Tous impliquent une référence à une fonction ou une variable que l’éditeur de liens n’a pas pu *résoudre*, ou trouver une définition pour. Le compilateur peut identifier le moment où un symbole n’est pas *déclaré*, mais il ne peut pas déterminer quand le symbole n’est pas *défini*. Cela est dû au fait que la définition peut se trouver dans un fichier source ou une bibliothèque différent (e). Si un symbole est référencé mais jamais défini, l’éditeur de liens génère une erreur de symbole al non résolue extern .
 
 Voici un aperçu des problèmes courants qui provoquent l'erreur LNK2019 :
 
@@ -67,23 +67,23 @@ La déclaration de la fonction doit correspondre à la définition. Assurez-vous
 
 ### <a name="a-function-or-variable-is-declared-but-not-defined"></a>Une fonction ou une variable est déclarée, mais n’est pas définie
 
-L’erreur LNK2019 peut se produire lorsqu’une déclaration existe dans un fichier d’en-tête, mais qu’aucune définition correspondante n’est implémentée. Pour les fonctions membres ou les :::no-loc(static)::: membres de données, l’implémentation doit inclure le sélecteur de portée de classe. Pour obtenir un exemple, consultez [Missing Function Body or Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md).
+L’erreur LNK2019 peut se produire lorsqu’une déclaration existe dans un fichier d’en-tête, mais qu’aucune définition correspondante n’est implémentée. Pour les fonctions membres ou les static membres de données, l’implémentation doit inclure le sélecteur de portée de classe. Pour obtenir un exemple, consultez [Missing Function Body or Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md).
 
 ### <a name="the-calling-convention-is-different-between-the-function-declaration-and-the-function-definition"></a>La Convention d’appel est différente entre la déclaration de fonction et la définition de fonction
 
-Les conventions d’appel ( [:::no-loc(__cdecl):::](../../cpp/cdecl.md) , [:::no-loc(__stdcall):::](../../cpp/stdcall.md) , [:::no-loc(__fastcall):::](../../cpp/fastcall.md) ou [:::no-loc(__vectorcall):::](../../cpp/vectorcall.md) ) sont encodées dans le cadre du nom décoré. Assurez-vous que la Convention d’appel est la même.
+Les conventions d’appel ( [__cdecl](../../cpp/cdecl.md) , [__stdcall](../../cpp/stdcall.md) , [__fastcall](../../cpp/fastcall.md) ou [__vectorcall](../../cpp/vectorcall.md) ) sont encodées dans le cadre du nom décoré. Assurez-vous que la Convention d’appel est la même.
 
-### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-no-locextern-c-in-a-c-file"></a>Un symbole est défini dans un fichier C, mais déclaré sans utiliser :::no-loc(extern)::: "C" dans un fichier C++
+### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-no-locextern-c-in-a-c-file"></a>Un symbole est défini dans un fichier C, mais déclaré sans utiliser extern "C" dans un fichier C++
 
-Les symboles définis dans un fichier compilé en C ont des noms décorés différents des symboles déclarés dans un fichier C++, sauf si vous utilisez un modificateur [ :::no-loc(extern)::: « C »](../../cpp/using-:::no-loc(extern):::-to-specify-linkage.md) . Assurez-vous que la déclaration correspond à la liaison de compilation pour chaque symbole. De même, si vous définissez un symbole dans un fichier C++ qui sera utilisé par un programme C, utilisez `:::no-loc(extern)::: "C"` dans la définition.
+Les symboles définis dans un fichier compilé en C ont des noms décorés différents des symboles déclarés dans un fichier C++, sauf si vous utilisez un modificateur [ extern « C »](../../cpp/extern-cpp.md) . Assurez-vous que la déclaration correspond à la liaison de compilation pour chaque symbole. De même, si vous définissez un symbole dans un fichier C++ qui sera utilisé par un programme C, utilisez `extern "C"` dans la définition.
 
-### <a name="a-symbol-is-defined-as-no-locstatic-and-then-later-referenced-outside-the-file"></a>Un symbole est défini comme :::no-loc(static)::: , puis référencé ultérieurement en dehors du fichier
+### <a name="a-symbol-is-defined-as-no-locstatic-and-then-later-referenced-outside-the-file"></a>Un symbole est défini comme static , puis référencé ultérieurement en dehors du fichier
 
-En C++, contrairement à C, les [ :::no-loc(const)::: ants globaux](../../error-messages/tool-errors/global-:::no-loc(const):::ants-in-cpp.md) ont une **`:::no-loc(static):::`** liaison. Pour contourner cette limitation, vous pouvez inclure les **`:::no-loc(const):::`** initialisations dans un fichier d’en-tête et inclure cet en-tête dans vos fichiers. cpp, ou vous pouvez faire en sorte que la variable ne soit pas :::no-loc(const)::: ant et utilise une :::no-loc(const)::: référence ant pour y accéder.
+En C++, contrairement à C, les [ const ants globaux](../../error-messages/tool-errors/global-constants-in-cpp.md) ont une **`static`** liaison. Pour contourner cette limitation, vous pouvez inclure les **`const`** initialisations dans un fichier d’en-tête et inclure cet en-tête dans vos fichiers. cpp, ou vous pouvez faire en sorte que la variable ne soit pas const ant et utilise une const référence ant pour y accéder.
 
-### <a name="a-no-locstatic-member-of-a-class-isnt-defined"></a>Un :::no-loc(static)::: membre d’une classe n’est pas défini
+### <a name="a-no-locstatic-member-of-a-class-isnt-defined"></a>Un static membre d’une classe n’est pas défini
 
-Un :::no-loc(static)::: membre de classe doit avoir une définition unique, ou il violera la règle à une seule définition. Un :::no-loc(static)::: membre de classe qui ne peut pas être défini inline doit être défini dans un fichier source à l’aide de son nom complet. S’il n’est pas défini, l’éditeur de liens génère l’erreur LNK2019.
+Un static membre de classe doit avoir une définition unique, ou il violera la règle à une seule définition. Un static membre de classe qui ne peut pas être défini inline doit être défini dans un fichier source à l’aide de son nom complet. S’il n’est pas défini, l’éditeur de liens génère l’erreur LNK2019.
 
 ### <a name="a-build-dependency-is-only-defined-as-a-project-dependency-in-the-solution"></a>Une dépendance de génération est définie uniquement comme une dépendance de projet dans la solution
 
@@ -91,11 +91,11 @@ Dans les versions antérieures de Visual Studio, ce niveau de dépendance était
 
 ### <a name="an-entry-point-isnt-defined"></a>Un point d’entrée n’est pas défini
 
-Le code d’application doit définir un point d’entrée approprié : `:::no-loc(main):::` ou `:::no-loc(wmain):::` pour les applications console, et `:::no-loc(WinMain):::` ou `:::no-loc(wWinMain):::` pour les applications Windows. Pour plus d’informations, consultez [ :::no-loc(main)::: fonctions et arguments de ligne de commande](../../cpp/:::no-loc(main):::-function-command-line-args.md) ou fonction. [ :::no-loc(WinMain)::: ](/windows/win32/api/winbase/nf-winbase-win:::no-loc(main):::) Pour utiliser un point d’entrée personnalisé, spécifiez l’option de l’éditeur de liens [/entry (symbole de point d’entrée)](../../build/reference/entry-entry-point-symbol.md) .
+Le code d’application doit définir un point d’entrée approprié : `main` ou `wmain` pour les applications console, et `WinMain` ou `wWinMain` pour les applications Windows. Pour plus d’informations, consultez [ main fonctions et arguments de ligne de commande](../../cpp/main-function-command-line-args.md) ou fonction. [ WinMain ](/windows/win32/api/winbase/nf-winbase-winmain) Pour utiliser un point d’entrée personnalisé, spécifiez l’option de l’éditeur de liens [/entry (symbole de point d’entrée)](../../build/reference/entry-entry-point-symbol.md) .
 
 ### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>Vous générez une application console en utilisant les paramètres d’une application Windows
 
-Si le message d’erreur est semblable **au :::no-loc(extern)::: symbole al non résolu :::no-loc(WinMain)::: référencé dans la fonction** *function_name*, liez-le à l’aide de **/SUBSYSTEM : console** au lieu de **/SUBSYSTEM : Windows**. Pour plus d’informations sur ce paramètre et pour obtenir des instructions sur la façon de définir cette propriété dans Visual Studio, consultez [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md).
+Si le message d’erreur est semblable **au extern symbole al non résolu WinMain référencé dans la fonction** *function_name*, liez-le à l’aide de **/SUBSYSTEM : console** au lieu de **/SUBSYSTEM : Windows**. Pour plus d’informations sur ce paramètre et pour obtenir des instructions sur la façon de définir cette propriété dans Visual Studio, consultez [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md).
 
 ### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>Vous tentez de lier des bibliothèques 64 bits au code 32 bits, ou des bibliothèques 32 bits au code 64 bits
 
@@ -107,29 +107,29 @@ L’utilisation de fonctions inline définies dans des fichiers .cpp et le panac
 
 ### <a name="you-use-automatic-variables-outside-their-scope"></a>Vous utilisez des variables automatiques en dehors de leur portée
 
-Les variables automatiques (portée de fonction) ne peuvent être utilisées que dans la portée de la fonction en question. Ces variables ne peuvent pas être déclarées **`:::no-loc(extern):::`** et utilisées dans d’autres fichiers sources. Pour obtenir un exemple, consultez [Automatic (Function Scope) Variables](../../error-messages/tool-errors/automatic-function-scope-variables.md).
+Les variables automatiques (portée de fonction) ne peuvent être utilisées que dans la portée de la fonction en question. Ces variables ne peuvent pas être déclarées **`extern`** et utilisées dans d’autres fichiers sources. Pour obtenir un exemple, consultez [Automatic (Function Scope) Variables](../../error-messages/tool-errors/automatic-function-scope-variables.md).
 
 ### <a name="you-call-intrinsic-functions-or-pass-argument-types-to-intrinsic-functions-that-arent-supported-on-your-target-architecture"></a>Vous appelez des fonctions intrinsèques ou transmettez des types d’arguments à des fonctions intrinsèques qui ne sont pas prises en charge sur votre architecture cible
 
-Par exemple, si vous utilisez un :::no-loc(AVX2)::: intrinsèque, mais que vous ne spécifiez pas l’option [ / :::no-loc(ARCH)::: : :::no-loc(AVX2)::: ](../../build/reference/arch-x86.md) du compilateur, le compilateur suppose que l’intrinsèque est une :::no-loc(extern)::: fonction al. Au lieu de générer une instruction Inline, le compilateur génère un appel à un :::no-loc(extern)::: symbole al portant le même nom que le intrinsèque. Quand l'éditeur de liens tente de trouver la définition de cette fonction manquante, il génère l'erreur LNK2019. Veillez à utiliser uniquement des fonctions intrinsèques et des types pris en charge par votre architecture cible.
+Par exemple, si vous utilisez un AVX2 intrinsèque, mais que vous ne spécifiez pas l’option [ / ARCH : AVX2 ](../../build/reference/arch-x86.md) du compilateur, le compilateur suppose que l’intrinsèque est une extern fonction al. Au lieu de générer une instruction Inline, le compilateur génère un appel à un extern symbole al portant le même nom que le intrinsèque. Quand l'éditeur de liens tente de trouver la définition de cette fonction manquante, il génère l'erreur LNK2019. Veillez à utiliser uniquement des fonctions intrinsèques et des types pris en charge par votre architecture cible.
 
-### <a name="you-mix-code-that-uses-native-no-locwchar_t-with-code-that-doesnt"></a>Vous mélangez du code qui utilise native :::no-loc(wchar_t)::: avec du code qui ne
+### <a name="you-mix-code-that-uses-native-no-locwchar_t-with-code-that-doesnt"></a>Vous mélangez du code qui utilise native wchar_t avec du code qui ne
 
-Le travail de mise en conformité du langage C++ effectué dans Visual Studio 2005 a rendu **`:::no-loc(wchar_t):::`** un type natif par défaut. Si tous les fichiers n’ont pas été compilés à l’aide du même **/Zc : :::no-loc(wchar_t)::: ** Settings, les références de type risquent de ne pas être résolues en types compatibles. Assurez-vous que **`:::no-loc(wchar_t):::`** les types dans tous les fichiers objets et de bibliothèque sont compatibles. Effectuez une mise à jour à partir d’un **`:::no-loc(wchar_t):::`** typedef ou utilisez des paramètres **/Zc :::no-loc(wchar_t)::: :** Settings cohérents quand vous compilez.
+Le travail de mise en conformité du langage C++ effectué dans Visual Studio 2005 a rendu **`wchar_t`** un type natif par défaut. Si tous les fichiers n’ont pas été compilés à l’aide du même **/Zc : wchar_t ** Settings, les références de type risquent de ne pas être résolues en types compatibles. Assurez-vous que **`wchar_t`** les types dans tous les fichiers objets et de bibliothèque sont compatibles. Effectuez une mise à jour à partir d’un **`wchar_t`** typedef ou utilisez des paramètres **/Zc wchar_t :** Settings cohérents quand vous compilez.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problèmes de bibliothèque tierce et vcpkg
 
-Si vous voyez cette erreur lorsque vous essayez de configurer une bibliothèque tierce dans le cadre de votre Build, envisagez d’utiliser [vcpkg](../../vcpkg.md), un gestionnaire de package C++, pour installer et générer la bibliothèque. vcpkg prend en charge une liste importante et croissante [de bibliothèques tierces](https://github.com/Microsoft/vcpkg/tree/master/ports). Il définit toutes les propriétés de configuration et les dépendances requises pour les builds réussies dans le cadre de votre projet.
+Si vous voyez cette erreur lorsque vous essayez de configurer une bibliothèque tierce dans le cadre de votre Build, envisagez d’utiliser [vcpkg](../../build/vcpkg.md), un gestionnaire de package C++, pour installer et générer la bibliothèque. vcpkg prend en charge une liste importante et croissante [de bibliothèques tierces](https://github.com/Microsoft/vcpkg/tree/master/ports). Il définit toutes les propriétés de configuration et les dépendances requises pour les builds réussies dans le cadre de votre projet.
 
 ## <a name="diagnosis-tools"></a>Outils de diagnostic
 
-Il est parfois difficile de savoir pourquoi l’éditeur de liens ne peut pas trouver une définition de symbole particulière. Souvent, le problème est que vous n’avez pas inclus le code qui contient la définition dans votre Build. Ou, les options de génération ont créé des noms décorés différents pour les :::no-loc(extern)::: symboles al. Il existe plusieurs outils et options qui peuvent vous aider à diagnostiquer les erreurs LNK2019.
+Il est parfois difficile de savoir pourquoi l’éditeur de liens ne peut pas trouver une définition de symbole particulière. Souvent, le problème est que vous n’avez pas inclus le code qui contient la définition dans votre Build. Ou, les options de génération ont créé des noms décorés différents pour les extern symboles al. Il existe plusieurs outils et options qui peuvent vous aider à diagnostiquer les erreurs LNK2019.
 
-- L' [/:::no-loc(VERBOSE):::](../../build/reference/verbose-print-progress-messages.md) option de l’éditeur de liens peut vous aider à déterminer les fichiers auxquels l’éditeur de liens fait référence. Cette option peut vous aider à vérifier si le fichier qui contient la définition du symbole est inclus dans votre Build.
+- L' [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) option de l’éditeur de liens peut vous aider à déterminer les fichiers auxquels l’éditeur de liens fait référence. Cette option peut vous aider à vérifier si le fichier qui contient la définition du symbole est inclus dans votre Build.
 
-- Les [/:::no-loc(EXPORTS):::](../../build/reference/dash-exports.md) [/:::no-loc(SYMBOLS):::](../../build/reference/symbols.md) options et de l' **:::no-loc(DUMPBIN):::** utilitaire peuvent vous aider à identifier les symboles qui sont définis dans vos fichiers. dll et objets ou bibliothèques. Assurez-vous que les noms décorés exportés correspondent aux noms décorés que l’éditeur de liens recherche.
+- Les [/EXPORTS](../../build/reference/dash-exports.md) [/SYMBOLS](../../build/reference/symbols.md) options et de l' **DUMPBIN** utilitaire peuvent vous aider à identifier les symboles qui sont définis dans vos fichiers. dll et objets ou bibliothèques. Assurez-vous que les noms décorés exportés correspondent aux noms décorés que l’éditeur de liens recherche.
 
-- L' **:::no-loc(UNDNAME):::** utilitaire peut vous indiquer le symbole al non décoré équivalent :::no-loc(extern)::: pour un nom décoré.
+- L' **UNDNAME** utilitaire peut vous indiquer le symbole al non décoré équivalent extern pour un nom décoré.
 
 ## <a name="examples"></a>Exemples
 
@@ -137,51 +137,51 @@ Voici plusieurs exemples de code qui génèrent une erreur LNK2019, ainsi que de
 
 ### <a name="a-symbol-is-declared-but-not-defined"></a>Un symbole est déclaré mais pas défini
 
-Dans cet exemple, une :::no-loc(extern)::: variable Al est déclarée, mais pas définie :
+Dans cet exemple, une extern variable Al est déclarée, mais pas définie :
 
 ```cpp
 // LNK2019.cpp
 // Compile by using: cl /EHsc /W4 LNK2019.cpp
 // LNK2019 expected
-:::no-loc(extern)::: char B[100];   // B isn't available to the linker
-int :::no-loc(main):::() {
+extern char B[100];   // B isn't available to the linker
+int main() {
    B[0] = ' ';   // LNK2019
 }
 ```
 
-Voici un autre exemple dans lequel une variable et une fonction sont déclarées, **`:::no-loc(extern):::`** mais aucune définition n’est fournie :
+Voici un autre exemple dans lequel une variable et une fonction sont déclarées, **`extern`** mais aucune définition n’est fournie :
 
 ```cpp
 // LNK2019c.cpp
 // Compile by using: cl /EHsc LNK2019c.cpp
 // LNK2019 expected
-:::no-loc(extern)::: int i;
-:::no-loc(extern)::: void g();
+extern int i;
+extern void g();
 void f() {
    i++;
    g();
 }
-int :::no-loc(main):::() {}
+int main() {}
 ```
 
 À moins que `i` et `g` ne soient définis dans l’un des fichiers inclus dans la build, l’éditeur de liens génère l’erreur LNK2019. Vous pouvez corriger les erreurs en incluant le fichier de code source qui contient les définitions dans le cadre de la compilation. Vous pouvez également passer des fichiers. obj ou. lib qui contiennent les définitions à l’éditeur de liens.
 
-### <a name="a-no-locstatic-data-member-is-declared-but-not-defined"></a>Un :::no-loc(static)::: membre de données est déclaré mais pas défini
+### <a name="a-no-locstatic-data-member-is-declared-but-not-defined"></a>Un static membre de données est déclaré mais pas défini
 
-L’erreur LNK2019 peut également se produire quand un :::no-loc(static)::: membre de données est déclaré mais pas défini. L'exemple suivant génère l'erreur LNK2019 et montre comment la corriger.
+L’erreur LNK2019 peut également se produire quand un static membre de données est déclaré mais pas défini. L'exemple suivant génère l'erreur LNK2019 et montre comment la corriger.
 
 ```cpp
 // LNK2019b.cpp
 // Compile by using: cl /EHsc LNK2019b.cpp
 // LNK2019 expected
 struct C {
-   :::no-loc(static)::: int s;
+   static int s;
 };
 
 // Uncomment the following line to fix the error.
 // int C::s;
 
-int :::no-loc(main):::() {
+int main() {
    C c;
    C::s = 1;
 }
@@ -211,21 +211,21 @@ ostream& operator<<(ostream& os, Test<T>& tt) {
    return os;
 }
 
-int :::no-loc(main):::() {
+int main() {
    Test<int> t;
-   cout << "Test: " << t << endl;   // LNK2019 unresolved :::no-loc(extern):::al
+   cout << "Test: " << t << endl;   // LNK2019 unresolved external
 }
 ```
 
-### <a name="inconsistent-no-locwchar_t-type-definitions"></a>Définitions de types incohérents :::no-loc(wchar_t):::
+### <a name="inconsistent-no-locwchar_t-type-definitions"></a>Définitions de types incohérents wchar_t
 
-Cet exemple crée une DLL qui a une exportation qui utilise `WCHAR` , qui correspond à **`:::no-loc(wchar_t):::`** .
+Cet exemple crée une DLL qui a une exportation qui utilise `WCHAR` , qui correspond à **`wchar_t`** .
 
 ```cpp
 // LNK2019g.cpp
 // compile with: cl /EHsc /LD LNK2019g.cpp
 #include "windows.h"
-// WCHAR resolves to :::no-loc(wchar_t):::
+// WCHAR resolves to wchar_t
 __declspec(dllexport) void func(WCHAR*) {}
 ```
 
@@ -237,13 +237,13 @@ L’exemple suivant utilise la DLL de l’exemple précédent et génère l’er
 // LNK2019 expected
 __declspec(dllimport) void func(unsigned short*);
 
-int :::no-loc(main):::() {
+int main() {
    func(0);
 }
 ```
 
-Pour corriger cette erreur, remplacez **`unsigned short`** par **`:::no-loc(wchar_t):::`** ou `WCHAR` , ou compilez LNK2019g. cpp en utilisant **/Zc : :::no-loc(wchar_t)::: - **.
+Pour corriger cette erreur, remplacez **`unsigned short`** par **`wchar_t`** ou `WCHAR` , ou compilez LNK2019g. cpp en utilisant **/Zc : wchar_t - **.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-Pour plus d’informations sur les causes et solutions possibles pour LNK2001, consultez la Stack Overflow question [qu’est-ce qu’une erreur de symbole al non défini/non définie :::no-loc(extern)::: et comment la corriger ?](https://stackoverflow.com/q/12573816/2002113).
+Pour plus d’informations sur les causes et solutions possibles pour LNK2001, consultez la Stack Overflow question [qu’est-ce qu’une erreur de symbole al non défini/non définie extern et comment la corriger ?](https://stackoverflow.com/q/12573816/2002113).

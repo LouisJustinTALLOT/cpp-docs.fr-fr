@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: aa6e5d1ea7d1bc2d7ebfaf07c7c9f808b37e9804
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 887fa14153e728735937604d531782a9ae7535bb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219766"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509718"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensions de composants pour .NET et UWP
 
@@ -37,7 +37,7 @@ Les extensions incluent également des mots clés *contextuels*. Un mot clé est
 
 Le tableau suivant répertorie les mots clés de l'extension du langage C++.
 
-|Mot clé|Contextuel|Objectif|Informations de référence|
+|Mot clé|Contextuel|Objectif|Référence|
 |-------------|-----------------------|-------------|---------------|
 |**ref class**<br /><br /> **ref struct**|Non|Déclare une classe.|[Classes et structs](classes-and-structs-cpp-component-extensions.md)|
 |**value class**<br /><br /> **value struct**|Non|Déclare une classe de valeur.|[Classes et structs](classes-and-structs-cpp-component-extensions.md)|
@@ -51,11 +51,11 @@ Le tableau suivant répertorie les mots clés de l'extension du langage C++.
 
 Vous pouvez utiliser les mots clés suivants pour qualifier le comportement de substitution pour la dérivation. Bien que le **`new`** mot clé ne soit pas une extension de C++, il est répertorié ici, car il peut être utilisé dans un contexte supplémentaire. Certains spécificateurs sont également valides pour la programmation native. Pour plus d’informations, consultez [Comment : déclarer des spécificateurs de substitution dans les compilations natives (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-|Mot clé|Contextuel|Objectif|Informations de référence|
+|Mot clé|Contextuel|Objectif|Référence|
 |-------------|-----------------------|-------------|---------------|
 |**abstraction**|Oui|Indique que les fonctions ou classes sont abstraites.|[abstraction](abstract-cpp-component-extensions.md)|
 |**`new`**|Non|Indique qu'une fonction n'est pas une substitution d'une version de la classe de base.|[new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
-|**remplacer**|Oui|Indique qu'une méthode doit être une substitution d'une version de la classe de base.|[remplacer](override-cpp-component-extensions.md)|
+|**override**|Oui|Indique qu'une méthode doit être une substitution d'une version de la classe de base.|[override](override-cpp-component-extensions.md)|
 |**sealed**|Oui|Empêche les classes d'être utilisées comme classes de base.|[sealed](sealed-cpp-component-extensions.md)|
 
 ## <a name="keywords-for-generics"></a>Mots clés pour les génériques
@@ -71,21 +71,21 @@ Les mots clés suivants ont été ajoutés pour prendre en charge des types gén
 
 Les mots clés suivants ont été ajoutés aux extensions C++.
 
-|Mot clé|Contextuel|Objectif|Informations de référence|
+|Mot clé|Contextuel|Objectif|Référence|
 |-------------|-----------------------|-------------|---------------|
 |**suivie**|Oui|Indique le comportement de gestion des exceptions par défaut.|[Gestion des exceptions](exception-handling-cpp-component-extensions.md)|
 |**for each, in**|Non|Énumère les éléments d’une collection.|[for each, in](../dotnet/for-each-in.md)|
 |**gcnew**|Non|Alloue des types sur le tas récupéré par le garbage collector. Utilisez à la place de **`new`** et **`delete`** .|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**ref new**|Oui|Alloue un type Windows Runtime. Utilisez à la place de **`new`** et **`delete`** .|[ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Oui|Indique qu’un membre peut uniquement être initialisé lors de la déclaration ou dans un constructeur statique.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**opérateur**|Oui|Crée une variable littérale.|[opérateur](literal-cpp-component-extensions.md)|
+|**literal**|Oui|Crée une variable littérale.|[literal](literal-cpp-component-extensions.md)|
 |**`nullptr`**|Non|Indique qu'un handle ou pointeur ne pointe pas vers un objet.|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>Constructions de modèle
 
 Les constructions de langage suivantes sont implémentées comme modèles, plutôt que comme mots clés. Si vous spécifiez l'option de compilateur `/ZW`, elles sont définies dans l'espace de noms `lang`. Si vous spécifiez l'option de compilateur `/clr`, elles sont définies dans l'espace de noms `cli`.
 
-|Mot clé|Objectif|Informations de référence|
+|Mot clé|Objectif|Référence|
 |-------------|-------------|---------------|
 |**array**|Déclare un tableau.|[Tableaux](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(CLR uniquement) Pointe vers des données dans un type de référence.|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +97,7 @@ Les constructions de langage suivantes sont implémentées comme modèles, plut�
 
 Les déclarateurs de type suivants demandent au runtime de gérer automatiquement la durée de vie et la suppression des objets alloués.
 
-|Opérateur|Objectif|Informations de référence|
+|Opérateur|Objectif|Référence|
 |--------------|-------------|---------------|
 |`^`|Déclare un handle à un objet ; autrement dit, un pointeur vers un objet Windows Runtime ou CLR qui est automatiquement supprimé quand il n’est plus utilisable.|[Descripteur to Object, opérateur (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Déclare une référence de suivi ; autrement dit, une référence vers un objet Windows Runtime ou CLR qui est automatiquement supprimé quand il n’est plus utilisable.|[Opérateur de référence de suivi](tracking-reference-operator-cpp-component-extensions.md)|
@@ -110,7 +110,7 @@ Cette section répertorie les constructions de programmation supplémentaires, a
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows Runtime et CLR) Permet d’utiliser des mots clés en tant qu’identificateurs.|
 |[Listes d’arguments de variable (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime et CLR) Permet à une fonction de prendre un nombre variable d’arguments.|
-|[.NET Framework équivalents aux types natifs C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Répertorie les types CLR qui sont utilisés à la place des types intégraux C++.|
+|[.NET Framework équivalents aux types natifs C++ (C++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet)|Répertorie les types CLR qui sont utilisés à la place des types intégraux C++.|
 |[domaine](../cpp/appdomain.md) **`__declspec`** d’application modificateur|**`__declspec`** modificateur qui impose que des variables statiques et globales existent par AppDomain.|
 |[Casts de style C avec /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|Décrit comment les casts de style C sont interprétées.|
 |Convention d’appel [__clrcall](../cpp/clrcall.md)|Indique la convention d’appel conforme au CLR.|

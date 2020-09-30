@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 94e44493b9356b3a0717c42aa1bed510ebe460dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039808"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509980"
 ---
 # <a name="ltbitgt-functions"></a>&lt;fonctions de bits &gt;
 
@@ -74,7 +74,7 @@ Type de la valeur à convertir.
 *De*\
 Valeur à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet de type `To`.
 
@@ -106,14 +106,17 @@ std::bit_cat<int>(f) = 7f800000
 Le code de bas niveau doit souvent interpréter un objet d’un type comme un autre type. L’objet réinterprété a la même représentation de bit que l’original, mais il s’agit d’un type différent.
 
 Au lieu d’utiliser `reinterpret_cast` , ou `memcpy()` , `bit_cast()` est un meilleur moyen d’effectuer ces conversions. Il est préférable de procéder comme suit :
-- `bit_cast()` a la valeur `constexpr`.
+
+- `bit_cast()` est `constexpr`
 - `bit_cast()` requiert que les types soient copiables de façon triviale et de la même taille. Cela empêche les problèmes potentiels que vous pouvez rencontrer à l’aide de `reinterpret_cast` et `memcpy` parce qu’ils peuvent être utilisés par inadvertance et par inadvertance pour convertir des types non triviales. En outre, `memcpy()` peut être utilisé pour effectuer une copie par inadvertance entre des types qui n’ont pas la même taille. Par exemple, un double (8 octets) dans un entier non signé (4 octets), ou l’inverse.
 
 Cette surcharge participe uniquement à la résolution de surcharge dans les cas suivants :
--  `sizeof(To) == sizeof(From)`
+
+- `sizeof(To) == sizeof(From)`
 - `To` et `From` sont [is_trivially_copyable](is-trivially-copyable-class.md).
 
 Ce modèle de fonction est `constexpr` si et seulement si `To` , et `From` les types de leurs sous-objets sont :
+
 - n’est pas un type d’Union ou de pointeur
 - n’est pas un pointeur vers un type de membre
 - non volatile-Qualified
@@ -133,7 +136,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
  Puissance la plus petite de deux supérieure ou égale à `value` .
 
@@ -183,7 +186,7 @@ template< class T >
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La plus grande puissance de deux qui n’est pas supérieure à `value` . \
 Si `value` est égal à zéro, retourne zéro.
@@ -236,7 +239,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de bits nécessaires pour représenter `value` . \
 Si `value` est égal à zéro, retourne zéro.
@@ -288,7 +291,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de bits nuls consécutifs, à partir du bit le plus significatif. \
 Si `value` est égal à zéro, nombre de bits dans le type de `value` .
@@ -341,7 +344,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de bits consécutifs définis sur un, à partir du bit le plus significatif.
 
@@ -394,7 +397,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de bits nuls consécutifs, à partir du bit le moins significatif. \
 Si `value` est égal à zéro, nombre de bits dans le type de `value` .
@@ -448,7 +451,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de bits consécutifs définis sur un, à partir du bit le moins significatif.
 
@@ -490,7 +493,7 @@ Cette fonction de modèle participe uniquement à la résolution de surcharge si
 ## <a name="has_single_bit"></a>`has_single_bit`
 
 Vérifie si une valeur n’a qu’un seul bit défini. Cela revient à tester si une valeur est une puissance de deux.
- 
+
 ```cpp
 template <class T>
 [[nodiscard]] constexpr bool has_single_bit(T value) noexcept;
@@ -501,7 +504,7 @@ template <class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `true` Si `value` a un seul jeu de bits, ce qui signifie également qu' `value` il s’agit d’une puissance de deux. Sinon, `false`.
 
@@ -544,7 +547,7 @@ Cette fonction de modèle participe uniquement à la résolution de surcharge si
 ## <a name="popcount"></a>`popcount`
 
 Comptez le nombre de bits définis sur un dans une valeur entière non signée.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr int popcount(T value) noexcept;
@@ -555,7 +558,7 @@ template<class T>
 *ajoutée*\
 Valeur entière non signée à tester.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de bits défini sur un dans `value` .
 
@@ -603,7 +606,7 @@ Cette fonction de modèle participe uniquement à la résolution de surcharge si
 ## <a name="rotl"></a>`rotl`
 
 Fait pivoter les bits d’une valeur entière non signée à gauche du nombre de fois spécifié. Les bits qui « se déposent » du bit le plus à gauche sont pivotés dans le bit le plus à droite.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotl(T value, int s) noexcept;
@@ -617,7 +620,7 @@ Valeur entière non signée à faire pivoter.
 *x*\
 Nombre de rotations gauches à effectuer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat de rotation `value` gauche, `s` heures.
 Si `s` est égal à zéro, retourne `value` . \
@@ -665,7 +668,7 @@ Cette fonction de modèle participe uniquement à la résolution de surcharge si
 ## <a name="rotr"></a>`rotr`
 
 Fait pivoter les bits du `value` nombre de fois spécifié. Les bits qui « se déplacent » du bit le plus à droite sont retournés vers le bit le plus à gauche.
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotr(T value, int s) noexcept;
@@ -679,7 +682,7 @@ Valeur entière non signée à faire pivoter.
 *x*\
 Nombre de rotations appropriées à effectuer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat de rotation de `value` droite, d' `s` heures.
 Si `s` est égal à zéro, retourne `value` . \

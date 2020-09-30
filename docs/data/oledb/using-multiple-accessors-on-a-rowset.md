@@ -7,44 +7,44 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: d1ab314edeebedef4cff14cd5364a7ca16c74769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48772539b4dda9262a244506a36932d1e752949e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216380"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509400"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilisation de plusieurs accesseurs dans un jeu de lignes
 
-Il existe trois principaux scénarios dans lesquels vous devez utiliser plusieurs accesseurs :
+Il existe trois scénarios de base dans lesquels vous devez utiliser plusieurs accesseurs :
 
-- **Plusieurs ensembles de lignes en lecture/écriture.** Dans ce scénario, vous avez une table avec une clé primaire. Vous souhaitez être en mesure de lire toutes les colonnes dans la ligne, y compris la clé primaire. Vous souhaitez également être en mesure d’écrire des données à toutes les colonnes à l’exception de la clé primaire (car vous ne peut pas écrire dans la colonne clé primaire). Dans ce cas, vous définissez deux accesseurs :
+- **Ensembles de lignes de lecture/écriture multiples.** Dans ce scénario, vous disposez d’une table avec une clé primaire. Vous souhaitez pouvoir lire toutes les colonnes de la ligne, y compris la clé primaire. Vous pouvez également être en mesure d’écrire des données dans toutes les colonnes à l’exception de la clé primaire (car vous ne pouvez pas écrire dans la colonne de clé primaire). Dans ce cas, vous configurez deux accesseurs :
 
   - L’accesseur 0 contient toutes les colonnes.
 
   - L’accesseur 1 contient toutes les colonnes à l’exception de la clé primaire.
 
-- **Performances** Dans ce scénario, une ou plusieurs colonnes ont une grande quantité de données, par exemple, aux fichiers de graphiques, audio ou vidéo. Chaque fois que vous passez à une ligne, sans doute ne voulez-vous extraire la colonne avec le fichier de données volumineux, car cela risque de ralentir les performances de votre application.
+- **Niveau de performance.** Dans ce scénario, une ou plusieurs colonnes ont une grande quantité de données, par exemple, des fichiers graphiques, audio ou vidéo. Chaque fois que vous passez à une ligne, vous ne souhaitez probablement pas récupérer la colonne avec le fichier de données volumineux, car cela ralentirait les performances de votre application.
 
-  Vous pouvez définir des accesseurs distincts dans lequel le premier accesseur contient toutes les colonnes sauf celui avec des données volumineuses, et il récupère des données à partir de ces colonnes automatiquement ; l’accesseur premier est l’accesseur automatique. Le deuxième accesseur extrait uniquement la colonne contenant les données volumineuses, mais il ne récupérer automatiquement des données à partir de cette colonne. Vous pouvez avoir des autres méthodes de mise à jour ou extraire les données volumineuses à la demande.
+  Vous pouvez configurer des accesseurs distincts dans lesquels le premier accesseur contient toutes les colonnes à l’exception de celle contenant des données volumineuses, et il récupère automatiquement les données de ces colonnes. le premier accesseur est l’accesseur automatique. Le deuxième accesseur récupère uniquement la colonne contenant des données volumineuses, mais il ne récupère pas automatiquement les données de cette colonne. Vous pouvez avoir d’autres méthodes qui mettent à jour ou récupèrent les données volumineuses à la demande.
 
-  - Accesseur 0 est un accesseur automatique ; Il récupère toutes les colonnes à l’exception de celui avec des données volumineuses.
+  - L’accesseur 0 est un accesseur automatique ; elle récupère toutes les colonnes à l’exception de celles contenant des données volumineuses.
 
-  - L’accesseur 1 n’est pas un accesseur automatique ; Il récupère la colonne avec des données volumineuses.
+  - L’accesseur 1 n’est pas un accesseur automatique ; Il récupère la colonne contenant des données volumineuses.
 
-  Utilisez l’argument automatique pour spécifier si l’accesseur est un accesseur automatique.
+  Utilisez l’argument auto pour spécifier si l’accesseur est un accesseur automatique.
 
-- **Plusieurs colonnes ISequentialStream.** Dans ce scénario, vous avez plus d’une exploitation colonne `ISequentialStream` données. Toutefois, chaque accesseur est limité à un `ISequentialStream` flux de données. Pour résoudre ce problème, configurez plusieurs accesseurs, chacun comportant une `ISequentialStream` pointeur.
+- **Plusieurs colonnes ISequentialStream.** Dans ce scénario, vous avez plus d’une colonne contenant des `ISequentialStream` données. Toutefois, chaque accesseur est limité à un `ISequentialStream` flux de données. Pour résoudre ce problème, configurez plusieurs accesseurs, chacun d’entre eux ayant un `ISequentialStream` pointeur.
 
-Normalement, vous créez des accesseurs en utilisant le [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) macros. Vous pouvez également utiliser le [db_accessor](../../windows/db-accessor.md) attribut. (Les accesseurs sont décrits dans [enregistrements utilisateur](../../data/oledb/user-records.md).) Les macros ou l’attribut spécifient si un accesseur est automatique ou un accesseur non automatique :
+Normalement, vous créez des accesseurs à l’aide des macros [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) et [END_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) . Vous pouvez également utiliser l’attribut [db_accessor](../../windows/attributes/db-accessor.md) . (Les accesseurs sont décrits plus en détail dans les [enregistrements utilisateur](../../data/oledb/user-records.md).) Les macros ou l’attribut spécifient si un accesseur est un accesseur automatique ou non automatique :
 
-- Dans un accesseur automatique, les méthodes de déplacement comme `MoveFirst`, `MoveLast`, `MoveNext`, et `MovePrev` récupérer des données pour toutes les colonnes spécifiées automatiquement. L’accesseur 0 doit être l’accesseur automatique.
+- Dans un accesseur automatique, déplacez les méthodes telles que `MoveFirst` ,, `MoveLast` `MoveNext` et `MovePrev` récupérez automatiquement des données pour toutes les colonnes spécifiées. L’accesseur 0 doit être l’accesseur automatique.
 
-- Dans un accesseur non automatique, la récupération ne se produit pas jusqu'à ce que vous appelez explicitement une méthode comme `Update`, `Insert`, `Fetch`, ou `Delete`. Dans les scénarios décrits ci-dessus, vous ne souhaitez ne peut-être pas récupérer toutes les colonnes à chaque déplacement. Vous pouvez placer une ou plusieurs colonnes dans un accesseur séparé et en faire un accesseur non automatique, comme indiqué ci-dessous.
+- Dans un accesseur non automatique, la récupération ne se produit pas tant que vous n’appelez pas explicitement une méthode telle que `Update` , `Insert` , `Fetch` ou `Delete` . Dans les scénarios décrits ci-dessus, il est possible que vous ne souhaitiez pas récupérer toutes les colonnes à chaque déplacement. Vous pouvez placer une ou plusieurs colonnes dans un accesseur séparé et en faire un accesseur non automatique, comme indiqué ci-dessous.
 
-L’exemple suivant utilise plusieurs accesseurs pour lire et écrire dans la table des tâches de la base de données pubs SQL Server à l’aide de plusieurs accesseurs. Cet exemple est l’utilisation la plus courante des accesseurs multiples ; consultez le scénario « plusieurs ensembles de lignes en lecture/écriture » ci-dessus.
+L’exemple suivant utilise plusieurs accesseurs pour lire et écrire dans la table jobs de la base de données SQL Server pubs à l’aide de plusieurs accesseurs. Cet exemple est l’utilisation la plus courante de plusieurs accesseurs. consultez le scénario « plusieurs ensembles de lignes en lecture/écriture » ci-dessus.
 
-La classe d’enregistrement utilisateur est comme suit. Elle définit deux accesseurs : l’accesseur 0 contient uniquement la colonne clé primaire (ID) et l’accesseur 1 contient d’autres colonnes.
+La classe d’enregistrement utilisateur est la suivante. Il configure deux accesseurs : l’accesseur 0 contient uniquement la colonne de clé primaire (ID) et l’accesseur 1 contient d’autres colonnes.
 
 ```cpp
 class CJobs
@@ -79,7 +79,7 @@ END_ACCESSOR_MAP()
 };
 ```
 
-Voici le code principal. Appel `MoveNext` récupère automatiquement les données à partir de l’ID de colonne de clé primaire à l’aide de l’accesseur 0. Notez comment la `Insert` méthode près de l’accesseur utilise 1 pour éviter d’écrire dans la colonne clé primaire.
+Le code principal est le suivant. L’appel `MoveNext` de récupère automatiquement les données de l’ID de colonne de clé primaire à l’aide de l’accesseur 0. Notez que la `Insert` méthode proche de la fin utilise l’accesseur 1 pour éviter d’écrire dans la colonne de clé primaire.
 
 ```cpp
 int main(int argc, char* argv[])

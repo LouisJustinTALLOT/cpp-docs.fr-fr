@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212941"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509448"
 ---
 # <a name="updating-rowsets"></a>mettre à jour les jeux de lignes
 
@@ -20,11 +20,11 @@ Une opération de base de données très simple consiste à mettre à jour ou à
 
 Les consommateurs peuvent effectuer les types de mises à jour suivants sur les données d’ensemble de lignes : définition des valeurs des colonnes dans une ligne, insertion d’une ligne et suppression d’une ligne. Pour effectuer ces opérations, la classe de modèle OLE DB [CRowset](../../data/oledb/crowset-class.md) implémente l’interface [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) et remplace les méthodes suivantes de l’interface :
 
-- [SetData](../../data/oledb/crowset-setdata.md) change les valeurs des colonnes dans une ligne d’un ensemble de lignes. Elle est équivalente à la commande SQL UPDATE.
+- [SetData](./crowset-class.md#setdata) change les valeurs des colonnes dans une ligne d’un ensemble de lignes. Elle est équivalente à la commande SQL UPDATE.
 
-- [Insert](../../data/oledb/crowset-insert.md) insère une ligne dans un ensemble de lignes. Elle est équivalente à la commande SQL INSERT.
+- [Insert](./crowset-class.md#insert) insère une ligne dans un ensemble de lignes. Elle est équivalente à la commande SQL INSERT.
 
-- [Delete](../../data/oledb/crowset-delete.md) supprime une ligne d’un ensemble de lignes. Elle est équivalente à la commande SQL DELETE.
+- [Delete](./crowset-class.md#delete) supprime une ligne d’un ensemble de lignes. Elle est équivalente à la commande SQL DELETE.
 
 ## <a name="supporting-update-operations"></a>Prise en charge des opérations de mise à jour
 
@@ -52,7 +52,7 @@ Les opérations de modification, d’insertion ou de suppression peuvent échoue
 
 ## <a name="setting-data-in-rows"></a>Définition de données dans des lignes
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) définit les valeurs des données dans une ou plusieurs colonnes de la ligne actuelle. Le code suivant définit les valeurs des membres de données liés aux colonnes `Name` et `Units in Stock` du tableau `Products`, puis appelle `SetData` pour écrire ces valeurs dans la 100e ligne de l’ensemble de lignes :
+[CRowset::SetData](./crowset-class.md#setdata) définit les valeurs des données dans une ou plusieurs colonnes de la ligne actuelle. Le code suivant définit les valeurs des membres de données liés aux colonnes `Name` et `Units in Stock` du tableau `Products`, puis appelle `SetData` pour écrire ces valeurs dans la 100e ligne de l’ensemble de lignes :
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -74,13 +74,13 @@ HRESULT hr = product.SetData();
 
 ## <a name="inserting-rows-into-rowsets"></a>Insertion de lignes dans des rowsets
 
-[CRowset::Insert](../../data/oledb/crowset-insert.md) crée et initialise une ligne en utilisant les données provenant de l’accesseur. `Insert` crée une toute nouvelle ligne après la ligne active. Vous devez spécifier si vous voulez faire passer la ligne active à la ligne suivante ou la laisser inchangée. Pour cela, vous définissez le paramètre *bGetRow* :
+[CRowset::Insert](./crowset-class.md#insert) crée et initialise une ligne en utilisant les données provenant de l’accesseur. `Insert` crée une toute nouvelle ligne après la ligne active. Vous devez spécifier si vous voulez faire passer la ligne active à la ligne suivante ou la laisser inchangée. Pour cela, vous définissez le paramètre *bGetRow* :
 
 ```cpp
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **`false`**(valeur par défaut) spécifie que la ligne actuelle est incrémentée à la ligne suivante (auquel cas elle pointe vers la ligne insérée).
+- **`false`** (valeur par défaut) spécifie que la ligne actuelle est incrémentée à la ligne suivante (auquel cas elle pointe vers la ligne insérée).
 
 - **`true`** Spécifie que la ligne actuelle reste à l’emplacement où elle est.
 
@@ -131,13 +131,13 @@ m_dwQuantityPerUnitLength = 10;        // "Pack of 10" has 10 characters
 HRESULT hr = product.Insert();
 ```
 
-Pour obtenir un exemple plus détaillé, consultez [CRowset::Insert](../../data/oledb/crowset-insert.md).
+Pour obtenir un exemple plus détaillé, consultez [CRowset::Insert](./crowset-class.md#insert).
 
 Pour plus d’informations sur la définition des données membres d’état et de longueur, consultez [Membres de données d’état des champs dans les accesseurs générés par un Assistant](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).
 
 ## <a name="deleting-rows-from-rowsets"></a>Suppression de lignes dans les rowsets
 
-[CRowset::Delete](../../data/oledb/crowset-delete.md) supprime la ligne active du rowset. Le code suivant appelle `Delete` pour supprimer la 100e ligne de l’ensemble de lignes :
+[CRowset::Delete](./crowset-class.md#delete) supprime la ligne active du rowset. Le code suivant appelle `Delete` pour supprimer la 100e ligne de l’ensemble de lignes :
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -156,9 +156,9 @@ HRESULT hr = product.Delete();
 
 Sauf indication contraire, les appels aux méthodes `SetData`, `Insert`, et `Delete` mettent à jour le magasin de données immédiatement. Vous pouvez cependant différer les mises à jour, afin que le consommateur stocke toutes les modifications dans un cache local, puis les transfère vers le magasin de données quand vous appelez une des méthodes de mise à jour suivantes :
 
-- [CRowset::Update](../../data/oledb/crowset-update.md) transfère toute modification en attente apportée à la ligne active depuis la dernière extraction ou depuis le dernier appel `Update` sur cette ligne.
+- [CRowset::Update](./crowset-class.md#update) transfère toute modification en attente apportée à la ligne active depuis la dernière extraction ou depuis le dernier appel `Update` sur cette ligne.
 
-- [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md) transfère toute modification en attente apportée à toutes les lignes depuis la dernière extraction ou depuis le dernier appel `Update` sur cette ligne.
+- [CRowset::UpdateAll](./crowset-class.md#updateall) transfère toute modification en attente apportée à toutes les lignes depuis la dernière extraction ou depuis le dernier appel `Update` sur cette ligne.
 
 Notez qu’une mise à jour, telle qu’elle est utilisée par les méthodes de mise à jour, consiste à apporter des modifications sur commande ; elle ne doit pas être confondue avec la commande SQL **UPDATE** (`SetData` est équivalent à la commande SQL **UPDATE**).
 
@@ -204,7 +204,7 @@ Pour faire en sorte que les modifications en attente soient effectivement transf
 
 Par exemple, si le premier appel à `Update` ne se trouvait pas dans le code ci-dessus, la ligne 100 resterait inchangée, alors que la ligne 101 serait modifiée. Après cela, votre application devrait appeler `UpdateAll` ou revenir à la ligne 100 et appeler `Update` pour que cette ligne soit mise à jour.
 
-Enfin, une des principales raisons de différer des modifications est la possibilité de les annuler. L’appel à [CRowset::Undo](../../data/oledb/crowset-undo.md) rétablit l’état du cache local des modifications à l’état du magasin de données avant que les modifications aient été apportées. Il est important de noter que `Undo` ne restaure pas l’état du cache local à l’étape immédiatement précédente (c’est-à-dire seulement à l’état précédant la dernière modification), mais efface en fait le cache local pour cette ligne. En outre, `Undo` affecte seulement la ligne active.
+Enfin, une des principales raisons de différer des modifications est la possibilité de les annuler. L’appel à [CRowset::Undo](./crowset-class.md#undo) rétablit l’état du cache local des modifications à l’état du magasin de données avant que les modifications aient été apportées. Il est important de noter que `Undo` ne restaure pas l’état du cache local à l’étape immédiatement précédente (c’est-à-dire seulement à l’état précédant la dernière modification), mais efface en fait le cache local pour cette ligne. En outre, `Undo` affecte seulement la ligne active.
 
 ## <a name="see-also"></a>Voir aussi
 

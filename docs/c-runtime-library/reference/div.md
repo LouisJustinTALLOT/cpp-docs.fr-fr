@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0c87ad44986363e871d68bccde757214f5e2c45
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234222"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509897"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
@@ -75,17 +75,17 @@ Numérateur.
 *denom*<br/>
 Dénominateur.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 la **balise div** appelée à l’aide d’arguments de type **`int`** retourne une structure de type **div_t**, qui comprend le quotient et le reste. La valeur de retour avec des arguments de type **`long`** est **ldiv_t**et la valeur de retour avec des arguments de type **`long long`** est **lldiv_t**. **div_t**, **ldiv_t**et **lldiv_t** sont définis dans \<stdlib.h> .
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La fonction **div** divise le *chiffre* par *denom* et calcule donc le quotient et le reste. La structure [div_t](../../c-runtime-library/standard-types.md) contient le quotient, le **guillemet**et le reste, **REM**. Le signe du quotient est le même que celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
 
 Les surcharges de la **balise div** qui acceptent des arguments de type **`long`** ou **`long long`** sont uniquement disponibles pour le code C++. Les types de retour [ldiv_t](../../c-runtime-library/standard-types.md) et [lldiv_t](../../c-runtime-library/standard-types.md) contiennent les membres **quote** et **REM**, qui ont la même signification que les membres de **div_t**.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -134,5 +134,5 @@ The quotient is 67, and the remainder is 5
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv, lldiv](ldiv-lldiv.md)<br/>
+[ldiv, lldiv]()<br/>
 [imaxdiv](imaxdiv.md)<br/>

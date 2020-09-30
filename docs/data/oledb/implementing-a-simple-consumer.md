@@ -4,12 +4,12 @@ ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 9e93b40313a215dfe5872b33dc7d41641204a2f1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311945"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508972"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implémentation d'un consommateur simple
 
@@ -33,7 +33,7 @@ Les rubriques suivantes montrent comment modifier les fichiers créés par l’*
 > [!NOTE]
 > Pour générer une application consommateur pour tester `MyProv` (le même fournisseur que celui décrit dans [Amélioration du fournisseur simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md)), vous devez inclure la prise en charge des signets comme décrit dans [Ajout de la prise en charge de signet au consommateur](#bookmark).
 
-## <a name="retrieve" ></a> Récupération des données avec le consommateur
+## <a name="retrieving-data-with-the-consumer"></a><a name="retrieve" ></a> Récupération des données avec le consommateur
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Pour modifier l’application de console afin d’utiliser le consommateur OLE DB
 
@@ -64,7 +64,7 @@ Les rubriques suivantes montrent comment modifier les fichiers créés par l’*
     }
     ```
 
-## <a name="bookmark" ></a> Ajout de prise en charge de signet au consommateur
+## <a name="adding-bookmark-support-to-the-consumer"></a><a name="bookmark" ></a> Ajout de prise en charge de signet au consommateur
 
 Un signet est une colonne qui identifie de façon unique les lignes dans le tableau. Il s’agit en général la colonne clé, mais ce n’est pas toujours le cas (ce point est spécifique au fournisseur). Cette section vous montre comment ajouter la prise en charge des signets. Pour ce faire, vous devez effectuer les étapes suivantes dans la classe d’enregistrement utilisateur :
 
@@ -72,7 +72,7 @@ Un signet est une colonne qui identifie de façon unique les lignes dans le tabl
 
 - Demandez une colonne de signet à partir du fournisseur en définissant la propriété `DBPROP_IRowsetLocate`.
 
-- Ajoutez une entrée de signet dans le mappage de colonnes à l’aide de la macro [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+- Ajoutez une entrée de signet dans le mappage de colonnes à l’aide de la macro [BOOKMARK_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#bookmark_entry).
 
 Grâce aux étapes précédentes, vous disposez de la prise en charge des signets et d’un objet signet avec lequel vous pouvez travailler. Cet exemple de code montre un signet comme suit :
 
@@ -80,7 +80,7 @@ Grâce aux étapes précédentes, vous disposez de la prise en charge des signet
 
 - Sortez les données d’ensemble de lignes dans le fichier ligne par ligne.
 
-- Déplacez le curseur de l’ensemble de lignes vers le signet en appelant [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Déplacez le curseur de l’ensemble de lignes vers le signet en appelant [MoveToBookmark](./crowset-class.md#movetobookmark).
 
 - Sortez la ligne marquée par un signet et ajoutez-la à la fin du fichier.
 
@@ -207,4 +207,4 @@ Pour plus d’informations sur les signets, consultez [Utilisation des signets](
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d’un consommateur OLE DB en utilisant l’Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Création d’un consommateur OLE DB à l’aide d’un Assistant](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

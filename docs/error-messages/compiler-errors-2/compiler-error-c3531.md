@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 7da9da2daedc79db619f82848dc864d1cb7bd1f1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4537c6c76814f2aeb8f8d62579caec86785de252
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750089"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510139"
 ---
 # <a name="compiler-error-c3531"></a>Erreur du compilateur C3531
 
@@ -25,7 +25,7 @@ La variable spécifiée n’a pas d’expression d’initialiseur.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3531, car les variables `x1`, `y1, y2, y3`et `z2` ne sont pas initialisées.
+L’exemple suivant génère C3531, car les variables `x1` , `y1, y2, y3` et ne `z2` sont pas initialisées.
 
 ```cpp
 // C3531.cpp
@@ -41,4 +41,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[auto, mot clé](../../cpp/auto-keyword.md)
+[Auto, mot clé](../../cpp/auto-cpp.md)

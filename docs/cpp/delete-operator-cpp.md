@@ -8,23 +8,23 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 19f92e2aa62adf1ede4c0e6ab1187fd9e4106e68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ce9b8e606d5bbc2051af76e6dc4ac1350ec81a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221690"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509144"
 ---
 # <a name="delete-operator-c"></a>delete, opérateur (C++)
 
 Libère un bloc de mémoire.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
 > [ `::` ] `delete` *expression cast*\
 > [ `::` ] `delete []` *expression cast*
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 L’argument *Cast-expression* doit être un pointeur vers un bloc de mémoire précédemment alloué pour un objet créé avec l' [opérateur New](../cpp/new-operator-cpp.md). L' **`delete`** opérateur a un résultat de type **`void`** et, par conséquent, ne retourne pas de valeur. Par exemple :
 
@@ -50,7 +50,7 @@ Lorsque **`delete`** est utilisé pour libérer de la mémoire pour un objet de 
 
 Si l’opérande de l' **`delete`** opérateur est une l-value modifiable, sa valeur n’est pas définie une fois que l’objet a été supprimé.
 
-Si l’option de compilateur [/SDL (activer des vérifications de sécurité supplémentaires)](/cpp/build/reference/sdl-enable-additional-security-checks) est spécifiée, l’opérande de l' **`delete`** opérateur est défini sur une valeur non valide après la suppression de l’objet.
+Si l’option de compilateur [/SDL (activer des vérifications de sécurité supplémentaires)](../build/reference/sdl-enable-additional-security-checks.md) est spécifiée, l’opérande de l' **`delete`** opérateur est défini sur une valeur non valide après la suppression de l’objet.
 
 ## <a name="using-delete"></a>Utilisation de delete
 

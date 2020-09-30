@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 16f1a3f8ae9b50e43bfd67d9ac8c65507bf4f147
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d94c5d121386989d223a55b8ce7626444c3f8950
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834334"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509068"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl, classe
 
@@ -58,9 +58,9 @@ Votre classe, dérivée de `IDBPropertiesImpl` .
 |[GetPropertyInfo](#getpropertyinfo)|Retourne des informations sur toutes les propriétés prises en charge par le fournisseur.|
 |[SetProperties](#setproperties)|Définit les propriétés de la source de données et des groupes de propriétés d’initialisation, pour les objets de source de données ou le groupe de propriétés d’initialisation, pour les énumérateurs.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), il doit exposer `IDBProperties` . `IDBPropertiesImpl` implémente à `IDBProperties` l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), il doit exposer `IDBProperties` . `IDBPropertiesImpl` implémente à `IDBProperties` l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map).
 
 ## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a> IDBPropertiesImpl :: GetProperties
 
@@ -88,7 +88,7 @@ Certains paramètres correspondent à *OLE DB paramètres de référence du prog
 |*pcProperties*|*pcPropertySets*|
 |*prgProperties*|*prgPropertySets*|
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si le fournisseur est initialisé, cette méthode retourne les valeurs des propriétés dans le DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO DBPROPSET_DBINIT groupes de propriétés qui sont actuellement définis sur l’objet source de données. Si le fournisseur n’est pas initialisé, il retourne uniquement les propriétés de groupe DBPROPSET_DBINIT.
 
@@ -117,9 +117,9 @@ Certains paramètres correspondent à *OLE DB paramètres de référence du prog
 |*cPropertySets*|*cPropertyIDSets*|
 |*rgPropertySets*|*rgPropertyIDSets*|
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Utilise [IDBInitializeImpl :: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) pour implémenter cette fonctionnalité.
+Utilise [IDBInitializeImpl :: m_pCUtlPropInfo](./idbinitializeimpl-class.md#pcutlpropinfo) pour implémenter cette fonctionnalité.
 
 ## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a> IDBPropertiesImpl :: SetProperties
 
@@ -136,7 +136,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 Pour plus d’informations, consultez [IDBProperties :: SetProperties](/previous-versions/windows/desktop/ms723049(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si le fournisseur est initialisé, cette méthode définit les valeurs des propriétés dans les groupes de propriétés DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO DBPROPSET_DBINIT pour l’objet source de données. Si le fournisseur n’est pas initialisé, il définit DBPROPSET_DBINIT propriétés de groupe uniquement.
 

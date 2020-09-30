@@ -3,12 +3,12 @@ title: Bibliothèque de modèles Windows Runtime C++ (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840532"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509801"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Bibliothèque de modèles Windows Runtime C++ (WRL)
 
@@ -32,11 +32,11 @@ La bibliothèque de modèles C++ Windows Runtime et C++/CX offrent des avantages
 - C++/CX représente les valeurs COM HRESULT comme des exceptions. Si vous avez hérité d’une base de code qui utilise COM ou qui n’utilise pas d’exceptions, vous pouvez constater que la bibliothèque de modèles C++ Windows Runtime est un moyen plus naturel de travailler avec le Windows Runtime, car vous n’êtes pas obligé d’utiliser des exceptions.
 
    > [!NOTE]
-   > La bibliothèque de modèles C++ Windows Runtime utilise des valeurs HRESULT et ne lève pas d’exceptions. En outre, la bibliothèque de modèles C++ Windows Runtime utilise des pointeurs intelligents et le modèle RAII pour garantir que les objets sont détruits correctement lorsque votre code d’application lève une exception. Pour plus d’informations sur les pointeurs intelligents et RAII, consultez la page [pointeurs intelligents](../../cpp/smart-pointers-modern-cpp.md) et [ressources propres (RAII)](../../cpp/objects-own-resources-raii.md).
+   > La bibliothèque de modèles C++ Windows Runtime utilise des valeurs HRESULT et ne lève pas d’exceptions. En outre, la bibliothèque de modèles C++ Windows Runtime utilise des pointeurs intelligents et le modèle RAII pour garantir que les objets sont détruits correctement lorsque votre code d’application lève une exception. Pour plus d’informations sur les pointeurs intelligents et RAII, consultez la page [pointeurs intelligents](../../cpp/smart-pointers-modern-cpp.md) et [ressources propres (RAII)](../../cpp/object-lifetime-and-resource-management-modern-cpp.md).
 
 - L’objectif et la conception de la bibliothèque de modèles Windows Runtime C++ sont inspirés par le Active Template Library (ATL), qui est un ensemble de classes C++ basées sur des modèles qui simplifient la programmation des objets COM. Étant donné que Windows Runtime C++ Template Library utilise le C++ standard pour encapsuler les Windows Runtime, vous pouvez plus facilement porter et interagir avec de nombreux composants COM existants écrits en ATL dans le Windows Runtime. Si vous connaissez déjà ATL, vous constaterez peut-être que Windows Runtime la programmation de la bibliothèque de modèles C++ est plus facile.
 
-## <a name="getting-started"></a>Mise en route
+## <a name="getting-started"></a>Prise en main
 
 Voici quelques ressources qui peuvent vous aider à travailler immédiatement avec la bibliothèque de modèles C++ Windows Runtime.
 

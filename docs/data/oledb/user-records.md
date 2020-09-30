@@ -15,12 +15,12 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209441"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509424"
 ---
 # <a name="user-records"></a>Enregistrements utilisateur
 
@@ -64,7 +64,7 @@ Quand vous utilisez l’**Assistant Consommateur OLE DB ATL** pour générer un 
 
 Pour obtenir une présentation détaillée des scénarios dans lesquels vous auriez à utiliser plusieurs accesseurs, consultez [Utilisation de plusieurs accesseurs dans un ensemble de lignes](../../data/oledb/using-multiple-accessors-on-a-rowset.md).
 
-L’exemple suivant montre l’enregistrement utilisateur modifié pour prendre en charge plusieurs accesseurs dans l’ensemble de lignes. Au lieu de BEGIN_COLUMN_MAP et END_COLUMN_MAP, il utilise [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) et [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) pour chaque accesseur. La macro BEGIN_ACCESSOR spécifie le numéro de l’accesseur (décalage partant de zéro) et indique si l’accesseur est un auto-accesseur. Les auto-accesseurs appellent `GetData` pour récupérer les données automatiquement via un appel à [MoveNext](../../data/oledb/crowset-movenext.md). Les accesseurs non automatiques nécessitent que vous récupériez explicitement les données. Utilisez un accesseur non automatique si vous effectuez une liaison vers un champ de données de grande taille (par exemple, une image bitmap) que vous ne voulez pas récupérer pour chaque enregistrement.
+L’exemple suivant montre l’enregistrement utilisateur modifié pour prendre en charge plusieurs accesseurs dans l’ensemble de lignes. Au lieu de BEGIN_COLUMN_MAP et END_COLUMN_MAP, il utilise [BEGIN_ACCESSOR_MAP](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor_map) et [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) pour chaque accesseur. La macro BEGIN_ACCESSOR spécifie le numéro de l’accesseur (décalage partant de zéro) et indique si l’accesseur est un auto-accesseur. Les auto-accesseurs appellent `GetData` pour récupérer les données automatiquement via un appel à [MoveNext](./crowset-class.md#movenext). Les accesseurs non automatiques nécessitent que vous récupériez explicitement les données. Utilisez un accesseur non automatique si vous effectuez une liaison vers un champ de données de grande taille (par exemple, une image bitmap) que vous ne voulez pas récupérer pour chaque enregistrement.
 
 ```cpp
 class CMultiArtists
@@ -90,4 +90,4 @@ END_ACCESSOR_MAP()
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

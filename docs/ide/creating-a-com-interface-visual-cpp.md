@@ -7,12 +7,12 @@ helpviewer_keywords:
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: 09ddc113450fadb208e4f8471bc9aacf596a53f1
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 6ad8d50049d34a711937f3d1f73157ce26f69808
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182609"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509690"
 ---
 # <a name="create-a-com-interface"></a>Créer une interface COM
 
@@ -28,7 +28,7 @@ Vous pouvez utiliser ces Assistants pour effectuer les trois tâches courantes c
 
   Ouvrez l’[Assistant Contrôle ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md) pour créer un contrôle ActiveX possédant une dispinterface et une table d’événements définies dans le fichier .idl et dans la classe de contrôle, respectivement.
 
-- [Ajouter un contrôle ATL](../atl/reference/adding-an-atl-control.md)
+- [Ajoutez un contrôle ATL](../atl/reference/adding-an-atl-control.md).
 
   Utilisez conjointement l’[Assistant Projet ATL](../atl/reference/atl-project-wizard.md) et l’[Assistant Contrôle ATL](../atl/reference/atl-control-wizard.md) pour créer un contrôle ActiveX ATL.
 
@@ -36,14 +36,14 @@ Vous pouvez utiliser ces Assistants pour effectuer les trois tâches courantes c
 
   Cet Assistant crée une source IDL et une table COM dans les classes du projet.
 
-Si un projet ATL est ouvert, la boîte de dialogue [Ajouter une classe](../ide/add-class-dialog-box.md) propose des Assistants et modèles supplémentaires pour l’ajout d’interfaces COM à votre projet. Les Assistants suivants vous permettent de définir une ou plusieurs interfaces pour l’objet :
+Si un projet ATL est ouvert, la boîte de dialogue [Ajouter une classe](./adding-a-class-visual-cpp.md#add-class-dialog-box) propose des Assistants et modèles supplémentaires pour l’ajout d’interfaces COM à votre projet. Les Assistants suivants vous permettent de définir une ou plusieurs interfaces pour l’objet :
 
-- [Assistant Composant COM+ 1.0 ATL](../atl/reference/atl-com-plus-1-0-component-wizard.md)
-- [Assistant Objet simple ATL](../atl/reference/atl-simple-object-wizard.md)
-- [Assistant Composant ASP ATL](../atl/reference/atl-active-server-page-component-wizard.md)
-- [Assistant Contrôle ATL](../atl/reference/atl-control-wizard.md)
+- [Assistant composant ATL COM+ 1,0](../atl/reference/atl-com-plus-1-0-component-wizard.md)
+- [Assistant objet simple ATL](../atl/reference/atl-simple-object-wizard.md)
+- [Assistant composant ASP ATL](../atl/reference/atl-active-server-page-component-wizard.md)
+- [Assistant contrôle ATL](../atl/reference/atl-control-wizard.md)
 
-De plus, vous pouvez implémenter de nouvelles interfaces sur votre contrôle COM. Il vous suffit de cliquer avec le bouton droit sur la classe de contrôle de l’objet dans Affichage de classes et de choisir [Implémenter l’interface](../ide/implement-interface-wizard.md).
+De plus, vous pouvez implémenter de nouvelles interfaces sur votre contrôle COM. Il vous suffit de cliquer avec le bouton droit sur la classe de contrôle de l’objet dans Affichage de classes et de choisir [Implémenter l’interface](./implementing-an-interface-visual-cpp.md#implement-interface-wizard).
 
 > [!NOTE]
 > Visual Studio ne propose pas d’Assistant pour l’ajout d’une interface à un projet. Vous pouvez ajouter une interface à un projet ATL ou [ajouter la prise en charge ATL à votre projet MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) en ajoutant un objet simple à l’aide de l’[Assistant Objet simple ATL](../atl/reference/atl-simple-object-wizard.md). Vous pouvez également ouvrir le fichier .idl du projet et créer l’interface en tapant :
@@ -65,7 +65,7 @@ Dans l’affichage de classes et ses menus contextuels, vous pouvez utiliser les
 - ajouter des méthodes, des propriétés et des événements ;
 - accéder directement au code d’interface d’un élément en double-cliquant sur ce dernier.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 - [Modifier une interface COM](#edit-a-com-interface)
 
@@ -82,7 +82,7 @@ Les trois Assistants suivants vous aident à personnaliser les interfaces exista
 
 |Assistant|Type de projet|
 |------------|------------------|
-|[Assistant Ajout de propriété](../ide/names-add-property-wizard.md)|Projets ATL ou MFC prenant en charge ATL. Cliquez avec le bouton droit sur l’interface à laquelle vous voulez ajouter la propriété.<br /><br />Visual C++ détecte le type de projet et modifie les options de l’Assistant Ajout de propriété si nécessaire :<br /><br />- Pour les dispinterfaces de projets créés à l’aide de l’[Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’appel de l’Assistant Ajout de propriété fournit des options propres à MFC.<br />- Pour les interfaces de contrôle ActiveX MFC, l’Assistant Ajout de propriété fournit la liste des méthodes et propriétés stock que vous pouvez utiliser telles quelles ou personnaliser pour votre contrôle.<br />- Pour toutes les autres interfaces, l’Assistant Ajout de propriété fournit des options utiles dans la plupart des situations.|
-|[Assistant Ajout de méthode](../ide/add-method-wizard.md)|Projets ATL ou MFC prenant en charge ATL. Cliquez avec le bouton droit sur l’interface à laquelle vous voulez ajouter la méthode.<br /><br />Visual C++ détecte le type de projet et modifie les options de l’Assistant Ajout de méthode si nécessaire :<br /><br />- Pour les dispinterfaces de projets créés à l’aide de l’[Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’utilisation de l’Assistant Ajout de méthode fournit des options propres à MFC.<br />- Pour les interfaces de contrôle ActiveX MFC, l’Assistant Ajout de méthode fournit la liste des méthodes et propriétés stock que vous pouvez utiliser telles quelles ou personnaliser pour votre contrôle.<br />- Pour toutes les autres interfaces, l’Assistant **Ajout de méthode** fournit des options utiles dans la plupart des situations.|
+|[Assistant Ajout de propriété](./adding-a-property-visual-cpp.md#names-add-property-wizard)|Projets ATL ou MFC prenant en charge ATL. Cliquez avec le bouton droit sur l’interface à laquelle vous voulez ajouter la propriété.<br /><br />Visual C++ détecte le type de projet et modifie les options de l’Assistant Ajout de propriété si nécessaire :<br /><br />-Pour les dispinterfaces des projets créés à l’aide de l' [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’appel de l’Assistant Ajout de propriété fournit des options spécifiques à MFC.<br />- Pour les interfaces de contrôle ActiveX MFC, l’Assistant Ajout de propriété fournit la liste des méthodes et propriétés stock que vous pouvez utiliser telles quelles ou personnaliser pour votre contrôle.<br />- Pour toutes les autres interfaces, l’Assistant Ajout de propriété fournit des options utiles dans la plupart des situations.|
+|[Assistant Ajout de méthode](./adding-a-method-visual-cpp.md#add-method-wizard)|Projets ATL ou MFC prenant en charge ATL. Cliquez avec le bouton droit sur l’interface à laquelle vous voulez ajouter la méthode.<br /><br />Visual C++ détecte le type de projet et modifie les options de l’Assistant Ajout de méthode si nécessaire :<br /><br />- Pour les dispinterfaces de projets créés à l’aide de l’[Assistant Application MFC](../mfc/reference/mfc-application-wizard.md), l’utilisation de l’Assistant Ajout de méthode fournit des options propres à MFC.<br />- Pour les interfaces de contrôle ActiveX MFC, l’Assistant Ajout de méthode fournit la liste des méthodes et propriétés stock que vous pouvez utiliser telles quelles ou personnaliser pour votre contrôle.<br />-Pour toutes les autres interfaces, les assistants **Ajouter une méthode** fournissent des options utiles dans la plupart des situations.|
 
-De plus, vous pouvez implémenter de nouvelles interfaces sur votre contrôle COM. Il vous suffit de cliquer avec le bouton droit sur la classe de contrôle de l’objet dans Affichage de classes et de choisir [Implémenter l’interface](../ide/implement-interface-wizard.md).
+De plus, vous pouvez implémenter de nouvelles interfaces sur votre contrôle COM. Il vous suffit de cliquer avec le bouton droit sur la classe de contrôle de l’objet dans Affichage de classes et de choisir [Implémenter l’interface](./implementing-an-interface-visual-cpp.md#implement-interface-wizard).

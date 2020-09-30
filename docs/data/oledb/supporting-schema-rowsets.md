@@ -7,34 +7,34 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 1ad1a91e8a79238eee773d92a756b0238e8901d5
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707490"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509460"
 ---
 # <a name="supporting-schema-rowsets"></a>Prise en charge des ensembles de lignes de schéma
 
-Les ensembles de lignes de schéma permettent au consommateur d’obtenir des informations sur une banque de données sans connaître sa structure sous-jacente ou son schéma. Par exemple, une banque de données peut contenir des tableaux organisés selon une hiérarchie définie par l’utilisateur, il n’y aurait donc aucun moyen de connaître le schéma à moins de le lire. (Pour prendre un autre exemple, les Assistants Visual C++ utilisent des ensembles de lignes de schéma afin de générer des accesseurs pour le consommateur.) Pour permettre au consommateur de faire ceci, l’objet de session du fournisseur expose des méthodes sur l’interface [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)). Dans les applications Visual C++, vous utilisez la classe [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) pour implémenter `IDBSchemaRowset`.
+Les ensembles de lignes de schéma permettent au consommateur d’obtenir des informations sur une banque de données sans connaître sa structure sous-jacente ou son schéma. Par exemple, une banque de données peut contenir des tableaux organisés selon une hiérarchie définie par l’utilisateur, il n’y aurait donc aucun moyen de connaître le schéma à moins de le lire. (Autre exemple, les assistants de Visual C++ utilisent des ensembles de lignes de schéma pour générer des accesseurs pour le consommateur.) Pour permettre au consommateur d’effectuer cette opération, l’objet session du fournisseur expose des méthodes sur l’interface [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) . Dans les applications Visual C++, vous utilisez la classe [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) pour implémenter `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` prend en charge les méthodes suivantes :
 
-- [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) vérifie la validité des restrictions par rapport à un ensemble de lignes de schéma.
+- [CheckRestrictions](./idbschemarowsetimpl-class.md#checkrestrictions) vérifie la validité des restrictions par rapport à un ensemble de lignes de schéma.
 
-- [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) implémente une fonction de créateur d’objet COM pour l’objet spécifié par le paramètre du modèle.
+- [CreateSchemaRowset](./idbschemarowsetimpl-class.md#createschemarowset) implémente une fonction de créateur d’objet COM pour l’objet spécifié par le paramètre du modèle.
 
-- [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) spécifie les restrictions prises en charge sur un ensemble de lignes de schéma en particulier.
+- [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions) spécifie les restrictions prises en charge sur un ensemble de lignes de schéma en particulier.
 
-- [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) retourne un ensemble de lignes de schéma (hérité de l’interface).
+- [IDBSchemaRowset::GetRowset](./idbschemarowsetimpl-class.md#getrowset) retourne un ensemble de lignes de schéma (hérité de l’interface).
 
-- [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) retourne une liste d’ensembles de lignes de schéma accessibles par `IDBSchemaRowsetImpl::GetRowset` (héritée de l’interface).
+- [GetSchemas](./idbschemarowsetimpl-class.md#getschemas) retourne une liste d’ensembles de lignes de schéma accessibles par `IDBSchemaRowsetImpl::GetRowset` (héritée de l’interface).
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Prise en charge de l’Assistant Fournisseur OLE DB ATL
 
 ::: moniker range="vs-2019"
 
-L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures.
+L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 ::: moniker-end
 
@@ -94,7 +94,7 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` hérite de `IDBSchemaRowsetImpl` et dispose donc de toutes les méthodes de gestion des restrictions. À l’aide de `CSchemaRowsetImpl`, déclarez les trois classes enfants (répertoriées dans le mappage du schéma ci-dessus) : `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, et `CUpdateSessionPTSchemaRowset`. Chacune de ces classes enfants dispose d’une méthode `Execute` qui gère son ensemble de restrictions (critères de recherche) respectif. Chaque méthode `Execute` compare les valeurs des paramètres *cRestrictions* et *rgRestrictions*. Consultez la description de ces paramètres dans [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+`CUpdateSession` hérite de `IDBSchemaRowsetImpl` et dispose donc de toutes les méthodes de gestion des restrictions. À l’aide de `CSchemaRowsetImpl`, déclarez les trois classes enfants (répertoriées dans le mappage du schéma ci-dessus) : `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, et `CUpdateSessionPTSchemaRowset`. Chacune de ces classes enfants dispose d’une méthode `Execute` qui gère son ensemble de restrictions (critères de recherche) respectif. Chaque méthode `Execute` compare les valeurs des paramètres *cRestrictions* et *rgRestrictions*. Consultez la description de ces paramètres dans [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
 
 Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma spécifique, consultez le tableau des GUID d’ensemble de lignes de schéma dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans les **Informations de référence du programmeur OLE DB** du SDK Windows.
 
@@ -115,7 +115,7 @@ Par défaut, l’implémentation retourne 0 (aucune restriction prise en charge)
 
 ### <a name="example"></a>Exemple
 
-Le code suivant est extrait de l’exemple [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV). `UpdatePv` prend en charge les trois ensembles de lignes de schéma requis : DBSCHEMA_TABLES, DBSCHEMA_COLUMNS, et DBSCHEMA_PROVIDER_TYPES. Pour illustrer comment implémenter la prise en charge du schéma dans votre fournisseur, cette rubrique passe en revue l’implémentation de l’ensemble de lignes DBSCHEMA_TABLE.
+Le code suivant est extrait de l’exemple [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV). `UpdatePv` prend en charge les trois ensembles de lignes de schéma requis : DBSCHEMA_TABLES, DBSCHEMA_COLUMNS et DBSCHEMA_PROVIDER_TYPES. Pour illustrer comment implémenter la prise en charge du schéma dans votre fournisseur, cette rubrique passe en revue l’implémentation de l’ensemble de lignes DBSCHEMA_TABLE.
 
 > [!NOTE]
 > L’exemple de code peut différer de ce qui est répertorié ici. Considérez cet exemple de code comme la version la plus récente.
@@ -224,7 +224,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-`UpdatePV` définit seulement trois colonnes : TABLE_NAME, TABLE_TYPE et DESCRIPTION. Prenez note des colonnes pour lesquelles vous retournez des informations, car ces informations sont nécessaires lorsque vous implémentez `GetDBStatus` :
+`UpdatePV` définit uniquement trois colonnes : TABLE_NAME, TABLE_TYPE et DESCRIPTION. Prenez note des colonnes pour lesquelles vous retournez des informations, car ces informations sont nécessaires lorsque vous implémentez `GetDBStatus` :
 
 ```cpp
     _ATLTRY
