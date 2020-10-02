@@ -7,12 +7,12 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: def223682b58f3d0c8bd3dd88f6d54fc5aa8b8a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84fdac7010805fc4d0a429231a080ab11d5c595a
+ms.sourcegitcommit: f7fbdc39d73e1fb3793c396fccf7a1602af7248b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186449"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662254"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>Littéraux numériques, booléens et de pointeur
 
@@ -31,7 +31,7 @@ Parfois, il est important indiquer au compilateur comment interpréter un litté
 
 ## <a name="integer-literals"></a>Littéraux d'entier
 
-Les littéraux d'entier commencent par un chiffre et n'ont aucune partie fractionnaire ni exposant. Vous pouvez spécifier les littéraux d'entier sous forme décimale, octale ou hexadécimale. Vous pouvez spécifier des types signés ou non signés, ainsi que des types longs ou courts.
+Les littéraux d'entier commencent par un chiffre et n'ont aucune partie fractionnaire ni exposant. Vous pouvez spécifier des littéraux entiers au format décimal, binaire, octal ou hexadécimal. Vous pouvez éventuellement spécifier un littéral d’entier comme non signé, et comme type long ou long long, à l’aide d’un suffixe.
 
 Quand aucun préfixe ou suffixe n’est présent, le compilateur donne un type valeur littérale intégral **`int`** (32 bits), si la valeur est ajustée, sinon il lui donne le type **`long long`** (64 bits).
 
@@ -103,7 +103,7 @@ Bien que **`long double`** et **`double`** aient la même représentation, ils n
 void func( double );
 ```
 
-et
+and
 
 ```cpp
 void func( long double );

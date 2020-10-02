@@ -14,14 +14,14 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: c954794d6d0fd087eee74ebb7e86d77b89a9a8fc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 6c0009e5236f33119ed411dc81ce6a4385f21a2a
+ms.sourcegitcommit: f7fbdc39d73e1fb3793c396fccf7a1602af7248b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180797"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662266"
 ---
-# <a name="ltcg-link-time-code-generation"></a>`/LTCG`(Génération de code durant l’édition de liens)
+# <a name="ltcg-link-time-code-generation"></a>`/LTCG` (Génération de code durant l’édition de liens)
 
 Utilisez **`/LTCG`** pour effectuer l’optimisation de l’ensemble du programme, ou pour créer l’instrumentation de l’optimisation guidée par profil (PGO), effectuer une formation et créer des builds optimisées par profil.
 
@@ -38,20 +38,20 @@ Ces options sont dépréciées à partir de Visual Studio 2015 :
 **`INCREMENTAL`**<br/>
 Facultatif Spécifie que l’éditeur de liens applique uniquement l’optimisation de l’ensemble du programme ou la génération du code durant l’édition de liens (LTCG) aux fichiers affectés par une modification, au lieu du projet entier. Par défaut, cet indicateur n’est pas défini lorsque **`/LTCG`** est spécifié, et l’ensemble du projet est lié à l’aide de l’optimisation de l’ensemble du programme.
 
-**`NOSTATUS`**&#124;**`STATUS`**<br/>
+**`NOSTATUS`** &#124; **`STATUS`**<br/>
 (Facultatif) Spécifie si l’éditeur de liens affiche un indicateur de progression qui montre le pourcentage d’exécution du lien. Par défaut, ces informations d’État ne sont pas affichées.
 
 **`OFF`**<br/>
 (Facultatif) Désactive la génération de code durant l’édition de liens. Ce comportement est le même que lorsque **`/LTCG`** n’est pas spécifié sur la ligne de commande.
 
 **`PGINSTRUMENT`**<br/>
-(Facultatif) Cette option est dépréciée à partir de Visual Studio 2015. Utilisez plutôt **`/LTCG`** and `[/GENPROFILE` ou `/FASTGENPROFILE` ] (genprofile-fastgenprofile-Generate-Profiling-Instrumented-Build.MD) pour générer une build instrumentée pour l’optimisation guidée par profil. Les données recueillies à partir des séries de tests instrumentées sont utilisées pour créer une image optimisée. Pour plus d’informations, consultez [Optimisations guidées par profil](../profile-guided-optimizations.md). La forme abrégée de cette option est **`/LTCG:PGI`** .
+(Facultatif) Cette option est dépréciée à partir de Visual Studio 2015. Utilisez plutôt **`/LTCG`** et [ `/GENPROFILE` `/FASTGENPROFILE` ou](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) pour générer une build instrumentée pour l’optimisation guidée par profil. Les données recueillies à partir des séries de tests instrumentées sont utilisées pour créer une image optimisée. Pour plus d’informations, consultez [Optimisations guidées par profil](../profile-guided-optimizations.md). La forme abrégée de cette option est **`/LTCG:PGI`** .
 
 **`PGOPTIMIZE`**<br/>
-(Facultatif) Cette option est dépréciée à partir de Visual Studio 2015. Au lieu de cela, utilisez **`/LTCG`** et [`/USEPROFILE`](useprofile.md) pour générer une image optimisée. Pour plus d’informations, consultez [Optimisations guidées par profil](../profile-guided-optimizations.md). La forme abrégée de cette option est **`/LTCG:PGO`** .
+(Facultatif) Cette option est dépréciée à partir de Visual Studio 2015. Au lieu de cela, utilisez **`/LTCG`** et  [`/USEPROFILE`](useprofile.md) pour générer une image optimisée. Pour plus d’informations, consultez [Optimisations guidées par profil](../profile-guided-optimizations.md). La forme abrégée de cette option est **`/LTCG:PGO`** .
 
 **`PGUPDATE`**<br/>
-(Facultatif) Cette option est dépréciée à partir de Visual Studio 2015. Au lieu de cela, utilisez **`/LTCG`** et **`/USEPROFILE`** pour reconstruire une image optimisée. Pour plus d’informations, consultez [Optimisations guidées par profil](../profile-guided-optimizations.md). La forme abrégée de cette option est **`/LTCG:PGU`** .
+(Facultatif) Cette option est dépréciée à partir de Visual Studio 2015. Au lieu de cela, utilisez **`/LTCG`** et  **`/USEPROFILE`** pour reconstruire une image optimisée. Pour plus d’informations, consultez [Optimisations guidées par profil](../profile-guided-optimizations.md). La forme abrégée de cette option est **`/LTCG:PGU`** .
 
 ## <a name="remarks"></a>Notes
 
@@ -129,13 +129,13 @@ Si une fonction est appelée via un pointeur de fonction, ou si une fonction est
 > [!NOTE]
 > Si vous utilisez **`/LTCG`** et redéfinissez `mainCRTStartup` , votre application peut avoir un comportement imprévisible qui se réfère au code utilisateur qui s’exécute avant l’initialisation des objets globaux. Il existe trois façons de résoudre ce problème : ne pas redéfinir `mainCRTStartup` , ne pas compiler le fichier qui contient `mainCRTStartup` à l’aide de **`/LTCG`** , ni initialiser des variables globales et des objets statiquement.
 
-### <a name="ltcg-and-msil-modules"></a>`/LTCG`et modules MSIL
+### <a name="ltcg-and-msil-modules"></a>`/LTCG` et modules MSIL
 
 Les modules compilés à l’aide [`/GL`](gl-whole-program-optimization.md) de et [`/clr`](clr-common-language-runtime-compilation.md) peuvent être utilisés comme entrée de l’éditeur de liens lorsque **`/LTCG`** est spécifié.
 
 - **`/LTCG`** peut accepter des fichiers objets natifs et des fichiers objets natifs/managés mixtes (compilés à l’aide de **`/clr`** ). Les **`/clr:pure`** **`/clr:safe`** Options du compilateur et sont dépréciées dans visual studio 2015 et ne sont pas prises en charge dans visual studio 2017 et versions ultérieures.
 
-- **`/LTCG:PGI`** n’accepte pas les modules natifs compilés à l’aide **`/GL`** de et**`/clr`**
+- **`/LTCG:PGI`** n’accepte pas les modules natifs compilés à l’aide **`/GL`** de et **`/clr`**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
