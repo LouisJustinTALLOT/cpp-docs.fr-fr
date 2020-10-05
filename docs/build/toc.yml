@@ -369,6 +369,8 @@
               href: ../build/reference/property-page-xml-files.md
             - name: Structure des fichiers .vcxproj et .props
               href: ../build/reference/vcxproj-file-structure.md
+            - name: Fichiers .vcxproj et caractères génériques
+              href: ../build/reference/vcxproj-files-and-wildcards.md
             - name: Exemple de fichier projet
               href: ../build/reference/project-files.md
             - name: Structure des fichiers .vcxproj.filters
