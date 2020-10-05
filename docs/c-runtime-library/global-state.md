@@ -2,21 +2,21 @@
 title: État global dans le CRT
 description: Décrit comment un état global partagé est géré dans le runtime Microsoft Universal C.
 ms.topic: conceptual
-ms.date: 04/02/2020
+ms.date: 10/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 60532fbdb905bd8ea78b4ce705ec8ecc3e374d9d
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 6c8b97e2bd6fa71891aedacb1fbfec2bbe382d84
+ms.sourcegitcommit: faedcc3be78b29c78e5d51e3c7c7c2f448c745bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589729"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91717513"
 ---
 # <a name="global-state-in-the-crt"></a>État global dans le CRT
 
 Certaines fonctions du runtime C universel (UCRT) utilisent l’état global. Par exemple, `setlocale()` définit les paramètres régionaux pour le programme entier, ce qui affecte les séparateurs de chiffres, la page de codes texte, etc.
 
-L’état global de UCRT n’est pas partagé entre les applications et le système d’exploitation. Par exemple, si votre application appelle `setlocale()` , elle n’affecte pas les paramètres régionaux pour les composants du système d’exploitation qui utilisent le runtime C, ou vice versa.
+L’état global de UCRT n’est pas partagé entre les applications et le système d’exploitation. Par exemple, si votre application appelle `setlocale()` , elle n’affecte pas les paramètres régionaux pour tous les composants du système d’exploitation qui utilisent le runtime C, ou l’inverse.
 
 ## <a name="os-specific-versions-of-crt-functions"></a>Versions spécifiques au système d’exploitation des fonctions CRT
 
@@ -31,8 +31,8 @@ Les versions spécifiques au système d’exploitation de ces fonctions se trouv
 
 Il existe deux façons d’isoler l’état du CRT de votre composant de l’État CRT d’une application :
 
-- Liez de manière statique votre composant à l’aide des options du compilateur/MT (Release) ou MTd (Debug). Pour plus d’informations, consultez [/MD,/MT,/LD](../build/reference/md-mt-ld-use-run-time-library.md). Notez que la liaison statique peut augmenter de façon considérable la taille binaire.
-- À compter de Windows 10 20H2, récupérez l’isolation d’État CRT en établissant une liaison dynamique au CRT, mais appelez les exportations en mode système d’exploitation (les fonctions qui commencent par _o_). Pour appeler les exportations en mode système d’exploitation, liez statiquement comme avant, mais ignorez le UCRT statique à l’aide de l’option de l’éditeur de liens `/NODEFAULTLIB:libucrt.lib` (version) ou `/NODEFAULTLIB:libucrtd.lib` (débogage) consultez [/NODEFAULTLIB (ignorer les bibliothèques)](../build/reference/nodefaultlib-ignore-libraries.md) pour plus d’informations. Et ajoutez `ucrt.osmode.lib` à l’entrée de l’éditeur de liens.
+- Liez de manière statique votre composant à l’aide des options du compilateur `/MT` (version finale) ou `/MTd` (débogage). Pour plus d’informations, consultez [/MD,/MT,/LD](../build/reference/md-mt-ld-use-run-time-library.md). La liaison statique peut augmenter de façon considérable la taille binaire.
+- À compter de Windows 10 version 2004, établir une liaison dynamique au CRT, mais appeler les exportations en mode système d’exploitation (les fonctions qui commencent par _o_). Pour appeler les exportations en mode système d’exploitation, liez statiquement comme avant, mais ignorez le UCRT statique à l’aide de l’option de l’éditeur de liens `/NODEFAULTLIB:libucrt.lib` (Release) ou `/NODEFAULTLIB:libucrtd.lib` (Debug). Et ajoutez `ucrt.osmode.lib` à l’entrée de l’éditeur de liens. Pour plus d’informations [, consultez/NODEFAULTLIB (ignorer les bibliothèques)](../build/reference/nodefaultlib-ignore-libraries.md) .
 
 > [!Note]
 > Dans le code source, écrivez `setlocale()` , et non `_o_setlocale()` . Lorsque vous vous liez à `ucrt.osmode.lib` , l’éditeur de liens remplace automatiquement la version propre au système d’exploitation de la fonction. Autrement dit, `setlocale()` sera remplacé par `_o_setlocale()` .
@@ -52,7 +52,7 @@ L’état global affecté par la séparation de l’état de l’application et 
 - Mémoire tampon utilisée par [_putch, _putwch](reference/putch-putwch.md)
 - [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)
 - [_set_new_handler](reference/set-new-handler.md) et [_set_new_mode](reference/set-new-mode.md)
-- [fmode] (text-and-binary-mode-file-i-o.md)
+- [fmode](text-and-binary-mode-file-i-o.md)
 - [Informations de fuseau horaire](time-management.md)
 
 ## <a name="see-also"></a>Voir aussi
