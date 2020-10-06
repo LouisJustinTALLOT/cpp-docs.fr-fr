@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Unicode [C++], wide character set
 - wide characters [C++], Unicode
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
-ms.openlocfilehash: 751017a62a960eaf2afa2354a43a13971b89252a
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 7cd170ae43223f1e8e61d9fc576e49baa2164b23
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590158"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765338"
 ---
 # <a name="unicode-the-wide-character-set"></a>Unicode : jeu de caractères larges
 
 Un caractère large est un code de caractère multilingue de 2 octets. Partout dans le monde, tous les caractères utilisés dans l'informatique moderne, y compris les symboles techniques et les caractères d'édition spéciaux, peuvent être représentés conformément à la spécification Unicode sous la forme d'un caractère large. Développée et gérée par un vaste consortium qui inclut Microsoft, la norme Unicode est désormais largement acceptée.
 
-Un caractère élargi est de type **`wchar_t`** . Une chaîne de caractères larges est représentée sous la forme d’un **`wchar_t[]`** tableau. Vous pointez sur le tableau avec un `wchar_t*` pointeur. 
+Un caractère élargi est de type **`wchar_t`** . Une chaîne de caractères larges est représentée sous la forme d’un **`wchar_t[]`** tableau. Vous pointez sur le tableau avec un `wchar_t*` pointeur.
 
 Vous pouvez représenter n’importe quel caractère ASCII sous la forme d’un caractère élargi en préfixant la lettre `L` . Par exemple, `L'\0'` est le caractère null de fin (16 bits).
 

@@ -1,5 +1,6 @@
 ---
 title: /RTC (Vérifications des erreurs au moment de l’exécution)
+description: Options/RTC du compilateur Microsoft C/C++ pour les vérifications des erreurs au moment de l’exécution.
 ms.date: 07/31/2020
 f1_keywords:
 - /rtc
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: eefec0956bebe9f72324f3cbc61fccbc5e2e24d7
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 888a81d0d5c21b0b85420a43d534c5b2742aa082
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520536"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765227"
 ---
-# <a name="rtc-run-time-error-checks"></a>`/RTC`(Vérifications des erreurs au moment de l’exécution)
+# <a name="rtc-run-time-error-checks"></a>`/RTC` (Vérifications des erreurs au moment de l’exécution)
 
 Utilisé pour activer et désactiver la fonctionnalité de vérification des erreurs au moment de l’exécution, conjointement avec le pragma [runtime_checks](../../preprocessor/runtime-checks.md) .
 
@@ -109,7 +110,7 @@ La `__MSVC_RUNTIME_CHECKS` directive de préprocesseur est définie lorsque vous
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés **Propriétés de configuration**  >  **C/C++****génération de code** .  
+1. Sélectionnez la page de propriétés **Propriétés de configuration**  >  **C/C++**  >  **génération de code** .
 
 1. Modifiez l’une des propriétés suivantes, ou les deux : vérifications de l' **exécution de base** ou **plus petite vérification du type**.
 

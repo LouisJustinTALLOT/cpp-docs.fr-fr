@@ -1,6 +1,7 @@
 ---
-title: Opérateur d’adresse :&amp;
-ms.date: 11/04/2016
+title: 'Opérateur d’adresse : &amp;'
+description: Opérateur d’adresse en langage C++.
+ms.date: 10/02/2020
 f1_keywords:
 - '&'
 helpviewer_keywords:
@@ -8,30 +9,34 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-ms.openlocfilehash: 836802684e24c721f97dc4c5558d87b9a5e69bc8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ef7ad065281e4de58ddbdebea25950f8eb9dd06
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227684"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765287"
 ---
-# <a name="address-of-operator-amp"></a>Opérateur d’adresse :&amp;
+# <a name="address-of-operator-amp"></a>Opérateur d’adresse : &amp;
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-& cast-expression
-```
+> **`&`** *`cast-expression`*
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur unaire Address-of ( **&** ) prend l’adresse de son opérande. L’opérande de l’opérateur d’adresse peut être un désignateur de fonction ou une l-value qui désigne un objet qui n’est pas un champ de bits.
+L’opérateur unaire Address-of ( **`&`** ) prend l’adresse de son opérande. L’opérande de l’opérateur d’adresse peut être un désignateur de fonction ou une l-value qui désigne un objet qui n’est pas un champ de bits.
 
-L'opérateur d'adresse peut être appliqué uniquement aux variables dotées de types fondamentaux, de structure, de classe ou d'union qui sont déclarées au niveau de la portée du fichier, ou aux références indicées de tableau. Dans ces expressions, une expression constante qui n'inclut pas l'opérateur d'adresse peut être ajoutée ou soustraite dans l'expression d'adresse.
+L’opérateur d’adresse peut être appliqué uniquement aux variables de types fondamentaux, de structure, de classe ou d’Union déclarés au niveau de la portée du fichier, ou aux références de tableau en indice. Dans ces expressions, une expression constante qui n’inclut pas l’opérateur d’adresse peut être ajoutée ou soustraite de l’expression d’adresse.
 
-Lorsqu’il est appliqué à des fonctions ou des l-values, le résultat de l’expression est un type pointeur (une r-value) dérivé du type de l’opérande. Par exemple, si l’opérande est de type **`char`** , le résultat de l’expression est de type pointeur vers **`char`** . L’opérateur d’adresse, appliqué aux **`const`** objets ou **`volatile`** , a la valeur `const type *` ou `volatile type *` , où **type** est le type de l’objet d’origine.
+Lorsqu’il est appliqué à des fonctions ou des l-values, le résultat de l’expression est un type pointeur (une r-value) dérivé du type de l’opérande. Par exemple, si l’opérande est de type **`char`** , le résultat de l’expression est de type pointeur vers **`char`** . L’opérateur d’adresse, appliqué aux **`const`** objets ou **`volatile`** , `const type *` `volatile type *` a la valeur ou, où `type` est le type de l’objet d’origine.
 
-Lorsque l’opérateur address-of est appliqué à un nom qualifié, le résultat varie selon que le *nom qualifié* spécifie ou non un membre statique. Si oui, le résultat est un pointeur vers le type spécifié dans la déclaration du membre. Si le membre n’est pas statique, le résultat est un pointeur vers le *nom* de membre de la classe indiqué par *Qualified-Class-Name*. (Pour plus d’informations sur *Qualified-Class-Name*, consultez [expressions primaires](../cpp/primary-expressions.md) .) Le fragment de code suivant montre comment le résultat est différent, selon que le membre est statique ou non :
+L’adresse d’une fonction surchargée ne peut être utilisée que lorsqu’il est clair que la version de la fonction est référencée. Consultez [surcharge de fonction](function-overloading.md) pour plus d’informations sur l’obtention de l’adresse d’une fonction surchargée particulière.
+
+Lorsque l’opérateur address-of est appliqué à un nom qualifié, le résultat varie selon que le *nom qualifié* spécifie ou non un membre statique. Si oui, le résultat est un pointeur vers le type spécifié dans la déclaration du membre. Pour un membre qui n’est pas statique, le résultat est un pointeur vers le *nom* de membre de la classe indiquée par *Qualified-Class-Name*. Pour plus d’informations sur *Qualified-Class-Name*, consultez [expressions primaires](../cpp/primary-expressions.md).
+
+## <a name="example-address-of-static-member"></a>Exemple : adresse d’un membre statique
+
+Le fragment de code suivant montre comment le résultat de l’opérateur d’adresse diffère selon qu’un membre de classe est statique ou non :
 
 ```cpp
 // expre_Address_Of_Operator.cpp
@@ -51,11 +56,9 @@ int main() {
 
 Dans cet exemple, l'expression `&PTM::fValue` permet d'obtenir le type `float *` à la place du type `float PTM::*`, car `fValue` est un membre statique.
 
-L'adresse d'une fonction surchargée peut être prise uniquement lorsque vous savez clairement quelle version de la fonction est référencée. Consultez [surcharge de fonction](function-overloading.md) pour plus d’informations sur l’obtention de l’adresse d’une fonction surchargée particulière.
+## <a name="example-address-of-a-reference-type"></a>Exemple : adresse d’un type référence
 
 L'application de l'opérateur d'adresse à un type référence fournit le même résultat que l'application de l'opérateur à l'objet auquel la référence est liée. Par exemple :
-
-## <a name="example"></a>Exemple
 
 ```cpp
 // expre_Address_Of_Operator2.cpp
@@ -72,11 +75,11 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Output
-
 ```Output
 &d equals &rd
 ```
+
+## <a name="example-function-address-as-parameter"></a>Exemple : adresse de fonction en tant que paramètre
 
 L'exemple ci-dessous utilise l'opérateur d'adresse pour passer un argument de pointeur à une fonction :
 
@@ -99,8 +102,6 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Output
-
 ```Output
 25
 ```
@@ -108,6 +109,6 @@ int main() {
 ## <a name="see-also"></a>Voir aussi
 
 [Expressions avec opérateurs unaires](../cpp/expressions-with-unary-operators.md)<br/>
-[Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Opérateurs, priorité et associativité C++ intégrés](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Déclarateur de référence Lvalue : &](../cpp/lvalue-reference-declarator-amp.md)<br/>
 [Opérateurs d’indirection et d’adresse](../c-language/indirection-and-address-of-operators.md)

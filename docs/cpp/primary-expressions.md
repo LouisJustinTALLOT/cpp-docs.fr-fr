@@ -1,6 +1,7 @@
 ---
 title: Expressions primaires
-ms.date: 11/04/2016
+description: Expressions primaires dans le langage de programmation C++.
+ms.date: 10/02/2020
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -8,29 +9,28 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-ms.openlocfilehash: c827f811813091abc62d07f12ac387bc2a0a0cc5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4c52992071453bc189a3078db9592b02dfb8ba9b
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231141"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765330"
 ---
 # <a name="primary-expressions"></a>Expressions primaires
 
-Les expressions primaires sont des blocs de construction d'expressions plus complexes. Il s'agit de littéraux, de noms et de noms qualifiés par l'opérateur résolution-portée (`::`).  Une expression primaire peut prendre chacune des formes suivantes :
+Les expressions primaires sont des blocs de construction d'expressions plus complexes. Il peut s’agir de littéraux, de noms et de noms qualifiés par l’opérateur de résolution de portée ( `::` ). Une expression primaire peut prendre chacune des formes suivantes :
 
-```
-literal
-this
-name
-::name ( expression )
-```
+*`primary-expression`*\
+&emsp;*`literal`*\
+&emsp;**`this`**\
+&emsp;*`name`*\
+&emsp;**`::`** *`name`* **`(`** *`expression`* **`)`**
 
-Un *littéral* est une expression primaire constante. Son type dépend de la forme de sa spécification. Pour obtenir des informations complètes sur la spécification des littéraux, consultez [littéraux](../cpp/numeric-boolean-and-pointer-literals-cpp.md) .
+Un *`literal`* est une expression primaire constante. Son type dépend de la forme de sa spécification. Pour obtenir des informations complètes sur la spécification de littéraux, consultez [littéraux](../cpp/numeric-boolean-and-pointer-literals-cpp.md) .
 
-Le **`this`** mot clé est un pointeur vers un objet de classe. Il est disponible dans les fonctions membres non statiques et pointe vers l'instance de la classe pour laquelle la fonction est appelée. Le **`this`** mot clé ne peut pas être utilisé en dehors du corps d’une fonction membre de classe.
+Le **`this`** mot clé est un pointeur vers un objet de classe. Elle est disponible dans les fonctions membres non statiques. Il pointe vers l’instance de la classe pour laquelle la fonction a été appelée. Le **`this`** mot clé ne peut pas être utilisé en dehors du corps d’une fonction membre de classe.
 
-Le type du **`this`** pointeur est `type` ** \* const** (où `type` est le nom de la classe) dans les fonctions qui ne modifient pas spécifiquement le **`this`** pointeur. L’exemple suivant montre des déclarations de fonctions membres et les types de **`this`** :
+Le type du **`this`** pointeur est `type * const` (où `type` est le nom de la classe) dans les fonctions qui ne modifient pas spécifiquement le **`this`** pointeur. L’exemple suivant montre des déclarations de fonctions membres et les types de **`this`** :
 
 ```cpp
 // expre_Primary_Expressions.cpp
@@ -44,11 +44,11 @@ public:
 };
 ```
 
-Pour plus d’informations sur la modification du type du pointeur, consultez [ce pointeur](this-pointer.md) **`this`** .
+Pour plus d’informations sur la modification du type du **`this`** pointeur, consultez [ `this` pointeur](this-pointer.md).
 
-L’opérateur résolution-portée (`::`) suivi d’un nom constitue une expression primaire.  Ces noms doivent être des noms au niveau de la portée globale, pas des noms de membres.  Le type de cette expression est déterminé par la déclaration du nom. Il s'agit d'une l-value (autrement dit, il peut apparaître dans la partie gauche d'une expression opérateur d'assignation) si le nom de déclaration est une l-value. L’opérateur résolution-portée permet de faire référence à un nom global, même si ce nom est masqué dans la portée actuelle. Consultez [scope](../cpp/scope-visual-cpp.md) pour obtenir un exemple d’utilisation de l’opérateur de résolution de portée.
+L’opérateur de résolution de portée ( **`::`** ) suivi d’un nom est une expression primaire.  Ces noms doivent être des noms au niveau de la portée globale, pas des noms de membres. Le type de l’expression est déterminé par la déclaration du nom. Il s’agit d’une l-value (autrement dit, elle peut apparaître sur le côté gauche d’une expression d’assignation) si le nom de déclaration est une l-value. L’opérateur résolution-portée permet de faire référence à un nom global, même si ce nom est masqué dans la portée actuelle. Consultez [scope](../cpp/scope-visual-cpp.md) pour obtenir un exemple d’utilisation de l’opérateur de résolution de portée.
 
-Une expression placée entre parenthèses est une expression principale dont le type et la valeur sont identiques à ceux de l'expression qui n'est pas entre parenthèses. Il s'agit d'une l-value si l'expression qui n'est pas entre parenthèses est une l-value.
+Une expression entre parenthèses est une expression primaire. Son type et sa valeur sont identiques au type et à la valeur de l’expression non entre parenthèses. Il s’agit d’une l-value si l’expression non entre parenthèses est une l-value.
 
 Les exemples d'expressions principaux incluent :
 
@@ -62,10 +62,10 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression
 ```
 
-Les exemples ci-dessous sont tous considérés comme des *noms*, et donc des expressions primaires, sous différentes formes :
+Ces exemples sont tous considérés comme des *noms*et, en tant que tels, des expressions primaires, sous différentes formes :
 
 ```cpp
-MyClass // a identifier
+MyClass // an identifier
 MyClass::f // a qualified name
 operator = // an operator function name
 operator char* // a conversion operator function name

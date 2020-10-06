@@ -1,7 +1,7 @@
 ---
 title: if-else, instruction (C++)
-ms.date: 07/20/2019
-description: Utilisez les instructions if-else en C++ pour contrôler la branche conditionnelle.
+description: Utilisez if-else, if-else avec initializer et les instructions If-constexpr pour contrôler la gestion des branches conditionnelles.
+ms.date: 10/02/2020
 f1_keywords:
 - else_cpp
 - if_cpp
@@ -9,16 +9,18 @@ helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: a9256e32c89890635c5473a85b4bb3b56bec26d4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 20d828bf00a79687fe0a9fffbeb1a9cc56fae08c
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187567"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765297"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 
-Contrôle la branche conditionnelle. Les instructions dans le *bloc If* ne sont exécutées que si l' *expression if-expression* prend une valeur différente de zéro (ou **`true`** ). Si la valeur de l' *expression* est différente de zéro, *instruction1* et toutes les autres instructions du bloc sont exécutées et le bloc Else, s’il est présent, est ignoré. Si la valeur de l' *expression* est égale à zéro, le bloc If est ignoré et le bloc Else, s’il est présent, est exécuté. Les expressions qui sont évaluées à une valeur différente de zéro sont
+Une instruction if-else contrôle la gestion des branches conditionnelles. Les instructions dans le *`if-branch`* sont exécutées uniquement si la valeur de est *`condition`* différente de zéro (ou **`true`** ). Si la valeur de *`condition`* est différente de zéro, l’instruction suivante est exécutée et l’instruction qui suit l’option facultative est **`else`** ignorée. Dans le cas contraire, l’instruction suivante est ignorée et, si c’est le cas, **`else`** l’instruction qui suit **`else`** est exécutée.
+
+*`condition`* les expressions qui sont évaluées à une valeur différente de zéro sont :
 
 - **`true`**
 - pointeur non null,
@@ -27,44 +29,49 @@ Contrôle la branche conditionnelle. Les instructions dans le *bloc If* ne sont 
 
 ## <a name="syntax"></a>Syntaxe
 
-```cpp
-if ( expression )
-{
-   statement1;
-   ...
-}
-else  // optional
-{
-   statement2;
-   ...
-}
+*`init-statement`*:\
+&emsp; *`expression-statement`*\
+&emsp; *`simple-declaration`*
 
-// C++17 - Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )
-{
-   statement1;
-   ...
-}
-else  // optional
-{
-   statement2;
-   ...
-}
+*`condition`*:\
+&emsp; *`expression`*\
+&emsp;*`attribute-specifier-seq`* <sub>*opt*</sub> *`decl-specifier-seq`* OPT *`declarator`**`brace-or-equal-initializer`*
 
-// C++17 - Visual Studio 2017 version 15.3 and later:
-if constexpr (expression)
-{
-    statement1;
-    ...
-}
-else  // optional
-{
-   statement2;
-   ...
-}
-```
+*`statement`*:\
+&emsp; *`expression-statement`*\
+&emsp; *`compound-statement`*
 
-## <a name="example"></a>Exemple
+*`expression-statement`*:\
+&emsp;*`expression`* <sub>*OPT*</sub>**`;`**
+
+*`compound-statement`*:\
+&emsp;**`{`** *`statement-seq`* <sub>*OPT*</sub>**`}`**
+
+*`statement-seq`*:\
+&emsp; *`statement`*\
+&emsp; *`statement-seq`* *`statement`*
+
+*`if-branch`*:\
+&emsp; *`statement`*
+
+*`else-branch`*:\
+&emsp; *`statement`*
+
+*`selection-statement`*:\
+&emsp;**`if`** **`constexpr`** <sub>*OPT*</sub><sup>17</sup> **`(`** *`init-statement`* <sub>*opt*</sub><sup>17</sup> opt *`condition`* **`)`***`if-branch`*\
+&emsp;**`if`** **`constexpr`** <sub>*OPT*</sub><sup>17</sup> **`(`** *`init-statement`* <sub>*opt*</sub><sup>17</sup> opt *`condition`* **`)`** *`if-branch`* **`else`***`else-branch`*
+
+<sup>17</sup> cet élément facultatif est disponible à partir de c++ 17.
+
+## <a name="if-else-statements"></a>instructions if-else
+
+Dans toutes les formes de l' **`if`** instruction, *`condition`* , qui peut avoir n’importe quelle valeur, à l’exception d’une structure, est évaluée, y compris tous les effets secondaires. Le contrôle passe de l' **`if`** instruction à l’instruction suivante dans le programme à moins que le soit exécuté ou qu’il ne *`if-branch`* *`else-branch`* contienne un [`break`](../cpp/break-statement-cpp.md) , [`continue`](../cpp/continue-statement-cpp.md) ou [`goto`](../cpp/goto-statement-cpp.md) .
+
+La **`else`** clause d’une `if...else` instruction est associée à l’instruction précédente la plus proche **`if`** dans la même étendue qui n’a pas d' **`else`** instruction correspondante.
+
+### <a name="example"></a>Exemple
+
+Cet exemple de code illustre plusieurs **`if`** instructions en cours d’utilisation, avec et sans **`else`** :
 
 ```cpp
 // if_else_statement.cpp
@@ -111,11 +118,11 @@ int main()
 }
 ```
 
-## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a>instruction if avec un initialiseur
+## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a> instruction if avec un initialiseur
 
-**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : une **`if`** instruction peut également contenir une expression qui déclare et Initialise une variable nommée. Utilisez cette forme de l’instruction if si la variable est uniquement requise dans la portée du bloc If.
+À partir de C++ 17, une **`if`** instruction peut également contenir une *`init-statement`* expression qui déclare et Initialise une variable nommée. Utilisez cette forme de l’instruction if-lorsque la variable est uniquement requise dans la portée de l’instruction if. **Spécifique à Microsoft**: ce formulaire est disponible à partir de Visual Studio 2017 version 15,3, et nécessite au moins l' [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) option de compilateur.
 
-## <a name="example"></a>Exemple
+### <a name="example"></a>Exemple
 
 ```cpp
 #include <iostream>
@@ -159,13 +166,13 @@ int main()
 }
 ```
 
-Dans toutes les formes de l' **`if`** instruction, *expression*, qui peut avoir n’importe quelle valeur, à l’exception d’une structure, est évaluée, y compris tous les effets secondaires. Le contrôle passe de l' **`if`** instruction à l’instruction suivante dans le programme, sauf si l’une des instructions contient une *instruction* [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md).
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> Si les instructions constexpr
 
-La **`else`** clause d’une `if...else` instruction est associée à l’instruction précédente la plus proche **`if`** dans la même étendue qui n’a pas d' **`else`** instruction correspondante.
+À partir de C++ 17, vous pouvez utiliser une **`if constexpr`** instruction dans les modèles de fonction pour prendre des décisions de création de branche au moment de la compilation sans avoir à recourir à plusieurs surcharges de fonction. **Spécifique à Microsoft**: ce formulaire est disponible à partir de Visual Studio 2017 version 15,3, et nécessite au moins l' [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) option de compilateur.
 
-## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">Si les instructions constexpr
+### <a name="example"></a>Exemple
 
-**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : dans les modèles de fonction, vous pouvez utiliser une instruction **If constexpr** pour prendre des décisions de création de branche au moment de la compilation sans avoir à recourir à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une seule fonction qui gère la décompression des paramètres (aucune surcharge de paramètre zéro n’est nécessaire) :
+Cet exemple montre comment vous pouvez écrire une seule fonction qui gère la décompression de paramètres. Aucune surcharge de paramètre zéro n’est nécessaire :
 
 ```cpp
 template <class T, class... Rest>
@@ -188,6 +195,6 @@ void f(T&& t, Rest&&... r)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Instructions de sélection](../cpp/selection-statements-cpp.md)<br/>
-[Mots clés](../cpp/keywords-cpp.md)<br/>
-[Switch, instruction (C++)](../cpp/switch-statement-cpp.md)
+[Instructions de sélection](../cpp/selection-statements-cpp.md)\
+[Mot](../cpp/keywords-cpp.md)\
+[`switch` Instruction (C++)](../cpp/switch-statement-cpp.md)

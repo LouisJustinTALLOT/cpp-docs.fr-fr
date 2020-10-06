@@ -19,12 +19,12 @@ f1_keywords:
 - _Field_size_full_opt_
 - _Field_z_
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
-ms.openlocfilehash: e6b08c18d2524f1240eed99dd45320a7f4c00ac3
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: fe177e6afea088b59b16bfbd0bff6fa00b526222
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77417478"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765116"
 ---
 # <a name="annotating-structs-and-classes"></a>Structs et classes d'annotation
 
@@ -34,19 +34,19 @@ Vous pouvez annoter des membres de classe et de struct à l’aide d’annotatio
 
 - `_Field_range_(low, high)`
 
-     Le champ se trouve dans la plage (inclusive) de `low` à `high`.  Équivaut à `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` appliquée à l’objet annoté à l’aide des conditions pre ou postales appropriées.
+     Le champ se trouve dans la plage (inclusive) de `low` à `high` .  Équivalent à `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` appliqué à l’objet annoté à l’aide des conditions pre ou postales appropriées.
 
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
 
-     Champ qui a une taille accessible en écriture dans les éléments (ou octets) comme spécifié par `size`.
+     Champ qui a une taille accessible en écriture dans les éléments (ou octets), comme spécifié par `size` .
 
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`, `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
 
-     Champ qui a une taille accessible en écriture dans des éléments (ou octets) comme spécifié par `size`, et le `count` de ces éléments (octets) qui sont accessibles en lecture.
+     Champ qui a une taille accessible en écriture dans les éléments (ou octets) comme spécifié par `size` , et le `count` de ces éléments (octets) qui sont accessibles en lecture.
 
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
 
-     Champ qui a à la fois une taille lisible et accessible en écriture dans des éléments (ou octets), comme spécifié par `size`.
+     Champ qui a à la fois une taille lisible et accessible en écriture dans des éléments (ou octets), comme spécifié par `size` .
 
 - `_Field_z_`
 
@@ -54,7 +54,7 @@ Vous pouvez annoter des membres de classe et de struct à l’aide d’annotatio
 
 - `_Struct_size_bytes_(size)`
 
-     S’applique à une déclaration de classe ou de struct.  Indique qu’un objet valide de ce type peut être plus grand que le type déclaré, avec le nombre d’octets spécifié par `size`.  Par exemple :
+     S’applique à une déclaration de classe ou de struct.  Indique qu’un objet valide de ce type peut être plus grand que le type déclaré, avec le nombre d’octets spécifié par `size` .  Par exemple :
 
     ```cpp
 
@@ -93,7 +93,7 @@ struct MyBuffer
     _Field_range_(1, MaxBufferSize)
     int bufferSize;
 
-    _Field_size_(bufferSize)        // Prefered way - easier to read and maintain.
+    _Field_size_(bufferSize)        // Preferred way - easier to read and maintain.
     int buffer[]; // Using C99 Flexible array member
 };
 ```
@@ -101,16 +101,16 @@ struct MyBuffer
 Remarques pour cet exemple :
 
 - `_Field_z_` équivaut à `_Null_terminated_`.  `_Field_z_` pour le champ nom spécifie que le champ nom est une chaîne terminée par le caractère null.
-- `_Field_range_` pour `bufferSize` spécifie que la valeur de `bufferSize` doit être comprise entre 1 et `MaxBufferSize` (les deux incluses).
-- Les résultats finaux des annotations d' `_Struct_size_bytes_` et de `_Field_size_` sont équivalents. Pour les structures ou les classes qui ont une disposition similaire, `_Field_size_` est plus facile à lire et à gérer, car il a moins de références et de calculs que l’annotation `_Struct_size_bytes_` équivalente. `_Field_size_` ne nécessite pas de conversion en taille d’octet. Si la taille d’octet est la seule option, par exemple, pour un champ de pointeur void, `_Field_size_bytes_` peut être utilisée. Si `_Struct_size_bytes_` et `_Field_size_` existent, les deux seront disponibles pour les outils. C’est à l’outil qu’il faut faire si les deux annotations ne sont pas en désaccord.
+- `_Field_range_` pour `bufferSize` spécifie que la valeur de `bufferSize` doit être comprise entre 1 et `MaxBufferSize` (les deux inclus).
+- Les résultats finaux des `_Struct_size_bytes_` `_Field_size_` annotations et sont équivalents. Pour les structures ou les classes qui ont une disposition similaire, `_Field_size_` est plus facile à lire et à gérer, car il a moins de références et de calculs que l’annotation équivalente `_Struct_size_bytes_` . `_Field_size_` ne nécessite pas de conversion en taille d’octet. Si la taille d’octet est la seule option, par exemple, pour un champ de pointeur void, `_Field_size_bytes_` peut être utilisée. Si `_Struct_size_bytes_` et `_Field_size_` existent, les deux seront disponibles pour les outils. C’est à l’outil qu’il faut faire si les deux annotations ne sont pas en désaccord.
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Utilisation d’annotations SAL pour réduire les défauts du code C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [Présentation de SAL](../code-quality/understanding-sal.md)
-- [Annotation des paramètres de fonction et des valeurs de retour](../code-quality/annotating-function-parameters-and-return-values.md)
+- [Annotation de paramètres de fonction et valeurs de retour](../code-quality/annotating-function-parameters-and-return-values.md)
 - [Annotation du comportement d’une fonction](../code-quality/annotating-function-behavior.md)
 - [Annotation du comportement de verrouillage](../code-quality/annotating-locking-behavior.md)
-- [Spécification du moment et de l’endroit où une annotation s’applique](../code-quality/specifying-when-and-where-an-annotation-applies.md)
+- [Spécification du moment où une annotation est applicable et dans quel cas](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 - [Fonctions intrinsèques](../code-quality/intrinsic-functions.md)
 - [Bonnes pratiques et exemples](../code-quality/best-practices-and-examples-sal.md)

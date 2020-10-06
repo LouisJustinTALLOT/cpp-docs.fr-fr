@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POSIX file names
 - UNIX, compatibility
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
-ms.openlocfilehash: 07f5ffeec8696ded5880c45ed2ea1a5107bee48c
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 3975db2407943b329fa7eded0d72d63524428210
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590145"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765216"
 ---
 # <a name="unix"></a>UNIX
 
@@ -29,7 +29,7 @@ Si vous prévoyez de porter vos programmes vers UNIX, suivez ces instructions :
 - Utilisez des chemins d’accès et des noms de fichiers qui fonctionnent correctement dans UNIX, qui respecte la casse. Le système de fichiers FAT (File Allocation Table) dans les systèmes d’exploitation Win32 n’est pas sensible à la casse. Le système de fichiers NTFS préserve la casse pour les listes de répertoires, mais ignore la casse dans les recherches de fichiers et les autres opérations système.
 
 > [!NOTE]
->  Dans cette version de Visual C++, les informations sur la compatibilité UNIX ont été supprimées des descriptions de fonction.
+> Dans cette version de Visual C++, les informations sur la compatibilité UNIX ont été supprimées des descriptions de fonction.
 
 ## <a name="see-also"></a>Voir aussi
 

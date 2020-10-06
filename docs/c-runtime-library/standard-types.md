@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: bf90adbdbc739a2dd26d8e59ab38e56aef3bd312
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 376c29371fb9213ed46435b41bea1666058c7b4e
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352932"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765306"
 ---
 # <a name="standard-types"></a>Types standard
 
@@ -173,7 +173,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 
 ### <a name="fixed-width-integral-types-stdinth"></a>Types intégraux de largeur fixe (stdint.h)
 
-|Name|Type intégré équivalent|
+|Nom|Type intégré équivalent|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|signed char, unsigned char|
 |int16\_t, uint16\_t|short, unsigned short|
@@ -199,7 +199,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Une définition de type pour une fonction de rappel qui sera appelée dans [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> Les paramètres de cette fonction sont : le type de rapport, le message de sortie et la valeur de retour de la fonction de rappel.|CRTDBG.H|
 |`dev_t`, `_dev_t` entier court ou entier non signé|Représente les handles du périphérique.|SYS\TYPES.H|
 |Structure `_diskfree_t`|Contient des informations à propos d'un lecteur de disque. Utilisé par [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H et DIRECT.H|
-|Structures `div_t`, `ldiv_t` et `lldiv_t`|Stockent les valeurs retournées par [div](reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) et [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivement.|STDLIB.H|
+|Structures `div_t`, `ldiv_t` et `lldiv_t`|Stockent les valeurs retournées par [div](reference/div.md), [ldiv](./reference/div.md) et [lldiv](./reference/div.md), respectivement.|STDLIB.H|
 |Entier `errno_t`|Utilisé pour un type de résultat ou un paramètre de fonction qui traite les codes d'erreur de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Structure `_exception`|Stocke les informations sur l'erreur pour [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
 |`_EXCEPTION_POINTERS`|Contient un enregistrement d'exception. Pour plus d'informations, consultez [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
