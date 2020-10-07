@@ -55,12 +55,12 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: b730933879df04d2455b5eae6fc5abf16bbf4484
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ab8e9e0243a298f5ef39b38b3fd345572cafa587
+ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219272"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806556"
 ---
 # <a name="basic_ios-class"></a>basic_ios, classe
 
@@ -77,10 +77,10 @@ class basic_ios : public ios_base
 ### <a name="parameters"></a>Paramètres
 
 *Elem*\
-Type.
+Type de caractère.
 
 *Caractéristiques*\
-Variable de type `char_traits`.
+Type qui fournit des informations sur le type de caractère, la valeur par défaut est `char_traits < Elem >` .
 
 ## <a name="remarks"></a>Notes
 
@@ -116,14 +116,14 @@ Objet de la classe **basic_ios \<class Elem, class Traits> ** stocke :
 
 |Fonction membre|Description|
 |-|-|
-|[incorrecte](#bad)|Indique une perte d'intégrité de la mémoire tampon du flux.|
+|[incorrect](#bad)|Indique une perte d'intégrité de la mémoire tampon du flux.|
 |[clear](#clear)|Efface tous les indicateurs d'erreur.|
 |[copyfmt](#copyfmt)|Copie les indicateurs d'un flux vers un autre.|
 |[EOF](#eof)|Indique si la fin d'un flux a été atteinte.|
 |[exceptions](#exceptions)|Indique les exceptions qui seront levées par le flux.|
 |[incident](#fail)|Indique l'échec de l'extraction d'un champ valide dans un flux.|
 |[complète](#fill)|Spécifie ou retourne le caractère qui est utilisé quand le texte n'est pas aussi large que le flux.|
-|[État](#good)|Indique que le flux est en bon état.|
+|[good](#good)|Indique que le flux est en bon état.|
 |[imbue](#imbue)|Change les paramètres régionaux.|
 |[init](#init)|Appelé par les constructeurs `basic_ios`.|
 |[move](#move)|Déplace toutes les valeurs, sauf le pointeur vers la mémoire tampon du flux, du paramètre vers l'objet actuel.|
@@ -150,7 +150,7 @@ Objet de la classe **basic_ios \<class Elem, class Traits> ** stocke :
 
 **Espace de noms :** std
 
-## <a name="basic_iosbad"></a><a name="bad"></a>basic_ios :: Bad
+## <a name="basic_iosbad"></a><a name="bad"></a> basic_ios :: Bad
 
 Indique une perte d’intégrité de la mémoire tampon de flux
 
@@ -158,7 +158,7 @@ Indique une perte d’intégrité de la mémoire tampon de flux
 bool bad() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si `rdstate & badbit` est différent de zéro ; sinon, **`false`** .
 
@@ -183,7 +183,7 @@ int main( void )
 }
 ```
 
-## <a name="basic_iosbasic_ios"></a><a name="basic_ios"></a>basic_ios :: basic_ios
+## <a name="basic_iosbasic_ios"></a><a name="basic_ios"></a> basic_ios :: basic_ios
 
 Construit la classe basic_ios.
 
@@ -201,7 +201,7 @@ Mémoire tampon standard pour stocker les éléments d’entrée ou de sortie.
 
 Le premier constructeur initialise ses objets membres en appelant [init](#init)(_ *Sb*). Le deuxième constructeur (protégé) laisse ses objets membres non initialisés. Un appel ultérieur à `init` doit initialiser l’objet avant qu’il puisse être détruit en toute sécurité.
 
-## <a name="basic_ioschar_type"></a><a name="char_type"></a>basic_ios :: char_type
+## <a name="basic_ioschar_type"></a><a name="char_type"></a> basic_ios :: char_type
 
 Synonyme pour le paramètre du modèle `Elem`.
 
@@ -209,7 +209,7 @@ Synonyme pour le paramètre du modèle `Elem`.
 typedef Elem char_type;
 ```
 
-## <a name="basic_iosclear"></a><a name="clear"></a>basic_ios :: Clear
+## <a name="basic_iosclear"></a><a name="clear"></a> basic_ios :: Clear
 
 Efface tous les indicateurs d'erreur.
 
@@ -240,7 +240,7 @@ Si `state` **&** [exceptions](#exceptions) est différent de zéro, il lève alo
 
 Pour obtenir des exemples d’utilisation de, consultez [rdstate](#rdstate) et [getline](../standard-library/string-functions.md#getline) `clear` .
 
-## <a name="basic_ioscopyfmt"></a><a name="copyfmt"></a>basic_ios :: copyfmt
+## <a name="basic_ioscopyfmt"></a><a name="copyfmt"></a> basic_ios :: copyfmt
 
 Copie les indicateurs d'un flux vers un autre.
 
@@ -254,7 +254,7 @@ const basic_ios<Elem, Traits>& right);
 *Oui*\
 Flux dont vous voulez copier les indicateurs.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`this`** Objet pour le flux vers lequel vous copiez les indicateurs.
 
@@ -283,7 +283,7 @@ int main( )
 }
 ```
 
-## <a name="basic_ioseof"></a><a name="eof"></a>basic_ios :: EOF
+## <a name="basic_ioseof"></a><a name="eof"></a> basic_ios :: EOF
 
 Indique si la fin d'un flux a été atteinte.
 
@@ -291,7 +291,7 @@ Indique si la fin d'un flux a été atteinte.
 bool eof() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la fin du flux a été atteinte ; **`false`** sinon,.
 
@@ -321,7 +321,7 @@ int main( int argc, char* argv[] )
 }
 ```
 
-## <a name="basic_iosexceptions"></a><a name="exceptions"></a>basic_ios :: exceptions
+## <a name="basic_iosexceptions"></a><a name="exceptions"></a> basic_ios :: exceptions
 
 Indique les exceptions qui seront levées par le flux.
 
@@ -336,7 +336,7 @@ void exceptions(io_state Newexcept);
 *Newexcept*\
 Indicateurs pour lesquels vous voulez lever une exception.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Les indicateurs sont actuellement spécifiés pour lever une exception pour le flux.
 
@@ -380,7 +380,7 @@ Exception class: class std::ios_base::failure
 Exception description: ios_base::eofbit set
 ```
 
-## <a name="basic_iosfail"></a><a name="fail"></a>basic_ios :: Fail
+## <a name="basic_iosfail"></a><a name="fail"></a> basic_ios :: Fail
 
 Indique l'échec de l'extraction d'un champ valide dans un flux.
 
@@ -388,7 +388,7 @@ Indique l'échec de l'extraction d'un champ valide dans un flux.
 bool fail() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si [rdstate](#rdstate) `& (badbit|failbit)` est différent de zéro ; sinon, **`false`** .
 
@@ -410,7 +410,7 @@ int main( void )
 }
 ```
 
-## <a name="basic_iosfill"></a><a name="fill"></a>basic_ios :: Fill
+## <a name="basic_iosfill"></a><a name="fill"></a> basic_ios :: Fill
 
 Spécifie ou retourne le caractère qui est utilisé quand le texte n'est pas aussi large que le flux.
 
@@ -424,7 +424,7 @@ char_type fill(char_type Char);
 *Char*\
 Caractère souhaité comme caractère de remplissage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Caractère de remplissage actuel.
 
@@ -457,7 +457,7 @@ xxxxa
 x
 ```
 
-## <a name="basic_iosgood"></a><a name="good"></a>basic_ios :: Good
+## <a name="basic_iosgood"></a><a name="good"></a> basic_ios :: Good
 
 Indique que le flux est en bon état.
 
@@ -465,7 +465,7 @@ Indique que le flux est en bon état.
 bool good() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si [rdstate](#rdstate) `== goodbit` (aucun indicateur d’État n’est défini); sinon, **`false`** .
 
@@ -475,7 +475,7 @@ Pour plus d’informations sur `goodbit`, consultez [ios_base::iostate](../stand
 
 Consultez [basic_ios::bad](#bad) pour obtenir un exemple d’utilisation de `good`.
 
-## <a name="basic_iosimbue"></a><a name="imbue"></a>basic_ios :: imbue
+## <a name="basic_iosimbue"></a><a name="imbue"></a> basic_ios :: imbue
 
 Change les paramètres régionaux.
 
@@ -488,7 +488,7 @@ locale imbue(const locale& Loc);
 *Loc*\
 Chaîne de paramètres régionaux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètres régionaux précédents.
 
@@ -518,7 +518,7 @@ int main( )
 }
 ```
 
-## <a name="basic_iosinit"></a><a name="init"></a>basic_ios :: init
+## <a name="basic_iosinit"></a><a name="init"></a> basic_ios :: init
 
 Appelé par les constructeurs de basic_ios.
 
@@ -558,7 +558,7 @@ La fonction membre stocke les valeurs de tous les objets membres, afin que :
 
 - [iword](../standard-library/ios-base-class.md#iword) retourne zéro et [pword](../standard-library/ios-base-class.md#pword) retourne un pointeur Null pour toutes les valeurs d’argument.
 
-## <a name="basic_iosint_type"></a><a name="int_type"></a>basic_ios :: int_type
+## <a name="basic_iosint_type"></a><a name="int_type"></a> basic_ios :: int_type
 
 Synonyme de `traits_type::int_type`.
 
@@ -566,7 +566,7 @@ Synonyme de `traits_type::int_type`.
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_iosmove"></a><a name="move"></a>basic_ios :: Move
+## <a name="basic_iosmove"></a><a name="move"></a> basic_ios :: Move
 
 Déplace toutes les valeurs, sauf le pointeur vers la mémoire tampon du flux, du paramètre vers l'objet actuel.
 
@@ -583,7 +583,7 @@ Objet `ios_base` à partir duquel déplacer les valeurs.
 
 La fonction membre protégée déplace toutes les valeurs stockées à *droite* vers **`*this`** , à l’exception de l’élément stocké `stream buffer pointer` , qui n’est pas modifié à *droite* et qui a la valeur d’un pointeur null dans **`*this`** . Le stocké `tie pointer` est défini sur un pointeur null à *droite*.
 
-## <a name="basic_iosnarrow"></a><a name="narrow"></a>basic_ios :: Narrow
+## <a name="basic_iosnarrow"></a><a name="narrow"></a> basic_ios :: Narrow
 
 Trouve le caractère équivalent à un type `char_type` donné.
 
@@ -599,7 +599,7 @@ char narrow(char_type Char, char Default = '\0') const;
 *Valeurs*\
 **`char`** Que vous souhaitez retourner si aucun équivalent n’est trouvé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Équivalent **`char`** à un donné `char_type` .
 
@@ -628,7 +628,7 @@ int main( )
 }
 ```
 
-## <a name="basic_iosoff_type"></a><a name="off_type"></a>basic_ios :: off_type
+## <a name="basic_iosoff_type"></a><a name="off_type"></a> basic_ios :: off_type
 
 Synonyme de `traits_type::off_type`.
 
@@ -636,7 +636,7 @@ Synonyme de `traits_type::off_type`.
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_iosoperator-void-"></a><a name="op_void_star"></a>basic_ios :: Operator void *
+## <a name="basic_iosoperator-void-"></a><a name="op_void_star"></a> basic_ios :: Operator void *
 
 Indique si le flux est toujours en bon état.
 
@@ -644,7 +644,7 @@ Indique si le flux est toujours en bon état.
 operator void *() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’opérateur retourne un pointeur null uniquement si [fail](#fail).
 
@@ -666,7 +666,7 @@ int main( )
 1
 ```
 
-## <a name="basic_iosoperator"></a><a name="op_not"></a>basic_ios :: Operator !
+## <a name="basic_iosoperator"></a><a name="op_not"></a> basic_ios :: Operator !
 
 Indique si le flux n'est pas en mauvais état.
 
@@ -674,7 +674,7 @@ Indique si le flux n'est pas en mauvais état.
 bool operator!() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne [fail](#fail).
 
@@ -696,7 +696,7 @@ int main( )
 0
 ```
 
-## <a name="basic_iosoperator-bool"></a><a name="op_bool"></a>basic_ios :: operator bool
+## <a name="basic_iosoperator-bool"></a><a name="op_bool"></a> basic_ios :: operator bool
 
 Autorise l’utilisation d’un `basic_ios` objet en tant que **`bool`** . La conversion de type automatique est désactivée pour éviter des effets secondaires involontaires courants.
 
@@ -708,7 +708,7 @@ explicit operator bool() const;
 
 L’opérateur retourne une valeur convertible en **`false`** uniquement si `fail()` . Le type de retour est convertible uniquement en **`bool`** , pas en ou en un `void *` autre type scalaire connu.
 
-## <a name="basic_iospos_type"></a><a name="pos_type"></a>basic_ios ::p os_type
+## <a name="basic_iospos_type"></a><a name="pos_type"></a> basic_ios ::p os_type
 
 Synonyme de `traits_type::pos_type`.
 
@@ -716,7 +716,7 @@ Synonyme de `traits_type::pos_type`.
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_iosrdbuf"></a><a name="rdbuf"></a>basic_ios :: rdbuf
+## <a name="basic_iosrdbuf"></a><a name="rdbuf"></a> basic_ios :: rdbuf
 
 Dirige le flux vers la mémoire tampon spécifiée.
 
@@ -729,7 +729,7 @@ basic_streambuf<Elem, Traits>* _Sb);
 ### <a name="parameters"></a>Paramètres
 
 *_Sb*\
-Flux.
+Un flux.
 
 ### <a name="remarks"></a>Notes
 
@@ -761,7 +761,7 @@ int main( )
 test2
 ```
 
-## <a name="basic_iosrdstate"></a><a name="rdstate"></a>basic_ios :: rdstate
+## <a name="basic_iosrdstate"></a><a name="rdstate"></a> basic_ios :: rdstate
 
 Lit l'état des bits pour les indicateurs.
 
@@ -769,7 +769,7 @@ Lit l'état des bits pour les indicateurs.
 iostate rdstate() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Informations de l’état de flux stocké.
 
@@ -810,7 +810,7 @@ int main( )
 1
 ```
 
-## <a name="basic_iossetstate"></a><a name="setstate"></a>basic_ios :: SetState
+## <a name="basic_iossetstate"></a><a name="setstate"></a> basic_ios :: SetState
 
 Définit des indicateurs supplémentaires.
 
@@ -859,7 +859,7 @@ int main( )
 1
 ```
 
-## <a name="basic_iosset_rdbuf"></a><a name="set_rdbuf"></a>basic_ios :: set_rdbuf
+## <a name="basic_iosset_rdbuf"></a><a name="set_rdbuf"></a> basic_ios :: set_rdbuf
 
 Affecte une mémoire tampon de flux comme mémoire tampon de lecture pour cet objet de flux.
 
@@ -877,7 +877,7 @@ Mémoire tampon de flux qui doit devenir la mémoire tampon de lecture.
 
 La fonction membre protégée stocke *strbuf* dans le `stream buffer pointer` . Elle n’appelle pas `clear` .
 
-## <a name="basic_iostie"></a><a name="tie"></a>basic_ios :: tie
+## <a name="basic_iostie"></a><a name="tie"></a> basic_ios :: tie
 
 Garantit qu'un flux est traité avant un autre flux.
 
@@ -890,9 +890,9 @@ basic_ostream<Elem, Traits>* str);
 ### <a name="parameters"></a>Paramètres
 
 *Str*\
-Flux.
+Un flux.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre retourne le pointeur de lien stocké. La deuxième fonction membre stocke *Str* dans le pointeur de liaison et retourne sa valeur stockée précédente.
 
@@ -918,7 +918,7 @@ int main( )
 }
 ```
 
-## <a name="basic_iostraits_type"></a><a name="traits_type"></a>basic_ios :: traits_type
+## <a name="basic_iostraits_type"></a><a name="traits_type"></a> basic_ios :: traits_type
 
 Synonyme pour le paramètre du modèle `Traits`.
 
@@ -926,7 +926,7 @@ Synonyme pour le paramètre du modèle `Traits`.
 typedef Traits traits_type;
 ```
 
-## <a name="basic_ioswiden"></a><a name="widen"></a>basic_ios :: Widening
+## <a name="basic_ioswiden"></a><a name="widen"></a> basic_ios :: Widening
 
 Recherche l’équivalent `char_type` d’un donné **`char`** .
 
@@ -939,7 +939,7 @@ char_type widen(char Char) const;
 *Char*\
 Caractère à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Recherche l’équivalent `char_type` d’un donné **`char`** .
 
@@ -967,7 +967,7 @@ int main( )
 }
 ```
 
-## <a name="basic_iosswap"></a><a name="swap"></a>basic_ios :: swap
+## <a name="basic_iosswap"></a><a name="swap"></a> basic_ios :: swap
 
 Échange les valeurs de cet objet `basic_ios` avec celles d'un autre objet `basic_ios`. Toutefois, les pointeurs vers les mémoires tampons de flux ne sont pas échangés.
 

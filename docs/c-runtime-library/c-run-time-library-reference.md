@@ -1,31 +1,31 @@
 ---
-title: Informations de référence sur la bibliothèque Runtime C
+title: Informations de référence sur la bibliothèque Runtime C
 description: Liens vers des informations et des références pour les fonctions de la bibliothèque Runtime C de Microsoft.
-ms.date: 11/04/2016
+ms.date: 10/05/2020
 f1_keywords:
 - c.runtime
 helpviewer_keywords:
 - CRT
-- run-time libraries
+- runtime libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 99d8463ddd9dd7b9037cb96e214af7f9581ba074
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 2e5fcadca5dcca30370b0f03917650136ab46ee8
+ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590054"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806524"
 ---
-# <a name="c-run-time-library-reference"></a>Informations de référence sur la bibliothèque Runtime C
+# <a name="c-runtime-library-reference"></a>Référence de la bibliothèque Runtime C
 
-La bibliothèque Microsoft Runtime fournit des routines de programmation pour le système d’exploitation Microsoft Windows. Ces routines automatisent de nombreuses tâches de programmation courantes qui ne sont pas fournies par les langages C et C++.
+La bibliothèque Microsoft Runtime fournit des routines pour la programmation pour le système d’exploitation Microsoft Windows. Ces routines automatisent de nombreuses tâches de programmation courantes qui ne sont pas fournies par les langages C et C++.
 
 Des exemples de programmes sont inclus dans chaque rubrique de référence pour la plupart des routines de la bibliothèque.
 
 ## <a name="in-this-section"></a>Dans cette section
 
 [Bibliothèques Runtime C](crt-library-features.md)\
-Décrit les fichiers .lib qui composent les bibliothèques Runtime C.
+Décrit les fichiers. lib qui composent les bibliothèques Runtime C.
 
 [Routines du runtime C universel par catégorie](run-time-routines-by-category.md)\
 Fournit des liens vers la bibliothèque Runtime par catégorie.
@@ -39,11 +39,14 @@ Fournit des liens vers les constantes globales définies par la bibliothèque Ru
 [État global](global-state.md)\
 Décrit la portée de l’état global dans la bibliothèque Runtime C.
 
-[Référence de fonction alphabétique](reference/crt-alphabetical-function-reference.md)\
-Fournit un point d’entrée de table des matières dans une liste alphabétique de toutes les fonctions de bibliothèque Runtime C.
-
 [Mappages de texte générique](generic-text-mappings.md)\
 Fournit des liens vers les mappages de texte générique définis dans Tchar.h.
+
+[Référence de fonction alphabétique](reference/crt-alphabetical-function-reference.md)\
+Fournit des liens vers les fonctions de la bibliothèque Runtime C, classées par ordre alphabétique.
+
+[Vues d’ensemble des familles de fonctions](function-family-overviews.md)\
+Fournit des liens vers les fonctions de la bibliothèque Runtime C, organisées par famille de fonctions.
 
 [Chaînes de langue et de pays/région](locale-names-languages-and-country-region-strings.md)\
 Décrit comment utiliser la fonction `setlocale` pour définir les chaînes de langue et de pays/région.
@@ -51,9 +54,9 @@ Décrit comment utiliser la fonction `setlocale` pour définir les chaînes de l
 ## <a name="related-sections"></a>Sections connexes
 
 [Routines de débogage](debug-routines.md)\
-Fournit des liens vers les versions Debug des routines de la bibliothèque Runtime C.
+Fournit des liens vers les versions Debug des routines de la bibliothèque Runtime.
 
-[Vérification des erreurs au moment de l’exécution](run-time-error-checking.md)\
+[Vérification des erreurs d’exécution](run-time-error-checking.md)\
 Fournit des liens vers les fonctions qui prennent en charge les vérifications des erreurs d’exécution.
 
 [Dll et comportement de la bibliothèque Runtime Visual C++](../build/run-time-library-behavior.md)\

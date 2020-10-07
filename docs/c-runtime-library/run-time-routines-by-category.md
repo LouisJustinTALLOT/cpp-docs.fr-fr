@@ -1,5 +1,6 @@
 ---
 title: Routines du runtime C universel par catégorie
+description: Liste des routines de la bibliothèque Microsoft Universal C Runtime (UCRT) par catégorie.
 ms.date: 04/06/2018
 helpviewer_keywords:
 - routines, run-time
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: be58ce7550c8f15c1c12eafa1dd4187f12fb71cd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3106c97bfcaf6ed273ba9f826edf7b268fdca782
+ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846340"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806537"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>Routines du runtime C universel par catégorie
 
-Cette section répertorie et décrit les routines de la bibliothèque du runtime C universel (UCRT) par catégorie. Pour des raisons pratiques de référence, certaines routines sont listées dans plusieurs catégories. Les routines de caractères multioctets et les routines de caractères larges sont regroupées avec leurs équivalents à caractères codés sur un octet, s’ils existent.
+Cette section répertorie les routines de la bibliothèque Runtime C universel (UCRT) par catégorie. Pour des raisons pratiques de référence, certaines routines sont listées dans plusieurs catégories. Les routines de caractères multioctets et les routines de caractères larges sont regroupées avec leurs équivalents à caractères codés sur un octet, s’ils existent.
 
 ## <a name="ucrt-library-routine-categories"></a>Catégories des routines de la bibliothèque UCRT
 
