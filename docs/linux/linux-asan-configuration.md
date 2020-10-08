@@ -1,13 +1,13 @@
 ---
 title: Configurer des projets Linux pour utiliser Address Sanitizer
 description: Décrit comment configurer des projets Linux C++ dans Visual Studio pour utiliser Address Sanitizer.
-ms.date: 09/25/2020
-ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.date: 10/7/2020
+ms.openlocfilehash: 3c2f78346e4a2049e3482ba4093d8a6212f54e9a
+ms.sourcegitcommit: 611e903f222ec794ef14195796b332851ab98904
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414194"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847149"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Configurer des projets Linux pour utiliser Address Sanitizer
 
@@ -84,5 +84,7 @@ Vous pouvez installer les bits de débogage ASan sur les distributions Linux qui
 ```bash
 sudo apt-get install libasan4-dbg
 ```
+
+Vous trouverez des instructions complètes pour l’installation des packages de symboles de débogage sur Ubuntu dans [packages de symboles de débogage](https://wiki.ubuntu.com/Debug%20Symbol%20Packages).
 
 Si ASan est activé, Visual Studio vous invite en haut du volet **Déboguer** de la fenêtre **Sortie** à installer les symboles de débogage ASan.
