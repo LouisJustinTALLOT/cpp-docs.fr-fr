@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 072ecd325a76e80dbd710c241e39fdf7b969e537
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227021"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008253"
 ---
 # <a name="using-declaration"></a>déclaration using
 
@@ -37,7 +37,7 @@ using declarator-list ;
 
 Une déclaration using introduit un nom non qualifié comme synonyme d’une entité déclarée ailleurs. Il permet d’utiliser un seul nom d’un espace de noms spécifique sans qualification explicite dans la région de la déclaration dans laquelle il apparaît. Cela diffère de la [directive using](../cpp/namespaces-cpp.md#using_directives), qui permet d’utiliser *tous* les noms d’un espace de noms sans qualification. Le **`using`** mot clé est également utilisé pour les [alias de type](../cpp/aliases-and-typedefs-cpp.md).
 
-## <a name="example"></a>Exemple
+## <a name="example-using-declaration-in-class-field"></a>Exemple : `using` déclaration dans le champ de classe
 
 Une déclaration using peut être utilisée dans une définition de classe.
 
@@ -83,7 +83,7 @@ In B::f()
 In B::g()
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-using-declaration-to-declare-a-member"></a>Exemple : `using` déclaration pour déclarer un membre
 
 Lorsqu’elle est utilisée pour déclarer un membre, une déclaration using doit faire référence à un membre d’une classe de base.
 
@@ -123,7 +123,7 @@ int main() {
 In B::f()
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-using-declaration-with-explicit-qualification"></a>Exemple : `using` déclaration avec qualification explicite
 
 Les membres déclarés à l’aide d’une déclaration using peuvent être référencés à l’aide d’une qualification explicite. Le `::` préfixe fait référence à l’espace de noms global.
 
@@ -163,7 +163,7 @@ In f
 In A::g
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-using-declaration-synonyms-and-aliases"></a>Exemple : `using` synonymes et alias de déclaration
 
 Quand une déclaration using est effectuée, le synonyme créé par la déclaration fait référence uniquement aux définitions qui sont valides au point de la déclaration using. Les définitions ajoutées à un espace de noms après la déclaration using ne sont pas des synonymes valides.
 
@@ -192,7 +192,7 @@ void b() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-local-declarations-and-using-declarations"></a>Exemple : déclarations locales et `using` déclarations
 
 En ce qui concerne les fonctions dans les espaces de noms, si un ensemble de déclarations locales et l’utilisation de déclarations pour un même nom sont fournies dans une région déclarative, elles doivent toutes faire référence à la même entité, ou elles doivent toutes faire référence à des fonctions.
 
@@ -215,7 +215,7 @@ void g() {
 
 Dans l’exemple ci-dessus, l' `using B::i` instruction entraîne la déclaration d’une seconde `int i` dans la `g()` fonction. L' `using B::f` instruction n’est pas en conflit avec la `f(char)` fonction, car les noms de fonctions introduits par `B::f` ont des types de paramètres différents.
 
-## <a name="example"></a>Exemple
+## <a name="example-local-function-declarations-and-using-declarations"></a>Exemple : déclarations et déclarations de fonctions locales `using`
 
 Une déclaration de fonction locale ne peut pas avoir le même nom et le même type qu’une fonction introduite à l’aide d’une déclaration. Par exemple :
 
@@ -242,7 +242,7 @@ void h() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-using-declaration-and-inheritance"></a>Exemple : `using` déclaration et héritage
 
 En ce qui concerne l’héritage, quand une déclaration using introduit un nom d’une classe de base dans une portée de classe dérivée, les fonctions membres dans la classe dérivée remplacent les fonctions membres virtuelles avec les mêmes types de noms et d’arguments dans la classe de base.
 
@@ -300,7 +300,7 @@ In B::g
 In D::g(char)
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-using-declaration-accessibility"></a>Exemple : `using` accessibilité de déclaration
 
 Toutes les instances d’un nom mentionné dans une déclaration using doivent être accessibles. En particulier, si une classe dérivée utilise une déclaration using pour accéder à un membre d’une classe de base, le nom du membre doit être accessible. Si le nom est celui d’une fonction membre surchargée, toutes les fonctions nommées doivent être accessibles.
 

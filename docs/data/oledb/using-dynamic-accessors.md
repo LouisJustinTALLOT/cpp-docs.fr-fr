@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: eea1c6199fed5a4e6e331c1c76f34b96090b709a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4f42d6f20da819cf325cad06a04878b46e52352a
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509419"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008684"
 ---
 # <a name="using-dynamic-accessors"></a>Utilisation d’accesseurs dynamiques
 
@@ -22,7 +22,7 @@ L’exemple [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) vous permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (la structure sous-jacente de la base de données). `CDynamicAccessor` les méthodes obtiennent des informations sur les colonnes, telles que les noms de colonnes, le nombre et le type de données. Vous utilisez ces informations de colonne pour créer un accesseur de manière dynamique au moment de l’exécution. Les informations de colonne sont stockées dans une mémoire tampon qui est créée et gérée par cette classe. Obtient des données de la mémoire tampon à l’aide de la méthode [GetValue](./cdynamicaccessor-class.md#getvalue) .
 
-## <a name="example"></a>Exemple
+## <a name="example-cdynamic-accessors"></a>Exemple : accesseurs CDynamic
 
 ```cpp
 // Using_Dynamic_Accessors.cpp
@@ -94,7 +94,7 @@ int main(int argc, char* argv[] )
 
 Utilisez des `CDynamicStringAccessor` méthodes pour récupérer des informations sur les colonnes. Vous utilisez ces informations de colonne pour créer un accesseur de manière dynamique au moment de l’exécution. Les informations de colonne sont stockées dans une mémoire tampon créée et gérée par cette classe. Récupérez des données à partir de la mémoire tampon à l’aide de [CDynamicStringAccessor :: GetString](./cdynamicstringaccessor-class.md#getstring) ou stockez-les dans la mémoire tampon à l’aide de [CDynamicStringAccessor :: SetString](./cdynamicstringaccessor-class.md#setstring).
 
-## <a name="example"></a>Exemple
+## <a name="example-cdynamicstringaccessor"></a>Exemple : CDynamicStringAccessor
 
 ```cpp
 // Using_Dynamic_Accessors_b.cpp

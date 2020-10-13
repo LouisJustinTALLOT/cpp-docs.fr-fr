@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 17f1f15a5356d760119123214e939a7dd2d1fbaf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f71c2c3862bd015ba3edcd17aeac85472eb2562
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223575"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008910"
 ---
 # <a name="template-specialization-c"></a>Spécialisation de modèle
 
@@ -19,7 +19,7 @@ Les modèles de classe peuvent être partiellement spécialisés et la classe ob
 
 - Un modèle comporte un seul type, mais une spécialisation est nécessaire pour les types pointeur, référence, pointeur vers un membre ou pointeur fonction. La spécialisation proprement dite est toujours un modèle sur le type désigné ou référencé.
 
-## <a name="example"></a>Exemple
+## <a name="example-partial-specialization-of-class-templates"></a>Exemple : spécialisation partielle des modèles de classe
 
 ```cpp
 // partial_specialization_of_class_templates.cpp
@@ -66,7 +66,7 @@ PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0
 PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-partial-specialization-for-pointer-types"></a>Exemple : spécialisation partielle pour les types pointeur
 
 Si vous avez une classe de collection de modèles qui accepte tout type `T` , vous pouvez créer une spécialisation partielle qui accepte tout type pointeur `T*` . Le code suivant illustre un modèle de classe de collection `Bag` et une spécialisation partielle pour les types pointeur dans laquelle la collection déréférence les types pointeur avant de les copier dans le tableau. La collection stocke ensuite les valeurs cibles des pointeurs. Avec le modèle d’origine, seuls les pointeurs proprement dits auraient été stockés dans la collection, laissant les données vulnérables à la suppression ou à la modification. Dans cette version de pointeur spéciale de la collection, du code vérifiant l'existence d'un pointeur null dans la méthode `add` est ajouté.
 
@@ -178,7 +178,7 @@ Null pointer!
 3 87 8 100
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-define-partial-specialization-so-one-type-is-int"></a>Exemple : définir une spécialisation partielle pour qu’un type soit `int`
 
 L’exemple suivant définit une classe de modèle qui accepte des paires de deux types quelconques, puis définit une spécialisation partielle de cette classe de modèle spécialisée afin que l’un des types soit **`int`** . La spécialisation définit une méthode de tri supplémentaire qui implémente un tri par propagation simple sur l'entier.
 

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 6d2ef22b90009d320485fb6fe3f7e308ae05c442
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 835bd968035b355ded9636d446d44d4ce069c248
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80173619"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008890"
 ---
 # <a name="missing-function-body-or-variable"></a>Corps de fonction ou variable manquant
 
 Avec juste un prototype de fonction, le compilateur peut continuer sans erreur, mais l’éditeur de liens ne peut pas résoudre un appel à une adresse, car aucun code de fonction ou espace de variable n’est réservé. Vous ne verrez pas cette erreur tant que vous n’avez pas créé un appel à la fonction que l’éditeur de liens doit résoudre.
 
-## <a name="example"></a>Exemple
+## <a name="example-call-to-an-undefined-function"></a>Exemple : appel à une fonction non définie
 
 L’appel de fonction dans main entraînera l’erreur LNK2019, car le prototype permet au compilateur de croire que la fonction existe.  L’éditeur de liens détecte qu’il ne l’a pas.
 
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-call-to-an-implemented-function"></a>Exemple : appel à une fonction implémentée
 
-Dans C++, assurez-vous que vous incluez l’implémentation d’une fonction spécifique pour une classe et pas simplement un prototype dans la définition de classe. Si vous définissez la classe en dehors du fichier d’en-tête, veillez à inclure le nom de la classe avant la fonction (`Classname::memberfunction`).
+En C++, veillez à inclure l’implémentation d’une fonction spécifique pour une classe et pas simplement un prototype dans la définition de classe. Si vous définissez la classe en dehors du fichier d’en-tête, veillez à inclure le nom de la classe avant la fonction ( `Classname::memberfunction` ).
 
 ```cpp
 // LNK2019_MFBV_2.cpp

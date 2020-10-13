@@ -8,38 +8,40 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: fe5d2cf4804baea286827e9d5e270c10cd587b30
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: e132505ef536a79c67afdd76443c2637c08f923b
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988450"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008753"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Comment : marshaler des structures à l'aide de PInvoke
 
-Ce document explique comment les fonctions natives qui acceptent des structs de style C peuvent être appelées à partir de fonctions managées à l’aide de P/Invoke. Bien que nous vous recommandons d’utiliser C++ les fonctionnalités d’interopérabilité au lieu de p/Invoke, car p/Invoke fournit peu de rapports d’erreurs de compilation, n’est pas de type sécurisé et peut être fastidieux à implémenter, si l’API non managée est empaquetée en tant que dll et que le code source n’est pas disponible, P/Invoke est la seule option. Dans le cas contraire, consultez les documents suivants :
+Ce document explique comment les fonctions natives qui acceptent des structs de style C peuvent être appelées à partir de fonctions managées à l’aide de P/Invoke. Bien que nous vous recommandons d’utiliser les fonctionnalités d’interopérabilité C++ au lieu de P/Invoke, car P/Invoke fournit peu de rapports d’erreurs de compilation, n’est pas de type sécurisé et peut être fastidieux à implémenter, si l’API non managée est empaquetée en tant que DLL et que le code source n’est pas disponible, P/Invoke est la seule option. Dans le cas contraire, consultez les documents suivants :
 
 - [Utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Guide pratique pour marshaler des chaînes à l’aide de PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+- [Comment : marshaler des chaînes à l’aide de PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 
 Par défaut, les structures natives et managées sont disposées différemment en mémoire. par conséquent, le passage de structures entre les limites managées/non managées requiert des étapes supplémentaires pour préserver l’intégrité des données.
 
-Ce document explique les étapes requises pour définir des équivalents managés de structures natives et comment les structures résultantes peuvent être passées à des fonctions non managées. Ce document suppose que des structures simples, celles qui ne contiennent pas de chaînes ou de pointeurs, sont utilisées. Pour plus d’informations sur l’interopérabilité non blittable, consultez [utilisation de C++ l’interopérabilité (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke ne peut pas avoir de types non blittables comme valeur de retour. Les types blittables ont la même représentation dans du code managé et non managé. Pour plus d’informations, consultez [types blittables et non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types).
+Ce document explique les étapes requises pour définir des équivalents managés de structures natives et comment les structures résultantes peuvent être passées à des fonctions non managées. Ce document suppose que des structures simples, celles qui ne contiennent pas de chaînes ou de pointeurs, sont utilisées. Pour plus d’informations sur l’interopérabilité non blittable, consultez [utilisation de l’interopérabilité C++ (PInvoke implicite)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke ne peut pas avoir de types non blittables comme valeur de retour. Les types blittables ont la même représentation dans du code managé et non managé. Pour plus d’informations, consultez [types blittables et non blittables](/dotnet/framework/interop/blittable-and-non-blittable-types).
 
 Le marshaling de structures simples et blittables sur les limites managées/non managées exige d’abord que les versions managées de chaque structure native soient définies. Ces structures peuvent avoir n’importe quel nom légal. Il n’existe aucune relation entre la version native et managée des deux structures, à l’exception de la disposition des données. Par conséquent, il est vital que la version managée contienne des champs de la même taille et dans le même ordre que la version native. (Il n’existe aucun mécanisme permettant de s’assurer que les versions managées et natives de la structure sont équivalentes, de sorte que les incompatibilités ne seront pas visibles jusqu’au moment de l’exécution. Il incombe au programmeur de s’assurer que les deux structures ont la même disposition des données.)
 
-Étant donné que les membres des structures managées sont parfois réorganisés à des fins de performances, il est nécessaire d’utiliser l’attribut <xref:System.Runtime.InteropServices.StructLayoutAttribute> pour indiquer que la structure est disposée de manière séquentielle. Il est également judicieux de définir explicitement le paramètre de compression de la structure de manière à ce qu’il soit identique à celui utilisé par la structure native. (Bien que, par défaut C++ , Visual utilise une compression de structure de 8 octets pour le code managé.)
+Étant donné que les membres des structures managées sont parfois réorganisés à des fins de performances, il est nécessaire d’utiliser l' <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribut pour indiquer que la structure est disposée de manière séquentielle. Il est également judicieux de définir explicitement le paramètre de compression de la structure de manière à ce qu’il soit identique à celui utilisé par la structure native. (Bien que par défaut, Visual C++ utilise une compression de structure de 8 octets pour le code managé.)
 
 1. Ensuite, utilisez <xref:System.Runtime.InteropServices.DllImportAttribute> pour déclarer des points d’entrée qui correspondent à toutes les fonctions non managées qui acceptent la structure, mais utilisez la version managée de la structure dans les signatures de fonction, qui est un point discutable si vous utilisez le même nom pour les deux versions de la structure.
 
 1. Désormais, le code managé peut passer la version managée de la structure aux fonctions non managées comme s’il s’agissait de fonctions managées. Ces structures peuvent être passées par valeur ou par référence, comme illustré dans l’exemple suivant.
 
-## <a name="example"></a>Exemple
+## <a name="unmanaged-and-a-managed-modules"></a>Modules managés et non managés
 
 Le code suivant est constitué d’un module non managé et d’un module managé. Le module non managé est une DLL qui définit une structure appelée location et une fonction appelée GetDistance qui accepte deux instances de la structure location. Le deuxième module est une application de ligne de commande managée qui importe la fonction GetDistance, mais la définit en termes d’équivalent managé de la structure d’emplacement, MLocation. Dans la pratique, le même nom est probablement utilisé pour les deux versions de la structure. Toutefois, un autre nom est utilisé ici pour démontrer que le prototype DllImport est défini en termes de version managée.
 
 Notez qu’aucune partie de la DLL n’est exposée au code managé à l’aide de la directive #include traditionnelle. En fait, la DLL est accessible uniquement au moment de l’exécution. par conséquent, les problèmes liés aux fonctions importées avec DllImport ne seront pas détectés au moment de la compilation.
+
+### <a name="example-unmanaged-dll-module"></a>Exemple : module DLL non managé
 
 ```cpp
 // TraditionalDll3.cpp
@@ -85,7 +87,7 @@ void InitLocation(Location* lp) {
 }
 ```
 
-## <a name="example"></a>Exemple
+### <a name="example-managed-command-line-application-module"></a>Exemple : module d’application en ligne de commande managé
 
 ```cpp
 // MarshalStruct_pi.cpp

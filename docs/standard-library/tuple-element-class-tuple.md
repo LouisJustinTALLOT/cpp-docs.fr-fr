@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: be9d9fe56d35e96e4179eb511edccd475a369f32
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684462"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008283"
 ---
 # <a name="tuple_element-class"></a>tuple_element, classe
 
@@ -56,22 +56,22 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 d' *index*
+*Index*\
 Index de l’élément désigné.
 
-@No__t_1 de *Tuple*
+*Passent*\
 Type du tuple.
 
-@No__t_1 *elem*
+*Elem*\
 Type d’un élément de tableau.
 
-*Taille* \
+*Taille*\
 Taille du tableau.
 
-@No__t_1 *T1*
+*T1*\
 Type du premier élément d’une paire.
 
-*T2* \
+*H2*\
 Le type du second élément d’une paire.
 
 ## <a name="remarks"></a>Notes
@@ -80,13 +80,13 @@ Le modèle de classe `tuple_element` a un typedef imbriqué `type` qui est un sy
 
 Le typedef `tuple_element_t` est un alias pratique pour `tuple_element<Index, Tuple>::type`.
 
-La spécialisation de modèle de classe pour les tableaux fournit une interface à un `array` en tant que tuple d’éléments `Size`, chacun d’entre eux ayant le même type. Chaque spécialisation a un typedef imbriqué `type` qui est un synonyme du type de l’élément *index* de l' `array`, avec des qualifications const-volatiles conservées.
+La spécialisation de modèle de classe pour les tableaux fournit une interface à un `array` comme un tuple d' `Size` éléments, chacun d’entre eux ayant le même type. Chaque spécialisation a un typedef imbriqué `type` qui est un synonyme du type de l’élément *index* de `array` , avec des qualifications const-volatiles conservées.
 
 Les spécialisations de modèle pour les types `pair` fournissent chacune un typedef de membre unique, `type`, qui est un synonyme du type de l’élément à la position spécifiée dans la paire, avec des qualifications const et/ou volatiles conservées. Le typedef `tuple_element_t` est un alias pratique pour `tuple_element<N, pair<T1, T2>>::type`.
 
-Utilisez la [fonction obtenir &lt;utility &gt;](../standard-library/utility-functions.md#get) pour retourner l’élément à une position spécifiée ou d’un type spécifié.
+Utilisez l' [ &lt; utilitaire &gt; d’extraction de fonction](../standard-library/utility-functions.md#get) pour retourner l’élément à une position spécifiée ou d’un type spécifié.
 
-## <a name="example"></a>Exemple
+## <a name="example-get-an-element-from-a-tuple"></a>Exemple : obtenir un élément à partir d’un tuple
 
 ```cpp
 #include <tuple>
@@ -111,7 +111,7 @@ int main() {
 0 1.5 Tail
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-get-an-element-from-an-array"></a>Exemple : récupération d’un élément d’un tableau
 
 ```cpp
 #include <array>
@@ -141,7 +141,7 @@ int main()
 0
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-get-an-element-from-a-pair"></a>Exemple : obtenir un élément d’une paire
 
 ```cpp
 #include <utility>
@@ -172,12 +172,12 @@ int main() {
 0 1.333
 ```
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<tuple>
+**En-tête :**\<tuple>
 
 **En-tête :** \<array> (pour la spécialisation de tableau)
 
-**En-tête :** \<utility > (pour les spécialisations de paire)
+**En-tête :** \<utility> (pour les spécialisations de paire)
 
 **Espace de noms :** std

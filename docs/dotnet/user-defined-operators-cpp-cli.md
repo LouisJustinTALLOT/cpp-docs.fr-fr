@@ -4,66 +4,66 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee5aa122983a315e55884c643a9b7894f075e260
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384502"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008946"
 ---
 # <a name="user-defined-operators-ccli"></a>Opérateurs définis par l'utilisateur (C++/CLI)
 
-Opérateurs définis par l’utilisateur pour les types managés sont autorisés comme membres statiques ou membres d’instance, ou avec une portée globale. Toutefois, seuls les opérateurs statiques sont accessibles via des métadonnées aux clients qui sont écrits dans une langue autre que Visual C++.
+Les opérateurs définis par l’utilisateur pour les types managés sont autorisés en tant que membres statiques ou membres d’instance, ou au niveau de la portée globale. Toutefois, seuls les opérateurs statiques sont accessibles par le biais de métadonnées aux clients écrits dans un langage autre que Visual C++.
 
-Dans un type référence, l’un des paramètres d’un opérateur défini par l’utilisateur statique doit être un d'entre eux :
+Dans un type référence, l’un des paramètres d’un opérateur statique défini par l’utilisateur doit être l’un des suivants :
 
-- Un handle (`type` ^) à une instance du type englobant.
+- Handle ( `type` ^) vers une instance du type englobant.
 
-- Une indirection de type référence (`type`^ & ou type ^ %) pour un pointeur vers une instance du type englobant.
+- Indirection de type référence ( `type` ^& ou type ^%) à un handle vers une instance du type englobant.
 
-Dans un type valeur, l’un des paramètres d’un opérateur défini par l’utilisateur statique doit être un d'entre eux :
+Dans un type valeur, l’un des paramètres d’un opérateur statique défini par l’utilisateur doit être l’un des suivants :
 
-- De même type que le type englobant de valeur.
+- Du même type que le type valeur englobante.
 
-- Une indirection de type pointeur (`type`^) pour le type englobant.
+- Indirection de type pointeur ( `type` ^) vers le type englobant.
 
-- Une indirection de type référence (`type`% ou `type`&) pour le type englobant.
+- Indirection de type référence ( `type` % ou `type`&) vers le type englobant.
 
-- Une indirection de type référence (`type`^ % ou `type`^ &) au handle.
+- Indirection de type référence ( `type` ^% ou `type` ^&) vers le descripteur.
 
 Vous pouvez définir les opérateurs suivants :
 
-|Opérateur|Formulaires d’unaire/binaire ?|
+|Opérateur|Formulaires unaires/binaires ?|
 |--------------|--------------------------|
 |!|Unaire|
-|!=|Binaire|
-|%|Binaire|
+|!=|Binary|
+|%|Binary|
 |&|Unaire et binaire|
-|&&|Binaire|
+|&&|Binary|
 |*|Unaire et binaire|
 |+|Unaire et binaire|
 |++|Unaire|
-|,|Binaire|
+|,|Binary|
 |-|Unaire et binaire|
 |--|Unaire|
 |->|Unaire|
-|/|Binaire|
-|<|Binaire|
-|<<|Binaire|
-|\<=|Binaire|
-|=|Binaire|
-|==|Binaire|
-|>|Binaire|
-|>=|Binaire|
-|>>|Binaire|
-|^|Binaire|
-|False|Unaire|
+|/|Binary|
+|<|Binary|
+|<<|Binary|
+|\<=|Binary|
+|=|Binary|
+|==|Binary|
+|>|Binary|
+|>=|Binary|
+|>>|Binary|
+|^|Binary|
+|false|Unaire|
 |true|Unaire|
-|&#124;|Binaire|
-|&#124;&#124;|Binaire|
+|&#124;|Binary|
+|&#124;&#124;|Binary|
 |~|Unaire|
 
-## <a name="example"></a>Exemple
+## <a name="example-user-defined-operators"></a>Exemple : opérateurs définis par l’utilisateur
 
 ```cpp
 // mcppv2_user-defined_operators.cpp
@@ -135,9 +135,9 @@ int main() {
 -3
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-operator-synthesis"></a>Exemple : synthèse d’opérateur
 
-L’exemple suivant montre la synthèse d’opérateur, qui est uniquement disponible lorsque vous utilisez **/CLR** à compiler. Synthèse d’opérateur crée l’écran de l’affectation d’un opérateur binaire, s’il n’est pas défini, où le côté gauche de l’opérateur d’assignation a un type CLR.
+L’exemple suivant illustre la synthèse d’opérateur, qui n’est disponible que lorsque vous utilisez **/CLR** pour compiler. La synthèse d’opérateur crée la forme d’assignation d’un opérateur binaire, si aucune n’est définie, où la partie gauche de l’opérateur d’assignation a un type CLR.
 
 ```cpp
 // mcppv2_user-defined_operators_2.cpp

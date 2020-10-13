@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 1fa2cc24f4ec610e1cc892ddd8d3bf8971ddf687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 08921ff44d2d69ab77eb210b2123016ea61c4f67
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919293"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008279"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
@@ -174,14 +174,14 @@ Zéro en cas de réussite, **STRUNCATE** si la troncation s’est produite, sino
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*strDest*|*numberOfElements*|*strSource*|Valeur retournée|Contenu de *strDest*|
+|*strDest*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NUL**|n'importe laquelle|n'importe laquelle|**EINVAL**|non modifié|
-|n'importe laquelle|n'importe laquelle|**NUL**|**EINVAL**|*strDest*[0] a la valeur 0|
+|**NULL**|n'importe laquelle|n'importe laquelle|**EINVAL**|non modifié|
+|n'importe laquelle|n'importe laquelle|**NULL**|**EINVAL**|*strDest*[0] a la valeur 0|
 |n'importe laquelle|0|n'importe laquelle|**EINVAL**|non modifié|
 |non **null**|trop petit|n'importe laquelle|**ERANGE**|*strDest*[0] a la valeur 0|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions essaient de copier les premiers caractères *d* de *strSource* dans *strDest*, où *D* est le plus petit de *Count* et la longueur de *strSource*. Si ces caractères *D* tiennent dans *strDest* (dont la taille est spécifiée comme *NumberOfElements*) tout en laissant de l’espace pour une marque de fin null, ces caractères sont copiés et une valeur null de fin est ajoutée ; Sinon, *strDest*[0] est défini sur le caractère null et le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
@@ -229,7 +229,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 > [!NOTE]
 > **_strncpy_s_l**, **_wcsncpy_s_l** et **_mbsncpy_s_l** n’ont aucune dépendance des paramètres régionaux et sont fournis uniquement pour les **_tcsncpy_s_l** et ne sont pas destinés à être appelés directement.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -239,7 +239,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example-copy-chars-to-a-buffer"></a>Exemple : copie de caractères dans une mémoire tampon
 
 ```cpp
 // crt_strncpy_s_1.cpp
@@ -366,7 +366,7 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-strncpy-and-strncpy_s"></a>Exemple : strncpy et strncpy_s
 
 ```C
 // crt_strncpy_s_2.c
@@ -414,7 +414,7 @@ After strncpy_s (with null-termination):
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

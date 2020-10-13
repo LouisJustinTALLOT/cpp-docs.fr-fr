@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 81dd7483c49a699ac53ea53d33481fa6539d484c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c3ed59262ec5ad061572d23c1166b2153cb16ca
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223653"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008576"
 ---
 # <a name="new-operator-c"></a>new, opérateur (C++)
 
@@ -70,7 +70,7 @@ Spécifie le type à allouer ; il peut s'agir d'un type intégré ou d'un type 
 *initializer*<br/>
 Fournit une valeur pour l'objet initialisé. Les initialiseurs ne peuvent pas être spécifiés pour des tableaux. L' **`new`** opérateur crée des tableaux d’objets uniquement si la classe a un constructeur par défaut.
 
-## <a name="example"></a>Exemple
+## <a name="example-allocate-and-free-a-character-array"></a>Exemple : allouer et libérer un tableau de caractères
 
 L'exemple de code suivant alloue un tableau de caractères et un objet de classe `CName`, puis les libère.
 
@@ -115,7 +115,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-new-operator"></a>Exemple : `new` opérateur
 
 Si vous utilisez la nouvelle forme positionnement de l' **`new`** opérateur, le formulaire avec des arguments en plus de la taille de l’allocation, le compilateur ne prend pas en charge une forme de placement de l' **`delete`** opérateur si le constructeur lève une exception. Par exemple :
 

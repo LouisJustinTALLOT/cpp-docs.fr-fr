@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915808"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008414"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -67,14 +67,14 @@ Si des paramètres non valides sont passés à cette fonction, le gestionnaire d
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_setmode** *définit le mode de traduction du fichier* donné par *FD*. Le passage de **_O_TEXT** en *mode* définit le mode texte (autrement dit, traduit). Les combinaisons retour chariot-saut de ligne sont traduites en un seul caractère de saut de ligne en entrée. Les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. Le passage de **_O_BINARY** définit le mode binaire (non traduit), dans lequel ces traductions sont supprimées.
 
 Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT**ou **_O_WTEXT** pour activer le mode Unicode, comme illustré dans le deuxième exemple plus loin dans ce document.
 
 > [!CAUTION]
-> Le mode Unicode est destiné aux fonctions d’impression larges ( `wprintf`par exemple,) et n’est pas pris en charge pour les fonctions d’impression étroite. L’utilisation d’une fonction d’impression étroite sur un flux en mode Unicode déclenche une assertion.
+> Le mode Unicode est destiné aux fonctions d’impression larges (par exemple, `wprintf` ) et n’est pas pris en charge pour les fonctions d’impression étroite. L’utilisation d’une fonction d’impression étroite sur un flux en mode Unicode déclenche une assertion.
 
 **_setmode** est généralement utilisé pour modifier le mode de traduction par défaut de **stdin** et **stdout**, mais vous pouvez l’utiliser sur n’importe quel fichier. Si vous appliquez **_setmode** au descripteur de fichier pour un flux, appelez **_setmode** avant d’effectuer des opérations d’entrée ou de sortie sur le flux.
 
@@ -83,7 +83,7 @@ Vous pouvez également passer **_O_U16TEXT**, **_O_U8TEXT**ou **_O_WTEXT** pour 
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
@@ -91,7 +91,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example-use-_setmode-to-change-stdin"></a>Exemple : utiliser _setmode pour modifier stdin
 
 ```C
 // crt_setmode.c
@@ -119,7 +119,7 @@ int main( void )
 'stdin' successfully changed to binary mode
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-use-_setmode-to-change-stdout"></a>Exemple : utiliser _setmode pour modifier stdout
 
 ```C
 // crt_setmodeunicode.c

@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: f6d831ac8b86be8a6669e8ee6c66da64507d129f
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 2d42803b5eca7a43f122d209b7d9e2d4e45c38de
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590184"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008933"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Erreurs potentielles de passage d'objets CRT entre frontières DLL
 
@@ -33,7 +33,7 @@ Dans Visual Studio 2013 et antérieur, chaque version de Visual Studio avait sa
 
 La DLL et ses clients utilisent normalement la même copie de la bibliothèque CRT uniquement si, au moment du chargement, ils sont tous deux liés à la même version de la DLL CRT. Étant donné que la version DLL de la bibliothèque Universal CRT utilisée par Visual Studio 2015, et versions ultérieures sur Windows 10, est désormais un composant Windows déployé de manière centralisée (ucrtbase.dll), c’est le même pour les applications créées avec Visual Studio 2015 et versions ultérieures. Toutefois, même lorsque le code CRT est identique, vous ne pouvez pas attribuer la mémoire allouée dans un segment à un composant qui utilise un segment de mémoire différent.
 
-## <a name="example"></a> Exemple
+## <a name="example-pass-file-handle-across-dll-boundary"></a>Exemple : passer le descripteur de fichier à travers la limite de DLL
 
 ### <a name="description"></a>Description
 
@@ -75,7 +75,7 @@ int main(void)
 this is a string
 ```
 
-## <a name="example"></a> Exemple
+## <a name="example-pass-environment-variables-across-dll-boundary"></a>Exemple : passer des variables d’environnement à travers les limites de DLL
 
 ### <a name="description"></a>Description
 

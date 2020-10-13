@@ -49,12 +49,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: 9a3f10fc89d93717edfb032dea910040589c1254
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: da3c5b3660b481fd3a7140adbc236f44cd51f37e
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334941"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008823"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -110,7 +110,7 @@ int _sprintf_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage pour la sortie
 
 *count*<br/>
@@ -127,13 +127,13 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 Nombre de caractères écrits, ou-1 si une erreur s’est produite. Si la *mémoire tampon* ou le *format* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
 **sprintf** retourne le nombre d’octets stockés dans la *mémoire tampon*, sans compter le caractère null de fin. **swprintf** retourne le nombre de caractères larges stockés dans la *mémoire tampon*, sans compter le caractère élargi de la valeur null de fin.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction **sprintf** met en forme et stocke une série de caractères et de valeurs dans *buffer*. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. Le format se compose de caractères ordinaires et a la même forme et fonction que l’argument *format* pour [printf](printf-printf-l-wprintf-wprintf-l.md). Un caractère null est ajouté après le dernier caractère écrit. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
@@ -162,7 +162,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example-use-sprintf-to-format-data"></a>Exemple : utilisation de sprintf pour mettre en forme des données
 
 ```C
 // crt_sprintf.c
@@ -199,7 +199,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-error-code-handling"></a>Exemple : gestion de code d’erreur
 
 ```C
 // crt_swprintf.c

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-ms.openlocfilehash: ee36d4f33f3e4216e2ad9c434ac1da4ca3aa83e8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8514c8ffe630f5bc44d8d287d6ccf08c7755e3a0
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177979"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008562"
 ---
 # <a name="member-function-templates"></a>Modèles de fonctions membres
 
@@ -17,7 +17,7 @@ Le terme « modèle membre » fait référence aux modèles de fonction membre
 
 Les fonctions membres peuvent être des modèles de fonction dans plusieurs contextes. Toutes les fonctionnalités des modèles de classe sont génériques, mais ne sont pas appelés modèles membres ou modèles de fonction membre. Si ces fonctions membres prennent leurs propres arguments template, elles sont considérées comme des modèles de fonction membre.
 
-## <a name="example"></a>Exemple
+## <a name="example-declare-member-function-templates"></a>Exemple : déclarer des modèles de fonction membre
 
 Les modèles de fonction membre de classes de modèles ou de classes non basées sur un modèle sont déclarés comme modèles de fonction avec leurs paramètres de modèle.
 
@@ -36,7 +36,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-member-function-template-of-template-class"></a>Exemple : modèle de fonction membre de classe de modèle
 
 L'exemple suivant montre un modèle de fonction membre d'une classe de modèle.
 
@@ -57,7 +57,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-define-member-templates-outside-class"></a>Exemple : définir des modèles membres en dehors de la classe
 
 ```cpp
 // defining_member_templates_outside_class.cpp
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-templated-user-defined-conversion"></a>Exemple : conversion définie par l’utilisateur basée sur un modèle
 
 Les classes locales ne doivent pas avoir de modèles membres.
 
@@ -107,4 +107,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles de fonctions](../cpp/function-templates.md)
+[Modèles de fonction](../cpp/function-templates.md)

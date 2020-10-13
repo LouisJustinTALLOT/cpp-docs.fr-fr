@@ -7,35 +7,35 @@ helpviewer_keywords:
 - threading [C++], locales
 - per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
-ms.openlocfilehash: c12a3fa1922db7a1ec0a7bcd43ddf09000d97961
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b410c592e5b68737514dda5a864c7bd15f6dc3
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213249"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008590"
 ---
 # <a name="multithreading-and-locales"></a>Multithreading et paramètres régionaux
 
-La bibliothèque Runtime C et la bibliothèque Standard C++ fournissent la prise en charge pour la modification des paramètres régionaux de votre programme. Cette rubrique décrit les problèmes qui surviennent lors de l’utilisation de la fonctionnalité de paramètres régionaux des deux bibliothèques dans une application multithread.
+La bibliothèque Runtime C et la bibliothèque C++ standard prennent en charge la modification des paramètres régionaux de votre programme. Cette rubrique décrit les problèmes qui surviennent lors de l’utilisation des fonctionnalités de paramètres régionaux des deux bibliothèques dans une application multithread.
 
 ## <a name="remarks"></a>Notes
 
-Avec la bibliothèque Runtime C, vous pouvez créer des applications multithread à l’aide de la `_beginthread` et `_beginthreadex` fonctions. Cette rubrique couvre uniquement les applications multithread créées à l’aide de ces fonctions. Pour plus d’informations, consultez [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).
+Avec la bibliothèque Runtime C, vous pouvez créer des applications multithread à l’aide `_beginthread` des `_beginthreadex` fonctions et. Cette rubrique traite uniquement des applications multithread créées à l’aide de ces fonctions. Pour plus d’informations, consultez [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).
 
-Pour modifier les paramètres régionaux à l’aide de la bibliothèque Runtime C, utilisez la [setlocale](../preprocessor/setlocale.md) (fonction). Dans les versions précédentes de Visual C++, cette fonction est toujours modifier les paramètres régionaux dans toute l’application. Il est prennent désormais en charge pour la définition des paramètres régionaux par thread. Cette opération est effectuée à l’aide de la [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) (fonction). Pour spécifier que [setlocale](../preprocessor/setlocale.md) ne devez modifier les paramètres régionaux du thread actif, l’appel `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` dans ce thread. Inversement, l’appel `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` entraînera ce thread à utiliser les paramètres régionaux globaux et tout appel à [setlocale](../preprocessor/setlocale.md) dans ce thread modifiera les paramètres régionaux dans tous les threads qui n’ont pas explicitement activé de paramètres régionaux par thread.
+Pour modifier les paramètres régionaux à l’aide de la bibliothèque Runtime C, utilisez la fonction [setlocale](../preprocessor/setlocale.md) . Dans les versions précédentes de Visual C++, cette fonction modifiait toujours les paramètres régionaux dans toute l’application. Il existe désormais une prise en charge de la définition des paramètres régionaux pour chaque thread. Cette opération s’effectue à l’aide de la fonction [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) . Pour spécifier que [setlocale](../preprocessor/setlocale.md) doit uniquement changer les paramètres régionaux dans le thread actuel, appelez `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` dans ce thread. Inversement, l’appel à `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` entraîne l’utilisation par ce thread des paramètres régionaux globaux, et tout appel à [setlocale](../preprocessor/setlocale.md) dans ce thread modifie les paramètres régionaux dans tous les threads qui n’ont pas explicitement activé les paramètres régionaux par thread.
 
-Pour modifier les paramètres régionaux à l’aide de la bibliothèque Runtime C++, utilisez la [locale, classe](../standard-library/locale-class.md). En appelant le [locale::global](../standard-library/locale-class.md#global) (méthode), vous modifiez les paramètres régionaux dans chaque thread qui n’a pas explicitement activé de paramètres régionaux par thread. Pour modifier les paramètres régionaux dans un thread unique ou une partie d’une application, créez simplement une instance d’un `locale` objet dans ce thread ou d’une partie du code.
+Pour modifier les paramètres régionaux à l’aide de la bibliothèque Runtime C++, utilisez la [classe locale](../standard-library/locale-class.md). En appelant la méthode [locale :: Global](../standard-library/locale-class.md#global) , vous modifiez les paramètres régionaux dans chaque thread qui n’a pas explicitement activé les paramètres régionaux par thread. Pour modifier les paramètres régionaux d’un thread unique ou d’une partie d’une application, il vous suffit de créer une instance d’un `locale` objet dans ce thread ou cette partie de code.
 
 > [!NOTE]
-> Appel [locale::global](../standard-library/locale-class.md#global) modifie les paramètres régionaux pour la bibliothèque C++ Standard et la bibliothèque Runtime C. Toutefois, l’appel [setlocale](../preprocessor/setlocale.md) modifie uniquement les paramètres régionaux de la bibliothèque Runtime C ; la bibliothèque Standard C++ n’est pas affectée.
+> L’appel de [paramètres régionaux :: Global](../standard-library/locale-class.md#global) modifie les paramètres régionaux de la bibliothèque standard C++ et de la bibliothèque Runtime C. Toutefois, l’appel de [setlocale](../preprocessor/setlocale.md) modifie uniquement les paramètres régionaux de la bibliothèque Runtime C ; la bibliothèque C++ standard n’est pas affectée.
 
-Les exemples suivants montrent comment utiliser le [setlocale](../preprocessor/setlocale.md) (fonction), le [locale, classe](../standard-library/locale-class.md)et le [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) (fonction) pour modifier les paramètres régionaux d’une application dans différents scénarios.
+Les exemples suivants montrent comment utiliser la fonction [setlocale](../preprocessor/setlocale.md) , la [classe locale](../standard-library/locale-class.md)et la fonction [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) pour modifier les paramètres régionaux d’une application dans différents scénarios.
 
-## <a name="example"></a>Exemple
+## <a name="example-change-locale-with-per-thread-locale-enabled"></a>Exemple : modifier les paramètres régionaux avec les paramètres régionaux par thread activés
 
-Dans cet exemple, le thread principal génère deux threads enfants. Le premier thread, Thread A, Active les paramètres régionaux par thread en appelant `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Le deuxième thread, Thread B, ainsi que le thread principal, n’activez pas les paramètres régionaux par thread. Thread A entreprend alors modifier les paramètres régionaux à l’aide de la [setlocale](../preprocessor/setlocale.md) fonction de la bibliothèque Runtime C.
+Dans cet exemple, le thread principal génère deux threads enfants. Le premier thread, thread A, active les paramètres régionaux par thread en appelant `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` . Le deuxième thread, thread B, ainsi que le thread principal, n’activent pas les paramètres régionaux par thread. Le thread A entreprend alors de modifier les paramètres régionaux à l’aide de la fonction [setlocale](../preprocessor/setlocale.md) de la bibliothèque Runtime C.
 
-Étant donné que le Thread A possède par thread activé les paramètres régionaux, uniquement les fonctions de bibliothèque Runtime C de lancer le Thread A à l’aide des paramètres régionaux « français ». Les fonctions de bibliothèque Runtime C dans Thread B et dans le thread principal continuent à utiliser les paramètres régionaux « C ». En outre, depuis [setlocale](../preprocessor/setlocale.md) n’affecte pas les paramètres régionaux à la bibliothèque Standard C++, bibliothèque Standard C++ tous les objets de continuent à utiliser les paramètres régionaux « C ».
+Étant donné que les paramètres régionaux par thread sont activés pour le thread A, seules les fonctions de la bibliothèque Runtime C dans le thread A commencent à utiliser les paramètres régionaux « français ». Les fonctions de la bibliothèque Runtime C dans le thread B et dans le thread principal continuent à utiliser les paramètres régionaux « C ». En outre, étant donné que [setlocale](../preprocessor/setlocale.md) n’affecte pas les paramètres régionaux de la bibliothèque c++ standard, tous les objets de la bibliothèque c++ standard continuent à utiliser les paramètres régionaux « C ».
 
 ```cpp
 // multithread_locale_1.cpp
@@ -130,11 +130,11 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "C"
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-change-global-locale-with-per-thread-locale-enabled"></a>Exemple : modifier les paramètres régionaux globaux avec les paramètres régionaux par thread activés
 
-Dans cet exemple, le thread principal génère deux threads enfants. Le premier thread, Thread A, Active les paramètres régionaux par thread en appelant `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Le deuxième thread, Thread B, ainsi que le thread principal, n’activez pas les paramètres régionaux par thread. Thread A entreprend alors modifier les paramètres régionaux à l’aide de la [locale::global](../standard-library/locale-class.md#global) méthode de la bibliothèque Standard C++.
+Dans cet exemple, le thread principal génère deux threads enfants. Le premier thread, thread A, active les paramètres régionaux par thread en appelant `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` . Le deuxième thread, thread B, ainsi que le thread principal, n’activent pas les paramètres régionaux par thread. Le thread A entreprend alors de modifier les paramètres régionaux à l’aide de la méthode [locale :: Global](../standard-library/locale-class.md#global) de la bibliothèque C++ standard.
 
-Étant donné que le Thread A possède par thread activé les paramètres régionaux, uniquement les fonctions de bibliothèque Runtime C de lancer le Thread A à l’aide des paramètres régionaux « français ». Les fonctions de bibliothèque Runtime C dans Thread B et dans le thread principal continuent à utiliser les paramètres régionaux « C ». Toutefois, étant donné que le [locale::global](../standard-library/locale-class.md#global) méthode modifie les paramètres régionaux « globalement », tous les objets de bibliothèque C++ Standard dans tous les threads commencent à utiliser les paramètres régionaux « français ».
+Étant donné que les paramètres régionaux par thread sont activés pour le thread A, seules les fonctions de la bibliothèque Runtime C dans le thread A commencent à utiliser les paramètres régionaux « français ». Les fonctions de la bibliothèque Runtime C dans le thread B et dans le thread principal continuent à utiliser les paramètres régionaux « C ». Toutefois, étant donné que la méthode [locale :: Global](../standard-library/locale-class.md#global) modifie les paramètres régionaux « globalement », tous les objets de la bibliothèque C++ standard de tous les threads commencent par les paramètres régionaux « français ».
 
 ```cpp
 // multithread_locale_2.cpp
@@ -229,11 +229,11 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "French_France.1252"
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-change-locale-without-per-thread-locale-enabled"></a>Exemple : modifier les paramètres régionaux sans les paramètres régionaux par thread activés
 
-Dans cet exemple, le thread principal génère deux threads enfants. Le premier thread, Thread A, Active les paramètres régionaux par thread en appelant `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Le deuxième thread, Thread B, ainsi que le thread principal, n’activez pas les paramètres régionaux par thread. Thread B entreprend alors de modifier les paramètres régionaux à l’aide de la [setlocale](../preprocessor/setlocale.md) fonction de la bibliothèque Runtime C.
+Dans cet exemple, le thread principal génère deux threads enfants. Le premier thread, thread A, active les paramètres régionaux par thread en appelant `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` . Le deuxième thread, thread B, ainsi que le thread principal, n’activent pas les paramètres régionaux par thread. Le thread B procède ensuite à la modification des paramètres régionaux à l’aide de la fonction [setlocale](../preprocessor/setlocale.md) de la bibliothèque Runtime C.
 
-Étant donné que Thread B n’a pas activé les paramètres régionaux par thread, les fonctions de bibliothèque Runtime C dans Thread B et dans le thread principal commencer à utiliser les paramètres régionaux « français ». Les fonctions de la bibliothèque Runtime C dans Thread A continuent à utiliser les paramètres régionaux « C », car le Thread A a activé les paramètres régionaux par thread. En outre, depuis [setlocale](../preprocessor/setlocale.md) n’affecte pas les paramètres régionaux à la bibliothèque Standard C++, bibliothèque Standard C++ tous les objets de continuent à utiliser les paramètres régionaux « C ».
+Étant donné que les paramètres régionaux par thread ne sont pas activés pour le thread B, les fonctions de la bibliothèque Runtime C dans le thread B et dans le thread principal commencent par les paramètres régionaux « français ». Les fonctions de la bibliothèque Runtime C dans le thread A continuent à utiliser les paramètres régionaux « C », car le thread a a des paramètres régionaux par thread activés. En outre, étant donné que [setlocale](../preprocessor/setlocale.md) n’affecte pas les paramètres régionaux de la bibliothèque c++ standard, tous les objets de la bibliothèque c++ standard continuent à utiliser les paramètres régionaux « C ».
 
 ```cpp
 // multithread_locale_3.cpp
@@ -332,11 +332,11 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "C"
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-change-global-locale-without-per-thread-locale-enabled"></a>Exemple : modifier les paramètres régionaux globaux sans les paramètres régionaux par thread activés
 
-Dans cet exemple, le thread principal génère deux threads enfants. Le premier thread, Thread A, Active les paramètres régionaux par thread en appelant `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Le deuxième thread, Thread B, ainsi que le thread principal, n’activez pas les paramètres régionaux par thread. Thread B entreprend alors de modifier les paramètres régionaux à l’aide de la [locale::global](../standard-library/locale-class.md#global) méthode de la bibliothèque Standard C++.
+Dans cet exemple, le thread principal génère deux threads enfants. Le premier thread, thread A, active les paramètres régionaux par thread en appelant `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` . Le deuxième thread, thread B, ainsi que le thread principal, n’activent pas les paramètres régionaux par thread. Le thread B procède ensuite à la modification des paramètres régionaux à l’aide de la méthode [locale :: Global](../standard-library/locale-class.md#global) de la bibliothèque C++ standard.
 
-Étant donné que Thread B n’a pas activé les paramètres régionaux par thread, les fonctions de bibliothèque Runtime C dans Thread B et dans le thread principal commencer à utiliser les paramètres régionaux « français ». Les fonctions de la bibliothèque Runtime C dans Thread A continuent à utiliser les paramètres régionaux « C », car le Thread A a activé les paramètres régionaux par thread. Toutefois, étant donné que le [locale::global](../standard-library/locale-class.md#global) méthode modifie les paramètres régionaux « globalement », tous les objets de bibliothèque C++ Standard dans tous les threads commencent à utiliser les paramètres régionaux « français ».
+Étant donné que les paramètres régionaux par thread ne sont pas activés pour le thread B, les fonctions de la bibliothèque Runtime C dans le thread B et dans le thread principal commencent par les paramètres régionaux « français ». Les fonctions de la bibliothèque Runtime C dans le thread A continuent à utiliser les paramètres régionaux « C », car le thread a a des paramètres régionaux par thread activés. Toutefois, étant donné que la méthode [locale :: Global](../standard-library/locale-class.md#global) modifie les paramètres régionaux « globalement », tous les objets de la bibliothèque C++ standard de tous les threads commencent par les paramètres régionaux « français ».
 
 ```cpp
 // multithread_locale_4.cpp

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 5e7a5d3f9a42968dee35f82d3f19d0fdb6da5d0c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e9cf88fdc0444f736f1cfac0d06dfc675a162cc
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214228"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008351"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI et C++/CX)
 
@@ -23,7 +23,7 @@ Le mot clé **__nullptr** est un mot clé spécifique à Microsoft qui a la mêm
 
 Le **`nullptr`** mot clé est équivalent à **Nothing** dans Visual Basic et **null** en C#.
 
-## <a name="usage"></a>Usage
+## <a name="usage"></a>Utilisation
 
 Le **`nullptr`** mot clé peut être utilisé partout où il est possible d’utiliser un handle, un pointeur natif ou un argument de fonction.
 
@@ -51,7 +51,7 @@ Les appels de fonction dans les langages qui utilisent des valeurs de pointeur n
 
 Vous ne pouvez pas initialiser un handle à zéro ; seul **`nullptr`** peut être utilisé. L’affectation de la constante 0 pour un descripteur d’objet produit un `Int32` boxed et effectue un cast dans `Object^`.
 
-## <a name="example"></a>Exemple
+## <a name="example-nullptr-keyword"></a>Exemple : `nullptr` mot clé
 
 L’exemple de code suivant montre que le **`nullptr`** mot clé peut être utilisé partout où un handle, un pointeur natif ou un argument de fonction peut être utilisé. Et l’exemple montre que le **`nullptr`** mot clé peut être utilisé pour vérifier une référence avant son utilisation.
 
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-use-nullptr-and-zero-interchangeably"></a>Exemple : utilisez `nullptr` et zéro de façon interchangeable
 
 L’exemple de code suivant montre que **`nullptr`** et zéro peut être utilisé de manière interchangeable sur des pointeurs natifs.
 
@@ -119,7 +119,7 @@ pMyClass == nullptr
 pMyClass == 0
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-interpret-nullptr-as-a-handle"></a>Exemple : interpréter `nullptr` comme un handle
 
 L’exemple de code suivant montre que **`nullptr`** est interprété comme un handle de tout type ou un pointeur natif vers n’importe quel type. En cas de surcharge de fonction avec des descripteurs vers des types différents, une erreur d’ambiguïté sera générée. Doit **`nullptr`** être explicitement casté en type.
 
@@ -137,7 +137,7 @@ void f_null() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-cast-nullptr"></a>Exemple : cast `nullptr`
 
 L’exemple de code suivant montre que la conversion **`nullptr`** est autorisée et retourne un pointeur ou un handle vers le type de cast qui contient la **`nullptr`** valeur.
 
@@ -158,7 +158,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-pass-nullptr-as-a-function-parameter"></a>Exemple : Pass `nullptr` en tant que paramètre de fonction
 
 L’exemple de code suivant montre que **`nullptr`** peut être utilisé comme paramètre de fonction.
 
@@ -179,7 +179,7 @@ int main() {
 test
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-default-initialization"></a>Exemple : initialisation par défaut
 
 L’exemple de code suivant montre que lorsque les handles sont déclarés et ne sont pas explicitement initialisés, ils sont initialisés par défaut à **`nullptr`** .
 
@@ -206,7 +206,7 @@ int main() {
 NULL
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-assign-nullptr-to-a-native-pointer"></a>Exemple : assigner `nullptr` à un pointeur natif
 
 L’exemple de code suivant montre qu' **`nullptr`** il est possible d’assigner à un pointeur natif quand vous compilez avec `/clr` .
 
@@ -219,7 +219,7 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Option du compilateur : (non obligatoire ; prise en charge par toutes les options de génération de code, y compris `/ZW` et `/clr` )
 

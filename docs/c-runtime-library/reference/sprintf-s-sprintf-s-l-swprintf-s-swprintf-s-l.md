@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 34b3ddce68563479b26abff34e8fa31f6298558a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 006b0f84494466b5c23a8c86f586774b66839b03
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958011"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008830"
 ---
 # <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
@@ -100,7 +100,7 @@ int swprintf_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage pour la sortie
 
 *sizeOfBuffer*<br/>
@@ -115,13 +115,13 @@ Arguments facultatifs de mise en forme
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="return-value"></a>Valeur de retour
 
 Nombre de caractères écrits, ou-1 si une erreur s’est produite. Si *buffer* ou *format* est un pointeur null, **sprintf_s** et **swprintf_s** retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
-**sprintf_s** retourne le nombre d’octets stockés dans la *mémoire tampon*, sans compter le caractère null de fin. **swprintf_s** retourne le nombre de caractères larges stockés dans la *mémoire tampon*, sans compter le caractère élargi de la valeur null de fin.
+**sprintf_s** retourne le nombre d’octets stockés dans la *mémoire tampon*, sans compter le caractère null de fin. **swprintf_s** retourne le nombre de caractères larges stockés dans la *mémoire tampon*, sans compter le caractère élargi null de fin.
 
 ## <a name="remarks"></a>Notes
 
@@ -131,9 +131,9 @@ L’une des principales différences entre **sprintf_s** et [sprintf](sprintf-sp
 
 L’autre différence principale entre **sprintf_s** et [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) est que **sprintf_s** prend un paramètre de longueur spécifiant la taille de la mémoire tampon de sortie en caractères. Si la mémoire tampon est trop petite pour le texte mis en forme, y compris la valeur null de fin, la mémoire tampon est définie sur une chaîne vide en plaçant un caractère null à la *mémoire tampon*[0], et le gestionnaire de paramètre non valide est appelé. Contrairement à **_snprintf**, **sprintf_s** garantit que la mémoire tampon se termine par un caractère null, sauf si la taille de la mémoire tampon est égale à zéro.
 
-**swprintf_s** est une version à caractères larges de **sprintf_s**; les arguments de pointeur vers **swprintf_s** sont des chaînes à caractères larges. La détection des erreurs d’encodage dans **swprintf_s** peut différer de celle de **sprintf_s**. Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
+**swprintf_s** est une version à caractères larges de **sprintf_s**; les arguments de pointeur pour **swprintf_s** sont des chaînes à caractères larges. La détection des erreurs d’encodage dans **swprintf_s** peut différer de celle de **sprintf_s**. Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle. Les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement, ce qui évite d’avoir à spécifier un argument taille, et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle. Les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement, ce qui évite d’avoir à spécifier un argument taille, et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
 Il existe des versions de **sprintf_s** qui offrent un contrôle supplémentaire sur ce qui se produit si la mémoire tampon est trop petite. Pour plus d'informations, consultez [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
@@ -148,12 +148,12 @@ Il existe des versions de **sprintf_s** qui offrent un contrôle supplémentaire
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**sprintf_s**, **_sprintf_s_l**|C : \<stdio.h><br /><br /> C++ : \<cstdio> ou \<stdio.h>|
-|**swprintf_s**, **_swprintf_s_l**|C : \<stdio.h> ou \<wchar.h><br /><br /> C++ : \<cstdio>, \<cwchar>, \<stdio.h> ou \<wchar.h>|
+|**sprintf_s**, **_sprintf_s_l**|Secteur \<stdio.h><br /><br /> C++ : \<cstdio> ou \<stdio.h>|
+|**swprintf_s**, **_swprintf_s_l**|C : \<stdio.h> ou \<wchar.h><br /><br /> C++ : \<cstdio> , \<cwchar> \<stdio.h> ou \<wchar.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example-use-sprintf_s-to-format-data"></a>Exemple : utiliser sprintf_s pour mettre en forme des données
 
 ```C
 // crt_sprintf_s.c
@@ -189,7 +189,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-error-code-handling"></a>Exemple : gestion de code d’erreur
 
 ```C
 // crt_swprintf_s.c

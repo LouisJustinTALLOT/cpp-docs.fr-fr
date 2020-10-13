@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: e279184322c239e7768eb8fd4321ee451b2cb94c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6cd2ec4e22d94c42432a1fc3e39afd5540302d22
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213227"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008210"
 ---
 # `selectany`
 
@@ -37,7 +37,7 @@ Un élément de données global ne peut généralement être initialisé qu'une 
 > [!NOTE]
 > **`selectany`** ne peut être appliqué qu’à l’initialisation réelle des éléments de données globaux qui sont visibles de l’extérieur.
 
-## <a name="example"></a>Exemple
+## <a name="example-selectany-attribute"></a>Exemple : `selectany` attribut
 
 Ce code montre comment utiliser l' **`selectany`** attribut :
 
@@ -71,7 +71,7 @@ int i;
 __declspec(selectany) X x(1);
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-use-selectany-attribute-to-ensure-data-comdat-folding"></a>Exemple : utiliser l' `selectany` attribut pour garantir le repli des données COMDAT
 
 Ce code montre comment utiliser l' **`selectany`** attribut pour garantir le repli des données COMDAT lorsque vous utilisez également l’option de l' [`/OPT:ICF`](../build/reference/opt-optimizations.md) éditeur de liens. Notez que les données doivent être marquées avec **`selectany`** et placées dans une **`const`** section (ReadOnly). Vous devez spécifier explicitement la section en lecture seule.
 

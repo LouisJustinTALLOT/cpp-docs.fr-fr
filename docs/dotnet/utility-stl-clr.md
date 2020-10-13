@@ -39,18 +39,18 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: 271bc01f5c8fd9dd07bfa03035ae3d0204ebd8e7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: faf7f607f9433fa3e4813957b24220a5e66e1e49
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500596"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008609"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
 Incluez l’en-tête STL/CLR `<cliext/utility>` pour définir la classe de modèle `pair` et plusieurs fonctions de modèle de prise en charge.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 #include <utility>
@@ -80,8 +80,6 @@ Incluez l’en-tête STL/CLR `<cliext/utility>` pour définir la classe de modè
 |Fonction|Description|
 |--------------|-----------------|
 |[make_pair (STL/CLR)](#make_pair)|Créer une paire à partir d’une paire de valeurs.|
-
-## <a name="members"></a>Membres
 
 ## <a name="pair-stlclr"></a><a name="pair"></a> paire (STL/CLR)
 
@@ -124,7 +122,7 @@ Type de la deuxième valeur encapsulée.
 |--------------|-----------------|
 |[pair::operator= (STL/CLR)](#op_as)|Remplace la paire de valeurs stockée.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’objet stocke une paire de valeurs. Vous utilisez cette classe de modèle pour combiner deux valeurs en un seul objet. En outre, l’objet `cliext::pair` (décrit ici) stocke uniquement les types managés ; pour stocker une paire de types non managés `std::pair` , utilisez, déclaré dans `<utility>` .
 
@@ -217,7 +215,7 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 *Oui*<br/>
 Paire à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la paire de valeurs stockée par une copie de la paire de valeurs stockée dans *Right*.
 
@@ -270,7 +268,7 @@ Première valeur à stocker.
 *val2*<br/>
 Deuxième valeur à stocker.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le constructeur :
 
@@ -420,7 +418,7 @@ void swap(pair<Value1, Value2>% right);
 *Oui*<br/>
 Coupler pour échanger le contenu avec.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre permute la paire de valeurs stockée entre **`*this`** et *Right*.
 
@@ -500,7 +498,7 @@ Première valeur à inclure dans un wrapper.
 *second*<br/>
 Deuxième valeur à inclure dans un wrapper.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction de modèle retourne `pair<Value1, Value2>(first, second)`. Vous l’utilisez pour construire un `pair<Value1, Value2>` objet à partir d’une paire de valeurs.
 
@@ -548,7 +546,7 @@ Paire gauche à comparer.
 *Oui*<br/>
 Paire à droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux paires sont comparées élément par élément.
 
@@ -602,7 +600,7 @@ Paire gauche à comparer.
 *Oui*<br/>
 Paire à droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second` . Vous l’utilisez pour vérifier si *Left* est *ordonné avant le moment où* les deux paires sont comparées élément par élément.
 
@@ -656,7 +654,7 @@ Paire gauche à comparer.
 *Oui*<br/>
 Paire à droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas trié après *le* moment où les deux paires sont comparées élément par élément.
 
@@ -710,7 +708,7 @@ Paire gauche à comparer.
 *Oui*<br/>
 Paire à droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `left.first ==` `right.first &&` `left.second ==` `right.second` . Vous l’utilisez pour vérifier si *Left* est *ordonné de la même manière que* si les deux paires sont comparées élément par élément.
 
@@ -764,7 +762,7 @@ Paire gauche à comparer.
 *Oui*<br/>
 Paire à droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour vérifier si *Left* est ordonné après *le* moment où les deux paires sont comparées élément par élément.
 
@@ -818,7 +816,7 @@ Paire gauche à comparer.
 *Oui*<br/>
 Paire à droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left < right)` . Vous l’utilisez pour tester si *Left* n’est pas trié *avant le moment où* les deux paires sont comparées élément par élément.
 

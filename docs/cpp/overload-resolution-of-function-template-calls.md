@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-ms.openlocfilehash: d96046c629e812e342ce86b850b6d52a57094997
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7b7e374328b6d234426d8263e4c6655191133700
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188439"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008905"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Résolution de surcharge des appels de modèles de fonctions
 
 Un modèle de fonction peut surcharger des fonctions non basées sur un modèle du même nom. Dans ce scénario, les appels de fonction sont résolus d’abord en utilisant la déduction de l’argument template pour instancier le modèle de fonction avec une seule spécialisation. Si la déduction d'argument template échoue, les autres surcharges de fonction sont prises en compte pour résoudre l'appel. Ces autres surcharges, également connues comme étant l'ensemble de candidats, incluent des fonctions non basées sur un modèle et d'autres modèles de fonctions instanciés. Si la déduction d'arguments template réussit, la fonction générée est comparée aux autres fonctions pour déterminer la meilleure correspondance, d'après les règles relative à la résolution de la surcharge. Pour plus d’informations, consultez [surcharge de fonction](function-overloading.md).
 
-## <a name="example"></a>Exemple
+## <a name="example-choose-a-nontemplate-function"></a>Exemple : choisir une fonction non basée sur un modèle
 
 Si une fonction non basée sur un modèle est une correspondance également correcte par rapport à une fonction de modèle, c’est elle qui est choisie (sauf si les arguments template ont été explicitement spécifiés), comme dans l’appel `f(1, 1)` illustré dans l’exemple suivant.
 
@@ -48,7 +48,7 @@ void f(T1, T2)
 void f(T1, T2)
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-exact-match-template-function-preferred"></a>Exemple : fonction de modèle de correspondance exacte préférée
 
 L'exemple suivant montre que la fonction de modèle à correspondance exacte est privilégiée si la fonction non basée sur un modèle requiert une conversion.
 
@@ -83,4 +83,4 @@ void f(T1, T2)
 ## <a name="see-also"></a>Voir aussi
 
 [Résolution de noms](../cpp/templates-and-name-resolution.md)<br/>
-[typename](../cpp/typename.md)
+[TypeName](../cpp/typename.md)

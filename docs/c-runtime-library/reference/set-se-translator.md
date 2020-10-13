@@ -26,12 +26,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: f1c9446f9c3f0d637ea53d54584258959677b339
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232415"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008621"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -76,7 +76,7 @@ Pour **_set_se_translator**, il existe des implications lors de la liaison dynam
 
 Lorsque vous utilisez **_set_se_translator** à partir du code managé (code compilé avec/CLR) ou du code natif et managé mixte, sachez que le traducteur affecte les exceptions générées uniquement en code natif. Les exceptions managées générées en code managé (par exemple, en déclenchant `System::Exception`) ne sont pas acheminées par le biais de la fonction de traduction. Les exceptions levées dans le code managé à l’aide de la fonction Win32 **RaiseException** ou provoquées par une exception système telle qu’une exception de division par zéro sont acheminées via le traducteur.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -84,7 +84,7 @@ Lorsque vous utilisez **_set_se_translator** à partir du code managé (code com
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example-catch-__try-exception-error"></a>Exemple : catch __try erreur d’exception
 
 Cet exemple encapsule les appels pour définir un traducteur d’exceptions structurées et pour restaurer l’ancien dans une classe RAII, `Scoped_SE_Translator` . Cette classe vous permet d’introduire un traducteur spécifique à l’étendue comme une déclaration unique. Le destructeur de classe restaure le convertisseur d’origine lorsque le contrôle quitte l’étendue.
 
@@ -157,7 +157,7 @@ In __finally
 Caught a __try exception, error c0000094.
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-catch-se_exception-error"></a>Exemple : erreur d’interception SE_Exception
 
 Bien que les fonctionnalités fournies par les **_set_se_translator** ne soient pas disponibles en code managé, il est possible d’utiliser ce mappage en code natif, même si ce code natif se trouve dans une compilation sous le commutateur **/CLR** , à condition que le code natif soit indiqué à l’aide de `#pragma unmanaged` . Si une exception structurée est levée dans le code managé qui doit être mappé, le code qui génère et gère l’exception doit être marqué `#pragma unmanaged` . Le code suivant illustre une utilisation possible. Pour plus d’informations, consultez [Directives pragma et mot clé __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
@@ -236,4 +236,4 @@ Caught SE_Exception, error c0000094
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [pire](terminate-crt.md)<br/>
-[erreur](unexpected-crt.md)<br/>
+[inattendu](unexpected-crt.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: e57f67eeca93572b26ee03033cbe4dcf90431f78
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550769"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008878"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructeurs de déplacement et opérateurs d'assignation de déplacement (C++)
 
@@ -168,7 +168,7 @@ Les procédures suivantes décrivent comment écrire un constructeur de déplace
     return *this;
     ```
 
-## <a name="example"></a>Exemple
+## <a name="example-complete-move-constructor-and-assignment-operator"></a>Exemple : terminer le constructeur de déplacement et l’opérateur d’assignation
 
 L'exemple suivant montre le constructeur de déplacement et l'opérateur d'assignation de déplacement complets pour la classe `MemoryBlock` :
 
@@ -217,7 +217,7 @@ MemoryBlock& operator=(MemoryBlock&& other) noexcept
 }
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-use-move-semantics-to-improve-performance"></a>Exemple d’utilisation de la sémantique de déplacement pour améliorer les performances
 
 L'exemple suivant montre comment la sémantique de déplacement peut améliorer les performances de vos applications. L'exemple ajoute deux éléments à un objet vectoriel, puis insère un nouvel élément entre les deux éléments existants. La `vector` classe utilise la sémantique de déplacement pour exécuter efficacement l’opération d’insertion en déplaçant les éléments du vecteur au lieu de les copier.
 
