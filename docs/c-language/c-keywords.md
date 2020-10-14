@@ -1,18 +1,18 @@
 ---
 title: Mots clés C
 description: Mots clés dans les extensions de compilateur C et Microsoft C standard.
-ms.date: 09/12/2020
+ms.date: 10/12/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: f459b81c2b3f314218108f3f367eec0c1bf17f26
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: cb255e1d7ce6bc15bf13bc1e3152bc3464ea5ec2
+ms.sourcegitcommit: 651348f8cd92ab0d52f09e9225a7eb41562559db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075736"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059793"
 ---
 # <a name="c-keywords"></a>Mots clés C
 
@@ -119,7 +119,8 @@ Les mots clés et les identificateurs spéciaux ci-dessous sont reconnus par le 
         **`__try`**<sup>5,5</sup>\
         **`dllexport`**<sup>4</sup>\
         **`__inline`**<sup>5,5</sup>\
-        **`__leave`**<sup>5,5</sup>
+        **`__leave`**<sup>5,5</sup>\
+        **`static_assert`**<sup>6,3</sup>
     :::column-end:::
 :::row-end:::
 
@@ -129,10 +130,12 @@ Les mots clés et les identificateurs spéciaux ci-dessous sont reconnus par le 
 
 <sup>5</sup> pour la compatibilité avec les versions précédentes, ces mots clés sont disponibles à la fois avec deux traits de soulignement de début et un trait de soulignement simple lorsque les extensions Microsoft sont activées.
 
+<sup>6</sup> lorsque <Assert. h> n’est pas inclus, le compilateur Microsoft Visual C est mappé **`static_assert`** au **`_Static_assert`** mot clé C11.
+
 Les extensions Microsoft sont activées par défaut. Pour faciliter la création de code portable, vous pouvez désactiver les extensions Microsoft en spécifiant l’option [/za \( Désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) pendant la compilation. Lorsque vous utilisez cette option, certains mots clés spécifiques à Microsoft sont désactivés.
 
 Lorsque les extensions Microsoft sont activées, vous pouvez utiliser les mots clés répertoriés ci-dessus dans vos programmes. Pour la conformité aux normes, la plupart de ces mots clés sont précédés d’un trait de soulignement double. Les quatre exceptions,,, **`dllexport`** **`dllimport`** **`naked`** et **`thread`** , sont utilisées uniquement avec **`__declspec`** et ne nécessitent pas de trait de soulignement double de début. Pour assurer la compatibilité descendante, des versions à un seul trait de soulignement sont prises en charge pour les autres mots clés.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir également
 
 [Éléments de C](../c-language/elements-of-c.md)
