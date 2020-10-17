@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 09418991e805e494c1d79ef31980bbec66a2e172
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126459"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135565"
 ---
 # <a name="invalid_compute_domain-class"></a>invalid_compute_domain (classe)
 
@@ -29,7 +29,7 @@ class invalid_compute_domain : public runtime_exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Constructeur invalid_compute_domain](#ctor)|Initialise une nouvelle instance de la classe `invalid_compute_domain`.|
 
@@ -41,17 +41,17 @@ class invalid_compute_domain : public runtime_exception;
 
 `invalid_compute_domain`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Conditions requises
 
 **En-tête :** amprt. h
 
 **Espace de noms :** Concurrency
 
-## <a name="ctor"></a>invalid_compute_domain
+## <a name="invalid_compute_domain"></a><a name="ctor"></a> invalid_compute_domain
 
 Initialise une nouvelle instance de la classe.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 explicit invalid_compute_domain(
@@ -65,10 +65,10 @@ invalid_compute_domain() throw();
 *_Message*<br/>
 Description de l’erreur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une instance de la classe `invalid_compute_domain`
+Une instance de la `invalid_compute_domain` classe
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrence de l’espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)

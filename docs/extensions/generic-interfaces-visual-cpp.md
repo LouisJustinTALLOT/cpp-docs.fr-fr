@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61ab514d244c8b41d467d382fa97e30556ccbb32
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218024"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135526"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfaces génériques (C++/CLI)
 
@@ -30,13 +30,13 @@ Pour plus d’informations sur les interfaces, consultez [Classe d’interface](
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 *attributes*<br/>
 (Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et les classes d’attributs, consultez **Attributs**.
 
 *class-key*<br/>
-**`class`** ni**`typename`**
+**`class`** ni **`typename`**
 
 *type-parameter-identifier(s)*<br/>
 Liste d’identificateurs séparés par des virgules.
@@ -59,7 +59,7 @@ Déclarations des membres d’interface.
 *declarators*<br/>
 (Facultatif) Déclarations des variables basées sur ce type.
 
-## <a name="example"></a>Exemple
+## <a name="example-how-to-declare-and-instantiate-a-generic-interface"></a>Exemple : comment déclarer et instancier une interface générique
 
 L’exemple suivant montre comment déclarer et instancier une interface générique. Dans l’exemple, l’interface générique `IList<ItemType>` est déclarée. Elle est ensuite implémentée par deux classes génériques, `List1<ItemType>` et `List2<ItemType>`, avec des implémentations différentes.
 
@@ -236,7 +236,7 @@ Array List
 List2
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example-declare-a-generic-interface"></a>Exemple : déclarer une interface générique
 
 Cet exemple déclare une interface générique, `IMyGenIface`, et deux interfaces non génériques, `IMySpecializedInt` et `ImySpecializedString`, spécialisées pour `IMyGenIface`. Les deux interfaces spécialisées sont ensuite implémentées par deux classes, `MyIntClass` et `MyStringClass`. L’exemple montre comment spécialiser des interfaces génériques, instancier les interfaces génériques et non génériques et appeler les membres implémentés explicitement sur les interfaces.
 

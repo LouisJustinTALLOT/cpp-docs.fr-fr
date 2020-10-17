@@ -4,12 +4,12 @@ description: Fonctionnement de l’héritage des propriétés dans les projets V
 ms.date: 02/21/2020
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 4740c479c6cc7c877fd72b7828a8e4811826de6c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00afe982156597aa166c2c5de98f3027e3f84bdb
+ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328474"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099704"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Héritage des propriétés dans les projets Visual Studio
 
@@ -17,17 +17,35 @@ Le système de projet Visual Studio native est basé sur MSBuild. MSBuild défin
 
 ## <a name="the-vcxproj-file-props-files-and-targets-files"></a>Fichier .vcxproj, fichiers .props et fichiers .targets
 
-Les propriétés de projet sont stockées directement dans le fichier projet*`.vcxproj`*() ou dans *`.targets`* d' *`.props`* autres fichiers ou que le fichier projet importe, et qui fournissent des valeurs par défaut. Pour Visual Studio 2015, ces fichiers se trouvent dans *`\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140`*. Pour Visual Studio 2017, ces fichiers se trouvent dans *`\Program Files (x86)\Microsoft Visual Studio\2017\<edition>\Common7\IDE\VC\VCTargets`*, où *`<edition>`* est l’édition de Visual Studio installée. Dans Visual Studio 2019, ces fichiers se trouvent dans *`\Program Files (x86)\Microsoft Visual Studio\2019\<edition>\MSBuild\Microsoft\VC\v160`*. Les propriétés sont également stockées dans tous *`.props`* les fichiers personnalisés que vous pouvez ajouter à votre propre projet. Nous vous recommandons vivement de ne pas modifier ces fichiers manuellement. Utilisez plutôt les pages de propriétés dans l’IDE pour modifier toutes les propriétés, en particulier celles qui participent à l’héritage, à moins que vous n’ayez une connaissance approfondie de MSBuild.
+::: moniker range="vs-2015"
 
-Comme indiqué précédemment, une même propriété pour une même configuration peut avoir une valeur différente dans ces différents fichiers. Quand vous générez un projet, le moteur MSBuild évalue le fichier projet et tous les fichiers importés dans un ordre bien défini (décrit ci-dessous). Comme chaque fichier est évalué, toutes les valeurs de propriété définies dans ce fichier remplacent les valeurs existantes. Les valeurs qui ne sont pas spécifiées sont héritées des fichiers qui ont été évalués précédemment. Lorsque vous définissez une propriété avec des pages de propriétés, il est également important de faire attention à l’emplacement où vous la définissez. Si vous affectez la valeur « X » à une *`.props`* propriété dans un fichier, mais que la propriété a la valeur « y » dans le fichier projet, le projet est généré avec la propriété définie sur « y ». Si la même propriété est définie sur « Z » sur un élément de projet, tel qu' *`.cpp`* un fichier, le moteur MSBuild utilise la valeur « z ».
+Les propriétés de projet sont stockées dans plusieurs fichiers. Certaines sont stockées directement dans le *`.vcxproj`* fichier projet. D’autres proviennent d' *`.targets`* autres *`.props`* fichiers ou que le fichier projet importe et qui fournissent des valeurs par défaut. Vous trouverez les fichiers projet Visual Studio 2015 dans un dossier spécifique aux paramètres régionaux sous le répertoire de base, *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\v140`* .
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Les propriétés de projet sont stockées dans plusieurs fichiers. Certaines sont stockées directement dans le *`.vcxproj`* fichier projet. D’autres proviennent d' *`.targets`* autres *`.props`* fichiers ou que le fichier projet importe et qui fournissent des valeurs par défaut. Vous trouverez les fichiers projet Visual Studio 2017 dans un dossier spécifique aux paramètres régionaux sous le répertoire de base, *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* .
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+Les propriétés de projet sont stockées dans plusieurs fichiers. Certaines sont stockées directement dans le *`.vcxproj`* fichier projet. D’autres proviennent d' *`.targets`* autres *`.props`* fichiers ou que le fichier projet importe et qui fournissent des valeurs par défaut. Vous trouverez les fichiers projet Visual Studio dans un dossier spécifique aux paramètres régionaux sous le répertoire de base, *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>`* . Le `<version>` est spécifique à la version de Visual Studio. Il s’agit *`v160`* de Visual Studio 2019.
+
+::: moniker-end
+
+Les propriétés sont également stockées dans tous les *`.props`* fichiers personnalisés que vous pouvez ajouter à votre propre projet. Nous vous recommandons vivement de *ne pas* modifier ces fichiers manuellement. Utilisez plutôt les pages de propriétés dans l’IDE pour modifier toutes les propriétés, en particulier celles qui participent à l’héritage, à moins que vous n’ayez une connaissance approfondie de MSBuild et des *`.vcxproj`* fichiers.
+
+Comme indiqué précédemment, une même propriété pour une même configuration peut avoir une valeur différente dans ces différents fichiers. Quand vous générez un projet, le moteur MSBuild évalue le fichier projet et tous les fichiers importés dans un ordre bien défini qui est décrit plus loin. Comme chaque fichier est évalué, toutes les valeurs de propriété définies dans ce fichier remplacent les valeurs existantes. Les valeurs qui ne sont pas spécifiées sont héritées des fichiers qui ont été évalués précédemment. Lorsque vous définissez une propriété avec des pages de propriétés, il est également important de faire attention à l’emplacement où vous la définissez. Si vous affectez la valeur « X » à une propriété dans un *`.props`* fichier, mais que la propriété a la valeur « y » dans le fichier projet, le projet est généré avec la propriété définie sur « y ». Si la même propriété est définie sur « Z » sur un élément de projet, tel qu’un *`.cpp`* fichier, le moteur MSBuild utilise la valeur « z ».
 
 Voici l’arborescence d’héritage de base :
 
-1. Paramètres par défaut de l’ensemble d’outils MSBuild CPP (.. \Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props, qui est importé par le *`.vcxproj`* fichier.)
+1. Paramètres par défaut de l’ensemble d’outils MSBuild CPP (le *`Microsoft.Cpp.Default.props`* fichier dans le répertoire de base, qui est importé par le *`.vcxproj`* fichier.)
 
 1. Feuilles de propriétés
 
-1. *`.vcxproj`* txt. (peut substituer les paramètres par défaut et les paramètres de feuille de propriétés.)
+1. *`.vcxproj`* txt. (Ce fichier peut remplacer les paramètres par défaut et les paramètres de la feuille de propriétés.)
 
 1. Métadonnées d'élément
 
@@ -44,13 +62,13 @@ Les fichiers projet développés peuvent être volumineux et difficiles à compr
 
 1. Propriétés de projet fondamentales, qui ne sont pas exposées dans l’IDE.
 
-1. Importation de *`Microsoft.cpp.default.props`*, qui définit des propriétés de base, indépendantes des ensembles d’outils.
+1. Importation de *`Microsoft.cpp.default.props`* , qui définit des propriétés de base, indépendantes des ensembles d’outils.
 
-1. Propriétés de configuration globales (exposées en tant que propriétés par défaut de **PlatformToolset** et **Project** dans la page **configuration générale** . Ces propriétés déterminent l’ensemble d’outils et les feuilles de *`Microsoft.cpp.props`* propriétés intrinsèques importés dans à l’étape suivante.
+1. Propriétés de configuration globales (exposées en tant que propriétés par défaut de **PlatformToolset** et **Project** dans la page **configuration générale** . Ces propriétés déterminent l’ensemble d’outils et les feuilles de propriétés intrinsèques importés dans *`Microsoft.cpp.props`* à l’étape suivante.
 
-1. Importation de *`Microsoft.cpp.props`*, qui définit la plupart des paramètres par défaut du projet.
+1. Importation de *`Microsoft.cpp.props`* , qui définit la plupart des paramètres par défaut du projet.
 
-1. Importation de toutes les feuilles de propriétés *`.user`* , y compris les fichiers. Ces feuilles de propriétés peuvent remplacer tout sauf les propriétés par défaut **PlatformToolset** et **Project** .
+1. Importation de toutes les feuilles de propriétés, y compris les *`.user`* fichiers. Ces feuilles de propriétés peuvent remplacer tout sauf les propriétés par défaut **PlatformToolset** et **Project** .
 
 1. Le reste des propriétés de configuration de projet. Ces valeurs peuvent remplacer celles définies dans les feuilles de propriétés.
 
@@ -62,7 +80,7 @@ Pour plus d’informations, consultez [propriétés MSBuild](/visualstudio/msbui
 
 Une configuration est simplement un groupe arbitraire de propriétés qui porte un nom. Visual Studio fournit des configurations Debug et Release. Chaque définit de manière appropriée différentes propriétés pour une version Debug ou une version Release. Vous pouvez utiliser la **Configuration Manager** pour définir des configurations personnalisées. Ils constituent un moyen pratique de regrouper des propriétés pour une version spécifique de la Build.
 
-Pour obtenir une meilleure idée des configurations de build, ouvrez **Gestionnaire de propriétés**. Vous pouvez l’ouvrir en choisissant **afficher > gestionnaire de propriétés** ou **afficher > autres > Windows Gestionnaire de propriétés**, en fonction de vos paramètres. **Gestionnaire de propriétés** a des nœuds pour chaque paire de configuration et de plateforme dans le projet. Sous chacun de ces nœuds se trouvent des nœuds*`.props`* pour les feuilles de propriétés (fichiers) qui définissent des propriétés spécifiques pour cette configuration.
+Pour obtenir une meilleure idée des configurations de build, ouvrez **Gestionnaire de propriétés**. Vous pouvez l’ouvrir en choisissant **afficher > gestionnaire de propriétés** ou **afficher > autres > Windows Gestionnaire de propriétés**, en fonction de vos paramètres. **Gestionnaire de propriétés** a des nœuds pour chaque paire de configuration et de plateforme dans le projet. Sous chacun de ces nœuds se trouvent des nœuds pour les feuilles de propriétés ( *`.props`* fichiers) qui définissent des propriétés spécifiques pour cette configuration.
 
 ![Gestionnaire de propriétés](media/property-manager.png "Gestionnaire de propriétés")
 
