@@ -1,14 +1,15 @@
 ---
 title: C/C++, propriétés (Linux C++)
-ms.date: 06/07/2019
+ms.date: 10/14/2020
+description: Décrit les options de compilation Linux sur la page de propriétés de Visual Studio C/C++
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
-ms.openlocfilehash: 394cb501b4df6caed6a358ffa96ce0de5d187ae1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0840327b30d94b4845adef7788fd73f4e797775f
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441473"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176236"
 ---
 # <a name="cc-properties-linux-c"></a>C/C++, propriétés (Linux C++)
 
@@ -36,6 +37,9 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Compilateur C++ | Spécifie le programme à appeler durant la compilation de fichiers sources C++, ou le chemin du compilateur C++ sur le système distant. |
 | Délai d’attente de la compilation | Délai d’attente de la compilation distante en millisecondes. |
 | Copier les fichiers objets | Indique s’il faut copier les fichiers objets compilés du système distant sur la machine locale. |
+| Nombre maximal de travaux de compilation parallèles | Nombre de processus à créer en parallèle pendant la compilation. La valeur par défaut est 1. Si vous utilisez le sous-système Windows pour Linux (WSL) version 1, la limite est de 64. |
+| Valider l’architecture | Spécifiez s’il faut vérifier si la plateforme ciblée par le projet correspond au système distant.|
+| Activer le désinfectant d’adresse | Compilez le programme avec l’adresse assainir, qui est un détecteur d’erreurs de mémoire rapide qui peut détecter les problèmes de mémoire d’exécution tels que l’utilisation de-après-gratuit, et effectuer des vérifications hors limites.|
 
 ## <a name="optimization"></a>Optimization
 
@@ -50,8 +54,8 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ## <a name="preprocessor"></a>Préprocesseur
 
-| Propriété | Description | Choices |
-|--|--|--|
+| Propriété | Description |
+|--|--|
 | Définitions de préprocesseur | Définit les symboles de prétraitement pour votre fichier source. (-D) |
 | Annuler la définition de définitions de préprocesseur | Spécifie l’annulation de la définition d’une ou de plusieurs définitions du préprocesseur.  (-U \[macro]) |
 | Annulation de la définition de toutes les définitions du préprocesseur | Annule la définition de toutes les valeurs de préprocesseur précédemment définies.  (-undef) |
@@ -73,14 +77,14 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Propriété | Description | Choices |
 |--|--|--|
 | Activer les informations de type au moment de l’exécution | Ajoute le code permettant de vérifier les types d’objet C++ à l’exécution (informations de type au moment de l’exécution).     (frtti, fno-rtti) |
-| Norme du langage C | Détermine la norme du langage C. | **Par défaut**<br/>**C89** : norme du langage C89.<br/>**C99** : norme du langage C99.<br/>**C11** : norme du langage C11.<br/>**C99 (Dialecte GNU)**  : norme du langage C99 (Dialecte GNU).<br/>**C11 (GNU Dialect)** - C11 (GNU Dialect) Language Standard. |
-| Norme du langage C++ | Détermine la norme du langage C++. | **Par défaut**<br/>**C++03** : norme du langage C++03.<br/>**Norme linguistique de la 11e** J.-C.<br/>**C++14** : norme du langage C++14.<br/>**C++03 (Dialecte GNU)**  : norme du langage C++03 (Dialecte GNU).<br/>**C++11 (Dialecte GNU)**  : norme du langage C++11 (Dialecte GNU).<br/>**C++14 (Dialecte GNU)**  : norme du langage C++14 (Dialecte GNU). |
+| Norme du langage C | Détermine la norme du langage C. | **Par défaut**<br/>**C89** : norme du langage C89.<br/>**C99** : norme du langage C99.<br/>**C11** : norme du langage C11.<br/>**C99 (Dialecte GNU)**  : norme du langage C99 (Dialecte GNU).<br/>**C11 (dialecte GNU)** -norme du langage C11 (dialecte GNU). |
+| Norme du langage C++ | Détermine la norme du langage C++. | **Par défaut**<br/>**C++03** : norme du langage C++03.<br/>**C++ 11** -norme du langage c++ 11.<br/>**C++14** : norme du langage C++14.<br/>**C++03 (Dialecte GNU)**  : norme du langage C++03 (Dialecte GNU).<br/>**C++11 (Dialecte GNU)**  : norme du langage C++11 (Dialecte GNU).<br/>**C++14 (Dialecte GNU)**  : norme du langage C++14 (Dialecte GNU). |
 
 ## <a name="advanced"></a>Avancé
 
 | Propriété | Description | Choices |
 |--|--|--|
-| Compiler en | Sélectionne l’option de langage de compilation pour les fichiers .c et .cpp. (-x c, -x c++) | **Par défaut** : effectue la détection d’après l’extension (.c ou .cpp).<br/>**Comile comme code C** - Compile comme code C.<br/>**Compilez sous le nom de Code CMD** - Comile en tant que code C. |
+| Compiler en | Sélectionne l’option de langage de compilation pour les fichiers .c et .cpp. (-x c, -x c++) | **Par défaut** : effectue la détection d’après l’extension (.c ou .cpp).<br/>**Compilez en code c** -compile en code c.<br/>**Compiler en code c++** -compiler en code c++. |
 | Fichiers Include forcés | Spécifie un ou plusieurs fichiers Include forcés (-include \[name]). |
 
 ::: moniker-end

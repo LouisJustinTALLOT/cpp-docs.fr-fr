@@ -1,16 +1,16 @@
 ---
-title: Propriétés générales (Projet Linux CMD)
-description: Décrit les propriétés du projet Linux que vous pouvez définir dans Visual Studio sur la page propriétés générales.
-ms.date: 01/14/2020
+title: Propriétés générales (projet Linux C++)
+description: Décrit les propriétés de projet Linux que vous pouvez définir dans Visual Studio sur la page Propriétés générales.
+ms.date: 10/14/2020
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: 832f10ca2c95e40ff7ece23462105fa49014aa5d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9d6cb4ca51eff799788776c2641364939d438d63
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446167"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176189"
 ---
-# <a name="general-properties-linux-c"></a>Propriétés générales (Linux CMD)
+# <a name="general-properties-linux-c"></a>Propriétés générales (Linux C++)
 
 ::: moniker range="vs-2015"
 
@@ -20,23 +20,25 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ::: moniker range=">=vs-2017"
 
-| Propriété | Description | Choices |
-|--|--|--|
-| Répertoire de sortie | Spécifie un chemin relatif vers l’annuaire des fichiers de sortie. Il peut inclure des variables d'environnement. |
+| Propriété | Description |
+|--|--|
+| Répertoire de sortie | Spécifie un chemin d’accès relatif au répertoire de fichiers de sortie. Il peut inclure des variables d'environnement. |
 | Répertoire intermédiaire | Spécifie un chemin d'accès relatif au répertoire des fichiers intermédiaires. Il peut inclure des variables d'environnement. |
-| Nom de la cible | Spécifie le nom de fichier que ce projet génère. |
-| Extension de la cible | Spécifie l’extension `.a`de fichiers (par exemple) que ce projet génère. |
-| Extensions à supprimer lors du nettoyage | Spécification de wildcard semi-colon-délimité pour quels fichiers dans l’annuaire intermédiaire à supprimer sur propre ou reconstruire. |
+| Nom de la cible | Spécifie le nom de fichier généré par ce projet. |
+| Extension de la cible | Spécifie l’extension de fichier (par exemple, `.a` ) générée par ce projet. |
+| Extensions à supprimer lors du nettoyage | Spécification de caractères génériques délimités par des points-virgules pour les fichiers du répertoire intermédiaire à supprimer lors du nettoyage ou de la régénération. |
 | Fichier journal de génération | Spécifie le fichier journal de génération à utiliser quand la journalisation de la génération est activée. |
-| Ensemble d'outils de plateforme | Spécifie le sertier d’outils utilisé pour la construction de la configuration actuelle. Si elle n’est pas définie, l’ensemble d’outils par défaut est utilisé. |
-| Machine de build distante | Affiche la machine ou l’appareil cible à utiliser pour la construction à distance, le déploiement et le débogé. Vous pouvez ajouter ou modifier une connexion machine cible en utilisant **Tools** > **Options** > **Cross Platform** > **Connection Manager**.<br /> **Visual Studio 2019 version 16.1** Vous pouvez spécifier une autre machine pour débogage sur la page [Debugging.](debugging-linux.md) |
+| Ensemble d'outils de plateforme | Spécifie l’ensemble d’outils utilisé pour générer la configuration actuelle. S’il n’est pas défini, l’ensemble d’outils par défaut est utilisé. |
+| WSL *. exe-chemin d’accès complet | **Visual Studio 2019 version 16,1** Chemin d’accès complet au fichier exécutable Windows sous-système pour Linux (WSL) utilisé pour la génération et le débogage. |
+| Machine de build distante | Affiche l’ordinateur ou le périphérique cible à utiliser pour la génération, le déploiement et le débogage à distance. Vous pouvez ajouter ou modifier une connexion à un ordinateur cible à l’aide des options **Outils**  >  **Options**  >  Gestionnaire de**Cross Platform**  >  **connexions**multiplateforme.<br /> **Visual Studio 2019 version 16,1** Vous pouvez spécifier un autre ordinateur pour le débogage sur la page [débogage](debugging-linux.md) . |
 | Répertoire racine de build distant | Spécifie le chemin d’un répertoire sur la machine ou l’appareil distant. |
 | Répertoire de projet de build distant | Spécifie le chemin d’un répertoire sur la machine ou l’appareil distant du projet. |
-| Répertoire de déploiement à distance | **Visual Studio 2019 version 16.1** Spécifie le parcours de la machine à distance ou de l’appareil pour déployer le projet. |
-| Copie à distance Inclure des répertoires | **Visual Studio 2019 version 16.5**  Une liste d’annuaires à copier de façon récursive de la cible Linux. Cette propriété affecte la copie d’en-tête à distance pour IntelliSense, mais pas la construction. Il peut être utilisé lorsque **IntelliSense Utilise Compiler Defaults** est mis à faux. Utilisez **d’autres répertoires inclus** dans l’onglet C/C-General pour spécifier d’autres répertoires à utiliser pour IntelliSense et construire. |
-| La copie à distance exclut les répertoires | **Visual Studio 2019 version 16.5** Une liste d’annuaires à *ne pas* copier à partir de la cible Linux. Habituellement, cette propriété est utilisée pour supprimer les sous-directeurs des répertoires inclus. |
-| IntelliSense utilise Compiler Par défaut | **Visual Studio 2019 version 16.5** Que ce soit pour interroger le compilateur référencé par ce projet pour sa liste par défaut d’inclure des emplacements. Ces emplacements sont automatiquement ajoutés à la liste des répertoires distants à copier. Ne définissez cette propriété à faux que si le compilateur ne prend pas en charge les paramètres de gcc. Les compilateurs de gcc et de clang soutiennent les `g++ -x c++ -E -v -std=c++11`requêtes pour les répertoires incluent (par exemple, ). |
-| Type de configuration | Spécifie le type de sortie généré par cette configuration. | **Bibliothèque dynamique (.so)**<br/><br/>**Bibliothèque statique (.a)**<br/><br/>**Application (.out)**<br/><br/>**Makefile** |
-| Utilisation de STL | Spécifie la bibliothèque C++ standard à utiliser pour cette configuration. | **Bibliothèque standard C++ GNU partagée**<br/><br/>**Bibliothèque standard C++ GNU statique (-static)** |
+| Répertoire de déploiement distant | **Visual Studio 2019 version 16,1** Spécifie le chemin d’accès au répertoire sur l’ordinateur ou l’appareil distant pour déployer le projet. |
+| Activer la build incrémentielle | **Visual Studio 2019 version 16,7** Spécifie s’il faut effectuer des builds incrémentielles à l’aide du système de génération [Ninja](https://ninja-build.org/) . Les builds sont généralement plus rapides pour la plupart des projets avec ce paramètre activé. |
+| Répertoires Include de la copie distante | **Visual Studio 2019 version 16,5**  Liste des répertoires à copier de manière récursive à partir de la cible Linux. Cette propriété affecte la copie d’en-tête distant pour IntelliSense, mais pas la Build. Il peut être utilisé quand **IntelliSense utilise les valeurs par défaut du compilateur** a la valeur false. Utilisez **des répertoires Include supplémentaires** sous l’onglet général C/C++ pour spécifier des répertoires Include supplémentaires à utiliser à la fois pour IntelliSense et pour la génération. |
+| Répertoires d’exclusion de la copie distante | **Visual Studio 2019 version 16,5** Liste de répertoires à *ne pas* copier à partir de la cible Linux. En règle générale, cette propriété est utilisée pour supprimer les sous-répertoires des répertoires Include. |
+| IntelliSense utilise les valeurs par défaut du compilateur | **Visual Studio 2019 version 16,5** Indique s’il faut interroger le compilateur référencé par ce projet pour obtenir la liste par défaut des emplacements include. Ces emplacements sont automatiquement ajoutés à la liste des répertoires distants à copier. Affectez uniquement la valeur false à cette propriété si le compilateur ne prend pas en charge les paramètres de type GCC. Les compilateurs GCC et Clang prennent en charge les requêtes pour les répertoires Include (par exemple, `g++ -x c++ -E -v -std=c++11` ). |
+| Type de configuration | Spécifie le type de sortie généré par cette configuration, par exemple : **bibliothèque dynamique (. so)**, **bibliothèque statique (. a)**, **application (. out)** et **Makefile** |
+| Utilisation de STL | Spécifie la bibliothèque C++ standard à utiliser pour cette configuration, par exemple : **bibliothèque C++ GNU standard partagée**ou **bibliothèque C++ standard GNU statique (-static)** |
 
 ::: moniker-end

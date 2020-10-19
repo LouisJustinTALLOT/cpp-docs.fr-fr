@@ -1,14 +1,14 @@
 ---
 title: Configurer un projet C++ MSBuild Linux dans Visual Studio
-ms.date: 08/06/2020
+ms.date: 10/16/2020
 description: Configurez un projet Linux basé sur MSBuild dans Visual Studio afin de pouvoir le générer.
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 51837dc86d041b9120f984cc01f8db06d696b292
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685954"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176344"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Configurer un projet C++ MSBuild Linux dans Visual Studio
 
@@ -26,19 +26,23 @@ Vous pouvez configurer un projet Linux pour cibler une machine Linux physique, u
 
 **Visual Studio 2019 version 16,1**:
 
-- Quand vous ciblez WSL, vous pouvez éviter les opérations de copie qui sont nécessaires pour la génération et IntelliSense lors du ciblage de systèmes Linux distants.
+- Quand vous ciblez WSL, vous pouvez éviter les opérations de copie nécessaires pour générer et obtenir IntelliSense qui sont nécessaires lorsque vous ciblez un système Linux distant.
 
 - Vous pouvez spécifier des cibles Linux distinctes pour la génération et le débogage.
 
 ::: moniker-end
 
-## <a name="general-settings"></a>Paramètres généraux :
+## <a name="general-settings"></a>Paramètres généraux :
 
 Pour afficher les options de configuration, sélectionnez le menu **Propriétés du projet >** , ou cliquez avec le bouton droit sur le projet dans **Explorateur de solutions** et sélectionnez **Propriétés** dans le menu contextuel. Les paramètres généraux s’affichent dans la section **Général**.
 
 ![Configuration générale](media/settings_general.png)
 
 Par défaut, un fichier exécutable (.out) est généré. Pour générer une bibliothèque statique ou dynamique, ou utiliser un fichier makefile existant, utilisez le paramètre **Type de configuration**.
+
+Si vous générez pour le sous-système Windows pour Linux (WSL), WSL version 1 est limitée à 64 processus de compilation parallèle. Cela est régi par le paramètre **nombre maximal de travaux de compilation parallèle** dans les **propriétés de configuration > C/C++ > général**.
+
+Quelle que soit la version de WSL que vous utilisez, si vous envisagez d’utiliser plus de 64 processus de compilation parallèle, nous vous recommandons de créer avec Ninja, ce qui est généralement plus rapide et plus fiable. Pour créer avec Ninja, utilisez le paramètre **activer la build incrémentielle** dans les **propriétés de configuration > général**.
 
 Pour plus d’informations sur les paramètres dans les pages de propriétés, consultez [Informations de référence sur les pages de propriétés dans un projet Linux](prop-pages-linux.md).
 
@@ -52,7 +56,7 @@ Pour modifier les paramètres relatifs à l’ordinateur Linux distant, configur
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 version 16,1**: pour cibler le sous-système Windows pour Linux, cliquez sur la flèche vers le bas de l' **ensemble d’outils de plateforme** , puis choisissez **WSL_1_0**. Les autres options distantes disparaissent et le chemin de l’interpréteur de commandes WSL par défaut s’affiche à leur place :
+   **Visual Studio 2019 version 16,7**: pour cibler le sous-système Windows pour Linux (WSL), définissez la liste déroulante **ensemble d’outils de plateforme** sur **GCC pour le sous-système Windows pour Linux**. Les autres options distantes disparaissent et le chemin de l’interpréteur de commandes WSL par défaut s’affiche à leur place :
 
    ![Machine de build WSL](media/wsl-remote-vs2019.png)
 
@@ -67,7 +71,7 @@ Pour modifier les paramètres relatifs à l’ordinateur Linux distant, configur
 - L’entrée **Répertoire de projet de build distant** définit l’emplacement où ce projet spécifique est généré sur l’ordinateur Linux distant. Par défaut, il s’agit de **$(RemoteRootDir)/$(ProjectName)**, qui se développe jusqu’à un répertoire nommé d’après le projet actuel, sous le répertoire racine défini ci-dessus.
 
 > [!NOTE]
-> Pour changer les compilateurs C et C++ par défaut, ou l’éditeur de liens et le programme d’archivage utilisés pour générer le projet, utilisez les entrées appropriées dans les sections **C/C++ > Général** et **Éditeur de liens > Général**. Vous pouvez spécifier une version spécifique de GCC ou Clang, par exemple. Pour plus d’informations, consultez [C/C++, propriétés (Linux C++)](prop-pages/c-cpp-linux.md) et [Éditeur de liens, propriétés (Linux C++)](prop-pages/linker-linux.md).
+> Pour changer les compilateurs C et C++ par défaut, ou l’éditeur de liens et le programme d’archivage utilisés pour générer le projet, utilisez les entrées appropriées dans les sections **C/C++ > Général** et **Éditeur de liens > Général**. Vous pouvez spécifier une version spécifique de GCC ou Clang, par exemple. Pour plus d’informations, consultez [Propriétés C/c++ (Linux c++)](prop-pages/c-cpp-linux.md) et propriétés de l' [éditeur de liens (Linux c++)](prop-pages/linker-linux.md).
 
 ## <a name="copy-sources-remote-systems-only"></a>Copier les sources (uniquement pour les systèmes distants)
 
@@ -106,7 +110,7 @@ Cette fonctionnalité nécessite l’installation de zip sur l’ordinateur Linu
 sudo apt install zip
 ```
 
-Pour gérer votre cache d’en-têtes, accédez à **Outils > Options, Multiplateforme > Gestionnaire de connexions > Gestionnaire IntelliSense des en-têtes distants**. Pour mettre à jour le cache d’en-têtes après avoir effectué des changements sur votre ordinateur Linux, sélectionnez la connexion à distance, puis sélectionnez **Mettre à jour**. Sélectionnez **Supprimer** pour supprimer les en-têtes tout en conservant la connexion. Sélectionnez **Explorer** pour ouvrir le répertoire local dans **l’Explorateur de fichiers**. Traitez ce dossier en lecture seule. Pour télécharger les en-têtes d’une connexion existante créée avant Visual Studio 2017 version 15.3, sélectionnez la connexion, puis **Télécharger**.
+Pour gérer votre cache d’en-têtes, accédez à **Outils > Options, Multiplateforme > Gestionnaire de connexions > Gestionnaire IntelliSense des en-têtes distants**. Pour mettre à jour le cache d’en-têtes après avoir effectué des changements sur votre ordinateur Linux, sélectionnez la connexion à distance, puis sélectionnez **Mettre à jour**. Sélectionnez **Supprimer** pour supprimer les en-têtes tout en conservant la connexion. Sélectionnez **Explorer** pour ouvrir le répertoire local dans **l’Explorateur de fichiers**. Traitez ce dossier en lecture seule. Pour télécharger les en-têtes pour une connexion existante qui a été créée avant Visual Studio 2017 version 15,3, sélectionnez la connexion, puis cliquez sur **Télécharger**.
 
 ::: moniker range="vs-2017"
 
