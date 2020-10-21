@@ -434,6 +434,8 @@
                   href: ../c-language/inline-functions.md
                 - name: Assembleur inline (C)
                   href: ../c-language/inline-assembler-c.md
+                - name: _Noreturn (C)
+                  href: ../c-language/noreturn.md
             - name: Fonctions d’importation et d’exportation de DLL
               items:
                 - name: Fonctions d’importation et d’exportation de DLL
