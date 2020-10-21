@@ -1,57 +1,51 @@
 ---
-title: literal (C++/CLI et C++/CX)
-ms.date: 10/12/2018
+title: littéral (C++/CLI)
+description: Le mot clé Literal est un mot clé contextuel Microsoft C++/CLI pour une constante au moment de la compilation.
+ms.date: 10/20/2020
 ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
 helpviewer_keywords:
 - literal keyword [C++]
-ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2d71a535252ba51f89407670b474a34b407eaffc
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686728"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92337211"
 ---
-# <a name="literal-ccli-and-ccx"></a>literal (C++/CLI et C++/CX)
+# <a name="literal-ccli"></a>`literal` (C++/CLI)
 
-Une variable (membre de données) marquée comme **literal** dans une compilation **/CLR** est l’équivalent natif d’une variable **static const**.
+Une variable (membre de données) marquée comme **`literal`** dans une **`/clr`** compilation est une constante au moment de la compilation. Il s’agit de l’équivalent natif d’une [`const`](/dotnet/csharp/language-reference/keywords/const) variable C#.
 
 ## <a name="all-platforms"></a>Toutes les plateformes
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 (Aucune remarque pour cette fonctionnalité de langage ne s’applique à tous les runtimes.)
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Windows Runtime.)
 
-### <a name="requirements"></a>Spécifications
-
-Option du compilateur : `/ZW`
-
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Un membre de données marqué comme **literal** doit être initialisé lorsqu’il est déclaré, et la valeur doit être un type constant, integral, enum ou string. La conversion du type de l’expression d’initialisation en type de membre de données static const ne doit pas nécessiter une conversion définie par l’utilisateur.
+Un membre de données marqué comme **`literal`** doit être initialisé lorsqu’il est déclaré. Et, la valeur doit être un type intégral, enum ou chaîne constant. La conversion du type de l’expression d’initialisation en type du membre de **`literal`** données ne peut pas nécessiter une conversion définie par l’utilisateur.
 
-Aucune mémoire n’est allouée pour le champ literal au moment du runtime ; le compilateur insère uniquement sa valeur dans les métadonnées pour la classe.
+Aucune mémoire n’est allouée pour le **`literal`** champ au moment de l’exécution ; le compilateur insère uniquement sa valeur dans les métadonnées de la classe. La **`literal`** valeur est traitée comme une constante au moment de la compilation. L’équivalent le plus proche dans le C++ standard est **`constexpr`** , mais un membre de données ne peut pas être **`constexpr`** en c++/CLI.
 
-Une variable marquée **static const** ne sera pas disponible dans les métadonnées pour les autres compilateurs.
+Une variable marquée comme **`literal`** diffère d’une variable marquée **`static const`** . Un **`static const`** membre de données n’est pas mis à disposition dans les métadonnées d’autres compilateurs. Pour plus d’informations, consultez [`static`](../cpp/storage-classes-cpp.md) et [`const`](../cpp/const-cpp.md).
 
-Pour plus d’informations, consultez [Static](../cpp/storage-classes-cpp.md) et [const](../cpp/const-cpp.md).
-
-**literal** est un mot clé contextuel. Pour plus d’informations, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md).
+**`literal`** est un mot clé contextuel. Pour plus d’informations, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md).
 
 ## <a name="examples"></a>Exemples
 
-Cet exemple montre qu’une variable **littérale** implique **`static`** .
+Cet exemple montre qu’une **`literal`** variable implique **`static`** .
 
 ```cpp
 // mcppv2_literal.cpp
@@ -65,7 +59,7 @@ int main() {
 }
 ```
 
-L’exemple suivant montre l’effet de la variable literal sur les métadonnées :
+L’exemple suivant montre l’effet de **`literal`** dans les métadonnées :
 
 ```cpp
 // mcppv2_literal2.cpp
@@ -78,15 +72,15 @@ public ref struct A {
 
 Notez la différence entre `sc` et `lit` dans les métadonnées : la directive `modopt` est appliquée à `sc`, ce qui signifie qu’elle peut être ignorée par d’autres compilateurs.
 
-```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
-```
-
-```
-.field public static literal int32 lit = int32(0x0000000A)
+```MSIL
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x00000001)
 ```
 
-L’exemple suivant, créé dans C#, référence les métadonnées créées dans l’exemple précédent et présente l’effet des variables **literal** et **static const** :
+```MSIL
+.field public static literal int32 lit = int32(0x00000000)
+```
+
+L’exemple suivant, créé en C#, référence les métadonnées créées dans l’exemple précédent et montre l’effet des **`literal`** **`static const`** variables et :
 
 ```csharp
 // mcppv2_literal3.cs
@@ -117,7 +111,7 @@ class B {
 }
 ```
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Option du compilateur : `/clr`
 
