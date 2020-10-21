@@ -5,15 +5,15 @@ f1_keywords:
 - forward_list/std::swap
 ms.assetid: 0d6bc656-7049-4651-a4bd-c9a805e47756
 ms.openlocfilehash: 78b1eaa44ed464de67d8ec45fab3241179bb94b9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419097"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274570"
 ---
 # <a name="ltforward_listgt-functions"></a>&lt;forward_list&gt;, fonctions
 
-## <a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 Échange les éléments de deux forward_list.
 
@@ -23,11 +23,11 @@ void swap(forward_list <Type, Allocator>& left, forward_list <Type, Allocator>& 
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
-Objet de type `forward_list`.
+*gauche*\
+Objet de type `forward_list`.
 
-\ *droit*
-Objet de type `forward_list`.
+*Oui*\
+Objet de type `forward_list`.
 
 ### <a name="remarks"></a>Notes
 

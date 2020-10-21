@@ -10,15 +10,15 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422646"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274624"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt;, opérateurs
 
-## <a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Compare des objets `tuple` pour déterminer s’ils sont inégaux.
 
@@ -31,7 +31,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-\ *TN*
+*TN*\
 Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
@@ -83,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>, opérateur&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Compare des objets `tuple` pour déterminer l’infériorité.
 
@@ -96,7 +96,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-\ *TN*
+*TN*\
 Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>&lt;d’opérateur =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> and&lt;=
 
 Comparer des objets `tuple` pour déterminer l’infériorité ou l’égalité.
 
@@ -161,7 +161,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-\ *TN*
+*TN*\
 Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Compare des objets `tuple` pour déterminer s’ils sont égaux.
 
@@ -226,7 +226,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-\ *TN*
+*TN*\
 Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
@@ -278,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>, opérateur&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 
 Compare des objets `tuple` pour déterminer la supériorité.
 
@@ -291,7 +291,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-\ *TN*
+*TN*\
 Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>&gt;d’opérateur =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> and&gt;=
 
 Compare des objets `tuple` pour déterminer la supériorité ou l’égalité.
 
@@ -356,7 +356,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Paramètres
 
-\ *TN*
+*TN*\
 Type du Nième élément de tuple.
 
 ### <a name="remarks"></a>Notes

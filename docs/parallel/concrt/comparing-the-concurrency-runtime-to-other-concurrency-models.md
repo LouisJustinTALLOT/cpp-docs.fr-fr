@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
 ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422254"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274696"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparaison du runtime d'accès concurrentiel aux autres modèles d'accès concurrentiel
 
@@ -19,7 +19,7 @@ Si vous utilisez un autre modèle de programmation, tel que le pool de threads W
 
 Vous pouvez tirer avantage des fonctionnalités et de la productivité du runtime d’accès concurrentiel pour améliorer votre application existante basée sur un autre modèle d’accès concurrentiel. Le runtime d’accès concurrentiel ne peut pas garantir l’équilibrage du traitement quand plusieurs planificateurs de tâches sont en concurrence pour les mêmes ressources de calcul. Quand il n’y a pas de chevauchement de traitement, l’impact reste toutefois minime.
 
-## <a name="top"></a> Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
 - [Comparaison de la planification préemptive avec la planification coopérative](#models)
 
@@ -27,7 +27,7 @@ Vous pouvez tirer avantage des fonctionnalités et de la productivité du runtim
 
 - [Comparaison du runtime d’accès concurrentiel avec OpenMP](#openmp)
 
-## <a name="models"></a> Comparaison de la planification préemptive avec la planification coopérative
+## <a name="comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a> Comparaison de la planification préemptive à la planification coopérative
 
 Le modèle préemptif et les modèles de planification coopérative sont deux méthodes courantes pour permettre à plusieurs tâches de partager des ressources de calcul, par exemple, des processeurs ou des threads matériels.
 
@@ -51,7 +51,7 @@ La planification coopérative ne résout pas tous les problèmes de planificatio
 
 [[Haut](#top)]
 
-## <a name="winapi"></a> Comparaison du runtime d’accès concurrentiel avec l’API Windows
+## <a name="comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> Comparaison de la runtime d’accès concurrentiel à l’API Windows
 
 L’interface de programmation d’application Microsoft Windows, le plus souvent appelée API Windows (et auparavant appelée Win32), fournit un modèle de programmation qui permet l’accès concurrentiel dans vos applications. Le runtime d’accès concurrentiel s’appuie sur l’API Windows pour fournir des modèles de programmation supplémentaires qui ne sont pas disponibles dans le système d’exploitation sous-jacent.
 
@@ -81,7 +81,7 @@ Sur Windows 7 et Windows Server 2008 R2, le système d’exploitation prend mieu
 
 [[Haut](#top)]
 
-## <a name="openmp"></a> Comparaison du runtime d’accès concurrentiel avec OpenMP
+## <a name="comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> Comparaison de la runtime d’accès concurrentiel à OpenMP
 
 Le runtime d’accès concurrentiel accepte divers modèles de programmation. Ces modèles peuvent chevaucher ou compléter les modèles d’autres bibliothèques. Cette section compare le runtime d’accès concurrentiel avec [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).
 
@@ -97,8 +97,8 @@ Pour plus d’informations sur les différences entre le runtime d’accès conc
 
 ## <a name="see-also"></a>Voir aussi
 
-[Le runtime d’accès concurrentiel](../../parallel/concrt/concurrency-runtime.md)<br/>
+[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)<br/>
 [Vue d'ensemble](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[Bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
-[Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Bibliothèque de modèles parallèles](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)
