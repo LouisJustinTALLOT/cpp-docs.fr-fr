@@ -1,6 +1,7 @@
 ---
 title: qsort
-ms.date: 4/2/2020
+description: Décrit l’API de tri rapide Microsoft C Runtime `qsort`
+ms.date: 10/23/2020
 api_name:
 - qsort
 - _o_qsort
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c658ffae69cd662809eb4dac09c06b6a13f4e051
+ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913258"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639118"
 ---
 # <a name="qsort"></a>qsort
 
@@ -55,23 +56,23 @@ void qsort(
 
 ### <a name="parameters"></a>Paramètres
 
-*base*<br/>
+*`base`*\
 Début du tableau cible.
 
-*number*<br/>
+*`number`*\
 Taille du tableau dans les éléments.
 
-*width*<br/>
+*`width`*\
 Taille d’élément en octets.
 
-*compar*<br/>
+*`compare`*\
 Pointeur désignant une routine fournie par l’utilisateur qui compare deux éléments de tableau et retourne une valeur qui spécifie leur relation.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **qsort** implémente un algorithme de tri rapide pour trier un tableau d’éléments *Number* , chacun d’un octet *Width* . La *base* de l’argument est un pointeur vers la base du tableau à trier. **qsort** remplace ce tableau à l’aide des éléments triés.
+La **`qsort`** fonction implémente un algorithme de tri rapide pour trier un tableau d' *`number`* éléments, chacun de ces *`width`* octets. L’argument *`base`* est un pointeur vers la base du tableau à trier. **`qsort`** remplace ce tableau à l’aide des éléments triés.
 
-**qsort** appelle la routine de *comparaison* une ou plusieurs fois pendant le tri, et transmet des pointeurs à deux éléments de tableau à chaque appel.
+**`qsort`** appelle la *`compare`* routine une ou plusieurs fois pendant le tri, et passe des pointeurs à deux éléments de tableau à chaque appel. Si *`compare`* indique que deux éléments sont identiques, leur ordre dans le tableau trié résultant n’est pas spécifié.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -81,13 +82,13 @@ La routine compare les éléments et retourner l’une des valeurs suivantes.
 
 |Valeur de retour de la fonction compare|Description|
 |-----------------------------------|-----------------|
-|< 0|**elem1** inférieur à **elem2**|
-|0|**elem1** équivalent à **elem2**|
-|> 0|**elem1** supérieur à **elem2**|
+|< 0|**`elem1`** inférieur à **`elem2`**|
+|0|**`elem1`** équivalent à **`elem2`**|
+|> 0|**`elem1`** supérieur à **`elem2`**|
 
 Le tableau est trié par ordre croissant, comme défini par la fonction de comparaison. Pour trier un tableau par ordre décroissant, changez le sens de « supérieur à » et « inférieur à » dans la fonction de comparaison.
 
-Cette fonction valide ses paramètres. Si *compare* ou *Number* a la **valeur null**, ou si *base* a la **valeur null** et que le *nombre* est différent de zéro, ou si la *largeur* est inférieure à zéro, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne et **errno** a la valeur **EINVAL**.
+Cette fonction valide ses paramètres. Si *`compare`* ou *`number`* a la valeur **`NULL`** , ou si a la valeur et que est différent de *`base`* **`NULL`** *`number`* zéro, ou si *`width`* est inférieur à zéro, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne et **`errno`** prend la valeur **`EINVAL`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -95,7 +96,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**qsort**|\<stdlib.h> et \<search.h>|
+|**`qsort`**|\<stdlib.h> et \<search.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -145,6 +146,6 @@ boy deserves every favor good
 
 ## <a name="see-also"></a>Voir aussi
 
-[Recherche et tri](../../c-runtime-library/searching-and-sorting.md)<br/>
-[bsearch](bsearch.md)<br/>
-[_lsearch](lsearch.md)<br/>
+[Recherche et tri](../../c-runtime-library/searching-and-sorting.md)\
+[`bsearch`](bsearch.md)\
+[`_lsearch`](lsearch.md)
