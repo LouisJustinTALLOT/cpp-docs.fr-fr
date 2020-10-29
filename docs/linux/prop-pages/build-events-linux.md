@@ -2,22 +2,22 @@
 title: Événements de build distants (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 165d3690-5bd8-4b0b-bc66-8b699d85a61b
-ms.openlocfilehash: 4a3e9019d4dacc3d494feb5d6de8f5c2247e4d12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a337c1e83976f06ebb09ac92fd077c18cc8543fd
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441501"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924565"
 ---
 # <a name="build-event-properties-linux-c"></a>Événement de build, propriétés (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="pre-build-event"></a>Événement prébuild
 
@@ -26,7 +26,7 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement prébuild à exécuter. |
 | Description | Spécifie une description de l’outil d’événement prébuild à afficher. |
 | Utilisation dans la génération | Spécifie si cet événement de build est exclu de la génération pour la configuration actuelle. |
-| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Spécifiez optionnellement les paires de cartographie locales à éloignées à l’aide d’une syntaxe comme celle-ci : fulllocalpath1:fullremotepath1;fulllocalpath2: 'fullremotepath2, où un fichier local peut être copié à l’emplacement à distance spécifié sur le système distant. |
+| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Spécifiez éventuellement des paires de mappage local à distant à l’aide d’une syntaxe similaire à celle-ci : fulllocalpath1 : = fullremotepath1 ; fulllocalpath2 : = fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant. |
 
 ## <a name="pre-link-event"></a>Événement de préédition des liens
 
@@ -35,7 +35,7 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement de préédition des liens à exécuter. |
 | Description | Spécifie une description de l’outil d’événement de préédition des liens à afficher. |
 | Utilisation dans la génération | Spécifie si cet événement de build est exclu de la génération pour la configuration actuelle. |
-| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Spécifiez optionnellement les paires de cartographie locales à éloignées à l’aide d’une syntaxe comme celle-ci : fulllocalpath1:fullremotepath1;fulllocalpath2: 'fullremotepath2, où un fichier local peut être copié à l’emplacement à distance spécifié sur le système distant. |
+| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Spécifiez éventuellement des paires de mappage local à distant à l’aide d’une syntaxe similaire à celle-ci : fulllocalpath1 : = fullremotepath1 ; fulllocalpath2 : = fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant. |
 
 ## <a name="post-build-event"></a>Événement post-build
 
@@ -44,7 +44,7 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement postbuild à exécuter. |
 | Description | Spécifie une description de l’outil d’événement post-build à afficher. |
 | Utilisation dans la génération | Spécifie si cet événement de build est exclu de la génération pour la configuration actuelle. |
-| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Spécifiez optionnellement les paires de cartographie locales à éloignées à l’aide d’une syntaxe comme celle-ci : fulllocalpath1:fullremotepath1;fulllocalpath2: 'fullremotepath2, où un fichier local peut être copié à l’emplacement à distance spécifié sur le système distant. |
+| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier sur le système distant. Spécifiez éventuellement des paires de mappage local à distant à l’aide d’une syntaxe similaire à celle-ci : fulllocalpath1 : = fullremotepath1 ; fulllocalpath2 : = fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant. |
 
 ## <a name="remote-pre-build-event"></a>Événement prébuild distant
 
@@ -53,7 +53,7 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement prébuild à exécuter sur le système distant. |
 | Description | Spécifie une description de l’outil d’événement prébuild à afficher. |
 | Utilisation dans la génération | Spécifie si cet événement de build est exclu de la génération pour la configuration actuelle. |
-| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier à partir du système distant. Spécifiez optionnellement à distance aux paires de cartographie locales à l’aide d’une syntaxe comme celle-ci : fullremotepath1:fulllocalpath1;fullremotepath2: 'fulllocalpath2, où un fichier distant peut être copié à l’emplacement spécifié sur la machine locale. |
+| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier à partir du système distant. Si vous le souhaitez, vous pouvez spécifier des paires de mappage distant à local à l’aide de la syntaxe suivante : fullremotepath1 : = fulllocalpath1 ; fullremotepath2 : = fulllocalpath2, où un fichier distant peut être copié à l’emplacement spécifié sur l’ordinateur local. |
 
 ## <a name="remote-pre-link-event"></a>Événement de préédition des liens distant
 
@@ -62,7 +62,7 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement de préédition des liens à exécuter sur le système distant. |
 | Description | Spécifie une description de l’outil d’événement de préédition des liens à afficher. |
 | Utilisation dans la génération | Spécifie si cet événement de build est exclu de la génération pour la configuration actuelle. |
-| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier à partir du système distant. Spécifiez optionnellement à distance aux paires de cartographie locales à l’aide d’une syntaxe comme celle-ci : fullremotepath1:fulllocalpath1;fullremotepath2: 'fulllocalpath2, où un fichier distant peut être copié à l’emplacement spécifié sur la machine locale. |
+| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier à partir du système distant. Si vous le souhaitez, vous pouvez spécifier des paires de mappage distant à local à l’aide de la syntaxe suivante : fullremotepath1 : = fulllocalpath1 ; fullremotepath2 : = fulllocalpath2, où un fichier distant peut être copié à l’emplacement spécifié sur l’ordinateur local. |
 
 ## <a name="remote-post-build-event"></a>Événement post-build distant
 
@@ -71,6 +71,6 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Ligne de commande | Spécifie une ligne de commande pour l’outil d’événement post-build à exécuter sur le système distant. |
 | Description | Spécifie une description de l’outil d’événement post-build à afficher. |
 | Utilisation dans la génération | Spécifie si cet événement de build est exclu de la génération pour la configuration actuelle. |
-| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier à partir du système distant. Spécifiez optionnellement à distance aux paires de cartographie locales à l’aide d’une syntaxe comme celle-ci : fullremotepath1:fulllocalpath1;fullremotepath2: 'fulllocalpath2, où un fichier distant peut être copié à l’emplacement spécifié sur la machine locale. |
+| Fichiers supplémentaires à copier | Spécifie les fichiers supplémentaires à copier à partir du système distant. Si vous le souhaitez, vous pouvez spécifier des paires de mappage distant à local à l’aide de la syntaxe suivante : fullremotepath1 : = fulllocalpath1 ; fullremotepath2 : = fulllocalpath2, où un fichier distant peut être copié à l’emplacement spécifié sur l’ordinateur local. |
 
 ::: moniker-end

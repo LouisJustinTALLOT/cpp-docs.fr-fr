@@ -2,22 +2,22 @@
 title: Général, propriétés (projet Makefile Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: 72a7919bc94be80acdbf7a2cef5b4a9875595545
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd92d77069024456020a09b22de3596b8192c5af
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446152"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924663"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Projet Makefile, propriétés (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Il s’agit d’une liste partielle des propriétés disponibles dans un projet Makefile Linux. Beaucoup de propriétés de projet Makefile sont identiques aux propriétés de projet d’application de console C++ Linux.
 
@@ -108,6 +108,6 @@ Les propriétés IntelliSense peuvent être définies au niveau du projet ou du 
 | Ligne de commande Build | Spécifie la ligne de commande à exécuter pour la commande 'Build'. Cette commande est exécutée sur le système distant. |
 | Ligne de commande Rebuild All | Spécifie la ligne de commande à exécuter pour la commande 'Rebuild All'. Cette commande est exécutée sur le système distant. |
 | Ligne de commande Clean | Spécifie la ligne de commande à exécuter pour la commande 'Clean'. Cette commande est exécutée sur le système distant. |
-| Outputs | Spécifie les sorties générées par la build distante sur le système distant. |
+| Sorties | Spécifie les sorties générées par la build distante sur le système distant. |
 
 ::: moniker-end

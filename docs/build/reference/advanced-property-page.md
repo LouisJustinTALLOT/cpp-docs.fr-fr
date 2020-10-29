@@ -4,22 +4,22 @@ ms.date: 08/10/2020
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 3d6694e44d3da4023998a0335cd06c85b353b2b1
-ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
+ms.openlocfilehash: 3b1e45f984cd40d6ea42ead25b045fc8688ad0a7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88144163"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924042"
 ---
 # <a name="advanced-property-page"></a>Page de propriétés avancé
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 La page de propriétés avancé est disponible dans Visual Studio 2019 et versions ultérieures. Pour afficher la documentation de cette version, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 La page de propriétés avancé est disponible dans Visual Studio 2019 et versions ultérieures.
 
@@ -31,7 +31,7 @@ La page de propriétés avancé est disponible dans Visual Studio 2019 et versio
 
 - **Extensions à supprimer lors du nettoyage**
 
-   L’option **Nettoyer** (menu **Générer**) supprime les fichiers du répertoire intermédiaire où la configuration d’un projet est générée. Les fichiers dont les extensions sont spécifiées dans cette propriété sont supprimés lorsque le **nettoyage** est exécuté ou lorsque vous régénérez. Le système de génération supprime tous les fichiers qui ont ces extensions dans le répertoire intermédiaire. Elle supprime également toute sortie connue de la génération, quel que soit l’emplacement où elle se trouve. (Qui comprend les sorties intermédiaires telles que les *`.obj`* fichiers.) Vous pouvez spécifier des caractères génériques dans cette propriété.
+   L’option **Nettoyer** (menu **Générer** ) supprime les fichiers du répertoire intermédiaire où la configuration d’un projet est générée. Les fichiers dont les extensions sont spécifiées dans cette propriété sont supprimés lorsque le **nettoyage** est exécuté ou lorsque vous régénérez. Le système de génération supprime tous les fichiers qui ont ces extensions dans le répertoire intermédiaire. Elle supprime également toute sortie connue de la génération, quel que soit l’emplacement où elle se trouve. (Qui comprend les sorties intermédiaires telles que les *`.obj`* fichiers.) Vous pouvez spécifier des caractères génériques dans cette propriété.
 
    Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 
@@ -81,7 +81,7 @@ La page de propriétés avancé est disponible dans Visual Studio 2019 et versio
 
    Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>.
 
-- **Optimisation de l'ensemble du programme**
+- **Optimisation de l’ensemble du programme**
 
    Spécifie l’option [`/GL`](gl-whole-program-optimization.md) de compilateur et l’option de l' [`/LTCG`](ltcg-link-time-code-generation.md) éditeur de liens. Par défaut, l’optimisation de l’ensemble du programme est désactivée pour les configurations de débogage et activée pour les configurations Release.
 

@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: b470663e3cea8ec62a1737fb19e9ec5a277d27cc
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176318"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924705"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avertissements du compilateur par version du compilateur
 
@@ -51,7 +51,7 @@ Vous pouvez spécifier uniquement le nombre principal, les nombres principaux et
 
 Les sections suivantes répertorient les avertissements introduits par chaque version de Visual C++ que vous pouvez supprimer à l’aide de l' **`/Wv`** option du compilateur. L' **`/Wv`** option ne peut pas supprimer les avertissements qui ne sont pas listés, qui prédatent les versions spécifiées du compilateur.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 ## <a name="warnings-introduced-in-visual-studio-2019-version-167-compiler-version-1927291120"></a>Avertissements introduits dans Visual Studio 2019 version 16,7 (compilateur version 19.27.29112.0)
 
@@ -151,7 +151,7 @@ Ces avertissements et tous les avertissements dans les versions ultérieures son
 | C5051 | `attribute 'attribute-name' requires at least 'standard-level'; ignored` |
 
 ::: moniker-end
-::: moniker range=">= vs-2017"
+::: moniker range=">= msvc-150"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Avertissements introduits dans Visual Studio 2017 version 15,8 (compilateur version 19.15.26726.0)
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 156fe9c7a2b15f7254fb0c83f8b25982aa5ad09a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509460"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924315"
 ---
 # <a name="supporting-schema-rowsets"></a>Prise en charge des ensembles de lignes de schéma
 
@@ -32,15 +32,15 @@ Les ensembles de lignes de schéma permettent au consommateur d’obtenir des in
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Prise en charge de l’Assistant Fournisseur OLE DB ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-L’**Assistant Fournisseur OLE DB ATL** crée trois classes de schéma dans le fichier d’en-tête de session :
+L’ **Assistant Fournisseur OLE DB ATL** crée trois classes de schéma dans le fichier d’en-tête de session :
 
 - **C**<em>ShortName</em>**SessionTRSchemaRowset**
 
@@ -58,9 +58,9 @@ Ces classes répondent aux requêtes de consommateur concernant les informations
 
 Vous pouvez personnaliser ces classes pour gérer les informations de schéma adaptées à votre fournisseur :
 
-- Dans **C**<em>ShortName</em>**SessionTRSchemaRowset**, vous devez remplir les champs du catalogue, du tableau et de la description (`trData.m_szType`, `trData.m_szTable`, et `trData.m_szDesc`). L’exemple généré par l’Assistant n’utilise qu’une seule ligne (tableau). D’autres fournisseurs peuvent retourner plusieurs tableaux.
+- Dans **C**<em>ShortName</em>**SessionTRSchemaRowset** , vous devez remplir les champs du catalogue, du tableau et de la description (`trData.m_szType`, `trData.m_szTable`, et `trData.m_szDesc`). L’exemple généré par l’Assistant n’utilise qu’une seule ligne (tableau). D’autres fournisseurs peuvent retourner plusieurs tableaux.
 
-- Dans **C**<em>ShortName</em>**SessionColSchemaRowset**, vous passez le nom du tableau en tant que `DBID`.
+- Dans **C**<em>ShortName</em>**SessionColSchemaRowset** , vous passez le nom du tableau en tant que `DBID`.
 
 ::: moniker-end
 
@@ -94,7 +94,7 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` hérite de `IDBSchemaRowsetImpl` et dispose donc de toutes les méthodes de gestion des restrictions. À l’aide de `CSchemaRowsetImpl`, déclarez les trois classes enfants (répertoriées dans le mappage du schéma ci-dessus) : `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, et `CUpdateSessionPTSchemaRowset`. Chacune de ces classes enfants dispose d’une méthode `Execute` qui gère son ensemble de restrictions (critères de recherche) respectif. Chaque méthode `Execute` compare les valeurs des paramètres *cRestrictions* et *rgRestrictions*. Consultez la description de ces paramètres dans [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
+`CUpdateSession` hérite de `IDBSchemaRowsetImpl` et dispose donc de toutes les méthodes de gestion des restrictions. À l’aide de `CSchemaRowsetImpl`, déclarez les trois classes enfants (répertoriées dans le mappage du schéma ci-dessus) : `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, et `CUpdateSessionPTSchemaRowset`. Chacune de ces classes enfants dispose d’une méthode `Execute` qui gère son ensemble de restrictions (critères de recherche) respectif. Chaque méthode `Execute` compare les valeurs des paramètres *cRestrictions* et *rgRestrictions* . Consultez la description de ces paramètres dans [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions).
 
 Pour plus d’informations sur les restrictions correspondant à un ensemble de lignes de schéma spécifique, consultez le tableau des GUID d’ensemble de lignes de schéma dans [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans les **Informations de référence du programmeur OLE DB** du SDK Windows.
 
@@ -146,7 +146,7 @@ if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-La fonction `Execute` suivante est similaire à celles des ensembles de lignes ordinaires. Vous avez trois arguments : *pcRowsAffected*, *cRestrictions*, et *rgRestrictions*. La variable *pcRowsAffected* est un paramètre de sortie permettant au fournisseur de renvoyer le nombre de lignes de l’ensemble de lignes de schéma. Le paramètre *cRestrictions* est un paramètre d’entrée qui contient le nombre de restrictions passées par le consommateur au fournisseur. Le paramètre *rgRestrictions* est un tableau de valeurs VARIANT contenant les valeurs de restriction.
+La fonction `Execute` suivante est similaire à celles des ensembles de lignes ordinaires. Vous avez trois arguments : *pcRowsAffected* , *cRestrictions* , et *rgRestrictions* . La variable *pcRowsAffected* est un paramètre de sortie permettant au fournisseur de renvoyer le nombre de lignes de l’ensemble de lignes de schéma. Le paramètre *cRestrictions* est un paramètre d’entrée qui contient le nombre de restrictions passées par le consommateur au fournisseur. Le paramètre *rgRestrictions* est un tableau de valeurs VARIANT contenant les valeurs de restriction.
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
@@ -194,7 +194,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }
 ```
 
-La prise en charge de la quatrième restriction (TABLE_TYPE) est similaire à la restriction de la troisième. Vérifiez que la valeur n’est pas VT_EMPTY. Cette restriction retourne uniquement le type de tableau, TABLE. Pour déterminer les valeurs valides pour DBSCHEMA_TABLES, regardez l’**Annexe B** des **Informations de référence du programmeur OLE DB**, dans la section d’ensemble de lignes TABLES.
+La prise en charge de la quatrième restriction (TABLE_TYPE) est similaire à la restriction de la troisième. Vérifiez que la valeur n’est pas VT_EMPTY. Cette restriction retourne uniquement le type de tableau, TABLE. Pour déterminer les valeurs valides pour DBSCHEMA_TABLES, regardez l’ **Annexe B** des **Informations de référence du programmeur OLE DB** , dans la section d’ensemble de lignes TABLES.
 
 ```cpp
 // TABLE_TYPE restriction:
@@ -213,7 +213,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }
 ```
 
-C’est ici que vous créez une entrée de ligne pour l’ensemble de lignes. La variable `trData` correspond à `CTABLESRow`, une structure définie dans les modèles du fournisseur OLE DB. `CTABLESRow` correspond à la définition de l’ensemble de lignes TABLES dans l’**Annexe B** de la spécification OLE DB. Vous n’avez qu’une ligne à ajouter, car vous pouvez prendre uniquement en charge un seul tableau à la fois.
+C’est ici que vous créez une entrée de ligne pour l’ensemble de lignes. La variable `trData` correspond à `CTABLESRow`, une structure définie dans les modèles du fournisseur OLE DB. `CTABLESRow` correspond à la définition de l’ensemble de lignes TABLES dans l’ **Annexe B** de la spécification OLE DB. Vous n’avez qu’une ligne à ajouter, car vous pouvez prendre uniquement en charge un seul tableau à la fois.
 
 ```cpp
 // Bring over the data:
@@ -263,9 +263,9 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }
 ```
 
-Étant donné que votre fonction `Execute` retourne des données pour les champs TABLE_NAME, TABLE_TYPE et DESCRIPTION de l’ensemble de lignes TABLES, vous pouvez rechercher dans l’**Annexe B** de la spécification OLE DB et déterminer (en comptant du haut vers le bas) qu’ils correspondent aux ordinaux 3, 4 et 6. Pour chacune de ces colonnes, retournez DBSTATUS_S_OK. Pour toutes les autres colonnes, retournez DBSTATUS_S_ISNULL. Il est important de retourner cet état, car un consommateur pourrait ne pas comprendre que la valeur que vous retournez est NULL ou autre chose. Là encore, notez que NULL n’est pas équivalent à vide.
+Étant donné que votre fonction `Execute` retourne des données pour les champs TABLE_NAME, TABLE_TYPE et DESCRIPTION de l’ensemble de lignes TABLES, vous pouvez rechercher dans l’ **Annexe B** de la spécification OLE DB et déterminer (en comptant du haut vers le bas) qu’ils correspondent aux ordinaux 3, 4 et 6. Pour chacune de ces colonnes, retournez DBSTATUS_S_OK. Pour toutes les autres colonnes, retournez DBSTATUS_S_ISNULL. Il est important de retourner cet état, car un consommateur pourrait ne pas comprendre que la valeur que vous retournez est NULL ou autre chose. Là encore, notez que NULL n’est pas équivalent à vide.
 
-Pour plus d’informations sur l’interface d’ensemble de lignes de schéma OLE DB, consultez l’interface [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) dans les **Informations de référence du programmeur OLE DB**.
+Pour plus d’informations sur l’interface d’ensemble de lignes de schéma OLE DB, consultez l’interface [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) dans les **Informations de référence du programmeur OLE DB** .
 
 Pour plus d’informations sur la façon dont les utilisateurs peuvent utiliser les méthodes`IDBSchemaRowset`, consultez [Récupération de métadonnées avec les ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 1090bf98332a51773e53bfcda51e944dc09c5221
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075606"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924738"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Procédure pas à pas : Compiler un programme C sur la ligne de commande
 
@@ -22,13 +22,13 @@ Visual C++ inclut un compilateur C que vous pouvez utiliser pour créer toutes s
 
 Cette procédure pas à pas montre comment créer un programme de style C de base, « Hello, World », à l’aide d’un éditeur de texte, puis le compiler sur la ligne de commande. Si vous préférez travailler en C++ sur la ligne de commande, consultez [procédure pas à pas : compilation d’un programme C++ natif sur la ligne de commande](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Si vous souhaitez tester l’IDE de Visual Studio au lieu d’utiliser la ligne de commande, consultez [procédure pas à pas : utilisation de projets et de solutions (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) ou [utilisation de l’IDE Visual Studio pour le développement de bureau C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual Studio et les composants Visual C++ facultatifs, ou les outils de génération pour Visual Studio.
 
 Visual Studio est un environnement de développement intégré puissant qui prend en charge un éditeur complet, les gestionnaires de ressources, les débogueurs et les compilateurs pour de nombreux langages et plateformes. Pour plus d’informations sur ces fonctionnalités et sur le téléchargement et l’installation de Visual Studio, y compris l’édition Visual Studio Community gratuite, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
 
-La version des outils de génération pour Visual Studio de Visual Studio installe uniquement l’ensemble d’outils de ligne de commande, les compilateurs, les outils et les bibliothèques dont vous avez besoin pour générer des programmes C et C++. Il est parfait pour les ateliers de génération ou les exercices de la classe et s’installe relativement rapidement. Pour installer uniquement l’ensemble d’outils de ligne de commande, téléchargez Build Tools pour Visual Studio à partir de la page de [téléchargements Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) et exécutez le programme d’installation. Dans le programme d’installation de Visual Studio, sélectionnez la charge de travail **outils de génération C++** , puis choisissez **installer**.
+La version des outils de génération pour Visual Studio de Visual Studio installe uniquement l’ensemble d’outils de ligne de commande, les compilateurs, les outils et les bibliothèques dont vous avez besoin pour générer des programmes C et C++. Il est parfait pour les ateliers de génération ou les exercices de la classe et s’installe relativement rapidement. Pour installer uniquement l’ensemble d’outils de ligne de commande, téléchargez Build Tools pour Visual Studio à partir de la page de [téléchargements Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) et exécutez le programme d’installation. Dans le programme d’installation de Visual Studio, sélectionnez la charge de travail **outils de génération C++** , puis choisissez **installer** .
 
 Avant de pouvoir générer un programme C ou C++ sur la ligne de commande, vous devez vérifier que les outils sont installés et que vous pouvez y accéder à partir de la ligne de commande. Visual C++ a des exigences complexes pour que l’environnement de ligne de commande recherche les outils, les en-têtes et les bibliothèques qu’il utilise. **Vous ne pouvez pas utiliser Visual C++ dans une fenêtre d’invite de commandes simple** sans préparation. Vous avez besoin d’une fenêtre d' *invite de commandes développeur* , qui est une fenêtre d’invite de commandes standard avec toutes les variables d’environnement définies. Heureusement, Visual C++ installe des raccourcis pour lancer des invites de commandes développeur pour lesquelles l’environnement est configuré pour les builds de ligne de commande. Malheureusement, les noms des raccourcis de l’invite de commandes développeur et de leur emplacement sont différents dans presque toutes les versions de Visual C++ et sur différentes versions de Windows. Votre première tâche de procédure pas à pas consiste à trouver le bon raccourci à utiliser.
 
@@ -37,7 +37,7 @@ Avant de pouvoir générer un programme C ou C++ sur la ligne de commande, vous 
 
 Ces instructions varient en fonction de la version de Visual Studio que vous utilisez. Pour consulter la documentation de votre version par défaut de Visual Studio, utilisez le contrôle sélecteur de **version** . Elle se trouve en haut de la table des matières sur cette page.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2019"></a>Ouvrir une invite de commandes développeur dans Visual Studio 2019
 
@@ -47,7 +47,7 @@ Si vous utilisez une autre version de Windows, recherchez dans le menu Démarrer
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2017"></a>Ouvrir une invite de commandes développeur dans Visual Studio 2017
 
@@ -57,7 +57,7 @@ Si vous utilisez une autre version de Windows, recherchez dans le menu Démarrer
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2015"></a>Ouvrir une invite de commandes développeur dans Visual Studio 2015
 

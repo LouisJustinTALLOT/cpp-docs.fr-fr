@@ -1,6 +1,6 @@
 ---
-title: Classe Linker
-description: La référence de classe CMD Build Insights SDK Linker.
+title: Classe de l’éditeur de liens
+description: Référence de classe de l’éditeur de liens du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: e5d4c0c3841377fc2e029c23d5cbbd076c8029cc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf5544d725c12db8962d888944d4a281387207fa
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324602"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923087"
 ---
-# <a name="linker-class"></a>Classe Linker
+# <a name="linker-class"></a>Classe de l’éditeur de liens
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `Linker` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Utilisez-le pour correspondre à un événement [LINKER.](../event-table.md#linker)
+La `Linker` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilisez-le pour établir une correspondance avec un événement de l' [éditeur de liens](../event-table.md#linker) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membres
 
-Avec les membres hérités de sa classe `Linker` de base [d’Invocation,](invocation.md) la classe contient les membres suivants :
+Avec les membres hérités de sa classe de base d' [appel](invocation.md) , la `Linker` classe contient les membres suivants :
 
 ### <a name="constructors"></a>Constructeurs
 
 [Éditeur de liens](#linker)
 
-## <a name="linker"></a><a name="linker"></a>Linker
+## <a name="linker"></a><a name="linker"></a> Éditeur
 
 ```cpp
 Linker(const RawEvent& event);
@@ -53,7 +53,7 @@ Linker(const RawEvent& event);
 
 ### <a name="parameters"></a>Paramètres
 
-*Événement*\
-Un événement [LINKER.](../event-table.md#linker)
+*événement*\
+Événement de l' [éditeur de liens](../event-table.md#linker) .
 
 ::: moniker-end

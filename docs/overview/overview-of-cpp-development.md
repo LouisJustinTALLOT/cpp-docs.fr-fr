@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: db0a4ccbab142d01f0506b77237dbb09d43a1cf0
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500279"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924357"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Présentation du développement C++ dans Visual Studio
 
-Dans l’environnement de développement intégré (IDE) Visual Studio, Microsoft C++ (MSVC) partage plusieurs fenêtres et outils avec d’autres langages. Beaucoup d’entre eux, y compris **l’Explorateur de solutions**, l’éditeur de code et le débogueur, sont documentés sous [IDE Visual Studio](/visualstudio/get-started/visual-studio-ide). Il arrive souvent qu’une fenêtre ou un outil partagé n’ait pas tout à fait les mêmes fonctionnalités pour C++ que pour les autres langages. Quelques fenêtres ou outils sont disponibles seulement dans les éditions Visual Studio Professional ou Visual Studio Enterprise.
+Dans l’environnement de développement intégré (IDE) Visual Studio, Microsoft C++ (MSVC) partage plusieurs fenêtres et outils avec d’autres langages. Beaucoup d’entre eux, y compris **l’Explorateur de solutions** , l’éditeur de code et le débogueur, sont documentés sous [IDE Visual Studio](/visualstudio/get-started/visual-studio-ide). Il arrive souvent qu’une fenêtre ou un outil partagé n’ait pas tout à fait les mêmes fonctionnalités pour C++ que pour les autres langages. Quelques fenêtres ou outils sont disponibles seulement dans les éditions Visual Studio Professional ou Visual Studio Enterprise.
 
 En plus des outils partagés dans l’IDE Visual Studio, MSVC propose plusieurs outils spécifiques pour le développement de code natif. Ces outils sont également répertoriés dans cet article. Pour obtenir la liste des outils disponibles dans chaque édition de Visual Studio, consultez [Outils et fonctionnalités C++ dans les éditions de Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md).
 
@@ -27,13 +27,13 @@ Visual Studio prend en charge tous les systèmes de projet ou outils de build pe
 
 - **MSBuild** est le système de projet natif de Visual Studio. Quand vous sélectionnez **fichier**  >  **nouveau**  >  **projet** dans le menu principal, vous voyez de nombreux genres de *modèles de projet* MSBuild qui vous permettent de commencer rapidement à développer différents genres d’applications C++.
 
-   ::: moniker range="vs-2019"
+   ::: moniker range="msvc-160"
 
    ![Nouveaux modèles de projet](../build/media/mathclient-project-name-2019.png "Boîte de dialogue Nouveau projet de Visual Studio 2019")
 
    ::: moniker-end
 
-   ::: moniker range="<=vs-2017"
+   ::: moniker range="<=msvc-150"
 
    ![Modèles de projet](media/vs2017-new-project.png "Boîte de dialogue Nouveau projet de Visual Studio 2017")
 
@@ -47,15 +47,15 @@ Visual Studio prend en charge tous les systèmes de projet ou outils de build pe
 
 ## <a name="add-to-source-control"></a>Ajouter au contrôle de code source
 
-Le contrôle de code source vous permet de coordonner le travail entre plusieurs développeurs, d’isoler le travail en cours du code de production, et de sauvegarder votre code source. Visual Studio prend en charge Git et [Team Foundation Version Control \(TFVC\)](/azure/devops/repos/tfvc/) par le biais de sa fenêtre **Team Explorer**.
+Le contrôle de code source vous permet de coordonner le travail entre plusieurs développeurs, d’isoler le travail en cours du code de production, et de sauvegarder votre code source. Visual Studio prend en charge Git et [Team Foundation Version Control \(TFVC\)](/azure/devops/repos/tfvc/) par le biais de sa fenêtre **Team Explorer** .
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![Capture d’écran de la fenêtre de Team Explorer dans Visual Studio 2019.](media/vs2019-team-explorer.png "Team Explorer Visual Studio 2017")
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ![Capture d’écran de la fenêtre de Team Explorer dans Visual Studio 2017.](media/vs2017-team-explorer.png "Team Explorer Visual Studio 2017")
 
@@ -79,7 +79,7 @@ Pour plus d’informations sur la création d’une interface utilisateur pour u
 
 ## <a name="write-code"></a>Écrire du code
 
-Une fois que vous avez créé un projet, tous les fichiers projet s’affichent dans la fenêtre **Explorateur de solutions**. (Une *solution* est un conteneur logique pour un ou plusieurs projets connexes.) Lorsque vous cliquez sur un fichier. h ou. cpp dans **Explorateur de solutions**, le fichier s’ouvre dans l’éditeur de code.
+Une fois que vous avez créé un projet, tous les fichiers projet s’affichent dans la fenêtre **Explorateur de solutions** . (Une *solution* est un conteneur logique pour un ou plusieurs projets connexes.) Lorsque vous cliquez sur un fichier. h ou. cpp dans **Explorateur de solutions** , le fichier s’ouvre dans l’éditeur de code.
 
 ![Explorateur de solutions et éditeur de code](media/vs2017-solution-explorer-code-editor.png "Explorateur de solutions et éditeur de code Visual Studio 2017")
 
@@ -87,11 +87,11 @@ L'éditeur de code est un traitement de texte spécialisé pour le code source C
 
 ## <a name="add-and-edit-resources"></a>Ajouter et modifier des ressources
 
-Un programme ou une DLL Windows comprend généralement des *ressources*, telles que des boîtes de dialogue, des icônes, des images, des chaînes localisables, des écrans de démarrage, des chaînes de connexion de base de données ou des données arbitraires. Visual Studio comprend des outils permettant d’ajouter et de modifier des ressources. Pour plus d’informations, consultez [utilisation des fichiers de ressources](../windows/working-with-resource-files.md).
+Un programme ou une DLL Windows comprend généralement des *ressources* , telles que des boîtes de dialogue, des icônes, des images, des chaînes localisables, des écrans de démarrage, des chaînes de connexion de base de données ou des données arbitraires. Visual Studio comprend des outils permettant d’ajouter et de modifier des ressources. Pour plus d’informations, consultez [utilisation des fichiers de ressources](../windows/working-with-resource-files.md).
 
 ## <a name="build-compile-and-link"></a>Générer (compiler et lier)
 
-Choisissez **générer**générer  >  la**solution** dans la barre de menus, ou entrez la combinaison de touches **Ctrl + Maj + B** pour compiler et lier un projet. Les erreurs et les avertissements de build sont signalés dans le Liste d’erreurs (**CTRL + \\ , E**). La fenêtre **sortie** (**ALT + 2**) affiche des informations sur le processus de génération.
+Choisissez **générer** générer  >  la **solution** dans la barre de menus, ou entrez la combinaison de touches **Ctrl + Maj + B** pour compiler et lier un projet. Les erreurs et les avertissements de build sont signalés dans le Liste d’erreurs ( **CTRL + \\ , E** ). La fenêtre **sortie** ( **ALT + 2** ) affiche des informations sur le processus de génération.
 
 ![Fenêtre Sortie et Liste d’erreurs](media/vs2017-output-error-list.png "Fenêtre sortie et Liste d’erreurs de Visual Studio 2017")
 
@@ -101,7 +101,7 @@ Vous pouvez également utiliser le compilateur (cl.exe) et de nombreux autres ou
 
 ## <a name="debug"></a>Débogage
 
-Vous pouvez démarrer le débogage en appuyant sur **F5**. L’exécution s’interrompt sur tous les points d’arrêt que vous avez définis (en appuyant sur **F9**). Vous pouvez également parcourir le code une ligne à la fois (**F10**), afficher les valeurs des variables ou des registres, et même dans certains cas apporter des modifications au code et continuer le débogage sans recompiler. L’illustration suivante montre une session de débogage dans laquelle l’exécution est arrêtée sur un point d’arrêt. Les valeurs des membres de la structure de données sont visibles dans la **fenêtre Espion**.
+Vous pouvez démarrer le débogage en appuyant sur **F5** . L’exécution s’interrompt sur tous les points d’arrêt que vous avez définis (en appuyant sur **F9** ). Vous pouvez également parcourir le code une ligne à la fois ( **F10** ), afficher les valeurs des variables ou des registres, et même dans certains cas apporter des modifications au code et continuer le débogage sans recompiler. L’illustration suivante montre une session de débogage dans laquelle l’exécution est arrêtée sur un point d’arrêt. Les valeurs des membres de la structure de données sont visibles dans la **fenêtre Espion** .
 
 ![Session de débogage](media/vs2017-debug-watch.png "Session de débogage Visual Studio 2017")
 
@@ -109,7 +109,7 @@ Pour plus d'informations, consultez [Debugging in Visual Studio](/visualstudio/d
 
 ## <a name="test"></a>Test
 
-Visual Studio comprend le framework de tests unitaires Microsoft pour C++ et la prise en charge de Boost.Test, Google Test et CTest. Exécutez vos tests à partir de la fenêtre **Explorateur de tests** :
+Visual Studio comprend le framework de tests unitaires Microsoft pour C++ et la prise en charge de Boost.Test, Google Test et CTest. Exécutez vos tests à partir de la fenêtre **Explorateur de tests**  :
 
 ![Explorateur de tests](media/cpp-test-explorer-passed.png "Explorateur de tests de Visual Studio 2017")
 

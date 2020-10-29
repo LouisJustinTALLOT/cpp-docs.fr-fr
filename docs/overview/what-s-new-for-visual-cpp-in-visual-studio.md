@@ -4,18 +4,18 @@ description: Les nouvelles fonctionnalités et les correctifs du compilateur et 
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 5e82e39b9480b83e2d1c8143338654467a08b7d0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c5e1f368060b650781c413a03e1bc2f9e368941a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500272"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924839"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Nouveautés de C++ dans Visual Studio
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-Visual Studio 2019 comprend un grand nombre de mises à jour et de correctifs de l’environnement Microsoft C++. Nous avons résolu plusieurs bogues et problèmes dans le compilateur et les outils. Beaucoup de ces problèmes ont été soumis par des clients via les options [Signaler un problème](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) et [Faire une suggestion](https://developercommunity.visualstudio.com/spaces/62/index.html) sous **Envoyer des commentaires**. Merci d’avoir signalé ces bogues. Pour plus d’informations sur l’ensemble des nouveautés de Visual Studio, visitez [Nouveautés de Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2017, consultez [Nouveautés de C++ dans Visual Studio 2017](?preserve-view=true&view=vs-2017). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2015 et versions antérieures, consultez [Nouveautés de Visual C++ entre 2003 et 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
+Visual Studio 2019 comprend un grand nombre de mises à jour et de correctifs de l’environnement Microsoft C++. Nous avons résolu plusieurs bogues et problèmes dans le compilateur et les outils. Beaucoup de ces problèmes ont été soumis par des clients via les options [Signaler un problème](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) et [Faire une suggestion](https://developercommunity.visualstudio.com/spaces/62/index.html) sous **Envoyer des commentaires** . Merci d’avoir signalé ces bogues. Pour plus d’informations sur l’ensemble des nouveautés de Visual Studio, visitez [Nouveautés de Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2017, consultez [Nouveautés de C++ dans Visual Studio 2017](?preserve-view=true&view=msvc-150). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2015 et versions antérieures, consultez [Nouveautés de Visual C++ entre 2003 et 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 ## <a name="c-compiler"></a>compilateur C++
 
@@ -93,7 +93,7 @@ Analyse améliorée avec `/Qspectre` afin de fournir une aide à l’atténuatio
 
 ### <a name="live-share-c-support"></a>Prise en charge de C++ par Live Share
 
-[Live Share ](/visualstudio/liveshare/) prend désormais en charge C++, ce qui permet aux développeurs utilisant Visual Studio ou Visual Studio Code de collaborer en temps réel. Pour plus d’informations, consultez [annonce de Live share pour C++ : partage et collaboration en temps réel](https://devblogs.microsoft.com/cppblog/cppliveshare/)
+[Live Share ](/visualstudio/liveshare/) prend désormais en charge C++, ce qui permet aux développeurs utilisant Visual Studio ou Visual Studio Code de collaborer en temps réel. Pour plus d’informations, consultez [annonce de Live share pour C++ : Real-Time le partage et la collaboration](https://devblogs.microsoft.com/cppblog/cppliveshare/)
 
 ### <a name="intellicode-for-c"></a>IntelliCode pour C++
 
@@ -103,7 +103,7 @@ IntelliCode utilise sa propre formation complète et votre contexte de code pour
 
 ### <a name="template-intellisense"></a>Modèle IntelliSense
 
-La **barre de modèles** utilise maintenant l’interface utilisateur de la **fenêtre d’aperçu** au lieu d’une fenêtre modale, prend en charge les modèles imbriqués et prérenseigne les arguments par défaut dans la **fenêtre d’aperçu**. Pour plus d’informations, consultez [Template IntelliSense Improvements for Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/template-intellisense-improvements-for-visual-studio-2019-preview-2/). Une liste déroulante **Utilisés le plus récemment** dans la **barre de modèles** vous permet de basculer rapidement entre des ensembles antérieurs d’exemples d’arguments.
+La **barre de modèles** utilise maintenant l’interface utilisateur de la **fenêtre d’aperçu** au lieu d’une fenêtre modale, prend en charge les modèles imbriqués et prérenseigne les arguments par défaut dans la **fenêtre d’aperçu** . Pour plus d’informations, consultez [Template IntelliSense Improvements for Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/template-intellisense-improvements-for-visual-studio-2019-preview-2/). Une liste déroulante **Utilisés le plus récemment** dans la **barre de modèles** vous permet de basculer rapidement entre des ensembles antérieurs d’exemples d’arguments.
 
 ### <a name="new-start-window-experience"></a>Nouvelle fenêtre de démarrage
 
@@ -139,7 +139,7 @@ L’info-bulle Info express respecte désormais la colorisation sémantique de v
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 version 16.1
 
-IntelliCode est désormais fourni en tant que composant facultatif dans la charge de travail **Développement Desktop en C++**. Pour en savoir plus, voir [IntelliCode C++ amélioré désormais fourni avec Visual Studio 2019](https://devblogs.microsoft.com/cppblog/improved-c-intellicode-now-ships-with-visual-studio-2019/).
+IntelliCode est désormais fourni en tant que composant facultatif dans la charge de travail **Développement Desktop en C++** . Pour en savoir plus, voir [IntelliCode C++ amélioré désormais fourni avec Visual Studio 2019](https://devblogs.microsoft.com/cppblog/improved-c-intellicode-now-ships-with-visual-studio-2019/).
 
 ## <a name="cmake-support"></a>Prise en charge de CMake
 
@@ -165,7 +165,7 @@ IntelliCode est désormais fourni en tant que composant facultatif dans la charg
 
 - Le paramètre `cmakeToolchain` est désormais pris en charge dans CMakeSettings.json pour spécifier des chaînes d’outils sans modifier manuellement la ligne de commande CMake.
 
-- Nouveau raccourci pour le menu **Tout générer** (**Ctrl+Maj+B**).
+- Nouveau raccourci pour le menu **Tout générer** ( **Ctrl+Maj+B** ).
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 version 16.1
 
@@ -181,13 +181,13 @@ IntelliCode est désormais fourni en tant que composant facultatif dans la charg
 
 ## <a name="incredibuild-integration"></a>Intégration d’IncrediBuild
 
-IncrediBuild est désormais fourni en tant que composant facultatif dans la charge de travail **Développement Desktop en C++**. Le moniteur de build IncrediBuild est entièrement intégré à l’IDE de Visual Studio. Pour plus d’informations, consultez visualiser [votre build avec IncrediBuild Build Monitor et Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
+IncrediBuild est désormais fourni en tant que composant facultatif dans la charge de travail **Développement Desktop en C++** . Le moniteur de build IncrediBuild est entièrement intégré à l’IDE de Visual Studio. Pour plus d’informations, consultez visualiser [votre build avec IncrediBuild Build Monitor et Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
 
 ## <a name="debugging"></a>Débogage
 
 - Pour les applications C++ exécutées sur Windows, les fichiers PDB se chargent désormais dans un processus 64 bits distinct. Cette modification résout une plage de pannes provoquée par le débogueur qui manque de mémoire. Par exemple, lors du débogage d’applications qui contiennent un grand nombre de modules et de fichiers PDB.
 
-- La recherche est activée dans les fenêtres **Espion**, **Autos**, et **Variables locales**.
+- La recherche est activée dans les fenêtres **Espion** , **Autos** , et **Variables locales** .
 
 ## <a name="windows-desktop-development-with-c"></a>Développement Windows Desktop avec C++
 
@@ -232,15 +232,15 @@ Le composant expérimental Clang/C2 a été supprimé. Utilisez l’ensemble d�
 
 - Nouveaux correctifs rapides pour des vérifications de variables non initialisées. Pour en savoir plus, voir [Nouveaux correctifs rapides d’analyse de code pour la mémoire non initialisée (C6001) et les avertissements d’utilisation avant init (C26494)](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/).
 
-## <a name="unit-testing"></a>Test unitaire
+## <a name="unit-testing"></a>Effectuer des tests unitaires
 
 Le modèle de projet de test C++ managé n’est plus disponible. Vous pouvez continuer à utiliser le framework de test C++ managé dans vos projets existants. Pour les nouveaux tests unitaires, utilisez un des frameworks de test natifs pour lesquels Visual Studio fournit des modèles (MSTest, Google Test) ou le modèle de projet de test C# managé.
 
 ::: moniker-end
 
-::: moniker range="=vs-2017"
+::: moniker range="=msvc-150"
 
-Visual Studio 2017 comprend un grand nombre de mises à jour et de correctifs de l’environnement C++. Nous avons corrigé plus de 250 bogues et signalé des problèmes dans le compilateur et les outils. Un grand nombre d’entre eux ont été envoyés par les clients par le biais du [rapport un problème et fournissent des options de suggestion](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) sous **Envoyer des commentaires**. Merci d’avoir signalé ces bogues. Pour plus d’informations sur l’ensemble des nouveautés de Visual Studio, visitez [Nouveautés de Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2019, consultez [Nouveautés de C++ dans Visual Studio](?preserve-view=true&view=vs-2019). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2015 et versions antérieures, consultez [Nouveautés de Visual C++ entre 2003 et 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
+Visual Studio 2017 comprend un grand nombre de mises à jour et de correctifs de l’environnement C++. Nous avons corrigé plus de 250 bogues et signalé des problèmes dans le compilateur et les outils. Un grand nombre d’entre eux ont été envoyés par les clients par le biais du [rapport un problème et fournissent des options de suggestion](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) sous **Envoyer des commentaires** . Merci d’avoir signalé ces bogues. Pour plus d’informations sur l’ensemble des nouveautés de Visual Studio, visitez [Nouveautés de Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2019, consultez [Nouveautés de C++ dans Visual Studio](?preserve-view=true&view=msvc-160). Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2015 et versions antérieures, consultez [Nouveautés de Visual C++ entre 2003 et 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 ## <a name="visual-studio-2017-c-compiler"></a>Compilateur C++ Visual Studio 2017
 
@@ -282,7 +282,7 @@ Cette version apporte plusieurs améliorations à l’optimisation, à la géné
 
 - Amélioration de la génération du code des boucles : prise en charge de la vectorisation automatique de la division d’entiers constants, optimisation de l’identification des modèles de memset.
 - Amélioration de la sécurité du code : amélioration de l’émission des diagnostics du compilateur de dépassement de mémoire tampon et [`/guard:cf`](../build/reference/guard-enable-control-flow-guard.md) protection à présent des instructions Switch qui génèrent des tables de saut.
-- Contrôle de version : la valeur de la macro de préprocesseur intégrée ** \_ MSC \_ ver** est désormais mise à jour de façon monotone à chaque mise à jour de Visual C++ ensemble d’outils. Pour plus d’informations, consultez [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/).
+- Contrôle de version : la valeur de la macro de préprocesseur intégrée **\_ MSC \_ ver** est désormais mise à jour de façon monotone à chaque mise à jour de Visual C++ ensemble d’outils. Pour plus d’informations, consultez [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/).
 - Nouvelle disposition de l’ensemble d’outils : le compilateur et les outils de génération connexes ont un nouvel emplacement et une structure de répertoire sur votre ordinateur de développement. La nouvelle disposition permet des installations côte à côte de plusieurs versions du compilateur. Pour plus d’informations, consultez [Compiler Tools Layout in Visual Studio 2017](https://devblogs.microsoft.com/cppblog/compiler-tools-layout-in-visual-studio-15/).
 - Amélioration des diagnostics : la fenêtre Sortie affiche maintenant la colonne où une erreur se produit. Pour plus d’informations, consultez [améliorations des diagnostics du compilateur C++ dans Visual Studio « 15 » Preview 5](https://devblogs.microsoft.com/cppblog/c-compiler-diagnostics-improvements-in-vs-15-rc/).
 - Lors de l’utilisation de coroutines, le **rendement** du mot clé expérimental (disponible sous l' **`/await`** option) a été supprimé. Votre code doit être mis à jour pour utiliser `co_yield` à la place. Pour plus d’informations, consultez [ `yield` mot clé pour devenir `co_yield` dans vs 2017](https://devblogs.microsoft.com/cppblog/yield-keyword-to-become-co_yield-in-vs-2017/).
@@ -333,7 +333,7 @@ Il existe d’autres améliorations de la bibliothèque standard dans Visual Stu
 - `future::get()` invalide désormais `future`, conformément au standard.
 - `iterator_traits<void *>` constituait une erreur matérielle, car il tentait de former `void&` ; il devient désormais une structure vide sans erreur pour permettre l’utilisation de `iterator_traits` dans les conditions SFINAE « is iterator ».
 - Certains avertissements signalés par Clang **-wsystem-headers** ont été corrigés.
-- « La spécification d’exception dans la déclaration ne correspond pas à la déclaration précédente » signalée par Clang **-Wmicrosoft-exception-spec**.
+- « La spécification d’exception dans la déclaration ne correspond pas à la déclaration précédente » signalée par Clang **-Wmicrosoft-exception-spec** .
 - Correction également des avertissements d’ordre mem-initializer-list signalés par Clang et C1XX.
 - Les conteneurs non ordonnés ne permutaient pas leurs fonctions de hachage ou prédicats lorsque les conteneurs eux-mêmes étaient permutés. C’est le cas désormais.
 - De nombreuses opérations de permutation de conteneur sont désormais marquées **`noexcept`** (car notre bibliothèque standard ne prévoit jamais de lever une exception lors de la détection de la condition de comportement non définie non- `propagate_on_container_swap` équivalent-Allocator).
@@ -378,7 +378,7 @@ Pour plus d’informations, consultez [table de conformité du langage Microsoft
 - `static_assert(false, "message")` a été changé en `#error message`. Cette modification permet d’améliorer les diagnostics du compilateur, car `#error` arrête immédiatement la compilation.
 - La bibliothèque standard ne marque plus les fonctions en tant que `__declspec(dllimport)`. La technologie de l’éditeur de liens moderne ne requiert plus cela.
 - Extraction de SFINAE dans des arguments de modèle par défaut, ce qui réduit l’encombrement par rapport aux types de retour et aux types d’arguments de fonction.
-- Les vérifications de débogage dans \<random\> utilisent désormais les machines habituelles de la bibliothèque standard, au lieu de la fonction interne `_Rng_abort()` , qui est appelée `fputs()` à **stderr**. L’implémentation de cette fonction a été conservée pour la compatibilité binaire. Nous la supprimerons dans la prochaine version non compatible binaire de la bibliothèque standard.
+- Les vérifications de débogage dans \<random\> utilisent désormais les machines habituelles de la bibliothèque standard, au lieu de la fonction interne `_Rng_abort()` , qui est appelée `fputs()` à **stderr** . L’implémentation de cette fonction a été conservée pour la compatibilité binaire. Nous la supprimerons dans la prochaine version non compatible binaire de la bibliothèque standard.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
@@ -506,15 +506,15 @@ Le SDK C++ REST, une API web multiplateforme pour C++, a été mis à jour vers 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 version 15.3
 
 - Plusieurs Assistants de projet et de code ont été réécrits pour refléter le style particulier des boîtes de dialogue.
-- **Ajouter une classe** lance désormais l’Assistant Ajouter une classe directement. Tous les autres éléments qui se trouvaient déjà ici sont maintenant disponibles sous **Ajouter > Nouvel élément**.
+- **Ajouter une classe** lance désormais l’Assistant Ajouter une classe directement. Tous les autres éléments qui se trouvaient déjà ici sont maintenant disponibles sous **Ajouter > Nouvel élément** .
 - Les projets Win32 se trouvent désormais sous la catégorie **Windows Desktop** dans la boîte de dialogue **nouveau projet** .
-- La **console Windows** et les modèles d' **application de bureau** créent désormais les projets sans afficher d’Assistant. Il existe un nouvel **Assistant Windows Desktop** sous la même catégorie, qui affiche les mêmes options que l’ancien **Assistant Console Win32**.
+- La **console Windows** et les modèles d' **application de bureau** créent désormais les projets sans afficher d’Assistant. Il existe un nouvel **Assistant Windows Desktop** sous la même catégorie, qui affiche les mêmes options que l’ancien **Assistant Console Win32** .
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
 Plusieurs opérations C++ qui utilisent le moteur IntelliSense pour la refactorisation et la navigation dans le code s’exécutent beaucoup plus rapidement. Les valeurs suivantes sont basées sur la solution Visual Studio Chromium avec 3 500 projets :
 
-| Caractéristique | Amélioration des performances |
+| Fonctionnalité | Amélioration des performances |
 |--|--|
 | Renommer | x 5,3 |
 | Changer la signature | x 4,5 |
@@ -524,7 +524,7 @@ C++ prend maintenant en charge la fonctionnalité **Atteindre la définition** a
 
 ## <a name="intellisense"></a>IntelliSense
 
-- Le nouveau moteur de base de données SQLite est désormais celui utilisé par défaut. Le nouveau moteur accélère les opérations de base de données comme **atteindre la définition** et **Rechercher toutes les références**. Cela améliore considérablement le temps d’analyse de la solution initiale. Le paramètre a été déplacé vers **outils > Options > éditeur de texte > C/C++ > avancé**. (Anciennement sous... C/C++ > expérimental.)
+- Le nouveau moteur de base de données SQLite est désormais celui utilisé par défaut. Le nouveau moteur accélère les opérations de base de données comme **atteindre la définition** et **Rechercher toutes les références** . Cela améliore considérablement le temps d’analyse de la solution initiale. Le paramètre a été déplacé vers **outils > Options > éditeur de texte > C/C++ > avancé** . (Anciennement sous... C/C++ > expérimental.)
 
 - Nous avons amélioré les performances d’IntelliSense dans les projets et fichiers qui n’utilisent pas d’en-têtes précompilés : un en-tête précompilé automatique est créé pour les en-têtes du fichier en cours.
 
@@ -607,7 +607,7 @@ Des améliorations ont été apportées au partage de code multiplateforme et à
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
 - La charge de travail Linux a ajouté la prise en charge de la **synchronisation** d’accès en tant qu’alternative à **SFTP** pour la synchronisation des fichiers sur des machines Linux distantes.
-- La compilation croisée ciblant les microcontrôleurs ARM est maintenant prise en charge. Pour activer cette fonctionnalité dans l’installation, choisissez la charge de travail **Développement Linux en C++** et sélectionnez l’option **Développement embarqué et IoT**. Cette option ajoute les outils de compilation croisée GCC ARM à votre installation. Pour plus d’informations, consultez [ARM GCC Cross Compilation in Visual Studio](https://devblogs.microsoft.com/cppblog/arm-gcc-cross-compilation-in-visual-studio/).
+- La compilation croisée ciblant les microcontrôleurs ARM est maintenant prise en charge. Pour activer cette fonctionnalité dans l’installation, choisissez la charge de travail **Développement Linux en C++** et sélectionnez l’option **Développement embarqué et IoT** . Cette option ajoute les outils de compilation croisée GCC ARM à votre installation. Pour plus d’informations, consultez [ARM GCC Cross Compilation in Visual Studio](https://devblogs.microsoft.com/cppblog/arm-gcc-cross-compilation-in-visual-studio/).
 - La prise en charge de CMake a été améliorée. Vous pouvez maintenant utiliser votre base de code CMake existante sans avoir à la convertir en projet Visual Studio. Pour plus d’informations, consultez [Configurer un projet CMake Linux](../linux/cmake-linux-project.md).
 - La prise en charge de l’exécution de tâches distantes a été améliorée. Cette fonctionnalité vous permet d’exécuter n’importe quelle commande sur un système distant défini dans le gestionnaire de connexions de Visual Studio. Avec les tâches distantes, vous pouvez également copier des fichiers sur le système distant.
 Pour plus d’informations, consultez [Configurer un projet CMake Linux](../linux/cmake-linux-project.md).
@@ -635,7 +635,7 @@ Vous disposez maintenant de nouvelles options pour l’écriture et l’empaquet
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
-Un modèle de **projet de création de packages d’application Windows ** a été ajouté et facilite considérablement l’empaquetage d’applications de bureau à l’aide de Desktop Bridge. Cette fonctionnalité est disponible sous **Fichier | Nouveau | Projet | Installé | Visual C++ | Plateforme Windows universelle**. Pour plus d’informations, consultez [Empaqueter une application à l’aide de Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Un modèle de **projet de création de packages d’application Windows** a été ajouté et facilite considérablement l’empaquetage d’applications de bureau à l’aide de Desktop Bridge. Cette fonctionnalité est disponible sous **Fichier | Nouveau | Projet | Installé | Visual C++ | Plateforme Windows universelle** . Pour plus d’informations, consultez [Empaqueter une application à l’aide de Visual Studio (Desktop Bridge)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Lors de l’écriture de nouveau code, vous pouvez désormais utiliser C++/WinRT, une projection de langage C++ standard pour Windows Runtime (WinRT) implémentée uniquement dans les fichiers d’en-tête. Elle vous permet de consommer et de créer des API Windows Runtime à l’aide d’un compilateur C++ conforme aux normes. C++/WinRT est conçu pour offrir aux développeurs C++ un accès idéal à l’API Windows moderne. Pour plus d’informations, consultez [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/).
 
@@ -674,7 +674,7 @@ Les vérificateurs principaux C++ permettant d’appliquer les [directives princ
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
-Les adaptateurs de Google Test et Boost. test sont désormais disponibles en tant que composants de la charge de travail **développement Desktop en C++** . Ils sont intégrés à l' **Explorateur de tests**. La prise en charge de CTest est ajoutée pour les projets CMake (à l’aide d’un dossier ouvert), bien que l’intégration complète avec l' **Explorateur de tests** ne soit pas encore disponible. Pour plus d’informations, consultez [écriture de tests unitaires pour C/C++](/visualstudio/test/writing-unit-tests-for-c-cpp).
+Les adaptateurs de Google Test et Boost. test sont désormais disponibles en tant que composants de la charge de travail **développement Desktop en C++** . Ils sont intégrés à l' **Explorateur de tests** . La prise en charge de CTest est ajoutée pour les projets CMake (à l’aide d’un dossier ouvert), bien que l’intégration complète avec l' **Explorateur de tests** ne soit pas encore disponible. Pour plus d’informations, consultez [écriture de tests unitaires pour C/C++](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
 ##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 version 15.6
 
@@ -707,13 +707,13 @@ Outils Visual Studio Graphics Diagnostics : vous pouvez les utiliser pour enreg
 
   ![Modification de l’historique des ressources](media/resource-history-change.png)
 
-  Vous pouvez capturer des frames avec la capture de pile des appels complète activée. Cela vous permet de déduire rapidement le contexte de chaque événement de modification et de l’inspecter dans votre projet Visual Studio. Définissez l’option capture de pile complète dans la boîte de dialogue **options de > des outils** Visual Studio sous **Graphics Diagnostics**.
+  Vous pouvez capturer des frames avec la capture de pile des appels complète activée. Cela vous permet de déduire rapidement le contexte de chaque événement de modification et de l’inspecter dans votre projet Visual Studio. Définissez l’option capture de pile complète dans la boîte de dialogue **options de > des outils** Visual Studio sous **Graphics Diagnostics** .
 
 - **Statistiques d’API :** affichez une synthèse générale de l’utilisation des API dans votre frame. Il est pratique de découvrir des appels que vous n’êtes pas en train de faire, ou les appels que vous faites trop souvent. Cette fenêtre est disponible via **afficher > statistiques des API** dans Visual Studio Graphics Analyzer.
 
   ![Statistiques d’API](media/api-stats.png)
 
-- **Statistiques de la mémoire :** Affichez la quantité de mémoire allouée par le pilote pour les ressources que vous créez dans le frame. Cette fenêtre est disponible via **afficher les statistiques de la mémoire >** dans **Visual Studio Graphics Analyzer**. Pour copier des données dans un fichier CSV pour les afficher dans une feuille de calcul, cliquez avec le bouton droit et choisissez **copier tout**.
+- **Statistiques de la mémoire :** Affichez la quantité de mémoire allouée par le pilote pour les ressources que vous créez dans le frame. Cette fenêtre est disponible via **afficher les statistiques de la mémoire >** dans **Visual Studio Graphics Analyzer** . Pour copier des données dans un fichier CSV pour les afficher dans une feuille de calcul, cliquez avec le bouton droit et choisissez **copier tout** .
 
   ![Statistiques de la mémoire](media/memory-stats.png)
 
@@ -735,14 +735,14 @@ Outils Visual Studio Graphics Diagnostics : vous pouvez les utiliser pour enreg
 
 ::: moniker-end
 
-::: moniker range="=vs-2015"
+::: moniker range="=msvc-140"
 
 Pour obtenir la liste complète des nouveautés jusqu’à Visual Studio 2015, Update 3, consultez [Visual C++ What’s New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).
 
 Pour plus d’informations sur les nouveautés de Visual Studio 2015, consultez les notes de publication. Elles sont liées à partir de [l’historique des notes de publication de Visual Studio 2015](/visualstudio/releasenotes/vs2015-version-history).
 
-Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2019, consultez [Nouveautés de c++ dans Visual studio 2019](?preserve-view=true&view=vs-2019).
+Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2019, consultez [Nouveautés de c++ dans Visual studio 2019](?preserve-view=true&view=msvc-160).
 
-Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2017, consultez [Nouveautés de C++ dans Visual Studio 2017](?preserve-view=true&view=vs-2017).
+Pour plus d’informations sur les nouveautés de C++ dans Visual Studio 2017, consultez [Nouveautés de C++ dans Visual Studio 2017](?preserve-view=true&view=msvc-150).
 
 ::: moniker-end

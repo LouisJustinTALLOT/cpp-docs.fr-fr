@@ -4,12 +4,12 @@ description: Procédure pas à pas qui montre comment créer un projet MSBuild C
 ms.date: 10/08/2020
 helpviewer_keywords:
 - 'MSBuild (C++), walkthrough: create a project'
-ms.openlocfilehash: 4f17cd8c4f5f48d8be5cd7cb25940db87029e111
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: b3d4e8881f926e80e95832a27f7a5106ce876265
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099730"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924331"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Procédure pas à pas : utilisation de MSBuild pour créer un projet Visual C++
 
@@ -28,7 +28,7 @@ Cette procédure pas à pas décrit les tâches suivantes :
 
 - Personnalisation du projet à l’aide de MSBuild.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Pour effectuer cette procédure pas à pas, vous avez besoin des conditions préalables suivantes :
 
@@ -36,21 +36,21 @@ Pour effectuer cette procédure pas à pas, vous avez besoin des conditions pré
 
 - Une compréhension générale du système MSBuild.
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > [!NOTE]
 > La plupart des instructions de génération de bas niveau sont contenues dans les *`.targets`* *`.props`* fichiers et qui sont définis dans le dossier cibles par défaut, stocké dans la propriété `$(VCTargetsPath)` . C’est là que vous trouverez des fichiers tels que *`Microsoft.Cpp.Common.props`* . Le chemin d’accès par défaut de ces fichiers dans Visual Studio 2015 et versions antérieures est sous *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 > [!NOTE]
 > La plupart des instructions de génération de bas niveau sont contenues dans les *`.targets`* *`.props`* fichiers et qui sont définis dans le dossier cibles par défaut, stocké dans la propriété `$(VCTargetsPath)` . C’est là que vous trouverez des fichiers tels que *`Microsoft.Cpp.Common.props`* . Le chemin d’accès par défaut de ces fichiers dans Visual Studio 2017 est sous *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . Visual Studio 2015 et les versions antérieures les stockaient sous *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 > [!NOTE]
 > La plupart des instructions de génération de bas niveau sont contenues dans les *`.targets`* *`.props`* fichiers et qui sont définis dans le dossier cibles par défaut, stocké dans la propriété `$(VCTargetsPath)` . C’est là que vous trouverez des fichiers tels que *`Microsoft.Cpp.Common.props`* . Le chemin d’accès par défaut de ces fichiers est sous *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\`* . L' `<version>` élément Path est spécifique à la version de Visual Studio. Il s’agit *`v160`* de Visual Studio 2019. Visual Studio 2017 stockait ces fichiers sous *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* . Visual Studio 2015 et les versions antérieures les stockaient sous *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* .

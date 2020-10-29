@@ -4,16 +4,16 @@ description: Fichiers de prise en charge, propriétés et cibles utilisés par M
 ms.date: 10/14/2020
 helpviewer_keywords:
 - MSBuild overview
-ms.openlocfilehash: b08db751bfe04c7cd3ce2c2f4741c9ee8956cf74
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: e99b9a428d9c6149debc06e1dfab7a69c3590196
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099678"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924394"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Composants internes MSBuild pour les projets C++
 
-Quand vous définissez des propriétés de projet dans l’IDE et enregistrez le projet, Visual Studio écrit les paramètres du projet dans votre fichier projet. Le fichier projet contient des paramètres qui sont uniques à votre projet. Toutefois, il ne contient pas tous les paramètres requis pour générer votre projet. Le fichier projet contient des éléments `Import` qui incluent un réseau d’autres *fichiers de support*. Les fichiers de support contiennent les propriétés, cibles et paramètres restants nécessaires pour générer le projet.
+Quand vous définissez des propriétés de projet dans l’IDE et enregistrez le projet, Visual Studio écrit les paramètres du projet dans votre fichier projet. Le fichier projet contient des paramètres qui sont uniques à votre projet. Toutefois, il ne contient pas tous les paramètres requis pour générer votre projet. Le fichier projet contient des éléments `Import` qui incluent un réseau d’autres *fichiers de support* . Les fichiers de support contiennent les propriétés, cibles et paramètres restants nécessaires pour générer le projet.
 
 La plupart des cibles et propriétés dans les fichiers de support ont pour seul but d’implémenter le système de build. Cet article présente les cibles et les propriétés utiles que vous pouvez spécifier sur la ligne de commande MSBuild. Pour découvrir d’autres cibles et propriétés, explorez les fichiers dans les répertoires des fichiers de support.
 
@@ -21,7 +21,7 @@ La plupart des cibles et propriétés dans les fichiers de support ont pour seul
 
 Par défaut, les principaux fichiers de support Visual Studio sont situés dans les répertoires suivants. Ces informations sont spécifiques à la version.
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
@@ -39,9 +39,9 @@ Par défaut, les principaux fichiers de support Visual Studio sont situés dans 
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-### <a name="visual-studio-2017"></a>Visual Studio 2017
+### <a name="visual-studio-2017"></a>Visual Studio 2017
 
 - *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`*
 

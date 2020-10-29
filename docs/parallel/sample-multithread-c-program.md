@@ -2,16 +2,16 @@
 title: Exemple de programme multithread en langage C
 ms.date: 08/09/2019
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: eb1a07558dd9446e167c27ad08891f88c37fb4ec
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: 355024b995dc638b89a335983bd2e0f2cb0d96ce
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195817"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924769"
 ---
 # <a name="sample-multithread-c-program"></a>Exemple de programme multithread en langage C
 
-Bounce. c est un exemple de programme multithread qui crée un nouveau thread chaque fois que la `a` lettre `A` ou est tapée. Chaque thread rebondit une lettre d’une couleur différente autour de l’écran. Vous pouvez créer jusqu’à 32 threads. L’arrêt normal du programme se produit `q` lorsque `Q` ou est tapé.
+Bounce. c est un exemple de programme multithread qui crée un nouveau thread chaque fois que la lettre `a` ou `A` est tapée. Chaque thread rebondit une lettre d’une couleur différente autour de l’écran. Vous pouvez créer jusqu’à 32 threads. L’arrêt normal du programme se produit lorsque `q` ou `Q` est tapé.
 
 ## <a name="compile-and-link-a-multithread-program"></a>Compiler et lier un programme multithread
 
@@ -19,11 +19,11 @@ Les programmes sont compilés en tant que multithread par défaut.
 
 ### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>Pour compiler et lier le programme multithread Bounce. c à partir de l’environnement de développement
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-1. Dans le menu **Fichier**, choisissez **Nouveau** > **Projet**.
+1. Dans le menu **Fichier** , choisissez **Nouveau** > **Projet** .
 
-1. Dans la boîte de dialogue **créer un nouveau projet** , sélectionnez le modèle **application console** qui contient **C++** les balises, **Windows**et **console** . Choisissez **Suivant** pour continuer.
+1. Dans la boîte de dialogue **créer un nouveau projet** , sélectionnez le modèle **application console** qui contient les balises **C++** , **Windows** et **console** . Choisissez **Suivant** pour continuer.
 
 1. Dans la boîte de dialogue **configurer votre nouveau projet** , entrez un nom pour votre projet, par exemple « Bounce ». Choisissez **créer** pour continuer.
 
@@ -31,17 +31,17 @@ Les programmes sont compilés en tant que multithread par défaut.
 
 1. Dans la fenêtre d’édition, supprimez le code source existant et remplacez-le par l’exemple de code.
 
-1. Dans le menu **Générer** , choisissez **Générer la solution**.
+1. Dans le menu **Générer** , choisissez **Générer la solution** .
 
 1. Appuyez sur **F5** pour démarrer le programme dans le débogueur.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-1. Dans le menu **Fichier**, choisissez **Nouveau** > **Projet**.
+1. Dans le menu **Fichier** , choisissez **Nouveau** > **Projet** .
 
-1. Dans la boîte de dialogue **nouveau projet** , sélectionnez  **C++ visuel** dans le volet gauche, puis sélectionnez **projet vide** dans le volet central.
+1. Dans la boîte de dialogue **nouveau projet** , sélectionnez **Visual C++** dans le volet gauche, puis sélectionnez **projet vide** dans le volet central.
 
 1. Dans la zone d’édition **nom** , entrez un nom pour votre projet, par exemple « Bounce ». Choisissez **OK** pour créer le projet vide.
 
@@ -266,4 +266,4 @@ void ClearScreen(void)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Multithreading à l’aide de C et de Win32](multithreading-with-c-and-win32.md)
+[Multithreading à l'aide de C et de Win32](multithreading-with-c-and-win32.md)

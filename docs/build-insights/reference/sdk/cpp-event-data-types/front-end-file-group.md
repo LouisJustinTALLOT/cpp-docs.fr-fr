@@ -1,6 +1,6 @@
 ---
-title: Classe FrontEndFileGroup
-description: La référence de classe CMD Build Insights SDK FrontEndFileGroup.
+title: FrontEndFileGroup, classe
+description: Référence de la classe FrontEndFileGroup du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d2eebb650e59e750e5ebde74914dca5f0ef4779d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 902b394f645030fed4eeb79bae79535e6d246a1f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324775"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923226"
 ---
-# <a name="frontendfilegroup-class"></a>Classe FrontEndFileGroup
+# <a name="frontendfilegroup-class"></a>FrontEndFileGroup, classe
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `FrontEndFileGroup` classe est utilisée avec les fonctions [MatchEventStack](../functions/match-event-stack.md) et [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Utilisez-le pour faire correspondre des groupes [d’événements FRONT_END_FILE.](../event-table.md#front-end-file)
+La `FrontEndFileGroup` classe est utilisée avec les fonctions [MatchEventStack](../functions/match-event-stack.md) et [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilisez-le pour faire correspondre des groupes d’événements [FRONT_END_FILE](../event-table.md#front-end-file) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membres
 
-Avec les membres hérités de sa classe de `FrontEndFileGroup` base [EventGroup\<\> FrontEndFile,](event-group.md) la classe contient les membres suivants :
+Avec les membres hérités de sa classe de base [EventGroup \<FrontEndFile\> ](event-group.md) , la `FrontEndFileGroup` classe contient les membres suivants :
 
 ### <a name="constructors"></a>Constructeurs
 
 [FrontEndFileGroup](#front-end-file-group)
 
-## <a name="frontendfilegroup"></a><a name="front-end-file-group"></a>FrontEndFileGroup
+## <a name="frontendfilegroup"></a><a name="front-end-file-group"></a> FrontEndFileGroup
 
 ```cpp
 FrontEndFileGroup(std::deque<FrontEndFile>&& group);
@@ -53,7 +53,7 @@ FrontEndFileGroup(std::deque<FrontEndFile>&& group);
 
 ### <a name="parameters"></a>Paramètres
 
-*Groupe*\
-Un groupe d’événements [FRONT_END_FILE.](../event-table.md#front-end-file)
+*Communauté*\
+Groupe d’événements de [FRONT_END_FILE](../event-table.md#front-end-file) .
 
 ::: moniker-end

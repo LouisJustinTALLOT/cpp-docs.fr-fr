@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 7e7435a8538c04867a810e525e053109a7abc04d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: dd4a0b8a7a06debdc3556d48e000fe09deccf857
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683453"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924423"
 ---
 # <a name="creating-an-mfc-application"></a>Création d'une application MFC
 
@@ -21,26 +21,26 @@ Une application MFC est une application exécutable pour Windows qui se base sur
 
 - [Création et affichage de boîtes de dialogue](../../mfc/creating-and-displaying-dialog-boxes.md)
 
-- [Création d’une application MFC basée sur les formulaires](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+- [Création d’une application Forms-Based MFC](../../mfc/reference/creating-a-forms-based-mfc-application.md)
 
-- [Création d’une application MFC de style Explorateur de fichiers](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)
+- [Création d’un fichier Explorer-Style application MFC](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)
 
-- [Création d’une application MFC de style navigateur Web](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
+- [Création d’une application Web Browser-Style MFC](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
 
 L'Assistant Application MFC génère les classes et fichiers appropriés pour n'importe lequel de ces types d'applications, en fonction des options sélectionnées dans l'Assistant.
 
-Le moyen le plus simple de créer une application MFC consiste à utiliser l’Assistant Application MFC (projet d’application**MFC** dans Visual Studio 2019). Pour créer une application console MFC (un programme de ligne de commande qui utilise des bibliothèques MFC, mais qui s’exécute dans la fenêtre de console), utilisez l’Assistant de bureau Windows et choisissez l' **application console** et les options des **en-têtes MFC** .
+Le moyen le plus simple de créer une application MFC consiste à utiliser l’Assistant Application MFC (projet d’application **MFC** dans Visual Studio 2019). Pour créer une application console MFC (un programme de ligne de commande qui utilise des bibliothèques MFC, mais qui s’exécute dans la fenêtre de console), utilisez l’Assistant de bureau Windows et choisissez l' **application console** et les options des **en-têtes MFC** .
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Pour créer un formulaire MFC ou une application basée sur une boîte de dialogue
 
-1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
+1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet** .
 1. Entrez « MFC » dans la zone de recherche, puis choisissez **application MFC** dans la liste des résultats.
-1. Modifiez les valeurs par défaut en fonction des besoins, puis appuyez sur **créer** pour ouvrir l' **Assistant Application MFC**.
-1. Modifiez les valeurs de configuration en fonction des besoins, puis cliquez sur **Terminer**.
+1. Modifiez les valeurs par défaut en fonction des besoins, puis appuyez sur **créer** pour ouvrir l' **Assistant Application MFC** .
+1. Modifiez les valeurs de configuration en fonction des besoins, puis cliquez sur **Terminer** .
 
-Pour plus d’informations, consultez [création d’une application MFC basée sur les formulaires](creating-a-forms-based-mfc-application.md).
+Pour plus d’informations, consultez [création d’une Forms-Based application MFC](creating-a-forms-based-mfc-application.md).
 
 ![Capture d’écran de l’Assistant Application MFC dans Visual Studio 2019.](media/mfc-app-wizard.png)
 
@@ -48,25 +48,25 @@ Pour plus d’informations, consultez [création d’une application MFC basée 
 
 Une application console MFC est un programme de ligne de commande qui utilise des bibliothèques MFC, mais qui s’exécute dans la fenêtre de console.
 
-1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
+1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet** .
 1. Entrez « Bureau » dans la zone de recherche, puis choisissez **Assistant Bureau Windows** dans la liste des résultats.
-1. Modifiez le nom du projet si nécessaire, puis appuyez sur **suivant** pour ouvrir l' **Assistant du bureau Windows**.
-1. Cochez la case **en-têtes MFC** et définissez d’autres valeurs en fonction des besoins, puis cliquez sur **Terminer**.
+1. Modifiez le nom du projet si nécessaire, puis appuyez sur **suivant** pour ouvrir l' **Assistant du bureau Windows** .
+1. Cochez la case **en-têtes MFC** et définissez d’autres valeurs en fonction des besoins, puis cliquez sur **Terminer** .
 
 ![Capture d’écran de l’Assistant de bureau Windows dans Visual Studio 2019.](media/windows-desktop-wizard.png)
 
 ::: moniker-end
 
-::: moniker range="=vs-2017"
+::: moniker range="=msvc-150"
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Pour créer un formulaire MFC ou une application basée sur une boîte de dialogue
 
-1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
-1. Sous les modèles **installés** , choisissez **Visual C++**  >  **MFC/ATL**. Si vous ne les voyez pas, utilisez la Visual Studio Installer pour les ajouter.
+1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet** .
+1. Sous les modèles **installés** , choisissez **Visual C++**  >  **MFC/ATL** . Si vous ne les voyez pas, utilisez la Visual Studio Installer pour les ajouter.
 1. Choisissez **application MFC** dans le volet central.
-1. Modifiez les valeurs de configuration en fonction des besoins, puis cliquez sur **Terminer**.
+1. Modifiez les valeurs de configuration en fonction des besoins, puis cliquez sur **Terminer** .
 
-Pour plus d’informations, consultez [création d’une application MFC basée sur les formulaires](creating-a-forms-based-mfc-application.md).
+Pour plus d’informations, consultez [création d’une Forms-Based application MFC](creating-a-forms-based-mfc-application.md).
 
 ![Capture d’écran de l’Assistant Application MFC dans Visual Studio 2017.](media/mfc-app-wizard.png)
 
@@ -74,26 +74,26 @@ Pour plus d’informations, consultez [création d’une application MFC basée 
 
 Une application console MFC est un programme de ligne de commande qui utilise des bibliothèques MFC, mais qui s’exécute dans la fenêtre de console.
 
-1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
-1. Sous les modèles **installés** , choisissez **Visual C++** > **Bureau Windows**.
+1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet** .
+1. Sous les modèles **installés** , choisissez **Visual C++** > **Bureau Windows** .
 1. Choisissez **Windows Desktop Wizard** dans le volet central.
-1. Modifiez le nom du projet en fonction des besoins, puis appuyez sur **OK** pour ouvrir l' **Assistant du bureau Windows**.
-1. Cochez la case **en-têtes MFC** et définissez d’autres valeurs en fonction des besoins, puis cliquez sur **Terminer**.
+1. Modifiez le nom du projet en fonction des besoins, puis appuyez sur **OK** pour ouvrir l' **Assistant du bureau Windows** .
+1. Cochez la case **en-têtes MFC** et définissez d’autres valeurs en fonction des besoins, puis cliquez sur **Terminer** .
 
 ![Capture d’écran de l’Assistant de bureau Windows dans Visual Studio 2017.](media/windows-desktop-wizard-2017.png)
 
 ::: moniker-end
 
-::: moniker range="=vs-2015"
+::: moniker range="=msvc-140"
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>Pour créer un formulaire MFC ou une application basée sur une boîte de dialogue
 
-1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
-1. Sous les modèles **installés** , choisissez **Visual C++** > **MFC**.
+1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet** .
+1. Sous les modèles **installés** , choisissez **Visual C++** > **MFC** .
 1. Choisissez **application MFC** dans le volet central.
-1. Cliquez sur **suivant** pour démarrer l' **Assistant Application MFC**.
+1. Cliquez sur **suivant** pour démarrer l' **Assistant Application MFC** .
 
-Pour plus d’informations, consultez [création d’une application MFC basée sur les formulaires](creating-a-forms-based-mfc-application.md).
+Pour plus d’informations, consultez [création d’une Forms-Based application MFC](creating-a-forms-based-mfc-application.md).
 
 ![Capture d’écran de l’Assistant Application MFC dans Visual Studio 2015.](media/mfc-app-wizard-2015.png)
 
@@ -101,15 +101,15 @@ Pour plus d’informations, consultez [création d’une application MFC basée 
 
 Une application console MFC est un programme de ligne de commande qui utilise des bibliothèques MFC, mais qui s’exécute dans la fenêtre de console.
 
-1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet**.
-1. Sous les modèles **installés** , choisissez **Visual C++** > **Win32**.
+1. Dans le menu principal, choisissez **fichier** > **nouveau** > **projet** .
+1. Sous les modèles **installés** , choisissez **Visual C++** > **Win32** .
 1. Choisissez **application console Win32** dans le volet central.
-1. Modifiez le nom du projet si nécessaire, puis cliquez sur **OK**.
-1. Dans la deuxième page de l’Assistant, activez la case à cocher **Ajouter des en-têtes communs pour MFC** et définissez d’autres valeurs si nécessaire, puis cliquez sur **Terminer**.
+1. Modifiez le nom du projet si nécessaire, puis cliquez sur **OK** .
+1. Dans la deuxième page de l’Assistant, activez la case à cocher **Ajouter des en-têtes communs pour MFC** et définissez d’autres valeurs si nécessaire, puis cliquez sur **Terminer** .
 
 ::: moniker-end
 
-Une fois votre projet créé, vous pouvez visualiser les fichiers créés dans l’**Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour les projets Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Une fois votre projet créé, vous pouvez visualiser les fichiers créés dans l’ **Explorateur de solutions** . Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour les projets Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Voir aussi
 

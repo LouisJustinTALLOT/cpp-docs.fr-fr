@@ -1,6 +1,6 @@
 ---
-title: SurTraceInfoFunc typedef
-description: La référence SDK OnTraceInfoFunc typéef de CMD Build Insights.
+title: OnTraceInfoFunc (typedef)
+description: Référence typedef OnTraceInfoFunc du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b987d4db9852c2e52c148bb91015ad414c04d41b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4aaa865fd0f907a67179e7ee967f23a9827b0026
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329022"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922459"
 ---
-# <a name="ontraceinfofunc-typedef"></a>SurTraceInfoFunc typedef
+# <a name="ontraceinfofunc-typedef"></a>OnTraceInfoFunc (typedef)
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Le `OnTraceInfoFunc` tapdef est l’une des signatures de fonction utilisées dans les structures [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) et [RELOG_CALLBACKS.](relog-callbacks-struct.md)
+Le `OnTraceInfoFunc` typedef est l’une des signatures de fonction utilisées dans les structures [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) et [RELOG_CALLBACKS](relog-callbacks-struct.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,13 +38,13 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnTraceInfoFunc)(
 ### <a name="parameters"></a>Paramètres
 
 *traceInfo*\
-Un [objet TRACE_INFO_DATA](../c-event-data-types/trace-info-data-struct.md) qui contient des informations sur la trace actuellement analysée ou relstruée.
+Objet [TRACE_INFO_DATA](../c-event-data-types/trace-info-data-struct.md) qui contient des informations sur la trace en cours d’analyse ou de retardement.
 
 *callbackContext*\
-La valeur contextuelle qui a été fixée pour ce rappel en [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) ou [RELOG_DESCRIPTOR](relog-descriptor-struct.md).
+Valeur de contexte qui a été définie pour ce rappel dans [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) ou [RELOG_DESCRIPTOR](relog-descriptor-struct.md).
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une [valeur CALLBACK_CODE](callback-code-enum.md) qui contrôle ce qui devrait se passer ensuite.
+Valeur [CALLBACK_CODE](callback-code-enum.md) qui contrôle ce qui doit se passer ensuite.
 
 ::: moniker-end

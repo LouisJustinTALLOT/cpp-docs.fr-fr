@@ -6,30 +6,30 @@ helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-ms.openlocfilehash: 36c07da6249a106836433e127f95258d4ed5b509
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: e593fdbd1c8c48a381cb2941971ebe4e0148965d
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706942"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923779"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Ajout d’un fournisseur OLE DB ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Utilisez cet Assistant pour ajouter un fournisseur OLE DB ATL à un projet. Un fournisseur OLE DB ATL se compose de classes data source, session, command et rowset. Le projet doit avoir été créé en tant qu’application COM ATL.
 
 ## <a name="to-add-an-atl-ole-db-provider-to-your-project"></a>Pour ajouter un fournisseur OLE DB ATL à votre projet
 
-1. Dans **Affichage de classes**, cliquez avec le bouton droit sur le projet. Dans le menu contextuel, cliquez sur **Ajouter**, puis sur **Ajouter une classe**.
+1. Dans **Affichage de classes** , cliquez avec le bouton droit sur le projet. Dans le menu contextuel, cliquez sur **Ajouter** , puis sur **Ajouter une classe** .
 
-1. Dans le dossier **Visual C++**, double-cliquez sur l’icône **ATL OLE DB Provider** (Fournisseur OLE DB ATL) ou sélectionnez-le et cliquez sur **Ouvrir**.
+1. Dans le dossier **Visual C++** , double-cliquez sur l’icône **ATL OLE DB Provider** (Fournisseur OLE DB ATL) ou sélectionnez-le et cliquez sur **Ouvrir** .
 
    L’Assistant Fournisseur OLE DB ATL s’affiche.
 

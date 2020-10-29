@@ -25,20 +25,20 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: bb301f63bfd1e6839d7893cdc03d61e021409666
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: eaaa2c7428809c05532642b0f9ac53146c6f01a9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500069"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924285"
 ---
 # <a name="general-property-page-project"></a>Général, page de propriétés (Projet)
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Cette rubrique s’applique aux projets Visual Studio pour Windows. Pour les projets Linux, consultez Référence de la [page de propriétés C++ Linux](../../linux/prop-pages-linux.md). Pour les projets CMake, consultez [projets cmake dans Visual Studio](../cmake-projects-in-visual-studio.md). Pour les projets Android, consultez [Propriétés générales du projet (Android C++)](../../cross-platform/general-android-prop-page.md). Pour les projets Makefile Android, consultez [Propriétés générales du projet (Makefile Android C++)](../../cross-platform/general-makefile-android-prop-page.md)
 
-Lorsque vous cliquez avec le bouton droit sur un nœud de projet dans Explorateur de solutions, puis sélectionnez **Propriétés**, la page de propriétés **général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche les propriétés suivantes :
+Lorsque vous cliquez avec le bouton droit sur un nœud de projet dans Explorateur de solutions, puis sélectionnez **Propriétés** , la page de propriétés **général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche les propriétés suivantes :
 
 - **Répertoire de sortie**
 
@@ -100,9 +100,9 @@ Lorsque vous cliquez avec le bouton droit sur un nœud de projet dans Explorateu
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bouton droit sur un nœud de projet dans **Explorateur de solutions**, et que vous sélectionnez **Propriétés**, la page de propriétés **général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche deux sections de propriétés :
+Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bouton droit sur un nœud de projet dans **Explorateur de solutions** , et que vous sélectionnez **Propriétés** , la page de propriétés **général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche deux sections de propriétés :
 
 - Général
 
@@ -112,7 +112,7 @@ Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bout
 
 - **Plateforme cible**
 
-   Spécifie la plateforme sur laquelle le projet s'exécutera. Par exemple Windows, Android ou iOS. La valeur **Windows 10** signifie que le projet cible la plateforme Windows universelle. Si vous ciblez des versions antérieures de Windows, la version n’est pas répertoriée et la valeur de ce champ est simplement **Windows**. Il s'agit d'un champ en lecture seule qui est défini quand vous créez un projet.
+   Spécifie la plateforme sur laquelle le projet s'exécutera. Par exemple Windows, Android ou iOS. La valeur **Windows 10** signifie que le projet cible la plateforme Windows universelle. Si vous ciblez des versions antérieures de Windows, la version n’est pas répertoriée et la valeur de ce champ est simplement **Windows** . Il s'agit d'un champ en lecture seule qui est défini quand vous créez un projet.
 
 - **Version de la plateforme cible (Visual Studio 2015)**
 
@@ -150,7 +150,7 @@ Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bout
 
 - **Extensions à supprimer lors du nettoyage**
 
-   L’option **Nettoyer** (menu **Générer**) supprime les fichiers du répertoire intermédiaire où la configuration d’un projet est générée. Les fichiers portant les extensions spécifiées avec cette propriété sont supprimés quand vous exécutez la commande **Nettoyer** ou quand vous effectuez une regénération. Outre les fichiers qui figurent dans le répertoire intermédiaire avec ces extensions, le système de génération supprime également toute sortie connue de la génération, quel que soit l’emplacement où elle se trouve (y compris les sorties intermédiaires telles que les fichiers .obj). Notez que vous pouvez spécifier des caractères génériques.
+   L’option **Nettoyer** (menu **Générer** ) supprime les fichiers du répertoire intermédiaire où la configuration d’un projet est générée. Les fichiers portant les extensions spécifiées avec cette propriété sont supprimés quand vous exécutez la commande **Nettoyer** ou quand vous effectuez une regénération. Outre les fichiers qui figurent dans le répertoire intermédiaire avec ces extensions, le système de génération supprime également toute sortie connue de la génération, quel que soit l’emplacement où elle se trouve (y compris les sorties intermédiaires telles que les fichiers .obj). Notez que vous pouvez spécifier des caractères génériques.
 
    Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>.
 
@@ -170,7 +170,7 @@ Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bout
 
 ## <a name="project-defaults"></a>Paramètres par défaut du projet
 
-Les propriétés de la section Paramètres par défaut du projet représentent les propriétés par défaut que vous pouvez modifier. La définition de ces propriétés est accessible dans les fichiers .props dans *Installation Directory*\VC\VCProjectDefaults.
+Les propriétés de la section Paramètres par défaut du projet représentent les propriétés par défaut que vous pouvez modifier. La définition de ces propriétés est accessible dans les fichiers .props dans *Installation Directory* \VC\VCProjectDefaults.
 
 - **Type de configuration**
 
@@ -220,7 +220,7 @@ Les propriétés de la section Paramètres par défaut du projet représentent l
 
    Dans les projets managés, spécifie la version du .NET Framework à cibler.
 
-- **Optimisation de l'ensemble du programme**
+- **Optimisation de l’ensemble du programme**
 
    Spécifie l’option du compilateur [/GL](gl-whole-program-optimization.md) et l’option de l’éditeur de liens [/LTCG](ltcg-link-time-code-generation.md). Par défaut, cette option est désactivée pour les configurations Debug, et activée pour les configurations Retail.
 

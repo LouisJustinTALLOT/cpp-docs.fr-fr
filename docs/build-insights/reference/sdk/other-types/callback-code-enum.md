@@ -1,6 +1,6 @@
 ---
-title: CALLBACK_CODE enum
-description: La référence enum de L’ouvrage de construction de la CMD Build Insights CALLBACK_CODE.
+title: Énumération CALLBACK_CODE
+description: Le kit de développement logiciel (SDK) C++ Build Insights CALLBACK_CODE référence Enum.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d0d3dcc70040f562cd40755188e545f709a807b5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 146d191d0b642ad538f5a314016b41fdbdf26113
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329194"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922589"
 ---
-# <a name="callback_code-enum"></a>CALLBACK_CODE enum
+# <a name="callback_code-enum"></a>Énumération CALLBACK_CODE
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-L’enum `CALLBACK_CODE` est utilisé contrôler le flux d’une analyse ou de relogging session. Retournez une valeur CALLBACK_CODE des fonctions dans [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) ou [RELOG_CALLBACKS](relog-callbacks-struct.md) pour contrôler ce qui devrait se passer ensuite.
+L' `CALLBACK_CODE` énumération est utilisée pour contrôler le déroulement d’une session d’analyse ou de rejournalisation. Retournez une valeur CALLBACK_CODE à partir des fonctions dans [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) ou [RELOG_CALLBACKS](relog-callbacks-struct.md) pour contrôler ce qui doit se passer ensuite.
 
 ## <a name="members"></a>Membres
 
 | Nom | Valeur | Description |
 |--|--|--|
-| `CALLBACK_CODE_ANALYSIS_SUCCESS` | 1 (0x00000001) | Poursuivez l’analyse actuelle ou reloggingez la session normalement. |
-| `CALLBACK_CODE_ANALYSIS_FAILURE` | 2 (0x0000002) | Annuler l’analyse en cours ou la session de relogging et signaler une erreur. |
-| `CALLBACK_CODE_ANALYSIS_CANCEL` | 4 (0x00000004) | Annuler l’analyse en cours ou la session de relogging. |
+| `CALLBACK_CODE_ANALYSIS_SUCCESS` | 1 (0x00000001) | Poursuivez normalement la session d’analyse ou de rejournalisation actuelle. |
+| `CALLBACK_CODE_ANALYSIS_FAILURE` | 2 (0x00000002) | Annulez l’analyse actuelle ou la session de rejournalisation et signalez une erreur. |
+| `CALLBACK_CODE_ANALYSIS_CANCEL` | 4 (0x00000004) | Annulez la session d’analyse ou de rejournalisation en cours. |
 
 ::: moniker-end

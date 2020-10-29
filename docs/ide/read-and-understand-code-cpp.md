@@ -2,12 +2,12 @@
 title: Lire et comprendre du code C++ dans Visual Studio
 description: Utilisez l’éditeur de code C++ dans Visual Studio pour mettre en forme et comprendre votre code.
 ms.date: 05/28/2019
-ms.openlocfilehash: 3da4224592cabd11e449fa4be395eba046c0e554
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cd152ffbbd106c6a31a21da35d08b53555047209
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686127"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924650"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Lire et comprendre du code C++ dans Visual Studio
 
@@ -23,7 +23,7 @@ Le code non utilisé (par exemple, le code sous une ligne #if 0) a une couleur e
 
 ![Code inactif](../ide/media/inactive-code-cpp.png "Code inactif C++")
 
-Vous pouvez personnaliser les couleurs en tapant « Polices » dans **Lancement rapide**, puis en choisissant **Polices et couleurs**. Dans la boîte de dialogue **Polices et couleurs**, faites défiler l’affichage jusqu’aux options C/C++, puis choisissez une police et/ou une couleur personnalisée(s).
+Vous pouvez personnaliser les couleurs en tapant « Polices » dans **Lancement rapide** , puis en choisissant **Polices et couleurs** . Dans la boîte de dialogue **Polices et couleurs** , faites défiler l’affichage jusqu’aux options C/C++, puis choisissez une police et/ou une couleur personnalisée(s).
 
 ## <a name="outlining"></a>mode Plan
 
@@ -33,11 +33,11 @@ Cliquez avec le bouton droit n’importe où dans un fichier de code source et c
 
 Quand vous placez votre curseur devant une accolade, « { » ou « } », l’éditeur met en évidence l’accolade correspondante.
 
-Les autres options en mode plan se trouvent sous **modifier**  >  le**mode plan** dans le menu principal.
+Les autres options en mode plan se trouvent sous **modifier**  >  le **mode plan** dans le menu principal.
 
 ## <a name="line-numbers"></a>Numéros de ligne
 
-Vous pouvez ajouter des numéros de ligne à votre projet en accédant à **Outils**  >  **options**  >  **éditeur de texte**  >  **tous les langages**  >  **général** ou en recherchant « ligne num » avec **lancement rapide (Ctrl + Q)**. Les numéros de ligne peuvent être définis pour tous les langages ou pour seulement quelques langages, notamment C++.
+Vous pouvez ajouter des numéros de ligne à votre projet en accédant à **Outils**  >  **options**  >  **éditeur de texte**  >  **tous les langages**  >  **général** ou en recherchant « ligne num » avec **lancement rapide (Ctrl + Q)** . Les numéros de ligne peuvent être définis pour tous les langages ou pour seulement quelques langages, notamment C++.
 
 ## <a name="scroll-and-zoom"></a>Faire défiler et effectuer un zoom
 
@@ -49,7 +49,7 @@ Le **mode Carte** pour la barre de défilement vous permet de faire défiler et 
 
 ![Carte de code en C&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "Carte du code")
 
-Pour activer le **mode carte**, tapez « carte » dans la zone de recherche **lancement rapide** de la barre d’outils principale et choisissez **utiliser le mode de mappage de défilement**. Pour plus d’informations, consultez [Comment : suivre votre code en personnalisant la barre de défilement](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+Pour activer le **mode carte** , tapez « carte » dans la zone de recherche **lancement rapide** de la barre d’outils principale et choisissez **utiliser le mode de mappage de défilement** . Pour plus d’informations, consultez [Comment : suivre votre code en personnalisant la barre de défilement](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 Quand le **mode Carte** est désactivé, la barre de défilement met toujours en évidence les modifications que vous avez apportées dans le fichier. Le vert indique les modifications enregistrées, le jaune les modifications non enregistrées.
 
@@ -57,23 +57,23 @@ Quand le **mode Carte** est désactivé, la barre de défilement met toujours en
 
 Pointez n’importe quelle variable, fonction ou autre symbole pour obtenir des informations le concernant, y compris la déclaration et tout commentaire le précédant.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![Capture d’écran montrant les info-bulle Info express dans Visual Studio 2019.](../ide/media/quick-info-vs2019.png "Infos express")
 
-L’info-bulle **Info express** contient un lien **Rechercher en ligne**. Accédez à **Outils**  >  **options**  >  **éditeur de texte**  >  **C++**  >  **vue** C++ pour spécifier le moteur de recherche.
+L’info-bulle **Info express** contient un lien **Rechercher en ligne** . Accédez à **Outils**  >  **options**  >  **éditeur de texte**  >  **C++**  >  **vue** C++ pour spécifier le moteur de recherche.
 
-Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’**Info express** affiche le message d’erreur correspondant. Vous trouverez également le message d’erreur dans la fenêtre Liste d’erreurs.
+Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’ **Info express** affiche le message d’erreur correspondant. Vous trouverez également le message d’erreur dans la fenêtre Liste d’erreurs.
 
 ![Infos Express sur l’erreur](../ide/media/quickinfo-on-error.png "Infos Express sur l’erreur")
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ![Capture d’écran montrant les info-bulle Info express dans Visual Studio 2017.](../ide/media/quick-info.png "Infos express")
 
-Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’**Info express** affiche le message d’erreur correspondant. Vous trouverez également le message d’erreur dans la fenêtre **Liste d’erreurs**.
+Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’ **Info express** affiche le message d’erreur correspondant. Vous trouverez également le message d’erreur dans la fenêtre **Liste d’erreurs** .
 
 ![Infos Express sur l’erreur](../ide/media/quickinfo-on-error.png "Infos Express sur l’erreur")
 
@@ -95,7 +95,7 @@ Placez le curseur sur ou juste après un type, un mot clé ou une fonction et ap
 
 ## <a name="class-view"></a>Affichage de classes
 
-L’**Affichage de classes** affiche un ensemble d’arborescences pouvant faire l’objet d’une recherche, qui regroupent par projet tous les symboles de code et leurs hiérarchies parent/enfant et portée. Pour configurer ce que l’**Affichage de classes** affiche, accédez à **Paramètres de l’Affichage de classes** (cliquez sur l’icône en forme d’engrenage en haut de la fenêtre).
+L’ **Affichage de classes** affiche un ensemble d’arborescences pouvant faire l’objet d’une recherche, qui regroupent par projet tous les symboles de code et leurs hiérarchies parent/enfant et portée. Pour configurer ce que l’ **Affichage de classes** affiche, accédez à **Paramètres de l’Affichage de classes** (cliquez sur l’icône en forme d’engrenage en haut de la fenêtre).
 
 ![Affichage de classes en C&#43;&#43;](../ide/media/class-view.png "Affichage de classes")
 

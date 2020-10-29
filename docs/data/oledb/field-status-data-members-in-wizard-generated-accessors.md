@@ -5,26 +5,26 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 61ee867f664b6b0d885e35f6d58840b37ce322b9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 476c91f55071f6d1c7f243257273a32798813cae
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210910"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924635"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Données membres de l'état des champs dans les accesseurs générés par l'Assistant
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures. Vous pouvez toujours ajouter la fonctionnalité manuellement. Pour plus d’informations, consultez [Création d’un consommateur sans utiliser l’Assistant](creating-a-consumer-without-using-a-wizard.md).
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Lorsque vous utilisez l’**Assistant Consommateur OLE DB ATL** pour créer un consommateur, l’Assistant génère un membre de données dans la classe d’enregistrement utilisateur pour chaque champ que vous spécifiez dans le mappage de colonnes. Chaque membre de données est de type `DWORD` et contient une valeur d’état correspondant à son champ respectif.
+Lorsque vous utilisez l’ **Assistant Consommateur OLE DB ATL** pour créer un consommateur, l’Assistant génère un membre de données dans la classe d’enregistrement utilisateur pour chaque champ que vous spécifiez dans le mappage de colonnes. Chaque membre de données est de type `DWORD` et contient une valeur d’état correspondant à son champ respectif.
 
-Par exemple, pour un membre de données *m_OwnerID*, l’Assistant génère un membre de données supplémentaire pour l’état du champ (*dwOwnerIDStatus*) et un autre pour la longueur de champ (*dwOwnerIDLength*). Il génère également un mappage de colonnes avec des entrées COLUMN_ENTRY_LENGTH_STATUS.
+Par exemple, pour un membre de données *m_OwnerID* , l’Assistant génère un membre de données supplémentaire pour l’état du champ ( *dwOwnerIDStatus* ) et un autre pour la longueur de champ ( *dwOwnerIDLength* ). Il génère également un mappage de colonnes avec des entrées COLUMN_ENTRY_LENGTH_STATUS.
 
 Ceci est illustré dans le code suivant :
 
@@ -62,7 +62,7 @@ public:
 > [!NOTE]
 > Si vous modifiez la classe d’enregistrement utilisateur ou écrivez votre propre consommateur, les variables de données doivent précéder les variables d’état et de longueur.
 
-Vous pouvez utiliser les valeurs d’état pour le débogage. Si le code généré par l’**Assistant Consommateur OLE DB ATL** génère des erreurs de compilation telles que DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, vous devez tout d’abord examiner les valeurs actuelles des membre de données d’état des champs. Celles qui ont des valeurs différentes de zéro correspondent aux colonnes incriminées.
+Vous pouvez utiliser les valeurs d’état pour le débogage. Si le code généré par l’ **Assistant Consommateur OLE DB ATL** génère des erreurs de compilation telles que DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, vous devez tout d’abord examiner les valeurs actuelles des membre de données d’état des champs. Celles qui ont des valeurs différentes de zéro correspondent aux colonnes incriminées.
 
 Vous pouvez également utiliser les valeurs d’état pour définir une valeur NULL pour un champ particulier. Ainsi, vous pourrez distinguer une valeur de champ comme étant NULL au lieu de zéro si nécessaire. Il vous incombe de déterminer si NULL constitue une valeur valide ou une valeur spéciale, puis de décider comment votre application doit la gérer. OLE DB définit DBSTATUS_S_ISNULL comme la manière correcte pour spécifier une valeur NULL générique. Si le consommateur lit les données et que la valeur est NULL, le champ d’état est défini sur DBSTATUS_S_ISNULL. Si le consommateur souhaite définir une valeur NULL, il définit la valeur d’état sur DBSTATUS_S_ISNULL avant d’appeler le fournisseur.
 
@@ -116,4 +116,4 @@ Lorsque vous utilisez `CDynamicAccessor`, la longueur et l’état sont liés au
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[Utilisation des modèles de consommateurs OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

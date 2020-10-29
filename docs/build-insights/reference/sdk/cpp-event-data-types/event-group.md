@@ -1,6 +1,6 @@
 ---
-title: Cours EventGroup
-description: La référence de classe CMD Build Insights SDK EventGroup.
+title: EventGroup, classe
+description: Référence de la classe EventGroup du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 596c18ca0e9b4d7b26c4ed5209b16871952c4af2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57cbc7a053132909149aee182b9560e2ee33c161
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324985"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923313"
 ---
-# <a name="eventgroup-class"></a>Cours EventGroup
+# <a name="eventgroup-class"></a>EventGroup, classe
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Le `EventGroup` modèle de classe est la classe de base pour toutes les classes de capture de groupe.
 
@@ -47,20 +47,20 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*TActivité* Le type d’activité contenu dans le groupe.
+*Tactabilité* Type d’activité contenu dans le groupe.
 
 ## <a name="members"></a>Membres
 
 ### <a name="functions"></a>Fonctions
 
-[Back](#back)
-[begin front](#begin)
-[end](#end)
-[Front](#front)
-[Size](#size) [operator[]](#subscript-operator)operator[] Taille
+En [retour](#back) 
+ [commencer](#begin) 
+ [fin](#end) 
+ [Avant](#front) 
+ [[]](#subscript-operator) 
+ , opérateur [Taille](#size)
 
-
-## <a name="back"></a><a name="back"></a>Précédent
+## <a name="back"></a><a name="back"></a> Précédent
 
 ```cpp
 const TActivity& Back() const;
@@ -68,9 +68,9 @@ const TActivity& Back() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une référence au dernier événement d’activité dans le groupe.
+Référence au dernier événement d’activité dans le groupe.
 
-## <a name="begin"></a><a name="begin"></a>Commencer
+## <a name="begin"></a><a name="begin"></a> commencer
 
 ```cpp
 std::deque<TActivity>::const_iterator begin() const;
@@ -78,9 +78,9 @@ std::deque<TActivity>::const_iterator begin() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un itérateur pointant au début du groupe d’événements d’activité.
+Itérateur pointant au début du groupe d’événements d’activité.
 
-## <a name="end"></a><a name="end"></a>Fin
+## <a name="end"></a><a name="end"></a> effet
 
 ```cpp
 std::deque<TActivity>::const_iterator end() const;
@@ -88,9 +88,9 @@ std::deque<TActivity>::const_iterator end() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un itérateur pointant une position au-delà de la fin du groupe d’événements d’activité.
+Itérateur pointant vers une position au-delà de la fin du groupe d’événements d’activité.
 
-## <a name="front"></a><a name="front"></a>Avant
+## <a name="front"></a><a name="front"></a> Frontal
 
 ```cpp
 const TActivity& Front() const;
@@ -98,9 +98,9 @@ const TActivity& Front() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une référence au premier événement d’activité dans le groupe.
+Référence au premier événement d’activité dans le groupe.
 
-## <a name="operator"></a><a name="subscript-operator"></a>opérateur[]
+## <a name="operator"></a><a name="subscript-operator"></a> [], opérateur
 
 ```cpp
 const TActivity& operator[](size_t index) const;
@@ -108,14 +108,14 @@ const TActivity& operator[](size_t index) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Index*\
-L’index de l’élément d’accès dans le groupe d’événements d’activité.
+*évaluer*\
+Index de l’élément auquel accéder dans le groupe d’événements d’activité.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’événement de la pile d’événements stocké à la position indiquée par *index*.
+Événement de la pile d’événements stocké à la position indiquée par l' *index* .
 
-## <a name="size"></a><a name="size"></a>Taille
+## <a name="size"></a><a name="size"></a> Corps
 
 ```cpp
 size_t Size() const;
@@ -123,6 +123,6 @@ size_t Size() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La taille du groupe d’événements.
+Taille du groupe d’événements.
 
 ::: moniker-end

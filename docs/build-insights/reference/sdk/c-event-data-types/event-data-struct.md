@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 468fc30d337e5cfc5ab90f7558904fc90588c3df
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 617a82055f406c130d74a2823c2cf00aa1beef36
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041820"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923615"
 ---
 # <a name="event_data-structure"></a>Structure EVENT_DATA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `EVENT_DATA` structure décrit un événement reçu à partir d’une session d’analyse ou de rejournalisation. Ces sessions sont démarrées en appelant les fonctions [analyze](../functions/analyze.md), [Analysis](../functions/analyze-a.md), [AnalyzeW](../functions/analyze-w.md), [relog](../functions/relog.md), [RelogA](../functions/relog-a.md)ou [RelogW](../functions/relog-w.md) .
 
@@ -63,13 +63,13 @@ typedef struct EVENT_DATA_TAG
 | `EventId` | Nombre qui identifie l’événement. Pour obtenir la liste des identificateurs d’événements, consultez [event_id](event-id-enum.md). |
 | `EventInstanceId` | Numéro qui identifie de façon unique l’événement actuel à l’intérieur d’une trace. Cette valeur ne change pas lors de l’analyse ou de la rejournalisation de la même trace plusieurs fois. Utilisez ce champ pour identifier le même événement dans plusieurs analyses ou rejournalisation sur la même trace. |
 | `TickFrequency` | Nombre de graduations par seconde à utiliser lors de l’évaluation d’une durée mesurée en graduations. |
-| `StartTimestamp` | Lorsque l’événement est une *activité*, ce champ est défini sur une valeur de graduation capturée au moment du démarrage de l’activité. Si cet événement est un *événement simple*, ce champ est défini sur une valeur de graduation capturée au moment où l’événement s’est produit. |
-| `StopTimestamp` | Lorsque l’événement est une *activité*, ce champ est défini sur une valeur de graduation capturée au moment de l’arrêt de l’activité. Si l’événement Stop n’a pas encore été reçu pour cette activité, ce champ a la valeur zéro. Si cet événement est un *événement simple*, ce champ a la valeur zéro. |
-| `ExclusiveDurationTicks` | Si cet événement est une *activité*, ce champ est défini sur le nombre de graduations qui se sont produites directement dans cette activité. Le nombre de cycles qui se sont produits dans une activité enfant est exclu. Ce champ a la valeur zéro pour les *événements simples*. |
-| `CPUTicks` | Si cet événement est une *activité*, ce champ est défini sur le nombre de cycles de processeur qui se sont produits pendant cette activité. Un battement de l’UC est différent d’un battement normal. Les cycles de l’UC sont comptabilisés uniquement lorsque le processeur exécute du code dans une activité. Les cycles de l’UC ne sont pas comptabilisés lorsque le thread associé à l’activité est en veille. Ce champ a la valeur zéro pour les *événements simples*. |
-| `ExclusiveCPUTicks` | Ce champ a la même signification que `CPUTicks` , sauf qu’il n’inclut pas les cycles de processeur qui se sont produits dans les activités enfants. Ce champ a la valeur zéro pour les *événements simples*. |
-| `WallClockTimeResponsibilityTicks` | Si cet événement est une *activité*, ce champ est défini sur un nombre de cycles qui représente la contribution de cette activité à l’heure d’horloge globale. Un cycle de responsabilité de l’heure du mur est différent d’un battement normal. La responsabilité de l’horloge du mur prend en compte le parallélisme entre les activités. Par exemple, deux activités parallèles peuvent avoir une durée de 50 cycles et la même heure de début et de fin. Dans ce cas, les deux sont affectées à la responsabilité du temps horloge de 25 graduations. Ce champ a la valeur zéro pour les *événements simples*. |
-| `ExclusiveWallClockTimeResponsibilityTicks` | Ce champ a la même signification que `WallClockTimeResponsibilityTicks` , à la différence près qu’il n’inclut pas les graduations de la responsabilité de l’heure du mur des activités enfants. Ce champ a la valeur zéro pour les *événements simples*. |
+| `StartTimestamp` | Lorsque l’événement est une *activité* , ce champ est défini sur une valeur de graduation capturée au moment du démarrage de l’activité. Si cet événement est un *événement simple* , ce champ est défini sur une valeur de graduation capturée au moment où l’événement s’est produit. |
+| `StopTimestamp` | Lorsque l’événement est une *activité* , ce champ est défini sur une valeur de graduation capturée au moment de l’arrêt de l’activité. Si l’événement Stop n’a pas encore été reçu pour cette activité, ce champ a la valeur zéro. Si cet événement est un *événement simple* , ce champ a la valeur zéro. |
+| `ExclusiveDurationTicks` | Si cet événement est une *activité* , ce champ est défini sur le nombre de graduations qui se sont produites directement dans cette activité. Le nombre de cycles qui se sont produits dans une activité enfant est exclu. Ce champ a la valeur zéro pour les *événements simples* . |
+| `CPUTicks` | Si cet événement est une *activité* , ce champ est défini sur le nombre de cycles de processeur qui se sont produits pendant cette activité. Un battement de l’UC est différent d’un battement normal. Les cycles de l’UC sont comptabilisés uniquement lorsque le processeur exécute du code dans une activité. Les cycles de l’UC ne sont pas comptabilisés lorsque le thread associé à l’activité est en veille. Ce champ a la valeur zéro pour les *événements simples* . |
+| `ExclusiveCPUTicks` | Ce champ a la même signification que `CPUTicks` , sauf qu’il n’inclut pas les cycles de processeur qui se sont produits dans les activités enfants. Ce champ a la valeur zéro pour les *événements simples* . |
+| `WallClockTimeResponsibilityTicks` | Si cet événement est une *activité* , ce champ est défini sur un nombre de cycles qui représente la contribution de cette activité à l’heure d’horloge globale. Un cycle de responsabilité de l’heure du mur est différent d’un battement normal. La responsabilité de l’horloge du mur prend en compte le parallélisme entre les activités. Par exemple, deux activités parallèles peuvent avoir une durée de 50 cycles et la même heure de début et de fin. Dans ce cas, les deux sont affectées à la responsabilité du temps horloge de 25 graduations. Ce champ a la valeur zéro pour les *événements simples* . |
+| `ExclusiveWallClockTimeResponsibilityTicks` | Ce champ a la même signification que `WallClockTimeResponsibilityTicks` , à la différence près qu’il n’inclut pas les graduations de la responsabilité de l’heure du mur des activités enfants. Ce champ a la valeur zéro pour les *événements simples* . |
 | `Data` | Pointe vers des données supplémentaires stockées dans l’événement. Le type de données pointé est différent selon le `EventId` champ. |
 | `ProcessId` | Identificateur du processus dans lequel l’événement s’est produit. |
 | `ThreadId` | Identificateur du thread dans lequel l’événement s’est produit. |
@@ -77,7 +77,7 @@ typedef struct EVENT_DATA_TAG
 | `EventName` | Chaîne ANSI contenant le nom de l’entité identifiée par `EventId` . |
 | `EventWideName` | Chaîne étendue contenant le nom de l’entité identifiée par `EventId` . |
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 De nombreux champs dans `EVENT_DATA` contiennent des nombres de battements. C++ Build Insights utilise le compteur de performance de la fenêtre comme source des battements. Un nombre de cycles doit être utilisé avec le `TickFrequency` champ pour le convertir en une unité de temps appropriée, telle que des secondes. Consultez l’exemple ci-dessous pour effectuer cette conversion. `EVENT_DATA` ne contient pas de champ pour le nombre de cycles réguliers d’une activité. Pour obtenir cette valeur, soustraire `StartTimestamp` de `StopTimestamp` . `EVENT_DATA` est une structure destinée à être utilisée par les utilisateurs de l’API C. Pour les utilisateurs de l’API C++, les classes comme [Event](../cpp-event-data-types/event.md) effectuent automatiquement des conversions temporelles.
 
@@ -86,7 +86,7 @@ La valeur du `EVENT_DATA` `Data` champ dépend de la valeur de son `EventId` cha
 | Valeur `EventId` | Type vers lequel pointe `Data` |
 |--|--|
 | `EVENT_ID_BACK_END_PASS` | [CL_PASS_DATA](cl-pass-data-struct.md) |
-| `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
+| `EVENT_ID_COMMAND_LINE` | `const wchar_t` |
 | `EVENT_ID_COMPILER` | [INVOCATION_DATA](invocation-data-struct.md) |
 | `EVENT_ID_ENVIRONMENT_VARIABLE` | [NAME_VALUE_PAIR_DATA](name-value-pair-data-struct.md) |
 | `EVENT_ID_EXECUTABLE_IMAGE_OUTPUT` | [FILE_DATA](file-data-struct.md) |

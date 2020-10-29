@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 74cf72feedd8dc8e1186d54a8abe840195964620
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076208"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923656"
 ---
 # <a name="options-atl-property-page-wizard"></a>Options, Assistant Page de propriétés ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’Assistant Page de propriétés ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Utilisez cette page de l’Assistant pour définir le modèle de thread et le niveau d’agrégation de la page de propriétés que vous créez.
 
@@ -34,7 +34,7 @@ Utilisez cette page de l’Assistant pour définir le modèle de thread et le ni
    |Option|Description|
    |------------|-----------------|
    |**Unique**|La page de propriétés s’exécute uniquement dans le thread COM principal.|
-   |**Apartment**|La page de propriétés peut être créée dans n’importe quel thread unique cloisonné. La valeur par défaut.|
+   |**STA**|La page de propriétés peut être créée dans n’importe quel thread unique cloisonné. Valeur par défaut.|
 
 - **Agrégation**
 
@@ -44,7 +44,7 @@ Utilisez cette page de l’Assistant pour définir le modèle de thread et le ni
    |------------|-----------------|
    |**Oui**|Créez une page de propriétés qui peut être agrégée.|
    |**Non**|Créez une page de propriétés qui ne peut pas être agrégée.|
-   |**Uniquement**|Créez une page de propriétés qui peut être uniquement instanciée via l’agrégation.|
+   |**Ne**|Créez une page de propriétés qui peut être uniquement instanciée via l’agrégation.|
 
 ::: moniker-end
 

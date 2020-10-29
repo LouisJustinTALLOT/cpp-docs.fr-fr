@@ -1,6 +1,6 @@
 ---
-title: Cours d’invocation
-description: La référence de classe d’invocation de CMD Build Insights SDK.
+title: Classe d’appel
+description: Référence de la classe d’appel du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fcb087d46ea445251b0108f811545a44c26f421e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dfd463c7b9ca72dc14ad74b3759fdd1e3730d5a9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324642"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923145"
 ---
-# <a name="invocation-class"></a>Cours d’invocation
+# <a name="invocation-class"></a>Classe d’appel
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `Invocation` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Utilisez-le pour correspondre à un événement [COMPILER](../event-table.md#compiler) ou [LINKER.](../event-table.md#linker)
+La `Invocation` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilisez-le pour faire correspondre un [compilateur](../event-table.md#compiler) ou un événement de l' [éditeur de liens](../event-table.md#linker) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,7 +54,7 @@ public:
 
 ## <a name="members"></a>Membres
 
-Avec les membres hérités de sa `Invocation` classe de base [d’activité,](activity.md) la classe contient les membres suivants :
+Avec les membres hérités de sa classe de base [Activity](activity.md) , la `Invocation` classe contient les membres suivants :
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -62,13 +62,13 @@ Avec les membres hérités de sa `Invocation` classe de base [d’activité,](ac
 
 ### <a name="functions"></a>Fonctions
 
-[ToolPath](#tool-path)
-[ToolVersion](#tool-version)
-[ToolVersionString](#tool-version-string)
-[Type](#type)
-[WorkingDirectory](#working-directory)
+[Trajectoire d’outil](#tool-path) 
+ [Toolversion la valeur](#tool-version) 
+ [ToolVersionString](#tool-version-string) 
+ [Type](#type) 
+ [WorkingDirectory](#working-directory)
 
-## <a name="invocation"></a><a name="invocation"></a>Invocation
+## <a name="invocation"></a><a name="invocation"></a> Appel
 
 ```cpp
 Invocation(const RawEvent& event);
@@ -76,10 +76,10 @@ Invocation(const RawEvent& event);
 
 ### <a name="parameters"></a>Paramètres
 
-*Événement*\
-Un événement [COMPILER](../event-table.md#compiler) ou [LINKER.](../event-table.md#linker)
+*événement*\
+Événement [du compilateur](../event-table.md#compiler) ou de l' [éditeur de liens](../event-table.md#linker) .
 
-## <a name="toolpath"></a><a name="tool-path"></a>ToolPath (en)
+## <a name="toolpath"></a><a name="tool-path"></a> Outil
 
 ```cpp
 const wchar_t* ToolPath() const;
@@ -87,9 +87,9 @@ const wchar_t* ToolPath() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le chemin absolu vers l’outil qui a été invoqué.
+Chemin d’accès absolu à l’outil appelé.
 
-## <a name="toolversion"></a><a name="tool-version"></a>ToolVersion
+## <a name="toolversion"></a><a name="tool-version"></a> Toolversion la valeur
 
 ```cpp
 const INVOCATION_VERSION_DATA& ToolVersion() const;
@@ -97,9 +97,9 @@ const INVOCATION_VERSION_DATA& ToolVersion() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La version de l’outil qui a été invoquée, comme une [référence INVOCATION_VERSION_DATA.](../c-event-data-types/invocation-version-data-struct.md)
+Version de l’outil qui a été appelée, en tant que référence de [INVOCATION_VERSION_DATA](../c-event-data-types/invocation-version-data-struct.md) .
 
-## <a name="toolversionstring"></a><a name="tool-version-string"></a>ToolVersionString (en)
+## <a name="toolversionstring"></a><a name="tool-version-string"></a> ToolVersionString
 
 ```cpp
 const char* ToolVersionString() const;
@@ -107,7 +107,7 @@ const char* ToolVersionString() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La version de l’outil qui a été invoqué, comme une chaîne ANSI.
+Version de l’outil qui a été appelée, sous la forme d’une chaîne ANSI.
 
 ## <a name="type"></a>Type <a name="type"></a>
 
@@ -117,9 +117,9 @@ Type Type() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un code indiquant l’outil qui a été invoqué.
+Code indiquant l’outil qui a été appelé.
 
-## <a name="workingdirectory"></a><a name="working-directory"></a>Direction de travail
+## <a name="workingdirectory"></a><a name="working-directory"></a> WorkingDirectory
 
 ```cpp
 const wchar_t* WorkingDirectory() const;
@@ -127,6 +127,6 @@ const wchar_t* WorkingDirectory() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le chemin absolu vers le répertoire dans lequel l’outil a été invoqué.
+Chemin d’accès absolu au répertoire dans lequel l’outil a été appelé.
 
 ::: moniker-end

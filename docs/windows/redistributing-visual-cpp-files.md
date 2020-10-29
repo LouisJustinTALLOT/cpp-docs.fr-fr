@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 7a639f7ad7deb76cade47b0162012dcb70cb0d69
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: a660e67b2664417438ea9fa7acddbde4c20c307a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446751"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924142"
 ---
 # <a name="redistributing-visual-c-files"></a>Redistribution des fichiers Visual C++
 
@@ -25,19 +25,19 @@ ms.locfileid: "86446751"
 
 Lorsque vous déployez une application, vous devez également déployer les fichiers qui sont requis pour sa prise en charge. Si l’un de ces fichiers est fourni par Microsoft, vérifiez si vous êtes autorisé à les redistribuer. Vous trouverez un lien vers les termes du contrat de licence Visual Studio dans l’IDE. Utilisez le lien termes du contrat de licence de la boîte de dialogue à propos de Microsoft Visual Studio. Ou, téléchargez les CLUF et licences appropriés à partir du répertoire de [licence](https://visualstudio.microsoft.com/license-terms/)de Visual Studio.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Pour afficher la « liste Redist » référencée dans la section « Code distribuable » des termes du contrat de licence logiciel Microsoft Visual Studio 2019, consultez [fichiers de code distribuable pour Microsoft Visual Studio 2019](/visualstudio/releases/2019/redistribution#-distributable-code-files-for-visual-studio-2019)
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Pour afficher la « liste Redist » référencée dans la section « Code distribuable » des termes du contrat de licence logiciel Microsoft Visual Studio 2017, consultez [fichiers de code distribuable pour Microsoft Visual Studio 2017](/visualstudio/productinfo/2017-redistribution-vs#-distributable-code-files-for-visual-studio-2017).
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Pour afficher la « liste Redist » référencée dans la section « Code distribuable » des termes du contrat de licence logiciel Microsoft Visual Studio 2015, consultez [fichiers de code distribuable pour Microsoft Visual Studio 2015](/visualstudio/productinfo/2015-redistribution-vs#-distributable-code-files-for-visual-studio-2015).
 
@@ -65,11 +65,11 @@ Les modules de fusion redistribuables doivent être inclus dans le package Windo
 
 ## <a name="install-individual-redistributable-files"></a>Installer des fichiers redistribuables individuels
 
-Il est également possible d’installer directement les dll redistribuables dans le *dossier local*de l’application. Il s’agit du dossier qui contient votre fichier d’application exécutable. Pour des raisons de maintenance, nous vous déconseillons d’utiliser cet emplacement d’installation.
+Il est également possible d’installer directement les dll redistribuables dans le *dossier local* de l’application. Il s’agit du dossier qui contient votre fichier d’application exécutable. Pour des raisons de maintenance, nous vous déconseillons d’utiliser cet emplacement d’installation.
 
 ## <a name="potential-run-time-errors"></a>Erreurs d’exécution potentielles
 
-Si Windows ne peut pas trouver l’une des dll de la bibliothèque redistribuable requises par votre application, il peut afficher un message semblable à celui-ci : «cette application n’a pas pu démarrer, car la *bibliothèque*. dll est introuvable. La réinstallation de l’application peut résoudre ce problème.»
+Si Windows ne peut pas trouver l’une des dll de la bibliothèque redistribuable requises par votre application, il peut afficher un message semblable à celui-ci : «cette application n’a pas pu démarrer, car la *bibliothèque* . dll est introuvable. La réinstallation de l’application peut résoudre ce problème.»
 
 Pour résoudre ce genre d’erreur, assurez-vous que votre programme d’installation de l’application se génère correctement. Vérifiez que les bibliothèques redistribuables sont correctement déployées sur le système cible. Pour plus d’informations, consultez [Fonctionnement des dépendances d’une application Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md).
 

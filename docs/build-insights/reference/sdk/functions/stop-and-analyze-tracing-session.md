@@ -1,6 +1,6 @@
 ---
 title: StopAndAnalyzeTracingSession
-description: La référence de la fonction SDK StopAndAnalyzeTracingSession.
+description: Référence de la fonction StopAndAnalyzeTracingSession du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c9bd4a092c22dfcdfb6d463b74207ec11ee6d64
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 81a8ce43ecedfa51874508193637969411ae52d6
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323701"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922714"
 ---
 # <a name="stopandanalyzetracingsession"></a>StopAndAnalyzeTracingSession
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `StopAndAnalyzeTracingSession` fonction arrête une séance de traçage en cours et enregistre la trace résultante dans un fichier temporaire. Une séance d’analyse est alors immédiatement commencée à utiliser le fichier temporaire comme entrée. Les exécutables qui appellent cette fonction doivent avoir des privilèges d’administrateur.
+La `StopAndAnalyzeTracingSession` fonction arrête une session de suivi en cours et enregistre le suivi résultant dans un fichier temporaire. Une session d’analyse est ensuite immédiatement démarrée en utilisant le fichier temporaire comme entrée. Les exécutables qui appellent cette fonction doivent avoir des privilèges d’administrateur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,20 +47,20 @@ RESULT_CODE StopAndAnalyzeTracingSession(
 
 ### <a name="parameters"></a>Paramètres
 
-*sessionName*\
-Le nom de la séance de traçage pour s’arrêter. Utilisez le même nom de session que celui passé à [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md), ou [StartTracingSessionW](start-tracing-session-w.md).
+*Session*\
+Nom de la session de suivi à arrêter. Utilisez le même nom de session que celui passé à [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)ou [StartTracingSessionW](start-tracing-session-w.md).
 
 *numberOfAnalysisPasses*\
-Le nombre d’analyses passe pour courir sur la trace. La trace passe par le groupe d’analyseur fourni une fois par passage d’analyse.
+Nombre de passes d’analyse à exécuter sur la trace. La trace est passée par le groupe d’analyseur fourni une fois par passe d’analyse.
 
-*Statistiques*\
-Pointeur vers un [objet TRACING_SESSION_STATISTICS.](../other-types/tracing-session-statistics-struct.md) `StopAndAnalyzeTracingSession`écrit des statistiques de collecte de traces dans cet objet avant de revenir.
+*portent*\
+Pointeur vers un objet [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . `StopAndAnalyzeTracingSession` écrit les statistiques de collection de traces dans cet objet avant de retourner.
 
-*analyseurGroup*\
-Le groupe d’analyseur utilisé pour l’analyse. Appelez [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) pour créer un groupe d’analyseurs. Si vous souhaitez utiliser un groupe d’analyseur dynamique obtenu à partir de [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), d’abord l’encapsuler à l’intérieur d’un groupe d’analyseur statique en passant son adresse à `MakeStaticAnalyzerGroup`.
+*analyzerGroup*\
+Groupe de l’analyseur utilisé pour l’analyse. Appelez [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) pour créer un groupe d’analyseur. Si vous souhaitez utiliser un groupe d’analyseur dynamique obtenu à partir de [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), encapsulez-le d’abord à l’intérieur d’un groupe d’analyseur statique en passant son adresse à `MakeStaticAnalyzerGroup` .
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un code de résultat de [l’enum RESULT_CODE.](../other-types/result-code-enum.md)
+Code de résultat de l’énumération [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end

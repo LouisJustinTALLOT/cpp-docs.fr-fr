@@ -1,50 +1,50 @@
 ---
 title: Configurer le développement Linux à distance sécurisé compatible FIPS
-description: Comment configurer une connexion cryptographique conforme à la FIPS entre Visual Studio et une machine Linux pour le développement à distance.
+description: Comment configurer une connexion de chiffrement compatible FIPS entre Visual Studio et une machine Linux pour le développement à distance.
 ms.date: 01/17/2020
-ms.openlocfilehash: 9a0e87f4ddf69bf489b52d4f83934d3279f2d085
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b7eb6bfd32d362415eda057bfa78afe80fb9e2f4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "76520892"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924689"
 ---
 # <a name="set-up-fips-compliant-secure-remote-linux-development"></a>Configurer le développement Linux à distance sécurisé compatible FIPS
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur. Le développement Linux sécurisé conforme à FIPS est disponible dans la version 16.5 de Visual Studio 2019 et plus tard.
+La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur. Le développement Linux à distance sécurisé conforme aux normes FIPS est disponible dans Visual Studio 2019 version 16,5 et versions ultérieures.
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Federal Information Processing Standard (FIPS) Publication 140-2 est une norme du gouvernement américain pour les modules cryptographiques. Les implémentations de la norme sont validées par NIST. Windows a [validé la prise en charge des modules cryptographiques conformes au FIPS](/windows/security/threat-protection/fips-140-validation). Dans visual Studio 2019 version 16.5 et plus tard, vous pouvez utiliser une connexion cryptographique sécurisée conforme à la FIPS à votre système Linux pour le développement à distance.
+La publication normes FIPS (Federal Information Processing Standard) (FIPS) 140-2 est une norme gouvernementale américaine pour les modules cryptographiques. Les implémentations de la norme sont validées par NIST. Windows a [validé la prise en charge des modules de chiffrement conformes aux normes FIPS](/windows/security/threat-protection/fips-140-validation). Dans Visual Studio 2019 version 16,5 et versions ultérieures, vous pouvez utiliser une connexion de chiffrement sécurisée et compatible FIPS à votre système Linux pour le développement à distance.
 
-Voici comment configurer une connexion sécurisée conforme aux FIPS entre Visual Studio et votre système Linux distant. Ce guide s’applique lorsque vous construisez des projets CMake ou MSBuild Linux dans Visual Studio. Cet article est la version conforme aux FIPS des instructions de connexion dans [Connect to your remote Linux computer](connect-to-your-remote-linux-computer.md).
+Voici comment configurer une connexion sécurisée et compatible FIPS entre Visual Studio et votre système Linux distant. Ce guide s’applique quand vous générez des projets CMake ou MSBuild Linux dans Visual Studio. Cet article est la version conforme aux normes FIPS des instructions de connexion de la rubrique [se connecter à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md).
 
-## <a name="prepare-a-fips-compliant-connection"></a>Préparer une connexion conforme au FIPS
+## <a name="prepare-a-fips-compliant-connection"></a>Préparer une connexion conforme aux normes FIPS
 
-Une certaine préparation est nécessaire pour utiliser une connexion ssh conforme à la FIPS et cryptographiquement sécurisée entre Visual Studio et votre système Linux distant. Pour la conformité FIPS-140-2, Visual Studio ne prend en charge que les clés RSA.
+Une certaine préparation est nécessaire pour utiliser une connexion SSH sécurisée par chiffrement sécurisée avec FIPS entre Visual Studio et votre système Linux distant. Pour la conformité FIPS-140-2, Visual Studio ne prend en charge que les clés RSA.
 
-Les exemples de cet article utilisent Ubuntu 18.04 LTS avec la version serveur OpenSSH 7.6. Cependant, les instructions devraient être les mêmes pour toute distro en utilisant une version modérément récente de OpenSSH.
+Les exemples de cet article utilisent Ubuntu 18,04 LTS avec OpenSSH Server version 7,6. Toutefois, les instructions doivent être les mêmes pour tout distribution utilisant une version modérément récente d’OpenSSH.
 
-### <a name="to-set-up-the-ssh-server-on-the-remote-system"></a>Configurer le serveur SSH sur le système distant
+### <a name="to-set-up-the-ssh-server-on-the-remote-system"></a>Pour configurer le serveur SSH sur le système distant
 
-1. Sur le système Linux, installez et démarrez le serveur OpenSSH :
+1. Sur le système Linux, installez et démarrez le serveur OpenSSH :
 
    ```bash
    sudo apt install openssh-server
    sudo service ssh start
    ```
 
-1. Si vous souhaitez que le serveur ssh démarre automatiquement lorsque le système démarre, activez-le à l’aide de systemctl :
+1. Si vous souhaitez que le serveur SSH démarre automatiquement lorsque le système démarre, activez-le à l’aide de systemctl :
 
    ```bash
    sudo systemctl enable ssh
    ```
 
-1. Ouvrez */etc/ssh/sshd_config* comme racine. Modifier (ou ajouter, s’ils n’existent pas) les lignes suivantes :
+1. Ouvrez */etc/ssh/sshd_config* en tant que root. Modifiez (ou ajoutez, s’ils n’existent pas) les lignes suivantes :
 
    ```config
    Ciphers aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc
@@ -54,123 +54,123 @@ Les exemples de cet article utilisent Ubuntu 18.04 LTS avec la version serveur O
    ```
 
    > [!NOTE]
-   > ssh-rsa est le seul algorithme clé d’hôte conforme à la FIPS VS prend en charge. Les algorithmes aes-ctr\*sont également conformes FIPS, mais la mise en œuvre dans Visual Studio n’est pas approuvé. Les algorithmes\* d’échange ecdh-clés sont conformes à LA FIPS, mais Visual Studio ne les prend pas en charge.
+   > ssh-RSA est le seul algorithme de clé d’hôte compatible FIPS et prend en charge. Les \* algorithmes AES-CTR sont également compatibles avec FIPS, mais l’implémentation dans Visual Studio n’est pas approuvée. Les \* algorithmes d’échange de clé ECDH sont compatibles FIPS, mais Visual Studio ne les prend pas en charge.
 
-   Vous ne vous limitez pas à ces options. Vous pouvez configurer ssh pour utiliser des chiffrements supplémentaires, héberger des algorithmes clés, et ainsi de suite. D’autres options de sécurité pertinentes `PermitRootLogin` `PasswordAuthentication`que `PermitEmptyPasswords`vous voudrez peut-être envisager sont , , et . Pour plus d’informations, consultez la page homme pour sshd_config ou l’article [SSH Server Configuration](https://www.ssh.com/ssh/sshd_config).
+   Vous n’êtes pas limité à ces options. Vous pouvez configurer ssh pour utiliser des chiffrements supplémentaires, des algorithmes de clé d’hôte, et ainsi de suite. Certaines autres options de sécurité pertinentes que vous pouvez envisager sont `PermitRootLogin` , `PasswordAuthentication` et `PermitEmptyPasswords` . Pour plus d’informations, consultez la page man de sshd_config ou l’article [configuration du serveur SSH](https://www.ssh.com/ssh/sshd_config).
 
-1. Après l’enregistrement et la fermeture sshd_config, redémarrez le serveur ssh pour appliquer la nouvelle configuration :
+1. Après avoir enregistré et fermé sshd_config, redémarrez le serveur SSH pour appliquer la nouvelle configuration :
 
    ```bash
    sudo service ssh restart
    ```
 
-Ensuite, vous allez créer une paire de clés RSA sur votre ordinateur Windows. Ensuite, vous copierez la clé publique du système Linux à distance pour une utilisation par ssh.
+Ensuite, vous allez créer une paire de clés RSA sur votre ordinateur Windows. Vous copierez ensuite la clé publique sur le système Linux distant pour une utilisation par SSH.
 
-### <a name="to-create-and-use-an-rsa-key-file"></a>Créer et utiliser un fichier clé RSA
+### <a name="to-create-and-use-an-rsa-key-file"></a>Pour créer et utiliser un fichier de clé RSA
 
-1. Sur la machine Windows, générer une paire de clés RSA public/privé en utilisant cette commande :
+1. Sur l’ordinateur Windows, générez une paire de clés RSA publique/privée à l’aide de cette commande :
 
    ```cmd
    ssh-keygen -t rsa -b 4096
    ```
 
-   La commande crée une clé publique et une clé privée. Par défaut, les clés sont *enregistrées\\à %USERPROFILE% .ssh\\id_rsa* et *%USERPROFILE%\\.ssh\\id_rsa.pub*. (Dans Powershell, `$env:USERPROFILE` utilisez au lieu `%USERPROFILE%`de la macro cmd ) Si vous modifiez le nom clé, utilisez le nom changé dans les étapes qui suivent.  Nous vous recommandons d’utiliser un passphrase pour une sécurité accrue.
+   La commande crée une clé publique et une clé privée. Par défaut, les clés sont enregistrées dans *% UserProfile% \\ . ssh \\ id_rsa* et *% UserProfile% \\ . ssh \\ id_rsa. pub* . (Dans PowerShell, utilisez à `$env:USERPROFILE` la place de la macro cmd `%USERPROFILE%` ) si vous modifiez le nom de la clé, utilisez le nom modifié dans les étapes qui suivent.  Nous vous recommandons d’utiliser une phrase secrète pour une sécurité accrue.
 
-1. De Windows, copiez la clé publique de la machine Linux :
+1. À partir de Windows, copiez la clé publique sur la machine Linux :
 
    ```cmd
    scp %USERPROFILE%\.ssh\id_rsa.pub user@hostname:
    ```
 
-1. Sur le système Linux, ajoutez la clé à la liste des clés autorisées et assurez-vous que le fichier dispose des autorisations correctes :
+1. Sur le système Linux, ajoutez la clé à la liste des clés autorisées et assurez-vous que le fichier dispose des autorisations appropriées :
 
    ```bash
    cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
    chmod 600 ~/.ssh/authorized_keys
    ```
 
-1. Maintenant, vous pouvez tester pour voir si la nouvelle clé fonctionne en ssh. Utilisez-le pour vous connecter à partir de Windows:
+1. À présent, vous pouvez tester pour voir si la nouvelle clé fonctionne dans SSH. Utilisez-le pour vous connecter à partir de Windows :
 
     ```cmd
     ssh -i %USERPROFILE%\.ssh\id_rsa user@hostname
     ```
 
-Vous avez réussi à configurer ssh, créé et déployé des clés de chiffrement, et testé votre connexion. Maintenant, vous êtes prêt à configurer la connexion Visual Studio.
+Vous avez correctement configuré SSH, créé et déployé des clés de chiffrement et testé votre connexion. Vous êtes maintenant prêt à configurer la connexion Visual Studio.
 
-## <a name="connect-to-the-remote-system-in-visual-studio"></a>Connectez-vous au système distant de Visual Studio
+## <a name="connect-to-the-remote-system-in-visual-studio"></a>Se connecter au système distant dans Visual Studio
 
-1. Dans Visual Studio, choisissez **Tools > Options** sur la barre de menu pour ouvrir le dialogue **Options.** Sélectionnez ensuite **Cross Platform > Connection Manager** pour ouvrir le dialogue Connection Manager.
+1. Dans Visual Studio, choisissez **outils > options** dans la barre de menus pour ouvrir la boîte de dialogue **options** . Ensuite, sélectionnez **multiplateforme > gestionnaire de connexions** pour ouvrir la boîte de dialogue Gestionnaire de connexions.
 
-   Si vous n’avez pas déjà établi de connexion dans Visual Studio, lorsque vous construisez votre projet pour la première fois, Visual Studio vous ouvre le dialogue Connection Manager.
+   Si vous n’avez pas encore configuré de connexion dans Visual Studio, quand vous générez votre projet pour la première fois, Visual Studio ouvre la boîte de dialogue Gestionnaire de connexions pour vous.
 
-1. Dans le dialogue Connection Manager, choisissez le bouton **Ajouter** pour ajouter une nouvelle connexion.
+1. Dans la boîte de dialogue Gestionnaire de connexions, cliquez sur le bouton **Ajouter** pour ajouter une nouvelle connexion.
 
    ![Gestionnaire de connexions](media/settings_connectionmanager.png)
 
-   La fenêtre **Connect to Remote System** s’affiche.
+   La fenêtre **se connecter à un système distant** s’affiche.
 
    ![Connect to Remote System (Se connecter au système distant)](media/connect.png)
 
-1. Dans le dialogue **Connect to Remote System,** entrez les détails de connexion de votre machine à distance.
+1. Dans la boîte de dialogue **se connecter au système distant** , entrez les détails de connexion de votre machine distante.
 
    | Entrée | Description
    | ----- | ---
-   | **Nom de l’hôte**           | Nom ou adresse IP de votre appareil cible
+   | **Host Name**           | Nom ou adresse IP de votre appareil cible
    | **Port**                | Port sur lequel le service SSH est exécuté, en général 22
    | **Nom d'utilisateur**           | Utilisateur sous le nom duquel s’authentifier
-   | **Type d’authentification** | Choisissez la clé privée pour une connexion conforme au FIPS
+   | **Type d’authentification** | Choisir une clé privée pour une connexion conforme aux normes FIPS
    | **Fichier de clé privée**    | Fichier de clé privée créé pour la connexion ssh
-   | **Phrase**          | Phrase secrète utilisée avec la clé privée sélectionnée ci-dessus
+   | **Risquent**          | Phrase secrète utilisée avec la clé privée sélectionnée ci-dessus
 
-   Modifier le type d’authentification en **clé privée**. Entrez le chemin de votre clé privée dans le domaine **du fichier clé privé.** Vous pouvez utiliser le bouton **Parcourir** pour naviguer vers votre fichier clé privé à la place. Ensuite, entrez la passphrase utilisée pour chiffrer votre fichier clé privé dans le champ **Passphrase.**
+   Remplacez le type d’authentification par **clé privée** . Entrez le chemin d’accès à votre clé privée dans le champ **fichier de clé privée** . Vous pouvez utiliser le bouton **Parcourir** pour accéder à votre fichier de clé privée à la place. Ensuite, entrez la phrase secrète utilisée pour chiffrer votre fichier de clé privée dans le champ **phrase secrète** .
 
-1. Choisissez le bouton **Connect** pour tenter une connexion à l’ordinateur distant.
+1. Choisissez le bouton **se connecter** pour tenter une connexion à l’ordinateur distant.
 
-   Si la connexion réussit, Visual Studio configure IntelliSense pour utiliser les en-têtes distants. Pour plus d’informations, consultez [IntelliSense pour les en-têtes sur les systèmes distants](configure-a-linux-project.md#remote_intellisense).
+   Si la connexion est établie, Visual Studio configure IntelliSense pour utiliser les en-têtes distants. Pour plus d’informations, consultez [IntelliSense pour les en-têtes sur les systèmes distants](configure-a-linux-project.md#remote_intellisense).
 
    Si la connexion échoue, les zones des entrées qui doivent être modifiées seront surlignées en rouge.
 
    ![Erreur du Gestionnaire de connexion](media/settings_connectionmanagererror.png)
 
-   Pour plus d’informations sur le dépannage de votre connexion, consultez [Connectez-vous à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md).
+   Pour plus d’informations sur le dépannage de votre connexion, consultez [se connecter à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md).
 
-## <a name="command-line-utility-for-the-connection-manager"></a>Service public de la ligne de commandement pour le gestionnaire de connexion  
+## <a name="command-line-utility-for-the-connection-manager"></a>Utilitaire de ligne de commande pour le gestionnaire de connexions  
 
-**Visual Studio 2019 version 16.5 ou plus tard**: ConnectionManager.exe est un utilitaire de commande pour gérer les connexions de développement à distance en dehors de Visual Studio. Il est utile pour des tâches telles que l’approvisionnement d’une nouvelle machine de développement. Ou, vous pouvez l’utiliser pour configurer Visual Studio pour une intégration continue. Pour des exemples et une référence complète à la commande ConnectionManager, voir [ConnectionManager référence](connectionmanager-reference.md).  
+**Visual studio 2019 version 16,5 ou ultérieure** : ConnectionManager.exe est un utilitaire de ligne de commande permettant de gérer les connexions de développement à distance en dehors de Visual Studio. Elle est utile pour des tâches telles que la configuration d’un nouvel ordinateur de développement. Ou vous pouvez l’utiliser pour configurer Visual Studio pour une intégration continue. Pour obtenir des exemples et une référence complète à la commande ConnectionManager, consultez [référence ConnectionManager](connectionmanager-reference.md).  
 
-## <a name="optional-enable-or-disable-fips-mode"></a>Facultatif : Activez ou désactiver le mode FIPS
+## <a name="optional-enable-or-disable-fips-mode"></a>Facultatif : activer ou désactiver le mode FIPS
 
 Il est possible d’activer le mode FIPS dans le monde entier dans Windows.
 
-1. Pour activer le mode FIPS, appuyez sur **Windows-R** pour ouvrir le dialogue Run, puis exécutez gpedit.msc.
+1. Pour activer le mode FIPS, appuyez sur **Windows + R** pour ouvrir la boîte de dialogue Exécuter, puis exécutez gpedit. msc.
 
-1. Élargir **la politique informatique locale > la configuration informatique > les paramètres Windows > paramètres de sécurité > les politiques locales** et sélectionner les **options de sécurité**.
+1. Développez stratégie de l' **ordinateur Local > configuration de l’ordinateur > paramètres Windows > paramètres de sécurité > stratégies locales** et sélectionnez **options de sécurité** .
 
-1. En vertu **de la politique**, sélectionnez la **cryptographie du système : utilisez des algorithmes conformes au FIPS pour le chiffrement, le hachage et la signature,** puis appuyez sur **Enter** pour ouvrir sa boîte de dialogue.
+1. Sous **stratégie** , sélectionnez **chiffrement du système : utilisez des algorithmes compatibles FIPS pour le chiffrement, le hachage et la signature** , puis appuyez sur **entrée** pour ouvrir la boîte de dialogue correspondante.
 
-1. Dans l’onglet **Local Security Setting,** sélectionnez **Activé** ou **Désactivé,** puis choisissez **OK** pour enregistrer vos modifications.
+1. Dans l’onglet **paramètre de sécurité locale** , sélectionnez **activé** ou **désactivé** , puis choisissez **OK** pour enregistrer vos modifications.
 
 > [!WARNING]
-> L’activation du mode FIPS peut entraîner la rupture ou le comportement inattendu de certaines applications. Pour plus d’informations, voir le blog [Pourquoi nous ne recommandons pas "mode FIPS" Anymore](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-8217-re-not-recommending-8220-fips-mode-8221-anymore/ba-p/701037).
+> L’activation du mode FIPS peut entraîner l’interruption ou le comportement inattendu de certaines applications. Pour plus d’informations, consultez le billet de blog [pourquoi nous ne recommandons plus le « mode FIPS »](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-8217-re-not-recommending-8220-fips-mode-8221-anymore/ba-p/701037).
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 [Documentation Microsoft sur la validation FIPS 140](/windows/security/threat-protection/fips-140-validation)
 
-[FIPS 140-2: Exigences de sécurité pour les modules cryptographiques](https://csrc.nist.gov/publications/detail/fips/140/2/final) (de NIST)
+[FIPS 140-2 : exigences de sécurité pour les modules de chiffrement](https://csrc.nist.gov/publications/detail/fips/140/2/final) (à partir de NIST)
 
-[Programme de validation des algorithmes cryptographiques : Notes](https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/Validation-Notes) de validation (de NIST)
+[Programme de validation de l’algorithme de chiffrement : notes de validation](https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/Validation-Notes) (à partir de NIST)
 
-Microsoft blog post sur [Pourquoi nous ne recommandons pas "mode FIPS" Anymore](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-8217-re-not-recommending-8220-fips-mode-8221-anymore/ba-p/701037)
+Billet de blog Microsoft [expliquant pourquoi nous ne recommandons plus le « mode FIPS »](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-8217-re-not-recommending-8220-fips-mode-8221-anymore/ba-p/701037)
 
 [Configuration du serveur SSH](https://www.ssh.com/ssh/sshd_config)
 
 ## <a name="see-also"></a>Voir aussi
 
 [Configurer un projet Linux](configure-a-linux-project.md)\
-[Configurer un projet Linux CMake](cmake-linux-project.md)\
+[Configurer un projet CMake Linux](cmake-linux-project.md)\
 [Connectez-vous à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md)\
-[Déployez, exécutez et débassez votre projet Linux](deploy-run-and-debug-your-linux-project.md)\
+[Déployer, exécuter et déboguer votre projet Linux](deploy-run-and-debug-your-linux-project.md)\
 [Configurer des sessions de débogage CMake](../build/configure-cmake-debugging-sessions.md)
 
 ::: moniker-end

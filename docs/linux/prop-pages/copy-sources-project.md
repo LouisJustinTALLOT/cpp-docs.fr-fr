@@ -2,22 +2,22 @@
 title: Copier les sources, propriétés de projet (Linux C++)
 ms.date: 10/16/2019
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-ms.openlocfilehash: 732a13520a223f1aa73733cd4098c247052f8d3b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 393f1b92bb5185bcd5ce93999e0c13f7d370e78d
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441391"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924544"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Copier les sources, propriétés de projet (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Les propriétés définies dans cette page de propriétés s’appliquent à tous les fichiers contenus dans le projet, à l’exception de ceux pour lesquels des propriétés de niveau fichier sont définies.
 
@@ -25,9 +25,9 @@ Les propriétés définies dans cette page de propriétés s’appliquent à tou
 |--|--|
 | Sources à copier | Spécifie les sources devant être copiées sur le système distant. Tout changement apporté à cette liste peut entraîner un décalage ou des répercussions dans la structure des répertoires où sont copiés les fichiers sur le système distant. |
 | Copier les sources | Spécifie si les sources doivent être copiées sur le système distant. |
-| Sources supplémentaires à copier | Spécifie les sources supplémentaires à copier sur le système distant. Spécifiez optionnellement les paires de cartographie locales à éloignées à l’aide d’une syntaxe comme celle-ci : fulllocalpath1:fullremotepath1;fulllocalpath2: 'fullremotepath2, où un fichier local peut être copié à l’emplacement à distance spécifié sur le système distant. |
+| Sources supplémentaires à copier | Spécifie les sources supplémentaires à copier sur le système distant. Spécifiez éventuellement des paires de mappage local à distant à l’aide d’une syntaxe similaire à celle-ci : fulllocalpath1 : = fullremotepath1 ; fulllocalpath2 : = fullremotepath2, où un fichier local peut être copié vers l’emplacement distant spécifié sur le système distant. |
 
-@SourcesToCopyRemotelyet @DataFilesToCopyRemotely se référer aux groupes d’éléments dans le dossier du projet. Pour modifier les sources ou les fichiers de données copiés à distance, modifiez le fichier *vcxproj* comme ceci :
+@SourcesToCopyRemotely et @DataFilesToCopyRemotely font référence à des groupes d’éléments dans le fichier projet. Pour modifier les sources ou les fichiers de données qui sont copiés à distance, modifiez le fichier *vcxproj* de la façon suivante :
 
 ```xml
 <ItemGroup>

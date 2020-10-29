@@ -6,22 +6,22 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 6544f5ddf0b81fdec893308bb10e0c19cea73005
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c9b1c0c159a15ec7d9a5c99208baa2ed6af2d6d1
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499453"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923888"
 ---
 # <a name="implementing-property-pages"></a>Implémentation de pages de propriétés
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’Assistant Page de propriétés ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Les pages de propriétés sont des objets COM qui implémentent l’interface `IPropertyPage` ou `IPropertyPage2`. ATL prend en charge l’implémentation de pages de propriétés via l’[Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) dans la [boîte de dialogue Ajouter une classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box).
 
@@ -29,7 +29,7 @@ Pour créer une page de propriétés à l’aide d’ATL :
 
 - Créez ou ouvrez un projet de serveur de bibliothèque de liens dynamiques (DLL) ATL.
 
-- Ouvrez la [boîte de dialogue Ajouter une classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) et sélectionnez **Page de propriétés ATL**.
+- Ouvrez la [boîte de dialogue Ajouter une classe](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) et sélectionnez **Page de propriétés ATL** .
 
 - Assurez-vous que votre page de propriétés est cloisonnée (puisqu’elle a une interface utilisateur).
 
@@ -51,7 +51,7 @@ Pour créer une page de propriétés à l’aide d’ATL :
 Pour obtenir un exemple d’implémentation de page de propriétés, consultez [exemple : implémentation d’une page de propriétés](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
-> Si vous souhaitez héberger des contrôles ActiveX dans votre page de propriétés, vous devez modifier la dérivation de votre classe générée par l’Assistant. Remplacez **CDialogImpl \<CYourClass> ** par **CAxDialogImpl \<CYourClass> ** dans la liste des classes de base.
+> Si vous souhaitez héberger des contrôles ActiveX dans votre page de propriétés, vous devez modifier la dérivation de votre classe générée par l’Assistant. Remplacez **CDialogImpl \<CYourClass>** par **CAxDialogImpl \<CYourClass>** dans la liste des classes de base.
 
 ::: moniker-end
 

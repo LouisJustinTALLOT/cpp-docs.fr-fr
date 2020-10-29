@@ -5,22 +5,22 @@ ms.date: 09/10/2020
 helpviewer_keywords:
 - preprocessor, experimental
 - preprocessor, new
-ms.openlocfilehash: c95f923d8c38250958e26431b61a71a1e6a7fdda
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5327a8148f78a07e222fae7fb92e6ed741d12011
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041365"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924585"
 ---
 # <a name="msvc-new-preprocessor-overview"></a>Vue d’ensemble du nouveau préprocesseur MSVC
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Visual Studio 2015 utilise le préprocesseur traditionnel, qui n’est pas conforme à la norme C++ ou C99. À compter de Visual Studio 2019 version 16,5, la prise en charge du nouveau préprocesseur pour la norme C++ 20 est terminée par la fonctionnalité. Ces modifications sont disponibles à l’aide du commutateur du compilateur [/Zc : preprocesseur](../build/reference/zc-preprocessor.md) . Une version expérimentale du nouveau préprocesseur est disponible à partir de Visual Studio 2017 version 15,8 et versions ultérieures à l’aide du commutateur de compilateur de [préprocesseur/experimental :](../build/reference/experimental-preprocessor.md) . Vous trouverez plus d’informations sur l’utilisation du nouveau préprocesseur dans Visual Studio 2017 et Visual Studio 2019. Pour consulter la documentation de votre version par défaut de Visual Studio, utilisez le contrôle sélecteur de **version** . Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Nous mettons à jour le préprocesseur Microsoft C++ pour améliorer la conformité aux normes, résoudre les bogues de longue date et modifier certains comportements qui sont officiellement non définis. Nous avons également ajouté de nouveaux diagnostics pour signaler les erreurs dans les définitions de macros.
 

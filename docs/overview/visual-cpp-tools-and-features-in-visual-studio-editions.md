@@ -4,22 +4,22 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c2ef6c539d5845beee044a963e0056d3287ba679
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845352"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924806"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Outils et fonctionnalités C++ dans les éditions de Visual Studio
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sauf indication contraire, toutes les fonctionnalités sont disponibles dans toutes les éditions : Communauté Visual Studio, Visual Studio Professional et Visual Studio Enterprise. Certaines fonctionnalités nécessitent des charges de travail ou des composants facultatifs spécifiques que vous pouvez installer avec Visual Studio Installer.
 
 ## <a name="platforms"></a>Plateformes
 
-- Windows Desktop
+- Bureau Windows
 - Plateforme Windows universelle ((téléphone, tablette, PC, Xbox, IoT et HoloLens))
 - Linux
 - Android
@@ -38,7 +38,7 @@ Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sa
 
 Visual Studio comprend les charges de travail suivantes pour le développement C++. Vous pouvez les installer toutes ou une partie, ainsi que d’autres charges de travail telles que Développement .NET Desktop, Développement Python, Développement Azure, Développement d’extension Visual Studio et autres.
 
-### <a name="desktop-development-with-c"></a>Développement Desktop avec C++
+### <a name="desktop-development-with-c"></a>Développement Desktop en C++
 
 Inclus :
 
@@ -309,15 +309,15 @@ Linux :
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles dans Visual Studio 2017. La présence d’une croix (« X ») dans une cellule indique que la fonctionnalité est disponible ; une cellule vide indique que la fonctionnalité n’est pas disponible. Les remarques entre parenthèses indiquent qu'une fonctionnalité est disponible, mais limitée.
 
 ## <a name="platforms"></a>Plateformes
 
-|Plate-forme|Visual Studio Express pour Windows 10|Visual Studio Express pour Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
+|Plateforme|Visual Studio Express pour Windows 10|Visual Studio Express pour Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |-|-|-|-|-|
-|Windows Desktop||X|X|X|
+|Bureau Windows||X|X|X|
 |Plateforme Windows universelle ((téléphone, tablette, PC, Xbox, IoT et HoloLens))|X||X|X|
 |Linux|X|X|
 |Microsoft Store 8.1|||X|X|
