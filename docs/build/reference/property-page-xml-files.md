@@ -4,30 +4,30 @@ description: Description du contenu et des fichiers de règles XML de la page de
 ms.date: 10/14/2020
 helpviewer_keywords:
 - property page XML files
-ms.openlocfilehash: 96cbf6a32cada2b594874493868ec884823016cb
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: f8aa893fa2b062da2f1d0784e5a9b1a6f2b30c95
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099717"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921397"
 ---
 # <a name="property-page-xml-rule-files"></a>Fichiers de règles XML des pages de propriétés
 
 Les pages de propriétés du projet dans l’IDE sont configurées par des fichiers XML dans le dossier des règles par défaut. Les fichiers XML décrivent les noms des règles, les catégories et les propriétés individuelles, leur type de données, leurs valeurs par défaut et comment les afficher. Quand vous définissez une propriété dans l’IDE, la nouvelle valeur est stockée dans le fichier projet.
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Le chemin d’accès au dossier des règles par défaut dépend des paramètres régionaux et de la version de Visual Studio en cours d’utilisation. Dans une invite de commandes développeur Visual Studio 2015 ou version antérieure, le dossier règles est *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>`* . La `<version>` valeur est *`v140`* dans Visual Studio 2015. `<locale>`Est un LCID, par exemple, `1033` pour l’anglais. Vous utiliserez un chemin d’accès différent pour chaque édition de Visual Studio installée, et pour chaque langue. Par exemple, le chemin d’accès du dossier des règles par défaut pour Visual Studio 2015 Community Edition en anglais peut être *`C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v140\1033\`* .
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Le chemin d’accès au dossier des règles par défaut dépend des paramètres régionaux et de la version de Visual Studio en cours d’utilisation. Dans une invite de commandes développeur Visual Studio 2017, le dossier règles est *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* . `<locale>`Est un LCID, par exemple, `1033` pour l’anglais. Dans une invite de commandes développeur Visual Studio 2015 ou version antérieure, le dossier Rules est *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* , où la `<version>` valeur se trouve *`v140`* dans Visual Studio 2015. Vous utiliserez un chemin d’accès différent pour chaque édition de Visual Studio installée, et pour chaque langue. Par exemple, le chemin d’accès du dossier des règles par défaut pour Visual Studio 2017 Community Edition en anglais peut être *`C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\`* .
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Le chemin d’accès au dossier des règles par défaut dépend des paramètres régionaux et de la version de Visual Studio en cours d’utilisation. Dans une invite de commandes développeur Visual Studio 2019 ou version ultérieure, le dossier règles est *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\<locale>\`* , où la `<version>` valeur se trouve *`v160`* dans Visual Studio 2019. `<locale>`Est un LCID, par exemple, `1033` pour l’anglais. Dans Visual Studio 2017, le dossier Rules est *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* . Dans une invite de commandes développeur Visual Studio 2015 ou version antérieure, le dossier règles est *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* . Vous utiliserez un chemin d’accès différent pour chaque édition de Visual Studio installée, et pour chaque langue. Par exemple, le chemin d’accès du dossier des règles par défaut pour Visual Studio 2019 Community Edition en anglais peut être *`C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\1033\`* .
 
@@ -40,13 +40,13 @@ Il vous suffit de comprendre le fonctionnement interne de ces fichiers et de l�
 
 ## <a name="contents-of-rule-files"></a>Contenu des fichiers de règles
 
-Tout d’abord, nous allons ouvrir les pages de propriétés d’un projet. Cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** , puis choisissez **Propriétés**:
+Tout d’abord, nous allons ouvrir les pages de propriétés d’un projet. Cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** , puis choisissez **Propriétés** :
 
 ![Affiche la boîte de dialogue des propriétés du projet C++ Visual Studio](../media/cpp-property-page-2017.png)
 
-Chaque nœud sous **Propriétés de configuration** est appelé *règle*. Une règle représente parfois un outil unique tel que le compilateur. En général, le terme fait référence à un qui a des propriétés, qui s’exécute et qui peut produire une sortie. Chaque règle est renseignée à partir d’un fichier XML dans le dossier des règles par défaut. Par exemple, la règle C/C++ qui est indiquée ici est remplie par *« cl.xml »*.
+Chaque nœud sous **Propriétés de configuration** est appelé *règle* . Une règle représente parfois un outil unique tel que le compilateur. En général, le terme fait référence à un qui a des propriétés, qui s’exécute et qui peut produire une sortie. Chaque règle est renseignée à partir d’un fichier XML dans le dossier des règles par défaut. Par exemple, la règle C/C++ qui est indiquée ici est remplie par *« cl.xml »* .
 
-Chaque règle possède un ensemble de propriétés, qui sont organisées en *catégories*. Chaque sous-nœud sous une règle représente une catégorie. Par exemple, le nœud **optimisation** sous **C/C++** contient toutes les propriétés relatives à l’optimisation de l’outil compilateur. Les propriétés et leurs valeurs sont rendues dans un format de grille dans le volet droit.
+Chaque règle possède un ensemble de propriétés, qui sont organisées en *catégories* . Chaque sous-nœud sous une règle représente une catégorie. Par exemple, le nœud **optimisation** sous **C/C++** contient toutes les propriétés relatives à l’optimisation de l’outil compilateur. Les propriétés et leurs valeurs sont rendues dans un format de grille dans le volet droit.
 
 Vous pouvez ouvrir *`cl.xml`* dans le bloc-notes ou dans n’importe quel éditeur XML. Vous verrez un nœud racine appelé `Rule` . Elle définit la même liste de propriétés qui s’affichent dans l’interface utilisateur, ainsi que des métadonnées supplémentaires.
 
@@ -111,19 +111,19 @@ Un **`<Rule>`** élément est le nœud racine dans le fichier XML. Il peut avoir
   </Rule.DisplayName>
 ```
 
-- **`Name`**: L’attribut Name est un ID pour le `Rule` . Elle doit être unique parmi tous les fichiers XML de page de propriétés pour un projet.
+- **`Name`** : L’attribut Name est un ID pour le `Rule` . Elle doit être unique parmi tous les fichiers XML de page de propriétés pour un projet.
 
-- **`PageTemplate`**: La valeur de cet attribut est utilisée par l’interface utilisateur pour faire un choix dans une collection de modèles d’interface utilisateur. Le modèle « tool » montre les propriétés selon un format de grille standard. D’autres valeurs prédéfinies de cet attribut sont « debugger » et « generic ». Regardez respectivement le nœud Debugging et le nœud General pour voir le format d’interface utilisateur qui résulte de la spécification de ces valeurs. L’interface utilisateur pour le modèle de page « débogueur » utilise une zone de liste déroulante pour basculer entre les propriétés de différents débogueurs. Le modèle « générique » affiche des catégories de propriétés différentes dans une page, par opposition à l’utilisation de plusieurs sous-nœuds de catégorie sous le `Rule` nœud. Cet attribut n’est qu’une suggestion de l’interface utilisateur. Le fichier XML est conçu pour être indépendant de l’interface utilisateur. Une autre interface utilisateur peut utiliser cet attribut à des fins différentes.
+- **`PageTemplate`** : La valeur de cet attribut est utilisée par l’interface utilisateur pour faire un choix dans une collection de modèles d’interface utilisateur. Le modèle « tool » montre les propriétés selon un format de grille standard. D’autres valeurs prédéfinies de cet attribut sont « debugger » et « generic ». Regardez respectivement le nœud Debugging et le nœud General pour voir le format d’interface utilisateur qui résulte de la spécification de ces valeurs. L’interface utilisateur pour le modèle de page « débogueur » utilise une zone de liste déroulante pour basculer entre les propriétés de différents débogueurs. Le modèle « générique » affiche des catégories de propriétés différentes dans une page, par opposition à l’utilisation de plusieurs sous-nœuds de catégorie sous le `Rule` nœud. Cet attribut n’est qu’une suggestion de l’interface utilisateur. Le fichier XML est conçu pour être indépendant de l’interface utilisateur. Une autre interface utilisateur peut utiliser cet attribut à des fins différentes.
 
-- **`SwitchPrefix`**: Le préfixe utilisé dans la ligne de commande pour les commutateurs. Si la valeur `"/"` est, les commutateurs ressemblent à,, **`/ZI`** **`/nologo`** **`/W3`** , et ainsi de suite.
+- **`SwitchPrefix`** : Le préfixe utilisé dans la ligne de commande pour les commutateurs. Si la valeur `"/"` est, les commutateurs ressemblent à,, **`/ZI`** **`/nologo`** **`/W3`** , et ainsi de suite.
 
-- **`Order`**: Suggestion d’un client d’interface utilisateur potentiel sur l’emplacement relatif de ce `Rule` par rapport à toutes les autres règles du système.
+- **`Order`** : Suggestion d’un client d’interface utilisateur potentiel sur l’emplacement relatif de ce `Rule` par rapport à toutes les autres règles du système.
 
-- **`xmlns`**: Élément XML standard. Vous pouvez voir trois espaces de noms répertoriés. Ces attributs correspondent respectivement aux espaces de noms des classes de désérialisation XML, du schéma XML et de l’espace de noms System.
+- **`xmlns`** : Élément XML standard. Vous pouvez voir trois espaces de noms répertoriés. Ces attributs correspondent respectivement aux espaces de noms des classes de désérialisation XML, du schéma XML et de l’espace de noms System.
 
-- **`DisplayName`**: Nom affiché dans l’interface utilisateur de la page de propriétés pour le `Rule` nœud. Cette valeur est localisée. Nous avons créé `DisplayName` comme élément enfant de `Rule` plutôt que comme attribut (comme `Name` ou) en `SwitchPrefix` raison des exigences de l’outil de localisation interne. D’un point de vue XML, les deux sont équivalents. Vous pouvez donc simplement en faire un attribut pour réduire l’encombrement ou le laisser tel quel.
+- **`DisplayName`** : Nom affiché dans l’interface utilisateur de la page de propriétés pour le `Rule` nœud. Cette valeur est localisée. Nous avons créé `DisplayName` comme élément enfant de `Rule` plutôt que comme attribut (comme `Name` ou) en `SwitchPrefix` raison des exigences de l’outil de localisation interne. D’un point de vue XML, les deux sont équivalents. Vous pouvez donc simplement en faire un attribut pour réduire l’encombrement ou le laisser tel quel.
 
-- **`DataSource`**: Cette propriété importante indique au système de projet l’emplacement où lire et écrire la valeur de la propriété, ainsi que son regroupement (expliqué plus tard). Pour *`cl.xml`* , ces valeurs sont les suivantes :
+- **`DataSource`** : Cette propriété importante indique au système de projet l’emplacement où lire et écrire la valeur de la propriété, ainsi que son regroupement (expliqué plus tard). Pour *`cl.xml`* , ces valeurs sont les suivantes :
 
     ```xml
     <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
@@ -161,7 +161,7 @@ Un **`<Rule>`** élément est le nœud racine dans le fichier XML. Il peut avoir
 
 - D’autres attributs d’un `Rule` , y compris `Description` et `SupportsFileBatching` , ne sont pas indiqués ici. Vous pouvez obtenir l’ensemble complet des attributs applicables à un `Rule` ou à tout autre élément en parcourant la documentation de ces types. Vous pouvez aussi examiner les propriétés publiques sur les types dans l’espace de noms `Microsoft.Build.Framework.XamlTypes` de l’assembly `Microsoft.Build.Framework.dll`.
 
-- **`DisplayName`**, **`PageTemplate`** et **`Order`** sont des propriétés liées à l’interface utilisateur qui sont présentes dans ce modèle de données indépendant de l’interface utilisateur. Ces propriétés sont généralement utilisées par les interfaces utilisateur utilisées pour afficher les pages de propriétés. `DisplayName` et `Description` sont deux propriétés qui sont présentes sur presque tous les éléments du fichier XML. Et, ces deux propriétés sont les seules à être localisées.
+- **`DisplayName`** , **`PageTemplate`** et **`Order`** sont des propriétés liées à l’interface utilisateur qui sont présentes dans ce modèle de données indépendant de l’interface utilisateur. Ces propriétés sont généralement utilisées par les interfaces utilisateur utilisées pour afficher les pages de propriétés. `DisplayName` et `Description` sont deux propriétés qui sont présentes sur presque tous les éléments du fichier XML. Et, ces deux propriétés sont les seules à être localisées.
 
 ### <a name="category-elements"></a>Éléments category
 
@@ -196,14 +196,14 @@ La plupart des attributs de l’extrait de code ont été décrits précédemmen
 
 - **`Subtype`** est un attribut disponible uniquement pour `StringProperty` les `StringListProperty` éléments et. Il fournit des informations contextuelles. Par exemple, la valeur `file` indique que la propriété représente un chemin d’accès de fichier. Visual Studio utilise ces informations contextuelles pour améliorer l’expérience de modification. Par exemple, elle peut fournir une fenêtre de l’Explorateur Windows qui permet à l’utilisateur de choisir le fichier visuellement comme éditeur de la propriété.
 
-- **`Category`**: Catégorie sous laquelle cette propriété se trouve. Recherchez cette propriété sous la catégorie **Fichiers de sortie** dans l’interface utilisateur.
+- **`Category`** : Catégorie sous laquelle cette propriété se trouve. Recherchez cette propriété sous la catégorie **Fichiers de sortie** dans l’interface utilisateur.
 
-- **`Switch`**: Lorsqu’une règle représente un outil tel que l’outil compilateur, la plupart des `Rule` propriétés sont passées en tant que commutateurs à l’exécutable de l’outil au moment de la génération. La valeur de cet attribut indique le littéral de commutateur à utiliser. L' `<StringProperty>` exemple spécifie que son commutateur doit être **`Fo`** . Associé à l' `SwitchPrefix` attribut sur le parent `Rule` , cette propriété est passée au fichier exécutable en tant que  **`/Fo"Debug\"`** . Elle est visible dans la ligne de commande pour C/C++ dans l’interface utilisateur de la page de propriétés.
+- **`Switch`** : Lorsqu’une règle représente un outil tel que l’outil compilateur, la plupart des `Rule` propriétés sont passées en tant que commutateurs à l’exécutable de l’outil au moment de la génération. La valeur de cet attribut indique le littéral de commutateur à utiliser. L' `<StringProperty>` exemple spécifie que son commutateur doit être **`Fo`** . Associé à l' `SwitchPrefix` attribut sur le parent `Rule` , cette propriété est passée au fichier exécutable en tant que  **`/Fo"Debug\"`** . Elle est visible dans la ligne de commande pour C/C++ dans l’interface utilisateur de la page de propriétés.
 
    Voici d’autres attributs de propriété :
 
-- **`Visible`**: Si vous ne souhaitez pas que votre propriété apparaisse dans les pages de propriétés, mais que vous souhaitez qu’elle soit disponible au moment de la génération, affectez à cet attribut la valeur `false` .
+- **`Visible`** : Si vous ne souhaitez pas que votre propriété apparaisse dans les pages de propriétés, mais que vous souhaitez qu’elle soit disponible au moment de la génération, affectez à cet attribut la valeur `false` .
 
-- **`ReadOnly`**: Si vous souhaitez fournir une vue en lecture seule de la valeur de cette propriété dans les pages de propriétés, affectez à cet attribut la valeur `true` .
+- **`ReadOnly`** : Si vous souhaitez fournir une vue en lecture seule de la valeur de cette propriété dans les pages de propriétés, affectez à cet attribut la valeur `true` .
 
-- **`IncludeInCommandLine`**: Au moment de la génération, un outil peut ne pas avoir besoin de certaines de ses propriétés. Affectez à cet attribut la valeur `false` pour empêcher la transmission d’une propriété particulière.
+- **`IncludeInCommandLine`** : Au moment de la génération, un outil peut ne pas avoir besoin de certaines de ses propriétés. Affectez à cet attribut la valeur `false` pour empêcher la transmission d’une propriété particulière.

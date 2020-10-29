@@ -4,12 +4,12 @@ description: Fonctionnement de l’héritage des propriétés dans les projets V
 ms.date: 02/21/2020
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 00afe982156597aa166c2c5de98f3027e3f84bdb
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: 17b23426f70bb2d306491e538d30cffc0f202362
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099704"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919213"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Héritage des propriétés dans les projets Visual Studio
 
@@ -17,19 +17,19 @@ Le système de projet Visual Studio native est basé sur MSBuild. MSBuild défin
 
 ## <a name="the-vcxproj-file-props-files-and-targets-files"></a>Fichier .vcxproj, fichiers .props et fichiers .targets
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Les propriétés de projet sont stockées dans plusieurs fichiers. Certaines sont stockées directement dans le *`.vcxproj`* fichier projet. D’autres proviennent d' *`.targets`* autres *`.props`* fichiers ou que le fichier projet importe et qui fournissent des valeurs par défaut. Vous trouverez les fichiers projet Visual Studio 2015 dans un dossier spécifique aux paramètres régionaux sous le répertoire de base, *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\v140`* .
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Les propriétés de projet sont stockées dans plusieurs fichiers. Certaines sont stockées directement dans le *`.vcxproj`* fichier projet. D’autres proviennent d' *`.targets`* autres *`.props`* fichiers ou que le fichier projet importe et qui fournissent des valeurs par défaut. Vous trouverez les fichiers projet Visual Studio 2017 dans un dossier spécifique aux paramètres régionaux sous le répertoire de base, *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* .
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 Les propriétés de projet sont stockées dans plusieurs fichiers. Certaines sont stockées directement dans le *`.vcxproj`* fichier projet. D’autres proviennent d' *`.targets`* autres *`.props`* fichiers ou que le fichier projet importe et qui fournissent des valeurs par défaut. Vous trouverez les fichiers projet Visual Studio dans un dossier spécifique aux paramètres régionaux sous le répertoire de base, *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>`* . Le `<version>` est spécifique à la version de Visual Studio. Il s’agit *`v160`* de Visual Studio 2019.
 
@@ -80,11 +80,11 @@ Pour plus d’informations, consultez [propriétés MSBuild](/visualstudio/msbui
 
 Une configuration est simplement un groupe arbitraire de propriétés qui porte un nom. Visual Studio fournit des configurations Debug et Release. Chaque définit de manière appropriée différentes propriétés pour une version Debug ou une version Release. Vous pouvez utiliser la **Configuration Manager** pour définir des configurations personnalisées. Ils constituent un moyen pratique de regrouper des propriétés pour une version spécifique de la Build.
 
-Pour obtenir une meilleure idée des configurations de build, ouvrez **Gestionnaire de propriétés**. Vous pouvez l’ouvrir en choisissant **afficher > gestionnaire de propriétés** ou **afficher > autres > Windows Gestionnaire de propriétés**, en fonction de vos paramètres. **Gestionnaire de propriétés** a des nœuds pour chaque paire de configuration et de plateforme dans le projet. Sous chacun de ces nœuds se trouvent des nœuds pour les feuilles de propriétés ( *`.props`* fichiers) qui définissent des propriétés spécifiques pour cette configuration.
+Pour obtenir une meilleure idée des configurations de build, ouvrez **Gestionnaire de propriétés** . Vous pouvez l’ouvrir en choisissant **afficher > gestionnaire de propriétés** ou **afficher > autres > Windows Gestionnaire de propriétés** , en fonction de vos paramètres. **Gestionnaire de propriétés** a des nœuds pour chaque paire de configuration et de plateforme dans le projet. Sous chacun de ces nœuds se trouvent des nœuds pour les feuilles de propriétés ( *`.props`* fichiers) qui définissent des propriétés spécifiques pour cette configuration.
 
 ![Gestionnaire de propriétés](media/property-manager.png "Gestionnaire de propriétés")
 
-Par exemple, vous pouvez accéder au volet général dans les pages de propriétés. Remplacez la valeur de la propriété jeu de caractères par « non défini » au lieu de « utiliser Unicode », puis cliquez sur **OK**. La Gestionnaire de propriétés affiche désormais aucune feuille de propriétés de **prise en charge Unicode** . Elle est supprimée pour la configuration actuelle, mais elle existe toujours pour d’autres configurations.
+Par exemple, vous pouvez accéder au volet général dans les pages de propriétés. Remplacez la valeur de la propriété jeu de caractères par « non défini » au lieu de « utiliser Unicode », puis cliquez sur **OK** . La Gestionnaire de propriétés affiche désormais aucune feuille de propriétés de **prise en charge Unicode** . Elle est supprimée pour la configuration actuelle, mais elle existe toujours pour d’autres configurations.
 
 Pour plus d’informations sur le Gestionnaire de propriétés et les feuilles de propriétés, consultez [Partager ou réutiliser des paramètres de projet Visual Studio C++](create-reusable-property-configurations.md).
 

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2d4473e3682a6e00e0eef61cb73d7450976bcc0c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 75f45244b9e9b38b7dc65b604940199acafa0ede
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507733"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922216"
 ---
 # <a name="tutorial-windows-performance-analyzer-basics"></a>Didacticiel : notions de base de l’analyseur de performances Windows
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Les outils C++ Build Insights sont disponibles dans Visual Studio 2019. Pour afficher la documentation de cette version, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’utilisation de C++ Build Insights requiert une connaissance de Windows Performance Analyzer (WPA). Cet article vous permet de vous familiariser avec les opérations WPA courantes. Pour plus d’informations sur l’utilisation de WPA, consultez la documentation de l' [Analyseur de performances Windows](/windows-hardware/test/wpt/windows-performance-analyzer) .
 
@@ -44,7 +44,7 @@ La plupart des affichages WPA de build Insights de C++ vous permettent de choisi
 
 ## <a name="zoom-in-and-out"></a>Zoom avant et arrière
 
-Certains suivis de build sont tellement volumineux qu’il est difficile d’en faire les détails. Pour effectuer un zoom avant sur une zone qui vous intéresse, cliquez avec le bouton droit sur le graphique et sélectionnez **Zoom**. Vous pouvez toujours revenir au paramètre précédent en choisissant annuler le **Zoom**. Cette image montre un exemple d’utilisation d’une sélection et de la commande **Zoom** pour effectuer un zoom avant sur une section du graphique :
+Certains suivis de build sont tellement volumineux qu’il est difficile d’en faire les détails. Pour effectuer un zoom avant sur une zone qui vous intéresse, cliquez avec le bouton droit sur le graphique et sélectionnez **Zoom** . Vous pouvez toujours revenir au paramètre précédent en choisissant annuler le **Zoom** . Cette image montre un exemple d’utilisation d’une sélection et de la commande **Zoom** pour effectuer un zoom avant sur une section du graphique :
 
 ![Brève vidéo qui montre comment effectuer un zoom avant sur un graphique.](media/wpa-zooming.gif)
 

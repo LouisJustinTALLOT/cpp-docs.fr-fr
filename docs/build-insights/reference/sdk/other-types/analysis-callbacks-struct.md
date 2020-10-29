@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a24755befdd446051ae376b49d3dca06c7bc3320
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3fae97370ff9366ffc2fbd8d046a73c30125e554
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041040"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919928"
 ---
 # <a name="analysis_callbacks-structure"></a>Structure ANALYSIS_CALLBACKS
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `ANALYSIS_CALLBACKS` structure est utilisée lors de l’initialisation d’un objet [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) ou [RELOG_DESCRIPTOR](relog-descriptor-struct.md) . Elle spécifie les fonctions à appeler lors de l’analyse ou de la reconnexion d’une trace de Suivi d’v nements pour Windows (ETW).
 
@@ -56,7 +56,7 @@ typedef struct ANALYSIS_CALLBACKS_TAG
 | `OnBeginAnalysisPass` | Appelé au début d’un test d’analyse ou de la passe de reconnexion, avant de traiter tout événement. |
 | `OnEndAnalysisPass` | Appelée lors de la fin d’un test d’analyse ou de la passe de rejournalisation, après le traitement de tous les événements. |
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La phase d’analyse d’une session de rejournalisation est considérée comme faisant partie de la session de rejournalisation et peut contenir plusieurs passes d’analyse. Pour cette raison, `OnBeginAnalysis` est appelé deux fois dans une ligne au début d’une session de rejournalisation. `OnEndAnalysis` est appelé à la fin de la phase d’analyse, avant de commencer la phase de rejournalisation, et une nouvelle fois à la fin de la phase de reconnexion. La phase de rejournalisation contient toujours une seule passe de reconnexion.
 

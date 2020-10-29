@@ -4,26 +4,26 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706965"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921137"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistant Fournisseur OLEDB ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+Cet Assistant n’est pas disponible dans Visual Studio 2019 et ultérieur.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
+À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE** . Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
 
 Le tableau suivant décrit les options de l’Assistant Fournisseur OLE DB ATL :
 
@@ -31,7 +31,7 @@ Le tableau suivant décrit les options de l’Assistant Fournisseur OLE DB ATL :
 
    Tapez le nom court du fournisseur à créer. Les autres champs de modification dans l’Assistant se rempliront automatiquement en fonction de ce que vous tapez ici. Vous pouvez modifier les autres champs de nom si vous le souhaitez.
 
-- **CoClasse**
+- **Coclasse**
 
    Nom de la coclasse. Le nom du ProgID sera modifié pour correspondre à ce nom.
 
@@ -43,15 +43,15 @@ Le tableau suivant décrit les options de l’Assistant Fournisseur OLE DB ATL :
 
 - **ProgID**
 
-   Le progID, ou identificateur programmatique, est une chaîne de texte que votre application peut utiliser à la place d’un GUID. Le nom du ProgID est au format *NomProjet.NomCoclasse*.
+   Le progID, ou identificateur programmatique, est une chaîne de texte que votre application peut utiliser à la place d’un GUID. Le nom du ProgID est au format *NomProjet.NomCoclasse* .
 
 - **Version**
 
    Numéro de version de votre fournisseur. La valeur par défaut est 1.
 
-- **DataSource class** (Classe DataSource)
+- **Classe DataSource**
 
-   Nom de la classe data source, au format C*Nomcourt*Source.
+   Nom de la classe data source, au format C *Nomcourt* Source.
 
 - **DataSource .h file** (Fichier .h DataSource)
 
@@ -59,7 +59,7 @@ Le tableau suivant décrit les options de l’Assistant Fournisseur OLE DB ATL :
 
 - **Session class** (Classe Session)
 
-   Nom de la classe session, au format C*Nomcourt*Session.
+   Nom de la classe session, au format C *Nomcourt* Session.
 
 - **Session .h file** (Fichier .h Session)
 
@@ -67,7 +67,7 @@ Le tableau suivant décrit les options de l’Assistant Fournisseur OLE DB ATL :
 
 - **Classe Command**
 
-   Nom de la classe command, au format C*Nomcourt*Command.
+   Nom de la classe command, au format C *Nomcourt* Command.
 
 - **Command .h file** (Fichier .h Command)
 
@@ -75,7 +75,7 @@ Le tableau suivant décrit les options de l’Assistant Fournisseur OLE DB ATL :
 
 - **Rowset class** (Classe Rowset)
 
-   Nom de la classe Rowset, au format C*Nomcourt*Rowset.
+   Nom de la classe Rowset, au format C *Nomcourt* Rowset.
 
 - **Rowset .h file** (Fichier .h Rowset)
 

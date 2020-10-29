@@ -4,24 +4,24 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: f3bcc799f2a9591cfe7b2fc364b03161b5c0da33
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 15d41aabee174a409ad11e4422292bcea5f10bbf
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500690"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919122"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Méthodes de consommateur générées par l'Assistant
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures. Vous pouvez toujours ajouter la fonctionnalité manuellement.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-L’**Assistant Consommateur OLE DB ATL** et l’**Assistant Application MFC** génèrent certaines fonctions que vous devriez connaître. Certaines méthodes sont implémentées différemment dans les projets avec attributs et présentent donc quelques risques à prendre en compte. Chaque cas est expliqué ci-après. Pour plus d’informations sur l’affichage de code injecté, consultez [Débogage de code injecté](/visualstudio/debugger/how-to-debug-injected-code).
+L’ **Assistant Consommateur OLE DB ATL** et l’ **Assistant Application MFC** génèrent certaines fonctions que vous devriez connaître. Certaines méthodes sont implémentées différemment dans les projets avec attributs et présentent donc quelques risques à prendre en compte. Chaque cas est expliqué ci-après. Pour plus d’informations sur l’affichage de code injecté, consultez [Débogage de code injecté](/visualstudio/debugger/how-to-debug-injected-code).
 
 - `OpenAll` ouvre la source de données ainsi que les ensembles de lignes et active les signets s’ils sont disponibles.
 
@@ -31,7 +31,7 @@ L’**Assistant Consommateur OLE DB ATL** et l’**Assistant Application MFC** g
 
 - `GetRowsetProperties` récupère un pointeur pour l’ensemble de propriétés de l’ensemble de lignes qui permet de définir les propriétés.
 
-- `OpenDataSource` ouvre la source de données à l’aide de la chaîne d’initialisation que vous avez spécifiée dans la boîte de dialogue **Propriétés des liaisons de données**.
+- `OpenDataSource` ouvre la source de données à l’aide de la chaîne d’initialisation que vous avez spécifiée dans la boîte de dialogue **Propriétés des liaisons de données** .
 
 - `CloseDataSource` ferme la source de données de manière appropriée.
 
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si vous définissez une méthode `HasBookmark`, le code `OpenAll` définit la propriété `DBPROP_IRowsetLocate`. Faites-le seulement si votre fournisseur prend en charge cette propriété.
 
@@ -141,7 +141,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous ne devez pas définir une méthode `GetRowsetProperties` globale, car elle pourrait créer un conflit avec celle définie par l’Assistant. Il s’agit d’une méthode générée par l’Assistant que vous obtenez avec les projets basés sur des modèles et avec attributs. Les attributs n’injectent pas ce code.
 
@@ -153,7 +153,7 @@ HRESULT OpenDataSource();
 void CloseDataSource();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’Assistant définit les méthodes `OpenDataSource` et `CloseDataSource`. `OpenDataSource` appelle [CDataSource::OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring).
 

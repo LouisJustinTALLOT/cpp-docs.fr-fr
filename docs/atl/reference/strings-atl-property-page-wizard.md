@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-ms.openlocfilehash: 04178c435bbd0ca80e412efc39a1b736062d95e7
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 61378e0aa2cee94420849195a94203be078418ff
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706769"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921111"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Chaînes, Assistant Page de propriétés ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’Assistant Page de propriétés ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Fournit le texte associé à la page de propriétés.
 
@@ -35,7 +35,7 @@ Fournit le texte associé à la page de propriétés.
 
 - **Fichier d’aide**
 
-   Définit le nom du fichier d’aide qui décrit comment utiliser la page de propriétés. Le nom ne doit pas comprendre de chemin d’accès. Lorsque l’utilisateur appuie sur **Aide**, le cadre ouvre le fichier d’aide dans le répertoire nommé dans la valeur de la clé HelpDir des entrées du registre de la page de propriétés sous son CLSID.
+   Définit le nom du fichier d’aide qui décrit comment utiliser la page de propriétés. Le nom ne doit pas comprendre de chemin d’accès. Lorsque l’utilisateur appuie sur **Aide** , le cadre ouvre le fichier d’aide dans le répertoire nommé dans la valeur de la clé HelpDir des entrées du registre de la page de propriétés sous son CLSID.
 
 ::: moniker-end
 

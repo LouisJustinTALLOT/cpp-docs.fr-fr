@@ -3,20 +3,20 @@ title: Créer un projet Linux CMake dans Visual Studio
 description: Comment créer un projet CMake Linux dans Visual Studio
 ms.date: 08/06/2020
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 5753dbb37c11686becb3e141261284b68468a3bc
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8a960f89274fbbf235b88fdcd787ee6de8ab988b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507956"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921800"
 ---
 # <a name="create-a-cmake-linux-project-in-visual-studio"></a>Créer un projet Linux CMake dans Visual Studio
 
-::: moniker range="vs-2015"
-La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur. Pour consulter la documentation de ces versions, définissez la liste déroulante **version** située au-dessus de la table des matières dans **Visual Studio 2017** ou **Visual Studio 2019**.
+::: moniker range="msvc-140"
+La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur. Pour consulter la documentation de ces versions, définissez la liste déroulante **version** située au-dessus de la table des matières dans **Visual Studio 2017** ou **Visual Studio 2019** .
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Nous vous recommandons d’utiliser CMake pour les projets qui sont multiplateformes ou qui seront rendus Open source. Vous pouvez utiliser des projets CMake pour générer et déboguer le même code source sur Windows, le sous-système Windows pour Linux (WSL) et les systèmes distants.
 
@@ -33,7 +33,7 @@ En outre, assurez-vous que les éléments suivants sont installés sur l’ordin
 - Ninja-Build (Visual Studio 2019 ou version ultérieure)
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 La prise en charge de CMake dans Visual Studio nécessite la prise en charge du mode serveur introduite dans CMake 3,8. Pour une variante CMake fournie par Microsoft, téléchargez les derniers binaires prégénérés à l’adresse [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) .
 
 Les fichiers binaires sont installés dans `~/.vs/cmake` . Une fois les fichiers binaires déployés, votre projet régénère automatiquement. Si le CMake spécifié par le `cmakeExecutable` champ dans *CMakeSettings.json* n’est pas valide (il n’existe pas ou qu’il s’agit d’une version non prise en charge) et que les fichiers binaires prédéfinis sont présents, Visual Studio ignore `cmakeExecutable` et utilise les binaires prédéfinis.
@@ -41,7 +41,7 @@ Les fichiers binaires sont installés dans `~/.vs/cmake` . Une fois les fichiers
 Visual Studio 2017 ne peut pas créer un projet CMake à partir de zéro, mais vous pouvez ouvrir un dossier qui contient un projet CMake existant, comme décrit dans la section suivante.
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 Vous pouvez utiliser Visual Studio 2019 pour générer et déboguer sur un système Linux distant ou WSL, et CMake sera appelé sur ce système. Cmake version 3,14 ou ultérieure doit être installé sur l’ordinateur cible.
 
 Assurez-vous que l’ordinateur cible dispose d’une version récente de CMake. Souvent, la version offerte par le gestionnaire de package par défaut d’une distribution n’est pas assez récente pour prendre en charge toutes les fonctionnalités requises par Visual Studio. Visual Studio 2019 détecte si une version récente de CMake est installée sur le système Linux. Si aucune valeur n’est trouvée, Visual Studio affiche une barre d’informations en haut du volet de l’éditeur. Il propose d’installer CMake pour vous à partir de [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) .
@@ -52,8 +52,8 @@ Avec Visual Studio 2019, vous pouvez créer un projet CMake à partir de zéro, 
 
 Pour créer un nouveau projet Linux CMake dans Visual Studio 2019 :
 
-1. Sélectionnez **Fichier > Nouveau projet** dans Visual Studio, ou appuyez sur **Ctrl+Maj+N**.
-1. Définissez le **Langage** sur **C++** et recherchez « CMake ». Ensuite, choisissez **Suivant**. Entrez un **Nom** et un **Emplacement**, puis choisissez **Créer**.
+1. Sélectionnez **Fichier > Nouveau projet** dans Visual Studio, ou appuyez sur **Ctrl+Maj+N** .
+1. Définissez le **Langage** sur **C++** et recherchez « CMake ». Ensuite, choisissez **Suivant** . Entrez un **Nom** et un **Emplacement** , puis choisissez **Créer** .
 
 Vous pouvez également ouvrir votre propre projet CMake dans Visual Studio 2019. La section suivante explique comment procéder.
 
@@ -66,17 +66,17 @@ Pour vous aider à mieux comprendre, modifier et créer vos scripts CMake dans V
 - [Ajouter, supprimer et renommer facilement des fichiers et des cibles dans des projets CMake](https://devblogs.microsoft.com/cppblog/easily-add-remove-and-rename-files-and-targets-in-cmake-projects/)
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="open-a-cmake-project-folder"></a>Ouvrir un dossier de projet CMake
 
 Lorsque vous ouvrez un dossier qui contient un projet CMake existant, Visual Studio utilise des variables dans le cache CMake pour configurer automatiquement IntelliSense et les builds. Les paramètres de configuration locale et de débogage sont stockés dans des fichiers JSON. Vous pouvez éventuellement partager ces fichiers avec d’autres personnes qui utilisent Visual Studio.
 
-Visual Studio ne modifie pas les fichiers de *CMakeLists.txt* . Cela permet à d’autres personnes travaillant sur le même projet de continuer à utiliser leurs outils existants. Visual Studio régénère le cache lorsque vous enregistrez les modifications apportées à *CMakeLists.txt*ou, dans certains cas, à *CMakeSettings.jssur*. Si vous utilisez une configuration de **cache existante** , Visual Studio ne modifie pas le cache.
+Visual Studio ne modifie pas les fichiers de *CMakeLists.txt* . Cela permet à d’autres personnes travaillant sur le même projet de continuer à utiliser leurs outils existants. Visual Studio régénère le cache lorsque vous enregistrez les modifications apportées à *CMakeLists.txt* ou, dans certains cas, à *CMakeSettings.jssur* . Si vous utilisez une configuration de **cache existante** , Visual Studio ne modifie pas le cache.
 
 Pour obtenir des informations générales sur la prise en charge de CMake dans Visual Studio, consultez [Projets CMake dans Visual Studio](../build/cmake-projects-in-visual-studio.md). Lisez ce qui suit avant de continuer.
 
-Pour commencer, choisissez **fichier**  >  **ouvrir**  >  le**dossier** dans le menu principal ou tapez `devenv.exe <foldername>` dans une fenêtre d’invite de [commandes développeur](../build/building-on-the-command-line.md) . Le dossier que vous ouvrez doit contenir un fichier *CMakeLists.txt* , ainsi que votre code source.
+Pour commencer, choisissez **fichier**  >  **ouvrir**  >  le **dossier** dans le menu principal ou tapez `devenv.exe <foldername>` dans une fenêtre d’invite de [commandes développeur](../build/building-on-the-command-line.md) . Le dossier que vous ouvrez doit contenir un fichier *CMakeLists.txt* , ainsi que votre code source.
 
 L’exemple suivant montre un fichier *CMakeLists.txt* simple et un fichier. cpp :
 
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-*CMakeLists.txt*:
+*CMakeLists.txt* :
 
 ```txt
 cmake_minimum_required(VERSION 3.8)

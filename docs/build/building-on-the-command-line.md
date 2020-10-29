@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 1fe8e59c85e0c6b00bff4de639267a44c6ae369e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 72fff7e788e4ffd938867dfa662c98fc0305ec0c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838800"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922190"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Utiliser l’ensemble d’outils Microsoft C++ à partir de la ligne de commande
 
@@ -26,11 +26,11 @@ Vous pouvez générer des applications C et C++ sur la ligne de commande en util
 
 ## <a name="download-and-install-the-tools"></a>Télécharger et installer les outils
 
-Si vous avez installé Visual Studio et une charge de travail C++, vous disposez de tous les outils en ligne de commande. Pour plus d’informations sur l’installation de C++ et de Visual Studio, consultez [installer la prise en charge de c++ dans Visual Studio](vscpp-step-0-installation.md). Si vous souhaitez uniquement l’ensemble d’outils de ligne de commande, téléchargez les [outils de génération pour Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Lorsque vous exécutez le fichier exécutable téléchargé, il met à jour et exécute l’Visual Studio Installer. Pour installer uniquement les outils dont vous avez besoin pour le développement C++, sélectionnez la charge de travail **outils de génération c++** . Vous pouvez sélectionner des bibliothèques et des ensembles d’outils facultatifs à inclure dans les **Détails de l’installation**. Pour générer du code à l’aide des ensembles d’outils Visual Studio 2015 ou 2017, sélectionnez les outils de génération MSVC V140 ou MSVC V141 facultatifs. Lorsque vous êtes satisfait de vos sélections, choisissez **installer**.
+Si vous avez installé Visual Studio et une charge de travail C++, vous disposez de tous les outils en ligne de commande. Pour plus d’informations sur l’installation de C++ et de Visual Studio, consultez [installer la prise en charge de c++ dans Visual Studio](vscpp-step-0-installation.md). Si vous souhaitez uniquement l’ensemble d’outils de ligne de commande, téléchargez les [outils de génération pour Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). Lorsque vous exécutez le fichier exécutable téléchargé, il met à jour et exécute l’Visual Studio Installer. Pour installer uniquement les outils dont vous avez besoin pour le développement C++, sélectionnez la charge de travail **outils de génération c++** . Vous pouvez sélectionner des bibliothèques et des ensembles d’outils facultatifs à inclure dans les **Détails de l’installation** . Pour générer du code à l’aide des ensembles d’outils Visual Studio 2015 ou 2017, sélectionnez les outils de génération MSVC V140 ou MSVC V141 facultatifs. Lorsque vous êtes satisfait de vos sélections, choisissez **installer** .
 
 ## <a name="how-to-use-the-command-line-tools"></a>Comment utiliser les outils en ligne de commande
 
-Quand vous choisissez l’une des charges de travail C++ dans Visual Studio Installer, l’*ensemble d’outils de plateforme* Visual Studio est installé. Un ensemble d’outils de plateforme contient tous les outils C et C++ pour une version spécifique de Visual Studio. Les outils incluent les compilateurs C/C++, les éditeur de liens, les assembleurs et d’autres outils de génération, ainsi que les bibliothèques correspondantes. Vous pouvez utiliser tous ces outils à partir de la ligne de commande. Ils sont également utilisés en interne par l’IDE de Visual Studio. Il existe des compilateurs et des outils hébergés et hébergés sur x86 et x64 pour générer du code pour les cibles x86, x64, ARM et ARM64. Chaque ensemble d’outils propre à une architecture de build hôte et cible particulière est stocké dans son propre répertoire.
+Quand vous choisissez l’une des charges de travail C++ dans Visual Studio Installer, l’ *ensemble d’outils de plateforme* Visual Studio est installé. Un ensemble d’outils de plateforme contient tous les outils C et C++ pour une version spécifique de Visual Studio. Les outils incluent les compilateurs C/C++, les éditeur de liens, les assembleurs et d’autres outils de génération, ainsi que les bibliothèques correspondantes. Vous pouvez utiliser tous ces outils à partir de la ligne de commande. Ils sont également utilisés en interne par l’IDE de Visual Studio. Il existe des compilateurs et des outils hébergés et hébergés sur x86 et x64 pour générer du code pour les cibles x86, x64, ARM et ARM64. Chaque ensemble d’outils propre à une architecture de build hôte et cible particulière est stocké dans son propre répertoire.
 
 Pour fonctionner correctement, les outils nécessitent de définir plusieurs variables d’environnement spécifiques. Ces variables sont utilisées pour ajouter les outils au chemin d’accès et pour définir les emplacements du fichier, de la bibliothèque et du fichier include. Pour faciliter la définition de ces variables d’environnement, le programme d’installation crée des *fichiers de commandes* personnalisés lors de l’installation. Vous pouvez exécuter l’un de ces fichiers de commandes pour définir un hôte et une architecture de build cibles spécifiques, SDK Windows version et l’ensemble d’outils de plateforme. Pour plus de commodité, le programme d’installation crée également des raccourcis dans votre menu Démarrer. Les raccourcis démarrent les fenêtres d’invite de commandes développeur en utilisant ces fichiers de commandes pour des combinaisons spécifiques de l’hôte et de la cible. Ces raccourcis garantissent que toutes les variables d’environnement requises sont définies et prêtes à l’emploi.
 
@@ -42,31 +42,31 @@ Les ensembles d’outils, les fichiers de commandes et les raccourcis installés
 
 Les raccourcis d’invite de commandes sont installés dans un dossier propre à la version de Visual Studio dans votre menu Démarrer. Voici la liste des principaux raccourcis d’invite de commandes et des architectures de build prises en charge :
 
-- **Invite de commandes développeur** : définit l’environnement pour utiliser des outils natifs x86 32 bits pour générer du code natif x86 32 bits.
-- **Invite de commandes des outils natifs x86** : définit l’environnement pour utiliser des outils natifs x86 32 bits pour générer du code natif x86 32 bits.
-- **Invite de commandes des outils natifs x64** : définit l’environnement pour utiliser des outils natifs x64 64 bits pour générer du code natif x64 64 bits.
-- **Invite de commandes des outils croisés x86_x64** : définit l’environnement pour utiliser des outils natifs x86 32 bits pour générer du code natif x64 64 bits.
-- **Invite de commandes des outils croisés x64_x86** : définit l’environnement pour utiliser des outils natifs x64 64 bits pour générer du code natif x86 32 bits.
+- **Invite de commandes développeur**  : définit l’environnement pour utiliser des outils natifs x86 32 bits pour générer du code natif x86 32 bits.
+- **Invite de commandes des outils natifs x86**  : définit l’environnement pour utiliser des outils natifs x86 32 bits pour générer du code natif x86 32 bits.
+- **Invite de commandes des outils natifs x64**  : définit l’environnement pour utiliser des outils natifs x64 64 bits pour générer du code natif x64 64 bits.
+- **Invite de commandes des outils croisés x86_x64**  : définit l’environnement pour utiliser des outils natifs x86 32 bits pour générer du code natif x64 64 bits.
+- **Invite de commandes des outils croisés x64_x86**  : définit l’environnement pour utiliser des outils natifs x64 64 bits pour générer du code natif x86 32 bits.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
-Le dossier du menu Démarrer et les noms des raccourcis varient en fonction de la version installée de Visual Studio. Si vous en définissez un, il dépend également du **surnom**d’installation. Par exemple, supposons que vous avez installé Visual Studio 2019 et que vous lui avez donné un surnom de la *dernière version*. Le raccourci de l’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2019 (dernière version)**, dans un dossier nommé **Visual Studio 2019**.
-
-::: moniker-end
-::: moniker range="= vs-2017"
-
-Le dossier du menu Démarrer et les noms des raccourcis varient en fonction de la version installée de Visual Studio. Si vous en définissez un, il dépend également du **surnom**d’installation. Par exemple, supposons que vous avez installé Visual Studio 2017 et que vous lui avez donné un surnom de la *dernière version*. Le raccourci de l’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2017 (dernière version)**, dans un dossier nommé **Visual Studio 2017**.
+Le dossier du menu Démarrer et les noms des raccourcis varient en fonction de la version installée de Visual Studio. Si vous en définissez un, il dépend également du **surnom** d’installation. Par exemple, supposons que vous avez installé Visual Studio 2019 et que vous lui avez donné un surnom de la *dernière version* . Le raccourci de l’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2019 (dernière version)** , dans un dossier nommé **Visual Studio 2019** .
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="= msvc-150"
 
-Le dossier du menu Démarrer et les noms des raccourcis varient en fonction de la version installée de Visual Studio. Par exemple, supposons que vous avez installé Visual Studio 2015. Le raccourci de l’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2015**.
+Le dossier du menu Démarrer et les noms des raccourcis varient en fonction de la version installée de Visual Studio. Si vous en définissez un, il dépend également du **surnom** d’installation. Par exemple, supposons que vous avez installé Visual Studio 2017 et que vous lui avez donné un surnom de la *dernière version* . Le raccourci de l’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2017 (dernière version)** , dans un dossier nommé **Visual Studio 2017** .
+
+::: moniker-end
+::: moniker range="< msvc-150"
+
+Le dossier du menu Démarrer et les noms des raccourcis varient en fonction de la version installée de Visual Studio. Par exemple, supposons que vous avez installé Visual Studio 2015. Le raccourci de l’invite de commandes développeur est nommé **invite de commandes développeur pour VS 2015** .
 
 ::: moniker-end
 
 ### <a name="to-open-a-developer-command-prompt-window"></a><a name="developer_command_prompt"></a> Pour ouvrir une fenêtre d’invite de commandes développeur
 
-1. Sur le bureau, ouvrez le menu **Démarrer** de Windows, puis faites-le défiler pour trouver et ouvrir le dossier correspondant à votre version de Visual Studio, par exemple, **Visual Studio 2019**.
+1. Sur le bureau, ouvrez le menu **Démarrer** de Windows, puis faites-le défiler pour trouver et ouvrir le dossier correspondant à votre version de Visual Studio, par exemple, **Visual Studio 2019** .
 
 1. Dans le dossier, choisissez le raccourci **Invite de commandes développeur** de votre version de Visual Studio. Ce raccourci ouvre une fenêtre d’invite de commandes développeur qui utilise l’architecture de build par défaut des outils natifs x86 32 bits pour générer du code natif x86 32 bits. Si vous préférez une architecture de build autre que celle par défaut, choisissez l’une des invites de commandes des outils natifs ou croisés pour spécifier l’architecture hôte et cible.
 
@@ -76,17 +76,17 @@ Pour un moyen encore plus rapide d’ouvrir une invite de commandes développeur
 
 Si vous préférez définir l’environnement de génération dans une fenêtre d’invite de commandes existante, vous pouvez utiliser l’un des fichiers de commandes créés par le programme d’installation. Nous vous recommandons de définir l’environnement dans une nouvelle fenêtre d’invite de commandes. Nous vous déconseillons de changer d’environnement ultérieurement dans la même fenêtre de commande.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
-L’emplacement du fichier de commandes dépend de la version de Visual Studio que vous avez installée et des choix que vous avez effectués lors de l’installation. Pour Visual Studio 2019, l’emplacement d’installation par défaut sur un système 64 bits se trouve dans \\ Program Files (x86) \\ Microsoft Visual Studio \\ 2019 \\ *Edition*. L' *édition* peut être Community, Professional, Enterprise, BuildTools ou un autre surnom que vous avez fourni.
-
-::: moniker-end
-::: moniker range="= vs-2017"
-
-L’emplacement du fichier de commandes dépend de la version de Visual Studio que vous avez installée et des choix que vous avez effectués lors de l’installation. Pour Visual Studio 2017, l’emplacement d’installation par défaut sur un système 64 bits se trouve dans \\ Program Files (x86) \\ Microsoft Visual Studio \\ 2017 \\ *Edition*. L' *édition* peut être Community, Professional, Enterprise, BuildTools ou un autre surnom que vous avez fourni.
+L’emplacement du fichier de commandes dépend de la version de Visual Studio que vous avez installée et des choix que vous avez effectués lors de l’installation. Pour Visual Studio 2019, l’emplacement d’installation par défaut sur un système 64 bits se trouve dans \\ Program Files (x86) \\ Microsoft Visual Studio \\ 2019 \\ *Edition* . L' *édition* peut être Community, Professional, Enterprise, BuildTools ou un autre surnom que vous avez fourni.
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="= msvc-150"
+
+L’emplacement du fichier de commandes dépend de la version de Visual Studio que vous avez installée et des choix que vous avez effectués lors de l’installation. Pour Visual Studio 2017, l’emplacement d’installation par défaut sur un système 64 bits se trouve dans \\ Program Files (x86) \\ Microsoft Visual Studio \\ 2017 \\ *Edition* . L' *édition* peut être Community, Professional, Enterprise, BuildTools ou un autre surnom que vous avez fourni.
+
+::: moniker-end
+::: moniker range="< msvc-150"
 
 L’emplacement du fichier de commandes dépend de la version de Visual Studio et du répertoire d’installation. Pour Visual Studio 2015, l’emplacement d’installation par défaut se trouve dans \\ Program Files (x86) \\ Microsoft Visual Studio 14,0.
 
@@ -94,12 +94,12 @@ L’emplacement du fichier de commandes dépend de la version de Visual Studio e
 
 Le fichier de commande de l’invite de commandes développeur principal, VsDevCmd.bat, se trouve dans le \\ sous-répertoire Common7 Tools. Quand aucun paramètre n’est spécifié, il définit l’environnement de façon à utiliser les outils x86-natifs pour générer le code x86 32 bits.
 
-::: moniker range=">= vs-2017"
+::: moniker range=">= msvc-150"
 
 D’autres fichiers de commandes sont disponibles pour configurer des architectures de build spécifiques. Les fichiers de commandes disponibles dépendent des charges de travail et des options de Visual Studio que vous avez installées. Dans Visual Studio 2017 et Visual Studio 2019, vous les trouverez dans le \\ \\ sous-répertoire Build auxiliaire VC.
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 D’autres fichiers de commandes sont disponibles pour configurer des architectures de build spécifiques. Les fichiers de commandes disponibles dépendent des charges de travail et des options de Visual Studio que vous avez installées. Dans Visual Studio 2015, ils se trouvent dans les \\ sous-répertoires VC, VC bin ou VC \\ bin \\ *architecture* , où *architecture* est l’une des options natives ou de compilateur croisé.
 
@@ -115,7 +115,7 @@ Ces fichiers de commandes définissent les paramètres par défaut et appellent 
 |**vcvarsamd64_x86.bat**| Utilisent les outils croisés natifs x64 64 bits pour générer du code x86 32 bits.|
 |**vcvarsx86_arm.bat**| Utilisent les outils croisés natifs x86 32 bits pour générer du code ARM.|
 |**vcvarsamd64_arm.bat**| Utilisent les outils croisés natifs x64 64 bits pour générer du code ARM.|
-|**vcvarsall.bat**| Utilisez des paramètres pour spécifier les architectures hôtes et cibles, les SDK Windows et les choix de plateforme. Pour obtenir la liste des options prises en charge, effectuez un appel en utilisant un paramètre **/help**.|
+|**vcvarsall.bat**| Utilisez des paramètres pour spécifier les architectures hôtes et cibles, les SDK Windows et les choix de plateforme. Pour obtenir la liste des options prises en charge, effectuez un appel en utilisant un paramètre **/help** .|
 
 > [!CAUTION]
 > Le fichier vcvarsall.bat et d’autres fichiers de commandes Visual Studio peuvent varier d’un ordinateur à l’autre. Ne remplacez pas un fichier vcvarsall.bat manquant ou endommagé en utilisant un fichier provenant d'un autre ordinateur. Réexécutez le programme d’installation de Visual Studio pour remplacer le fichier manquant.
@@ -130,7 +130,7 @@ En cas d’utilisation sans argument, vcvarsall.bat configure les variables d’
 
 ### <a name="vcvarsall-syntax"></a>Syntaxe de vcvarsall
 
-> **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
+> **vcvarsall.bat** [ *architecture* ] [ *platform_type* ] [ *winsdk_version* ] [ **-vcvars_ver=**_vcversion_ ]
 
 *architecture*<br/>
 Cet argument facultatif spécifie l’architecture hôte et cible à utiliser. Si *architecture* n’est pas spécifié, l’environnement de génération par défaut est utilisé. Ces arguments sont pris en charge :
@@ -155,14 +155,14 @@ Spécifie éventuellement la version du SDK Windows à utiliser. Par défaut, le
 *vcversion*<br/>
 Spécifie éventuellement l’ensemble d’outils du compilateur Visual Studio à utiliser. Par défaut, l’environnement est défini pour utiliser l’ensemble d’outils du compilateur Visual Studio actuel.
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 Utilisez **-vcvars_ver = 14.2 x. yyyyy** pour spécifier une version spécifique de l’ensemble d’outils du compilateur Visual Studio 2019.
 
 Utilisez **-vcvars_ver = 14.16** pour spécifier la dernière version de l’ensemble d’outils du compilateur Visual Studio 2017.
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 Utilisez **-vcvars_ver = 14.16** pour spécifier la dernière version de l’ensemble d’outils du compilateur Visual Studio 2017.
 
@@ -174,7 +174,7 @@ Utilisez **-vcvars_ver = 14.0** pour spécifier l’ensemble d’outils du compi
 
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a><a name="vcvarsall"></a> Pour configurer l’environnement de génération dans une fenêtre d’invite de commandes existante
 
-1. À l’invite de commandes, utilisez la commande CD pour accéder au répertoire d’installation de Visual Studio. Ensuite, réutilisez CD pour accéder au sous-répertoire qui contient les fichiers de commandes propres à la configuration. Pour Visual Studio 2019 et Visual Studio 2017, utilisez le sous-répertoire de * \\ \\ Build auxiliaire VC* . Pour Visual Studio 2015, utilisez le sous-répertoire *VC* .
+1. À l’invite de commandes, utilisez la commande CD pour accéder au répertoire d’installation de Visual Studio. Ensuite, réutilisez CD pour accéder au sous-répertoire qui contient les fichiers de commandes propres à la configuration. Pour Visual Studio 2019 et Visual Studio 2017, utilisez le sous-répertoire de *\\ \\ Build auxiliaire VC* . Pour Visual Studio 2015, utilisez le sous-répertoire *VC* .
 
 1. Entrez la commande qui correspond à votre environnement de développement préféré. Par exemple, pour générer du code ARM pour UWP sur une plateforme 64 bits, à l’aide de la dernière SDK Windows et de l’ensemble d’outils du compilateur Visual Studio, utilisez la ligne de commande suivante :
 
@@ -182,21 +182,21 @@ Utilisez **-vcvars_ver = 14.0** pour spécifier l’ensemble d’outils du compi
 
 ## <a name="create-your-own-command-prompt-shortcut"></a>Créer votre propre raccourci d’invite de commandes
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 Ouvrez la boîte de dialogue Propriétés d’un raccourci d’invite de commandes développeur pour voir la cible de commande utilisée. Par exemple, la cible du raccourci **Invite de commandes des outils natifs x64 pour VS 2019** ressemble à ceci :
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 Ouvrez la boîte de dialogue Propriétés d’un raccourci d’invite de commandes développeur pour voir la cible de commande utilisée. Par exemple, la cible pour le raccourci **invite de commandes des outils natifs x64 pour Visual studio 2017** est semblable à celle-ci :
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 Ouvrez la boîte de dialogue Propriétés d’un raccourci d’invite de commandes développeur pour voir la cible de commande utilisée. Par exemple, la cible du raccourci **invite de commandes des outils natifs x64 VS2015** ressemble à ceci :
 
@@ -206,17 +206,17 @@ Ouvrez la boîte de dialogue Propriétés d’un raccourci d’invite de command
 
 Les fichiers de commandes propres à l’architecture définissent le paramètre *architecture* et appellent vcvarsall.bat. Vous pouvez transmettre les mêmes options à ces fichiers de commandes que vous passerez à vcvarsall.bat, ou vous pouvez simplement appeler vcvarsall.bat directement. Pour spécifier des paramètres pour votre propre raccourci de commande, ajoutez-les à la fin de la commande entre guillemets doubles. Par exemple, voici un raccourci pour générer du code ARM pour UWP sur une plateforme 64 bits, à l’aide de la SDK Windows la plus récente. Pour utiliser un ensemble d’outils de compilateur antérieur, spécifiez le numéro de version. Utilisez quelque chose comme la cible de cette commande dans votre raccourci :
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.16`
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.0`
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64 -vcvars_ver=12.0`
 
@@ -249,7 +249,7 @@ Utilisez MSBuild (msbuild.exe) et un fichier projet (.vcxproj) pour configurer u
 [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
 Utilisez DEVENV (devenv.exe) associé à un commutateur de ligne de commande tel que **/Build** ou **/Clean** pour exécuter certaines commandes de génération sans afficher l’IDE de Visual Studio. En général, DEVENV est préférable à l’utilisation directe de MSBuild, car vous pouvez laisser Visual Studio gérer les complexités de MSBuild. À compter de Visual Studio version 16,5, DEVENV n’utilise pas l’environnement de ligne de commande pour contrôler l’ensemble d’outils et les bibliothèques utilisés.
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 Ces articles montrent comment créer des applications sur la ligne de commande et décrivent comment personnaliser l’environnement de génération à partir de la ligne de commande. Certains montrent comment utiliser des ensembles d’outils 64 bits et cibler des plateformes x86, x64, ARM et ARM64. Ils décrivent également l’utilisation des outils de génération en ligne de commande MSBuild et NMAKE.
 

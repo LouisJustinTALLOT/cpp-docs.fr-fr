@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 48b4c28d3c01d61a31343894312a54ba2ab17a70
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 98ac234b702ef2c73a5c8d90ee6bf4dc59349ed6
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041638"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920968"
 ---
 # <a name="invocation_data-structure"></a>Structure INVOCATION_DATA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `INVOCATION_DATA` structure décrit un appel du compilateur ou de l’éditeur de liens.
 

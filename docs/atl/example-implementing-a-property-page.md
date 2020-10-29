@@ -4,22 +4,22 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: dd74dd4562a3c4a8bff2c58d5f1d801f5dd06fd8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 82c2bd3765802f87025eaf2dfbda8f7467bbe9a0
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499614"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921241"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemple : implémentation d’une page de propriétés
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’Assistant Page de propriétés ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Cet exemple montre comment créer une page de propriétés qui affiche (et vous permet de modifier) les propriétés de l’interface [Classes de documents](../mfc/document-classes.md).
 
@@ -47,11 +47,11 @@ Pour mettre en place cet exemple, vous allez :
 
 ## <a name="adding-the-atl-property-page-class"></a><a name="vcconusing_the_atl_object_wizard"></a> Ajout de la classe de page de propriétés ATL
 
-Commencez par créer un projet ATL pour un serveur DLL appelé `ATLPages7`. Utilisez maintenant [l’Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) pour générer une page de propriétés. Renseignez le champ **Nom court** de la page de propriétés avec la valeur **DocProperties**, puis basculez sur la page **Chaînes** pour définir les éléments spécifiques de page de propriétés comme indiqué dans le tableau ci-dessous.
+Commencez par créer un projet ATL pour un serveur DLL appelé `ATLPages7`. Utilisez maintenant [l’Assistant Page de propriétés ATL](../atl/reference/atl-property-page-wizard.md) pour générer une page de propriétés. Renseignez le champ **Nom court** de la page de propriétés avec la valeur **DocProperties** , puis basculez sur la page **Chaînes** pour définir les éléments spécifiques de page de propriétés comme indiqué dans le tableau ci-dessous.
 
 |Élément|Valeur|
 |----------|-----------|
-|Titre|TextDocument|
+|Intitulé|TextDocument|
 |Chaîne doc|VCUE TextDocument Properties|
 |Helpfile|*\<blank>*|
 

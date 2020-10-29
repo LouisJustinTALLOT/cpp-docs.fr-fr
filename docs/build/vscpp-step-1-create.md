@@ -5,30 +5,30 @@ ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 333bb6ce1f3ea0db6b07d70ddd60d4a4be337abd
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: ee9631ee858ca34f82b599eeabce628483d9a247
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686507"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922086"
 ---
 # <a name="create-a-c-console-app-project"></a>Créer un projet d’application console C++
 
 Habituellement, le programmeur C++ commence par créer une application « Hello, world ! » qu’il exécute sur la ligne de commande. C’est ce que vous allez créer dans Visual Studio au cours de cette étape.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Vous devez installer puis exécuter Visual Studio ainsi que la charge de travail Développement Desktop en C++ sur votre ordinateur. S’il n’est pas installé, consultez [Installer la prise en charge de C++ dans Visual Studio](vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Créer un projet d’application
 
-Visual Studio organise le code des applications dans des *projets*, et vos projets dans des *solutions*. Un projet contient l’ensemble des options, des configurations et des règles utilisées pour créer une application. Il gère la relation entre tous les fichiers du projet et les fichiers externes. Pour créer votre application, commencez par créer un projet et une solution.
+Visual Studio organise le code des applications dans des *projets* , et vos projets dans des *solutions* . Un projet contient l’ensemble des options, des configurations et des règles utilisées pour créer une application. Il gère la relation entre tous les fichiers du projet et les fichiers externes. Pour créer votre application, commencez par créer un projet et une solution.
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-1. Dans Visual Studio, ouvrez le menu **fichier** et choisissez **nouveau > projet** pour ouvrir la boîte de dialogue **créer un nouveau projet** . Sélectionnez le modèle **application console** qui contient des balises **C++**, **Windows**et **console** , puis choisissez **suivant**.
+1. Dans Visual Studio, ouvrez le menu **fichier** et choisissez **nouveau > projet** pour ouvrir la boîte de dialogue **créer un nouveau projet** . Sélectionnez le modèle **application console** qui contient des balises **C++** , **Windows** et **console** , puis choisissez **suivant** .
 
-   ![Création d'un projet](media/vs2019-choose-console-app.png "Ouvrir la boîte de dialogue créer un nouveau projet")
+   ![Créer un projet](media/vs2019-choose-console-app.png "Ouvrir la boîte de dialogue créer un nouveau projet")
 
 1. Dans la boîte de dialogue **configurer votre nouveau projet** , entrez *HelloWorld* dans la zone d’édition **nom du projet** . Choisissez **créer** pour créer le projet.
 
@@ -44,17 +44,17 @@ Visual Studio organise le code des applications dans des *projets*, et vos proje
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 1. Dans Visual Studio, ouvrez le menu **fichier** et choisissez **nouveau > projet** pour ouvrir la boîte de dialogue **nouveau projet** .
 
    ![Ouvrir la boîte de dialogue Nouveau projet](media/vscpp-file-new-project.gif "Ouvrir la boîte de dialogue Nouveau projet")
 
-1. Dans la boîte de dialogue **nouveau projet** , sélectionnez **installé > Visual C++** s’il n’est pas déjà sélectionné, puis choisissez le modèle de **projet vide** . Dans le champ **nom** , entrez *HelloWorld*. Choisissez **OK** pour créer le projet.
+1. Dans la boîte de dialogue **nouveau projet** , sélectionnez **installé > Visual C++** s’il n’est pas déjà sélectionné, puis choisissez le modèle de **projet vide** . Dans le champ **nom** , entrez *HelloWorld* . Choisissez **OK** pour créer le projet.
 
    ![Capture d’écran de la boîte de dialogue Nouveau projet avec installé > Visual C plus plus sélectionné et appelé, l’option de projet vide appelée out et Hellow World tape dans la zone de texte nom.](media/vscpp-concierge-project-name-callouts.png "Nommer et créer le projet")
 
-Visual Studio crée un projet vide. Il est prêt à être spécialisé pour le type d’application que vous souhaitez créer et pour ajouter vos fichiers de code source. Ce sera votre prochaine tâche.
+Visual Studio crée un projet vide. Il est prêt à être spécialisé pour le type d’application que vous souhaitez créer et pour ajouter vos fichiers de code source. Il s’agit de notre prochaine tâche.
 
 [J’ai rencontré un problème.](#create-your-app-project-issues)
 
@@ -64,7 +64,7 @@ Visual Studio peut créer tous les types d’applications et de composants pour 
 
 1. Dans Visual Studio, ouvrez le menu **projet** , puis choisissez **Propriétés** pour ouvrir la boîte de dialogue **pages de propriétés HelloWorld** .
 
-1. Dans la boîte de dialogue **pages de propriétés** , sélectionnez **propriétés de configuration > éditeur de liens > système**, puis choisissez la zone d’édition en regard de la propriété **sous-système** . Dans le menu déroulant qui s’affiche, sélectionnez **console (/SUBSYSTEM : console)**. Choisissez **OK** pour enregistrer vos modifications.
+1. Dans la boîte de dialogue **pages de propriétés** , sélectionnez **propriétés de configuration > éditeur de liens > système** , puis choisissez la zone d’édition en regard de la propriété **sous-système** . Dans le menu déroulant qui s’affiche, sélectionnez **console (/SUBSYSTEM : console)** . Choisissez **OK** pour enregistrer vos modifications.
 
    ![Ouvrir la boîte de dialogue pages de propriétés](media/vscpp-properties-linker-subsystem.gif "Ouvrir la boîte de dialogue pages de propriétés")
 
@@ -74,9 +74,9 @@ Visual Studio sait maintenant générer votre projet pour qu’il s’exécute d
 
 ## <a name="add-a-source-code-file"></a>Ajouter un fichier de code source
 
-1. Dans **Explorateur de solutions**, sélectionnez le projet HelloWorld. Dans la barre de menus, choisissez **projet**, **Ajouter un nouvel élément** pour ouvrir la boîte de dialogue **Ajouter un nouvel élément** .
+1. Dans **Explorateur de solutions** , sélectionnez le projet HelloWorld. Dans la barre de menus, choisissez **projet** , **Ajouter un nouvel élément** pour ouvrir la boîte de dialogue **Ajouter un nouvel élément** .
 
-1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Visual C++** sous **installé** s’il n’est pas déjà sélectionné. Dans le volet central, sélectionnez **fichier C++ (. cpp)**. Remplacez le **nom** par *HelloWorld. cpp*. Choisissez **Ajouter** pour fermer la boîte de dialogue et créer le fichier.
+1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez **Visual C++** sous **installé** s’il n’est pas déjà sélectionné. Dans le volet central, sélectionnez **fichier C++ (. cpp)** . Remplacez le **nom** par *HelloWorld. cpp* . Choisissez **Ajouter** pour fermer la boîte de dialogue et créer le fichier.
 
    ![Ajouter un fichier source pour HelloWorld. cpp](media/vscpp-add-new-item.gif "Ajouter un fichier source pour HelloWorld. cpp")
 
@@ -119,11 +119,11 @@ Venez ici pour obtenir des solutions aux problèmes courants lorsque vous créez
 
 ### <a name="create-your-app-project-issues"></a>Créer votre projet d’application : problèmes
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-La boîte de dialogue **nouveau projet** doit afficher un modèle d' **application console** qui contient des balises **C++**, **Windows**et **console** . Si vous ne le voyez pas, deux causes sont possibles. Il est possible qu’il soit exclu de la liste ou qu’il ne soit pas installé. Tout d’abord, vérifiez les listes déroulantes de filtre en haut de la liste des modèles. Définissez-les sur **C++**, **Windows**et **console**. Le modèle d' **application console** C++ doit apparaître. dans le cas contraire, la charge **de travail développement Desktop en C++** n’est pas installée.
+La boîte de dialogue **nouveau projet** doit afficher un modèle d' **application console** qui contient des balises **C++** , **Windows** et **console** . Si vous ne le voyez pas, deux causes sont possibles. Il est possible qu’il soit exclu de la liste ou qu’il ne soit pas installé. Tout d’abord, vérifiez les listes déroulantes de filtre en haut de la liste des modèles. Définissez-les sur **C++** , **Windows** et **console** . Le modèle d' **application console** C++ doit apparaître. dans le cas contraire, la charge **de travail développement Desktop en C++** n’est pas installée.
 
-Pour installer le **développement Desktop en C++**, vous pouvez exécuter le programme d’installation directement à partir de la boîte de dialogue **nouveau projet** . Cliquez sur le lien **installer d’autres outils et fonctionnalités** en bas de la liste des modèles pour démarrer le programme d’installation. Si la boîte de dialogue **contrôle de compte d’utilisateur** demande des autorisations, choisissez **Oui**. Dans le programme d’installation, assurez-vous que la charge de travail **développement Desktop en C++** est activée. Choisissez ensuite **modifier** pour mettre à jour votre installation de Visual Studio.
+Pour installer le **développement Desktop en C++** , vous pouvez exécuter le programme d’installation directement à partir de la boîte de dialogue **nouveau projet** . Cliquez sur le lien **installer d’autres outils et fonctionnalités** en bas de la liste des modèles pour démarrer le programme d’installation. Si la boîte de dialogue **contrôle de compte d’utilisateur** demande des autorisations, choisissez **Oui** . Dans le programme d’installation, assurez-vous que la charge de travail **développement Desktop en C++** est activée. Choisissez ensuite **modifier** pour mettre à jour votre installation de Visual Studio.
 
 Si un autre projet portant le même nom existe déjà, choisissez un autre nom pour votre projet. Ou supprimez le projet existant et réessayez. Pour supprimer un projet existant, supprimez le dossier de solution (le dossier qui contient le fichier *HelloWorld. sln* ) dans l’Explorateur de fichiers.
 
@@ -131,13 +131,13 @@ Si un autre projet portant le même nom existe déjà, choisissez un autre nom p
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
-Si la boîte de dialogue **nouveau projet** n’affiche pas une entrée de **Visual C++** sous **installé**, la charge de travail **développement Desktop en C++** n’est probablement pas installée sur votre copie de Visual Studio. Vous pouvez exécuter le programme d’installation directement à partir de la boîte de dialogue **nouveau projet** . Cliquez sur le lien **ouvrir Visual Studio installer** pour redémarrer le programme d’installation. Si la boîte de dialogue **contrôle de compte d’utilisateur** demande des autorisations, choisissez **Oui**. Mettez à jour le programme d’installation si nécessaire. Dans le programme d’installation, assurez-vous que la charge de travail **développement Desktop en C++** est activée, puis choisissez **OK** pour mettre à jour votre installation de Visual Studio.
+Si la boîte de dialogue **nouveau projet** n’affiche pas une entrée de **Visual C++** sous **installé** , la charge de travail **développement Desktop en C++** n’est probablement pas installée sur votre copie de Visual Studio. Vous pouvez exécuter le programme d’installation directement à partir de la boîte de dialogue **nouveau projet** . Cliquez sur le lien **ouvrir Visual Studio installer** pour redémarrer le programme d’installation. Si la boîte de dialogue **contrôle de compte d’utilisateur** demande des autorisations, choisissez **Oui** . Mettez à jour le programme d’installation si nécessaire. Dans le programme d’installation, assurez-vous que la charge de travail **développement Desktop en C++** est activée, puis choisissez **OK** pour mettre à jour votre installation de Visual Studio.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Si un autre projet portant le même nom existe déjà, choisissez un autre nom pour votre projet. Ou supprimez le projet existant et réessayez. Pour supprimer un projet existant, supprimez le dossier de solution (le dossier qui contient le fichier *HelloWorld. sln* ) dans l’Explorateur de fichiers.
 
@@ -145,7 +145,7 @@ Si un autre projet portant le même nom existe déjà, choisissez un autre nom p
 
 ### <a name="make-your-project-a-console-app-issues"></a>Faire de votre projet une application console : problèmes
 
-Si vous ne voyez pas l' **éditeur de liens** listé sous **Propriétés de configuration**, choisissez **Annuler** pour fermer la boîte de dialogue **pages de propriétés** . Assurez-vous que le projet **HelloWorld** est sélectionné dans **Explorateur de solutions** avant de réessayer. Ne sélectionnez pas la solution **HelloWorld** , ou un autre élément, dans **Explorateur de solutions**.
+Si vous ne voyez pas l' **éditeur de liens** listé sous **Propriétés de configuration** , choisissez **Annuler** pour fermer la boîte de dialogue **pages de propriétés** . Assurez-vous que le projet **HelloWorld** est sélectionné dans **Explorateur de solutions** avant de réessayer. Ne sélectionnez pas la solution **HelloWorld** , ou un autre élément, dans **Explorateur de solutions** .
 
 Le contrôle dropdown n’apparaît pas dans la zone de modification de la propriété du **sous-système** tant que vous n’avez pas sélectionné la propriété. Cliquez dans la zone d’édition pour la sélectionner. Vous pouvez aussi appuyer sur la touche **Tab** pour parcourir les contrôles de boîte de dialogue jusqu’à ce que le **sous-système** soit mis en surbrillance. Choisissez le contrôle dropdown ou appuyez sur **Alt + Pg. suiv** pour l’ouvrir.
 
@@ -155,7 +155,7 @@ Le contrôle dropdown n’apparaît pas dans la zone de modification de la propr
 
 C’est parfait si vous attribuez un autre nom au fichier de code source. Toutefois, n’ajoutez pas plus d’un fichier qui contient le même code à votre projet.
 
-Si vous avez ajouté un type de fichier incorrect à votre projet, tel qu’un fichier d’en-tête, supprimez-le et réessayez. Pour supprimer le fichier, sélectionnez-le dans **Explorateur de solutions**. Appuyez ensuite sur la touche **Suppr** .
+Si vous avez ajouté un type de fichier incorrect à votre projet, tel qu’un fichier d’en-tête, supprimez-le et réessayez. Pour supprimer le fichier, sélectionnez-le dans **Explorateur de solutions** . Appuyez ensuite sur la touche **Suppr** .
 
 [Revenez en arrière](#add-a-source-code-file).
 

@@ -3,32 +3,32 @@ title: Installer la charge de travail Linux C++ dans Visual Studio
 description: Comment télécharger, installer et configurer la charge de travail Linux pour C++ dans Visual Studio.
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1a1b42927d440d1cde847fd1c1b6593e87a3824a
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 9d0c832ec383286b5f89b8ed1474e69d72b5cb98
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176283"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921605"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Télécharger, installer et configurer la charge de travail Linux
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Les projets Linux sont pris en charge dans Visual Studio 2017 et ultérieur. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Vous pouvez utiliser l’IDE de Visual Studio sur Windows pour créer, modifier et déboguer des projets C++ qui s’exécutent sur un système Linux distant, une machine virtuelle ou le [sous-système Windows pour Linux](/windows/wsl/about).
 
 Vous pouvez travailler sur votre base de code existante qui utilise CMake sans avoir à la convertir en projet Visual Studio. Si votre base de code est multiplateforme, vous pouvez cibler Windows et Linux à partir de Visual Studio. Par exemple, vous pouvez modifier, générer et déboguer votre code sur Windows à l’aide de Visual Studio. Ensuite, reciblez rapidement le projet pour Linux pour la génération et le débogage dans un environnement Linux. Les fichiers d’en-tête Linux sont automatiquement copiés sur votre ordinateur local. Visual Studio les utilise pour fournir une prise en charge complète d’IntelliSense (saisie semi-automatique des instructions, atteindre la définition, etc.).
 
-Tous ces scénarios nécessitent la charge de travail de **développement Linux en C++**.
+Tous ces scénarios nécessitent la charge de travail de **développement Linux en C++** .
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="visual-studio-setup"></a>Installation Visual Studio
 
@@ -36,11 +36,11 @@ Tous ces scénarios nécessitent la charge de travail de **développement Linux 
 
    ![Zone de recherche Windows](media/visual-studio-installer-search.png)
 
-1. Recherchez le programme d’installation dans les résultats situés sous **Applications**, puis double-cliquez dessus. Quand le programme d’installation s’ouvre, choisissez **modifier**, puis cliquez sur l’onglet **charges de travail** . Faites défiler jusqu’à d' **autres ensembles d’outils** et sélectionnez la charge **de travail développement Linux en C++** .
+1. Recherchez le programme d’installation dans les résultats situés sous **Applications** , puis double-cliquez dessus. Quand le programme d’installation s’ouvre, choisissez **modifier** , puis cliquez sur l’onglet **charges de travail** . Faites défiler jusqu’à d' **autres ensembles d’outils** et sélectionnez la charge **de travail développement Linux en C++** .
 
    ![Charge de travail Visual C++ pour le développement sous Linux](media/linuxworkload.png)
 
-1. Si vous ciblez des plateformes IoT ou Embedded, accédez au volet des détails de l' **installation** à droite. Sous **développement Linux avec C++**, développez **composants facultatifs**, puis choisissez les composants dont vous avez besoin. La prise en charge de CMake pour Linux est sélectionnée par défaut.
+1. Si vous ciblez des plateformes IoT ou Embedded, accédez au volet des détails de l' **installation** à droite. Sous **développement Linux avec C++** , développez **composants facultatifs** , puis choisissez les composants dont vous avez besoin. La prise en charge de CMake pour Linux est sélectionnée par défaut.
 
 1. Cliquez sur **Modifier** pour continuer l’installation.
 
@@ -52,7 +52,7 @@ Sur Windows 10, vous pouvez installer et cibler votre distribution Linux favori
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Dans Visual Studio, les projets Linux requièrent l’installation des dépendances suivantes sur votre système Linux distant ou WSL :
 
@@ -68,7 +68,7 @@ Les commandes suivantes supposent que vous utilisez g + + à la place de Clang.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Dans Visual Studio, les projets Linux requièrent l’installation des dépendances suivantes sur votre système Linux distant ou WSL :
 
@@ -81,7 +81,7 @@ Dans Visual Studio, les projets Linux requièrent l’installation des dépendan
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Configuration de Linux : Ubuntu sur WSL
 
@@ -93,11 +93,11 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu sur les systèmes Linux distants
 
-Le système Linux cible doit avoir **OpenSSH-Server**, **g + +**, **gdb**et **être** installé. **Ninja-Build** est requis pour les projets cmake uniquement. Le démon **SSH** doit être en cours d’exécution. **zip** et **rsync** sont requis pour la synchronisation automatique des en-têtes distants avec votre ordinateur local pour la prise en charge d’IntelliSense. Si ces applications ne sont pas déjà présentes, vous pouvez les installer comme suit :
+Le système Linux cible doit avoir **OpenSSH-Server** , **g + +** , **gdb** et **être** installé. **Ninja-Build** est requis pour les projets cmake uniquement. Le démon **SSH** doit être en cours d’exécution. **zip** et **rsync** sont requis pour la synchronisation automatique des en-têtes distants avec votre ordinateur local pour la prise en charge d’IntelliSense. Si ces applications ne sont pas déjà présentes, vous pouvez les installer comme suit :
 
 1. À l’invite de commandes du shell sur votre ordinateur Linux, exécutez :
 
@@ -117,11 +117,11 @@ Le système Linux cible doit avoir **OpenSSH-Server**, **g + +**, **gdb**et **ê
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="fedora-on-wsl"></a>Fedora sur WSL
 
-Fedora utilise le programme d’installation du package **dnf**. Pour télécharger **g + +**, **gdb**, **Make**, **rsync**, **Ninja-Build**et **zip**, exécutez :
+Fedora utilise le programme d’installation du package **dnf** . Pour télécharger **g + +** , **gdb** , **Make** , **rsync** , **Ninja-Build** et **zip** , exécutez :
 
    ```bash
    sudo dnf install gcc-g++ gdb rsync ninja-build make zip
@@ -131,11 +131,11 @@ Fedora utilise le programme d’installation du package **dnf**. Pour téléchar
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="fedora-on-remote-linux-systems"></a>Fedora sur les systèmes Linux distants
 
-L’ordinateur cible exécutant Fedora utilise le programme d’installation de package **fnd**. Pour télécharger **OpenSSH-Server**, **g + +**, **gdb**, **Make**, **Ninja-Build**, **rsync**et **zip**, puis redémarrez le démon SSH, suivez ces instructions. **Ninja-Build** est requis uniquement pour les projets cmake.
+L’ordinateur cible exécutant Fedora utilise le programme d’installation de package **fnd** . Pour télécharger **OpenSSH-Server** , **g + +** , **gdb** , **Make** , **Ninja-Build** , **rsync** et **zip** , puis redémarrez le démon SSH, suivez ces instructions. **Ninja-Build** est requis uniquement pour les projets cmake.
 
 1. À l’invite de commandes du shell sur votre ordinateur Linux, exécutez :
 

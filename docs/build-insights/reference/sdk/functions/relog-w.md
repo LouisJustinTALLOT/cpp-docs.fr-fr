@@ -1,6 +1,6 @@
 ---
-title: RelogW (RelogW)
-description: La référence de fonction CMD Build Insights SDK RelogW.
+title: RelogW
+description: Référence de la fonction RelogW du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c5d5f6e35c7cd24d2324ce1d8a0434d9048b1d85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e01cf7ca769c60761999ca320a7f9a65b41a8ed6
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323813"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920058"
 ---
-# <a name="relogw"></a>RelogW (RelogW)
+# <a name="relogw"></a>RelogW
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `RelogW` fonction est utilisée pour lire les événements MSVC à partir d’une trace d’entrée Event Tracing for Windows (ETW) et les écrire dans une nouvelle trace ETW modifiée.
+La `RelogW` fonction est utilisée pour lire des événements MSVC à partir d’une trace d’suivi d’v nements pour Windows d’entrée (ETW) et les écrire dans une nouvelle trace ETW modifiée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,17 +38,17 @@ enum RESULT_CODE RelogW(
 
 ### <a name="parameters"></a>Paramètres
 
-*inputLogFile (en)*\
-L’entrée ETW trace que vous souhaitez lire les événements à partir.
+*inputLogFile*\
+Trace ETW d’entrée à partir de laquelle vous souhaitez lire les événements.
 
-*sortieLogFile*\
-Le fichier dans lequel écrire les nouveaux événements.
+*outputLogFile*\
+Fichier dans lequel écrire les nouveaux événements.
 
 *relogDescriptor*\
-Pointeur vers un [objet RELOG_DESCRIPTOR.](../other-types/relog-descriptor-struct.md) Utilisez cet objet pour configurer la session de réinstruation.
+Pointeur vers un objet [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md) . Utilisez cet objet pour configurer la session de rejournalisation.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un code de résultat de [l’enum RESULT_CODE.](../other-types/result-code-enum.md)
+Code de résultat de l’énumération [RESULT_CODE](../other-types/result-code-enum.md) .
 
 ::: moniker-end

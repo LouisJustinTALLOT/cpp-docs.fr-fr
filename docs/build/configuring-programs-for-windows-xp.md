@@ -3,18 +3,18 @@ title: Configuration des programmes pour Windows XP
 description: Comment installer et utiliser les ensembles d’outils Windows XP C++ dans Visual Studio.
 ms.date: 03/16/2020
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 92364d7fd25ac617baacc125b279fb0ee9c92f62
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 09fe1a511c92f999e02646b9e606a3631a175215
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440483"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919369"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configuration des programmes pour Windows XP
 
 Visual Studio prend en charge plusieurs ensembles d’outils de plateforme. Cela signifie qu’il est possible de cibler les systèmes d’exploitation et les bibliothèques d’exécution qui ne sont pas pris en charge par l’ensemble d’outils par défaut. Par exemple, en basculant sur l’ensemble d’outils de plateforme, vous pouvez utiliser le compilateur C++ Visual Studio 2017 pour créer des applications qui ciblent Windows XP et Windows Server 2003. Vous pouvez également utiliser des ensembles d’outils de plateforme plus anciens pour maintenir le code hérité compatible binaire et continuer à tirer parti des dernières fonctionnalités de l’IDE Visual Studio.
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 L’ensemble d’outils V142 fourni dans Visual Studio 2019 ne prend pas en charge la création de code pour Windows XP. La prise en charge du développement Windows XP à l’aide de l’ensemble d’outils v141_xp Visual Studio 2017 est disponible en tant qu’option de composant individuel dans le Visual Studio Installer.
 
@@ -22,15 +22,15 @@ L’ensemble d’outils V142 fourni dans Visual Studio 2019 ne prend pas en char
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installer l’ensemble d’outils de plateforme Windows XP
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-Pour faire en sorte que l’ensemble d’outils et les composants de la plateforme Visual Studio 2017 ciblent Windows XP et Windows Server 2003, exécutez le Visual Studio Installer. Lorsque vous installez Visual Studio pour la première fois ou lorsque vous modifiez une installation existante, assurez-vous que la charge **de travail développement Desktop en C++** est sélectionnée. Dans la liste des composants facultatifs pour cette charge de travail, choisissez **Prise en charge de Windows XP pour C++**, puis choisissez **Installer** ou **Modifier**.
+Pour faire en sorte que l’ensemble d’outils et les composants de la plateforme Visual Studio 2017 ciblent Windows XP et Windows Server 2003, exécutez le Visual Studio Installer. Lorsque vous installez Visual Studio pour la première fois ou lorsque vous modifiez une installation existante, assurez-vous que la charge **de travail développement Desktop en C++** est sélectionnée. Dans la liste des composants facultatifs pour cette charge de travail, choisissez **Prise en charge de Windows XP pour C++** , puis choisissez **Installer** ou **Modifier** .
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Pour faire en sorte que les composants et l’ensemble d’outils de plateforme v141_xp ciblent Windows XP et Windows Server 2003, exécutez le Visual Studio Installer. Lorsque vous installez Visual Studio pour la première fois, ou lorsque vous modifiez une installation existante, assurez-vous que la charge **de travail développement Desktop en C++** est sélectionnée. Dans l’onglet **composants individuels** , sous **compilateurs, outils de génération et runtimes**, choisissez **prise en charge C++ de Windows XP pour les outils \[vs 2017 (V141) déconseillé]**, puis choisissez **installer** ou **modifier**.
+Pour faire en sorte que les composants et l’ensemble d’outils de plateforme v141_xp ciblent Windows XP et Windows Server 2003, exécutez le Visual Studio Installer. Lorsque vous installez Visual Studio pour la première fois, ou lorsque vous modifiez une installation existante, assurez-vous que la charge **de travail développement Desktop en C++** est sélectionnée. Dans l’onglet **composants individuels** , sous **compilateurs, outils de génération et runtimes** , choisissez **prise en charge C++ de Windows XP pour les outils vs 2017 (V141) \[ déconseillé]** , puis choisissez **installer** ou **modifier** .
 
 ::: moniker-end
 
@@ -40,9 +40,9 @@ L’ensemble d’outils de plateforme Windows XP inclus dans Visual Studio est u
 
 ### <a name="to-target-windows-xp"></a>Pour cibler Windows XP
 
-1. Dans l’**Explorateur de solutions**, ouvrez le menu contextuel de votre projet et choisissez **Propriétés**.
+1. Dans l’ **Explorateur de solutions** , ouvrez le menu contextuel de votre projet et choisissez **Propriétés** .
 
-1. Dans la boîte de dialogue **pages de propriétés** du projet, sélectionnez **Propriétés** > de configuration**général**. Affectez à la propriété **ensemble d’outils de plateforme** la valeur de votre ensemble d’outils Windows XP préféré. Par exemple, choisissez **Visual Studio 2017 - Windows XP (v141_xp)** afin de créer du code pour Windows XP et Windows Server 2003 à l’aide du compilateur Microsoft C++ dans Visual Studio 2017.
+1. Dans la boîte de dialogue **pages de propriétés** du projet, sélectionnez **Propriétés de configuration**  >  **général** . Affectez à la propriété **ensemble d’outils de plateforme** la valeur de votre ensemble d’outils Windows XP préféré. Par exemple, choisissez **Visual Studio 2017 - Windows XP (v141_xp)** afin de créer du code pour Windows XP et Windows Server 2003 à l’aide du compilateur Microsoft C++ dans Visual Studio 2017.
 
 ### <a name="c-runtime-support"></a>Prise en charge du runtime C++
 
@@ -68,7 +68,7 @@ En raison des différences de prise en charge de la plateforme et de la biblioth
 
 - **Fonctionnalités du langage C++**
 
-   Seules les fonctionnalités du langage C++ implémentées dans Visual Studio 2012 sont prises en charge dans les applications qui utilisent l’ensemble d’outils de plateforme v110\_xp. Seules les fonctionnalités du langage C++ implémentées dans Visual Studio 2013 sont prises en charge dans les applications qui utilisent l’ensemble d’outils de plateforme v120\_xp. Seules les fonctionnalités du langage C++ implémentées dans Visual Studio 2015 sont prises en charge dans les applications qui utilisent l’ensemble d’outils de plateforme v140\_xp. Seules les fonctionnalités du langage C++ implémentées dans Visual Studio 2017 sont prises en charge dans\_les applications qui utilisent l’ensemble d’outils de plateforme V141 XP. Visual Studio utilise le compilateur correspondant lors du développement à l’aide d’ensembles d’outils de plateforme plus anciens. Utilisez l’ensemble d’outils de plateforme Windows XP le plus récent pour tirer parti des fonctionnalités du langage C++ additionnelles implémentées dans cette version du compilateur.
+   Seules les fonctionnalités du langage C++ implémentées dans Visual Studio 2012 sont prises en charge dans les applications qui utilisent l’ensemble d’outils de plateforme v110\_xp. Seules les fonctionnalités du langage C++ implémentées dans Visual Studio 2013 sont prises en charge dans les applications qui utilisent l’ensemble d’outils de plateforme v120\_xp. Seules les fonctionnalités du langage C++ implémentées dans Visual Studio 2015 sont prises en charge dans les applications qui utilisent l’ensemble d’outils de plateforme v140\_xp. Seules les fonctionnalités du langage C++ implémentées dans Visual Studio 2017 sont prises en charge dans les applications qui utilisent l' \_ ensemble d’outils de plateforme V141 XP. Visual Studio utilise le compilateur correspondant lors du développement à l’aide d’ensembles d’outils de plateforme plus anciens. Utilisez l’ensemble d’outils de plateforme Windows XP le plus récent pour tirer parti des fonctionnalités du langage C++ additionnelles implémentées dans cette version du compilateur.
 
 - **Débogage distant**
 

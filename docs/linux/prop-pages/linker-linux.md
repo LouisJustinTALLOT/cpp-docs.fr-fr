@@ -2,22 +2,22 @@
 title: Éditeur de liens, propriétés (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 934e639199d663cba391c9913b067f32e5e32165
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d6c6bc44a4d681f442a5a85ca9d5865c4590f884
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441284"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921488"
 ---
 # <a name="linker-properties-linux-c"></a>Éditeur de liens, propriétés (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="general"></a>Général
 

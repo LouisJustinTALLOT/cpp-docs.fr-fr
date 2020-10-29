@@ -7,35 +7,35 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: c25e3b9194cf0c7dc7c152edb50be01def2d2d9b
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 85de65dc1b18ee5c2e62388e57b0199ed64cee3f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352725"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921124"
 ---
 # <a name="atl-property-page-wizard"></a>Assistant Page de propriétés ATL
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Cet Assistant n’est pas disponible dans Visual Studio 2019 et ultérieur.
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Cet Assistant [ajoute une page de propriétés dans un projet ATL](../../atl/reference/adding-an-atl-property-page.md) ou dans un projet MFC avec prise en charge d’ATL. Une page de propriétés ATL fournit une interface utilisateur pour définir les propriétés (ou pour appeler les méthodes) d’un ou plusieurs objets COM.
 
 ## <a name="remarks"></a>Notes
 
-À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
+À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE** . Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
 
 ## <a name="names"></a>Noms
 
-Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à votre projet. À l’exception du champ **Nom court**, tous les autres peuvent être modifiés de manière indépendante. Si vous modifiez le contenu du champ **Nom court**, la modification se reflète dans les noms de tous les autres champs de cette page. Si vous modifiez le nom **Coclasse** dans la section COM, la modification se reflète dans les champs **Type** et **ProgID**. Ce comportement de nommage est conçu pour rendre tous les noms faciles à identifier lors du développement de votre page de propriétés.
+Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à votre projet. À l’exception du champ **Nom court** , tous les autres peuvent être modifiés de manière indépendante. Si vous modifiez le contenu du champ **Nom court** , la modification se reflète dans les noms de tous les autres champs de cette page. Si vous modifiez le nom **Coclasse** dans la section COM, la modification se reflète dans les champs **Type** et **ProgID** . Ce comportement de nommage est conçu pour rendre tous les noms faciles à identifier lors du développement de votre page de propriétés.
 
 > [!NOTE]
-> **Coclasse** est modifiable uniquement pour les projets non attribués. Si votre projet est attribué, vous ne pouvez pas modifier **Coclasse**.
+> **Coclasse** est modifiable uniquement pour les projets non attribués. Si votre projet est attribué, vous ne pouvez pas modifier **Coclasse** .
 
 ### <a name="c"></a>C++
 
@@ -43,10 +43,10 @@ Fournit des informations pour la classe C++ créée pour implémenter l’objet.
 
 |Terme|Définition|
 |-|-|
-|**Nom court**|Définit le nom abrégé de l’objet. Le nom que vous renseignez détermine les noms de la classe et de la **Coclasse**, les noms de fichier (**.cpp** and **.h**), le nom du **Type** et le **ProgID**, sauf si vous modifiez ces champs individuellement.|
-|**Fichier .h**|Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur celui que vous fournissez dans **Nom court**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous sélectionnez un fichier existant, l’Assistant attend que vous cliquiez sur **Terminer** pour l’enregistrer à l’emplacement sélectionné.<br /><br /> L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.|
-|**Classe**|Définit le nom de la classe qui implémente l’objet. Ce nom est basé sur le nom que vous renseignez dans **Nom court**, précédé de « C », préfixe typique d’un nom de classe.|
-|**Fichier .cpp**|Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur celui que vous fournissez dans **Nom court**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. L’Assistant attend que vous cliquiez sur **Terminer** pour enregistrer le fichier à l’emplacement sélectionné.<br /><br /> L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si l’implémentation de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.|
+|**Nom court**|Définit le nom abrégé de l’objet. Le nom que vous renseignez détermine les noms de la classe et de la **Coclasse** , les noms de fichier ( **.cpp** and **.h** ), le nom du **Type** et le **ProgID** , sauf si vous modifiez ces champs individuellement.|
+|**Fichier .h**|Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur celui que vous fournissez dans **Nom court** . Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous sélectionnez un fichier existant, l’Assistant attend que vous cliquiez sur **Terminer** pour l’enregistrer à l’emplacement sélectionné.<br /><br /> L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer** , l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.|
+|**Classe**|Définit le nom de la classe qui implémente l’objet. Ce nom est basé sur le nom que vous renseignez dans **Nom court** , précédé de « C », préfixe typique d’un nom de classe.|
+|**Fichier .cpp**|Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur celui que vous fournissez dans **Nom court** . Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. L’Assistant attend que vous cliquiez sur **Terminer** pour enregistrer le fichier à l’emplacement sélectionné.<br /><br /> L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer** , l’Assistant vous invite à indiquer si l’implémentation de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.|
 |**Avec attributs**|Indique si l’objet utilise des attributs. Si vous ajoutez un objet à un projet ATL attribué, cette option est sélectionnée et il est impossible de la modifier. Vous ne pouvez ajouter que des objets attribués à un projet créé avec une prise en charge d’attribut.<br /><br /> Vous pouvez ajouter un objet attribué uniquement à un projet ATL qui utilise des attributs. Si vous sélectionnez cette option pour un projet ATL qui ne prend pas en charge les attributs, l’Assistant vous invite à spécifier si vous souhaitez ajouter la prise en charge d’attributs au projet.<br /><br /> Par défaut, tous les objets que vous ajoutez après avoir défini cette option sont désignés comme attribués (la case est cochée). Vous pouvez effacer ce champ pour y ajouter un objet qui n’utilise pas d’attributs.<br /><br /> Pour plus d’informations, consultez Paramètres de l' [application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [mécanismes de base des attributs](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) .|
 
 ### <a name="com"></a>COM

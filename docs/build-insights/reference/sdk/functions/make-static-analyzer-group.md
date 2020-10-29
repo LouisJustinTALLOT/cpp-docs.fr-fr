@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 81c5654c78e086af1c33d0791768ceea52575c51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d7ddb8652400438c38882b1d27e635e8f1e8db51
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224173"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920240"
 ---
 # <a name="makestaticanalyzergroup"></a>MakeStaticAnalyzerGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `MakeStaticAnalyzerGroup` fonction est utilisée pour créer un groupe d’analyseur statique qui peut être passé à des fonctions telles que [`Analyze`](analyze.md) ou [`Relog`](relog.md) . Les membres d’un groupe d’analyseur reçoivent les événements un par un de gauche à droite, jusqu’à ce que tous les événements d’une trace soient analysés.
 

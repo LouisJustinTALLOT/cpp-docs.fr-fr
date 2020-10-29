@@ -1,6 +1,6 @@
 ---
-title: Classe LibOutput
-description: La référence de classe CMD Build Insights SDK LibOutput.
+title: Classe de sortie
+description: Référence de classe de sortie du kit de développement logiciel (SDK) de build Insights C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fda7b471759a9c49937214bb2176473226668776
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7cb759403a3e9b922ffa861b3938bcb874adac32
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324622"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920617"
 ---
-# <a name="liboutput-class"></a>Classe LibOutput
+# <a name="liboutput-class"></a>Classe de sortie
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `LibOutput` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Utilisez-le pour correspondre à un [événement LIB_OUTPUT.](../event-table.md#lib-output)
+La `LibOutput` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilisez-le pour faire correspondre un événement [LIB_OUTPUT](../event-table.md#lib-output) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membres
 
-Avec les membres hérités de sa classe `LibOutput` de base [FileOutput,](file-output.md) la classe contient les membres suivants :
+Avec les membres hérités de sa classe de base [FileOutput](file-output.md) , la `LibOutput` classe contient les membres suivants :
 
 ### <a name="constructors"></a>Constructeurs
 
-[LibOutput (LibOutput)](#lib-output)
+[LibOutput](#lib-output)
 
-## <a name="liboutput"></a><a name="lib-output"></a>LibOutput (LibOutput)
+## <a name="liboutput"></a><a name="lib-output"></a> Liboutput
 
 ```cpp
 LibOutput(const RawEvent& event);
@@ -53,7 +53,7 @@ LibOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Paramètres
 
-*Événement*\
-Un [événement LIB_OUTPUT.](../event-table.md#lib-output)
+*événement*\
+Événement [LIB_OUTPUT](../event-table.md#lib-output) .
 
 ::: moniker-end

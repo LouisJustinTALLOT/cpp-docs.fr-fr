@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d3fdc015b0744cb5d0f98a1c9025343b93489ed9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62a7bf6bde62dee7fdf5b1d2ce9044491a123f94
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224147"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920188"
 ---
 # <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `MatchEventInMemberFunction` fonction est utilisée pour faire correspondre un événement au type décrit par le premier paramètre d’une fonction membre. L’événement correspondant est transféré à la fonction membre pour un traitement ultérieur.
 
@@ -61,7 +61,7 @@ Types des paramètres supplémentaires acceptés par la fonction membre avec le 
 Types des arguments supplémentaires passés à `MatchEventInMemberFunction` .
 
 *événement*\
-Événement à faire correspondre au type d’événement décrit par *TEvent*.
+Événement à faire correspondre au type d’événement décrit par *TEvent* .
 
 *objectPtr*\
 Pointeur vers un objet sur lequel *memberFunc* est appelé.
@@ -78,7 +78,7 @@ Les arguments qui sont parfaits sont transmis à *memberFunc* avec le paramètre
 
 ## <a name="remarks"></a>Notes
 
-Le type d’événement à utiliser pour le paramètre *TEvent* peut être sélectionné dans une liste de *classes de capture*. Pour obtenir la liste des événements et les classes de capture que vous pouvez utiliser pour les mettre en correspondance, consultez [table des événements](../event-table.md).
+Le type d’événement à utiliser pour le paramètre *TEvent* peut être sélectionné dans une liste de *classes de capture* . Pour obtenir la liste des événements et les classes de capture que vous pouvez utiliser pour les mettre en correspondance, consultez [table des événements](../event-table.md).
 
 ## <a name="example"></a>Exemple
 

@@ -1,6 +1,6 @@
 ---
-title: Classe LinkerPass
-description: La référence de classe CMD Build Insights SDK LinkerPass.
+title: LinkerPass, classe
+description: Référence de la classe LinkerPass du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2b0c5a02958560faeff30500543b6e6d4921ac52
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bee4538ff04ec14effe0223a178ffdb2cca37a75
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324612"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920591"
 ---
-# <a name="linkerpass-class"></a>Classe LinkerPass
+# <a name="linkerpass-class"></a>LinkerPass, classe
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-La `LinkerPass` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Utilisez-le pour correspondre à un événement [PASS1](../event-table.md#pass1) ou [PASS2.](../event-table.md#pass2)
+La `LinkerPass` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilisez-le pour faire correspondre un événement [PASS1](../event-table.md#pass1) ou [pass2](../event-table.md#pass2) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Membres
 
-Avec les membres hérités de sa `LinkerPass` classe de base [d’activité,](activity.md) la classe contient les membres suivants :
+Avec les membres hérités de sa classe de base [Activity](activity.md) , la `LinkerPass` classe contient les membres suivants :
 
 ### <a name="constructors"></a>Constructeurs
 
-[LinkerPass (LinkerPass)](#linker-pass)
+[LinkerPass](#linker-pass)
 
-## <a name="linkerpass"></a><a name="linker-pass"></a>LinkerPass (LinkerPass)
+## <a name="linkerpass"></a><a name="linker-pass"></a> LinkerPass
 
 ```cpp
 LinkerPass(const RawEvent& event);
@@ -53,7 +53,7 @@ LinkerPass(const RawEvent& event);
 
 ### <a name="parameters"></a>Paramètres
 
-*Événement*\
-Un événement [PASS1](../event-table.md#pass1) ou [PASS2.](../event-table.md#pass2)
+*événement*\
+Événement [PASS1](../event-table.md#pass1) ou [pass2](../event-table.md#pass2) .
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
-title: OnAnalysisEventFunc typedef
-description: La référence Dactylo SDK OnAnalysisEventFunc typedef.
+title: OnAnalysisEventFunc (typedef)
+description: Référence typedef OnAnalysisEventFunc du kit de développement logiciel (SDK) C++ Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: eacd174279caff0db22586d5e40d3a866afc4459
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 069c89a01fa466e86986a821e5dd9d0b09f5c81a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329130"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919785"
 ---
-# <a name="onanalysiseventfunc-typedef"></a>OnAnalysisEventFunc typedef
+# <a name="onanalysiseventfunc-typedef"></a>OnAnalysisEventFunc (typedef)
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-Le `OnAnalysisEventFunc` tapdef est l’une des signatures de fonction utilisées dans la structure [ANALYSIS_CALLBACKS.](analysis-callbacks-struct.md)
+Le `OnAnalysisEventFunc` typedef est l’une des signatures de fonction utilisées dans la structure [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,14 +37,14 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnAnalysisEventFunc)(
 
 ### <a name="parameters"></a>Paramètres
 
-*événementStack*\
-La pile d’événements pour l’événement actuel. Pour plus d’informations sur les piles d’événements, voir [Événements](../event-table.md).
+*eventStack*\
+Pile d’événements pour l’événement actuel. Pour plus d’informations sur les piles d’événements, consultez [événements](../event-table.md).
 
 *callbackContext*\
-La valeur contextuelle qui a été fixée pour ce rappel en [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) ou [RELOG_DESCRIPTOR](relog-descriptor-struct.md).
+Valeur de contexte qui a été définie pour ce rappel dans [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) ou [RELOG_DESCRIPTOR](relog-descriptor-struct.md).
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une [valeur CALLBACK_CODE](callback-code-enum.md) qui contrôle ce qui devrait se passer ensuite.
+Valeur [CALLBACK_CODE](callback-code-enum.md) qui contrôle ce qui doit se passer ensuite.
 
 ::: moniker-end

@@ -12,20 +12,20 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: e970872e89132aed52190b8688f2cdaccab5ea6f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dcf44f1d282a9dd39205aecb4e75b59a6e8481f9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500083"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919096"
 ---
 # <a name="analyze-code-analysis"></a>`/analyze` (Analyse du code)
 
 Active l'analyse du code et les options de contrôle.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 > **`/analyze`**\
 > **`/analyze-`**\
@@ -42,7 +42,7 @@ Active l'analyse du code et les options de contrôle.
 > **`/analyze:WX-`**
 
 ::: moniker-end
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > **`/analyze`**\
 > **`/analyze-`**\
@@ -68,10 +68,10 @@ Active l'analyse en mode par défaut. La sortie de l’analyse est envoyée à l
 Les résultats détaillés de l’analyseur sont écrits au format XML dans un fichier avec le même nom de base que le fichier source et une extension de *`.pftlog`* . **`/analyze:autolog-`** désactive ce fichier journal.
 
 **`/analyze:autolog:ext`***extension*\
-Les résultats détaillés de l’analyseur sont écrits au format XML dans un fichier avec le même nom de base que le fichier source et une extension de l' *extension*.
+Les résultats détaillés de l’analyseur sont écrits au format XML dans un fichier avec le même nom de base que le fichier source et une extension de l' *extension* .
 
 **`/analyze:log`***nom du fichier*\
-Les résultats détaillés de l’analyseur sont écrits au format XML dans le fichier spécifié par *filename*.
+Les résultats détaillés de l’analyseur sont écrits au format XML dans le fichier spécifié par *filename* .
 
 **`/analyze:max_paths`***nombre*\
 Le paramètre *Number* utilisé avec cette option spécifie le nombre maximal de chemins de code à analyser. Si ce paramètre n’est pas spécifié, le nombre est 256 par défaut. Des valeurs plus élevées entraînent une vérification plus approfondie, mais l’analyse peut prendre plus de temps.
@@ -82,14 +82,14 @@ En règle générale, le compilateur génère du code et effectue plutôt une v�
 **`/analyze:plugin`***plug-in-dll*\
 Active le plug-in PREfast spécifié dans le cadre des exécutions de l’analyse du code.
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 LocalEspC.dll est le plug-in qui implémente les contrôles d’analyse du code liés à l’accès concurrentiel dans la plage d’avertissements C261XX. Par exemple, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
 Pour exécuter LocalEspC.dll, utilisez cette option du compilateur : **`/analyze:plugin LocalEspC.dll`**
 
 ::: moniker-end
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ConcurrencyCheck.dll implémente les contrôles d’analyse du code liés à l’accès concurrentiel dans la plage d’avertissements C261XX. Par exemple, [C26100](../../code-quality/c26100.md), [C26101](../../code-quality/c26101.md),...,  [C26167](../../code-quality/c26167.md).
 
@@ -114,7 +114,7 @@ Utilisez ensuite cette option du compilateur : **`/analyze:plugin EspXEngine.dl
 **`/analyze:quiet`**\
 Désactive la sortie de l’analyseur dans la fenêtre de **sortie** de la console ou de Visual Studio.
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 **`/analyze:ruleset`***FILE_PATH. RuleSet*\
 Vous permet de spécifier les ensembles de règles à analyser, y compris les ensembles de règles personnalisés que vous pouvez créer vous-même. Lorsque ce commutateur est défini, le moteur de règles est plus efficace, car il exclut les non-membres de l’ensemble de règles spécifié avant de l’exécuter. Dans le cas contraire, le moteur vérifie toutes les règles.
@@ -141,7 +141,7 @@ Le paramètre *Number* utilisé avec cette option spécifie la taille, en octets
 **`/analyze:WX-`**\
 Les avertissements d’analyse du code ne sont pas traités comme des erreurs quand vous compilez à l’aide de **`/WX`** . Pour plus d’informations, consultez [ `/WX` (niveau d’avertissement)](compiler-option-warning-level.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [vue d’ensemble de l’analyse du code pour c/c++](../../code-quality/code-analysis-for-c-cpp-overview.md) et [analyse du code pour les avertissements c/c++](../../code-quality/code-analysis-for-c-cpp-warnings.md).
 
@@ -149,7 +149,7 @@ Pour plus d’informations, consultez [vue d’ensemble de l’analyse du code p
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page **Propriétés de configuration**général de l'  >  **analyse du code**  >  **General** .
+1. Sélectionnez la page **Propriétés de configuration** général de l'  >  **analyse du code**  >  **General** .
 
 1. Modifiez une ou plusieurs des propriétés de l' **analyse du code** .
 
@@ -160,4 +160,4 @@ Pour plus d’informations, consultez [vue d’ensemble de l’analyse du code p
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)\
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

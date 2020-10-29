@@ -8,30 +8,30 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: a8e23a3c384ce9b5ac7e73d18958246b52eb95b5
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078694"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919382"
 ---
 # <a name="visual-studio-projects---c"></a>Projets Visual Studio – C++
 
 Un *projet Visual Studio* est un projet basé sur le système de génération MSBuild. MSBuild est le système de génération natif pour Visual Studio. il s’agit généralement du meilleur système de génération à utiliser pour les programmes spécifiques à Windows. MSBuild est étroitement intégré à Visual Studio, mais vous pouvez aussi l’utiliser à partir de la ligne de commande. Pour les projets multiplateforme, ou les projets qui utilisent des bibliothèques Open source, nous vous recommandons d’utiliser des [projets cmake dans Visual Studio](cmake-projects-in-visual-studio.md) dans visual studio 2017 et versions ultérieures. Pour plus d’informations sur la mise à niveau de projets MSBuild à partir de versions antérieures de Visual Studio, consultez le [Guide de Portage et de mise à niveau de Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
-## <a name="create-a-project"></a>Création d’un projet
+## <a name="create-a-project"></a>Créer un projet
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-Vous pouvez créer des projets C++ en choisissant **fichier** > **nouveau** > **projet**, puis en définissant le **langage** sur C++. Dans la liste des résultats, vous voyez une liste de modèles de projet que vous pouvez filtrer en définissant le paramètre **Plateforme** ou **Type de projet** et ou tapant des mots clés dans la zone de recherche.
+Vous pouvez créer des projets C++ en choisissant **fichier**  >  **nouveau**  >  **projet** , puis en définissant le **langage** sur C++. Dans la liste des résultats, vous voyez une liste de modèles de projet que vous pouvez filtrer en définissant le paramètre **Plateforme** ou **Type de projet** et ou tapant des mots clés dans la zone de recherche.
 
    ![Modèles de projet Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Boîte de dialogue Nouveau projet de Visual Studio 2019")
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
-Vous pouvez créer des projets C++ en choisissant **fichier** > **nouveau** > **projet**, puis en choisissant Visual C++ dans le volet gauche. Dans le volet central, vous voyez une liste de modèles de projet :
+Vous pouvez créer des projets C++ en choisissant **fichier**  >  **nouveau**  >  **projet** , puis en choisissant Visual C++ dans le volet gauche. Dans le volet central, vous voyez une liste de modèles de projet :
 
    ![Modèles de projet](../overview/media/vs2017-new-project.png "Boîte de dialogue Nouveau projet de Visual Studio 2017")
 
@@ -43,11 +43,11 @@ Un projet que vous créez apparaît aussitôt dans la fenêtre [Explorateur de s
 
    ![Explorateur de solutions](media/mathlibrary-solution-explorer-153.png)
 
-Quand vous créez un projet, un fichier solution (.sln) est aussi créé. Vous pouvez ajouter des projets supplémentaires à la solution en cliquant dessus avec le bouton droit dans l’**Explorateur de solutions**. Le fichier solution permet de coordonner les dépendances de build quand vous avez plusieurs projets connexes, mais il n’a aucune autre utilité. Toutes les options du compilateur sont définies au niveau du projet.
+Quand vous créez un projet, un fichier solution (.sln) est aussi créé. Vous pouvez ajouter des projets supplémentaires à la solution en cliquant dessus avec le bouton droit dans l’ **Explorateur de solutions** . Le fichier solution permet de coordonner les dépendances de build quand vous avez plusieurs projets connexes, mais il n’a aucune autre utilité. Toutes les options du compilateur sont définies au niveau du projet.
 
-## <a name="add-items"></a>Sélectionner les éléments à sauvegarder
+## <a name="add-items"></a>Ajouter des éléments
 
-Ajoutez des fichiers de code source, des icônes ou tout autre élément à votre projet en cliquant sur le projet avec le bouton droit dans l’**Explorateur de solutions** et en choisissant **Ajouter > Nouveau** ou **Ajouter > Existant**.
+Ajoutez des fichiers de code source, des icônes ou tout autre élément à votre projet en cliquant sur le projet avec le bouton droit dans l’ **Explorateur de solutions** et en choisissant **Ajouter > Nouveau** ou **Ajouter > Existant** .
 
 ## <a name="add-third-party-libraries"></a>Ajouter des bibliothèques tierces
 
@@ -55,7 +55,7 @@ Pour ajouter des bibliothèques tierces, utilisez le gestionnaire de package [vc
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Définir les options du compilateur et autres propriétés de build
 
-Pour configurer les paramètres de build d’un projet, cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis choisissez **Propriétés**. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md).
+Pour configurer les paramètres de build d’un projet, cliquez avec le bouton droit sur le projet dans l’ **Explorateur de solutions** , puis choisissez **Propriétés** . Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md).
 
 ## <a name="compile-and-run"></a>Compilation et exécution
 
@@ -72,13 +72,13 @@ Dans la Liste d’erreurs, vous pouvez appuyer sur **F1** pour une erreur en sur
 [Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md)<br/>
 Guide pratique pour utiliser Pages de propriétés et Feuilles de propriétés pour spécifier les paramètres de votre projet.
 
-[Composants et bibliothèques de référence au moment de la création](adding-references-in-visual-cpp-projects.md)<br/>
+[Composants et bibliothèques de référence au moment de la build](adding-references-in-visual-cpp-projects.md)<br/>
 Guide pratique pour inclure bibliothèques, DLL, composants COM et .NET dans un projet.
 
-[Organiser des fichiers de sortie de projet](how-to-organize-project-output-files-for-builds.md)<br/>
+[Organiser les fichiers de sortie du projet](how-to-organize-project-output-files-for-builds.md)<br/>
 Guide pratique pour personnaliser l’emplacement des fichiers exécutables créés dans le processus de build.
 
-[Étapes de build personnalisée et événements de build](understanding-custom-build-steps-and-build-events.md)<br/>
+[Étapes de génération personnalisée et événements de build](understanding-custom-build-steps-and-build-events.md)<br/>
 Guide pratique pour ajouter une commande arbitraire au processus de build à des points spécifiés.
 
 [Créer un projet à partir d’un code existant](how-to-create-a-cpp-project-from-existing-code.md)<br/>

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 054bdf75dcfca42b8c202565fb44df671f17f912
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bfbfdc28870a13a9cdb19d0ec050ea2e69fe1208
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831617"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920812"
 ---
 # <a name="compilerpass-class"></a>CompilerPass, classe
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `CompilerPass` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilisez-le pour faire correspondre un événement [BACK_END_PASS](../event-table.md#back-end-pass) ou [FRONT_END_PASS](../event-table.md#front-end-pass) .
 
@@ -64,7 +64,7 @@ Avec les membres hérités de sa classe de base [Activity](activity.md) , la `Co
 |FRONT_END|Réussite du serveur frontal.|
 |BACK_END|Réussite de l’arrière-plan.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 [InputSourcePath](#input-source-path)\
 [OutputObjectPath](#output-object-path)\
@@ -87,7 +87,7 @@ CompilerPass(const RawEvent& event);
 const wchar_t* InputSourcePath() const;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Le chemin d’accès absolu au fichier source d’entrée traité par ce compilateur passe.
 
@@ -97,7 +97,7 @@ Le chemin d’accès absolu au fichier source d’entrée traité par ce compila
 const wchar_t* OutputObjectPath() const;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Le chemin d’accès absolu au fichier objet de sortie produit par ce compilateur passe.
 
@@ -107,7 +107,7 @@ Le chemin d’accès absolu au fichier objet de sortie produit par ce compilateu
 PassCode PassCode() const;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Code indiquant la passe de compilateur représentée par cet objet CompilerPass.
 

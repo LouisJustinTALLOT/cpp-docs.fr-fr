@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8ec2c6bfcacf28998058dc66b5f363fbf1ea5d70
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1486a76aab7b9a4f3b4da209f4f163b4c65b0ac4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224108"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920097"
 ---
 # <a name="matchevent"></a>MatchEvent
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 La `MatchEvent` fonction est utilisée pour faire correspondre un événement à une liste de types d’événements. Si l’événement correspond à un type de la liste, il est transféré à un gestionnaire en vue d’un traitement ultérieur.
 
@@ -56,10 +56,10 @@ Type qui prend en charge `operator()` . Pour plus d’informations sur les argum
 Types des arguments supplémentaires passés à `MatchEvent` .
 
 *événement*\
-Événement à faire correspondre aux types d’événements décrits par *TEvent* et *TEvents*.
+Événement à faire correspondre aux types d’événements décrits par *TEvent* et *TEvents* .
 
 *pouvant être appelé*\
-`MatchEvent`*appelle une fois que* l’événement a été mis en correspondance avec l’un des types d’événements décrits par *TEvent* et *TEvents*. Le premier argument passé à *Callable* est une valeur r du type d’événement correspondant. Le Pack de paramètres *extraArgs* est parfait-transféré dans les paramètres restants de *Callable*.  
+`MatchEvent`*appelle une fois que* l’événement a été mis en correspondance avec l’un des types d’événements décrits par *TEvent* et *TEvents* . Le premier argument passé à *Callable* est une valeur r du type d’événement correspondant. Le Pack de paramètres *extraArgs* est parfait-transféré dans les paramètres restants de *Callable* .  
 
 *extraArgs*\
 Les arguments qui sont parfaits parfaits, transférés pour être *appelés* avec le type d’événement correspondant.
@@ -70,7 +70,7 @@ Les arguments qui sont parfaits parfaits, transférés pour être *appelés* ave
 
 ## <a name="remarks"></a>Notes
 
-Les types d’événements à utiliser pour les paramètres *TEvent* et *TEvents* sont sélectionnés dans une liste de *classes de capture*. Pour obtenir la liste des événements et les classes de capture que vous pouvez utiliser pour les mettre en correspondance, consultez [table des événements](../event-table.md).
+Les types d’événements à utiliser pour les paramètres *TEvent* et *TEvents* sont sélectionnés dans une liste de *classes de capture* . Pour obtenir la liste des événements et les classes de capture que vous pouvez utiliser pour les mettre en correspondance, consultez [table des événements](../event-table.md).
 
 ## <a name="example"></a>Exemple
 

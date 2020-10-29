@@ -10,21 +10,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6f53a9b6c682a0af7d8a01f6378ed0574d8fa4ca
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a6ecff81a9f3d2b22107a8fa7fc26fad85d4f579
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041170"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919512"
 ---
 # <a name="c-build-insights-sdk"></a>Kit SDK C++ Build Insights
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 Le kit de développement logiciel (SDK) C++ Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2017 ou visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Le kit de développement logiciel (SDK) C++ Build Insights est un ensemble d’API qui vous permettent de créer des outils personnalisés en plus de la plateforme C++ Build Insights. Cette page fournit une vue d’ensemble de haut niveau pour vous aider à commencer.
 
@@ -37,7 +37,7 @@ Vous pouvez télécharger le kit de développement logiciel (SDK) Build Insights
 1. Sélectionnez **gérer les packages NuGet** dans le menu contextuel.
 1. En haut à droite, sélectionnez la source du package **NuGet.org** .
 1. Recherchez la version la plus récente du package Microsoft. cpp. BuildInsights.
-1. Choisissez **installer**.
+1. Choisissez **installer** .
 1. Acceptez la licence.
 
 Lisez la suite pour plus d’informations sur les concepts généraux entourant le kit de développement logiciel (SDK). Vous pouvez également accéder au [référentiel GitHub officiel des exemples de génération Insights c++](https://github.com/microsoft/cpp-build-insights-samples) pour obtenir des exemples d’applications c++ réelles qui utilisent le kit de développement logiciel (SDK).
@@ -148,11 +148,11 @@ int main()
 | Fonctionnalités | API C++ | API C | Notes |
 |--|--|--|--|
 | Correspondance et filtrage des événements | [MatchEventStackInMemberFunction](functions/match-event-stack-in-member-function.md)<br />[MatchEventStack](functions/match-event-stack.md)<br />[MatchEventInMemberFunction](functions/match-event-in-member-function.md)<br />[MatchEvent](functions/match-event.md) |  | L’API C++ offre des fonctions qui facilitent l’extraction des événements qui vous intéressent à partir de vos traces. Avec l’API C, ce filtrage doit être effectué manuellement. |
-| Types de données d’événement | [Activité](cpp-event-data-types/activity.md)<br />[BackEndPass](cpp-event-data-types/back-end-pass.md)<br />[BottomUp](cpp-event-data-types/bottom-up.md)<br />[C1DLL](cpp-event-data-types/c1-dll.md)<br />[C2DLL](cpp-event-data-types/c2-dll.md)<br />[CodeGeneration](cpp-event-data-types/code-generation.md)<br />[CommandLine](cpp-event-data-types/command-line.md)<br />[Compilateur](cpp-event-data-types/compiler.md)<br />[CompilerPass](cpp-event-data-types/compiler-pass.md)<br />[EnvironmentVariable](cpp-event-data-types/environment-variable.md)<br />[Event](cpp-event-data-types/event.md)<br />[EventGroup](cpp-event-data-types/event-group.md)<br />[EventStack](cpp-event-data-types/event-stack.md)<br />[ExecutableImageOutput](cpp-event-data-types/executable-image-output.md)<br />[ExpOutput](cpp-event-data-types/exp-output.md)<br />[FileInput](cpp-event-data-types/file-input.md)<br />[FileOutput](cpp-event-data-types/file-output.md)<br />[ForceInlinee](cpp-event-data-types/force-inlinee.md)<br />[FrontEndFile](cpp-event-data-types/front-end-file.md)<br />[FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md)<br />[FrontEndPass](cpp-event-data-types/front-end-pass.md)<br />[Fonction](cpp-event-data-types/function.md)<br />[ImpLibOutput](cpp-event-data-types/imp-lib-output.md)<br />[Invocation](cpp-event-data-types/invocation.md)<br />[InvocationGroup](cpp-event-data-types/invocation-group.md)<br />[LibOutput](cpp-event-data-types/lib-output.md)<br />[Éditeur de liens](cpp-event-data-types/linker.md)<br />[LinkerGroup](cpp-event-data-types/linker-group.md)<br />[LinkerPass](cpp-event-data-types/linker-pass.md)<br />[LTCG](cpp-event-data-types/ltcg.md)<br />[ObjOutput](cpp-event-data-types/obj-output.md)<br />[OptICF](cpp-event-data-types/opt-icf.md)<br />[OptLBR](cpp-event-data-types/opt-lbr.md)<br />[OptRef](cpp-event-data-types/opt-ref.md)<br />[Pass1](cpp-event-data-types/pass1.md)<br />[Pass2](cpp-event-data-types/pass2.md)<br />[PreLTCGOptRef](cpp-event-data-types/pre-ltcg-opt-ref.md)<br />[SimpleEvent](cpp-event-data-types/simple-event.md)<br />[SymbolName](cpp-event-data-types/symbol-name.md)<br />[TemplateInstantiation](cpp-event-data-types/template-instantiation.md)<br />[TemplateInstantiationGroup](cpp-event-data-types/template-instantiation-group.md)<br />[Thread](cpp-event-data-types/thread.md)<br />[TopDown](cpp-event-data-types/top-down.md)<br />[TraceInfo](cpp-event-data-types/trace-info.md)<br />[WholeProgramAnalysis](cpp-event-data-types/whole-program-analysis.md) | [CL_PASS_DATA](c-event-data-types/cl-pass-data-struct.md)<br />[EVENT_COLLECTION_DATA](c-event-data-types/event-collection-data-struct.md)<br />[EVENT_DATA](c-event-data-types/event-data-struct.md)<br />[EVENT_ID](c-event-data-types/event-id-enum.md)<br />[FILE_DATA](c-event-data-types/file-data-struct.md)<br />[FILE_TYPE_CODE](c-event-data-types/file-type-code-enum.md)<br />[FRONT_END_FILE_DATA](c-event-data-types/front-end-file-data-struct.md)<br />[FUNCTION_DATA](c-event-data-types/function-data-struct.md)<br />[FUNCTION_FORCE_INLINEE_DATA](c-event-data-types/function-force-inlinee-data-struct.md)<br />[INVOCATION_DATA](c-event-data-types/invocation-data-struct.md)<br />[INVOCATION_VERSION_DATA](c-event-data-types/invocation-version-data-struct.md)<br />[MSVC_TOOL_CODE](c-event-data-types/msvc-tool-code-enum.md)<br />[NAME_VALUE_PAIR_DATA](c-event-data-types/name-value-pair-data-struct.md)<br />[SYMBOL_NAME_DATA](c-event-data-types/symbol-name-data-struct.md)<br />[TEMPLATE_INSTANTIATION_DATA](c-event-data-types/template-instantiation-data-struct.md)<br />[TEMPLATE_INSTANTIATION_KIND_CODE](c-event-data-types/template-instantiation-kind-code-enum.md)<br />[TRACE_INFO_DATA](c-event-data-types/trace-info-data-struct.md)<br />[TRANSLATION_UNIT_PASS_CODE](c-event-data-types/translation-unit-pass-code-enum.md) |  |
+| Types de données d’événement | [Activité](cpp-event-data-types/activity.md)<br />[BackEndPass](cpp-event-data-types/back-end-pass.md)<br />[BottomUp](cpp-event-data-types/bottom-up.md)<br />[C1DLL](cpp-event-data-types/c1-dll.md)<br />[C2DLL](cpp-event-data-types/c2-dll.md)<br />[CodeGeneration](cpp-event-data-types/code-generation.md)<br />[CommandLine](cpp-event-data-types/command-line.md)<br />[Compiler](cpp-event-data-types/compiler.md)<br />[CompilerPass](cpp-event-data-types/compiler-pass.md)<br />[EnvironmentVariable](cpp-event-data-types/environment-variable.md)<br />[Event](cpp-event-data-types/event.md)<br />[EventGroup](cpp-event-data-types/event-group.md)<br />[EventStack](cpp-event-data-types/event-stack.md)<br />[ExecutableImageOutput](cpp-event-data-types/executable-image-output.md)<br />[ExpOutput](cpp-event-data-types/exp-output.md)<br />[FileInput](cpp-event-data-types/file-input.md)<br />[FileOutput](cpp-event-data-types/file-output.md)<br />[ForceInlinee](cpp-event-data-types/force-inlinee.md)<br />[FrontEndFile](cpp-event-data-types/front-end-file.md)<br />[FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md)<br />[FrontEndPass](cpp-event-data-types/front-end-pass.md)<br />[Fonction](cpp-event-data-types/function.md)<br />[ImpLibOutput](cpp-event-data-types/imp-lib-output.md)<br />[Invocation](cpp-event-data-types/invocation.md)<br />[InvocationGroup](cpp-event-data-types/invocation-group.md)<br />[LibOutput](cpp-event-data-types/lib-output.md)<br />[Éditeur de liens](cpp-event-data-types/linker.md)<br />[LinkerGroup](cpp-event-data-types/linker-group.md)<br />[LinkerPass](cpp-event-data-types/linker-pass.md)<br />[LTCG](cpp-event-data-types/ltcg.md)<br />[ObjOutput](cpp-event-data-types/obj-output.md)<br />[OptICF](cpp-event-data-types/opt-icf.md)<br />[OptLBR](cpp-event-data-types/opt-lbr.md)<br />[OptRef](cpp-event-data-types/opt-ref.md)<br />[Pass1](cpp-event-data-types/pass1.md)<br />[Pass2](cpp-event-data-types/pass2.md)<br />[PreLTCGOptRef](cpp-event-data-types/pre-ltcg-opt-ref.md)<br />[SimpleEvent](cpp-event-data-types/simple-event.md)<br />[SymbolName](cpp-event-data-types/symbol-name.md)<br />[TemplateInstantiation](cpp-event-data-types/template-instantiation.md)<br />[TemplateInstantiationGroup](cpp-event-data-types/template-instantiation-group.md)<br />[Thread](cpp-event-data-types/thread.md)<br />[TopDown](cpp-event-data-types/top-down.md)<br />[TraceInfo](cpp-event-data-types/trace-info.md)<br />[WholeProgramAnalysis](cpp-event-data-types/whole-program-analysis.md) | [CL_PASS_DATA](c-event-data-types/cl-pass-data-struct.md)<br />[EVENT_COLLECTION_DATA](c-event-data-types/event-collection-data-struct.md)<br />[EVENT_DATA](c-event-data-types/event-data-struct.md)<br />[EVENT_ID](c-event-data-types/event-id-enum.md)<br />[FILE_DATA](c-event-data-types/file-data-struct.md)<br />[FILE_TYPE_CODE](c-event-data-types/file-type-code-enum.md)<br />[FRONT_END_FILE_DATA](c-event-data-types/front-end-file-data-struct.md)<br />[FUNCTION_DATA](c-event-data-types/function-data-struct.md)<br />[FUNCTION_FORCE_INLINEE_DATA](c-event-data-types/function-force-inlinee-data-struct.md)<br />[INVOCATION_DATA](c-event-data-types/invocation-data-struct.md)<br />[INVOCATION_VERSION_DATA](c-event-data-types/invocation-version-data-struct.md)<br />[MSVC_TOOL_CODE](c-event-data-types/msvc-tool-code-enum.md)<br />[NAME_VALUE_PAIR_DATA](c-event-data-types/name-value-pair-data-struct.md)<br />[SYMBOL_NAME_DATA](c-event-data-types/symbol-name-data-struct.md)<br />[TEMPLATE_INSTANTIATION_DATA](c-event-data-types/template-instantiation-data-struct.md)<br />[TEMPLATE_INSTANTIATION_KIND_CODE](c-event-data-types/template-instantiation-kind-code-enum.md)<br />[TRACE_INFO_DATA](c-event-data-types/trace-info-data-struct.md)<br />[TRANSLATION_UNIT_PASS_CODE](c-event-data-types/translation-unit-pass-code-enum.md) |  |
 
 ### <a name="activities-and-simple-events"></a>Activités et événements simples
 
-Les événements se présentent sous deux catégories : les *activités* et les *événements simples*. Les activités sont des processus en cours dans le temps qui ont un début et une fin. Les événements simples sont des occurrences ponctuelles et n’ont pas de durée. Lors de l’analyse des traces MSVC avec le kit de développement logiciel (SDK) C++ Build Insights, vous recevrez des événements distincts quand une activité démarre et s’arrête. Vous ne recevrez qu’un seul événement lorsqu’un événement simple se produit.
+Les événements se présentent sous deux catégories : les *activités* et les *événements simples* . Les activités sont des processus en cours dans le temps qui ont un début et une fin. Les événements simples sont des occurrences ponctuelles et n’ont pas de durée. Lors de l’analyse des traces MSVC avec le kit de développement logiciel (SDK) C++ Build Insights, vous recevrez des événements distincts quand une activité démarre et s’arrête. Vous ne recevrez qu’un seul événement lorsqu’un événement simple se produit.
 
 ### <a name="parent-child-relationships"></a>Relations parent-enfant
 
@@ -166,7 +166,7 @@ Les relations parent-enfant de chaque activité et événement simple sont indiq
 
 Tous les événements ont les propriétés suivantes :
 
-| Property | Description |
+| Propriété | Description |
 |--|--|
 | Identificateur de type | Numéro qui identifie de façon unique le type d’événement. |
 | Identificateur d’instance | Numéro qui identifie de façon unique l’événement dans la trace. Si deux événements du même type se produisent dans une trace, tous deux reçoivent un identificateur d’instance unique. |
@@ -178,7 +178,7 @@ Tous les événements ont les propriétés suivantes :
 
 Toutes les activités autres que les événements simples ont également les propriétés suivantes :
 
-| Property | Description |
+| Propriété | Description |
 |--|--|
 | Heure d’arrêt | Heure à laquelle l’activité s’est arrêtée. |
 | Durée exclusive | Temps passé dans une activité, à l’exclusion du temps passé dans ses activités enfants. |
@@ -197,7 +197,7 @@ Chaque fois que le kit de développement logiciel (SDK) C++ Build Insights vous 
 
 #### <a name="matching-events-and-event-stacks"></a>Événements et piles d’événements correspondants
 
-Le kit de développement logiciel (SDK) C++ Build Insights vous donne chaque événement dans une trace, mais la plupart du temps, vous ne vous souciez que d’un sous-ensemble de ces événements. Dans certains cas, vous ne vous souciez que d’un sous-ensemble de *piles d’événements*. Le kit de développement logiciel (SDK) fournit des fonctionnalités qui vous permettent d’extraire rapidement les événements ou la pile d’événements dont vous avez besoin, et de rejeter ceux dont vous n’avez pas besoin. Pour ce faire, vous disposez des fonctions de correspondance suivantes :
+Le kit de développement logiciel (SDK) C++ Build Insights vous donne chaque événement dans une trace, mais la plupart du temps, vous ne vous souciez que d’un sous-ensemble de ces événements. Dans certains cas, vous ne vous souciez que d’un sous-ensemble de *piles d’événements* . Le kit de développement logiciel (SDK) fournit des fonctionnalités qui vous permettent d’extraire rapidement les événements ou la pile d’événements dont vous avez besoin, et de rejeter ceux dont vous n’avez pas besoin. Pour ce faire, vous disposez des fonctions de correspondance suivantes :
 
 | Fonction | Description |
 |--|--|
@@ -210,13 +210,13 @@ Les fonctions de mise en correspondance des piles d’événements telles que `M
 
 #### <a name="capture-classes"></a>Classes de capture
 
-L’utilisation des `Match*` fonctions requiert que vous spécifiiez les types que vous souhaitez faire correspondre. Ces types sont sélectionnés dans une liste de *classes de capture*. Les classes de capture sont disponibles dans plusieurs catégories, décrites ci-dessous.
+L’utilisation des `Match*` fonctions requiert que vous spécifiiez les types que vous souhaitez faire correspondre. Ces types sont sélectionnés dans une liste de *classes de capture* . Les classes de capture sont disponibles dans plusieurs catégories, décrites ci-dessous.
 
 | Category | Description |
 |--|--|
 | Exact | Ces classes de capture sont utilisées pour mettre en correspondance un type d’événement spécifique et aucune autre. La classe [du compilateur](cpp-event-data-types/compiler.md) , qui correspond à l’événement [du compilateur](event-table.md#compiler) , en est un exemple. |
 | Caractère générique | Ces classes de capture peuvent être utilisées pour mettre en correspondance n’importe quel événement de la liste des événements qu’ils prennent en charge. Par exemple, le caractère générique d' [activité](cpp-event-data-types/activity.md) correspond à n’importe quel événement d’activité. Un autre exemple est le caractère générique [CompilerPass](cpp-event-data-types/compiler-pass.md) , qui peut correspondre à l' [FRONT_END_PASS](event-table.md#front-end-pass) ou à l’événement [BACK_END_PASS](event-table.md#back-end-pass) . |
-| Group | Les noms des classes de capture de groupe se terminent par *groupe*. Ils sont utilisés pour faire correspondre plusieurs événements du même type dans une ligne, en ignorant les écarts. Ils n’ont de sens que lors de la correspondance des événements récursifs, car vous ne savez pas combien existent dans la pile des événements. Par exemple, l’activité [FRONT_END_FILE](event-table.md#front-end-file) se produit chaque fois que le compilateur analyse un fichier. Cette activité est récursive car le compilateur peut trouver une directive include lors de l’analyse du fichier. La classe [FrontEndFile](cpp-event-data-types/front-end-file.md) correspond à un seul événement FRONT_END_FILE dans la pile. Utilisez la classe [FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) pour correspondre à la hiérarchie include entière. |
+| Group | Les noms des classes de capture de groupe se terminent par *groupe* . Ils sont utilisés pour faire correspondre plusieurs événements du même type dans une ligne, en ignorant les écarts. Ils n’ont de sens que lors de la correspondance des événements récursifs, car vous ne savez pas combien existent dans la pile des événements. Par exemple, l’activité [FRONT_END_FILE](event-table.md#front-end-file) se produit chaque fois que le compilateur analyse un fichier. Cette activité est récursive car le compilateur peut trouver une directive include lors de l’analyse du fichier. La classe [FrontEndFile](cpp-event-data-types/front-end-file.md) correspond à un seul événement FRONT_END_FILE dans la pile. Utilisez la classe [FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) pour correspondre à la hiérarchie include entière. |
 | Groupe de caractères génériques | Un groupe de caractères génériques combine les propriétés des caractères génériques et des groupes. La seule classe de cette catégorie est [InvocationGroup](cpp-event-data-types/invocation-group.md), qui correspond et capture tous les événements de l' [éditeur de liens](event-table.md#linker) et [du compilateur](event-table.md#compiler) dans une pile d’événements unique. |
 
 Reportez-vous à la [table d’événements](event-table.md) pour savoir quelles classes de capture peuvent être utilisées pour mettre en correspondance chaque événement.
