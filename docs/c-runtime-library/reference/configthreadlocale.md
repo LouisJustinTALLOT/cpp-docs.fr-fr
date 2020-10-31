@@ -1,6 +1,7 @@
 ---
 title: _configthreadlocale
-ms.date: 4/2/2020
+ms.date: 10/29/2020
+description: Décrit la fonction Microsoft C Runtime `_configthreadlocale`  utilisée pour configurer les options des paramètres régionaux par thread.
 api_name:
 - _configthreadlocale
 - _o__configthreadlocale
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 26bcfe0d93a8c2b1a14e6afc0d413a5c7e4a7f6e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ffea30f8547088d6117ee980cdf28f017e87e83
+ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917320"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102322"
 ---
-# <a name="_configthreadlocale"></a>_configthreadlocale
+# `_configthreadlocale`
 
 Configure les options de paramètres régionaux par thread.
 
@@ -50,28 +51,28 @@ int _configthreadlocale( int per_thread_locale_type );
 
 ### <a name="parameters"></a>Paramètres
 
-*per_thread_locale_type*<br/>
+*`per_thread_locale_type`*\
 Option à définir. Une des options répertoriées dans le tableau suivant.
 
 ## <a name="return-value"></a>Valeur de retour
 
-État des paramètres régionaux par thread précédent (**_DISABLE_PER_THREAD_LOCALE** ou **_ENABLE_PER_THREAD_LOCALE**), ou-1 en cas d’échec.
+État des paramètres régionaux par thread précédent ( **`_DISABLE_PER_THREAD_LOCALE`** ou **`_ENABLE_PER_THREAD_LOCALE`** ), ou-1 en cas d’échec.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Remarques
 
-La fonction **_configurethreadlocale** est utilisée pour contrôler l’utilisation des paramètres régionaux spécifiques aux threads. Utilisez l’une de ces options de *per_thread_locale_type* pour spécifier ou déterminer l’état des paramètres régionaux par thread :
+La **`_configthreadlocale`** fonction est utilisée pour contrôler l’utilisation des paramètres régionaux spécifiques aux threads. Utilisez l’une de ces *`per_thread_locale_type`* options pour spécifier ou déterminer l’état des paramètres régionaux par thread :
 
 | Option | Description |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | Faites en sorte que le thread actuel utilise des paramètres régionaux spécifiques aux threads. Les appels suivants à **setlocale** dans ce thread affectent uniquement les propres paramètres régionaux du thread. |
-| **_DISABLE_PER_THREAD_LOCALE** | Faites en sorte que le thread actuel utilise les paramètres régionaux globaux. Les appels suivants à **setlocale** dans ce thread affectent d’autres threads utilisant les paramètres régionaux globaux. |
+| **`_ENABLE_PER_THREAD_LOCALE`** | Faites en sorte que le thread actuel utilise des paramètres régionaux spécifiques aux threads. Les appels suivants à **`setlocale`** dans ce thread affectent uniquement les propres paramètres régionaux du thread. |
+| **`_DISABLE_PER_THREAD_LOCALE`** | Faites en sorte que le thread actuel utilise les paramètres régionaux globaux. Les appels suivants à **`setlocale`** dans ce thread affectent d’autres threads à l’aide des paramètres régionaux globaux. |
 | **0** | Récupère le paramétrage actuel de ce thread particulier. |
 
-Ces fonctions affectent le comportement de **setlocale**, **_tsetlocale**, **_wsetlocale**et **_setmbcp**. Quand les paramètres régionaux par thread sont désactivés, tout appel ultérieur à **setlocale** ou **_wsetlocale** modifie les paramètres régionaux de tous les threads qui utilisent les paramètres régionaux globaux. Lorsque les paramètres régionaux par thread sont activés, **setlocale** ou **_wsetlocale** affecte uniquement les paramètres régionaux du thread actuel.
+Ces fonctions affectent le comportement de **`setlocale`** , **`_tsetlocale`** , **`_wsetlocale`** et **`_setmbcp`** . Lorsque les paramètres régionaux par thread sont désactivés, tout appel ultérieur à **`setlocale`** ou **`_wsetlocale`** modifie les paramètres régionaux de tous les threads qui utilisent les paramètres régionaux globaux. Lorsque les paramètres régionaux par thread sont activés, **`setlocale`** ou **`_wsetlocale`** affectent uniquement les paramètres régionaux du thread actuel.
 
-Si vous utilisez **_configurethreadlocale** pour activer des paramètres régionaux par thread, nous vous recommandons d’appeler **setlocale** ou **_wsetlocale** pour définir les paramètres régionaux préférés dans ce thread immédiatement après.
+Si vous utilisez **`_configthreadlocale`** pour activer des paramètres régionaux par thread, nous vous recommandons d’appeler **`setlocale`** ou **`_wsetlocale`** de définir les paramètres régionaux préférés dans ce thread immédiatement après.
 
-Si *per_thread_locale_type* ne fait pas partie des valeurs répertoriées dans le tableau, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne-1.
+Si *`per_thread_locale_type`* n’est pas l’une des valeurs répertoriées dans le tableau, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte **`errno`** à la valeur **`EINVAL`** et retourne-1.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -79,7 +80,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**_configthreadlocale**|\<locale.h>|
+|**`_configthreadlocale`**|\`<paramètres régionaux. h>»|
 
 ## <a name="example"></a>Exemple
 
@@ -192,7 +193,7 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
 
 ## <a name="see-also"></a>Voir aussi
 
-[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
-[_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Multithread et paramètres régionaux](../../parallel/multithreading-and-locales.md)<br/>
+[`setlocale`, `_wsetlocale`](setlocale-wsetlocale.md)\
+[`_beginthread`, `_beginthreadex`](beginthread-beginthreadex.md)\
+[Paramètres régionaux](../../c-runtime-library/locale.md)\
+[Multithreading et paramètres régionaux](../../parallel/multithreading-and-locales.md)
