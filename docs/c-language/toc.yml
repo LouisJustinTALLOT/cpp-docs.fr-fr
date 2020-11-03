@@ -481,23 +481,7 @@
         - name: Définitions et conventions
           href: ../c-language/definitions-and-conventions.md
         - name: Grammaire lexicale
-          items:
-            - name: Grammaire lexicale
-              href: ../c-language/lexical-grammar.md
-            - name: Résumé des jetons
-              href: ../c-language/summary-of-tokens.md
-            - name: Résumé des mots clés
-              href: ../c-language/summary-of-keywords.md
-            - name: Résumé des identificateurs
-              href: ../c-language/summary-of-identifiers.md
-            - name: Résumé des constantes
-              href: ../c-language/summary-of-constants.md
-            - name: Résumé des littéraux de chaîne
-              href: ../c-language/summary-of-string-literals.md
-            - name: Opérateurs (C)
-              href: ../c-language/operators-c.md
-            - name: Signes de ponctuation
-              href: ../c-language/punctuators.md
+          href: ../c-language/lexical-grammar.md
         - name: Grammaire de la structure des phrases
           items:
             - name: Grammaire de la structure des phrases
