@@ -1,6 +1,7 @@
 ---
 title: Directives Pragma et mot clé __pragma
-ms.date: 08/29/2019
+description: Décrit les directives pragma disponibles dans Microsoft Visual C et C++ (MSVC)
+ms.date: 10/30/2020
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 786f76d9f7fd2eee73c6b1d009186bf93ea0c667
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bf4bbdcf74808edd8ef54149f8258f47bd94c600
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842687"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238406"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Directives Pragma et mot clé __pragma
 
@@ -26,8 +27,8 @@ Les directives pragma spécifient des fonctionnalités de compilateur spécifiqu
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma** *chaîne de jeton de* #pragma\
-> **__Pragma (** *chaîne de jeton* **)**
+> **#`pragma`***jeton-chaîne*\
+> **`__pragma(`***jeton-chaîne* **`)`** deux traits de soulignement de début : **`_Pragma(`** *chaîne littérale* d’extension spécifique à Microsoft **`)`** //C99
 
 ## <a name="remarks"></a>Notes
 
@@ -35,7 +36,9 @@ Chaque implémentation de C et C++ prend en charge des fonctionnalités spécifi
 
 Les pragmas sont spécifiques à l’ordinateur ou au système d’exploitation par définition, et sont généralement différents pour chaque compilateur. Les pragmas peuvent être utilisés dans les directives conditionnelles pour fournir de nouvelles fonctionnalités de préprocesseur ou pour fournir des informations définies par l’implémentation au compilateur.
 
-La *chaîne de jeton* est une série de caractères qui donne une instruction et des arguments spécifiques du compilateur, le cas échéant. Le signe dièse ( **#** ) doit être le premier caractère autre qu’un espace blanc sur la ligne qui contient le pragma. Les espaces blancs peuvent séparer le signe dièse et le mot « pragma ». Après **#pragma**, écrivez le texte que le traducteur peut analyser en tant que jetons de prétraitement. L’argument pour **#pragma** est soumis à une expansion macro.
+La *chaîne de jeton* est une série de caractères représentant une instruction et des arguments spécifiques du compilateur, le cas échéant. Le signe dièse ( **#** ) doit être le premier caractère autre qu’un espace blanc sur la ligne qui contient le pragma. Les espaces blancs peuvent séparer le signe dièse et le mot « pragma ». Après **#pragma** , écrivez le texte que le traducteur peut analyser en tant que jetons de prétraitement. L’argument pour **#pragma** est soumis à une expansion macro.
+
+Le *littéral de chaîne* est l’entrée de `_Pragma` . Les guillemets externes et les espaces de début/de fin sont supprimés. `\"` est remplacé par `"` et `\\` est remplacé par `\` .
 
 Le compilateur émet un avertissement lorsqu’il trouve un pragma qu’il ne reconnaît pas, et poursuit la compilation.
 
@@ -114,9 +117,9 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>Mot clé __pragma ()
 
-Le compilateur prend également en charge le mot clé **__Pragma** spécifique à Microsoft, qui a les mêmes fonctionnalités que la directive **#pragma** . La différence est que le mot clé **__Pragma** est utilisable inline dans une définition de macro. La directive **#pragma** n’est pas utilisable dans une définition de macro, car le compilateur interprète le signe dièse (#) dans la directive comme opérateur de [chaîne (#)](../preprocessor/stringizing-operator-hash.md).
+Le compilateur prend également en charge le mot clé propre à Microsoft **`__pragma`** , qui a les mêmes fonctionnalités que la **`#pragma`** directive. La différence est que le **`__pragma`** mot clé est utilisable inline dans une définition de macro. La **`#pragma`** directive n’est pas utilisable dans une définition de macro, car le compilateur interprète le signe dièse (#) dans la directive comme opérateur de [chaîne (#)](../preprocessor/stringizing-operator-hash.md).
 
-L’exemple de code suivant montre comment le mot clé **__Pragma** peut être utilisé dans une macro. Ce code est extrait de l'en-tête mfcdual.h de l'exemple CDUAL dans « Exemples de prise en charge COM du compilateur » :
+L’exemple de code suivant montre comment le **`__pragma`** mot clé peut être utilisé dans une macro. Ce code est extrait de l’en-tête *mfcdual. h* de l’exemple ACDual dans « exemples de prise en charge com du compilateur » :
 
 ```cpp
 #define CATCH_ALL_DUAL \
@@ -134,6 +137,48 @@ _hr = DualHandleException(_riidSource, e); \
 } \
 END_CATCH_ALL \
 return _hr; \
+```
+
+## <a name="the-_pragma-preprocessing-operator-c99-c11"></a>`_Pragma`Opérateur de prétraitement (C99, c++ 11)
+
+`_Pragma` est semblable au mot clé spécifique à Microsoft [`__pragma`](#the-__pragma-keyword) , sauf qu’il fait partie de la norme. Il a été introduit pour C dans C99. Pour C++, elle a été introduite dans C++ 11.
+
+ Elle vous permet de placer des pragmas dans une définition de macro. Il a un trait de soulignement `_` de début au lieu de deux traits de soulignement de début `__` qui ont le mot clé propre à Microsoft, et la première lettre est en majuscule.
+
+Le littéral de chaîne doit correspondre à ce que vous placeriez après une *`#pragma`* instruction. Par exemple :
+
+```c
+#pragma message("--the #pragma way")
+_Pragma ("message( \"the _Pragma way\")") 
+```
+
+Les guillemets et les barres obliques inverses doivent être placés dans une séquence d’échappement, comme illustré ci-dessus. Une chaîne pragma qui n’est pas reconnue est ignorée.
+
+L’exemple de code suivant montre comment le **`_Pragma`** mot clé peut être utilisé dans une macro de type assertion lorsque vous ne souhaitez pas obtenir d’avertissement lorsque l’expression de condition devient constante. 
+
+La définition de macro utilise l’idiome do/while (0) pour les macros à instructions multiples afin qu’il puisse être utilisé comme s’il s’agissait d’une seule instruction. Pour plus d’informations, consultez [macro multiligne C](https://stackoverflow.com/questions/1067226/c-multi-line-macro-do-while0-vs-scope-block) sur Stack overflow. L’instruction _Pragma s’applique uniquement à la ligne de code qui la suit.
+
+```C
+// Compile with /W4
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MY_ASSERT(BOOL_EXPRESSION) \
+    do { \
+        _Pragma("warning(suppress: 4127)") /* C4127 conditional expression is constant */  \
+        if (!(BOOL_EXPRESSION)) {   \
+            printf("MY_ASSERT FAILED: \"" #BOOL_EXPRESSION "\" on %s(%d)", __FILE__, __LINE__); \
+            exit(-1); \
+        } \
+    } while (0)
+
+int main()
+{
+    MY_ASSERT(0 && "Note that there is no warning: C4127 conditional expression is constant");
+
+    return 0;
+}
 ```
 
 ## <a name="see-also"></a>Voir aussi

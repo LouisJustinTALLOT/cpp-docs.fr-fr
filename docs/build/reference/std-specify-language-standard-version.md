@@ -1,7 +1,7 @@
 ---
 title: /std (Spécifier la version de la norme du langage)
 description: L’option de compilateur MSVC/STD spécifie la norme du langage C ou C++ prise en charge par le compilateur.
-ms.date: 09/11/2020
+ms.date: 10/29/2020
 f1_keywords:
 - /std
 - -std
@@ -11,12 +11,12 @@ f1_keywords:
 - /std:c17
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 82f37377dc223bfe3f5e578e1c7f390da91752a1
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 208789071ff028107d3c7311c3b5c6cf3eea7c1d
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075827"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238471"
 ---
 # <a name="std-specify-language-standard-version"></a>`/std` (Spécifier la version du langage standard)
 
@@ -77,13 +77,13 @@ Par défaut, lorsque le code est compilé en tant que C, le compilateur MSVC n�
 
 Lorsque vous spécifiez **`/std:c11`** ou **`/std:c17`** , MSVC prend en charge toutes les fonctionnalités requises de C11 et C17. Les options du compilateur activent la prise en charge de ces fonctionnalités :
 
-- **`_Pragma`**
+- [`_Pragma`](../../preprocessor/pragma-directives-and-the-pragma-keyword.md#the-_pragma-preprocessing-operator-c99-c11)
 
 - **`restrict`**
 
 - **`_Noreturn`** les \<stdnoreturn.h>
 
-- **`_Alignas`**, **`_Alignof`** et \<stdalign.h>
+- **`_Alignas`** , **`_Alignof`** et \<stdalign.h>
 
 - **`_Generic`** les \<tgmath.h>
 
@@ -107,11 +107,11 @@ Le compilateur ne prend pas en charge les fonctionnalités facultatives de la no
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez **Propriétés de configuration**, **C/C++**, **Langage**.
+1. Sélectionnez **Propriétés de configuration** , **C/C++** , **Langage** .
 
-1. Dans la **norme du langage C++** (ou pour c, **norme du langage c**), choisissez la norme du langage à prendre en charge dans le contrôle de liste déroulante, puis cliquez sur **OK** ou sur **appliquer** pour enregistrer vos modifications.
+1. Dans la **norme du langage C++** (ou pour c, **norme du langage c** ), choisissez la norme du langage à prendre en charge dans le contrôle de liste déroulante, puis cliquez sur **OK** ou sur **appliquer** pour enregistrer vos modifications.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)
