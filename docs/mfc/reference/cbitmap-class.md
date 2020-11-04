@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: adb2a461de5e82fa76ce0ed9961d970f46dbe26a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8c19a54584390312cfd1657e88898cdb044179d0
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834984"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344577"
 ---
 # <a name="cbitmap-class"></a>CBitmap, classe
 
@@ -408,7 +408,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Par défaut, `LoadMappedBitmap` mappe les couleurs couramment utilisées dans les glyphes de bouton.
 
-Pour plus d’informations sur la création d’une bitmap mappée, consultez la fonction Windows [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) et la structure [COLORMAP](/windows/win32/api/commctrl/ns-commctrl-colormap) dans le SDK Windows.
+Pour plus d’informations sur la création d’une bitmap mappée, consultez la fonction Windows [CreateMappedBitmap](/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap) et la structure [COLORMAP](/windows/win32/api/commctrl/ns-commctrl-colormap) dans le SDK Windows.
 
 ## <a name="cbitmaploadoembitmap"></a><a name="loadoembitmap"></a> CBitmap :: LoadOEMBitmap
 

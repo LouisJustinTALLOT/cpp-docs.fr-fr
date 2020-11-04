@@ -3,12 +3,12 @@ title: Créer des projets multiplateformes C++ dans Visual Studio
 description: Comment installer, compiler et déboguer un projet CMake Open source C++ dans Visual Studio qui cible à la fois Linux et Windows.
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c420e0ee04e85d49ad752da085d38b2c5ff9d4fa
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040481"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344655"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutoriel : Créer des projets multiplateformes C++ dans Visual Studio
 
@@ -31,10 +31,10 @@ Dans ce tutoriel, vous allez apprendre à :
 
 * Configurer une machine Linux pour le développement multiplateforme en C++
   * Visual Studio ne nécessite pas de distribution particulière de Linux. Le système d’exploitation peut s’exécuter sur un ordinateur physique, sur une machine virtuelle ou dans le Cloud. Vous pouvez également utiliser le sous-système Windows pour Linux (WSL). Toutefois, pour ce didacticiel, un environnement graphique est requis. WSL n’est pas recommandé ici, car il est destiné principalement aux opérations de ligne de commande.
-  * Visual Studio requiert ces outils sur l’ordinateur Linux : compilateurs C++, gdb, SSH, synchronisation, Ninja et zip. Sur les systèmes Debian, vous pouvez utiliser cette commande pour installer les dépendances suivantes :
+  * Visual Studio requiert ces outils sur l’ordinateur Linux : compilateurs C++, gdb, SSH, synchronisation, marque et code postal. Sur les systèmes Debian, vous pouvez utiliser cette commande pour installer les dépendances suivantes :
 
     ```cmd
-    sudo apt install -y openssh-server build-essential gdb rsync ninja-build zip
+    sudo apt install -y openssh-server build-essential gdb rsync make zip
     ```
 
   * Visual Studio requiert une version récente de CMake sur l’ordinateur Linux sur lequel le mode serveur est activé (au moins 3,8). Microsoft fournit une build universelle de CMake que vous pouvez installer sur n’importe quelle distribution Linux. Nous vous recommandons d’utiliser cette build pour vous assurer que vous disposez des dernières fonctionnalités. Vous pouvez obtenir les fichiers binaires de CMake à partir de la [duplication (fork) Microsoft dans le dépôt CMake](https://github.com/Microsoft/CMake/releases) sur GitHub. Accédez à cette page et téléchargez la version qui correspond à l’architecture système sur votre machine Linux, puis marquez-la comme un fichier exécutable :
@@ -79,13 +79,13 @@ git clone https://github.com/bulletphysics/bullet3.git
 
 Quand vous ouvrez un dossier qui utilise CMake, Visual Studio génère automatiquement le cache CMake. Cette opération peut prendre plus ou moins de temps selon la taille de votre projet.
 
-1. Dans la **fenêtre Sortie**, sélectionnez **Afficher la sortie à partir de**, puis choisissez **CMake** pour superviser l’état du processus de génération du cache. À la fin de l’opération, le message « Extraction des informations cibles terminée » s’affiche.
+1. Dans la **fenêtre Sortie** , sélectionnez **Afficher la sortie à partir de** , puis choisissez **CMake** pour superviser l’état du processus de génération du cache. À la fin de l’opération, le message « Extraction des informations cibles terminée » s’affiche.
 
    ![Fenêtre Sortie de Studio Visual montrant la sortie à partir de CMake](media/cmake-bullet3-output-window.png)
 
    Une fois cette opération terminée, IntelliSense est configuré. Vous pouvez générer le projet et déboguer l’application. Visual Studio affiche désormais une vue logique de la solution, en fonction des cibles spécifiées dans les fichiers fichier CMakeLists.
 
-1. Utilisez le bouton **Solutions et dossiers** dans l’**Explorateur de solutions** pour passer à la vue des cibles de CMake.
+1. Utilisez le bouton **Solutions et dossiers** dans l’ **Explorateur de solutions** pour passer à la vue des cibles de CMake.
 
    ![Bouton Solutions et dossiers dans l’Explorateur de solutions pour afficher la vue des cibles de CMake](media/cmake-bullet3-show-targets.png)
 
@@ -109,13 +109,13 @@ Visual Studio crée une configuration par défaut de **débogage x64** pour Wind
 
    ![Boîte de dialogue Ajouter la configuration à CMakeSettings](media/cmake-bullet3-add-configuration-x64-debug.png)
 
-   Cette boîte de dialogue affiche toutes les configurations incluses dans Visual Studio, ainsi que toutes les configurations personnalisées que vous créez. Si vous souhaitez continuer à utiliser une configuration de **débogage x64** , celle-ci doit être la première que vous ajoutez. Sélectionnez **x64-Debug**, puis cliquez sur le bouton **Sélectionner** . Visual Studio crée le CMakeSettings.jssur le fichier avec une configuration pour **x64-Debug**et l’enregistre sur le disque. Vous pouvez utiliser un nom de votre choix pour vos configurations en changeant le paramètre de nom directement dans CMakeSettings.json.
+   Cette boîte de dialogue affiche toutes les configurations incluses dans Visual Studio, ainsi que toutes les configurations personnalisées que vous créez. Si vous souhaitez continuer à utiliser une configuration de **débogage x64** , celle-ci doit être la première que vous ajoutez. Sélectionnez **x64-Debug** , puis cliquez sur le bouton **Sélectionner** . Visual Studio crée le CMakeSettings.jssur le fichier avec une configuration pour **x64-Debug** et l’enregistre sur le disque. Vous pouvez utiliser un nom de votre choix pour vos configurations en changeant le paramètre de nom directement dans CMakeSettings.json.
 
 ## <a name="set-a-breakpoint-build-and-run-on-windows"></a>Définir un point d’arrêt, générer et exécuter sur Windows
 
 Dans cette étape, nous allons déboguer un exemple de programme qui utilise la bibliothèque Bullet Physics.
   
-1. Dans l’**Explorateur de solutions**, sélectionnez AppBasicExampleGui et développez-le.
+1. Dans l’ **Explorateur de solutions** , sélectionnez AppBasicExampleGui et développez-le.
 
 1. Ouvrez le fichier `BasicExample.cpp`.
 
@@ -143,7 +143,9 @@ Dans cette étape, nous allons déboguer un exemple de programme qui utilise la 
 
 ## <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>Ajouter une configuration Linux et se connecter à la machine distante
 
-1. Ajoutez une configuration Linux. Cliquez avec le bouton droit sur le fichier CMakeSettings.json dans la vue de l’**Explorateur de solutions**, puis sélectionnez **Ajouter une configuration**. Comme précédemment, la boîte de dialogue Ajouter la configuration à CMakeSettings s’affiche. Sélectionnez **Linux-déboguer** cette fois-ci, puis enregistrez le CMakeSettings.jsdans le fichier (Ctrl + s).
+1. Ajoutez une configuration Linux. Cliquez avec le bouton droit sur le fichier CMakeSettings.json dans la vue de l’ **Explorateur de solutions** , puis sélectionnez **Ajouter une configuration**. Comme précédemment, la boîte de dialogue Ajouter la configuration à CMakeSettings s’affiche. Sélectionnez **Linux-déboguer** cette fois-ci, puis enregistrez le CMakeSettings.jsdans le fichier (Ctrl + s).
+
+1. **Visual Studio 2019 version 16,6 ou ultérieure** Faites défiler jusqu’en bas de l’éditeur de paramètres CMake, puis sélectionnez **afficher les paramètres avancés**. Sélectionnez **makefiles UNIX** en tant que **Générateur cmake** , puis enregistrez le CMakeSettings.jsdans le fichier (Ctrl + s).
 
 1. Sélectionnez **Linux-Debug** dans la liste déroulante Configuration.
 

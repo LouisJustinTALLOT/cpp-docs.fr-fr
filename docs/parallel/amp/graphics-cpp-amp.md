@@ -2,12 +2,12 @@
 title: Graphiques (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 3f68766c2c38b74df6e57aaa52419baf5d1151a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 97fd433387aac809053ea6dd8ac59a56207a4fc8
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041456"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344720"
 ---
 # <a name="graphics-c-amp"></a>Graphiques (C++ AMP)
 
@@ -21,11 +21,11 @@ C++ AMP contient plusieurs API dans l’espace de noms [Concurrency :: Graphics
 
 ## <a name="the-norm-and-unorm-types"></a>Les types norm et unorm
 
-Les `norm` `unorm` types et sont des types scalaires qui limitent la plage de **`float`** valeurs ; c’est ce qu’on appelle la « *fixation*». Ces types peuvent être explicitement construits à partir d'autres types scalaires. Dans le cast, la valeur est d’abord convertie en, **`float`** puis ancrée à la région respective autorisée par la norme [-1,0, 1,0] ou unorm [0,0, 1,0]. Le cast de +/- infini retourne +/-1. Le cast depuis NaN n'est pas défini. Un norm peut être implicitement construit à partir d'un unorm sans perte de données. L'opérateur de conversion implicite en float est défini sur ces types. Les opérateurs binaires sont définis entre ces types et d’autres types scalaires intégrés tels que **`float`** et **`int`** : +,-, \* ,/, = =, ! =, >, \<, > =, <=. Les opérateurs d’assignation composée sont également pris en charge : + =,-=, \* =,/=. L'opérateur de négation unaire (-) est défini pour les types norm.
+Les `norm` `unorm` types et sont des types scalaires qui limitent la plage de **`float`** valeurs ; c’est ce qu’on appelle la « *fixation* ». Ces types peuvent être explicitement construits à partir d'autres types scalaires. Dans le cast, la valeur est d’abord convertie en, **`float`** puis ancrée à la région respective autorisée par la norme [-1,0, 1,0] ou unorm [0,0, 1,0]. Le cast de +/- infini retourne +/-1. Le cast depuis NaN n'est pas défini. Un norm peut être implicitement construit à partir d'un unorm sans perte de données. L'opérateur de conversion implicite en float est défini sur ces types. Les opérateurs binaires sont définis entre ces types et d’autres types scalaires intégrés tels que **`float`** et **`int`** : +,-, \* ,/, = =, ! =, >, \<, > =, <=. Les opérateurs d’assignation composée sont également pris en charge : + =,-=, \* =,/=. L'opérateur de négation unaire (-) est défini pour les types norm.
 
 ## <a name="short-vector-library"></a>Bibliothèque de vecteurs courts
 
-La bibliothèque de vecteurs courts fournit certaines fonctionnalités du [type de vecteur](https://go.microsoft.com/fwlink/p/?linkid=248500) défini en HLSL et est généralement utilisée pour définir des texels. Un vecteur court est une structure de données contenant une à quatre valeurs du même type. Les types pris en charge sont,,,, **`double`** **`float`** **`int`** `norm` `uint` et `unorm` . Les noms des types sont affichés dans le tableau suivant. Pour chaque type, il existe également un correspondant **`typedef`** qui n’a pas de trait de soulignement dans le nom. Les types qui ont les traits de soulignement se trouvent dans l' [espace de noms Concurrency :: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Les types qui n’ont pas de traits de soulignement se trouvent dans l' [espace de noms Concurrency :: Graphics ::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) afin qu’ils soient clairement séparés des types fondamentaux nommés de la même façon, tels que **`__int8`** et **`__int16`** .
+La bibliothèque de vecteurs courts fournit certaines fonctionnalités du [type de vecteur](/windows/win32/direct3dhlsl/dx-graphics-hlsl-vector) défini en HLSL et est généralement utilisée pour définir des texels. Un vecteur court est une structure de données contenant une à quatre valeurs du même type. Les types pris en charge sont,,,, **`double`** **`float`** **`int`** `norm` `uint` et `unorm` . Les noms des types sont affichés dans le tableau suivant. Pour chaque type, il existe également un correspondant **`typedef`** qui n’a pas de trait de soulignement dans le nom. Les types qui ont les traits de soulignement se trouvent dans l' [espace de noms Concurrency :: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Les types qui n’ont pas de traits de soulignement se trouvent dans l' [espace de noms Concurrency :: Graphics ::d irect3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) afin qu’ils soient clairement séparés des types fondamentaux nommés de la même façon, tels que **`__int8`** et **`__int16`** .
 
 |Type|Length 2|Longueur 3|Longueur 4|
 |-|--------------|--------------|--------------|
@@ -46,7 +46,7 @@ Si un opérateur est défini entre deux vecteurs courts, alors il est également
 
 L'opération est portée entre chaque composant du vecteur court et la variable scalaire. Voici les opérateurs valides :
 
-|Type d'opérateur|Types valides|
+|Type d’opérateur|Types valides|
 |-------------------|-----------------|
 |Opérateurs binaires|Valide sur tous les types : +,-, \* ,/,<br /><br /> Valide sur les types d’entiers :%, ^, &#124;, &, <\<, >><br /><br /> Les deux vecteurs doivent avoir la même taille et le résultat doit être un vecteur de la même taille.|
 |Opérateurs relationnels|Valides sur tous les types : == et !=|
@@ -57,7 +57,7 @@ L'opération est portée entre chaque composant du vecteur court et la variable 
 
 ### <a name="swizzling-expressions"></a>Expressions de swizzling
 
-La bibliothèque de vecteurs courts prend en charge la construction de l'accesseur `vector_type.identifier` pour accéder aux composants d'un vecteur court. `identifier`, Qui est connu sous le nom d' *expression swizzling*, spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Les caractères individuels de l’identificateur peuvent être : x, y, z et w ; ou r, g, b et a. « x » et « r » signifient le zéro du composant, « y » et « g » signifient le premier composant, et ainsi de suite. (Notez que « x » et « r » ne peuvent pas être utilisés dans le même identificateur.) Par conséquent, « RVBA » et « XYZW » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.
+La bibliothèque de vecteurs courts prend en charge la construction de l'accesseur `vector_type.identifier` pour accéder aux composants d'un vecteur court. `identifier`, Qui est connu sous le nom d' *expression swizzling* , spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Les caractères individuels de l’identificateur peuvent être : x, y, z et w ; ou r, g, b et a. « x » et « r » signifient le zéro du composant, « y » et « g » signifient le premier composant, et ainsi de suite. (Notez que « x » et « r » ne peuvent pas être utilisés dans le même identificateur.) Par conséquent, « RVBA » et « XYZW » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.
 
 ## <a name="texture-classes"></a>Classes de texture
 
@@ -67,7 +67,7 @@ De nombreux GPU ont un matériel et des caches optimisées pour récupérer des 
 
 - Un vecteur court ayant deux ou quatre composants. La seule exception est `double_4`, qui n'est pas autorisée.
 
-L'objet `texture` peut avoir un rang de 1, 2 ou 3. L'objet `texture` peut être capturé uniquement par référence dans le lambda d'un appel à `parallel_for_each`. La texture est stockée sur le GPU en tant qu'objet de texture Direct3D. Pour plus d’informations sur les textures et les texels dans Direct3D, consultez [Introduction aux textures dans Direct3D 11](https://go.microsoft.com/fwlink/p/?linkid=248502).
+L'objet `texture` peut avoir un rang de 1, 2 ou 3. L'objet `texture` peut être capturé uniquement par référence dans le lambda d'un appel à `parallel_for_each`. La texture est stockée sur le GPU en tant qu'objet de texture Direct3D. Pour plus d’informations sur les textures et les texels dans Direct3D, consultez [Introduction aux textures dans Direct3D 11](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures-intro).
 
 Le type de texel que vous utilisez peut être l'un des nombreux formats de texture utilisés dans la programmation graphique. Par exemple, un format RVBA peut utiliser 32 bits, avec 8 bits pour chacun des éléments scalaires R, G, B et A. Le matériel de texture d'une carte graphique peut accéder à chaque élément selon son format. Par exemple, si vous utilisez le format RVBA, le matériel de texture peut extraire chaque élément de 8 bits dans une forme 32 bits. En C++ AMP, vous pouvez définir des bits par élément scalaire de votre texel afin d'accéder automatiquement aux éléments scalaires individuels dans le code sans utiliser le décalage de bits.
 
@@ -342,7 +342,7 @@ Notez comment une vue de texture dont le type d'élément est non const avec un 
 
 Le type d'élément d'une `texture_view` (son attribut const/non const et aussi le nombre de composants qu'il comporte) joue également un rôle pour déterminer si la vue prend en charge l'échantillonnage, et comment les niveaux de mipmap sont accessibles :
 
-|Type|Composants|Lire|Write|échantillonnage|Accès aux mipmaps|
+|Type|Components|Lire|Write|échantillonnage|Accès aux mipmaps|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N>|1, 2, 4|Oui|Non (1)|Oui|Oui, indexable. La plage est déterminée à l'instanciation.|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|Oui<br /><br /> Non (2)|Oui<br /><br /> Oui|Non (1)<br /><br /> Non (1)|Oui, un niveau. Le niveau est déterminé à l'instanciation.<br /><br /> Oui, un niveau. Le niveau est déterminé à l'instanciation.|
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>Interopérabilité
 
-Le Runtime C++ AMP prend en charge l’interopérabilité entre et `texture<T,1>` l' [interface ID3D11Texture1D](https://go.microsoft.com/fwlink/p/?linkId=248503), entre `texture<T,2>` et l' [interface ID3D11Texture2D](https://go.microsoft.com/fwlink/p/?linkId=255317), et entre `texture<T,3>` et l' [interface ID3D11Texture3D](https://go.microsoft.com/fwlink/p/?linkId=255377). La méthode [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) prend un `texture` objet et retourne une `IUnknown` interface. La méthode [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) prend une `IUnknown` interface et un `accelerator_view` objet et retourne un `texture` objet.
+Le Runtime C++ AMP prend en charge l’interopérabilité entre et `texture<T,1>` l' [interface ID3D11Texture1D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture1d), entre `texture<T,2>` et l' [interface ID3D11Texture2D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture2d), et entre `texture<T,3>` et l' [interface ID3D11Texture3D](/windows/win32/api/d3d11/nn-d3d11-id3d11texture3d). La méthode [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) prend un `texture` objet et retourne une `IUnknown` interface. La méthode [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) prend une `IUnknown` interface et un `accelerator_view` objet et retourne un `texture` objet.
 
 ## <a name="see-also"></a>Voir aussi
 

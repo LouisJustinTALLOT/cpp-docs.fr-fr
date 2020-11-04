@@ -23,16 +23,16 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 - VC.Project.FXCompilerTool.CompileD2DCustomEffect
 - VC.Project.FXCompilerTool.MultiProcFXC
-ms.openlocfilehash: a45ae433e5adaa8aeaf32215d4af7ad0a247af04
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 629a242d3698c9c3c2d3c697298b5c6625e4768f
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606398"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344681"
 ---
 # <a name="hlsl-compiler-property-pages"></a>Pages de propriétés du compilateur HLSL
 
-Vous pouvez utiliser les pages de propriétés du compilateur HLSL (fxc.exe) pour configurer la façon dont les fichiers du nuanceur HLSL sont générés. Vous pouvez également spécifier des arguments de ligne de commande pour le compilateur HLSL à l’aide de la propriété **options supplémentaires** de la page de propriétés **ligne de commande** ; Cela comprend les arguments qui ne peuvent pas être configurés à l’aide d’autres propriétés des pages de propriétés HLSL. Pour plus d’informations sur le compilateur HLSL, consultez [Outil Compilateur d’effets](https://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)
+Vous pouvez utiliser les pages de propriétés du compilateur HLSL (fxc.exe) pour configurer la façon dont les fichiers du nuanceur HLSL sont générés. Vous pouvez également spécifier des arguments de ligne de commande pour le compilateur HLSL à l’aide de la propriété **options supplémentaires** de la page de propriétés **ligne de commande** ; Cela comprend les arguments qui ne peuvent pas être configurés à l’aide d’autres propriétés des pages de propriétés HLSL. Pour plus d’informations sur le compilateur HLSL, consultez [Outil Compilateur d’effets](/windows/win32/direct3dtools/fxc)
 
 ## <a name="hlsl-general-property-page"></a>Page de propriétés général HLSL
 
@@ -48,7 +48,7 @@ Spécifie le nom du point d’entrée pour le nuanceur (/E [nom])
 
 **Oui (/Od)** pour désactiver les optimisations ; sinon, **Non**. Par défaut, la valeur est **Oui (/Od)** pour les configurations **Debug** et **Non** pour les configurations **Release**.
 
-L’argument de ligne de commande **/Od** du compilateur HLSL applique implicitement l’argument de ligne de commande **/Gfp**, mais la sortie peut ne pas être identique à la sortie qui est produite en passant explicitement les deux arguments de ligne de commande **/Od** et **/Gfp**.
+L’argument de ligne de commande **/Od** du compilateur HLSL applique implicitement l’argument de ligne de commande **/Gfp** , mais la sortie peut ne pas être identique à la sortie qui est produite en passant explicitement les deux arguments de ligne de commande **/Od** et **/Gfp**.
 
 ### <a name="enable-debugging-information"></a>Activer les informations de débogage
 
@@ -56,13 +56,13 @@ L’argument de ligne de commande **/Od** du compilateur HLSL applique implicite
 
 ### <a name="shader-type"></a>Type de nuanceur
 
-Spécifie le type de nuanceur. Les différents types de nuanceurs implémentent des parties différentes du pipeline graphique. Certains types de nuanceurs sont disponibles seulement dans les modèles de nuanceur les plus récents (qui sont spécifiés par la propriété **Modèle de nuanceur**) : par exemple, les nuanceurs de calcul ont été introduits dans le modèle de nuanceur 5.
+Spécifie le type de nuanceur. Les différents types de nuanceurs implémentent des parties différentes du pipeline graphique. Certains types de nuanceurs sont disponibles seulement dans les modèles de nuanceur les plus récents (qui sont spécifiés par la propriété **Modèle de nuanceur** ) : par exemple, les nuanceurs de calcul ont été introduits dans le modèle de nuanceur 5.
 
-Cette propriété correspond à la partie **\[type]** de l’argument de ligne de commande **/T \[type]_\[modèle]** du compilateur HLSL. La propriété **Modèles de nuanceur** spécifie la partie **[modèle]** de l’argument.
+Cette propriété correspond à la partie **\[ type]** de l’argument de ligne de commande **/t \[ type] _ \[ Model]** au compilateur HLSL. La propriété **Modèles de nuanceur** spécifie la partie **[modèle]** de l’argument.
 
-**Choix**
+**Choices**
 
-- **Effect**
+- **Effet**
 - **Nuanceur de sommets**
 - **Nuanceur de pixels**
 - **Nuanceur de géométrie**
@@ -74,9 +74,9 @@ Cette propriété correspond à la partie **\[type]** de l’argument de ligne d
 
 ### <a name="shader-model"></a>Modèle de nuanceur
 
-Spécifie le modèle de nuanceur. Les différents modèles de nuanceur ont des fonctionnalités différentes. En général, les modèles de nuanceur plus récents offrent des fonctionnalités étendues, mais ils nécessitent du matériel graphique plus moderne pour exécuter le code du nuanceur. Certains types de nuanceurs (qui sont spécifiés par la propriété **Type de nuanceur**) sont disponibles seulement dans les modèles de nuanceur les plus récents : par exemple, les nuanceurs de calcul ont été introduits dans le modèle de nuanceur 5.
+Spécifie le modèle de nuanceur. Les différents modèles de nuanceur ont des fonctionnalités différentes. En général, les modèles de nuanceur plus récents offrent des fonctionnalités étendues, mais ils nécessitent du matériel graphique plus moderne pour exécuter le code du nuanceur. Certains types de nuanceurs (qui sont spécifiés par la propriété **Type de nuanceur** ) sont disponibles seulement dans les modèles de nuanceur les plus récents : par exemple, les nuanceurs de calcul ont été introduits dans le modèle de nuanceur 5.
 
-Cette propriété correspond à la partie **\[modèle]** de l’argument de ligne de commande **/T \[type]_\[modèle]** du compilateur HLSL. La propriété **Type de nuanceur** spécifie la partie **[type]** de l’argument.
+Cette propriété correspond à la partie **\[ Model]** de l’argument de ligne de commande **/t \[ type] _ \[ Model]** au compilateur HLSL. La propriété **Type de nuanceur** spécifie la partie **[type]** de l’argument.
 
 ### <a name="all-resources-bound"></a>Toutes les ressources liées
 
@@ -116,7 +116,7 @@ Considère tous les avertissements du compilateur comme des erreurs. Pour un nou
 
 ## <a name="output-files-property-page"></a>Page de propriétés des fichiers de sortie
 
-### <a name="header-variable-name"></a>Nom de la variable d’en-tête
+### <a name="header-variable-name"></a>Nom de la variable dans l’en-tête
 
 Spécifie un nom pour le nom de la variable dans le fichier d’en-tête (/VN [name])
 
@@ -132,7 +132,7 @@ Spécifie un nom pour le fichier objet. (/FO [name])
 
 Spécifie le contenu du fichier de sortie linguistique de l’assembly. (/FC,/FX)
 
-**Choix**
+**Choices**
 
 - **Aucune liste** -aucune liste.
 - **Listing assembleur uniquement** -fichier de code d’assembly
@@ -144,6 +144,6 @@ Spécifie le nom de fichier pour le fichier de liste de code assembleur
 
 ## <a name="see-also"></a>Voir aussi
 
-[C++Référence de la page de propriétés du projet](property-pages-visual-cpp.md)<br>
-[Ligne de commande, pages de propriétés](command-line-property-pages.md)<br>
-[Compilation de nuanceurs](https://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+[Informations de référence sur les pages de propriétés de projet C++](property-pages-visual-cpp.md)<br>
+[Pages de propriétés ligne de commande](command-line-property-pages.md)<br>
+[Compilation des nuanceurs](/windows/win32/direct3dhlsl/dx-graphics-hlsl-part1)

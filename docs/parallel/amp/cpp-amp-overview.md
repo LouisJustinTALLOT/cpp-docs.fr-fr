@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
-ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
+ms.openlocfilehash: 0eeda43a279be74ea71669b55356603e980cab40
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427723"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344746"
 ---
 # <a name="c-amp-overview"></a>Présentation de C++ AMP
 
@@ -229,7 +229,7 @@ Le tableau suivant récapitule les similitudes et les différences entre les `ar
 |-----------------|-----------------|-----------------------|
 |Quand le rang est déterminé|Au moment de la compilation.|Au moment de la compilation.|
 |Lorsque l’étendue est déterminée|Au moment de l’exécution.|Au moment de l’exécution.|
-|Forme|Rectangulaire.|Rectangulaire.|
+|Graphique à base de formes|Rectangulaire.|Rectangulaire.|
 |Stockage des données|Est un conteneur de données.|Est un wrapper de données.|
 |Copier|Copie complète et explicite au niveau de la définition.|Copie implicite lorsque la fonction noyau y accède.|
 |Récupération de données|En recopiant les données du tableau dans un objet sur le thread de l’UC.|En accédant directement à l' `array_view` objet ou en appelant la [méthode array_view :: Synchronize](reference/array-view-class.md#synchronize) pour continuer à accéder aux données sur le conteneur d’origine.|
@@ -473,9 +473,9 @@ C++ AMP comprend une bibliothèque de graphiques conçue pour la programmation g
 
 - [Utilisation de C++ AMP dans des applications UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Procédure pas à pas : création d’un composant de Windows Runtime de base en C++ et appel de ce dernier à partir de JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Procédure pas à pas : création d’un composant de Windows Runtime de base en C++ et appel de ce dernier à partir de JavaScript](/previous-versions/windows/apps/hh755833(v=vs.140))
 
-- [Optimiseur de voyage Bing Maps, application Windows Store en JavaScript et C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Optimiseur de voyage Bing Maps, application Windows Store en JavaScript et C++](/previous-versions/windows/apps/hh699893(v=vs.140))
 
 - [Comment utiliser C++ AMP à partir de C# à l’aide de l’Windows Runtime](https://devblogs.microsoft.com/pfxteam/how-to-use-c-amp-from-c-using-winrt/)
 
