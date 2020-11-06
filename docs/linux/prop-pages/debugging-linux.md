@@ -1,13 +1,14 @@
 ---
 title: Débogage, propriétés (Linux C++) | Microsoft Docs
+description: Décrit les propriétés du débogueur Microsoft Visual Studio Linux C++
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: 2b55a0db001c98be72ac88c17c62b21e98ec4888
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0d43877df817f40cfd97a03c4f66730ab17138d8
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924515"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334219"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Débogage C++, propriétés (Linux C++)
 
@@ -35,5 +36,6 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Activer la mise en forme Python | Permet d’afficher les valeurs d’expression selon une mise en forme élégante. Uniquement pris en charge en mode de débogage gdb. |
 | Fichier de visualisation | Fichier de visualisation natif par défaut (.natvis) contenant les directives de visualisation des types SLT. Les autres fichiers .natvis associés à la solution actuelle sont chargés automatiquement. |
 | Mappage de chemins de fichiers sources supplémentaires | Équivalences de chemins supplémentaires que le débogueur utilise pour mapper les noms de fichiers sources Windows aux noms de fichiers sources Linux. Le format est « \<windows-path> = \<linux-path> ;... ». Un nom de fichier source sous le chemin Windows est référencé comme s’il s’agissait d’un nom de fichier situé à la même position relative sous le chemin Linux. Les fichiers qui se trouvent dans le projet local ne nécessitent pas de mappage supplémentaire. |
+| GDB chemin d’accès | **Visual studio 2019 version 16,9** : spécifie le chemin d’accès à l’exécutable gdb devant être utilisé par Visual Studio. |
 
 ::: moniker-end

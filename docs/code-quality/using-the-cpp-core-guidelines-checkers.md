@@ -5,12 +5,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: a041ecd4053360ebfc0da198efe9a3decb73ffd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 4fb06b0f78c93e6b76e0b8d64d7dfbdc541cf299
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924797"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334141"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Utiliser les vérificateurs de C++ Core Guidelines
 
@@ -61,7 +61,7 @@ Vous pouvez également choisir d’exécuter toutes les règles de C++ Core Chec
 
 1. Sélectionnez la page de propriétés données de **configuration** > **analyse du code** > **Microsoft** .
 
-1. Ouvrez la liste déroulante **règles actives** et sélectionnez **choisir plusieurs ensembles de règles** .
+1. Ouvrez la liste déroulante **règles actives** et sélectionnez **choisir plusieurs ensembles de règles**.
 
 1. Dans la boîte de dialogue **Ajouter ou supprimer des ensembles de règles** , choisissez les ensembles de règles que vous souhaitez inclure.
 
@@ -96,7 +96,7 @@ Cet exemple illustre quelques-uns des avertissements que les règles de C++ Core
 
 - C26485 est une limite de règle. 3 : aucune atténuation de tableau à pointeur.
 
-- C26481 est une limite de règle. 1 : n’utilisez pas l’arithmétique de pointeur. Utilisez plutôt `span`.
+- C26481 est une limite de règle. 1 : n’utilisez pas l’arithmétique de pointeur. Utilisez `span` à la place.
 
 Installez et activez les ensembles de règles d’analyse du code C++ Core Check, puis compilez ce code. L’analyse du code génère les deux premiers avertissements et supprime le troisième. Voici la sortie de la génération de l’exemple de code dans Visual Studio 2015 :
 
@@ -130,7 +130,7 @@ Les C++ Core Guidelines sont là pour vous aider à écrire du code plus sécuri
 
 - **Règles d’énumération** : ces règles appliquent [des vérifications relatives aux énumérations à partir du C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum). <sup>16,3</sup>
 
-- **Règles expérimentales** Il s’agit de règles de C++ Core Check expérimentales qui sont utiles, mais qui ne sont pas prêtes pour une utilisation quotidienne. Essayez-les et [fournissez vos commentaires](https://developercommunity.visualstudio.com/content/idea/post.html?space=62). <sup>16,0</sup>
+- **Règles expérimentales** Il s’agit de règles de C++ Core Check expérimentales qui sont utiles, mais qui ne sont pas prêtes pour une utilisation quotidienne. Essayez-les et [fournissez vos commentaires](https://aka.ms/feedback/suggest?space=62). <sup>16,0</sup>
 
 - **Règles de fonction** : deux contrôles qui facilitent l’adoption du **`noexcept`** spécificateur. Elles font partie des instructions relatives à la conception et à l’implémentation de la [fonction Clear](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions). <sup>15,5</sup>
 
@@ -165,12 +165,12 @@ Vous pouvez choisir de limiter les avertissements à un seul ou à quelques grou
 
 ::: moniker range="<=msvc-150"
 
-Pour afficher les ensembles de règles disponibles, ouvrez la boîte de dialogue **Propriétés du projet** . Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page **Propriétés de configuration** général de l'  >  **analyse du code**  >  **General** . Ensuite, ouvrez la liste déroulante de la zone de liste déroulante **ensembles de règles** pour afficher les ensembles de règles disponibles. Pour créer une combinaison personnalisée d’ensembles de règles, sélectionnez **choisir plusieurs ensembles de règles** . La boîte de dialogue **Ajouter ou supprimer des ensembles de règles** répertorie les règles que vous pouvez choisir. Pour plus d’informations sur l’utilisation d’ensembles de règles dans Visual Studio, consultez [utiliser des ensembles de règles pour spécifier les règles C++ à exécuter](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Pour afficher les ensembles de règles disponibles, ouvrez la boîte de dialogue **Propriétés du projet** . Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page **Propriétés de configuration** général de l'  >  **analyse du code**  >  **General** . Ensuite, ouvrez la liste déroulante de la zone de liste déroulante **ensembles de règles** pour afficher les ensembles de règles disponibles. Pour créer une combinaison personnalisée d’ensembles de règles, sélectionnez **choisir plusieurs ensembles de règles**. La boîte de dialogue **Ajouter ou supprimer des ensembles de règles** répertorie les règles que vous pouvez choisir. Pour plus d’informations sur l’utilisation d’ensembles de règles dans Visual Studio, consultez [utiliser des ensembles de règles pour spécifier les règles C++ à exécuter](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 ::: moniker range=">=msvc-160"
 
-Pour afficher les ensembles de règles disponibles, ouvrez la boîte de dialogue **Propriétés du projet** . Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page **Propriétés de configuration**  >  **analyse du code**  >  **Microsoft** . Ensuite, ouvrez la liste déroulante dans la zone de liste déroulante **règles actives** pour afficher les ensembles de règles disponibles. Pour créer une combinaison personnalisée d’ensembles de règles, sélectionnez **choisir plusieurs ensembles de règles** . La boîte de dialogue **Ajouter ou supprimer des ensembles de règles** répertorie les règles que vous pouvez choisir. Pour plus d’informations sur l’utilisation d’ensembles de règles dans Visual Studio, consultez [utiliser des ensembles de règles pour spécifier les règles C++ à exécuter](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+Pour afficher les ensembles de règles disponibles, ouvrez la boîte de dialogue **Propriétés du projet** . Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page **Propriétés de configuration**  >  **analyse du code**  >  **Microsoft** . Ensuite, ouvrez la liste déroulante dans la zone de liste déroulante **règles actives** pour afficher les ensembles de règles disponibles. Pour créer une combinaison personnalisée d’ensembles de règles, sélectionnez **choisir plusieurs ensembles de règles**. La boîte de dialogue **Ajouter ou supprimer des ensembles de règles** répertorie les règles que vous pouvez choisir. Pour plus d’informations sur l’utilisation d’ensembles de règles dans Visual Studio, consultez [utiliser des ensembles de règles pour spécifier les règles C++ à exécuter](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
 ::: moniker-end
 
@@ -224,7 +224,7 @@ Le compilateur Microsoft C++ a une prise en charge limitée de l' `[[gsl::suppre
 
 Au lieu de #pragmas, vous pouvez utiliser les options de ligne de commande dans la page de propriétés du fichier pour supprimer les avertissements d’un projet ou d’un fichier unique. Par exemple, pour désactiver l’avertissement C26400 pour un fichier :
 
-1. Dans **Explorateur de solutions** , cliquez avec le bouton droit sur le fichier et choisissez **Propriétés** .
+1. Dans **Explorateur de solutions** , cliquez avec le bouton droit sur le fichier et choisissez **Propriétés**.
 
 1. Dans la boîte de dialogue **pages de propriétés** , sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
 
@@ -322,7 +322,7 @@ En raison de la façon dont les règles d’analyse du code sont chargées dans 
 
 ### <a name="to-add-the-microsoftcppcorecheck-package-to-your-project-in-visual-studio-2015"></a>Pour ajouter le package Microsoft. CppCoreCheck à votre projet dans Visual Studio 2015
 
-1. Dans **Explorateur de solutions** , cliquez avec le bouton droit pour ouvrir le menu contextuel de votre projet dans la solution à laquelle vous souhaitez ajouter le package. Sélectionnez **gérer les packages NuGet** pour ouvrir le **Gestionnaire de package NuGet** .
+1. Dans **Explorateur de solutions** , cliquez avec le bouton droit pour ouvrir le menu contextuel de votre projet dans la solution à laquelle vous souhaitez ajouter le package. Sélectionnez **gérer les packages NuGet** pour ouvrir le **Gestionnaire de package NuGet**.
 
 1. Dans la fenêtre **Gestionnaire de package NuGet** , recherchez Microsoft. CppCoreCheck.
 

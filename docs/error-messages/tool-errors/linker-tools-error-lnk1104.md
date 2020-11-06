@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: aa7bcf34cddfa24956d807131b3c484e7d580e73
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2eea6885537037db496a2f42e0fff0ffa69127e3
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506034"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334206"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Erreur des outils Éditeur de liens LNK1104
 
-> Impossible d’ouvrir le fichier'*nom_fichier*'
+> Impossible d’ouvrir le fichier' *nom_fichier* '
 
 Cette erreur est signalée lorsque l’éditeur de liens ne parvient pas à ouvrir un fichier pour la lecture ou l’écriture. Les deux causes les plus courantes du problème sont les suivantes :
 
@@ -40,11 +40,11 @@ Les programmes antivirus bloquent souvent temporairement l’accès aux fichiers
 
 ### <a name="windows-libraries-such-as-kernel32lib"></a>Bibliothèques Windows, telles que kernel32. lib
 
-Si le fichier qui ne peut pas être ouvert est l’un des fichiers de bibliothèque standard fournis par Microsoft, par exemple *Kernel32. lib*, il se peut que vous ayez une erreur de configuration de projet ou une erreur d’installation. Vérifiez que le SDK Windows a été installé. Si votre projet requiert d’autres bibliothèques Microsoft, telles que MFC, assurez-vous que les composants MFC ont également été installés par le programme d’installation de Visual Studio. Vous pouvez réexécuter le programme d’installation pour ajouter des composants facultatifs à tout moment. Pour plus d’informations, consultez [modifier Visual Studio](/visualstudio/install/modify-visual-studio). Utilisez l’onglet **composants individuels** dans le programme d’installation pour choisir des bibliothèques et des kits de développement logiciel (SDK) spécifiques.
+Si le fichier qui ne peut pas être ouvert est l’un des fichiers de bibliothèque standard fournis par Microsoft, par exemple *Kernel32. lib* , il se peut que vous ayez une erreur de configuration de projet ou une erreur d’installation. Vérifiez que le SDK Windows a été installé. Si votre projet requiert d’autres bibliothèques Microsoft, telles que MFC, assurez-vous que les composants MFC ont également été installés par le programme d’installation de Visual Studio. Vous pouvez réexécuter le programme d’installation pour ajouter des composants facultatifs à tout moment. Pour plus d’informations, consultez [modifier Visual Studio](/visualstudio/install/modify-visual-studio). Utilisez l’onglet **composants individuels** dans le programme d’installation pour choisir des bibliothèques et des kits de développement logiciel (SDK) spécifiques.
 
 ### <a name="versioned-vcruntime-libraries"></a>Bibliothèques vcruntime avec version
 
-Si le message d’erreur a une bibliothèque Microsoft, telle que *msvcr120. lib*, l’ensemble d’outils de plateforme de cette version de compilateur n’est peut-être pas installé. Pour résoudre ce problème, vous avez deux options : mettre à niveau le projet pour utiliser l’ensemble d’outils de plateforme actuel ou installer l’ensemble d’outils antérieur et générer le projet sans le modifier. Pour plus d’informations, consultez [mise à niveau de projets à partir de versions antérieures de Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) et [utiliser le multi-ciblage natif dans Visual Studio pour générer des projets anciens](../../porting/use-native-multi-targeting.md).
+Si le message d’erreur a une bibliothèque Microsoft, telle que *msvcr120. lib* , l’ensemble d’outils de plateforme de cette version de compilateur n’est peut-être pas installé. Pour résoudre ce problème, vous avez deux options : mettre à niveau le projet pour utiliser l’ensemble d’outils de plateforme actuel ou installer l’ensemble d’outils antérieur et générer le projet sans le modifier. Pour plus d’informations, consultez [mise à niveau de projets à partir de versions antérieures de Visual C++](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) et [utiliser le multi-ciblage natif dans Visual Studio pour générer des projets anciens](../../porting/use-native-multi-targeting.md).
 
 ### <a name="retail-debug-or-platform-specific-libraries"></a>Bibliothèques de vente au détail, débogage ou spécifiques à la plateforme
 
@@ -52,7 +52,7 @@ L’erreur peut se produire lorsque vous créez pour la première fois une nouve
 
 ### <a name="the-vccorliblib-library"></a>Bibliothèque vccorlib. lib
 
-Il n’existe aucune bibliothèque atténuée spectre pour les applications ou les composants de Windows universel (UWP). Si le message d’erreur comprend *vccorlib. lib*, vous avez peut-être activé [/Qspectre](../../build/reference/qspectre.md) dans un projet UWP. Désactivez l’option de compilateur **/Qspectre** pour résoudre ce problème. Dans Visual Studio, modifiez la propriété d' **atténuation spectre** . Elle est disponible dans la page génération de code **C/C++**  >  **Code Generation** de la boîte de dialogue **pages de propriétés** du projet.
+Il n’existe aucune bibliothèque atténuée spectre pour les applications ou les composants de Windows universel (UWP). Si le message d’erreur comprend *vccorlib. lib* , vous avez peut-être activé [/Qspectre](../../build/reference/qspectre.md) dans un projet UWP. Désactivez l’option de compilateur **/Qspectre** pour résoudre ce problème. Dans Visual Studio, modifiez la propriété d' **atténuation spectre** . Elle est disponible dans la page génération de code **C/C++**  >  **Code Generation** de la boîte de dialogue **pages de propriétés** du projet.
 
 ### <a name="libraries-in-projects-from-online-or-other-sources"></a>Bibliothèques dans des projets en ligne ou dans d’autres sources
 
@@ -82,7 +82,7 @@ Veillez à installer toutes les versions de la bibliothèque dont vous avez beso
 
 Cette erreur peut s’afficher si le *nom de fichier* n’existe pas encore lorsque l’éditeur de liens tente d’y accéder. Cela peut se produire lorsqu’un projet dépend d’un autre dans la solution, mais que les projets sont générés dans le mauvais ordre. Pour résoudre ce problème, assurez-vous que vos références de projet sont définies dans le projet qui utilise le fichier. Le fichier manquant est alors généré avant d’être requis. Pour plus d’informations, consultez [Ajout de références dans les projets Visual Studio C++](../../build/adding-references-in-visual-cpp-projects.md) et [gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project).
 
-## <a name="cannot-open-file-cprogramobj"></a>Impossible d’ouvrir le fichier’C : \\ Program. obj'
+## <a name="cant-open-file-cprogramobj"></a>Impossible d’ouvrir le fichier’C : \\ Program. obj'
 
 Si vous voyez le nom de fichier *C : \\ Program. obj* dans le message d’erreur, encapsulez vos chemins de bibliothèque entre guillemets doubles. Cette erreur se produit lorsqu’un chemin d’accès non encapsulé qui commence par *C : \\ Program Files* est passé à l’éditeur de liens. Les chemins d’accès désencapsulés peuvent également provoquer des erreurs similaires. En règle générale, ils affichent un fichier. obj inattendu à la racine de votre lecteur.
 
@@ -120,7 +120,7 @@ Cette erreur peut se produire si le fichier est trop volumineux. Les bibliothèq
 
 ### <a name="incorrect-file-permissions"></a>Autorisations de fichier incorrectes
 
-Cette erreur peut se produire si vous disposez d’autorisations de fichiers insuffisantes pour accéder au *nom*de fichier. Cela peut se produire si vous utilisez un compte d’utilisateur ordinaire pour accéder aux fichiers de bibliothèque dans les répertoires système protégés. Ou, si vous utilisez des fichiers copiés à partir d’autres utilisateurs dont les autorisations d’origine sont toujours définies. Pour résoudre ce problème, déplacez le fichier vers un répertoire de projet accessible en écriture. Si le fichier déplacé a des autorisations inaccessibles, exécutez la commande takeown.exe dans une fenêtre de commande d’administrateur pour prendre possession du fichier.
+Cette erreur peut se produire si vous disposez d’autorisations de fichiers insuffisantes pour accéder au *nom* de fichier. Cela peut se produire si vous utilisez un compte d’utilisateur ordinaire pour accéder aux fichiers de bibliothèque dans les répertoires système protégés. Ou, si vous utilisez des fichiers copiés à partir d’autres utilisateurs dont les autorisations d’origine sont toujours définies. Pour résoudre ce problème, déplacez le fichier vers un répertoire de projet accessible en écriture. Si le fichier déplacé a des autorisations inaccessibles, exécutez la commande takeown.exe dans une fenêtre de commande d’administrateur pour prendre possession du fichier.
 
 ### <a name="insufficient-disk-space"></a>Espace disque insuffisant
 
@@ -128,10 +128,10 @@ L’erreur peut se produire lorsque vous n’avez pas suffisamment d’espace di
 
 ### <a name="problems-in-the-tmp-environment-variable"></a>Problèmes dans la variable d’environnement TMP
 
-Si le *nom* de fichier est nommé LNK*nnn*, il s’agit d’un nom de fichier généré par l’éditeur de liens pour un fichier temporaire. Le répertoire spécifié dans la variable d’environnement TMP n’existe peut-être pas. Ou bien, plusieurs répertoires peuvent être spécifiés pour la variable d’environnement TMP. Un seul chemin d’accès au répertoire doit être spécifié pour la variable d’environnement TMP.
+Si le *nom* de fichier est nommé LNK *nnn* , il s’agit d’un nom de fichier généré par l’éditeur de liens pour un fichier temporaire. Le répertoire spécifié dans la variable d’environnement TMP n’existe peut-être pas. Ou bien, plusieurs répertoires peuvent être spécifiés pour la variable d’environnement TMP. Un seul chemin d’accès au répertoire doit être spécifié pour la variable d’environnement TMP.
 
 ## <a name="help-my-issue-isnt-listed-here"></a>Aide, mon problème n’est pas répertorié ici.
 
-Si aucun des problèmes répertoriés ici ne s’applique, vous pouvez utiliser les outils de commentaires de Visual Studio pour obtenir de l’aide. Dans l’IDE, accédez à la barre de menus et choisissez **aide > envoyer des commentaires > signaler un problème**. Ou soumettez une suggestion en utilisant l' **aide > envoyer des commentaires > envoyer une suggestion**. Vous pouvez également utiliser le site Web de la [communauté de développeurs](https://developercommunity.visualstudio.com/spaces/62/index.html)Visual Studio C++). Utilisez-le pour rechercher des réponses aux questions et demander de l’aide. Pour plus d’informations, consultez [Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++ ou la documentation](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Si aucun des problèmes répertoriés ici ne s’applique, vous pouvez utiliser les outils de commentaires de Visual Studio pour obtenir de l’aide. Dans l’IDE, accédez à la barre de menus et choisissez **aide > envoyer des commentaires > signaler un problème**. Ou soumettez une suggestion en utilisant l' **aide > envoyer des commentaires > envoyer une suggestion**. Vous pouvez également utiliser le [Microsoft docs Q&un](/answers/topics/c%2B%2B.html) site pour les questions et le site Web de la [communauté de développeurs](https://aka.ms/vsfeedback/browsecpp) Visual Studio C++. Utilisez ces sites pour rechercher des réponses aux questions et demander de l’aide. Pour plus d’informations, consultez [Guide pratique pour signaler un problème avec l’ensemble d’outils Visual C++ ou la documentation](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 Si vous avez découvert un nouveau moyen de résoudre ce problème, nous devons l’ajouter à cet article, faites-le nous savoir. Vous pouvez nous envoyer vos commentaires en utilisant le bouton ci-dessous pour **cette page**. Utilisez-le pour créer un nouveau problème dans notre [documentation C++ GitHub référentiel](https://github.com/MicrosoftDocs/cpp-docs/issues). Merci !
