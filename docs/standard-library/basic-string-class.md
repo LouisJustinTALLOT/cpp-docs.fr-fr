@@ -121,12 +121,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: fa2e6813d6cfb55ea1924bc976ef03396b88ca92
-ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
+ms.openlocfilehash: 87eda4064ff63a22add49b2872a26c76ac15bc6a
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907569"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381647"
 ---
 # <a name="basic_string-class"></a>La classe `basic_string`
 
@@ -231,13 +231,13 @@ Type qui représente l'objet allocateur stocké qui contient des informations su
 |[`operator=`](#op_eq)|Assigne de nouvelles valeurs de caractère au contenu d'une chaîne.|
 |[`operator`&#91;&#93;](#op_at)|Fournit une référence au caractère situé à l'index spécifié dans une chaîne.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Si une fonction est invitée à générer une séquence plus longue que des [`max_size`](#max_size) éléments, la fonction signale une erreur de longueur en levant un objet de type [`length_error`](../standard-library/length-error-class.md) .
 
 Les références, les pointeurs et les itérateurs qui désignent des éléments de la séquence contrôlée peuvent devenir non valides après tout appel à une fonction qui modifie la séquence contrôlée, ou après le premier appel à une `const` fonction non membre.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :**\<string>
 
@@ -251,7 +251,7 @@ Type qui représente la classe allocator d’un objet string.
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type est un synonyme du paramètre de modèle `Allocator`.
 
@@ -335,11 +335,11 @@ Itérateur d’entrée qui cible le premier élément de la plage à ajouter.
 *`last`*\
 Itérateur d’entrée, `const_pointer` ou `const_iterator` qui traite la position de l’élément au-delà du dernier élément de la plage à ajouter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’objet string ajouté avec les caractères transmis par la fonction membre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les caractères peuvent être ajoutés à une chaîne à l’aide de [`operator+=`](#op_add_eq) ou des fonctions membres `append` ou [`push_back`](#push_back) . `operator+=` Ajoute des valeurs à argument unique tandis que la fonction membre à plusieurs arguments `append` permet de spécifier une partie spécifique d’une chaîne pour l’ajout de.
 
@@ -496,11 +496,11 @@ Itérateur d’entrée, const_pointer ou const_iterator, qui cible la position j
 *`off`*\
 Position à laquelle les nouveaux caractères commencent à être assignés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’objet string auquel la fonction membre assigne les nouveaux caractères.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les chaînes peuvent recevoir de nouvelles valeurs de caractère. La nouvelle valeur peut être une chaîne et une chaîne C, ou un caractère unique. [`operator=`](#op_eq)Peut être utilisé si la nouvelle valeur peut être décrite par un seul paramètre ; sinon la fonction membre `assign` , qui a plusieurs paramètres, peut être utilisée pour spécifier la partie de la chaîne qui doit être assignée à une chaîne cible.
 
@@ -611,11 +611,11 @@ reference at(size_type offset);
 *`offset`*\
 Index de la position de l’élément à référencer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au caractère de la chaîne à la position spécifiée par l’index de paramètre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le premier élément de la chaîne a un index égal à zéro et les éléments suivants sont indexés consécutivement par les entiers positifs, de sorte qu’une chaîne de longueur *n* a un *n* ième élément indexé par le nombre *n-* 1.
 
@@ -674,11 +674,11 @@ const_reference back() const;
 reference back();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au dernier élément de la chaîne, qui doit être non vide.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 ## <a name="basic_stringbasic_string"></a><a name="basic_string"></a> `basic_string::basic_string`
 
@@ -778,11 +778,11 @@ Itérateur d'entrée, const_pointer ou const_iterator qui traite le premier él�
 *`last`*\
 Itérateur d'entrée, const_pointer ou const_iterator qui traite la position de l'objet au-delà du dernier élément dans la plage source à insérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l'objet String qui est construit par les constructeurs.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Tous les constructeurs stockent un [`basic_string::allocator_type`](#allocator_type) et initialisent la séquence contrôlée. L'objet allocateur est l'argument `al`, s'il est présent. Pour le constructeur de copie, il s’agit de `right.` [`basic_string::get_allocator`](#get_allocator) `()` . Sinon, l’allocateur est `Alloc()` .
 
@@ -847,7 +847,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur d’accès aléatoire qui cible le premier élément de la séquence ou la position juste après la fin d’une séquence vide.
 
@@ -895,11 +895,11 @@ Convertit le contenu d’une chaîne en chaîne de style C se terminant par un c
 const value_type *c_str() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la version de style C de la chaîne d’appel.  La valeur du pointeur n’est pas valide après l’appel d’une fonction non- `const` , y compris le destructeur, dans la classe basic_string de l’objet.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les objets de type chaîne appartenant au modèle de classe `basic_string<char>` ne sont pas nécessairement terminés par une valeur null. Le caractère null « \0 » est utilisé comme caractère spécial dans une chaîne C pour marquer la fin de la chaîne, mais il n’a aucune signification particulière dans un objet de type chaîne et peut faire partie de la chaîne comme tout autre caractère. Il existe une conversion automatique de `const char *` en chaînes, mais la classe String ne fournit pas de conversion automatique des chaînes de style C en objets de type `basic_string<char>` .
 
@@ -959,11 +959,11 @@ Retourne le plus grand nombre d'éléments qui peuvent être stockés dans une c
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille du stockage actuellement alloué dans la mémoire pour contenir la chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre retourne le stockage actuellement alloué pour contenir la séquence contrôlée, une valeur au moins aussi grande que [`size`](#size) .
 
@@ -1029,11 +1029,11 @@ Retourne un itérateur `const` qui traite le premier élément d'une plage.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur d'accès aléatoire `const` qui pointe vers le premier élément de la plage, ou vers l'emplacement situé juste après la fin d'une plage vide (pour une plage vide : `cbegin() == cend()`).
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Avec la valeur de retour `cbegin` , les éléments de la plage ne peuvent pas être modifiés.
 
@@ -1055,11 +1055,11 @@ Retourne un itérateur `const` qui traite l'emplacement situé immédiatement ap
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur d'accès aléatoire `const` qui pointe juste après la fin de la plage.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
@@ -1083,7 +1083,7 @@ Efface tous les éléments d'une chaîne.
 void clear();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La chaîne sur laquelle la fonction membre est appelée est vide.
 
@@ -1184,11 +1184,11 @@ Nombre maximal de caractères de la chaîne de paramètre à comparer.
 *`ptr`*\
 Chaîne C à comparer à la chaîne d’opérande.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur négative si la chaîne d’opérande est inférieure à la chaîne de paramètre ; zéro si les deux chaînes sont égales ; ou valeur positive si la chaîne d’opérande est supérieure à la chaîne de paramètre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les `compare` fonctions membres comparent la totalité ou une partie du paramètre et des chaînes d’opérande en fonction de ce qui est utilisé.
 
@@ -1395,7 +1395,7 @@ Type qui fournit un itérateur à accès aléatoire pouvant accéder à un élé
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `const_iterator` ne peut pas être utilisé pour modifier la valeur d’un caractère et est utilisé pour itérer au sein d’une chaîne vers l’avant.
 
@@ -1411,7 +1411,7 @@ Type qui fournit un pointeur vers un élément `const` d'une chaîne.
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type est un synonyme de `allocator_type::const_pointer`.
 
@@ -1451,7 +1451,7 @@ Type qui fournit une référence à un élément `const` stocké dans une chaîn
 typedef typename allocator_type::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `const_reference` ne peut pas être utilisé pour modifier la valeur d’un élément.
 
@@ -1469,7 +1469,7 @@ Type qui fournit un itérateur à accès aléatoire pouvant lire un élément `c
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `const_reverse_iterator` ne peut pas modifier la valeur d’un caractère et est utilisé pour itérer au sein d’une chaîne en sens inverse.
 
@@ -1500,11 +1500,11 @@ Tableau de caractères cible dans lequel les éléments doivent être copiés.
 *`offset`*\
 Position de début dans la chaîne source à partir de laquelle les copies doivent être effectuées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de caractères copiés.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un caractère NULL n’est pas ajouté à la fin de la copie.
 
@@ -1565,7 +1565,7 @@ Retourne un itérateur const qui traite le premier élément d'une chaîne inver
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur inverse qui pointe juste après la fin de la chaîne. La position désigne le début de la chaîne inverse.
 
@@ -1577,11 +1577,11 @@ Retourne un `const` itérateur qui traite l’emplacement suivant le dernier él
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `const`Itérateur inversé qui traite l’emplacement qui suit le dernier élément d’une chaîne inversée (emplacement qui précédait le premier élément de la chaîne non inversée).
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 ## <a name="basic_string_copy_s"></a><a name="copy_s"></a> `basic_string::_Copy_s`
 
@@ -1601,18 +1601,18 @@ size_type _Copy_s(
 Tableau de caractères cible dans lequel les éléments doivent être copiés.
 
 *`dest_size`*\
-La taille de *dest* .
+La taille de *dest*.
 
 *`count`* Nombre de caractères à copier, au maximum, à partir de la chaîne source.
 
 *`offset`*\
 Position de début dans la chaîne source à partir de laquelle les copies doivent être effectuées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de caractères réellement copiés.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un caractère NULL n’est pas ajouté à la fin de la copie.
 
@@ -1672,11 +1672,11 @@ const value_type *data() const noexcept;
 value_type *data() noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le premier élément du tableau terminé par le caractère null qui contient le contenu de la chaîne. Pour une chaîne vide, le pointeur pointe vers un caractère null unique égal à `value_type()` .
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Pointeur retourné par `data` points dans une plage valide `[data(), data() + size()]` . Chaque élément de la plage correspond aux données actuelles de la chaîne. Autrement dit, pour chaque décalage valide *`n`* dans la plage, `data() + n == addressof(operator[](n))` .
 
@@ -1740,7 +1740,7 @@ Type qui fournit la différence entre deux itérateurs qui font référence aux 
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type d'entier signé décrit un objet qui peut représenter la différence entre les adresses de deux éléments quelconques dans la séquence contrôlée.
 
@@ -1788,11 +1788,11 @@ Vérifie si la chaîne contient ou non des caractères.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `true` Si l’objet String ne contient pas de caractères ; `false` si elle comporte au moins un caractère.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre est équivalente à [size](#size) == 0.
 
@@ -1838,11 +1838,11 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un itérateur d’accès aléatoire qui cible l’emplacement situé après le dernier élément d’une chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `end` est souvent utilisé pour tester si un itérateur a atteint la fin de sa chaîne. La valeur retournée par `end` ne doit pas être déréférencée.
 
@@ -1923,11 +1923,11 @@ Vous pouvez passer un `std::basic_string` , qui convertit en vue de chaîne.
 *`x`*\
 Chaîne de caractères se terminant par un caractère null qui contient le suffixe à rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `true` Si la chaîne se termine par le suffixe spécifié ; `false` sinon,.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `ends_with()` est nouveau dans C++ 20. Pour l’utiliser, spécifiez l' [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) option du compilateur.
 
@@ -1995,11 +1995,11 @@ Index du premier caractère de la chaîne à supprimer.
 *`count`*\
 Nombre d’éléments qui seront supprimés s’il y en a autant dans la plage de la chaîne commençant par *`offset`* .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour les deux premières fonctions membres, un itérateur qui cible le premier caractère après le dernier caractère supprimé par la fonction membre. Pour la troisième fonction membre, une référence à l’objet de chaîne à partir duquel les éléments ont été effacés.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La troisième fonction membre retourne `*this` .
 
@@ -2104,7 +2104,7 @@ Nombre de caractères, en comptant à partir du premier caractère, dans le C-st
 *`str`*\
 Chaîne que la fonction membre doit rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du premier caractère de la sous-chaîne recherchée en cas de succès ; dans le cas contraire, `npos`.
 
@@ -2179,7 +2179,7 @@ int main( )
       cout << "The index of the 1st element of sample "
            << "in str3 is: " << indexCh3a << endl;
    else
-      cout << "The substring 'perfect' was not found in str3 ."
+      cout << "The substring 'sample' was not found in str3 ."
            << endl;
 
    const char *cstr3b = "for";
@@ -2279,7 +2279,7 @@ Nombre de caractères, en comptant à partir du premier caractère, dans le C-st
 *`str`*\
 Chaîne que la fonction membre doit rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du premier caractère de la sous-chaîne recherchée en cas de succès ; dans le cas contraire, `npos`.
 
@@ -2467,7 +2467,7 @@ Nombre de caractères, en comptant à partir du premier caractère, dans le C-st
 *`str`*\
 Chaîne que la fonction membre doit rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du premier caractère de la sous-chaîne recherchée en cas de succès ; dans le cas contraire, `npos`.
 
@@ -2654,7 +2654,7 @@ Nombre de caractères, en comptant à partir du premier caractère, dans le C-st
 *`str`*\
 Chaîne que la fonction membre doit rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du premier caractère de la sous-chaîne recherchée en cas de succès ; dans le cas contraire, `npos`.
 
@@ -2843,7 +2843,7 @@ Nombre de caractères, en comptant à partir du premier caractère, dans le C-st
 *`str`*\
 Chaîne que la fonction membre doit rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du dernier caractère de la sous-chaîne recherchée en cas de réussite ; sinon, `npos`.
 
@@ -2987,11 +2987,11 @@ const_reference front() const;
 reference front();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au premier élément de la chaîne, qui doit être non vide.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 ## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a> `basic_string::get_allocator`
 
@@ -3001,11 +3001,11 @@ Retourne une copie de l’objet allocateur utilisé pour construire la chaîne.
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Allocateur utilisé par la chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre retourne l’objet d’allocateur stocké.
 
@@ -3122,7 +3122,7 @@ Itérateur d’entrée, `const_pointer` ou `const_iterator` traitant le premier 
 *`last`*\
 Itérateur d’entrée, `const_pointer` ou `const_iterator` qui traite la position de l’élément au-delà du dernier élément de la plage source à insérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’objet string auquel la fonction membre affecte de nouveaux caractères ou, dans le cas d’insertions de caractères individuels, itérateur traitant la position du caractère inséré, ou aucune valeur, selon la fonction membre en question.
 
@@ -3223,7 +3223,7 @@ Type qui fournit un itérateur à accès aléatoire pouvant accéder à un élé
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `iterator` peut être utilisé pour modifier la valeur d’un caractère et est utilisé pour itérer au sein d’une chaîne vers l’avant.
 
@@ -3239,7 +3239,7 @@ Retourne le nombre actuel d'éléments contenus dans une chaîne.
 size_type length() const;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre est la même que [`size`](#size) .
 
@@ -3305,11 +3305,11 @@ Retourne le nombre maximal de caractères qu'une chaîne peut contenir.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre maximal de caractères qu’une chaîne peut contenir.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Une exception de type [Length_error classe](../standard-library/length-error-class.md) est levée lorsqu’une opération produit une chaîne d’une longueur supérieure à la taille maximale.
 
@@ -3375,7 +3375,7 @@ Valeur intégrale non signée initialisée à-1 qui indique « introuvable » 
 static const size_type npos = -1;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Lorsque la valeur de retour doit être vérifiée pour la `npos` valeur, elle peut ne pas fonctionner, sauf si la valeur de retour est de type [`size_type`](#size_type) et non `int` ou `unsigned` .
 
@@ -3409,11 +3409,11 @@ Caractères de la chaîne C à ajouter.
 *`right`*\
 Caractères de la chaîne à ajouter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’objet string ajouté avec les caractères transmis par la fonction membre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les caractères peuvent être ajoutés à une chaîne à l’aide de `operator+=` ou des fonctions membres [`append`](#append) ou [`push_back`](#push_back) . `operator+=` ajoute des valeurs à argument unique tandis que la fonction membre append à plusieurs arguments permet de spécifier une partie spécifique d’une chaîne à ajouter.
 
@@ -3501,11 +3501,11 @@ Pointeur vers les caractères de la chaîne C à assigner à la chaîne cible.
 *`right`*\
 Chaîne source dont les caractères doivent être assignés à la chaîne cible.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’objet string auquel la fonction membre assigne les nouveaux caractères.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les chaînes peuvent recevoir de nouvelles valeurs de caractère. La nouvelle valeur peut être une chaîne et une chaîne C, ou un caractère unique. `operator=`Peut être utilisé si la nouvelle valeur peut être décrite par un seul paramètre ; sinon, la fonction membre [`assign`](#assign) , qui a plusieurs paramètres, peut être utilisée pour spécifier la partie de la chaîne qui doit être assignée à une chaîne cible.
 
@@ -3580,11 +3580,11 @@ reference operator[](size_type offset);
 *`offset`*\
 Index de la position de l’élément à référencer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au caractère de la chaîne à la position spécifiée par l’index de paramètre.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le premier élément de la chaîne a un index égal à zéro et les éléments suivants sont indexés consécutivement par les entiers positifs, de sorte qu’une chaîne de longueur *n* a son *n* -ième élément indexé par le nombre *n* - 1.
 
@@ -3643,7 +3643,7 @@ Type qui fournit un pointeur vers un élément caractère d'une chaîne ou d'un 
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type est un synonyme de `allocator_type::pointer`.
 
@@ -3680,7 +3680,7 @@ Efface le dernier élément de la chaîne.
 void pop_back();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre appelle `erase(size() - 1)` pour effacer le dernier élément de la séquence, qui ne doit pas être vide.
 
@@ -3697,7 +3697,7 @@ void push_back(value_type char_value);
 *`char_value`*\
 Caractère à ajouter à la fin de la chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction membre appelle effectivement [`insert`](#insert) ( [`end`](#end) , *char_value* ).
 
@@ -3749,11 +3749,11 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un itérateur d’accès aléatoire vers le premier élément d’une chaîne inversée, qui cible le dernier élément de la chaîne non inversée correspondante.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `rbegin` est utilisé avec une chaîne inversée comme [`begin`](#begin) est utilisé avec une chaîne.
 
@@ -3823,7 +3823,7 @@ Type qui fournit une référence à un élément stocké dans une chaîne.
 typedef typename allocator_type::reference reference;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `reference` peut être utilisé pour modifier la valeur d’un élément.
 
@@ -3845,11 +3845,11 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un itérateur d’accès aléatoire qui cible l’emplacement suivant le dernier élément d’une chaîne inversée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `rend` est utilisé avec une chaîne inversée comme [`end`](#end) est utilisé avec une chaîne.
 
@@ -4027,7 +4027,7 @@ Itérateur, const_pointer ou const_iterator qui cible le dernier caractère à c
 *`count`*\
 Nombre de fois où *char_value* est copié dans la chaîne d’opérande.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Chaîne d’opérande avec le remplacement effectué.
 
@@ -4223,7 +4223,7 @@ void reserve(size_type count = 0);
 *`count`*\
 Nombre de caractères pour lequel la mémoire est réservée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Il est important d’avoir une capacité suffisante, car les réallocations sont chronophages et invalident toutes les références, pointeurs et itérateurs qui référencent les caractères d’une chaîne.
 
@@ -4321,7 +4321,7 @@ Nouvelle taille de la chaîne.
 *`char_value`*\
 Valeur avec laquelle les caractères ajoutés sont initialisés si des éléments supplémentaires sont nécessaires.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si la taille obtenue dépasse le nombre maximal de caractères, le formulaire lève `length_error`.
 
@@ -4418,7 +4418,7 @@ Type qui fournit une référence à un élément stocké dans une chaîne.
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Un type `reverse_iterator` peut servir à changer la valeur d’un caractère. Il sert à itérer au sein d’une chaîne dans l’ordre inverse.
 
@@ -4466,7 +4466,7 @@ Nombre de caractères, en comptant à partir du premier caractère, dans le C-st
 *`str`*\
 Chaîne que la fonction membre doit rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de la dernière occurrence, dans une recherche inversée, du premier caractère de la sous-chaîne en cas de réussite ; sinon, `npos`.
 
@@ -4609,7 +4609,7 @@ Ignore la capacité excédentaire de la chaîne.
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction membre élimine tout stockage inutile dans le conteneur.
 
@@ -4621,7 +4621,7 @@ Retourne le nombre actuel d'éléments contenus dans une chaîne.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur de la chaîne.
 
@@ -4687,7 +4687,7 @@ Type entier non signé qui peut représenter le nombre d’éléments et d’ind
 typedef typename allocator_type::size_type size_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 elle est équivalente à `allocator_type::size_type` .
 
@@ -4744,11 +4744,11 @@ Vous pouvez passer un `std::basic_string` , qui convertit en vue de chaîne.
 *`x`*\
 Chaîne de caractères se terminant par un caractère null qui contient le préfixe à rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `true` Si la chaîne commence par le préfixe spécifié ; `false` sinon,.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `starts_with()` est nouveau dans C++ 20. Pour l’utiliser, spécifiez l' [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) option du compilateur.
 
@@ -4800,7 +4800,7 @@ Index situant l’élément à la position à partir de laquelle la copie de la 
 *`count`*\
 Nombre de caractères à copier s’ils sont présents.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet de sous-chaîne qui est une copie des éléments de l’opérande de chaîne commençant à la position spécifiée par le premier argument.
 
@@ -4855,7 +4855,7 @@ void swap(
 *`str`*\
 Chaîne source dont les éléments doivent être échangés avec ceux de la chaîne de destination.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si les chaînes échangées ont le même objet allocateur, la fonction membre `swap` :
 
@@ -4908,7 +4908,7 @@ Type pour les caractéristiques de caractère des éléments stockés dans une c
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type est un synonyme du deuxième paramètre de modèle `Traits` .
 
@@ -4926,7 +4926,7 @@ Type qui représente le type des caractères stockés dans une chaîne.
 typedef typename allocator_type::value_type value_type;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Elle est équivalente à `traits_type::char_type` et équivaut à `char` pour les objets de type `string` .
 

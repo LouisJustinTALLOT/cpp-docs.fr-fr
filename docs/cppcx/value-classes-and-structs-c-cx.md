@@ -5,12 +5,12 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d54d139f086ce5bb025aaeab145c71d33903c0
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214943"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381595"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes de valeur et structures de valeur (C++/CX)
 
@@ -64,7 +64,7 @@ Le fragment de code suivant déclare les types `Coordinates` et `City` comme str
 
 ## <a name="parameter-passing-for-value-types"></a>Passage de paramètres pour les types valeur
 
-Si vous avez un type valeur comme paramètre de fonction ou de méthode, il est normalement passé par valeur. Pour les objets plus grands, cela peut provoquer un problème de performances. Dans Visual Studio 2013 et versions antérieures, les types valeur dans C++/CX étaient toujours passés par valeur. Dans Visual Studio 2015 et versions ultérieures, vous pouvez passer des types valeur par référence ou par valeur.
+Si vous avez un type valeur comme paramètre de fonction ou de méthode, il est normalement passé par valeur. Pour les objets plus grands, cela peut provoquer un problème de performances. Dans Visual Studio 2013 et versions antérieures, les types valeur en C++/CX étaient toujours passés par valeur. Dans Visual Studio 2015 et versions ultérieures, vous pouvez passer des types valeur par référence ou par valeur.
 
 Pour déclarer un paramètre qui passe un type valeur par valeur, utilisez du code semblable au suivant :
 

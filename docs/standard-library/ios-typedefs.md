@@ -1,6 +1,7 @@
 ---
-title: '&lt;ios&gt;, typedefs'
-ms.date: 11/04/2016
+title: '`<ios>`, typedefs'
+description: Décrit les typedefs de la bibliothèque STL (Standard Template Library) C++ `<ios>` qui prennent en charge la `ios` classe de l’ancienne `iostream` bibliothèque.
+ms.date: 11/06/2020
 f1_keywords:
 - iosfwd/std::ios
 - iosfwd/std::streamoff
@@ -8,29 +9,28 @@ f1_keywords:
 - iosfwd/std::streamsize
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
-ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 6167856c579acfca2bde600b2dd4d457199cafcc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4af9636ab3317e7b81eb73dc74aef065b1287e21
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212278"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381634"
 ---
-# <a name="ltiosgt-typedefs"></a>&lt;ios&gt;, typedefs
+# <a name="ios-typedefs"></a>`<ios>`, typedefs
 
-## <a name="ios"></a><a name="ios"></a>libéré
+## `ios`
 
-Prend en charge la classe ios de l'ancienne bibliothèque iostream.
+Prend en charge la `ios` classe de l’ancienne `iostream` bibliothèque.
 
 ```cpp
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Le type est un synonyme du modèle de classe [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **`char`** avec des caractéristiques de caractère par défaut.
+Le type est un synonyme du modèle de classe [`basic_ios`](../standard-library/basic-ios-class.md) , spécialisé pour les éléments de type **`char`** avec des caractéristiques de caractère par défaut.
 
-## <a name="streamoff"></a><a name="streamoff"></a>streamoff
+## `streamoff`
 
 Prend en charge les opérations internes.
 
@@ -42,11 +42,11 @@ Prend en charge les opérations internes.
 #endif
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Le type est un entier signé qui décrit un objet capable de stocker un décalage d’octet impliqué dans différentes opérations de positionnement de flux. Sa représentation a au moins 32 bits de valeur. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux. La valeur `streamoff(-1)` indique généralement un décalage erroné.
+Le type est un entier signé. Il décrit un objet qui peut stocker un décalage d’octet dans les opérations de positionnement de flux. Sa représentation a au moins 32 bits de valeur. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux. La valeur `streamoff(-1)` indique généralement un décalage erroné.
 
-## <a name="streampos"></a><a name="streampos"></a>streampos
+## `streampos`
 
 Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de fichier.
 
@@ -54,9 +54,9 @@ Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de f
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Le type est un synonyme de [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Le type est un synonyme de [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Exemple
 
@@ -73,7 +73,7 @@ int main( )
    ofstream x( "iostream.txt" );
    x << "testing";
    streampos y = x.tellp( );
-   cout << y << endl;
+   cout << streamoff(y) << '\n';
 }
 ```
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a><a name="streamsize"></a>données StreamSize
+## `streamsize`
 
 Indique la taille du flux.
 
@@ -93,13 +93,13 @@ Indique la taille du flux.
 #endif
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le type est un entier signé qui décrit un objet capable de stocker le nombre d’éléments impliqués dans différentes opérations de flux. Sa représentation a au moins 16 bits. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux.
 
 ### <a name="example"></a>Exemple
 
-Après avoir compilé et exécuté le programme suivant, examinez le fichier test.txt pour voir l’effet du paramètre `streamsize`.
+Après la compilation et l’exécution du programme suivant, examinez le fichier `test.txt` pour voir l’effet du paramètre `streamsize` .
 
 ```cpp
 // ios_streamsize.cpp
@@ -117,19 +117,19 @@ int main( )
 }
 ```
 
-## <a name="wios"></a><a name="wios"></a>wios
+## `wios`
 
-Prend en charge la classe wios de l'ancienne bibliothèque iostream.
+Prend en charge la `wios` classe de l’ancienne `iostream` bibliothèque.
 
 ```cpp
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Le type est un synonyme du modèle de classe [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **`wchar_t`** avec des caractéristiques de caractère par défaut.
+Le type est un synonyme du modèle de classe [`basic_ios`](../standard-library/basic-ios-class.md) , spécialisé pour les éléments de type **`wchar_t`** avec des caractéristiques de caractère par défaut.
 
-## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
+## `wstreampos`
 
 Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de fichier.
 
@@ -137,9 +137,9 @@ Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de f
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
-Le type est un synonyme de [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Le type est un synonyme de [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Exemple
 

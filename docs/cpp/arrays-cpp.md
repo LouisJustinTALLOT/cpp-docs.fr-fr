@@ -1,17 +1,18 @@
 ---
 title: Tableaux (C++)
-ms.date: 08/03/2020
+description: Découvrez comment déclarer et utiliser le type de tableau natif dans le langage de programmation C++ standard.
+ms.date: 11/08/2020
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 6d002f2baa6657c13ffc603e74828ab60585d3a9
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 2a84e5db04d0a37ebd65e0d979e9b075b7c23312
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352789"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381582"
 ---
 # <a name="arrays-c"></a>Tableaux (C++)
 
@@ -44,7 +45,7 @@ Dans une déclaration de tableau C++, la taille du tableau est spécifiée aprè
     }
 ```
 
-Le premier élément du tableau est l’élément avant toute chose. Le dernier élément est l’élément (*n*-1), où *n* est le nombre d’éléments que le tableau peut contenir. Le nombre d’éléments dans la déclaration doit être de type intégral et doit être supérieur à 0. Il vous incombe de vous assurer que votre programme ne transmet jamais une valeur à l’opérateur d’indice qui est supérieur à `(size - 1)` .
+Le premier élément du tableau est l’élément avant toute chose. Le dernier élément est l’élément ( *n* -1), où *n* est le nombre d’éléments que le tableau peut contenir. Le nombre d’éléments dans la déclaration doit être de type intégral et doit être supérieur à 0. Il vous incombe de vous assurer que votre programme ne transmet jamais une valeur à l’opérateur d’indice qui est supérieur à `(size - 1)` .
 
 Un tableau de taille zéro est légal uniquement lorsque le tableau est le dernier champ d’un **`struct`** ou **`union`** et lorsque les extensions Microsoft sont activées ( **`/Za`** ou **`/permissive-`** ne sont pas définies).
 
@@ -136,7 +137,7 @@ Lorsqu’un tableau est passé à une fonction, il est passé en tant que pointe
 L’exemple suivant montre une fonction qui accepte un tableau et une longueur. Le pointeur pointe vers le tableau d’origine, pas une copie. Étant donné que le paramètre n’est pas **`const`** , la fonction peut modifier les éléments du tableau.
 
 ```cpp
-void process(double p*, const size_t len)
+void process(double *p, const size_t len)
 {
     std::cout << "process:\n";
     for (size_t i = 0; i < len; ++i)
@@ -146,10 +147,10 @@ void process(double p*, const size_t len)
 }
 ```
 
-Déclarez le tableau comme const pour le rendre accessible en lecture seule dans le bloc de fonction :
+Déclarez et définissez le paramètre de tableau `p` comme **`const`** pour le rendre accessible en lecture seule dans le bloc de fonction :
 
 ```cpp
-void process(const double p*, const size_t len);
+void process(const double *p, const size_t len);
 ```
 
 La même fonction peut également être déclarée de cette manière, sans modification du comportement. Le tableau est toujours passé comme pointeur vers le premier élément :
@@ -195,7 +196,7 @@ L’utilisation de l’opérateur d’indirection (*) sur un type de tableau mul
 
 Les tableaux C++ sont stockés dans l'ordre row-major. L'ordre row-major signifie que le dernier indice varie le plus rapidement.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Vous pouvez également omettre la spécification des limites de la première dimension d’un tableau multidimensionnel dans les déclarations de fonction, comme illustré ici :
 
@@ -254,7 +255,7 @@ La fonction `FindMinToMkt` est écrite de telle sorte que l’ajout de nouvelles
 
 ## <a name="initializing-arrays"></a>Initialisation des tableaux
 
-Les tableaux d’objets qui ont un constructeur de classe sont initialisés par le constructeur. Quand il y a moins d’éléments dans la liste d’initialiseurs que d’éléments dans le tableau, le constructeur par défaut est utilisé pour les éléments restants. Si aucun constructeur par défaut n’est défini pour la classe, la liste d’initialiseurs doit être *terminée*, autrement dit, il doit exister un initialiseur pour chaque élément du tableau.
+Les tableaux d’objets qui ont un constructeur de classe sont initialisés par le constructeur. Quand il y a moins d’éléments dans la liste d’initialiseurs que d’éléments dans le tableau, le constructeur par défaut est utilisé pour les éléments restants. Si aucun constructeur par défaut n’est défini pour la classe, la liste d’initialiseurs doit être *terminée* , autrement dit, il doit exister un initialiseur pour chaque élément du tableau.
 
 Prenons la classe `Point` qui définit deux constructeurs :
 
@@ -344,7 +345,7 @@ Comme les autres opérateurs, l’opérateur d’indice ( `[]` ) peut être red�
 
 `*((array_name) + (subscript))`
 
-Comme pour tous les ajouts impliquant des types pointeur, la mise à l’échelle s’effectue automatiquement pour ajuster la taille du type. La valeur résultante n’est pas *n* octets de l’origine de `array_name` ; il s’agit plutôt du *n*ième élément du tableau. Pour plus d’informations sur cette conversion, consultez [opérateurs additifs](additive-operators-plus-and.md).
+Comme pour tous les ajouts impliquant des types pointeur, la mise à l’échelle s’effectue automatiquement pour ajuster la taille du type. La valeur résultante n’est pas *n* octets de l’origine de `array_name` ; il s’agit plutôt du *n* ième élément du tableau. Pour plus d’informations sur cette conversion, consultez [opérateurs additifs](additive-operators-plus-and.md).
 
 De même, pour des tableaux multidimensionnels, l'adresse est dérivée à l'aide de la méthode suivante :
 

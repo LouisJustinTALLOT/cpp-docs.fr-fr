@@ -14,12 +14,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: bf4bbdcf74808edd8ef54149f8258f47bd94c600
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 784cd413b6b81033c9e49b22d979ece72e5ee101
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238406"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381543"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Directives Pragma et mot clé __pragma
 
@@ -30,7 +30,7 @@ Les directives pragma spécifient des fonctionnalités de compilateur spécifiqu
 > **#`pragma`***jeton-chaîne*\
 > **`__pragma(`***jeton-chaîne* **`)`** deux traits de soulignement de début : **`_Pragma(`** *chaîne littérale* d’extension spécifique à Microsoft **`)`** //C99
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Chaque implémentation de C et C++ prend en charge des fonctionnalités spécifiques de son ordinateur hôte ou de son système d’exploitation. Certains programmes, par exemple, doivent exercer un contrôle précis sur l’emplacement des données en mémoire ou contrôler la façon dont certaines fonctions reçoivent des paramètres. Les directives **#pragma** permettent à chaque compilateur d’offrir des fonctionnalités propres aux ordinateurs et aux systèmes d’exploitation, tout en conservant la compatibilité générale avec les langages C et C++.
 
@@ -148,7 +148,7 @@ return _hr; \
 Le littéral de chaîne doit correspondre à ce que vous placeriez après une *`#pragma`* instruction. Par exemple :
 
 ```c
-#pragma message("--the #pragma way")
+#pragma message("the #pragma way")
 _Pragma ("message( \"the _Pragma way\")") 
 ```
 
