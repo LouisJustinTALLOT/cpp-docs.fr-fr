@@ -9,12 +9,12 @@ f1_keywords:
 - iosfwd/std::streamsize
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
-ms.openlocfilehash: 4af9636ab3317e7b81eb73dc74aef065b1287e21
-ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
+ms.openlocfilehash: b9dbed64c88a00f5ca065e23c4af2f3922634ece
+ms.sourcegitcommit: b38485bb3a9d479e0c5d64ffc3d841fa2c2b366f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381634"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441266"
 ---
 # <a name="ios-typedefs"></a>`<ios>`, typedefs
 
@@ -26,7 +26,7 @@ Prend en charge la `ios` classe de l’ancienne `iostream` bibliothèque.
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme du modèle de classe [`basic_ios`](../standard-library/basic-ios-class.md) , spécialisé pour les éléments de type **`char`** avec des caractéristiques de caractère par défaut.
 
@@ -42,7 +42,7 @@ Prend en charge les opérations internes.
 #endif
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un entier signé. Il décrit un objet qui peut stocker un décalage d’octet dans les opérations de positionnement de flux. Sa représentation a au moins 32 bits de valeur. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux. La valeur `streamoff(-1)` indique généralement un décalage erroné.
 
@@ -54,7 +54,7 @@ Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de f
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme de [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
@@ -73,7 +73,7 @@ int main( )
    ofstream x( "iostream.txt" );
    x << "testing";
    streampos y = x.tellp( );
-   cout << streamoff(y) << '\n';
+   cout << streamoff( y ) << '\n';
 }
 ```
 
@@ -93,7 +93,7 @@ Indique la taille du flux.
 #endif
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un entier signé qui décrit un objet capable de stocker le nombre d’éléments impliqués dans différentes opérations de flux. Sa représentation a au moins 16 bits. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux.
 
@@ -125,7 +125,7 @@ Prend en charge la `wios` classe de l’ancienne `iostream` bibliothèque.
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme du modèle de classe [`basic_ios`](../standard-library/basic-ios-class.md) , spécialisé pour les éléments de type **`wchar_t`** avec des caractéristiques de caractère par défaut.
 
@@ -137,7 +137,7 @@ Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de f
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme de [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
@@ -155,7 +155,7 @@ int main( )
    wofstream xw( "wiostream.txt" );
    xw << L"testing";
    wstreampos y = xw.tellp( );
-   cout << y << endl;
+   cout << streamoff( y ) << '\n';
 }
 ```
 
