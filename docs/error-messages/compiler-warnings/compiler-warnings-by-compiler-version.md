@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1fdc4f79a7ae3cd45b66cb312a9297754acfc964
+ms.sourcegitcommit: 1f85841f403e76d041c34a7c77089dab389960a2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924705"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518815"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avertissements du compilateur par version du compilateur
 
@@ -45,7 +45,7 @@ Ces versions du compilateur ont introduit de nouveaux avertissements :
 |  Visual Studio 2019 version 16.4 | 19.24.28314.0 |
 | Visual Studio 2019 version 16,5 | 19.25.28610.0 |
 | Visual Studio 2019 version 16,6 | 19.26.28805.0 |
-| Visual Studio 2019 version 16,7 | 19.26.29112.0 |
+| Visual Studio 2019 version 16,7 | 19.27.29112.0 |
 
 Vous pouvez spécifier uniquement le nombre principal, les nombres principaux et secondaires, ou les numéros principal, secondaire et de build de l' **`/Wv`** option. Le compilateur signale tous les avertissements qui correspondent aux versions qui commencent par le nombre spécifié. Il supprime tous les avertissements pour les versions supérieures au nombre spécifié. Par exemple, **`/Wv:17`** signale les avertissements introduits dans ou avant toute version de Visual Studio 2012 et supprime les avertissements introduits par n’importe quel compilateur de Visual Studio 2013 (version 18) ou ultérieure. Pour supprimer les avertissements introduits dans Visual Studio 2015 Update 2 et versions ultérieures, vous pouvez utiliser **`/Wv:19.00.23506`** . Utilisez **`/Wv:19.11`** pour signaler les avertissements introduits dans toutes les versions de Visual Studio antérieures à Visual studio 2017 version 15,5, mais supprimez les avertissements introduits dans Visual studio 2017 version 15,5 et ultérieure.
 
