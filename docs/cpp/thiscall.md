@@ -1,5 +1,6 @@
 ---
 title: __thiscall
+description: En savoir plus sur la Convention d’appel de __thiscall spécifique à Microsoft pour les fonctions membres de classe x86 dans Microsoft C++.
 ms.date: 05/22/2020
 f1_keywords:
 - __thiscall
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: b9edc2cd8caa5fd5458f6a53c5fdb1f8a5e69914
-ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
+ms.openlocfilehash: 9b11dcf8dee928b687f942639ed72ead3659614b
+ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854812"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448449"
 ---
 # `__thiscall`
 
@@ -24,9 +25,9 @@ Sur les machines ARM, ARM64 et x64, **`__thiscall`** est accepté et ignoré par
 
 L’une des raisons d’utiliser **`__thiscall`** est dans les classes dont les fonctions membres utilisent **`__clrcall`** par défaut. Dans ce cas, vous pouvez utiliser **`__thiscall`** pour que les fonctions membres individuelles puissent être appelées à partir du code natif.
 
-Lors de la compilation avec [**`/clr:pure`**](../build/reference/clr-common-language-runtime-compilation.md) , toutes les fonctions et les pointeurs fonction sont **`__clrcall`** sauf indication contraire. Les **`/clr:pure`** **`/clr:safe`** Options du compilateur et sont dépréciées dans visual studio 2015 et ne sont pas prises en charge dans visual studio 2017.
+Lors de la compilation avec [`/clr:pure`](../build/reference/clr-common-language-runtime-compilation.md) , toutes les fonctions et les pointeurs fonction sont **`__clrcall`** sauf indication contraire. Les **`/clr:pure`** **`/clr:safe`** Options du compilateur et sont dépréciées dans visual studio 2015 et ne sont pas prises en charge dans visual studio 2017.
 
-`vararg`les fonctions membres utilisent la **`__cdecl`** Convention d’appel. Tous les arguments de fonction font l’objet d’un push sur la pile, avec le **`this`** pointeur placé sur la pile en dernier.
+`vararg` les fonctions membres utilisent la **`__cdecl`** Convention d’appel. Tous les arguments de fonction font l’objet d’un push sur la pile, avec le **`this`** pointeur placé sur la pile en dernier.
 
 Étant donné que cette Convention d’appel s’applique uniquement à C++, elle n’a pas de schéma de décoration de nom C.
 
@@ -34,4 +35,4 @@ Quand vous définissez une fonction membre de classe non statique hors ligne, sp
 
 ## <a name="see-also"></a>Voir aussi
 
-[Passage des arguments et conventions de nommage](../cpp/argument-passing-and-naming-conventions.md)
+[Réussite des arguments et conventions de dénomination](../cpp/argument-passing-and-naming-conventions.md)
