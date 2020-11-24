@@ -1,6 +1,7 @@
 ---
 title: Personnalisation du traitement de ligne de commande C
-ms.date: 11/04/2016
+description: Comment supprimer `main` la gestion des paramètres d’environnement et des arguments de fonction dans le code de démarrage du Runtime.
+ms.date: 11/19/2020
 helpviewer_keywords:
 - _spawn functions
 - command line, processing
@@ -11,22 +12,24 @@ helpviewer_keywords:
 - command line, processing arguments
 - suppressing environment processing
 - _exec function
-ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-ms.openlocfilehash: 1abdb0c104755efc86543ac4773359078e855999
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc306172491cd401caeecb3c87c0711f8b4ef911
+ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290681"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95483293"
 ---
 # <a name="customizing-c-command-line-processing"></a>Personnalisation du traitement de ligne de commande C
 
-Si votre programme ne prend pas d’arguments de ligne de commande, vous pouvez économiser une petite quantité d’espace en supprimant l’utilisation de la routine de bibliothèque qui exécute le traitement de ligne de commande. Cette routine est appelée **_setargv** (ou **_wsetargv** dans l’environnement à caractères larges), comme décrit dans [Développement les arguments génériques](../c-language/expanding-wildcard-arguments.md). Pour supprimer son utilisation, définissez une routine qui n'exécute aucune opération dans le fichier contenant la fonction **principale** et nommez-la **_setargv** (ou **_wsetargv** dans l'environnement à caractères larges). L'appel de **_setargv** ou **_wsetargv** est ensuite satisfait par votre définition de **_setargv** ou **_wsetargv**, et la version de la bibliothèque n'est pas chargée.
+Si votre programme ne prend pas d’arguments de ligne de commande, vous pouvez supprimer la routine de traitement de ligne de commande pour économiser une petite quantité d’espace. Pour supprimer son utilisation, incluez le *`noarg.obj`* fichier (pour `main` et `wmain` ) dans les **`/link`** Options du compilateur ou la **`LINK`** ligne de commande.
 
-De même, si vous n’accédez jamais à la table d’environnement via l’argument `envp`, vous pouvez fournir votre propre routine vide à utiliser à la place de **_setenvp** (ou **_wsetenvp**), la routine de traitement de l’environnement.
+De même, si vous n’accédez jamais à la table d’environnement via l' *`envp`* argument, vous pouvez supprimer la routine de traitement de l’environnement interne. Pour supprimer son utilisation, incluez le *`noenv.obj`* fichier (pour `main` et `wmain` ) dans les **`/link`** Options du compilateur ou la **`LINK`** ligne de commande.
 
-Si votre programme effectue des appels à la famille **_spawn** ou **_exec** des routines de la bibliothèque Runtime C, vous ne devez pas supprimer la routine de traitement de l'environnement, car cette routine est utilisée pour transmettre un environnement du processus de génération dynamique au nouveau processus.
+Pour plus d’informations sur les options de l’éditeur de liens de démarrage du runtime, consultez [options de liaison](../c-runtime-library/link-options.md).
+
+Votre programme peut effectuer des appels à `spawn` la `exec` famille ou des routines dans la bibliothèque Runtime C. Si c’est le cas, vous ne devez pas supprimer la routine de traitement de l’environnement, car elle est utilisée pour passer un environnement du processus parent au processus enfant.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonction main et exécution du programme](../c-language/main-function-and-program-execution.md)
+[`main` fonction et exécution du programme](../c-language/main-function-and-program-execution.md)\
+[Options de liaison](../c-runtime-library/link-options.md).

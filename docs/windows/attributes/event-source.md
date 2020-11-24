@@ -1,6 +1,7 @@
 ---
 title: event_source (attribut COM C++)
-ms.date: 10/02/2018
+description: Découvrez comment utiliser l’attribut com de l’extension Microsoft C++ `event_source` .
+ms.date: 11/20/2020
 f1_keywords:
 - vc-attr.event_source
 helpviewer_keywords:
@@ -10,17 +11,19 @@ helpviewer_keywords:
 - event_source attribute
 - event sources
 - event handling, creating event source
-ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: bea90020c3ec570149e11db95ff6d6f8fd0a5507
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3cdfaaa86f8fc36bf0dc90d7961077546362a662
+ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845300"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95483267"
 ---
-# <a name="event_source"></a>event_source
+# <a name="event_source-attribute"></a>Attribut `event_source`
 
 Crée une source d'événement.
+
+> [!NOTE]
+> Les attributs d’événement en C++ natif sont incompatibles avec le C++ standard. Elles ne se compilent pas lorsque vous spécifiez le [`/permissive-`](../../build/reference/permissive-standards-conformance.md) mode de conformité.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,12 +33,12 @@ Crée une source d'événement.
 
 ### <a name="parameters"></a>Paramètres
 
-*type*<br/>
+*`type`*\
 Une énumération de l’une des valeurs suivantes :
 
 - `native` pour le code C/C++ non managé (par défaut pour les classes non managées).
 
-- `com` pour le code COM. Vous devez utiliser `coclass` quand `type`=`com`. Cette valeur nécessite que vous incluiez les fichiers d’en-tête suivants :
+- `com` pour le code COM. Utilisez `coclass` When *`type`* = `com` . Cette valeur nécessite que vous incluiez les fichiers d’en-tête suivants :
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -43,37 +46,37 @@ Une énumération de l’une des valeurs suivantes :
     #include <atlcom.h>
     ```
 
-*requêtes*<br/>
+*`optimize`*\
 Quand le *type* est `native` , vous pouvez spécifier `optimize=size` , pour indiquer qu’il y a 4 octets de stockage (minimum) pour tous les événements dans une classe ou `optimize=speed` (valeur par défaut) pour indiquer qu’il y a 4 * (nombre d’événements) octets de stockage.
 
-*decorate*<br/>
-Quand le *type* est `native` , vous pouvez spécifier `decorate=false` , pour indiquer que le nom développé dans le fichier fusionné (. MRG) ne doit pas inclure le nom de la classe englobante. [/Fx](../../build/reference/fx-merge-injected-code.md) vous permet de générer des fichiers .mrg. `decorate=false`, qui est la valeur par défaut, génère des noms de types qualifiés complets dans le fichier fusionné.
+*`decorate`*\
+Quand le *type* est `native` , vous pouvez spécifier `decorate=false` , pour indiquer que le nom développé dans le fichier fusionné ( *`.mrg`* ) ne doit pas inclure le nom de la classe englobante. [`/Fx`](../../build/reference/fx-merge-injected-code.md) vous permet de générer des *`.mrg`* fichiers. `decorate=false`, qui est la valeur par défaut, génère des noms de types qualifiés complets dans le fichier fusionné.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut C++ **event_source** indique que la classe ou structure à laquelle il est appliqué est une source d’événements.
+L' **`event_source`** attribut C++ spécifie que la classe ou la structure à laquelle il est appliqué sera une source d’événement.
 
-**event_source** s’utilise conjointement avec l’attribut [event_receiver](event-receiver.md) et le mot clé [__event](../../cpp/event.md) . Utilisez `event_receiver` pour créer des récepteurs d’événements. Utilisez **`__event`** sur les méthodes dans la source d’événements pour spécifier ces méthodes en tant qu’événements.
+**`event_source`** est utilisé conjointement avec l' [`event_receiver`](event-receiver.md) attribut et le [`__event`](../../cpp/event.md) mot clé. Utilisez `event_receiver` pour créer des récepteurs d’événements. Utilisez **`__event`** sur les méthodes dans la source d’événements pour spécifier ces méthodes en tant qu’événements.
 
 > [!NOTE]
 > Une classe ou structure modélisée ne peut pas contenir d'événements.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
-|-|-|
-|**S’applique à**|**`class`**, **`struct`**|
-|**Repeatable Read**|Non|
-|**Attributs requis**|**coclasse** lorsque `type`=`com`|
-|**Attributs non valides**|Aucun|
+|--|--|
+| **S’applique à** | **`class`**, **`struct`** |
+| **Renouvelable** | Non |
+| **Attributs requis** | **`coclass`** à `type`=`com` |
+| **Attributs non valides** | None |
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs du compilateur](compiler-attributes.md)<br/>
-[event_receiver](event-receiver.md)<br/>
-[__event](../../cpp/event.md)<br/>
-[__hook](../../cpp/hook.md)<br/>
-[__unhook](../../cpp/unhook.md)<br/>
+[Attributs du compilateur](compiler-attributes.md)\
+[`event_receiver`](event-receiver.md)\
+[`__event`](../../cpp/event.md)\
+[`__hook`](../../cpp/hook.md)\
+[`__unhook`](../../cpp/unhook.md)\
 [Attributs de classe](class-attributes.md)
