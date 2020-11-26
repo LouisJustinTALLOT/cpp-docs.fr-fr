@@ -8,11 +8,11 @@ helpviewer_keywords:
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
 ms.openlocfilehash: 6ad8d50049d34a711937f3d1f73157ce26f69808
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509690"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188820"
 ---
 # <a name="create-a-com-interface"></a>Créer une interface COM
 
@@ -65,7 +65,7 @@ Dans l’affichage de classes et ses menus contextuels, vous pouvez utiliser les
 - ajouter des méthodes, des propriétés et des événements ;
 - accéder directement au code d’interface d’un élément en double-cliquant sur ce dernier.
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 - [Modifier une interface COM](#edit-a-com-interface)
 

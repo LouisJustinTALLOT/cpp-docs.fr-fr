@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
 ms.openlocfilehash: b1c64505a63b8720ed7aee855f2bbbbdb9134e28
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505983"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188833"
 ---
 # <a name="add-a-class"></a>Ajouter une classe
 
@@ -24,7 +24,7 @@ Quand vous ajoutez une classe, vous devez spécifier un nom différent de celui 
 
 Si la convention de nommage de votre projet exige que vous utilisiez un nom existant, il vous suffit de modifier la casse d’une ou de plusieurs lettres du nom, car C++ respecte la casse. Par exemple, bien que vous ne puissiez pas nommer une classe `CDocument`, vous pouvez la nommer `cdocument`.
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 - [Quel genre de classe voulez-vous ajouter ?](#what-kind-of-class-do-you-want-to-add)
 - [Boîte de dialogue Ajouter une classe](#add-class-dialog-box)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
 ms.openlocfilehash: b1928de1aacb9c66c9f784f4eee41ce2c444b820
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499641"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188937"
 ---
 # <a name="add-an-event-handler"></a>Ajouter un gestionnaire d’événements
 
@@ -40,7 +40,7 @@ Vous pouvez ajouter un événement à la classe implémentant la boîte de dialo
 
 Une autre solution consiste à ajouter les gestionnaires d’événements à partir de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Pour plus d’informations, consultez [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-editing-or-deleting-controls.md).
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 - [Assistant Gestionnaire d’événements](#event-handler-wizard)
 

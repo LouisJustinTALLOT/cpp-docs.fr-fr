@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add class from ActiveX control wizard [C++]
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
 ms.openlocfilehash: d63f73e17e47f2cabb8f1a55c71325ec7068a2c8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500375"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188924"
 ---
 # <a name="add-a-class-from-an-activex-control"></a>Ajouter une classe à partir d’un contrôle ActiveX
 
@@ -42,7 +42,7 @@ Vous pouvez ajouter des classes à partir des contrôles ActiveX inscrits dans v
 
 L’Assistant crée une classe MFC, dérivée de [CWnd](../mfc/reference/cwnd-class.md) ou de [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md), pour chaque interface que vous ajoutez à partir du contrôle ActiveX sélectionné.
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 - [Assistant Ajouter une classe à partir d’un contrôle ActiveX](#add-class-from-activex-control-wizard)
 
@@ -65,7 +65,7 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’un contrôle Ac
 
   Si vous sélectionnez **Fichier** sous **Ajouter une classe à partir de**, cette zone n’est pas modifiable.
 
-- **Emplacement**
+- **Lieu**
 
   Spécifie l’emplacement du contrôle ActiveX. Si vous sélectionnez **Fichier** sous **Ajouter une classe à partir de**, vous pouvez indiquer l’emplacement du fichier contenant la bibliothèque de types. Pour accéder à l’emplacement du fichier, sélectionnez le bouton de sélection (...).
 
