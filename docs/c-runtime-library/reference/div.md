@@ -1,8 +1,11 @@
 ---
 title: div, ldiv, lldiv
-ms.date: 04/05/2018
+description: Les fonctions div, ldiv et lldiv de la bibliothèque Runtime C de Microsoft calculent le quotient et le reste de deux valeurs entières.
+ms.date: 11/21/2020
 api_name:
 - div
+- ldiv
+- lldiv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,21 +24,22 @@ topic_type:
 - apiref
 f1_keywords:
 - div
+- ldiv
+- lldiv
 helpviewer_keywords:
 - div function
 - quotients, computing
 - quotients
 - dividing integers
 - remainder computing
-ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: e0c87ad44986363e871d68bccde757214f5e2c45
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d87b2e3a84e389be8b14970a3aa611bb288cbec8
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509897"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440281"
 ---
-# <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
+# <a name="div-ldiv-lldiv"></a>`div`, `ldiv`, `lldiv`
 
 Calcule le quotient et le reste de deux valeurs entières.
 
@@ -69,27 +73,27 @@ lldiv_t div(
 
 ### <a name="parameters"></a>Paramètres
 
-*univoque*<br/>
+*`numer`*\
 Numérateur.
 
-*denom*<br/>
+*`denom`*\
 Dénominateur.
 
 ## <a name="return-value"></a>Valeur renvoyée
 
-la **balise div** appelée à l’aide d’arguments de type **`int`** retourne une structure de type **div_t**, qui comprend le quotient et le reste. La valeur de retour avec des arguments de type **`long`** est **ldiv_t**et la valeur de retour avec des arguments de type **`long long`** est **lldiv_t**. **div_t**, **ldiv_t**et **lldiv_t** sont définis dans \<stdlib.h> .
+**`div`** appelée en utilisant des arguments de type **`int`** retourne une structure de type `div_t` , qui contient le quotient et le reste. La valeur de retour avec des arguments de type **`long`** est `ldiv_t` , et la valeur de retour avec des arguments de type **`long long`** est `lldiv_t` . Les `div_t` `ldiv_t` types, et `lldiv_t` sont définis dans \<stdlib.h> .
 
 ## <a name="remarks"></a>Remarques
 
-La fonction **div** divise le *chiffre* par *denom* et calcule donc le quotient et le reste. La structure [div_t](../../c-runtime-library/standard-types.md) contient le quotient, le **guillemet**et le reste, **REM**. Le signe du quotient est le même que celui du quotient mathématique. Sa valeur absolue est le plus grand entier qui est inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
+La **`div`** fonction divise *`numer`* par *`denom`* et calcule le quotient et le reste. La [`div_t`](../../c-runtime-library/standard-types.md) structure contient le quotient, `quot` , et le reste, `rem` . Le signe du quotient est le même que le signe du quotient mathématique. Sa valeur absolue est le plus grand entier inférieur à la valeur absolue du quotient mathématique. Si le dénominateur est 0, le programme se termine par un message d’erreur.
 
-Les surcharges de la **balise div** qui acceptent des arguments de type **`long`** ou **`long long`** sont uniquement disponibles pour le code C++. Les types de retour [ldiv_t](../../c-runtime-library/standard-types.md) et [lldiv_t](../../c-runtime-library/standard-types.md) contiennent les membres **quote** et **REM**, qui ont la même signification que les membres de **div_t**.
+Les surcharges de **`div`** qui acceptent des arguments de type **`long`** ou **`long long`** sont uniquement disponibles pour le code C++. Les types de retour [`ldiv_t`](../../c-runtime-library/standard-types.md) et [`lldiv_t`](../../c-runtime-library/standard-types.md) contiennent des membres `quot` et `rem` , qui ont les mêmes significations que les membres de `div_t` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Routine|En-tête requis|
-|-------------|---------------------|
-|**div**, **ldiv**, **lldiv**|\<stdlib.h>|
+| Routine | En-tête requis |
+|--|--|
+| **`div`**, **`ldiv`**, **`lldiv`** | \<stdlib.h> |
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -133,6 +137,5 @@ The quotient is 67, and the remainder is 5
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv, lldiv]()<br/>
-[imaxdiv](imaxdiv.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)\
+[`imaxdiv`](imaxdiv.md)

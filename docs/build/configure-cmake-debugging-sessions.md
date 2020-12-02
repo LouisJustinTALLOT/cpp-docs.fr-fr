@@ -4,12 +4,12 @@ description: Décrit comment utiliser Visual Studio pour configurer les paramèt
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: a790e26e5bf3980ffb81a3ba778577afacff95b4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 74be1f07b838cd77f4ee87f5e9d245410fe716de
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922229"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440297"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurer des sessions de débogage CMake
 
@@ -21,7 +21,7 @@ La prise en charge native de CMake est disponible dans Visual Studio 2017 et ver
 
 ::: moniker range=">=msvc-150"
 
-Toutes les cibles CMake exécutables figurent dans la liste déroulante **Élément de démarrage** dans la barre d’outils **Général** . Sélectionnez-en un pour démarrer une session de débogage et lancer le débogueur.
+Toutes les cibles CMake exécutables figurent dans la liste déroulante **Élément de démarrage** dans la barre d’outils **Général**. Sélectionnez-en un pour démarrer une session de débogage et lancer le débogueur.
 
 ![Liste déroulante d’élément de démarrage CMake](media/cmake-startup-item-dropdown.png "Liste déroulante d’élément de démarrage CMake")
 
@@ -29,11 +29,11 @@ Vous pouvez également démarrer une session de débogage à partir de Explorate
 
 ![Bouton Affichage des cibles de CMake](media/cmake-targets-view.png  "Élément de menu Affichage des cibles CMake")
 
-Ensuite, cliquez avec le bouton droit sur un exécutable et sélectionnez **Déboguer** . Cette commande démarre automatiquement le débogage de la cible sélectionnée en fonction de votre configuration active.
+Ensuite, cliquez avec le bouton droit sur un exécutable et sélectionnez **Déboguer**. Cette commande démarre automatiquement le débogage de la cible sélectionnée en fonction de votre configuration active.
 
 ## <a name="customize-debugger-settings"></a>Personnaliser les paramètres du débogueur
 
-Vous pouvez personnaliser les paramètres du débogueur pour toute cible CMake exécutable dans votre projet. Ils se trouvent dans un fichier de configuration appelé *launch.vs.js* , situé dans un *`.vs`* dossier à la racine de votre projet. Un fichier de configuration de lancement est utile dans la plupart des scénarios de débogage, car vous pouvez configurer et enregistrer les détails de l’installation du débogage. Il existe trois points d’entrée pour ce fichier :
+Vous pouvez personnaliser les paramètres du débogueur pour toute cible CMake exécutable dans votre projet. Ils se trouvent dans un fichier de configuration appelé *launch.vs.js*, situé dans un *`.vs`* dossier à la racine de votre projet. Un fichier de configuration de lancement est utile dans la plupart des scénarios de débogage, car vous pouvez configurer et enregistrer les détails de l’installation du débogage. Il existe trois points d’entrée pour ce fichier :
 
 - **Menu Déboguer :** Sélectionnez **Déboguer > paramètres de débogage et de lancement pour $ {activeDebugTarget}** dans le menu principal pour personnaliser la configuration de débogage spécifique à votre cible de débogage active. Si aucune cible de débogage n’est sélectionnée, cette option est grisée.
 
@@ -51,12 +51,11 @@ Vous pouvez modifier la *launch.vs.jssur* le fichier pour créer des configurati
 
 ## <a name="reference-keys-in-cmakesettingsjson"></a>Clés de référence dans CMakeSettings.jssur
 
-Pour faire référence à une clé d’un *CMakeSettings.js* dans un fichier, ajoutez-le au début `cmake.` *launch.vs.js* . L’exemple suivant montre un *launch.vs.jssimple sur* un fichier qui extrait la valeur de la `remoteCopySources` clé dans le fichier *CMakeSettings.js* de la configuration actuellement sélectionnée :
+Pour faire référence à une clé d’un *CMakeSettings.js* dans un fichier, ajoutez-le au début `cmake.` *launch.vs.js*. L’exemple suivant montre un *launch.vs.jssimple sur* un fichier qui extrait la valeur de la `remoteCopySources` clé dans le fichier *CMakeSettings.js* de la configuration actuellement sélectionnée :
 
 ```json
 {
   "version": "0.2.1",
-  "defaults": {},
   "configurations": [
     {
       "type": "default",
@@ -69,13 +68,13 @@ Pour faire référence à une clé d’un *CMakeSettings.js* dans un fichier, aj
 }
 ```
 
-Les **variables d’environnement** définies dans *CMakeSettings.jssur* peuvent également être utilisées dans launch.vs.jsà l’aide de la syntaxe `${env.VARIABLE_NAME}` . Dans Visual Studio 2019 version 16,4 et versions ultérieures, les cibles de débogage sont automatiquement lancées à l’aide de l’environnement que vous spécifiez dans *CMakeSettings.js* . Vous pouvez annuler la définition d’une variable d’environnement en lui affectant la **valeur null** .
+Les **variables d’environnement** définies dans *CMakeSettings.jssur* peuvent également être utilisées dans launch.vs.jsà l’aide de la syntaxe `${env.VARIABLE_NAME}` . Dans Visual Studio 2019 version 16,4 et versions ultérieures, les cibles de débogage sont automatiquement lancées à l’aide de l’environnement que vous spécifiez dans *CMakeSettings.js*. Vous pouvez annuler la définition d’une variable d’environnement en lui affectant la **valeur null**.
 
 ## <a name="launchvsjson-reference"></a>Launch.vs.jsà la référence
 
 Il existe *de nombreuxlaunch.vs.jssur* les propriétés pour prendre en charge tous vos scénarios de débogage. Les propriétés suivantes sont communes à toutes les configurations de débogage, à la fois distantes et locales :
 
-- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *launch.vs.js* à partir du **menu Déboguer** ou de la **vue cibles** . Cette valeur doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
+- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *launch.vs.js* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
 
 - `env`: Variables d’environnement supplémentaires à ajouter à l’aide de la syntaxe suivante :
 
@@ -96,7 +95,7 @@ Dans Visual Studio 2019 version 16,6, nous avons ajouté une nouvelle configurat
 
 - `name`: Nom convivial permettant d’identifier la configuration dans la liste déroulante **élément de démarrage** .
 - `project`: Spécifie le chemin d’accès relatif au fichier projet. Normalement, vous n’avez pas besoin de modifier ce chemin d’accès lors du débogage d’un projet CMake.
-- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *launch.vs.js* à partir du **menu Déboguer** ou de la **vue cibles** . Cette valeur cible doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
+- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *launch.vs.js* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur cible doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
 - `debuggerConfiguration`: Indique le jeu de valeurs par défaut de débogage à utiliser. Dans Visual Studio 2019 version 16,6, la seule option valide est `gdb` . Visual Studio 2019 version 16,7 ou ultérieure prend également en charge `gdbserver` .
 - `args`: Arguments de ligne de commande passés au démarrage au programme en cours de débogage.
 - `env`: Autres variables d’environnement passées au programme en cours de débogage. Par exemple : `{"DISPLAY": "0.0"}`.
@@ -131,7 +130,7 @@ Utilisez les options suivantes pour séparer votre ordinateur de build (défini 
   - `targetMachine`: Ordinateur sur lequel le fichier ou le répertoire est copié. Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes stockées dans le gestionnaire de connexions.
   - `sourcePath`: Emplacement du fichier ou du répertoire sur `sourceMachine` .
   - `targetPath`: Emplacement du fichier ou du répertoire sur `targetMachine` .
-  - `deploymentType`: Description du type de déploiement. `LocalRemote` et `RemoteRemote` sont pris en charge. `LocalRemote` signifie la copie à partir du système de fichiers local vers le système distant spécifié par `remoteMachineName` dans *launch.vs.jssur* . `RemoteRemote` signifie que la copie à partir du système de génération distant spécifié dans *CMakeSettings.jssur* le autre système distant spécifié dans *launch.vs.jssur* .
+  - `deploymentType`: Description du type de déploiement. `LocalRemote` et `RemoteRemote` sont pris en charge. `LocalRemote` signifie la copie à partir du système de fichiers local vers le système distant spécifié par `remoteMachineName` dans *launch.vs.jssur*. `RemoteRemote` signifie que la copie à partir du système de génération distant spécifié dans *CMakeSettings.jssur* le autre système distant spécifié dans *launch.vs.jssur*.
   - `executable`: Indique si le fichier déployé est un exécutable.
 
 ### <a name="execute-custom-gdb-commands"></a>Exécuter des `gdb` commandes personnalisées
@@ -150,7 +149,7 @@ Les options suivantes peuvent être utilisées lors du débogage sur un système
 
 - `project`: Spécifie le chemin d’accès relatif au fichier projet. Normalement, vous n’avez pas besoin de modifier cette valeur lors du débogage d’un projet CMake.
 
-- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *launch.vs.js* à partir du **menu Déboguer** ou de la **vue cibles** . Cette valeur doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
+- `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *launch.vs.js* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
 
 - `args`: Arguments de ligne de commande passés au démarrage au programme en cours de débogage.
 
