@@ -1,93 +1,57 @@
 ---
 title: '**`CStringT`** Type'
 description: Informations de référence sur l’API pour la classe Microsoft ATL **`CStringT`**
-ms.date: 11/13/2020
+ms.date: 12/06/2020
 f1_keywords:
 - CStringT
-- ATLSTR/ATL::CStringT
-- ATLSTR/ATL::CStringT::CStringT
-- ATLSTR/ATL::CStringT::AllocSysString
-- ATLSTR/ATL::CStringT::AnsiToOem
-- ATLSTR/ATL::CStringT::AppendFormat
-- ATLSTR/ATL::CStringT::Collate
-- ATLSTR/ATL::CStringT::CollateNoCase
-- ATLSTR/ATL::CStringT::Compare
-- ATLSTR/ATL::CStringT::CompareNoCase
-- ATLSTR/ATL::CStringT::Delete
-- ATLSTR/ATL::CStringT::Find
-- ATLSTR/ATL::CStringT::FindOneOf
-- ATLSTR/ATL::CStringT::Format
-- ATLSTR/ATL::CStringT::FormatMessage
-- ATLSTR/ATL::CStringT::FormatMessageV
-- ATLSTR/ATL::CStringT::FormatV
-- ATLSTR/ATL::CStringT::GetEnvironmentVariable
-- ATLSTR/ATL::CStringT::Insert
-- ATLSTR/ATL::CStringT::Left
-- ATLSTR/ATL::CStringT::LoadString
-- ATLSTR/ATL::CStringT::MakeLower
-- ATLSTR/ATL::CStringT::MakeReverse
-- ATLSTR/ATL::CStringT::MakeUpper
-- ATLSTR/ATL::CStringT::Mid
-- ATLSTR/ATL::CStringT::OemToAnsi
-- ATLSTR/ATL::CStringT::Remove
-- ATLSTR/ATL::CStringT::Replace
-- ATLSTR/ATL::CStringT::ReverseFind
-- ATLSTR/ATL::CStringT::Right
-- ATLSTR/ATL::CStringT::SetSysString
-- ATLSTR/ATL::CStringT::SpanExcluding
-- ATLSTR/ATL::CStringT::SpanIncluding
-- ATLSTR/ATL::CStringT::Tokenize
-- ATLSTR/ATL::CStringT::Trim
-- ATLSTR/ATL::CStringT::TrimLeft
-- ATLSTR/ATL::CStringT::TrimRight
-- CSTRINGT/CStringT
-- CSTRINGT/CStringT::CStringT
-- CSTRINGT/CStringT::AllocSysString
-- CSTRINGT/CStringT::AnsiToOem
-- CSTRINGT/CStringT::AppendFormat
-- CSTRINGT/CStringT::Collate
-- CSTRINGT/CStringT::CollateNoCase
-- CSTRINGT/CStringT::Compare
-- CSTRINGT/CStringT::CompareNoCase
-- CSTRINGT/CStringT::Delete
-- CSTRINGT/CStringT::Find
-- CSTRINGT/CStringT::FindOneOf
-- CSTRINGT/CStringT::Format
-- CSTRINGT/CStringT::FormatMessage
-- CSTRINGT/CStringT::FormatMessageV
-- CSTRINGT/CStringT::FormatV
-- CSTRINGT/CStringT::GetEnvironmentVariable
-- CSTRINGT/CStringT::Insert
-- CSTRINGT/CStringT::Left
-- CSTRINGT/CStringT::LoadString
-- CSTRINGT/CStringT::MakeLower
-- CSTRINGT/CStringT::MakeReverse
-- CSTRINGT/CStringT::MakeUpper
-- CSTRINGT/CStringT::Mid
-- CSTRINGT/CStringT::OemToAnsi
-- CSTRINGT/CStringT::Remove
-- CSTRINGT/CStringT::Replace
-- CSTRINGT/CStringT::ReverseFind
-- CSTRINGT/CStringT::Right
-- CSTRINGT/CStringT::SetSysString
-- CSTRINGT/CStringT::SpanExcluding
-- CSTRINGT/CStringT::SpanIncluding
-- CSTRINGT/CStringT::Tokenize
-- CSTRINGT/CStringT::Trim
-- CSTRINGT/CStringT::TrimLeft
-- CSTRINGT/CStringT::TrimRight
+- CSTRINGT/ATL::CStringT
+- CSTRINGT/ATL::CStringT::CStringT
+- CSTRINGT/ATL::CStringT::AllocSysString
+- CSTRINGT/ATL::CStringT::AnsiToOem
+- CSTRINGT/ATL::CStringT::AppendFormat
+- CSTRINGT/ATL::CStringT::Collate
+- CSTRINGT/ATL::CStringT::CollateNoCase
+- CSTRINGT/ATL::CStringT::Compare
+- CSTRINGT/ATL::CStringT::CompareNoCase
+- CSTRINGT/ATL::CStringT::Delete
+- CSTRINGT/ATL::CStringT::Find
+- CSTRINGT/ATL::CStringT::FindOneOf
+- CSTRINGT/ATL::CStringT::Format
+- CSTRINGT/ATL::CStringT::FormatMessage
+- CSTRINGT/ATL::CStringT::FormatMessageV
+- CSTRINGT/ATL::CStringT::FormatV
+- CSTRINGT/ATL::CStringT::GetEnvironmentVariable
+- CSTRINGT/ATL::CStringT::Insert
+- CSTRINGT/ATL::CStringT::Left
+- CSTRINGT/ATL::CStringT::LoadString
+- CSTRINGT/ATL::CStringT::MakeLower
+- CSTRINGT/ATL::CStringT::MakeReverse
+- CSTRINGT/ATL::CStringT::MakeUpper
+- CSTRINGT/ATL::CStringT::Mid
+- CSTRINGT/ATL::CStringT::OemToAnsi
+- CSTRINGT/ATL::CStringT::Remove
+- CSTRINGT/ATL::CStringT::Replace
+- CSTRINGT/ATL::CStringT::ReverseFind
+- CSTRINGT/ATL::CStringT::Right
+- CSTRINGT/ATL::CStringT::SetSysString
+- CSTRINGT/ATL::CStringT::SpanExcluding
+- CSTRINGT/ATL::CStringT::SpanIncluding
+- CSTRINGT/ATL::CStringT::Tokenize
+- CSTRINGT/ATL::CStringT::Trim
+- CSTRINGT/ATL::CStringT::TrimLeft
+- CSTRINGT/ATL::CStringT::TrimRight
 helpviewer_keywords:
 - strings [C++], in ATL
 - shared classes, CStringT
 - CStringT class
-ms.openlocfilehash: 80ea59b5f50fc9f430aa588a37e73d4526e3fd94
-ms.sourcegitcommit: 07408df5f4b2cbf070d9bb4bb40d821bfd5d8a62
+ms.openlocfilehash: f9ec5c02aa1ed9377a38d30d9a4152af5e164d58
+ms.sourcegitcommit: 7b131db4ed39bddb4a456ebea402f47c5cbd69d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703509"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96776542"
 ---
-# <a name="cstringt-class"></a>CStringT (classe)
+# <a name="cstringt-class"></a>La classe `CStringT`
 
 Cette classe représente un **`CStringT`** objet.
 
@@ -192,7 +156,7 @@ Détermine si la classe de chaîne requiert la prise en charge de la bibliothèq
 |[`CStringT::operator <=`](#operator_lt_eq)|Détermine si la chaîne située à gauche de l’opérateur est inférieure ou égale à la chaîne située à droite.|
 |[`CStringT::operator >=`](#operator_gt_eq)|Détermine si la chaîne située à gauche de l’opérateur est supérieure ou égale à la chaîne située à droite.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 **`CStringT`** hérite de la [classe CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md). Les fonctionnalités avancées, telles que la manipulation de caractères, le classement et la recherche, sont implémentées par **`CStringT`** .
 
@@ -288,7 +252,7 @@ BSTR AllocSysString() const;
 
 Chaîne qui vient d’être allouée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Dans les programmes MFC, une [classe CMemoryException](../../mfc/reference/cmemoryexception-class.md) est levée si la mémoire disponible est insuffisante. Dans les programmes ATL, une [CAtlException](../../atl/reference/catlexception-class.md) est levée. Cette fonction est généralement utilisée pour retourner des chaînes pour l’automatisation.
 
@@ -310,7 +274,7 @@ Convertit tous les caractères de cet **`CStringT`** objet du jeu de caractères
 void AnsiToOem();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction n’est pas disponible si `_UNICODE` est défini.
 
@@ -338,7 +302,7 @@ Identificateur de ressource de chaîne qui contient la chaîne de contrôle de f
 *`argument`*\
 Arguments facultatifs.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction met en forme et ajoute une série de caractères et de valeurs dans le **`CStringT`** . Chaque argument facultatif (le cas échéant) est converti et ajouté conformément à la spécification de format correspondante dans *`pszFormat`* ou à partir de la ressource de chaîne identifiée par *`nFormatID`* .
 
@@ -363,7 +327,7 @@ Autre chaîne utilisée pour la comparaison.
 
 Zéro si les chaînes sont identiques, < 0 si cet **`CStringT`** objet est inférieur à *`psz`* , ou > 0 si cet **`CStringT`** objet est supérieur à *`psz`* .
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction de texte générique `_tcscoll` , qui est définie dans Tchar. H, est mappé à `strcoll` , `wcscoll` ou `_mbscoll` , selon le jeu de caractères défini au moment de la compilation. Chaque fonction effectue une comparaison sensible à la casse des chaînes en fonction de la page de codes en cours d’utilisation. Pour plus d’informations, consultez [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
 
@@ -384,7 +348,7 @@ Autre chaîne utilisée pour la comparaison.
 
 Zéro si les chaînes sont identiques (casse ignorée), < 0 si cet **`CStringT`** objet est inférieur à *`psz`* (casse ignorée), ou > 0 si cet **`CStringT`** objet est supérieur à *`psz`* (casse ignorée).
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction de texte générique `_tcscoll` , qui est définie dans Tchar. H, est mappé à `stricoll` , `wcsicoll` ou `_mbsicoll` , selon le jeu de caractères défini au moment de la compilation. Chaque fonction effectue une comparaison ne respectant pas la casse des chaînes, en fonction de la page de codes en cours d’utilisation. Pour plus d’informations, consultez [strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
 
@@ -409,7 +373,7 @@ Autre chaîne utilisée pour la comparaison.
 
 Zéro si les chaînes sont identiques, < 0 si cet **`CStringT`** objet est inférieur à *`psz`* , ou > 0 si cet **`CStringT`** objet est supérieur à *`psz`* .
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction de texte générique `_tcscmp` , qui est définie dans Tchar. H, est mappé à `strcmp` , `wcscmp` ou `_mbscmp` , selon le jeu de caractères défini au moment de la compilation. Chaque fonction effectue une comparaison sensible à la casse des chaînes et n’est pas affectée par les paramètres régionaux. Pour plus d’informations, consultez [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).
 
@@ -438,7 +402,7 @@ Autre chaîne utilisée pour la comparaison.
 
 Zéro si les chaînes sont identiques (casse ignorée), <0 si cet **`CStringT`** objet est inférieur à *`psz`* (casse ignorée), ou >0 si cet **`CStringT`** objet est supérieur à *`psz`* (casse ignorée).
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction de texte générique `_tcsicmp` , qui est définie dans Tchar. H, correspond à `_stricmp` , `_wcsicmp` ou `_mbsicmp` , selon le jeu de caractères défini au moment de la compilation. Chaque fonction effectue une comparaison ne respectant pas la casse des chaînes. La comparaison dépend de l’aspect LC_CTYPE des paramètres régionaux, mais pas LC_COLLATE. Pour plus d’informations, consultez [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).
 
@@ -564,7 +528,7 @@ Doit être `System::String` , et le projet doit être compilé avec `/clr` .
 *`pString`*\
 Handle pour un **`CStringT`** objet.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Étant donné que les constructeurs copient les données d’entrée dans le nouveau stockage alloué, des exceptions de mémoire peuvent se produire. Certains de ces constructeurs agissent comme des fonctions de conversion. Cela vous permet de substituer, par exemple, un **`LPTSTR`** où un **`CStringT`** objet est attendu.
 
@@ -575,7 +539,7 @@ Handle pour un **`CStringT`** objet.
 - **`CStringT`**( `const unsigned char*` `psz` ) : Vous permet de construire un **`CStringT`** à partir d’un pointeur vers **`unsigned char`** .
 
 > [!NOTE]
-> Définissez la ` _CSTRING_DISABLE_NARROW_WIDE_CONVERSION` macro pour désactiver la conversion de chaînes implicite entre les chaînes ANSI et Unicode. La macro exclut des constructeurs de compilation qui prennent en charge la conversion.
+> Définissez la `_CSTRING_DISABLE_NARROW_WIDE_CONVERSION` macro pour désactiver la conversion de chaînes implicite entre les chaînes ANSI et Unicode. La macro exclut des constructeurs de compilation qui prennent en charge la conversion.
 
 Le *`strSrc`* paramètre peut être un **`CStringT`** objet ou `CThisSimpleString` . Pour **`CStringT`** , utilisez l’une de ses instanciations par défaut ( `CString` , `CStringA` ou `CStringW` ); pour `CThisSimpleString` , utilisez un **`this`** pointeur. `CThisSimpleString` déclare une instance de la [classe CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), qui est une classe de chaîne plus petite avec des fonctionnalités moins intégrées que la **`CStringT`** classe.
 
@@ -596,7 +560,7 @@ Détruit l' **`CStringT`** objet.
 ~CStringT() throw();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Détruit l' **`CStringT`** objet.
 
@@ -620,7 +584,7 @@ Nombre de caractères à supprimer.
 
 Longueur de la chaîne modifiée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si *`nCount`* est plus long que la chaîne, le reste de la chaîne sera supprimé.
 
@@ -659,7 +623,7 @@ Caractère unique à rechercher.
 
 Index de base zéro du premier caractère de cet **`CStringT`** objet qui correspond à la sous-chaîne ou aux caractères demandés ;-1 si la sous-chaîne ou le caractère est introuvable.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction est surchargée pour accepter les deux caractères uniques (similaires à la fonction runtime `strchr` ) et les chaînes (similaires à `strstr` ).
 
@@ -684,7 +648,7 @@ Chaîne contenant des caractères pour la correspondance.
 
 Index de base zéro du premier caractère de cette chaîne qui se trouve également dans *`pszCharSet`* ;-1 s’il n’y a aucune correspondance.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Recherche la première occurrence de l’un des caractères de *`pszCharSet`* .
 
@@ -712,7 +676,7 @@ Chaîne de contrôle de format.
 *`argument`*\
 Arguments facultatifs.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction met en forme et stocke une série de caractères et de valeurs dans le **`CStringT`** . Chaque argument facultatif (le cas échéant) est converti et sorti selon la spécification de format correspondante dans *`pszFormat`* ou à partir de la ressource de chaîne identifiée par *`nFormatID`* .
 
@@ -746,7 +710,7 @@ Pointe vers la chaîne de contrôle de format. Les insertions et les mises en fo
 *`argument`*\
 Arguments facultatifs.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction requiert une définition de message comme entrée. La définition du message est déterminée par *`pszFormat`* ou à partir de la ressource de type chaîne identifiée par *`nFormatID`* . La fonction copie le texte du message mis en forme dans l' **`CStringT`** objet, en traitant toutes les séquences d’insertion incorporées si nécessaire.
 
@@ -775,7 +739,7 @@ Pointe vers la chaîne de contrôle de format. Les insertions et les mises en fo
 *`pArgList`*\
 Pointeur désignant une liste d’arguments.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction requiert une définition de message comme entrée, déterminée par *`pszFormat`* . La fonction copie le texte du message mis en forme et une liste variable d’arguments vers l' **`CStringT`** objet, en traitant toutes les séquences d’insertion incorporées, le cas échéant.
 
@@ -800,7 +764,7 @@ Pointe vers la chaîne de contrôle de format. Les insertions et les mises en fo
 *`args`*\
 Pointeur désignant une liste d’arguments.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Écrit une chaîne mise en forme et une liste variable d’arguments dans une **`CStringT`** chaîne de la même façon que `vsprintf_s` met en forme les données dans un tableau de caractères de style C.
 
@@ -827,7 +791,7 @@ Pointeur vers une chaîne se terminant par un caractère null qui spécifie la v
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Récupère la valeur de la variable spécifiée à partir du bloc d’environnement du processus appelant. La valeur est sous la forme d’une chaîne de caractères se terminant par un caractère null.
 
@@ -859,7 +823,7 @@ Caractère à insérer.
 
 Longueur de la chaîne modifiée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Le *`iIndex`* paramètre identifie le premier caractère qui sera déplacé pour faire de la place pour le caractère ou la sous-chaîne. Si *nIndex* est égal à zéro, l’insertion se produit avant la chaîne entière. Si *nIndex* est supérieur à la longueur de la chaîne, la fonction concatène la chaîne présente et le nouveau matériel fourni par *`ch`* ou *`psz`* .
 
@@ -884,7 +848,7 @@ Nombre de caractères à extraire de cet **`CStringT`** objet.
 
 **`CStringT`** Objet qui contient une copie de la plage de caractères spécifiée. L' **`CStringT`** objet retourné peut être vide.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si est *`nCount`* supérieur à la longueur de chaîne, la totalité de la chaîne est extraite. `Left` est similaire à la fonction de base `Left`.
 
@@ -919,7 +883,7 @@ Langage de la ressource de type chaîne.
 
 Différent de zéro si le chargement de la ressource a réussi ; Sinon, 0.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Charge la ressource de chaîne (*nid*) à partir du module spécifié (*HINSTANCE*) à l’aide du langage spécifié (*wLanguage*).
 
@@ -971,7 +935,7 @@ CStringT& MakeUpper();
 
 Chaîne en majuscules résultante.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 ### <a name="example"></a> Exemple
 
@@ -998,7 +962,7 @@ Nombre de caractères à extraire de cet **`CStringT`** objet. Si ce paramètre 
 
 **`CStringT`** Objet qui contient une copie de la plage de caractères spécifiée. L' **`CStringT`** objet retourné peut être vide.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction retourne une copie de la sous-chaîne extraite. `Mid` est similaire à la fonction Mid de base (à ceci près que les index de base sont de base un).
 
@@ -1016,7 +980,7 @@ Convertit tous les caractères de cet **`CStringT`** objet du jeu de caractères
 void OemToAnsi();
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Cette fonction n’est pas disponible si `_UNICODE` est défini.
 
@@ -1064,7 +1028,7 @@ Caractère ANSI ou Unicode à assigner à la chaîne.
 *`pszSrc`*\
 Pointeur vers la chaîne d’origine qui est assignée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’opérateur d’assignation accepte un autre **`CStringT`** objet, un pointeur de caractère ou un caractère unique. Des exceptions de mémoire peuvent se produire chaque fois que vous utilisez cet opérateur, car un nouveau stockage peut être alloué.
 
@@ -1107,7 +1071,7 @@ Pointeur vers une chaîne se terminant par null à concaténer avec une chaîne 
 *`psz2`*\
 Pointeur vers une chaîne à concaténer avec une chaîne ou un caractère.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Il existe sept formes surchargées de la `CStringT::operator+` fonction. La première version concatène deux objets existants **`CStringT`** . Les deux suivants concatènent un **`CStringT`** objet et une chaîne terminée par le caractère null. Les deux suivants concatènent un **`CStringT`** objet et un caractère ANSI. Les deux derniers concatènent un **`CStringT`** objet et un caractère Unicode.
 
@@ -1161,7 +1125,7 @@ Pointeur vers la chaîne d’origine qui est concaténée.
 *`strSrc`*\
 **`CStringT`** À concaténer à cette chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 L’opérateur accepte un autre **`CStringT`** objet, un pointeur de caractère ou un caractère unique. Des exceptions de mémoire peuvent se produire chaque fois que vous utilisez cet opérateur de concaténation, car un nouveau stockage peut être alloué pour les caractères ajoutés à cet **`CStringT`** objet.
 
@@ -1208,7 +1172,7 @@ Pointeur vers une chaîne se terminant par null pour la comparaison.
 *`psz2`*\
 Pointeur vers une chaîne se terminant par null pour la comparaison.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Teste si une chaîne ou un caractère sur le côté gauche est égal à une chaîne ou un caractère situé à droite, et retourne `TRUE` ou en `FALSE` conséquence.
 
@@ -1250,7 +1214,7 @@ Pointeur vers une chaîne se terminant par null pour la comparaison.
 *`psz2`*\
 Pointeur vers une chaîne se terminant par null pour la comparaison.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Teste si une chaîne ou un caractère situé à gauche n’est pas égal à une chaîne ou un caractère situé à droite.
 
@@ -1282,7 +1246,7 @@ Pointeur vers une chaîne se terminant par null pour la comparaison.
 *`psz2`*\
 Pointeur vers une chaîne se terminant par null pour la comparaison.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Comparaison lexicographique entre les chaînes, caractère par caractère jusqu’à ce que :
 
@@ -1320,7 +1284,7 @@ Pointeur vers une chaîne se terminant par null pour la comparaison.
 *`psz2`*\
 Pointeur vers une chaîne se terminant par null pour la comparaison.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Comparaison lexicographique entre les chaînes, caractère par caractère jusqu’à ce que :
 
@@ -1358,7 +1322,7 @@ Pointeur vers une chaîne se terminant par null pour la comparaison.
 *`psz2`*\
 Pointeur vers une chaîne se terminant par null pour la comparaison.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Comparaison lexicographique entre les chaînes, caractère par caractère jusqu’à ce que :
 
@@ -1396,7 +1360,7 @@ Pointeur vers une chaîne à comparer.
 *`psz2`*\
 Pointeur vers une chaîne à comparer.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Comparaison lexicographique entre les chaînes, caractère par caractère jusqu’à ce que :
 
@@ -1427,7 +1391,7 @@ Caractère à supprimer d’une chaîne.
 
 Nombre de caractères supprimés de la chaîne. Zéro si la chaîne n’est pas modifiée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Les comparaisons pour le caractère respectent la casse.
 
@@ -1462,7 +1426,7 @@ Caractère qui remplace *`chOld`* .
 
 Retourne le nombre d’instances remplacées du caractère ou de la sous-chaîne, ou zéro si la chaîne n’est pas modifiée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `Replace` peut modifier la longueur de chaîne car *`pszNew`* et *`pszOld`* n’a pas besoin d’être de la même longueur, et plusieurs copies de l’ancienne sous-chaîne peuvent être remplacées par la nouvelle. La fonction effectue une correspondance respectant la casse.
 
@@ -1500,7 +1464,7 @@ Caractère à rechercher.
 
 Index de base zéro du dernier caractère de cet **`CStringT`** objet qui correspond au caractère demandé, ou-1 si le caractère est introuvable.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La fonction est similaire à la fonction runtime `strrchr` .
 
@@ -1525,7 +1489,7 @@ Nombre de caractères à extraire de cet **`CStringT`** objet.
 
 **`CStringT`** Objet qui contient une copie de la plage de caractères spécifiée. L' **`CStringT`** objet retourné peut être vide.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si est *`nCount`* supérieur à la longueur de chaîne, la totalité de la chaîne est extraite. `Right` est similaire à la fonction de base `Right` (à ceci près que les index de base sont de base zéro).
 
@@ -1552,7 +1516,7 @@ Pointeur vers une chaîne de caractères.
 
 La nouvelle chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 En fonction du contenu de l' **`CStringT`** objet, la valeur de l’objet **`BSTR`** référencé par *`pbstr`* peut changer. La fonction lève une si la mémoire disponible est `CMemoryException` insuffisante.
 
@@ -1579,7 +1543,7 @@ Chaîne interprétée comme un jeu de caractères.
 
 Sous-chaîne qui contient les caractères de la chaîne qui ne se trouvent pas dans *`pszCharSet`* , commençant par le premier caractère de la chaîne et se terminant par le premier caractère trouvé dans la chaîne qui se trouve également dans *`pszCharSet`* (autrement dit, en commençant par le premier caractère de la chaîne et en excluant le premier caractère de la chaîne trouvée *`pszCharSet`* ). Elle retourne la chaîne entière si aucun caractère dans *`pszCharSet`* n’est trouvé dans la chaîne.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `SpanExcluding` extrait et retourne tous les caractères qui précèdent la première occurrence d’un caractère de *`pszCharSet`* (en d’autres termes, le caractère de *`pszCharSet`* et tous les caractères qui le suivent dans la chaîne ne sont pas retournés). Si aucun caractère de *`pszCharSet`* n’est trouvé dans la chaîne, `SpanExcluding` retourne la chaîne entière.
 
@@ -1604,7 +1568,7 @@ Chaîne interprétée comme un jeu de caractères.
 
 Sous-chaîne qui contient les caractères de la chaîne qui se trouvent dans *`pszCharSet`* , commençant par le premier caractère de la chaîne et se terminant lorsqu’un caractère se trouve dans la chaîne qui n’est pas dans *`pszCharSet`* . `SpanIncluding` retourne une sous-chaîne vide si le premier caractère de la chaîne ne figure pas dans le jeu spécifié.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si le premier caractère de la chaîne ne figure pas dans le jeu de caractères, `SpanIncluding` retourne une chaîne vide. Sinon, elle retourne une séquence de caractères consécutifs qui se trouvent dans le jeu.
 
@@ -1632,7 +1596,7 @@ Index de base zéro à partir duquel commencer la recherche.
 
 **`CStringT`** Objet contenant la valeur de jeton actuelle.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La `Tokenize` fonction recherche le jeton suivant dans la chaîne cible. Le jeu de caractères dans *pszTokens* spécifie les délimiteurs possibles du jeton à trouver. À chaque appel à `Tokenize` la fonction démarre à *`iStart`* , ignore les délimiteurs de début et retourne un **`CStringT`** objet contenant le jeton actuel, qui est la chaîne de caractères jusqu’au caractère délimiteur suivant. La valeur de *`iStart`* est mise à jour pour correspondre à la position qui suit le caractère délimiteur de fin, ou-1 si la fin de la chaîne a été atteinte. Un plus grand nombre de jetons peuvent être décomposés du reste de la chaîne cible par une série d’appels à `Tokenize` , à l’aide *`iStart`* de pour effectuer le suivi de l’emplacement où le jeton suivant doit être lu dans la chaîne. Lorsqu’il n’y a plus de jetons, la fonction retourne une chaîne vide et *`iStart`* prend la valeur-1.
 
@@ -1641,8 +1605,6 @@ Contrairement aux fonctions de jeton CRT [`strtok_s, _strtok_s_l, wcstok_s, _wcs
 ### <a name="example"></a> Exemple
 
 [!code-cpp[NVC_ATLMFC_Utilities#135](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_39.cpp)]
-
-### <a name="remarks"></a>Notes
 
 La sortie de cet exemple est la suivante :
 
@@ -1674,7 +1636,7 @@ Pointeur vers une chaîne contenant les caractères cibles à tronquer. Toutes l
 
 Retourne la chaîne tronquée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Supprime toutes les occurrences de début et de fin de l’un des éléments suivants :
 
@@ -1687,8 +1649,6 @@ Supprime toutes les occurrences de début et de fin de l’un des éléments sui
 ### <a name="example"></a> Exemple
 
 [!code-cpp[NVC_ATLMFC_Utilities#136](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_40.cpp)]
-
-### <a name="remarks"></a>Notes
 
 La sortie de cet exemple est la suivante :
 
@@ -1719,7 +1679,7 @@ Pointeur vers une chaîne contenant les caractères cibles à tronquer. Toutes l
 
 Chaîne tronquée résultante.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Supprime toutes les occurrences de début et de fin de l’un des éléments suivants :
 
@@ -1755,7 +1715,7 @@ Pointeur vers une chaîne contenant les caractères cibles à tronquer. Toutes l
 
 Retourne l' **`CStringT`** objet qui contient la chaîne tronquée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Supprime les occurrences de fin de l’un des éléments suivants :
 

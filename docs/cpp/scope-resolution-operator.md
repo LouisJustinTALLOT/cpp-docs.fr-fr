@@ -1,6 +1,7 @@
 ---
-title: 'Opérateur de résolution de portée : ::'
-ms.date: 11/04/2016
+title: 'Opérateur de résolution de portée : `::`'
+description: Découvrez comment fonctionne l’opérateur `::` de résolution de portée en C++ standard.
+ms.date: 12/06/2020
 f1_keywords:
 - '::'
 helpviewer_keywords:
@@ -8,33 +9,44 @@ helpviewer_keywords:
 - operators [C++], scope resolution
 - scope resolution operator
 - ':: operator'
-ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ff774d9fcca9f68cb2925af82c55ef438ab4d71a
+ms.sourcegitcommit: 7b131db4ed39bddb4a456ebea402f47c5cbd69d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178884"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96776529"
 ---
-# <a name="scope-resolution-operator-"></a>Opérateur de résolution de portée : ::
+# <a name="scope-resolution-operator-"></a>Opérateur de résolution de portée : `::`
 
-L’opérateur de résolution de portée **::** est utilisé pour identifier et lever l’ambiguïté des identificateurs utilisés dans différentes portées. Pour plus d’informations sur l’étendue, consultez [scope](../cpp/scope-visual-cpp.md).
+L’opérateur de résolution de portée **`::`** est utilisé pour identifier et lever l’ambiguïté des identificateurs utilisés dans différentes portées. Pour plus d’informations sur l’étendue, consultez [scope](../cpp/scope-visual-cpp.md).
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-:: identifier
-class-name :: identifier
-namespace :: identifier
-enum class :: identifier
-enum struct :: identifier
-```
+> *`qualified-id`*:\
+> &emsp;*`nested-name-specifier`***`template`** <sub>OPT</sub>*`unqualified-id`*
 
-## <a name="remarks"></a>Notes
+> *`nested-name-specifier`*:\
+> &emsp;**`::`**\
+> &emsp;*`type-name`* **`::`**\
+> &emsp;*`namespace-name`* **`::`**\
+> &emsp;*`decltype-specifier`* **`::`**\
+> &emsp;*`nested-name-specifier`* *`identifier`* **`::`**\
+> &emsp;*`nested-name-specifier`***`template`** <sub>opt</sub> opt *`simple-template-id`***`::`**
+
+> *`unqualified-id`*:\
+> &emsp;*`identifier`*\
+> &emsp;*`operator-function-id`*\
+> &emsp;*`conversion-function-id`*\
+> &emsp;*`literal-operator-id`*\
+> &emsp;**`~`** *`type-name`*\
+> &emsp;**`~`** *`decltype-specifier`*\
+> &emsp;*`template-id`*
+
+## <a name="remarks"></a>Remarques
 
 `identifier` peut être une variable, une fonction ou une valeur d'énumération.
 
-## <a name="with-classes-and-namespaces"></a>Avec les classes et les espaces de noms
+## <a name="use--for-classes-and-namespaces"></a>`::`À utiliser pour les classes et les espaces de noms
 
 L’exemple suivant montre comment l’opérateur de résolution de portée est utilisé avec les espaces de noms et les classes :
 
@@ -80,7 +92,7 @@ int main() {
 }
 ```
 
-Vous pouvez utiliser l’opérateur de résolution de portée pour identifier un membre d’un espace de noms ou un espace de noms désignant l’espace de noms du membre dans une directive using. Dans l'exemple ci-dessous, vous pouvez utiliser `NamespaceC` pour qualifier `ClassB`, même si `ClassB` a été déclaré dans l'espace de noms `NamespaceB`, car `NamespaceB` a été désigné dans `NamespaceC` à l'aide d'une directive.
+Vous pouvez utiliser l’opérateur de résolution de portée pour identifier un membre d’un **`namespace`** ou pour identifier un espace de noms qui désigne l’espace de noms du membre dans une **`using`** directive. Dans l’exemple ci-dessous, vous pouvez utiliser `NamespaceC` pour qualifier `ClassB` , même si `ClassB` a été déclaré dans l’espace de noms `NamespaceB` , car `NamespaceB` a été désigné `NamespaceC` par une **`using`** directive.
 
 ```cpp
 namespace NamespaceB {
@@ -91,14 +103,15 @@ namespace NamespaceB {
 }
 
 namespace NamespaceC{
-    using namespace B;
+    using namespace NamespaceB;
 }
-int main() {
-    NamespaceB::ClassB c_b;
-    NamespaceC::ClassB c_c;
 
-    c_b.x = 3;
-    c_c.x = 4;
+int main() {
+    NamespaceB::ClassB b_b;
+    NamespaceC::ClassB c_b;
+
+    b_b.x = 3;
+    c_b.x = 4;
 }
 ```
 
@@ -128,7 +141,7 @@ int main() {
 }
 ```
 
-## <a name="with-static-members"></a>Avec des membres statiques
+## <a name="use--for-static-members"></a>`::`À utiliser pour les membres statiques
 
 Vous devez utiliser l'opérateur de résolution de portée pour appeler des membres statiques de classes.
 
@@ -148,7 +161,7 @@ int main() {
 }
 ```
 
-## <a name="with-scoped-enumerations"></a>Avec des énumérations délimitées
+## <a name="use--for-scoped-enumerations"></a>Utiliser `::` pour les énumérations délimitées
 
 L’opérateur de résolution de portée est également utilisé avec les valeurs des [déclarations d’énumération](../cpp/enumerations-cpp.md)d’énumération délimitées, comme dans l’exemple suivant :
 
@@ -166,5 +179,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Opérateurs, priorité et associativité C++ intégrés](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Espaces de noms](../cpp/namespaces-cpp.md)
