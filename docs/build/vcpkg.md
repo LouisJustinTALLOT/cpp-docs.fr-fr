@@ -4,12 +4,12 @@ description: vcpkg est un gestionnaire de package en ligne de commande qui simpl
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ec908824c19099ad6eaa46a4d85c0187ef12b3fd
+ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373630"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862553"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg : gestionnaire de package C++ pour Windows, Linux et macOS
 
@@ -29,12 +29,12 @@ Vous pouvez également créer un clone vcpkg contenant des bibliothèques privé
 
 ## <a name="installation"></a>Installation
 
-Clonez le référentiel vcpkg à partir de GitHub : [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg) . Vous pouvez télécharger vers n’importe quel emplacement de dossier de votre choix. Cet emplacement est la *racine*vcpkg. Une fois le téléchargement terminé, accédez à ce répertoire dans votre interface de commande.
+Clonez le référentiel vcpkg à partir de GitHub : [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg) . Vous pouvez télécharger vers n’importe quel emplacement de dossier de votre choix. Cet emplacement est la *racine* vcpkg. Une fois le téléchargement terminé, accédez à ce répertoire dans votre interface de commande.
 
 Dans le répertoire racine vcpkg, exécutez le programme d’amorçage vcpkg :
 
 - **`bootstrap-vcpkg.bat`** Windows
-- **`./bootstrap-vcpkg.sh`**(Linux, macOS)
+- **`./bootstrap-vcpkg.sh`** (Linux, macOS)
 
 Sur Linux ou macOS, vous devrez peut-être préfixer les commandes vcpkg en utilisant **`./`** dans les exemples qui suivent. N’oubliez pas d’exécuter ces commandes à partir du répertoire racine vcpkg.
 
@@ -185,10 +185,10 @@ Par défaut, la **`vcpkg upgrade`** commande répertorie uniquement les biblioth
 
 ### <a name="upgrade-options"></a>Options de mise à niveau
 
-- **`--no-dry-run`** Effectuez la mise à niveau ; lorsqu’elle n’est pas spécifiée, la commande répertorie uniquement les packages obsolètes.
-- **`--keep-going`** Continuer l’installation des packages même si l’un d’eux échoue.
-- **`--triplet <t>`** Définissez les triplets par défaut pour les packages non qualifiés.
-- **`--vcpkg-root <path>`** Spécifiez le répertoire vcpkg à utiliser au lieu du répertoire actif ou du répertoire d’outils.
+- **`--no-dry-run`**  Effectuez la mise à niveau ; lorsqu’elle n’est pas spécifiée, la commande répertorie uniquement les packages obsolètes.
+- **`--keep-going`**  Continuer l’installation des packages même si l’un d’eux échoue.
+- **`--triplet <t>`**  Définissez les triplets par défaut pour les packages non qualifiés.
+- **`--vcpkg-root <path>`**  Spécifiez le répertoire vcpkg à utiliser au lieu du répertoire actif ou du répertoire d’outils.
 
 ### <a name="upgrade-example"></a>Exemple de mise à niveau
 
@@ -226,6 +226,8 @@ Le gestionnaire de package vcpkg est régulièrement mis à jour sur GitHub. Pou
 ## <a name="uninstall-vcpkg"></a>Désinstaller vcpkg
 
 Pour désinstaller vcpkg, supprimez simplement le répertoire vcpkg. La suppression de ce répertoire désinstalle la distribution vcpkg et toutes les bibliothèques installées par vcpkg.
+
+Toutefois, si vous avez exécuté **`vcpkg integrate install`** , vous devez exécuter **`vcpkg integrate remove`** pour vous assurer que l’intégration est nettoyée, avant que le dossier ne soit supprimé.
 
 ## <a name="send-feedback-about-vcpkg"></a>Envoyer des commentaires à propos de vcpkg
 
