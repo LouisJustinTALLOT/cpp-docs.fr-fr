@@ -1,64 +1,147 @@
 ---
 title: 'Comment : créer des applications console CLR (C++/CLI)'
-ms.date: 11/04/2016
+description: Découvrez comment créer des projets d’application console CLR pour utiliser C++/CLI dans Visual Studio.
+ms.date: 12/08/2020
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
-ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: 86e5abe330b0edc514fed74a12188ab73e8bfdd8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef74ca4cc31884543ff18d63d981504f36d1838e
+ms.sourcegitcommit: 754df5278f795f661d4eeb0d4cacc908aa630159
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368536"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933220"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Comment : créer des applications console CLR (C++/CLI)
 
-Vous pouvez utiliser le modèle Application console pour créer un projet d’application console qui a déjà les références et les fichiers principaux d’un projet.
+::: moniker range="msvc-140"
 
-En général, une application console est compilée en un fichier exécutable autonome, mais elle n’a pas d’interface utilisateur graphique. Un utilisateur exécute l’application console à l’invite de commandes et utilise l’invite de commandes pour émettre des instructions destinées à l’application en cours d’exécution. L’application fournit également des informations de sortie, toujours à l’invite de commandes. L’interactivité directe d’une application console constitue un bon moyen d’apprendre les techniques de programmation sans se soucier de l’implémentation d’une interface utilisateur.
+Vous pouvez utiliser le modèle  **application console CLR** dans la boîte de dialogue **nouveau projet** pour créer un projet d’application console qui a déjà des références et des fichiers de projet essentiels.
 
-Quand vous utilisez le modèle Application console pour créer un projet, il ajoute automatiquement ces références et ces fichiers :
+::: moniker-end
+::: moniker range="msvc-150"
+
+Vous pouvez utiliser le modèle **application console CLR** dans la boîte de dialogue **nouveau projet** pour créer un projet d’application console qui a déjà des références et des fichiers de projet essentiels.
+
+La prise en charge de c++/CLI n’est pas installée par défaut lorsque vous installez une charge de travail Visual Studio C++. Si vous ne voyez pas un en-tête CLR sous Visual C++ dans la boîte de dialogue **nouveau projet** , vous devrez peut-être installer la prise en charge de C++/CLI. Pour plus d’informations, consultez [programmation .net avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+
+::: moniker-end
+::: moniker range="msvc-160"
+
+Vous pouvez utiliser le modèle **application console CLR (.NET Framework)** dans la boîte de dialogue **créer un nouveau projet** pour créer un projet d’application console qui a déjà des références et des fichiers de projet essentiels.
+
+La prise en charge de c++/CLI n’est pas installée par défaut lorsque vous installez une charge de travail Visual Studio C++. Si les modèles de projet CLR ne s’affichent pas dans la boîte de dialogue  **créer un nouveau projet** , vous devrez peut-être installer la prise en charge de C++/CLI. Pour plus d’informations, consultez [programmation .net avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+
+::: moniker-end
+
+En général, une application console est compilée en un fichier exécutable autonome, mais elle n’a pas d’interface utilisateur graphique. Les utilisateurs exécutent l’application console à partir d’une invite de commandes. Ils peuvent utiliser la ligne de commande pour émettre des instructions pour l’application en cours d’exécution. L’application fournit des informations de sortie sous forme de texte dans la fenêtre de commande. Le retour immédiat d’une application console en fait un excellent moyen d’apprendre la programmation. Vous n’avez pas besoin de vous soucier de l’implémentation d’une interface utilisateur graphique.
+
+::: moniker range="msvc-140"
+
+Lorsque vous utilisez le modèle d’application console CLR pour créer un projet, il ajoute automatiquement ces références et ces fichiers :
 
 - Références à ces espaces de noms .NET Framework :
 
-  - <xref:System.AppDomainManager>—Contient des classes fondamentales et des classes de base qui définissent les valeurs couramment utilisées et les types de données de référence, les événements et les gestionnaires d’événements, les interfaces, les attributs et les exceptions de traitement.
+  - <xref:System>, <xref:System.Data> , <xref:System.Xml> : Ces références contiennent les classes fondamentales qui définissent des types, des événements, des interfaces, des attributs et des exceptions couramment utilisés.
 
-  - mscorlib  : DLL de l’assembly qui prend en charge le développement .NET Framework.
+  - *`mscorlib.dll`*: DLL d’assembly qui prend en charge le développement de .NET Framework.
 
 - Fichiers sources :
 
-  - Console (fichier .cpp) : le fichier source et le point d’entrée principal entrée dans l’application que vous venez de créer. Il identifie le fichier .dll du projet et l’espace de noms du projet. Fournissez votre propre code dans ce fichier.
+  - *`ConsoleApplicationName.cpp`*: Le fichier source principal et le point d’entrée dans l’application. Ce fichier porte le nom de base que vous avez spécifié pour votre projet. Il identifie le fichier DLL du projet et l’espace de noms du projet. Fournissez votre propre code dans ce fichier.
 
-  - AssemblyInfo.cpp : contient des attributs, fichiers, ressources, types, informations de contrôle de version, informations de signature, etc., que vous pouvez utiliser pour modifier les métadonnées de l’assembly du projet. Pour plus d’informations, voir [Contenus de l’Assemblée](/dotnet/framework/app-domains/assembly-contents).
+  - *`AssemblyInfo.cpp`*: Contient des attributs et des paramètres que vous pouvez utiliser pour modifier les métadonnées de l’assembly du projet. Pour plus d’informations, consultez contenu de l' [assembly](/dotnet/framework/app-domains/assembly-contents).
 
-  - Stdafx.cpp : utilisé pour générer un fichier d’en-tête précompilé nommé Win32.pch et un fichier de types précompilé nommé StdAfx.obj.
+  - *`stdafx.cpp`*: Utilisé pour générer un fichier d’en-tête précompilé nommé *`ConsoleApplicationName.pch`* et un fichier de types précompilé nommé *`stdafx.obj`* .
 
 - Fichiers d’en-tête :
 
-  - Stdafx.h : utilisé pour générer un fichier d’en-tête précompilé nommé Win32.pch et un fichier de types précompilé nommé StdAfx.obj.
+  - *`stdafx.h`*: Utilisé pour générer un fichier d’en-tête précompilé nommé *`ConsoleApplicationName.pch`* et un fichier de types précompilé nommé *`stdafx.obj`* .
 
-  - resource.h : un fichier include généré pour app.rc.
+  - *`resource.h`*: Un fichier Include généré pour *`app.rc`* .
 
 - Les fichiers de ressources :
 
-  - app.rc : le fichier de script de ressources d’un programme.
+  - *`app.rc`*: Fichier de script de ressources d’un programme.
 
-  - app.ico : le fichier icône d’un programme.
+  - *`app.ico`*: Le fichier icône d’un programme.
 
-- ReadMe.txt : décrit les fichiers du projet.
+- *`ReadMe.txt`*: Décrit les fichiers du projet.
 
-## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>Pour créer un projet d’application console CLR (Common Language Runtime)
+::: moniker-end
+::: moniker range=">=msvc-150"
 
-1. Dans le menu principal, sélectionnez **Fichier**, **Nouveau**, **Projet**.
+Quand vous utilisez le modèle d’application console CLR pour créer un projet, il ajoute automatiquement ces références et ces fichiers :
 
-1. Dans la boîte de dialogue **Nouveau projet** , sous **Modèles installés**, sélectionnez le nœud **Visual C++** , sélectionnez le nœud **CLR** , puis sélectionnez le modèle Application console.
+- Références à ces espaces de noms .NET Framework :
+
+  - <xref:System>, <xref:System.Data> , <xref:System.Xml> : Ces références contiennent les classes fondamentales qui définissent des types, des événements, des interfaces, des attributs et des exceptions couramment utilisés.
+
+  - *`mscorlib.dll`*: DLL d’assembly qui prend en charge le développement de .NET Framework.
+
+- Fichiers sources :
+
+  - *`ConsoleApplicationName.cpp`*: Le fichier source principal et le point d’entrée dans l’application. Ce fichier porte le nom de base que vous avez spécifié pour votre projet. Il identifie le fichier DLL du projet et l’espace de noms du projet. Fournissez votre propre code dans ce fichier.
+
+  - *`AssemblyInfo.cpp`*: Contient des attributs et des paramètres que vous pouvez utiliser pour modifier les métadonnées de l’assembly du projet. Pour plus d’informations, consultez contenu de l' [assembly](/dotnet/framework/app-domains/assembly-contents).
+
+  - *`pch.cpp`*: Utilisé pour générer un fichier d’en-tête précompilé nommé *`ConsoleApplicationName.pch`* et un fichier de types précompilé nommé *`pch.obj`* .
+
+- Fichiers d’en-tête :
+
+  - *`pch.h`*: Utilisé pour générer un fichier d’en-tête précompilé nommé *`ConsoleApplicationName.pch`* et un fichier de types précompilé nommé *`pch.obj`* .
+
+  - *`Resource.h`*: Un fichier Include généré pour *`app.rc`* .
+
+- Les fichiers de ressources :
+
+  - *`app.rc`*: Fichier de script de ressources d’un programme.
+
+  - *`app.ico`*: Le fichier icône d’un programme.
+
+::: moniker-end
+
+## <a name="to-create-a-clr-console-app-project"></a>Pour créer un projet d’application console CLR
+
+::: moniker range="msvc-140"
+
+1. Dans la barre de menus, choisissez **fichier** > **nouveau** > **projet**.
+
+1. Dans la boîte de dialogue **nouveau projet** , sélectionnez **Installed** le > nœud **modèles** installés > **Visual C++** > **CLR** , puis sélectionnez le modèle **application console CLR** .
 
 1. Dans la zone **Nom** , entrez un nom unique pour votre application.
 
-   Vous pouvez spécifier d’autres paramètres pour le projet et la solution, mais ils ne sont pas obligatoires.
+   Vous pouvez spécifier d’autres paramètres de projet et de solution, mais ils ne sont pas requis.
 
-1. Choisissez le bouton **OK**.
+1. Choisissez le bouton **OK** pour générer le projet et les fichiers sources.
+
+::: moniker-end
+::: moniker range="msvc-150"
+
+1. Dans la barre de menus, choisissez **fichier** > **nouveau** > **projet**.
+
+1. Dans la boîte de dialogue **nouveau projet** , sélectionnez le nœud **installé** > **Visual C++** > **CLR** , puis sélectionnez le modèle **application console CLR** .
+
+1. Dans la zone **Nom** , entrez un nom unique pour votre application.
+
+   Vous pouvez spécifier d’autres paramètres de projet et de solution, mais ils ne sont pas requis.
+
+1. Choisissez le bouton **OK** pour générer le projet et les fichiers sources.
+
+::: moniker-end
+::: moniker range="msvc-160"
+
+1. Dans la barre de menus, choisissez **fichier** > **nouveau** > **projet**.
+
+1. Dans la boîte de dialogue **créer un nouveau projet** , entrez « console CLR » dans la zone de recherche. Sélectionnez le modèle **application console CLR (.NET Framework)** , puis choisissez **suivant**.
+
+1. Dans la zone **Nom** , entrez un nom unique pour votre application.
+
+   Vous pouvez spécifier d’autres paramètres de projet et de solution, mais ils ne sont pas requis.
+
+1. Cliquez sur le bouton **créer** pour générer le projet et les fichiers sources.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Voir aussi
 
