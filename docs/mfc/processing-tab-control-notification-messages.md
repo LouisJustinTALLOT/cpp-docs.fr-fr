@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : traitement des messages de notification du contrôle onglet'
 title: Traitement des messages de notification du contrôle Tab
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
-ms.openlocfilehash: cc322a038717d48f440df1ec571674cec80743ce
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: f5d81437b566143e2fc7cb1e0f275c0f9e9993de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908065"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154719"
 ---
 # <a name="processing-tab-control-notification-messages"></a>Traitement des messages de notification du contrôle Tab
 

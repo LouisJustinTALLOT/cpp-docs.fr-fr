@@ -1,35 +1,36 @@
 ---
-title: Classes d’utilitaire (ATL)
+description: 'En savoir plus sur : classes utilitaires'
+title: Classes utilitaires (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - utility classes
 ms.assetid: 33d5da9d-89a5-49f9-a873-a26499299d17
-ms.openlocfilehash: 2de899d6c70bde4f9f9ec7241d3c923f77ff8248
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95fbc6a557080175682f9f54a3ac6b9b7d0efdc6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274839"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157150"
 ---
-# <a name="utility-classes"></a>Classes d’utilitaire
+# <a name="utility-classes"></a>Classes d'utilitaire
 
-Les classes d’utilitaire indépendants des MFC suivantes sont fournies :
+Les classes d’utilitaires indépendantes des MFC suivantes sont fournies :
 
-- [CImage](../atl-mfc-shared/reference/cimage-class.md) fournit amélioré la prise en charge de la bitmap, y compris la possibilité pour charger et enregistrer des images JPEG, GIF, BMP, et met en forme graphique PNG (Portable Network).
+- [CImage](../atl-mfc-shared/reference/cimage-class.md) Offre une prise en charge améliorée des bitmaps, notamment la possibilité de charger et d’enregistrer des images au format JPEG, GIF, BMP et PNG (Portable Network Graphics).
 
-- [CPoint](../atl-mfc-shared/reference/cpoint-class.md) fournit une implémentation pour le stockage des paires de coordonnées (x, y).
+- [CPoint](../atl-mfc-shared/reference/cpoint-class.md) Fournit une implémentation pour le stockage des paires de coordonnées (x, y).
 
-- [CRect](../atl-mfc-shared/reference/crect-class.md) fournit une implémentation pour le stockage des coordonnées de zones rectangulaires.
+- [CRect](../atl-mfc-shared/reference/crect-class.md) Fournit une implémentation pour le stockage des coordonnées des zones rectangulaires.
 
-- [CSize](../atl-mfc-shared/reference/csize-class.md) fournit une implémentation pour le stockage de distance positions relatives, valeurs ou associés.
+- [CSize](../atl-mfc-shared/reference/csize-class.md) Fournit une implémentation pour stocker les distances, les positions relatives ou les valeurs jumelées.
 
-- [CString](../atl-mfc-shared/reference/cstringt-class.md) fournit une implémentation pour le stockage des chaînes de caractères.
+- [CString](../atl-mfc-shared/reference/cstringt-class.md) Fournit une implémentation pour le stockage des chaînes de caractères.
 
-- [CAdapt](../atl/reference/cadapt-class.md) un modèle simple utilisé pour encapsuler les classes qui redéfinissent l’opérateur address-of.
+- [CAdapt](../atl/reference/cadapt-class.md) Modèle simple utilisé pour encapsuler les classes qui redéfinissent l’opérateur d’adresse.
 
-- [_U_RECT](../atl/reference/u-rect-class.md) une classe d’adaptateur argument qui permet soit `RECT` les pointeurs ou références à passer à une fonction qui est implémentée en termes de pointeurs.
+- [_U_RECT](../atl/reference/u-rect-class.md) Classe d’adaptateur d’argument qui permet `RECT` de passer des pointeurs ou des références à une fonction implémentée en termes de pointeurs.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../atl/atl-class-overview.md)

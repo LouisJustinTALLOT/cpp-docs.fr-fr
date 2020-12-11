@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe length_error'
 title: length_error, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-ms.openlocfilehash: 740ae69948a8f1975872f223ba51fb669121a891
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 051f79da569a153413a88af4976cb619e4b04e66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112048"
 ---
 # <a name="length_error-class"></a>length_error, classe
 
@@ -31,7 +32,7 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-La valeur retournée par `what()` est une copie de `message.data()` . Pour plus d’informations, consultez [`what`](../standard-library/exception-class.md) et [`data`](../standard-library/basic-string-class.md#data) .
+La valeur retournée par `what()` est une copie de `message.data()` . Pour plus d’informations, consultez [`what`](../standard-library/exception-class.md) et [`data`](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Exemple
 
@@ -75,7 +76,7 @@ Type class std::length_error
 */
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<stdexcept>
 

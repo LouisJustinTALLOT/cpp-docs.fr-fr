@@ -1,21 +1,22 @@
 ---
+description: 'En savoir plus sur : &lt; IStream, &gt; fonctions'
 title: '&lt;istream&gt;, fonction'
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: 6d1fede2726d3d8f5dd678b95fd7a22a301ea95a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c71770d8c6e86829eb4e0153abc924d612d3eff6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154173"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt;, fonction
 
 [échange](#istream_swap)\
-[Web](#ws)
+[ws](#ws)
 
 ## <a name="swap"></a><a name="istream_swap"></a> échange
 
@@ -36,10 +37,10 @@ void swap(
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Flux.
+Un flux.
 
 *Oui*\
-Flux.
+Un flux.
 
 ## <a name="ws"></a><a name="ws"></a> Web
 
@@ -52,7 +53,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 ### <a name="parameters"></a>Paramètres
 
 *_Istr*\
-Flux.
+Un flux.
 
 ### <a name="return-value"></a>Valeur renvoyée
 

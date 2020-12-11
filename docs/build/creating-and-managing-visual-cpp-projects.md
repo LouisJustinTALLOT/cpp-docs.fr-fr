@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : projets Visual Studio-C++'
 title: Projets Visual Studio – C++
 ms.date: 10/25/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a8e23a3c384ce9b5ac7e73d18958246b52eb95b5
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 07c7c0394c7b1a49bd4b8861540e540b095fae5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919382"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156812"
 ---
 # <a name="visual-studio-projects---c"></a>Projets Visual Studio – C++
 
@@ -23,7 +24,7 @@ Un *projet Visual Studio* est un projet basé sur le système de génération MS
 
 ::: moniker range="msvc-160"
 
-Vous pouvez créer des projets C++ en choisissant **fichier**  >  **nouveau**  >  **projet** , puis en définissant le **langage** sur C++. Dans la liste des résultats, vous voyez une liste de modèles de projet que vous pouvez filtrer en définissant le paramètre **Plateforme** ou **Type de projet** et ou tapant des mots clés dans la zone de recherche.
+Vous pouvez créer des projets C++ en choisissant **fichier**  >  **nouveau**  >  **projet**, puis en définissant le **langage** sur C++. Dans la liste des résultats, vous voyez une liste de modèles de projet que vous pouvez filtrer en définissant le paramètre **Plateforme** ou **Type de projet** et ou tapant des mots clés dans la zone de recherche.
 
    ![Modèles de projet Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Boîte de dialogue Nouveau projet de Visual Studio 2019")
 
@@ -31,7 +32,7 @@ Vous pouvez créer des projets C++ en choisissant **fichier**  >  **nouveau**  >
 
 ::: moniker range="msvc-150"
 
-Vous pouvez créer des projets C++ en choisissant **fichier**  >  **nouveau**  >  **projet** , puis en choisissant Visual C++ dans le volet gauche. Dans le volet central, vous voyez une liste de modèles de projet :
+Vous pouvez créer des projets C++ en choisissant **fichier**  >  **nouveau**  >  **projet**, puis en choisissant Visual C++ dans le volet gauche. Dans le volet central, vous voyez une liste de modèles de projet :
 
    ![Modèles de projet](../overview/media/vs2017-new-project.png "Boîte de dialogue Nouveau projet de Visual Studio 2017")
 
@@ -43,11 +44,11 @@ Un projet que vous créez apparaît aussitôt dans la fenêtre [Explorateur de s
 
    ![Explorateur de solutions](media/mathlibrary-solution-explorer-153.png)
 
-Quand vous créez un projet, un fichier solution (.sln) est aussi créé. Vous pouvez ajouter des projets supplémentaires à la solution en cliquant dessus avec le bouton droit dans l’ **Explorateur de solutions** . Le fichier solution permet de coordonner les dépendances de build quand vous avez plusieurs projets connexes, mais il n’a aucune autre utilité. Toutes les options du compilateur sont définies au niveau du projet.
+Quand vous créez un projet, un fichier solution (.sln) est aussi créé. Vous pouvez ajouter des projets supplémentaires à la solution en cliquant dessus avec le bouton droit dans l’**Explorateur de solutions**. Le fichier solution permet de coordonner les dépendances de build quand vous avez plusieurs projets connexes, mais il n’a aucune autre utilité. Toutes les options du compilateur sont définies au niveau du projet.
 
 ## <a name="add-items"></a>Ajouter des éléments
 
-Ajoutez des fichiers de code source, des icônes ou tout autre élément à votre projet en cliquant sur le projet avec le bouton droit dans l’ **Explorateur de solutions** et en choisissant **Ajouter > Nouveau** ou **Ajouter > Existant** .
+Ajoutez des fichiers de code source, des icônes ou tout autre élément à votre projet en cliquant sur le projet avec le bouton droit dans l’**Explorateur de solutions** et en choisissant **Ajouter > Nouveau** ou **Ajouter > Existant**.
 
 ## <a name="add-third-party-libraries"></a>Ajouter des bibliothèques tierces
 
@@ -55,7 +56,7 @@ Pour ajouter des bibliothèques tierces, utilisez le gestionnaire de package [vc
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Définir les options du compilateur et autres propriétés de build
 
-Pour configurer les paramètres de build d’un projet, cliquez avec le bouton droit sur le projet dans l’ **Explorateur de solutions** , puis choisissez **Propriétés** . Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md).
+Pour configurer les paramètres de build d’un projet, cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis choisissez **Propriétés**. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md).
 
 ## <a name="compile-and-run"></a>Compilation et exécution
 

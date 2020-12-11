@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : importation à l’aide de fichiers DEF'
 title: Importation à l'aide de fichiers DEF
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: e4ac48dc013874c240411f78a733d32e116df25d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9eb4face47bf999daa8f969282cc621708a76006
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156149"
 ---
 # <a name="importing-using-def-files"></a>Importation à l'aide de fichiers DEF
 

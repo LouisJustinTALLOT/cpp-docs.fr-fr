@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création et utilisation de contrôles'
 title: Création et utilisation de contrôles
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Windows common controls [MFC], about common controls
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
-ms.openlocfilehash: f5fcb15a0cb7e336f6c818eb39b271f5f6e74af5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: eaf0c25fefe327b20e859adab5e1addf6771328b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112340"
 ---
 # <a name="making-and-using-controls"></a>Création et utilisation de contrôles
 
@@ -25,15 +26,15 @@ Vous définissez la plupart des contrôles pour les boîtes de dialogue dans l' 
 
 - [Ajout de contrôles manuellement](adding-controls-by-hand.md) (sans l’éditeur de boîtes de dialogue)
 
-- [Dériver des contrôles d’un contrôle standard](deriving-controls-from-a-standard-control.md)
+- [Dérivation des contrôles à partir d'un contrôle standard](deriving-controls-from-a-standard-control.md)
 
-- [Utilisation d’un contrôle commun en tant que fenêtre enfant](using-a-common-control-as-a-child-window.md)
+- [Utilisation d'un contrôle commun en tant que fenêtre enfant](using-a-common-control-as-a-child-window.md)
 
-- [Réception des notifications à partir de contrôles communs](receiving-notification-from-common-controls.md)
+- [Réception des notifications de contrôles communs](receiving-notification-from-common-controls.md)
 
-- [Échange et validation de données de boîtes de dialogue](dialog-data-exchange-and-validation.md)
+- [Échange et validation des données de boîte de dialogue](dialog-data-exchange-and-validation.md)
 
-- [Accès de type sécurisé aux contrôles avec Assistants Code](type-safe-access-to-controls-with-code-wizards.md)
+- [Accès de type sécurisé aux contrôles à l’aide des assistants code](type-safe-access-to-controls-with-code-wizards.md)
 
 - Contrôles individuels : consultez [contrôles](controls-mfc.md) pour obtenir des liens vers tous les contrôles communs
 
@@ -43,4 +44,4 @@ Vous définissez la plupart des contrôles pour les boîtes de dialogue dans l' 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

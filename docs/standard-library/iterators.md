@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : itérateurs'
 title: Iterators
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: c3bb2825ec6ad98f523fa4c3a616d0807eac50a8
-ms.sourcegitcommit: 5ef9697b4cb1947bec9669be57bc920d2c4d82a6
+ms.openlocfilehash: 98263f69c49e0d645106e1ce29e6bb1a4330acea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87870150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112243"
 ---
 # <a name="iterators"></a>Iterators
 

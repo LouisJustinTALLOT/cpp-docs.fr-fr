@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : impression'
 title: Impression
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: 3d2ef494be66171cbcbf2b8b9e19c29c8bdc5c2f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0cb4455b2de27d7b609226099b00a37dc8175db6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154862"
 ---
 # <a name="printing"></a>Impression
 
 Microsoft Windows implémente l’affichage indépendant du périphérique. Dans MFC, cela signifie que les mêmes appels de dessin, dans la `OnDraw` fonction membre de votre classe d’affichage, sont responsables du dessin sur l’affichage et sur d’autres périphériques, tels que les imprimantes. Pour l’aperçu avant impression, l’appareil cible est une sortie d’imprimante simulée à l’écran.
 
-## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>Votre rôle dans l’impression et le rôle de l’infrastructure
+## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Votre rôle dans l’impression et le rôle de l’infrastructure
 
 Votre classe d’affichage a les responsabilités suivantes :
 
@@ -46,7 +47,7 @@ Les articles suivants expliquent comment le Framework prend en charge l’impres
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Comment l’impression par défaut est effectuée](how-default-printing-is-done.md)
+- [Comment exécuter l’impression par défaut](how-default-printing-is-done.md)
 
 - [Documents multipages](multipage-documents.md)
 

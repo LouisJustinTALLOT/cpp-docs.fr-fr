@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlAutoThreadModuleT'
 title: CAtlAutoThreadModuleT, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-ms.openlocfilehash: 7308e3a51c531fbe942e2df326c03273eeb326e2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: ad55c78488567c12477c427b99a527b8154ddd22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168721"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158411"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT, classe
 
@@ -52,7 +53,7 @@ Spécifie l’intervalle de délai d’attente, en millisecondes. La valeur par 
 
 ## <a name="remarks"></a>Notes
 
-La classe [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) dérive `CAtlAutoThreadModuleT` de pour IMPLÉMENTer un serveur com à pool de threads et de modèle Apartment. Il remplace la classe obsolète [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+La classe [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) dérive de `CAtlAutoThreadModuleT` pour implémenter un serveur com à pool de threads et de modèle Apartment. Il remplace la classe obsolète [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
 
 > [!NOTE]
 > Cette classe ne doit pas être utilisée dans une DLL, car la valeur *dwWait* par défaut Infinite provoque un interblocage lorsque la dll est déchargée.
@@ -67,7 +68,7 @@ La classe [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.
 
 **En-tête :** atlbase. h
 
-## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads
+## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a> CAtlAutoThreadModuleT::GetDefaultThreads
 
 Cette fonction statique calcule dynamiquement et retourne le nombre maximal de threads pour le module EXE, en fonction du nombre de processeurs.
 
@@ -75,7 +76,7 @@ Cette fonction statique calcule dynamiquement et retourne le nombre maximal de t
 static int GetDefaultThreads();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de threads à créer dans le module EXE.
 

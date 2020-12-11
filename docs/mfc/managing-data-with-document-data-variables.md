@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestion des données avec les variables de données de document'
 title: Gestion des données avec variables de données de document
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - document data [MFC]
 - member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
-ms.openlocfilehash: 3d845b0fc3d00369d44c21c04a3fb7e3b8d6189e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d05bfe71d080c08b3e0f3bbd416421e612b5d7ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112204"
 ---
 # <a name="managing-data-with-document-data-variables"></a>Gestion des données avec variables de données de document
 

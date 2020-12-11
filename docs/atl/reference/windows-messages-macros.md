@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les macros de messages Windows
 title: Macros de messages Windows
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: b4cd3c2eea24449eb17050b147d9c59560d8358f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: be5913c5eaa88ca0020a978f2b3f6686a6756715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834438"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157579"
 ---
 # <a name="windows-messages-macros"></a>Macros de messages Windows
 
@@ -19,7 +20,7 @@ Cette macro transfère les messages de fenêtre.
 |-|-|
 |[WM_FORWARDMSG](#wm_forwardmsg)|Utilisez pour transférer un message reçu par une fenêtre à une autre fenêtre en vue de son traitement.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 

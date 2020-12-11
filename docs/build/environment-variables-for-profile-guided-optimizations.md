@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les variables d’environnement pour les optimisations de Profile-Guided
 title: Variables d'environnement pour les optimisations guidées par profil
 ms.date: 03/14/2018
 helpviewer_keywords:
 - profile-guided optimizations, environment variables
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
-ms.openlocfilehash: 099e57f1ac69223adafe7bec1af4cc3452915e86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd78db781fc19b7ecfd451e01dc046b21bd87d11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156669"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Variables d'environnement pour les optimisations guidées par profil
 
@@ -21,7 +22,7 @@ Il existe trois variables d’environnement qui affectent les scénarios de test
 
 - **VCPROFILE_PATH** vous permet de spécifier le dossier utilisé pour les fichiers. PGC.
 
-**Les variables d’environnement PogoSafeMode et VCPROFILE_ALLOC_SCALE sont déconseillées à partir de Visual Studio 2015.** Les options de l’éditeur de liens [/GENPROFILE ou/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) et [/USEPROFILE](reference/useprofile.md) spécifient le même comportement de l’éditeur de liens que ces variables d’environnement.
+**Les variables d’environnement PogoSafeMode et VCPROFILE_ALLOC_SCALE sont déconseillées à partir de Visual Studio 2015.** Les options de l’éditeur de liens [/GENPROFILE ou/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) et  [/USEPROFILE](reference/useprofile.md) spécifient le même comportement de l’éditeur de liens que ces variables d’environnement.
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
@@ -37,7 +38,7 @@ Pour exécuter le profilage PGO en mode sans échec, vous devez utiliser la vari
 
 ### <a name="pogosafemode-syntax"></a>Syntaxe PogoSafeMode
 
-> **définir PogoSafeMode**[**=**_valeur_]
+> **définir PogoSafeMode**[ **=** _valeur_]
 
 Définissez **PogoSafeMode** sur n’importe quelle valeur pour activer le mode sans échec. Définissez sans valeur pour effacer une valeur précédente et réactiver le mode rapide.
 
@@ -49,7 +50,7 @@ Modifiez la variable d’environnement **VCPROFILE_ALLOC_SCALE** pour modifier l
 
 ### <a name="vcprofile_alloc_scale-syntax"></a>Syntaxe de VCPROFILE_ALLOC_SCALE
 
-> **définir VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **définir VCPROFILE_ALLOC_SCALE**[ __=__ *scale_value*]
 
 Le paramètre *scale_value* est un facteur d’échelle pour la quantité de mémoire que vous souhaitez pour exécuter des scénarios de test.  La valeur par défaut est 1. Par exemple, cette ligne de commande définit le facteur d’échelle sur 2 :
 
@@ -61,7 +62,7 @@ Utilisez la variable d’environnement **VCPROFILE_PATH** pour spécifier le ré
 
 ### <a name="vcprofile_path-syntax"></a>Syntaxe de VCPROFILE_PATH
 
-> **Set VCPROFILE_PATH**[**=**_chemin_]
+> **Set VCPROFILE_PATH**[ **=** _chemin_]
 
 Définissez le paramètre *path* sur le chemin d’accès du répertoire dans lequel ajouter les fichiers. PGC. Par exemple, cette ligne de commande définit le dossier C:\profile :
 

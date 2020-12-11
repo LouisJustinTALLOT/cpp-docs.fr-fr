@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : générer des applications isolées pour consommer des composants COM'
 title: 'Comment : générer des applications isolées pour consommer des composants COM'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
-ms.openlocfilehash: 8ae3c51502267f202cbb85ea7be2a81dc3310410
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 31a54683974b8539724ecee24aa45917674a6e82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493233"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156383"
 ---
 # <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Comment : générer des applications isolées pour consommer des composants COM
 

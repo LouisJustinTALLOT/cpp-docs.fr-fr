@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Caccesstoken,'
 title: Caccesstoken,, classe
 ms.date: 07/02/2019
 f1_keywords:
@@ -52,12 +53,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 93e7d6b3bbd26a765e49791a1122cba2a68f6565
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: fdcef40948a19c5ffb69aa32b18566280d048697
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158541"
 ---
 # <a name="caccesstoken-class"></a>Caccesstoken,, classe
 
@@ -88,7 +89,7 @@ class CAccessToken
 |[Caccesstoken, :: CheckTokenMembership](#checktokenmembership)|Appelez cette méthode pour déterminer si un SID spécifié est activé dans l' `CAccessToken` objet.|
 |[Caccesstoken, :: CreateImpersonationToken](#createimpersonationtoken)|Appelez cette méthode pour créer un nouveau jeton d’accès d’emprunt d’identité.|
 |[Caccesstoken, :: CreatePrimaryToken](#createprimarytoken)|Appelez cette méthode pour créer un jeton principal.|
-|[Caccesstoken, :: CreateProcessAsUser](#createprocessasuser)|Appelez cette méthode pour créer un nouveau processus qui s’exécute dans le contexte de sécurité de l’utilisateur `CAccessToken` représenté par l’objet.|
+|[Caccesstoken, :: CreateProcessAsUser](#createprocessasuser)|Appelez cette méthode pour créer un nouveau processus qui s’exécute dans le contexte de sécurité de l’utilisateur représenté par l' `CAccessToken` objet.|
 |[Caccesstoken, :: CreateRestrictedToken](#createrestrictedtoken)|Appelez cette méthode pour créer un nouvel objet restreint `CAccessToken` .|
 |[Caccesstoken, ::D Etach](#detach)|Appelez cette méthode pour révoquer la propriété du jeton d’accès.|
 |[Caccesstoken, ::D isablePrivilege](#disableprivilege)|Appelez cette méthode pour désactiver un privilège dans l' `CAccessToken` objet.|
@@ -100,33 +101,33 @@ class CAccessToken
 |[Caccesstoken, :: GetGroups](#getgroups)|Appelez cette méthode pour retourner les `CAccessToken` groupes de jetons de l’objet.|
 |[Caccesstoken, :: GetHandle](#gethandle)|Appelez cette méthode pour récupérer un handle du jeton d’accès.|
 |[Caccesstoken, :: GetImpersonationLevel](#getimpersonationlevel)|Appelez cette méthode pour récupérer le niveau d’emprunt d’identité à partir du jeton d’accès.|
-|[Caccesstoken, :: GetLogonSessionId](#getlogonsessionid)|Appelez cette méthode pour récupérer l’ID de session d’ouverture de `CAccessToken` session associé à l’objet.|
-|[Caccesstoken, :: GetLogonSid](#getlogonsid)|Appelez cette méthode pour récupérer le SID d’ouverture de session `CAccessToken` associé à l’objet.|
-|[Caccesstoken, :: GetOwner](#getowner)|Appelez cette méthode pour que le propriétaire soit associé à `CAccessToken` l’objet.|
+|[Caccesstoken, :: GetLogonSessionId](#getlogonsessionid)|Appelez cette méthode pour récupérer l’ID de session d’ouverture de session associé à l' `CAccessToken` objet.|
+|[Caccesstoken, :: GetLogonSid](#getlogonsid)|Appelez cette méthode pour récupérer le SID d’ouverture de session associé à l' `CAccessToken` objet.|
+|[Caccesstoken, :: GetOwner](#getowner)|Appelez cette méthode pour que le propriétaire soit associé à l' `CAccessToken` objet.|
 |[Caccesstoken, :: GetPrimaryGroup](#getprimarygroup)|Appelez cette méthode pour récupérer le groupe principal associé à l' `CAccessToken` objet.|
 |[Caccesstoken, :: GetPrivileges](#getprivileges)|Appelez cette méthode pour récupérer les privilèges associés à l' `CAccessToken` objet.|
 |[Caccesstoken, :: GetProcessToken](#getprocesstoken)|Appelez cette méthode pour initialiser `CAccessToken` avec le jeton d’accès à partir du processus donné.|
-|[Caccesstoken, :: GetProfile](#getprofile)|Appelez cette méthode pour faire en sorte que le handle pointe vers le profil utilisateur `CAccessToken` associé à l’objet.|
+|[Caccesstoken, :: GetProfile](#getprofile)|Appelez cette méthode pour faire en sorte que le handle pointe vers le profil utilisateur associé à l' `CAccessToken` objet.|
 |[Caccesstoken, :: GetSource](#getsource)|Appelez cette méthode pour récupérer la source de l' `CAccessToken` objet.|
-|[Caccesstoken, :: GetStatistics](#getstatistics)|Appelez cette méthode pour récupérer les informations associées à `CAccessToken` l’objet.|
-|[Caccesstoken, :: GetTerminalServicesSessionId](#getterminalservicessessionid)|Appelez cette méthode pour récupérer l’ID de session des services Terminal Server `CAccessToken` associé à l’objet.|
+|[Caccesstoken, :: GetStatistics](#getstatistics)|Appelez cette méthode pour récupérer les informations associées à l' `CAccessToken` objet.|
+|[Caccesstoken, :: GetTerminalServicesSessionId](#getterminalservicessessionid)|Appelez cette méthode pour récupérer l’ID de session des services Terminal Server associé à l' `CAccessToken` objet.|
 |[Caccesstoken, :: GetThreadToken](#getthreadtoken)|Appelez cette méthode pour initialiser `CAccessToken` avec le jeton à partir du thread donné.|
-|[Caccesstoken, :: GetTokenId](#gettokenid)|Appelez cette méthode pour récupérer l’ID de jeton associé à `CAccessToken` l’objet.|
-|[Caccesstoken, :: GetType](#gettype)|Appelez cette méthode pour récupérer le type de jeton de `CAccessToken` l’objet.|
+|[Caccesstoken, :: GetTokenId](#gettokenid)|Appelez cette méthode pour récupérer l’ID de jeton associé à l' `CAccessToken` objet.|
+|[Caccesstoken, :: GetType](#gettype)|Appelez cette méthode pour récupérer le type de jeton de l' `CAccessToken` objet.|
 |[Caccesstoken, :: GetUser](#getuser)|Appelez cette méthode pour identifier l’utilisateur associé à l' `CAccessToken` objet.|
-|[Caccesstoken, :: HKeyCurrentUser](#hkeycurrentuser)|Appelez cette méthode pour faire en sorte que le handle pointe vers le profil utilisateur `CAccessToken` associé à l’objet.|
+|[Caccesstoken, :: HKeyCurrentUser](#hkeycurrentuser)|Appelez cette méthode pour faire en sorte que le handle pointe vers le profil utilisateur associé à l' `CAccessToken` objet.|
 |[Caccesstoken, :: Impersonate](#impersonate)|Appelez cette méthode pour assigner un emprunt `CAccessToken` d’identité à un thread.|
 |[Caccesstoken, :: ImpersonateLoggedOnUser](#impersonateloggedonuser)|Appelez cette méthode pour autoriser le thread appelant à emprunter l’identité du contexte de sécurité d’un utilisateur connecté.|
 |[Caccesstoken, :: IsTokenRestricted](#istokenrestricted)|Appelez cette méthode pour vérifier si l' `CAccessToken` objet contient une liste de sid restreints.|
 |[Caccesstoken, :: LoadUserProfile](#loaduserprofile)|Appelez cette méthode pour charger le profil utilisateur associé à l' `CAccessToken` objet.|
 |[Caccesstoken, :: LogonUser](#logonuser)|Appelez cette méthode pour créer une session d’ouverture de session pour l’utilisateur associé aux informations d’identification données.|
 |[Caccesstoken, :: OpenCOMClientToken](#opencomclienttoken)|Appelez cette méthode à partir d’un serveur COM qui gère un appel d’un client pour initialiser `CAccessToken` avec le jeton d’accès à partir du client com.|
-|[Caccesstoken, :: OpenNamedPipeClientToken](#opennamedpipeclienttoken)|Appelez cette méthode à partir d’un serveur effectuant des requêtes sur un canal nommé pour `CAccessToken` initialiser le avec le jeton d’accès du client.|
+|[Caccesstoken, :: OpenNamedPipeClientToken](#opennamedpipeclienttoken)|Appelez cette méthode à partir d’un serveur effectuant des requêtes sur un canal nommé pour initialiser le `CAccessToken` avec le jeton d’accès du client.|
 |[Caccesstoken, :: OpenRPCClientToken](#openrpcclienttoken)|Appelez cette méthode à partir d’un serveur qui gère un appel d’un client RPC pour initialiser `CAccessToken` avec le jeton d’accès à partir du client.|
 |[Caccesstoken, :: OpenThreadToken](#openthreadtoken)|Appelez cette méthode pour définir le niveau d’emprunt d’identité, puis initialisez `CAccessToken` avec le jeton à partir du thread donné.|
 |[Caccesstoken, ::P rivilegeCheck](#privilegecheck)|Appelez cette méthode pour déterminer si un jeu de privilèges spécifié est activé dans l' `CAccessToken` objet.|
 |[Caccesstoken, :: Revert](#revert)|Appelez cette méthode pour arrêter un thread qui utilise un jeton d’emprunt d’identité.|
-|[Caccesstoken, :: SetDefaultDacl](#setdefaultdacl)|Appelez cette méthode pour définir la DACL par défaut de `CAccessToken` l’objet.|
+|[Caccesstoken, :: SetDefaultDacl](#setdefaultdacl)|Appelez cette méthode pour définir la DACL par défaut de l' `CAccessToken` objet.|
 |[Caccesstoken, :: SetOwner](#setowner)|Appelez cette méthode pour définir le propriétaire de l' `CAccessToken` objet.|
 |[Caccesstoken, :: SetPrimaryGroup](#setprimarygroup)|Appelez cette méthode pour définir le groupe principal de l' `CAccessToken` objet.|
 
@@ -140,7 +141,7 @@ Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, 
 
 **En-tête :** ATLSecurity. h
 
-## <a name="caccesstokenattach"></a><a name="attach"></a>Caccesstoken, :: Attach
+## <a name="caccesstokenattach"></a><a name="attach"></a> Caccesstoken, :: Attach
 
 Appelez cette méthode pour prendre possession du handle de jeton d’accès donné.
 
@@ -155,9 +156,9 @@ Handle du jeton d’accès.
 
 ### <a name="remarks"></a>Notes
 
-Dans les versions Debug, une erreur d’assertion se produit `CAccessToken` si l’objet a déjà la propriété d’un jeton d’accès.
+Dans les versions Debug, une erreur d’assertion se produit si l' `CAccessToken` objet a déjà la propriété d’un jeton d’accès.
 
-## <a name="caccesstokencaccesstoken"></a><a name="dtor"></a>Caccesstoken, :: ~ Caccesstoken,
+## <a name="caccesstokencaccesstoken"></a><a name="dtor"></a> Caccesstoken, :: ~ Caccesstoken,
 
 Destructeur.
 
@@ -169,7 +170,7 @@ virtual ~CAccessToken() throw();
 
 Libère toutes les ressources allouées.
 
-## <a name="caccesstokenchecktokenmembership"></a><a name="checktokenmembership"></a>Caccesstoken, :: CheckTokenMembership
+## <a name="caccesstokenchecktokenmembership"></a><a name="checktokenmembership"></a> Caccesstoken, :: CheckTokenMembership
 
 Appelez cette méthode pour déterminer si un SID spécifié est activé dans l' `CAccessToken` objet.
 
@@ -187,7 +188,7 @@ Référence à un objet de [classe CSID](../../atl/reference/csid-class.md) .
 *pbIsMember*<br/>
 Pointeur vers une variable qui reçoit les résultats de la vérification.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -200,7 +201,7 @@ Dans les versions Debug, une erreur d’assertion se produit si *pbIsMember* n�
 > [!NOTE]
 > L' `CAccessToken` objet doit être un jeton d’emprunt d’identité et non un jeton principal.
 
-## <a name="caccesstokencreateimpersonationtoken"></a><a name="createimpersonationtoken"></a>Caccesstoken, :: CreateImpersonationToken
+## <a name="caccesstokencreateimpersonationtoken"></a><a name="createimpersonationtoken"></a> Caccesstoken, :: CreateImpersonationToken
 
 Appelez cette méthode pour créer un jeton d’accès d’emprunt d’identité.
 
@@ -218,15 +219,15 @@ Pointeur vers le nouvel `CAccessToken` objet.
 *SIL*<br/>
 Spécifie un [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) type énuméré qui fournit le niveau d’emprunt d’identité du nouveau jeton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-`CreateImpersonationToken`appelle [DuplicateToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) pour créer un jeton d’emprunt d’identité.
+`CreateImpersonationToken` appelle [DuplicateToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) pour créer un jeton d’emprunt d’identité.
 
-## <a name="caccesstokencreateprimarytoken"></a><a name="createprimarytoken"></a>Caccesstoken, :: CreatePrimaryToken
+## <a name="caccesstokencreateprimarytoken"></a><a name="createprimarytoken"></a> Caccesstoken, :: CreatePrimaryToken
 
 Appelez cette méthode pour créer un jeton principal.
 
@@ -248,17 +249,17 @@ Spécifie les droits d’accès demandés pour le nouveau jeton. La valeur par d
 *pTokenAttributes*<br/>
 Pointeur vers une structure [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) qui spécifie un descripteur de sécurité pour le nouveau jeton et détermine si les processus enfants peuvent hériter du jeton. Si *pTokenAttributes* a la valeur null, le jeton obtient un descripteur de sécurité par défaut et le descripteur ne peut pas être hérité.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-`CreatePrimaryToken`appelle [DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) pour créer un jeton principal.
+`CreatePrimaryToken` appelle [DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) pour créer un jeton principal.
 
-## <a name="caccesstokencreateprocessasuser"></a><a name="createprocessasuser"></a>Caccesstoken, :: CreateProcessAsUser
+## <a name="caccesstokencreateprocessasuser"></a><a name="createprocessasuser"></a> Caccesstoken, :: CreateProcessAsUser
 
-Appelez cette méthode pour créer un nouveau processus qui s’exécute dans le contexte de sécurité de l’utilisateur `CAccessToken` représenté par l’objet.
+Appelez cette méthode pour créer un nouveau processus qui s’exécute dans le contexte de sécurité de l’utilisateur représenté par l' `CAccessToken` objet.
 
 ```cpp
 bool CreateProcessAsUser(
@@ -306,17 +307,17 @@ Indique si le nouveau processus hérite des handles du processus appelant. Si la
 *pCurrentDirectory*<br/>
 Pointeur vers une chaîne se terminant par un caractère null qui spécifie le lecteur et le répertoire actifs pour le nouveau processus. La chaîne doit être un chemin d’accès complet qui comprend une lettre de lecteur. Si ce paramètre a la valeur NULL, le nouveau processus aura le même lecteur et le même répertoire en cours que le processus appelant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-`CreateProcessAsUser`utilise la `CreateProcessAsUser` fonction Win32 pour créer un nouveau processus qui s’exécute dans le contexte de sécurité de l’utilisateur représenté `CAccessToken` par l’objet. Consultez la description de la fonction [CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) pour une discussion complète sur les paramètres requis.
+`CreateProcessAsUser` utilise la `CreateProcessAsUser` fonction Win32 pour créer un nouveau processus qui s’exécute dans le contexte de sécurité de l’utilisateur représenté par l' `CAccessToken` objet. Consultez la description de la fonction [CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) pour une discussion complète sur les paramètres requis.
 
-Pour que cette méthode aboutisse, `CAccessToken` l’objet doit contenir AssignPrimaryToken (sauf s’il s’agit d’un jeton restreint) et des privilèges IncreaseQuota.
+Pour que cette méthode aboutisse, l' `CAccessToken` objet doit contenir AssignPrimaryToken (sauf s’il s’agit d’un jeton restreint) et des privilèges IncreaseQuota.
 
-## <a name="caccesstokencreaterestrictedtoken"></a><a name="createrestrictedtoken"></a>Caccesstoken, :: CreateRestrictedToken
+## <a name="caccesstokencreaterestrictedtoken"></a><a name="createrestrictedtoken"></a> Caccesstoken, :: CreateRestrictedToken
 
 Appelez cette méthode pour créer un nouvel objet restreint `CAccessToken` .
 
@@ -331,29 +332,29 @@ bool CreateRestrictedToken(
 ### <a name="parameters"></a>Paramètres
 
 *pRestrictedToken*<br/>
-Nouvel objet restreint `CAccessToken` .
+Nouvel `CAccessToken` objet restreint.
 
 *SidsToDisable*<br/>
-`CTokenGroups` Objet qui spécifie les SID en refus seul.
+`CTokenGroups`Objet qui spécifie les SID en refus seul.
 
 *SidsToRestrict*<br/>
-`CTokenGroups` Objet qui spécifie les SID de restriction.
+`CTokenGroups`Objet qui spécifie les SID de restriction.
 
 *PrivilegesToDelete*<br/>
-`CTokenPrivileges` Objet qui spécifie les privilèges à supprimer dans le jeton restreint. La valeur par défaut crée un objet vide.
+`CTokenPrivileges`Objet qui spécifie les privilèges à supprimer dans le jeton restreint. La valeur par défaut crée un objet vide.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-`CreateRestrictedToken`utilise la fonction Win32 [CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) pour créer un nouvel `CAccessToken` objet, avec des restrictions.
+`CreateRestrictedToken` utilise la fonction Win32 [CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) pour créer un nouvel `CAccessToken` objet, avec des restrictions.
 
 > [!IMPORTANT]
-> Lors de `CreateRestrictedToken`l’utilisation de, vérifiez les points suivants : le jeton existant est valide (et n’est pas entré par l’utilisateur) et *SidsToDisable* et *PrivilegesToDelete* sont tous les deux valides (et ne sont pas entrés par l’utilisateur). Si la méthode retourne la valeur FALSe, refuser la fonctionnalité.
+> Lors de l’utilisation `CreateRestrictedToken` de, vérifiez les points suivants : le jeton existant est valide (et n’est pas entré par l’utilisateur) et *SidsToDisable* et *PrivilegesToDelete* sont tous les deux valides (et ne sont pas entrés par l’utilisateur). Si la méthode retourne la valeur FALSe, refuser la fonctionnalité.
 
-## <a name="caccesstokendetach"></a><a name="detach"></a>Caccesstoken, ::D Etach
+## <a name="caccesstokendetach"></a><a name="detach"></a> Caccesstoken, ::D Etach
 
 Appelez cette méthode pour révoquer la propriété du jeton d’accès.
 
@@ -361,15 +362,15 @@ Appelez cette méthode pour révoquer la propriété du jeton d’accès.
 HANDLE Detach() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le handle vers le `CAccessToken` qui a été détaché.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode révoque la `CAccessToken`propriété du jeton d’accès.
+Cette méthode révoque la `CAccessToken` propriété du jeton d’accès.
 
-## <a name="caccesstokendisableprivilege"></a><a name="disableprivilege"></a>Caccesstoken, ::D isablePrivilege
+## <a name="caccesstokendisableprivilege"></a><a name="disableprivilege"></a> Caccesstoken, ::D isablePrivilege
 
 Appelez cette méthode pour désactiver un privilège dans l' `CAccessToken` objet.
 
@@ -387,11 +388,11 @@ Pointeur vers une chaîne contenant le privilège à désactiver dans l' `CAcces
 *pPreviousState*<br/>
 Pointeur vers un `CTokenPrivileges` objet qui va contenir l’état précédent des privilèges.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokendisableprivileges"></a><a name="disableprivileges"></a>Caccesstoken, ::D isablePrivileges
+## <a name="caccesstokendisableprivileges"></a><a name="disableprivileges"></a> Caccesstoken, ::D isablePrivileges
 
 Appelez cette méthode pour désactiver un ou plusieurs privilèges dans l' `CAccessToken` objet.
 
@@ -409,11 +410,11 @@ Pointeur vers un tableau de chaînes contenant les privilèges à désactiver da
 *pPreviousState*<br/>
 Pointeur vers un `CTokenPrivileges` objet qui va contenir l’état précédent des privilèges.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokenenableprivilege"></a><a name="enableprivilege"></a>Caccesstoken, :: EnablePrivilege
+## <a name="caccesstokenenableprivilege"></a><a name="enableprivilege"></a> Caccesstoken, :: EnablePrivilege
 
 Appelez cette méthode pour activer un privilège dans l' `CAccessToken` objet.
 
@@ -431,11 +432,11 @@ Pointeur vers une chaîne contenant le privilège à activer dans l' `CAccessTok
 *pPreviousState*<br/>
 Pointeur vers un `CTokenPrivileges` objet qui va contenir l’état précédent des privilèges.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokenenableprivileges"></a><a name="enableprivileges"></a>Caccesstoken, :: EnablePrivileges
+## <a name="caccesstokenenableprivileges"></a><a name="enableprivileges"></a> Caccesstoken, :: EnablePrivileges
 
 Appelez cette méthode pour activer un ou plusieurs privilèges dans l' `CAccessToken` objet.
 
@@ -453,11 +454,11 @@ Pointeur vers un tableau de chaînes contenant les privilèges à activer dans l
 *pPreviousState*<br/>
 Pointeur vers un `CTokenPrivileges` objet qui va contenir l’état précédent des privilèges.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengetdefaultdacl"></a><a name="getdefaultdacl"></a>Caccesstoken, :: GetDefaultDacl
+## <a name="caccesstokengetdefaultdacl"></a><a name="getdefaultdacl"></a> Caccesstoken, :: GetDefaultDacl
 
 Appelez cette méthode pour retourner la `CAccessToken` liste DACL par défaut de l’objet.
 
@@ -468,13 +469,13 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *pDacl*<br/>
-Pointeur vers l’objet de [classe CDacl](../../atl/reference/cdacl-class.md) qui recevra `CAccessToken` la liste DACL par défaut de l’objet.
+Pointeur vers l’objet de [classe CDacl](../../atl/reference/cdacl-class.md) qui recevra la `CAccessToken` liste DACL par défaut de l’objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si la DACL par défaut a été récupérée ; sinon, FALSe.
 
-## <a name="caccesstokengeteffectivetoken"></a><a name="geteffectivetoken"></a>Caccesstoken, :: GetEffectiveToken
+## <a name="caccesstokengeteffectivetoken"></a><a name="geteffectivetoken"></a> Caccesstoken, :: GetEffectiveToken
 
 Appelez cette méthode pour obtenir l' `CAccessToken` objet égal au jeton d’accès en vigueur pour le thread actuel.
 
@@ -487,11 +488,11 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 *dwDesiredAccess*<br/>
 Spécifie un masque d’accès qui spécifie les types d’accès demandés au jeton d’accès. Ces types d’accès demandés sont comparés à la liste DACL du jeton pour déterminer quels accès sont accordés ou refusés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengetgroups"></a><a name="getgroups"></a>Caccesstoken, :: GetGroups
+## <a name="caccesstokengetgroups"></a><a name="getgroups"></a> Caccesstoken, :: GetGroups
 
 Appelez cette méthode pour retourner les `CAccessToken` groupes de jetons de l’objet.
 
@@ -504,11 +505,11 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 *pGroups*<br/>
 Pointeur vers l’objet de [classe CTokenGroups](../../atl/reference/ctokengroups-class.md) qui recevra les informations de groupe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengethandle"></a><a name="gethandle"></a>Caccesstoken, :: GetHandle
+## <a name="caccesstokengethandle"></a><a name="gethandle"></a> Caccesstoken, :: GetHandle
 
 Appelez cette méthode pour récupérer un handle du jeton d’accès.
 
@@ -516,11 +517,11 @@ Appelez cette méthode pour récupérer un handle du jeton d’accès.
 HANDLE GetHandle() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un handle pour le `CAccessToken` jeton d’accès de l’objet.
 
-## <a name="caccesstokengetimpersonationlevel"></a><a name="getimpersonationlevel"></a>Caccesstoken, :: GetImpersonationLevel
+## <a name="caccesstokengetimpersonationlevel"></a><a name="getimpersonationlevel"></a> Caccesstoken, :: GetImpersonationLevel
 
 Appelez cette méthode pour récupérer le niveau d’emprunt d’identité à partir du jeton d’accès.
 
@@ -534,13 +535,13 @@ bool GetImpersonationLevel(
 *pImpersonationLevel*<br/>
 Pointeur vers un type d’énumération [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) qui recevra les informations de niveau d’emprunt d’identité.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengetlogonsessionid"></a><a name="getlogonsessionid"></a>Caccesstoken, :: GetLogonSessionId
+## <a name="caccesstokengetlogonsessionid"></a><a name="getlogonsessionid"></a> Caccesstoken, :: GetLogonSessionId
 
-Appelez cette méthode pour récupérer l’ID de session d’ouverture de `CAccessToken` session associé à l’objet.
+Appelez cette méthode pour récupérer l’ID de session d’ouverture de session associé à l' `CAccessToken` objet.
 
 ```cpp
 bool GetLogonSessionId(LUID* pluid) const throw(...);
@@ -551,7 +552,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 *pluid*<br/>
 Pointeur vers un [LUID](/windows/win32/api/winnt/ns-winnt-luid) qui recevra l’ID de session de connexion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -559,9 +560,9 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Dans les versions Debug, une erreur d’assertion se produit si *pluid* est une valeur non valide.
 
-## <a name="caccesstokengetlogonsid"></a><a name="getlogonsid"></a>Caccesstoken, :: GetLogonSid
+## <a name="caccesstokengetlogonsid"></a><a name="getlogonsid"></a> Caccesstoken, :: GetLogonSid
 
-Appelez cette méthode pour récupérer le SID d’ouverture de session `CAccessToken` associé à l’objet.
+Appelez cette méthode pour récupérer le SID d’ouverture de session associé à l' `CAccessToken` objet.
 
 ```cpp
 bool GetLogonSid(CSid* pSid) const throw(...);
@@ -572,7 +573,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 *pSid*<br/>
 Pointeur vers un objet de [classe CSID](../../atl/reference/csid-class.md) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -580,9 +581,9 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Dans les versions Debug, une erreur d’assertion se produit si *pSid* est une valeur non valide.
 
-## <a name="caccesstokengetowner"></a><a name="getowner"></a>Caccesstoken, :: GetOwner
+## <a name="caccesstokengetowner"></a><a name="getowner"></a> Caccesstoken, :: GetOwner
 
-Appelez cette méthode pour que le propriétaire soit associé à `CAccessToken` l’objet.
+Appelez cette méthode pour que le propriétaire soit associé à l' `CAccessToken` objet.
 
 ```cpp
 bool GetOwner(CSid* pSid) const throw(...);
@@ -593,7 +594,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 *pSid*<br/>
 Pointeur vers un objet de [classe CSID](../../atl/reference/csid-class.md) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -601,7 +602,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Le propriétaire est défini par défaut sur tous les objets créés pendant que ce jeton d’accès est en vigueur.
 
-## <a name="caccesstokengetprimarygroup"></a><a name="getprimarygroup"></a>Caccesstoken, :: GetPrimaryGroup
+## <a name="caccesstokengetprimarygroup"></a><a name="getprimarygroup"></a> Caccesstoken, :: GetPrimaryGroup
 
 Appelez cette méthode pour récupérer le groupe principal associé à l' `CAccessToken` objet.
 
@@ -614,7 +615,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 *pSid*<br/>
 Pointeur vers un objet de [classe CSID](../../atl/reference/csid-class.md) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -622,7 +623,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Le groupe est défini par défaut sur tous les objets créés pendant que ce jeton d’accès est en vigueur.
 
-## <a name="caccesstokengetprivileges"></a><a name="getprivileges"></a>Caccesstoken, :: GetPrivileges
+## <a name="caccesstokengetprivileges"></a><a name="getprivileges"></a> Caccesstoken, :: GetPrivileges
 
 Appelez cette méthode pour récupérer les privilèges associés à l' `CAccessToken` objet.
 
@@ -635,11 +636,11 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 *pPrivileges*<br/>
 Pointeur vers un objet de [classe CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md) qui recevra les privilèges.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengetprocesstoken"></a><a name="getprocesstoken"></a>Caccesstoken, :: GetProcessToken
+## <a name="caccesstokengetprocesstoken"></a><a name="getprocesstoken"></a> Caccesstoken, :: GetProcessToken
 
 Appelez cette méthode pour initialiser `CAccessToken` avec le jeton d’accès à partir du processus donné.
 
@@ -655,7 +656,7 @@ Spécifie un masque d’accès qui spécifie les types d’accès demandés au j
 *hProcess*<br/>
 Handle vers le processus dont le jeton d’accès est ouvert. Si la valeur par défaut NULL est utilisée, le processus actuel est utilisé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -663,19 +664,19 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Appelle la fonction Win32 [OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) .
 
-## <a name="caccesstokengetprofile"></a><a name="getprofile"></a>Caccesstoken, :: GetProfile
+## <a name="caccesstokengetprofile"></a><a name="getprofile"></a> Caccesstoken, :: GetProfile
 
-Appelez cette méthode pour faire en sorte que le handle pointe vers le profil utilisateur `CAccessToken` associé à l’objet.
+Appelez cette méthode pour faire en sorte que le handle pointe vers le profil utilisateur associé à l' `CAccessToken` objet.
 
 ```cpp
 HANDLE GetProfile() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un handle pointant vers le profil utilisateur, ou NULL s’il n’existe aucun profil.
 
-## <a name="caccesstokengetsource"></a><a name="getsource"></a>Caccesstoken, :: GetSource
+## <a name="caccesstokengetsource"></a><a name="getsource"></a> Caccesstoken, :: GetSource
 
 Appelez cette méthode pour récupérer la source de l' `CAccessToken` objet.
 
@@ -688,13 +689,13 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 *pSource*<br/>
 Pointeur vers une structure [TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengetstatistics"></a><a name="getstatistics"></a>Caccesstoken, :: GetStatistics
+## <a name="caccesstokengetstatistics"></a><a name="getstatistics"></a> Caccesstoken, :: GetStatistics
 
-Appelez cette méthode pour récupérer les informations associées à `CAccessToken` l’objet.
+Appelez cette méthode pour récupérer les informations associées à l' `CAccessToken` objet.
 
 ```cpp
 bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
@@ -705,13 +706,13 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 *pStatistics*<br/>
 Pointeur vers une structure [TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengetterminalservicessessionid"></a><a name="getterminalservicessessionid"></a>Caccesstoken, :: GetTerminalServicesSessionId
+## <a name="caccesstokengetterminalservicessessionid"></a><a name="getterminalservicessessionid"></a> Caccesstoken, :: GetTerminalServicesSessionId
 
-Appelez cette méthode pour récupérer l’ID de session des services Terminal Server `CAccessToken` associé à l’objet.
+Appelez cette méthode pour récupérer l’ID de session des services Terminal Server associé à l' `CAccessToken` objet.
 
 ```cpp
 bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
@@ -722,11 +723,11 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 *pdwSessionId*<br/>
 ID de session des services Terminal Server.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengetthreadtoken"></a><a name="getthreadtoken"></a>Caccesstoken, :: GetThreadToken
+## <a name="caccesstokengetthreadtoken"></a><a name="getthreadtoken"></a> Caccesstoken, :: GetThreadToken
 
 Appelez cette méthode pour initialiser `CAccessToken` avec le jeton à partir du thread donné.
 
@@ -746,17 +747,17 @@ Spécifie un masque d’accès qui spécifie les types d’accès demandés au j
 Handle vers le thread dont le jeton d’accès est ouvert.
 
 *bOpenAsSelf*<br/>
-Indique si la vérification de l’accès doit être effectuée par rapport au contexte de sécurité du thread `GetThreadToken` appelant la méthode ou par rapport au contexte de sécurité du processus pour le thread appelant.
+Indique si la vérification de l’accès doit être effectuée par rapport au contexte de sécurité du thread appelant la `GetThreadToken` méthode ou par rapport au contexte de sécurité du processus pour le thread appelant.
 
 Si ce paramètre a la valeur FALSe, le contrôle d’accès est effectué à l’aide du contexte de sécurité du thread appelant. Si le thread emprunte l’identité d’un client, ce contexte de sécurité peut être celui d’un processus client. Si ce paramètre a la valeur TRUE, le contrôle d’accès est effectué à l’aide du contexte de sécurité du processus pour le thread appelant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengettokenid"></a><a name="gettokenid"></a>Caccesstoken, :: GetTokenId
+## <a name="caccesstokengettokenid"></a><a name="gettokenid"></a> Caccesstoken, :: GetTokenId
 
-Appelez cette méthode pour récupérer l’ID de jeton associé à `CAccessToken` l’objet.
+Appelez cette méthode pour récupérer l’ID de jeton associé à l' `CAccessToken` objet.
 
 ```cpp
 bool GetTokenId(LUID* pluid) const throw(...);
@@ -767,13 +768,13 @@ bool GetTokenId(LUID* pluid) const throw(...);
 *pluid*<br/>
 Pointeur vers un [LUID](/windows/win32/api/winnt/ns-winnt-luid) qui recevra l’ID de jeton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokengettype"></a><a name="gettype"></a>Caccesstoken, :: GetType
+## <a name="caccesstokengettype"></a><a name="gettype"></a> Caccesstoken, :: GetType
 
-Appelez cette méthode pour récupérer le type de jeton de `CAccessToken` l’objet.
+Appelez cette méthode pour récupérer le type de jeton de l' `CAccessToken` objet.
 
 ```cpp
 bool GetType(TOKEN_TYPE* pType) const throw(...);
@@ -784,7 +785,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 *pType*<br/>
 Adresse de la variable [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type) qui, en cas de réussite, reçoit le type du jeton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -792,7 +793,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Le type d’énumération TOKEN_TYPE contient des valeurs qui différencient un jeton principal et un jeton d’emprunt d’identité.
 
-## <a name="caccesstokengetuser"></a><a name="getuser"></a>Caccesstoken, :: GetUser
+## <a name="caccesstokengetuser"></a><a name="getuser"></a> Caccesstoken, :: GetUser
 
 Appelez cette méthode pour identifier l’utilisateur associé à l' `CAccessToken` objet.
 
@@ -805,23 +806,23 @@ bool GetUser(CSid* pSid) const throw(...);
 *pSid*<br/>
 Pointeur vers un objet de [classe CSID](../../atl/reference/csid-class.md) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="caccesstokenhkeycurrentuser"></a><a name="hkeycurrentuser"></a>Caccesstoken, :: HKeyCurrentUser
+## <a name="caccesstokenhkeycurrentuser"></a><a name="hkeycurrentuser"></a> Caccesstoken, :: HKeyCurrentUser
 
-Appelez cette méthode pour faire en sorte que le handle pointe vers le profil utilisateur `CAccessToken` associé à l’objet.
+Appelez cette méthode pour faire en sorte que le handle pointe vers le profil utilisateur associé à l' `CAccessToken` objet.
 
 ```cpp
 HKEY HKeyCurrentUser() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un handle pointant vers le profil utilisateur, ou NULL s’il n’existe aucun profil.
 
-## <a name="caccesstokenimpersonate"></a><a name="impersonate"></a>Caccesstoken, :: Impersonate
+## <a name="caccesstokenimpersonate"></a><a name="impersonate"></a> Caccesstoken, :: Impersonate
 
 Appelez cette méthode pour assigner un emprunt `CAccessToken` d’identité à un thread.
 
@@ -834,17 +835,17 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 *hThread*<br/>
 Handle vers le thread auquel assigner le jeton d’emprunt d’identité. Ce descripteur doit avoir été ouvert avec les droits d’accès TOKEN_IMPERSONATE. Si *hThread* a la valeur null, la méthode provoque l’arrêt du thread à l’aide d’un jeton d’emprunt d’identité.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Dans les versions Debug, une erreur d’assertion se `CAccessToken` produit si le n’a pas de pointeur valide vers un jeton.
+Dans les versions Debug, une erreur d’assertion se produit si `CAccessToken` le n’a pas de pointeur valide vers un jeton.
 
 La [classe CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisée pour rétablir automatiquement les jetons d’accès empruntés.
 
-## <a name="caccesstokenimpersonateloggedonuser"></a><a name="impersonateloggedonuser"></a>Caccesstoken, :: ImpersonateLoggedOnUser
+## <a name="caccesstokenimpersonateloggedonuser"></a><a name="impersonateloggedonuser"></a> Caccesstoken, :: ImpersonateLoggedOnUser
 
 Appelez cette méthode pour autoriser le thread appelant à emprunter l’identité du contexte de sécurité d’un utilisateur connecté.
 
@@ -852,7 +853,7 @@ Appelez cette méthode pour autoriser le thread appelant à emprunter l’identi
 bool ImpersonateLoggedOnUser() const throw(...);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -861,7 +862,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 > [!IMPORTANT]
 > Si un appel à une fonction d’emprunt d’identité échoue pour une raison quelconque, le client n’est pas emprunté et la demande du client est effectuée dans le contexte de sécurité du processus à partir duquel l’appel a été effectué. Si le processus s’exécute en tant que compte à privilèges élevés, ou en tant que membre d’un groupe d’administration, l’utilisateur peut être en mesure d’effectuer des actions qui, sinon, seraient rejetées. Par conséquent, la valeur de retour de cette fonction doit toujours être confirmée.
 
-## <a name="caccesstokenistokenrestricted"></a><a name="istokenrestricted"></a>Caccesstoken, :: IsTokenRestricted
+## <a name="caccesstokenistokenrestricted"></a><a name="istokenrestricted"></a> Caccesstoken, :: IsTokenRestricted
 
 Appelez cette méthode pour vérifier si l' `CAccessToken` objet contient une liste de sid restreints.
 
@@ -869,11 +870,11 @@ Appelez cette méthode pour vérifier si l' `CAccessToken` objet contient une li
 bool IsTokenRestricted() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE si l’objet contient une liste de SID de restriction, FALSe s’il n’y a pas de sid restreints ou si la méthode échoue.
 
-## <a name="caccesstokenloaduserprofile"></a><a name="loaduserprofile"></a>Caccesstoken, :: LoadUserProfile
+## <a name="caccesstokenloaduserprofile"></a><a name="loaduserprofile"></a> Caccesstoken, :: LoadUserProfile
 
 Appelez cette méthode pour charger le profil utilisateur associé à l' `CAccessToken` objet.
 
@@ -881,15 +882,15 @@ Appelez cette méthode pour charger le profil utilisateur associé à l' `CAcces
 bool LoadUserProfile() throw(...);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Dans les `CAccessToken` versions Debug, une erreur d’assertion se produit si ne contient pas de jeton valide, ou si un profil utilisateur existe déjà.
+Dans les versions Debug, une erreur d’assertion se produit si `CAccessToken` ne contient pas de jeton valide, ou si un profil utilisateur existe déjà.
 
-## <a name="caccesstokenlogonuser"></a><a name="logonuser"></a>Caccesstoken, :: LogonUser
+## <a name="caccesstokenlogonuser"></a><a name="logonuser"></a> Caccesstoken, :: LogonUser
 
 Appelez cette méthode pour créer une session d’ouverture de session pour l’utilisateur associé aux informations d’identification données.
 
@@ -919,15 +920,15 @@ Spécifie le type d’opération d’ouverture de session à effectuer. Pour plu
 *dwLogonProvider*<br/>
 Spécifie le fournisseur d’ouverture de session. Pour plus d’informations, consultez [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Le jeton d’accès résultant de l’ouverture de session est associé `CAccessToken`à. Pour que cette méthode aboutisse, `CAccessToken` l’objet doit contenir SE_TCB_NAME privilèges, identifiant le détenteur dans le cadre de la base de l’ordinateur approuvé. Pour plus d’informations sur les privilèges requis, consultez [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
+Le jeton d’accès résultant de l’ouverture de session est associé à `CAccessToken` . Pour que cette méthode aboutisse, l' `CAccessToken` objet doit contenir SE_TCB_NAME privilèges, identifiant le détenteur dans le cadre de la base de l’ordinateur approuvé. Pour plus d’informations sur les privilèges requis, consultez [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
 
-## <a name="caccesstokenopencomclienttoken"></a><a name="opencomclienttoken"></a>Caccesstoken, :: OpenCOMClientToken
+## <a name="caccesstokenopencomclienttoken"></a><a name="opencomclienttoken"></a> Caccesstoken, :: OpenCOMClientToken
 
 Appelez cette méthode à partir d’un serveur COM qui gère un appel d’un client pour initialiser `CAccessToken` avec le jeton d’accès à partir du client com.
 
@@ -951,7 +952,7 @@ Indique si la vérification de l’accès doit être effectuée par rapport au c
 
 Si ce paramètre a la valeur FALSe, le contrôle d’accès est effectué à l’aide du contexte de sécurité du thread appelant. Si le thread emprunte l’identité d’un client, ce contexte de sécurité peut être celui d’un processus client. Si ce paramètre a la valeur TRUE, le contrôle d’accès est effectué à l’aide du contexte de sécurité du processus pour le thread appelant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -959,9 +960,9 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 La [classe CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisée pour rétablir automatiquement les jetons d’accès empruntés créés en affectant à l’indicateur *bImpersonate* la valeur true.
 
-## <a name="caccesstokenopennamedpipeclienttoken"></a><a name="opennamedpipeclienttoken"></a>Caccesstoken, :: OpenNamedPipeClientToken
+## <a name="caccesstokenopennamedpipeclienttoken"></a><a name="opennamedpipeclienttoken"></a> Caccesstoken, :: OpenNamedPipeClientToken
 
-Appelez cette méthode à partir d’un serveur effectuant des requêtes sur un canal nommé pour `CAccessToken` initialiser le avec le jeton d’accès du client.
+Appelez cette méthode à partir d’un serveur effectuant des requêtes sur un canal nommé pour initialiser le `CAccessToken` avec le jeton d’accès du client.
 
 ```cpp
 bool OpenNamedPipeClientToken(
@@ -987,7 +988,7 @@ Indique si la vérification de l’accès doit être effectuée par rapport au c
 
 Si ce paramètre a la valeur FALSe, le contrôle d’accès est effectué à l’aide du contexte de sécurité du thread appelant. Si le thread emprunte l’identité d’un client, ce contexte de sécurité peut être celui d’un processus client. Si ce paramètre a la valeur TRUE, le contrôle d’accès est effectué à l’aide du contexte de sécurité du processus pour le thread appelant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -995,7 +996,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 La [classe CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisée pour rétablir automatiquement les jetons d’accès empruntés créés en affectant à l’indicateur *bImpersonate* la valeur true.
 
-## <a name="caccesstokenopenrpcclienttoken"></a><a name="openrpcclienttoken"></a>Caccesstoken, :: OpenRPCClientToken
+## <a name="caccesstokenopenrpcclienttoken"></a><a name="openrpcclienttoken"></a> Caccesstoken, :: OpenRPCClientToken
 
 Appelez cette méthode à partir d’un serveur qui gère un appel d’un client RPC pour initialiser `CAccessToken` avec le jeton d’accès à partir du client.
 
@@ -1023,7 +1024,7 @@ Indique si la vérification de l’accès doit être effectuée par rapport au c
 
 Si ce paramètre a la valeur FALSe, le contrôle d’accès est effectué à l’aide du contexte de sécurité du thread appelant. Si le thread emprunte l’identité d’un client, ce contexte de sécurité peut être celui d’un processus client. Si ce paramètre a la valeur TRUE, le contrôle d’accès est effectué à l’aide du contexte de sécurité du processus pour le thread appelant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -1031,7 +1032,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 La [classe CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisée pour rétablir automatiquement les jetons d’accès empruntés créés en affectant à l’indicateur *bImpersonate* la valeur true.
 
-## <a name="caccesstokenopenthreadtoken"></a><a name="openthreadtoken"></a>Caccesstoken, :: OpenThreadToken
+## <a name="caccesstokenopenthreadtoken"></a><a name="openthreadtoken"></a> Caccesstoken, :: OpenThreadToken
 
 Appelez cette méthode pour définir le niveau d’emprunt d’identité, puis initialisez `CAccessToken` avec le jeton à partir du thread donné.
 
@@ -1059,17 +1060,17 @@ Si ce paramètre a la valeur FALSe, le contrôle d’accès est effectué à l�
 *SIL*<br/>
 Spécifie un [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) type énuméré qui fournit le niveau d’emprunt d’identité du jeton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-`OpenThreadToken`est semblable à [caccesstoken, :: GetThreadToken](#getthreadtoken), mais définit le niveau d’emprunt d’identité avant d’initialiser le `CAccessToken` à partir du jeton d’accès du thread.
+`OpenThreadToken` est semblable à [caccesstoken, :: GetThreadToken](#getthreadtoken), mais définit le niveau d’emprunt d’identité avant d’initialiser le `CAccessToken` à partir du jeton d’accès du thread.
 
 La [classe CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) peut être utilisée pour rétablir automatiquement les jetons d’accès empruntés créés en affectant à l’indicateur *bImpersonate* la valeur true.
 
-## <a name="caccesstokenprivilegecheck"></a><a name="privilegecheck"></a>Caccesstoken, ::P rivilegeCheck
+## <a name="caccesstokenprivilegecheck"></a><a name="privilegecheck"></a> Caccesstoken, ::P rivilegeCheck
 
 Appelez cette méthode pour déterminer si un jeu de privilèges spécifié est activé dans l' `CAccessToken` objet.
 
@@ -1085,9 +1086,9 @@ bool PrivilegeCheck(
 Pointeur vers une structure [PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set) .
 
 *pbResult*<br/>
-Pointeur vers une valeur que la méthode définit pour indiquer si l’un ou l’ensemble des privilèges spécifiés sont `CAccessToken` activés dans l’objet.
+Pointeur vers une valeur que la méthode définit pour indiquer si l’un ou l’ensemble des privilèges spécifiés sont activés dans l' `CAccessToken` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -1095,7 +1096,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Lorsque `PrivilegeCheck` retourne, le `Attributes` membre de chaque structure de [LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes) est défini sur SE_PRIVILEGE_USED_FOR_ACCESS si le privilège correspondant est activé. Cette méthode appelle la fonction Win32 [PrivilegeCheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) .
 
-## <a name="caccesstokenrevert"></a><a name="revert"></a>Caccesstoken, :: Revert
+## <a name="caccesstokenrevert"></a><a name="revert"></a> Caccesstoken, :: Revert
 
 Appelez cette méthode pour empêcher un thread d’utiliser un jeton d’emprunt d’identité.
 
@@ -1108,7 +1109,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 *hThread*<br/>
 Handle vers le thread pour rétablir l’emprunt d’identité. Si *hThread* a la valeur null, le thread actuel est utilisé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -1116,9 +1117,9 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 La Reversion des jetons d’emprunt d’identité peut être effectuée automatiquement avec la [classe CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md).
 
-## <a name="caccesstokensetdefaultdacl"></a><a name="setdefaultdacl"></a>Caccesstoken, :: SetDefaultDacl
+## <a name="caccesstokensetdefaultdacl"></a><a name="setdefaultdacl"></a> Caccesstoken, :: SetDefaultDacl
 
-Appelez cette méthode pour définir la DACL par défaut de `CAccessToken` l’objet.
+Appelez cette méthode pour définir la DACL par défaut de l' `CAccessToken` objet.
 
 ```cpp
 bool SetDefaultDacl(const CDacl& rDacl) throw(...);
@@ -1129,7 +1130,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 *rDacl*<br/>
 Nouvelles informations de la [classe CDacl](../../atl/reference/cdacl-class.md) par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -1137,7 +1138,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 La liste DACL par défaut est la liste DACL qui est utilisée par défaut lorsque de nouveaux objets sont créés avec ce jeton d’accès en vigueur.
 
-## <a name="caccesstokensetowner"></a><a name="setowner"></a>Caccesstoken, :: SetOwner
+## <a name="caccesstokensetowner"></a><a name="setowner"></a> Caccesstoken, :: SetOwner
 
 Appelez cette méthode pour définir le propriétaire de l' `CAccessToken` objet.
 
@@ -1150,7 +1151,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 *rSid*<br/>
 Objet de [classe CSID](../../atl/reference/csid-class.md) contenant les informations de propriétaire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -1158,7 +1159,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Le propriétaire est le propriétaire par défaut qui est utilisé pour les nouveaux objets créés alors que ce jeton d’accès est en vigueur.
 
-## <a name="caccesstokensetprimarygroup"></a><a name="setprimarygroup"></a>Caccesstoken, :: SetPrimaryGroup
+## <a name="caccesstokensetprimarygroup"></a><a name="setprimarygroup"></a> Caccesstoken, :: SetPrimaryGroup
 
 Appelez cette méthode pour définir le groupe principal de l' `CAccessToken` objet.
 
@@ -1171,7 +1172,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 *rSid*<br/>
 Objet de [classe CSID](../../atl/reference/csid-class.md) contenant les informations de groupe principal.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 

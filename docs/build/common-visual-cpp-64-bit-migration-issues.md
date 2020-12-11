@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les problèmes de migration courants Visual C++ 64 bits
 title: Problèmes courants de migration vers Visual C++ 64 bits
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: 68f4dc4276c5cbce687477ca25ec69f0cb544acb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 86c4618423353a3a7ac217432ce9dfcb0c19061b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156890"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problèmes courants de migration vers Visual C++ 64 bits
 
@@ -26,7 +27,7 @@ Lorsque vous utilisez le compilateur Microsoft C++ (MSVC) pour créer des applic
 
 - `size_t`, `time_t` et `ptrdiff_t` sont des valeurs 64 bits sur les systèmes d’exploitation Windows 64 bits.
 
-- `time_t`est une valeur 32 bits sur les systèmes d’exploitation Windows 32 bits dans Visual Studio 2005 et versions antérieures. `time_t` est maintenant un entier 64 bits par défaut. Pour plus d’informations, consultez [gestion du temps](../c-runtime-library/time-management.md).
+- `time_t` est une valeur 32 bits sur les systèmes d’exploitation Windows 32 bits dans Visual Studio 2005 et versions antérieures. `time_t` est maintenant un entier 64 bits par défaut. Pour plus d’informations, consultez [gestion du temps](../c-runtime-library/time-management.md).
 
    Vous devez être conscient de l’endroit où votre code prend une **`int`** valeur et le traite en tant que `size_t` `time_t` valeur ou. Il est possible que le nombre puisse croître pour être plus grand qu’un nombre 32 bits et que les données soient tronquées lorsqu’elles sont renvoyées au **`int`** stockage.
 

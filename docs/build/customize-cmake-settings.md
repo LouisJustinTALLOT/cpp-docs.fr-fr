@@ -1,48 +1,49 @@
 ---
+description: 'En savoir plus sur : personnaliser les paramètres de build CMake'
 title: Personnaliser des paramètres de génération CMake dans Visual Studio
 ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 9fa1a21b26088482fb64441d0ccf0ad968bd480f
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: a7a0dcf946d4bef3a1dc7eb63fd2c22be6740682
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156851"
 ---
 # <a name="customize-cmake-build-settings"></a>Personnaliser des paramètres de génération CMake
 
 ::: moniker range="msvc-160"
 
-Dans Visual Studio 2019 et ultérieur, vous pouvez ajouter des configurations et personnaliser leurs paramètres à l’aide de l’ **éditeur de paramètres CMake** . L’éditeur est conçu pour être une alternative plus simple à la modification manuelle *de l'CMakeSettings.jsdans* un fichier, mais si vous préférez modifier le fichier directement, vous pouvez cliquer sur le lien **modifier JSON** en haut à droite de l’éditeur.
+Dans Visual Studio 2019 et ultérieur, vous pouvez ajouter des configurations et personnaliser leurs paramètres à l’aide de l’**éditeur de paramètres CMake**. L’éditeur est conçu pour être une alternative plus simple à la modification manuelle *de l'CMakeSettings.jsdans* un fichier, mais si vous préférez modifier le fichier directement, vous pouvez cliquer sur le lien **modifier JSON** en haut à droite de l’éditeur.
 
-Pour ouvrir l’éditeur, cliquez sur la liste déroulante **Configuration** dans la barre d’outils principale et choisissez **Gérer les configurations** .
+Pour ouvrir l’éditeur, cliquez sur la liste déroulante **Configuration** dans la barre d’outils principale et choisissez **Gérer les configurations**.
 
 ![Liste déroulante des configurations CMake](media/vs2019-cmake-manage-configurations.png)
 
-Maintenant, vous voyez l’ **éditeur de paramètres** , avec les configurations installées sur la gauche.
+Maintenant, vous voyez l’**éditeur de paramètres**, avec les configurations installées sur la gauche.
 
 ![Éditeur de paramètres CMake](media/cmake-settings-editor.png)
 
 Visual Studio fournit une `x64-Debug` configuration par défaut. Vous pouvez ajouter des configurations supplémentaires en cliquant sur le signe plus vert. Les paramètres que vous voyez dans l’éditeur peuvent varier en fonction de la configuration sélectionnée.
 
-Les options que vous choisissez dans l’éditeur sont écrites dans un fichier appelé *CMakeSettings.js* . Ce fichier fournit des arguments de ligne de commande et des variables d’environnement qui sont passés à CMake quand vous générez les projets. Visual Studio ne modifie jamais *CMakeLists.txt* automatiquement. en utilisant *CMakeSettings.jssur* vous pouvez personnaliser la build via Visual Studio tout en laissant les fichiers de projet cmake intacts afin que d’autres personnes de votre équipe puissent les utiliser avec les outils qu’ils utilisent.
+Les options que vous choisissez dans l’éditeur sont écrites dans un fichier appelé *CMakeSettings.js*. Ce fichier fournit des arguments de ligne de commande et des variables d’environnement qui sont passés à CMake quand vous générez les projets. Visual Studio ne modifie jamais *CMakeLists.txt* automatiquement. en utilisant *CMakeSettings.jssur* vous pouvez personnaliser la build via Visual Studio tout en laissant les fichiers de projet cmake intacts afin que d’autres personnes de votre équipe puissent les utiliser avec les outils qu’ils utilisent.
 
 ## <a name="cmake-general-settings"></a>Paramètres généraux CMake
 
-Les paramètres suivants sont disponibles sous le titre **Général**  :
+Les paramètres suivants sont disponibles sous le titre **Général** :
 
 ### <a name="configuration-name"></a>Nom de la configuration
 
-Correspond au paramètre **name** . Ce nom apparaît dans la liste déroulante de configuration C++. Vous pouvez utiliser la macro `${name}` pour composer d’autres valeurs de propriété telles que des chemins.
+Correspond au paramètre **name**. Ce nom apparaît dans la liste déroulante de configuration C++. Vous pouvez utiliser la macro `${name}` pour composer d’autres valeurs de propriété telles que des chemins.
 
 ### <a name="configuration-type"></a>Type de configuration
 
-Correspond au paramètre **configurationType** . Définit le type de configuration de build du générateur sélectionné. Les valeurs actuellement prises en charge sont « Debug », « MinSizeRel », « Release » et « RelWithDebInfo ». Elle est mappée à [CMAKE_BUILD_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html).
+Correspond au paramètre **configurationType**. Définit le type de configuration de build du générateur sélectionné. Les valeurs actuellement prises en charge sont « Debug », « MinSizeRel », « Release » et « RelWithDebInfo ». Elle est mappée à [CMAKE_BUILD_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html).
 
 ### <a name="toolset"></a>Ensemble d'outils
 
-Correspond au paramètre **inheritedEnvironments** . Définit l’environnement du compilateur utilisé pour générer la configuration sélectionnée. Les valeurs prises en charge varient selon le type de configuration. Pour créer un environnement personnalisé, choisissez le lien **modifier JSON** dans l’angle supérieur droit de l’éditeur de paramètres, puis modifiez le *CMakeSettings.jsdirectement sur* le fichier.
+Correspond au paramètre **inheritedEnvironments**. Définit l’environnement du compilateur utilisé pour générer la configuration sélectionnée. Les valeurs prises en charge varient selon le type de configuration. Pour créer un environnement personnalisé, choisissez le lien **modifier JSON** dans l’angle supérieur droit de l’éditeur de paramètres, puis modifiez le *CMakeSettings.jsdirectement sur* le fichier.
 
 ### <a name="cmake-toolchain-file"></a>Fichier de chaîne d’outils CMake
 
@@ -50,7 +51,7 @@ Chemin d’accès au [fichier cmake chaîne d’outils](https://cmake.org/cmake/
 
 ### <a name="build-root"></a>Racine de build
 
-Correspond à **buildRoot** . Mappe à [CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)et spécifie où créer le cache CMAKE. Le dossier spécifié est créé s’il n’existe pas.
+Correspond à **buildRoot**. Mappe à [CMAKE_BINARY_DIR](https://cmake.org/cmake/help/v3.15/variable/CMAKE_BINARY_DIR.html)et spécifie où créer le cache CMAKE. Le dossier spécifié est créé s’il n’existe pas.
 
 ## <a name="command-arguments"></a>Arguments de la commande
 
@@ -58,15 +59,15 @@ Les paramètres suivants sont disponibles sous le titre **Arguments de la comman
 
 ### <a name="cmake-command-arguments"></a>Arguments de commande CMake
 
-Correspond à **cmakeCommandArgs** . Spécifie les [options de ligne de commande](https://cmake.org/cmake/help/latest/manual/cmake.1.html) supplémentaires passées à CMake.exe.
+Correspond à **cmakeCommandArgs**. Spécifie les [options de ligne de commande](https://cmake.org/cmake/help/latest/manual/cmake.1.html) supplémentaires passées à CMake.exe.
 
 ### <a name="build-command-arguments"></a>Arguments de commande de build
 
-Correspond à **buildCommandArgs** . Spécifie des commutateurs supplémentaires à passer au système de génération sous-jacent. Par exemple, `-v` si vous utilisez le générateur Ninja, le Ninja force le Ninja à sortir les lignes de commande.
+Correspond à **buildCommandArgs**. Spécifie des commutateurs supplémentaires à passer au système de génération sous-jacent. Par exemple, `-v` si vous utilisez le générateur Ninja, le Ninja force le Ninja à sortir les lignes de commande.
 
 ### <a name="ctest-command-arguments"></a>Arguments de commande CTest
 
-Correspond à **ctestCommandArgs** . Spécifie des [options de ligne de commande](https://cmake.org/cmake/help/v3.15/manual/ctest.1.html) supplémentaires à passer à ctest lors de l’exécution des tests.
+Correspond à **ctestCommandArgs**. Spécifie des [options de ligne de commande](https://cmake.org/cmake/help/v3.15/manual/ctest.1.html) supplémentaires à passer à ctest lors de l’exécution des tests.
 
 ## <a name="general-settings-for-remote-builds"></a>Paramètres généraux pour les builds distantes
 
@@ -78,15 +79,15 @@ Options de ligne de commande supplémentaires passées à la [synchronisation d�
 
 ## <a name="cmake-variables-and-cache"></a>Variables et cache CMake
 
-Ces paramètres vous permettent de définir des variables CMake et de les enregistrer dans *CMakeSettings.js* . Elles sont passées à CMake au moment de la génération et remplacent toutes les valeurs figurant dans le fichier *CMakeLists.txt* . Vous pouvez utiliser cette section de la même façon que l’interface CMakeGUI pour afficher la liste de toutes les variables CMake modifiables. Cliquez sur le bouton **Enregistrer et générer le cache** pour voir la liste de toutes les variables CMake modifiables, y compris les variables avancées (par le biais de l’interface CMakeGUI). Vous pouvez filtrer la liste par nom de variable.
+Ces paramètres vous permettent de définir des variables CMake et de les enregistrer dans *CMakeSettings.js*. Elles sont passées à CMake au moment de la génération et remplacent toutes les valeurs figurant dans le fichier *CMakeLists.txt* . Vous pouvez utiliser cette section de la même façon que l’interface CMakeGUI pour afficher la liste de toutes les variables CMake modifiables. Cliquez sur le bouton **Enregistrer et générer le cache** pour voir la liste de toutes les variables CMake modifiables, y compris les variables avancées (par le biais de l’interface CMakeGUI). Vous pouvez filtrer la liste par nom de variable.
 
-Correspond aux **variables** . Contient une paire nom-valeur de variables cmake passées en tant que *_name_ = _valeur_ de nom* **-D** à cmake. Si les instructions de génération de votre projet CMake spécifient l’ajout de toutes les variables directement au fichier cache CMake, nous vous recommandons de les ajouter ici à la place.
+Correspond aux **variables**. Contient une paire nom-valeur de variables cmake passées en tant que *= _valeur_ de nom* **-D** à cmake. Si les instructions de génération de votre projet CMake spécifient l’ajout de toutes les variables directement au fichier cache CMake, nous vous recommandons de les ajouter ici à la place.
 
 ## <a name="advanced-settings"></a>Paramètres avancés
 
 ### <a name="cmake-generator"></a>Générateur CMake
 
-Correspond au **Générateur** . Correspond au commutateur CMake **-G** et spécifie le [Générateur de cmake](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) à utiliser. Cette propriété peut également être utilisée en tant que macro, `${generator}`, quand vous rédigez d’autres valeurs de propriétés. Visual Studio prend actuellement en charge les générateurs CMake suivants :
+Correspond au **Générateur**. Correspond au commutateur CMake **-G** et spécifie le [Générateur de cmake](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) à utiliser. Cette propriété peut également être utilisée en tant que macro, `${generator}`, quand vous rédigez d’autres valeurs de propriétés. Visual Studio prend actuellement en charge les générateurs CMake suivants :
 
 - « Ninja »
 - « Unix Makefiles »
@@ -130,7 +131,7 @@ Spécifie s’il faut copier les fichiers sources sur l’ordinateur distant et 
 
 ## <a name="directly-edit-cmakesettingsjson"></a>Modifier CMakeSettings.json directement
 
-Vous pouvez également modifier directement *CMakeSettings.js* pour créer des configurations personnalisées. L’ **éditeur de paramètres** a un bouton **Modifier JSON** en haut à droite qui ouvre le fichier en vue de sa modification.
+Vous pouvez également modifier directement *CMakeSettings.js* pour créer des configurations personnalisées. L’**éditeur de paramètres** a un bouton **Modifier JSON** en haut à droite qui ouvre le fichier en vue de sa modification.
 
 L’exemple suivant illustre une configuration, que vous pouvez utiliser comme point de départ :
 
@@ -160,7 +161,7 @@ Pour plus d’informations sur chacune des propriétés dans le fichier, consult
 
 ::: moniker range="<=msvc-150"
 
-Visual Studio 2017 fournit plusieurs configurations CMake qui définissent la manière d’appeler CMake.exe pour créer le cache CMake d’un projet donné. Pour ajouter une nouvelle configuration, cliquez sur la liste déroulante de configuration dans la barre d’outils et choisissez **Gérer les configurations**  :
+Visual Studio 2017 fournit plusieurs configurations CMake qui définissent la manière d’appeler CMake.exe pour créer le cache CMake d’un projet donné. Pour ajouter une nouvelle configuration, cliquez sur la liste déroulante de configuration dans la barre d’outils et choisissez **Gérer les configurations** :
 
    ![Gérer les configurations CMake](media/cmake-manage-configurations.png)
 
@@ -168,13 +169,13 @@ Vous pouvez choisir dans la liste des configurations prédéfinies :
 
    ![Configurations CMake prédéfinies](media/cmake-configurations.png)
 
-La première fois que vous sélectionnez une configuration, Visual Studio crée un *CMakeSettings.jssur* le fichier dans le dossier racine de votre projet. Ce fichier est utilisé pour recréer le fichier de cache CMake, par exemple, après une opération **Clean** .
+La première fois que vous sélectionnez une configuration, Visual Studio crée un *CMakeSettings.jssur* le fichier dans le dossier racine de votre projet. Ce fichier est utilisé pour recréer le fichier de cache CMake, par exemple, après une opération **Clean**.
 
-Pour ajouter une configuration supplémentaire, cliquez avec le bouton droit sur *CMakeSettings.js* , puis choisissez **Ajouter une configuration** .
+Pour ajouter une configuration supplémentaire, cliquez avec le bouton droit sur *CMakeSettings.js* , puis choisissez **Ajouter une configuration**.
 
    ![CMake ajouter une configuration](media/cmake-add-configuration.png "CMake ajouter une configuration")
 
-Vous pouvez également modifier le fichier en utilisant l’ **éditeur de paramètres CMake** . Cliquez avec le bouton droit sur *CMakeSettings.js* dans **Explorateur de solutions** puis choisissez **modifier les paramètres cmake** . Ou sélectionnez **Gérer les configurations** dans la liste déroulante de configuration en haut de la fenêtre de l’éditeur.
+Vous pouvez également modifier le fichier en utilisant l’**éditeur de paramètres CMake**. Cliquez avec le bouton droit sur *CMakeSettings.js* dans **Explorateur de solutions** puis choisissez **modifier les paramètres cmake**. Ou sélectionnez **Gérer les configurations** dans la liste déroulante de configuration en haut de la fenêtre de l’éditeur.
 
 Vous pouvez également modifier directement *CMakeSettings.js* pour créer des configurations personnalisées. L’exemple suivant illustre une configuration, que vous pouvez utiliser comme point de départ :
 

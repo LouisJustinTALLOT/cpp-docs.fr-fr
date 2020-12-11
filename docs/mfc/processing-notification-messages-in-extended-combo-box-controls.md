@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : traitement des messages de notification dans les contrôles de zone de liste déroulante étendus'
 title: Traitement des messages de notification dans les contrôles de zone de liste déroulante étendue
 ms.date: 11/04/2016
 helpviewer_keywords:
 - extended combo boxes [MFC], notifications
 - notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
-ms.openlocfilehash: 58a7c5ec36807489d24014055c39775b4552be03
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ef004c3649ce78b24aa1c77aa90488ae6391dcca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154810"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Traitement des messages de notification dans les contrôles de zone de liste déroulante étendue
 
@@ -35,4 +36,4 @@ La liste suivante décrit les différentes notifications envoyées par le contr�
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CComboBoxEx](using-ccomboboxex.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

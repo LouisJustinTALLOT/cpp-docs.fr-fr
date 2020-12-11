@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : CMakeSettings.jssur la référence de schéma'
 title: Informations de référence sur le schéma CMakeSettings.json
 ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 61da0fd70ad68928872a2212b70377ab8a83a76a
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 2be5edb616764d56e7c08a51be19aab11a62f227
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919395"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156903"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informations de référence sur le schéma CMakeSettings.json
 
@@ -71,9 +72,9 @@ Une `configuration` a les propriétés suivantes :
 
 Comme Ninja est conçu pour des vitesses de génération rapides plutôt que pour la flexibilité et la fonctionnalité, il est défini par défaut. Toutefois, certains projets CMake peuvent ne pas pouvoir être générés correctement avec Ninja. Si cela se produit, vous pouvez demander à CMake de générer des projets Visual Studio à la place.
 
-Pour spécifier un générateur Visual Studio dans Visual Studio 2017, ouvrez l’éditeur de paramètres à partir du menu principal en choisissant **cmake | Modifiez les paramètres de CMake** . Supprimez « Ninja » et tapez « V ». Cela active IntelliSense, qui vous permet de choisir le générateur souhaité.
+Pour spécifier un générateur Visual Studio dans Visual Studio 2017, ouvrez l’éditeur de paramètres à partir du menu principal en choisissant **cmake | Modifiez les paramètres de CMake**. Supprimez « Ninja » et tapez « V ». Cela active IntelliSense, qui vous permet de choisir le générateur souhaité.
 
-Pour spécifier un générateur Visual Studio dans Visual Studio 2019, cliquez avec le bouton droit sur le fichier *CMakeLists.txt* dans **Explorateur de solutions** et choisissez **paramètres cmake pour projet** > **afficher les paramètres avancés** > **Générateur cmake** .
+Pour spécifier un générateur Visual Studio dans Visual Studio 2019, cliquez avec le bouton droit sur le fichier *CMakeLists.txt* dans **Explorateur de solutions** et choisissez **paramètres cmake pour projet** > **afficher les paramètres avancés** > **Générateur cmake**.
 
 Quand la configuration active spécifie un générateur Visual Studio, MSBuild.exe est appelé par défaut avec des arguments `-m -v:minimal`. Pour personnaliser la build, à l’intérieur du  *CMakeSettings.js* fichier, vous pouvez spécifier des [arguments de ligne de commande MSBuild](../build/reference/msbuild-visual-cpp-overview.md) supplémentaires à passer au système de génération via la `buildCommandArgs` propriété :
 
@@ -178,9 +179,9 @@ Dans  `CMakeSettings.json` , vous pouvez définir des variables d’environnemen
 - `groupPriority`: Entier qui spécifie la priorité de ces variables lors de leur évaluation. Les éléments dont la valeur est élevée sont évalués en premier.
 - `inheritEnvironments`: Tableau de valeurs qui spécifient le jeu d’environnements hérités par ce groupe. Cette fonctionnalité vous permet d’hériter les environnements par défaut et de créer des variables d’environnement personnalisées qui sont passées à CMake.exe quand il s’exécute.
 
-**Visual Studio 2019 version 16,4 et versions ultérieures :** Les cibles de débogage sont automatiquement lancées avec l’environnement que vous spécifiez dans *CMakeSettings.js* . Vous pouvez remplacer ou ajouter des variables d’environnement sur une base par cible ou par tâche dans [launch.vs.jssur](launch-vs-schema-reference-cpp.md) et [tasks.vs.jssur](tasks-vs-json-schema-reference-cpp.md).
+**Visual Studio 2019 version 16,4 et versions ultérieures :** Les cibles de débogage sont automatiquement lancées avec l’environnement que vous spécifiez dans *CMakeSettings.js*. Vous pouvez remplacer ou ajouter des variables d’environnement sur une base par cible ou par tâche dans [launch.vs.jssur](launch-vs-schema-reference-cpp.md) et [tasks.vs.jssur](tasks-vs-json-schema-reference-cpp.md).
 
-L’exemple suivant définit une variable globale, **BuildDir** , qui est héritée dans les configurations x86-Debug et de x64-Debug. Chaque configuration utilise la variable pour spécifier la valeur de la propriété **buildRoot** pour cette configuration. Notez également la façon dont chaque configuration utilise la propriété **inheritEnvironments** pour spécifier une variable qui s’applique uniquement à cette configuration.
+L’exemple suivant définit une variable globale, **BuildDir**, qui est héritée dans les configurations x86-Debug et de x64-Debug. Chaque configuration utilise la variable pour spécifier la valeur de la propriété **buildRoot** pour cette configuration. Notez également la façon dont chaque configuration utilise la propriété **inheritEnvironments** pour spécifier une variable qui s’applique uniquement à cette configuration.
 
 ```json
 {
@@ -212,7 +213,7 @@ L’exemple suivant définit une variable globale, **BuildDir** , qui est hérit
 }
 ```
 
-Dans l’exemple suivant, la configuration x86-Debug définit sa propre valeur pour la propriété **BuildDir** . Cette valeur remplace celle définie par la propriété **BuildDir** globales pour que **BuildRoot** prenne la valeur `D:\custom-builddir\x86-Debug`.
+Dans l’exemple suivant, la configuration x86-Debug définit sa propre valeur pour la propriété **BuildDir**. Cette valeur remplace celle définie par la propriété **BuildDir** globales pour que **BuildRoot** prenne la valeur `D:\custom-builddir\x86-Debug`.
 
 ```json
 {
@@ -258,7 +259,7 @@ Dans l’exemple suivant, la configuration x86-Debug définit sa propre valeur p
 
 ## <a name="macros"></a>Macros
 
-Les macros suivantes peuvent être utilisées dans *CMakeSettings.jssur* :
+Les macros suivantes peuvent être utilisées dans *CMakeSettings.jssur*:
 
 - `${workspaceRoot}` : chemin d’accès complet du dossier de l’espace de travail.
 - `${workspaceHash}` : Hachage de l’emplacement de l’espace de travail. Utile pour créer un identificateur unique pour l’espace de travail actuel (par exemple, à utiliser dans les chemins de dossier)

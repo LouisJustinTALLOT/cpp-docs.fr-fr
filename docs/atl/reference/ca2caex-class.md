@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CA2CAEX'
 title: CA2CAEX, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-ms.openlocfilehash: 505c1e369bc5949fea291a2172c16d5e52c75567
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 89709280e94e07c549d179dc9a9863bd4bf2cbaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158593"
 ---
 # <a name="ca2caex-class"></a>CA2CAEX, classe
 
@@ -82,7 +83,7 @@ Pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes 
 
 **En-tête :** atlconv. h
 
-## <a name="ca2caexca2caex"></a><a name="ca2caex"></a>CA2CAEX::CA2CAEX
+## <a name="ca2caexca2caex"></a><a name="ca2caex"></a> CA2CAEX::CA2CAEX
 
 Constructeur.
 
@@ -103,7 +104,7 @@ Inutilisé dans cette classe.
 
 Crée la mémoire tampon requise pour la traduction.
 
-## <a name="ca2caexca2caex"></a><a name="dtor"></a>CA2CAEX :: ~ CA2CAEX
+## <a name="ca2caexca2caex"></a><a name="dtor"></a> CA2CAEX :: ~ CA2CAEX
 
 Destructeur.
 
@@ -115,7 +116,7 @@ Destructeur.
 
 Libère la mémoire tampon allouée.
 
-## <a name="ca2caexm_psz"></a><a name="m_psz"></a>CA2CAEX :: m_psz
+## <a name="ca2caexm_psz"></a><a name="m_psz"></a> CA2CAEX :: m_psz
 
 Membre de données qui stocke la chaîne source.
 
@@ -123,7 +124,7 @@ Membre de données qui stocke la chaîne source.
 LPCSTR m_psz;
 ```
 
-## <a name="ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a>CA2CAEX :: Operator LPCSTR
+## <a name="ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a> CA2CAEX :: Operator LPCSTR
 
 Opérateur de conversion.
 
@@ -131,7 +132,7 @@ Opérateur de conversion.
 operator LPCSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la chaîne de texte en tant que type LPCSTR.
 

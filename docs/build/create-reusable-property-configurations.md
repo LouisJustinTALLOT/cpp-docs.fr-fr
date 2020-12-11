@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : partager ou réutiliser les paramètres de projet Visual Studio'
 title: Partager ou réutiliser des paramètres de projet Visual Studio-C++
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: bcf54be0531c7150c1506eb6f5dda2b5bc95161f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5108bba6526c6c3140680cc12013b0c6232c9a0e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328690"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156838"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Partager ou réutiliser les paramètres de projet Visual Studio
 
@@ -17,11 +18,11 @@ Pour créer un groupe de paramètres personnalisé que vous pouvez partager avec
 > [!IMPORTANT]
 > **Les fichiers .user et pourquoi ils sont problématiques**
 >
-> Les versions précédentes de Visual Studio utilisaient des feuilles de propriétés globales qui avaient une extension de nom de fichier .user et se trouvaient dans le dossier \<profil_utilisateur>\AppData\Local\Microsoft\MSBuild\v4.0\. Nous ne recommandons plus l'utilisation de ces fichiers, car ils définissent des propriétés pour les configurations de projet sur la base de chaque utilisateur et de chaque ordinateur. Ces paramètres « globaux » peuvent perturber les builds, surtout lorsque vous ciblez plusieurs plateformes sur votre ordinateur de build. Par exemple, si vous avez un projet MFC et un projet Windows Phone, les propriétés .user seraient non valides pour l'un d'eux. Les feuilles de propriétés réutilisables sont plus flexibles et plus fiables.
+> Les versions antérieures de Visual Studio utilisaient des feuilles de propriétés globales ayant une extension de nom de fichier. User et se trouvaient dans le \<userprofile> dossier \AppData\Local\Microsoft\MSBuild\v4.0\ Nous ne recommandons plus l'utilisation de ces fichiers, car ils définissent des propriétés pour les configurations de projet sur la base de chaque utilisateur et de chaque ordinateur. Ces paramètres « globaux » peuvent perturber les builds, surtout lorsque vous ciblez plusieurs plateformes sur votre ordinateur de build. Par exemple, si vous avez un projet MFC et un projet Windows Phone, les propriétés .user seraient non valides pour l'un d'eux. Les feuilles de propriétés réutilisables sont plus flexibles et plus fiables.
 >
 > Bien que les fichiers .user soient toujours installés par Visual Studio et participent à l'héritage des propriétés, ils sont vides par défaut. Une bonne pratique est de supprimer la référence correspondante dans le **Gestionnaire de propriétés** pour faire en sorte que les projets fonctionnent indépendamment des paramètres selon l’utilisateur et l’ordinateur. De cette façon, vous garantissez un comportement approprié dans un environnement de contrôle de code source (SCC).
 
-Pour afficher **Gestionnaire de propriétés**, dans la barre de menus, choisissez **Afficher** > les**Gestionnaire de propriétés** ou **Afficher** > **les autres** > **Gestionnaire de propriétés**Windows, en fonction de vos paramètres.
+Pour afficher **Gestionnaire de propriétés**, dans la barre de menus, choisissez **Afficher** les  >  **Gestionnaire de propriétés** ou **Afficher**  >  **les autres**  >  **Gestionnaire de propriétés** Windows, en fonction de vos paramètres.
 
 Si vous avez un ensemble commun de propriétés fréquemment utilisées que vous souhaitez appliquer à plusieurs projets, vous pouvez utiliser **Gestionnaire de propriétés** pour les capturer dans un fichier de feuille de *Propriétés* réutilisable, qui par Convention a une extension de nom de fichier. props. Vous pouvez appliquer la feuille (ou les feuilles) à de nouveaux projets afin de ne pas avoir à définir intégralement ses propriétés.
 
@@ -44,7 +45,7 @@ Dans les grandes solutions qui auront de nombreux projets, il peut être utile d
 
 #### <a name="to-create-a-property-sheet"></a>Pour créer une feuille de propriétés
 
-1. Dans la barre de menus, choisissez **Afficher** > **Gestionnaire de propriétés** ou **Afficher** > d'**autres** > **Gestionnaire de propriétés**Windows. Le **Gestionnaire de propriétés** s’ouvre.
+1. Dans la barre de menus, choisissez **Afficher**  >  **Gestionnaire de propriétés** ou **Afficher** d'  >  **autres**  >  **Gestionnaire de propriétés** Windows. Le **Gestionnaire de propriétés** s’ouvre.
 
 2. Pour définir la portée de la feuille de propriétés, sélectionnez l'élément auquel elle s'applique. Il peut s'agir d'une configuration particulière ou d'une autre feuille de propriétés. Ouvrez le menu contextuel de cet élément, puis choisissez **Ajouter une nouvelle feuille de propriétés de projet**. Spécifiez un nom et un emplacement.
 

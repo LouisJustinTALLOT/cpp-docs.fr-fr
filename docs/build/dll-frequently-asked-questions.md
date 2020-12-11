@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : DLL Forum aux questions'
 title: Forum aux questions sur les DLL MFC
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: e12817e016376d5b76ec67e8bd10fbd3e85dbdda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 501ec5cb5c5a8f4993e4f54e5d0434e31a26af9e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156708"
 ---
 # <a name="dll-frequently-asked-questions"></a>Forum Aux Questions à propos des DLL
 
@@ -27,7 +28,7 @@ Voici quelques questions fréquemment posées (FAQ) sur les dll.
 
 - [Il y a une fuite de mémoire dans ma DLL MFC normale, mais mon code semble parfait. Comment puis-je trouver la fuite de mémoire ?](#memory_leak)
 
-## <a name="can-an-mfc-dll-create-multiple-threads"></a><a name="mfc_multithreaded_1"></a>Une DLL MFC peut-elle créer plusieurs threads ?
+## <a name="can-an-mfc-dll-create-multiple-threads"></a><a name="mfc_multithreaded_1"></a> Une DLL MFC peut-elle créer plusieurs threads ?
 
 Sauf pendant l’initialisation, une DLL MFC peut créer en toute sécurité plusieurs threads, à condition qu’elle utilise les fonctions de stockage local des threads (TLS) Win32, telles que **TlsAlloc** , pour allouer le stockage local des threads. Toutefois, si une DLL MFC utilise **`__declspec(thread)`** pour allouer le stockage local des threads, l’application cliente doit être implicitement liée à la dll. Si l’application cliente est liée explicitement à la DLL, l’appel à **LoadLibrary** ne chargera pas correctement la dll. Pour plus d’informations sur les variables locales de thread dans les dll, consultez [thread](../cpp/thread.md).
 
@@ -39,11 +40,11 @@ Une DLL MFC qui crée un nouveau thread MFC au cours du démarrage ne répond pl
 
 - Fonction fournie `DllMain` ou **RawDllMain** dans une DLL d’extension MFC.
 
-## <a name="can-a-multithreaded-application-access-an-mfc-dll-in-different-threads"></a><a name="mfc_multithreaded_2"></a>Une application multithread peut-elle accéder à une DLL MFC dans des threads différents ?
+## <a name="can-a-multithreaded-application-access-an-mfc-dll-in-different-threads"></a><a name="mfc_multithreaded_2"></a> Une application multithread peut-elle accéder à une DLL MFC dans des threads différents ?
 
 Les applications multithread peuvent accéder aux DLL MFC normales qui sont liées de manière dynamique aux DLL d’extension MFC et MFC à partir de différents threads. Une application peut accéder à des DLL MFC standard qui sont liées de manière statique aux MFC à partir de plusieurs threads créés dans l’application.
 
-## <a name="are-there-any-mfc-classes-or-functions-that-cannot-be-used-in-an-mfc-dll"></a><a name="mfc_prohibited_classes"></a>Existe-t-il des classes ou des fonctions MFC qui ne peuvent pas être utilisées dans une DLL MFC ?
+## <a name="are-there-any-mfc-classes-or-functions-that-cannot-be-used-in-an-mfc-dll"></a><a name="mfc_prohibited_classes"></a> Existe-t-il des classes ou des fonctions MFC qui ne peuvent pas être utilisées dans une DLL MFC ?
 
 Les dll d’extension utilisent la `CWinApp` classe dérivée de l’application cliente. Ils ne doivent pas avoir leur propre `CWinApp` classe dérivée de.
 
@@ -51,7 +52,7 @@ Les DLL MFC normales doivent avoir une `CWinApp` classe dérivée de et un objet
 
 Notez que dans la mesure où le `CWinApp::Run` mécanisme ne s’applique pas à une dll, l’application possède la pompe de messages principale. Si la DLL ouvre des boîtes de dialogue non modales ou possède sa propre fenêtre frame principale, la pompe de messages principale de l’application doit appeler une routine exportée par la DLL, qui à son tour appelle la `CWinApp::PreTranslateMessage` fonction membre de l’objet d’application de la dll.
 
-## <a name="what-optimization-techniques-should-i-use-to-improve-the-client-application39s-performance-when-loading"></a><a name="mfc_optimization"></a>Quelles techniques d’optimisation dois-je utiliser pour améliorer les performances de l’application cliente&#39;s lors du chargement ?
+## <a name="what-optimization-techniques-should-i-use-to-improve-the-client-application39s-performance-when-loading"></a><a name="mfc_optimization"></a> Quelles techniques d’optimisation dois-je utiliser pour améliorer les performances de l’application cliente&#39;s lors du chargement ?
 
 Si votre DLL est une DLL MFC normale liée de manière statique aux MFC, le fait de la remplacer par une DLL MFC normale qui est liée de manière dynamique aux MFC réduit la taille du fichier.
 
@@ -59,7 +60,7 @@ Si la DLL comporte un grand nombre de fonctions exportées, utilisez un fichier.
 
 Les dll qui sont implicitement liées à une application sont chargées lors du chargement de l’application. Pour améliorer les performances lors du chargement, essayez de diviser la DLL en différentes dll. Placez toutes les fonctions dont l’application appelante a besoin immédiatement après le chargement dans une DLL et faites en sorte que l’application appelante soit implicitement liée à cette DLL. Placez les autres fonctions dont l’application appelante n’a pas besoin directement dans une autre DLL et faites en sorte que l’application soit explicitement liée à cette DLL. Pour plus d’informations, consultez [lier un exécutable à une dll](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use).
 
-## <a name="there39s-a-memory-leak-in-my-regular-mfc-dll-but-my-code-looks-fine-how-can-i-find-the-memory-leak"></a><a name="memory_leak"></a>Il y a&#39;une fuite de mémoire dans ma DLL MFC normale, mais mon code semble parfait. Comment puis-je trouver la fuite de mémoire ?
+## <a name="there39s-a-memory-leak-in-my-regular-mfc-dll-but-my-code-looks-fine-how-can-i-find-the-memory-leak"></a><a name="memory_leak"></a> Il y a&#39;une fuite de mémoire dans ma DLL MFC normale, mais mon code semble parfait. Comment puis-je trouver la fuite de mémoire ?
 
 L’une des causes possibles de la fuite de mémoire est que MFC crée des objets temporaires qui sont utilisés dans les fonctions de gestionnaire de messages. Dans les applications MFC, ces objets temporaires sont automatiquement nettoyés dans la `CWinApp::OnIdle()` fonction qui est appelée entre le traitement des messages. Toutefois, dans les bibliothèques de liens dynamiques (dll) MFC, la `OnIdle()` fonction n’est pas appelée automatiquement. Par conséquent, les objets temporaires ne sont pas automatiquement nettoyés. Pour nettoyer des objets temporaires, la DLL doit explicitement appeler `OnIdle(1)` périodiquement.
 

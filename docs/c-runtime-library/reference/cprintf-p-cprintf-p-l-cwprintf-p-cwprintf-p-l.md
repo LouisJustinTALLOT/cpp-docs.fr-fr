@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l'
 title: _cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -46,19 +47,19 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-ms.openlocfilehash: a02de28a61812147c192495c4794830f85567a10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63b02da66c3eb8856e735eb8445bd688fc1636aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942650"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155995"
 ---
 # <a name="_cprintf_p-_cprintf_p_l-_cwprintf_p-_cwprintf_p_l"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
 Met en forme et affiche les informations sur la console, et prend en charge les paramètres positionnels dans la chaîne de format.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -94,15 +95,15 @@ Paramètres facultatifs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Nombre de caractères affichés ou valeur négative en cas d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions mettent en forme et impriment une série de caractères et de valeurs directement dans la console, à l’aide des fonctions **_putch** et **_putwch** pour les caractères de sortie. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. Le format a la même forme et la même fonction que le paramètre *format* pour la fonction [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) . La différence entre **_cprintf_p** et **cprintf_s** est que **_cprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisés dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Ces fonctions mettent en forme et impriment une série de caractères et de valeurs directement dans la console, à l’aide des fonctions **_putch** et **_putwch** pour la sortie des caractères. Chaque *argument* (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. Le format a la même forme et la même fonction que le paramètre *format* pour la fonction [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) . La différence entre **_cprintf_p** et **cprintf_s** est que **_cprintf_p** prend en charge les paramètres positionnels, ce qui permet de spécifier l’ordre dans lequel les arguments sont utilisés dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Contrairement aux fonctions **fprintf_p**, **printf_p**et **sprintf_p** , ni **_cprintf_p** ni **_cwprintf_p** ne convertit les caractères de saut de ligne en combinaisons retour chariot-saut de ligne (CR-LF) lors de la sortie. Une distinction importante est que **_cwprintf_p** affiche les caractères Unicode lorsqu’il est utilisé dans Windows NT. Contrairement à **_cprintf_p**, **_cwprintf_p** utilise les paramètres régionaux de la console actuelle.
+Contrairement aux fonctions **fprintf_p**, **printf_p** et **sprintf_p** , ni **_cprintf_p** ni **_cwprintf_p** ne convertit les caractères de saut de ligne en combinaisons retour chariot-saut de ligne (CR-LF) lors de la sortie. Une distinction importante est que **_cwprintf_p** affiche des caractères Unicode lorsqu’ils sont utilisés dans Windows NT. Contrairement à **_cprintf_p**, **_cwprintf_p** utilise les paramètres régionaux actuels de la console.
 
 Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
@@ -118,14 +119,14 @@ De plus, comme **_cprintf_s** et **_cwprintf_s**, ils valident le pointeur d’e
 |**_tcprintf_p**|**_cprintf_p**|**_cprintf_p**|**_cwprintf_p**|
 |**_tcprintf_p_l**|**_cprintf_p_l**|**_cprintf_p_l**|**_cwprintf_p_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_cprintf_p**, **_cprintf_p_l**|\<conio.h>|
 |**_cwprintf_p**, **_cwprintf_p_l**|\<conio.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -157,7 +158,7 @@ int main( void )
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>

@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : gestion des exceptions ARM'
 title: Gestion des exceptions ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 4bdf0c88f0c2fe445f3a8865353ca1259ba586fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d37d0ad65f436d1ff67677032f378a30b44e32a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323227"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157124"
 ---
 # <a name="arm-exception-handling"></a>Gestion des exceptions ARM
 
@@ -117,26 +118,26 @@ Pour configurer le chaînage de frames, l’instruction 3A ou 3b est présente s
 
 Si un ajustement non plié est spécifié, l'instruction 5 est l'ajustement de pile explicite.
 
-Les instructions 2 et 4 sont définies selon qu'un push est nécessaire ou pas. Ce tableau récapitule les registres enregistrés en fonction des champs *C*, *L*, *R*et *PF* . Dans tous les cas, *N* est égal *à Reg* + 4, *E* est égal à *reg* + 8, et *S* est égal à (~ ajuster de la*pile*) & 3.
+Les instructions 2 et 4 sont définies selon qu'un push est nécessaire ou pas. Ce tableau récapitule les registres enregistrés en fonction des champs *C*, *L*, *R* et *PF* . Dans tous les cas, *N* est égal *à Reg* + 4, *E* est égal à *reg* + 8, et *S* est égal à (~ ajuster de la *pile*) & 3.
 
 |C|L|R|PF|Registres d'entiers faisant l'objet d'un push|Registres VFP faisant l'objet d'un push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r*N*|Aucun|
-|0|0|0|1|r*S*-r*N*|Aucun|
-|0|0|1|0|Aucun|D8-d*E*|
-|0|0|1|1|r*S*-R3|D8-d*E*|
-|0|1|0|0|R4-r*N*, LR|Aucun|
-|0|1|0|1|r*S*-r*N*, LR|Aucun|
-|0|1|1|0|LR|D8-d*E*|
-|0|1|1|1|r *-* R3, LR|D8-d*E*|
-|1|0|0|0|R4-r*N*, R11|Aucun|
-|1|0|0|1|r*S*-r*N*, R11|Aucun|
-|1|0|1|0|r11|D8-d*E*|
-|1|0|1|1|r *-* R3, R11|D8-d*E*|
-|1|1|0|0|R4-r*N*, R11, LR|Aucun|
-|1|1|0|1|r*S*-r*N*, R11, LR|Aucun|
-|1|1|1|0|r11, LR|D8-d*E*|
-|1|1|1|1|r *-R3*, R11, LR|D8-d*E*|
+|0|0|0|0|R4-r *N*|aucun|
+|0|0|0|1|r *S*-r *N*|aucun|
+|0|0|1|0|Aucun|D8-d *E*|
+|0|0|1|1|r *S*-R3|D8-d *E*|
+|0|1|0|0|R4-r *N*, LR|aucun|
+|0|1|0|1|r *S*-r *N*, LR|aucun|
+|0|1|1|0|LR|D8-d *E*|
+|0|1|1|1|r *-* R3, LR|D8-d *E*|
+|1|0|0|0|R4-r *N*, R11|aucun|
+|1|0|0|1|r *S*-r *N*, R11|aucun|
+|1|0|1|0|r11|D8-d *E*|
+|1|0|1|1|r *-* R3, R11|D8-d *E*|
+|1|1|0|0|R4-r *N*, R11, LR|aucun|
+|1|1|0|1|r *S*-r *N*, R11, LR|aucun|
+|1|1|1|0|r11, LR|D8-d *E*|
+|1|1|1|1|r *-R3*, R11, LR|D8-d *E*|
 
 Les épilogues des fonctions canoniques suivent une forme analogue, mais en sens inverse et avec quelques options supplémentaires. L'épilogue peut compter jusqu'à 5 instructions et sa forme est strictement dictée par celle du prologue.
 
@@ -238,36 +239,36 @@ Le tableau suivant présente le mappage entre les codes de déroulement et les o
 
 |Octet 1|Octet 2|Octet 3|Octet 4|Taille d'opcode|Explication|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x7F \* ) 4|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x7F) \* 4|
 |80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> où LR est dépilé si le code & 0x2000 et R0-R12 sont dépilés si le bit correspondant est défini dans le code & 0x1FFF|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> où X correspond au code & 0x0F|
 |D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> où X correspond à (code & 0x03) + 4 et LR est dépilé si le code & 0x04|
 |D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> où X correspond à (code & 0x03) + 8 et LR est dépilé si le code & 0x04|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> où X correspond à (code & 0x07) + 8|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> où X correspond à (code & 0x03FF \* ) 4|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> où X correspond à (code & 0x03FF) \* 4|
 |EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> où LR est dépilé si le code & 0x0100 et R0-R7 sont dépilés si le bit correspondant est défini dans le code & 0x00FF|
 |EE|00-0F|||16|Spécifique à Microsoft|
 |EE|10-FF|||16|Disponible|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> où X correspond à (code & 0x000F \* ) 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> où X correspond à (code & 0x000F) \* 4|
 |EF|10-FF|||32|Disponible|
 |F0-F4||||-|Disponible|
 |F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> où S est (code & 0x00F0)  >> 4 et E est du code & 0x000F|
 |F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> où S est ((code & 0x00F0)  >> 4) + 16 et E est (code & 0x000F) + 16|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x00FFFF \* ) 4|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x00FFFFFF \* ) 4|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x00FFFF \* ) 4|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x00FFFFFF \* ) 4|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x00FFFF) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x00FFFFFF) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x00FFFF) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> où X correspond à (code & 0x00FFFFFF) \* 4|
 |FB||||16|nop (16 bits)|
 |FC||||32|nop (32 bits)|
 |FD||||16|fin + nop de 16 bits dans l'épilogue|
 |FE||||32|fin + nop de 32 bits dans l'épilogue|
 |FF||||-|end|
 
-Cela montre la plage de valeurs hexadécimales pour chaque octet dans un *code*de code de déroulement, ainsi que la taille de l’opcode *Opsize* et l’interprétation de l’instruction d’origine correspondante. Les cellules vides indiquent des codes de déroulement plus courts. Dans les instructions qui contiennent des valeurs élevées couvrant plusieurs octets, les bits les plus significatifs sont stockés en premier. Le champ *Opsize* affiche la taille d’opcode implicite associée à chaque opération Thumb-2. Les entrées en double apparentes figurant dans le tableau avec des encodages différents servent à faire la distinction entre les différentes tailles d’opcode.
+Cela montre la plage de valeurs hexadécimales pour chaque octet dans un *code* de code de déroulement, ainsi que la taille de l’opcode *Opsize* et l’interprétation de l’instruction d’origine correspondante. Les cellules vides indiquent des codes de déroulement plus courts. Dans les instructions qui contiennent des valeurs élevées couvrant plusieurs octets, les bits les plus significatifs sont stockés en premier. Le champ *Opsize* affiche la taille d’opcode implicite associée à chaque opération Thumb-2. Les entrées en double apparentes figurant dans le tableau avec des encodages différents servent à faire la distinction entre les différentes tailles d’opcode.
 
 Les codes de déroulement sont conçus de telle sorte que le premier octet du code indique à la fois la taille totale en octets du code et la taille de l'opcode correspondant dans le flux d'instructions. Pour calculer la taille du prologue ou de l’épilogue, parcourez les codes de déroulement du début jusqu’à la fin de la séquence, puis utilisez une table de correspondance ou une méthode similaire pour déterminer la longueur de l’opcode correspondant.
 
-Les codes de déroulement 0xFD et 0xFE sont équivalents au code de fin normal 0xFF, mais prennent en compte un opcode nop supplémentaire dans le cas de l'épilogue, de 16 ou 32 bits. Pour les prologues, les codes 0xFD, 0xFE et 0xFF sont tout à fait équivalents. Cela compte pour les fins épilogue courantes `bx lr` ou `b <tailcall-target>`, qui n’ont pas d’instruction de prologue équivalente. Cela augmente les probabilités de partage des séquences de déroulement entre le prologue et les épilogues.
+Les codes de déroulement 0xFD et 0xFE sont équivalents au code de fin normal 0xFF, mais prennent en compte un opcode nop supplémentaire dans le cas de l'épilogue, de 16 ou 32 bits. Pour les prologues, les codes 0xFD, 0xFE et 0xFF sont tout à fait équivalents. Cela compte pour les fins épilogue courantes `bx lr` ou `b <tailcall-target>` , qui n’ont pas d’instruction de prologue équivalente. Cela augmente les probabilités de partage des séquences de déroulement entre le prologue et les épilogues.
 
 Dans bien des cas, il devrait être possible d'utiliser le même ensemble de codes de déroulement pour le prologue et tous les épilogues. Or, pour gérer le déroulement des prologues et des épilogues partiellement exécutés, il serait nécessaire d'avoir plusieurs séquences de code de déroulement avec un ordre ou un comportement différents. C'est pourquoi chaque épilogue a son propre index dans le tableau de déroulement pour indiquer où commencer l'exécution.
 
@@ -739,5 +740,5 @@ Function:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d'ensemble des conventions ABI ARM](overview-of-arm-abi-conventions.md)<br/>
+[Vue d’ensemble des conventions ABI ARM](overview-of-arm-abi-conventions.md)<br/>
 [Problèmes courants de migration ARM Visual C++](common-visual-cpp-arm-migration-issues.md)

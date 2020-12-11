@@ -1,16 +1,17 @@
 ---
+description: En savoir plus sur la syntaxe BNF (Understanding Backus-Naur Form)
 title: Enregistreur ATL et syntaxe BNF (Backus-Naur Form)
 ms.date: 05/14/2019
 helpviewer_keywords:
 - BNF notation
 - Backus-Naur form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: 0f07a39863b586d524d060dc3df7117e2c930b3e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 7f392d442c4d43865faf9e788f8bf69288673398
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168707"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157345"
 ---
 # <a name="understanding-backus-naur-form-bnf-syntax"></a>Présentation de la syntaxe BNF (Backus Nauer Form)
 
@@ -19,7 +20,7 @@ Les scripts utilisés par l’enregistreur ATL sont décrits dans cette rubrique
 |Convention/symbole|Signification|
 |------------------------|-------------|
 |::=|Équivalent|
-|&#124;|OR|
+|&#124;|OU|
 |X+|Un ou plusieurs X.|
 |\[X]|X est facultatif. Les délimiteurs facultatifs sont indiqués par \[].|
 |Du texte **en gras**|Un littéral de chaîne.|
@@ -33,10 +34,10 @@ Comme indiqué dans le tableau précédent, les scripts d’enregistreur utilise
 |**NoRemove**|Ne supprime pas la clé suivante lors de la désinscription.|
 |**multiples**|Spécifie que `<Key Name>` est en réalité une valeur nommée.|
 |**Supprimer**|Supprime la clé suivante lors de l’inscription.|
-|**x**|Spécifie que la valeur suivante est une chaîne (REG_SZ).|
-|**e**|Spécifie que la valeur suivante est un DWORD (REG_DWORD).|
-|**lecteur**|Spécifie que la valeur suivante est une multichaîne (REG_MULTI_SZ).|
-|**p**|Spécifie que la valeur suivante est une valeur binaire (REG_BINARY).|
+|**s**|Spécifie que la valeur suivante est une chaîne (REG_SZ).|
+|**d**|Spécifie que la valeur suivante est un DWORD (REG_DWORD).|
+|**m**|Spécifie que la valeur suivante est une multichaîne (REG_MULTI_SZ).|
+|**b**|Spécifie que la valeur suivante est une valeur binaire (REG_BINARY).|
 
 ## <a name="bnf-syntax-examples"></a>Exemples de syntaxe BNF
 
@@ -44,31 +45,31 @@ Voici quelques exemples de syntaxe pour vous aider à comprendre le fonctionneme
 
 ### <a name="syntax-example-1"></a>Exemple de syntaxe 1
 
-> \<expression de Registre> :: \<= Add Key>
+> \<registry expression> ::= \<Add Key>
 
 spécifie que `registry expression` équivaut à `Add Key`.
 
 ### <a name="syntax-example-2"></a>Exemple de syntaxe 2
 
-> \<expression de Registre> :: \<= Add Key> | \<Supprimer la clé>
+> \<registry expression> ::= \<Add Key> | \<Delete Key>
 
 spécifie que `registry expression` équivaut à `Add Key` ou à `Delete Key`.
 
 ### <a name="syntax-example-3"></a>Exemple de syntaxe 3
 
-> \<Nom de clé> :: =\<'alphanumérique>+ '
+> \<Key Name> ::= '\<AlphaNumeric>+'
 
-spécifie `Key Name` que est équivalent à une ou `AlphaNumeric` plusieurs valeurs.
+Spécifie que `Key Name` est équivalent à une ou plusieurs `AlphaNumeric` valeurs.
 
 ### <a name="syntax-example-4"></a>Exemple de syntaxe 4
 
-> \<Ajoutez une clé> :: = [**ForceRemove** | **NoRemove** | **Val**]\<nom de clé>
+> \<Add Key>:: = [**ForceRemove**  |  **NoRemove**  |  **Val**]\<Key Name>
 
 spécifie que `Add Key` équivaut à `Key Name`, et que les littéraux de chaîne, `ForceRemove`, `NoRemove` et `val` sont facultatifs.
 
 ### <a name="syntax-example-5"></a>Exemple de syntaxe 5
 
-> \<Alphanumérique> :: = *n’importe quel caractère non null, autrement dit, ASCII 0*
+> \<AlphaNumeric> :: = *n’importe quel caractère non null, autrement dit, ASCII 0*
 
 spécifie que `AlphaNumeric` équivaut à n’importe quel caractère non NULL.
 

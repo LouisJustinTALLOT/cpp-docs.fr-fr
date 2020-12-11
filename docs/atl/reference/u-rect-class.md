@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe _U_RECT'
 title: Classe _U_RECT
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-ms.openlocfilehash: 8a4d5b2a770b3f0ecfe10be0fbad22a702aa0531
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b3720107d1b64f930b4c64dff269de041d9b928c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157605"
 ---
 # <a name="_u_rect-class"></a>Classe _U_RECT
 
-Cette classe d’adaptateur d’argument permet soit `RECT` des pointeurs ou des références à passer à une fonction qui est implémentée en termes de pointeurs.
+Cette classe d’adaptateur d’arguments permet `RECT` de passer des pointeurs ou des références à une fonction implémentée en termes de pointeurs.
 
 > [!IMPORTANT]
 > Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
@@ -35,33 +36,33 @@ class _U_RECT
 
 |Nom|Description|
 |----------|-----------------|
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|Constructeur.|
+|[_U_RECT :: _U_RECT](#_u_rect___u_rect)|Constructeur.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointeur `RECT`à un .|
+|[_U_RECT :: m_lpRect](#_u_rect__m_lprect)|Pointeur vers un `RECT` .|
 
 ## <a name="remarks"></a>Notes
 
-La classe définit deux surcharges de constructeurs : l’une accepte un ARGUMENT `LPRECT` **reCT&** et l’autre accepte un argument. Le premier constructeur stocke l’adresse de l’argument de référence dans le seul membre de la classe, [m_lpRect](#_u_rect__m_lprect). L’argument du constructeur de pointeur est stocké directement sans conversion.
+La classe définit deux surcharges de constructeur : l’une accepte un argument **RECT&** et l’autre accepte un `LPRECT` argument. Le premier constructeur stocke l’adresse de l’argument de référence dans le membre de données unique de la classe, [m_lpRect](#_u_rect__m_lprect). L’argument du constructeur de pointeur est stocké directement sans conversion.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlwin.h
+**En-tête :** atlwin. h
 
-## <a name="_u_rectm_lprect"></a><a name="_u_rect__m_lprect"></a>_U_RECT::m_lpRect
+## <a name="_u_rectm_lprect"></a><a name="_u_rect__m_lprect"></a> _U_RECT :: m_lpRect
 
-La classe détient la valeur transmise à l’un de ses constructeurs en tant que membre public `LPRECT` des données.
+La classe contient la valeur passée à l’un de ses constructeurs en tant que `LPRECT` membre de données public.
 
 ```
 LPRECT m_lpRect;
 ```
 
-## <a name="_u_rect_u_rect"></a><a name="_u_rect___u_rect"></a>_U_RECT::_U_RECT
+## <a name="_u_rect_u_rect"></a><a name="_u_rect___u_rect"></a> _U_RECT :: _U_RECT
 
-L’adresse de l’argument de référence est stockée dans le seul membre de la donnée de la classe, [m_lpRect](#_u_rect__m_lprect).
+L’adresse de l’argument de référence est stockée dans le membre de données unique de la classe, [m_lpRect](#_u_rect__m_lprect).
 
 ```
 _U_RECT(RECT& rc);
@@ -70,11 +71,11 @@ _U_RECT(LPRECT lpRect);
 
 ### <a name="parameters"></a>Paramètres
 
-*Rc*<br/>
+*Release*<br/>
 Une référence `RECT`.
 
 *lpRect*<br/>
-Un `RECT` pointeur.
+`RECT`Pointeur.
 
 ### <a name="remarks"></a>Notes
 

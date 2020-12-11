@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Comment : modifier le Framework cible et l’ensemble d’outils de plateforme'
 title: "comment : modifier la version cible de .Net Framework et l'ensemble d'outils de la plateforme"
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 8b3de299652efcdd8fd94622b890b6cec7b059e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73964904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156253"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>comment : modifier la version cible de .Net Framework et l'ensemble d'outils de la plateforme
 
@@ -18,7 +19,7 @@ Vous pouvez modifier un fichier projet Visual Studio C++ pour cibler différente
 
 ## <a name="platform-toolset"></a>Ensemble d’outils de plateforme
 
-L’ensemble d’outils de plateforme se compose du compilateur C++ (cl. exe) et de l’éditeur de liens (Link. exe), ainsi que des bibliothèques standard C/C++. Depuis Visual Studio 2015, la version majeure de l’ensemble d’outils est restée à 14, ce qui signifie que les projets compilés avec Visual Studio 2019 ou Visual Studio 2017 sont compatibles ABI-Backwards avec les projets compilés avec Visual Studio 2015. La version mineure a été mise à jour de 1 pour chaque version depuis Visual Studio 2015 :
+L’ensemble d’outils de plateforme se compose du compilateur C++ (cl.exe) et de l’éditeur de liens (link.exe), ainsi que des bibliothèques standard C/C++. Depuis Visual Studio 2015, la version majeure de l’ensemble d’outils est restée à 14, ce qui signifie que les projets compilés avec Visual Studio 2019 ou Visual Studio 2017 sont compatibles ABI-Backwards avec les projets compilés avec Visual Studio 2015. La version mineure a été mise à jour de 1 pour chaque version depuis Visual Studio 2015 :
 
 - Visual Studio 2015 : V140
 - Visual Studio 2017 : V141

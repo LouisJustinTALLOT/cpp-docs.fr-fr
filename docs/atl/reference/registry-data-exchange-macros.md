@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : macros d’échange de données du Registre'
 title: Macros d’échange de données de Registre
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-ms.openlocfilehash: 507db77b525c526fe1cd47c7d75c34e15a6a0628
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ecfc5617922fe0a1ec7b134f61093a4ed3962a54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157774"
 ---
 # <a name="registry-data-exchange-macros"></a>Macros d’échange de données de Registre
 
@@ -31,7 +32,7 @@ Ces macros effectuent des opérations d’échange de données de registre.
 |[RDX_DWORD](#rdx_dword)|Associe l’entrée de Registre spécifiée à une variable membre spécifiée de type DWORD.|
 |[RDX_TEXT](#rdx_text)|Associe l’entrée de Registre spécifiée à une variable membre spécifiée de type TCHAR.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlplus. h
 

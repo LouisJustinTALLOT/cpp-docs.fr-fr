@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exportation à partir d’une DLL à l’aide de fichiers DEF'
 title: Exportation à partir d'une DLL à l'aide de fichiers DEF
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 8fdbb060502f339eb748306eef582d2f296b1f60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5be5f2c4a5f6db5f1983da940d8a336f02c938f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229829"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156526"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Exportation à partir d'une DLL à l'aide de fichiers DEF
 
@@ -34,7 +35,7 @@ EXPORTS
    Min   @4
 ```
 
-Si vous utilisez l' [Assistant DLL MFC](../mfc/reference/mfc-dll-wizard.md) pour créer une DLL MFC, l’Assistant crée un fichier de définition squelette pour vous et l’ajoute automatiquement à votre projet. Ajoutez les noms des fonctions à exporter dans ce fichier. Pour les dll non-MFC, créez vous-même le fichier DEF et ajoutez-le à votre projet. Accédez ensuite à **Project**  >  **Propriétés**  >  **Linker**  >  du projet fichier de définition du module**d’entrée**de l’éditeur de liens  >  **Module Definition File** et entrez le nom du fichier def. Répétez cette étape pour chaque configuration et plateforme, ou faites-la tout à la fois en sélectionnant **configuration = toutes les configurations**et **plateforme = toutes les plateformes**.
+Si vous utilisez l' [Assistant DLL MFC](../mfc/reference/mfc-dll-wizard.md) pour créer une DLL MFC, l’Assistant crée un fichier de définition squelette pour vous et l’ajoute automatiquement à votre projet. Ajoutez les noms des fonctions à exporter dans ce fichier. Pour les dll non-MFC, créez vous-même le fichier DEF et ajoutez-le à votre projet. Accédez ensuite à   >  **Propriétés**  >    >  du projet fichier de définition du module **d’entrée** de l’éditeur de liens  >   et entrez le nom du fichier def. Répétez cette étape pour chaque configuration et plateforme, ou faites-la tout à la fois en sélectionnant **configuration = toutes les configurations** et **plateforme = toutes les plateformes**.
 
 Si vous exportez des fonctions dans un fichier C++, vous devez placer les noms décorés dans le fichier DEF ou définir vos fonctions exportées avec une liaison C standard à l’aide de extern "C". Si vous devez placer les noms décorés dans le fichier DEF, vous pouvez les obtenir à l’aide de l’outil [DUMPBIN](../build/reference/dumpbin-reference.md) ou à l’aide de l’option [/Map](../build/reference/map-generate-mapfile.md) de l’éditeur de liens. Notez que les noms décorés produits par le compilateur sont spécifiques au compilateur. Si vous placez les noms décorés produits par le compilateur Microsoft C++ (MSVC) dans un fichier DEF, les applications qui lient à votre DLL doivent également être générées à l’aide de la même version de MSVC afin que les noms décorés dans l’application appelante correspondent aux noms exportés dans le fichier DEF de la DLL.
 

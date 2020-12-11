@@ -1,12 +1,13 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble des conventions ABI ARM64'
 title: Vue d’ensemble des conventions ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: bfe55513ffd24175dbe62efc6d5afcfd82f71e4c
-ms.sourcegitcommit: 7f378314c5692d897ead10b7f6c96d4cb2abd266
+ms.openlocfilehash: fbdb709eaa960446bb76712962dbbc3bfb66d38a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157111"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Vue d’ensemble des conventions ABI ARM64
 
@@ -31,7 +32,7 @@ Enfin, lorsque vous faites référence aux types de données, les définitions s
 
 - **Short-Vector** : type de données directement représentable dans SIMD, vecteur de 8 octets ou 16 octets d’éléments. Elle est alignée sur une taille de 8 octets ou 16 octets, où chaque élément peut être 1, 2, 4 ou 8 octets.
 - **HFA (agrégat à virgule flottante homogène)** : type de données avec 2 à 4 membres à virgule flottante identiques, flottant ou double.
-- **HVA (agrégat à vecteurs courts homogènes)** : type de données avec 2 à 4 membres de vecteurs courts identiques.
+- **HVA (agrégation homogène Short-Vector)** : type de données avec 2 à 4 membres Short-Vector identiques.
 
 ## <a name="base-requirements"></a>Configuration de base requise
 
@@ -71,7 +72,7 @@ Alignement de la disposition par défaut pour les valeurs globales et statiques�
 
 L’architecture AArch64 prend en charge les registres d’entiers 32 :
 
-| Inscrire | Volatil ? | Role |
+| S’inscrire | Volatil ? | Rôle |
 | - | - | - |
 | x0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
 | x1-x 7 | Volatil | Paramètre/Registre de travail 2-8 |
@@ -94,7 +95,7 @@ Le pointeur de frame (x29) est requis pour la compatibilité avec le parcours de
 
 L’architecture AArch64 prend également en charge les registres à virgule flottante 32/SIMD, résumés ci-dessous :
 
-| Inscrire | Volatil ? | Role |
+| S’inscrire | Volatil ? | Rôle |
 | - | - | - |
 | v0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
 | v1-v7 | Volatil | Registres de paramètres/Scratch 2-8 |
@@ -105,7 +106,7 @@ Chaque registre est accessible en tant que valeur 128 bits complète (via v0-V31
 
 Le registre de contrôle à virgule flottante (FPCR) a certaines exigences sur les différents champs de bits qu’il contient :
 
-| Bits | Signification | Volatil ? | Role |
+| Bits | Signification | Volatil ? | Rôle |
 | - | - | - | - |
 | 26 | AHP | Non volatile | Autre contrôle à demi-précision. |
 | 25 | DN | Non volatile | Contrôle en mode NaN par défaut. |
@@ -117,7 +118,7 @@ Le registre de contrôle à virgule flottante (FPCR) a certaines exigences sur l
 
 Comme AArch32, la spécification AArch64 fournit trois registres « ID de thread » contrôlés par le système :
 
-| Inscrire | Role |
+| S’inscrire | Rôle |
 | - | - |
 | TPIDR_EL0 | Réservé. |
 | TPIDRRO_EL0 | Contient le nombre de processeurs pour le processeur actuel. |

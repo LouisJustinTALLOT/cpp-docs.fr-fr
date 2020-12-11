@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : options, Assistant contrôle ATL'
 title: Options, Assistant contrôle ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 481c97fe7621e9592317f629c2cf87f2f719d5d1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 428f6ba1a4bee9cec60ca05b57d66d176c3f0deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506915"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157891"
 ---
 # <a name="options-atl-control-wizard"></a>Options, Assistant contrôle ATL
 

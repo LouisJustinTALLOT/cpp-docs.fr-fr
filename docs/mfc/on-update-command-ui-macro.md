@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : macro ON_UPDATE_COMMAND_UI'
 title: ON_UPDATE_COMMAND_UI, macro
 ms.date: 09/06/2019
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-ms.openlocfilehash: ba5a48fabb9142c080e688e189e0983ad5ba2eda
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 394ee2679e84c09223f61d485fac3e628dec7145
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624049"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112165"
 ---
 # <a name="on_update_command_ui-macro"></a>ON_UPDATE_COMMAND_UI, macro
 
@@ -28,4 +29,4 @@ Comme tous les gestionnaires, la déclaration de fonction affiche le mot clé **
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour mettre à jour des objets d’interface utilisateur](how-to-update-user-interface-objects.md)
+[Comment : mettre à jour des objets User-Interface](how-to-update-user-interface-objects.md)

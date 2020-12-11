@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : technologie active et dll'
 title: Technologie active et DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Active technology [C++]
 - MFC DLLs [C++], Active Technology
 ms.assetid: 3ed27f8d-164a-4562-ad61-9f2333404cc7
-ms.openlocfilehash: f67fb9548601ac705ceda08d20d3049f0bf1e0a5
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 02a11bd18e8c6f62748d0be3f4cd708c8e4e4621
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157137"
 ---
 # <a name="active-technology-and-dlls"></a>Technologie active et DLL
 

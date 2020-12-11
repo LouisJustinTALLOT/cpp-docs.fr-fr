@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : configurer des projets Visual Studio C++ pour cibler des plateformes x64 64 bits'
 title: 'Comment : configurer des projets Visual Studio C++ pour cibler des plateformes x64 64 bits'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 762fd5d6ddbb55713cf2fc5e34cb33fb91b08eb9
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: 717f9db302f4a7bfef12d30830336b22f9fc5169
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492243"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156370"
 ---
 # <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Comment : configurer des projets Visual Studio C++ pour cibler des plateformes x64 64 bits
 
@@ -24,11 +25,11 @@ Vous pouvez utiliser les configurations de projet dans l’IDE de Visual Studio 
 1. Ouvrez les pages de propriétés de ce projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md).
 
    > [!NOTE]
-   > Pour les projets .net, assurez-vous que le nœud **Propriétés de configuration** , ou l’un de ses nœuds enfants, est sélectionné dans la boîte de dialogue pages de ** \<propriétés du> ProjectName** ; dans le cas contraire, le bouton **Configuration Manager** reste indisponible.
+   > Pour les projets .NET, assurez-vous que le nœud **Propriétés de configuration** , ou l’un de ses nœuds enfants, est sélectionné dans la boîte de dialogue **\<Projectname> pages de propriétés** ; sinon, le bouton **Configuration Manager** reste indisponible.
 
 1. Choisissez le bouton **Gestionnaire de configurations** pour ouvrir la boîte de dialogue **Gestionnaire de configurations** .
 
-1. Dans la liste déroulante plateforme de la **solution active** , sélectionnez l' ** \<option nouveau... >** pour ouvrir la boîte de dialogue **nouvelle plateforme de solution** .
+1. Dans la liste déroulante plateforme de la **solution active** , sélectionnez l' **\<New...>** option permettant d’ouvrir la boîte de dialogue **nouvelle plateforme de solution** .
 
 1. Dans la liste déroulante **tapez ou sélectionnez la nouvelle plateforme** , sélectionnez une plateforme cible 64 bits.
 
@@ -37,7 +38,7 @@ Vous pouvez utiliser les configurations de projet dans l’IDE de Visual Studio 
 
 1. Choisissez le bouton **OK**. La plateforme que vous avez sélectionnée à l’étape précédente s’affiche sous **Plateforme de la solution active** dans la boîte de dialogue **Gestionnaire de configurations** .
 
-1. Cliquez sur le bouton **Fermer** dans la boîte de dialogue **Configuration Manager** , puis choisissez le bouton **OK** dans la ** \<** boîte de dialogue pages de propriétés de ProjectName>.
+1. Choisissez le bouton **Fermer** dans la boîte de dialogue **Configuration Manager** , puis choisissez le bouton **OK** dans la boîte de dialogue pages de **\<Projectname> Propriétés** .
 
 ### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>Pour copier des paramètres de projet Win32 dans une configuration de projet 64 bits
 
@@ -49,7 +50,7 @@ Vous pouvez utiliser les configurations de projet dans l’IDE de Visual Studio 
 
   - L’**Environnement cible** prend la valeur **/env x64**. Pour plus d’informations, consultez [pages de propriétés MIDL](reference/midl-property-pages.md).
 
-  - L’option**Validation des paramètres** est effacée et réinitialisée à la valeur par défaut. Pour plus d’informations, consultez [pages de propriétés MIDL](reference/midl-property-pages.md).
+  - L’option **Validation des paramètres** est effacée et réinitialisée à la valeur par défaut. Pour plus d’informations, consultez [pages de propriétés MIDL](reference/midl-property-pages.md).
 
   - Si vous avez affecté la valeur **/ZI** à l’option **Format des informations de débogage** dans la configuration de projet Win32, elle prend la valeur **/Zi** dans la configuration de projet 64 bits. Pour plus d’informations, consultez l’article [/Z7, /Zi, /ZI (Format des informations de débogage)](reference/z7-zi-zi-debug-information-format.md).
 

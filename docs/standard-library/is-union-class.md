@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_union'
 title: is_union, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_union class
 - is_union
 ms.assetid: 80eda256-40b8-4db5-9ac1-d58bb8032a3e
-ms.openlocfilehash: 3b4383fd96c359661d225433dbe9e7dd8b7f939f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: be095053523a0348632d2c81c3a3a7eafe8593d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458896"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154303"
 ---
-# <a name="isunion-class"></a>is_union, classe
+# <a name="is_union-class"></a>is_union, classe
 
 Teste si le type est une union.
 
@@ -32,7 +33,7 @@ Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *Ty* est un type Union ou `cv-qualified` une forme d’un type Union. sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *Ty* est un type Union ou une `cv-qualified` forme d’un type Union. sinon, sa valeur est false.
 
 ## <a name="example"></a>Exemple
 
@@ -72,13 +73,13 @@ is_union<int> == false
 is_union<ints> == true
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[is_class, classe](../standard-library/is-class-class.md)
+[Classe is_class](../standard-library/is-class-class.md)

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros de mappage de propriétés
 title: Macros de mappage de propriétés
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-ms.openlocfilehash: 5e14c3cb82b9b7527ed8af42e181581097218360
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2fc7f96c42d7f9d3f116f13c9864ce857e32743
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157800"
 ---
 # <a name="property-map-macros"></a>Macros de mappage de propriétés
 
@@ -31,7 +32,7 @@ Ces macros définissent les mappages et les entrées des propriétés.
 |[PROP_PAGE](#prop_page)|Entre un CLSID de page de propriétés dans le mappage de propriété.|
 |[END_PROP_MAP](#end_prop_map)|Marque la fin du mappage de propriétés ATL.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 
@@ -109,7 +110,7 @@ dans Description de la propriété.
 *égal*<br/>
 dans DISPID de la propriété.
 
-*clsid*<br/>
+*identificateur*<br/>
 dans CLSID de la page de propriétés associée. Utilisez la valeur spéciale CLSID_NULL pour une propriété qui n’a pas de page de propriétés associée.
 
 *vt*<br/>
@@ -141,7 +142,7 @@ dans Description de la propriété.
 *égal*<br/>
 dans DISPID de la propriété.
 
-*clsid*<br/>
+*identificateur*<br/>
 dans CLSID de la page de propriétés associée. Utilisez la valeur spéciale CLSID_NULL pour une propriété qui n’a pas de page de propriétés associée.
 
 *iidDispatch*<br/>
@@ -172,7 +173,7 @@ PROP_PAGE(clsid)
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
+*identificateur*<br/>
 dans CLSID d’une page de propriétés.
 
 ### <a name="remarks"></a>Notes

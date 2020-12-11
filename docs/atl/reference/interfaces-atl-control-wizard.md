@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : interfaces, Assistant contrôle ATL'
 title: Interfaces, Assistant contrôle ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,34 +7,34 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
-ms.openlocfilehash: f19df1723a4e115ca7f8e314bd5ea423082417e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abc0980588c3340277704b0084334a7d15fc1c6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275280"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158346"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Interfaces, Assistant contrôle ATL
 
-Cette page de l’Assistant identifie les interfaces prenant en charge le contrôle. Par défaut, les interfaces prises en charge sont celles généralement utilisées par la plupart des conteneurs.
+Cette page de l’Assistant identifie les interfaces prises en charge par le contrôle. Par défaut, les interfaces prises en charge sont celles généralement utilisées par la plupart des conteneurs.
 
 > [!NOTE]
-> Si vous avez sélectionné **contrôle Minimal** sur le [Options](../../atl/reference/options-atl-control-wizard.md) onglet, aucune interface s’affichent par défaut dans le **pris en charge** zone de liste.
+> Si vous avez sélectionné le **contrôle minimal** sous l’onglet [options](../../atl/reference/options-atl-control-wizard.md) , aucune interface n’apparaît par défaut dans la zone de liste **pris en charge** .
 
 - **Non pris en charge**
 
-   Indique les interfaces disponibles qui ne sont pas actuellement pris en charge pour le contrôle.
+   Indique les interfaces disponibles qui ne sont pas actuellement prises en charge pour le contrôle.
 
-- **Prise en charge**
+- **Pris en charge**
 
-   Indique les interfaces qui sont actuellement prises en charge pour le contrôle.
+   Indique les interfaces actuellement prises en charge pour le contrôle.
 
    |Bouton de transfert|Description|
    |---------------------|-----------------|
-   |**>**|Ajoute à la **pris en charge** liste le nom d’interface actuellement sélectionné dans le **pas pris en charge** liste.|
-   |**>>**|Ajoute à la **pris en charge** répertorier tous les noms d’interface disponibles dans le **pas pris en charge** liste.|
-   |**\<**|Supprime le nom d’interface actuellement sélectionné dans le **pris en charge** liste.|
-   |**\<\<**|Supprime tous les noms de l’interface du **pris en charge** liste.|
+   |**>**|Ajoute à la liste **prise en charge** le nom d’interface actuellement sélectionné dans la liste **non pris en charge** .|
+   |**>>**|Ajoute à la liste **pris en charge** tous les noms d’interface disponibles dans la liste **non pris en charge** .|
+   |**\<**|Supprime le nom d’interface actuellement sélectionné dans la liste **prise en charge** .|
+   |**\<\<**|Supprime tous les noms d’interface actuellement répertoriés dans la liste **prise en charge** .|
 
 ## <a name="see-also"></a>Voir aussi
 

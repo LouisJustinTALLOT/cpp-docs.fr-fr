@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : utilisation de IDispEventImpl'
 title: Utilisation de IDispEventImpl (ATL)
 ms.date: 08/19/2019
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: 9684781ba99d96e2c58d450ee0ff892374e33aef
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 4ddab52eeac3c409b32393e8b8b07a85019143c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157176"
 ---
 # <a name="using-idispeventimpl"></a>Utilisation d’IDispEventImpl
 
-Lorsque vous `IDispEventImpl` utilisez pour gérer des événements, vous devez:
+Lorsque `IDispEventImpl` vous utilisez pour gérer des événements, vous devez :
 
 - Dérivez votre classe de [IDispEventImpl](../atl/reference/idispeventimpl-class.md).
 
@@ -25,9 +26,9 @@ Lorsque vous `IDispEventImpl` utilisez pour gérer des événements, vous devez:
 
 - Conseillez et Déconseillez la source de l’événement.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-L’exemple ci-dessous montre comment gérer `DocumentChange` l’événement déclenché par l’objet **application** de Word. Cet événement est défini comme une méthode sur la `ApplicationEvents` dispinterface.
+L’exemple ci-dessous montre comment gérer l' `DocumentChange` événement déclenché par l’objet **application** de Word. Cet événement est défini comme une méthode sur la `ApplicationEvents` dispinterface.
 
 L’exemple provient de l' [exemple ATLEventHandling](../overview/visual-cpp-samples.md).
 
@@ -47,11 +48,11 @@ methods:
 };
 ```
 
-L’exemple utilise `#import` pour générer les fichiers d’en-tête requis à partir de la bibliothèque de types Word. Si vous souhaitez utiliser cet exemple avec d’autres versions de Word, vous devez spécifier le fichier dll mso correct. Par exemple, Office 2000 fournit mso9. dll et OfficeXP fournit mso. dll. Ce code est simplifié de *pch. h* (*stdafx. h* dans Visual Studio 2017 et versions antérieures):
+L’exemple utilise `#import` pour générer les fichiers d’en-tête requis à partir de la bibliothèque de types Word. Si vous souhaitez utiliser cet exemple avec d’autres versions de Word, vous devez spécifier le fichier dll mso correct. Par exemple, Office 2000 fournit des mso9.dll et OfficeXP mso.dll. Ce code est simplifié de *pch. h* (*stdafx. h* dans Visual Studio 2017 et versions antérieures) :
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]
 
-Le code suivant apparaît dans NotSoSimple. h. Le code approprié est indiqué par des commentaires:
+Le code suivant apparaît dans NotSoSimple. h. Le code approprié est indiqué par des commentaires :
 
 [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]
 

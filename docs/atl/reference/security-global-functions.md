@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions globales de sécurité'
 title: Fonctions globales de sécurité
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 0b42fe10ef1de517677b35a9fe54d0c6a04ff748
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10a3a3f358eba3aa1715bd375221f6ec35a56fcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834490"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157787"
 ---
 # <a name="security-global-functions"></a>Fonctions globales de sécurité
 
@@ -42,7 +43,7 @@ Ces fonctions assurent la prise en charge de la modification des objets SID et A
 |[AtlSetSacl](#atlsetsacl)|Appelez cette fonction pour définir les informations relatives à la liste de contrôle d'accès système (SACL) d'un objet spécifique.|
 |[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Appelez cette fonction pour récupérer le descripteur de sécurité d'un objet donné.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 
@@ -116,7 +117,7 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 Dans les versions Debug, une erreur d’assertion se produit si *hObject* n’est pas valide ou si *dwInheritanceFlowControl* n’est pas l’une des trois valeurs autorisées.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 
@@ -149,7 +150,7 @@ Pointeur vers un `CSid` objet qui contiendra les nouvelles informations de sécu
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 
@@ -182,7 +183,7 @@ Spécifie une valeur de l’énumération [SE_OBJECT_TYPE](/windows/win32/api/ac
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 
@@ -215,7 +216,7 @@ Pointeur vers un `CSid` objet qui contiendra les nouvelles informations de sécu
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 
@@ -248,7 +249,7 @@ Spécifie une valeur de l’énumération [SE_OBJECT_TYPE](/windows/win32/api/ac
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 
@@ -289,7 +290,7 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 Si `AtlGetSacl` doit être appelé plusieurs fois sur de nombreux objets différents, il est plus efficace d’activer le privilège SE_SECURITY_NAME une fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* défini sur false.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 
@@ -336,7 +337,7 @@ Dans les versions Debug, une erreur d’assertion se produit si *hObject* n’es
 
 Si `AtlSetSacl` doit être appelé plusieurs fois sur de nombreux objets différents, il est plus efficace d’activer le privilège SE_SECURITY_NAME une fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* défini sur false.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 
@@ -383,7 +384,7 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 Si `AtlGetSecurityDescriptor` doit être appelé plusieurs fois sur de nombreux objets différents, il est plus efficace d’activer le privilège SE_SECURITY_NAME une fois avant d’appeler la fonction, avec *bRequestNeededPrivileges* défini sur false.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 

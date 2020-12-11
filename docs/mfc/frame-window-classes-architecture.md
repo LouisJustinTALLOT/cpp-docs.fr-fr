@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : classes de fenêtres frames (architecture)'
 title: Classes de fenêtre frame (architecture)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
-ms.openlocfilehash: 483112d197b7c7211989ecda8b774deb9f30d49e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 045108cd1e45325cf6069b5d8259ffab9abb0c2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155031"
 ---
 # <a name="frame-window-classes-architecture"></a>Classes de fenêtre frame (architecture)
 

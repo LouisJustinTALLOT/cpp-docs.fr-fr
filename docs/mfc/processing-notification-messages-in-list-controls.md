@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : traitement des messages de notification dans les contrôles de liste'
 title: Traitement des messages de notification dans les contrôles de liste
 ms.date: 11/04/2016
 helpviewer_keywords:
 - processing notifications [MFC]
 - CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
-ms.openlocfilehash: 92111e3e0a4869ca06b89d2d18d38aab9f10ab7d
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: b761f5213a73ce31484a7a252b9b441da2fe154d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154797"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Traitement des messages de notification dans les contrôles de liste
 

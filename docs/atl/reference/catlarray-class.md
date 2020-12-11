@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlArray'
 title: Classe CAtlArray
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0ae3f5aef84cac64adba20ef438f5063abda098e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158424"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -45,7 +46,7 @@ class CAtlArray
 
 ### <a name="parameters"></a>Paramètres
 
-*Envoyer*<br/>
+*E*<br/>
 Type de données à stocker dans le tableau.
 
 *ETraits*<br/>
@@ -62,7 +63,7 @@ Code utilisé pour copier ou déplacer des éléments.
 |[AssertValid](#assertvalid)|Appelez cette méthode pour confirmer que l’objet tableau est valide.|
 |[CAtlArray](#catlarray)|Constructeur.|
 |[~ CAtlArray](#dtor)|Destructeur.|
-|[Copier](#copy)|Appelez cette méthode pour copier les éléments d’un tableau dans un autre.|
+|[Copy](#copy)|Appelez cette méthode pour copier les éléments d’un tableau dans un autre.|
 |[FreeExtra](#freeextra)|Appelez cette méthode pour supprimer tous les éléments vides du tableau.|
 |[GetAt](#getat)|Appelez cette méthode pour récupérer un élément unique de l’objet de tableau.|
 |[GetCount](#getcount)|Appelez cette méthode pour retourner le nombre d’éléments stockés dans le tableau.|
@@ -99,7 +100,7 @@ Pour les tableaux comportant un petit nombre d’éléments, la classe ATL [CSim
 
 Pour plus d’informations, consultez [classes de collection ATL](../../atl/atl-collection-classes.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcoll. h
 

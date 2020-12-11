@@ -1,62 +1,63 @@
 ---
-title: Archetype de travailleur
+description: 'En savoir plus sur : Worker archétype'
+title: Archétype Worker
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: c9ed9b30b94a8debe133bc213c12063750bfb15a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 8cb8c2b281bbdc074bb700b77a856f4d26c26cf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747344"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157566"
 ---
-# <a name="worker-archetype"></a>Archetype de travailleur
+# <a name="worker-archetype"></a>Archétype Worker
 
-Les classes conformes à l’archétype *du travailleur* fournissent le code pour traiter les éléments de travail en file d’attente sur un pool de threads.
+Les classes qui se conforment aux archétype de *travail* fournissent le code pour traiter les éléments de travail mis en file d’attente sur un pool de threads.
 
 **Implémentation**
 
-Pour mettre en œuvre une classe conforme à cet archétype, la classe doit fournir les caractéristiques suivantes :
+Pour implémenter une classe conforme à ce archétype, la classe doit fournir les fonctionnalités suivantes :
 
 |Méthode|Description|
 |------------|-----------------|
-|[Initialiser](#initialize)|Appelé à initialiser l’objet du travailleur avant que toute demande ne soit transmise à [Exécuter](#execute).|
-|[Exécuter](#execute)|Appelé à traiter un élément de travail.|
-|[Terminate](#terminate)|Appelé à uninitialiser l’objet du travailleur après que toutes les demandes ont été transmises à [Exécuter](#execute).|
+|[Initialiser](#initialize)|Appelé pour initialiser l’objet Worker avant que toutes les demandes soient passées à [Execute](#execute).|
+|[Execute](#execute)|Appelé pour traiter un élément de travail.|
+|[Terminer](#terminate).|Appelé pour désinitialiser l’objet Worker une fois que toutes les demandes ont été passées à [Execute](#execute).|
 
 |Typedef|Description|
 |-------------|-----------------|
-|[DemandeType](#requesttype)|Un typedef pour le type d’élément de travail qui peut être traité par la classe des travailleurs.|
+|[RequestType](#requesttype)|Typedef pour le type d’élément de travail qui peut être traité par la classe Worker.|
 
-Une classe de *travailleurs* typique ressemble à ceci :
+Une classe *Worker* classique ressemble à ceci :
 
 [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]
 
-**Mises en œuvre existantes**
+**Implémentations existantes**
 
-Ces classes sont conformes à cet archétype :
+Ces classes sont conformes à ce archétype :
 
 |Classe|Description|
 |-----------|-----------------|
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Reçoit les demandes du pool de threads et les transmet à un objet de travailleur qui est créé et détruit pour chaque demande.|
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Reçoit des demandes du pool de threads et les transmet à un objet de travail créé et détruit pour chaque requête.|
 
 **Utilisation**
 
-Ces paramètres de modèle s’attendent à ce que la classe se conforme à cet archétype :
+Ces paramètres de modèle s’attendent à ce que la classe soit conforme à ce archétype :
 
 |Nom du paramètre|Utilisée par|
 |--------------------|-------------|
-|*Travailleur*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
-|*Travailleur*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
+|*Worker*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
+|*Worker*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête:** atlutil.h
+**En-tête :** atlutil. h
 
-## <a name="workerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype::Exécuter
+## <a name="workerarchetypeexecute"></a><a name="execute"></a> WorkerArchetype :: Execute
 
-Appelé à traiter un élément de travail.
+Appelé pour traiter un élément de travail.
 
 ```cpp
 void Execute(
@@ -68,17 +69,17 @@ void Execute(
 #### <a name="parameters"></a>Paramètres
 
 *requête*<br/>
-L’élément de travail à traiter. L’élément de travail est `RequestType`du même type que .
+Élément de travail à traiter. L’élément de travail est du même type que `RequestType` .
 
 *pvWorkerParam*<br/>
-Un paramètre personnalisé compris par la classe des travailleurs. Également passé `WorkerArchetype::Initialize` `Terminate`à et .
+Paramètre personnalisé compréhensible par la classe Worker. Également passé à `WorkerArchetype::Initialize` et `Terminate` .
 
 *pOverlapped*<br/>
-Un pointeur de la structure [OVERLAPPED](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) utilisé pour créer la file d’attente sur laquelle les éléments de travail ont été mis en file d’attente.
+Pointeur vers la structure [OVERLAPPED](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) utilisée pour créer la file d’attente sur laquelle les éléments de travail ont été mis en file d’attente.
 
-## <a name="workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="workerarchetypeinitialize"></a><a name="initialize"></a> WorkerArchetype :: Initialize
 
-Appelé à initialiser l’objet du `WorkerArchetype::Execute`travailleur avant que toute demande ne soit transmise à .
+Appelé pour initialiser l’objet Worker avant que toutes les demandes soient passées à `WorkerArchetype::Execute` .
 
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -86,16 +87,16 @@ BOOL Initialize(void* pvParam) throw();
 
 #### <a name="parameters"></a>Paramètres
 
-*pvParam pvParam*<br/>
-Un paramètre personnalisé compris par la classe des travailleurs. Également passé `WorkerArchetype::Terminate` `WorkerArchetype::Execute`à et .
+*pvParam*<br/>
+Paramètre personnalisé compréhensible par la classe Worker. Également passé à `WorkerArchetype::Terminate` et `WorkerArchetype::Execute` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retour VRAI sur le succès, FALSE sur l’échec.
+Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="workerarchetyperequesttype"></a><a name="requesttype"></a> WorkerArchetype :: RequestType
 
-Un typedef pour le type d’élément de travail qui peut être traité par la classe des travailleurs.
+Typedef pour le type d’élément de travail qui peut être traité par la classe Worker.
 
 ```
 typedef MyRequestType RequestType;
@@ -103,11 +104,11 @@ typedef MyRequestType RequestType;
 
 ### <a name="remarks"></a>Notes
 
-Ce type doit être utilisé `WorkerArchetype::Execute` comme premier paramètre et doit être capable d’être jeté vers et à partir d’une ULONG_PTR.
+Ce type doit être utilisé comme premier paramètre de `WorkerArchetype::Execute` et doit pouvoir être casté vers et à partir d’un ULONG_PTR.
 
-## <a name="workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="workerarchetypeterminate"></a><a name="terminate"></a> WorkerArchetype :: Terminate
 
-Appelé à uninitialiser l’objet du travailleur `WorkerArchetype::Execute`après que toutes les demandes ont été transmises à ).
+Appelé pour désinitialiser l’objet Worker une fois que toutes les demandes ont été passées à `WorkerArchetype::Execute` ).
 
 ```cpp
 void Terminate(void* pvParam) throw();
@@ -115,8 +116,8 @@ void Terminate(void* pvParam) throw();
 
 #### <a name="parameters"></a>Paramètres
 
-*pvParam pvParam*<br/>
-Un paramètre personnalisé compris par la classe des travailleurs. Également passé `WorkerArchetype::Initialize` `WorkerArchetype::Execute`à et .
+*pvParam*<br/>
+Paramètre personnalisé compréhensible par la classe Worker. Également passé à `WorkerArchetype::Initialize` et `WorkerArchetype::Execute` .
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure _AtlCreateWndData'
 title: Structure _AtlCreateWndData
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - _AtlCreateWndData structure
 - AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
-ms.openlocfilehash: a38ddb7e3575e883c11b14a9b01004bb54fcd4a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 912f2d108baa9cae1b91a34f3c5e386339d11f0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230011"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158606"
 ---
 # <a name="_atlcreatewnddata-structure"></a>Structure _AtlCreateWndData
 

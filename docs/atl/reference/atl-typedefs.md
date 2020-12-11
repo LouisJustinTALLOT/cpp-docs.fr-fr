@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ATL typedefs'
 title: Typedefs ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: 10d11b2b6e78220c1c562d100ee7886026a94b22
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb243ef3d16689a1a0ddeb81d3de0bb4ec234a9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158645"
 ---
 # <a name="atl-typedefs"></a>Typedefs ATL
 
@@ -67,7 +68,7 @@ Utilisé dans chaque projet ATL. Basé sur [_ATL_BASE_MODULE70](../../atl/refere
 
 Les classes qui font partie des classes de module ATL 7,0 dérivent de la structure _ATL_BASE_MODULE.  Pour plus d’informations sur les classes de module ATL, consultez [classes de modules com](../../atl/com-modules-classes.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcore. h
 
@@ -83,7 +84,7 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 
 Utilisé par les projets ATL qui utilisent les fonctionnalités COM. Basé sur [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -95,7 +96,7 @@ Défini comme un typedef basé sur _ATL_MODULE70.
 typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **Titre**
 
@@ -115,7 +116,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 
 Utilisé par tous les projets ATL qui utilisent des fonctionnalités de fenêtrage. Basé sur [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -127,7 +128,7 @@ Type utilisé par la [boucle](curl-class.md) pour spécifier un numéro de port.
 typedef WORD ATL_URL_PORT;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlutil. h
 
@@ -139,7 +140,7 @@ Cette classe gère les pointeurs d’interface COM.
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -179,7 +180,7 @@ S = `CComSingleThreadModel` ; M = `CComMultiThreadModel`
 
 Utilisez `CComObjectThreadModel` dans une classe d’objet unique. Utilisez `CComGlobalsThreadModel` dans un objet qui est globalement disponible pour votre programme, ou lorsque vous souhaitez protéger des ressources de module sur plusieurs threads.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -219,7 +220,7 @@ S = `CComSingleThreadModel` ; M = `CComMultiThreadModel`
 
 Utilisez `CComObjectThreadModel` dans une classe d’objet unique. Utilisez `CComGlobalsThreadModel` dans un objet qui est accessible globalement à votre programme, ou lorsque vous souhaitez protéger des ressources de module sur plusieurs threads.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -231,7 +232,7 @@ Cette classe est une spécialisation de `CContainedWindowT` .
 typedef CContainedWindowT<CWindow> CContainedWindow;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlwin. h
 
@@ -247,7 +248,7 @@ Une spécialisation de [CPathT](../../atl/reference/cpatht-class.md) à l’aide
 typedef CPathT<CString> CPath;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlpath. h
 
@@ -259,7 +260,7 @@ Une spécialisation de [CPathT](../../atl/reference/cpatht-class.md) à l’aide
 typedef CPathT<CStringA> CPathA;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlpath. h
 
@@ -271,7 +272,7 @@ Une spécialisation de [CPathT](../../atl/reference/cpatht-class.md) à l’aide
 typedef ATL::CPathT<CStringW> CPathW;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlpath. h
 
@@ -287,7 +288,7 @@ Représente un tableau pour le stockage des types simples.
 
 `CSimpleValArray` est fourni pour créer et gérer des tableaux contenant des types de données simples. C’est un #define simple de [CSimpleArray](../../atl/reference/csimplearray-class.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsimpcoll. h
 
@@ -299,7 +300,7 @@ Pointeur vers un objet de [boucle](../../atl/reference/curl-class.md) constante.
 typedef const CUrl* LPCURL;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlutil. h
 
@@ -321,7 +322,7 @@ Classe de caractéristiques de thread par défaut.
 
 Si le projet en cours utilise le CRT multithread, DefaultThreadTraits est défini en tant que CRTThreadTraits. Dans le cas contraire, Win32ThreadTraits est utilisé.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 
@@ -333,7 +334,7 @@ Pointeur vers un objet de la [boucle](../../atl/reference/curl-class.md) .
 typedef CUrl* LPURL;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlutil. h
 

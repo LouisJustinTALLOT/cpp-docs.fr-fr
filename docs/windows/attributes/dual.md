@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : double'
 title: double (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d1e72bd787bc73042b4f4a180ea119712021edaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112022"
 ---
 # <a name="dual"></a>dual
 
@@ -53,13 +54,13 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**interface**|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
 |**Attributs non valides**|`dispinterface`|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

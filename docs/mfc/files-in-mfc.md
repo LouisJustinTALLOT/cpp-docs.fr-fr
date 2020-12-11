@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fichiers dans MFC'
 title: Fichiers dans MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - files [MFC], manipulating
 - binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
-ms.openlocfilehash: 8b8859e188e42f4419ca7ee7f683cc31de0c75b3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 47fab5876efd7d06ec4364721a09b7ed09da9744
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155044"
 ---
 # <a name="files-in-mfc"></a>Fichiers dans MFC
 
@@ -61,6 +62,6 @@ Pour plus d’informations sur `CFile` les classes dérivées, consultez le [gra
 ## <a name="see-also"></a>Voir aussi
 
 [Concepts](mfc-concepts.md)<br/>
-[Rubriques MFC générales](general-mfc-topics.md)<br/>
-[CArchive, classe](reference/carchive-class.md)<br/>
+[Rubriques générales sur MFC](general-mfc-topics.md)<br/>
+[CArchive (classe)](reference/carchive-class.md)<br/>
 [CObject (classe)](reference/cobject-class.md)

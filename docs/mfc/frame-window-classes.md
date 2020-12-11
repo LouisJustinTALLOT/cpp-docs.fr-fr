@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes Frame-Window'
 title: Classes de fenêtre frame
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
-ms.openlocfilehash: ffa5b966ee042120213896dc7ad9d81c048ef928
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 888fae71bef2dd2e30e10c645e78ab981a30c6af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625810"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154953"
 ---
 # <a name="frame-window-classes"></a>Classes de fenêtre frame
 
@@ -27,7 +28,7 @@ Chaque application possède une « fenêtre frame principale », une fenêtre 
 
 Pour une application SDI, il existe une fenêtre frame dérivée de la classe [CFrameWnd](reference/cframewnd-class.md). Cette fenêtre est à la fois la fenêtre frame principale et la fenêtre frame de document. Pour une application MDI, la fenêtre frame principale est dérivée de la classe [CMDIFrameWnd](reference/cmdiframewnd-class.md)et les fenêtres frame de document, qui sont des fenêtres enfants MDI, sont dérivées de la classe [CMDIChildWnd](reference/cmdichildwnd-class.md).
 
-## <a name="use-the-frame-window-class-or-derive-from-it"></a>Utilisez la classe de fenêtre frame ou dérivez-la
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>Utilisez la classe Frame-Window ou dérivez-la
 
 Ces classes fournissent la plupart des fonctionnalités de fenêtre frame dont vous avez besoin pour vos applications. Dans des circonstances normales, le comportement et l’apparence par défaut qu’ils fournissent répondent à vos besoins. Si vous avez besoin de fonctionnalités supplémentaires, dérivez de ces classes.
 
@@ -41,4 +42,4 @@ Ces classes fournissent la plupart des fonctionnalités de fenêtre frame dont v
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fenêtres frame](frame-windows.md)
+[Fenêtres Frame](frame-windows.md)
