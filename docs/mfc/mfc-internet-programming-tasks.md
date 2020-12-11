@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : tâches de programmation Internet MFC'
 title: Tâches de programmation Internet MFC
 ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], getting started
 - Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
-ms.openlocfilehash: 6d8a542ada94bc52ee2000bc92ae0457ec87609c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 26823dbd85222998ebf20947ac2af30a6b11e987
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617963"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159932"
 ---
 # <a name="mfc-internet-programming-tasks"></a>Tâches de programmation Internet MFC
 
@@ -32,13 +33,13 @@ Le tableau suivant décrit quelques unes des opérations réalisables avec ces t
 
 Consultez les rubriques suivantes pour savoir comment démarrer :
 
-- [Choix en matière de conception d’applications](application-design-choices.md)
+- [Choix de conception d’application](application-design-choices.md)
 
 - [Écriture d’applications MFC](writing-mfc-applications.md)
 
 - [Contrôles ActiveX sur Internet](activex-controls-on-the-internet.md)
 
-- [Mise à niveau d'un contrôle ActiveX](upgrading-an-existing-activex-control.md)
+- [Mise à niveau d’un contrôle ActiveX existant](upgrading-an-existing-activex-control.md)
 
 - [Monikers asynchrones sur Internet](asynchronous-monikers-on-the-internet.md)
 

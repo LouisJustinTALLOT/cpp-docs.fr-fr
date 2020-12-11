@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe remove_cv'
 title: remove_cv, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_cv class
 - remove_cv
 ms.assetid: 8502602a-1c80-479c-84e0-33bd1d6496d6
-ms.openlocfilehash: dbe21d8e9f0ed0dc7c72a19584f24ee1bce0803c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2842c250ef46bf4fe1d36e6159bfaaf09b872034
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159685"
 ---
-# <a name="removecv-class"></a>remove_cv, classe
+# <a name="remove_cv-class"></a>remove_cv, classe
 
 Rend un type non volatile ou non const.
 
@@ -35,7 +36,7 @@ Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance de `remove_cv<T>` contient un type modifié qui est `T1` quand *t* est de la `const T1`forme, `volatile T1`ou `const volatile T1`, sinon *t*.
+Une instance de `remove_cv<T>` contient un type modifié qui est `T1` quand *t* est de la forme `const T1` , `volatile T1` ou `const volatile T1` , sinon *t*.
 
 ## <a name="example"></a>Exemple
 
@@ -59,14 +60,14 @@ int main()
 remove_cv_t<const volatile int> == int
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[remove_const, classe](../standard-library/remove-const-class.md)\
-[remove_volatile, classe](../standard-library/remove-volatile-class.md)
+[Classe remove_const](../standard-library/remove-const-class.md)\
+[Classe remove_volatile](../standard-library/remove-volatile-class.md)

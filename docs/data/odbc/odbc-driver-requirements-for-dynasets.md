@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pilotes ODBC requis pour les feuilles de réponse dynamiques'
 title: Pilote ODBC requis pour les feuilles de réponse dynamiques
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - dynasets
 - ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-ms.openlocfilehash: 4c436764649a1aa418e12300809482b45224dd46
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 9e72499eb500ae79248673e73b666bf535fcdcc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161011"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Pilote ODBC requis pour les feuilles de réponse dynamiques
 

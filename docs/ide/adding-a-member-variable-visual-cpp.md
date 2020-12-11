@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajouter une variable membre'
 title: Ajouter une variable membre
 ms.date: 11/09/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b3af5c5920e465545623e9fa7239662954df2d66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160114"
 ---
 # <a name="add-a-member-variable"></a>Ajouter une variable membre
 
@@ -55,7 +56,7 @@ Vous pouvez ajouter une variable membre à une classe à l’aide d’Affichage 
 
 1. Sélectionnez **Terminer** pour ajouter la définition et le code d’implémentation au projet et fermer l’Assistant.
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 - [Assistant Ajout de variable membre](#add-member-variable-wizard)
 - [Contrôles de boîtes de dialogue et types de variables](#dialog-box-controls-and-variable-types)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe remove_pointer'
 title: remove_pointer, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_pointer class
 - remove_pointer
 ms.assetid: 2cd4e417-32fb-4f53-bd16-4e8a98240832
-ms.openlocfilehash: 786a1cba5fc35014e33e3e19245271adefec1372
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8739fcd197dc59f5163740d1290abd3faee1922a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159659"
 ---
-# <a name="removepointer-class"></a>remove_pointer, classe
+# <a name="remove_pointer-class"></a>remove_pointer, classe
 
 Transforme un pointeur en type.
 
@@ -35,9 +36,9 @@ Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance de `remove_pointer<T>` contient un type modifié qui est `T1` quand *t* est de la forme `T1*`, `T1* volatile` `T1* const`, ou `T1* const volatile`, sinon *t*.
+Une instance de `remove_pointer<T>` contient un type modifié qui est `T1` quand *t* est de la forme `T1*` ,, `T1* const` `T1* volatile` ou `T1* const volatile` , sinon *t*.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 #include <type_traits>
@@ -59,13 +60,13 @@ int main()
 remove_pointer_t<int *> == int
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[add_pointer, classe](../standard-library/add-pointer-class.md)
+[Classe add_pointer](../standard-library/add-pointer-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ODBC : configuration d’une source de données ODBC'
 title: "ODBC : configuration d'une source de données ODBC"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,25 +7,25 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
-ms.openlocfilehash: aaa69fd7e0b2b592cd7d5c4eff92f51d0ce5f680
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7111578ad5d9e5f3e5fb7226adc57f474c7ade6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161050"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC : configuration d'une source de données ODBC
 
-Pour utiliser une source de [données](../../data/odbc/data-source-odbc.md) avec une application que vous avez développée, vous devez utiliser odBC Administrator pour la configurer. L’administrateur d’ODBC suit les sources de données disponibles et leurs informations de connexion dans le registre Windows. Utilisez l’administrateur d’ODBC pour ajouter, modifier et supprimer les sources de données dans la boîte de dialogue **des sources de données** et pour ajouter et supprimer les pilotes ODBC.
+Pour utiliser une [source de données](../../data/odbc/data-source-odbc.md) avec une application que vous avez développée, vous devez utiliser l’administrateur ODBC pour la configurer. L’administrateur ODBC effectue le suivi des sources de données disponibles et de leurs informations de connexion dans le Registre Windows. Utilisez l’administrateur ODBC pour ajouter, modifier et supprimer des sources de données dans la boîte de dialogue **sources de données** et pour ajouter et supprimer des pilotes ODBC.
 
 > [!NOTE]
-> Ces informations s’appliquent lorsque vous utilisez les classes MFC Data Access Object (DAO) pour l’accès à l’ODBC et lorsque vous utilisez les classes MFC ODBC.
+> Ces informations s’appliquent lorsque vous utilisez les classes DAO (Data Access Object) MFC pour l’accès ODBC et lorsque vous utilisez les classes ODBC MFC.
 
-L’administrateur D’ODBC est automatiquement installé avec le support de base de données de la bibliothèque Microsoft Foundation Classes (MFC). Pour plus d’informations sur le programme d’administrateur ODBC, consultez [l’administrateur d’ODBC](../../data/odbc/odbc-administrator.md) et le système d’aide de référence API en ligne DBC.
+L’administrateur ODBC est installé automatiquement avec la prise en charge de la base de données de bibliothèque Microsoft Foundation Classes (MFC). Pour plus d’informations sur le programme Administrateur ODBC, consultez [ODBC Administrator](../../data/odbc/odbc-administrator.md) et le système d’aide de référence de l’API ODBC en ligne.
 
-Pour plus d’informations sur la façon d’écrire des programmes d’installation et d’administration ODBC pour les applications de base de données MFC,[Note technique 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).
+Pour plus d’informations sur la façon d’écrire des programmes d’installation et d’administration ODBC pour les applications de base de données MFC,[Technical Note 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[ODBC Basics](../../data/odbc/odbc-basics.md)<br/>
+[Notions de base relatives à ODBC](../../data/odbc/odbc-basics.md)<br/>
 [ODBC : appel direct de fonctions API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

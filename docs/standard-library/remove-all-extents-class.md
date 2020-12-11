@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe remove_all_extents'
 title: remove_all_extents, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_all_extents class
 - remove_all_extents
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
-ms.openlocfilehash: 0909da3f08cec62bcb915a65c353abdd33c96c9d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a6c798e1f128b10ef94061573c93c3bb9e3aa4f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159724"
 ---
-# <a name="removeallextents-class"></a>remove_all_extents, classe
+# <a name="remove_all_extents-class"></a>remove_all_extents, classe
 
 Convertit un type tableau en un type autre qu'un type tableau.
 
@@ -59,13 +60,13 @@ int main()
     }
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[remove_extent, classe](../standard-library/remove-extent-class.md)
+[Classe remove_extent](../standard-library/remove-extent-class.md)

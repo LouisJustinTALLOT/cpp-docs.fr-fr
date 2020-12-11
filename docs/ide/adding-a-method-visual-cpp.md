@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajouter une méthode'
 title: Ajouter une méthode
 ms.date: 11/09/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - methods [C++], adding using wizards
 - IDL attributes, add method wizard
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-ms.openlocfilehash: b0c8ddabc4ed08fd217545bad269f0b2e48dd49e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: fb472bd5df2709bc0d7115540f78e18b70d02528
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160023"
 ---
 # <a name="add-a-method"></a>Ajouter une méthode
 
@@ -69,7 +70,7 @@ Utilisez cet Assistant pour ajouter une méthode à une interface. En fonction d
   |--------------------|-----------------|
   |Interface double ATL, interface personnalisée et interface personnalisée locale|Fournissez votre propre nom de méthode.|
   |Dispinterface MFC|Fournissez votre propre nom de méthode ou sélectionnez un nom de méthode dans la liste. Si vous sélectionnez un nom dans la liste, la valeur appropriée s’affiche dans la zone **Type de retour** et n’est pas modifiable.|
-  |Dispinterface du contrôle ActiveX MFC|Fournissez la vôtre ou sélectionnez une des méthodes stock [DoClick](../mfc/reference/colecontrol-class.md#doclick) et [Refresh](../mfc/reference/colecontrol-class.md#refresh). Pour plus d’informations, consultez [Contrôles ActiveX MFC : ajout de méthodes stock](../mfc/mfc-activex-controls-adding-stock-methods.md).|
+  |Dispinterface du contrôle ActiveX MFC|Fournissez la vôtre ou sélectionnez une des méthodes stock [DoClick](../mfc/reference/colecontrol-class.md#doclick) et [Refresh](../mfc/reference/colecontrol-class.md#refresh). Pour plus d’informations, consultez [Contrôles ActiveX MFC : Ajout de méthodes stock](../mfc/mfc-activex-controls-adding-stock-methods.md).|
 
 - **Type de méthode**
 
@@ -79,8 +80,8 @@ Utilisez cet Assistant pour ajouter une méthode à une interface. En fonction d
 
   |Type de méthode|Description|
   |-----------------|-----------------|
-  |**Stock**|Valeur par défaut. Insère l’implémentation stock de la méthode que vous sélectionnez dans la liste **Nom de la méthode**. Le **Type de retour** n’est pas modifiable si vous sélectionnez **Stock**.|
-  |**Personnalisé**|Insère une implémentation stub de la méthode sélectionnée dans la liste **Nom de la méthode**. Pour les types de méthodes personnalisées, vous pouvez fournir votre propre type de retour ou en sélectionner un dans la liste **Type de retour**.|
+  |**Boursier**|Valeur par défaut. Insère l’implémentation stock de la méthode que vous sélectionnez dans la liste **Nom de la méthode**. Le **Type de retour** n’est pas modifiable si vous sélectionnez **Stock**.|
+  |**Personnalisée**|Insère une implémentation stub de la méthode sélectionnée dans la liste **Nom de la méthode**. Pour les types de méthodes personnalisées, vous pouvez fournir votre propre type de retour ou en sélectionner un dans la liste **Type de retour**.|
 
 - **Nom interne**
 
@@ -98,8 +99,8 @@ Utilisez cet Assistant pour ajouter une méthode à une interface. En fonction d
 
   |Attribut de paramètre|Description|Combinaisons autorisées|
   |-------------------------|-----------------|--------------------------|
-  |**In**|Indique que le paramètre est transmis de la procédure appelante à la procédure appelée.|`in` uniquement<br /><br /> `in` et `out`|
-  |**Out**|Indique que le paramètre de pointeur est retourné par la procédure appelée à la procédure appelante (du serveur au client).|`out` uniquement<br /><br /> `in` et `out`<br /><br /> `out` et `retval`|
+  |**Dans**|Indique que le paramètre est transmis de la procédure appelante à la procédure appelée.|`in` uniquement<br /><br /> `in` et `out`|
+  |**Sortie**|Indique que le paramètre pointeur est retourné par la procédure appelée à la procédure appelante (du serveur au client).|`out` uniquement<br /><br /> `in` et `out`<br /><br /> `out` et `retval`|
   |**Retval**|Indique que le paramètre reçoit la valeur de retour du membre.|`retval` et `out`|
 
 - **Type de paramètre**

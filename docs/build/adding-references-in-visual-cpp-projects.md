@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation des bibliothèques et des composants'
 title: Utilisation de bibliothèques et de composants dans des projets C++
 ms.date: 12/10/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a8933afc1d3d9257e4a8b1d80a39c5fa15a9d438
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163260"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilisation de bibliothèques et de composants
 
@@ -128,7 +129,7 @@ Les propriétés suivantes font partie des références d’assembly COM et .NET
 
    Affiche le nom de l'assembly pour l'assembly référencé.
 
-- **Culture**
+- **Culturel**
 
    Affiche la culture de la référence sélectionnée.
 
@@ -136,7 +137,7 @@ Les propriétés suivantes font partie des références d’assembly COM et .NET
 
    Affiche la description de la référence sélectionnée.
 
-- **Chemin d'accès complet**
+- **Chemin d’accès complet**
 
    Affiche le chemin d'accès du répertoire de l'assembly référencé.
 

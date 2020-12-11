@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : extracteurs de _variant_t'
 title: Extracteurs _variant_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: a1b7c713b5d82ff54250b622f2d4afe17abac468
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55a02fdf422388b0e44a9aad77e86f7a76e80e3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161596"
 ---
 # <a name="_variant_t-extractors"></a>Extracteurs _variant_t
 
@@ -107,9 +108,9 @@ Extrait des données brutes d’un encapsulé `VARIANT` . Si le `VARIANT` n’es
 
 - **_bstr_t d’opérateur ()** Extrait une chaîne, qui est encapsulée dans un `_bstr_t` objet.
 
-- l' **opérateur IDispatch \* ()** extrait un pointeur dispinterface d’un encapsulé `VARIANT` . `AddRef`est appelé sur le pointeur résultant, c’est pourquoi il vous revient d’appeler `Release` pour le libérer.
+- l' **opérateur IDispatch \* ()** extrait un pointeur dispinterface d’un encapsulé `VARIANT` . `AddRef` est appelé sur le pointeur résultant, c’est pourquoi il vous revient d’appeler `Release` pour le libérer.
 
-- l' **opérateur IUnknown \* ()** extrait un pointeur d’interface com à partir d’un encapsulé `VARIANT` . `AddRef`est appelé sur le pointeur résultant, c’est pourquoi il vous revient d’appeler `Release` pour le libérer.
+- l' **opérateur IUnknown \* ()** extrait un pointeur d’interface com à partir d’un encapsulé `VARIANT` . `AddRef` est appelé sur le pointeur résultant, c’est pourquoi il vous revient d’appeler `Release` pour le libérer.
 
 **FIN spécifique à Microsoft**
 

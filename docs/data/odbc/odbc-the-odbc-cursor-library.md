@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ODBC : bibliothèque de curseurs ODBC'
 title: 'ODBC : bibliothèque de curseurs ODBC'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,55 +17,55 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-ms.openlocfilehash: 13640dd2a8593057bef708a45dfc8471ba212563
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b7c05529f771b281e623502a4b8c4358e17db71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160985"
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC : bibliothèque de curseurs ODBC
 
-Ce sujet décrit la Bibliothèque des curseurs de l’ODBC et explique comment l’utiliser. Pour plus d'informations, consultez les pages suivantes :
+Cette rubrique décrit la bibliothèque de curseurs ODBC et explique comment l’utiliser. Pour plus d'informations, consultez les pages suivantes :
 
-- [Bibliothèque Cursor et pilotes ODBC de niveau 1](#_core_the_cursor_library_and_level_1_odbc_drivers)
+- [Bibliothèque de curseurs et pilotes ODBC de niveau 1](#_core_the_cursor_library_and_level_1_odbc_drivers)
 
-- [Mises à jour positionnées et colonnes Timestamp](#_core_positioned_updates_and_timestamp_columns)
+- [Mises à jour positionnées et colonnes timestamp](#_core_positioned_updates_and_timestamp_columns)
 
-- [Utilisation de la bibliothèque cursor](#_core_using_the_cursor_library)
+- [Utilisation de la bibliothèque de curseurs](#_core_using_the_cursor_library)
 
-La Bibliothèque des curseurs de l’ODBC est une bibliothèque à liaison dynamique (DLL) qui se trouve entre le gestionnaire de chauffeur de l’ODBC et le conducteur. En termes ODBC, un conducteur maintient un curseur pour garder une trace de sa position dans le dossier. Le curseur marque la position dans l’enregistrement auquel vous avez déjà fait défiler — le record actuel.
+La bibliothèque de curseurs ODBC est une bibliothèque de liens dynamiques (DLL) qui se trouve entre le gestionnaire de pilotes ODBC et le pilote. En termes ODBC, un pilote gère un curseur pour assurer le suivi de sa position dans le jeu d’enregistrements. Le curseur marque la position dans le jeu d’enregistrements vers lequel vous avez déjà fait l’objet d’un défilement, c’est-à-dire l’enregistrement en cours.
 
-## <a name="cursor-library-and-level-1-odbc-drivers"></a><a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a>Bibliothèque Cursor et pilotes ODBC de niveau 1
+## <a name="cursor-library-and-level-1-odbc-drivers"></a><a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a> Bibliothèque de curseurs et pilotes ODBC de niveau 1
 
-La bibliothèque ODBC Cursor offre aux conducteurs de niveau 1 les nouvelles capacités suivantes :
+La bibliothèque de curseurs ODBC donne aux pilotes de niveau 1 les nouvelles fonctionnalités suivantes :
 
-- Défilement vers l’avant et vers l’arrière. Les conducteurs de niveau 2 n’ont pas besoin de la bibliothèque de curseurs parce qu’ils sont déjà défilants.
+- Défilement vers l’avant et vers l’arrière. Les pilotes de niveau 2 n’ont pas besoin de la bibliothèque de curseurs, car ils sont déjà défilant.
 
-- Prise en charge des instantanés. La bibliothèque de curseurs gère un tampon contenant les enregistrements de l’instantané. Ce tampon reflète les suppressions et les modifications de votre programme aux enregistrements, mais pas les ajouts, suppressions ou modifications d’autres utilisateurs. Par conséquent, l’instantané n’est aussi actuel que le tampon de la bibliothèque de curseurs. Le tampon ne reflète pas non plus `Requery`vos propres ajouts jusqu’à ce que vous appelez . Les dynasets n’utilisent pas la bibliothèque de curseurs.
+- Prise en charge des instantanés. La bibliothèque de curseurs gère une mémoire tampon contenant les enregistrements de l’instantané. Cette mémoire tampon reflète les suppressions de votre programme et les modifications apportées aux enregistrements, mais pas les ajouts, les suppressions ou les modifications apportées aux autres utilisateurs. Par conséquent, l’instantané est le plus récent que la mémoire tampon de la bibliothèque de curseurs. La mémoire tampon ne reflète pas non plus vos propres ajouts tant que vous n’appelez pas `Requery` . Les feuilles de réponse dynamiques n’utilisent pas la bibliothèque de curseurs.
 
-La bibliothèque de curseurs vous donne des instantanés (curseurs statiques) même s’ils ne sont pas normalement pris en charge par votre chauffeur. Si votre pilote prend déjà en charge les curseurs statiques, vous n’avez pas besoin de charger la bibliothèque de curseurs pour obtenir un support instantané. Si vous utilisez la bibliothèque de curseurs, vous ne pouvez utiliser que des instantanés et des enregistrements avant seulement. Si votre chauffeur prend en charge les dynasets (KEYSET_DRIVEN curseurs) et que vous souhaitez les utiliser, vous ne devez pas utiliser la bibliothèque de curseurs. Si vous souhaitez utiliser les deux instantanés et les dynasets, vous devez les baser sur deux objets différents `CDatabase` (deux connexions différentes) à moins que votre pilote ne supporte les deux.
+La bibliothèque de curseurs vous fournit des instantanés (curseurs statiques), même s’ils ne sont normalement pas pris en charge par votre pilote. Si votre pilote prend déjà en charge les curseurs statiques, vous n’avez pas besoin de charger la bibliothèque de curseurs pour bénéficier de la prise en charge des instantanés. Si vous utilisez la bibliothèque de curseurs, vous ne pouvez utiliser que des instantanés et des recordsets avant uniquement. Si votre pilote prend en charge les feuilles de réponse dynamiques (KEYSET_DRIVEN les curseurs) et que vous souhaitez les utiliser, vous ne devez pas utiliser la bibliothèque de curseurs. Si vous souhaitez utiliser à la fois des instantanés et des feuilles de réponse dynamiques, vous devez les baser sur deux `CDatabase` objets différents (deux connexions différentes), à moins que votre pilote ne prenne en charge les deux.
 
-## <a name="positioned-updates-and-timestamp-columns"></a><a name="_core_positioned_updates_and_timestamp_columns"></a>Mises à jour positionnées et colonnes Timestamp
-
-> [!NOTE]
-> Les sources de données de l’ODBC sont accessibles par l’intermédiaire des classes MFC ODBC, telles que décrites dans ce sujet, ou par l’intermédiaire des classes MFC Data Access Object (DAO).
+## <a name="positioned-updates-and-timestamp-columns"></a><a name="_core_positioned_updates_and_timestamp_columns"></a> Mises à jour positionnées et colonnes timestamp
 
 > [!NOTE]
-> Si votre pilote ODBC prend en charge `SQLSetPos`, ce que MFC utilise s’il est disponible, ce sujet ne s’applique pas à vous.
+> Les sources de données ODBC sont accessibles par le biais des classes ODBC MFC, comme décrit dans cette rubrique, ou par le biais des classes d’objets d’accès aux données (DAO) MFC.
 
-La plupart des pilotes de niveau 1 ne prennent pas en charge les mises à jour positionnées. Ces conducteurs comptent sur la bibliothèque de curseurs pour imiter les capacités des conducteurs de niveau 2 à cet égard. La bibliothèque de curseurs imite le support de mise à jour positionné en faisant une mise à jour recherchée sur les champs immuables.
+> [!NOTE]
+> Si votre pilote ODBC prend en charge `SQLSetPos` , que MFC utilise si disponible, cette rubrique ne s’applique pas à vous.
 
-Dans certains cas, un jeu d’enregistrement peut contenir une colonne de temps comme l’un de ces champs immuables. Deux problèmes se posent à l’aide d’enregistrements MFC avec des tableaux qui contiennent des colonnes de timestamp.
+La plupart des pilotes de niveau 1 ne prennent pas en charge les mises à jour positionnées. Ces pilotes s’appuient sur la bibliothèque de curseurs pour émuler les capacités des pilotes de niveau 2 à cet égard. La bibliothèque de curseurs émule la prise en charge des mises à jour positionnées en effectuant une mise à jour avec recherche sur les champs immuables.
 
-Le premier numéro concerne des instantanés actualisables sur les tableaux avec des colonnes de timestamp. Si le tableau auquel votre instantané est lié contient une `Requery` colonne `Edit` de `Update`timestamp, vous devriez appeler après votre appel et . Si ce n’est pas le cas, vous pourriez ne pas être en mesure de modifier le même enregistrement à nouveau. Lorsque vous `Edit` appelez `Update`et puis, l’enregistrement est écrit à la source de données et la colonne de timestamp est mise à jour. Si vous n’appelez `Requery`pas, la valeur de l’enregistrement pour l’enregistrement dans votre instantané ne correspond plus à l’humidité de temps correspondante sur la source de données. Lorsque vous essayez de mettre à jour l’enregistrement à nouveau, la source de données peut interdire la mise à jour en raison de l’inadéquation.
+Dans certains cas, un jeu d’enregistrements peut contenir une colonne timestamp comme l’un de ces champs immuables. Deux problèmes se posent lors de l’utilisation des recordsets MFC avec des tables qui contiennent des colonnes timestamp.
 
-La deuxième question concerne les limitations de `RFX_Date` la classe [CTime](../../atl-mfc-shared/reference/ctime-class.md) lorsqu’il est utilisé avec la fonction de transférer des informations d’heure et de date à ou à partir d’une table. Le `CTime` traitement de l’objet impose des frais généraux sous forme de traitement intermédiaire supplémentaire pendant le transfert de données. La plage `CTime` de dates d’objets peut également être trop limitante pour certaines applications. Une nouvelle version `RFX_Date` de la fonction prend un paramètre `CTime` *ODBC TIMESTAMP_STRUCT* au lieu d’un objet. Pour plus d’informations, voir `RFX_Date` dans [Macros et Globals](../../mfc/reference/mfc-macros-and-globals.md) dans la référence *MFC*.
+Le premier problème concerne les instantanés modifiables sur les tables avec des colonnes timestamp. Si la table à laquelle votre instantané est lié contient une colonne timestamp, vous devez appeler `Requery` après avoir appelé `Edit` et `Update` . Si ce n’est pas le cas, vous ne pourrez peut-être pas modifier à nouveau le même enregistrement. Lorsque vous appelez `Edit` , puis `Update` , l’enregistrement est écrit dans la source de données et la colonne timestamp est mise à jour. Si vous n’appelez pas `Requery` , la valeur d’horodatage de l’enregistrement dans votre instantané ne correspond plus à l’horodatage correspondant sur la source de données. Lorsque vous essayez de mettre à jour l’enregistrement, la source de données peut interdire la mise à jour en raison de l’incompatibilité.
 
-## <a name="using-the-cursor-library"></a><a name="_core_using_the_cursor_library"></a>Utilisation de la bibliothèque cursor
+Le deuxième problème concerne les limitations de la classe [ctime](../../atl-mfc-shared/reference/ctime-class.md) lorsqu’elle est utilisée avec la `RFX_Date` fonction pour transférer des informations de date et d’heure vers ou à partir d’une table. Le traitement `CTime` de l’objet impose une certaine surcharge sous la forme d’un traitement intermédiaire supplémentaire pendant le transfert de données. La plage de dates des `CTime` objets peut également être trop restrictive pour certaines applications. Une nouvelle version de la `RFX_Date` fonction prend un paramètre de *TIMESTAMP_STRUCT* ODBC à la place d’un `CTime` objet. Pour plus d’informations, consultez `RFX_Date` dans les [macros et les champs globaux](../../mfc/reference/mfc-macros-and-globals.md) dans la *référence MFC*.
 
-Lorsque vous vous connectez à une source de données — en appelant [CDatabase : : OpenEx](../../mfc/reference/cdatabase-class.md#openex) ou [CDatabase : : : Ouvert](../../mfc/reference/cdatabase-class.md#open) — vous pouvez spécifier s’il faut utiliser la bibliothèque de curseurs pour la source de données. Si vous créez des instantanés sur cette `CDatabase::useCursorLib` source `dwOptions` de `OpenEx` données, spécifiez l’option `Open` dans le paramètre ou spécifiez VRAI pour le paramètre *bUseCursorLib* (la valeur par défaut est VRAI). Si votre chauffeur ODBC prend en charge les dynasets et que vous souhaitez ouvrir des dynasets sur la source de données, n’utilisez pas la bibliothèque de curseurs (elle masque certaines fonctionnalités du conducteur nécessaires pour les dynasets). Dans ce cas, `CDatabase::useCursorLib` ne `OpenEx` pas spécifier ou spécifier FALSE pour le paramètre *bUseCursorLib* dans `Open`.
+## <a name="using-the-cursor-library"></a><a name="_core_using_the_cursor_library"></a> Utilisation de la bibliothèque de curseurs
+
+Quand vous vous connectez à une source de données, en appelant [CDatabase :: OpenEx](../../mfc/reference/cdatabase-class.md#openex) ou [CDatabase :: Open](../../mfc/reference/cdatabase-class.md#open) , vous pouvez spécifier s’il faut utiliser la bibliothèque de curseurs pour la source de données. Si vous souhaitez créer des instantanés sur cette source de données, spécifiez l' `CDatabase::useCursorLib` option dans le `dwOptions` paramètre `OpenEx` ou affectez la valeur true au paramètre *bUseCursorLib* `Open` (la valeur par défaut est true). Si votre pilote ODBC prend en charge les feuilles de réponse dynamiques et que vous souhaitez ouvrir les feuilles de réponse dynamiques sur la source de données, n’utilisez pas la bibliothèque de curseurs (elle masque certaines fonctionnalités de pilote nécessaires pour les feuilles de réponse dynamiques). Dans ce cas, ne spécifiez pas `CDatabase::useCursorLib` dans `OpenEx` ou SPÉCIFIez false pour le paramètre *bUseCursorLib* dans `Open` .
 
 ## <a name="see-also"></a>Voir aussi
 
-[ODBC Basics](../../data/odbc/odbc-basics.md)
+[Notions de base relatives à ODBC](../../data/odbc/odbc-basics.md)

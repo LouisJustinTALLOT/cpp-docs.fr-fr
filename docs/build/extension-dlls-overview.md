@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : dll d’extension MFC : vue d’ensemble'
 title: 'DLL d’extension : vue d’ensemble'
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: ea8e950e28907ea1a4a85c1f39392d5505f08c49
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: b877eeaae2e67466d4b695820659c5718d552d0e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162922"
 ---
-# <a name="mfc-extension-dlls-overview"></a>DLL d’extension de MFC : vue d’ensemble
+# <a name="mfc-extension-dlls-overview"></a>DLL d’extension de MFC : Vue d'ensemble
 
 Une DLL d’extension MFC est une DLL qui implémente généralement des classes réutilisables dérivées de classes de bibliothèque MFC (Microsoft Foundation Class) existantes. Les dll d’extension MFC sont créées à l’aide de la version de bibliothèque de liens dynamiques de MFC (également appelée version partagée de MFC). Seuls les exécutables MFC (applications ou DLL MFC régulières) qui sont générés avec la version partagée de MFC peuvent utiliser une DLL d’extension MFC. Avec une DLL d’extension MFC, vous pouvez dériver de nouvelles classes personnalisées à partir de MFC, puis proposer cette version étendue de MFC aux applications qui appellent votre DLL.
 
@@ -29,11 +30,11 @@ Pour obtenir un exemple de DLL qui répond aux exigences de base d’une DLL d�
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [Dll d’extension MFC](extension-dlls.md)
+- [DLL d’extension de MFC](extension-dlls.md)
 
 - [Utilisation de DLL d’extension MFC de base de données, OLE et sockets dans des DLL MFC normales](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [DLL non-MFC : vue d’ensemble](non-mfc-dlls-overview.md)
+- [DLL non MFC : Vue d'ensemble](non-mfc-dlls-overview.md)
 
 - [DLL MFC normales liées de manière statique à MFC](regular-dlls-statically-linked-to-mfc.md)
 

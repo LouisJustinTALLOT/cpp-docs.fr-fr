@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : illustration du routage des commandes'
 title: Illustration du routage des commandes
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
-ms.openlocfilehash: d362cfe54a9b5a562237c7bb9632edae6e58228b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 51c5182eb1fa2a8b9666e265526e9220a9f3d4a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159958"
 ---
 # <a name="command-routing-illustration"></a>Illustration du routage des commandes
 
@@ -31,4 +32,4 @@ Si le document n’avait pas de gestionnaire, il acheminerait ensuite la command
 
 ## <a name="see-also"></a>Voir aussi
 
-[Méthode d’appel d’un gestionnaire par le Framework](how-the-framework-calls-a-handler.md)
+[Comment le Framework appelle un gestionnaire](how-the-framework-calls-a-handler.md)

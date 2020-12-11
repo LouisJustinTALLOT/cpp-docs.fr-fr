@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : problèmes courants lors de la création d’une version Release'
 title: Problèmes courants lors de la création d’une version release
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - troubleshooting release builds
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-ms.openlocfilehash: 9bd1cafe40417872d42f2e9e1427e5f2eccad7a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7470b87a33b9dc0cb6f7e85b9cfa7b7c1216a936
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328867"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163091"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problèmes courants lors de la création d’une version release
 
@@ -38,9 +39,9 @@ La liste ci-dessous montre les principales différences entre une version Debug 
 
 - [Optimisations](#_core_optimizations)
 
-Pour plus d’informations sur la façon d’intercepter les erreurs de build de version dans les versions de débogage, consultez l’option de compilateur [/gz (intercepter les erreurs de build dans la version de débogage)](reference/gz-enable-stack-frame-run-time-error-checking.md) .
+Pour plus d’informations sur la façon d’intercepter les erreurs de build de version dans les versions de débogage, consultez l’option de compilateur [/gz (Catch Release-Build Errors in Debug Build)](reference/gz-enable-stack-frame-run-time-error-checking.md) .
 
-## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Disposition du tas
+## <a name="heap-layout"></a><a name="_core_heap_layout"></a> Disposition du tas
 
 La disposition du tas sera la cause d’environ 90% des problèmes apparentés lorsqu’une application fonctionne dans Debug, mais pas dans la version Release.
 
@@ -48,21 +49,21 @@ Quand vous générez votre projet pour le débogage, vous utilisez l’allocateu
 
 Pour plus d’informations, consultez [vérifier le remplacement de mémoire](checking-for-memory-overwrites.md) et [Utilisez la version Debug pour vérifier le remplacement de mémoire](using-the-debug-build-to-check-for-memory-overwrite.md).
 
-## <a name="compilation"></a><a name="_core_compilation"></a>Élaboration
+## <a name="compilation"></a><a name="_core_compilation"></a> Élaboration
 
 La plupart des macros MFC et la majeure partie de l’implémentation de MFC changent lorsque vous générez pour la version finale. En particulier, la macro Assert prend la valeur Nothing dans une version Release, donc aucun code trouvé dans assertions ne sera exécuté. Pour plus d’informations, consultez [examiner les instructions Assert](using-verify-instead-of-assert.md).
 
 Certaines fonctions sont Inline pour une vitesse accrue dans la version Release. Les optimisations sont généralement activées dans une version Release. Un allocateur de mémoire différent est également utilisé.
 
-## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Prise en charge du pointeur
+## <a name="pointer-support"></a><a name="_core_pointer_support"></a> Prise en charge du pointeur
 
 L’absence d’informations de débogage supprime le remplissage de votre application. Dans une version Release, les pointeurs isolés ont une plus grande chance de pointer vers une mémoire non initialisée au lieu de pointer vers les informations de débogage.
 
-## <a name="optimizations"></a><a name="_core_optimizations"></a>Optimisations
+## <a name="optimizations"></a><a name="_core_optimizations"></a> Optimisations
 
 Selon la nature de certains segments de code, le compilateur d’optimisation peut générer du code inattendu. Il s’agit de la cause la moins probable des problèmes de génération de version, mais cela se produit à l’occasion. Pour obtenir une solution, consultez [optimisation de votre code](optimizing-your-code.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Versions Release](release-builds.md)<br/>
-[Résolution de problèmes liés à la version release](fixing-release-build-problems.md)
+[Résolution des problèmes de version Release](fixing-release-build-problems.md)

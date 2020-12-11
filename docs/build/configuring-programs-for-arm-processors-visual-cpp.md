@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : configurer des projets C++ pour les processeurs ARM'
 title: Configurer des projets C++ pour les processeurs ARM
 ms.date: 07/11/2018
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
-ms.openlocfilehash: 0dc87e9a119f82c03a11dde0d90c27de71618f5a
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 6ad22cd9e6c51b18bd08dad8be85eafa0ca4efdc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163430"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163014"
 ---
 # <a name="configure-c-projects-for-arm-processors"></a>Configurer des projets C++ pour les processeurs ARM
 

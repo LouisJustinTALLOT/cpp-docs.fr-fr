@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : générer des composants COM Registration-Free'
 title: 'Comment : générer des composants COM sans inscription'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-ms.openlocfilehash: 783677c97835acc98751fc4a19f9405af752b71a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ddcb378989878749d170705b4808d8302523a73a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162714"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>Comment : générer des composants COM sans inscription
 
@@ -29,4 +30,4 @@ Les composants COM sans inscription sont des composants COM qui ont des manifest
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour générer des applications isolées pour consommer des composants COM](how-to-build-isolated-applications-to-consume-com-components.md)
+[Comment : générer des applications isolées pour consommer des composants COM](how-to-build-isolated-applications-to-consume-com-components.md)

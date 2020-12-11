@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : ajouter des outils de génération personnalisée à des projets MSBuild'
 title: 'Comment : ajouter des outils de génération personnalisée à des projets MSBuild'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-ms.openlocfilehash: 812932d9e668ab5ee0eb75eadbf75be3d791cddb
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 66ec4a488fd2a089f09ac775d1150300ff662ff2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162818"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Comment : ajouter des outils de génération personnalisée à des projets MSBuild
 
@@ -17,13 +18,13 @@ Un outil de génération personnalisée est un outil de ligne de commande défin
 
 Pour un fichier particulier, spécifiez dans le fichier projet (. vcxproj) la ligne de commande à exécuter, tous les fichiers d’entrée ou de sortie supplémentaires et un message à afficher. Si **MSBuild** détermine que vos fichiers de sortie sont obsolètes par rapport à vos fichiers d’entrée, il affiche le message et exécute l’outil en ligne de commande.
 
-Pour spécifier à quel moment l’outil de génération personnalisée s’exécute, utilisez l’un `CustomBuildBeforeTargets` des `CustomBuildAfterTargets` éléments XML, ou les deux, dans le fichier projet. Par exemple, vous pouvez spécifier que votre outil de génération personnalisée s’exécute après le compilateur MIDL et avant le compilateur C/C++. Spécifier l' `CustomBuildBeforeTargets` élément pour exécuter l’outil avant l’exécution d’une cible particulière ; `CustomBuildAfterTargets` élément permettant d’exécuter l’outil après une cible particulière ; ou les deux éléments pour exécuter l’outil entre l’exécution de deux cibles. Si aucun élément n’est spécifié, votre outil de génération personnalisée s’exécute à son emplacement par défaut, qui est antérieur à la cible **MIDL** .
+Pour spécifier à quel moment l’outil de génération personnalisée s’exécute, utilisez l’un des éléments XML, ou les deux, `CustomBuildBeforeTargets` `CustomBuildAfterTargets` dans le fichier projet. Par exemple, vous pouvez spécifier que votre outil de génération personnalisée s’exécute après le compilateur MIDL et avant le compilateur C/C++. Spécifiez l' `CustomBuildBeforeTargets` élément pour exécuter l’outil avant l’exécution d’une cible particulière ; l' `CustomBuildAfterTargets` élément pour exécuter l’outil après une cible particulière, ou les deux éléments pour exécuter l’outil entre l’exécution de deux cibles. Si aucun élément n’est spécifié, votre outil de génération personnalisée s’exécute à son emplacement par défaut, qui est antérieur à la cible **MIDL** .
 
-Les étapes de génération personnalisée et les outils de génération personnalisés partagent les `CustomBuildBeforeTargets` informations `CustomBuildAfterTargets` spécifiées dans les éléments et XML. Spécifiez ces cibles une fois dans votre fichier projet.
+Les étapes de génération personnalisée et les outils de génération personnalisés partagent les informations spécifiées dans les `CustomBuildBeforeTargets` `CustomBuildAfterTargets` éléments et XML. Spécifiez ces cibles une fois dans votre fichier projet.
 
 ### <a name="to-add-a-custom-build-tool"></a>Pour ajouter un outil de génération personnalisée
 
-1. Ajoutez un groupe d’éléments au fichier projet et ajoutez un élément pour chaque fichier d’entrée. Spécifiez la commande, les entrées supplémentaires, les sorties et un message en tant que métadonnées d’élément, comme indiqué ici. Cet exemple suppose qu’un fichier « FAQ. txt » existe dans le même répertoire que votre projet.
+1. Ajoutez un groupe d’éléments au fichier projet et ajoutez un élément pour chaque fichier d’entrée. Spécifiez la commande, les entrées supplémentaires, les sorties et un message en tant que métadonnées d’élément, comme indiqué ici. Cet exemple suppose qu’un fichier « faq.txt » existe dans le même répertoire que votre projet.
 
     ```
     <ItemGroup>

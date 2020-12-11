@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _variant_t :: _variant_t'
 title: _variant_t::_variant_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - _variant_t class [C++], constructor
 - _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
-ms.openlocfilehash: 50c10eb4ff617f4bcdc69d2e1781a9920b9eb0e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e49f2cf42ce1d73cb18d280d335ed267cb11df3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161362"
 ---
 # <a name="_variant_t_variant_t"></a>_variant_t::_variant_t
 

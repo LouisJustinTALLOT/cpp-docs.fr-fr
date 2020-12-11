@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : CppProperties.jsà la référence'
 title: CppProperties.jsà la référence
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9067a186d3ab111eda11246d06e3a9d7a164455f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163052"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.jsà la référence
 

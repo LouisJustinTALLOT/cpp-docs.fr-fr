@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : vérification des remplacements de mémoire'
 title: Vérification des remplacements de mémoire
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: da7c5d77-a267-415f-a8ab-ee5ce5bfc286
-ms.openlocfilehash: 2c59cb96d640df6dcd96b9e0eafbcd325ed475f5
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 53361a6aea3de54017be3c966f9500accd21ced1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163169"
 ---
 # <a name="checking-for-memory-overwrites"></a>Vérification des remplacements de mémoire
 
@@ -19,7 +20,7 @@ Si vous recevez une violation d’accès sur un appel à une fonction de manipul
 Access Violation in _searchseg
 ```
 
-La fonction [_heapchk](../c-runtime-library/reference/heapchk.md) est disponible à la fois dans les versions Debug et Release (Windows NT uniquement) pour vérifier l’intégrité du tas de la bibliothèque Runtime. Vous pouvez utiliser `_heapchk` à peu près de la même façon `AfxCheckMemory` que la fonction pour isoler un remplacement de segment de mémoire, par exemple :
+La fonction [_heapchk](../c-runtime-library/reference/heapchk.md) est disponible à la fois dans les versions Debug et Release (Windows NT uniquement) pour vérifier l’intégrité du tas de la bibliothèque Runtime. Vous pouvez utiliser à `_heapchk` peu près de la même façon que la `AfxCheckMemory` fonction pour isoler un remplacement de segment de mémoire, par exemple :
 
 ```
 if(_heapchk()!=_HEAPOK)
@@ -30,4 +31,4 @@ Si cette fonction échoue, vous devez isoler à quel moment le segment de mémoi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Résolution de problèmes liés à la version release](fixing-release-build-problems.md)
+[Résolution des problèmes de version Release](fixing-release-build-problems.md)

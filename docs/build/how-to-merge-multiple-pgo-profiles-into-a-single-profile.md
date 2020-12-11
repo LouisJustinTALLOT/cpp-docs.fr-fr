@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : Comment : fusionner plusieurs profils PGO en un seul profil'
 title: 'Comment : fusionner plusieurs profils PGO en un seul profil'
 ms.date: 03/14/2018
 helpviewer_keywords:
 - merging profiles
 - profile-guided optimizations, merging profiles
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
-ms.openlocfilehash: 451c0f30a271f5dce3974e172766da4a23340b93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9549b9a26b0c16300c3750159f2c18c74dd293b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188871"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162688"
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Comment : fusionner plusieurs profils PGO en un seul profil
 
-L’optimisation guidée par profil (PGO) est un outil formidable pour créer des binaires optimisés basés sur un scénario profilé. Mais que se passe-t-il si vous avez une application qui comporte plusieurs scénarios importants et néanmoins distincts ? Comment créer un profil unique que PGO peut utiliser à partir de différents scénarios ? Dans Visual Studio, PGO Manager, [pgomgr. exe](pgomgr.md), fait ce travail pour vous.
+L’optimisation guidée par profil (PGO) est un outil formidable pour créer des binaires optimisés basés sur un scénario profilé. Mais que se passe-t-il si vous avez une application qui comporte plusieurs scénarios importants et néanmoins distincts ? Comment créer un profil unique que PGO peut utiliser à partir de différents scénarios ? Dans Visual Studio, PGO Manager, [pgomgr.exe](pgomgr.md), fait ce travail pour vous.
 
 La syntaxe de la fusion des profils est la suivante :
 

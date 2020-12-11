@@ -1,13 +1,14 @@
 ---
+description: En savoir plus sur les problèmes de migration courants Visual C++ ARM
 title: Problèmes courants de migration ARM Visual C++
 ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 889eed2b02362f33446cd9441ef84f406817b01a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b867d94fa8b80bd1a5be12b50718b979ee92a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224069"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163078"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Problèmes courants de migration ARM Visual C++
 
@@ -54,7 +55,7 @@ Dans l’architecture ARM, une valeur peut être décalée vers la gauche ou ver
 
 ### <a name="variable-arguments-varargs-behavior"></a>Comportement des arguments variables (varargs)
 
-Dans l’architecture ARM, les paramètres de la liste d’arguments variables qui sont transmis sur la pile sont sujets à l’alignement. Par exemple, un paramètre 64 bits est aligné sur une limite de 64 bits. Sur x86 et x64, les arguments passés sur la pile ne sont pas soumis à un alignement et à un pack serrés. Cette différence peut entraîner une fonction variadiques comme `printf` la lecture des adresses mémoire qui étaient destinées à être remplies sur ARM si la disposition attendue de la liste d’arguments de la variable n’est pas exactement mise en correspondance, même si elle peut fonctionner pour un sous-ensemble de certaines valeurs sur les architectures x86 ou x64. Examinez cet exemple :
+Dans l’architecture ARM, les paramètres de la liste d’arguments variables qui sont transmis sur la pile sont sujets à l’alignement. Par exemple, un paramètre 64 bits est aligné sur une limite de 64 bits. Sur x86 et x64, les arguments passés sur la pile ne sont pas soumis à un alignement et à un pack serrés. Cette différence peut entraîner une fonction variadiques comme `printf` la lecture des adresses mémoire qui étaient destinées à être remplies sur ARM si la disposition attendue de la liste d’arguments de la variable n’est pas exactement mise en correspondance, même si elle peut fonctionner pour un sous-ensemble de certaines valeurs sur les architectures x86 ou x64. Prenons l’exemple suivant :
 
 ```C
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.

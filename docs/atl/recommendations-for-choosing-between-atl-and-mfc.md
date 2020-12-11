@@ -1,32 +1,33 @@
 ---
-title: Recommandations relatives au choix entre ATL et MFC
+description: 'En savoir plus sur : recommandations pour le choix entre ATL et MFC'
+title: Recommandations pour le choix entre ATL et MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
-ms.openlocfilehash: e4e51f81bbdc54ff09980acfba22037df77abac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 506df04ebbd3bc9079e1d40cf14773d9d9a6bd1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159152"
 ---
-# <a name="recommendations-for-choosing-between-atl-and-mfc"></a>Recommandations relatives au choix entre ATL et MFC
+# <a name="recommendations-for-choosing-between-atl-and-mfc"></a>Recommandations pour le choix entre ATL et MFC
 
-Lorsque vous développez des applications et des composants, vous pouvez choisir entre deux approches — ATL et MFC (bibliothèque Microsoft Foundation Class).
+Lorsque vous développez des composants et des applications, vous pouvez choisir entre deux approches, à savoir ATL et MFC (le bibliothèque MFC (Microsoft Foundation Class)).
 
-## <a name="using-atl"></a>À l’aide de ATL
+## <a name="using-atl"></a>Utilisation d’ATL
 
-ATL est un moyen rapide et facile pour créer un composant COM dans C++ et maintenir un faible encombrement. Utilisez ATL pour créer un contrôle si vous n’avez pas besoin de toutes les fonctionnalités intégrées qui fournit automatiquement de MFC.
+ATL est un moyen simple et rapide de créer un composant COM en C++ et de conserver un faible encombrement. Utilisez ATL pour créer un contrôle si vous n’avez pas besoin de toutes les fonctionnalités intégrées que MFC fournit automatiquement.
 
-## <a name="using-mfc"></a>À l’aide de MFC
+## <a name="using-mfc"></a>Utilisation de MFC
 
-MFC vous permet de créer des applications complètes, des contrôles ActiveX et des documents actifs. Si vous avez déjà créé un contrôle avec MFC, voulez-vous continuer le développement avec MFC. Lorsque vous créez un nouveau contrôle, envisagez d’utiliser ATL si vous n’avez pas besoin de toutes les fonctionnalités intégrées de MFC.
+MFC vous permet de créer des applications complètes, des contrôles ActiveX et des documents actifs. Si vous avez déjà créé un contrôle avec MFC, vous souhaiterez peut-être continuer le développement dans MFC. Lorsque vous créez un nouveau contrôle, envisagez d’utiliser ATL si vous n’avez pas besoin de toutes les fonctionnalités intégrées de MFC.
 
-## <a name="using-atl-in-an-mfc-project"></a>À l’aide de ATL dans un projet MFC
+## <a name="using-atl-in-an-mfc-project"></a>Utilisation d’ATL dans un projet MFC
 
-Vous pouvez ajouter la prise en charge pour l’utilisation d’ATL dans un projet MFC existant en exécutant un Assistant. Pour plus d’informations, consultez [Ajout de la prise en charge ATL à votre projet MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+Vous pouvez ajouter la prise en charge de l’utilisation d’ATL dans un projet MFC existant en exécutant un Assistant. Pour plus d’informations, consultez [Ajout de la prise en charge ATL à votre projet MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajout d’une page de propriétés ATL'
 title: Ajout d’une page de propriétés ATL
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: 4cd7444d18d26124f8c3c642bba55fb7592f5c8b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7b2798cca257f0ab80c27a6e18a23b173f1d93a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499318"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159035"
 ---
 # <a name="adding-an-atl-property-page"></a>Ajout d’une page de propriétés ATL
 

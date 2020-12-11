@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les constantes de mode de traduction
 title: Constantes de mode de traduction
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: 0b951fc76635f67115f4a832ed316d66b6de7497
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4be3b24344a61d4aa8d5ea76ab623ee275afb399
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162317"
 ---
 # <a name="translation-mode-constants"></a>Constantes de mode de traduction
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fichiers d’en-tête précompilés'
 title: Fichiers d'en-tête précompilés
 ms.date: 10/24/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: c68de0ee8e6376731254adf965fb9a81f10f2861
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9f3d6847043f988f4b0ef57df9b1558c1cd5655c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838852"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163130"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
 

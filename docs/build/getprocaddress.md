@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : GetProcAddress'
 title: GetProcAddress
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-ms.openlocfilehash: 2d322cfe7d3bd60d8d702a226e181eb7b4ede963
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 32f0d6d623ea3a4499603a1b76e2c320537820fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493249"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162870"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Les processus de liaison explicite à une DLL appellent [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) pour obtenir l’adresse d’une fonction exportée dans la dll. Vous utilisez le pointeur de fonction retourné pour appeler la fonction DLL. **GetProcAddress** prend comme paramètres le handle du module dll (retourné par **LoadLibrary**, `AfxLoadLibrary`ou **GetModuleHandle**) et prend soit le nom de la fonction que vous souhaitez appeler, soit l’ordinal d’exportation de la fonction.
+Les processus de liaison explicite à une DLL appellent [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) pour obtenir l’adresse d’une fonction exportée dans la dll. Vous utilisez le pointeur de fonction retourné pour appeler la fonction DLL. **GetProcAddress** prend comme paramètres le handle du module dll (retourné par **LoadLibrary**, `AfxLoadLibrary` ou **GetModuleHandle**) et prend soit le nom de la fonction que vous souhaitez appeler, soit l’ordinal d’exportation de la fonction.
 
 Étant donné que vous appelez la fonction DLL par le biais d’un pointeur et qu’il n’y a aucune vérification de type au moment de la compilation, assurez-vous que les paramètres de la fonction sont corrects afin de ne pas surExécuter la mémoire allouée sur la pile et de provoquer une violation d’accès. L’une des façons d’assurer la sécurité des types consiste à examiner les prototypes de fonction des fonctions exportées et à créer des typedefs correspondants pour les pointeurs de fonction. Par exemple :
 
@@ -65,7 +66,7 @@ Vous pouvez obtenir l’ordinal d’exportation uniquement si la DLL à laquelle
 
 - [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 
-- [Exportation à partir d'une DLL à l'aide de fichiers DEF](exporting-from-a-dll-using-def-files.md)
+- [Exportation à partir d’une DLL à l’aide de fichiers DEF](exporting-from-a-dll-using-def-files.md)
 
 ## <a name="see-also"></a>Voir aussi
 

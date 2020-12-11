@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe remove_const'
 title: remove_const, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_const class
 - remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
-ms.openlocfilehash: 0091c77d33e1fcd2be5b361680c9422210866be2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 262c4ec34a0559afb7cf77849efce8fe577cf5b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159711"
 ---
-# <a name="removeconst-class"></a>remove_const, classe
+# <a name="remove_const-class"></a>remove_const, classe
 
 Crée un type non const à partir d'un type.
 
@@ -37,9 +38,9 @@ Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance de `remove_const<T>` contient un type modifié qui est `T1` quand *t* se présente sous la forme `const T1`, sinon *t*.
+Une instance de `remove_const<T>` contient un type modifié qui est `T1` quand *t* se présente sous la forme `const T1` , sinon *t*.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 #include <type_traits>
@@ -61,14 +62,14 @@ int main()
 remove_const_t<const int> == int
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[add_const, classe](../standard-library/add-const-class.md)\
-[remove_cv, classe](../standard-library/remove-cv-class.md)
+[Classe add_const](../standard-library/add-const-class.md)\
+[Classe remove_cv](../standard-library/remove-cv-class.md)

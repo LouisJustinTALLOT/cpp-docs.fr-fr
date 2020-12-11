@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : agrégation et macros de fabrique de classes'
 title: Agrégation et macros de fabrique de classes
 ms.date: 08/12/2020
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - ATL::DECLARE_PROTECT_FINAL_CONSTRUCT
 - ATL::DECLARE_VIEW_STATUS
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: 5fdf330cfc69ea68720666eae5952be356cad314
-ms.sourcegitcommit: 50db6d0a0d640155c9347c1914bc8859efaadd90
+ms.openlocfilehash: 7aa62bfe8e87b9e7923dfe1de1f28b6acdba595e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88197339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158957"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agrégation et macros de fabrique de classes
 
@@ -98,7 +99,7 @@ Ces macros offrent des moyens de contrôler l’agrégation et de déclarer des 
 | [DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct) | Empêche la suppression de l’objet externe pendant la construction d’un objet interne. |
 | [DECLARE_VIEW_STATUS](#declare_view_status) | Spécifie les indicateurs VIEWSTATUS pour le conteneur. |
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 
@@ -152,7 +153,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 
 `CComClassFactory` implémente l’interface [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) , qui contient des méthodes pour créer un objet d’un CLSID particulier, ainsi que le verrouillage de la fabrique de classe en mémoire pour permettre la création plus rapide de nouveaux objets. `IClassFactory` doit être implémentée pour chaque classe que vous inscrivez dans le registre système et pour laquelle vous affectez un CLSID.
 
-Les objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe comprend la macro [DECLARE_CLASSFACTORY](#declare_classfactory), qui déclare `CComClassFactory` comme fabrique de classe par défaut. Pour remplacer cette valeur par défaut, spécifiez l’une des macros DECLARE_CLASSFACTORY*xxx* dans votre définition de classe. Par exemple, la macro [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) utilise la classe spécifiée pour la fabrique de classe :
+Les objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe comprend la macro [DECLARE_CLASSFACTORY](#declare_classfactory), qui déclare `CComClassFactory` comme fabrique de classe par défaut. Pour remplacer cette valeur par défaut, spécifiez l’une des macros DECLARE_CLASSFACTORY *xxx* dans votre définition de classe. Par exemple, la macro [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) utilise la classe spécifiée pour la fabrique de classe :
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 

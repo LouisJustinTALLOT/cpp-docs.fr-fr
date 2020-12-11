@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les points d’entrée de l’interface COM
 title: Interface COM, points d'entrée
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: 132dd7394119081dcaeb098c2088782ff5d40ae4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 805ac906c3ccca246d1af71c689aaf768f789999
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619343"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160010"
 ---
 # <a name="com-interface-entry-points"></a>Interface COM, points d'entrée
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : notions de base relatives à ODBC'
 title: Éléments fondamentaux relatifs à ODBC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 042b1ce6d12e4f4a2be57c0e2e8e01d9750f5357
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 94482abd046645e445ffae7f85f192514f4fff78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161180"
 ---
 # <a name="odbc-basics"></a>Éléments fondamentaux relatifs à ODBC
 
@@ -45,7 +46,7 @@ Les composants de ODBC sont les suivants :
 
 - Gestionnaire de pilotes ODBC
 
-   Bibliothèque de liens dynamiques (Odbc32. dll) qui charge les pilotes de base de données ODBC pour le compte d’une application. Cette DLL est transparente pour votre application.
+   Bibliothèque de liens dynamiques (Odbc32.dll) qui charge les pilotes de base de données ODBC pour le compte d’une application. Cette DLL est transparente pour votre application.
 
 - Pilotes de base de données ODBC
 
@@ -53,7 +54,7 @@ Les composants de ODBC sont les suivants :
 
 - [Bibliothèque de curseurs ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
-   Bibliothèque de liens dynamiques (odbccr32. dll) qui se trouve entre le gestionnaire de pilotes ODBC et les pilotes et gère le défilement des données.
+   Bibliothèque de liens dynamiques (Odbccr32.dll) qui réside entre le gestionnaire de pilotes ODBC et les pilotes et gère le défilement des données.
 
 - [Administrateur ODBC](../../data/odbc/odbc-administrator.md)
 
@@ -67,4 +68,4 @@ Pour la liste des pilotes ODBC inclus dans cette version de Visual C++ et pour d
 
 ## <a name="see-also"></a>Voir aussi
 
-[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

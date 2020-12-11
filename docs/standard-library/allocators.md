@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : allocators'
 title: Allocateurs
 ms.date: 11/04/2016
 helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: fdad5cc8417740f7736bcf34cbc941a4e66de87d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4001ba007037e50ca3c5d2bea079f313b1c52bc3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163429"
 ---
 # <a name="allocators"></a>Allocateurs
 

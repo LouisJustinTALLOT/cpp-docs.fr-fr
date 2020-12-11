@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : attribute unextensible'
 title: Attribut unextensible
 ms.date: 11/04/2016
 helpviewer_keywords:
 - nonextensible attribute
 - dual interfaces, nonextensible attribute
 ms.assetid: 02a4a18b-ffd3-4d53-8fd1-feb1c05ad5ac
-ms.openlocfilehash: fda2a0d43144b6e9832e061e7198b3f3e65f8b86
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5bad214d6688570bc4a69aca952f6bed98c2b0dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159399"
 ---
 # <a name="nonextensible-attribute"></a>Attribut unextensible
 

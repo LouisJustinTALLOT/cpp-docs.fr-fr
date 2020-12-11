@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _TRUNCATE'
 title: _TRUNCATE
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: b472fceffa6284baaaf4dc1780ab54399fdd42c7
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: ea8a1517db8b270e03c5767838f3965cdea8b36f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162362"
 ---
 # <a name="_truncate"></a>_TRUNCATE
 

@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : modificateurs spécifiques à Microsoft'
 title: Modificateurs propres à Microsoft
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: 2f56220ba15027a522264b91366cab9cf0b65d21
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dd82bf22da99e864a7b4898da1a99a12c3ad3de4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506534"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161622"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificateurs propres à Microsoft
 

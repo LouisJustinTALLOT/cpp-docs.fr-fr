@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Assistant consommateur de OLE DB ATL'
 title: Assistant Consommateur OLEDB ATL
 ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 490335f1f61987fc6e5b0b3806ee8e39c82f336f
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 5d5fb0e6d5ec08ba75aa84a501169544598d8843
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158697"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistant Consommateur OLEDB ATL
 
@@ -24,19 +25,19 @@ Cet Assistant n’est pas disponible dans Visual Studio 2019 et ultérieur.
 Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de données nécessaires pour accéder à la source de données spécifiée via le fournisseur OLE DB spécifié.
 
 > [!NOTE]
-> Cet Assistant nécessite que vous cliquiez sur le bouton **Source de données** pour sélectionner une source de données avant d’entrer des noms dans les champs `Class` et **fichier .h** .
+> Cet Assistant nécessite que vous cliquiez sur le bouton **Source de données** pour sélectionner une source de données avant d’entrer des noms dans les champs `Class` et **fichier .h**.
 
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur
 
 - **Source de données**
 
-   Le bouton **Source de données** vous permet de configurer la source de données spécifiée à l’aide du fournisseur OLE DB spécifié. Lorsque vous cliquez sur ce bouton, la boîte de dialogue **Propriétés des liaisons de données** s’affiche. Pour plus d’informations sur la création de chaînes de connexion et la boîte de dialogue **Propriétés des liaisons de données** , consultez [Data Link API Overview](/previous-versions/windows/desktop/ms718102(v=vs.85)) (Présentation de la liaison de données) dans la documentation du SDK Windows.
+   Le bouton **Source de données** vous permet de configurer la source de données spécifiée à l’aide du fournisseur OLE DB spécifié. Lorsque vous cliquez sur ce bouton, la boîte de dialogue **Propriétés des liaisons de données** s’affiche. Pour plus d’informations sur la création de chaînes de connexion et la boîte de dialogue **Propriétés des liaisons de données**, consultez [Data Link API Overview](/previous-versions/windows/desktop/ms718102(v=vs.85)) (Présentation de la liaison de données) dans la documentation du SDK Windows.
 
-   Les informations supplémentaires suivantes décrivent les onglets de la boîte de dialogue **Propriétés des liaisons de données** .
+   Les informations supplémentaires suivantes décrivent les onglets de la boîte de dialogue **Propriétés des liaisons de données**.
 
   - Onglet **Fournisseur**
 
-      Sélectionnez un fournisseur approprié pour gérer la connexion à la source de données. Le type de fournisseur est généralement déterminé par le type de la base de données à laquelle vous vous connectez. Cliquez sur le bouton **Suivant** ou sur l’onglet **Connexion** .
+      Sélectionnez un fournisseur approprié pour gérer la connexion à la source de données. Le type de fournisseur est généralement déterminé par le type de la base de données à laquelle vous vous connectez. Cliquez sur le bouton **Suivant** ou sur l’onglet **Connexion**.
 
   - Onglet **connexion**
 
@@ -54,7 +55,7 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
          > - **Utiliser la sécurité intégrée de Windows NT**
          > - **Utiliser un nom d'utilisateur et un mot de passe spécifiques**
          >
-         > Si vous sélectionnez **Utiliser un nom d’utilisateur spécifique et un mot de passe** , vous avez la possibilité d’enregistrer le mot de passe (à l’aide de la case à cocher « Autoriser l’enregistrement du mot de passe ») ; néanmoins, cette option n’est pas sûre. Nous vous recommandons plutôt de sélectionner l’option **Utiliser la sécurité intégrée de Windows NT** , qui crypte le mot de passe, assurant sa sécurité.
+         > Si vous sélectionnez **Utiliser un nom d’utilisateur spécifique et un mot de passe**, vous avez la possibilité d’enregistrer le mot de passe (à l’aide de la case à cocher « Autoriser l’enregistrement du mot de passe ») ; néanmoins, cette option n’est pas sûre. Nous vous recommandons plutôt de sélectionner l’option **Utiliser la sécurité intégrée de Windows NT**, qui crypte le mot de passe, assurant sa sécurité.
          > Dans certaines situations, vous souhaiterez quand même sélectionner « Autoriser l’enregistrement du mot de passe ». Par exemple, si vous publiez une bibliothèque avec une solution de base de données privée, vous ne devez pas accéder à la base de données directement, mais plutôt utiliser une application intermédiaire pour identifier l’utilisateur (via le schéma d’authentification de votre choix), puis limiter les données disponibles pour l’utilisateur.
 
       1. **Sélectionnez la base de données sur le serveur :** Cliquez sur le menu déroulant de la liste pour afficher toutes les bases de données inscrites sur le serveur de données, puis sélectionnez-en une.
@@ -71,22 +72,22 @@ Cet Assistant définit une classe de consommateur OLE DB avec les liaisons de do
 
          \- ou -
 
-         **Utiliser la chaîne de connexion :** Entrez une chaîne de connexion que vous avez déjà obtenue ou cliquez sur le bouton **générer** . la boîte de dialogue **Sélectionner une source de données** s’affiche. Sélectionnez une source de données de fichier ou de machine et cliquez sur **OK** .
+         **Utiliser la chaîne de connexion :** Entrez une chaîne de connexion que vous avez déjà obtenue ou cliquez sur le bouton **générer** . la boîte de dialogue **Sélectionner une source de données** s’affiche. Sélectionnez une source de données de fichier ou de machine et cliquez sur **OK**.
 
          > [!NOTE]
-         > Vous pouvez obtenir une chaîne de connexion en affichant les propriétés d’une connexion existante dans l’ **Explorateur de serveurs** , ou vous pouvez créer une connexion en double-cliquant sur **Ajouter une connexion** dans l’ **Explorateur de serveurs** .
+         > Vous pouvez obtenir une chaîne de connexion en affichant les propriétés d’une connexion existante dans l’**Explorateur de serveurs**, ou vous pouvez créer une connexion en double-cliquant sur **Ajouter une connexion** dans l’**Explorateur de serveurs**.
 
       1. **Entrez les informations pour vous connecter au serveur :** Entrez un nom d’utilisateur et un mot de passe pour vous connecter au serveur de données.
 
       1. Saisissez le catalogue initial à utiliser.
 
-      1. Cliquez sur **Tester la connexion** ; si le test réussit, cliquez sur **OK** . Si ce n’est pas le cas, vérifiez vos informations d’ouverture de session, ou bien essayez une autre base de données ou un autre serveur de données.
+      1. Cliquez sur **Tester la connexion** ; si le test réussit, cliquez sur **OK**. Si ce n’est pas le cas, vérifiez vos informations d’ouverture de session, ou bien essayez une autre base de données ou un autre serveur de données.
 
   - Onglet **avancé**
 
       **Paramètres réseau :** Spécifiez le **niveau d’emprunt** d’identité (le niveau d’emprunt d’identité que le serveur est autorisé à utiliser lorsqu’il emprunte l’identité du client ; correspond directement aux niveaux d’emprunt d’identité RPC) et le niveau de **protection** (le niveau de protection des données envoyées entre le client et le serveur) qui correspond directement aux niveaux de protection RPC.
 
-      **Autres :** Dans **délai de connexion** , spécifiez le nombre de secondes d’inactivité autorisées avant qu’un délai d’attente ne se produise. Dans les **Autorisations d’accès** , spécifiez les autorisations d’accès pour la connexion de données.
+      **Autres :** Dans **délai de connexion**, spécifiez le nombre de secondes d’inactivité autorisées avant qu’un délai d’attente ne se produise. Dans les **Autorisations d’accès**, spécifiez les autorisations d’accès pour la connexion de données.
 
       Pour plus d’informations sur les propriétés d’initialisation avancées, reportez-vous à la documentation fournie avec chaque fournisseur OLE DB spécifique.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajouter une fonction membre'
 title: Ajouter une fonction membre
 ms.date: 11/09/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e40cd3b70b90026ebaebe2ec0af2224d89868f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160153"
 ---
 # <a name="add-a-member-function"></a>Ajouter une fonction membre
 
@@ -30,7 +31,7 @@ Dans **l’affichage de classes**, vous pouvez ajouter une fonction membre à n�
 
 1. Cliquez sur le bouton **Terminer** pour générer le code de la fonction membre.
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 - [Assistant Ajout d’une fonction membre](#add-member-function-wizard)
 
@@ -104,7 +105,7 @@ Une fois que vous avez ajouté la fonction membre avec l’Assistant, vous pouve
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [private](../cpp/private-cpp.md)
+  - [priv](../cpp/private-cpp.md)
 
   Vérifiez si la nouvelle fonction membre est statique ou virtuelle, et si elle est inline ou pure. Si vous définissez la fonction membre comme pure, la case **Virtual** est cochée et la case **Inline** n’est plus disponible. Par défaut, la fonction membre est non statique et non virtuelle.
 

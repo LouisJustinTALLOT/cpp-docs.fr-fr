@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exportation à partir d’une DLL'
 title: Exportation à partir d'une DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - functions [C++], exporting
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-ms.openlocfilehash: e6a8555561fcf935b3968bd6cb6d19ec42a78563
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 324ca733eab48973dc9ca902f81abfe4ce52a5c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162935"
 ---
 # <a name="exporting-from-a-dll"></a>Exportation à partir d'une DLL
 
