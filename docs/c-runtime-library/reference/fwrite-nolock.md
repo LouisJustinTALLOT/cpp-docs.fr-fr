@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fwrite_nolock'
 title: _fwrite_nolock
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 6856dd2af0536deacfbef6b02c7cdf38d41f9c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6b80933756c930403cbba464fb4921266b0d618f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919429"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273733"
 ---
 # <a name="_fwrite_nolock"></a>_fwrite_nolock
 
@@ -53,7 +54,7 @@ size_t _fwrite_nolock(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Pointeur désignant les données à écrire.
 
 *size*<br/>
@@ -65,11 +66,11 @@ Nombre maximal d'éléments à écrire.
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Identique à [fwrite](fwrite.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Cette fonction est une version sans verrouillage de **fwrite**. Elle est identique à **fwrite** , à ceci près qu’elle n’est pas protégée contre les interférences par d’autres threads. Elle peut être plus rapide, car elle n’entraîne pas la charge liée au verrouillage des autres threads. Utilisez cette fonction uniquement dans les contextes thread-safe, par exemple avec les applications monothread ou lorsque la portée appelante gère déjà l’isolation des threads.
 
@@ -77,13 +78,13 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_fwrite_nolock**|\<stdio.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [fread](fread.md).
 

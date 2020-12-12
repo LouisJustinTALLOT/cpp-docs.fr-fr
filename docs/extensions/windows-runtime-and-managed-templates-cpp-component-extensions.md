@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Windows Runtime et les modèles managés (C++/CLI et C++/CX)'
 title: Windows Runtime et modèles gérés (C++/CLI and C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75b39c58bc42c23da313525f125dc98abdb0866b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376307"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274032"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime et modèles gérés (C++/CLI and C++/CX)
 
@@ -73,7 +74,7 @@ template<class T> public ref class R {
 };
 ```
 
-Vous ne pouvez pas accéder aux modèles définis dans un assembly référencé avec une syntaxe de langage C++/CLI, mais vous pouvez utiliser la réflexion. Si un modèle n’est pas instantané, il n’est pas émis dans les métadonnées. Si un modèle est instancié, seules les fonctions membres référencées s’affichent dans les métadonnées.
+Vous ne pouvez pas accéder aux modèles définis dans un assembly référencé avec une syntaxe de langage C++/CLI, mais vous pouvez utiliser la réflexion. Si un modèle n’est pas instancié, il n’est pas émis dans les métadonnées. Si un modèle est instancié, seules les fonctions membres référencées s’affichent dans les métadonnées.
 
 ```cpp
 // managed_templates_3.cpp
@@ -132,4 +133,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

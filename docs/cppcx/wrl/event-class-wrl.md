@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe d’événements (WRL)'
 title: Event, classe (WRL)
 ms.date: 09/24/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Event::Event, constructor
 - Microsoft::WRL::Wrappers::Event::operator= operator
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-ms.openlocfilehash: 27a90bb801d1b6869b2391227464bb215dd42538
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e3a61a40d1160830df80a7e0650e60fbf803e3d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272823"
 ---
 # <a name="event-class-wrl"></a>Event, classe (WRL)
 
@@ -54,7 +55,7 @@ Nom                                 | Description
 
 **Espace de noms :** Microsoft :: WRL :: wrappers
 
-## <a name="eventevent"></a><a name="event"></a>Event :: Event
+## <a name="eventevent"></a><a name="event"></a> Event :: Event
 
 Initialise une nouvelle instance de la classe `Event`.
 
@@ -72,7 +73,7 @@ WRL_NOTHROW Event(
 *h*<br/>
 Handle vers un événement. Par défaut, *h* est initialisé à **`nullptr`** .
 
-## <a name="eventoperator"></a><a name="operator-assign"></a>Event :: Operator =
+## <a name="eventoperator"></a><a name="operator-assign"></a> Event :: Operator =
 
 Assigne la `Event` référence spécifiée à l' `Event` instance actuelle.
 
@@ -87,6 +88,6 @@ WRL_NOTHROW Event& operator=(
 *h*<br/>
 Référence rvalue à une `Event` instance.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’instance actuelle `Event` .

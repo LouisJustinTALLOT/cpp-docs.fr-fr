@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure CreatorMap'
 title: CreatorMap (structure)
 ms.date: 09/21/2018
 ms.topic: reference
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::CreatorMap::factoryCreator data member
 - Microsoft::WRL::Details::CreatorMap::serverName data member
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
-ms.openlocfilehash: 1527f81694d1d809d585f3f6504c0e6433a2c26b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0ef3b441390a22a6c4b35f274857ccb58de030d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273044"
 ---
 # <a name="creatormap-structure"></a>CreatorMap (structure)
 
-Prend en charge l’infrastructure windows Runtime CMD Template Library et n’est pas destiné à être utilisé directement à partir de votre code.
+Prend en charge l’infrastructure de la bibliothèque de modèles C++ Windows Runtime et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,15 +36,15 @@ struct CreatorMap;
 
 ## <a name="remarks"></a>Notes
 
-Contient des informations sur la façon d’initialiser, de vous inscrire et de ne pas enregistrer les objets.
+Contient des informations sur l’initialisation, l’inscription et l’annulation de l’inscription d’objets.
 
 `CreatorMap` contient les informations suivantes :
 
-- Comment initialiser, enregistrer et désinscrire les objets.
+- Comment initialiser, inscrire et désinscrire des objets.
 
-- Comment comparer les données d’activation en fonction d’une usine CLASSIQUE COM ou Windows Runtime.
+- Comparaison des données d’activation selon une fabrique COM ou Windows Runtime classique.
 
-- Informations sur le cache d’usine et le nom du serveur pour une interface.
+- Informations sur le cache de fabrique et le nom de serveur pour une interface.
 
 ## <a name="members"></a>Membres
 
@@ -51,10 +52,10 @@ Contient des informations sur la façon d’initialiser, de vous inscrire et de 
 
 Nom                                          | Description
 --------------------------------------------- | ------------------------------------------------------------------------------------------------------
-[CreatorMap::activationId](#activationid)     | Représente un identifiant d’objet qui est identifié soit par un IDENTIFIANT de classe COM classique ou un nom Windows Runtime.
-[CreatorMap::factoryCache](#factorycache)     | Stocke le pointeur à `CreatorMap`la cache d’usine pour le .
-[CreatorMap::factoryCreator](#factorycreator) | Crée une usine `CreatorMap`pour les spécifiés .
-[CreatorMap::serverName](#servername)         | Stocke le nom `CreatorMap`du serveur pour le .
+[CreatorMap :: activationId](#activationid)     | Représente un ID d’objet identifié par un ID de classe COM classique ou un nom de Windows Runtime.
+[CreatorMap :: factoryCache](#factorycache)     | Stocke le pointeur dans le cache de fabrique pour le `CreatorMap` .
+[CreatorMap :: FactoryCreator,](#factorycreator) | Crée une fabrique pour le spécifié `CreatorMap` .
+[CreatorMap :: NomServeur](#servername)         | Stocke le nom du serveur pour le `CreatorMap` .
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -62,11 +63,11 @@ Nom                                          | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** module.h
+**En-tête :** module. h
 
-**Espace nom:** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
-## <a name="creatormapactivationid"></a><a name="activationid"></a>CreatorMap::activationId
+## <a name="creatormapactivationid"></a><a name="activationid"></a> CreatorMap :: activationId
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -79,17 +80,17 @@ union {
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
+*identificateur*<br/>
 ID d’interface.
 
 *getRuntimeName*<br/>
-Une fonction qui récupère le nom Windows runtime d’un objet.
+Fonction qui récupère le nom Windows Runtime d’un objet.
 
 ### <a name="remarks"></a>Notes
 
-Représente un identifiant d’objet qui est identifié soit par un IDENTIFIANT de classe COM classique ou un nom Windows runtime.
+Représente un ID d’objet identifié par un ID de classe COM classique ou un nom Windows Runtime.
 
-## <a name="creatormapfactorycache"></a><a name="factorycache"></a>CreatorMap::factoryCache
+## <a name="creatormapfactorycache"></a><a name="factorycache"></a> CreatorMap :: factoryCache
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -99,9 +100,9 @@ FactoryCache* factoryCache;
 
 ### <a name="remarks"></a>Notes
 
-Stocke le pointeur à `CreatorMap`la cache d’usine pour le .
+Stocke le pointeur dans le cache de fabrique pour le `CreatorMap` .
 
-## <a name="creatormapfactorycreator"></a><a name="factorycreator"></a>CreatorMap::factoryCreator
+## <a name="creatormapfactorycreator"></a><a name="factorycreator"></a> CreatorMap :: FactoryCreator,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -116,26 +117,26 @@ IUnknown** factory);
 ### <a name="parameters"></a>Paramètres
 
 *currentflags*<br/>
-L’un des enumérateurs [RuntimeClassType.](runtimeclasstype-enumeration.md)
+Un des énumérateurs [RuntimeClassType](runtimeclasstype-enumeration.md) .
 
-*Entrée*<br/>
-Un CreatorMap.
+*mention*<br/>
+CreatorMap.
 
-*iidClassFactory iidClassFactory*<br/>
-L’interface ID d’une usine de classe.
+*iidClassFactory*<br/>
+ID d’interface d’une fabrique de classe.
 
 *usine*<br/>
-Lorsque l’opération se termine, l’adresse d’une usine de classe.
+Une fois l’opération terminée, l’adresse d’une fabrique de classe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 ### <a name="remarks"></a>Notes
 
-Crée une usine pour le CreatorMap spécifié.
+Crée une fabrique pour le CreatorMap spécifié.
 
-## <a name="creatormapservername"></a><a name="servername"></a>CreatorMap::serverName
+## <a name="creatormapservername"></a><a name="servername"></a> CreatorMap :: NomServeur
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 

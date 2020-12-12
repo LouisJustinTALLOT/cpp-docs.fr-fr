@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe result_of'
 title: result_of, classe
 ms.date: 02/21/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: 54806f965cc46058e3c82b4863bb45782abe079e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2aba6b073309be064b9ff0edc7bffa4d8d0098e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273902"
 ---
 # <a name="result_of-class"></a>result_of, classe
 

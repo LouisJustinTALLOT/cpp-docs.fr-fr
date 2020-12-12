@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : classes REF et structs (C++/CX)'
 title: Classes et structures de référence (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-ms.openlocfilehash: d128734f8c78c9198f0731b415c1be35b0c58e65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e87709febd03c185ec50845ff6fbb1a5ee27aba7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273226"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classes et structures de référence (C++/CX)
 
-Le C++/CX prend en charge les *classes Ref* définies par l’utilisateur et les *structs de référence*, ainsi que les *classes* de valeur et les *structures*de valeur définies par l’utilisateur. Ces structures de données sont les conteneurs principaux par lesquels C++/CX prend en charge le système de type Windows Runtime. Leur contenu est émis vers les métadonnées en fonction de certaines règles spécifiques, ce qui leur permet d’être transmis entre des composants de Windows Runtime et des applications plateforme Windows universelle qui sont écrites en C++ ou dans d’autres langages.
+Le C++/CX prend en charge les *classes Ref* définies par l’utilisateur et les *structs de référence*, ainsi que les *classes* de valeur et les *structures* de valeur définies par l’utilisateur. Ces structures de données sont les conteneurs principaux par lesquels C++/CX prend en charge le système de type Windows Runtime. Leur contenu est émis vers les métadonnées en fonction de certaines règles spécifiques, ce qui leur permet d’être transmis entre des composants de Windows Runtime et des applications plateforme Windows universelle qui sont écrites en C++ ou dans d’autres langages.
 
 Une classe ref ou un struct ref comporte les caractéristiques essentielles suivantes :
 
@@ -39,7 +40,7 @@ Cet exemple de code montre une implémentation de la classe ref `Person` :
 
 [!code-cpp[cx_classes#04](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#04)]
 
-## <a name="usage"></a>Usage
+## <a name="usage"></a>Utilisation
 
 L'exemple de code suivant montre comment le code client utilise la classe ref `Person` .
 
@@ -97,7 +98,7 @@ Il ne fournit aucune autre combinaison d'accessibilité, de virtualité et de ve
 
 Le comportement n'est pas défini si vous tentez d'accéder aux membres d'une classe dont le destructeur a déjà été exécuté ; il provoquera très probablement l'arrêt système du programme. Appeler `delete t` sur un type qui ne comporte aucun destructeur public n'a aucun effet. `delete this`L’appel de sur un type ou une classe de base qui a un **`private`** destructeur connu **`protected private`** à partir de sa hiérarchie de types n’a également aucun effet.
 
-Lorsque vous déclarez un destructeur public, le compilateur génère le code afin que la classe ref implémente `Platform::IDisposable` et que le destructeur implémente la méthode `Dispose` . `Platform::IDisposable`est la projection C++/CX de `Windows::Foundation::IClosable` . N'implémentez jamais explicitement ces interfaces.
+Lorsque vous déclarez un destructeur public, le compilateur génère le code afin que la classe ref implémente `Platform::IDisposable` et que le destructeur implémente la méthode `Dispose` . `Platform::IDisposable` est la projection C++/CX de `Windows::Foundation::IClosable` . N'implémentez jamais explicitement ces interfaces.
 
 ## <a name="inheritance"></a>Héritage
 

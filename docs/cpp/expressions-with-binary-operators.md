@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : expressions avec opérateurs binaires'
 title: Expressions avec opérateurs binaires
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: a5c9127db4714575cdf037147cc97601a4523e93
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 753b7f22658d843ad2388b38a2dc636e7190a278
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360849"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273343"
 ---
 # <a name="expressions-with-binary-operators"></a>Expressions avec opérateurs binaires
 
@@ -33,17 +34,17 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
 
 - [Opérateurs de décalage](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-  - Changement droit (>>)
+  - Décalage vers la droite (>>)
 
-  - Quart de gauche (<<)
+  - Décalage vers la gauche (<<)
 
-- [Opérateurs relationnels et égalité](../cpp/relational-operators-equal-and-equal.md)
+- [Opérateurs relationnels et d’égalité](../cpp/relational-operators-equal-and-equal.md)
 
   - Inférieur à (\<)
 
   - Supérieur à (>)
 
-  - Moins ou égal à\<()
+  - Inférieur ou égal à ( \< =)
 
   - Supérieur ou égal à (>=)
 
@@ -53,25 +54,25 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
 
 - Opérateurs de bits
 
-  - [Bitwise et (&)](../cpp/bitwise-and-operator-amp.md)
+  - [AND au niveau du bit (&)](../cpp/bitwise-and-operator-amp.md)
 
-  - [Bitwise exclusif OU (MD)](../cpp/bitwise-exclusive-or-operator-hat.md)
+  - [Or exclusif au niveau du bit (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-  - [Bitwise inclusive OU (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+  - [Or inclusif au niveau du bit (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - Opérateurs logiques
 
-  - [Logique ET (&&)](../cpp/logical-and-operator-amp-amp.md)
+  - [AND logique (&&)](../cpp/logical-and-operator-amp-amp.md)
 
-  - [Logical OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+  - [OR logique (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
 
-- [Opérateurs d'assignation](../cpp/assignment-operators.md)
+- [Opérateurs d’assignation](../cpp/assignment-operators.md)
 
   - Assignation (=)
 
   - Assignation d'addition (+=)
 
-  - Affectation de soustraction (-MD)
+  - Assignation de soustraction (-=)
 
   - Assignation de multiplication (*=)
 
@@ -79,18 +80,18 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
 
   - Assignation de modulo (%=)
 
-  - Affectation de quart de \<gauche (<)
+  - Assignation de décalage vers la gauche (<\< =)
 
-  - Affectation de quart droit (>>)
+  - Assignation de décalage vers la droite (>>=)
 
-  - Bitwise ET affectation (&)
+  - Assignation and au niveau du bit (&=)
 
   - Assignation d'opération OR exclusive au niveau du bit (^=)
 
-  - Affectation BITwise inclusive OR (&#124;)
+  - Assignation or inclusive au niveau du bit (&#124;=)
 
-- [Opérateur de virgule](../cpp/comma-operator.md) (,)
+- [Opérateur virgule](../cpp/comma-operator.md) (,)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Types d'expressions](../cpp/types-of-expressions.md)
+[Types d’expressions](../cpp/types-of-expressions.md)

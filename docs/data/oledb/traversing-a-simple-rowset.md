@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : parcours d’un ensemble de lignes simple'
 title: Parcours d'un jeu de lignes simple
 ms.date: 10/19/2018
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: a6b2ebf918f42e274c372d1dda1e277f7fd49cd5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f2e0c1f9647e168d8de2a10eaea6425bf9ad5a88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272628"
 ---
 # <a name="traversing-a-simple-rowset"></a>Parcours d'un jeu de lignes simple
 
-L’exemple suivant montre un accès rapide et facile à la base de données qui n’implique pas de commandes. Dans un projet ATL, le code de consommateur suivant récupère les enregistrements d’une table appelée *Artists* dans une base de données Microsoft Access à l’aide du fournisseur Microsoft OLE DB pour ODBC. Le code crée un objet de table [CTable](../../data/oledb/ctable-class.md) avec un accesseur basé sur la classe d’enregistrement utilisateur `CArtists`. Il ouvre une connexion, ouvre une session sur la connexion et ouvre la table dans la session.
+L’exemple suivant montre un accès rapide et facile à la base de données qui n’implique pas de commandes. Dans un projet ATL, le code de consommateur suivant récupère les enregistrements d’une table appelée *Artists* dans une base de données Microsoft Access à l’aide du fournisseur Microsoft OLE DB pour ODBC. Le code crée un objet de table [CTable](../../data/oledb/ctable-class.md) avec un accesseur basé sur la classe d’enregistrement utilisateur `CArtists` . Il ouvre une connexion, ouvre une session sur la connexion et ouvre la table dans la session.
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +55,7 @@ int main()
 }
 ```
 
-L’enregistrement utilisateur, `CArtists`, ressemble à cet exemple :
+L’enregistrement utilisateur, `CArtists` , ressemble à cet exemple :
 
 ```cpp
 class CArtists
@@ -76,4 +77,4 @@ END_COLUMN_MAP()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des modèles du consommateur OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[Utilisation des modèles de consommateurs OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _futime, _futime32 _futime64'
 title: _futime, _futime32, _futime64
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: 615e436abf9d763e73d26db61d9063d5e586232b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d0e438c14d8fa7ba472be77d9d6f064b41d61431
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273759"
 ---
 # <a name="_futime-_futime32-_futime64"></a>_futime, _futime32, _futime64
 
@@ -74,11 +75,11 @@ Descripteur du fichier ouvert.
 *FILETIME*<br/>
 Pointeur désignant la structure qui contient la nouvelle date de modification.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retournent 0 en cas de réussite. Si une erreur se produit, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et **errno** a la valeur **EBADF**, ce qui indique un descripteur de fichier non valide, ou **EINVAL**, qui indique un paramètre non valide.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La routine **_futime** définit la date de modification et l’heure d’accès du fichier ouvert associé à *FD*. **_futime** est identique à [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), sauf que son argument est le descripteur de fichier d’un fichier ouvert, plutôt que le nom d’un fichier ou un chemin d’accès à un fichier. La structure **_utimbuf** contient des champs pour la nouvelle date de modification et l’heure d’accès. Les deux champs doivent contenir des valeurs valides. les **_utimbuf32** et les **_utimbuf64** sont identiques à **_utimbuf** , à l’exception de l’utilisation des types d’heure 32 bits et 64 bits, respectivement. **_futime** et **_utimbuf** utilisent un type de temps de 64 bits et **_futime** sont identiques en ce qui concerne le comportement de **_futime64**. Si vous devez forcer l’ancien comportement, définissez **_USE_32BIT_TIME_T**. Dans ce cas, **_futime** est identique dans le comportement à **_futime32** et la structure **_utimbuf** utilise le type de temps 32 bits, ce qui en fait l’équivalent de **__utimbuf32**.
 
@@ -88,7 +89,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|En-tête facultatif|
+|Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
 |**_futime**|\<sys/utime.h>|\<errno.h>|
 |**_futime32**|\<sys/utime.h>|\<errno.h>|
@@ -96,7 +97,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_futime.c

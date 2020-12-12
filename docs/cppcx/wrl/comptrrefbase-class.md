@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe ComPtrRefBase'
 title: ComPtrRefBase (classe)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown** operator
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
-ms.openlocfilehash: 4f6dd6449cf8135ad14486d64cea95d8329e0014
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4dce58e8292092084916c24153d543f2a45856fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273135"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase (classe)
 
@@ -34,11 +35,11 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Un [ComPtr\<T>](comptr-class.md) type ou un type dérivé de lui, pas seulement l’interface représentée par le `ComPtr`.
+Type [ComPtr \<T> ](comptr-class.md) ou type dérivé de celui-ci, pas simplement l’interface représentée par `ComPtr` .
 
 ## <a name="remarks"></a>Notes
 
-Représente la classe de base pour la classe [ComPtrRef.](comptrref-class.md)
+Représente la classe de base pour la classe [ComPtrRef](comptrref-class.md) .
 
 ## <a name="members"></a>Membres
 
@@ -46,20 +47,20 @@ Représente la classe de base pour la classe [ComPtrRef.](comptrref-class.md)
 
 Nom            | Description
 --------------- | -------------------------------------------------
-`InterfaceType` | Un synonyme pour le type de paramètre de modèle *T*.
+`InterfaceType` | Synonyme du type de paramètre de modèle *T*.
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 Nom                                                                       | Description
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
-[ComPtrRefBase::opérateur IInspectable](#operator-iinspectable-star-star) | Lance le membre actuel [ptr_](#ptr) de données à un pointeur-à-un-pointeur-à l’interface. `IInspectable`
-[ComPtrRefBase::opérateur IUnknown](#operator-iunknown-star-star)         | Lance le membre actuel [ptr_](#ptr) de données à un pointeur-à-un-pointeur-à l’interface. `IUnknown`
+[ComPtrRefBase :: Operator IInspectable * *](#operator-iinspectable-star-star) | Effectue un cast du membre de données de [PTR_](#ptr) actuel en pointeur vers l' `IInspectable` interface.
+[ComPtrRefBase :: Operator IUnknown * *](#operator-iunknown-star-star)         | Effectue un cast du membre de données de [PTR_](#ptr) actuel en pointeur vers l' `IUnknown` interface.
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
 Nom                        | Description
 --------------------------- | ----------------------------------------------------------------
-[ComPtrRefBase::ptr](#ptr) | Pointeur sur le type spécifié par le paramètre du modèle actuel.
+[ComPtrRefBase ::p tr_](#ptr) | Pointeur vers le type spécifié par le paramètre de modèle actuel.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -69,9 +70,9 @@ Nom                        | Description
 
 **En-tête :** client.h
 
-**Espace nom:** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
-## <a name="comptrrefbaseoperator-iinspectable-operator"></a><a name="operator-iinspectable-star-star"></a>ComPtrRefBase::opérateur IInspectable\* \* Opérateur
+## <a name="comptrrefbaseoperator-iinspectable-operator"></a><a name="operator-iinspectable-star-star"></a>ComPtrRefBase :: Operator IInspectable, \* \* opérateur
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -81,13 +82,13 @@ operator IInspectable**() const;
 
 ### <a name="remarks"></a>Notes
 
-Lance le membre actuel [ptr_](#ptr) de données à un pointeur-à-un-pointeur-à l’interface. `IInspectable`
+Effectue un cast du membre de données de [PTR_](#ptr) actuel en pointeur vers l' `IInspectable` interface.
 
-Une erreur est émise `ComPtrRefBase` si le courant `IInspectable`ne dérive pas de .
+Une erreur est émise si le actuel `ComPtrRefBase` ne dérive pas de `IInspectable` .
 
-Ce casting n’est disponible que s’il `__WRL_CLASSIC_COM__` est défini.
+Ce cast est disponible uniquement si `__WRL_CLASSIC_COM__` est défini.
 
-## <a name="comptrrefbaseoperator-iunknown-operator"></a><a name="operator-iunknown-star-star"></a>ComPtrRefBase::opérateur IUnknown OPÉRATEUR
+## <a name="comptrrefbaseoperator-iunknown-operator"></a><a name="operator-iunknown-star-star"></a> ComPtrRefBase :: Operator IUnknown * *, opérateur
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -97,11 +98,11 @@ operator IUnknown**() const;
 
 ### <a name="remarks"></a>Notes
 
-Lance le membre actuel [ptr_](#ptr) de données à un pointeur-à-un-pointeur-à l’interface. `IUnknown`
+Effectue un cast du membre de données de [PTR_](#ptr) actuel en pointeur vers l' `IUnknown` interface.
 
-Une erreur est émise `ComPtrRefBase` si le courant `IUnknown`ne dérive pas de .
+Une erreur est émise si le actuel `ComPtrRefBase` ne dérive pas de `IUnknown` .
 
-## <a name="comptrrefbaseptr_"></a><a name="ptr"></a>ComPtrRefBase::ptr
+## <a name="comptrrefbaseptr_"></a><a name="ptr"></a> ComPtrRefBase ::p tr_
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -111,4 +112,4 @@ T* ptr_;
 
 ### <a name="remarks"></a>Notes
 
-Pointeur sur le type spécifié par le paramètre du modèle actuel. `ptr_`est le membre protégé des données.
+Pointeur vers le type spécifié par le paramètre de modèle actuel. `ptr_` est le membre de données protégé.

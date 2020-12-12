@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : interfaces d’objet de transaction'
 title: Interfaces de l’objet transaction
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-ms.openlocfilehash: b86064c162dcacfbbc5877614c63d92d0f2bd347
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bc8eec6ca5a962e825eafa12255d8a47a8a463f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272641"
 ---
 # <a name="transaction-object-interfaces"></a>Interfaces de l’objet transaction
 
@@ -24,10 +25,10 @@ Le tableau suivant indique les interfaces obligatoires et facultatives définies
 
 |Interface|Requis ?|Implémenté par OLE DB modèles ?|
 |---------------|---------------|--------------------------------------|
-|[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Obligatoire|Non|
+|[Interfaces](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Obligatoire|Non|
 |[ITransaction](/previous-versions/windows/desktop/ms723053(v=vs.85))|Obligatoire|Non|
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Facultatif|Non|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

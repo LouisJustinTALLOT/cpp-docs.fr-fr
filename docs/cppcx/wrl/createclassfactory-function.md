@@ -1,5 +1,6 @@
 ---
-title: CreateClassFactory, fonction
+description: 'En savoir plus sur : fonction Createclassfactory,'
+title: CreateClassFactory (fonction)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: 0467a9a1341e29a61a3b32d999769b01385f641f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 99565ee732843f57426f10375ffabc7680ef3c62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273057"
 ---
-# <a name="createclassfactory-function"></a>CreateClassFactory, fonction
+# <a name="createclassfactory-function"></a>CreateClassFactory (fonction)
 
 Crée une fabrique produisant des instances de la classe spécifiée.
 
@@ -35,7 +36,7 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 *flags*<br/>
 Combinaison d’une ou de plusieurs valeurs d’énumération [RuntimeClassType](runtimeclasstype-enumeration.md) .
 
-*entry*<br/>
+*mention*<br/>
 Pointeur vers un [CreatorMap](creatormap-structure.md) qui contient les informations d’initialisation et d’inscription relatives au paramètre *riid*.
 
 *riid*<br/>
@@ -44,13 +45,13 @@ Référence à un ID d’interface.
 *ppFactory*<br/>
 Si cette opération se termine correctement, pointeur vers une fabrique de classe.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 ## <a name="remarks"></a>Notes
 
-Une erreur d’assertion est émise si la *fabrique* de paramètres de modèle ne dérive pas de l’interface `IClassFactory`.
+Une erreur d’assertion est émise si la *fabrique* de paramètres de modèle ne dérive pas de l’interface `IClassFactory` .
 
 ## <a name="requirements"></a>Spécifications
 
@@ -60,4 +61,4 @@ Une erreur d’assertion est émise si la *fabrique* de paramètres de modèle n
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL::Wrappers::Details, espace de noms](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft :: WRL :: wrappers ::D espace de noms étails](microsoft-wrl-wrappers-details-namespace.md)

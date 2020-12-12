@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : transactions de prise en charge dans OLE DB'
 title: Prise en charge des transactions dans OLE DB
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: e7ec4f69b4bba497446c94afb94cb5a1d648f7c7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f8d01a0d359a3d33fbe4b88877d8a4452f257c16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272719"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Prise en charge des transactions dans OLE DB
 
@@ -36,15 +37,15 @@ Lorsqu’une session n’entre pas dans une transaction, tout le travail effectu
 
 Lorsqu’une session entre dans une transaction, tout le travail effectué dans cette session sur le magasin de données fait partie de cette transaction et est validé ou abandonné en tant qu’unité unique. (Cette opération est parfois appelée mode de validation manuelle).
 
-La prise en charge des transactions est spécifique au fournisseur. Si le fournisseur que vous utilisez prend en charge les transactions, un objet de session qui prend en charge `ITransaction` et `ITransactionLocal` peut entrer une transaction (non imbriquée). La classe de modèles OLE DB [CSession](../../data/oledb/csession-class.md) prend en charge ces interfaces et constitue la méthode recommandée pour implémenter C++la prise en charge des transactions dans Visual.
+La prise en charge des transactions est spécifique au fournisseur. Si le fournisseur que vous utilisez prend en charge les transactions, il s’agit d’un objet de session qui prend en charge `ITransaction` et `ITransactionLocal` peut entrer une transaction (non imbriquée). La classe de modèles OLE DB [CSession](../../data/oledb/csession-class.md) prend en charge ces interfaces et constitue la méthode recommandée pour implémenter la prise en charge des transactions dans Visual C++.
 
 ## <a name="starting-and-ending-the-transaction"></a>Démarrage et fin de la transaction
 
-Vous appelez les méthodes `StartTransaction`, `Commit`et `Abort` dans l’objet rowset dans le consommateur.
+Vous appelez les `StartTransaction` `Commit` méthodes, et `Abort` dans l’objet rowset dans le consommateur.
 
-L’appel de `ITransactionLocal::StartTransaction` démarre une nouvelle transaction locale. Lorsque vous démarrez la transaction, toutes les modifications imposées par les opérations ultérieures ne sont pas appliquées au magasin de données tant que vous n’avez pas validé la transaction.
+L’appel `ITransactionLocal::StartTransaction` de démarre une nouvelle transaction locale. Lorsque vous démarrez la transaction, toutes les modifications imposées par les opérations ultérieures ne sont pas appliquées au magasin de données tant que vous n’avez pas validé la transaction.
 
-L’appel de `ITransaction::Commit` ou `ITransaction::Abort` met fin à la transaction. `Commit` entraîne l’application de toutes les modifications dans l’étendue de la transaction à la Banque de données. `Abort` entraîne l’annulation de toutes les modifications dans l’étendue de la transaction et la Banque de données reste dans l’État où elle se trouvait avant le démarrage de la transaction.
+`ITransaction::Commit`L’appel de ou `ITransaction::Abort` met fin à la transaction. `Commit` entraîne l’application de toutes les modifications dans l’étendue de la transaction à la Banque de données. `Abort` entraîne l’annulation de toutes les modifications dans l’étendue de la transaction et la Banque de données reste dans l’État où elle se trouvait avant le démarrage de la transaction.
 
 ## <a name="nested-transactions"></a>Transactions imbriquées
 

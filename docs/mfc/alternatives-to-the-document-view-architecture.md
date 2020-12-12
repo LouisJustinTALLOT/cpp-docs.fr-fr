@@ -1,17 +1,18 @@
 ---
-title: Alternatives à l’architecture document-vue
+description: 'En savoir plus sur : alternatives à l’architecture document/vue'
+title: Alternatives à l’architecture Document-View
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], applications without
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 66325d1ae087b29f59f37197fb8695504bbddbc6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6462a7aabdf52e3ec881f32d68d12128595f2110
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274045"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Solutions de remplacement de l'architecture document/vue
 
@@ -50,7 +51,7 @@ Il est fortement recommandé d'utiliser l'Assistant Application MFC pour créer 
 
   - Deux objets `CString`.
 
-  - Trois **bool**s.
+  - Trois **bool** s.
 
   - Un pointeur `CDocTemplate`.
 

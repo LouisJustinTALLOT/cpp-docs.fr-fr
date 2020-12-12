@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Run-Time la vérification des erreurs'
 title: Vérifications des erreurs d’exécution
 ms.date: 11/04/2016
 helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-ms.openlocfilehash: cf707cbd53e2285684d53d3f440db0f618343598
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: aff00bc66cd118b891e902328eb6ae85bd6fc14c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444829"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273603"
 ---
 # <a name="run-time-error-checking"></a>Vérifications des erreurs d’exécution
 
@@ -30,6 +31,6 @@ Utilisez les fonctions suivantes pour personnaliser la façon dont votre program
 ## <a name="see-also"></a>Voir aussi
 
 [Routines du runtime C universel par catégorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[/RTC (Vérifications des erreurs au moment de l’exécution)](../build/reference/rtc-run-time-error-checks.md)<br/>
+[/RTC (vérifications des erreurs au moment de l’exécution)](../build/reference/rtc-run-time-error-checks.md)<br/>
 [runtime_checks](../preprocessor/runtime-checks.md)<br/>
 [Routines de débogage](../c-runtime-library/debug-routines.md)<br/>

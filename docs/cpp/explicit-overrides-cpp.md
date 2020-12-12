@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : substitutions explicites (C++)'
 title: Substitutions explicites (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,22 +9,22 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4abb57c16f8fc4105b4fe3bb598cb84f66d07de9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273408"
 ---
 # <a name="explicit-overrides-c"></a>Substitutions explicites (C++)
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Si la même fonction virtuelle est déclarée dans au moins deux [interfaces](../cpp/interface.md) et si une classe est dérivée de ces interfaces, vous pouvez substituer explicitement chaque fonction virtuelle.
 
-Pour plus d’informations sur les substitutions explicites dans C++le code managé à l’aide de/CLI, consultez [substitutions explicites](../extensions/explicit-overrides-cpp-component-extensions.md).
+Pour plus d’informations sur les substitutions explicites dans le code managé à l’aide de C++/CLI, consultez [substitutions explicites](../extensions/explicit-overrides-cpp-component-extensions.md).
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="example"></a>Exemple
 

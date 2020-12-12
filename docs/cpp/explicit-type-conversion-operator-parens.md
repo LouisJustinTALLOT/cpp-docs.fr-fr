@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateur de conversion de type explicite : ()'
 title: 'Opérateur de conversions de type explicite : ()'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data type conversion [C++], explicit
 - type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
-ms.openlocfilehash: c168653a82b4d4c5023de1f76a1e6269625c74d8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb2a1ff742b71edf2f298512a55ab37dd3d37f77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273382"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Opérateur de conversions de type explicite : ()
 
@@ -27,13 +28,13 @@ simple-type-name ( expression-list )
 
 ## <a name="remarks"></a>Notes
 
-Un *nom simple suivi* d’une liste *d’expression* incluse entre parenthèses construit un objet du type spécifié à l’aide des expressions spécifiées. L'exemple suivant montre une conversion de type explicite en type int :
+Un *simple-type-name* suivi d’une *expression-List* placée entre parenthèses construit un objet du type spécifié à l’aide des expressions spécifiées. L'exemple suivant montre une conversion de type explicite en type int :
 
 ```cpp
 int i = int( d );
 ```
 
-L’exemple suivant `Point` montre une classe.
+L’exemple suivant illustre une `Point` classe.
 
 ## <a name="example"></a>Exemple
 
@@ -116,12 +117,12 @@ struct Point
 Point pt = Point( 3, 10 );
 ```
 
-L’exemple précédent, qui utilise la conversion de type fonction, montre comment convertir deux valeurs `Point`(une pour *x* et une pour *y*) au type défini par l’utilisateur.
+L’exemple précédent, qui utilise la conversion de style fonction, montre comment convertir deux valeurs (une pour *x* et une pour *y*) en un type défini par l’utilisateur `Point` .
 
 > [!CAUTION]
 > Utilisez les conversions de type explicites avec précaution, car elles remplacent la vérification de type intégrée du compilateur C++.
 
-La notation [de distribution](../cpp/cast-operator-parens.md) doit être utilisée pour les conversions en types qui n’ont pas un nom simple *de type* (pointeur ou type de référence, par exemple). La conversion en types qui peuvent être exprimés avec un *nom simple de type* peut être écrit sous une forme ou l’autre.
+La notation de [Cast](../cpp/cast-operator-parens.md) doit être utilisée pour les conversions en types qui n’ont pas de *type simple-type-name* (pointeur ou types référence, par exemple). La conversion en types pouvant être exprimés à l’aide d’un *simple-type-name* peut être écrite sous l’une ou l’autre forme.
 
 La définition de type avec des casts n'est pas conforme.
 

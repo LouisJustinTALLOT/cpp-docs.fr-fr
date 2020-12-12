@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure Derefhelper ('
 title: DerefHelper (structure)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-ms.openlocfilehash: 43453d3162de697fa1cfcf0581953c91bbe3934f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8605e3923d8d3099a080be22f9d8e70ee9187ef9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214043"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272914"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper (structure)
 
@@ -35,17 +36,17 @@ Paramètre de modèle.
 
 ## <a name="remarks"></a>Notes
 
-Représente un pointeur déréférencé vers le paramètre de modèle `T*`.
+Représente un pointeur déréférencé vers le `T*` paramètre de modèle.
 
-**Derefhelper (** est utilisé dans une expression telle que : `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.
+**Derefhelper (** est utilisé dans une expression telle que : `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;` .
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|`DerefType`|Identificateur du paramètre de modèle déréférencé `T*`.|
+|`DerefType`|Identificateur du paramètre de modèle déréférencé `T*` .|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -59,4 +60,4 @@ Représente un pointeur déréférencé vers le paramètre de modèle `T*`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL::Details, espace de noms](microsoft-wrl-details-namespace.md)
+[Microsoft :: WRL ::D espace de noms étails](microsoft-wrl-details-namespace.md)

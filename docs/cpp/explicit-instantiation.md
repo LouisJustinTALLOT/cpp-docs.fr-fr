@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : instanciation explicite'
 title: instanciation explicite
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-ms.openlocfilehash: 4b1808791110c4eed237d18436897dac59170206
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3d6587490215627a867b7e20d49a50a089940da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273473"
 ---
 # <a name="explicit-instantiation"></a>instanciation explicite
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les clients Automation'
 title: Clients Automation
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-ms.openlocfilehash: 9c34f6fccd06635dfb686e6eb1f2cf895bb86989
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 38379feb0881b154418daa5c02980eeee2dd21e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626081"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273954"
 ---
 # <a name="automation-clients"></a>Clients Automation
 
