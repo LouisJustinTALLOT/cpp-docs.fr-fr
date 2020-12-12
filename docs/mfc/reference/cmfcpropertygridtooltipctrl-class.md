@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCPropertyGridToolTipCtrl'
 title: CMFCPropertyGridToolTipCtrl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 82d5f021204628121be242845583797348d02120
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5e560d09756be99c00257c351b58223b37a6b5da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289879"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl, classe
 
@@ -80,7 +81,7 @@ L’exemple suivant montre comment construire un objet de la `CMFCPropertyGridTo
 
 [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpropertygridtooltipctrl. h
 

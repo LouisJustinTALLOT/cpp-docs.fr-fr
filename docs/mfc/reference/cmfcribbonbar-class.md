@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCRibbonBar'
 title: CMFCRibbonBar, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -188,12 +189,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 26f130206a84c81120dce090ce65971f01a2dade
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3a572a3615703abfda99b5ff61796175adfa4484
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289710"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar, classe
 
@@ -335,7 +336,7 @@ Pour plus d’informations sur l’ajout d’une barre de ruban à votre applica
 
 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxribbonbar.h
 
@@ -1314,7 +1315,7 @@ dans TRUE pour effectuer une recherche dans la catégorie active ; FALSe pour n
 *bCheckPanelCaption*<br/>
 dans TRUE pour tester la légende du volet du ruban avec le point situé dans celui-ci ; FALSe pour ne pas tester la légende du volet du ruban avec le point situé dans celui-ci. Pour plus d'informations, consultez la section Notes.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Pointeur vers l’élément de ruban situé au point spécifié ; Sinon, NULL si le point ne se trouve pas dans un élément de ruban.
 

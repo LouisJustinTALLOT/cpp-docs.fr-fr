@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : traitement des boucles inactives'
 title: Traitement des boucles inactives
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 74ca89d91cf4e60b09a063551b526f177caed161
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8972a2bafe5c9d35af2a5f4452082a7ca82f28dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290152"
 ---
 # <a name="idle-loop-processing"></a>Traitement des boucles inactives
 
@@ -35,7 +36,7 @@ Cet article décrit les deux modes de traitement des temps d'inactivité pouvant
 
 - Incorporation d’une autre boucle **PeekMessage** ailleurs dans l’application.
 
-## <a name="peekmessage-in-the-mfc-message-loop"></a><a name="_core_peekmessage_in_the_mfc_message_loop"></a>PeekMessage dans la boucle de messages MFC
+## <a name="peekmessage-in-the-mfc-message-loop"></a><a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage dans la boucle de messages MFC
 
 Dans une application développée avec MFC, la boucle de message principale de la `CWinThread` classe contient une boucle de messages qui appelle l’API Win32 [PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) . Cette boucle appelle également la fonction membre `OnIdle` de `CWinThread` entre les messages. Une application peut traiter les messages dans cette durée d'inactivité en remplaçant la fonction `OnIdle`.
 
@@ -44,7 +45,7 @@ Dans une application développée avec MFC, la boucle de message principale de l
 
 Pour plus d’informations sur l’exécution du traitement inactif, consultez [OnIdle](reference/cwinthread-class.md#onidle) dans la *référence MFC*.
 
-## <a name="peekmessage-elsewhere-in-your-application"></a><a name="_core_peekmessage_elsewhere_in_your_application"></a>PeekMessage ailleurs dans votre application
+## <a name="peekmessage-elsewhere-in-your-application"></a><a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage ailleurs dans votre application
 
 Une autre méthode de traiter les temps d'inactivité dans une application implique l'incorporation d'une boucle de messages dans une de vos fonctions. Cette boucle de messages est très similaire à la boucle de messages principale de MFC, qui se trouve dans [CWinThread :: Run](reference/cwinthread-class.md#run). Cela signifie que cette boucle dans une application développée avec MFC doit exécuter plusieurs des fonctions identiques à la boucle de messages principale. Le fragment de code suivant montre comment écrire une boucle de messages compatible avec MFC :
 
@@ -58,4 +59,4 @@ Pour plus d’informations sur l’exécution du traitement inactif, consultez [
 
 ## <a name="see-also"></a>Voir aussi
 
-[Rubriques MFC générales](general-mfc-topics.md)
+[Rubriques générales sur MFC](general-mfc-topics.md)

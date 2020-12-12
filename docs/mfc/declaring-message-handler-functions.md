@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : déclaration des fonctions de gestionnaire de messages'
 title: Déclaration des fonctions de gestionnaire de messages
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declaring functions, message handler functions [MFC]
 ms.assetid: f8d3dbc1-4500-4f1e-a18d-7371edf36386
-ms.openlocfilehash: 302a03d35f00046c7368517de8d31e77d4ee2ad3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 01d17fb99f782130cb9ce3a8e5629d76a8042a1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291023"
 ---
 # <a name="declaring-message-handler-functions"></a>Déclaration des fonctions de gestionnaire de messages
 

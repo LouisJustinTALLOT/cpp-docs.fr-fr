@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _getdrive'
 title: _getdrive
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: c9c30fa288469d2382b3923e50f0486d6e190f17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9a8e9928504ad0320d5e96d21fdcafd2ff5f6ec9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289164"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -52,9 +53,9 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le lecteur actuel (par défaut) (1 = A, 2 = B et ainsi de suite). Une valeur de retour de zéro signifie que le chemin d’accès actuel ne commence pas par un nom de lecteur de lettre, tel qu’un chemin d’accès UNC. Ou, cela signifie qu’une allocation de mémoire tampon interne a échoué. En cas d’échec d’une `errno` allocation interne, est défini sur ENOMEM.
+Retourne le lecteur actuel (par défaut) (1 = A, 2 = B et ainsi de suite). Une valeur de retour de zéro signifie que le chemin d’accès actuel ne commence pas par un nom de lecteur de lettre, tel qu’un chemin d’accès UNC. Ou, cela signifie qu’une allocation de mémoire tampon interne a échoué. En cas d’échec d’une allocation interne, `errno` est défini sur ENOMEM.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCPropertyGridCtrl'
 title: CMFCPropertyGridCtrl, classe
 ms.date: 11/19/2018
 f1_keywords:
@@ -150,12 +151,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c20ab10ac95ab6788f34367a9d68cdc9eae685b5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 26b7a16a0a890f669323dc514c863e81dd066c9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290048"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl, classe
 
@@ -332,7 +333,7 @@ virtual HRESULT accSelect(
 dans *flagsSelect*<br/>
 dans *varChild*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -358,7 +359,7 @@ dans TRUE pour redessiner immédiatement la propriété ; Sinon, FALSe. La vale
 *bAdjustLayout*<br/>
 dans TRUE pour recalculer le texte et la valeur de la propriété, puis dessiner la propriété ; FALSe pour utiliser des calculs existants pour dessiner la propriété. La valeur par défaut est TRUE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si cette méthode est réussie, index de base zéro de la position dans le contrôle de grille de propriétés où la propriété est ajoutée ; Sinon,-1.
 
@@ -410,7 +411,7 @@ Construit un objet `CMFCPropertyGridCtrl`.
 CMFCPropertyGridCtrl();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -432,7 +433,7 @@ Pointeur vers une propriété.
 *pProp2*<br/>
 Pointeur vers une propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 |Valeur de retour|Description|
 |------------------|-----------------|
@@ -470,7 +471,7 @@ dans Pointeur vers la fenêtre parente. Ne doit pas avoir la valeur NULL.
 *nID*<br/>
 dans ID de la fenêtre enfant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la fenêtre a été créée avec succès ; Sinon, FALSe.
 
@@ -506,7 +507,7 @@ dans TRUE pour redessiner le contrôle de grille de propriétés ; Sinon, FALSe
 *bAdjustLayout*<br/>
 dans TRUE pour recalculer la façon de dessiner l’ensemble du texte, des images et des éléments dans le contrôle de grille de propriétés, puis de dessiner le contrôle ; Sinon, FALSe. La valeur par défaut est TRUE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -520,7 +521,7 @@ Utilisez cette méthode pour supprimer une propriété et tous les sous-élémen
 BOOL DrawControlBarColors() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -542,7 +543,7 @@ dans Pointeur vers une propriété.
 *lptClick*<br/>
 dans Point sur le contrôle de grille de propriétés sur lequel l’utilisateur a cliqué pour commencer la modification. Le point se trouve dans les coordonnées clientes du contrôle. La valeur par défaut est NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode réussit ; Sinon, FALSe.
 
@@ -600,7 +601,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 *bUpdateData*<br/>
 dans TRUE pour spécifier que les données de propriété modifiées doivent être validées lorsque l’opération de modification est terminée ; Sinon, FALSe. La valeur par défaut est TRUE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’opération de modification se termine correctement ; FALSe si les données de propriété modifiées ne sont pas valides ou si l’opération de modification doit continuer.
 
@@ -659,7 +660,7 @@ dans Valeur DWORD.
 *bSearchSubItems*<br/>
 dans TRUE pour rechercher des sous-éléments de propriété ; Sinon, FALSe. La valeur par défaut est TRUE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet de propriété associé si cette méthode est réussie ; Sinon, NULL.
 
@@ -677,7 +678,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 dans *pcountChildren*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -691,7 +692,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 dans *pvarChild*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -708,7 +709,7 @@ virtual HRESULT get_accHelp(
 dans *varChild*<br/>
 dans *pszHelp*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -727,7 +728,7 @@ dans *pszHelpFile*<br/>
 dans *varChild*<br/>
 dans *pidTopic*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -744,7 +745,7 @@ virtual HRESULT get_accKeyboardShortcut(
 dans *varChild*<br/>
 dans *pszKeyboardShortcut*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -758,7 +759,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 dans *pvarChildren*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -770,7 +771,7 @@ Récupère la couleur d’arrière-plan du contrôle de grille de propriétés a
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de couleur RVB.
 
@@ -786,7 +787,7 @@ Récupère la police Windows utilisée pour dessiner du texte dans le contrôle 
 CFont& GetBoldFont();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à un objet [CFont](../../mfc/reference/cfont-class.md) qui décrit les caractéristiques d’une police en gras.
 
@@ -798,7 +799,7 @@ Récupère la propriété actuellement sélectionnée.
 CMFCPropertyGridProperty* GetCurSel() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet de propriété qui correspond à l’élément sélectionné dans le contrôle de grille de propriétés.
 
@@ -854,7 +855,7 @@ Récupère la hauteur de la zone de description, située en bas du contrôle de 
 int GetDescriptionHeight() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur, en pixels, de la zone de description.
 
@@ -872,7 +873,7 @@ Récupère le nombre de lignes dans la zone de description du contrôle de grill
 int GetDescriptionRows() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de lignes dans la zone de description du contrôle de grille de propriétés actuel.
 
@@ -888,7 +889,7 @@ Récupère l’objet [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.m
 virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à un objet `CMFCHeaderCtrl`.
 
@@ -900,7 +901,7 @@ Récupère la hauteur de l’en-tête d’un contrôle de grille de propriétés
 int GetHeaderHeight() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur de l’en-tête, en pixels.
 
@@ -914,7 +915,7 @@ Récupère la largeur de la colonne de gauche du contrôle de grille de proprié
 int GetLeftColumnWidth() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur de la colonne de nom.
 
@@ -930,7 +931,7 @@ Récupère le rectangle englobant du contrôle de la grille des propriétés.
 CRect GetListRect() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Rectangle englobant du contrôle de grille de propriétés. Ce rectange n’inclut pas la zone et l’en-tête de description.
 
@@ -951,7 +952,7 @@ dans Index de base zéro d’un élément de contrôle de la grille des proprié
 
 Cette méthode déclare si le paramètre *nIndex* est inférieur à zéro ou supérieur ou égal au nombre de propriétés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet de propriété qui correspond à l’index spécifié si cette méthode réussit ; Sinon, `NULL` .
 
@@ -965,7 +966,7 @@ Récupère la largeur actuelle de la colonne qui contient les valeurs de propri�
 int GetPropertyColumnWidth() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur actuelle de la colonne qui contient les valeurs de propriété.
 
@@ -981,7 +982,7 @@ Récupère le nombre de propriétés dans un contrôle de grille de propriétés
 int GetPropertyCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de propriétés.
 
@@ -995,7 +996,7 @@ Récupère la hauteur d’une ligne dans le contrôle de la grille des propriét
 int GetRowHeight() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur d'une ligne.
 
@@ -1016,7 +1017,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 *nBar*<br/>
 dans Orientation de la barre de défilement, qui doit être SB_VERT.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet de barre de défilement, ou NULL s’il n’y a aucune barre de défilement ou si l’orientation de la barre de défilement est SB_HORZ.
 
@@ -1032,7 +1033,7 @@ Récupère la couleur utilisée pour dessiner le texte des éléments de propri�
 COLORREF GetTextColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de couleur RVB.
 
@@ -1062,7 +1063,7 @@ dans Point, dans les coordonnées clientes.
 *bPropsOnly*<br/>
 dans TRUE pour tester uniquement la zone de propriété ; FALSe pour tester la *zone de description* si le point spécifié n’est pas dans la zone de propriété. La valeur par défaut est FALSE. Pour plus d’informations sur la zone Description, consultez la section Notes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le paramètre *bPropsOnly* a la valeur true et que le point spécifié se trouve dans une zone de propriété, la valeur de retour est un pointeur vers l’objet de propriété correspondant. En outre, le paramètre *pnArea* est défini sur la zone particulière qui contient le point spécifié. Dans le cas contraire, la valeur de retour est NULL et le paramètre *pnArea* n’est pas modifié.
 
@@ -1107,7 +1108,7 @@ Indique si un contrôle de grille de propriétés est en mode alphabétique.
 BOOL IsAlphabeticMode() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le contrôle de grille de propriétés est en mode alphabétique ; Sinon, FALSe.
 
@@ -1123,7 +1124,7 @@ Utilisez la méthode [CMFCPropertyGridCtrl :: SetAlphabeticMode](#setalphabetic
 BOOL IsAlwaysShowUserToolTip() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -1135,7 +1136,7 @@ Indique si la zone de description du contrôle de grille de propriétés est aff
 BOOL IsDescriptionArea() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la zone de description est affichée ; Sinon, FALSe.
 
@@ -1151,7 +1152,7 @@ Indique si chaque nom de groupe de propriétés est affiché sur la largeur du c
 BOOL IsGroupNameFullWidth() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si les noms de groupes sont affichés sur la largeur du contrôle de grille de propriétés ; FALSe si les noms de groupes sont tronqués par la colonne de droite (valeur) du contrôle.
 
@@ -1167,7 +1168,7 @@ Indique si le contrôle d’en-tête est affiché.
 BOOL IsHeaderCtrl() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le contrôle header est affiché ; Sinon, FALSe.
 
@@ -1183,7 +1184,7 @@ Indique comment le contrôle de grille de propriétés affiche les propriétés 
 BOOL IsMarkModifiedProperties() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le style gras est utilisé pour afficher les propriétés modifiées ; FALSe si le style normal est utilisé pour afficher les propriétés modifiées.
 
@@ -1197,7 +1198,7 @@ Indique si le Framework redessine les colonnes de nom et de valeur du contrôle 
 BOOL IsShowDragContext() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le Framework redessine les colonnes Name et value pendant une opération de redimensionnement ; FALSe si le Framework redessine les colonnes une fois l’opération glisser terminée.
 
@@ -1213,7 +1214,7 @@ Indique si l’apparence du contrôle de grille de propriétés est dans le styl
 BOOL IsVSDotNetLook() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le contrôle de grille de propriétés est dans le style de Visual Studio .NET ; Sinon, FALSe.
 
@@ -1350,7 +1351,7 @@ dans Pointeur vers un contexte de périphérique (Device Context).
 *pProp*<br/>
 dans Pointeur vers un objet de propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1558,7 +1559,7 @@ void SetListDelimiter(TCHAR c);
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 dans Caractère à servir de délimiteur.
 
 ### <a name="remarks"></a>Notes
@@ -1629,11 +1630,11 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 *pProp*\
 dans Pointeur vers une propriété. Ce paramètre n'est pas utilisé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Toujours TRUE.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La méthode [CMFCPropertyGridCtrl :: EndEditItem](#endedititem) appelle cette méthode pour valider des données. Par défaut, cette méthode n’utilise pas son paramètre *pProp* et sa valeur de retour est toujours true.
 

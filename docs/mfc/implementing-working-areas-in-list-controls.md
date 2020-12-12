@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : implémentation des zones de travail dans les contrôles de liste'
 title: Implémentation d'espaces de travail dans des contrôles de liste
 ms.date: 11/04/2016
 helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: abbf9dd823e13fab252b7af8f32338b0d801079b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 04eb935531dff0ac1ee240dec8690bd7ce1378a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626373"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290074"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implémentation d'espaces de travail dans des contrôles de liste
 
-Par défaut, un contrôle de liste réorganise tous les éléments sous forme de grille standard. Toutefois, une autre méthode est prise en charge, à savoir les zones de travail qui réorganisent les éléments de liste en groupes rectangulaires. Pour obtenir une image d’un contrôle de liste qui implémente des zones de travail, consultez Utilisation de contrôles List-View dans le SDK Windows.
+Par défaut, un contrôle de liste réorganise tous les éléments sous forme de grille standard. Toutefois, une autre méthode est prise en charge, à savoir les zones de travail qui réorganisent les éléments de liste en groupes rectangulaires. Pour obtenir une image d’un contrôle de liste qui implémente des zones de travail, consultez Utilisation des contrôles List-View dans le SDK Windows.
 
 > [!NOTE]
 > Les zones de travail sont visibles uniquement lorsque le contrôle de liste est en mode icône ou petite icône. Toutefois, les zones de travail actives sont conservées si la vue passe en mode de rapport ou de liste.
@@ -40,4 +41,4 @@ L’exemple suivant affecte les éléments de liste existants à chaque groupe (
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CListCtrl](using-clistctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

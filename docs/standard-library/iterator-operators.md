@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs itérateurs'
 title: '&lt;iterator&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 36851eab86a32fab9294129cf1918e0add528eb3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe47669bcd2ab72cd91bc9eee36afea975fab3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215658"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289697"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt;, opérateurs
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Teste si l'objet itérateur situé à gauche de l'opérateur n'est pas égal à l'objet itérateur situé à droite.
 
@@ -44,12 +45,12 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `iterator`.
+Objet de type `iterator`.
 
 *Oui*\
-Objet de type `iterator`.
+Objet de type `iterator`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets itérateurs ne sont pas égaux ; **`false`** si les objets itérateurs sont égaux.
 
@@ -119,7 +120,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Teste si l'objet itérateur situé à gauche de l'opérateur est égal à l'objet itérateur situé à droite.
 
@@ -153,7 +154,7 @@ Objet de type iterator.
 *Oui*\
 Objet de type iterator.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets itérateurs sont égaux ; **`false`** si les objets itérateurs ne sont pas égaux.
 
@@ -225,7 +226,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Teste si l'objet itérateur situé à gauche de l'opérateur est inférieur à l'objet itérateur situé à droite.
 
@@ -237,12 +238,12 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `iterator`.
+Objet de type `iterator`.
 
 *Oui*\
-Objet de type `iterator`.
+Objet de type `iterator`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’itérateur du côté gauche de l’expression est inférieur à l’itérateur situé à droite de l’expression ; **`false`** s’il est supérieur ou égal à l’itérateur situé à droite.
 
@@ -316,7 +317,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> and&lt;=
 
 Teste si l'objet itérateur situé à gauche de l'opérateur est inférieur ou égal à l'objet itérateur situé à droite.
 
@@ -333,7 +334,7 @@ Objet de type iterator.
 *Oui*\
 Objet de type iterator.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’itérateur situé à gauche de l’expression est inférieur ou égal à l’itérateur du côté droit de l’expression ; **`false`** s’il est supérieur à l’itérateur situé à droite.
 
@@ -411,7 +412,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 
 Teste si l'objet itérateur situé à gauche de l'opérateur est supérieur à l'objet itérateur situé à droite.
 
@@ -428,7 +429,7 @@ Objet de type iterator.
 *Oui*\
 Objet de type iterator.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’itérateur du côté gauche de l’expression est supérieur à l’itérateur situé à droite de l’expression ; **`false`** s’il est inférieur ou égal à l’itérateur situé à droite.
 
@@ -500,7 +501,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> and&gt;=
 
 Teste si l'objet itérateur situé à gauche de l'opérateur est supérieur ou égal à l'objet itérateur situé à droite.
 
@@ -517,7 +518,7 @@ Objet de type iterator.
 *Oui*\
 Objet de type iterator.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’itérateur du côté gauche de l’expression est supérieur ou égal à l’itérateur situé à droite de l’expression ; **`false`** s’il est inférieur à l’itérateur de droite.
 
@@ -595,7 +596,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="operator"></a><a name="op_add"></a>opérateur +
+## <a name="operator"></a><a name="op_add"></a> opérateur +
 
 Ajoute un décalage à un itérateur et retourne un `move_iterator` ou `reverse_iterator` qui traite l’élément inséré à la nouvelle position décalée.
 
@@ -621,9 +622,9 @@ Nombre de positions duquel décaler le const move_iterator ou const reverse_iter
 *Oui*\
 Itérateur à décaler.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne le _OFF de somme à *droite*  +  *_Off*.
+Retourne le _OFF de somme à *droite*  +  .
 
 ### <a name="example"></a>Exemple
 
@@ -674,7 +675,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>and
+## <a name="operator-"></a><a name="operator-"></a> and
 
 Soustrait un itérateur à un autre et retourne la différence.
 
@@ -698,7 +699,7 @@ Itérateur.
 *Oui*\
 Itérateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différence entre deux itérateurs `.`.
 

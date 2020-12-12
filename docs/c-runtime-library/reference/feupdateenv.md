@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : feupdateenv'
 title: feupdateenv
 ms.date: 04/05/2018
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-ms.openlocfilehash: 8f40cab42e4a89b1fc5a100587b11b0e2aeeb55c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4e3fe47c6a03138f2bc82679eb5fc8e938678a17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940987"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289333"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -46,7 +47,7 @@ int feupdateenv(
 *penv*<br/>
 Pointeur vers un objet **fenv_t** qui contient un environnement à virgule flottante tel qu’il est défini par un appel à [fegetenv](fegetenv1.md) ou [feholdexcept](feholdexcept2.md). Vous pouvez également spécifier l’environnement à virgule flottante de démarrage par défaut à l’aide de la macro FE_DFL_ENV.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 si toutes les actions se sont déroulées correctement. Sinon, retourne une valeur différente de zéro.
 
@@ -56,7 +57,7 @@ La fonction **feupdateenv** exécute plusieurs actions. Tout d’abord, elle sto
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

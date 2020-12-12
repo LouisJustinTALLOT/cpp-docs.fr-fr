@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exemple de relation contenant-contenu de document actif : classeur Office'
 title: 'Exemple de relation contenant-contenu de documents actifs : classeur Office'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-ms.openlocfilehash: fe9ccb5b78d9a60c5b8b2a19fe0818a8e1682f00
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 075922f3a50df77f83aab90dc380e33f703737fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623123"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290828"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Exemple de relation contenant-contenu de documents actifs : classeur Office
 
@@ -30,4 +31,4 @@ Il existe, bien sûr, d’autres types de conteneurs possibles en regard des cla
 
 ## <a name="see-also"></a>Voir aussi
 
-[Documents actifs (contenance)](active-document-containment.md)
+[Relation contenant-contenu de document actif](active-document-containment.md)

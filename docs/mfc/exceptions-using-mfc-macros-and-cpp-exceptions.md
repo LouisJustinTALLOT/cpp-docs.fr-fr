@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exceptions : utilisation de macros MFC et d’exceptions C++'
 title: "Exceptions : utilisation de macros MFC et d'exceptions C++"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 9e97eb545dedd3ac38dd93471f82aecc382717ae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f46cdff236f37ccdccde8215c7937300014aca6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290443"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Exceptions : utilisation de macros MFC et d'exceptions C++
 
@@ -33,7 +34,7 @@ Cet article aborde les thèmes suivants :
 
 - [Blocs try dans les blocs catch](#_core_try_blocks_inside_catch_blocks)
 
-## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>Combinaison de mots clés et macros d’exception
+## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a> Combinaison de mots clés et macros d’exception
 
 Vous pouvez mélanger les macros d’exception MFC et les mots clés d’exceptions C++ dans le même programme. Toutefois, vous ne pouvez pas mélanger les macros MFC avec les mots clés d’exceptions C++ dans le même bloc, car les macros suppriment automatiquement des objets d’exception lorsqu’ils sont hors de portée, alors que le code qui utilise les mots clés de gestion des exceptions ne le fait pas. Pour plus d’informations, consultez l’article [exceptions : interception et suppression d’exceptions](exceptions-catching-and-deleting-exceptions.md).
 
@@ -47,7 +48,7 @@ Le problème se produit car `e` est supprimé lorsque l’exécution est en deho
 
 [!code-cpp[NVC_MFCExceptions#11](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
-## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Blocs try dans les blocs catch
+## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a> Blocs try dans les blocs catch
 
 Vous ne pouvez pas lever à nouveau l’exception actuelle à partir d’un **`try`** bloc qui se trouve à l’intérieur d’un bloc **catch** . L’exemple suivant n’est pas valide :
 

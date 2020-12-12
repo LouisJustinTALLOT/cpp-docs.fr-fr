@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exceptions : modifications apportées aux macros d’exception dans la version 3,0'
 title: "Exceptions : modifications apportées aux macros d'exception dans la version 3.0"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 72b343641b0b43d408c5820ca2a2af1de94ce327
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3135e78885d0b4f14eb8588419b3b9d1852cf1c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225057"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290724"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceptions : modifications apportées aux macros d'exception dans la version 3.0
 
@@ -26,7 +27,7 @@ Cet article aborde les thèmes suivants :
 
 - [Nouvelle levée des exceptions](#_core_re.2d.throwing_exceptions)
 
-## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a>Types d’exception et macro CATCH
+## <a name="exception-types-and-the-catch-macro"></a><a name="_core_exception_types_and_the_catch_macro"></a> Types d’exception et macro CATCH
 
 Dans les versions antérieures de MFC, la macro **catch** utilisait des informations de type au moment de l’exécution MFC pour déterminer le type d’une exception. le type de l’exception est déterminé, en d’autres termes, sur le site d’interception. Toutefois, avec les exceptions C++, le type de l’exception est toujours déterminé au niveau du site de levée par le type de l’objet d’exception qui est levé. Cela entraînera des incompatibilités dans le cas rare où le type du pointeur vers l’objet levé diffère du type de l’objet levé.
 
@@ -48,7 +49,7 @@ Un code similaire à celui-ci est rare. Il apparaît généralement lorsqu’un 
 
 Pour contourner ce problème, déplacez l’expression Throw de la fonction vers le code appelant et levez une exception du type réel connu du compilateur au moment où l’exception est générée.
 
-## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a>Nouvelle levée des exceptions
+## <a name="re-throwing-exceptions"></a><a name="_core_re.2d.throwing_exceptions"></a> Exceptions de Re-Throwing
 
 Un bloc catch ne peut pas lever le même pointeur d’exception qu’il A intercepté.
 

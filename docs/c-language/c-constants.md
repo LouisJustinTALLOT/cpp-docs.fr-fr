@@ -1,16 +1,17 @@
 ---
+description: En savoir plus sur les constantes C
 title: Constantes C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constants, C
 - constants
 ms.assetid: f5bd7213-97ab-4cad-b913-1fc91a486935
-ms.openlocfilehash: 1bce7d72c5f16a543db1c2cae492460fefd51306
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ee298ba88f20bc30ccb2f957601cd6f593d2ba86
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231466"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289476"
 ---
 # <a name="c-constants"></a>Constantes C
 

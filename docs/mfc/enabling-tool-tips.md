@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : activation des info-bulles'
 title: Activation des info-bulles
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - tool tips [MFC], initializing
 - tool tips [MFC], enabling
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
-ms.openlocfilehash: bdd5c54f9174c42e17db0be7e13ea31acfea2dcf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 677d2cc071e87f62f9bd2e700d8fdba166dfdee7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290945"
 ---
 # <a name="enabling-tool-tips"></a>Activation des info-bulles
 
@@ -26,4 +27,4 @@ Vous pouvez activer la prise en charge des info-bulles pour les contrôles enfan
 
 ## <a name="see-also"></a>Voir aussi
 
-[Info-bulles dans les fenêtres non dérivées de CFrameWnd](tool-tips-in-windows-not-derived-from-cframewnd.md)
+[Info-bulles dans Windows non dérivées de CFrameWnd](tool-tips-in-windows-not-derived-from-cframewnd.md)

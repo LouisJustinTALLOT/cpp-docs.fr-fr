@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fgetc, fgetwc'
 title: fgetc, fgetwc
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: 5f8d4b1fcdc2d4d4de712ee79742025db74b6452
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9567c6d24fe0ae978a3680171167168061339f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289229"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -63,9 +64,9 @@ wint_t fgetwc(
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-**fgetc** retourne le caractère lu en tant que **`int`** ou retourne **EOF** pour indiquer une erreur ou la fin du fichier. **fgetwc** retourne, en tant que [wint_t](../../c-runtime-library/standard-types.md), le caractère élargi qui correspond au caractère lu ou retourne **WEOF** pour indiquer une erreur ou la fin du fichier. Pour les deux fonctions, utilisez feof **ou un** **feof** pour faire la distinction entre une erreur et une condition de fin de fichier. Si une erreur de lecture se produit, l’indicateur d’erreur pour le flux est défini. Si *Stream* a la **valeur null**, **fgetc** et **fgetwc** appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EOF**.
+**fgetc** retourne le caractère lu en tant que **`int`** ou retourne **EOF** pour indiquer une erreur ou la fin du fichier. **fgetwc** retourne, en tant que [wint_t](../../c-runtime-library/standard-types.md), le caractère élargi qui correspond au caractère lu ou retourne **WEOF** pour indiquer une erreur ou la fin du fichier. Pour les deux fonctions, utilisez feof **ou un**  pour faire la distinction entre une erreur et une condition de fin de fichier. Si une erreur de lecture se produit, l’indicateur d’erreur pour le flux est défini. Si *Stream* a la **valeur null**, **fgetc** et **fgetwc** appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EOF**.
 
 ## <a name="remarks"></a>Notes
 

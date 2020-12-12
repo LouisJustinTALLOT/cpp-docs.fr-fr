@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exceptions : libération d’objets dans les exceptions'
 title: "Exceptions : libération d'objets dans les exceptions"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 47b10f3ecb96875ceee986eadda4595d2afbb77e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217933"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290555"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Exceptions : libération d'objets dans les exceptions
 
@@ -40,7 +41,7 @@ Ces deux approches sont illustrées ci-dessous en tant que solutions aux exemple
 
 Comme indiqué ci-dessus, `myPerson` ne sera pas supprimé si une exception est levée par `SomeFunc` . L’exécution accède directement au gestionnaire d’exceptions externe suivant, en ignorant la sortie de la fonction normale et le code qui supprime l’objet. Le pointeur vers l’objet est hors de portée quand l’exception quitte la fonction, et la mémoire occupée par l’objet ne sera jamais Récupérée tant que le programme est en cours d’exécution. Il s’agit d’une fuite de mémoire ; elle est détectée à l’aide des diagnostics de la mémoire.
 
-## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a>Gestion de l’exception en local
+## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a> Gestion de l’exception en local
 
 Le paradigme **try/catch** fournit une méthode de programmation défensive pour éviter les fuites de mémoire et vous assurer que vos objets sont détruits lorsque des exceptions se produisent. Par exemple, l’exemple indiqué plus haut dans cet article peut être réécrit comme suit :
 
@@ -48,7 +49,7 @@ Le paradigme **try/catch** fournit une méthode de programmation défensive pour
 
 Ce nouvel exemple configure un gestionnaire d’exceptions pour intercepter l’exception et la gérer localement. Il quitte ensuite la fonction normalement et détruit l’objet. L’aspect important de cet exemple est qu’un contexte pour intercepter l’exception est établi avec les blocs **try/catch** . Sans Frame d’exception locale, la fonction ne sait jamais qu’une exception a été levée et n’a pas la possibilité de se fermer normalement et de détruire l’objet.
 
-## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Levée d’exceptions après la destruction d’objets
+## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a> Levée d’exceptions après la destruction d’objets
 
 Une autre façon de gérer les exceptions consiste à les passer au contexte de gestion des exceptions externe suivant. Dans votre **`catch`** bloc, vous pouvez effectuer un nettoyage de vos objets alloués localement, puis lever l’exception sur pour un traitement supplémentaire.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCPropertyGridProperty'
 title: CMFCPropertyGridProperty, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -166,12 +167,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: cabff68a356bfa2d91d7c8db9c806e8a9f013705
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 7893d58933f9f13744a42b14fd6fa7c47bec56c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289905"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty, classe
 
@@ -329,7 +330,7 @@ dans Élément de liste (option) à ajouter.
 *bInsertUnique*<br/>
 dans TRUE pour ajouter l’élément de liste uniquement s’il n’existe pas déjà ; Sinon, FALSe. La valeur par défaut est TRUE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE, ce qui signifie que l’élément de liste est ajouté. Sinon, FALSe, ce qui signifie que l’élément de liste n’est pas ajouté parce que le paramètre *bInsertUnique* a la valeur true et que l’élément de liste spécifié par le paramètre *lpszOption* existe déjà.
 
@@ -348,7 +349,7 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 *pProp*<br/>
 dans Pointeur vers une propriété à ajouter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété spécifiée est correctement ajoutée en tant que propriété enfant. FALSe si la propriété n’est pas ajoutée, car elle se produit déjà dans la propriété parente.
 
@@ -480,7 +481,7 @@ dans Pointeur vers la fenêtre parente de la zone de liste déroulante.
 *rectangulaire*<br/>
 dans Rectangle englobant de la zone de liste déroulante.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un nouvel objet [CComboBox](../../mfc/reference/ccombobox-class.md) .
 
@@ -504,15 +505,15 @@ dans Rectangle englobant du contrôle modifiable.
 *bDefaultFormat*<br/>
 dans TRUE pour utiliser le format de propriété par défaut pour définir le texte du contrôle modifiable ; Sinon, FALSe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le contrôle modifiable si cette méthode est réussie ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode utilise les valeurs des paramètres *varValue*, *lpszEditMask*, *lpszEditTemplate*et *lpszValidChars* spécifiés dans le constructeur de classe [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) . Par défaut, cette méthode prend en charge les types variant *varValue* . Cela comprend VT_BSTR, VT_R4, VT_R8, VT_UI1, VT_I2, VT_INT, VT_UINT, VT_I4, VT_UI2, VT_UI4 et VT_BOOL.
+Cette méthode utilise les valeurs des paramètres *varValue*, *lpszEditMask*, *lpszEditTemplate* et *lpszValidChars* spécifiés dans le constructeur de classe [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) . Par défaut, cette méthode prend en charge les types variant *varValue* . Cela comprend VT_BSTR, VT_R4, VT_R8, VT_UI1, VT_I2, VT_INT, VT_UINT, VT_I4, VT_UI2, VT_UI4 et VT_BOOL.
 
-Cette méthode crée un contrôle [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) si un ou plusieurs paramètres *lpszEditMask*, *lpszEditTemplate*ou *lpszValidChars* sont spécifiés ; dans le cas contraire, il crée un contrôle [CEdit](../../mfc/reference/cedit-class.md) .
+Cette méthode crée un contrôle [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) si un ou plusieurs paramètres *lpszEditMask*, *lpszEditTemplate* ou *lpszValidChars* sont spécifiés ; dans le cas contraire, il crée un contrôle [CEdit](../../mfc/reference/cedit-class.md) .
 
 ## <a name="cmfcpropertygridpropertycreatespincontrol"></a><a name="createspincontrol"></a> CMFCPropertyGridProperty :: CreateSpinControl
 
@@ -527,7 +528,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 *rectSpin*<br/>
 dans Rectangle qui définit où le contrôle de bouton toupie (spin) modifiable est créé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un nouvel objet [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) qui est casté en un pointeur vers un objet [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) .
 
@@ -601,7 +602,7 @@ Met en forme la représentation textuelle d'une valeur de propriété.
 virtual CString FormatProperty();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Représentation textuelle de la valeur de la propriété.
 
@@ -617,7 +618,7 @@ Récupère une valeur DWORD associée à une propriété.
 DWORD_PTR GetData() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur DWORD.
 
@@ -633,7 +634,7 @@ Récupère une description de propriété.
 const CString& GetDescription() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Chaîne de texte qui contient la description de la propriété.
 
@@ -654,7 +655,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
 *bIncludeHidden*\
 dans TRUE pour inclure les sous-éléments masqués dans le nombre ; Sinon, FALSe. La valeur par défaut est TRUE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de sous-éléments développés.
 
@@ -668,7 +669,7 @@ Récupère l’index de base zéro du niveau de la hiérarchie de la propriété
 int GetHierarchyLevel() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Niveau hiérarchique de la propriété.
 
@@ -682,7 +683,7 @@ Récupère le nom de la propriété.
 LPCTSTR GetName() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers une chaîne qui contient le nom de la propriété.
 
@@ -696,7 +697,7 @@ Appelé par l’infrastructure pour afficher le nom de la propriété dans une i
 virtual CString GetNameTooltip();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Chaîne qui contient le nom de la propriété. Par défaut, la valeur de retour est la chaîne vide.
 
@@ -715,7 +716,7 @@ LPCTSTR GetOption(int nIndex) const;
 *nIndex*<br/>
 Index de base zéro de l’élément de liste de propriétés (option) à récupérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers une chaîne qui contient le texte de l’option.
 
@@ -729,7 +730,7 @@ Récupère le nombre d’options qui appartiennent à une propriété.
 int GetOptionCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments de liste de propriétés (options) contenus dans le contrôle de propriété.
 
@@ -745,7 +746,7 @@ Récupère la valeur initiale de la propriété actuelle.
 const COleVariant& GetOriginalValue() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur d’origine de la propriété actuelle.
 
@@ -763,7 +764,7 @@ Récupère un pointeur vers une propriété parente.
 CMFCPropertyGridProperty* GetParent() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet de propriété Parent, ou NULL pour la propriété de niveau supérieur.
 
@@ -777,7 +778,7 @@ Récupère le rectangle englobant d’une propriété.
 CRect GetRect() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui décrit le rectangle englobant.
 
@@ -796,7 +797,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 *nIndex*<br/>
 dans Index de base zéro de la propriété à récupérer. Ce paramètre n’est pas valide s’il est inférieur à zéro ou supérieur ou égal au nombre de sous-propriétés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet de propriété qui est un élément enfant de cette propriété.
 
@@ -814,7 +815,7 @@ Récupère le nombre de sous-éléments.
 int GetSubItemsCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments enfants.
 
@@ -828,7 +829,7 @@ Récupère une valeur de propriété.
 virtual const _variant_t& GetValue() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Variant qui contient la valeur de la propriété.
 
@@ -842,7 +843,7 @@ Appelé par l’infrastructure pour récupérer la représentation textuelle de 
 virtual CString GetValueTooltip();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `CString`Objet contenant la représentation textuelle de la valeur de propriété. Par défaut, cette valeur est la chaîne vide.
 
@@ -856,7 +857,7 @@ Indique si une propriété contient un bouton.
 virtual BOOL HasButton() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si une propriété contient un bouton (ou une liste de propriétés); Sinon, FALSe.
 
@@ -891,7 +892,7 @@ dans Point à tester, en coordonnées clientes.
 *bPropsOnly*<br/>
 dans TRUE pour tester une zone dans le contrôle de propriété ; FALSe pour tester uniquement la zone de description. La valeur par défaut est FALSE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet de propriété ou NULL.
 
@@ -925,7 +926,7 @@ Indique si une propriété est modifiable.
 BOOL IsAllowEdit() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété est modifiable ; Sinon, FALSe.
 
@@ -939,7 +940,7 @@ Indique si une propriété est activée ou désactivée.
 BOOL IsEnabled() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété est activée ; FALSe si la propriété est désactivée.
 
@@ -955,7 +956,7 @@ Indique si une propriété est développée ou réduite.
 BOOL IsExpanded() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété est développée ; FALSe si la propriété est réduite.
 
@@ -969,7 +970,7 @@ Indique si la propriété actuelle représente un groupe.
 BOOL IsGroup() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’objet de propriété actuel représente un groupe ; FALSe si la propriété représente une valeur.
 
@@ -985,7 +986,7 @@ Indique si la propriété actuelle est modifiable.
 BOOL IsInPlaceEditing() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété actuelle est modifiable ; Sinon, FALSe.
 
@@ -999,7 +1000,7 @@ Indique si la propriété actuelle est modifiée.
 BOOL IsModified() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété est modifiée ; Sinon, FALSe.
 
@@ -1013,7 +1014,7 @@ Indique si les parents de la propriété actuelle sont développés.
 BOOL IsParentExpanded() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si tous les parents de la propriété actuelle sont développés ; FALSe si les propriétés parentes sont réduites.
 
@@ -1027,7 +1028,7 @@ Indique si la propriété actuelle est sélectionnée.
 virtual BOOL IsSelected() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété actuelle est sélectionnée ; Sinon, FALSe.
 
@@ -1046,7 +1047,7 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 *pProp*<br/>
 dans Pointeur vers une propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété spécifiée est un sous-élément de la propriété actuelle ; Sinon, FALSe.
 
@@ -1058,7 +1059,7 @@ Indique si la valeur de la propriété actuelle a été modifiée.
 virtual BOOL IsValueChanged() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la valeur de la propriété actuelle a été modifiée ; Sinon, FALSe.
 
@@ -1072,7 +1073,7 @@ Indique si la propriété actuelle est visible.
 BOOL IsVisible() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété actuelle est visible ; dispose Fausses.
 
@@ -1170,7 +1171,7 @@ dans Message de souris.
 *point*<br/>
 dans Point, dans les coordonnées clientes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si le message de souris spécifié est traité par cette méthode ; Sinon, FALSe.
 
@@ -1206,7 +1207,7 @@ dans Pointeur vers un contexte de périphérique (Device Context).
 *nCtlColor*<br/>
 dans (Ce paramètre n’est pas utilisé.)
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’un pinceau si cette méthode réussit ; Sinon, NULL.
 
@@ -1225,7 +1226,7 @@ virtual BOOL OnDblClk(CPoint point);
 *point*<br/>
 dans Point, dans les coordonnées clientes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1360,7 +1361,7 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 *lptClick*<br/>
 dans (Ce paramètre n’est pas utilisé.) Pointeur vers un point, en coordonnées clientes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’opération de modification commence avec succès ; Sinon, FALSe.
 
@@ -1376,7 +1377,7 @@ Appelé par le Framework lorsque l’utilisateur a fini de modifier une valeur d
 virtual BOOL OnEndEdit();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Cette méthode retourne toujours TRUE.
 
@@ -1397,7 +1398,7 @@ virtual BOOL OnKillFocus(CWnd*);
 *CWnd*\
 dans (Non utilisé.) Pointeur vers une fenêtre.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Cette méthode retourne toujours TRUE.
 
@@ -1492,7 +1493,7 @@ Appelé par le Framework lorsque le pointeur de la souris se déplace vers un é
 virtual BOOL OnSetCursor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la propriété actuelle est un type Variant ou une liste de valeurs, et si cette méthode charge correctement le curseur de la souris du point d’insertion (I-Beam); Sinon, FALSe.
 
@@ -1522,7 +1523,7 @@ Appelé par l'infrastructure quand la valeur d'une propriété modifiable a chan
 virtual BOOL OnUpdateValue();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1541,7 +1542,7 @@ virtual BOOL PushChar(UINT nChar);
 *nChar*<br/>
 dans Caractère.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’opération de modification se poursuit ; Sinon, FALSe.
 
@@ -1589,7 +1590,7 @@ dans Pointeur désignant un sous-élément de propriété.
 *bSupprimer*<br/>
 dans TRUE pour supprimer l’objet de propriété qui est spécifié par le paramètre *pProp* ; Sinon, FALSe. La valeur par défaut est TRUE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 

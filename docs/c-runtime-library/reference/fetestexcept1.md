@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fetestexcept'
 title: fetestexcept
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: e70ae1b74420b8186cccd8fc8a817423df618adf
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 8a62ae33f2965916bd16e2e854555bf22d87a0cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289385"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -44,18 +45,18 @@ int fetestexcept(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
-*excepts*<br/>
+*sauf*<br/>
 Opération OR au niveau du bit des indicateurs d’état à virgule flottante à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne un masque de bits qui contient une opération OR au niveau du bit des macros d’exception de virgule flottante qui correspondent aux indicateurs d’état d’exception définis. Retourne 0 si aucune des exceptions n’est définie.
 
 ## <a name="remarks"></a>Notes
 
-La fonction fetestexcept permet de déterminer les exceptions levées par une opération à virgule flottante. Utilisez le paramètre *EXCEPTS* pour spécifier les indicateurs d’état d’exception à tester. La fonction **fetestexcept** utilise les macros d’exception définies dans \<fenv. h > dans *except* et la valeur de retour :
+La fonction fetestexcept permet de déterminer les exceptions levées par une opération à virgule flottante. Utilisez le paramètre *EXCEPTS* pour spécifier les indicateurs d’état d’exception à tester. La fonction **fetestexcept** utilise les macros d’exception définies dans \<fenv.h> dans, à l' *exception* de et la valeur de retour :
 
 |Macros d’exception|Description|
 |---------------------|-----------------|
@@ -70,7 +71,7 @@ L’argument *EXCEPTS* spécifié peut être 0, l’une des macros d’exception
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
@@ -80,6 +81,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [feclearexcept](feclearexcept1.md)<br/>
 [feraiseexcept](feraiseexcept.md)<br/>

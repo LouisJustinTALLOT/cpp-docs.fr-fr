@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exemple : affichage d’une boîte de dialogue à l’aide d’une commande de menu'
 title: "Exemple : affichage d'une boîte de dialogue via une commande de menu"
 ms.date: 09/07/2019
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 1cada8124cd7ea71a24367626508782b522cc746
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dcfa34eb05733d2f27176795a447e15949d6e274
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290854"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Exemple : affichage d'une boîte de dialogue via une commande de menu
 
@@ -44,7 +45,7 @@ Les procédures utilisent les noms et valeurs suivants :
 
 1. Ajoutez une classe pour votre boîte de dialogue. Pour plus d’informations, consultez [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md) .
 
-1. Dans **affichage de classes**, sélectionnez la classe de document (CDisplayDialogDoc). Dans la fenêtre **Propriétés** , cliquez sur le bouton **Événements** . Double-cliquez sur l’ID de la commande de menu (ID_VIEW_TEST). Ensuite, cliquez sur la flèche orientée vers le bas et sélectionnez ** \<Add> OnViewTest**.
+1. Dans **affichage de classes**, sélectionnez la classe de document (CDisplayDialogDoc). Dans la fenêtre **Propriétés** , cliquez sur le bouton **Événements** . Double-cliquez sur l’ID de la commande de menu (ID_VIEW_TEST). Ensuite, cliquez sur la flèche orientée vers le bas et sélectionnez **\<Add> OnViewTest**.
 
    Si vous avez ajouté la commande de menu au macroordinateur d’une application MDI, sélectionnez la classe d’application (CDisplayDialogApp) à la place.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : initialisation et nettoyage des documents et des vues'
 title: Initialisation et nettoyage des documents et vues
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - document objects [MFC], life cycle of
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
-ms.openlocfilehash: c5beed5618d4fa991160ad1688a5a686aeaa842f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 023f81e46d67237d64836e843205c45558728b31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290061"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>Initialisation et nettoyage des documents et vues
 
@@ -45,9 +46,9 @@ Dans une application SDI, l’étape 1 est exécutée une seule fois, lors de la
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Initialisation des documents et vues](initializing-documents-and-views.md)
+- [Initialisation des documents et des vues](initializing-documents-and-views.md)
 
-- [Nettoyage des documents et vues](cleaning-up-documents-and-views.md)
+- [Nettoyage des documents et des vues](cleaning-up-documents-and-views.md)
 
 ## <a name="see-also"></a>Voir aussi
 

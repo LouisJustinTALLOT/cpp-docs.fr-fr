@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exceptions : exceptions de base de données'
 title: 'Exceptions : exceptions de base de données'
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: aaed2a9f88c46a405b754b78242478f93cffda31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3e45f887d51b4b81196cd08d11f426f4ee6d4481
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290646"
 ---
 # <a name="exceptions-database-exceptions"></a>Exceptions : exceptions de base de données
 
@@ -26,7 +27,7 @@ Cet article explique comment gérer les exceptions de base de données. La plupa
 
 - [Exemple de gestion des exceptions de base de données](#_core_a_database_exception.2d.handling_example)
 
-## <a name="approaches-to-exception-handling"></a><a name="_core_approaches_to_exception_handling"></a>Approches de la gestion des exceptions
+## <a name="approaches-to-exception-handling"></a><a name="_core_approaches_to_exception_handling"></a> Approches de la gestion des exceptions
 
 L’approche est la même que vous utilisiez DAO (obsolète) ou ODBC.
 
@@ -52,7 +53,7 @@ Pour les exceptions DAO, des informations supplémentaires sont généralement d
 
 Des informations supplémentaires sur les erreurs DAO, le type d’objet d’erreur DAO et la collection d’erreurs DAO sont disponibles sous la classe [CDaoException](reference/cdaoexception-class.md).
 
-## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a>Exemple de gestion des exceptions de base de données
+## <a name="a-database-exception-handling-example"></a><a name="_core_a_database_exception.2d.handling_example"></a> Exemple de Exception-Handling de base de données
 
 L’exemple suivant tente de construire un objet dérivé de [CRecordset](reference/crecordset-class.md)sur le tas avec l' **`new`** opérateur, puis d’ouvrir le jeu d’enregistrements (pour une source de données ODBC). Pour obtenir un exemple similaire pour les classes DAO, consultez « exemple d’exception DAO » ci-dessous.
 

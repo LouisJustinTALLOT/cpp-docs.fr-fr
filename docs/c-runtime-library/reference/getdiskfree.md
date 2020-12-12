@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _getdiskfree'
 title: _getdiskfree
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f17310b426ded63f3e1139e3d7212657d4c6efd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913813"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289203"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
@@ -62,11 +63,11 @@ Lecteur de disque pour lequel vous voulez obtenir des informations.
 *DriveInfo*<br/>
 Structure **_diskfree_t** qui sera remplie avec des informations sur le lecteur.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction aboutit, la valeur de retour est égale à zéro. Si la fonction échoue, la valeur de retour est le code d'erreur. La valeur **errno** est définie pour toutes les erreurs retournées par le système d’exploitation. Pour plus d’informations sur les conditions d’erreur signalées par **errno**, consultez [constantes errno](../../c-runtime-library/errno-constants.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La structure **_diskfree_t** est définie dans direct. h.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exceptions : conversion à partir de macros d’exception MFC'
 title: "Exceptions : conversion à partir de macros d'exception MFC"
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: e8e7f47b66f4263ed55d73c0aac1fda73d72393c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83d4522dff902681e26a2bd098b46fea92bf1c6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183810"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290698"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Exceptions : conversion à partir de macros d'exception MFC
 
@@ -31,7 +32,7 @@ Cet article explique comment convertir le code existant écrit avec des macros M
 
 - [Conversion de code avec des macros d’exception pour utiliser des exceptions C++](#_core_doing_the_conversion)
 
-## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a>Avantages de la conversion
+## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a> Avantages de la conversion
 
 Vous n’avez probablement pas besoin de convertir le code existant, bien que vous deviez connaître les différences entre les implémentations de macro dans MFC version 3,0 et les implémentations dans les versions antérieures. Ces différences et les modifications ultérieures du comportement du code sont décrites dans [exceptions : modifications apportées aux macros d’exception dans la Version 3,0](exceptions-changes-to-exception-macros-in-version-3-0.md).
 
@@ -69,11 +70,11 @@ La syntaxe est également différente. La syntaxe des macros et des mots clés d
 
    Les macros utilisent **THROW_LAST** pour lever à nouveau l’exception actuelle. Le **`throw`** mot clé, sans argument, a le même effet.
 
-## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>Conversion en cours
+## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a> Conversion en cours
 
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Pour convertir du code à l’aide de macros pour utiliser les mots clés de gestion des exceptions C++
 
-1. Recherchez toutes les occurrences de la macro MFC **try**, **catch**, **AND_CATCH**, **END_CATCH**, **throw**et **THROW_LAST**.
+1. Recherchez toutes les occurrences de la macro MFC **try**, **catch**, **AND_CATCH**, **END_CATCH**, **throw** et **THROW_LAST**.
 
 2. Remplacez ou supprimez toutes les occurrences des macros suivantes :
 
@@ -95,7 +96,7 @@ La syntaxe est également différente. La syntaxe des macros et des mots clés d
 
    [!code-cpp[NVC_MFCExceptions#6](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
-   par celle-ci :
+   to
 
    [!code-cpp[NVC_MFCExceptions#7](codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
