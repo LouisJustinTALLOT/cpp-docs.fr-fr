@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : casting (C++/CX)'
 title: Effectuer un cast (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: 5e51f9e100be2096494e10aca38232dbd1576f40
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 90b9e90833acc14bcf76287b44f70fb914c7604a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843480"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190274"
 ---
 # <a name="casting-ccx"></a>Effectuer un cast (C++/CX)
 
-Quatre opérateurs de cast différents s’appliquent aux types de Windows Runtime : opérateur [static_cast](../cpp/static-cast-operator.md), opérateur [dynamic_cast](../cpp/dynamic-cast-operator.md), opérateur **safe_cast**et [opérateur reinterpret_cast](../cpp/reinterpret-cast-operator.md). **safe_cast** et **`static_cast`** lèvent une exception lorsque la conversion ne peut pas être effectuée ; [Static_cast opérateur](../cpp/static-cast-operator.md) effectue également une vérification de type au moment de la compilation. **`dynamic_cast`** retourne **`nullptr`** s’il ne parvient pas à convertir le type. Bien que **`reinterpret_cast`** retourne une valeur non null, il est possible qu’il ne soit pas valide. Pour cette raison, nous vous recommandons de ne pas utiliser, **`reinterpret_cast`** sauf si vous savez que le cast est concluant. En outre, nous vous recommandons de ne pas utiliser de casts de style C dans votre code C++/CX, car ils sont identiques à **`reinterpret_cast`** .
+Quatre opérateurs de cast différents s’appliquent aux types de Windows Runtime : opérateur [static_cast](../cpp/static-cast-operator.md), opérateur [dynamic_cast](../cpp/dynamic-cast-operator.md), opérateur **safe_cast** et [opérateur reinterpret_cast](../cpp/reinterpret-cast-operator.md). **safe_cast** et **`static_cast`** lèvent une exception lorsque la conversion ne peut pas être effectuée ; [Static_cast opérateur](../cpp/static-cast-operator.md) effectue également une vérification de type au moment de la compilation. **`dynamic_cast`** retourne **`nullptr`** s’il ne parvient pas à convertir le type. Bien que **`reinterpret_cast`** retourne une valeur non null, il est possible qu’il ne soit pas valide. Pour cette raison, nous vous recommandons de ne pas utiliser, **`reinterpret_cast`** sauf si vous savez que le cast est concluant. En outre, nous vous recommandons de ne pas utiliser de casts de style C dans votre code C++/CX, car ils sont identiques à **`reinterpret_cast`** .
 
 Le compilateur et le runtime exécutent également des casts implicites, par exemple, dans les opérations de boxing lorsqu'un type valeur ou un type intégré sont passés en tant qu'arguments à une méthode dont le type de paramètre est `Object^`. En théorie, un cast implicite ne doit jamais générer une exception au moment de l'exécution. Si le compilateur ne peut pas effectuer une conversion implicite, il déclenche une erreur au moment de la compilation.
 

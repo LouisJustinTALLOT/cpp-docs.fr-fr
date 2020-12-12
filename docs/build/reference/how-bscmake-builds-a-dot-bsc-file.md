@@ -1,28 +1,29 @@
 ---
+description: 'En savoir plus sur : Comment BSCMAKE génère un. Fichier BSC'
 title: Génération d'un fichier .bsc par BSCMAKE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-ms.openlocfilehash: 6f721641e021396f112bfe4c075ca0f524100d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d468f365f7f42be2eb393e53d72053b682ec65a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191379"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Génération d'un fichier .bsc par BSCMAKE
 
-BSCMAKE génère ou régénère un fichier .bsc dans le moyen le plus efficace que possible. Pour éviter d’éventuels problèmes, il est important de comprendre le processus de génération.
+BSCMAKE génère ou reconstruit un fichier. bsc de la manière la plus efficace possible. Pour éviter les problèmes potentiels, il est important de comprendre le processus de génération.
 
-Lors de la génération d’un fichier d’informations de consultation BSCMAKE, elle tronque les fichiers .sbr de longueur nulle. Pendant une génération ultérieure du même fichier, un fichier .sbr de longueur nulle (ou vide) indique à BSCMAKE ne qu’aucune nouvelle contribution pour rendre le fichier .sbr. Il informe BSCMAKE qu’une mise à jour de cette partie du fichier n’est pas nécessaire et une build incrémentielle sera suffisante. Lors de chaque génération (sauf si l’option /n est spécifiée), BSCMAKE essaie d’abord de mettre à jour le fichier de façon incrémentielle avec uniquement les fichiers .sbr qui ont été modifiés.
+Lorsque BSCMAKE génère un fichier d’informations de consultation, il tronque les fichiers. SBR à une longueur nulle. Pendant une génération suivante du même fichier, un fichier. sbr de longueur nulle (ou vide) indique à BSCMAKE que le fichier. SBR n’a pas de nouvelle contribution à effectuer. Il permet à BSCMAKE de savoir qu’une mise à jour de cette partie du fichier n’est pas requise et qu’une build incrémentielle est suffisante. Lors de chaque génération (sauf si l’option/n est spécifiée), BSCMAKE tente d’abord de mettre à jour le fichier de façon incrémentielle en utilisant uniquement les fichiers. SBR modifiés.
 
-BSCMAKE recherche un fichier .bsc qui porte le nom spécifié avec l’option/o. Si/o n’est pas spécifiée, BSCMAKE recherche un fichier qui a le nom de base du premier fichier .sbr et une extension .bsc. Si le fichier existe, BSCMAKE effectue une génération incrémentielle du fichier d’informations de navigation en utilisant uniquement les fichiers .sbr contribue à. Si le fichier n’existe pas, BSCMAKE effectue une génération complète à l’aide de tous les fichiers .sbr. Les règles pour les builds sont les suivantes :
+BSCMAKE recherche un fichier. bsc qui porte le nom spécifié avec l’option/o. Si/o n’est pas spécifié, BSCMAKE recherche un fichier qui porte le nom de base du premier fichier. SBR et une extension. bsc. Si le fichier existe, BSCMAKE effectue une génération incrémentielle du fichier d’informations de consultation en utilisant uniquement les fichiers. SBR contributeurs. Si le fichier n’existe pas, BSCMAKE effectue une génération complète à l’aide de tous les fichiers. sbr. Les règles pour les builds sont les suivantes :
 
-- Pour une génération complète réussisse, tous spécifiés des fichiers .sbr doivent exister et ne doivent pas être tronqués. Si un fichier .sbr est tronqué, vous devez le reconstruire (par recompilation ou assemblage) avant d’exécuter BSCMAKE.
+- Pour qu’une génération complète aboutisse, tous les fichiers. SBR spécifiés doivent exister et ne doivent pas être tronqués. Si un fichier. SBR est tronqué, vous devez le reconstruire (en recompilant ou en assemblant) avant d’exécuter BSCMAKE.
 
-- Pour une build incrémentielle réussisse, le fichier .bsc doit exister. Tous les fichiers .sbr contributeurs, même vides, il doit exister et doit être spécifié sur la ligne de commande BSCMAKE. Si vous omettez un fichier .sbr à partir de la ligne de commande, BSCMAKE supprime sa contribution à partir du fichier.
+- Pour qu’une build incrémentielle aboutisse, le fichier. bsc doit exister. Tous les fichiers. SBR contributeurs, même les fichiers vides, doivent exister et être spécifiés sur la ligne de commande BSCMAKE. Si vous omettez un fichier. SBR à partir de la ligne de commande, BSCMAKE supprime sa contribution du fichier.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Génération d’un fichier .bsc](building-a-dot-bsc-file.md)
+[Génération d’un. Fichier BSC](building-a-dot-bsc-file.md)

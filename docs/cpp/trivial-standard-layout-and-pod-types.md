@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur les types : trivial, standard-Layout, POD et Literal'
 title: Types triviaux, à disposition standard, POD et littéraux
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: 6fe237386e63fcdd96621edabf2b0b66ce72e4f8
-ms.sourcegitcommit: 435133128b18cdd02d33d929b16c33e7ec40e9eb
+ms.openlocfilehash: cfd9a9406c62f8c338d2c54587b61ad0c7b87ecc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81664132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186466"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Types triviaux, à disposition standard, POD et littéraux
 

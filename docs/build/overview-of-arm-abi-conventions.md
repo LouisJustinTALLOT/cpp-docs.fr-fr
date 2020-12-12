@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble des conventions ABI ARM32'
 title: Vue d'ensemble des conventions ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: fc211b887b2b82f533c1e36bf95e6fd6b8e24728
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: de82fc6c3da085c3840af0ad48694c7472d687c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229764"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187401"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Vue d’ensemble des conventions ABI ARM32
 
@@ -75,7 +76,7 @@ L'utilisation des instructions de division d'entier SDIV et UDIV est entièremen
 
 Le processeur ARM prend en charge 16 registres d'entiers :
 
-|Inscrire|Volatil ?|Role|
+|S’inscrire|Volatil ?|Rôle|
 |--------------|---------------|----------|
 |r0|Volatil|Paramètres, résultat, registre de travail 1|
 |r1|Volatil|Paramètres, résultat, registre de travail 2|
@@ -102,7 +103,7 @@ Windows utilise r11 pour parcourir rapidement le frame de pile. Pour plus d'info
 
 Windows prend en charge uniquement les variantes ARM qui intègrent une prise en charge du coprocesseur VFPv3-D32. Cela signifie que les registres en virgule flottante sont toujours présents, qu'ils peuvent être considérés comme des transmetteurs de paramètres fiables, et que l'ensemble complet des 32 registres est disponible. Les registres VFP et leur fonction sont résumés dans ce tableau :
 
-|Simples|Doubles|Quadruples|Volatil ?|Role|
+|Simples|Doubles|Quadruples|Volatil ?|Rôle|
 |-------------|-------------|-----------|---------------|----------|
 |s0-s3|d0-d1|q0|Volatil|Paramètres, résultat, registre de travail|
 |s4-s7|d2-d3|q1|Volatil|Paramètres, registre de travail|
@@ -116,7 +117,7 @@ Windows prend en charge uniquement les variantes ARM qui intègrent une prise en
 
 Le tableau suivant illustre les champs de bits du registre d'état et de contrôle des nombres à virgule flottante (ou FPSCR, Floating-Point Status and Control Register) :
 
-|Bits|Signification|Volatil ?|Role|
+|Bits|Signification|Volatil ?|Rôle|
 |----------|-------------|---------------|----------|
 |31-28|NZCV|Volatil|Indicateurs d'état|
 |27|QC|Volatil|Saturation cumulative|

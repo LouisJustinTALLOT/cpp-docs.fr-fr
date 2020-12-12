@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : l’assignation de caractères'
 title: Assignation de caractère
 ms.date: 11/04/2016
 helpviewer_keywords:
 - characters [C++], assignments
 - MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-ms.openlocfilehash: 0f627f88ca2b1d3533d3690cd0316ee047a327ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d0db79acb8732404016f4a20579aff78ff996c17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187544"
 ---
 # <a name="character-assignment"></a>Assignation de caractère
 

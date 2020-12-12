@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : expressions avec opérateurs unaires'
 title: Expressions avec opérateurs unaires
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-ms.openlocfilehash: 032ebd99041de9308d16710b2a27e0db3cddd4df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6714727d0a4b2c386c37550151df21062534376e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186504"
 ---
 # <a name="expressions-with-unary-operators"></a>Expressions avec opérateurs unaires
 
@@ -35,15 +36,15 @@ Les opérateurs unaires agissent sur un seul opérande dans une expression. Opé
 
 - [Opérateur de conversion ()](../cpp/cast-operator-parens.md)
 
-- [`sizeof`and](../cpp/sizeof-operator.md)
+- [`sizeof` and](../cpp/sizeof-operator.md)
 
-- [`__uuidof`and](../cpp/uuidof-operator.md)
+- [`__uuidof` and](../cpp/uuidof-operator.md)
 
-- [`alignof`and](../cpp/alignof-operator.md)
+- [`alignof` and](../cpp/alignof-operator.md)
 
-- [`new`and](../cpp/new-operator-cpp.md)
+- [`new` and](../cpp/new-operator-cpp.md)
 
-- [`delete`and](../cpp/delete-operator-cpp.md)
+- [`delete` and](../cpp/delete-operator-cpp.md)
 
 Ces opérateurs ont une associativité de droite à gauche. Les expressions unaires impliquent en général une syntaxe qui précède une expression primaire ou suffixée.
 
@@ -69,7 +70,7 @@ Voici les formes possibles des expressions unaires :
 
 Tout *suffixe-expression* est considéré comme une expression *unaire*, et comme toute expression primaire est considérée comme *suffix-expression*, les expressions primaires sont également considérées comme une *expression unaire* . Pour plus d’informations, consultez [expressions suffixées](../cpp/postfix-expressions.md) et [expressions primaires](../cpp/primary-expressions.md).
 
-Un *opérateur unaire* se compose d’un ou plusieurs des symboles suivants :`* & + - ! ~`
+Un *opérateur unaire* se compose d’un ou plusieurs des symboles suivants : `* & + - ! ~`
 
 *Cast-expression* est une expression unaire avec un cast facultatif pour modifier le type. Pour plus d’informations, consultez [opérateur de Cast : ()](../cpp/cast-operator-parens.md).
 

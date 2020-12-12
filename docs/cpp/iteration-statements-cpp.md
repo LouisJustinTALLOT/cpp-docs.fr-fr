@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : instructions d’itération (C++)'
 title: Instructions d'itération (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iteration statements
 - loop structures, iteration statements
 ms.assetid: bf6d75f7-ead2-426a-9c47-33847f59b8c7
-ms.openlocfilehash: b4176e8265759ae569275bdae5304b0b10c29fc1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 71edf526ed641a5bcd7944c546486cf3d2fb5059
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190287"
 ---
 # <a name="iteration-statements-c"></a>Instructions d'itération (C++)
 

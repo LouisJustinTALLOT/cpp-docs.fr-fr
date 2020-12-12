@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les extensions Microsoft pour C et C++'
 title: Extensions Microsoft pour C et C++
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fac6edbdfd559f3cebd18dcdc3b8cfca2a9336dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190690"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Extensions Microsoft pour C et C++
 
@@ -302,4 +303,4 @@ int main()
 
 - [/Za,/Ze (désactiver les extensions de langage)](za-ze-disable-language-extensions.md)
 - [Options du compilateur MSVC](compiler-options.md)
-- [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+- [Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

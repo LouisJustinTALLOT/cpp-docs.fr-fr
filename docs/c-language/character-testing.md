@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : test de caractères'
 title: Test de caractère
 ms.date: 11/04/2016
 ms.assetid: 376ba061-bae3-427e-9569-33fa5949a199
-ms.openlocfilehash: b02d07ca2796e5088c3021f1ae8795ea92761943
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: b7d73bce671787622814e11d8f3add7a1092572a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190534"
 ---
 # <a name="character-testing"></a>Test de caractère
 
-**ANSI 4.3.1** Jeux de caractères testés par `isalnum`les fonctions, `isalpha`, `iscntrl`, `islower`, `isprint`et `isupper`
+**ANSI 4.3.1** Jeux de caractères testés par les `isalnum` fonctions, `isalpha` , `iscntrl` , `islower` , `isprint` et `isupper`
 
 La liste suivante décrit ces fonctions telles qu'elles sont implémentées par le compilateur Microsoft C.
 

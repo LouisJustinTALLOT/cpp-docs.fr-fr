@@ -1,13 +1,14 @@
 ---
+description: En savoir plus sur:/HIGHENTROPYVA (prise en charge de 64 bits ASLR)
 title: /HIGHENTROPYVA (Prendre en charge l'ASLR 64 bits)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: ead296b1bd31171fb1a187685f407f6a0cf8a74c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aed5d5eea2d3351d4eff88a58818a953563ba0e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191548"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (Prendre en charge l'ASLR 64 bits)
 
@@ -29,7 +30,7 @@ Pour **`/HIGHENTROPYVA`** que ait un effet au moment du chargement, [`/DYNAMICBA
 
 1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
 1. Dans **options supplémentaires**, entrez `/HIGHENTROPYVA` ou `/HIGHENTROPYVA:NO` .
 

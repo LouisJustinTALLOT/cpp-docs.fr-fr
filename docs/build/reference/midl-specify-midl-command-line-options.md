@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/MIDL (spécifier les options de ligne de commande MIDL)
 title: /MIDL (Spécification d'options de ligne de commande MIDL)
 ms.date: 09/05/2018
 f1_keywords:
@@ -11,27 +12,27 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: 3f1b6526f51e5aaa48008792361d3e63249d9f16
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7c3a095e687ebe58db25cc8313569df3ee3a5886
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190638"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Spécification d'options de ligne de commande MIDL)
 
 Spécifie un fichier réponse pour les options de ligne de commande MIDL
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
-> **/MIDL : \@ ** <em>fichier</em>
+> **/MIDL : \@** <em>fichier</em>
 
 ## <a name="arguments"></a>Arguments
 
 *file*<br/>
 Nom du fichier qui contient les [options de ligne de commande MIDL](/windows/win32/Midl/general-midl-command-line-syntax).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Toutes les options de conversion d’un fichier IDL en fichier TLB doivent être fournies dans le *fichier*; Les options de ligne de commande MIDL ne peuvent pas être spécifiées sur la ligne de commande de l’éditeur de liens. Si/MIDL n’est pas spécifié, le compilateur MIDL est appelé uniquement avec le nom de fichier IDL et aucune autre option.
 
@@ -41,7 +42,7 @@ Le fichier doit contenir une option de ligne de commande MIDL par ligne.
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez les **Propriétés de configuration**  >  **Linker**  >  page de propriétés**IDL incorporé** .
+1. Sélectionnez les **Propriétés de configuration**  >    >  page de propriétés **IDL incorporé** .
 
 1. Modifiez la propriété **commandes MIDL** .
 

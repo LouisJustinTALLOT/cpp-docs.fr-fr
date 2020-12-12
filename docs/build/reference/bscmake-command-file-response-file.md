@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fichier de commandes BSCMAKE (fichier réponse)'
 title: BSCMAKE, fichier de commandes (fichier réponse)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - response files
 - command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-ms.openlocfilehash: 6a55fd616a00aeb3ade229bf7cff8220f86085b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bb321cd7aa705d7e33d0f539ab3e0aa2e3cb8bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295043"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187154"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE, fichier de commandes (fichier réponse)
 
@@ -27,7 +28,7 @@ Vous pouvez fournir tout ou partie de l’entrée de ligne de commande dans un f
 BSCMAKE @filename
 ```
 
-Fichier de commandes qu’un seul est autorisé. Vous pouvez spécifier un chemin d’accès avec *filename*. Faites précéder *filename* avec un arobase (**\@**). BSCMAKE n’assume pas une extension. Vous pouvez spécifier supplémentaires *sbrfiles* sur la ligne de commande après *filename*. Le fichier de commandes est un fichier texte qui contient l’entrée à BSCMAKE dans le même ordre que vous le définiriez sur la ligne de commande. Séparez les arguments de ligne de commande avec un ou plusieurs espaces, des tabulations ou des caractères de saut de ligne.
+Un seul fichier de commandes est autorisé. Vous pouvez spécifier un chemin d’accès avec le *nom de fichier*. Faites précéder le *nom de fichier* d’un arobase ( **\@** ). BSCMAKE ne suppose pas d’extension. Vous pouvez spécifier des *sbrfiles* supplémentaires sur la ligne de commande après le *nom de fichier*. Le fichier de commandes est un fichier texte qui contient l’entrée dans BSCMAKE dans le même ordre que celui que vous spécifiez sur la ligne de commande. Séparez les arguments de ligne de commande par un ou plusieurs espaces, tabulations ou caractères de saut de ligne.
 
 La commande suivante appelle BSCMAKE à l’aide d’un fichier de commandes :
 
@@ -35,7 +36,7 @@ La commande suivante appelle BSCMAKE à l’aide d’un fichier de commandes :
 BSCMAKE @prog1.txt
 ```
 
-Voici un exemple de fichier de commande :
+Voici un exemple de fichier de commandes :
 
 ```
 /n /v /o main.bsc /El

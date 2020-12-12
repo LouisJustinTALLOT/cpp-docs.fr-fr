@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les États des modules d’une DLL MFC normale liée de manière dynamique aux MFC
 title: États du module d’une DLL MFC normale liée de manière dynamique aux MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - module states [C++], regular MFC DLLs dynamically linked to
 - DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-ms.openlocfilehash: cedce676f5586369446c9856fd33e4d16c237b27
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 4cf1720e7aff21f13b7486517e626307ef6731a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187505"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>États du module d’une DLL MFC normale liée de manière dynamique aux MFC
 
 La possibilité de lier dynamiquement une DLL MFC normale à la DLL MFC autorise certaines configurations très compliquées. Par exemple, une DLL MFC normale et l’exécutable qui l’utilise peuvent être liés de manière dynamique à la DLL MFC et à toutes les dll d’extension MFC.
 
-Cette configuration pose un problème concernant les données globales MFC, telles que le pointeur vers l’objet actuel `CWinApp` et les mappages de handles.
+Cette configuration pose un problème concernant les données globales MFC, telles que le pointeur vers l' `CWinApp` objet actuel et les mappages de handles.
 
-Avant la version 4,0 de MFC, ces données globales se trouvaient dans la DLL MFC elle-même et étaient partagées par tous les modules du processus. Étant donné que chaque processus utilisant une DLL Win32 obtient sa propre copie des données de la DLL, ce schéma offre un moyen simple de suivre les données par processus. En outre, étant donné que le modèle AFXDLL supposait qu’il n' `CWinApp` y avait qu’un seul objet et un seul ensemble de mappages de handle dans le processus, ces éléments pouvaient être suivis dans la DLL MFC elle-même.
+Avant la version 4,0 de MFC, ces données globales se trouvaient dans la DLL MFC elle-même et étaient partagées par tous les modules du processus. Étant donné que chaque processus utilisant une DLL Win32 obtient sa propre copie des données de la DLL, ce schéma offre un moyen simple de suivre les données par processus. En outre, étant donné que le modèle AFXDLL supposait qu’il n’y avait qu’un seul `CWinApp` objet et un seul ensemble de mappages de handle dans le processus, ces éléments pouvaient être suivis dans la DLL MFC elle-même.
 
 Toutefois, avec la possibilité de lier de manière dynamique une DLL MFC normale à la DLL MFC, il est désormais possible d’avoir deux `CWinApp` objets ou plus dans un processus, ainsi qu’au moins deux jeux de mappages de handle. Comment les MFC assurent-elles le suivi des éléments à utiliser ?
 
@@ -35,11 +36,11 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [Gestion des données d’état des modules MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+- [Gestion des données d'état des modules MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
 - [DLL MFC normales liées de manière dynamique à MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Dll d’extension MFC](extension-dlls-overview.md)
+- [DLL d’extension de MFC](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Voir aussi
 

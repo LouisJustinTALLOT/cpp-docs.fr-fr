@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : optimisations guidées par profil'
 title: Optimisations guidées par profil
 ms.date: 04/23/2019
 helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd6a9627de72ef170e88493ef3e2147a0ccc2bc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187323"
 ---
 # <a name="profile-guided-optimizations"></a>Optimisations guidées par profil
 
@@ -19,7 +20,7 @@ L’optimisation guidée par profil (PGO) vous permet d’optimiser l’intégra
 Les optimisations guidées par profil sont uniquement disponibles pour les cibles natives x86 ou x64. Les optimisations guidées par profil ne sont pas disponibles pour les fichiers exécutables qui s’exécutent sur le common language runtime. Même si vous générez un assembly avec du code mixte natif et managé (à l’aide de l’option du compilateur **/CLR** ), vous ne pouvez pas utiliser l’optimisation guidée par profil uniquement sur le code natif. Si vous tentez de générer un projet avec ces options définies dans l’IDE, une erreur de génération se produit.
 
 > [!NOTE]
-> Les informations collectées à partir des séries de tests de profilage remplacent les optimisations qui seraient autrement appliquées si vous spécifiez **/ob**, **/OS**ou **/OT**. Pour plus d’informations, consultez [/ob (expansion des fonctions inline)](reference/ob-inline-function-expansion.md) et [/OS,/OT (favoriser la taille du code, favoriser la rapidité du code)](reference/os-ot-favor-small-code-favor-fast-code.md).
+> Les informations collectées à partir des séries de tests de profilage remplacent les optimisations qui seraient autrement appliquées si vous spécifiez **/ob**, **/OS** ou **/OT**. Pour plus d’informations, consultez [/ob (expansion des fonctions inline)](reference/ob-inline-function-expansion.md) et [/OS,/OT (favoriser la taille du code, favoriser la rapidité du code)](reference/os-ot-favor-small-code-favor-fast-code.md).
 
 ## <a name="steps-to-optimize-your-app"></a>Étapes d’optimisation de votre application
 

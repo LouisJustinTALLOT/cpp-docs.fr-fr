@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/ALLOWBIND (empêcher la liaison DLL)
 title: /ALLOWBIND (Éviter la liaison DLL)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: d963a7145ab2e8c8872dc21c485bdc8f877b0b76
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 727f1cae7d1b0a94a8f7faba90ee6994df8657e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187232"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (Éviter la liaison DLL)
 

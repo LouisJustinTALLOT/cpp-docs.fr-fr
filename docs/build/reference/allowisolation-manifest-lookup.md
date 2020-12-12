@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/ALLOWISOLATION (recherche de manifeste)
 title: /ALLOWISOLATION (Recherche de manifeste)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: 7c799f3d44428643bccc2869255ffa4e9d194d70
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 659c908e4de910941ca71c9f40814608df19c6d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187219"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Recherche de manifeste)
 
@@ -27,13 +28,13 @@ Spécifie un comportement pour la recherche de manifeste.
 
 ## <a name="remarks"></a>Notes
 
-**/ALLOWISOLATION: no** indique que les dll sont chargées comme s’il n’existait aucun manifeste et que l’éditeur `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` de liens a défini le bit `DllCharacteristics` dans le champ d’en-tête facultatif.
+**/ALLOWISOLATION : no** indique que les dll sont chargées comme s’il n’existait aucun manifeste et que l’éditeur de liens a défini le `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dans le champ d’en-tête facultatif `DllCharacteristics` .
 
 **/ALLOWISOLATION** fait en sorte que le système d’exploitation effectue des recherches et des chargements de manifeste.
 
 **/ALLOWISOLATION** est la valeur par défaut.
 
-Lorsque l’isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas de trouver un manifeste d’application pour le processus nouvellement créé. Le nouveau processus n’aura pas de contexte d’activation par défaut, même s’il existe un manifeste dans le fichier exécutable ou placé dans le même répertoire que le fichier exécutable avec name <em>executable-name</em> **. exe. manifest**.
+Lorsque l’isolation est désactivée pour un fichier exécutable, le chargeur Windows ne tente pas de trouver un manifeste d’application pour le processus nouvellement créé. Le nouveau processus n’aura pas de contexte d’activation par défaut, même s’il existe un manifeste dans le fichier exécutable ou placé dans le même répertoire que le fichier exécutable avec name <em>executable-name</em>**. exe. manifest**.
 
 Pour plus d’informations, consultez [référence des fichiers manifestes](/windows/win32/SbsCs/manifest-files-reference).
 
@@ -41,7 +42,7 @@ Pour plus d’informations, consultez [référence des fichiers manifestes](/win
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés**fichier manifeste** de l'**éditeur de liens** >  **Propriétés** > de configuration.
+1. Sélectionnez la page de propriétés  >    >  **fichier manifeste** de l’éditeur de liens propriétés de configuration.
 
 1. Modifiez la propriété **autoriser l’isolation** .
 
