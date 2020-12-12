@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2597'
 title: Erreur du compilateur C2597
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2597
 ms.assetid: 2e48127d-e3ff-4a40-8156-2863e45b1a38
-ms.openlocfilehash: 680268948f8642b02768bd4b3092666982e14eb7
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b3430da85cef961b7c26b55e8dee9f1911533faf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120137"
 ---
 # <a name="compiler-error-c2597"></a>Erreur du compilateur C2597
 
 référence non conforme à un membre non static 'identificateur'
 
-Causes possibles :
+Causes possibles :
 
 1. Un membre non statique est spécifié dans une fonction membre statique. Pour accéder au membre non statique, vous devez transmettre ou créer une instance locale de la classe et utiliser un opérateur d'accès au membre (`.` ou `->`).
 

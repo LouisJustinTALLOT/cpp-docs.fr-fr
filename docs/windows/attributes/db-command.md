@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : db_command'
 title: db_command (attribut COM C++)
 ms.date: 07/10/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 5910e72b10d5b849d203d088564d79d0f80a7961
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 109dea1fe2070ef6a0acc9370d4065a9e6a9a575
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122172"
 ---
 # <a name="db_command"></a>db_command
 
@@ -44,7 +45,7 @@ La syntaxe de *command* est la suivante :
 
 Un *bloc de paramètres de liaison* est défini comme suit :
 
-> **( \[ ** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
+> **( \[** *BindType* **]** *szVar1* \[ , *szVar2* \[ , *nVar3* \[ ,...]]] **)**
 
 où :
 
@@ -52,15 +53,15 @@ où :
 
 - **\[***BindType* **]** est l’une des chaînes suivantes qui ne respectent pas la casse :
 
-  - ** \[ db_column]** lie chacune des variables membres à une colonne dans un ensemble de lignes.
+  - **\[ db_column]** lie chacune des variables membres à une colonne dans un ensemble de lignes.
 
-  - ** \[ BindTo]** (identique à ** \[ db_column]**).
+  - **\[ BindTo]** (identique à **\[ db_column]**).
 
-  - ** \[ in]** lie les variables de membre en tant que paramètres d’entrée.
+  - **\[ in]** lie les variables de membre en tant que paramètres d’entrée.
 
-  - ** \[ out]** lie les variables de membre en tant que paramètres de sortie.
+  - **\[ out]** lie les variables de membre en tant que paramètres de sortie.
 
-  - ** \[ dans, out]** lie les variables de membre en tant que paramètres d’entrée/sortie.
+  - **\[ dans, out]** lie les variables de membre en tant que paramètres d’entrée/sortie.
 
 - *szVarX*, *nVarX* correspond à une variable membre dans l’étendue actuelle.
 
@@ -87,7 +88,7 @@ TCHAR m_state[3] = 'CA';
 ```
 
 *name*<br/>
-Facultatif Nom du handle que vous utilisez pour travailler avec l’ensemble de lignes. Si vous spécifiez *name*, **db_command** génère une classe avec l’objet *name*spécifié, qui peut être utilisée pour parcourir l’ensemble de lignes ou pour exécuter plusieurs requêtes d’action. Si vous ne spécifiez pas *name*, vous ne pouvez pas retourner plusieurs lignes de résultats à l’utilisateur.
+Facultatif Nom du handle que vous utilisez pour travailler avec l’ensemble de lignes. Si vous spécifiez *name*, **db_command** génère une classe avec l’objet *name* spécifié, qui peut être utilisée pour parcourir l’ensemble de lignes ou pour exécuter plusieurs requêtes d’action. Si vous ne spécifiez pas *name*, vous ne pouvez pas retourner plusieurs lignes de résultats à l’utilisateur.
 
 *source_name*<br/>
 Facultatif `CSession` Variable ou instance d’une classe à laquelle l' `db_source` attribut est appliqué et sur lequel la commande s’exécute. Voir [db_source](db-source.md).
@@ -113,13 +114,13 @@ Une valeur supérieure à 1 spécifie l’extraction de lignes en bloc. L’extr
 
 Si *bulk_fetch* est inférieur à 1, `SetRows` retourne la valeur zéro.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 **db_command** crée un objet [CCommand](../../data/oledb/ccommand-class.md) , qui est utilisé par un consommateur OLE DB pour exécuter une commande.
 
 Vous pouvez utiliser **db_command** avec une portée de classe ou de fonction. La principale différence est la portée de l’objet `CCommand` . Avec la portée de fonction, les données telles que les liaisons se terminent à la fin de la fonction. Les utilisations de la portée de la classe et de la fonction impliquent la classe de modèle de consommateur OLE DB `CCommand<>` , mais les arguments de modèle diffèrent pour la fonction et les cas de classe. Dans le cas de fonction, les liaisons sont effectuées sur un `Accessor` qui comprend des variables locales, tandis que l’utilisation de la classe déduira une `CAccessor` classe dérivée de comme argument. En cas d’utilisation comme attribut de classe, **db_command** fonctionne conjointement avec **db_column**.
 
-Vous pouvez utiliser**db_command** pour exécuter des commandes qui ne retournent pas de jeu de résultats.
+Vous pouvez utiliser **db_command** pour exécuter des commandes qui ne retournent pas de jeu de résultats.
 
 Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_ accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de l' \_ accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
 
@@ -232,14 +233,14 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-| Contexte d’attribut | Value |
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`** , membre, méthode, local|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

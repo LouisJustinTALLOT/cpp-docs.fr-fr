@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur:/Zc : inline (supprimer les éléments COMDAT non référencés)'
 title: /Zc:inline (supprimer des éléments COMDAT non référencés)
 ms.date: 09/05/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 290252262254521c024d7b0d6355472199d1f55d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9a3ac488057059d53925b8f505b9a3ad7f6674a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117547"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (supprimer des éléments COMDAT non référencés)
 
@@ -29,7 +30,7 @@ Supprime les données non référencées ou les fonctions qui sont des COMDAT, o
 
 Quand **/Zc : Inline** est spécifié, le compilateur n’émet pas d’informations de symbole pour les fonctions ou les données COMDAT non référencées. Ou, pour les données ou les fonctions qui ont uniquement une liaison interne. Cette optimisation simplifie une partie du travail de l’éditeur de liens dans les versions release, ou lorsque vous spécifiez l’option de l’éditeur de liens [/OPT : Ref](opt-optimizations.md) . Cette optimisation du compilateur peut réduire considérablement la taille du fichier. objet améliorer les vitesses de l’éditeur de liens. L’option de compilateur n’est pas activée lorsque vous désactivez les optimisations ([/OD](od-disable-debug.md)). Ou, lorsque vous spécifiez [/GL (optimisation de l’ensemble du programme)](gl-whole-program-optimization.md).
 
-Par défaut, cette option est désactivée (**/Zc : Inline-**) dans les générations à partir de la ligne de commande. L’option [/permissive-](permissive-standards-conformance.md) n’active pas **/Zc : Inline**. Dans les projets MSBuild, l’option est définie par les **Propriétés de configuration**  >  **langage C/C++**  >  **Language**  >  **supprimer le code et** la propriété de données non référencés, qui est défini sur **Oui** par défaut.
+Par défaut, cette option est désactivée (**/Zc : Inline-**) dans les générations à partir de la ligne de commande. L’option [/permissive-](permissive-standards-conformance.md) n’active pas **/Zc : Inline**. Dans les projets MSBuild, l’option est définie par les **Propriétés de configuration**  >  **langage C/C++**  >    >  **supprimer le code et** la propriété de données non référencés, qui est défini sur **Oui** par défaut.
 
 Si **/Zc : Inline** est spécifié, le compilateur applique la condition c++ 11 stipulant que toutes les fonctions déclarées **`inline`** doivent avoir une définition disponible dans la même unité de traduction si elles sont utilisées. Lorsque l’option n’est pas spécifiée, le compilateur Microsoft autorise le code non conforme qui appelle les fonctions déclarées **`inline`** même si aucune définition n’est visible. Pour plus d'informations, voir la norme C++11, section 3.2 et section 7.1.2. Cette option du compilateur a été introduite pour la première fois dans Visual Studio 2013 Update 2.
 

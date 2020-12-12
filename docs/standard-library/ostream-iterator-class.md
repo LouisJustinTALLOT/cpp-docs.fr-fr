@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe ostream_iterator'
 title: ostream_iterator, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::ostream_iterator [C++], ostream_type
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
-ms.openlocfilehash: 97367c19d0b1bdb4b9c16d5d12621210c8562485
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2123c2a9addb5024877364a1906800b244b91edb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224667"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118366"
 ---
 # <a name="ostream_iterator-class"></a>ostream_iterator, classe
 
@@ -71,7 +72,7 @@ La classe ostream_iterator doit répondre aux exigences d’un itérateur de sor
 
 **Espace de noms :** std
 
-## <a name="ostream_iteratorchar_type"></a><a name="char_type"></a>ostream_iterator :: char_type
+## <a name="ostream_iteratorchar_type"></a><a name="char_type"></a> ostream_iterator :: char_type
 
 Type qui fournit le type de caractère de l’itérateur.
 
@@ -120,7 +121,7 @@ by intOut are:
 */
 ```
 
-## <a name="ostream_iteratoroperator"></a><a name="op_star"></a>ostream_iterator :: Operator *
+## <a name="ostream_iteratoroperator"></a><a name="op_star"></a> ostream_iterator :: Operator *
 
 Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie \* *II*  =  *x*.
 
@@ -128,13 +129,13 @@ Opérateur de suppression de référence utilisé pour implémenter l’expressi
 ostream_iterator<Type, CharType, Traits>& operator*();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à `ostream_iterator`.
 
 ### <a name="remarks"></a>Notes
 
-La configuration requise pour un itérateur de sortie que le `ostream_iterator` doit remplir nécessite uniquement que l’expression \* *II*  =  *t* soit valide et n’indique rien sur le **`operator`** ou le `operator=` . L’opérateur membre dans cette implémentation retourne ** \* This**.
+La configuration requise pour un itérateur de sortie que le `ostream_iterator` doit remplir nécessite uniquement que l’expression \* *II*  =  *t* soit valide et n’indique rien sur le **`operator`** ou le `operator=` . L’opérateur membre dans cette implémentation retourne **\* This**.
 
 ### <a name="example"></a>Exemple
 
@@ -169,7 +170,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iteratoroperator"></a><a name="op_add_add"></a>ostream_iterator :: Operator + +
+## <a name="ostream_iteratoroperator"></a><a name="op_add_add"></a> ostream_iterator :: Operator + +
 
 Opérateur d'incrément non fonctionnel qui retourne un `ostream_iterator` au même objet qu'il a traité avant que l'opération n'ait été appelée.
 
@@ -178,13 +179,13 @@ ostream_iterator<Type, CharType, Traits>& operator++();
 ostream_iterator<Type, CharType, Traits> operator++(int);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à `ostream_iterator`.
 
 ### <a name="remarks"></a>Notes
 
-Ces opérateurs membres retournent ** \* This**.
+Ces opérateurs membres retournent **\* This**.
 
 ### <a name="example"></a>Exemple
 
@@ -219,7 +220,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iteratoroperator"></a><a name="op_eq"></a>ostream_iterator :: Operator =
+## <a name="ostream_iteratoroperator"></a><a name="op_eq"></a> ostream_iterator :: Operator =
 
 Opérateur d’assignation utilisé pour implémenter l’expression output_iterator \* `i`  =  `x` pour l’écriture dans un flux de sortie.
 
@@ -232,7 +233,7 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 *multiples*\
 Valeur de l’objet de type `Type` à insérer dans le flux de sortie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’opérateur insère *Val* dans le flux de sortie associé à l’objet, suivi du délimiteur spécifié dans le [constructeur ostream_iterator](#ostream_iterator) (le cas échéant), puis retourne une référence à `ostream_iterator` .
 
@@ -273,7 +274,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iteratorostream_iterator"></a><a name="ostream_iterator"></a>ostream_iterator :: ostream_iterator
+## <a name="ostream_iteratorostream_iterator"></a><a name="ostream_iterator"></a> ostream_iterator :: ostream_iterator
 
 Construit un `ostream_iterator` qui est initialisé et délimité en vue de son enregistrement dans le flux de sortie.
 
@@ -347,7 +348,7 @@ Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
 */
 ```
 
-## <a name="ostream_iteratorostream_type"></a><a name="ostream_type"></a>ostream_iterator :: ostream_type
+## <a name="ostream_iteratorostream_type"></a><a name="ostream_type"></a> ostream_iterator :: ostream_type
 
 Type qui fournit le type de flux de l’itérateur.
 
@@ -363,7 +364,7 @@ Le type est un synonyme de [basic_ostream](../standard-library/basic-ostream-cla
 
 Pour savoir comment déclarer et utiliser `ostream_type`, consultez l’exemple [ostream_iterator](#ostream_iterator).
 
-## <a name="ostream_iteratortraits_type"></a><a name="traits_type"></a>ostream_iterator :: traits_type
+## <a name="ostream_iteratortraits_type"></a><a name="traits_type"></a> ostream_iterator :: traits_type
 
 Type qui fournit le type des caractéristiques de caractère de l’itérateur.
 

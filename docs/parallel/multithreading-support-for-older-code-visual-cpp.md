@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : prise en charge du multithreading pour le code plus ancien (Visual C++)'
 title: Prise en charge du multithreading pour le code plus ancien (Visual C++)
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - multiple concurrent threads
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-ms.openlocfilehash: 6f76ff42d2e28afe251ce234220051111736d3c9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3b04fdde01e2576d37d41f2860526fcf5ba1691
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149901"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Prise en charge du multithreading pour le code plus ancien (Visual C++)
 
@@ -23,14 +24,14 @@ Visual C++ vous permet d’exécuter simultanément plusieurs threads d’exécu
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Multithreading à l’aide de C et de Win32](multithreading-with-c-and-win32.md)<br/>
+[Multithreading à l'aide de C et de Win32](multithreading-with-c-and-win32.md)<br/>
 Prend en charge la création d’applications multithread avec Microsoft Windows
 
-[Multithreading à l’aide de C++ et de MFC](multithreading-with-cpp-and-mfc.md)<br/>
+[Multithreading à l'aide de C++ et de MFC](multithreading-with-cpp-and-mfc.md)<br/>
 Décrit ce que sont les processus et les threads et ce que fait l’approche MFC pour le multithreading.
 
-[Multithreading et paramètres régionaux](multithreading-and-locales.md)<br/>
-Décrit les problèmes qui surviennent lors de l’utilisation des fonctionnalités des paramètres régionaux de la bibliothèque Runtime C++ C et de la bibliothèque standard dans une application multithread.
+[Multithread et paramètres régionaux](multithreading-and-locales.md)<br/>
+Décrit les problèmes qui surviennent lors de l’utilisation des fonctionnalités des paramètres régionaux de la bibliothèque Runtime C et de la bibliothèque C++ standard dans une application multithread.
 
 ## <a name="related-sections"></a>Sections connexes
 

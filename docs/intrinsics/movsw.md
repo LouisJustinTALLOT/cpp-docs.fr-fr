@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __movsw'
 title: __movsw
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 500a2bc3af83887cdd5d65501695c9db60ef60f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221721"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119026"
 ---
 # <a name="__movsw"></a>__movsw
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère une instruction Move String`rep movsw`().
+Génère une instruction Move String ( `rep movsw` ).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,23 +37,23 @@ void __movsw(
 *Destination*\
 à Destination de l’opération.
 
-*Source*\
+*Code*\
 dans Source de l’opération.
 
 *Saut*\
 dans Nombre de mots à copier.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__movsw`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-Le résultat est que les premiers mots pointés par la *source* sont copiés dans la chaîne de *destination* .
+Le résultat est que *les premiers mots* pointés par la *source* sont copiés dans la chaîne de *destination* .
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
@@ -82,7 +83,7 @@ int main()
 0 1 2 3 4 5 6 7 8 9
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

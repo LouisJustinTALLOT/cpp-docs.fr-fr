@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : HelpString'
 title: HelpString (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 57f7a5bfd5bd0e7a6509797ec34e88531304ec92
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3b3aa2470080f33fd4a9dea4f063e908c0431d5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831032"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148809"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -36,14 +37,14 @@ L’attribut C++ **helpString** a les mêmes fonctionnalités que l’attribut M
 
 Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemple d’utilisation de **helpString**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**interface**, **`typedef`** , **`class`** , méthode, propriété|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

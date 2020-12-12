@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CBitmap'
 title: CBitmap, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 8c19a54584390312cfd1657e88898cdb044179d0
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: e3d54a87cb53757f4751558b77e9c0c187484410
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344577"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122718"
 ---
 # <a name="cbitmap-class"></a>CBitmap, classe
 
@@ -97,7 +98,7 @@ Pour plus d’informations sur l’utilisation d’objets graphiques comme `CBit
 
 `CBitmap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 

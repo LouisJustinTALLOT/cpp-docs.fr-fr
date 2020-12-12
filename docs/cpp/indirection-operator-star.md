@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateur d’indirection : *'
 title: "Opérateur d'indirection : *"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d82e65676178fcfc9a62b10a780360c0c69d0d2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113907"
 ---
 # <a name="indirection-operator-"></a>Opérateur d'indirection : *
 
@@ -24,7 +25,7 @@ ms.locfileid: "80178275"
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur d’indirection unaire (<strong>\*</strong>) déréférence un pointeur ; autrement dit, il convertit une valeur de pointeur en l-value. L’opérande de l’opérateur d’indirection doit être un pointeur vers un type. Le résultat de l'expression d'indirection est le type à partir duquel le type pointeur est dérivé. L’utilisation de l’opérateur <strong>\*</strong> dans ce contexte diffère de sa signification en tant qu’opérateur binaire, qui est une multiplication.
+L’opérateur d’indirection unaire ( <strong>\*</strong> ) déréférence un pointeur ; autrement dit, il convertit une valeur de pointeur en l-value. L’opérande de l’opérateur d’indirection doit être un pointeur vers un type. Le résultat de l'expression d'indirection est le type à partir duquel le type pointeur est dérivé. L’utilisation de l' <strong>\*</strong> opérateur dans ce contexte diffère de sa signification en tant qu’opérateur binaire, qui est une multiplication.
 
 Si l'opérande pointe vers une fonction, le résultat est un désignateur de fonction. S'il pointe vers un emplacement de stockage, le résultat est une l-value désignant l'emplacement de stockage.
 

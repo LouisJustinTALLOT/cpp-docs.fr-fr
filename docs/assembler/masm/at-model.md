@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : @Model'
 title: '@Model'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-ms.openlocfilehash: fc72293d2379b9f9e692f87dd3b11ac92fabbae1
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a1b5ef7fe84c2de1f54e93492277a69579a020da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75315522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121197"
 ---
-# <a name="model"></a>Modèle de \@
+# <a name="model"></a>\@Modélisation
 
 1 pour le modèle **minuscule** , 2 pour un modèle de **petite** taille, 3 pour le modèle **compact** , 4 pour le modèle **moyen** , 5 pour le modèle **volumineux** , 6 pour le modèle **énorme** et 7 pour le modèle **plat** (équivalent numérique).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **Modèle de \@**
+> **\@Modélisation**
 
 ## <a name="see-also"></a>Voir aussi
 
-\ de [référence des symboles](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

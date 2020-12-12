@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : glissement d’images à partir d’une liste d’images'
 title: Faire glisser des images à partir d'une liste d'images
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-ms.openlocfilehash: 5d15b0b66d2270174dbfbcfd21bb77f5f41558c7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4d81be73484d32d9b26e5aa4ae48b7e550306493
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626484"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118847"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Faire glisser des images à partir d'une liste d'images
 
@@ -33,4 +34,4 @@ Lorsqu'une application appelle `BeginDrag`, le système crée une liste d'images
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CImageList](using-cimagelist.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

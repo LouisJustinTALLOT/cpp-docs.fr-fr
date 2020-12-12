@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur le multithreading : comment utiliser les classes de synchronisation MFC'
 title: 'Multithreading : comment utiliser les classes de synchronisation MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-ms.openlocfilehash: ef76199813de417d2aa57eb7f3f15ae4d2fefc56
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: a62bdba992ef8b65c14991da26e098f545c30ccd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140502"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149914"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading : comment utiliser les classes de synchronisation MFC
 
@@ -30,15 +31,15 @@ Par exemple, prenez une application qui gère une liste liée de comptes. Cette 
 
 Cet exemple d’application utilise les trois types de classes de synchronisation. Étant donné qu’il permet d’examiner jusqu’à trois comptes à la fois, il utilise [CSemaphore](../mfc/reference/csemaphore-class.md) pour limiter l’accès à trois objets de vue. Lorsqu’une tentative d’affichage d’un quatrième compte se produit, l’application attend jusqu’à ce que l’une des trois premières fenêtres soit fermée ou qu’elle échoue. Lorsqu’un compte est mis à jour, l’application utilise [CCriticalSection](../mfc/reference/ccriticalsection-class.md) pour s’assurer qu’un seul compte est mis à jour à la fois. Une fois la mise à jour réussie, elle signale [CEvent](../mfc/reference/cevent-class.md), qui libère un thread en attente de signalement de l’événement. Ce thread envoie les nouvelles données à l’archive de données.
 
-## <a name="_mfc_designing_a_thread.2d.safe_class"></a>Conception d’une classe thread-safe
+## <a name="designing-a-thread-safe-class"></a><a name="_mfc_designing_a_thread.2d.safe_class"></a> Conception d’une classe Thread-Safe
 
-Pour rendre une classe entièrement thread-safe, ajoutez d’abord la classe de synchronisation appropriée aux classes partagées en tant que membre de données. Dans l’exemple de gestion de compte précédent, un membre de données `CSemaphore` serait ajouté à la classe d’affichage, un membre de données `CCriticalSection` serait ajouté à la classe de liste liée, et un membre de données `CEvent` serait ajouté à la classe de stockage de données.
+Pour rendre une classe entièrement thread-safe, ajoutez d’abord la classe de synchronisation appropriée aux classes partagées en tant que membre de données. Dans l’exemple de gestion de compte précédent, un `CSemaphore` membre de données est ajouté à la classe de vue, un `CCriticalSection` membre de données est ajouté à la classe de liste liée, et un `CEvent` membre de données est ajouté à la classe de stockage de données.
 
-Ensuite, ajoutez des appels de synchronisation à toutes les fonctions membres qui modifient les données dans la classe ou accèdent à une ressource contrôlée. Dans chaque fonction, vous devez créer un objet [CSingleLock](../mfc/reference/csinglelock-class.md) ou [CMultiLock](../mfc/reference/cmultilock-class.md) et appeler la fonction `Lock` de cet objet. Lorsque l’objet Lock est hors de portée et est détruit, le destructeur de l’objet appelle `Unlock` pour vous, libérant ainsi la ressource. Bien entendu, vous pouvez appeler `Unlock` directement si vous le souhaitez.
+Ensuite, ajoutez des appels de synchronisation à toutes les fonctions membres qui modifient les données dans la classe ou accèdent à une ressource contrôlée. Dans chaque fonction, vous devez créer un objet [CSingleLock](../mfc/reference/csinglelock-class.md) ou [CMultiLock](../mfc/reference/cmultilock-class.md) et appeler la fonction de cet objet `Lock` . Lorsque l’objet Lock est hors de portée et est détruit, le destructeur de l’objet `Unlock` vous appelle pour vous, libérant ainsi la ressource. Bien entendu, vous pouvez appeler `Unlock` directement si vous le souhaitez.
 
 La conception de votre classe thread-safe de cette manière permet de l’utiliser dans une application multithread aussi facilement qu’une classe non thread-safe, mais avec un niveau de sécurité plus élevé. L’encapsulation de l’objet de synchronisation et de l’objet d’accès de synchronisation dans la classe de la ressource offre tous les avantages de la programmation entièrement thread-safe sans l’inconvénient de conserver le code de synchronisation.
 
-L’exemple de code suivant illustre cette méthode à l’aide d’un membre de données, `m_CritSection` (de type `CCriticalSection`), déclaré dans la classe de ressources partagées et un objet `CSingleLock`. La synchronisation de la ressource partagée (dérivée de `CWinThread`) est tentée en créant un objet `CSingleLock` à l’aide de l’adresse de l’objet `m_CritSection`. Une tentative de verrouillage de la ressource a été effectuée et, une fois obtenue, le travail est effectué sur l’objet partagé. Une fois le travail terminé, la ressource est déverrouillée à l’aide d’un appel à `Unlock`.
+L’exemple de code suivant illustre cette méthode à l’aide d’un membre de données, `m_CritSection` (de type `CCriticalSection` ), déclaré dans la classe de ressources partagées et un `CSingleLock` objet. La synchronisation de la ressource partagée (dérivée de `CWinThread` ) est tentée en créant un `CSingleLock` objet à l’aide de l’adresse de l' `m_CritSection` objet. Une tentative de verrouillage de la ressource a été effectuée et, une fois obtenue, le travail est effectué sur l’objet partagé. Une fois le travail terminé, la ressource est déverrouillée à l’aide d’un appel à `Unlock` .
 
 ```cpp
 CSingleLock singleLock(&m_CritSection);
@@ -50,7 +51,7 @@ singleLock.Unlock();
 ```
 
 > [!NOTE]
-> `CCriticalSection`, contrairement à d’autres classes de synchronisation MFC, n’a pas l’option d’une demande de verrou chronométré. La période d’attente pour qu’un thread devienne libre est infinie.
+> `CCriticalSection`, contrairement aux autres classes de synchronisation MFC, n’a pas l’option d’une demande de verrou chronométré. La période d’attente pour qu’un thread devienne libre est infinie.
 
 L’inconvénient de cette approche est que la classe sera légèrement plus lente que la même classe sans les objets de synchronisation ajoutés. De même, s’il existe un risque que plusieurs threads puissent supprimer l’objet, l’approche fusionnée ne fonctionnera peut-être pas toujours. Dans ce cas, il est préférable de gérer des objets de synchronisation distincts.
 
@@ -58,4 +59,4 @@ Pour plus d’informations sur la détermination de la classe de synchronisation
 
 ## <a name="see-also"></a>Voir aussi
 
-[Multithreading à l’aide de C++ et de MFC](multithreading-with-cpp-and-mfc.md)
+[Multithreading à l'aide de C++ et de MFC](multithreading-with-cpp-and-mfc.md)

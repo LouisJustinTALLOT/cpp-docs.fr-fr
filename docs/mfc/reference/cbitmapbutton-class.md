@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CBitmapButton, classe'
 title: CBitmapButton, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 0cf4554f86f4a9275e4d96b3db519fde7fb05b22
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 93d114dce87aba4643af427f3726a5ffab004b77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122705"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton, classe
 
@@ -49,7 +50,7 @@ class CBitmapButton : public CButton
 
 ## <a name="remarks"></a>Notes
 
-`CBitmapButton`les objets contiennent jusqu’à quatre bitmaps, qui contiennent des images pour les différents États qu’un bouton peut supposer : haut (ou normal), vers le haut (ou sélectionné), focus et désactivé. Seule la première bitmap est requise ; les autres sont facultatifs.
+`CBitmapButton` les objets contiennent jusqu’à quatre bitmaps, qui contiennent des images pour les différents États qu’un bouton peut supposer : haut (ou normal), vers le haut (ou sélectionné), focus et désactivé. Seule la première bitmap est requise ; les autres sont facultatifs.
 
 Les images de bouton bitmap incluent la bordure autour de l’image, ainsi que l’image elle-même. La bordure joue généralement un rôle dans la représentation de l’état du bouton. Par exemple, l’image bitmap de l’État ciblé est généralement similaire à celle de l’État up, mais avec un rectangle en pointillés à partir de la bordure ou d’une ligne pleine épaisse à la bordure. L’image bitmap de l’état désactivé est généralement similaire à celle de l’État haut, mais elle présente un contraste plus faible (par exemple, une sélection de menu grisée ou grisée).
 
@@ -112,7 +113,7 @@ Pour plus d’informations sur `CBitmapButton` , consultez [contrôles](../../mf
 
 **En-tête :** afxext. h
 
-## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton :: autoload
+## <a name="cbitmapbuttonautoload"></a><a name="autoload"></a> CBitmapButton :: autoload
 
 Associe un bouton dans une boîte de dialogue à un objet de la `CBitmapButton` classe, charge le ou les bitmaps par nom et dimensionne le bouton pour l’adapter à la bitmap.
 
@@ -130,7 +131,7 @@ ID de contrôle du bouton.
 *pParent*<br/>
 Pointeur vers l’objet qui possède le bouton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -142,7 +143,7 @@ Utilisez la `AutoLoad` fonction pour initialiser un bouton owner-draw dans une b
 
 [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]
 
-## <a name="cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>CBitmapButton :: CBitmapButton
+## <a name="cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a> CBitmapButton :: CBitmapButton
 
 Crée un objet `CBitmapButton`.
 
@@ -158,7 +159,7 @@ Après avoir créé l' `CBitmapButton` objet C++, appelez [CButton :: Create](.
 
 [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]
 
-## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton :: LoadBitmaps
+## <a name="cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a> CBitmapButton :: LoadBitmaps
 
 Utilisez cette fonction lorsque vous souhaitez charger des images bitmap identifiées par leurs noms de ressources ou numéros d’ID, ou lorsque vous ne pouvez pas utiliser la `AutoLoad` fonction car, par exemple, vous créez un bouton bitmap qui ne fait pas partie d’une boîte de dialogue.
 
@@ -202,7 +203,7 @@ Spécifie le numéro d’ID de ressource de la ressource bitmap pour l’état d
 *nIDBitmapResourceDisabled*<br/>
 Spécifie le numéro d’ID de ressource de la ressource bitmap pour l’état désactivé d’un bouton bitmap. Peut être 0.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -210,7 +211,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]
 
-## <a name="cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton :: SizeToContent
+## <a name="cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a> CBitmapButton :: SizeToContent
 
 Appelez cette fonction pour redimensionner un bouton bitmap à la taille de l’image bitmap.
 

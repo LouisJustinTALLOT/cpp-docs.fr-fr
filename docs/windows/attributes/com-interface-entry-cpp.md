@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : com_interface_entry (C++)'
 title: com_interface_entry (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 8339afb97df57f5080629dfed08823c5c091c5a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f182149eeac887292391cbb06f625aff261e91f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114883"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -103,14 +104,14 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
-|**Repeatable Read**|Oui|
+|**Renouvelable**|Oui|
 |**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass` , `progid` ou `vi_progid` .|
-|**Attributs non valides**|Aucun|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

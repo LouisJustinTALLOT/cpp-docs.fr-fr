@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : symboles Win32 prédéfinis'
 title: Symboles Win32 prédéfinis
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: f69dddcb8b6a9a390f80ab4d0112e19c4e8d32e1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ed6d41bc82a30a40d157c2e23b999e430d505fa9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148770"
 ---
 # <a name="win32-predefined-symbols"></a>Symboles Win32 prédéfinis
 
@@ -34,7 +35,7 @@ Ces symboles sont définis dans les fichiers d’en-tête Win32 et prennent en c
 |IDS_APP_TITLE|chaîne Nom de l’application actuelle|
 |IDYES|régulation Boîte de dialogue, bouton Oui|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

@@ -1,5 +1,6 @@
 ---
-title: Mappages de texte générique dans Tchar. h
+description: En savoir plus sur les mappages de Generic-Text dans Tchar. h
+title: Mappages de Generic-Text dans Tchar. h
 ms.date: 11/04/2016
 helpviewer_keywords:
 - mapping generic-text
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: c317e7d67cc3d086dacbe0f24b0103d389afefda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f083dc03eab7db25b54955d8d34a13f2b5b7197b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118346"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Mappages de texte générique dans Tchar. h
+# <a name="generic-text-mappings-in-tcharh"></a>Mappages de Generic-Text dans Tchar. h
 
 Pour simplifier le transport de code pour une utilisation internationale, la bibliothèque Runtime Microsoft fournit des mappages de texte générique spécifiques à Microsoft pour de nombreux types de données, routines et autres objets. Vous pouvez utiliser ces mappages, qui sont définis dans Tchar. h, pour écrire du code générique qui peut être compilé pour les jeux de caractères codés sur un octet, multioctets ou Unicode, en fonction d’une constante de manifeste que vous définissez à l’aide d’une `#define` instruction. Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.
 
@@ -45,16 +46,16 @@ Par exemple, la fonction de texte générique `_tcsrev` , qui est définie dans 
 
 ### <a name="generic-text-data-type-mappings"></a>Mappages de types de données de texte générique
 
-|Texte générique<br /> Nom du type de données|_UNICODE &<br /> _MBCS non définie|_MBCS<br /> Défini|_UNICODE<br /> Défini|
+|Generic-Text<br /> Nom du type de données|_UNICODE &<br /> _MBCS non définie|_MBCS<br /> Défini|_UNICODE<br /> Défini|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**`char`**|**`char`**|**`wchar_t`**|
 |`_TINT`|**`int`**|**`unsigned int`**|`wint_t`|
 |`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
 |`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
 |`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
-|`_T` ou `_TEXT`|Aucun effet (supprimé par le préprocesseur)|Aucun effet (supprimé par le préprocesseur)|`L`(convertit le caractère ou la chaîne suivant en son équivalent Unicode)|
+|`_T` ou `_TEXT`|Aucun effet (supprimé par le préprocesseur)|Aucun effet (supprimé par le préprocesseur)|`L` (convertit le caractère ou la chaîne suivant en son équivalent Unicode)|
 
-Pour obtenir la liste des mappages de texte générique des routines, des variables et d’autres objets, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans la référence de la bibliothèque Runtime.
+Pour obtenir la liste des mappages de texte générique des routines, des variables et d’autres objets, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans la référence de la bibliothèque de Run-Time.
 
 > [!NOTE]
 > N’utilisez pas la `str` famille de fonctions avec des chaînes Unicode, qui sont susceptibles de contenir des octets null incorporés. De même, n’utilisez pas la `wcs` famille de fonctions avec des chaînes MBCS (ou SBCS).

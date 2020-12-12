@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l'
 title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 4/2/2020
 api_name:
@@ -59,12 +60,12 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: 1106a3882fd9c6a6c2e9d434a6f49221ff6d99d0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28db01c76da7789b5887d5209d133a63dede8d4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117521"
 ---
 # <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
@@ -86,17 +87,17 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 *value*<br/>
 Valeur de type double, long double ou float produite par la conversion de la chaîne en une valeur à virgule flottante. Ces valeurs sont encapsulées dans une structure.
 
-*Str*<br/>
+*str*<br/>
 Chaîne à analyser en vue de sa conversion en une valeur à virgule flottante.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Retourne 0 en cas de réussite. Les codes d’erreur possibles sont **_UNDERFLOW** ou **_OVERFLOW**, qui sont définis dans le \<fichier d’en-tête Math. h>.
+Retourne 0 en cas de réussite. Les codes d’erreur possibles sont **_UNDERFLOW** ou **_OVERFLOW**, qui sont définis dans le fichier d’en-tête \<math.h> .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions convertissent une chaîne en une valeur à virgule flottante. La différence entre ces fonctions et la famille de fonctions **atof** est que ces fonctions ne génèrent pas de code à virgule flottante et n’entraînent pas d’exceptions matérielles. Au lieu de cela, les conditions d’erreur sont signalées en tant que codes d’erreur.
 

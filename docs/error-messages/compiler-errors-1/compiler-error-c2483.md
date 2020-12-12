@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2483'
 title: Erreur du compilateur C2483
 ms.date: 09/15/2017
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2483
 ms.assetid: 5762b325-914b-442d-a604-e4617ba04038
-ms.openlocfilehash: 20b08c0d2cd89224ed3d3b8b34915deb947b0b4b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5edafbbb0852eb622f34698421ce9a2b794f9209
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97123875"
 ---
 # <a name="compiler-error-c2483"></a>Erreur du compilateur C2483
 
 >'*identificateur*' : un objet avec un constructeur ou un destructeur ne peut pas être déclaré’thread'
 
-Ce message d’erreur est obsolète dans Visual Studio 2015 et versions ultérieures. Dans les versions précédentes, les variables déclarées avec l’attribut `thread` ne peuvent pas être initialisées avec un constructeur ou une autre expression qui requiert une évaluation au moment de l’exécution. Une expression statique est requise pour initialiser `thread` données.
+Ce message d’erreur est obsolète dans Visual Studio 2015 et versions ultérieures. Dans les versions précédentes, les variables déclarées avec l' `thread` attribut ne peuvent pas être initialisées avec un constructeur ou une autre expression qui requiert une évaluation au moment de l’exécution. Une expression statique est requise pour initialiser les `thread` données.
 
 ## <a name="example"></a>Exemple
 

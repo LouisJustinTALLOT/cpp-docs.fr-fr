@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation de C ou C++ dans les blocs __asm'
 title: Utilisation de C ou C++ dans les blocs __asm
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 05e63d666f3fc39126d6f48e8fc523c4a02e76df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fc1987339fcbabee07e2b626c3ae764c3d5e2e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121925"
 ---
 # <a name="using-c-or-c-in-__asm-blocks"></a>Utilisation de C ou C++ dans les blocs __asm
 
@@ -35,7 +36,7 @@ Un **`__asm`** bloc peut utiliser les éléments de langage suivants :
 
 - Macros et directives de préprocesseur
 
-- __ / \* Commentaires \* ( / __ et __//__ )
+- __/ \* Commentaires \* ( /__ et __//__ )
 
 - Noms de types (partout où un type MASM est autorisé)
 

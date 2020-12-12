@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les tailles de type et de variable dans l’assembly inline
 title: Tailles de type et de variable dans l'assembly inline
 ms.date: 08/30/2018
 ms.topic: reference
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - variables, type
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-ms.openlocfilehash: 3e244aaa8ea849b558b77c3f1569820079f6f76c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0d6822537f542c159c40c0ed6f14dca93aa36525
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122016"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Tailles de type et de variable dans l'assembly inline
 
 **Spécifique à Microsoft**
 
-Les opérateurs de **longueur**, de **taille**et de **type** ont une signification limitée dans l’assembly inline. Ils ne peuvent pas du tout être utilisés avec l'opérateur `DUP` (car vous ne pouvez pas définir des données avec des directives ou des opérateurs MASM). Toutefois, vous pouvez les utiliser pour rechercher la taille des variables ou types C ou C++ :
+Les opérateurs de **longueur**, de **taille** et de **type** ont une signification limitée dans l’assembly inline. Ils ne peuvent pas du tout être utilisés avec l'opérateur `DUP` (car vous ne pouvez pas définir des données avec des directives ou des opérateurs MASM). Toutefois, vous pouvez les utiliser pour rechercher la taille des variables ou types C ou C++ :
 
 - L’opérateur de **longueur** peut retourner le nombre d’éléments d’un tableau. Il retourne la valeur 1 pour les variables non-tableau.
 

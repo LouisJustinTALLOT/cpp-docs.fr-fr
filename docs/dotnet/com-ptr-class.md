@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : com ::p tr (classe)'
 title: com::ptr, classe
 ms.date: 01/16/2019
 ms.topic: reference
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 9cb0ad23450d06bb314b0e2d6fa1d01784d633e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73016d425d06ecbda12702afc1793a4bab81ccc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124395"
 ---
 # <a name="comptr-class"></a>com::ptr, classe
 
@@ -198,7 +199,7 @@ int main() {
 
 **Espace de noms** msclr, :: com
 
-## <a name="ptrptr"></a><a name="ptr"></a>ptr ::p tr
+## <a name="ptrptr"></a><a name="ptr"></a> ptr ::p tr
 
 Retourne un pointeur vers l’objet COM détenu.
 
@@ -285,7 +286,7 @@ int main() {
 }
 ```
 
-## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr :: ~ PTR
+## <a name="ptrptr"></a><a name="tilde-ptr"></a> ptr :: ~ PTR
 
 Détruit un `com::ptr` .
 
@@ -360,7 +361,7 @@ int main() {
 }
 ```
 
-## <a name="ptrattach"></a><a name="attach"></a>ptr :: Attach
+## <a name="ptrattach"></a><a name="attach"></a> ptr :: Attach
 
 Joint un objet COM à un `com::ptr` .
 
@@ -461,7 +462,7 @@ int main() {
 }
 ```
 
-## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr :: CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a> ptr :: CreateInstance
 
 Crée une instance d’un objet COM dans un `com::ptr` .
 
@@ -516,7 +517,7 @@ Pointeur vers l’interface IUnknown de l’objet d’agrégation (contrôle IUn
 Contexte dans lequel le code qui gère l’objet nouvellement créé s’exécutera. Les valeurs sont extraites de l' `CLSCTX` énumération. Si `cls_context` n’est pas spécifié, la valeur CLSCTX_ALL est utilisée.
 
 *rclsid*<br/>
-`CLSID`associé aux données et au code qui seront utilisés pour créer l’objet.
+`CLSID` associé aux données et au code qui seront utilisés pour créer l’objet.
 
 ### <a name="exceptions"></a>Exceptions
 
@@ -526,7 +527,7 @@ Cette fonction appelle `CoCreateInstance` et utilise <xref:System.Runtime.Intero
 
 ### <a name="remarks"></a>Notes
 
-`CreateInstance`utilise `CoCreateInstance` pour créer une nouvelle instance de l’objet spécifié, identifiée à partir d’un ProgID ou d’un CLSID. Le `com::ptr` référence l’objet nouvellement créé et libère automatiquement toutes les références détenues lors de la destruction.
+`CreateInstance` utilise `CoCreateInstance` pour créer une nouvelle instance de l’objet spécifié, identifiée à partir d’un ProgID ou d’un CLSID. Le `com::ptr` référence l’objet nouvellement créé et libère automatiquement toutes les références détenues lors de la destruction.
 
 ### <a name="example"></a>Exemple
 
@@ -579,7 +580,7 @@ int main() {
 }
 ```
 
-## <a name="ptrdetach"></a><a name="detach"></a>ptr ::D Etach
+## <a name="ptrdetach"></a><a name="detach"></a> ptr ::D Etach
 
 Donne la propriété de l’objet COM, en retournant un pointeur vers l’objet.
 
@@ -599,7 +600,7 @@ En interne, `QueryInterface` est appelé sur l’objet com détenu et toute erre
 
 ### <a name="remarks"></a>Notes
 
-`Detach`Ajoute d’abord une référence à l’objet COM pour le compte de l’appelant, puis libère toutes les références détenues par le `com::ptr` .  L’appelant doit finalement libérer l’objet retourné pour le détruire.
+`Detach` Ajoute d’abord une référence à l’objet COM pour le compte de l’appelant, puis libère toutes les références détenues par le `com::ptr` .  L’appelant doit finalement libérer l’objet retourné pour le détruire.
 
 ### <a name="example"></a>Exemple
 
@@ -684,7 +685,7 @@ int main() {
 }
 ```
 
-## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr :: GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a> ptr :: GetInterface
 
 Retourne un pointeur vers l’objet COM détenu.
 
@@ -826,7 +827,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr :: QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a> ptr :: QueryInterface
 
 Interroge l’objet COM détenu pour une interface et joint le résultat à un autre objet `com::ptr` .
 
@@ -957,7 +958,7 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="ptrrelease"></a><a name="release"></a>ptr :: Release
+## <a name="ptrrelease"></a><a name="release"></a> ptr :: Release
 
 Libère toutes les références appartenant à l’objet COM.
 
@@ -1045,7 +1046,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>ptr :: Operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a> ptr :: Operator-&gt;
 
 Opérateur d’accès aux membres, utilisé pour appeler des méthodes sur l’objet COM détenu.
 
@@ -1187,7 +1188,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptroperator"></a><a name="operator-assign"></a>ptr :: Operator =
+## <a name="ptroperator"></a><a name="operator-assign"></a> ptr :: Operator =
 
 Joint un objet COM à un `com::ptr` .
 
@@ -1292,7 +1293,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr :: operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a> ptr :: operator bool
 
 Opérateur à utiliser `com::ptr` dans une expression conditionnelle.
 
@@ -1363,7 +1364,7 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="ptroperator"></a><a name="operator-logical-not"></a>ptr :: Operator !
+## <a name="ptroperator"></a><a name="operator-logical-not"></a> ptr :: Operator !
 
 Pour déterminer si l’objet COM détenu n’est pas valide.
 

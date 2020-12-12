@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : composant du Registre ATL (registraire)'
 title: Composant de registre ATL (Inscription)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,27 +11,27 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-ms.openlocfilehash: 9b4492ea393c01b3fa382828d3ca6097d52493f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b02d1d8bc1584c3f17349b8e3c0f9e8a3e98cb4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317358"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148614"
 ---
 # <a name="atl-registry-component-registrar"></a>Composant de registre ATL (Inscription)
 
-Le registraire ATL offre un accès optimisé au registre du système grâce à une interface personnalisée. Le registraire est libre et permet un lien statique de code pour les clients CMD.
+Le Bureau d’enregistrement ATL fournit un accès optimisé au registre système par le biais d’une interface personnalisée. Le Bureau d’enregistrement est libre de thread et permet la liaison statique du code pour les clients C++.
 
 > [!NOTE]
-> Le code source du registraire ATL peut être trouvé dans atlmfc-inclu-atliface.h.
+> Le code source pour le Bureau d’enregistrement ATL se trouve dans atlmfc\include\atliface.h.
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Création de scripts registraires](../atl/creating-registrar-scripts.md)<br/>
-Un guide pour créer des scripts de registraire. Comprend des sujets sur la syntaxe BNF, l’analyse des arbres, les exemples de script de registre, l’utilisation de paramètres remplaçables et l’invocation des scripts.
+[Création de scripts d’inscription](../atl/creating-registrar-scripts.md)<br/>
+Guide de création de scripts d’inscription. Contient des rubriques sur la syntaxe BNF, les arborescences d’analyse, les exemples de scripts de Registre, l’utilisation de paramètres remplaçables et l’appel de scripts.
 
-[Mise en place d’un lien statique vers le Code registraire (C seulement)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
-Répertorie les étapes pour configurer un lien statique avec le registraire.
+[Configuration d’un lien statique vers le code d’inscription (C++ uniquement)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
+Répertorie les étapes pour configurer la liaison statique au bureau d’enregistrement.
 
 ## <a name="related-sections"></a>Sections connexes
 

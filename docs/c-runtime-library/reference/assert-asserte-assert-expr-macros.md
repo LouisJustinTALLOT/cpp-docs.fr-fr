@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _ASSERT, _ASSERTE _ASSERT_EXPR macros'
 title: _ASSERT, _ASSERTE, _ASSERT_EXPR (macros)
 ms.date: 11/04/2016
 api_location:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-ms.openlocfilehash: d07fbe5de7afdc62f952727660447c5e4f0b78aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28c90d2c92feb298b2416633e783c5d0a87e4bd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117573"
 ---
 # <a name="_assert-_asserte-_assert_expr-macros"></a>_ASSERT, _ASSERTE, _ASSERT_EXPR (macros)
 
@@ -60,7 +61,7 @@ Large chaîne à afficher dans le cadre du rapport.
 
 Les macros **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** fournissent une application avec un mécanisme propre et simple pour vérifier les hypothèses pendant le processus de débogage. Elles sont très flexibles, car vous n’avez pas besoin de les placer entre des instructions `#ifdef` pour les empêcher d’être appelées dans une version commerciale d’une application. Cette flexibilité s’obtient grâce à la macro [_DEBUG](../../c-runtime-library/debug.md) . **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** sont disponibles uniquement quand **_DEBUG** est défini au moment de la compilation. Lorsque **_DEBUG** n’est pas défini, les appels à ces macros sont supprimés lors du prétraitement.
 
-**_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** évaluent leur argument *booleanExpression* et, lorsque le résultat est **`false`** (0), il affiche un message de diagnostic et appelle [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) pour générer un rapport de débogage. La macro **_ASSERT** imprime un message de diagnostic simple, **_ASSERTE** contient une représentation sous forme de chaîne de l’expression qui a échoué dans le message, et **_ASSERT_EXPR** contient la chaîne de *message* dans le message de diagnostic. Ces macros ne font rien lorsque *booleanExpression* a une valeur différente de zéro.
+**_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** évaluent leur argument *booleanExpression* et, lorsque le résultat est **`false`** (0), il affiche un message de diagnostic et appelle [_CrtDbgReportW](crtdbgreport-crtdbgreportw.md) pour générer un rapport de débogage. La macro **_ASSERT** imprime un message de diagnostic simple,  **_ASSERTE** contient une représentation sous forme de chaîne de l’expression qui a échoué dans le message, et **_ASSERT_EXPR** contient la chaîne de *message* dans le message de diagnostic. Ces macros ne font rien lorsque *booleanExpression* a une valeur différente de zéro.
 
 **_ASSERT_EXPR**, **_ASSERT** et **_ASSERTE** appeler **_CrtDbgReportW**, ce qui entraîne une sortie en caractères larges. **_ASSERTE** imprime correctement les caractères Unicode dans *booleanExpression* et **_ASSERT_EXPR** affiche les caractères Unicode dans le *message*.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2594'
 title: Erreur du compilateur C2594
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2594
 ms.assetid: 68cd708f-266e-44b0-a211-3e3ab63b11bf
-ms.openlocfilehash: ade657f9ada2a2249d2f96b7caada7b9719195d1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 972fb58624a7f2ba185c34f2e58fd9f2dc15217d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120150"
 ---
 # <a name="compiler-error-c2594"></a>Erreur du compilateur C2594
 

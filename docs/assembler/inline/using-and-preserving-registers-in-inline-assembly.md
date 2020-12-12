@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : utilisation et préservation des registres dans un assembly inline'
 title: Utilisation et conservation des registres dans un assembly inline
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - registers, inline assembly
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-ms.openlocfilehash: 99ca0093bb27e859854dfd1ca64addea923e5a5c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36758a313044190c9ee2f2a9b094325821d87635
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122003"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>Utilisation et conservation des registres dans un assembly inline
 

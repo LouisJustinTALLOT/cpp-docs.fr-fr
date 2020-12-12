@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : constantes de tas'
 title: Constantes de tas
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - _HEAPBADPTR constants
 - heap constants
 ms.assetid: 3f751bb9-2dc4-486f-b5f5-9061c96d3754
-ms.openlocfilehash: 44c7a280ebffd0073f1dfb3a0a3cbdbd2efee0fb
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: da90be1855f9a4714bc2d441651ac721ede84c1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745371"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120693"
 ---
 # <a name="heap-constants"></a>Constantes de tas
 
@@ -38,7 +39,7 @@ ms.locfileid: "57745371"
 #include <malloc.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Ces constantes donnent la valeur de retour indiquant l’état du tas.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CBaseTabbedPane'
 title: CBaseTabbedPane, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 21f2821392d2b9e71837997f5a9a10ab80ba073f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 980f2691aa9e129b0e47070d7ff095d486c45b65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838670"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122744"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane, classe
 
@@ -150,7 +151,7 @@ Pour plus d’informations sur la création de volets à onglets, consultez clas
 
 `CBaseTabbedPane`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxBaseTabbedPane. h
 
@@ -260,7 +261,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bActiveTabOnly*<br/>
-dans Lorsque vous convertissez un volet à onglets, spécifiez TRUE pour convertir uniquement l’onglet actif. spécifiez FALSe pour convertir tous les onglets dans le volet.
+dans Lorsque vous convertissez un volet à onglets, spécifiez TRUE pour convertir uniquement l’onglet actif. Spécifiez FALSe pour convertir tous les onglets dans le volet.
 
 ## <a name="cbasetabbedpanedetachpane"></a><a name="detachpane"></a> CBaseTabbedPane ::D etachPane
 
@@ -444,7 +445,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="remarks"></a>Notes
 
-Si la gestion cohérente des tailles de volet minimales est active ( [CPane :: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), la *taille* est remplie avec la taille minimale autorisée pour l’onglet actif. sinon, la *taille* est remplie avec la valeur de retour de [CPane :: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
+Si la gestion cohérente des tailles de volet minimales est active ( [CPane :: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), la *taille* est remplie avec la taille minimale autorisée pour l’onglet actif. Sinon, la *taille* est remplie avec la valeur de retour de [CPane :: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
 
 ## <a name="cbasetabbedpanegetpaneicon"></a><a name="getpaneicon"></a> CBaseTabbedPane :: GetPaneIcon
 
@@ -461,7 +462,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="remarks"></a>Notes
 
-Si la gestion cohérente des tailles de volet minimales est active ( [CPane :: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), la *taille* est remplie avec la taille minimale autorisée pour l’onglet actif. sinon, la *taille* est remplie avec la valeur de retour de [CPane :: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
+Si la gestion cohérente des tailles de volet minimales est active ( [CPane :: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), la *taille* est remplie avec la taille minimale autorisée pour l’onglet actif. Sinon, la *taille* est remplie avec la valeur de retour de [CPane :: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
 
 ## <a name="cbasetabbedpanegetpanelist"></a><a name="getpanelist"></a> CBaseTabbedPane :: GetPaneList
 

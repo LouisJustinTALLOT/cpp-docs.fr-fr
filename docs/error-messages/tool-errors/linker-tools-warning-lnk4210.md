@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : avertissement des outils Éditeur de liens LNK4210'
 title: Avertissement des outils Éditeur de liens LNK4210
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,39 +7,39 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
-ms.openlocfilehash: 75376129ce0033c717a4da3074cee9de132d357d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7634952df026dc664aed2a2f9625a7380b3a38b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150603"
 ---
 # <a name="linker-tools-warning-lnk4210"></a>Avertissement des outils Éditeur de liens LNK4210
 
-> section *section* existe ; il se peut qu’il y ait des terminateurs ou des initialiseurs static non gérés
+> la *section de section existe ;* Il peut y avoir des initialiseurs statiques non gérés ou des terminateurs
 
 ## <a name="remarks"></a>Notes
 
-Du code a introduit des terminateurs ou des initialiseurs statiques, mais le code de démarrage de bibliothèque VCRuntime ou son équivalent (qui doit exécuter les terminateurs ou des initialiseurs static) n’est pas exécuté lorsque l’application démarre. Voici quelques exemples de code qui requiert des terminateurs ou des initialiseurs statiques :
+Du code a introduit des initialiseurs ou des terminateurs statiques, mais le code de démarrage de la bibliothèque VCRuntime ou son équivalent (qui doit exécuter les initialiseurs ou les terminateurs statiques) n’est pas exécuté au démarrage de l’application. Voici quelques exemples de code qui requièrent des initialiseurs statiques ou des terminateurs :
 
-- Variable de classe mondiale avec un constructeur, un destructeur ou une table de fonctions virtuelles.
+- Variable de classe globale avec un constructeur, un destructeur ou une table de fonctions virtuelles.
 
-- Variable globale initialisée avec une constante au moment de compilation.
+- Variable globale initialisée avec une constante de non-compilation.
 
 Pour résoudre ce problème, essayez l’une des opérations suivantes :
 
-- Supprimez tout le code avec initialiseurs statiques.
+- Supprimez tout le code avec des initialiseurs statiques.
 
-- N’utilisez pas [/NOENTRY](../../build/reference/noentry-no-entry-point.md). Après avoir supprimé /NOENTRY, vous devrez peut-être également supprimer [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) à partir de votre ligne de commande de l’éditeur de liens.
+- N’utilisez pas [/noentry](../../build/reference/noentry-no-entry-point.md). Après avoir supprimé/NOENTRY, vous devrez peut-être également supprimer [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) de la ligne de commande de l’éditeur de liens.
 
-- Si votre build utilise/MT, ajoutez libcmt.lib, libvcruntime.lib et libucrt.lib à votre ligne de commande de l’éditeur de liens. Si votre build utilise /MTd, ajoutez libcmtd.lib, vcruntimed.lib et libucrtd.lib.
+- Si votre build utilise/MT, ajoutez LIBCMT. lib, libvcruntime. lib et libucrt. lib à la ligne de commande de l’éditeur de liens. Si votre build utilise/MTd, ajoutez LIBCMTD. lib, vcruntimed. lib et libucrtd. lib.
 
-- Lors du passage de/CLR : pure compilation vers/CLR, supprimez le [/Entry](../../build/reference/entry-entry-point-symbol.md) option depuis la ligne de l’éditeur de liens. Cela permet l’initialisation CRT et initialiseurs statiques puissent être exécutés au démarrage de l’application. Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+- Quand vous passez de la compilation/CLR : pure à/CLR, supprimez l’option [/entry](../../build/reference/entry-entry-point-symbol.md) de la ligne de l’éditeur de liens. Cela active l’initialisation CRT et permet l’exécution des initialiseurs statiques au démarrage de l’application. L’option de compilateur **/clr : pure** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017.
 
-Le [/GS](../../build/reference/gs-buffer-security-check.md) option du compilateur requiert une initialisation par le `__security_init_cookie` (fonction). Cette initialisation est fournie par défaut dans le code de démarrage de bibliothèque VCRuntime qui s’exécute dans `_DllMainCRTStartup`.
+L’option de compilateur [/GS](../../build/reference/gs-buffer-security-check.md) requiert l’initialisation par la `__security_init_cookie` fonction. Cette initialisation est fournie par défaut dans le code de démarrage de la bibliothèque VCRuntime qui s’exécute dans `_DllMainCRTStartup` .
 
-- Si votre projet est généré à l’aide / Entry, et si/Entry est passé une fonction autre que `_DllMainCRTStartup`, la fonction doit appeler `_CRT_INIT` pour initialiser la bibliothèque CRT. Cet appel seul ne suffit pas si votre DLL utilise/GS, nécessite les initialiseurs statiques ou est appelée dans le contexte du code MFC ou ATL. Consultez [DLL et Visual C++ comportement de la bibliothèque du run-time](../../build/run-time-library-behavior.md) pour plus d’informations.
+- Si votre projet est généré à l’aide de/ENTRY et si/ENTRY reçoit une fonction autre que `_DllMainCRTStartup` , la fonction doit appeler `_CRT_INIT` pour initialiser la bibliothèque CRT. Cet appel seul n’est pas suffisant si votre DLL utilise/GS, requiert des initialiseurs statiques ou est appelé dans le contexte de code MFC ou ATL. Pour plus d’informations, consultez [dll et comportement de la bibliothèque runtime Visual C++](../../build/run-time-library-behavior.md) .
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Définition des options de l’Éditeur de liens](../../build/reference/linking.md)
+- [Définition des options de l'Éditeur de liens](../../build/reference/linking.md)

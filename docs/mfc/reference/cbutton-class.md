@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CButton, classe'
 title: CButton, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 7e2156c7fba6d5c621ab9e73b4739be45941fcc5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: af7b9bec8298942bcb414e83be24257dd62652cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122575"
 ---
 # <a name="cbutton-class"></a>CButton, classe
 
@@ -153,7 +154,7 @@ Si vous voulez gérer les messages de notification Windows envoyés par un contr
 
 Chaque entrée de la table des messages prend la forme suivante :
 
-**Sur \_ ** _Notification_ **(** _ID_, _memberFxn_ **)**
+**Sur \_** _Notification_ **(** _ID_, _memberFxn_ **)**
 
 où *ID* spécifie l’ID de fenêtre enfant du contrôle qui envoie la notification et *memberFxn* est le nom de la fonction membre parente que vous avez écrite pour gérer la notification.
 
@@ -228,7 +229,7 @@ Spécifie la fenêtre parente du contrôle Button, généralement `CDialog` . Il
 *nID*<br/>
 Spécifie l’ID du contrôle bouton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -285,7 +286,7 @@ Appelez cette fonction membre pour obtenir le handle d’une image bitmap, préc
 HBITMAP GetBitmap() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’une bitmap. NULL si aucune bitmap n’est précédemment spécifiée.
 
@@ -301,7 +302,7 @@ Récupère des informations sur le style du contrôle bouton.
 UINT GetButtonStyle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne les styles de bouton pour cet `CButton` objet. Cette fonction retourne uniquement les valeurs de style [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) , pas les autres styles de fenêtre.
 
@@ -317,7 +318,7 @@ Récupère l’état d’activation d’une case d’option ou d’une case à c
 int GetCheck() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour d’un contrôle bouton créé avec le style BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON ou BS_3STATE est l’une des valeurs suivantes :
 
@@ -341,7 +342,7 @@ Appelez cette fonction membre pour obtenir le handle d’un curseur, précédemm
 HCURSOR GetCursor();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’une image de curseur. NULL si aucun curseur n’est spécifié précédemment.
 
@@ -357,7 +358,7 @@ Appelez cette fonction membre pour obtenir le handle d’une icône, précédemm
 HICON GetIcon() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d'une icône. NULL si aucune icône n’est précédemment spécifiée.
 
@@ -378,7 +379,7 @@ BOOL GetIdealSize(SIZE* psize);
 *psize*<br/>
 Pointeur vers la taille actuelle du bouton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -399,7 +400,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 *pbuttonImagelist*<br/>
 Pointeur vers la liste d’images de l' `CButton` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -427,7 +428,7 @@ BOOL GetNote(
 *cchNote*\
 [in, out] Pointeur vers une variable de type entier non signé. Lorsque cette méthode est appelée, la variable contient la taille de la mémoire tampon spécifiée par le paramètre *lpszNote* . Lorsque cette méthode est retournée, si la valeur de retour est TRUE, la variable contient la taille de la note associée au contrôle de lien de commande actuel. Si la valeur de retour est FALSe, la variable contient la taille de mémoire tampon requise pour contenir la note.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Dans la première surcharge, objet [CString](../../atl-mfc-shared/using-cstring.md) qui contient le texte de note associé au contrôle de lien de commande actuel.
 
@@ -449,7 +450,7 @@ Récupère la longueur du texte de la note pour le contrôle de lien de commande
 UINT GetNoteLength() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur du texte de la note, en caractères Unicode 16 bits, pour le contrôle de lien de commande actuel.
 
@@ -467,7 +468,7 @@ Récupère le glyphe associé au contrôle de bouton partagé actuel.
 TCHAR GetSplitGlyph() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Caractère de glyphe associé au contrôle de bouton partagé actuel.
 
@@ -487,7 +488,7 @@ Récupère la [liste d’images](../../mfc/reference/cimagelist-class.md) pour l
 CImageList* GetSplitImageList() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) .
 
@@ -510,7 +511,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 *pInfo*\
 à Pointeur vers une structure [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) qui reçoit des informations sur le contrôle bouton partagé actuel. L’appelant est chargé d’allouer la structure.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -533,7 +534,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 *pSize*\
 à Pointeur vers une structure de [taille](/windows/win32/api/windef/ns-windef-size) qui reçoit la description d’un rectangle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -553,7 +554,7 @@ Récupère les styles de bouton partagé qui définissent le contrôle bouton pa
 UINT GetSplitStyle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Combinaison d’opérations de bits de styles de bouton partagé. Pour plus d’informations, consultez le `uSplitStyle` membre de la structure [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
 
@@ -573,7 +574,7 @@ Récupère l’état d’un contrôle bouton.
 UINT GetState() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Champ de bits qui contient la combinaison de valeurs qui indiquent l’état actuel d’un contrôle bouton. Le tableau suivant répertorie les valeurs possibles.
 
@@ -606,7 +607,7 @@ BOOL GetTextMargin(RECT* pmargin);
 *pmargin*<br/>
 Pointeur vers la marge de texte de l' `CButton` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la marge de texte.
 
@@ -631,7 +632,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 *hBitmap*<br/>
 Handle d’une bitmap.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’une bitmap précédemment associée au bouton.
 
@@ -725,7 +726,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 *hCursor*<br/>
 Handle d’un curseur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’un curseur précédemment associé au bouton.
 
@@ -764,7 +765,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 *fDropDown*\
 dans TRUE pour définir BST_DROPDOWNPUSHED État ; Sinon, FALSe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -799,7 +800,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 *fElevationRequired*\
 dans TRUE pour définir l' `elevation required` État ; sinon, false.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -822,7 +823,7 @@ HICON SetIcon(HICON hIcon);
 *hIcon*<br/>
 Handle d’une icône.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d’une icône précédemment associée au bouton.
 
@@ -861,7 +862,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 *pbuttonImagelist*<br/>
 Pointeur vers la nouvelle liste d’images.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -882,7 +883,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 *lpszNote*\
 dans Pointeur vers une chaîne Unicode qui est définie comme texte de note pour le contrôle de lien de commande.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -917,7 +918,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 *chGlyph*\
 dans Caractère qui spécifie le glyphe à utiliser comme flèche de déroulement du bouton partagé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -942,7 +943,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 *pSplitImageList*\
 dans Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) à assigner au contrôle bouton partagé actuel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -965,7 +966,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 *pInfo*\
 dans Pointeur vers une structure [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) qui définit le contrôle bouton partagé actuel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1000,7 +1001,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 *pSize*\
 dans Pointeur vers une structure de [taille](/windows/win32/api/windef/ns-windef-size) qui décrit un rectangle englobant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1037,7 +1038,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 *uSplitStyle*\
 dans Combinaison d’opérations de bits de styles de bouton partagé. Pour plus d’informations, consultez le `uSplitStyle` membre de la structure [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1097,7 +1098,7 @@ BOOL SetTextMargin(RECT* pmargin);
 *pmargin*<br/>
 Pointeur vers la nouvelle marge de texte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : @code'
 title: '@code'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '@code symbol'
 ms.assetid: 44e050e6-d254-4157-9022-cf6afbaa0515
-ms.openlocfilehash: 841f75f45477938fc7d92703f6e2b9c11e568480
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 942370c171db8175683ddffa77cb7447d173d0af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121548"
 ---
 # <a name="code"></a>\@code
 
@@ -23,5 +24,5 @@ Nom du segment de code (macro de texte).
 
 ## <a name="see-also"></a>Voir aussi
 
-\ de [référence des symboles](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)
