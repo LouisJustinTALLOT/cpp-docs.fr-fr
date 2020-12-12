@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : optimisation de votre code'
 title: Optimisation du code
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: 00356cf50ca8e50c80e8a1142adf654816490c9b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 893e3dce64400d47026e478b081283e3f1d82262
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179796"
 ---
 # <a name="optimizing-your-code"></a>Optimisation du code
 
@@ -52,7 +53,7 @@ Paradoxalement, l’optimisation d’un programme pour une vitesse peut entraîn
 
 Les rubriques suivantes abordent les bonnes pratiques en matière de programmation.
 
-[Conseils pour améliorer le code critique dans le temps](tips-for-improving-time-critical-code.md) \
+[Conseils pour l’amélioration du code Time-Critical](tips-for-improving-time-critical-code.md) \
 De meilleures techniques de codage peuvent donner de meilleures performances. Cette rubrique suggère des techniques de codage qui peuvent vous aider à vous assurer que les parties critiques de votre code s’exécutent de manière satisfaisante.
 
 [Meilleures pratiques pour l’optimisation](optimization-best-practices.md) \
@@ -68,7 +69,7 @@ Les rubriques suivantes fournissent des informations sur le débogage des versio
 
 - [Comment : déboguer le code optimisé](/visualstudio/debugger/how-to-debug-optimized-code)
 
-- [Pourquoi les nombres à virgule flottante peuvent manquer de précision](why-floating-point-numbers-may-lose-precision.md)
+- [Pourquoi Floating-Point nombres peuvent perdre leur précision](why-floating-point-numbers-may-lose-precision.md)
 
 Les rubriques suivantes fournissent des informations sur l’optimisation de la génération, du chargement et de l’exécution de votre code.
 
@@ -76,23 +77,23 @@ Les rubriques suivantes fournissent des informations sur l’optimisation de la 
 
 - [L’utilisation d’un nom de fonction sans () ne génère pas de code](using-function-name-without-parens-produces-no-code.md)
 
-- [Optimisation de l'assembly inline](../assembler/inline/optimizing-inline-assembly.md)
+- [Optimisation de l’assembly inline](../assembler/inline/optimizing-inline-assembly.md)
 
 - [Spécification de l’optimisation du compilateur pour un projet ATL](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
 - [Quelles techniques d'optimisation dois-je utiliser pour améliorer les performances de l'application cliente lors du chargement ?](../build/dll-frequently-asked-questions.md#mfc_optimization)
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 [Pragmas et Mots clés d’optimisation](optimization-pragmas-and-keywords.md) \
 [Amélioration du débit du compilateur](improving-compiler-throughput.md) \
-[Pourquoi les nombres à virgule flottante peuvent perdre la précision](why-floating-point-numbers-may-lose-precision.md) \
-[Représentation à virgule flottante IEEE](ieee-floating-point-representation.md) \
-[Conseils pour améliorer le code critique dans le temps](tips-for-improving-time-critical-code.md) \
+[Pourquoi Floating-Point nombres peuvent perdre leur précision](why-floating-point-numbers-may-lose-precision.md) \
+[Représentation IEEE Floating-Point](ieee-floating-point-representation.md) \
+[Conseils pour l’amélioration du code Time-Critical](tips-for-improving-time-critical-code.md) \
 [L’utilisation d’un nom de fonction sans () ne génère pas de code](using-function-name-without-parens-produces-no-code.md) \
 [Meilleures pratiques pour l’optimisation](optimization-best-practices.md) \
 [Optimisations guidées par profil](profile-guided-optimizations.md) \
-[Variables d’environnement pour les optimisations guidées par profil](environment-variables-for-profile-guided-optimizations.md) \
+[Variables d’environnement pour les optimisations de Profile-Guided](environment-variables-for-profile-guided-optimizations.md) \
 [PgoAutoSweep](pgoautosweep.md) \
 [pgomgr](pgomgr.md) \
 [pgosweep](pgosweep.md) \

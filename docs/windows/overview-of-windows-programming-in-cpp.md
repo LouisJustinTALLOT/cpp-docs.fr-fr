@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble de la programmation Windows en C++'
 title: Vue d'ensemble de la programmation Windows en C++
 ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 0aa667168f88f48458ae3a9b3541d4944f7530cc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 812fef686208f5f9d4f1c23cd5eb9b2cb8b227bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180108"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
@@ -95,9 +96,9 @@ D'autres plateformes, telles que Xbox et Azure, possèdent leurs propres Kits de
 
 Visual Studio inclut un débogueur puissant pour le code natif, des outils d’analyse statique, des outils de débogage graphique, un éditeur de code complet, la prise en charge des tests unitaires et de nombreux autres outils et utilitaires. Pour plus d’informations, consultez la page prise en main du développement [avec Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)et [vue d’ensemble du développement C++ dans Visual Studio](../overview/overview-of-cpp-development.md).
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
-|Intitulé|Description|
+|Titre|Description|
 |-----------|-----------------|
 |[Procédure pas à pas : création d’un programme C++ standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Créez une application console Windows.|
 |[Procédure pas à pas : création d’applications de bureau Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Créer une application de bureau Windows native.|
@@ -114,9 +115,9 @@ Visual Studio inclut un débogueur puissant pour le code natif, des outils d’a
 |[Comment : utiliser le kit de développement logiciel (SDK) Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
 |[Déploiement des applications de bureau natives](deploying-native-desktop-applications-visual-cpp.md)|Déployez des applications natives sur Windows.|
 
-## <a name="related-articles"></a>Articles associés
+## <a name="related-articles"></a>Articles connexes
 
-|Intitulé|Description|
+|Titre|Description|
 |-----------|-----------------|
 |[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Rubrique parente pour Visual C++ le contenu du développeur.|
 [Développement .NET avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Créer des wrappers pour les bibliothèques C++ natives qui lui permettent de communiquer avec les applications et composants .NET.|

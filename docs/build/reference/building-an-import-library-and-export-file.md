@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : génération d’une bibliothèque d’importation et d’un fichier d’exportation'
 title: Génération d'une bibliothèque d'importation et d'un fichier d'exportation
 ms.date: 09/05/2018
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 5cb5224b3edaf84dbcb7c0429044a647fb5ac19a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8fbd06ce06d77721e64294b88632933b3ad71a03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179510"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Génération d'une bibliothèque d'importation et d'un fichier d'exportation
 

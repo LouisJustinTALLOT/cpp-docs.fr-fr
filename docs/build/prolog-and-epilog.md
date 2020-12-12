@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : prologue et épilogue x64'
 title: Prologue et épilogue x64
 ms.date: 12/17/2018
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-ms.openlocfilehash: d0b7444af6e434a09f6af5f5b1c144b46c79ad56
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bd4e2350a678e16a1c506ec8cd16497f78b7ec9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328433"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179770"
 ---
 # <a name="x64-prolog-and-epilog"></a>Prologue et épilogue x64
 
@@ -33,7 +34,7 @@ Le code d’un prologue classique peut être :
 
 Ce prologue stocke l’argument Register RCX à son emplacement d’hébergement, enregistre les registres non volatils R13-R15, alloue la partie fixe du frame de pile et établit un pointeur de frame qui pointe 128 octets dans la zone d’allocation fixe. L’utilisation d’un décalage permet de traiter une plus grande partie de la zone d’allocation fixe avec des décalages d’un octet.
 
-Si la taille d’allocation fixe est supérieure ou égale à une page de mémoire, une fonction d’assistance doit être appelée avant la modification de RSP. Cette application d’assistance `__chkstk`,, sonde la plage de la pile à allouer pour s’assurer que la pile est correctement étendue. Dans ce cas, l’exemple de prologue précédent serait à la place :
+Si la taille d’allocation fixe est supérieure ou égale à une page de mémoire, une fonction d’assistance doit être appelée avant la modification de RSP. Cette application d’assistance, `__chkstk` , sonde la plage de la pile à allouer pour s’assurer que la pile est correctement étendue. Dans ce cas, l’exemple de prologue précédent serait à la place :
 
 ```MASM
     mov    [RSP + 8], RCX
@@ -55,7 +56,7 @@ Le code d’épilogue existe à chaque sortie d’une fonction. Alors qu’il n�
 
 Le code d’épilogue doit suivre un ensemble strict de règles pour le code de déroulement afin de dérouler de manière fiable les exceptions et les interruptions. Ces règles réduisent la quantité de données de déroulement requises, car aucune donnée supplémentaire n’est nécessaire pour décrire chaque épilogue. Au lieu de cela, le code de déroulement peut déterminer qu’un épilogue est en cours d’exécution en analysant par progression un flux de code pour identifier un épilogue.
 
-Si aucun pointeur de frame n’est utilisé dans la fonction, l’épilogue doit d’abord libérer la partie fixe de la pile, les registres non volatils sont dépilés et le contrôle est retourné à la fonction appelante. Par exemple,
+Si aucun pointeur de frame n’est utilisé dans la fonction, l’épilogue doit d’abord libérer la partie fixe de la pile, les registres non volatils sont dépilés et le contrôle est retourné à la fonction appelante. Par exemple :
 
 ```MASM
     add      RSP, fixed-allocation-size
@@ -87,9 +88,9 @@ Dans la pratique, lorsqu’un pointeur de frame est utilisé, il n’y a aucune 
     ret
 ```
 
-Ces formulaires sont les seuls à être autorisés pour un épilogue. Il doit se composer d’un `add RSP,constant` ou `lea RSP,constant[FPReg]`d’un, suivi d’une série de zéro ou plusieurs points de présence de Registre `return` de 8 `jmp`octets et d’un ou d’un. (Seul un sous- `jmp` ensemble d’instructions est autorisé dans l’épilogue. Le sous-ensemble est exclusivement la `jmp` classe d’instructions avec des références de mémoire ModRM où la valeur du champ mod ModRM est 00. L’utilisation d' `jmp` instructions dans l’épilogue avec la valeur de champ ModRM mod 01 ou 10 est interdite. Pour plus d’informations sur les références ModRM autorisées, consultez le tableau A-15 de l’architecture AMD x86-64 Guide de l’ouvrage manuel 3 : usage général et des instructions du système.) Aucun autre code ne peut apparaître. En particulier, rien ne peut être planifié dans un épilogue, y compris le chargement d’une valeur de retour.
+Ces formulaires sont les seuls à être autorisés pour un épilogue. Il doit se composer d’un `add RSP,constant` ou d' `lea RSP,constant[FPReg]` un, suivi d’une série de zéro ou plusieurs points de présence de registre de 8 octets et d’un `return` ou d’un `jmp` . (Seul un sous-ensemble d' `jmp` instructions est autorisé dans l’épilogue. Le sous-ensemble est exclusivement la classe d' `jmp` instructions avec des références de mémoire ModRM où la valeur du champ mod ModRM est 00. L’utilisation d' `jmp` instructions dans l’épilogue avec la valeur de champ ModRM mod 01 ou 10 est interdite. Pour plus d’informations sur les références ModRM autorisées, consultez le tableau A-15 de l’architecture AMD x86-64 Guide de l’ouvrage manuel 3 : usage général et des instructions du système.) Aucun autre code ne peut apparaître. En particulier, rien ne peut être planifié dans un épilogue, y compris le chargement d’une valeur de retour.
 
-Lorsqu’un pointeur de frame n’est pas utilisé, l’épilogue doit utiliser `add RSP,constant` pour libérer la partie fixe de la pile. Elle ne peut pas `lea RSP,constant[RSP]` utiliser à la place. Cette restriction existe afin que le code de déroulement ait moins de modèles à reconnaître lors de la recherche de épilogues.
+Lorsqu’un pointeur de frame n’est pas utilisé, l’épilogue doit utiliser `add RSP,constant` pour libérer la partie fixe de la pile. Elle ne peut pas utiliser à la `lea RSP,constant[RSP]` place. Cette restriction existe afin que le code de déroulement ait moins de modèles à reconnaître lors de la recherche de épilogues.
 
 Le respect de ces règles permet au code de déroulement de déterminer qu’un épilogue est en cours d’exécution et de simuler l’exécution du reste de l’épilogue pour permettre la recréation du contexte de la fonction appelante.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : commandes de menu (C++)'
 title: Commandes de menu (C++)
 ms.date: 02/15/2019
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: a950e7d0156d1b952782fddcdff26718fcf0e291
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 86b9a4343da269cb3dcd403fbc0d2469e85a391f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180160"
 ---
 # <a name="menu-commands-c"></a>Commandes de menu (C++)
 
@@ -36,7 +37,7 @@ Les informations ci-dessous sont organisées en fonction des propriétés de **m
 |**Activé**|Si la valeur est **False**, l'élément de menu est désactivé.|
 |**Grisé**|Si la **valeur est true**, la commande de menu est initialement grisée et inactive. Type : **bool**. Valeur par défaut : **false**.|
 |**Aide**|Aligne l'élément de menu à droite. Valeur par défaut : **false**.<br/><br/>Par exemple, la commande de menu **? (Aide)** est toujours sur la droite dans toutes les applications Windows. Si vous affectez cette propriété à un élément de menu, celui-ci s'affiche à l'extrémité droite et à la fin du menu. S'applique aux éléments de niveau supérieur.|
-|**Identifiant**|Symbole défini dans le fichier d'en-tête. Type : **symbole**, **entier**ou **chaîne entre guillemets**.<br/><br/>Vous pouvez utiliser n'importe quel symbole couramment disponible dans les éditeurs, même si la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) ne fournit pas de liste déroulante pour sélectionner des éléments.|
+|**Identifiant**|Symbole défini dans le fichier d'en-tête. Type : **symbole**, **entier** ou **chaîne entre guillemets**.<br/><br/>Vous pouvez utiliser n'importe quel symbole couramment disponible dans les éditeurs, même si la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) ne fournit pas de liste déroulante pour sélectionner des éléments.|
 |**Popup**|Si la **valeur est true**, la commande de menu est un menu contextuel. Type : **bool**. Valeur par défaut : **true** pour les menus de niveau supérieur dans une barre de menus, sinon **false**.|
 |**Demander**|Contient le texte qui s'affiche dans la barre d'état quand cette commande de menu est mise en surbrillance. Le texte est placé dans la table de chaînes avec le même identificateur que la commande de menu.<br/><br/>Cette propriété est disponible pour tous les types de projet, mais les fonctionnalités d'exécution sont spécifiques à MFC.|
 |**Justification de droite à gauche**|Aligne à droite la commande de menu dans la barre de menus au moment de l'exécution. Type : **bool**. Valeur par défaut : **false**.|
@@ -55,7 +56,7 @@ Bien souvent, vous souhaitez qu’une commande de menu et une combinaison de tou
 
    - À la suite de la légende de menu, tapez la séquence d’échappement d’une tabulation (\t) pour que toutes les touches accélérateurs du menu soient alignées à gauche.
 
-   - Tapez le nom de la touche de modification (**CTRL**, **ALT**ou **MAJ**) suivi d’un signe plus ( **+** ) et du nom, de la lettre ou du symbole de la touche supplémentaire.
+   - Tapez le nom de la touche de modification (**CTRL**, **ALT** ou **MAJ**) suivi d’un signe plus ( **+** ) et du nom, de la lettre ou du symbole de la touche supplémentaire.
 
    Par exemple, pour affecter **CTRL** + **O** à la commande **ouvrir** du menu **fichier** , vous modifiez la **légende** de la commande de menu pour qu’elle ressemble au texte suivant :
 
@@ -82,7 +83,7 @@ Dans un projet C++, vous pouvez affecter une touche d’accès (un mnémonique q
 > [!NOTE]
 > Assurez-vous que toutes les clés d’accès d’un menu sont uniques en cliquant avec le bouton droit sur le menu et en choisissant **vérifier les mnémoniques**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

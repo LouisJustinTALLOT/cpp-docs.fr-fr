@@ -1,22 +1,23 @@
 ---
+description: 'En savoir plus sur : procédure pas à pas : création d’une application Agent-Based'
 title: 'Procédure pas à pas : création d’une application basée sur un agent'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 9d9fdd3ddface01f84f6426dd334600cf88b84e7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: cca3fc5e8467b7eb5699e4e9f513e35d5b97da93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180369"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Procédure pas à pas : création d’une application basée sur un agent
 
 Cette rubrique explique comment créer une application de base basée sur un agent. Dans cette procédure pas à pas, vous pouvez créer un agent qui lit les données d’un fichier texte de façon asynchrone. L’application utilise l’algorithme de somme de contrôle Adler-32 pour calculer la somme de contrôle du contenu de ce fichier.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Pour effectuer cette procédure pas à pas, vous devez comprendre les rubriques suivantes :
 
@@ -46,15 +47,15 @@ Cette section montre comment créer une application console C++ qui fait référ
 
 ### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>Pour créer une application console C++ dans Visual Studio 2019
 
-1. Dans le menu principal, choisissez **Fichier** > **Nouveau** > **Projet** pour ouvrir la boîte de dialogue **Créer un projet** .
+1. Dans le menu principal, choisissez **Fichier** > **Nouveau** > **Projet** pour ouvrir la boîte de dialogue **Créer un projet**.
 
-1. En haut de la boîte de dialogue, définissez **Langage** sur **C++** , **Plateforme** sur **Windows** et **Type de projet** sur **Console** .
+1. En haut de la boîte de dialogue, définissez **Langage** sur **C++**, **Plateforme** sur **Windows** et **Type de projet** sur **Console**.
 
-1. À partir de la liste des types de projets, choisissez **Application console** , puis choisissez **Suivant** . Dans la page suivante, entrez `BasicAgent` comme nom pour le projet, puis spécifiez l’emplacement du projet si vous le souhaitez.
+1. À partir de la liste des types de projets, choisissez **Application console**, puis choisissez **Suivant**. Dans la page suivante, entrez `BasicAgent` comme nom pour le projet, puis spécifiez l’emplacement du projet si vous le souhaitez.
 
 1. Choisissez le bouton **Créer** pour créer le projet.
 
-1. Cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions** , puis choisissez **Propriétés** . Sous **Propriétés de configuration** , en-têtes précompilés en-têtes précompilés  >  **C/C++**  >  **Precompiled Headers**  >  **Precompiled header** , choisissez **créer** .
+1. Cliquez avec le bouton droit sur le nœud du projet dans **Explorateur de solutions**, puis choisissez **Propriétés**. Sous **Propriétés de configuration**, en-têtes précompilés en-têtes précompilés  >  **C/C++**  >    >   , choisissez **créer**.
 
 ::: moniker-end
 
@@ -62,21 +63,21 @@ Cette section montre comment créer une application console C++ qui fait référ
 
 ### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>Pour créer une application console C++ dans Visual Studio 2017 et versions antérieures
 
-1. Dans le menu **fichier** , cliquez sur **nouveau** , puis sur **projet** pour afficher la boîte de dialogue **nouveau projet** .
+1. Dans le menu **fichier** , cliquez sur **nouveau**, puis sur **projet** pour afficher la boîte de dialogue **nouveau projet** .
 
-1. Dans la boîte de dialogue **nouveau projet** , sélectionnez le nœud **Visual C++** dans le volet **types de projets** , puis sélectionnez **application console Win32** dans le volet **modèles** . Tapez un nom pour le projet, par exemple, `BasicAgent` , puis cliquez sur **OK** pour afficher l **'Assistant Application console Win32** .
+1. Dans la boîte de dialogue **nouveau projet** , sélectionnez le nœud **Visual C++** dans le volet **types de projets** , puis sélectionnez **application console Win32** dans le volet **modèles** . Tapez un nom pour le projet, par exemple, `BasicAgent` , puis cliquez sur **OK** pour afficher l **'Assistant Application console Win32**.
 
-1. Dans la boîte de dialogue **Assistant Application console Win32** , cliquez sur **Terminer** .
+1. Dans la boîte de dialogue **Assistant Application console Win32** , cliquez sur **Terminer**.
 
 ::: moniker-end
 
-1. Dans *pch. h* ( *stdafx. h* dans Visual Studio 2017 et versions antérieures), ajoutez le code suivant :
+1. Dans *pch. h* (*stdafx. h* dans Visual Studio 2017 et versions antérieures), ajoutez le code suivant :
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
    Le fichier d’en-tête agents. h contient les fonctionnalités de la classe [Concurrency :: agent](../../parallel/concrt/reference/agent-class.md) .
 
-1. Vérifiez que l’application a été créée avec succès en la générant et en l’exécutant. Pour générer l’application, dans le menu **générer** , cliquez sur **générer la solution** . Si l’application est générée avec succès, exécutez l’application en cliquant sur **Démarrer le débogage** dans le menu **Déboguer** .
+1. Vérifiez que l’application a été créée avec succès en la générant et en l’exécutant. Pour générer l’application, dans le menu **générer** , cliquez sur **générer la solution**. Si l’application est générée avec succès, exécutez l’application en cliquant sur **Démarrer le débogage** dans le menu **Déboguer** .
 
 [[Haut](#top)]
 
@@ -86,7 +87,7 @@ Cette section montre comment créer la `file_reader` classe. Le runtime planifie
 
 #### <a name="to-create-the-file_reader-class"></a>Pour créer la classe file_reader
 
-1. Ajoutez un nouveau fichier d’en-tête C++ à votre projet. Pour ce faire, cliquez avec le bouton droit sur le nœud **fichiers d’en-tête** dans **Explorateur de solutions** , cliquez sur **Ajouter** , puis sur **nouvel élément** . Dans le volet **modèles** , sélectionnez **fichier d’en-tête (. h)** . Dans la boîte de dialogue **Ajouter un nouvel élément** , tapez `file_reader.h` dans la zone **nom** , puis cliquez sur **Ajouter** .
+1. Ajoutez un nouveau fichier d’en-tête C++ à votre projet. Pour ce faire, cliquez avec le bouton droit sur le nœud **fichiers d’en-tête** dans **Explorateur de solutions**, cliquez sur **Ajouter**, puis sur **nouvel élément**. Dans le volet **modèles** , sélectionnez **fichier d’en-tête (. h)**. Dans la boîte de dialogue **Ajouter un nouvel élément** , tapez `file_reader.h` dans la zone **nom** , puis cliquez sur **Ajouter**.
 
 1. Dans file_reader. h, ajoutez le code suivant.
 

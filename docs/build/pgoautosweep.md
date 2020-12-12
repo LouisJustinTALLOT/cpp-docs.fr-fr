@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : PgoAutoSweep'
 title: PgoAutoSweep
 ms.date: 07/02/2019
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 8310b86f8ef7db011ed7340cef4e42def79a0927
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179783"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep`enregistre les informations du compteur de profil actuel dans un fichier, puis réinitialise les compteurs. Utilisez la fonction lors de la formation de l’optimisation guidée par profil pour écrire toutes les données de profil `.pgc` du programme en cours d’exécution dans un fichier en vue d’une utilisation ultérieure dans la build d’optimisation.
+`PgoAutoSweep` enregistre les informations du compteur de profil actuel dans un fichier, puis réinitialise les compteurs. Utilisez la fonction lors de la formation de l’optimisation guidée par profil pour écrire toutes les données de profil du programme en cours d’exécution dans un `.pgc` fichier en vue d’une utilisation ultérieure dans la build d’optimisation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,29 +29,29 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 *name*<br/>
 Chaîne d’identification du fichier enregistré `.pgc` .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Vous pouvez appeler `PgoAutoSweep` à partir de votre application pour enregistrer et réinitialiser les données de profil à tout moment pendant l’exécution de l’application. Dans une build instrumentée, `PgoAutoSweep` capture les données de profilage actuelles, les enregistre dans un fichier et réinitialise les compteurs de profil. C’est l’équivalent de l’appel de la commande [pgosweep](pgosweep.md) à un point spécifique dans votre fichier exécutable. Dans une version optimisée `PgoAutoSweep` , n’est pas une opération.
+Vous pouvez appeler `PgoAutoSweep` à partir de votre application pour enregistrer et réinitialiser les données de profil à tout moment pendant l’exécution de l’application. Dans une build instrumentée, `PgoAutoSweep` capture les données de profilage actuelles, les enregistre dans un fichier et réinitialise les compteurs de profil. C’est l’équivalent de l’appel de la commande [pgosweep](pgosweep.md) à un point spécifique dans votre fichier exécutable. Dans une version optimisée, `PgoAutoSweep` n’est pas une opération.
 
-Les données de compteur de profil enregistrées sont placées dans un fichier nommé *base_name*-*Name*! *value*. PGC, où *base_name* est le nom de base de l’exécutable, *Name* est le paramètre passé à `PgoAutoSweep`, et *value* est une valeur unique, généralement un nombre à croissance monotone, pour éviter les collisions de nom de fichier.
+Les données de compteur de profil enregistrées sont placées dans un fichier nommé *base_name* - *Name*!*value*. PGC, où *base_name* est le nom de base de l’exécutable, *Name* est le paramètre passé à `PgoAutoSweep` , et *value* est une valeur unique, généralement un nombre à croissance monotone, pour éviter les collisions de nom de fichier.
 
 Les `.pgc` fichiers créés par `PgoAutoSweep` doivent être fusionnés dans un `.pgd` fichier à utiliser pour créer un exécutable optimisé. Vous pouvez utiliser la commande [pgomgr](pgomgr.md) pour effectuer la fusion.
 
-Vous `.pgd` pouvez passer le nom du fichier fusionné à l’éditeur de liens pendant la génération de l’optimisation à l’aide de l’argument **PGD =**_filename_ de l’option de l’éditeur de liens [/USEPROFILE](reference/useprofile.md) , ou à l’aide de l’option de l’éditeur de liens **/PGD** déconseillée. Si vous fusionnez `.pgc` les fichiers dans un fichier nommé *base_name*. pgd, vous n’avez pas besoin de spécifier le nom de fichier sur la ligne de commande, car l’éditeur de liens sélectionne ce nom de fichier par défaut.
+Vous pouvez passer le nom du `.pgd` fichier fusionné à l’éditeur de liens pendant la génération de l’optimisation à l’aide de l’argument **PGD =**_filename_ de l’option de l’éditeur de liens [/USEPROFILE](reference/useprofile.md) , ou à l’aide de l’option de l’éditeur de liens **/PGD** déconseillée. Si vous fusionnez les `.pgc` fichiers dans un fichier nommé *base_name*. pgd, vous n’avez pas besoin de spécifier le nom de fichier sur la ligne de commande, car l’éditeur de liens sélectionne ce nom de fichier par défaut.
 
-La `PgoAutoSweep` fonction conserve le paramètre de sécurité des threads spécifié lors de la création de la build instrumentée. Si vous utilisez le paramètre par défaut ou si vous spécifiez l’argument **noexact** pour l’option de l’éditeur de `PgoAutoSweep` liens [/GENPROFILE ou/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) , les appels à ne sont pas thread-safe. L’argument **exact** crée un exécutable instrumenté thread-safe et plus précis, mais plus lent.
+La `PgoAutoSweep` fonction conserve le paramètre de sécurité des threads spécifié lors de la création de la build instrumentée. Si vous utilisez le paramètre par défaut ou si vous spécifiez l’argument **noexact** pour l’option de l’éditeur de liens [/GENPROFILE ou/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) , les appels à `PgoAutoSweep` ne sont pas thread-safe. L’argument **exact** crée un exécutable instrumenté thread-safe et plus précis, mais plus lent.
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|`PgoAutoSweep`|\<pgobootrun. h>|
+|`PgoAutoSweep`|\<pgobootrun.h>|
 
 L’exécutable doit inclure le fichier pgobootrun. lib dans les bibliothèques liées. Ce fichier est inclus dans votre installation de Visual Studio, dans le répertoire des bibliothèques VC pour chaque architecture prise en charge.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
-L’exemple ci- `PgoAutoSweep` dessous utilise pour `.pgc` créer deux fichiers à des moments différents au cours de l’exécution. Le premier contient des données qui décrivent le comportement `count` d’exécution jusqu’à ce que soit égal à 3, et le second contient les données collectées après ce point jusqu’à l’arrêt de l’application juste avant.
+L’exemple ci-dessous utilise `PgoAutoSweep` pour créer deux `.pgc` fichiers à des moments différents au cours de l’exécution. Le premier contient des données qui décrivent le comportement d’exécution jusqu’à ce que `count` soit égal à 3, et le second contient les données collectées après ce point jusqu’à l’arrêt de l’application juste avant.
 
 ```cpp
 // pgoautosweep.cpp
@@ -105,7 +106,7 @@ Générez ensuite une build instrumentée pour l’apprentissage à l’aide de 
 
 `link /LTCG /genprofile pgobootrun.lib pgoautosweep.obj`
 
-Exécutez l’exécutable instrumenté pour capturer les données d’apprentissage. Les données générées par les appels `PgoAutoSweep` à sont enregistrées dans des fichiers nommés PgoAutoSweep-func1 ! 1. pgc et PgoAutoSweep-Func2 ! 1. PGC. La sortie du programme doit ressembler à ceci, car il s’exécute :
+Exécutez l’exécutable instrumenté pour capturer les données d’apprentissage. Les données générées par les appels à `PgoAutoSweep` sont enregistrées dans des fichiers nommés PgoAutoSweep-func1 ! 1. pgc et PgoAutoSweep-Func2 ! 1. PGC. La sortie du programme doit ressembler à ceci, car il s’exécute :
 
 ```Output
 hello from func1 9

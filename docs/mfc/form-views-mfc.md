@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vues de formulaire (MFC)'
 title: Mode Formulaire (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-ms.openlocfilehash: 94d8b7d026ee3aaf1bac9dee2226de6dd9382599
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: be0853c46509e92d758b38e6a3b7fbd993e9b700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180359"
 ---
 # <a name="form-views-mfc"></a>Mode Formulaire (MFC)
 
@@ -56,9 +57,9 @@ Pour les applications basées sur l’architecture document/vue, la commande **n
 
    Les modèles de document servent de connexion entre les documents, les fenêtres Frame et les vues. Pour un document unique, vous pouvez créer de nombreux modèles.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
-- [Créer une application basée sur les formulaires](reference/creating-a-forms-based-mfc-application.md)
+- [Créer une application Forms-Based](reference/creating-a-forms-based-mfc-application.md)
 
 - [Insertion d’un formulaire dans un projet](inserting-a-form-into-a-project.md)
 

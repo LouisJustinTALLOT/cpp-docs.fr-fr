@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/C (conserver les commentaires pendant le prétraitement)
 title: /C (Conserver les commentaires pendant le prétraitement)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-ms.openlocfilehash: f80ebf45dd396a3f92d9b755c56522d4731bb2d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2cf5bf562db78dcb6c570d7313b56ad4a9fc5adb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179354"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Conserver les commentaires pendant le prétraitement)
 
@@ -30,7 +31,7 @@ Conserve les commentaires pendant le prétraitement.
 
 ## <a name="remarks"></a>Notes
 
-Cette option de compilateur requiert l’option **/e**, **/p**ou **/EP** .
+Cette option de compilateur requiert l’option **/e**, **/p** ou **/EP** .
 
 L’exemple de code suivant affiche le commentaire de code source.
 
@@ -47,9 +48,9 @@ Cet exemple produira la sortie suivante.
 int i;   // a variable
 ```
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -64,7 +65,7 @@ int i;   // a variable
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [/E (Prétraiter dans stdout)](e-preprocess-to-stdout.md)<br/>
-[/P (Prétraiter jusqu’à un fichier)](p-preprocess-to-a-file.md)<br/>
-[/EP (Prétraiter dans stdout sans directive #line)](ep-preprocess-to-stdout-without-hash-line-directives.md)
+[/P (Prétraiter dans un fichier)](p-preprocess-to-a-file.md)<br/>
+[/EP (Prétraiter dans stdout sans directives #line)](ep-preprocess-to-stdout-without-hash-line-directives.md)

@@ -1,5 +1,6 @@
 ---
-title: Éditeur de menusC++()
+description: 'En savoir plus sur : éditeur de menus (C++)'
+title: Éditeur de menus (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.menu.F1
@@ -39,14 +40,14 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab4b0c3f2fe7986b7b30b3c9bce9c6558b09fc60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214446"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180173"
 ---
-# <a name="menu-editor-c"></a>Éditeur de menusC++()
+# <a name="menu-editor-c"></a>Éditeur de menus (C++)
 
 Les menus permettent d’organiser les commandes de manière logique et de les trouver plus facilement. Avec l' **éditeur de menus**, vous pouvez créer et modifier des menus en travaillant directement avec une barre de menus qui ressemble étroitement à celle de votre application terminée.
 
@@ -59,11 +60,11 @@ L' **éditeur de menus** vous permet d’activer les éléments suivants :
 
 ### <a name="to-create-a-standard-menu"></a>Pour créer un menu standard
 
-1. Accédez à la **vue** de menu > **autres > Windows** **affichage des ressources** et cliquez avec le bouton droit sur l’en-tête du **menu** . Sélectionnez **Ajouter une ressource**, puis **menu**.
+1. Accédez à menu **Afficher**  >  **autres fenêtres**  >  **affichage des ressources** et cliquez avec le bouton droit sur l’en-tête du **menu** . Sélectionnez **Ajouter une ressource**, puis **menu**.
 
 1. Sélectionnez la zone **nouvel élément** (le rectangle qui contient le *type ici*) dans la barre de menus.
 
-   ![Zone nouvel élément de l’éditeur de menus](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   ![Zone Nouvel élément de l'éditeur de menus](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
    Zone **nouvel élément**
 
 1. Tapez un nom pour votre nouveau menu, par exemple *fichier*.
@@ -72,11 +73,11 @@ L' **éditeur de menus** vous permet d’activer les éléments suivants :
 
    Une fois que vous avez donné un nom à votre nouveau menu dans la barre de menus, la zone Nouvel élément se déplace vers la droite (pour vous permettre d’ajouter un autre menu) et une autre zone Nouvel élément s’ouvre sous votre premier menu pour que vous puissiez y ajouter des commandes de menu.
 
-   ![Zone de nouvel élément développée](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   ![Zone Nouvel élément développée](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
    Zone **nouvel élément** avec le focus déplacé après que vous avez tapé le nom du menu
 
    > [!NOTE]
-   > Pour créer un menu à un seul élément dans la barre de menus, affectez la valeur **false**à la propriété **Popup** .
+   > Pour créer un menu à un seul élément dans la barre de menus, affectez la valeur **false** à la propriété **Popup** .
 
 ### <a name="to-create-a-submenu"></a>Pour créer un sous-menu
 
@@ -96,7 +97,7 @@ Sélectionnez un nom de menu existant et appuyez sur la touche **Inser** , ou cl
 
 1. Créez un menu. Sélectionnez ensuite un nom de menu, par exemple **fichier**.
 
-   Chaque menu sera développé et exposera une zone Nouvel élément pour les commandes. Par exemple, vous pouvez ajouter les commandes **nouveau**, **ouvrir**et **Fermer** à un menu **fichier** .
+   Chaque menu sera développé et exposera une zone Nouvel élément pour les commandes. Par exemple, vous pouvez ajouter les commandes **nouveau**, **ouvrir** et **Fermer** à un menu **fichier** .
 
 1. Dans la zone Nouvel élément, tapez le nom de la nouvelle commande de menu.
 
@@ -104,7 +105,7 @@ Sélectionnez un nom de menu existant et appuyez sur la touche **Inser** , ou cl
    > Le texte que vous tapez s’affiche à la fois dans l' **éditeur de menus** et dans la zone **légende** de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Vous pouvez modifier les propriétés du nouveau menu dans les deux emplacements.
 
    > [!TIP]
-   > Vous pouvez définir une touche mnémonique (touche d'accès rapide) qui permet à l'utilisateur de sélectionner la commande de menu. Tapez une esperluette (`&`) devant une lettre pour la spécifier comme mnémonique. L'utilisateur peut sélectionner la commande de menu en tapant cette lettre.
+   > Vous pouvez définir une touche mnémonique (touche d'accès rapide) qui permet à l'utilisateur de sélectionner la commande de menu. Tapez une esperluette ( `&` ) devant une lettre pour la spécifier comme mnémonique. L'utilisateur peut sélectionner la commande de menu en tapant cette lettre.
 
 1. Dans la fenêtre **Propriétés** , sélectionnez les propriétés de commande de menu qui s’appliquent. Pour plus d’informations, consultez Propriétés de la [commande de menu](../windows/menu-command-properties.md).
 
@@ -198,6 +199,6 @@ Win32
 
 [Éditeurs de ressources](../windows/resource-editors.md)<br/>
 [Commandes de menu](../windows/menu-command-properties.md)<br/>
-[Objets d’interface utilisateur et ID de commande](../mfc/user-interface-objects-and-command-ids.md)<br/>
+[Objets de l’interface utilisateur et ID de commande](../mfc/user-interface-objects-and-command-ids.md)<br/>
 [Menus](../mfc/menus-mfc.md)<br/>
 [Menus](/windows/win32/menurc/menus)

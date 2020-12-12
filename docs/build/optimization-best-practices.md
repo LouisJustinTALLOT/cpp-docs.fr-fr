@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : meilleures pratiques pour l’optimisation'
 title: Bonnes pratiques d’optimisation
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 06588225838da3b52216fa0ae3eb51b7538ee58d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833346"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179822"
 ---
 # <a name="optimization-best-practices"></a>Bonnes pratiques d’optimisation
 
@@ -30,7 +31,7 @@ Pour plus d’informations, consultez [ `/GL` (optimisation de l’ensemble du p
 
 Si possible, les versions finales des versions doivent être compilées avec des optimisations guidées par profil. S’il n’est pas possible de générer avec PGO, qu’il s’agisse d’une infrastructure insuffisante pour l’exécution des builds instrumentées ou de l’absence d’accès aux scénarios, nous vous suggérons de générer l’ensemble avec l’optimisation de l’ensemble du programme.
 
-Le **`/Gy`** commutateur est également très utile. Il génère un COMDAT distinct pour chaque fonction, ce qui donne à l’éditeur de liens une plus grande flexibilité lorsqu’il s’agit de supprimer les COMDAT non référencés et le repli COMDAT. Le seul inconvénient à l’utilisation de **`/Gy`** est qu’elle peut provoquer des problèmes lors du débogage. Par conséquent, il est généralement recommandé de l’utiliser. Pour plus d’informations, consultez [ `/Gy` (activer la liaison au niveau des fonctions)](reference/gy-enable-function-level-linking.md).
+Le **`/Gy`** commutateur est également très utile. Il génère un COMDAT distinct pour chaque fonction, ce qui donne à l’éditeur de liens une plus grande flexibilité lorsqu’il s’agit de supprimer les COMDAT non référencés et le repli COMDAT. Le seul inconvénient à l’utilisation de **`/Gy`** est qu’elle peut provoquer des problèmes lors du débogage. Par conséquent, il est généralement recommandé de l’utiliser. Pour plus d’informations, consultez [ `/Gy` (activer la liaison de Function-Level)](reference/gy-enable-function-level-linking.md).
 
 Pour la liaison dans les environnements 64 bits, il est recommandé d’utiliser l’option de l' **`/OPT:REF,ICF`** éditeur de liens et, dans les environnements 32 bits, **`/OPT:REF`** est recommandé. Pour plus d’informations, consultez [/OPT (optimisations)](reference/opt-optimizations.md).
 
@@ -47,7 +48,7 @@ L' **`/Op`** option de compilateur a été supprimée, et les quatre options de 
 |**`/fp:strict`**|Recommandé si les exceptions de virgule flottante précises et le comportement IEEE sont souhaitées. Cela entraînera des performances plus lentes.|
 |**`/fp:except[-]`**|Peut être utilisé conjointement avec **`/fp:strict`** ou **`/fp:precise`** , mais pas **`/fp:fast`** .|
 
-Pour plus d’informations, consultez [ `/fp` (spécifier le comportement de virgule flottante)](reference/fp-specify-floating-point-behavior.md).
+Pour plus d’informations, consultez [ `/fp` (spécifier le comportement de Floating-Point)](reference/fp-specify-floating-point-behavior.md).
 
 ## <a name="optimization-declspecs"></a>Declspec d’optimisation
 

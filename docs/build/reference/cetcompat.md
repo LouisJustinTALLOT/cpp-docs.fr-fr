@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/CETCOMPAT (compatible avec la pile Shadow de CET)
 title: /CETCOMPAT (compatible avec la pile cachée de l’heure de l’est)
 ms.date: 09/01/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 7de7c2007c29769cb3ac8f89d07de8b00bf44c26
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: 923272a3b3829d0b00f22d2f8c9474f02b7306d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179276"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (compatible avec la pile cachée de l’heure de l’est)
 
@@ -41,7 +42,7 @@ L' **`/CETCOMPAT`** option est disponible à partir de Visual Studio 2019.
 
 1. Ouvrez la boîte de dialogue **pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés avancé de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Advanced** .
+1. Sélectionnez la page de propriétés avancé de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
 1. Sélectionnez la propriété **compatible avec la pile Shadow de cet** .
 
@@ -51,7 +52,7 @@ Dans les versions précédentes de Visual Studio 2019 :
 
 1. Ouvrez la boîte de dialogue **pages de propriétés** du projet. Pour plus d’informations, consultez [Utilisation des propriétés de projet](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
 1. Dans le contrôle d’édition **options supplémentaires** , ajoutez *`/CETCOMPAT`* pour marquer le binaire comme étant compatible avec la pile Shadowy, ou *`/CETCOMPAT:NO`* pour le marquer explicitement comme non compatible.
 

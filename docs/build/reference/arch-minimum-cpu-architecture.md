@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/Arch (architecture d’UC minimale)
 title: /arch (Architecture d'UC minimale)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - /arch compiler option [C++]
 - arch compiler option [C++]
 ms.assetid: cc17da15-47bd-4e74-b905-4e73c3bdb8a0
-ms.openlocfilehash: 83379ad7daca7dcb21f4ed0c0b94bb354161204a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01030d3c9f5680f305d602340cc31477d572732f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179549"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (Architecture d'UC minimale)
 
-Les options d’architecture spécifient l’architecture pour la génération de code. Sélectionnez l’architecture matérielle de base que vous travaillez à voir/arch des options pour cette plateforme cible.
+Les options d’architecture spécifient l’architecture de génération de code. Sélectionnez l’architecture matérielle de base avec laquelle vous travaillez pour voir les options/ARCH pour cette plateforme cible.
 
 - [/arch (x86)](arch-x86.md)
 
@@ -29,4 +30,4 @@ Les options d’architecture spécifient l’architecture pour la génération d
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

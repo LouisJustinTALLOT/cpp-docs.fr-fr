@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : touches accélérateur (C++)'
 title: Touches accélérateur (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 4f838caa8ca9e4a996fa4cb8018d663c6c7aecea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 397e0735ba33af6adf8f10c6188f73d6f504e68b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504294"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180095"
 ---
 # <a name="accelerator-keys-c"></a>Touches accélérateur (C++)
 
@@ -57,7 +58,7 @@ Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent
 |VK_OEM_2|Windows Pour le clavier américain standard, le **/ ?** key|
 |VK_OEM_3|Windows Pour le clavier américain standard, la **`~** clé|
 |VK_OEM_4|Windows Pour le clavier américain standard, la **[{** Key|
-|VK_OEM_5|Windows Pour le clavier américain standard, la touche ** \\&#124;**|
+|VK_OEM_5|Windows Pour le clavier américain standard, la touche **\\&#124;**|
 |VK_OEM_6|Windows Pour le clavier standard américain, la touche **]}**|
 |VK_OEM_7|Windows Pour le clavier standard américain, la touche « apostrophe/guillemet »|
 |VK_OEM_COMMA|Windows Pour n’importe quel pays/région, la touche **,**|
@@ -79,7 +80,7 @@ Il existe un certain nombre de touches d'accès rapide prédéfinies qui peuvent
 
 Bien souvent, vous souhaitez qu'un élément de menu et une combinaison de touches du clavier permettent d'exécuter la même commande de programme. Vous pouvez effectuer cette action en affectant le même identificateur de ressource (ID) à l’élément de menu et à une entrée dans la table d’accélérateurs de votre application. Vous modifiez ensuite la légende de l'élément de menu pour afficher le nom de l'accélérateur. Pour plus d’informations sur les éléments de menu et les touches d’accès rapide, consultez [commandes de menu](./menu-command-properties.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 
