@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3073'
 title: Erreur du compilateur C3073
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
-ms.openlocfilehash: 0b53e704c14746579a32550726364c062a9ade6f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e26938d6c708c364bb2447b793abf7d51adb5779
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320245"
 ---
 # <a name="compiler-error-c3073"></a>Erreur du compilateur C3073
 
@@ -19,7 +20,7 @@ ms.locfileid: "74756745"
 
 Dans une compilation [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , le compilateur ne génère pas de constructeur de copie pour un type référence. Dans toute compilation **/CLR** , vous devez définir votre propre constructeur de copie pour un type référence si vous pensez qu’une instance du type doit être copiée.
 
-Pour plus d’informations, consultez [ C++ sémantique de pile pour les types référence](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Pour plus d’informations, consultez [sémantique de pile C++ pour les types référence](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Exemple
 

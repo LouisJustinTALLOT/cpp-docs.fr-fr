@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exécution en tant que membre du groupe utilisateurs'
 title: Exécution en tant que membre du groupe Utilisateurs
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7b3f73dc572a3a132300eb0f246f68030f0b27dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319991"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>Exécution en tant que membre du groupe Utilisateurs
 
@@ -50,4 +51,4 @@ Vous pouvez déboguer n'importe quelle application lancée dans Visual Studio (
 
 ## <a name="see-also"></a>Voir aussi
 
-[Bonnes pratiques de sécurité](security-best-practices-for-cpp.md)
+[Meilleures pratiques de sécurité](security-best-practices-for-cpp.md)

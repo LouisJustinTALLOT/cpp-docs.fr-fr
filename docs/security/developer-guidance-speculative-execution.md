@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Guide du développeur C++ pour les canaux côté exécution spéculative'
 title: Guide de développement C++ pour les canaux côté exécution spéculative
 ms.date: 07/10/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 41376f02c04a9baf83fec19791d77c169c73fa31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320077"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Guide de développement C++ pour les canaux côté exécution spéculative
 
@@ -51,11 +52,11 @@ D’un point de vue architectural, cette séquence de code est parfaitement séc
 
 Alors que le processeur finit par détecter cette prédiction, des effets secondaires résiduels peuvent être laissés dans le cache de l’UC qui révèlent des informations sur la valeur d’octet qui a été lue en dehors des limites de `buffer` . Ces effets secondaires peuvent être détectés par un contexte moins privilégié s’exécutant sur le système en détectant la rapidité d’accès à chaque ligne de cache `shared_buffer` . Les étapes à suivre pour y parvenir sont les suivantes :
 
-1. **Appelez `ReadByte` plusieurs fois avec un nombre `untrusted_index` inférieur `buffer_size` à **. Le contexte d’attaque peut entraîner l’appel du contexte de la victime `ReadByte` (par exemple, via RPC) de telle sorte que le prédiction de branche soit formé comme étant `untrusted_index` inférieur à `buffer_size` .
+1. **Appelez `ReadByte` plusieurs fois avec un nombre `untrusted_index` inférieur `buffer_size` à**. Le contexte d’attaque peut entraîner l’appel du contexte de la victime `ReadByte` (par exemple, via RPC) de telle sorte que le prédiction de branche soit formé comme étant `untrusted_index` inférieur à `buffer_size` .
 
-2. **Videz toutes les lignes du `shared_buffer` cache dans **. Le contexte d’attaque doit vider toutes les lignes de cache dans la région partagée de mémoire référencée par `shared_buffer` . Étant donné que la région de la mémoire est partagée, cette opération est simple et peut être effectuée à l’aide d’intrinsèques tels que `_mm_clflush` .
+2. **Videz toutes les lignes du `shared_buffer` cache dans**. Le contexte d’attaque doit vider toutes les lignes de cache dans la région partagée de mémoire référencée par `shared_buffer` . Étant donné que la région de la mémoire est partagée, cette opération est simple et peut être effectuée à l’aide d’intrinsèques tels que `_mm_clflush` .
 
-3. **Invoke `ReadByte` avec `untrusted_index` valeur supérieure à `buffer_size` **. Le contexte d’attaque entraîne l’appel du contexte de la victime de `ReadByte` sorte qu’il prédit de manière incorrecte que la branche ne sera pas prise. Cela amène le processeur à exécuter de manière spéculative le corps du bloc If avec `untrusted_index` une valeur supérieure à `buffer_size` , ce qui aboutit à une lecture hors limites de `buffer` . Par conséquent, `shared_buffer` est indexé à l’aide d’une valeur potentiellement secrète qui a été lue en dehors des limites, provoquant ainsi le chargement de la ligne de cache correspondante par l’UC.
+3. **Invoke `ReadByte` avec `untrusted_index` valeur supérieure à `buffer_size`**. Le contexte d’attaque entraîne l’appel du contexte de la victime de `ReadByte` sorte qu’il prédit de manière incorrecte que la branche ne sera pas prise. Cela amène le processeur à exécuter de manière spéculative le corps du bloc If avec `untrusted_index` une valeur supérieure à `buffer_size` , ce qui aboutit à une lecture hors limites de `buffer` . Par conséquent, `shared_buffer` est indexé à l’aide d’une valeur potentiellement secrète qui a été lue en dehors des limites, provoquant ainsi le chargement de la ligne de cache correspondante par l’UC.
 
 4. **Lisez chaque ligne de cache dans `shared_buffer` pour voir qui est accédé le plus rapidement**. Le contexte d’attaque peut lire chaque ligne de cache dans `shared_buffer` et détecter la ligne de cache qui se charge considérablement plus rapidement que les autres. Il s’agit de la ligne de cache susceptible d’être importée à l’étape 3. Étant donné qu’il y a une relation 1:1 entre la valeur d’octet et la ligne de cache dans cet exemple, cela permet à l’attaquant de déduire la valeur réelle de l’octet qui a été lu hors limites.
 
@@ -69,9 +70,9 @@ Le tableau suivant fournit un résumé des modèles de sécurité logiciels dans
 
 |Limite de confiance|Description|
 |----------------|----------------|
-|Limite de machines virtuelles|Les applications qui isolent les charges de travail dans des machines virtuelles distinctes qui reçoivent des données non approuvées d’une autre machine virtuelle peuvent être menacées.|
-|Limite du noyau|Un pilote de périphérique en mode noyau qui reçoit des données non approuvées à partir d’un processus de mode utilisateur non administratif peut être menacé.|
-|Limite de processus|Une application qui reçoit des données non approuvées d’un autre processus s’exécutant sur le système local, par exemple par le biais d’un appel de procédure distante (RPC), d’une mémoire partagée ou d’autres mécanismes de communication entre processus (IPC) peut être menacée.|
+|Limite de machine virtuelle |Les applications qui isolent les charges de travail dans des machines virtuelles distinctes qui reçoivent des données non approuvées d’une autre machine virtuelle peuvent être menacées.|
+|Limite de noyau|Un pilote de périphérique en mode noyau qui reçoit des données non approuvées à partir d’un processus de mode utilisateur non administratif peut être menacé.|
+|Limite de processus |Une application qui reçoit des données non approuvées d’un autre processus s’exécutant sur le système local, par exemple par le biais d’un appel de procédure distante (RPC), d’une mémoire partagée ou d’autres mécanismes de communication Inter-Process (IPC) peut être menacée.|
 |Limite de l’enclave|Une application qui s’exécute au sein d’une enclave sécurisée (par exemple Intel SGX) qui reçoit des données non approuvées en dehors de l’enclave peut être menacée.|
 |Limite de langue|Une application qui interprète ou juste-à-temps (JIT) compile et exécute le code non fiable écrit dans un langage de niveau supérieur peut être menacé.|
 
@@ -302,7 +303,7 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 
 ## <a name="mitigation-options"></a>Options de correction
 
-Les vulnérabilités de canal côté exécution spéculative peuvent être atténuées en apportant des modifications au code source. Ces modifications peuvent impliquer l’atténuation des instances spécifiques d’une vulnérabilité, telles que l’ajout d’une *barrière de spéculation*ou l’apport de modifications à la conception d’une application pour rendre des informations sensibles inaccessibles à l’exécution spéculative.
+Les vulnérabilités de canal côté exécution spéculative peuvent être atténuées en apportant des modifications au code source. Ces modifications peuvent impliquer l’atténuation des instances spécifiques d’une vulnérabilité, telles que l’ajout d’une *barrière de spéculation* ou l’apport de modifications à la conception d’une application pour rendre des informations sensibles inaccessibles à l’exécution spéculative.
 
 ### <a name="speculation-barrier-via-manual-instrumentation"></a>Barrière de spéculation via l’instrumentation manuelle
 

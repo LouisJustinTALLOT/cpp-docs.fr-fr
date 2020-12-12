@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2876'
 title: Erreur du compilateur C2876
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2876
 ms.assetid: 8b674bf1-f9f4-4a8e-8127-e884c1d1708f
-ms.openlocfilehash: bb242c889d924612b5349ea06c19db954261b245
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5d83c1dd57c074354d3643452a1a2189bcbd860e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74736345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320497"
 ---
 # <a name="compiler-error-c2876"></a>Erreur du compilateur C2876
 

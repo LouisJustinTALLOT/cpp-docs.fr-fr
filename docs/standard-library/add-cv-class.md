@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe add_cv'
 title: add_cv, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 0afeea71daf8358b2aeeefe8d368c135a54a6ad6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bc25efd879a27b3d3af2e5f4db8dd74fafa3fb45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222626"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319929"
 ---
 # <a name="add_cv-class"></a>add_cv, classe
 

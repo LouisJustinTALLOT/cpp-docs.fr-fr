@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3080'
 title: Erreur du compilateur C3080
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3080
 ms.assetid: ff62a3f7-9b3b-44bd-b8d9-f3a8e5354560
-ms.openlocfilehash: 74a5f33a3b6b6524b53b15067c722c19c0e3f04e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 746e5527118c617983e96d02a584a0aa4508c64c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756706"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320152"
 ---
 # <a name="compiler-error-c3080"></a>Erreur du compilateur C3080
 
 'finalizer_function' : un finaliseur ne peut pas avoir de spécificateur de classe de stockage
 
-Pour plus d’informations, consultez [destructeurs et finaliseurs dans Guide pratique pour définir et consommer des classes et desC++structs (/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Pour plus d’informations, consultez [destructeurs et finaliseurs dans Guide pratique pour définir et consommer des classes et des structs (C++/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Exemple
 
