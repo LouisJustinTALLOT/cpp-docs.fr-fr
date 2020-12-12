@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _getchar_nolock, _getwchar_nolock'
 title: _getchar_nolock, _getwchar_nolock
 ms.date: 11/04/2016
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-ms.openlocfilehash: df7d07d4478d8feee1d5a0b35c40e4158a93be82
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 776eb6185cad072e416699e7ec253ab34bd146a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955400"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256690"
 ---
 # <a name="_getchar_nolock-_getwchar_nolock"></a>_getchar_nolock, _getwchar_nolock
 
@@ -64,14 +65,14 @@ See [getchar, getwchar](getchar-getwchar.md).
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettchar_nolock**|**_getchar_nolock**|**_getchar_nolock**|**_getwchar_nolock**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_getchar_nolock**|\<stdio.h>|
 |**_getwchar_nolock**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

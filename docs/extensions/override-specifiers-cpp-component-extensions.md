@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spécificateurs de substitution (C++/CLI et C++/CX)'
 title: Spécificateurs de remplacement (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-ms.openlocfilehash: 410fe9ecc48b92c68132f7b1b8057c2549c8afcf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce0b9ad4464eef66bc71826825e8129ef0a24cab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257587"
 ---
 # <a name="override-specifiers--ccli-and-ccx"></a>Spécificateurs de remplacement (C++/CLI et C++/CX)
 
@@ -23,7 +24,7 @@ Les *spécificateurs de substitution* modifient le comportement des types hérit
 
 Pour plus d'informations sur les spécificateurs de substitution, consultez :
 
-- [abstract](abstract-cpp-component-extensions.md)
+- [abstraction](abstract-cpp-component-extensions.md)
 
 - [new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)
 
@@ -55,4 +56,4 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

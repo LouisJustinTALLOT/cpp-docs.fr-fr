@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __rdtsc'
 title: __rdtsc
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 930c8fbd0ae762c8674a85e379899bc4fe4d3394
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257509"
 ---
 # <a name="__rdtsc"></a>__rdtsc
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Génère l' `rdtsc` instruction, qui retourne l’horodatage du processeur. Le datage du processeur enregistre le nombre de cycles d’horloge depuis la dernière réinitialisation.
 
@@ -31,13 +32,13 @@ unsigned __int64 __rdtsc();
 
 Entier non signé 64 bits représentant un nombre de cycles.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__rdtsc`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -45,7 +46,7 @@ Cette routine est disponible uniquement comme intrinsèque.
 
 L’interprétation de la valeur TSC dans les générations ultérieures de matériel diffère de celle des versions antérieures de x64. Pour plus d’informations, consultez les manuels du matériel.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // rdtsc.cpp
@@ -67,7 +68,7 @@ int main()
 3363423610155519 ticks
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

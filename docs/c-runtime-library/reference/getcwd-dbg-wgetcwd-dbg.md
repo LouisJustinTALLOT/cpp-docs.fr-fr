@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _getcwd_dbg, _wgetcwd_dbg'
 title: _getcwd_dbg, _wgetcwd_dbg
 ms.date: 11/04/2016
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-ms.openlocfilehash: 982a7c94ef3cbe5adf1e8e8a8a4c28443d8a5b8f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e470402cc258bf0fa0512136229eeace5bac466e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256599"
 ---
 # <a name="_getcwd_dbg-_wgetcwd_dbg"></a>_getcwd_dbg, _wgetcwd_dbg
 
@@ -75,13 +76,13 @@ Longueur maximale du chemin d’accès en caractères : **`char`** pour **_getc
 *blockType*<br/>
 Type demandé du bloc de mémoire : **_CLIENT_BLOCK** ou **_NORMAL_BLOCK**.
 
-*extension*<br/>
+*filename*<br/>
 Pointeur vers le nom du fichier source qui a demandé l’opération d’allocation ou **null**.
 
 *LineNumber*<br/>
 Numéro de ligne dans le fichier source où l’opération d’allocation a été demandée ou **null**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers la *mémoire tampon*. Une valeur de retour **null** indique une erreur, et **errno** a la valeur **ENOMEM**, ce qui indique que la mémoire est insuffisante pour allouer *MaxLen* octets (quand un argument **null** est fourni comme *buffer*) ou à **ERANGE**, ce qui indique que le chemin d’accès dépasse les caractères *MaxLen* .
 
@@ -112,4 +113,4 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [Contrôle de répertoire](../../c-runtime-library/directory-control.md)<br/>
-[Versions Debug des fonctions d'allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>
+[Versions Debug des fonctions d’allocation du tas](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)<br/>

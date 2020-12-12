@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : numeric (STL/CLR)'
 title: numériques (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - inner_product function [STL/CLR]
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-ms.openlocfilehash: 1939a6dd9b6d8186eb278623f3b0a5a3d851f4d3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4717226a0ad365aa13255d69b498b329acc37f40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208479"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255611"
 ---
 # <a name="numeric-stlclr"></a>numériques (STL/CLR)
 
@@ -36,7 +37,7 @@ Définit les fonctions de modèle de conteneur qui exécutent des algorithmes fo
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<cliext/Numeric >
+**En-tête :**\<cliext/numeric>
 
 **Espace de noms :** cliext
 
@@ -47,11 +48,11 @@ Définit les fonctions de modèle de conteneur qui exécutent des algorithmes fo
 |[accumulate (STL/CLR)](#accumulate)|Calcule la somme de tous les éléments d’une plage spécifiée incluant une valeur initiale en calculant des sommes partielles successives, ou calcule le résultat des résultats partiels successifs obtenus de la même façon en utilisant une opération binaire spécifiée autre que la somme.|
 |[adjacent_difference (STL/CLR)](#adjacent_difference)|Détermine les différences successives entre chaque élément et son prédécesseur au sein d'une plage d'entrée, puis génère les résultats dans une plage de destination ou calcule le résultat d'une procédure généralisée dans laquelle l'opération de différence est remplacée par une autre opération binaire spécifiée.|
 |[inner_product (STL/CLR)](#inner_product)|Calcule la somme du produit d’éléments de deux plages et l’ajoute à une valeur initiale spécifiée, ou calcule le résultat d’une procédure généralisée dans laquelle les opérations binaires de somme et de produit sont remplacées par d’autres opérations binaires spécifiées.|
-|[partial_sum (STL/CLR)](#partial_sum)|Calcule une série de sommes dans une plage d’entrée à partir du premier élément jusqu’au `i`Th et stocke le résultat de chaque somme dans `i`ième élément d’une plage de destination ou calcule le résultat d’une procédure généralisée où l’opération de somme est remplacée par une autre opération binaire spécifiée.|
+|[partial_sum (STL/CLR)](#partial_sum)|Calcule une série de sommes dans une plage d’entrée à partir du premier élément jusqu’à l' `i` élément Th et stocke le résultat de chaque somme dans l' `i` élément th d’une plage de destination ou calcule le résultat d’une procédure généralisée où l’opération Sum est remplacée par une autre opération binaire spécifiée.|
 
 ## <a name="members"></a>Membres
 
-## <a name="accumulate-stlclr"></a><a name="accumulate"></a>cumul (STL/CLR)
+## <a name="accumulate-stlclr"></a><a name="accumulate"></a> cumul (STL/CLR)
 
 Calcule la somme de tous les éléments d’une plage spécifiée incluant une valeur initiale en calculant des sommes partielles successives, ou calcule le résultat des résultats partiels successifs obtenus de la même façon en utilisant une opération binaire spécifiée autre que la somme.
 
@@ -66,9 +67,9 @@ template<class _InIt, class _Ty, class _Fn2> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction se comporte de la même façon que C++ la fonction numérique standard de la bibliothèque `accumulate`. Pour plus d’informations, consultez [cumul](../standard-library/numeric-functions.md#accumulate).
+Cette fonction se comporte de la même façon que la fonction numérique de la bibliothèque standard C++ `accumulate` . Pour plus d’informations, consultez [cumul](../standard-library/numeric-functions.md#accumulate).
 
-## <a name="adjacent_difference-stlclr"></a><a name="adjacent_difference"></a>adjacent_difference (STL/CLR)
+## <a name="adjacent_difference-stlclr"></a><a name="adjacent_difference"></a> adjacent_difference (STL/CLR)
 
 Détermine les différences successives entre chaque élément et son prédécesseur au sein d'une plage d'entrée, puis génère les résultats dans une plage de destination ou calcule le résultat d'une procédure généralisée dans laquelle l'opération de différence est remplacée par une autre opération binaire spécifiée.
 
@@ -85,9 +86,9 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction se comporte de la même façon que C++ la fonction numérique standard de la bibliothèque `adjacent_difference`. Pour plus d’informations, consultez [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference).
+Cette fonction se comporte de la même façon que la fonction numérique de la bibliothèque standard C++ `adjacent_difference` . Pour plus d’informations, consultez [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference).
 
-## <a name="inner_product-stlclr"></a><a name="inner_product"></a>inner_product (STL/CLR)
+## <a name="inner_product-stlclr"></a><a name="inner_product"></a> inner_product (STL/CLR)
 
 Calcule la somme du produit d’éléments de deux plages et l’ajoute à une valeur initiale spécifiée, ou calcule le résultat d’une procédure généralisée dans laquelle les opérations binaires de somme et de produit sont remplacées par d’autres opérations binaires spécifiées.
 
@@ -105,11 +106,11 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction se comporte de la même façon que C++ la fonction numérique standard de la bibliothèque `inner_product`. Pour plus d’informations, consultez [inner_product](../standard-library/numeric-functions.md#inner_product).
+Cette fonction se comporte de la même façon que la fonction numérique de la bibliothèque standard C++ `inner_product` . Pour plus d’informations, consultez [inner_product](../standard-library/numeric-functions.md#inner_product).
 
-## <a name="partial_sum-stlclr"></a><a name="partial_sum"></a>partial_sum (STL/CLR)
+## <a name="partial_sum-stlclr"></a><a name="partial_sum"></a> partial_sum (STL/CLR)
 
-Calcule une série de sommes dans une plage d’entrée à partir du premier élément jusqu’au `i`Th et stocke le résultat de chaque somme dans `i`ième élément d’une plage de destination ou calcule le résultat d’une procédure généralisée où l’opération de somme est remplacée par une autre opération binaire spécifiée.
+Calcule une série de sommes dans une plage d’entrée à partir du premier élément jusqu’à l' `i` élément Th et stocke le résultat de chaque somme dans l' `i` élément th d’une plage de destination ou calcule le résultat d’une procédure généralisée où l’opération Sum est remplacée par une autre opération binaire spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -123,4 +124,4 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction se comporte de la même façon que C++ la fonction numérique standard de la bibliothèque `partial_sum`. Pour plus d’informations, consultez [partial_sum](../standard-library/numeric-functions.md#partial_sum).
+Cette fonction se comporte de la même façon que la fonction numérique de la bibliothèque standard C++ `partial_sum` . Pour plus d’informations, consultez [partial_sum](../standard-library/numeric-functions.md#partial_sum).

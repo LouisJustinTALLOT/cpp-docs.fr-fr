@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : __popcnt16, __popcnt __popcnt64'
 title: __popcnt16, __popcnt, __popcnt64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cb95ff09d589cfd9a9cfc438d0334cf68f073825
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257522"
 ---
 # <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Compte le nombre de `1` bits (nombre de remplissage) dans un entier non signé 16, 32 ou 64 bits.
 
@@ -40,28 +41,28 @@ unsigned __int64 __popcnt64(
 
 ### <a name="parameters"></a>Paramètres
 
-*value*\
+*ajoutée*\
 dans Entier non signé 16, 32 ou 64 bits pour lequel nous souhaitons obtenir le nombre de remplissages.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Nombre de `1` bits dans le paramètre de *valeur* .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__popcnt16`|Manipulation de bits avancée|
 |`__popcnt`|Manipulation de bits avancée|
 |`__popcnt64`|Manipulation de bits avancée en mode 64 bits.|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-Chacun des intrinsèques génère l' `popcnt` instruction. En mode 32 bits, il n’existe aucun registre à usage général de 64 bits, donc 64 `popcnt` bits n’est pas pris en charge.
+Chacun des intrinsèques génère l' `popcnt` instruction. En mode 32 bits, il n’existe aucun registre à usage général de 64 bits, donc 64 bits `popcnt` n’est pas pris en charge.
 
-Pour déterminer la prise en charge `popcnt` matérielle de l’instruction `__cpuid` , appelez `InfoType=0x00000001` l’intrinsèque avec et vérifiez `CPUInfo[2] (ECX)`le bit 23 de. Ce bit est égal à 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez du code qui utilise ces fonctions intrinsèques sur du matériel qui `popcnt` ne prend pas en charge l’instruction, les résultats sont imprévisibles.
+Pour déterminer la prise en charge matérielle de l' `popcnt` instruction, appelez l' `__cpuid` intrinsèque avec `InfoType=0x00000001` et vérifiez le bit 23 de `CPUInfo[2] (ECX)` . Ce bit est égal à 1 si l’instruction est prise en charge et 0 dans le cas contraire. Si vous exécutez du code qui utilise ces fonctions intrinsèques sur du matériel qui ne prend pas en charge l' `popcnt` instruction, les résultats sont imprévisibles.
 
 ## <a name="example"></a>Exemple
 
@@ -99,7 +100,7 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 Parties Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation de Advanced Micro Devices, Inc.
 

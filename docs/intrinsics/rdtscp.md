@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __rdtscp'
 title: __rdtscp
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: 4dcabd6ed0f7fb3f422927815cbdc91f2b4b9d43
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 511d0f1001c218fd838d4bb315fe8c95f10eb3bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221325"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257487"
 ---
 # <a name="__rdtscp"></a>__rdtscp
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère l' `rdtscp` instruction, écrit `TSC_AUX[31:0`] dans la mémoire et retourne le compteur d’horodatage 64 bits (`TSC)` résultat.
+Génère l' `rdtscp` instruction, écrit `TSC_AUX[31:0` ] dans la mémoire et retourne le compteur d’horodatage 64 bits ( `TSC)` résultat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,30 +32,30 @@ unsigned __int64 __rdtscp(
 
 ### <a name="parameters"></a>Paramètres
 
-*COORD*\
-à Pointeur vers un emplacement qui contiendra le contenu du Registre `TSC_AUX[31:0]`spécifique à l’ordinateur.
+*Coord*\
+à Pointeur vers un emplacement qui contiendra le contenu du Registre spécifique à l’ordinateur `TSC_AUX[31:0]` .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Nombre de cycles d’entier non signé 64 bits.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__rdtscp`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-L' `__rdtscp` intrinsèque génère l' `rdtscp` instruction. Pour déterminer la prise en charge matérielle pour cette instruction `__cpuid` , appelez `InfoType=0x80000001` l’intrinsèque avec et vérifiez `CPUInfo[3] (EDX)`le bit 27 de. Ce bit est égal à 1 si l’instruction est prise en charge et 0 dans le cas contraire.  Si vous exécutez du code qui utilise l’intrinsèque sur du matériel qui ne `rdtscp` prend pas en charge l’instruction, les résultats sont imprévisibles.
+L' `__rdtscp` intrinsèque génère l' `rdtscp` instruction. Pour déterminer la prise en charge matérielle pour cette instruction, appelez l' `__cpuid` intrinsèque avec `InfoType=0x80000001` et vérifiez le bit 27 de `CPUInfo[3] (EDX)` . Ce bit est égal à 1 si l’instruction est prise en charge et 0 dans le cas contraire.  Si vous exécutez du code qui utilise l’intrinsèque sur du matériel qui ne prend pas en charge l' `rdtscp` instruction, les résultats sont imprévisibles.
 
 Cette instruction attend que toutes les instructions précédentes aient été exécutées et que toutes les chargements précédents soient globalement visibles. Toutefois, il ne s’agit pas d’une instruction de sérialisation. Pour plus d’informations, consultez les manuels Intel et AMD.
 
 La signification de la valeur dans `TSC_AUX[31:0]` dépend du système d’exploitation.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 #include <intrin.h>
@@ -74,7 +75,7 @@ int main()
 TSC_AUX was 0
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

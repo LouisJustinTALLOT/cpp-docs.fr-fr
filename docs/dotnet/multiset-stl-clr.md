@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : multiensemble (STL/CLR)'
 title: multiset (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -97,12 +98,12 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-ms.openlocfilehash: a6bb7a262df21a835f1e870f2bce29480467c543
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1b2300fe7b856e989dd470f47da559496374961b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255650"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
@@ -131,7 +132,7 @@ template<typename Key>
 *Clé*<br/>
 Type du composant clé d'un élément dans la séquence contrôlée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<cliext/set>
 
@@ -202,7 +203,7 @@ Type du composant clé d'un élément dans la séquence contrôlée.
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|
 |ITree\<Key, Value>|Conserver le conteneur générique.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels. Elle insère des éléments dans une arborescence (quasi) équilibrée qu’elle continue de trier en modifiant les liens entre les nœuds, jamais en copiant le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber les éléments restants.
 
@@ -482,7 +483,7 @@ size_type count(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne le nombre d’éléments dans la séquence contrôlée qui ont un classement équivalent avec la *clé*. Vous l'utilisez pour déterminer le nombre d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
@@ -691,7 +692,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(` [multijeu :: lower_bound (STL/CLR)](#lower_bound) `(key),` [multijeu :: upper_bound (STL/CLR)](#upper_bound) `(key))` . Vous l’utilisez pour déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
@@ -762,9 +763,9 @@ Fin de la plage à effacer.
 *where*<br/>
 Élément à effacer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle*pointe, et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [multijeu :: end (STL/CLR)](#end) `()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer un seul élément.
+La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle* pointe, et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [multijeu :: end (STL/CLR)](#end) `()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer un seul élément.
 
 La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage [ `first` , `last` ) et retourne un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `end()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
 
@@ -835,7 +836,7 @@ iterator find(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si au moins un élément de la séquence contrôlée a un classement équivalent avec la *clé*, la fonction membre retourne un itérateur désignant l’un de ces éléments ; Sinon, elle retourne [multijeu :: end (STL/CLR)](#end) `()` . Vous l’utilisez pour rechercher un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
@@ -1137,11 +1138,11 @@ Valeur de clé à insérer.
 *where*<br/>
 Où dans le conteneur à insérer (hint uniquement).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Chacune des fonctions membres insère une séquence spécifiée par les opérandes restants.
 
-La première fonction membre insère un élément avec la valeur *Val*et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique.
+La première fonction membre insère un élément avec la valeur *Val* et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique.
 
 La deuxième fonction membre insère un élément avec la valeur *Val*, en utilisant *Where* comme indicateur (pour améliorer les performances) et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique qui peut être adjacent à un élément que vous connaissez.
 
@@ -1392,7 +1393,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la *clé*de paramètre de modèle.
+Le type est un synonyme de la *clé* de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1440,7 +1441,7 @@ iterator lower_bound(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre détermine le premier élément `X` de la séquence contrôlée qui a un classement équivalent à la *clé*. Si aucun élément de ce type n’existe, il retourne [multijeu :: end (STL/CLR)](#end) `()` ; sinon, il retourne un itérateur qui désigne `X` . Vous l’utilisez pour localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
@@ -1497,7 +1498,7 @@ static value_type make_value(key_type key);
 *key*<br/>
 Valeur de clé à utiliser.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne un `value_type` objet dont la clé est *clé*. Vous l’utilisez pour composer un objet pouvant être utilisé avec plusieurs autres fonctions membres.
 
@@ -1563,7 +1564,7 @@ Prédicat de classement pour la séquence contrôlée.
 *Oui*<br/>
 Objet ou plage à insérer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le constructeur :
 
@@ -1611,7 +1612,7 @@ Le constructeur :
 
 `multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Initialise la séquence contrôlée avec la séquence désignée par le *droit*d’énumérateur, avec le prédicat de classement *prédit*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri spécifié.
+Initialise la séquence contrôlée avec la séquence désignée par le *droit* d’énumérateur, avec le prédicat de classement *prédit*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -1714,7 +1715,7 @@ multiset<Key>% operator=(multiset<Key>% right);
 *Oui*<br/>
 Conteneur à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
@@ -2055,7 +2056,7 @@ void swap(multiset<Key>% right);
 *Oui*<br/>
 Conteneur avec lequel échanger le contenu.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre échange les séquences contrôlées entre **`this`** et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
 
@@ -2173,7 +2174,7 @@ iterator upper_bound(key_type key);
 *key*<br/>
 Valeur de clé à rechercher.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre détermine le dernier élément `X` de la séquence contrôlée qui a un classement équivalent à la *clé*. Si aucun élément de ce type n’existe, ou si `X` est le dernier élément de la séquence contrôlée, elle retourne [multijeu :: end (STL/CLR)](#end) `()` ; sinon, elle retourne un itérateur qui désigne le premier élément au-delà de `X` . Vous l’utilisez pour localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
@@ -2369,7 +2370,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même façon que* lorsque les deux multijeux sont comparés élément par élément.
 
@@ -2439,9 +2440,9 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, il retourne `left->size() < right->size()` que vous l’utilisez pour tester si *right* *Left* est ordonné avant le moment où les deux multijeux sont comparés élément par élément.
+La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, il retourne `left->size() < right->size()` que vous l’utilisez pour tester si  *Left* est ordonné avant le moment où les deux multijeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2509,7 +2510,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas ordonné après *le* moment où les deux multijeux sont comparés élément par élément.
 
@@ -2579,7 +2580,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i` , `left[i] ==` `right[i]` . Vous l’utilisez pour tester si *Left* est *ordonné de la même façon que* lorsque les deux multijeux sont comparés élément par élément.
 
@@ -2649,7 +2650,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour tester si la *gauche* est triée après *le* moment où les deux multijeux sont comparés élément par élément.
 
@@ -2719,7 +2720,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left < right)` . Vous l’utilisez pour tester si *Left* n’est pas ordonné *avant le moment où* les deux multijeux sont comparés élément par élément.
 

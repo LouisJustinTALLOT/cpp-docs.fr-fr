@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur l’interopérabilité native et .NET
 title: Interopérabilité native et .NET
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0276c4401b56f453549cf31433cc6f558daf1c02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255637"
 ---
 # <a name="native-and-net-interoperability"></a>Interopérabilité native et .NET
 
-Visual C++ prend en charge les fonctionnalités d’interopérabilité qui permettent des constructions managées et non managées de coexister et d’interagir dans le même assembly et même dans le même fichier. Un petit sous-ensemble de ces fonctionnalités, telles que P/Invoke, est pris en charge par d’autres langages .NET, mais la plupart de la prise en charge l’interopérabilité fournie par Visual C++ n’est pas disponible dans d’autres langages.
+Visual C++ prend en charge les fonctionnalités d’interopérabilité qui permettent aux constructions managées et non managées de coexister et d’interagir dans le même assembly, et même dans le même fichier. Un petit sous-ensemble de cette fonctionnalité, tel que P/Invoke, est également pris en charge par d’autres langages .NET, mais la majeure partie de la prise en charge de l’interopérabilité fournie par Visual C++ n’est pas disponible dans d’autres langages.
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
-Décrit les assemblys générés avec le [/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) option du compilateur qui contiennent les deux fonctionnalités managées et.
+[Assemblys mixtes (natifs et managés)](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
+Décrit les assemblys générés avec l’option du compilateur [/clr (compilation du Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) qui contiennent à la fois les fonctionnalités managées et non managées.
 
 [Utilisation d’un contrôle utilisateur Windows Form dans MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-Explique comment utiliser les classes de prise en charge de MFC Windows Forms pour héberger des contrôles Windows Forms dans vos applications MFC.
+Explique comment utiliser les classes de prise en charge MFC Windows Forms pour héberger des contrôles Windows Forms dans vos applications MFC.
 
-[Appel à des fonctions natives à partir de code managé](../dotnet/calling-native-functions-from-managed-code.md)<br/>
-Décrit l’utilisation des DLL non - CLR à partir d’applications .NET.
+[Appel de fonctions natives à partir de code managé](../dotnet/calling-native-functions-from-managed-code.md)<br/>
+Décrit comment les dll non-CLR peuvent être utilisées à partir d’applications .NET.

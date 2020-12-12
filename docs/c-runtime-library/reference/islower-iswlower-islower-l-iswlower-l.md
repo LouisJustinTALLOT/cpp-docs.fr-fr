@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : IsLower, iswlower, _islower_l, _iswlower_l'
 title: islower, iswlower, _islower_l, _iswlower_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-ms.openlocfilehash: 4add576b9abe2bedda227d76cf3fc57890cfcbc1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cf4b127e46a18308da9e51880b7c10b2e2f4aa06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917566"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256443"
 ---
 # <a name="islower-iswlower-_islower_l-_iswlower_l"></a>islower, iswlower, _islower_l, _iswlower_l
 
@@ -80,15 +81,15 @@ int _iswlower_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère minuscule. **IsLower** retourne une valeur différente de zéro si *c* est un caractère minuscule (a-z). **iswlower** retourne une valeur différente de zéro si *c* est un caractère élargi qui correspond à une lettre minuscule, ou si *c* est l’un des jeux de caractères larges définis par l’implémentation pour lesquels aucun des **iswcntrl**, **iswdigit**, **iswpunct**ou **iswspace** n’est différent de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
+Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère minuscule. **IsLower** retourne une valeur différente de zéro si *c* est un caractère minuscule (a-z). **iswlower** retourne une valeur différente de zéro si *c* est un caractère élargi qui correspond à une lettre minuscule, ou si *c* est l’un des jeux de caractères larges définis par l’implémentation pour lesquels aucun des **iswcntrl**, **iswdigit**, **iswpunct** ou **iswspace** n’est différent de zéro. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
 Les versions de ces fonctions qui ont le suffixe **_L** utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -101,7 +102,7 @@ Le comportement de **IsLower** et **_islower_l** n’est pas défini si *c* n’
 |**_istlower**|**islower**|[_ismbclower](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswlower**|
 |**_istlower_l**|`_islower _l`|[_ismbclower_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_liswlower_l**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -118,6 +119,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Classification des caractères](../../c-runtime-library/character-classification.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>
