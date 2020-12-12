@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation de CAnimateCtrl'
 title: Utilisation de CAnimateCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - controls [MFC], animation
 - CAnimateCtrl class [MFC], about CAnimateCtrl class [MFC]
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
-ms.openlocfilehash: 79c1a0111317514ef6fd68acd0c6a2ebdccc3ba4
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bb13d23f45b3a19516a688fd9e9857f750196d56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271783"
 ---
 # <a name="using-canimatectrl"></a>Utilisation de CAnimateCtrl
 
@@ -23,7 +24,7 @@ Les contrôles d’animation peuvent uniquement lire des clips AVI simples et ne
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Utilisation d’un contrôle Animation](../mfc/using-an-animation-control.md)
+- [Utilisation d’un contrôle animation](../mfc/using-an-animation-control.md)
 
 - [Notifications envoyées par les contrôles d’animation](../mfc/notifications-sent-by-animation-controls.md)
 

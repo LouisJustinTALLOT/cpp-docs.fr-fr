@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : Planificateur de tâches (runtime d’accès concurrentiel)'
 title: Planificateur de tâches (runtime d'accès concurrentiel)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: e4a2e66afe656f9588ed3040218d1f70b3684190
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: db52b6714f5bdb96cb33aeea1bce1d92f5d5d4a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271380"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Planificateur de tâches (runtime d'accès concurrentiel)
 
 Les rubriques de cette partie de la documentation décrivent les fonctionnalités importantes du planificateur de tâches du runtime d’accès concurrentiel. Le planificateur de tâches s’avère utile quand vous voulez affiner les performances de votre code existant qui utilise le runtime d’accès concurrentiel.
 
 > [!IMPORTANT]
-> Le Planificateur de tâches n’est pas disponible à partir d’une application plateforme Windows universelle (UWP). Pour plus d’informations, consultez [création d’opérations C++ asynchrones dans pour les applications UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
+> Le Planificateur de tâches n’est pas disponible à partir d’une application plateforme Windows universelle (UWP). Pour plus d’informations, consultez [création d’opérations asynchrones en C++ pour les applications UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 >
 > Dans Visual Studio 2015 et versions ultérieures, la classe [Concurrency :: Task](../../parallel/concrt/reference/task-class.md) et les types associés dans ppltasks. h utilisent le pool de threads Windows en tant que planificateur. Cette rubrique ne s'applique plus aux types qui sont définis dans ppltasks.h. Les algorithmes parallèles comme parallel_for continuent à utiliser le runtime d'accès concurrentiel en tant que planificateur par défaut.
 
@@ -45,7 +46,7 @@ Le runtime d'accès concurrentiel fournit un planificateur par défaut pour que 
 
 ## <a name="related-topics"></a>Rubriques connexes
 
-|Intitulé|Description|
+|Titre|Description|
 |-----------|-----------------|
 |[Instances de planificateur](../../parallel/concrt/scheduler-instances.md)|Décrit les instances de planificateur et la manière d'utiliser les classes `concurrency::Scheduler` et `concurrency::CurrentScheduler` pour les gérer. Utilisez les instances de planificateur pour associer des stratégies de planification explicites à des types spécifiques de charges de travail.|
 |[Stratégies de planificateur](../../parallel/concrt/scheduler-policies.md)|Décrit le rôle des stratégies de planificateur. Utilisez des stratégies de planificateur pour contrôler la stratégie utilisée par le planificateur pour gérer des tâches.|
@@ -53,7 +54,7 @@ Le runtime d'accès concurrentiel fournit un planificateur par défaut pour que 
 |[Tâches légères](../../parallel/concrt/lightweight-tasks.md)|Décrit le rôle des tâches légères. Les tâches légères s’avèrent utiles quand vous adaptez du code existant pour utiliser les fonctionnalités de planification du runtime d’accès concurrentiel.|
 |[Contextes](../../parallel/concrt/contexts.md)|Décrit le rôle des contextes, la fonction `concurrency::wait` et la classe `concurrency::Context`. Utilisez cette fonctionnalité quand vous avez besoin de contrôler le moment auquel les contextes bloquent, débloquent et produisent, ou quand vous voulez activer le surabonnement dans votre application.|
 |[Fonctions de gestion de la mémoire](../../parallel/concrt/memory-management-functions.md)|Décrit les fonctions `concurrency::Alloc` et `concurrency::Free`. Ces fonctions peuvent améliorer les performances de la mémoire en allouant ou en libérant de la mémoire de façon simultanée.|
-|[Comparaison avec d’autres modèles d’accès concurrentiel](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Décrit les différences entre les mécanismes de planification de préemption et de coopération.|
-|[Bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Décrit comment utiliser divers modèles parallèles, par exemple, des algorithmes parallèles, dans vos applications.|
-|[Bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)|Décrit comment utiliser des agents asynchrones dans vos applications.|
-|[Le runtime d’accès concurrentiel](../../parallel/concrt/concurrency-runtime.md)|Décrit le runtime d'accès concurrentiel, qui simplifie la programmation parallèle, et contient des liens vers les rubriques connexes.|
+|[Comparaison des autres modèles d'accès concurrentiel](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Décrit les différences entre les mécanismes de planification de préemption et de coopération.|
+|[Bibliothèque de modèles parallèles](../../parallel/concrt/parallel-patterns-library-ppl.md)|Décrit comment utiliser divers modèles parallèles, par exemple, des algorithmes parallèles, dans vos applications.|
+|[bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md)|Décrit comment utiliser des agents asynchrones dans vos applications.|
+|[Concurrency Runtime](../../parallel/concrt/concurrency-runtime.md)|Décrit le runtime d'accès concurrentiel, qui simplifie la programmation parallèle, et contient des liens vers les rubriques connexes.|

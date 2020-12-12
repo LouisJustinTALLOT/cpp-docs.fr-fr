@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : utilisation de CRichEditCtrl'
 title: Utilisation de CRichEditCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - rich edit controls [MFC], using
 - CRichEditCtrl class [MFC], using
 ms.assetid: e400c6ed-563e-4d4c-ab3b-a3f0aa20273b
-ms.openlocfilehash: 53f718d58840eba5f7c1e41c1c337e6c779b51e3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 134b07436d9d277256e91ac625ed28accf470696
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271601"
 ---
 # <a name="using-cricheditctrl"></a>Utilisation de CRichEditCtrl
 
@@ -20,7 +21,7 @@ Un contrôle RichEdit est une fenêtre dans laquelle l’utilisateur peut entrer
 
 - [Vue d’ensemble du contrôle RichEdit](../mfc/overview-of-the-rich-edit-control.md)
 
-- [Classes associées aux contrôles RichEdit](../mfc/classes-related-to-rich-edit-controls.md)
+- [Classes liées aux contrôles RichEdit](../mfc/classes-related-to-rich-edit-controls.md)
 
 - [Exemples de contrôle RichEdit](../mfc/rich-edit-control-examples.md)
 
@@ -32,13 +33,13 @@ Un contrôle RichEdit est une fenêtre dans laquelle l’utilisateur peut entrer
 
 - [Coupure des mots dans un contrôle RichEdit](../mfc/word-breaks-in-rich-edit-controls.md)
 
-- [Opérations du Presse-papiers dans les contrôles RichEdit](../mfc/clipboard-operations-in-rich-edit-controls.md)
+- [Opérations du presse-papiers dans les contrôles RichEdit](../mfc/clipboard-operations-in-rich-edit-controls.md)
 
 - [Opérations de flux dans les contrôles RichEdit](../mfc/stream-operations-in-rich-edit-controls.md)
 
 - [Impression dans des contrôles RichEdit](../mfc/printing-in-rich-edit-controls.md)
 
-- [Contrôles RichEdit sans marge inférieure](../mfc/bottomless-rich-edit-controls.md)
+- [Contrôles RichEdit sans fin](../mfc/bottomless-rich-edit-controls.md)
 
 - [Notifications d’un contrôle RichEdit](../mfc/notifications-from-a-rich-edit-control.md)
 

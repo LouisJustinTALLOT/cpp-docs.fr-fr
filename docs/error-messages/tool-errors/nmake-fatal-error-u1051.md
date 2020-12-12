@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur irrécupérable NMAKE NMAKE U1051'
 title: Erreur irrécupérable NMAKE U1051
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - U1051
 ms.assetid: fede5cd5-dac3-47b7-b86d-e1acfb78699f
-ms.openlocfilehash: 9c6b939c97f993e42049677292374377d825d474
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c7d465eaf34adb69e41f523006fb0740eea722ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80193678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272108"
 ---
 # <a name="nmake-fatal-error-u1051"></a>Erreur irrécupérable NMAKE U1051
 
@@ -25,4 +26,4 @@ NMAKE ne dispose pas de suffisamment de mémoire, y compris la mémoire virtuell
 
 1. Augmentez la taille du fichier d’échange Windows NT ou du fichier d’échange Windows.
 
-1. Si seule une partie du Makefile est utilisée, divisez le Makefile en fichiers distincts ou utilisez **! Si** les directives de prétraitement limitent la quantité que doit traiter NMAKE. Le **! Si** les directives incluent **! Si**, `!IFDEF`, **! IFNDEF**, **! Sinon, si**, **! SINON** `IFDEF`, et **! SINON** `IFNDEF`.
+1. Si seule une partie du Makefile est utilisée, divisez le Makefile en fichiers distincts ou utilisez **! Si** les directives de prétraitement limitent la quantité que doit traiter NMAKE. Le **! Si** les directives incluent **! Si**, `!IFDEF` , **! IFNDEF**, **! Sinon, si**, **! SINON** `IFDEF` , et **! SINON** `IFNDEF` .

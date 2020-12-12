@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : enregistrement utilisateur'
 title: Enregistrement utilisateur
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -8,17 +9,17 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f858660800391eff45cb88115f8fb09afa26a77f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272498"
 ---
 # <a name="user-record"></a>Enregistrement utilisateur
 
 > [!NOTE]
-> L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures.
+> L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 L’enregistrement utilisateur fournit la structure de code et de données qui représente les données de colonne pour un ensemble de lignes. Un enregistrement d’utilisateur peut être créé au moment de la compilation ou au moment de l’exécution. Lorsque vous créez un fournisseur à l’aide de l’**Assistant Fournisseur OLE DB ATL**, l’Assistant crée un enregistrement utilisateur par défaut qui ressemble à ceci (en supposant que vous avez spécifié un nom de fournisseur [nom court] de *MyProvider*) :
 
@@ -71,4 +72,4 @@ Pour obtenir un exemple plus détaillé concernant le remplacement de `GetColumn
 
 ## <a name="see-also"></a>Voir aussi
 
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

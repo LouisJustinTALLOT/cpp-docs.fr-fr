@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : utilisation de CToolBarCtrl'
 title: Utilisation de CToolBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d2d72ab6368c66e76648cd7ff00771bde4f5a60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271549"
 ---
 # <a name="using-ctoolbarctrl"></a>Utilisation de CToolBarCtrl
 
@@ -26,7 +27,7 @@ Vous pouvez utiliser le contrôle ToolBar ([CToolBarCtrl](../mfc/reference/ctool
 
 - [Utilisation de listes d’images dans un contrôle ToolBar](../mfc/using-image-lists-in-a-toolbar-control.md)
 
-- [Utilisation de boutons de liste déroulante dans un contrôle ToolBar](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)
+- [Utilisation de boutons Drop-Down dans un contrôle ToolBar](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)
 
 - [Personnalisation de l’apparence d’un contrôle ToolBar](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
 

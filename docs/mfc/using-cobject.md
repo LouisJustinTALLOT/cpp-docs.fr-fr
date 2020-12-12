@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation de CObject'
 title: Utilisation de CObject
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-ms.openlocfilehash: b5399f02819407a529fd5ec66d4f5acbb16ca002
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 203e2a498f787f23de21db4469e5cdd7c5543761
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271640"
 ---
 # <a name="using-cobject"></a>Utilisation de CObject
 
-[CObject](../mfc/reference/cobject-class.md) est la classe de base racine pour la plupart des bibliothèque MFC (Microsoft Foundation Class) (MFC). La classe `CObject` contient de nombreuses fonctionnalités utiles que vous pouvez incorporer dans vos propres objets de programme, notamment la prise en charge de la sérialisation, les informations de classe au moment de l’exécution et la sortie de diagnostic d’objet. Si vous dérivez votre classe de `CObject`, votre classe peut exploiter ces `CObject` fonctionnalités.
+[CObject](../mfc/reference/cobject-class.md) est la classe de base racine pour la plupart des bibliothèque MFC (Microsoft Foundation Class) (MFC). La `CObject` classe contient de nombreuses fonctionnalités utiles que vous pouvez incorporer dans vos propres objets de programme, notamment la prise en charge de la sérialisation, les informations de classe au moment de l’exécution et la sortie de diagnostic d’objet. Si vous dérivez votre classe de `CObject` , votre classe peut exploiter ces `CObject` fonctionnalités.
 
 ## <a name="what-do-you-want-to-do"></a>Tu veux faire quoi
 
@@ -40,7 +41,7 @@ ms.locfileid: "79441923"
 ## <a name="see-also"></a>Voir aussi
 
 [Concepts](../mfc/mfc-concepts.md)<br/>
-[Rubriques MFC générales](../mfc/general-mfc-topics.md)<br/>
-[CRuntimeClass, structure](../mfc/reference/cruntimeclass-structure.md)<br/>
+[Rubriques générales sur MFC](../mfc/general-mfc-topics.md)<br/>
+[Structure CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
 [Fichiers](../mfc/files-in-mfc.md)<br/>
 [Sérialisation](../mfc/serialization-in-mfc.md)

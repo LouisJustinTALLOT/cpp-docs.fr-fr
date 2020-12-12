@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : utilisation de CStatusBarCtrl'
 title: Utilisation de CStatusBarCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-ms.openlocfilehash: ee691d013d578f4c16fa9eadabd05f8710f32d8e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29eed7f32355c838ce605132a77009d9db595aa2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271536"
 ---
 # <a name="using-cstatusbarctrl"></a>Utilisation de CStatusBarCtrl
 
@@ -18,9 +19,9 @@ Vous pouvez utiliser le contrôle de barre d’État ([CStatusBarCtrl](../mfc/re
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Méthodes de création d’une barre d’état](../mfc/methods-of-creating-a-status-bar.md)
+- [Méthodes de création d’une barre d’État](../mfc/methods-of-creating-a-status-bar.md)
 
-- [Paramètres de l’objet CStatusBarCtrl](../mfc/settings-for-the-cstatusbarctrl.md)
+- [Paramètres de l'objet CStatusBarCtrl](../mfc/settings-for-the-cstatusbarctrl.md)
 
 - [Utilisation de CStatusBarCtrl pour créer un objet CStatusBarCtrl](../mfc/using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md)
 

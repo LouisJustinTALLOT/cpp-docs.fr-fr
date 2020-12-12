@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : comparaison des runtime d’accès concurrentiel à d’autres modèles d’accès concurrentiel'
 title: Comparaison du runtime d'accès concurrentiel aux autres modèles d'accès concurrentiel
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 3259d24d4eb3d5b4af9731b97c343d4dd01ea6e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271477"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparaison du runtime d'accès concurrentiel aux autres modèles d'accès concurrentiel
 
@@ -33,7 +34,7 @@ Le modèle préemptif et les modèles de planification coopérative sont deux m�
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Planifications préemptive et coopérative
 
-La*planification préemptive* est un mécanisme de tourniquet (round robin) basé sur des priorités, qui donne à chaque tâche un accès exclusif à une ressource de calcul pour une période donnée, puis bascule vers une autre tâche. La planification préemptive est le modèle généralement utilisé dans les systèmes d’exploitation multitâches tels que Windows. La *planification coopérative* est un mécanisme qui donne à chaque tâche un accès exclusif à une ressource de calcul jusqu’à ce que la tâche se termine ou jusqu’à ce que la tâche donne son accès à la ressource. Le runtime d’accès concurrentiel utilise la planification coopérative en combinaison avec le planificateur préemptif du système d’exploitation pour optimiser l’utilisation des ressources de traitement.
+La *planification préemptive* est un mécanisme de tourniquet (round robin) basé sur des priorités, qui donne à chaque tâche un accès exclusif à une ressource de calcul pour une période donnée, puis bascule vers une autre tâche. La planification préemptive est le modèle généralement utilisé dans les systèmes d’exploitation multitâches tels que Windows. La *planification coopérative* est un mécanisme qui donne à chaque tâche un accès exclusif à une ressource de calcul jusqu’à ce que la tâche se termine ou jusqu’à ce que la tâche donne son accès à la ressource. Le runtime d’accès concurrentiel utilise la planification coopérative en combinaison avec le planificateur préemptif du système d’exploitation pour optimiser l’utilisation des ressources de traitement.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Différences entre les planificateurs préemptifs et coopératifs
 

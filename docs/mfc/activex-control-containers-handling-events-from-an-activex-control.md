@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conteneurs de contrôles ActiveX : gestion des événements à partir d’un contrôle ActiveX'
 title: "Conteneurs de contrôles ActiveX : gestion d'événements à partir d'un contrôle ActiveX"
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-ms.openlocfilehash: 4b7bc78a2937c010a4d2f1fb000ae0fe8ca2416c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 451061467b87df82b8bca141684ea70f222edcac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625121"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271874"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Conteneurs de contrôles ActiveX : gestion d'événements à partir d'un contrôle ActiveX
 
@@ -32,7 +33,7 @@ Cet article décrit l’utilisation de la fenêtre **Propriétés** (dans **affi
 
 Pour plus d’informations sur les tables de récepteurs d’événements, consultez [tables de récepteurs d’événements](reference/event-sink-maps.md) dans la référence de la bibliothèque de *classes*.
 
-## <a name="event-handler-modifications-to-the-project"></a><a name="_core_event_handler_modifications_to_the_project"></a>Modifications du gestionnaire d’événements dans le projet
+## <a name="event-handler-modifications-to-the-project"></a><a name="_core_event_handler_modifications_to_the_project"></a> Modifications du gestionnaire d’événements dans le projet
 
 Lorsque vous utilisez la fenêtre **Propriétés** pour ajouter des gestionnaires d’événements, un mappage de récepteur d’événements est déclaré et défini dans votre projet. Les instructions suivantes sont ajoutées au contrôle. Fichier CPP la première fois qu’un gestionnaire d’événements est ajouté. Ce code déclare une table de récepteurs d’événements pour la classe de boîte de dialogue (dans ce cas, `CContainerDlg` ) :
 
@@ -63,7 +64,7 @@ Pour plus d’informations sur les macros du récepteur d’événements, consul
 
 1. Sélectionnez l’événement que vous souhaitez que la classe de dialogue gère. Pour cet exemple, sélectionnez **Click**.
 
-1. Dans la liste déroulante située à droite, sélectionnez ** \<Add> ClickCircctrl1**.
+1. Dans la liste déroulante située à droite, sélectionnez **\<Add> ClickCircctrl1**.
 
 1. Double-cliquez sur la nouvelle fonction de gestionnaire de Affichage de classes pour accéder au code du gestionnaire d’événements dans l’implémentation (. CPP) de `CContainerDlg` .
 

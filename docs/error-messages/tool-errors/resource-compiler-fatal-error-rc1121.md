@@ -1,19 +1,20 @@
 ---
-title: Erreur irrécupérable RC1121 du compilateur de ressources
+description: 'En savoir plus sur : erreur irrécupérable du compilateur de ressources RC1121 du compilateur'
+title: 'Erreur irrécupérable RC1121 du compilateur de ressources '
 ms.date: 11/04/2016
 f1_keywords:
 - RC1121
 helpviewer_keywords:
 - RC1121
 ms.assetid: 19ed8c71-d63a-4ff4-8652-a3ef52318a55
-ms.openlocfilehash: 9cf8dcccc297f0b59be39138971c9c618855b874
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f591fac31e3f278eba84c54edb085e17c290d9e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172917"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271991"
 ---
-# <a name="resource-compiler-fatal-error-rc1121"></a>Erreur irrécupérable RC1121 du compilateur de ressources
+# <a name="resource-compiler-fatal-error-rc1121"></a>Erreur irrécupérable RC1121 du compilateur de ressources 
 
 Erreur d’E/S lors de la lecture du fichier
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mise à jour des ensembles de lignes'
 title: mettre à jour les jeux de lignes
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e5fcd374e446670df586c27e6b6e89d5da30da6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272524"
 ---
 # <a name="updating-rowsets"></a>mettre à jour les jeux de lignes
 
@@ -31,7 +32,7 @@ Les consommateurs peuvent effectuer les types de mises à jour suivants sur les 
 > [!NOTE]
 > L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures. Vous pouvez toujours ajouter la fonctionnalité manuellement. Pour plus d’informations, consultez [Création d’un consommateur sans utiliser l’Assistant](creating-a-consumer-without-using-a-wizard.md).
 
-Lorsque vous créez un consommateur à l’aide de l' **Assistant consommateur d’OLE DB ATL**, vous pouvez prendre en charge les opérations de mise à jour en sélectionnant une ou plusieurs des trois cases à cocher **modifier**, **Insérer**et **supprimer**. Si vous sélectionnez ces options, l’Assistant modifie le code en conséquence de façon à prendre en charge le type des modifications que vous choisissez. Cependant, si vous n’utilisez pas l’Assistant, vous devez définir les propriétés d’ensemble de lignes suivantes sur `VARIANT_TRUE` pour prendre en charge les mises à jour :
+Lorsque vous créez un consommateur à l’aide de l' **Assistant consommateur d’OLE DB ATL**, vous pouvez prendre en charge les opérations de mise à jour en sélectionnant une ou plusieurs des trois cases à cocher **modifier**, **Insérer** et **supprimer**. Si vous sélectionnez ces options, l’Assistant modifie le code en conséquence de façon à prendre en charge le type des modifications que vous choisissez. Cependant, si vous n’utilisez pas l’Assistant, vous devez définir les propriétés d’ensemble de lignes suivantes sur `VARIANT_TRUE` pour prendre en charge les mises à jour :
 
 - `DBPROPVAL_UP_CHANGE` vous permet de modifier les valeurs des données dans une ligne.
 
