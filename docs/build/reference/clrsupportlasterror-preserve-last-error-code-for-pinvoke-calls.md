@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/CLRSUPPORTLASTERROR (conserver le dernier code d’erreur pour les appels PInvoke)
 title: /CLRSUPPORTLASTERROR (Conserver le dernier code d'erreur pour les appels PInvoke)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: ccf13971bf77fb8e960b781e4a1aa2a0e06a5d61
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 253d67e2ced2667d3ca8c7b9330ed3e6d4182d9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182409"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Conserver le dernier code d'erreur pour les appels PInvoke)
 

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/CLRUNMANAGEDCODECHECK (supprimer SuppressUnmanagedCodeSecurityAttribute)
 title: /CLRUNMANAGEDCODECHECK (Supprimer SuppressUnmanagedCodeSecurityAttribute)
 ms.date: 05/16/2019
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: ecc560673a8e98752289ef0e0f89d3abfc1938e4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: e08b7b4b18a463122316b041ad81d6ddd2598bca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182396"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Supprimer SuppressUnmanagedCodeSecurityAttribute)
 
@@ -23,9 +24,9 @@ ms.locfileid: "65837244"
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/CLRUNMANAGEDCODECHECK**[ **:NO**]
+> **/CLRUNMANAGEDCODECHECK**[**:NO**]
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Par défaut, l’éditeur de liens applique **SuppressUnmanagedCodeSecurityAttribute** aux appels `PInvoke` générés par l’éditeur de liens. Lorsque **/CLRUNMANAGEDCODECHECK** est en vigueur, **SuppressUnmanagedCodeSecurityAttribute** est supprimé. Pour appliquer explicitement **SuppressUnmanagedCodeSecurityAttribute** aux appels `PInvoke` générés par l’éditeur de liens, vous pouvez utiliser **/CLRUNMANAGEDCODECHECK:NO**.
 
@@ -39,7 +40,7 @@ Consultez [Instructions de codage sécurisé pour le code non managé](/dotnet/f
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Développez le nœud **Propriétés de configuration**.
 

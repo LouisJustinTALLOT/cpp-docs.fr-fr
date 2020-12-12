@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_output_format'
 title: _get_output_format
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: 682ab9796942e52ed036193887158ea22b738189
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdbe5038745273882685a79e148e143c3d65d7e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349338"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181733"
 ---
 # <a name="_get_output_format"></a>_get_output_format
 

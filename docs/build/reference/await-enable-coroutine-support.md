@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/await (activer la prise en charge de la Coroutine)
 title: /await (Activer la prise en charge de la coroutine)
 ms.date: 08/15/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: 526216ba2ae259b53bcf77691ebd09a6152b83f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a36c2233085a1c38ed61aed7d6ea757762179cc4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182760"
 ---
 # <a name="await-enable-coroutine-support"></a>/await (Activer la prise en charge de la coroutine)
 
@@ -45,4 +46,4 @@ L’option **/await** est disponible à partir de Visual Studio 2015.
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

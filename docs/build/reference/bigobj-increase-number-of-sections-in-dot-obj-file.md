@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/bigobj (augmenter le nombre de sections dans. Fichier OBJ)
 title: /bigobj (Augmenter le nombre de sections dans le fichier .obj)
 ms.date: 03/26/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: 30c02c72496e3bb91da3b39e1870f1dc5a2c040a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4e820211ec46ad2a2d125552f95fb8a82c6f57ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182695"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Augmenter le nombre de sections dans le fichier .obj)
 
@@ -35,7 +36,7 @@ Pour plus d’informations sur le format de fichier d’objet PE-COFF, consultez
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés **Propriétés de configuration** > **C/C++**  > **Ligne de commande**.
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Entrez l’option du compilateur **/bigobj** dans la zone **options supplémentaires** .
 
@@ -46,4 +47,4 @@ Pour plus d’informations sur le format de fichier d’objet PE-COFF, consultez
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : @ (spécifier un fichier réponse de l’éditeur de liens)'
 title: "@ (Spécifier un fichier réponse de l'Éditeur de liens)"
 ms.date: 09/05/2018
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d05136742ab476b649346d3e89d47c58b05f5b23
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182812"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (Spécifier un fichier réponse de l'Éditeur de liens)
 
-Spécifie un fichier de réponse de l’éditeur de liens.
+Spécifie un fichier réponse de l’éditeur de liens.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,11 +29,11 @@ Spécifie un fichier de réponse de l’éditeur de liens.
 ## <a name="arguments"></a>Arguments
 
 *response_file*<br/>
-Un fichier texte spécifiant des commandes de l’éditeur de liens.
+Fichier texte spécifiant les commandes de l’éditeur de liens.
 
 ## <a name="remarks"></a>Notes
 
-Consultez [@ (spécifier un fichier de réponse du compilateur)](at-specify-a-compiler-response-file.md) pour plus d’informations.
+Pour plus d’informations [, consultez @ (spécifier un fichier réponse du compilateur)](at-specify-a-compiler-response-file.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 

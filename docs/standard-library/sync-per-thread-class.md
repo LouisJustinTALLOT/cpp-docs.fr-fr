@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe sync_per_thread'
 title: sync_per_thread, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 24c5463dc9fb80703361e374efb99fae9e103e7c
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: dbce0441e32c97907bdf2cc5831a94c9af125453
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183293"
 ---
 # <a name="sync_per_thread-class"></a>sync_per_thread, classe
 
@@ -106,7 +107,7 @@ L’objet cache du filtre de synchronisation.
 *Autres*\
 Objet cache dont l’égalité est à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`false`** Si aucun objet cache n’a été alloué pour cet objet ou pour d' *autres* dans le thread actuel. Sinon, elle retourne le résultat de l’application de `operator==` aux deux objets caches.
 

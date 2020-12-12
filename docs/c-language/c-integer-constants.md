@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les constantes entières C
 title: Constantes entières C
 ms.date: 02/27/2018
 helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-ms.openlocfilehash: 48561599896bb8a6f9ee159630ff15df6c0454be
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 1dbc22a2d4351dbd6d09f555a95380a1fd94619b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182188"
 ---
 # <a name="c-integer-constants"></a>Constantes entières C
 
@@ -70,7 +71,7 @@ Une *constante entière* est un nombre décimal (base 10), octal (base 8) ou hex
 
 Les suffixes **i64** et **I64** sont spécifiques à Microsoft.
 
-Les constantes entières sont positives, sauf si elles sont précédées**-** d’un signe moins (). Le signe moins est interprété comme l'opérateur de négation arithmétique unaire. Pour plus d’informations sur cet opérateur, consultez [Opérateurs arithmétiques unaires](../c-language/unary-arithmetic-operators.md).
+Les constantes entières sont positives, sauf si elles sont précédées d’un signe moins ( **-** ). Le signe moins est interprété comme l'opérateur de négation arithmétique unaire. Pour plus d’informations sur cet opérateur, consultez [Opérateurs arithmétiques unaires](../c-language/unary-arithmetic-operators.md).
 
 Si une constante Integer commence par **0x** ou **0X**, elle est hexadécimale. Si elle commence par le chiffre **0**, elle est octale. Sinon, elle est supposée être décimale.
 

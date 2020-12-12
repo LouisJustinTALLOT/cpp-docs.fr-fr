@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les règles de Batch-Mode
 title: Règles en mode batch
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: 38402e7b8a937cebb823ce13fa1ac01fc1099878
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73439082b4e2ad8e33b104329d861ddd1919ec63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182734"
 ---
 # <a name="batch-mode-rules"></a>Règles en mode batch
 
@@ -20,18 +21,18 @@ ms.locfileid: "81328412"
    commands
 ```
 
-Les règles d’inférence en mode par lots ne fournissent qu’une seule invocation de la règle d’inférence lorsque les commandes N passent par cette règle d’inférence. Sans règles d’inférence en mode par lots, il faudrait invoquer les commandes N. N est le nombre de personnes à charge qui déclenchent la règle de l’inférence.
+Les règles d’inférence en mode batch ne fournissent qu’un seul appel de la règle d’inférence lorsque N commandes passent par cette règle d’inférence. Sans règles d’inférence en mode batch, il faut appeler N commandes. N est le nombre de dépendants qui déclenchent la règle d’inférence.
 
-Lesfils qui contiennent des règles d’inférence en mode par lots doivent utiliser la version NMAKE 1.62 ou plus. Pour vérifier la version NMAKE, exécutez la macro _NMAKE_VER disponible avec la version NMAKE 1.62 ou plus. Cette macro renvoie une chaîne représentant la version produit Visual C.
+Les Makefiles qui contiennent des règles d’inférence en mode batch doivent utiliser NMAKE version 1,62 ou ultérieure. Pour vérifier la version NMAKE, exécutez la macro _NMAKE_VER disponible avec NMAKE version 1,62 ou ultérieure. Cette macro retourne une chaîne représentant le Visual C++ version du produit.
 
-La seule différence syntaxique par rapport à la règle d’inférence standard est que la règle d’inférence en mode par lots est terminée avec un double côlon (::).
+La seule différence syntaxique par rapport à la règle d’inférence standard est que la règle d’inférence en mode traitement par lot se termine par un double deux-points ( ::).
 
 > [!NOTE]
-> L’outil invoqué doit être en mesure de traiter plusieurs fichiers. La règle d’inférence `$<` en mode par lots doit être utilisée comme macro pour accéder aux fichiers dépendants.
+> L’outil appelé doit pouvoir gérer plusieurs fichiers. La règle d’inférence en mode batch doit utiliser `$<` comme macro pour accéder aux fichiers dépendants.
 
-Les règles d’inférence en mode par lots peuvent accélérer le processus de construction. Il est plus rapide de fournir des fichiers au compilateur en lots, parce que le pilote compilateur n’est invoqué qu’une seule fois. Par exemple, le compilateur C et CMD fonctionne mieux lors du traitement d’un ensemble de fichiers parce qu’il peut rester résident de la mémoire pendant le processus.
+Les règles d’inférence en mode batch peuvent accélérer le processus de génération. Il est plus rapide de fournir des fichiers au compilateur par lots, car le pilote du compilateur est appelé une seule fois. Par exemple, le compilateur C et C++ s’exécute mieux lors de la gestion d’un ensemble de fichiers, car il peut rester résident dans la mémoire pendant le processus.
 
-L’exemple suivant montre comment utiliser les règles d’inférence en mode par lots :
+L’exemple suivant montre comment utiliser des règles d’inférence en mode batch :
 
 ```
 #
@@ -56,7 +57,7 @@ $(Objs) :
 #end of makefile
 ```
 
-NMAKE produit la sortie suivante sans règles d’inférence en mode par lots :
+NMAKE produit la sortie suivante sans règles d’inférence en mode batch :
 
 ```
 E:\tmp> nmake -f test.mak -a NOBatch=1
@@ -73,7 +74,7 @@ foo3.cpp
 foo4.cpp
 ```
 
-NMAKE produit le résultat suivant avec les règles d’inférence en mode par lots :
+NMAKE produit le résultat suivant avec les règles d’inférence en mode batch :
 
 ```
 E:\tmp> nmake -f test.mak -a
@@ -91,4 +92,4 @@ Generating Code...
 
 ## <a name="see-also"></a>Voir aussi
 
-[Règles d'inférence](inference-rules.md)
+[Règles d’inférence](inference-rules.md)

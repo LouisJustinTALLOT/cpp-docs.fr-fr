@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/ASSEMBLYRESOURCE (incorporer une ressource managée)
 title: /ASSEMBLYRESOURCE (Incorporer une ressource managée)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-ms.openlocfilehash: 1eac489ffd01f6bd79fc8c5bbda23adb751c9486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f79cc177df72bb83288a0a229fdf47adb0e7fc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295069"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182916"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (Incorporer une ressource managée)
 
@@ -27,22 +28,22 @@ ms.locfileid: "62295069"
 ## <a name="parameters"></a>Paramètres
 
 *filename*<br/>
-La ressource managée que vous souhaitez incorporer dans cet assembly.
+Ressource managée que vous souhaitez incorporer dans cet assembly.
 
 *name*<br/>
-Optionnel. Le nom logique de la ressource ; le nom utilisé pour charger la ressource. La valeur par défaut est le nom du fichier.
+facultatif. Nom logique de la ressource ; nom utilisé pour charger la ressource. La valeur par défaut est le nom du fichier.
 
-Si vous le souhaitez, vous pouvez spécifier si le fichier doit être privé dans le manifeste d’assembly. Par défaut, *nom* est public dans l’assembly.
+Si vous le souhaitez, vous pouvez spécifier si le fichier doit être privé dans le manifeste de l’assembly. Par défaut, le *nom* est public dans l’assembly.
 
 ## <a name="remarks"></a>Notes
 
-Utilisez l’option /ASSEMBLYRESOURCE pour incorporer une ressource dans un assembly.
+Utilisez l’option/ASSEMBLYRESOURCE pour incorporer une ressource dans un assembly.
 
-Les ressources sont publiques dans l’assembly lors de la création avec l’éditeur de liens. L’éditeur de liens ne vous permet pas de renommer la ressource dans l’assembly.
+Les ressources sont publiques dans l’assembly quand elles sont créées avec l’éditeur de liens. L’éditeur de liens ne vous permet pas de renommer la ressource dans l’assembly.
 
-Si *filename* est un fichier de ressources (.resources) de .NET Framework créé, par exemple, par le [Resource File Generator (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou dans l’environnement de développement, il est accessible à l’aide des membres de la **System.Resources** espace de noms (consultez [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager) pour plus d’informations). Pour toutes les autres ressources, utilisez le **GetManifestResource** \* méthodes dans **System.Reflection.Assembly** classe pour accéder à la ressource au moment de l’exécution.
+Si *filename* est un fichier de ressources de .NET Framework (. Resources) créé, par exemple, par le [Générateur de fichiers de ressources (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou dans l’environnement de développement, il est accessible à l’aide des membres de l’espace de noms **System. Resources** (pour plus d’informations, consultez [System. resources. ResourceManager](/dotnet/api/system.resources.resourcemanager) ). Pour toutes les autres ressources, utilisez les méthodes **GetManifestResource** \* de la classe **System. Reflection. assembly** pour accéder à la ressource au moment de l’exécution.
 
-Autres options de l’éditeur de liens qui affectent la génération de l’assembly sont :
+Les autres options de l’éditeur de liens qui affectent la génération d’assembly sont les suivantes :
 
 - [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
@@ -60,13 +61,13 @@ Autres options de l’éditeur de liens qui affectent la génération de l’ass
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Cliquez sur le **l’éditeur de liens** dossier.
+1. Cliquez sur le dossier **Éditeur de liens**.
 
-1. Cliquez sur le **entrée** page de propriétés.
+1. Cliquez sur la page de propriétés **entrée** .
 
-1. Modifier le **incorporer de fichier de ressources managé** propriété.
+1. Modifiez la propriété **incorporer le fichier de ressources managées** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

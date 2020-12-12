@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/ASSEMBLYDEBUG (Ajouter DebuggableAttribute)
 title: /ASSEMBLYDEBUG (Ajouter DebuggableAttribute)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -ASSEMBLYDEBUG linker option
 - ASSEMBLYDEBUG linker option
 ms.assetid: 94443af3-470c-41d7-83a0-7434563d7982
-ms.openlocfilehash: b9899ea76b7a23a0d09442fca01e7d968c5e8aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d63ae4ffd86099147b076a499321ed5dcf3ca54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183033"
 ---
 # <a name="assemblydebug-add-debuggableattribute"></a>/ASSEMBLYDEBUG (Ajouter DebuggableAttribute)
 
@@ -22,19 +23,19 @@ ms.locfileid: "62273090"
 /ASSEMBLYDEBUG[:DISABLE]
 ```
 
-/ASSEMBLYDEBUG émet le **DebuggableAttribute** attribut avec débogage informations suivi et désactive les optimisations JIT. Cela équivaut à spécifier l’attribut suivant dans la source :
+/ASSEMBLYDEBUG émet l’attribut **DebuggableAttribute** avec le suivi des informations de débogage et désactive les optimisations JIT. Cela revient à spécifier l’attribut suivant dans la source :
 
 ```
 [assembly:Debuggable(true, true)];   // same as /ASSEMBLYDEBUG
 ```
 
-: Disable émet le **DebuggableAttribute** attribut mais désactive le suivi des informations de débogage et Active les optimisations JIT. Cela équivaut à spécifier l’attribut suivant dans la source :
+/ASSEMBLYDEBUG : DISABLE émet l’attribut **DebuggableAttribute** , mais désactive le suivi des informations de débogage et active les optimisations JIT. Cela revient à spécifier l’attribut suivant dans la source :
 
 ```
 [assembly:Debuggable(false, false)];   // same as /ASSEMBLYDEBUG:DISABLE
 ```
 
-La valeur par défaut est de ne pas émettre le **DebuggableAttribute** attribut.
+La valeur par défaut est de ne pas émettre l’attribut **DebuggableAttribute** .
 
 DebuggableAttribute peut également être ajouté à un assembly directement dans le code source. Par exemple :
 
@@ -44,9 +45,9 @@ DebuggableAttribute peut également être ajouté à un assembly directement dan
 
 ## <a name="remarks"></a>Notes
 
-Il est nécessaire de spécifier explicitement qu’une image managée est débogable. À l’aide de [/Zi](z7-zi-zi-debug-information-format.md) seul ne suffit pas.
+Il est nécessaire de spécifier explicitement qu’une image managée peut être déboguée. L’utilisation de [/Zi](z7-zi-zi-debug-information-format.md) seul n’est pas suffisante.
 
-Autres options de l’éditeur de liens qui affectent la génération de l’assembly sont :
+Les autres options de l’éditeur de liens qui affectent la génération d’assembly sont les suivantes :
 
 - [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
@@ -64,13 +65,13 @@ Autres options de l’éditeur de liens qui affectent la génération de l’ass
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Cliquez sur le **l’éditeur de liens** dossier.
+1. Cliquez sur le dossier **Éditeur de liens**.
 
-1. Cliquez sur le **déboguer** page de propriétés.
+1. Cliquez sur la page de propriétés **Déboguer** .
 
-1. Modifier le **Assembly pouvant être débogué** propriété.
+1. Modifiez la propriété de l' **assembly pouvant être débogué** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 

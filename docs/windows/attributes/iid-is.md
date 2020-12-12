@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : iid_is'
 title: iid_is (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 6a8fe8c7481cd251baff65293607733573f46ea6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9de6d636fbb189ece9aedec95cb9460c2ccbb5a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832215"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183098"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -51,14 +52,14 @@ __interface IFireTabCtrl : IDispatch
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Paramètre d’interface, membre de données|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

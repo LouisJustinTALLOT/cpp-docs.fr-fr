@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation de Visual C++ ajouter de nouveaux modèles d’élément'
 title: Utilisation de modèles Ajouter un nouvel élément de Visual C++
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 11e7057f563ac446daf8e7506896a5af778fdac4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217764"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182201"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilisation de modèles Ajouter un nouvel élément de Visual C++
 
-Vous pouvez facilement ajouter des éléments qui sont communes aux projets Visual Studio à l’aide de la **ajouter un nouvel élément** commande. Quand vous utilisez la commande **Ajouter un nouvel élément**, la boîte de dialogue `Add New Item` s’affiche avec une liste de modèles d’élément, qui ajoutent les fichiers appropriés à votre projet.
+Vous pouvez facilement ajouter des éléments communs aux projets Visual Studio à l’aide de la commande **Ajouter un nouvel élément** . Quand vous utilisez la commande **Ajouter un nouvel élément**, la boîte de dialogue `Add New Item` s’affiche avec une liste de modèles d’élément, qui ajoutent les fichiers appropriés à votre projet.
 
-Le tableau suivant est une liste alphabétique des modèles Ajouter un nouvel élément de Visual Studio.
+Le tableau suivant est une liste alphabétique des modèles ajouter un nouvel élément de Visual Studio.
 
 |Modèle|Description|
 |--------------|-----------------|
@@ -45,7 +46,7 @@ Le tableau suivant est une liste alphabétique des modèles Ajouter un nouvel é
 |Fichier modèle de ressource (.rct)|Crée un fichier modèle de ressource.|
 |Ruban (.mfcribbon-ms)|Crée un fichier du ruban.|
 |Fichier réponse de serveur (.srf)|Crée un fichier réponse de serveur utilisé avec ATL Server.|
-|Fichier de script SQL (.sql)|Crée un fichier de script SQL. **Remarque :**  Ce modèle n’est pas une fonctionnalité de la version Professional Edition.|
+|Fichier de script SQL (.sql)|Crée un fichier de script SQL. **Remarque :** Ce modèle n’est pas une fonctionnalité de la version Professional Edition.|
 |Feuille de style (.css)|Ajoute une feuille de style en cascade utilisée pour les définitions complexes de style HTML.|
 |Fichier texte (.txt)|Ajoute un fichier texte vide.|
 |Contrôle utilisateur|Ajoute un contrôle utilisateur avec des fonctionnalités CLR.|
