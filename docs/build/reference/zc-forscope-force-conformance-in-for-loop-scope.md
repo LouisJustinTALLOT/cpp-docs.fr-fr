@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur:/Zc : forScope (forcer la conformité à la portée de la boucle for)'
 title: /Zc:forScope (Forcer la conformité à la portée de la boucle for)
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b1173ad609a1b2c95d6cf118f4e2d5defeec5b9c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7124bba6608facfea546974cfa40ef9556ff713a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114661"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Forcer la conformité à la portée de la boucle for)
 

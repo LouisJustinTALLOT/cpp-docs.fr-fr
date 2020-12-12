@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble de la classe ATL'
 title: Vue d’ensemble des classes ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: 7480bc19ad4a49c0fb816bca5f1fed13f470030b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a35fd7b178082e81e7cc43ff037f2fc083ef4b67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166055"
 ---
 # <a name="atl-class-overview"></a>Vue d’ensemble des classes ATL
 

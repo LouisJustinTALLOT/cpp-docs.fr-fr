@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : `/Zc:auto` (déduire le type de variable)'
 title: /Zc:auto (déduire le type de variable)
 ms.date: 02/28/2018
 f1_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 6bb1c8f2b14c483cbd46ecb6534a33db020e23e0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d20f377fc653e9c3cceb5c3e81b5e5e8a815bcad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114713"
 ---
 # <a name="zcauto-deduce-variable-type"></a>`/Zc:auto` (Déduire le type de variable)
 
 L' **`/Zc:auto`** option du compilateur indique au compilateur comment utiliser le [ `auto` mot clé](../../cpp/auto-cpp.md) pour déclarer des variables. Si vous spécifiez l’option par défaut, **`/Zc:auto`** , le compilateur déduit le type de la variable déclarée à partir de son expression d’initialisation. Si vous spécifiez **`/Zc:auto-`** , le compilateur alloue la variable à la classe de stockage automatique.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 > **`/Zc:auto`**[**`-`**]
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La norme C++ définit une signification originale et modifiée pour le **`auto`** mot clé. Avant Visual Studio 2010, le mot clé déclare une variable dans la classe de stockage automatique. autrement dit, une variable qui a une durée de vie locale. À compter de Visual Studio 2010, le mot clé déduit le type d’une variable à partir de l’expression d’initialisation de la déclaration. Utilisez l' **`/Zc:auto`** option du compilateur pour indiquer au compilateur d’utiliser la signification révisée du **`auto`** mot clé. L' **`/Zc:auto`** option est activée par défaut. L' [`/permissive-`](permissive-standards-conformance.md) option ne change pas le paramètre par défaut **`/Zc:auto`** .
 
@@ -34,7 +35,7 @@ Le compilateur émet un message de diagnostic approprié si votre utilisation du
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Ajoutez **`/Zc:auto`** ou **`/Zc:auto-`** au volet **options supplémentaires :** .
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCToolBarsCustomizeDialog'
 title: CMFCToolBarsCustomizeDialog, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,18 +25,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: a61cefa7f844062fcca42711ce6515180066b919
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d05e94f614510c264e5916404abeeb6dfc4bea9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143453"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog, classe
 
 Boîte de dialogue à onglets non modale ( [classe CPropertySheet](../../mfc/reference/cpropertysheet-class.md)) qui permet à l’utilisateur de personnaliser les barres d’outils, les menus, les raccourcis clavier, les outils définis par l’utilisateur et le style visuel dans une application. En général, l'utilisateur accède à cette boîte de dialogue en sélectionnant **Personnaliser** dans le menu **Outils** .
 
-La boîte de dialogue **personnaliser** contient six onglets : **commandes**, **barres d’outils**, **Outils**, **clavier**, **menu**et **options**.
+La boîte de dialogue **personnaliser** contient six onglets : **commandes**, **barres d’outils**, **Outils**, **clavier**, **menu** et **options**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -112,7 +113,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 `CMFCToolBarsCustomizeDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxToolBarsCustomizeDialog. h
 

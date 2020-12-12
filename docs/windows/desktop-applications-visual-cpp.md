@@ -1,14 +1,15 @@
 ---
+description: En savoir plus sur les applications de bureau (Visual C++)
 title: Applications de bureau (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: eb7badb73af507d31c9dd982f0a6189362249a3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114752"
 ---
 # <a name="desktop-applications-visual-c"></a>Applications de bureau (Visual C++)
 
@@ -34,7 +35,7 @@ Dans Visual Studio 2017 version 15,4 et versions ultérieures, vous pouvez crée
 
 Toute application de bureau en C++ peut utiliser C Runtime (CRT) et des classes et des fonctions de bibliothèque standard, des objets COM et les fonctions Windows publiques, qui sont collectivement appelées API Windows. Pour une introduction aux applications de bureau Windows en C++, consultez [prise en main de Win32 et c++](/windows/win32/LearnWin32/learn-to-program-for-windows).
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 |Titre|Description|
 |-----------|-----------------|

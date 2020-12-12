@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CStrBufT'
 title: CStrBufT, classe
 ms.date: 10/18/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: 4d9d0b403e572d6fdea65355702467c89587cc3a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4cc38f13d740b7def65c6f958d53af7b367adcb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166614"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT, classe
 
@@ -36,9 +37,9 @@ class CStrBufT
 *TCharType*<br/>
 Type de caractère de la `CStrBufT` classe. Il peut s'agir d'une des méthodes suivantes :
 
-- **`char`**(pour les chaînes de caractères ANSI)
+- **`char`** (pour les chaînes de caractères ANSI)
 
-- **`wchar_t`**(pour les chaînes de caractères Unicode)
+- **`wchar_t`** (pour les chaînes de caractères Unicode)
 
 - TCHAR (pour les chaînes de caractères ANSI et Unicode)
 
@@ -88,7 +89,7 @@ Conçu principalement comme une classe d’assistance, `CStrBufT` offre un moyen
 
 **En-tête :** atlsimpstr. h
 
-## <a name="cstrbuftauto_length"></a><a name="auto_length"></a>CStrBufT :: AUTO_LENGTH
+## <a name="cstrbuftauto_length"></a><a name="auto_length"></a> CStrBufT :: AUTO_LENGTH
 
 Détermine automatiquement la nouvelle longueur de la chaîne au niveau de la mise en sortie.
 
@@ -100,7 +101,7 @@ static const DWORD AUTO_LENGTH = 0x01;
 
 Détermine automatiquement la nouvelle longueur de la chaîne au niveau de la mise en sortie. La chaîne doit se terminer par un caractère null.
 
-## <a name="cstrbuftcstrbuft"></a><a name="cstrbuft"></a>CStrBufT::CStrBufT
+## <a name="cstrbuftcstrbuft"></a><a name="cstrbuft"></a> CStrBufT::CStrBufT
 
 Construit un objet de mémoire tampon.
 
@@ -130,7 +131,7 @@ Crée une mémoire tampon de chaîne pour l’objet String associé. Pendant la 
 
 Notez que le constructeur de copie est **`private`** .
 
-## <a name="cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT :: Operator PCXSTR
+## <a name="cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a> CStrBufT :: Operator PCXSTR
 
 Accède directement aux caractères stockés dans l’objet String associé en tant que chaîne de style C.
 
@@ -138,7 +139,7 @@ Accède directement aux caractères stockés dans l’objet String associé en t
 operator PCXSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur de caractère vers les données de la chaîne.
 
@@ -146,7 +147,7 @@ Pointeur de caractère vers les données de la chaîne.
 
 Appelez cette fonction pour retourner un pointeur vers la mémoire tampon de caractères d’un objet String. Le contenu de l’objet String ne peut pas être modifié à l’aide de ce pointeur.
 
-## <a name="cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT :: Operator PXSTR
+## <a name="cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a> CStrBufT :: Operator PXSTR
 
 Accède directement aux caractères stockés dans l’objet String associé en tant que chaîne de style C.
 
@@ -154,7 +155,7 @@ Accède directement aux caractères stockés dans l’objet String associé en t
 operator PXSTR() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur de caractère vers les données de la chaîne.
 
@@ -162,7 +163,7 @@ Pointeur de caractère vers les données de la chaîne.
 
 Appelez cette fonction pour retourner un pointeur vers la mémoire tampon de caractères d’un objet String. Le développeur peut modifier le contenu de l’objet String avec ce pointeur.
 
-## <a name="cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT ::P CXSTR
+## <a name="cstrbuftpcxstr"></a><a name="pcxstr"></a> CStrBufT ::P CXSTR
 
 Pointeur vers une chaîne constante.
 
@@ -170,7 +171,7 @@ Pointeur vers une chaîne constante.
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```
 
-## <a name="cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT ::P XSTR
+## <a name="cstrbuftpxstr"></a><a name="pxstr"></a> CStrBufT ::P XSTR
 
 Pointeur vers une chaîne.
 
@@ -178,7 +179,7 @@ Pointeur vers une chaîne.
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```
 
-## <a name="cstrbuftset_length"></a><a name="set_length"></a>CStrBufT :: SET_LENGTH
+## <a name="cstrbuftset_length"></a><a name="set_length"></a> CStrBufT :: SET_LENGTH
 
 Définissez la longueur de l’objet String dans le `GetBuffer` temps.
 
@@ -192,7 +193,7 @@ Définissez la longueur de l’objet String à l’heure GetBuffer.
 
 Détermine si [CSimpleStringT :: GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) et [CSimpleStringT :: GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) sont appelés lors de la construction de l’objet de mémoire tampon de chaîne.
 
-## <a name="cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT :: SetLength
+## <a name="cstrbuftsetlength"></a><a name="setlength"></a> CStrBufT :: SetLength
 
 Définit la longueur de la mémoire tampon de caractères.
 
@@ -212,7 +213,7 @@ Nouvelle longueur de la mémoire tampon de caractères de l’objet String.
 
 Appelez cette fonction pour définir la longueur de la chaîne représentée par l’objet de mémoire tampon.
 
-## <a name="cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT::StringType
+## <a name="cstrbuftstringtype"></a><a name="stringtype"></a> CStrBufT::StringType
 
 Type de chaîne dont la mémoire tampon doit être manipulée par les spécialisations de ce modèle de classe.
 
@@ -222,7 +223,7 @@ typedef CSimpleStringT<TCharType> StringType;
 
 ### <a name="remarks"></a>Notes
 
-`TCharType`type de caractère utilisé pour spécialiser le modèle de classe.
+`TCharType` type de caractère utilisé pour spécialiser le modèle de classe.
 
 ## <a name="see-also"></a>Voir aussi
 

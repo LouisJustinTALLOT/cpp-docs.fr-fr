@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CTimeSpan'
 title: CTimeSpan, classe
 ms.date: 10/18/2018
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 0c13aa0d8f6c46db3b018283ab2a408a3f9531e1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b15fa247baaa4de77c5caab12d584a80321b9420
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166575"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan, classe
 
@@ -85,7 +86,7 @@ Les `CTime` classes et ne `CTimeSpan` sont pas conçues pour la dérivation. Ét
 
 Pour plus d’informations sur l’utilisation de `CTimeSpan` , consultez les articles [date et heure](../../atl-mfc-shared/date-and-time.md)et [gestion du temps](../../c-runtime-library/time-management.md) dans la référence de la *bibliothèque Runtime*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atltime. h
 
@@ -399,7 +400,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Paramètres
 
-*AR*<br/>
+*ar*<br/>
 `CArchive`Objet que vous souhaitez mettre à jour.
 
 ### <a name="return-value"></a>Valeur renvoyée

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CComCritSecLock'
 title: CComCritSecLock, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: fd2904f67d84db42d6b35aa4e505b063d6ea9a9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cad44f062fe75418da1f948c5f180283142779b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152098"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock, classe
 
@@ -56,7 +57,7 @@ Utilisez cette classe pour verrouiller et déverrouiller des objets de manière 
 
 **En-tête :** atlbase. h
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a> CComCritSecLock::CComCritSecLock
 
 Constructeur.
 
@@ -66,7 +67,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*cs*<br/>
 Objet de section critique.
 
 *bInitialLock*<br/>
@@ -76,7 +77,7 @@ L’état initial du verrouillage : **`true`** signifie verrouillé.
 
 Initialise l’objet de section critique.
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock :: ~ CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a> CComCritSecLock :: ~ CComCritSecLock
 
 Destructeur.
 
@@ -88,7 +89,7 @@ Destructeur.
 
 Déverrouille l’objet de section critique.
 
-## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock :: Lock
+## <a name="ccomcritseclocklock"></a><a name="lock"></a> CComCritSecLock :: Lock
 
 Appelez cette méthode pour verrouiller l’objet de section critique.
 
@@ -96,7 +97,7 @@ Appelez cette méthode pour verrouiller l’objet de section critique.
 HRESULT Lock() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK si l’objet a été verrouillé correctement, ou une erreur HRESULT en cas d’échec.
 
@@ -104,7 +105,7 @@ Retourne S_OK si l’objet a été verrouillé correctement, ou une erreur HRESU
 
 Si l’objet est déjà verrouillé, une erreur d’assertion se produit dans les versions Debug.
 
-## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock :: Unlock
+## <a name="ccomcritseclockunlock"></a><a name="unlock"></a> CComCritSecLock :: Unlock
 
 Appelez cette méthode pour déverrouiller l’objet de section critique.
 

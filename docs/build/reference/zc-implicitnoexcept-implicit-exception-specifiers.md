@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur:/Zc : implicitNoexcept (spécificateurs d’exceptions implicites)'
 title: /Zc:implicitNoexcept (spécificateurs d'exceptions implicites)
 ms.date: 03/06/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-ms.openlocfilehash: bb1a632ffe684ac0777d0089a2edfd514bf66d0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8c6aabe2878282b42ad0f2ce1e205ac387bd9a96
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114635"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (spécificateurs d'exceptions implicites)
 
@@ -131,7 +132,7 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Modifiez la propriété **options supplémentaires** pour inclure **/Zc : implicitNoexcept** ou **/Zc : ImplicitNoexcept-** , puis choisissez **OK**.
 

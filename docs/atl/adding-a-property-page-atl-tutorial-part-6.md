@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : ajout d’une page de propriétés (Didacticiel ATL, partie 6)'
 title: Ajout d'une page de propriétés (Didacticiel ATL, Partie 6)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: 467ae19c372e24b2d368002cb83367b7087136fd
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c33789919e104cc1600622dc3972a23069afe573
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166285"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Ajout d'une page de propriétés (Didacticiel ATL, Partie 6)
 
 > [!NOTE]
-> L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures.
+> L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 Les pages de propriétés sont implémentées en tant qu’objets COM distincts, ce qui leur permet d’être partagées si nécessaire. Au cours de cette étape, vous allez exécuter les tâches suivantes pour ajouter une page de propriétés au contrôle :
 
@@ -31,9 +32,9 @@ Pour ajouter une page de propriétés à votre contrôle, utilisez le modèle de
 
 1. Dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur `Polygon`.
 
-1. Dans le menu contextuel, cliquez sur **Ajouter** > **Nouvel élément**.
+1. Dans le menu contextuel, cliquez sur **Ajouter**  >  **un nouvel élément**.
 
-1. Dans la liste des modèles, sélectionnez **ATL** > **Page de propriétés ATL** et cliquez sur **Ajouter**.
+1. Dans la liste des modèles **, sélectionnez ATL ATL**  >  **Property page** et cliquez sur **Ajouter**.
 
 1. Lorsque **l’Assistant Page de propriétés ATL** s’affiche, entrez *PolyProp* dans le champ **Nom court**.
 
@@ -109,7 +110,7 @@ Vous devez également définir l’indicateur modifié de la page de propriété
 
 1. Développez le nœud `IDC_SIDES` dans la liste des événements.
 
-1. Sélectionnez `EN_CHANGE` et cliquez sur **\<Ajouter > OnEnChangeSides** dans le menu déroulant à droite. La déclaration du gestionnaire `OnEnChangeSides` est ajoutée à Polyprop.h, et l’implémentation du gestionnaire à Polyprop.cpp.
+1. Sélectionnez `EN_CHANGE` , puis dans le menu déroulant à droite, cliquez sur **\<Add> OnEnChangeSides**. La déclaration du gestionnaire `OnEnChangeSides` est ajoutée à Polyprop.h, et l’implémentation du gestionnaire à Polyprop.cpp.
 
 Ensuite, vous allez modifier le gestionnaire.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3505'
 title: Erreur du compilateur C3505
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3505
 ms.assetid: ed73c99e-93a1-4f3a-bac7-ba7ed5d836e4
-ms.openlocfilehash: 0c67eb46208c35c1b11a74898107ad3c0e6e570d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10727b04ce587eb56872440ad7d46dd544eb0642
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113111"
 ---
 # <a name="compiler-error-c3505"></a>Erreur du compilateur C3505
 

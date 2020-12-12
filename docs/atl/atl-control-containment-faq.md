@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Forum aux questions sur la relation contenant-contenu des contrôles ATL'
 title: FAQ sur la relation contenant-contenu des contrôles ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: 693617589f157d352972485396777cec587a5b8f
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 5c5d3d452a119908cb6c8dcdb08da3276db78f51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352698"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165769"
 ---
 # <a name="atl-control-containment-faq"></a>FAQ sur la relation contenant-contenu des contrôles ATL
 
 ## <a name="which-atl-classes-facilitate-activex-control-containment"></a>Quelles sont les classes ATL qui facilitent la contenance de contrôles ActiveX ?
 
-Le code d’hébergement de contrôle ATL ne vous oblige pas à utiliser des classes ATL ; vous pouvez simplement créer une fenêtre **« AtlAxWin80 »** et utiliser l’API d’hébergement de contrôle si nécessaire (pour plus d’informations, consultez **qu’est-ce que l’API d’hébergement de contrôle ATL**. Toutefois, les classes suivantes rendent les fonctionnalités de relation contenant-contenu plus faciles à utiliser.
+Le code d’hébergement de contrôle ATL ne vous oblige pas à utiliser des classes ATL ; vous pouvez simplement créer une fenêtre **« AtlAxWin80 »** et utiliser l’API d’hébergement de contrôle si nécessaire (pour plus d’informations, consultez **qu’est-ce que l’API Control-Hosting ATL**. Toutefois, les classes suivantes rendent les fonctionnalités de relation contenant-contenu plus faciles à utiliser.
 
 |Classe|Description|
 |-----------|-----------------|

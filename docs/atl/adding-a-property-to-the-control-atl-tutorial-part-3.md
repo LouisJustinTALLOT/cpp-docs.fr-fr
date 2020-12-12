@@ -1,18 +1,19 @@
 ---
+description: 'En savoir plus sur : ajout d’une propriété au contrôle (Didacticiel ATL, partie 3)'
 title: Ajout d'une propriété au contrôle (Didacticiel ATL, Partie 3)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: c5f71880f780e793cd77eb5a7571d31de4a8d01a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22a44b6878afd6d51fb396d8f02a60e93436cf05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166328"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Ajout d'une propriété au contrôle (Didacticiel ATL, Partie 3)
 
-`IPolyCtl`est l’interface qui contient les méthodes et les propriétés personnalisées du contrôle, et vous y ajoutez une propriété.
+`IPolyCtl` est l’interface qui contient les méthodes et les propriétés personnalisées du contrôle, et vous y ajoutez une propriété.
 
 ### <a name="to-add-the-property-definitions-to-your-project"></a>Pour ajouter les définitions de propriétés à votre projet
 

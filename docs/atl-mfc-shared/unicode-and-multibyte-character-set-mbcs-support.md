@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : prise en charge d’Unicode et du jeu de caractères multioctets (MBCS)'
 title: Prise en charge des jeux de caractères Unicode et MBCS (Multibyte Character Set)
 ms.date: 01/09/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: efa90acd169aeb8739b0bf97a5ab27026cc80cc6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9e9a09777e835872a5c8bc6613460478acf9be9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831981"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166406"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Prise en charge des jeux de caractères Unicode et MBCS (Multibyte Character Set)
 
@@ -25,7 +26,7 @@ Certains langages, par exemple, le japonais et le chinois, possèdent de grands 
 
 - [Jeux de caractères multioctets (MBCS)](#mfc-support-for-mbcs-strings), **`char`** caractères uniques ou codés sur deux octets et chaînes encodés dans un jeu de caractères spécifique aux paramètres régionaux.
 
-Microsoft a recommandé les bibliothèques Unicode MFC pour tout nouveau développement, et les bibliothèques MBCS étaient dépréciées dans Visual Studio 2013 et Visual Studio 2015. Cela n'est plus le cas. Les avertissements de désapprobation MBCS ont été supprimés dans Visual Studio 2017.
+Microsoft a recommandé les bibliothèques Unicode MFC pour tout nouveau développement, et les bibliothèques MBCS étaient dépréciées dans Visual Studio 2013 et Visual Studio 2015. Cela n’est plus le cas. Les avertissements de désapprobation MBCS ont été supprimés dans Visual Studio 2017.
 
 ## <a name="mfc-support-for-unicode-strings"></a>Prise en charge MFC pour les chaînes Unicode
 
@@ -35,22 +36,22 @@ Ces fichiers de bibliothèque, de débogueur et de DLL sont utilisés pour prend
 
 :::row:::
    :::column span="":::
-      MFC*version*U. lib \
-      UD de*version*MFC. LIB
-      MFCM*version*U. lib \
-      MFCM*version*ud. LIB
-      MFCS*version*U. lib \
-      MFCS*version*ud. LIB
+      MFC *version* U. lib \
+      UD de *version* MFC. LIB
+      MFCM *version* U. lib \
+      MFCM *version* ud. LIB
+      MFCS *version* U. lib \
+      MFCS *version* ud. LIB
       UAFXCW. LIB
       UAFXCWD. LIB
    :::column-end:::
    :::column span="":::
-      MFC*version*U. pdb \
-      UD de*version*MFC. Pdbonly
-      MFCM*version*U. pdb \
-      MFCM*version*ud. Pdbonly
-      MFCS*version*U. pdb \
-      MFCS*version*ud. Pdbonly
+      MFC *version* U. pdb \
+      UD de *version* MFC. Pdbonly
+      MFCM *version* U. pdb \
+      MFCM *version* ud. Pdbonly
+      MFCS *version* U. pdb \
+      MFCS *version* ud. Pdbonly
       UAFXCW. Pdbonly
       UAFXCWD. PDBONLY
    :::column-end:::
@@ -110,7 +111,7 @@ Sous DBCS, une chaîne donnée peut contenir tous les caractères ANSI codés su
 > [!NOTE]
 > Les symboles _MBCS et _UNICODE s’excluent mutuellement.
 
-Les mappages de fonctions de texte générique pour toutes les routines de gestion de chaîne d’exécution sont décrits dans la référence de la [bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md). Pour obtenir une liste, consultez [internationalisation](../c-runtime-library/internationalization.md).
+Les mappages de fonctions de texte générique pour toutes les routines de gestion de chaîne d’exécution sont abordés dans la [référence de bibliothèque C Run-Time](../c-runtime-library/c-run-time-library-reference.md). Pour obtenir une liste, consultez [internationalisation](../c-runtime-library/internationalization.md).
 
 De même, `CString` les méthodes sont implémentées à l’aide de mappages de types de données génériques. Pour activer MBCS et Unicode, MFC utilise TCHAR pour **`char`** ou, **`wchar_t`** LPTStr pour **`char`** <strong>\*</strong> ou `wchar_t*` , et LPCTSTR pour **const char** <strong>\*</strong> ou `const wchar_t*` . Ils garantissent les mappages appropriés pour MBCS ou Unicode.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CImage (classe)'
 title: CImage (classe)
 ms.date: 08/19/2019
 f1_keywords:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6e7197648fd91b2280d406c19c1019ca23f6a470
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a094aecfae57a678f306d00e0998247000361822
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166823"
 ---
 # <a name="cimage-class"></a>CImage (classe)
 
@@ -282,7 +283,7 @@ Référence à une structure [Rect](/windows/win32/api/windef/ns-windef-rect) , 
 *rectSrc*<br/>
 Référence à une `RECT` structure, identifiant la source.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -386,7 +387,7 @@ Structure [Rect](/windows/win32/api/windef/ns-windef-rect) indiquant le rectangl
 *pointSrc*<br/>
 `POINT`Structure qui indique l’angle supérieur gauche du rectangle source.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -441,7 +442,7 @@ Spécifie si l’objet Bitmap a un canal alpha. Peut être une combinaison de z�
 > [!NOTE]
 > Dans les appels à [CImage ::D RAW](#draw), les images avec un canal alpha sont automatiquement fusionnées dans la destination.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -488,11 +489,11 @@ Spécifie si l’objet Bitmap a un canal alpha. Peut être une combinaison de z�
    > [!NOTE]
    > Dans les appels à [CImage ::D RAW](#draw), les images avec un canal alpha sont automatiquement fusionnées dans la destination.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite. Sinon, FALSe.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 L’exemple suivant crée une image bitmap de pixel 100x100 à l’aide de 16 bits pour encoder chaque pixel. Dans un pixel 16 bits donné, bits 0-3 encode le composant rouge, bits 4-7 encode le vert et bits 8-11 encode le bleu. Les 4 bits restants ne sont pas utilisés.
 
@@ -517,7 +518,7 @@ Détache une image bitmap d’un `CImage` objet.
 HBITMAP Detach() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers la bitmap détachée, ou NULL si aucune bitmap n’est attachée.
 
@@ -601,7 +602,7 @@ Référence à une `RECT` structure, identifiant la source.
 *pointDest*<br/>
 Référence à une structure de [points](/windows/win32/api/windef/ns-windef-point) qui identifie l’angle supérieur gauche du rectangle de destination, en unités logiques.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -619,7 +620,7 @@ Récupère un pointeur vers les valeurs de bit réelles d’un pixel donné dans
 void* GetBits() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la mémoire tampon bitmap. Si la bitmap est un DIB ascendant, le pointeur pointe vers la fin de la mémoire tampon. Si la bitmap est un DIB descendant, le pointeur pointe vers le premier octet de la mémoire tampon.
 
@@ -638,7 +639,7 @@ Récupère la valeur en bits par pixel.
 int GetBPP() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de bits par pixel.
 
@@ -678,7 +679,7 @@ Récupère le contexte de périphérique sur lequel l’image est actuellement s
 HDC GetDC() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle d'un contexte de périphérique.
 
@@ -713,7 +714,7 @@ Tableau de GUID, avec chaque élément correspondant à l’un des types de fich
 *pszAllFilesDescription*<br/>
 Si ce paramètre n’est pas NULL, la chaîne de filtrage aura un filtre supplémentaire au début de la liste. Ce filtre aura la valeur actuelle de *pszAllFilesDescription* pour sa description et acceptera les fichiers de n’importe quelle extension prise en charge par tout autre exportateur de la liste.
 
-Exemple :
+Par exemple :
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -751,7 +752,7 @@ Jeu d’indicateurs de bits spécifiant les types de fichiers à exclure de la l
 *chSeparator*<br/>
 Séparateur utilisé entre les formats d’image. Pour plus d’informations, consultez la **section Notes** .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -763,7 +764,7 @@ Le paramètre *strExporter* a le format suivant :
 
 fichier description0&#124;\* . ext0&#124;filedescription1&#124;\* . EXT1&#124;... Description du fichier *n*&#124;\* . ext *n*&#124;&#124;
 
-où' &#124; 'est le caractère de séparation spécifié par `chSeparator` . Exemple :
+où' &#124; 'est le caractère de séparation spécifié par `chSeparator` . Par exemple :
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
@@ -777,7 +778,7 @@ Récupère la hauteur, en pixels, d’une image.
 int GetHeight() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur, en pixels, d’une image.
 
@@ -808,7 +809,7 @@ Tableau de GUID, avec chaque élément correspondant à l’un des types de fich
 *pszAllFilesDescription*<br/>
 Si ce paramètre n’est pas NULL, la chaîne de filtrage aura un filtre supplémentaire au début de la liste. Ce filtre aura la valeur actuelle de *pszAllFilesDescription* pour sa description et acceptera les fichiers de n’importe quelle extension prise en charge par tout autre exportateur de la liste.
 
-Exemple :
+Par exemple :
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -854,7 +855,7 @@ Le paramètre *strImporter* a le format suivant :
 
 fichier description0&#124;\* . ext0&#124;filedescription1&#124;\* . EXT1&#124;... Description du fichier *n*&#124;\* . ext *n*&#124;&#124;
 
-où' &#124; 'est le caractère de séparation spécifié par *chSeparator*. Exemple :
+où' &#124; 'est le caractère de séparation spécifié par *chSeparator*. Par exemple :
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
@@ -868,7 +869,7 @@ Récupère le nombre maximal d’entrées dans la table des couleurs.
 int GetMaxColorTableEntries() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’entrées dans la table des couleurs.
 
@@ -884,7 +885,7 @@ Récupère le pas d’une image.
 int GetPitch() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur de l’image. Si la valeur de retour est négative, l’image bitmap est un DIB ascendant et son origine est l’angle inférieur gauche. Si la valeur de retour est positive, le bitmap est un DIB descendant et son origine est l’angle supérieur gauche.
 
@@ -913,7 +914,7 @@ Coordonnée x du pixel.
 *y*<br/>
 Coordonnée y du pixel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur rouge, verte, bleue (RVB) du pixel. Si le pixel est en dehors de la zone de découpage actuelle, la valeur de retour est CLR_INVALID.
 
@@ -950,7 +951,7 @@ Récupère l’emplacement indexé de la couleur transparente dans la palette de
 LONG GetTransparentColor() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de la couleur transparente.
 
@@ -962,7 +963,7 @@ Récupère la largeur, en pixels, d’une image.
 int GetWidth() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur de la bitmap, en pixels.
 
@@ -974,7 +975,7 @@ Détermine si la bitmap attachée est une section DIB.
 bool IsDIBSection() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la bitmap attachée est une section DIB. Sinon, FALSe.
 
@@ -1004,7 +1005,7 @@ Détermine si les pixels d’une bitmap sont mappés à une palette de couleurs.
 bool IsIndexed() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si indexé ; Sinon, FALSe.
 
@@ -1035,7 +1036,7 @@ Indique si l’application prend en charge les bitmaps transparentes.
 static BOOL IsTransparencySupported() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la plateforme actuelle prend en charge la transparence. Sinon, 0.
 
@@ -1060,7 +1061,7 @@ Pointeur vers une chaîne contenant le nom du fichier image à charger.
 *pStream*<br/>
 Pointeur vers un flux contenant le nom du fichier image à charger.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -1186,7 +1187,7 @@ Référence à une `RECT` structure, identifiant la destination.
 *pointDest*<br/>
 Référence à une `POINT` structure qui identifie l’angle supérieur gauche du rectangle de destination, en unités logiques.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite, sinon 0.
 
@@ -1262,7 +1263,7 @@ Référence à une structure [Rect](/windows/win32/api/windef/ns-windef-rect) sp
 *pointMask*<br/>
 Structure de [points](/windows/win32/api/windef/ns-windef-point) indiquant l’angle supérieur gauche de la bitmap du masque.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite, sinon 0.
 
@@ -1332,7 +1333,7 @@ Type de fichier dans lequel enregistrer l’image. Il peut s'agir d'une des mét
 > [!NOTE]
 > Pour obtenir la liste complète des constantes, consultez **constantes de format de fichier image** dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 HRESULT standard.
 
@@ -1410,7 +1411,7 @@ Index d’une couleur dans la palette de couleurs.
 
 ## <a name="cimagesetpixelrgb"></a><a name="setpixelrgb"></a> CImage :: SetPixelRGB
 
-Définit le pixel aux emplacements spécifiés par *x* et *y* sur les couleurs indiquées par *r*, *v*et *b*, dans une image rouge, verte, bleue (RVB).
+Définit le pixel aux emplacements spécifiés par *x* et *y* sur les couleurs indiquées par *r*, *v* et *b*, dans une image rouge, verte, bleue (RVB).
 
 ```cpp
 void SetPixelRGB(
@@ -1432,7 +1433,7 @@ Emplacement vertical du pixel à définir.
 *r*<br/>
 Intensité de la couleur rouge.
 
-*g*<br/>
+*activée*<br/>
 Intensité de la couleur verte.
 
 *b*<br/>
@@ -1455,7 +1456,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 *iTransparentColor*<br/>
 Index, dans une palette de couleurs, de la couleur à définir comme transparente. Si-1, aucune couleur n’est définie sur transparent.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’index de la couleur précédemment défini comme transparent.
 
@@ -1534,7 +1535,7 @@ Hauteur, en unités logiques, du rectangle source.
 *rectSrc*<br/>
 Référence à une `RECT` structure, identifiant la source.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite, sinon 0.
 
@@ -1617,7 +1618,7 @@ Hauteur, en unités logiques, du rectangle source.
 *rectSrc*<br/>
 Référence à une `RECT` structure, identifiant la source.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite ; sinon, FALSe.
 

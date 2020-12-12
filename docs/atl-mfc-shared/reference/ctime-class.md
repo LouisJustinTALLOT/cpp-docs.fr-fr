@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CTime'
 title: Classe CTime
 ms.date: 10/18/2018
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: d551698a81921227dd0d7b7d80436bba960ed176
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3768423a4d3bf873e9161b846e21fda4beffdc9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166601"
 ---
 # <a name="ctime-class"></a>Classe CTime
 
@@ -94,12 +95,12 @@ Les `CTime` classes et ne `CTimeSpan` sont pas conçues pour la dérivation. Ét
 > [!NOTE]
 > La limite de date supérieure est 12/31/3000. La limite inférieure est de 1/1/1970 12:00:00 AM GMT.
 
-Pour plus d’informations sur l’utilisation de `CTime` , consultez les articles [date et heure](../../atl-mfc-shared/date-and-time.md)et [gestion du temps](../../c-runtime-library/time-management.md) dans la référence de la bibliothèque Runtime.
+Pour plus d’informations sur l’utilisation de `CTime` , consultez les articles [date et heure](../../atl-mfc-shared/date-and-time.md)et [gestion du temps](../../c-runtime-library/time-management.md) dans la référence de la bibliothèque Run-Time.
 
 > [!NOTE]
 > La `CTime` structure a changé de mfc 7,1 en mfc 8,0. Si vous sérialisez une `CTime` structure à l’aide de l' **opérateur <<** sous MFC 8,0 ou une version ultérieure, le fichier résultant ne sera pas lisible sur les versions antérieures de MFC.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atltime. h
 
@@ -167,7 +168,7 @@ Indique si l’heure d’été est en vigueur. Peut avoir l’une des trois vale
 *wDosDate*, *wDosTime*<br/>
 Valeurs de date et d’heure MS-DOS à convertir en valeur de date/heure et copiées dans le nouvel `CTime` objet.
 
-*St*<br/>
+*st*<br/>
 Structure [SystemTime](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) à convertir en valeur de date/heure et copiée dans le nouvel `CTime` objet.
 
 *pied*<br/>
@@ -397,7 +398,7 @@ Pointe vers une mémoire tampon qui recevra les données d’heure. Si ce pointe
 
 ### <a name="return-value"></a>Valeur renvoyée
 
-Pointeur vers un **struct de struct** rempli tel que défini dans l’heure de fichier include. Manutention. Consultez [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) pour la disposition de la structure.
+Pointeur vers un **struct TM** rempli tel que défini dans l’include file Time. H. Consultez [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) pour la disposition de la structure.
 
 ### <a name="remarks"></a>Notes
 
@@ -444,7 +445,7 @@ Pointe vers une mémoire tampon qui recevra les données d’heure. Si ce pointe
 
 ### <a name="return-value"></a>Valeur renvoyée
 
-Pointeur vers un **struct de struct** rempli tel que défini dans l’heure de fichier include. Manutention. Consultez [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) pour la disposition de la structure.
+Pointeur vers un **struct TM** rempli tel que défini dans l’include file Time. H. Consultez [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) pour la disposition de la structure.
 
 ### <a name="remarks"></a>Notes
 
@@ -642,7 +643,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Paramètres
 
-*AR*<br/>
+*ar*<br/>
 `CArchive`Objet que vous souhaitez mettre à jour.
 
 ### <a name="return-value"></a>Valeur renvoyée

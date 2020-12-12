@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CStringData'
 title: CStringData (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 140836f45ed2f4088bc0baed67676f93cb268d01
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 74bf3563cb5dca506498ceef05ddc84f13c44f41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166588"
 ---
 # <a name="cstringdata-class"></a>CStringData (classe)
 
@@ -46,9 +47,9 @@ struct CStringData
 |[data](#data)|Récupère les données caractères d’un objet String.|
 |[IsLocked](#islocked)|Détermine si la mémoire tampon de l’objet String associé est verrouillée.|
 |[IsShared](#isshared)|Détermine si la mémoire tampon de l’objet String associé est actuellement partagée.|
-|[Verrouiller](#lock)|Verrouille la mémoire tampon de l’objet String associé.|
+|[Verrou](#lock)|Verrouille la mémoire tampon de l’objet String associé.|
 |[Version release](#release)|Libère l’objet String spécifié.|
-|[Bloquer](#unlock)|Déverrouille la mémoire tampon de l’objet String associé.|
+|[Déverrouiller](#unlock)|Déverrouille la mémoire tampon de l’objet String associé.|
 
 ### <a name="data-members"></a>Données membres
 
@@ -83,7 +84,7 @@ Ces données sont composées des éléments suivants :
    > [!NOTE]
    > La mémoire tampon de caractères réelle de l’objet String est allouée par le gestionnaire de chaînes et ajoutée à l' `CStringData` objet.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlsimpstr. h
 

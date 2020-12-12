@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur les concepts suivants : Active Template Library (ATL)'
 title: Concepts ATL (Active Template Library)
 ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5437f381ea145d5474dcdba25673d4e41c60c54b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166315"
 ---
 # <a name="active-template-library-atl-concepts"></a>Concepts ATL (Active Template Library)
 
@@ -70,7 +71,7 @@ Décrit comment utiliser des tableaux et des mappages dans ATL.
 [Composant de registre ATL (inscription)](atl-registry-component-registrar.md)<br/>
 Traite les paramètres remplaçables et la syntaxe de script ATL. Il explique également comment configurer un lien statique vers l’organisme d’enregistrement.
 
-[Programmation à l’aide du code ATL et Runtime C](programming-with-atl-and-c-run-time-code.md)<br/>
+[Programmation avec des Run-Time du code ATL et C](programming-with-atl-and-c-run-time-code.md)<br/>
 Décrit les avantages de la liaison de manière statique ou dynamique à la bibliothèque Runtime C (CRT).
 
 [Programmation avec CComBSTR](programming-with-ccombstr-atl.md)<br/>

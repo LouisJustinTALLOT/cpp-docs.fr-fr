@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : @FileName'
 title: '@FileName'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - '@FileName symbol'
 ms.assetid: a713bf70-2abd-4953-b187-7875ded58e52
-ms.openlocfilehash: a49be94ecd14f9f81d9d2396a0c2fb4d46713275
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1767f50f51ea86e577cd27bdeb9efe3c4a94b30c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75315769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121262"
 ---
-# <a name="filename"></a>Nom de fichier \@
+# <a name="filename"></a>\@Extension
 
 Nom de base du fichier principal assemblé (macro de texte).
 
 ## <a name="syntax"></a>Syntaxe
 
-> **\@FileName**
+> **\@Extension**
 
 ## <a name="see-also"></a>Voir aussi
 
-\ de [référence des symboles](symbols-reference.md)
+[Référence des symboles](symbols-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

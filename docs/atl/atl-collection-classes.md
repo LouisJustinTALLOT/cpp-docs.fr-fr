@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes de collection ATL'
 title: Vue d’ensemble de la classe de collection ATL
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 039af388a3713540c6ba7d39e8b639cf83d291ff
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 32d9fe928024d82af7031fbbb8d88aba5e3eae31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166081"
 ---
 # <a name="atl-collection-classes"></a>Classes de collection ATL
 
@@ -50,8 +51,8 @@ Les classes suivantes implémentent des tableaux, des listes et des mappages, et
 |[CAtlArray](../atl/reference/catlarray-class.md)|Implémente un tableau.|
 |[CAtlList](../atl/reference/catllist-class.md)|Implémente une liste.|
 |[CAtlMap](../atl/reference/catlmap-class.md)|Implémente une structure de mappage, dans laquelle les données peuvent être référencées par la clé ou la valeur.|
-|[CRBMap](../atl/reference/crbmap-class.md)|Implémente une structure de mappage à l’aide de l’algorithme rouge-noir.|
-|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implémente une structure de multimappage rouge-noir.|
+|[CRBMap](../atl/reference/crbmap-class.md)|Implémente une structure de mappage à l’aide de l’algorithme Red-Black.|
+|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implémente une structure de multimappage Red-Black.|
 
 Ces classes interceptent de nombreuses erreurs de programmation quand elles sont utilisées dans les versions Debug, mais pour des raisons de performances, ces vérifications ne sont pas effectuées dans les versions commerciales.
 
@@ -82,13 +83,13 @@ Chacune des classes de collection disponibles offre des caractéristiques de per
 
 ### <a name="collection-shape-features"></a>Fonctionnalités des formes de collection
 
-|Forme|Ordered (Validée)|Indexée|Insérer un<br /><br /> element|Rechercher<br /><br /> élément spécifié|Dupliquer<br /><br /> elements|
+|Graphique à base de formes|Ordered (Validée)|Indexée|Insérer un<br /><br /> element|Rechercher<br /><br /> élément spécifié|Dupliquer<br /><br /> elements|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
 |List|Oui|Non|Rapide (temps constant)|O lent (n)|Oui|
 |Array|Oui|Par int (temps constant)|Lent O (n), sauf en cas d’insertion à la fin, auquel cas une heure constante|O lent (n)|Oui|
-|Carte|Non|Par clé (temps constant)|Rapide (temps constant)|Rapide (temps constant)|Non (clés) Oui (valeurs)|
-|Carte rouge-noire|Oui (par clé)|Par clé O (log n)|O rapide (log n)|O rapide (log n)|Non|
-|Multimap rouge-noir|Oui (par clé)|Par clé O (log n) (valeurs multiples par clé)|O rapide (log n)|O rapide (log n)|Oui (valeurs multiples par clé)|
+|Mappage|Non|Par clé (temps constant)|Rapide (temps constant)|Rapide (temps constant)|Non (clés) Oui (valeurs)|
+|Carte de Red-Black|Oui (par clé)|Par clé O (log n)|O rapide (log n)|O rapide (log n)|Non|
+|Red-Black Multimap|Oui (par clé)|Par clé O (log n) (valeurs multiples par clé)|O rapide (log n)|O rapide (log n)|Oui (valeurs multiples par clé)|
 
 ## <a name="using-ctraits-objects"></a>Utilisation d’objets CTraits
 
