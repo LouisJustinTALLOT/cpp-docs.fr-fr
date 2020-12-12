@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe money_put'
 title: money_put, classe
 ms.date: 11/01/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: d15667f4e30561dbba024f877530c4ff0f824f64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d7e35e870d4a065948123e9d21339095d36c4579
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277477"
 ---
 # <a name="money_put-class"></a>money_put, classe
 
@@ -74,7 +75,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 **Espace de noms :** std
 
-## <a name="money_putchar_type"></a><a name="char_type"></a>money_put :: char_type
+## <a name="money_putchar_type"></a><a name="char_type"></a> money_put :: char_type
 
 Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.
 
@@ -86,7 +87,7 @@ typedef CharType char_type;
 
 Le type est un synonyme du paramètre de modèle **CharType**.
 
-## <a name="money_putdo_put"></a><a name="do_put"></a>money_put ::d o_put
+## <a name="money_putdo_put"></a><a name="do_put"></a> money_put ::d o_put
 
 Fonction virtuelle appelée pour convertir un nombre ou une chaîne en une séquence de caractères représentant une valeur monétaire.
 
@@ -123,7 +124,7 @@ Caractère utilisé pour l’espacement.
 *multiples*\
 Objet de chaîne à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur de sortie qui traite la position située juste au-delà du dernier élément produit.
 
@@ -169,7 +170,7 @@ La fonction appelle **iosbase**. **width**(0) pour réinitialiser la largeur du 
 
 Consultez l’exemple relatif à [put](#put), où la fonction membre virtuelle est appelée par **put**.
 
-## <a name="money_putiter_type"></a><a name="iter_type"></a>money_put :: iter_type
+## <a name="money_putiter_type"></a><a name="iter_type"></a> money_put :: iter_type
 
 Type qui décrit un itérateur de sortie.
 
@@ -181,7 +182,7 @@ typedef OutputIterator iter_type;
 
 Le type est un synonyme du paramètre de modèle **OutputIterator.**
 
-## <a name="money_putmoney_put"></a><a name="money_put"></a>money_put :: money_put
+## <a name="money_putmoney_put"></a><a name="money_put"></a> money_put :: money_put
 
 Constructeur des objets de type `money_put`.
 
@@ -202,13 +203,13 @@ Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les 
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1 : ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
 Le constructeur initialise son objet de base avec **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
-## <a name="money_putput"></a><a name="put"></a>money_put ::p ut
+## <a name="money_putput"></a><a name="put"></a> money_put ::p ut
 
 Convertit un nombre ou une chaîne en une séquence de caractères représentant une valeur monétaire.
 
@@ -245,7 +246,7 @@ Caractère utilisé pour l’espacement.
 *multiples*\
 Objet de chaîne à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur de sortie qui traite la position située juste au-delà du dernier élément produit.
 
@@ -281,7 +282,7 @@ int main()
 money_put() = "EUR1.000,12"
 ```
 
-## <a name="money_putstring_type"></a><a name="string_type"></a>money_put :: string_type
+## <a name="money_putstring_type"></a><a name="string_type"></a> money_put :: string_type
 
 Type qui décrit une chaîne contenant des caractères de type `CharType`.
 

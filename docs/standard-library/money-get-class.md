@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe money_get'
 title: money_get, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: ab49dad1a24e57eb33834cc651d9ccdb50abe68c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6dfab2347799c78b89e2da9e00ebdb71af0c22d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277503"
 ---
 # <a name="money_get-class"></a>money_get, classe
 
@@ -73,7 +74,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 **Espace de noms :** std
 
-## <a name="money_getchar_type"></a><a name="char_type"></a>money_get :: char_type
+## <a name="money_getchar_type"></a><a name="char_type"></a> money_get :: char_type
 
 Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.
 
@@ -85,7 +86,7 @@ typedef CharType char_type;
 
 Le type est un synonyme du paramètre de modèle *CharType*.
 
-## <a name="money_getdo_get"></a><a name="do_get"></a>money_get ::d o_get
+## <a name="money_getdo_get"></a><a name="do_get"></a> money_get ::d o_get
 
 Fonction virtuelle appelée pour extraire une valeur numérique d’une séquence de caractères qui représente une valeur monétaire.
 
@@ -123,7 +124,7 @@ Définit les éléments de masque de bits appropriés pour l’état de flux sel
 *multiples*\
 Chaîne stockant la séquence convertie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur d’entrée qui traite le premier élément au-delà du champ d’entrée monétaire.
 
@@ -165,7 +166,7 @@ Un espace blanc arbitraire est mis en correspondance là où l’élément égal
 
 Consultez l’exemple relatif à [get](#get), qui appelle `do_get`.
 
-## <a name="money_getget"></a><a name="get"></a>money_get :: obtient
+## <a name="money_getget"></a><a name="get"></a> money_get :: obtient
 
 Extrait une valeur numérique d'une séquence de caractères représentant une valeur monétaire.
 
@@ -205,7 +206,7 @@ Définit les éléments de masque de bits appropriés pour l’état de flux sel
 *multiples*\
 Chaîne stockant la séquence convertie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur d’entrée qui traite le premier élément au-delà du champ d’entrée monétaire.
 
@@ -262,7 +263,7 @@ int main( )
 };
 ```
 
-## <a name="money_getiter_type"></a><a name="iter_type"></a>money_get :: iter_type
+## <a name="money_getiter_type"></a><a name="iter_type"></a> money_get :: iter_type
 
 Type qui décrit un itérateur d'entrée.
 
@@ -274,7 +275,7 @@ typedef InputIterator iter_type;
 
 Le type est un synonyme du paramètre de modèle **InputIterator**.
 
-## <a name="money_getmoney_get"></a><a name="money_get"></a>money_get :: money_get
+## <a name="money_getmoney_get"></a><a name="money_get"></a> money_get :: money_get
 
 Constructeur des objets de type `money_get` utilisés pour extraire des valeurs numériques de séquences représentant des valeurs monétaires.
 
@@ -295,13 +296,13 @@ Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les 
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1 : ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
 Le constructeur initialise son objet de base avec **locale ::**[facette](../standard-library/locale-class.md#facet_class)(*_Refs*).
 
-## <a name="money_getstring_type"></a><a name="string_type"></a>money_get :: string_type
+## <a name="money_getstring_type"></a><a name="string_type"></a> money_get :: string_type
 
 Type qui décrit une chaîne contenant des caractères de type **CharType**.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe istream_iterator'
 title: istream_iterator, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: 4ab1c6188a076b46f08b9ea171a8a945cbe1fc70
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7247e96c68f1adcc145519fc1cca6b3401302854
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277906"
 ---
 # <a name="istream_iterator-class"></a>istream_iterator, classe
 
@@ -69,7 +70,7 @@ Après avoir construit ou incrémenté un objet de classe istream_iterator avec 
 |Opérateur|Description|
 |-|-|
 |[and](#op_star)|L'opérateur de déréférencement retourne l'objet stocké de type `Type` auquel se rapporte l'objet `istream_iterator`.|
-|[>Operator](#op_arrow)|Retourne la valeur d'un membre, le cas échéant.|
+|[>Operator ](#op_arrow)|Retourne la valeur d'un membre, le cas échéant.|
 |[opérateur + +](#op_add_add)|Extrait un objet incrémenté du flux d'entrée ou copie l'objet avant de l'incrémenter et retourne la copie.|
 
 ## <a name="requirements"></a>Spécifications
@@ -78,7 +79,7 @@ Après avoir construit ou incrémenté un objet de classe istream_iterator avec 
 
 **Espace de noms :** std
 
-## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator :: char_type
+## <a name="istream_iteratorchar_type"></a><a name="char_type"></a> istream_iterator :: char_type
 
 Type qui fournit le type de caractère de `istream_iterator`.
 
@@ -126,7 +127,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator :: istream_iterator
+## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a> istream_iterator :: istream_iterator
 
 Construit un itérateur de fin de flux comme `istream_iterator` par défaut ou un `istream_iterator` initialisé sur le type de flux de l'itérateur à partir duquel il lit.
 
@@ -181,7 +182,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator :: istream_type
+## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a> istream_iterator :: istream_type
 
 Type qui fournit le type de flux de `istream_iterator`.
 
@@ -197,7 +198,7 @@ Le type est un synonyme de `basic_istream` \< **CharType**, **Traits**> .
 
 Pour découvrir comment déclarer et utiliser `istream_type`, consultez l’exemple relatif à [istream_iterator](#istream_iterator).
 
-## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator :: Operator *
+## <a name="istream_iteratoroperator"></a><a name="op_star"></a> istream_iterator :: Operator *
 
 L'opérateur de déréférencement retourne l'objet stocké de type `Type` auquel se rapporte l'objet `istream_iterator`.
 
@@ -205,7 +206,7 @@ L'opérateur de déréférencement retourne l'objet stocké de type `Type` auque
 const Type& operator*() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet stocké de type `Type` .
 
@@ -241,7 +242,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator :: Operator-&gt;
+## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a> istream_iterator :: Operator-&gt;
 
 Retourne la valeur d'un membre, le cas échéant.
 
@@ -249,7 +250,7 @@ Retourne la valeur d'un membre, le cas échéant.
 const Type* operator->() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur d’un membre, le cas échéant.
 
@@ -291,7 +292,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator :: Operator + +
+## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a> istream_iterator :: Operator + +
 
 Extrait un objet incrémenté du flux d'entrée ou copie l'objet avant de l'incrémenter et retourne la copie.
 
@@ -301,7 +302,7 @@ istream_iterator<Type, CharType, Traits, Distance>& operator++();
 istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le premier opérateur membre retourne une référence à l’objet incrémenté de type `Type` extrait à partir du flux d’entrée et la deuxième fonction membre retourne une copie de l’objet.
 
@@ -337,7 +338,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator :: traits_type
+## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a> istream_iterator :: traits_type
 
 Type qui fournit le type de caractéristique de `istream_iterator`.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : struct logical_or'
 title: logical_or (struct)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7b6578bb3405b2428724554d520ffe784b885a40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246450"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277672"
 ---
-# <a name="logicalor-struct"></a>logical_or (struct)
+# <a name="logical_or-struct"></a>logical_or (struct)
 
 Objet de fonction prédéfini qui effectue l’opération de disjonction logique ( `operator||`) sur ses arguments.
 
@@ -43,12 +44,12 @@ struct logical_or<void>
 Tout type qui prend en charge un `operator||` qui accepte des opérandes des types spécifiés ou inférés.
 
 *Gauche*\
-Opérande gauche de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+Opérande gauche de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
 *Oui*\
-Opérande droit de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+Opérande droit de l’opération de disjonction logique. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left || Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator||`.
 

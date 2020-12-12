@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; paramètres régionaux&gt;'
 title: '&lt;locale&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-ms.openlocfilehash: ae008ef45e8a6bb57505432f2c931a768d4c8ea4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dce8cb130269450e1b7996b61504e59dc372e3b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277802"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 

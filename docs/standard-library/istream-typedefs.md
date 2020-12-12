@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; IStream &gt; typedefs'
 title: '&lt;istream&gt;, typedefs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: c66a4349a016eb8428a8aa8eb260a78b4bac9efb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 576d1be7733a01689b4cfc511049dfad89390f63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277854"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;istream&gt;, typedefs
 

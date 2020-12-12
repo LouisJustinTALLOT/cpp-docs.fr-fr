@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : présentation des étapes de génération personnalisée et des événements de build'
 title: Présentation des étapes de génération personnalisée et des événements de build
 ms.date: 08/29/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: da7e9399a1502c3d7ddaccbfb10a4d2b71fb85cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277399"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Présentation des étapes de génération personnalisée et des événements de build
 
@@ -64,14 +65,14 @@ Pour chaque projet dans une solution, les événements de build et les étapes d
 
 L’`custom build step on the project` et un `post-build event` s’exécutent de manière séquentielle une fois que tous les autres processus de build sont terminés.
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
-[Spécifier des outils de génération personnalisée](specifying-custom-build-tools.md)<br/>
-[Spécifier des événements de build](specifying-build-events.md)<br/>
-[Dépannage des personnalisations de génération](troubleshooting-build-customizations.md)<br/>
-[Mettre en forme la sortie d'une étape de génération personnalisée ou d'un événement de build](formatting-the-output-of-a-custom-build-step-or-build-event.md)
+[Spécifier les outils de génération personnalisée](specifying-custom-build-tools.md)<br/>
+[Spécifier les événements de build](specifying-build-events.md)<br/>
+[Dépanner les personnalisations de build](troubleshooting-build-customizations.md)<br/>
+[Mettre en forme la sortie d’une étape de génération personnalisée ou d’un événement de build](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Projets Visual Studio - C++](creating-and-managing-visual-cpp-projects.md)<br>
+[Projets Visual Studio-C++](creating-and-managing-visual-cpp-projects.md)<br>
 [Macros courantes pour les propriétés et les commandes de build](reference/common-macros-for-build-commands-and-properties.md)

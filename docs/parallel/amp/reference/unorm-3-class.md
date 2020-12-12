@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe unorm_3'
 title: unorm_3, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: efca9b51f44a9eb64e6e9d89cc156ab0b2df5ae5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b62b05487a90e273851b5c5eb7f045132353be37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126186"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277997"
 ---
 # <a name="unorm_3-class"></a>unorm_3, classe
 
@@ -93,107 +94,107 @@ class unorm_3;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Constructeur unorm_3](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|unorm_3::get_x||
-|unorm_3::get_xy||
-|unorm_3::get_xyz||
-|unorm_3::get_xz||
-|unorm_3::get_xzy||
-|unorm_3::get_y||
-|unorm_3::get_yx||
-|unorm_3::get_yxz||
-|unorm_3::get_yz||
-|unorm_3::get_yzx||
-|unorm_3::get_z||
-|unorm_3::get_zx||
-|unorm_3::get_zxy||
-|unorm_3::get_zy||
-|unorm_3::get_zyx||
+|unorm_3 :: get_x||
+|unorm_3 :: get_xy||
+|unorm_3 :: get_xyz||
+|unorm_3 :: get_xz||
+|unorm_3 :: get_xzy||
+|unorm_3 :: get_y||
+|unorm_3 :: get_yx||
+|unorm_3 :: get_yxz||
+|unorm_3 :: get_yz||
+|unorm_3 :: get_yzx||
+|unorm_3 :: get_z||
+|unorm_3 :: get_zx||
+|unorm_3 :: get_zxy||
+|unorm_3 :: get_zy||
+|unorm_3 :: get_zyx||
 |Unorm_3 :: ref_b||
 |Unorm_3 :: ref_g||
 |Unorm_3 :: ref_r||
-|Unorm_3::ref_x||
-|Unorm_3::ref_y||
+|Unorm_3 :: ref_x||
+|Unorm_3 :: ref_y||
 |Unorm_3 :: ref_z||
-|unorm_3::set_x||
-|unorm_3::set_xy||
-|unorm_3::set_xyz||
-|unorm_3::set_xz||
-|unorm_3::set_xzy||
-|unorm_3::set_y||
-|unorm_3::set_yx||
-|unorm_3::set_yxz||
-|unorm_3::set_yz||
-|unorm_3::set_yzx||
-|unorm_3::set_z||
-|unorm_3::set_zx||
-|unorm_3::set_zxy||
-|unorm_3::set_zy||
-|unorm_3::set_zyx||
+|unorm_3 :: set_x||
+|unorm_3 :: set_xy||
+|unorm_3 :: set_xyz||
+|unorm_3 :: set_xz||
+|unorm_3 :: set_xzy||
+|unorm_3 :: set_y||
+|unorm_3 :: set_yx||
+|unorm_3 :: set_yxz||
+|unorm_3 :: set_yz||
+|unorm_3 :: set_yzx||
+|unorm_3 :: set_z||
+|unorm_3 :: set_zx||
+|unorm_3 :: set_zxy||
+|unorm_3 :: set_zy||
+|unorm_3 :: set_zyx||
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|unorm_3::operator--||
-|unorm_3::operator*=||
-|unorm_3::operator/=||
-|unorm_3::operator++||
-|unorm_3::operator+=||
-|unorm_3::operator=||
-|unorm_3::operator-=||
+|unorm_3 :: Operator--||
+|unorm_3 :: Operator * =||
+|unorm_3 :: Operator/=||
+|unorm_3 :: Operator + +||
+|unorm_3 :: Operator + =||
+|unorm_3 :: Operator =||
+|unorm_3 :: Operator-=||
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[taille, constante](#unorm_3__size)||
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |unorm_3 :: b||
-|unorm_3::bg||
-|unorm_3::bgr||
+|unorm_3 :: BG||
+|unorm_3 :: BGR||
 |unorm_3 :: BR||
 |unorm_3 :: BRG||
 |unorm_3 :: g||
-|unorm_3::gb||
-|unorm_3::gbr||
+|unorm_3 :: go||
+|unorm_3 :: GBR||
 |unorm_3 :: gr||
-|unorm_3::grb||
+|unorm_3 :: GRB||
 |unorm_3 :: r||
 |unorm_3 :: RB||
-|unorm_3::rbg||
+|unorm_3 :: RBG||
 |unorm_3 :: RG||
-|unorm_3::rgb||
+|unorm_3 :: RGB||
 |unorm_3 :: x||
 |unorm_3 :: XY||
-|unorm_3::xyz||
-|unorm_3::xz||
-|unorm_3::xzy||
+|unorm_3 :: XYZ||
+|unorm_3 :: XZ||
+|unorm_3 :: XZY||
 |unorm_3 :: y||
-|unorm_3::yx||
-|unorm_3::yxz||
-|unorm_3::yz||
-|unorm_3::yzx||
+|unorm_3 :: YX||
+|unorm_3 :: Yxz||
+|unorm_3 :: YZ||
+|unorm_3 :: yzx||
 |unorm_3 :: z||
-|unorm_3::zx||
-|unorm_3::zxy||
+|unorm_3 :: ZX||
+|unorm_3 :: zxy||
 |unorm_3 :: ZY||
 |unorm_3 :: ZYX||
 
@@ -207,7 +208,7 @@ class unorm_3;
 
 **Espace de noms :** Concurrency :: Graphics
 
-## <a name="ctor"></a>unorm_3
+## <a name="unorm_3"></a><a name="ctor"></a> unorm_3
 
 Le constructeur par défaut initialise tous les éléments avec 0.
 
@@ -277,7 +278,7 @@ Valeur d’initialisation.
 *_Other*<br/>
 Objet utilisé pour initialiser.
 
-## <a name="unorm_3__size"></a>corps
+## <a name="size"></a><a name="unorm_3__size"></a> corps
 
 ```cpp
 static const int size = 3;

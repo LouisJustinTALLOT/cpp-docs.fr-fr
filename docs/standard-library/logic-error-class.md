@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe logic_error'
 title: logic_error, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-ms.openlocfilehash: b94f7f4c2482f0317e37c6f4bf3618b91a175147
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: b4b592d268a29a1bf1c095beb79904789d695e64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277711"
 ---
 # <a name="logic_error-class"></a>logic_error, classe
 
@@ -31,7 +32,7 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-La valeur retournée par `what()` est une copie de `message.data()` . Pour plus d’informations, consultez [`what`](../standard-library/exception-class.md) et [`data`](../standard-library/basic-string-class.md#data) .
+La valeur retournée par `what()` est une copie de `message.data()` . Pour plus d’informations, consultez [`what`](../standard-library/exception-class.md) et [`data`](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Exemple
 
@@ -60,7 +61,7 @@ Caught: logic error
 Type: class std::logic_error
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<stdexcept>
 

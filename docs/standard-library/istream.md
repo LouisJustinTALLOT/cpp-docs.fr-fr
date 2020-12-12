@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; IStream&gt;'
 title: '&lt;istream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c897441eef935cd6ef5a8b4e9f4676d06a57e1af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277815"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -38,7 +39,7 @@ Définit le modèle de classe basic_istream, qui sert d’intermédiaire pour le
 
 |Nom|Description|
 |-|-|
-|[Web](../standard-library/istream-functions.md#ws)|Ignore l'espace blanc dans le flux.|
+|[ws](../standard-library/istream-functions.md#ws)|Ignore l'espace blanc dans le flux.|
 |[swap](../standard-library/istream-functions.md#istream_swap)|Échange deux objets de flux.|
 
 ### <a name="operators"></a>Opérateurs
