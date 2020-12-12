@@ -1,5 +1,6 @@
 ---
-title: Classe IConnectionPointImpl
+description: 'En savoir plus sur : classe IConnectionPointImpl'
+title: IConnectionPointImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
 - IConnectionPointImpl
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-ms.openlocfilehash: c62ac3310a579379674674a7a9a517e3f2fd60e5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d87eb0821a3a48d171c196c891b5f5c7aacb9cdf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139579"
 ---
-# <a name="iconnectionpointimpl-class"></a>Classe IConnectionPointImpl
+# <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl, classe
 
 Cette classe implémente un point de connexion.
 
@@ -35,13 +36,13 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe, `IConnectionPointImpl`dérivée de .
+Votre classe, dérivée de `IConnectionPointImpl` .
 
 *piid*<br/>
-Un pointeur à l’IID de l’interface représentée par l’objet point de connexion.
+Pointeur vers l’IID de l’interface représentée par l’objet de point de connexion.
 
-*Cdv*<br/>
-Une classe qui gère les connexions. La valeur par défaut est [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), qui permet des connexions illimitées. Vous pouvez également utiliser [CComUnkArray](../../atl/reference/ccomunkarray-class.md), qui spécifie un nombre fixe de connexions.
+*CDV*<br/>
+Classe qui gère les connexions. La valeur par défaut est [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), ce qui permet des connexions illimitées. Vous pouvez également utiliser [CComUnkArray](../../atl/reference/ccomunkarray-class.md), qui spécifie un nombre fixe de connexions.
 
 ## <a name="members"></a>Membres
 
@@ -49,25 +50,25 @@ Une classe qui gère les connexions. La valeur par défaut est [CComDynamicUnkAr
 
 |Nom|Description|
 |----------|-----------------|
-|[IConnectionPointImpl::Conseiller](#advise)|Établit un lien entre le point de connexion et un évier.|
-|[IConnectionPointImpl::EnumConnections](#enumconnections)|Crée un enumérateur à itérer à travers les connexions pour le point de connexion.|
+|[IConnectionPointImpl :: Advise](#advise)|Établit une connexion entre le point de connexion et un récepteur.|
+|[IConnectionPointImpl::EnumConnections](#enumconnections)|Crée un énumérateur pour itérer au sein des connexions pour le point de connexion.|
 |[IConnectionPointImpl::GetConnectionInterface](#getconnectioninterface)|Récupère l’IID de l’interface représentée par le point de connexion.|
-|[IConnectionPointImpl::GetConnectionPointContainer](#getconnectionpointcontainer)|Récupère un pointeur d’interface à l’objet connectable.|
-|[IConnectionPointImpl::Unadvise](#unadvise)|Termine une connexion précédemment `Advise`établie par .|
+|[IConnectionPointImpl::GetConnectionPointContainer](#getconnectionpointcontainer)|Récupère un pointeur d’interface vers l’objet connectable.|
+|[IConnectionPointImpl :: Unadvise](#unadvise)|Met fin à une connexion précédemment établie par le biais de `Advise` .|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[IConnectionPointImpl::m_vec](#m_vec)|Gère les connexions pour le point de connexion.|
+|[IConnectionPointImpl :: m_vec](#m_vec)|Gère les connexions pour le point de connexion.|
 
 ## <a name="remarks"></a>Notes
 
-`IConnectionPointImpl`implémente un point de connexion, qui permet à un objet d’exposer une interface sortante au client. Le client implémente cette interface sur un objet appelé évier.
+`IConnectionPointImpl` implémente un point de connexion, qui permet à un objet d’exposer une interface sortante au client. Le client implémente cette interface sur un objet appelé récepteur.
 
-ATL utilise [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) pour implémenter l’objet connectable. Chaque point de connexion à l’intérieur de l’objet connectable représente une interface sortante, identifiée par *piid*. *CdV* de classe gère les connexions entre le point de connexion et un évier. Chaque connexion est identifiée de façon unique par un « cookie ».
+ATL utilise [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) pour implémenter l’objet connectable. Chaque point de connexion dans l’objet connectable représente une interface sortante, identifiée par *piid*. La classe *CDV* gère les connexions entre le point de connexion et un récepteur. Chaque connexion est identifiée de manière unique par un « cookie ».
 
-Pour plus d’informations sur l’utilisation des points de connexion dans ATL, voir l’article [Points de connexion](../../atl/atl-connection-points.md).
+Pour plus d’informations sur l’utilisation des points de connexion dans ATL, consultez l’article [points de connexion](../../atl/atl-connection-points.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -77,11 +78,11 @@ Pour plus d’informations sur l’utilisation des points de connexion dans ATL,
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcom.h
+**En-tête :** atlcom. h
 
-## <a name="iconnectionpointimpladvise"></a><a name="advise"></a>IConnectionPointImpl::Conseiller
+## <a name="iconnectionpointimpladvise"></a><a name="advise"></a> IConnectionPointImpl :: Advise
 
-Établit un lien entre le point de connexion et un évier.
+Établit une connexion entre le point de connexion et un récepteur.
 
 ```
 STDMETHOD(Advise)(
@@ -93,11 +94,11 @@ STDMETHOD(Advise)(
 
 Utilisez [Unadvise](#unadvise) pour mettre fin à l’appel de connexion.
 
-Voir [IConnectionPoint::Conseiller](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) dans le SDK Windows.
+Consultez [IConnectionPoint :: Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) dans le SDK Windows.
 
-## <a name="iconnectionpointimplenumconnections"></a><a name="enumconnections"></a>IConnectionPointImpl::EnumConnections
+## <a name="iconnectionpointimplenumconnections"></a><a name="enumconnections"></a> IConnectionPointImpl::EnumConnections
 
-Crée un enumérateur à itérer à travers les connexions pour le point de connexion.
+Crée un énumérateur pour itérer au sein des connexions pour le point de connexion.
 
 ```
 STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
@@ -105,9 +106,9 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 
 ### <a name="remarks"></a>Notes
 
-Voir [IConnectionPoint::EnumConnections](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) dans le SDK Windows.
+Consultez [IConnectionPoint :: EnumConnections](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-enumconnections) dans la SDK Windows.
 
-## <a name="iconnectionpointimplgetconnectioninterface"></a><a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface
+## <a name="iconnectionpointimplgetconnectioninterface"></a><a name="getconnectioninterface"></a> IConnectionPointImpl::GetConnectionInterface
 
 Récupère l’IID de l’interface représentée par le point de connexion.
 
@@ -117,11 +118,11 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 
 ### <a name="remarks"></a>Notes
 
-Voir [IConnectionPoint::GetConnectionInterface](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) dans le SDK Windows.
+Consultez [IConnectionPoint :: GetConnectionInterface](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectioninterface) dans la SDK Windows.
 
-## <a name="iconnectionpointimplgetconnectionpointcontainer"></a><a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer
+## <a name="iconnectionpointimplgetconnectionpointcontainer"></a><a name="getconnectionpointcontainer"></a> IConnectionPointImpl::GetConnectionPointContainer
 
-Récupère un pointeur d’interface à l’objet connectable.
+Récupère un pointeur d’interface vers l’objet connectable.
 
 ```
 STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
@@ -129,11 +130,11 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 
 ### <a name="remarks"></a>Notes
 
-Voir [IConnectionPoint::GetConnectionPointContainer](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) dans le SDK Windows.
+Consultez [IConnectionPoint :: GetConnectionPointContainer](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-getconnectionpointcontainer) dans la SDK Windows.
 
-## <a name="iconnectionpointimplm_vec"></a><a name="m_vec"></a>IConnectionPointImpl::m_vec
+## <a name="iconnectionpointimplm_vec"></a><a name="m_vec"></a> IConnectionPointImpl :: m_vec
 
-Gère les connexions entre l’objet de point de connexion et un évier.
+Gère les connexions entre l’objet de point de connexion et un récepteur.
 
 ```
 CDV m_vec;
@@ -143,9 +144,9 @@ CDV m_vec;
 
 Par défaut, `m_vec` est de type [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md).
 
-## <a name="iconnectionpointimplunadvise"></a><a name="unadvise"></a>IConnectionPointImpl::Unadvise
+## <a name="iconnectionpointimplunadvise"></a><a name="unadvise"></a> IConnectionPointImpl :: Unadvise
 
-Termine une connexion précédemment établie par [l’intermédiaire de Advise](#advise).
+Met fin à une connexion précédemment établie par le biais de la [notification](#advise).
 
 ```
 STDMETHOD(Unadvise)(DWORD dwCookie);
@@ -153,7 +154,7 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 
 ### <a name="remarks"></a>Notes
 
-Voir [IConnectionPoint:Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) in the Windows SDK.
+Consultez [IConnectionPoint :: Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) dans le SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

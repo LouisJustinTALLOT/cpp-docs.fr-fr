@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : plus d’informations sur les classes ODBC MFC'
 title: Informations supplémentaires sur les classes ODBC MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 8aa3b936b9f06153170dac013f9dcd03485c8bbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 54f7fba138c14ee6970a06808447cb8c2fb68081
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213224"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145663"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Informations supplémentaires sur les classes ODBC MFC
 
@@ -25,7 +26,7 @@ Les rubriques suivantes expliquent plus en détail les concepts et les technique
 
 - [Exceptions : exceptions de base de données](../../mfc/exceptions-database-exceptions.md)
 
-- [MFC : utilisation de classes de bases de données avec des documents et des vues](../../data/mfc-using-database-classes-with-documents-and-views.md)
+- [MFC : utilisation de classes de base de données avec des documents et des vues](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
 - [MFC : utilisation de classes de bases de données sans document ni vue](../../data/mfc-using-database-classes-without-documents-and-views.md)
 
@@ -33,7 +34,7 @@ Les rubriques suivantes expliquent plus en détail les concepts et les technique
 
 - [Administrateur ODBC](../../data/odbc/odbc-administrator.md)
 
-- [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+- [RFX (Record Field Exchange)](../../data/odbc/record-field-exchange-rfx.md)
 
 - [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)
 

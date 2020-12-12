@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : Windows operator :: UI :: XAML :: Interop :: TypeName'
 title: Windows::UI::Xaml::Interop::TypeName, opérateur
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: d35056ca1a4e7f06c9f91fe86998a676a12395f2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c4c856fcf93214959f75f861b035dbdee9b94a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145715"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Windows::UI::Xaml::Interop::TypeName, opérateur
 
@@ -52,4 +53,4 @@ Projet de programmes .NET Framework `TypeName` sous la forme [System.Type](/dotn
 ## <a name="see-also"></a>Voir aussi
 
 [Windows::UI::Xaml::Interop::TypeName, opérateur](../cppcx/operator-windows-ui-xaml-interop-typename.md)<br/>
-[Platform::Type, classe](../cppcx/platform-type-class.md)
+[Classe Platform :: type](../cppcx/platform-type-class.md)

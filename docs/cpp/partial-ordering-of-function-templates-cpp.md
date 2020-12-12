@@ -1,21 +1,22 @@
 ---
+description: 'En savoir plus sur : classement partiel des modèles de fonction (C++)'
 title: Tri partiel des modèles de fonction (C++)
 ms.date: 07/30/2019
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-ms.openlocfilehash: 0c4f11b4b3e02504c4786ea34441362b542959d6
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 701c97aa819d0294f69f2fe2a71ffb9bf0210afa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145897"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Tri partiel des modèles de fonction (C++)
 
 Plusieurs modèles de fonction qui correspondent à la liste d’arguments d’un appel de fonction peuvent être disponibles. C++ définit un classement partiel des modèles de fonction pour spécifier quelle fonction doit être appelée. Le classement est partiel car certains modèles peuvent être considérés comme également spécialisés.
 
-Le compilateur sélectionne la fonction de modèle la plus spécialisée disponible parmi les correspondances possibles. Par exemple, si un modèle de fonction prend un `T` type et qu’un autre modèle `T*` de fonction qui prend `T*` est disponible, la version est dite plus spécialisée. Il est préférable d’utiliser la `T` version générique chaque fois que l’argument est un type pointeur, même si les deux sont des correspondances autorisées.
+Le compilateur sélectionne la fonction de modèle la plus spécialisée disponible parmi les correspondances possibles. Par exemple, si un modèle de fonction prend un type `T` et qu’un autre modèle de fonction qui prend `T*` est disponible, la `T*` version est dite plus spécialisée. Il est préférable d’utiliser la `T` version générique chaque fois que l’argument est un type pointeur, même si les deux sont des correspondances autorisées.
 
 Utilisez le processus suivant pour déterminer si un candidat de modèle de fonction est plus spécialisé :
 
@@ -33,15 +34,15 @@ Utilisez le processus suivant pour déterminer si un candidat de modèle de fonc
 
    1. Une spécialisation de modèle pour un type spécifique est plus spécialisée qu'une spécialisation acceptant un argument de type générique.
 
-   1. Un modèle acceptant `T*` uniquement est plus spécialisé qu’un modèle `T`acceptant uniquement, car `X*` un type hypothétique est un argument `T` valide pour un argument `X` template, mais n’est pas un argument valide pour un `T*`argument template.
+   1. Un modèle acceptant uniquement `T*` est plus spécialisé qu’un modèle acceptant uniquement `T` , car un type hypothétique `X*` est un argument valide pour un `T` argument template, mais `X` n’est pas un argument valide pour un `T*` argument template.
 
-   1. `const T`est plus spécialisé que `T`, car `const X` est un argument valide pour un `T` argument de modèle, `X` mais n’est pas un argument valide `const T` pour un argument de modèle.
+   1. `const T` est plus spécialisé que `T` , car `const X` est un argument valide pour un `T` argument de modèle, mais n' `X` est pas un argument valide pour un `const T` argument de modèle.
 
-   1. `const T*`est plus spécialisé que `T*`, car `const X*` est un argument valide pour un `T*` argument de modèle, `X*` mais n’est pas un argument valide `const T*` pour un argument de modèle.
+   1. `const T*` est plus spécialisé que `T*` , car `const X*` est un argument valide pour un `T*` argument de modèle, mais n' `X*` est pas un argument valide pour un `const T*` argument de modèle.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-L’exemple suivant fonctionne comme indiqué dans la norme:
+L’exemple suivant fonctionne comme indiqué dans la norme :
 
 ```cpp
 // partial_ordering_of_function_templates.cpp
@@ -73,7 +74,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Less specialized function called
@@ -83,4 +84,4 @@ Even more specialized function for const T*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles de fonctions](../cpp/function-templates.md)
+[Modèles de fonction](../cpp/function-templates.md)

@@ -1,5 +1,6 @@
 ---
-title: Pages de propriété de compilateur DE MIDL
+description: En savoir plus sur les pages de propriétés MIDL
+title: Pages de propriétés du compilateur MIDL
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
@@ -47,48 +48,48 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: d6833230baca892836c187799df7f0658aa16772
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 12cc0791bfadf7611d62ab16fc788081f4c7b7e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137824"
 ---
 # <a name="midl-property-pages"></a>Pages de propriétés MIDL
 
-Les pages de propriété MIDL sont disponibles comme une propriété d’article sur un . Fichier IDL dans un projet CMD qui utilise COM. Utilisez-les pour configurer le [compilateur MIDL](/windows/win32/midl/using-the-midl-compiler-2). Pour plus d’informations sur l’accès par programmation aux options MIDL des projets C++, consultez l’objet <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>. Voir aussi [General MIDL Command-line Syntax](/windows/win32/midl/general-midl-command-line-syntax).
+Les pages de propriétés MIDL sont disponibles en tant que propriété d’élément sur un. Fichier IDL dans un projet C++ qui utilise COM. Utilisez-les pour configurer le [compilateur MIDL](/windows/win32/midl/using-the-midl-compiler-2). Pour plus d’informations sur l’accès par programmation aux options MIDL des projets C++, consultez l’objet <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>. Voir aussi [syntaxe générale de la ligne de commande MIDL](/windows/win32/midl/general-midl-command-line-syntax).
 
-## <a name="general-property-page"></a>Page de propriétés Général
+## <a name="general-property-page"></a>Général, page de propriétés
 
 ### <a name="preprocessor-definitions"></a>Définitions de préprocesseur
 
-Spécifie une ou plusieurs définitions, y\[compris\]les macros MIDL ([/D)](/windows/win32/midl/-d)macros ).
+Spécifie une ou plusieurs définitions, y compris les macros MIDL ([/d](/windows/win32/midl/-d)) \[ \] .
 
 ### <a name="additional-include-directories"></a>Autres répertoires Include
 
-Spécifie un ou plusieurs répertoires à ajouter\]au chemin inclus ([/I](/windows/win32/midl/-i)\[chemin ).
+Spécifie un ou plusieurs répertoires à ajouter au chemin d’accès include ([/i](/windows/win32/midl/-i) \[ path \] ).
 
 ### <a name="additional-metadata-directories"></a>Répertoires de métadonnées supplémentaires
 
-Spécifier l’annuaire contenant le fichier Windows.Foundation.WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[chemin\]).
+Spécifiez le répertoire contenant le fichier Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[ chemin d’accès \] ).
 
-### <a name="enable-windows-runtime"></a>Activez Windows Runtime
+### <a name="enable-windows-runtime"></a>Activer Windows Runtime
 
-Activez la sémantique Windows Runtime pour créer un fichier windows de métadonnées ([/winrt](/windows/win32/midl/-winrt)).
+Activez Windows Runtime sémantique pour créer un fichier de métadonnées Windows ([/WinRT](/windows/win32/midl/-winrt)).
 
-### <a name="ignore-standard-include-path"></a>Ignorer la norme Inclure la voie
+### <a name="ignore-standard-include-path"></a>Ignorer le chemin d’accès Include standard
 
-Ignorer le courant et les répertoires INCLUDE ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
+Ignorez les répertoires actuels et INCLUDe ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
 
-### <a name="mktyplib-compatible"></a>MkTypLib Compatible
+### <a name="mktyplib-compatible"></a>Compatible MkTypLib
 
-Forces compatibilité avec mktyplib.exe version 2.03 ([/mktyplib203](/windows/win32/midl/-mktyplib203)).
+Force la compatibilité avec mktyplib.exe version 2,03 ([/mktyplib203](/windows/win32/midl/-mktyplib203)).
 
 ### <a name="warning-level"></a>Niveau d’avertissement
 
-Sélectionne la rigueur des erreurs de code MIDL ([/W](/windows/win32/midl/-w)).
+Sélectionne la rigueur des erreurs de code MIDL ([/w](/windows/win32/midl/-w)).
 
-**Choix**
+**Choices**
 
 - **1**
 - **1**
@@ -102,184 +103,184 @@ Permet à MIDL de traiter tous les avertissements comme des erreurs ([/WX](/wind
 
 ### <a name="suppress-startup-banner"></a>Supprimer la bannière de démarrage
 
-Supprimer l’affichage de la bannière de démarrage et le message[d’information ( /nologo](/windows/win32/midl/-nologo)).
+Supprimer l’affichage de la bannière de démarrage et du message d’information ([/nologo](/windows/win32/midl/-nologo)).
 
-### <a name="c-compiler-char-type"></a>C Compiler Char Type
+### <a name="c-compiler-char-type"></a>Type de caractère du compilateur C
 
-Spécifie le type de caractère par défaut du compilateur C qui sera utilisé pour compiler le code généré. [(/char](/windows/win32/midl/-char) signé’unsigned’ascii7).
+Spécifie le type de caractère par défaut du compilateur C qui sera utilisé pour compiler le code généré. ([/char](/windows/win32/midl/-char) signé | unsigned | ascii7).
 
-**Choix**
+**Choices**
 
-- **Signé** - Signé
-- **Non signé** - Non signé
-- **Ascii** - Ascii
+- **Signé** -signé
+- Non **signé** -non signé
+- **ASCII** -ASCII
 
 ### <a name="target-environment"></a>Environnement cible
 
-Précise quel environnement cibler ([/env](/windows/win32/midl/-env) arm32-win32-ia64-x64).
+Spécifie l’environnement à cibler ([/env](/windows/win32/midl/-env) Arm32 | Win32 | ia64 | x64).
 
-**Choix**
+**Choices**
 
-- **Pas fixé** - Win32
-- **Microsoft Windows 32 bits** - Win32
-- **Microsoft Windows 64 bits sur Itanium** - IA64
-- **Microsoft Windows ARM** - ARM
-- **Microsoft Windows ARM64** - ARM64
-- **Microsoft Windows 64 bits sur x64** - X64
+- **Non défini** -Win32
+- **Microsoft Windows 32** bits-Win32
+- **Microsoft Windows 64 bits sur Itanium** -ia64
+- **ARM Microsoft Windows** -ARM
+- **Microsoft Windows ARM64** -ARM64
+- **Microsoft Windows 64 bits sur x64** -x64
 
-### <a name="generate-stubless-proxies"></a>Générer des procurations Stubless
+### <a name="generate-stubless-proxies"></a>Générer des proxies avec stub
 
-Générer des talons entièrement interprétés avec des extensions et des procurations stubless pour les interfaces d’objets ([/Oicf](/windows/win32/midl/-oi), [/Oif](/windows/win32/midl/-oi) ).
+Générez des stubs entièrement interprétés avec des extensions et des proxies sans stub pour les interfaces d’objet ([/Oicf](/windows/win32/midl/-oi), [/OIF](/windows/win32/midl/-oi) ).
 
 ### <a name="suppress-compiler-warnings"></a>Supprimer les avertissements du compilateur
 
-Supprimer les messages d’avertissement compilateur ([/no_warn](/windows/win32/midl/-no-warn)).
+Supprimer les messages d’avertissement du compilateur ([/no_warn](/windows/win32/midl/-no-warn)).
 
-### <a name="application-configuration-mode"></a>Mode configuration d’application
+### <a name="application-configuration-mode"></a>Mode de configuration de l’application
 
-Autoriser certains attributs ACF dans le fichier IDL ([/app_config](/windows/win32/midl/-app-config)).
+Autorisez les attributs ACF sélectionnés dans le fichier IDL ([/app_config](/windows/win32/midl/-app-config)).
 
 ### <a name="locale-id"></a>ID des paramètres régionaux
 
-Spécifie le LCID pour les fichiers d’entrée, les noms de fichiers et les trajectoires d’annuaire[(/lcid](/windows/win32/midl/-lcid) DECIMAL).
+Spécifie le LCID pour les fichiers d’entrée, les noms de fichiers et les chemins d’accès aux répertoires ([/LCID](/windows/win32/midl/-lcid) décimal).
 
-### <a name="multi-processor-compilation"></a>Compilation multi-processeur
+### <a name="multi-processor-compilation"></a>Compilation multiprocesseur
 
 Exécutez plusieurs instances en même temps.
 
-## <a name="output-property-page"></a>Page de propriété de sortie
+## <a name="output-property-page"></a>Page de propriétés de sortie
 
 ### <a name="output-directory"></a>Répertoire de sortie
 
-Spécifie le répertoire de sortie[(/out](/windows/win32/midl/-out) [directory]).
+Spécifie le répertoire de sortie ([/out](/windows/win32/midl/-out) [Directory]).
 
 ### <a name="metadata-file"></a>Fichier de métadonnées
 
-Spécifie le nom du fichier des métadonnées générées (nom de fichier[winmd).](/windows/win32/midl/-winmd)
+Spécifie le nom du fichier de métadonnées généré ([/winmd](/windows/win32/midl/-winmd) filename).
 
 ### <a name="header-file"></a>Fichier d'en-tête
 
-Spécifie le nom du fichier d’en-tête généré[(/h](/windows/win32/midl/-h) nom de fichier).
+Spécifie le nom du fichier d’en-tête généré ([/h](/windows/win32/midl/-h) filename).
 
 ### <a name="dlldata-file"></a>Fichier DllData
 
-Précise le nom du fichier DLLDATA ([/dlldata](/windows/win32/midl/-dlldata) nom de fichier).
+Spécifie le nom du fichier DLLDATA ([/dlldata](/windows/win32/midl/-dlldata) filename).
 
 ### <a name="iid-file"></a>Fichier IID
 
-Spécifie le nom du fichier Interface Identifier (/nom de fichier[iid).](/windows/win32/midl/-iid)
+Spécifie le nom du fichier d’identificateur d’interface (nom de fichier[/IID](/windows/win32/midl/-iid) ).
 
 ### <a name="proxy-file"></a>Fichier proxy
 
-Spécifie le nom du fichier proxy[(/nom](/windows/win32/midl/-proxy) de fichier proxy).
+Spécifie le nom du fichier proxy (nom de fichier[/proxy](/windows/win32/midl/-proxy) ).
 
-### <a name="generate-type-library"></a>Générer type bibliothèque
+### <a name="generate-type-library"></a>Générer une bibliothèque de types
 
-Spécifier pour ne pas générer une bibliothèque de type ([/notlb] pour non).
+Spécifiez de ne pas générer de bibliothèque de types ([/notlb] pour non).
 
-### <a name="type-library"></a>Bibliothèque de type
+### <a name="type-library"></a>Bibliothèque de types
 
-Spécifie le nom du fichier de bibliothèque type ([/tlb](/windows/win32/midl/-tlb) nom de fichier).
+Spécifie le nom du fichier bibliothèque de types (nom de fichier[/TLB](/windows/win32/midl/-tlb) ).
 
-### <a name="generate-client-stub-files"></a>Générer des fichiers Stub Clients
+### <a name="generate-client-stub-files"></a>Générer des fichiers stub client
 
-Générer le fichier de talon client seulement ([/client](/windows/win32/midl/-client) [stub’none]).
+Générer le fichier stub du client uniquement ([/client](/windows/win32/midl/-client) [stub | None]).
 
-**Choix**
+**Choices**
 
-- **Stub** - Stub
-- **Aucun** - Aucun
+- **Stub-stub**
+- **Aucun** -aucun
 
-### <a name="generate-server-stub-files"></a>Générer des fichiers de talon serveur
+### <a name="generate-server-stub-files"></a>Générer des fichiers stub serveur
 
-Générer le fichier de talon serveur seulement ([/serveur](/windows/win32/midl/-server) [stub’none]).
+Générer le fichier stub du serveur uniquement ([/Server](/windows/win32/midl/-server) [stub | None]).
 
-**Choix**
+**Choices**
 
-- **Stub** - Stub
-- **Aucun** - Aucun
+- **Stub-stub**
+- **Aucun** -aucun
 
-### <a name="client-stub-file"></a>Fichier Stub client
+### <a name="client-stub-file"></a>Fichier stub client
 
-Spécifier le fichier de talon client[(/cstub](/windows/win32/midl/-cstub) [fichier]).
+Spécifiez le fichier stub du client ([/cstub](/windows/win32/midl/-cstub) [fichier]).
 
-### <a name="server-stub-file"></a>Fichier De talon de serveur
+### <a name="server-stub-file"></a>Fichier stub serveur
 
-Spécifier le fichier de talon serveur ([/sstub](/windows/win32/midl/-sstub) [fichier]).
+Spécifiez le fichier stub du serveur ([/sstub](/windows/win32/midl/-sstub) [fichier]).
 
-### <a name="type-library-format"></a>Format de bibliothèque de type
+### <a name="type-library-format"></a>Format de bibliothèque de types
 
-Spécifie le format de fichier de bibliothèque de type ([/oldtlbMD/newtlb]).
+Spécifie le format de fichier de bibliothèque de types ([/oldtlb |/newtlb]).
 
-**Choix**
+**Choices**
 
-- **NewFormat** - Nouveau format
-- **OldFormat** - Ancien Format
+- **NewFormat** -nouveau format
+- **OldFormat** -ancien format
 
-## <a name="advanced-property-page"></a>Page de propriété avancée
+## <a name="advanced-property-page"></a>Page de propriétés avancé
 
 ### <a name="c-preprocess-options"></a>Options de prétraitement C
 
-Spécifie les commutateurs pour passer au préprocesseur de compilateur C[(/cpp_opt](/windows/win32/midl/-cpp-opt) commutateurs).
+Spécifie les commutateurs à passer au préprocesseur du compilateur C (commutateurs[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
 
 ### <a name="undefine-preprocessor-definitions"></a>Annuler la définition de définitions de préprocesseur
 
-Spécifie un ou plusieurs indéfines, y compris les macros MIDL ([/U](/windows/win32/midl/-U) [macros]).
+Spécifie une ou plusieurs non-définition, y compris les macros MIDL ([/u](/windows/win32/midl/-U)  [macros]).
 
-### <a name="enable-error-checking"></a>Activez la vérification des erreurs
+### <a name="enable-error-checking"></a>Activer la vérification des erreurs
 
-Sélectionnez l’option de vérification des erreurs ([/erreur all’none]).
+Sélectionnez l’option de vérification des erreurs ([/Error All | None]).
 
-**Choix**
+**Choices**
 
-- **EnableCustom** - Tous
-- **Tous** - Tous
-- **Aucun** - Aucun
+- **EnableCustom** -tout
+- **Tout** -tout
+- **Aucun** -aucun
 
 ### <a name="check-allocations"></a>Vérifier les allocations
 
-Découvrez les erreurs de mémoire[(/allocation d’erreurs).](/windows/win32/midl/-error)
+Rechercher les erreurs de mémoire insuffisante (attribution de[/Error](/windows/win32/midl/-error) ).
 
 ### <a name="check-bounds"></a>Vérifier les limites
 
-Vérifier la taille vs la spécification de longueur de transmission[(/erreur](/windows/win32/midl/-error) bounds_check).
+Vérifiez la taille par rapport à la spécification de longueur de transmission ([/error](/windows/win32/midl/-error) bounds_check).
 
-### <a name="check-enum-range"></a>Vérifiez la gamme Enum
+### <a name="check-enum-range"></a>Vérifier la plage d’énumération
 
-Vérifiez que les valeurs enum sont dans la plage autorisée[(/enum d’erreur).](/windows/win32/midl/-error)
+Vérifiez que les valeurs enum se trouvent dans la plage autorisée ([/Error](/windows/win32/midl/-error) enum).
 
 ### <a name="check-reference-pointers"></a>Vérifier les pointeurs de référence
 
-Vérifiez que les pointeurs d’arbitres ne sont pas nuls[(/arbitre d’erreur).](/windows/win32/midl/-error)
+Vérifiez que les pointeurs de référence sont non null ([/Error](/windows/win32/midl/-error) Ref).
 
-### <a name="check-stub-data"></a>Vérifier les données Stub
+### <a name="check-stub-data"></a>Vérifier les données stub
 
-Émettre une vérification supplémentaire de la validité des données de talon côté serveur ([/erreur](/windows/win32/midl/-error) stub_data).
+Émet une vérification supplémentaire pour la validité des données stub côté serveur ([/error](/windows/win32/midl/-error) stub_data).
 
-### <a name="prepend-with-abi-namespace"></a>Prepend avec 'ABI' namespace
+### <a name="prepend-with-abi-namespace"></a>Ajouter au début l’espace de noms’ABI'
 
-Préciez l’espace nom 'ABI' à tous les types.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
+Ajoutez l’espace de noms’ABI’à tous les types.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
 
 ### <a name="validate-parameters"></a>Valider les paramètres
 
-Générer des informations supplémentaires pour valider les paramètres ([/robuste](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
+Générez des informations supplémentaires pour valider les paramètres ([/Robust](/windows/win32/midl/-robust)  |  [/no_robust](/windows/win32/midl/-no-robust)).
 
-### <a name="struct-member-alignment"></a>Alignement des membres de Struct
+### <a name="struct-member-alignment"></a>Alignement des membres de la structure
 
-Spécifie le niveau d’emballage des structures dans le système cible (/ZpN).
+Spécifie le niveau de compression des structures dans le système cible (/ZpN).
 
-**Choix**
+**Choices**
 
-- **Non réglé** - Pas réglé
-- **1 Byte** - Zp1
-- **2 Byte** - Zp2
-- **4 Byte** - Zp4
-- **8 Byte** - Zp8
+- **Non défini** -non défini
+- **1 octet** -Zp1
+- **2 octets** -ZP2
+- **4 octets** -zp4
+- **8 octets** -Zp8
 
-### <a name="redirect-output"></a>Rendement redirection
+### <a name="redirect-output"></a>Rediriger la sortie
 
-Redirige la sortie de l’écran vers un fichier ([/o](/windows/win32/midl/-o) fichier).
+Redirige la sortie de l’écran vers un fichier (fichier[/o](/windows/win32/midl/-o) ).
 
-### <a name="minimum-target-system"></a>Système cible minimum
+### <a name="minimum-target-system"></a>Système cible minimal
 
-Définissez le système cible minimum ([/target](/windows/win32/midl/-target) STRING).
+Définissez le système cible minimal ([/target](/windows/win32/midl/-target) String).

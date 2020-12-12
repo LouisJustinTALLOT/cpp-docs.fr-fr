@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mm_stream_si64x'
 title: _mm_stream_si64x
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2a68437905c0d5dd56a522d15985db7179921852
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133222"
 ---
 # <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Génère l’instruction MOVNTI. Écrit les données dans la *source* dans un emplacement de mémoire spécifié par *destination*, sans polluer les caches.
 
@@ -34,16 +35,16 @@ void _mm_stream_si64x(
 *Destination*\
 à Pointeur vers l’emplacement où écrire les données sources.
 
-*Source*\
+*Code*\
 dans Données à écrire.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`_mm_stream_si64x`|X64|
+|`_mm_stream_si64x`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -75,7 +76,7 @@ int main()
 0 ffffffffffff 0 0
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

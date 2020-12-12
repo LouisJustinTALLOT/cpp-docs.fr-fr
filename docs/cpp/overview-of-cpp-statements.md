@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble des instructions C++'
 title: Vue d'ensemble des instructions C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - statements [C++]
 ms.assetid: e56996b2-b846-4b99-ac94-ac72fffc5ec7
-ms.openlocfilehash: d6bd6b5bb7ba4b83fbed63a40fecc8194cb3707a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e30b33bbc1aeb94c5b188ff7796a39b130bec827
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832423"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145949"
 ---
 # <a name="overview-of-c-statements"></a>Vue d'ensemble des instructions C++
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __movsd'
 title: __movsd
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: c43f6bdb731abc281d60fe4bc6ecaec1331b9945
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 4a735327253e0a3c605a17119e0821b915fd9394
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133183"
 ---
 # <a name="__movsd"></a>__movsd
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère une instruction Move String`rep movsd`().
+Génère une instruction Move String ( `rep movsd` ).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,19 +37,19 @@ void __movsd(
 *Destination*\
 à Destination de l’opération.
 
-*Source*\
+*Code*\
 dans Source de l’opération.
 
 *Saut*\
 dans Nombre de mots doubles à copier.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__movsd`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -83,7 +84,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe underlying_type'
 title: underlying_type, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
-ms.openlocfilehash: ea4768d78047112a7584ca49b0e4487fad55a970
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e717abe854f13fc96926deba1d4bf177529618cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132702"
 ---
 # <a name="underlying_type-class"></a>underlying_type, classe
 
@@ -26,16 +27,16 @@ struct underlying_type;
 
 ### <a name="parameters"></a>Paramètres
 
-*T* \
+*T*\
 Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Le `type` membre typedef du modèle de classe nomme le type intégral sous-jacent de *t*, quand *t* est un type d’énumération, sinon il n’y a aucun typedef de membre `type`.
+Le `type` typedef de membre du modèle de classe nomme le type intégral sous-jacent de *T*, quand *t* est un type d’énumération, sinon il n’y a aucun typedef de membre `type` .
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

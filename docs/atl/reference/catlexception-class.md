@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlException'
 title: CAtlException, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-ms.openlocfilehash: f09d9b2f46233cf356f5ade8a5b90e08a213d276
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: b6d788bc8d852fa0b8d091682ff7740aa4ebbbed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168200"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147470"
 ---
 # <a name="catlexception-class"></a>CAtlException, classe
 
@@ -56,7 +57,7 @@ En général, vous appelez `AtlThrow` plutôt que de créer un `CAtlException` o
 
 **En-tête :** atlexcept. h
 
-## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a>CAtlException::CAtlException
+## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a> CAtlException::CAtlException
 
 Constructeur.
 
@@ -67,10 +68,10 @@ CAtlException() throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*h*<br/>
+*heure(s)*<br/>
 Code d'erreur HRESULT.
 
-## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>CAtlException :: Operator HRESULT
+## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a> CAtlException :: Operator HRESULT
 
 Effectue un cast de l’objet actuel en une valeur HRESULT.
 
@@ -78,7 +79,7 @@ Effectue un cast de l’objet actuel en une valeur HRESULT.
 operator HRESULT() const throw ();
 ```
 
-## <a name="catlexceptionm_hr"></a><a name="m_hr"></a>CAtlException :: m_hr
+## <a name="catlexceptionm_hr"></a><a name="m_hr"></a> CAtlException :: m_hr
 
 Données membres HRESULT.
 

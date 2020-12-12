@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : utilisation des pages de propriétés stock'
 title: 'Contrôles ActiveX MFC : utilisation des pages de propriétés stock'
 ms.date: 09/12/2018
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: 18e482ca93166246df7569be9babff93d983dfd5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 37cb6e5b5dfa08c5e7935064a66c2c77fe8dcde6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133053"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Contrôles ActiveX MFC : utilisation des pages de propriétés stock
 
@@ -33,7 +34,7 @@ Pour plus d’informations sur l’utilisation des pages de propriétés dans un
 
 - [Contrôles ActiveX MFC : pages de propriétés](mfc-activex-controls-property-pages.md)
 
-- [Contrôles ActiveX MFC : ajout d'une page de propriétés personnalisées](mfc-activex-controls-adding-another-custom-property-page.md)
+- [Contrôles ActiveX MFC : ajout d’une autre page de propriétés personnalisée](mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC fournit trois pages de propriétés stock à utiliser avec les contrôles ActiveX : `CLSID_CColorPropPage` , `CLSID_CFontPropPage` et `CLSID_CPicturePropPage` . Ces pages affichent une interface utilisateur pour les propriétés de la couleur, de la police et de l’image de stock, respectivement.
 
@@ -46,10 +47,10 @@ Notez que le nombre de pages de propriétés, dans la macro BEGIN_PROPPAGEIDS, e
 Une fois ces modifications effectuées, régénérez votre projet. Votre contrôle comporte désormais des pages de propriétés pour les propriétés de police, d’image et de couleur.
 
 > [!NOTE]
-> Si les pages de propriétés stock du contrôle ne sont pas accessibles, cela peut être dû au fait que la DLL MFC (MFCxx. DLL) n’a pas été correctement inscrite auprès du système d’exploitation actuel. Cela résulte généralement de l’installation de Visual C++ sous un système d’exploitation différent de celui en cours d’exécution.
+> Si les pages de propriétés stock du contrôle ne sont pas accessibles, cela peut être dû au fait que la DLL MFC (MFCxx.DLL) n’a pas été correctement inscrite auprès du système d’exploitation actuel. Cela résulte généralement de l’installation de Visual C++ sous un système d’exploitation différent de celui en cours d’exécution.
 
 > [!TIP]
-> Si vos pages de propriétés stock ne sont pas visibles (voir la remarque précédente), inscrivez la DLL en exécutant RegSvr32. exe à partir de la ligne de commande avec le nom de chemin d’accès complet à la DLL.
+> Si vos pages de propriétés stock ne sont pas visibles (voir la remarque précédente), inscrivez la DLL en exécutant RegSvr32.exe à partir de la ligne de commande avec le nom de chemin d’accès complet à la DLL.
 
 ## <a name="see-also"></a>Voir aussi
 

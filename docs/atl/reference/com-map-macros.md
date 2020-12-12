@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : macros de mappage COM'
 title: Macros de mappage COM
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-ms.openlocfilehash: 100402e17ca1bee5f338c37f2315fbc4898a713e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 076a13418a48147654862c2b5a26688b195d5252
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141321"
 ---
 # <a name="com-map-macros"></a>Macros de mappage COM
 
@@ -23,7 +24,7 @@ Ces macros définissent des mappages d’interface COM.
 |[BEGIN_COM_MAP](#begin_com_map)|Marque le début des entrées de mappage de l’interface COM.|
 |[END_COM_MAP](#end_com_map)|Marque la fin des entrées de mappage de l’interface COM.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 

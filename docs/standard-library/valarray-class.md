@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe valarray'
 title: valarray, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: 177840ffea711395b7cace6e47426d979f8fe329
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 53b2c2160b522bd28e316eb29f0661447fb84b11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840126"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132624"
 ---
 # <a name="valarray-class"></a>valarray, classe
 
@@ -69,13 +70,13 @@ En particulier, aucune différence même minime ne peut exister entre la constru
 |-|-|
 |[value_type](#value_type)|Type qui représente le type des éléments stockés dans un `valarray`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
 |[appliqu](#apply)|Applique une fonction spécifiée à chaque élément d'un `valarray`.|
 |[cshift](#cshift)|Déplace de façon cyclique tous les éléments d'un `valarray` d'un nombre spécifié de positions.|
-|[Gratuit](#free)|Libère la mémoire utilisée par le `valarray`.|
+|[free](#free)|Libère la mémoire utilisée par le `valarray`.|
 |[max](#max)|Recherche l'élément le plus grand dans un `valarray`.|
 |[min](#min)|Recherche l'élément le plus petit dans un `valarray`.|
 |[redimensionner](#resize)|Change le nombre d'éléments d'un `valarray` pour un nouveau nombre spécifié, en ajoutant ou en supprimant des éléments selon les besoins.|
@@ -129,7 +130,7 @@ Un valarray dont les éléments ont eu `_Func` appliqué élément par élément
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne un objet de classe [valarray](../standard-library/valarray-class.md) **\<Type>** , de longueur [size](#size)longueur, dont chacun des éléments *I* est `_Func((*this)[I])` .
+La fonction membre retourne un objet de classe [valarray](../standard-library/valarray-class.md) **\<Type>** , de longueur [](#size)longueur, dont chacun des éléments *I* est `_Func((*this)[I])` .
 
 ### <a name="example"></a>Exemple
 
@@ -292,7 +293,7 @@ La valeur maximale des éléments dans le valarray d’opérandes.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre compare les valeurs en appliquant l' **opérateur \<** or **operator> ** entre les paires d’éléments de `Type` la classe, pour lesquels les opérateurs doivent être fournis pour l’élément `Type` .
+La fonction membre compare les valeurs en appliquant l' **opérateur \<** or **operator>** entre les paires d’éléments de `Type` la classe, pour lesquels les opérateurs doivent être fournis pour l’élément `Type` .
 
 ### <a name="example"></a>Exemple
 
@@ -345,7 +346,7 @@ La valeur minimale des éléments dans le valarray d’opérandes.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre compare les valeurs en appliquant l' **opérateur \<** or **operator> ** entre les paires d’éléments de `Type` la classe, pour lesquels les opérateurs doivent être fournis pour l’élément `Type` .
+La fonction membre compare les valeurs en appliquant l' **opérateur \<** or **operator>** entre les paires d’éléments de `Type` la classe, pour lesquels les opérateurs doivent être fournis pour l’élément `Type` .
 
 ### <a name="example"></a>Exemple
 
@@ -532,7 +533,7 @@ Valarray dont les éléments sont la logique au niveau `AND` des éléments de l
 
 Une opération au niveau du bit peut uniquement être utilisée pour manipuler des bits dans **`char`** les types de données et et les **`int`** variantes, et non sur **`float`** , **`double`** , **longdouble**,, **`void`** ou d' **`bool`** autres types de données plus complexes.
 
-L’opération de bits AND a la même table de vérité que l’opérateur logique `AND` mais s’applique au type de données au niveau des bits individuels. Avec les bits *b*1 et *b*2, *b*1 `AND` *b*2 est **`true`** si les deux bits ont la valeur true ; **`false`** si au moins un a la valeur false.
+L’opération de bits AND a la même table de vérité que l’opérateur logique `AND` mais s’applique au type de données au niveau des bits individuels. Avec les bits *b* 1 et *b* 2, *b* 1 `AND` *b* 2 est **`true`** si les deux bits ont la valeur true ; **`false`** si au moins un a la valeur false.
 
 ### <a name="example"></a>Exemple
 
@@ -1287,7 +1288,7 @@ Valarray dont les éléments sont l’élément **Xor** logique exclusif de l’
 
 ### <a name="remarks"></a>Notes
 
-Le or logique exclusif, connu sous le terme **Xor**, a la sémantique suivante : les éléments *e*1 et *e*2, *e*1 **Xor** *e*2 correspondent **`true`** si exactement l’un des éléments a la valeur true ; **`false`** si les deux éléments ont la valeur false ou si les deux éléments ont la valeur true.
+Le or logique exclusif, connu sous le terme **Xor**, a la sémantique suivante : les éléments *e* 1 et *e* 2, *e* 1 **Xor** *e* 2 correspondent **`true`** si exactement l’un des éléments a la valeur true ; **`false`** si les deux éléments ont la valeur false ou si les deux éléments ont la valeur true.
 
 ### <a name="example"></a>Exemple
 
@@ -1364,7 +1365,7 @@ Valarray dont les éléments sont le bit au niveau du bit `OR` de l’opérande 
 
 Une opération au niveau du bit peut uniquement être utilisée pour manipuler des bits dans **`char`** les types de données et et les **`int`** variantes, et non sur **`float`** , **`double`** , **longdouble**,, **`void`** ou d' **`bool`** autres types de données plus complexes.
 
-L’opérateur de bits `OR` a la même table de vérité que l’opérateur `OR` logique, mais il s’applique au type de données au niveau des bits individuels. Avec les bits *b*1 et *b*2, *b*1 `OR` *b*2 **`true`** si au moins l’un des bits a la valeur true ; **`false`** si les deux bits ont la valeur false.
+L’opérateur de bits `OR` a la même table de vérité que l’opérateur `OR` logique, mais il s’applique au type de données au niveau des bits individuels. Avec les bits *b* 1 et *b* 2, *b* 1 `OR` *b* 2 **`true`** si au moins l’un des bits a la valeur true ; **`false`** si les deux bits ont la valeur false.
 
 ### <a name="example"></a>Exemple
 

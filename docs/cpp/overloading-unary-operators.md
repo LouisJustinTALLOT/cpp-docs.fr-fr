@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : surcharge des opérateurs unaires'
 title: Surcharge des opérateurs unaires
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,32 +12,32 @@ helpviewer_keywords:
 - pointer dereference operator overloading
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
-ms.openlocfilehash: a21c62549f02dddda951c79a06617671ccfe2526
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e0a2d2b902403ee5ed34a95b6d282d7c2199795
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146053"
 ---
 # <a name="overloading-unary-operators"></a>Surcharge des opérateurs unaires
 
 Les opérateurs unaires qui peuvent être surchargés sont les suivants :
 
-1. `!`([not logique](../cpp/logical-negation-operator-exclpt.md))
+1. `!` ([not logique](../cpp/logical-negation-operator-exclpt.md))
 
-1. `&`([adresse](../cpp/address-of-operator-amp.md))
+1. `&` ([adresse](../cpp/address-of-operator-amp.md))
 
-1. `~`([complément à 1](../cpp/one-s-complement-operator-tilde.md))
+1. `~` ([complément à 1](../cpp/one-s-complement-operator-tilde.md))
 
-1. `*`([déréférencement du pointeur](../cpp/indirection-operator-star.md))
+1. `*` ([déréférencement du pointeur](../cpp/indirection-operator-star.md))
 
-1. `+`([plus unaire](../cpp/additive-operators-plus-and.md))
+1. `+` ([plus unaire](../cpp/additive-operators-plus-and.md))
 
-1. `-`([négation unaire](../cpp/additive-operators-plus-and.md))
+1. `-` ([négation unaire](../cpp/additive-operators-plus-and.md))
 
-1. `++`([incrément](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
+1. `++` ([incrément](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
 
-1. `--`([décrémentation](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
+1. `--` ([décrémentation](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
 
 1. opérateurs de conversion
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CComEnum'
 title: CComEnum, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-ms.openlocfilehash: 7241d903e44329eb8fd50155059355a470fb7b90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0cee4129c0bc5129313b92e144c22de9d161c9cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146690"
 ---
 # <a name="ccomenum-class"></a>CComEnum, classe
 
@@ -40,7 +41,7 @@ Pointeur vers l’ID d’interface de l’interface de l’énumérateur.
 *T*<br/>
 Type d’élément exposé par l’interface de l’énumérateur.
 
-*Copier*<br/>
+*Copy*<br/>
 Classe de [stratégie de copie](../../atl/atl-copy-policy-classes.md)homogène.
 
 *ThreadModel*<br/>
@@ -48,7 +49,7 @@ Modèle de thread de la classe. Par défaut, ce paramètre est le modèle de thr
 
 ## <a name="remarks"></a>Notes
 
-`CComEnum`définit un objet énumérateur COM basé sur un tableau. Cette classe est analogue à [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) qui implémente un énumérateur basé sur un conteneur de bibliothèque standard C++. Les étapes classiques de l’utilisation de cette classe sont présentées ci-dessous. Pour plus d’informations, consultez [collections et énumérateurs ATL](../../atl/atl-collections-and-enumerators.md).
+`CComEnum` définit un objet énumérateur COM basé sur un tableau. Cette classe est analogue à [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) qui implémente un énumérateur basé sur un conteneur de bibliothèque standard C++. Les étapes classiques de l’utilisation de cette classe sont présentées ci-dessous. Pour plus d’informations, consultez [collections et énumérateurs ATL](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="to-use-this-class"></a>Pour utiliser cette classe :
 

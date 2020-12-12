@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : informations de référence sur les directives'
 title: Référence des directives
 ms.date: 07/15/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
-ms.openlocfilehash: e3e4fa7fbf18fbb18096593042873106897c70ca
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5f4e4a75ce37b0d393bbc6a2a8fd45d16247dcff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132586"
 ---
 # <a name="directives-reference"></a>Référence des directives
 
@@ -341,7 +342,7 @@ ms.locfileid: "88830746"
    :::column-end:::
 :::row-end:::
 
-## <a name="string"></a>String
+## <a name="string"></a>Chaîne
 
 :::row:::
    :::column span="":::

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : surcharge d’opérateur'
 title: Surcharge d'opérateur
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: 822bd5efb3125e69ff60aa42ba6419969cace403
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 23a35a87f9f370a9bb8f268ac1637a4a899ee5f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227229"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146027"
 ---
 # <a name="operator-overloading"></a>Surcharge d’opérateur
 
@@ -39,7 +40,7 @@ Le nom d’un opérateur surchargé est **`operator`** *x*, où *x* est l’opé
 |**,**|Comma|Binary|
 |**!**|NOT logique|Unaire|
 |**!=**|Inégalité|Binary|
-|**%**|Modulus|Binary|
+|**%**|Modulo|Binary|
 |**%=**|Assignation de modulo|Binary|
 |**&**|ET au niveau du bit|Binary|
 |**&**|Adresse-de|Unaire|
@@ -79,7 +80,7 @@ Le nom d’un opérateur surchargé est **`operator`** *x*, où *x* est l’opé
 |**&#124;=**|Assignation d'opération OR inclusive au niveau du bit|Binary|
 |**&#124;&#124;**|OU logique|Binary|
 |**~**|Complément à 1|Unaire|
-|**`delete`**|DELETE|—|
+|**`delete`**|Supprimer|—|
 |**`new`**|Nouveau|—|
 |opérateurs de conversion|opérateurs de conversion|Unaire|
 
@@ -160,7 +161,7 @@ int main() {
 6.8, 11.2
 ```
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 - [Règles générales pour la surcharge d’opérateur](../cpp/general-rules-for-operator-overloading.md)
 

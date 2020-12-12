@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : nom (C/C++)'
 title: NAME (C/C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-ms.openlocfilehash: d0813befc622db72e095c449794405fc5d58465b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7444aa20539b47b1f04d17a266a0b65a552af3f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137772"
 ---
 # <a name="name-cc"></a>NAME (C/C++)
 
@@ -23,10 +24,10 @@ NAME [application][BASE=address]
 
 ## <a name="remarks"></a>Notes
 
-Méthode équivalente pour spécifier un nom de fichier de sortie est avec la [/OUT](out-output-file-name.md) option de l’éditeur de liens et pour définir l’adresse de base d’une manière équivalente est avec la [/de BASE](base-base-address.md) option de l’éditeur de liens. Si les deux sont spécifiés, / OUT remplace **nom**.
+Une méthode équivalente pour spécifier un nom de fichier de sortie est avec l’option de l’éditeur de liens [/out](out-output-file-name.md) , et une méthode équivalente pour définir l’adresse de base est avec l’option de l’éditeur de liens [/base](base-base-address.md) . Si les deux sont spécifiés,/OUT remplace **Name**.
 
 Si vous générez une DLL, le nom n’affecte que le nom de la DLL.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Règles s’appliquant aux instructions de définition de module](rules-for-module-definition-statements.md)
+[Règles pour les instructions Module-Definition](rules-for-module-definition-statements.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CComCompositeControl'
 title: CComCompositeControl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: a37386c40f119c855dcb8584a72ce85c48a66381
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5c4d5b3e04855d570cab3a85bfe3a4c59482d990
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146820"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl, classe
 
@@ -98,7 +99,7 @@ Un contrôle implémenté par une `CComCompositeControl` classe dérivée de a u
 
 `CComCompositeControl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlctl. h
 

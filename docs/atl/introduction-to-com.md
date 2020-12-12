@@ -1,22 +1,23 @@
 ---
+description: 'En savoir plus sur : présentation de COM'
 title: Introduction à COM
 ms.custom: index-page
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM
 ms.assetid: 120735d9-db71-4ad3-a730-ce576ea2354e
-ms.openlocfilehash: e29f761e0380357bc999af82cc4bde8bfbaf4d6e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 635bce8c1214dddfc258ae6d2d6c7e751f778e9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147665"
 ---
 # <a name="introduction-to-com"></a>Introduction à COM
 
-COM est le «modèle objet» fondamental sur lequel les contrôles ActiveX et OLE sont générés. COM permet à un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. Il définit à la fois comment l’objet s’expose et comment cette exposition fonctionne sur les processus et sur les réseaux. COM définit également le cycle de vie de l’objet.
+COM est le « modèle objet » fondamental sur lequel les contrôles ActiveX et OLE sont générés. COM permet à un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. Il définit à la fois comment l’objet s’expose et comment cette exposition fonctionne sur les processus et sur les réseaux. COM définit également le cycle de vie de l’objet.
 
-Les concepts fondamentaux de COM sont les suivants:
+Les concepts fondamentaux de COM sont les suivants :
 
 - [Interfaces](../atl/interfaces-atl.md) : mécanisme par lequel un objet expose ses fonctionnalités.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : macros de point de connexion'
 title: Macros de point de connexion
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-ms.openlocfilehash: 6c716ad85ecb458b4be418a7e8554687dd19f3d8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bcb021abe128e15a598f485ab0c0a32a01f90327
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141126"
 ---
 # <a name="connection-point-macros"></a>Macros de point de connexion
 
@@ -25,7 +26,7 @@ Ces macros définissent les mappages et les entrées des points de connexion.
 |[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Semblable à CONNECTION_POINT_ENTRY, mais prend un pointeur vers iid.|
 |[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Marque la fin des entrées de mappage de point de connexion.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes d’affichage (Windows)'
 title: Classes d'affichage (Windows)
 ms.date: 09/17/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: f7ad1fb97952468fd2f2bde9560b1a4c18252332
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143102"
 ---
 # <a name="view-classes-windows"></a>Classes d'affichage (Windows)
 
@@ -22,7 +23,7 @@ ms.locfileid: "74302968"
 Une classe de vue est associée à une classe de document et à une classe de fenêtre frame à l’aide d’un objet de modèle de document.
 
 [CView](../mfc/reference/cview-class.md)<br/>
-Classe de base pour les vues spécifiques à l’application des données d’un document. Les vues affichent les données et acceptent les entrées utilisateur pour modifier ou sélectionner les données. Dérivez votre classe d’affichage ou vos classes de `CView`.
+Classe de base pour les vues spécifiques à l’application des données d’un document. Les vues affichent les données et acceptent les entrées utilisateur pour modifier ou sélectionner les données. Dérivez votre classe d’affichage ou vos classes à partir de `CView` .
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
 Classe de base pour les vues avec des fonctions de défilement. Dérivez votre classe d’affichage de `CScrollView` pour le défilement automatique.
@@ -75,14 +76,14 @@ Fenêtre que l’utilisateur peut fractionner en plusieurs volets. Ces volets pe
 Fournit une boîte de dialogue standard pour l’impression d’un fichier.
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-Structure contenant des informations sur un travail d’impression ou d’aperçu avant impression. Utilisé par l’architecture d’impression de `CView`.
+Structure contenant des informations sur un travail d’impression ou d’aperçu avant impression. Utilisé par l' `CView` architecture d’impression de.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-Conserve la liste des éléments du client OLE qui se trouvent dans un `CRichEditView`.
+Gère la liste des éléments du client OLE qui se trouvent dans un `CRichEditView` .
 
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-Fournit un accès côté client à un élément OLE stocké dans un `CRichEditView`.
+Fournit l’accès côté client à un élément OLE stocké dans un `CRichEditView` .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+[Vue d'ensemble des classes](../mfc/class-library-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CComCriticalSection'
 title: CComCriticalSection, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: 8cf590052dee9d0303ccfb102296fc66038aec57
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a6a3efef68a14cbda513ee60ed3980293514ad6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146729"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection, classe
 
@@ -55,7 +56,7 @@ class CComCriticalSection
 
 ## <a name="remarks"></a>Notes
 
-`CComCriticalSection`est semblable à la classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), à ceci près que vous devez initialiser explicitement et libérer la section critique.
+`CComCriticalSection` est semblable à la classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), à ceci près que vous devez initialiser explicitement et libérer la section critique.
 
 En général, vous utilisez `CComCriticalSection` le **`typedef`** nom [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Ce nom fait référence à lors de l' `CComCriticalSection` utilisation de [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) .
 
@@ -65,7 +66,7 @@ Consultez la [classe CComCritSecLock](../../atl/reference/ccomcritseclock-class.
 
 **En-tête :** atlcore. h
 
-## <a name="ccomcriticalsectionccomcriticalsection"></a><a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection
+## <a name="ccomcriticalsectionccomcriticalsection"></a><a name="ccomcriticalsection"></a> CComCriticalSection::CComCriticalSection
 
 Constructeur.
 
@@ -77,7 +78,7 @@ CComCriticalSection() throw();
 
 Affecte la valeur NULL au membre de données [m_sec](#m_sec) .
 
-## <a name="ccomcriticalsectioninit"></a><a name="init"></a>CComCriticalSection :: init
+## <a name="ccomcriticalsectioninit"></a><a name="init"></a> CComCriticalSection :: init
 
 Appelle la fonction Win32 [InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), qui initialise l’objet de section critique contenu dans le membre de données [m_sec](#m_sec) .
 
@@ -85,11 +86,11 @@ Appelle la fonction Win32 [InitializeCriticalSection](/windows/win32/api/synchap
 HRESULT Init() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, E_OUTOFMEMORY ou E_FAIL en cas d’échec.
 
-## <a name="ccomcriticalsectionlock"></a><a name="lock"></a>CComCriticalSection :: Lock
+## <a name="ccomcriticalsectionlock"></a><a name="lock"></a> CComCriticalSection :: Lock
 
 Appelle la fonction Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), qui attend que le thread puisse prendre possession de l’objet de section critique contenu dans le membre de données [m_sec](#m_sec) .
 
@@ -97,7 +98,7 @@ Appelle la fonction Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-
 HRESULT Lock() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, E_OUTOFMEMORY ou E_FAIL en cas d’échec.
 
@@ -105,7 +106,7 @@ Retourne S_OK en cas de réussite, E_OUTOFMEMORY ou E_FAIL en cas d’échec.
 
 L’objet de section critique doit d’abord être initialisé avec un appel à la méthode [init](#init) . Lorsque l’exécution du code protégé est terminée, le thread doit appeler [Unlock](#unlock) pour libérer la propriété de la section critique.
 
-## <a name="ccomcriticalsectionm_sec"></a><a name="m_sec"></a>CComCriticalSection :: m_sec
+## <a name="ccomcriticalsectionm_sec"></a><a name="m_sec"></a> CComCriticalSection :: m_sec
 
 Contient un objet de section critique qui est utilisé par toutes les `CComCriticalSection` méthodes.
 
@@ -113,7 +114,7 @@ Contient un objet de section critique qui est utilisé par toutes les `CComCriti
 CRITICAL_SECTION m_sec;
 ```
 
-## <a name="ccomcriticalsectionterm"></a><a name="term"></a>CComCriticalSection :: term
+## <a name="ccomcriticalsectionterm"></a><a name="term"></a> CComCriticalSection :: term
 
 Appelle la fonction Win32 [DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), qui libère toutes les ressources utilisées par l’objet de section critique contenu dans le membre de données [m_sec](#m_sec) .
 
@@ -121,7 +122,7 @@ Appelle la fonction Win32 [DeleteCriticalSection](/windows/win32/api/synchapi/nf
 HRESULT Term() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK.
 
@@ -129,7 +130,7 @@ Retourne S_OK.
 
 Une fois que `Term` a été appelé, la section critique ne peut plus être utilisée pour la synchronisation.
 
-## <a name="ccomcriticalsectionunlock"></a><a name="unlock"></a>CComCriticalSection :: Unlock
+## <a name="ccomcriticalsectionunlock"></a><a name="unlock"></a> CComCriticalSection :: Unlock
 
 Appelle la fonction Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), qui libère la propriété de l’objet de section critique contenu dans le membre de données [m_sec](#m_sec) .
 
@@ -137,7 +138,7 @@ Appelle la fonction Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-
 HRESULT Unlock() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK.
 

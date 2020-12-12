@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAtlBaseModule'
 title: CAtlBaseModule, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: d57d6e631cb287496a4ff5516e97e65ec0152e30
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 249b2ad2d133ba0f407e9c5fabcf716b09605972
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147535"
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule, classe
 
@@ -46,10 +47,10 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 |----------|-----------------|
 |[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Ajoute une instance de ressource à la liste des handles stockés.|
 |[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Retourne un handle vers une instance de ressource spécifiée.|
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Retourne l’instance de module à `CAtlBaseModule` partir d’un objet.|
-|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Retourne l’instance de ressource à `CAtlBaseModule` partir d’un objet.|
+|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Retourne l’instance de module à partir d’un `CAtlBaseModule` objet.|
+|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Retourne l’instance de ressource à partir d’un `CAtlBaseModule` objet.|
 |[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Supprime une instance de ressource de la liste des descripteurs stockés.|
-|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Définit l’instance de ressource d' `CAtlBaseModule` un objet.|
+|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Définit l’instance de ressource d’un `CAtlBaseModule` objet.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
@@ -59,7 +60,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ## <a name="remarks"></a>Notes
 
-Une instance de `CAtlBaseModule` nommée _AtlBaseModule est présente dans chaque projet ATL, contenant un handle vers l’instance de module, un handle vers le module contenant les ressources (qui, par défaut, sont un et le même) et un tableau de handles vers des modules fournissant des ressources principales. `CAtlBaseModule`peut être accessible en toute sécurité à partir de plusieurs threads.
+Une instance de `CAtlBaseModule` nommée _AtlBaseModule est présente dans chaque projet ATL, contenant un handle vers l’instance de module, un handle vers le module contenant les ressources (qui, par défaut, sont un et le même) et un tableau de handles vers des modules fournissant des ressources principales. `CAtlBaseModule` peut être accessible en toute sécurité à partir de plusieurs threads.
 
 Cette classe remplace la classe [CComModule](../../atl/reference/ccommodule-class.md) obsolète utilisée dans les versions antérieures d’ATL.
 
@@ -73,7 +74,7 @@ Cette classe remplace la classe [CComModule](../../atl/reference/ccommodule-clas
 
 **En-tête :** atlcore. h
 
-## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance
+## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a> CAtlBaseModule::AddResourceInstance
 
 Ajoute une instance de ressource à la liste des handles stockés.
 
@@ -86,11 +87,11 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 *hInst*<br/>
 Instance de ressource à ajouter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true si la ressource a été correctement ajoutée, false dans le cas contraire.
 
-## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule
+## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a> CAtlBaseModule::CAtlBaseModule
 
 Constructeur.
 
@@ -102,7 +103,7 @@ CAtlBaseModule() throw();
 
 Crée l'objet `CAtlBaseModule`.
 
-## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt
+## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a> CAtlBaseModule::GetHInstanceAt
 
 Retourne un handle vers une instance de ressource spécifiée.
 
@@ -112,26 +113,26 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*cliqu*<br/>
+*i*<br/>
 Numéro de l’instance de ressource.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne le handle de l’instance de ressource, ou NULL s’il n’existe aucune instance de ressource correspondante.
 
-## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance
+## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a> CAtlBaseModule::GetModuleInstance
 
-Retourne l’instance de module à `CAtlBaseModule` partir d’un objet.
+Retourne l’instance de module à partir d’un `CAtlBaseModule` objet.
 
 ```cpp
 HINSTANCE GetModuleInstance() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’instance de module.
 
-## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance
+## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a> CAtlBaseModule::GetResourceInstance
 
 Retourne l’instance de ressource.
 
@@ -139,11 +140,11 @@ Retourne l’instance de ressource.
 HINSTANCE GetResourceInstance() throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’instance de ressource.
 
-## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule :: m_bInitFailed
+## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a> CAtlBaseModule :: m_bInitFailed
 
 Variable qui indique si l’initialisation du module a échoué.
 
@@ -155,7 +156,7 @@ static bool m_bInitFailed;
 
 True si le module a été initialisé, false s’il n’a pas pu être initialisé.
 
-## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance
+## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a> CAtlBaseModule::RemoveResourceInstance
 
 Supprime une instance de ressource de la liste des descripteurs stockés.
 
@@ -168,13 +169,13 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 *hInst*<br/>
 Instance de ressource à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true si la ressource a été supprimée avec succès ; sinon, false.
 
-## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance
+## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a> CAtlBaseModule::SetResourceInstance
 
-Définit l’instance de ressource d' `CAtlBaseModule` un objet.
+Définit l’instance de ressource d’un `CAtlBaseModule` objet.
 
 ```cpp
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
@@ -185,7 +186,7 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 *hInst*<br/>
 Nouvelle instance de ressource.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’instance de ressource mise à jour.
 

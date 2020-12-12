@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : opérateur typeid'
 title: typeid, opérateur
 ms.date: 10/04/2019
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: e17b88d81d9987ec586401e025e108cfbe88cb3b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8e036cbdcc540eca224b97b09d174362c454da6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145858"
 ---
 # <a name="typeid-operator"></a>typeid, opérateur
 
@@ -32,7 +33,7 @@ L' **`typeid`** opérateur effectue un contrôle au moment de l’exécution lor
 
 - Une référence à une classe
 
-- Pointeur, déréférencé avec`*`
+- Pointeur, déréférencé avec `*`
 
 - Pointeur sous-script ( `[ ]` ). (Il n’est pas possible d’utiliser un indice avec un pointeur vers un type polymorphe.)
 

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur la gestion des fichiers
 title: Gestion de fichiers
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-ms.openlocfilehash: 2a5c6ec3a70a85bf81f00b104d0c505677f609ac
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5727f2c4f1d0d79a471b8ec5a76ed719380e2d83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135770"
 ---
 # <a name="file-handling"></a>Gestion de fichiers
 
@@ -25,7 +26,7 @@ Les bibliothèques Runtime C limitent à 512 le nombre de fichiers pouvant être
 
 Ces routines fonctionnent sur les fichiers désignés par un descripteur de fichier.
 
-|Routine|Utilisez|
+|Routine|Utilisation|
 |-------------|---------|
 |[_chsize](../c-runtime-library/reference/chsize.md),[_chsize_s](../c-runtime-library/reference/chsize-s.md)|Modifier la taille de fichier|
 |[_filelength, _filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|Obtenir la longueur de fichier|
@@ -40,7 +41,7 @@ Ces routines fonctionnent sur les fichiers désignés par un descripteur de fich
 
 Ces routines fonctionnent sur les fichiers spécifiés par un chemin ou un nom de fichier.
 
-|Routine|Utilisez|
+|Routine|Utilisation|
 |-------------|---------|
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Vérifier le paramètre d’autorisation de fichier|
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Modifier le paramètre d’autorisation de fichier|
@@ -48,7 +49,7 @@ Ces routines fonctionnent sur les fichiers spécifiés par un chemin ou un nom d
 |[_makepath, _wmakepath](../c-runtime-library/reference/makepath-wmakepath.md), [_makepath_s, _wmakepath_s](../c-runtime-library/reference/makepath-s-wmakepath-s.md)|Fusionner des composants de chemin d’accès en un seul chemin d’accès complet|
 |[_mktemp, _wmktemp](../c-runtime-library/reference/mktemp-wmktemp.md), [_mktemp_s, _wmktemp_s](../c-runtime-library/reference/mktemp-s-wmktemp-s.md)|Créer un nom de fichier unique|
 |[remove, _wremove](../c-runtime-library/reference/remove-wremove.md)|Supprimer le fichier|
-|[rename, _wrename](../c-runtime-library/reference/rename-wrename.md)|Renommer un fichier|
+|[rename, _wrename](../c-runtime-library/reference/rename-wrename.md)|Renommer le fichier|
 |[_splitpath, _wsplitpath](../c-runtime-library/reference/splitpath-wsplitpath.md), [_splitpath_s, _wsplitpath_s](../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)|Analyser un chemin d’accès en composants|
 |[_stat, _stat64, _stati64, _wstat, _wstat64, _wstati64](../c-runtime-library/reference/stat-functions.md)|Obtenir des informations d’état de fichier sur un fichier nommé|
 |[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|Définir le masque d’autorisation par défaut pour les nouveaux fichiers créés par programme|
@@ -58,7 +59,7 @@ Ces routines fonctionnent sur les fichiers spécifiés par un chemin ou un nom d
 
 Ces routines ouvrent des fichiers.
 
-|Routine|Utilisez|
+|Routine|Utilisation|
 |-------------|---------|
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Ouvre un fichier et retourne un pointeur vers le fichier ouvert.|
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Ouvre un flux avec le partage de fichiers et retourne un pointeur vers le fichier ouvert.|
@@ -69,7 +70,7 @@ Ces routines ouvrent des fichiers.
 
 Ces routines permettent de modifier la représentation du fichier entre une structure `FILE`, un descripteur de fichier et un handle de fichier Win32.
 
-|Routine|Utilisez|
+|Routine|Utilisation|
 |-------------|---------|
 |[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Associe un flux à un fichier ouvert précédemment pour une E/S de bas niveau et retourne un pointeur vers le flux ouvert.|
 |[_fileno](../c-runtime-library/reference/fileno.md)|Obtient le descripteur de fichier associé à un flux.|

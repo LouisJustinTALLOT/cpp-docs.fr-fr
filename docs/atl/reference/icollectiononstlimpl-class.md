@@ -1,5 +1,6 @@
 ---
-title: Classe ICollectionOnSTLImpl
+description: 'En savoir plus sur : ICollectionOnSTLImpl, classe'
+title: ICollectionOnSTLImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
 - ICollectionOnSTLImpl
@@ -11,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: a8ccab08b89da8c1b8ef56c8932e27a6c74e62aa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 089fc0fbd8f410d740646e2a653b076d32448647
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139604"
 ---
-# <a name="icollectiononstlimpl-class"></a>Classe ICollectionOnSTLImpl
+# <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl, classe
 
-Cette classe fournit des méthodes utilisées par une classe de collecte.
+Cette classe fournit des méthodes utilisées par une classe de collection.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,19 +33,19 @@ class ICollectionOnSTLImpl : public T
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Une interface de collection COM.
+Interface de collection COM.
 
-*CollType CollType*<br/>
-Une classe de conteneurs de la Bibliothèque Standard.
+*CollType*<br/>
+Classe de conteneur de la bibliothèque standard C++.
 
 *itemType*<br/>
-Le type d’article exposé par l’interface du conteneur.
+Type d’élément exposé par l’interface de conteneur.
 
-*CopyItem (en anglais)*<br/>
-Une [classe de police de copie](../../atl/atl-copy-policy-classes.md).
+*CopyItem*<br/>
+[Classe de stratégie de copie](../../atl/atl-copy-policy-classes.md).
 
-*Enumtype*<br/>
-Une classe d’enumérateur [compatible CComEnumOnSTL.](../../atl/reference/ccomenumonstl-class.md)
+*EnumType*<br/>
+Classe d’énumérateur compatible [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md).
 
 ## <a name="members"></a>Membres
 
@@ -52,34 +53,34 @@ Une classe d’enumérateur [compatible CComEnumOnSTL.](../../atl/reference/ccom
 
 |Nom|Description|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|Retourne un objet d’enumérateur pour la collection.|
-|[ICollectionOnSTLImpl::getcount](#get_count)|Retourne le nombre d’éléments de la collection.|
-|[ICollectionOnSTLImpl::get_Item](#get_item)|Renvoie l’article demandé de la collection.|
+|[ICollectionOnSTLImpl :: get__NewEnum](#newenum)|Retourne un objet énumérateur pour la collection.|
+|[ICollectionOnSTLImpl :: GetCount](#get_count)|Retourne le nombre d’éléments dans la collection.|
+|[ICollectionOnSTLImpl :: get_Item](#get_item)|Retourne l’élément demandé de la collection.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::m_coll](#m_coll)|Collection.|
+|[ICollectionOnSTLImpl :: m_coll](#m_coll)|Collection.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit la mise en œuvre de trois méthodes d’une interface de collecte: [getcount](#get_count), [get_Item](#get_item), et [get__NewEnum](#newenum).
+Cette classe fournit l’implémentation pour trois méthodes d’une interface de collection : [GetCount](#get_count), [get_Item](#get_item)et [get__NewEnum](#newenum).
 
-Pour utiliser cette classe :
+Pour utiliser cette classe :
 
 - Définissez (ou empruntez) une interface de collection que vous souhaitez implémenter.
 
-- Dérivez votre classe d’une spécialisation de basé sur cette interface de `ICollectionOnSTLImpl` collection.
+- Dérivez votre classe d’une spécialisation `ICollectionOnSTLImpl` basée sur cette interface de collection.
 
-- Utilisez votre classe dérivée pour implémenter `ICollectionOnSTLImpl`toutes les méthodes de l’interface de collecte non gérée par .
+- Utilisez votre classe dérivée pour implémenter toutes les méthodes de l’interface de collection non gérée par `ICollectionOnSTLImpl` .
 
 > [!NOTE]
-> Si l’interface de collection est une double interface, dérivez `ICollectionOnSTLImpl` votre classe [d’IDispatchImpl](../../atl/reference/idispatchimpl-class.md), en passant `IDispatch` la spécialisation comme le premier paramètre de modèle si vous voulez ATL pour fournir la mise en œuvre des méthodes.
+> Si l’interface de collection est une interface double, dérivez votre classe de [IDispatchImpl](../../atl/reference/idispatchimpl-class.md), en passant la `ICollectionOnSTLImpl` spécialisation comme premier paramètre de modèle si vous souhaitez que ATL fournisse l’implémentation des `IDispatch` méthodes.
 
-- Ajoutez des articles au [membre m_coll](#m_coll) pour remplir la collection.
+- Ajoutez des éléments au membre [m_coll](#m_coll) pour remplir la collection.
 
-Pour plus d’informations et d’exemples, voir [ATL Collections et Enumerators](../../atl/atl-collections-and-enumerators.md).
+Pour plus d’informations et d’exemples, consultez [collections et énumérateurs ATL](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -89,11 +90,11 @@ Pour plus d’informations et d’exemples, voir [ATL Collections et Enumerators
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcom.h
+**En-tête :** atlcom. h
 
-## <a name="icollectiononstlimplgetcount"></a><a name="get_count"></a>ICollectionOnSTLImpl::getcount
+## <a name="icollectiononstlimplgetcount"></a><a name="get_count"></a> ICollectionOnSTLImpl :: GetCount
 
-Cette méthode renvoie le nombre d’articles de la collection.
+Cette méthode retourne le nombre d’éléments dans la collection.
 
 ```
 STDMETHOD(getcount)(long* pcount);
@@ -102,15 +103,15 @@ STDMETHOD(getcount)(long* pcount);
 ### <a name="parameters"></a>Paramètres
 
 *pcount*<br/>
-[out] Le nombre d’éléments de la collection.
+à Nombre d’éléments dans la collection.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
-## <a name="icollectiononstlimplget_item"></a><a name="get_item"></a>ICollectionOnSTLImpl::get_Item
+## <a name="icollectiononstlimplget_item"></a><a name="get_item"></a> ICollectionOnSTLImpl :: get_Item
 
-Cette méthode renvoie l’élément spécifié de la collection.
+Cette méthode retourne l’élément spécifié de la collection.
 
 ```
 STDMETHOD(get_Item)(long Index, ItemType* pvar);
@@ -119,22 +120,22 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 ### <a name="parameters"></a>Paramètres
 
 *Index*<br/>
-[dans] L’index à 1 base d’un élément de la collection.
+dans Index de base 1 d’un élément dans la collection.
 
-*pvar pvar*<br/>
-[out] L’élément correspondant à *l’indice*.
+*pvar*<br/>
+à Élément correspondant à l' *index*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-L’élément est obtenu en copiant les données à la position spécifiée dans [m_coll](#m_coll) en utilisant `ICollectionOnSTLImpl` la méthode de copie de la classe de politique de [copie](../../atl/atl-copy-policy-classes.md) adoptée comme un argument de modèle dans la spécialisation.
+L’élément est obtenu en copiant les données à la position spécifiée dans [m_coll](#m_coll) à l’aide de la méthode de copie de la [classe de stratégie de copie](../../atl/atl-copy-policy-classes.md) passée comme argument de modèle dans la `ICollectionOnSTLImpl` spécialisation.
 
-## <a name="icollectiononstlimplget__newenum"></a><a name="newenum"></a>ICollectionOnSTLImpl::get__NewEnum
+## <a name="icollectiononstlimplget__newenum"></a><a name="newenum"></a> ICollectionOnSTLImpl :: get__NewEnum
 
-Retourne un objet d’enumérateur pour la collection.
+Retourne un objet énumérateur pour la collection.
 
 ```
 STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
@@ -143,19 +144,19 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 ### <a name="parameters"></a>Paramètres
 
 *ppUnk*<br/>
-[out] Le pointeur **IUnknown** d’un objet d’enumérateur nouvellement créé.
+à Pointeur **IUnknown** d’un objet énumérateur nouvellement créé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-L’enumérateur nouvellement créé maintient un itérateur sur la collection originale, `m_coll`(donc aucune copie n’est faite) et détient une référence COM sur l’objet de collection pour s’assurer que la collection reste vivante alors qu’il ya des enumérateurs exceptionnels.
+L’énumérateur nouvellement créé maintient un itérateur sur la collection d’origine, `m_coll` , (donc aucune copie n’est effectuée) et contient une référence com sur l’objet de collection pour garantir que la collection reste active alors qu’il existe des énumérateurs en attente.
 
-## <a name="icollectiononstlimplm_coll"></a><a name="m_coll"></a>ICollectionOnSTLImpl::m_coll
+## <a name="icollectiononstlimplm_coll"></a><a name="m_coll"></a> ICollectionOnSTLImpl :: m_coll
 
-Ce membre détient les articles représentés par la collection.
+Ce membre contient les éléments représentés par la collection.
 
 ```
 CollType m_coll;
@@ -163,5 +164,5 @@ CollType m_coll;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Échantillon d’ATLCollections](../../overview/visual-cpp-samples.md)<br/>
+[Exemple ATLCollections](../../overview/visual-cpp-samples.md)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : initialisation des types d’agrégats'
 title: Initialisation des types d'agrégats
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: b4b0dd82263781966760b6e21ef24ded56b06a01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a17e55f01e6a8844252dc0926942a27d40a6c7c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137616"
 ---
 # <a name="initializing-aggregate-types"></a>Initialisation des types d'agrégats
 
@@ -22,7 +23,7 @@ Un type d’*agrégat* est un type de structure, d’union ou de tableau. Si un 
 ## <a name="syntax"></a>Syntaxe
 
 *initialiseur*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-List*  **}** /* pour l’initialisation d’agrégats\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-List*  **}** /* pour l’initialisation d’agrégats \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-List*  **,}**
 
 *initialiseur-List*:<br/>

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur :. MODÈLE (MASM 32 bits)
 title: .MODEL
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: f4f69b88a2041a13a0b92445c61c4a84d43e442f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131428"
 ---
 # <a name="model-32-bit-masm"></a>. MODÈLE (MASM 32 bits)
 
@@ -19,17 +20,17 @@ Initialise le modèle de mémoire du programme. (uniquement MASM 32 bits.)
 
 ## <a name="syntax"></a>Syntaxe
 
-> **. Memory Model** *-Model* ⟦ __,__ *Language-type*⟧ ⟦ __,__ *Stack-option*⟧
+> **. Memory Model** *-Model* ⟦__,__ *Language-type*⟧ ⟦__,__ *Stack-option*⟧
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
-\ *de modèle de mémoire*
+*modèle de mémoire*\
 Paramètre obligatoire qui détermine la taille des pointeurs du code et des données.
 
 *Language-type*\
 Paramètre facultatif qui définit les conventions d’appel et de nommage pour les procédures et les symboles publics.
 
-\ d' *option de pile*
+*option de pile*\
 Paramètre facultatif.
 
 *Stack-option* n’est pas utilisé si *le modèle de mémoire* est **plat**.
@@ -38,14 +39,14 @@ La spécification de **NEARSTACK** regroupe le segment de pile en un seul segmen
 
 ## <a name="remarks"></a>Notes
 
-**. Le modèle** n’est pas utilisé dans [MASM pour x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
+**. Le modèle** n’est pas utilisé dans [MASM pour x64 (ml64.exe)](masm-for-x64-ml64-exe.md).
 
 Le tableau suivant liste les valeurs possibles pour chaque paramètre lors du ciblage des plateformes 16 bits et 32 bits :
 
 |Paramètre|Valeurs 32 bits|Valeurs 16 bits (prise en charge du développement en 16 bits antérieur)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*modèle de mémoire*|**PLATE**|**petite**, **petite**, **compacte**, **moyenne**, **grande** **, grande,** **plate**|
-|*Language-type*|**C**, **StdCall**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
+|*Language-type*|**C**, **StdCall**|**C**, **Basic**, **Fortran**, **Pascal**, **syscall**, **StdCall**|
 |*option de pile*|Non utilisé|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Code
@@ -88,5 +89,5 @@ end
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

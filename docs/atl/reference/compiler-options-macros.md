@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros d’options du compilateur
 title: Macros d’options du compilateur
 ms.date: 08/19/2019
 f1_keywords:
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 90b80aaa34456677f2d7c2dd5717ae6837f4523f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 247ede37721d868c9c941ce85e024a55a2487947
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833567"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141269"
 ---
 # <a name="compiler-options-macros"></a>Macros d’options du compilateur
 

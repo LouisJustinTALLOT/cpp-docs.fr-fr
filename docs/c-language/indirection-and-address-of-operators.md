@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les opérateurs d’indirection et d’adresse'
 title: Indirection et opérateurs d'adresse
 ms.date: 02/16/2018
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-ms.openlocfilehash: e631959e69fbdf026886b7a67a3d4e4cd7266989
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bd05d9eee4a453d9d99198a1a8481fcebcf103dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137591"
 ---
 # <a name="indirection-and-address-of-operators"></a>Indirection et opérateurs d'adresse
 

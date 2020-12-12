@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : interface IAxWinHostWindow'
 title: Interface IAxWinHostWindow
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 44681b94e0bd1dfd757ebfa19f83074785dd95f5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 86cccd2b9ae19d5020cd1cf7ff2f0aff8759060e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833372"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139709"
 ---
 # <a name="iaxwinhostwindow-interface"></a>Interface IAxWinHostWindow
 
@@ -50,7 +51,7 @@ interface IAxWinHostWindow : IUnknown
 
 Cette interface est exposée par les objets hébergeant le contrôle ActiveX de l’ATL. Appelez les méthodes sur cette interface pour créer et/ou attacher un contrôle à l’objet hôte, pour obtenir une interface à partir d’un contrôle hébergé ou pour définir la dispinterface externe ou le gestionnaire d’interface utilisateur à utiliser lors de l’hébergement du navigateur Web.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 La définition de cette interface est disponible en tant que IDL ou C++, comme indiqué ci-dessous.
 

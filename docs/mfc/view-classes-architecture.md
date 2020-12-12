@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes d’affichage (architecture)'
 title: Classes d'affichage (Architecture)
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: 7235ccfea1f41dd185f0b5b6be9b39ea16250d94
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fe883c34ad8bd3948ee65ecec25151cc4dd2416c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143128"
 ---
 # <a name="view-classes-architecture"></a>Classes d'affichage (Architecture)
 
@@ -21,7 +22,7 @@ ms.locfileid: "79447164"
 Une classe de vue est associée à une classe de document et à une classe de fenêtre frame à l’aide d’un objet de modèle de document.
 
 [CView](../mfc/reference/cview-class.md)<br/>
-Classe de base pour les vues spécifiques à l’application des données d’un document. Les vues affichent les données et acceptent les entrées utilisateur pour modifier ou sélectionner les données. Dérivez vos classes d’affichage de `CView`.
+Classe de base pour les vues spécifiques à l’application des données d’un document. Les vues affichent les données et acceptent les entrées utilisateur pour modifier ou sélectionner les données. Dérivez vos classes d’affichage de `CView` .
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
 Classe de base pour les vues avec des fonctions de défilement. Dérivez votre classe d’affichage de `CScrollView` pour le défilement automatique.
@@ -68,4 +69,4 @@ Vue qui contient un contrôle d’arborescence Windows (consultez [CTreeCtrl](..
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+[Vue d'ensemble des classes](../mfc/class-library-overview.md)

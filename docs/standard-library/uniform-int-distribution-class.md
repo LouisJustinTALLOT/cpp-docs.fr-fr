@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe uniform_int_distribution'
 title: uniform_int_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 3d9bb3cf9c4e34916dad3e435c7f4040dcc5f373
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 96e5782c04ce77f8d705f60002ef8316b26793e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132689"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution, classe
 
@@ -171,7 +172,7 @@ Distribution for 200 samples:
    12 :::::::::::::::::
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

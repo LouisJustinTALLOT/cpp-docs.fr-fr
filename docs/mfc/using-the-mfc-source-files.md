@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation des fichiers sources MFC'
 title: Utilisation des fichiers sources MFC
 ms.date: 08/19/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - protected member access
 - source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
-ms.openlocfilehash: acd702f5a032f9dca3480d287142583070701e84
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42dc285bf4877c4bef70e430b6d2982f43e08d51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143258"
 ---
 # <a name="using-the-mfc-source-files"></a>Utilisation des fichiers sources MFC
 
@@ -38,7 +39,7 @@ Dans les fichiers sources MFC et les fichiers d’en-tête créés par l’Assis
 
 `// Implementation`
 
-## <a name="an-example-of-the-comments"></a><a name="an-example-of-the-comments"></a>Un exemple des commentaires
+## <a name="an-example-of-the-comments"></a><a name="an-example-of-the-comments"></a> Un exemple des commentaires
 
 La liste partielle suivante de la classe `CStdioFile` utilise la plupart des commentaires standard que MFC utilise dans ses classes pour diviser les membres de la classe selon les méthodes utilisées :
 

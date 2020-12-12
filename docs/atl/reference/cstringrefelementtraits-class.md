@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CStringRefElementTraits'
 title: CStringRefElementTraits, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: 6fa8772033a5a82940cf30b2a73d6ea356269d67
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5523a2a451fc1825c443cf2d2e518b1c8dc2b340
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140385"
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits, classe
 
@@ -59,7 +60,7 @@ Pour plus d’informations, consultez [classes de collection ATL](../../atl/atl-
 
 **En-tête :** atlcoll. h
 
-## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits::CompareElements
+## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a> CStringRefElementTraits::CompareElements
 
 Appelez cette fonction statique pour comparer l’égalité de deux éléments de chaîne.
 
@@ -75,11 +76,11 @@ Premier élément de chaîne.
 *élément2*<br/>
 Deuxième élément de chaîne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true si les éléments sont égaux, sinon false.
 
-## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered
+## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a> CStringRefElementTraits::CompareElementsOrdered
 
 Appelez cette fonction statique pour comparer deux éléments de chaîne.
 
@@ -95,11 +96,11 @@ Premier élément de chaîne.
 *répartition*<br/>
 Deuxième élément de chaîne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Zéro si les chaînes sont identiques, < 0 si *str1* est inférieur à *str2*, ou > 0 si *str1* est supérieur à *str2*. La méthode [CStringT :: compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) est utilisée pour effectuer les comparaisons.
 
-## <a name="cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits :: Hash
+## <a name="cstringrefelementtraitshash"></a><a name="hash"></a> CStringRefElementTraits :: Hash
 
 Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de chaîne donné.
 
@@ -112,7 +113,7 @@ static ULONG Hash(INARGTYPE str) throw();
 *str*<br/>
 Élément String.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une valeur de hachage, calculée à l’aide du contenu de la chaîne.
 
