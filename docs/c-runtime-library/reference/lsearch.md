@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _lsearch'
 title: _lsearch
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 73bc82ed57692dee348448d2b523961324203ca9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ee27eb61a76e4b44755d8dcebb5589070ae15c9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299941"
 ---
 # <a name="_lsearch"></a>_lsearch
 
@@ -72,11 +73,11 @@ Largeur de chaque élément du tableau.
 *compar*<br/>
 Pointeur désignant la routine de comparaison. Le premier paramètre est un pointeur désignant la clé pour la recherche. Le second paramètre est un pointeur désignant un élément de tableau à comparer à la clé.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si la clé est trouvée, **_lsearch** retourne un pointeur vers l’élément du tableau au niveau de *base* qui correspond à la *clé*. Si la clé est introuvable, **_lsearch** retourne un pointeur vers l’élément qui vient d’être ajouté à la fin du tableau.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_lsearch** effectue une recherche linéaire sur la *clé* de valeur dans un tableau d’éléments *Number* , chacun d’octets de *largeur* . Contrairement à **ensuite bsearch**, **_lsearch** ne nécessite pas le tri du tableau. Si la *clé* est introuvable, **_lsearch** l’ajoute à la fin du tableau et incrémente le *nombre*.
 

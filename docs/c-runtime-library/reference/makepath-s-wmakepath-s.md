@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _makepath_s, _wmakepath_s'
 title: _makepath_s, _wmakepath_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 8eb3cf338d7486d7e7893090a1390e5d2d16a438
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8096061c80c2cfb7da3148e1ba8e7a0d2f193c4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914479"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299902"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
@@ -99,7 +100,7 @@ Taille, en octets, de la mémoire tampon.
 Contient une lettre (A, B, etc.) correspondant au lecteur souhaité et un signe deux-points de fin facultatif. **_makepath_s** insère automatiquement le signe deux-points dans le chemin d’accès composite s’il est manquant. Si le *lecteur* est **null** ou pointe vers une chaîne vide, aucune lettre de lecteur ne s’affiche dans la chaîne du *chemin d’accès* composite.
 
 *dir*<br/>
-Contient le chemin d’accès des répertoires, sans l’indicateur de lecteur ou le nom de fichier réel. La barre oblique finale est facultative, et une barre oblique (/) ou une barre oblique inverse\\() ou les deux peuvent être utilisées dans un seul argument *dir* . Si aucune barre oblique finale (/ ou \\) n’est spécifiée, elle est insérée automatiquement. Si *dir* a la **valeur null** ou pointe vers une chaîne vide, aucun chemin d’accès de répertoire n’est inséré dans la chaîne du *chemin d’accès* composite.
+Contient le chemin d’accès des répertoires, sans l’indicateur de lecteur ou le nom de fichier réel. La barre oblique finale est facultative, et une barre oblique (/) ou une barre oblique inverse ( \\ ) ou les deux peuvent être utilisées dans un seul argument *dir* . Si aucune barre oblique finale (/ ou \\) n’est spécifiée, elle est insérée automatiquement. Si *dir* a la **valeur null** ou pointe vers une chaîne vide, aucun chemin d’accès de répertoire n’est inséré dans la chaîne du *chemin d’accès* composite.
 
 *fname*<br/>
 Contient le nom de fichier de base sans les extensions du nom de fichier. Si *fname* a la **valeur null** ou pointe vers une chaîne vide, aucun nom de fichier n’est inséré dans la chaîne du *chemin d’accès* composite.
@@ -107,20 +108,20 @@ Contient le nom de fichier de base sans les extensions du nom de fichier. Si *fn
 *ext*<br/>
 Contient l’extension de nom de fichier réelle, avec ou sans point initial (.). **_makepath_s** insère automatiquement le point s’il n’apparaît pas dans *ext*. Si *ext* a la **valeur null** ou pointe vers une chaîne vide, aucune extension n’est insérée dans la chaîne du *chemin d’accès* composite.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*path*|*sizeInWords* / *sizeInBytes*|Renvoie|Contenu du *chemin*|
+|*path*|*sizeInWords*  /  *sizeInBytes*|Renvoie|Contenu du *chemin*|
 |------------|------------------------------------|------------|------------------------|
-|**NUL**|n'importe laquelle|**EINVAL**|non modifié|
+|**NULL**|n'importe laquelle|**EINVAL**|non modifié|
 |n'importe laquelle|<= 0|**EINVAL**|non modifié|
 
-Si une des conditions d’erreur ci-dessus se produit, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et les fonctions retournent **EINVAL**. La **valeur null** est autorisée pour les paramètres *Drive*, *fname*et *ext*. Pour plus d’informations sur le comportement lorsque ces paramètres sont des pointeurs null ou des chaînes vides, consultez la section Notes.
+Si une des conditions d’erreur ci-dessus se produit, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et les fonctions retournent **EINVAL**. La **valeur null** est autorisée pour les paramètres *Drive*, *fname* et *ext*. Pour plus d’informations sur le comportement lorsque ces paramètres sont des pointeurs null ou des chaînes vides, consultez la section Notes.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_makepath_s** crée une chaîne de chemin d’accès composite à partir de composants individuels, en stockant le résultat dans le *chemin d’accès*. Le *chemin d’accès* peut inclure une lettre de lecteur, un chemin d’accès de répertoire, un nom de fichier et une extension de nom de fichier. **_wmakepath_s** est une version à caractères larges de **_makepath_s**; les arguments de **_wmakepath_s** sont des chaînes à caractères larges. dans le cas contraire, **_wmakepath_s** et **_makepath_s** se comportent de la même façon.
 

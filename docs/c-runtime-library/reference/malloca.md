@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _malloca'
 title: _malloca
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 64bed4dac2bbaeb60c7b04a600af38f455caf08d
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 8357bc15ba432a0adb390494882ee4b63adf70f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008268"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299798"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -50,7 +51,7 @@ void *_malloca(
 *size*<br/>
 Octets à allouer à partir de la pile.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La routine **_malloca** retourne un **`void`** pointeur vers l’espace alloué, qui est garanti être correctement aligné pour le stockage de tout type d’objet. Si la *taille* est égale à 0, **_malloca** alloue un élément de longueur zéro et retourne un pointeur valide vers cet élément.
 
@@ -75,7 +76,7 @@ Toutefois, **_malloca** peut être appelée directement à partir d’une routin
 
 Outre les restrictions ci-dessus, lors de l’utilisation de l’option [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , **_malloca** ne peut pas être utilisé dans des **`__except`** blocs. Pour plus d’informations, consultez [Restrictions de /clr](../../build/reference/clr-restrictions.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

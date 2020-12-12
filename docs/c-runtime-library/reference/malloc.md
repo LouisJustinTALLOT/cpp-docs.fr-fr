@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : malloc'
 title: malloc
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: a093dbdbc4849b1c2f3d86e85a5e2b25a7b988e2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8026cf24ee49999026c58787b83b2c8c0a238a2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836658"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299785"
 ---
 # <a name="malloc"></a>malloc
 
@@ -61,7 +62,7 @@ La fonction **malloc** alloue un bloc de mémoire d’au moins octets de *taille
 
 **malloc** affecte à **errno** la valeur **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour obtenir des informations sur ce code de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Le code de démarrage utilise **malloc** pour allouer le stockage pour les variables **_environ**, *envp*et *argv* . Les fonctions suivantes et leurs équivalents à caractères larges appellent également **malloc**.
+Le code de démarrage utilise **malloc** pour allouer le stockage pour les variables **_environ**, *envp* et *argv* . Les fonctions suivantes et leurs équivalents à caractères larges appellent également **malloc**.
 
 :::row:::
    :::column span="":::
@@ -120,7 +121,7 @@ Lorsque l’application est liée à une version de débogage des bibliothèques
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -173,6 +174,6 @@ Memory freed
 
 [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Gratuit](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_aligned_malloc](aligned-malloc.md)<br/>
