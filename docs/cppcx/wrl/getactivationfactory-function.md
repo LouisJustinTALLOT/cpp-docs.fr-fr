@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonction GetActivationFactory'
 title: GetActivationFactory (fonction)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 430b4ed3f6a02fd3db2bcab05fbb7f21f5367b5c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae2384e0620282723c6f10090a0028347408b271
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213978"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124629"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory (fonction)
 
@@ -38,10 +39,10 @@ Paramètre de modèle qui spécifie le type de la fabrique d’activation.
 *activatableClassId*<br/>
 Nom de la classe que la fabrique d’activation peut produire.
 
-*fabrique*<br/>
+*usine*<br/>
 Lorsque cette opération est terminée, une référence à la fabrique d’activation pour le type *T*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de réussite ; Sinon, une erreur HRESULT qui indique la raison de l’échec de cette opération.
 
@@ -53,4 +54,4 @@ S_OK en cas de réussite ; Sinon, une erreur HRESULT qui indique la raison de l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Windows::Foundation, espace de noms](windows-foundation-namespace.md)
+[Windows :: Foundation, espace de noms](windows-foundation-namespace.md)

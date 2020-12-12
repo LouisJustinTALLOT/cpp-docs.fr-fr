@@ -1,57 +1,58 @@
 ---
-title: Exporter des Classes de chaîne à l’aide de CStringT
+description: 'En savoir plus sur : exportation de classes de chaînes à l’aide de CStringT'
+title: Exportation de classes de chaînes à l’aide de CStringT
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-ms.openlocfilehash: a4ee73d2ae5cfb7bf9834fb23eed8470b7d29445
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8876ea04f1252e4f5861a950b04dabcd99d6a804
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166991"
 ---
-# <a name="exporting-string-classes-using-cstringt"></a>Exporter des Classes de chaîne à l’aide de CStringT
+# <a name="exporting-string-classes-using-cstringt"></a>Exportation de classes de chaînes à l’aide de CStringT
 
-Dans le passé, les développeurs MFC ont dérivé `CString` pour spécialiser leurs propres classes de chaîne. Dans Microsoft Visual C++ .NET (MFC 8.0), le [CString](../atl-mfc-shared/using-cstring.md) classe a été remplacée par une classe de modèle nommée [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Cela fourni plusieurs avantages :
+Par le passé, les développeurs MFC ont dérivé de `CString` pour spécialiser leurs propres classes de chaîne. Dans Microsoft Visual C++ .NET (MFC 8,0), la classe [CString](../atl-mfc-shared/using-cstring.md) a été remplacée par une classe de modèle appelée [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Cela offre plusieurs avantages :
 
-- Il autorisé MFC `CString` classe à utiliser dans les ATL projets sans liaison dans la plus grande bibliothèque statique MFC ou une DLL.
+- Elle permettait l' `CString` utilisation de la classe MFC dans les projets ATL sans lien avec la plus grande bibliothèque statique MFC ou dll.
 
-- Avec la nouvelle `CStringT` classe de modèle, vous pouvez personnaliser `CString` comportement à l’aide des paramètres de modèle qui spécifient les caractéristiques de caractère, similaires aux modèles dans la bibliothèque C++ Standard.
+- Avec la nouvelle `CStringT` classe de modèle, vous pouvez personnaliser le `CString` comportement à l’aide de paramètres de modèle qui spécifient des caractéristiques de caractères, comme les modèles dans la bibliothèque standard C++.
 
-- Lorsque vous exportez votre propre classe de chaîne à partir d’une DLL à l’aide `CStringT`, le compilateur exporte également automatiquement la `CString` classe de base. Dans la mesure où `CString` lui-même est une classe de modèle, elle peut être instanciée par le compilateur lorsqu’il est utilisé, à moins que le compilateur connaît qui `CString` est importée à partir d’une DLL. Si vous avez migré des projets à partir de Visual C++ 6.0 vers Visual C++ .NET, vous avez peut-être vu des erreurs de symbole de l’éditeur de liens pour un défini à plusieurs reprises `CString` en raison de la collision de la `CString` importées à partir d’une DLL et la version instanciée localement. La méthode appropriée pour ce faire est décrite ci-dessous.
+- Lorsque vous exportez votre propre classe de chaîne à partir d’une DLL à l’aide de `CStringT` , le compilateur exporte également automatiquement la `CString` classe de base. Étant donné que `CString` est lui-même une classe de modèle, il peut être instancié par le compilateur lorsqu’il est utilisé, à moins que le compilateur n’ait conscience qu’il est `CString` importé à partir d’une dll. Si vous avez migré des projets de Visual C++ 6,0 vers Visual C++ .NET, vous avez peut-être vu des erreurs de symboles de l’éditeur de liens pour un défini par multiplication en `CString` raison de la collision de l' `CString` importation à partir d’une dll et de la version instanciée localement. Pour ce faire, la méthode appropriée est décrite ci-dessous.
 
-Le scénario suivant entraîne l’éditeur de liens produire des erreurs de symboles pour les classes définis à plusieurs reprises. Supposons que vous exportez un `CString`-classe dérivée (`CMyString`) à partir d’une DLL d’extension MFC :
+Le scénario suivant fait en sorte que l’éditeur de liens produise des erreurs de symbole pour les classes définies multipliées. Supposons que vous exportez une `CString` classe dérivée de ( `CMyString` ) à partir d’une DLL d’extension MFC :
 
 [!code-cpp[NVC_MFC_DLL#6](../atl-mfc-shared/codesnippet/cpp/exporting-string-classes-using-cstringt_1.cpp)]
 
-Le code de consommateur utilise un mélange de `CString` et `CMyString`. « MyString.h » n’est pas inclus dans l’en-tête précompilé et certains l’utilisation de `CString` n’a pas `CMyString` visible.
+Le code du consommateur utilise une combinaison de `CString` et `CMyString` . « MyString. h » n’est pas inclus dans l’en-tête précompilé, et une partie de l’utilisation de `CString` n’est pas `CMyString` visible.
 
-Supposons que vous utilisez le `CString` et `CMyString` classes dans des fichiers sources distincts, Source1.cpp et Source2.cpp. Dans Source1.cpp, vous utilisez `CMyString` et #include MyString.h. Dans Source2.cpp, vous utilisez `CString`, mais ne le faites pas #include MyString.h. Dans ce cas, l’éditeur de liens se plaindront sur `CStringT` qui est défini plusieurs fois. Cela est dû au fait `CString` étant toutes deux été importées à partir de la DLL qui exporte `CMyString`et instancié localement par le compilateur via la `CStringT` modèle.
+Supposons que vous utilisez `CString` les `CMyString` classes et dans des fichiers sources distincts, source1. cpp et source2. cpp. Dans source1. cpp, vous utilisez `CMyString` et #include MyString. h. Dans source2. cpp, vous utilisez `CString` , mais vous ne #include pas MyString. h. Dans ce cas, l’éditeur de liens se plaint de la `CStringT` multiplication définie. Cela est dû à l' `CString` importation à partir de la dll qui exporte `CMyString` et instanciée localement par le compilateur via le `CStringT` modèle.
 
 Pour résoudre ce problème, procédez comme suit :
 
-Exporter `CStringA` et `CStringW` (et les classes de base nécessaires) à partir de MFC90. DLL. Les projets qui incluent des MFC utilisent toujours la DLL de MFC exportée `CStringA` et `CStringW`, comme dans les implémentations précédentes de MFC.
+Exportez `CStringA` et `CStringW` (et les classes de base nécessaires) à partir de MFC90.DLL. Les projets qui incluent MFC utilisent toujours la DLL MFC exportée `CStringA` et `CStringW` , comme dans les implémentations MFC précédentes.
 
-Puis créez une classe dérivée exportable à l’aide de la `CStringT` modèle, en tant que `CStringT_Exported` est indiquée ci-dessous, par exemple :
+Créez ensuite une classe exportable dérivée à l’aide du `CStringT` modèle, comme `CStringT_Exported` indiqué ci-dessous, par exemple :
 
 [!code-cpp[NVC_MFC_DLL#7](../atl-mfc-shared/codesnippet/cpp/exporting-string-classes-using-cstringt_2.cpp)]
 
-Dans AfxStr.h, remplacez le précédent `CString`, `CStringA`, et `CStringW` typedefs comme suit :
+Dans AfxStr. h, remplacez les typedefs précédents, `CString` `CStringA` et, `CStringW` comme suit :
 
 [!code-cpp[NVC_MFC_DLL#8](../atl-mfc-shared/codesnippet/cpp/exporting-string-classes-using-cstringt_3.cpp)]
 
 Il existe plusieurs inconvénients :
 
-- Vous ne devez pas exporter `CStringT` lui-même, car cela entraîne des projets ATL seule exportation spécialisé `CStringT` classe.
+- Vous ne devez pas exporter `CStringT` lui-même, car cela entraîne l’exportation d’une classe spécialisée par des projets ATL uniquement `CStringT` .
 
-- À l’aide d’un exportable dérivé de classe de `CStringT` réduit de devoir réimplémenter `CStringT` fonctionnalité. Code supplémentaire est limité au transfert des constructeurs pour la `CStringT` classe de base.
+- L’utilisation d’une classe dérivée exportable à partir de `CStringT` minimise la nécessité d’implémenter de nouveau la `CStringT` fonctionnalité. Du code supplémentaire est limité aux constructeurs de transfert vers la `CStringT` classe de base.
 
-- `CString`, `CStringA`, et `CStringW` doit uniquement être marquée `__declspec(dllexport/dllimport)` lorsque vous générez une MFC DLL partagée. Si une liaison avec une bibliothèque statique MFC, vous ne devez pas marquer ces classes comme l’exportation ; utilisation interne et sinon de `CString`, `CStringA`, et `CStringW` marque à l’intérieur de l’utilisateur DLL `CString` comme exportés également.
+- `CString`, `CStringA` et `CStringW` doivent être marqués uniquement `__declspec(dllexport/dllimport)` lorsque vous générez avec une DLL partagée MFC. Si vous établissez une liaison avec une bibliothèque statique MFC, vous ne devez pas marquer ces classes comme étant exportées ; dans le cas contraire, l’utilisation interne de `CString` , `CStringA` et `CStringW` à l’intérieur des dll utilisateur sera marquée `CString` comme étant exportée.
 
 ## <a name="related-topics"></a>Rubriques connexes
 
-[CStringT, classe](../atl-mfc-shared/reference/cstringt-class.md)
+[CStringT (classe)](../atl-mfc-shared/reference/cstringt-class.md)
 
 ## <a name="see-also"></a>Voir aussi
 

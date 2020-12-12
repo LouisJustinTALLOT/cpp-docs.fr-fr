@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3104'
 title: Erreur du compilateur C3104
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 5f72af3d7149db7362df9fa23ac5ad6c058c552b
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: b093c5daa96a4c0e9bf789dfcc67ac6b6d3f2561
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116091"
 ---
 # <a name="compiler-error-c3104"></a>Erreur du compilateur C3104
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : variables globales et types standard'
 title: Variables globales et types standard
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - standard types
 - types [CRT]
 ms.assetid: 8f8bad6f-2b78-4068-a0dc-77d58d978920
-ms.openlocfilehash: 46b0bf0ea9fd9671165e2d331ce1bb0787feaa3f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 52c2ca78546c549d15dfbe40d7e264eb127e69fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120716"
 ---
 # <a name="global-variables-and-standard-types"></a>Variables globales et types standard
 
@@ -20,5 +21,5 @@ La bibliothèque Runtime de Microsoft contient des définitions pour les [variab
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Référence de la bibliothèque de Run-Time C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [Constantes globales](../c-runtime-library/global-constants.md)

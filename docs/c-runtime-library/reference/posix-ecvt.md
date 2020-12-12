@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ECVT'
 title: ecvt
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - ecvt function
 ms.assetid: a24fccea-033a-4cc7-b120-4fd0f525a7e3
-ms.openlocfilehash: 99c6d3d29e5c5eb376da8381461f2bbb0de6d5dc
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 1c0e65904dfa294ed1e0bbe364a6804090889bc6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117473"
 ---
 # <a name="ecvt"></a>ecvt
 

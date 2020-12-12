@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _write'
 title: _write
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 02864a797a64e6c1b1d836edf4e435cdb43d0932
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15988f803b37f9ce128a49662c2311a4aa6ca8fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211617"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117157"
 ---
 # <a name="_write"></a>_write
 
@@ -60,7 +61,7 @@ Données à écrire.
 *count*<br/>
 Nombre d'octets.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, **_Write** retourne le nombre d’octets écrits. Si l’espace réel restant sur le disque est inférieur à la taille de la mémoire tampon que la fonction essaie d’écrire sur le disque, **_Write** échoue et n’efface pas le contenu de la mémoire tampon sur le disque. Une valeur de retour de-1 indique une erreur. Si des paramètres non valides sont passés, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et **errno** a la valeur de l’une des trois valeurs suivantes : **EBADF**, ce qui signifie que le descripteur de fichier n’est pas valide ou que le fichier n’est pas ouvert en écriture. **ENOSPC**, ce qui signifie que l’espace restant sur l’appareil est insuffisant pour l’opération ; ou **EINVAL**, ce qui signifie que la *mémoire tampon* était un pointeur null ou qu’un *nombre* impair d’octets était passé à être écrit dans un fichier en mode Unicode.
 
@@ -68,7 +69,7 @@ Pour plus d’informations sur ces codes de retour et les autres, consultez [err
 
 Si le fichier est ouvert en mode texte, chaque caractère de saut de ligne est remplacé par une paire retour chariot-saut de ligne dans la sortie. Le remplacement n’affecte pas la valeur de retour.
 
-Lorsque le fichier est ouvert en mode de traduction Unicode, par exemple, si *FD* est ouvert à l’aide de **_open** ou **_sopen** et d’un paramètre de mode qui comprend **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, ou s’il est ouvert à l’aide de **fopen** et d’un paramètre de mode qui inclut **CCS = Unicode**, **CCS = UTF-16LE**ou **CCS = utf-8**, ou si le mode est modifié en mode de traduction Unicode à l’aide de **_setmode**, la*mémoire tampon* est interprétée comme un pointeur vers un tableau de **`wchar_t`** qui contient des données **UTF-16** . Toute tentative d'écriture d'une quantité impaire d'octets dans ce mode provoque une erreur de validation de paramètre.
+Lorsque le fichier est ouvert en mode de traduction Unicode, par exemple, si *FD* est ouvert à l’aide de **_open** ou **_sopen** et d’un paramètre de mode qui comprend **_O_WTEXT**, **_O_U16TEXT** ou **_O_U8TEXT**, ou s’il est ouvert à l’aide de **fopen** et d’un paramètre de mode qui inclut **CCS = Unicode**, **CCS = UTF-16LE** ou **CCS = utf-8**, ou si le mode est modifié en mode de traduction Unicode à l’aide de **_setmode**, la *mémoire tampon* est interprétée comme un pointeur vers un tableau de **`wchar_t`** qui contient des données **UTF-16** . Toute tentative d'écriture d'une quantité impaire d'octets dans ce mode provoque une erreur de validation de paramètre.
 
 ## <a name="remarks"></a>Notes
 

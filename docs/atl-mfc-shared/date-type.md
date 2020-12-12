@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : type de DATE'
 title: Type de DATE
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: 5a6c1e1cca5b2cb978d6af4208377db1a2926357
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6a0fd8f02abe5fd3ecb3695fd2715bfb3a573028
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167017"
 ---
 # <a name="date-type"></a>Type de DATE
 
@@ -26,7 +27,7 @@ Le type de DATE est implémenté à l’aide d’un nombre à virgule flottante 
 |-------------------|--------------------|
 |30 décembre 1899, minuit|0,00|
 |1er janvier 1900, minuit|2,00|
-|4 janvier 1900, minuit|5,00|
+|4 janvier 1900, minuit|5.00|
 |4 janvier 1900, 18:00|5.25|
 |4 janvier 1900, midi|5.50|
 |4 janvier 1900, 9 h 00|5.875|
@@ -52,7 +53,7 @@ Les points suivants doivent être notés lors de l’utilisation de ces formats 
 |30 décembre 1899, 18:00|-0.25|
 |30 décembre 1899, minuit|0,00|
 |30 décembre 1899, 18:00|0,25|
-|30 décembre 1899, midi|0,50|
+|30 décembre 1899, midi|0.50|
 |30 décembre 1899, 18:00|0,75|
 |31 décembre 1899, minuit|1.00|
 |1er janvier 1900, minuit|2,00|

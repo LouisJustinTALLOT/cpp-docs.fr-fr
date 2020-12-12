@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : `__asm`'
 title: __asm
 ms.date: 10/09/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 14a40bef5b2edba76fc130604414c45eee589bcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5fa4e64bdb9ae4fc01e6e379de3e8a6771959e80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118054"
 ---
 # `__asm`
 

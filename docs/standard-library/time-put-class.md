@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe time_put'
 title: time_put, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 4f7b609493e16d3d1c0a9ab6274ed6f5bfd7b033
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 135bd8c619907b789f448e41e742fcc256d9b6eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167264"
 ---
 # <a name="time_put-class"></a>time_put, classe
 
@@ -71,7 +72,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 **Espace de noms :** std
 
-## <a name="time_putchar_type"></a><a name="char_type"></a>time_put :: char_type
+## <a name="time_putchar_type"></a><a name="char_type"></a> time_put :: char_type
 
 Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.
 
@@ -83,7 +84,7 @@ typedef CharType char_type;
 
 Le type est un synonyme du paramètre de modèle `CharType`.
 
-## <a name="time_putdo_put"></a><a name="do_put"></a>time_put ::d o_put
+## <a name="time_putdo_put"></a><a name="do_put"></a> time_put ::d o_put
 
 Fonction virtuelle qui fournit en sortie des informations de date et d'heure sous la forme d'une séquence d'objets `CharType`.
 
@@ -113,7 +114,7 @@ Le format de la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l]
 *_Mod*\
 Un modificateur du format. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un itérateur pour la première position après le dernier élément inséré.
 
@@ -127,7 +128,7 @@ La sortie est générée par les mêmes règles que celles utilisées par `strft
 
 Consultez l’exemple relatif à [put](#put), qui appelle `do_put`.
 
-## <a name="time_putiter_type"></a><a name="iter_type"></a>time_put :: iter_type
+## <a name="time_putiter_type"></a><a name="iter_type"></a> time_put :: iter_type
 
 Type qui décrit un itérateur de sortie.
 
@@ -139,7 +140,7 @@ typedef OutputIterator iter_type;
 
 Le type est un synonyme du paramètre de modèle `OutputIterator`.
 
-## <a name="time_putput"></a><a name="put"></a>time_put ::p ut
+## <a name="time_putput"></a><a name="put"></a> time_put ::p ut
 
 Fournit en sortie des informations de date et d'heure sous la forme d'une séquence d'objets `CharType`.
 
@@ -185,7 +186,7 @@ Le début de la chaîne de mise en forme pour la sortie. Consultez [strftime, wc
 *famille*\
 La fin de la chaîne de mise en forme pour la sortie. Consultez [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) pour obtenir des valeurs valides.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un itérateur pour la première position après le dernier élément inséré.
 
@@ -237,7 +238,7 @@ num_put( ) = x: 05:30:40 07/04/00
 strftime( ) = x: 05:30:40 07/04/00
 ```
 
-## <a name="time_puttime_put"></a><a name="time_put"></a>time_put :: time_put
+## <a name="time_puttime_put"></a><a name="time_put"></a> time_put :: time_put
 
 Constructeur d’objets de type `time_put`.
 
@@ -258,7 +259,7 @@ Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les 
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1 : ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Le constructeur initialise son objet de base avec [locale :: facette](../standard-library/locale-class.md#facet_class)(*_Refs*).
 

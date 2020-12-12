@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : directive #using (C++/CLI)'
 title: '#using, directive (C++/CLI)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 0245eb15219585421be83def0258415ab4b573b6
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5903e3b5af4cd6ee40e0b087d52d1bd0115b1c6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684259"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167524"
 ---
 # <a name="using-directive-ccli"></a>#using, directive (C++/CLI)
 
@@ -30,7 +31,7 @@ Importe des métadonnées dans un programme compilé avec [/CLR](../build/refere
 ### <a name="parameters"></a>Paramètres
 
 *txt*\
-Fichier Microsoft Intermediate Language (MSIL) *`.dll`* , *`.exe`* , *`.netmodule`* ou *`.obj`* . Par exemple,
+Fichier Microsoft Intermediate Language (MSIL) *`.dll`* , *`.exe`* , *`.netmodule`* ou *`.obj`* . Par exemple :
 
 `#using <MyComponent.dll>`
 
@@ -41,7 +42,7 @@ Spécifie que tous les types dans le *fichier* sont accessibles. Pour plus d’i
 
 le *fichier* peut être un fichier MSIL (Microsoft Intermediate Language) que vous importez pour ses données managées et les constructions managées. Si une DLL contient un manifeste d’assembly, toutes les dll référencées dans le manifeste sont importées. L’assembly que vous générez répertorie les *fichiers* dans les métadonnées en tant que référence d’assembly.
 
-Par exemple, le *fichier* ne contient pas d’assembly (le*fichier* est un module) et vous n’avez pas l’intention d’utiliser les informations de type du module dans l’application (Assembly) actuelle. Vous pouvez indiquer que le module fait partie de l’assembly à l’aide de [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Les types du module sont ensuite accessibles à toute application qui a référencé l'assembly.
+Par exemple, le *fichier* ne contient pas d’assembly (le *fichier* est un module) et vous n’avez pas l’intention d’utiliser les informations de type du module dans l’application (Assembly) actuelle. Vous pouvez indiquer que le module fait partie de l’assembly à l’aide de [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). Les types du module sont ensuite accessibles à toute application qui a référencé l'assembly.
 
 Une alternative à utiliser **`#using`** est l’option de compilateur [/Fu](../build/reference/fu-name-forced-hash-using-file.md) .
 

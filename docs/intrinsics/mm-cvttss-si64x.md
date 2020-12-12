@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mm_cvttss_si64x'
 title: _mm_cvttss_si64x
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 6d920a5c59cacb23c7fb155c7ac8e813a9b0e8d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4af7b726d0f15099586bc94348ab4ba7ebf5b8e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167628"
 ---
 # <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Spécifique à Microsoft**
 
-Émet la version étendue x64 du convertir avec un nombre à virgule flottante simple précision de troncation en une instruction de type entier 64 bits ( `cvttss2si` ).
+Émet la version étendue x64 de la conversion avec troncation Single-Precision Floating-Point nombre en une instruction de type entier () de 64 bits `cvttss2si` .
 
 ## <a name="syntax"></a>Syntaxe
 

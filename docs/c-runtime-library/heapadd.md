@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _heapadd'
 title: _heapadd
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: c5eeb66ff0e6fb05063ec395e12cd97106ad724d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0270f84de2c543e37f089418b833011c2d83230d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120680"
 ---
 # <a name="_heapadd"></a>_heapadd
 
@@ -52,10 +53,10 @@ int _heapadd(
 *memblock*<br/>
 Pointeur vers la mémoire du tas.
 
-*Taille*<br/>
+*size*<br/>
 Taille de la mémoire à ajouter, en octets.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, `_heapadd` retourne 0 ; sinon, la fonction retourne -1 et définit `errno` sur `ENOSYS`.
 
@@ -76,7 +77,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../
 ## <a name="see-also"></a>Voir aussi
 
 [Allocation de mémoire](../c-runtime-library/memory-allocation.md)<br/>
-[Gratuit](../c-runtime-library/reference/free.md)<br/>
+[free](../c-runtime-library/reference/free.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

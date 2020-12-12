@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vfscanf, vfwscanf'
 title: vfscanf, vfwscanf
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c087451d7b5a11b8c7cb6af63c9e009971ee87a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120590"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -52,7 +53,7 @@ int vfwscanf(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*train*<br/>
 Pointeur désignant la structure **FILE**.
 
 *format*<br/>
@@ -61,7 +62,7 @@ Chaîne de contrôle de format.
 *arglist*<br/>
 Liste d’arguments de variable.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui sont été lus mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. Si une erreur se produit ou si la fin du flux de fichier est atteinte avant la première conversion, la valeur de retour est **EOF** pour **vfscanf** et **vfwscanf**.
 
@@ -81,7 +82,7 @@ La fonction **vfscanf** lit les données à partir de la position actuelle du *f
 
 Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|

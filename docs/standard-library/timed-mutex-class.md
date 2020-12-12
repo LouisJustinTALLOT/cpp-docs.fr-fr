@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe timed_mutex'
 title: timed_mutex, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 3329c46f0760a13693507de18a09b974b6b646e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: af701a8f1f3777fb7f760c3eed561bd3dae5f21f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167225"
 ---
 # <a name="timed_mutex-class"></a>timed_mutex, classe
 
@@ -60,7 +61,7 @@ class timed_mutex;
 
 **Espace de noms :** std
 
-## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex :: Lock
+## <a name="timed_mutexlock"></a><a name="lock"></a> timed_mutex :: Lock
 
 Bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du `mutex`.
 
@@ -72,7 +73,7 @@ void lock();
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>timed_mutex :: timed_mutex, constructeur
+## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a> timed_mutex :: timed_mutex, constructeur
 
 Construit un objet `timed_mutex` qui n’est pas verrouillé.
 
@@ -80,7 +81,7 @@ Construit un objet `timed_mutex` qui n’est pas verrouillé.
 timed_mutex();
 ```
 
-## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>timed_mutex :: ~ timed_mutex destructeur
+## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a> timed_mutex :: ~ timed_mutex destructeur
 
 Libère les ressources utilisées par l’objet `mutex`.
 
@@ -92,7 +93,7 @@ Libère les ressources utilisées par l’objet `mutex`.
 
 Si l'objet est verrouillé lorsque le destructeur s'exécute, le comportement est indéfini.
 
-## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex :: try_lock
+## <a name="timed_mutextry_lock"></a><a name="try_lock"></a> timed_mutex :: try_lock
 
 Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 
@@ -100,7 +101,7 @@ Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 bool try_lock();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la méthode obtient avec succès la propriété de `mutex` ; sinon, **`false`** .
 
@@ -108,7 +109,7 @@ bool try_lock();
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex :: try_lock_for
+## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a> timed_mutex :: try_lock_for
 
 Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 
@@ -122,7 +123,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 *Rel_time*\
 Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la durée maximale pendant laquelle la méthode essaie d’obtenir la propriété du `mutex`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la méthode obtient avec succès la propriété de `mutex` ; sinon, **`false`** .
 
@@ -130,7 +131,7 @@ Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex :: try_lock_until
+## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a> timed_mutex :: try_lock_until
 
 Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 
@@ -146,7 +147,7 @@ bool try_lock_until(const xtime* Abs_time);
 *Abs_time*\
 Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente plus d'obtenir la propriété du `mutex`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la méthode obtient avec succès la propriété de `mutex` ; sinon, **`false`** .
 
@@ -154,7 +155,7 @@ Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente 
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex :: Unlock
+## <a name="timed_mutexunlock"></a><a name="unlock"></a> timed_mutex :: Unlock
 
 Libère la propriété du `mutex`.
 

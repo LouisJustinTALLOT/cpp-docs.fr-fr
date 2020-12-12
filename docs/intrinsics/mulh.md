@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __mulh'
 title: __mulh
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0cee31b6a9e1088d76200cd46482fd4aaf80474b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221684"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118938"
 ---
 # <a name="__mulh"></a>__mulh
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Retourne les 64 bits de poids fort du produit des entiers 2 64 bits signés.
 
@@ -36,23 +37,23 @@ __int64 __mulh(
 *p*\
 [in] Second nombre à multiplier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 64 bits de poids fort du résultat 128 bits de la multiplication.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`__mulh`|X64|
+|`__mulh`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // mulh.cpp
@@ -79,7 +80,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

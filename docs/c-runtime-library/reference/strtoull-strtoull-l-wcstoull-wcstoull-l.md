@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strtoull, _strtoull_l, wcstoull, _wcstoull_l'
 title: strtoull, _strtoull_l, wcstoull, _wcstoull_l
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-ms.openlocfilehash: 9664ee4c671796ad8805c19c93d5a5fd289c80ae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 941a38f5c972b73924aabea826e5495929505fe5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117261"
 ---
 # <a name="strtoull-_strtoull_l-wcstoull-_wcstoull_l"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 
@@ -94,7 +95,7 @@ Base numérique à utiliser.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **strtoull** retourne la valeur convertie, le cas échéant, ou **ULLONG_MAX** en cas de dépassement de capacité. **strtoull** retourne 0 si aucune conversion ne peut être effectuée. **wcstoull** retourne des valeurs de façon analogue à **strtoull**. Pour les deux fonctions, **errno** a la valeur **ERANGE** si le dépassement de capacité positif ou négatif se produit.
 
@@ -121,7 +122,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 **strtoull** attend que *strSource* pointe vers une chaîne au format suivant :
 
-> [*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*chiffres* &#124; *lettres*]
+> [*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*chiffres*  &#124; *lettres*]
 
 Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés. les *chiffres* correspondent à un ou plusieurs chiffres décimaux. les *lettres* sont une ou plusieurs lettres de « a » à « z » (ou de « a » à « z »). Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si la *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* a la valeur 0, les caractères initiaux de la chaîne vers laquelle pointe *strSource* sont utilisés pour déterminer la base. Si le premier caractère est « 0 » et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* a la valeur 0 et que le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrête l’analyse. **strtoull** autorise un préfixe de signe plus ( **+** ) ou de signe moins ( **-** ); un signe moins de début indique que la valeur de retour est négative.
 

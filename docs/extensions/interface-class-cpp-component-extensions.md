@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe d’interface (C++/CLI et C++/CX)'
 title: classe d’interface (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 8a637332110fa18a7a5803d7512c643e29d66eab
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 8d6fd1eda0ddaaf6ab995e09ad1d84f78fcc91be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807743"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119017"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>classe d’interface (C++/CLI et C++/CX)
 

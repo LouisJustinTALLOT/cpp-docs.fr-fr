@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure InterfaceTraits'
 title: InterfaceTraits (structure)
 ms.date: 10/03/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8dfa540119b0a120ea7b8d9365a0e8b8203939b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124525"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits (structure)
 
@@ -61,7 +62,7 @@ Le deuxième modèle est une spécialisation pour les interfaces masquées. Le t
 
 ## <a name="members"></a>Membres
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>Typedefs publics
+### <a name="public-typedefs"></a><a name="public-typedefs"></a> Typedefs publics
 
 Nom   | Description
 ------ | ------------------------------------------
@@ -93,7 +94,7 @@ Nom                                   | Description
 
 **Espace de noms :** Microsoft :: WRL ::D étails
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits :: CanCastTo,
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a> InterfaceTraits :: CanCastTo,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -117,7 +118,7 @@ ID d’interface de `Base` .
 *ppv*<br/>
 Si cette opération réussit, *PPV* pointe vers l’interface spécifiée par `Base` . Sinon, *PPV* a la valeur **`nullptr`** .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si cette opération réussit et que *ptr* est casté en pointeur vers `Base` ; sinon, **`false`** .
 
@@ -127,7 +128,7 @@ Indique si le pointeur spécifié peut être casté en pointeur vers `Base` .
 
 Pour plus d’informations sur `Base` , consultez la section [typedefs publics](#public-typedefs) .
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits :: Casttobase,
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a> InterfaceTraits :: Casttobase,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -141,12 +142,12 @@ static __forceinline Base* CastToBase(
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Type de *ptr*du paramètre.
+Type de *ptr* du paramètre.
 
 *ptr*<br/>
 Pointeur vers un type *T*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers `Base`.
 
@@ -156,7 +157,7 @@ Effectue un cast du pointeur spécifié vers un pointeur vers `Base` .
 
 Pour plus d’informations sur `Base` , consultez la section [typedefs publics](#public-typedefs) .
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits :: Casttounknown,
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a> InterfaceTraits :: Casttounknown,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -170,12 +171,12 @@ static __forceinline IUnknown* CastToUnknown(
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Type de *ptr*du paramètre.
+Type de *ptr* du paramètre.
 
 *ptr*<br/>
 Pointeur vers le type *T*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers IUnknown à partir duquel `Base` est dérivé.
 
@@ -185,7 +186,7 @@ Effectue un cast du pointeur spécifié vers un pointeur vers `IUnknown` .
 
 Pour plus d’informations sur `Base` , consultez la section [typedefs publics](#public-typedefs) .
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits :: Fillarraywithiid,
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a> InterfaceTraits :: Fillarraywithiid,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -212,7 +213,7 @@ Contrairement au nom de cette API, un seul élément de tableau est modifié ; 
 
 Pour plus d’informations sur `Base` , consultez la section [typedefs publics](#public-typedefs) .
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits :: Iidcount,
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a> InterfaceTraits :: Iidcount,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -224,7 +225,7 @@ static const unsigned long IidCount = 1;
 
 Contient le nombre d’ID d’interface associés à l' `InterfaceTraits` objet actuel.
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits :: Verify
+## <a name="interfacetraitsverify"></a><a name="verify"></a> InterfaceTraits :: Verify
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 

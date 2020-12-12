@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fcvt'
 title: fcvt
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - fcvt function
 ms.assetid: 1f748ad0-e186-400e-af8e-80d4431523d7
-ms.openlocfilehash: 2e4358cbaecca29f282c32070e41771222d54067
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2500d858e6fce640f6a8d8f009fb5d32895f7d29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117456"
 ---
 # <a name="fcvt"></a>fcvt
 
