@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : présentation du SAL'
 title: Présentation de SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: affbca9eb65467b65ee5ba4ed3ae550a6da25ac7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226045"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288501"
 ---
 # <a name="understanding-sal"></a>Présentation de SAL
 
@@ -40,7 +41,7 @@ Pouvez-vous indiquer ce que fait cette fonction ? Lorsqu’une fonction est imp
 
 La documentation contient quelques bits d’informations qui suggèrent que votre code doit gérer certaines propriétés pour garantir l’exactitude du programme :
 
-- `memcpy`copie le `count` d’octets de la mémoire tampon source vers la mémoire tampon de destination.
+- `memcpy` copie le `count` d’octets de la mémoire tampon source vers la mémoire tampon de destination.
 
 - La mémoire tampon de destination doit être au moins aussi grande que la mémoire tampon source.
 
@@ -126,9 +127,9 @@ L' `_In_` annotation indique que :
 
 - L’appelant doit fournir la mémoire tampon et l’initialiser.
 
-- `_In_`spécifie « lecture seule ». Une erreur courante consiste à s’appliquer `_In_` à un paramètre qui doit avoir l’annotation à la `_Inout_` place.
+- `_In_` spécifie « lecture seule ». Une erreur courante consiste à s’appliquer `_In_` à un paramètre qui doit avoir l’annotation à la `_Inout_` place.
 
-- `_In_`est autorisé mais ignoré par l’analyseur sur les valeurs scalaires non-pointeur.
+- `_In_` est autorisé mais ignoré par l’analyseur sur les valeurs scalaires non-pointeur.
 
 ```cpp
 void InCallee(_In_ int *pInt)
@@ -156,7 +157,7 @@ Si vous utilisez Visual Studio Code analyse sur cet exemple, il vérifie que les
 
 ### <a name="example-the-_in_opt_-annotation"></a>Exemple : \_ dans l' \_ \_ annotation opt
 
-`_In_opt_`est identique à `_In_` , à ceci près que le paramètre d’entrée peut avoir la valeur null et, par conséquent, la fonction doit vérifier cela.
+`_In_opt_` est identique à `_In_` , à ceci près que le paramètre d’entrée peut avoir la valeur null et, par conséquent, la fonction doit vérifier cela.
 
 ```cpp
 
@@ -184,7 +185,7 @@ Visual Studio Code analyse vérifie que la fonction recherche la valeur NULL ava
 
 ### <a name="example-the-_out_-annotation"></a>Exemple : \_ annotation out \_
 
-`_Out_`prend en charge un scénario courant dans lequel un pointeur non NULL qui pointe vers une mémoire tampon d’élément est passé et la fonction initialise l’élément. L’appelant n’a pas besoin d’initialiser la mémoire tampon avant l’appel ; la fonction appelée promet de l’initialiser avant de retourner la valeur.
+`_Out_` prend en charge un scénario courant dans lequel un pointeur non NULL qui pointe vers une mémoire tampon d’élément est passé et la fonction initialise l’élément. L’appelant n’a pas besoin d’initialiser la mémoire tampon avant l’appel ; la fonction appelée promet de l’initialiser avant de retourner la valeur.
 
 ```cpp
 void GoodOutCallee(_Out_ int *pInt)
@@ -210,7 +211,7 @@ Visual Studio Code outil d’analyse vérifie que l’appelant passe un pointeur
 
 ### <a name="example-the-_out_opt_-annotation"></a>Exemple : \_ annotation out \_ OPT \_
 
-`_Out_opt_`est identique à `_Out_` , à ceci près que le paramètre peut avoir la valeur null et, par conséquent, la fonction doit vérifier cela.
+`_Out_opt_` est identique à `_Out_` , à ceci près que le paramètre peut avoir la valeur null et, par conséquent, la fonction doit vérifier cela.
 
 ```cpp
 void GoodOutOptCallee(_Out_opt_ int *pInt)
@@ -237,7 +238,7 @@ Visual Studio Code analyse vérifie que cette fonction recherche la valeur NULL 
 
 ### <a name="example-the-_inout_-annotation"></a>Exemple : l' \_ \_ annotation INOUT
 
-`_Inout_`est utilisé pour annoter un paramètre de pointeur qui peut être modifié par la fonction. Le pointeur doit pointer vers des données initialisées valides avant l’appel, et même s’il est modifié, il doit toujours avoir une valeur valide au retour. L’annotation spécifie que la fonction peut lire et écrire librement dans la mémoire tampon d’un élément. L’appelant doit fournir la mémoire tampon et l’initialiser.
+`_Inout_` est utilisé pour annoter un paramètre de pointeur qui peut être modifié par la fonction. Le pointeur doit pointer vers des données initialisées valides avant l’appel, et même s’il est modifié, il doit toujours avoir une valeur valide au retour. L’annotation spécifie que la fonction peut lire et écrire librement dans la mémoire tampon d’un élément. L’appelant doit fournir la mémoire tampon et l’initialiser.
 
 > [!NOTE]
 > Comme `_Out_` , `_Inout_` doit s’appliquer à une valeur modifiable.
@@ -268,7 +269,7 @@ Visual Studio Code analyse vérifie que les appelants passent un pointeur non NU
 
 ### <a name="example-the-_inout_opt_-annotation"></a>Exemple : \_ annotation INOUT \_ OPT \_
 
-`_Inout_opt_`est identique à `_Inout_` , à ceci près que le paramètre d’entrée peut avoir la valeur null et, par conséquent, la fonction doit vérifier cela.
+`_Inout_opt_` est identique à `_Inout_` , à ceci près que le paramètre d’entrée peut avoir la valeur null et, par conséquent, la fonction doit vérifier cela.
 
 ```cpp
 void GoodInOutOptCallee(_Inout_opt_ int *pInt)
@@ -297,7 +298,7 @@ Visual Studio Code analyse vérifie que cette fonction recherche la valeur NULL 
 
 ### <a name="example-the-_outptr_-annotation"></a>Exemple : l' \_ \_ annotation Outptr
 
-`_Outptr_`est utilisé pour annoter un paramètre destiné à retourner un pointeur.  Le paramètre lui-même ne doit pas avoir la valeur NULL, et la fonction appelée retourne un pointeur non NULL dans celui-ci et ce pointeur pointe vers les données initialisées.
+`_Outptr_` est utilisé pour annoter un paramètre destiné à retourner un pointeur.  Le paramètre lui-même ne doit pas avoir la valeur NULL, et la fonction appelée retourne un pointeur non NULL dans celui-ci et ce pointeur pointe vers les données initialisées.
 
 ```cpp
 void GoodOutPtrCallee(_Outptr_ int **pInt)
@@ -327,7 +328,7 @@ Visual Studio Code analyse vérifie que l’appelant passe un pointeur non NULL 
 
 ### <a name="example-the-_outptr_opt_-annotation"></a>Exemple : \_ annotation Outptr \_ OPT \_
 
-`_Outptr_opt_`est identique à `_Outptr_` , à ceci près que le paramètre est facultatif : l’appelant peut passer un pointeur null pour le paramètre.
+`_Outptr_opt_` est identique à `_Outptr_` , à ceci près que le paramètre est facultatif : l’appelant peut passer un pointeur null pour le paramètre.
 
 ```cpp
 void GoodOutPtrOptCallee(_Outptr_opt_ int **pInt)

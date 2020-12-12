@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : prise en charge des threads libres dans votre fournisseur'
 title: Prise en charge du Free Threading dans votre fournisseur
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: 50e05b70a782dd343031443540790697e980c994
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4f6785dd85ae043ce0ee74c1dda4fa365c566729
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286473"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Prise en charge du Free Threading dans votre fournisseur
 
@@ -37,10 +38,10 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-Pour plus d’informations sur la façon de protéger des sections critiques avec des `Lock` et des `Unlock`, consultez [Multithreading : comment utiliser les classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Pour plus d’informations sur la façon de protéger des sections critiques avec `Lock` et `Unlock` , consultez [Multithreading : comment utiliser les classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
-Vérifiez que toutes les méthodes que vous substituez (par exemple `Execute`) sont thread-safe.
+Vérifiez que toutes les méthodes que vous substituez (comme `Execute` ) sont thread-safe.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des modèles du fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Utilisation des modèles de fournisseur OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

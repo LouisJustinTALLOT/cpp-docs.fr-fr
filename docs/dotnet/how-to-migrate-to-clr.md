@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : effectuer une migration vers/CLR'
 title: 'Procédure : Migrer vers -clr'
 ms.custom: get-started-article
 ms.date: 09/18/2018
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 0c21fe585049ebce6383c5d8f673704e7362cd72
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 39853f755074a4999f39f9e04445234abfbe93b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286395"
 ---
 # <a name="how-to-migrate-to-clr"></a>Comment : effectuer une migration vers /clr
 
@@ -100,7 +101,7 @@ vous pouvez sélectionner **/CLR** dans l’environnement de développement en s
 > [!NOTE]
 > Lors de la mise à niveau d’une bibliothèque managée ou d’un projet de service Web à partir de Visual Studio 2003, l’option de compilateur **/zl** sera ajoutée à la page de propriétés **ligne de commande** . Cela provoque l’LNK2001. Supprimez **/zl** de la page de propriétés **ligne de commande** pour résoudre. Pour plus d’informations, consultez [/zl (omettre le nom de la bibliothèque par défaut)](../build/reference/zl-omit-default-library-name.md) et [définir les propriétés du compilateur et](../build/working-with-project-properties.md) de la Build. Ou ajoutez Msvcrt. lib et msvcmrt. lib à la propriété **dépendances supplémentaires** de l’éditeur de liens.
 
-Pour les projets générés avec des makefiles, les options de compilateur incompatibles doivent être désactivées manuellement une fois que **/CLR** est ajouté. Consultez[restrictions//CLR](../build/reference/clr-restrictions.md) pour plus d’informations sur les options du compilateur qui ne sont pas compatibles avec **/CLR**.
+Pour les projets générés avec des makefiles, les options de compilateur incompatibles doivent être désactivées manuellement une fois que **/CLR** est ajouté. Consultez [restrictions//CLR](../build/reference/clr-restrictions.md) pour plus d’informations sur les options du compilateur qui ne sont pas compatibles avec **/CLR**.
 
 ### <a name="precompiled-headers"></a>En-têtes précompilés
 
@@ -132,7 +133,7 @@ Les types natifs sont privés par défaut. Cela peut entraîner un type natif qu
 
 ### <a name="floating-point-and-alignment-issues"></a>Problèmes de virgule flottante et d’alignement
 
-`__controlfp`n’est pas pris en charge sur le common language runtime (consultez [_control87, _controlfp, \_ _control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) pour plus d’informations). Le CLR ne respecte pas non plus l' [alignement](../cpp/align-cpp.md).
+`__controlfp` n’est pas pris en charge sur le common language runtime (consultez [_control87, _controlfp, \_ _control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) pour plus d’informations). Le CLR ne respecte pas non plus l' [alignement](../cpp/align-cpp.md).
 
 ### <a name="com-initialization"></a>Initialisation COM
 

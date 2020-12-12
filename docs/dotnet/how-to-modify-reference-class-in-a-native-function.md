@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : modifier la classe de référence dans une fonction native'
 title: 'Comment : modifier la classe de référence dans une fonction native'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: a9ff21390f8a5d7b20c8c36e596f80140ccb9a39
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 49bdb082d5b884a0cbb34970b2ffebe988f15c0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286499"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>Comment : modifier la classe de référence dans une fonction native
 

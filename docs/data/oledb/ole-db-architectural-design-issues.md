@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : OLE DB problèmes de conception architecturale'
 title: Questions relatives à la conception architecturale d'OLE DB
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e6bd90b5d3c67fbdfb8cdfbb9c32af88ed106e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311867"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286980"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Questions relatives à la conception architecturale d'OLE DB
 
 > [!NOTE]
-> L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures. Vous pouvez toujours ajouter la fonctionnalité manuellement. Pour plus d’informations, consultez [Création d’un consommateur sans utiliser l’Assistant](creating-a-consumer-without-using-a-wizard.md).
+> L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures. Vous pouvez toujours ajouter la fonctionnalité manuellement. Pour plus d’informations, consultez [Création d’un consommateur sans utiliser l’Assistant](creating-a-consumer-without-using-a-wizard.md).
 
 Réfléchissez aux problèmes suivants avant de commencer la création de votre application OLE DB :
 
@@ -42,5 +43,5 @@ Par exemple, si vous souhaitez mettre à jour des données dans un ensemble de l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation OLE DB](../../data/oledb/ole-db-programming.md)<br/>
-[Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)
+[Programmation OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)

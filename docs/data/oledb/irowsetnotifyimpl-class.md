@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe IRowsetNotifyImpl'
 title: IRowsetNotifyImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - OnRowChange method
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-ms.openlocfilehash: f938d9e92bc2f447ecfa82f2bfb27c8fda7652ab
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e07f918d7315998f5aa0dc14dbd613520a68f134
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287045"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl, classe
 
@@ -37,7 +38,7 @@ Implémente et inscrit [IRowsetNotify](/previous-versions/windows/desktop/ms7129
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 

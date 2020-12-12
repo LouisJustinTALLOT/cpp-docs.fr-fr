@@ -1,21 +1,22 @@
 ---
+description: 'En savoir plus sur : lecture de chaînes dans le fournisseur OLE DB'
 title: Lecture de chaînes dans le fournisseur OLE DB
 ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: d46b4e1a53e7e489763f40e7a5238e65b493f7c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df8812d5589dd457684bf5e36a8a49f798f99aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283807"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286629"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lecture de chaînes dans le fournisseur OLE DB
 
-Le `CCustomRowset::Execute` fonction ouvre un fichier et lit les chaînes. Le consommateur passe le nom de fichier au fournisseur en appelant [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_strCommandText`. `Execute` lit le nom de fichier à partir de `m_strCommandText`. Si le nom de fichier n’est pas valide ou le fichier n’est pas disponible, `Execute` retourne une erreur. Sinon, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes. Pour chaque jeu de chaînes qu’il lit, `Execute` crée une instance de l’enregistrement utilisateur (modifié `CCustomWindowsFile` de [stocker des chaînes dans le fournisseur OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) et le place dans un tableau.
+La `CCustomRowset::Execute` fonction ouvre un fichier et lit les chaînes. Le consommateur transmet le nom de fichier au fournisseur en appelant [ICommandText :: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). Le fournisseur reçoit le nom de fichier et le stocke dans la variable membre `m_strCommandText` . `Execute` lit le nom de fichier à partir de `m_strCommandText` . Si le nom de fichier n’est pas valide ou si le fichier n’est pas disponible, `Execute` retourne une erreur. Dans le cas contraire, il ouvre le fichier et appelle `fgets` pour récupérer les chaînes. Pour chaque ensemble de chaînes qu’il lit, `Execute` crée une instance de l’enregistrement utilisateur (modifié `CCustomWindowsFile` à partir du [stockage des chaînes dans le fournisseur OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) et le place dans un tableau.
 
-Si le fichier ne peut pas être ouvert, `Execute` doit retourner DB_E_NOTABLE. Si elle retourne E_FAIL à la place, le fournisseur ne fonctionnera pas avec beaucoup de consommateurs et ne sont pas transmettre OLE DB [tests de compatibilité](../../data/oledb/testing-your-provider.md).
+Si le fichier ne peut pas être ouvert, `Execute` doit retourner DB_E_NOTABLE. S’il retourne E_FAIL à la place, le fournisseur ne fonctionnera pas avec de nombreux consommateurs et ne passera pas les [tests de conformité](../../data/oledb/testing-your-provider.md)OLE DB.
 
 ## <a name="example"></a>Exemple
 
@@ -91,10 +92,10 @@ public:
 };
 ```
 
-Dans ce cas, votre fournisseur doit être prêt à compiler et exécuter. Pour tester le fournisseur, vous avez besoin d’un consommateur avec la fonctionnalité de correspondance. [Implémentation d’un consommateur Simple](../../data/oledb/implementing-a-simple-consumer.md) montre comment créer un tel un consommateur de test. Exécutez le consommateur de test avec le fournisseur et vérifiez que le consommateur de test récupère les chaînes appropriées à partir du fournisseur.
+Une fois cette opération effectuée, votre fournisseur doit être prêt à être compilé et exécuté. Pour tester le fournisseur, vous avez besoin d’un consommateur avec une fonctionnalité de correspondance. L' [implémentation d’un consommateur simple](../../data/oledb/implementing-a-simple-consumer.md) montre comment créer un tel consommateur de test. Exécutez le consommateur de test avec le fournisseur et vérifiez que le consommateur de test récupère les chaînes appropriées auprès du fournisseur.
 
-Lorsque vous avez testé avec succès votre fournisseur, vous souhaiterez peut-être améliorer son fonctionnement en implémentant des interfaces supplémentaires. Voici un exemple dans [amélioration le fournisseur Simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md).
+Une fois que vous avez testé votre fournisseur, vous souhaiterez peut-être améliorer ses fonctionnalités en implémentant des interfaces supplémentaires. Un exemple est présenté dans [amélioration du fournisseur de Read-Only simple](../../data/oledb/enhancing-the-simple-read-only-provider.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Implémentation d’un fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>
+[Implémentation du fournisseur de Read-Only simple](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>

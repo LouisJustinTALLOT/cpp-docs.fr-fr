@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : align (C++)'
 title: align (C++)
 ms.date: 12/17/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: 0a1212f1c78f49029f82be5a2f5d82ea1788b6e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2794c94e5ef56063ea0b5621838a8e33cfdca5c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227658"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288302"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -24,13 +25,13 @@ Utilisez `__declspec(align(#))` pour contrôler avec précision l'alignement des
 
 ## <a name="syntax"></a>Syntaxe
 
-> déclarateur **__declspec (align (** *#* **))** *declarator*
+> déclarateur **__declspec (align (** *#* **))** 
 
 ## <a name="remarks"></a>Notes
 
 L'écriture d'applications qui utilisent les dernières instructions du processeur introduit de nouvelles contraintes et de nouveaux problèmes. De nombreuses instructions nouvelles requièrent des données qui sont alignées sur des limites de 16 octets. En outre, en alignant les données fréquemment utilisées sur la taille de la ligne de cache du processeur, vous améliorez les performances du cache. Par exemple, si vous définissez une structure dont la taille est inférieure à 32 octets, vous pouvez avoir besoin d’un alignement de 32 octets pour vous assurer que les objets de ce type de structure sont mis en cache efficacement.
 
-\#valeur d’alignement. Les entrées valides sont des puissances entières de deux comprises entre 1 et 8192 (octets), telles que 2, 4, 8, 16, 32 ou 64. `declarator`données que vous déclarez comme alignées.
+\# valeur d’alignement. Les entrées valides sont des puissances entières de deux comprises entre 1 et 8192 (octets), telles que 2, 4, 8, 16, 32 ou 64. `declarator` données que vous déclarez comme alignées.
 
 Pour plus d’informations sur la façon de retourner une valeur de type `size_t` qui est la spécification d’alignement du type, consultez [`alignof`](../cpp/alignof-operator.md) . Pour plus d’informations sur la façon de déclarer des pointeurs non alignés lorsque vous ciblez des processeurs 64 bits, consultez [`__unaligned`](../cpp/unaligned.md) .
 
@@ -70,9 +71,9 @@ Le compilateur utilise ces règles pour l'alignement de la structure :
 
 Pour plus d'informations, consultez les pages suivantes :
 
-- [`align`Illustre](#vclrfalignexamples)
+- [`align` Illustre](#vclrfalignexamples)
 
-- [Définition de nouveaux types avec`__declspec(align(#))`](#vclrf_declspecaligntypedef)
+- [Définition de nouveaux types avec `__declspec(align(#))`](#vclrf_declspecaligntypedef)
 
 - [Alignement des données dans le stockage local des threads](#vclrfthreadlocalstorageallocation)
 
@@ -80,7 +81,7 @@ Pour plus d'informations, consultez les pages suivantes :
 
 - [Exemples d’alignement de structure](../build/x64-software-conventions.md#examples-of-structure-alignment) (spécifique à x64)
 
-## <a name="align-examples"></a><a name="vclrfalignexamples"></a>Exemples d’alignement
+## <a name="align-examples"></a><a name="vclrfalignexamples"></a> Exemples d’alignement
 
 Les exemples suivants montrent comment `__declspec(align(#))` affecte la taille et l'alignement des structures de données. Les exemples supposent les définitions suivantes :
 
@@ -117,7 +118,7 @@ struct S3 {
 };
 ```
 
-Dans cet exemple, notez que `a` a l'alignement de son type naturel, dans le cas présent, 4 octets. Toutefois, `S1` doit être aligné sur 32 octets. 28 octets de remplissage suivent `a` , de sorte que `s1` commence à l’offset 32. `S4`hérite ensuite de la spécification d’alignement de `S1` , car il s’agit de la plus grande exigence d’alignement dans la structure. `sizeof(struct S4)` retourne 64.
+Dans cet exemple, notez que `a` a l'alignement de son type naturel, dans le cas présent, 4 octets. Toutefois, `S1` doit être aligné sur 32 octets. 28 octets de remplissage suivent `a` , de sorte que `s1` commence à l’offset 32. `S4` hérite ensuite de la spécification d’alignement de `S1` , car il s’agit de la plus grande exigence d’alignement dans la structure. `sizeof(struct S4)` retourne 64.
 
 ```cpp
 struct S4 {
@@ -171,7 +172,7 @@ void fn() {
 
 Quand la mémoire est allouée sur le tas, l'alignement dépend de la fonction d'allocation appelée.  Par exemple, si vous utilisez `malloc`, le résultat dépend de la taille d’opérande. Si *arg* >= 8, la mémoire retournée est alignée sur 8 octets. Si *arg* < 8, l’alignement de la mémoire retournée est la première puissance de 2 inférieure à *arg*. Par exemple, si vous utilisez `malloc(7)` , l’alignement est de 4 octets.
 
-## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a>Définition de nouveaux types avec`__declspec(align(#))`
+## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a> Définition de nouveaux types avec `__declspec(align(#))`
 
 Vous pouvez définir un type avec une caractéristique d'alignement.
 
@@ -184,7 +185,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 À présent, `aType` et `bType` sont de la même taille (8 octets) mais les variables de type `bType` sont alignées sur 32 octets.
 
-## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a>Alignement des données dans le stockage local des threads
+## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a> Alignement des données dans le stockage local des threads
 
 Le stockage local des threads de type statique (TLS) créé avec l'attribut `__declspec(thread)` et placé dans la section TLS de l'image contribue à l'alignement exactement comme les données statiques normales. Pour créer des données TLS, le système d'exploitation alloue de la mémoire de la taille de la section TLS et respecte l'attribut d'alignement de la section TLS.
 

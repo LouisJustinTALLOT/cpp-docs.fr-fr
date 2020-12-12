@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : erreurs et avertissements d’optimisation de Profile-Guided (PGxxxx)'
 title: Erreurs et avertissements de l’optimisation guidée par profil
 ms.date: 04/17/2019
 f1_keywords:
@@ -44,29 +45,29 @@ f1_keywords:
 - PG1066
 - PG1067
 ms.assetid: f67b1011-fb64-4df3-9356-d52c9423ff3f
-ms.openlocfilehash: 9be94ee3145dc23543fa5880c14e08a2ed25c76b
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 6c319d7f4ef7e0eaeaf3bf551f83ce1e2a312446
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97285186"
 ---
-# <a name="profile-guided-optimization-errors-and-warnings-pgxxxx"></a>Erreurs de l’optimisation guidée par profil et les avertissements (PGxxxx)
+# <a name="profile-guided-optimization-errors-and-warnings-pgxxxx"></a>Profile-Guided les erreurs et avertissements d’optimisation (PGxxxx)
 
-Cette section est une référence pour les erreurs générées par les outils de l’optimisation guidée par profil (PGO). PGO erreurs et avertissements ont la forme PG*xxxx*, où *xxxx* est un nombre à quatre chiffres.
+Cette section est une référence aux erreurs générées par les outils d’optimisation de Profile-Guided. Les erreurs et les avertissements PGO se présentent sous la forme PG *xxxx*, où *xxxx* est un nombre à quatre chiffres.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="pgo-errors"></a>Erreurs PGO
 
-[Erreur de l’optimisation guidée par profil PG0165](../../error-messages/tool-errors/profile-guided-optimization-error-pg0165.md)
+[Erreur d’optimisation guidée par profil PG0165](../../error-messages/tool-errors/profile-guided-optimization-error-pg0165.md)
 
-## <a name="pgo-warnings"></a>Avertissements de PGO
+## <a name="pgo-warnings"></a>Avertissements PGO
 
 [Avertissement de l’optimisation guidée par profil PG1039](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1039.md) \
 [Avertissement de l’optimisation guidée par profil PG1087](../../error-messages/tool-errors/profile-guided-optimization-warning-pg1087.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erreurs et avertissements du compilateur C/C++ et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md) \
 [Optimisations guidées par profil](../../build/profile-guided-optimizations.md)

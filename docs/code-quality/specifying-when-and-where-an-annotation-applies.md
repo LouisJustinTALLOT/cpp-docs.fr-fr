@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spécification du moment et de l’endroit où une annotation s’applique'
 title: Spécification du moment où une annotation est applicable et dans quel cas
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -8,12 +9,12 @@ f1_keywords:
 - _When_
 - _At_buffer_
 ms.assetid: 8e4f4f9c-5dfa-4835-87df-ecd1698fc650
-ms.openlocfilehash: 790a1349c3f4d7dbee878f3eb695d83682a7fa7d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73b461b4e072958b25f43ac3692241549e1c7823
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288514"
 ---
 # <a name="specifying-when-and-where-an-annotation-applies"></a>Spécification du moment où une annotation est applicable et dans quel cas
 
@@ -25,10 +26,10 @@ Pour contrôler quand et où les annotations s’appliquent, utilisez les annota
 
 |Annotation|Description|
 |----------------|-----------------|
-|`_At_(expr, anno-list)`|`expr`expression qui produit une lvalue. Les annotations de `anno-list` sont appliquées à l’objet nommé par `expr` . Pour chaque annotation dans `anno-list` , `expr` est interprétée dans la condition préalable si l’annotation est interprétée dans les conditions préalables, et dans le cas où l’annotation est interprétée dans une condition postérieure.|
-|`_At_buffer_(expr, iter, elem-count, anno-list)`|`expr`expression qui produit une lvalue. Les annotations de `anno-list` sont appliquées à l’objet nommé par `expr` . Pour chaque annotation dans `anno-list` , `expr` est interprétée dans la condition préalable si l’annotation est interprétée dans la condition préalable et dans le cas où l’annotation est interprétée dans une condition de publication.<br /><br /> `iter`nom d’une variable dont la portée est l’annotation (y compris `anno-list` ). `iter`a un type implicite **`long`** . Les variables portant le même nom dans une portée englobante sont masquées de l’évaluation.<br /><br /> `elem-count`expression qui prend la valeur d’un entier.|
+|`_At_(expr, anno-list)`|`expr` expression qui produit une lvalue. Les annotations de `anno-list` sont appliquées à l’objet nommé par `expr` . Pour chaque annotation dans `anno-list` , `expr` est interprétée dans la condition préalable si l’annotation est interprétée dans les conditions préalables, et dans le cas où l’annotation est interprétée dans une condition postérieure.|
+|`_At_buffer_(expr, iter, elem-count, anno-list)`|`expr` expression qui produit une lvalue. Les annotations de `anno-list` sont appliquées à l’objet nommé par `expr` . Pour chaque annotation dans `anno-list` , `expr` est interprétée dans la condition préalable si l’annotation est interprétée dans la condition préalable et dans le cas où l’annotation est interprétée dans une condition de publication.<br /><br /> `iter` nom d’une variable dont la portée est l’annotation (y compris `anno-list` ). `iter` a un type implicite **`long`** . Les variables portant le même nom dans une portée englobante sont masquées de l’évaluation.<br /><br /> `elem-count` expression qui prend la valeur d’un entier.|
 |`_Group_(anno-list)`|Les annotations dans `anno-list` sont toutes considérées comme ayant un qualificateur qui s’applique à l’annotation de groupe appliquée à chaque annotation.|
-|`_When_(expr, anno-list)`|`expr`expression qui peut être convertie en **`bool`** . Si la valeur est différente de zéro ( **`true`** ), les annotations spécifiées dans `anno-list` sont considérées comme applicables.<br /><br /> Par défaut, pour chaque annotation dans `anno-list` , `expr` est interprété comme utilisant les valeurs d’entrée si l’annotation est une condition préalable et comme utilisant les valeurs de sortie si l’annotation est une condition postérieure. Pour remplacer la valeur par défaut, vous pouvez utiliser l' `_Old_` intrinsèque lorsque vous évaluez une condition postérieure pour indiquer que les valeurs d’entrée doivent être utilisées. **Remarque :**  Différentes annotations peuvent être activées à la suite de l’utilisation de `_When_` si une valeur mutable (par exemple, `*pLength` ) est impliquée, car le résultat évalué de `expr` dans la condition préalable peut différer de son résultat évalué dans le billet.|
+|`_When_(expr, anno-list)`|`expr` expression qui peut être convertie en **`bool`** . Si la valeur est différente de zéro ( **`true`** ), les annotations spécifiées dans `anno-list` sont considérées comme applicables.<br /><br /> Par défaut, pour chaque annotation dans `anno-list` , `expr` est interprété comme utilisant les valeurs d’entrée si l’annotation est une condition préalable et comme utilisant les valeurs de sortie si l’annotation est une condition postérieure. Pour remplacer la valeur par défaut, vous pouvez utiliser l' `_Old_` intrinsèque lorsque vous évaluez une condition postérieure pour indiquer que les valeurs d’entrée doivent être utilisées. **Remarque :**  Différentes annotations peuvent être activées à la suite de l’utilisation de `_When_` si une valeur mutable (par exemple, `*pLength` ) est impliquée, car le résultat évalué de `expr` dans la condition préalable peut différer de son résultat évalué dans le billet.|
 
 ## <a name="see-also"></a>Voir aussi
 

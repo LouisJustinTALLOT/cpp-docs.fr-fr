@@ -1,22 +1,23 @@
 ---
+description: 'En savoir plus sur : détermination dynamique des colonnes retournées au consommateur'
 title: Détermination de manière dynamique des colonnes retournées au consommateur
 ms.date: 10/26/2018
 helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 6b6061fc7da6f4c4dd53ae70a0e2d5ba7ec40023
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: fd70164edff5b9267e01a891a143920ac4e60a35
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079643"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287565"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Détermination de manière dynamique des colonnes retournées au consommateur
 
-Les macros PROVIDER_COLUMN_ENTRY gèrent normalement l’appel de `IColumnsInfo::GetColumnsInfo`. Toutefois, étant donné qu’un consommateur peut choisir d’utiliser des signets, le fournisseur doit être en mesure de modifier les colonnes retournées selon que le consommateur demande ou non un signet.
+Les macros PROVIDER_COLUMN_ENTRY gèrent normalement l' `IColumnsInfo::GetColumnsInfo` appel. Toutefois, étant donné qu’un consommateur peut choisir d’utiliser des signets, le fournisseur doit être en mesure de modifier les colonnes retournées selon que le consommateur demande ou non un signet.
 
-Pour gérer l’appel de `IColumnsInfo::GetColumnsInfo`, supprimez le PROVIDER_COLUMN_MAP, qui définit une fonction `GetColumnInfo`, à partir de l’enregistrement d’utilisateur `CCustomWindowsFile` dans un RS. h *personnalisé*et remplacez-le par la définition de votre propre `GetColumnInfo` fonction :
+Pour gérer l' `IColumnsInfo::GetColumnsInfo` appel, supprimez le PROVIDER_COLUMN_MAP, qui définit une fonction `GetColumnInfo` , à partir de l' `CCustomWindowsFile` enregistrement utilisateur dans RS. h *personnalisé* et remplacez-le par la définition de votre propre `GetColumnInfo` fonction :
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -39,11 +40,11 @@ public:
 };
 ```
 
-Ensuite, implémentez la fonction `GetColumnInfo` dans *personnalisé*RS. cpp, comme indiqué dans le code suivant.
+Ensuite, implémentez la `GetColumnInfo` fonction dans *personnalisé* RS. cpp, comme indiqué dans le code suivant.
 
-`GetColumnInfo` vérifie d’abord si la propriété OLE DB `DBPROP_BOOKMARKS` est définie. Pour obtenir la propriété, `GetColumnInfo` utilise un pointeur (`pRowset`) sur l’objet d’ensemble de lignes. Le pointeur `pThis` représente la classe qui a créé l’ensemble de lignes, qui est la classe où le mappage de propriété est stocké. `GetColumnInfo` conversions le pointeur de `pThis` vers un pointeur `RCustomRowset`.
+`GetColumnInfo` vérifie d’abord si la propriété OLE DB `DBPROP_BOOKMARKS` est définie. Pour obtenir la propriété, `GetColumnInfo` utilise un pointeur ( `pRowset` ) vers l’objet d’ensemble de lignes. Le `pThis` pointeur représente la classe qui a créé l’ensemble de lignes, qui est la classe où le mappage de propriété est stocké. `GetColumnInfo` conversions `pThis` pointeur vers un `RCustomRowset` pointeur.
 
-Pour vérifier la propriété `DBPROP_BOOKMARKS`, `GetColumnInfo` utilise l’interface `IRowsetInfo`, que vous pouvez obtenir en appelant `QueryInterface` sur l’interface `pRowset`. Vous pouvez également utiliser une méthode ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) à la place.
+Pour vérifier la `DBPROP_BOOKMARKS` propriété, `GetColumnInfo` utilise l' `IRowsetInfo` interface, que vous pouvez obtenir en appelant `QueryInterface` sur l' `pRowset` interface. Vous pouvez également utiliser une méthode ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) à la place.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -135,7 +136,7 @@ Cet exemple utilise un tableau statique pour contenir les informations de colonn
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```
 
-Dans la fonction `GetColumnInfo`, la macro Bookmark est utilisée comme suit :
+Dans la `GetColumnInfo` fonction, la macro Bookmark est utilisée comme suit :
 
 ```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
@@ -147,4 +148,4 @@ Vous pouvez maintenant compiler et exécuter le fournisseur amélioré. Pour tes
 
 ## <a name="see-also"></a>Voir aussi
 
-[Amélioration du fournisseur simple accessible en lecture seule](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>
+[Amélioration du fournisseur de Read-Only simple](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

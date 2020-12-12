@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Irowsetidentityimpl,'
 title: IRowsetIdentityImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 48ed687ff67208109b5a2acf400d98491b4c769a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4cba00d16671c3efd26bc3a9b20e93e1f80a1cc4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287201"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl, classe
 
@@ -40,7 +41,7 @@ Classe dérivée de `IRowsetIdentityImpl` .
 *RowClass*<br/>
 Unité de stockage du `HROW` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 

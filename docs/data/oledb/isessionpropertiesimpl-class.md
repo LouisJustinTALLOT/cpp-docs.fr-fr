@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Isessionpropertiesimpl,'
 title: ISessionPropertiesImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: d664f32226498326ffb092f1d3248fbdbf614d50
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6b20331de5419de868d6739a010eb5df1548a94e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287032"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl, classe
 
@@ -40,7 +41,7 @@ Votre classe, dérivée de `ISessionPropertiesImpl` .
 *PropClass*<br/>
 Classe de propriété définissable par l’utilisateur qui A par défaut la valeur *T*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -53,7 +54,7 @@ Classe de propriété définissable par l’utilisateur qui A par défaut la val
 |[GetProperties](#getproperties)|Retourne la liste des propriétés dans le groupe de propriétés de session qui sont actuellement définies sur la session.|
 |[SetProperties](#setproperties)|Définit les propriétés du groupe de propriétés de session.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Interface obligatoire sur les sessions. Cette classe implémente les propriétés de session en appelant une fonction statique définie par le [mappage de jeu de propriétés](./macros-for-ole-db-provider-templates.md#begin_propset_map). Le mappage de jeu de propriétés doit être spécifié dans votre classe de session.
 

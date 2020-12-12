@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_controlfp'
 title: _set_controlfp
 ms.date: 04/05/2018
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-ms.openlocfilehash: 4d39406db0f4c9ba6374776da62aea2dbb61e23d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 44316cb4114d06ced1b3d67a261bc8d3ceb1aee6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948681"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288865"
 ---
 # <a name="_set_controlfp"></a>_set_controlfp
 
@@ -52,26 +53,26 @@ void __cdecl _set_controlfp(
 *newControl*<br/>
 Nouvelles valeurs en bits du mot de contrôle.
 
-*mask*<br/>
+*filtrage*<br/>
 Masque des bits du nouveau mot de contrôle à définir.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Aucun
+Aucun.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_set_controlfp** est similaire à **_control87**, mais elle définit uniquement le mot de contrôle à virgule flottante sur *newControl*. Les bits contenus dans les valeurs indiquent l’état de contrôle à virgule flottante. L’état de contrôle à virgule flottante permet au programme de modifier les modes de précision, d’arrondi et d’infini dans le package mathématique à virgule flottante. Vous pouvez également masquer ou démasquer les exceptions de virgule flottante à l’aide de **_set_controlfp**. Pour plus d’informations, consultez [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
+La fonction **_set_controlfp** est semblable à **_control87**, mais elle définit uniquement le mot de contrôle à virgule flottante sur *newControl*. Les bits contenus dans les valeurs indiquent l’état de contrôle à virgule flottante. L’état de contrôle à virgule flottante permet au programme de modifier les modes de précision, d’arrondi et d’infini dans le package mathématique à virgule flottante. Vous pouvez également masquer ou démasquer les exceptions de virgule flottante à l’aide de **_set_controlfp**. Pour plus d’informations, consultez [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
 Cette fonction est déconseillée lors de la compilation avec [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car la Common Language Runtime prend en charge uniquement la précision en virgule flottante par défaut.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|Compatibilité|
 |-------------|---------------------|-------------------|
 |**_set_controlfp**|\<float.h>|Processeur x86 uniquement|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur la classe CXMLAccessor
 title: CXMLAccessor, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 36419e85554982d1c3784d0d73663b48cc820b6d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 30725f47add9f9b965fe36226a366342988275e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287695"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor, classe
 
@@ -37,7 +38,7 @@ Vous permet d’accéder aux sources de données en tant que données de chaîne
 class CXMLAccessor : public CDynamicStringAccessorW
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: atldbcli. h
 

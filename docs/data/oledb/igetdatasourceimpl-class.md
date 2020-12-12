@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Igetdatasourceimpl,'
 title: IGetDataSourceImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 4c8af66f41724c5a99dfe271a7dd8babc3a993a5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24cf83b7eb799882f1c7da42854899bcf46fddf2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287266"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl, classe
 
@@ -37,7 +38,7 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 *T*<br/>
 Votre classe, dérivée de `IGetDataSourceImpl` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 

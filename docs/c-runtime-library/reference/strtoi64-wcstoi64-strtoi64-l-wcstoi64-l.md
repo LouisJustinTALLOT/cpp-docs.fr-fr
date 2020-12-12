@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l'
 title: _strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 ms.date: 4/2/2020
 api_name:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: ede96e39b596225d13c041468eb6172853959c6a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5aaf65f3b1c15d24c9a858ff366cc2d53eab481a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288761"
 ---
 # <a name="_strtoi64-_wcstoi64-_strtoi64_l-_wcstoi64_l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
@@ -99,11 +100,11 @@ Base numérique à utiliser.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_strtoi64** retourne la valeur représentée dans la chaîne *strSource*, sauf lorsque la représentation provoque un dépassement de capacité, auquel cas elle retourne **_I64_MAX** ou **_I64_MIN**. La fonction retourne 0 si aucune conversion ne peut être effectuée. **_wcstoi64** retourne des valeurs de façon analogue à **strtoi64**.
 
-Les **_I64_MAX** et les **_I64_MIN** sont définis dans des limites. Manutention.
+Les **_I64_MAX** et les **_I64_MIN** sont définis dans Limits. H.
 
 Si *strSource* a la **valeur null** ou si la *base* est différente de zéro et inférieure à 2 ou supérieure à 36, **errno** a la valeur **EINVAL**.
 
@@ -128,7 +129,7 @@ Si *endptr* n’a pas la **valeur null**, un pointeur vers le caractère qui a a
 
 **_strtoi64** s’attend à ce que *strSource* pointe vers une chaîne au format suivant :
 
-> [*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*chiffres* &#124; *lettres*]
+> [*espace blanc*] [{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [*chiffres*  &#124; *lettres*]
 
 Un espace *blanc* peut se composer d’espaces et de caractères de tabulation, qui sont ignorés ; les *chiffres* correspondent à un ou plusieurs chiffres décimaux ; les *lettres* sont une ou plusieurs lettres de « a » à « z » (ou de « a » à « z »).  Le premier caractère qui ne correspond pas à ce format a pour effet d’arrêter l’analyse. Si la *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* a la valeur 0, les caractères initiaux de la chaîne vers laquelle pointe *strSource* sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme étant un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient affecter des valeurs comprises entre 10 et 35 ; seules sont autorisées les lettres dont les valeurs affectées sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, si *base* a la valeur 0 et que le premier caractère analysé est « 0 », un entier octal est supposé et un caractère « 8 » ou « 9 » arrête l’analyse.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l'
 title: scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 ms.date: 03/26/2019
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: 8811bd0b6e4009cd6aba570e65d0687fab465614
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f7044a5f0a29e9421b7105ac177228e7fad3ab30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289099"
 ---
 # <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 
@@ -90,7 +91,7 @@ Arguments facultatifs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus mais qui n’ont pas été assignés. Une valeur de retour de 0 indique qu’aucun champ n’a été assigné. La valeur de retour est **EOF** pour une erreur, ou si le caractère de fin de fichier ou le caractère de fin de chaîne est trouvé lors de la première tentative de lecture d’un caractère. Si *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **scanf_s** et **wscanf_s** retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
@@ -98,13 +99,13 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **scanf_s** lit les données du flux d’entrée standard, **stdin**et les écrit dans l' *argument*. Chaque *argument* doit être un pointeur vers un type de variable qui correspond au spécificateur de type dans le *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **scanf_s** lit les données du flux d’entrée standard, **stdin** et les écrit dans l' *argument*. Chaque *argument* doit être un pointeur vers un type de variable qui correspond au spécificateur de type dans le *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 **wscanf_s** est une version à caractères larges de **scanf_s**; l’argument de *format* de **wscanf_s** est une chaîne de caractères larges. **wscanf_s** et **scanf_s** se comportent de la même manière si le flux est ouvert en mode ANSI. **scanf_s** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
 
 Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres *régionaux* à la place des paramètres régionaux du thread actuel.
 
-Contrairement à **scanf** et **wscanf**, **scanf_s** et **wscanf_s** vous obligent à spécifier des tailles de mémoire tampon pour certains paramètres. Spécifiez les tailles pour tous les paramètres **c**, **c**, **s** **, ou**jeu de contrôle de chaîne **[]** . La taille de la mémoire tampon en caractères est passée en tant que paramètre supplémentaire. Il suit immédiatement le pointeur vers la mémoire tampon ou la variable. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
+Contrairement à **scanf** et **wscanf**, **scanf_s** et **wscanf_s** vous obligent à spécifier des tailles de mémoire tampon pour certains paramètres. Spécifiez les tailles pour tous les paramètres **c**, **c**, **s** **, ou** jeu de contrôle de chaîne **[]** . La taille de la mémoire tampon en caractères est passée en tant que paramètre supplémentaire. Il suit immédiatement le pointeur vers la mémoire tampon ou la variable. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
 
 ```C
 char s[10];
@@ -157,7 +158,7 @@ Pour plus d’informations, consultez [Champs de spécification de format : fon
 |**scanf_s**, **_scanf_s_l**|\<stdio.h>|
 |**wscanf_s**, **_wscanf_s_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard **stdin**, **stdout**et **stderr** doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard **stdin**, **stdout** et **stderr** doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

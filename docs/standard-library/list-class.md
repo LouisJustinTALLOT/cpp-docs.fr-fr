@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe List'
 title: list, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: ec53e2a907cd38b262ec305d10ae63ad746f29b5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d73c1c61cb7e630ea936685aeaab20f778340ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284835"
 ---
 # <a name="list-class"></a>list, classe
 
@@ -159,7 +160,7 @@ Incluez l’en-tête standard de la bibliothèque standard C++ \<list> pour déf
 |[size_type](#size_type)|Type qui compte le nombre d'éléments dans une liste.|
 |[value_type](#value_type)|Type qui représente le type de données stocké dans une liste.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -204,7 +205,7 @@ Incluez l’en-tête standard de la bibliothèque standard C++ \<list> pour déf
 |-|-|
 |[opérateur =](#op_eq)|Remplace les éléments de la liste par une copie d'une autre liste.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: \<list>
 
@@ -218,7 +219,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>Notes
 
-`allocator_type` est un synonyme de l' *allocateur*de paramètre de modèle.
+`allocator_type` est un synonyme de l' *allocateur* de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -2395,7 +2396,7 @@ La première paire de fonctions membres insère tous les éléments de la liste 
 
 La deuxième paire de fonctions membres insère l’élément référencé par *ITER* avant la position dans la liste de destination référencée par *Where* et supprime *ITER* de la liste source. (Si `Where == Iter || Where == ++Iter`, aucune modification ne se produit.)
 
-La troisième paire de fonctions membres insère la plage désignée par [ `First` , `Last` ) avant l’élément dans la liste de destination référencé par *où* et supprime cette plage d’éléments de la liste source. (Si `&Source == this` la valeur est, la plage `[First, Last)` ne doit pas inclure l’élément vers *lequel*pointe.)
+La troisième paire de fonctions membres insère la plage désignée par [ `First` , `Last` ) avant l’élément dans la liste de destination référencé par *où* et supprime cette plage d’éléments de la liste source. (Si `&Source == this` la valeur est, la plage `[First, Last)` ne doit pas inclure l’élément vers *lequel* pointe.)
 
 Si la méthode splice à plage insère `N` éléments et que `&Source != this`, un objet de classe [iterator](../standard-library/forward-list-class.md#iterator) est incrémenté `N` fois.
 

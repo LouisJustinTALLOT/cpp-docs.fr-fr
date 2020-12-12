@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros et les fonctions globales pour les modèles de consommateur OLE DB
 title: Macros et fonctions globales pour les modèles du consommateur OLE DB
 ms.date: 02/11/2019
 f1_keywords:
@@ -99,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 60f642366589bb13b15665331a81d440322eb13f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fb6e126483690e43ceaf3814f6c288ecfdc69da1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287071"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macros et fonctions globales pour les modèles du consommateur OLE DB
 
@@ -140,7 +141,7 @@ Les modèles de consommateur OLE DB incluent les macros et les fonctions globale
 |[BLOB_NAME_STATUS](#blob_name_status)|Indique l’état de la colonne de données d’objet BLOB.|
 |[BOOKMARK_ENTRY](#bookmark_entry)|Représente une entrée de signet sur l’ensemble de lignes. Une entrée de signet est un type spécial d’entrée de colonne.|
 |[COLUMN_ENTRY](#column_entry)|Représente une liaison à une colonne spécifique dans la base de données.|
-|[COLUMN_ENTRY_EX](#column_entry_ex)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres de *type*, de *longueur*, de *précision*, d' *échelle*et d' *État* .|
+|[COLUMN_ENTRY_EX](#column_entry_ex)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres de *type*, de *longueur*, de *précision*, d' *échelle* et d' *État* .|
 |[COLUMN_ENTRY_LENGTH](#column_entry_length)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge la variable de *longueur* .|
 |[COLUMN_ENTRY_LENGTH_STATUS](#column_entry_length_status)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres d' *État* et de *longueur* .|
 |[COLUMN_ENTRY_PS](#column_entry_ps)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres de *précision* et d' *échelle* .|
@@ -195,7 +196,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 *hErr*<br/>
 dans HRESULT retourné par une fonction membre de modèle de consommateur OLE DB.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Si *hErr* n’est pas S_OK, `AtlTraceErrorRecords` vide OLE DB informations sur l’enregistrement de l’erreur sur le périphérique de vidage (onglet **débogage** de la fenêtre sortie ou d’un fichier). Les informations de l’enregistrement d’erreur, qui sont obtenues auprès du fournisseur, incluent le numéro de ligne, la source, la description, le fichier d’aide, le contexte et le GUID pour chaque entrée d’enregistrement d’erreur. `AtlTraceErrorRecords` vide ces informations uniquement dans les versions Debug. Dans les versions release, il s’agit d’un stub vide qui est optimisé. Pour plus d’informations, consultez [CDBErrorInfo, classe](../../data/oledb/cdberrorinfo-class.md).
 
@@ -217,7 +218,7 @@ dans Nombre de décalage zéro pour l’accesseur dans ce mappage d’accesseur.
 *bAuto*<br/>
 dans Spécifie si cet accesseur est un accesseur automatique ou un accesseur manuel. Si **`true`** , l’accesseur est auto ; si **`false`** , l’accesseur est manuel. Un accesseur automatique signifie que les données sont extraites pour vous lors des opérations de déplacement.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Dans le cas de plusieurs accesseurs sur un ensemble de lignes, vous devez spécifier BEGIN_ACCESSOR_MAP et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR s’est terminée avec la macro END_ACCESSOR. La macro BEGIN_ACCESSOR_MAP s’est terminée avec la macro END_ACCESSOR_MAP.
 
@@ -243,7 +244,7 @@ BEGIN_ACCESSOR_MAP(x, num)
 *num*<br/>
 [in] Nombre d’accesseurs contenus dans ce mappage d’accesseur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Dans le cas de plusieurs accesseurs sur un ensemble de lignes, vous devez spécifier BEGIN_ACCESSOR_MAP au début et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR s’est terminée avec la macro END_ACCESSOR. Le mappage d’accesseur est terminé avec la macro END_ACCESSOR_MAP.
 
@@ -345,7 +346,7 @@ BEGIN_COLUMN_MAP(x)
 *x*<br/>
 [in] Nom de la classe d’enregistrement utilisateur dérivée de `CAccessor`.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Cette macro est utilisée dans le cas d’un seul accesseur sur un ensemble de lignes. Si vous avez plusieurs accesseurs sur un ensemble de lignes, utilisez [BEGIN_ACCESSOR_MAP](#begin_accessor_map).
 
@@ -686,7 +687,7 @@ dans Numéro de la colonne.
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 La macro COLUMN_ENTRY est utilisée aux emplacements suivants :
 
@@ -738,7 +739,7 @@ dans Variable à lier à la longueur de la colonne.
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 La macro COLUMN_ENTRY_EX est utilisée aux emplacements suivants :
 
@@ -775,7 +776,7 @@ dans Données membres correspondantes dans l’enregistrement de l’utilisateur
 *length*<br/>
 dans Variable à lier à la longueur de la colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Cette macro prend en charge la variable de *longueur* . Il est utilisé aux emplacements suivants :
 
@@ -811,7 +812,7 @@ dans Variable à lier à la longueur de la colonne.
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Utilisez cette macro lorsque vous souhaitez prendre en charge des variables d’État et de longueur. Il est utilisé aux emplacements suivants :
 
@@ -847,7 +848,7 @@ dans Échelle de la colonne que vous souhaitez lier.
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Il est utilisé aux emplacements suivants :
 
@@ -886,7 +887,7 @@ dans Données membres correspondantes dans l’enregistrement de l’utilisateur
 *length*<br/>
 dans Variable à lier à la longueur de la colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Cette macro prend en charge la variable de *longueur* . Il est utilisé aux emplacements suivants :
 
@@ -928,7 +929,7 @@ dans Variable à lier à la longueur de la colonne.
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Utilisez cette macro lorsque vous souhaitez prendre en charge des variables d’État et de longueur. Il est utilisé aux emplacements suivants :
 
@@ -967,7 +968,7 @@ dans Données membres correspondantes dans l’enregistrement de l’utilisateur
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Cette macro prend en charge la variable d' *État* . Il est utilisé aux emplacements suivants :
 
@@ -1000,7 +1001,7 @@ dans Données membres correspondantes dans l’enregistrement de l’utilisateur
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Cette macro prend en charge la variable d' *État* . Il est utilisé aux emplacements suivants :
 
@@ -1031,7 +1032,7 @@ dans Type de données de l’entrée de colonne.
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Cette macro est une variante spécialisée de la macro [COLUMN_ENTRY](#column_entry) qui fournit un moyen de spécifier le type de données.
 
@@ -1059,7 +1060,7 @@ dans Taille de l’entrée de colonne en octets.
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Cette macro est une variante spécialisée de la macro [COLUMN_ENTRY](#column_entry) qui fournit un moyen de spécifier la taille et le type des données.
 
@@ -1081,7 +1082,7 @@ dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. 
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Les macros COLUMN_NAME_ * sont utilisées aux mêmes emplacements que [COLUMN_ENTRY](#column_entry):
 
@@ -1127,7 +1128,7 @@ dans Variable à lier à la longueur de la colonne.
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1152,7 +1153,7 @@ dans Données membres correspondantes dans l’enregistrement de l’utilisateur
 *length*<br/>
 dans Variable à lier à la longueur de la colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1180,7 +1181,7 @@ dans Variable à lier à la longueur de la colonne.
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1208,7 +1209,7 @@ dans Échelle de la colonne que vous souhaitez lier.
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1239,7 +1240,7 @@ dans Données membres correspondantes dans l’enregistrement de l’utilisateur
 *length*<br/>
 dans Variable à lier à la longueur de la colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1273,7 +1274,7 @@ dans Variable à lier à la longueur de la colonne.
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1304,7 +1305,7 @@ dans Données membres correspondantes dans l’enregistrement de l’utilisateur
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1329,7 +1330,7 @@ dans Données membres correspondantes dans l’enregistrement de l’utilisateur
 *statut*<br/>
 dans Variable à lier à l’état de colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1354,7 +1355,7 @@ dans Type de données.
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1385,7 +1386,7 @@ dans L’échelle à utiliser lors de l’obtention de données et de *wType* es
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1413,7 +1414,7 @@ dans Taille des données en octets.
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1441,7 +1442,7 @@ dans Variable à lier à l’état de colonne.
 *data*<br/>
 dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](#column_name) .
 
@@ -1484,7 +1485,7 @@ dans Nom de la classe d’enregistrement utilisateur (commande).
 *szCommand*<br/>
 dans Chaîne de commande qui sera utilisée pour créer l’ensemble de lignes lors de l’utilisation de [CCommand](../../data/oledb/ccommand-class.md).
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 La chaîne de commande que vous spécifiez sera utilisée comme valeur par défaut si vous ne spécifiez pas de texte de commande dans la méthode [CCommand :: Open](./ccommand-class.md#open) .
 
@@ -1512,7 +1513,7 @@ dans Nom de la classe d’enregistrement utilisateur (commande).
 *wszCommand*<br/>
 dans Chaîne de commande qui sera utilisée pour créer l’ensemble de lignes lors de l’utilisation de [CCommand](../../data/oledb/ccommand-class.md).
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 La chaîne de commande que vous spécifiez sera utilisée comme valeur par défaut si vous ne spécifiez pas de texte de commande dans la méthode [CCommand :: Open](./ccommand-class.md#open) .
 
@@ -1537,7 +1538,7 @@ BEGIN_PARAM_MAP(x)
 *x*<br/>
 [in] Nom de la classe d’enregistrement utilisateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Les paramètres sont utilisés par les [commandes](/previous-versions/windows/desktop/ms724608(v=vs.85)).
 
@@ -1574,7 +1575,7 @@ SET_PARAM_TYPE(type)
 *type*<br/>
 [in] Type à définir pour le paramètre.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Les fournisseurs prennent en charge uniquement les types d’entrée/sortie de paramètres qui sont pris en charge par la source de données sous-jacente. Le type est une combinaison d’une ou de plusieurs `DBPARAMIO` valeurs (consultez [structures DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *OLE DB Guide de référence du programmeur*) :
 
@@ -1628,7 +1629,7 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 

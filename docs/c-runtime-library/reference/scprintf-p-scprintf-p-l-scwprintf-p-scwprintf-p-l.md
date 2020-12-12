@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l'
 title: _scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - scwprintf_p_l function
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
-ms.openlocfilehash: 79744ee814583b5b5c15fbf51d2822c6e4bfe1fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3f4fa9ffd1a54756fa3dfb274ebeb3e49f0544c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949484"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288995"
 ---
 # <a name="_scprintf_p-_scprintf_p_l-_scwprintf_p-_scwprintf_p_l"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 
@@ -91,7 +92,7 @@ Arguments facultatifs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre de caractères qui seraient générés si la chaîne devait était imprimée ou envoyée vers un fichier ou une mémoire tampon en utilisant les codes de mise en forme spécifiés. La valeur retournée n’inclut pas le caractère Null de fin. **_scwprintf_p** effectue la même fonction pour les caractères larges.
 
@@ -117,14 +118,14 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 |**_sctprintf_p**|**_scprintf_p**|**_scprintf_p**|**_scwprintf_p**|
 |**_sctprintf_p_l**|**_scprintf_p_l**|**_scprintf_p_l**|**_scwprintf_p_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_scprintf_p**, **_scprintf_p_l**|\<stdio.h>|
 |**_scwprintf_p**, **_scwprintf_p_l**|\<stdio.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

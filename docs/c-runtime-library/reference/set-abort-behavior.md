@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_abort_behavior'
 title: _set_abort_behavior
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: 06f72597a384cc5c90b2e345e62e13dee96c4dca
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1e024cf825115204f51e727d81af7aba74c305fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288904"
 ---
 # <a name="_set_abort_behavior"></a>_set_abort_behavior
 
@@ -56,14 +57,14 @@ unsigned int _set_abort_behavior(
 *flags*<br/>
 Nouvelle valeur des indicateurs d' [abandon](abort.md) .
 
-*masque*<br/>
+*filtrage*<br/>
 Masque pour les bits d’indicateurs d' [abandon](abort.md) à définir.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Ancienne valeur des indicateurs.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Il existe deux indicateurs d' [abandon](abort.md) : **_WRITE_ABORT_MSG** et **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** détermine si un message texte utile est imprimé lorsqu’un programme se termine anormalement. Le message indique que l’application a appelé la fonction d' [abandon](abort.md) . Le comportement par défaut consiste à imprimer le message. **_CALL_REPORTFAULT**, s’il est défini, spécifie qu’un vidage sur incident Watson est généré et signalé lorsque [Abort](abort.md) est appelé. Par défaut, le signalement de vidage sur incident est activé dans les builds non DEBUG.
 

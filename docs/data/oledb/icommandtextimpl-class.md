@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe ICommandTextImpl'
 title: ICommandTextImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4b48b9f8f2ee535a648681064cc6b1083c76e489
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501721"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287370"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl, classe
 
@@ -46,7 +47,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 *T*<br/>
 Classe de commande dérivée de `ICommandTextImpl` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** altdb. h
 
@@ -65,7 +66,7 @@ Classe de commande dérivée de `ICommandTextImpl` .
 |-|-|
 |[m_strCommandText](#strcommandtext)|Stocke le texte de la commande.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Interface obligatoire sur les commandes.
 

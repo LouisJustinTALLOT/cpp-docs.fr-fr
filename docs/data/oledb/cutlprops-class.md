@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CUtlProps'
 title: CUtlProps, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 535da4b2dd7d3214633a1e76c04be1e4627b965a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509085"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287747"
 ---
 # <a name="cutlprops-class"></a>CUtlProps, classe
 
@@ -52,7 +53,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 *T*<br/>
 Classe qui contient `BEGIN_PROPSET_MAP` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -68,7 +69,7 @@ Classe qui contient `BEGIN_PROPSET_MAP` .
 |[OnPropertyChanged](#onpropertychanged)|Appelée après la définition d’une propriété pour gérer les propriétés chaînées.|
 |[SetPropValue](#setpropvalue)|Définit une propriété dans un jeu de propriétés.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La plupart de cette classe est un détail d’implémentation.
 
@@ -126,7 +127,7 @@ L’ID de propriété et la nouvelle valeur dans une structure [DBPROP](/previou
 
 HRESULT standard. La valeur de retour par défaut est S_OK.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si vous souhaitez exécuter des routines de validation sur une valeur que vous allez utiliser pour définir une propriété, vous devez remplacer cette fonction. Par exemple, vous pouvez valider DBPROP_AUTH_PASSWORD par rapport à une table de mots de passe pour déterminer une valeur valide.
 
@@ -145,7 +146,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 *riid*<br/>
 dans IID de l’interface demandée. Pour plus d’informations, consultez la description du paramètre *riid* de `ICommand::Execute` dans le *Guide de référence du programmeur OLE DB* (dans le *Kit de développement logiciel (SDK) MDAC*).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `OnInterfaceRequested` gère les demandes de consommateur pour une interface facultative lorsqu’un consommateur appelle une méthode sur l’une des interfaces de création d’objet (telles que `IDBCreateSession` ,, `IDBCreateCommand` `IOpenRowset` ou `ICommand` ). Elle définit la propriété OLE DB correspondante pour l’interface demandée. Par exemple, si le consommateur demande `IID_IRowsetLocate` , `OnInterfaceRequested` définit l' `DBPROP_IRowsetLocate` interface. Cela maintient l’état correct lors de la création de l’ensemble de lignes.
 
@@ -188,7 +189,7 @@ L’ID de propriété et la nouvelle valeur dans une structure [DBPROP](/previou
 
 HRESULT standard. La valeur de retour par défaut est S_OK.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si vous souhaitez gérer les propriétés chaînées, telles que les signets ou les mises à jour dont les valeurs sont dépendantes de la valeur d’une autre propriété, vous devez substituer cette fonction.
 

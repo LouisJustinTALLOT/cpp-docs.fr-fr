@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonction Activateinstance,'
 title: ActivateInstance (fonction)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: d1109e769352d412df8348822e05b66063159ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 03d7b67810ee2ab287072546b098f81f43687233
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287851"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance (fonction)
 
@@ -37,10 +38,10 @@ Type à activer.
 *activatableClassId*<br/>
 Nom de l’ID de classe qui définit le paramètre *T*.
 
-*instance*<br/>
+*instancié*<br/>
 Lorsque cette opération est terminée, une référence à une instance de *T*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de réussite ; Sinon, une erreur HRESULT qui indique la cause de l’erreur.
 
@@ -52,4 +53,4 @@ S_OK en cas de réussite ; Sinon, une erreur HRESULT qui indique la cause de l�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Windows::Foundation, espace de noms](windows-foundation-namespace.md)
+[Windows :: Foundation, espace de noms](windows-foundation-namespace.md)

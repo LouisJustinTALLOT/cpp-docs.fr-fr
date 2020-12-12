@@ -1,5 +1,6 @@
 ---
-title: Interfaces de l'objet session
+description: 'En savoir plus sur : interfaces d’objet de session'
+title: Interfaces de l'objet Session
 ms.date: 11/19/2018
 helpviewer_keywords:
 - session objects [OLE DB]
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 2fb91365fec0709e1bb2a26afa519e6565862681
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc4f5644258b0ced4c97a5cda6de1b69abb8c2f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286577"
 ---
-# <a name="session-object-interfaces"></a>Interfaces de l'objet session
+# <a name="session-object-interfaces"></a>Interfaces de l'objet Session
 
-Le tableau suivant montre les interfaces obligatoires et facultatives définies par OLE DB pour un objet de session.
+Le tableau suivant indique les interfaces obligatoires et facultatives définies par OLE DB pour un objet de session.
 
-|Interface|Obligatoire ?|Implémentée par les modèles OLE DB ?|
+|Interface|Requis ?|Implémenté par OLE DB modèles ?|
 |---------------|---------------|--------------------------------------|
 |[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))|Obligatoire|Oui|
 |[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))|Obligatoire|Oui|
@@ -40,10 +41,10 @@ Le tableau suivant montre les interfaces obligatoires et facultatives définies 
 |[ITransactionLocal](/previous-versions/windows/desktop/ms714893(v=vs.85))|Facultatif|Non|
 |[ITransactionObject](/previous-versions/windows/desktop/ms713659(v=vs.85))|Facultatif|Non|
 
-L’objet session crée un objet d’ensemble de lignes. Si le fournisseur prend en charge les commandes, la session crée également un objet de commande (`CCommand`, implémentation OLE DB `TCommand`). Implémente l’objet de commande le `ICommand` interface et utilise le `ICommand::Execute` méthode à exécuter des commandes sur l’ensemble de lignes, comme indiqué dans l’illustration suivante.
+L’objet session crée un objet rowset. Si le fournisseur prend en charge les commandes, la session crée également un objet Command ( `CCommand` , implémentant le OLE DB `TCommand` ). L’objet Command implémente l' `ICommand` interface et utilise la `ICommand::Execute` méthode pour exécuter des commandes sur l’ensemble de lignes, comme indiqué dans l’illustration suivante.
 
-![Diagramme conceptuel des fournisseurs](../../data/oledb/media/vc4u551.gif "diagramme conceptuel des fournisseurs")
+![Diagramme conceptuel des fournisseurs](../../data/oledb/media/vc4u551.gif "Diagramme conceptuel des fournisseurs")
 
 ## <a name="see-also"></a>Voir aussi
 
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _seh_filter_dll, _seh_filter_exe'
 title: _seh_filter_dll, _seh_filter_exe
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-ms.openlocfilehash: ddfab11b149fc6919fb0b8d461b914a0470d9dc9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f1f297e0ace4a342dcc7370472c1ff1e9f409ce5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288930"
 ---
 # <a name="_seh_filter_dll-_seh_filter_exe"></a>_seh_filter_dll, _seh_filter_exe
 
@@ -69,11 +70,11 @@ L’identificateur de l’exception.
 *_ExceptionPtr*<br/>
 Pointeur vers les informations sur l’exception.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Entier qui indique l’action à entreprendre, en fonction du résultat du traitement de l’exception.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces méthodes sont appelées par l’expression de filtre d’exception de l’ [try-except Statement](../../cpp/try-except-statement.md). La méthode consulte une table interne de constantes pour identifier l’exception, et déterminer l’action appropriée, comme indiqué ici. Les numéros relatifs aux exceptions sont définis dans winnt.h, alors que les numéros relatifs aux signaux sont définis dans signal.h.
 
@@ -98,4 +99,4 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>

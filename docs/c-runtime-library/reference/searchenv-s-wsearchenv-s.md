@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _searchenv_s, _wsearchenv_s'
 title: _searchenv_s, _wsearchenv_s
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 5dd21013c8910ba07e2d23606af49bc80458dbc6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c618840c904bb03eb2f04b9931c7fe7999a278a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918996"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288956"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s, _wsearchenv_s
 
@@ -87,7 +88,7 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*extension*<br/>
+*filename*<br/>
 Nom du fichier à rechercher.
 
 *argument*<br/>
@@ -99,7 +100,7 @@ Mémoire tampon destinée à stocker le chemin d’accès complet.
 *numberOfElements*<br/>
 Taille de la mémoire tampon du *chemin d’accès* .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
@@ -107,19 +108,19 @@ Si *filename* est une chaîne vide, la valeur de retour est **ENOENT**.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*extension*|*argument*|*chemin*|*numberOfElements*|Valeur retournée|Contenu du *chemin d’accès*|
+|*filename*|*argument*|*chemin*|*numberOfElements*|Valeur retournée|Contenu du *chemin d’accès*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|n'importe laquelle|n'importe laquelle|**NUL**|n'importe laquelle|**EINVAL**|n/a|
-|**NUL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|inchangé|
+|n'importe laquelle|n'importe laquelle|**NULL**|n'importe laquelle|**EINVAL**|n/a|
+|**NULL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|inchangé|
 |n'importe laquelle|n'importe laquelle|n'importe laquelle|<= 0|**EINVAL**|inchangé|
 
 Si l’une de ces conditions d’erreur se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La routine **_searchenv_s** recherche le fichier cible dans le domaine spécifié. La variable *varname* peut être n’importe quel environnement ou variable définie par l’utilisateur qui spécifie une liste de chemins d’accès aux répertoires, tels que **path**, **lib**et **include**. Étant donné que **_searchenv_s** est sensible à la casse, *varname* doit correspondre à la casse de la variable d’environnement. Si *varname* ne correspond pas au nom d’une variable d’environnement définie dans l’environnement du processus, la fonction retourne zéro et la variable de *chemin d’accès* est inchangée.
+La routine **_searchenv_s** recherche le fichier cible dans le domaine spécifié. La variable *varname* peut être n’importe quel environnement ou variable définie par l’utilisateur qui spécifie une liste de chemins d’accès aux répertoires, tels que **path**, **lib** et **include**. Étant donné que **_searchenv_s** est sensible à la casse, *varname* doit correspondre à la casse de la variable d’environnement. Si *varname* ne correspond pas au nom d’une variable d’environnement définie dans l’environnement du processus, la fonction retourne zéro et la variable de *chemin d’accès* est inchangée.
 
-La routine recherche d’abord le fichier dans le répertoire de travail actif. Si elle ne le trouve pas, elle parcourt ensuite les répertoires spécifiés par la variable d’environnement. Si le fichier cible se trouve dans l’un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans le *nom de chemin*d’accès. Si le fichier de *nom* de fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
+La routine recherche d’abord le fichier dans le répertoire de travail actif. Si elle ne le trouve pas, elle parcourt ensuite les répertoires spécifiés par la variable d’environnement. Si le fichier cible se trouve dans l’un de ces répertoires, le chemin d’accès qui vient d’être créé est copié dans le *nom de chemin* d’accès. Si le fichier de *nom* de fichier est introuvable, *pathname* contient une chaîne vide se terminant par null.
 
 La mémoire tampon du *chemin d’accès* doit être d’au moins **_MAX_PATH** caractères pour tenir compte de la longueur totale du nom de chemin d’accès construit. Sinon, **_searchenv_s** risque de saturer la mémoire tampon de *chemin d’accès* , ce qui se traduit par un comportement inattendu.
 

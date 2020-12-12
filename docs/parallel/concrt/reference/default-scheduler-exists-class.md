@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe default_scheduler_exists'
 title: default_scheduler_exists, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-ms.openlocfilehash: eed5dd242beb4c4cd481f22635e0d5f71c28d7e6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6921f7bd820271cf590707c2e56cefa9f576cefe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139186"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284848"
 ---
 # <a name="default_scheduler_exists-class"></a>default_scheduler_exists, classe
 
@@ -29,7 +30,7 @@ class default_scheduler_exists : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[default_scheduler_exists](#ctor)|Surchargé. Construit un objet `default_scheduler_exists`.|
 
@@ -43,9 +44,9 @@ class default_scheduler_exists : public std::exception;
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>default_scheduler_exists
+## <a name="default_scheduler_exists"></a><a name="ctor"></a> default_scheduler_exists
 
 Construit un objet `default_scheduler_exists`.
 
@@ -62,4 +63,4 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateurs additifs : + et-'
 title: 'Opérateurs additifs : + et -'
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-ms.openlocfilehash: 2601debb0a21c4ab9cdcedb25b26085a1aff0a1b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f87a8682b6f282668c168262cd28230745cb4402
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288371"
 ---
 # <a name="additive-operators--and--"></a>Opérateurs additifs : + et -
 
@@ -32,39 +33,39 @@ expression - expression
 
 Les opérateurs additifs sont les suivants :
 
-- Ajout**+**( )
+- Addition ( **+** )
 
-- Soustraction**-**( )
+- Soustraction ( **-** )
 
 Ces opérateurs binaires ont une associativité de droite à gauche.
 
-Les opérateurs additifs prennent des opérandes de type arithmétique ou pointeur. Le résultat de**+** l’ajout ( ) opérateur est la somme des opérands. Le résultat de la**-** soustraction ( ) opérateur est la différence entre les opérands. Si l'un des opérandes ou les deux sont des pointeurs, ils doit d'agir de pointeurs vers des objets, et non des fonctions. Si les deux opérandes sont des pointeurs, les résultats ne sont pas significatifs à moins que tous deux ne soient des pointeurs vers des objets dans le même tableau.
+Les opérateurs additifs prennent des opérandes de type arithmétique ou pointeur. Le résultat de l’opérateur d’addition ( **+** ) est la somme des opérandes. Le résultat de l’opérateur de soustraction ( **-** ) est la différence entre les opérandes. Si l'un des opérandes ou les deux sont des pointeurs, ils doit d'agir de pointeurs vers des objets, et non des fonctions. Si les deux opérandes sont des pointeurs, les résultats ne sont pas significatifs à moins que tous deux ne soient des pointeurs vers des objets dans le même tableau.
 
-Les opérateurs additifs prennent des opérands de types *arithmétiques,* *intégrales*et *scalaires.* Ils sont définis dans le tableau suivant.
+Les opérateurs additifs prennent des opérandes de types *arithmétiques*, *intégraux* et *scalaires* . Ils sont définis dans le tableau suivant.
 
 ### <a name="types-used-with-additive-operators"></a>Types utilisés avec les opérateurs additifs
 
 |Type|Signification|
 |----------|-------------|
-|*Arithmétique*|Les types intégraux et flottants sont appelés collectivement des types « arithmétiques ».|
-|*Intégrale*|Les types char et int de toutes tailles (longs, courts) et les énumérations sont des types « intégraux ».|
+|*Opérateurs arithmétiques*|Les types intégraux et flottants sont appelés collectivement des types « arithmétiques ».|
+|*amovible*|Les types char et int de toutes tailles (longs, courts) et les énumérations sont des types « intégraux ».|
 |*scalaire*|Les opérandes scalaires sont des opérandes de type arithmétique ou pointeur.|
 
 Les combinaisons valides pour ces opérateurs sont les suivantes :
 
-*arithmétique* + *arithmétique*
+*opérations arithmétiques*  +  *opérations arithmétiques*
 
-*scalar* + *intégrale*
+*scalaire*  +  *intégral*
 
-*integral* + *scalar* intégral
+*intégral*  +  *scalaire*
 
-*arithmétique* - *arithmétique*
+*opérations arithmétiques*  -  *opérations arithmétiques*
 
-*scalar* - *scalaire*
+*scalaire*  -  *scalaire*
 
 Notez que l'addition et la soustraction ne sont pas des opérations équivalentes.
 
-Si les deux opérandes sont de type arithmétique, les conversions couvertes dans [les conversions standard](standard-conversions.md) sont appliquées aux opérandes, et le résultat est du type converti.
+Si les deux opérandes sont de type arithmétique, les conversions couvertes dans les [conversions standard](standard-conversions.md) sont appliquées aux opérandes, et le résultat est du type converti.
 
 ## <a name="example"></a>Exemple
 
@@ -109,9 +110,9 @@ Bien que la valeur intégrale 1 soit ajoutée à `pIntArray`, cela ne signifie 
 
 ## <a name="pointer-subtraction"></a>Soustraction de pointeur
 
-Si les deux opérandes sont des pointeurs, le résultat de la soustraction est la différence (en éléments de tableau) entre les opérandes. L’expression de soustraction donne `ptrdiff_t` un résultat intégral signé \<de type (défini dans la norme comprennent le fichier stddef.h>).
+Si les deux opérandes sont des pointeurs, le résultat de la soustraction est la différence (en éléments de tableau) entre les opérandes. L’expression de soustraction produit un résultat intégral signé de type `ptrdiff_t` (défini dans le fichier Include standard \<stddef.h> ).
 
-L’un des opérandes peut être de type intégral, à condition que ce soit le second opérande. Le résultat de la soustraction est du même type que le pointeur d'origine. La valeur de la soustraction est un pointeur à l’élément (*n* - *i*) e tableau, où *n* est l’élément pointé vers le pointeur d’origine et *je* suis la valeur intégrale de la deuxième opérande.
+L’un des opérandes peut être de type intégral, à condition que ce soit le second opérande. Le résultat de la soustraction est du même type que le pointeur d'origine. La valeur de la soustraction est un pointeur vers l’élément de tableau (*n*  -  *i*) th, où *n* est l’élément désigné par le pointeur d’origine et *i* la valeur intégrale du second opérande.
 
 ## <a name="see-also"></a>Voir aussi
 

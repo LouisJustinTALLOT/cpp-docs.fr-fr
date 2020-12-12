@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes d’ensemble de lignes de schéma et classes typedef'
 title: Classes de jeu de lignes du schéma et classes Typedef
 ms.date: 11/04/2016
 f1_keywords:
@@ -548,12 +549,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 104f7a92cdb472fc889d44cff20982e51b955014
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5b51404642dbb6d9ad6c2236e7693137b4a949c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509493"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286564"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Classes de jeu de lignes du schéma et classes Typedef
 
@@ -602,7 +603,7 @@ Le tableau suivant affiche chaque ensemble de lignes de schéma OLE DB, ainsi qu
 
 Appelez la classe typedef `CAssertions` pour implémenter sa classe de paramètres `CAssertionInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -623,7 +624,7 @@ Le tableau suivant répertorie les membres de données de classe pour `CAssertio
 
 Appelez la classe typedef `CCatalogs` pour implémenter sa classe de paramètres `CCatalogInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -640,7 +641,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CCharacterSets` pour implémenter sa classe de paramètres `CCharacterSetInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -663,7 +664,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CCheckConstraints` pour implémenter sa classe de paramètres `CCheckConstraintInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -683,7 +684,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CCollations` pour implémenter sa classe de paramètres `CCollationInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -705,7 +706,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CColumnDomainUsage` pour implémenter sa classe de paramètres `CColumnDomainUsageInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -729,7 +730,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CColumnPrivileges` pour implémenter sa classe de paramètres `CColumnPrivilegeInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -754,7 +755,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CColumns` pour implémenter sa classe de paramètres `CColumnsInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -797,7 +798,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CConstraintColumnUsage` pour implémenter sa classe de paramètres `CConstraintColumnUsageInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -821,7 +822,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CConstraintTableUsage` pour implémenter sa classe de paramètres `CConstraintTableUsageInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -842,7 +843,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CForeignKeys` pour implémenter sa classe de paramètres `CForeignKeysInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -872,7 +873,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CIndexes` pour implémenter sa classe de paramètres `CIndexInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -911,7 +912,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CKeyColumns` pour implémenter sa classe de paramètres `CKeyColumnInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -936,7 +937,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CPrimaryKeys` pour implémenter sa classe de paramètres `CPrimaryKeyInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -958,7 +959,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CProcedureColumns` pour implémenter sa classe de paramètres `CProcedureColumnInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -989,7 +990,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CProcedureParameters` pour implémenter sa classe de paramètres `CProcedureParamInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1019,7 +1020,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CProcedures` pour implémenter sa classe de paramètres `CProcedureInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1040,7 +1041,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CProviderTypes` pour implémenter sa classe de paramètres `CProviderInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1058,7 +1059,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 |m_szCreateParams|CREATE_PARAMS|
 |m_bIsNullable|IS_NULLABLE|
 |m_bCaseSensitive|CASE_SENSITIVE|
-|m_nSearchable|SEARCHABLE|
+|m_nSearchable|POSSIBILITÉ DE RECHERCHE|
 |m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE|
 |m_bFixedPrecScale|FIXED_PREC_SCALE|
 |m_bAutoUniqueValue|AUTO_UNIQUE_VALUE|
@@ -1075,7 +1076,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CReferentialConstraints` pour implémenter sa classe de paramètres `CReferentialConstraintInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1100,7 +1101,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CSchemata` pour implémenter sa classe de paramètres `CSchemataInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1121,7 +1122,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CSQLLanguages` pour implémenter sa classe de paramètres `CSQLLanguageInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1143,7 +1144,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CStatistics` pour implémenter sa classe de paramètres `CStatisticInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1162,7 +1163,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CTableConstraints` pour implémenter sa classe de paramètres `CTableConstraintInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1187,7 +1188,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CTablePrivileges` pour implémenter sa classe de paramètres `CTablePrivilegeInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1209,7 +1210,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CTables` pour implémenter sa classe de paramètres `CTableInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1230,7 +1231,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CTranslations` pour implémenter sa classe de paramètres `CTranslationInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1254,7 +1255,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CUsagePrivileges` pour implémenter sa classe de paramètres `CUsagePrivilegeInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1277,7 +1278,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CViewColumnUsage` pour implémenter sa classe de paramètres `CViewColumnInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1301,7 +1302,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CViews` pour implémenter sa classe de paramètres `CViewInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1323,7 +1324,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 
 Appelez la classe typedef `CViewTableUsage` pour implémenter sa classe de paramètres `CViewTableInfo` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Consultez classes d' [ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) pour plus d’informations sur l’utilisation des classes typedef.
 
@@ -1340,7 +1341,7 @@ Le tableau suivant répertorie les membres de données de classe et leurs OLE DB
 |m_szTableSchema|TABLE_SCHEMA|
 |m_szTableName|TABLE_NAME|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbsch. h
 

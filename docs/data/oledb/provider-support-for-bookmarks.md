@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : prise en charge des signets par le fournisseur'
 title: Prise en charge des signets par le fournisseur
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 240cb4da03d6c8c1958b7a86e78171aca2dc30e9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a2225f44d9d094f52e97b88eb58c6942906edf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286655"
 ---
 # <a name="provider-support-for-bookmarks"></a>Prise en charge des signets par le fournisseur
 
@@ -40,7 +41,7 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-Les quatrième, cinquième et sixième paramètres sont ajoutés. Cet exemple utilise les valeurs par défaut pour les quatrième et cinquième paramètres, mais spécifie `IRowsetLocateImpl` comme sixième paramètre. `IRowsetLocateImpl`est une classe de modèle OLE DB qui accepte deux paramètres de modèle : ils raccordent l' `IRowsetLocate` interface à la `CCustomRowset` classe. Pour ajouter la plupart des interfaces, vous pouvez ignorer cette étape et passer à la suivante. Seules les `IRowsetLocate` `IRowsetScroll` interfaces et doivent être gérées de cette manière.
+Les quatrième, cinquième et sixième paramètres sont ajoutés. Cet exemple utilise les valeurs par défaut pour les quatrième et cinquième paramètres, mais spécifie `IRowsetLocateImpl` comme sixième paramètre. `IRowsetLocateImpl` est une classe de modèle OLE DB qui accepte deux paramètres de modèle : ils raccordent l' `IRowsetLocate` interface à la `CCustomRowset` classe. Pour ajouter la plupart des interfaces, vous pouvez ignorer cette étape et passer à la suivante. Seules les `IRowsetLocate` `IRowsetScroll` interfaces et doivent être gérées de cette manière.
 
 Vous devez ensuite indiquer au `CCustomRowset` à appeler `QueryInterface` pour l' `IRowsetLocate` interface. Ajoutez la ligne `COM_INTERFACE_ENTRY(IRowsetLocate)` à la carte. Le mappage d’interface pour `CCustomRowset` doit apparaître comme indiqué dans le code suivant :
 
@@ -78,7 +79,7 @@ class CTextData
 };
 ```
 
-Ensuite, implémentez la `GetColumnInfo` fonction dans le fichier RS. cpp *personnalisé*comme suit :
+Ensuite, implémentez la `GetColumnInfo` fonction dans le fichier RS. cpp *personnalisé* comme suit :
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,7 +149,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo`vérifie d’abord si une propriété appelée `DBPROP_IRowsetLocate` est définie. OLE DB possède des propriétés pour chacune des interfaces facultatives de l’objet rowset. Si le consommateur souhaite utiliser l’une de ces interfaces facultatives, il affecte à une propriété la valeur true. Le fournisseur peut ensuite vérifier cette propriété et prendre une mesure spéciale en fonction de celle-ci.
+`GetColumnInfo` vérifie d’abord si une propriété appelée `DBPROP_IRowsetLocate` est définie. OLE DB possède des propriétés pour chacune des interfaces facultatives de l’objet rowset. Si le consommateur souhaite utiliser l’une de ces interfaces facultatives, il affecte à une propriété la valeur true. Le fournisseur peut ensuite vérifier cette propriété et prendre une mesure spéciale en fonction de celle-ci.
 
 Dans votre implémentation, vous récupérez la propriété en utilisant le pointeur désignant l’objet Command. Le `pThis` pointeur représente l’ensemble de lignes ou la classe de commande. Étant donné que vous utilisez des modèles ici, vous devez le passer en tant que **`void`** pointeur ou le code ne se compile pas.
 
