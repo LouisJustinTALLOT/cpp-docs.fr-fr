@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur les opérateurs suivants : &lt; unordered_set &gt;'
 title: '&lt;unordered_set&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-ms.openlocfilehash: 7780b5dd031d6babc13bc202c948c3e8233f7170
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6404ea9348dedea1e8ecdd4eefbca6b7c1b8158f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153731"
 ---
 # <a name="ltunordered_setgt-operators"></a>&lt;unordered_set&gt;, opérateurs
 
@@ -30,7 +31,7 @@ Objet de type `unordered_set`.
 *Oui*\
 Objet de type `unordered_set`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les unordered_sets ne sont pas égales ; **`false`** si elles sont égales.
 
@@ -74,7 +75,7 @@ int main()
 }
 ```
 
-**Sortie :**
+**Output:**
 
 `c1 != c2: true`
 
@@ -98,7 +99,7 @@ Objet de type `unordered_set`.
 *Oui*\
 Objet de type `unordered_set`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les unordered_sets sont égales ; **`false`** si elles ne sont pas égales.
 
@@ -164,7 +165,7 @@ Objet de type `unordered_multiset`.
 *Oui*\
 Objet de type `unordered_multiset`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les unordered_multisets ne sont pas égales ; **`false`** si elles sont égales.
 
@@ -233,7 +234,7 @@ Objet de type `unordered_multiset`.
 *Oui*\
 Objet de type `unordered_multiset`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les unordered_multisets sont égales ; **`false`** si elles ne sont pas égales.
 

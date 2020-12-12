@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __dllonexit'
 title: __dllonexit
 ms.date: 11/04/2016
 api_name:
@@ -21,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
-ms.openlocfilehash: 61d63c751dd755bf8a7680c674681e114945814b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef9dc444ecb1b36062a4dc9ea98ec9a15804f930
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151825"
 ---
 # <a name="__dllonexit"></a>__dllonexit
 
-Enregistre une routine à appeler au moment de la sortie.
+Inscrit une routine à appeler au moment de la sortie.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,7 +53,7 @@ Pointeur vers une variable qui pointe vers le début d’une liste de fonctions 
 *pend*<br/>
 Pointeur vers une variable qui pointe vers la fin d’une liste de fonctions à exécuter au moment du détachement.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si l’opération réussit, pointeur vers la fonction de l’utilisateur. Dans le cas contraire, pointeur **NULL**.
 
@@ -64,7 +65,7 @@ Les fonctions `_onexit` et `atexit` dans une DLL liée à MSVCRT.LIB doivent con
 
 Le type `_PVFV` est défini en tant que `typedef void (__cdecl *_PVFV)(void)`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|Fichier obligatoire|
 |-------------|-------------------|

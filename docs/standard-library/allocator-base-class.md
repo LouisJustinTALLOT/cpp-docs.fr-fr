@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe allocator_base'
 title: allocator_base, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: f642c21f2b1060dd5adc5c3d98144592c3413777
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95da41fd480101c26a2ab71b445790da47144189
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163637"
 ---
 # <a name="allocator_base-class"></a>allocator_base, classe
 
@@ -90,7 +91,7 @@ Stratégie de synchronisation de l’allocateur, qui est la classe [sync_none](s
 |[_Chardealloc](#chardealloc)|Libère le stockage pour le tableau contenant des éléments de type **`char`** .|
 |[address](#address)|Recherche l'adresse d'un objet dont la valeur est spécifiée.|
 |[lui](#allocate)|Alloue un bloc de mémoire suffisamment grand pour stocker au moins un nombre spécifié d'éléments.|
-|[construct](#construct)|Construit un type d'objet spécifique à une adresse spécifiée qui est initialisée avec une valeur spécifiée.|
+|[composer](#construct)|Construit un type d'objet spécifique à une adresse spécifiée qui est initialisée avec une valeur spécifiée.|
 |[libérer](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[suppression](#destroy)|Appelle un destructeur d'objets sans libérer la mémoire où l'objet était stocké.|
 |[max_size](#max_size)|Retourne le nombre d’éléments de type *Type* qui pourraient être alloués par un objet de classe allocator avant que la mémoire libre soit complètement utilisée.|
@@ -114,7 +115,7 @@ char *_Charalloc(size_type count);
 *saut*\
 Nombre d’éléments du tableau à allouer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un pointeur vers l’objet alloué.
 
@@ -157,7 +158,7 @@ const_pointer address(const_reference val);
 *multiples*\
 Valeur const ou nonconst de l’objet dont l’adresse est recherchée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur const ou nonconst vers l’objet trouvé d’une valeur const ou nonconst, respectivement.
 
@@ -184,7 +185,7 @@ Nombre d’éléments du tableau à allouer.
 *_Hint*\
 Ce paramètre est ignoré.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un pointeur vers l’objet alloué.
 
@@ -301,7 +302,7 @@ Retourne le nombre d'éléments de type `Type` qui pourraient être alloués par
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments pouvant être alloués.
 

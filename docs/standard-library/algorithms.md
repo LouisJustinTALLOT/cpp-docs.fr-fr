@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : algorithmes'
 title: Algorithmes
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: 6532cb56bb70c82525a13ba53efdd6203ebafb12
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d270b35720211c099876eb899e4ef5add9813cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163754"
 ---
 # <a name="algorithms"></a>Algorithmes
 
@@ -23,7 +24,7 @@ Les algorithmes sont un élément fondamental de la bibliothèque C++ Standard. 
 
 Les descriptions des fonctions de modèle d'algorithme emploient plusieurs expressions raccourcies :
 
-- L’expression « dans la plage \[ *A*, *B*) » correspond à la séquence de zéro, une ou plusieurs valeurs discrètes commençant par *un* allant jusqu’à *b*non compris. Une plage est valide uniquement si *B* est accessible à partir de *.* vous pouvez stocker *un* dans un objet *n* (*n*  =  *a*), incrémenter l’objet zéro ou plusieurs fois (+ +*N*) et faire en sorte que l’objet soit égal à *B* après un nombre fini d’incréments (*N*  ==  *B*).
+- L’expression « dans la plage \[ *A*, *B*) » correspond à la séquence de zéro, une ou plusieurs valeurs discrètes commençant par *un* allant jusqu’à *b* non compris. Une plage est valide uniquement si *B* est accessible à partir de *.* vous pouvez stocker *un* dans un objet *n* (*n*  =  *a*), incrémenter l’objet zéro ou plusieurs fois (+ +*N*) et faire en sorte que l’objet soit égal à *B* après un nombre fini d’incréments (*N*  ==  *B*).
 
 - L’expression « chaque *N* dans la plage \[ *A*, *B*) » signifie que *N* commence par la valeur *a* et est incrémenté zéro, une ou plusieurs fois jusqu’à ce qu’il soit égal à la valeur *B*. Le cas *N*  ==  *B* n’est pas dans la plage.
 
@@ -45,7 +46,7 @@ Plusieurs algorithmes utilisent un prédicat qui doit imposer un classement faib
 
 Certains de ces algorithmes utilisent implicitement le prédicat *X* \< *Y*. Other predicates that typically satisfy the strict weak ordering requirement are *X* > *Y*, `less` (*x*, *y*) et `greater` (*x*, *y*). Notez, toutefois, que les prédicats tels que *X* \<= *Y* and *X* > =  *Y* ne répondent pas à cette exigence.
 
-Une séquence d’éléments désignée par des itérateurs dans la plage \[ *First*, *Last*) est une séquence ordonnée par opérateur **<** si, pour chaque *N* dans la \[ plage 0, Last *Last*  -  *First*) et pour chaque *M* dans la plage (*n*, *Last*  -  *First*), le prédicat \! ( \* (*First*  +  *M*) < \* (*First*  +  *N*)) a la valeur true. (Notez que les éléments sont triés par ordre croissant.) La fonction de prédicat `operator<` , ou tout remplacement, ne doit pas modifier l’un de ses opérandes. Elle doit générer le même **`bool`** résultat chaque fois qu’elle est évaluée et doit générer le même résultat si une copie de l’un des opérandes est substituée à l’opérande. En outre, elle doit imposer un classement faible strict sur les opérandes qu’elle compare.
+Une séquence d’éléments désignée par des itérateurs dans la plage \[ *First*, *Last*) est une séquence ordonnée par opérateur **<** si, pour chaque *N* dans la \[ plage 0, Last   -  *First*) et pour chaque *M* dans la plage (*n*, *Last*  -  *First*), le prédicat \! ( \* (*First*  +  *M*) < \* (*First*  +  *N*)) a la valeur true. (Notez que les éléments sont triés par ordre croissant.) La fonction de prédicat `operator<` , ou tout remplacement, ne doit pas modifier l’un de ses opérandes. Elle doit générer le même **`bool`** résultat chaque fois qu’elle est évaluée et doit générer le même résultat si une copie de l’un des opérandes est substituée à l’opérande. En outre, elle doit imposer un classement faible strict sur les opérandes qu’elle compare.
 
 Une séquence d’éléments désignée par des itérateurs dans la plage \[ `First` , `Last` ) est un tas ordonné par `operator<` si, pour chaque *N* dans la plage \[ 1, *dernier*  -  *prénom*, le prédicat \! ( \* _First_  <  \* (*First*  +  *N*)) a la valeur true. (Le premier élément est le plus grand.) Sa structure interne est également connue uniquement des fonctions de modèle [make_heap](algorithm-functions.md#make_heap), [pop_heap](algorithm-functions.md#pop_heap)et [push_heap](algorithm-functions.md#push_heap). Comme avec une séquence ordonnée, la fonction de prédicat `operator<` , ou tout remplacement, ne doit pas modifier l’un de ses opérandes et elle doit imposer un classement faible strict sur les opérandes qu’elle compare. Elle doit générer le même **`bool`** résultat chaque fois qu’elle est évaluée et doit générer le même résultat si une copie de l’un des opérandes est substituée à l’opérande.
 

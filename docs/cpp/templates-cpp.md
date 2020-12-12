@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : modèles (C++)'
 title: Modèles (C++)
 ms.date: 12/27/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: 996458417b20533db074ce2fa13c06860c54247c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 14de4372502748c4d622e8739cad82b78a55daa9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164755"
 ---
 # <a name="templates-c"></a>Modèles (C++)
 
@@ -30,9 +31,9 @@ T minimum(const T& lhs, const T& rhs)
 }
 ```
 
-Le code ci-dessus décrit un modèle pour une fonction générique avec un seul paramètre de type *T*, dont la valeur de retour et les paramètres d’appel (LHS et RHS) sont tous de ce type. Vous pouvez nommer un paramètre de type comme vous le souhaitez, mais par Convention les lettres majuscules uniques sont le plus couramment utilisées. *T* est un paramètre de modèle ; le **`typename`** mot clé indique que ce paramètre est un espace réservé pour un type. Lorsque la fonction est appelée, le compilateur remplace chaque instance de `T` par l’argument de type concret qui est spécifié par l’utilisateur ou déduit par le compilateur. Le processus dans lequel le compilateur génère une classe ou une fonction à partir d’un modèle est appelé *instanciation de modèle*; `minimum<int>`est une instanciation du modèle `minimum<T>` .
+Le code ci-dessus décrit un modèle pour une fonction générique avec un seul paramètre de type *T*, dont la valeur de retour et les paramètres d’appel (LHS et RHS) sont tous de ce type. Vous pouvez nommer un paramètre de type comme vous le souhaitez, mais par Convention les lettres majuscules uniques sont le plus couramment utilisées. *T* est un paramètre de modèle ; le **`typename`** mot clé indique que ce paramètre est un espace réservé pour un type. Lorsque la fonction est appelée, le compilateur remplace chaque instance de `T` par l’argument de type concret qui est spécifié par l’utilisateur ou déduit par le compilateur. Le processus dans lequel le compilateur génère une classe ou une fonction à partir d’un modèle est appelé  *instanciation de modèle*; `minimum<int>` est une instanciation du modèle `minimum<T>` .
 
-Ailleurs, un utilisateur peut déclarer une instance du modèle spécialisée pour int. Supposons que get_a () et get_b () sont des fonctions qui retournent un int :
+Ailleurs, un utilisateur peut déclarer une instance du modèle qui est spécialisée pour int. Supposons que get_a () et get_b () sont des fonctions qui retournent un int :
 
 ```cpp
 int a = get_a();
@@ -57,7 +58,7 @@ int minimum(const int& lhs, const int& rhs)
 
 Les règles relatives à la façon dont le compilateur effectue la déduction de type dans les modèles de fonction sont basées sur les règles des fonctions ordinaires. Pour plus d’informations, consultez [résolution de surcharge des appels de modèle de fonction](../cpp/overload-resolution-of-function-template-calls.md).
 
-## <a name="type-parameters"></a><a id="type_parameters"></a>Paramètres de type
+## <a name="type-parameters"></a><a id="type_parameters"></a> Paramètres de type
 
 Dans le `minimum` modèle ci-dessus, Notez que le paramètre de type *T* n’est pas qualifié tant qu’il n’est pas utilisé dans les paramètres d’appel de fonction, où les qualificateurs const et de référence sont ajoutés.
 
@@ -151,7 +152,7 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>Modèles en tant que paramètres de modèle
+## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a> Modèles en tant que paramètres de modèle
 
 Un modèle peut être un paramètre de modèle. Dans cet exemple, MyClass2 a deux paramètres de modèle : un paramètre TypeName *T* et un paramètre de modèle *arr*:
 
@@ -165,7 +166,7 @@ class MyClass2
 };
 ```
 
-Étant donné que le paramètre *arr* lui-même n’a pas de corps, ses noms de paramètres ne sont pas nécessaires. En fait, il est erroné de faire référence aux noms de paramètre TypeName ou de classe d' *arr*à partir du corps de `MyClass2` . Pour cette raison, les noms des paramètres de type d' *arr*peuvent être omis, comme illustré dans cet exemple :
+Étant donné que le paramètre *arr* lui-même n’a pas de corps, ses noms de paramètres ne sont pas nécessaires. En fait, il est erroné de faire référence aux noms de paramètre TypeName ou de classe d' *arr* à partir du corps de `MyClass2` . Pour cette raison, les noms des paramètres de type d'  *arr* peuvent être omis, comme illustré dans cet exemple :
 
 ```cpp
 template<typename T, template<typename, int> class Arr>

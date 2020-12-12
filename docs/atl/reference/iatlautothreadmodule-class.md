@@ -1,5 +1,6 @@
 ---
-title: Classe IAtlAutoThreadModule
+description: 'En savoir plus sur : classe IAtlAutoThreadModule'
+title: IAtlAutoThreadModule, classe
 ms.date: 11/04/2016
 f1_keywords:
 - IAtlAutoThreadModule
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - IAtlAutoThreadModule class
 ms.assetid: fcb58cf9-a427-4be9-89eb-04e1ab5cc3a1
-ms.openlocfilehash: e4528ca4e4d72518f4da9f30e7aa71d951ddaf5b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8dbcf5d9de9ff2e7874a12bdb698eed200cbaf44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330073"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139761"
 ---
-# <a name="iatlautothreadmodule-class"></a>Classe IAtlAutoThreadModule
+# <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule, classe
 
-Cette classe représente une `CreateInstance` interface à une méthode.
+Cette classe représente une interface à une `CreateInstance` méthode.
 
 > [!IMPORTANT]
 > Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
@@ -29,11 +30,11 @@ __interface IAtlAutoThreadModule
 
 ## <a name="remarks"></a>Notes
 
-La classe [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) `IAtlAutoThreadModule`dérive de , l’utiliser pour fournir du code pour créer un objet et récupérer un pointeur d’interface.
+La classe [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) dérive de `IAtlAutoThreadModule` , en l’utilisant pour fournir du code pour la création d’un objet et la récupération d’un pointeur d’interface.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlbase.h
+**En-tête :** atlbase. h
 
 ## <a name="see-also"></a>Voir aussi
 

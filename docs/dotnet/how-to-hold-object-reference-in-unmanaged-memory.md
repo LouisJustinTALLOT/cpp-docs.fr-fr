@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : conserver la référence d’objet dans la mémoire non managée'
 title: "Comment : stocker la référence d'un objet dans une mémoire non managée"
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 13d5bd37a0f5e0b065aecb8c5b264fb70685363f
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 9c54d0ce376e57c5865c2fef5987d878bfa8d7f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134925"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Comment : stocker la référence d'un objet dans une mémoire non managée
 

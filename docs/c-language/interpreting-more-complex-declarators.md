@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : interprétation des déclarateurs plus complexes'
 title: Interprétation des déclarateurs plus complexes
 ms.date: 11/04/2016
 helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-ms.openlocfilehash: 385392ea8836998e71584d02bd0ee4478fb774a0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 82fc9b3cbd1bbf36191b5bfae7d5c3695f84f964
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137512"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interprétation des déclarateurs plus complexes
 

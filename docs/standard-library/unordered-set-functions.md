@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur les fonctions suivantes : &lt; unordered_set &gt;'
 title: '&lt;unordered_set&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 852536a5c5bdfe5d944f3b70581a313a56dc8742
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153757"
 ---
 # <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt;, fonctions
 
-## <a name="swap"></a>échange (unordered_set)
+## <a name="swap-unordered_set"></a><a name="swap"></a> échange (unordered_set)
 
 Échange le contenu de deux conteneurs.
 
@@ -27,27 +28,27 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-\ de *clé*
+*Essentiel*\
 Type de clé.
 
-\ de *hachage*
-Type d'objet de la fonction de hachage.
+*Format*\
+Type d’objet de la fonction de hachage.
 
-*\ prévu*
+*Prédit*\
 Type d’objet de fonction de comparaison d’égalité.
 
-\ *Alloc*
+*Utilis*\
 Classe allocator.
 
-\ *gauche*
+*gauche*\
 Premier conteneur à échanger.
 
-\ *droit*
+*Oui*\
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle exécute `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`.
+La fonction de modèle exécute `left.` [unordered_set :: swap](../standard-library/unordered-set-class.md#swap) `(right)` .
 
 ### <a name="example"></a>Exemple
 
@@ -102,7 +103,7 @@ return (0);
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>échange (unordered_multiset)
+## <a name="swap-unordered_multiset"></a><a name="swap_unordered_multiset"></a> échange (unordered_multiset)
 
 Échange le contenu de deux conteneurs.
 
@@ -115,27 +116,27 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-\ de *clé*
+*Essentiel*\
 Type de clé.
 
-\ de *hachage*
-Type d'objet de la fonction de hachage.
+*Format*\
+Type d’objet de la fonction de hachage.
 
-*\ prévu*
+*Prédit*\
 Type d’objet de fonction de comparaison d’égalité.
 
-\ *Alloc*
+*Utilis*\
 Classe allocator.
 
-\ *gauche*
+*gauche*\
 Premier conteneur à échanger.
 
-\ *droit*
+*Oui*\
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle exécute `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`.
+La fonction de modèle exécute `left.` [unordered_multiset :: swap](../standard-library/unordered-multiset-class.md#swap) `(right)` .
 
 ### <a name="example"></a>Exemple
 

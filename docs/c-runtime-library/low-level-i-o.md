@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : Low-Level e/s'
 title: E/S niveau bas
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 88e159e9f85cd4f893616d3aef935417f5abde52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443104"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164976"
 ---
 # <a name="low-level-io"></a>E/S niveau bas
 
@@ -25,7 +26,7 @@ Les routines de bas niveau peuvent accéder aux flux standard ouverts au démarr
 |------------|---------------------|
 |**stdin**|0|
 |**stdout**|1|
-|**stderr**|2|
+|**achemine**|2|
 
 Les routines d’E/S de bas niveau définissent la variable globale [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) lorsqu’une erreur se produit. Lorsque vous utilisez des fonctions de bas niveau, vous ne devez inclure STDIO.H que si votre programme nécessite une constante définie dans STDIO.H, comme l’indicateur de fin de fichier (**EOF**).
 

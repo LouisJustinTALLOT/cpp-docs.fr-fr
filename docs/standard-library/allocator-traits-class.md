@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe allocator_traits'
 title: allocator_traits, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d60658c5f8cf6217dff7a846f0e5cbae42e6a565
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163559"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits, classe
 
@@ -83,7 +84,7 @@ Les méthodes statiques suivantes appellent la méthode correspondante sur un pa
 |Nom|Description|
 |-|-|
 |[lui](#allocate)|Méthode statique qui alloue de la mémoire en utilisant le paramètre d’allocateur donné.|
-|[construct](#construct)|Méthode statique qui utilise un allocateur spécifié pour construire un objet.|
+|[composer](#construct)|Méthode statique qui utilise un allocateur spécifié pour construire un objet.|
 |[libérer](#deallocate)|Méthode statique qui utilise un allocateur spécifié pour désallouer un nombre spécifié d’objets.|
 |[suppression](#destroy)|Méthode statique qui utilise un allocateur spécifié pour appeler le destructeur sur un objet sans désallouer sa mémoire.|
 |[max_size](#max_size)|Méthode statique qui utilise un allocateur spécifié pour déterminer le nombre maximal d’objets pouvant être alloués.|

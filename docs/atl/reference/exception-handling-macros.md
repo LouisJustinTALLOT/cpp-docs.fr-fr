@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros de gestion des exceptions
 title: Macros de gestion des exceptions
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - exception handling, macros
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
-ms.openlocfilehash: 7fcd8221ba5f121749cf366a93cc8a6d8d00ed7c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8d5e6564dec5769fb172c66b3102677e58cbd788
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139826"
 ---
 # <a name="exception-handling-macros"></a>Macros de gestion des exceptions
 

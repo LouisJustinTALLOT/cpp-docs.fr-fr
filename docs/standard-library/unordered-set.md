@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; unordered_set&gt;'
 title: '&lt;unordered_set&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: 978c717cf0d893d19947a98268ff0c49b2b24f9d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: af27e4757cbb62e27f9f8e5708268576bbd09109
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153692"
 ---
 # <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
 Définit les modèles de classe de conteneur [unordered_multiset](../standard-library/unordered-multiset-class.md) et [unordered_set](../standard-library/unordered-set-class.md) et leurs modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<unordered_set>
 
@@ -35,7 +36,7 @@ Définit les modèles de classe de conteneur [unordered_multiset](../standard-li
 |[Classe unordered_multiset](../standard-library/unordered-multiset-class.md)|Stocke une table de hachage de clés.|
 |[Classe unordered_set](../standard-library/unordered-set-class.md)|Stocke une table de hachage de clés.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

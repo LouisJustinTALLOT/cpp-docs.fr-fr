@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe IAtlMemMgr'
 title: IAtlMemMgr, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: b23d8f582c53114ea1434e250e8e5e64b642f733
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 31f25c5fdb6a4e443bf011aac29620be8a4f13f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139748"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr, classe
 
@@ -48,7 +49,7 @@ Cette interface est implémentée par [CComHeap](../../atl/reference/ccomheap-cl
 > [!NOTE]
 > Les fonctions de tas local et global sont plus lentes que les autres fonctions de gestion de la mémoire et ne fournissent pas autant de fonctionnalités. Par conséquent, les nouvelles applications doivent utiliser les [fonctions de tas](/windows/win32/Memory/heap-functions). Celles-ci sont disponibles dans la classe [CWin32Heap](../../atl/reference/cwin32heap-class.md) .
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#94](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]
 
@@ -69,7 +70,7 @@ void* Allocate(size_t nBytes) throw();
 *nBytes*<br/>
 Nombre demandé d'octets dans le nouveau bloc de mémoire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.
 
@@ -77,7 +78,7 @@ Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.
 
 Appelez [IAtlMemMgr :: Free](#free) ou [IAtlMemMgr :: Allocate](#reallocate) pour libérer la mémoire allouée par cette méthode.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple, consultez la [vue d’ensemble de IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
@@ -98,7 +99,7 @@ Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoir
 
 Utilisez cette méthode pour libérer de la mémoire obtenue par [IAtlMemMgr :: Allocate](#allocate) ou [IAtlMemMgr :: Allocate](#reallocate).
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple, consultez la [vue d’ensemble de IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
@@ -115,11 +116,11 @@ size_t GetSize(void* p) throw();
 *p*<br/>
 Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la taille du bloc de mémoire en octets.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple, consultez la [vue d’ensemble de IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
@@ -139,7 +140,7 @@ Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoir
 *nBytes*<br/>
 Nombre demandé d'octets dans le nouveau bloc de mémoire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.
 
@@ -149,7 +150,7 @@ Appelez [IAtlMemMgr :: Free](#free) ou [IAtlMemMgr :: Allocate](#reallocate) p
 
 Conceptuellement, cette méthode libère la mémoire existante et alloue un nouveau bloc de mémoire. En réalité, la mémoire existante peut être étendue ou réutilisée.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple, consultez la [vue d’ensemble de IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
@@ -166,7 +167,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 *pbAllowContextMenu*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -187,7 +188,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 *pbAllowShowUI*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -208,7 +209,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 *pbAllowWindowless*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -229,7 +230,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 *pclrBackground*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -250,7 +251,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 *pbDisplayAsDefault*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -271,7 +272,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 *pdwDocHostDoubleClickFlags*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -292,7 +293,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 *pdwDocHostFlags*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -313,7 +314,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 *pFont*<br/>
 à Adresse d’un `IFontDisp` pointeur d’interface utilisé pour recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -334,7 +335,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 *pclrForeground*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -355,7 +356,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 *plcidLocaleID*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -378,7 +379,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 *pbMessageReflect*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -399,7 +400,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 *pbstrOptionKeyPath*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -416,7 +417,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 *pbShowGrabHandles*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -437,7 +438,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 *pbShowHatching*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -458,7 +459,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 *pbUserMode*<br/>
 à Adresse d’une variable devant recevoir la valeur actuelle de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -479,7 +480,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 *bAllowContextMenu*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -500,7 +501,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 *bAllowShowUI*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -521,7 +522,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 *bAllowWindowless*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -542,7 +543,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 *clrBackground*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -563,7 +564,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 *bDisplayAsDefault*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -584,7 +585,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 *dwDocHostDoubleClickFlags*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -605,7 +606,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 *dwDocHostFlags*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -626,7 +627,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 *pFont*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -647,7 +648,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 *clrForeground*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -668,7 +669,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 *lcidLocaleID*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -689,7 +690,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 *bMessageReflect*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -710,7 +711,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 *bstrOptionKeyPath*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -727,7 +728,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 *bUserMode*<br/>
 dans Nouvelle valeur de cette propriété.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -748,7 +749,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 *pDispatch*<br/>
 Pointeur vers la nouvelle interface.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
@@ -772,7 +773,7 @@ dans Pointeur vers l' `IUnknown` interface du contrôle à attacher à l’objet
 *hWnd*<br/>
 dans Handle de la fenêtre à utiliser pour l’hébergement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -798,7 +799,7 @@ dans Handle de la fenêtre à utiliser pour l’hébergement.
 *pStream*<br/>
 dans Pointeur d’interface pour un flux contenant des données d’initialisation pour le contrôle. Sa valeur peut être NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -844,7 +845,7 @@ dans Identificateur d’interface d’une interface sortante sur l’objet conte
 *punkAdvise*<br/>
 dans Pointeur vers l' `IUnknown` interface de l’objet récepteur à connecter au point de connexion sur l’objet contenu spécifié par `iidSink` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -870,7 +871,7 @@ dans ID d’une interface sur le contrôle demandé.
 *ppvObject*<br/>
 à Adresse d’un pointeur qui recevra l’interface spécifiée du contrôle créé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -887,7 +888,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 *pDisp*<br/>
 dans Pointeur vers une `IDispatch` interface.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -904,7 +905,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 *pDisp*<br/>
 dans Pointeur vers une `IDocHostUIHandlerDispatch` interface.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 
@@ -935,7 +936,7 @@ Pour obtenir une description des paramètres restants et de la valeur de retour,
 
 L’appel de cette méthode équivaut à appeler [IAxWinHostWindowLic :: CreateControlLicEx](#createcontrollicex)
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) pour obtenir un exemple qui utilise `IAxWinHostWindowLic::CreateControlLic` .
 
@@ -963,7 +964,7 @@ dans BSTR qui contient la clé de licence du contrôle.
 
 Pour obtenir une description des paramètres restants et de la valeur de retour, consultez [IAxWinHostWindow :: CreateControlEx](#createcontrolex) .
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 Consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) pour obtenir un exemple qui utilise `IAxWinHostWindowLic::CreateControlLicEx` .
 

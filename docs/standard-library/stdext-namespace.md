@@ -1,5 +1,6 @@
 ---
-title: stdext, espace de noms
+description: 'En savoir plus sur : espace de noms stdext'
+title: Espace de noms stdext
 ms.date: 09/06/2017
 f1_keywords:
 - stdext
@@ -7,26 +8,26 @@ helpviewer_keywords:
 - _DEFINE_DEPRECATED_HASH_CLASSES symbol
 - stdext namespace
 ms.assetid: 3e94fc89-0584-424f-bc09-081b73379545
-ms.openlocfilehash: d40f3f7a99db72784cc9a32a9c37064228597d34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb81dde22014ec91f7212ce4313c21a8410f30a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153783"
 ---
-# <a name="stdext-namespace"></a>stdext, espace de noms
+# <a name="stdext-namespace"></a>Espace de noms stdext
 
-Membres de la [ \<hash_map >](../standard-library/hash-map.md) et [ \<hash_set >](../standard-library/hash-set.md) fichiers d’en-tête ne sont pas actuellement partie de l’image ISO C++ standard. Par conséquent, ces types et ces membres ont été déplacés de l’espace de noms `std` vers l’espace de noms `stdext`, de façon à rester conforme à la norme C++.
+Les membres des [\<hash_map>](../standard-library/hash-map.md) [\<hash_set>](../standard-library/hash-set.md) fichiers d’en-tête et ne font pas partie de la norme ISO C++. Par conséquent, ces types et ces membres ont été déplacés de l’espace de noms `std` vers l’espace de noms `stdext`, de façon à rester conforme à la norme C++.
 
-Lors de la compilation avec [/Ze](../build/reference/za-ze-disable-language-extensions.md), qui est la valeur par défaut, le compilateur vous avertit de l’utilisation de `std` pour les membres de la \<hash_map > et \<hash_set > fichiers d’en-tête. Pour désactiver l’avertissement, utilisez le pragma [warning](../preprocessor/warning.md) .
+Lors de la compilation avec [/Ze](../build/reference/za-ze-disable-language-extensions.md), qui est la valeur par défaut, le compilateur vous avertit de l’utilisation de `std` pour les membres des \<hash_map> fichiers d' \<hash_set> en-tête et. Pour désactiver l’avertissement, utilisez le pragma [warning](../preprocessor/warning.md) .
 
-Pour que le compilateur génère une erreur pour l’utilisation de `std` pour les membres de la \<hash_map > et \<hash_set > avec les fichiers d’en-tête **/Ze**, ajoutez la directive suivante avant de vous `#include` n’importe quel C++ fichiers d’en-tête de bibliothèque Standard.
+Pour que le compilateur génère une erreur pour l’utilisation de `std` pour les membres des \<hash_map> \<hash_set> fichiers d’en-tête et avec **/Ze**, ajoutez la directive suivante avant `#include` tous les fichiers d’en-tête de bibliothèque standard C++.
 
 ```cpp
 #define _DEFINE_DEPRECATED_HASH_CLASSES 0
 ```
 
-Lors de la compilation avec **/Za**, le compilateur génère une erreur.
+Lors de la compilation avec **/za**, le compilateur génère une erreur.
 
 ## <a name="see-also"></a>Voir aussi
 

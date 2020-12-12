@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fpclass, _fpclassf'
 title: _fpclass, _fpclassf
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bd7a2aa02a3431ff41c4d9695efca1f959ece24f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914849"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164911"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -63,11 +64,11 @@ int _fpclassf(
 *x*<br/>
 Valeur à virgule flottante à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Les fonctions **_fpclass** et **_fpclassf** retournent une valeur entière qui indique la classification à virgule flottante de l’argument *x*. La classification peut avoir une des valeurs suivantes, définies dans \<float.h>.
+Les fonctions **_fpclass** et **_fpclassf** retournent une valeur entière qui indique la classification à virgule flottante de l’argument *x*. La classification peut avoir l’une des valeurs suivantes, définie dans \<float.h> .
 
-|Value|Description|
+|Valeur|Description|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|NaN signalant|
 |**_FPCLASS_QNAN**|NaN silencieux|
@@ -80,7 +81,7 @@ Les fonctions **_fpclass** et **_fpclassf** retournent une valeur entière qui i
 |**_FPCLASS_PN**|Valeur non nulle normalisée positive|
 |**_FPCLASS_PINF**|Infini positif (+INF)|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **_fpclass** et **_fpclassf** sont spécifiques à Microsoft. Elles sont similaires à [fpclassify](fpclassify.md), mais retournent des informations plus détaillées sur l’argument. La fonction **_fpclassf** n’est disponible que lorsqu’elle est compilée pour la plateforme x64.
 
@@ -88,7 +89,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_fpclass**, **_fpclassf**|\<float.h>|
 

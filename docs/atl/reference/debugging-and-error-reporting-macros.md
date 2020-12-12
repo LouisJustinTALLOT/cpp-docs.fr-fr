@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros de débogage et de création de rapports d’erreurs
 title: Macros de débogage et de rapport d’erreurs
 ms.date: 05/06/2019
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 6b969cfb841a9a95d695eacc0a25f9dd378379ac
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 573c3f341ff9f9df58337b75e1080dde960d232c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139943"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et de rapport d’erreurs
 
@@ -40,7 +41,7 @@ Définissez cette macro avant d’inclure des fichiers d’en-tête ATL pour sui
 #define _ATL_DEBUG_INTERFACES
 ```
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 La sortie du suivi s’affiche comme indiqué ci-dessous :
 
@@ -71,7 +72,7 @@ Les informations fournies ici correspondent directement aux informations fournie
 #define _ATL_DEBUG_QI
 ```
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 En cas d’échec d’un appel à `QueryInterface` , la fenêtre sortie affiche :
 
@@ -90,11 +91,11 @@ ATLASSERT(booleanExpression);
 *booleanExpression*<br/>
 Expression (pointeurs inclus) qui prend une valeur différente de zéro ou 0.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Dans les versions Debug, ATLASSERT évalue *booleanExpression* et génère un rapport de débogage lorsque le résultat est false.
 
-### <a name="requirements"></a>Conditions requises
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atldef. h
 
@@ -115,7 +116,7 @@ Spécifie une expression booléenne à tester.
 *heure(s)*<br/>
 Spécifie un code d’erreur à retourner.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Ces macros fournissent un mécanisme permettant de détecter et d’informer l’utilisateur d’une utilisation incorrecte des paramètres.
 
@@ -127,11 +128,11 @@ Dans le cas ATLENSURE_THROW, `AtlThrow` est appelé avec le HRESULT spécifié.
 
 La différence entre ATLENSURE et ATLASSERT est que ATLENSURE lève une exception dans les versions release et dans les versions Debug.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-### <a name="requirements"></a>Conditions requises
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -148,15 +149,15 @@ ATLTRACENOTIMPL(funcname);
 *funcname*<br/>
 dans Chaîne contenant le nom de la fonction qui n’est pas implémentée.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Dans les versions release, retourne simplement E_NOTIMPL.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-### <a name="requirements"></a>Conditions requises
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLTRACE. h
 
@@ -187,7 +188,7 @@ dans Niveau de suivi à signaler. Pour plus d’informations, consultez les note
 *lpszFormat*<br/>
 dans Chaîne mise en forme à envoyer au périphérique de vidage.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Consultez [ATLTRACE2](#atltrace2) pour obtenir une description de ATLTRACE. ATLTRACE et ATLTRACE2 ont le même comportement, ATLTRACE est inclus à des fins de compatibilité descendante.
 
@@ -218,7 +219,7 @@ dans Niveau de suivi à signaler. Pour plus d’informations, consultez les note
 *lpszFormat*<br/>
 dans `printf`Chaîne de format de style à utiliser pour créer une chaîne à envoyer au périphérique de vidage.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 La forme abrégée de ATLTRACE2 écrit une chaîne dans la fenêtre de sortie du débogueur. La deuxième forme de ATLTRACE2 écrit également la sortie dans la fenêtre de sortie du débogueur, mais elle est soumise aux paramètres de l’outil de trace ATL/MFC (consultez [exemple ATLTraceTool](../../overview/visual-cpp-samples.md)). Par exemple, si vous définissez *niveau* sur 4 et l’outil de trace ATL/MFC sur le niveau 0, le message ne s’affiche pas. le *niveau* peut être 0, 1, 2, 3 ou 4. La valeur par défaut, 0, signale uniquement les problèmes les plus graves.
 

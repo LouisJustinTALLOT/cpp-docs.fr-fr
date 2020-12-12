@@ -1,5 +1,6 @@
 ---
-title: Classe CSecurityDesc
+description: 'En savoir plus sur : classe CSecurityDesc'
+title: CSecurityDesc, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityDesc
@@ -34,16 +35,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 926e4e0a795982479188d90ed866bf5e2584c187
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66a2229aa4819059a353baf8b3802bb1263da2e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140775"
 ---
-# <a name="csecuritydesc-class"></a>Classe CSecurityDesc
+# <a name="csecuritydesc-class"></a>CSecurityDesc, classe
 
-Cette classe est un `SECURITY_DESCRIPTOR` emballage pour la structure.
+Cette classe est un wrapper pour la `SECURITY_DESCRIPTOR` structure.
 
 > [!IMPORTANT]
 > Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
@@ -60,60 +61,60 @@ class CSecurityDesc
 
 |Nom|Description|
 |----------|-----------------|
-|[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Constructeur.|
-|[CSecurityDesc::CSecurityDesc](#dtor)|Destructeur.|
+|[CSecurityDesc :: CSecurityDesc](#csecuritydesc)|Constructeur.|
+|[CSecurityDesc :: ~ CSecurityDesc](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CSecurityDesc::DeString](#fromstring)|Convertit un descripteur de sécurité de format de chaîne en un descripteur de sécurité fonctionnel valide.|
-|[CSecurityDesc::GetControl](#getcontrol)|Récupère les informations de contrôle du descripteur de sécurité.|
-|[CSecurityDesc::GetDacl](#getdacl)|Récupère les informations discrétionnaires de la liste d’accès-contrôle (DACL) du descripteur de sécurité.|
-|[CSecurityDesc::GetGroup](#getgroup)|Récupère les informations du groupe principal du descripteur de sécurité.|
-|[CSecurityDesc::GetOwner](#getowner)|Récupère l’informaton propriétaire du descripteur de sécurité.|
-|[CSecurityDesc::GetPSECURITY_DESCRIPTOR](#getpsecurity_descriptor)|Retourne un pointeur à la `SECURITY_DESCRIPTOR` structure.|
-|[CSecurityDesc::GetSacl](#getsacl)|Récupère les informations de la liste d’accès au système (SACL) du descripteur de sécurité.|
-|[CSecurityDesc::IsDaclAutoInherited](#isdaclautoinherited)|Détermine si le DACL est configuré pour prendre en charge la propagation automatique.|
-|[CSecurityDesc::IsDaclDefaulted](#isdacldefaulted)|Détermine si le descripteur de sécurité est configuré avec un DACL par défaut.|
-|[CSecurityDesc::IsDaclPresent](#isdaclpresent)|Détermine si le descripteur de sécurité contient un DACL.|
-|[CSecurityDesc::IsDaclProtected](#isdaclprotected)|Détermine si le DACL est configuré pour empêcher les modifications.|
-|[CSecurityDesc::IsGroupDefaulted](#isgroupdefaulted)|Détermine si l’identifiant de sécurité du descripteur de sécurité (SID) a été défini par défaut.|
-|[CSecurityDesc::IsOwnerDefaulted](#isownerdefaulted)|Détermine si le propriétaire du descripteur de sécurité SID a été défini par défaut.|
-|[CSecurityDesc::IsSaclAutoInherited](#issaclautoinherited)|Détermine si le SACL est configuré pour prendre en charge la propagation automatique.|
-|[CSecurityDesc::IsSaclDefaulted](#issacldefaulted)|Détermine si le descripteur de sécurité est configuré avec un SACL par défaut.|
-|[CSecurityDesc::IsSaclPresent](#issaclpresent)|Détermine si le descripteur de sécurité contient un SACL.|
-|[CSecurityDesc::IsSaclProté](#issaclprotected)|Détermine si le SACL est configuré pour éviter les modifications.|
-|[CSecurityDesc::IsSelfRelative](#isselfrelative)|Détermine si le descripteur de sécurité est en format auto-relatif.|
-|[CSecurityDesc::MakeAbsolute](#makeabsolute)|Appelez cette méthode pour convertir le descripteur de sécurité en format absolu.|
-|[CSecurityDesc::MakeSelfRelative](#makeselfrelative)|Appelez cette méthode pour convertir le descripteur de sécurité en format auto-relatif.|
-|[CSecurityDesc::SetControl](#setcontrol)|Définit les bits de contrôle d'un descripteur de sécurité.|
-|[CSecurityDesc::SetDacl](#setdacl)|Définit les informations dans un DACL. Si un DACL est déjà présent dans le descripteur de sécurité, il est remplacé.|
-|[CSecurityDesc::SetGroup](#setgroup)|Définit les informations de groupe primaires d’un descripteur de sécurité de format absolu, remplaçant toute information de groupe primaire déjà présente.|
-|[CSecurityDesc::SetOwner](#setowner)|Définit les informations du propriétaire d’un descripteur de sécurité de format absolu, remplaçant toute information du propriétaire déjà présente.|
-|[CSecurityDesc::SetSacl](#setsacl)|Définit l’information dans un SACL. Si un SACL est déjà présent dans le descripteur de sécurité, il est remplacé.|
-|[CSecurityDesc::ToString](#tostring)|Convertit un descripteur de sécurité en format de chaîne.|
+|[CSecurityDesc :: FromString](#fromstring)|Convertit un descripteur de sécurité au format chaîne en un descripteur de sécurité valide et fonctionnel.|
+|[CSecurityDesc :: GetControl](#getcontrol)|Récupère les informations de contrôle du descripteur de sécurité.|
+|[CSecurityDesc :: GetDacl,](#getdacl)|Récupère des informations de liste de contrôle d’accès discrétionnaire (DACL) à partir du descripteur de sécurité.|
+|[CSecurityDesc :: GetGroup](#getgroup)|Récupère les informations de groupe principal à partir du descripteur de sécurité.|
+|[CSecurityDesc :: GetOwner](#getowner)|Récupère les information du propriétaire à partir du descripteur de sécurité.|
+|[CSecurityDesc :: GetPSECURITY_DESCRIPTOR](#getpsecurity_descriptor)|Retourne un pointeur vers la `SECURITY_DESCRIPTOR` structure.|
+|[CSecurityDesc :: GetSacl](#getsacl)|Récupère des informations de la liste de contrôle d’accès système (SACL) à partir du descripteur de sécurité.|
+|[CSecurityDesc :: IsDaclAutoInherited](#isdaclautoinherited)|Détermine si la liste DACL est configurée pour prendre en charge la propagation automatique.|
+|[CSecurityDesc :: IsDaclDefaulted](#isdacldefaulted)|Détermine si le descripteur de sécurité est configuré avec une liste DACL par défaut.|
+|[CSecurityDesc :: IsDaclPresent](#isdaclpresent)|Détermine si le descripteur de sécurité contient une liste DACL.|
+|[CSecurityDesc :: IsDaclProtected](#isdaclprotected)|Détermine si la liste DACL est configurée pour empêcher les modifications.|
+|[CSecurityDesc :: IsGroupDefaulted](#isgroupdefaulted)|Détermine si l’identificateur de sécurité (SID) de groupe du descripteur de sécurité a été défini par défaut.|
+|[CSecurityDesc :: IsOwnerDefaulted](#isownerdefaulted)|Détermine si le SID du propriétaire du descripteur de sécurité a été défini par défaut.|
+|[CSecurityDesc :: IsSaclAutoInherited](#issaclautoinherited)|Détermine si la liste SACL est configurée pour prendre en charge la propagation automatique.|
+|[CSecurityDesc :: IsSaclDefaulted](#issacldefaulted)|Détermine si le descripteur de sécurité est configuré avec une liste SACL par défaut.|
+|[CSecurityDesc :: IsSaclPresent](#issaclpresent)|Détermine si le descripteur de sécurité contient une liste SACL.|
+|[CSecurityDesc :: IsSaclProtected](#issaclprotected)|Détermine si la liste SACL est configurée pour empêcher les modifications.|
+|[CSecurityDesc :: IsSelfRelative](#isselfrelative)|Détermine si le descripteur de sécurité est au format auto-relatif.|
+|[CSecurityDesc :: MakeAbsolute](#makeabsolute)|Appelez cette méthode pour convertir le descripteur de sécurité au format absolu.|
+|[CSecurityDesc :: MakeSelfRelative](#makeselfrelative)|Appelez cette méthode pour convertir le descripteur de sécurité au format auto-relatif.|
+|[CSecurityDesc :: SetControl](#setcontrol)|Définit les bits de contrôle d'un descripteur de sécurité.|
+|[CSecurityDesc :: SetDacl,](#setdacl)|Définit des informations dans une liste DACL. Si une liste DACL est déjà présente dans le descripteur de sécurité, elle est remplacée.|
+|[CSecurityDesc :: SetGroup](#setgroup)|Définit les informations de groupe principal d’un descripteur de sécurité de format absolu, en remplaçant toutes les informations de groupe principal déjà présentes.|
+|[CSecurityDesc :: SetOwner](#setowner)|Définit les informations de propriétaire d’un descripteur de sécurité de format absolu, en remplaçant toutes les informations de propriétaire déjà présentes.|
+|[CSecurityDesc :: SetSacl](#setsacl)|Définit des informations dans une liste SACL. Si une liste SACL est déjà présente dans le descripteur de sécurité, elle est remplacée.|
+|[CSecurityDesc :: ToString](#tostring)|Convertit un descripteur de sécurité en un format de chaîne.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CSecurityDesc::l’opérateur const SECURITY_DESCRIPTOR](#operator_const_security_descriptor__star)|Retourne un pointeur à la `SECURITY_DESCRIPTOR` structure.|
-|[CSecurityDesc::opérateur](#operator_eq)|Opérateur d'assignation.|
+|[CSecurityDesc :: Operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|Retourne un pointeur vers la `SECURITY_DESCRIPTOR` structure.|
+|[CSecurityDesc :: Operator =](#operator_eq)|Opérateur d'assignation.|
 
 ## <a name="remarks"></a>Notes
 
 La `SECURITY_DESCRIPTOR` structure contient les informations de sécurité associées à un objet. Les applications utilisent cette structure pour définir et interroger l’état de sécurité d’un objet. Voir aussi [AtlGetSecurityDescriptor](security-global-functions.md#atlgetsecuritydescriptor).
 
-Les applications ne `SECURITY_DESCRIPTOR` doivent pas modifier la structure directement, et devraient plutôt utiliser les méthodes de classe fournies.
+Les applications ne doivent pas modifier la `SECURITY_DESCRIPTOR` structure directement, et doivent plutôt utiliser les méthodes de classe fournies.
 
-Pour une introduction au modèle de contrôle d’accès dans Windows, voir [Contrôle d’accès](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
+Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlsecurity.h
+**En-tête :** ATLSecurity. h
 
-## <a name="csecuritydesccsecuritydesc"></a><a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc
+## <a name="csecuritydesccsecuritydesc"></a><a name="csecuritydesc"></a> CSecurityDesc :: CSecurityDesc
 
 Constructeur.
 
@@ -126,13 +127,13 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *rhs*<br/>
-`CSecurityDesc` L’objet `SECURITY_DESCRIPTOR` ou la structure `CSecurityDesc` à attribuer au nouvel objet.
+`CSecurityDesc`Objet ou `SECURITY_DESCRIPTOR` structure à assigner au nouvel `CSecurityDesc` objet.
 
 ### <a name="remarks"></a>Notes
 
-L’objet `CSecurityDesc` peut être créé `SECURITY_DESCRIPTOR` en option `CSecurityDesc` à l’aide d’une structure ou d’un objet précédemment défini.
+L' `CSecurityDesc` objet peut éventuellement être créé à l’aide d’une `SECURITY_DESCRIPTOR` structure ou d’un objet défini précédemment `CSecurityDesc` .
 
-## <a name="csecuritydesccsecuritydesc"></a><a name="dtor"></a>CSecurityDesc::CSecurityDesc
+## <a name="csecuritydesccsecuritydesc"></a><a name="dtor"></a> CSecurityDesc :: ~ CSecurityDesc
 
 Destructeur.
 
@@ -144,9 +145,9 @@ virtual ~CSecurityDesc() throw();
 
 Le destructeur libère toutes les ressources allouées.
 
-## <a name="csecuritydescfromstring"></a><a name="fromstring"></a>CSecurityDesc::DeString
+## <a name="csecuritydescfromstring"></a><a name="fromstring"></a> CSecurityDesc :: FromString
 
-Convertit un descripteur de sécurité de format de chaîne en un descripteur de sécurité fonctionnel valide.
+Convertit un descripteur de sécurité au format chaîne en un descripteur de sécurité valide et fonctionnel.
 
 ```
 bool FromString(LPCTSTR pstr) throw(...);
@@ -155,19 +156,19 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *pstr*<br/>
-Pointeur vers une chaîne désilisée qui contient le [descripteur de sécurité de format de chaîne](/windows/win32/SecAuthZ/security-descriptor-string-format) à convertir.
+Pointeur vers une chaîne se terminant par un caractère null qui contient le [descripteur de sécurité au format chaîne](/windows/win32/SecAuthZ/security-descriptor-string-format) à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Les retours sont vrais sur le succès. Jette une exception sur l’échec.
+Retourne la valeur true en cas de réussite. Lève une exception en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-La chaîne peut être créée en utilisant [CSecurityDesc::ToString](#tostring). La conversion du descripteur de sécurité en chaîne facilite le stockage et la transmission.
+La chaîne peut être créée à l’aide de [CSecurityDesc :: ToString](#tostring). La conversion du descripteur de sécurité en chaîne facilite son stockage et sa transmission.
 
-Cette méthode appelle [ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
+Cette méthode appelle [convertstringsecuritydescriptortosecuritydescriptor a](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
 
-## <a name="csecuritydescgetcontrol"></a><a name="getcontrol"></a>CSecurityDesc::GetControl
+## <a name="csecuritydescgetcontrol"></a><a name="getcontrol"></a> CSecurityDesc :: GetControl
 
 Récupère les informations de contrôle du descripteur de sécurité.
 
@@ -178,19 +179,19 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 ### <a name="parameters"></a>Paramètres
 
 *psdc*<br/>
-Pointeur `SECURITY_DESCRIPTOR_CONTROL` vers une structure qui reçoit les informations de contrôle du descripteur de sécurité.
+Pointeur vers une `SECURITY_DESCRIPTOR_CONTROL` structure qui reçoit les informations de contrôle du descripteur de sécurité.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si la méthode réussit, fausse si elle échoue.
+Retourne la valeur true si la méthode réussit, false en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
 Cette méthode appelle [GetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
 
-## <a name="csecuritydescgetdacl"></a><a name="getdacl"></a>CSecurityDesc::GetDacl
+## <a name="csecuritydescgetdacl"></a><a name="getdacl"></a> CSecurityDesc :: GetDacl,
 
-Récupère les informations discrétionnaires de la liste d’accès-contrôle (DACL) du descripteur de sécurité.
+Récupère des informations de liste de contrôle d’accès discrétionnaire (DACL) à partir du descripteur de sécurité.
 
 ```
 bool GetDacl(
@@ -201,22 +202,22 @@ bool GetDacl(
 
 ### <a name="parameters"></a>Paramètres
 
-*pDacl (en)*<br/>
-Pointeur `CDacl` vers une structure dans laquelle stocker une copie du DACL du descripteur de sécurité. S’il existe un LCA discrétionnaire, la méthode fixe *pDacl* à l’adresse de l’ACL discrétionnaire du descripteur de sécurité. Si un ACL discrétionnaire n’existe pas, aucune valeur n’est stockée.
+*pDacl*<br/>
+Pointeur vers une `CDacl` structure dans laquelle stocker une copie de la liste DACL du descripteur de sécurité. Si une liste de contrôle d’accès discrétionnaire existe, la méthode définit *pDacl* sur l’adresse de la liste de contrôle d’accès discrétionnaire du descripteur de sécurité. S’il n’existe pas de liste de contrôle d’accès discrétionnaire, aucune valeur n’est stockée.
 
-*pbPrésent*<br/>
-Pointeur à une valeur qui indique la présence d’un ACL discrétionnaire dans le descripteur de sécurité spécifié. Si le descripteur de sécurité contient un LCA discrétionnaire, ce paramètre est concrétisateur. Si le descripteur de sécurité ne contient pas de LCA discrétionnaire, ce paramètre est mis à faux.
+*pbPresent*<br/>
+Pointeur vers une valeur qui indique la présence d’une liste de contrôle d’accès discrétionnaire dans le descripteur de sécurité spécifié. Si le descripteur de sécurité contient une liste de contrôle d’accès discrétionnaire, ce paramètre a la valeur true. Si le descripteur de sécurité ne contient pas de liste de contrôle d’accès discrétionnaire, ce paramètre est défini sur false.
 
 *pbDefaulted*<br/>
-Pointeur d’un drapeau fixé à la valeur `SECURITY_DESCRIPTOR_CONTROL` du drapeau SE_DACL_DEFAULTED dans la structure si un ACL discrétionnaire existe pour le descripteur de sécurité. Si ce drapeau est vrai, le LCA discrétionnaire a été récupéré par un mécanisme par défaut; si elle est fausse, l’ACL discrétionnaire a été explicitement spécifiée par un utilisateur.
+Pointeur vers un indicateur défini sur la valeur de l’indicateur SE_DACL_DEFAULTED dans la `SECURITY_DESCRIPTOR_CONTROL` structure si une liste de contrôle d’accès discrétionnaire existe pour le descripteur de sécurité. Si cet indicateur a la valeur true, la liste de contrôle d’accès discrétionnaire a été récupérée par un mécanisme par défaut. Si la valeur est false, l’ACL discrétionnaire a été explicitement spécifiée par un utilisateur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si la méthode réussit, fausse si elle échoue.
+Retourne la valeur true si la méthode réussit, false en cas d’échec.
 
-## <a name="csecuritydescgetgroup"></a><a name="getgroup"></a>CSecurityDesc::GetGroup
+## <a name="csecuritydescgetgroup"></a><a name="getgroup"></a> CSecurityDesc :: GetGroup
 
-Récupère les informations du groupe principal du descripteur de sécurité.
+Récupère les informations de groupe principal à partir du descripteur de sécurité.
 
 ```
 bool GetGroup(
@@ -227,18 +228,18 @@ bool GetGroup(
 ### <a name="parameters"></a>Paramètres
 
 *pSid*<br/>
-Pointeur vers un [CSid](../../atl/reference/csid-class.md) (identifiant de sécurité) qui reçoit une copie du groupe stocké dans le CDacl.
+Pointeur vers un [CSID](../../atl/reference/csid-class.md) (identificateur de sécurité) qui reçoit une copie du groupe stocké dans le CDacl.
 
 *pbDefaulted*<br/>
-Pointeur vers un drapeau réglé à la valeur `SECURITY_DESCRIPTOR_CONTROL` du drapeau SE_GROUP_DEFAULTED dans la structure lorsque la méthode revient.
+Pointeur vers un indicateur défini sur la valeur de l’indicateur SE_GROUP_DEFAULTED dans la `SECURITY_DESCRIPTOR_CONTROL` structure lorsque la méthode est retournée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si la méthode réussit, fausse si elle échoue.
+Retourne la valeur true si la méthode réussit, false en cas d’échec.
 
-## <a name="csecuritydescgetowner"></a><a name="getowner"></a>CSecurityDesc::GetOwner
+## <a name="csecuritydescgetowner"></a><a name="getowner"></a> CSecurityDesc :: GetOwner
 
-Récupère l’informaton propriétaire du descripteur de sécurité.
+Récupère les information du propriétaire à partir du descripteur de sécurité.
 
 ```
 bool GetOwner(
@@ -249,30 +250,30 @@ bool GetOwner(
 ### <a name="parameters"></a>Paramètres
 
 *pSid*<br/>
-Pointeur vers un [CSid](../../atl/reference/csid-class.md) (identifiant de sécurité) qui reçoit une copie du groupe stocké dans le CDacl.
+Pointeur vers un [CSID](../../atl/reference/csid-class.md) (identificateur de sécurité) qui reçoit une copie du groupe stocké dans le CDacl.
 
 *pbDefaulted*<br/>
-Pointeur vers un drapeau réglé à la valeur `SECURITY_DESCRIPTOR_CONTROL` du drapeau SE_OWNER_DEFAULTED dans la structure lorsque la méthode revient.
+Pointeur vers un indicateur défini sur la valeur de l’indicateur SE_OWNER_DEFAULTED dans la `SECURITY_DESCRIPTOR_CONTROL` structure lorsque la méthode est retournée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si la méthode réussit, fausse si elle échoue.
+Retourne la valeur true si la méthode réussit, false en cas d’échec.
 
-## <a name="csecuritydescgetpsecurity_descriptor"></a><a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR
+## <a name="csecuritydescgetpsecurity_descriptor"></a><a name="getpsecurity_descriptor"></a> CSecurityDesc :: GetPSECURITY_DESCRIPTOR
 
-Retourne un pointeur à la `SECURITY_DESCRIPTOR` structure.
+Retourne un pointeur vers la `SECURITY_DESCRIPTOR` structure.
 
 ```
 const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne un pointeur à la structure [SECURITY_DESCRIPTOR.](/windows/win32/api/winnt/ns-winnt-security_descriptor)
+Retourne un pointeur vers la structure [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) .
 
-## <a name="csecuritydescgetsacl"></a><a name="getsacl"></a>CSecurityDesc::GetSacl
+## <a name="csecuritydescgetsacl"></a><a name="getsacl"></a> CSecurityDesc :: GetSacl
 
-Récupère les informations de la liste d’accès au système (SACL) du descripteur de sécurité.
+Récupère des informations de la liste de contrôle d’accès système (SACL) à partir du descripteur de sécurité.
 
 ```
 bool GetSacl(
@@ -283,126 +284,126 @@ bool GetSacl(
 
 ### <a name="parameters"></a>Paramètres
 
-*pSacl (en)*<br/>
-Pointeur `CSacl` vers une structure dans laquelle stocker une copie de la SACL du descripteur de sécurité. Si un système ACL existe, la méthode définit *pSacl* à l’adresse du système descripteur de sécurité ACL. Si un système ACL n’existe pas, aucune valeur n’est stockée.
+*pSacl*<br/>
+Pointeur vers une `CSacl` structure dans laquelle stocker une copie de la liste SACL du descripteur de sécurité. Si une liste de contrôle d’accès système existe, la méthode définit *pSacl* sur l’adresse de la liste de contrôle d’accès système du descripteur de sécurité. Si aucune liste de contrôle d’accès système n’existe, aucune valeur n’est stockée.
 
-*pbPrésent*<br/>
-Pointeur à un indicateur de la méthode définit pour indiquer la présence d’un système ACL dans le descripteur de sécurité spécifié. Si le descripteur de sécurité contient un système ACL, ce paramètre est défini pour être vrai. Si le descripteur de sécurité ne contient pas de système ACL, ce paramètre est mis à faux.
+*pbPresent*<br/>
+Pointeur vers un indicateur que la méthode définit pour indiquer la présence d’une liste de contrôle d’accès système dans le descripteur de sécurité spécifié. Si le descripteur de sécurité contient une liste de contrôle d’accès système, ce paramètre est défini sur true. Si le descripteur de sécurité ne contient pas de liste de contrôle d’accès système, ce paramètre est défini sur false.
 
 *pbDefaulted*<br/>
-Pointeur à un drapeau réglé à la valeur `SECURITY_DESCRIPTOR_CONTROL` du drapeau SE_SACL_DEFAULTED dans la structure si un système ACL existe pour le descripteur de sécurité.
+Pointeur vers un indicateur défini sur la valeur de l’indicateur SE_SACL_DEFAULTED dans la `SECURITY_DESCRIPTOR_CONTROL` structure si une liste de contrôle d’accès système existe pour le descripteur de sécurité.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si la méthode réussit, fausse si elle échoue.
+Retourne la valeur true si la méthode réussit, false en cas d’échec.
 
-## <a name="csecuritydescisdaclautoinherited"></a><a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited
+## <a name="csecuritydescisdaclautoinherited"></a><a name="isdaclautoinherited"></a> CSecurityDesc :: IsDaclAutoInherited
 
-Détermine si la liste discrétionnaire de contrôle d’accès (DACL) est configurée pour prendre en charge la propagation automatique.
+Détermine si la liste de contrôle d’accès discrétionnaire (DACL) est configurée pour prendre en charge la propagation automatique.
 
 ```
 bool IsDaclAutoInherited() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si le descripteur de sécurité contient un DACL qui est mis en place pour soutenir la propagation automatique des entrées héréditaires de contrôle d’accès (ACE) aux objets existants pour enfants. Sinon, retourne False.
+Retourne la valeur true si le descripteur de sécurité contient une liste DACL qui est configurée pour prendre en charge la propagation automatique des entrées de contrôle d’accès (ACE) pouvant être héritées aux objets enfants existants. Sinon, retourne False.
 
 ### <a name="remarks"></a>Notes
 
-Le système définit ce bit quand il exécute l’algorithme d’héritage automatique pour l’objet et ses objets enfant existants.
+Le système définit ce bit lorsqu’il exécute l’algorithme d’héritage automatique pour l’objet et ses objets enfants existants.
 
-## <a name="csecuritydescisdacldefaulted"></a><a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted
+## <a name="csecuritydescisdacldefaulted"></a><a name="isdacldefaulted"></a> CSecurityDesc :: IsDaclDefaulted
 
-Détermine si le descripteur de sécurité est configuré avec une liste discrétionnaire de contrôle d’accès par défaut (DACL).
+Détermine si le descripteur de sécurité est configuré avec une liste de contrôle d’accès discrétionnaire (DACL) par défaut.
 
 ```
 bool IsDaclDefaulted() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si le descripteur de sécurité contient un DACL par défaut, faux autrement.
+Retourne la valeur true si le descripteur de sécurité contient une DACL par défaut ; sinon, false.
 
 ### <a name="remarks"></a>Notes
 
-Ce drapeau peut affecter la façon dont le système traite le DACL, en ce qui concerne l’héritage d’entrée de contrôle d’accès (ACE). Par exemple, si le créateur d’un objet ne spécifie pas un DACL, l’objet reçoit le DACL par défaut du jeton d’accès du créateur. Le système ignore ce drapeau si le drapeau SE_DACL_PRESENT n’est pas fixé.
+Cet indicateur peut affecter la façon dont le système traite la liste DACL, en ce qui concerne l’héritage de l’entrée de contrôle d’accès (ACE). Par exemple, si le créateur d’un objet ne spécifie pas de liste DACL, l’objet reçoit la DACL par défaut à partir du jeton d’accès du créateur. Le système ignore cet indicateur si l’indicateur SE_DACL_PRESENT n’est pas défini.
 
-Ce drapeau est utilisé pour déterminer comment le DACL final sur l’objet doit être calculé et n’est pas stocké physiquement dans le contrôle descripteur de sécurité de l’objet titrable.
+Cet indicateur est utilisé pour déterminer comment la liste DACL finale sur l’objet doit être calculée et qu’elle n’est pas stockée physiquement dans le contrôle de descripteur de sécurité de l’objet sécurisable.
 
-Pour définir ce drapeau, utilisez la méthode [CSecurityDesc::SetDacl.](#setdacl)
+Pour définir cet indicateur, utilisez la méthode [CSecurityDesc :: SetDacl,](#setdacl) .
 
-## <a name="csecuritydescisdaclpresent"></a><a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent
+## <a name="csecuritydescisdaclpresent"></a><a name="isdaclpresent"></a> CSecurityDesc :: IsDaclPresent
 
-Détermine si le descripteur de sécurité contient une liste discrétionnaire de contrôle d’accès (DACL).
+Détermine si le descripteur de sécurité contient une liste de contrôle d’accès discrétionnaire (DACL, Discretionary Access Control List).
 
 ```
 bool IsDaclPresent() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si le descripteur de sécurité contient un DACL, faux autrement.
+Retourne la valeur true si le descripteur de sécurité contient une liste DACL, false dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Si ce drapeau n’est pas défini, ou si ce drapeau est défini et que le DACL est NULL, le descripteur de sécurité permet un accès complet à tout le monde.
+Si cet indicateur n’est pas défini, ou si cet indicateur est défini et que la liste DACL est NULL, le descripteur de sécurité autorise un accès complet à tout le monde.
 
-Ce drapeau est utilisé pour contenir les informations de sécurité spécifiées par un appelant jusqu’à ce que le descripteur de sécurité soit associé à un objet titrable. Une fois que le descripteur de sécurité est associé à un objet titrable, le drapeau SE_DACL_PRESENT est toujours placé dans le contrôle du descripteur de sécurité.
+Cet indicateur est utilisé pour stocker les informations de sécurité spécifiées par un appelant jusqu’à ce que le descripteur de sécurité soit associé à un objet sécurisable. Une fois que le descripteur de sécurité est associé à un objet sécurisable, l’indicateur SE_DACL_PRESENT est toujours défini dans le contrôle descripteur de sécurité.
 
-Pour définir ce drapeau, utilisez la méthode [CSecurityDesc::SetDacl.](#setdacl)
+Pour définir cet indicateur, utilisez la méthode [CSecurityDesc :: SetDacl,](#setdacl) .
 
-## <a name="csecuritydescisdaclprotected"></a><a name="isdaclprotected"></a>CSecurityDesc::IsDaclProtected
+## <a name="csecuritydescisdaclprotected"></a><a name="isdaclprotected"></a> CSecurityDesc :: IsDaclProtected
 
-Détermine si la liste discrétionnaire de contrôle d’accès (DACL) est configurée pour prévenir les modifications.
+Détermine si la liste de contrôle d’accès discrétionnaire (DACL) est configurée pour empêcher les modifications.
 
 ```
 bool IsDaclProtected() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si le DACL est configuré pour empêcher le descripteur de sécurité d’être modifié par des entrées héréditaires de contrôle d’accès (ACE). Sinon, retourne False.
+Retourne la valeur true si la liste DACL est configurée pour empêcher la modification du descripteur de sécurité par des entrées de contrôle d’accès (ACE) pouvant être héritées. Sinon, retourne False.
 
 ### <a name="remarks"></a>Notes
 
-Pour définir ce drapeau, utilisez la méthode [CSecurityDesc::SetDacl.](#setdacl)
+Pour définir cet indicateur, utilisez la méthode [CSecurityDesc :: SetDacl,](#setdacl) .
 
-Cette méthode prend en charge la propagation automatique des ACI héréditaires.
+Cette méthode prend en charge la propagation automatique des ACE pouvant être héritées.
 
-## <a name="csecuritydescisgroupdefaulted"></a><a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted
+## <a name="csecuritydescisgroupdefaulted"></a><a name="isgroupdefaulted"></a> CSecurityDesc :: IsGroupDefaulted
 
-Détermine si l’identifiant de sécurité du descripteur de sécurité (SID) a été défini par défaut.
+Détermine si l’identificateur de sécurité (SID) de groupe du descripteur de sécurité a été défini par défaut.
 
 ```
 bool IsGroupDefaulted() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Les rendements sont vrais si un mécanisme par défaut, plutôt que le fournisseur initial du descripteur de sécurité, a fourni le groupe sid du descripteur de sécurité. Sinon, retourne False.
+Retourne la valeur true si un mécanisme par défaut, plutôt que le fournisseur d’origine du descripteur de sécurité, a fourni le SID du groupe du descripteur de sécurité. Sinon, retourne False.
 
 ### <a name="remarks"></a>Notes
 
-Pour définir ce drapeau, utilisez la méthode [CSecurityDesc::SetGroup.](#setgroup)
+Pour définir cet indicateur, utilisez la méthode [CSecurityDesc :: SetGroup](#setgroup) .
 
-## <a name="csecuritydescisownerdefaulted"></a><a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted
+## <a name="csecuritydescisownerdefaulted"></a><a name="isownerdefaulted"></a> CSecurityDesc :: IsOwnerDefaulted
 
-Détermine si l’identifiant de sécurité propriétaire du descripteur de sécurité (SID) a été défini par défaut.
+Détermine si l’identificateur de sécurité (SID) du propriétaire du descripteur de sécurité a été défini par défaut.
 
 ```
 bool IsOwnerDefaulted() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Rendements vrais si un mécanisme par défaut, plutôt que le fournisseur original du descripteur de sécurité, a fourni le propriétaire du descripteur de sécurité SID. Sinon, retourne False.
+Retourne la valeur true si un mécanisme par défaut, plutôt que le fournisseur d’origine du descripteur de sécurité, a fourni le SID du propriétaire du descripteur de sécurité. Sinon, retourne False.
 
 ### <a name="remarks"></a>Notes
 
-Pour définir ce drapeau, utilisez la méthode [CSecurityDesc::SetOwner.](#setowner)
+Pour définir cet indicateur, utilisez la méthode [CSecurityDesc :: SetOwner](#setowner) .
 
-## <a name="csecuritydescissaclautoinherited"></a><a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited
+## <a name="csecuritydescissaclautoinherited"></a><a name="issaclautoinherited"></a> CSecurityDesc :: IsSaclAutoInherited
 
 Détermine si la liste de contrôle d’accès système (SACL) est configurée pour prendre en charge la propagation automatique.
 
@@ -410,33 +411,33 @@ Détermine si la liste de contrôle d’accès système (SACL) est configurée p
 bool IsSaclAutoInherited() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si le descripteur de sécurité contient un SACL qui est mis en place pour soutenir la propagation automatique des entrées héréditaires de contrôle d’accès (ACE) aux objets existants pour enfants. Sinon, retourne False.
+Retourne la valeur true si le descripteur de sécurité contient une liste SACL qui est configurée pour prendre en charge la propagation automatique des entrées de contrôle d’accès (ACE) pouvant être héritées aux objets enfants existants. Sinon, retourne False.
 
 ### <a name="remarks"></a>Notes
 
-Le système définit ce bit quand il exécute l’algorithme d’héritage automatique pour l’objet et ses objets enfant existants.
+Le système définit ce bit lorsqu’il exécute l’algorithme d’héritage automatique pour l’objet et ses objets enfants existants.
 
-## <a name="csecuritydescissacldefaulted"></a><a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted
+## <a name="csecuritydescissacldefaulted"></a><a name="issacldefaulted"></a> CSecurityDesc :: IsSaclDefaulted
 
-Détermine si le descripteur de sécurité est configuré avec une liste de contrôle d’accès par défaut du système (SACL).
+Détermine si le descripteur de sécurité est configuré avec une liste de contrôle d’accès système (SACL) par défaut.
 
 ```
 bool IsSaclDefaulted() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si le descripteur de sécurité contient un SACL par défaut, faux autrement.
+Retourne la valeur true si le descripteur de sécurité contient une liste SACL par défaut, false dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Ce drapeau peut affecter la façon dont le système traite le SACL, en ce qui concerne l’héritage d’entrée de contrôle d’accès (ACE). Le système ignore ce drapeau si le drapeau SE_SACL_PRESENT n’est pas fixé.
+Cet indicateur peut affecter la façon dont le système traite la liste SACL, en ce qui concerne l’héritage de l’entrée de contrôle d’accès (ACE). Le système ignore cet indicateur si l’indicateur SE_SACL_PRESENT n’est pas défini.
 
-Pour définir ce drapeau, utilisez la méthode [CSecurityDesc::SetSacl.](#setsacl)
+Pour définir cet indicateur, utilisez la méthode [CSecurityDesc :: SetSacl](#setsacl) .
 
-## <a name="csecuritydescissaclpresent"></a><a name="issaclpresent"></a>CSecurityDesc::IsSaclPresent
+## <a name="csecuritydescissaclpresent"></a><a name="issaclpresent"></a> CSecurityDesc :: IsSaclPresent
 
 Détermine si le descripteur de sécurité contient une liste de contrôle d’accès système (SACL).
 
@@ -444,77 +445,77 @@ Détermine si le descripteur de sécurité contient une liste de contrôle d’a
 bool IsSaclPresent() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si le descripteur de sécurité contient un SACL, faux autrement.
+Retourne la valeur true si le descripteur de sécurité contient une liste SACL, false dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Pour définir ce drapeau, utilisez la méthode [CSecurityDesc::SetSacl.](#setsacl)
+Pour définir cet indicateur, utilisez la méthode [CSecurityDesc :: SetSacl](#setsacl) .
 
-## <a name="csecuritydescissaclprotected"></a><a name="issaclprotected"></a>CSecurityDesc::IsSaclProté
+## <a name="csecuritydescissaclprotected"></a><a name="issaclprotected"></a> CSecurityDesc :: IsSaclProtected
 
-Détermine si la liste de contrôle d’accès système (SACL) est configurée pour éviter les modifications.
+Détermine si la liste de contrôle d’accès système (SACL) est configurée pour empêcher les modifications.
 
 ```
 bool IsSaclProtected() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si le SACL est configuré pour empêcher le descripteur de sécurité d’être modifié par des entrées de contrôle d’accès héréditaires (ACE). Sinon, retourne False.
+Retourne la valeur true si la liste SACL est configurée pour empêcher la modification du descripteur de sécurité par des entrées de contrôle d’accès (ACE) pouvant être héritées. Sinon, retourne False.
 
 ### <a name="remarks"></a>Notes
 
-Pour définir ce drapeau, utilisez la méthode [CSecurityDesc::SetSacl.](#setsacl)
+Pour définir cet indicateur, utilisez la méthode [CSecurityDesc :: SetSacl](#setsacl) .
 
-Cette méthode prend en charge la propagation automatique des ACI héréditaires.
+Cette méthode prend en charge la propagation automatique des ACE pouvant être héritées.
 
-## <a name="csecuritydescisselfrelative"></a><a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative
+## <a name="csecuritydescisselfrelative"></a><a name="isselfrelative"></a> CSecurityDesc :: IsSelfRelative
 
-Détermine si le descripteur de sécurité est en format auto-relatif.
+Détermine si le descripteur de sécurité est au format auto-relatif.
 
 ```
 bool IsSelfRelative() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne vrai si le descripteur de sécurité est en format auto-relatif avec toutes les informations de sécurité dans un bloc de mémoire contigus. Retourne faux si le descripteur de sécurité est en format absolu. Pour plus d’informations, voir [Absolute and Self-Relative Security Descriptors](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Retourne la valeur true si le descripteur de sécurité est au format auto-relatif avec toutes les informations de sécurité dans un bloc de mémoire contigu. Retourne la valeur false si le descripteur de sécurité est au format absolu. Pour plus d’informations, consultez [descripteurs de sécurité absolus et Self-Relative](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
-## <a name="csecuritydescmakeabsolute"></a><a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute
+## <a name="csecuritydescmakeabsolute"></a><a name="makeabsolute"></a> CSecurityDesc :: MakeAbsolute
 
-Appelez cette méthode pour convertir le descripteur de sécurité en format absolu.
+Appelez cette méthode pour convertir le descripteur de sécurité au format absolu.
 
 ```
 bool MakeAbsolute() throw(...);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Revient vrai si la méthode réussit, faux sinon.
+Retourne la valeur true si la méthode est réussie ; sinon, false.
 
 ### <a name="remarks"></a>Notes
 
-Un descripteur de sécurité en format absolu contient des indications sur les informations qu’il contient, plutôt que l’information elle-même. Un descripteur de sécurité en format auto-relatif contient les informations dans un bloc de mémoire contigus. Dans un descripteur de sécurité `SECURITY_DESCRIPTOR` auto-relatif, une structure démarre toujours l’information, mais les autres composants du descripteur de sécurité peuvent suivre la structure dans n’importe quel ordre. Au lieu d’utiliser des adresses mémoire, les composants du descripteur de sécurité auto-relatif sont identifiés par des décalages dès le début du descripteur de sécurité. Ce format est utile lorsqu’un descripteur de sécurité doit être stocké sur un disque ou transmis au moyen d’un protocole de communication. Pour plus d’informations, voir [Absolute and Self-Relative Security Descriptors](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Un descripteur de sécurité au format absolu contient des pointeurs vers les informations qu’il contient, plutôt que les informations lui-même. Un descripteur de sécurité au format auto-relatif contient les informations dans un bloc de mémoire contigu. Dans un descripteur de sécurité auto-relatif, une `SECURITY_DESCRIPTOR` structure démarre toujours les informations, mais les autres composants du descripteur de sécurité peuvent suivre la structure dans n’importe quel ordre. Au lieu d’utiliser des adresses mémoire, les composants du descripteur de sécurité auto-relatif sont identifiés par des décalages à partir du début du descripteur de sécurité. Ce format est utile lorsqu’un descripteur de sécurité doit être stocké sur un disque ou transmis au moyen d’un protocole de communication. Pour plus d’informations, consultez [descripteurs de sécurité absolus et Self-Relative](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
-## <a name="csecuritydescmakeselfrelative"></a><a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative
+## <a name="csecuritydescmakeselfrelative"></a><a name="makeselfrelative"></a> CSecurityDesc :: MakeSelfRelative
 
-Appelez cette méthode pour convertir le descripteur de sécurité en format auto-relatif.
+Appelez cette méthode pour convertir le descripteur de sécurité au format auto-relatif.
 
 ```
 bool MakeSelfRelative() throw(...);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Revient vrai si la méthode réussit, faux sinon.
+Retourne la valeur true si la méthode est réussie ; sinon, false.
 
 ### <a name="remarks"></a>Notes
 
-Un descripteur de sécurité en format absolu contient des indications sur les informations qu’il contient, plutôt que de contenir l’information elle-même. Un descripteur de sécurité en format auto-relatif contient les informations dans un bloc de mémoire contigus. Dans un descripteur de sécurité `SECURITY_DESCRIPTOR` auto-relatif, une structure démarre toujours l’information, mais les autres composants du descripteur de sécurité peuvent suivre la structure dans n’importe quel ordre. Au lieu d’utiliser des adresses mémoire, les composants du descripteur de sécurité sont identifiés par des décalages depuis le début du descripteur de sécurité. Ce format est utile lorsqu’un descripteur de sécurité doit être stocké sur un disque ou transmis au moyen d’un protocole de communication. Pour plus d’informations, voir [Absolute and Self-Relative Security Descriptors](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Un descripteur de sécurité au format absolu contient des pointeurs vers les informations qu’il contient, au lieu de contenir les informations lui-même. Un descripteur de sécurité au format auto-relatif contient les informations dans un bloc de mémoire contigu. Dans un descripteur de sécurité auto-relatif, une `SECURITY_DESCRIPTOR` structure démarre toujours les informations, mais les autres composants du descripteur de sécurité peuvent suivre la structure dans n’importe quel ordre. Au lieu d’utiliser des adresses mémoire, les composants du descripteur de sécurité sont identifiés par des décalages à partir du début du descripteur de sécurité. Ce format est utile lorsqu’un descripteur de sécurité doit être stocké sur un disque ou transmis au moyen d’un protocole de communication. Pour plus d’informations, consultez [descripteurs de sécurité absolus et Self-Relative](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
-## <a name="csecuritydescoperator-"></a><a name="operator_eq"></a>CSecurityDesc::opérateur
+## <a name="csecuritydescoperator-"></a><a name="operator_eq"></a> CSecurityDesc :: Operator =
 
 Opérateur d'assignation.
 
@@ -526,21 +527,21 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *rhs*<br/>
-La `SECURITY_DESCRIPTOR` structure `CSecurityDesc` ou l’objet à attribuer à l’objet. `CSecurityDesc`
+`SECURITY_DESCRIPTOR`Structure ou `CSecurityDesc` objet à assigner à l' `CSecurityDesc` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne l’objet mis à jour. `CSecurityDesc`
+Retourne l’objet mis à jour `CSecurityDesc` .
 
-## <a name="csecuritydescoperator-const-security_descriptor-"></a><a name="operator_const_security_descriptor__star"></a>CSecurityDesc::l’opérateur const SECURITY_DESCRIPTOR
+## <a name="csecuritydescoperator-const-security_descriptor-"></a><a name="operator_const_security_descriptor__star"></a> CSecurityDesc :: Operator const SECURITY_DESCRIPTOR *
 
-Jette une valeur à un `SECURITY_DESCRIPTOR` pointeur de la structure.
+Convertit une valeur en pointeur vers la `SECURITY_DESCRIPTOR` structure.
 
 ```
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```
 
-## <a name="csecuritydescsetcontrol"></a><a name="setcontrol"></a>CSecurityDesc::SetControl
+## <a name="csecuritydescsetcontrol"></a><a name="setcontrol"></a> CSecurityDesc :: SetControl
 
 Définit les bits de contrôle d'un descripteur de sécurité.
 
@@ -552,13 +553,13 @@ bool SetControl(
 
 ### <a name="parameters"></a>Paramètres
 
-*ControlBitsOfInterest (en)*<br/>
-Masque SECURITY_DESCRIPTOR_CONTROL qui indique les bits de contrôle à définir. Pour une liste des drapeaux qui peuvent être fixés, voir [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
+*ControlBitsOfInterest*<br/>
+Masque SECURITY_DESCRIPTOR_CONTROL qui indique les bits de contrôle à définir. Pour obtenir la liste des indicateurs qui peuvent être définis, consultez [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
-*ControlBitsToSet (en anglais)*<br/>
-Un masque SECURITY_DESCRIPTOR_CONTROL qui indique les nouvelles valeurs pour les bits de contrôle spécifiés par le masque *ControlBitsOfInterest.* Ce paramètre peut être une combinaison des drapeaux énumérés pour le paramètre *ControlBitsOfInterest.*
+*ControlBitsToSet*<br/>
+Masque SECURITY_DESCRIPTOR_CONTROL qui indique les nouvelles valeurs pour les bits de contrôle spécifiés par le masque *ControlBitsOfInterest* . Ce paramètre peut être une combinaison des indicateurs listés pour le paramètre *ControlBitsOfInterest* .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
@@ -566,9 +567,9 @@ Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 Cette méthode appelle [SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
-## <a name="csecuritydescsetdacl"></a><a name="setdacl"></a>CSecurityDesc::SetDacl
+## <a name="csecuritydescsetdacl"></a><a name="setdacl"></a> CSecurityDesc :: SetDacl,
 
-Définit l’information dans une liste discrétionnaire de contrôle d’accès (DACL). Si un DACL est déjà présent dans le descripteur de sécurité, il est remplacé.
+Définit les informations dans une liste de contrôle d’accès discrétionnaire (DACL, Discretionary Access Control List). Si une liste DACL est déjà présente dans le descripteur de sécurité, elle est remplacée.
 
 ```
 inline void SetDacl(
@@ -582,26 +583,26 @@ inline void SetDacl(
 
 ### <a name="parameters"></a>Paramètres
 
-*Dacl Dacl*<br/>
-Référence à `CDacl` un objet spécifiant le DACL pour le descripteur de sécurité. Ce paramètre ne doit pas être NULL. Pour définir un DACL NULL dans le descripteur de sécurité, la première forme de la méthode doit être utilisée avec *bPresent* réglé à faux.
+*DACL*<br/>
+Référence à un `CDacl` objet spécifiant la liste DACL pour le descripteur de sécurité. Ce paramètre ne doit pas avoir la valeur NULL. Pour définir une liste DACL NULL dans le descripteur de sécurité, la première forme de la méthode doit être utilisée avec *bPresent* défini sur false.
 
-*bPrésent*<br/>
-Spécifie un drapeau indiquant la présence d’un DACL dans le descripteur de sécurité. Si ce paramètre est vrai, la méthode `SECURITY_DESCRIPTOR_CONTROL` définit le drapeau SE_DACL_PRESENT dans la structure et utilise les valeurs dans les paramètres *Dacl* et *bDefaulted.* Si elle est fausse, la méthode efface le drapeau SE_DACL_PRESENT, et *bDefaulted* est ignoré.
+*bPresent*<br/>
+Spécifie un indicateur qui spécifie la présence d’une liste DACL dans le descripteur de sécurité. Si ce paramètre a la valeur true, la méthode définit l’indicateur SE_DACL_PRESENT dans la `SECURITY_DESCRIPTOR_CONTROL` structure et utilise les valeurs des paramètres *DACL* et *bDefaulted* . Si la valeur est false, la méthode efface l’indicateur SE_DACL_PRESENT et *bDefaulted* est ignoré.
 
 *bDefaulted*<br/>
-Spécifie un drapeau indiquant la source du DACL. Si ce drapeau est vrai, le DACL a été récupéré par un mécanisme par défaut. En cas de faux, le DACL a été explicitement spécifié par un utilisateur. La méthode stocke cette valeur dans `SECURITY_DESCRIPTOR_CONTROL` le drapeau SE_DACL_DEFAULTED de la structure. Si ce paramètre n’est pas spécifié, le drapeau SE_DACL_DEFAULTED est effacé.
+Spécifie un indicateur qui spécifie la source de la liste DACL. Si cet indicateur a la valeur true, la liste DACL a été récupérée par un mécanisme par défaut. Si la valeur est false, la liste DACL a été explicitement spécifiée par un utilisateur. La méthode stocke cette valeur dans l’indicateur SE_DACL_DEFAULTED de la `SECURITY_DESCRIPTOR_CONTROL` structure. Si ce paramètre n’est pas spécifié, l’indicateur de SE_DACL_DEFAULTED est effacé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 ### <a name="remarks"></a>Notes
 
-Il y a une différence importante entre un DACL vide et un DACL inexistant. Lorsqu’un DACL est vide, il ne contient aucune entrée de contrôle d’accès et aucun droit d’accès n’a été explicitement accordé. Par conséquent, l’accès à l’objet est implicitement refusé. Lorsqu’un objet n’a pas de DACL, d’autre part, aucune protection n’est assignée à l’objet, et toute demande d’accès est accordée.
+Il existe une différence importante entre une liste DACL vide et une liste DACL inexistante. Quand une liste DACL est vide, elle ne contient aucune entrée de contrôle d’accès et aucun droit d’accès n’a été accordé explicitement. Par conséquent, l’accès à l’objet est refusé implicitement. En revanche, lorsqu’un objet n’a pas de liste DACL, aucune protection n’est assignée à l’objet et toute demande d’accès est accordée.
 
-## <a name="csecuritydescsetgroup"></a><a name="setgroup"></a>CSecurityDesc::SetGroup
+## <a name="csecuritydescsetgroup"></a><a name="setgroup"></a> CSecurityDesc :: SetGroup
 
-Définit les informations de groupe primaires d’un descripteur de sécurité de format absolu, remplaçant toute information de groupe primaire déjà présente.
+Définit les informations de groupe principal d’un descripteur de sécurité de format absolu, en remplaçant toutes les informations de groupe principal déjà présentes.
 
 ```
 bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
@@ -610,18 +611,18 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *Sid*<br/>
-Référence à un objet [CSid](../../atl/reference/csid-class.md) pour le nouveau groupe principal du descripteur de sécurité. Ce paramètre ne doit pas être NULL. Un descripteur de sécurité peut être marqué comme n’ayant pas un DACL ou un SACL, mais il doit avoir un groupe et un propriétaire, même lui ce sont le SID NULL (qui est un SID intégré avec une signification particulière).
+Référence à un objet [CSID](../../atl/reference/csid-class.md) pour le nouveau groupe principal du descripteur de sécurité. Ce paramètre ne doit pas avoir la valeur NULL. Un descripteur de sécurité peut être marqué comme n’ayant pas de liste DACL ou SACL, mais il doit avoir un groupe et un propriétaire, même s’il s’agit du SID NULL (qui est un SID intégré avec une signification particulière).
 
 *bDefaulted*<br/>
-Indique si les informations du groupe primaire provenaient d’un mécanisme par défaut. Si cette valeur est vraie, il s’agit d’informations par défaut, `SECURITY_DESCRIPTOR_CONTROL` et la méthode stocke cette valeur comme le drapeau SE_GROUP_DEFAULTED dans la structure. Si ce paramètre est nul, le drapeau SE_GROUP_DEFAULTED est effacé.
+Indique si les informations de groupe principal ont été dérivées d’un mécanisme par défaut. Si cette valeur est true, il s’agit d’informations par défaut, et la méthode stocke cette valeur en tant qu’indicateur de SE_GROUP_DEFAULTED dans la `SECURITY_DESCRIPTOR_CONTROL` structure. Si ce paramètre est égal à zéro, l’indicateur de SE_GROUP_DEFAULTED est effacé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-## <a name="csecuritydescsetowner"></a><a name="setowner"></a>CSecurityDesc::SetOwner
+## <a name="csecuritydescsetowner"></a><a name="setowner"></a> CSecurityDesc :: SetOwner
 
-Définit les informations du propriétaire d’un descripteur de sécurité de format absolu. Il remplace toute information de propriétaire déjà présente.
+Définit les informations de propriétaire d’un descripteur de sécurité de format absolu. Il remplace toutes les informations de propriétaire déjà présentes.
 
 ```
 bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
@@ -630,18 +631,18 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="parameters"></a>Paramètres
 
 *Sid*<br/>
-[L’objet CSid](../../atl/reference/csid-class.md) pour le nouveau propriétaire principal du descripteur de sécurité. Ce paramètre ne doit pas être NULL.
+Objet [CSID](../../atl/reference/csid-class.md) pour le nouveau propriétaire principal du descripteur de sécurité. Ce paramètre ne doit pas avoir la valeur NULL.
 
 *bDefaulted*<br/>
-Indique si les informations du propriétaire proviennent d’un mécanisme par défaut. Si cette valeur est vraie, il s’agit d’informations par défaut. La méthode stocke cette valeur comme `SECURITY_DESCRIPTOR_CONTROL` le drapeau SE_OWNER_DEFAULTED dans la structure. Si ce paramètre est nul, le drapeau SE_OWNER_DEFAULTED est effacé.
+Indique si les informations de propriétaire sont dérivées d’un mécanisme par défaut. Si cette valeur est true, il s’agit des informations par défaut. La méthode stocke cette valeur en tant qu’indicateur de SE_OWNER_DEFAULTED dans la `SECURITY_DESCRIPTOR_CONTROL` structure. Si ce paramètre est égal à zéro, l’indicateur de SE_OWNER_DEFAULTED est effacé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-## <a name="csecuritydescsetsacl"></a><a name="setsacl"></a>CSecurityDesc::SetSacl
+## <a name="csecuritydescsetsacl"></a><a name="setsacl"></a> CSecurityDesc :: SetSacl
 
-Définit l’information dans une liste de contrôle d’accès système (SACL). Si un SACL est déjà présent dans le descripteur de sécurité, il est remplacé.
+Définit les informations dans une liste de contrôle d’accès système (SACL). Si une liste SACL est déjà présente dans le descripteur de sécurité, elle est remplacée.
 
 ```
 bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
@@ -649,19 +650,19 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*Sacl*<br/>
-Pointeur `CSacl` vers un objet spécifiant le SACL pour le descripteur de sécurité. Ce paramètre ne doit pas être NULL, et doit être un objet CSacl. Contrairement aux CADL, il n’y a pas de différence entre NULL et un SACL vide, car les objets SACL ne spécifient pas les droits d’accès, seulement l’information de vérification.
+*SACL*<br/>
+Pointeur vers un `CSacl` objet spécifiant la liste SACL pour le descripteur de sécurité. Ce paramètre ne doit pas avoir la valeur NULL et doit être un objet CSacl. Contrairement aux DACL, il n’existe aucune différence entre la valeur NULL et une liste SACL vide, car les objets SACL ne spécifient pas de droits d’accès, mais uniquement des informations d’audit.
 
 *bDefaulted*<br/>
-Spécifie un drapeau indiquant la source de la SACL. Si ce drapeau est vrai, le SACL a été récupéré par un mécanisme par défaut. En cas de faux, le SACL a été explicitement spécifié par un utilisateur. La méthode stocke cette valeur dans le `SECURITY_DESCRIPTOR_CONTROL` drapeau SE_SACL_DEFAULTED de la structure. Si ce paramètre n’est pas spécifié, le drapeau SE_SACL_DEFAULTED est effacé.
+Spécifie un indicateur qui spécifie la source de la liste SACL. Si cet indicateur a la valeur true, la liste SACL a été récupérée par un mécanisme par défaut. Si la valeur est false, la liste SACL a été explicitement spécifiée par un utilisateur. La méthode stocke cette valeur dans l’indicateur SE_SACL_DEFAULTED de la `SECURITY_DESCRIPTOR_CONTROL` structure. Si ce paramètre n’est pas spécifié, l’indicateur de SE_SACL_DEFAULTED est effacé.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
-## <a name="csecuritydesctostring"></a><a name="tostring"></a>CSecurityDesc::ToString
+## <a name="csecuritydesctostring"></a><a name="tostring"></a> CSecurityDesc :: ToString
 
-Convertit un descripteur de sécurité en format de chaîne.
+Convertit un descripteur de sécurité en un format de chaîne.
 
 ```
 bool ToString(
@@ -673,37 +674,37 @@ bool ToString(
 ### <a name="parameters"></a>Paramètres
 
 *pstr*<br/>
-Pointeur vers une chaîne non terminée qui recevra le [descripteur de sécurité de format de chaîne.](/windows/win32/SecAuthZ/security-descriptor-string-format)
+Pointeur vers une chaîne se terminant par un caractère null qui recevra le [descripteur de sécurité au format chaîne](/windows/win32/SecAuthZ/security-descriptor-string-format).
 
 *si*<br/>
-Spécifie une combinaison de SECURITY_INFORMATION des drapeaux bits pour indiquer les composants du descripteur de sécurité à inclure dans la chaîne de sortie.
+Spécifie une combinaison d’indicateurs de bits SECURITY_INFORMATION pour indiquer les composants du descripteur de sécurité à inclure dans la chaîne de sortie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur true en cas de réussite, false en cas d'échec.
 
 ### <a name="remarks"></a>Notes
 
-Une fois que le descripteur de sécurité est en format de chaîne, il peut plus facilement être stocké ou transmis. Utilisez `CSecurityDesc::FromString` la méthode pour convertir la chaîne en un descripteur de sécurité.
+Une fois que le descripteur de sécurité est au format chaîne, il peut être plus facilement stocké ou transmis. Utilisez la `CSecurityDesc::FromString` méthode pour reconvertir la chaîne en descripteur de sécurité.
 
-Le paramètre *si* peut contenir les indicateurs SECURITY_INFORMATION suivants :
+Le paramètre *si* peut contenir les indicateurs de SECURITY_INFORMATION suivants :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
-|OWNER_SECURITY_INFORMATION|Inclure le propriétaire.|
-|GROUP_SECURITY_INFORMATION|Inclure le groupe principal.|
-|DACL_SECURITY_INFORMATION|Inclure le DACL.|
-|SACL_SECURITY_INFORMATION|Inclure le SACL.|
+|OWNER_SECURITY_INFORMATION|Incluez le propriétaire.|
+|GROUP_SECURITY_INFORMATION|Incluez le groupe principal.|
+|DACL_SECURITY_INFORMATION|Incluez la liste DACL.|
+|SACL_SECURITY_INFORMATION|Incluez la liste SACL.|
 
-Si le DACL est NULL et que le bit de contrôle SE_DACL_PRESENT est réglé dans le descripteur de sécurité d’entrée, la méthode échoue.
+Si la liste DACL est NULL et que le bit de contrôle SE_DACL_PRESENT est défini dans le descripteur de sécurité d’entrée, la méthode échoue.
 
-Si le DACL est NULL et que le bit de contrôle SE_DACL_PRESENT n’est pas réglé dans le descripteur de sécurité d’entrée, la chaîne descripteur de sécurité qui en résulte n’a pas de composant D : Voir [Security Descriptor String Format](/windows/win32/SecAuthZ/security-descriptor-string-format) pour plus de détails.
+Si la liste DACL est NULL et que le bit de contrôle SE_DACL_PRESENT n’est pas défini dans le descripteur de sécurité d’entrée, la chaîne du descripteur de sécurité résultant n’a pas de composant D :. Pour plus d’informations, consultez [format de chaîne de descripteur de sécurité](/windows/win32/SecAuthZ/security-descriptor-string-format) .
 
-Cette méthode appelle [ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
+Cette méthode appelle [convertstringsecuritydescriptortosecuritydescriptor a](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Échantillon de sécurité](../../overview/visual-cpp-samples.md)<br/>
+[Exemple de sécurité](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)<br/>
 [Fonctions globales de sécurité](../../atl/reference/security-global-functions.md)

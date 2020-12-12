@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : EQ Operator'
 title: EQ, opérateur
 ms.date: 12/17/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - operator EQ
 - EQ operator
 ms.assetid: d88afd01-dd8e-419d-ac4e-49afb4a67197
-ms.openlocfilehash: faf652111eb699d11ec6413ece31e030fa0a0cf5
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 9117719864bc40e0954df5aa0b4b3f11df2f122e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75311609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97127918"
 ---
 # <a name="operator-eq"></a>EQ, opérateur
 
@@ -25,5 +26,5 @@ Retourne true (-1) si *expression1* est égal à *Expression2*, ou retourne fals
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [opérateurs](operators-reference.md)\
+[Informations de référence sur les opérateurs](operators-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

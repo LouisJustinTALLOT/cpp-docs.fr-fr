@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; allocators&gt;'
 title: '&lt;allocators&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38183f58d9b919464a6cdbc31c6f75c539a9461b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204883"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163481"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -24,7 +25,7 @@ Définit plusieurs modèles qui permettent d’allouer et de libérer des blocs 
 ```
 
 > [!NOTE]
-> \<allocators>est déconseillé, à compter de Visual Studio 2019 version 16,3.
+> \<allocators> est déconseillé, à compter de Visual Studio 2019 version 16,3.
 
 ## <a name="remarks"></a>Notes
 
@@ -84,7 +85,7 @@ Un allocateur de blocs est un cache ou un filtre. Un cache est un modèle de cla
 
 Avec un compilateur qui ne peut pas relier la valeur de l’argument std :: size_t utilisé lorsque le modèle a été instancié n’est pas nécessairement la valeur de l’argument _Sz passé aux fonctions membres Allocate et DEALLOCATE d’un cache.
 
-\<allocators>fournit les modèles de cache suivants :
+\<allocators> fournit les modèles de cache suivants :
 
 - [cache_freelist](cache-freelist-class.md)
 
@@ -92,7 +93,7 @@ Avec un compilateur qui ne peut pas relier la valeur de l’argument std :: siz
 
 - [cache_chunklist](cache-chunklist-class.md)
 
-Un filtre est un allocateur de bloc qui implémente ses fonctions membres à l’aide d’un autre allocateur de bloc, qui lui est passé comme argument de modèle. La forme de filtre la plus courante est le filtre de synchronisation, qui applique une stratégie de synchronisation pour contrôler l’accès aux fonctions membres d’une instance d’un autre allocateur de blocs. \<allocators>fournit les filtres de synchronisation suivants :
+Un filtre est un allocateur de bloc qui implémente ses fonctions membres à l’aide d’un autre allocateur de bloc, qui lui est passé comme argument de modèle. La forme de filtre la plus courante est le filtre de synchronisation, qui applique une stratégie de synchronisation pour contrôler l’accès aux fonctions membres d’une instance d’un autre allocateur de blocs. \<allocators> fournit les filtres de synchronisation suivants :
 
 - [sync_none](sync-none-class.md)
 
@@ -102,7 +103,7 @@ Un filtre est un allocateur de bloc qui implémente ses fonctions membres à l�
 
 - [sync_shared](sync-shared-class.md)
 
-\<allocators>fournit également le filtre [rts_alloc](rts-alloc-class.md), qui contient plusieurs instances d’allocateur de bloc et détermine l’instance à utiliser pour l’allocation ou la désallocation au moment de l’exécution plutôt qu’au moment de la compilation. Elle est utilisée avec les compilateurs qui ne peuvent pas compiler la reliaison.
+\<allocators> fournit également le filtre [rts_alloc](rts-alloc-class.md), qui contient plusieurs instances d’allocateur de bloc et détermine l’instance à utiliser pour l’allocation ou la désallocation au moment de l’exécution plutôt qu’au moment de la compilation. Elle est utilisée avec les compilateurs qui ne peuvent pas compiler la reliaison.
 
 Une stratégie de synchronisation détermine comment une instance d’allocateur gère des demandes d’allocation et de désallocation simultanées à partir de plusieurs threads. La stratégie la plus simple consiste à passer toutes les demandes directement à l’objet cache sous-jacent, laissant à l’utilisateur la gestion de la synchronisation. Une stratégie plus complexe consiste à utiliser un mutex pour sérialiser l’accès à l’objet cache sous-jacent.
 
@@ -110,7 +111,7 @@ Si un compilateur prend en charge la compilation d’applications monothread et 
 
 Le modèle de cache `cache_freelist` accepte un argument de classe Max, qui détermine le nombre maximal d’éléments à stocker dans la liste libre.
 
-\<allocators>fournit les classes Max suivantes :
+\<allocators> fournit les classes Max suivantes :
 
 - [max_none](max-none-class.md)
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CSid'
 title: CSid (classe)
 ms.date: 03/27/2019
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: b6787c0e3f075935f19d51aa73bbd66da9cc0fcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b0f5553f14d31a43c0cc581ef43b518fa612616d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140801"
 ---
 # <a name="csid-class"></a>CSid (classe)
 
@@ -99,7 +100,7 @@ Les applications ne doivent pas modifier la `SID` structure directement, mais ut
 
 Pour obtenir une présentation du modèle de contrôle d’accès dans Windows, consultez [Access Control](/windows/win32/SecAuthZ/access-control) dans le SDK Windows.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLSecurity. h
 
@@ -166,7 +167,7 @@ Pointeur vers une `SID` structure.
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur initialise l' `CSid` objet, en affectant la valeur *SidTypeInvalid*à un membre de données interne, ou en copiant les paramètres à partir d’un `CSid` compte existant, `SID` ou existant.
+Le constructeur initialise l' `CSid` objet, en affectant la valeur *SidTypeInvalid* à un membre de données interne, ou en copiant les paramètres à partir d’un `CSid` compte existant, `SID` ou existant.
 
 Si l’initialisation échoue, le constructeur lèvera une [classe CAtlException](../../atl/reference/catlexception-class.md).
 

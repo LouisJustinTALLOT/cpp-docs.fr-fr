@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : informations de référence sur les utilitaires ATL'
 title: Référence des utilitaires ATL
 ms.date: 11/04/2016
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-ms.openlocfilehash: f9e59a2c67d391995d94d77f526613534acb48de
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8545881c5cd48aaff1bb25448ba443829128dc41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148575"
 ---
 # <a name="atl-utilities-reference"></a>Référence des utilitaires ATL
 
@@ -40,7 +41,7 @@ ATL fournit du code pour manipuler les chemins d’accès et les URL sous la for
 |--|--|
 | [ATL_URL_SCHEME](../atl/reference/atl-url-scheme-enum.md) | Les membres de cette énumération fournissent des constantes pour les schémas comprises par la [boucle](../atl/reference/curl-class.md). |
 
-## <a name="functions"></a>Functions
+## <a name="functions"></a>Fonctions
 
 | &emsp; | &emsp; |
 |--|--|

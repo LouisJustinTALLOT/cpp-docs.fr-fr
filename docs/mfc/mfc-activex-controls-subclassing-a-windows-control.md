@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : sous-classement d’un contrôle Windows'
 title: "Contrôles ActiveX MFC : sous-classement d'un contrôle Windows"
 ms.date: 09/12/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 354cd1cac5db775ea56cb5215a8528bdfe9ac5ab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3ea0e1af9860ca4585fe31817c689b75241d0f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225005"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164105"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Contrôles ActiveX MFC : sous-classement d'un contrôle Windows
 
@@ -41,7 +42,7 @@ Pour sous-classer un contrôle Windows, effectuez les tâches suivantes :
    > [!NOTE]
    > La majeure partie de ce travail est effectuée pour vous par l’Assistant contrôle ActiveX si vous sélectionnez le contrôle à sous-classé à l’aide de la liste déroulante **Sélectionner la classe de fenêtre parente** dans la page **paramètres du contrôle** .
 
-## <a name="overriding-issubclassedcontrol-and-precreatewindow"></a><a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a>Substitution de IsSubclassedControl et de PreCreateWindow
+## <a name="overriding-issubclassedcontrol-and-precreatewindow"></a><a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Substitution de IsSubclassedControl et de PreCreateWindow
 
 Pour substituer `PreCreateWindow` et `IsSubclassedControl` , ajoutez les lignes de code suivantes à la **`protected`** section de la déclaration de classe du contrôle :
 
@@ -59,7 +60,7 @@ Lors du sous-classement d'un contrôle Windows, vous pouvez préciser le style d
 
 Cette opération ajoute l’indicateur de style BS_CHECKBOX, tout en laissant l’indicateur de style par défaut (WS_CHILD) de la classe `COleControl` intact.
 
-## <a name="modifying-the-ondraw-member-function"></a><a name="_core_modifying_the_ondraw_member_function"></a>Modification de la fonction membre OnDraw
+## <a name="modifying-the-ondraw-member-function"></a><a name="_core_modifying_the_ondraw_member_function"></a> Modification de la fonction membre OnDraw
 
 Si vous souhaitez que votre contrôle sous-classé conserve la même apparence que le contrôle Windows correspondant, la fonction membre `OnDraw` du contrôle doit contenir un seul appel à la fonction membre `DoSuperclassPaint`, comme dans l'exemple suivant :
 
@@ -70,13 +71,13 @@ La fonction membre `DoSuperclassPaint`, implémentée par `COleControl`, utilise
 > [!NOTE]
 > La `DoSuperclassPaint` fonction membre fonctionne uniquement avec ces types de contrôles qui permettent de transmettre un contexte de périphérique en tant que *wParam* d’un message de WM_PAINT. Cela inclut certains contrôles Windows standard, tels que SCROLLBAR et BUTTON, et tous les contrôles communs. Pour les contrôles qui ne prennent pas en charge ce comportement, vous devez fournir votre propre code pour afficher un contrôle inactif correctement.
 
-## <a name="handling-reflected-window-messages"></a><a name="_core_handling_reflected_window_messages"></a>Gestion des messages de fenêtre réfléchie
+## <a name="handling-reflected-window-messages"></a><a name="_core_handling_reflected_window_messages"></a> Gestion des messages de fenêtre réfléchie
 
 Les contrôles Windows envoient généralement certains messages de fenêtre à leur fenêtre parente. Certains de ces messages, comme WM_COMMAND, notifient une action effectuée par l'utilisateur. D’autres, telles que WM_CTLCOLOR, sont utilisées pour obtenir des informations à partir de la fenêtre parente. Un contrôle ActiveX communique généralement avec la fenêtre parente par d'autres moyens. Les notifications sont communiquées en expédiant des événements (envoi de notifications d'événements) et des informations sur le conteneur de contrôle sont obtenues lors de l'accès aux propriétés ambiantes du conteneur. Comme ces techniques de communication existent, les conteneurs de contrôle ActiveX ne sont pas sensés traiter les messages de fenêtre envoyés par le contrôle.
 
 Pour empêcher le conteneur de recevoir les messages de fenêtre envoyés par un contrôle Windows sous-classé, `COleControl` crée une fenêtre supplémentaire pour servir de parent du contrôle. Cette fenêtre supplémentaire, appelée "réflecteur", n'est créée que pour un contrôle ActiveX qui sous-classe un contrôle Windows et a la même taille et position que la fenêtre de contrôle. La fenêtre réflecteur intercepte certains messages de fenêtre et les envoie au contrôle. Le contrôle, dans sa procédure de fenêtre, peut ensuite traiter ces messages réfléchis en utilisant les actions appropriées pour un contrôle ActiveX (par exemple, déclencher un événement). Consultez la page [ID de message de fenêtre réfléchi](reflected-window-message-ids.md) pour obtenir la liste des messages Windows interceptés et leurs messages reflétés correspondants.
 
-Un conteneur de contrôles ActiveX peut être conçu pour effectuer le renvoi de message lui-même, éliminant le besoin de `COleControl` de créer la fenêtre de réflection et de réduire la charge d'exécution pour un contrôle Windows sous-classé. `COleControl`détecte si le conteneur prend en charge cette fonctionnalité en recherchant une propriété ambiante MessageReflect avec la valeur **true**.
+Un conteneur de contrôles ActiveX peut être conçu pour effectuer le renvoi de message lui-même, éliminant le besoin de `COleControl` de créer la fenêtre de réflection et de réduire la charge d'exécution pour un contrôle Windows sous-classé. `COleControl` détecte si le conteneur prend en charge cette fonctionnalité en recherchant une propriété ambiante MessageReflect avec la valeur **true**.
 
 Pour traiter un message de fenêtre réfléchi, ajoutez une entrée à la table des messages de contrôle et implémentez une fonction gestionnaire. Comme les messages réfléchis ne font pas partie de l'ensemble standard de messages définis par Windows, l'Affichage de classes ne prend pas en charge l'ajout de ces gestionnaires de messages. Toutefois, il n'est pas difficile d'ajouter un gestionnaire manuellement.
 

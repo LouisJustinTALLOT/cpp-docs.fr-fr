@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les configurations de projet ATL par défaut
 title: Configurations de projet ATL par défaut
 ms.date: 10/20/2017
 helpviewer_keywords:
 - ATL projects, default configurations
 ms.assetid: 7e272722-41af-4330-b965-a6d74ec16880
-ms.openlocfilehash: 24f518f3ca5fefbfed1d89da9209bc2c27d890e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3546631863173ea70a1d7eb61126e92c517c907b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276573"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139916"
 ---
 # <a name="default-atl-project-configurations"></a>Configurations de projet ATL par défaut
 
@@ -17,14 +18,14 @@ L’Assistant Projet ATL crée deux configurations de projet par défaut :
 
 |Configuration|Jeu de caractères|Utilisation des ATL|
 |-------------------|-------------------|----------------|
-|Édition|MBCS|DLL|
+|Libérer|MBCS|DLL|
 |Débogage|MBCS|DLL|
 
-**Jeu de caractères**, **utilisation des ATL** et peut être modifié dans le **paramètres du projet** boîte de dialogue sous la **général** onglet. Vous pouvez également ajouter vos propres configurations à l’aide du Gestionnaire de Configuration. Pour plus d’informations, consultez [des Configurations de Build](/visualstudio/ide/understanding-build-configurations).
+Le **jeu de caractères**, l' **utilisation des ATL** et peuvent tous être modifiés dans la boîte de dialogue **paramètres du projet** sous l’onglet **général** . Vous pouvez également ajouter vos propres configurations à l’aide de l’Configuration Manager. Pour plus d’informations, consultez [configurations de build](/visualstudio/ide/understanding-build-configurations).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation avec ATL et le code C Run-Time](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Programmation avec des Run-Time du code ATL et C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Définir des propriétés de build et de compilateur](../../build/working-with-project-properties.md)<br/>
-[Boîte de dialogue de configuration Manager](/visualstudio/ide/understanding-build-configurations)<br/>
+[Configuration Manager, boîte de dialogue](/visualstudio/ide/understanding-build-configurations)<br/>
 [Compilation et génération](/visualstudio/ide/compiling-and-building-in-visual-studio)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Allocator, classe'
 title: allocator, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 4857de0b77d69a0d256da2200e5f4d0eb9d51c51
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f1f54aae3191d261d549e69e942974fc46a670f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844819"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163624"
 ---
 # <a name="allocator-class"></a>allocator, classe
 
@@ -99,13 +100,13 @@ Ces `Type` s spécifient la forme que les pointeurs et les références doivent 
 |[size_type](#size_type)|Type intégral non signé qui peut représenter la longueur d’une séquence qu’un objet de type `allocator` peut allouer.|
 |[value_type](#value_type)|Type géré par l'allocateur.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
 |[address](#address)|Recherche l'adresse d'un objet dont la valeur est spécifiée.|
 |[lui](#allocate)|Alloue un bloc de mémoire suffisamment grand pour stocker au moins un nombre spécifié d'éléments.|
-|[construct](#construct)|Construit un type d'objet spécifique à une adresse spécifiée qui est initialisée avec une valeur spécifiée.|
+|[composer](#construct)|Construit un type d'objet spécifique à une adresse spécifiée qui est initialisée avec une valeur spécifiée.|
 |[libérer](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[suppression](#destroy)|Appelle un destructeur d'objets sans libérer la mémoire où l'objet était stocké.|
 |[max_size](#max_size)|Retourne le nombre d'éléments de type `Type` qui pourraient être alloués par un objet de classe `allocator` avant que la mémoire libre soit complètement utilisée.|
@@ -537,7 +538,7 @@ Nombre d’objets à désallouer dans le stockage.
 
 #### <a name="remarks"></a>Notes
 
-La fonction membre libère le stockage pour le tableau d’objets Count de type `Type` en commençant par *ptr*, en appelant `operator delete(ptr)` . Le pointeur *ptr* doit avoir été retourné précédemment par un appel à [allouer](#allocate) pour un objet allocateur dont la valeur est égale à ** \* This**, en allouant un objet tableau de même taille et de même type. `deallocate` ne lève jamais d’exception.
+La fonction membre libère le stockage pour le tableau d’objets Count de type `Type` en commençant par *ptr*, en appelant `operator delete(ptr)` . Le pointeur *ptr* doit avoir été retourné précédemment par un appel à [allouer](#allocate) pour un objet allocateur dont la valeur est égale à **\* This**, en allouant un objet tableau de même taille et de même type. `deallocate` ne lève jamais d’exception.
 
 #### <a name="example"></a>Exemple
 
@@ -812,7 +813,7 @@ typedef value_type *pointer;
 
 #### <a name="remarks"></a>Notes
 
-Le type pointeur décrit un objet `ptr` qui peut désigner, par l’expression ** \* ptr**, tout objet qu’un objet de type `allocator` peut allouer.
+Le type pointeur décrit un objet `ptr` qui peut désigner, par l’expression **\* ptr**, tout objet qu’un objet de type `allocator` peut allouer.
 
 #### <a name="example"></a>Exemple
 

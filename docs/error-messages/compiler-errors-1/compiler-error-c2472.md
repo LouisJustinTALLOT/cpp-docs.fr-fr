@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2472'
 title: Erreur du compilateur C2472
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2472
 ms.assetid: 3b36bcdc-2ba5-4357-ab88-7545ba0551cd
-ms.openlocfilehash: d2f104bb61915f8d19d5fff22eea17929c0e8d74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1d4d668c1e7151771a2df85e888384c6c3ea028
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164495"
 ---
 # <a name="compiler-error-c2472"></a>Erreur du compilateur C2472
 
-> «*fonction*' ne peut pas être généré dans le code managé : '*message*' ; compilez avec /clr pour générer une image mixte
+> '*Function*'ne peut pas être généré dans du code managé : '*message*'; compiler avec/CLR pour générer une image mixte
 
 ## <a name="remarks"></a>Notes
 
 Cette erreur se produit quand des types non pris en charge par le code managé sont utilisés dans un environnement CLR pur. Compilez avec **/clr** pour résoudre l’erreur.
 
-Le **/CLR : pure** et **/CLR : safe** options du compilateur sont déconseillées dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+Les options de compilateur **/clr : pure** et **/clr : safe** sont dépréciées dans Visual Studio 2015 et ne sont pas prises en charge dans Visual Studio 2017.
 
 ## <a name="example"></a>Exemple
 
@@ -46,4 +47,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-- [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)

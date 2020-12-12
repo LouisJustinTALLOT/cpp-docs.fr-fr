@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Comment : étendre la bibliothèque de marshaling'
 title: 'Comment : étendre la bibliothèque de marshaling'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 071ea72a2aa03dcf16eb0f09e121eba4514e5828
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 829e05002c23f5a5b59efdb5e65dc5769ca7906a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134964"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Comment : étendre la bibliothèque de marshaling
 

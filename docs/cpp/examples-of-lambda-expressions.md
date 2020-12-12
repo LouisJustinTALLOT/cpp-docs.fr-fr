@@ -1,21 +1,22 @@
 ---
+description: 'En savoir plus sur : exemples d’expressions lambda'
 title: Exemples d’expressions lambda
 ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 585e76119b0e848e322c88ad0149ebb42c6b5b1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91c29bd1cd49045d51421d76bd46b3c121cfca3f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164801"
 ---
 # <a name="examples-of-lambda-expressions"></a>Exemples d’expressions lambda
 
 Cet article explique comment utiliser des expressions lambda dans vos programmes. Pour obtenir une vue d’ensemble des expressions lambda, consultez [expressions lambda](../cpp/lambda-expressions-in-cpp.md). Pour plus d’informations sur la structure d’une expression lambda, consultez [syntaxe d’expression lambda](../cpp/lambda-expression-syntax.md).
 
-## <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a>Déclaration d’expressions lambda
+## <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a> Déclaration d’expressions lambda
 
 ### <a name="example-1"></a>Exemple 1
 
@@ -99,7 +100,7 @@ int main()
 
 [[Dans cet article](#top)]
 
-## <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a>Appel d’expressions lambda
+## <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a> Appel d’expressions lambda
 
 Vous pouvez appeler une expression lambda immédiatement, comme indiqué dans l’extrait de code suivant. Le deuxième extrait de code montre comment passer une expression lambda en tant qu’argument aux algorithmes de la bibliothèque standard C++, tels que `find_if` .
 
@@ -179,7 +180,7 @@ Pour plus d’informations sur la `find_if` fonction, consultez [`find_if`](../s
 
 [[Dans cet article](#top)]
 
-## <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a>Imbrication d’expressions lambda
+## <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a> Imbrication d’expressions lambda
 
 ### <a name="example"></a>Exemple
 
@@ -217,7 +218,7 @@ Dans cet exemple, `[](int y) { return y * 2; }` est l’expression lambda imbriq
 
 [[Dans cet article](#top)]
 
-## <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a>Fonctions lambda d’ordre supérieur
+## <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a> Higher-Order les fonctions lambda
 
 ### <a name="example"></a>Exemple
 
@@ -266,7 +267,7 @@ int main()
 
 [[Dans cet article](#top)]
 
-## <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a>Utilisation d’une expression lambda dans une fonction
+## <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a> Utilisation d’une expression lambda dans une fonction
 
 ### <a name="example"></a>Exemple
 
@@ -359,7 +360,7 @@ La fonction `ApplyScale` utilise une expression lambda pour imprimer le produit 
 
 [[Dans cet article](#top)]
 
-## <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a>Utilisation d’expressions lambda avec des modèles
+## <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a> Utilisation d’expressions lambda avec des modèles
 
 ### <a name="example"></a>Exemple
 
@@ -423,7 +424,7 @@ Pour plus d’informations sur les modèles C++, consultez [modèles](../cpp/tem
 
 [[Dans cet article](#top)]
 
-## <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a>Gestion des exceptions
+## <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a> Gestion des exceptions
 
 ### <a name="example"></a>Exemple
 
@@ -479,7 +480,7 @@ Pour plus d’informations sur la gestion des exceptions, consultez [gestion des
 
 [[Dans cet article](#top)]
 
-## <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a>Utilisation d’expressions lambda avec des types managés (C++/CLI)
+## <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a> Utilisation d’expressions lambda avec des types managés (C++/CLI)
 
 ### <a name="example"></a>Exemple
 
@@ -524,7 +525,7 @@ Vous pouvez également utiliser vos expressions lambda avec la bibliothèque STL
 [Expressions lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Syntaxe d’expression lambda](../cpp/lambda-expression-syntax.md)<br/>
 [`auto`](../cpp/auto-cpp.md)<br/>
-[`function`Type](../standard-library/function-class.md)<br/>
+[`function` Type](../standard-library/function-class.md)<br/>
 [`find_if`](../standard-library/algorithm-functions.md#find_if)<br/>
 [`<algorithm>`](../standard-library/algorithm.md)<br/>
 [Appel de fonction](../cpp/function-call-cpp.md)<br/>

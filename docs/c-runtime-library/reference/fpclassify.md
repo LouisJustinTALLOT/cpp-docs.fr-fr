@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fpclassify'
 title: fpclassify
 ms.date: 04/05/2018
 api_name:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: 75cfdc33c21059e190fd04f4cd1b73716e74ac42
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 716684f15e82fb439c16239a61401b892a244f93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164833"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -59,7 +60,7 @@ int fpclassify(
 *x*<br/>
 Valeur à virgule flottante à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **fpclassify** retourne une valeur entière qui indique la classe à virgule flottante de l’argument *x*. Ce tableau montre les valeurs possibles retournées par **fpclassify**, définies dans \<math.h> .
 

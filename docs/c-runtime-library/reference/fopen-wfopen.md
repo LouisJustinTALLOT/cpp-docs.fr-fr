@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fopen, _wfopen'
 title: fopen, _wfopen
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: b7889009fe2de3c5256d6caf6cb5afa8792919c4
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: a11bf5ab387ac3436a488f77bea4c5c130836790
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164924"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -64,13 +65,13 @@ FILE *_wfopen(
 
 ### <a name="parameters"></a>Paramètres
 
-*extension*<br/>
+*filename*<br/>
 Nom du fichier.
 
 *mode*<br/>
 Genre d'accès qui est activé.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne un pointeur vers le fichier ouvert. Une valeur de pointeur null indique une erreur. Si *filename* ou *mode* a la **valeur null** ou est une chaîne vide, ces fonctions déclenchent le gestionnaire de paramètre non valide, qui est décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la **valeur null** et attribuent à **errno** la valeur **EINVAL**.
 
@@ -92,7 +93,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 > **Fichier \* FP = fopen ("newfile.txt", "RT +, CCS =**_Encoding_**");**
 
-Les valeurs d' *encodage* autorisées sont **Unicode**, **UTF-8**et **UTF-16LE**.
+Les valeurs d' *encodage* autorisées sont **Unicode**, **UTF-8** et **UTF-16LE**.
 
 Lorsqu’un fichier est ouvert en mode Unicode, les fonctions d’entrée traduisent les données lues à partir du fichier en données UTF-16 stockées en tant que type **`wchar_t`** . Les fonctions qui écrivent dans un fichier ouvert en mode Unicode attendent des mémoires tampons qui contiennent des données UTF-16 stockées en tant que type **`wchar_t`** . Si le fichier est encodé au format UTF-8, les données UTF-16 sont traduites en UTF-8 lors de leur écriture et le contenu du fichier encodé au format UTF-8 est traduit en UTF-16 lorsqu'il est lu. Une tentative de lecture ou d’écriture d’un nombre impair d’octets en mode Unicode provoque une erreur de [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Pour lire ou écrire des données stockées dans votre programme au format UTF-8, utilisez un mode de fichier binaire ou texte au lieu d'un mode Unicode. Vous êtes responsable de toute traduction d'encodage nécessaire.
 
@@ -123,7 +124,7 @@ Si le *mode* est **« a, CCS =**_Encoding_**»**, **fopen** tente d’abord d�
 
 Le *mode* chaîne de caractères spécifie le type d’accès demandé pour le fichier, comme suit.
 
-|*mode*|Accès|
+|*mode*|Access|
 |-|-|
 | **r** | Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, l’appel **fopen** échoue. |
 | **s** | Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit. |
@@ -165,23 +166,23 @@ Les options suivantes peuvent être ajoutées au *mode* pour spécifier des comp
 | **R** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque. |
 | **T** | Spécifie un fichier comme temporaire. Si possible, il n'est pas vidé sur disque. |
 | **D** | Spécifie un fichier comme temporaire. Il est supprimé lorsque le dernier pointeur de fichier est fermé. |
-| **CCS =**_encodage_ | Spécifie le jeu de caractères codé à utiliser (l’un des **UTF-8**, **UTF-16LE**ou **Unicode**) pour ce fichier. Laissez ce paramètre non spécifié si vous souhaitez bénéficier de l'encodage ANSI. |
+| **CCS =**_encodage_ | Spécifie le jeu de caractères codé à utiliser (l’un des **UTF-8**, **UTF-16LE** ou **Unicode**) pour ce fichier. Laissez ce paramètre non spécifié si vous souhaitez bénéficier de l'encodage ANSI. |
 
 Les caractères valides pour la chaîne de *mode* utilisée dans **fopen** et **_fdopen** correspondent aux arguments *Oflag* utilisés dans [_open](open-wopen.md) et [_sopen](sopen-wsopen.md), comme suit.
 
 |Caractères dans la chaîne de *mode*|Valeur *Oflag* équivalente pour \_ Open/ \_ sopen|
 |-------------------------------|----------------------------------------------------|
-|**un**|** \_ O \_ WRONLY** &#124; ** \_ o \_ Append** (généralement ** \_ o \_ WRONLY** &#124; ** \_ o \_ Create** &#124; ** \_ o \_ Append**)|
-|**r +**|** \_ O \_ RDWR** &#124; ** \_ o \_ Append** (généralement ** \_ o \_ RDWR** &#124; ** \_ o \_ Append** &#124; ** \_ o \_ Create** )|
+|**un**|**\_ O \_ WRONLY** &#124; **\_ o \_ Append** (généralement **\_ o \_ WRONLY** &#124; **\_ o \_ Create** &#124; **\_ o \_ Append**)|
+|**r +**|**\_ O \_ RDWR** &#124; **\_ o \_ Append** (généralement **\_ o \_ RDWR** &#124; **\_ o \_ Append** &#124; **\_ o \_ Create** )|
 |**r**|**\_O \_ RDONLY**|
 |**r +**|**\_O \_ RDWR**|
-|**w**|** \_ O \_ WRONLY** (généralement ** \_ o \_ WRONLY** &#124; ** \_ o \_ Creating** &#124; ** \_ o \_ trunc**)|
-|**w +**|** \_ O \_ RDWR** (généralement ** \_ o \_ RDWR** &#124; ** \_ o \_ Creating** &#124; ** \_ o \_ trunc**)|
+|**w**|**\_ O \_ WRONLY** (généralement **\_ o \_ WRONLY** &#124; **\_ o \_ Creating** &#124; **\_ o \_ trunc**)|
+|**w +**|**\_ O \_ RDWR** (généralement **\_ o \_ RDWR** &#124; **\_ o \_ Creating** &#124; **\_ o \_ trunc**)|
 |**b**|**\_\_binaire O**|
 |**t**|**\_O \_ Text**|
 |**x**|**\_O \_ hors**|
-|**c**|Aucun|
-|**n**|Aucun|
+|**c**|None|
+|**n**|None|
 |**S**|**\_O \_ séquentiel**|
 |**R**|**\_O \_ aléatoire**|
 |**T**|**\_O \_ SHORTLIVED**|
@@ -201,7 +202,7 @@ Si vous utilisez le mode **RB** , vous n’avez pas besoin de porter votre code,
 
 **_wfopen** est une extension Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-Les **options c**, **n**, **t**, **S**, **R**, **t**et **D** *en mode* D sont des extensions Microsoft pour **fopen** et **_fdopen** et ne doivent pas être utilisées là où la portabilité ANSI est souhaitée.
+Les **options c**, **n**, **t**, **S**, **R**, **t** et  *en mode* D sont des extensions Microsoft pour **fopen** et **_fdopen** et ne doivent pas être utilisées là où la portabilité ANSI est souhaitée.
 
 ## <a name="example-1"></a>Exemple 1
 
@@ -317,7 +318,7 @@ int main(int argc, char** argv)
 ## <a name="see-also"></a>Voir aussi
 
 [E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
 [ferror](ferror.md)<br/>

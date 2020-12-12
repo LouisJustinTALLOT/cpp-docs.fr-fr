@@ -1,29 +1,30 @@
 ---
-title: Avantages et inconvénients de la méthode utilisée pour le lien vers la bibliothèque CRT
+description: En savoir plus sur les avantages et les inconvénients de la méthode utilisée pour établir un lien vers la bibliothèque CRT
+title: Avantages et inconvénients de la méthode utilisée pour établir un lien vers la bibliothèque CRT
 ms.date: 05/06/2019
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 49b485f7-9487-49e4-b12a-0f710b620e2b
-ms.openlocfilehash: b2e504de91cea9fef6e9acb0fc851bc2cc271e97
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 763332de9615e978d84902f67f2c97efd0767c89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221277"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148523"
 ---
-# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Avantages et inconvénients de la méthode utilisée pour le lien vers la bibliothèque CRT
+# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Avantages et inconvénients de la méthode utilisée pour établir un lien vers la bibliothèque CRT
 
-Votre projet peut lier avec la bibliothèque CRT de façon statique ou dynamique. Le tableau ci-dessous présente les avantages et les inconvénients liés à choix de la méthode à utiliser.
+Votre projet peut être lié au CRT de manière dynamique ou statique. Le tableau ci-dessous décrit les avantages et les compromis impliqués dans le choix de la méthode à utiliser.
 
-|Méthode|Avantage|Tradeoff|
+|Méthode|Avantage|Compromis|
 |------------|-------------|--------------|
-|Liaison statique à la bibliothèque CRT<br /><br /> (**Bibliothèque Runtime** définie sur **Single-threaded**)|La DLL CRT n’est pas requis sur le système où l’image s’exécutera.|Environ 25 Ko de code de démarrage est ajouté à votre image, augmenter sa taille.|
-|Liaison dynamique vers le CRT<br /><br /> (**Bibliothèque Runtime** définie sur **multithread**)|Votre image ne nécessite pas le code de démarrage du CRT, par conséquent, il est beaucoup plus petite.|La DLL CRT doit être sur le système de l’image en cours d’exécution.|
+|Liaison statique au CRT<br /><br /> (La **bibliothèque Runtime** est définie sur un **thread unique**)|La DLL CRT n’est pas requise sur le système sur lequel l’image s’exécutera.|Environ 25 Ko de code de démarrage sont ajoutés à votre image, ce qui accroît considérablement sa taille.|
+|Liaison dynamique au CRT<br /><br /> (La **bibliothèque Runtime** est définie sur **multithread**)|Votre image ne nécessite pas le code de démarrage du CRT, il est donc nettement plus petit.|La DLL CRT doit se trouver sur le système qui exécute l’image.|
 
-La rubrique [au CRT dans votre projet ATL](../atl/linking-to-the-crt-in-your-atl-project.md) explique comment sélectionner le mode de liaison vers la bibliothèque CRT.
+La rubrique [liaison au CRT dans votre projet ATL](../atl/linking-to-the-crt-in-your-atl-project.md) explique comment sélectionner la manière de créer un lien vers le CRT.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation avec ATL et le code C Run-Time](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Programmation avec des Run-Time du code ATL et C](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [DLL et comportement de la bibliothèque runtime Visual C++](../build/run-time-library-behavior.md)<br/>
-[Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+[Fonctionnalités de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les macros de catégorie
 title: Macros de catégorie
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0db32c9550cd76fbc8e1f6776b8ecf4cceffebd7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cbef36ca02fb990ba8935915837074d7dd4116
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165080"
 ---
 # <a name="category-macros"></a>Macros de catégorie
 
@@ -25,7 +26,7 @@ Ces macros définissent des cartes de catégorie.
 |[IMPLEMENTED_CATEGORY](#implemented_category)|Indique les catégories implémentées par l’objet COM.|
 |[REQUIRED_CATEGORY](#required_category)|Indique les catégories qui sont requises par l’objet COM pour le conteneur.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 
@@ -102,7 +103,7 @@ Pour plus d’informations sur les catégories de composants, consultez [que son
 |liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Liaison de données avancée|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Contrôles sans fenêtre|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Objets prenant en charge Internet|Pour obtenir un exemple de liste, consultez [objets prenant en charge Internet](/windows/win32/com/internet-aware-objects) dans le SDK Windows.||
+|Objets Internet-Aware|Pour obtenir un exemple de liste, consultez [objets prenant en charge Internet](/windows/win32/com/internet-aware-objects) dans le SDK Windows.||
 
 ### <a name="example"></a>Exemple
 
@@ -139,7 +140,7 @@ Pour plus d’informations sur les catégories de composants, y compris un exemp
 |liaison de données simple|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |Liaison de données avancée|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Contrôles sans fenêtre|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Objets prenant en charge Internet|Pour obtenir un exemple de liste, consultez [objets prenant en charge Internet](/windows/win32/com/internet-aware-objects) dans le SDK Windows.||
+|Objets Internet-Aware|Pour obtenir un exemple de liste, consultez [objets prenant en charge Internet](/windows/win32/com/internet-aware-objects) dans le SDK Windows.||
 
 ### <a name="example"></a>Exemple
 
