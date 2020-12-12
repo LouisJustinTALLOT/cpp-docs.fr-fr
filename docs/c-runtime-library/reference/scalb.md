@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _scalb, _scalbf'
 title: _scalb, _scalbf
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: debb617afea26437df16150592e631461d82c6b8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d118fc19c4635f0f0b6d93b1528308e9b31ee45a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268910"
 ---
 # <a name="_scalb-_scalbf"></a>_scalb, _scalbf
 
@@ -61,18 +62,18 @@ float _scalbf(
 *x*<br/>
 Valeur à virgule flottante double précision.
 
-*venir*<br/>
+*exp*<br/>
 Exposant entier long.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne une valeur exponentielle en cas de réussite. En cas de dépassement (selon le signe de *x*), **_scalb** retourne +/- **HUGE_VAL**; la variable **errno** est définie sur **ERANGE**.
 
 Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_scalb** calcule la valeur de *x* \* 2<sup>*exp*</sup>.
+La fonction **_scalb** calcule la valeur de *x* \* 2 <sup>*exp*</sup>.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

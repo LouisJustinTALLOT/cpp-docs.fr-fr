@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : types intégrés (C++)'
 title: Types intégrés (C++)
 ms.date: 07/22/2020
 f1_keywords:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: 73486dd4d81fc91007f078ec5c509bcb963d2706
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 601bd0742002506272ec3da7af448a4bdba96065
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268741"
 ---
 # <a name="built-in-types-c"></a>Types intégrés (C++)
 
-Les types intégrés (également appelés *types fondamentaux*) sont spécifiés par la norme du langage C++ et sont intégrés au compilateur. Les types intégrés ne sont définis dans aucun fichier d’en-tête. Les types intégrés sont divisés en trois catégories principales : *intégral*, *virgule flottante*et *void*. Les types intégraux représentent des nombres entiers. Les types à virgule flottante peuvent spécifier des valeurs qui peuvent avoir des parties fractionnaires. La plupart des types intégrés sont traités comme des types distincts par le compilateur. Toutefois, certains types sont des *synonymes*, ou traités comme des types équivalents par le compilateur.
+Les types intégrés (également appelés *types fondamentaux*) sont spécifiés par la norme du langage C++ et sont intégrés au compilateur. Les types intégrés ne sont définis dans aucun fichier d’en-tête. Les types intégrés sont divisés en trois catégories principales : *intégral*, *virgule flottante* et *void*. Les types intégraux représentent des nombres entiers. Les types à virgule flottante peuvent spécifier des valeurs qui peuvent avoir des parties fractionnaires. La plupart des types intégrés sont traités comme des types distincts par le compilateur. Toutefois, certains types sont des *synonymes*, ou traités comme des types équivalents par le compilateur.
 
 ## <a name="void-type"></a>Type void
 
@@ -85,7 +86,7 @@ Une variable de type **`wchar_t`** est un type de caractère à caractères larg
 
 **Spécifique à Microsoft**: par défaut, **`wchar_t`** est un type natif, mais vous pouvez utiliser [`/Zc:wchar_t-`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour créer **`wchar_t`** un typedef pour **`unsigned short`** . Le **`__wchar_t`** type est un synonyme spécifique à Microsoft pour le **`wchar_t`** type natif.
 
-Le **`char8_t`** type est utilisé pour la représentation de caractères UTF-8. Elle a la même représentation que **`unsigned char`** , mais elle est traitée comme un type distinct par le compilateur. Le **`char8_t`** type est nouveau dans c++ 20. **Spécifique à Microsoft**: l’utilisation de **`char8_t`** requiert l' [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) option de compilateur.
+Le **`char8_t`** type est utilisé pour la représentation de caractères UTF-8. Elle a la même représentation que **`unsigned char`** , mais elle est traitée comme un type distinct par le compilateur. Le **`char8_t`** type est nouveau dans c++ 20. **Spécifique à Microsoft**: l’utilisation de **`char8_t`**  requiert l' [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) option de compilateur.
 
 Le **`char16_t`** type est utilisé pour la représentation de caractères UTF-16. Elle doit être suffisamment grande pour représenter une unité de code UTF-16. Il est traité comme un type distinct par le compilateur.
 

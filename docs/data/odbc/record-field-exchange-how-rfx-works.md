@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Record Field Exchange : fonctionnement de RFX'
 title: 'Record Field Exchange : fonctionnement de RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-ms.openlocfilehash: 9e717d0f0ce3b8841feee2beb457fee7221fcf69
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 81b8d65c4c4f6344456c85ace057ad093c1c18b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268572"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Record Field Exchange : fonctionnement de RFX
 
@@ -28,7 +29,7 @@ Cette rubrique décrit le processus RFX. Il s’agit d’une rubrique avancée q
 > [!NOTE]
 > Cette rubrique s’applique aux classes dérivées de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, l’échange de champs d’enregistrements en bloc (Bulk RFX) est implémenté. Bulk RFX est similaire à RFX. Pour comprendre les différences, consultez [Recordset : extraction globale d’enregistrements (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-## <a name="rfx-and-the-recordset"></a><a name="_core_rfx_and_the_recordset"></a>RFX et le Recordset
+## <a name="rfx-and-the-recordset"></a><a name="_core_rfx_and_the_recordset"></a> RFX et le Recordset
 
 Les membres de données de champ de l’objet Recordset, pris ensemble, constituent un tampon de modification qui contient les colonnes sélectionnées d’un enregistrement. Lorsque le Recordset est ouvert pour la première fois et qu’il est sur le point de lire le premier enregistrement, RFX lie (associe) chaque colonne sélectionnée à l’adresse du membre de données de champ approprié. Lorsque le recordset met à jour un enregistrement, RFX appelle les fonctions API ODBC pour envoyer une instruction SQL **Update** ou **Insert** au pilote. RFX utilise sa connaissance des membres de données de champ pour spécifier les colonnes à écrire.
 
@@ -38,15 +39,15 @@ Outre l’échange de données entre la source de données et les membres de don
 
 La substitution de la classe de Recordset de `DoFieldExchange` effectue tout le travail, en déplaçant les données dans les deux directions. Comme l’échange de données de boîtes de dialogue (DDX), RFX a besoin d’informations sur les données membres de votre classe. L’Assistant fournit les informations nécessaires en écrivant pour vous une implémentation spécifique à un jeu d’enregistrements `DoFieldExchange` , en fonction des noms de membres de données de champ et des types de données que vous spécifiez avec l’Assistant.
 
-## <a name="record-field-exchange-process"></a><a name="_core_the_record_field_exchange_process"></a>Processus d’échange de champs d’enregistrement
+## <a name="record-field-exchange-process"></a><a name="_core_the_record_field_exchange_process"></a> Processus d’échange de champs d’enregistrement
 
 Cette section décrit la séquence d’événements RFX lorsqu’un objet Recordset est ouvert et que vous ajoutez, mettez à jour et supprimez des enregistrements. La [séquence de table des opérations RFX au cours](#_core_sequence_of_rfx_operations_during_recordset_open) de l’ouverture de l’ensemble d’enregistrements et la [séquence de table des opérations RFX pendant le défilement](#_core_sequence_of_rfx_operations_during_scrolling) dans cette rubrique montrent que RFX traite une `Move` commande dans le Recordset et que RFX gère une mise à jour. Au cours de ces processus, [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) est appelé pour effectuer de nombreuses opérations différentes. Le `m_nOperation` membre de données de l’objet [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) détermine l’opération demandée. Il peut s’avérer utile de lire [Recordset : comment les recordsets sélectionnent les enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) et [Recordset : comment les recordsets mettent à jour les enregistrements (ODBC) avant de](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) lire ce document.
 
-### <a name="rfx-initial-binding-of-columns-and-parameters"></a><a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a>RFX : liaison initiale des colonnes et des paramètres
+### <a name="rfx-initial-binding-of-columns-and-parameters"></a><a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX : liaison initiale des colonnes et des paramètres
 
 Les activités RFX suivantes se produisent, dans l’ordre indiqué, lorsque vous appelez la fonction membre [Open](../../mfc/reference/crecordset-class.md#open) d’un objet Recordset :
 
-- Si le Recordset possède des membres de données de paramètre, le Framework appelle `DoFieldExchange` pour lier les paramètres aux espaces réservés de paramètre dans la chaîne de l’instruction SQL du Recordset. Une représentation dépendante du type de données de la valeur du paramètre est utilisée pour chaque espace réservé trouvé dans l’instruction **Select** . Cela se produit après la préparation de l’instruction SQL, mais avant son exécution. Pour plus d’informations sur la préparation des instructions, consultez la `::SQLPrepare` fonction dans le *Guide de référence du programmeur*ODBC.
+- Si le Recordset possède des membres de données de paramètre, le Framework appelle `DoFieldExchange` pour lier les paramètres aux espaces réservés de paramètre dans la chaîne de l’instruction SQL du Recordset. Une représentation dépendante du type de données de la valeur du paramètre est utilisée pour chaque espace réservé trouvé dans l’instruction **Select** . Cela se produit après la préparation de l’instruction SQL, mais avant son exécution. Pour plus d’informations sur la préparation des instructions, consultez la `::SQLPrepare` fonction dans le *Guide de référence du programmeur* ODBC.
 
 - L’infrastructure appelle `DoFieldExchange` une deuxième fois pour lier les valeurs des colonnes sélectionnées aux membres de données de champ correspondants dans le Recordset. L’objet Recordset est ainsi établi sous la forme d’une mémoire tampon de modification contenant les colonnes du premier enregistrement.
 
@@ -54,7 +55,7 @@ Les activités RFX suivantes se produisent, dans l’ordre indiqué, lorsque vou
 
 Le tableau suivant montre la séquence des opérations RFX lorsque vous ouvrez un jeu d’enregistrements.
 
-### <a name="sequence-of-rfx-operations-during-recordset-open"></a><a name="_core_sequence_of_rfx_operations_during_recordset_open"></a>Séquence des opérations RFX lors de l’ouverture de l’ensemble d’enregistrements
+### <a name="sequence-of-rfx-operations-during-recordset-open"></a><a name="_core_sequence_of_rfx_operations_during_recordset_open"></a> Séquence des opérations RFX lors de l’ouverture de l’ensemble d’enregistrements
 
 |Votre opération|Opération DoFieldExchange|Base de données/opération SQL|
 |--------------------|-------------------------------|-----------------------------|
@@ -68,13 +69,13 @@ Le tableau suivant montre la séquence des opérations RFX lorsque vous ouvrez u
 
 Les jeux d’enregistrements utilisent l’exécution préparée d’ODBC pour permettre une rerequête rapide avec la même instruction SQL. Pour plus d’informations sur l’exécution préparée, consultez [Guide de référence du programmeur ODBC](/sql/odbc/reference/odbc-programmer-s-reference).
 
-### <a name="rfx-scrolling"></a><a name="_mfc_rfx.3a_.scrolling"></a>RFX : défilement
+### <a name="rfx-scrolling"></a><a name="_mfc_rfx.3a_.scrolling"></a> RFX : défilement
 
 Lorsque vous faites défiler d’un enregistrement à un autre, le Framework appelle `DoFieldExchange` pour remplacer les valeurs précédemment stockées dans les membres de données de champ avec des valeurs pour le nouvel enregistrement.
 
 Le tableau suivant montre la séquence des opérations RFX lorsque l’utilisateur passe d’un enregistrement à un autre.
 
-### <a name="sequence-of-rfx-operations-during-scrolling"></a><a name="_core_sequence_of_rfx_operations_during_scrolling"></a>Séquence d’opérations RFX pendant le défilement
+### <a name="sequence-of-rfx-operations-during-scrolling"></a><a name="_core_sequence_of_rfx_operations_during_scrolling"></a> Séquence d’opérations RFX pendant le défilement
 
 |Votre opération|Opération DoFieldExchange|Base de données/opération SQL|
 |--------------------|-------------------------------|-----------------------------|
@@ -82,13 +83,13 @@ Le tableau suivant montre la séquence des opérations RFX lorsque l’utilisate
 |||2. ODBC effectue le déplacement et remplit les données.|
 ||3. corrigez les données pour C++.||
 
-### <a name="rfx-adding-new-records-and-editing-existing-records"></a><a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a>RFX : ajout de nouveaux enregistrements et modification d’enregistrements existants
+### <a name="rfx-adding-new-records-and-editing-existing-records"></a><a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX : ajout de nouveaux enregistrements et modification d’enregistrements existants
 
 Si vous ajoutez un nouvel enregistrement, le jeu d’enregistrements fonctionne comme un tampon d’édition pour générer le contenu du nouvel enregistrement. Comme pour l’ajout d’enregistrements, la modification d’enregistrements implique la modification des valeurs des membres de données de champ du Recordset. Du point de vue de RFX, la séquence est la suivante :
 
 1. Votre appel à la fonction membre [AddNew](../../mfc/reference/crecordset-class.md#addnew) ou [Edit](../../mfc/reference/crecordset-class.md#edit) du Recordset fait que RFX stocke la mémoire tampon d’édition actuelle pour pouvoir être restaurée ultérieurement.
 
-1. `AddNew`ou `Edit` prépare les champs dans la mémoire tampon d’édition afin que RFX puisse détecter les membres de données de champ modifiés.
+1. `AddNew` ou `Edit` prépare les champs dans la mémoire tampon d’édition afin que RFX puisse détecter les membres de données de champ modifiés.
 
    Étant donné qu’un nouvel enregistrement n’a pas de valeurs précédentes pour en comparer de nouvelles avec, `AddNew` définit la valeur de chaque membre de données de champ sur une valeur PSEUDO_NULL. Plus tard, quand vous appelez `Update` , RFX compare la valeur de chaque membre de données à la valeur PSEUDO_NULL. En cas de différence, le membre de données a été défini. (PSEUDO_NULL n’est pas la même chose qu’une colonne d’enregistrement avec une valeur NULL NULL, et n’est pas de la même façon que C++ NULL.)
 

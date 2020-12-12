@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : `/Zc:strictStrings` (désactiver la conversion de type de littéral de chaîne)'
 title: /Zc:strictStrings (Désactiver la conversion du type de littéral de chaîne)
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-ms.openlocfilehash: df880ed64fa472ff55eb5ee0d17caacf56228ab6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38c0ac2fe69acd81762fbf26797eece659ee63a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211890"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269053"
 ---
-# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings`(Désactiver la conversion de type de littéral de chaîne)
+# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings` (Désactiver la conversion de type de littéral de chaîne)
 
 Lorsqu’il est spécifié, le compilateur requiert **`const`** une conformité stricte pour les pointeurs initialisés à l’aide de littéraux de chaîne.
 
@@ -66,10 +67,10 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Modifiez la propriété **options supplémentaires** pour inclure **`/Zc:strictStrings`** , puis cliquez sur **OK**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[`/Zc`Conformité](zc-conformance.md)<br/>
+[`/Zc` Conformité](zc-conformance.md)<br/>

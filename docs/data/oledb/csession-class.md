@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CSession'
 title: CSession, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,24 +41,24 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: f507ed432e107f586d34bb6b08fa9d3f7dc509d8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 41ebf1c9d93e1443504f92b052e770c251324633
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268429"
 ---
 # <a name="csession-class"></a>CSession, classe
 
 Représente une session d’accès à la base de données unique.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CSession
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -67,14 +68,14 @@ class CSession
 
 | Nom | Description |
 |-|-|
-|[Arrêté](#abort)|Annule (termine) la transaction.|
+|[Abandon](#abort)|Annule (termine) la transaction.|
 |[Close](#close)|Ferme la session.|
 |[Commiter](#commit)|Valide la transaction.|
 |[GetTransactionInfo](#gettransactioninfo)|Retourne des informations concernant une transaction.|
 |[Ouvrir](#open)|Ouvre une nouvelle session pour l’objet source de données.|
 |[StartTransaction](#starttransaction)|Commence une nouvelle transaction pour cette session.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Une ou plusieurs sessions peuvent être associées à chaque connexion de fournisseur (source de données), qui est représentée par un objet [CDataSource](../../data/oledb/cdatasource-class.md) . Pour créer un nouveau `CSession` pour un `CDataSource` , appelez [CSession :: Open](#open). Pour commencer une transaction de base de données, `CSession` fournit la `StartTransaction` méthode. Une fois qu’une transaction est démarrée, vous pouvez la valider à l’aide de la `Commit` méthode ou l’annuler à l’aide de la `Abort` méthode.
 
@@ -132,7 +133,7 @@ Consultez [ITransaction :: Commit](/previous-versions/windows/desktop/ms713008(
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [ITransaction :: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
@@ -154,7 +155,7 @@ Consultez [ITransaction :: GetTransactionInfo](/previous-versions/windows/deskt
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [ITransaction :: GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
@@ -185,7 +186,7 @@ dans Nombre de structures [DBPROPSET](/previous-versions/windows/desktop/ms71436
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous devez ouvrir l’objet de source de données à l’aide de [CDataSource :: Open](./cdatasource-class.md#open) avant de le passer à `CSession::Open` .
 
@@ -210,7 +211,7 @@ Consultez [ITransactionLocal :: StartTransaction](/previous-versions/windows/de
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [ITransactionLocal :: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 

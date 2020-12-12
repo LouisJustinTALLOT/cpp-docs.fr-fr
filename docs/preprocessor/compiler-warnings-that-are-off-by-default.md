@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : avertissements du compilateur désactivés par défaut'
 title: Avertissements du compilateur désactivés par défaut
 ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 3727777c6abd3ae5ba19f147e2b6fbe559251813
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5bc482d12026bb8358d773be6a0c8b32cc2317fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269378"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avertissements du compilateur désactivés par défaut
 
@@ -32,7 +33,7 @@ Vous pouvez activer les avertissements qui sont normalement désactivés par dé
 
    `/Wall` active tous les avertissements qui sont désactivés par défaut. Si vous utilisez cette option, vous pouvez désactiver des avertissements individuels à l’aide de l’option [/WD](../build/reference/compiler-option-warning-level.md) .
 
-- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
+- [/w *Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
    Cette option active l’avertissement *nnnn* au niveau *L*.
 
@@ -91,7 +92,7 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 |[C4596](../error-messages/compiler-warnings/c4596.md) (niveau 4)|'*identificateur*' : nom qualifié non conforme dans la déclaration de membre <sup>14,3</sup> <sup>Perm</sup>|
 |C4598 (niveau 1 et niveau 3)|*en-* tête « #include » «» : le numéro d’en- *tête* du numéro d’en-tête dans l’en-tête précompilé ne correspond pas à la compilation actuelle à cette position <sup>14,3</sup>|
 |C4599 (niveau 3)|'*option* *path*' : le numéro d’argument de ligne de commande ne correspond pas au *nombre* d’en-tête précompilé <sup>14,3</sup>|
-|C4605 (niveau 1)|'/D*macro*'spécifié sur la ligne de commande actuelle, mais n’a pas été spécifié quand l’en-tête précompilé a été généré|
+|C4605 (niveau 1)|'/D *macro*'spécifié sur la ligne de commande actuelle, mais n’a pas été spécifié quand l’en-tête précompilé a été généré|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (niveau 3)|'*union_member*'a déjà été initialisé par un autre membre Union dans la liste d’initialiseurs, '*union_member*' <sup>Perm</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (niveau 3)|Avertissement de #pragma : il n’y a aucun numéro d’avertissement'*numéro*'|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (niveau 4)|'classe dérivée' : le constructeur par défaut n'a pas pu être généré parce que le constructeur par défaut de la classe de base est inaccessible|
@@ -157,7 +158,7 @@ Les avertissements suivants sont désactivés par défaut dans Visual Studio 201
 <sup>15,7</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,7. \
 <sup>15,8</sup> cet avertissement est disponible à partir de Visual Studio 2017 version 15,8. \
 <sup>16,0</sup> cet avertissement est disponible à partir de Visual Studio 2019 RTM. \
-<sup>Perm</sup> Autorisation Cet avertissement est désactivé, sauf si l’option du compilateur [/permissive-](../build/reference/permissive-standards-conformance.md) est définie.
+<sup></sup> Autorisation Cet avertissement est désactivé, sauf si l’option du compilateur [/permissive-](../build/reference/permissive-standards-conformance.md) est définie.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avertissements désactivés par défaut dans les versions antérieures
 

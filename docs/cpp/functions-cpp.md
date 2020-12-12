@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions (C++)'
 title: Fonctions (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: 5beadbbf283a64f12dab7f0ee39a267ec1797861
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: da338e0fcc6c30f0f1482cb900803c0a98f854ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268923"
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 
@@ -239,7 +240,7 @@ Pour plus d’informations, consultez [arguments par défaut](../cpp/default-arg
 
 ## <a name="function-return-types"></a>Types de retour de fonction
 
-Une fonction ne peut pas retourner une autre fonction ou un tableau intégré ; Toutefois, il peut retourner des pointeurs vers ces types, ou une *expression lambda*qui produit un objet de fonction. À l’exception de ces cas, une fonction peut retourner une valeur de n’importe quel type qui est dans la portée, ou elle peut ne retourner aucune valeur, auquel cas le type de retour est **`void`** .
+Une fonction ne peut pas retourner une autre fonction ou un tableau intégré ; Toutefois, il peut retourner des pointeurs vers ces types, ou une *expression lambda* qui produit un objet de fonction. À l’exception de ces cas, une fonction peut retourner une valeur de n’importe quel type qui est dans la portée, ou elle peut ne retourner aucune valeur, auquel cas le type de retour est **`void`** .
 
 ### <a name="trailing-return-types"></a>Types de retours de fin
 
@@ -261,7 +262,7 @@ Une variable déclarée à l’intérieur d’un corps de fonction est appelée 
 
 En C++, une variable locale peut être déclarée comme statique. La variable n'est visible que dans le corps de fonction, mais une seule copie de la variable existe pour toutes les instances de la fonction. Les objets statiques locaux sont détruits durant l’arrêt spécifié par `atexit`. Si un objet statique n’a pas été construit car le flux de contrôle du programme a contourné sa déclaration, aucune tentative de destruction de cet objet n’est effectuée.
 
-## <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>Déduction de type dans les types de retour (C++ 14)
+## <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a> Déduction de type dans les types de retour (C++ 14)
 
 En C++ 14, vous pouvez utiliser **`auto`** pour indiquer au compilateur de déduire le type de retour du corps de la fonction sans avoir à fournir un type de retour de fin. Notez que **`auto`** retourne toujours à une valeur de retour par valeur. Utilisez `auto&&` pour indiquer au compilateur de déduire une référence.
 
@@ -295,7 +296,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>Retour de plusieurs valeurs à partir d’une fonction
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a> Retour de plusieurs valeurs à partir d’une fonction
 
 Il existe plusieurs façons de retourner plusieurs valeurs à partir d’une fonction :
 

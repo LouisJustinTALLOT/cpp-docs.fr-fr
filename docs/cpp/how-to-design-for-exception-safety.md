@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : concevoir pour la sécurité des exceptions'
 title: 'Comment : concevoir la sécurité des exceptions'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4b957803d822b495ae6d44bb6640dcbb4535397
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268637"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Comment : concevoir la sécurité des exceptions
 
@@ -89,7 +90,7 @@ Pour être sécurisé contre les exceptions, une fonction doit garantir que les 
 
 ## <a name="the-three-exception-guarantees"></a>Les trois garanties d’exception
 
-En règle générale, la sécurité des exceptions est décrite en termes de trois garanties d’exception qu’une fonction peut fournir : la *garantie sans échec*, la *garantie forte*et la *garantie de base*.
+En règle générale, la sécurité des exceptions est décrite en termes de trois garanties d’exception qu’une fonction peut fournir : la *garantie sans échec*, la *garantie forte* et la *garantie de base*.
 
 ### <a name="no-fail-guarantee"></a>Garantie sans échec
 

@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : créer et utiliser des instances CComPtr et CComQIPtr'
 title: 'Procédure : Créer et utiliser des instances CComPtr et CComQIPtr'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 4d3a9f98f4f4111e88a41f9d4a96cb3caefe64d8
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: c16d908e3df9e10641f1264aed7623463424de69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268650"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procédure : Créer et utiliser des instances CComPtr et CComQIPtr
 

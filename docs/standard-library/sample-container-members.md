@@ -1,22 +1,23 @@
 ---
+description: 'En savoir plus sur : exemples de membres de conteneur'
 title: sample container, membres
 ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fabf049f3fd33483cd226fd541717c7ac6d6df29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269196"
 ---
 # <a name="sample-container-members"></a>sample container, membres
 
 > [!NOTE]
 > Cette rubrique se trouve dans la documentation de Microsoft C++ comme un exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque standard C++](../standard-library/stl-containers.md).
 
-## <a name="reference"></a>Référence
+## <a name="reference"></a>Informations de référence
 
 ## <a name="typedefs"></a>Typedefs
 

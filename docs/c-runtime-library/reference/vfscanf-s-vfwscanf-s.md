@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vfscanf_s, vfwscanf_s'
 title: vfscanf_s, vfwscanf_s
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vfwscanf_s
 - _vftscanf_s
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-ms.openlocfilehash: 834def5f1465f3ce0d903b0af31b67d0e7eb2543
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99d822ef2425c44f4339c1102eda9924f46f54c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268884"
 ---
 # <a name="vfscanf_s-vfwscanf_s"></a>vfscanf_s, vfwscanf_s
 
@@ -61,7 +62,7 @@ Chaîne de contrôle de format.
 *arglist*<br/>
 Liste d’arguments de variable.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. Si une erreur se produit ou si la fin du flux de fichier est atteinte avant la première conversion, la valeur de retour est **EOF** pour **vfscanf_s** et **vfwscanf_s**.
 
@@ -71,7 +72,7 @@ Ces fonctions valident leurs paramètres. Si *Stream* est un pointeur de fichier
 
 La fonction **vfscanf_s** lit les données à partir de la position actuelle du *flux* dans les emplacements fournis par la liste d’arguments *arglist* (le cas échéant). Chaque argument de la liste doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type au *format*. le *format* contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument *format* pour **scanf_s**; consultez [champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour obtenir une description du *format*. **vfwscanf_s** est une version à caractères larges de **vfscanf_s**; l’argument de format de **vfwscanf_s** est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **vfscanf_s** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
 
-La principale différence entre les fonctions les plus sécurisées (qui ont le suffixe **_s** ) et les autres versions est que les fonctions plus sécurisées requièrent que la taille en caractères de chaque champ **c**, **c**, **s**, **s**et **[** type soit passée comme argument immédiatement après la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
+La principale différence entre les fonctions les plus sécurisées (qui ont le suffixe **_s** ) et les autres versions est que les fonctions plus sécurisées requièrent que la taille en caractères de chaque champ **c**, **c**, **s**, **s** et **[** type soit passée comme argument immédiatement après la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
 > Le paramètre de taille est de type **`unsigned`** , et non **size_t**.

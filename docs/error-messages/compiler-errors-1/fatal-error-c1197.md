@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur irrécupérable C1197'
 title: Erreur irrécupérable C1197
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C1197
 ms.assetid: 22b801b7-e792-41f6-a461-973c03c69f25
-ms.openlocfilehash: 7f698262c73f0b311a92a8940107b552430919bb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c61cbd71fa8f17dc787fd9ee5eabd0f073aafb39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747239"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268169"
 ---
 # <a name="fatal-error-c1197"></a>Erreur irrécupérable C1197
 
-Impossible de référencer’mscorlib. dll_1 ', car le programme a déjà référencé’mscorlib. dll_2 '
+Impossible de référencer' mscorlib.dll_1 ', car le programme a déjà référencé' mscorlib.dll_2 '
 
 Le compilateur est mis en correspondance avec une version du common language runtime.  Toutefois, une tentative de référencement d’une version d’un fichier common language runtime à partir d’une version antérieure a été effectuée.
 
-Pour résoudre cette erreur, utilisez uniquement les fichiers de référence de la version de la common language runtime fournie avec la version C++ de Visual avec laquelle vous effectuez la compilation.
+Pour résoudre cette erreur, seuls les fichiers de référence de la version de la common language runtime fournie avec la version de Visual C++ vous compilez.
 
 ## <a name="example"></a>Exemple
 

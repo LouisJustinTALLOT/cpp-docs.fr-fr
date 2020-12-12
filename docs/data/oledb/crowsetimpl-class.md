@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CRowsetImpl, classe'
 title: CRowsetImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: cca74504c80b964b14742e7405953ad68764aa62
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e517806cc7083700d4fad7fc053777b11a7de665
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268442"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl, classe
 
@@ -75,7 +76,7 @@ La classe qui contient les propriétés de l’ensemble de lignes ; en généra
 *ArrayType*<br/>
 Classe qui servira de stockage pour les données de l’ensemble de lignes. Par défaut, ce paramètre `CAtlArray` a la valeur, mais il peut s’agir de n’importe quelle classe qui prend en charge les fonctionnalités requises.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -104,7 +105,7 @@ Classe qui servira de stockage pour les données de l’ensemble de lignes. Par 
 |[m_strCommandText](#strcommandtext)|Contient la commande initiale de l’ensemble de lignes.|
 |[m_strIndexText](#strindextext)|Contient l’index initial de l’ensemble de lignes.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 `CRowsetImpl` fournit des substitutions sous la forme de conversions statiques. Les méthodes contrôlent la façon dont un ensemble de lignes donné validera le texte de la commande. Vous pouvez créer votre propre `CRowsetImpl` classe de style en rendant les interfaces d’implémentation multiples héritées. La seule méthode pour laquelle vous devez fournir l’implémentation est `Execute` . Selon le type d’ensemble de lignes que vous créez, les méthodes Creator s’attendent à des signatures différentes pour `Execute` . Par exemple, si vous utilisez une `CRowsetImpl` classe dérivée de pour implémenter un ensemble de lignes de schéma, la `Execute` méthode aura la signature suivante :
 
@@ -143,7 +144,7 @@ dans Une référence [CComBSTR](../../atl/reference/ccombstr-class.md) pour plac
 
 HRESULT standard. Selon que le `DBID` est une table ou un index (indiqué par *bIndex*), la méthode retourne DB_E_NOINDEX ou DB_E_NOTABLE.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode est appelée par les `CRowsetImpl` implémentations de [ValidateCommandID](#validatecommandid) et [GetCommandFromID](#getcommandfromid).
 
@@ -170,7 +171,7 @@ dans Pointeur vers le `DBID` représentant l’ID d’index.
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La `SetCommentText` méthode est appelée par `CreateRowset` , une méthode modélisée de `IOpenRowsetImpl` .
 
@@ -199,7 +200,7 @@ dans Pointeur (sortie) vers le nombre de colonnes retournées.
 
 Pointeur vers une structure statique `ATLCOLUMNINFO` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode est une substitution avancée.
 
@@ -232,7 +233,7 @@ dans Pointeur vers le `DBID` représentant l’ID d’index.
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode est appelée via un upcast statique par `CRowsetImpl` pour remplir les données membres [m_strCommandText](#strcommandtext) et [m_strIndexText](#strindextext). Par défaut, cette méthode vérifie si un ou les deux paramètres contiennent des valeurs de chaîne. Si elles contiennent des valeurs de chaîne, cette méthode copie les valeurs de chaîne dans les membres de données. En plaçant une méthode avec cette signature dans votre `CRowsetImpl` classe dérivée de, votre méthode sera appelée à la place de l’implémentation de base.
 
@@ -259,7 +260,7 @@ dans Pointeur vers le `DBID` représentant l’ID d’index.
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode est appelée via un upcast statique par `CRowsetImpl` pour remplir ses membres de données [m_strCommandText](#strcommandtext) et [m_strIndexText](#strindextext). Par défaut, cette méthode vérifie si l’un des deux ou les deux `DBID` contiennent des valeurs de chaîne et, si tel est le cas, les copie dans ses membres de données. En plaçant une méthode avec cette signature dans votre `CRowsetImpl` classe dérivée de, votre méthode sera appelée à la place de l’implémentation de base.
 
@@ -281,7 +282,7 @@ ArrayType CRowsetBaseImpl::m_rgRowData;
 
 Contient la commande initiale de l’ensemble de lignes.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 CComBSTR CRowsetBaseImpl::m_strCommandText;

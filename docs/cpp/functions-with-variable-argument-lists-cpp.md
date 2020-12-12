@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions avec listes d’arguments variables (C++)'
 title: Fonctions avec listes d’arguments variables (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-ms.openlocfilehash: 99f1f5cec2350f99bf2993947870f25e357ffc23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 035f389a6aa1686464cd30982ccdbf07a3305d1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268845"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Fonctions avec listes d’arguments variables (C++)
 

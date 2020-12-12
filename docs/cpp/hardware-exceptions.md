@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : exceptions matérielles'
 title: Exceptions matérielles
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 8adfd59eab0960ab14b2becb8d9864c77196c909
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3fccda4f23aa260f737f81e877d2ea9d673ebafe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268715"
 ---
 # <a name="hardware-exceptions"></a>Exceptions matérielles
 
@@ -27,7 +28,7 @@ Les exceptions matérielles identifiées par Windows sont résumées dans le tab
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|Lecture ou écriture à un emplacement mémoire inaccessible.|
 |STATUS_BREAKPOINT|Rencontre d'un point d'arrêt défini par le matériel ; utilisé uniquement par les débogueurs.|
-|STATUS_DATATYPE_MISALIGNMENT|Lecture ou écriture dans les données à une adresse qui n'est pas correctement alignée ; par exemple, des entités 16 bits doivent être alignées sur des limites de 2 octets. (Non applicable aux processeurs Intel 80*x*86).|
+|STATUS_DATATYPE_MISALIGNMENT|Lecture ou écriture dans les données à une adresse qui n'est pas correctement alignée ; par exemple, des entités 16 bits doivent être alignées sur des limites de 2 octets. (Non applicable aux processeurs Intel 80 *x* 86).|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|Division du type à virgule flottante par 0,0.|
 |STATUS_FLOAT_OVERFLOW|Dépassement de l'exposant positif maximal du type à virgule flottante.|
 |STATUS_FLOAT_UNDERFLOW|Dépassement de la grandeur de l'exposant négatif le plus bas du type à virgule flottante.|
@@ -43,4 +44,4 @@ Un grand nombre des exceptions répertoriées dans le tableau précédent sont d
 ## <a name="see-also"></a>Voir aussi
 
 [Écriture d’un gestionnaire d’exceptions](../cpp/writing-an-exception-handler.md)<br/>
-[Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _creat, _wcreat'
 title: _creat, _wcreat
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-ms.openlocfilehash: 379a4adbf17755341fed6a48c649afe29e150fe5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 716f0d11af408ba30cb91744fd770300272dc26b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912110"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269040"
 ---
 # <a name="_creat-_wcreat"></a>_creat, _wcreat
 
@@ -64,13 +65,13 @@ int _wcreat(
 
 ### <a name="parameters"></a>Paramètres
 
-*extension*<br/>
+*filename*<br/>
 Nom du nouveau fichier.
 
 *pmode*<br/>
 Paramètre d'autorisation.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Ces fonctions, en cas de réussite, retournent un descripteur de fichier pour le fichier créé. Sinon, les fonctions retournent-1 et définissent **errno** comme indiqué dans le tableau suivant.
 
@@ -84,7 +85,7 @@ Si *filename* a la **valeur null**, ces fonctions appellent le gestionnaire de p
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_creat** crée un nouveau fichier ou ouvre et tronque un fichier existant. **_wcreat** est une version à caractères larges de **_creat**; l’argument de *nom de fichier* pour **_wcreat** est une chaîne de caractères larges. dans le cas contraire, **_wcreat** et **_creat** se comportent de la même façon.
 
@@ -98,13 +99,13 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Si le fichier spécifié par *filename* n’existe pas, un nouveau fichier est créé avec le paramètre d’autorisation donné et est ouvert en écriture. Si le fichier existe déjà et que son paramètre d’autorisation autorise l’écriture, **_creat** tronque le fichier à la longueur 0, en détruisant le contenu précédent et en l’ouvrant pour écriture. Le paramètre d’autorisation, *PMODE*, s’applique uniquement aux fichiers nouvellement créés. Le nouveau fichier reçoit le paramètre d’autorisation spécifié après sa première fermeture. L’expression entière *PMODE* contient l’une des constantes manifestes, ou les deux, **_S_IWRITE** et les **_S_IREAD**, définis dans SYS\Stat.h. Quand les deux constantes sont données, elles sont jointes avec l’opérateur or au niveau du bit ( **&#124;** ). Le paramètre *PMODE* est défini sur l’une des valeurs suivantes.
 
-|Value|Définition|
+|Valeur|Définition|
 |-----------|----------------|
 |**_S_IWRITE**|Écriture autorisée.|
 |**_S_IREAD**|Lecture autorisée.|
 |**_S_IREAD** &#124; **_S_IWRITE**|Lecture et écriture autorisées.|
 
-Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Tous les fichiers sont toujours accessibles en lecture ; il est impossible d’accorder l’autorisation en écriture seule. Les modes **_S_IWRITE** et **_S_IREAD** | **_S_IWRITE** sont alors équivalents. Les fichiers ouverts à l’aide de **_creat** sont toujours ouverts en mode de compatibilité (consultez [_sopen](sopen-wsopen.md)) avec **_SH_DENYNO**.
+Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Tous les fichiers sont toujours accessibles en lecture ; il est impossible d’accorder l’autorisation en écriture seule. Les modes **_S_IWRITE** et **_S_IREAD**  |  **_S_IWRITE** sont alors équivalents. Les fichiers ouverts à l’aide de **_creat** sont toujours ouverts en mode de compatibilité (consultez [_sopen](sopen-wsopen.md)) avec **_SH_DENYNO**.
 
 **_creat** applique le masque d’autorisation de fichier actuel à *PMODE* avant de définir les autorisations (consultez [_umask](umask.md)). **_creat** est fourni principalement pour la compatibilité avec les bibliothèques précédentes. Un appel à **_open** avec **_O_CREAT** et **_O_TRUNC** dans le paramètre *Oflag* est équivalent à **_creat** et est préférable pour le nouveau code.
 
@@ -154,7 +155,7 @@ Created data file.
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_chsize](chsize.md)<br/>
 [_close](close.md)<br/>

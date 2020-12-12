@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : primitives à virgule flottante'
 title: Primitives à virgule flottante
 ms.date: 4/2/2020
 api_name:
@@ -157,12 +158,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05422620a4da907820ed86a61d4e8dc16b37d3f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268962"
 ---
 # <a name="floating-point-primitives"></a>Primitives à virgule flottante
 
@@ -257,7 +258,7 @@ short __cdecl _fdtest(float* px);
 
 ### <a name="parameters"></a>Paramètres
 
-*pix*<br/>
+*px*<br/>
 Pointeur vers un argument à virgule flottante.
 
 ### <a name="remarks"></a>Notes
@@ -286,7 +287,7 @@ short __cdecl _fd_int(float* px, short exp);
 
 ### <a name="parameters"></a>Paramètres
 
-*pix*<br/>
+*px*<br/>
 Pointeur vers un argument à virgule flottante.
 
 *exp*<br/>
@@ -308,7 +309,7 @@ short __cdecl _fdscale(float* px, long exp);
 
 ### <a name="parameters"></a>Paramètres
 
-*pix*<br/>
+*px*<br/>
 Pointeur vers un argument à virgule flottante.
 
 *exp*<br/>
@@ -316,7 +317,7 @@ Exposant comme type intégral.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante prennent un pointeur vers une valeur à virgule flottante *PX* et une valeur d’exposant *exp*, et ajustent la valeur en *PX* de 2<sup>*exp*</sup>, si possible. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire. Pour la portabilité, préférez les fonctions [ldexp, ldexpf, et ldexpl](ldexp.md) .
+Ces primitives à virgule flottante prennent un pointeur vers une valeur à virgule flottante *PX* et une valeur d’exposant *exp*, et ajustent la valeur en *PX* de 2 <sup>*exp*</sup>, si possible. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire. Pour la portabilité, préférez les fonctions [ldexp, ldexpf, et ldexpl](ldexp.md) .
 
 ## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale, _ldunscale _fdunscale
 
@@ -333,12 +334,12 @@ short __cdecl _fdunscale(short* pexp, float* px);
 *pexp*<br/>
 Pointeur vers un exposant en tant que type intégral.
 
-*pix*<br/>
+*px*<br/>
 Pointeur vers un argument à virgule flottante.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante décomposent la valeur à virgule flottante pointée par *PX* dans une mantisse (mantisse) et un exposant, si possible. Le mantisse est mis à l’échelle de telle sorte que la valeur absolue soit supérieure ou égale à 0,5 et inférieure à 1,0. L’exposant est la valeur *n*, où la valeur à virgule flottante d’origine est égale au nombre de mantisse mis à l’échelle 2<sup>*n*</sup>. Cet exposant entier *n* est stocké à l’emplacement désigné par *pexp*. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’une valeur NaN ou d’une valeur d’infini, et sur la valeur de sortie dans le cas contraire. Pour la portabilité, préférez les fonctions [frexp, frexpf,, frexpl](frexp.md) .
+Ces primitives à virgule flottante décomposent la valeur à virgule flottante pointée par *PX* dans une mantisse (mantisse) et un exposant, si possible. Le mantisse est mis à l’échelle de telle sorte que la valeur absolue soit supérieure ou égale à 0,5 et inférieure à 1,0. L’exposant est la valeur *n*, où la valeur à virgule flottante d’origine est égale au nombre de mantisse mis à l’échelle 2 <sup>*n*</sup>. Cet exposant entier *n* est stocké à l’emplacement désigné par *pexp*. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’une valeur NaN ou d’une valeur d’infini, et sur la valeur de sortie dans le cas contraire. Pour la portabilité, préférez les fonctions [frexp, frexpf,, frexpl](frexp.md) .
 
 ## <a name="_dexp-_ldexp-_fdexp"></a>_dexp, _ldexp _fdexp
 
@@ -355,7 +356,7 @@ short __cdecl _fdexp(float* px, float y, long exp);
 *y*<br/>
 Argument de fonction à virgule flottante.
 
-*pix*<br/>
+*px*<br/>
 Pointeur vers un argument à virgule flottante.
 
 *exp*<br/>
@@ -363,7 +364,7 @@ Exposant comme type intégral.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante construisent une valeur à virgule flottante à l’emplacement désigné par *PX* égal à *y* * 2<sup>*exp*</sup>. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *y* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire. Pour la portabilité, préférez les fonctions [ldexp, ldexpf, et ldexpl](ldexp.md) .
+Ces primitives à virgule flottante construisent une valeur à virgule flottante à l’emplacement désigné par *PX* égal à *y* * 2 <sup>*exp*</sup>. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *y* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire. Pour la portabilité, préférez les fonctions [ldexp, ldexpf, et ldexpl](ldexp.md) .
 
 ## <a name="_dnorm-_fdnorm"></a>_dnorm, _fdnorm
 
@@ -406,7 +407,7 @@ Ordre du polynôme à évaluer.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante retournent l’évaluation de *x* dans le degré polynomial de l’ordre *n* dont les coefficients sont représentés par les valeurs constantes correspondantes dans la *table*. Par exemple, si *table* \[ 0] = 3,0, *table* \[ 1] = 4,0, *table* \[ 2] = 5,0, et *n* = 2, il représente le polynôme 5,0 x<sup>2</sup> + 4.0 x + 3,0. Si ce polynôme est évaluée pour *x* de 2,0, le résultat est 31,0. Ces fonctions ne sont pas utilisées en interne.
+Ces primitives à virgule flottante retournent l’évaluation de *x* dans le degré polynomial de l’ordre *n* dont les coefficients sont représentés par les valeurs constantes correspondantes dans la *table*. Par exemple, si *table* \[ 0] = 3,0, *table* \[ 1] = 4,0, *table* \[ 2] = 5,0, et *n* = 2, il représente le polynôme 5,0 x <sup>2</sup> + 4.0 x + 3,0. Si ce polynôme est évaluée pour *x* de 2,0, le résultat est 31,0. Ces fonctions ne sont pas utilisées en interne.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog _dlog
 
@@ -428,7 +429,7 @@ Indicateur qui contrôle la base à utiliser, 0 pour la base *e* et différente 
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante retournent le logarithme népérien de *x*, ln (*x*) ou log<sub>*e*</sub>(*x*), lorsque *base_flag* est égal à 0. Ils retournent la base du journal 10 sur *x*ou log<sub>10</sub>(*x*), lorsque *base_flag* est différent de zéro. Ces fonctions ne sont pas utilisées en interne. Pour la portabilité, préférez les fonctions [log, LogF,, logl, log10, log10f, et log10L](log-logf-log10-log10f.md).
+Ces primitives à virgule flottante retournent le logarithme népérien de *x*, ln (*x*) ou log <sub>*e*</sub>(*x*), lorsque *base_flag* est égal à 0. Ils retournent la base du journal 10 sur *x* ou log <sub>10</sub>(*x*), lorsque *base_flag* est différent de zéro. Ces fonctions ne sont pas utilisées en interne. Pour la portabilité, préférez les fonctions [log, LogF,, logl, log10, log10f, et log10L](log-logf-log10-log10f.md).
 
 ## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin _fdsin
 
@@ -464,7 +465,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[isinf,](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>
