@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCStatusBar'
 title: CMFCStatusBar, classe
 ms.date: 11/19/2018
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 004873ef2696eb9504cdd4df77e700c4a145e886
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 79ba7c749a73406893173d7486fd5df208a37b83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307078"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar, classe
 
@@ -193,7 +194,7 @@ virtual CSize CalcFixedLayout(
 dans *bStretch*<br/>
 dans *bHorz*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -207,7 +208,7 @@ int CommandToIndex(UINT nIDFind) const;
 
 dans *nIDFind*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -226,7 +227,7 @@ dans *pParentWnd*<br/>
 dans *dwStyle*<br/>
 dans *nid*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -247,7 +248,7 @@ dans *dwCtrlStyle*<br/>
 dans *dwStyle*<br/>
 dans *nid*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -257,7 +258,7 @@ dans *nid*<br/>
 virtual BOOL DoesAllowDynInsertBefore() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -328,7 +329,7 @@ Récupère le nombre de volets dans la barre d’État.
 int GetCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de volets dans la barre d’État.
 
@@ -338,7 +339,7 @@ Nombre de volets dans la barre d’État.
 BOOL GetDrawExtendedArea() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -352,7 +353,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 dans *Rect*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -366,7 +367,7 @@ UINT GetItemID(int nIndex) const;
 
 dans *nIndex*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -414,7 +415,7 @@ long GetPaneProgress(int nIndex) const;
 
 dans *nIndex*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -428,7 +429,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 dans *nIndex*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -447,7 +448,7 @@ CString GetPaneText(int nIndex) const;
 dans *nIndex*<br/>
 dans *s*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -464,7 +465,7 @@ int GetPaneWidth(int nIndex) const;
 *nIndex*<br/>
 dans Spécifie l’index du volet de la barre d’État.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur du volet de la barre d’État que *nIndex* spécifie ; Sinon, zéro si un volet de barre d’État n’existe pas.
 
@@ -481,7 +482,7 @@ CString GetTipText(int nIndex) const;
 *nIndex*<br/>
 dans Spécifie l’index du volet pour lequel récupérer le texte d’info-bulle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Texte d’info-bulle du volet de la barre d’État que *nIndex* spécifie. Sinon, la chaîne vide si un volet de barre d’État n’existe pas pour le *nIndex* spécifié ou si son texte info-bulle est vide.
 
@@ -536,7 +537,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 dans *CS*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -565,7 +566,7 @@ BOOL SetIndicators(
 dans *lpIDArray*<br/>
 dans *nIDCount*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
@@ -738,7 +739,7 @@ dans *nIndex*<br/>
 dans *lpszNewText*<br/>
 dans *bUpdate*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 

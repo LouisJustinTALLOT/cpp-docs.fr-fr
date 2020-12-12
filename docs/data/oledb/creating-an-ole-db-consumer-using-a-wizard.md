@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : création d’un OLE DB consommateur à l’aide d’un Assistant'
 title: Création d'un consommateur OLE DB en utilisant l'Assistant
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: efefd4c0-4491-4072-aa9b-59545641efb3
-ms.openlocfilehash: 08abbae2e8d3cb791117225c74b09aaf8dbf2ecb
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 4c4d60538c67317e34eaf8f0e200d7c79c18c951
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305433"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Création d'un consommateur OLE DB en utilisant l'Assistant
 
@@ -21,7 +22,7 @@ L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 
 
 ::: moniker range="<=msvc-150"
 
-Cette procédure montre comment vous pouvez utiliser l’ **Assistant Projet ATL** et l’ **Assistant Consommateur OLE DB ATL** pour générer un consommateur basé sur des modèles OLE DB, puis modifier le code principal de l’application de console à récupérer et afficher des données à partir d’une table de base de données.
+Cette procédure montre comment vous pouvez utiliser l’**Assistant Projet ATL** et l’**Assistant Consommateur OLE DB ATL** pour générer un consommateur basé sur des modèles OLE DB, puis modifier le code principal de l’application de console à récupérer et afficher des données à partir d’une table de base de données.
 
 Les deux dernières sections expliquent le code du consommateur OLE DB généré par l’Assistant.
 

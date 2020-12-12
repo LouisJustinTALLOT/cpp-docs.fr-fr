@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CAccessorRowset, classe'
 title: CAccessorRowset, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c93580fa41967004947b075e82e00bdcb745ad4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498721"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307572"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset, classe
 
@@ -54,7 +55,7 @@ Classe d’accesseur.
 *TRowset*<br/>
 Classe d’ensemble de lignes.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -70,7 +71,7 @@ Classe d’ensemble de lignes.
 | [FreeRecordMemory](#freerecordmemory) | Libère toutes les colonnes de l’enregistrement actif qui doivent être libérées. |
 | [GetColumnInfo](#getcolumninfo) | Implémente [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)). |
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 `TAccessor`La classe gère l’accesseur. La classe *TRowset* gère l’ensemble de lignes.
 
@@ -92,7 +93,7 @@ HRESULT standard.
 
 Initialise l'objet `CAccessorRowset`.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 CAccessorRowset();
@@ -116,7 +117,7 @@ Libère toute mémoire associée.
 
 Libère toutes les colonnes de l’enregistrement actif qui doivent être libérées.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 void FreeRecordMemory();
@@ -145,7 +146,7 @@ Consultez [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms
 
 HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’utilisateur doit libérer les informations de colonne retournées et la mémoire tampon de chaîne. Utilisez la deuxième version de cette méthode lorsque vous utilisez [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) et que vous devez substituer les liaisons.
 

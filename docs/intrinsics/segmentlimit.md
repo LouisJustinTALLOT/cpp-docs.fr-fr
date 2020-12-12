@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __segmentlimit'
 title: __segmentlimit
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 49f8688918e07e143615af7b184a784daa0eaaa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307000"
 ---
 # <a name="__segmentlimit"></a>__segmentlimit
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Génère l' `lsl` instruction (limite de chargement du segment).
 
@@ -33,17 +34,17 @@ unsigned long __segmentlimit(
 *un*\
 dans Constante qui spécifie le sélecteur de segment.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Limite de segment du sélecteur de segment spécifié par *un*, si le sélecteur est valide et visible au niveau d’autorisation actuel.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -105,7 +106,7 @@ Success!
 sl was changed
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

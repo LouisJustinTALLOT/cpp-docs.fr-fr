@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l'
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 ms.date: 4/2/2020
 api_name:
@@ -68,12 +69,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 1a21d9cb06b9459a7f015cd8f2a8fee75a1ab979
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28d3998ccfe1e7460fa628d462732f233c553b10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306103"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -173,13 +174,13 @@ Nombre de caractères à copier.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne *strDest*. Aucune valeur de retour n'est réservée pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **strncpy** copie les caractères *de nombre* initiaux de *StrSource* vers *strDest* et retourne *strDest*. Si *Count* est inférieur ou égal à la longueur de *strSource*, un caractère NULL n’est pas ajouté automatiquement à la chaîne copiée. Si le *nombre* est supérieur à la longueur de *strSource*, la chaîne de destination est complétée avec un *nombre*de caractères null jusqu’à la longueur. Le comportement de **strncpy** n’est pas défini si les chaînes source et de destination se chevauchent.
+La fonction **strncpy** copie les caractères *de nombre* initiaux de *StrSource* vers *strDest* et retourne *strDest*. Si *Count* est inférieur ou égal à la longueur de *strSource*, un caractère NULL n’est pas ajouté automatiquement à la chaîne copiée. Si le *nombre* est supérieur à la longueur de *strSource*, la chaîne de destination est complétée avec un *nombre* de caractères null jusqu’à la longueur. Le comportement de **strncpy** n’est pas défini si les chaînes source et de destination se chevauchent.
 
 > [!IMPORTANT]
 > **strncpy** ne vérifie pas si l’espace est suffisant dans *strDest*; cela en fait une cause potentielle de dépassements de mémoire tampon. L’argument *Count* limite le nombre de caractères copiés ; il ne s’agit pas d’une limite de la taille de *strDest*. Consultez l’exemple qui suit. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
@@ -214,7 +215,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité de plateforme, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 L’exemple suivant illustre l’utilisation de **strncpy** et la façon dont il peut être utilisé de manière inutilisée pour provoquer des bogues de programme et des problèmes de sécurité. Le compilateur génère un avertissement pour chaque appel à **strncpy** similaire à **crt_strncpy_x86. c (15) : Warning C4996 : 'strncpy' : cette fonction ou cette variable peut ne pas être sécurisée. Envisagez plutôt d’utiliser strncpy_s. Pour désactiver la désapprobation, utilisez _CRT_SECURE_NO_WARNINGS. Pour plus d’informations, consultez l’aide en ligne.**
 
@@ -287,7 +288,7 @@ La structure des variables automatiques et le niveau de détection d'erreurs et 
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>

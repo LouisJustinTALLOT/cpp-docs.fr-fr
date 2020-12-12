@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l'
 title: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -76,12 +77,12 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 3be900679dddbbab7cba0982c11d5c75a190d685
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d43a0879bf044f71b9f71b6c5d97d0bd3b1353d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920079"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306077"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
@@ -139,7 +140,7 @@ Nombre de caractères à comparer.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Indique la relation entre les sous-chaînes, comme suit.
 
@@ -149,11 +150,11 @@ Indique la relation entre les sous-chaînes, comme suit.
 |0|*Chaîne1* SUBSTRING est identique à la sous-chaîne *string2* .|
 |> 0|la sous-chaîne *Chaîne1* est supérieure à la sous-chaîne *Chaîne2* .|
 
-Dans le cas d’une erreur de validation de paramètre, ces fonctions retournent **_NLSCMPERROR**, qui est défini dans \<String. h> et \<mbstring. h>.
+Dans le cas d’une erreur de validation de paramètre, ces fonctions retournent **_NLSCMPERROR**, qui est défini dans \<string.h> et \<mbstring.h> .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_strnicmp** compare, au plus, les premiers caractères de *nombre* de *string1* et *Chaîne2*. La comparaison est effectuée sans tenir compte de la casse, en convertissant chaque caractère en minuscule. **_strnicmp** est une version de **strncmp**qui ne respecte pas la casse. La comparaison se termine si un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés. Si les chaînes sont égales lorsqu’un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés, la chaîne la plus courte est inférieure.
+La fonction **_strnicmp** compare, au plus, les premiers caractères de *nombre* de *string1* et *Chaîne2*. La comparaison est effectuée sans tenir compte de la casse, en convertissant chaque caractère en minuscule. **_strnicmp** est une version de **strncmp** qui ne respecte pas la casse. La comparaison se termine si un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés. Si les chaînes sont égales lorsqu’un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés, la chaîne la plus courte est inférieure.
 
 Les caractères compris entre 91 et 96 dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») sont évalués comme étant inférieurs à n’importe quel caractère alphabétique. Ce classement est identique à celui de **stricmp**.
 
@@ -181,7 +182,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
 

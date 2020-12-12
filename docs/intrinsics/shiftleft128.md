@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __shiftleft128'
 title: __shiftleft128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e0e1402660c2ddb6f5993e5186302ff489ed864f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306987"
 ---
 # <a name="__shiftleft128"></a>__shiftleft128
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Décale une quantité de 128 bits, représentée par deux quantités de 64 bits `LowPart` et `HighPart`, vers la gauche d'un nombre de bits spécifié par `Shift` et retourne les 64 bits de poids fort du résultat.
 
@@ -40,21 +41,21 @@ dans 64 bits de poids fort de la quantité 128 bits à décaler.
 *Majuscule*\
 dans Nombre de bits à décaler.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 64 bits de poids fort du résultat.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`__shiftleft128`|X64|
+|`__shiftleft128`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-La valeur de *décalage* est toujours modulo 64 afin que, par exemple, si vous `__shiftleft128(1, 0, 64)`appelez, la fonction décale les bits `0` de la partie inférieure vers la gauche et `0` retourne une `1` partie haute de et non comme cela peut être prévu.
+La valeur de *décalage* est toujours modulo 64 afin que, par exemple, si vous appelez `__shiftleft128(1, 0, 64)` , la fonction décale les bits de la partie inférieure vers la `0` gauche et retourne une partie haute de `0` et non `1` comme cela peut être prévu.
 
 ## <a name="example"></a>Exemple
 
@@ -94,7 +95,7 @@ int main()
 0x100000000000000001 >> 1 = 0x080000000000000000
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

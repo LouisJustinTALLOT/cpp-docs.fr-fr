@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : peinture d’un contrôle ActiveX'
 title: "Contrôles ActiveX MFC : peinture d'un contrôle ActiveX"
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: a01a66402471b295a6e57af8af265c50685b4a1f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d9e6fb23deb701e32f1af6ff4bf4d79c7d9df085
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618219"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305271"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Contrôles ActiveX MFC : peinture d'un contrôle ActiveX
 
@@ -21,7 +22,7 @@ Cet article décrit le processus de peinture du contrôle ActiveX et le mode de 
 
 Les exemples dans cet article proviennent d'un contrôle créé par l'Assistant Contrôle ActiveX de MFC avec des paramètres par défaut. Pour plus d’informations sur la création d’une application de contrôle squelette à l’aide de l’Assistant contrôle ActiveX MFC, consultez l’article [Assistant contrôle ActiveX MFC](reference/mfc-activex-control-wizard.md).
 
-Les rubriques suivantes sont traitées :
+Les rubriques suivantes sont traitées :
 
 - [Le processus global pour peindre un contrôle et le code créé par l'Assistant Contrôle ActiveX pour prendre en charge la peinture](#_core_the_painting_process_of_an_activex_control)
 
@@ -29,7 +30,7 @@ Les rubriques suivantes sont traitées :
 
 - [Comment peindre votre contrôle à l'aide de métafichiers ?](#_core_painting_your_control_using_metafiles)
 
-## <a name="the-painting-process-of-an-activex-control"></a><a name="_core_the_painting_process_of_an_activex_control"></a>Processus de peinture d’un contrôle ActiveX
+## <a name="the-painting-process-of-an-activex-control"></a><a name="_core_the_painting_process_of_an_activex_control"></a> Processus de peinture d’un contrôle ActiveX
 
 Lorsque les contrôles ActiveX sont initialement affichés ou redessinés, ils suivent un processus de peinture semblable à d'autres applications développées à l'aide de MFC, avec une distinction importante : les contrôles ActiveX peuvent être dans un état actif ou inactif.
 
@@ -53,7 +54,7 @@ L'implémentation par défaut fournie par l'Assistant Contrôle ActiveX MFC dans
 > [!NOTE]
 > Lors de la peinture d’un contrôle, vous ne devez pas faire d’hypothèses concernant l’état du contexte de périphérique qui est passé comme paramètre de *contrôleur de domaine principal* à la `OnDraw` fonction. Occasionnellement le contexte de périphérique est fourni par l'application conteneur et n'est pas nécessairement initialisé à l'état par défaut. En particulier, sélectionnez explicitement les stylets, pinceaux, couleurs, polices et autres ressources dont votre code de dessin dépend.
 
-## <a name="optimizing-your-paint-code"></a><a name="_core_optimizing_your_paint_code"></a>Optimisation de votre code de peinture
+## <a name="optimizing-your-paint-code"></a><a name="_core_optimizing_your_paint_code"></a> Optimisation de votre code de peinture
 
 Lorsque le contrôle se peint avec succès, l'étape suivante consiste à optimiser la fonction `OnDraw`.
 
@@ -61,7 +62,7 @@ L'implémentation par défaut du contrôle de peinture ActiveX peint la zone de 
 
 La `OnDraw` fonction fournit une méthode simple d’optimisation en passant *rcInvalid*, la zone rectangulaire du contrôle qui doit être redessinée. Utilisez cette zone, généralement inférieure à la zone de contrôle entière, pour accélérer le processus de peinture.
 
-## <a name="painting-your-control-using-metafiles"></a><a name="_core_painting_your_control_using_metafiles"></a>Peinture de votre contrôle à l’aide de safiles
+## <a name="painting-your-control-using-metafiles"></a><a name="_core_painting_your_control_using_metafiles"></a> Peinture de votre contrôle à l’aide de safiles
 
 Dans la plupart des cas, le paramètre *PDC* vers la `OnDraw` fonction pointe vers un contexte de périphérique (DC) d’écran. Toutefois, lors de l'impression d'images du contrôle ou lors d'une session d'aperçu avant impression, le contrôleur de domaine reçu pour affichage est un type spécial appelé "contexte de périphérique de métafichier". Contrairement à un écran contrôleur de domaine, qui gère à la fois les demandes qui lui sont envoyées, les métafichiers DC stocke les demandes qui doivent être traitées ultérieurement. Certaines applications conteneur peuvent également choisir d'afficher l'image de contrôle lorsqu'il se trouve en mode création à l'aide d'un métafichier DC.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3010'
 title: Erreur du compilateur C3010
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3010
 ms.assetid: e959d038-bba6-432a-9c0a-0470474de7d9
-ms.openlocfilehash: cbce65840280d3171ea84638b968686fa65633be
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 50467ad1cb03255cbb5ef008e2ac2897de4a6a5c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305310"
 ---
 # <a name="compiler-error-c3010"></a>Erreur du compilateur C3010
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : strcmp, wcscmp, _mbscmp, _mbscmp_l'
 title: strcmp, wcscmp, _mbscmp, _mbscmp_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: 805e355fe12cb2f7ead6180edd45ad0748570141
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0c611b92b39d04e455bbd31f22f98898723ff7c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306155"
 ---
 # <a name="strcmp-wcscmp-_mbscmp-_mbscmp_l"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
@@ -92,19 +93,19 @@ Chaîne terminée par Null à comparer.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour pour chacune de ces fonctions indique la relation ordinale de *Chaîne1* à *Chaîne2*.
 
-|Value|Relation de chaîne1 à chaîne2|
+|Valeur|Relation de chaîne1 à chaîne2|
 |-----------|----------------------------------------|
 |< 0|*Chaîne1* est inférieur à *Chaîne2*|
 |0|*Chaîne1* est identique à *Chaîne2*|
 |> 0|*Chaîne1* est supérieur à *Chaîne2*|
 
-Dans le cas d’une erreur de validation de paramètre, **_mbscmp** et **_mbscmp_l** retournent **_NLSCMPERROR**, qui est défini dans \<string. h> et \<mbstring. h>.
+Dans le cas d’une erreur de validation de paramètre, **_mbscmp** et **_mbscmp_l** retournent **_NLSCMPERROR**, qui est défini dans \<string.h> et \<mbstring.h> .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **strcmp** effectue une comparaison ordinale de *Chaîne1* et *Chaîne2* et retourne une valeur qui indique leur relation. **wcscmp** et **_mbscmp** sont, respectivement, des versions à caractères larges et à caractères multioctets de **strcmp**. **_mbscmp** reconnaît les séquences de caractères multioctets en fonction de la page de codes multioctets actuelle et retourne **_NLSCMPERROR** en cas d’erreur. **_mbscmp_l** a le même comportement, mais utilise les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Pages de codes](../../c-runtime-library/code-pages.md). En outre, si *Chaîne1* ou *string2* est un pointeur null, **_mbscmp** appelle le gestionnaire de paramètre non valide, comme décrit dans validation de [paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbscmp** et **_mbscmp_l** retournent **_NLSCMPERROR** et attribuent à **errno** la valeur **EINVAL**. **strcmp** et **wcscmp** ne valident pas leurs paramètres. Ces fonctions se comportent sinon de façon identique.
 
@@ -122,7 +123,7 @@ Dans les paramètres régionaux "C", l'ordre des caractères du jeu de caractèr
 
 Dans les paramètres régionaux pour lesquels le jeu de caractères et l’ordre des caractères lexicographique diffèrent, vous pouvez utiliser **strcoll** au lieu de **strcmp** pour la comparaison lexicographique des chaînes. Vous pouvez également utiliser **strxfrm** sur les chaînes d’origine, puis utiliser **strcmp** sur les chaînes résultantes.
 
-Les fonctions **strcmp** respectent la casse. stricmp, ** \_wcsicmp**et ** \_mbsicmp** comparent les chaînes en les convertissant d’abord en minuscules. ** \_** Deux chaînes qui contiennent des caractères situés entre « Z » et « a » dans la table ASCII (« [ », «\\», « ] », « ^ », « _ » et «\`») se comparent différemment, en fonction de leur casse. Par exemple, les deux chaînes « ABCD » et « ABCD ^ » sont comparées de façon unidirectionnelle si la comparaison est en minuscules (« ABCDE » > « ABCD ^ ») et l’autre façon (« ABCDe » < « ABCD ^ ») si la comparaison est en majuscules.
+Les fonctions **strcmp** respectent la casse. **\_ stricmp**, **\_ wcsicmp** et **\_ mbsicmp** comparent les chaînes en les convertissant d’abord en minuscules. Deux chaînes qui contiennent des caractères situés entre « Z » et « a » dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») se comparent différemment, en fonction de leur casse. Par exemple, les deux chaînes « ABCD » et « ABCD ^ » sont comparées de façon unidirectionnelle si la comparaison est en minuscules (« ABCDE » > « ABCD ^ ») et l’autre façon (« ABCDe » < « ABCD ^ ») si la comparaison est en majuscules.
 
 ## <a name="requirements"></a>Spécifications
 

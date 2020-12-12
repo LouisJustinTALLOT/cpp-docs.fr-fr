@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: type'
 title: Platform::Type (classe)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c11e85180dfb3eeeeb6eea88c3bd47b40fa7289b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307897"
 ---
 # <a name="platformtype-class"></a>Platform::Type (classe)
 
@@ -51,7 +52,7 @@ La `Type` classe est utile dans les applications qui doivent diriger le traiteme
 | [Type d’opérateur ^](../cppcx/operator-type-hat.md) | Permet de convertir `Windows::UI::Xaml::Interop::TypeName` en `Platform::Type`. |
 | [Windows::UI::Xaml::Interop::TypeName, opérateur](../cppcx/operator-windows-ui-xaml-interop-typename.md) | Permet de convertir `Platform::Type` en `Windows::UI::Xaml::Interop::TypeName`. |
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **Client minimal pris en charge :** Windows 8
 

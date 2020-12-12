@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe variant'
 title: Classe de variante
 ms.date: 04/04/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: aba121604636ebd253523acb9b630dd9ab762584
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0fc2887def147b458e63bc316f211e62a5eba879
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840022"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305102"
 ---
 # <a name="variant-class"></a>Classe de variante
 
@@ -37,7 +38,7 @@ template <class... Types>
 |-|-|
 |[variant](#variant)|Construit un objet de type `variant`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

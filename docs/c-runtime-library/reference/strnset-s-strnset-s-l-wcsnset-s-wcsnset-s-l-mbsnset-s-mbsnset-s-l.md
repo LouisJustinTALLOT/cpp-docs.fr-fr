@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l'
 title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 ms.date: 4/2/2020
 api_name:
@@ -63,12 +64,12 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 123f8c4945d98ccf3dd94a48dbbb0fef3b35a8e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 388d0ed82b811187f10d68fed7e48b954fdb3e2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305908"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
@@ -123,13 +124,13 @@ errno_t _mbsnset_s_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne à modifier.
 
 *numberOfElements*<br/>
 Taille de la mémoire tampon *Str* .
 
-*secteur*<br/>
+*c*<br/>
 Paramètre de caractère.
 
 *count*<br/>
@@ -138,13 +139,13 @@ Nombre de caractères à définir.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite ; code d’erreur dans un autre cas.
 
 Ces fonctions valident leurs arguments. Si *Str* n’est pas une chaîne terminée par le caractère null valide ou si l’argument Size est inférieur ou égal à 0, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent un code d’erreur et attribuent à **errno** la valeur de ce code d’erreur. Le code d’erreur par défaut est **EINVAL** si une valeur plus spécifique ne s’applique pas.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions définissent, au plus, les *premiers caractères de* *Str* en *c*. Si *Count* est supérieur à la taille de *Str*, la taille de *Str* est utilisée à la place de *Count*. Une erreur se produit si le *nombre* est supérieur à *NumberOfElements* et si ces deux paramètres sont supérieurs à la taille de *Str*.
 
@@ -201,7 +202,7 @@ After:  **** is a test
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

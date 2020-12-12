@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l'
 title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 ms.date: 4/2/2020
 api_name:
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-ms.openlocfilehash: f75bf4bb28a2dc34a233374314e6bc170793d77e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f3d826a14bb1cc77f6265806cc24ef5e9cd92b6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920372"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306142"
 ---
 # <a name="strcoll-wcscoll-_mbscoll-_strcoll_l-_wcscoll_l-_mbscoll_l"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -107,7 +108,7 @@ Chaîne terminée par Null à comparer.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne une valeur indiquant la relation de *Chaîne1* à *Chaîne2*, comme suit.
 
@@ -117,9 +118,9 @@ Chacune de ces fonctions retourne une valeur indiquant la relation de *Chaîne1*
 |0|*Chaîne1* identique à *Chaîne2*|
 |> 0|*Chaîne1* supérieure à *Chaîne2*|
 
-Chacune de ces fonctions retourne **_NLSCMPERROR** en cas d’erreur. Pour utiliser **_NLSCMPERROR**, incluez l’une ou l’autre chaîne. H ou MBSTRING. Manutention. **wcscoll** peut échouer si *Chaîne1* ou *string2* a la **valeur null** ou contient des codes à caractères larges en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **wcscoll** peut définir **errno** sur **EINVAL**. Pour rechercher une erreur lors d’un appel à **wcscoll**, attribuez la valeur 0 à **errno** , puis activez la case à cocher **errno** après avoir appelé **wcscoll**.
+Chacune de ces fonctions retourne **_NLSCMPERROR** en cas d’erreur. Pour utiliser **_NLSCMPERROR**, incluez l’une ou l’autre chaîne. H ou MBSTRING. H. **wcscoll** peut échouer si *Chaîne1* ou *string2* a la **valeur null** ou contient des codes à caractères larges en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **wcscoll** peut définir **errno** sur **EINVAL**. Pour rechercher une erreur lors d’un appel à **wcscoll**, attribuez la valeur 0 à **errno** , puis activez la case à cocher **errno** après avoir appelé **wcscoll**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions effectue une comparaison sensible à la casse de *string1* et *string2* , en fonction de la page de codes en cours d’utilisation. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.
 

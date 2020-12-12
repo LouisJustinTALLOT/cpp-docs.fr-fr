@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : classes Ref de modèle (C++/CX)'
 title: Classes ref de modèle (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: a24d5f45-8dbb-4540-958f-c76c90d8ed93
-ms.openlocfilehash: 3e9c233b5227b4ad86eb632db740001bc2a3a8bd
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: c8f3e668dddd80a2ce05f10f9a5d2ada30096c3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307624"
 ---
 # <a name="template-ref-classes-ccx"></a>Classes ref de modèle (C++/CX)
 
@@ -23,4 +24,4 @@ L'exemple suivant indique comment déclarer une classe ref privée comme modèle
 
 [Système de type (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)
+[Référence des espaces de noms](../cppcx/namespaces-reference-c-cx.md)

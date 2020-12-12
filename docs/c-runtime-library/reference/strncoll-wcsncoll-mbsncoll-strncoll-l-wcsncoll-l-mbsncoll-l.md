@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l'
 title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 ms.date: 4/2/2020
 api_name:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-ms.openlocfilehash: c7abe5ce96d0fa3d198834f6923724321d60d666
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 71f37511ab531def178926d77e61978190fce817
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306116"
 ---
 # <a name="_strncoll-_wcsncoll-_mbsncoll-_strncoll_l-_wcsncoll_l-_mbsncoll_l"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
@@ -133,7 +134,7 @@ Nombre de caractères à comparer.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne une valeur qui indique la relation des sous-chaînes de *Chaîne1* et *Chaîne2*, comme suit.
 
@@ -145,7 +146,7 @@ Chacune de ces fonctions retourne une valeur qui indique la relation des sous-ch
 
 Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, incluez String. h ou mbstring. h. **_wcsncoll** peut échouer si *Chaîne1* ou *string2* contient des codes à caractères larges qui se trouvent en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **_wcsncoll** peut définir **errno** sur **EINVAL**. Pour rechercher une erreur lors d’un appel à **_wcsncoll**, attribuez la valeur 0 à **errno** , puis activez la case à cocher **errno** après avoir appelé **_wcsncoll**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions effectue une comparaison sensible à la casse des premiers caractères de *nombre* dans *Chaîne1* et *Chaîne2*, en fonction de la page de codes en cours d’utilisation. N'utilisez ces fonctions que s'il existe une différence entre l'ordre du jeu de caractères et l'ordre lexicographique des caractères dans la page de codes, et si cette différence présente un intérêt pour la comparaison de chaînes. L'ordre du jeu de caractères dépend des paramètres régionaux. Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels, mais les versions qui ont le suffixe **_L** utilisent les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

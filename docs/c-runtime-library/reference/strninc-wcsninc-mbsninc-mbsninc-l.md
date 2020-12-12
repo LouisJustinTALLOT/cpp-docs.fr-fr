@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _strninc, _wcsninc, _mbsninc, _mbsninc_l'
 title: _strninc, _wcsninc, _mbsninc, _mbsninc_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-ms.openlocfilehash: fe35d3b37d5aadfbeae69de5ff00c349a2263e30
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5368811af3677bf6b9de47b56eeb6095d994960b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914191"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306064"
 ---
 # <a name="_strninc-_wcsninc-_mbsninc-_mbsninc_l"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
@@ -86,7 +87,7 @@ unsigned char *_mbsninc(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne source.
 
 *count*<br/>
@@ -95,11 +96,11 @@ Nombre de caractères dont un pointeur de chaîne est incrémenté.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces routines retourne un pointeur vers *Str* après l’incrémentation de *Str* par le *nombre* de caractères ou la **valeur null** si le pointeur fourni a la **valeur null**. Si *Count* est supérieur ou égal au nombre de caractères dans *Str*, le résultat n’est pas défini.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbsninc** incrémente *Str* par *nombre* de caractères multioctets. **_mbsninc** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation.
 
@@ -130,7 +131,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>

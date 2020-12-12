@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Platform :: TypeCode, énumération'
 title: Platform::TypeCode (énumération)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::TypeCode Enumeration
 ms.assetid: 93c1305f-eb16-4bec-aead-f88d9518b4cf
-ms.openlocfilehash: 86bc17c45f36a5a72b089340e166df11e9a4334d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3e7bc3d5fa3cf8aec29a9aa3f20c7d02489eddf9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307884"
 ---
 # <a name="platformtypecode-enumeration"></a>Platform::TypeCode (énumération)
 
@@ -40,7 +41,7 @@ enum class TypeCode {};
 |Int8|Type default::int8.|
 |Object|Type Platform::Object.|
 |Unique|Type default::float32.|
-|String|Type Platform::String.|
+|Chaîne|Type Platform::String.|
 |UInt16|Type default::uint16.|
 |UInt32|Type default::uint32.|
 |UInt64|Type default::uint64.|
@@ -54,4 +55,4 @@ enum class TypeCode {};
 
 **Espace de noms :** Platform
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd

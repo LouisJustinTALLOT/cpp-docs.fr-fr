@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCTabDropTarget'
 title: CMFCTabDropTarget, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: 9160cfd847977f98ac22eecd72632822c751a3aa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a12d171a934912993a61ba4ae915d9e1f3a5cf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306779"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget, classe
 
@@ -73,7 +74,7 @@ L'exemple suivant montre comment construire un objet `CMFCTabDropTarget` et util
 
 [CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxbasetabctrl.h
 

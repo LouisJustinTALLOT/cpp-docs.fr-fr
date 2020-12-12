@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strcmpi'
 title: strcmpi
 ms.date: 12/16/2019
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - strcmpi function
 ms.assetid: 74206b2f-9bca-4d32-9cdc-93cb94c2aaa1
-ms.openlocfilehash: c3baf7fee937f915ab4ddfa71fb7e6869394e3fa
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a14e76201832db0a1c185f692fedde098c4ef94c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300584"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306129"
 ---
 # <a name="strcmpi"></a>strcmpi
 

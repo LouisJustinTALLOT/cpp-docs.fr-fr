@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonction to_vector'
 title: to_vector (fonction)
 ms.date: 12/30/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - to_vector Function
 ms.assetid: 9cdd5123-7243-4def-a1d3-162e0bf6219e
-ms.openlocfilehash: 4fa4e9c620519cc6bb2f96d346ded88b6cc826ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77d6bee58a793946f91bc03ba4afed35aa7252cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404622"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307585"
 ---
-# <a name="tovector-function"></a>to_vector (fonction)
+# <a name="to_vector-function"></a>to_vector (fonction)
 
 Retourne un `std::vector` dont la valeur est la même que la collection sous-jacente du paramètre IVector ou IVectorView spécifié.
 
@@ -35,14 +36,14 @@ Paramètre de type de modèle.
 *v*<br/>
 Interface IVector ou IVectorView qui permet d'accéder à un objet Vector ou VectorView sous-jacent.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Windows::Foundation::Collections
+**Espace de noms :** Windows::Foundation::Collections
 
 ## <a name="see-also"></a>Voir aussi
 
-[Windows::Foundation::Collections, espace de noms](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows :: Foundation :: Collections, espace de noms](../cppcx/windows-foundation-collections-namespace-c-cx.md)

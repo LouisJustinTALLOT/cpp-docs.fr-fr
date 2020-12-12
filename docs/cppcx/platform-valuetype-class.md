@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: ValueType'
 title: Classe Platform::ValueType
 ms.date: 02/03/2017
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: f4ce34fa3f197424833d34bdb866712d412e69c3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e6873b4b884586d06dae6e2fd1966041fd49bcc8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307806"
 ---
 # <a name="platformvaluetype-class"></a>Classe Platform::ValueType
 
@@ -34,7 +35,7 @@ public ref class ValueType : Object
 
 La classe ValueType est utilisée pour construire des types valeur. ValueType est dérivée d’Object, qui a des membres de base. Toutefois, le compilateur détache ces membres de base des types valeur qui sont dérivés de la classe ValueType. Le compilateur réattache ces membres de base lorsqu’un type valeur est boxed.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **Client minimal pris en charge :** Windows 8
 
