@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64'
 title: _utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 ms.date: 4/2/2020
 api_name:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: dbff557cd116eb1df44f015b17716408c8dc54c2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7ec25f60c508464abf8232419f8867bc3f0a20fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912128"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299343"
 ---
 # <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -108,13 +109,13 @@ int _wutime64(
 
 ### <a name="parameters"></a>Paramètres
 
-*extension*<br/>
+*filename*<br/>
 Pointeur désignant une chaîne qui contient le chemin ou le nom de fichier.
 
-*demi*<br/>
+*times*<br/>
 Pointeur désignant les valeurs d’heure stockées.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne 0 si l’heure de modification de fichier a changé. Une valeur de retour de-1 indique une erreur. Si un paramètre non valide est transmis, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et **errno** est défini sur l’une des valeurs suivantes :
 
@@ -129,9 +130,9 @@ Pour plus d’informations sur ces codes de retour et autres, consultez [_doserr
 
 La date d’un fichier peut être modifiée si la date de modification est postérieure au 1er janvier 1970 à minuit et antérieure à la date de fin de la fonction utilisée. **_utime** et **_wutime** utilisent une valeur de temps de 64 bits, la date de fin est donc 23:59:59, 31 décembre 3000, UTC. Si **_USE_32BIT_TIME_T** est défini pour forcer l’ancien comportement, la date de fin est 23:59:59 le 18 janvier 2038, UTC. **_utime32** ou **_wutime32** utilisez un type de temps de 32 bits, que **_USE_32BIT_TIME_T** soit défini et que la date de fin soit toujours la plus ancienne. **_utime64** ou **_wutime64** utilisent toujours le type de temps 64 bits, de sorte que ces fonctions prennent toujours en charge la date de fin ultérieure.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_utime** définit l’heure de modification pour le fichier spécifié par *filename*. Pour que la modification de l’heure soit possible, le processus doit avoir un accès en écriture au fichier. Dans le système d’exploitation Windows, vous pouvez modifier l’heure d’accès et l’heure de modification dans la structure **_utimbuf** . Si *Times* est un pointeur **null** , l’heure de modification est définie à l’heure locale actuelle. Dans le cas contraire, les *heures* doivent pointer vers une structure de type **_utimbuf**, définie dans SYS\UTIME. Manutention.
+La fonction **_utime** définit l’heure de modification pour le fichier spécifié par *filename*. Pour que la modification de l’heure soit possible, le processus doit avoir un accès en écriture au fichier. Dans le système d’exploitation Windows, vous pouvez modifier l’heure d’accès et l’heure de modification dans la structure **_utimbuf** . Si *Times* est un pointeur **null** , l’heure de modification est définie à l’heure locale actuelle. Dans le cas contraire, les *heures* doivent pointer vers une structure de type **_utimbuf**, définie dans SYS\UTIME.H.
 
 La structure **_utimbuf** stocke les heures d’accès et de modification des fichiers utilisées par **_utime** pour modifier les dates de modification des fichiers. La structure contient les champs suivants, qui sont tous deux de type **time_t**:
 
@@ -166,7 +167,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme utilise **_utime** pour définir l’heure de modification de fichier à l’heure actuelle.
 

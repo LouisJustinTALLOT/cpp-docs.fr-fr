@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _initterm, _initterm_e'
 title: _initterm, _initterm_e
 ms.date: 11/04/2016
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-ms.openlocfilehash: 7e85494bf6c8215d03602ee112e1ff2c0f1cf6f2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c9686504ae39f5aad1678430f4e4ad0054aabc36
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296392"
 ---
 # <a name="_initterm-_initterm_e"></a>_initterm, _initterm_e
 
@@ -70,4 +71,4 @@ Lorsque ces méthodes parcourent une table d’entrées de fonction, elles ignor
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>

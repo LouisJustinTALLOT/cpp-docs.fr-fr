@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les spécificateurs de Storage-Class pour les déclarations External-Level
 title: Spécificateurs de classe de stockage pour les déclarations de niveau externe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,18 +17,18 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-ms.openlocfilehash: 6c30b8a12c0bf26bc35905872fb6fa527b367ef4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a048ebcf6eea87c77cba23ed50ab117d014c95e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296847"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Spécificateurs de classe de stockage pour les déclarations de niveau externe
 
 Les variables externes sont des variables au niveau de la portée du fichier. Elles sont définies en dehors de toute fonction et sont potentiellement disponibles pour de nombreuses fonctions. Les fonctions ne peuvent être définies qu'au niveau externe, par conséquent elles ne peuvent pas être imbriquées. Par défaut, toutes les références aux variables externes et aux fonctions du même nom sont des références au même objet, ce qui signifie qu’elles ont une *liaison externe*. (Vous pouvez utiliser le **`static`** mot clé pour remplacer ce comportement.)
 
-Les déclarations de variables au niveau externe sont des définitions de variables (*définition de déclarations*) ou des références aux variables définies ailleurs (déclarations de*référence*).
+Les déclarations de variables au niveau externe sont des définitions de variables (*définition de déclarations*) ou des références aux variables définies ailleurs (déclarations de *référence*).
 
 Une déclaration de variable externe qui initialise aussi la variable (implicitement ou explicitement) est une déclaration de définition de la variable. Une définition au niveau externe peut prendre plusieurs formes :
 

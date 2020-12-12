@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : va_arg, va_copy, va_end, va_start'
 title: va_arg, va_copy, va_end, va_start
 ms.date: 11/04/2016
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: d35cf3aea99b7e832afb7d2a8e0aaa9d008226fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 368a08e3ceb78d09d11a9f661772c6b0abef471f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299278"
 ---
 # <a name="va_arg-va_copy-va_end-va_start"></a>va_arg, va_copy, va_end, va_start
 
@@ -91,13 +92,13 @@ Pointeur vers la liste d’arguments initialisée à copier vers *dest*.
 *prev_param*<br/>
 Paramètre qui précède le premier argument facultatif.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **va_arg** retourne l’argument actuel. **va_copy**, **va_start** et **va_end** ne retournent pas de valeurs.
 
 ## <a name="remarks"></a>Notes
 
-Les macros **va_arg**, **va_copy**, **va_end**et **va_start** offrent un moyen portable d’accéder aux arguments d’une fonction lorsque la fonction accepte un nombre variable d’arguments. Il existe deux versions de ces macros : les macros définies dans STDARG.H, qui sont conformes à la norme ISO C99, et les macros définies dans VARARGS.H qui, bien que dépréciées, sont conservées pour des besoins de compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89.
+Les macros **va_arg**, **va_copy**, **va_end** et **va_start** offrent un moyen portable d’accéder aux arguments d’une fonction lorsque la fonction accepte un nombre variable d’arguments. Il existe deux versions de ces macros : les macros définies dans STDARG.H, qui sont conformes à la norme ISO C99, et les macros définies dans VARARGS.H qui, bien que dépréciées, sont conservées pour des besoins de compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89.
 
 Ces macros considèrent que la fonction accepte un nombre fixe d’arguments obligatoires, suivi d’un nombre variable d’arguments facultatifs. Les arguments obligatoires sont déclarés à la fonction en tant que paramètres ordinaires et sont accessibles via les noms des paramètres. Les arguments facultatifs sont accessibles via les macros contenues dans STDARG.H (ou dans VARARGS.H pour le code qui a été écrit avant la norme ANSI C89). Ils définissent le pointeur désignant le premier argument facultatif de la liste d’arguments, récupère les arguments de la liste et réinitialise le pointeur dès que le traitement de l’argument est terminé.
 
@@ -156,7 +157,7 @@ Notez que **testit** s’attend à ce que le deuxième paramètre soit un **`int
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<stdio.h> les\<stdarg.h>
+**En-tête :** \<stdio.h> les \<stdarg.h>
 
 **En-tête déconseillé :**\<varargs.h>
 

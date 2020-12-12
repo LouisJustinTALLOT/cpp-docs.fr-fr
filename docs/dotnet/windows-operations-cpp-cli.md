@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérations Windows (C++/CLI)'
 title: Opérations Windows (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: 3c4ef2a69c25313ff444e0fabaea6eef2feeeee2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 95fff25cb5c921272972e343dd3a85d53f909c52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298719"
 ---
 # <a name="windows-operations-ccli"></a>Opérations Windows (C++/CLI)
 
@@ -140,7 +141,7 @@ int main( )
 }
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La <xref:Microsoft.Win32.Registry> classe est simplement un conteneur pour les instances statiques de <xref:Microsoft.Win32.RegistryKey> . Chaque instance représente un nœud de Registre racine. Les instances sont <xref:Microsoft.Win32.Registry.ClassesRoot> ,,, <xref:Microsoft.Win32.Registry.CurrentConfig> <xref:Microsoft.Win32.Registry.CurrentUser> <xref:Microsoft.Win32.Registry.LocalMachine> et <xref:Microsoft.Win32.Registry.Users> .
 
@@ -501,7 +502,7 @@ int main()
 }
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous pouvez utiliser la .NET Framework pour accéder au registre avec les <xref:Microsoft.Win32.Registry> <xref:Microsoft.Win32.RegistryKey> classes et, qui sont toutes les deux définies dans l' <xref:Microsoft.Win32> espace de noms. La classe **Registry** est un conteneur pour les instances statiques de la <xref:Microsoft.Win32.RegistryKey> classe. Chaque instance représente un nœud de Registre racine. Les instances sont <xref:Microsoft.Win32.Registry.ClassesRoot> ,,, <xref:Microsoft.Win32.Registry.CurrentConfig> <xref:Microsoft.Win32.Registry.CurrentUser> <xref:Microsoft.Win32.Registry.LocalMachine> et <xref:Microsoft.Win32.Registry.Users> .
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comparaison de caractères'
 title: Comparaison de caractères
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,30 +7,30 @@ helpviewer_keywords:
 - MBCS [C++], character comparison
 - characters [C++], comparing
 ms.assetid: 18846e44-3e6e-40c4-9b42-3153fb15db20
-ms.openlocfilehash: 075a22634f254c2ea634a1171ee157971fe5918e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e00e087074a70145f1a73694293edc3c522d69f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297003"
 ---
 # <a name="character-comparison"></a>Comparaison de caractères
 
 Utilisez les conseils suivants :
 
-- Comparaison d’un octet de tête connu avec un caractère ASCII fonctionne correctement :
+- La comparaison d’un octet de tête connu avec un caractère ASCII fonctionne correctement :
 
     ```cpp
     if( *sz1 == 'A' )
     ```
 
-- Comparaison de deux caractères inconnus nécessite l’utilisation de l’une des macros définies dans Mbstring.h :
+- La comparaison de deux caractères inconnus requiert l’utilisation de l’une des macros définies dans mbstring. h :
 
     ```cpp
     if( !_mbccmp( sz1, sz2) )
     ```
 
-   Cela garantit que les deux octets d’un caractère sur deux octets sont comparés sont égaux.
+   Cela garantit que les deux octets d’un caractère codé sur deux octets sont comparés pour déterminer leur égalité.
 
 ## <a name="see-also"></a>Voir aussi
 

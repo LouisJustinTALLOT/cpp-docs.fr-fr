@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : isalnum, iswalnum, _isalnum_l, _iswalnum_l'
 title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
 ms.date: 4/2/2020
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: e32cdd2ad13ead282840e192e572757d759110f7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fbd1b686a02938317f36d7a9ec0e61c3fc2ae73f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919815"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296379"
 ---
 # <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -65,13 +66,13 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère alphanumérique. **isalnum** retourne une valeur différente de zéro si **isalpha** ou **IsDigit** est différent de zéro pour *c*, autrement dit, si *c* est dans les plages a-Z, a-z ou 0-9. **iswalnum** retourne une valeur différente de zéro si **iswalpha** ou **iswdigit** est différent de zéro pour *c*. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
@@ -86,7 +87,7 @@ Le comportement de **isalnum** et **_isalnum_l** n’est pas défini si *c* n’
 |**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
 |**_istalnum_l**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -103,6 +104,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Classification des caractères](../../c-runtime-library/character-classification.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure InvokeModeOptions'
 title: InvokeModeOptions, structure
 ms.date: 03/22/2018
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
-ms.openlocfilehash: 9bca49479d97ee371f6728f90a9aa96da0387f54
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1e1382242c95c47355239c220c43c278280dd451
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298979"
 ---
 # <a name="invokemodeoptions-structure"></a>InvokeModeOptions, structure
 
-Spécifie s’il faut activer tous les événements dans la file d’attente du délégué, ou arrêter le déclenchement après qu’une erreur a été générée. Les valeurs autorisées sont spécifiées dans l’énumération `InvokeMode`.
+Spécifie s’il faut activer tous les événements dans la file d’attente du délégué, ou arrêter le déclenchement après qu’une erreur a été générée. Les valeurs autorisées sont spécifiées dans l' `InvokeMode` énumération.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,5 +42,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL, espace de noms](microsoft-wrl-namespace.md)<br/>
+[Microsoft :: WRL, espace de noms](microsoft-wrl-namespace.md)<br/>
 [Classe Microsoft :: WRL :: AgileEventSource](agileeventsource-class.md)

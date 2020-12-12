@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mbbtombc, _mbbtombc_l'
 title: _mbbtombc, _mbbtombc_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: b2088ea83729a74a60e75d1710529480f34cd638
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 20aa3c9abdc9d4dad1f6da50abdb9977f2b22694
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299648"
 ---
 # <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
@@ -62,17 +63,17 @@ unsigned int _mbbtombc_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère codé sur un octet à convertir.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si **_mbbtombc** convertit correctement *c*, il retourne un caractère multioctet ; Sinon, elle retourne *c*.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbbtombc** convertit un caractère multioctet codé sur un octet donné en caractère multioctet codé sur deux octets correspondant. Les caractères doivent être compris dans la plage 0x20-0x7E ou 0xA1-0xDF à convertir.
 

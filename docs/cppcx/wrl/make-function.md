@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Make, fonction'
 title: Make, fonction
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb83c6c163440f911bc625a8646d1758442b25f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298901"
 ---
 # <a name="make-function"></a>Make, fonction
 
@@ -221,7 +222,7 @@ Argument 8 qui est passé à la classe d’exécution spécifiée.
 *arg9*<br/>
 Argument 9 passé à la classe d’exécution spécifiée.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 `ComPtr<T>`Objet en cas de réussite ; sinon, **`nullptr`** .
 

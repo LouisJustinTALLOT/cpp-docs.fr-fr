@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vector (STL/CLR)'
 title: vector (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -91,12 +92,12 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: 9abecfa6e0bbdf74514e2b7162d1d22a84fa01b2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5997a70fb6b6e37fd4b1ff19c34fdc15750bbe4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298732"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -125,7 +126,7 @@ template<typename Value>
 *Valeur*<br/>
 Type d'un élément dans la séquence contrôlée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<cliext/vector>
 
@@ -201,7 +202,7 @@ Type d'un élément dans la séquence contrôlée.
 |<xref:System.Collections.Generic.IList%601>|Gérer le groupe ordonné d’éléments typés.|
 |Valeur de<IVector\>|Conserver le conteneur générique.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’objet alloue et libère du stockage pour la séquence qu’il contrôle via un tableau stocké d’éléments de *valeur* , ce qui augmente à la demande. La croissance se produit de telle sorte que le coût de l’ajout d’un nouvel élément est le temps constant amorti. En d’autres termes, le coût de l’ajout d’éléments à la fin n’augmente pas en moyenne, car la longueur de la séquence contrôlée est plus importante. Par conséquent, un vecteur est un bon candidat pour le conteneur sous-jacent pour la pile de classes de modèle [(STL/CLR)](../dotnet/stack-stl-clr.md).
 
@@ -245,13 +246,13 @@ Fin de la plage à insérer.
 *multiples*<br/>
 Valeur de l’élément à insérer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première fonction membre remplace la séquence contrôlée par une répétition des éléments *Count* de la valeur *Val*. Vous l’utilisez pour remplir le conteneur avec des éléments ayant tous la même valeur.
 
 Si `InIt` est un type entier, la deuxième fonction membre se comporte de la même façon que `assign((size_type)first, (value_type)last)` . Dans le cas contraire, elle remplace la séquence contrôlée par la séquence [ `first` , `last` ). Vous l’utilisez pour faire en sorte que la séquence contrôlée copie une autre séquence.
 
-La troisième fonction membre remplace la séquence contrôlée par la séquence désignée par le *droit*de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une séquence décrite par un énumérateur.
+La troisième fonction membre remplace la séquence contrôlée par la séquence désignée par le *droit* de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une séquence décrite par un énumérateur.
 
 ### <a name="example"></a>Exemple
 
@@ -311,7 +312,7 @@ reference at(size_type pos);
 *pos*<br/>
 Position de l'élément auquel accéder.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne une référence à l’élément de la séquence contrôlée à la position *pos*. Vous l’utilisez pour lire ou écrire un élément dont vous connaissez la position.
 
@@ -922,9 +923,9 @@ Fin de la plage à effacer.
 *where*<br/>
 Élément à effacer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle*pointe. Vous l’utilisez pour supprimer un seul élément.
+La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle* pointe. Vous l’utilisez pour supprimer un seul élément.
 
 La deuxième fonction membre supprime l’élément de la séquence contrôlée dans la plage [`first`, `last`). Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
 
@@ -1353,7 +1354,7 @@ Valeur de l’élément à insérer.
 *where*<br/>
 Où insérer dans le conteneur.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Chacune des fonctions membres insère, avant l’élément vers *lequel* pointe, dans la séquence contrôlée, une séquence spécifiée par les opérandes restants.
 
@@ -1491,7 +1492,7 @@ vector<Value>% operator=(vector<Value>% right);
 *Oui*<br/>
 Conteneur à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
@@ -1544,7 +1545,7 @@ reference operator[](size_type pos);
 *pos*<br/>
 Position de l'élément auquel accéder.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre retourne un referene à l’élément à la position *pos*. Vous l’utilisez pour accéder à un élément dont vous connaissez la position.
 
@@ -1849,7 +1850,7 @@ void reserve(size_type count);
 *count*<br/>
 Nouvelle capacité minimale du conteneur.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre garantit que `capacity()` retourne désormais au moins un *nombre*. Vous pouvez l’utiliser pour vous assurer que le conteneur n’a pas besoin de réallouer le stockage pour la séquence contrôlée tant qu’il n’a pas atteint la taille spécifiée.
 
@@ -1908,7 +1909,7 @@ Nouvelle taille de la séquence contrôlée.
 *multiples*<br/>
 Valeur de l’élément de remplissage.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les fonctions membres garantissent que [vector :: Size (STL/CLR)](#size) `()` retourne désormais *NEW_SIZE*. Si la séquence contrôlée doit être plus longue, la première fonction membre ajoute des éléments avec `value_type()` la valeur, tandis que la deuxième fonction membre ajoute des éléments avec la valeur *Val*. Pour rendre la séquence contrôlée plus concise, les deux fonctions membres effacent efficacement le dernier élément [vector :: Size (STL/CLR)](#size) `() -` `new_size` . Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée a une taille *NEW_SIZE*, en découpant ou en remplissant la séquence contrôlée actuelle.
 
@@ -2111,7 +2112,7 @@ void swap(vector<Value>% right);
 *Oui*<br/>
 Conteneur avec lequel échanger le contenu.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre échange les séquences contrôlées entre **`*this`** et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
 
@@ -2221,7 +2222,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la *valeur*de paramètre de modèle.
+Le type est un synonyme de la *valeur* de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -2288,7 +2289,7 @@ Objet ou plage à insérer.
 *multiples*<br/>
 Valeur de l’élément à insérer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le constructeur :
 
@@ -2300,7 +2301,7 @@ Le constructeur :
 
 `vector(vector<Value>% right);`
 
-Initialise la séquence contrôlée à l’aide de la séquence [ `right.begin()` , `right.end()` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit*de l’objet vectoriel.
+Initialise la séquence contrôlée à l’aide de la séquence [ `right.begin()` , `right.end()` ). Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par le *droit* de l’objet vectoriel.
 
 Le constructeur :
 
@@ -2332,7 +2333,7 @@ Le constructeur :
 
 `vector(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-Initialise la séquence contrôlée avec la séquence désignée par le *droit*de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur.
+Initialise la séquence contrôlée avec la séquence désignée par le *droit* de l’énumérateur. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur.
 
 ### <a name="example"></a>Exemple
 
@@ -2419,7 +2420,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left == right)` . Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même manière que* si les deux vecteurs sont comparés élément par élément.
 
@@ -2488,9 +2489,9 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, il retourne `left->size() < right->size()` que vous l’utilisez pour vérifier si *right* *Left* est ordonné avant le moment où les deux vecteurs sont comparés élément par élément.
+La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` elle est également true `left[i] < right[i]` . Dans le cas contraire, il retourne `left->size() < right->size()` que vous l’utilisez pour vérifier si  *Left* est ordonné avant le moment où les deux vecteurs sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2557,7 +2558,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(right < left)` . Vous l’utilisez pour tester si *Left* n’est pas ordonné après *le* moment où les deux vecteurs sont comparés élément par élément.
 
@@ -2626,7 +2627,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i` , `left[i] ==` `right[i]` . Vous l’utilisez pour tester si *Left* est *ordonné de la même façon que* lorsque les deux vecteurs sont comparés élément par élément.
 
@@ -2695,7 +2696,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `right` `<` `left` . Vous l’utilisez pour tester si *Left* est ordonné après *le* moment où les deux vecteurs sont comparés élément par élément.
 
@@ -2764,7 +2765,7 @@ Conteneur de gauche à comparer.
 *Oui*<br/>
 Conteneur de droite à comparer.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction opérateur retourne `!(left < right)` . Vous l’utilisez pour tester si *Left* n’est pas ordonné *avant le moment où* les deux vecteurs sont comparés élément par élément.
 

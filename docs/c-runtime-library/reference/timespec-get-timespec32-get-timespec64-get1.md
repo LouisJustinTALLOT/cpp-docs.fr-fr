@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : timespec_get, _timespec32_get _timespec64_get'
 title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c6fc7c84d21bdeb8394602565dfe83fe22b59cb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299525"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -75,7 +76,7 @@ Pointeur vers un struct qui a pour valeur la durée, en secondes et nanosecondes
 *base*<br/>
 Valeur propre à l’implémentation différente de zéro qui spécifie la base de temps.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de *base* en cas de réussite ; sinon, elle retourne zéro.
 
@@ -95,7 +96,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get** **_timespec64_get**|C : \<time.h> , C++ : \<ctime> ou\<time.h>|
+|**timespec_get**, **_timespec32_get** **_timespec64_get**|C : \<time.h> , C++ : \<ctime> ou \<time.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

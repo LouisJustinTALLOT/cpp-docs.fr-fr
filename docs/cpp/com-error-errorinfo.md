@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _com_error :: ErrorInfo'
 title: _com_error::ErrorInfo
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorInfo method [C++]
 ms.assetid: 071b446c-4395-4fb8-bd3d-300a8b25f5cd
-ms.openlocfilehash: cedb9ccadc63166c43d980333d93a195254700d8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36092ae9287352d421bf502ad24c054cf3b7a907
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296041"
 ---
 # <a name="_com_errorerrorinfo"></a>_com_error::ErrorInfo
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Récupère le `IErrorInfo` objet passé au constructeur.
+Récupère l' `IErrorInfo` objet passé au constructeur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,10 +32,10 @@ L'élément `IErrorInfo` brut est transmis dans le constructeur.
 
 ## <a name="remarks"></a>Notes
 
-Récupère l’élément de `IErrorInfo` encapsulé dans un objet `_com_error`, ou NULL si aucun élément `IErrorInfo` n’est enregistré. L’appelant doit appeler `Release` sur l’objet retourné une fois qu’il a fini de l’utiliser.
+Récupère l' `IErrorInfo` élément encapsulé dans un `_com_error` objet, ou null si aucun `IErrorInfo` élément n’est enregistré. `Release`Lorsque vous avez fini de l’utiliser, l’appelant doit appeler sur l’objet retourné.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[_com_error, classe](../cpp/com-error-class.md)
+[Classe _com_error](../cpp/com-error-class.md)

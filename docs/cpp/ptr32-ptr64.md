@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __ptr32, __ptr64'
 title: __ptr32, __ptr64
 ms.date: 10/09/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 5ff2fa22c8a466252cfaf8b80dc8d56774aff58e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3393cdfddf08ba2ae5366cacae8554faa7c4a50c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299031"
 ---
 # <a name="__ptr32-__ptr64"></a>__ptr32, __ptr64
 

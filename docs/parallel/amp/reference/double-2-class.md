@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe double_2'
 title: double_2, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 73656415d1b8774fe8304d674872524e76ee301d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 104fef0c035487570a23360c312684ef176f69ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126706"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297126"
 ---
 # <a name="double_2-class"></a>double_2, classe
 
@@ -49,64 +50,64 @@ class double_2;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Constructeur double_2](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|double_2::get_x||
-|double_2::get_xy||
-|double_2::get_y||
-|double_2::get_yx||
-|double_2::ref_g||
-|double_2::ref_r||
-|double_2::ref_x||
-|double_2::ref_y||
-|double_2::set_x||
-|double_2::set_xy||
-|double_2::set_y||
-|double_2::set_yx||
+|double_2 :: get_x||
+|double_2 :: get_xy||
+|double_2 :: get_y||
+|double_2 :: get_yx||
+|double_2 :: ref_g||
+|double_2 :: ref_r||
+|double_2 :: ref_x||
+|double_2 :: ref_y||
+|double_2 :: set_x||
+|double_2 :: set_xy||
+|double_2 :: set_y||
+|double_2 :: set_yx||
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|double_2::operator-||
-|double_2::operator--||
-|double_2::operator*=||
-|double_2::operator/=||
-|double_2::operator++||
-|double_2::operator+=||
-|double_2::operator=||
-|double_2::operator-=||
+|double_2 :: Operator-||
+|double_2 :: Operator--||
+|double_2 :: Operator * =||
+|double_2 :: Operator/=||
+|double_2 :: Operator + +||
+|double_2 :: Operator + =||
+|double_2 :: Operator =||
+|double_2 :: Operator-=||
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |double_2::size, constante||
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|double_2::g||
-|double_2::gr||
-|double_2::r||
-|double_2::rg||
-|double_2::x||
-|double_2::xy||
-|double_2::y||
-|double_2::yx||
+|double_2 :: g||
+|double_2 :: gr||
+|double_2 :: r||
+|double_2 :: RG||
+|double_2 :: x||
+|double_2 :: XY||
+|double_2 :: y||
+|double_2 :: YX||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -118,7 +119,7 @@ class double_2;
 
 **Espace de noms :** Concurrency :: Graphics
 
-## <a name="ctor"></a>double_2
+## <a name="double_2"></a><a name="ctor"></a> double_2
 
 Le constructeur par défaut initialise tous les éléments avec 0.
 
@@ -174,7 +175,7 @@ Valeur d’initialisation.
 *_Other*<br/>
 Objet utilisé pour initialiser.
 
-## <a name="double_2__size"></a>corps
+## <a name="size"></a><a name="double_2__size"></a> corps
 
 ```cpp
 static const int size = 2;

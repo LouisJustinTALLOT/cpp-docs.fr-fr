@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _matherr'
 title: _matherr
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 340e3b8562e1f0f564810bc63cf6bd2e87ffdf63
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 406f9fe43ed64b24637f94cc5bf1ef01d4c94567
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299629"
 ---
 # <a name="_matherr"></a>_matherr
 
@@ -44,22 +45,22 @@ int _matherr( struct _exception * except );
 
 ### <a name="parameters"></a>Paramètres
 
-*except*<br/>
+*mais*<br/>
 Pointeur vers la structure contenant des informations sur l’erreur.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-_ **matherr** retourne 0 pour indiquer une erreur, ou une valeur différente de zéro pour indiquer la réussite. Si _ **matherr** retourne 0, un message d’erreur peut s’afficher et **errno** est défini sur une valeur d’erreur appropriée. Si _ **matherr** retourne une valeur différente de zéro, aucun message d’erreur n’est affiché et **errno** reste inchangé.
+**_matherr** retourne 0 pour indiquer une erreur, ou une valeur différente de zéro pour indiquer la réussite. Si **_matherr** retourne 0, un message d’erreur peut s’afficher et **errno** est défini sur une valeur d’erreur appropriée. Si **_matherr** retourne une valeur différente de zéro, aucun message d’erreur n’est affiché et **errno** reste inchangé.
 
 Pour plus d’informations sur ces codes de retour, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction _ **matherr** traite les erreurs générées par les fonctions à virgule flottante de la bibliothèque mathématique. Ces fonctions appellent _ **matherr** quand une erreur est détectée.
+La fonction **_matherr** traite les erreurs générées par les fonctions à virgule flottante de la bibliothèque mathématique. Ces fonctions appellent **_matherr** lorsqu’une erreur est détectée.
 
-Pour une gestion des erreurs spéciale, vous pouvez fournir une définition différente de _ **matherr**. Si vous utilisez la version liée dynamiquement de la bibliothèque Runtime C (CRT), vous pouvez remplacer la routine _ **matherr** par défaut dans un exécutable client par une version définie par l’utilisateur. Toutefois, vous ne pouvez pas remplacer la routine _ **matherr** par défaut dans un client dll de la dll CRT.
+Pour une gestion des erreurs spéciale, vous pouvez fournir une définition différente de **_matherr**. Si vous utilisez la version liée dynamiquement de la bibliothèque Runtime C (CRT), vous pouvez remplacer la routine **_matherr** par défaut dans un exécutable client par une version définie par l’utilisateur. Toutefois, vous ne pouvez pas remplacer la routine **_matherr** par défaut dans un client dll de la dll CRT.
 
-Lorsqu’une erreur se produit dans une routine mathématique, _ **matherr** est appelé avec un pointeur vers une structure de \<type _Exception (définie dans Math. h >) en tant qu’argument. La structure **_exception** contient les éléments suivants.
+Lorsqu’une erreur se produit dans une routine mathématique, **_matherr** est appelée avec un pointeur vers une structure de type **_Exception** (définie dans \<math.h> ) en tant qu’argument. La structure **_exception** contient les éléments suivants.
 
 ```C
 struct _exception
@@ -72,7 +73,7 @@ struct _exception
 };
 ```
 
-Le membre de **type** spécifie le type d’erreur mathématique. Il s’agit de l’une des valeurs suivantes, \<définies dans Math. h >:
+Le membre de **type** spécifie le type d’erreur mathématique. Il s’agit de l’une des valeurs suivantes, définie dans \<math.h> :
 
 |Macro|Signification|
 |-|-|
@@ -87,13 +88,13 @@ Le membre de structure **name** est un pointeur désignant une chaîne terminée
 
 La valeur de retour par défaut pour l’erreur donnée est **retval**. Si vous modifiez la valeur de retour, elle doit spécifier si une erreur s’est effectivement produite.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_matherr**|\<math.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

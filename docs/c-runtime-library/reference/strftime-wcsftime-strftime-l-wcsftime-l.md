@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strftime, wcsftime, _strftime_l, _wcsftime_l'
 title: strftime, wcsftime, _strftime_l, _wcsftime_l
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f6297af6ad7c0f6f9a0280cc47ea7a0caa6440af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299564"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -111,9 +112,9 @@ Le nombre de caractères dans *strDest* est égal au nombre de caractères litt�
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **strftime** et **wcsftime** mettent en forme la valeur de temps **TM** dans *timeptr* en fonction de l’argument de *format* fourni et stockent le résultat dans le *strDest*de mémoire tampon. Au maximum, les caractères *MaxSize* sont placés dans la chaîne. Pour obtenir une description des champs de la structure *timeptr* , consultez [asctime](asctime-wasctime.md). **wcsftime** est l’équivalent à caractères larges de **strftime**; son argument de pointeur de chaîne pointe vers une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
+Les fonctions **strftime** et **wcsftime** mettent en forme la valeur de temps **TM** dans *timeptr* en fonction de l’argument de *format* fourni et stockent le résultat dans le *strDest* de mémoire tampon. Au maximum, les caractères *MaxSize* sont placés dans la chaîne. Pour obtenir une description des champs de la structure *timeptr* , consultez [asctime](asctime-wasctime.md). **wcsftime** est l’équivalent à caractères larges de **strftime**; son argument de pointeur de chaîne pointe vers une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 
-Cette fonction valide ses paramètres. Si *strDest*, *format*ou *timeptr* est un pointeur null, ou si la structure de données **TM** adressée par *timeptr* n’est pas valide (par exemple, si elle contient des valeurs hors limites pour la date ou l’heure), ou si la chaîne de *format* contient un code de mise en forme non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne 0 et définit **errno** sur **EINVAL**.
+Cette fonction valide ses paramètres. Si *strDest*, *format* ou *timeptr* est un pointeur null, ou si la structure de données **TM** adressée par *timeptr* n’est pas valide (par exemple, si elle contient des valeurs hors limites pour la date ou l’heure), ou si la chaîne de *format* contient un code de mise en forme non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne 0 et définit **errno** sur **EINVAL**.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -174,14 +175,14 @@ Comme dans la fonction **printf** , l' **#** indicateur peut préfixer tout code
 |**% #a**, **% #A**, **% #b**, **% #B**, **% #g**, **% #G**, **%**#h, **% #n**, **% #p**, **%**#t, **% #u**, **% #w**, **% #X**, **%**#z, **% #Z**, **%#%**|**#** l’indicateur est ignoré.|
 |**% #c**|Représentation de la date et de l’heure longues, adaptée aux paramètres régionaux. Par exemple : « Mardi 14 mars 1995, 12:41:29 ».|
 |**% #x**|Représentation de date longue, adaptée aux paramètres régionaux. Par exemple : « Mardi 14 mars 1995 ».|
-|**% #d**, **% #D**, **% #e**, **% #F**, **% #H**, **% #I**, **% #j**, **% #m**, **% #M**, **%**#r, **% #R**, **%**#S, **%#T**% #T, **%**#U, **% #V**,% **#W**, **%**#y, **%** #Y|Supprimer les zéros ou les espaces non significatifs (le cas échéant).|
+|**% #d**, **% #D**, **% #e**, **% #F**, **% #H**, **% #I**, **% #j**, **% #m**, **% #M**, **%**#r, **% #R**, **%**#S, % #T, **%**#U, **% #V**,% **#W**, **%**#y, **%** #Y|Supprimer les zéros ou les espaces non significatifs (le cas échéant).|
 
-L’année ISO 8601 semaine et semaine générée par **% V**, **% g**et **% g**, utilise une semaine qui commence le lundi, où semaine 1 est la semaine qui contient le 4 janvier, soit la première semaine qui inclut au moins quatre jours de l’année. Si le premier lundi de l’année est le 2e, troisième ou quatrième, les jours précédents font partie de la dernière semaine de l’année précédente. Pour ces jours-ci, **% V** est remplacé par 53, et **% g** et **% g** sont remplacés par les chiffres de l’année précédente.
+L’année ISO 8601 semaine et semaine générée par **% V**, **% g** et **% g**, utilise une semaine qui commence le lundi, où semaine 1 est la semaine qui contient le 4 janvier, soit la première semaine qui inclut au moins quatre jours de l’année. Si le premier lundi de l’année est le 2e, troisième ou quatrième, les jours précédents font partie de la dernière semaine de l’année précédente. Pour ces jours-ci, **% V** est remplacé par 53, et **% g** et **% g** sont remplacés par les chiffres de l’année précédente.
 
 > [!NOTE]
 > Lors de l’utilisation de l’une des `strftime` fonctions avec un `tm` pointeur retourné par `gmtime` , les valeurs imprimées via les `%Z` spécificateurs et ne sont `%z` pas exactes. Cela est dû au fait que le `tm` struct tel que spécifié par la norme C ne contient pas les informations relatives au nom et au décalage du fuseau horaire. Au lieu de cela, les informations de fuseau horaire sont renseignées via les variables globales [ `_timezone` et `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

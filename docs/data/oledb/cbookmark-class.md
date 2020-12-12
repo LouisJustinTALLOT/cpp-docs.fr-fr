@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CBookmark, classe'
 title: CBookmark, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 4013e40c364593676ebb099804304ffb2adb42c1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7c138776e282c287eb7e7e09b93196ac0792f7ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295066"
 ---
 # <a name="cbookmark-class"></a>CBookmark, classe
 
@@ -92,7 +93,7 @@ class CBookmark< 0 > : public CBookmarkBase
 *nSize*<br/>
 Taille de la mémoire tampon du signet, en octets. Lorsque *nSize* est égal à zéro, la mémoire tampon du signet est créée dynamiquement au moment de l’exécution.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -135,7 +136,7 @@ dans Taille de la mémoire tampon du signet, en octets.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction affecte la valeur NULL à la mémoire tampon et la taille de la mémoire tampon à 0. La deuxième fonction définit la taille de la mémoire tampon sur *nSize*et la mémoire tampon sur un tableau d’octets *nSize* octets.
+La première fonction affecte la valeur NULL à la mémoire tampon et la taille de la mémoire tampon à 0. La deuxième fonction définit la taille de la mémoire tampon sur *nSize* et la mémoire tampon sur un tableau d’octets *nSize* octets.
 
 > [!NOTE]
 > Cette fonction est uniquement disponible dans `CBookmark<0>` .

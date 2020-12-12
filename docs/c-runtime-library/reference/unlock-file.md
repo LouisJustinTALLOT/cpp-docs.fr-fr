@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _unlock_file'
 title: _unlock_file
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: ed79f66baebf71c89e537c8343779bef44ebfbb8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6b639ca178f9cb397e9ec14f383b952e94400e7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299356"
 ---
 # <a name="_unlock_file"></a>_unlock_file
 
@@ -51,10 +52,10 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Paramètres
 
-*txt*<br/>
+*file*<br/>
 Descripteur de fichier.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_unlock_file** déverrouille le fichier spécifié par le *fichier*. Le déverrouillage d’un fichier autorise d’autres processus à y accéder. Cette fonction ne doit pas être appelée, sauf si **_lock_file** a été appelée précédemment sur le pointeur de *fichier* . L’appel de **_unlock_file** sur un fichier qui n’est pas verrouillé peut entraîner un blocage. Pour obtenir un exemple, consultez [_lock_file](lock-file.md).
 

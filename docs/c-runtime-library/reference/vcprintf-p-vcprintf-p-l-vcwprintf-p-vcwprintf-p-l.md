@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l'
 title: _vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -44,19 +45,19 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: a0cfcd5ff6c99ae521d1521c9467288daaf05913
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3fb9cf8ca2bb561da6d859a1bbeff487b6b2e801
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299252"
 ---
 # <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
 Écrit la sortie mise en forme dans la console en utilisant un pointeur désignant une liste d’arguments et prend en charge les paramètres de position dans la chaîne de format.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -94,13 +95,13 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations, consultez [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Nombre de caractères écrits ou valeur négative en cas d'erreur de sortie. Si *format* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et-1 est retourné.
 
 ## <a name="remarks"></a>Notes
 
-Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis utilise la fonction **_putch** pour mettre en forme et écrire les données fournies dans la console. ( **_vcwprintf_p** utilise **_putwch** au lieu de **_putch**. **_vcwprintf_p** est la version à caractères larges de **_vcprintf_p**. Elle prend une chaîne de caractères larges comme argument.)
+Chacune de ces fonctions prend un pointeur désignant une liste d’arguments, puis utilise la fonction **_putch** pour mettre en forme et écrire les données fournies dans la console. (**_vcwprintf_p** utilise **_putwch** au lieu de **_putch**. **_vcwprintf_p** est la version à caractères larges de **_vcprintf_p**. Elle prend une chaîne de caractères larges comme argument.)
 
 Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels.
 
@@ -120,16 +121,16 @@ Ces fonctions valident le pointeur d'entrée et la chaîne de format. Si le *for
 |**_vtcprintf_p**|**_vcprintf_p**|**_vcprintf_p**|**_vcwprintf_p**|
 |**_vtcprintf_p_l**|**_vcprintf_p_l**|**_vcprintf_p_l**|**_vcwprintf_p_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_vcprintf_p**, **_vcprintf_p_l**|\<conio.h> et \<stdarg.h>|
 |**_vcwprintf_p**, **_vcwprintf_p_l**|\<conio.h> et \<stdarg.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_vcprintf_p.c
@@ -162,7 +163,7 @@ parameter 2 = 222; parameter 1 = one
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
 [Paramètres positionnels printf_p](../../c-runtime-library/printf-p-positional-parameters.md)<br/>

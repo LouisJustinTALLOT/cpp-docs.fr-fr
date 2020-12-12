@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Record Field Exchange : utilisation des fonctions RFX'
 title: 'Record Field Exchange : utilisation des fonctions RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: 4d621fbe2207114dd51845b819d309802a009690
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b597a6ca8ae43922b6bba57b63ea2fc93fb82d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298758"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Record Field Exchange : utilisation des fonctions RFX
 
@@ -26,7 +27,7 @@ Cette rubrique explique comment utiliser les appels de fonction RFX qui composen
 
 Les fonctions globales RFX échangent des données entre les colonnes de la source de données et les données membres de champ dans votre Recordset. Vous écrivez les appels de fonction RFX dans la fonction membre [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) de votre Recordset. Cette rubrique décrit brièvement les fonctions et indique les types de données pour lesquels les fonctions RFX sont disponibles. La [note technique 43](../../mfc/tn043-rfx-routines.md) décrit comment écrire vos propres fonctions RFX pour des types de données supplémentaires.
 
-## <a name="rfx-function-syntax"></a><a name="_core_rfx_function_syntax"></a>Syntaxe des fonctions RFX
+## <a name="rfx-function-syntax"></a><a name="_core_rfx_function_syntax"></a> Syntaxe des fonctions RFX
 
 Chaque fonction RFX prend trois paramètres (et certains prennent un quatrième ou cinquième paramètre facultatif) :
 
@@ -42,14 +43,14 @@ Chaque fonction RFX prend trois paramètres (et certains prennent un quatrième 
 
 Pour plus d’informations, consultez les fonctions RFX sous [macros et globales](../../mfc/reference/mfc-macros-and-globals.md) dans la référence de la *bibliothèque de classes*. Pour obtenir un exemple d’utilisation particulière des paramètres, consultez [Recordset : obtention de sommes et d’autres résultats d’agrégation (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).
 
-## <a name="rfx-data-types"></a><a name="_core_rfx_data_types"></a>Types de données RFX
+## <a name="rfx-data-types"></a><a name="_core_rfx_data_types"></a> Types de données RFX
 
 La bibliothèque de classes fournit des fonctions RFX pour transférer de nombreux types de données différents entre la source de données et vos recordsets. La liste suivante récapitule les fonctions RFX par type de données. Dans les cas où vous devez écrire vos propres appels de fonction RFX, sélectionnez à partir de ces fonctions par type de données.
 
 |Fonction|Type de données|
 |--------------|---------------|
 |`RFX_Bool`|**Boolean**|
-|`RFX_Byte`|**POIDS**|
+|`RFX_Byte`|**BYTE**|
 |`RFX_Binary`|`CByteArray`|
 |`RFX_Double`|**`double`**|
 |`RFX_Single`|**`float`**|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : optimisation'
 title: 'Contrôles ActiveX MFC : optimisation'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: b4e12889ca1bb5f4bb423a1f1ede1c396f8d60b5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: db7fc1f1bdcdc3a3ffbf3b14d1809806389f0862
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294104"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Contrôles ActiveX MFC : optimisation
 
@@ -40,28 +41,28 @@ Vous pouvez implémenter un grand nombre de ces optimisations par le biais de l'
 
 |Paramètre de contrôle dans l’Assistant contrôle ActiveX MFC|Action|Informations complémentaires|
 |-------------------------------------------------------|------------|----------------------|
-|Case à cocher **activer quand** elle est visible|Désactiver|[Désactivation de l’option Activer quand elle est visible](turning-off-the-activate-when-visible-option.md)|
-|Case à cocher **activation sans fenêtre**|Sélectionnez|[Mise à disposition de l'activation sans fenêtre](providing-windowless-activation.md)|
-|Case à cocher du **contexte de périphérique non découpé**|Sélectionnez|[Utilisation d’un contexte d’appareil non découpé](using-an-unclipped-device-context.md)|
-|Case à cocher **activation sans scintillement**|Sélectionnez|[Mise à disposition de l’activation sans scintillement](providing-flicker-free-activation.md)|
-|Case à cocher **des notifications de pointeur de souris en cas d’inactivité**|Sélectionnez|[Prise en charge de l’interaction souris pendant l’inactivité](providing-mouse-interaction-while-inactive.md)|
+|Case à cocher **activer quand** elle est visible|Effacer|[Désactivation de l’option Activer quand elle est visible](turning-off-the-activate-when-visible-option.md)|
+|Case à cocher **activation sans fenêtre**|Sélectionnez|[Mise en place d’une activation sans fenêtre](providing-windowless-activation.md)|
+|Case à cocher du **contexte de périphérique non découpé**|Sélectionnez|[Utilisation d’un contexte de périphérique non découpé](using-an-unclipped-device-context.md)|
+|Case à cocher **activation sans scintillement**|Sélectionnez|[Activation de l' Flicker-Free](providing-flicker-free-activation.md)|
+|Case à cocher **des notifications de pointeur de souris en cas d’inactivité**|Sélectionnez|[Activation de l’interaction souris pendant l’inactivité](providing-mouse-interaction-while-inactive.md)|
 |Case à cocher **Code de dessin optimisé**|Sélectionnez|[Optimisation du dessin de contrôle](optimizing-control-drawing.md)|
 
 Pour plus d’informations sur les fonctions membres qui implémentent ces optimisations, consultez [COleControl](reference/colecontrol-class.md).
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Optimisation de la persistance et de l’initialisation](optimizing-persistence-and-initialization.md)
 
-- [Mise à disposition de l'activation sans fenêtre](providing-windowless-activation.md)
+- [Mise en place d’une activation sans fenêtre](providing-windowless-activation.md)
 
 - [Désactivation de l’option Activer quand elle est visible](turning-off-the-activate-when-visible-option.md)
 
-- [Prise en charge de l’interaction souris pendant l’inactivité](providing-mouse-interaction-while-inactive.md)
+- [Activation de l’interaction souris pendant l’inactivité](providing-mouse-interaction-while-inactive.md)
 
-- [Mise à disposition de l’activation sans scintillement](providing-flicker-free-activation.md)
+- [Activation de l' Flicker-Free](providing-flicker-free-activation.md)
 
-- [Utilisation d’un contexte d’appareil non découpé](using-an-unclipped-device-context.md)
+- [Utilisation d’un contexte de périphérique non découpé](using-an-unclipped-device-context.md)
 
 - [Optimisation du dessin de contrôle](optimizing-control-drawing.md)
 

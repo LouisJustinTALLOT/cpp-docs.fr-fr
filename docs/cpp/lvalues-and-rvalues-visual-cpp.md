@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : lvalues et rvalues (C++)'
 title: 'Catégories de valeurs : lvalues et rvalues (C++)'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: b4b3ba5fdbc11ec97870b0f06fd1aabd3b57f5ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b92ddc3aad62f1eaf7af6a6bc113c1a0fdd70769
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299239"
 ---
 # <a name="lvalues-and-rvalues-c"></a>Lvalues et Rvalues (C++)
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2286'
 title: Erreur du compilateur C2286
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2286
 ms.assetid: 078e0201-35cc-42e2-8dbc-6f8cf557b098
-ms.openlocfilehash: 79697a17d322ae15a21e522efa7dfd5c2342f7a6
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 89c8b69c42188d448fad0cd08287773d7a713d08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298459"
 ---
 # <a name="compiler-error-c2286"></a>Erreur du compilateur C2286
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mbccpy, _mbccpy_l'
 title: _mbccpy, _mbccpy_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: a265a37ba4c16dd15e6b50035dcc65bc8afbe7c7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a5d63a2d4ccd623d035fdc423774d6a344d107f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919577"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299590"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy, _mbccpy_l
 
@@ -79,7 +80,7 @@ Caractère multioctet à copier.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbccpy** copie un caractère multioctet de *src* vers *dest*.
 
@@ -110,5 +111,5 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 ## <a name="see-also"></a>Voir aussi
 
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

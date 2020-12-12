@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mbbtype, _mbbtype_l'
 title: _mbbtype, _mbbtype_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-ms.openlocfilehash: dca59f2d31cc5ad843a48e9825ef6a617d46ae4a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6a646682144acb346827eaa78382915f026fa455
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299603"
 ---
 # <a name="_mbbtype-_mbbtype_l"></a>_mbbtype, _mbbtype_l
 
@@ -64,7 +65,7 @@ int _mbbtype_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère à tester.
 
 *type*<br/>
@@ -73,11 +74,11 @@ Type d'octet à tester.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_mbbtype** retourne le type d’octet dans une chaîne. Cette décision est contextuelle, comme spécifié par la valeur de *type*, qui fournit la condition de test de contrôle. *type* est le type de l’octet précédent dans la chaîne. Les constantes manifestes présentes dans le tableau suivant sont définies dans Mbctype.h.
 
-|Valeur de *type*|tests de **_mbbtype** pour|Valeur retournée|*secteur*|
+|Valeur de *type*|tests de **_mbbtype** pour|Valeur retournée|*c*|
 |---------------------|--------------------------|------------------|---------|
 |Toute valeur sauf 1|Octet unique ou octet de tête valide|**_MBC_SINGLE** (0)|Octet unique (0x20-0x7E, 0xA1-0xDF)|
 |Toute valeur sauf 1|Octet unique ou octet de tête valide|**_MBC_LEAD** (1)|Octet de tête d’un caractère multioctet (0x81-0x9F, 0xE0-0xFC)|
@@ -85,7 +86,7 @@ Paramètres régionaux à utiliser.
 |1|Octet de fin valide|**_MBC_TRAIL** (2)|Octet de fin d’un caractère multioctet (0x40-0x7E, 0x80-0xFC)|
 |1|Octet de fin valide|**_MBC_ILLEGAL**<br /><br /> (-1)|Caractère non valide (n’importe quelle valeur, à l’exception de 0x20-0x7E, 0xA1-0xDF, 0x81-0x9F, 0xE0-0xFC|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbbtype** détermine le type d’un octet dans un caractère multioctet. Si la valeur de *type* est toute valeur sauf 1, **_mbbtype** teste un octet codé sur un octet ou un octet de tête valide d’un caractère multioctet. Si la valeur de *type* est 1, **_mbbtype** teste un octet de fin valide d’un caractère multioctet.
 

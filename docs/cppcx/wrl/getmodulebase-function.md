@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : fonction Getmodulebase,'
 title: GetModuleBase, fonction
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-ms.openlocfilehash: 0d130fffa9fad9ae327d03eaa01d84742094cc67
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cdedaf905da194400209840b6bd84fa8e626eb0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295196"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase, fonction
 
@@ -22,7 +23,7 @@ Récupère un pointeur [ModuleBase](modulebase-class.md) qui autorise l’incré
 inline Details::ModuleBase* GetModuleBase() throw()
 ```
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
 Pointeur vers un objet `ModuleBase`.
 
@@ -40,4 +41,4 @@ Vous pouvez utiliser cette fonction pour contrôler le nombre de références en
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL, espace de noms](microsoft-wrl-namespace.md)
+[Microsoft :: WRL, espace de noms](microsoft-wrl-namespace.md)

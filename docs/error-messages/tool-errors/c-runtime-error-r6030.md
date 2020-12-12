@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur Runtime C exécution c r6030'
 title: Erreur Runtime C R6030
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6030
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
-ms.openlocfilehash: 5d7160623d4e1eb83240c09e637c780fefc0d43d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e3c945df043f8702d75db56c28b50b8b00f4df8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297211"
 ---
 # <a name="c-runtime-error-r6030"></a>Erreur Runtime C R6030
 
@@ -29,6 +30,6 @@ CRT non initialisé
 
 **Informations pour les programmeurs**
 
-Cette erreur se produit si vous utilisez le runtime C (CRT), mais que le code de démarrage du CRT n’a pas été exécuté. Il est possible d’obtenir cette erreur si le commutateur de l’éditeur de liens [/entry](../../build/reference/entry-entry-point-symbol.md) est utilisé pour remplacer l’adresse de départ par défaut, généralement **mainCRTStartup**, **wmainCRTStartup** pour un exe de console, **WinMainCRTStartup** ou **wWinMainCRTStartup** pour un exe Windows, ou **_DllMainCRTStartup** pour une dll. À moins que l’une des fonctions ci-dessus ne soit appelée au démarrage, le runtime C ne sera pas initialisé. Ces fonctions de démarrage sont généralement appelées par défaut lorsque vous liez à la bibliothèque Runtime C et utilisent les points d’entrée **principaux**, **wmain**, **WinMain**ou **DllMain** normaux.
+Cette erreur se produit si vous utilisez le runtime C (CRT), mais que le code de démarrage du CRT n’a pas été exécuté. Il est possible d’obtenir cette erreur si le commutateur de l’éditeur de liens [/entry](../../build/reference/entry-entry-point-symbol.md) est utilisé pour remplacer l’adresse de départ par défaut, généralement **mainCRTStartup**, **wmainCRTStartup** pour un exe de console, **WinMainCRTStartup** ou **wWinMainCRTStartup** pour un exe Windows, ou **_DllMainCRTStartup** pour une dll. À moins que l’une des fonctions ci-dessus ne soit appelée au démarrage, le runtime C ne sera pas initialisé. Ces fonctions de démarrage sont généralement appelées par défaut lorsque vous liez à la bibliothèque Runtime C et utilisent les points d’entrée **principaux**, **wmain**, **WinMain** ou **DllMain** normaux.
 
-Vous pouvez également recevoir cette erreur lorsqu’un autre programme utilise des techniques d’injection de code pour intercepter certains appels de bibliothèque DLL. Certains programmes de sécurité intrusifs utilisent cette technique. Dans les versions de C++ Visual antérieures à visual studio 2015, il est possible d’utiliser une bibliothèque CRT liée de manière statique pour résoudre le problème, mais cela n’est pas recommandé pour des raisons de sécurité et de mise à jour d’application. La correction de ce problème peut nécessiter l’intervention de l’utilisateur final.
+Vous pouvez également recevoir cette erreur lorsqu’un autre programme utilise des techniques d’injection de code pour intercepter certains appels de bibliothèque DLL. Certains programmes de sécurité intrusifs utilisent cette technique. Dans les versions de Visual C++ antérieures à Visual Studio 2015, il est possible d’utiliser une bibliothèque CRT liée de manière statique pour résoudre le problème, mais cela n’est pas recommandé pour des raisons de sécurité et de mise à jour d’application. La correction de ce problème peut nécessiter l’intervention de l’utilisateur final.

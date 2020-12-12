@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : tmpfile'
 title: tmpfile
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-ms.openlocfilehash: f58c23050fe89f84f283c3784a7c0cee72637bf2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27760a7d1369a0292c6719667b8cb182ce7df815
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299512"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -55,13 +56,13 @@ Si le fichier ne peut pas être ouvert, **tmpfile** retourne un pointeur **null*
 
 Une défaillance peut se produire si vous tentez plus de TMP_MAX (voir STDIO. H) appels avec **tmpfile**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**tmpfile**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

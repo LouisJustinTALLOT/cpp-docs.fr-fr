@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les définitions de fonction C
 title: Définitions de fonction C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: a26f95f8fef2b52dac36dd5d33f826c73fd84eee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9e664224608a741897bf8ae6208a0d9011cdb3c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228009"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296925"
 ---
 # <a name="c-function-definitions"></a>Définitions de fonction C
 
@@ -29,7 +30,7 @@ Une définition de fonction spécifie le nom de la fonction, les types et le nom
 &nbsp;&nbsp;&nbsp;&nbsp;*External-DECLARATION* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
-*External-DECLARATION*:/ \* autorisé uniquement au niveau de l’étendue externe (fichier)\*/<br/>
+*External-DECLARATION*:/ \* autorisé uniquement au niveau de l’étendue externe (fichier) \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*définition de fonction*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*déclaré*
 
@@ -52,13 +53,13 @@ Les paramètres de prototype sont les suivants :
 *déclarateur*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>OPT</sub> *direct-declarator*
 
-*direct-declarator*:/ \* un déclarateur de fonction\*/<br/>
+*direct-declarator*:/ \* un déclarateur de fonction \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***Parameter-type-list***)**  / \* New-style declarator      \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***identifier-List*<sub>OPT</sub> **)**  / \* -déclarateur de style obsolète    \*/
 
 La liste des paramètres dans une définition utilise la syntaxe suivante :
 
-*Parameter-type-list*:/ \* la liste de paramètres\*/<br/>
+*Parameter-type-list*:/ \* la liste de paramètres \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*liste de paramètres* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*liste de paramètres* **,...**
 
@@ -72,7 +73,7 @@ La liste des paramètres dans une définition utilise la syntaxe suivante :
 
 La liste des paramètres dans une définition de fonction de style ancien utilise la syntaxe suivante :
 
-*identifier-List*:/ \* utilisé dans les définitions et les déclarations de fonction obsolètes\*/<br/>
+*identifier-List*:/ \* utilisé dans les définitions et les déclarations de fonction obsolètes \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identificateur*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identificateur-liste* **,**  *identificateur*
 
