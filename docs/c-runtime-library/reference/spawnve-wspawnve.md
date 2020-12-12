@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _spawnve, _wspawnve'
 title: _spawnve, _wspawnve
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: dc6a6195987c1d5b323a86671de09dc28df84665
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 911124f7d3469cfc807b85af90c8389476283f34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323496"
 ---
 # <a name="_spawnve-_wspawnve"></a>_spawnve, _wspawnve
 
@@ -99,11 +100,11 @@ Pour plus d’informations sur ces codes de retour et les autres, consultez [_do
 
 Chacune de ces fonctions crée et exécute un nouveau processus, passant un tableau de pointeurs vers des arguments de ligne de commande et un tableau de pointeurs vers des paramètres d’environnement.
 
-Ces fonctions valident leurs paramètres. Si *CmdName* ou *argv* est un pointeur null, si *argv* pointe vers un pointeur null ou si *argv*[0] est une chaîne vide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL**et retournent-1. Aucun nouveau processus généré.
+Ces fonctions valident leurs paramètres. Si *CmdName* ou *argv* est un pointeur null, si *argv* pointe vers un pointeur null ou si *argv*[0] est une chaîne vide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1. Aucun nouveau processus généré.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

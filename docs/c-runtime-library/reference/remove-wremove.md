@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : supprimer, _wremove'
 title: remove, _wremove
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c17215803e03e1e59df86b6049249a824d5615c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322509"
 ---
 # <a name="remove-_wremove"></a>remove, _wremove
 
@@ -63,13 +64,13 @@ int _wremove(
 *path*<br/>
 Chemin du fichier à supprimer.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne 0 si le fichier est bien supprimé. Sinon, elle retourne-1 et définit **errno** sur **EACCES** pour indiquer que le chemin d’accès spécifie un fichier en lecture seule, spécifie un répertoire ou que le fichier est ouvert, ou **ENOENT** pour indiquer que le nom de fichier ou le chemin d’accès est introuvable.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **remove** supprime le fichier spécifié par *path.* **_wremove** est une version à caractères larges de **_remove**; l’argument *path* de **_wremove** est une chaîne de caractères larges. dans le cas contraire, **_wremove** et **_remove** se comportent de la même façon. Tous les descripteurs d’un fichier doivent être fermés avant de pouvoir être supprimés.
 
@@ -79,13 +80,13 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tremove**|**retirer**|**retirer**|**_wremove**|
+|**_tremove**|**remove**|**remove**|**_wremove**|
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**retirer**|\<stdio.h> ou \<io.h>|
+|**remove**|\<stdio.h> ou \<io.h>|
 |**_wremove**|\<stdio.h> ou \<wchar.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
@@ -94,7 +95,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_remove.c

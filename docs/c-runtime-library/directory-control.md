@@ -1,16 +1,17 @@
 ---
+description: En savoir plus sur le contrôle de répertoire
 title: Contrôle de répertoire
 ms.date: 11/04/2016
 helpviewer_keywords:
 - controls [C++], directory
 - directory control routines
 ms.assetid: a72dcf6f-f366-4d20-8850-0e19cc53ca18
-ms.openlocfilehash: 640ce8a8665936b604c6e8e6270e358a200c880a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a4115fc127292916f6f5b013f75104ed5771e5ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321233"
 ---
 # <a name="directory-control"></a>Contrôle de répertoire
 

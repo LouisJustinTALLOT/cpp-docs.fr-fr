@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : expressions lambda en C++'
 title: Expressions lambda en C++
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 6fcc26c3ed86c86264773a70ac16501c102e1861
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e65279fa8740876ad8824803ec459ced154f952
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321039"
 ---
 # <a name="lambda-expressions-in-c"></a>Expressions lambda en C++
 
@@ -102,7 +103,7 @@ void f(Args... args) {
 
 Pour utiliser des expressions lambda dans le corps d’une méthode de classe, transmettez le **`this`** pointeur à la clause de capture pour permettre l’accès aux méthodes et aux données membres de la classe englobante.
 
-**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : le **`this`** pointeur peut être capturé par valeur en spécifiant **`*this`** dans la clause de capture. La capture par valeur signifie que la *fermeture*entière, qui est l’objet de fonction anonyme qui encapulates l’expression lambda, est copiée sur chaque site d’appel où le lambda est appelé. La capture par valeur est utile lorsque l’expression lambda s’exécute en opérations parallèles ou asynchrones, en particulier sur certaines architectures matérielles telles que NUMA.
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : le **`this`** pointeur peut être capturé par valeur en spécifiant **`*this`** dans la clause de capture. La capture par valeur signifie que la *fermeture* entière, qui est l’objet de fonction anonyme qui encapulates l’expression lambda, est copiée sur chaque site d’appel où le lambda est appelé. La capture par valeur est utile lorsque l’expression lambda s’exécute en opérations parallèles ou asynchrones, en particulier sur certaines architectures matérielles telles que NUMA.
 
 Pour obtenir un exemple qui montre comment utiliser des expressions lambda avec des méthodes de classe, consultez « exemple : utilisation d’une expression lambda dans une méthode » dans [exemples d’expressions lambda](../cpp/examples-of-lambda-expressions.md).
 
@@ -149,7 +150,7 @@ auto y = [] (auto first, auto second)
 
 Une expression lambda peut accepter une autre expression lambda comme argument. Pour plus d’informations, consultez « Expressions lambda d’ordre supérieur » dans la rubrique [exemples d’expressions lambda](../cpp/examples-of-lambda-expressions.md).
 
-Comme une liste de paramètres est facultative, vous pouvez omettre les parenthèses vides si vous ne passez pas d’arguments à l’expression lambda et que son lambda-déclarateur ne contient pas *de spécification d’exception*, de *type de retour de fin*ou **`mutable`** .
+Comme une liste de paramètres est facultative, vous pouvez omettre les parenthèses vides si vous ne passez pas d’arguments à l’expression lambda et que son lambda-déclarateur ne contient pas *de spécification d’exception*, de *type de retour de fin* ou **`mutable`** .
 
 ### <a name="mutable-specification"></a>Spécification mutable
 
@@ -322,7 +323,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 Pour plus d’informations, consultez [generate_n](../standard-library/algorithm-functions.md#generate_n).
 
-## <a name="constexpr-lambda-expressions"></a>`constexpr`expressions lambda
+## <a name="constexpr-lambda-expressions"></a>`constexpr` expressions lambda
 
 **Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ) : une expression lambda peut être déclarée comme **`constexpr`** ou utilisée dans une expression constante lorsque l’initialisation de chaque membre de données qu’elle capture ou introduit est autorisée dans une expression constante.
 

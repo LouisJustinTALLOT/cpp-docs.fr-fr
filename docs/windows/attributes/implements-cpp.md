@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : Implements (C++)'
 title: Implements (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 601d1c99a9f59af8354d98e930a3e21c45255401
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321387"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -38,12 +39,12 @@ Par défaut, seules les interfaces COM qui sont des classes de base de `coclass`
 
 ## <a name="requirements"></a>Spécifications
 
-| Contexte d’attribut | Value |
+| Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
-|**Repeatable Read**|Oui|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Oui|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

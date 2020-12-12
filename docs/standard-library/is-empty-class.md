@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_empty'
 title: is_empty, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_empty class
 - is_empty
 ms.assetid: 44a6fc92-7e55-4fbe-9a24-2a0ce2dccba0
-ms.openlocfilehash: 6300107ecf9c4ea1e237a60bf18f26b6416f7fba
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 130f1919e3553bb2757a5c1e71c829586b63c8aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452711"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323767"
 ---
-# <a name="isempty-class"></a>is_empty, classe
+# <a name="is_empty-class"></a>is_empty, classe
 
 Teste si le type est une classe vide.
 
@@ -70,9 +71,9 @@ is_empty<empty> == true
 is_empty<int> == false
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

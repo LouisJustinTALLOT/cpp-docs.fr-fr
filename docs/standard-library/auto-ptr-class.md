@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe auto_ptr'
 title: auto_ptr, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 7e652b18b723e2a58c1f4673baf180a14db93477
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e656da9f5ffdaf4dfe85b1cbd75ef79ba41adb64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321664"
 ---
 # <a name="auto_ptr-class"></a>auto_ptr, classe
 
@@ -81,7 +82,7 @@ Vous pouvez passer un objet `auto_ptr<Type>` par valeur en tant qu'argument à u
 |-|-|
 |[element_type](#element_type)|Le type est un synonyme du paramètre de modèle `Type`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -278,7 +279,7 @@ Référence à un objet de type `auto_ptr<Type>`.
 
 #### <a name="remarks"></a>Notes
 
-L’assignation évalue l’expression `delete myptr` , mais uniquement si le pointeur stocké `myptr` change à la suite de l’assignation. Il transfère ensuite la propriété du pointeur stocké à *droite*, en stockant *Right*. [version](#release) de `myptr` . La fonction retourne __ \* This__.
+L’assignation évalue l’expression `delete myptr` , mais uniquement si le pointeur stocké `myptr` change à la suite de l’assignation. Il transfère ensuite la propriété du pointeur stocké à *droite*, en stockant *Right*. [version](#release) de `myptr` . La fonction retourne __\* This__.
 
 #### <a name="example"></a>Exemple
 
@@ -318,7 +319,7 @@ Membre de l’objet qui `auto_ptr` possède.
 
 #### <a name="remarks"></a>Notes
 
-L' [opérateur de sélection retourne](#get) `( )` la valeur, afin que le membre expression *AP* ->  **member** se comporte de la même façon que ( *AP*. **obtient**())-> **membre**, où *AP* est un objet de classe `auto_ptr` \< **Type**> . Par conséquent, le pointeur stocké ne doit pas avoir la valeur null et `Type` doit être une classe, un struct ou un type d’Union avec un `member` membre.
+L' [opérateur de sélection retourne](#get) `( )` la valeur, afin que le membre expression *AP* ->   se comporte de la même façon que ( *AP*. **obtient**())-> **membre**, où *AP* est un objet de classe `auto_ptr` \< **Type**> . Par conséquent, le pointeur stocké ne doit pas avoir la valeur null et `Type` doit être une classe, un struct ou un type d’Union avec un `member` membre.
 
 #### <a name="example"></a>Exemple
 
@@ -335,7 +336,7 @@ operator auto _ptr<Other>() throw();
 
 #### <a name="return-value"></a>Valeur renvoyée
 
-L’opérateur de conversion de type retourne `auto_ptr` \< **Other**> ( ** \* This**).
+L’opérateur de conversion de type retourne `auto_ptr` \< **Other**> ( **\* This**).
 
 #### <a name="example"></a>Exemple
 
@@ -365,7 +366,7 @@ operator auto _ptr  _ref<Other>() throw();
 
 #### <a name="return-value"></a>Valeur renvoyée
 
-L’opérateur de cast de type retourne **auto_ptr_ref** \< **Other**> ( ** \* This**).
+L’opérateur de cast de type retourne **auto_ptr_ref** \< **Other**> ( **\* This**).
 
 #### <a name="example"></a>Exemple
 

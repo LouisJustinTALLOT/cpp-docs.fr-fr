@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe invalid_argument'
 title: invalid_argument, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-ms.openlocfilehash: 4fb15785cbff18daa1bfa9a1198a64d018383764
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 58eee3a5e56932bcd045a7e66e59e105b8921813
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323941"
 ---
 # <a name="invalid_argument-class"></a>invalid_argument, classe
 
@@ -31,7 +32,7 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-La valeur retournée par `what()` est une copie de `message.data()` . Pour plus d’informations, consultez [`what`](../standard-library/exception-class.md) et [`data`](../standard-library/basic-string-class.md#data) .
+La valeur retournée par `what()` est une copie de `message.data()` . Pour plus d’informations, consultez [`what`](../standard-library/exception-class.md) et [`data`](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Exemple
 
@@ -61,7 +62,7 @@ Type class std::invalid_argument
 */
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<stdexcept>
 

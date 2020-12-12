@@ -1,5 +1,6 @@
 ---
-title: Classe CMFCRibbonLabel
+description: 'En savoir plus sur : classe CMFCRibbonLabel'
+title: CMFCRibbonLabel, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonLabel
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-ms.openlocfilehash: cd30e374441661368d3ea7abf5177424f8dffb3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0699e76dfe90b87cd813d18d076adf23f8512bee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321824"
 ---
-# <a name="cmfcribbonlabel-class"></a>Classe CMFCRibbonLabel
+# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel, classe
 
 Implémente une étiquette de texte non interactive pour un ruban.
 
@@ -33,7 +34,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Construit et initialise `CMFCRibbonLabel` un objet avec la chaîne de texte spécifiée.|
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Construit et initialise un `CMFCRibbonLabel` objet avec la chaîne de texte spécifiée.|
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
@@ -41,14 +42,14 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |Nom|Description|
 |----------|-----------------|
 |`CMFCRibbonLabel::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|
-|`CMFCRibbonLabel::GetThisClass`|Utilisé par le cadre pour obtenir un pointeur à l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) qui est associé à ce type de classe.|
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Détermine les données d’accessibilité de l’élément d’étiquette de ruban actuel. (Overrides [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|`CMFCRibbonLabel::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associé à ce type de classe.|
+|[CMFCRibbonLabel :: SetACCData](#setaccdata)|Détermine les données d’accessibilité pour l’élément d’étiquette de ruban actuel. (Substitue [CMFCRibbonButton :: SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
 ### <a name="remarks"></a>Notes
 
-Après avoir créé une étiquette de ruban, ajoutez-la à un panneau en appelant [CMFCRibbonPanel: :Ajouter](../../mfc/reference/cmfcribbonpanel-class.md#add).
+Après avoir créé une étiquette de ruban, ajoutez-la à un panneau en appelant [CMFCRibbonPanel :: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
 
-Vous ne pouvez pas ajouter une étiquette ruban à la barre d’outils d’accès rapide.
+Vous ne pouvez pas ajouter une étiquette de ruban à la barre d’outils accès rapide.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -62,9 +63,9 @@ Vous ne pouvez pas ajouter une étiquette ruban à la barre d’outils d’accè
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxRibbonLabel.h
+**En-tête :** afxRibbonLabel. h
 
-## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel
+## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a> CMFCRibbonLabel::CMFCRibbonLabel
 
 Construit et initialise un objet [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) qui affiche la chaîne de texte spécifiée.
 
@@ -77,14 +78,14 @@ CMFCRibbonLabel(
 ### <a name="parameters"></a>Paramètres
 
 *lpszText*<br/>
-[dans] Le texte à apparaître dans l’étiquette.
+dans Texte à afficher dans l’étiquette.
 
-*bIsMultiLine (en)*<br/>
-[dans] VRAI pour spécifier que l’étiquette est une étiquette multi-lignes; autrement, FALSE.
+*bIsMultiLine*<br/>
+dans TRUE pour spécifier que l’étiquette est une étiquette à plusieurs lignes ; Sinon, FALSe.
 
-## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonLabel::SetACCData
+## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a> CMFCRibbonLabel :: SetACCData
 
-Détermine les données d’accessibilité de l’élément d’étiquette de ruban actuel.
+Détermine les données d’accessibilité pour l’élément d’étiquette de ruban actuel.
 
 ```
 virtual BOOL SetACCData(
@@ -95,14 +96,14 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Paramètres
 
 *pParent*<br/>
-[dans] Représente la fenêtre parente de l’étiquette de ruban actuelle.
+dans Représente la fenêtre parente de l’étiquette de ruban actuelle.
 
 *data*<br/>
-[out] Un objet `CAccessibilityData` de type qui est peuplé avec les données d’accessibilité de l’étiquette de ruban actuelle.
+à Objet de type `CAccessibilityData` qui est rempli avec les données d’accessibilité de l’étiquette de ruban actuelle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si le paramètre *de données* a été peuplé avec succès avec les données d’accessibilité de l’étiquette de ruban actuelle; autrement, FALSE.
+TRUE si le paramètre de *données* a été correctement rempli avec les données d’accessibilité de l’étiquette de ruban actuelle ; Sinon, FALSe.
 
 ## <a name="see-also"></a>Voir aussi
 

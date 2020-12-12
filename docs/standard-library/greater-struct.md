@@ -1,5 +1,6 @@
 ---
-title: greater (struct)
+description: 'En savoir plus sur : struct supérieur'
+title: greater, struct
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::greater
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - greater struct
 - greater function
 ms.assetid: ebc348e1-edcd-466b-b21a-db95bd8f9079
-ms.openlocfilehash: aca47223810bdae31e7711492d107fbfa2814391
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fabee76d20d201f63b9f5397c20409ad62125657
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243735"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324172"
 ---
-# <a name="greater-struct"></a>greater (struct)
+# <a name="greater-struct"></a>greater, struct
 
-Un prédicat binaire qui effectue la plus grande-que l’opération (`operator>`) sur ses arguments.
+Prédicat binaire qui effectue l’opération « supérieur à » ( `operator>` ) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,20 +47,20 @@ struct greater<void>
 Tout type qui prend en charge un `operator>` qui accepte des opérandes des types spécifiés ou inférés.
 
 *Gauche*\
-Opérande gauche de l’opération Supérieur à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+Opérande gauche de l’opération Supérieur à. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
 *Oui*\
-Opérande droit de l’opération Supérieur à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+Opérande droit de l’opération Supérieur à. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left > Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator>`.
 
 ## <a name="remarks"></a>Notes
 
-Le prédicat binaire `greater` < `Type`> fournit un ordre faible strict d’un ensemble de valeurs d’éléments de type *Type* dans des classes d’équivalence, si et seulement si ce type remplit la norme mathématique configuration requise pour donc classées. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
+Le prédicat binaire `greater` < `Type`> fournit un classement faible strict d’un ensemble de valeurs d’élément de type *type* dans des classes d’équivalence, si et seulement si ce type satisfait les exigences mathématiques standard pour être classé. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // functional_greater.cpp

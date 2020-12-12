@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : classes de Wizard-Generated consommateur'
 title: Classes de consommateur générées par l’Assistant
 ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 5c8a975b2f4a8ae3285f035e7b708c5026f5f480
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 13b8b56564ec0acaba342ffd55f8dd5c9b94accb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323272"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes de consommateur générées par l’Assistant
 
@@ -21,7 +22,7 @@ L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 
 
 ::: moniker range="<=msvc-150"
 
-Quand vous utilisez l’ **Assistant Consommateur OLE DB ATL** pour générer un consommateur, vous pouvez utiliser soit des modèles OLE DB, soit des attributs OLE DB. Dans les deux cas, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande contient du code destiné à ouvrir la source de données et le rowset que vous avez spécifié dans l’Assistant. La classe d’enregistrement utilisateur contient un mappage de colonnes pour la table de base de données que vous avez sélectionnée. Cependant, le code généré est différent dans chaque cas :
+Quand vous utilisez l’**Assistant Consommateur OLE DB ATL** pour générer un consommateur, vous pouvez utiliser soit des modèles OLE DB, soit des attributs OLE DB. Dans les deux cas, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande contient du code destiné à ouvrir la source de données et le rowset que vous avez spécifié dans l’Assistant. La classe d’enregistrement utilisateur contient un mappage de colonnes pour la table de base de données que vous avez sélectionnée. Cependant, le code généré est différent dans chaque cas :
 
 - Si vous sélectionnez un consommateur basé sur un modèle, l’Assistant génère une classe de commande et une classe d’enregistrement utilisateur. La classe de commande prend le nom que vous entrez dans la zone **Classe** de l’Assistant (par exemple, `CProducts`), tandis que la classe prend un nom sous la forme « *NomClasse* Accessor » (par exemple, `CProductsAccessor`). Les deux classes sont placées dans le fichier d’en-tête du consommateur.
 
@@ -88,7 +89,7 @@ public:
 
 ### <a name="rowset-properties"></a>Propriétés du rowset
 
-Ensuite, l’Assistant définit les propriétés du rowset. Si vous avez sélectionné **Modifier** , **Insérer** ou **Supprimer** dans l’Assistant Consommateur OLE DB ATL, les propriétés appropriées sont définies ici (DBPROP_IRowsetChange est toujours défini, puis une ou plusieurs propriétés parmi DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT et/ou DBPROPVAL_UP_DELETE, respectivement).
+Ensuite, l’Assistant définit les propriétés du rowset. Si vous avez sélectionné **Modifier**, **Insérer** ou **Supprimer** dans l’Assistant Consommateur OLE DB ATL, les propriétés appropriées sont définies ici (DBPROP_IRowsetChange est toujours défini, puis une ou plusieurs propriétés parmi DBPROPVAL_UP_CHANGE, DBPROPVAL_UP_INSERT et/ou DBPROPVAL_UP_DELETE, respectivement).
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)
@@ -150,7 +151,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>Classes d'enregistrement utilisateur injectées par les attributs
 
-Si vous créez un consommateur OLE DB en utilisant les attributs de base de données ( [db_command](../../windows/attributes/db-command.md) ou [db_table](../../windows/attributes/db-table.md)), les attributs injectent une classe d’enregistrement utilisateur dont le nom prend la forme « _ *NomClasse* Accessor ». Par exemple, si vous avez nommé votre classe de commande `COrders`, la classe d’enregistrement utilisateur s’intitule `_COrdersAccessor`. Bien que la classe d’enregistrement utilisateur s’affiche dans **Affichage de classes** , double-cliquer dessus vous redirige vers la classe de commande ou de table dans le fichier d’en-tête. Dans ce cas, vous ne pouvez voir la déclaration réelle de la classe d’enregistrement utilisateur qu’en affichant le code injecté par les attributs.
+Si vous créez un consommateur OLE DB en utilisant les attributs de base de données ([db_command](../../windows/attributes/db-command.md) ou [db_table](../../windows/attributes/db-table.md)), les attributs injectent une classe d’enregistrement utilisateur dont le nom prend la forme « _ *NomClasse* Accessor ». Par exemple, si vous avez nommé votre classe de commande `COrders`, la classe d’enregistrement utilisateur s’intitule `_COrdersAccessor`. Bien que la classe d’enregistrement utilisateur s’affiche dans **Affichage de classes**, double-cliquer dessus vous redirige vers la classe de commande ou de table dans le fichier d’en-tête. Dans ce cas, vous ne pouvez voir la déclaration réelle de la classe d’enregistrement utilisateur qu’en affichant le code injecté par les attributs.
 
 Vous pouvez rencontrer des complications si vous ajoutez ou substituez des méthodes dans des consommateurs avec attributs. Par exemple, vous pouvez décider d’ajouter un constructeur `_COrdersAccessor` à la déclaration `COrders` . Or, en réalité, le constructeur est ajouté à la classe `COrdersAccessor` injectée. Un constructeur de ce type peut initialiser les colonnes/paramètres, mais vous ne pouvez pas créer un constructeur de copie de cette façon, car il ne peut pas instancier directement l’objet `COrdersAccessor`. Si vous avez besoin d’un constructeur (ou autre méthode) directement dans la classe `COrders`, il est recommandé de définir une nouvelle classe dérivant de `COrders` et d’y ajouter les méthodes nécessaires.
 

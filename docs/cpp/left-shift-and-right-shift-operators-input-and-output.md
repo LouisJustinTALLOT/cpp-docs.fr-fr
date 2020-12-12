@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les opérateurs de décalage vers la gauche et vers la droite ( &gt; &gt; et &lt; &lt; )
 title: Opérateurs de décalage vers la gauche et de décalage vers la droite ( &gt; &gt; et &lt; &lt; )
 ms.date: 08/13/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 4cdb353c950313396b331dc7ba01b3ea392ed0f8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e13333d178fdfbb44631b9a2aced9ed2a48ad871
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321016"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et de décalage vers la droite ( &gt; &gt; et &lt; &lt; )
 
@@ -174,7 +175,7 @@ int main() {
 
 ## <a name="shifts-and-promotions"></a>Décalages et promotions
 
-Les expressions des deux côtés de l'opérateur de décalage doivent être de type intégral. Les promotions intégrales sont exécutées selon les règles décrites dans [conversions standard](standard-conversions.md). Le type du résultat est le même que le type de l' *expression Shift-expression*promue.
+Les expressions des deux côtés de l'opérateur de décalage doivent être de type intégral. Les promotions intégrales sont exécutées selon les règles décrites dans [conversions standard](standard-conversions.md). Le type du résultat est le même que le type de l' *expression Shift-expression* promue.
 
 Dans l’exemple suivant, une variable de type **`char`** est promue en **`int`** .
 

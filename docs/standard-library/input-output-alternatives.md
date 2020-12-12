@@ -1,19 +1,20 @@
 ---
-title: Alternatives d’entrée-sortie
+description: 'En savoir plus sur : alternatives d’entrée/sortie'
+title: Input-Output alternatives
 ms.date: 05/07/2019
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-ms.openlocfilehash: b46ff242fc263be5069eb691dd0ea9e8fb00b0f9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a6df022dd38bc23eaaaad49620067aca408b2df2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455289"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324000"
 ---
 # <a name="inputoutput-alternatives"></a>Alternatives d'entrée/sortie
 
-Le compilateur C++ Microsoft offre plusieurs alternatives pour la programmation d’e/s:
+Le compilateur Microsoft C++ fournit plusieurs alternatives pour la programmation d’e/s :
 
 - E/S directe et sans mise en mémoire tampon avec bibliothèque Runtime C
 
@@ -31,4 +32,4 @@ Vous pouvez utiliser les classes iostream avec le système d’exploitation Micr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Définition d’un flux](../standard-library/what-a-stream-is.md)
+[Présentation d’un flux](../standard-library/what-a-stream-is.md)

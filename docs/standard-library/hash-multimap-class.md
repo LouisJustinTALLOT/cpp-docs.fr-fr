@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe hash_multimap'
 title: hash_multimap, classe
 ms.date: 10/18/2018
 f1_keywords:
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 089204ac77403923d38f198d53b3ff711e6a4963
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b8cbf11bf633940140fb9a90b58ee1128b9efca6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560819"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324107"
 ---
 # <a name="hash_multimap-class"></a>hash_multimap, classe
 
@@ -256,7 +257,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel qui traite le premier élément du hash_multimap ou l’emplacement qui suit un hash_multimap vide.
 
@@ -319,7 +320,7 @@ Retourne un itérateur const qui traite le premier élément du hash_multimap.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel const qui traite le premier élément du [hash_multimap](../standard-library/hash-multimap-class.md) ou l’emplacement qui suit un `hash_multimap` vide.
 
@@ -363,7 +364,7 @@ Retourne un itérateur const qui traite l’emplacement situé après le dernier
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel const qui traite l’emplacement suivant le dernier élément d’un [hash_multimap](../standard-library/hash-multimap-class.md). Si le `hash_multimap` est vide, `hash_multimap::cend == hash_multimap::begin`.
 
@@ -592,7 +593,7 @@ size_type count(const Key& key) const;
 *essentiel*\
 Clé des éléments à mettre en correspondance à partir du hash_multimap.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 1 si le hash_multimap contient un élément dont la clé de tri correspond à la clé du paramètre ; 0 si le hash_multimap ne contient pas d'élément avec une clé correspondante.
 
@@ -602,7 +603,7 @@ La fonction membre retourne le nombre d'éléments dans la plage
 
 **[lower_bound (** `key` **), upper_bound (** `key` **) )**
 
-qui ont une *clé*de valeur de clé.
+qui ont une *clé* de valeur de clé.
 
 ### <a name="example"></a>Exemple
 
@@ -660,7 +661,7 @@ Retourne un itérateur const qui traite le premier élément d’un hash_multima
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite le premier élément d’un [hash_multimap](../standard-library/hash-multimap-class.md) inversé ou qui traite ce qui était le dernier élément de l’objet `hash_multimap` non inversé.
 
@@ -712,7 +713,7 @@ Retourne un itérateur const qui traite l’emplacement qui suit le dernier él�
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite l’emplacement qui suit le dernier élément d’un [hash_multimap](../standard-library/hash-multimap-class.md) inversé (emplacement qui précédait celui du premier élément du `hash_multimap` non inversé).
 
@@ -850,7 +851,7 @@ iterator emplace(ValTy&& val);
 *multiples*\
 Valeur utilisée pour construire un élément à insérer dans le [hash_multimap](../standard-library/hash-multimap-class.md).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre `emplace` retourne un itérateur qui pointe vers la position où le nouvel élément a été inséré.
 
@@ -909,7 +910,7 @@ Valeur utilisée pour déplacer un élément à insérer dans le [hash_multimap]
 *_Where*\
 Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre [hash_multimap::emplace](#emplace) retourne un itérateur qui pointe vers la position où le nouvel élément a été inséré dans le `hash_multimap`.
 
@@ -959,7 +960,7 @@ Teste si un hash_multimap est vide.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le hash_multimap est vide ; **`false`** si la hash_multimap n’est pas vide.
 
@@ -1012,7 +1013,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel qui traite l’emplacement suivant le dernier élément d’un hash_multimap. Si le hash_multimap est vide, hash_multimap::end == hash_multimap::begin.
 
@@ -1088,7 +1089,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *essentiel*\
 Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paire d’itérateurs telle que le premier est la [lower_bound](#lower_bound) de la clé et le second est la [upper_bound](#upper_bound) de la clé.
 
@@ -1188,7 +1189,7 @@ Position juste après le dernier élément supprimé du hash_multimap.
 *essentiel*\
 Clé des éléments à supprimer du hash_multimap.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour les deux premières fonctions membres, il s'agit d'un itérateur bidirectionnel qui désigne le premier élément restant après tous les éléments supprimés, ou un pointeur vers la fin du hash_multimap si aucun élément de ce genre n'existe.
 
@@ -1303,7 +1304,7 @@ const_iterator find(const Key& key) const;
 *essentiel*\
 Clé qui doit correspondre à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur qui traite le premier emplacement d’un élément ayant la clé spécifiée, ou l’emplacement qui suit le dernier élément du hash_multimap, si aucune correspondance n’est trouvée pour la clé.
 
@@ -1392,7 +1393,7 @@ Retourne une copie de l’objet allocateur utilisé pour construire le hash_mult
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Allocateur utilisé par le hash_multimap.
 
@@ -1594,7 +1595,7 @@ Position du premier élément à copier à partir d’une carte.
 *Famille*\
 Position juste au-delà du dernier élément à copier à partir d’une carte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Les deux premières fonctions membres `insert` retournent un itérateur qui pointe vers l’emplacement d’insertion du nouvel élément.
 
@@ -1646,7 +1647,7 @@ Récupère une copie de l’objet de comparaison utilisé pour trier les clés d
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’objet de fonction utilisé par un hash_multimap pour ordonner ses éléments.
 
@@ -1720,7 +1721,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Notes
 
-`key_compare` est un synonyme des *caractéristiques*de paramètre de modèle.
+`key_compare` est un synonyme des *caractéristiques* de paramètre de modèle.
 
 Pour plus d’informations sur les *caractéristiques* , consultez la rubrique relative à la [classe hash_multimap](../standard-library/hash-multimap-class.md) .
 
@@ -1741,7 +1742,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Notes
 
-`key_type` est un synonyme de la *clé*de paramètre de modèle.
+`key_type` est un synonyme de la *clé* de paramètre de modèle.
 
 Pour plus d’informations sur la *clé*, consultez la section Notes de la rubrique relative à la [classe hash_multimap](../standard-library/hash-multimap-class.md) .
 
@@ -1767,7 +1768,7 @@ const_iterator lower_bound(const Key& key) const;
 *essentiel*\
 Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [iterator](#iterator) ou [const_iterator](#const_iterator) qui traite l’emplacement d’un élément dans un hash_multimap ayant une clé supérieure ou égale à la clé d’argument, ou qui traite l’emplacement suivant le dernier élément dans le hash_multimap si aucune correspondance n’est trouvée pour la clé.
 
@@ -1876,7 +1877,7 @@ Retourne la longueur maximale du hash_multimap.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur maximale autorisée du hash_multimap.
 
@@ -1993,7 +1994,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé traitant le premier élément d’un hash_multimap inversé ou traitant ce qui était le dernier élément du hash_multimap non inversé.
 
@@ -2141,7 +2142,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé qui traite l’emplacement qui suit le dernier élément d’un hash_multimap inversé (emplacement qui précédait celui du premier élément du hash_multimap non inversé).
 
@@ -2248,7 +2249,7 @@ Retourne le nombre d'éléments figurant dans le hash_multimap.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur actuelle du hash_multimap.
 
@@ -2394,7 +2395,7 @@ const_iterator upper_bound(const Key& key) const;
 *essentiel*\
 Clé d’argument à comparer à la clé de tri d’un élément du hash_multimap dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [iterator](#iterator) ou [const_iterator](#const_iterator) qui traite l’emplacement d’un élément dans un hash_multimap ayant une clé supérieure à la clé d’argument, ou qui traite l’emplacement suivant le dernier élément dans le hash_multimap si aucune correspondance n’est trouvée pour la clé.
 
@@ -2473,7 +2474,7 @@ La fonction membre retourne un objet de fonction qui détermine l’ordre des é
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’objet de fonction de comparaison utilisé par un hash_multimap pour ordonner ses éléments.
 

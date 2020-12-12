@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : feof'
 title: feof
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6bfa0382878cef2843f3a6a6e2ba6e6d8c5bed8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322535"
 ---
 # <a name="feof"></a>feof
 
@@ -51,13 +52,13 @@ int feof(
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La fonction **feof** retourne une valeur différente de zéro si une opération de lecture a tenté de lire au-delà de la fin du fichier ; Sinon, retourne 0. Si le pointeur de flux a la **valeur null**, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **feof** retourne 0.
 
 Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La routine **feof** (implémentée à la fois en tant que fonction et en tant que macro) détermine si la fin du *flux* a été passée. Lorsque la fin du fichier est passée, les opérations de lecture retournent un indicateur de fin de fichier jusqu’à ce que le flux soit fermé ou jusqu’à ce que [rembobine](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)ou **clearerr** soit appelé.
 
@@ -67,13 +68,13 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_feof.c

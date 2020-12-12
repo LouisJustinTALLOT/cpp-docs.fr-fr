@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les constantes de validation sur disque
 title: Commit-To-Disk, constantes
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-ms.openlocfilehash: c02b18e5a4a731957a7c74cc45e6e181fe23fad8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 416729f4b3b7bfdfdcb0ba11193f6c2a52691e6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322642"
 ---
 # <a name="commit-to-disk-constants"></a>Commit-To-Disk, constantes
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,7 +24,7 @@ ms.locfileid: "57750609"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Ces constantes spécifiques à Microsoft spécifient si la mémoire tampon associée au fichier ouvert est vidée dans les mémoires tampons du système d'exploitation ou sur le disque. Le mode est inclus dans la chaîne qui spécifie le type d'accès en lecture/écriture (**"r"**, **"w"**, **"a"**, **"r+"**, **"w+"**, **"a+"**).
 
@@ -46,7 +47,7 @@ Par défaut, les appels aux fonctions [fflush](../c-runtime-library/reference/ff
 
 Dans le fichier exécutable résultant, les appels à `fflush` écrivent le contenu de la mémoire tampon directement sur le disque, et les appels à `_flushall` écrivent le contenu de toutes les mémoires tampons sur le disque. Ces deux fonctions sont les seules affectées par COMMODE.OBJ.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

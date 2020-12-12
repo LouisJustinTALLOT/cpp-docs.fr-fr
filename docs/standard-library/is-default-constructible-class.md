@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_default_constructible'
 title: is_default_constructible, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 6e31220fa6b15d958e94e82322467cd73e1c3a6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c5365ee6e2e2b7382b5dd5f17cce2afd0ce8932
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323780"
 ---
 # <a name="is_default_constructible-class"></a>is_default_constructible, classe
 

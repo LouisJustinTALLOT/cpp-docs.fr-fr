@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; Atomic &gt; Functions'
 title: '&lt;atomic&gt;, fonctions'
 ms.date: 07/11/2018
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: 5252fbb12682af3e5d1480208c4cbe4d32af7d05
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 21badeaa900f35e05e411987a93fa74e20c99559
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321679"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt;, fonctions
 
@@ -706,7 +707,7 @@ La `atomic_fetch_xor_explicit` fonction effectue une `read-modify-write` opérat
 
 ## <a name="atomic_flag_clear"></a><a name="atomic_flag_clear"></a> atomic_flag_clear
 
-Affecte **`bool`** à l’indicateur dans [atomic_flag](../standard-library/atomic-flag-structure.md) un objet atomic_flag **`false`** la valeur, dans le `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Affecte **`bool`** à l’indicateur dans [](../standard-library/atomic-flag-structure.md) un objet atomic_flag **`false`** la valeur, dans le `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
@@ -720,7 +721,7 @@ Pointeur vers un objet `atomic_flag` .
 
 ## <a name="atomic_flag_clear_explicit"></a><a name="atomic_flag_clear_explicit"></a> atomic_flag_clear_explicit
 
-Affecte **`bool`** à l’indicateur dans [atomic_flag](../standard-library/atomic-flag-structure.md) un objet atomic_flag **`false`** la valeur, dans les contraintes [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
+Affecte **`bool`** à l’indicateur dans [](../standard-library/atomic-flag-structure.md) un objet atomic_flag **`false`** la valeur, dans les contraintes [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
 
 ```cpp
 inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -755,7 +756,7 @@ Valeur initiale de l' *indicateur*.
 
 ## <a name="atomic_flag_test_and_set_explicit"></a><a name="atomic_flag_test_and_set_explicit"></a> atomic_flag_test_and_set_explicit
 
-Affecte **`bool`** à l’indicateur dans [atomic_flag](../standard-library/atomic-flag-structure.md) un objet atomic_flag **`true`** la valeur, dans les contraintes [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
+Affecte **`bool`** à l’indicateur dans [](../standard-library/atomic-flag-structure.md) un objet atomic_flag **`true`** la valeur, dans les contraintes [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
 
 ```cpp
 inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;

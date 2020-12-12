@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur les opérateurs suivants : &lt; unordered_map &gt;'
 title: '&lt;unordered_map&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 2c09fa0070151f7cdd502e8f5583645110e91c5b
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: b7bf3712a7068b3af2d8316249d169854401b93e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741955"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321476"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt;, opérateurs
 
@@ -35,7 +36,7 @@ Objet de type `unordered_map`.
 *Oui*\
 Objet de type `unordered_map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les unordered_maps ne sont pas égales ; **`false`** si elles sont égales.
 
@@ -97,7 +98,7 @@ Objet de type `unordered_map`.
 *Oui*\
 Objet de type `unordered_map`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les unordered_maps sont égales ; **`false`** si elles ne sont pas égales.
 
@@ -159,7 +160,7 @@ Objet de type `unordered_multimap`.
 *Oui*\
 Objet de type `unordered_multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les unordered_multimaps ne sont pas égales ; **`false`** si elles sont égales.
 
@@ -222,7 +223,7 @@ Objet de type `unordered_multimap`.
 *Oui*\
 Objet de type `unordered_multimap`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les unordered_multimaps sont égales ; **`false`** si elles ne sont pas égales.
 

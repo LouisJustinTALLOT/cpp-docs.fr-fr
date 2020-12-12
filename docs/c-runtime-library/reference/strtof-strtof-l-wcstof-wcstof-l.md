@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strtof, _strtof_l, wcstof, _wcstof_l'
 title: strtof, _strtof_l, wcstof, _wcstof_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: d99b895076025aa50028bb4cd21df9e13c98197f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a73df80fefb8d86431027650be2ecd236135dfd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322418"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -91,7 +92,7 @@ Pointeur désignant le caractère qui arrête l’analyse.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **strtof** retourne la valeur du nombre à virgule flottante, sauf lorsque la représentation provoque un dépassement de capacité, auquel cas la fonction retourne +/-**HUGE_VALF**. Le signe de **HUGE_VALF** correspond au signe de la valeur qui ne peut pas être représentée. **strtof** retourne 0 si aucune conversion ne peut être effectuée ou si un dépassement de capacité négatif se produit.
 
@@ -128,8 +129,8 @@ Les versions UCRT de ces fonctions ne prennent pas en charge la conversion des l
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**strtof**, **_strtof_l**|C : \<stdlib.h> C++ : &lt; cstdlib> ou\<stdlib.h>|
-|**wcstof**, **_wcstof_l**|C : \<stdlib.h> ou \<wchar.h> C++ : &lt; cstdlib>, \<stdlib.h> ou\<wchar.h>|
+|**strtof**, **_strtof_l**|C : \<stdlib.h> C++ : &lt; cstdlib> ou \<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C : \<stdlib.h> ou \<wchar.h> C++ : &lt; cstdlib>, \<stdlib.h> ou \<wchar.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -167,7 +168,7 @@ string = 3.14159This stopped it
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [Fonctions de chaîne en valeur numérique](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>

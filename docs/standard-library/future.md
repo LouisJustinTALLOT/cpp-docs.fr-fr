@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : &lt; futur&gt;'
 title: '&lt;future&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: b5f18de772ea2221ecbd4098b94e0b4f14c0484c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67c204f636ee9249e9c714df87a02ff6c6ff3149
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324198"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 

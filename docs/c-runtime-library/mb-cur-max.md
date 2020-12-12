@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : MB_CUR_MAX'
 title: MB_CUR_MAX
 ms.date: 10/18/2017
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - MB_CUR_MAX constant
 ms.assetid: fab22609-c14d-4c19-991c-bd09ff30e604
-ms.openlocfilehash: 8f89d06f11d5da14389c849814e06b56586b3c69
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 539b1bd658c1aac0c8998351b2676513c8cf5607
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746446"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321147"
 ---
-# <a name="mbcurmax"></a>MB_CUR_MAX
+# <a name="mb_cur_max"></a>MB_CUR_MAX
 
 Macro indiquant le nombre maximal d’octets dans un caractère multioctet pour les paramètres régionaux actuels.
 
@@ -23,7 +24,7 @@ Macro indiquant le nombre maximal d’octets dans un caractère multioctet pour 
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Contexte : Fonctions de conversion de caractères multi-octets et larges ANSI
 
@@ -38,5 +39,5 @@ La valeur de `MB_CUR_MAX` correspond au nombre maximal d’octets dans un caract
 [Types standard](../c-runtime-library/standard-types.md)<br/>
 [wcstombs, _wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md)<br/>
 [wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)<br/>
-[Constantes de types de données](../c-runtime-library/data-type-constants.md)<br/>
+[Constantes de type de données](../c-runtime-library/data-type-constants.md)<br/>
 [Constantes globales](../c-runtime-library/global-constants.md)

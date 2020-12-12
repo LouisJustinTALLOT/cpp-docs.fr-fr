@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : types fondamentaux (C++/CX)'
 title: Types fondamentaux (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: 3d484d9490a0a5b2ee2e7f92381528124b47701c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40e0a849d0b838f53ddaea26c8993dcfe625ed5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321003"
 ---
 # <a name="fundamental-types-ccx"></a>Types fondamentaux (C++/CX)
 
@@ -19,7 +20,7 @@ Le tableau suivant répertorie les types intégrés booléens et de caractère, 
 
 |Espace de noms|Nom de/CX C++|Définition|Nom C++ standard|Plage de valeurs|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Plate-forme|Boolean|Valeur booléenne de 8 bits.|bool|**`true`**(différent de zéro) et **`false`** (zéro)|
+|Plateforme|Boolean|Valeur booléenne de 8 bits.|bool|**`true`** (différent de zéro) et **`false`** (zéro)|
 |default|char16|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|wchar_t<br /><br /> -ou-<br /><br /> L’c’|(Spécifié par la norme Unicode)|
 
 ## <a name="numeric-types"></a>Types valeurs numériques
@@ -32,10 +33,10 @@ Le tableau suivant répertorie les types numériques intégrés. Les types numé
 |uint8|Valeur numérique non signée 8 bits.|unsigned char|De 0 à 255|
 |int16|Entier signé 16 bits.|short|-32 768 à 32 767|
 |uint16|Entier non signé 16 bits.|unsigned short|De 0 à 65 535|
-|int32|Entier signé de 32 bits.|int|-2 147 483 648 à 2 147 483 647|
+|int32|Entier signé 32 bits.|int|-2 147 483 648 à 2 147 483 647|
 |uint32|Entier non signé 32 bits.|nombre entier non signé|De 0 à 4 294 967 295|
-|int64|Entier signé de 64 bits.|long-ou-__int64|-9 223 372 036 854, 775 808 à 9 223 372 036 854 775 807|
-|uint64|Entier non signé 64 bits.|unsigned long-or-unsigned long __int64|De 0 à 18 446 744 073 709 551 615|
+|int64|Entier signé 64 bits.|long-ou-__int64|-9 223 372 036 854, 775 808 à 9 223 372 036 854 775 807|
+|uint64|Entier 64 bits non signé.|unsigned long-or-unsigned long __int64|De 0 à 18 446 744 073 709 551 615|
 |float32|Nombre à virgule flottante IEEE 754 32 bits.|float|3.4E +/- 38 (7 chiffres)|
 |float64|Nombre à virgule flottante IEEE 754 64 bits.|double|1.7E +/- 308 (15 chiffres)|
 
@@ -46,7 +47,7 @@ Le tableau suivant répertorie certains types supplémentaires qui sont définis
 |Nom|Définition|
 |----------|----------------|
 |Object|Représente tout type de Windows Runtime.|
-|String|Série de caractères représentant du texte.|
+|Chaîne|Série de caractères représentant du texte.|
 |Rect|Ensemble de quatre nombres à virgule flottante représentant l’emplacement et la taille d’un rectangle.|
 |SizeT|Paire ordonnée de nombres à virgule flottante qui spécifient la hauteur et la largeur.|
 |Point|Paire ordonnée de coordonnées x et y à virgule flottante qui définissent un point dans un plan à deux dimensions.|

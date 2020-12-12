@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions de rappel utilisées par MFC'
 title: Fonctions de rappel utilisées par MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 553e87320828590c9e1e9204b54622f2f1ca6d80
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 40c9fc15d6f7bc09aa991270d2f95ea5a7b2700d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040884"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322770"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Fonctions de rappel utilisées par MFC
 
@@ -22,7 +23,7 @@ Trois fonctions de rappel s’affichent dans le bibliothèque MFC (Microsoft Fou
 [Fonction de rappel pour CDC :: GrayString](#graystring)\
 [Fonction de rappel pour CDC::SetAbortProc](#setabortproc)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -46,11 +47,11 @@ Pointe vers une structure de données [logpen,](/windows/win32/api/Wingdi/ns-win
 *lpData*<br/>
 Pointe vers les données fournies par l’application passées à la `EnumObjects` fonction.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction de rappel retourne un **`int`** . La valeur de ce retour est définie par l’utilisateur. Si la fonction de rappel retourne 0, `EnumObjects` arrête l’énumération tôt.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le nom réel doit être exporté.
 
@@ -78,11 +79,11 @@ Pointe vers la chaîne de caractères à ajouter.
 *nCount*<br/>
 Spécifie le nombre de caractères à afficher en sortie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour de la fonction de rappel doit être TRUE pour indiquer la réussite ; dans le cas contraire, la valeur est FALSe.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction de rappel (*OutputFunc*) doit dessiner une image par rapport aux coordonnées (0,0) au lieu de (*x*, *y*).
 
@@ -106,11 +107,11 @@ Identifie le contexte de périphérique.
 *code*<br/>
 Spécifie si une erreur s’est produite. La valeur est 0 si aucune erreur n’est survenue. Il est SP_OUTOFDISK si le gestionnaire d’impression ne dispose pas de suffisamment d’espace disque et que de l’espace disque devient disponible si l’application attend. Si le *code* est SP_OUTOFDISK, l’application n’a pas besoin d’abandonner le travail d’impression. Si ce n’est pas le cas, il doit transmettre au gestionnaire d’impression en appelant la `PeekMessage` `GetMessage` fonction ou Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour de la fonction de gestionnaire d’abandon est différente de zéro si le travail d’impression doit continuer, et 0 s’il est annulé.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le nom réel doit être exporté comme décrit dans la section Notes de [CDC :: SETABORTPROC](../../mfc/reference/cdc-class.md#setabortproc).
 

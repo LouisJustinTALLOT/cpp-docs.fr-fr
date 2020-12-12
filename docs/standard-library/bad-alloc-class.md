@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe bad_alloc'
 title: bad_alloc, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 9d1d81e393b4a3eb27ea08bc53634bfcbc119240
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1096157e5c69633ee8d4e1c34d98c65775391aca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243979"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321651"
 ---
-# <a name="badalloc-class"></a>bad_alloc, classe
+# <a name="bad_alloc-class"></a>bad_alloc, classe
 
 La classe décrit une exception levée pour indiquer qu'une demande d'allocation n'a pas réussi.
 
@@ -33,7 +34,7 @@ class bad_alloc : public exception {
 
 La valeur retournée par `what` est une chaîne C définie par l’implémentation. Aucune des fonctions membres ne lève d'exception.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // bad_alloc.cpp

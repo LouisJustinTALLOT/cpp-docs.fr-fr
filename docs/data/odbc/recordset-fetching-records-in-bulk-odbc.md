@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Recordset : extraction globale d’enregistrements (ODBC)'
 title: "Recordset : extraction globale d'enregistrements (ODBC)"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: ccdc4668f0c19f63ec86ee9a6d788532eb4d9d38
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 6f77186a640971e6763160dde397f5aeb0b97f3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322349"
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset : extraction globale d'enregistrements (ODBC)
 
@@ -35,7 +36,7 @@ Cette rubrique répond aux questions suivantes :
 
 - [Comment implémenter l’échange de champs d’enregistrements en bloc](#_core_how_to_implement_bulk_record_field_exchange).
 
-## <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Comment CRecordset prend en charge l’extraction de lignes en bloc
+## <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a> Comment CRecordset prend en charge l’extraction de lignes en bloc
 
 Avant d’ouvrir l’objet Recordset, vous pouvez définir une taille d’ensemble de lignes avec la `SetRowsetSize` fonction membre. La taille de l’ensemble de lignes spécifie le nombre d’enregistrements qui doivent être récupérés au cours d’une seule extraction. Lorsque l’extraction de lignes en bloc est implémentée, la taille de l’ensemble de lignes par défaut est 25. Si l’extraction de lignes en bloc n’est pas implémentée, la taille de l’ensemble de lignes reste fixée à 1.
 
@@ -54,7 +55,7 @@ Le tableau suivant répertorie les fonctions membres fournies par `CRecordset` p
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Déplace le curseur vers une ligne particulière au sein d’un ensemble de lignes.|
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Fonction virtuelle qui modifie la valeur du paramètre pour la taille de l’ensemble de lignes à la valeur spécifiée.|
 
-## <a name="special-considerations"></a><a name="_core_special_considerations"></a>Considérations spéciales
+## <a name="special-considerations"></a><a name="_core_special_considerations"></a> Considérations spéciales
 
 Bien que l’extraction de lignes en bloc soit un gain de performances, certaines fonctionnalités fonctionnent différemment. Avant de décider d’implémenter l’extraction de lignes en bloc, tenez compte des éléments suivants :
 
@@ -62,11 +63,11 @@ Bien que l’extraction de lignes en bloc soit un gain de performances, certaine
 
 - Les fonctions membres,,,, `IsDeleted` `IsFieldDirty` `IsFieldNull` `IsFieldNullable` `SetFieldDirty` et `SetFieldNull` ne peuvent pas être utilisées sur les recordsets qui implémentent l’extraction de lignes en bloc. Toutefois, vous pouvez appeler `GetRowStatus` à la place de `IsDeleted` et `GetODBCFieldInfo` à la place de `IsFieldNullable` .
 
-- Les `Move` opérations repositionnent votre Recordset par ensemble de lignes. Par exemple, supposons que vous ouvrez un jeu d’enregistrements qui contient 100 enregistrements avec une taille d’ensemble de lignes initiale de 10. `Open`extrait les lignes 1 à 10, avec l’enregistrement en cours positionné sur la ligne 1. Appel pour `MoveNext` extraire l’ensemble de lignes suivant, et non la ligne suivante. Cet ensemble de lignes se compose de lignes 11 à 20, avec l’enregistrement en cours positionné sur la ligne 11. Notez que `MoveNext` et ne `Move( 1 )` sont pas équivalents lorsque l’extraction de lignes en bloc est implémentée. `Move( 1 )`extrait l’ensemble de lignes qui commence la ligne 1 de l’enregistrement en cours. Dans cet exemple, l’appel à `Move( 1 )` après `Open` l’appel de récupère l’ensemble de lignes composé de lignes 2 à 11, avec l’enregistrement actuel positionné sur la ligne 2. Pour plus d’informations, consultez la fonction de [déplacement](../../mfc/reference/crecordset-class.md#move) de membre.
+- Les `Move` opérations repositionnent votre Recordset par ensemble de lignes. Par exemple, supposons que vous ouvrez un jeu d’enregistrements qui contient 100 enregistrements avec une taille d’ensemble de lignes initiale de 10. `Open` extrait les lignes 1 à 10, avec l’enregistrement en cours positionné sur la ligne 1. Appel pour `MoveNext` extraire l’ensemble de lignes suivant, et non la ligne suivante. Cet ensemble de lignes se compose de lignes 11 à 20, avec l’enregistrement en cours positionné sur la ligne 11. Notez que `MoveNext` et ne `Move( 1 )` sont pas équivalents lorsque l’extraction de lignes en bloc est implémentée. `Move( 1 )` extrait l’ensemble de lignes qui commence la ligne 1 de l’enregistrement en cours. Dans cet exemple, l’appel à `Move( 1 )` après `Open` l’appel de récupère l’ensemble de lignes composé de lignes 2 à 11, avec l’enregistrement actuel positionné sur la ligne 2. Pour plus d’informations, consultez la fonction de [déplacement](../../mfc/reference/crecordset-class.md#move) de membre.
 
 - Contrairement à l’échange de champs d’enregistrement, les assistants ne prennent pas en charge l’échange de champs d’enregistrements en bloc. Cela signifie que vous devez déclarer manuellement les membres de données de champ et les remplacer manuellement `DoBulkFieldExchange` en écrivant des appels aux fonctions RFX en bloc. Pour plus d’informations, consultez [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md) dans la référence de la *bibliothèque de classes*.
 
-## <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>Comment implémenter l’échange de champs d’enregistrements en bloc
+## <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a> Comment implémenter l’échange de champs d’enregistrements en bloc
 
 L’échange de champs d’enregistrements en bloc transfère un ensemble de lignes de données de la source de données vers l’objet Recordset. Les fonctions RFX en bloc utilisent des tableaux pour stocker ces données, ainsi que des tableaux pour stocker la longueur de chaque élément de données dans l’ensemble de lignes. Dans votre définition de classe, vous devez définir les membres de données de champ comme pointeurs pour accéder aux tableaux de données. En outre, vous devez définir un ensemble de pointeurs pour accéder aux tableaux de longueurs. Les membres de données de paramètre ne doivent pas être déclarés comme pointeurs ; la déclaration de membres de données de paramètre lors de l’utilisation de l’échange de champs d’enregistrements en bloc revient à les déclarer lors de l’utilisation d’un échange de champs d’enregistrement. Le code suivant illustre un exemple simple :
 

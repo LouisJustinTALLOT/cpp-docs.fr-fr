@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fegetexceptflag'
 title: fegetexceptflag
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-ms.openlocfilehash: b840408ce704ad5519fbf233de41c8d5422006ad
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 9690263168c9eef46b5a8b684fa00dfd9d6f8715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972190"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322561"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -45,21 +46,21 @@ int fegetexceptflag(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *pstatus*<br/>
-Pointeur vers un objet **fexcept_t** destiné à contenir les valeurs actuelles des indicateurs d’exception spécifiés par *à l’exception*de.
+Pointeur vers un objet **fexcept_t** destiné à contenir les valeurs actuelles des indicateurs d’exception spécifiés par *à l’exception* de.
 
-*excepts*<br/>
+*sauf*<br/>
 Indicateurs d’exception à virgule flottante à stocker dans *pstatus*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne la valeur 0. Sinon, retourne une valeur différente de zéro.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **fegetexceptflag** stocke l’état actuel des indicateurs d’état d’exception de virgule flottante spécifiés par à l' *exception* de l’objet **fexcept_t** pointé par *pstatus*.  *pstatus* doit pointer vers un objet **fexcept_t** valide, ou le comportement suivant n’est pas défini. La fonction **fegetexceptflag** prend en charge les macros d’exception suivantes, définies dans \<fenv. h >:
+La fonction **fegetexceptflag** stocke l’état actuel des indicateurs d’état d’exception de virgule flottante spécifiés par à l' *exception* de l’objet **fexcept_t** pointé par *pstatus*.  *pstatus* doit pointer vers un objet **fexcept_t** valide, ou le comportement suivant n’est pas défini. La fonction **fegetexceptflag** prend en charge les macros d’exception suivantes, définies dans \<fenv.h> :
 
 |Macros d’exception|Description|
 |---------------------|-----------------|
@@ -74,7 +75,7 @@ L’argument *EXCEPTS* peut être égal à zéro, l’une des macros d’excepti
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
@@ -84,5 +85,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe hash_map'
 title: hash_map, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -88,12 +89,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: 67f891ae7e0b9eab10b1cceda8736661a24641bb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6f842e846d7ae171ecf754f9051794c56c04d4b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324133"
 ---
 # <a name="hash_map-class"></a>hash_map, classe
 
@@ -259,7 +260,7 @@ const Type& at(const Key& key) const;
 *essentiel*\
 Valeur de clé de l’élément à rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à la valeur de données de l'élément trouvé.
 
@@ -307,7 +308,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel qui traite le premier élément du hash_map ou l’emplacement qui suit un hash_map vide.
 
@@ -366,7 +367,7 @@ Retourne un itérateur const qui traite le premier élément du hash_map.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel const qui traite le premier élément du [hash_map](../standard-library/hash-map-class.md) ou l’emplacement qui suit un `hash_map` vide.
 
@@ -410,7 +411,7 @@ Retourne un itérateur const qui traite l’emplacement situé après le dernier
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel const qui traite l’emplacement suivant le dernier élément d’un [hash_map](../standard-library/hash-map-class.md). Si le `hash_map` est vide, `hash_map::cend == hash_map::begin`.
 
@@ -639,7 +640,7 @@ size_type count(const Key& key) const;
 *essentiel*\
 Valeur de clé des éléments à mettre en correspondance à partir du hash_map.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 1 si le hash_map contient un élément dont la clé de tri correspond à la clé du paramètre ; 0 si le hash_map ne contient pas d'élément avec une clé correspondante.
 
@@ -706,7 +707,7 @@ Retourne un itérateur const qui traite le premier élément d’un hash_map inv
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite le premier élément d’un [hash_map](../standard-library/hash-map-class.md) inversé ou qui traite ce qui était le dernier élément de l’objet `hash_map` non inversé.
 
@@ -758,7 +759,7 @@ Retourne un itérateur const qui traite l’emplacement qui suit le dernier él�
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite l’emplacement qui suit le dernier élément d’un [hash_map](../standard-library/hash-map-class.md) inversé (emplacement qui précédait celui du premier élément du `hash_map` non inversé).
 
@@ -891,7 +892,7 @@ emplace(
 *multiples*\
 Valeur utilisée pour déplacer un élément à insérer dans le [hash_map](../standard-library/hash-map-class.md), sauf si le `hash_map` contient déjà cet élément (ou, plus généralement, s’il contient déjà un élément dont la clé est ordonnée de façon équivalente).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre `emplace` retourne une paire dont le composant booléen retourne true si une insertion a été effectuée et false si le `hash_map` contenait déjà un élément dont la clé avait une valeur équivalente dans l’ordre, et dont le composant itérateur retourne l’adresse où un nouvel élément a été inséré, ou l’emplacement où l’élément se trouvait déjà.
 
@@ -952,7 +953,7 @@ Valeur utilisée pour déplacer un élément à insérer dans le [hash_map](../s
 *_Where*\
 Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre [hash_multimap::emplace](../standard-library/hash-multimap-class.md#emplace) retourne un itérateur qui pointe vers l’emplacement où le nouvel élément a été inséré dans le `hash_map`, ou vers l’emplacement où se trouve l’élément existant avec un ordonnancement équivalent.
 
@@ -1002,7 +1003,7 @@ Teste si un hash_map est vide.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le hash_map est vide ; **`false`** si la hash_map n’est pas vide.
 
@@ -1055,7 +1056,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel qui traite l’emplacement suivant le dernier élément d’un hash_map. Si le hash_map est vide, hash_map::end == hash_map::begin.
 
@@ -1131,7 +1132,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *essentiel*\
 Valeur de clé d’argument à comparer à la clé de tri d’un élément du hash_map dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paire d’itérateurs telle que le premier est la [lower_bound](#lower_bound) de la clé et le second est la [upper_bound](#upper_bound) de la clé.
 
@@ -1229,7 +1230,7 @@ Position juste après le dernier élément supprimé du hash_map.
 *essentiel*\
 Valeur de clé des éléments à supprimer du hash_map.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour les deux premières fonctions membres, il s'agit d'un itérateur bidirectionnel qui désigne le premier élément restant après tous les éléments supprimés, ou un pointeur vers la fin du hash_map si aucun élément de ce genre n'existe.
 
@@ -1342,7 +1343,7 @@ const_iterator find(const Key& key) const;
 *essentiel*\
 Valeur de clé qui doit correspondre à la clé de tri d’un élément du hash_map dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur qui traite l’emplacement d’un élément ayant la clé spécifiée, ou emplacement qui suit le dernier élément du hash_map, si aucune correspondance n’est trouvée pour la clé.
 
@@ -1414,7 +1415,7 @@ Retourne une copie de l’objet allocateur utilisé pour construire le hash_map.
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Allocateur utilisé par le hash_map.
 
@@ -1611,7 +1612,7 @@ Position du premier élément à copier à partir du hash_map.
 *famille*\
 Position juste au-delà du dernier élément à copier à partir du hash_map.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première `insert` fonction membre retourne une paire dont le composant bool retourne la valeur true si une insertion a été effectuée et false si le hash_map contient déjà un élément dont la clé avait une valeur équivalente dans le classement, et dont le composant itérateur retourne l’adresse où un nouvel élément a été inséré ou l’emplacement où l’élément se trouvait déjà.
 
@@ -1773,7 +1774,7 @@ Récupère une copie de l’objet de comparaison utilisé pour trier les clés d
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’objet de fonction utilisé par un hash_map pour ordonner ses éléments.
 
@@ -1898,7 +1899,7 @@ const_iterator lower_bound(const Key& key) const;
 *essentiel*\
 Valeur de clé d’argument à comparer à la clé de tri d’un élément du hash_map dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [iterator](#iterator) ou [const_iterator](#const_iterator) qui traite l’emplacement d’un élément dans un hash_map ayant une clé égale ou supérieure à la clé d’argument, ou qui traite l’emplacement suivant le dernier élément dans le hash_map si aucune correspondance n’est trouvée pour la clé.
 
@@ -1989,7 +1990,7 @@ Retourne la longueur maximale du hash_map.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur maximale autorisée du hash_map.
 
@@ -2035,7 +2036,7 @@ Type& operator[](Key&& key);
 *essentiel*\
 Valeur de clé de l’élément à insérer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à la valeur de données de l'élément inséré.
 
@@ -2203,7 +2204,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé traitant le premier élément d’un hash_map inversé ou traitant ce qui était le dernier élément du hash_map non inversé.
 
@@ -2350,7 +2351,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé qui traite l’emplacement qui suit le dernier élément d’un hash_map inversé (emplacement qui précédait celui du premier élément du hash_map non inversé).
 
@@ -2442,7 +2443,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 Un type `reverse_iterator` ne peut pas changer la valeur d’un élément. Il sert à itérer le hash_map dans l’ordre inverse.
 
-Le `reverse_iterator` défini par hash_map pointe vers des éléments qui sont des objets de [Value_type](#value_type), qui est de type **paire \<const Key, Type> **, dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
+Le `reverse_iterator` défini par hash_map pointe vers des éléments qui sont des objets de [Value_type](#value_type), qui est de type **paire \<const Key, Type>**, dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
 
 Pour déréférencer un `reverse_iterator` `rIter` pointant sur un élément dans un hash_map, utilisez l’opérateur ->.
 
@@ -2463,7 +2464,7 @@ Retourne le nombre d'éléments figurant dans le hash_map.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur actuelle du hash_map.
 
@@ -2611,7 +2612,7 @@ const_iterator upper_bound(const Key& key) const;
 *essentiel*\
 Valeur de clé d’argument à comparer à la valeur de clé de tri d’un élément du hash_map dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [iterator](#iterator) ou [const_iterator](#const_iterator) qui traite l’emplacement d’un élément dans un hash_map ayant une clé supérieure à la clé d’argument, ou qui traite l’emplacement suivant le dernier élément dans le hash_map si aucune correspondance n’est trouvée pour la clé.
 
@@ -2682,7 +2683,7 @@ Retourne un objet de fonction qui détermine l’ordre des éléments d’un has
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’objet de fonction de comparaison utilisé par un hash_map pour ordonner ses éléments.
 

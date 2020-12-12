@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe hash_set'
 title: hash_set, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 01076d29a18a2b051695955e9409d8b77d22c313
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 36bcb0e1f35fd8012ad1398a481bdae17b6d1424
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324094"
 ---
 # <a name="hash_set-class"></a>hash_set, classe
 
@@ -229,7 +230,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>Notes
 
-`allocator_type` est un synonyme de l' *allocateur*de paramètre de modèle.
+`allocator_type` est un synonyme de l' *allocateur* de paramètre de modèle.
 
 Pour plus d’informations sur *Allocator*, consultez la section Notes de la rubrique relative à la [classe hash_set](../standard-library/hash-set-class.md) .
 
@@ -250,7 +251,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel qui traite le premier élément du hash_set ou l’emplacement qui suit un hash_set vide.
 
@@ -309,7 +310,7 @@ Retourne un itérateur const qui traite le premier élément du hash_set.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel const qui traite le premier élément du [hash_set](../standard-library/hash-set-class.md) ou l’emplacement qui suit un `hash_set` vide.
 
@@ -356,7 +357,7 @@ Retourne un itérateur const qui traite l’emplacement situé après le dernier
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel const qui traite l’emplacement suivant le dernier élément d’un [hash_set](../standard-library/hash-set-class.md). Si le `hash_set` est vide, `hash_set::cend == hash_set::begin`.
 
@@ -555,7 +556,7 @@ size_type count(const Key& key) const;
 *essentiel*\
 Clé des éléments à mettre en correspondance à partir du hash_set.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 1 si la classe hash_set contient un élément dont la clé de tri correspond à la clé de paramètre.
 
@@ -614,7 +615,7 @@ Retourne un itérateur const qui traite le premier élément d’un hash_set inv
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite le premier élément d’un [hash_set](../standard-library/hash-set-class.md) inversé ou qui traite ce qui était le dernier élément de l’objet `hash_set` non inversé.
 
@@ -666,7 +667,7 @@ Retourne un itérateur const qui traite l’emplacement qui suit le dernier él�
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé const qui traite l’emplacement qui suit le dernier élément d’un [hash_set](../standard-library/hash-set-class.md) inversé (emplacement qui précédait celui du premier élément du `hash_set` non inversé).
 
@@ -804,7 +805,7 @@ emplace(
 *multiples*\
 Valeur d’un élément à insérer dans le [hash_set](../standard-library/hash-set-class.md), sauf si le `hash_set` contient déjà cet élément ou, plus généralement, un élément dont la clé est ordonnée de façon équivalente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La `emplace` fonction membre retourne une paire dont le **`bool`** composant retourne **`true`** si une insertion a été effectué et **`false`** si la propriété `hash_set` contient déjà un élément dont la clé avait une valeur équivalente dans le classement, et dont le composant itérateur retourne l’adresse où un nouvel élément a été inséré ou l’emplacement où l’élément se trouvait déjà.
 
@@ -858,7 +859,7 @@ Valeur d’un élément à insérer dans le [hash_set](../standard-library/hash-
 *_Where*\
 Emplacement où commencer à rechercher le point d'insertion correct. (L’insertion peut se produire dans le temps constant amorti, plutôt que dans le temps logarithmique, si le point d’insertion suit immédiatement *_WHERE*.)
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre [hash_set::emplace](#emplace) retourne un itérateur qui pointe vers l’emplacement où le nouvel élément a été inséré dans le `hash_set`, ou vers l’emplacement où se trouve l’élément existant avec un ordonnancement équivalent.
 
@@ -903,7 +904,7 @@ Vérifie si un hash_set est vide.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le hash_set est vide ; **`false`** si la hash_set n’est pas vide.
 
@@ -954,7 +955,7 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel qui traite l’emplacement suivant le dernier élément d’un hash_set. Si le hash_set est vide, hash_set::end == hash_set::begin.
 
@@ -1022,7 +1023,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 *essentiel*\
 Clé d’argument à comparer à la clé de tri d’un élément du hash_set dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paire d’itérateurs telle que le premier est la [lower_bound](../standard-library/set-class.md#lower_bound) de la clé et le second est la [upper_bound](../standard-library/set-class.md#upper_bound) de la clé.
 
@@ -1118,7 +1119,7 @@ Position juste après le dernier élément supprimé du hash_set.
 *essentiel*\
 Clé des éléments à supprimer du hash_set.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour les deux premières fonctions membres, il s'agit d'un itérateur bidirectionnel qui désigne le premier élément restant après tous les éléments supprimés, ou un pointeur vers la fin du hash_set si aucun élément de ce genre n'existe. Pour la troisième fonction membre, il s'agit du nombre d'éléments qui ont été supprimés du hash_set.
 
@@ -1227,7 +1228,7 @@ const_iterator find(const Key& key) const;
 *essentiel*\
 Clé d’argument qui doit correspondre à la clé de tri d’un élément du hash_set dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `iterator`Ou `const_iterator` qui traite l’emplacement d’un élément équivalent à une clé spécifiée ou qui traite l’emplacement qui suit le dernier élément de la hash_set si aucune correspondance n’est trouvée pour la clé.
 
@@ -1298,9 +1299,9 @@ Retourne une copie de l’objet allocateur utilisé pour construire le hash_set.
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Allocateur utilisé par le hash_set pour gérer la mémoire, qui est l' *allocateur*de paramètre de modèle.
+Allocateur utilisé par le hash_set pour gérer la mémoire, qui est l' *allocateur* de paramètre de modèle.
 
 Pour plus d’informations sur *Allocator*, consultez la section Notes de la rubrique relative à la [classe hash_set](../standard-library/hash-set-class.md) .
 
@@ -1494,7 +1495,7 @@ Position juste au-delà du dernier élément à copier à partir d’un `hash_se
 *IList*\
 Initializer_list depuis laquelle copier les éléments.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première `insert` fonction membre retourne une paire dont le **`bool`** composant retourne **`true`** si une insertion a été effectué et **`false`** si la propriété `hash_set` contenait déjà un élément dont la clé avait une valeur équivalente dans le classement, et dont le composant itérateur retourne l’adresse où un nouvel élément a été inséré ou l’emplacement où l’élément se trouvait déjà.
 
@@ -1538,9 +1539,9 @@ Récupère une copie de l’objet de caractéristiques de hachage utilisé pour 
 key_compare key_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne l’objet de fonction qu’un hash_set utilise pour classer ses éléments, qui sont les *caractéristiques*de paramètre de modèle.
+Retourne l’objet de fonction qu’un hash_set utilise pour classer ses éléments, qui sont les *caractéristiques* de paramètre de modèle.
 
 Pour plus d’informations sur les *caractéristiques* , consultez la rubrique relative à la [classe hash_set](../standard-library/hash-set-class.md) .
 
@@ -1616,7 +1617,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Notes
 
-`key_compare` est un synonyme des *caractéristiques*de paramètre de modèle.
+`key_compare` est un synonyme des *caractéristiques* de paramètre de modèle.
 
 Pour plus d’informations sur les *caractéristiques* , consultez la rubrique relative à la [classe hash_set](../standard-library/hash-set-class.md) .
 
@@ -1639,7 +1640,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Notes
 
-`key_type` est un synonyme de la *clé*de paramètre de modèle.
+`key_type` est un synonyme de la *clé* de paramètre de modèle.
 
 Pour plus d’informations sur la *clé*, consultez la section Notes de la rubrique relative à la [classe hash_set](../standard-library/hash-set-class.md) .
 
@@ -1667,7 +1668,7 @@ iterator lower_bound(const Key& key);
 *essentiel*\
 Clé d’argument à comparer à la clé de tri d’un élément du hash_set dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `iterator`Ou `const_iterator` qui traite l’emplacement d’un élément dans un hash_set avec une clé supérieure ou égale à la clé d’argument, ou qui traite l’emplacement qui suit le dernier élément de la hash_set si aucune correspondance n’est trouvée pour la clé.
 
@@ -1734,7 +1735,7 @@ Retourne la longueur maximale du hash_set.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur maximale autorisée du hash_set.
 
@@ -1851,7 +1852,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé qui traite le premier élément d’un hash_set inversé ou qui traite ce qui était le dernier élément du hash_set non inversé.
 
@@ -1984,7 +1985,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur bidirectionnel inversé qui traite l’emplacement qui suit le dernier élément d’un hash_set inversé (emplacement qui précédait celui du premier élément du hash_set non inversé).
 
@@ -2087,7 +2088,7 @@ Retourne le nombre d’éléments du hash_set.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur actuelle du hash_set.
 
@@ -2232,7 +2233,7 @@ iterator upper_bound(const Key& key);
 *essentiel*\
 Clé d’argument à comparer à la clé de tri d’un élément du hash_set dans lequel la recherche est effectuée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `iterator`Ou `const_iterator` qui traite l’emplacement d’un élément dans un hash_set avec une clé supérieure ou égale à la clé d’argument, ou qui traite l’emplacement qui suit le dernier élément de la hash_set si aucune correspondance n’est trouvée pour la clé.
 
@@ -2299,9 +2300,9 @@ Récupère une copie de l’objet de comparaison utilisé pour trier les valeurs
 value_compare value_comp() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Retourne l’objet de fonction qu’un hash_set utilise pour ordonner ses éléments, qui est la *comparaison*des paramètres de modèle.
+Retourne l’objet de fonction qu’un hash_set utilise pour ordonner ses éléments, qui est la *comparaison* des paramètres de modèle.
 
 Pour plus d’informations sur la *comparaison*, consultez la section Notes de la rubrique relative à la [classe hash_set](../standard-library/hash-set-class.md) .
 
@@ -2313,7 +2314,7 @@ L’objet stocké définit la fonction membre :
 
 qui retourne **`true`** la valeur si `_xVal` précède et n’est pas égal à `_yVal` dans l’ordre de tri.
 
-Notez que [value_compare](../standard-library/set-class.md#value_compare) et [key_compare](../standard-library/set-class.md#key_compare) sont synonymes de la *comparaison*des paramètres de modèle. Ces deux types sont fournis pour les classes hash_set et hash_multiset, où ils sont identiques, pour la compatibilité avec les classes hash_map et hash_multimap, où ils sont distincts.
+Notez que [value_compare](../standard-library/set-class.md#value_compare) et [key_compare](../standard-library/set-class.md#key_compare) sont synonymes de la *comparaison* des paramètres de modèle. Ces deux types sont fournis pour les classes hash_set et hash_multiset, où ils sont identiques, pour la compatibilité avec les classes hash_map et hash_multimap, où ils sont distincts.
 
 ### <a name="example"></a>Exemple
 
@@ -2377,11 +2378,11 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>Notes
 
-`value_compare` est un synonyme des *caractéristiques*de paramètre de modèle.
+`value_compare` est un synonyme des *caractéristiques* de paramètre de modèle.
 
 Pour plus d’informations sur les *caractéristiques* , consultez la rubrique relative à la [classe hash_set](../standard-library/hash-set-class.md) .
 
-Notez que les [key_compare](#key_compare) et `value_compare` sont des synonymes pour les *caractéristiques*de paramètre de modèle. Ces deux types sont fournis pour les classes hash_set et hash_multiset, où ils sont identiques, pour la compatibilité avec les classes hash_map et hash_multimap, où ils sont distincts.
+Notez que les [key_compare](#key_compare) et `value_compare` sont des synonymes pour les *caractéristiques* de paramètre de modèle. Ces deux types sont fournis pour les classes hash_set et hash_multiset, où ils sont identiques, pour la compatibilité avec les classes hash_map et hash_multimap, où ils sont distincts.
 
 ### <a name="example"></a>Exemple
 

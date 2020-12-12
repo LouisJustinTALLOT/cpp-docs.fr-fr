@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : feclearexcept'
 title: feclearexcept1
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 09eb34ddb781a40418152ec8cc6893074c58a617
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322587"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -46,10 +47,10 @@ int feclearexcept(
 
 ### <a name="parameters"></a>Paramètres
 
-*excepts*<br/>
+*sauf*<br/>
 Indicateurs d’état d’exception à effacer.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne zéro si *except* est égal à zéro, ou si toutes les exceptions spécifiées ont été correctement effacées. Sinon, retourne une valeur différente de zéro.
 
@@ -68,7 +69,7 @@ La fonction **feclearexcept** tente d’effacer les indicateurs d’état d’ex
 
 L’argument *EXCEPTS* peut être égal à zéro ou au niveau du bit ou d’une ou plusieurs des macros d’exception prises en charge. Le résultat de toute autre valeur d’argument est indéfini.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
@@ -78,5 +79,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [fetestexcept](fetestexcept1.md)<br/>

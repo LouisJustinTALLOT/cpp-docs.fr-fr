@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : Guide de Portage : COM Spy'
 title: 'Guide du portage : COMSpy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: c21049a2faa8bb34ecd1ba75a5beda1db119f0fc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 69a97a04d255e64fdde0d863e637d72dfb238967
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322632"
 ---
 # <a name="porting-guide-com-spy"></a>Guide du portage : COMSpy
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation des classes pour écrire des applications pour Windows'
 title: Utilisation des classes pour l'écriture d'applications pour Windows
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,40 +10,40 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b94155b565872b614efa291699cecbaf4770fdaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411472"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322710"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>Utilisation des classes pour l'écriture d'applications pour Windows
 
-Prises ensemble, les classes dans la bibliothèque Microsoft Foundation classes (MFC) constituent une « infrastructure d’application », sur lequel vous créez une application pour le système d’exploitation Windows. À un niveau très général, le framework définit la structure d’une application et fournit des implémentations d’interface utilisateur standard qui peuvent être placées sur le squelette. Votre travail en tant que programmeur consiste à remplir le reste de la structure, qui sont des composants qui sont spécifiques à votre application. Vous pouvez obtenir un point de départ à l’aide de l’Assistant Application MFC pour créer les fichiers pour une application de départ très complète. Les éditeurs de ressources de Microsoft Visual C++ pour concevoir vos éléments d’interface utilisateur visuellement, commandes d’affichage de classes pour connecter ces éléments au code et la bibliothèque de classes vous permet d’implémenter votre logique spécifique à l’application.
+Pris ensemble, les classes de la bibliothèque MFC (Microsoft Foundation Class) constituent une « infrastructure d’application », sur laquelle vous générez une application pour le système d’exploitation Windows. À un niveau très général, le Framework définit la structure d’une application et fournit des implémentations standard de l’interface utilisateur qui peuvent être placées sur la structure. Votre travail en tant que programmeur est de remplir le reste du squelette, qui sont les éléments spécifiques à votre application. Vous pouvez commencer à utiliser l’Assistant Application MFC pour créer les fichiers d’une application de démarrage très approfondie. Vous utilisez les Microsoft Visual C++ éditeurs de ressources pour concevoir visuellement vos éléments d’interface utilisateur, Affichage de classes des commandes pour connecter ces éléments au code, et la bibliothèque de classes pour implémenter la logique spécifique à votre application.
 
-Version 3.0 et versions ultérieure de l’infrastructure MFC prend en charge la programmation pour les plateformes Win32, y compris Microsoft Windows 95 et versions ultérieures et Windows NT versions 3.51 et ultérieures. Prise en charge de MFC Win32 inclut le multithreading. Utilisez la version 1.5*x* si vous avez besoin effectuer la programmation de 16 bits.
+La version 3,0 et les versions ultérieures de l’infrastructure MFC prennent en charge la programmation pour les plateformes Win32, notamment Microsoft Windows 95 et versions ultérieures, et Windows NT versions 3,51 et ultérieures. La prise en charge de MFC Win32 comprend le multithread. Utilisez la version 1,5 *x* si vous devez programmer 16 bits.
 
-Cette série d’articles présente une vue d’ensemble de l’infrastructure d’application. Il explore également les objets principaux qui composent votre application et comment ils sont créés. Parmi les sujets abordés dans ces articles sont les suivantes :
+Cette famille d’articles présente une vue d’ensemble générale de l’infrastructure d’application. Il explore également les principaux objets qui composent votre application et la façon dont ils sont créés. Parmi les sujets abordés dans ces articles, citons les suivantes :
 
-- [Le framework](../mfc/framework-mfc.md).
+- [Framework](../mfc/framework-mfc.md).
 
-- Répartition des tâches entre l’infrastructure et votre code, comme décrit dans [création sur Framework](../mfc/building-on-the-framework.md).
+- Division du travail entre l’infrastructure et votre code, comme décrit dans [génération sur le Framework](../mfc/building-on-the-framework.md).
 
-- [La classe application](../mfc/cwinapp-the-application-class.md), qui encapsule les fonctionnalités de niveau application.
+- [La classe d’application](../mfc/cwinapp-the-application-class.md), qui encapsule les fonctionnalités au niveau de l’application.
 
-- Comment [modèles de document](../mfc/document-templates-and-the-document-view-creation-process.md) créer et gérer des documents et leurs vues associées et fenêtres frame.
+- Comment les [modèles de document](../mfc/document-templates-and-the-document-view-creation-process.md) créent et gèrent des documents et leurs vues et fenêtres Frame associées.
 
 - Classe [CWnd](../mfc/window-objects.md), la classe de base racine de toutes les fenêtres.
 
-- [Objets graphiques](../mfc/graphic-objects.md), tels que des stylets et des pinceaux.
+- [Objets graphiques](../mfc/graphic-objects.md), tels que les stylets et les pinceaux.
 
-Autres parties de l’infrastructure sont les suivantes :
+Les autres parties de l’infrastructure sont les suivantes :
 
 - [Objets de fenêtre : vue d’ensemble](../mfc/window-objects.md)
 
-- [Mappage et gestion des messages](../mfc/message-handling-and-mapping.md)
+- [Gestion et mappage des messages](../mfc/message-handling-and-mapping.md)
 
-- [CObject, la classe de Base racine dans MFC](../mfc/using-cobject.md)
+- [CObject, la classe de base racine dans MFC](../mfc/using-cobject.md)
 
 - [Architecture document/vue](../mfc/document-view-architecture.md)
 
@@ -56,20 +57,20 @@ Autres parties de l’infrastructure sont les suivantes :
 
 - [Gestion de la mémoire](../mfc/memory-management.md)
 
-   Outre ce qui vous donne un avantage à écrire des applications pour le système d’exploitation Windows, MFC rend également beaucoup plus facile d’écrire des applications qui utilisent spécifiquement de liaison et incorporation technologie OLE. Vous pouvez rendre votre application OLE visual modification du conteneur, un serveur d’édition visuelle OLE ou les deux, et vous pouvez ajouter Automation afin que les autres applications peuvent utiliser des objets à partir de votre application ou même le lecteur à distance.
+   En plus de vous donner un avantage à l’écriture d’applications pour le système d’exploitation Windows, MFC facilite également l’écriture d’applications qui utilisent spécifiquement la technologie de liaison et d’incorporation OLE. Vous pouvez faire de votre application un conteneur d’édition visuelle OLE, un serveur d’édition visuelle OLE, ou les deux, et vous pouvez ajouter l’automatisation afin que d’autres applications puissent utiliser des objets de votre application ou même les piloter à distance.
 
 - [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
 
-   Le kit de développement de contrôle OLE (CDK) est maintenant entièrement intégré à l’infrastructure. Famille de cet article fournit une vue d’ensemble du développement de contrôles ActiveX avec MFC. (Les contrôles ActiveX ont été anciennement contrôles OLE.)
+   Le kit de développement de contrôle OLE (CDK) est maintenant entièrement intégré à l’infrastructure. Cette famille d’articles fournit une vue d’ensemble du développement de contrôles ActiveX avec MFC. (Les contrôles ActiveX étaient auparavant appelés contrôles OLE.)
 
 - [Programmation de base de données](../data/data-access-programming-mfc-atl.md)
 
-   MFC fournit également deux ensembles de classes de base de données qui simplifient l’écriture d’accès aux données des applications. À l’aide des classes de base de données ODBC, vous pouvez vous connecter aux bases de données via un pilote Open Database Connectivity (ODBC), sélectionner des enregistrements de tables et afficher les informations de l’enregistrement dans un formulaire à l’écran. En utilisant les classes d’objet DAO (Data Access), vous pouvez manipuler les bases de données via le moteur de base de données Microsoft Jet ou les sources de données de (non Jet) externes, y compris les sources de données ODBC.
+   MFC fournit également deux ensembles de classes de base de données qui simplifient l’écriture d’applications d’accès aux données. À l’aide des classes de base de données ODBC, vous pouvez vous connecter aux bases de données via un pilote Open Database Connectivity (ODBC), sélectionner des enregistrements dans des tables et afficher les informations sur les enregistrements dans un formulaire à l’écran. À l’aide des classes d’objets d’accès aux données (DAO), vous pouvez travailler avec des bases de données à l’aide du moteur de base de données Microsoft Jet ou de sources de données externes (non-jet), y compris les sources de données ODBC.
 
-   En outre, MFC est entièrement activé pour écrire des applications qui utilisent Unicode et jeux de caractères multioctets (MBCS), spécifiquement double jeux de caractères (DBCS).
+   En outre, MFC est entièrement activé pour l’écriture d’applications utilisant Unicode et les jeux de caractères multioctets (MBCS), en particulier les jeux de caractères codés sur deux octets (DBCS).
 
-Pour obtenir une aide générale à la documentation de MFC, consultez [Rubriques MFC générales](../mfc/general-mfc-topics.md).
+Pour obtenir un guide général de la documentation MFC, consultez les [rubriques générales sur MFC](../mfc/general-mfc-topics.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Rubriques MFC générales](../mfc/general-mfc-topics.md)
+[Rubriques générales sur MFC](../mfc/general-mfc-topics.md)

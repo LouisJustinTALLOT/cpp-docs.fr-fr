@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : contrôle d’application'
 title: Contrôle d'application
 ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 40ac3b6871d13420797279629a2661b22545d1d8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 20a777f5b7bb20870e9156ee090ff24ec4690f14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832371"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322822"
 ---
 # <a name="application-control"></a>Contrôle d'application
 
@@ -50,7 +51,7 @@ Une application ne doit pas se terminer s’il existe des références en suspen
 
 [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: afxdisp. h
 
@@ -76,7 +77,7 @@ Appelez cette fonction pour accéder à l' `COleMessageFilter` objet dérivé de
 
 [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête**: AFXWIN. h
 
@@ -96,7 +97,7 @@ Différent de zéro si l’utilisateur est dans le contrôle de l’application�
 
 L’utilisateur contrôle l’application lorsque l’utilisateur a explicitement ouvert ou créé un nouveau document. L’utilisateur contrôle également si l’application n’a pas été lancée par les dll du système OLE, en d’autres termes, si l’utilisateur a lancé l’application avec l’interpréteur de commandes système.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête**: afxdisp. h
 
@@ -119,7 +120,7 @@ L’infrastructure appelle cette fonction lorsque l’utilisateur crée ou charg
 
 Appelez cette fonction si d’autres actions dans votre application doivent mettre l’utilisateur au contrôle de l’application.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête**: afxdisp. h
 
@@ -143,7 +144,7 @@ Appelez `AfxOleLockApp` à partir de n’importe quel objet qui expose des inter
 
 [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête**: afxdisp. h
 
@@ -165,7 +166,7 @@ Lorsque le nombre d’objets actifs atteint zéro, `AfxOleOnReleaseAllObjects` e
 
 Consultez l’exemple pour [AfxOleLockApp](#afxolelockapp).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête**: afxdisp. h
 
@@ -182,7 +183,7 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
+*identificateur*<br/>
 ID de classe unique du contrôle.
 
 *lpszProgID*<br/>
@@ -206,7 +207,7 @@ Cela peut considérablement accélérer l’affichage des contrôles. Par exempl
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -227,7 +228,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
+*identificateur*<br/>
 Référence à l’ID de classe OLE du serveur.
 
 *lpszClassName*<br/>
@@ -276,7 +277,7 @@ Les symboles sont remplis comme suit :
 |4|Nom de type abrégé|
 |%5|Nom de type long|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête**: afxdisp. h
 
@@ -322,7 +323,7 @@ Vous devez disposer de l’instruction suivante dans le script de ressources de 
 
 **#include \<afxolecl.rc>**
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête**: AFXOLE. h
 
@@ -339,7 +340,7 @@ BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
+*identificateur*<br/>
 ID de classe unique du contrôle.
 
 *lpszProgID*<br/>
@@ -361,7 +362,7 @@ Un contrôle est verrouillé avec `AfxOleLockControl` , de sorte que les donnée
 AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 

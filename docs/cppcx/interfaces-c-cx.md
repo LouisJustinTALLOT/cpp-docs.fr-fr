@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : interfaces (C++/CX)'
 title: Interfaces (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: df010468d5e90fe61ac2cf57c754ac5ed01b1c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 590b1b80ada186f90bfd38ed9dcdc8a35c34020f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320931"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 
@@ -89,7 +90,7 @@ Voici comment les types de Windows Runtime peuvent être utilisés pour créer u
 
 - Une interface générique fermée possède un UUID généré implicitement. Un utilisateur ne peut pas spécifier un UUID.
 
-- Dans l'interface, il est supposé que toute référence à l'interface actuelle, dans un paramètre de méthode, une valeur de retour ou une propriété, fait référence à l'instanciation actuelle. Par exemple, *IMyIntf* signifie *IMyIntf \<T> *.
+- Dans l'interface, il est supposé que toute référence à l'interface actuelle, dans un paramètre de méthode, une valeur de retour ou une propriété, fait référence à l'instanciation actuelle. Par exemple, *IMyIntf* signifie *IMyIntf \<T>*.
 
 - Lorsque le type d'un paramètre de méthode est un paramètre de type, la déclaration de ce paramètre ou de cette variable utilise le nom du paramètre de type sans pointeur, référence native ou déclarateur de handle. En d'autres termes, vous ne devez jamais écrire « T^ ».
 

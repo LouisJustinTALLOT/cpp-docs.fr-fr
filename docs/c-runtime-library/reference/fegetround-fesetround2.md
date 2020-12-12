@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fegetround, fesetround'
 title: fegetround, fesetround
 ms.date: 04/05/2018
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-ms.openlocfilehash: b210dbce3104820f667d4ad0b4421277567b279f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3c112efc1c380ac4ce4495f4365e2a47a1d8fd2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941210"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322548"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -55,7 +56,7 @@ int fesetround(
 *round_mode*<br/>
 Mode d’arrondi à définir, comme l’une des macros d’arrondi à virgule flottante. Si la valeur n’est pas égale à l’une des macros d’arrondi à virgule flottante, le mode d’arrondi n’est pas modifié.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, **fegetround** retourne le mode d’arrondi comme l’une des valeurs de macros d’arrondi à virgule flottante. Une valeur négative est retournée s’il est impossible de déterminer le mode d’arrondi actuel.
 
@@ -63,7 +64,7 @@ En cas de réussite, **fesetround** retourne 0. Sinon, une valeur non nulle est 
 
 ## <a name="remarks"></a>Notes
 
-Les opérations à virgule flottante peuvent utiliser l’un des différents modes d’arrondi. Ils contrôlent la direction dans laquelle les résultats des opérations à virgule flottante sont arrondis lors du stockage des résultats. Voici les noms et les comportements des macros d’arrondi à virgule flottante définies dans \<fenv.h> :
+Les opérations à virgule flottante peuvent utiliser l’un des différents modes d’arrondi. Ils contrôlent la direction dans laquelle les résultats des opérations à virgule flottante sont arrondis lors du stockage des résultats. Voici les noms et les comportements des macros d’arrondi à virgule flottante définies dans \<fenv.h> :
 
 |Macro|Description|
 |-----------|-----------------|
@@ -86,15 +87,15 @@ Le mode d’arrondi actuel affecte ces opérations :
 
 Le mode d’arrondi actuel n’affecte pas ces opérations :
 
-- Fonctions de la bibliothèque **trunc**, **ceil**, **Floor**et **lround** .
+- Fonctions de la bibliothèque **trunc**, **ceil**, **Floor** et **lround** .
 
 - Casts et conversions implicites entre des valeurs à virgule flottante et entières, toujours arrondies à zéro.
 
 - Résultats des opérateurs arithmétiques à virgule flottante dans des expressions constantes, toujours arrondis à la valeur la plus proche.
 
-Pour utiliser ces fonctions, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d’informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
+Pour utiliser ces fonctions, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
@@ -104,7 +105,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
 [rint, rintf, rintl](rint-rintf-rintl.md)<br/>
 [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_fstream'
 title: basic_fstream, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::basic_fstream [C++], rdbuf
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
-ms.openlocfilehash: a2b62b85953a5f4ec829053c8af93582eec76618
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: df8ad83696422737b5b368b39bf21c82506e8b65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321571"
 ---
 # <a name="basic_fstream-class"></a>basic_fstream, classe
 
@@ -93,7 +94,7 @@ Writing to a basic_fstream object...
 
 |Fonction membre|Description|
 |-|-|
-|[plus](#close)|Ferme un fichier.|
+|[close](#close)|Ferme un fichier.|
 |[is_open](#is_open)|Détermine si un fichier est ouvert.|
 |[open](#open)|Ouvre un fichier.|
 |[rdbuf](#rdbuf)|Retourne l’adresse de la mémoire tampon de flux stockée, de type pointeur vers [basic_filebuf](../standard-library/basic-filebuf-class.md) <  `Elem` , `Tr`>.|
@@ -105,7 +106,7 @@ Writing to a basic_fstream object...
 
 **Espace de noms :** std
 
-## <a name="basic_fstreambasic_fstream"></a><a name="basic_fstream"></a>basic_fstream :: basic_fstream
+## <a name="basic_fstreambasic_fstream"></a><a name="basic_fstream"></a> basic_fstream :: basic_fstream
 
 Construit un objet de type `basic_fstream`.
 
@@ -148,7 +149,7 @@ Le quatrième constructeur initialise l’objet avec le contenu de `right`, trai
 
 Consultez [streampos](../standard-library/ios-typedefs.md#streampos) pour obtenir un exemple qui utilise `basic_fstream`.
 
-## <a name="basic_fstreamclose"></a><a name="close"></a>basic_fstream :: Close
+## <a name="basic_fstreamclose"></a><a name="close"></a> basic_fstream :: Close
 
 Ferme un fichier.
 
@@ -164,7 +165,7 @@ La fonction membre appelle [rdbuf](#rdbuf) **->** [Close](../standard-library/ba
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `close`.
 
-## <a name="basic_fstreamis_open"></a><a name="is_open"></a>basic_fstream :: is_open
+## <a name="basic_fstreamis_open"></a><a name="is_open"></a> basic_fstream :: is_open
 
 Détermine si un fichier est ouvert.
 
@@ -172,7 +173,7 @@ Détermine si un fichier est ouvert.
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le fichier est ouvert ; **`false`** sinon,.
 
@@ -184,7 +185,7 @@ La fonction membre retourne [rdbuf](#rdbuf) **->** [is_open](../standard-library
 
 Consultez [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) pour obtenir un exemple d’utilisation de `is_open`.
 
-## <a name="basic_fstreamopen"></a><a name="open"></a>basic_fstream :: Open
+## <a name="basic_fstreamopen"></a><a name="open"></a> basic_fstream :: Open
 
 Ouvre un fichier.
 
@@ -227,7 +228,7 @@ La fonction membre appelle [rdbuf](#rdbuf) **->** [Open](../standard-library/bas
 
 Pour obtenir un exemple d’utilisation de, consultez [basic_filebuf :: Open](../standard-library/basic-filebuf-class.md#open) `open` .
 
-## <a name="basic_fstreamoperator"></a><a name="op_eq"></a>basic_fstream :: Operator =
+## <a name="basic_fstreamoperator"></a><a name="op_eq"></a> basic_fstream :: Operator =
 
 Assigne à cet objet le contenu d'un objet de flux spécifié. Il s'agit d'une assignation de déplacement qui implique une rvalue qui ne laisse pas de copie.
 
@@ -240,7 +241,7 @@ basic_fstream& operator=(basic_fstream&& right);
 *Oui*\
 Référence lvalue à un objet `basic_fstream`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne **`*this`** .
 
@@ -248,7 +249,7 @@ Retourne **`*this`** .
 
 L’opérateur membre remplace le contenu de l’objet à l’aide du contenu de *droite*, traité comme une référence rvalue.
 
-## <a name="basic_fstreamrdbuf"></a><a name="rdbuf"></a>basic_fstream :: rdbuf
+## <a name="basic_fstreamrdbuf"></a><a name="rdbuf"></a> basic_fstream :: rdbuf
 
 Retourne l’adresse de la mémoire tampon de flux stockée, de type pointeur vers [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**> .
 
@@ -256,7 +257,7 @@ Retourne l’adresse de la mémoire tampon de flux stockée, de type pointeur ve
 basic_filebuf<Elem, Tr> *rdbuf() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Adresse de la mémoire tampon de flux stockée.
 
@@ -264,7 +265,7 @@ Adresse de la mémoire tampon de flux stockée.
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `rdbuf`.
 
-## <a name="basic_fstreamswap"></a><a name="swap"></a>basic_fstream :: swap
+## <a name="basic_fstreamswap"></a><a name="swap"></a> basic_fstream :: swap
 
 Échange le contenu de deux objets `basic_fstream`.
 

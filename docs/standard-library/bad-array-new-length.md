@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe bad_array_new_length'
 title: Classe bad_array_new_length
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: c4f4f58f7b28960bbacf695a675fbe4f20a54192
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e9de10b6fee215651ac8ff6ce2fce4af55ce6c82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321638"
 ---
 # <a name="bad_array_new_length-class"></a>Classe bad_array_new_length
 
@@ -32,9 +33,9 @@ La valeur retournée par `what` est une chaîne C définie par l’implémentati
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<nouveau >
+**En-tête :**\<new>
 
 ## <a name="see-also"></a>Voir aussi
 
-\ de la [classe d’exception](../standard-library/exception-class.md)
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Classe d’exception](../standard-library/exception-class.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

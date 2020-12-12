@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _strdup, _wcsdup _mbsdup'
 title: _strdup, _wcsdup, _mbsdup
 ms.date: 4/2/2020
 api_name:
@@ -48,19 +49,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: 42b4a890c1c7f350b83bb92a548d716ee6d9ebfc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b080f614f46aabc63e798c16113cffe45008047d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322444"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Duplique les chaînes.
 
 > [!IMPORTANT]
-> **_mbsdup** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [fonctions CRT non prises en charge dans les applications plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsdup** ne peut pas être utilisé dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez                  [fonctions CRT non prises en charge dans les applications plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,11 +82,11 @@ unsigned char *_mbsdup(
 *strSource*<br/>
 Chaîne source se terminant par null.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne un pointeur vers l’emplacement de stockage de la chaîne copiée ou **null** si le stockage ne peut pas être alloué.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_strdup** appelle [malloc](malloc.md) pour allouer de l’espace de stockage pour une copie de *strSource* , puis copie *strSource* dans l’espace alloué.
 

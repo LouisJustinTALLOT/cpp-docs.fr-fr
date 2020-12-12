@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les flux d’entrée
 title: Flux d'entrée
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-ms.openlocfilehash: 5dc3fa0af76f73897fe1181d944eb34c8d05bc64
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f7e6d41b904b2d28893637681e3c751d24aef441
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323960"
 ---
 # <a name="input-streams"></a>Flux d'entrée
 
@@ -30,7 +31,7 @@ Comme la fonction de bibliothèque `sscanf_s`, la classe `istringstream` prend e
 
 [Utilisation d’opérateurs d’extraction](../standard-library/using-extraction-operators.md)
 
-[Tester les erreurs d’extraction](../standard-library/testing-for-extraction-errors.md)
+[Test des erreurs d’extraction](../standard-library/testing-for-extraction-errors.md)
 
 [Manipulateurs de flux d’entrée](../standard-library/input-stream-manipulators.md)
 

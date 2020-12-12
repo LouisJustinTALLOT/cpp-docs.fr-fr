@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : IsDigit, iswdigit, _isdigit_l, _iswdigit_l'
 title: isdigit, iswdigit, _isdigit_l, _iswdigit_l
 ms.date: 4/2/2020
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-ms.openlocfilehash: 70a370068ca05c430845a8eba83a73498384b067
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3c0b2695f76a9dff1a4502e51938c428dc971fb8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321098"
 ---
 # <a name="isdigit-iswdigit-_isdigit_l-_iswdigit_l"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 
@@ -77,13 +78,13 @@ int _iswdigit_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère de chiffre décimal. **IsDigit** retourne une valeur différente de zéro si *c* est un chiffre décimal (0-9). **iswdigit** retourne une valeur différente de zéro si *c* est un caractère élargi qui correspond à un chiffre décimal. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
@@ -98,7 +99,7 @@ Le comportement de **IsDigit** et **_isdigit_l** n’est pas défini si *c* n’
 |**_istdigit**|**isdigit**|[_ismbcdigit](ismbcalnum-functions.md)|**iswdigit**|
 |**_istdigit_l**|**_isdigit_l**|[_ismbcdigit_l](ismbcalnum-functions.md)|**_iswdigit_l**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -115,6 +116,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Classification des caractères](../../c-runtime-library/character-classification.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>

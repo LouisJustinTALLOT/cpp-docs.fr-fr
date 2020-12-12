@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCRibbonSeparator'
 title: CMFCRibbonSeparator, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: db8e7f92089d1e6332fdb2ad057398c465c72f97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831799"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321746"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator, classe
 
@@ -91,7 +92,7 @@ Appelez [CMFCRibbonPanel :: AddSeparator](../../mfc/reference/cmfcribbonpanel-c
 
 [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxbaseribbonelement.h
 

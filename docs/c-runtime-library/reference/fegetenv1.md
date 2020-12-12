@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fegetenv'
 title: fegetenv
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-ms.openlocfilehash: b2e3566eb96174d0f0ccd6beb401824cc052c995
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f4d6ab3de440d2d8d7e145111339577f04699f8b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322574"
 ---
 # <a name="fegetenv"></a>fegetenv
 
@@ -49,7 +50,7 @@ int fegetenv(
 *penv*<br/>
 Pointeur vers un objet **fenv_t** pour contenir les valeurs d’environnement à virgule flottante actuelles.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 si l’environnement à virgule flottante a été correctement stocké dans *penv*. Sinon, retourne une valeur différente de zéro.
 
@@ -59,7 +60,7 @@ La fonction **fegetenv** stocke l’environnement à virgule flottante actuel da
 
 Pour utiliser cette fonction, vous devez désactiver les optimisations à virgule flottante qui peuvent empêcher l’accès à l’aide de la directive `#pragma fenv_access(on)` avant l’appel. Pour plus d'informations, consultez [fenv_access](../../preprocessor/fenv-access.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
@@ -69,5 +70,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [fesetenv](fesetenv1.md)<br/>

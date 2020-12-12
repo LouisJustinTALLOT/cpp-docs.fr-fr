@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création d’un projet pour le fournisseur'
 title: Création d'un projet pour le fournisseur
 ms.date: 10/22/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, projects
 - projects [C++], creating
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
-ms.openlocfilehash: f2ff42ba8a2e908f672db7e96fc9f24f51a1fd9b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9094e4bfc57838425793fac0c009ed70259dcb3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323244"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Création d'un projet pour le fournisseur
 
@@ -21,10 +22,10 @@ ms.locfileid: "80211404"
 
    La boîte de dialogue **Nouveau projet** apparaît.
 
-1. Dans le volet **types de projets** , cliquez sur le dossier **installé** > **Visual C++**  > **MFC/ATL** . Dans le volet **modèles** , cliquez sur **projet ATL**.
+1. Dans le volet **types de projets** , cliquez sur le dossier **installé**  >  **Visual C++**  >  **MFC/ATL** . Dans le volet **modèles** , cliquez sur **projet ATL**.
 
     > [!NOTE]
-    > Dans les versions précédentes de Visual Studio, recherchez le type de projet sous **installé** > **modèles** > **Visual C++**  > **ATL**.
+    > Dans les versions précédentes de Visual Studio, recherchez le type de projet sous modèles **installés**  >    >  **Visual C++**  >  **ATL**.
 
 1. Dans la zone **nom** , entrez un nom pour le projet, puis cliquez sur **OK**.
 
@@ -36,4 +37,4 @@ ms.locfileid: "80211404"
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d’un fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+[Création d’un fournisseur de OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

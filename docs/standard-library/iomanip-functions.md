@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les fonctions suivantes : &lt; iomanip &gt;'
 title: '&lt;iomanip&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: f540b311cafd59935a9cf1e521d3dbd558f59673
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9ddcea6b524c0413bc1c68c2b75ec910b529d22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323926"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;, fonctions
 
@@ -155,7 +156,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *Str*\
 Un littéral de type std :: String, char \* , String ou RAW, ou une version étendue de l’un d’entre eux (par exemple, std :: wstring, wchar_t \* ).
 
-*limite*\
+*delimiter*\
 Caractère spécifié par l'utilisateur ou caractère large à utiliser comme délimiteur de début et de fin de chaîne.
 
 *sortie*\

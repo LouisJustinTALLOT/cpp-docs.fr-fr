@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CAnimateCtrl, classe'
 title: CAnimateCtrl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 651b5775886374f3fcc95ab6b2cb3d892d9d77e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fe63e30ae53e6f5b3d308c8e09f0bfbaad76b2ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322744"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl, classe
 
@@ -56,7 +57,7 @@ class CAnimateCtrl : public CWnd
 |[CAnimateCtrl :: Close](#close)|Ferme le clip AVI.|
 |[CAnimateCtrl :: Create](#create)|Crée un contrôle d’animation et l’attache à un `CAnimateCtrl` objet.|
 |[CAnimateCtrl :: CreateEx](#createex)|Crée un contrôle d’animation avec les styles étendus Windows spécifiés et l’attache à un `CAnimateCtrl` objet.|
-|[CAnimateCtrl :: IsPlaying](#isplaying)|Indique si un clip AVI (Audio-Video entrelacé) est en lecture.|
+|[CAnimateCtrl :: IsPlaying](#isplaying)|Indique si un clip Audio-Video entrelacé (AVI) est lu.|
 |[CAnimateCtrl :: Open](#open)|Ouvre un clip AVI à partir d’un fichier ou d’une ressource et affiche la première image.|
 |[CAnimateCtrl ::P poser](#play)|Lit le clip AVI sans son.|
 |[CAnimateCtrl :: Seek](#seek)|Affiche une image unique sélectionnée du clip AVI.|
@@ -102,7 +103,7 @@ Pour plus d’informations sur l’utilisation de `CAnimateCtrl` , consultez [co
 
 **En-tête :** afxcmn.h
 
-## <a name="canimatectrlcanimatectrl"></a><a name="canimatectrl"></a>CAnimateCtrl :: CAnimateCtrl
+## <a name="canimatectrlcanimatectrl"></a><a name="canimatectrl"></a> CAnimateCtrl :: CAnimateCtrl
 
 Construit un objet `CAnimateCtrl`.
 
@@ -118,7 +119,7 @@ Vous devez appeler la fonction membre [Create](#create) avant de pouvoir effectu
 
 [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]
 
-## <a name="canimatectrlclose"></a><a name="close"></a>CAnimateCtrl :: Close
+## <a name="canimatectrlclose"></a><a name="close"></a> CAnimateCtrl :: Close
 
 Ferme le clip AVI précédemment ouvert dans le contrôle d’animation (le cas échéant) et le supprime de la mémoire.
 
@@ -126,7 +127,7 @@ Ferme le clip AVI précédemment ouvert dans le contrôle d’animation (le cas 
 BOOL Close();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -134,7 +135,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
   Consultez l’exemple de [CAnimateCtrl :: CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlcreate"></a><a name="create"></a>CAnimateCtrl :: Create
+## <a name="canimatectrlcreate"></a><a name="create"></a> CAnimateCtrl :: Create
 
 Crée un contrôle d’animation et l’attache à un `CAnimateCtrl` objet.
 
@@ -160,7 +161,7 @@ Spécifie la fenêtre parente du contrôle d’animation, généralement `CDialo
 *nID*<br/>
 Spécifie l’ID du contrôle d’animation.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -184,7 +185,7 @@ Outre les styles de fenêtre listés ci-dessus, vous pouvez appliquer un ou plus
 
   Consultez l’exemple de [CAnimateCtrl :: CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlcreateex"></a><a name="createex"></a>CAnimateCtrl :: CreateEx
+## <a name="canimatectrlcreateex"></a><a name="createex"></a> CAnimateCtrl :: CreateEx
 
 Crée un contrôle (une fenêtre enfant) et l’associe à l' `CAnimateCtrl` objet.
 
@@ -214,7 +215,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 *nID*<br/>
 ID de la fenêtre enfant du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -222,15 +223,15 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Utilisez `CreateEx` au lieu de [Create](#create) pour appliquer des styles Windows étendus, spécifiés par la préversion de style étendu Windows **WS_EX_**.
 
-## <a name="canimatectrlisplaying"></a><a name="isplaying"></a>CAnimateCtrl :: IsPlaying
+## <a name="canimatectrlisplaying"></a><a name="isplaying"></a> CAnimateCtrl :: IsPlaying
 
-Indique si un clip AVI (Audio-Video entrelacé) est en lecture.
+Indique si un clip Audio-Video entrelacé (AVI) est lu.
 
 ```
 BOOL IsPlaying() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si un clip AVI est lu ; Sinon, FALSe.
 
@@ -238,7 +239,7 @@ TRUE si un clip AVI est lu ; Sinon, FALSe.
 
 Cette méthode envoie le message [ACM_ISPLAYING](/windows/win32/Controls/acm-isplaying) , qui est décrit dans le SDK Windows.
 
-## <a name="canimatectrlopen"></a><a name="open"></a>CAnimateCtrl :: Open
+## <a name="canimatectrlopen"></a><a name="open"></a> CAnimateCtrl :: Open
 
 Appelez cette fonction pour ouvrir un clip AVI et afficher son premier frame.
 
@@ -255,7 +256,7 @@ BOOL Open(UINT nID);
 *nID*<br/>
 Identificateur de ressource AVI. Si ce paramètre a la valeur NULL, le système ferme le clip AVI précédemment ouvert pour le contrôle d’animation, le cas échéant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -263,7 +264,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 La ressource AVI est chargée à partir du module qui a créé le contrôle d’animation.
 
-`Open`ne prend pas en charge le son dans un clip AVI. vous ne pouvez ouvrir que des clips AVI en mode silencieux.
+`Open` ne prend pas en charge le son dans un clip AVI. vous ne pouvez ouvrir que des clips AVI en mode silencieux.
 
 Si le contrôle d’animation a le `ACS_AUTOPLAY` style, le contrôle d’animation commence automatiquement la diffusion du clip immédiatement après son ouverture. Il continuera de lire le clip en arrière-plan pendant que votre thread continue de s’exécuter. Lorsque la séquence est terminée, elle est automatiquement répétée.
 
@@ -275,7 +276,7 @@ Si le contrôle d’animation a le `ACS_TRANSPARENT` style, le premier frame est
 
   Consultez l’exemple de [CAnimateCtrl :: CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlplay"></a><a name="play"></a>CAnimateCtrl ::P poser
+## <a name="canimatectrlplay"></a><a name="play"></a> CAnimateCtrl ::P poser
 
 Appelez cette fonction pour lire un clip AVI dans un contrôle d’animation.
 
@@ -297,7 +298,7 @@ Index de base zéro de la trame dans laquelle la diffusion se termine. La valeur
 *nRep*<br/>
 Nombre de relectures du clip AVI. La valeur-1 signifie relire le fichier indéfiniment.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -309,7 +310,7 @@ Le contrôle animation lira le clip en arrière-plan pendant que votre thread co
 
   Consultez l’exemple de [CAnimateCtrl :: CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlseek"></a><a name="seek"></a>CAnimateCtrl :: Seek
+## <a name="canimatectrlseek"></a><a name="seek"></a> CAnimateCtrl :: Seek
 
 Appelez cette fonction pour afficher de manière statique une image unique de votre clip AVI.
 
@@ -322,7 +323,7 @@ BOOL Seek(UINT nTo);
 *nPour*<br/>
 Index de base zéro du frame à afficher. La valeur doit être inférieure à 65 536. La valeur 0 signifie que affiche la première image du clip AVI. La valeur-1 signifie que affiche la dernière image du clip AVI.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -334,7 +335,7 @@ Si le contrôle d’animation a le `ACS_TRANSPARENT` style, le clip AVI est dess
 
 Consultez l’exemple de [CAnimateCtrl :: CAnimateCtrl](#canimatectrl).
 
-## <a name="canimatectrlstop"></a><a name="stop"></a>CAnimateCtrl :: Stop
+## <a name="canimatectrlstop"></a><a name="stop"></a> CAnimateCtrl :: Stop
 
 Appelez cette fonction pour arrêter la diffusion d’un clip AVI dans un contrôle d’animation.
 
@@ -342,7 +343,7 @@ Appelez cette fonction pour arrêter la diffusion d’un clip AVI dans un contr�
 BOOL Stop();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 

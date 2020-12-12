@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : IsBlank, iswblank, _isblank_l, _iswblank_l'
 title: isblank, iswblank, _isblank_l, _iswblank_l
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: 1c45319d7da48fad21af5375b0c310330d0f575a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a2731468cda3a2d3bf059133f116b22fa2b019f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321111"
 ---
 # <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
@@ -65,13 +66,13 @@ int _iswblank_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un espace ou d’un caractère de tabulation horizontale, ou est l’un des jeux de caractères spécifiques aux paramètres régionaux utilisés pour séparer les mots dans une ligne de texte. **ISBLANK** retourne une valeur différente de zéro si *c* est un espace (0x20) ou un caractère de tabulation horizontale (0x09). Le résultat de la condition de test pour les fonctions **ISBLANK** dépend du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -86,7 +87,7 @@ Le comportement de **ISBLANK** et **_isblank_l** n’est pas défini si *c* n’
 |**_istblank**|**IsBlank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -103,6 +104,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
+[Classification des caractères](../../c-runtime-library/character-classification.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>

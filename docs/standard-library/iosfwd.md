@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; iosfwd&gt;'
 title: '&lt;iosfwd&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e9999d43226cb5daf22ef70af636efd616d41d47
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: a622cf0350a59cd3cf070ed7524925f6293590dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470951"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323912"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
 Déclare des références anticipées à plusieurs modèles de classe utilisés dans iostreams. Tous ces modèles de classe sont définis dans d’autres en-têtes standard. Vous incluez cet en-tête explicitement uniquement quand vous avez besoin de l’une de ses déclarations, mais pas de sa définition.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 #include <iosfwd>

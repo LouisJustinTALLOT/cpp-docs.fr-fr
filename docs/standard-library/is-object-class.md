@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_object'
 title: is_object, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_object class
 - is_object
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
-ms.openlocfilehash: 521c3fe1053f53e5d30edf39a41cb840522575a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f361d58676527e25887ad71097943a8b2b6c93a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323562"
 ---
-# <a name="isobject-class"></a>is_object, classe
+# <a name="is_object-class"></a>is_object, classe
 
 Teste si le type est un type d'objet.
 
@@ -32,7 +33,7 @@ Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur false si le type *Ty* est un type référence, un type fonction ou void, ou `cv-qualified` une forme de l’un d’eux. sinon, sa valeur est true.
+Une instance du prédicat de type a la valeur false si le type *Ty* est un type référence, un type fonction ou void, ou une `cv-qualified` forme de l’un d’eux. sinon, sa valeur est true.
 
 ## <a name="example"></a>Exemple
 
@@ -77,13 +78,13 @@ is_object<float()> == false
 is_object<void> == false
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[is_function, classe](../standard-library/is-function-class.md)
+[Classe is_function](../standard-library/is-function-class.md)

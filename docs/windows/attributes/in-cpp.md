@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : dans (C++)'
 title: in (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: 2838a00ffe365f42fb7778b654306eb0c73b5996
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c4d19fcf7adc767986306a3ef55b26a2cc91dccf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842232"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321374"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -31,13 +32,13 @@ L’attribut **in** C++ a les mêmes fonctionnalités que l’attribut MIDL [dan
 
 Pour [obtenir un](bindable.md) exemple d’utilisation de **dans,** consultez.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Paramètre d’interface, méthode d’interface|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
 |**Attributs non valides**|**retval**|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

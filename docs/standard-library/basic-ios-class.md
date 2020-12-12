@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_ios'
 title: basic_ios, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -55,16 +56,16 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: ab8e9e0243a298f5ef39b38b3fd345572cafa587
-ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
+ms.openlocfilehash: 54b70092860002b85b2a603ad5d4dc5a611007ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91806556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321545"
 ---
 # <a name="basic_ios-class"></a>basic_ios, classe
 
-Le modèle de classe décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et les flux de sortie (de modèle de classe [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres du modèle. (La classe [ios_base](../standard-library/ios-base-class.md) décrit ce qui est commun et non dépendant des paramètres de modèle.) Un objet de classe **basic_ios \<class Elem, class Traits> ** permet de contrôler un flux avec des éléments de type `Elem` , dont les caractéristiques sont déterminées par la classe `Traits` .
+Le modèle de classe décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et les flux de sortie (de modèle de classe [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres du modèle. (La classe [ios_base](../standard-library/ios-base-class.md) décrit ce qui est commun et non dépendant des paramètres de modèle.) Un objet de classe **basic_ios \<class Elem, class Traits>** permet de contrôler un flux avec des éléments de type `Elem` , dont les caractéristiques sont déterminées par la classe `Traits` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -84,7 +85,7 @@ Type qui fournit des informations sur le type de caractère, la valeur par défa
 
 ## <a name="remarks"></a>Notes
 
-Objet de la classe **basic_ios \<class Elem, class Traits> ** stocke :
+Objet de la classe **basic_ios \<class Elem, class Traits>** stocke :
 
 - Pointeur de lien vers un objet de type [basic_istream](../standard-library/basic-istream-class.md) **\<Elem, Traits>** .
 
@@ -260,7 +261,7 @@ Flux dont vous voulez copier les indicateurs.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre signale l' ** \_ événement d’effacement**d’événement de rappel. Il copie ensuite de *droite* dans ** \* ce** caractère de remplissage, le pointeur de liaison et les informations de mise en forme. Avant de modifier le masque d’exception, il signale l’événement de rappel `copyfmt_event` . Si, une fois que la copie est terminée, **state &**[exceptions](#exceptions) est différent de zéro, la fonction appelle [clear](#clear) avec l’argument [rdstate](#rdstate). Elle retourne ** \* This**.
+La fonction membre signale l' **\_ événement d’effacement** d’événement de rappel. Il copie ensuite de *droite* dans **\* ce** caractère de remplissage, le pointeur de liaison et les informations de mise en forme. Avant de modifier le masque d’exception, il signale l’événement de rappel `copyfmt_event` . Si, une fois que la copie est terminée, **state &**[exceptions](#exceptions) est différent de zéro, la fonction appelle [clear](#clear) avec l’argument [rdstate](#rdstate). Elle retourne **\* This**.
 
 ### <a name="example"></a>Exemple
 

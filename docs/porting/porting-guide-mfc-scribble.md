@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : Guide de Portage : Scribble MFC'
 title: 'Guide du portage : Scribble MFC'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 46fac5ceaeadd803ff30f2fa3f8e7723d7d6f6f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322696"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guide du portage : Scribble MFC
 
@@ -19,7 +20,7 @@ Chaque version de Visual Studio présente des incompatibilités susceptibles de 
 
 Scribble MFC est un exemple bien connu qui a déjà été utilisé dans de nombreuses versions différentes de Visual C++. C'est une application de dessin simple qui illustre certaines fonctionnalités de base de MFC. L'application est disponible dans différentes versions, y compris en code managé et en code natif. Pour cet exemple, nous avons trouvé une ancienne version de Scribble en code natif de Visual Studio 2005 et l’avons ouverte dans Visual Studio 2017.
 
-Avant de tenter la mise à niveau, vérifiez que la charge de travail Windows Desktop est installée. Ouvrez le programme d’installation de Visual Studio (vs_installer.exe). L’une des façons d’ouvrir le programme d’installation consiste à choisir **Fichier** > **Nouveau projet** et à faire défiler l’affichage vers le bas de la liste des modèles installés jusqu’à **Ouvrir Visual Studio Installer**. Après avoir ouvert le programme d’installation, vous verrez toutes les charges de travail disponibles. Si la case associée à la charge de travail **Windows Desktop** n’est pas cochée, cochez-la, puis cliquez sur le bouton **Modifier** au bas de la fenêtre.
+Avant de tenter la mise à niveau, vérifiez que la charge de travail Windows Desktop est installée. Ouvrez le programme d’installation de Visual Studio (vs_installer.exe). Pour ouvrir le programme d’installation, vous pouvez choisir **fichier**  >  **nouveau projet** et faire défiler la liste des modèles installés jusqu’au bas de la liste des modèles installés jusqu’à ce que vous voyez **ouvrir Visual Studio installer**. Après avoir ouvert le programme d’installation, vous verrez toutes les charges de travail disponibles. Si la zone de la charge de travail du **Bureau Windows** n’est pas sélectionnée, sélectionnez-la, puis cliquez sur le bouton **modifier** en bas de la fenêtre.
 
 Sauvegardez ensuite l’ensemble de la solution et tout son contenu.
 
@@ -31,7 +32,7 @@ Notez que vous pouvez aussi exécuter devenv avec l'option `/Upgrade` sur la lig
 
 Quand vous ouvrez un ancien fichier projet dans Visual Studio, Visual Studio propose de convertir le fichier projet vers la version la plus récente, que nous avons acceptée. La boîte de dialogue suivante s'est affichée :
 
-![Examiner les modifications apportées au projet et à la solution](../porting/media/scribbleprojectupgrade.PNG "Revue des modifications de projet et de solution")
+![Examen des modifications de projet et de solution](../porting/media/scribbleprojectupgrade.PNG "Examen des modifications de projet et de solution")
 
 Une erreur s'est produite. Le message nous informe que la cible Itanium n'est pas disponible et ne sera donc pas convertie.
 
@@ -77,7 +78,7 @@ Si le code utilise des parties de l'API Windows qui ne sont pas disponibles dans
 
 Comme il n'existe pas de suite de tests, nous avons simplement démarré l'application et testé ses fonctionnalités manuellement via l'interface utilisateur. Nous n'avons observé aucun problème.
 
-### <a name="step-4-improve-the-code"></a>Étape 4. Amélioration du code
+### <a name="step-4-improve-the-code"></a>Étape 4. Amélioration du code
 
 Maintenant que vous avez effectué la migration vers Visual Studio 2017, vous pouvez apporter quelques modifications pour exploiter au mieux les nouvelles fonctionnalités C++. La version actuelle du compilateur C++ est nettement plus conforme à la norme C++ que les versions précédentes. Si vous envisagez de changer votre code pour le sécuriser ou le rendre davantage compatible avec d’autres compilateurs et systèmes d’exploitation, étudiez les améliorations à apporter.
 
