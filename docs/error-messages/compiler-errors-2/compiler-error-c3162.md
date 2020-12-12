@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3162'
 title: Erreur du compilateur C3162
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3162
 ms.assetid: 0d4c4a24-1456-4191-b7d8-c38cb7b17c32
-ms.openlocfilehash: 95cd2c4af614906da7ba2d1c4c5dd488059f970a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ca44b27607a34a469a5fd6fc1371e1510452247a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242312"
 ---
 # <a name="compiler-error-c3162"></a>Erreur du compilateur C3162
 
@@ -23,7 +24,7 @@ Un destructeur ne sera jamais exécuté, sauf si l’objet est supprimé explici
 
 Pour plus d'informations, consultez
 
-- [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
 - [Problèmes courants de migration vers Visual C++ 64 bits](../../build/common-visual-cpp-64-bit-migration-issues.md)
 
