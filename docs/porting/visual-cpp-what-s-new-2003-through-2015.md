@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur les éléments suivants : Visual C++ les&#39;s de 2003 à 2015'
 title: Nouveautés de Visual C++ entre 2003 et 2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: eb76e5455f053717859d0ac571b9d1110d11c33b
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: ea126f3138ae437c3338e695fcebdf1cde037a50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301111"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -1279,7 +1280,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Aucun diagnostic du compilateur n’est associé à cette modification.
 
-    Exemple
+   Exemple
 
    ```cpp
     #include <type_traits>
@@ -1741,7 +1742,7 @@ En plus de la fenêtre **Tâches parallèles** et de la fenêtre **Piles parall�
 
 **Colorisation sémantique.** Les types, les énumérations, les macros et les autres jetons C++ ont désormais une colorisation par défaut.
 
-**Mise en surbrillance des références.** La sélection d’un symbole met désormais en surbrillance toutes les instances du symbole dans le fichier actuel. Appuyez sur **CTRL** + **MAJ**flèche + **haut** ou **CTRL** + **MAJ** + **flèche bas** pour vous déplacer parmi les références en surbrillance. Vous pouvez désactiver cette fonctionnalité dans la boîte de dialogue **Options**, sous **Éditeur de texte** > **C/C++** > **Avancé**.
+**Mise en surbrillance des références.** La sélection d’un symbole met désormais en surbrillance toutes les instances du symbole dans le fichier actuel. Appuyez sur **CTRL** + **MAJ** flèche + **haut** ou **CTRL** + **MAJ** + **flèche bas** pour vous déplacer parmi les références en surbrillance. Vous pouvez désactiver cette fonctionnalité dans la boîte de dialogue **Options**, sous **Éditeur de texte** > **C/C++** > **Avancé**.
 
 ### <a name="application-lifecycle-management-tools"></a>Outils de gestion du cycle de vie des applications
 
@@ -1767,7 +1768,7 @@ Pour mieux comprendre votre code, vous pouvez maintenant générer des graphique
 
 #### <a name="architecture-explorer"></a>Navigateur de l'architecture
 
-À l’aide du **Navigateur de l’architecture**, vous pouvez explorer les ressources de votre solution, de vos projets ou de vos fichiers C++. Dans la barre de menus, choisissez **architecture architecture**du  >  **Windows**  >  **navigateur**Windows. Vous pouvez sélectionner un nœud qui vous intéresse, par exemple **Affichage de classes**. Dans ce cas, le côté droit de la fenêtre Outil est développé pour afficher une liste d’espaces de noms. Si vous sélectionnez un espace de noms, une nouvelle colonne affiche la liste des classes, de structs et d’enums de cet espace de noms. Vous pouvez continuer à explorer ces ressources ou revenir à la colonne située à l’extrême gauche pour démarrer une autre requête. Consultez **Rechercher du code avec le navigateur de l’architecture**.
+À l’aide du **Navigateur de l’architecture**, vous pouvez explorer les ressources de votre solution, de vos projets ou de vos fichiers C++. Dans la barre de menus, choisissez **architecture architecture** du  >    >  **navigateur** Windows. Vous pouvez sélectionner un nœud qui vous intéresse, par exemple **Affichage de classes**. Dans ce cas, le côté droit de la fenêtre Outil est développé pour afficher une liste d’espaces de noms. Si vous sélectionnez un espace de noms, une nouvelle colonne affiche la liste des classes, de structs et d’enums de cet espace de noms. Vous pouvez continuer à explorer ces ressources ou revenir à la colonne située à l’extrême gauche pour démarrer une autre requête. Consultez **Rechercher du code avec le navigateur de l’architecture**.
 
 #### <a name="code-coverage"></a>Couverture du code
 
@@ -1850,7 +1851,7 @@ De nouvelles macros ont été ajoutées à la bibliothèque ATL pour développer
 
 #### <a name="analyze-warnings"></a>Avertissements /analyze
 
-La plupart des **`/analyze`** avertissements (analyse du code d’entreprise) ont été supprimés des bibliothèques Runtime C (CRT), MFC et ATL.
+La plupart des **`/analyze`** avertissements (analyse du code d’entreprise) ont été supprimés des bibliothèques C Run-Time (CRT), MFC et ATL.
 
 #### <a name="animation-and-d2d-support"></a>Prise en charge de l’animation et prise en charge D2D
 

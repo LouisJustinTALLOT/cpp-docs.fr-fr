@@ -1,22 +1,21 @@
 ---
 title: Mots clés C
 description: Mots clés dans les extensions de compilateur C et Microsoft C standard.
-ms.date: 10/30/2020
+ms.date: 12/8/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
-ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: 9efa3fc353a2386a465227c39f4ae83565ae12c3
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 1bcef118881a0596406d6ff455dd453220ff81c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238484"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300376"
 ---
 # <a name="c-keywords"></a>Mots clés C
 
-Les *Mots clés* sont des mots qui ont une signification spéciale pour le compilateur C. Dans les phases de traduction 7 et 8, un identificateur ne peut pas avoir la même orthographe et la même casse qu’un mot clé C. Pour plus d’informations, consultez [phases de traduction](../preprocessor/phases-of-translation.md) dans Référence du *préprocesseur* . Pour plus d’informations sur les identificateurs, consultez [identificateurs](../c-language/c-identifiers.md).
+Les *Mots clés* sont des mots qui ont une signification spéciale pour le compilateur C. Dans les phases de traduction 7 et 8, un identificateur ne peut pas avoir la même orthographe et la même casse qu’un mot clé C. Pour plus d’informations, consultez [phases de traduction](../preprocessor/phases-of-translation.md) dans Référence du *préprocesseur*. Pour plus d’informations sur les identificateurs, consultez [identificateurs](../c-language/c-identifiers.md).
 
 ## <a name="standard-c-keywords"></a>Mots clés C standard
 
@@ -69,7 +68,7 @@ Le langage C utilise les mots clés suivants :
         **`_Atomic`**<sup>2, b</sup>\
         **`_Bool`**<sup>1, un</sup>\
         **`_Complex`**<sup>1, b</sup>\
-        **`_Generic`**<sup>2, un</sup>\
+        **[`_Generic`](generic_selection.md)**<sup>2, un</sup>\
         **`_Imaginary`**<sup>1, b</sup>\
         **`_Noreturn`**<sup>2, un</sup>\
         **`_Static_assert`**<sup>2, un</sup>\

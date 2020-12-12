@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les fonctions suivantes : _exec, _wexec'
 title: _exec, _wexec, fonctions
 ms.date: 11/04/2016
 api_location:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: ecfcf88b09a4383fc050e9737a0ffe7203f9a050
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0a28c7bdc192e2e72c751e953987509c07611934
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300097"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec, _wexec, fonctions
 
@@ -242,7 +243,7 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** process.h
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : pragma comment'
 title: comment (pragma)
 ms.date: 08/29/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: 3175ad5318bcc6fd9aa6233258ccec9033c89be8
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 71172632ee1589c3f6d66136e9567929bff5d08c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219098"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300812"
 ---
 # <a name="comment-pragma"></a>comment (pragma)
 
@@ -27,15 +28,15 @@ Place un enregistrement de commentaires dans un fichier objet ou un fichier exé
 
 ## <a name="remarks"></a>Notes
 
-Le *type de commentaire* est l’un des identificateurs prédéfinis, décrits ci-dessous, qui spécifie le type d’enregistrement de commentaire. La *chaîne de commentaire* facultative est un littéral de chaîne qui fournit des informations supplémentaires pour certains types de commentaires. Comme *Comment-String* est un littéral de chaîne, il obéit à toutes les règles pour les littéraux de chaîne en ce qui concerne les caractères`"`d’échappement, les guillemets incorporés () et la concaténation.
+Le *type de commentaire* est l’un des identificateurs prédéfinis, décrits ci-dessous, qui spécifie le type d’enregistrement de commentaire. La *chaîne de commentaire* facultative est un littéral de chaîne qui fournit des informations supplémentaires pour certains types de commentaires. Comme *Comment-String* est un littéral de chaîne, il obéit à toutes les règles pour les littéraux de chaîne en ce qui concerne les caractères d’échappement, les guillemets incorporés ( `"` ) et la concaténation.
 
-### <a name="compiler"></a>compilateur
+### <a name="compiler"></a>compiler
 
 Place le nom et le numéro de version du compilateur dans le fichier objet. Cet enregistrement de commentaires est ignoré par l'Éditeur de liens. Si vous fournissez un paramètre de *chaîne de commentaire* pour ce type d’enregistrement, le compilateur génère un avertissement.
 
 ### <a name="lib"></a>lib
 
-Place un enregistrement de recherche de bibliothèque dans le fichier objet. Ce type de commentaire doit être accompagné d’un paramètre de *chaîne de commentaire* contenant le nom (et éventuellement le chemin d’accès) de la bibliothèque dans laquelle vous souhaitez que l’éditeur de liens recherche. Le nom de la bibliothèque suit les enregistrements de recherche de bibliothèque par défaut dans le fichier objet; l’éditeur de liens recherche cette bibliothèque comme si vous l’aviez nommée sur la ligne de commande, à condition que la bibliothèque ne soit pas spécifiée avec [/NODEFAULTLIB](../build/reference/nodefaultlib-ignore-libraries.md). Vous pouvez placer plusieurs enregistrements de recherche de bibliothèque dans le même fichier source. Les enregistrements figurent dans le fichier objet dans l'ordre où ils sont rencontrés dans le fichier source.
+Place un enregistrement de recherche de bibliothèque dans le fichier objet. Ce type de commentaire doit être accompagné d’un paramètre de *chaîne de commentaire* contenant le nom (et éventuellement le chemin d’accès) de la bibliothèque dans laquelle vous souhaitez que l’éditeur de liens recherche. Le nom de la bibliothèque suit les enregistrements de recherche de bibliothèque par défaut dans le fichier objet ; l’éditeur de liens recherche cette bibliothèque comme si vous l’aviez nommée sur la ligne de commande, à condition que la bibliothèque ne soit pas spécifiée avec [/NODEFAULTLIB](../build/reference/nodefaultlib-ignore-libraries.md). Vous pouvez placer plusieurs enregistrements de recherche de bibliothèque dans le même fichier source. Les enregistrements figurent dans le fichier objet dans l'ordre où ils sont rencontrés dans le fichier source.
 
 Si l’ordre de la bibliothèque par défaut et d’une bibliothèque ajoutée est important, la compilation avec le commutateur [/zl](../build/reference/zl-omit-default-library-name.md) empêche le nom de la bibliothèque par défaut d’être placé dans le module objet. Un deuxième pragma comment peut alors être utilisé pour insérer le nom de la bibliothèque par défaut après la bibliothèque ajoutée. Les bibliothèques répertoriées avec ces pragmas figureront dans le module objet, dans l'ordre où elles sont trouvées dans le code source.
 
@@ -47,11 +48,11 @@ Place une [option](../build/reference/linker-options.md) de l’éditeur de lien
 #pragma comment(linker, "/include:__mySymbol")
 ```
 
-Seules les options de l’éditeur de liens (*type de commentaire*) suivantes peuvent être passées à l’identificateur de l’éditeur de liens:
+Seules les options de l’éditeur de liens (*type de commentaire*) suivantes peuvent être passées à l’identificateur de l’éditeur de liens :
 
 - [/DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)
 
-- [/EXPORT](../build/reference/export-exports-a-function.md)
+- [/Export.](../build/reference/export-exports-a-function.md)
 
 - [/INCLUDE](../build/reference/include-force-symbol-references.md)
 
@@ -61,7 +62,7 @@ Seules les options de l’éditeur de liens (*type de commentaire*) suivantes pe
 
 - [/SECTION](../build/reference/section-specify-section-attributes.md)
 
-### <a name="user"></a>user
+### <a name="user"></a>utilisateur
 
 Place un commentaire général dans le fichier objet. Le paramètre de *chaîne de commentaire* contient le texte du commentaire. Cet enregistrement de commentaires est ignoré par l'Éditeur de liens.
 
@@ -87,4 +88,4 @@ Pour les commentaires qui acceptent un paramètre de *chaîne de commentaire* , 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

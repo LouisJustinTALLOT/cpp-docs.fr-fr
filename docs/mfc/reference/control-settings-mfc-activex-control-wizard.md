@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : paramètres de contrôle, Assistant contrôle ActiveX MFC'
 title: Paramètres du contrôle, Assistant Contrôle ActiveX MFC
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 1578ca7f4134e51e0ba0d3c2b247dcafcb0fbd67
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 31e8c5fd257128e17017d3d0fa801fc812f99397
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405011"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301592"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Paramètres du contrôle, Assistant Contrôle ActiveX MFC
 
@@ -23,7 +24,7 @@ Pour plus d’informations sur la façon de sélectionner des options sur cette 
 
 - **Créer un contrôle basé sur**
 
-   Dans cette liste, vous pouvez sélectionner le type de contrôle à partir duquel votre contrôle doit hériter. La liste est un sous-ensemble des classes de contrôle disponibles pour `CreateWindowEx` et des contrôles communs supplémentaires qui sont spécifiés dans commctrl. h. Votre sélection détermine le style du contrôle dans la `PreCreateWindow` fonction dans le fichier *ProjName*Ctrl. cpp. Pour plus d’informations, consultez [contrôles ActiveX MFC : sous-classement d’un contrôle Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+   Dans cette liste, vous pouvez sélectionner le type de contrôle à partir duquel votre contrôle doit hériter. La liste est un sous-ensemble des classes de contrôle disponibles pour `CreateWindowEx` et des contrôles communs supplémentaires qui sont spécifiés dans commctrl. h. Votre sélection détermine le style du contrôle dans la `PreCreateWindow` fonction dans le fichier *ProjName* Ctrl. cpp. Pour plus d’informations, consultez [contrôles ActiveX MFC : sous-classement d’un contrôle Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
    |Control|Description|
    |-------------|-----------------|
@@ -59,7 +60,7 @@ Pour plus d’informations sur la façon de sélectionner des options sur cette 
    > [!NOTE]
    > La façon dont l’utilisateur accède à l’aide pour le contrôle dépend de la façon dont vous avez implémenté l’aide et si vous avez intégré l’aide du contrôle à l’aide du conteneur.
 
-   Quand vous sélectionnez cette option, elle insère la `AboutBox` méthode Control dans la classe de contrôle de projet (C*ProjName*Ctrl. cpp) et ajoute AboutBox à la table de dispatch du projet. Cette option est activée par défaut.
+   Quand vous sélectionnez cette option, elle insère la `AboutBox` méthode Control dans la classe de contrôle de projet (C *ProjName* Ctrl. cpp) et ajoute AboutBox à la table de dispatch du projet. Cette option est activée par défaut.
 
 - **Code de dessin optimisé**
 
@@ -71,11 +72,11 @@ Pour plus d’informations sur la façon de sélectionner des options sur cette 
 
 - **Contexte de périphérique (DC) découpé**
 
-   Remplace [COleControl :: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) dans l’en-tête de contrôle (*ProjName*Ctrl. h) pour désactiver l’appel de `IntersectClipRect` `COleControl` . Lorsque vous sélectionnez cette option, vous bénéficiez d’un petit avantage en termes de vitesse. Si vous sélectionnez **activation sans fenêtre**, cette fonctionnalité n’est pas disponible. Pour plus d’informations, consultez [utilisation d’un contexte de périphérique non découpé](../../mfc/using-an-unclipped-device-context.md).
+   Remplace [COleControl :: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) dans l’en-tête de contrôle (*ProjName* Ctrl. h) pour désactiver l’appel de `IntersectClipRect` `COleControl` . Lorsque vous sélectionnez cette option, vous bénéficiez d’un petit avantage en termes de vitesse. Si vous sélectionnez **activation sans fenêtre**, cette fonctionnalité n’est pas disponible. Pour plus d’informations, consultez [utilisation d’un contexte de périphérique non découpé](../../mfc/using-an-unclipped-device-context.md).
 
 - **Activation sans scintillement**
 
-   Élimine les opérations de dessin et le scintillateur d’accompagnement qui se produisent entre les États actifs et inactifs du contrôle. Si vous sélectionnez **activation sans fenêtre**, cette fonctionnalité n’est pas disponible. Lorsque vous définissez cette option, l' `noFlickerActivate` indicateur est l’un des indicateurs retournés par [COleControl :: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Pour plus d’informations, consultez [fourniture d’une activation sans scintillement](../../mfc/providing-flicker-free-activation.md).
+   Élimine les opérations de dessin et le scintillateur d’accompagnement qui se produisent entre les États actifs et inactifs du contrôle. Si vous sélectionnez **activation sans fenêtre**, cette fonctionnalité n’est pas disponible. Lorsque vous définissez cette option, l' `noFlickerActivate` indicateur est l’un des indicateurs retournés par [COleControl :: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Pour plus d’informations, consultez [fourniture d' Flicker-Free activation](../../mfc/providing-flicker-free-activation.md).
 
 - **Disponible dans la boîte de dialogue Insérer un objet**
 

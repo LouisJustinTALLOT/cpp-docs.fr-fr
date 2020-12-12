@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _execute_onexit_table, _initialize_onexit_table _register_onexit_function'
 title: _execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 051961f049109b4fa6a2881e442e621036cb279c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5bd0449c4b353c6a417e145f864b07794ae40ca3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300071"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
@@ -60,16 +61,16 @@ int _execute_onexit_table(
 *table*<br/>
 [in, out] Pointeur vers la table de fonctions onexit.
 
-*fonctionnalités*<br/>
+*function*<br/>
 [in] Pointeur vers une fonction à ajouter à la table de fonctions onexit.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, retourne 0. Sinon, retourne une valeur négative.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Ces fonctions sont les détails de l’implémentation de l’infrastructure utilisés pour prendre en charge le runtime C. Elles ne doivent pas être appelées directement depuis votre code. Le Runtime C utilise une *table de fonctions OnExit* pour représenter la séquence des fonctions inscrites `atexit`par `at_quick_exit`les appels `_onexit`à, et. La structure de données de la table de fonctions onexit est un détail d’implémentation opaque du runtime C ; l’ordre et la signification de ses membres de données peuvent changer. Ils ne doivent pas être inspectés par du code externe.
+Ces fonctions sont les détails de l’implémentation de l’infrastructure utilisés pour prendre en charge le runtime C. Elles ne doivent pas être appelées directement depuis votre code. Le Runtime C utilise une *table de fonctions OnExit* pour représenter la séquence des fonctions inscrites par les appels à `atexit` , `at_quick_exit` et `_onexit` . La structure de données de la table de fonctions onexit est un détail d’implémentation opaque du runtime C ; l’ordre et la signification de ses membres de données peuvent changer. Ils ne doivent pas être inspectés par du code externe.
 
 La fonction `_initialize_onexit_table` rétablit la table de fonctions onexit à sa valeur initiale.  Cette fonction doit être appelée avant que la table de fonctions onexit ne passe à `_register_onexit_function` ou `_execute_onexit_table`.
 
@@ -83,9 +84,9 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
+|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++ : \<process.h>|
 
-Les `_initialize_onexit_table`fonctions `_register_onexit_function`, et `_execute_onexit_table` sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../c-runtime-library/compatibility.md).
+Les `_initialize_onexit_table` `_register_onexit_function` fonctions, et `_execute_onexit_table` sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

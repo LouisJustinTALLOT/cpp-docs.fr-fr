@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragma de conformité'
 title: conform, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -9,33 +10,33 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 816ff85bb19f549c6ea072073bd89fcd503545f2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bb9f62194196ea32e5f3326116894ea56ef83611
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300760"
 ---
 # <a name="conform-pragma"></a>conform, pragma
 
-**C++Plus**
+**Section spécifique à C++**
 
-Spécifie le comportement au moment de l’exécution de l’option du compilateur [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) .
+Spécifie le comportement au moment de l’exécution de l’option du compilateur [/Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma conforme (** *nom* [ **, affichage** ] [ **,** { **on** | **off** }] [[ **,** { **Push** | **pop** }] [ **,** *identificateur* [ **,** { **on** **off}** ]  |  ] ] **)**
+> **#pragma conforme (** *nom* [ **, affichage** ] [ **,** { **on**  |  **off** }] [[ **,** { **Push**  |  **pop** }] [ **,** *identificateur* [ **,** { **on**  |  **off** }]]] **)**
 
 ### <a name="parameters"></a>Paramètres
 
 *nomme*\
-Spécifie le nom de l'option du compilateur à modifier. Le seul *nom* valide est `forScope`.
+Spécifie le nom de l'option du compilateur à modifier. Le seul *nom* valide est `forScope` .
 
 **afficher**\
 Facultatif Entraîne l’affichage du paramètre actuel de *Name* (true ou false) au moyen d’un message d’avertissement lors de la compilation. Par exemple, `#pragma conform(forScope, show)`.
 
-activé, **désactivé**\
-Facultatif Le paramètre name **sur on** active l’option du compilateur [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) . La valeur par défaut est **off**.
+**activé**, **désactivé**\
+Facultatif Le  paramètre name **sur on** active l’option du compilateur [/Zc : forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) . La valeur par défaut est **off**.
 
 **souleve**\
 Facultatif Exécute un push de la valeur actuelle de *Name* dans la pile interne du compilateur. Si vous spécifiez *identifier*, vous pouvez spécifier la valeur **on** ou **off** pour que *Name* fasse l’objet d’un push dans la pile. Par exemple, `#pragma conform(forScope, push, myname, on)`.
@@ -66,4 +67,4 @@ int main() {}
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

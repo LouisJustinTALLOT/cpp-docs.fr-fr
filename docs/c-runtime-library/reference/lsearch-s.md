@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _lsearch_s'
 title: _lsearch_s
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-ms.openlocfilehash: d8c421eb3c7a6a617ce073cbf5f36416294c1874
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdc3d8011dac00cd8d19fe414c2ae1aa78120eee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299954"
 ---
 # <a name="_lsearch_s"></a>_lsearch_s
 
@@ -77,7 +78,7 @@ Pointeur désignant la routine de comparaison. Le deuxième paramètre est un po
 *context*<br/>
 Pointeur désignant un objet accessible dans la fonction de comparaison.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si la *clé* est trouvée, **_lsearch_s** retourne un pointeur vers l’élément du tableau au niveau de *base* qui correspond à la *clé*. Si la *clé* est introuvable, **_lsearch_s** retourne un pointeur vers l’élément qui vient d’être ajouté à la fin du tableau.
 
@@ -87,12 +88,12 @@ Si des paramètres non valides sont passés à la fonction, le gestionnaire de p
 
 |*key*|*base*|*compar*|*number*|*size*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
-|**NUL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|
-|n'importe laquelle|**NUL**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL**|
+|**NULL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|**NULL**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL**|
 |n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|zéro|**EINVAL**|
-|n'importe laquelle|n'importe laquelle|**NUL**|an|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|n'importe laquelle|**NULL**|an|n'importe laquelle|**EINVAL**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_lsearch_s** effectue une recherche linéaire sur la *clé* de valeur dans un tableau d’éléments *Number* , chacun d’octets de *largeur* . Contrairement à **bsearch_s**, **_lsearch_s** ne nécessite pas le tri du tableau. Si la *clé* est introuvable, **_lsearch_s** l’ajoute à la fin du tableau et incrémente le *nombre*.
 

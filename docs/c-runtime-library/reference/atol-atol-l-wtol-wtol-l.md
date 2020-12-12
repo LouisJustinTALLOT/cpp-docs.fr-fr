@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ATOL, _atol_l, _wtol, _wtol_l'
 title: atol, _atol_l, _wtol, _wtol_l
 ms.date: 4/2/2020
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99830a76d3392af71cf3f55992a4207dc3b6ce18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218726"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303685"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -89,7 +90,7 @@ Chaîne à convertir.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chaque fonction retourne la **`long`** valeur produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0L pour **ATOL** si l’entrée ne peut pas être convertie en valeur de ce type.
 

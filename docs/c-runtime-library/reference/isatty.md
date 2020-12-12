@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _isatty'
 title: _isatty
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: 16d67053cd05d567e4c732d4366bd121863d43f9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 354cb0ba66c0c25291626cf4278935571357d058
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303620"
 ---
 # <a name="_isatty"></a>_isatty
 
@@ -51,11 +52,11 @@ int _isatty( int fd );
 *FD*<br/>
 Descripteur de fichier qui fait référence au périphérique à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_isatty** retourne une valeur différente de zéro si le descripteur est associé à un périphérique de caractères. Sinon, **_isatty** retourne 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_isatty** détermine si *FD* est associé à un périphérique de caractères (terminal, console, imprimante ou port série).
 
@@ -75,7 +76,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_isatty.c

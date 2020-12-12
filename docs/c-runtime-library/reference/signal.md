@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : signal'
 title: signal
 ms.date: 04/12/2018
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 1dacf23b6c4f698b61c5bfe2dd2fb1ff7ee389f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 601e8108f7078356cdd1c6642deb05762b970e00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303451"
 ---
 # <a name="signal"></a>signal
 
@@ -51,7 +52,7 @@ Valeur du signal.
 *func*<br/>
 Le deuxième paramètre est un pointeur vers la fonction à exécuter. Le premier paramètre est une valeur de signal et le deuxième paramètre est un sous-code qui peut être utilisé lorsque le premier paramètre est SIGFPE.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **signal** retourne la valeur précédente de Func associée au signal donné. Par exemple, si la valeur précédente de *Func* était **SIG_IGN**, la valeur de retour est également **SIG_IGN**. Une valeur de retour de **SIG_ERR** indique une erreur ; dans ce cas, **errno** a la valeur **EINVAL**.
 
@@ -59,7 +60,7 @@ Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno,
 
 ## <a name="remarks"></a>Notes
 
-La fonction **signal** permet à un processus de choisir l’une des méthodes permettant de gérer un signal d’interruption à partir du système d’exploitation. L’argument *SIG* est l’interruption sur laquelle le **signal** répond ; il doit s’agir de l’une des constantes manifestes suivantes, qui sont définies dans SIGNAL. Manutention.
+La fonction **signal** permet à un processus de choisir l’une des méthodes permettant de gérer un signal d’interruption à partir du système d’exploitation. L’argument *SIG* est l’interruption sur laquelle le **signal** répond ; il doit s’agir de l’une des constantes manifestes suivantes, qui sont définies dans SIGNAL. H.
 
 |valeur *SIG*|Description|
 |-----------------|-----------------|
@@ -77,7 +78,7 @@ Par défaut, le **signal** met fin au programme appelant avec le code de sortie 
 > [!NOTE]
 > **SIGINT** n’est pris en charge pour aucune application Win32. Lorsqu'une interruption CTRL+C se produit, les systèmes d'exploitation Win32 génèrent un nouveau thread pour gérer spécifiquement cette interruption. Cela peut amener une application à un seul thread, par exemple celle dans UNIX, à devenir multithread et à provoquer un comportement inattendu.
 
-L’argument *Func* est une adresse à un gestionnaire de signal que vous écrivez, ou à l’une des constantes prédéfinies **SIG_DFL** ou **SIG_IGN**, qui sont également définies dans signal. Manutention. Si *Func* est une fonction, elle est installée en tant que gestionnaire de signal pour le signal donné. Le prototype du gestionnaire de signal requiert un argument formel, *SIG*, de type **`int`** . Le système d’exploitation fournit l’argument réel via *SIG* lorsqu’une interruption se produit ; l’argument est le signal qui a généré l’interruption. Par conséquent, vous pouvez utiliser les six constantes de manifeste (répertoriées dans le tableau précédent) de votre gestionnaire de signal pour déterminer le type d'interruption et prendre les mesures appropriées. Par exemple, vous pouvez appeler **signal** deux fois pour assigner le même gestionnaire à deux signaux différents, puis tester l’argument *SIG* dans le gestionnaire pour prendre des mesures différentes selon le signal reçu.
+L’argument *Func* est une adresse à un gestionnaire de signal que vous écrivez, ou à l’une des constantes prédéfinies **SIG_DFL** ou **SIG_IGN**, qui sont également définies dans signal. H. Si *Func* est une fonction, elle est installée en tant que gestionnaire de signal pour le signal donné. Le prototype du gestionnaire de signal requiert un argument formel, *SIG*, de type **`int`** . Le système d’exploitation fournit l’argument réel via *SIG* lorsqu’une interruption se produit ; l’argument est le signal qui a généré l’interruption. Par conséquent, vous pouvez utiliser les six constantes de manifeste (répertoriées dans le tableau précédent) de votre gestionnaire de signal pour déterminer le type d'interruption et prendre les mesures appropriées. Par exemple, vous pouvez appeler **signal** deux fois pour assigner le même gestionnaire à deux signaux différents, puis tester l’argument *SIG* dans le gestionnaire pour prendre des mesures différentes selon le signal reçu.
 
 Si vous testez des exceptions à virgule flottante (**SIGFPE**), *Func* pointe vers une fonction qui accepte un deuxième argument facultatif qui est l’une des nombreuses constantes de manifeste, définies en valeur float. H, sous la forme **FPE_xxx**. Quand un signal **SIGFPE** se produit, vous pouvez tester la valeur du deuxième argument pour déterminer le type d’exception à virgule flottante, puis prendre les mesures appropriées. Cet argument et ses valeurs possibles sont des extensions Microsoft.
 
@@ -91,7 +92,7 @@ Dans la mesure où les routines de gestion de signal sont généralement appelé
 
 - N’émettez pas de niveau inférieur ou STDIO. Routines d’e/s (par exemple, **printf** ou **fread**).
 
-- N’appelez pas les routines de tas ou toute routine qui utilise les routines de tas (par exemple, **malloc**, **_strdup**ou **_putenv**). Pour plus d’informations, consultez [malloc](malloc.md).
+- N’appelez pas les routines de tas ou toute routine qui utilise les routines de tas (par exemple, **malloc**, **_strdup** ou **_putenv**). Pour plus d’informations, consultez [malloc](malloc.md).
 
 - N’utilisez aucune fonction qui génère un appel système (par exemple, **_getcwd** ou une **heure**).
 

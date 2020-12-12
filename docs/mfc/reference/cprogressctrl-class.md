@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CProgressCtrl, classe'
 title: CProgressCtrl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: eda19ca2b94978201806e60d2ae8399e00e13f1f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f5bd1bcae041d6bd61b715275b232fc5536cba2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301410"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl, classe
 
@@ -157,7 +158,7 @@ Spécifie la fenêtre parente du contrôle de barre de progression, généraleme
 *nID*<br/>
 Spécifie l’ID du contrôle de barre de progression.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l' `CProgressCtrl` objet a été créé avec succès ; sinon, false.
 
@@ -199,7 +200,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 *nID*<br/>
 ID de la fenêtre enfant du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -215,7 +216,7 @@ Obtient la couleur de la barre de l’indicateur de progression pour le contrôl
 COLORREF GetBarColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur de la barre de progression actuelle, représentée sous la forme d’une valeur [COLORREF](/windows/win32/gdi/colorref) , ou CLR_DEFAULT si la couleur de la barre de l’indicateur de progression est la couleur par défaut.
 
@@ -231,7 +232,7 @@ Obtient la couleur d’arrière-plan de la barre de progression actuelle.
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur d’arrière-plan de la barre de progression actuelle, représentée sous la forme d’une valeur [COLORREF](/windows/win32/gdi/colorref) .
 
@@ -247,7 +248,7 @@ Récupère la position actuelle de la barre de progression.
 int GetPos();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position du contrôle de barre de progression.
 
@@ -293,14 +294,14 @@ Obtient l’état du contrôle de barre de progression actuel.
 int GetState() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 État du contrôle de barre de progression actuel, qui est l’une des valeurs suivantes :
 
 |Valeur|State|
 |-----------|-----------|
 |PBST_NORMAL|En cours|
-|PBST_ERROR|Error|
+|PBST_ERROR|Erreur|
 |PBST_PAUSED|Suspendu|
 
 ### <a name="remarks"></a>Notes
@@ -327,7 +328,7 @@ Récupère l’incrément de l’étape pour la barre de progression du contrôl
 int GetStep() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Incrément de la barre de progression.
 
@@ -362,7 +363,7 @@ int OffsetPos(int nPos);
 *nPos*<br/>
 Montant d’avance de la position.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position précédente du contrôle de barre de progression.
 
@@ -383,7 +384,7 @@ COLORREF SetBarColor(COLORREF clrBar);
 *clrBar*\
 dans Valeur [COLORREF](/windows/win32/gdi/colorref) qui spécifie la nouvelle couleur de la barre de l’indicateur de progression. Spécifiez CLR_DEFAULT pour que la barre de progression utilise sa couleur par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Couleur précédente de la barre de l’indicateur de progression, représentée sous la forme d’une valeur [COLORREF](/windows/win32/gdi/colorref) , ou CLR_DEFAULT si la couleur de la barre de l’indicateur de progression est la couleur par défaut.
 
@@ -418,7 +419,7 @@ COLORREF SetBkColor(COLORREF clrNew);
 *clrNew*<br/>
 Valeur COLORREF qui spécifie la nouvelle couleur d’arrière-plan. Spécifiez la valeur de CLR_DEFAULT pour utiliser la couleur d’arrière-plan par défaut pour la barre de progression.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [COLORREF](/windows/win32/gdi/colorref) indiquant la couleur d’arrière-plan précédente, ou CLR_DEFAULT si la couleur d’arrière-plan est la couleur par défaut.
 
@@ -444,7 +445,7 @@ dans TRUE pour activer le mode texte défilant ou FALSe pour désactiver le mode
 *Nintervalle*\
 dans Durée en millisecondes entre les mises à jour de l’animation de texte défilant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Cette méthode retourne toujours TRUE.
 
@@ -479,7 +480,7 @@ int SetPos(int nPos);
 *nPos*<br/>
 Nouvelle position du contrôle de barre de progression.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position précédente du contrôle de barre de progression.
 
@@ -538,7 +539,7 @@ dans État permettant de définir la barre de progression. Utilisez l’une des 
 - `PBST_ERROR` -Erreur
 - `PBST_PAUSED` -Suspendu
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 État précédent du contrôle de barre de progression actuel.
 
@@ -571,7 +572,7 @@ int SetStep(int nStep);
 *nStep*<br/>
 Nouvel incrément de l’étape.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Incrément de l’étape précédente.
 
@@ -593,7 +594,7 @@ Avance la position actuelle d’un contrôle de barre de progression à l’aide
 int StepIt();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position précédente du contrôle de barre de progression.
 

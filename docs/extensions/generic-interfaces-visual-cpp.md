@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : interfaces génériques (C++/CLI)'
 title: Interfaces génériques (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 61ab514d244c8b41d467d382fa97e30556ccbb32
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 7ba7cec76d23262977180a050326a0c5cf2966e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135526"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301696"
 ---
 # <a name="generic-interfaces-ccli"></a>Interfaces génériques (C++/CLI)
 
@@ -30,13 +31,13 @@ Pour plus d’informations sur les interfaces, consultez [Classe d’interface](
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 *attributes*<br/>
 (Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et les classes d’attributs, consultez **Attributs**.
 
 *class-key*<br/>
-**`class`** ni **`typename`**
+**`class`** ou **`typename`**
 
 *type-parameter-identifier(s)*<br/>
 Liste d’identificateurs séparés par des virgules.
@@ -47,7 +48,7 @@ Prend la forme spécifiée dans [Contraintes sur les paramètres de type génér
 *accessibility-modifiers*<br/>
 Facultatif Modificateurs d’accessibilité (par exemple **, public, privé**).
 
-*identificateur*<br/>
+*identifier*<br/>
 Nom de l’interface.
 
 *base-list*<br/>

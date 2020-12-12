@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : longjmp'
 title: longjmp
 ms.date: 08/14/2018
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-ms.openlocfilehash: 4f737818afe7136262362e4fe996745064568758
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfcbac2ea54e167f65f0d303e08d6450e53ff0e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299980"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -55,7 +56,7 @@ Valeur à retourner à l’appel `setjmp`.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **longjmp** restaure un environnement de pile et les paramètres régionaux d’exécution précédemment enregistrés dans *env* by `setjmp` . `setjmp`et **longjmp** offrent un moyen d’exécuter un non local **`goto`** ; ils sont généralement utilisés pour passer le contrôle d’exécution au code de gestion des erreurs ou de récupération dans une routine appelée précédemment sans utiliser les conventions d’appel et de retour normales.
+La fonction **longjmp** restaure un environnement de pile et les paramètres régionaux d’exécution précédemment enregistrés dans *env* by `setjmp` . `setjmp` et **longjmp** offrent un moyen d’exécuter un non local **`goto`** ; ils sont généralement utilisés pour passer le contrôle d’exécution au code de gestion des erreurs ou de récupération dans une routine appelée précédemment sans utiliser les conventions d’appel et de retour normales.
 
 Un appel à `setjmp` entraîne l’enregistrement de l’environnement de pile actuel dans *env*. Un appel ultérieur à **longjmp** restaure l’environnement enregistré et retourne le contrôle au point qui suit immédiatement l' `setjmp` appel correspondant. L’exécution reprend comme si *value* avait simplement été retourné par l’appel `setjmp`. Les valeurs de toutes les variables (à l’exception des variables de registre) accessibles au contrôle de réception de routine contiennent les valeurs qu’elles avaient lors de l’appel de **longjmp** . Les valeurs des variables de Registre sont imprévisibles. La valeur retournée par `setjmp` doit être différente de zéro. Si *value* est passé en tant que 0, la valeur 1 est substituée dans le retour effectif.
 

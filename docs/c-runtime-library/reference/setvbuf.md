@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : setvbuf'
 title: setvbuf
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 907d02e94c79acf09dfa99a8b42e9f448d32dcfa
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8010bdea7a2542e8797ea8c352d9221cdb4cc0b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303490"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -55,7 +56,7 @@ int setvbuf(
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Mémoire tampon allouée par l’utilisateur.
 
 *mode*<br/>
@@ -64,7 +65,7 @@ Mode de mise en mémoire tampon.
 *size*<br/>
 Taille de la mémoire tampon en octets. Plage autorisée : 2 <= *taille* <= INT_MAX (2147483647). En interne, la valeur fournie pour *Size* est arrondie au multiple le plus proche de 2.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 en cas de réussite.
 
@@ -72,17 +73,17 @@ Si *Stream* a la **valeur null**, ou si le *mode* ou la *taille* ne se trouve pa
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **setvbuf** permet au programme de contrôler la mise en mémoire tampon et la taille de la mémoire tampon pour le *flux*. le *flux* doit faire référence à un fichier ouvert qui n’a pas subi une opération d’e/s depuis son ouverture. Le tableau désigné par la *mémoire tampon* est utilisé comme mémoire tampon, sauf s’il est **null**, auquel cas **setvbuf** utilise une mémoire tampon allouée automatiquement de \* *taille*longueur/2 octets.
+La fonction **setvbuf** permet au programme de contrôler la mise en mémoire tampon et la taille de la mémoire tampon pour le *flux*. le *flux* doit faire référence à un fichier ouvert qui n’a pas subi une opération d’e/s depuis son ouverture. Le tableau désigné par la *mémoire tampon* est utilisé comme mémoire tampon, sauf s’il est **null**, auquel cas **setvbuf** utilise une mémoire tampon allouée automatiquement de *taille* longueur/2 \* octets.
 
-Le mode doit être **_IOFBF**, **_IOLBF**ou **_IONBF**. Si le *mode* est **_IOFBF** ou **_IOLBF**, la *taille* est utilisée comme taille de la mémoire tampon. Si le *mode* est **_IONBF**, le flux est non mis en mémoire tampon et la *taille* et la *mémoire tampon* sont ignorées. Les valeurs pour le *mode* et leurs significations sont les suivantes :
+Le mode doit être **_IOFBF**, **_IOLBF** ou **_IONBF**. Si le *mode* est **_IOFBF** ou **_IOLBF**, la *taille* est utilisée comme taille de la mémoire tampon. Si le *mode* est **_IONBF**, le flux est non mis en mémoire tampon et la *taille* et la *mémoire tampon* sont ignorées. Les valeurs pour le *mode* et leurs significations sont les suivantes :
 
 |valeur du *mode*|Signification|
 |-|-|
 | **_IOFBF** | Mise en mémoire tampon complète ; autrement dit, la *mémoire tampon* est utilisée comme mémoire tampon et la *taille* est utilisée comme taille de la mémoire tampon. Si *buffer* a la **valeur null**, une longueur d’octets de *taille* de mémoire tampon allouée automatiquement est utilisée. |
 | **_IOLBF** | Pour certains systèmes, ce mode assure une mise en mémoire tampon de ligne. Toutefois, pour Win32, le comportement est identique à la mise en mémoire tampon complète de **_IOFBF** . |
-| **_IONBF** | Aucune mémoire tampon n’est utilisée, quelle que soit la *taille*de la *mémoire tampon* ou. |
+| **_IONBF** | Aucune mémoire tampon n’est utilisée, quelle que soit la *taille* de la *mémoire tampon* ou. |
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

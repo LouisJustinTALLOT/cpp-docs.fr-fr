@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _lseek, _lseeki64'
 title: _lseek, _lseeki64
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: b99793c7d3f16eceec20c90f29824bca8321fb12
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5ac536a0f1388f8d664aa6721900256da368d652
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299967"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
@@ -72,13 +73,13 @@ Nombre d’octets à partir d’*origin*.
 *lancé*<br/>
 Position initiale.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_lseek** retourne l’offset, en octets, de la nouvelle position à partir du début du fichier. **_lseeki64** retourne l’offset dans un entier 64 bits. La fonction retourne-1L pour indiquer une erreur. Si un paramètre non valide est passé, tel qu’un descripteur de fichier incorrect, que la valeur d’*origin* n’est pas valide ou que la position spécifiée par *offset* se situe avant le début du fichier, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EBADF** et retournent-1L. Sur les appareils sans fonctionnalités de recherche (tels que les terminaux et les imprimantes), la valeur de retour n’est pas définie.
 
 Pour plus d’informations sur ces codes d’erreur et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_lseek** déplace le pointeur de fichier associé à *FD* vers un nouvel emplacement qui est *décalé* d’octets par rapport à l' *origine*. L’opération suivante sur le fichier se produit au nouvel emplacement. L’argument *origin* doit être une des constantes suivantes, qui sont définies dans Stdio.h.
 
@@ -105,7 +106,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_lseek.c
@@ -177,6 +178,6 @@ Position for end of file seek = 57
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
 [fseek, _fseeki64](fseek-fseeki64.md)<br/>
 [_tell, _telli64](tell-telli64.md)<br/>

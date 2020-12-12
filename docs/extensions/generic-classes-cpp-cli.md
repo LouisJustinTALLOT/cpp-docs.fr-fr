@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes génériques (C++/CLI)'
 title: Classes génériques (C++/CLI)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: fd287d8e9fe08ccd42436569eafee3f6935700e2
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 6b27f5220ab45fb62858bca2cec9ba0e46e9ec0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414124"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301761"
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 
@@ -41,7 +42,7 @@ Dans la syntaxe ci-dessus, les termes suivants sont utilisés :
 (Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et les classes d’attributs, consultez Attributs.
 
 *class-key*<br/>
-**`class`** Ou**`typename`**
+**`class`** Ou **`typename`**
 
 *type-parameter-identifier(s)*, une liste d’identificateurs séparée par des virgules spécifiant les noms des paramètres de type.
 
@@ -56,7 +57,7 @@ Une liste (non séparée par des virgules) de clauses **where** spécifiant les 
 *accessibility-modifiers*<br/>
 Modificateurs d’accessibilité pour la classe générique. Pour le Windows Runtime, le seul modificateur autorisé est **`private`** . Pour le common language runtime, les modificateurs autorisés sont **`private`** et **`public`** .
 
-*identificateur*<br/>
+*identifier*<br/>
 Le nom de la classe générique, tout identificateur C++ valide.
 
 *modificateurs*<br/>

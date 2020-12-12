@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _access, _waccess'
 title: _access, _waccess
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d8cb62050482f29be0bef2b8433a65c2730de2fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303737"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -106,7 +107,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_taccess`|**_access**|**_access**|**_waccess**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mbccpy_s, _mbccpy_s_l'
 title: _mbccpy_s, _mbccpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6764c100fb52b025db2d8f79a72c7c6420a64bee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920318"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303529"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -100,13 +101,13 @@ Caractère multioctet à copier.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec. Si *src* ou *dest* a la **valeur null**, ou si plus de **buffSizeinBytes** octets sont copiés vers *dest*, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **EINVAL** et **errno** a la valeur **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_mbccpy_s** copie un caractère multioctet de *src* vers *dest*. Si *src* ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à [_ismbblead](ismbblead-ismbblead-l.md), alors le seul octet vers lequel pointe *src* est copié. Si *src* pointe vers un octet de tête, mais que l’octet suivant est 0 et donc non valide, 0 est copié vers *dest*, **errno** a la valeur **EILSEQ**et la fonction retourne **EILSEQ**.
+La fonction **_mbccpy_s** copie un caractère multioctet de *src* vers *dest*. Si *src* ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à [_ismbblead](ismbblead-ismbblead-l.md), alors le seul octet vers lequel pointe *src* est copié. Si *src* pointe vers un octet de tête, mais que l’octet suivant est 0 et donc non valide, 0 est copié vers *dest*, **errno** a la valeur **EILSEQ** et la fonction retourne **EILSEQ**.
 
 **_mbccpy_s** n’ajoute pas de terminateur null ; Toutefois, si *src* pointe vers un caractère null, alors cette valeur null est copiée vers *dest* (il s’agit simplement d’une copie sur un octet standard).
 
@@ -119,7 +120,7 @@ La valeur de *pCopied* est remplie avec le nombre d’octets copiés. Les valeur
 |Octet de tête suivi d’une valeur différente de 0|Octet de tête suivi d’une valeur différente de 0|2|0|
 |Octet de tête suivi de 0|0|1|**EILSEQ**|
 
-Notez que la deuxième ligne est simplement un cas spécial de la première. Notez également que le tableau suppose que *buffSizeInBytes* >= *pCopied*.
+Notez que la deuxième ligne est simplement un cas spécial de la première. Notez également que le tableau suppose que *buffSizeInBytes*  >=  *pCopied*.
 
 **_mbccpy_s** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_mbccpy_s_l** est identique à **_mbccpy_s** sauf que **_mbccpy_s_l** utilise les paramètres régionaux passés pour tout comportement dépendant des paramètres régionaux.
 
@@ -145,5 +146,5 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 ## <a name="see-also"></a>Voir aussi
 
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

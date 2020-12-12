@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : directive #define (C/C++)'
 title: '#define, directive (C/C++)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -10,23 +11,23 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: e9e5b7a02ee55c05aa44278fbceb9c42f372c443
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6821f775492671d860f4491354fff77e66150101
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300457"
 ---
 # <a name="define-directive-cc"></a>#define, directive (C/C++)
 
 L' **#define** crée une *macro*, qui est l’Association d’un identificateur ou d’un identificateur paramétré avec une chaîne de jeton. Une fois la macro définie, le compilateur peut substituer la chaîne de jeton pour chaque occurrence de l'identificateur dans le fichier source.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
-> **#define** *identificateur* *de #define jeton-chaîne*<sub>OPT</sub>\
-> **#define** *identificateur* **de #define (** *identificateur*<sub>OPT</sub>**,** ... **,** *identificateur*<sub>OPT</sub> **)** *jeton-chaîne*<sub>OPT</sub>
+>  *identificateur* *de #define jeton-chaîne*<sub>OPT</sub>\
+>  *identificateur* **de #define (** *identificateur*<sub>OPT</sub>**,** ... **,** *identificateur*<sub>OPT</sub> **)** *jeton-chaîne*<sub>OPT</sub>
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La directive **#define** oblige le compilateur à substituer la *chaîne de jeton* pour chaque occurrence de l' *identificateur* dans le fichier source. L' *identificateur* est remplacé uniquement lorsqu’il forme un jeton. Autrement dit, l' *identificateur* n’est pas remplacé s’il apparaît dans un commentaire, dans une chaîne ou dans le cadre d’un identificateur plus long. Pour plus d’informations, consultez [jetons](../cpp/character-sets.md).
 

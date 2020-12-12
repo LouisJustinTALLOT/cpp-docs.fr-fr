@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : marshaler des structures à l’aide de PInvoke'
 title: "Comment : marshaler des structures à l'aide de PInvoke"
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e132505ef536a79c67afdd76443c2637c08f923b
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 417701ae1459c265e48171a517b7729d0e92c098
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302528"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Comment : marshaler des structures à l'aide de PInvoke
 

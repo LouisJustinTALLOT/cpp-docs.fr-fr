@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _aligned_free'
 title: _aligned_free
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-ms.openlocfilehash: d296600da4db2b97479de95cfc1f8c41d0e50708
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2efbda028f1a5c23ce8a6f02da543a114534985d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303724"
 ---
 # <a name="_aligned_free"></a>_aligned_free
 
@@ -52,9 +53,9 @@ void _aligned_free (
 *memblock*<br/>
 Pointeur vers le bloc de mémoire qui a été retourné à la fonction `_aligned_malloc` ou `_aligned_offset_malloc`.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-**_aligned_free** est marqué `__declspec(noalias)`, ce qui signifie que la fonction ne peut pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
+**_aligned_free** est marqué `__declspec(noalias)` , ce qui signifie que la fonction ne peut pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
 
 Cette fonction ne valide pas son paramètre, contrairement à d’autres fonctions CRT _aligned. Si *memblock* est un pointeur null, cette fonction n’exécute simplement aucune action. Elle ne modifie pas `errno` et elle n’appelle pas le gestionnaire de paramètres non valides. Si une erreur se produit dans la fonction en raison de la non-utilisation de fonctions _aligned au préalable pour allouer le bloc de mémoire ou qu’une erreur d’alignement de mémoire se produit en raison d’un désastre imprévu, la fonction génère un rapport de débogage à partir des [macros _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
 
@@ -66,7 +67,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |-------------|---------------------|
 |**_aligned_free**|\<malloc.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Pour plus d’informations, consultez [_aligned_malloc](aligned-malloc.md).
 

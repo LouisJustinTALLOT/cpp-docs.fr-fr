@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragma Component'
 title: component, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 73b308fdc426be9b403b808d4e638b4f5c1e9149
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2eeb70701c490e0f797dfbd6da7ac11030283073
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300799"
 ---
 # <a name="component-pragma"></a>component, pragma
 
@@ -25,7 +26,7 @@ Contrôle la collection d’informations de navigation ou d’informations de d�
 > **composant #pragma (minrebuild,** { **on** \| **off** } **)** \
 > **composant #pragma (MinTypeInfo,** { **on** \| **off** } **)**
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 ### <a name="browser"></a>Browser
 

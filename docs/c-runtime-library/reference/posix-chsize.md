@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : chsize'
 title: chsize
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - chsize function
 ms.assetid: f94d62f6-b539-4cbf-bf99-b81d081b4216
-ms.openlocfilehash: c3a239ec67f01f10adcee20c5c3170461e436f6e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 1634239bbc2e98f9ce71fea4b59f646ebfbaee71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301000"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304647"
 ---
 # <a name="chsize"></a>chsize
 

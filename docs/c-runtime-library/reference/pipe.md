@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _pipe'
 title: _pipe
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: 692a891549e0c84d6297b108918d9d7c58495ef7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5daf02262b9fecd0594ec25dd91d141c3fc52b71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304673"
 ---
 # <a name="_pipe"></a>_pipe
 
@@ -65,7 +66,7 @@ Quantité de mémoire à réserver.
 *TextMode*<br/>
 Mode de Fichier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 en cas de réussite. Retourne-1 pour indiquer une erreur. En cas d’erreur, **errno** est défini sur l’une des valeurs suivantes :
 
@@ -85,7 +86,7 @@ La fonction **_pipe** crée un *canal, qui est un canal d'* e/s artificiel utili
 
 Le descripteur de sortie standard de **Program1** est attaché au descripteur d’écriture du canal. Le descripteur d’entrée standard de **Program2** est attaché au descripteur de lecture du canal. De ce fait, il n’est plus nécessaire de créer des fichiers temporaires pour transmettre des informations à d’autres programmes.
 
-La fonction **_pipe** retourne deux descripteurs de fichier au canal dans l’argument de *CF* . L’élément *CF*[0] contient le descripteur de lecture, tandis que l’élément de la façon la plus à *l’élément est*le descripteur d’écriture. Les descripteurs de fichier de canal sont utilisés de la même façon que les autres descripteurs de fichier. (Les fonctions d’entrée et de sortie de bas niveau **_read** et **_Write** peuvent lire et écrire dans un canal.) Pour détecter la condition de fin de canal, recherchez une demande de **_read** qui retourne 0 comme nombre d’octets lus.
+La fonction **_pipe** retourne deux descripteurs de fichier au canal dans l’argument de *CF* . L’élément *CF*[0] contient le descripteur de lecture, tandis que l’élément de la façon la plus à *l’élément est* le descripteur d’écriture. Les descripteurs de fichier de canal sont utilisés de la même façon que les autres descripteurs de fichier. (Les fonctions d’entrée et de sortie de bas niveau **_read** et **_Write** peuvent lire et écrire dans un canal.) Pour détecter la condition de fin de canal, recherchez une demande de **_read** qui retourne 0 comme nombre d’octets lus.
 
 L’argument *psize* spécifie la quantité de mémoire, en octets, à réserver pour le canal. L’argument *TextMode* spécifie le mode de traduction pour le canal. La constante de manifeste **_O_TEXT** spécifie une traduction de texte, et la constante **_O_BINARY** spécifie la traduction binaire. (Consultez [fopen, _wfopen](fopen-wfopen.md) pour obtenir une description des modes texte et binaire.) Si l’argument *TextMode* a la valeur 0, **_pipe** utilise le mode de traduction par défaut spécifié par la variable de mode par défaut [_fmode](../../c-runtime-library/fmode.md).
 

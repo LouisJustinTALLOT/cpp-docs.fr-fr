@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateurs logiques C'
 title: Opérateurs logiques C
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - '&& operator'
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
-ms.openlocfilehash: 8f59ad927dd8ee62dbfc80fd238677bf1b646f9c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 58527e4702abce6d05f7f8e6d5aed2d7c17eca94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227996"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300305"
 ---
 # <a name="c-logical-operators"></a>Opérateurs logiques C
 

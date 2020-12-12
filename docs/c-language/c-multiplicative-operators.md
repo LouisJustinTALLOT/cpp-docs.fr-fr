@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateurs de multiplication C'
 title: Opérateurs de multiplication C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: 32ff74be0fd1afb1d8a21d74abb194eaa5e273df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61689435c5e76238feba26d5a49ffe3530798f88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300266"
 ---
 # <a name="c-multiplicative-operators"></a>Opérateurs de multiplication C
 
@@ -24,7 +25,7 @@ Les opérateurs de multiplication effectuent des opérations de multiplication (
 
 ## <a name="syntax"></a>Syntaxe
 
-multiplicatif *-* expression : cast-expression multiplicatif-expression cast-expression cast-expression multiplicative-expression cast-expression cast-expression cast-expression &nbsp; &nbsp; &nbsp; &nbsp; *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **/** *cast-expression* &nbsp; &nbsp; &nbsp; &nbsp; *multiplicative-expression* **%** *cast-expression*
+multiplicatif *-* expression : cast-expression multiplicatif-expression cast-expression cast-expression multiplicative-expression cast-expression cast-expression cast-expression &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  <strong>\*</strong>  &nbsp; &nbsp; &nbsp; &nbsp;  **/**  &nbsp; &nbsp; &nbsp; &nbsp;  **%** 
 
 Les opérandes de l’opérateur de reste ( **%** ) doivent être intégraux. Les opérateurs de multiplication ( <strong>\*</strong> ) et de division ( **/** ) peuvent prendre des opérandes de type intégral ou flottant ; les types des opérandes peuvent être différents.
 
