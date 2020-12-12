@@ -1,22 +1,23 @@
 ---
+description: 'En savoir plus sur : &lt; facultatif&gt;'
 title: '&lt;facultatif&gt;'
 ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: 31a3d9aad539e45bb835331a4ef63690d0e16f49
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c1f1e6f99278abf296c361515953a931109f47ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201831"
 ---
 # <a name="ltoptionalgt"></a>&lt;facultatif&gt;
 
 Définit le modèle de classe `optional` de conteneur et plusieurs modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<optional>
 
@@ -38,7 +39,7 @@ Définit le modèle de classe `optional` de conteneur et plusieurs modèles de p
 > [!NOTE]
 > Outre les comparaisons relationnelles, \<optional> les opérateurs prennent également en charge la comparaison avec **nullopt** et `T` .
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

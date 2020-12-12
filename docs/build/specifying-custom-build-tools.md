@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spécifier les outils de génération personnalisée'
 title: Spécification des outils de génération personnalisée
 ms.date: 06/05/2018
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - build tools (C++), specifying
 - custom build tools (C++), specifying
 - builds (C++), custom build tools
-ms.openlocfilehash: dbce226b34503a9e8e70b6f19d9aa0c68ef487f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db3162e3f7ad3f007d3f26e1ee2a279e5a132eb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275332"
 ---
 # <a name="specify-custom-build-tools"></a>Spécifier des outils de génération personnalisée
 
@@ -52,7 +53,7 @@ Pour obtenir des informations générales sur les outils de génération personn
 
       Il est possible de spécifier plusieurs fichiers d’entrée et de sortie symboliquement à l’aide de macros MSBuild. Pour plus d’informations sur la façon de spécifier l’emplacement des fichiers, ou les noms des ensembles de fichiers, consultez [macros courantes pour les commandes et les propriétés de génération](reference/common-macros-for-build-commands-and-properties.md).
 
-      Étant donné que le caractère'% 'est réservé par MSBuild, si vous spécifiez une variable **%** d’environnement, remplacez chaque caractère d’échappement par la séquence d’échappement hexadécimale **%25** . Par exemple, remplacez **%WINDIR%** par **%25WINDIR%25**. MSBuild remplace chaque séquence **%25** par le caractère **%** avant d’accéder à la variable d’environnement.
+      Étant donné que le caractère'% 'est réservé par MSBuild, si vous spécifiez une variable d’environnement, remplacez chaque **%** caractère d’échappement par la séquence d’échappement hexadécimale **%25** . Par exemple, remplacez **%WINDIR%** par **%25WINDIR%25**. MSBuild remplace chaque séquence **%25** par le caractère **%** avant d’accéder à la variable d’environnement.
 
    - Dans **Description**, entrez un message descriptif sur cet outil de génération personnalisée. Le message est imprimé dans la fenêtre **Sortie** quand le système de génération traite cet outil.
 
@@ -62,7 +63,7 @@ Pour obtenir des informations générales sur les outils de génération personn
 
 Si vous souhaitez que le système de génération fonctionne sur un fichier de sortie généré par l’outil de génération personnalisée, vous devez l’ajouter manuellement au projet. L’outil de génération personnalisée met à jour le fichier durant la génération.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Imaginons que vous souhaitiez inclure un fichier nommé parser.l dans votre projet. Vous avez un analyseur lexical, **lexer.exe**, sur votre chemin exécutable. Vous souhaitez l’utiliser pour traiter parser.l afin de produire un fichier .c portant le même nom de base (parser.c).
 
@@ -74,7 +75,7 @@ Cette commande exécute l’analyseur lexical sur parser.l et génère en sortie
 
 Dans la propriété **Sorties**, entrez ce qui suit :
 
-> **. \%(Nom de fichier). c**
+> **.\% (Nom de fichier). c**
 
 Quand vous générez le projet, le système de génération compare les horodatages de parser.l et de parser.c. Si parser.l est plus récent, ou si parser.c n’existe pas, le système de génération exécute la valeur de la propriété **Ligne de commande** pour mettre à jour parser.c. Dans la mesure où parser.c a également été ajouté au projet, le système de génération compile parser.c.
 

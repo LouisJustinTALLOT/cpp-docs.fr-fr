@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; Chrono&gt;'
 title: '&lt;chrono&gt;'
 ms.date: 05/07/2019
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: b74c25e9c26d5767426576633e0999ae3ca44954
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a59ad0d88a1d9266e61a8ef49e7cf9184da803b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840646"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325139"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -23,7 +24,7 @@ Incluez l’en-tête standard \<chrono> pour définir des classes et des fonctio
 
 À compter de Visual Studio 2015, l’implémentation de `steady_clock` a changé pour répondre aux exigences standard C++ pour en matière et monotonique. `steady_clock` est maintenant basé sur QueryPerformanceCounter() et `high_resolution_clock` est désormais un typedef pour `steady_clock`. Par conséquent, dans le compilateur Microsoft C++ `steady_clock::time_point` est désormais un typedef pour `chrono::time_point<steady_clock>` ; Toutefois, cette règle n’est pas nécessairement le cas pour d’autres implémentations.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<chrono>
 
@@ -49,7 +50,7 @@ Incluez l’en-tête standard \<chrono> pour définir des classes et des fonctio
 |[system_clock, structure](../standard-library/system-clock-structure.md)|Représente un *type d’horloge* basé sur l’horloge en temps réel du système.|
 |[treat_as_floating_point, structure](../standard-library/treat-as-floating-point-structure.md)|Spécifie si un type peut être traité comme un type à virgule flottante.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -66,11 +67,11 @@ Incluez l’en-tête standard \<chrono> pour définir des classes et des fonctio
 |[and](../standard-library/chrono-operators.md#op_star)|Opérateur de multiplication pour les objets `duration`.|
 |[and](../standard-library/chrono-operators.md#op_div)|Opérateur de division pour les objets `duration`.|
 |[opérateur +](../standard-library/chrono-operators.md#op_add)|Ajoute des objets `duration` et `time_point`.|
-|[and&lt;](../standard-library/chrono-operators.md#op_lt)|Détermine si un objet `duration` ou `time_point` est inférieur à un autre objet `duration` ou `time_point`.|
-|[and&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Détermine si un objet `duration` ou `time_point` est inférieur ou égal à un autre objet `duration` ou `time_point`.|
+|[operator&lt;](../standard-library/chrono-operators.md#op_lt)|Détermine si un objet `duration` ou `time_point` est inférieur à un autre objet `duration` ou `time_point`.|
+|[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Détermine si un objet `duration` ou `time_point` est inférieur ou égal à un autre objet `duration` ou `time_point`.|
 |[opérateur = =](../standard-library/chrono-operators.md#op_eq_eq)|Détermine si deux objets `duration` représentent des intervalles de temps de même longueur ou si deux objets `time_point` représentent le même point dans le temps.|
-|[and&gt;](../standard-library/chrono-operators.md#op_gt)|Détermine si un objet `duration` ou `time_point` est supérieur à un autre objet `duration` ou `time_point`.|
-|[and&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Détermine si un objet `duration` ou `time_point` est supérieur ou égal à un autre objet `duration` ou `time_point`.|
+|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|Détermine si un objet `duration` ou `time_point` est supérieur à un autre objet `duration` ou `time_point`.|
+|[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Détermine si un objet `duration` ou `time_point` est supérieur ou égal à un autre objet `duration` ou `time_point`.|
 
 ### <a name="typedefs-predefined-duration-types"></a>Typedefs (types de durée prédéfinis)
 

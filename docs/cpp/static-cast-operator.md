@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateur static_cast'
 title: static_cast, opérateur
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 8551d41417647ee4f759e2547e2c1909c59d78cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d76b4e21adea6561d7d6822871631c242aaf9c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317959"
 ---
 # <a name="static_cast-operator"></a>static_cast, opérateur
 

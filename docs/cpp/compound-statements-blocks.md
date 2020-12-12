@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : instructions composées (blocs)'
 title: Instructions composées (blocs)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - blocks, about blocks
 - compound statements
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
-ms.openlocfilehash: a06a3d9ce887150ba3333e8e9e874ab337f8b4df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7defb11a30466949d5a9ca5e86ca1e865fbfe4fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221807"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318011"
 ---
 # <a name="compound-statements-blocks"></a>Instructions composées (blocs)
 

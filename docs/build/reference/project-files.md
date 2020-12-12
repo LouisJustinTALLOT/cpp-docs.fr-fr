@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : fichiers projet'
 title: Exemple de fichier projet
 ms.date: 08/19/2019
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: eef28961ab8c4d3a34a74999c7e0c69a4fc3fced
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: caadd7c88b910b522868a6481219a3169cab2593
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225763"
 ---
 # <a name="project-files"></a>Fichiers projet
 
@@ -26,7 +27,7 @@ L’exemple de fichier. vcxproj suivant a été généré en choisissant **Assis
 
 ::: moniker range="<=msvc-150"
 
-L’exemple de fichier .vcxproj suivant a été produit en spécifiant une **Application console Win32** dans la boîte de dialogue **Nouveau projet** . Pour traiter un fichier projet, utilisez l’outil msbuild.exe sur la ligne de commande, ou la commande **Générer** dans l’IDE. (Cet exemple ne peut pas être traité, car les fichiers sources et d’en-tête requis ne sont pas fournis.) Pour plus d’informations sur les éléments XML d’un fichier projet, consultez [Référence du schéma de fichier projet](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+L’exemple de fichier .vcxproj suivant a été produit en spécifiant une **Application console Win32** dans la boîte de dialogue **Nouveau projet**. Pour traiter un fichier projet, utilisez l’outil msbuild.exe sur la ligne de commande, ou la commande **Générer** dans l’IDE. (Cet exemple ne peut pas être traité, car les fichiers sources et d’en-tête requis ne sont pas fournis.) Pour plus d’informations sur les éléments XML d’un fichier projet, consultez [Référence du schéma de fichier projet](/visualstudio/msbuild/msbuild-project-file-schema-reference).
 
 ::: moniker-end
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : presse-papiers : quand utiliser chaque mécanisme de presse-papiers'
 title: 'Presse-papiers : quand utiliser chaque mécanisme de Presse-papiers'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - formats [MFC], Clipboard for OLE
 - Clipboard [MFC], formats
 ms.assetid: fd071996-ef8c-488b-81bd-89057095a201
-ms.openlocfilehash: 88fef4b9c0cf37bb475e460c212765b17d4eb634
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e2fae9fd2af38a9b39c488ec17adf1433edc098c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338407"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Presse-papiers : quand utiliser chaque mécanisme de Presse-papiers
 

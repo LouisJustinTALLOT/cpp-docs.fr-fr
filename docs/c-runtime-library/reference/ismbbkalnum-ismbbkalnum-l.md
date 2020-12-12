@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _ismbbkalnum, _ismbbkalnum_l'
 title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9f18a80882b9f0bc703b0fbf5caace9746a486e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909520"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306311"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -59,17 +60,17 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Entier à tester.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_ismbbkalnum** retourne une valeur différente de zéro si l’entier *c* est un symbole de texte non-ASCII autre que la ponctuation, ou 0 dans le cas contraire. **_ismbbkalnum** utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. **_ismbbkalnum_l** est identique à **_ismbbkalnum** sauf qu’il prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

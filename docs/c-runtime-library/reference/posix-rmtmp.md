@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : rmtmp'
 title: rmtmp
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - rmtmp function
 ms.assetid: d79f0364-39e8-42fb-a73a-63c22a646cd8
-ms.openlocfilehash: 8c7a7302f1427e5ac6e70da9769c3b4b33231cc0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 66423265858a82067e60c3c69990b0f6f309f60e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300844"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253050"
 ---
 # <a name="rmtmp"></a>rmtmp
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2511'
 title: Erreur du compilateur C2511
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
-ms.openlocfilehash: ff78cb50b274fe40d513739264bd7e9894bbed9d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 846173cc887fd09b564d18e063820bc0e0d5b184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74746563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212920"
 ---
 # <a name="compiler-error-c2511"></a>Erreur du compilateur C2511
 
 'identificateur' : fonction membre surchargée introuvable dans’classe'
 
-Aucune version de la fonction n’est déclarée avec les paramètres spécifiés.  Causes possibles :
+Aucune version de la fonction n’est déclarée avec les paramètres spécifiés.  Causes possibles :
 
 1. Paramètres incorrects passés à la fonction.
 

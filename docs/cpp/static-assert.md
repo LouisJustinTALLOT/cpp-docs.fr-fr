@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : static_assert'
 title: static_assert
 ms.date: 07/29/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: bf796b853d21d33d97e25c05101b7486e1eb112f
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 76383aacf67f0e8bcc12880674afa17f9fce3603
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008865"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317985"
 ---
 # <a name="static_assert"></a>static_assert
 

@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : tasks.vs.jssur la référence de schéma (C++)'
 title: tasks.vs.jssur la référence de schéma (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - tasks.vs.json file [C++]
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: a2aea1b64d5a6c62604c680bf1a4a26478b7b52a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1fd4cfb960afa1260c8ea85c0e7fe9274c77ac68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275319"
 ---
 # <a name="tasksvsjson-schema-reference-c"></a>tasks.vs.jssur la référence de schéma (C++)
 
-Pour indiquer à Visual Studio comment générer votre code source dans un projet de dossier ouvert, ajoutez un *tasks.vs.jssur le* fichier. Vous pouvez définir ici une tâche arbitraire, puis l’appeler à partir du menu contextuel **Explorateur de solutions** . Les projets CMake n’utilisent pas ce fichier, car toutes les commandes de génération sont spécifiées dans *CMakeLists.txt*. Pour les systèmes de génération autres que CMake, *tasks.vs.json* vous permet de spécifier des commandes de génération et d’appeler des scripts de génération. Pour obtenir des informations générales sur l’utilisation * detasks.vs.jssur*, consultez [personnaliser les tâches de génération et de débogage pour le développement « ouvrir un dossier »](/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio).
+Pour indiquer à Visual Studio comment générer votre code source dans un projet de dossier ouvert, ajoutez un *tasks.vs.jssur le* fichier. Vous pouvez définir ici une tâche arbitraire, puis l’appeler à partir du menu contextuel **Explorateur de solutions** . Les projets CMake n’utilisent pas ce fichier, car toutes les commandes de génération sont spécifiées dans *CMakeLists.txt*. Pour les systèmes de génération autres que CMake, *tasks.vs.json* vous permet de spécifier des commandes de génération et d’appeler des scripts de génération. Pour obtenir des informations générales sur l’utilisation *detasks.vs.jssur*, consultez [personnaliser les tâches de génération et de débogage pour le développement « ouvrir un dossier »](/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio).
 
 Une tâche a une `type` propriété qui peut avoir l’une des quatre valeurs suivantes : `default` , `launch` , `remote` ou `msbuild` . La plupart des tâches doivent utiliser `launch` , sauf si une connexion à distance est requise.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe COLLATE'
 title: collate, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: ccdf05a7a41fc7f646852e7d326832b86c41dde8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cef6d30167aa61c674913ac7844f6eb021a82529
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325060"
 ---
 # <a name="collate-class"></a>collate, classe
 
@@ -79,7 +80,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 **Espace de noms :** std
 
-## <a name="collatechar_type"></a><a name="char_type"></a>COLLATE :: char_type
+## <a name="collatechar_type"></a><a name="char_type"></a> COLLATE :: char_type
 
 Type qui décrit un caractère de type `CharType`.
 
@@ -91,7 +92,7 @@ typedef CharType char_type;
 
 Le type est un synonyme du paramètre de modèle `CharType`.
 
-## <a name="collatecollate"></a><a name="collate"></a>COLLATE :: COLLATE
+## <a name="collatecollate"></a><a name="collate"></a> COLLATE :: COLLATE
 
 Constructeur des objets de la classe collate qui sert de facette de paramètres régionaux pour la gestion des conventions de tri de chaînes.
 
@@ -122,11 +123,11 @@ Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les 
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1 : ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Le constructeur initialise son objet de base avec **locale ::**[facette](../standard-library/locale-class.md#facet_class)( `_Refs` ).
 
-## <a name="collatecompare"></a><a name="compare"></a>COLLATE :: compare
+## <a name="collatecompare"></a><a name="compare"></a> COLLATE :: compare
 
 Compare deux séquences de caractères selon leurs règles de facette afin de vérifier leur égalité ou leur inégalité.
 
@@ -151,7 +152,7 @@ Pointeur vers le premier élément de la deuxième séquence à comparer.
 *last2*\
 Pointeur vers le dernier élément de la deuxième séquence à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre retourne :
 
@@ -192,7 +193,7 @@ int main() {
 }
 ```
 
-## <a name="collatedo_compare"></a><a name="do_compare"></a>COLLATE ::d o_compare
+## <a name="collatedo_compare"></a><a name="do_compare"></a> COLLATE ::d o_compare
 
 Fonction virtuelle appelée pour comparer deux séquences de caractères selon leurs règles de facette afin de vérifier leur égalité ou leur inégalité.
 
@@ -217,7 +218,7 @@ Pointeur vers le premier élément de la deuxième séquence à comparer.
 *last2*\
 Pointeur vers le dernier élément de la deuxième séquence à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre retourne :
 
@@ -235,7 +236,7 @@ La fonction membre virtuelle protégée compare la séquence à [* First1, Last1
 
 Consultez l’exemple relatif à [collate::compare](#compare), qui appelle `do_compare`.
 
-## <a name="collatedo_hash"></a><a name="do_hash"></a>COLLATE ::d o_hash
+## <a name="collatedo_hash"></a><a name="do_hash"></a> COLLATE ::d o_hash
 
 Fonction virtuelle appelée pour déterminer la valeur de hachage des séquences en fonction de leurs règles de facette.
 
@@ -251,7 +252,7 @@ Pointeur vers le premier caractère de la séquence dont la valeur doit être d�
 *famille*\
 Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de hachage de type **`long`** pour la séquence.
 
@@ -263,7 +264,7 @@ Une valeur de hachage peut être utile, par exemple, dans la répartition des s�
 
 Consultez l’exemple relatif à [hash](#hash), qui appelle `do_hash`.
 
-## <a name="collatedo_transform"></a><a name="do_transform"></a>COLLATE ::d o_transform
+## <a name="collatedo_transform"></a><a name="do_transform"></a> COLLATE ::d o_transform
 
 Fonction virtuelle appelée pour convertir une séquence de caractères de paramètres régionaux en une chaîne pouvant être utilisée dans des comparaisons lexicographiques avec d'autres séquences de caractères également converties depuis les mêmes paramètres régionaux.
 
@@ -279,7 +280,7 @@ Pointeur vers le premier caractère de la séquence à convertir.
 *famille*\
 Pointeur vers le dernier caractère de la séquence à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Chaîne qui est la séquence de caractères transformée.
 
@@ -291,7 +292,7 @@ La fonction membre virtuelle protégée retourne un objet de la classe [STRING_T
 
 Consultez l’exemple relatif à [transform](#transform), qui appelle `do_transform`.
 
-## <a name="collatehash"></a><a name="hash"></a>COLLATE :: Hash
+## <a name="collatehash"></a><a name="hash"></a> COLLATE :: Hash
 
 Détermine la valeur de hachage d'une séquence en fonction de ses règles de facette.
 
@@ -307,7 +308,7 @@ Pointeur vers le premier caractère de la séquence dont la valeur doit être d�
 *famille*\
 Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de hachage de type **`long`** pour la séquence.
 
@@ -345,7 +346,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="collatestring_type"></a><a name="string_type"></a>COLLATE :: string_type
+## <a name="collatestring_type"></a><a name="string_type"></a> COLLATE :: string_type
 
 Type qui décrit une chaîne de type `basic_string` qui contient des caractères de type `CharType`.
 
@@ -361,7 +362,7 @@ Le type décrit une spécialisation du modèle de classe [basic_string](../stand
 
 Pour savoir comment déclarer et utiliser `string_type`, consultez [transform](#transform).
 
-## <a name="collatetransform"></a><a name="transform"></a>COLLATE :: Transform
+## <a name="collatetransform"></a><a name="transform"></a> COLLATE :: Transform
 
 Convertit une séquence de caractères de paramètres régionaux en une chaîne qui peut être utilisée dans des comparaisons lexicographiques avec d'autres séquences de caractères, elles aussi converties depuis les mêmes paramètres régionaux.
 
@@ -377,7 +378,7 @@ Pointeur vers le premier caractère de la séquence à convertir.
 *famille*\
 Pointeur vers le dernier caractère de la séquence à convertir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Chaîne qui contient la séquence de caractères transformée.
 

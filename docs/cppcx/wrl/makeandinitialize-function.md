@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : fonction MakeAndInitialize'
 title: MakeAndInitialize, fonction
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-ms.openlocfilehash: 28d9e586a766a131e7ab6280859845810c1d9814
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 108da1f19d6956527f06e5239f5ce2e14716d664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317920"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize, fonction
 
@@ -47,7 +48,7 @@ HRESULT MakeAndInitialize(
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Classe spécifiée par l’utilisateur qui hérite de `WRL::RuntimeClass`.
+Classe spécifiée par l’utilisateur qui hérite de `WRL::RuntimeClass` .
 
 *TArg1*<br/>
 Type d’argument 1 passé à la classe d’exécution spécifiée.
@@ -76,10 +77,10 @@ Type d’argument 8 passé à la classe d’exécution spécifiée.
 *TArg9*<br/>
 Type d’argument 9 passé à la classe d’exécution spécifiée.
 
-*Arg1*<br/>
+*arg1*<br/>
 Argument 1 passé à la classe d’exécution spécifiée.
 
-*Arg2*<br/>
+*arg2*<br/>
 Argument 2 passé à la classe d’exécution spécifiée.
 
 *Arg3*<br/>
@@ -103,7 +104,7 @@ Argument 8 qui est passé à la classe d’exécution spécifiée.
 *arg9*<br/>
 Argument 9 passé à la classe d’exécution spécifiée.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT.
 
@@ -119,4 +120,4 @@ Consultez [Comment : instancier des composants WRL directement](how-to-instanti
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL::Details, espace de noms](microsoft-wrl-details-namespace.md)
+[Microsoft :: WRL ::D espace de noms étails](microsoft-wrl-details-namespace.md)

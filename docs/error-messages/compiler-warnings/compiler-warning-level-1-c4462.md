@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4462'
 title: Avertissement du compilateur (niveau 1) C4462
 ms.date: 10/25/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
-ms.openlocfilehash: bd4d5c1fd7dd8d7419fc901149ceab7e769e7076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81696df228b2cbe6278521f602d2a6f986cacb13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404050"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212530"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>Avertissement du compilateur (niveau 1) C4462
 
@@ -19,7 +20,7 @@ ms.locfileid: "62404050"
 
 L’avertissement C4462 se produit dans une application ou un composant Windows Runtime lorsqu’un `TypedEventHandler` public a parmi l’un de ses paramètres de type une référence à une classe englobante.
 
-Cet avertissement est automatiquement promu en une erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma warning](../../preprocessor/warning.md). Par exemple, pour que C4462 un niveau 4 avertissement, ajoutez cette ligne à votre fichier de code source :
+Cet avertissement est automatiquement promu en erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma AVERTISSEMENT](../../preprocessor/warning.md). Par exemple, pour faire de C4462 dans un numéro d’avertissement de niveau 4, ajoutez la ligne suivante à votre fichier de code source :
 
 ```cpp
 #pragma warning(4:4462)
@@ -27,7 +28,7 @@ Cet avertissement est automatiquement promu en une erreur. Si vous souhaitez mod
 
 ## <a name="example"></a>Exemple
 
-Cet exemple génère l’avertissement C4462 :
+Cet exemple génère un avertissement C4462 :
 
 ```cpp
 namespace N
