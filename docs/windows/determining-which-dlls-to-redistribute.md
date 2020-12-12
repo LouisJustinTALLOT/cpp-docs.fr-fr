@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : détermination des dll à redistribuer'
 title: Détermination des DLL à redistribuer
 ms.date: 07/15/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 079bfa33ced9f62d6abbccca86435b1b5654a2de
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 016351a6d204c71cfef516862c9b57bebafcc1a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344707"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329400"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Détermination des DLL à redistribuer
 

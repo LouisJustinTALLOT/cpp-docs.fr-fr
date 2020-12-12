@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_current_locale'
 title: _get_current_locale
 ms.date: 11/04/2016
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-ms.openlocfilehash: a17e730b350eaf88cf1c51502fda3df5ae30f611
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 672914875aebbe020fbfab0c4958ce2963958432
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341488"
 ---
 # <a name="_get_current_locale"></a>_get_current_locale
 
@@ -56,13 +57,13 @@ La fonction **_get_current_locale** obtient les paramètres régionaux actuellem
 
 Le nom précédent de cette fonction, **__get_current_locale** (avec deux traits de soulignement de début), est déconseillé.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_get_current_locale**|\<locale.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

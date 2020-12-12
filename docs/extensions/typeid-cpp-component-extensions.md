@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : typeid (C++/CLI et C++/CX)'
 title: typeid (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0452de57b93eb5d55bed34fc1f9745280a6b6184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185659"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI et C++/CX)
 
@@ -45,11 +46,11 @@ Platform::Type^ type = T::typeid;
 *T*<br/>
 Un nom de type.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Dans C++/CX, typeid retourne une classe [Platform::Type](../cppcx/platform-type-class.md) qui est construite à partir des informations sur le type de runtime.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -66,7 +67,7 @@ type::typeid
 *type*<br/>
 Le nom d’un type (déclarateur abstrait) dont vous souhaitez l’objet `System::Type`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 **`typeid`** est utilisé pour obtenir le <xref:System.Type> pour un type au moment de la compilation.
 
@@ -78,7 +79,7 @@ Le nom d’un type (déclarateur abstrait) dont vous souhaitez l’objet `System
 
 **`typeid`** fonctionne également avec les types natifs, même s’il retourne toujours un `System::Type` .  Pour obtenir une structure type_info, utilisez [ `typeid` Operator](../cpp/typeid-operator.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

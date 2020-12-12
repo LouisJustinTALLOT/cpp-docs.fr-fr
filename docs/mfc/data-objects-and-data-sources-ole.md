@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : objets de données et sources de données (OLE)'
 title: Objets de données et sources de données (OLE)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 719053e2a75b18fbf54440403351198acc66b9d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616219"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291205"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Objets de données et sources de données (OLE)
 
@@ -33,7 +34,7 @@ Les articles suivants expliquent comment utiliser des objets de données et des 
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Glisser-déplacer](drag-and-drop-ole.md)
+[Glisser-déposer](drag-and-drop-ole.md)
 
 [Presse-papiers](clipboard.md)
 

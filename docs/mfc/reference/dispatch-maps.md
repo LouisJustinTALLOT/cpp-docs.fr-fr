@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les tables de dispatch'
 title: Tables de dispatch
 ms.date: 06/20/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-ms.openlocfilehash: 24921f2da404a2e5103d9a3cd2abba03109f0681
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3b160040af52e8346cbcbb09cc05c301f607052b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219965"
 ---
 # <a name="dispatch-maps"></a>Tables de dispatch
 
@@ -29,7 +30,7 @@ OLE Automation permet d’appeler des méthodes et d’accéder aux propriétés
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Définit une propriété OLE Automation qui accepte des paramètres et nomme les fonctions d’extraction et de définition.|
 |[DISP_DEFVALUE](#disp_defvalue)|Fait d’une propriété existante la valeur par défaut d’un objet.|
 
-## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
+## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a> DECLARE_DISPATCH_MAP
 
 Si une `CCmdTarget` classe dérivée de votre programme prend en charge OLE Automation, cette classe doit fournir un mappage de dispatch pour exposer ses méthodes et ses propriétés.
 
@@ -54,7 +55,7 @@ L’Assistant Application et les assistants code aident à créer des classes Au
 
 **En-tête :** afxwin.h
 
-## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP
+## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a> BEGIN_DISPATCH_MAP
 
 Déclare la définition de votre table de dispatch.
 
@@ -78,7 +79,7 @@ Dans le fichier d’implémentation (. cpp) qui définit les fonctions membres p
 
 **En-tête :** afxdisp.h
 
-## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP
+## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a> END_DISPATCH_MAP
 
 Termine la définition de votre table de dispatch.
 
@@ -94,7 +95,7 @@ Elle doit être utilisée conjointement avec BEGIN_DISPATCH_MAP.
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_function"></a><a name="disp_function"></a>DISP_FUNCTION
+## <a name="disp_function"></a><a name="disp_function"></a> DISP_FUNCTION
 
 Définit une fonction OLE Automation dans une table de dispatch.
 
@@ -144,7 +145,7 @@ L’argument *vtRetVal* est de type VarType. Les valeurs possibles suivantes pou
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-L’argument *vtsParams* est une liste de valeurs séparées par des espaces des `VTS_*` constantes. Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste de paramètres de la fonction. Par exemple,
+L’argument *vtsParams* est une liste de valeurs séparées par des espaces des `VTS_*` constantes. Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste de paramètres de la fonction. Par exemple :
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
@@ -184,7 +185,7 @@ Les `VTS_` constantes et leurs significations sont les suivantes :
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_property"></a><a name="disp_property"></a>DISP_PROPERTY
+## <a name="disp_property"></a><a name="disp_property"></a> DISP_PROPERTY
 
 Définit une propriété OLE Automation dans une table de dispatch.
 
@@ -235,7 +236,7 @@ Lorsqu’un client externe modifie la propriété, la valeur de la variable memb
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_property_ex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX
+## <a name="disp_property_ex"></a><a name="disp_property_ex"></a> DISP_PROPERTY_EX
 
 Définit une propriété OLE Automation et nomme les fonctions utilisées pour obtenir et définir la valeur de la propriété dans une table de dispatch.
 
@@ -275,7 +276,7 @@ L’argument *vtPropType* est de type VarType. Les valeurs possibles pour cet ar
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_property_notify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY
+## <a name="disp_property_notify"></a><a name="disp_property_notify"></a> DISP_PROPERTY_NOTIFY
 
 Définit une propriété OLE Automation avec notification dans une table de dispatch.
 
@@ -330,7 +331,7 @@ L’argument *vtPropType* est de type VarType. Les valeurs possibles pour cet ar
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_property_param"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM
+## <a name="disp_property_param"></a><a name="disp_property_param"></a> DISP_PROPERTY_PARAM
 
 Définit une propriété accessible avec des `Get` `Set` fonctions membres et distinctes.
 
@@ -390,7 +391,7 @@ Celles-ci correspondent à la macro DISP_PROPERTY_PARAM suivante dans le mappage
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_defvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE
+## <a name="disp_defvalue"></a><a name="disp_defvalue"></a> DISP_DEFVALUE
 
 Fait d’une propriété existante la valeur par défaut d’un objet.
 

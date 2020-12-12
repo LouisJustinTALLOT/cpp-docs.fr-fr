@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : modifier la signature'
 title: Changer la signature
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: 1599a7900e33db61994ea75581f9d87b1aee83f9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2530a13f3e0e4a1aad987a4eed9dfc49b91323de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185685"
 ---
 # <a name="change-signature"></a>Changer la signature
 
@@ -17,7 +18,7 @@ ms.locfileid: "80171903"
 
 **Pourquoi :** vous pourriez manuellement changer ces paramètres vous-même, puis rechercher tous les appels à cette fonction et les modifier un par un, mais cela peut entraîner des erreurs.  Cet outil de refactorisation effectuera automatiquement cette tâche.
 
-**Comment :**
+**Utilisation**
 
 1. placez le curseur texte ou de la souris dans le nom de la méthode à modifier ou dans l’une de ses utilisations :
 
@@ -26,7 +27,7 @@ ms.locfileid: "80171903"
 1. Effectuez ensuite l'une des opérations suivantes :
    * **Clavier**
      * Appuyez sur **Ctrl+R**, puis **Ctrl+O**.  (Notez que le raccourci clavier peut varier en fonction du profil que vous avez sélectionné.)
-     * Appuyez sur **Ctrl+.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Changer la signature** dans le menu contextuel.
+     * Appuyez sur **CTRL +.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Changer la signature** dans le menu contextuel.
    * **Souris**
      * Sélectionnez **Modifier > Refactoriser > Réorganiser les paramètres**.
      * Cliquez avec le bouton droit sur le code et choisissez le menu **Actions rapides et refactorisations**, puis sélectionnez **Changer la signature** dans le menu contextuel.
@@ -39,8 +40,8 @@ ms.locfileid: "80171903"
    | ------ | ---
    | **Haut/bas**    | Déplacer le paramètre sélectionné vers le haut ou le bas de la liste
    | **Ajouter**        | Ajouter un nouveau paramètre à la liste
-   | **Remove**     | Supprimer le paramètre sélectionné de la liste
-   | **Modify**     | Modifier le paramètre sélectionné en changeant son type et/ou nom, en indiquant s’il est facultatif et ce que serait sa valeur injectée
+   | **Supprimer**     | Supprimer le paramètre sélectionné de la liste
+   | **Modification**     | Modifier le paramètre sélectionné en changeant son type et/ou nom, en indiquant s’il est facultatif et ce que serait sa valeur injectée
    | **Rétablir**     | Rétablir l’état d’origine du paramètre sélectionné
    | **Tout rétablir** | Rétablir l’état d’origine de tous les paramètres
 

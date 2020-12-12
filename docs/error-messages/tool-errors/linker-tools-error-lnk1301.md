@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK1301'
 title: Erreur des outils Éditeur de liens LNK1301
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ac282aea62836591c6e30abb3030ef2143a78003
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335952"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Erreur des outils Éditeur de liens LNK1301
 
@@ -21,13 +22,13 @@ Un module compilé avec/CLR et/GL a été passé à l’éditeur de liens avec l
 
 Les optimisations guidées par profil ne sont pas prises en charge pour les modules/CLR.
 
-Pour plus d'informations, consultez .
+Pour plus d'informations, consultez les pages suivantes :
 
-- [/GL (Optimisation de l’ensemble du programme)](../../build/reference/gl-whole-program-optimization.md)
+- [/GL (optimisation de l’ensemble du programme)](../../build/reference/gl-whole-program-optimization.md)
 
-- [/LTCG (Génération de code durant l’édition de liens)](../../build/reference/ltcg-link-time-code-generation.md)
+- [/LTCG (génération de code durant l’édition de liens)](../../build/reference/ltcg-link-time-code-generation.md)
 
-- [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
 - [Optimisations guidées par profil](../../build/profile-guided-optimizations.md)
 

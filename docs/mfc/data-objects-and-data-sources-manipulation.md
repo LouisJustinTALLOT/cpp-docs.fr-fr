@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : objets de données et sources de données : manipulation'
 title: 'Objets de données et sources de données : manipulation'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: f1a83511edbf240d9a05d6d489f6cda9453ccea9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a9611fefc94e8437f9e0e5361e0d95972f867984
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620399"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291231"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objets de données et sources de données : manipulation
 
@@ -29,7 +30,7 @@ Après avoir créé un objet de données ou une source de données, vous pouvez 
 
 - [Récupération de données à partir d’un objet de données](#_core_retrieving_data_from_a_data_object)
 
-## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a>Insertion de données dans une source de données
+## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a> Insertion de données dans une source de données
 
 La façon dont les données sont insérées dans une source de données varie selon que les données sont fournies immédiatement ou à la demande, et dans quelle moyenne elles sont fournies. Les possibilités sont les suivantes.
 
@@ -51,7 +52,7 @@ Il s’agit d’une rubrique avancée.
 
 - Si vous utilisez un `CFile` objet pour fournir les données, appelez `COleDataSource::DelayRenderFileData` au lieu de `COleDataSource::DelayRenderData` dans l’option précédente. Lorsque les données sont demandées, l’infrastructure appellera `COleDataSource::OnRenderFileData` , que vous devez substituer.
 
-## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a>Détermination des formats disponibles dans un objet de données
+## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a> Détermination des formats disponibles dans un objet de données
 
 Avant qu’une application autorise l’utilisateur à coller des données dans celle-ci, elle doit savoir s’il existe des formats dans le presse-papiers qu’elle peut gérer. Pour ce faire, votre application doit effectuer les opérations suivantes :
 
@@ -69,7 +70,7 @@ Avant qu’une application autorise l’utilisateur à coller des données dans 
 
 Si vous utilisez **ON_UPDATE_COMMAND_UI**, vous pouvez maintenant activer les éléments spéciaux coller et, éventuellement, coller dans le menu Edition. Pour ce faire, appelez `CMenu::EnableMenuItem` ou `CCmdUI::Enable` . Pour plus d’informations sur ce que les applications conteneur doivent faire avec les éléments de menu et le moment, consultez [menus et ressources : ajouts de conteneurs](menus-and-resources-container-additions.md).
 
-## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a>Récupération de données à partir d’un objet de données
+## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a> Récupération de données à partir d’un objet de données
 
 Une fois que vous avez choisi un format de données, il ne reste plus qu’à récupérer les données de l’objet de données. Pour ce faire, l’utilisateur décide où placer les données, et l’application appelle la fonction appropriée. Les données seront disponibles dans l’un des supports suivants :
 

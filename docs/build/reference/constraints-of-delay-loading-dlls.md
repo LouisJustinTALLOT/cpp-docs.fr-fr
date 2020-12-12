@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contraintes de chargement différé de dll'
 title: Contraintes relatives aux DLL à chargement différé
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: be5e5eb360f80e0b2ea9682f38f6787044cd3c63
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 45f54ca57b57bc689752a8aa80f4c03bbe096817
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493069"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197008"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Contraintes relatives aux DLL à chargement différé
 
@@ -23,7 +24,7 @@ Des contraintes s'appliquent au chargement différé d'importations.
 
 - La [liaison](binding-imports.md) des points d’entrée qui sont transférés n’est pas prise en charge.
 
-- Le chargement différé d'une DLL peut ne pas entraîner le même comportement du processus si des initialisations par processus surviennent au point d'entrée de la DLL chargée en différé. D’autres cas incluent le TLS statique (thread local Storage), déclaré à l’aide de [_ _ declspec (thread)](../../cpp/thread.md), qui n’est `LoadLibrary`pas géré lorsque la dll est chargée via. Le stockage local des threads (TLS) de type dynamique, via `TlsAlloc`, `TlsFree`, `TlsGetValue` et `TlsSetValue`, peut encore être utilisé dans les bibliothèques DLL statiques ou chargées en différé.
+- Le chargement différé d'une DLL peut ne pas entraîner le même comportement du processus si des initialisations par processus surviennent au point d'entrée de la DLL chargée en différé. D’autres cas incluent le stockage local des threads (TLS) statique, déclaré à l’aide [de __declspec (thread)](../../cpp/thread.md), qui n’est pas géré lorsque la dll est chargée via `LoadLibrary` . Le stockage local des threads (TLS) de type dynamique, via `TlsAlloc`, `TlsFree`, `TlsGetValue` et `TlsSetValue`, peut encore être utilisé dans les bibliothèques DLL statiques ou chargées en différé.
 
 - Les pointeurs de fonction (globaux) statiques doivent être réinitialisés en fonctions importées après le premier appel à la fonction. Cela est dû au fait que la première utilisation du pointeur de fonction pointera vers le thunk.
 
@@ -33,7 +34,7 @@ Des contraintes s'appliquent au chargement différé d'importations.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de l’éditeur de liens pour les DLL à chargement différé](linker-support-for-delay-loaded-dlls.md)<br/>
+[Prise en charge de l’éditeur de liens pour les dll Delay-Loaded](linker-support-for-delay-loaded-dlls.md)<br/>
 [Fonction LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)<br/>
 [GetModuleHandle, fonction](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)<br/>
 [GetProcAddress, fonction](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
