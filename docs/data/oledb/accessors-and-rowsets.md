@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : accesseurs et ensembles de lignes'
 title: Accesseurs et jeux de lignes
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 45180b3ac2647c9f4f5d25a1322794552bd79004
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5bda7957f808319de596edf51b6cb3e378c14254
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246108"
 ---
 # <a name="accessors-and-rowsets"></a>Accesseurs et jeux de lignes
 
@@ -41,9 +42,9 @@ Classes d’accesseur
 
 - [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Utilisez cet accesseur lorsque vous ne connaissez pas la structure de la base de données au moment de la conception. `CDynamicAccessor` appelle `IColumnsInfo::GetColumnInfo` pour récupérer les informations de colonne de base de données. Il crée et gère un accesseur et la mémoire tampon.
 
-- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) Utilisez cet accesseur pour gérer les types de commande inconnus. Lorsque vous préparez les commandes, `CDynamicParameterAccessor` pouvez récupérer des informations sur les paramètres à partir de l’interface `ICommandWithParameters`, si le fournisseur prend en charge `ICommandWithParameters`.
+- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) Utilisez cet accesseur pour gérer les types de commande inconnus. Lorsque vous préparez les commandes, `CDynamicParameterAccessor` peut recevoir des informations sur les paramètres à partir de l' `ICommandWithParameters` interface, si le fournisseur prend en charge `ICommandWithParameters` .
 
-- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)et [CDynamicStringAccessorW,](../../data/oledb/cdynamicstringaccessorw-class.md) utilisent ces classes lorsque vous n’avez aucune connaissance du schéma de base de données. `CDynamicStringAccessorA` récupère les données sous forme de chaînes ANSI ; `CDynamicStringAccessorW` récupère les données sous forme de chaînes Unicode.
+- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)et [CDynamicStringAccessorW,](../../data/oledb/cdynamicstringaccessorw-class.md) utilisent ces classes lorsque vous n’avez aucune connaissance du schéma de base de données. `CDynamicStringAccessorA` Récupère les données sous forme de chaînes ANSI ; `CDynamicStringAccessorW` récupère les données sous forme de chaînes Unicode.
 
 - [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) Avec cette classe, vous pouvez utiliser les types de données de votre choix si le fournisseur peut convertir le type. Il gère à la fois les colonnes de résultat et les paramètres de commande.
 
@@ -59,15 +60,15 @@ Le tableau suivant résume la prise en charge des types d’accesseurs de modèl
 
 ## <a name="rowset-types"></a>Types d’ensembles de lignes
 
-Les modèles OLE DB prennent en charge trois types d’ensembles de lignes (voir la figure précédente) : ensembles de lignes simples (implémentés par [CRowset](../../data/oledb/crowset-class.md)), ensembles de lignes en bloc (implémentés par [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) et ensembles de lignes de tableau (implémentés par [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Les ensembles de lignes uniques extraient un handle de ligne unique lorsque `MoveNext` est appelée. Les ensembles de lignes en bloc peuvent extraire plusieurs handles de ligne. Les ensembles de lignes de tableau sont des ensembles de lignes accessibles à l’aide de la syntaxe de tableau.
+Les modèles OLE DB prennent en charge trois types d’ensembles de lignes (voir la figure précédente) : ensembles de lignes simples (implémentés par [CRowset](../../data/oledb/crowset-class.md)), ensembles de lignes en bloc (implémentés par [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) et ensembles de lignes de tableau (implémentés par [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Les ensembles de lignes uniques extraient un descripteur de ligne unique lorsque `MoveNext` est appelé. Les ensembles de lignes en bloc peuvent extraire plusieurs handles de ligne. Les ensembles de lignes de tableau sont des ensembles de lignes accessibles à l’aide de la syntaxe de tableau.
 
 L’illustration suivante montre les types d’ensembles de lignes.
 
-![Graphique RowsetType](../../data/oledb/media/vcrowsettypes.gif "Graphique de RowsetType")<br/>
+![Graphique de RowsetType](../../data/oledb/media/vcrowsettypes.gif "Graphique de RowsetType")<br/>
 Classes d’ensemble de lignes
 
 Les [ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) n’accèdent pas aux données dans le magasin de données, mais les informations sur le magasin de données, appelées métadonnées. Les ensembles de lignes de schéma sont généralement utilisés dans les situations où la structure de la base de données n’est pas connue au moment de la compilation et doit être obtenue au moment de l’exécution.
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

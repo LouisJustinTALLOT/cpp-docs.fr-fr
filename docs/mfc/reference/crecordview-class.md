@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CRecordView, classe'
 title: CRecordView (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: 21db03fde267a366d4dd1bf747880951e7546058
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ad9ef6ed53ed1f9ad843518701bd6e8d619e6e8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301150"
 ---
 # <a name="crecordview-class"></a>CRecordView (classe)
 
@@ -59,7 +60,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 
 ## <a name="remarks"></a>Notes
 
-La vue est une vue de formulaire directement connectée à un `CRecordset` objet. La vue est créée à partir d’une ressource de modèle de boîte de dialogue et affiche les champs de l' `CRecordset` objet dans les contrôles du modèle de boîte de dialogue. L' `CRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et l’échange de champs d’enregistrements (RFX) pour automatiser le déplacement des données entre les contrôles du formulaire et les champs de l’ensemble d’enregistrements. `CRecordView`fournit également une implémentation par défaut pour le passage au premier enregistrement, suivant, précédent ou dernier, ainsi qu’une interface pour la mise à jour de l’enregistrement actuellement affiché.
+La vue est une vue de formulaire directement connectée à un `CRecordset` objet. La vue est créée à partir d’une ressource de modèle de boîte de dialogue et affiche les champs de l' `CRecordset` objet dans les contrôles du modèle de boîte de dialogue. L' `CRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et l’échange de champs d’enregistrements (RFX) pour automatiser le déplacement des données entre les contrôles du formulaire et les champs de l’ensemble d’enregistrements. `CRecordView` fournit également une implémentation par défaut pour le passage au premier enregistrement, suivant, précédent ou dernier, ainsi qu’une interface pour la mise à jour de l’enregistrement actuellement affiché.
 
 > [!NOTE]
 > Si vous utilisez les classes DAO (Data Access Objects) au lieu des classes Open Database Connectivity (ODBC), utilisez à la place la classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) . Pour plus d’informations, consultez l’article [vue d’ensemble : programmation de bases de données](../../data/data-access-programming-mfc-atl.md).
@@ -70,7 +71,7 @@ Pour permettre aux utilisateurs finaux de passer facilement d’un enregistremen
 
 Pour plus d’informations sur l’implémentation par défaut pour le déplacement d’un enregistrement à un autre, consultez `IsOnFirstRecord` et `IsOnLastRecord` et l’article [utilisation d’une vue](../../data/using-a-record-view-mfc-data-access.md)de l’enregistrement.
 
-`CRecordView`effectue le suivi de la position de l’utilisateur dans le Recordset afin que la vue d’enregistrement puisse mettre à jour l’interface utilisateur. Lorsque l’utilisateur passe à l’une des extrémités de l’ensemble d’enregistrements, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou les boutons de barre d’outils, pour se déplacer dans la même direction.
+`CRecordView` effectue le suivi de la position de l’utilisateur dans le Recordset afin que la vue d’enregistrement puisse mettre à jour l’interface utilisateur. Lorsque l’utilisateur passe à l’une des extrémités de l’ensemble d’enregistrements, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou les boutons de barre d’outils, pour se déplacer dans la même direction.
 
 Pour plus d’informations sur la déclaration et l’utilisation de vos classes d’affichage des enregistrements et de jeux d’enregistrements, consultez « conception et création d’une vue d’enregistrement » dans l’article [affichages des enregistrements](../../data/record-views-mfc-data-access.md). Pour plus d’informations sur le fonctionnement des vues d’enregistrement et leur utilisation, consultez l’article [utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
 
@@ -94,7 +95,7 @@ Pour plus d’informations sur la déclaration et l’utilisation de vos classes
 
 **En-tête :** AFXDB. h
 
-## <a name="crecordviewcrecordview"></a><a name="crecordview"></a>CRecordView :: CRecordView
+## <a name="crecordviewcrecordview"></a><a name="crecordview"></a> CRecordView :: CRecordView
 
 Quand vous créez un objet d’un type dérivé de `CRecordView` , appelez l’une ou l’autre forme du constructeur pour initialiser l’objet de vue et identifier la ressource de boîte de dialogue sur laquelle la vue est basée.
 
@@ -118,7 +119,7 @@ Vous pouvez identifier la ressource par son nom (passer une chaîne en tant qu�
 > [!NOTE]
 > Votre classe dérivée *doit* fournir son propre constructeur. Dans le constructeur de votre classe dérivée, appelez le constructeur `CRecordView::CRecordView` avec le nom ou l’ID de la ressource en tant qu’argument, comme indiqué dans l’exemple ci-dessous.
 
-`CRecordView::OnInitialUpdate`appelle `UpdateData` , qui appelle `DoDataExchange` . Cet appel initial à `DoDataExchange` connecte `CRecordView` les contrôles (indirectement) aux `CRecordset` membres de données de champ créés par ClassWizard. Ces membres de données ne peuvent pas être utilisés tant que vous n’avez pas appelé la fonction membre de la classe de base `CFormView::OnInitialUpdate` .
+`CRecordView::OnInitialUpdate` appelle `UpdateData` , qui appelle `DoDataExchange` . Cet appel initial à `DoDataExchange` connecte `CRecordView` les contrôles (indirectement) aux `CRecordset` membres de données de champ créés par ClassWizard. Ces membres de données ne peuvent pas être utilisés tant que vous n’avez pas appelé la fonction membre de la classe de base `CFormView::OnInitialUpdate` .
 
 > [!NOTE]
 > Si vous utilisez ClassWizard, l’Assistant définit une **`enum`** valeur `CRecordView::IDD` , le spécifie dans la déclaration de classe et l’utilise dans la liste d’initialisation des membres pour le constructeur.
@@ -127,7 +128,7 @@ Vous pouvez identifier la ressource par son nom (passer une chaîne en tant qu�
 
 [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]
 
-## <a name="crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CRecordView :: IsOnFirstRecord
+## <a name="crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a> CRecordView :: IsOnFirstRecord
 
 Appelez cette fonction membre pour déterminer si l’enregistrement en cours est le premier enregistrement de l’objet Recordset associé à cette vue de l’enregistrement.
 
@@ -135,7 +136,7 @@ Appelez cette fonction membre pour déterminer si l’enregistrement en cours es
 BOOL IsOnFirstRecord();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’enregistrement actif est le premier enregistrement dans le Recordset ; Sinon, 0.
 
@@ -145,7 +146,7 @@ Cette fonction est utile pour écrire vos propres implémentations des gestionna
 
 Si l’utilisateur passe au premier enregistrement, l’infrastructure désactive tous les objets d’interface utilisateur dont vous disposez pour passer au premier enregistrement ou à l’enregistrement précédent.
 
-## <a name="crecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CRecordView :: IsOnLastRecord
+## <a name="crecordviewisonlastrecord"></a><a name="isonlastrecord"></a> CRecordView :: IsOnLastRecord
 
 Appelez cette fonction membre pour déterminer si l’enregistrement en cours est le dernier enregistrement de l’objet Recordset associé à cette vue de l’enregistrement.
 
@@ -153,7 +154,7 @@ Appelez cette fonction membre pour déterminer si l’enregistrement en cours es
 BOOL IsOnLastRecord();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’enregistrement actif est le dernier enregistrement du Recordset ; Sinon, 0.
 
@@ -162,9 +163,9 @@ Valeur différente de zéro si l’enregistrement actif est le dernier enregistr
 Cette fonction est utile pour écrire vos propres implémentations des gestionnaires de mise à jour de commandes par défaut que ClassWizard écrit pour prendre en charge une interface utilisateur pour le déplacement d’un enregistrement à un autre.
 
 > [!CAUTION]
-> Le résultat de cette fonction est fiable, sauf que la vue ne peut pas détecter la fin du Recordset tant que l’utilisateur ne l’a pas déplacée. L’utilisateur doit se déplacer au-delà du dernier enregistrement avant que la vue de l’enregistrement puisse déterminer qu’il doit désactiver les objets d’interface utilisateur pour passer au dernier enregistrement ou à l’enregistrement suivant. Si l’utilisateur passe au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant), la vue de l’enregistrement peut suivre la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets de l’interface utilisateur correctement. `IsOnLastRecord`est également peu fiable après un appel à la fonction d’implémentation `OnRecordLast` , qui gère la commande ID_RECORD_LAST ou `CRecordset::MoveLast` .
+> Le résultat de cette fonction est fiable, sauf que la vue ne peut pas détecter la fin du Recordset tant que l’utilisateur ne l’a pas déplacée. L’utilisateur doit se déplacer au-delà du dernier enregistrement avant que la vue de l’enregistrement puisse déterminer qu’il doit désactiver les objets d’interface utilisateur pour passer au dernier enregistrement ou à l’enregistrement suivant. Si l’utilisateur passe au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant), la vue de l’enregistrement peut suivre la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets de l’interface utilisateur correctement. `IsOnLastRecord` est également peu fiable après un appel à la fonction d’implémentation `OnRecordLast` , qui gère la commande ID_RECORD_LAST ou `CRecordset::MoveLast` .
 
-## <a name="crecordviewongetrecordset"></a><a name="ongetrecordset"></a>CRecordView :: OnGetRecordset
+## <a name="crecordviewongetrecordset"></a><a name="ongetrecordset"></a> CRecordView :: OnGetRecordset
 
 Retourne un pointeur vers l' `CRecordset` objet dérivé de associé à la vue de l’enregistrement.
 
@@ -172,7 +173,7 @@ Retourne un pointeur vers l' `CRecordset` objet dérivé de associé à la vue d
 virtual CRecordset* OnGetRecordset() = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un `CRecordset` objet dérivé de si l’objet a été créé avec succès ; sinon, un pointeur null.
 
@@ -182,7 +183,7 @@ Vous devez substituer cette fonction membre pour construire ou obtenir un objet 
 
 Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
 
-## <a name="crecordviewonmove"></a><a name="onmove"></a>CRecordView :: OnMove
+## <a name="crecordviewonmove"></a><a name="onmove"></a> CRecordView :: OnMove
 
 Appelez cette fonction membre pour passer à un autre enregistrement dans le Recordset et afficher ses champs dans les contrôles de la vue de l’enregistrement.
 
@@ -203,7 +204,7 @@ L’une des valeurs d’ID de commande standard suivantes :
 
 - ID_RECORD_PREV passer à l’enregistrement précédent dans le jeu d’enregistrements.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si le déplacement a réussi ; Sinon, 0 si la demande de déplacement a été refusée.
 

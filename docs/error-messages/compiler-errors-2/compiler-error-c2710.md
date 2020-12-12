@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2710'
 title: Erreur du compilateur C2710
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2710
 ms.assetid: a2a6bb5b-86ad-4a6c-acd0-e2bef8464e0e
-ms.openlocfilehash: eea836f3508d750701b694421f660ce455d6f1f7
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ea9e4eaefa023362647f418be16a72ee14fbd044
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320855"
 ---
 # <a name="compiler-error-c2710"></a>Erreur du compilateur C2710
 
 'Construct' : ' __declspec (modifier) 'ne peut s’appliquer qu’à une fonction qui retourne un pointeur
 
-Une fonction dont la valeur de retour est un pointeur est la seule construction à laquelle `modifier` peut être appliqué.
+Une fonction dont la valeur de retour est un pointeur est la seule construction à laquelle `modifier` peut être appliquée.
 
 L’exemple suivant génère l’C2710 :
 

@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : notions de base du langage HTML'
 title: Éléments fondamentaux relatifs à HTML
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 29ca2e3df4981db22a10281ba2a2938fc91d5b46
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f32926beb9152441169320bf3553b0066f78fa7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290243"
 ---
 # <a name="html-basics"></a>Éléments fondamentaux relatifs à HTML
 
@@ -35,7 +36,7 @@ Les étapes ci-dessous utilisent les balises HTML pour générer une page Web. D
 
 1. Dans le menu **fichier** , choisissez **Enregistrer**, puis enregistrez le fichier en tant que c:\webpages\First.htm. Laissez le fichier ouvert dans l'éditeur.
 
-1. Basculez vers votre navigateur et, dans le menu **fichier** , choisissez **ouvrir**, ou tapez *file://C:/webpages/First.htm* dans la zone d’édition URL du navigateur. Vous devez voir une page vide avec la légende de fenêtre "Balises HTML principales"
+1. Basculez vers votre navigateur et, à partir du menu **fichier** , choisissez **ouvrir**, ou tapez *file://C:/webpages/first.htm* dans la zone d’édition URL du navigateur. Vous devez voir une page vide avec la légende de fenêtre "Balises HTML principales"
 
    Notez que les étiquettes sont affichées par paires et incluses entre crochets pointus. Les étiquettes ne respectent pas la casse, mais la mise en majuscules est souvent utilisée pour distinguer les étiquettes.
 

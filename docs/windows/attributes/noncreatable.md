@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : noncreatable'
 title: noncreatable (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: b645d6d6cbcaeff346437d6457360ecdef8d3190
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1bbd871d19ab4e02aa4d8acf715da76c4287ce64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840555"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327463"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -49,14 +50,14 @@ class CMyClass : public A
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
-|**Repeatable Read**|Non|
+|**Renouvelable**|Non|
 |**Attributs requis**|**coclasse**|
-|**Attributs non valides**|Aucun|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

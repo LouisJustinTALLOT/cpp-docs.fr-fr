@@ -1,18 +1,19 @@
 ---
-title: Corriger vos dépendances C++ sur les éléments internes de bibliothèque
+description: 'En savoir plus sur : corriger vos dépendances sur les éléments internes de la bibliothèque C++'
+title: Corriger vos dépendances sur les éléments internes de la bibliothèque C++
 ms.date: 05/24/2017
 helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: b101234c582d8730b1a8fb62e8182df68554b18c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5d9cbcdd039786c3f1bb637e6a59bcfce43bc883
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341540"
 ---
-# <a name="fix-your-dependencies-on-c-library-internals"></a>Corriger vos dépendances C++ sur les éléments internes de bibliothèque
+# <a name="fix-your-dependencies-on-c-library-internals"></a>Corriger vos dépendances sur les éléments internes de la bibliothèque C++
 
 Microsoft a publié le code source de la bibliothèque standard, la majeure partie de la bibliothèque Runtime C ainsi que d’autres bibliothèques Microsoft de nombreuses versions de Visual Studio. L’objectif est de vous aider à comprendre le comportement de la bibliothèque pour que vous puissiez déboguer votre code. Un effet secondaire de la publication du code source de la bibliothèque fait que même si elles ne font pas partie de l’interface de la bibliothèque, certaines structures de données, fonctions et valeurs internes sont exposées. Celles-ci portent généralement un nom commençant par deux traits de soulignement, ou un trait de soulignement suivi d’une lettre majuscule, des noms que la norme C++ réserve aux implémentations. Ces valeurs, structures et fonctions sont des détails d’implémentation susceptibles de changer au fur et à mesure que les bibliothèques évoluent au fil du temps, c’est pourquoi nous vous déconseillons fortement de prendre des dépendances à elles. Si vous le faites, vous risquez d’avoir des problèmes et d’obtenir un code non portable lorsque vous tenterez de migrer votre code vers les nouvelles versions des bibliothèques.
 
@@ -76,6 +77,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mise à niveau de projets à partir de versions antérieures de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[Mettre à niveau votre code vers la bibliothèque Universal CRT](upgrade-your-code-to-the-universal-crt.md)
+[Mettre à niveau votre code vers le CRT universel](upgrade-your-code-to-the-universal-crt.md)

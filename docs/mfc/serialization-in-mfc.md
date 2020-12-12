@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : sérialisation dans MFC'
 title: Sérialisation dans MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: eca4d0357977bc7ef21063718c738ae5bd8e7431
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 278de59c6e091fd59826622553f50503b12602bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372748"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217573"
 ---
 # <a name="serialization-in-mfc"></a>Sérialisation dans MFC
 
@@ -27,26 +28,26 @@ Le principe fondamental de la sérialisation est qu'un objet doit pouvoir écrir
 
 MFC utilise un objet de la classe `CArchive` comme intermédiaire entre l'objet à sérialiser et le support de stockage. Cet objet est toujours associé à un objet `CFile`, à partir duquel il obtient les informations nécessaires à la sérialisation, notamment le nom de fichier et si l'opération demandée est une lecture ou une écriture. L'objet qui effectue une opération de sérialisation peut utiliser l'objet `CArchive`, quelle que soit la nature du support de stockage.
 
-Un `CArchive` objet utilise l’insertion**<** surchargée**>>**( ) et l’extraction ( ) des opérateurs pour effectuer des opérations d’écriture et de lecture. Pour plus d’informations, voir [Stockage et chargement des CObjects via une archive](../mfc/storing-and-loading-cobjects-via-an-archive.md) dans l’article Serialization: Serializing an Object.
+Un `CArchive` objet utilise des opérateurs d’insertion () surchargés **<\<**) and extraction (**>>** pour effectuer des opérations d’écriture et de lecture. Pour plus d’informations, consultez [stockage et chargement de CObjects via une archive](../mfc/storing-and-loading-cobjects-via-an-archive.md) dans l’article sérialisation : sérialisation d’un objet.
 
 > [!NOTE]
 > Ne confondez pas la classe `CArchive` avec les classes iostream à usage général, utilisées pour le texte mis en forme uniquement. La classe `CArchive` est destinée aux objets sérialisés au format binaire.
 
-Si vous le souhaitez, vous pouvez ignorer la sérialisation MFC pour créer votre propre mécanisme de stockage persistant de données. Vous devrez remplacer les fonctions membres de classe qui initialisent la sérialisation sur commande de l'utilisateur. Voir la discussion dans [la note technique 22](../mfc/tn022-standard-commands-implementation.md) des commandes standard ID_FILE_OPEN, ID_FILE_SAVE et ID_FILE_SAVE_AS.
+Si vous le souhaitez, vous pouvez ignorer la sérialisation MFC pour créer votre propre mécanisme de stockage persistant de données. Vous devrez remplacer les fonctions membres de classe qui initialisent la sérialisation sur commande de l'utilisateur. Consultez la section [Technical Note 22](../mfc/tn022-standard-commands-implementation.md) du ID_FILE_OPEN, ID_FILE_SAVE et ID_FILE_SAVE_AS commandes standard.
 
 Les articles suivants détaillent les deux principales tâches requises pour la sérialisation :
 
-- [Sérialisation : définir une classe sérialisable](../mfc/serialization-making-a-serializable-class.md)
+- [Sérialisation : création d’une classe sérialisable](../mfc/serialization-making-a-serializable-class.md)
 
 - [Sérialisation : sérialisation d’un objet](../mfc/serialization-serializing-an-object.md)
 
-L’article [Serialization: Serialization vs Database Input/Output](../mfc/serialization-serialization-vs-database-input-output.md) décrit quand la sérialisation est une technique d’entrée/sortie appropriée dans les applications de base de données.
+L’article [sérialisation : sérialisation et entrées/sorties de base de données](../mfc/serialization-serialization-vs-database-input-output.md) décrit quand la sérialisation est une technique d’entrée/sortie appropriée dans les applications de base de données.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepts liés à la](../mfc/mfc-concepts.md)<br/>
-[Rubriques MFC générales](../mfc/general-mfc-topics.md)<br/>
-[CArchive, classe](../mfc/reference/carchive-class.md)<br/>
-[Classe CObject](../mfc/reference/cobject-class.md)<br/>
+[Concepts](../mfc/mfc-concepts.md)<br/>
+[Rubriques générales sur MFC](../mfc/general-mfc-topics.md)<br/>
+[CArchive (classe)](../mfc/reference/carchive-class.md)<br/>
+[CObject (classe)](../mfc/reference/cobject-class.md)<br/>
 [CDocument, classe](../mfc/reference/cdocument-class.md)<br/>
 [CFile, classe](../mfc/reference/cfile-class.md)

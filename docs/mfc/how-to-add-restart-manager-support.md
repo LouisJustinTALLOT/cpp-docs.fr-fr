@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Comment : ajouter la prise en charge du gestionnaire de redémarrage'
 title: 'Comment : ajouter la prise en charge du Gestionnaire de redémarrage'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 848cb3bb52ae13eb1b7798126becd13384fddeb6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: bf323b66dcf3b6f2571855cc789aa7a08e61ac39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625651"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290347"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Comment : ajouter la prise en charge du Gestionnaire de redémarrage
 
@@ -45,6 +46,6 @@ Par défaut, les applications MFC créées à l’aide de l’Assistant projet d
 
 [CDataRecoveryHandler, classe](reference/cdatarecoveryhandler-class.md)<br/>
 [CWinApp :: m_dwRestartManagerSupportFlags](reference/cwinapp-class.md#m_dwrestartmanagersupportflags)<br/>
-[CWinApp, classe](reference/cwinapp-class.md)<br/>
+[CWinApp (classe)](reference/cwinapp-class.md)<br/>
 [CWinApp :: m_nAutosaveInterval](reference/cwinapp-class.md#m_nautosaveinterval)<br/>
 [CDocument :: OnDocumentEvent](reference/cdocument-class.md#ondocumentevent)

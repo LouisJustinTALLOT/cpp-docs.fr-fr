@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _gcvt_s'
 title: _gcvt_s
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f96822920430122a56d8503b99cc0b881d9f06be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341519"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -64,7 +65,7 @@ errno_t _gcvt_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Mémoire tampon pour stocker le résultat de la conversion.
 
 *sizeInBytes*<br/>
@@ -76,15 +77,15 @@ Valeur à convertir.
 *chiffres*<br/>
 Nombre de chiffres significatifs stockés.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre non valide (voir le tableau ci-après pour découvrir les valeurs non valides), le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, un code d’erreur est retourné. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*buffer*|*sizeInBytes*|*value*|*chiffres*|Renvoie|Valeur dans la *mémoire tampon*|
+|*mémoire tampon*|*sizeInBytes*|*value*|*chiffres*|Renvoie|Valeur dans la *mémoire tampon*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NUL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée.|
+|**NULL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée.|
 |Not **null** (pointe vers une mémoire valide)|zéro|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée.|
 |Not **null** (pointe vers une mémoire valide)|n'importe laquelle|n'importe laquelle|>= *sizeInBytes*|**EINVAL**|Non modifiée.|
 
@@ -92,7 +93,7 @@ Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre 
 
 **_gcvt_s** pouvez générer une violation d’accès si la *mémoire tampon* ne pointe pas vers une mémoire valide et n’a pas la **valeur null**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_gcvt_s** convertit une *valeur* à virgule flottante en une chaîne de caractères (qui comprend une virgule décimale et un octet de signe possible) et stocke la chaîne dans la *mémoire tampon*. la *mémoire tampon* doit être suffisamment grande pour accueillir la valeur convertie plus un caractère null de fin, qui est ajouté automatiquement. Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour toute valeur à virgule flottante. Si une taille de mémoire tampon de *chiffres* + 1 est utilisée, la fonction ne remplace pas la fin de la mémoire tampon. Veillez donc à fournir une mémoire tampon suffisante pour cette opération. **_gcvt_s** tente de produire des chiffres de *chiffres* au format décimal. Si ce n’est pas le cas, il génère des chiffres de *chiffres* au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
 

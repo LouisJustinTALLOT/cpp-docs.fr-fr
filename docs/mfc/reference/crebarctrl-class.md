@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CReBarCtrl Class'
 title: CReBarCtrl (classe)
 ms.date: 11/19/2018
 f1_keywords:
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 872d577c2272939a6bf7ed1e3069cda426083e3f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 75caee2fb0b6bb883ecb421325d41b25c38252b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561893"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301228"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (classe)
 
@@ -263,7 +264,7 @@ Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fen�
 *nID*<br/>
 Spécifie l’ID de contrôle du contrôle rebar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’objet a été créé avec succès ; Sinon, 0.
 
@@ -311,7 +312,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 *nID*<br/>
 ID de la fenêtre enfant du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -344,7 +345,7 @@ BOOL DeleteBand(UINT uBand);
 *uBand*<br/>
 Index de base zéro de la bande à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la bande a été supprimée avec succès ; Sinon, zéro.
 
@@ -399,7 +400,7 @@ Implémente le comportement de la [RB_GETBANDCOUNT](/windows/win32/Controls/rb-g
 UINT GetBandCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de bandes affectées au contrôle.
 
@@ -421,7 +422,7 @@ Index de base zéro de la bande pour laquelle les informations sont récupérée
 *prbbi*<br/>
 Pointeur vers une structure [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) pour recevoir les informations de bande. Vous devez définir le `cbSize` membre de cette structure sur `sizeof(REBARBANDINFO)` et définir le `fMask` membre sur les éléments que vous souhaitez récupérer avant d’envoyer ce message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -450,7 +451,7 @@ Récupère la hauteur de la barre Rebar.
 UINT GetBarHeight() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur qui représente la hauteur, en pixels, du contrôle.
 
@@ -467,7 +468,7 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 *prbi*<br/>
 Pointeur vers une structure [REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) qui recevra les informations de contrôle rebar. Vous devez définir le membre *cbSize* de cette structure sur `sizeof(REBARINFO)` avant d’envoyer ce message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -479,7 +480,7 @@ Implémente le comportement de la [RB_GETBKCOLOR](/windows/win32/Controls/rb-get
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui représente la couleur d’arrière-plan par défaut actuelle.
 
@@ -496,7 +497,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 *lpcs*<br/>
 Pointeur vers une structure [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) , comme décrit dans la SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -512,7 +513,7 @@ Implémente le comportement de la [RB_GETDROPTARGET](/windows/win32/Controls/rb-
 IDropTarget* GetDropTarget() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers une interface [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) .
 
@@ -524,7 +525,7 @@ Obtient les styles étendus du contrôle rebar actuel.
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Combinaison d’opérations de bits d’indicateurs qui indiquent les styles étendus. Les indicateurs possibles sont RBS_EX_SPLITTER et RBS_EX_TRANSPARENT. Pour plus d’informations, consultez le paramètre *dwMask* de la méthode [CReBarCtrl :: SetExtendedStyle](#setextendedstyle) .
 
@@ -540,7 +541,7 @@ Obtient l' `CImageList` objet associé à un contrôle rebar.
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) . Retourne la valeur NULL si aucune liste d’images n’est définie pour le contrôle.
 
@@ -556,7 +557,7 @@ Récupère la palette actuelle du contrôle rebar.
 CPalette* GetPalette() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [cpalette](../../mfc/reference/cpalette-class.md) qui spécifie la palette actuelle du contrôle rebar.
 
@@ -586,7 +587,7 @@ Index de base zéro d’une bande dans le contrôle rebar.
 *République*<br/>
 Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) qui recevra les limites de la bande rebar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -602,7 +603,7 @@ Implémente le comportement de la [RB_GETROWCOUNT](/windows/win32/Controls/rb-ge
 UINT GetRowCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur UINT qui représente le nombre de lignes de bande dans le contrôle.
 
@@ -623,7 +624,7 @@ UINT GetRowHeight(UINT uRow) const;
 *uRow*<br/>
 Index de base zéro de la bande dont la hauteur sera récupérée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur UINT qui représente la hauteur de ligne, en pixels.
 
@@ -639,7 +640,7 @@ Implémente le comportement de la [RB_GETTEXTCOLOR](/windows/win32/Controls/rb-g
 COLORREF GetTextColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui représente la couleur de texte par défaut actuelle.
 
@@ -651,7 +652,7 @@ Implémente le comportement de la [RB_GETTOOLTIPS](/windows/win32/Controls/rb-ge
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) .
 
@@ -672,7 +673,7 @@ int HitTest(RBHITTESTINFO* prbht);
 *prbht*<br/>
 Pointeur vers une structure [RBHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo) . Avant d’envoyer le message, le `pt` membre de cette structure doit être initialisé au point qui sera testé, en coordonnées clientes.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de la bande au point donné, ou-1 si aucune bande rebar n’était au point.
 
@@ -689,7 +690,7 @@ int IDToIndex(UINT uBandID) const;
 *uBandID*<br/>
 Identificateur défini par l’application de la bande spécifiée, passé dans le `wID` membre de la structure [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) lorsque la bande est insérée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de la bande de base zéro en cas de réussite, ou-1 dans le cas contraire. Si des index de bande dupliqués existent, le premier est retourné.
 
@@ -711,7 +712,7 @@ Index de base zéro de l’emplacement où la bande sera insérée. Si vous affe
 *prbbi*<br/>
 Pointeur vers une structure [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) qui définit la bande à insérer. Vous devez définir le membre *cbSize* de cette structure sur `sizeof(REBARBANDINFO)` avant d’appeler cette fonction.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -779,7 +780,7 @@ Index de base zéro de la bande à déplacer.
 *utomatique*<br/>
 Index de base zéro de la nouvelle position de la bande. La valeur de ce paramètre ne doit jamais être supérieure au nombre de bandes moins un. Pour obtenir le nombre de bandes, appelez [GetBandCount](#getbandcount).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -840,7 +841,7 @@ Index de base zéro de la bande devant recevoir les nouveaux paramètres.
 *prbbi*<br/>
 Pointeur vers une structure [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) qui définit la bande à insérer. Vous devez définir le `cbSize` membre de cette structure sur `sizeof(REBARBANDINFO)` avant d’envoyer ce message.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -866,7 +867,7 @@ dans Index de base zéro d’une bande rebar.
 *cxWidth*\
 dans Nouvelle largeur de la bande rebar, en pixels.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode réussit ; Sinon, FALSe.
 
@@ -899,7 +900,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 *prbi*<br/>
 Pointeur vers une structure [REBARINFO](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) qui contient les informations à définir. Vous devez définir le `cbSize` membre de cette structure sur `sizeof(REBARINFO)` avant d’envoyer ce message
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -920,7 +921,7 @@ COLORREF SetBkColor(COLORREF clr);
 *Language*<br/>
 Valeur COLORREF qui représente la nouvelle couleur d’arrière-plan par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [COLORREF](/windows/win32/gdi/colorref) qui représente la couleur d’arrière-plan par défaut précédente.
 
@@ -966,7 +967,7 @@ dans Combinaison de bits (OR) d’indicateurs qui spécifie les indicateurs du p
 *dwStyleEx*\
 dans Combinaison de bits (OR) d’indicateurs qui spécifient les styles à appliquer. Pour définir un style, spécifiez le même indicateur que celui utilisé dans le paramètre *dwMask* . Pour réinitialiser un style, spécifiez zéro binaire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Style étendu précédent.
 
@@ -987,7 +988,7 @@ BOOL SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) contenant la liste d’images à assigner au contrôle rebar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1004,7 +1005,7 @@ CWnd* SetOwner(CWnd* pWnd);
 *pWnd*<br/>
 Pointeur vers un `CWnd` objet à définir en tant que propriétaire du contrôle rebar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est le propriétaire actuel du contrôle rebar.
 
@@ -1028,7 +1029,7 @@ CPalette* SetPalette(HPALETTE hPal);
 *hPal*<br/>
 HPALETTE qui spécifie la nouvelle palette que le contrôle rebar utilisera.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [cpalette](../../mfc/reference/cpalette-class.md) qui spécifie la palette précédente du contrôle rebar.
 
@@ -1049,7 +1050,7 @@ COLORREF SetTextColor(COLORREF clr);
 *Language*<br/>
 Valeur COLORREF qui représente la nouvelle couleur de texte dans l' `CReBarCtrl` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [COLORREF](/windows/win32/gdi/colorref) représentant la couleur de texte précédente associée à l' `CReBarCtrl` objet.
 
@@ -1087,7 +1088,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 *pszSubAppName*<br/>
 Pointeur vers une chaîne Unicode qui contient le style visuel rebar à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour n’est pas utilisée.
 
@@ -1113,7 +1114,7 @@ Index de base zéro d’une bande dans le contrôle rebar.
 *fShow*<br/>
 Indique si la bande doit être affichée ou masquée. Si cette valeur est TRUE, la bande est affichée. Dans le cas contraire, la bande sera masquée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1130,7 +1131,7 @@ BOOL SizeToRect(CRect& rect);
 *rectangulaire*<br/>
 Référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui spécifie le rectangle sur lequel le contrôle rebar doit être redimensionné.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 

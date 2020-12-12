@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 4) C4239'
 title: Avertissement du compilateur (niveau 4) C4239
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-ms.openlocfilehash: 25b97cfb50847a0929f3d3a97b822209e6a11900
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 635795392b5544f4985305a02e8534188c049224
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334860"
 ---
 # <a name="compiler-warning-level-4-c4239"></a>Avertissement du compilateur (niveau 4) C4239
 

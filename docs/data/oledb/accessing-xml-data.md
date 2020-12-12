@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : accès aux données XML'
 title: Accès aux données XML
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-ms.openlocfilehash: 437f1d103420ec5727294894c02587c68cffbdda
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: f229dc4567247ea95ebf00a5dbc9316be8aeac1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509129"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246082"
 ---
 # <a name="accessing-xml-data"></a>Accès aux données XML
 
 Il existe deux méthodes distinctes pour récupérer des données XML à partir d’une source de données : l’une utilise [CStreamRowset](../../data/oledb/cstreamrowset-class.md) et l’autre la [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).
 
-|Fonctionnalités|CStreamRowset|CXMLAccessor|
+|Fonctionnalité|CStreamRowset|CXMLAccessor|
 |-------------------|-------------------|------------------|
 |Quantité de données transférées|Récupère des données de toutes les colonnes et lignes à la fois.|Récupère des données de toutes les colonnes, mais une seule ligne à la fois. Vous devez parcourir les lignes à l’aide de méthodes telles que `MoveNext` .|
 |Mise en forme de la chaîne|SQL Server met en forme la chaîne XML et l’envoie au consommateur.|Récupère les données de l’ensemble de lignes dans son format natif (demande que le fournisseur l’envoie en tant que chaînes Unicode), puis génère la chaîne contenant les données au format XML.|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _create_locale, _wcreate_locale'
 title: _create_locale, _wcreate_locale
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 31bde3d032bdb47d63db5730ba53016de573332c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: feb2fee7befbaf3f798dc36466674eaa4aec55fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341518"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -66,11 +67,11 @@ Catégorie.
 *locale*<br/>
 Spécificateur de paramètres régionaux.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si *des paramètres régionaux et* une *catégorie* valides sont fournis, retourne les paramètres régionaux spécifiés en tant qu’objet **_locale_t** . Les paramètres régionaux actuels du programme ne sont pas modifiés.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_create_locale** vous permet de créer un objet qui représente certains paramètres spécifiques à une région, à utiliser dans les versions spécifiques aux paramètres régionaux de nombreuses fonctions CRT (fonctions avec le suffixe **_L** ). Le comportement est similaire à **setlocale**, sauf qu’au lieu d’appliquer les paramètres régionaux spécifiés à l’environnement actuel, les paramètres sont enregistrés dans une structure **_locale_t** retournée. La structure **_locale_t** doit être libérée à l’aide de [_free_locale](free-locale.md) lorsqu’elle n’est plus nécessaire.
 
@@ -81,8 +82,8 @@ L’argument *Category* spécifie les parties du comportement spécifique aux pa
 | indicateur de *catégorie* | Éléments affectés |
 |-----------------|---------|
 | **LC_ALL** |Toutes les catégories, comme indiqué ci-dessous. |
-| **LC_COLLATE** |Les fonctions **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**et **wcsxfrm** . |
-| **LC_CTYPE** | Fonctions de gestion de caractères (à l’exception de **IsDigit**, **isxdigit**, **mbstowcs**et **mbtowc**, qui ne sont pas affectées). |
+| **LC_COLLATE** |Les fonctions **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll** et **wcsxfrm** . |
+| **LC_CTYPE** | Fonctions de gestion de caractères (à l’exception de **IsDigit**, **isxdigit**, **mbstowcs** et **mbtowc**, qui ne sont pas affectées). |
 | **LC_MONETARY** | Informations de mise en forme monétaire retournées par la fonction **localeconv** . |
 | **LC_NUMERIC** | Caractère de virgule décimale pour les routines de sortie mises en forme (telles que **printf**), pour les routines de conversion de données et pour les informations de mise en forme non monétaire retournées par **localeconv**. Outre le caractère de virgule décimale, **LC_NUMERIC** définit le séparateur des milliers et la chaîne de contrôle de regroupement retournée par [localeconv](localeconv.md). |
 | **LC_TIME** | Fonctions **strftime** et **wcsftime** . |
@@ -173,7 +174,7 @@ In 'C' locale, _strftime_l returns 'Saturday, February 09, 2002'
 ## <a name="see-also"></a>Voir aussi
 
 [Chaînes de noms de paramètres régionaux, de langues et de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Language Strings](../../c-runtime-library/language-strings.md)<br/>
+[Chaînes de langue](../../c-runtime-library/language-strings.md)<br/>
 [Chaînes pays/région](../../c-runtime-library/country-region-strings.md)<br/>
 [_free_locale](free-locale.md)<br/>
 [_configthreadlocale](configthreadlocale.md)<br/>
