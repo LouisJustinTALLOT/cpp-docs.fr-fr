@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : execlpe'
 title: execlpe
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - execlpe function
 ms.assetid: 33b28785-43e3-4971-b139-33743a7c9a32
-ms.openlocfilehash: 782f917e377cac0c6b507eb0adf908a474fbeaf5
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 156d77914530cff34ab135a06b6efa6fbce00606
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283106"
 ---
 # <a name="execlpe"></a>execlpe
 

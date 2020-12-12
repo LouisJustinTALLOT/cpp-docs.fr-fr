@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: ChangedStateException'
 title: Platform::ChangedStateException, classe
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ChangedStateException
 ms.assetid: f894beac-9e80-4fac-ac25-89f1dbc0a6a4
-ms.openlocfilehash: 79181702c95f8c666b06bdb26319ccb06e55db0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: baabf54cacfc4dd03256b569fb868c402ea98a97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284029"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException, classe
 
@@ -31,16 +32,16 @@ Par exemple, cette exception est levée lorsque les méthodes d'un itérateur de
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Prise en charge minimale du client :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
 ## <a name="see-also"></a>Voir aussi
 
-[Platform::COMException, classe](../cppcx/platform-comexception-class.md)
+[Platform :: COMException, classe](../cppcx/platform-comexception-class.md)

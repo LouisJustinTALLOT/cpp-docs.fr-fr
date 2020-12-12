@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: Collections :: InputIterator'
 title: Platform::Collections::InputIterator, classe
 ms.date: 03/27/2019
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: 4aeef07a34c04bd1ab47acf808026024faada567
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7345435c57c75c04f0eb30d9773d655d713853de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283952"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator, classe
 
@@ -68,7 +69,7 @@ Nom de type de la classe de modèle InputIterator.
 
 **Espace de noms :** Platform::Collections
 
-## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>InputIterator :: InputIterator, constructeur
+## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a> InputIterator :: InputIterator, constructeur
 
 Initialise une nouvelle instance de la classe InputIterator.
 
@@ -84,7 +85,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 *répétiteur*<br/>
 Objet itérateur.
 
-## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>InputIterator :: Operator-, &gt; opérateur
+## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a> InputIterator :: Operator-, &gt; opérateur
 
 Récupère l’adresse de l’élément spécifié par l’objet InputIterator actif.
 
@@ -98,7 +99,7 @@ pointer operator->() const;
 
 Adresse de l’élément spécifié par l’objet InputIterator actif.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a>InputIterator :: Operator, \* opérateur
+## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a> InputIterator :: Operator, \* opérateur
 
 Récupère une référence à l’élément spécifié par l’InputIterator actif.
 
@@ -112,7 +113,7 @@ reference operator*() const;
 
 Élément spécifié par l’InputIterator actif.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>InputIterator :: Operator = =, opérateur
+## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a> InputIterator :: Operator = =, opérateur
 
 Indique si l'InputIterator actif est égal à un InputIterator spécifié.
 
@@ -127,11 +128,11 @@ bool operator== (const InputIterator& other) const;
 *autres*<br/>
 Autre InputIterator.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le InputIterator actuel est égal à *other*; Sinon, **`false`** .
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>InputIterator :: Operator + +, opérateur
+## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a> InputIterator :: Operator + +, opérateur
 
 Incrémente l'objet InputIterator actuel.
 
@@ -152,7 +153,7 @@ La première syntaxe InputIterator préincrémente l'objet InputIterator actuel.
 
 La deuxième syntaxe postincrémente l'objet InputIterator actuel. Le **`int`** type dans la deuxième syntaxe indique une opération postérieure à l’incrémentation, et non un opérande entier réel.
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>InputIterator :: Operator ! =, opérateur
+## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a> InputIterator :: Operator ! =, opérateur
 
 Indique si l'InputIterator actif n'est pas égal à un InputIterator spécifié.
 
@@ -167,7 +168,7 @@ bool operator!=(const InputIterator& other) const;
 *autres*<br/>
 Autre InputIterator.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le InputIterator actuel n’est pas égal à *other*; Sinon, **`false`** .
 

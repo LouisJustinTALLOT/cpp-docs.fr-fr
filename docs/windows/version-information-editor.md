@@ -1,5 +1,6 @@
 ---
-title: Éditeur d’informations surC++la version ()
+description: 'En savoir plus sur : éditeur d’informations sur la version (C++)'
+title: Éditeur d’informations sur la version (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.version.F1
@@ -23,14 +24,14 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e639db4fd0ec8ac6291be452c000a23246bac662
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283223"
 ---
-# <a name="version-information-editor-c"></a>Éditeur d’informations surC++la version ()
+# <a name="version-information-editor-c"></a>Éditeur d’informations sur la version (C++)
 
 Les informations sur la version sont composées de l’identification de l’entreprise et du produit, d’un numéro de version du produit, et de la notification de copyright et de marque déposée. Avec l' **éditeur d’informations sur la version**, vous créez et gérez ces données, qui sont stockées dans la ressource d’informations sur la version. La ressource d’informations sur la version n’est pas requise par une application, mais elle est utile pour collecter des informations qui identifient l’application. Les informations sur la version sont également utilisées par les API d’installation.
 
@@ -40,7 +41,7 @@ Les informations sur la version sont composées de l’identification de l’ent
 Une ressource d’informations sur la version a un bloc supérieur et un ou plusieurs blocs inférieurs : un bloc d’informations fixes unique en haut et un ou plusieurs blocs d’informations sur la version en bas (pour les autres langues et/ou jeux de caractères). Le bloc supérieur contient des zones numériques modifiables et des listes déroulantes sélectionnables. Les blocs inférieurs contiennent uniquement des zones de texte modifiables.
 
 > [!NOTE]
-> Lorsque vous utilisez l' **éditeur d’informations**sur la version, dans de nombreux cas, vous pouvez cliquer avec le bouton droit pour afficher un menu contextuel de commandes spécifiques à la ressource. Par exemple, si vous sélectionnez en pointant sur une entrée d’en-tête de bloc, le menu contextuel affiche les commandes **nouveau bloc d’informations sur la version** et **Supprimer les informations sur le bloc de version** .
+> Lorsque vous utilisez l' **éditeur d’informations** sur la version, dans de nombreux cas, vous pouvez cliquer avec le bouton droit pour afficher un menu contextuel de commandes spécifiques à la ressource. Par exemple, si vous sélectionnez en pointant sur une entrée d’en-tête de bloc, le menu contextuel affiche les commandes **nouveau bloc d’informations sur la version** et **Supprimer les informations sur le bloc de version** .
 
 ## <a name="how-to"></a>Procédure
 
@@ -50,11 +51,11 @@ L' **éditeur d’informations sur la version** vous permet d’activer les él�
 
 Sélectionnez l’élément une fois pour le choisir, puis à nouveau pour le modifier. Apportez les modifications directement dans la table d' **informations sur la version** ou dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Les modifications que vous apportez apparaîtront aux deux emplacements.
 
-Lorsque vous modifiez la clé de `FILEFLAGS` dans l' **éditeur d’informations sur la version**, Notez que vous ne pouvez pas définir les propriétés **Debug**, **Private Build**ou **Special Build** dans la fenêtre **Propriétés** des fichiers. RC :
+Lorsque vous modifiez la `FILEFLAGS` clé dans **l’éditeur d’informations sur la version**, Notez que vous ne pouvez pas définir les propriétés **Debug**, **Private Build** ou **Special Build** dans la fenêtre **Propriétés** des fichiers. RC :
 
-- L' **éditeur d’informations sur la version** définit la propriété **Debug** avec un `#ifdef` dans le script de ressources, en fonction de l’indicateur de build `_DEBUG`.
+- L' **éditeur d’informations sur la version** définit la propriété **Debug** avec un `#ifdef` dans le script de ressources, en fonction de l' `_DEBUG` indicateur de Build.
 
-- Si la clé de `Private Build` a une **valeur** définie dans la table d' **informations sur la version** , la propriété **Private Build** correspondante dans la fenêtre **Propriétés** de la clé `FILEFLAGS` a la valeur **true**. Si la **valeur** est vide, la propriété est **false**. De même, la clé de **Build spéciale** dans la table d' **informations sur la version** est liée à la propriété **special Build** de la clé `FILEFLAGS`.
+- Si la `Private Build` clé a une **valeur** définie dans la table d' **informations sur la version** , la propriété **Private Build** correspondante dans la fenêtre **Propriétés** de la `FILEFLAGS` clé est **true**. Si la **valeur** est vide, la propriété est **false**. De même, la clé de **Build spéciale** dans la table d' **informations sur la version** est liée à la propriété **Special Build** de la `FILEFLAGS` clé.
 
 Vous pouvez trier la séquence d’informations du bloc de chaîne en sélectionnant les en-têtes de colonne **clé** ou **valeur** . Ces en-têtes réorganisent automatiquement les informations dans la séquence sélectionnée.
 
@@ -62,7 +63,7 @@ Vous pouvez trier la séquence d’informations du bloc de chaîne en sélection
 
 1. Ouvrez une ressource d’informations de version en double-cliquant dessus dans [Affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Cliquez avec le bouton droit dans la table d’informations sur la version, puis choisissez **nouveau bloc**d’informations sur la version.
+1. Cliquez avec le bouton droit dans la table d’informations sur la version, puis choisissez **nouveau bloc** d’informations sur la version.
 
    Cette commande ajoute un bloc d’informations supplémentaire à la ressource d’informations de version actuelle et ouvre ses propriétés correspondantes dans la fenêtre [Propriétés](/visualstudio/ide/reference/properties-window).
 

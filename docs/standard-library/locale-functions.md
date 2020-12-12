@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les &lt; fonctions de paramètres régionaux &gt;
 title: '&lt;locale&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 91d0b40de557eb2414d6ee685795796c3290177c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6bad3cab6886fcee34fba06e88ce54e216db4649
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284614"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt;, fonctions
 

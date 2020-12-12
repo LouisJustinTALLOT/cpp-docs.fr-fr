@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : éléments de liste et listes d’images'
 title: Éléments de liste et listes d'images
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CListCtrl class [MFC], image lists
 - list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
-ms.openlocfilehash: 14abf72551d39b2d1b2069bd17da308b39d7f6cc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 674c67c2eb104d86f0bd80732469129b6c70e0f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283366"
 ---
 # <a name="list-items-and-image-lists"></a>Éléments de liste et listes d'images
 
@@ -34,4 +35,4 @@ Toutefois, si vous n’envisagez pas d’afficher des icônes dans votre mode li
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CListCtrl](using-clistctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

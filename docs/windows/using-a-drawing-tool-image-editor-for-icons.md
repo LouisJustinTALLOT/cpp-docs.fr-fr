@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : utiliser un outil de dessin'
 title: 'Comment : utiliser un outil de dessin'
 ms.date: 02/15/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 46ba1f1057484f2b5b1e1286482d80fd96312caf
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9415b81eb520b626186fe321184bd1d7d7391b61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502927"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283262"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Comment : utiliser un outil de dessin
 
@@ -61,7 +62,7 @@ Vous pouvez sélectionner des outils de dessin à partir de la barre d’outils 
 
 ### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Pour sélectionner et utiliser un outil de dessin à partir du menu image
 
-1. Accédez à menu **Image**  >  **Outils**image.
+1. Accédez à menu   >  **Outils** image.
 
 1. Dans le sous-menu en cascade, choisissez l’outil que vous souhaitez utiliser.
 
@@ -73,7 +74,7 @@ Les lignes sont dessinées dans une largeur déterminée par la sélection de pi
 
 ### <a name="to-draw-a-line"></a>Pour dessiner une ligne
 
-1. Utilisez la [barre d’outils de l’éditeur d’images](./image-editor-for-icons.md) ou accédez à menu Outils d' **image** >  **Tools** et choisissez l’outil **trait** .
+1. Utilisez la [barre d’outils de l’éditeur d’images](./image-editor-for-icons.md) ou accédez à menu Outils d' **image** >   et choisissez l’outil **trait** .
 
 1. Si nécessaire, sélectionnez les couleurs et un pinceau :
 
@@ -87,7 +88,7 @@ Les lignes sont dessinées dans une largeur déterminée par la sélection de pi
 
 ### <a name="to-draw-a-closed-figure"></a>Pour dessiner une figure fermée
 
-1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à menu **Image**  >  **Outils** image et sélectionnez un outil de **dessin de figure fermé** .
+1. Utilisez la barre d’outils de l' **éditeur d’images** ou accédez à menu   >  **Outils** image et sélectionnez un outil de **dessin de figure fermé** .
 
    Les outils de **dessin de la figure fermée** créent des figures comme indiqué sur leurs boutons respectifs.
 
@@ -105,7 +106,7 @@ Un pinceau personnalisé est une partie rectangulaire d’une image que vous sé
 
 1. Sélectionnez la partie de l’image que vous souhaitez utiliser pour un pinceau.
 
-1. Maintenez la touche **MAJ** enfoncée, choisissez dans la sélection et faites-la glisser sur l’image, ou accédez à **image**menu  >  **utiliser la sélection comme pinceau**.
+1. Maintenez la touche **MAJ** enfoncée, choisissez dans la sélection et faites-la glisser sur l’image, ou accédez à **image** menu  >  **utiliser la sélection comme pinceau**.
 
    Votre sélection devient un pinceau personnalisé qui répartit les couleurs de la sélection sur l’image. Les copies de la sélection sont conservées le long du tracé de glissement. Plus le déplacement est lent, plus les copies sont effectuées.
 
@@ -134,9 +135,9 @@ Appuyez sur la touche signe **plus** ( **+** ) pour doubler la taille du pinceau
 
 Appuyez sur **Échap** ou choisissez un autre outil de dessin.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Aucun
+None
 
 ## <a name="see-also"></a>Voir aussi
 

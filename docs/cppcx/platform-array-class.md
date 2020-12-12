@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: Array'
 title: Classe Platform::Array
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 4903c18f981c87c418a6ab08595816ce22a7413c
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 76e8329cdc324bc7a8de338725d48188b79ac9f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284198"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -103,7 +104,7 @@ T& get(unsigned int index)  const;
 *index*<br/>
 Index de base zéro qui identifie un élément du tableau. L’index minimal est 0 et l’index maximal est la valeur spécifiée par le `size` paramètre dans le [constructeur de tableau](#ctor).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Élément de tableau spécifié par le paramètre `index`.
 

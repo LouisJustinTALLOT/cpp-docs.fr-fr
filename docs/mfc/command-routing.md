@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : routage des commandes'
 title: routage des commandes
 ms.date: 09/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4004f74413f236599c5cdd14f6593bc5d2bd26b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620693"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283444"
 ---
 # <a name="command-routing"></a>routage des commandes
 
@@ -35,7 +36,7 @@ Quel est le coût de ce mécanisme de routage par rapport à ce que fait votre g
 
 |Quand un objet de ce type reçoit une commande. . .|Il se donne à lui-même et à d’autres objets cibles de commande une occasion de gérer la commande dans cet ordre :|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|Fenêtre frame MDI  (`CMDIFrameWnd`)|1. actif`CMDIChildWnd`<br />2. cette fenêtre frame<br />3. application ( `CWinApp` objet)|
+|Fenêtre frame MDI  (`CMDIFrameWnd`)|1. actif `CMDIChildWnd`<br />2. cette fenêtre frame<br />3. application ( `CWinApp` objet)|
 |Fenêtre frame de document  (`CFrameWnd`, `CMDIChildWnd`)|1. affichage actif<br />2. cette fenêtre frame<br />3. application ( `CWinApp` objet)|
 |Affichage|1. cette vue<br />2. document attaché à la vue|
 |Document|1. ce document<br />2. modèle de document attaché au document|
@@ -45,4 +46,4 @@ Quand les entrées numérotées dans la deuxième colonne du tableau précédent
 
 ## <a name="see-also"></a>Voir aussi
 
-[Méthode d’appel d’un gestionnaire par le Framework](how-the-framework-calls-a-handler.md)
+[Comment le Framework appelle un gestionnaire](how-the-framework-calls-a-handler.md)

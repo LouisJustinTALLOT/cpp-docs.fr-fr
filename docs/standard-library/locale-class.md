@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe locale'
 title: locale, classe
 ms.date: 07/20/2020
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e934a2e892f0b68926369c8e4a4128162345dd83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284627"
 ---
 # <a name="locale-class"></a>locale, classe
 
@@ -180,7 +181,7 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 |[articulaire](#facet_class)|Classe qui sert de classe de base pour toutes les facettes de paramètres régionaux.|
 |[`id`](#id_class)|La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<locale>
 
@@ -202,7 +203,7 @@ static const int all = LC_ALL;
 static const int none = 0;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme d’un **`int`** type qui peut représenter un groupe d’éléments distincts d’un type de masque de masque local aux paramètres régionaux de classe ou qui peut être utilisé pour représenter l’une des catégories de paramètres régionaux C correspondants. Les éléments sont :
 
@@ -234,11 +235,11 @@ La fonction membre statique retourne un objet de paramètres régionaux qui repr
 static const locale& classic();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence aux paramètres régionaux C.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les paramètres régionaux C classiques sont les paramètres régionaux ASCII anglais (États-Unis) dans la bibliothèque C standard. Il s’agit des paramètres régionaux utilisés implicitement dans les programmes qui ne sont pas internationalisés.
 
@@ -295,9 +296,9 @@ locale combine(const locale& source_locale) const;
 *source_locale*\
 Paramètres régionaux contenant la facette à insérer dans les paramètres régionaux cibles.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-La fonction membre retourne un objet de paramètres régionaux qui remplace ou ajoute à ** \* cette** facette `Facet` indiquée dans *source_locale*.
+La fonction membre retourne un objet de paramètres régionaux qui remplace ou ajoute à **\* cette** facette `Facet` indiquée dans *source_locale*.
 
 ### <a name="example"></a>Exemple
 
@@ -344,7 +345,7 @@ private:
 };
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous ne pouvez pas copier ou assigner un objet de classe `facet` . Vous pouvez construire et détruire des objets dérivés de la classe `locale::facet`, mais pas des objets de la classe de base proprement dite. En général, vous construisez un objet `_Myfac` dérivé de `facet` lorsque vous construisez un `locale` , comme dans `locale loc(locale::classic(), new _Myfac);`
 
@@ -363,11 +364,11 @@ static locale global(const locale& new_default_locale);
 *new_default_locale*\
 Paramètres régionaux à utiliser comme paramètres régionaux par défaut par le programme.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètres régionaux en vigueur avant la réinitialisation des paramètres régionaux par défaut.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Au démarrage du programme, les paramètres régionaux globaux sont les mêmes que les paramètres régionaux classiques. La fonction `global()` appelle `setlocale( LC_ALL, loc.name. c_str())` pour déterminer les paramètres régionaux correspondants dans la bibliothèque C standard.
 
@@ -412,7 +413,7 @@ class id
 };
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La classe membre décrit l’objet membre statique exigé par chaque facette de paramètres régionaux unique. Vous ne pouvez pas copier ou assigner un objet de classe `id` .
 
@@ -452,7 +453,7 @@ Catégorie à substituer dans les paramètres régionaux construits.
 *new_facet*\
 Facette à substituer dans les paramètres régionaux construits.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le premier constructeur initialise l’objet pour qu’il corresponde aux paramètres régionaux globaux. Les deuxième et troisième constructeurs initialisent toutes les catégories de paramètres régionaux pour que le comportement soit cohérent avec le nom des paramètres régionaux *locale_name*. Les constructeurs restants copient *from_locale*, avec les exceptions notées :
 
@@ -520,7 +521,7 @@ Retourne le nom des paramètres régionaux stocké.
 string name() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Chaîne indiquant le nom des paramètres régionaux.
 
@@ -572,11 +573,11 @@ bool operator!=(const locale& right) const;
 *Oui*\
 L’un des paramètres régionaux dont l’inégalité doit être testée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur booléenne qui est **`true`** si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux. C’est **`false`** le cas si les paramètres régionaux sont des copies des mêmes paramètres régionaux.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Deux paramètres régionaux sont égaux s’ils sont identiques, s’il s’agit d’une copie de l’autre ou s’ils ont des noms identiques.
 
@@ -639,11 +640,11 @@ Première chaîne à comparer.
 *Oui*\
 Deuxième chaîne à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 - **`true`** Si *Left* est vue lexicographique inférieur à *Right*; sinon, **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction de modèle exécute :
 
@@ -699,11 +700,11 @@ bool operator==(const locale& right) const;
 *Oui*\
 L’un des paramètres régionaux dont l’égalité doit être testée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur booléenne qui est **`true`** si les paramètres régionaux sont des copies des mêmes paramètres régionaux. C’est **`false`** le cas si les paramètres régionaux ne sont pas des copies des mêmes paramètres régionaux.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Deux paramètres régionaux sont égaux s’ils sont identiques, s’il s’agit d’une copie de l’autre ou s’ils ont des noms identiques.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : dessin d’images à partir d’une liste d’images'
 title: Dessin d'images à partir d'une liste d'images
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: 55c16ce5bff102d670e46867e121b0a0a2f304ac
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 2c413092e1e7568488a091acd2b0db175d03dab9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283457"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Dessin d'images à partir d'une liste d'images
 
@@ -28,9 +29,9 @@ Les styles **ILD_BLEND25** et **ILD_BLEND50** dithernt l’image avec la couleur
 
 Une image non masquée est copiée dans le contexte de périphérique de destination à l’aide de l' `SRCCOPY` opération Raster. Les couleurs dans l'image s'affichent de la même façon indépendamment de la couleur d'arrière-plan du contexte de périphérique. Les styles de dessin spécifiés dans `Draw` n’ont pas non plus d’effet sur l’apparence d’une image non masquée.
 
-Outre la fonction membre Draw, une autre fonction, [DrawIndirect](reference/cimagelist-class.md#drawindirect), permet d’étendre la capacité de rendu d’une image. `DrawIndirect`prend comme paramètre une structure [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) . Cette structure peut être utilisée pour personnaliser le rendu de l'image actuelle, notamment l'utilisation de codes d'opération de rastérisation (ROP, Raster Operation). Pour plus d’informations sur les codes ROP, consultez [codes d’opération Raster](/windows/win32/gdi/raster-operation-codes) et [bitmaps en tant que pinceaux](/windows/win32/gdi/bitmaps-as-brushes) dans le SDK Windows.
+Outre la fonction membre Draw, une autre fonction, [DrawIndirect](reference/cimagelist-class.md#drawindirect), permet d’étendre la capacité de rendu d’une image. `DrawIndirect` prend comme paramètre une structure [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) . Cette structure peut être utilisée pour personnaliser le rendu de l'image actuelle, notamment l'utilisation de codes d'opération de rastérisation (ROP, Raster Operation). Pour plus d’informations sur les codes ROP, consultez [codes d’opération Raster](/windows/win32/gdi/raster-operation-codes) et [bitmaps en tant que pinceaux](/windows/win32/gdi/bitmaps-as-brushes) dans le SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CImageList](using-cimagelist.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

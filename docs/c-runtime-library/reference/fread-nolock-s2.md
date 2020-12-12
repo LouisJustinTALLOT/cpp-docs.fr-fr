@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fread_nolock_s'
 title: _fread_nolock_s2
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 702264f3728b0d9eca3f2fb51ba2ea0467b592df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ba971d8db9fde15009362b2e8da0791883fb64e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283067"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -50,7 +51,7 @@ size_t _fread_nolock_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage des données.
 
 *Tampon*<br/>
@@ -65,11 +66,11 @@ Nombre maximal d’éléments à lire.
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Consultez [fread_s](fread-s.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Cette fonction est une version sans verrouillage de **fread_s**. Elle est identique à **fread_s** à ceci près qu’elle n’est pas protégée contre les interférences par d’autres threads. Elle peut être plus rapide, car elle n’entraîne pas la charge liée au verrouillage des autres threads. Utilisez cette fonction uniquement dans les contextes thread-safe, par exemple avec les applications monothread ou lorsque la portée appelante gère déjà l’isolation des threads.
 
@@ -77,9 +78,9 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
-|**_fread_nolock_s**|C : \<stdio.h> ; C++ : \<cstdio> ou \<stdio.h>|
+|**_fread_nolock_s**|C : \<stdio.h> ; C++ : \<cstdio> ou \<stdio.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 

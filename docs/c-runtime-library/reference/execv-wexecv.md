@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _execv, _wexecv'
 title: _execv, _wexecv
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: 2c92321ebf31cf3dd1e446246674a437919e347b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 62bb8d92acf99d9db091dbe7e3be9dffe1fbb439
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283080"
 ---
 # <a name="_execv-_wexecv"></a>_execv, _wexecv
 
@@ -68,7 +69,7 @@ Chemin d’accès du fichier à exécuter.
 *argv*<br/>
 Tableau de pointeurs vers les paramètres.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de-1 indique une erreur, auquel cas la variable globale **errno** est définie.
 
@@ -84,7 +85,7 @@ En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une 
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions charge et exécute un nouveau processus, passant un tableau de pointeurs à des arguments de ligne de commande.
 
@@ -94,14 +95,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|En-tête facultatif|
+|Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
 |**_execv**|\<process.h>|\<errno.h>|
 |**_wexecv**|\<process.h> ou \<wchar.h>|\<errno.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple dans [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md).
 

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Platform :: Collections ::D espace de noms étails'
 title: Platform::Collections::Details, espace de noms
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::Details
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-ms.openlocfilehash: 7f7885397a56391581f9e3d0fe985311164d0219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4af47a5eb84d5d27613d0c356ae3c352005da9d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283977"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Platform::Collections::Details, espace de noms
 
@@ -28,14 +29,14 @@ Les membres de cet espace de noms sont définis dans collection.h et ne sont pas
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
-[Platform::Collections, espace de noms](../cppcx/platform-collections-namespace.md)
+[Espace de noms Platform :: Collections](../cppcx/platform-collections-namespace.md)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** Collection.h
+**En-tête :** Collection. h
 
-**Espace de noms :** Platform::Collection::Details
+**Espace de noms :** Platform::collection:: Details
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)
+[Espace de noms de plateforme](platform-namespace-c-cx.md)

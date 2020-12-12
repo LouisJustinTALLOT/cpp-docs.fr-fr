@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur le contrôle de processus et d’environnement
 title: Contrôle de processus et d'environnement
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: ed8d15181a171b4b6a436a3e410a99b48232bc6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7ba9c81aff87f6cfdf253da6a5d4504bcc59dce5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284562"
 ---
 # <a name="process-and-environment-control"></a>Contrôle de processus et d'environnement
 
@@ -47,7 +48,7 @@ Utilisez les routines de contrôle de processus pour démarrer, arrêter et gér
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Terminer le processus immédiatement sans appeler **atexit** ou **_onexit**, ou vider les mémoires tampons|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Obtenir la valeur de la variable d’environnement|
 |[_getpid](../c-runtime-library/reference/getpid.md)|Obtenir un numéro d’identification de processus|
-|[longjmp](../c-runtime-library/reference/longjmp.md)|Restaurer l’environnement de pile enregistré ; l’utiliser pour exécuter un non local**`goto`**|
+|[longjmp](../c-runtime-library/reference/longjmp.md)|Restaurer l’environnement de pile enregistré ; l’utiliser pour exécuter un non local **`goto`**|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Planifier des routines à exécuter à l’arrêt du programme ; utiliser pour la compatibilité avec Microsoft C/C++ version 7.0 et antérieures|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Attendre un nouveau processeur de commandes et fermer le flux du canal associé|
 |[perror, _wperror](../c-runtime-library/reference/perror-wperror.md)|Imprimer un message d’erreur|
@@ -55,7 +56,7 @@ Utilisez les routines de contrôle de processus pour démarrer, arrêter et gér
 |[_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md)|Créer un canal et exécuter une commande|
 |[_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md), [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)|Ajouter ou modifier la valeur de la variable d’environnement|
 |[raise](../c-runtime-library/reference/raise.md)|Envoyer un signal au processus appelant|
-|[setjmp](../c-runtime-library/reference/setjmp.md)|Enregistrer l’environnement de pile ; utiliser pour exécuter un non local**`goto`**|
+|[setjmp](../c-runtime-library/reference/setjmp.md)|Enregistrer l’environnement de pile ; utiliser pour exécuter un non local **`goto`**|
 |[signal](../c-runtime-library/reference/signal.md)|Gérer le signal d’interruption|
 |[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|Créer un processus et l’exécuter avec la liste d’arguments spécifiée|
 |[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|Créer un processus et l’exécuter avec la liste d’arguments et l’environnement spécifiés|

@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : robustesse'
 title: Robustesse
 ms.date: 11/04/2016
 helpviewer_keywords:
 - robustness [CRT]
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
-ms.openlocfilehash: 9de2611e29f5f9bfd08839517e873c3dda225af0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7dfe3d40eae4c67f45d4332ce22255a44c33f728
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211591"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284510"
 ---
 # <a name="robustness"></a>Robustesse
 

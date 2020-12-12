@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateurs de décalage de bits'
 title: Opérateurs de décalage de bits
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - bitwise-shift operators
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
-ms.openlocfilehash: a8a72a8657daec39bb042fea744b5f97d3b34009
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 649c2057f4c70310b675e4d7bd71a87a5e5cd5c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226527"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283132"
 ---
 # <a name="bitwise-shift-operators"></a>Opérateurs de décalage de bits
 

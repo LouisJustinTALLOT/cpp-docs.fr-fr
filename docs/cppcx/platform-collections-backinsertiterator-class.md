@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: Collections :: BackInsertIterator'
 title: Platform::Collections::BackInsertIterator, classe
 ms.date: 03/27/2019
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: f5c82a776a537d469d42a16bd4f425e7bb2c13aa
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: d4130db388470b5e29b545b66b06ee85b2cbb608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283990"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator, classe
 
@@ -96,7 +97,7 @@ BackInsertIterator& operator=( const T& t);
 *t*<br/>
 Objet à ajouter à la collection actuelle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au BackInsertIterator actif.
 

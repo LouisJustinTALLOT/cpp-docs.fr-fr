@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs de liste'
 title: '&lt;list&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 8648258f17bff577ba1c0dde5016f5f284b82e25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 86f032a201943e6b42a997c2fc6ff29df353351e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224836"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284692"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt;, opérateurs
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a> opérateur ! =
 
 Teste si l'objet de liste situé à gauche de l'opérateur n'est pas égal à l'objet de liste situé à droite.
 
@@ -38,12 +39,12 @@ bool operator!=(
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `list`.
+Objet de type `list`.
 
 *Oui*\
-Objet de type `list`.
+Objet de type `list`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les listes ne sont pas égales ; **`false`** si les listes sont égales.
 
@@ -76,7 +77,7 @@ Lists not equal.
 */
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>and&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> and&lt;
 
 Teste si l'objet de liste situé à gauche de l'opérateur est inférieur à l'objet de liste situé à droite.
 
@@ -89,12 +90,12 @@ bool operator<(
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `list`.
+Objet de type `list`.
 
 *Oui*\
-Objet de type `list`.
+Objet de type `list`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la liste située à gauche de l’opérateur est inférieure mais pas égale à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -131,7 +132,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>and&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> and&lt;=
 
 Teste si l'objet de liste situé à gauche de l'opérateur est inférieur ou égal à l'objet de liste situé à droite.
 
@@ -144,12 +145,12 @@ bool operator<=(
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `list`.
+Objet de type `list`.
 
 *Oui*\
-Objet de type `list`.
+Objet de type `list`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la liste située à gauche de l’opérateur est inférieure ou égale à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -186,7 +187,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a> opérateur = =
 
 Teste si l'objet de liste situé à gauche de l'opérateur est égal à l'objet de liste situé à droite.
 
@@ -199,12 +200,12 @@ bool operator==(
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `list`.
+Objet de type `list`.
 
 *Oui*\
-Objet de type `list`.
+Objet de type `list`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la liste située à gauche de l’opérateur est égale à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -237,7 +238,7 @@ The lists are equal.
 */
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>and&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 
 Teste si l'objet de liste situé à gauche de l'opérateur est supérieur à l'objet de liste situé à droite.
 
@@ -250,12 +251,12 @@ bool operator>(
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `list`.
+Objet de type `list`.
 
 *Oui*\
-Objet de type `list`.
+Objet de type `list`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la liste située à gauche de l’opérateur est supérieure à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 
@@ -292,7 +293,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>and&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> and&gt;=
 
 Teste si l'objet de liste situé à gauche de l'opérateur est supérieur ou égal à l'objet de liste situé à droite.
 
@@ -305,12 +306,12 @@ bool operator>=(
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Objet de type `list`.
+Objet de type `list`.
 
 *Oui*\
-Objet de type `list`.
+Objet de type `list`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la liste située à gauche de l’opérateur est supérieure ou égale à la liste située à droite de l’opérateur ; Sinon, **`false`** .
 

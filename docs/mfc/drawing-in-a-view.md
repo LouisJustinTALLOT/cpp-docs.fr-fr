@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : dessin dans une vue'
 title: Dessin dans une vue
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: c60d99fdebcd64ad844bc19918a30beb90b86af3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b5d6b33d91f6a71048162078a926c5ad4336d6a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618937"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283405"
 ---
 # <a name="drawing-in-a-view"></a>Dessin dans une vue
 
@@ -26,9 +27,9 @@ Presque tous les dessins de votre application se produisent dans la `OnDraw` fon
 
 1. Affiche les données en appelant les fonctions membres d’un objet de contexte d’appareil que le Framework passe à `OnDraw` .
 
-Lorsque les données d’un document changent d’une certaine façon, la vue doit être redessinée pour refléter les modifications. En général, cela se produit lorsque l’utilisateur apporte une modification à l’aide d’une vue sur le document. Dans ce cas, la vue appelle la fonction membre [UpdateAllViews](reference/cdocument-class.md#updateallviews) du document pour notifier toutes les vues du même document à se mettre à jour eux-mêmes. `UpdateAllViews`appelle la fonction membre [OnUpdate](reference/cview-class.md#onupdate) de chaque vue. L’implémentation par défaut de `OnUpdate` invalide la zone cliente entière de la vue. Vous pouvez la remplacer pour invalider uniquement les régions de la zone cliente qui mappent aux parties modifiées du document.
+Lorsque les données d’un document changent d’une certaine façon, la vue doit être redessinée pour refléter les modifications. En général, cela se produit lorsque l’utilisateur apporte une modification à l’aide d’une vue sur le document. Dans ce cas, la vue appelle la fonction membre [UpdateAllViews](reference/cdocument-class.md#updateallviews) du document pour notifier toutes les vues du même document à se mettre à jour eux-mêmes. `UpdateAllViews` appelle la fonction membre [OnUpdate](reference/cview-class.md#onupdate) de chaque vue. L’implémentation par défaut de `OnUpdate` invalide la zone cliente entière de la vue. Vous pouvez la remplacer pour invalider uniquement les régions de la zone cliente qui mappent aux parties modifiées du document.
 
-La `UpdateAllViews` fonction membre de la classe `CDocument` et la `OnUpdate` fonction membre de la classe `CView` vous permettent de transmettre des informations décrivant les parties du document qui ont été modifiées. Ce mécanisme de « Conseil » vous permet de limiter la zone que la vue doit redessiner. `OnUpdate`accepte deux arguments « hint ». Le premier, *lHint*, de type **lParam**, vous permet de passer toutes les données de votre choix, tandis que le second, *pHint*, de type `CObject` *, vous permet de passer un pointeur vers n’importe quel objet dérivé de `CObject` .
+La `UpdateAllViews` fonction membre de la classe `CDocument` et la `OnUpdate` fonction membre de la classe `CView` vous permettent de transmettre des informations décrivant les parties du document qui ont été modifiées. Ce mécanisme de « Conseil » vous permet de limiter la zone que la vue doit redessiner. `OnUpdate` accepte deux arguments « hint ». Le premier, *lHint*, de type **lParam**, vous permet de passer toutes les données de votre choix, tandis que le second, *pHint*, de type `CObject` *, vous permet de passer un pointeur vers n’importe quel objet dérivé de `CObject` .
 
 Lorsqu’une vue n’est plus valide, Windows l’envoie un message de **WM_PAINT** . La fonction de gestionnaire [OnPaint](reference/cwnd-class.md#onpaint) de la vue répond au message en créant un objet de contexte d’appareil de la classe [CPaintDC](reference/cpaintdc-class.md) et appelle la fonction membre de votre vue `OnDraw` . Vous n’avez normalement pas besoin d’écrire une fonction de gestionnaire de substitution `OnPaint` .
 

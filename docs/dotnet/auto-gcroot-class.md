@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe auto_gcroot'
 title: auto_gcroot, classe
 ms.date: 01/16/2019
 ms.topic: reference
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
-ms.openlocfilehash: 3f6190b0d16648490552c0f415251a3df2b33188
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c763883a10906a8f63b7ba265576ab547750b66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282794"
 ---
 # <a name="auto_gcroot-class"></a>auto_gcroot, classe
 
@@ -75,7 +76,7 @@ Type managé à incorporer.
 
 **Espace de noms** msclr,
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot :: auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a> auto_gcroot :: auto_gcroot
 
 Constructeur `auto_gcroot`.
 
@@ -191,7 +192,7 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot :: ~ auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a> auto_gcroot :: ~ auto_gcroot
 
 `auto_gcroot`Destructeur.
 
@@ -238,7 +239,7 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot :: Attach
+## <a name="auto_gcrootattach"></a><a name="attach"></a> auto_gcroot :: Attach
 
 Attacher `auto_gcroot` à un objet.
 
@@ -333,7 +334,7 @@ Hello from fourth A!
 in ClassA destructor:fourth
 ```
 
-## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot :: obtient
+## <a name="auto_gcrootget"></a><a name="get"></a> auto_gcroot :: obtient
 
 Obtient l’objet contenu.
 
@@ -393,7 +394,7 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot :: Release
+## <a name="auto_gcrootrelease"></a><a name="release"></a> auto_gcroot :: Release
 
 Libère l’objet de la `auto_gcroot` gestion.
 
@@ -456,7 +457,7 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot :: Reset
+## <a name="auto_gcrootreset"></a><a name="reset"></a> auto_gcroot :: Reset
 
 Détruisez l’objet détenu en cours et éventuellement la possession d’un nouvel objet.
 
@@ -521,7 +522,7 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot :: swap
+## <a name="auto_gcrootswap"></a><a name="swap"></a> auto_gcroot :: swap
 
 Échange des objets avec un autre `auto_gcroot` .
 
@@ -563,7 +564,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>auto_gcroot :: Operator-&gt;
+## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a> auto_gcroot :: Operator-&gt;
 
 Opérateur d’accès aux membres.
 
@@ -612,7 +613,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot :: Operator =
+## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a> auto_gcroot :: Operator =
 
 Opérateur d'assignation.
 
@@ -704,7 +705,7 @@ done
 in ClassA destructor: third
 ```
 
-## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>auto_gcroot :: Operator auto_gcroot
+## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a> auto_gcroot :: Operator auto_gcroot
 
 Opérateur de cast de type entre `auto_gcroot` les types et compatibles.
 
@@ -759,7 +760,7 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot :: operator bool
+## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a> auto_gcroot :: operator bool
 
 Opérateur à utiliser `auto_gcroot` dans une expression conditionnelle.
 
@@ -804,7 +805,7 @@ now s is valid
 now s is invalid
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot :: Operator !
+## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a> auto_gcroot :: Operator !
 
 Opérateur à utiliser `auto_gcroot` dans une expression conditionnelle.
 

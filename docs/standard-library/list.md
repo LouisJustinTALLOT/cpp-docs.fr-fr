@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; liste&gt;'
 title: '&lt;list&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: cbc93500c3fe61b2a4640008b869f3a6b71b5c6c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dd75c6871e9996b7bfba32ed34999a6fec6fc1b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833307"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284666"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -34,12 +35,12 @@ Définit la liste de modèles de classe de conteneur et plusieurs modèles de pr
 |-|-|
 |[opérateur ! =](../standard-library/list-operators.md#op_neq)|Teste si l'objet de liste situé à gauche de l'opérateur n'est pas égal à l'objet de liste situé à droite.|
 |[<d’opérateur ](../standard-library/list-operators.md#op_lt)|Teste si l'objet de liste situé à gauche de l'opérateur est inférieur à l'objet de liste situé à droite.|
-|[and\<=](../standard-library/list-operators.md#op_gt_eq)|Teste si l'objet de liste situé à gauche de l'opérateur est inférieur ou égal à l'objet de liste situé à droite.|
+|[operator\<=](../standard-library/list-operators.md#op_gt_eq)|Teste si l'objet de liste situé à gauche de l'opérateur est inférieur ou égal à l'objet de liste situé à droite.|
 |[opérateur = =](../standard-library/list-operators.md#op_eq_eq)|Teste si l'objet de liste situé à gauche de l'opérateur est égal à l'objet de liste situé à droite.|
 |[>d’opérateur ](../standard-library/list-operators.md#op_gt)|Teste si l'objet de liste situé à gauche de l'opérateur est supérieur à l'objet de liste situé à droite.|
 |[>opérateur =](../standard-library/list-operators.md#op_gt_eq)|Teste si l'objet de liste situé à gauche de l'opérateur est supérieur ou égal à l'objet de liste situé à droite.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
