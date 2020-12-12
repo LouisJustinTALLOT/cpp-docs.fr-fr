@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CEdit'
 title: CEdit Class
 ms.date: 09/12/2018
 f1_keywords:
@@ -94,12 +95,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 0e15472ddaad214d575a7479680454ae6b4d3178
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8dbf5ffd05473720682703a9f309f8483591f143
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184684"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +182,7 @@ Si vous voulez gérer les messages de notification Windows envoyés par un contr
 
 Chaque entrée de la table des messages prend la forme suivante :
 
-  **ON_**_Notification_**de on_ (** _ID_**,** _memberFxn_ **)**
+  _Notification_**de on_ (** _ID_**,** _memberFxn_ **)**
 
 où `id` spécifie l’ID de fenêtre enfant du contrôle d’édition qui envoie la notification, et `memberFxn` est le nom de la fonction membre parente que vous avez écrite pour gérer la notification.
 
@@ -239,7 +240,7 @@ Appelez cette fonction pour déterminer si la dernière opération de modificati
 BOOL CanUndo() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la dernière opération de modification peut être annulée par un appel à la `Undo` fonction membre ; 0 si elle ne peut pas être annulée.
 
@@ -280,7 +281,7 @@ int CharFromPos(CPoint pt) const;
 *pt*<br/>
 Coordonnées d’un point dans la zone cliente de cet `CEdit` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 L’index de caractère dans le mot de poids faible, et l’index de ligne dans le mot de poids fort.
 
@@ -357,7 +358,7 @@ Spécifie la fenêtre parente du contrôle d’édition (généralement `CDialog
 *nID*<br/>
 Spécifie l’ID du contrôle d’édition.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’initialisation réussit ; Sinon, 0.
 
@@ -438,7 +439,7 @@ BOOL FmtLines(BOOL bAddEOL);
 *bAddEOL*<br/>
 Spécifie si les caractères de saut de ligne conditionnel doivent être insérés. La valeur TRUE insère les caractères ; la valeur FALSe les supprime.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si une mise en forme se produit ; Sinon, 0.
 
@@ -476,7 +477,7 @@ CString GetCueBanner() const;
 *cchText*<br/>
 dans Nombre de caractères qui peuvent être reçus. Ce nombre comprend le caractère NULL de fin.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour la première surcharge, TRUE si la méthode réussit ; Sinon, FALSe.
 
@@ -494,7 +495,7 @@ Appelez cette fonction pour déterminer la ligne la plus visible dans un contrô
 int GetFirstVisibleLine() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de la ligne la plus visible au premier plan. Pour les contrôles d’édition sur une seule ligne, la valeur de retour est 0.
 
@@ -514,7 +515,7 @@ Appelez cette fonction pour récupérer un handle de la mémoire actuellement al
 HLOCAL GetHandle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle de mémoire local qui identifie la mémoire tampon contenant le contenu du contrôle d’édition. Si une erreur se produit, telle que l’envoi du message à un contrôle d’édition sur une seule ligne, la valeur de retour est 0.
 
@@ -553,7 +554,7 @@ BOOL GetHighlight(
 *pichEnd*\
 à Index de base zéro du dernier caractère de la plage de texte mise en surbrillance.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -569,7 +570,7 @@ Appelez cette fonction membre pour obtenir la limite de texte pour cet `CEdit` o
 UINT GetLimitText() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Limite de texte actuelle, en TCHARs, pour cet `CEdit` objet.
 
@@ -612,7 +613,7 @@ Pointe vers la mémoire tampon qui reçoit une copie de la ligne. Le premier mot
 *nMaxLength*<br/>
 Spécifie le nombre maximal de caractères TCHAR qui peuvent être copiés dans la mémoire tampon. `GetLine` place cette valeur dans le premier mot de *lpszbuffer a été* avant d’effectuer l’appel à Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de caractères réellement copiés. La valeur de retour est 0 si le numéro de ligne spécifié par *nIndex* est supérieur au nombre de lignes dans le contrôle d’édition.
 
@@ -634,7 +635,7 @@ Appelez cette fonction pour récupérer le nombre de lignes dans un contrôle d�
 int GetLineCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Entier contenant le nombre de lignes dans le contrôle d’édition sur plusieurs lignes. Si aucun texte n’a été entré dans le contrôle d’édition, la valeur de retour est 1.
 
@@ -656,7 +657,7 @@ Appelez cette fonction membre pour récupérer les marges gauche et droite de ce
 DWORD GetMargins() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Largeur de la marge de gauche dans le mot de poids faible et largeur de la marge de droite dans le mot de poids fort.
 
@@ -681,7 +682,7 @@ Appelez cette fonction pour déterminer si le contenu d’un contrôle d’édit
 BOOL GetModify() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le contenu du contrôle de modification a été modifié ; 0 si elles sont restées inchangées.
 
@@ -703,7 +704,7 @@ Appelez cette fonction pour récupérer le caractère de mot de passe affiché d
 TCHAR GetPasswordChar() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Spécifie le caractère à afficher à la place du caractère tapé par l’utilisateur. La valeur de retour est NULL si aucun caractère de mot de passe n’existe.
 
@@ -762,7 +763,7 @@ Référence à un entier qui recevra la position du premier caractère dans la s
 *nEndChar*<br/>
 Référence à un entier qui recevra la position du premier caractère non sélectionné au-delà de la fin de la sélection actuelle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La version qui retourne une valeur DWORD retourne une valeur qui contient la position de départ dans le mot de poids faible et la position du premier caractère non sélectionné après la fin de la sélection dans le mot de poids fort.
 
@@ -782,7 +783,7 @@ Masque les info-bulles associées au contrôle d’édition actuel.
 BOOL HideBalloonTip();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -829,7 +830,7 @@ int LineFromChar(int nIndex = -1) const;
 *nIndex*<br/>
 Contient la valeur d’index de base zéro du caractère souhaité dans le texte du contrôle d’édition, ou contient-1. Si *nIndex* est-1, il spécifie la ligne active, autrement dit, la ligne qui contient le signe insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Numéro de ligne de base zéro de la ligne contenant l’index de caractère spécifié par *nIndex*. Si *nIndex* a la valeur-1, le numéro de la ligne qui contient le premier caractère de la sélection est retourné. Si aucune sélection n’est effectuée, le numéro de la ligne active est retourné.
 
@@ -858,7 +859,7 @@ int LineIndex(int nLine = -1) const;
 *nLigne*<br/>
 Contient la valeur d’index de la ligne souhaitée dans le texte du contrôle d’édition, ou contient-1. Si *nLigne* est-1, il spécifie la ligne active, autrement dit, la ligne qui contient le signe insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de caractère de la ligne spécifiée dans *nLigne* ou-1 si le numéro de ligne spécifié est supérieur au nombre de lignes dans le contrôle d’édition.
 
@@ -887,7 +888,7 @@ int LineLength(int nLine = -1) const;
 *nLigne*<br/>
 Index de base zéro d’un caractère de la ligne dont la longueur doit être récupérée. La valeur par défaut est -1.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour les contrôles d’édition sur une seule ligne, la valeur de retour est la longueur, en TCHARs, du texte dans le contrôle d’édition.
 
@@ -970,7 +971,7 @@ CPoint PosFromChar(UINT nChar) const;
 *nChar*<br/>
 Index de base zéro du caractère spécifié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Coordonnées du coin supérieur gauche du caractère spécifié par *nchar*.
 
@@ -1039,7 +1040,7 @@ Si la valeur est TRUE, la bannière de signal est dessinée même lorsque le con
 
 La valeur par défaut est FALSE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode réussit ; Sinon, FALSe.
 
@@ -1230,7 +1231,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 *bReadOnly*<br/>
 Spécifie s’il faut définir ou supprimer l’État en lecture seule du contrôle d’édition. La valeur TRUE définit l’État en lecture seule ; la valeur FALSe définit l’État sur lecture/écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’opération réussit, ou 0 si une erreur se produit.
 
@@ -1365,7 +1366,7 @@ Spécifie le nombre de taquets de tabulation contenus dans *rgTabStops*. Ce nomb
 *rgTabStops*<br/>
 Pointe vers un tableau d’entiers non signés spécifiant les taquets de tabulation dans les unités du dialogue. Une unité de boîte de dialogue est une distance horizontale ou verticale. Une unité de boîte de dialogue horizontale est égale à un quart de l’unité de largeur de base de la boîte de dialogue actuelle, et 1 unité de boîte de dialogue verticale est égale à un huitième de l’unité de hauteur de base de la boîte de dialogue actuelle. Les unités de dialogue sont calculées en fonction de la hauteur et de la largeur de la police système actuelle. La `GetDialogBaseUnits` fonction Windows retourne les unités de base de la boîte de dialogue en pixels.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si les onglets ont été définis ; Sinon, 0.
 
@@ -1412,7 +1413,7 @@ dans Pointeur vers une chaîne Unicode qui contient le texte d’info-bulle.
 *ttiIcon*\
 dans **Entier** qui spécifie le type d’icône à associer à l’info-bulle. La valeur par défaut est TTI_NONE. Pour plus d’informations, consultez le `ttiIcon` membre de la structure [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1440,7 +1441,7 @@ Appelez cette fonction pour annuler la dernière opération de contrôle de modi
 BOOL Undo();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pour un contrôle d’édition sur une seule ligne, la valeur de retour est toujours différente de zéro. Pour un contrôle d’édition sur plusieurs lignes, la valeur de retour est différente de zéro si l’opération d’annulation réussit, ou 0 si l’opération d’annulation échoue.
 

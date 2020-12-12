@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _filelength, _filelengthi64'
 title: _filelength, _filelengthi64
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 5fea019591fc5a90aab07f0347aa3f02fe0d43f3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 21004112e731827240b66c343b69cc00133aa6ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329281"
 ---
 # <a name="_filelength-_filelengthi64"></a>_filelength, _filelengthi64
 
@@ -62,24 +63,24 @@ __int64 _filelengthi64(
 *FD*<br/>
 Descripteur de fichier cible.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_Filelength** et **_filelengthi64** retourner la longueur du fichier, en octets, du fichier cible associé à *FD*. Si *FD* est un descripteur de fichier non valide, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les deux fonctions retournent-1L pour indiquer une erreur et affecter à **errno** la valeur **EBADF**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_filelength**|\<io.h>|
 |**_filelengthi64**|\<io.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [_chsize](chsize.md).
 

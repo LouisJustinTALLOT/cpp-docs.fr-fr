@@ -1,5 +1,6 @@
 ---
-title: CDialogEx, classe
+description: 'En savoir plus sur : classe Cdialogex,'
+title: Cdialogex,, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CDialogEx
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-ms.openlocfilehash: 717e560035d42957c16168097577d0c8c589e3c7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 27ec0011935871d472734cae6f0d62b402382727
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185243"
 ---
-# <a name="cdialogex-class"></a>CDialogEx, classe
+# <a name="cdialogex-class"></a>Cdialogex,, classe
 
 La classe `CDialogEx` spécifie la couleur d'arrière-plan et l'image d'arrière-plan d'une boîte de dialogue.
 
@@ -49,9 +50,9 @@ class CDialogEx : public CDialog
 
 Pour utiliser la classe `CDialogEx`, dérivez votre classe de boîte de dialogue de la classe `CDialogEx` plutôt que de la classe `CDialog`.
 
-Les images de boîte de dialogue sont stockées dans un fichier de ressources. Le framework supprime automatiquement toute image qui est chargée à partir du fichier de ressources. Pour supprimer de manière programmatique l’image de fond actuelle, appelez la `OnDestroy` méthode [CDialogEx::SetBackgroundImage](#setbackgroundimage) ou implémenter un gestionnaire d’événements. Lorsque vous appelez la méthode [CDialogEx::SetBackgroundImage,](#setbackgroundimage) passez dans un paramètre comme poignée d’image. `HBITMAP` L'objet `CDialogEx` prend possession de l'image et la supprime si l'indicateur `m_bAutoDestroyBmp` a pour valeur `TRUE`.
+Les images de boîte de dialogue sont stockées dans un fichier de ressources. Le framework supprime automatiquement toute image qui est chargée à partir du fichier de ressources. Pour supprimer par programmation l’image d’arrière-plan actuelle, appelez la méthode [cdialogex, :: SetBackgroundImage](#setbackgroundimage) ou implémentez un `OnDestroy` Gestionnaire d’événements. Quand vous appelez la méthode [cdialogex, :: SetBackgroundImage](#setbackgroundimage) , transmettez un `HBITMAP` paramètre comme handle d’image. L'objet `CDialogEx` prend possession de l'image et la supprime si l'indicateur `m_bAutoDestroyBmp` a pour valeur `TRUE`.
 
-Un `CDialogEx` objet peut être parent d’un objet [de classe CMFCPopupMenu.](../../mfc/reference/cmfcpopupmenu-class.md) [L’objet cmFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) `CDialogEx::SetActiveMenu` Class appelle la méthode lorsque l’objet [cmFCPopupMenu Class s’ouvre.](../../mfc/reference/cmfcpopupmenu-class.md) Par la `CDialogEx` suite, l’objet gère n’importe quel événement de menu jusqu’à ce que l’objet [cmFCPopupMenu Classe](../../mfc/reference/cmfcpopupmenu-class.md) soit fermé.
+Un `CDialogEx` objet peut être un parent d’un objet de [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) . L’objet de [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) appelle la `CDialogEx::SetActiveMenu` méthode lorsque l’objet de [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) s’ouvre. Ensuite, l' `CDialogEx` objet gère tout événement de menu jusqu’à la fermeture de l’objet de [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) .
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -67,9 +68,9 @@ Un `CDialogEx` objet peut être parent d’un objet [de classe CMFCPopupMenu.](.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxdialogex.h
+**En-tête :** afxdialogex. h
 
-## <a name="cdialogexcdialogex"></a><a name="cdialogex"></a>CDialogEx::CDialogEx
+## <a name="cdialogexcdialogex"></a><a name="cdialogex"></a> Cdialogex, :: Cdialogex,
 
 Construit un objet `CDialogEx`.
 
@@ -85,23 +86,23 @@ CDialogEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIDTemplate (en)*<br/>
-[dans] L’ID de ressource d’un modèle de boîte de dialogue.
+*nIDTemplate*<br/>
+dans ID de ressource d’un modèle de boîte de dialogue.
 
 *lpszTemplateName*<br/>
-[dans] Le nom de ressource d’un modèle de boîte de dialogue.
+dans Nom de ressource d’un modèle de boîte de dialogue.
 
 *pParent*<br/>
-[dans] Un pointeur à la fenêtre parente. La valeur par défaut est NULL.
+dans Pointeur vers la fenêtre parente. La valeur par défaut est NULL.
 
 *pParentWnd*<br/>
-[dans] Un pointeur à la fenêtre parente. La valeur par défaut est NULL.
+dans Pointeur vers la fenêtre parente. La valeur par défaut est NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor
+## <a name="cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a> Cdialogex, :: SetBackgroundColor
 
 Définit la couleur d'arrière-plan de la boîte de dialogue.
 
@@ -113,15 +114,15 @@ void SetBackgroundColor(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleur*<br/>
-[dans] Une valeur de couleur RGB.
+*color*<br/>
+dans Valeur de couleur RVB.
 
-*bRepaint (en anglais)*<br/>
-[dans] VRAI pour mettre immédiatement à jour l’écran; autrement, FALSE. La valeur par défaut est TRUE.
+*bRepaint*<br/>
+dans TRUE pour mettre immédiatement à jour l’écran ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage
+## <a name="cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a> Cdialogex, :: SetBackgroundImage
 
 Définit l'image d'arrière-plan de la boîte de dialogue.
 
@@ -140,28 +141,28 @@ BOOL SetBackgroundImage(
 
 ### <a name="parameters"></a>Paramètres
 
-*hBitmap (en)*<br/>
-[dans] Une poignée à l’image de fond.
+*hBitmap*<br/>
+dans Handle vers l’image d’arrière-plan.
 
 *uiBmpResId*<br/>
-[dans] L’ID de ressource de l’image de fond.
+dans ID de ressource de l’image d’arrière-plan.
 
 *location*<br/>
-[dans] Une des `CDialogEx::BackgroundLocation` valeurs qui spécifient l’emplacement de l’image. Les valeurs valides comprennent les BACKGR_TILE, les BACKGR_TOPLEFT, les BACKGR_TOPRIGHT, les BACKGR_BOTTOMLEFT et les BACKGR_BOTTOMRIGHT. La valeur par défaut est BACKGR_TILE.
+dans L’une des `CDialogEx::BackgroundLocation` valeurs qui spécifient l’emplacement de l’image. Les valeurs valides sont BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT et BACKGR_BOTTOMRIGHT. La valeur par défaut est BACKGR_TILE.
 
 *bAutoDestroy*<br/>
-[dans] VRAI pour détruire automatiquement l’image de fond; autrement, FALSE.
+dans TRUE pour détruire automatiquement l’image d’arrière-plan ; Sinon, FALSe.
 
-*bRepaint (en anglais)*<br/>
-[dans] VRAI pour redessiner immédiatement la boîte de dialogue; autrement, FALSE.
+*bRepaint*<br/>
+dans TRUE pour redessiner immédiatement la boîte de dialogue ; Sinon, FALSe.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Dans la deuxième méthode surcharge syntaxe, VRAI si la méthode est réussie; autrement, FALSE.
+Dans la deuxième syntaxe de surcharge de méthode, TRUE si la méthode réussit ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-L’image que vous spécifiez n’est pas étirée pour s’adapter à la zone client de la boîte de dialogue.
+L’image que vous spécifiez n’est pas étirée pour s’ajuster à la zone cliente de la boîte de dialogue.
 
 ## <a name="see-also"></a>Voir aussi
 

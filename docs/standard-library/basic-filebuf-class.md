@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe basic_filebuf'
 title: basic_filebuf, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 7dc244cde3d77ad99add1c35716779a55eac9263
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fedda394d2b10d07cda0580197f6763453455c4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219311"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335782"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf, classe
 
@@ -71,7 +72,7 @@ Caractéristiques de l’élément de base de la mémoire tampon de fichier (gé
 Le modèle de classe décrit une mémoire tampon de flux qui contrôle la transmission d’éléments de type *char_t*, dont les caractéristiques sont déterminées par la classe *TR*, vers et à partir d’une séquence d’éléments stockés dans un fichier externe.
 
 > [!NOTE]
-> Les objets de type `basic_filebuf` sont créés avec une mémoire tampon interne de type __char \* __ , quel que soit le `char_type` spécifié par le paramètre de type *char_t*. Cela signifie qu’une chaîne Unicode (contenant des **`wchar_t`** caractères) sera convertie en chaîne ANSI (contenant des **`char`** caractères) avant d’être écrite dans la mémoire tampon interne. Pour stocker des chaînes Unicode dans la mémoire tampon, créez une nouvelle mémoire tampon de type **`wchar_t`** et définissez-la à l’aide de la [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` méthode. Pour obtenir un exemple qui illustre ce comportement, voir ci-dessous.
+> Les objets de type `basic_filebuf` sont créés avec une mémoire tampon interne de type __char \*__ , quel que soit le `char_type` spécifié par le paramètre de type *char_t*. Cela signifie qu’une chaîne Unicode (contenant des **`wchar_t`** caractères) sera convertie en chaîne ANSI (contenant des **`char`** caractères) avant d’être écrite dans la mémoire tampon interne. Pour stocker des chaînes Unicode dans la mémoire tampon, créez une nouvelle mémoire tampon de type **`wchar_t`** et définissez-la à l’aide de la [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` méthode. Pour obtenir un exemple qui illustre ce comportement, voir ci-dessous.
 
 Un objet de classe `basic_filebuf<Char_T, Tr>` stocke un pointeur de fichier qui désigne l' `FILE` objet qui contrôle le flux associé à un fichier ouvert. Il stocke également des pointeurs vers deux facettes de conversion de fichier utilisables par les fonctions membres protégées [overflow](#overflow) et [underflow](#underflow). Pour plus d’informations, consultez [`basic_filebuf::open`](#open).
 
@@ -214,7 +215,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 |Fonction membre|Description|
 |-|-|
-|[plus](#close)|Ferme un fichier.|
+|[close](#close)|Ferme un fichier.|
 |[is_open](#is_open)|Indique si un fichier est ouvert.|
 |[open](#open)|Ouvre un fichier.|
 |[surcharge](#overflow)|Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.|
@@ -233,7 +234,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 **Espace de noms :** std
 
-## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a>basic_filebuf :: basic_filebuf
+## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a> basic_filebuf :: basic_filebuf
 
 Construit un objet de type `basic_filebuf`.
 
@@ -249,7 +250,7 @@ Le premier constructeur stocke un pointeur null dans tous les pointeurs contrôl
 
 Le deuxième constructeur initialise l’objet avec le contenu de *droite*, traité comme une référence rvalue.
 
-## <a name="basic_filebufchar_type"></a><a name="char_type"></a>basic_filebuf :: char_type
+## <a name="basic_filebufchar_type"></a><a name="char_type"></a> basic_filebuf :: char_type
 
 Associe un nom de type au paramètre de modèle `Char_T`.
 
@@ -257,7 +258,7 @@ Associe un nom de type au paramètre de modèle `Char_T`.
 typedef Char_T char_type;
 ```
 
-## <a name="basic_filebufclose"></a><a name="close"></a>basic_filebuf :: Close
+## <a name="basic_filebufclose"></a><a name="close"></a> basic_filebuf :: Close
 
 Ferme un fichier.
 
@@ -265,7 +266,7 @@ Ferme un fichier.
 basic_filebuf<Char_T, Tr> *close();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre retourne un pointeur null si le pointeur de fichier est un pointeur null.
 
@@ -324,7 +325,7 @@ s
 1
 ```
 
-## <a name="basic_filebufint_type"></a><a name="int_type"></a>basic_filebuf :: int_type
+## <a name="basic_filebufint_type"></a><a name="int_type"></a> basic_filebuf :: int_type
 
 Rend ce type dans la `basic_filebuf` portée équivalent au type du même nom dans l' `Tr` étendue.
 
@@ -332,7 +333,7 @@ Rend ce type dans la `basic_filebuf` portée équivalent au type du même nom da
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_filebufis_open"></a><a name="is_open"></a>basic_filebuf :: is_open
+## <a name="basic_filebufis_open"></a><a name="is_open"></a> basic_filebuf :: is_open
 
 Indique si un fichier est ouvert.
 
@@ -340,7 +341,7 @@ Indique si un fichier est ouvert.
 bool is_open() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le pointeur de fichier n’est pas null.
 
@@ -368,7 +369,7 @@ false
 true
 ```
 
-## <a name="basic_filebufoff_type"></a><a name="off_type"></a>basic_filebuf :: off_type
+## <a name="basic_filebufoff_type"></a><a name="off_type"></a> basic_filebuf :: off_type
 
 Rend ce type dans la `basic_filebuf` portée équivalent au type du même nom dans l' `Tr` étendue.
 
@@ -376,7 +377,7 @@ Rend ce type dans la `basic_filebuf` portée équivalent au type du même nom da
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_filebufopen"></a><a name="open"></a>basic_filebuf :: Open
+## <a name="basic_filebufopen"></a><a name="open"></a> basic_filebuf :: Open
 
 Ouvre un fichier.
 
@@ -411,7 +412,7 @@ Une des énumérations dans [`ios_base::openmode`](../standard-library/ios-base-
 *protéger*\
 La protection d’ouverture de fichier par défaut, équivalente au paramètre *shflag* dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la mémoire tampon est déjà ouverte, ou si le pointeur de fichier est un pointeur null, la fonction retourne un pointeur null. Sinon, elle retourne **`this`** .
 
@@ -419,12 +420,12 @@ Si la mémoire tampon est déjà ouverte, ou si le pointeur de fichier est un po
 
 Cette fonction utilise un `FILE *` pour sauvegarder `basic_filebuf` comme si vous aviez appelé [`fopen/wfopen`](../c-runtime-library/reference/fopen-wfopen.md) `(filename, strmode)` . `strmode`est déterminé à partir de `mode & ~(` [`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode) `)` :
 
-- `ios_base::in`devient `"r"` (ouvrir le fichier existant pour la lecture).
+- `ios_base::in` devient `"r"` (ouvrir le fichier existant pour la lecture).
 - [ios_base :: out](../standard-library/ios-base-class.md#fmtflags) ou `ios_base::out | ios_base::trunc` devient `"w"` (tronquer le fichier existant ou créer en écriture).
-- `ios_base::out | app`devient `"a"` (ouvrir le fichier existant pour l’ajout de toutes les écritures).
-- `ios_base::in | ios_base::out`devient `"r+"` (ouvrir le fichier existant pour la lecture et l’écriture).
-- `ios_base::in | ios_base::out | ios_base::trunc`devient `"w+"` (tronquer le fichier existant ou créer pour la lecture et l’écriture).
-- `ios_base::in | ios_base::out | ios_base::app`devient `"a+"` (ouvrir le fichier existant pour la lecture et pour l’ajout de toutes les écritures).
+- `ios_base::out | app` devient `"a"` (ouvrir le fichier existant pour l’ajout de toutes les écritures).
+- `ios_base::in | ios_base::out` devient `"r+"` (ouvrir le fichier existant pour la lecture et l’écriture).
+- `ios_base::in | ios_base::out | ios_base::trunc` devient `"w+"` (tronquer le fichier existant ou créer pour la lecture et l’écriture).
+- `ios_base::in | ios_base::out | ios_base::app` devient `"a+"` (ouvrir le fichier existant pour la lecture et pour l’ajout de toutes les écritures).
 
 Si `mode & ios_base::binary` est différent de zéro, la fonction ajoute `b` à `strmode` pour ouvrir un flux binaire au lieu d’un flux de texte.
 Si `mode & ios_base::ate` est différent de zéro et que le fichier a été ouvert avec succès, l’emplacement actuel dans le flux est positionné à la fin du fichier. En cas d’échec, le fichier est fermé.
@@ -437,7 +438,7 @@ Si le fichier n’a pas pu être ouvert correctement, la valeur null est retourn
 
 [`basic_filebuf::close`](#close)Pour obtenir un exemple qui utilise `open` , consultez.
 
-## <a name="basic_filebufoperator"></a><a name="op_eq"></a>basic_filebuf :: Operator =
+## <a name="basic_filebufoperator"></a><a name="op_eq"></a> basic_filebuf :: Operator =
 
 Affecter le contenu de cet objet de mémoire tampon de flux. Il s’agit d’une assignation de déplacement qui implique une rvalue qui ne laisse pas de copie.
 
@@ -450,7 +451,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 *Oui*\
 Référence rvalue à un objet [basic_filebuf](../standard-library/basic-filebuf-class.md).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne __* This__.
 
@@ -458,7 +459,7 @@ Retourne __* This__.
 
 L’opérateur membre remplace le contenu de l’objet à l’aide du contenu de *droite*, traité comme une référence rvalue. Pour plus d’informations, consultez [déclarateur de référence rvalue :  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="basic_filebufoverflow"></a><a name="overflow"></a>basic_filebuf :: overflow
+## <a name="basic_filebufoverflow"></a><a name="overflow"></a> basic_filebuf :: overflow
 
 Appelé quand un nouveau caractère est inséré dans une mémoire tampon saturée.
 
@@ -471,7 +472,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 *_Meta*\
 Caractère à insérer dans la mémoire tampon ou `traits_type::eof` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction ne peut pas être exécutée correctement, elle retourne `traits_type::eof` . Sinon, elle retourne `traits_type::` [`not_eof`](../standard-library/char-traits-struct.md#not_eof) `(_Meta)` .
 
@@ -485,7 +486,7 @@ Si `_Meta != traits_type::` [`eof`](../standard-library/char-traits-struct.md#eo
 
 - Il peut convertir toute sortie en attente dans la mémoire tampon de sortie, suivie de `ch` , en utilisant la facette `fac` de conversion de fichier pour appeler `fac.out` si nécessaire. Chaque élément produit `ch` de type *char* est écrit dans le flux associé désigné par le pointeur `fp` de fichier comme s’il s’agissait d’appels successifs du formulaire `fputc(ch, fp)` . Si une conversion ou écriture échoue, la fonction échoue.
 
-## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a>basic_filebuf : échec de la :p
+## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a> basic_filebuf : échec de la :p
 
 Tente de remettre un élément dans le flux d’entrée, puis d’en faire l’élément actuel (désigné par le pointeur suivant).
 
@@ -498,7 +499,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 *_Meta*\
 Caractère à insérer dans la mémoire tampon, ou `traits_type::eof`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction ne peut pas être exécutée correctement, elle retourne `traits_type::eof` . Sinon, elle retourne `traits_type::` [`not_eof`](../standard-library/char-traits-struct.md#not_eof) `(_Meta)` .
 
@@ -512,7 +513,7 @@ La fonction membre virtuelle protégée remet un élément dans la mémoire tamp
 
 - Si la fonction peut effectuer un push d’un élément dans le flux d’entrée, elle peut le faire, par exemple en appelant `ungetc` pour un élément de type **`char`** .
 
-## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>basic_filebuf ::p os_type
+## <a name="basic_filebufpos_type"></a><a name="pos_type"></a> basic_filebuf ::p os_type
 
 Rend ce type dans la `basic_filebuf` portée équivalent au type du même nom dans l' `Tr` étendue.
 
@@ -520,7 +521,7 @@ Rend ce type dans la `basic_filebuf` portée équivalent au type du même nom da
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_filebufseekoff"></a><a name="seekoff"></a>basic_filebuf :: seekoff
+## <a name="basic_filebufseekoff"></a><a name="seekoff"></a> basic_filebuf :: seekoff
 
 Tente de modifier les positions actuelles des flux contrôlés.
 
@@ -542,7 +543,7 @@ Point de départ des opérations de décalage. Consultez [seekdir](../standard-l
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la nouvelle position ou une position de flux non valide.
 
@@ -554,7 +555,7 @@ Dans le cas d’un fichier ouvert pour lecture et écriture, les flux d’entré
 
 Si le pointeur de fichier `fp` est un pointeur null, la fonction échoue. Sinon, elle tente de modifier la position du flux en appelant `fseek(fp, _Off, _Way)` . Si cette fonction aboutit et que la position résultante `fposn` peut être déterminée en appelant `fgetpos(fp, &fposn)` , la fonction aboutit. Si la fonction est réussie, elle retourne une valeur de type `pos_type` contenant `fposn` . Sinon, elle retourne une position de flux non valide.
 
-## <a name="basic_filebufseekpos"></a><a name="seekpos"></a>basic_filebuf :: seekpos
+## <a name="basic_filebufseekpos"></a><a name="seekpos"></a> basic_filebuf :: seekpos
 
 Tente de modifier les positions actuelles des flux contrôlés.
 
@@ -572,7 +573,7 @@ Position à rechercher.
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le pointeur de fichier `fp` est un pointeur null, la fonction échoue. Sinon, elle tente de modifier la position du flux en appelant `fsetpos(fp, &fposn)` , où `fposn` est l' `fpos_t` objet stocké dans `pos` . Si la fonction réussit, elle retourne `pos`. Sinon, elle retourne une position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.
 
@@ -584,7 +585,7 @@ Dans le cas d’un fichier ouvert pour lecture et écriture, les flux d’entré
 
 Pour un flux large, si des insertions se sont produites depuis l’ouverture du flux ou depuis le dernier appel à `streampos`, la fonction appelle [overflow](#overflow). Elle insère également toute séquence nécessaire pour restaurer l’état de conversion initial, en utilisant la facette `fac` de conversion de fichier pour appeler `fac.unshift` si nécessaire. Chaque élément produit `byte` de type **`char`** est écrit dans le flux associé désigné par le pointeur `fp` de fichier comme s’il s’agissait d’appels successifs du formulaire `fputc(byte, fp)` . Si l’appel à `fac.unshift` ou à une écriture échoue, la fonction échoue.
 
-## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>basic_filebuf :: setbuf
+## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a> basic_filebuf :: setbuf
 
 Effectue une opération spécifique pour chaque mémoire tampon de flux dérivée.
 
@@ -602,15 +603,15 @@ Pointeur vers une mémoire tampon.
 *saut*\
 Taille de la mémoire tampon.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre protégée retourne un zéro si le pointeur de fichier `fp` est un pointeur null.
 
 ### <a name="remarks"></a>Notes
 
-`setbuf`appelle `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` pour offrir le tableau d' `count` éléments commençant à *_Buffer* sous la forme d’une mémoire tampon pour le flux. Si cette fonction retourne une valeur différente de zéro, la fonction retourne un pointeur null. Dans le cas contraire, elle retourne **`this`** pour signaler la réussite.
+`setbuf` appelle `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` pour offrir le tableau d' `count` éléments commençant à *_Buffer* sous la forme d’une mémoire tampon pour le flux. Si cette fonction retourne une valeur différente de zéro, la fonction retourne un pointeur null. Dans le cas contraire, elle retourne **`this`** pour signaler la réussite.
 
-## <a name="basic_filebufswap"></a><a name="swap"></a>basic_filebuf :: swap
+## <a name="basic_filebufswap"></a><a name="swap"></a> basic_filebuf :: swap
 
 Échange le contenu de ce `basic_filebuf` avec le contenu du `basic_filebuf` fourni.
 
@@ -623,7 +624,7 @@ void swap(basic_filebuf& right);
 *Oui*\
 Une référence lvalue à une autre `basic_filebuf` .
 
-## <a name="basic_filebufsync"></a><a name="sync"></a>basic_filebuf :: Sync
+## <a name="basic_filebufsync"></a><a name="sync"></a> basic_filebuf :: Sync
 
 Tente de synchroniser les flux contrôlés avec n’importe quel flux externe associé.
 
@@ -631,11 +632,11 @@ Tente de synchroniser les flux contrôlés avec n’importe quel flux externe as
 virtual int sync();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne zéro si le pointeur de fichier `fp` est un pointeur null. Dans le cas contraire, elle retourne zéro uniquement si les appels à la fois au [dépassement de capacité](#overflow) et `fflush(fp)` le vidage de la sortie en attente dans le flux.
 
-## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a>basic_filebuf :: traits_type
+## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a> basic_filebuf :: traits_type
 
 Associe un nom de type au paramètre de modèle `Tr`.
 
@@ -643,7 +644,7 @@ Associe un nom de type au paramètre de modèle `Tr`.
 typedef Tr traits_type;
 ```
 
-## <a name="basic_filebufunderflow"></a><a name="underflow"></a>basic_filebuf :: dépassement de capacité négatif
+## <a name="basic_filebufunderflow"></a><a name="underflow"></a> basic_filebuf :: dépassement de capacité négatif
 
 Extrait l’élément actuel du flux d’entrée.
 
@@ -651,7 +652,7 @@ Extrait l’élément actuel du flux d’entrée.
 virtual int_type underflow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction ne peut pas être exécutée correctement, elle retourne `traits_type::` [`eof`](../standard-library/char-traits-struct.md#eof) . Sinon, elle retourne `ch` , comme décrit dans la section Notes.
 

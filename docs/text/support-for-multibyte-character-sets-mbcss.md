@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : prise en charge des jeux de caractères multioctets (MBCS)'
 title: Prise en charge des jeux de caractères multioctets (MBCS)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: 0b43168ec4331e99dea7e939b097674cc880804e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ab6af7aa77942b39785faf68ea6a530867abff8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335764"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Prise en charge des jeux de caractères multioctets (MBCS)
 
@@ -28,11 +29,11 @@ Dans le cadre de MBCS, les caractères sont codés sur 1 ou 2 octets. Dans les 
 
 Prenez en compte tous les éléments suivants dans votre programmation MBCS.
 
-Les caractères MBCS dans l’environnement que les caractères MBCS peuvent apparaître dans des chaînes telles que les noms de fichiers et de répertoire.
+Les caractères MBCS dans les caractères MBCS de l’environnement peuvent apparaître dans des chaînes telles que des noms de fichiers et de répertoires.
 
 ### <a name="editing-operations"></a>Opérations de modification
 
-Les opérations de modification dans les applications MBCS doivent porter sur des caractères, et non des octets. Le caret ne doit pas diviser un personnage, la clé **Droite Flèche** devrait se déplacer à droite un personnage, et ainsi de suite. **Supprimer** doit supprimer un personnage; **Annuler** devrait le réinsérer.
+Les opérations de modification dans les applications MBCS doivent porter sur des caractères, et non des octets. Le signe insertion ne doit pas fractionner un caractère, la touche **droite** doit se déplacer d’un caractère vers la droite, et ainsi de suite. **Delete** doit supprimer un caractère ; L' **annulation** doit être réinsérée.
 
 ### <a name="string-handling"></a>Gestion des chaînes
 
@@ -40,18 +41,18 @@ Dans une application qui utilise MBCS, la gestion des chaînes pose des problèm
 
 ### <a name="run-time-library-support"></a>Prise en charge de la bibliothèque Runtime
 
-La bibliothèque Runtime C et MFC prennent en charge la programmation sur un octet, MBCS et Unicode. Les chaînes à un seul `str` byte sont traitées avec la famille des fonctions `_mbs` de temps d’exécution, les `wcs` chaînes MBCS sont traitées avec des fonctions correspondantes, et les chaînes Unicode sont traitées avec des fonctions correspondantes. Les implémentations des fonctions membres de la classe MFC utilisent des fonctions runtime portables qui sont mappées, quand les circonstances sont favorables, à la famille de fonctions `str` normale, aux fonctions MBCS ou aux fonctions Unicode, comme décrit dans « Portabilité MBCS/Unicode ».
+La bibliothèque Runtime C et MFC prennent en charge la programmation sur un octet, MBCS et Unicode. Les chaînes sur un octet sont traitées avec la `str` famille de fonctions runtime, les chaînes MBCS sont traitées avec les `_mbs` fonctions correspondantes et les chaînes Unicode sont traitées avec les fonctions correspondantes `wcs` . Les implémentations des fonctions membres de la classe MFC utilisent des fonctions runtime portables qui sont mappées, quand les circonstances sont favorables, à la famille de fonctions `str` normale, aux fonctions MBCS ou aux fonctions Unicode, comme décrit dans « Portabilité MBCS/Unicode ».
 
 ### <a name="mbcsunicode-portability"></a>Portabilité MBCS/Unicode
 
-À l’aide du fichier d’en-tête tchar.h, vous pouvez créer des applications mono-byte, MBCS et Unicode à partir des mêmes sources. Tchar.h définit les macros préfixées avec *_tcs* `str`, `_mbs`qui `wcs` cartographient, ou fonctions, le cas échéant. Pour construire MBCS, `_MBCS`définissez le symbole . Pour construire Unicode, `_UNICODE`définissez le symbole . Par défaut, `_UNICODE` est défini pour les applications MFC. Pour plus d’informations, voir [Generic-Text Mappings in tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+À l’aide du fichier d’en-tête Tchar. h, vous pouvez générer des applications codées sur un octet, MBCS et Unicode à partir des mêmes sources. Tchar. h définit des macros préfixées avec *_tcs* , qui mappent aux `str` fonctions, `_mbs` ou `wcs` , selon le cas. Pour générer le MBCS, définissez le symbole `_MBCS` . Pour générer du code Unicode, définissez le symbole `_UNICODE` . Par défaut, `_UNICODE` est défini pour les applications MFC. Pour plus d’informations, consultez [mappages de texte générique dans Tchar. h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
-> Le comportement n’est pas `_UNICODE` défini `_MBCS`si vous définissez les deux et .
+> Le comportement n’est pas défini si vous définissez à la fois `_UNICODE` et `_MBCS` .
 
 Les fichiers d'en-tête Mbctype.h et Mbstring.h définissent les fonctions et macros propres à MBCS, dont vous pouvez avoir besoin dans certains cas. Par exemple, `_ismbblead` vous indique si un octet spécifique dans une chaîne est un octet de tête.
 
-Pour la portabilité internationale, codez votre programme avec [Unicode](../text/support-for-unicode.md) ou ensembles de caractères multioctets (MBCS).
+Pour la portabilité internationale, codez votre programme avec des jeux de caractères [Unicode](../text/support-for-unicode.md) ou multioctets (MBCS).
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 

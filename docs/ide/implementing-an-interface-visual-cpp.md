@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : implémenter une interface'
 title: Implémenter une interface
 ms.date: 11/12/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interfaces, implementing
 - implement interface wizard [C++]
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-ms.openlocfilehash: bb1db35e269ef884f3ebdf4564d8f0a3e579db50
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 202471577ec72f4cc28fa5cdceb3566d60e04653
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313214"
 ---
 # <a name="implement-an-interface"></a>Implémenter une interface
 
@@ -50,7 +51,7 @@ Si vous ajoutez une nouvelle interface, vous devez l’ajouter manuellement au f
 
 Cet Assistant implémente une interface pour un objet COM. Les implémentations de nombreuses interfaces sont incluses dans les bibliothèques COM disponibles avec Visual Studio et Windows. Une implémentation d’interface est associée à un objet quand une instance de cet objet est créée. Elle fournit également les services qu’offre l’objet.
 
-Pour en savoir plus sur les interfaces et les implémentations, consultez [Interfaces et implémentations d’interface](/windows/win32/com/interfaces-and-interface-implementations) dans le SDK Windows.
+Pour une description des interfaces et des implémentations, consultez [interfaces et implémentations d’interface](/windows/win32/com/interfaces-and-interface-implementations) dans le SDK Windows.
 
 - **Implémenter une interface à partir de**
 
@@ -59,14 +60,14 @@ Pour en savoir plus sur les interfaces et les implémentations, consultez [Inter
   |Option|Description|
   |------------|-----------------|
   |**Projet**|La bibliothèque de types fait partie du projet.|
-  |**Registry**|La bibliothèque de types est inscrite dans le système. Les bibliothèques de types inscrites sont répertoriées dans **Bibliothèques de types disponibles**.|
-  |**Fichier**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais est contenue dans un fichier. Spécifiez l’emplacement du fichier dans **Emplacement**.|
+  |**Registre**|La bibliothèque de types est inscrite dans le système. Les bibliothèques de types inscrites sont répertoriées dans **Bibliothèques de types disponibles**.|
+  |**File**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais est contenue dans un fichier. Spécifiez l’emplacement du fichier dans **Emplacement**.|
 
 - **Bibliothèques de types disponibles**
 
   Affiche les bibliothèques de types disponibles contenant les définitions d’interface que vous pouvez implémenter. Quand vous choisissez **Fichier** sous **Implémenter une interface à partir de**, cette zone n’est pas modifiable.
 
-- **Emplacement**
+- **Lieu**
 
   Affiche l’emplacement de la bibliothèque de types actuellement sélectionnée dans la liste **Bibliothèques de types disponibles**. Si vous avez sélectionné **Fichier** sous **Implémenter une interface à partir de**, sélectionnez le bouton de sélection pour rechercher un fichier contenant la bibliothèque de types à utiliser.
 

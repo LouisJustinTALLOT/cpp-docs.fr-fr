@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : espace de noms d’accès concurrentiel'
 title: concurrency, espace de noms
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: f710ead679484c41b006566a711a03ba153201ec
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c17e058c6666f944ea9f34b90995e9b9d343b40e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335814"
 ---
 # <a name="concurrency-namespace"></a>concurrency, espace de noms
 
@@ -223,12 +224,12 @@ namespace concurrency;
 |Nom|Description|
 |----------|-----------------|
 |[opérateur ! =](concurrency-namespace-operators.md#operator_neq)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur n'est pas égal à l'objet `concurrent_vector` situé à droite.|
-|[&&d’opérateur](concurrency-namespace-operators.md#operator_amp_amp)|Surchargé. Crée une tâche qui s’effectue correctement lorsque les deux tâches fournies comme arguments se terminent correctement.|
-|[&#124;&#124;d’opérateur](concurrency-namespace-operators.md#operator_lor)|Surchargé. Crée une tâche qui s’effectue correctement quand l’une des tâches fournies en tant qu’arguments s’effectue correctement.|
-|[<d’opérateur](concurrency-namespace-operators.md#operator_lt)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est inférieur à l'objet `concurrent_vector` situé à droite.|
+|[&&d’opérateur ](concurrency-namespace-operators.md#operator_amp_amp)|Surchargé. Crée une tâche qui s’effectue correctement lorsque les deux tâches fournies comme arguments se terminent correctement.|
+|[&#124;&#124;d’opérateur ](concurrency-namespace-operators.md#operator_lor)|Surchargé. Crée une tâche qui s’effectue correctement quand l’une des tâches fournies en tant qu’arguments s’effectue correctement.|
+|[<d’opérateur ](concurrency-namespace-operators.md#operator_lt)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est inférieur à l'objet `concurrent_vector` situé à droite.|
 |[<opérateur =](concurrency-namespace-operators.md#operator_lt_eq)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est inférieur ou égal à l'objet `concurrent_vector` situé à droite.|
 |[opérateur = =](concurrency-namespace-operators.md#operator_eq_eq)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est égal à l'objet `concurrent_vector` situé à droite.|
-|[>d’opérateur](concurrency-namespace-operators.md#operator_gt)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est supérieur à l'objet `concurrent_vector` situé à droite.|
+|[>d’opérateur ](concurrency-namespace-operators.md#operator_gt)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est supérieur à l'objet `concurrent_vector` situé à droite.|
 |[>opérateur =](concurrency-namespace-operators.md#operator_lt_eq)|Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est supérieur ou égal à l'objet `concurrent_vector` situé à droite.|
 
 ### <a name="constants"></a>Constantes

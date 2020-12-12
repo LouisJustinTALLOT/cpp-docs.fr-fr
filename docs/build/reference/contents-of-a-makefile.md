@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : contenu d’un Makefile'
 title: Contenu d'un makefile
 ms.date: 11/04/2016
 helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 208b2dcf6c170c6c4fdc814a299a2657adc364a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: db2ad308a45264a176daf5fb54c974153d314a3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169914"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196983"
 ---
 # <a name="contents-of-a-makefile"></a>Contenu d'un makefile
 
@@ -24,7 +25,7 @@ Un makefile contient les éléments suivants :
 
 - [Règles d’inférence](inference-rules.md)
 
-- [Directives point](dot-directives.md)
+- [Directives précédées d’un point](dot-directives.md)
 
 - [Directives de prétraitement](makefile-preprocessing.md)
 
@@ -36,4 +37,4 @@ Pour obtenir un exemple, consultez [exemple de Makefile](sample-makefile.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[NMAKE, référence](nmake-reference.md)
+[Référence NMAKE](nmake-reference.md)

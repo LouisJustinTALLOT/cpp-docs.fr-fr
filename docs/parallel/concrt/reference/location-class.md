@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Location'
 title: location, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: 848be3131e23ff53f2dec16364b132ee7c218195
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ae6ce0ac58d504f1fb99f5c38db04bb402dc31c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335799"
 ---
 # <a name="location-class"></a>location, classe
 
@@ -61,7 +62,7 @@ class location;
 
 **Espace de noms :** concurrence
 
-## <a name="location"></a><a name="dtor"></a>emplacement ~
+## <a name="location"></a><a name="dtor"></a> emplacement ~
 
 Détruit un objet `location` .
 
@@ -69,7 +70,7 @@ Détruit un objet `location` .
 ~location();
 ```
 
-## <a name="current"></a><a name="current"></a>actif
+## <a name="current"></a><a name="current"></a> actif
 
 Retourne un `location` objet représentant l’emplacement le plus spécifique que le thread appelant exécute.
 
@@ -77,11 +78,11 @@ Retourne un `location` objet représentant l’emplacement le plus spécifique q
 static location __cdecl current();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Emplacement représentant l’emplacement le plus spécifique que le thread appelant exécute.
 
-## <a name="from_numa_node"></a><a name="from_numa_node"></a>from_numa_node
+## <a name="from_numa_node"></a><a name="from_numa_node"></a> from_numa_node
 
 Retourne un `location` objet qui représente un nœud NUMA donné.
 
@@ -94,11 +95,11 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 *_NumaNodeNumber*<br/>
 Numéro de nœud NUMA pour lequel créer un emplacement.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Emplacement représentant le nœud NUMA spécifié par le `_NumaNodeNumber` paramètre.
 
-## <a name="location"></a><a name="ctor"></a>emplacement
+## <a name="location"></a><a name="ctor"></a> emplacement
 
 Construit un objet `location`.
 
@@ -132,7 +133,7 @@ Facultatif Pointeur de liaison.
 
 Un emplacement construit par défaut représente le système dans son ensemble.
 
-## <a name="operator"></a><a name="operator_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="operator_neq"></a> opérateur ! =
 
 Détermine si deux `location` objets représentent un emplacement différent.
 
@@ -145,11 +146,11 @@ bool operator!= (const location& _Rhs) const;
 *_Rhs*<br/>
 Opérande `location` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les deux emplacements sont différents ; **`false`** sinon,.
 
-## <a name="operator"></a><a name="operator_eq"></a>opérateur =
+## <a name="operator"></a><a name="operator_eq"></a> opérateur =
 
 Assigne le contenu d’un autre `location` objet à celui-ci.
 
@@ -162,9 +163,9 @@ location& operator= (const location& _Rhs);
 *_Rhs*<br/>
 Objet `location` source.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> opérateur = =
 
 Détermine si deux `location` objets représentent le même emplacement.
 
@@ -177,7 +178,7 @@ bool operator== (const location& _Rhs) const;
 *_Rhs*<br/>
 Opérande `location` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les deux emplacements sont identiques, **`false`** sinon.
 

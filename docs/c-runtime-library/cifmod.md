@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _CIfmod'
 title: _CIfmod
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: bcfbabd260e17ac788ca3a3b83301b5f35be07eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: db5ebb6178b468d9f131c374c8ef128a90664d17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917444"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246979"
 ---
 # <a name="_cifmod"></a>_CIfmod
 
@@ -42,7 +43,7 @@ Calcule le reste à virgule flottante des deux valeurs supérieures de la pile.
 void __cdecl _CIfmod();
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Cette version de la fonction `fmod` a une convention d’appel spécialisée que le compilateur comprend. Elle accélère l’exécution, car elle empêche la génération de copies et facilite l’allocation de registres.
 
@@ -56,5 +57,5 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)

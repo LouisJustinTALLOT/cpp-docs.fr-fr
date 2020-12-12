@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CArchiveException'
 title: CArchiveException, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-ms.openlocfilehash: 68f64cfd7dc96da04fcc0945a6b996eab4101487
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ce8355583e0a7a3fd8a382873a0e4b2a1ea91b83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185399"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException, classe
 
@@ -48,7 +49,7 @@ class CArchiveException : public CException
 
 La `CArchiveException` classe comprend un membre de données public qui indique la cause de l’exception.
 
-`CArchiveException`les objets sont construits et levés à l’intérieur des fonctions membres [CArchive](../../mfc/reference/carchive-class.md) . Vous pouvez accéder à ces objets dans l’étendue d’une expression **catch** . Le code de cause est indépendant du système d’exploitation. Pour plus d’informations sur le traitement des exceptions, consultez [gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md).
+`CArchiveException` les objets sont construits et levés à l’intérieur des fonctions membres [CArchive](../../mfc/reference/carchive-class.md) . Vous pouvez accéder à ces objets dans l’étendue d’une expression **catch** . Le code de cause est indépendant du système d’exploitation. Pour plus d’informations sur le traitement des exceptions, consultez [gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -62,7 +63,7 @@ La `CArchiveException` classe comprend un membre de données public qui indique 
 
 **En-tête :** AFX. h
 
-## <a name="carchiveexceptioncarchiveexception"></a><a name="carchiveexception"></a>CArchiveException::CArchiveException
+## <a name="carchiveexceptioncarchiveexception"></a><a name="carchiveexception"></a> CArchiveException::CArchiveException
 
 Construit un `CArchiveException` objet, en stockant la valeur de *cause* dans l’objet.
 
@@ -74,7 +75,7 @@ CArchiveException(
 
 ### <a name="parameters"></a>Paramètres
 
-*bloquer*<br/>
+*cause*<br/>
 Variable de type énuméré qui indique la raison de l’exception. Pour obtenir la liste des énumérateurs, consultez le [m_cause](#m_cause) membre de données.
 
 *lpszArchiveName*<br/>
@@ -86,7 +87,7 @@ Vous pouvez créer un `CArchiveException` objet sur le tas et le lever vous-mêm
 
 N’utilisez pas ce constructeur directement. au lieu de cela, appelez la fonction globale `AfxThrowArchiveException` .
 
-## <a name="carchiveexceptionm_cause"></a><a name="m_cause"></a>CArchiveException :: m_cause
+## <a name="carchiveexceptionm_cause"></a><a name="m_cause"></a> CArchiveException :: m_cause
 
 Spécifie la cause de l’exception.
 
@@ -98,21 +99,21 @@ int m_cause;
 
 Ce membre de données est une variable publique de type **`int`** . Ses valeurs sont définies par un `CArchiveException` type énuméré. Voici les énumérateurs et leurs significations :
 
-- `CArchiveException::none`Aucune erreur ne s’est produite.
+- `CArchiveException::none` Aucune erreur ne s’est produite.
 
-- `CArchiveException::genericException`Erreur non spécifiée.
+- `CArchiveException::genericException` Erreur non spécifiée.
 
-- `CArchiveException::readOnly`Tentative d’écriture dans une archive ouverte pour le chargement.
+- `CArchiveException::readOnly` Tentative d’écriture dans une archive ouverte pour le chargement.
 
-- `CArchiveException::endOfFile`Fin de fichier atteinte lors de la lecture d’un objet.
+- `CArchiveException::endOfFile` Fin de fichier atteinte lors de la lecture d’un objet.
 
-- `CArchiveException::writeOnly`Tentative de lecture à partir d’une archive ouverte pour le stockage.
+- `CArchiveException::writeOnly` Tentative de lecture à partir d’une archive ouverte pour le stockage.
 
-- `CArchiveException::badIndex`Format de fichier non valide.
+- `CArchiveException::badIndex` Format de fichier non valide.
 
-- `CArchiveException::badClass`Tentative de lecture d’un objet dans un objet de type incorrect.
+- `CArchiveException::badClass` Tentative de lecture d’un objet dans un objet de type incorrect.
 
-- `CArchiveException::badSchema`Tentative de lecture d’un objet avec une version différente de la classe.
+- `CArchiveException::badSchema` Tentative de lecture d’un objet avec une version différente de la classe.
 
     > [!NOTE]
     >  Ces énumérateurs de cause `CArchiveException` sont distincts des énumérateurs de cause `CFileException`.
@@ -120,7 +121,7 @@ Ce membre de données est une variable publique de type **`int`** . Ses valeurs 
     > [!NOTE]
     > `CArchiveException::generic` est déconseillé. Utilisez `genericException` à la place. Si le **générique** est utilisé dans une application et généré avec/CLR, il y aura des erreurs de syntaxe qui ne sont pas faciles à déchiffrer.
 
-## <a name="carchiveexceptionm_strfilename"></a><a name="m_strfilename"></a>CArchiveException :: m_strFileName
+## <a name="carchiveexceptionm_strfilename"></a><a name="m_strfilename"></a> CArchiveException :: m_strFileName
 
 Spécifie le nom du fichier pour cette condition d’exception.
 

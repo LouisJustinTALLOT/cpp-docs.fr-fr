@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : convertir en littéral de chaîne brute'
 title: Convertir en littéral de chaîne brut
 ms.date: 11/16/2016
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
-ms.openlocfilehash: 5636e00bfe8655d84fb2e4b64e0391324ab35d7d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f83cb955bc2b30957306e1467a2d353377d5f33a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171812"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185555"
 ---
 # <a name="convert-to-raw-string-literal"></a>Convertir en littéral de chaîne brut
 
@@ -17,7 +18,7 @@ ms.locfileid: "80171812"
 
 **Pourquoi :** vous pouvez doubler la séquence d’échappement, mais cela aboutit souvent à des chaînes illisibles et qui prêtent à confusion.  L’utilisation de littéraux de chaînes brutes facilite la lecture des chaînes.
 
-**Comment :**
+**Utilisation**
 
 1. placez le curseur texte ou de la souris sur la chaîne faisant l’objet d’une séquence d’échappement à convertir.
 
@@ -25,7 +26,7 @@ ms.locfileid: "80171812"
 
 1. Effectuez ensuite l'une des opérations suivantes :
    * **Clavier**
-     * Appuyez sur **Ctrl+.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Convertir en littéral de chaîne brute** dans le menu contextuel.
+     * Appuyez sur **CTRL +.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Convertir en littéral de chaîne brute** dans le menu contextuel.
    * **Souris**
      * Cliquez avec le bouton droit sur le code et choisissez le menu **Actions rapides et refactorisations**, puis sélectionnez **Convertir en littéral de chaîne brute** dans le menu contextuel.
      * Cliquez sur l’icône ![Ampoule](images/bulb.png) qui apparaît dans la marge de gauche et sélectionnez **Convertir en littéral de chaîne brute** dans le menu contextuel.

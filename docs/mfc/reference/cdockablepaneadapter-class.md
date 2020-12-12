@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDockablePaneAdapter'
 title: CDockablePaneAdapter, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-ms.openlocfilehash: 2fbaf99e4cc9bcbecf1a94012713b34e986f7ecb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a46ef15d35194203d6e5c035555de0d80b63c72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185035"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter, classe
 
@@ -37,50 +38,50 @@ class CDockablePaneAdapter : public CDockablePane
 
 |Nom|Description|
 |----------|-----------------|
-|[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Retourne la fenêtre incluse dans un wrapper.|
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Overrides [CDockablePane::LoadState](cdockablepane-class.md#loadstate).)|
-|[CDockablePaneAdapter::SaveState](#savestate)|(Overrides [CDockablePane::SaveState](cdockablepane-class.md).)|
+|[CDockablePaneAdapter :: GetWrappedWnd](#getwrappedwnd)|Retourne la fenêtre incluse dans un wrapper.|
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Substitue [CDockablePane :: LoadState](cdockablepane-class.md#loadstate).)|
+|[CDockablePaneAdapter::SaveState](#savestate)|(Substitue [CDockablePane :: saveste](cdockablepane-class.md).)|
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||
 
 ## <a name="remarks"></a>Notes
 
-Habituellement, le cadre instantané des objets de cette classe lorsque vous utilisez le [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) ou [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) méthodes.
+En général, le Framework instancie les objets de cette classe lorsque vous utilisez les méthodes [CMFCBaseTabCtrl :: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) ou [CMFCBaseTabCtrl :: InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) .
 
-Si vous voulez personnaliser `CDockablePaneAdapter` le comportement, il suffit d’en tirer une nouvelle classe et de définir les informations de classe runtime à une fenêtre tabbed en utilisant [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
+Si vous souhaitez personnaliser le `CDockablePaneAdapter` comportement, il vous suffit de dériver une nouvelle classe de celle-ci et de définir les informations de classe Runtime dans une fenêtre à onglets à l’aide de [CMFCBaseTabCtrl :: SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CObject](../../mfc/reference/cobject-class.md)\
-&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
+└ &nbsp; [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp; [CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp; [CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp; [CPane](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp; [CDockablePane](../../mfc/reference/cdockablepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp; [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxDockablePaneAdapter.h
+**En-tête :** afxDockablePaneAdapter. h
 
-## <a name="cdockablepaneadaptergetwrappedwnd"></a><a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd
+## <a name="cdockablepaneadaptergetwrappedwnd"></a><a name="getwrappedwnd"></a> CDockablePaneAdapter :: GetWrappedWnd
 
-Retourne la fenêtre sous-jacente pour l’adaptateur de vitres amarrée.
+Retourne la fenêtre sous-jacente de l’adaptateur de volet Ancrable.
 
 ```
 virtual CWnd* GetWrappedWnd() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Un pointeur à la fenêtre enveloppée.
+Pointeur vers la fenêtre encapsulée.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette fonction pour accéder à la fenêtre enveloppée.
+Utilisez cette fonction pour accéder à la fenêtre encapsulée.
 
-## <a name="cdockablepaneadapterloadstate"></a><a name="loadstate"></a>CDockablePaneAdapter::LoadState
+## <a name="cdockablepaneadapterloadstate"></a><a name="loadstate"></a> CDockablePaneAdapter :: LoadState
 
-Charge l’état de la vitre du registre.
+Charge l’état du volet à partir du Registre.
 
 ```
 virtual BOOL LoadState(
@@ -92,21 +93,21 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Paramètres
 
 *lpszProfileName*<br/>
-[dans] Le nom du profil.
+dans Nom du profil.
 
 *nIndex*<br/>
-[dans] L’indice de profil.
+dans Index du profil.
 
 *uiID*<br/>
-[dans] L’ID de la vitre.
+dans ID du volet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockablepaneadaptersavestate"></a><a name="savestate"></a>CDockablePaneAdapter::SaveState
+## <a name="cdockablepaneadaptersavestate"></a><a name="savestate"></a> CDockablePaneAdapter :: saveste
 
-Enregistre l’état de la vitre au registre.
+Enregistre l’état du volet dans le registre.
 
 ```
 virtual BOOL SaveState(
@@ -118,21 +119,21 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Paramètres
 
 *lpszProfileName*<br/>
-[dans] Le nom du profil.
+dans Nom du profil.
 
 *nIndex*<br/>
-[dans] L’index de profil (par défaut à l’ID de contrôle de la fenêtre).
+dans Index de profil (valeur par défaut : l’ID de contrôle de la fenêtre).
 
 *uiID*<br/>
-[dans] L’ID de la vitre.
+dans ID du volet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cdockablepaneadaptersetwrappedwnd"></a><a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd
+## <a name="cdockablepaneadaptersetwrappedwnd"></a><a name="setwrappedwnd"></a> CDockablePaneAdapter :: SetWrappedWnd
 
-Définit la fenêtre sous-jacente pour l’adaptateur de vitres amarrée.
+Définit la fenêtre sous-jacente de l’adaptateur de volet Ancrable.
 
 ```
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -140,10 +141,10 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*Pwnd*<br/>
-[dans] Un pointeur à la fenêtre pour l’adaptateur de vitre à envelopper.
+*pWnd*<br/>
+dans Pointeur vers la fenêtre de l’adaptateur de volet à encapsuler.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 

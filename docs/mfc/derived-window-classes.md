@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes de fenêtres dérivées'
 title: Classes de fenêtre dérivées
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-ms.openlocfilehash: c84284b765e740fa0a13972e9902e7737e15bbab
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9219267b5351f972257d9770f8e8b38039b85788
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335898"
 ---
 # <a name="derived-window-classes"></a>Classes de fenêtre dérivées
 
@@ -46,7 +47,7 @@ Les boîtes de dialogue sont créées à l’aide de la `CWnd` classe dérivée 
 *Formulaires*<br/>
 Les vues de formulaire basées sur des ressources de modèle de boîte de dialogue, telles que des boîtes de dialogue, sont créées à l’aide des classes [CFormView](reference/cformview-class.md), [CRecordView](reference/crecordview-class.md)ou [CDaoRecordView](reference/cdaorecordview-class.md).
 
-*Commandes*<br/>
+*Contrôles*<br/>
 Les contrôles tels que les boutons, les zones de liste et les zones de liste modifiable sont créés à l’aide d’autres classes dérivées de `CWnd` . Consultez les [rubriques relatives au contrôle](controls-mfc.md).
 
 *Barres de contrôles*<br/>
@@ -56,7 +57,7 @@ Fenêtres enfants qui contiennent des contrôles. Les exemples incluent des barr
 
 Reportez-vous au [graphique hiérarchique MFC](hierarchy-chart.md) dans la *référence MFC*. Les vues sont expliquées dans l' [architecture document/vue](document-view-architecture.md). Les boîtes de dialogue sont expliquées dans les [boîtes de dialogue](dialog-boxes.md).
 
-## <a name="creating-your-own-special-purpose-window-classes"></a>Création de vos propres classes de fenêtre à usage spécial
+## <a name="creating-your-own-special-purpose-window-classes"></a>Création de vos propres classes de fenêtre Special-Purpose
 
 En plus des classes de fenêtres fournies par la bibliothèque de classes, vous pouvez avoir besoin de fenêtres enfants spécialisées. Pour créer une telle fenêtre, créez votre propre classe dérivée de [CWnd](reference/cwnd-class.md)et faites-en une fenêtre enfant d’un frame ou d’une vue. N’oubliez pas que l’infrastructure gère l’étendue de la zone cliente d’une fenêtre frame de document. La majeure partie de la zone cliente est gérée par une vue, mais d’autres fenêtres, telles que les barres de contrôle ou vos propres fenêtres personnalisées, peuvent partager l’espace avec la vue. Vous devrez peut-être interagir avec les mécanismes des classes [CView](reference/cview-class.md) et [CControlBar](reference/ccontrolbar-class.md) pour positionner les fenêtres enfants dans la zone cliente d’une fenêtre frame.
 
@@ -64,4 +65,4 @@ La [création de fenêtres](creating-windows.md) explique comment créer des obj
 
 ## <a name="see-also"></a>Voir aussi
 
-[Objets fenêtres](window-objects.md)
+[Objets de fenêtre](window-objects.md)

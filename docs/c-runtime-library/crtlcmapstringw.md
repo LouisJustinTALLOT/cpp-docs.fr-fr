@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __crtLCMapStringW'
 title: __crtLCMapStringW
 ms.date: 11/04/2016
 api_name:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: f239d95c0dfd50f765b6f23d7874f01dce085054
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 57b3f7e961de94d8a3dbd045a1fa1d74681cbfdc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246747"
 ---
 # <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
@@ -65,7 +66,7 @@ Pointeur long désignant une mémoire tampon dans laquelle la fonction stocke la
 *cchDest*<br/>
 Taille en caractères de la mémoire tampon pointée par `lpDestStr`.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si la valeur de `cchDest` est différente de zéro, le nombre de caractères (ou d’octets si `LCMAP_SORTKEY` est spécifié) écrits dans la mémoire tampon indique que l’opération a réussi. Ce nombre inclut l’espace destiné à accueillir un terminateur null.
 

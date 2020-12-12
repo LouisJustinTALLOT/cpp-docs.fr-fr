@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajouter une propriété'
 title: Ajouter une propriété
 ms.date: 11/09/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 63985643973782ea2b4240a338d66cb5cc2195dc
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: bc5a93d42e8694d000da11cd667d48812a075f27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208084"
 ---
 # <a name="add-a-property"></a>Ajouter une propriété
 
@@ -44,7 +45,7 @@ Les méthodes `Get` et `Put` de la propriété sont affichées sous la forme de 
 
 - Pour les dispinterfaces MFC, si vous sélectionnez **Variable membre** comme type d’implémentation, une méthode et une variable sont ajoutées à la classe qui l’implémente. Si vous sélectionnez **Méthodes Get/Set** comme type d’implémentation, deux méthodes sont ajoutées à la classe qui l’implémente.
 
-## <a name="in-this-section"></a>Contenu de cette section
+## <a name="in-this-section"></a>Dans cette section
 
 - [Noms, Assistant Ajout de propriété](#names-add-property-wizard)
 - [Attributs IDL, Assistant Ajout de propriété](#idl-attributes-add-property-wizard)
@@ -135,7 +136,7 @@ Utilisez cet Assistant pour ajouter une propriété à une interface.
 
   Ajoute le paramètre spécifié dans les zones **Nom du paramètre** et **Type du paramètre** à la zone **Liste de paramètres**. Sélectionnez **Ajouter** pour ajouter un paramètre à la liste.
 
-- **Remove**
+- **Supprimer**
 
   Supprime le paramètre que vous sélectionnez dans la zone **Liste de paramètres**.
 
@@ -157,7 +158,7 @@ Utilisez cette page de l’Assistant Ajout de propriété pour spécifier tous l
 
 - `helpstring`
 
-  Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique. Par défaut, il est défini sur le nom de la **`property`** &nbsp; *propriété &nbsp; *. Consultez [helpstring](/windows/win32/Midl/helpstring) dans les *Informations de référence MIDL*.
+  Spécifie une chaîne de caractères qui est utilisée pour décrire l’élément auquel elle s’applique. Par défaut, il est défini sur le nom de la **`property`** &nbsp; *propriété &nbsp;*. Consultez [helpstring](/windows/win32/Midl/helpstring) dans les *Informations de référence MIDL*.
 
 ### <a name="other-options"></a>Autres options
 

@@ -1,16 +1,17 @@
 ---
-title: Avantages de l’architecture document-vue
+description: En savoir plus sur les avantages de l’architecture document/vue
+title: Avantages de l’architecture Document-View
 ms.date: 11/04/2016
 helpviewer_keywords:
 - views [MFC], advantages
 - document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
-ms.openlocfilehash: 80f7141ec62d509defdea361586399bd375df0d1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 54ff7cc0e4717f7f487ece3acee79f39ad7dfa3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185451"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Avantages de l'architecture document/vue
 

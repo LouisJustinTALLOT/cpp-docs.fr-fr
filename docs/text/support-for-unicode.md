@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : prise en charge d’Unicode'
 title: Prise en charge pour Unicode
 ms.date: 01/09/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-ms.openlocfilehash: 90c07874b61656a8bec0f9ef373f2ee8f339e994
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3226f488afc8d9899777ac0b717dd012fec2cc3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215372"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335751"
 ---
 # <a name="support-for-unicode"></a>Prise en charge pour Unicode
 
@@ -33,8 +34,8 @@ Toute l'infrastructure MFC prend en charge la spécification Unicode, et MFC per
 |Type de données non portables|Remplacé par cette macro|
 |-----------------------------|----------------------------|
 |**`char`**, **`wchar_t`**|`_TCHAR`|
-|**`char*`**, `LPSTR` (Type de données Win32),`LPWSTR`|`LPTSTR`|
-|`const char*`, `LPCSTR` (Type de données Win32),`LPCWSTR`|`LPCTSTR`|
+|**`char*`**, `LPSTR` (Type de données Win32), `LPWSTR`|`LPTSTR`|
+|`const char*`, `LPCSTR` (Type de données Win32), `LPCWSTR`|`LPCTSTR`|
 
 `CString`La classe utilise `_TCHAR` comme base et fournit des constructeurs et des opérateurs pour faciliter les conversions. Il est possible d'écrire la plupart des opérations de chaînes pour Unicode en utilisant la même logique que celle utilisée pour traiter le jeu de caractères Windows ANSI, si ce n'est que l'unité d'opération élémentaire est un caractère de 16 bits à la place d'un octet de 8 bits. Contrairement à l'utilisation de jeux de caractères multioctets, vous n'avez pas à (et ne devriez pas) traiter un caractère Unicode comme s'il s'agissait de deux octets distincts. Toutefois, vous devez gérer la possibilité d’un caractère unique représenté par une paire de substitution de caractères larges. En général, n’écrivez pas de code qui suppose que la longueur d’une chaîne est le même que le nombre de caractères, qu’il soit étroit ou large, qu’il contient.
 

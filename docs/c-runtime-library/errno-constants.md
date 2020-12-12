@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les constantes errno
 title: errno, constantes
 ms.date: 09/17/2018
 f1_keywords:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 4eb92b66970f1ef9455a0d7dd741ad02a60c26d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329339"
 ---
 # <a name="errno-constants"></a>errno, constantes
 

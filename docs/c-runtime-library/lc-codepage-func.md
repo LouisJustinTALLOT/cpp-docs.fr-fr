@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ___lc_codepage_func'
 title: ___lc_codepage_func
 ms.date: 4/2/2020
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: ea740bc335981ad7e1017ab4026fdc50b8fe8893
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b59443b8b448eb91e54548700ba7171fc0c00fd9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246537"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
@@ -44,7 +45,7 @@ UINT ___lc_codepage_func(void);
 
 Page de code active du thread.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 `___lc_codepage_func` est une fonction CRT interne utilisée par d'autres fonctions CRT pour obtenir la page de code active à partir du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide de la fonction [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _RTC_SetErrorFuncW'
 title: _RTC_SetErrorFuncW
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-ms.openlocfilehash: 0d45e5c857e917ca23b62482c64a06314565226e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e1f92b791f986c7881f0c65a22c24432c03160e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948963"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341423"
 ---
 # <a name="_rtc_seterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -52,7 +53,7 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 *function*<br/>
 L’adresse de la fonction qui va gérer les vérifications d’erreurs au moment de l’exécution.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La fonction d’erreur définie précédemment ; ou **null** s’il n’existe aucune fonction définie précédemment.
 
@@ -88,10 +89,10 @@ Le type d’erreur qui est spécifié par [_RTC_SetErrorType](rtc-seterrortype.m
 *filename*<br/>
 Le fichier source où la défaillance s’est produite, ou null si aucune information de débogage n’est disponible.
 
-*linenumber*<br/>
+*LineNumber*<br/>
 La ligne de *filename* où la défaillance s’est produite, ou 0 si aucune information de débogage n’est disponible.
 
-*moduleName*<br/>
+*NomModule*<br/>
 Le fichier DLL ou le nom du fichier exécutable où la défaillance s’est produite.
 
 *format*<br/>
@@ -99,7 +100,7 @@ chaîne de style printf pour afficher un message d’erreur, en utilisant les pa
 
 Pour obtenir un exemple qui montre comment utiliser **_RTC_error_fnW**, consultez [Personnalisation des contrôles natifs à l’exécution](/visualstudio/debugger/native-run-time-checks-customization).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -114,4 +115,4 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 ## <a name="see-also"></a>Voir aussi
 
 [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md)<br/>
-[Vérifications des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)<br/>
+[Vérification des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)<br/>

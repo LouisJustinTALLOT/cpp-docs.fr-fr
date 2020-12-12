@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDragListBox'
 title: CDragListBox, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: b260d3a88fc8c3f2d341005c1e47cfd9ab668e1e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0dfa61503bd9c1aa3017d37b873a8948f61e68e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184762"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox, classe
 
@@ -56,7 +57,7 @@ class CDragListBox : public CListBox
 |[CDragListBox ::D ropped](#dropped)|Appelé par le Framework après que l’élément a été supprimé.|
 |[CDragListBox::ItemFromPt](#itemfrompt)|Retourne les coordonnées de l’élément déplacé.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les zones de liste avec cette fonctionnalité permettent aux utilisateurs de classer les éléments d’une liste de la manière la plus utile. Par défaut, la zone de liste déplace l’élément vers le nouvel emplacement dans la liste. Toutefois, `CDragListBox` les objets peuvent être personnalisés pour copier des éléments au lieu de les déplacer.
 
@@ -78,7 +79,7 @@ Pour plus d’informations sur l’assignation de contrôles à des variables me
 
 `CDragListBox`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
@@ -99,7 +100,7 @@ Objet [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) qui contient les 
 
 Valeur différente de zéro si le glissement est autorisé ; sinon, 0.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Substituez cette fonction si vous souhaitez contrôler ce qui se passe au démarrage d’une opération glisser. L’implémentation par défaut capture la souris et reste en mode glisser jusqu’à ce que l’utilisateur clique sur le bouton gauche ou droit de la souris ou appuie sur ÉCHAP, moment auquel l’opération glisser est annulée.
 
@@ -116,7 +117,7 @@ virtual void CancelDrag(CPoint pt);
 *pt*<br/>
 Objet [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) qui contient les coordonnées de l’élément déplacé.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Substituez cette fonction pour gérer tout traitement spécial pour votre contrôle de zone de liste.
 
@@ -151,7 +152,7 @@ ID de ressource du curseur à afficher. Les valeurs suivantes sont possibles :
 
 - DL_STOPCURSOR indique que la cible de déplacement actuelle n’est pas acceptable.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le comportement par défaut retourne DL_MOVECURSOR. Remplacez cette fonction si vous souhaitez fournir des fonctionnalités supplémentaires.
 
@@ -168,7 +169,7 @@ virtual void DrawInsert(int nItem);
 *nItem*<br/>
 Index de base zéro du point d’insertion.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La valeur-1 efface le Guide d’insertion. Substituez cette fonction pour modifier l’apparence ou le comportement du Guide d’insertion.
 
@@ -190,7 +191,7 @@ Spécifie l’index de base zéro de la chaîne supprimée.
 *pt*<br/>
 Objet [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) qui contient les coordonnées du site cible.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le comportement par défaut copie l’élément de zone de liste et ses données vers le nouvel emplacement, puis supprime l’élément d’origine. Substituez cette fonction pour personnaliser le comportement par défaut, par exemple l’activation de copies d’éléments de zone de liste à déplacer vers d’autres emplacements de la liste.
 

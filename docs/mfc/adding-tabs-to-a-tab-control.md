@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajout d’onglets à un contrôle Tab'
 title: Ajout d'onglets à un contrôle Tab
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], adding tabs
 - tabs [MFC], adding to CTabCtrl class [MFC]
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
-ms.openlocfilehash: 89132e94396b51bee4a111b963c67d029f3dd9df
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ca25edf349fb11271d4e355241f4724d11bc4ac0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185464"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>Ajout d'onglets à un contrôle Tab
 
@@ -31,4 +32,4 @@ Pour plus d’informations, consultez [création d’un contrôle onglet](/windo
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CTabCtrl](using-ctabctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

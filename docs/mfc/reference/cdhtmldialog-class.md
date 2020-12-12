@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDHtmlDialog'
 title: CDHtmlDialog, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 9cc01c94357d7aac7fa6fa98127628a60746e1e8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa99d10b0d0ff6920f839d7588d80f489b971384
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185282"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog, classe
 
@@ -232,7 +233,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 `CDHtmlDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdhtml. h
 
@@ -703,7 +704,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 
 ### <a name="parameters"></a>Paramètres
 
-* \* \* pphtmlDoc* pointeur vers un pointeur vers un document HTML.
+*\* \* pphtmlDoc* pointeur vers un pointeur vers un document HTML.
 
 ### <a name="return-value"></a>Valeur renvoyée
 
@@ -1012,7 +1013,7 @@ BOOL m_bUseHtmlTitle;
 
 ### <a name="remarks"></a>Notes
 
-Si **m**_ **bUseHtmlTitle** a la valeur true, la légende de la boîte de dialogue est définie sur le titre du document HTML ; dans le cas contraire, la légende de la ressource de boîte de dialogue est utilisée.
+Si **m** _ **bUseHtmlTitle** a la valeur true, la légende de la boîte de dialogue est définie sur le titre du document HTML ; dans le cas contraire, la légende de la ressource de boîte de dialogue est utilisée.
 
 ## <a name="cdhtmldialogm_nhtmlresid"></a><a name="m_nhtmlresid"></a> CDHtmlDialog :: m_nHtmlResID
 

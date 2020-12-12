@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_daylight'
 title: _get_daylight
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 226242c5dd6c3c204d2449bd14ee7dee4f5fe7b5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dcb4ffb80ea79d89cad84617d4c8e4dceb1735c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341475"
 ---
 # <a name="_get_daylight"></a>_get_daylight
 
@@ -53,11 +54,11 @@ error_t _get_daylight( int* hours );
 *hours*<br/>
 Décalage en heures de l'heure d'été.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite ou une valeur **errno** si une erreur se produit.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_get_daylight** récupère le nombre d’heures de l’heure d’été sous la forme d’un entier. Si l'heure d'été est en vigueur, le décalage par défaut est d'une heure (même si quelques régions observent un décalage de deux heures).
 

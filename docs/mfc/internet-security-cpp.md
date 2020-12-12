@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : sécurité Internet (C++)'
 title: Sécurité Internet (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Internet applications [MFC], security
 - Web application security [MFC], Internet security approaches
 ms.assetid: bf0da697-81bc-41f0-83fa-d7f82ed83df8
-ms.openlocfilehash: ce044014c5c2e13528cea8b982227b0ec8bc03fc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 870695abc89ba022a333829ec974d2f1e9147a53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335847"
 ---
 # <a name="internet-security-c"></a>Sécurité Internet (C++)
 

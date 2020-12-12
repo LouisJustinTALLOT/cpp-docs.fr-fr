@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_dstbias'
 title: _get_dstbias
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 845310928ec4707afe15bccc7ff5b979e7da69b6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 00c5cef0e7c1e5e79cbcc2ce37a13e3f56d27029
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341449"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -52,14 +53,14 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Paramètres
 
-*seconds*<br/>
+*secondes*<br/>
 Décalage en secondes de l'heure d'été.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite ou une valeur **errno** si une erreur se produit.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_get_dstbias** récupère le nombre de secondes de l’heure d’été sous la forme d’un entier. Si l'heure d'été est en vigueur, le décalage par défaut est de 3 600 secondes, ce qui correspond au nombre de secondes dans une heure (même si quelques régions observent un décalage de deux heures).
 

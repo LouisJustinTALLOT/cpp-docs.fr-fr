@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : identificateurs de ressource (symboles) (C++)'
 title: Identificateurs de ressource (symboles) (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 1a01c127c69bb54209ecc059394eb85ef0ca4eeb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1299bb366ba380972d0027dc7285f6ac14dffe37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247083"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identificateurs de ressource (symboles) (C++)
 
@@ -42,7 +43,7 @@ Lorsque vous créez une ressource ou un objet de ressource, les [éditeurs de re
 > [!NOTE]
 > Lorsque vous copiez des ressources ou des objets de ressources d’un fichier .rc vers un autre, Visual C++ peut modifier la valeur du symbole de la ressource transférée, ou le nom et la valeur du symbole, pour éviter les conflits avec les noms de symboles ou les valeurs dans le fichier existant.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

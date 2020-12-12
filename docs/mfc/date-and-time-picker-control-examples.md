@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur les exemples de contrôle de sélecteur de date et d’heure
 title: Exemples de contrôle de sélecteur de date et heure
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DateTimePicker control [MFC]
 ms.assetid: f03c3a22-7725-45eb-8f8e-dddb2d15c3ca
-ms.openlocfilehash: be65b5f04323c1a5135d33e9164948a55cf78cac
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3c5347a70d7dfbc8a82cb275228b61e4873a0899
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291140"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Exemples de contrôle de sélecteur de date et heure
 
@@ -18,4 +19,4 @@ L’exemple [CMNCTRL1](../overview/visual-cpp-samples.md) illustre les différen
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CDateTimeCtrl](using-cdatetimectrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

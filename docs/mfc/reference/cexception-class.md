@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CException'
 title: CException (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 39d3266817ee1be20acde0b01c7c5d1aa90313cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184658"
 ---
 # <a name="cexception-class"></a>CException (classe)
 
@@ -80,7 +81,7 @@ Si une exception est interceptée par l’une des macros, l' `CException` objet 
 
 `CException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
