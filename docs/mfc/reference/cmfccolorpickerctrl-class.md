@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCColorPickerCtrl'
 title: CMFCColorPickerCtrl, classe
 ms.date: 11/19/2018
 f1_keywords:
@@ -40,16 +41,16 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e4363c08af86dee96df1492e9a029414d9902435
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313071"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl, classe
 
-La `CMFCColorPickerCtrl` classe fournit des fonctionnalités pour un contrôle qui est utilisé pour sélectionner les couleurs.
+La `CMFCColorPickerCtrl` classe fournit des fonctionnalités pour un contrôle utilisé pour sélectionner des couleurs.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,55 +64,55 @@ class CMFCColorPickerCtrl : public CButton
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Construit un objet `CMFCColorPickerCtrl`.|
+|[CMFCColorPickerCtrl :: CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Construit un objet `CMFCColorPickerCtrl`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCColorPickerCtrl::GetColor](#getcolor)|Récupère la couleur que l’utilisateur sélectionne.|
-|[CMFCColorPickerCtrl::GetHLS](#gethls)|Récupère les valeurs de teinte, de luminance et de saturation de la couleur que l’utilisateur sélectionne.|
-|[CMFCColorPickerCtrl::GetHue](#gethue)|Récupère le composant teinte de la couleur que l’utilisateur sélectionne.|
-|[CMFCColorPickerCtrl::GetLuminance](#getluminance)|Récupère le composant de luminance de la couleur que l’utilisateur sélectionne.|
-|[CMFCColorPickerCtrl::GetSaturation](#getsaturation)|Récupère le composant de saturation de la couleur que l’utilisateur sélectionne.|
-|[CMFCColorPickerCtrl::SelectCellHexagon](#selectcellhexagon)|Définit la couleur actuelle à la couleur définie par les composants de couleur RGB spécifiés ou l’hexagone cellulaire spécifié.|
-|[CMFCColorPickerCtrl::SetColor](#setcolor)|Définit la couleur actuelle à la valeur de couleur RGB spécifiée.|
-|[CMFCColorPickerCtrl::SetHLS](#sethls)|Définit la couleur actuelle à la valeur de couleur spécifiée HLS.|
-|[CMFCColorPickerCtrl::SetHue](#sethue)|Change le composant de teinte de la couleur actuellement sélectionnée.|
-|[CMFCColorPickerCtrl::SetLuminance](#setluminance)|Modifications du composant de luminance de la couleur actuellement sélectionnée.|
-|[CMFCColorPickerCtrl::SetLuminanceBarWidth](#setluminancebarwidth)|Définit la largeur de la barre de luminance dans le contrôle du cueilleur de couleurs.|
-|[CMFCColorPickerCtrl::SetOriginalColor](#setoriginalcolor)|Définit la couleur sélectionnée initiale.|
-|[CMFCColorPickerCtrl::SetPalette](#setpalette)|Définit la palette de couleurs actuelle.|
-|[CMFCColorPickerCtrl::SetSaturation](#setsaturation)|Modifie le composant de saturation de la couleur actuellement sélectionnée.|
-|[CMFCColorPickerCtrl::SetType](#settype)|Définit le type de contrôle de cueilleur de couleur pour afficher.|
+|[CMFCColorPickerCtrl :: GetColor](#getcolor)|Récupère la couleur sélectionnée par l’utilisateur.|
+|[CMFCColorPickerCtrl :: GetHLS](#gethls)|Récupère les valeurs de teinte, de luminance et de saturation de la couleur sélectionnée par l’utilisateur.|
+|[CMFCColorPickerCtrl :: GetHue](#gethue)|Récupère le composant teinte de la couleur sélectionnée par l’utilisateur.|
+|[CMFCColorPickerCtrl :: GetLuminance](#getluminance)|Récupère le composant luminance de la couleur sélectionnée par l’utilisateur.|
+|[CMFCColorPickerCtrl :: GetSaturation](#getsaturation)|Récupère le composant de saturation de la couleur sélectionnée par l’utilisateur.|
+|[CMFCColorPickerCtrl :: SelectCellHexagon](#selectcellhexagon)|Définit la couleur actuelle sur la couleur définie par les composants de couleur RVB spécifiés ou l’hexagone de cellule spécifié.|
+|[CMFCColorPickerCtrl :: SetColor](#setcolor)|Définit la couleur actuelle sur la valeur de couleur RVB spécifiée.|
+|[CMFCColorPickerCtrl :: SetHLS](#sethls)|Définit la couleur actuelle sur la valeur de couleur TLS spécifiée.|
+|[CMFCColorPickerCtrl :: SetHue](#sethue)|Modifie le composant teinte de la couleur actuellement sélectionnée.|
+|[CMFCColorPickerCtrl :: SetLuminance](#setluminance)|Modifie le composant luminance de la couleur actuellement sélectionnée.|
+|[CMFCColorPickerCtrl :: SetLuminanceBarWidth](#setluminancebarwidth)|Définit la largeur de la barre de luminance dans le contrôle de sélecteur de couleurs.|
+|[CMFCColorPickerCtrl :: SetOriginalColor](#setoriginalcolor)|Définit la couleur sélectionnée initiale.|
+|[CMFCColorPickerCtrl :: SetPalette](#setpalette)|Définit la palette de couleurs actuelle.|
+|[CMFCColorPickerCtrl :: SetSaturation](#setsaturation)|Modifie le composant de saturation de la couleur actuellement sélectionnée.|
+|[CMFCColorPickerCtrl :: SetType](#settype)|Définit le type de contrôle de sélecteur de couleurs à afficher.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Appelé par le cadre avant qu’un curseur qui indique la couleur sélectionnée est affiché.|
+|[CMFCColorPickerCtrl ::D rawCursor](#drawcursor)|Appelé par le Framework avant qu’un curseur qui pointe vers la couleur sélectionnée ne soit affiché.|
 
 ## <a name="remarks"></a>Notes
 
-Les couleurs standard sont sélectionnées à partir d’une palette de couleurs hexagonales, et les couleurs personnalisées sont sélectionnées à partir d’une barre de luminance où les couleurs sont spécifiées en utilisant soit la notation rouge/vert/bleu ou la notation de teinte/satuaration/luminance.
+Les couleurs standard sont sélectionnées dans une palette de couleurs hexagonales, et les couleurs personnalisées sont sélectionnées à partir d’une barre de luminance dans laquelle les couleurs sont spécifiées en utilisant la notation rouge, verte/bleue ou la notation teinte/satuaration/luminance.
 
-L’illustration suivante `CMFCColorPickerCtrl` représente plusieurs objets.
+L’illustration suivante représente plusieurs `CMFCColorPickerCtrl` objets.
 
 ![Boîte de dialogue CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "Boîte de dialogue CMFCColorPickerCtrl")
 
-Le `CMFCColorPickerCtrl` supporte deux paires de styles. Les styles HEX et HEX_GREYSCALE sont appropriés pour la sélection des couleurs standard. Les styles PICKER et LUMINANCE conviennent à la sélection personnalisée des couleurs.
+Le `CMFCColorPickerCtrl` prend en charge deux paires de styles. Les styles HEX et HEX_GREYSCALE sont appropriés pour la sélection de couleurs standard. Les styles du sélecteur et de la LUMINANCE sont appropriés pour la sélection des couleurs personnalisées.
 
-Effectuez les étapes `CMFCColorPickerCtrl` suivantes pour intégrer le contrôle dans votre boîte de dialogue :
+Procédez comme suit pour incorporer le `CMFCColorPickerCtrl` contrôle dans votre boîte de dialogue :
 
-1. Si vous utilisez le **ClassWizard**, insérez un nouveau `CMFCColorPickerCtrl` contrôle de `CButton` bouton dans votre modèle de boîte de dialogue (parce que la classe est héritée de la classe).
+1. Si vous utilisez l' **Assistant ClassWizard**, insérez un nouveau contrôle bouton dans votre modèle de boîte de dialogue (car la `CMFCColorPickerCtrl` classe est héritée de la `CButton` classe).
 
-1. Insérez une variable de membre associée au nouveau contrôle du bouton dans votre classe de boîte de dialogue. Ensuite, changez `CButton` le `CMFCColorPickerCtrl`type variable de .
+1. Insérez une variable membre associée au nouveau contrôle Button dans votre classe de boîte de dialogue. Modifiez ensuite le type de variable de `CButton` en `CMFCColorPickerCtrl` .
 
-1. Insérez le `WM_INITDIALOG` gestionnaire de message pour la classe de boîte de dialogue. Dans le gestionnaire, définissez le type, la `CMFCColorPickerCtrl` palette et la couleur choisie initiale du contrôle.
+1. Insérez le `WM_INITDIALOG` Gestionnaire de messages pour la classe de boîte de dialogue. Dans le gestionnaire, définissez le type, la palette et la couleur sélectionnée initiale du `CMFCColorPickerCtrl` contrôle.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `CMFCColorPickerCtrl` configurer un objet `CMFCColorPickerCtrl` en utilisant différentes méthodes dans la classe. L’exemple montre comment définir le type de contrôle du cueilleur, et comment définir sa couleur, sa teinte, sa luminance et sa saturation. L’exemple fait partie de [l’échantillon De nouveaux contrôles](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment configurer un `CMFCColorPickerCtrl` objet à l’aide de diverses méthodes de la `CMFCColorPickerCtrl` classe. L’exemple montre comment définir le type du contrôle sélecteur et comment définir sa couleur, sa teinte, sa luminance et sa saturation. L’exemple fait partie de l' [exemple New Controls](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]
@@ -130,9 +131,9 @@ L’exemple suivant montre comment `CMFCColorPickerCtrl` configurer un objet `CM
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxcolorpickerctrl.h
+**En-tête :** afxcolorpickerctrl. h
 
-## <a name="cmfccolorpickerctrlcmfccolorpickerctrl"></a><a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl
+## <a name="cmfccolorpickerctrlcmfccolorpickerctrl"></a><a name="cmfccolorpickerctrl"></a> CMFCColorPickerCtrl :: CMFCColorPickerCtrl
 
 Construit un objet `CMFCColorPickerCtrl`.
 
@@ -140,13 +141,13 @@ Construit un objet `CMFCColorPickerCtrl`.
 CMFCColorPickerCtrl();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrldrawcursor"></a><a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor
+## <a name="cmfccolorpickerctrldrawcursor"></a><a name="drawcursor"></a> CMFCColorPickerCtrl ::D rawCursor
 
-Appelé par le cadre avant qu’un curseur qui indique la couleur sélectionnée est affiché.
+Appelé par le Framework avant qu’un curseur qui pointe vers la couleur sélectionnée ne soit affiché.
 
 ```
 virtual void DrawCursor(
@@ -156,33 +157,33 @@ virtual void DrawCursor(
 
 ### <a name="parameters"></a>Paramètres
 
-*pDC*<br/>
-[dans] Pointeur vers un contexte d’appareil.
+*Maîtres*<br/>
+dans Pointeur vers un contexte de périphérique (Device Context).
 
-*Rect*<br/>
-[dans] Spécifie une zone rectangulaire autour de la couleur sélectionnée.
+*rectangulaire*<br/>
+dans Spécifie une zone rectangulaire autour de la couleur sélectionnée.
 
 ### <a name="remarks"></a>Notes
 
-Remplacer cette méthode lorsque vous avez besoin de changer la forme du curseur qui pointe vers la couleur sélectionnée.
+Substituez cette méthode lorsque vous devez modifier la forme du curseur qui pointe vers la couleur sélectionnée.
 
-## <a name="cmfccolorpickerctrlgetcolor"></a><a name="getcolor"></a>CMFCColorPickerCtrl::GetColor
+## <a name="cmfccolorpickerctrlgetcolor"></a><a name="getcolor"></a> CMFCColorPickerCtrl :: GetColor
 
-Récupère la couleur que l’utilisateur sélectionne.
+Récupère la couleur sélectionnée par l’utilisateur.
 
 ```
 COLORREF GetColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-La valeur RGB de la couleur sélectionnée.
+Valeur RVB de la couleur sélectionnée.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlgethls"></a><a name="gethls"></a>CMFCColorPickerCtrl::GetHLS
+## <a name="cmfccolorpickerctrlgethls"></a><a name="gethls"></a> CMFCColorPickerCtrl :: GetHLS
 
-Récupère les valeurs de teinte, de luminance et de saturation de la couleur que l’utilisateur sélectionne.
+Récupère les valeurs de teinte, de luminance et de saturation de la couleur sélectionnée par l’utilisateur.
 
 ```cpp
 void GetHLS(
@@ -193,62 +194,62 @@ void GetHLS(
 
 ### <a name="parameters"></a>Paramètres
 
-*Teinte*<br/>
-[out] Pointeur vers une variable de type double qui reçoit des informations de teinte.
+*Hue*<br/>
+à Pointeur vers une variable de type double qui reçoit les informations de teinte.
 
-*Luminance*<br/>
-[out] Pointeur vers une variable de type double qui reçoit des informations de luminance.
+*luminance*<br/>
+à Pointeur vers une variable de type double qui reçoit des informations de luminance.
 
-*Saturation*<br/>
-[out] Pointeur vers une variable de type double qui reçoit des informations de saturation.
+*saturation*<br/>
+à Pointeur vers une variable de type double qui reçoit les informations de saturation.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlgethue"></a><a name="gethue"></a>CMFCColorPickerCtrl::GetHue
+## <a name="cmfccolorpickerctrlgethue"></a><a name="gethue"></a> CMFCColorPickerCtrl :: GetHue
 
-Récupère le composant teinte de la couleur que l’utilisateur sélectionne.
+Récupère le composant teinte de la couleur sélectionnée par l’utilisateur.
 
 ```
 double GetHue() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Le composant de teinte de la couleur sélectionnée.
+Composant teinte de la couleur sélectionnée.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlgetluminance"></a><a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance
+## <a name="cmfccolorpickerctrlgetluminance"></a><a name="getluminance"></a> CMFCColorPickerCtrl :: GetLuminance
 
-Récupère le composant de luminance de la couleur que l’utilisateur sélectionne.
+Récupère le composant luminance de la couleur sélectionnée par l’utilisateur.
 
 ```
 double GetLuminance() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Le composant de luminance de la couleur sélectionnée.
+Composant luminance de la couleur sélectionnée.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlgetsaturation"></a><a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation
+## <a name="cmfccolorpickerctrlgetsaturation"></a><a name="getsaturation"></a> CMFCColorPickerCtrl :: GetSaturation
 
-Récupère la valeur de saturation de la couleur que l’utilisateur sélectionne.
+Récupère la valeur de saturation de la couleur sélectionnée par l’utilisateur.
 
 ```
 double GetSaturation() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Le composant de saturation de la couleur sélectionnée.
+Composant de saturation de la couleur sélectionnée.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlselectcellhexagon"></a><a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon
+## <a name="cmfccolorpickerctrlselectcellhexagon"></a><a name="selectcellhexagon"></a> CMFCColorPickerCtrl :: SelectCellHexagon
 
-Définit la couleur actuelle à la couleur définie par les composants de couleur RGB spécifiés ou l’hexagone cellulaire spécifié.
+Définit la couleur actuelle sur la couleur définie par les composants de couleur RVB spécifiés ou l’hexagone de cellule spécifié.
 
 ```cpp
 void SelectCellHexagon(
@@ -264,33 +265,33 @@ BOOL SelectCellHexagon(
 ### <a name="parameters"></a>Paramètres
 
 *R*<br/>
-[dans] Le composant de couleur rouge.
+dans Composant de couleur rouge.
 
 *G*<br/>
-[dans] Le composant de couleur verte.
+dans Composant de couleur verte.
 
 *B*<br/>
-[dans] Le composant de couleur bleue.
+dans Composant de couleur bleu.
 
 *x*<br/>
-[dans] Le x-coordonner le curseur, qui pointe vers un hexagone cellulaire.
+dans Coordonnée x du curseur, qui pointe vers un hexagone de cellule.
 
 *y*<br/>
-[dans] Le y-coordinate du curseur, qui pointe vers un hexagone cellulaire.
+dans Coordonnée y du curseur, qui pointe vers un hexagone de cellule.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-La deuxième surcharge de cette méthode renvoie toujours FALSE.
+La deuxième surcharge de cette méthode retourne toujours FALSe.
 
 ### <a name="remarks"></a>Notes
 
-La première surcharge de cette méthode définit la couleur actuelle à la couleur qui correspond aux composants spécifiés de couleur rouge, verte et bleue spécifiés du contrôle de sélection des couleurs.
+La première surcharge de cette méthode affecte à la couleur actuelle la couleur qui correspond aux composants de couleur rouge, vert et bleu spécifiés pour le contrôle de sélection de couleurs.
 
-La deuxième surcharge de cette méthode définit la couleur actuelle à la couleur de l’hexagone cellulaire qui est pointée vers l’emplacement spécifié du curseur.
+La deuxième surcharge de cette méthode affecte à la couleur actuelle la couleur de l’hexagone de cellule vers lequel pointe l’emplacement du curseur spécifié.
 
-## <a name="cmfccolorpickerctrlsetcolor"></a><a name="setcolor"></a>CMFCColorPickerCtrl::SetColor
+## <a name="cmfccolorpickerctrlsetcolor"></a><a name="setcolor"></a> CMFCColorPickerCtrl :: SetColor
 
-Définit la couleur actuelle à la valeur de couleur RGB spécifiée.
+Définit la couleur actuelle sur la valeur de couleur RVB spécifiée.
 
 ```cpp
 void SetColor(COLORREF Color);
@@ -299,13 +300,13 @@ void SetColor(COLORREF Color);
 ### <a name="parameters"></a>Paramètres
 
 *Couleur*<br/>
-[dans] Une valeur de couleur RGB.
+dans Valeur de couleur RVB.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlsethls"></a><a name="sethls"></a>CMFCColorPickerCtrl::SetHLS
+## <a name="cmfccolorpickerctrlsethls"></a><a name="sethls"></a> CMFCColorPickerCtrl :: SetHLS
 
-Définit la couleur actuelle à la valeur de couleur spécifiée HLS.
+Définit la couleur actuelle sur la valeur de couleur TLS spécifiée.
 
 ```cpp
 void SetHLS(
@@ -317,23 +318,23 @@ void SetHLS(
 
 ### <a name="parameters"></a>Paramètres
 
-*Teinte*<br/>
-[dans] Une valeur de teinte.
+*Hue*<br/>
+dans Valeur de teinte.
 
-*Luminance*<br/>
-[dans] Une valeur de luminance.
+*luminance*<br/>
+dans Valeur de luminance.
 
-*Saturation*<br/>
-[dans] Une valeur de saturation.
+*saturation*<br/>
+dans Valeur de saturation.
 
 *bInvalidate*<br/>
-[dans] VRAI pour forcer la fenêtre à mettre immédiatement à jour à la nouvelle couleur; autrement, FALSE. La valeur par défaut est TRUE.
+dans TRUE pour forcer la fenêtre à se mettre immédiatement à jour vers la nouvelle couleur ; Sinon, FALSe. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlsethue"></a><a name="sethue"></a>CMFCColorPickerCtrl::SetHue
+## <a name="cmfccolorpickerctrlsethue"></a><a name="sethue"></a> CMFCColorPickerCtrl :: SetHue
 
-Change la teinte de la couleur actuellement sélectionnée.
+Modifie la teinte de la couleur actuellement sélectionnée.
 
 ```cpp
 void SetHue(double Hue);
@@ -342,13 +343,13 @@ void SetHue(double Hue);
 ### <a name="parameters"></a>Paramètres
 
 *Teinte*<br/>
-[dans] Une valeur de teinte.
+dans Valeur de teinte.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlsetluminance"></a><a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance
+## <a name="cmfccolorpickerctrlsetluminance"></a><a name="setluminance"></a> CMFCColorPickerCtrl :: SetLuminance
 
-Modifie la luminosité de la couleur actuellement sélectionnée.
+Modifie la luminance de la couleur actuellement sélectionnée.
 
 ```cpp
 void SetLuminance(double Luminance);
@@ -357,13 +358,13 @@ void SetLuminance(double Luminance);
 ### <a name="parameters"></a>Paramètres
 
 *Luminance*<br/>
-[dans] Une valeur de luminance.
+dans Valeur de luminance.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlsetluminancebarwidth"></a><a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth
+## <a name="cmfccolorpickerctrlsetluminancebarwidth"></a><a name="setluminancebarwidth"></a> CMFCColorPickerCtrl :: SetLuminanceBarWidth
 
-Définit la largeur de la barre de luminance dans le contrôle du cueilleur de couleurs.
+Définit la largeur de la barre de luminance dans le contrôle de sélecteur de couleurs.
 
 ```cpp
 void SetLuminanceBarWidth(int w);
@@ -372,13 +373,13 @@ void SetLuminanceBarWidth(int w);
 ### <a name="parameters"></a>Paramètres
 
 *w*<br/>
-[dans] La largeur de la barre de luminance mesurée en pixels.
+dans Largeur de la barre de luminance mesurée en pixels.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour resize la barre de luminance, qui est sur **l’onglet Personnalisé** du contrôle de cueilleur de couleur. Le paramètre *w* spécifie la nouvelle largeur de la barre de luminance. La valeur de largeur est ignorée si elle dépasse les trois quarts de la largeur de la zone client.
+Utilisez cette méthode pour redimensionner la barre de luminance, qui se trouve sous l’onglet **personnalisé** du contrôle sélecteur de couleurs. Le paramètre *w* spécifie la nouvelle largeur de la barre de luminance. La valeur Width est ignorée si elle dépasse trois-quarts de la largeur de la zone cliente.
 
-## <a name="cmfccolorpickerctrlsetoriginalcolor"></a><a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor
+## <a name="cmfccolorpickerctrlsetoriginalcolor"></a><a name="setoriginalcolor"></a> CMFCColorPickerCtrl :: SetOriginalColor
 
 Définit la couleur sélectionnée initiale.
 
@@ -389,13 +390,13 @@ void SetOriginalColor(COLORREF ref);
 ### <a name="parameters"></a>Paramètres
 
 *ref*<br/>
-[dans] Une valeur de couleur RGB.
+dans Valeur de couleur RVB.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode lorsque le contrôle du cueilleur de couleurs est initialisé.
+Appelez cette méthode lorsque le contrôle de sélecteur de couleurs est initialisé.
 
-## <a name="cmfccolorpickerctrlsetpalette"></a><a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette
+## <a name="cmfccolorpickerctrlsetpalette"></a><a name="setpalette"></a> CMFCColorPickerCtrl :: SetPalette
 
 Définit la palette de couleurs actuelle.
 
@@ -405,14 +406,14 @@ void SetPalette(CPalette* pPalette);
 
 ### <a name="parameters"></a>Paramètres
 
-*pPalette (pPalette)*<br/>
-[dans] Pointeur vers une palette de couleurs.
+*pPalette*<br/>
+dans Pointeur vers une palette de couleurs.
 
 ### <a name="remarks"></a>Notes
 
-La palette de couleurs définit la gamme de couleurs qui est présentée dans le contrôle de cueilleur de couleurs.
+La palette de couleurs définit le tableau de couleurs présenté dans le contrôle de sélecteur de couleurs.
 
-## <a name="cmfccolorpickerctrlsetsaturation"></a><a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation
+## <a name="cmfccolorpickerctrlsetsaturation"></a><a name="setsaturation"></a> CMFCColorPickerCtrl :: SetSaturation
 
 Modifie la saturation de la couleur actuellement sélectionnée.
 
@@ -423,13 +424,13 @@ void SetSaturation(double Saturation);
 ### <a name="parameters"></a>Paramètres
 
 *Saturation*<br/>
-[dans] Une valeur de saturation.
+dans Valeur de saturation.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfccolorpickerctrlsettype"></a><a name="settype"></a>CMFCColorPickerCtrl::SetType
+## <a name="cmfccolorpickerctrlsettype"></a><a name="settype"></a> CMFCColorPickerCtrl :: SetType
 
-Définit le type de contrôle de cueilleur de couleur pour afficher.
+Définit le type de contrôle de sélecteur de couleurs à afficher.
 
 ```cpp
 void SetType(COLORTYPE colorType);
@@ -437,14 +438,14 @@ void SetType(COLORTYPE colorType);
 
 ### <a name="parameters"></a>Paramètres
 
-*Colortype*<br/>
-[dans] Un type de contrôle de cueilleur de couleur.
+*colorType*<br/>
+dans Type de contrôle de sélecteur de couleurs.
 
-Les types sont `CMFCColorPickerCtrl::COLORTYPE` définis par l’énumération. Les types possibles sont LUMINANCE, PICKER, HEX et HEX_GREYSCALE. Le type par défaut est PICKER.
+Les types sont définis par l' `CMFCColorPickerCtrl::COLORTYPE` énumération. Les types possibles sont LUMINANCE, PICKER, HEX et HEX_GREYSCALE. Le type par défaut est PICKER.
 
 ### <a name="remarks"></a>Notes
 
-Pour spécifier un type de contrôle de cueilleur de couleur, appelez cette méthode avant la création du contrôle Windows.
+Pour spécifier un type de contrôle de sélecteur de couleurs, appelez cette méthode avant la création du contrôle Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

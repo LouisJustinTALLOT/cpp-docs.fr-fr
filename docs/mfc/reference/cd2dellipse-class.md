@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Cd2dellipse,'
 title: CD2DEllipse, classe
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 827ba5515cb4b20cb8e5b10012590a001e01c08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369260"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313058"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse, classe
 
@@ -31,7 +32,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Surchargé. Construit un `CD2DEllipse` objet `D2D1_ELLIPSE` à partir de l’objet.|
+|[Cd2dellipse, :: Cd2dellipse,](#cd2dellipse)|Surchargé. Construit un `CD2DEllipse` objet à partir de l' `D2D1_ELLIPSE` objet.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -41,11 +42,11 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxrendertarget.h
+**En-tête :** afxrendertarget. h
 
-## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a> Cd2dellipse, :: Cd2dellipse,
 
-Construit un objet CD2DEllipse à partir d’un objet CD2DRectF.
+Construit un objet Cd2dellipse, à partir de l’objet Cd2drectf,.
 
 ```
 CD2DEllipse(const CD2DRectF& rect);
@@ -59,17 +60,17 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>Paramètres
 
-*Rect*<br/>
+*rectangulaire*<br/>
 rectangle source
 
-*ellipse*<br/>
-source ellipse
+*es*<br/>
+Ellipse source
 
-*ptCenter (ptCenter)*<br/>
-Le point central de l’ellipse.
+*ptCenter*<br/>
+Point central de l’ellipse.
 
-*tailleRadius*<br/>
-Le rayon X et le rayon Y de l’ellipse.
+*sizeRadius*<br/>
+Rayons X et Y de l’ellipse.
 
 ## <a name="see-also"></a>Voir aussi
 

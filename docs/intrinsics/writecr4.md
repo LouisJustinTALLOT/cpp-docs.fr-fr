@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __writecr4'
 title: __writecr4
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
-ms.openlocfilehash: 1afdadcdfdbf1060c87e3865dd5597b0b9a2ea6b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 711a6dff42f3805886865d09b4638479173bc64e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313084"
 ---
 # <a name="__writecr4"></a>__writecr4
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Écrit la valeur `Data` dans le registre CR4.
 
@@ -29,22 +30,22 @@ void writecr4(
 
 ### <a name="parameters"></a>Paramètres
 
-*Métadonnée*\
+*Données*\
 dans Valeur à écrire dans le registre CR4.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__writecr4`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 Cette intrinsèque est disponible uniquement en mode noyau et la routine est disponible uniquement comme intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

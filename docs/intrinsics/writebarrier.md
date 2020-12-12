@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _WriteBarrier'
 title: _WriteBarrier
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,21 +8,21 @@ helpviewer_keywords:
 - WriteBarrier intrinsic
 - _WriteBarrier intrinsic
 ms.assetid: a5ffdad9-0ca1-4eb7-b2f3-0f092c4bf4b5
-ms.openlocfilehash: a41f4c6c5cdd6b72e76a596622912e88fbd03f34
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7fe78eaa30e7971853ff9d73d7142b8eeddb679f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313136"
 ---
 # <a name="_writebarrier"></a>_WriteBarrier
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Limite les optimisations du compilateur qui peuvent réordonnancer les opérations d'accès à la mémoire sur le point de l'appel.
 
 > [!CAUTION]
-> Les intrinsèques `_ReadBarrier`, `_WriteBarrier` et `_ReadWriteBarrier` du compilateur et la macro `MemoryBarrier` sont tous déconseillés et ne doivent pas être utilisés. Pour la communication entre threads, utilisez des mécanismes tels que [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) et [std:\<: Atomic T >](../standard-library/atomic.md), qui sont définis dans la [ C++ bibliothèque standard](../standard-library/cpp-standard-library-reference.md). Pour l’accès au matériel, utilisez l’option de compilateur [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) avec le mot clé [volatile](../cpp/volatile-cpp.md) .
+> Les intrinsèques `_ReadBarrier`, `_WriteBarrier` et `_ReadWriteBarrier` du compilateur et la macro `MemoryBarrier` sont tous déconseillés et ne doivent pas être utilisés. Pour la communication entre threads, utilisez des mécanismes tels que [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) et [std : \<T> : Atomic](../standard-library/atomic.md), qui sont définis dans la [bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md). Pour l’accès au matériel, utilisez l’option de compilateur [/volatile : ISO](../build/reference/volatile-volatile-keyword-interpretation.md) avec le mot clé [volatile](../cpp/volatile-cpp.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,19 +30,19 @@ Limite les optimisations du compilateur qui peuvent réordonnancer les opératio
 void _WriteBarrier(void);
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_WriteBarrier`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 L'intrinsèque `_WriteBarrier` limite les optimisations du compilateur qui peuvent supprimer ou réordonnancer les opérations d'accès à la mémoire sur le point de l'appel.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
