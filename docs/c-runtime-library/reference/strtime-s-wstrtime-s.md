@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _strtime_s, _wstrtime_s'
 title: _strtime_s, _wstrtime_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7bc12d4749f0d79f00ff60901620e272a7c69917
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309145"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -70,13 +71,13 @@ errno_t _wstrtime_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Mémoire tampon, d’une longueur d’au moins 10 octets, dans laquelle l’heure doit être écrite.
 
 *numberOfElements*<br/>
 Taille de la mémoire tampon.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l’opération réussit.
 
@@ -84,20 +85,20 @@ Si une condition d’erreur se présente, le gestionnaire de paramètre non vali
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*buffer*|*numberOfElements*|Renvoie|Contenu de la *mémoire tampon*|
+|*mémoire tampon*|*numberOfElements*|Renvoie|Contenu de la *mémoire tampon*|
 |--------------|------------------------|------------|--------------------------|
-|**NUL**|(indifférent)|**EINVAL**|Non modifiée|
+|**NULL**|(indifférent)|**EINVAL**|Non modifiée|
 |Not **null** (pointant vers une mémoire tampon valide)|0|**EINVAL**|Non modifiée|
 |Not **null** (pointant vers une mémoire tampon valide)|0 < taille < 9|**EINVAL**|Chaîne vide|
 |Not **null** (pointant vers une mémoire tampon valide)|Taille > 9|0|Heure actuelle au format spécifié dans la section Notes|
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
-Le passage d’une valeur non**null** non valide pour la mémoire tampon entraîne une violation d’accès si le paramètre *NumberOfElements* est supérieur à 9.
+Le passage d’une valeur non **null** non valide pour la mémoire tampon entraîne une violation d’accès si le paramètre *NumberOfElements* est supérieur à 9.
 
 Le passage d’une valeur pour *NumberOfElements* qui est supérieure à la taille réelle de la mémoire tampon entraîne un dépassement de mémoire tampon.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions fournissent des versions plus sécurisées de [_strtime](strtime-wstrtime.md) et [_wstrtime](strtime-wstrtime.md). La fonction **_strtime_s** copie l’heure locale actuelle dans la mémoire tampon vers laquelle pointe *timestr*. L’heure est au format **hh : mm : SS** , où **hh** est deux chiffres représentant l’heure dans une notation de 24 heures, **mm** est deux chiffres représentant les minutes après l’heure et **SS** deux chiffres représentant les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 h 00. La mémoire tampon doit avoir une longueur au moins égale à 9 octets. La taille réelle est spécifiée par le deuxième paramètre.
 

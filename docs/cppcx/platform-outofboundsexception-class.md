@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: OutOfBoundsException'
 title: Platform::OutOfBoundsException, classe
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OutOfBoundsException
 ms.assetid: 96f8bf75-1207-4049-964b-7771822cadf3
-ms.openlocfilehash: 3f5165c0394726e0f6606f5261ba6306d8408948
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 451ed02897237eeee25dd92851baa60ccf4c417b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308209"
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException, classe
 
@@ -29,16 +30,16 @@ public ref class OutOfBoundsException : COMException,    IException,    IPrintab
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Prise en charge minimale du client :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
 ## <a name="see-also"></a>Voir aussi
 
-[Platform::COMException, classe](../cppcx/platform-comexception-class.md)
+[Platform :: COMException, classe](../cppcx/platform-comexception-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe de valeur Platform :: Sizet'
 title: Classe de valeur Platform::SizeT
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 5add9212dc2655bc37cd357741073f855b009bde
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ebcca27a94d23082374daafaa9fd7db180955a30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308014"
 ---
 # <a name="platformsizet-value-class"></a>Classe de valeur Platform::SizeT
 
@@ -32,15 +33,15 @@ public ref class SizeT sealed : ValueType
 
 ### <a name="requirements"></a>Spécifications
 
-**Client pris en charge au minimum :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimum :** Serveur Windows 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
 **Espace de noms :** Platform
 
-**Métadonnées:** platform.winmd
+**Métadonnées :** Platform. winmd
 
-## <a name="sizetsizet-constructor"></a><a name="ctor"></a>SizeT::SizeT constructeur
+## <a name="sizetsizet-constructor"></a><a name="ctor"></a> Sizet :: Sizet, constructeur
 
 Initialise une nouvelle instance de SizeT avec la valeur spécifiée.
 
@@ -60,4 +61,4 @@ Pointeur vers une valeur 32 bits non signée.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms de plateforme](../cppcx/platform-namespace-c-cx.md)
+[Espace de noms Platform](../cppcx/platform-namespace-c-cx.md)

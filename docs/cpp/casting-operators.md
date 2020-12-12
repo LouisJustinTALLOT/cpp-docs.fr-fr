@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les opérateurs de cast'
 title: Opérateurs de casting
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], casting
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
-ms.openlocfilehash: 606e8b159bb7bdb7527d33a5211cb33a26913754
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6ab19f1b30958f4d78a97be76c15373ed9c9b620
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308547"
 ---
 # <a name="casting-operators"></a>Opérateurs de casting
 
@@ -31,4 +32,4 @@ Utilisez **`const_cast`** et **`reinterpret_cast`** , en dernier recours, puisqu
 
 ## <a name="see-also"></a>Voir aussi
 
-[Cast](../cpp/casting.md)
+[Transtypage](../cpp/casting.md)

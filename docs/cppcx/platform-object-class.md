@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Platform :: Object, classe'
 title: Platform::Object, classe
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: dded4602eda9653f50d26ef1b4aae86af96a262b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a190d5a56bb27fb95ac2c2c8bd2ba0e0d0572427
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213032"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308248"
 ---
 # <a name="platformobject-class"></a>Platform::Object, classe
 
@@ -44,7 +45,7 @@ public ref class Object : Object
 |[Object::Equals](#equals)|Détermine si l'objet spécifié est égal à l'objet actuel.|
 |[Object::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|
 |[Object::ReferenceEquals](#referenceequals)|Détermine si les instances Object spécifiées sont identiques.|
-|[ToString](#tostring)|Retourne une chaîne qui représente l'objet actif. Peut être substituée.|
+|[ToString](#tostring)|Retourne une chaîne qui représente l'objet actuel. Peut être substituée.|
 |[GetType](#gettype)|Obtient un [Platform::Type](../cppcx/platform-type-class.md) qui décrit l'instance actuelle.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
@@ -59,7 +60,7 @@ public ref class Object : Object
 
 **Espace de noms :** Platform
 
-## <a name="objectequals-method"></a><a name="equals"></a>Object :: Equals, méthode
+## <a name="objectequals-method"></a><a name="equals"></a> Object :: Equals, méthode
 
 Détermine si l'objet spécifié est égal à l'objet actuel.
 
@@ -76,11 +77,11 @@ bool Equals(
 *obj*<br/>
 Objet à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets sont égaux ; sinon, **`false`** .
 
-## <a name="objectgethashcode-method"></a><a name="gethashcode"></a>Object :: GetHashCode, méthode
+## <a name="objectgethashcode-method"></a><a name="gethashcode"></a> Object :: GetHashCode, méthode
 
 Retourne la valeur d'identité `IUnknown`* pour cette instance s'il s'agit d'un objet COM ou une valeur de hachage calculée s'il ne s'agit d'un objet COM.
 
@@ -98,7 +99,7 @@ Une valeur numérique qui identifie de façon unique cet objet.
 
 Vous pouvez utiliser GetHashCode afin de créer des clés pour les objets des cartes. Vous pouvez comparer des codes de hachage à l’aide de [Object :: Equals](#equals). Si le chemin de code est extrêmement critique et `GetHashCode` et `Equals` ne sont pas suffisamment rapides, vous pouvez alors accéder à la couche COM sous-jacente et effectuer des comparaisons de pointeurs `IUnknown` natifs.
 
-## <a name="objectgettype-method"></a><a name="gettype"></a>Object :: GetType, méthode
+## <a name="objectgettype-method"></a><a name="gettype"></a> Object :: GetType, méthode
 
 Retourne un objet [Platform :: type](../cppcx/platform-type-class.md) qui décrit le type au moment de l’exécution d’un objet.
 
@@ -124,7 +125,7 @@ Utilisez l’opérateur [typeid](../extensions/typeid-cpp-component-extensions.m
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="objectobject-constructor"></a><a name="ctor"></a>Object :: Object, constructeur
+## <a name="objectobject-constructor"></a><a name="ctor"></a> Object :: Object, constructeur
 
 Initialise une nouvelle instance de la classe Object.
 
@@ -134,7 +135,7 @@ Initialise une nouvelle instance de la classe Object.
 public:Object();
 ```
 
-## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a>Object :: ReferenceEquals, méthode
+## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a> Object :: ReferenceEquals, méthode
 
 Détermine si les instances Object spécifiées sont identiques.
 
@@ -152,13 +153,13 @@ Premier objet à comparer.
 *obj2*<br/>
 Deuxième objet à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les deux objets sont identiques ; Sinon, **`false`** .
 
-## <a name="objecttostring-method-ccx"></a><a name="tostring"></a>Object :: ToString, méthode (C++/CX)
+## <a name="objecttostring-method-ccx"></a><a name="tostring"></a> Object :: ToString, méthode (C++/CX)
 
-Retourne une chaîne qui représente l'objet actif.
+Retourne une chaîne qui représente l'objet actuel.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -169,7 +170,7 @@ virtual String^ ToString();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Chaîne qui représente l’objet actif. Vous pouvez substituer cette méthode afin de fournir un message personnalisé dans votre classe ou struct ref :
+Chaîne qui représente l'objet actuel. Vous pouvez substituer cette méthode afin de fournir un message personnalisé dans votre classe ou struct ref :
 
 ```cpp
 public ref class Tree sealed

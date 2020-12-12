@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Platform :: STAThreadAttribute (classe)'
 title: Platform::STAThreadAttribute (classe)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1c235ef9a171e650c960df184b081c4b6511cf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213019"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308001"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute (classe)
 
@@ -44,7 +45,7 @@ L’attribut STAThreadAttribute hérite de la [classe Platform :: Object](../cp
 |----------|-----------------|
 |[STAThreadAttribute::Equals](#equals)|Détermine si l'objet spécifié est égal à l'objet actuel.|
 |[STAThreadAttribute::GetHashCode](#gethashcode)|Retourne le code de hachage de cette instance.|
-|[STAThreadAttribute::ToString](#tostring)|Retourne une chaîne qui représente l'objet actif.|
+|[STAThreadAttribute::ToString](#tostring)|Retourne une chaîne qui représente l'objet actuel.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -66,7 +67,7 @@ Initialise une nouvelle instance de la classe STAThreadAttribute.
 public:STAThreadAttribute();
 ```
 
-## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute :: Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a> STAThreadAttribute :: Equals
 
 Détermine si l'objet spécifié est égal à l'objet actuel.
 
@@ -81,11 +82,11 @@ public:virtual override bool Equals( Object^ obj );
 *obj*<br/>
 Objet à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets sont égaux ; Sinon, **`false`** .
 
-## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute :: GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a> STAThreadAttribute :: GetHashCode
 
 Retourne le code de hachage de cette instance.
 
@@ -99,9 +100,9 @@ public:int GetHashCode();
 
 Code de hachage de cette instance.
 
-## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute :: ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a> STAThreadAttribute :: ToString
 
-Retourne une chaîne qui représente l'objet actif.
+Retourne une chaîne qui représente l'objet actuel.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -111,7 +112,7 @@ public:String^ ToString();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Chaîne qui représente l’objet actif.
+Chaîne qui représente l'objet actuel.
 
 ## <a name="see-also"></a>Voir aussi
 

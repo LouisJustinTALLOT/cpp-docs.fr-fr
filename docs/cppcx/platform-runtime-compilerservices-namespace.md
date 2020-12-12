@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Platform :: Runtime :: CompilerServices, espace de noms'
 title: Platform::Runtime::CompilerServices (espace de noms)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
-ms.openlocfilehash: 88eac06eeb97fce26f321e8beb494b6b9e66be41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 273a218c0a53ff28188491277ffb6f7f0fe7f744
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308040"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices (espace de noms)
 
@@ -30,7 +31,7 @@ namespace Platform {
 
 Bien que cet espace de noms est destiné à un usage interne, les navigateurs peuvent afficher les membres suivants de cet espace de noms.
 
-|Nom|Note|
+|Nom|Remarque|
 |----------|------------|
 |CallConvCdecl||
 |CallConvFastcall||
@@ -54,12 +55,12 @@ Bien que cet espace de noms est destiné à un usage interne, les navigateurs pe
 
 `Platform`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
-**Espace de noms :** Platform::CompilerServices
+**Espace de noms :** Platform::CompilerServices
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)
+[Espace de noms de plateforme](platform-namespace-c-cx.md)

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : procédure pas à pas : implémentation de futures'
 title: 'Procédure pas à pas : implémentation d’objets future'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 9bf46b7f2a761aaf0c07e1017524c8ddf533aca6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b2ea0b273f25ce42f8b177ce2d8e4b4aef195109
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309223"
 ---
 # <a name="walkthrough-implementing-futures"></a>Procédure pas à pas : implémentation d’objets future
 

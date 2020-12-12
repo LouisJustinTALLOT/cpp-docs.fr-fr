@@ -1,30 +1,31 @@
 ---
-title: Référence desC++ bibliothèques C/langage et standard
+description: En savoir plus sur les informations de référence sur le langage C/C++ et les bibliothèques standard
+title: Informations de référence sur le langage C/C++ et les bibliothèques standard
 ms.date: 08/13/2019
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
 ms.topic: overview
-ms.openlocfilehash: 15285b2741167e8c873ac0a45514e7d05e259375
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: e8c1ad2e78889b9f288122ed18c3c6a1618e2612
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308664"
 ---
-# <a name="cc-language-and-standard-libraries-reference"></a>Référence desC++ bibliothèques C/langage et standard
+# <a name="cc-language-and-standard-libraries-reference"></a>Informations de référence sur le langage C/C++ et les bibliothèques standard
 
-Cette section de la documentation contient des informations de référence pour l’implémentation Microsoft de la norme ISO C++ C et des langues. La référence du langage comprend la documentation du préprocesseur, des intrinsèques du compilateur et des langages d’assembly pris en charge.
+Cette section de la documentation contient des informations de référence pour l’implémentation Microsoft des langages C et C++ standard ISO. La référence du langage comprend la documentation du préprocesseur, des intrinsèques du compilateur et des langages d’assembly pris en charge.
 
-Vous trouverez également la documentation de la bibliothèque Runtime C, de C++ la bibliothèque standard et de plusieurs autres bibliothèques disponibles avec le compilateur MicrosoftC++ c/compilateur (MSVC) ici.
+Vous trouverez également la documentation de la bibliothèque Runtime C, de la bibliothèque C++ standard et de plusieurs autres bibliothèques disponibles avec le compilateur Microsoft C/C++ (MSVC) ici.
 
 ## <a name="language-reference"></a>Informations de référence sur le langage
 
 [Langage C](../c-language/c-language-reference.md)\
 Contenu de référence pour l’implémentation Microsoft de la bibliothèque C Standard.
 
-[C++sous](../cpp/cpp-language-reference.md)\
-Contenu de référence pour l’implémentation Microsoft du C++ langage.
+[Langage C++](../cpp/cpp-language-reference.md)\
+Contenu de référence pour l’implémentation Microsoft du langage C++.
 
-[C/C++ préprocesseur](../preprocessor/c-cpp-preprocessor-reference.md)\
+[Préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)\
 Contenu de référence pour le préprocesseur utilisé par C et C++.
 
 [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
@@ -46,8 +47,8 @@ Fournit des documents de référence pour Microsoft Macro Assembler (MASM).
 [Bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)\
 Référence de l’implémentation Microsoft de la bibliothèque Runtime C (CRT), parfois appelée CRT universel.
 
-[C++bibliothèque standard](../standard-library/cpp-standard-library-reference.md)\
-Référence pour l’implémentation Microsoft de la C++ bibliothèque standard.
+[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)\
+Référence pour l’implémentation Microsoft de la bibliothèque C++ standard.
 
 ### <a name="libraries-for-windows-applications"></a>Bibliothèques pour les applications Windows
 
@@ -56,10 +57,10 @@ Documentation pour les bibliothèques de classes Microsoft Foundation Classes (M
 
 ### <a name="additional-libraries"></a>Bibliothèques supplémentaires
 
-[C++AMP (C++ Accelerated massive parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)\
+[C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)\
 Classes qui permettent d’utiliser des processeurs graphiques modernes pour la programmation à usage général.
 
-[Runtime d’accès concurrentiel](../parallel/concrt/concurrency-runtime.md)\
+[runtime d'accès concurrentiel](../parallel/concrt/concurrency-runtime.md)\
 Classes qui simplifient l’écriture de programmes qui utilisent le parallélisme des données ou le parallélisme des tâches.
 
 [OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)\
@@ -72,8 +73,8 @@ Une bibliothèque portable qui peut être utilisée avec MSVC, GCC ou Clang pour
 
 ## <a name="related-articles"></a>Articles connexes
 
-[Windows Runtime (WinRT) avecC++](/windows/uwp/cpp-and-winrt-apis/index)\
-C++/WinRT est une projection de langage C++ 17 moderne standard pour les API Windows Runtime (WinRT), implémentée en tant que bibliothèque basée sur un fichier d’en-tête.
+[Windows Runtime (WinRT) avec C++](/windows/uwp/cpp-and-winrt-apis/index)\
+C++/WinRT est une projection de langage C++17 moderne entièrement standard pour les API Windows Runtime (WinRT), implémentée en tant que bibliothèque basée sur un fichier d’en-tête.
 
-[Bibliothèque C++ de modèles Windows Runtime (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)\
-Une bibliothèque de modèles héritée pour le Windows Runtime, C++remplacée par/WinRT.
+[Windows Runtime C++ Template Library (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)\
+Une bibliothèque de modèles héritée pour le Windows Runtime, remplacée par C++/WinRT.

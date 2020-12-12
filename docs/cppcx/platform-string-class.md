@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Platform :: String, classe'
 title: Platform::String, classe
 ms.date: 10/16/2019
 ms.topic: reference
@@ -19,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: f8b5888ee2d28a3d870b5f0eeab143b189c88180
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 66e545b529ccd229b3c76395e265a006331d8652
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307975"
 ---
 # <a name="platformstring-class"></a>Platform::String, classe
 
@@ -102,7 +103,7 @@ La classe String a les opérateurs suivants.
 
 **En-tête** vccorlib.h (inclus par défaut)
 
-## <a name="stringbegin-method"></a><a name="begin"></a>String :: Begin, méthode
+## <a name="stringbegin-method"></a><a name="begin"></a> String :: Begin, méthode
 
 Retourne un pointeur au début de la chaîne actuelle.
 
@@ -116,7 +117,7 @@ char16* Begin();
 
 Pointeur au début de la chaîne actuelle.
 
-## <a name="stringcompareordinal-method"></a><a name="compareordinal"></a>String :: CompareOrdinal, méthode
+## <a name="stringcompareordinal-method"></a><a name="compareordinal"></a> String :: CompareOrdinal, méthode
 
 Méthode statique qui compare deux `String` objets en évaluant les valeurs numériques des caractères correspondants dans les deux valeurs de chaîne représentées par les objets.
 
@@ -134,17 +135,17 @@ Premier objet String.
 *répartition*<br/>
 Deuxième objet String.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Entier qui indique la relation lexicale entre les deux comparateurs. Le tableau ci-dessous répertorie les valeurs de retour possibles.
 
-|Valeur|Condition|
+|Value|Condition|
 |-----------|---------------|
 |-1|`str1` est inférieur à `str2`.|
 |0|`str1` est égal à `str2`.|
 |1|`str1` est supérieur à `str2`.|
 
-## <a name="stringconcat-method"></a><a name="concat"></a>String :: Concat, méthode
+## <a name="stringconcat-method"></a><a name="concat"></a> String :: Concat, méthode
 
 Concatène les valeurs de deux objets String.
 
@@ -162,13 +163,13 @@ Premier objet String ou `null`.
 *répartition*<br/>
 Deuxième objet String ou `null`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nouvel objet String^ dont la valeur est la concaténation des valeurs de `str1` et `str2`.
 
 Si `str1` est `null` et `str2` ne l’est pas, `str1`est retourné. Si `str2` est `null` et `str1` ne l’est pas, `str2`est retourné. Si `str1` et `str2` sont tous deux `null`, la chaîne vide (L"") est retournée.
 
-## <a name="stringdata-method"></a><a name="data"></a>Chaîne ::D méthode ATA
+## <a name="stringdata-method"></a><a name="data"></a> Chaîne ::D méthode ATA
 
 Retourne un pointeur vers le début de la mémoire tampon de données de l’objet sous la forme d’un tableau de style C d' `char16` **`wchar_t`** éléments ().
 
@@ -186,7 +187,7 @@ Pointeur vers le début d’un `const char16` tableau de caractères Unicode ( `
 
 Utilisez cette méthode pour convertir de `Platform::String^` en `wchar_t*`. Lorsque l'objet `String` se trouve hors de portée, la validité du pointeur donnée n'est plus garantie. Pour stocker les données au-delà de la durée de vie de l’objet d’origine `String` , utilisez [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) pour copier le tableau dans la mémoire que vous avez allouée vous-même.
 
-## <a name="stringdispose-method"></a><a name="dispose"></a>Chaîne ::D méthode ispose
+## <a name="stringdispose-method"></a><a name="dispose"></a> Chaîne ::D méthode ispose
 
 Libère des ressources.
 
@@ -196,7 +197,7 @@ Libère des ressources.
 virtual override void Dispose();
 ```
 
-## <a name="stringend-method"></a><a name="end"></a>String :: end, méthode
+## <a name="stringend-method"></a><a name="end"></a> String :: end, méthode
 
 Retourne un pointeur après la fin de la chaîne actuelle.
 
@@ -214,7 +215,7 @@ Pointeur vers au-delà de la fin de la chaîne actuelle.
 
 End () retourne Begin () + length.
 
-## <a name="stringequals-method"></a><a name="equals"></a>String :: Equals, méthode
+## <a name="stringequals-method"></a><a name="equals"></a> String :: Equals, méthode
 
 Indique si la chaîne spécifiée a la même valeur que l'objet actif.
 
@@ -230,7 +231,7 @@ bool String::Equals(String^ str);
 *str*<br/>
 Objet à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si `str` est égal à l’objet actuel ; sinon, **`false`** .
 
@@ -238,7 +239,7 @@ Objet à comparer.
 
 Cette méthode est équivalente à la [chaîne statique :: CompareOrdinal](#compareordinal). Dans la première surcharge, il est attendu que le paramètre `str` puisse être casté en un objet String^.
 
-## <a name="stringgethashcode-method"></a><a name="gethashcode"></a>String :: GetHashCode, méthode
+## <a name="stringgethashcode-method"></a><a name="gethashcode"></a> String :: GetHashCode, méthode
 
 Retourne le code de hachage de cette instance.
 
@@ -252,7 +253,7 @@ virtual override int GetHashCode();
 
 Code de hachage de cette instance.
 
-## <a name="stringisempty-method"></a><a name="isempty"></a>String :: IsEmpty, méthode
+## <a name="stringisempty-method"></a><a name="isempty"></a> String :: IsEmpty, méthode
 
 Indique si l'objet String actuel est vide.
 
@@ -266,7 +267,7 @@ bool IsEmpty();
 
 **`true`** Si l' `String` objet actuel a la **valeur null** ou est la chaîne vide (L ""); sinon, **`false`** .
 
-## <a name="stringisfastpass-method"></a><a name="isfastpass"></a>String :: Isfastpass,, méthode
+## <a name="stringisfastpass-method"></a><a name="isfastpass"></a> String :: Isfastpass,, méthode
 
 Indique si l’objet String actuel participe à une opération de *passage rapide* . Dans une opération de passage rapide, le comptage des références est interrompu.
 
@@ -284,7 +285,7 @@ bool IsFastPass();
 
 Au cours d'un appel de fonction où un objet, dont les références sont comptabilisées, constitue un paramètre, et que la fonction appelée ne lit que cet objet, le compilateur peut sans risque interrompre le décompte de références et améliorer les performances d'appel. Votre code ne peut rien faire d'utile avec cette propriété. Le système gère tous les détails.
 
-## <a name="stringlength-method"></a><a name="length"></a>String :: Length, méthode
+## <a name="stringlength-method"></a><a name="length"></a> String :: Length, méthode
 
 Récupère le nombre de caractères dans l’objet actuel `String` .
 
@@ -309,7 +310,7 @@ int len = str->Length(); //len = 5
 
 Tableau de caractères retourné par la [chaîne ::D ATA](#data) comporte un caractère supplémentaire, qui est le caractère null de fin ou « \ 0 ». La longueur de ce caractère est également de deux octets.
 
-## <a name="stringoperator-operator"></a><a name="operator-plus"></a>String :: Operator +, opérateur
+## <a name="stringoperator-operator"></a><a name="operator-plus"></a> String :: Operator +, opérateur
 
 Concatène deux objets [String](../cppcx/platform-string-class.md) en un nouvel objet [String](../cppcx/platform-string-class.md) .
 
@@ -327,7 +328,7 @@ Premier objet `String`.
 *répartition*<br/>
 Deuxième objet `String` dont le contenu sera ajouté à `str1`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si *str1* est égal à *str2*; Sinon, **`false`** .
 
@@ -335,7 +336,7 @@ Deuxième objet `String` dont le contenu sera ajouté à `str1`.
 
 Cet opérateur crée un objet `String^` qui contient les données des deux opérandes. Utilisez-le pour des raisons pratiques lorsque la performance extrême n'est pas critique. Certains appels à « `+` » dans une fonction ne seront peut-être pas visibles, mais si vous manipulez des objets volumineux ou des données texte dans une boucle serrée, utilisez ensuite les mécanismes et les types C++ standard.
 
-## <a name="stringoperator-operator"></a><a name="operator-equality"></a>String :: Operator = =, opérateur
+## <a name="stringoperator-operator"></a><a name="operator-equality"></a> String :: Operator = =, opérateur
 
 Indique si deux objets String spécifiés ont la même valeur de type texte.
 
@@ -353,7 +354,7 @@ Premier objet `String` à comparer.
 *répartition*<br/>
 Deuxième `String` objet à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le contenu de `str1` est égal à `str2` ; sinon, **`false`** .
 
@@ -361,7 +362,7 @@ Deuxième `String` objet à comparer.
 
 Cet opérateur est équivalent à [String :: CompareOrdinal](#compareordinal).
 
-## <a name="stringoperatorgt"></a><a name="operator-greater-than"></a>String ::, opérateur&gt;
+## <a name="stringoperatorgt"></a><a name="operator-greater-than"></a> String ::, opérateur&gt;
 
 Indique si la valeur d’un `String` objet est supérieure à la valeur d’un deuxième `String` objet.
 
@@ -379,7 +380,7 @@ Premier objet `String`.
 *répartition*<br/>
 Second objet `String`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la valeur de `str1` est supérieure à la valeur de `str2` ; sinon, **`false`** .
 
@@ -387,7 +388,7 @@ Second objet `String`.
 
 Cet opérateur est équivalent à l’appel explicite de [String :: CompareOrdinal](#compareordinal) et à l’obtention d’un résultat supérieur à zéro.
 
-## <a name="stringoperatorgt"></a><a name="operator-greater-than-or-equals"></a>String ::, opérateur&gt;=
+## <a name="stringoperatorgt"></a><a name="operator-greater-than-or-equals"></a> String ::, opérateur&gt;=
 
 Indique si la valeur d’un `String` objet est supérieure ou égale à la valeur d’un deuxième `String` objet.
 
@@ -405,11 +406,11 @@ Premier objet `String`.
 *répartition*<br/>
 Second objet `String`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la valeur de `str1` est supérieure ou égale à la valeur de `str2` ; sinon, **`false`** .
 
-## <a name="stringoperator"></a><a name="operator-inequality"></a>String :: Operator ! =
+## <a name="stringoperator"></a><a name="operator-inequality"></a> String :: Operator ! =
 
 Indique si deux objets spécifiés `String` ont des valeurs différentes.
 
@@ -427,11 +428,11 @@ Premier objet `String` à comparer.
 *répartition*<br/>
 Deuxième `String` objet à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si `str1` n’est pas égal à `str2` ; sinon, **`false`** .
 
-## <a name="stringoperatorlt"></a><a name="operator-less-than"></a>String ::, opérateur&lt;
+## <a name="stringoperatorlt"></a><a name="operator-less-than"></a> String ::, opérateur&lt;
 
 Indique si la valeur d’un `String` objet est inférieure à la valeur d’un deuxième `String` objet.
 
@@ -449,11 +450,11 @@ Premier objet `String`.
 *répartition*<br/>
 Second objet `String`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la valeur de *str1* est inférieure à la valeur de *str2*; Sinon, **`false`** .
 
-## <a name="stringstring-constructor"></a><a name="ctor"></a>String :: String, constructeur
+## <a name="stringstring-constructor"></a><a name="ctor"></a> String :: String, constructeur
 
 Initialise une nouvelle instance de la `String` classe avec une copie des données de la chaîne d’entrée.
 
@@ -467,7 +468,7 @@ String(char16* s, unsigned int n);
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*s*<br/>
 Ensemble de caractères larges qui initialisent la chaîne. char16
 
 *n*<br/>
@@ -483,7 +484,7 @@ Si les performances sont critiques et que vous contrôlez la durée de vie de la
 String^ s = L"Hello!";
 ```
 
-## <a name="stringtostring"></a><a name="tostring"></a>String :: ToString
+## <a name="stringtostring"></a><a name="tostring"></a> String :: ToString
 
 Retourne un `String` objet dont la valeur est identique à la chaîne actuelle.
 

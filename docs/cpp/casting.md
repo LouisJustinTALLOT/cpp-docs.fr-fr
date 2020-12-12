@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : la conversion'
 title: Cast
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: bb06db3af6aee031b6cb2d69b38a9404304420fc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0850b20db0e3f951414ba2b1d480cdcf43fb971f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190126"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308638"
 ---
 # <a name="casting"></a>Cast
 
@@ -28,7 +29,7 @@ Hiérarchie de classes
 
 Un objet de type `C` peut être visualisé comme indiqué dans l'illustration ci-dessous.
 
-![Classe C avec les&#45;sous-objets B et A](../cpp/media/vc38zz2.gif "Classe C avec les&#45;sous-objets B et A") <br/>
+![Classe C avec les objets Sub&#45;B et A](../cpp/media/vc38zz2.gif "Classe C avec les objets Sub&#45;B et A") <br/>
 Classe C avec les sous-objets B et A
 
 Avec une instance de classe `C`, il y a un sous-objet `B` et un sous-objet `A`. L'instance de `C`, avec les sous-objets `A` et `B` forme l'objet complet.
@@ -39,7 +40,7 @@ Pour la conversion de types des non polymorphes, vous pouvez utiliser l’opéra
 
 Cette section couvre les sujets suivants :
 
-- [Opérateurs de cast](../cpp/casting-operators.md)
+- [Opérateurs de casting](../cpp/casting-operators.md)
 
 - [Informations de type au moment de l’exécution](../cpp/run-time-type-information.md)
 

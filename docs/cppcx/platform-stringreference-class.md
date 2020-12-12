@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Platform :: StringReference'
 title: Platform::StringReference, classe
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 4748eecdf67ae5a60ddf97783a934a05e80b406c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5c211776bccbd3ba2fedaf769502f7dad71b6eb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307949"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference, classe
 
@@ -34,35 +35,35 @@ class StringReference
 
 |Nom|Description|
 |----------|-----------------|
-|[StringReference::StringReference](#ctor)|Deux constructeurs pour créer des instances de `StringReference`.|
+|[StringReference :: StringReference](#ctor)|Deux constructeurs pour créer des instances de `StringReference`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[StringReference::Data](#data)|Retourne des données de type chaîne en tant que tableau de valeurs char16.|
-|[StringReference::Longueur](#length)|Retourne le nombre de caractères de la chaîne.|
-|[StringReference::GetHSTRING](#gethstring)|Retourne des données de type chaîne en tant que HSTRING.|
-|[StringReference::GetString](#getstring)|Retourne des données de type chaîne en tant que `Platform::String^`.|
+|[StringReference ::D ATA](#data)|Retourne des données de type chaîne en tant que tableau de valeurs char16.|
+|[StringReference :: length](#length)|Retourne le nombre de caractères de la chaîne.|
+|[StringReference :: Gethstring,](#gethstring)|Retourne des données de type chaîne en tant que HSTRING.|
+|[StringReference :: GetString](#getstring)|Retourne des données de type chaîne en tant que `Platform::String^`.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[StringReference::opérateur](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|
-|[StringReference::opérateur()](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|
+|[StringReference :: Operator =](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|
+|[StringReference ::, opérateur ()](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|
 
 ### <a name="requirements"></a>Spécifications
 
-**Client pris en charge au minimum :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimum :** Serveur Windows 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
 **Espace de noms :** Platform
 
 **En-tête** : vccorlib.h
 
-## <a name="stringreferencedata-method"></a><a name="data"></a>StringReference::Data Méthode
+## <a name="stringreferencedata-method"></a><a name="data"></a> StringReference : méthode ATA :D
 
 Retourne le contenu de ce `StringReference` sous forme de tableau de valeurs char16.
 
@@ -76,7 +77,7 @@ const ::default::char16 * Data() const;
 
 Tableau de caractères de texte UNICODE char16.
 
-## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a>StringReference::GetHSTRING Méthode
+## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a> StringReference :: Gethstring,, méthode
 
 Retourne le contenu de la chaîne en tant que `__abi_HSTRING`.
 
@@ -92,7 +93,7 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="remarks"></a>Notes
 
-## <a name="stringreferencegetstring-method"></a><a name="getstring"></a>StringReference::GetString Méthode
+## <a name="stringreferencegetstring-method"></a><a name="getstring"></a> StringReference :: GetString, méthode
 
 Retourne le contenu de la chaîne en tant que `Platform::String^`.
 
@@ -107,7 +108,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 `Platform::String^` contenant les données de type chaîne.
 
-## <a name="stringreferencelength-method"></a><a name="length"></a>StringReference::Méthode de longueur
+## <a name="stringreferencelength-method"></a><a name="length"></a> StringReference :: Length, méthode
 
 Retourne le nombre de caractères de la chaîne.
 
@@ -123,7 +124,7 @@ Entier non signé qui Spécifie le nombre de caractères de la chaîne.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a>StringReference::opérateur OPÉRATEUR
+## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a> StringReference :: Operator =, opérateur
 
 Assigne l'objet spécifié à l'objet `StringReference` actif.
 
@@ -142,17 +143,17 @@ Adresse d'un objet `StringReference` utilisé pour initialiser l'objet `StringRe
 *__strArg*<br/>
 Pointeur vers un tableau de valeurs char16 utilisé pour initialiser l'objet `StringReference` actif.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à un objet de type `StringReference`.
 
 ### <a name="remarks"></a>Notes
 
-Parce `StringReference` qu’il s’agit d’une classe standard de C et non d’une classe d’arbitres, elle n’apparaît pas dans le **navigateur d’objets.**
+Étant donné que `StringReference` est une classe C++ standard et non une classe ref, elle n’apparaît pas dans l' **Explorateur d’objets**.
 
-## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a>StringReference::opérateur() Opérateur
+## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a> StringReference :: Operator (), opérateur
 
-Convertit un objet `StringReference` en un objet `Platform::String^`.
+Convertit un objet `StringReference` en objet `Platform::String^`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -165,7 +166,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 Handle d'un objet de type `Platform::String`.
 
-## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a>StringReference::StringReference Constructor
+## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a> StringReference :: StringReference, constructeur
 
 Initialise une nouvelle instance de la classe `StringReference`.
 
@@ -195,4 +196,4 @@ La première version de ce constructeur est le constructeur par défaut. La deux
 
 ## <a name="see-also"></a>Voir aussi
 
-[Platform::StringReference, classe](../cppcx/platform-stringreference-class.md)
+[Classe Platform :: StringReference](../cppcx/platform-stringreference-class.md)
