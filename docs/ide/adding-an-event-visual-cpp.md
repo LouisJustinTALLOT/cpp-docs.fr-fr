@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ajouter un événement'
 title: Ajouter un événement
 ms.date: 11/12/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - events [C++], ActiveX controls
 - add event wizard [C++]
 ms.assetid: fe34832a-edfc-4f86-aacb-8df77001873d
-ms.openlocfilehash: 1d5a8f5666dd04e00f8a438fdbf00320c37e14f4
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: c369be0fe241867b101ab458344ae706b1fd440d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693423"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240817"
 ---
 # <a name="add-an-event"></a>Ajouter un événement
 
@@ -40,18 +41,18 @@ ms.locfileid: "51693423"
 
 Cet Assistant ajoute un événement à un projet de contrôle ActiveX MFC. Vous pouvez spécifier votre propre événement, personnaliser un événement stock standard ou sélectionner un événement stock dans une liste.
 
-- **Nom de l’événement**
+- **Event name**
 
    Définit le nom utilisé par les clients Automation pour demander un événement de la classe. Entrez un nom ou sélectionnez-en un dans la liste.
 
-- **Type de l’événement**
+- **Type d’événement**
 
-   Indique le type d’événement à ajouter. Disponible uniquement si la sélection est effectuée dans la liste **Nom de l’événement**.
+   Indique le type d’événement à ajouter. Disponible uniquement si vous sélectionnez dans la liste nom de l' **événement** .
 
    |Option|Description|
    |------------|-----------------|
-   |**Stock**|Spécifie qu’un événement stock, tel qu’un clic sur un bouton, est implémenté pour cette classe. Les événements stock sont définis dans la bibliothèque MFC (Microsoft Foundation Class).|
-   |**Personnalisé**|Indique que vous utilisez votre propre implémentation de l’événement.|
+   |**Boursier**|Spécifie qu’un événement stock, tel qu’un clic sur un bouton, est implémenté pour cette classe. Les événements stock sont définis dans la bibliothèque MFC (Microsoft Foundation Class).|
+   |**Personnalisée**|Indique que vous utilisez votre propre implémentation de l’événement.|
 
 - **Nom interne**
 

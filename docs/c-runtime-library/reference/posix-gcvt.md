@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gcvt'
 title: gcvt
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - gcvt function
 ms.assetid: 913478fd-ef22-4dee-b558-ff2bd6d72f3d
-ms.openlocfilehash: dc7fa39bc278ffcbf8c81eae5ddbbbe3737fd964
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: de944e17296e40f5bce80363b53f5ccd6c71bd9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239972"
 ---
 # <a name="gcvt"></a>gcvt
 

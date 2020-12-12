@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CLinkCtrl'
 title: CLinkCtrl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 80548015ff9f24127280ee94421c8fbda7a647ea
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: a9a106d7511757fac0abfd19194081729a7d4977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236754"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl, classe
 
@@ -142,7 +143,7 @@ Spécifie la fenêtre parente du contrôle de lien. Il ne doit pas être NULL.
 *nID*<br/>
 Spécifie l’ID du contrôle de lien.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’initialisation a réussi ; Sinon, FALSe.
 
@@ -204,7 +205,7 @@ Spécifie la fenêtre parente du contrôle de lien. Il ne doit pas être NULL.
 *nID*<br/>
 Spécifie l’ID du contrôle de lien.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l’initialisation a réussi ; Sinon, FALSe.
 
@@ -222,7 +223,7 @@ Récupère la hauteur idéale du contrôle de lien.
 int GetIdealHeight() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur idéale du contrôle, en pixels.
 
@@ -248,7 +249,7 @@ dans Largeur maximale, en pixels, du lien.
 *pSize*\
 à Pointeur vers une structure de [taille](/windows/win32/api/windef/ns-windef-size) Windows. Lorsque cette méthode est retournée, le membre *CY* de la `SIZE` structure contient la hauteur de texte de lien idéale pour la largeur du texte de lien spécifiée par *cxMaxWidth*. Le membre *CX* de la structure contient la largeur du texte du lien qui est réellement nécessaire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Hauteur préférée du texte du lien, en pixels. La valeur de retour est la même que la valeur du membre *CY* de la `SIZE` structure.
 
@@ -271,7 +272,7 @@ BOOL GetItem(PLITEM pItem) const;
 *pItem*<br/>
 Pointeur vers une structure [litem](/windows/win32/api/commctrl/ns-commctrl-litem) pour recevoir des informations sur l’élément.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -308,7 +309,7 @@ Chaîne terminée par le caractère null qui contient l’ID de l’élément sp
 *cchID*<br/>
 Taille en caractères de la mémoire tampon *szID* .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -341,7 +342,7 @@ Valeur de l’élément d’état spécifié.
 *stateMask*<br/>
 Combinaison d’indicateurs décrivant l’élément d’État à atteindre. Pour obtenir la liste des valeurs, consultez la description du `state` membre dans la structure [litem](/windows/win32/api/commctrl/ns-commctrl-litem) . Les éléments autorisés sont identiques à ceux autorisés dans `state` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -378,7 +379,7 @@ Chaîne terminée par le caractère null, contenant l’URL représentée par l�
 *cchUrl*<br/>
 Taille en caractères de la mémoire tampon *szURL* .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -402,7 +403,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 *phti*<br/>
 Pointeur vers une `LHITTESTINFO` structure contenant toutes les informations relatives au lien sur lequel l’utilisateur a cliqué.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -423,7 +424,7 @@ BOOL SetItem(PLITEM pItem);
 *pItem*<br/>
 Pointeur vers une structure [litem](/windows/win32/api/commctrl/ns-commctrl-litem) contenant les informations à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -449,7 +450,7 @@ Index d’un élément de contrôle de lien.
 *szID*<br/>
 Chaîne terminée par le caractère null qui contient l’ID de l’élément spécifié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -479,7 +480,7 @@ Valeur de l’élément d’état spécifié qui est défini.
 *stateMask*<br/>
 Combinaison d’indicateurs décrivant l’élément d’État en cours de définition. Pour obtenir la liste des valeurs, consultez la description du `state` membre dans la structure [litem](/windows/win32/api/commctrl/ns-commctrl-litem) . Les éléments autorisés sont identiques à ceux autorisés dans `state` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
@@ -505,7 +506,7 @@ Index d’un élément de contrôle de lien.
 *szUrl*<br/>
 Chaîne terminée par le caractère null, contenant l’URL représentée par l’élément spécifié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 

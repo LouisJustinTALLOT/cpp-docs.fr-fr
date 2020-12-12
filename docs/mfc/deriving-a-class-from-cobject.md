@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : dérivation d’une classe à partir de CObject'
 title: Dérivation d'une classe de CObject
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: f4c01538877d8517cf3394d9e0108ce3a9df2900
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c6c2ea75354d783b234bc3f7cac7a08dac4f05da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240700"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Dérivation d'une classe de CObject
 
@@ -40,7 +41,7 @@ Vous choisissez le niveau de fonctionnalité en utilisant des macros de déclara
 
 Le tableau suivant montre la relation entre les macros utilisées pour prendre en charge la sérialisation et les informations d’exécution.
 
-### <a name="macros-used-for-serialization-and-run-time-information"></a>Macros utilisées pour les informations de sérialisation et d’exécution
+### <a name="macros-used-for-serialization-and-run-time-information"></a>Macros utilisées pour la sérialisation et les informations de Run-Time
 
 |Macro utilisée|CObject :: IsKindOf|CRuntimeClass ::<br /><br /> CreateObject|CArchive :: Operator>><br /><br /> CArchive :: Operator<<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|

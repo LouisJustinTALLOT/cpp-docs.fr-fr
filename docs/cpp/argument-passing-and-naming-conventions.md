@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur la réussite des arguments et les conventions d’affectation des noms
 title: Passage des arguments et conventions de dénomination
 ms.date: 12/17/2018
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 32f32ceb56267dc39b58b8eed1b30af697ca6d74
-ms.sourcegitcommit: d5a7ea8e462f555fbb3852d6fe5112521fef3133
+ms.openlocfilehash: bd51187fcc65dfce6c473c784c85c6afcae0bcf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96324174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239829"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passage des arguments et conventions de dénomination
 

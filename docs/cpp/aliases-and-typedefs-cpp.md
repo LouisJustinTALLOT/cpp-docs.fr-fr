@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : alias et typedefs (C++)'
 title: Alias et typedefs (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-ms.openlocfilehash: 6054b7119614d9325bd099dd39b8aa1365d97ed7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b5924fd30fe1d22e6a82fb82e2d252409d782ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239855"
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias et typedefs (C++)
 
@@ -23,7 +24,7 @@ using identifier = type;
 
 ## <a name="remarks"></a>Notes
 
-*identificateur*<br/>
+*identifier*<br/>
 Nom de l'alias.
 
 *type*<br/>

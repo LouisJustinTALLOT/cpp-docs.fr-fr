@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : AppDomain'
 title: appdomain
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-ms.openlocfilehash: 7ac74e8774204b316712a15975f7af3fb8835a9e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d817c71058c37b032e2ed6581de3a0fa8c169132
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181484"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239803"
 ---
 # <a name="appdomain"></a>appdomain
 
-Spécifie que chaque domaine d'application de votre application managée doit avoir sa propre copie d'une variable globale ou d'une variable membre static particulière. Pour plus d’informations [, C++ consultez domaines d’application et éléments visuels](../dotnet/application-domains-and-visual-cpp.md) .
+Spécifie que chaque domaine d'application de votre application managée doit avoir sa propre copie d'une variable globale ou d'une variable membre static particulière. Pour plus d’informations [, consultez domaines d’application et Visual C++](../dotnet/application-domains-and-visual-cpp.md) .
 
 Chaque domaine d'application a sa propre copie d'une variable par domaine d'application. Un constructeur d'une variable de domaine d'application est exécuté lorsqu'un assembly est chargé dans un domaine d'application, et le destructeur est exécuté lorsque le domaine d'application est déchargé.
 
-Si vous voulez que tous les domaines d'application au sein d'un processus dans le Common Langage Runtime partagent une variable globale, utilisez le modificateur `__declspec(process)`. `__declspec(process)` est activé par défaut sous [/CLR](../build/reference/clr-common-language-runtime-compilation.md). Les options de compilateur **/clr : pure** et **/clr : safe** sont dépréciées dans Visual Studio 2015 et ne sont pas prises en charge dans Visual Studio 2017.
+Si vous voulez que tous les domaines d'application au sein d'un processus dans le Common Langage Runtime partagent une variable globale, utilisez le modificateur `__declspec(process)`. `__declspec(process)` est appliqué par défaut sous [/CLR](../build/reference/clr-common-language-runtime-compilation.md). Les options de compilateur **/clr : pure** et **/clr : safe** sont dépréciées dans Visual Studio 2015 et ne sont pas prises en charge dans Visual Studio 2017.
 
 `__declspec(appdomain)` est valide uniquement lorsque l’une des options du compilateur **/CLR** est utilisée. Seules une variable globale, une variable membre static ou une variable locale static peuvent être marquées avec `__declspec(appdomain)`. Il est incorrect d'appliquer `__declspec(appdomain)` aux membres static des types managés, car ils ont toujours ce comportement.
 

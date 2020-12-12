@@ -1,19 +1,20 @@
 ---
-title: Erreur irrécupérable RW1009 du compilateur de ressources
+description: 'En savoir plus sur : erreur irrécupérable du compilateur de ressources RW1009 du compilateur'
+title: 'Erreur irrécupérable RW1009 du compilateur de ressources '
 ms.date: 11/04/2016
 f1_keywords:
 - RW1009
 helpviewer_keywords:
 - RW1009
 ms.assetid: c11aceaf-3527-4509-867d-e7b22254e276
-ms.openlocfilehash: e54037144763c6c1a0d8563fac3714d68887403e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b6d1cbbb59bd0ec6155909909be37eeee36004ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237359"
 ---
-# <a name="resource-compiler-fatal-error-rw1009"></a>Erreur irrécupérable RW1009 du compilateur de ressources
+# <a name="resource-compiler-fatal-error-rw1009"></a>Erreur irrécupérable RW1009 du compilateur de ressources 
 
 Erreur lors de la création de la ressource-nom
 

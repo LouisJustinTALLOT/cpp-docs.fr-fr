@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur Runtime C R6019'
 title: Erreur Runtime C R6019
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-ms.openlocfilehash: b647825b7e856be9dc51a5a652be87a4cc6d0e23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 190b836d5c0823b3644e4ff49812b5de05f421e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197260"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237632"
 ---
 # <a name="c-runtime-error-r6019"></a>Erreur Runtime C R6019
 

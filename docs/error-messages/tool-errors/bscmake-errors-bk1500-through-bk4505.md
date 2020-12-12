@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : erreurs et avertissements BSCMAKE (BKxxxx)'
 title: Erreurs et avertissements BSCMAKE
 ms.date: 04/16/2019
 ms.assetid: 3767baa6-e639-472e-99fd-7543fd945cd3
-ms.openlocfilehash: e6abc334d9ecf5df54d200ab242c91a7035ab226
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 8273782f82102c81cf7f7dd5e93b7e1ec6d1703e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856369"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237905"
 ---
 # <a name="bscmake-errors-and-warnings-bkxxxx"></a>Erreurs et avertissements BSCMAKE (BKxxxx)
 
-Cette section est une référence des erreurs et avertissements générés par le BSCMAKE outil de génération. BSCMAKE erreurs et avertissements ont la forme BK*xxxx*, où *xxxx* est un nombre à quatre chiffres.
+Cette section est une référence aux erreurs et avertissements générés par l’outil de génération BSCMAKE. Les erreurs et avertissements BSCMAKE se présentent sous la forme BK *xxxx*, où *xxxx* est un nombre à quatre chiffres.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -34,11 +35,11 @@ Cette section est une référence des erreurs et avertissements générés par l
 
 ## <a name="warning-messages"></a>Messages d’avertissement
 
-[BSCMAKE BK4502 d’avertissement](bscmake-warning-bk4502.md) \
-[BSCMAKE BK4503 d’avertissement](bscmake-warning-bk4503.md) \
-[BSCMAKE BK4504 d’avertissement](bscmake-warning-bk4504.md)
+[AVERTISSEMENT BSCMAKE BK4502](bscmake-warning-bk4502.md) \
+[BSCMAKE, avertissement BK4503](bscmake-warning-bk4503.md) \
+[Avertissement BSCMAKE BK4504](bscmake-warning-bk4504.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md) \
+[Erreurs et avertissements du compilateur C/C++ et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md) \
 [Référence BSCMake](../../build/reference/bscmake-reference.md)
