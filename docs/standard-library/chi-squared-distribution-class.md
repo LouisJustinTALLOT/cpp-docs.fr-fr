@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe chi_squared_distribution'
 title: chi_squared_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 5d7a7e2ba3c962a1ef63b14fed5d4bfb67c38b44
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5ee63e0331a8412ca5104dd7dfbfc427d6b7f627
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845677"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325166"
 ---
 # <a name="chi_squared_distribution-class"></a>chi_squared_distribution, classe
 
@@ -74,7 +75,7 @@ Moteur de générateur de nombres aléatoires uniformes. Pour connaître les typ
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la loi du Khi-deux. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées selon la distribution Chi-Squared. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 [chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)\
 [param_type](#param_type)
@@ -216,7 +217,7 @@ Distribution for 10 samples:
     10: 1054.7051509381
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

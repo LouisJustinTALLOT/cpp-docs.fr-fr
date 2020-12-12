@@ -1,5 +1,6 @@
 ---
-title: Définir le chemin d’accès et les variables d’environnement pour les générations à partir de la ligne de commande
+description: 'En savoir plus sur : définir le chemin d’accès et les variables d’environnement pour les builds de Command-Line'
+title: Définir le chemin d’accès et les variables d’environnement pour les builds Command-Line
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: aeafe806e5d29b89c243586974814aa7cfc16d1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3accc1cf56b86822298e1f1298bcae7d41c28332
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275384"
 ---
-# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Définir le chemin d’accès et les variables d’environnement pour les générations à partir de la ligne de commande
+# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Définir le chemin d’accès et les variables d’environnement pour les builds Command-Line
 
 Les outils de génération en ligne de commande Microsoft C++ (MSVC) requièrent plusieurs variables d’environnement personnalisées pour votre installation et votre configuration de Build. Lorsqu’une charge de travail C++ est installée par le programme d’installation de Visual Studio, elle crée des fichiers de commandes personnalisés, ou fichiers de commandes, qui définissent les variables d’environnement requises. Le programme d’installation utilise ensuite ces fichiers de commandes pour créer des raccourcis pour le menu Démarrer de Windows afin d’ouvrir une fenêtre d’invite de commandes développeur. Ces raccourcis configurent les variables d’environnement pour une configuration de build spécifique. Lorsque vous souhaitez utiliser les outils en ligne de commande, vous pouvez exécuter l’un de ces raccourcis ou ouvrir une fenêtre d’invite de commandes simple, puis exécuter l’un des fichiers de commandes personnalisés pour définir vous-même l’environnement de configuration de Build. Pour plus d’informations, consultez [utiliser l’ensemble d’outils MSVC à partir de la ligne de commande](building-on-the-command-line.md). Pour utiliser les fichiers de commandes avec une invite de commandes simple, consultez la section [emplacements des fichiers de commandes développeur](building-on-the-command-line.md#developer_command_file_locations).
 
@@ -34,8 +35,8 @@ Pour connaître les variables d’environnement qui sont définies par un raccou
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utiliser le jeu d’outils MSVC à partir de la ligne de commande](building-on-the-command-line.md)<br/>
+[Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande](building-on-the-command-line.md)<br/>
 [Informations de référence sur l’éditeur de liens MSVC](reference/linking.md)<br/>
 [Options de l’éditeur de liens MSVC](reference/linker-options.md)<br/>
-[Informations de référence sur le compilateur MSVC](reference/compiling-a-c-cpp-program.md)<br/>
+[Référence du compilateur MSVC](reference/compiling-a-c-cpp-program.md)<br/>
 [Options du compilateur MSVC](reference/compiler-options.md)

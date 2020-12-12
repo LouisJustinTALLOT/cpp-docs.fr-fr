@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreurs et avertissements des outils Éditeur de liens (LNKxxxx)'
 title: Erreurs et avertissements des outils Éditeur de liens
 ms.date: 09/10/2019
 f1_keywords:
@@ -313,16 +314,16 @@ helpviewer_keywords:
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-ms.openlocfilehash: e845ba44476508892be63f0a99f8b2c2fedf0d8e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 97d73a56469ac2337546859517d3057f1d078132
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332087"
 ---
 # <a name="linker-tools-errors-and-warnings-lnkxxxx"></a>Erreurs et avertissements des outils Éditeur de liens (LNKxxxx)
 
-Les outils de l’éditeur de liens LINK, LIB, DUMPBIN et EDITBIN partagent un exécutable commun qui génère ces erreurs et avertissements. Les outils génèrent des avertissements au format LNK*xxxx*, où *xxxx* est un nombre à quatre chiffres.
+Les outils de l’éditeur de liens LINK, LIB, DUMPBIN et EDITBIN partagent un exécutable commun qui génère ces erreurs et avertissements. Les outils génèrent des avertissements au format LNK *xxxx*, où *xxxx* est un nombre à quatre chiffres.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -455,4 +456,4 @@ Les outils de l’éditeur de liens LINK, LIB, DUMPBIN et EDITBIN partagent un e
 
 ## <a name="see-also"></a>Voir aussi
 
-[Erreurs etC++ avertissements du compilateur C/du compilateur et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md)
+[Erreurs d’outils et avertissements de compilateur C/C++ et de build](../compiler-errors-1/c-cpp-build-errors.md)

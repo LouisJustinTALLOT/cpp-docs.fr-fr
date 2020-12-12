@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : char_traits &lt; char32_t &gt; struct'
 title: char_traits&lt;char32_t&gt;, struct
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char32_t> class
 ms.assetid: c0315466-45d0-4a99-b83e-3b1dbfbfbbc3
-ms.openlocfilehash: 0daf61f641b0b68bf806bba081b3c312777c6fe7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b1b37421ef5e43c301cf36e1688806c8b6c8724
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325246"
 ---
 # <a name="char_traitsltchar32_tgt-struct"></a>char_traits&lt;char32_t&gt;, struct
 

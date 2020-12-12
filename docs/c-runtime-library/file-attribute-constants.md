@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les constantes d’attribut de fichier
 title: Constantes d'attributs de fichier
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-ms.openlocfilehash: 271459c33cdcc1110222871bdca06d3f04edb497
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8b57549b4a21cc5d699f933009c575b3f3fca81d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306363"
 ---
 # <a name="file-attribute-constants"></a>Constantes d'attributs de fichier
 
@@ -40,7 +41,7 @@ ms.locfileid: "57750882"
 #include <io.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Ces constantes spécifient les attributs actuels du fichier ou du répertoire spécifié par la fonction.
 
@@ -48,12 +49,12 @@ Les attributs sont représentés par les constantes manifestes suivantes :
 
 |Constante|Description|
 |-|-|
-|`_A_ARCH`| Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande BACKUP. Valeur : 0x20|
-|`_A_HIDDEN`| Fichier caché. Normalement non utilisé avec la commande DIR, sauf si l’option /AH est utilisée. Retourne des informations sur les fichiers normaux, ainsi que les fichiers avec cet attribut. Valeur : 0x02|
-|`_A_NORMAL`| Normal. Le fichier peut être lu et écrit sans restriction. Valeur : 0x00|
-|`_A_RDONLY`| Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ou de créer un fichier portant le même nom. Valeur : 0x01|
-|`_A_SUBDIR`| Sous-répertoire. Valeur : 0x10|
-|`_A_SYSTEM`| Fichier système. Normalement non utilisé avec la commande DIR, sauf si l’option /AS est utilisée. Valeur : 0x04|
+|`_A_ARCH`| Archive. Défini chaque fois que le fichier est modifié et supprimé par la commande BACKUP. Valeur : 0x20|
+|`_A_HIDDEN`| Fichier caché. Normalement non utilisé avec la commande DIR, sauf si l’option /AH est utilisée. Retourne des informations sur les fichiers normaux, ainsi que les fichiers avec cet attribut. Valeur : 0x02|
+|`_A_NORMAL`| Normal. Le fichier peut être lu et écrit sans restriction. Valeur : 0x00|
+|`_A_RDONLY`| Lecture seule. Impossible d’ouvrir le fichier pour des opérations d’écriture ou de créer un fichier portant le même nom. Valeur : 0x01|
+|`_A_SUBDIR`| Sous-répertoire. Valeur : 0x10|
+|`_A_SYSTEM`| Fichier système. Normalement non utilisé avec la commande DIR, sauf si l’option /AS est utilisée. Valeur : 0x04|
 
 Plusieurs constantes peuvent être combinées avec l’opérateur OR (&#124;).
 

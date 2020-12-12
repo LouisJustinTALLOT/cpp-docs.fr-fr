@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : utilisation de la pile x64'
 title: Utilisation de la pile x64
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: b1b1e0a8c30d5e24e81372912d5c488efce14841
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 564b5888f59d06199cd0f2c175b928c725e26e1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275358"
 ---
 # <a name="x64-stack-usage"></a>Utilisation de la pile x64
 

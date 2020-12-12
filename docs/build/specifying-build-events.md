@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spécification d’événements de build'
 title: Spécification d'événements de build
 ms.date: 12/28/2017
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - build events [C++]
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-ms.openlocfilehash: c8097e013f934c45b8e3860b8377bdb2bdb9d9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d1dc9a1f0e379c3abe36117beaf9ef58bcbd064
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315233"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275397"
 ---
 # <a name="specifying-build-events"></a>Spécification d’événements de build
 
@@ -46,7 +47,7 @@ Pour obtenir des informations générales sur les événements de build, consult
 
       Il est possible de spécifier plusieurs fichiers d’entrée et de sortie symboliquement à l’aide de macros MSBuild. Pour plus d’informations sur la façon de spécifier l’emplacement des fichiers, ou les noms des ensembles de fichiers, consultez [macros courantes pour les commandes et les propriétés de génération](reference/common-macros-for-build-commands-and-properties.md).
 
-      Étant donné que le caractère'% 'est réservé par MSBuild, si vous spécifiez une variable **%** d’environnement, remplacez chaque caractère d’échappement par la séquence d’échappement hexadécimale **%25** . Par exemple, remplacez **%WINDIR%** par **%25WINDIR%25**. MSBuild remplace chaque séquence **%25** par le caractère **%** avant d’accéder à la variable d’environnement.
+      Étant donné que le caractère'% 'est réservé par MSBuild, si vous spécifiez une variable d’environnement, remplacez chaque **%** caractère d’échappement par la séquence d’échappement hexadécimale **%25** . Par exemple, remplacez **%WINDIR%** par **%25WINDIR%25**. MSBuild remplace chaque séquence **%25** par le caractère **%** avant d’accéder à la variable d’environnement.
 
    - Dans **Description**, tapez une description pour cet événement. La description s’affiche dans la fenêtre **Sortie** quand cet événement se produit.
 

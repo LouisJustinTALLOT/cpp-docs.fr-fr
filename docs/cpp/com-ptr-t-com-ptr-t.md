@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _com_ptr_t :: _com_ptr_t'
 title: _com_ptr_t::_com_ptr_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b92d36b1138ba2615aa8d70acb191c1f4ed43bb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295560"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
@@ -141,7 +142,7 @@ Pointeur d'interface brut.
 *fAddRef*<br/>
 Si **`true`** , `AddRef` est appelé pour incrémenter le décompte de références du pointeur d’interface encapsulé.
 
-*CP*<br/>
+*cp*<br/>
 Objet **_com_ptr_t** .
 
 *p*<br/>
@@ -150,7 +151,7 @@ Pointeur d’interface brut qui est différent du type de pointeur intelligent d
 *varSrc*<br/>
 Objet `_variant_t`.
 
-*clsid*<br/>
+*identificateur*<br/>
 `CLSID`D’une coclasse.
 
 *dwClsContext*<br/>

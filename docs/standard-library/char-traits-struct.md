@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : struct char_traits'
 title: char_traits, struct
 ms.date: 05/07/2019
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 834572e96d9d8c19ae5d75a57dfa6c0053ae0ec5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a42aa29f2400d4610974530de04699daa32b7f1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222600"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325233"
 ---
 # <a name="char_traits-struct"></a>char_traits, struct
 
@@ -70,7 +71,7 @@ Le struct de modèle décrit différentes caractéristiques de caractères pour 
 |-|-|
 |[assign](#assign)|Affecte la valeur d'un caractère à un autre.|
 |[compar](#compare)|Compare un nombre spécifié de caractères dans deux chaînes.|
-|[copy](#copy)|Copie un nombre spécifié de caractères d'une chaîne vers une autre. Obsolète. Utilisez [char_traits::_Copy_s](#copy_s) à la place.|
+|[copy](#copy)|Copie un nombre spécifié de caractères d'une chaîne vers une autre. Action déconseillée. Utilisez [char_traits::_Copy_s](#copy_s) à la place.|
 |[_Copy_s](#copy_s)|Copie un nombre spécifié de caractères d'une chaîne vers une autre.|
 |[EOF](#eof)|Retourne le caractère de fin de fichier (EOF).|
 |[eq](#eq)|Teste si deux caractères `char_type` sont égaux.|
@@ -78,7 +79,7 @@ Le struct de modèle décrit différentes caractéristiques de caractères pour 
 |[find](#find)|Recherche la première occurrence d'un caractère spécifié dans une plage de caractères.|
 |[length](#length)|Retourne la longueur d'une chaîne.|
 |[lt](#lt)|Teste si un caractère est inférieur à un autre.|
-|[move](#move)|Copie un nombre spécifié de caractères d'une séquence vers une autre séquence qui la chevauche éventuellement. Obsolète. Utilisez [char_traits::_Move_s](#move_s) à la place.|
+|[move](#move)|Copie un nombre spécifié de caractères d'une séquence vers une autre séquence qui la chevauche éventuellement. Action déconseillée. Utilisez [char_traits::_Move_s](#move_s) à la place.|
 |[_Move_s](#move_s)|Copie un nombre spécifié de caractères d'une séquence vers une autre séquence qui la chevauche éventuellement.|
 |[not_eof](#not_eof)|Teste si un caractère est le caractère de fin de fichier (EOF).|
 |[to_char_type](#to_char_type)|Convertit un caractère `int_type` en caractère `char_type` correspondant et retourne le résultat.|
@@ -90,7 +91,7 @@ Le struct de modèle décrit différentes caractéristiques de caractères pour 
 
 **Espace de noms :** std
 
-## <a name="char_traitsassign"></a><a name="assign"></a>char_traits :: assign
+## <a name="char_traitsassign"></a><a name="assign"></a> char_traits :: assign
 
 Assigne la valeur d’un caractère à un autre ou à une plage d’éléments dans une chaîne.
 
@@ -116,7 +117,7 @@ Tableau de chaînes ou de caractères dont les éléments initiaux doivent recev
 *_Num*\
 Nombre d’éléments auxquels des valeurs vont être assignées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La deuxième fonction membre retourne un pointeur vers la chaîne dont les premières *_Num* éléments ont été affectées à des valeurs de *_CharFrom*.
 
@@ -161,7 +162,7 @@ The target string s1 is: abcd-1234-abcd
 The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 ```
 
-## <a name="char_traitschar_type"></a><a name="char_type"></a>char_traits :: char_type
+## <a name="char_traitschar_type"></a><a name="char_type"></a> char_traits :: char_type
 
 Type de caractère.
 
@@ -177,7 +178,7 @@ Le type est un synonyme du paramètre de modèle `CharType`.
 
 Consultez l’exemple relatif à [copy](#copy) pour savoir comment déclarer et utiliser `char_type`.
 
-## <a name="char_traitscompare"></a><a name="compare"></a>char_traits :: compare
+## <a name="char_traitscompare"></a><a name="compare"></a> char_traits :: compare
 
 Compare un nombre spécifié de caractères dans deux chaînes.
 
@@ -198,7 +199,7 @@ Deuxième de deux chaînes à comparer à l’autre.
 *_Num*\
 Nombre d’éléments dans les chaînes à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une valeur négative si la première chaîne est inférieure à la deuxième ; 0 si les deux chaînes sont égales ; ou une valeur positive si la première chaîne est supérieure à la deuxième.
 
@@ -241,7 +242,7 @@ int main() {
 }
 ```
 
-## <a name="char_traitscopy"></a><a name="copy"></a>char_traits :: copier
+## <a name="char_traitscopy"></a><a name="copy"></a> char_traits :: copier
 
 Copie un nombre spécifié de caractères d'une chaîne vers une autre.
 
@@ -264,7 +265,7 @@ static char_type *copy(char_type* _To,
 *_Num*\
 Nombre d’éléments à copier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Premier élément copié dans le tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
@@ -303,7 +304,7 @@ The destination string is: ABCD-1234
 The result1 = copy ( s1 , s2 , 4 ) is: ABCD-1234-abcd
 ```
 
-## <a name="char_traits_copy_s"></a><a name="copy_s"></a>char_traits :: _Copy_s
+## <a name="char_traits_copy_s"></a><a name="copy_s"></a> char_traits :: _Copy_s
 
 Copie un nombre spécifié de caractères d'une chaîne vers une autre.
 
@@ -329,7 +330,7 @@ Tableau source de chaînes ou de caractères à copier.
 *saut*\
 Nombre d’éléments à copier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
@@ -368,7 +369,7 @@ The destination string is: ABCD-1234
 The result1 = _Copy_s(s1, char_traits<char>::length(s1), s2, 4) is: ABCD-1234-abcd
 ```
 
-## <a name="char_traitseof"></a><a name="eof"></a>char_traits :: EOF
+## <a name="char_traitseof"></a><a name="eof"></a> char_traits :: EOF
 
 Retourne le caractère de fin de fichier (EOF).
 
@@ -376,7 +377,7 @@ Retourne le caractère de fin de fichier (EOF).
 static int_type eof();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Caractère EOF.
 
@@ -419,7 +420,7 @@ The eof marker for char_traits<char> is: -1
 The eof marker for char_traits<wchar_t> is: 65535
 ```
 
-## <a name="char_traitseq"></a><a name="eq"></a>char_traits :: EQ
+## <a name="char_traitseq"></a><a name="eq"></a> char_traits :: EQ
 
 Teste si deux caractères `char_type` sont égaux.
 
@@ -435,7 +436,7 @@ Premier de deux caractères dont l’égalité est à vérifier.
 *_Ch2*\
 Deuxième de deux caractères dont l’égalité est à vérifier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le premier caractère est égal au deuxième caractère ; Sinon, **`false`** .
 
@@ -479,7 +480,7 @@ The character ch1 is not equal to the character ch2.
 The character ch1 is equal to the character ch3.
 ```
 
-## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a>char_traits :: eq_int_type
+## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a> char_traits :: eq_int_type
 
 Vérifie si deux caractères représentés sous la forme d’un `int_type` sont égaux ou non.
 
@@ -495,7 +496,7 @@ Premier des deux caractères dont l’égalité doit être testée en tant que `
 *_Ch2*\
 Deuxième de deux caractères dont l’égalité est à vérifier, représentés sous la forme d’un `int_type`s.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le premier caractère est égal au deuxième caractère ; Sinon, **`false`** .
 
@@ -564,7 +565,7 @@ The int_type representation of character ch1
 is equal to the int_type representation of ch3.
 ```
 
-## <a name="char_traitsfind"></a><a name="find"></a>char_traits :: find
+## <a name="char_traitsfind"></a><a name="find"></a> char_traits :: find
 
 Recherche la première occurrence d'un caractère spécifié dans une plage de caractères.
 
@@ -585,7 +586,7 @@ Nombre de positions, à partir de la première, de la plage dans laquelle s’ef
 *_Ch*\
 Caractère à rechercher dans la plage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un pointeur vers la première occurrence du caractère spécifié dans la plage si une correspondance est trouvée ; sinon, un pointeur null.
 
@@ -631,7 +632,7 @@ of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
-## <a name="char_traitsint_type"></a><a name="int_type"></a>char_traits :: int_type
+## <a name="char_traitsint_type"></a><a name="int_type"></a> char_traits :: int_type
 
 Type entier qui peut représenter un caractère de type `char_type` ou un caractère de fin de fichier (EOF).
 
@@ -647,7 +648,7 @@ Il doit être possible de taper un cast d’une valeur de type `CharType` pour `
 
 Consultez l’exemple relatif à [eq_int_type](#eq_int_type) pour savoir comment déclarer et utiliser `int_type`.
 
-## <a name="char_traitslength"></a><a name="length"></a>char_traits :: length
+## <a name="char_traitslength"></a><a name="length"></a> char_traits :: length
 
 Retourne la longueur d'une chaîne.
 
@@ -660,7 +661,7 @@ static size_t length(const char_type* str);
 *Str*\
 Chaîne C dont la longueur doit être mesurée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments dans la séquence mesurée, sans inclure le terminateur null.
 
@@ -690,7 +691,7 @@ The C-string str1 is: Hello
 The length of C-string str1 is: 5.
 ```
 
-## <a name="char_traitslt"></a><a name="lt"></a>char_traits :: lt
+## <a name="char_traitslt"></a><a name="lt"></a> char_traits :: lt
 
 Teste si un caractère est inférieur à un autre.
 
@@ -706,7 +707,7 @@ Premier de deux caractères dont la relation Inférieur à est à vérifier.
 *_Ch2*\
 Deuxième de deux caractères dont la relation Inférieur à est à vérifier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le premier caractère est inférieur au deuxième caractère ; Sinon, **`false`** .
 
@@ -749,7 +750,7 @@ The character ch1 is less than the character ch2.
 The character ch3 is not less than the character ch2.
 ```
 
-## <a name="char_traitsmove"></a><a name="move"></a>char_traits :: Move
+## <a name="char_traitsmove"></a><a name="move"></a> char_traits :: Move
 
 Copie un nombre spécifié de caractères d’une séquence dans une autre qui la chevauche éventuellement.
 
@@ -772,7 +773,7 @@ static char_type *move(char_type* _To,
 *_Num*\
 Nombre d’éléments à copier à partir de la chaîne source.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le premier élément *_To* copié dans le tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
@@ -826,7 +827,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = move ( sToFrom2 , findc , 8 ) is: cd-1234-4-ABCD
 ```
 
-## <a name="char_traits_move_s"></a><a name="move_s"></a>char_traits :: _Move_s
+## <a name="char_traits_move_s"></a><a name="move_s"></a> char_traits :: _Move_s
 
 Copie un nombre spécifié de caractères d’une séquence dans une autre qui la chevauche éventuellement.
 
@@ -852,7 +853,7 @@ La taille de *dest*. Si `char_type` est **`char`** , il est en octets. Si `char_
 *saut*\
 Nombre d’éléments à copier à partir de la chaîne source.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le premier élément *dest* copié dans le tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
@@ -906,7 +907,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) is: cd-1234-4-ABCD
 ```
 
-## <a name="char_traitsnot_eof"></a><a name="not_eof"></a>char_traits :: not_eof
+## <a name="char_traitsnot_eof"></a><a name="not_eof"></a> char_traits :: not_eof
 
 Vérifie si un caractère est ou n’est pas le caractère de fin de fichier (EOF).
 
@@ -919,7 +920,7 @@ static int_type not_eof(const int_type& _Ch);
 *_Ch*\
 Caractère représenté sous la forme d’un `int_type` à vérifier pour déterminer s’il est ou non le caractère EOF.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `int_type`Représentation du caractère testé, si le `int_type` du caractère n’est pas égal à celui du caractère EOF.
 
@@ -978,7 +979,7 @@ The eofTest1 returns: 120, which is the character: x.
 The eofTest2 indicates int2 is an EOF character.
 ```
 
-## <a name="char_traitsoff_type"></a><a name="off_type"></a>char_traits :: off_type
+## <a name="char_traitsoff_type"></a><a name="off_type"></a> char_traits :: off_type
 
 Type entier qui peut représenter des décalages entre les positions dans un flux.
 
@@ -990,7 +991,7 @@ typedef streamoff off_type;
 
 Le type est un entier signé qui décrit un objet capable de stocker un décalage d’octet impliqué dans différentes opérations de positionnement de flux. Il s’agit généralement d’un synonyme de [streamoff](../standard-library/ios-typedefs.md#streamoff), mais il a essentiellement les mêmes propriétés que ce type.
 
-## <a name="char_traitspos_type"></a><a name="pos_type"></a>char_traits ::p os_type
+## <a name="char_traitspos_type"></a><a name="pos_type"></a> char_traits ::p os_type
 
 Type entier qui peut représenter des positions dans un flux.
 
@@ -1002,7 +1003,7 @@ typedef streampos pos_type;
 
 Le type décrit un objet capable de stocker toutes les informations nécessaires à la restauration d’un indicateur de position de fichier arbitraire dans un flux. Il s’agit généralement d’un synonyme de [streampos](../standard-library/ios-typedefs.md#streampos), mais dans tous les cas, il a essentiellement les mêmes propriétés que ce type.
 
-## <a name="char_traitsstate_type"></a><a name="state_type"></a>char_traits :: state_type
+## <a name="char_traitsstate_type"></a><a name="state_type"></a> char_traits :: state_type
 
 Type qui représente l’état de la conversion de caractères multioctets dans un flux.
 
@@ -1014,7 +1015,7 @@ typedef implementation-defined state_type;
 
 Le type décrit un objet qui peut représenter un état de conversion. Il s’agit généralement d’un synonyme de `mbstate_t`, mais dans tous les cas, il a essentiellement les mêmes propriétés que ce type.
 
-## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a>char_traits :: to_char_type
+## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a> char_traits :: to_char_type
 
 Convertit un caractère `int_type` en caractère `char_type` correspondant et retourne le résultat.
 
@@ -1027,7 +1028,7 @@ static char_type to_char_type(const int_type& _Ch);
 *_Ch*\
 Caractère `int_type` à représenter sous la forme d’un `char_type`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Caractère `char_type` correspondant au caractère `int_type`.
 
@@ -1120,7 +1121,7 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a>char_traits :: to_int_type
+## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a> char_traits :: to_int_type
 
 Convertit un caractère `char_type` en caractère `int_type` correspondant et retourne le résultat.
 
@@ -1133,7 +1134,7 @@ static int_type to_int_type(const char_type& _Ch);
 *_Ch*\
 Caractère `char_type` à représenter sous la forme d’un `int_type`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Caractère `int_type` correspondant au caractère `char_type`.
 
@@ -1143,7 +1144,7 @@ Les opérations de conversion `to_int_type` et [to_char_type](#to_char_type) son
 
 `to_int_type` ( `to_char_type` ( *x* ) ) == *x*
 
-pour Any `int_type` *x*et
+pour Any `int_type` *x* et
 
 `to_char_type` ( `to_int_type` ( *x* ) ) == *x*
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 3) C4839'
 title: Avertissement du compilateur (niveau 3) C4839
 ms.date: 09/13/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a8ae0d3e3c74c62d05163edd981679e5390fb184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198573"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332064"
 ---
 # <a name="compiler-warning-level-3-c4839"></a>Avertissement du compilateur (niveau 3) C4839
 
 > utilisation non standard de la classe'*type*'en tant qu’argument d’une fonction variadiques
 
-Les classes ou les structs passés à une fonction variadiques, comme `printf`, doivent être copiés de manière triviale. Quand de tels objets sont passés, le compilateur effectue simplement une copie au niveau du bit et n’appelle pas le constructeur ou le destructeur.
+Les classes ou les structs passés à une fonction variadiques, comme `printf` doivent être copiés de manière triviale. Quand de tels objets sont passés, le compilateur effectue simplement une copie au niveau du bit et n’appelle pas le constructeur ou le destructeur.
 
 Cet avertissement est disponible à partir de Visual Studio 2017.
 
@@ -51,7 +52,7 @@ Pour corriger cette erreur, vous pouvez appeler une fonction membre qui retourne
     printf("%i\n", i.load());
 ```
 
-Pour les chaînes générées et gérées à l’aide de `CStringW`, le `operator LPCWSTR()` fourni doit être utilisé pour effectuer un cast d’un objet `CStringW` vers le pointeur C attendu par la chaîne de format.
+Pour les chaînes générées et gérées à l’aide de `CStringW` , le fourni `operator LPCWSTR()` doit être utilisé pour effectuer un cast d’un `CStringW` objet en pointeur C attendu par la chaîne de format.
 
 ```cpp
     CStringW str1;

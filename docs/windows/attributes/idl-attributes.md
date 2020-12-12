@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : attributs IDL'
 title: Attributs IDL (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 8cceae2f1c4880b72f1ffc30070d6aa6bf8e3a51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1db49b6c68d0dd4e4f4c6c5dcfb148cafc39159d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275462"
 ---
 # <a name="idl-attributes"></a>Attributs IDL
 
@@ -36,18 +37,18 @@ Notez que [idl_quote](idl-quote.md) vous permet d’utiliser des constructions M
 |[async_uuid](async-uuid.md)|Spécifie l’UUID qui indique au compilateur MIDL de définir à la fois les versions synchrones et asynchrones d’une interface COM.|
 |[bindable](bindable.md)|Indique que la propriété prend en charge la liaison de données.|
 |[call_as](call-as.md)|Permet à une fonction non accessible à distance d’être mappée à une fonction distante.|
-|[études](case-cpp.md)|Utilisé avec l’attribut [switch_type](switch-type.md) dans une Union.|
+|[case](case-cpp.md)|Utilisé avec l’attribut [switch_type](switch-type.md) dans une Union.|
 |[coclasse](coclass.md)|Place la définition de classe dans un fichier. idl en tant que coclasse.|
 |[control](control.md)|Spécifie que le type défini par l’utilisateur est un contrôle.|
 |[cpp_quote](cpp-quote.md)|Émet la chaîne spécifiée, sans les caractères guillemets, dans le fichier d’en-tête généré.|
 |[defaultbind](defaultbind.md)|Indique la propriété unique pouvant être liée qui représente le mieux l’objet.|
 |[defaultcollelem](defaultcollelem.md)|Utilisé pour Visual Basic optimisation du code.|
 |[DefaultValue](defaultvalue.md)|Autorise la spécification d’une valeur par défaut pour un paramètre facultatif typé.|
-|[valeurs](default-cpp.md)|Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.|
+|[default](default-cpp.md)|Indique que l’interface personnalisée ou dispinterface définie dans une coclasse représente l’interface de programmabilité par défaut.|
 |[defaultvtable](defaultvtable.md)|Définit une interface comme interface vtable par défaut pour un contrôle.|
 |[dispinterface](dispinterface.md)|Place une interface dans le fichier .idl comme interface de dispatch.|
 |[displaybind](displaybind.md)|Indique une propriété qui doit être affichée à l’utilisateur comme pouvant être liée.|
-|[dual](dual.md)|Place une interface dans le fichier. idl en tant qu’interface double.|
+|[double](dual.md)|Place une interface dans le fichier. idl en tant qu’interface double.|
 |[mention](entry.md)|Spécifie une fonction ou une constante exportée dans un module en identifiant le point d’entrée dans la DLL.|
 |[first_is](first-is.md)|Spécifie l’index du premier élément de tableau à transmettre.|
 |[helpcontext](helpcontext.md)|Spécifie un ID de contexte qui permet à l’utilisateur d’afficher des informations sur cet élément dans le fichier d’aide.|
@@ -79,12 +80,12 @@ Notez que [idl_quote](idl-quote.md) vous permet d’utiliser des constructions M
 |[noncreatable](noncreatable.md)|Définit un objet qui ne peut pas être instancié par lui-même.|
 |[nonextensible](nonextensible.md)|Spécifie que l' `IDispatch` implémentation de comprend uniquement les propriétés et les méthodes listées dans la description de l’interface et ne peut pas être étendue avec des membres supplémentaires au moment de l’exécution.|
 |[object](object-cpp.md)|Identifie une interface personnalisée ; synonyme d’attribut personnalisé.|
-|[odl](odl.md)|Identifie une interface en tant qu’interface ODL (Object Description Language).|
+|[ODL](odl.md)|Identifie une interface en tant qu’interface ODL (Object Description Language).|
 |[oleautomation](oleautomation.md)|Indique qu’une interface est compatible avec Automation.|
 |[facultatif](optional-cpp.md)|Spécifie un paramètre facultatif pour une fonction membre.|
 |[à](out-cpp.md)|Identifie des paramètres pointeurs qui sont retournés de la procédure appelée à la procédure appelante (du serveur au client).|
 |[pointer_default](pointer-default.md)|Spécifie l’attribut de pointeur par défaut pour tous les pointeurs, à l’exception des pointeurs de niveau supérieur qui apparaissent dans les listes de paramètres.|
-|[Bali](pragma.md)|Émet la chaîne spécifiée, sans les guillemets, dans le fichier. idl généré.|
+|[pragma](pragma.md)|Émet la chaîne spécifiée, sans les guillemets, dans le fichier. idl généré.|
 |[ProgID](progid.md)|Spécifie le ProgID d’un objet COM.|
 |[propget](propget.md)|Spécifie une fonction d’accesseur de propriété (Get).|
 |[propputref](propputref.md)|Spécifie une fonction de définition de propriété qui utilise une référence au lieu d’une valeur.|
