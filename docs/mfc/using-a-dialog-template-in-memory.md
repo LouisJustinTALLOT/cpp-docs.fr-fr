@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation d’un modèle de boîte de dialogue en mémoire'
 title: Utilisation d'un modèle de boîte de dialogue en mémoire
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dialog templates [MFC], in memory
 - MFC dialog boxes [MFC], dialog templates
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
-ms.openlocfilehash: 7250ea628f371cac16e0a34e81d8bab0828db73e
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 829ab37e0aa8a5ec23d8313c26f774093746fa70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685032"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263489"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Utilisation d'un modèle de boîte de dialogue en mémoire
 

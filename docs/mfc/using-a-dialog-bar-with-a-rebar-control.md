@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation d’une barre de boîte de dialogue avec un contrôle rebar'
 title: Utilisation d'une barre de boîte de dialogue avec un contrôle rebar
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-ms.openlocfilehash: e4e786d3670ec74b734739e29aa7e3e33b5af384
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 97fb8ca5c356d91fa4b4ba44753fbdc9bf298435
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302365"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263528"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Utilisation d'une barre de boîte de dialogue avec un contrôle rebar
 
@@ -23,7 +24,7 @@ La procédure suivante détaille les étapes nécessaires pour obtenir la transp
 
 ### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Pour implémenter une barre de boîte de dialogue transparente dans une bande rebar
 
-1. À l’aide de la [boîte de dialogue Ajouter une classe](../mfc/reference/adding-an-mfc-class.md), ajoutez une nouvelle classe (par exemple, `CMyDlgBar`) qui implémente l’objet de barre de boîte de dialogue.
+1. À l’aide de la [boîte de dialogue Ajouter une classe](../mfc/reference/adding-an-mfc-class.md), ajoutez une nouvelle classe (par exemple, `CMyDlgBar` ) qui implémente l’objet de barre de boîte de dialogue.
 
 1. Ajoutez un gestionnaire pour le message de WM_ERASEBKGND.
 

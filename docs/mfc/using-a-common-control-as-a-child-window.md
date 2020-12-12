@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation d’un contrôle commun en tant que fenêtre enfant'
 title: Utilisation d'un contrôle commun en tant que fenêtre enfant
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,26 +9,26 @@ helpviewer_keywords:
 - common controls [MFC], child windows
 - Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
-ms.openlocfilehash: 827690f273852dee8f9461aa9af51f1cf7f4ce6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a5fda2cbf8d0bf16ccb17f2766b31d24e5c0c67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263554"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Utilisation d'un contrôle commun en tant que fenêtre enfant
 
-Un des contrôles communs Windows peut servir d’une fenêtre enfant de n’importe quelle autre fenêtre. La procédure suivante décrit comment créer un contrôle commun de manière dynamique et puis les utiliser.
+Les contrôles communs Windows peuvent être utilisés en tant que fenêtre enfant d’une autre fenêtre. La procédure suivante décrit comment créer dynamiquement un contrôle commun, puis l’utiliser.
 
 ### <a name="to-use-a-common-control-as-a-child-window"></a>Pour utiliser un contrôle commun en tant que fenêtre enfant
 
-1. Définissez le contrôle dans la classe connexe ou le gestionnaire.
+1. Définissez le contrôle dans la classe ou le gestionnaire associé.
 
-1. Utilisez la substitution de la [CWnd::Create](../mfc/reference/cwnd-class.md#create) méthode pour créer le contrôle Windows.
+1. Utilisez la substitution du contrôle de la méthode [CWnd :: Create](../mfc/reference/cwnd-class.md#create) pour créer le contrôle Windows.
 
-1. Une fois que le contrôle a été créé (en même temps que le `OnCreate` gestionnaire si vous créez une sous-classe le contrôle), vous pouvez manipuler le contrôle à l’aide de ses fonctions membres. Consultez les descriptions des contrôles individuels à [contrôles](../mfc/controls-mfc.md) pour plus d’informations sur les méthodes.
+1. Une fois que le contrôle a été créé (aussi tôt que le `OnCreate` Gestionnaire si vous sous-classez le contrôle), vous pouvez manipuler le contrôle à l’aide de ses fonctions membres. Pour plus d’informations sur les méthodes, consultez les descriptions des contrôles individuels dans [contrôles](../mfc/controls-mfc.md) .
 
-1. Lorsque vous avez terminé avec le contrôle, utilisez [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) détruire le contrôle.
+1. Lorsque vous avez terminé avec le contrôle, utilisez [CWnd ::D estroywindow](../mfc/reference/cwnd-class.md#destroywindow) pour détruire le contrôle.
 
 ## <a name="see-also"></a>Voir aussi
 

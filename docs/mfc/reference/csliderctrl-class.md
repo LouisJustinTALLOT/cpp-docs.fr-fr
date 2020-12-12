@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CSliderCtrl, classe'
 title: CSliderCtrl (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 8dfdcf34474027180708045131a19bf6f7e14512
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 556366f429b39344f4ae2f20acd3c20fd9760552
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264542"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
 
@@ -217,7 +218,7 @@ Spécifie la fenêtre parente du contrôle Slider, généralement `CDialog` . Il
 *nID*<br/>
 Spécifie l’ID du contrôle Slider.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’initialisation a réussi ; Sinon, 0.
 
@@ -259,7 +260,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 *nID*<br/>
 ID de la fenêtre enfant du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -292,7 +293,7 @@ Valeur booléenne qui indique le ou les deux handles de fenêtre associée à r�
 
 - FALSe récupère le handle de l’ami à droite du curseur. Si le contrôle Slider utilise le style TBS_VERT, le message récupère l’ami sous le curseur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre associée à l’emplacement spécifié par *FLOCATION*, ou null si aucune fenêtre associée n’existe à cet emplacement.
 
@@ -325,7 +326,7 @@ Récupère la taille de la ligne pour un contrôle Slider.
 int GetLineSize() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille d’une ligne pour le contrôle Slider.
 
@@ -341,7 +342,7 @@ Récupère le nombre de graduations dans un contrôle Slider.
 UINT GetNumTics() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de graduations dans le contrôle Slider.
 
@@ -353,7 +354,7 @@ Récupère la taille de la page pour un contrôle Slider.
 int GetPageSize() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille d’une page pour le contrôle Slider.
 
@@ -369,7 +370,7 @@ Récupère la position actuelle du curseur dans un contrôle Slider.
 int GetPos() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position actuelle.
 
@@ -403,7 +404,7 @@ Récupère la position maximale du curseur dans un contrôle Slider.
 int GetRangeMax() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position maximale du contrôle.
 
@@ -415,7 +416,7 @@ Récupère la position minimale du curseur dans un contrôle Slider.
 int GetRangeMin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position minimale du contrôle.
 
@@ -445,7 +446,7 @@ Récupère la longueur du curseur dans le contrôle TrackBar actuel.
 int GetThumbLength() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur du curseur, en pixels.
 
@@ -479,7 +480,7 @@ int GetTic(int nTic) const;
 *nTic*<br/>
 Index de base zéro identifiant une graduation.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position de la graduation spécifiée, ou-1 si *nTic* ne spécifie pas d’index valide.
 
@@ -491,7 +492,7 @@ Récupère l’adresse du tableau contenant les positions des graduations pour u
 DWORD* GetTicArray() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Adresse du tableau contenant les positions des graduations du contrôle Slider.
 
@@ -508,7 +509,7 @@ int GetTicPos(int nTic) const;
 *nTic*<br/>
 Index de base zéro identifiant une graduation.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Position physique, en coordonnées clientes, de la graduation spécifiée ou-1 si *nTic* ne spécifie pas d’index valide.
 
@@ -520,7 +521,7 @@ Récupère le handle du contrôle ToolTip affecté au contrôle Slider, le cas �
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) , ou null si les info-bulles ne sont pas utilisées. Si le contrôle Slider n’utilise pas le style TBS_TOOLTIPS, la valeur de retour est NULL.
 
@@ -552,7 +553,7 @@ Valeur spécifiant l’emplacement d’affichage de la fenêtre associée. Cette
 
 - FALSe, l’ami apparaît à droite du TrackBar si le contrôle TrackBar utilise le style TBS_HORZ. Si le TrackBar utilise le style TBS_VERT, l’ami apparaît sous le contrôle TrackBar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) précédemment assigné au contrôle Slider à cet emplacement.
 
@@ -575,7 +576,7 @@ int SetLineSize(int nSize);
 *nSize*<br/>
 Nouvelle taille de ligne du contrôle Slider.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille de ligne précédente.
 
@@ -596,7 +597,7 @@ int SetPageSize(int nSize);
 *nSize*<br/>
 Nouvelle taille de page du contrôle Slider.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille de page précédente.
 
@@ -737,7 +738,7 @@ BOOL SetTic(int nTic);
 *nTic*<br/>
 Position de la graduation. Ce paramètre doit spécifier une valeur positive.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la graduation est définie ; Sinon, 0.
 
@@ -773,7 +774,7 @@ int SetTipSide(int nLocation);
 *Nemplacement*<br/>
 Valeur représentant l’emplacement d’affichage du contrôle ToolTip. Pour obtenir la liste des valeurs possibles, consultez la [TBM_SETTIPSIDE](/windows/win32/Controls/tbm-settipside)de message Win32, comme décrit dans le SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur qui représente l’emplacement précédent du contrôle ToolTip. La valeur de retour est égale à l’une des valeurs possibles de *nemplacement*.
 
