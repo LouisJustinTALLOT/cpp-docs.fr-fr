@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions d’échange de champs d’enregistrement'
 title: Fonctions Record Field Exchange (RFX)
 ms.date: 09/17/2019
 f1_keywords:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 9bb1b7bcbce16bba8029fcfbbeea7552b1d4a0ba
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2ba3a83bdda21f91913d7eda435a845b0977e8a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218951"
 ---
 # <a name="record-field-exchange-functions"></a>Fonctions Record Field Exchange (RFX)
 
@@ -151,7 +152,7 @@ Les données de la source de données de ces types sont mappées vers et à part
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -183,7 +184,7 @@ Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour 
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -215,7 +216,7 @@ Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour 
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -265,7 +266,7 @@ La `CTime` version de la fonction impose la surcharge liée à un traitement int
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -297,7 +298,7 @@ Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour 
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -329,7 +330,7 @@ Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour 
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -362,7 +363,7 @@ Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour 
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -394,7 +395,7 @@ Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour 
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -426,7 +427,7 @@ Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour 
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -492,7 +493,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -543,7 +544,7 @@ Pour plus d’informations, consultez l’article [Recordset : extraction d’e
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -590,7 +591,7 @@ Pour plus d’informations, consultez l’article [Recordset : extraction d’e
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -637,7 +638,7 @@ Pour plus d’informations, consultez l’article [Recordset : extraction d’e
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -684,7 +685,7 @@ Pour plus d’informations, consultez l’article [Recordset : extraction d’e
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -731,7 +732,7 @@ Pour plus d’informations, consultez l’article [Recordset : extraction d’e
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -763,7 +764,7 @@ Valeur stockée dans la donnée membre indiquée : valeur à transférer. Pour 
 
 Consultez [RFX_Text](#rfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -810,7 +811,7 @@ Pour plus d’informations, consultez l’article [Recordset : extraction d’e
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -857,7 +858,7 @@ Pour plus d’informations, consultez l’article [Recordset : extraction d’e
 
 Consultez [RFX_Text_Bulk](#rfx_text_bulk).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -923,7 +924,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -970,7 +971,7 @@ Les données sont mappées entre le type DAO_BYTES dans DAO et le type [CByteArr
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1013,7 +1014,7 @@ Les données sont mappées entre le type DAO_BOOL dans DAO et le type BOOL dans 
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1056,7 +1057,7 @@ Les données sont mappées entre le type DAO_BYTES dans DAO et le type BYTE dans
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1099,7 +1100,7 @@ Les données sont mappées entre le type DAO_CURRENCY dans DAO et le type [COleC
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1145,7 +1146,7 @@ Les données sont mappées entre le type DAO_DATE dans DAO et le type [COleDateT
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1188,7 +1189,7 @@ Les données sont mappées entre le type DAO_R8 dans DAO et le type **double flo
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1231,7 +1232,7 @@ Les données sont mappées entre le type DAO_I4 dans DAO et **`long`** le type d
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1278,7 +1279,7 @@ Option qui vous permet de tirer parti du mécanisme de double mise en mémoire t
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1324,7 +1325,7 @@ Les données sont mappées entre le type DAO_I2 dans DAO et **`short`** le type 
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1367,7 +1368,7 @@ Les données sont mappées entre le type DAO_R4 dans DAO et **`float`** le type 
 
 Consultez [DFX_Text](#dfx_text).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -1430,7 +1431,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 

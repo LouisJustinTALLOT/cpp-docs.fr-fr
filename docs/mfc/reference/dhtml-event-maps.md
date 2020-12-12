@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mappages d’événements DHTML'
 title: DHTML, tables d'événements
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 099a08298357d99a3d09ed6fc1209d463f6a4526
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b9df8f1aa59472de033943efd28f5c688c61e706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837422"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220121"
 ---
 # <a name="dhtml-event-maps"></a>DHTML, tables d'événements
 
@@ -79,7 +80,7 @@ Les macros suivantes peuvent être utilisées pour gérer les événements DHTML
 |[END_URL_ENTRIES](#end_url_entries)|Marque la fin d’un mappage d’entrée d’événement d’URL.|
 |[URL_EVENT_ENTRY](#url_event_entry)|Mappe une URL ou une ressource HTML à une page dans une boîte de dialogue multipage.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -104,7 +105,7 @@ Placez la macro BEGIN_DHTML_EVENT_MAP dans le fichier d’implémentation (. cpp
 
 `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -129,7 +130,7 @@ Placez la macro BEGIN_DHTML_EVENT_MAP dans le fichier de définition de la class
 
 `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -151,7 +152,7 @@ Utilisez [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map) ou [BEGIN_DHTML_EVENT_M
 
 `virtual const DHtmlEventMapEntry* GetDHtmlEventMap( );`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -178,7 +179,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -205,7 +206,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -232,7 +233,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -263,7 +264,7 @@ Si cette macro est utilisée pour gérer des événements de non-propagation, la
 
 Si cette macro est utilisée pour gérer les événements de propagation, l’élément identifié par *elemName* peut ne pas être la source de l’événement (la source peut être n’importe quel élément contenu par *elemName*).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -287,7 +288,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -311,7 +312,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -335,7 +336,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -359,7 +360,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -383,7 +384,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -407,7 +408,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -431,7 +432,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -455,7 +456,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -479,7 +480,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -503,7 +504,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -527,7 +528,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -551,7 +552,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -575,7 +576,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -599,7 +600,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -623,7 +624,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -647,7 +648,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -671,7 +672,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -695,7 +696,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -719,7 +720,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -743,7 +744,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -767,7 +768,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -791,7 +792,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -815,7 +816,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -839,7 +840,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -863,7 +864,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -887,7 +888,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -914,7 +915,7 @@ Fonction de gestionnaire pour l’événement.
 
 Utilisez cette macro pour ajouter une entrée à la [table des événements DHTML](#begin_dhtml_event_map_inline) dans votre classe.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -930,7 +931,7 @@ END_DHTML_EVENT_MAP()
 
 Doit être utilisé conjointement avec [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -950,7 +951,7 @@ Placez BEGIN_DHTML_URL_EVENT_MAP dans le fichier d’implémentation de votre cl
 
 [!code-cpp[NVC_MFCDocView#196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -982,7 +983,7 @@ Chaque table des événements incorporée requiert une [entrée d’événement 
 
 Consultez l’exemple dans [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -1007,7 +1008,7 @@ Comme une boîte de dialogue DHTML multipage est composée de plusieurs pages HT
 
 Consultez l’exemple dans [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -1025,7 +1026,7 @@ Cette macro doit être utilisée dans la définition de classes dérivées de [C
 
 Une carte d’événements DHTML et URL contient des tables d’événements et des [entrées d’URL](#begin_url_entries) [DHTML incorporées](#begin_embed_dhtml_event_map) pour mapper des événements DHTML aux gestionnaires par page. Utilisez [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) pour implémenter le mappage.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -1046,7 +1047,7 @@ Nom de la classe contenant la table des événements. Cette classe doit dériver
 
 Consultez l’exemple dans [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -1062,7 +1063,7 @@ END_EMBED_DHTML_EVENT_MAP()
 
 Consultez l’exemple dans [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -1078,7 +1079,7 @@ END_URL_ENTRIES()
 
 Consultez l’exemple dans [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -1111,7 +1112,7 @@ L’identificateur de page, *mapname*, est un symbole arbitraire utilisé pour l
 
 Consultez l’exemple dans [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdhtml. h
 
@@ -1129,7 +1130,7 @@ END_DHTML_EVENT_MAP_INLINE( )
 
 Doit être utilisé conjointement avec [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdhtml. h
 

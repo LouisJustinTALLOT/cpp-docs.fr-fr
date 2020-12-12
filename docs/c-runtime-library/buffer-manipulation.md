@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : manipulation de mémoire tampon'
 title: Manipulation de la mémoire tampon
 ms.date: 04/04/2018
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-ms.openlocfilehash: a79bfdb33d2bff5e18c916a2e116ab03251afdf1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8389faf1e2e3de44507784755c7b4831952b9ffe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221733"
 ---
 # <a name="buffer-manipulation"></a>Manipulation de la mémoire tampon
 

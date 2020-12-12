@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur la classification d’octets
 title: Classification d’octets
 ms.date: 04/04/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - byte classification routines
 - bytes, testing
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
-ms.openlocfilehash: 7272170bd3a1e765e728451afc245947111ee947
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 00691ca85366c5cbbe28b023f2a269838128fe9e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171565"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221694"
 ---
 # <a name="byte-classification"></a>Classification d’octets
 
@@ -22,7 +23,7 @@ Chacune de ces routines teste un octet spécifié d’un caractère multioctet p
 > [!NOTE]
 > Par définition, les caractères ASCII compris entre 0 et 127 sont une partie de tous les jeux de caractères multioctets. Par exemple, le jeu de caractères japonais katakana inclut aussi bien des caractères ASCII que non-ASCII.
 
-Les constantes prédéfinies présentes dans le tableau suivant sont définies dans \<ctype.h>.
+Les constantes prédéfinies dans le tableau suivant sont définies dans \<ctype.h> .
 
 ## <a name="multibyte-character-byte-classification-routines"></a>Routines de classification d’octets en caractères multioctets
 
@@ -36,17 +37,17 @@ Les constantes prédéfinies présentes dans le tableau suivant sont définies d
 |[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Katakana (0xA1 - 0xDF), page de codes 932 uniquement|
 |[_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Texte non-ASCII ou symbole de ponctuation non-ASCII. Par exemple, dans la page de codes 932 uniquement, **_ismbbkprint** teste s’il s’agit de katakanas alphanumériques ou de ponctuation katakana (plage : 0xA1 - 0xDF).|
 |[_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Ponctuation non-ASCII. Par exemple, dans la page de codes 932 uniquement, **_ismbbkpunct** teste la présence d’une ponctuation katakana.|
-|[_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Premier octet d’un caractère multioctet. Par exemple, dans la page de codes 932 uniquement, les plages valides sont 0x81 - 0x9F, 0xE0 - 0xFC.|
-|[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|**isprint** &#124;&#124; **_ismbbkprint**. **ismbbprint** inclut le caractère espace (0x20)|
+|[_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Premier octet d’un caractère multioctet. Par exemple, dans la page de codes 932 uniquement, les plages valides sont 0x81 - 0x9F, 0xE0 - 0xFC.|
+|[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|**isprint** &#124;&#124; **_ismbbkprint**. **ismbbprint** comprend le caractère espace (0x20)|
 |[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|**ispunct** &#124;&#124; **_ismbbkpunct**|
-|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Deuxième octet de caractère multioctet. Par exemple, dans la page de codes 932 uniquement, les plages valides sont 0x40 - 0x7E, 0x80 - 0xEC.|
+|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|Deuxième octet de caractère multioctet. Par exemple, dans la page de codes 932 uniquement, les plages valides sont 0x40 - 0x7E, 0x80 - 0xEC.|
 |[_ismbslead, _ismbslead_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)|Octet de tête (dans le contexte de chaîne)|
 |[ismbstrail, _ismbstrail_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)|Octet de fin (dans le contexte de chaîne)|
 |[_mbbtype, _mbbtype_l](../c-runtime-library/reference/mbbtype-mbbtype-l.md)|Type d’octet de retour selon l’octet précédent|
 |[_mbsbtype, _mbsbtype_l](../c-runtime-library/reference/mbsbtype-mbsbtype-l.md)|Type de retour d’octet dans la chaîne|
-|[mbsinit](../c-runtime-library/reference/mbsinit.md)|Suit l’état d’une conversion en caractères multioctets.|
+|[mbsinit](../c-runtime-library/reference/mbsinit.md)|Suit l'état d'une conversion en caractères multioctets.|
 
-La macro **MB_LEN_MAX**, définie dans \<limits.h>, atteint la longueur maximale en octets que tous les caractères multioctets peuvent avoir. **MB_CUR_MAX**, définie dans \<stdlib.h>, atteint la longueur maximale en octets d’un caractère multioctet dans les paramètres régionaux actuels.
+La macro **MB_LEN_MAX** , définie dans \<limits.h> , est plus longue que la longueur maximale, en octets, d’un caractère multioctet. **MB_CUR_MAX**, défini dans \<stdlib.h> , augmente la longueur maximale en octets d’un caractère multioctet dans les paramètres régionaux actuels.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur l’accès aux arguments
 title: Accès aux arguments
 ms.date: 04/04/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - argument access macros [C++]
 - variable-length argument lists
 ms.assetid: 7046ae34-a0ec-44f0-815d-3209492a3e19
-ms.openlocfilehash: 8107cffa6a2da41c38b116b2e3fe36adf6ac945f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: f62ac2bc4ae895afe763d0a0a4caa32601e82713
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470406"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221863"
 ---
 # <a name="argument-access"></a>Accès aux arguments
 
@@ -20,7 +21,7 @@ Les macros **va_arg**, **va_end** et **va_start** fournissent l’accès aux arg
 
 ## <a name="argument-access-macros"></a>Macros d’accès à un argument
 
-|Macro|Utilisez|
+|Macro|Utilisation|
 |-----------|-------------------------------|
 |[va_arg](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)|Récupérer un argument dans la liste|
 |[va_end](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)|Réinitialiser le pointeur|

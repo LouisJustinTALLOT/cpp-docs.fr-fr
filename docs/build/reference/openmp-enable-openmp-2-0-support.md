@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/OpenMP (activer la prise en charge d’OpenMP)
 title: /OpenMP (activer la prise en charge d’OpenMP)
 ms.date: 04/15/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: 6bd1ffcd9b21bfe22ed9424ee77edf43100abf6c
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 818cd6167bf56b9948a3d9f455b0153b4302e8df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921228"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221980"
 ---
 # <a name="openmp-enable-openmp-support"></a>/OpenMP (activer la prise en charge d’OpenMP)
 
@@ -23,7 +24,7 @@ Fait en sorte que le compilateur traite les directives pour la [`#pragma omp`](.
 
 ::: moniker range=">= msvc-160"
 
-> **/OpenMP** \[ **:**__expérimental__ ]
+> **/OpenMP** \[ **:**__expérimental__]
 
 ::: moniker-end
 
@@ -43,13 +44,13 @@ Le compilateur C++ prend actuellement en charge la norme OpenMP 2,0. Toutefois, 
 
 ::: moniker-end
 
-Les applications compilées à l’aide de **/OpenMP** et **/CLR** ne peuvent être exécutées que dans un seul processus de domaine d’application. Plusieurs domaines d’application ne sont pas pris en charge. Autrement dit, lorsque le constructeur de module ( `.cctor` ) est exécuté, il détecte si le processus est compilé à l’aide de **/OpenMP** , et si l’application est chargée dans un runtime autre que celui par défaut. Pour plus d’informations, consultez [AppDomain](../../cpp/appdomain.md), [/clr (compilation pour le Common Language Runtime)](clr-common-language-runtime-compilation.md)et [initialisation d’assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md).
+Les applications compilées à l’aide de **/OpenMP** et **/CLR** ne peuvent être exécutées que dans un seul processus de domaine d’application. Plusieurs domaines d’application ne sont pas pris en charge. Autrement dit, lorsque le constructeur de module ( `.cctor` ) est exécuté, il détecte si le processus est compilé à l’aide de **/OpenMP**, et si l’application est chargée dans un runtime autre que celui par défaut. Pour plus d’informations, consultez [AppDomain](../../cpp/appdomain.md), [/clr (compilation pour le Common Language Runtime)](clr-common-language-runtime-compilation.md)et [initialisation d’assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md).
 
 Si vous tentez de charger une application compilée à l’aide de **/OpenMP** et **/CLR** dans un domaine d’application autre que celui par défaut, une <xref:System.TypeInitializationException> exception est levée en dehors du débogueur, et une `OpenMPWithMultipleAppdomainsException` exception est levée dans le débogueur.
 
 Ces exceptions peuvent également être générées dans les situations suivantes :
 
-- Si votre application est compilée à l’aide de **/CLR** mais pas de **/OpenMP** , et est chargée dans un domaine d’application non défini par défaut, où le processus comprend une application compilée à l’aide de **/OpenMP** .
+- Si votre application est compilée à l’aide de **/CLR** mais pas de **/OpenMP**, et est chargée dans un domaine d’application non défini par défaut, où le processus comprend une application compilée à l’aide de **/OpenMP**.
 
 - Si vous transmettez votre application **/CLR** à un utilitaire, tel que [regasm.exe](/dotnet/framework/tools/regasm-exe-assembly-registration-tool), qui charge ses assemblys cibles dans un domaine d’application non défini par défaut.
 
@@ -73,9 +74,9 @@ Microsoft ne recommande pas d’écrire des applications **/OpenMP** qui autoris
 
 L’exemple suivant montre certains des effets du démarrage du pool de threads par rapport à l’utilisation du pool de threads après son démarrage. En supposant qu’il s’agit d’un processeur x64, à noyau unique et à deux processeurs, le pool de threads prend environ 16 ms pour démarrer. Après cela, il y a peu de frais supplémentaires pour le pool de threads.
 
-Quand vous compilez à l’aide de **/OpenMP** , le deuxième appel à test2 ne s’exécute jamais plus longtemps que si vous compilez à l’aide de **/OpenMP-** , car il n’y a pas de démarrage du pool de threads. À un million d’itérations, la version **/OpenMP** est plus rapide que la version **/OpenMP-** pour le deuxième appel à test2. À 25 itérations, les versions **/OpenMP-** et **/OpenMP** s’inscrivent moins que la granularité de l’horloge.
+Quand vous compilez à l’aide de **/OpenMP**, le deuxième appel à test2 ne s’exécute jamais plus longtemps que si vous compilez à l’aide de **/OpenMP-**, car il n’y a pas de démarrage du pool de threads. À un million d’itérations, la version **/OpenMP** est plus rapide que la version **/OpenMP-** pour le deuxième appel à test2. À 25 itérations, les versions **/OpenMP-** et **/OpenMP** s’inscrivent moins que la granularité de l’horloge.
 
-Si vous n’avez qu’une seule boucle dans votre application et qu’elle s’exécute en moins de 15 ms (ajustée pour la surcharge approximative sur votre ordinateur), **/OpenMP** peut ne pas être approprié. Si la valeur est supérieure, vous pouvez envisager d’utiliser **/OpenMP** .
+Si vous n’avez qu’une seule boucle dans votre application et qu’elle s’exécute en moins de 15 ms (ajustée pour la surcharge approximative sur votre ordinateur), **/OpenMP** peut ne pas être approprié. Si la valeur est supérieure, vous pouvez envisager d’utiliser **/OpenMP**.
 
 ```cpp
 // cpp_compiler_options_openmp.cpp

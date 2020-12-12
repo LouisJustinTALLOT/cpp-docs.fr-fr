@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : services de diagnostic'
 title: Services de diagnostic
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 931545e6a79ecaa59d147e48265649ef20466fbd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d2b7bd303fc062aa520497e649430f53f7667c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220069"
 ---
 # <a name="diagnostic-services"></a>Services de diagnostic
 
@@ -43,7 +44,7 @@ Dans la bibliothèque Debug, tous les blocs de mémoire alloués sont entourés 
 
 dans votre fichier d’implémentation, tous les appels à **`new`** stockent le nom de fichier et le numéro de ligne où l’allocation de mémoire a eu lieu. La fonction [CMemoryState ::D umpallobjectssince](cmemorystate-structure.md#dumpallobjectssince) affiche ces informations supplémentaires, ce qui vous permet d’identifier les fuites de mémoire. Pour plus d’informations sur la sortie de diagnostic, consultez également la classe [CDumpContext](../../mfc/reference/cdumpcontext-class.md) .
 
-La bibliothèque Runtime C prend également en charge un ensemble de fonctions de diagnostic que vous pouvez utiliser pour déboguer vos applications. Pour plus d’informations, consultez [routines de débogage](../../c-runtime-library/debug-routines.md) dans la référence de la bibliothèque Runtime.
+La bibliothèque Runtime C prend également en charge un ensemble de fonctions de diagnostic que vous pouvez utiliser pour déboguer vos applications. Pour plus d’informations, consultez [routines de débogage](../../c-runtime-library/debug-routines.md) dans la référence de la bibliothèque de Run-Time.
 
 ### <a name="mfc-general-diagnostic-macros"></a>Macros de diagnostic général MFC
 
@@ -132,7 +133,7 @@ void AfxDebugBreak( );
 
 `AfxDebugBreak` n’a aucun effet dans les versions Release d’une application MFC et doit être supprimé. Cette fonction doit être utilisée uniquement dans les applications MFC. Utilisez la version de l’API Win32, `DebugBreak` , pour provoquer une rupture dans des applications non-MFC.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxver_. h
 
@@ -168,7 +169,7 @@ Dans la version finale de MFC, Assert n’évalue pas l’expression et n’inte
 
 [!code-cpp[NVC_MFC_Utilities#44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -203,7 +204,7 @@ Cette fonction fonctionne uniquement pour les classes déclarées avec la macro 
 > [!NOTE]
 > Cette fonction est uniquement disponible dans la version Debug de MFC.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -235,7 +236,7 @@ Pour plus d’informations et d’exemples, consultez [débogage des application
 
 [!code-cpp[NVC_MFCCObjectSample#19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -262,7 +263,7 @@ Une fois que vous avez inséré cette directive, le préprocesseur insère des D
 > [!NOTE]
 > Dans les versions précédentes de MFC (4,1 et versions antérieures), vous deviez placer l' `#define` instruction après toutes les instructions qui ont appelé les macros IMPLEMENT_DYNCREATE ou IMPLEMENT_SERIAL. Cela n'est plus nécessaire.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -284,7 +285,7 @@ La macro DEBUG_ONLY équivaut à l' *expression* environnante avec `#ifdef _DEBU
 
 [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -316,7 +317,7 @@ ENSURE_VALID appelle la macro ASSERT_VALID (qui a un effet uniquement dans les v
 
 Si l’un de ces tests échoue, un message d’alerte s’affiche de la même manière que l’instruction Assert. La macro lève une exception d’argument non valide si nécessaire.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -346,7 +347,7 @@ static char THIS_FILE[] = __FILE__;
 // compiler recognizes.
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -367,7 +368,7 @@ Dans la version Debug des MFC, cette macro envoie la chaîne spécifiée au déb
 
 Pour plus d’informations, consultez [débogage des applications MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -400,7 +401,7 @@ Dans la version finale de MFC, VERIFY évalue l’expression, mais n’imprime p
 
 [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -416,7 +417,7 @@ CDumpContext  afxDump;
 
 `afxDump` est un objet [CDumpContext](../../mfc/reference/cdumpcontext-class.md) prédéfini qui vous permet d’envoyer `CDumpContext` des informations à la fenêtre sortie du débogueur ou à un terminal de débogage. En général, vous fournissez `afxDump` en tant que paramètre à `CObject::Dump` .
 
-Sous Windows NT et toutes les versions de Windows, `afxDump` la sortie est envoyée à la fenêtre de débogage de sortie de Visual C++ lorsque vous déboguez votre application.
+Sous Windows NT et toutes les versions de Windows, `afxDump` la sortie est envoyée à la fenêtre de Output-Debug de Visual C++ lorsque vous déboguez votre application.
 
 Cette variable est définie uniquement dans la version Debug de MFC. Pour plus d’informations sur `afxDump` , consultez [débogage des applications MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
@@ -424,7 +425,7 @@ Cette variable est définie uniquement dans la version Debug de MFC. Pour plus d
 
 [!code-cpp[NVC_MFC_Utilities#23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -449,7 +450,7 @@ Pointeur vers un objet d’une classe dérivée de `CObject` .
 
 Votre code de programme ne doit pas appeler `AfxDump` , mais doit plutôt appeler la `Dump` fonction membre de l’objet approprié.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -475,7 +476,7 @@ int  afxMemDF;
 
 [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -502,7 +503,7 @@ Cette fonction peut être utilisée pour vérifier les valeurs de retour des app
 
 [!code-cpp[NVC_MFCOleContainer#33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -539,7 +540,7 @@ Cette fonction fonctionne uniquement dans la version Debug de MFC.
 
 [!code-cpp[NVC_MFCCObjectSample#26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -562,7 +563,7 @@ Pointeur vers un objet d’une classe dérivée de `CObject` .
 
 Votre code de programme ne doit pas appeler `AfxDump` , mais doit plutôt appeler la `Dump` fonction membre de l’objet approprié.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -638,7 +639,7 @@ Pour utiliser correctement cette fonction :
 
 - Les modules qui ont des frames sur la pile doivent inclure des informations de débogage. S’ils ne contiennent pas d’informations de débogage, la fonction génère toujours une trace de la pile, mais la trace sera moins détaillée.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -668,7 +669,7 @@ Si votre application charge une autre bibliothèque avant la bibliothèque MFC, 
 > [!NOTE]
 > Si vous utilisez cette méthode pour désactiver l’image des fuites de mémoire, vous ne recevez pas d’indication des fuites de mémoire valides dans votre application. Vous devez utiliser cette méthode seulement si vous êtes certain que le rapport sur les fuites de mémoire contient des fausses fuites de mémoire.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -702,7 +703,7 @@ Pour plus d’informations sur `AfxEnableMemoryTracking` , consultez [débogage 
 
 [!code-cpp[NVC_MFC_Utilities#24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -740,7 +741,7 @@ Elle vérifie également la taille spécifiée par rapport à la taille allouée
 
 [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -780,7 +781,7 @@ L’adresse n’est pas limitée aux blocs alloués par **`new`** .
 
 [!code-cpp[NVC_MFC_Utilities#28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -812,7 +813,7 @@ Dans les versions sans débogage, valeur différente de zéro si *lpsz* n’est 
 
 [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -850,7 +851,7 @@ Numéro de séquence de l’allocation de mémoire.
 
 Notez que la Convention d’appel AFXAPI implique que l’appelé doit supprimer les paramètres de la pile.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -886,7 +887,7 @@ Pointe vers des données facultatives que l’appelant peut fournir à la foncti
 
 [!code-cpp[NVC_MFCCollections#114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 

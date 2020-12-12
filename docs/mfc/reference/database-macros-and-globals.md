@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : macros de base de données et globales'
 title: Macros et objet Globals de base de données
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: 0dc53bce8b43677e7fe0aa1787d1adcc16a560c4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1dd6501c8ea37478a7b75341467e1c77819aa3f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220316"
 ---
 # <a name="database-macros-and-globals"></a>Macros et objet Globals de base de données
 
@@ -55,7 +56,7 @@ void AFXAPI AfxDbInitModule( );
 
 Assurez-vous que cet appel se produit avant tout appel de classe de base ou tout code ajouté qui accède à la DLL de base de données MFC. La DLL de la base de données MFC est une DLL d’extension MFC ; pour qu’une DLL d’extension MFC puisse être connectée à une `CDynLinkLibrary` chaîne, elle doit créer un `CDynLinkLibrary` objet dans le contexte de chaque module qui l’utilisera. `AfxDbInitModule` crée l' `CDynLinkLibrary` objet dans le contexte de votre DLL MFC normale afin qu’il soit relié à la `CDynLinkLibrary` chaîne d’objets de la DLL MFC normale.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :**\<afxdll_.h>
 
@@ -86,7 +87,7 @@ Cet exemple utilise `AFX_ODBC_CALL` pour appeler la `SQLColumns` fonction API OD
 
 [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -100,7 +101,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>Paramètres
 
-*tirage*<br/>
+*prs*<br/>
 Pointeur vers un `CRecordset` objet ou un `CDatabase` objet. À partir de MFC 4,2, cette valeur de paramètre est ignorée.
 
 *SQLFunc*<br/>
@@ -113,7 +114,7 @@ Fonction API ODBC. Pour plus d’informations sur les fonctions de l’API ODBC,
 > [!NOTE]
 > Les classes ODBC MFC utilisent désormais uniquement le traitement synchrone. Pour effectuer une opération asynchrone, vous devez appeler la fonction API ODBC `SQLSetConnectOption` . Pour plus d’informations, consultez la rubrique « exécution de fonctions de manière asynchrone » dans la SDK Windows.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** AFXDB. h
 
@@ -144,7 +145,7 @@ vous pouvez simplement effectuer l’affectation
 
 [!code-cpp[NVC_MFCDatabase#41](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** AFXDB. h
 
@@ -160,7 +161,7 @@ HENV AFXAPI AfxGetHENV();
 
 Handle de l’environnement ODBC en cours d’utilisation par MFC. Peut être `SQL_HENV_NULL` s’il n’y a aucun objet [CDatabase](../../mfc/reference/cdatabase-class.md) et aucun objet [CRecordset](../../mfc/reference/crecordset-class.md) en cours d’utilisation.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** AFXDB. h
 

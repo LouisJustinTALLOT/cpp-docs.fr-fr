@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : exemple de Makefile'
 title: Exemple de makefile
 ms.date: 11/04/2016
 ms.assetid: 8343ce71-5556-4ae0-8d1e-7efd82673070
-ms.openlocfilehash: 79ca4e466d37880787260be5b8b4ec76a5bb092f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95b7eef18ca2b517d1b3de9ca450b1bbd03116d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318821"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224905"
 ---
 # <a name="sample-makefile"></a>Exemple de makefile
 
-Cette rubrique contient un exemple de makefile.
+Cette rubrique contient un exemple de fichier Make.
 
 ## <a name="sample"></a>Exemple
 
@@ -36,4 +37,4 @@ challeng.exe: challeng.obj md4c.obj
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contenu d’un makefile](contents-of-a-makefile.md)
+[Contenu d’un Makefile](contents-of-a-makefile.md)

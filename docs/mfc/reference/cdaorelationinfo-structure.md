@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure Cdaorelationinfo,'
 title: CDaoRelationInfo, structure
 ms.date: 06/25/2018
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
-ms.openlocfilehash: 7d1c86732966d8222582dc6d4527af89963a5cdc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efcc880d30dd18108005d9c4f265238b81551532
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152824"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222240"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo, structure
 
-Le `CDaoRelationInfo` structure contient des informations sur une relation définie entre les champs de deux tables dans un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objet.
+La `CDaoRelationInfo` structure contient des informations sur une relation définie entre les champs de deux tables dans un objet [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,49 +39,49 @@ struct CDaoRelationInfo
 #### <a name="parameters"></a>Paramètres
 
 *m_strName*<br/>
-Identifiant de manière unique l’objet relation. Pour plus d’informations, consultez la rubrique « Propriété de nom » dans l’aide de DAO.
+Nomme l’objet relation de manière unique. Pour plus d’informations, consultez la rubrique « propriété de nom » dans l’aide de DAO.
 
 *m_strTable*<br/>
-Nom de la table primaire dans la relation.
+Nomme la table primaire dans la relation.
 
 *m_strForeignTable*<br/>
-Nom de la table étrangère dans la relation. Une table externe est une table utilisée pour contenir des clés étrangères. En règle générale, vous utilisez une table étrangère pour établir ou appliquer l’intégrité référentielle. La table externe est généralement sur le côté « plusieurs » d’une relation un-à-plusieurs. Exemples de tables externes contiennent des tables contenant des codes pour les États américains, provinces du Canada ou les commandes des clients.
+Nomme la table étrangère dans la relation. Une table étrangère est une table utilisée pour contenir des clés étrangères. En règle générale, vous utilisez une table étrangère pour établir ou appliquer l’intégrité référentielle. La table étrangère est généralement du côté « plusieurs » d’une relation un-à-plusieurs. Exemples de tables étrangères : tables contenant des codes pour les États américains, les provinces canadiennes ou les commandes client.
 
 *m_lAttributes*<br/>
-Contient des informations sur le type de relation. La valeur de ce membre peut être une des opérations suivantes :
+Contient des informations sur le type de relation. La valeur de ce membre peut être l’une des suivantes :
 
-- `dbRelationUnique` Relation est-à-un.
+- `dbRelationUnique` La relation est un-à-un.
 
-- `dbRelationDontEnforce` Relation n’est pas (aucune intégrité référentielle).
+- `dbRelationDontEnforce` La relation n’est pas appliquée (aucune intégrité référentielle).
 
-- `dbRelationInherited` Relation existe dans une base de données non courante qui contient les deux tables jointes.
+- `dbRelationInherited` La relation existe dans une base de données non active qui contient les deux tables attachées.
 
-- `dbRelationLeft` La relation est une jointure gauche. Une jointure externe gauche comprend tous les enregistrements de la première (gauche) de deux tables, même si aucune valeur correspondante pour les enregistrements de la seconde table (droite).
+- `dbRelationLeft` La relation est une jointure de gauche. Une jointure externe gauche inclut tous les enregistrements de la première (main gauche) de deux tables, même s’il n’y a aucune valeur correspondante pour les enregistrements dans la deuxième table (à droite).
 
-- `dbRelationRight` La relation est une jointure droite. Une jointure externe droite inclut tous les enregistrements de la deuxième (droite) de deux tables, même si aucune valeur correspondante pour les enregistrements dans la première table (gauche).
+- `dbRelationRight` La relation est une jointure appropriée. Une jointure externe droite inclut tous les enregistrements de la seconde (droite) de deux tables, même s’il n’y a aucune valeur correspondante pour les enregistrements dans la première table (à gauche).
 
-- `dbRelationUpdateCascade` Mises à jour sont mises en cascade.
+- `dbRelationUpdateCascade` Les mises à jour s’effectuent en cascade.
 
-- `dbRelationDeleteCascade` Suppressions sont mises en cascade.
+- `dbRelationDeleteCascade` Les suppressions s’effectuent en cascade.
 
 *m_pFieldInfos*<br/>
-Un pointeur vers un tableau de [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) structures. Le tableau contient un objet pour chaque champ dans la relation. Le `m_nFields` membre de données renvoie un nombre des éléments du tableau.
+Pointeur vers un tableau de structures [cdaorelationfieldinfo,](../../mfc/reference/cdaorelationfieldinfo-structure.md) . Le tableau contient un objet pour chaque champ de la relation. Le `m_nFields` membre de données donne le nombre d’éléments du tableau.
 
 *m_nFields*<br/>
-Le nombre de `CDaoRelationFieldInfo` des objets dans le `m_pFieldInfos` membre de données.
+Nombre d' `CDaoRelationFieldInfo` objets dans la `m_pFieldInfos` donnée membre.
 
 ## <a name="remarks"></a>Notes
 
-Les références au principal et secondaire ci-dessus indiquent la façon dont les informations sont retournées par la [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre dans la classe `CDaoDatabase`.
+Les références à Primary et Secondary ci-dessus indiquent comment les informations sont retournées par la fonction membre [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) dans la classe `CDaoDatabase` .
 
-Les objets de relation ne sont pas représentées par une classe MFC. Au lieu de cela, l’objet DAO sous-jacent d’un objet MFC de le `CDaoDatabase` classe maintient une collection d’objets de relation : `CDaoDatabase` fournit des fonctions de membre pour accéder à certains des éléments individuels d’informations sur la relation, ou vous peuvent y accéder à la fois avec un `CDaoRelationInfo` objet en appelant le `GetRelationInfo` fonction membre de l’objet conteneur de la base de données.
+Les objets de relation ne sont pas représentés par une classe MFC. Au lieu de cela, l’objet DAO sous-jacent à un objet MFC de la `CDaoDatabase` classe gère une collection d’objets relation : `CDaoDatabase` fournit des fonctions membres pour accéder à certains éléments d’informations de relation, ou vous pouvez y accéder en même temps avec un `CDaoRelationInfo` objet en appelant la `GetRelationInfo` fonction membre de l’objet de base de données conteneur.
 
-Les informations récupérées par le [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) fonction membre est stockée dans un `CDaoRelationInfo` structure. `CDaoRelationInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoRelationInfo` objet.
+Les informations récupérées par la fonction membre [CDaoDatabase :: GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) sont stockées dans une `CDaoRelationInfo` structure. `CDaoRelationInfo` définit également une `Dump` fonction membre dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoRelationInfo` objet.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="see-also"></a>Voir aussi
 
-[CDaoRelationFieldInfo, structure](../../mfc/reference/cdaorelationfieldinfo-structure.md)
+[Cdaorelationfieldinfo,, structure](../../mfc/reference/cdaorelationfieldinfo-structure.md)

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/SECTION (EDITBIN)
 title: /SECTION (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 770e1d1c1cf288a7fe68f5bd076791d43f5b8572
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 51d1305ca4f3e0e8222ae9408b44563a4c480d57
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438912"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224866"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -28,7 +29,7 @@ Cette option modifie les attributs d’une section, en substituant les attributs
 
 Après les deux-points ( **:** ), spécifiez le *nom* de la section. Pour modifier le nom de la section, faites suivre le *nom* d’un signe égal (=) et d’un *NewName* pour la section.
 
-Pour définir ou modifier le `attributes`de la section, spécifiez une virgule ( **,** ) suivie d’un ou plusieurs caractères d’attributs. Pour nier un attribut, faites précéder son caractère d’un point d’exclamation ( !). Les caractères suivants spécifient les attributs de mémoire :
+Pour définir ou modifier la section `attributes` , spécifiez une virgule (**,**) suivie d’un ou de plusieurs caractères d’attributs. Pour nier un attribut, faites précéder son caractère d’un point d’exclamation ( !). Les caractères suivants spécifient les attributs de mémoire :
 
 |Attribut|Paramètre|
 |---------------|-------------|
@@ -41,7 +42,7 @@ Pour définir ou modifier le `attributes`de la section, spécifiez une virgule (
 |o|informations sur le lien|
 |p|mémoire virtuelle paginée|
 |r|lire|
-|s|shared|
+|s|partagés|
 |u|données non initialisées|
 |w|écrire|
 
@@ -58,7 +59,7 @@ Pour contrôler l' *alignement*, spécifiez le caractère **A** suivi de l’un 
 |s|64|
 |x|aucun alignement|
 
-Spécifiez les `attributes` et les caractères d' *alignement* sous la forme d’une chaîne sans espace blanc. Les caractères ne respectent pas la casse.
+Spécifiez les `attributes` caractères d' *alignement* et en tant que chaîne sans espace blanc. Les caractères ne respectent pas la casse.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,13 +1,14 @@
 ---
+description: En savoir plus sur les mappages de commande d’édition DHTML
 title: Mappages de commande d'édition DHTML
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: f4bbfb500e8de9594bbaa334b4e227caeaa845da
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: da50d9b58e5294622da0685450e01ad0acabad3f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220108"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mappages de commande d'édition DHTML
 
@@ -48,7 +49,7 @@ Utilisez [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) pour implément
 
 Consultez l' [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml. h
 
@@ -71,7 +72,7 @@ Ajoutez un mappage de commandes d’édition DHTML à votre classe pour mapper l
 
 Placez la macro BEGIN_DHTMLEDITING_CMDMAP dans le fichier d’implémentation (. cpp) de la classe, suivi de [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) macros pour les commandes que la classe doit mapper (par exemple, de ID_EDIT_CUT à IDM_CUT). Utilisez la macro [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap) pour marquer la fin de la table des événements.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml. h
 
@@ -91,7 +92,7 @@ END_DHTMLEDITING_CMDMAP()
 
 Consultez l' [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml. h
 
@@ -115,7 +116,7 @@ Commande d’édition HTML à laquelle *cmdID* mappe (par exemple, IDM_COPY).
 
 Consultez l' [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml. h
 
@@ -142,7 +143,7 @@ Nom de la fonction de gestionnaire de messages à laquelle la commande est mapp�
 
 Consultez l' [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml. h
 
@@ -169,7 +170,7 @@ Type d’élément d’interface utilisateur ; l’une des AFX_UI_ELEMTYPE_NORM
 
 Consultez l' [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml. h
 
@@ -199,7 +200,7 @@ Type d’élément d’interface utilisateur ; l’une des AFX_UI_ELEMTYPE_NORM
 
 Consultez l' [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml. h
 

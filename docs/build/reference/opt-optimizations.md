@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/OPT (optimisations)
 title: /OPT (Optimisations)
 ms.date: 05/18/2018
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: 7f576d971425a67fc533bb417583173617615e3b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 73cdb182941ddf865695d58f6d60a96002f5005a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221954"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimisations)
 
@@ -50,7 +51,7 @@ Si [/Debug](debug-generate-debug-info.md) est spécifié, la valeur par défaut 
 
 **Pare-feu** \[ **=** _itérations_] &#124; **NOICF**
 
-Utilisez **ICF**des \[ **=** _itérations_ICF] pour effectuer un repli COMDAT identique. Les COMDAT redondants peuvent être supprimés de la sortie de l'éditeur de liens. Le paramètre facultatif *iterations* spécifie le nombre de fois où les symboles doivent être parcourus pour les doublons. Le nombre d’itérations par défaut est 1. Des itérations supplémentaires peuvent permettre de localiser davantage de doublons n’ayant pas été détectés par pliage au cours de l’itération précédente.
+Utilisez des \[ **=** _itérations_ ICF] pour effectuer un repli COMDAT identique. Les COMDAT redondants peuvent être supprimés de la sortie de l'éditeur de liens. Le paramètre facultatif *iterations* spécifie le nombre de fois où les symboles doivent être parcourus pour les doublons. Le nombre d’itérations par défaut est 1. Des itérations supplémentaires peuvent permettre de localiser davantage de doublons n’ayant pas été détectés par pliage au cours de l’itération précédente.
 
 Par défaut, **/OPT : ICF** est activé par l’éditeur de liens, sauf si **/OPT : NOICF** ou [/Debug](debug-generate-debug-info.md) est spécifié. Pour remplacer cette valeur par défaut et empêcher les COMDAT d’être pliées dans le programme, spécifiez **/OPT : NOICF**.
 
@@ -65,7 +66,7 @@ Les options **/OPT : LBR** et **/OPT : NOLBR** s’appliquent uniquement aux b
 
 Par défaut, l’option **/OPT : LBR** est définie lorsque l’édition de liens incrémentielle n’est pas activée. Si vous souhaitez un lien non incrémentiel, mais pas des optimisations de branches longues, spécifiez **/OPT : NOLBR**. L’option **/OPT : LBR** désactive les liens incrémentiels.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 En cas d’utilisation sur la ligne de commande, l’éditeur de liens utilise par défaut **/OPT : REF, ICF, LBR**. Si **/Debug** est spécifié, la valeur par défaut est **/OPT : NOREF, NOICF, NOLBR**.
 
@@ -83,7 +84,7 @@ Les arguments **/OPT** sont souvent définis pour les projets créés à l’aid
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés optimisation de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Optimization** .
+1. Sélectionnez la page de propriétés optimisation de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
 1. Modifiez l'une des propriétés suivantes :
 
@@ -95,7 +96,7 @@ Les arguments **/OPT** sont souvent définis pour les projets créés à l’aid
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
 1. Entrez l’option dans **options supplémentaires**:
 

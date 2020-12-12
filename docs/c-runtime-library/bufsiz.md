@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : BUFSIZ'
 title: BUFSIZ
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BUFSIZ constant
 ms.assetid: 94ac04a3-d154-476b-bd89-eefbc7b949ae
-ms.openlocfilehash: 820e9bb0a8b21c2bacb54c9d0df3fe4a20d36241
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 65f4e7613be2a50adaf17dea0b8496048737a9a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752452"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221720"
 ---
 # <a name="bufsiz"></a>BUFSIZ
 
@@ -21,7 +22,7 @@ ms.locfileid: "57752452"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 `BUFSIZ` est le tampon alloué par l’utilisateur requis pour la routine [setvbuf](../c-runtime-library/reference/setvbuf.md).
 

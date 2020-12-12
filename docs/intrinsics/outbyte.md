@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __outbyte'
 title: __outbyte
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: 18792010c45ffb648e9555ccb73f8614c3e3e6ea
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e062d561719cbcdb32ab980efde9eb568defeadb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217197"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222474"
 ---
 # <a name="__outbyte"></a>__outbyte
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère l' `out` instruction, qui envoie 1 octet spécifié par `Data` le port d’e/s spécifié par `Port`.
+Génère l' `out` instruction, qui envoie 1 octet spécifié par `Data` le port d’e/s spécifié par `Port` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,22 +35,22 @@ void __outbyte(
 *Importer*\
 dans Port auquel envoyer les données.
 
-*Métadonnée*\
+*Données*\
 dans Octet à envoyer sur le port spécifié.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__outbyte`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

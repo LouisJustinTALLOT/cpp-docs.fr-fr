@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CWnd, classe'
 title: CWnd, classe
 ms.date: 11/19/2018
 f1_keywords:
@@ -818,12 +819,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 62298872def1a6e0e262c5339d323b83ad9bbc3d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c77beb57f62e4395ec5c08b2f0deb65ab114fc1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837643"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220504"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -1295,7 +1296,7 @@ Pour plus d’informations sur l’utilisation de `CWnd` , consultez [fenêtres 
 
 `CWnd`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -2080,7 +2081,7 @@ Indique si les données dans *pPersist* doivent être interprétées en tant que
 *bstrLicKey*<br/>
 Données de clé de licence facultatives. Ces données sont nécessaires uniquement pour créer des contrôles qui nécessitent une clé de licence d’exécution. Si le contrôle prend en charge la gestion des licences, vous devez fournir une clé de licence pour que la création du contrôle aboutisse. La valeur par défaut est NULL.
 
-*clsid*<br/>
+*identificateur*<br/>
 ID de classe unique du contrôle.
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -6391,7 +6392,7 @@ afx_msg void OnContextMenu(
 *pWnd*<br/>
 Handle vers la fenêtre dans laquelle l’utilisateur a cliqué avec le bouton droit de la souris. Il peut s’agir d’une fenêtre enfant de la fenêtre recevant le message. Pour plus d’informations sur le traitement de ce message, consultez la section Notes.
 
-*imprim*<br/>
+*pos*<br/>
 Position du curseur, en coordonnées d’écran, au moment du clic de la souris.
 
 ### <a name="remarks"></a>Notes
@@ -9794,7 +9795,7 @@ Quand le code de contexte est 0, le message WM_SYSKEYUP reçu par `OnSysKeyUp` p
 
 Pour les claviers IBM Enhanced 101-and 102-Key, les touches améliorées sont les touches ALT et droite de la section principale du clavier. les touches Inser, DEL, début, fin, PAGE précédente, PAGE suivante et flèche dans les clusters à gauche du pavé numérique ; et la barre oblique (/) et les touches de saisie dans le pavé numérique. D’autres claviers peuvent prendre en charge le bit de clé étendue dans *nFlags*.
 
-Pour les claviers autres que les États-102 Unis, la touche ALT droite est gérée comme la combinaison de touches CTRL + ALT. L’exemple suivant illustre la séquence de messages et d’appels qui résulte quand l’utilisateur appuie sur cette touche et la relâche :
+Pour les non-U. S. Clavier amélioré 102 touches, la touche ALT de droite est gérée comme la combinaison de touches CTRL + ALT. L’exemple suivant illustre la séquence de messages et d’appels qui résulte quand l’utilisateur appuie sur cette touche et la relâche :
 
 |Séquence|Fonction accessible|Message transmis|
 |--------------|-----------------------|--------------------|
@@ -9906,9 +9907,9 @@ Spécifie la coordonnée x et y du curseur. Ces coordonnées sont toujours relat
 *pTI*<br/>
 Pointeur vers une structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) . Les valeurs de structure suivantes sont définies par défaut :
 
-- *hwnd*  =  HWND `m_hWnd` Handle vers une fenêtre
+-   =  HWND `m_hWnd` Handle vers une fenêtre
 
-- *uId*  =  UID `(UINT)hWndChild` Handle vers une fenêtre enfant
+-   =  UID `(UINT)hWndChild` Handle vers une fenêtre enfant
 
 - *uFlags* &#124;= TTF_IDISHWND handle de l’outil
 
@@ -10609,7 +10610,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*cs*<br/>
 Structure [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) .
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -11107,7 +11108,7 @@ Si la fenêtre a le style [WS_CLIPCHILDREN](/windows/win32/api/winuser/nf-winuse
 
 Si l’indicateur [SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex) est spécifié, Windows ne met pas correctement à jour l’écran si une partie d’une fenêtre enfant est défilant. La partie de la fenêtre enfant défilante qui se trouve en dehors du rectangle source n’est pas effacée et n’est pas redessinée correctement dans sa nouvelle destination. Utilisez la fonction Windows [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) pour déplacer des fenêtres enfants qui ne se trouvent pas complètement dans le rectangle *lpRectScroll* . Le curseur est repositionné si l’indicateur de SW_SCROLLCHILDREN est défini et que le rectangle du signe insertion croise le rectangle de défilement.
 
-Toutes les coordonnées d’entrée et de sortie (pour *lpRectScroll*, *lpRectClip*, *lpRectUpdate*et *prgnUpdate*) sont supposées être dans les coordonnées clientes, que la fenêtre ait ou non le CS_OWNDC ou CS_CLASSDC style de classe. Utilisez les fonctions Windows [LPtoDP](/windows/win32/api/wingdi/nf-wingdi-lptodp) et [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) pour convertir en coordonnées logiques, si nécessaire.
+Toutes les coordonnées d’entrée et de sortie (pour *lpRectScroll*, *lpRectClip*, *lpRectUpdate* et *prgnUpdate*) sont supposées être dans les coordonnées clientes, que la fenêtre ait ou non le CS_OWNDC ou CS_CLASSDC style de classe. Utilisez les fonctions Windows [LPtoDP](/windows/win32/api/wingdi/nf-wingdi-lptodp) et [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) pour convertir en coordonnées logiques, si nécessaire.
 
 ## <a name="cwndsendchildnotifylastmsg"></a><a name="sendchildnotifylastmsg"></a> CWnd :: SendChildNotifyLastMsg
 
@@ -12004,7 +12005,7 @@ Si la valeur est TRUE, le système d’exploitation redessine la fenêtre après
 
 ### <a name="return-value"></a>Valeur renvoyée
 
-Si la fonction est réussie, la valeur de retour est différente de zéro. Si la fonction échoue, la valeur de retour est égale à zéro.
+Si la fonction réussit, la valeur de retour est différente de zéro. Si la fonction échoue, la valeur de retour est égale à zéro.
 
 ### <a name="remarks"></a>Notes
 
@@ -12252,7 +12253,7 @@ Indicateur qui signale si la boîte de dialogue est en cours d’initialisation 
 
 ### <a name="return-value"></a>Valeur renvoyée
 
-Différent de zéro si l’opération réussit ; Sinon, 0. Si *bSaveAndValidat*a la valeur true, une valeur de retour différente de zéro signifie que les données ont été validées avec succès.
+Différent de zéro si l’opération réussit ; Sinon, 0. Si *bSaveAndValidat* a la valeur true, une valeur de retour différente de zéro signifie que les données ont été validées avec succès.
 
 ### <a name="remarks"></a>Notes
 

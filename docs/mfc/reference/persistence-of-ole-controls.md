@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : persistance des contrôles OLE'
 title: Persistance des contrôles OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: f3ef5a1f465cc478b429b9fa41d6478f22030a8a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8c0ee5b81ffd21953c3ed9bcbc21a9ae30979b49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218977"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistance des contrôles OLE
 
