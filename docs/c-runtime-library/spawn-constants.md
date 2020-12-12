@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les constantes de génération
 title: spawn, constantes
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - P_WAIT constant
 - _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
-ms.openlocfilehash: 988cc5e1b982f0c5577db77ae94f1df46c95ec0e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0bac30346c974fa63d65da78a097cb24768cb313
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276957"
 ---
 # <a name="spawn-constants"></a>spawn, constantes
 
@@ -35,7 +36,7 @@ ms.locfileid: "57742754"
 #include <process.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L'argument `mode` détermine l'action effectuée par le processus appelant avant et pendant une opération de génération dynamique. Les valeurs suivantes pour `mode` sont possibles :
 
@@ -48,5 +49,5 @@ L'argument `mode` détermine l'action effectuée par le processus appelant avant
 
 ## <a name="see-also"></a>Voir aussi
 
-[_spawn, _wspawn, fonctions](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn fonctions](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [Constantes globales](../c-runtime-library/global-constants.md)

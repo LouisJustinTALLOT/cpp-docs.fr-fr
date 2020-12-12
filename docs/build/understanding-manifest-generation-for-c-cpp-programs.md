@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : comprendre la génération de manifestes pour les programmes C/C++'
 title: Fonctionnement de la génération de manifestes pour les programmes C/C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: 16d5efc5c5f7ce81b4b60269b0c666fd5d24266e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78169dd6d8185e1ae8470dea93ab145fc05dbc7b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277269"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Fonctionnement de la génération de manifestes pour les programmes C/C++
 
@@ -21,5 +22,5 @@ Les en-têtes de Visual C++ bibliothèques contiennent des informations d’asse
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepts d'applications isolées et d'assemblys côte à côte](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
+[Concepts d’applications isolées et d’assemblys côte à côte](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
 [Génération d’applications isolées C/C++ et d’assemblys côte à côte](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

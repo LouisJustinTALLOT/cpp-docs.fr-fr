@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : rand_s'
 title: rand_s
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8894248bf924ef513dc916e10e47ce8ea7e95137
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274825"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -54,11 +55,11 @@ errno_t rand_s(unsigned int* randomValue);
 *randomValue*<br/>
 Pointeur vers un entier destiné à contenir la valeur générée.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro en cas de réussite, code d’erreur dans un autre cas. Si le pointeur d’entrée _randomValue_ est un pointeur null, la fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **EINVAL** et définit **errno** sur **EINVAL**. Si la fonction échoue pour une autre raison, *_randomValue_ a la valeur 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **rand_s** écrit un entier Pseudo-aléatoire compris entre 0 et **UINT_MAX** au pointeur d’entrée. La fonction **rand_s** utilise le système d’exploitation pour générer des nombres aléatoires sécurisés par chiffrement. Elle n’utilise pas la valeur de départ générée par la fonction [srand](srand.md) , pas plus qu’elle n’affecte la séquence de nombres aléatoires utilisée par [Rand](rand.md).
 
@@ -81,7 +82,7 @@ By default, this function's global state is scoped to the application. To change
 
 Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_rand_s.c

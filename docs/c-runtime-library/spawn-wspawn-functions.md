@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les fonctions suivantes : _spawn, _wspawn'
 title: _spawn, _wspawn, fonctions
 ms.date: 11/04/2016
 api_location:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4b5fe1b386358095880c69fbf956c7c0a4a08ba9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276905"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn, fonctions
 
@@ -76,7 +77,7 @@ Chacune des fonctions `_spawn` crée et exécute un nouveau processus :
 
 Les lettres à la fin du nom de la fonction déterminent la variation.
 
-|Lettre|Variant|
+|Lettre|Variante|
 |-|-|
 | `e`  | `envp`, un tableau de pointeurs vers les paramètres d'environnement, est passé au nouveau processus.  |
 | `l`  | Les arguments de ligne de commande sont passés individuellement à la fonction `_spawn`. Ce suffixe est généralement utilisé lorsque plusieurs paramètres d'un nouveau processus sont connus à l'avance.  |

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _setjmp3'
 title: _setjmp3
 ms.date: 11/04/2016
 api_name:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - _setjmp3 function
 - setjmp3 function
 ms.assetid: 6129c2f3-8bac-4fdb-a827-44e1eebba500
-ms.openlocfilehash: d7120ddd10322d0b7391608fd388d9f45c1600e8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07a84601a6f57eca3e7dc71638a964428579b1c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277061"
 ---
 # <a name="_setjmp3"></a>_setjmp3
 
@@ -51,20 +52,20 @@ int _setjmp3(
 *count*<br/>
 [in] Nombre de `DWORD` d’informations supplémentaires stockés dans le paramètre `optional parameters`.
 
-*optional parameters*<br/>
+*paramètres facultatifs*<br/>
 [in] Données supplémentaires transmises par l’intrinsèque `setjmp`. Le premier `DWORD` est un pointeur de fonction utilisé pour dérouler des données supplémentaires et rétablir un état de registre non volatile. Le deuxième `DWORD` est le niveau d'essai à restaurer. Les données supplémentaires éventuelles sont enregistrées dans le tableau de données générique dans `jmp_buf`.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Retourne toujours 0.
+Retourne toujours 0.
 
 ## <a name="remarks"></a>Notes
 
 N'utilisez pas cette fonction dans un programme C++. Il s'agit d'une fonction intrinsèque qui ne prend pas en charge C++. Pour plus d'informations sur l'utilisation de `setjmp`, consultez [Utilisation de setjmp/longjmp](../cpp/using-setjmp-longjmp.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [setjmp](../c-runtime-library/reference/setjmp.md)

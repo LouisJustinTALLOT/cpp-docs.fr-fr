@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les versions Security-Enhanced des fonctions CRT
 title: Versions à la sécurité améliorée des fonctions CRT
 ms.date: 03/21/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 9cc44caa047e087b2f3de9b5af142d1ea868e893
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 95e94eb7790ef589fee3287b6cee8997faac7ab6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277204"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versions à la sécurité améliorée des fonctions CRT
 

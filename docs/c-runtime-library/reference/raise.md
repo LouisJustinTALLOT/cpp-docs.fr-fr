@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : déclencher'
 title: raise
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 81b92404603820948a384b6ad33421251a27c13c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb225e25ef0ff4e04f1ea8877a434c2af240cbfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274864"
 ---
 # <a name="raise"></a>raise
 
@@ -52,18 +53,18 @@ int raise(
 
 ### <a name="parameters"></a>Paramètres
 
-*sig*<br/>
+*McAfee*<br/>
 Signal à déclencher.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, **raise** retourne 0. Sinon, elle retourne une valeur différente de zéro.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **raise** envoie *sig* au programme en cours d’exécution. Si un appel précédent à **signal** a installé une fonction de gestion de signal pour *sig*, **raise** exécute cette fonction. Si aucune fonction de gestionnaire n’a été installée, l’action par défaut associée à la valeur de signal *sig* est effectuée, comme suit.
 
-|Signal|Signification|Valeur par défaut|
+|Signal|Signification|Default|
 |------------|-------------|-------------|
 |**SIGABRT**|Arrêt anormal|Termine le programme appelant avec le code de sortie 3|
 |**SIGFPE**|Erreur de virgule flottante|Termine le programme appelant|
@@ -80,7 +81,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**raise**|\<signal.h >|
+|**raise**|\<signal.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

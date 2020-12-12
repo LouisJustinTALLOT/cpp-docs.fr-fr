@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : type d’opérateur ^'
 title: Type^, opérateur
 ms.date: 12/30/2016
 ms.assetid: b24ffc83-0780-4f9a-8ee0-f5725db339d1
-ms.openlocfilehash: 180efcac76b7f51291a47ee68508e7444a6c069c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6258da5f276313d28f56fe470849c929cc057a47
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276801"
 ---
 # <a name="operator-type"></a>Type^, opérateur
 
@@ -46,11 +47,11 @@ Type^ tx2 = (Type^)(tn);
 
 ## <a name="net-framework-equivalent"></a>Équivalent .NET Framework
 
-Projet de programmes .NET framework `TypeName` en tant que <xref:System.Type>
+.NET Framework le projet `TypeName` de programmes en tant que <xref:System.Type>
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 ## <a name="see-also"></a>Voir aussi
 
 [Windows::UI::Xaml::Interop::TypeName, opérateur](../cppcx/operator-windows-ui-xaml-interop-typename.md)<br/>
-[Platform::Type, classe](../cppcx/platform-type-class.md)
+[Classe Platform :: type](../cppcx/platform-type-class.md)

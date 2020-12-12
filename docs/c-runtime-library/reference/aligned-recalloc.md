@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _aligned_recalloc'
 title: _aligned_recalloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_recalloc function
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
-ms.openlocfilehash: d425ff6c24cd7886c8d712b69e6e5d10da9dd6a2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6e7ae7cb41781a480018aa8f5f9e056b84fef45c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275215"
 ---
 # <a name="_aligned_recalloc"></a>_aligned_recalloc
 
@@ -64,13 +65,13 @@ Taille en octets de chaque élément.
 *repère*<br/>
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_aligned_recalloc** retourne un pointeur void vers le bloc de mémoire réalloué (et éventuellement déplacé). La valeur de retour est **null** si la taille est égale à zéro et l’argument de mémoire tampon n’est pas **null**, ou s’il n’y a pas assez de mémoire disponible pour développer le bloc à la taille donnée. Dans le premier cas, le bloc d'origine est libéré. Dans le second cas, le bloc d'origine est inchangé. La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que void, utilisez un cast de type sur la valeur de retour.
 
 Le fait de réallouer la mémoire et de modifier l'alignement d'un bloc constitue une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **_aligned_recalloc** est basé sur **malloc**. Pour plus d’informations sur l’utilisation de **_aligned_offset_malloc**, consultez [malloc](malloc.md).
 
