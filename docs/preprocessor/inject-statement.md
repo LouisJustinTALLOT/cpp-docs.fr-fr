@@ -1,27 +1,28 @@
 ---
-title: inject_statement importer l’attribut
+description: 'En savoir plus sur les éléments suivants : inject_statement l’attribut import'
+title: inject_statement l’attribut d’importation
 ms.date: 08/29/2019
 f1_keywords:
 - inject_statement
 helpviewer_keywords:
 - inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
-ms.openlocfilehash: 25dee621ff8af2c9a39e605b9da2c29d80f9570a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: b7ab8059e95ed3799857fe1b899ef2efff729ffb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236423"
 ---
-# <a name="inject_statement-import-attribute"></a>inject_statement importer l’attribut
+# <a name="inject_statement-import-attribute"></a>inject_statement l’attribut d’importation
 
-**C++Plus**
+**Section spécifique à C++**
 
 Insère son argument en tant que texte source dans l’en-tête de bibliothèque de types.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#import** *bibliothèque de types* **inject_statement (** "*source-Text*" **)**
+> **#import** *de la bibliothèque de types* **inject_statement (** "*source-Text*" **)**
 
 ### <a name="parameters"></a>Paramètres
 
@@ -32,7 +33,7 @@ Texte source à insérer dans le fichier d'en-tête de bibliothèque de types.
 
 Le texte est placé au début de la déclaration d’espace de noms qui encapsule le contenu de la *bibliothèque de types* dans le fichier d’en-tête.
 
-**Spécifique C++ à la fin**
+**FIN de la section spécifique à C++**
 
 ## <a name="see-also"></a>Voir aussi
 

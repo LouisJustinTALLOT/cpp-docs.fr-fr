@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragma init_seg'
 title: init_seg, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -9,30 +10,30 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: 5e57ea0eedfc1df6e196391c5edd3acfbad0a7c7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cab1c82acd3e06a0ace4d55be3ce82e8fd7aed1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236462"
 ---
 # <a name="init_seg-pragma"></a>init_seg, pragma
 
-**C++Plus**
+**Section spécifique à C++**
 
 Spécifie un mot clé ou une section de code qui affecte l'ordre dans lequel le code de démarrage est exécuté.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma init_seg (** {**utilisateur** **lib** |  **du compilateur** | | "*section-Name*" [ **,** *Func-Name* ]} **)**
+> **#pragma init_seg (** {, utilisateur de la bibliothèque de **compilateurs**  |    |   | "*section-Name*" [ **,** *Func-Name* ]} **)**
 
 ## <a name="remarks"></a>Notes
 
-Les termes « *segment* » et « *section»* ont la même signification dans cet article.
+Les termes « *segment* » et « *section »* ont la même signification dans cet article.
 
 Étant donné que le code est parfois requis pour initialiser des objets statiques globaux, vous devez spécifier quand créer les objets. En particulier, il est important d’utiliser le pragma **init_seg** dans les bibliothèques de liens dynamiques (dll), ou dans les bibliothèques qui requièrent une initialisation.
 
-Les options du pragma **init_seg** sont les suivantes:
+Les options du pragma **init_seg** sont les suivantes :
 
 **compiler**\
 Réservé pour l'initialisation de la bibliothèque Runtime C Microsoft. Les objets de ce groupe sont construits en premier.
@@ -67,13 +68,13 @@ Vos objets seront toujours placés dans les sections définies par les autres `X
 
 Les objets déclarés dans le module ne sont pas automatiquement initialisés par le runtime C. Votre code doit effectuer l’initialisation.
 
-Par défaut, les sections `init_seg` sont en lecture seule. Si le nom de la `.CRT`section est, le compilateur change l’attribut en mode lecture seule, même s’il est marqué comme étant en lecture et en écriture.
+Par défaut, les sections `init_seg` sont en lecture seule. Si le nom de la section est `.CRT` , le compilateur change l’attribut en mode lecture seule, même s’il est marqué comme étant en lecture et en écriture.
 
 Vous ne pouvez pas spécifier **init_seg** plusieurs fois dans une unité de traduction.
 
 Même si votre objet n’a pas de constructeur défini par l’utilisateur, un défini explicitement dans le code, le compilateur peut en générer un pour vous. Par exemple, il peut en créer un pour lier les pointeurs v-table. Le cas échéant, votre code appelle le constructeur généré par le compilateur.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // pragma_directive_init_seg.cpp
@@ -156,4 +157,4 @@ A()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

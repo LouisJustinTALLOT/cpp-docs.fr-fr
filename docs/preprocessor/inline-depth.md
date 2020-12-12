@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragma inline_depth'
 title: inline_depth, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-ms.openlocfilehash: 73540ec19c4ecc18a740dace0d23a37ad43182c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10ac7f5543108018eb7b51e8916dfed149363899
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236397"
 ---
 # <a name="inline_depth-pragma"></a>inline_depth, pragma
 

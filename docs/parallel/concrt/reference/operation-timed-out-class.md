@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe operation_timed_out'
 title: operation_timed_out, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-ms.openlocfilehash: 7a2513d30aa68798707f3bb16318db9b594b9e16
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 476dfc2d7f29b2769c076ff525f3d0eb1e20a8f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236553"
 ---
 # <a name="operation_timed_out-class"></a>operation_timed_out, classe
 
@@ -29,7 +30,7 @@ class operation_timed_out : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[operation_timed_out](#ctor)|Surchargé. Construit un objet `operation_timed_out`.|
 
@@ -43,9 +44,9 @@ class operation_timed_out : public std::exception;
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>operation_timed_out
+## <a name="operation_timed_out"></a><a name="ctor"></a> operation_timed_out
 
 Construit un objet `operation_timed_out`.
 
@@ -62,4 +63,4 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

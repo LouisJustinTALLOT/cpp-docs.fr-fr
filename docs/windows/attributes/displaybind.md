@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : displaybind'
 title: displaybind (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: e5c870aefbc73893b5bf14edec384a93fe0b057b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 98411ec7f07c3145216c536db3e1c19ef7043429
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236319"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -31,14 +32,14 @@ L’attribut C++ **displaybind** a les mêmes fonctionnalités que l’attribut 
 
 Pour obtenir un exemple d’utilisation de **displaybind**, consultez l’exemple de [Bindable](bindable.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|Méthode d’interface|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
