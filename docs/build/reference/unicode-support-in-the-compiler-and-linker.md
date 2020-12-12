@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : prise en charge d’Unicode dans le compilateur et l’éditeur de liens'
 title: Prise en charge Unicode dans le compilateur et l'éditeur de liens
 ms.date: 12/15/2017
 f1_keywords:
@@ -8,20 +9,20 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: 420b01263320cf86df3f99da4523cc2b8bb4d4b6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c853907dd0d70a4ab7311c41f51d8d73bb25cf20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178951"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Prise en charge Unicode dans le compilateur et l'éditeur de liens
 
-La plupart C++ des outils de génération d’éléments visuels prennent en charge les entrées et sorties Unicode.
+La plupart des Visual C++ outils de génération prennent en charge les entrées et sorties Unicode.
 
 ## <a name="filenames"></a>Noms de fichiers
 
-Les noms de fichiers spécifiés sur la ligne de commande ou dans les directives de compilateur (par exemple `#include`) peuvent contenir des caractères Unicode.
+Les noms de fichiers spécifiés sur la ligne de commande ou dans les directives de compilateur (tels que `#include` ) peuvent contenir des caractères Unicode.
 
 ## <a name="source-code-files"></a>Fichiers de code source
 
@@ -49,4 +50,4 @@ les dumps. asm et. COD sont par défaut en ANSI pour des compatibilités avec MA
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utiliser le jeu d’outils MSVC à partir de la ligne de commande](../building-on-the-command-line.md)
+[Utiliser l’ensemble d’outils MSVC à partir de la ligne de commande](../building-on-the-command-line.md)

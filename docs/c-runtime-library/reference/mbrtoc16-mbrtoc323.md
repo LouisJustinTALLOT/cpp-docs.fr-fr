@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mbrtoc16, mbrtoc32'
 title: mbrtoc16, mbrtoc323
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 113c103cfedfe1982c8524623b259c3d58d4f4e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4132be867186567b31c9e297e6acb4ada68a66ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234066"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178613"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -79,11 +80,11 @@ Pointeur vers un objet d’état de conversion **mbstate_t** utilisé pour inter
 
 En cas de réussite, retourne la valeur de la première des conditions qui s’applique, étant donné la valeur d' *État* actuelle :
 
-|Valeur|Condition|
+|Value|Condition|
 |-----------|---------------|
 |0|Le *max_bytes* suivant ou un nombre de caractères inférieur converti à partir de la *source* correspond au caractère élargi null, qui est la valeur stockée si *destination* n’est pas null.<br /><br /> l' *État* contient l’état de décalage initial.|
-|Entre 1 et *max_bytes*inclus|La valeur retournée est le nombre d’octets de la *source* qui terminent un caractère multioctet valide. Le caractère élargi converti est stocké si la *destination* n’est pas null.|
-|-3|Le caractère élargi suivant résultant d’un appel précédent à la fonction a été stocké dans la *destination* si la *destination* n’est pas null. Aucun octet de la *source* n’est consommé par cet appel à la fonction.<br /><br /> Lorsque la *source* pointe vers un caractère multioctet UTF-8 qui requiert plusieurs caractères larges à représenter (par exemple, une paire de substitution), la valeur d' *État* est mise à jour afin que l’appel de fonction suivant écrive le caractère supplémentaire.|
+|Entre 1 et *max_bytes* inclus|La valeur retournée est le nombre d’octets de la *source* qui terminent un caractère multioctet valide. Le caractère élargi converti est stocké si la *destination* n’est pas null.|
+|-3|Le caractère élargi suivant résultant d’un appel précédent à la fonction a été stocké dans la *destination* si la *destination* n’est pas null. Aucun octet de la *source* n’est consommé par cet appel à la fonction.<br /><br /> Lorsque la  *source* pointe vers un caractère multioctet UTF-8 qui requiert plusieurs caractères larges à représenter (par exemple, une paire de substitution), la valeur d' *État* est mise à jour afin que l’appel de fonction suivant écrive le caractère supplémentaire.|
 |-2|Les octets *max_bytes* suivants représentent un caractère multioctet UTF-8 incomplet, mais potentiellement valide. Aucune valeur n’est stockée dans la *destination*. Ce résultat peut se produire si *max_bytes* est égal à zéro.|
 |-1|Une erreur d’encodage s’est produite. Le *max_bytes* suivant ou moins d’octets ne contribuent pas à un caractère multioctet UTF-8 complet et valide. Aucune valeur n’est stockée dans la *destination*.<br /><br /> **EILSEQ** est stocké dans **errno** et l' *État* de la valeur de l’état de conversion n’est pas spécifié.|
 

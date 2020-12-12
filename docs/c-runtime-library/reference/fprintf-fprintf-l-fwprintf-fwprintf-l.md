@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les tâches suivantes : fprintf, _fprintf_l, fwprintf, _fwprintf_l'
 title: fprintf, _fprintf_l, fwprintf, _fwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-ms.openlocfilehash: 1a296b8ac97a7f20a3834814c1ca3b7319720148
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 05896f56ac7058be1618833d6f50a8935a61a14f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178678"
 ---
 # <a name="fprintf-_fprintf_l-fwprintf-_fwprintf_l"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
@@ -78,7 +79,7 @@ int _fwprintf_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*train*<br/>
 Pointeur désignant la structure **FILE**.
 
 *format*<br/>
@@ -90,15 +91,15 @@ Arguments facultatifs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **fprintf** retourne le nombre d’octets écrits. **fwprintf** retourne le nombre de caractères larges écrits. Chacune de ces fonctions retourne une valeur négative à la place en cas d’erreur de sortie. Si *Stream* ou *format* a la **valeur null**, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**. La chaîne de format n’est pas vérifiée pour les caractères de mise en forme valides, comme c’est le cas lors de l’utilisation de **fprintf_s** ou **fwprintf_s**.
 
-Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.
 
 ## <a name="remarks"></a>Notes
 
-**fprintf** met en forme et imprime une série de caractères et de valeurs dans le *flux*de sortie. Chaque *argument* de fonction (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. Pour **fprintf**, l’argument de *format* a la même syntaxe et utilise dans **printf**.
+**fprintf** met en forme et imprime une série de caractères et de valeurs dans le *flux* de sortie. Chaque *argument* de fonction (le cas échéant) est converti et sorti selon la spécification de format correspondante au *format*. Pour **fprintf**, l’argument de *format* a la même syntaxe et utilise dans **printf**.
 
 **fwprintf** est une version à caractères larges de **fprintf**; dans **fwprintf**, *format* est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fprintf** ne prend pas actuellement en charge la sortie dans un flux Unicode.
 
@@ -114,9 +115,9 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 |**_ftprintf**|**fprintf**|**fprintf**|**fwprintf**|
 |**_ftprintf_l**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
 
-Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
@@ -125,7 +126,7 @@ Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_fprintf.c
@@ -167,5 +168,5 @@ this is a string
 [E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [Syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>

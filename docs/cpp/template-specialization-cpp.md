@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : spécialisation de modèle (C++)'
 title: Spécialisation de modèle
 ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 7f71c2c3862bd015ba3edcd17aeac85472eb2562
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: a0bb000e318da5f19a25d7c52e39f4ca248c8c2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178119"
 ---
 # <a name="template-specialization-c"></a>Spécialisation de modèle
 

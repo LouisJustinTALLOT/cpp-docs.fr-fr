@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Résumé des règles d’étendue'
 title: Résumé des règles de portée
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: 024a61419129f669485944a427379dd41c385404
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cbb5fdc448039e2e7ac998fa8dc5754ef7026d8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231063"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178158"
 ---
 # <a name="summary-of-scope-rules"></a>Résumé des règles de portée
 

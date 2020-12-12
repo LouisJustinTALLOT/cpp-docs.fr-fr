@@ -1,5 +1,6 @@
 ---
-title: '&lt;> de codeC++ (commentaires de documentation)'
+description: 'En savoir plus sur : &lt; code&gt;'
+title: '&lt;> de code (commentaires de documentation C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <code>
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: f4bc28c4615a4aab3076940806f54c699ec1ee0e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae40becf272e6be00cd23d157953bd54da21b2b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169928"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179094"
 ---
 # <a name="ltcodegt"></a>&lt;code&gt;
 
-La balise \<code> vous permet d’indiquer une ou plusieurs lignes comme étant du code.
+La \<code> balise vous donne un moyen d’indiquer une ou plusieurs lignes en tant que code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,13 +32,13 @@ Texte à marquer comme étant du code.
 
 ## <a name="remarks"></a>Notes
 
-Utilisez [\<c>](c-visual-cpp.md) pour indiquer qu’une partie du texte doit être marquée comme étant du code.
+Utilisez [\<c>](c-visual-cpp.md) pour indiquer qu’une partie du texte doit être marquée comme code.
 
-Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation dans un fichier.
 
 ## <a name="example"></a>Exemple
 
-Consultez la rubrique [\<example>](example-visual-cpp.md) pour obtenir un exemple d’utilisation de la balise \<code>.
+Consultez la [\<example>](example-visual-cpp.md) rubrique pour obtenir un exemple d’utilisation de la \<code> balise.
 
 ## <a name="see-also"></a>Voir aussi
 
