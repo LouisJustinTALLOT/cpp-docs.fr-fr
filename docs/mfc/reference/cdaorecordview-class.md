@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CDaoRecordView, classe'
 title: CDaoRecordView, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: 95ed9207d0047287e373401da52f05235a817999
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb91f6d3890806ac357a1f662905845598df1680
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223133"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248175"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView, classe
 
@@ -52,7 +53,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 ## <a name="remarks"></a>Notes
 
-La vue est une vue de formulaire directement connectée à un `CDaoRecordset` objet. La vue est créée à partir d’une ressource de modèle de boîte de dialogue et affiche les champs de l' `CDaoRecordset` objet dans les contrôles du modèle de boîte de dialogue. L' `CDaoRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et l’échange de champs d’enregistrements DAO (DFX) pour automatiser le déplacement des données entre les contrôles du formulaire et les champs de l’ensemble d’enregistrements. `CDaoRecordView`fournit également une implémentation par défaut pour passer au premier enregistrement, suivant, précédent ou dernier et une interface pour mettre à jour l’enregistrement actuellement affiché.
+La vue est une vue de formulaire directement connectée à un `CDaoRecordset` objet. La vue est créée à partir d’une ressource de modèle de boîte de dialogue et affiche les champs de l' `CDaoRecordset` objet dans les contrôles du modèle de boîte de dialogue. L' `CDaoRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et l’échange de champs d’enregistrements DAO (DFX) pour automatiser le déplacement des données entre les contrôles du formulaire et les champs de l’ensemble d’enregistrements. `CDaoRecordView` fournit également une implémentation par défaut pour passer au premier enregistrement, suivant, précédent ou dernier et une interface pour mettre à jour l’enregistrement actuellement affiché.
 
 > [!NOTE]
 > Les classes de base de données DAO sont distinctes des classes de base de données MFC basées sur Open Database Connectivity (ODBC). Tous les noms de classe de base de données DAO ont le préfixe « CDao ». Vous pouvez toujours accéder aux sources de données ODBC avec les classes DAO. les classes DAO offrent généralement des fonctionnalités supérieures, car elles utilisent le moteur de base de données Microsoft Jet.
@@ -65,7 +66,7 @@ Pour permettre aux utilisateurs finaux de passer facilement d’un enregistremen
 
 Pour plus d’informations sur l’implémentation par défaut pour le déplacement d’un enregistrement à un autre, consultez `IsOnFirstRecord` et `IsOnLastRecord` et l’article [à l’aide d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md)qui s’applique à la fois à `CRecordView` et à `CDaoRecordView` .
 
-`CDaoRecordView`effectue le suivi de la position de l’utilisateur dans le Recordset afin que la vue d’enregistrement puisse mettre à jour l’interface utilisateur. Lorsque l’utilisateur passe à l’une des extrémités de l’ensemble d’enregistrements, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou les boutons de barre d’outils, pour se déplacer dans la même direction.
+`CDaoRecordView` effectue le suivi de la position de l’utilisateur dans le Recordset afin que la vue d’enregistrement puisse mettre à jour l’interface utilisateur. Lorsque l’utilisateur passe à l’une des extrémités de l’ensemble d’enregistrements, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou les boutons de barre d’outils, pour se déplacer dans la même direction.
 
 Pour plus d’informations sur la déclaration et l’utilisation de vos classes d’affichage des enregistrements et de jeux d’enregistrements, consultez « conception et création d’une vue d’enregistrement » dans l’article [affichages des enregistrements](../../data/record-views-mfc-data-access.md). Pour plus d’informations sur le fonctionnement des vues d’enregistrement et leur utilisation, consultez l’article [utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md). Tous les articles mentionnés ci-dessus s’appliquent à `CRecordView` et à `CDaoRecordView` .
 
@@ -89,7 +90,7 @@ Pour plus d’informations sur la déclaration et l’utilisation de vos classes
 
 **En-tête :** afxdao. h
 
-## <a name="cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a>CDaoRecordView :: CDaoRecordView
+## <a name="cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a> CDaoRecordView :: CDaoRecordView
 
 Quand vous créez un objet d’un type dérivé de `CDaoRecordView` , appelez l’une ou l’autre forme du constructeur pour initialiser l’objet de vue et identifier la ressource de boîte de dialogue sur laquelle la vue est basée.
 
@@ -113,14 +114,14 @@ Vous pouvez identifier la ressource par son nom (passer une chaîne en tant qu�
 > [!NOTE]
 > Votre classe dérivée doit fournir son propre constructeur. Dans le constructeur de votre classe dérivée, appelez le constructeur `CDaoRecordView::CDaoRecordView` avec le nom ou l’ID de la ressource en tant qu’argument.
 
-`CDaoRecordView::OnInitialUpdate`appelle `CWnd::UpdateData` , qui appelle `CWnd::DoDataExchange` . Cet appel initial à `DoDataExchange` connecte `CDaoRecordView` les contrôles (indirectement) aux `CDaoRecordset` membres de données de champ créés par ClassWizard. Ces membres de données ne peuvent pas être utilisés tant que vous n’avez pas appelé la fonction membre de la classe de base `CFormView::OnInitialUpdate` .
+`CDaoRecordView::OnInitialUpdate` appelle `CWnd::UpdateData` , qui appelle `CWnd::DoDataExchange` . Cet appel initial à `DoDataExchange` connecte `CDaoRecordView` les contrôles (indirectement) aux `CDaoRecordset` membres de données de champ créés par ClassWizard. Ces membres de données ne peuvent pas être utilisés tant que vous n’avez pas appelé la fonction membre de la classe de base `CFormView::OnInitialUpdate` .
 
 > [!NOTE]
 > Si vous utilisez ClassWizard, l’Assistant définit une **`enum`** valeur `CDaoRecordView::IDD` dans la déclaration de classe et l’utilise dans la liste d’initialisation des membres pour le constructeur.
 
 [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]
 
-## <a name="cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CDaoRecordView :: IsOnFirstRecord
+## <a name="cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a> CDaoRecordView :: IsOnFirstRecord
 
 Appelez cette fonction membre pour déterminer si l’enregistrement en cours est le premier enregistrement de l’objet Recordset associé à cette vue de l’enregistrement.
 
@@ -128,7 +129,7 @@ Appelez cette fonction membre pour déterminer si l’enregistrement en cours es
 BOOL IsOnFirstRecord();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si l’enregistrement actif est le premier enregistrement dans le Recordset ; Sinon, 0.
 
@@ -138,7 +139,7 @@ Cette fonction est utile pour écrire vos propres implémentations des gestionna
 
 Si l’utilisateur passe au premier enregistrement, l’infrastructure désactive tous les objets d’interface utilisateur (par exemple, les éléments de menu ou les boutons de barre d’outils) dont vous disposez pour déplacer vers le premier ou l’enregistrement précédent.
 
-## <a name="cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CDaoRecordView :: IsOnLastRecord
+## <a name="cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a> CDaoRecordView :: IsOnLastRecord
 
 Appelez cette fonction membre pour déterminer si l’enregistrement en cours est le dernier enregistrement de l’objet Recordset associé à cette vue de l’enregistrement.
 
@@ -146,7 +147,7 @@ Appelez cette fonction membre pour déterminer si l’enregistrement en cours es
 BOOL IsOnLastRecord();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’enregistrement actif est le dernier enregistrement du Recordset ; Sinon, 0.
 
@@ -157,7 +158,7 @@ Cette fonction est utile pour écrire vos propres implémentations des gestionna
 > [!CAUTION]
 > Le résultat de cette fonction est fiable, sauf que la vue peut ne pas être en mesure de détecter la fin du Recordset tant que l’utilisateur ne l’a pas déplacée. L’utilisateur devra peut-être se déplacer au-delà du dernier enregistrement pour que la vue de l’enregistrement puisse déterminer qu’il doit désactiver les objets d’interface utilisateur pour passer au dernier enregistrement ou suivant. Si l’utilisateur passe au-delà du dernier enregistrement, puis revient au dernier enregistrement (ou avant), la vue de l’enregistrement peut suivre la position de l’utilisateur dans le jeu d’enregistrements et désactiver les objets de l’interface utilisateur correctement.
 
-## <a name="cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a>CDaoRecordView :: OnGetRecordset
+## <a name="cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a> CDaoRecordView :: OnGetRecordset
 
 Retourne un pointeur vers l' `CDaoRecordset` objet dérivé de associé à la vue de l’enregistrement.
 
@@ -165,7 +166,7 @@ Retourne un pointeur vers l' `CDaoRecordset` objet dérivé de associé à la vu
 virtual CDaoRecordset* OnGetRecordset() = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un `CDaoRecordset` objet dérivé de si l’objet a été créé avec succès ; sinon, un pointeur null.
 
@@ -175,7 +176,7 @@ Vous devez substituer cette fonction membre pour construire ou obtenir un objet 
 
 Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
 
-## <a name="cdaorecordviewonmove"></a><a name="onmove"></a>CDaoRecordView :: OnMove
+## <a name="cdaorecordviewonmove"></a><a name="onmove"></a> CDaoRecordView :: OnMove
 
 Appelez cette fonction membre pour passer à un autre enregistrement dans le Recordset et afficher ses champs dans les contrôles de la vue de l’enregistrement.
 
@@ -196,7 +197,7 @@ L’une des valeurs d’ID de commande standard suivantes :
 
 - ID_RECORD_PREV passer à l’enregistrement précédent dans le jeu d’enregistrements.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si le déplacement a réussi ; Sinon, 0 si la demande de déplacement a été refusée.
 

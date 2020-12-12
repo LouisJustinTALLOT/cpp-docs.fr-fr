@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CDateTimeCtrl, classe'
 title: CDateTimeCtrl (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: f04cce93aa6a86d11c2d9ec953992a0f90f635c5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: cfed57d74e16f8433a5199ca912379b90a4f48cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247929"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl (classe)
 
@@ -166,7 +167,7 @@ Pointeur vers un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fen�
 *nID*<br/>
 Spécifie l’ID de contrôle du contrôle de sélecteur de date et d’heure.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si la création a réussi ; Sinon, 0.
 
@@ -197,7 +198,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 *pDateTimePickerInfo*\
 à Pointeur vers une structure [DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) qui reçoit une description du contrôle de sélecteur de date et d’heure actuel. L’appelant est chargé d’allouer cette structure. Toutefois, cette méthode initialise le membre *cbSize* de la structure.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -230,7 +231,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 *iColor*<br/>
 **`int`** Valeur qui spécifie la zone de couleur du calendrier du mois à récupérer. Pour obtenir la liste des valeurs, consultez le paramètre *iColor* pour [SetMonthCalColor](#setmonthcalcolor).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui représente le paramètre de couleur de la partie spécifiée du contrôle Month Calendar en cas de réussite. La fonction retourne-1 en cas d’échec.
 
@@ -250,7 +251,7 @@ Récupère l' `CMonthCalCtrl` objet associé au contrôle de sélecteur de date 
 CMonthCalCtrl* GetMonthCalCtrl() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) , ou null en cas d’échec ou si la fenêtre n’est pas visible.
 
@@ -270,7 +271,7 @@ Obtient la police actuellement utilisée par le contrôle Month Calendar du cont
 CFont* GetMonthCalFont() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CFont](../../mfc/reference/cfont-class.md) , ou null en cas d’échec.
 
@@ -286,7 +287,7 @@ Obtient le style du contrôle calendrier du mois déroulant associé au contrôl
 DWORD GetMonthCalStyle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Style du contrôle de calendrier du mois de la liste déroulante, qui est une combinaison au niveau du bit (ou) des styles de contrôle de sélecteur de date et d’heure. Pour plus d’informations, consultez [styles de contrôle de calendrier mensuel](/windows/win32/Controls/month-calendar-control-styles).
 
@@ -316,9 +317,9 @@ Pointeur vers un objet [COleDateTime](../../atl-mfc-shared/reference/coledatetim
 *pMaxRange*<br/>
 Pointeur vers un `COleDateTime` objet ou un `CTime` objet contenant l’heure la plus récente autorisée dans l' `CDateTimeCtrl` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Valeur DWORD contenant des indicateurs qui indiquent les plages définies. Si
+Valeur DWORD contenant des indicateurs qui indiquent les plages définies. If
 
 `return value & GDTR_MAX` == 0
 
@@ -354,7 +355,7 @@ Dans la première version, référence à un objet [COleDateTime](../../atl-mfc-
 *pTimeDest*<br/>
 Pointeur vers la structure [SystemTime](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) pour recevoir les informations d’heure système. Ne doit pas avoir la valeur NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Dans la première version, différente de zéro si l’heure est correctement écrite dans l' `COleDateTime` objet ; sinon, 0. Dans la deuxième et la troisième version, il s’agit d’une valeur DWORD égale au membre *dwFlag* défini dans la structure [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) . Pour plus d’informations, consultez la section **Notes** ci-dessous.
 
@@ -381,7 +382,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 *psize*\
 à Pointeur vers une structure de [taille](/windows/win32/api/windef/ns-windef-size) qui contient la taille idéale pour le contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour est toujours TRUE.
 
@@ -414,7 +415,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 *pstrFormat*<br/>
 Pointeur vers une chaîne de format se terminant par zéro qui définit l’affichage souhaité. Si ce paramètre a la valeur NULL, le contrôle est réinitialisé à la chaîne de format par défaut pour le style actuel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -456,7 +457,7 @@ COLORREF SetMonthCalColor(
 *ref*<br/>
 Valeur COLORREF représentant la couleur qui sera définie pour la zone spécifiée du calendrier du mois.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui représente le paramètre de couleur précédent pour la partie spécifiée du contrôle Month Calendar en cas de réussite. Dans le cas contraire, le message retourne-1.
 
@@ -510,7 +511,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 *dwStyle*\
 dans Nouveau style de contrôle Month Calendar, qui est une combinaison au niveau du bit (OR) des styles du contrôle Month Calendar. Pour plus d’informations, consultez [styles de contrôle de calendrier mensuel](/windows/win32/Controls/month-calendar-control-styles).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le style précédent du contrôle de calendrier mensuel déroulant.
 
@@ -552,7 +553,7 @@ Pointeur vers un objet [COleDateTime](../../atl-mfc-shared/reference/coledatetim
 *pMaxRange*<br/>
 Pointeur vers un `COleDateTime` objet ou un `CTime` objet contenant l’heure la plus récente autorisée dans l' `CDateTimeCtrl` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -582,7 +583,7 @@ Référence à un objet [COleDateTime](../../atl-mfc-shared/reference/coledateti
 *pTimeNew*<br/>
 Dans la deuxième version ci-dessus, pointeur vers un objet [ctime](../../atl-mfc-shared/reference/ctime-class.md) contenant l’heure à laquelle le contrôle sera défini. Dans la troisième version ci-dessus, pointeur vers une structure [SystemTime](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) contenant l’heure à laquelle le contrôle sera défini.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 

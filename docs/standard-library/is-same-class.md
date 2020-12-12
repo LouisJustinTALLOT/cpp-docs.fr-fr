@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_same'
 title: is_same, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_same class
 - is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
-ms.openlocfilehash: f4e4babeef89960762ebb2ccf0f733f60eadfa47
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 19e0ecec009227c0785c263893aa32beff4049e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450060"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247720"
 ---
-# <a name="issame-class"></a>is_same, classe
+# <a name="is_same-class"></a>is_same, classe
 
 Teste si deux types sont identiques.
 
@@ -80,14 +81,14 @@ is_same<int, int> == true
 is_same<int, const int> == false
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[is_convertible, classe](../standard-library/is-convertible-class.md)\
-[is_base_of, classe](../standard-library/is-base-of-class.md)
+[Classe is_convertible](../standard-library/is-convertible-class.md)\
+[Classe is_base_of](../standard-library/is-base-of-class.md)

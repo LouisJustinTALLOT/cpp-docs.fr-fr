@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Putch'
 title: putch
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - putch function
 ms.assetid: 81e733e5-770e-4c7a-b7e4-8e66da109f92
-ms.openlocfilehash: 60efe440814a415da0cc51fa1b822bc1fd1f51f0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a7a5044e9ed59b1c6438ef3985307bdfe7bbb487
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246329"
 ---
 # <a name="putch"></a>putch
 

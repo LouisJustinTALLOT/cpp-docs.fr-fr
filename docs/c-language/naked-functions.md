@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions Naked'
 title: Naked, fonctions
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - prolog code
 - epilog code
 ms.assetid: 2543c8af-00d4-4a2a-8a87-e746da1f9929
-ms.openlocfilehash: b752dd6fa378bc1275e8a7da90420aa2b8247e4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cea9bf2497a14bc7007f97b2c3db68eafc15059
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232813"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243352"
 ---
 # <a name="naked-functions"></a>Naked, fonctions
 

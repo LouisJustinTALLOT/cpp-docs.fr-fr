@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _putenv_s, _wputenv_s'
 title: _putenv_s, _wputenv_s
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - environment variables, creating
 - environment variables, modifying
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
-ms.openlocfilehash: ade4fe613a2fd57df67f58c496b62d7192354654
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bba9d595d716f3a8e5e9c41326a0258b10e8abf8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246290"
 ---
 # <a name="_putenv_s-_wputenv_s"></a>_putenv_s, _wputenv_s
 
@@ -72,7 +73,7 @@ Nom de la variable d'environnement.
 *value_string*<br/>
 Valeur à attribuer à la variable d'environnement.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne 0 en cas de réussite et un code d'erreur dans le cas contraire.
 
@@ -80,12 +81,12 @@ Retourne 0 en cas de réussite et un code d'erreur dans le cas contraire.
 
 |*argument*|*value_string*|Valeur retournée|
 |------------|-------------|------------------|
-|**NUL**|n'importe laquelle|**EINVAL**|
-|n'importe laquelle|**NUL**|**EINVAL**|
+|**NULL**|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|**NULL**|**EINVAL**|
 
 Si l’une des conditions d’erreur se produit, ces fonctions appellent un gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_putenv_s** ajoute de nouvelles variables d’environnement ou modifie les valeurs des variables d’environnement existantes. Les variables d'environnement définissent l'environnement d'exécution d'un processus (par exemple, le chemin de recherche par défaut pour les bibliothèques à lier à un programme). **_wputenv_s** est une version à caractères larges de **_putenv_s**; l’argument *envstring* pour **_wputenv_s** est une chaîne de caractères larges.
 
@@ -99,7 +100,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 *varname* est le nom de la variable d’environnement à ajouter ou à modifier, *value_string* la valeur de la variable. Si *varname* fait déjà partie de l’environnement, sa valeur est remplacée par *value_string*; dans le cas contraire, la nouvelle variable *varname* et ses *value_string* sont ajoutés à l’environnement. Vous pouvez supprimer une variable de l’environnement en spécifiant une chaîne vide (autrement dit, «») pour *value_string*.
 
-**_putenv_s** et **_wputenv_s** affectent uniquement l’environnement local au processus en cours ; vous ne pouvez pas les utiliser pour modifier l’environnement au niveau de la commande. Ces fonctions agissent uniquement sur les structures de données accessibles à la bibliothèque Runtime et non sur l'environnement « segment » que le système d'exploitation crée pour un processus. Quand le processus actif se termine, l'environnement repasse au niveau du processus appelant qui, dans la plupart des cas, est le niveau du système d'exploitation. Toutefois, l’environnement modifié peut être passé aux nouveaux processus créés par **_spawn**, **_exec**ou **System**, et ces nouveaux processus obtiennent les nouveaux éléments ajoutés par **_putenv_s** et **_wputenv_s**.
+**_putenv_s** et **_wputenv_s** affectent uniquement l’environnement local au processus en cours ; vous ne pouvez pas les utiliser pour modifier l’environnement au niveau de la commande. Ces fonctions agissent uniquement sur les structures de données accessibles à la bibliothèque Runtime et non sur l'environnement « segment » que le système d'exploitation crée pour un processus. Quand le processus actif se termine, l'environnement repasse au niveau du processus appelant qui, dans la plupart des cas, est le niveau du système d'exploitation. Toutefois, l’environnement modifié peut être passé aux nouveaux processus créés par **_spawn**, **_exec** ou **System**, et ces nouveaux processus obtiennent les nouveaux éléments ajoutés par **_putenv_s** et **_wputenv_s**.
 
 Ne modifiez pas directement une entrée d’environnement ; au lieu de cela, utilisez **_putenv_s** ou **_wputenv_s** pour le modifier. En particulier, la libération directe des éléments du tableau global **_environ []** peut entraîner la prise en considération d’une mémoire non valide.
 
@@ -117,7 +118,7 @@ Ne modifiez pas directement une entrée d’environnement ; au lieu de cela, ut
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Pour obtenir un exemple qui montre comment utiliser **_putenv_s**, consultez [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 

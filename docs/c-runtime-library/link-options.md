@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : options de lien'
 title: Options de lien
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-ms.openlocfilehash: 146722fb0dd3a4fc774ede692808b1e6bfb1e5c7
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: affb5d95af176ba49aa2aeafff5ac84653df2ad8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506856"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246524"
 ---
 # <a name="link-options"></a>Options de lien
 
@@ -55,7 +56,7 @@ Les versions CLR en mode pur de ces objets sont déconseillées dans Visual Stud
 |loosefpmath.obj|n/a|Garantit la tolérance de valeurs anormales par le code à virgule flottante.|
 |newmode.obj|pnewmode.obj|Entraîne l’appel par [malloc](../c-runtime-library/reference/malloc.md) du nouveau gestionnaire en cas d’échec. Consultez [_set_new_mode](../c-runtime-library/reference/set-new-mode.md), [_set_new_handler](../c-runtime-library/reference/set-new-handler.md), [calloc](../c-runtime-library/reference/calloc.md) et [realloc](../c-runtime-library/reference/realloc.md).|
 |noarg.obj|pnoarg.obj|Désactive tout le traitement d’argc et d’argv.|
-|nochkclr.obj|n/a|Ne fait rien. Supprime de votre projet.|
+|nochkclr.obj|n/a|Sans effet Supprime de votre projet.|
 |noenv.obj|pnoenv.obj|Désactive la création d’un environnement mis en cache pour la bibliothèque CRT.|
 |nothrownew.obj|pnothrownew.obj|Active la version qui ne peut pas être levée de l’opérateur new dans la bibliothèque CRT. Consultez [Opérateurs new et delete](../cpp/new-and-delete-operators.md).|
 |setargv.obj|psetargv.obj|Active le développement des caractères génériques dans les arguments de ligne de commande. Consultez [Développement des arguments avec caractères génériques](../c-language/expanding-wildcard-arguments.md).|

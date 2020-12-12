@@ -1,65 +1,66 @@
 ---
-title: 'Procédure : Créer des projets C++ vérifiables (C++ / c++ / CLI)'
+description: 'En savoir plus sur : Comment : créer des projets C++ vérifiables (C++/CLI)'
+title: 'Comment : créer des projets C++ vérifiables (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 5f3a84a4f87db5cf390dcfbad18f167108e0ff08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245991"
 ---
-# <a name="how-to-create-verifiable-c-projects-ccli"></a>Comment : créer des projets C++ vérifiables (C++ / c++ / CLI)
+# <a name="how-to-create-verifiable-c-projects-ccli"></a>Comment : créer des projets C++ vérifiables (C++/CLI)
 
-Les Assistants application Visual C++ ne créent pas de projets vérifiables.
+Visual C++ assistants application ne créent pas de projets vérifiables.
 
 > [!IMPORTANT]
-> Déconseillé de Visual Studio 2015 et Visual Studio 2017 ne prend pas en charge la **/CLR : pure** et **/CLR : safe** la création de projets vérifiables. Si vous avez besoin du code vérifiable, nous vous recommandons de que vous traduisez votre code en c#.
+> Visual Studio 2015 déconseillé et Visual Studio 2017 ne prend pas en charge la création de projets vérifiables **/clr : pure** et **/clr : safe** . Si vous avez besoin de code vérifiable, nous vous recommandons de traduire votre code en C#.
 
-Toutefois, si vous utilisez une version antérieure de Microsoft C++ ensemble d’outils du compilateur qui prend en charge **/CLR : pure** et **/CLR : safe**, projets peuvent être convertis pour être vérifiable. Cette rubrique décrit comment définir les propriétés du projet et modifier les fichiers sources du projet pour transformer votre Visual Studio C++ projets pour produire des applications vérifiables.
+Toutefois, si vous utilisez une version antérieure de l’ensemble d’outils du compilateur Microsoft C++ qui prend en charge **/clr : pure** et **/clr : safe**, les projets peuvent être convertis pour être vérifiables. Cette rubrique explique comment définir les propriétés du projet et modifier les fichiers sources du projet pour transformer vos projets Visual Studio C++ afin de produire des applications vérifiables.
 
-## <a name="compiler-and-linker-settings"></a>Paramètres du compilateur et éditeur de liens
+## <a name="compiler-and-linker-settings"></a>Paramètres du compilateur et de l’éditeur de liens
 
-Par défaut, les projets .NET utilisent l’indicateur de compilateur/CLR et configurer le matériel cible x86 l’éditeur de liens. Pour le code vérifiable, vous devez utiliser l’indicateur/clr : safe, et vous devez demander à l’éditeur de liens pour générer du code MSIL au lieu d’en instructions machine natives.
+Par défaut, les projets .NET utilisent l’indicateur de compilateur/CLR et configurent l’éditeur de liens pour cibler le matériel x86. Pour le code vérifiable, vous devez utiliser l’indicateur/CLR : safe, et vous devez demander à l’éditeur de liens de générer du code MSIL au lieu d’instructions machine natives.
 
-### <a name="to-change-the-compiler-and-linker-settings"></a>Pour modifier les paramètres du compilateur et éditeur de liens
+### <a name="to-change-the-compiler-and-linker-settings"></a>Pour modifier les paramètres du compilateur et de l’éditeur de liens
 
-1. Afficher la Page de propriétés du projet. Pour plus d’informations, consultez [définir du compilateur et les propriétés de build](../build/working-with-project-properties.md).
+1. Affichez la page de propriétés du projet. Pour plus d’informations, consultez [définir les propriétés du compilateur et de la build](../build/working-with-project-properties.md).
 
-1. Sur le **général** page sous le **propriétés de Configuration** nœud, définissez la **prise en charge du Common Language Runtime** propriété **Safe MSIL Common Language Prise en charge runtime (/ CLR : safe)**.
+1. Sur la page **général** , sous le nœud **Propriétés de configuration** , affectez à la propriété **prise en charge du Common Language Runtime** la valeur **prise en charge du Common Language Runtime MSIL sécurisé (/CLR : safe)**.
 
-1. Sur le **avancé** page sous le **l’éditeur de liens** nœud, définissez la **Type d’Image CLR** propriété **forcer l’image IL sécurisée (/ CLRIMAGETYPE : safe)**.
+1. Sur la page **avancé** , sous le nœud **éditeur de liens** , définissez la propriété type d' **image CLR** sur **forcer l’image il sécurisée (/CLRIMAGETYPE : safe)**.
 
 ## <a name="removing-native-data-types"></a>Suppression de types de données natifs
 
-Étant donné que les types de données natifs sont non vérifiable, même s’ils ne sont pas réellement utilisés, vous devez supprimer tous les fichiers d’en-tête contenant des types natifs.
+Comme les types de données natifs ne sont pas vérifiables, même s’ils ne sont pas réellement utilisés, vous devez supprimer tous les fichiers d’en-tête contenant des types natifs.
 
 > [!NOTE]
-> La procédure suivante s’applique aux projets Windows Forms Application (.NET) et une Application Console (.NET).
+> La procédure suivante s’applique à Windows Forms projets d’application (.NET) et d’application console (.NET).
 
 ### <a name="to-remove-references-to-native-data-types"></a>Pour supprimer les références aux types de données natifs
 
-1. Commentez tout dans le fichier Stdafx.h.
+1. Commentez tout dans le fichier stdafx. h.
 
 ## <a name="configuring-an-entry-point"></a>Configuration d’un point d’entrée
 
-Étant donné que les applications vérifiables ne peut pas utiliser les bibliothèques d’exécution C (CRT), ils ne peut pas dépendre de la bibliothèque CRT pour appeler la fonction principale comme point d’entrée standard. Cela signifie que vous devez explicitement fournir le nom de la fonction à appeler initialement à l’éditeur de liens. (Dans ce cas, Main() est utilisé au lieu de main() ou _tmain() pour indiquer un point d’entrée non-CRT, mais étant donné que le point d’entrée doit être spécifié explicitement, ce nom est arbitraire.)
+Étant donné que les applications vérifiables ne peuvent pas utiliser les bibliothèques Runtime C (CRT), elles ne peuvent pas dépendre de la bibliothèque CRT pour appeler la fonction main en tant que point d’entrée standard. Cela signifie que vous devez fournir explicitement le nom de la fonction à appeler initialement à l’éditeur de liens. (Dans ce cas, main () est utilisé à la place de main () ou _tmain () pour indiquer un point d’entrée non CRT, mais comme le point d’entrée doit être spécifié explicitement, ce nom est arbitraire.)
 
 > [!NOTE]
-> Les procédures suivantes s’appliquent aux projets d’Application Console (.NET).
+> Les procédures suivantes s’appliquent aux projets d’application console (.NET).
 
 #### <a name="to-configure-an-entry-point"></a>Pour configurer un point d’entrée
 
-1. Remplacez _tmain() Main() dans le fichier du projet .cpp principal.
+1. Remplacez _tmain () par main () dans le fichier main. cpp du projet.
 
-1. Afficher la Page de propriétés du projet. Pour plus d’informations, consultez [définir du compilateur et les propriétés de build](../build/working-with-project-properties.md).
+1. Affichez la page de propriétés du projet. Pour plus d’informations, consultez [définir les propriétés du compilateur et de la build](../build/working-with-project-properties.md).
 
-1. Sur le **avancé** page sous le **l’éditeur de liens** nœud, entrez `Main` en tant que le **Point d’entrée** valeur de propriété.
+1. Dans la page **avancé** , sous le nœud **éditeur de liens** , entrez `Main` comme valeur de propriété de **point d’entrée** .
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Code pur et vérifiable (C++-CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+- [Code pur et vérifiable (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes de mappage prêtes à l’emploi'
 title: Classes de mappage prêtes à être utilisées
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - classes [MFC], map
 - map classes [MFC]
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
-ms.openlocfilehash: 5ed191525e11ca2a4d3f5b1c39e9b50b65066d7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bc672d7b64104c3faceae03022945392b0e48d16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248578"
 ---
 # <a name="ready-to-use-map-classes"></a>Classes de mappage prêtes à être utilisées
 

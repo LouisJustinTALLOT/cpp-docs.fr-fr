@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure CDaoTableDefInfo'
 title: CDaoTableDefInfo, structure
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-ms.openlocfilehash: 5785ed19c6929e19c7d376efa012dd1c059611c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 953a255b35860dcce0ac8d3ef5081951dd15c344
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247967"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo, structure
 
-Le `CDaoTableDefInfo` structure contient des informations sur un objet tabledef défini pour les objets d’accès aux données (DAO).
+La `CDaoTableDefInfo` structure contient des informations sur un objet TableDef défini pour les objets d’accès aux données (DAO).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,61 +40,61 @@ struct CDaoTableDefInfo
 #### <a name="parameters"></a>Paramètres
 
 *m_strName*<br/>
-Identifiant de manière unique l’objet tabledef. Pour récupérer la valeur de cette propriété directement, appelez l’objet tabledef [GetName](../../mfc/reference/cdaotabledef-class.md#getname) fonction membre. Pour plus d’informations, consultez la rubrique « Propriété de nom » dans l’aide de DAO.
+Nomme l’objet TableDef de manière unique. Pour récupérer directement la valeur de cette propriété, appelez la fonction membre [GetName](../../mfc/reference/cdaotabledef-class.md#getname) de l’objet TableDef. Pour plus d’informations, consultez la rubrique « propriété de nom » dans l’aide de DAO.
 
 *m_bUpdatable*<br/>
-Indique si les modifications peuvent être apportées à la table. La méthode rapide pour déterminer si une table est modifiable consiste à ouvrir un `CDaoTableDef` de l’objet pour la table et appeler l’objet [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) fonction membre. `CanUpdate` Retourne toujours différente de zéro (TRUE) pour un objet tabledef nouvellement créé et 0 (FALSE) pour un objet tabledef attaché. Un nouvel objet tabledef peut être ajouté uniquement à une base de données pour lequel l’utilisateur actuel a l’autorisation d’écriture. Si la table contient uniquement des champs assimilables, `CanUpdate` retourne 0. Lorsqu’un ou plusieurs champs sont modifiables, `CanUpdate` retourne différente de zéro. Vous pouvez modifier que les champs modifiables. Pour plus d’informations, consultez la rubrique « Propriété actualisable » dans l’aide de DAO.
+Indique si les modifications peuvent être apportées à la table. La méthode la plus rapide pour déterminer si une table peut être mise à jour consiste à ouvrir un `CDaoTableDef` objet pour la table et à appeler la fonction membre [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) de l’objet. `CanUpdate` retourne toujours une valeur différente de zéro (TRUE) pour un objet TableDef nouvellement créé et 0 (FALSe) pour un objet TableDef attaché. Un nouvel objet TableDef ne peut être ajouté qu’à une base de données pour laquelle l’utilisateur actuel dispose d’une autorisation d’écriture. Si la table contient uniquement des champs pouvant être mis à jour, `CanUpdate` retourne 0. Quand un ou plusieurs champs peuvent être mis à jour, retourne une valeur `CanUpdate` différente de zéro. Vous ne pouvez modifier que les champs pouvant être mis à jour. Pour plus d’informations, consultez la rubrique « propriété pouvant être mise à jour » dans l’aide de DAO.
 
 *m_lAttributes*<br/>
-Spécifie les caractéristiques de la table représentée par l’objet tabledef. Pour récupérer les attributs actuels d’un objet, appelez sa [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) fonction membre. La valeur retournée peut être une combinaison de ces constantes longues (à l’aide de l’opération de bits OR (**&#124;**) opérateur) :
+Spécifie les caractéristiques de la table représentée par l’objet TableDef. Pour récupérer les attributs actuels d’un objet TableDef, appelez sa fonction membre [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) . La valeur retournée peut être une combinaison de ces constantes longues (à l’aide de l’opérateur de bits or (**&#124;**)) :
 
-- `dbAttachExclusive` Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique la table est une table attachée ouverte pour une utilisation exclusive.
+- `dbAttachExclusive` Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que la table est une table attachée ouverte pour une utilisation exclusive.
 
-- `dbAttachSavePWD` Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que l’ID utilisateur et le mot de passe pour la table jointe sont enregistrées avec les informations de connexion.
+- `dbAttachSavePWD` Pour les bases de données qui utilisent le moteur de base de données Microsoft Jet, indique que l’ID d’utilisateur et le mot de passe de la table attachée sont enregistrés avec les informations de connexion.
 
-- `dbSystemObject` Indique la table est une table système fournie par le moteur de base de données Microsoft Jet. (En lecture seule.)
+- `dbSystemObject` Indique que la table est une table système fournie par le moteur de base de données Microsoft Jet. (En lecture seule.)
 
-- `dbHiddenObject` Indique la table est une table masquée fournie par le moteur de base de données Microsoft Jet (pour une utilisation temporaire). (En lecture seule.)
+- `dbHiddenObject` Indique que la table est une table cachée fournie par le moteur de base de données Microsoft Jet (pour une utilisation temporaire). (En lecture seule.)
 
-- `dbAttachedTable` Indique la table est une table jointe à partir d’une base de données non-ODBC, comme une base de données Paradox.
+- `dbAttachedTable` Indique que la table est une table attachée à partir d’une base de données non ODBC, telle qu’une base de données Paradox.
 
-- `dbAttachedODBC` Indique la table est une table jointe à partir d’une base de données ODBC, telles que Microsoft SQL Server.
+- `dbAttachedODBC` Indique que la table est une table attachée à partir d’une base de données ODBC, par exemple Microsoft SQL Server.
 
 *m_dateCreated*<br/>
-Date et heure de que création de la table. Pour récupérer directement la date de la table a été créée, appelez le [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) fonction membre de la `CDaoTableDef` objet associé à la table. Pour plus d’informations, consultez les commentaires ci-dessous. Pour plus d’informations, consultez la rubrique « DateCreated, LastUpdated propriétés » dans l’aide de DAO.
+Date et heure de création de la table. Pour récupérer directement la date à laquelle la table a été créée, appelez la fonction membre [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) de l' `CDaoTableDef` objet associé à la table. Pour plus d’informations, consultez les commentaires ci-dessous. Pour obtenir des informations connexes, consultez la rubrique « Propriétés DateCreated, LastUpdated » dans l’aide de DAO.
 
 *m_dateLastUpdated*<br/>
-La date et l’heure de la dernière modification apportée à la conception de la table. Pour récupérer directement la date de dernière mise à jour de la table, appelez le [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) fonction membre de la `CDaoTableDef` objet associé à la table. Pour plus d’informations, consultez les commentaires ci-dessous. Pour plus d’informations, consultez la rubrique « DateCreated, LastUpdated propriétés » dans l’aide de DAO.
+Date et heure de la dernière modification apportée à la conception de la table. Pour récupérer directement la date de la dernière mise à jour de la table, appelez la fonction membre [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) de l' `CDaoTableDef` objet associé à la table. Pour plus d’informations, consultez les commentaires ci-dessous. Pour obtenir des informations connexes, consultez la rubrique « Propriétés DateCreated, LastUpdated » dans l’aide de DAO.
 
 *m_strSrcTableName*<br/>
-Spécifie le nom d’une table jointe, le cas échéant. Pour extraire directement le nom de la table source, appelez le [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) fonction membre de la `CDaoTableDef` objet associé à la table.
+Spécifie le nom d’une table attachée, le cas échéant. Pour récupérer directement le nom de la table source, appelez la fonction membre [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) de l' `CDaoTableDef` objet associé à la table.
 
 *m_strConnect*<br/>
-Fournit des informations sur la source d’une base de données ouverte. Vous pouvez vérifier cette propriété en appelant le [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) fonction membre de votre `CDaoTableDef` objet. Pour plus d’informations sur les chaînes de connexion, consultez `GetConnect`.
+Fournit des informations sur la source d’une base de données ouverte. Vous pouvez vérifier cette propriété en appelant la fonction membre [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) de votre `CDaoTableDef` objet. Pour plus d’informations sur les chaînes de connexion, consultez `GetConnect` .
 
 *m_strValidationRule*<br/>
-Une valeur qui valide les données dans les champs tabledef car ils sont modifiées ou ajoutées à une table. La validation est pris en charge uniquement pour les bases de données qui utilisent le moteur de base de données Microsoft Jet. Pour récupérer directement la règle de validation, appelez le [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) fonction membre de la `CDaoTableDef` objet associé à la table. Pour plus d’informations, consultez la rubrique « Propriété ValidationRule » dans l’aide de DAO.
+Valeur qui valide les données dans les champs TableDef à mesure qu’ils sont modifiés ou ajoutés à une table. La validation est prise en charge uniquement pour les bases de données qui utilisent le moteur de base de données Microsoft Jet. Pour récupérer directement la règle de validation, appelez la fonction membre [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) de l' `CDaoTableDef` objet associé à la table. Pour obtenir des informations connexes, consultez la rubrique « propriété ValidationRule » dans l’aide de DAO.
 
 *m_strValidationText*<br/>
-Une valeur qui spécifie le texte du message que votre application doit s’afficher si la règle de validation spécifiée par la propriété ValidationRule n’est pas satisfaite. Pour plus d’informations, consultez la rubrique « Propriété ValidationRule » dans l’aide de DAO.
+Valeur qui spécifie le texte du message que votre application doit afficher si la règle de validation spécifiée par la propriété ValidationRule n’est pas satisfaite. Pour obtenir des informations connexes, consultez la rubrique « propriété MessageSiErreur » dans l’aide de DAO.
 
 *m_lRecordCount*<br/>
-Le nombre d’enregistrements auquel accédé dans un objet tabledef. Cette propriété est en lecture seule. Pour extraire directement le nombre d’enregistrements, appelez le [GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount) fonction membre de la `CDaoTableDef` objet. La documentation de `GetRecordCount` décrit le nombre d’enregistrements supplémentaires. Notez que la récupération de ce nombre peut être une opération longue si la table contient de nombreux enregistrements.
+Nombre d’enregistrements accessibles dans un objet TableDef. Ce paramètre de propriété est en lecture seule. Pour récupérer directement le nombre d’enregistrements, appelez la fonction membre [GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount) de l' `CDaoTableDef` objet. La documentation de `GetRecordCount` décrit le nombre d’enregistrements. Notez que la récupération de ce nombre peut être une opération longue si la table contient de nombreux enregistrements.
 
 ## <a name="remarks"></a>Notes
 
-Cet objet est un objet de classe [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Les références à principal, secondaire et tous les ci-dessus indiquent comment les informations sont retournées par la [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) fonction membre dans la classe `CDaoDatabase`.
+TableDef est un objet de la classe [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). Les références à Primary, Secondary et All ci-dessus indiquent comment les informations sont retournées par la fonction membre [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) dans la classe `CDaoDatabase` .
 
-Les informations récupérées par le [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) fonction membre est stockée dans un `CDaoTableDefInfo` structure. Appelez le `GetTableDefInfo` fonction membre de la `CDaoDatabase` objet dans dont TableDefs (collection) est stocké l’objet tabledef. `CDaoTableDefInfo` définit également un `Dump` génère de la fonction membre en mode de débogage. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoTableDefInfo` objet.
+Les informations récupérées par la fonction membre [CDaoDatabase :: GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) sont stockées dans une `CDaoTableDefInfo` structure. Appelez la `GetTableDefInfo` fonction membre de l' `CDaoDatabase` objet dans la collection d’objets TableDef dans laquelle l’objet TableDef est stocké. `CDaoTableDefInfo` définit également une `Dump` fonction membre dans les versions Debug. Vous pouvez utiliser `Dump` pour vider le contenu d’un `CDaoTableDefInfo` objet.
 
-Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la table de base a été créée ou mises à jour. Dans un environnement multi-utilisateur, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichiers afin d’éviter des incohérences dans le DateCreated et les paramètres de propriété LastUpdated.
+Les paramètres de date et d’heure sont dérivés de l’ordinateur sur lequel la table de base a été créée ou mise à jour pour la dernière fois. Dans un environnement multi-utilisateur, les utilisateurs doivent obtenir ces paramètres directement à partir du serveur de fichiers afin d’éviter les incohérences dans les paramètres de propriété DateCreated et LastUpdated.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxdao.h
+**En-tête :** afxdao. h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Structures, styles, rappels et tables de messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[Structures, styles, rappels et tables des messages](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef, classe](../../mfc/reference/cdaotabledef-class.md)<br/>
-[CDaoDatabase, classe](../../mfc/reference/cdaodatabase-class.md)
+[Classe CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CDaoWorkspace, classe'
 title: CDaoWorkspace (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: eea3fb29f219890ebe596c5d8109257e9d422054
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 73236019db3ecf4a79ef93e19a55d909e6e0d61d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247994"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace (classe)
 
@@ -147,7 +148,7 @@ Dans la plupart des cas, vous n’aurez pas besoin de plusieurs espaces de trava
 
 MFC n’implémente pas les collections Users et groups dans DAO, qui sont utilisées pour le contrôle de sécurité. Si vous avez besoin de ces aspects de DAO, vous devez les programmer par le biais d’appels directs à des interfaces DAO. Pour plus d’informations, consultez la [note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-## <a name="usage"></a>Usage
+## <a name="usage"></a>Utilisation
 
 Vous pouvez utiliser la classe `CDaoWorkspace` pour effectuer les opérations suivantes :
 
@@ -189,7 +190,7 @@ Pour plus d’informations sur l’appel de DAO directement et sur la sécurité
 
 `CDaoWorkspace`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : struct (C++)'
 title: struct (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: d0092cf107159f4c84b431f5eeae130df64dc835
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4c7f8ab04bec2f161e303c3fed93414332fddeb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507456"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246251"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -50,7 +51,7 @@ Liste des membres de structure. Pour plus d’informations, consultez [vue d’e
 *declarators*<br/>
 Liste des déclarateurs spécifiant les noms de la structure. Les listes des déclarateurs déclarent une ou plusieurs instances du type structure. Les déclarateurs peuvent inclure des listes d’initialiseurs si toutes les données membres de la structure sont **`public`** . Les listes d’initialiseurs sont courantes dans les structures, car les membres de données sont **`public`** par défaut.  Pour plus d’informations, consultez [vue d’ensemble des déclarateurs](./declarations-and-definitions-cpp.md) .
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Un type structure est un type composite défini par l'utilisateur. Il comprend des champs ou des membres qui peuvent avoir différents types.
 

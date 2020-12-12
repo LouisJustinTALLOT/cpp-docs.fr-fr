@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : concurrence ::d fonctions de l’espace de noms irect3d (AMP)'
 title: Concurrency::direct3d, fonctions de l’espace de noms (AMP)
 ms.date: 08/31/2018
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: bf98249001c2b8227581fbbbcceeebd085e5d820
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c446e89835e49d9afd7b11abd73ccccd032a7321
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831110"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247824"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d, fonctions de l’espace de noms (AMP)
 
@@ -67,7 +68,7 @@ ms.locfileid: "88831110"
    :::column-end:::
 :::row-end:::
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** **espace de noms** amp. h : accès concurrentiel
 
@@ -297,7 +298,7 @@ IUnknown* get_device(const accelerator_view Av);
 *Alternatif*<br/>
 Accelerator_view D3D pour lequel l’interface d’appareil D3D sous-jacente est retournée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 `IUnknown`Pointeur d’interface de l’appareil D3D sous-jacent au accelerator_view.
 

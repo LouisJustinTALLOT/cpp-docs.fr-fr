@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les catégories de paramètres régionaux
 title: Catégories de paramètres régionaux
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 434500dab0c68aa9475f54e930b91da0b1cd2fc9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 2c6bfa4b2d1d0b76520043ee5568d51cf28a23c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246381"
 ---
 # <a name="locale-categories"></a>Catégories de paramètres régionaux
 
@@ -36,7 +37,7 @@ ms.locfileid: "57749800"
 #include <locale.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les catégories de paramètres régionaux sont des constantes manifestes utilisées par les routines de localisation pour spécifier dans quelle portion des informations de paramètres régionaux d’un programme les informations seront utilisées. Les paramètres régionaux font référence à la localité (ou au pays/à la région) pour laquelle certains aspects de votre programme peuvent être personnalisés. Les zones dépendant des paramètres régionaux comprennent par exemple la mise en forme des dates et le format d'affichage des valeurs monétaires.
 

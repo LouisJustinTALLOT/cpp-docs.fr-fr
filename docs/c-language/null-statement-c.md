@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : instruction null (C)'
 title: null, instruction (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - null statement
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
-ms.openlocfilehash: 58825544121c6cb189b52469403effb93f5f5f8c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 362fc9e311d0495e0a3ab51da7a5042574859649
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227814"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243287"
 ---
 # <a name="null-statement-c"></a>null, instruction (C)
 
