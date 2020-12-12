@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/FPO
 title: /FPO
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -FPO dumpbin option
 - FPO dumpbin option
 ms.assetid: ee67f08b-bc5a-475a-bee3-c5614721755a
-ms.openlocfilehash: bb56398efb328163c0e0952d50da105bc226c9fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0f5b4567b544e73f4b68da9417110dba105487b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192042"
 ---
 # <a name="fpo"></a>/FPO
 
@@ -23,10 +24,10 @@ ms.locfileid: "62271015"
 
 ## <a name="remarks"></a>Notes
 
-Cette option affiche les enregistrements de l’optimisation (FPO) de pointeur de frame.
+Cette option affiche les enregistrements d’optimisation du pointeur de frame (FPO).
 
-Uniquement les [/HEADERS](headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](gl-whole-program-optimization.md) option du compilateur.
+Seule l’option [/HEADERS](headers.md) DUMPBIN peut être utilisée sur les fichiers générés avec l’option du compilateur [/GL](gl-whole-program-optimization.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](dumpbin-options.md)
+[Options DUMPBIN](dumpbin-options.md)

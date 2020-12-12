@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/Fe (nom de fichier EXE)
 title: /Fe (Nom de fichier EXE)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: 72eada34c6a64a8b4591afbee03b686f3da3ee11
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 551c6f54ba75c71d9229b5a60ff0fdb192dbf100
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192276"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Nom de fichier EXE)
 
@@ -43,7 +44,7 @@ Si vous spécifiez l’option [/c (compiler sans liaison)](c-compile-without-lin
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Ouvrez la page de propriétés général de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **General** .
+1. Ouvrez la page de propriétés général de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
 1. Modifiez la propriété **fichier de sortie** . Choisissez **OK** pour enregistrer vos modifications.
 
@@ -69,5 +70,5 @@ CL /FeC:\BIN\ *.C
 
 [Options du fichier de sortie (/F)](output-file-f-options.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [Spécification du chemin d’accès](specifying-the-pathname.md)<br/>

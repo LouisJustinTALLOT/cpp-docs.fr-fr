@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/GE (activer les tests de pile)
 title: /Ge (Activer les tests de pile)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - stack checking calls
 - Ge compiler option [C++]
 ms.assetid: 4b54deae-4e3c-4bfa-95f3-ba23590f7258
-ms.openlocfilehash: a785ec041370e0bcbb2ce8b698bfba89235a0a0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db996deb1c5b964661e5465fe72cfb0fab93df56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192016"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Activer les tests de pile)
 
-Active les tests de pile pour chaque appel de fonction qui requiert un stockage pour les variables locales.
+Active les tests de pile pour chaque appel de fonction qui requiert le stockage pour les variables locales.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,15 +32,15 @@ Active les tests de pile pour chaque appel de fonction qui requiert un stockage 
 
 ## <a name="remarks"></a>Notes
 
-Ce mécanisme est utile si vous réécrivez la fonctionnalité de la sonde de pile. Il est recommandé d’utiliser [/Gh (activer _penter la fonction de raccordement)](gh-enable-penter-hook-function.md) au lieu de la réécriture de la sonde de pile.
+Ce mécanisme est utile si vous réécrivez les fonctionnalités de la sonde de pile. Il est recommandé d’utiliser [/GH (activer la fonction de raccordement _penter)](gh-enable-penter-hook-function.md) au lieu de réécrire la sonde de pile.
 
-[/GS (contrôle pile des appels vérification)](gs-control-stack-checking-calls.md) a le même effet.
+[/GS (contrôler les appels de contrôle de pile)](gs-control-stack-checking-calls.md) a le même effet.
 
-**/GE** est déconseillé ; à compter de Visual Studio 2005, le compilateur génère automatiquement le contrôle de pile. Pour obtenir la liste des options du compilateur déconseillées, consultez **Options déconseillées et supprimées du compilateur** dans [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md).
+**/GE** est déconseillé ; à compter de Visual Studio 2005, le compilateur génère automatiquement le contrôle de pile. Pour obtenir la liste des options du compilateur déconseillées, consultez **Options du compilateur déconseillées et supprimées** dans [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -54,4 +55,4 @@ Ce mécanisme est utile si vous réécrivez la fonctionnalité de la sonde de pi
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

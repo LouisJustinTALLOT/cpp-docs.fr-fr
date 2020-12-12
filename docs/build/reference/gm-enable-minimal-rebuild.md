@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/GM (activer la régénération minimale)
 title: /Gm (Activer la régénération minimale)
 ms.date: 11/12/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-ms.openlocfilehash: 9b928f3add0a2ec10257bf63fe61a824336c19b8
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2e0035f4fc50f16ce1c381dd707a2411b29bdb6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439643"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191886"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (Activer la régénération minimale)
 
@@ -40,11 +41,11 @@ Le compilateur stocke des informations sur les dépendances entre les fichiers s
 
 Étant donné que l’éditeur de liens incrémentiel ne prend pas en charge les métadonnées Windows incluses dans les fichiers. obj à l’aide de l’option [/ZW (Windows Runtime Compilation)](zw-windows-runtime-compilation.md) , l’option **/GM** est incompatible avec **/ZW**.
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez les **Propriétés de configuration** > page de propriétés de **génération de code** **C/C++**  > .
+1. Sélectionnez la page de propriétés **Propriétés de configuration**  >  **C/C++**  >  **génération de code** .
 
 1. Modifiez la propriété **activer la régénération minimale** .
 
@@ -55,4 +56,4 @@ Le compilateur stocke des informations sur les dépendances entre les fichiers s
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

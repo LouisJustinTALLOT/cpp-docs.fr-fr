@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/HEADERS
 title: /HEADERS
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -HEADERS dumpbin option
 - /HEADERS dumpbin option
 ms.assetid: 24d9a770-d44e-48b6-b744-143e4fff7748
-ms.openlocfilehash: 9a80044b96a0e0d73e0e25435a292a786de81531
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ed6afc96659fe2ed2834a7d068d192f7fd39358
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292027"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191678"
 ---
 # <a name="headers"></a>/HEADERS
 
@@ -23,10 +24,10 @@ ms.locfileid: "62292027"
 
 ## <a name="remarks"></a>Notes
 
-Cette option affiche l’en-tête du fichier et l’en-tête de chaque section. Lorsqu’il est utilisé avec une bibliothèque, elle affiche l’en-tête de chaque objet membre.
+Cette option affiche l’en-tête de fichier et l’en-tête pour chaque section. Lorsqu’il est utilisé avec une bibliothèque, il affiche l’en-tête pour chaque objet de membre.
 
-Uniquement les **/HEADERS** (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](gl-whole-program-optimization.md) option du compilateur.
+Seule l’option **/HEADERS** DUMPBIN peut être utilisée sur les fichiers générés avec l’option du compilateur [/GL](gl-whole-program-optimization.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](dumpbin-options.md)
+[Options DUMPBIN](dumpbin-options.md)

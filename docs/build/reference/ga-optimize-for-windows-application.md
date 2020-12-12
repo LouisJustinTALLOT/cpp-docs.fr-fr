@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/GA (optimiser pour une application Windows)
 title: /GA (Optimiser pour une application Windows)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: 85efa03a3f3d267580cbb0442839afb18ac6c313
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f9d65dce26e80b585abc4d67e2eef55f10cb365b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492864"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191977"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Optimiser pour une application Windows)
 
@@ -29,7 +30,7 @@ Permet d’obtenir un code plus efficace pour un fichier. exe pour l’accès au
 
 ## <a name="remarks"></a>Notes
 
-**/GA** accélère l’accès aux données déclarées avec [_ _ declspec (thread)](../../cpp/declspec.md) dans un programme Windows. Lorsque cette option est définie, la macro [__tls_index](/windows/win32/ProcThread/thread-local-storage) est supposée être 0.
+**/GA** accélère l’accès aux données déclarées avec [__declspec (thread)](../../cpp/declspec.md) dans un programme Windows. Lorsque cette option est définie, la macro [__tls_index](/windows/win32/ProcThread/thread-local-storage) est supposée être 0.
 
 L’utilisation de **/GA** pour une dll peut entraîner une génération de code incorrecte.
 
@@ -50,4 +51,4 @@ L’utilisation de **/GA** pour une dll peut entraîner une génération de code
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/HEAP (définir la taille du tas)
 title: /HEAP (Définir la taille des tas)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: f155ad56ec1a90479b402e38e7ec7f3e3d80e470
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9831180925d5d669c799982d021d75ea31a2dae5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191665"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Définir la taille des tas)
 
@@ -29,15 +30,15 @@ L’option/HEAP définit la taille du segment de mémoire en octets. Cette optio
 
 L’argument *Reserve* spécifie l’allocation totale du tas dans la mémoire virtuelle. La taille du tas par défaut est de 1 Mo. L’éditeur de liens arrondit la valeur spécifiée aux 4 octets les plus proches.
 
-L’argument `commit` facultatif spécifie la quantité de mémoire physique à allouer à la fois. La mémoire virtuelle validée entraîne la réservation de l’espace dans le fichier d’échange. Une valeur de `commit` supérieure fait gagner du temps lorsque l’application a besoin de davantage d’espace de tas, mais augmente les besoins en mémoire et éventuellement le temps de démarrage.
+L' `commit` argument facultatif spécifie la quantité de mémoire physique à allouer à la fois. La mémoire virtuelle validée entraîne la réservation de l’espace dans le fichier d’échange. Une valeur plus élevée permet de `commit` gagner du temps lorsque l’application a besoin de davantage d’espace de tas, mais augmente les besoins en mémoire et éventuellement le temps de démarrage.
 
-Spécifiez les valeurs *Reserve* et `commit` en notation décimale ou de langage C.
+Spécifiez la *réserve* et les `commit` valeurs en notation décimale ou de langage C.
 
 Cette fonctionnalité est également disponible via un fichier de définition de module avec [HEAPSIZE](heapsize.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **Éditeur de liens**.
 

@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/GS (vérification de la sécurité des tampons)
 title: /GS (vérification de la sécurité des mémoires tampons)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 92d296e8079a9ecd8d366c46bbdad8b2ee5dc313
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d7fa3c2220260914c9ff931c2f2e7c76bf12ea1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191873"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (vérification de la sécurité des mémoires tampons)
 
@@ -32,7 +33,7 @@ Détecte des dépassements de mémoire tampon qui remplacent l’adresse de reto
 
 ## <a name="remarks"></a>Notes
 
-**/GS** est activé par défaut. Si vous vous attendez à ce que votre application n’ait aucune exposition de sécurité, utilisez **/GS-** . Pour plus d’informations sur la suppression de la détection de dépassement de mémoire tampon, consultez [safebuffers](../../cpp/safebuffers.md).
+**/GS** est activé par défaut. Si vous vous attendez à ce que votre application n’ait aucune exposition de sécurité, utilisez **/GS-**. Pour plus d’informations sur la suppression de la détection de dépassement de mémoire tampon, consultez [safebuffers](../../cpp/safebuffers.md).
 
 ## <a name="security-checks"></a>Vérifications de sécurité
 
@@ -87,7 +88,7 @@ Sur toutes les plateformes, **/GS** tente de détecter les dépassements de mém
 
 Sur x86, si une fonction utilise un gestionnaire d’exceptions, le compilateur injecte un cookie de sécurité pour protéger l’adresse du gestionnaire d’exceptions. Le cookie est vérifié pendant le déroulement du frame.
 
-**/GS** protège les *paramètres vulnérables* passés dans une fonction. Un paramètre vulnérable est un pointeur, une C++ référence, une structure C (C++ type Pod) qui contient un pointeur ou une mémoire tampon GS.
+**/GS** protège les *paramètres vulnérables* passés dans une fonction. Un paramètre vulnérable est un pointeur, une référence C++, une structure C (type POD C++) qui contient un pointeur ou une mémoire tampon GS.
 
 Un paramètre vulnérable est alloué avant le cookie et les variables locales. Un dépassement de mémoire tampon peut remplacer ces paramètres. Et le code de la fonction qui utilise ces paramètres peut provoquer une attaque avant que la fonction ne retourne et que la vérification de sécurité soit effectuée. Pour réduire ce risque, le compilateur effectue une copie des paramètres vulnérables pendant le prologue des fonctions et les met en dessous de la zone de stockage pour toutes les mémoires tampons.
 
@@ -117,7 +118,7 @@ Même si vous utilisez **/GS**, essayez toujours d’écrire du code sécurisé 
 
    Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Dans la boîte de dialogue **pages de propriétés** , cliquez sur le dossier **C/C++**  .
+1. Dans la boîte de dialogue **pages de propriétés** , cliquez sur le dossier **C/C++** .
 
 1. Cliquez sur la page de propriétés **génération de code** .
 
@@ -157,4 +158,4 @@ int main() {
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : `/Fi` (prétraiter le nom du fichier de sortie)'
 title: /Fi (prétraiter le nom du fichier de sortie)
 ms.date: 08/12/2020
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-ms.openlocfilehash: 82bf09a8f01f656f90ad9971530b05f108fc95a4
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: c598730b19b843aa312df71d745ed363d082cc43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192224"
 ---
 # <a name="fi-preprocess-output-file-name"></a>`/Fi` (Prétraiter le nom du fichier de sortie)
 
@@ -53,11 +54,11 @@ CL /P /Fi".\\preprocessed\\" main.cpp helper.cpp
 
 1. Ouvrez le fichier source ou la boîte de dialogue **pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés de **Configuration Propriétés**du  >  préprocesseur**C/C++**  >  **Preprocessor** .
+1. Sélectionnez la page de propriétés de **Configuration Propriétés** du  >  préprocesseur **C/C++**  >   .
 
-1. Définissez le **prétraitement sur** **Oui**comme valeur de la propriété de fichier.
+1. Définissez le **prétraitement sur** **Oui** comme valeur de la propriété de fichier.
 
-1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Entrez l' **`/Fi`** option du compilateur et *`pathname`* dans la zone **options supplémentaires** . Spécifiez uniquement un chemin d’accès de répertoire, et non un nom de fichier, lors de la définition de cette propriété pour un projet.
 

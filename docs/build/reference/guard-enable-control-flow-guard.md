@@ -1,16 +1,17 @@
 ---
+description: En savoir plus sur:/Guard (activer la protection du contrôle de Workflow)
 title: /guard (Activer la protection du flux de contrôle)
 ms.date: 11/04/2016
 f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8661f94e0ee35f8d5e2c8caba1fc01bbf4072876
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65a027a845ab7ea53fbe2ef1a6ba6bcd4a3dde87
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190687"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191769"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (Activer la protection du flux de contrôle)
 
@@ -51,4 +52,4 @@ Le code compilé avec l'option **/guard:cf** peut être lié à des bibliothèqu
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)
