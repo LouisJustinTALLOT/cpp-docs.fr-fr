@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Windows Sockets : classement des octets'
 title: 'Windows Sockets : classement des octets'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: f00936f3de07df8c1e4d9df1c678b2cfd5f3e3ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d143967fdcc9b4d1dac772bf0fe25b67d70aef53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118652"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets : classement des octets
 
@@ -23,12 +24,12 @@ Si vous utilisez ou dérivez de la classe [CAsyncSocket](../mfc/reference/casync
 
 Les différentes architectures d’ordinateur stockent parfois des données à l’aide de différentes commandes d’octet. Par exemple, les machines Intel stockent les données dans l’ordre inverse des machines Macintosh (Motorola). L’ordre d’octet Intel, appelé « Little endian », est également l’inverse de l’ordre « Big-endian » standard du réseau. Le tableau suivant décrit ces termes.
 
-### <a name="big--and-little-endian-byte-ordering"></a>Classement des octets Big-endian et Little-endian
+### <a name="big--and-little-endian-byte-ordering"></a>Classement des octets Big-and-Little-Endian
 
 |Classement des octets|Signification|
 |-------------------|-------------|
-|Big endian|L’octet le plus significatif se trouve à l’extrémité gauche d’un mot.|
-|Little endian|L’octet le plus significatif se trouve à l’extrémité droite d’un mot.|
+|Big-Endian|L’octet le plus significatif se trouve à l’extrémité gauche d’un mot.|
+|Little-Endian|L’octet le plus significatif se trouve à l’extrémité droite d’un mot.|
 
 En règle générale, vous n’avez pas à vous soucier de la conversion de l’ordre des octets pour les données que vous envoyez et recevez sur le réseau, mais il existe des situations dans lesquelles vous devez convertir des commandes d’octet.
 
@@ -54,14 +55,14 @@ Vous pouvez éviter le travail de conversion des ordres d’octet dans les cas s
 
 En utilisant [CAsyncSocket](../mfc/reference/casyncsocket-class.md), vous devez gérer vous-même toutes les conversions d’ordre d’octet nécessaires. Windows Sockets normalise le modèle d’ordre d’octet « Big-endian » et fournit des fonctions pour effectuer une conversion entre cet ordre et d’autres. [CArchive](../mfc/reference/carchive-class.md), toutefois, que vous utilisez avec [CSocket](../mfc/reference/csocket-class.md), utilise l’ordre inverse (« Little endian »), mais gère `CArchive` les détails des conversions d’ordre d’octet pour vous. En utilisant ce classement standard dans vos applications, ou en utilisant les fonctions de conversion d’ordre d’octet de Windows Sockets, vous pouvez rendre votre code plus portable.
 
-Le cas idéal pour l’utilisation des sockets MFC est lorsque vous écrivez les deux extrémités de la communication : à l’aide de MFC aux deux extrémités. Si vous écrivez une application qui communique avec des applications non-MFC, par exemple un serveur FTP, vous devrez probablement gérer vous-même les échanges d’octets avant de transmettre des données à l’objet archive, à l’aide des routines de conversion Windows Sockets **ntohs**, **ntohl**, **htons**et **htonl**. Un exemple de ces fonctions utilisées dans la communication avec une application non-MFC apparaît plus loin dans cet article.
+Le cas idéal pour l’utilisation des sockets MFC est lorsque vous écrivez les deux extrémités de la communication : à l’aide de MFC aux deux extrémités. Si vous écrivez une application qui communique avec des applications non-MFC, par exemple un serveur FTP, vous devrez probablement gérer vous-même les échanges d’octets avant de transmettre des données à l’objet archive, à l’aide des routines de conversion Windows Sockets **ntohs**, **ntohl**, **htons** et **htonl**. Un exemple de ces fonctions utilisées dans la communication avec une application non-MFC apparaît plus loin dans cet article.
 
 > [!NOTE]
 > Lorsque l’autre terminaison de la communication n’est pas une application MFC, vous devez également éviter de diffuser en continu les objets C++ dérivés de `CObject` dans votre archive, car le destinataire ne pourra pas les gérer. Consultez la remarque dans [Windows Sockets : utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md).
 
 Pour plus d’informations sur les commandes d’octet, consultez la spécification Windows Sockets, disponible dans le SDK Windows.
 
-## <a name="a-byte-order-conversion-example"></a>Exemple de conversion d’ordre d’octet
+## <a name="a-byte-order-conversion-example"></a>Exemple de conversion Byte-Order
 
 L’exemple suivant montre une fonction de sérialisation pour un `CSocket` objet qui utilise une archive. Il illustre également l’utilisation des fonctions de conversion de l’ordre des octets dans l’API Windows Sockets.
 
@@ -81,7 +82,7 @@ En C++, a **`struct`** est essentiellement la même chose qu’une classe. La `M
 
 Cet exemple appelle les conversions de données d’ordre d’octet en raison d’une incompatibilité claire entre l’ordonnancement des octets de l’application serveur non MFC sur une terminaison et le `CArchive` utilisé dans votre application cliente MFC à l’autre extrémité. L’exemple illustre plusieurs fonctions de conversion d’ordre d’octet fournies par Windows Sockets. Le tableau suivant décrit ces fonctions.
 
-### <a name="windows-sockets-byte-order-conversion-functions"></a>Fonctions de conversion de l’ordre des octets de Windows Sockets
+### <a name="windows-sockets-byte-order-conversion-functions"></a>Fonctions de conversion de Windows Sockets Byte-Order
 
 |Fonction|Objectif|
 |--------------|-------------|

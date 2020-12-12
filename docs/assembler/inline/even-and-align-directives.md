@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : directives paires et d’alignement'
 title: MÊME et ALIGNEZ les directives
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - NOP (no operation instruction)
 - ALIGN directive
 ms.assetid: 7357ab2d-4a5c-43ca-accb-a5f21cdfcde5
-ms.openlocfilehash: b191ce0942d7596090bfd7948a37a5c9e6aac15e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: adf633e99f1cb52a7849de24751d065a0344798f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169433"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117794"
 ---
 # <a name="even-and-align-directives"></a>MÊME et ALIGNEZ les directives
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-Bien que l’assembleur inline ne prenne pas en charge la plupart des directives MASM, il prend en charge la `EVEN` et l' **alignement**. Ces directives placent les instructions **NOP** (aucune opération) dans le code assembleur en fonction des besoins pour aligner des étiquettes sur des limites spécifiques. Cela rend les opérations de récupération d’instruction plus efficaces pour certains processeurs.
+Bien que l’assembleur inline ne prenne pas en charge la plupart des directives MASM, il prend en charge `EVEN` et **aligne**. Ces directives placent les instructions **NOP** (aucune opération) dans le code assembleur en fonction des besoins pour aligner des étiquettes sur des limites spécifiques. Cela rend les opérations de récupération d’instruction plus efficaces pour certains processeurs.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

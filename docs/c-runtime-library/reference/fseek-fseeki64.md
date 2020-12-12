@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fseek, _fseeki64'
 title: fseek, _fseeki64
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: c9bfc9a575504d890d0021937713c720c4557441
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7e15bd7cd273da2f73a58c2bd012670216c1938c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114323"
 ---
 # <a name="fseek-_fseeki64"></a>fseek, _fseeki64
 
@@ -71,11 +72,11 @@ Nombre d’octets à partir d’*origin*.
 *lancé*<br/>
 Position initiale.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, **fseek** et **_fseeki64** retourne 0. Sinon, elle retourne une valeur différente de zéro. Sur les appareils incapables de rechercher, la valeur de retour n’est pas définie. Si *Stream* est un pointeur null ou si *origin* ne fait pas partie des valeurs autorisées décrites ci-dessous, **fseek** et **_fseeki64** appeler le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **fseek** et **_fseeki64** déplacent le pointeur de fichier (le cas échéant) associé au *flux* vers un nouvel emplacement qui est *décalé* d’octets de l' *origine*. L’opération suivante sur le flux a lieu au nouvel emplacement. Sur un flux ouvert pour la mise à jour, l’opération suivante peut être une lecture ou une écriture. L’argument *origin* doit être l’une des constantes suivantes, définies dans stdio. Manutention
 
@@ -105,7 +106,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**fseek**|\<stdio.h>|
 |**_fseeki64**|\<stdio.h>|

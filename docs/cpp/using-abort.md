@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur l’utilisation d’Abort
 title: Utilisation de abort
 ms.date: 11/04/2016
 helpviewer_keywords:
 - abort function
 ms.assetid: 3ba39b78-ef74-4a8d-8dee-2d62442de174
-ms.openlocfilehash: db0f6cdcdaf4bca1b74d89a9415c4f7951455d80
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16c1df7a7b3a26be444d9b17d370366b1a41ea1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116858"
 ---
 # <a name="using-abort"></a>Utilisation de abort
 
@@ -17,4 +18,4 @@ L’appel de la fonction [Abort](../c-runtime-library/reference/abort.md) provoq
 
 ## <a name="see-also"></a>Voir aussi
 
-[Considérations supplémentaires sur la terminaison](../cpp/additional-termination-considerations.md)
+[Autres considérations relatives à l’arrêt](../cpp/additional-termination-considerations.md)

@@ -1,15 +1,16 @@
 ---
-title: 'Portage et mise à niveau : Exemples et études de cas'
+description: 'En savoir plus sur : Portage et mise à niveau : exemples et études de cas'
+title: 'Portage et mise à niveau : exemples et études de cas'
 ms.date: 11/04/2016
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-ms.openlocfilehash: 50e22c9eac39927c4456eeff1ed05c46a239bd30
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 2488e4675cd20c72439aadf3c6eba5c85f2e12d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115194"
 ---
-# <a name="porting-and-upgrading-examples-and-case-studies"></a>Portage et mise à niveau : Exemples et études de cas
+# <a name="porting-and-upgrading-examples-and-case-studies"></a>Portage et mise à niveau : exemples et études de cas
 
 Lisez des récits de migrations réussies pour vous faire une idée des types de problèmes que vous pouvez rencontrer pendant la migration d'une version antérieure de Visual C++ vers la version actuelle.
 
@@ -21,7 +22,7 @@ Lisez des récits de migrations réussies pour vous faire une idée des types de
 
 - [COM Spy](../porting/porting-guide-mfc-scribble.md) est une application qui affiche des informations sur les composants COM+ d’un ordinateur.
 
-- [Spy ++](../porting/porting-guide-spy-increment.md) est une application qui inspecte et fournit des informations sur les éléments d’interface utilisateur dans les applications en cours d’exécution.
+- [Spy++](../porting/porting-guide-spy-increment.md) est une application qui inspecte et fournit des informations sur les éléments d’interface utilisateur dans les applications en cours d’exécution.
 
 ## <a name="see-also"></a>Voir aussi
 

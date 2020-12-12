@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions membres spéciales'
 title: Fonctions membres spéciales
 ms.date: 12/06/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - move operators [C++]
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
-ms.openlocfilehash: b15a0e50774bbc4e70912a31f9a57ea0439f2c12
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab3b5be3c7006729e135cc273e9b7856adbd3252
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113829"
 ---
 # <a name="special-member-functions"></a>Fonctions membres spéciales
 

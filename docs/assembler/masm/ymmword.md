@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : YMMWORD'
 title: YMMWORD
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - YMMWORD directive
 ms.assetid: 955a7d23-6150-4056-befc-7f72e8258ecb
-ms.openlocfilehash: 1a251be75924121d45e3ff6501cbb006649897f3
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: eccbc28e3c902a88bf986fb532e8114a963b307c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75319084"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124967"
 ---
 # <a name="ymmword"></a>YMMWORD
 
@@ -27,5 +28,5 @@ Utilisé pour les opérandes multimédias 256 bits avec les instructions AVX (Ad
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

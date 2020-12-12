@@ -1,39 +1,40 @@
 ---
+description: 'En savoir plus sur : directives de l’assembleur ARM'
 title: Directive d'assembleur ARM
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8362453f2113922c5e834d1d68583b4199cf8d4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118116"
 ---
 # <a name="arm-assembler-directives"></a>Directive d'assembleur ARM
 
-La plupart du temps, l’assembleur Microsoft ARM utilise le langage d’assembly ARM, qui est décrite dans le [du compilateur ARM armasm Guide de référence](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html). Toutefois, les implémentations de Microsoft de certaines directives d’assembly diffèrent dans les directives d’assembly ARM. Cet article explique les différences.
+Pour l’essentiel, l’assembleur Microsoft ARM utilise le langage d’assembly ARM, qui est documenté dans le [Guide de référence Armasm du compilateur ARM](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html). Toutefois, les implémentations Microsoft de certaines directives d’assembly diffèrent des directives d’assembly ARM. Cet article explique les différences.
 
-## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implémentations de Microsoft de Directives d’Assembly ARM
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implémentations Microsoft des directives d’assembly ARM
 
-- ZONE
+- PARTIE
 
-   L’assembleur Microsoft ARM prend en charge ces `AREA` attributs : `ALIGN`, `CODE`, `CODEALIGN`, `DATA`, `NOINIT`, `READONLY`, `READWRITE`, `THUMB`, `ARM`.
+   L’assembleur Microsoft ARM prend en charge les `AREA` attributs suivants : `ALIGN` , `CODE` , `CODEALIGN` , `DATA` , `NOINIT` , `READONLY` , `READWRITE` , `THUMB` , `ARM` .
 
-   Tout sauf `THUMB` et `ARM` fonctionne comme décrit dans la [du compilateur ARM armasm Guide de référence](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
+   Tout sauf `THUMB` et `ARM` fonctionne comme décrit dans le [Guide de référence Armasm du compilateur ARM](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
 
-   Dans l’assembleur Microsoft ARM, `THUMB` indique qu’un `CODE` section contient du code Thumb et est la valeur par défaut pour `CODE` sections.  `ARM` Indique que la section contient le code d’ARM.
+   Dans l’assembleur Microsoft ARM, `THUMB` indique qu’une `CODE` section contient du code Thumb et est la valeur par défaut pour les `CODE` sections.  `ARM` indique que la section contient du code ARM.
 
-- ATTR
+- AVERTISSEMENT
 
    Non pris en charge.
 
 - CODE16
 
-   Non pris en charge, car il implique la syntaxe de Thumb pre-UAL, l’assembleur Microsoft ARM n’autorise pas.  Utilisez la `THUMB` directive au lieu de cela, ainsi que de la syntaxe de la journalisation des accès utilisateur.
+   Non pris en charge, car il implique une syntaxe de curseur de défilement, que l’assembleur Microsoft ARM n’autorise pas.  Utilisez la `THUMB` directive à la place, ainsi que la syntaxe de la journalisation des utilisation.
 
-- COURANTES
+- CLASSIQUES
 
-   Spécification d’un alignement de la région commune n’est pas prise en charge.
+   La spécification d’un alignement pour la région commune n’est pas prise en charge.
 
 - DCDO
 
@@ -41,25 +42,25 @@ La plupart du temps, l’assembleur Microsoft ARM utilise le langage d’assembl
 
 - `DN`, `QN`, `SN`
 
-   Spécification d’un type ou un couloir sur l’alias de Registre n’est pas pris en charge.
+   La spécification d’un type ou d’un couloir sur l’alias Register n’est pas prise en charge.
 
-- ENTRÉE
+- ENTRY
 
    Non pris en charge.
 
 - EQU
 
-   Spécification d’un type pour le symbole défini n’est pas prise en charge.
+   La spécification d’un type pour le symbole défini n’est pas prise en charge.
 
 - `EXPORT` et `GLOBAL`
 
-   Spécifie des exportations à l’aide de cette syntaxe :
+   Spécifie les exportations à l’aide de la syntaxe suivante :
 
-   > **EXPORT**|**GLOBAL** <em>sym</em>{**[**<em>type</em>**]**}
+   > **Exporter** |  <em>Sym</em>global {**[**<em>type</em>**]**}
 
-   *SYM* est le symbole à exporter.  [*type*], si spécifiée, peut être `[DATA]` pour indiquer que le symbole pointe vers les données ou `[FUNC]` pour indiquer que le symbole pointe vers du code. `GLOBAL` est un synonyme de `EXPORT`.
+   *sym* est le symbole à exporter.  [*type*], s’il est spécifié, peut être `[DATA]` pour indiquer que le symbole pointe vers les données ou `[FUNC]` pour indiquer que le symbole pointe vers le code. `GLOBAL` est un synonyme de `EXPORT`.
 
-- EXPORTAS
+- Exportas
 
    Non pris en charge.
 
@@ -69,31 +70,31 @@ La plupart du temps, l’assembleur Microsoft ARM utilise le langage d’assembl
 
 - `FUNCTION` et `PROC`
 
-   Bien que la syntaxe de l’assembly prend en charge la spécification d’un personnalisé convention d’appel sur les procédures en répertoriant les registres sont enregistrer à l’appelant et celles qui sont appelé enregistrement, l’assembleur Microsoft ARM accepte la syntaxe, mais ignore les listes de Registre.  Les informations de débogage qui sont générées par l’assembleur prend en charge uniquement la valeur par défaut convention d’appel.
+   Bien que la syntaxe d’assembly prenne en charge la spécification d’une convention d’appel personnalisée sur les procédures en répertoriant les registres qui sont l’appelant-Save et ceux qui sont appelés-Save, l’assembleur Microsoft ARM accepte la syntaxe mais ignore les listes de registres.  Les informations de débogage produites par l’assembleur ne prennent en charge que la Convention d’appel par défaut.
 
 - `IMPORT` et `EXTERN`
 
-   Spécifie les importations à l’aide de cette syntaxe :
+   Spécifie les importations à l’aide de la syntaxe suivante :
 
-   > **IMPORTATION**|**EXTERN** *sym*{**, faible** *alias*{**, TYPE** *t*}}
+   > **Importer** | **Extern** *sym*{**, faible** *alias*{**, type** *t*}}
 
-   *SYM* est le nom du symbole à importer.
+   *sym* est le nom du symbole à importer.
 
-   Si `WEAK` *alias* est spécifié, il indique que *sym* est un faible externe. Si aucune définition pour qu’il se trouve au moment de la liaison, toutes les références à lier à la place à *alias*.
+   Si `WEAK` *alias* est spécifié, il indique que *sym* est un externe faible. Si aucune définition n’est trouvée au moment de la liaison, toutes les références à ce dernier sont liées au lieu d’un *alias*.
 
-   Si `TYPE` *t* est spécifié, puis *t* indique comment l’éditeur de liens doit tenter de résoudre *sym*.  Ces valeurs pour *t* sont possibles :
+   Si `TYPE` *t* est spécifié, *t* indique comment l’éditeur de liens doit tenter de résoudre *sym*.  Ces valeurs pour *t* sont possibles :
 
-   |Value|Description|
+   |Valeur|Description|
    |-|-|
-   |1|N’effectuez pas une recherche de bibliothèque pour *sym*|
-   |2|Effectuer une recherche de la bibliothèque de *sym*|
-   |3|*SYM* est un alias pour *alias* (valeur par défaut)|
+   |1|Ne pas effectuer de recherche de bibliothèque pour *sym*|
+   |2|Effectuer une recherche de bibliothèque *sym*|
+   |3|*sym* est un alias pour l' *alias* (valeur par défaut)|
 
-   `EXTERN` est un synonyme de `IMPORT`, sauf que *sym* est importé uniquement s’il existe des références à celle-ci dans l’assembly actuel.
+   `EXTERN` est un synonyme de `IMPORT` , sauf que *sym* est importé uniquement s’il existe des références à celui-ci dans l’assembly actuel.
 
 - MACRO
 
-   L’utilisation d’une variable pour contenir le code de la condition d’une macro n’est pas pris en charge. Valeurs par défaut des paramètres ne sont pas pris en charge de macro.
+   L’utilisation d’une variable pour contenir le code de condition d’une macro n’est pas prise en charge. Les valeurs par défaut des paramètres de macro ne sont pas prises en charge.
 
 - NOFP
 
@@ -101,17 +102,17 @@ La plupart du temps, l’assembleur Microsoft ARM utilise le langage d’assembl
 
 - `OPT`, `TTL`, `SUBT`
 
-   Non pris en charge, car l’assembleur Microsoft ARM ne génère pas de listes.
+   Non pris en charge, car l’assembleur Microsoft ARM ne produit pas de listes.
 
 - PRESERVE8
 
    Non pris en charge.
 
-- RÉADRESSAGE
+- RELOC
 
-   `RELOC n` ne peut suivre qu’une instruction ou une directive de définition de données. Il n’existe aucun « symbole anonyme » qui peut être déplacé.
+   `RELOC n` peut uniquement suivre une instruction ou une directive de définition de données. Il n’y a aucun « symbole anonyme » qui peut être déplacé.
 
-- NÉCESSITENT
+- IMPOSANT
 
    Non pris en charge.
 
@@ -121,9 +122,9 @@ La plupart du temps, l’assembleur Microsoft ARM utilise le langage d’assembl
 
 - THUMBX
 
-   Non pris en charge car l’assembleur Microsoft ARM ne prend pas en charge le jeu d’instructions Thumb-2EE.
+   Non pris en charge, car l’assembleur Microsoft ARM ne prend pas en charge le jeu d’instructions Thumb-2EE.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de la ligne de commande de l’assembleur ARM](../../assembler/arm/arm-assembler-command-line-reference.md)<br/>
+[Référence Command-Line assembly ARM](../../assembler/arm/arm-assembler-command-line-reference.md)<br/>
 [Messages de diagnostic de l’assembleur ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>

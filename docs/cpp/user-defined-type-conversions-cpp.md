@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conversions de type User-Defined (C++)'
 title: Conversions de type définies par l'utilisateur (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-ms.openlocfilehash: e7889a7365a6b3a362804d3dad4b2fefc3780d01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac3a373a7c6075e75c79f636e54f15425301ec3f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116871"
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversions de type définies par l'utilisateur (C++)
 
@@ -71,7 +72,7 @@ Le **`explicit`** mot clé indique au compilateur que la conversion spécifiée 
 
 Le **`explicit`** mot clé peut être appliqué aux constructeurs de conversion depuis c++ 98 et aux fonctions de conversion depuis c++ 11. Les sections suivantes contiennent des informations supplémentaires sur l’utilisation du **`explicit`** mot clé.
 
-## <a name="conversion-constructors"></a><a name="ConvCTOR"></a>Constructeurs de conversion
+## <a name="conversion-constructors"></a><a name="ConvCTOR"></a> Constructeurs de conversion
 
 Les constructeurs de conversion définissent les conversions de types définis par l'utilisateur ou intégrés en type défini par l'utilisateur. L’exemple suivant illustre un constructeur de conversion qui convertit le type intégré **`double`** en un type défini par l’utilisateur `Money` .
 
@@ -155,7 +156,7 @@ Dans cet exemple, notez que vous pouvez encore utiliser le constructeur de conve
 
 Même si vous pouvez être tenté par la commodité de l'autorisation des conversions implicites, celle-ci peut introduire des bogues difficiles à trouver. De manière générale, il vaut mieux que tous les constructeurs de conversion soient explicites, sauf quand vous êtes sûr que vous voulez qu'une conversion spécifique se produise de manière implicite.
 
-## <a name="conversion-functions"></a><a name="ConvFunc"></a>Fonctions de conversion
+## <a name="conversion-functions"></a><a name="ConvFunc"></a> Fonctions de conversion
 
 Les fonctions de conversion définissent des conversions d'un type défini par l'utilisateur en d'autres types. Ces fonctions sont parfois qualifiées d'« opérateurs de transtypage », car elles sont appelées, en même temps que les constructeurs de conversion, quand une valeur est transtypée vers un type différent. L’exemple suivant montre une fonction de conversion qui convertit le type défini par l’utilisateur en `Money` type intégré **`double`** :
 

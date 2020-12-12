@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fseek_nolock, _fseeki64_nolock'
 title: _fseek_nolock, _fseeki64_nolock
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: c09f9964416785131c0c928c214a0de5ec6dd859
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3a8701dcb7380bee31d1d04aa92209169682e54d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114259"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
@@ -73,11 +74,11 @@ Nombre d’octets à partir d’*origin*.
 *lancé*<br/>
 Position initiale.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Identique à [fseek](fseek-fseeki64.md) et [_fseeki64](fseek-fseeki64.md), respectivement.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Ces fonctions sont les versions sans verrouillage de [fseek](fseek-fseeki64.md) et [_fseeki64](fseek-fseeki64.md), respectivement. Celles-ci sont identiques à [fseek](fseek-fseeki64.md) et [_fseeki64](fseek-fseeki64.md) , à ceci près qu’elles ne sont pas protégées contre les interférences par d’autres threads. Ces fonctions peuvent être plus rapides, car elles n’entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
@@ -85,7 +86,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_fseek_nolock**, **_fseeki64_nolock**|\<stdio.h>|
 

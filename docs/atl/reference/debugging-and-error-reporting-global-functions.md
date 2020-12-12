@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les fonctions globales de débogage et de rapport d’erreurs
 title: Fonctions globales de débogage et de rapport d’erreurs
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 3c729a7d8e870ce7b104ca53cd83bf8c41112dea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139982"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Fonctions globales de débogage et de rapport d’erreurs
 
@@ -143,7 +144,7 @@ dans Chemin d’accès et nom du fichier d’aide décrivant l’erreur.
 *hInst*<br/>
 dans Handle de la ressource. Par défaut, ce paramètre est `__AtlBaseModuleModule::GetResourceInstance` , où `__AtlBaseModuleModule` est l’instance globale de [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) ou une classe dérivée de celle-ci.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le paramètre *hres* est différent de zéro, retourne la valeur de *hres*. Si *hres* est égal à zéro, les quatre premières versions de `AtlReportError` retournent DISP_E_EXCEPTION. Les deux dernières versions renvoient le résultat de la macro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.
 

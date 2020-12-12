@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mktemp'
 title: mktemp
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - mktemp function
 ms.assetid: b58cba60-034f-4e63-b312-ccbcd489d0a7
-ms.openlocfilehash: c9efd79111c000764561ba415db79a13a34c46fe
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 8126741883c651b11bbd667591840faba11ef16a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114154"
 ---
 # <a name="mktemp"></a>mktemp
 

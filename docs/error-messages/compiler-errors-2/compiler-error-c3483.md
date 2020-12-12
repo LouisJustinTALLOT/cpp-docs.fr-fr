@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3483'
 title: Erreur du compilateur C3483
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3483
 ms.assetid: 18b3a2c5-dfc9-4661-9653-08a5798474cf
-ms.openlocfilehash: 0d6c1467575e7fae7d5e4862f36e733a68210f8e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7c67e1e4d44c64fbcc023ee410dff2ecdd92c361
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113383"
 ---
 # <a name="compiler-error-c3483"></a>Erreur du compilateur C3483
 

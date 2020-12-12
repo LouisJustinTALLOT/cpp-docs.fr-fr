@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : gérer les symboles'
 title: 'Comment : gérer des symboles'
 ms.date: 02/14/2019
 f1_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 67a5c801c13038e7215473edecc2d41a8f7086e0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2a7bdc6994bfcdadc9b7d1d5b98350fcd47ad6fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118223"
 ---
 # <a name="how-to-manage-symbols"></a>Comment : gérer des symboles
 
@@ -74,7 +75,7 @@ Les restrictions relatives aux noms de symboles sont les suivantes :
 
 Les noms de symboles comportent des préfixes descriptifs qui indiquent le genre de ressource ou d'objet qu'ils représentent. Ces préfixes descriptifs commencent par la combinaison de texte ID. La bibliothèque MFC (Microsoft Foundation Class) utilise les conventions d’affectation des noms de symboles indiquées dans le tableau suivant :
 
-|Category|Préfixe|Utilisez|
+|Category|Préfixe|Utilisation|
 |--------------|------------|---------|
 |Ressources|IDR_, IDD_, IDC_, IDI_, IDB_|Accélérateur ou menu (et ressources associées ou personnalisées), boîte de dialogue, curseur, icône, bitmap|
 |Éléments de menu|ID_|Élément de menu|
@@ -208,7 +209,7 @@ L'environnement interprète correctement ces symboles calculés tant que les con
 
 1. Dans la zone **fichier d’en-tête de symbole** , tapez le nouveau nom du fichier include.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

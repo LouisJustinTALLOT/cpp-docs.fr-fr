@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l'
 title: fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: ff4fa01fe53794ed04f087f264021de9beea4ba9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ae5d0c953cb46850cf56a4ce4113e5831518ae5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124915"
 ---
 # <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -95,7 +96,7 @@ Arguments facultatifs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. Si une erreur se produit ou si la fin du flux de fichier est atteinte avant la première conversion, la valeur de retour est **EOF** pour **fscanf_s** et **fwscanf_s**.
 
@@ -105,7 +106,7 @@ Ces fonctions valident leurs paramètres. Si *Stream* est un pointeur de fichier
 
 La fonction **fscanf_s** lit les données à partir de la position actuelle du *flux* dans les emplacements donnés par *argument* (le cas échéant). Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type au *format*. le *format* contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument *format* pour **scanf_s**; consultez [champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour obtenir une description du *format*.  **fwscanf_s** est une version à caractères larges de **fscanf_s**; l’argument de format de **fwscanf_s** est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fscanf_s** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
 
-La principale différence entre les fonctions les plus sécurisées (qui ont le suffixe **_s** ) et les autres versions est que les fonctions plus sécurisées requièrent que la taille en caractères de chaque champ **c**, **c**, **s**, **s**et **[** type soit passée comme argument immédiatement après la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
+La principale différence entre les fonctions les plus sécurisées (qui ont le suffixe **_s** ) et les autres versions est que les fonctions plus sécurisées requièrent que la taille en caractères de chaque champ **c**, **c**, **s**, **s** et **[** type soit passée comme argument immédiatement après la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
 > Le paramètre de taille est de type **`unsigned`** , et non **size_t**.

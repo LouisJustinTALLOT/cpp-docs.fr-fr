@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)'
 title: Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 42060fc7bd1aeedebf6cdfc7f645ad8eea38153c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115207"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 

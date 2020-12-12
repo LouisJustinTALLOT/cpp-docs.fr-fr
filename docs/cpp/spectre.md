@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spectre'
 title: spectre
 ms.date: 01/23/2018
 f1_keywords:
@@ -8,22 +9,22 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword (C++), spectre
 - spectre __declspec keyword
-ms.openlocfilehash: 40eee25dec867ae3fce7a6b2d4715f0be81bfe76
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fc1f56a59dea1eaa3596a6f7a7c0347ab822e302
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113816"
 ---
 # <a name="spectre"></a>spectre
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Indique au compilateur de ne pas insérer d’instructions de barrière d’exécution spéculative spectre variant 1 pour une fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **__declspec( spectre(nomitigation) )**
+> **__declspec (spectre (nomitigation))**
 
 ## <a name="remarks"></a>Notes
 
@@ -53,7 +54,7 @@ int main() {
 }
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

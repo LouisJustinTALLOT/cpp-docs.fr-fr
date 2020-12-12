@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_printf_count_output'
 title: _set_printf_count_output
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 455c4f0e49ce111853145a05d78efabcd76386fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948418"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114245"
 ---
 # <a name="_set_printf_count_output"></a>_set_printf_count_output
 
@@ -59,13 +60,13 @@ L’état de la prise en charge de **% n** avant d’appeler cette fonction : d
 
 Pour des raisons de sécurité, la prise en charge du spécificateur de format **% n** est désactivée par défaut dans **printf** et toutes ses variantes. Si **% n** est rencontré dans une spécification de format **printf** , le comportement par défaut consiste à appeler le gestionnaire de paramètre non valide comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). L’appel de **_set_printf_count_output** avec un argument différent de zéro entraîne l’interprétation de **% n** par les fonctions de la famille **printf**, comme décrit dans la [syntaxe de spécification de format : fonctions printf et wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_set_printf_count_output**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

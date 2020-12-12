@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : feraiseexcept'
 title: feraiseexcept
 ms.date: 04/05/2018
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 8e7a06006cfdc768fdaa306bc293857f1c375b90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124941"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -41,18 +42,18 @@ int feraiseexcept(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
-*excepts*<br/>
+*sauf*<br/>
 Exceptions de virgule flottante à déclencher.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Si toutes les exceptions spécifiées sont correctement déclenchées, retourne 0.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **feraiseexcept** tente de déclencher les exceptions à virgule flottante spécifiées par *except*.   La fonction **feraiseexcept** prend en charge les macros d’exception suivantes, définies dans \<fenv. h >:
+La fonction **feraiseexcept** tente de déclencher les exceptions à virgule flottante spécifiées par *except*.   La fonction **feraiseexcept** prend en charge les macros d’exception suivantes, définies dans \<fenv.h> :
 
 |Macros d’exception|Description|
 |---------------------|-----------------|
@@ -69,7 +70,7 @@ Pour utiliser cette fonction, vous devez désactiver les optimisations à virgul
 
 **Spécifique à Microsoft :** Les exceptions spécifiées dans *except* sont générées dans l’ordre FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Toutefois, FE_INEXACT peut être déclenché lorsque FE_OVERFLOW ou FE_UNDERFLOW est déclenché, même s’il n’est pas spécifié dans *except*.
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
@@ -79,7 +80,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>
 [feholdexcept](feholdexcept2.md)<br/>
 [fetestexcept](fetestexcept1.md)<br/>

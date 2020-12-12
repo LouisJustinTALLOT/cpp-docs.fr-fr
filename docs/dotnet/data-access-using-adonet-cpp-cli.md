@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : accès aux données à l’aide de ADO.NET (C++/CLI)'
 title: Accès aux données à l'aide d'ADO.NET (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 3f3980c98890382e77d9d89db2944bebf7b12319
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 93af8a8a2dc4ebc8d9fe6073b9f3a70f4868bee8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211058"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124265"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Accès aux données à l'aide d'ADO.NET (C++/CLI)
 
@@ -35,7 +36,7 @@ ADO.NET est l’API .NET Framework pour l’accès aux données et fournit une p
 
 ADO.NET s’exécute sous le Common Language Runtime (CLR). Par conséquent, toute application qui interagit avec ADO.NET doit également cibler le CLR. Toutefois, cela ne signifie pas que les applications natives ne peuvent pas utiliser ADO.NET. Ces exemples illustrent comment interagir avec une base de données ADO.NET à partir du code natif.
 
-## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a>Marshaler des chaînes ANSI pour ADO.NET
+## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a> Marshaler des chaînes ANSI pour ADO.NET
 
 Montre comment ajouter une chaîne native ( `char *` ) à une base de données et comment marshaler une à <xref:System.String?displayProperty=fullName> partir d’une base de données vers une chaîne native.
 
@@ -161,7 +162,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a>Marshaler des chaînes BSTR pour ADO.NET
+## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a> Marshaler des chaînes BSTR pour ADO.NET
 
 Montre comment ajouter une chaîne COM ( `BSTR` ) à une base de données et comment marshaler une à <xref:System.String?displayProperty=fullName> partir d’une base de données vers un `BSTR` .
 
@@ -295,7 +296,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a>Marshaler des chaînes Unicode pour ADO.NET
+## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a> Marshaler des chaînes Unicode pour ADO.NET
 
 Montre comment ajouter une chaîne Unicode native ( `wchar_t *` ) à une base de données et comment marshaler une à <xref:System.String?displayProperty=fullName> partir d’une base de données vers une chaîne Unicode native.
 
@@ -421,7 +422,7 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_wide.cpp
     ```
 
-## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a>Marshaler un VARIANT pour ADO.NET
+## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a> Marshaler un VARIANT pour ADO.NET
 
 Montre comment ajouter un natif `VARIANT` à une base de données et comment marshaler un <xref:System.Object?displayProperty=fullName> d’une base de données vers un natif `VARIANT` .
 
@@ -562,7 +563,7 @@ ObjectCol: 42
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp
     ```
 
-## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a>Marshaler un SAFEARRAY pour ADO.NET
+## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a> Marshaler un SAFEARRAY pour ADO.NET
 
 Montre comment ajouter un natif `SAFEARRAY` à une base de données et comment marshaler un tableau managé d’une base de données vers un natif `SAFEARRAY` .
 
@@ -715,7 +716,7 @@ int main()
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_safearray.cpp
     ```
 
-## <a name="net-framework-security"></a>Sécurité du .NET Framework
+## <a name="net-framework-security"></a>Sécurité .NET Framework
 
 Pour plus d’informations sur les problèmes de sécurité impliquant ADO.NET, consultez [sécurisation des Applications ADO.net](/dotnet/framework/data/adonet/securing-ado-net-applications).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble de l’assembleur inline'
 title: Vue d'ensemble de l'assembleur inline
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - invoking inline assembler
 - inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-ms.openlocfilehash: 3872dcb194146bf0f4c89b0be03a49b5fe3a9e37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e6028e0187c1aeab338636d734425d1881fc740
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87192078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117781"
 ---
 # <a name="inline-assembler-overview"></a>Vue d'ensemble de l'assembleur inline
 

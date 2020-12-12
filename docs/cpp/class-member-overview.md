@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : vue d’ensemble des membres de classe'
 title: Vue d'ensemble des membres de classe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-ms.openlocfilehash: 02c5593d9fb5e72ee6b398c9637397ab26c9f3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6059fc589d7065863c37f03a6e40882e1039b17c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114115"
 ---
 # <a name="class-member-overview"></a>Vue d'ensemble des membres de classe
 
@@ -102,7 +103,7 @@ Des données membres peuvent être déclarées comme statiques, ce qui signifie 
 
 Les fonctions membres spéciales sont des fonctions qui sont fournies automatiquement par le compilateur si vous ne les spécifiez pas dans votre code source.
 
-1. Constructeur par défaut.
+1. Constructeur par défaut
 
 1. Constructeur de copie
 

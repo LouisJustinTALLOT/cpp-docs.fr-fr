@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe moneypunct'
 title: moneypunct, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 8efed3cea9684c61f3bcac9eadb87b8a2b55ce09
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 8885b80b352ed7eee2830b2416ef9f57d634aa07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115168"
 ---
 # <a name="moneypunct-class"></a>moneypunct, classe
 
@@ -72,7 +73,7 @@ Type utilisé dans le cadre d'un programme pour encoder des caractères.
 *IU*\
 Indicateur spécifiant si les conventions internationales doivent être respectées.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet statique possède une valeur stockée initiale de zéro. La première tentative d’accès à sa valeur stockée entraîne le stockage d’une valeur positive unique dans **id.**
 
@@ -114,13 +115,13 @@ L’objet statique const intl stocke la valeur du paramètre de modèle *Intl*.
 |[positive_sign](#positive_sign)|Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole du signe positif.|
 |[thousands_sep](#thousands_sep)|Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole de séparateur des milliers.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<locale>
 
 **Espace de noms :** std
 
-## <a name="moneypunctchar_type"></a><a name="char_type"></a>moneypunct :: char_type
+## <a name="moneypunctchar_type"></a><a name="char_type"></a> moneypunct :: char_type
 
 Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.
 
@@ -128,11 +129,11 @@ Type utilisé pour décrire un caractère utilisé par des paramètres régionau
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type est un synonyme du paramètre de modèle **CharType**.
 
-## <a name="moneypunctcurr_symbol"></a><a name="curr_symbol"></a>moneypunct :: curr_symbol
+## <a name="moneypunctcurr_symbol"></a><a name="curr_symbol"></a> moneypunct :: curr_symbol
 
 Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole monétaire.
 
@@ -144,7 +145,7 @@ string_type curr_symbol() const;
 
 Chaîne contenant le symbole monétaire.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_curr_symbol](#do_curr_symbol).
 
@@ -169,7 +170,7 @@ int main( )
 };
 ```
 
-## <a name="moneypunctdecimal_point"></a><a name="decimal_point"></a>moneypunct ::d ecimal_point
+## <a name="moneypunctdecimal_point"></a><a name="decimal_point"></a> moneypunct ::d ecimal_point
 
 Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole de virgule décimale.
 
@@ -181,7 +182,7 @@ CharType decimal_point() const;
 
 Séquence propre aux paramètres régionaux d’éléments à utiliser comme symbole de virgule décimale.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_decimal_point](#do_decimal_point).
 
@@ -215,7 +216,7 @@ German_Germany.1252 international decimal point ,
 German_Germany.1252 domestic decimal point ,
 ```
 
-## <a name="moneypunctdo_curr_symbol"></a><a name="do_curr_symbol"></a>moneypunct ::d o_curr_symbol
+## <a name="moneypunctdo_curr_symbol"></a><a name="do_curr_symbol"></a> moneypunct ::d o_curr_symbol
 
 Fonction membre virtuelle protégée qui retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole monétaire.
 
@@ -231,7 +232,7 @@ Séquence propre aux paramètres régionaux d’éléments à utiliser comme sym
 
 Consultez l’exemple relatif à [curr_symbol](#curr_symbol), où la fonction membre virtuelle est appelée par `curr_symbol`.
 
-## <a name="moneypunctdo_decimal_point"></a><a name="do_decimal_point"></a>moneypunct ::d o_decimal_point
+## <a name="moneypunctdo_decimal_point"></a><a name="do_decimal_point"></a> moneypunct ::d o_decimal_point
 
 Fonction membre virtuelle protégée qui retourne une séquence propre aux paramètres régionaux d’éléments à utiliser comme symbole de virgule décimale.
 
@@ -247,7 +248,7 @@ Séquence propre aux paramètres régionaux d’éléments à utiliser comme sym
 
 Consultez l’exemple relatif à [decimal_point](#decimal_point), où la fonction membre virtuelle est appelée par `decimal_point`.
 
-## <a name="moneypunctdo_frac_digits"></a><a name="do_frac_digits"></a>moneypunct ::d o_frac_digits
+## <a name="moneypunctdo_frac_digits"></a><a name="do_frac_digits"></a> moneypunct ::d o_frac_digits
 
 Fonction membre virtuelle protégée qui retourne un décompte propre aux paramètres régionaux du nombre de chiffres à afficher à droite de la virgule décimale.
 
@@ -263,7 +264,7 @@ Décompte propre aux paramètres régionaux du nombre de chiffres à afficher à
 
 Consultez l’exemple relatif à [frac_digits](#frac_digits), où la fonction membre virtuelle est appelée par `frac_digits`.
 
-## <a name="moneypunctdo_grouping"></a><a name="do_grouping"></a>moneypunct ::d o_grouping
+## <a name="moneypunctdo_grouping"></a><a name="do_grouping"></a> moneypunct ::d o_grouping
 
 Fonction membre virtuelle protégée qui retourne une règle propre aux paramètres régionaux permettant de déterminer comment les chiffres sont regroupés à gauche de la virgule décimale.
 
@@ -279,7 +280,7 @@ Règle propre aux paramètres régionaux pour déterminer comment les chiffres s
 
 Consultez l’exemple de [regroupement](#grouping), où la fonction membre virtuelle est appelée par `grouping` .
 
-## <a name="moneypunctdo_neg_format"></a><a name="do_neg_format"></a>moneypunct ::d o_neg_format
+## <a name="moneypunctdo_neg_format"></a><a name="do_neg_format"></a> moneypunct ::d o_neg_format
 
 Fonction membre virtuelle protégée qui est appelée pour retourner une règle spécifique aux paramètres régionaux pour mettre en forme les sorties avec des montants négatifs.
 
@@ -291,15 +292,15 @@ virtual pattern do_neg_format() const;
 
 La fonction membre virtuelle protégée retourne une règle propre aux paramètres régionaux pour déterminer comment générer un champ de sortie monétaire pour un montant négatif. Chacun des quatre éléments de `pattern::field` peut avoir les valeurs suivantes :
 
-- `none`pour faire correspondre zéro, un ou plusieurs espaces ou générer Nothing.
+- `none` pour faire correspondre zéro, un ou plusieurs espaces ou générer Nothing.
 
-- `sign`pour faire correspondre ou générer un signe positif ou négatif.
+- `sign` pour faire correspondre ou générer un signe positif ou négatif.
 
-- `space`pour faire correspondre zéro, un ou plusieurs espaces ou générer un espace.
+- `space` pour faire correspondre zéro, un ou plusieurs espaces ou générer un espace.
 
-- `symbol`pour faire correspondre ou générer un symbole monétaire.
+- `symbol` pour faire correspondre ou générer un symbole monétaire.
 
-- `value`pour faire correspondre ou générer une valeur monétaire.
+- `value` pour faire correspondre ou générer une valeur monétaire.
 
 Les composants d’un champ de sortie monétaire sont générés et les composants d’un champ d’entrée monétaire sont mis en correspondance dans l’ordre dans lequel ces éléments apparaissent dans `pattern::field` . Chacune des valeurs `sign` , `symbol` , `value` et `none` `space` doit apparaître une seule fois. La valeur `none` ne doit pas apparaître en premier. La valeur `space` ne doit pas apparaître en premier ou en dernier. Si `Intl` a la valeur true, l’ordre est `symbol` , `sign` , `none` , puis `value` .
 
@@ -309,7 +310,7 @@ La version de modèle de `moneypunct< CharType, Intl >` retourne `{money_base::s
 
 Consultez l’exemple relatif à [neg_format](#neg_format), où la fonction membre virtuelle est appelée par `neg_format`.
 
-## <a name="moneypunctdo_negative_sign"></a><a name="do_negative_sign"></a>moneypunct ::d o_negative_sign
+## <a name="moneypunctdo_negative_sign"></a><a name="do_negative_sign"></a> moneypunct ::d o_negative_sign
 
 Fonction membre virtuelle protégée qui est appelée pour retourner une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole du signe négatif.
 
@@ -325,7 +326,7 @@ Séquence propre aux paramètres régionaux d’éléments à utiliser comme sig
 
 Consultez l’exemple relatif à [negative_sign](#negative_sign), où la fonction membre virtuelle est appelée par `negative_sign`.
 
-## <a name="moneypunctdo_pos_format"></a><a name="do_pos_format"></a>moneypunct ::d o_pos_format
+## <a name="moneypunctdo_pos_format"></a><a name="do_pos_format"></a> moneypunct ::d o_pos_format
 
 Fonction membre virtuelle protégée qui est appelée pour retourner une règle spécifique aux paramètres régionaux pour mettre en forme les sorties avec des montants positifs.
 
@@ -343,7 +344,7 @@ La version de modèle de `moneypunct< CharType, Inputlterator >` retourne `{ mon
 
 Consultez l’exemple relatif à [pos_format](#pos_format), où la fonction membre virtuelle est appelée par `pos_format`.
 
-## <a name="moneypunctdo_positive_sign"></a><a name="do_positive_sign"></a>moneypunct ::d o_positive_sign
+## <a name="moneypunctdo_positive_sign"></a><a name="do_positive_sign"></a> moneypunct ::d o_positive_sign
 
 Fonction membre virtuelle protégée qui retourne une séquence propre aux paramètres régionaux d’éléments à utiliser comme signe positif.
 
@@ -359,7 +360,7 @@ Séquence propre aux paramètres régionaux d’éléments à utiliser comme sig
 
 Consultez l’exemple relatif à [positive_sign](#positive_sign), où la fonction membre virtuelle est appelée par `positive_sign`.
 
-## <a name="moneypunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>moneypunct ::d o_thousands_sep
+## <a name="moneypunctdo_thousands_sep"></a><a name="do_thousands_sep"></a> moneypunct ::d o_thousands_sep
 
 Fonction membre virtuelle protégée qui retourne un élément propre aux paramètres régionaux à utiliser comme séparateur de groupes à gauche de la virgule décimale.
 
@@ -375,7 +376,7 @@ virtual CharType do_thousands_sep() const;
 
 Consultez l’exemple relatif à [group separator](#thousands_sep), où la fonction membre virtuelle est appelée par `thousands_sep`.
 
-## <a name="moneypunctfrac_digits"></a><a name="frac_digits"></a>moneypunct :: frac_digits
+## <a name="moneypunctfrac_digits"></a><a name="frac_digits"></a> moneypunct :: frac_digits
 
 Retourne un compte spécifique aux paramètres régionaux du nombre de chiffres à afficher à droite de la virgule décimale.
 
@@ -387,7 +388,7 @@ int frac_digits() const;
 
 Décompte propre aux paramètres régionaux du nombre de chiffres à afficher à droite de la virgule décimale.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_frac_digits](#do_frac_digits).
 
@@ -444,7 +445,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="moneypunctgrouping"></a><a name="grouping"></a>moneypunct :: regroupement
+## <a name="moneypunctgrouping"></a><a name="grouping"></a> moneypunct :: regroupement
 
 Retourne une règle spécifique aux paramètres régionaux pour déterminer la manière dont les chiffres sont regroupés à gauche de la virgule décimale.
 
@@ -456,7 +457,7 @@ string grouping() const;
 
 Règle propre aux paramètres régionaux pour déterminer comment les chiffres sont regroupés à gauche de la virgule décimale.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_grouping](#do_grouping).
 
@@ -513,7 +514,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="moneypunctmoneypunct"></a><a name="moneypunct"></a>moneypunct :: moneypunct
+## <a name="moneypunctmoneypunct"></a><a name="moneypunct"></a> moneypunct :: moneypunct
 
 Constructeur d'objets de type `moneypunct`.
 
@@ -526,7 +527,7 @@ explicit moneypunct(size_t _Refs = 0);
 *_Refs*\
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
@@ -534,13 +535,13 @@ Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les 
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1 : ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
 Le constructeur initialise son objet de base avec [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).
 
-## <a name="moneypunctneg_format"></a><a name="neg_format"></a>moneypunct :: neg_format
+## <a name="moneypunctneg_format"></a><a name="neg_format"></a> moneypunct :: neg_format
 
 Retourne une règle spécifique aux paramètres régionaux pour mettre en forme les sorties avec des montants négatifs.
 
@@ -552,7 +553,7 @@ pattern neg_format() const;
 
 Règle propre aux paramètres régionaux pour mettre en forme les sorties avec des montants négatifs.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_neg_format](#do_neg_format).
 
@@ -588,7 +589,7 @@ int main( ) {
 }
 ```
 
-## <a name="moneypunctnegative_sign"></a><a name="negative_sign"></a>moneypunct :: negative_sign
+## <a name="moneypunctnegative_sign"></a><a name="negative_sign"></a> moneypunct :: negative_sign
 
 Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole du signe négatif.
 
@@ -600,7 +601,7 @@ string_type negative_sign() const;
 
 Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole du signe négatif.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_negative_sign](#do_negative_sign).
 
@@ -650,7 +651,7 @@ French_France.1252 international negative sign: -
 French_France.1252 domestic negative sign: -
 ```
 
-## <a name="moneypunctpos_format"></a><a name="pos_format"></a>moneypunct ::p os_format
+## <a name="moneypunctpos_format"></a><a name="pos_format"></a> moneypunct ::p os_format
 
 Retourne une règle spécifique aux paramètres régionaux pour mettre en forme les sorties avec des montants positifs.
 
@@ -662,7 +663,7 @@ pattern pos_format() const;
 
 Règle propre aux paramètres régionaux pour mettre en forme les sorties avec des montants positifs.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_pos_format](#do_pos_format).
 
@@ -698,7 +699,7 @@ int main() {
 }
 ```
 
-## <a name="moneypunctpositive_sign"></a><a name="positive_sign"></a>moneypunct ::p ositive_sign
+## <a name="moneypunctpositive_sign"></a><a name="positive_sign"></a> moneypunct ::p ositive_sign
 
 Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole du signe positif.
 
@@ -710,7 +711,7 @@ string_type positive_sign() const;
 
 Séquence propre aux paramètres régionaux d’éléments à utiliser comme symbole du signe positif.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_positive_sign](#do_positive_sign).
 
@@ -760,7 +761,7 @@ French_France.1252 international positive sign:
 French_France.1252 domestic positive sign:
 ```
 
-## <a name="moneypunctstring_type"></a><a name="string_type"></a>moneypunct :: string_type
+## <a name="moneypunctstring_type"></a><a name="string_type"></a> moneypunct :: string_type
 
 Type qui décrit une chaîne contenant des caractères de type **CharType**.
 
@@ -768,11 +769,11 @@ Type qui décrit une chaîne contenant des caractères de type **CharType**.
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le type décrit une spécialisation du modèle de classe [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des copies des séquences de ponctuation.
 
-## <a name="moneypunctthousands_sep"></a><a name="thousands_sep"></a>moneypunct :: thousands_sep
+## <a name="moneypunctthousands_sep"></a><a name="thousands_sep"></a> moneypunct :: thousands_sep
 
 Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole de séparateur des milliers.
 
@@ -784,7 +785,7 @@ CharType thousands_sep() const;
 
 Séquence propre aux paramètres régionaux d’éléments à utiliser comme séparateur des milliers.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_thousands_sep](#do_thousands_sep).
 

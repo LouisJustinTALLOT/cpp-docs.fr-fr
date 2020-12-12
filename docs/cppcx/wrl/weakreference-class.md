@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : WeakReference, classe'
 title: WeakReference, classe
 ms.date: 09/24/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: 9a367a61a029abe1be599b1e262e279402149ccd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 743a705fae93d015d190df24d2534de62613e542
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116547"
 ---
 # <a name="weakreference-class"></a>WeakReference, classe
 
@@ -74,7 +75,7 @@ Nom                                                                 | Descriptio
 
 **Espace de noms :** Microsoft :: WRL ::D étails
 
-## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>WeakReference :: ~ WeakReference
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a> WeakReference :: ~ WeakReference
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -82,13 +83,13 @@ Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé
 virtual ~WeakReference();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
 Désinitialise l’instance actuelle de la `WeakReference` classe.
 
-## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>WeakReference ::D ecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a> WeakReference ::D ecrementStrongReference
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -102,11 +103,11 @@ Décrémente le décompte de références fortes de l' `WeakReference` objet act
 
 Lorsque le nombre de références fortes est égal à zéro, la référence forte est définie sur **`nullptr`** .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de références fortes décrémenté.
 
-## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>WeakReference :: Incrementstrongreference,
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a> WeakReference :: Incrementstrongreference,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -114,7 +115,7 @@ Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé
 ULONG IncrementStrongReference();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de références fortes incrémentées.
 
@@ -122,7 +123,7 @@ Nombre de références fortes incrémentées.
 
 Incrémente le décompte de références fortes de l' `WeakReference` objet actuel.
 
-## <a name="weakreferenceresolve"></a><a name="resolve"></a>WeakReference :: Resolve
+## <a name="weakreferenceresolve"></a><a name="resolve"></a> WeakReference :: Resolve
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -141,7 +142,7 @@ ID d’interface.
 *ppvObject*<br/>
 Lorsque cette opération est terminée, il s’agit d’une copie de la référence forte actuelle si le nombre de références fortes est différent de zéro.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 - S_OK si cette opération réussit et si le nombre de références fortes est égal à zéro. Le paramètre *ppvObject* a la valeur **`nullptr`** .
 
@@ -153,7 +154,7 @@ Lorsque cette opération est terminée, il s’agit d’une copie de la référe
 
 Définit le pointeur spécifié sur la valeur de référence forte actuelle si le nombre de références fortes est différent de zéro.
 
-## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>WeakReference :: Setunknown,
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a> WeakReference :: Setunknown,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -172,7 +173,7 @@ Pointeur vers l' `IUnknown` interface d’un objet.
 
 Définit la référence forte de l' `WeakReference` objet actuel sur le pointeur d’interface spécifié.
 
-## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>WeakReference :: WeakReference
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a> WeakReference :: WeakReference
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _clear87, _clearfp'
 title: _clear87, _clearfp
 ms.date: 04/05/2018
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-ms.openlocfilehash: 4ca49895b881d9e307c1116681bc36f86b167c25
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c15dd66f9a6598f351a54f0269619d9768eaa152
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942957"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124954"
 ---
 # <a name="_clear87-_clearfp"></a>_clear87, _clearfp
 
@@ -58,20 +59,20 @@ Les bits de la valeur retournée indiquent l’État à virgule flottante avant 
 
 La fonction **_clear87** efface les indicateurs d’exception dans le mot d’État à virgule flottante, définit le bit occupé sur 0 et retourne le mot d’État. Le mot d'état à virgule flottante est une combinaison du mot d'état 8087/80287 et d'autres conditions détectées par le gestionnaire d'exceptions 8087/80287, telles que le dépassement de capacité positif et négatif de pile à virgule flottante.
 
-**_clearfp** est une version portable, indépendante de la plateforme, de la routine **_clear87** . Elle est identique à **_clear87** sur les plateformes Intel (x86) et est également prise en charge par les plateformes x64 et ARM. Pour vous assurer que votre code à virgule flottante est portable vers x64 et ARM, utilisez **_clearfp**. Si vous ciblez uniquement des plateformes x86, vous pouvez utiliser **_clear87** ou **_clearfp**.
+**_clearfp** est une version portable, indépendante de la plateforme, de la routine **_clear87** . Elle est identique à **_clear87** sur les plateformes Intel (x86) et est également prise en charge par les plateformes x64 et ARM. Pour vous assurer que votre code à virgule flottante est portable pour x64 et ARM, utilisez **_clearfp**. Si vous ciblez uniquement des plateformes x86, vous pouvez utiliser **_clear87** ou **_clearfp**.
 
 Ces fonctions sont déconseillées lors de la compilation avec [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) , car la Common Language Runtime prend en charge uniquement la précision en virgule flottante par défaut.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_clear87**|\<float.h>|
 |**_clearfp**|\<float.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_clear87.c
@@ -113,5 +114,5 @@ Status: 80000 - denormal
 ## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md)<br/>
+[_control87, _controlfp \_ _control87_2](control87-controlfp-control87-2.md)<br/>
 [_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>

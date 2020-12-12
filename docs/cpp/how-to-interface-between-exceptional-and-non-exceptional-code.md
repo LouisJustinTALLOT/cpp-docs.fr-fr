@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : Comment : établir une interface entre du code exceptionnel et non exceptionnel'
 title: 'Comment : établir une interface entre du code exceptionnel et non exceptionnel'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: 88dacda9b20f351eb67dde24a8335bdcbba27dd3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 34a0966d496e5e22099de051a74f3458d1cc05d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114024"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Comment : établir une interface entre du code exceptionnel et non exceptionnel
 
@@ -237,4 +238,4 @@ Pour plus d’informations sur les expressions lambda, consultez [expressions la
 ## <a name="see-also"></a>Voir aussi
 
 [Meilleures pratiques C++ modernes pour les exceptions et la gestion des erreurs](errors-and-exception-handling-modern-cpp.md)<br/>
-[Comment : concevoir la sécurité des exceptions](how-to-design-for-exception-safety.md)<br/>
+[Procédure : conception pour parer à toute exception](how-to-design-for-exception-safety.md)<br/>

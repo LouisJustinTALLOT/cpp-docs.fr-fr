@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Résumé de la durée de vie et de la visibilité'
 title: Résumé de la durée de vie et de la visibilité
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1ce139b4fdc2562862eaef1828ec481685eca60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114479"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité
 
@@ -18,7 +19,7 @@ Le tableau suivant récapitule les caractéristiques de durée de vie et de visi
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité
 
-|Attributs :<br /><br /> Level|Article|Classe de stockage<br /><br /> Spécificateur|Résultat :<br /><br /> Durée de vie|Visibilité|
+|Attributs :<br /><br /> Level|Élément|Classe de stockage<br /><br /> Spécificateur|Résultat :<br /><br /> Durée de vie|Visibilité|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |Portée du fichier|Définition de variable|**`static`**|Global|Reste du fichier source dans lequel elle se produit|
 ||Déclaration de variable|**`extern`**|Global|Reste du fichier source dans lequel elle se produit|
@@ -26,7 +27,7 @@ Le tableau suivant récapitule les caractéristiques de durée de vie et de visi
 ||Prototype de fonction|**`extern`**|Global|Reste du fichier source|
 |Portée de bloc|Déclaration de variable|**`extern`**|Global|Bloquer|
 ||Définition de variable|**`static`**|Global|Bloquer|
-||Définition de variable|**`auto`** ni**`register`**|Local|Bloquer|
+||Définition de variable|**`auto`** ou **`register`**|Local|Bloquer|
 
 ## <a name="example"></a>Exemple
 

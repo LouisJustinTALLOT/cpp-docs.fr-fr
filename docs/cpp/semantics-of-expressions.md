@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : sémantique des expressions'
 title: Sémantique des expressions
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 43bcd98e0dbf14dada2643c0b731d3f6bae863e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5e038d8ea6de55463a60d7b21104c2e71accec1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116988"
 ---
 # <a name="semantics-of-expressions"></a>Sémantique des expressions
 
@@ -20,7 +21,7 @@ Les expressions sont évaluées selon la priorité et le regroupement de leurs o
 
 ## <a name="order-of-evaluation"></a>Ordre d’évaluation
 
-Examinez cet exemple :
+Prenons l’exemple suivant :
 
 ```cpp
 // Order_of_Evaluation.cpp

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : adaptateur (STL/CLR)'
 title: adapter (STL/CLR)
 ms.date: 06/15/2018
 ms.topic: reference
@@ -48,24 +49,24 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: 3278371cc7afb08f0d461c77cde9578e1f2840c6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 66e6346c644bc0d176d90701722cfcd90cbb3590
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502423"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116417"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
 L’en-tête STL/CLR `<cliext/adapter>` spécifie deux classes de modèle ( `collection_adapter` et `range_adapter` ) et la fonction de modèle `make_collection` .
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 #include <cliext/adapter>
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<cliext/adapter>
 
@@ -164,7 +165,7 @@ Type de la collection encapsulée.
 |--------------|-----------------|
 |[collection_adapter::operator= (STL/CLR)](#op_eq)|Remplace le descripteur BCL stocké.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous utilisez cette classe de modèle pour manipuler un conteneur BCL en tant que conteneur STL/CLR. `collection_adapter`Stocke un handle vers une interface BCL qui, à son tour, contrôle une séquence d’éléments. Un `collection_adapter` objet `X` retourne une paire d’itérateurs d’entrée `X.begin()` et vous permet de `X.end()` consulter les éléments, dans l’ordre. Certaines des spécialisations vous permettent également d’écrire `X.size()` pour déterminer la longueur de la séquence contrôlée.
 
@@ -284,7 +285,7 @@ Handle BCL à encapsuler.
 *Oui*<br/>
 Objet à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le constructeur :
 
@@ -614,7 +615,7 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 *Oui*<br/>
 Adaptateur à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer le descripteur BCL stocké par une copie du descripteur BCL stocké à *droite*.
 
@@ -807,7 +808,7 @@ void swap(collection_adapter<Coll>% right);
 *Oui*<br/>
 Conteneur avec lequel échanger le contenu.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction membre échange les handles BCL stockés entre **`*this`** et *Right*.
 
@@ -873,7 +874,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de la *valeur*de paramètre de modèle, s’il est présent dans la spécialisation ; dans le cas contraire, il s’agit d’un synonyme de `System::Object^` .
+Le type est un synonyme de la *valeur* de paramètre de modèle, s’il est présent dans la spécialisation ; dans le cas contraire, il s’agit d’un synonyme de `System::Object^` .
 
 ### <a name="example"></a>Exemple
 
@@ -932,7 +933,7 @@ Premier itérateur à encapsuler.
 *last*<br/>
 Deuxième itérateur à encapsuler.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La fonction de modèle retourne `gcnew range_adapter<Iter>(first, last)`. Vous l’utilisez pour construire un `range_adapter<Iter>` objet à partir d’une paire d’itérateurs.
 
@@ -1029,7 +1030,7 @@ Type associé aux itérateurs encapsulés.
 |<xref:System.Collections.Generic.IEnumerable%601>|Itère au sein des éléments typés dans la collection.|
 |<xref:System.Collections.Generic.ICollection%601>|Gère un groupe d’éléments typés.|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le range_adapter stocke une paire d’itérateurs, qui à son tour délimitent une séquence d’éléments. L’objet implémente quatre interfaces BCL qui vous permettent d’itérer au sein des éléments, dans l’ordre. Vous utilisez cette classe de modèle pour manipuler des plages STL/CLR de la même façon que les conteneurs BCL.
 
@@ -1048,7 +1049,7 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 *Oui*<br/>
 Adaptateur à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opérateur membre copie *directement* vers l’objet, puis retourne **`*this`** . Vous l’utilisez pour remplacer la paire d’itérateurs stockée par une copie de la paire d’itérateurs stockée à *droite*.
 
@@ -1114,7 +1115,7 @@ Deuxième itérateur à encapsuler.
 *Oui*<br/>
 Objet à copier.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le constructeur :
 

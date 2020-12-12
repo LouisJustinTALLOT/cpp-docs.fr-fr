@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Windows Sockets : utilisation de la classe CAsyncSocket'
 title: 'Windows Sockets : utilisation de la classe CAsyncSocket'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: 6a3b3469b908eaf6f8062b8db7fc4287606b7f02
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9fbf385a2e327588685fdcb996465386628e5e4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118600"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets : utilisation de la classe CAsyncSocket
 
-Cet article explique comment utiliser la classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md). N’oubliez pas que cette classe encapsule l’API Windows Sockets à un niveau très bas. `CAsyncSocket`est destiné aux programmeurs qui connaissent les communications réseau en détail, mais qui veulent la commodité des rappels pour la notification des événements réseau. Sur la base de cette hypothèse, cet article fournit uniquement des instructions de base. Vous devez probablement envisager `CAsyncSocket` d’utiliser si vous souhaitez que Windows Sockets soit plus facile à gérer avec plusieurs protocoles réseau dans une application MFC, mais ne souhaite pas sacrifier la flexibilité. Vous vous sentirez peut-être également à obtenir une meilleure efficacité en programmant les communications plus directement que vous ne pouviez utiliser le modèle d’alternative plus général de la classe `CSocket` .
+Cet article explique comment utiliser la classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md). N’oubliez pas que cette classe encapsule l’API Windows Sockets à un niveau très bas. `CAsyncSocket` est destiné aux programmeurs qui connaissent les communications réseau en détail, mais qui veulent la commodité des rappels pour la notification des événements réseau. Sur la base de cette hypothèse, cet article fournit uniquement des instructions de base. Vous devez probablement envisager `CAsyncSocket` d’utiliser si vous souhaitez que Windows Sockets soit plus facile à gérer avec plusieurs protocoles réseau dans une application MFC, mais ne souhaite pas sacrifier la flexibilité. Vous vous sentirez peut-être également à obtenir une meilleure efficacité en programmant les communications plus directement que vous ne pouviez utiliser le modèle d’alternative plus général de la classe `CSocket` .
 
-`CAsyncSocket`est documenté dans la *référence MFC*. Visual C++ fournit également la spécification Windows Sockets, située dans le SDK Windows. Les détails sont conservés. Visual C++ ne fournit pas d’exemple d’application pour `CAsyncSocket` .
+`CAsyncSocket` est documenté dans la *référence MFC*. Visual C++ fournit également la spécification Windows Sockets, située dans le SDK Windows. Les détails sont conservés. Visual C++ ne fournit pas d’exemple d’application pour `CAsyncSocket` .
 
 Si vous n’êtes pas très compétent en ce qui concerne les communications réseau et que vous souhaitez une solution simple, utilisez la classe [CSocket](../mfc/reference/csocket-class.md) avec un `CArchive` objet. Pour plus d’informations, consultez [Windows Sockets : utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md) .
 
@@ -30,7 +31,7 @@ Cet article couvre les points suivants :
 
 - [Vos responsabilités avec CAsyncSocket](#_core_your_responsibilities_with_casyncsocket).
 
-## <a name="creating-and-using-a-casyncsocket-object"></a><a name="_core_creating_and_using_a_casyncsocket_object"></a>Création et utilisation d’un objet CAsyncSocket
+## <a name="creating-and-using-a-casyncsocket-object"></a><a name="_core_creating_and_using_a_casyncsocket_object"></a> Création et utilisation d’un objet CAsyncSocket
 
 #### <a name="to-use-casyncsocket"></a>Pour utiliser CAsyncSocket
 
@@ -85,7 +86,7 @@ Cet article couvre les points suivants :
 
 Pour obtenir un exemple de cette séquence dans le code (en fait pour un `CSocket` objet), consultez [Windows Sockets : séquence des opérations](../mfc/windows-sockets-sequence-of-operations.md).
 
-## <a name="your-responsibilities-with-casyncsocket"></a><a name="_core_your_responsibilities_with_casyncsocket"></a>Vos responsabilités avec CAsyncSocket
+## <a name="your-responsibilities-with-casyncsocket"></a><a name="_core_your_responsibilities_with_casyncsocket"></a> Vos responsabilités avec CAsyncSocket
 
 Lorsque vous créez un objet de classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md), l’objet encapsule un handle Windows **Socket** et fournit des opérations sur ce handle. Lorsque vous utilisez `CAsyncSocket` , vous devez gérer tous les problèmes que vous pouvez rencontrer si vous utilisez l’API directement. Par exemple :
 
@@ -97,7 +98,7 @@ Lorsque vous créez un objet de classe [CAsyncSocket](../mfc/reference/casyncsoc
 
 Pour obtenir les définitions de ces termes et des informations supplémentaires, consultez [Windows Sockets : blocage](../mfc/windows-sockets-blocking.md), [Windows Sockets : classement des octets](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets : conversion de chaînes](../mfc/windows-sockets-converting-strings.md).
 
-Malgré ces problèmes, `CAsycnSocket` la classe peut être le bon choix pour vous si votre application a besoin de toute la flexibilité et du contrôle que vous pouvez obtenir. Si ce n’est pas le cas, vous devez envisager d’utiliser la classe à la `CSocket` place. `CSocket`Masque un grand nombre de détails : il pompe les messages Windows pendant les appels de blocage et vous donne accès à `CArchive` , qui gère les différences d’ordre d’octet et la conversion de chaînes pour vous.
+Malgré ces problèmes, `CAsycnSocket` la classe peut être le bon choix pour vous si votre application a besoin de toute la flexibilité et du contrôle que vous pouvez obtenir. Si ce n’est pas le cas, vous devez envisager d’utiliser la classe à la `CSocket` place. `CSocket` Masque un grand nombre de détails : il pompe les messages Windows pendant les appels de blocage et vous donne accès à `CArchive` , qui gère les différences d’ordre d’octet et la conversion de chaînes pour vous.
 
 Pour plus d'informations, consultez les pages suivantes :
 

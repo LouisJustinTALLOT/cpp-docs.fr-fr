@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2749'
 title: Erreur du compilateur C2749
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2749
 ms.assetid: a81aef36-cdca-4d78-89d5-b72eff2500b2
-ms.openlocfilehash: 71c2f3d3a297d70501c675ac6a9f750cbdf0d421
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 582bc035411c8ee77684f89ca841260a4391340a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122887"
 ---
 # <a name="compiler-error-c2749"></a>Erreur du compilateur C2749
 
@@ -19,7 +20,7 @@ ms.locfileid: "74759618"
 
 Quand vous utilisez **/clr : safe**, vous pouvez uniquement lever ou intercepter un type référence.
 
-Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Pour plus d’informations, consultez [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemple
 

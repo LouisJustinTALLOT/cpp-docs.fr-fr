@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : classes et structs (C++)'
 title: Classes et structs (C++)
 ms.date: 05/07/2019
 helpviewer_keywords:
 - C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: d593f6575fec64aa0eb14c7aa0fcbb5c4eb66691
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d845cf130c2cbf06e182a49f3d83c78745864d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220598"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114063"
 ---
 # <a name="classes-and-structs-c"></a>Classes et structs (C++)
 
@@ -53,7 +54,7 @@ Pour plus d’informations sur les unions, consultez [unions](../cpp/unions.md).
 
 |Structures|Classes|Unions|
 |----------------|-------------|------------|
-|la clé de classe est**`struct`**|la clé de classe est**`class`**|la clé de classe est**`union`**|
+|la clé de classe est **`struct`**|la clé de classe est **`class`**|la clé de classe est **`union`**|
 |L'accès par défaut est public|L'accès par défaut est privé|L'accès par défaut est public|
 |Aucune contrainte d'utilisation|Aucune contrainte d'utilisation|Utilisation d'un seul membre à la fois|
 

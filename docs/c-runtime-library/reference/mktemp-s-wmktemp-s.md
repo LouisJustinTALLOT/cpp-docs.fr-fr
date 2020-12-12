@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mktemp_s, _wmktemp_s'
 title: _mktemp_s, _wmktemp_s
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 7834049fe8d28f7294976ac29a3daa663a06cff6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c1dcaa7817de70a3478e9bf8014b4ab223837c34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919138"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114302"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -78,7 +79,7 @@ Modèle de nom de fichier.
 *sizeInChars*<br/>
 Taille de la mémoire tampon en caractères codés sur un octet dans **_mktemp_s**; caractères larges dans **_wmktemp_s**, y compris la marque de fin null.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Ces deux fonctions retournent zéro en cas de réussite, sinon un code d’erreur.
 
@@ -86,13 +87,13 @@ Ces deux fonctions retournent zéro en cas de réussite, sinon un code d’erreu
 
 |*nameTemplate*|*sizeInChars*|Valeur retournée|Nouvelle valeur dans *nameTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NUL**|n'importe laquelle|**EINVAL**|**NUL**|
-|Format incorrect (consultez la section Notes pour obtenir le format approprié)|n'importe laquelle|**EINVAL**|Chaîne vide|
-|n'importe laquelle|<= nombre de X|**EINVAL**|Chaîne vide|
+|**NULL**|n'importe laquelle|**EINVAL**|**NULL**|
+|Format incorrect (consultez la section Notes pour obtenir le format approprié)|n'importe laquelle|**EINVAL**|chaîne vide|
+|n'importe laquelle|<= nombre de X|**EINVAL**|chaîne vide|
 
 Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et les fonctions retournent **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mktemp_s** crée un nom de fichier unique en modifiant l’argument *nameTemplate* , de sorte qu’après l’appel, le pointeur *nameTemplate* pointe vers une chaîne contenant le nouveau nom de fichier. **_mktemp_s** gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation par le système d’exécution. **_wmktemp_s** est une version à caractères larges de **_mktemp_s**; l’argument de **_wmktemp_s** est une chaîne de caractères larges. autrement, les **_wmktemp_s** et **_mktemp_s** se comportent de la même manière, sauf que **_wmktemp_s** ne gère pas les chaînes de caractères multioctets.
 
@@ -137,7 +138,7 @@ En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de m
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```cpp
 // crt_mktemp_s.cpp
