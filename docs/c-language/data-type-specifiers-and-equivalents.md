@@ -1,5 +1,6 @@
 ---
 title: Spécificateurs de type de données et équivalents
+description: Décrit les spécificateurs de type de données Microsoft Visual C et leurs équivalents.
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type specifiers [C++], list
@@ -11,17 +12,16 @@ helpviewer_keywords:
 - data types [C++], specifiers
 - simple types, names
 - type names [C++], simple
-ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
-ms.openlocfilehash: cc8ba746bea7f6ea885beb625de414d83367b53f
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6a1231bc19617dddf1cc01d4c5e7db2863f1055f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207044"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Spécificateurs de type de données et équivalents
 
-Ce livre utilise généralement les formes des spécificateurs de type listés dans le tableau ci-dessous plutôt que les formes longues, et il suppose que le **`char`** type est signé par défaut. Par conséquent, tout au long de cet ouvrage, **`char`** est équivalent à **`signed char`** .
+Cette documentation utilise généralement les formes des spécificateurs de type figurant dans le tableau ci-dessous plutôt que les formulaires longs. Il suppose également que le **`char`** type est signé par défaut. Tout au long de cette documentation, **`char`** est équivalent à **`signed char`** .
 
 ## <a name="type-specifiers-and-equivalents"></a>Spécificateurs de type et équivalents
 
@@ -44,7 +44,7 @@ Ce livre utilise généralement les formes des spécificateurs de type listés d
 
 **Spécifique à Microsoft**
 
-Vous pouvez spécifier l' **`/J`** option de compilateur pour remplacer le type par défaut par **`char`** **`signed char`** **`unsigned char`** . Lorsque cette option est activée, **`char`** signifie comme **`unsigned char`** et vous devez utiliser le **`signed`** mot clé pour déclarer une valeur de caractère signée. Si une **`char`** valeur est déclarée explicitement **`signed`** , l' **`/J`** option ne l’affecte pas, et la valeur est étendue par un signe lorsqu’elle est élargie à un **`int`** type. Le **`char`** type est étendu par zéro lorsqu’il est élargi au **`int`** type.
+Vous pouvez spécifier l' **`/J`** option de compilateur pour remplacer le type par défaut par **`char`** **`signed char`** **`unsigned char`** . Lorsque cette option est activée, **`char`** signifie comme **`unsigned char`** et vous devez utiliser le **`signed`** mot clé pour déclarer une valeur de caractère signée. Si une **`char`** valeur est déclarée explicitement **`signed`** , l' **`/J`** option n’affecte pas celle-ci et la valeur est étendue par un signe lorsqu’elle est élargie à un **`int`** type. Le **`char`** type est étendu par zéro lorsqu’il est élargi au **`int`** type.
 
 **FIN spécifique à Microsoft**
 

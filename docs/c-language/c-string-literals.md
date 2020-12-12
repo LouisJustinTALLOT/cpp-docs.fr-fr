@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : littéraux de chaîne C'
 title: Littéraux de chaîne C
 ms.date: 08/31/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], string literals
 - literal strings, C
 ms.assetid: 4b05523e-49a2-4900-b21a-754350af3328
-ms.openlocfilehash: 0df7126efe5a5b2caa3a4fee51465d0dbe892e89
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c18a13dcc44203399aa6518f53031d29b00a5a4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400582"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207083"
 ---
 # <a name="c-string-literals"></a>Littéraux de chaîne C
 
@@ -33,7 +34,7 @@ Un littéral de chaîne est une séquence de caractères du jeu de caractères s
 
 &nbsp;&nbsp;&nbsp;&nbsp;*séquence d’échappement*
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 L'exemple ci-dessous est un littéral de chaîne simple :
 
@@ -41,7 +42,7 @@ L'exemple ci-dessous est un littéral de chaîne simple :
 char *amessage = "This is a string literal.";
 ```
 
-Tous les codes d'échappement répertoriés dans le tableau [Séquences d’échappement](../c-language/escape-sequences.md) sont valides dans les littéraux de chaîne. Pour représenter un guillemet double dans un littéral de chaîne, utilisez ** \\la séquence d'** échappement. Le guillemet simple (**'**) peut être représenté sans séquence d'échappement. La barre oblique**\\**inverse () doit être suivie d’une deuxième**\\**barre oblique inverse () lorsqu’elle apparaît dans une chaîne. Lorsqu'une barre oblique inverse apparaît à la fin d'une ligne, elle est toujours interprétée comme un caractère de continuation de ligne.
+Tous les codes d'échappement répertoriés dans le tableau [Séquences d’échappement](../c-language/escape-sequences.md) sont valides dans les littéraux de chaîne. Pour représenter un guillemet double dans un littéral de chaîne, utilisez la séquence d' **\\** échappement. Le guillemet simple (**'**) peut être représenté sans séquence d'échappement. La barre oblique inverse ( **\\** ) doit être suivie d’une deuxième barre oblique inverse ( **\\\\** ) lorsqu’elle apparaît dans une chaîne. Lorsqu'une barre oblique inverse apparaît à la fin d'une ligne, elle est toujours interprétée comme un caractère de continuation de ligne.
 
 ## <a name="see-also"></a>Voir aussi
 

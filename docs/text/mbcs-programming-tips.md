@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conseils de programmation MBCS'
 title: Conseils de programmation MBCS
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-ms.openlocfilehash: 420e376d3a66c8f8115732692089f4254847bc0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76890f3ecbee6938433bcd2d3fa99023d69e039c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410589"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207187"
 ---
 # <a name="mbcs-programming-tips"></a>Conseils de programmation MBCS
 
-Dans tout nouveau développement, vous devez utiliser l’encodage de caractères Unicode pour toutes les chaînes que les utilisateurs finaux peuvent voir éventuellement. MBCS est une technologie héritée qui a été remplacée par Unicode. Cette section fournit des conseils pour les développeurs qui doivent gérer les programmes existants qui utilisent MBCS et où il n’est pas pratique de convertir au format Unicode. Le Conseil s’applique aux applications MFC et les applications écrites sans MFC. Les rubriques traitées ici sont les suivantes :
+Dans un nouveau développement, vous devez utiliser l’encodage de caractères Unicode pour toutes les chaînes que les utilisateurs finaux peuvent éventuellement voir. MBCS est une technologie héritée qui a été remplacée par Unicode. Cette section fournit des conseils aux développeurs qui doivent gérer des programmes existants qui utilisent MBCS et où il n’est pas pratique de les convertir au format Unicode. Les conseils s’appliquent aux applications MFC et aux applications écrites sans MFC. Les sujets abordés sont les suivants :
 
 - [Conseils généraux sur la programmation MBCS](../text/general-mbcs-programming-advice.md)
 

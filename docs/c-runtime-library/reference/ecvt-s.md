@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _ecvt_s'
 title: _ecvt_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: e76ebd065d323a9ae501ce6a7a5790389c7d5dad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: abda39ce5c33a5f6b6cca0757411e16c4171cd97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234209"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206940"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
@@ -82,7 +83,7 @@ Position de la virgule décimale stockée.
 *_Sign*<br/>
 Signe du nombre converti.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans Errno.h. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
