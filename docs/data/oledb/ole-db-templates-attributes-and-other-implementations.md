@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : modèles, attributs et autres implémentations de OLE DB'
 title: Modèles, attributs et autres implémentations OLE DB
 ms.date: 10/22/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 217db304c7d0b5723b7af383e07290f160cc9465
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 87f839fe39f2d2c9dcd61fd6628666f4ac8f5809
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316958"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modèles, attributs et autres implémentations OLE DB
 
@@ -45,7 +46,7 @@ Les [attributs du consommateur OLE DB](../../windows/attributes/ole-db-consumer-
 
 ## <a name="mfc-ole-db-classes"></a>Classes de OLE DB MFC
 
-La bibliothèque MFC a une classe, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), qui affiche des enregistrements de base de données dans des contrôles. La vue est une vue de formulaire directement connectée à un `CRowset` objet et affiche les champs de l' `CRowset` objet dans les contrôles du modèle de boîte de dialogue. Il fournit également une implémentation par défaut pour passer au premier enregistrement, suivant, précédent ou dernier, ainsi qu’une interface pour la mise à jour de l’enregistrement actuellement affiché. Pour plus d'informations, consultez `COleDBRecordView`.
+La bibliothèque MFC a une classe, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), qui affiche des enregistrements de base de données dans des contrôles. La vue est une vue de formulaire directement connectée à un `CRowset` objet et affiche les champs de l' `CRowset` objet dans les contrôles du modèle de boîte de dialogue. Il fournit également une implémentation par défaut pour passer au premier enregistrement, suivant, précédent ou dernier, ainsi qu’une interface pour la mise à jour de l’enregistrement actuellement affiché. Pour plus d’informations, consultez `COleDBRecordView`.
 
 ## <a name="ole-db-sdk-interfaces"></a>Interfaces du kit de développement logiciel OLE DB
 

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : utilisation de l’IDE Visual Studio pour le développement de bureau C++'
 title: Utilisation de l'IDE de Visual Studio pour le développement de bureau C++
 ms.date: 04/25/2019
 helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 082aa353d3046d9c9b20669e075e200c96017bce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d82b3717525758810720121f1319c763e3de8f43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318700"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilisation de l'IDE de Visual Studio pour le développement de bureau C++
 
@@ -30,7 +31,7 @@ Pour obtenir Visual Studio 2019, vous pouvez le télécharger ici : [Télécha
 
 **Installation de Visual Studio 2017**
 
-Pour obtenir Visual Studio 2017, vous pouvez le télécharger ici : [Téléchargements de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Veillez à inclure les outils de développement C++ quand vous installez Visual Studio, car ceux-ci ne sont pas installés par défaut. Pour plus d’informations sur l’installation de Visual Studio, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio). Pour voir les instructions de Visual Studio 2017, définissez le contrôle du sélecteur Visual Studio **Version** sur Visual Studio 2017. On le trouve en haut de la table des contenus sur la page.
+Pour obtenir Visual Studio 2017, vous pouvez le télécharger ici : [Téléchargements de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Veillez à inclure les outils de développement C++ quand vous installez Visual Studio, car ceux-ci ne sont pas installés par défaut. Pour plus d’informations sur l’installation de Visual Studio, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio). Pour afficher les instructions pour Visual Studio 2017, définissez le contrôle sélecteur de **version** de Visual Studio sur visual studio 2017. Elle se trouve en haut de la table des matières sur la page.
 
 **Installation de Visual Studio 2015**
 

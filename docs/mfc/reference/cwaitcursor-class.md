@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CWaitCursor'
 title: CWaitCursor, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: dfeedad18b3ebcefedff446699f074c86037a4a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9552dcd6f5304c96d550e153870f69d78d932ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318466"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor, classe
 
@@ -43,7 +44,7 @@ class CWaitCursor
 
 ## <a name="remarks"></a>Notes
 
-`CWaitCursor`n’a pas de classe de base.
+`CWaitCursor` n’a pas de classe de base.
 
 Pour de bonnes pratiques de programmation Windows, vous devez afficher un curseur d’attente chaque fois que vous effectuez une opération qui prend un certain temps.
 
@@ -73,7 +74,7 @@ Une autre façon d’afficher un curseur d’attente consiste à utiliser la com
 
 [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]
 
-## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor::CWaitCursor
+## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a> CWaitCursor::CWaitCursor
 
 Pour afficher un curseur d’attente, il vous suffit de déclarer un `CWaitCursor` objet avant le code qui effectue l’opération de longue durée.
 
@@ -96,7 +97,7 @@ Vous pouvez tirer parti du fait que le destructeur est appelé à la fin du bloc
 
 [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]
 
-## <a name="cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor :: Restore
+## <a name="cwaitcursorrestore"></a><a name="restore"></a> CWaitCursor :: Restore
 
 Pour restaurer le curseur d’attente, appelez cette fonction après avoir effectué une opération, telle que l’affichage d’une boîte de message ou d’une boîte de dialogue, qui peut remplacer le curseur d’attente par un autre curseur.
 

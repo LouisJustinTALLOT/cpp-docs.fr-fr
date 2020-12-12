@@ -1,21 +1,22 @@
 ---
+description: 'En savoir plus sur : Recordset : déclaration d’une classe pour une table (ODBC)'
 title: "Recordset : déclaration de la classe d'une table (ODBC)"
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: ec5731e7e5058206e210c5a9a5bb1a189c940c91
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0785fbf684942748075729be630a6b309c183d06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319207"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset : déclaration de la classe d'une table (ODBC)
 
 > [!NOTE]
-> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez quand même créer un consommateur manuellement.
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -31,5 +32,5 @@ Voici d’autres utilisations possibles des recordsets :
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Recordset : création et fermeture de recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
-[Recordset : déclaration de la classe d’une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[Recordset : création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Recordset : déclaration d’une classe pour une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Recordset : exécution d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

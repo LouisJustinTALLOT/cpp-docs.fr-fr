@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _CrtSetBreakAlloc'
 title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-ms.openlocfilehash: e13c908c1efd1af9196885dee6e3b0f45845946b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07db47aa23fe95e86b3341813137643b81f57fbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942314"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319597"
 ---
 # <a name="_crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -49,25 +50,25 @@ long _CrtSetBreakAlloc(
 *lBreakAlloc*<br/>
 Numéro d'ordre d'allocation pour lequel le point d'arrêt est défini.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le numéro d'ordre d'allocation d'objet précédent qui avait un point d'arrêt défini.
 
 ## <a name="remarks"></a>Notes
 
-**_CrtSetBreakAlloc** permet à une application de détecter les fuites de mémoire en s’arrêtant à un point d’allocation de mémoire spécifique et en remontant jusqu’à l’origine de la demande. La fonction utilise le numéro d'ordre d'allocation d'objet séquentiel assigné au bloc de mémoire au moment où il a été alloué dans le tas. Lorsque [_ DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetBreakAlloc** sont supprimés lors du prétraitement.
+**_CrtSetBreakAlloc** permet à une application d’effectuer la détection des fuites de mémoire en s’arrêtant à un point d’allocation de mémoire spécifique et en remontant à l’origine de la demande. La fonction utilise le numéro d'ordre d'allocation d'objet séquentiel assigné au bloc de mémoire au moment où il a été alloué dans le tas. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtSetBreakAlloc** sont supprimés lors du prétraitement.
 
-Le numéro d’ordre d’allocation d’objet est stocké dans le champ *lRequest* de la structure **_CrtMemBlockHeader**, définie dans Crtdbg.h. Quand les informations sur un bloc de mémoire sont signalées par l’une des fonctions de vidage du débogage, ce nombre est placé {36}entre accolades, par exemple.
+Le numéro d’ordre d’allocation d’objet est stocké dans le champ *lRequest* de la structure **_CrtMemBlockHeader**, définie dans Crtdbg.h. Quand les informations sur un bloc de mémoire sont signalées par l’une des fonctions de vidage du débogage, ce nombre est placé entre accolades, par exemple {36} .
 
 Pour plus d’informations sur la façon dont **_CrtSetBreakAlloc** peut être utilisé avec d’autres fonctions de gestion de la mémoire, consultez [suivi des demandes d’allocation de tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 

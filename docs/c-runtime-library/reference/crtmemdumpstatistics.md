@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _CrtMemDumpStatistics'
 title: _CrtMemDumpStatistics
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CrtMemDumpStatistics function
 - CrtMemDumpStatistics function
 ms.assetid: 27b9d731-3184-4a2d-b9a7-6566ab28a9fe
-ms.openlocfilehash: 7aba82e3dfea220f2edc3bd3a689a48e316a0087
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2f02c35ff61dc2bc5ac7e8dfbe921fa48731c2b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319611"
 ---
 # <a name="_crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
@@ -51,21 +52,21 @@ Pointeur vers l’état du tas à vider.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_CrtMemDumpStatistics** vide les informations d’en-tête de débogage pour un état spécifié du tas sous une forme lisible par l’utilisateur. Les statistiques de vidage permettent à l’application d’effectuer le suivi des allocations, et de détecter les problèmes de mémoire. L’état de la mémoire peut contenir un état de tas spécifique, ou la différence entre deux états. Lorsque [_ DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtMemDumpStatistics** sont supprimés lors du prétraitement.
+La fonction **_CrtMemDumpStatistics** vide les informations d’en-tête de débogage pour un état spécifié du tas sous une forme lisible par l’utilisateur. Les statistiques de vidage permettent à l’application d’effectuer le suivi des allocations, et de détecter les problèmes de mémoire. L’état de la mémoire peut contenir un état de tas spécifique, ou la différence entre deux états. Lorsque [_DEBUG](../../c-runtime-library/debug.md) n’est pas défini, les appels à **_CrtMemDumpStatistics** sont supprimés lors du prétraitement.
 
-Le paramètre d' *État* doit être un pointeur vers une structure _ **crtmemstate** qui a été remplie par [_CrtMemCheckpoint](crtmemcheckpoint.md) ou retournée par [_CrtMemDifference](crtmemdifference.md) avant l’appel de **_CrtMemDumpStatistics** . Si *State* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et aucune action n’est effectuée. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Le paramètre d' *État* doit être un pointeur vers une structure **_CrtMemState** qui a été remplie par [_CrtMemCheckpoint](crtmemcheckpoint.md) ou retournée par [_CrtMemDifference](crtmemdifference.md) avant l’appel de **_CrtMemDumpStatistics** . Si *State* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et aucune action n’est effectuée. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Pour plus d’informations sur les fonctions d’État du tas et la structure _ **crtmemstate** , consultez [fonctions de rapport d’État du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Pour plus d’informations sur les fonctions d’État du tas et la structure **_CrtMemState** , consultez [fonctions de rapport d’État du tas](/visualstudio/debugger/crt-debug-heap-details). Pour plus d’informations sur la façon dont les blocs de mémoire sont alloués, initialisés et gérés dans la version Debug du tas de base, consultez [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
 |**_CrtMemDumpStatistics**|\<crtdbg.h>|\<errno.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-**Bibliotheque** Versions de débogage des fonctionnalités de la [bibliothèque CRT](../../c-runtime-library/crt-library-features.md) uniquement.
+**Bibliothèques :** uniquement les versions de débogage des [fonctions de bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="see-also"></a>Voir aussi
 

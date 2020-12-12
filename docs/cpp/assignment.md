@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : affectation'
 title: Affectation
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
-ms.openlocfilehash: f1697a8de3dff6c46de01db6bbff5447c03b6282
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 696706202e70e8baf50dda34ac98ff9bca5dcda2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319484"
 ---
 # <a name="assignment"></a>Affectation
 
@@ -70,5 +71,5 @@ Point pt4(pt1); // Copy constructor call.
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Surcharge d'opérateur](../cpp/operator-overloading.md)
-- [Constructeurs de copie et opérateurs d’assignation de copie (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)
+- [Surcharge d’opérateur](../cpp/operator-overloading.md)
+- [Constructeurs de copie et opérateurs d'assignation de copie (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)

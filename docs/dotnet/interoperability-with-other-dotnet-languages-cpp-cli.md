@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : interopérabilité avec d’autres langages .NET (C++/CLI)'
 title: Interopérabilité avec d'autres langages .NET (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - lock statement
 - lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
-ms.openlocfilehash: ffdf9a8b11912bde38e15408228670c8cff9a503
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51cead7fcc7dedc05f0225facf10fe70a3d606fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316607"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Interopérabilité avec d'autres langages .NET (C++/CLI)
 
-Les rubriques de cette section montrent comment créer des assemblys dans Visual C++ qui consomment ou fournissent des fonctionnalités aux assemblys écrits en c# ou Visual Basic.
+Les rubriques de cette section montrent comment créer des assemblys dans Visual C++ qui consomment ou fournissent des fonctionnalités aux assemblys écrits en C# ou Visual Basic.
 
-## <a name="consume_indexer"></a> Consommer un indexeur c#
+## <a name="consume-a-c-indexer"></a><a name="consume_indexer"></a> Utiliser un indexeur C#
 
-Visual C++ ne contient pas d’indexeur ; Il a des propriétés indexées. Pour consommer un indexeur c#, accédez à l’indexeur comme s’il s’agissait d’une propriété indexée.
+Visual C++ ne contient pas d’indexeurs ; Il possède des propriétés indexées. Pour utiliser un indexeur C#, accédez à l’indexeur comme s’il s’agissait d’une propriété indexée.
 
 Pour plus d’informations sur les indexeurs, consultez :
 
@@ -30,7 +31,7 @@ Pour plus d’informations sur les indexeurs, consultez :
 
 ### <a name="example"></a>Exemple
 
-Le programme c# suivant définit un indexeur.
+Le programme C# suivant définit un indexeur.
 
 ```csharp
 // consume_cs_indexers.cs
@@ -70,7 +71,7 @@ public class MainClass {
 
 ### <a name="example"></a>Exemple
 
-Ce programme Visual C++ utilise l’indexeur.
+Ce programme de Visual C++ utilise l’indexeur.
 
 ```cpp
 // consume_cs_indexers_2.cpp
@@ -100,9 +101,9 @@ Element #9 = 0
 Element #10 = 0
 ```
 
-## <a name="implement_isas"></a> Implémenter est et que les mots clés c#
+## <a name="implement-is-and-as-c-keywords"></a><a name="implement_isas"></a> Implémentez les mots clés C# is et As
 
-Cette rubrique montre comment implémenter les fonctionnalités de la `is` et `as` mots clés c# dans Visual C++.
+Cette rubrique montre comment implémenter les fonctionnalités des `is` `as` Mots clés C# et dans Visual C++.
 
 ### <a name="example"></a>Exemple
 
@@ -141,11 +142,11 @@ int main() {
 o is a string
 ```
 
-## <a name="implement_locak"></a> Implémenter le mot clé c# lock
+## <a name="implement-the-lock-c-keyword"></a><a name="implement_locak"></a> Implémenter le mot clé C# lock
 
-Cette rubrique montre comment implémenter le C# `lock` mot clé dans Visual C++.
+Cette rubrique montre comment implémenter le `lock` mot clé C# dans Visual C++.
 
-Vous pouvez également utiliser le `lock` classe dans la bibliothèque de prise en charge de C++. Consultez [synchronisation (classe lock)](../dotnet/synchronization-lock-class.md) pour plus d’informations.
+Vous pouvez également utiliser la `lock` classe dans la bibliothèque de prise en charge C++. Pour plus d’informations, consultez [Synchronization (classe de verrouillage)](../dotnet/synchronization-lock-class.md) .
 
 ### <a name="example"></a>Exemple
 
@@ -186,4 +187,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

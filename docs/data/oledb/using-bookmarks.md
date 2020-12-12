@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : utilisation des signets'
 title: Utilisation de signets
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 8caa33b3bafbaa9e537d9669aa7b60a9355475ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d0cf27a5f93b3e6b00fa6f8cbb69ae7414f4d819
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319155"
 ---
 # <a name="using-bookmarks"></a>Utilisation de signets
 
-Avant d’ouvrir l’ensemble de lignes, vous devez indiquer au fournisseur que vous souhaitez utiliser des signets. Pour ce faire, affectez à la propriété la valeur `DBPROP_BOOKMARKS` **`true`** dans votre jeu de propriétés. Le fournisseur récupère les signets en tant que colonne zéro. vous devez donc utiliser la macro spéciale BOOKMARK_ENTRY et la `CBookmark` classe si vous utilisez un accesseur statique. `CBookmark`est une classe de modèle où l’argument est la longueur, en octets, de la mémoire tampon du signet. La longueur de la mémoire tampon requise pour un signet dépend du fournisseur. Si vous utilisez le fournisseur de OLE DB ODBC, comme indiqué dans l’exemple suivant, la mémoire tampon doit être de 4 octets.
+Avant d’ouvrir l’ensemble de lignes, vous devez indiquer au fournisseur que vous souhaitez utiliser des signets. Pour ce faire, affectez à la propriété la valeur `DBPROP_BOOKMARKS` **`true`** dans votre jeu de propriétés. Le fournisseur récupère les signets en tant que colonne zéro. vous devez donc utiliser la macro spéciale BOOKMARK_ENTRY et la `CBookmark` classe si vous utilisez un accesseur statique. `CBookmark` est une classe de modèle où l’argument est la longueur, en octets, de la mémoire tampon du signet. La longueur de la mémoire tampon requise pour un signet dépend du fournisseur. Si vous utilisez le fournisseur de OLE DB ODBC, comme indiqué dans l’exemple suivant, la mémoire tampon doit être de 4 octets.
 
 ```cpp
 class CProducts

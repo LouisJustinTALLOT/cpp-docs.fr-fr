@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : déplacer la définition de l’emplacement'
 title: Déplacer l'emplacement de définition
 ms.date: 11/16/2016
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
-ms.openlocfilehash: 7957e18732dfae92b7b3ae9cf7ecea441fc3a6b4
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 5c0ae4ed5e14a50f4d54226fb298c34099c8aec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693203"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318713"
 ---
 # <a name="move-definition-location"></a>Déplacer l'emplacement de définition
 
@@ -17,7 +18,7 @@ ms.locfileid: "51693203"
 
 **Pourquoi :** vous pouvez déplacer manuellement la fonction, mais cette fonctionnalité la déplace automatiquement, en créant le fichier d’en-tête si nécessaire.
 
-**Comment :**
+**Utilisation**
 
 1. placez le curseur texte ou de la souris sur la fonction à déplacer.
 
@@ -25,7 +26,7 @@ ms.locfileid: "51693203"
 
 1. Effectuez ensuite l'une des opérations suivantes :
    * **Clavier**
-     * Appuyez sur **Ctrl+.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Déplacer l’emplacement de définition** dans le menu contextuel.
+     * Appuyez sur **CTRL +.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Déplacer l’emplacement de définition** dans le menu contextuel.
    * **Souris**
      * Cliquez avec le bouton droit et choisissez le menu **Actions rapides et refactorisations**, puis sélectionnez **Déplacer l’emplacement de définition** dans le menu contextuel.
 

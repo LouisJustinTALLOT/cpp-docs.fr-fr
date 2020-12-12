@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : exemples de développement mobile multiplateforme'
 title: Exemples de développement mobile multiplateforme
 ms.date: 10/17/2019
 ms.assetid: bc384c12-fccc-45d7-9fb9-b90d536aa663
-ms.openlocfilehash: 0c2e40be96bd0efdad608daaab973c34e8c90495
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 4577791a21fc7340414df1e03eea320c094661f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319259"
 ---
 # <a name="cross-platform-mobile-development-examples"></a>Exemples de développement mobile multiplateforme
 
-Plusieurs des modèles installés par le **développement mobile avec une C++**  charge de travail génèrent des exemples complets que vous pouvez utiliser pour vous familiariser avec. En outre, le Centre de développement Windows présente plusieurs exemples d’applications que vous pouvez télécharger et essayer dans Visual Studio.
+Plusieurs des modèles installés par le **développement mobile avec** la charge de travail C++ génèrent des exemples complets que vous pouvez utiliser pour vous familiariser avec. En outre, le Centre de développement Windows présente plusieurs exemples d’applications que vous pouvez télécharger et essayer dans Visual Studio.
 
 - [Exemple d’application Android hello-jni](https://code.msdn.microsoft.com/hello-jni-Android-790ab73d)
 

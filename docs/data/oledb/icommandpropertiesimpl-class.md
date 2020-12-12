@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Icommandpropertiesimpl,'
 title: ICommandPropertiesImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: bd4dd73c79085a2c2d85a5dbacbfd20bc920108e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: bf6a6f9a3ddd43a61671a85a791d63958f63c3e3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317561"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl, classe
 
@@ -41,7 +42,7 @@ Votre classe, dérivée de
 *PropClass*<br/>
 Votre classe de propriétés.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -54,7 +55,7 @@ Votre classe de propriétés.
 |[GetProperties](#getproperties)|Retourne la liste des propriétés dans le groupe de propriétés rowset actuellement demandé pour l’ensemble de lignes.|
 |[SetProperties](#setproperties)|Définit des propriétés dans le groupe de propriétés rowset.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Cela est obligatoire sur les commandes. L’implémentation est fournie par une fonction statique définie par la macro [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) .
 
@@ -75,7 +76,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 Consultez [ICommandProperties :: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Voir [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map).
 

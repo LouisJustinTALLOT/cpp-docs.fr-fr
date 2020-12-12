@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : créer une application Android Native Activity'
 title: Créer une application Android Native Activity
 ms.date: 10/17/2019
 ms.assetid: 884014b1-5208-45ec-b0da-ad0070d2c24d
-ms.openlocfilehash: 664729a920076839f5f9b4440768fe3adb846803
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: d8ccccde40c89553d12fd98645cda2877e581273
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319324"
 ---
 # <a name="create-an-android-native-activity-app"></a>Créer une application Android Native Activity
 
@@ -23,11 +24,11 @@ Dans ce didacticiel, vous allez d’abord créer un projet Android Native Activi
 
 ::: moniker range="msvc-150"
 
-1. Dans Visual Studio, choisissez **fichier** > **nouveau** > **projet** .
+1. Dans Visual Studio, choisissez **fichier** > **nouveau** > **projet**.
 
-1. Dans la boîte de dialogue **Nouveau projet** , sous **Modèles** , choisissez **Visual C++** > **multiplateforme** , puis choisissez le modèle **Application Native Activity** (Android).
+1. Dans la boîte de dialogue **Nouveau projet**, sous **Modèles**, choisissez **Visual C++** > **multiplateforme**, puis choisissez le modèle **Application Native Activity** (Android).
 
-1. Donnez un nom à l’application, par exemple *MyAndroidApp* , puis choisissez **OK** .
+1. Donnez un nom à l’application, par exemple *MyAndroidApp*, puis choisissez **OK**.
 
    ![Créer un projet d'activité native](../cross-platform/media/cppmdd-newproject.png "Créer un projet d'activité native")
 
@@ -39,11 +40,11 @@ Dans ce didacticiel, vous allez d’abord créer un projet Android Native Activi
 
 ::: moniker range=">=msvc-160"
 
-1. Dans Visual Studio, choisissez **fichier** > **nouveau** > **projet** .
+1. Dans Visual Studio, choisissez **fichier** > **nouveau** > **projet**.
 
-1. Dans la boîte de dialogue **créer un nouveau projet** , sélectionnez le modèle **application d’activité native (Android)** , puis choisissez **suivant** .
+1. Dans la boîte de dialogue **créer un nouveau projet** , sélectionnez le modèle **application d’activité native (Android)** , puis choisissez **suivant**.
 
-1. Dans la boîte de dialogue **configurer votre nouveau projet** , entrez un nom tel que *MyAndroidApp* dans **nom du projet** , puis choisissez **créer** .
+1. Dans la boîte de dialogue **configurer votre nouveau projet** , entrez un nom tel que *MyAndroidApp* dans **nom du projet**, puis choisissez **créer**.
 
    Visual Studio crée la solution et ouvre l’Explorateur de solutions.
 
@@ -51,7 +52,7 @@ Dans ce didacticiel, vous allez d’abord créer un projet Android Native Activi
 
 La nouvelle solution Application Android Native Activity comprend deux projets :
 
-- `MyAndroidApp.NativeActivity` contient les références et le code de type glue pour que votre application s’exécute comme Native Activity sur Android. L’implémentation des points d’entrée à partir du code de type glue se trouve dans *main.cpp* . Les en-têtes précompilés sont dans *pch.h* . Ce projet d’application Native Activity est compilé en fichier de bibliothèque partagée *.so* , qui est utilisé par le projet de création de package.
+- `MyAndroidApp.NativeActivity` contient les références et le code de type glue pour que votre application s’exécute comme Native Activity sur Android. L’implémentation des points d’entrée à partir du code de type glue se trouve dans *main.cpp*. Les en-têtes précompilés sont dans *pch.h*. Ce projet d’application Native Activity est compilé en fichier de bibliothèque partagée *.so*, qui est utilisé par le projet de création de package.
 
 - `MyAndroidApp.Packaging` crée le fichier *.apk* pour le déploiement sur un émulateur ou un appareil Android. Il contient les ressources et le fichier *AndroidManifest.xml* où vous avez défini les propriétés de manifeste. Il contient aussi le fichier *build.xml* qui contrôle le processus de génération Ant. Il est configuré comme projet de démarrage par défaut et peut donc être déployé et exécuté directement à partir de Visual Studio.
 
@@ -65,9 +66,9 @@ Générez et exécutez l’application générée par le modèle pour vérifier 
 
      ![Sélection x86 de liste déroulante de plateformes de solution](../cross-platform/media/cppmdd-rc-na-solution-x86.png "Sélection x86 de liste déroulante de plateformes de solution")
 
-     Si la liste **Plateformes Solution** n’est pas visible, choisissez **Plateformes Solution** dans la liste **Ajouter/supprimer des boutons** , puis choisissez votre plateforme.
+     Si la liste **Plateformes Solution** n’est pas visible, choisissez **Plateformes Solution** dans la liste **Ajouter/supprimer des boutons**, puis choisissez votre plateforme.
 
-1. Dans la barre de menus, choisissez **générer**  >  **générer la solution** .
+1. Dans la barre de menus, choisissez **générer**  >  **générer la solution**.
 
      La fenêtre Sortie affiche la sortie du processus de génération pour les deux projets de la solution.
 

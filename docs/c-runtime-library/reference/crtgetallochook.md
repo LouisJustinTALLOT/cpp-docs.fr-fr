@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _CrtGetAllocHook'
 title: _CrtGetAllocHook
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-ms.openlocfilehash: 769621e92bf5f99f76f71b368a3b9a5cd0f79fd0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 997e3a03f0c9b56fda3a0fd89daf606a652136c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319763"
 ---
 # <a name="_crtgetallochook"></a>_CrtGetAllocHook
 
@@ -52,13 +53,13 @@ Retourne la fonction de raccordement d’allocation définie.
 
 Pour plus d’informations sur l’utilisation d’autres fonctions d’exécution compatibles avec le raccordement et sur l’écriture de vos propres fonctions de raccordement définies par le client, consultez [Écriture de fonctions de raccordement de débogage](/visualstudio/debugger/debug-hook-function-writing).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_CrtGetAllocHook**|\<crtdbg.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 

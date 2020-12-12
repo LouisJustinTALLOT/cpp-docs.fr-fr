@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : installer le développement mobile multiplateforme avec C++'
 title: Installer le développement mobile multiplateforme avec C++
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: b9a6b78450969f5228ccf16cc7b0cff02a4d3b1e
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 45059cbadcd8e8c304c65262ffcb89bf767095e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319220"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>Installer le développement mobile multiplateforme avec C++
 
@@ -64,15 +65,15 @@ Le Visual Studio Installer comprend un **développement mobile avec** une charge
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>Installer la charge de travail Développement mobile en C++
 
-1. Exécutez le **programme d’installation de Visual Studio** à partir du menu **Démarrer** .
+1. Exécutez le **programme d’installation de Visual Studio** à partir du menu **Démarrer**.
 
 1. Si vous avez déjà installé Visual Studio, choisissez le bouton **Modifier** pour la version installée de Visual Studio que vous souhaitez modifier. Sinon, choisissez **Installer** pour installer Visual Studio.
 
-1. Après avoir sélectionné l’onglet **Charges de travail** , faites défiler vers le bas et sélectionnez la charge de travail **Développement mobile en C++** dans le programme d’installation de Visual Studio. Lorsque cette charge de travail est sélectionnée, les autres composants requis pour le développement C++ sont également sélectionnés. Vous pouvez également choisir d’autres charges de travail et composants individuels à installer en même temps. Pour générer un code multiplateforme qui cible la plateforme Windows universelle, sélectionnez la charge de travail **Développement de la plateforme universelle Windows** .
+1. Après avoir sélectionné l’onglet **Charges de travail**, faites défiler vers le bas et sélectionnez la charge de travail **Développement mobile en C++** dans le programme d’installation de Visual Studio. Lorsque cette charge de travail est sélectionnée, les autres composants requis pour le développement C++ sont également sélectionnés. Vous pouvez également choisir d’autres charges de travail et composants individuels à installer en même temps. Pour générer un code multiplateforme qui cible la plateforme Windows universelle, sélectionnez la charge de travail **Développement de la plateforme universelle Windows**.
 
-1. Dans le volet **Détails de l’installation** , développez **Développement mobile en C++** . Dans la section **Facultatif** , vous pouvez choisir des versions supplémentaires du NDK, l’émulateur Google Android, Hardware Accelerated Execution Manager et l’outil d’accélération de build IncrediBuild.
+1. Dans le volet **Détails de l’installation**, développez **Développement mobile en C++**. Dans la section **Facultatif**, vous pouvez choisir des versions supplémentaires du NDK, l’émulateur Google Android, Hardware Accelerated Execution Manager et l’outil d’accélération de build IncrediBuild.
 
-1. Par défaut, un ou plusieurs composants du programme d’installation du SDK Android sont inclus par la charge de travail. D’autres versions du SDK Android sont disponibles. Pour en ajouter une à votre installation, choisissez l’onglet **Composants individuels** , puis faites défiler jusqu'à la section **SDK, bibliothèques et frameworks** pour effectuer votre sélection.
+1. Par défaut, un ou plusieurs composants du programme d’installation du SDK Android sont inclus par la charge de travail. D’autres versions du SDK Android sont disponibles. Pour en ajouter une à votre installation, choisissez l’onglet **Composants individuels**, puis faites défiler jusqu'à la section **SDK, bibliothèques et frameworks** pour effectuer votre sélection.
 
 1. Choisissez le bouton **Modifier** ou **Installer** pour installer la charge de travail **Développement mobile en C++** et vos autres charges de travail et composants facultatifs sélectionnés.
 
@@ -99,13 +100,13 @@ Dans la plupart des cas, Visual Studio peut détecter les configurations pour le
 
 ### <a name="to-set-the-paths-for-third-party-tools"></a>Pour définir les chemins des outils tiers
 
-1. Dans la barre de menus de Visual Studio, sélectionnez **Outils**  >  **options** .
+1. Dans la barre de menus de Visual Studio, sélectionnez **Outils**  >  **options**.
 
-1. Dans la boîte de dialogue **Options** , sélectionnez **Multiplateforme** > **C++** > **Android** .
+1. Dans la boîte de dialogue **Options**, sélectionnez **Multiplateforme** > **C++** > **Android**.
 
    ![Options de chemin d'accès de l'outil Android](../cross-platform/media/cppmdd-options-android.png "Options de chemin d'accès de l'outil Android")
 
-1. Pour modifier le chemin utilisé par un outil, cochez la case en regard du chemin et modifiez le chemin du dossier dans la zone de texte. Vous pouvez également utiliser le bouton Parcourir ( **...** ) pour ouvrir une boîte de dialogue **Sélectionner un emplacement** et choisir le dossier.
+1. Pour modifier le chemin utilisé par un outil, cochez la case en regard du chemin et modifiez le chemin du dossier dans la zone de texte. Vous pouvez également utiliser le bouton Parcourir (**...**) pour ouvrir une boîte de dialogue **Sélectionner un emplacement** et choisir le dossier.
 
 1. Choisissez **OK** pour enregistrer les emplacements des dossiers d’outils personnalisés.
 

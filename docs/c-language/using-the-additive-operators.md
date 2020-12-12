@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : utilisation des opérateurs additifs'
 title: Utilisation des opérateurs additifs
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [C++], addition
 - additive operators
 ms.assetid: 7d54841e-436d-4ae8-9865-1ac1829e6f22
-ms.openlocfilehash: 06d71f3ad1944976a8d415be9487cb5ea365fa26
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d56a1b2e2696ae88598306271ed02c417ef63b0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318362"
 ---
 # <a name="using-the-additive-operators"></a>Utilisation des opérateurs additifs
 

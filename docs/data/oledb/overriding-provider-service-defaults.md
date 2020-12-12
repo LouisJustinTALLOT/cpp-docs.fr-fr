@@ -1,22 +1,23 @@
 ---
+description: 'En savoir plus sur : remplacement des valeurs par défaut du service fournisseur'
 title: Substitution des services par défaut du fournisseur
 ms.date: 10/29/2018
 helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: 4cf3ad1064627f64315822a5045642aa50330d10
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eca6045c347ee8dc9295540d17bfc8feb225a73b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316919"
 ---
 # <a name="overriding-provider-service-defaults"></a>Substitution des services par défaut du fournisseur
 
 La valeur de Registre du fournisseur pour OLEDB_SERVICES est retournée en tant que valeur par défaut pour la propriété d’initialisation [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898(v=vs.85)) sur l’objet de source de données.
 
-Tant que l’entrée de Registre existe, les objets du fournisseur sont agrégés. L’utilisateur peut remplacer le paramètre par défaut du fournisseur pour les services activés en définissant la propriété DBPROP_INIT_OLEDBSERVICES avant l’initialisation. Pour activer ou désactiver un service particulier, l’utilisateur obtient la valeur actuelle de la propriété DBPROP_INIT_OLEDBSERVICES, définit ou efface le bit pour la propriété particulière à activer ou désactiver, puis réinitialise la propriété. DBPROP_INIT_OLEDBSERVICES peut être défini directement dans OLE DB ou dans la chaîne de connexion transmise à ADO ou `IDataInitialize::GetDatasource`. Les valeurs correspondantes pour activer ou désactiver des services individuels sont répertoriées dans le tableau suivant.
+Tant que l’entrée de Registre existe, les objets du fournisseur sont agrégés. L’utilisateur peut remplacer le paramètre par défaut du fournisseur pour les services activés en définissant la propriété DBPROP_INIT_OLEDBSERVICES avant l’initialisation. Pour activer ou désactiver un service particulier, l’utilisateur obtient la valeur actuelle de la propriété DBPROP_INIT_OLEDBSERVICES, définit ou efface le bit pour la propriété particulière à activer ou désactiver, puis réinitialise la propriété. DBPROP_INIT_OLEDBSERVICES pouvez les définir directement dans OLE DB ou dans la chaîne de connexion passée à ADO ou `IDataInitialize::GetDatasource` . Les valeurs correspondantes pour activer ou désactiver des services individuels sont répertoriées dans le tableau suivant.
 
 |Services par défaut activés|Valeur de la propriété DBPROP_INIT_OLEDBSERVICES|Valeur dans la chaîne de connexion|
 |------------------------------|------------------------------------------------|--------------------------------|
@@ -33,4 +34,4 @@ Si l’entrée de Registre n’existe pas pour le fournisseur, les gestionnaires
 [Regroupement des ressources](/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
 [Utilisation du regroupement des ressources par les consommateurs](/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
 [Fonctionnement efficace des fournisseurs avec le regroupement de ressources](/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
-[Activation et désactivation des services OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>
+[Activation et désactivation de services OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

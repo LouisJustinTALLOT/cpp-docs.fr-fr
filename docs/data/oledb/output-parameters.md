@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : paramètres de sortie'
 title: Paramètres de sortie
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: ece626eb7fbecae9b90321ccc2569607897cf520
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c52877483d40d7de1a8313eb806769ce92af7337
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209857"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316932"
 ---
 # <a name="output-parameters"></a>Paramètres de sortie
 
@@ -53,8 +54,8 @@ as
 return 0
 ```
 
-Le `@_rowcount` paramètre de paramètres indique le nombre de lignes retournées à partir de la table de test. Toutefois, cette procédure stockée limite le nombre de lignes à 50. Par exemple, s’il y a 100 lignes dans le test, le ROWCOUNT est 50 (car ce code récupère uniquement les 50 lignes supérieures). S’il n’y avait que 30 lignes dans la table, le ROWCOUNT est de 30. Veillez à appeler `Close` ou `CloseAll` pour renseigner le paramètre out avant d’extraire sa valeur.
+Le `@_rowcount` paramètre unparameter signale le nombre de lignes retournées à partir de la table de test. Toutefois, cette procédure stockée limite le nombre de lignes à 50. Par exemple, s’il y a 100 lignes dans le test, le ROWCOUNT est 50 (car ce code récupère uniquement les 50 lignes supérieures). S’il n’y avait que 30 lignes dans la table, le ROWCOUNT est de 30. Veillez à appeler `Close` ou `CloseAll` à remplir le paramètre out avant de récupérer sa valeur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des procédures stockées](../../data/oledb/using-stored-procedures.md)
+[Utilisation de procédures stockées](../../data/oledb/using-stored-procedures.md)

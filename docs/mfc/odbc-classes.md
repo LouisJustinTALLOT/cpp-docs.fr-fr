@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : classes ODBC'
 title: Classes ODBC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: 18b6e3a0ea20dbd352a61c4faab52c35b852dcb3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ac03543a6dfd9cf85320f9ff051730c102f2e0bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318687"
 ---
 # <a name="odbc-classes"></a>Classes ODBC
 
@@ -36,10 +37,10 @@ Fournit des informations de contexte pour prendre en charge RFX (Record Field Ex
 ## <a name="related-classes"></a>Classes connexes
 
 [CLongBinary](reference/clongbinary-class.md)<br/>
-Encapsule un handle vers le stockage pour un objet BLOB (Binary Large Object), tel qu’une image bitmap. `CLongBinary`les objets sont utilisés pour gérer les objets de données volumineux stockés dans les tables de base de données.
+Encapsule un handle vers le stockage pour un objet BLOB (Binary Large Object), tel qu’une image bitmap. `CLongBinary` les objets sont utilisés pour gérer les objets de données volumineux stockés dans les tables de base de données.
 
 [CDBVariant](reference/cdbvariant-class.md)<br/>
-Vous permet de stocker une valeur sans vous préoccuper du type de données de la valeur. `CDBVariant`effectue le suivi du type de données de la valeur actuelle, qui est stockée dans une Union.
+Vous permet de stocker une valeur sans vous préoccuper du type de données de la valeur. `CDBVariant` effectue le suivi du type de données de la valeur actuelle, qui est stockée dans une Union.
 
 ## <a name="see-also"></a>Voir aussi
 

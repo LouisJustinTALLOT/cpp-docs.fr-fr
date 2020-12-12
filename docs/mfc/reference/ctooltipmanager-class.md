@@ -1,5 +1,6 @@
 ---
-title: Classe CTooltipManager
+description: 'En savoir plus sur : classe CTooltipManager'
+title: CTooltipManager, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CTooltipManager
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0ec6d691abbceb7026fe9656c17ff899f1d07759
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318544"
 ---
-# <a name="ctooltipmanager-class"></a>Classe CTooltipManager
+# <a name="ctooltipmanager-class"></a>CTooltipManager, classe
 
 Gère les informations d'exécution relatives aux info-bulles. La classe `CTooltipManager` est instanciée une fois par application.
 
@@ -47,7 +48,7 @@ class CTooltipManager : public CObject
 
 ## <a name="remarks"></a>Notes
 
-Utilisez [cmFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) `CMFCToolTipInfo`Class `CTooltipManager` , et ensemble pour implémenter des outils personnalisés dans votre application. Pour un exemple de la façon d’utiliser ces classes de pointe d’outil, voir le sujet de classe [CMFCToolTipCtrl.](../../mfc/reference/cmfctooltipctrl-class.md)
+Utilisez la [classe CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo` , et `CTooltipManager` ensemble pour implémenter des info-bulles personnalisées dans votre application. Pour obtenir un exemple d’utilisation de ces classes d’info-bulle, consultez la rubrique relative à la [classe CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) .
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -57,11 +58,11 @@ Utilisez [cmFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md) `CMFCTo
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxtooltipmanager.h
+**En-tête :** afxtooltipmanager. h
 
-## <a name="ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a>CTooltipManager::CreateToolTip
+## <a name="ctooltipmanagercreatetooltip"></a><a name="createtooltip"></a> CTooltipManager :: CreateToolTip
 
-Crée un contrôle de bout d’outil.
+Crée un contrôle ToolTip.
 
 ```
 static BOOL CreateToolTip(
@@ -73,41 +74,41 @@ static BOOL CreateToolTip(
 ### <a name="parameters"></a>Paramètres
 
 *pToolTip*<br/>
-[out] Une référence à un pointeur tooltip. Il est configuré pour pointer vers la pointe d’outils nouvellement créée lorsque la fonction revient.
+à Référence à un pointeur d’info-bulle. Elle est définie pour pointer vers l’info-bulle qui vient d’être créée lorsque la fonction retourne.
 
 *pWndParent*<br/>
-[dans] Parent de l’outiltip.
+dans Parent de l’info-bulle.
 
 *nType*<br/>
-[dans] Type de l’outiltip.
+dans Type de l’info-bulle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Nonzero si un tooltip a été créé avec succès.
+Valeur différente de zéro si une info-bulle a été créée avec succès.
 
 ### <a name="remarks"></a>Notes
 
-Vous devez appeler [CTooltipManager::DeleteToolTip](#deletetooltip) pour supprimer le contrôle de la pointe d’outil qui est passé en arrière dans *pToolTip*.
+Vous devez appeler [CTooltipManager ::D eletetooltip](#deletetooltip) pour supprimer le contrôle ToolTip qui est retourné dans *pToolTip*.
 
-Le [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) définit les paramètres d’affichage visuel de chaque outil qu’il crée en fonction du type de boîte à outils que *nType* spécifie. Pour modifier les paramètres d’un ou de plusieurs types d’outils, appelez [CTooltipManager::SetTooltipParams](#settooltipparams).
+[CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) définit les paramètres d’affichage visuels de chaque info-bulle qu’il crée en fonction du type d’info-bulle que *ndéclarations* spécifie. Pour modifier les paramètres d’un ou de plusieurs types d’info-bulles, appelez [CTooltipManager :: SetTooltipParams](#settooltipparams).
 
-Les types valides de pointe d’outils sont énumérés dans le tableau suivant :
+Les types d’info-bulles valides sont répertoriés dans le tableau suivant :
 
-|Type Tooltip|Catégorie de contrôle|Exemples types|
+|Type d’info-bulle|Catégorie de contrôle|Exemples de types|
 |------------------|----------------------|-------------------|
-|AFX_TOOLTIP_TYPE_BUTTON|Un bouton.|CMFCButton|
-|AFX_TOOLTIP_TYPE_CAPTIONBAR|Un bar de légende.|CMFCCaptionBar|
+|AFX_TOOLTIP_TYPE_BUTTON|Bouton.|CMFCButton|
+|AFX_TOOLTIP_TYPE_CAPTIONBAR|Barre de légende.|CMFCCaptionBar|
 |AFX_TOOLTIP_TYPE_DEFAULT|Tout contrôle qui ne correspond pas à une autre catégorie.|Aucun.|
-|AFX_TOOLTIP_TYPE_DOCKBAR|Une vitre amarable.|CDockablePane|
+|AFX_TOOLTIP_TYPE_DOCKBAR|Un volet Ancrable.|CDockablePane|
 |AFX_TOOLTIP_TYPE_EDIT|Zone de texte.|Aucun.|
-|AFX_TOOLTIP_TYPE_MINIFRAME|Un miniframe.|CPaneFrameWnd|
+|AFX_TOOLTIP_TYPE_MINIFRAME|Miniframe.|CPaneFrameWnd|
 |AFX_TOOLTIP_TYPE_PLANNER|Un planificateur.|Aucun.|
-|AFX_TOOLTIP_TYPE_RIBBON|Une barre de ruban.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
-|AFX_TOOLTIP_TYPE_TAB|Un contrôle de l’onglet.|CMFCTabCtrl|
-|AFX_TOOLTIP_TYPE_TOOLBAR|Une barre d’outils.|CMFCToolBar, CMFCPopupMenuBar|
-|AFX_TOOLTIP_TYPE_TOOLBOX|Une boîte à outils.|Aucun.|
+|AFX_TOOLTIP_TYPE_RIBBON|Barre de ruban.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
+|AFX_TOOLTIP_TYPE_TAB|Contrôle onglet.|CMFCTabCtrl|
+|AFX_TOOLTIP_TYPE_TOOLBAR|Une barre d’outils.|CMFCToolBar, Cmfcpopupmenubar,|
+|AFX_TOOLTIP_TYPE_TOOLBOX|Boîte à outils.|Aucun.|
 
-## <a name="ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>CTooltipManager::DeleteToolTip
+## <a name="ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a> CTooltipManager ::D eleteToolTip
 
 Supprime un contrôle d'info-bulle.
 
@@ -118,15 +119,15 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="parameters"></a>Paramètres
 
 *pToolTip*<br/>
-[dans, dehors] Une référence à un pointeur à un tooltip à détruire.
+[in, out] Référence à un pointeur vers une info-bulle à détruire.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour chaque [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) qui a été créé par [CTooltipManager::CreateToolTip](#createtooltip). Le contrôle parent doit appeler `OnDestroy` cette méthode de son gestionnaire. Ceci est nécessaire pour supprimer correctement le bout d’outil du cadre. Cette méthode définit *pToolTip* à NULL avant qu’il ne revienne.
+Appelez cette méthode pour chaque [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) créée par [CTooltipManager :: CreateToolTip](#createtooltip). Le contrôle parent doit appeler cette méthode à partir de son `OnDestroy` Gestionnaire. Cela est nécessaire pour supprimer correctement l’info-bulle du Framework. Cette méthode affecte la valeur NULL à *pToolTip* avant de retourner.
 
-## <a name="ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a>CTooltipManager::SetTooltipParams
+## <a name="ctooltipmanagersettooltipparams"></a><a name="settooltipparams"></a> CTooltipManager :: SetTooltipParams
 
-Personnalise l’apparence du contrôle de l’outil pour les types de contrôle Windows spécifiés.
+Personnalise l’apparence du contrôle ToolTip pour les types de contrôles Windows spécifiés.
 
 ```cpp
 void SetTooltipParams(
@@ -138,31 +139,31 @@ void SetTooltipParams(
 ### <a name="parameters"></a>Paramètres
 
 *nTypes*<br/>
-[dans] Spécifie les types de contrôle.
+dans Spécifie les types de contrôle.
 
-*Cfrp*<br/>
-[dans] Classe de temps d’exécution de l’outil personnalisé.
+*pRTC*<br/>
+dans Classe Runtime de l’info-bulle personnalisée.
 
-*pParams pParams*<br/>
-[dans] Paramètres de l’outil.
+*pParams*<br/>
+dans Paramètres d’info-bulle.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode définit la classe de temps d’exécution et les paramètres initiaux que le [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) utilise lorsqu’il crée des outils. Lorsqu’un contrôle appelle [CTooltipManager::CreateToolTip](#createtooltip) et passe dans un type de boîte à outils qui est l’un des types indiqués par *nTypes*, le gestionnaire de pointe d’outils crée un contrôle de pointe d’outil qui est une instance de la classe de temps d’exécution spécifiée par *pRTC* et passe les paramètres spécifiés par *pParams* au nouveau tooltip.
+Cette méthode définit la classe d’exécution et les paramètres initiaux que le [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) utilise lorsqu’il crée des info-bulles. Lorsqu’un contrôle appelle [CTooltipManager :: CreateToolTip](#createtooltip) et passe dans un type d’info-bulle qui est l’un des types indiqués par *nTypes*, le gestionnaire d’info-bulles crée un contrôle ToolTip qui est une instance de la classe Runtime spécifiée par *pRTC* et passe les paramètres spécifiés par *pParams* à la nouvelle info-bulle.
 
-Lorsque vous appelez cette méthode, tous les propriétaires de boîte à outils existantes reçoivent le message AFX_WM_UPDATETOOLTIPS et ils doivent recréer leurs outils en utilisant [CTooltipManager:CreateToolTip](#createtooltip).
+Lorsque vous appelez cette méthode, tous les propriétaires d’info-bulle existants reçoivent le message AFX_WM_UPDATETOOLTIPS et ils doivent recréer leurs info-bulles à l’aide de [CTooltipManager :: CreateToolTip](#createtooltip).
 
-*nTypes* peut être n’importe quelle combinaison des types valides de bout d’outils que [CTooltipManager: :CreateToolTip](#createtooltip) utilise, ou il peut être AFX_TOOLTIP_TYPE_ALL. Si vous passez AFX_TOOLTIP_TYPE_ALL, tous les types de bout d’outils sont affectés.
+*nTypes* peut être n’importe quelle combinaison de types d’info-bulles valides que [CTooltipManager :: CreateToolTip](#createtooltip) utilise, ou il peut être AFX_TOOLTIP_TYPE_ALL. Si vous transmettez AFX_TOOLTIP_TYPE_ALL, tous les types d’info-bulle sont affectés.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `SetTooltipParams` utiliser `CTooltipManager` la méthode de la classe. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser la `SetTooltipParams` méthode de la `CTooltipManager` classe. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 
-## <a name="ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a>CTooltipManager::SetTooltipText
+## <a name="ctooltipmanagersettooltiptext"></a><a name="settooltiptext"></a> CTooltipManager :: SetTooltipText
 
-Définit le texte et la description d’un tooltip.
+Définit le texte et la description d’une info-bulle.
 
 ```
 static void SetTooltipText(
@@ -175,28 +176,28 @@ static void SetTooltipText(
 
 ### <a name="parameters"></a>Paramètres
 
-*Pti*<br/>
-[dans] Un pointeur vers un objet TOOLINFO.
+*pTI*<br/>
+dans Pointeur vers un objet TOOLINFO.
 
 *pToolTip*<br/>
-[dans, dehors] Un pointeur vers le contrôle de l’outil pour lequel définir le texte et la description.
+[in, out] Pointeur vers le contrôle d’info-bulle pour lequel le texte et la description doivent être définis.
 
 *nType*<br/>
-[dans] Spécifie le type de contrôle auquel cette boîte à outils est associée.
+dans Spécifie le type de contrôle auquel cette info-bulle est associée.
 
-*strText (en)*<br/>
-[dans] Le texte à définir comme le texte de l’outiltip.
+*strText*<br/>
+dans Texte à définir comme texte d’info-bulle.
 
 *lpszDescr*<br/>
-[dans] Un pointeur à la description de l’outiltip. Sa valeur peut être NULL.
+dans Pointeur vers la description de l’info-bulle. Sa valeur peut être NULL.
 
 ### <a name="remarks"></a>Notes
 
-La valeur de *nType* doit être la même valeur que le paramètre *nType* de [CTooltipManager::CreateToolTip](#createtooltip) lorsque vous avez créé l’outiltip.
+La valeur de *ndéclarations* doit être identique à celle du paramètre *ndéclarations* de [CTooltipManager :: CreateToolTip](#createtooltip) lorsque vous avez créé l’info-bulle.
 
-## <a name="ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a>CTooltipManager::UpdateTooltips
+## <a name="ctooltipmanagerupdatetooltips"></a><a name="updatetooltips"></a> CTooltipManager :: UpdateTooltips
 
-Pour plus de détails, consultez le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
+Pour plus d’informations, consultez le code source situé dans le dossier **VC \\ ATLMFC \\ src \\ MFC** de votre installation de Visual Studio.
 
 ```cpp
 void UpdateTooltips();
@@ -208,5 +209,5 @@ void UpdateTooltips();
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md)<br/>
-[Classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)
+[CMFCToolTipCtrl, classe](../../mfc/reference/cmfctooltipctrl-class.md)<br/>
+[CMFCToolTipInfo, classe](../../mfc/reference/cmfctooltipinfo-class.md)

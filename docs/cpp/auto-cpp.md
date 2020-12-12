@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : `auto` (C++)'
 title: auto (C++)
 ms.date: 12/10/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: be268635e61005efbdb01ed8c4eec79c7cb9b800
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 2237c8aa3cb1b1078a8b90ba5a3ba6cba0a7134b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319467"
 ---
 # <a name="auto-c"></a>`auto` C++
 

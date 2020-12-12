@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe add_volatile'
 title: add_volatile, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: e8c213a116ff7a7d4218179f0e944ac4f84a75e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f138c9009d127efe2d640124d9af1e114eb0732
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319867"
 ---
 # <a name="add_volatile-class"></a>add_volatile, classe
 

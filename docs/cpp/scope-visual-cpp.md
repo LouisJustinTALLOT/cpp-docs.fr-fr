@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Scope (C++)'
 title: Portée (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: 5cff7a4607201175c7095a87134850583b76d636
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62f4e948f956565ef25bf612332a59823be6df23
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319363"
 ---
 # <a name="scope-c"></a>Portée (C++)
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe add_rvalue_reference'
 title: add_rvalue_reference, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: 6d7cc1d45ed3b963de0a0a004c1696ddbf0af440
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f4f5b58ddd2aa1e02b3023a27ef2feba83624326
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319880"
 ---
 # <a name="add_rvalue_reference-class"></a>add_rvalue_reference, classe
 
@@ -69,7 +70,7 @@ All static_assert tests of add_rvalue_reference passed.
 */
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 En-tête : \<type_traits>
 

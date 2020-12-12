@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : comparaison des structures de données de synchronisation avec l’API Windows'
 title: Comparaison des structures de données de synchronisation avec l’API Windows
 ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: b889570935b3a94e0cb8717c8af1783e2ce31c42
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: b5c633c61d070e2cd687b6281597694a7533fe0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318414"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Comparaison des structures de données de synchronisation avec l’API Windows
 
@@ -26,7 +27,7 @@ La classe [Concurrency :: critical_section](../../parallel/concrt/reference/cri
 
 La classe [Concurrency :: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) ressemble aux verrous SRW (Windows Slim Reader/Writer). Le tableau suivant explique les similitudes et les différences.
 
-| Fonctionnalité | Classe `reader_writer_lock` | Verrou SRW |
+| Composant | Classe `reader_writer_lock` | Verrou SRW |
 |--|--|--|
 | Non réentrant | Oui | Oui |
 | Peut promouvoir un lecteur en écriture (prise en charge de la mise à niveau) | Non | Non |
@@ -36,7 +37,7 @@ La classe [Concurrency :: reader_writer_lock](../../parallel/concrt/reference/r
 
 Pour plus d’informations sur les verrous SRW, consultez [verrous SRW (Slim Reader/Writer)](/windows/win32/sync/slim-reader-writer--srw--locks) dans le kit de développement logiciel (SDK) de plateforme.
 
-## <a name="event"></a>event
+## <a name="event"></a>événement
 
 La classe [Concurrency :: Event](../../parallel/concrt/reference/event-class.md) ressemble à un événement sans nom de réinitialisation manuelle de Windows. Toutefois, un `event` objet se comporte de manière coopérative, tandis qu’un événement Windows se comporte de manière préemptive. Pour plus d’informations sur les événements Windows, consultez [objets d’événement](/windows/win32/Sync/event-objects).
 

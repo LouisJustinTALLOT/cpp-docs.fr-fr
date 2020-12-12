@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les constantes suivantes : fseek, _lseek'
 title: fseek, _lseek, constantes
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - SEEK_END constant
 - SEEK_CUR constant
 ms.assetid: 9deeb13e-5aa3-4c33-80d8-721c80a4de9d
-ms.openlocfilehash: 2e6cb2e0d781212f3b5e7758554507dfa438a716
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: be12597682074f610b0a69395146b400fed4d6b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743372"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319815"
 ---
-# <a name="fseek-lseek-constants"></a>fseek, _lseek, constantes
+# <a name="fseek-_lseek-constants"></a>fseek, _lseek, constantes
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +26,7 @@ ms.locfileid: "57743372"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’argument *origin* spécifie la position initiale et peut prendre l’une des constantes manifestes suivantes :
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Iconverttypeimpl,'
 title: IConvertTypeImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: b4309e794a83e6c13dcf0051791cd1762a6d5012
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5ac0e70432dbb81bd3f8aa30fd2adb9cb9e3fc30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845560"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317560"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl, classe
 
@@ -38,7 +39,7 @@ class ATL_NO_VTABLE IConvertTypeImpl
 *T*<br/>
 Votre classe, dérivée de `IConvertTypeImpl` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 

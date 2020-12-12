@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : IRowsetUpdateImpl, classe'
 title: IRowsetUpdateImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: f040ed902b867059636a16bf635dc5c526b8ba1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317244"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl, classe
 
@@ -96,7 +97,7 @@ Unité de stockage du `HROW` .
 *MapClass*<br/>
 Unité de stockage de tous les descripteurs de lignes détenues par le fournisseur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -130,7 +131,7 @@ Unité de stockage de tous les descripteurs de lignes détenues par le fournisse
 |-|-|
 |[m_mapCachedData](#mapcacheddata)|Contient les données d’origine pour l’opération différée.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Vous devez d’abord lire et comprendre la documentation de [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)), car tous les éléments qui y sont décrits s’appliquent également ici. Vous devez également lire le chapitre 6 du *OLE DB Guide de référence du programmeur* sur le paramétrage des données.
 
@@ -161,7 +162,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 Consultez [IRowsetChange :: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette méthode remplace la méthode [IRowsetChangeImpl :: SetData](./irowsetchangeimpl-class.md#setdata) , mais elle comprend la mise en cache des données d’origine pour autoriser le traitement immédiat ou différé de l’opération.
 
@@ -202,7 +203,7 @@ dans Correspond au paramètre *hChapter* dans [IRowsetUpdate :: GetPendingRows]
 
 Pour les autres paramètres, consultez [IRowsetUpdate :: GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [IRowsetUpdate :: GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
@@ -276,7 +277,7 @@ dans Correspond au paramètre *hChapter* dans [IRowsetUpdate :: Update](/previo
 
 Pour les autres paramètres, consultez [IRowsetUpdate :: Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les modifications sont transmises en appelant [IRowsetChangeImpl :: FlushData](./irowsetchangeimpl-class.md#flushdata). Le consommateur doit appeler [CRowset :: Update](./crowset-class.md#update) pour que les modifications prennent effet. Affectez une valeur appropriée à *prgRowstatus* , comme décrit dans les [États de ligne](/previous-versions/windows/desktop/ms722752(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
@@ -303,7 +304,7 @@ dans Handle pour les lignes que l’utilisateur souhaite mettre à jour.
 *pRowStatus*<br/>
 à État renvoyé à l’utilisateur.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si vous déterminez qu’une mise à jour doit être autorisée, retourne S_OK ; Sinon, Retourne E_FAIL. Si vous autorisez une mise à jour, vous devez également affecter à la valeur `DBROWSTATUS` dans [IRowsetUpdateImpl :: Update](#update) un [État de ligne](/previous-versions/windows/desktop/ms722752(v=vs.85))approprié.
 

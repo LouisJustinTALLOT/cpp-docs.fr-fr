@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CTaskDialog'
 title: CTaskDialog Class
 ms.date: 11/19/2018
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 3fd67eed7e80a2e594710df8ae8bc6fd13f0e96c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 91cd3caec703f8e81116fccd75c0457abb69a3e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318583"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -245,7 +246,7 @@ L’illustration suivante montre un exemple `CTaskDialog` illustrant l’emplace
 ![Exemple de CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "Exemple de CTaskDialog") <br/>
 Exemple CTaskDialog
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **Système d’exploitation minimal requis :** Windows Vista
 

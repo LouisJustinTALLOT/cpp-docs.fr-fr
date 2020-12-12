@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CToolBarCtrl, classe'
 title: CToolBarCtrl (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -182,12 +183,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: e62d1a6773e1b65eaa1d2f0a8050873c673b5039
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 769403be6e4015df1de04d41fcb0a1b2721ee434
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318557"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
 
@@ -378,7 +379,7 @@ Identificateur de ressource de la bitmap qui contient l’image ou les images du
 *pBitmap*<br/>
 Pointeur vers l' `CBitmap` objet qui contient l’image ou les images du bouton à ajouter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de la première nouvelle image en cas de réussite ; sinon-1.
 
@@ -404,7 +405,7 @@ Nombre de boutons à ajouter.
 *lpButtons*<br/>
 Adresse d’un tableau de `TBBUTTON` structures qui contient des informations sur les boutons à ajouter. Le tableau doit contenir le même nombre d’éléments que les boutons spécifiés par *nNumButtons*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -486,7 +487,7 @@ int AddString(UINT nStringID);
 *nStringID*<br/>
 Identificateur de ressource de la ressource de type chaîne à ajouter à la liste de chaînes du contrôle ToolBar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de la première nouvelle chaîne ajoutée en cas de réussite ; sinon-1.
 
@@ -503,7 +504,7 @@ int AddStrings(LPCTSTR lpszStrings);
 *lpszStrings*<br/>
 Adresse d’une mémoire tampon qui contient une ou plusieurs chaînes se terminant par un caractère null à ajouter à la liste de chaînes de la barre d’outils. La dernière chaîne doit se terminer par deux caractères null.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de la première nouvelle chaîne ajoutée en cas de réussite ; sinon-1.
 
@@ -549,7 +550,7 @@ dans Identificateur de commande du bouton qui doit recevoir une nouvelle image b
 *iBitmap*\
 dans Index de base zéro d’une image dans la liste d’images du contrôle de barre d’outils actuel.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -583,7 +584,7 @@ Identificateur de commande du bouton à activer ou à désactiver.
 *bCheck*<br/>
 TRUE pour activer le bouton, FALSe pour l’effacer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -604,7 +605,7 @@ UINT CommandToIndex(UINT nID) const;
 *nID*<br/>
 ID de commande dont vous souhaitez Rechercher l’index de bouton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro pour le bouton associé à l’ID de commande.
 
@@ -636,7 +637,7 @@ Spécifie la fenêtre parente du contrôle ToolBar. Il ne doit pas être NULL.
 *nID*<br/>
 Spécifie l’ID du contrôle ToolBar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -690,7 +691,7 @@ Pointeur vers la fenêtre qui est le parent du contrôle.
 *nID*<br/>
 ID de la fenêtre enfant du contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -735,7 +736,7 @@ BOOL DeleteButton(int nIndex);
 *nIndex*<br/>
 Index de base zéro du bouton à supprimer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -759,7 +760,7 @@ Identificateur de commande du bouton à activer ou à désactiver.
 *bEnable*<br/>
 TRUE pour activer le bouton. FALSe pour désactiver le bouton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -775,7 +776,7 @@ Récupère le paramètre de surbrillance d’ancrage d’une barre d’outils.
 BOOL GetAnchorHighlight() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la valeur est différente de zéro, la mise en surbrillance de l’ancre est activée. Si la valeur est zéro, la mise en surbrillance d’ancrage est désactivée.
 
@@ -796,7 +797,7 @@ int GetBitmap(int nID) const;
 *nID*<br/>
 Identificateur de commande du bouton dont l’index bitmap doit être récupéré.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne l’index de l’image bitmap en cas de réussite, ou zéro dans le cas contraire.
 
@@ -812,7 +813,7 @@ Récupère les indicateurs de bitmap de la barre d’outils.
 UINT GetBitmapFlags() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 UINT qui a l’indicateur TBBF_LARGE défini si l’affichage peut prendre en charge des bitmaps de barre d’outils volumineuses, désactivez-le dans le cas contraire.
 
@@ -838,7 +839,7 @@ Index de base zéro du bouton pour lequel des informations doivent être récup�
 *lpButton*<br/>
 Adresse de la `TBBUTTON` structure qui doit recevoir une copie des informations sur le bouton. Pour plus d’informations sur la structure, consultez [CToolBarCtrl :: AddButtons](#addbuttons) `TBBUTTON` .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -850,7 +851,7 @@ Récupère le nombre de boutons actuellement dans le contrôle ToolBar.
 int GetButtonCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de boutons.
 
@@ -872,7 +873,7 @@ Identificateur du bouton.
 *ptbbi*<br/>
 Pointeur vers une structure [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) qui reçoit les informations sur le bouton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro du bouton, en cas de réussite ; sinon-1.
 
@@ -888,7 +889,7 @@ Obtient la taille d’un bouton de barre d’outils.
 DWORD GetButtonSize() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur DWORD qui contient les valeurs de largeur et de hauteur dans LOWORD et HIWORD, respectivement.
 
@@ -905,7 +906,7 @@ CString GetButtonText(int idButton) const;
 *idButton*\
 dans Identificateur du bouton dont le texte affiché est récupéré.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [CString](../../atl-mfc-shared/using-cstring.md) qui contient le texte d’affichage du bouton spécifié.
 
@@ -926,7 +927,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 *lpColorScheme*\
 à Pointeur vers une structure [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) qui reçoit les informations de modèle de couleurs. Lorsque cette méthode est retournée, la structure décrit la couleur de surbrillance et la couleur de l’ombre du contrôle ToolBar.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -942,7 +943,7 @@ Récupère la liste d’images utilisée par un contrôle de barre d’outils po
 CImageList* GetDisabledImageList() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) , ou null si aucune liste d’images désactivées n’est définie.
 
@@ -963,7 +964,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 *ppDropTarget*<br/>
 Pointeur vers un pointeur d’interface [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) . Si une erreur se produit, un pointeur NULL est placé dans cette adresse.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une valeur HRESULT indiquant la réussite ou l’échec de l’opération.
 
@@ -979,7 +980,7 @@ Récupère les styles étendus pour un contrôle ToolBar.
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur DWORD qui représente les styles étendus en cours d’utilisation pour le contrôle ToolBar. Pour obtenir la liste des styles, consultez [styles étendus de la barre d’outils](/windows/win32/Controls/toolbar-extended-styles), dans la SDK Windows.
 
@@ -995,7 +996,7 @@ Récupère la liste d’images utilisée par un contrôle de barre d’outils po
 CImageList* GetHotImageList() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) , ou null si aucune liste d’images désactivées n’est définie.
 
@@ -1011,7 +1012,7 @@ Récupère l’index de l’élément réactif dans une barre d’outils.
 int GetHotItem() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de base zéro de l’élément réactif dans une barre d’outils.
 
@@ -1027,7 +1028,7 @@ Récupère la liste d’images utilisée par un contrôle de barre d’outils po
 CImageList* GetImageList() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) , ou null si aucune liste d’images n’est définie.
 
@@ -1060,7 +1061,7 @@ Récupère la couleur utilisée pour dessiner la marque d’insertion pour la ba
 COLORREF GetInsertMarkColor() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui contient la couleur de la marque d’insertion actuelle.
 
@@ -1086,7 +1087,7 @@ Index de base zéro du bouton pour lequel des informations doivent être récup�
 *lpRect*<br/>
 Adresse d’une structure [Rect](/windows/win32/api/windef/ns-windef-rect) ou d’un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui reçoit les coordonnées du rectangle englobant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1107,7 +1108,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 *pSize*<br/>
 Pointeur vers une structure de [taille](/windows/win32/api/windef/ns-windef-size) qui reçoit la taille des éléments.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1123,7 +1124,7 @@ Récupère le nombre maximal de lignes de texte affichées sur un bouton de barr
 int GetMaxTextRows() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre maximal de lignes de texte affichées sur un bouton de barre d’outils.
 
@@ -1162,7 +1163,7 @@ BOOL GetPadding(
 *pnVertPadding*\
 à Entier qui reçoit le remplissage vertical du contrôle de barre d’outils, en pixels.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1178,7 +1179,7 @@ Récupère la liste d’images que le contrôle de barre d’outils actuelle uti
 CImageList* GetPressedImageList();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) qui contient la liste d’images pour le contrôle actuel, ou null si aucune liste d’images de ce type n’est définie.
 
@@ -1204,7 +1205,7 @@ Identificateur du bouton.
 *lpRect*<br/>
 Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) pour recevoir les informations de rectangle englobant.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite, sinon FALSE.
 
@@ -1220,7 +1221,7 @@ Récupère le nombre de lignes de boutons actuellement affichées par le contrô
 int GetRows() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre de lignes de boutons actuellement affichées dans la barre d’outils.
 
@@ -1241,7 +1242,7 @@ int GetState(int nID) const;
 *nID*<br/>
 Identificateur de commande du bouton pour lequel des informations doivent être récupérées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Informations d’État du bouton en cas de réussite ou-1 dans le cas contraire. Les informations d’État du bouton peuvent être une combinaison des valeurs listées dans [CToolBarCtrl :: AddButtons](#addbuttons).
 
@@ -1275,10 +1276,10 @@ Pointeur vers une mémoire tampon utilisée pour retourner la chaîne.
 *cchMaxLen*<br/>
 Longueur de la mémoire tampon en octets.
 
-*Str*<br/>
+*str*<br/>
 Chaîne.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Longueur de la chaîne en cas de réussite,-1 dans le cas contraire.
 
@@ -1294,7 +1295,7 @@ Obtient les styles actuellement appliqués à un contrôle de barre d’outils.
 DWORD GetStyle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur DWORD contenant une combinaison de [styles de contrôle de barre d’outils](/windows/win32/Controls/toolbar-control-and-button-styles), comme décrit dans la SDK Windows.
 
@@ -1306,7 +1307,7 @@ Récupère le handle du contrôle d’info-bulle, le cas échéant, associé au 
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’objet [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) associé à cette barre d’outils ou null si la barre d’outils n’a pas de contrôle d’info-bulle associé.
 
@@ -1327,7 +1328,7 @@ int HitTest(LPPOINT ppt) const;
 *formations*<br/>
 Pointeur vers une structure de [points](/windows/win32/api/windef/ns-windef-point) qui contient la coordonnée x du test de positionnement dans le `x` membre et la coordonnée y du test de positionnement dans le `y` membre. Les coordonnées sont relatives à la zone cliente de la barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur entière indiquant l’emplacement d’un point sur une barre d’outils. Si la valeur est zéro ou une valeur positive, cette valeur de retour est l’index de base zéro de l’élément de non-séparateur dans lequel se trouve le point.
 
@@ -1355,7 +1356,7 @@ Identificateur de commande du bouton à masquer ou afficher.
 *bHide*<br/>
 TRUE pour masquer le bouton, FALSe pour l’afficher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1381,7 +1382,7 @@ Identificateur de commande du bouton dont l’état indéterminé doit être dé
 *bIndeterminate*<br/>
 TRUE pour définir l’état indéterminé du bouton spécifié, FALSe pour l’effacer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1407,7 +1408,7 @@ Index de base zéro d’un bouton. Cette fonction insère le bouton nouveau à g
 *lpButton*<br/>
 Adresse d’une `TBBUTTON` structure contenant des informations sur le bouton à insérer. Consultez [CToolBarCtrl :: AddButtons](#addbuttons) pour obtenir une description de la `TBBUTTON` structure.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1433,7 +1434,7 @@ Pointeur vers une structure de [points](/windows/win32/api/windef/ns-windef-poin
 *ptbim*<br/>
 Pointeur vers une structure [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) qui reçoit les informations sur les marques d’insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1454,7 +1455,7 @@ BOOL IsButtonChecked(int nID) const;
 *nID*<br/>
 Identificateur de commande du bouton dans la barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le bouton est activé ; Sinon, zéro.
 
@@ -1475,7 +1476,7 @@ BOOL IsButtonEnabled(int nID) const;
 *nID*<br/>
 Identificateur de commande du bouton dans la barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le bouton est activé ; Sinon, zéro.
 
@@ -1496,7 +1497,7 @@ BOOL IsButtonHidden(int nID) const;
 *nID*<br/>
 Identificateur de commande du bouton dans la barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le bouton est masqué ; Sinon, zéro.
 
@@ -1517,7 +1518,7 @@ BOOL IsButtonHighlighted(int nID) const;
 *nID*<br/>
 dans ID de commande pour le bouton de barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Entier positif si le bouton est mis en surbrillance, 0 si le bouton n’est pas mis en surbrillance ou-1 si une erreur se produit.
 
@@ -1534,7 +1535,7 @@ BOOL IsButtonIndeterminate(int nID) const;
 *nID*<br/>
 dans Identificateur de commande du bouton dans la barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Entier positif si le bouton est indéterminé, zéro si le bouton n’est pas indéterminé, ou-1 si une erreur se produit.
 
@@ -1555,7 +1556,7 @@ BOOL IsButtonPressed(int nID) const;
 *nID*<br/>
 Identificateur de commande du bouton dans la barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le bouton est enfoncé ; sinon, zéro.
 
@@ -1612,7 +1613,7 @@ Caractère d’accélérateur à mapper. Ce caractère est le même que celui qu
 *pIDBtn*<br/>
 Pointeur vers un UINT qui reçoit l’identificateur de commande du bouton qui correspond à l’accélérateur spécifié dans *chAccel*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1638,7 +1639,7 @@ Identificateur du bouton.
 *fHighlight*<br/>
 Spécifie l’état de mise en surbrillance à définir. Par défaut, TRUE. Si la valeur est FALSe, le bouton est défini sur son état par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1664,7 +1665,7 @@ Index de base zéro du bouton à déplacer.
 *nNewPos*<br/>
 Index de base zéro de la destination du bouton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1688,7 +1689,7 @@ dans Identificateur de commande du bouton à appuyer ou à libérer.
 *bPress*<br/>
 dans TRUE pour appuyer sur le bouton spécifié ; FALSe pour libérer le bouton spécifié. La valeur par défaut est TRUE.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la méthode réussit ; Sinon, FALSe.
 
@@ -1711,7 +1712,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 *pReplaceBitmap*\
 dans Pointeur vers une structure [TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap) qui décrit l’image bitmap à remplacer et la nouvelle bitmap.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode réussit ; Sinon, FALSe.
 
@@ -1798,7 +1799,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 *fAnchor*<br/>
 dans Spécifie si la mise en surbrillance de l’ancre est activée ou désactivée. Si cette valeur est différente de zéro, la mise en surbrillance de l’ancre est activée. Si cette valeur est égale à zéro, la mise en surbrillance de l’ancre est désactivée
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Paramètre d’ancrage précédent. Si la mise en surbrillance a été activée, cette valeur est différente de zéro. Si la mise en surbrillance n’a pas été activée, cette valeur est égale à zéro.
 
@@ -1819,7 +1820,7 @@ BOOL SetBitmapSize(CSize size);
 *size*<br/>
 Largeur et hauteur, en pixels, des images bitmap.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1845,7 +1846,7 @@ Identificateur du bouton.
 *ptbbi*<br/>
 Pointeur vers une structure [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) qui reçoit les informations sur le bouton.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1866,7 +1867,7 @@ BOOL SetButtonSize(CSize size);
 *size*<br/>
 Largeur et hauteur, en pixels, des boutons.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -1915,7 +1916,7 @@ Largeur minimale du bouton, en pixels. Les boutons de la barre d’outils ne ser
 *cxMax*<br/>
 Largeur maximale du bouton, en pixels. Si le texte du bouton est trop grand, le contrôle l’affiche avec des points de suspension.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1941,7 +1942,7 @@ Index de base zéro du bouton dont l’ID de commande doit être défini.
 *nID*<br/>
 ID de commande auquel définir le bouton sélectionné.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne une valeur différente de zéro en cas de réussite ; Sinon, zéro.
 
@@ -1983,7 +1984,7 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
 *pImageList*<br/>
 Pointeur vers un `CImageList` objet contenant les images à utiliser par le contrôle de barre d’outils pour afficher les images de bouton désactivées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) précédemment utilisé par le contrôle ToolBar pour afficher des images de bouton désactivées.
 
@@ -2009,7 +2010,7 @@ Combinaison d’un ou plusieurs des indicateurs de DT_, spécifiés dans la fonc
 *dwDTFlags*<br/>
 Combinaison d’un ou plusieurs DT_ indicateurs, spécifiés dans la fonction Win32 `DrawText` , qui indiquent comment le texte du bouton sera dessiné. Cette valeur est passée à `DrawText` lorsque le texte du bouton est dessiné.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur DWORD contenant les indicateurs de dessin de texte précédents.
 
@@ -2030,7 +2031,7 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 *dwExStyle*<br/>
 Valeur qui spécifie les nouveaux styles étendus. Ce paramètre peut être une combinaison des styles étendus de la barre d’outils.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur DWORD qui représente les styles étendus précédents. Pour obtenir la liste des styles, consultez [styles étendus de la barre d’outils](/windows/win32/Controls/toolbar-extended-styles), dans la SDK Windows.
 
@@ -2051,7 +2052,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
 *pImageList*<br/>
 Pointeur vers un `CImageList` objet contenant les images à utiliser par le contrôle de barre d’outils pour afficher les images de bouton actif.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) précédemment utilisé par le contrôle ToolBar pour afficher des images de bouton actif.
 
@@ -2074,7 +2075,7 @@ int SetHotItem(int nHot);
 *nHot*<br/>
 Numéro d’index de base zéro de l’élément qui sera rendu chaud. Si cette valeur est-1, aucun des éléments n’est chaud.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément réactif précédent, ou-1 s’il n’y a pas d’élément réactif.
 
@@ -2095,7 +2096,7 @@ CImageList* SetImageList(CImageList* pImageList);
 *pImageList*<br/>
 Pointeur vers un `CImageList` objet contenant les images à utiliser par le contrôle de barre d’outils pour afficher les images de bouton dans leur état par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un objet [CImageList](../../mfc/reference/cimagelist-class.md) précédemment utilisé par le contrôle ToolBar pour afficher les images de bouton dans leur état par défaut.
 
@@ -2118,7 +2119,7 @@ BOOL SetIndent(int iIndent);
 *iIndent*<br/>
 Valeur qui spécifie la mise en retrait, en pixels.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -2152,7 +2153,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 *clrNew*<br/>
 Valeur COLORREF qui contient la nouvelle couleur de la marque d’insertion.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur COLORREF qui contient la couleur de la marque d’insertion précédente.
 
@@ -2173,7 +2174,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 *iMaxRows*<br/>
 Nombre maximal de lignes à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -2229,7 +2230,7 @@ dans Spécifie la marge intérieure horizontale du contrôle ToolBar, en pixels.
 *nVertPadding*\
 dans Spécifie la marge intérieure verticale du contrôle ToolBar, en pixels.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur DWORD dont le mot de poids faible contient la valeur de remplissage horizontal précédente et dont le mot de poids fort contient la valeur de marge intérieure verticale précédente. Les valeurs de remplissage sont exprimées en pixels.
 
@@ -2261,7 +2262,7 @@ dans Index de base zéro de la liste d’images. Définissez ce paramètre sur z
 *pImageList*\
 dans Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) qui contient la nouvelle liste d’images.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un [CImageList](../../mfc/reference/cimagelist-class.md) qui contient la liste d’images précédente pour le contrôle actuel, ou null si aucune liste d’images n’a été définie.
 
@@ -2329,7 +2330,7 @@ Identificateur de commande du bouton.
 *nState*<br/>
 Indicateurs d’État. Il peut s’agir d’une combinaison des valeurs indiquées pour les États de bouton dans [CToolBarCtrl :: AddButtons](#addbuttons).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
@@ -2376,7 +2377,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 *pszSubAppName*<br/>
 Pointeur vers une chaîne Unicode qui contient le style visuel de la barre d’outils à définir.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour n’est pas utilisée.
 

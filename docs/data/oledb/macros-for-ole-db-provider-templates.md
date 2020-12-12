@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : macros pour les modèles de fournisseur OLE DB'
 title: Macros pour les modèles du fournisseur OLE DB
 ms.date: 02/11/2019
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5e1e1137f49060273c60c73fc89c24c75fd2604d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504005"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317166"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros pour les modèles du fournisseur OLE DB
 
@@ -97,7 +98,7 @@ Les macros du fournisseur de modèles OLE DB offrent des fonctionnalités dans l
 |[END_SCHEMA_MAP](#end_schema_map)|Marque la fin d’un mappage de schéma.|
 |[SCHEMA_ENTRY](#schema_entry)|Associe un GUID à une classe.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -184,7 +185,7 @@ CHAIN_PROPERTY_SET(ChainClass)
 *ChainClass*<br/>
 dans Nom de la classe pour laquelle les propriétés doivent être chaînées. Il s’agit d’une classe générée par l’Assistant Projet ATL qui contient déjà un mappage (par exemple, une session, une commande ou une classe d’objet de source de données).
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Vous pouvez chaîner un jeu de propriétés d’une autre classe à votre propre classe, puis accéder aux propriétés directement à partir de votre classe.
 
@@ -239,7 +240,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
 *dwPropID*<br/>
 [in] Valeur [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) qui peut être utilisée en combinaison avec le GUID du jeu de propriétés pour identifier une propriété.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Cette macro attribue à la propriété de type `DWORD` une valeur par défaut définie dans ATLDB.H. Pour attribuer à la propriété une valeur de votre choix, utilisez [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value). Pour définir `VARTYPE` en même temps les [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) et pour la propriété, utilisez [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
@@ -274,7 +275,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 *options*<br/>
 DBPROPOPTIONS_REQUIRED ou DBPROPOPTIONS_SETIFCHEAP. Normalement, un fournisseur n’a pas besoin de définir d' *options* , car il est défini par le consommateur.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Avec cette macro, vous pouvez spécifier directement la valeur de propriété de type `DWORD` , ainsi que les options et les indicateurs. Pour affecter simplement à une propriété une valeur par défaut définie dans ATLDB.H, utilisez [PROPERTY_INFO_ENTRY](#property_info_entry). Pour affecter à une propriété une valeur de votre choix, sans définir aucune option ou indicateur, utilisez [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value).
 
@@ -300,7 +301,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *value*<br/>
 [in] Valeur de propriété de type `DWORD`.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Avec cette macro, vous pouvez spécifier directement la valeur de propriété de type `DWORD` . Pour affecter à la propriété la valeur par défaut définie dans ATLDB. H, utilisez [PROPERTY_INFO_ENTRY](#property_info_entry). Pour définir la valeur, les indicateurs et les options de la propriété, utilisez [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex).
 
@@ -388,7 +389,7 @@ dans Type de données dans [DbType](/previous-versions/windows/desktop/ms711251(
 *membre*<br/>
 dans Variable membre dans `dataClass` qui stocke les données.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Vous permet de spécifier le type de données de la colonne.
 
@@ -432,7 +433,7 @@ dans Indique l’échelle à utiliser lors de l’obtention de données si dbTyp
 *guid*<br/>
 GUID d’ensemble de lignes de schéma. Pour obtenir la liste des ensembles de lignes de schéma et leurs GUID, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* .
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Vous permet de spécifier la taille de la colonne, le type de données, la précision, l’échelle et le GUID de l’ensemble de lignes de schéma.
 
@@ -460,7 +461,7 @@ dans Taille de la colonne en octets.
 *membre*<br/>
 dans Variable membre dans `dataClass` qui stocke les données de la colonne.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Vous permet de spécifier la taille de la colonne.
 
@@ -489,7 +490,7 @@ dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signe
 *membre*<br/>
 dans Variable membre dans la classe de données qui stocke les données.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Utilisez cette macro lorsque les données de la colonne sont supposées être [DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
@@ -524,7 +525,7 @@ dans Taille de la colonne en octets.
 *membre*<br/>
 dans Variable membre dans la classe de données qui stocke les données.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Semblable à [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) , mais vous permet également de spécifier le type de données de la colonne, ainsi que la taille.
 
@@ -549,7 +550,7 @@ dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signe
 *membre*<br/>
 dans Variable membre dans la classe de données qui stocke les données.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Utilisez cette macro lorsque les données de la colonne sont une chaîne de caractères Unicode terminée par un caractère null, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
@@ -568,7 +569,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 *SchemaClass*<br/>
 Classe qui contient le mappage. En général, il s’agit de la classe session.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le SDK Windows.
 
@@ -605,7 +606,7 @@ GUID d’ensemble de lignes de schéma. Pour obtenir la liste des ensembles de l
 *rowsetClass*<br/>
 Classe qui sera créée pour représenter l’ensemble de lignes de schéma.
 
-#### <a name="remarks"></a>Remarques
+#### <a name="remarks"></a>Notes
 
 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) peut ensuite interroger le mappage pour obtenir une liste de GUID, ou il peut créer un ensemble de lignes s’il reçoit un GUID. L’ensemble de lignes de schéma `IDBSchemaRowsetImpl` créé est semblable à une `CRowsetImpl` classe dérivée standard, sauf qu’il doit fournir une `Execute` méthode ayant la signature suivante :
 

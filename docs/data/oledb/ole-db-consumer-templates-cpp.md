@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les modèles de consommateur OLE DB (C++)
 title: Modèles du consommateur OLE DB (C++)
 ms.date: 10/22/2018
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aaf935234b8ec3396c97345ca7e38a0f8d806bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317153"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modèles du consommateur OLE DB (C++)
 
-Les modèles de consommateurs OLE DB prennent ne charge la spécification OLE DB version 2.6. (Les modèles du consommateur OLE DB sont testés pour OLE DB 2.6, mais ne prend pas en charge chaque interface dans la spécification.) Les modèles de consommateurs réduisent la quantité de code que vous devez écrire pour implémenter un consommateur OLE DB. Les modèles fournissent :
+Les modèles de consommateurs OLE DB prennent ne charge la spécification OLE DB version 2.6. (Les modèles de consommateur OLE DB sont testés sur OLE DB 2,6, mais ne prennent pas en charge toutes les interfaces dans la spécification.) Les modèles de consommateur réduisent la quantité de code que vous devez écrire pour implémenter un consommateur OLE DB. Les modèles fournissent :
 
 - Un accès facile aux fonctionnalités d’OLE DB, et une intégration facile à ATL et à MFC.
 
@@ -24,7 +25,7 @@ Les modèles de consommateurs OLE DB prennent ne charge la spécification OLE DB
 
 - Des types de données C/C++ natifs pour la programmation OLE DB.
 
-Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [Microsoft OLE DB Driver pour SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
+Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server).
 
 Les modèles OLE DB prennent en charge le modèle objet OLE DB existant, au lieu d’ajouter un nouveau modèle objet. Les classes de la couche la plus élevée des modèles de consommateur OLE DB figurent en parallèle des composants définis dans la spécification OLE DB. La conception des modèles de consommateur OLE DB comprend des fonctionnalités avancées, comme les accesseurs multiples sur un ensemble de lignes. L’utilisation de modèles et de l’héritage multiple rend la bibliothèque souple et d’une taille réduite.
 
@@ -34,7 +35,7 @@ Les consommateurs utilisent différentes sortes d’objets, qui sont décrits da
 
 - [Sources de données et sessions](../../data/oledb/data-sources-and-sessions.md)
 
-- [Accesseurs et jeux de lignes](../../data/oledb/accessors-and-rowsets.md)
+- [Accesseurs et ensembles de lignes](../../data/oledb/accessors-and-rowsets.md)
 
 - [Commandes et tables](../../data/oledb/commands-and-tables.md)
 
@@ -50,7 +51,7 @@ Un consommateur OLE DB lie les colonnes des tables de la base de données à des
 
 Un concept important pour travailler avec des consommateurs est que vous déclarez deux classes dans un consommateur : la [classe command (ou table)](../../data/oledb/commands-and-tables.md) et la [classe enregistrement utilisateur](../../data/oledb/user-records.md). Vous accédez à l’ensemble de lignes via la classe command (ou table), qui hérite à la fois d’une classe accessor et d’une classe rowset. La classe d’enregistrement utilisateur (user record) contient le mappage des liaisons de lignes décrit précédemment.
 
-Pour plus d’informations, consultez les rubriques suivantes :
+Pour plus d'informations, voir les rubriques suivantes :
 
 - [Création d’un consommateur OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
 
@@ -58,7 +59,7 @@ Pour plus d’informations, consultez les rubriques suivantes :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Programmation OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Programmation OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Accès aux données](../data-access-in-cpp.md)<br/>
-[Documentation du Kit de développement OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
-[Pilote Microsoft OLE DB pour SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)
+[Documentation du Kit de développement logiciel (SDK) OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Microsoft OLE DB Driver pour SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)

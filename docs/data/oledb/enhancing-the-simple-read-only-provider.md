@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : amélioration du fournisseur de Read-Only simple'
 title: Amélioration du fournisseur simple accessible en lecture seule
 ms.date: 10/26/2018
 helpviewer_keywords:
@@ -7,25 +8,25 @@ helpviewer_keywords:
 - IRowsetLocate class, adding to OLE DB template providers
 - simple read-only poviders [C++]
 ms.assetid: cba0e09f-44c1-41c1-9456-332aa13dc158
-ms.openlocfilehash: d61f24a9a9abffe836a7f11bd5d1517fddf97fe7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00a0ea4fb9b759447026353ba0d78c7c856b15ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317634"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Amélioration du fournisseur simple accessible en lecture seule
 
-Cette section montre comment améliorer la [fournisseur simple en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md) créé dans la section précédente. `IRowsetLocateImpl` Crée une implémentation pour le `IRowsetLocate` interface et ajoute la prise en charge des signets pour vous.
+Cette section montre comment améliorer le [fournisseur simple accessible en lecture seule](../../data/oledb/implementing-the-simple-read-only-provider.md) créé dans la section précédente. `IRowsetLocateImpl` crée une implémentation pour l' `IRowsetLocate` interface et ajoute la prise en charge des signets pour vous.
 
-Lorsque vous avez un fournisseur opérationnel, vous souhaiterez peut-être améliorer pour rendre la mise à jour du fournisseur, gérer des transactions ou améliorer les performances de l’algorithme de l’extraction de lignes. La plupart des améliorations du fournisseur impliquent l’ajout d’une interface à un objet COM existant.
+Si vous disposez d’un fournisseur opérationnel, vous pouvez l’améliorer pour mettre à jour le fournisseur, gérer les transactions ou améliorer les performances de l’algorithme d’extraction de lignes. La plupart des améliorations du fournisseur impliquent l’ajout d’une interface à un objet COM existant.
 
-L’exemple dans les rubriques suivantes améliore le mécanisme d’extraction de lignes en ajoutant le `IRowsetLocate` à l’interface `CAgentRowset`. Les rubriques vous montrent à :
+L’exemple des rubriques suivantes améliore le mécanisme d’extraction de lignes en ajoutant l' `IRowsetLocate` interface à `CAgentRowset` . Les rubriques vous montrent comment :
 
-- [Rendre RCustomRowset l’héritage de](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).
+- [Faire en sorte que RCustomRowset hérite de IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md).
 
-- [Déterminer dynamiquement les colonnes retournées au consommateur](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
+- [Déterminez dynamiquement les colonnes retournées au consommateur](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d’un fournisseur simple accessible en lecture seule](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
+[Création d’un fournisseur de Read-Only simple](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

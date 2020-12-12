@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe IRowsetInfoImpl'
 title: IRowsetInfoImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 7ceaf30318c176b13cb6f81c8401501863b988a4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cc51a32b6bee62ef7343bf134b3f1bc4099b8562
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317361"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
 
@@ -53,7 +54,7 @@ Votre classe, dérivée de `IRowsetInfoImpl` .
 *PropClass*<br/>
 Classe de propriété définissable par l’utilisateur qui A par défaut la valeur *T*.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** altdb. h
 
@@ -67,7 +68,7 @@ Classe de propriété définissable par l’utilisateur qui A par défaut la val
 |[GetReferencedRowset](#getreferencedrowset)|Retourne un pointeur d’interface vers l’ensemble de lignes auquel un signet s’applique.|
 |[GetSpecification](#getspecification)|Retourne un pointeur d'interface sur l'objet (commande ou session) qui a créé ce jeu de lignes.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Interface obligatoire sur les ensembles de lignes. Cette classe implémente les propriétés de l’ensemble de lignes à l’aide du [mappage de jeu de propriétés](./macros-for-ole-db-provider-templates.md#begin_propset_map) défini dans votre classe de commande. Bien que la classe d’ensemble de lignes semble utiliser les jeux de propriétés de la classe de commande, l’ensemble de lignes est fourni avec sa propre copie des propriétés au moment de l’exécution, lorsqu’il est créé par un objet de commande ou de session.
 
@@ -119,7 +120,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 Consultez [IRowsetInfo :: GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Utilisez cette méthode avec [igetdatasourceimpl,](../../data/oledb/igetdatasourceimpl-class.md) pour récupérer les propriétés de l’objet source de données.
 

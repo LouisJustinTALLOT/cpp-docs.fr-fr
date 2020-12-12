@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : propriétés du projet Clang (Android C++)'
 title: Propriétés du projet Clang (Android C++)
 ms.date: 10/23/2017
 ms.assetid: 663140ea-a568-472b-a79a-dfea8818e06a
@@ -35,27 +36,27 @@ f1_keywords:
 - VC.Project.VCClangCompilerTool.ForcedIncludeFiles
 - VC.Project.VCClangCompilerTool.MultiProcessorCompilation
 - VC.Project.VCClangCompilerTool.AdditionalOptionsPage
-ms.openlocfilehash: 11e8a7f1ea264b26b9092d4834525541e098a5e1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5f98181ddcbd47e97333a796843e81b50e6d5276
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444976"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319285"
 ---
 # <a name="clang-project-properties-android-c"></a>Propriétés du projet Clang (Android C++)
 
 | Propriété | Description | Choices |
 |--|--|--|
-| Autres répertoires Include | Spécifie un ou plusieurs répertoires à ajouter au chemin Include, séparés par des points-virgules s’il en existe plusieurs. (-I*chemin*). |
-| Format des informations de débogage | Indique le type d'informations de débogage générées par le compilateur. | **Aucune** : ne génère aucune information de débogage, la compilation peut donc être plus rapide.<br>**Informations de débogage complètes (DWARF2)**  : génère des informations de débogage DWARF2.<br>**Informations de numéro de ligne** : générez uniquement des informations de numéro de ligne.<br> |
-| Nom de fichier objet | Spécifie un nom de substitution pour le nom de fichier objet par défaut. Il peut s’agir d’un nom de fichier ou de répertoire. (/FO*Name*). |
-| Niveau d'avertissement | Sélectionnez la rigueur avec laquelle le compilateur doit traiter les erreurs de code.  D’autres indicateurs doivent être ajoutés directement dans les options supplémentaires. (/w, /Weverything). | **Désactiver tous les avertissements** : désactive tous les avertissements du compilateur.<br>**Activer** : active tous les avertissements, y compris ceux qui sont désactivés par défaut.<br> |
+| Autres répertoires Include | Spécifie un ou plusieurs répertoires à ajouter au chemin include. Si vous ajoutez plusieurs répertoires, séparez-les par des points-virgules. (-I *chemin*). |
+| Format des informations de débogage | Indique le type d'informations de débogage générées par le compilateur. | **Aucune** : ne génère aucune information de débogage ; la compilation peut donc être plus rapide.<br>**Informations de débogage complètes (DWARF2)** : générez des informations de débogage DWARF2.<br>**Informations de numéro de ligne** : générez uniquement des informations de numéro de ligne.<br> |
+| Nom de fichier objet | Spécifie un nom de substitution pour le nom de fichier objet par défaut. Il peut s’agir d’un nom de fichier ou de répertoire. (/FO *Name*). |
+| Niveau d’avertissement | Sélectionnez la rigueur avec laquelle le compilateur doit traiter les erreurs de code.  D’autres indicateurs doivent être ajoutés directement dans les options supplémentaires. (/w, /Weverything). | **Désactiver tous les avertissements** : désactive tous les avertissements du compilateur.<br>**Activer** : active tous les avertissements, y compris ceux qui sont désactivés par défaut.<br> |
 | Considérer les avertissements comme des erreurs | Considère tous les avertissements du compilateur comme des erreurs. Pour un nouveau projet, il est conseillé d’utiliser /WX dans toutes les compilations, car la résolution de tous les avertissements permet de réduire les erreurs de code difficilement détectables. |
 | Activer le mode détaillé | Affichez les commandes à exécuter et utilisez la sortie détaillée. |
 | Optimization | Indique le niveau d’optimisation pour l’application. | **Personnalisé** : optimisation personnalisée.<br>**Désactivé** : désactive l’optimisation.<br>**Réduire la taille** : optimise la taille.<br>**Augmenter la vitesse** : optimise la vitesse.<br>**Optimisation complète** : optimisations coûteuses.<br> |
 | Alias strict | Les règles d’alias les plus strictes sont utilisées.  Un objet d’un type n’est jamais supposé être à la même adresse qu’un objet de type différent. |
 | Omettre le pointeur de frame | Empêche la création des pointeurs de frame sur la pile des appels. |
-| Activer les exceptions C++ | Spécifie le modèle de gestion des exceptions à utiliser par le compilateur. | **Non** : désactive la gestion des exceptions.<br>**Oui** : activez la gestion des exceptions.<br>**Tables de déroulement** : génère toutes les données statiques nécessaires, mais n’affecte pas le code généré.<br> |
+| Activer les exceptions C++ | Spécifie le modèle de gestion des exceptions à utiliser par le compilateur. | **Non** : désactive la gestion des exceptions.<br>**Oui** : active la gestion des exceptions.<br>**Tables de déroulement** : génère toutes les données statiques nécessaires, mais n’affecte pas le code généré.<br> |
 | Activer la liaison au niveau des fonctions | Permet au compilateur d’empaqueter des fonctions individuelles sous la forme de fonctions empaquetées (COMDATs). Requis avec l’option Modifier et Continuer.     (ffunction-sections). |
 | Activer la liaison au niveau des données | Permet aux optimisations de l’éditeur de liens de supprimer les données inutilisées en émettant chaque élément de données dans une section séparée. |
 | Activer Advanced SIMD (Neon) | Permet la génération de code pour le matériel NEON Floating Point. Applicable uniquement à l’architecture ARM. |
@@ -64,8 +65,8 @@ ms.locfileid: "79444976"
 | PIC (Position Independent Code) | Générez un code PIC (position Independent Code) à utiliser dans une bibliothèque partagée. |
 | Utiliser des enums courts | Un type enum utilise uniquement le nombre d’octets requis par l’ensemble des valeurs possibles d’entrée. |
 | Activer les informations de type au moment de l’exécution | Ajoute le code permettant de vérifier les types d’objet C++ à l’exécution (informations de type au moment de l’exécution).     (frtti, fno-rtti) |
-| Norme du langage C | Détermine la norme du langage C. | **Par défaut**<br>**C89** : norme du langage C89.<br>**C99** : norme du langage C99.<br>**C11** : norme du langage C11.<br>**C99 (Dialecte GNU)**  : norme du langage C99 (Dialecte GNU).<br>**C11 (Dialecte GNU)**  : norme du langage C11 (Dialecte GNU).<br> |
-| Norme du langage C++ | Détermine la norme du langage C++. | **Par défaut**<br>**C++03** : norme du langage C++03.<br>**C++11** : norme du langage C++11.<br>**C++14** : norme du langage C++14.<br>**C++03 (Dialecte GNU)**  : norme du langage C++03 (Dialecte GNU).<br>**C++11 (Dialecte GNU)**  : norme du langage C++11 (Dialecte GNU).<br>**C++14 (Dialecte GNU)**  : norme du langage C++14 (Dialecte GNU).<br> |
+| Norme du langage C | Détermine la norme du langage C. | **Par défaut**<br>**C89** : norme du langage C89.<br>**C99** : norme du langage C99.<br>**C11** : norme du langage C11.<br>**C99 (Dialecte GNU)**  : norme du langage C99 (Dialecte GNU).<br>**C11 (dialecte GNU)** -norme du langage C11 (dialecte GNU).<br> |
+| Norme du langage C++ | Détermine la norme du langage C++. | **Par défaut**<br>**C++03** : norme du langage C++03.<br>**C++ 11** -norme du langage c++ 11.<br>**C++14** : norme du langage C++14.<br>**C++03 (Dialecte GNU)**  : norme du langage C++03 (Dialecte GNU).<br>**C++11 (Dialecte GNU)**  : norme du langage C++11 (Dialecte GNU).<br>**C++14 (Dialecte GNU)**  : norme du langage C++14 (Dialecte GNU).<br> |
 | Définitions de préprocesseur | Définit les symboles de prétraitement pour votre fichier source. (-D) |
 | Annuler la définition de définitions de préprocesseur | Spécifie un ou plusieurs non définis pour le préprocesseur.  ( *Macro*-U) |
 | Annulation de la définition de toutes les définitions du préprocesseur | Annule la définition de toutes les valeurs de préprocesseur précédemment définies.  (-undef) |
@@ -73,8 +74,8 @@ ms.locfileid: "79444976"
 | En-tête précompilé | Créer/utiliser un en-tête précompilé : active la création ou l’utilisation d’un en-tête précompilé pendant la génération. | **Utiliser** : utilisez un en-tête précompilé.<br>**Sans utiliser les en-têtes précompilés** : n’utilise pas un en-tête précompilé.<br> |
 | Fichier d’en-tête précompilé | Spécifie le nom du fichier d’en-tête à utiliser pour le fichier d’en-tête précompilé. Ce fichier est également ajouté à’fichiers Include forcés’lors de la génération |
 | Répertoire du fichier d’en-tête précompilé de sortie | Spécifie le répertoire de l’en-tête précompilé généré. Ce répertoire est également ajouté à « autres répertoires Include » lors de la génération |
-| Compiler l’en-tête précompilé comme | Sélectionnez l’option de langage de compilation pour le fichier d’en-tête précompilé (-x c-header, -x c++-header). | **Compiler en code C** : compilez en code C.<br>**Compiler en code C++**  : compile en code C++.<br> |
-| Compiler en | Sélectionnez l’option langage de compilation pour les fichiers *`.c`* et *`.cpp`* .  'Default’détectera en fonction de *`.c`* ou de l’extension de *`.cpp`* . (-x c, -x c++) | **Par défaut** : option par défaut.<br>**Compiler en code C** : compilez en code C.<br>**Compiler en code C++**  : compile en code C++.<br> |
+| Compiler l’en-tête précompilé comme | Sélectionnez l’option de langage de compilation pour le fichier d’en-tête précompilé (-x c-header, -x c++-header). | **Compiler en code C** : compile en code C.<br>**Compiler en code c++** -compiler en code c++.<br> |
+| Compiler en | Sélectionnez l’option langage de compilation pour les *`.c`* *`.cpp`* fichiers et.  'Default’détecte en fonction de *`.c`* ou de l' *`.cpp`* extension. (-x c, -x c++) | **Par défaut** : option par défaut.<br>**Compiler en code C** : compile en code C.<br>**Compiler en code c++** -compiler en code c++.<br> |
 | Fichiers Include forcés | un ou plusieurs fichiers Include forcés.     (-inclure le *nom*) |
 | Compilation multiprocesseur | Compilation multiprocesseur. |
 | Options supplémentaires | Options supplémentaires. |

@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : signes de ponctuation (C++)'
 title: Signes de ponctuation (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - punctuators [C++]
 ms.assetid: 1521564c-a977-488a-9490-068079897592
-ms.openlocfilehash: cc4e56cd0dce3ae91183a8675eba96f174c3c31f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7485ea82725c2221d32d0647123cfce473719ca3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319428"
 ---
 # <a name="punctuators-c"></a>Signes de ponctuation (C++)
 
@@ -22,7 +23,7 @@ Tous les caractères suivants sont considérés comme des signes de ponctuation�
 [ ] \ ; ' : " < > ? , . / #
 ```
 
-Les signes de ponctuation **[]** , **()** et **{}** doivent apparaître par paires après la [phase de traduction](../preprocessor/phases-of-translation.md) 4.
+Les signes de ponctuation **[]**, **()** et **{}** doivent apparaître par paires après la [phase de traduction](../preprocessor/phases-of-translation.md) 4.
 
 ## <a name="see-also"></a>Voir aussi
 

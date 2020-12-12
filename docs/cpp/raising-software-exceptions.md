@@ -1,5 +1,6 @@
 ---
-title: Déclenchement d'exceptions logicielles
+description: 'En savoir plus sur : déclenchement d’exceptions logicielles'
+title: Déclenchement d’exceptions logicielles
 ms.date: 11/04/2016
 helpviewer_keywords:
 - run-time errors, treating as exceptions
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: f50d84bd034cc6eeb00dc17cb3b7272a988b6731
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 737bec4af99ad7743a8f7740d57919f169c2b509
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319402"
 ---
-# <a name="raising-software-exceptions"></a>Déclenchement d'exceptions logicielles
+# <a name="raising-software-exceptions"></a>Déclenchement d’exceptions logicielles
 
 Certaines des sources les plus courantes d'erreurs de programme ne sont pas marquées en tant qu'exceptions par le système. Par exemple, si vous essayez d'allouer un bloc de mémoire mais que la mémoire disponible est insuffisante, la fonction runtime ou API ne déclenche pas d'exception mais retourne un code d'erreur.
 
@@ -34,7 +35,7 @@ Pour utiliser la gestion structurée des exceptions avec des erreurs :
 
 - Utilisez les filtres de gestion des exceptions pour tester le code d'exception que vous avez défini.
 
-Le \<le fichier winerror. h > affiche le format des codes d’exception. Pour veiller à ne pas définir un code qui est en conflit avec un code d'exception existant, définissez le troisième bit le plus significatif à 1. Les quatre bits les plus significatifs doivent être définis comme indiqué dans le tableau suivant.
+Le \<winerror.h> fichier affiche le format des codes d’exception. Pour veiller à ne pas définir un code qui est en conflit avec un code d'exception existant, définissez le troisième bit le plus significatif à 1. Les quatre bits les plus significatifs doivent être définis comme indiqué dans le tableau suivant.
 
 |Bits|Paramètre binaire recommandé|Description|
 |----------|--------------------------------|-----------------|
@@ -51,7 +52,7 @@ Le code d’erreur obtenu doit donc avoir les quatre bits les plus élevés déf
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-Après avoir défini un code d'exception, vous pouvez l'utiliser pour lever une exception. Par exemple, le code suivant déclenche l’exception `STATUS_INSUFFICIENT_MEM` en réponse à un problème d’allocation de mémoire :
+Après avoir défini un code d'exception, vous pouvez l'utiliser pour lever une exception. Par exemple, le code suivant lève l' `STATUS_INSUFFICIENT_MEM` exception en réponse à un problème d’allocation de mémoire :
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -74,4 +75,4 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
 ## <a name="see-also"></a>Voir aussi
 
 [Écriture d’un gestionnaire d’exceptions](../cpp/writing-an-exception-handler.md)<br/>
-[Gestion structurée des exceptions (C++C/)](../cpp/structured-exception-handling-c-cpp.md)
+[Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

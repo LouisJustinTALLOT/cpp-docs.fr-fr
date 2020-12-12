@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : informations de référence sur les pages de propriétés multiplateforme C++'
 title: Propriétés du projet Android (C++)
 ms.date: 10/23/2017
 ms.topic: reference
 ms.assetid: 3a7ba14f-a628-4c1b-bb89-73b9195769f1
-ms.openlocfilehash: 2d6cf27136f848a323023c584ef57c91641f8489
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: d4cfb5a74a2c2a19286708bb76c107b002472cd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041274"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319246"
 ---
 # <a name="c-cross-platform-property-page-reference"></a>Informations de référence sur les pages de propriétés des projets multiplateformes C++
 

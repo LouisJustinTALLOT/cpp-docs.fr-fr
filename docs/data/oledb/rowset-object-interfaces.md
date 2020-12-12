@@ -1,5 +1,6 @@
 ---
-title: Interfaces de l'objet rowset
+description: 'En savoir plus sur : interfaces d’objet rowset'
+title: Interfaces de l'objet Rowset
 ms.date: 10/24/2018
 helpviewer_keywords:
 - interfaces, OLE DB
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
-ms.openlocfilehash: d9c2c61714a98d9de09d8657352a14f296e35a58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fc7cbb0ee7c15cc7414144334018afc93888da01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316854"
 ---
-# <a name="rowset-object-interfaces"></a>Interfaces de l'objet rowset
+# <a name="rowset-object-interfaces"></a>Interfaces de l'objet Rowset
 
 Le tableau suivant indique les interfaces obligatoires et facultatives définies par OLE DB pour un objet d’ensemble de lignes.
 
@@ -29,7 +30,7 @@ Le tableau suivant indique les interfaces obligatoires et facultatives définies
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180(v=vs.85))|Facultatif|Non|
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953(v=vs.85))|Facultatif|Non|
 |[IColumnsRowset](/previous-versions/windows/desktop/ms722657(v=vs.85))|Facultatif|Non|
-|[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Facultatif|Oui (via ATL)|
+|[Interfaces](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Facultatif|Oui (via ATL)|
 |[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832(v=vs.85))|Facultatif|Non|
 |[IGetRow](/previous-versions/windows/desktop/ms718047(v=vs.85))|Facultatif|Non|
 |[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))|Facultatif|Oui|
@@ -46,8 +47,8 @@ Le tableau suivant indique les interfaces obligatoires et facultatives définies
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Facultatif|Oui|
 |[IRowsetBookmark](/previous-versions/windows/desktop/ms714246(v=vs.85))|Facultatif|Non|
 
-L’objet d’ensemble de lignes généré par `IAccessor`l' `IRowset`Assistant implémente, et `IRowsetInfo` via l’héritage. Le `IAccessorImpl` lie les deux colonnes de sortie. L' `IRowset` interface gère les extractions de lignes et de données. L' `IRowsetInfo` interface gère les propriétés de l’ensemble de lignes.
+L’objet d’ensemble de lignes généré par l’Assistant implémente `IAccessor` , `IRowset` et `IRowsetInfo` via l’héritage. Le `IAccessorImpl` lie les deux colonnes de sortie. L' `IRowset` interface gère les extractions de lignes et de données. L' `IRowsetInfo` interface gère les propriétés de l’ensemble de lignes.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Architecture du modèle de fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
