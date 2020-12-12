@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : énumération ModuleType'
 title: ModuleType (énumération)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ModuleType enumeration
 ms.assetid: 61a763af-a5a4-451d-8b40-815af507fcde
-ms.openlocfilehash: 8425a15d594f7b8b30027d3576ee86015b656130
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 148f9594fd16a6c8a2af70ac0ff2ac03cd1f62e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209371"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType (énumération)
 
@@ -28,13 +29,13 @@ enum ModuleType;
 
 ### <a name="values"></a>Valeurs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`InProc`|Un serveur in-process.|
 |`OutOfProc`|Un serveur hors processus.|
 |`DisableCaching`|Désactivez le mécanisme de mise en cache sur le module.|
-|`InProcDisableCaching`|Combinaison de `InProc` et `DisableCaching`.|
-|`OutOfProcDisableCaching`|Combinaison de `OutOfProc` et `DisableCaching`.|
+|`InProcDisableCaching`|Combinaison de `InProc` et `DisableCaching` .|
+|`OutOfProcDisableCaching`|Combinaison de `OutOfProc` et `DisableCaching` .|
 
 ## <a name="requirements"></a>Spécifications
 
@@ -44,4 +45,4 @@ enum ModuleType;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL, espace de noms](microsoft-wrl-namespace.md)
+[Microsoft :: WRL, espace de noms](microsoft-wrl-namespace.md)

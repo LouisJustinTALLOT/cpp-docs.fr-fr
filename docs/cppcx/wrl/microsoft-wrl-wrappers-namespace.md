@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Microsoft :: WRL :: wrappers, espace de noms'
 title: Microsoft::WRL::Wrappers, espace de noms
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-ms.openlocfilehash: ece26b3f9928d44a593de830cf8a25c57e4c2d89
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 603fa14b0e43f481b1afe56d98e355d328f284fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213744"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209397"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers, espace de noms
 
@@ -28,17 +29,17 @@ namespace Microsoft::WRL::Wrappers;
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`FileHandle`|`HandleT<HandleTraits::FileHandleTraits>`|
 
 ### <a name="classes"></a>Classes
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[CriticalSection, classe](criticalsection-class.md)|Représente un objet de section critique.|
 |[Event, classe (WRL)](event-class-wrl.md)|Représente un événement.|
-|[HandleT, classe](handlet-class.md)|Représente un handle vers un objet.|
+|[Handlet (classe)](handlet-class.md)|Représente un handle vers un objet.|
 |[HString, classe](hstring-class.md)|Prend en charge la manipulation des handles HSTRING.|
 |[HStringReference, classe](hstringreference-class.md)|Représente un HSTRING créé à partir d’une chaîne existante.|
 |[Mutex, classe](mutex-class.md)|Représente un objet de synchronisation qui contrôle exclusivement une ressource partagée.|
@@ -54,4 +55,4 @@ namespace Microsoft::WRL::Wrappers;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL, espace de noms](microsoft-wrl-namespace.md)
+[Microsoft :: WRL, espace de noms](microsoft-wrl-namespace.md)

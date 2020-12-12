@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : printf_s, _printf_s_l, wprintf_s, _wprintf_s_l'
 title: printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-ms.openlocfilehash: f8b324b5f3c23b324bdcd43e3529ad3a3d4d6847
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d26f18a45f218f6d1921a8603ffed15df24dcc90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209475"
 ---
 # <a name="printf_s-_printf_s_l-wprintf_s-_wprintf_s_l"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
@@ -84,7 +85,7 @@ Arguments facultatifs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre de caractères imprimés ou une valeur négative si une erreur se produit.
 
@@ -96,7 +97,7 @@ La principale différence entre **printf_s** et **printf** est que **printf_s** 
 
 Pour plus d’informations sur les codes d’erreur et **errno** , consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**printf_s** et **fprintf_s** se comportent de la même manière, sauf que **printf_s** écrit la sortie dans **stdout** plutôt que dans une destination de type **file**. Pour plus d’informations, consultez [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+**printf_s** et **fprintf_s** se comportent de la même manière, sauf que **printf_s** écrit la sortie dans **stdout** plutôt que sur une destination de type **file**. Pour plus d’informations, consultez [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
 
 **wprintf_s** est une version à caractères larges de **printf_s**; le *format* est une chaîne de caractères larges. **wprintf_s** et **printf_s** se comportent de la même manière si le flux est ouvert en mode ANSI. **printf_s** ne prend pas actuellement en charge la sortie dans un flux Unicode.
 
@@ -122,19 +123,19 @@ Line one
         Line two
 ```
 
-Les [spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) commencent toujours par un signe **%** de pourcentage () et sont lues de gauche à droite. Quand **printf_s** rencontre la première spécification de format (le cas échéant), il convertit la valeur du premier argument après le *format* et la génère en conséquence. La deuxième spécification de format entraîne la conversion et la sortie du deuxième argument, et ainsi de suite. S’il y a plus d’arguments que de spécifications de format, les arguments en trop sont ignorés. Les résultats sont indéfinis s’il n’y a pas assez d’arguments pour toutes les spécifications de format.
+Les [spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) commencent toujours par un signe de pourcentage ( **%** ) et sont lues de gauche à droite. Lorsque **printf_s** rencontre la première spécification de format (le cas échéant), il convertit la valeur du premier argument après le *format* et la génère en conséquence. La deuxième spécification de format entraîne la conversion et la sortie du deuxième argument, et ainsi de suite. S’il y a plus d’arguments que de spécifications de format, les arguments en trop sont ignorés. Les résultats sont indéfinis s’il n’y a pas assez d’arguments pour toutes les spécifications de format.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**printf_s**, **_printf_s_l**|\<stdio.h>|
 |**wprintf_s**, **_wprintf_s_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -186,7 +187,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
+### <a name="sample-output"></a>Exemple de sortie
 
 ```Output
 Integer formats:
@@ -221,5 +222,5 @@ Address as:   0012FF78
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)<br/>

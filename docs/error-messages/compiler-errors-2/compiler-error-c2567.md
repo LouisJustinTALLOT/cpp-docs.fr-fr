@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2567'
 title: Erreur du compilateur C2567
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2567
 ms.assetid: 9c140ac9-7059-47e6-9ba1-e7939c8c0dc3
-ms.openlocfilehash: 921992c678c1de0b74f99f544173478ebe809b2c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 113dfebc1ac6bde6857ea55fd6249fff12c9faae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209111"
 ---
 # <a name="compiler-error-c2567"></a>Erreur du compilateur C2567
 
 Impossible d’ouvrir les métadonnées dans’file', le fichier a peut-être été supprimé ou déplacé
 
-Un fichier de métadonnées référencé dans la source (avec `#using`) est introuvable dans le même répertoire par le compilateur back end processus comme c’était le cas par le processus frontal du compilateur. Pour plus d’informations, consultez [#using directive](../../preprocessor/hash-using-directive-cpp.md) .
+Un fichier de métadonnées référencé dans la source (avec `#using` ) n’a pas été trouvé dans le même répertoire par le compilateur back end processus comme c’était le cas par le processus frontal du compilateur. Pour plus d’informations, consultez [#using directive](../../preprocessor/hash-using-directive-cpp.md) .
 
 C2567 peut être provoquée si vous compilez avec **/c** sur un ordinateur, puis tentez une génération de code durant l’édition de liens sur un autre ordinateur. Pour plus d’informations, consultez [/LTCG (génération de code durant l’édition de liens)](../../build/reference/ltcg-link-time-code-generation.md)).
 

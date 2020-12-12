@@ -1,23 +1,24 @@
 ---
-title: 'Procédure : Utiliser des tableaux dans C++ / c++ / CLI'
+description: 'En savoir plus sur : Comment : utiliser des tableaux en C++/CLI'
+title: 'Comment : utiliser des tableaux dans C++/CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: 65d384cbac7691d000ae6e895c9cf63e71726689
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d88f1b0b936c6a2f8589e78ac7ae585e4550fec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387186"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209215"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>Procédure : Utiliser des tableaux dans C++ / c++ / CLI
+# <a name="how-to-use-arrays-in-ccli"></a>Comment : utiliser des tableaux dans C++/CLI
 
-Cet article explique comment utiliser des tableaux dans C++ / c++ / CLI.
+Cet article explique comment utiliser des tableaux en C++/CLI.
 
-## <a name="single-dimension-arrays"></a>Tableaux unidimensionnels
+## <a name="single-dimension-arrays"></a>Tableaux à une seule dimension
 
-L’exemple suivant montre comment créer des tableaux à une dimension de référence, valeur et types de pointeur natif. Il montre également comment retourner un tableau unidimensionnel à partir d’une fonction et comment passer un tableau unidimensionnel en tant qu’argument à une fonction.
+L’exemple suivant montre comment créer des tableaux unidimensionnels de type référence, valeur et pointeur natif. Il montre également comment retourner un tableau à une seule dimension à partir d’une fonction et comment passer un tableau à une seule dimension comme argument à une fonction.
 
 ```cpp
 // mcppv2_sdarrays.cpp
@@ -151,7 +152,7 @@ MyStruct1[0] = 40
 MyStruct1[1] = 41
 ```
 
-L’exemple suivant montre comment effectuer l’initialisation d’agrégat sur une dimension des tableaux managés.
+L’exemple suivant montre comment effectuer l’initialisation d’agrégats sur des tableaux managés à une seule dimension.
 
 ```cpp
 // mcppv2_sdarrays_aggregate_init.cpp
@@ -204,7 +205,7 @@ IntArray[1, 0] = 11
 IntArray[1, 1] = 11
 ```
 
-Cet exemple montre comment effectuer l’initialisation d’agrégat sur un tableau managé de plusieurs dimension :
+Cet exemple montre comment effectuer une initialisation d’agrégats sur un tableau managé à plusieurs dimensions :
 
 ```cpp
 // mcppv2_mdarrays_aggregate_initialization.cpp
@@ -250,7 +251,7 @@ int main() {
 
 ## <a name="jagged-arrays"></a>Tableaux en escalier
 
-Cette section montre comment créer des tableaux unidimensionnels de tableaux managés de référence, valeur et types de pointeur natif. Il montre également comment retourner un tableau unidimensionnel de tableaux managés à partir d’une fonction et comment passer un tableau unidimensionnel en tant qu’argument à une fonction.
+Cette section montre comment créer des tableaux unidimensionnels de tableaux managés de types de référence, de valeur et de pointeurs natifs. Il montre également comment retourner un tableau de tableaux managés à une seule dimension à partir d’une fonction et comment passer un tableau à une seule dimension comme argument d’une fonction.
 
 ```cpp
 // mcppv2_array_of_arrays.cpp
@@ -347,7 +348,7 @@ IntArray[1] = 11
 41
 ```
 
-L’exemple suivant montre comment effectuer l’initialisation d’agrégat avec des tableaux en escalier.
+L’exemple suivant montre comment effectuer l’initialisation d’agrégats avec des tableaux en escalier.
 
 ```cpp
 // mcppv2_array_of_arrays_aggregate_init.cpp
@@ -454,7 +455,7 @@ MyClass0[1] = 1
 
 ## <a name="managed-arrays-as-template-type-parameters"></a>Tableaux managés en tant que paramètres de type de modèle
 
-Cet exemple montre comment utiliser un tableau managé en tant que paramètre à un modèle :
+Cet exemple montre comment utiliser un tableau managé comme paramètre d’un modèle :
 
 ```cpp
 // mcppv2_template_type_params.cpp
@@ -482,9 +483,9 @@ int main() {
 Return Code: 0
 ```
 
-## <a name="typedefs-for-managed-arrays"></a>typedefs pour des tableaux gérés
+## <a name="typedefs-for-managed-arrays"></a>typedefs pour les tableaux managés
 
-Cet exemple montre comment effectuer un typedef pour un tableau managé :
+Cet exemple montre comment créer un typedef pour un tableau managé :
 
 ```cpp
 // mcppv2_typedef_arrays.cpp
@@ -501,9 +502,9 @@ int main() {
 
 ## <a name="sorting-arrays"></a>Tri de tableaux
 
-Contrairement aux tableaux C++ standard, les tableaux managés sont dérivés implicitement à partir d’une classe de base du tableau à partir duquel ils héritent le comportement commun. Par exemple, le `Sort` (méthode), qui peut être utilisée pour ordonner les éléments dans n’importe quel tableau.
+Contrairement aux tableaux C++ standard, les tableaux managés sont dérivés implicitement d’une classe de base de tableau dont ils héritent le comportement commun. La `Sort` méthode, qui peut être utilisée pour classer les éléments d’un tableau, en est un exemple.
 
-Pour les tableaux qui contiennent des types intrinsèques base, vous pouvez appeler la `Sort` (méthode). Vous pouvez remplacer les critères de tri, et cela n’est requis lorsque vous souhaitez trier des tableaux de types complexes. Dans ce cas, le type d’élément de tableau doit implémenter le <xref:System.IComparable.CompareTo%2A> (méthode).
+Pour les tableaux qui contiennent des types intrinsèques de base, vous pouvez appeler la `Sort` méthode. Vous pouvez remplacer les critères de tri, ce qui est nécessaire lorsque vous souhaitez trier des tableaux de types complexes. Dans ce cas, le type d’élément de tableau doit implémenter la <xref:System.IComparable.CompareTo%2A> méthode.
 
 ```cpp
 // array_sort.cpp
@@ -518,11 +519,11 @@ int main() {
 }
 ```
 
-## <a name="sorting-arrays-by-using-custom-criteria"></a>Tri des tableaux à l’aide de critères personnalisés
+## <a name="sorting-arrays-by-using-custom-criteria"></a>Tri de tableaux à l’aide de critères personnalisés
 
-Pour trier des tableaux qui contiennent des types intrinsèques base, appelez simplement la `Array::Sort` (méthode). Toutefois, pour le tri des tableaux qui contiennent des types complexes ou à remplacer les critères de tri par défaut, remplacent le <xref:System.IComparable.CompareTo%2A> (méthode).
+Pour trier des tableaux qui contiennent des types intrinsèques de base, il vous suffit d’appeler la `Array::Sort` méthode. Toutefois, pour trier des tableaux qui contiennent des types complexes ou substituer les critères de tri par défaut, remplacez la <xref:System.IComparable.CompareTo%2A> méthode.
 
-Dans l’exemple suivant, une structure nommée `Element` est dérivée de <xref:System.IComparable>et écrits pour fournir un <xref:System.IComparable.CompareTo%2A> méthode qui utilise la moyenne des deux entiers comme critère de tri.
+Dans l’exemple suivant, une structure nommée `Element` est dérivée de <xref:System.IComparable> et écrite pour fournir une <xref:System.IComparable.CompareTo%2A> méthode qui utilise la moyenne de deux entiers comme critère de tri.
 
 ```cpp
 using namespace System;
@@ -568,7 +569,7 @@ int main() {
 
 ## <a name="array-covariance"></a>Covariance de tableau
 
-Compte tenu de classe de référence D disposant de classe base directe ou indirecte B, un tableau de type D affectables à une variable de tableau de type b.
+Si vous avez donné la classe de référence D qui a une classe de base directe ou indirecte B, un tableau de type D peut être assigné à une variable de tableau de type B.
 
 ```cpp
 // clr_array_covariance.cpp
@@ -581,9 +582,9 @@ int main() {
 }
 ```
 
-Une assignation à un élément de tableau doit être compatible avec l’assignation avec le type dynamique du tableau. Une assignation à un élément de tableau qui a un type incompatible provoque `System::ArrayTypeMismatchException` levée.
+Une assignation à un élément de tableau doit être compatible avec le type dynamique du tableau. Une assignation à un élément de tableau dont le type est incompatible provoque la `System::ArrayTypeMismatchException` levée de.
 
-Covariance de tableau ne s’applique pas aux tableaux de type de classe de valeur. Par exemple, les tableaux de Int32 ne peut pas être convertis en objet ^ tableaux, pas même à l’aide de boxing.
+La covariance de tableau ne s’applique pas aux tableaux de type de classe valeur. Par exemple, les tableaux de Int32 ne peuvent pas être convertis en objets ^ Arrays, pas même à l’aide de la conversion boxing.
 
 ```cpp
 // clr_array_covariance2.cpp

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : effectuer des opérations de mappage et de réduction en parallèle'
 title: 'Comment : exécuter des opérations de mappage et de réduction en parallèle'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-ms.openlocfilehash: 599e46c05a91a1f2ea6e317fe024d3c98a78977f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f35c9bf4df5a79cf9568bc286ff628e2f9fd45c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141705"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209839"
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Comment : exécuter des opérations de mappage et de réduction en parallèle
 
 Cet exemple montre comment utiliser les algorithmes d' [accès concurrentiel ::p arallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) et d' [accès concurrentiel ::p arallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) et la classe [Concurrency :: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md) pour compter les occurrences des mots dans les fichiers.
 
-Une opération de *mappage* applique une fonction à chaque valeur d’une séquence. Une opération de *réduction* combine les éléments d’une séquence en une seule valeur. Vous pouvez utiliser les C++ fonctions [std :: Transform](../../standard-library/algorithm-functions.md#transform) et [std :: Accumulate](../../standard-library/numeric-functions.md#accumulate) de la bibliothèque standard pour effectuer des opérations de mappage et de réduction. Toutefois, pour améliorer les performances en réponse à de nombreux problèmes, vous pouvez utiliser l'algorithme `parallel_transform` pour effectuer l'opération de mappage en parallèle et l'algorithme `parallel_reduce` pour effectuer l'opération de réduction en parallèle. Dans certains cas, vous pouvez utiliser `concurrent_unordered_map` pour effectuer le mappage et la réduction en une seule opération.
+Une opération de *mappage* applique une fonction à chaque valeur d’une séquence. Une opération de *réduction* combine les éléments d’une séquence en une seule valeur. Vous pouvez utiliser les fonctions de la bibliothèque standard C++ [std :: Transform](../../standard-library/algorithm-functions.md#transform) et [std :: Accumulate](../../standard-library/numeric-functions.md#accumulate) pour effectuer des opérations de mappage et de réduction. Toutefois, pour améliorer les performances en réponse à de nombreux problèmes, vous pouvez utiliser l'algorithme `parallel_transform` pour effectuer l'opération de mappage en parallèle et l'algorithme `parallel_reduce` pour effectuer l'opération de réduction en parallèle. Dans certains cas, vous pouvez utiliser `concurrent_unordered_map` pour effectuer le mappage et la réduction en une seule opération.
 
 ## <a name="example"></a>Exemple
 
@@ -27,9 +28,9 @@ L'exemple suivant compte les occurrences de mots dans des fichiers. Elle utilise
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Pour compiler le code, copiez-le, puis collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `parallel-map-reduce.cpp` puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
+Pour compiler le code, copiez-le, puis collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `parallel-map-reduce.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-> **CL. exe/EHsc Parallel-Map-Reduce. cpp**
+> **cl.exe/EHsc Parallel-Map-Reduce. cpp**
 
 ## <a name="robust-programming"></a>Programmation fiable
 
@@ -42,6 +43,6 @@ En règle générale, vous parallélisez uniquement la boucle externe ou interne
 ## <a name="see-also"></a>Voir aussi
 
 [Algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md)<br/>
-[parallel_transform fonction)](reference/concurrency-namespace-functions.md#parallel_transform)<br/>
+[parallel_transform, fonction](reference/concurrency-namespace-functions.md#parallel_transform)<br/>
 [parallel_reduce fonction)](reference/concurrency-namespace-functions.md#parallel_reduce)<br/>
-[concurrent_unordered_map, classe](../../parallel/concrt/reference/concurrent-unordered-map-class.md)
+[Classe concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)

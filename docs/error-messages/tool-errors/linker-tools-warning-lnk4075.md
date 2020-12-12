@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : avertissement des outils Éditeur de liens LNK4075'
 title: Avertissement des outils Éditeur de liens LNK4075
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: e4a385b9559e2f54e81bda76e6dd13505e978a74
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d7883573271522857b34b3aac81bf45029e540ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183486"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210151"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Avertissement des outils Éditeur de liens LNK4075
 

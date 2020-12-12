@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Comment : implémenter divers modèles de Producer-Consumer'
 title: 'Comment : implémenter divers modèles de producteur-consommateur'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - producer-consumer patterns, implementing [Concurrency Runtime]
 - implementing producer-consumer patterns [Concurrency Runtime]
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
-ms.openlocfilehash: 70813adf6715a2bcaf4af7370ce43d99c44263bd
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 5742d3ba213997efc54aeca360c99fd11b0cf712
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209904"
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>Comment : implémenter divers modèles de producteur-consommateur
 

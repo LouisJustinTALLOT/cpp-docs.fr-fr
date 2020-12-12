@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _purecall'
 title: _purecall
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: 19ad6c2f517d9ddf277a7bdda6e46c7940f0d3f1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: df52d7383685f3ce183562d8789b710fd7587acd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209449"
 ---
 # <a name="_purecall"></a>_purecall
 
@@ -45,7 +46,7 @@ Gestionnaire d’erreurs d’appel de fonction virtuelle pure par défaut. Le co
 extern "C" int __cdecl _purecall();
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_purecall** est un détail d’implémentation spécifique à Microsoft du compilateur Microsoft C++. Cette fonction n’est pas destinée à être appelée directement par votre code, et ne s’accompagne d’aucune déclaration d’en-tête publique. Elle est documentée ici, car il s’agit d’une exportation publique de la bibliothèque Runtime C.
 
@@ -55,9 +56,9 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-La fonction **_purecall** n’a pas de déclaration d’en-tête. Le **_purecall_handler** typedef est défini dans \<stdlib. h>.
+La fonction **_purecall** n’a pas de déclaration d’en-tête. Le **_purecall_handler** typedef est défini dans \<stdlib.h> .
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [_get_purecall_handler, _set_purecall_handler](get-purecall-handler-set-purecall-handler.md)<br/>
