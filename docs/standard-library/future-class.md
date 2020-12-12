@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : future Class'
 title: future, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.openlocfilehash: ac52429919f83a90a87141399952e248e18e0862
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ca73a3d0273014c4f22e8e807c2bf7c3d6e43320
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324224"
 ---
 # <a name="future-class"></a>future, classe
 
@@ -48,7 +49,7 @@ Chaque *fournisseur asynchrone* standard retourne un objet dont le type est une 
 
 |Nom|Description|
 |----------|-----------------|
-|[postérieur](#future)|Construit un objet `future`.|
+|[future](#future)|Construit un objet `future`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
@@ -57,7 +58,7 @@ Chaque *fournisseur asynchrone* standard retourne un objet dont le type est une 
 |[get](#get)|Récupère le résultat stocké dans l’état asynchrone associé.|
 |[partager](#share)|Convertit l’objet en `shared_future`.|
 |[valide](#valid)|Spécifie si l’objet n’est pas vide.|
-|[qu'](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|
+|[wait](#wait)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt.|
 |[wait_for](#wait_for)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou que le délai spécifié soit écoulé.|
 |[wait_until](#wait_until)|Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit prêt ou jusqu’à un point spécifié dans le temps.|
 
@@ -73,7 +74,7 @@ Chaque *fournisseur asynchrone* standard retourne un objet dont le type est une 
 
 **Espace de noms :** std
 
-## <a name="futurefuture-constructor"></a><a name="future"></a>futur :: future, constructeur
+## <a name="futurefuture-constructor"></a><a name="future"></a> futur :: future, constructeur
 
 Construit un objet `future`.
 
@@ -93,7 +94,7 @@ Le premier constructeur construit un objet `future` sans état asynchrone associ
 
 Le deuxième constructeur construit un `future` objet et transfère l’état asynchrone associé à partir d' *autres*. D' *autres* n’ont plus d’état asynchrone associé.
 
-## <a name="futureget"></a><a name="get"></a>à venir :: obtient
+## <a name="futureget"></a><a name="get"></a> à venir :: obtient
 
 Récupère le résultat stocké dans l’état asynchrone associé.
 
@@ -101,7 +102,7 @@ Récupère le résultat stocké dans l’état asynchrone associé.
 Ty get();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si le résultat est une exception, la méthode la lève de nouveau. Sinon, le résultat est retourné.
 
@@ -115,7 +116,7 @@ Pour la spécialisation partielle `future<Ty&>`, la valeur stockée est une réf
 
 Dans d’autres spécialisations, la méthode déplace sa valeur de retour à partir de la valeur stockée. Par conséquent, n’appelez cette méthode qu’une seule fois.
 
-## <a name="futureoperator"></a><a name="op_eq"></a>futur :: Operator =
+## <a name="futureoperator"></a><a name="op_eq"></a> futur :: Operator =
 
 Transfère un état asynchrone associé d’un objet spécifié.
 
@@ -128,7 +129,7 @@ future& operator=(future&& Right) noexcept;
 *Oui*\
 Objet `future`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `*this`
 
@@ -136,7 +137,7 @@ Objet `future`.
 
 Après le *transfert, ne possède plus d'* état asynchrone associé.
 
-## <a name="futureshare"></a><a name="share"></a>futur :: partager
+## <a name="futureshare"></a><a name="share"></a> futur :: partager
 
 Convertit l’objet en un objet [shared_future](../standard-library/shared-future-class.md).
 
@@ -144,11 +145,11 @@ Convertit l’objet en un objet [shared_future](../standard-library/shared-futur
 shared_future<Ty> share();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `shared_future(move(*this))`
 
-## <a name="futurevalid"></a><a name="valid"></a>futur :: valide
+## <a name="futurevalid"></a><a name="valid"></a> futur :: valide
 
 Spécifie si l’objet a un état asynchrone associé.
 
@@ -156,11 +157,11 @@ Spécifie si l’objet a un état asynchrone associé.
 bool valid() noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l’objet a un état asynchrone associé ; Sinon, **`false`** .
 
-## <a name="futurewait"></a><a name="wait"></a>futur :: wait
+## <a name="futurewait"></a><a name="wait"></a> futur :: wait
 
 Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt*.
 
@@ -172,7 +173,7 @@ void wait() const;
 
 Un état asynchrone associé est *prêt* uniquement si son fournisseur asynchrone a stocké une valeur de retour ou si une exception a été stockée.
 
-## <a name="futurewait_for"></a><a name="wait_for"></a>futur :: wait_for
+## <a name="futurewait_for"></a><a name="wait_for"></a> futur :: wait_for
 
 Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou que l’intervalle de temps spécifié soit écoulé.
 
@@ -186,7 +187,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 *Rel_time*\
 Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie un intervalle de temps maximal pour le blocage du thread.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [future_status](../standard-library/future-enums.md#future_status) qui indique la raison du retour.
 
@@ -194,7 +195,7 @@ Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie un
 
 Un état asynchrone associé est prêt uniquement si son fournisseur asynchrone a stocké une valeur de retour ou une exception.
 
-## <a name="futurewait_until"></a><a name="wait_until"></a>futur :: wait_until
+## <a name="futurewait_until"></a><a name="wait_until"></a> futur :: wait_until
 
 Bloque le thread actuel jusqu’à ce que l’état asynchrone associé soit *prêt* ou jusqu’à un point spécifié dans le temps.
 
@@ -208,7 +209,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 *Abs_time*\
 Objet [chrono::time_point](../standard-library/time-point-class.md) qui spécifie un point dans le temps après lequel le thread peut être débloqué.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 [future_status](../standard-library/future-enums.md#future_status) qui indique la raison du retour.
 

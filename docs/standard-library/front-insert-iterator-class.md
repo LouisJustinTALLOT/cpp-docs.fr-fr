@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe front_insert_iterator'
 title: front_insert_iterator, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 8f60b2e5e21b559edb630be2aee377341d4480f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 79690f51ce108357a6131c6ab811cee23c6c4529
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203271"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324276"
 ---
 # <a name="front_insert_iterator-class"></a>front_insert_iterator, classe
 
@@ -60,11 +61,11 @@ Le conteneur doit répondre aux exigences d’une insertion de début de séquen
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête**:\<iterator>
+**En-tête**: \<iterator>
 
 **Espace de noms :** std
 
-## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a>front_insert_iterator :: container_type
+## <a name="front_insert_iteratorcontainer_type"></a><a name="container_type"></a> front_insert_iterator :: container_type
 
 Type qui représente le conteneur dans lequel une insertion de début doit être effectuée.
 
@@ -106,7 +107,7 @@ The list L2 is: ( 40 10 20 ).
 */
 ```
 
-## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a>front_insert_iterator :: front_insert_iterator
+## <a name="front_insert_iteratorfront_insert_iterator"></a><a name="front_insert_iterator"></a> front_insert_iterator :: front_insert_iterator
 
 Crée un itérateur qui peut insérer des éléments au début d'un objet conteneur spécifié.
 
@@ -119,7 +120,7 @@ explicit front_insert_iterator(Container& _Cont);
 *_Cont*\
 Objet de conteneur dans lequel `front_insert_iterator` doit insérer des éléments.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `front_insert_iterator` pour l’objet conteneur du paramètre.
 
@@ -169,7 +170,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a>front_insert_iterator ::, opérateur\*
+## <a name="front_insert_iteratoroperator"></a><a name="op_star"></a> front_insert_iterator ::, opérateur\*
 
 Supprime la référence à l’itérateur d’insertion retournant l’élément ciblé.
 
@@ -177,13 +178,13 @@ Supprime la référence à l’itérateur d’insertion retournant l’élément
 front_insert_iterator<Container>& operator*();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre retourne la valeur de l’élément ciblé.
 
 ### <a name="remarks"></a>Notes
 
-Utilisé pour implémenter la valeur d' ** \* ITER**de l’expression d’itérateur de sortie  =  **value**. Si `Iter` est un itérateur qui traite un élément dans une séquence, la ** \* **  =  **valeur** d’ITER remplace cet élément par la valeur et ne modifie pas le nombre total d’éléments dans la séquence.
+Utilisé pour implémenter la valeur d' **\* ITER** de l’expression d’itérateur de sortie  =  . Si `Iter` est un itérateur qui traite un élément dans une séquence, la **\***  =  **valeur** d’ITER remplace cet élément par la valeur et ne modifie pas le nombre total d’éléments dans la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -230,7 +231,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a>front_insert_iterator :: Operator + +
+## <a name="front_insert_iteratoroperator"></a><a name="op_add_add"></a> front_insert_iterator :: Operator + +
 
 Incrémente le `back_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.
 
@@ -240,7 +241,7 @@ front_insert_iterator<Container>& operator++();
 front_insert_iterator<Container> operator++(int);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `front_insert_iterator` qui cible l’emplacement suivant où une valeur peut être stockée.
 
@@ -281,7 +282,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a>front_insert_iterator :: Operator =
+## <a name="front_insert_iteratoroperator"></a><a name="op_eq"></a> front_insert_iterator :: Operator =
 
 Ajoute (push) une valeur au début du conteneur.
 
@@ -296,7 +297,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 *multiples*\
 Valeur à assigner au conteneur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au dernier élément inséré au début du conteneur.
 
@@ -343,7 +344,7 @@ The list L1 is: ( 30 20 10 ).
 */
 ```
 
-## <a name="front_insert_iteratorreference"></a><a name="reference"></a>front_insert_iterator :: référence
+## <a name="front_insert_iteratorreference"></a><a name="reference"></a> front_insert_iterator :: référence
 
 Type qui fournit une référence à un élément dans une séquence contrôlée par le conteneur associé.
 

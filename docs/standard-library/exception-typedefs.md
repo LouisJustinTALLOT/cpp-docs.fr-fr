@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : les &lt; typedefs d’exception &gt;'
 title: '&lt;exception&gt;, typedefs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: f71c03e0c0a2e7ea4f37a85e85628ccf630ea317
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5df3f49a66cced171d96c2dedad7b239535519a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368736"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324527"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt;, typedefs
 
-## <a name="exception_ptr"></a><a name="exception_ptr"></a>exception_ptr
+## <a name="exception_ptr"></a><a name="exception_ptr"></a> exception_ptr
 
 Type qui décrit un pointeur vers une exception.
 
@@ -31,15 +32,15 @@ Utilisez un objet `exception_ptr` pour référencer l'exception actuelle ou une 
 
 Lorsque vous déclarez une variable `exception_ptr`, la variable n'est associée à aucune exception. Autrement dit, son champ de référence d'exception est NULL. Ce type d’objet `exception_ptr` est appelé *exception_ptr null*.
 
-Utilisez la fonction `current_exception` ou `make_exception_ptr` pour assigner une exception à un objet `exception_ptr`. Lorsque vous assignez une exception à une variable `exception_ptr`, le champ de référence de l'exception de la variable pointe vers une copie de l'exception. Si la mémoire est insuffisante pour copier l’exception, le champ de référence d’exception pointe vers une copie d’une exception [std::bad_alloc](../standard-library/bad-alloc-class.md). Si `current_exception` la `make_exception_ptr` fonction ou la fonction ne peut pas `terminate` copier l’exception pour une autre raison, la fonction appelle la fonction CRT pour quitter le processus actuel.
+Utilisez la fonction `current_exception` ou `make_exception_ptr` pour assigner une exception à un objet `exception_ptr`. Lorsque vous assignez une exception à une variable `exception_ptr`, le champ de référence de l'exception de la variable pointe vers une copie de l'exception. Si la mémoire est insuffisante pour copier l’exception, le champ de référence d’exception pointe vers une copie d’une exception [std::bad_alloc](../standard-library/bad-alloc-class.md). Si la `current_exception` `make_exception_ptr` fonction ou ne peut pas copier l’exception pour une autre raison, la fonction appelle la `terminate` fonction CRT pour quitter le processus en cours.
 
 En dépit de son nom, un objet `exception_ptr` n'est pas lui-même un pointeur. Il ne respecte pas la sémantique des pointeurs et ne peut pas être utilisé avec les accès des membres pointeurs (`->`) ou des opérateurs d’indirection (*). L'objet `exception_ptr` n'a aucune donnée membre ou fonction membre publique.
 
-**Comparaisons:**
+**Comparaisons**
 
 Vous pouvez utiliser les opérateurs Égal à (`==`) et Non égal à (`!=`) pour comparer deux objets `exception_ptr`. Les opérateurs ne comparent pas la valeur binaire (modèle binaire) des structures `EXCEPTION_RECORD` qui représentent les exceptions. À la place, les opérateurs comparent les adresses dans le domaine de référence d'exception des objets `exception_ptr`. Par conséquent, une exception `exception_ptr` null et la valeur NULL sont considérées comme égales.
 
-## <a name="terminate_handler"></a><a name="terminate_handler"></a>terminate_handler
+## <a name="terminate_handler"></a><a name="terminate_handler"></a> terminate_handler
 
 Type qui décrit un pointeur vers une fonction appropriée pour une utilisation en tant que `terminate_handler`.
 
@@ -55,7 +56,7 @@ Le type décrit un pointeur vers une fonction appropriée devant être utilisée
 
 Consultez [set_terminate](../standard-library/exception-functions.md#set_terminate) pour obtenir un exemple d’utilisation de `terminate_handler`.
 
-## <a name="unexpected_handler"></a><a name="unexpected_handler"></a>unexpected_handler
+## <a name="unexpected_handler"></a><a name="unexpected_handler"></a> unexpected_handler
 
 Le type décrit un pointeur vers une fonction pouvant être utilisée comme `unexpected_handler`.
 

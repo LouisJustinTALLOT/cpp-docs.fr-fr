@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe enable_if'
 title: enable_if, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 1017fc315a4440350a0190cf4b40e644cda16876
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 89bd78113a9f6ea9d94a69decccd58c7953e4a8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324460"
 ---
 # <a name="enable_if-class"></a>enable_if, classe
 

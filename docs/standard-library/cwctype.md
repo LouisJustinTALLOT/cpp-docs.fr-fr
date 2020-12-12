@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; cwctype&gt;'
 title: '&lt;cwctype&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cwctype header
 ms.assetid: 46476f95-b8c3-4ab2-a172-9a1be91124b7
-ms.openlocfilehash: 26fbefa7dbaf68ac559e79c702a5a7a2c31266a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 604cffe5acb61a90fc36e7733db01f2f92aa6155
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324612"
 ---
 # <a name="ltcwctypegt"></a>&lt;cwctype&gt;
 
-Inclut l’en-tête \<wctype.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.
+Inclut l’en-tête de la bibliothèque C standard \<wctype.h> et ajoute les noms associés à l' `std` espace de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,6 +65,6 @@ wctrans_t wctrans(const char* property);
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

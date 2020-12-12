@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe deque'
 title: deque, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -88,12 +89,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: 1edcabf526d0f3aa2ba52ba3fd0fc656c5ae6b9c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f46c3c31dd23f7603a1d4ef6289e435c9b38e823
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324573"
 ---
 # <a name="deque-class"></a>deque, classe
 
@@ -112,7 +113,7 @@ class deque
 Type de données de l'élément à stocker dans la file d'attente à deux extrémités.
 
 *Allocateur*\
-Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la file d'attente à deux extrémités. Cet argument est facultatif et sa valeur par défaut est **Allocator \<Type> **.
+Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la file d'attente à deux extrémités. Cet argument est facultatif et sa valeur par défaut est **Allocator \<Type>**.
 
 ## <a name="remarks"></a>Notes
 
@@ -157,7 +158,7 @@ Dans le cas contraire, l'insertion ou la suppression d'un élément invalide tou
 |[size_type](#size_type)|Type qui compte le nombre d'éléments d'une `deque`.|
 |[value_type](#value_type)|Type qui représente le type de données stocké dans un `deque`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -797,7 +798,7 @@ Le troisième constructeur spécifie une répétition d'un nombre donné (`count
 
 Les quatrième et cinquième constructeurs spécifient une répétition des éléments (*Count*) de la valeur `val` .
 
-Le sixième constructeur spécifie une copie du *droit*deque.
+Le sixième constructeur spécifie une copie du *droit* deque.
 
 Les septième et huitième constructeurs copient la plage `[First, Last)` d’une file d’attente à deux extrémités.
 
@@ -2282,7 +2283,7 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 File d’attente à deux extrémités qui fournit les éléments à échanger ou file d’attente à deux extrémités dont les éléments doivent être échangés avec ceux de la file d’attente à deux extrémités `left`.
 
 *gauche*\
-Deque dont les éléments doivent être échangés avec ceux du *droit*deque.
+Deque dont les éléments doivent être échangés avec ceux du *droit* deque.
 
 ### <a name="example"></a>Exemple
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe freelist'
 title: freelist, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: bf88e33f5d00b9b6b90d2712a0bbabaa3e571340
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: de0803aac13138dc25116084f52e7a5bea694b41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324351"
 ---
 # <a name="freelist-class"></a>freelist, classe
 
@@ -77,7 +78,7 @@ Supprime le premier bloc de mémoire de la liste de libération.
 void *pop();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers le bloc de mémoire supprimé de la liste.
 
@@ -98,7 +99,7 @@ bool push(void* ptr);
 *effectués*\
 Pointeur vers le bloc de mémoire à ajouter à la liste de libération.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la `full` fonction de la classe Max retourne **`false`** ; sinon, la `push` fonction retourne **`false`** .
 

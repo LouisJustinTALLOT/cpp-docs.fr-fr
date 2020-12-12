@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; exécution&gt;'
 title: '&lt;production&gt;'
 ms.date: 04/18/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: f37458fdc0b58968e095a7c59de797eac295bde7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ea444ab2f4fcf3211e85837701a8ea6a0c3ec81f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324407"
 ---
 # <a name="ltexecutiongt"></a>&lt;production&gt;
 
@@ -39,7 +40,7 @@ namespace std::execution {
 |[Classe parallel_unsequenced_policy](parallel-unsequenced-policy-class.md)|Utilisé comme type unique pour lever l’ambiguïté de la surcharge de l’algorithme parallèle et indiquer que l’exécution d’un algorithme parallèle peut être parallélisée et vectorisé.|
 |[Classe sequenced_policy](sequenced-policy-class.md)|Utilisé comme type unique pour lever l’ambiguïté de la surcharge de l’algorithme parallèle et exiger que l’exécution d’un algorithme parallèle ne soit pas parallélisée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<execution>
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; forward_list&gt;'
 title: '&lt;forward_list&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: 6966d8513d78b6bbe3831709f52daa04c67b4572
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a43f07f9371c8de785fa9c2fe2aedef5f378c2b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324305"
 ---
 # <a name="ltforward_listgt"></a>&lt;forward_list&gt;
 
 Définit le modèle de classe de conteneur forward_list et plusieurs modèles de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<forward_list>
 
@@ -39,7 +40,7 @@ Définit le modèle de classe de conteneur forward_list et plusieurs modèles de
 |[>d’opérateur ](../standard-library/forward-list-operators.md#op_gt)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est supérieur à l’objet de liste forward_list situé à droite.|
 |[>opérateur =](../standard-library/forward-list-operators.md#op_lt_eq)|Vérifie si l’objet de liste forward_list à gauche de l’opérateur est supérieur ou égal à l’objet de liste forward_list situé à droite.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

@@ -1,5 +1,6 @@
 ---
-title: '&lt;cvt wstring &gt;'
+description: 'En savoir plus sur : &lt; CVT/wstring&gt;'
+title: '&lt;CVT-wstring&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - stdext.cvt.<cvt/wstring>
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wstring header
 ms.assetid: d78b04bb-9ac0-4adb-8ffe-3aefb9b14c2d
-ms.openlocfilehash: 57b4dd482c7659b4ce5e27b20e4626c6809f8a4e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 992c36aae9ae45ae6143a688f1e051a4ac46231b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324625"
 ---
 # <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
 
-L’en-tête `<cvt/wstring>` dans les versions précédentes de Visual Studio définissait la classe de modèle [wstring_convert](../standard-library/wstring-convert-class.md) dans l’espace de noms stdext :: CVT. L'en-tête est conservé à des fins de compatibilité descendante. Le nouveau code doit utiliser la version de la classe qui est définie dans [\<locale>](../standard-library/locale.md) dans l’espace de noms `std`
+L’en-tête `<cvt/wstring>` dans les versions précédentes de Visual Studio définissait le modèle de classe [wstring_convert classe](../standard-library/wstring-convert-class.md) dans l’espace de noms stdext :: CVT. L'en-tête est conservé à des fins de compatibilité descendante. Le nouveau code doit utiliser la version de la classe qui est définie dans [\<locale>](../standard-library/locale.md) dans l' `std` espace de noms
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +26,7 @@ L’en-tête `<cvt/wstring>` dans les versions précédentes de Visual Studio d�
 #include <cvt/wstring>
 ```
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 ## <a name="see-also"></a>Voir aussi
 
