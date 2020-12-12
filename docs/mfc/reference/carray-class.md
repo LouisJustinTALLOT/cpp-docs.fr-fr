@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CArray (classe)'
 title: CArray (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: f73666f3a20488d14a82b7c56d682f3f5b2386df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2aea88178347fd146720a8205974049e4baf039f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259641"
 ---
 # <a name="carray-class"></a>CArray (classe)
 
@@ -134,7 +135,7 @@ Pour plus d’informations sur l’utilisation de `CArray` , consultez l’artic
 
 **En-tête :** afxtempl.h
 
-## <a name="carrayadd"></a><a name="add"></a>CArray :: Add
+## <a name="carrayadd"></a><a name="add"></a> CArray :: Add
 
 Ajoute un nouvel élément à la fin d’un tableau, en augmentant le tableau de 1.
 
@@ -150,7 +151,7 @@ Paramètre de modèle qui spécifie le type d’arguments référençant des él
 *newElement*<br/>
 Élément à ajouter à ce tableau.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index de l’élément ajouté.
 
@@ -162,7 +163,7 @@ Si l’opération de [configuration](#setsize) a été utilisée avec une `nGrow
 
 [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]
 
-## <a name="carrayappend"></a><a name="append"></a>CArray :: Append
+## <a name="carrayappend"></a><a name="append"></a> CArray :: Append
 
 Appelez cette fonction membre pour ajouter le contenu d’un tableau à la fin d’un autre.
 
@@ -175,7 +176,7 @@ INT_PTR Append(const CArray& src);
 *src*<br/>
 Source des éléments à ajouter à un tableau.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Index du premier élément ajouté.
 
@@ -189,7 +190,7 @@ Si nécessaire, `Append` peut allouer de la mémoire supplémentaire pour prendr
 
 [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]
 
-## <a name="carraycarray"></a><a name="carray"></a>CArray :: CArray
+## <a name="carraycarray"></a><a name="carray"></a> CArray :: CArray
 
 Construit un tableau vide.
 
@@ -205,7 +206,7 @@ Le tableau augmente un élément à la fois.
 
 [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]
 
-## <a name="carraycopy"></a><a name="copy"></a>CArray :: Copy
+## <a name="carraycopy"></a><a name="copy"></a> CArray :: Copy
 
 Utilisez cette fonction membre pour copier les éléments d’un tableau dans un autre.
 
@@ -222,13 +223,13 @@ Source des éléments à copier dans un tableau.
 
 Appelez cette fonction membre pour remplacer les éléments d’un tableau par les éléments d’un autre tableau.
 
-`Copy`ne libère pas la mémoire ; Toutefois, si nécessaire, `Copy` peut allouer de la mémoire supplémentaire pour prendre en charge les éléments copiés dans le tableau.
+`Copy` ne libère pas la mémoire ; Toutefois, si nécessaire, `Copy` peut allouer de la mémoire supplémentaire pour prendre en charge les éléments copiés dans le tableau.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]
 
-## <a name="carrayelementat"></a><a name="elementat"></a>CArray :: ElementAt
+## <a name="carrayelementat"></a><a name="elementat"></a> CArray :: ElementAt
 
 Retourne une référence temporaire à l’élément spécifié dans le tableau.
 
@@ -242,7 +243,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 *nIndex*<br/>
 Index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par [GetUpperBound](#getupperbound).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à un élément de tableau.
 
@@ -254,7 +255,7 @@ Il est utilisé pour implémenter l’opérateur d’assignation côté gauche p
 
   Consultez l’exemple correspondant à la [propriété](#getsize).
 
-## <a name="carrayfreeextra"></a><a name="freeextra"></a>CArray :: FreeExtra
+## <a name="carrayfreeextra"></a><a name="freeextra"></a> CArray :: FreeExtra
 
 Libère toute mémoire supplémentaire allouée lors de la croissance du tableau.
 
@@ -270,7 +271,7 @@ Cette fonction n’a aucun effet sur la taille ou la limite supérieure du table
 
   Consultez l’exemple pour [GetData](#getdata).
 
-## <a name="carraygetat"></a><a name="getat"></a>CArray :: GetAt
+## <a name="carraygetat"></a><a name="getat"></a> CArray :: GetAt
 
 Retourne l’élément de tableau à l’index spécifié.
 
@@ -287,7 +288,7 @@ Paramètre de modèle qui spécifie le type des éléments du tableau.
 *nIndex*<br/>
 Index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par [GetUpperBound](#getupperbound).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Élément de tableau actuellement à cet index.
 
@@ -299,7 +300,7 @@ Le passage d’une valeur négative ou d’une valeur supérieure à la valeur r
 
 [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]
 
-## <a name="carraygetcount"></a><a name="getcount"></a>CArray :: GetCount
+## <a name="carraygetcount"></a><a name="getcount"></a> CArray :: GetCount
 
 Retourne le nombre d’éléments du tableau.
 
@@ -307,7 +308,7 @@ Retourne le nombre d’éléments du tableau.
 INT_PTR GetCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments dans le tableau.
 
@@ -319,7 +320,7 @@ Appelez cette méthode pour récupérer le nombre d’éléments dans le tableau
 
 [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]
 
-## <a name="carraygetdata"></a><a name="getdata"></a>CArray :: GetData
+## <a name="carraygetdata"></a><a name="getdata"></a> CArray :: GetData
 
 Utilisez cette fonction membre pour obtenir un accès direct aux éléments d’un tableau.
 
@@ -333,7 +334,7 @@ TYPE* GetData();
 *TYPE*<br/>
 Paramètre de modèle qui spécifie le type des éléments du tableau.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un élément de tableau.
 
@@ -347,7 +348,7 @@ Bien que l’accès direct aux éléments d’un tableau puisse vous aider à tr
 
 [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]
 
-## <a name="carraygetsize"></a><a name="getsize"></a>CArray :: Deis
+## <a name="carraygetsize"></a><a name="getsize"></a> CArray :: Deis
 
 Retourne la taille du tableau.
 
@@ -363,7 +364,7 @@ INT_PTR GetSize() const;
 
 [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]
 
-## <a name="carraygetupperbound"></a><a name="getupperbound"></a>CArray :: GetUpperBound
+## <a name="carraygetupperbound"></a><a name="getupperbound"></a> CArray :: GetUpperBound
 
 Retourne la limite supérieure actuelle de ce tableau.
 
@@ -381,7 +382,7 @@ La condition `GetUpperBound( )` =-1 indique que le tableau ne contient pas d’�
 
   Consultez l’exemple pour [CArray :: GetAt](#getat).
 
-## <a name="carrayinsertat"></a><a name="insertat"></a>CArray :: InsertAt
+## <a name="carrayinsertat"></a><a name="insertat"></a> CArray :: InsertAt
 
 La première version de `InsertAt` insère un élément (ou plusieurs copies d’un élément) à un index spécifié dans un tableau.
 
@@ -428,7 +429,7 @@ La deuxième version insère tous les éléments d’une autre `CArray` collecti
 
 [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]
 
-## <a name="carrayisempty"></a><a name="isempty"></a>CArray :: IsEmpty
+## <a name="carrayisempty"></a><a name="isempty"></a> CArray :: IsEmpty
 
 Détermine si le tableau est vide.
 
@@ -436,11 +437,11 @@ Détermine si le tableau est vide.
 BOOL IsEmpty() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si le tableau ne contient pas d’éléments ; Sinon, 0.
 
-## <a name="carrayoperator-"></a><a name="operator_at"></a>CArray :: Operator\[\]
+## <a name="carrayoperator-"></a><a name="operator_at"></a> CArray :: Operator \[\]
 
 Ces opérateurs d’indice sont un substitut pratique pour les fonctions [setat](#setat) et [GetAt](#getat) .
 
@@ -467,7 +468,7 @@ La version de débogage de la bibliothèque déclare si l’indice (à gauche ou
 
 [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]
 
-## <a name="carrayrelocateelements"></a><a name="relocateelements"></a>CArray :: RelocateElements
+## <a name="carrayrelocateelements"></a><a name="relocateelements"></a> CArray :: RelocateElements
 
 Déplace les données vers une nouvelle mémoire tampon lorsque le tableau doit croître ou diminuer.
 
@@ -498,7 +499,7 @@ L’implémentation de [CArray](../../mfc/reference/carray-class.md) utilise cet
 
 Pour les tableaux dans lesquels un élément contient un pointeur vers l’un de ses propres membres, ou une autre structure contient un pointeur vers l’un des éléments du tableau, les pointeurs ne sont pas mis à jour en copie simple. Dans ce cas, vous pouvez corriger les pointeurs en implémentant une spécialisation de `RelocateElements` avec les types appropriés. Vous êtes également responsable de la copie des données.
 
-## <a name="carrayremoveall"></a><a name="removeall"></a>CArray :: RemoveAll
+## <a name="carrayremoveall"></a><a name="removeall"></a> CArray :: RemoveAll
 
 Supprime tous les éléments de ce tableau.
 
@@ -514,7 +515,7 @@ Si le tableau est déjà vide, la fonction fonctionne toujours.
 
 [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]
 
-## <a name="carrayremoveat"></a><a name="removeat"></a>CArray :: RemoveAt
+## <a name="carrayremoveat"></a><a name="removeat"></a> CArray :: RemoveAt
 
 Supprime un ou plusieurs éléments commençant à un index spécifié dans un tableau.
 
@@ -542,7 +543,7 @@ Si vous essayez de supprimer plus d’éléments que ceux contenus dans le table
 
 [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]
 
-## <a name="carraysetat"></a><a name="setat"></a>CArray :: SetAt
+## <a name="carraysetat"></a><a name="setat"></a> CArray :: SetAt
 
 Définit l’élément de tableau à l’index spécifié.
 
@@ -563,7 +564,7 @@ Nouvelle valeur de l’élément à stocker à la position spécifiée.
 
 ### <a name="remarks"></a>Notes
 
-`SetAt`n’entraîne pas la croissance du tableau. Utilisez [SetAtGrow](#setatgrow) si vous souhaitez que le tableau augmente automatiquement.
+`SetAt` n’entraîne pas la croissance du tableau. Utilisez [SetAtGrow](#setatgrow) si vous souhaitez que le tableau augmente automatiquement.
 
 Vous devez vous assurer que votre valeur d’index représente une position valide dans le tableau. S’il est hors limites, la version de débogage de la bibliothèque Assert.
 
@@ -571,7 +572,7 @@ Vous devez vous assurer que votre valeur d’index représente une position vali
 
   Consultez l’exemple pour [GetAt](#getat).
 
-## <a name="carraysetatgrow"></a><a name="setatgrow"></a>CArray :: SetAtGrow
+## <a name="carraysetatgrow"></a><a name="setatgrow"></a> CArray :: SetAtGrow
 
 Définit l’élément de tableau à l’index spécifié.
 
@@ -598,7 +599,7 @@ Le tableau s’agrandit automatiquement si nécessaire (autrement dit, la limite
 
 [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]
 
-## <a name="carraysetsize"></a><a name="setsize"></a>CArray :: assets
+## <a name="carraysetsize"></a><a name="setsize"></a> CArray :: assets
 
 Établit la taille d’un tableau vide ou existant ; alloue de la mémoire si nécessaire.
 
@@ -611,7 +612,7 @@ void SetSize(
 ### <a name="parameters"></a>Paramètres
 
 *nNewSize*<br/>
-Nouvelle taille de tableau (nombre d’éléments). Doit être supérieure ou égale à 0.
+Nouvelle taille de tableau (nombre d’éléments). Doit être supérieur ou égal à 0.
 
 *nGrowBy*<br/>
 Nombre minimal d’emplacements d’éléments à allouer si une augmentation de la taille est nécessaire.

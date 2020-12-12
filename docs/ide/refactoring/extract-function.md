@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : fonction Extract'
 title: Extraire la fonction
 ms.date: 11/16/2016
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
-ms.openlocfilehash: ec3b9a0aeaef9e418b457bafdfb9bb1bbd2edffc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 4ae5e858c658d14e72db8740232b74935c655292
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692318"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259758"
 ---
 # <a name="extract-function"></a>Extraire la fonction
 
@@ -17,7 +18,7 @@ ms.locfileid: "51692318"
 
 **Pourquoi :** vous pouvez copier/coller ce code, mais cela entraîne une duplication.  Une meilleure solution consiste à refactoriser ce fragment dans sa propre fonction pouvant être appelée librement par toute autre fonction.
 
-**Comment :**
+**Utilisation**
 
 1. Mettez en surbrillance le code à extraire :
 
@@ -26,7 +27,7 @@ ms.locfileid: "51692318"
 1. Effectuez ensuite l'une des opérations suivantes :
    * **Clavier**
      * Appuyez sur **Ctrl+R**, puis **Ctrl+M**.  (Notez que le raccourci clavier peut varier en fonction du profil que vous avez sélectionné.)
-     * Appuyez sur **Ctrl+.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Extraire la fonction (expérimental)** dans le menu contextuel.
+     * Appuyez sur **CTRL +.** pour afficher le menu **Actions rapides et refactorisations**, puis sélectionnez **Extraire la fonction (expérimental)** dans le menu contextuel.
    * **Souris**
      * Sélectionnez **Modifier > Refactoriser > Extraire la fonction (expérimental)**.
      * Cliquez avec le bouton droit sur le code et choisissez le menu **Actions rapides et refactorisations**, puis sélectionnez **Extraire la fonction (expérimental)** dans le menu contextuel.

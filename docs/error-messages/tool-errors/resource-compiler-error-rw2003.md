@@ -1,19 +1,20 @@
 ---
-title: Erreur RW2003 du compilateur de ressources
+description: 'En savoir plus sur : erreur du compilateur de ressources RW2003'
+title: 'Erreur RW2003 du compilateur de ressources '
 ms.date: 11/04/2016
 f1_keywords:
 - RW2003
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 60e813fff46ebc015f281dfed99d2916ca0eb4bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 545168aae1c483c358c55dfc90ce320aafac3ca2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259680"
 ---
-# <a name="resource-compiler-error-rw2003"></a>Erreur RW2003 du compilateur de ressources
+# <a name="resource-compiler-error-rw2003"></a>Erreur RW2003 du compilateur de ressources 
 
 Erreur de génération
 
@@ -37,11 +38,11 @@ Erreur de génération
 
 1. **Impossible d’initialiser les informations de symboles**
 
-   Cette erreur se produit uniquement dans C++le visuel. La cause probable est que vous avez trop de fichiers ouverts ou que vous ne pouvez pas ouvrir ou écrire dans les fichiers de C++ données nécessaires à Visual pour importer les symboles dans votre script. Visual C++ tente de créer ces fichiers dans le répertoire spécifié par la variable d’environnement **tmp** ou le répertoire actuel si aucun n’est spécifié.
+   Cette erreur se produit uniquement dans Visual C++. La cause probable est que vous avez trop de fichiers ouverts ou que vous ne pouvez pas ouvrir ou écrire dans les fichiers de données nécessaires à Visual C++ importer les symboles dans votre script. Visual C++ tente de créer ces fichiers dans le répertoire spécifié par la variable d’environnement **tmp** ou le répertoire actuel si aucun n’est spécifié.
 
 1. **Impossible d’enregistrer les informations de symbole**
 
-   Cette erreur se produit uniquement dans C++le visuel. La cause probable est que vous avez trop de fichiers ouverts ou que vous ne pouvez pas fermer ou écrire dans les fichiers de C++ données nécessaires à Visual pour importer les symboles dans votre script. Visual C++ tente d’utiliser ces fichiers dans le répertoire spécifié par la variable d’environnement **tmp** ou le répertoire actuel si aucun n’est spécifié.
+   Cette erreur se produit uniquement dans Visual C++. La cause probable est que vous avez trop de fichiers ouverts ou que vous ne pouvez pas fermer ou écrire dans les fichiers de données nécessaires à Visual C++ importer les symboles dans votre script. Visual C++ tente d’utiliser ces fichiers dans le répertoire spécifié par la variable d’environnement **tmp** ou le répertoire actuel si aucun n’est spécifié.
 
 1. **Le fichier de ressources du fichier bitmap n’est pas au format 2,03**
 
