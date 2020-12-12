@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : PROC'
 title: PROC
 ms.date: 12/06/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: fe811ed1723dc1a41014720d97b6f21ab596c2e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126033"
 ---
 # <a name="proc"></a>PROC
 
@@ -19,20 +20,20 @@ Marque le début et la fin d’un bloc de procédure appelé *label*. Les instru
 
 ## <a name="syntax"></a>Syntaxe
 
-> *label* **proc** ⟦*distance*⟧ ⟦*Language-type*⟧ ⟦ **public** | **Private** | **Export** ⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**utilise** *reglist*⟧ ⟦ __,__ *paramètre* ⟦ __:__ *tag*⟧... ⟧\
-> ⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ \
-> *instructions*\
+> *label* **proc** ⟦*distance*⟧ ⟦*Language-type*⟧ ⟦ **public**  |  **Private**  |  **Export** ⟧ ⟦ __\<__*prologuearg*__>__ ⟧ ⟦**utilise** *reglist*⟧ ⟦__,__ *paramètre* ⟦__:__*tag*⟧... ⟧\
+> ⟦**Frame** ⟦__:__*ehandler-Address*⟧ ⟧ \
+> *publication*\
 > *étiquette* **ENDP**
 
 ## <a name="remarks"></a>Notes
 
 Les arguments ⟦*distance*⟧ et ⟦*Language-type*⟧ sont valides uniquement dans MASM 32 bits.
 
-⟦**Frame** ⟦ __:__ *ehandler-Address*⟧ ⟧ est valide uniquement avec ml64. exe, et fait MASM pour générer une entrée de table de fonctions dans. pdata et des informations de déroulement dans. XData pour le comportement de déroulement de la gestion structurée des exceptions d’une fonction.
+⟦**Frame** ⟦__:__*ehandler-Address*⟧ ⟧ est uniquement valide avec ml64.exe, et fait MASM pour générer une entrée de table de fonctions dans. pdata et des informations de déroulement dans. XData pour le comportement de déroulement de la gestion structurée des exceptions d’une fonction.
 
 Lorsque l’attribut **Frame** est utilisé, il doit être suivi d’un [. Directive ENDPROLOG](dot-endprolog.md) .
 
-Pour plus d’informations sur l’utilisation de ml64. exe [, consultez MASM pour x64 (ml64. exe)](masm-for-x64-ml64-exe.md) .
+Pour plus d’informations sur l’utilisation de ml64.exe [, consultez MASM pour x64 (ml64.exe)](masm-for-x64-ml64-exe.md) .
 
 ## <a name="example"></a>Exemple
 
@@ -81,5 +82,5 @@ Dumping Unwind Information for file ex2.exe
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

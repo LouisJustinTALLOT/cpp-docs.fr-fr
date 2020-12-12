@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : PROTO'
 title: PROTO
 ms.date: 12/06/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 3963fa29050653d1706222d33734c4b5f2a17919
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 34dbf9d877dbbc52484e45c5f94212108aeacb42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126007"
 ---
 # <a name="proto"></a>PROTO
 
@@ -19,11 +20,11 @@ Prototype une fonction ou une procédure. Vous pouvez appeler la fonction protot
 
 ## <a name="syntax"></a>Syntaxe
 
-> *étiquette* **proto** ⟦*distance*⟧ ⟦*Language-type*⟧ ⟦ __,__ ⟦*paramètre*⟧ __:__ *tag* ... ⟧
+> *étiquette* **proto** ⟦*distance*⟧ ⟦*Language-type*⟧ ⟦__,__ ⟦*paramètre*⟧__:__*tag* ... ⟧
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
-*étiquette*\
+*noms*\
 Nom de la fonction prototypée.
 
 *distance* (MASM 32 bits uniquement.) \
@@ -36,10 +37,10 @@ Facultatif Définit la Convention d’appel et d’affectation des noms pour les
 
 - modèles 16 bits : **C**, **Basic**, **Fortran**, **Pascal**, **syscall**, **StdCall**
 
-\ de *paramètres*
+*paramètre*\
 Nom facultatif d’un paramètre de fonction.
 
-\ de *balise*
+*Référence*\
 Type d’un paramètre de fonction.
 
 Le *paramètre* et les paramètres de *balise* peuvent apparaître plusieurs fois, une fois pour chaque argument passé.
@@ -54,6 +55,6 @@ addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
-[. Référence de modèle](dot-model.md)\
+[Informations de référence sur les directives](directives-reference.md)\
+[. Référence du modèle](dot-model.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

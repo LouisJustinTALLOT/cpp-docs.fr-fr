@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : manuels de programmation du fabricant de processeurs'
 title: Manuels de programmation du fabricant du processeur
 ms.date: 05/28/2020
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-ms.openlocfilehash: 444539c1d06d24dd6c2847cf5c426cdb96a3aed5
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 5691669804c6d44a32e5cde6a87ca358beef12d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126020"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Manuels de programmation du fabricant du processeur
 
@@ -23,7 +24,7 @@ Cet article fournit des liens vers des sites Web qui peuvent contenir des inform
 
 - [Présentation d’Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Visual Studio et Microsoft Macro Assembler ne prennent pas en charge tous les processeurs.
 

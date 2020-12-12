@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CA2AEX'
 title: CA2AEX, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: dfd8967d21005d83b38eeae36cfc147051d7beaf
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 408e04760d6b614fd344b3cab1b34f22678db315
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165106"
 ---
 # <a name="ca2aex-class"></a>CA2AEX, classe
 
@@ -64,7 +65,7 @@ Taille de la mémoire tampon utilisée dans le processus de traduction. La longu
 
 Cette classe contient une mémoire tampon statique de taille fixe qui est utilisée pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire à l’aide de **malloc**, en libérant la mémoire lorsque l’objet est hors de portée. Cela garantit que, contrairement aux macros de conversion de texte disponibles dans les versions précédentes d’ATL, cette classe peut être utilisée en toute sécurité dans les boucles et qu’elle ne déborde pas la pile.
 
-Si la classe tente d’allouer de la mémoire sur le tas et échoue, `AtlThrow` elle appellera avec un argument de E_OUTOFMEMORY.
+Si la classe tente d’allouer de la mémoire sur le tas et échoue, elle appellera `AtlThrow` avec un argument de E_OUTOFMEMORY.
 
 Par défaut, les macros et les classes de conversion ATL utilisent la page de codes ANSI du thread actuel pour la conversion.
 
@@ -88,7 +89,7 @@ Pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes 
 
 **En-tête :** atlconv. h
 
-## <a name="ca2aexca2aex"></a><a name="ca2aex"></a>CA2AEX::CA2AEX
+## <a name="ca2aexca2aex"></a><a name="ca2aex"></a> CA2AEX::CA2AEX
 
 Constructeur.
 
@@ -109,7 +110,7 @@ Inutilisé dans cette classe.
 
 Crée la mémoire tampon requise pour la traduction.
 
-## <a name="ca2aexca2aex"></a><a name="dtor"></a>CA2AEX :: ~ CA2AEX
+## <a name="ca2aexca2aex"></a><a name="dtor"></a> CA2AEX :: ~ CA2AEX
 
 Destructeur.
 
@@ -121,7 +122,7 @@ Destructeur.
 
 Libère la mémoire tampon allouée.
 
-## <a name="ca2aexm_psz"></a><a name="m_psz"></a>CA2AEX :: m_psz
+## <a name="ca2aexm_psz"></a><a name="m_psz"></a> CA2AEX :: m_psz
 
 Membre de données qui stocke la chaîne source.
 
@@ -129,7 +130,7 @@ Membre de données qui stocke la chaîne source.
 LPSTR m_psz;
 ```
 
-## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a>CA2AEX :: m_szBuffer
+## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a> CA2AEX :: m_szBuffer
 
 Mémoire tampon statique, utilisée pour stocker la chaîne convertie.
 
@@ -137,7 +138,7 @@ Mémoire tampon statique, utilisée pour stocker la chaîne convertie.
 char m_szBuffer[ t_nBufferLength];
 ```
 
-## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CA2AEX :: Operator LPSTR
+## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a> CA2AEX :: Operator LPSTR
 
 Opérateur de conversion.
 
@@ -145,7 +146,7 @@ Opérateur de conversion.
 operator LPSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la chaîne de texte en tant que type LPSTR.
 

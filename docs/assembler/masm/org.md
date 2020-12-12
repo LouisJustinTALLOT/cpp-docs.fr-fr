@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ORG'
 title: ORG
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ORG directive
 ms.assetid: ab654827-99dd-4018-b27e-f29a7bb392eb
-ms.openlocfilehash: 0f2d84d8430c079173a407bc1f3e4ddabee41cda
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a81a16d0f83056832889b31ebd3c564c028b7deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126150"
 ---
 # <a name="org"></a>ORG
 
@@ -19,9 +20,9 @@ Définit le compteur d’emplacement sur *expression*.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *Expression* org
+>  *Expression* org
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de référence sur les [Directives](directives-reference.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

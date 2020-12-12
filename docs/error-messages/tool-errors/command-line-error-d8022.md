@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur Command-Line D8022'
 title: Erreur de ligne de commande D8022
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - D8022
 ms.assetid: eb18ec34-d32d-4636-a852-abf2063e886b
-ms.openlocfilehash: 59e917f008e528debca3d5237a520cab92a2574a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4830f3df2e7d72e8b8fd0532ffda83ce6ace3651
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80196896"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115662"
 ---
 # <a name="command-line-error-d8022"></a>Erreur de ligne de commande D8022
 

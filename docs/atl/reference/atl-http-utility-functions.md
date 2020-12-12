@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : fonctions de l’utilitaire HTTP ATL'
 title: Fonctions de l’utilitaire HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: d2e30f940ded0bf355000cd42ff46a67662b54f5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb8cc8789db45095f969dd9513dcf70a9bd0d05c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165366"
 ---
 # <a name="atl-http-utility-functions"></a>Fonctions de l’utilitaire HTTP ATL
 
@@ -24,7 +25,7 @@ Ces fonctions prennent en charge la manipulation des URL.
 |[RGBToHtml](#rgbtohtml)|Convertit une valeur [COLORREF](/windows/win32/gdi/colorref) en texte HTML correspondant à cette valeur de couleur.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Appelez cette fonction pour convertir une heure système en une chaîne au format approprié pour être utilisée dans les en-têtes HTTP.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlutil. h
 
@@ -275,7 +276,7 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Paramètres
 
-*St*<br/>
+*st*<br/>
 Heure système à obtenir sous la forme d’une chaîne de format HTTP.
 
 *strTime*<br/>

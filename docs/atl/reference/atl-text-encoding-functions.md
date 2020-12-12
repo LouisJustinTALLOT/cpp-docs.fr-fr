@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions d’encodage de texte ATL'
 title: Fonctions d’encodage de texte ATL
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 330a73e0d41bf384a799635d5f2e6f09f7e3dd03
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1cc0848fed5832d0d91752c4c52d1e7310df0932
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833853"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165249"
 ---
 # <a name="atl-text-encoding-functions"></a>Fonctions d’encodage de texte ATL
 
@@ -62,7 +63,7 @@ Ces fonctions prennent en charge l’encodage et le décodage de texte.
 |[UUEncode](#uuencode)|Appelez cette fonction pour convertir des données au format UUEncode. |
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|Appelez cette fonction pour obtenir la taille en caractères d'une mémoire tampon qui peut contenir une chaîne encodée à partir des données de la taille spécifiée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlenc. h
 
@@ -106,7 +107,7 @@ La fonction doit être appelée comme suit.
 
 [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** atlbase. h
 

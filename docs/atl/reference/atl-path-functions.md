@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions de chemin d’accès ATL'
 title: Fonctions de chemin d’accès ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -41,12 +42,12 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: e9e8af5a902a51d9a3ee4956a60ad162196f659c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7244494c6be2819b3cd4142f5d1404ea356fdc30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833996"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165301"
 ---
 # <a name="atl-path-functions"></a>Fonctions de chemin d’accès ATL
 
@@ -107,7 +108,7 @@ ATL fournit la classe ATLPath pour manipuler les chemins sous la forme [CPathT](
 |[ATLPath::StripToRoot](#striptoroot)|Cette fonction est un wrapper surchargé pour [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).|
 |[ATLPath::UnquoteSpaces](#unquotespaces)|Cette fonction est un wrapper surchargé pour [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlpath. h
 

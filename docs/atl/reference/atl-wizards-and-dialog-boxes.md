@@ -1,23 +1,24 @@
 ---
+description: 'En savoir plus sur : assistants et boîtes de dialogue ATL'
 title: Assistants et boîtes de dialogue ATL
 ms.date: 06/26/2020
 helpviewer_keywords:
 - ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-ms.openlocfilehash: f2ba981c771572f93e9a452db83c722c817b6428
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 531758560ef5d639112a1f15ef591b3b3ca7ed65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165119"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>Assistants et boîtes de dialogue ATL
 
 Les assistants Active Template Library (ATL) génèrent du code réutilisable pour différents genres d’objets COM. Vous pouvez exécuter les assistants en ouvrant le menu contextuel d’un projet dans **Explorateur de solutions** et en choisissant **Ajouter**, **classe**.
 
-## <a name="related-articles"></a>Articles associés
+## <a name="related-articles"></a>Articles connexes
 
-|Intitulé|Description|
+|Titre|Description|
 |-----------|-----------------|
 |[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)|Décrit l’Assistant Projet ATL et ses paramètres.|
 |[Objet simple ATL](../../atl/reference/adding-an-atl-simple-object.md)|Crée un objet de base.|

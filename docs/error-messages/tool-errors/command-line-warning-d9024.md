@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Command-Line AVERTISSEMENT D9024'
 title: Avertissement de ligne de commande D9024
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-ms.openlocfilehash: 5de051b9ca5c09af74b94be4b75616bce6fadf2c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f31144d1c27e348679115095980f0809831609fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80196758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115519"
 ---
 # <a name="command-line-warning-d9024"></a>Avertissement de ligne de commande D9024
 
@@ -23,9 +24,9 @@ Les extensions suivantes sont reconnues :
 
 - . c (fichier source C)
 
-- . CXX (C++ fichier source)
+- . CXX (fichier source C++)
 
-- . cpp (C++ fichier source)
+- . cpp (fichier source C++)
 
 - . obj (fichier objet)
 

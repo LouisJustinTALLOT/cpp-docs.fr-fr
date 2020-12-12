@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CA2WEX'
 title: CA2WEX, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: a710034c5d94a8fb093a2b6a2a52373e2bab2d6d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 59d0624176f01ee266b8162060b281202ef977c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165093"
 ---
 # <a name="ca2wex-class"></a>CA2WEX, classe
 
@@ -64,7 +65,7 @@ Taille de la mémoire tampon utilisée dans le processus de traduction. La longu
 
 Cette classe contient une mémoire tampon statique de taille fixe qui est utilisée pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire à l’aide de **malloc**, en libérant la mémoire lorsque l’objet est hors de portée. Cela garantit que, contrairement aux macros de conversion de texte disponibles dans les versions précédentes d’ATL, cette classe peut être utilisée en toute sécurité dans les boucles et qu’elle ne déborde pas la pile.
 
-Si la classe tente d’allouer de la mémoire sur le tas et échoue, `AtlThrow` elle appellera avec un argument de E_OUTOFMEMORY.
+Si la classe tente d’allouer de la mémoire sur le tas et échoue, elle appellera `AtlThrow` avec un argument de E_OUTOFMEMORY.
 
 Par défaut, les macros et les classes de conversion ATL utilisent la page de codes ANSI du thread actuel pour la conversion. Si vous souhaitez substituer ce comportement pour une conversion spécifique, spécifiez la page de codes comme deuxième paramètre du constructeur pour la classe.
 
@@ -92,7 +93,7 @@ Pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes 
 
 **En-tête :** atlconv. h
 
-## <a name="ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX
+## <a name="ca2wexca2wex"></a><a name="ca2wex"></a> CA2WEX::CA2WEX
 
 Constructeur.
 
@@ -113,7 +114,7 @@ Page de codes utilisée pour effectuer la conversion. Pour plus d’informations
 
 Alloue la mémoire tampon utilisée dans le processus de traduction.
 
-## <a name="ca2wexca2wex"></a><a name="dtor"></a>CA2WEX :: ~ CA2WEX
+## <a name="ca2wexca2wex"></a><a name="dtor"></a> CA2WEX :: ~ CA2WEX
 
 Destructeur.
 
@@ -125,7 +126,7 @@ Destructeur.
 
 Libère la mémoire tampon allouée.
 
-## <a name="ca2wexm_psz"></a><a name="m_psz"></a>CA2WEX :: m_psz
+## <a name="ca2wexm_psz"></a><a name="m_psz"></a> CA2WEX :: m_psz
 
 Membre de données qui stocke la chaîne source.
 
@@ -133,7 +134,7 @@ Membre de données qui stocke la chaîne source.
 LPWSTR m_psz;
 ```
 
-## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a>CA2WEX :: m_szBuffer
+## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a> CA2WEX :: m_szBuffer
 
 Mémoire tampon statique, utilisée pour stocker la chaîne convertie.
 
@@ -141,7 +142,7 @@ Mémoire tampon statique, utilisée pour stocker la chaîne convertie.
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX :: Operator LPWSTR
+## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a> CA2WEX :: Operator LPWSTR
 
 Opérateur de conversion.
 
@@ -149,7 +150,7 @@ Opérateur de conversion.
 operator LPWSTR() const throw();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne la chaîne de texte en tant que type LPWSTR.
 

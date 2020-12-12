@@ -1,17 +1,18 @@
 ---
+description: En savoir plus sur les erreurs de ligne de commande et les avertissements
 title: Erreurs et avertissements de ligne de commande
 ms.date: 04/17/2019
 ms.assetid: d02ec7df-26a5-4198-ac92-87b29ec9d5c8
-ms.openlocfilehash: d5cd53a23c4f043715fa7e2372fb5c256337da20
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 6a0f467bfcb67e02352ccba9db8d892d6b929e43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857346"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115623"
 ---
 # <a name="command-line-errors-and-warnings"></a>Erreurs et avertissements de ligne de commande
 
-Les articles de cette section fournissent une référence pour les erreurs de ligne de commande et les avertissements générés par les outils de génération. Ces messages ont la forme `Dxxxx`, où *xxxx* est un nombre à quatre chiffres.
+Les Articles de cette section fournissent des informations de référence sur les erreurs de ligne de commande et les avertissements générés par les outils de génération. Ces messages se présentent sous la forme `Dxxxx` , où *xxxx* est un nombre à quatre chiffres.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -23,7 +24,7 @@ Les articles de cette section fournissent une référence pour les erreurs de li
 [Erreur de ligne de commande D8027](../../error-messages/tool-errors/command-line-error-d8027.md) \
 [Erreur de ligne de commande D8036](../../error-messages/tool-errors/command-line-error-d8036.md) \
 [Erreur de ligne de commande D8037](../../error-messages/tool-errors/command-line-error-d8037.md) \
-[Erreur de ligne de commande D8045](../../error-messages/tool-errors/command-line-error-d8045.md)
+[Erreur de ligne de commande D8045](../../error-messages/tool-errors/command-line-error-d8045.md)
 
 ## <a name="command-line-warning-messages"></a>Messages d’avertissement de ligne de commande
 
@@ -40,4 +41,4 @@ Les articles de cette section fournissent une référence pour les erreurs de li
 
 ## <a name="see-also"></a>Voir aussi
 
-[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md)
+[Erreurs d’outils et avertissements de compilateur C/C++ et de build](../compiler-errors-1/c-cpp-build-errors.md)
