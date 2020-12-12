@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMapStringToString'
 title: CMapStringToString, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CMapStringToString [MFC], RemoveKey
 - CMapStringToString [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: 28422c26ba2ca77657bfcf166592d2bc69169891
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ba82647a6e81e82b4d977e4de3beee1bfd0b7c4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207811"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString, classe
 
@@ -128,7 +129,7 @@ Pour plus d’informations sur `CMapStringToString` , consultez l’article [Col
 
 **En-tête :** afxcoll. h
 
-## <a name="cmapstringtostringcpair"></a><a name="cpair"></a>CMapStringToString::CPair
+## <a name="cmapstringtostringcpair"></a><a name="cpair"></a> CMapStringToString::CPair
 
 Contient une valeur de clé et la valeur de l’objet String associé.
 
@@ -138,9 +139,9 @@ Il s’agit d’une structure imbriquée dans la classe [CMapStringToString](../
 
 La structure est composée de deux champs :
 
-- `key`Valeur réelle du type de clé.
+- `key` Valeur réelle du type de clé.
 
-- `value`Valeur de l’objet associé.
+- `value` Valeur de l’objet associé.
 
 Il est utilisé pour stocker les valeurs de retour de [CMapStringToString ::P Lookup](#plookup), [CMapStringToString ::P getfirstassoc](#pgetfirstassoc)et [CMapStringToString ::P GetNextAssoc](#pgetnextassoc).
 
@@ -148,7 +149,7 @@ Il est utilisé pour stocker les valeurs de retour de [CMapStringToString ::P L
 
   Pour obtenir un exemple d’utilisation, consultez l’exemple pour [CMapStringToString ::P Lookup](#plookup).
 
-## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringToString ::P GetFirstAssoc
+## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a> CMapStringToString ::P GetFirstAssoc
 
 Retourne la première entrée de l’objet Map.
 
@@ -158,7 +159,7 @@ const CPair* PGetFirstAssoc() const;
 CPair* PGetFirstAssoc();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la première entrée dans le mappage ; consultez [CMapStringToString :: CPair](#cpair). Si le mappage est vide, la valeur est NULL.
 
@@ -170,7 +171,7 @@ Appelez cette fonction pour retourner un pointeur vers le premier élément de l
 
 [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]
 
-## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringToString ::P GetNextAssoc
+## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a> CMapStringToString ::P GetNextAssoc
 
 Récupère l’élément de mappage pointé par *pAssocRec*.
 
@@ -185,7 +186,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 *pAssoc*<br/>
 Pointe vers une entrée de mappage retournée par un appel [PGetNextAssoc](#pgetnextassoc) ou [PGetFirstAssoc](#pgetfirstassoc) précédent.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’entrée suivante dans le mappage ; consultez [CMapStringToString :: CPair](#cpair). Si l’élément est le dernier dans le mappage, la valeur est NULL.
 
@@ -197,7 +198,7 @@ Appelez cette méthode pour itérer au sein de tous les éléments de la classe 
 
   Consultez l’exemple pour [CMapStringToString ::P getfirstassoc](#pgetfirstassoc).
 
-## <a name="cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringToString ::P la recherche
+## <a name="cmapstringtostringplookup"></a><a name="plookup"></a> CMapStringToString ::P la recherche
 
 Recherche la valeur mappée à une clé donnée.
 
@@ -212,7 +213,7 @@ CPair* PLookup(LPCTSTR key);
 *key*<br/>
 Pointeur vers la clé de l’élément à rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la clé spécifiée.
 

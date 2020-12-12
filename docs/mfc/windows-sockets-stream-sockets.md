@@ -1,23 +1,24 @@
 ---
-title: 'Windows Sockets : Sockets de Stream'
+description: 'En savoir plus sur : Windows Sockets : Sockets de flux'
+title: 'Windows Sockets : sockets flux'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9e40be06ebb1de04466b5f13a46fe82fb3b0bd2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207642"
 ---
-# <a name="windows-sockets-stream-sockets"></a>Windows Sockets : Sockets de Stream
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets : sockets flux
 
 Cet article décrit les flux de sockets, l'un des deux types de Windows Socket disponibles. (L’autre type est le [socket datagramme](../mfc/windows-sockets-datagram-sockets.md).)
 
-Les flux de sockets fournissent pour un flux de données sans limites d'enregistrement : un flux d'octets pouvant être bidirectionnel (l'application est totalement bidirectionnelle : elle peut transmettre et recevoir via le socket). Les flux peut être reliés afin de fournir des données organisées et non dupliquées. ("Ordonnancé" signifie que des paquets sont remis dans l'ordre envoyé. "Non dupliqué » signifie que vous obtenez un paquet particulier une seule fois. La réception des messages de flux est garantie, et les flux sont bien adaptés pour gérer de grandes quantités de données.
+Les flux de sockets fournissent pour un flux de données sans limites d'enregistrement : un flux d'octets pouvant être bidirectionnel (l'application est totalement bidirectionnelle : elle peut transmettre et recevoir via le socket). Les flux peut être reliés afin de fournir des données organisées et non dupliquées. ("Ordonnancé" signifie que des paquets sont remis dans l'ordre envoyé. « Unduplicated » signifie que vous recevez un paquet particulier une seule fois.) La réception des messages de flux est garantie, et les flux sont bien adaptés à la gestion de grandes quantités de données.
 
 La couche de transport réseau peut se diviser ou regrouper des données dans des paquets de taille raisonnable. La classe `CSocket` gère la compression et la décompression à votre place.
 
@@ -38,9 +39,9 @@ L'utilisation de sockets de flux peut être supérieure aux applications conçue
 - Le modèle final bénéficie de la capacité de communiquer entre les applications Socket Unicode et ANSI que la classe CArchive prête à la classe CSocket.
 
     > [!NOTE]
-    >  Si vous utilisez la classe `CSocket`, vous devez utiliser un flux de données. Une assertion MFC échoue si vous spécifiez le type de socket **SOCK_DGRAM**.
+    >  Si vous utilisez la classe `CSocket`, vous devez utiliser un flux de données. Une assertion MFC échoue si vous spécifiez le type de socket comme **SOCK_DGRAM**.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Windows Sockets dans MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows Sockets : Arrière-plan](../mfc/windows-sockets-background.md)
+[Windows Sockets : Présentation](../mfc/windows-sockets-background.md)

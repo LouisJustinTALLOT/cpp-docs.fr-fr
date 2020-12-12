@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : incrémentation et décrémentation de pointeurs'
 title: Incrémentation et décrémentation de pointeurs
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - pointers [C++], multibyte characters
 - decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-ms.openlocfilehash: cdaee3d13a8ceab47f62100953a0eb6e51bfc255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c333c11c5a0b68bf013dbd374eb1cc4e5f00abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207317"
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>Incrémentation et décrémentation de pointeurs
 
 Utilisez les conseils suivants :
 
-- Pointer vers les octets de tête, pas les octets de Queue. Il est généralement déconseillé d’avoir un pointeur vers un octet de fin. Il est plus sûr d’analyser une chaîne vers l’avant, plutôt que dans l’ordre inverse.
+- Pointez sur octets de tête, et non sur octets de fin. Il est généralement risqué d’avoir un pointeur vers un octet de fin. Il est généralement plus sûr d’analyser une chaîne vers l’avant plutôt que vers l’arrière.
 
-- Il existe des fonctions incrémenter/décrémenter des pointeurs et des macros disponibles pour déplacement d’un caractère entier :
+- Des fonctions et des macros d’incrémentation/décrémentation de pointeur sont disponibles qui se déplacent sur un caractère entier :
 
     ```cpp
     sz1++;
@@ -32,9 +33,9 @@ Utilisez les conseils suivants :
     sz1 = _mbsinc( sz1 );
     ```
 
-   Le `_mbsinc` et `_mbsdec` fonctions correctement incrémenter et décrémenter dans `character` unités, quelles que soient la taille des caractères.
+   Les `_mbsinc` `_mbsdec` fonctions et incrémentent et décrémentent correctement les `character` unités, quelle que soit la taille des caractères.
 
-- Pour décréments, vous avez besoin d’un pointeur vers le début de la chaîne, comme dans l’exemple suivant :
+- Pour les décrémentations, vous avez besoin d’un pointeur vers le début de la chaîne, comme dans l’exemple suivant :
 
     ```cpp
     sz2--;
@@ -46,15 +47,15 @@ Utilisez les conseils suivants :
     sz2 = _mbsdec( sz2Head, sz2 );
     ```
 
-   Vous pouvez également votre pointeur d’en-tête peut être un caractère valide dans la chaîne, telles que :
+   En guise d’alternative, votre pointeur d’en-tête peut être un caractère valide dans la chaîne, de sorte que :
 
     ```cpp
     sz2Head < sz2
     ```
 
-   Vous devez disposer d’un pointeur vers un octet de tête valide connu.
+   Vous devez avoir un pointeur vers un octet de tête valide connu.
 
-- Vous pouvez souhaiter conserver un pointeur vers le caractère précédent pour des appels plus rapides à `_mbsdec`.
+- Vous pouvez conserver un pointeur vers le caractère précédent pour des appels plus rapides à `_mbsdec` .
 
 ## <a name="see-also"></a>Voir aussi
 

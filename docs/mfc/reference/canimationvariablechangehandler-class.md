@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Classe CAnimationVariableChangeHandler,'
 title: CAnimationVariableChangeHandler, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 2dc8f2c03f9df34012fb9db1ed5e5b0bb448b17f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 1c97bc908a29bfb7edf2222f6df117fefdaf4091
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81755043"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207876"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler, classe
 
@@ -39,13 +40,13 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 |Nom|Description|
 |----------|-----------------|
-|`CAnimationVariableChangeHandler::CreateInstance`|Crée une `CAnimationVariableChangeHandler` instance d’objet.|
-|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Appelé quand une valeur d’une variable d’animation a changé. (Substitue `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.)|
-|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Stocke un pointeur au contrôleur d’animation pour acheminer les événements.|
+|`CAnimationVariableChangeHandler::CreateInstance`|Crée une instance de l' `CAnimationVariableChangeHandler` objet.|
+|[CAnimationVariableChangeHandler, :: OnValueChanged](#onvaluechanged)|Appelée lorsqu’une valeur d’une variable d’animation a été modifiée. (Substitue `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.)|
+|[CAnimationVariableChangeHandler, :: SetAnimationController](#setanimationcontroller)|Stocke un pointeur vers le contrôleur d’animation pour acheminer les événements.|
 
 ## <a name="remarks"></a>Notes
 
-Ce gestionnaire d’événements `IUIAnimationVariable::SetVariableChangeHandler` est créé et `CAnimationVariable::EnableValueChangedEvent` `CAnimationBaseObject::EnableValueChangedEvent` transmis à la méthode, lorsque vous appelez ou (ce qui permet cet événement pour toutes les variables d’animation encapsulées dans un objet d’animation).
+Ce gestionnaire d’événements est créé et passé à `IUIAnimationVariable::SetVariableChangeHandler` la méthode quand vous appelez `CAnimationVariable::EnableValueChangedEvent` ou `CAnimationBaseObject::EnableValueChangedEvent` (qui active cet événement pour toutes les variables d’animation encapsulées dans un objet d’animation).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -59,9 +60,9 @@ Ce gestionnaire d’événements `IUIAnimationVariable::SetVariableChangeHandler
 
 **En-tête :** afxanimationcontroller.h
 
-## <a name="canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged
+## <a name="canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a> CAnimationVariableChangeHandler, :: OnValueChanged
 
-Appelé quand une valeur d’une variable d’animation a changé.
+Appelée lorsqu’une valeur d’une variable d’animation a été modifiée.
 
 ```
 IFACEMETHOD(OnValueChanged) (
@@ -73,25 +74,25 @@ IFACEMETHOD(OnValueChanged) (
 
 ### <a name="parameters"></a>Paramètres
 
-*Storyboard*<br/>
-Le storyboard qui anime la variable.
+*s*<br/>
+Le Storyboard qui anime la variable.
 
-*Variable*<br/>
-La variable d’animation qui a été mise à jour.
+*variable*<br/>
+Variable d’animation qui a été mise à jour.
 
 *newValue*<br/>
 Nouvelle valeur.
 
-*previousValue (en)*<br/>
+*previousValue*<br/>
 Valeur précédente.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Si la méthode réussit, retourne S_OK. Sinon, il renvoie un code d’erreur HRESULT.
+Si la méthode réussit, retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.
 
-## <a name="canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController
+## <a name="canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a> CAnimationVariableChangeHandler, :: SetAnimationController
 
-Stocke un pointeur au contrôleur d’animation pour acheminer les événements.
+Stocke un pointeur vers le contrôleur d’animation pour acheminer les événements.
 
 ```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -100,7 +101,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ### <a name="parameters"></a>Paramètres
 
 *pAnimationController*<br/>
-Un pointeur au contrôleur d’animation, qui recevra des événements.
+Pointeur vers le contrôleur d’animation, qui reçoit les événements.
 
 ## <a name="see-also"></a>Voir aussi
 

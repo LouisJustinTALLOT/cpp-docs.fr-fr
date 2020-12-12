@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : effectuer une conversion entre différents types de chaînes'
 title: 'Comment : effectuer une conversion entre différents types de chaînes'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 068665c594f2fbeb531be21ded7ef16f3f5c1ef3
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 47a7107e8e776c0d9be584fd0cc166f48c90326c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207343"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Comment : effectuer une conversion entre différents types de chaînes
 

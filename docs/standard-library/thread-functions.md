@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; fonctions de thread'
 title: '&lt;thread&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 37e1f745b66c45f5e3ad6bd4be2a2837042b8433
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207434"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt;, fonctions
 

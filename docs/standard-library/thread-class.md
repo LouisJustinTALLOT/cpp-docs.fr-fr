@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe de thread'
 title: thread, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.openlocfilehash: 19f7ae1fc95f531f509273f0eb9998c73fe7d47b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b9afa8e649fd2b3fb0fdaf339e4a6fbead5b4ef6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207460"
 ---
 # <a name="thread-class"></a>thread, classe
 
@@ -84,7 +85,7 @@ Chaque thread d’exécution possède un identificateur unique de type `thread::
 
 **Espace de noms :** std
 
-## <a name="threaddetach"></a><a name="detach"></a>thread ::d Etach
+## <a name="threaddetach"></a><a name="detach"></a> thread ::d Etach
 
 Détache le thread associé. Le système d’exploitation devient responsable de la libération des ressources de thread lors d’un arrêt.
 
@@ -100,7 +101,7 @@ Si le thread qui est associé à l’objet appelant n’est pas joignable, la fo
 
 Si le thread qui est associé à l’objet appelant est non valide, la fonction lève un objet `system_error` dotée du code d’erreur `no_such_process`.
 
-## <a name="threadget_id"></a><a name="get_id"></a>thread :: get_id
+## <a name="threadget_id"></a><a name="get_id"></a> thread :: get_id
 
 Retourne un identificateur unique du thread associé.
 
@@ -108,11 +109,11 @@ Retourne un identificateur unique du thread associé.
 id get_id() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un objet [thread::id](#id_class) qui identifie de façon unique le thread associé, ou `thread::id()` si aucun thread n’est associé à l’objet.
 
-## <a name="threadhardware_concurrency"></a><a name="hardware_concurrency"></a>thread :: hardware_concurrency
+## <a name="threadhardware_concurrency"></a><a name="hardware_concurrency"></a> thread :: hardware_concurrency
 
 Méthode statique qui retourne une estimation du nombre de contextes de thread matériel.
 
@@ -120,11 +121,11 @@ Méthode statique qui retourne une estimation du nombre de contextes de thread m
 static unsigned int hardware_concurrency() noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Une estimation du nombre de contextes de thread matériel. Si la valeur ne peut pas être calculée ou n’est pas bien définie, cette méthode retourne 0.
 
-## <a name="threadid-class"></a><a name="id_class"></a>thread :: ID, classe
+## <a name="threadid-class"></a><a name="id_class"></a> thread :: ID, classe
 
 Fournit un identificateur unique pour chaque thread d’exécution dans le processus.
 
@@ -140,7 +141,7 @@ Le constructeur par défaut crée un objet qui n’est pas considéré comme ég
 
 Tous les objets `thread::id` construits par défaut sont considérés comme égaux.
 
-## <a name="threadjoin"></a><a name="join"></a>thread :: Join
+## <a name="threadjoin"></a><a name="join"></a> thread :: Join
 
 Bloque jusqu’à ce que le thread d’exécution associé à l’objet appelant soit terminé.
 
@@ -152,7 +153,7 @@ void join();
 
 Si l’appel réussit, les appels suivants à [get_id](#get_id) pour l’objet appelant retournent un [thread::id](#id_class) par défaut qui n’est pas considéré comme égal au `thread::id` de n’importe quel thread existant ; si l’appel n’aboutit pas, la valeur retournée par `get_id` est inchangée.
 
-## <a name="threadjoinable"></a><a name="joinable"></a>thread :: joignable
+## <a name="threadjoinable"></a><a name="joinable"></a> thread :: joignable
 
 Spécifie si le thread associé est *joignable*.
 
@@ -160,7 +161,7 @@ Spécifie si le thread associé est *joignable*.
 bool joinable() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si le thread associé est *joignable*; Sinon, **`false`** .
 
@@ -168,7 +169,7 @@ bool joinable() const noexcept;
 
 Un objet thread est *joignable* si `get_id() != id()`.
 
-## <a name="threadnative_handle"></a><a name="native_handle"></a>thread :: native_handle
+## <a name="threadnative_handle"></a><a name="native_handle"></a> thread :: native_handle
 
 Retourne le type propre à l’implémentation qui représente le descripteur de thread. Vous pouvez utiliser le descripteur de thread de plusieurs manières propres à l’implémentation.
 
@@ -176,11 +177,11 @@ Retourne le type propre à l’implémentation qui représente le descripteur de
 native_handle_type native_handle();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `native_handle_type` est défini comme un `HANDLE` Win32 converti en `void *`.
 
-## <a name="threadoperator"></a><a name="op_eq"></a>thread :: Operator =
+## <a name="threadoperator"></a><a name="op_eq"></a> thread :: Operator =
 
 Associe le thread d’un objet spécifié à l’objet en cours.
 
@@ -193,7 +194,7 @@ thread& operator=(thread&& Other) noexcept;
 *Autres*\
 Objet `thread`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `*this`
 
@@ -203,7 +204,7 @@ La méthode appelle detach si l’objet appelant est joignable.
 
 Une fois l’association établie, `Other` est défini à un état construit par défaut.
 
-## <a name="threadswap"></a><a name="swap"></a>thread :: swap
+## <a name="threadswap"></a><a name="swap"></a> thread :: swap
 
 Permute l’état de l’objet avec celui d’un objet `thread` spécifié.
 
@@ -216,7 +217,7 @@ void swap(thread& Other) noexcept;
 *Autres*\
 Objet `thread`.
 
-## <a name="threadthread-constructor"></a><a name="thread"></a>thread :: thread, constructeur
+## <a name="threadthread-constructor"></a><a name="thread"></a> thread :: thread, constructeur
 
 Construit un objet `thread`.
 

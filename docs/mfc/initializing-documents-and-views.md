@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : initialisation des documents et des vues'
 title: Initialisation des documents et vues
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-ms.openlocfilehash: 0e970d6e8a166283f82575b309cf023f48899403
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ea0840faefac0ae5a8b4cee0fe3b707a92737c70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208032"
 ---
 # <a name="initializing-documents-and-views"></a>Initialisation des documents et vues
 
@@ -23,4 +24,4 @@ Les vues sont créées après la création de leurs documents. Le meilleur momen
 
 ## <a name="see-also"></a>Voir aussi
 
-[Initialisation et nettoyage des documents et vues](initializing-and-cleaning-up-documents-and-views.md)
+[Initialisation et nettoyage des documents et des vues](initializing-and-cleaning-up-documents-and-views.md)
