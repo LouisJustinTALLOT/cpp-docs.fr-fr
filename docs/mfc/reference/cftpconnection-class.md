@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CFtpConnection, classe'
 title: CFtpConnection, classe
 ms.date: 08/29/2019
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 4ad2262b17208dd634b59f5df4d6e60c300bb3c1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 97c7c848a5724a670f324e1d1d26ea781265be27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832735"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184255"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection, classe
 
@@ -91,7 +92,7 @@ Pour en savoir plus sur le `CFtpConnection` fonctionnement des autres classes In
 
 `CFtpConnection`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXINET. h
 

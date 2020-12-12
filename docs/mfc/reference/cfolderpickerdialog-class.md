@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Cfolderpickerdialog,'
 title: CFolderPickerDialog, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: ed3dc151060519bce216cf4a2f3d6559d6b8937e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f4a5bcc3162a5fffcc723d7ec420685b02be10f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184424"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog, classe
 
-CFolderPickerDialog classe implémente CFileDialog en mode dossier.
+La classe Cfolderpickerdialog, implémente CFileDialog en mode de sélecteur de dossiers.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,8 +32,8 @@ class CFolderPickerDialog : public CFileDialog;
 
 |Nom|Description|
 |----------|-----------------|
-|[CFolderPickerDialog: :CFolderPickerDialog](#_dtorcfolderpickerdialog)|Destructeur.|
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Constructeur.|
+|[Cfolderpickerdialog, :: ~ Cfolderpickerdialog,](#_dtorcfolderpickerdialog)|Destructeur.|
+|[Cfolderpickerdialog, :: Cfolderpickerdialog,](#cfolderpickerdialog)|Constructeur.|
 
 ## <a name="remarks"></a>Notes
 
@@ -54,9 +55,9 @@ class CFolderPickerDialog : public CFileDialog;
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxdlgs.h
+**En-tête :** afxdlgs. h
 
-## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a> Cfolderpickerdialog, :: Cfolderpickerdialog,
 
 Constructeur.
 
@@ -70,21 +71,21 @@ explicit CFolderPickerDialog(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszFolder (lpszFolder)*<br/>
+*lpszFolder*<br/>
 Dossier initial.
 
 *dwFlags*<br/>
-Une combinaison d’un ou plusieurs drapeaux qui vous permettent de personnaliser la boîte de dialogue.
+Combinaison d’un ou de plusieurs indicateurs qui vous permettent de personnaliser la boîte de dialogue.
 
 *pParentWnd*<br/>
-Un pointeur à la fenêtre parent ou propriétaire de la boîte de dialogue.
+Pointeur vers la fenêtre parente ou propriétaire de l’objet de boîte de dialogue.
 
-*dwSize dwSize*<br/>
-La taille de la structure OPENFILENAME.
+*dwSize nul*<br/>
+Taille de la structure OPENFILENAME.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog: :CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a> Cfolderpickerdialog, :: ~ Cfolderpickerdialog,
 
 Destructeur.
 

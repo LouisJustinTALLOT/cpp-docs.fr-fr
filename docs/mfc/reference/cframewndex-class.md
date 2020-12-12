@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CFrameWndEx'
 title: CFrameWndEx, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -178,12 +179,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 5aeffddcaa62732d2cba731f897f543e660cbab2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 81774a3f2c11504f3e3022faf4a109cb1bafdc29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832764"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184268"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx, classe
 
@@ -308,7 +309,7 @@ L’exemple suivant montre comment hériter d’une classe de la `CFrameWndEx` c
 
 [CFrameWndEx](../../mfc/reference/cframewndex-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxframewndex.h
 
@@ -1919,7 +1920,7 @@ Pointeur vers une barre de contrôle qui contient le *point*; NULL si aucun cont
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode recherche un *point*dans toutes les barres de contrôle de votre application.
+Cette méthode recherche un *point* dans toutes les barres de contrôle de votre application.
 
 Utilisez *nSensitivity* pour augmenter la taille de la zone de recherche. Utilisez *pRTCBarType* pour restreindre les types de barres de contrôles que la méthode recherche.
 

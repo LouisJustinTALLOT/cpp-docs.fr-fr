@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; chaîne&gt;'
 title: '&lt;string&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4a5598189be96cb15ff423f57e45fd91e2d93216
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183540"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -95,7 +96,7 @@ Le langage C++ et la bibliothèque standard C++ prennent en charge deux types de
 |[char_traits<char16_t struct>](../standard-library/char-traits-char16-t-struct.md)|Struct qui est une spécialisation de la structure de modèle `char_traits` \<CharType> en un élément de type **`char16_t`** .|
 |[char_traits<char32_t struct>](../standard-library/char-traits-char32-t-struct.md)|Struct qui est une spécialisation de la structure de modèle `char_traits` \<CharType> en un élément de type **`char32_t`** .|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 - **En-tête :**\<string>
 

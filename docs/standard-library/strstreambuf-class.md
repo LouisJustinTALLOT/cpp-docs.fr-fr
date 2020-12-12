@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe strstreambuf'
 title: strstreambuf, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: e6b4df60f4d28839419d02fd3ed6d7cbf73d327f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7eaed8a540fc4d9e53f7c6c5b8bbb69b3a7c4653
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183501"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf, classe
 
@@ -83,7 +84,7 @@ L'objet stocke également des pointeurs vers deux fonctions qui contrôlent l'al
 
 **Espace de noms :** std
 
-## <a name="strstreambuffreeze"></a><a name="freeze"></a>strstreambuf :: Freeze
+## <a name="strstreambuffreeze"></a><a name="freeze"></a> strstreambuf :: Freeze
 
 Fait en sorte qu'une mémoire tampon de flux soit indisponible via des opérations de mémoire tampon de flux.
 
@@ -171,7 +172,7 @@ after clearing stream: stream good
 test1test3
 ```
 
-## <a name="strstreambufoverflow"></a><a name="overflow"></a>strstreambuf :: overflow
+## <a name="strstreambufoverflow"></a><a name="overflow"></a> strstreambuf :: overflow
 
 Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.
 
@@ -184,19 +185,19 @@ virtual int overflow(int _Meta = EOF);
 *_Meta*\
 Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si * \_ meta*  ==  `EOF` , elle retourne une valeur autre que `EOF` . Dans le cas contraire, elle retourne * \_ meta*.
+Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si *\_ meta*  ==  `EOF` , elle retourne une valeur autre que `EOF` . Dans le cas contraire, elle retourne *\_ meta*.
 
 ### <a name="remarks"></a>Notes
 
-Si * \_ meta* ! = `EOF` , la fonction membre virtuelle protégée essaie d’insérer l’élément `(char)_Meta` dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
+Si *\_ meta* ! = `EOF` , la fonction membre virtuelle protégée essaie d’insérer l’élément `(char)_Meta` dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
 
 - Si une position d’écriture est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.
 
 - Si le mode strstreambuf stocké indique que la séquence contrôlée est modifiable, extensible et non gelée, la fonction peut proposer une position d’écriture en en allouant une nouvelle pour la mémoire tampon de sortie. Cette façon d’étendre la mémoire tampon de sortie permet également d’étendre les mémoires tampons d’entrée associées.
 
-## <a name="strstreambufpbackfail"></a><a name="pbackfail"></a>strstreambuf : échec de la :p
+## <a name="strstreambufpbackfail"></a><a name="pbackfail"></a> strstreambuf : échec de la :p
 
 Fonction membre virtuelle protégée qui tente de replacer un élément dans le flux d’entrée, puis d’en faire l’élément actif (vers lequel pointe le pointeur suivant).
 
@@ -209,21 +210,21 @@ virtual int pbackfail(int _Meta = EOF);
 *_Meta*\
 Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si * \_ meta*  ==  `EOF` , elle retourne une valeur autre que `EOF` . Dans le cas contraire, elle retourne * \_ meta*.
+Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si *\_ meta*  ==  `EOF` , elle retourne une valeur autre que `EOF` . Dans le cas contraire, elle retourne *\_ meta*.
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre virtuelle protégée tente de replacer un élément dans la mémoire tampon d’entrée, puis d’en faire l’élément actif (vers lequel pointe le pointeur suivant).
 
-Si * \_ meta*  ==  `EOF` , l’élément à envoyer à nouveau est effectivement celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par `ch = (char)_Meta` . La fonction peut replacer un élément de différentes manières :
+Si *\_ meta*  ==  `EOF` , l’élément à envoyer à nouveau est effectivement celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par `ch = (char)_Meta` . La fonction peut replacer un élément de différentes manières :
 
 - Si une position remise est disponible et que l’élément qui y est stocké est égal à `ch` , elle peut décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
 - Si une position remise est disponible et si le mode strstreambuf indique que la séquence contrôlée est modifiable, la fonction peut stocker `ch` dans la position remise et décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
-## <a name="strstreambufpcount"></a><a name="pcount"></a>strstreambuf : nombre de :p
+## <a name="strstreambufpcount"></a><a name="pcount"></a> strstreambuf : nombre de :p
 
 Retourne le nombre d'éléments écrits dans la séquence contrôlée.
 
@@ -231,7 +232,7 @@ Retourne le nombre d'éléments écrits dans la séquence contrôlée.
 streamsize pcount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un décompte du nombre d’éléments écrits dans la séquence contrôlée.
 
@@ -258,7 +259,7 @@ int main( )
 }
 ```
 
-## <a name="strstreambufseekoff"></a><a name="seekoff"></a>strstreambuf :: seekoff
+## <a name="strstreambufseekoff"></a><a name="seekoff"></a> strstreambuf :: seekoff
 
 Fonction membre virtuelle protégée qui tente de modifier les positions actuelles des flux contrôlés.
 
@@ -279,7 +280,7 @@ Point de départ des opérations de décalage. Consultez [seekdir](../standard-l
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction réussit à modifier une ou les deux positions de flux, elle retourne la position de flux obtenue. Sinon, elle échoue et retourne une position de flux non valide.
 
@@ -299,7 +300,7 @@ Si `_Which & ios_base::in` est différent de zéro et que la mémoire tampon d�
 
 Dans le cas contraire, si `_Which & ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction modifie la position suivante d’écriture dans la mémoire tampon de sortie. Dans le cas contraire, l’opération de positionnement échoue. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée.
 
-## <a name="strstreambufseekpos"></a><a name="seekpos"></a>strstreambuf :: seekpos
+## <a name="strstreambufseekpos"></a><a name="seekpos"></a> strstreambuf :: seekpos
 
 Fonction membre virtuelle protégée qui tente de modifier les positions actuelles des flux contrôlés.
 
@@ -315,7 +316,7 @@ Position à rechercher.
 *_Which*\
 Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction réussit à modifier une ou les deux positions de flux, elle retourne la position de flux obtenue. Sinon, elle échoue et retourne une position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.
 
@@ -325,7 +326,7 @@ La fonction membre virtuelle protégée s’efforce de modifier les positions ac
 
 Si `_Which` & **ios_base::in** est différent de zéro et que la mémoire tampon d’entrée existe, la fonction modifie la position suivante de lecture dans la mémoire tampon d’entrée. Si `_Which` & `ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction définit également la position suivante d’écriture pour qu’elle corresponde à la position suivante de lecture. Dans le cas contraire, si `_Which` & `ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction modifie la position suivante d’écriture dans la mémoire tampon de sortie. Dans le cas contraire, l’opération de positionnement échoue. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée.
 
-## <a name="strstreambufstr"></a><a name="str"></a>strstreambuf :: Str
+## <a name="strstreambufstr"></a><a name="str"></a> strstreambuf :: Str
 
 Appelle [freeze](#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.
 
@@ -333,7 +334,7 @@ Appelle [freeze](#freeze), puis retourne un pointeur vers le début de la séque
 char *str();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le début de la séquence contrôlée.
 
@@ -345,7 +346,7 @@ Aucun élément Null de fin n’existe, à moins que n’en insériez explicitem
 
 Consultez [strstreambuf::freeze](#freeze) pour obtenir un exemple qui utilise **str**.
 
-## <a name="strstreambufstrstreambuf"></a><a name="strstreambuf"></a>strstreambuf :: strstreambuf
+## <a name="strstreambufstrstreambuf"></a><a name="strstreambuf"></a> strstreambuf :: strstreambuf
 
 Construit un objet de type `strstreambuf`.
 
@@ -466,7 +467,7 @@ streambuf((char *)getptr, count);
 
 si ce n’est que le mode stocké ne rend la séquence contrôlée ni modifiable, ni extensible.
 
-## <a name="strstreambufunderflow"></a><a name="underflow"></a>strstreambuf :: dépassement de capacité négatif
+## <a name="strstreambufunderflow"></a><a name="underflow"></a> strstreambuf :: dépassement de capacité négatif
 
 Fonction virtuelle protégée pour extraire l'élément actuel du flux d'entrée.
 
@@ -474,7 +475,7 @@ Fonction virtuelle protégée pour extraire l'élément actuel du flux d'entrée
 virtual int underflow();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, elle retourne l’élément actuel dans le flux d’entrée, converti comme décrit ci-dessus.
 

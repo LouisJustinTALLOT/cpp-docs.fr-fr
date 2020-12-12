@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe strstream'
 title: strstream, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-ms.openlocfilehash: 796bf1b3ac41a4b5a6ab5bc16239d50616f554df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c37a2ec46872b34e256710fe61f216a84cb0359d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224615"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183527"
 ---
 # <a name="strstream-class"></a>strstream, classe
 
@@ -57,7 +58,7 @@ L'objet stocke un objet de classe `strstreambuf`.
 
 **Espace de noms :** std
 
-## <a name="strstreamfreeze"></a><a name="freeze"></a>strstream :: Freeze
+## <a name="strstreamfreeze"></a><a name="freeze"></a> strstream :: Freeze
 
 Fait en sorte qu'une mémoire tampon de flux soit indisponible via des opérations de mémoire tampon de flux.
 
@@ -78,7 +79,7 @@ La fonction membre appelle [rdbuf](#rdbuf)  ->  [Freeze](../standard-library/str
 
 Consultez [strstreambuf :: Freeze](../standard-library/strstreambuf-class.md#freeze) pour obtenir un exemple qui utilise `freeze` .
 
-## <a name="strstreampcount"></a><a name="pcount"></a>strstream : nombre de :p
+## <a name="strstreampcount"></a><a name="pcount"></a> strstream : nombre de :p
 
 Retourne le nombre d'éléments écrits dans la séquence contrôlée.
 
@@ -86,7 +87,7 @@ Retourne le nombre d'éléments écrits dans la séquence contrôlée.
 streamsize pcount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments écrits dans la séquence contrôlée.
 
@@ -98,7 +99,7 @@ La fonction membre retourne [rdbuf](#rdbuf)  ->  [pCount](../standard-library/st
 
 Pour obtenir un exemple d’utilisation de pcount, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).
 
-## <a name="strstreamrdbuf"></a><a name="rdbuf"></a>strstream :: rdbuf
+## <a name="strstreamrdbuf"></a><a name="rdbuf"></a> strstream :: rdbuf
 
 Retourne un pointeur vers l’objet strstreambuf associé au flux.
 
@@ -106,7 +107,7 @@ Retourne un pointeur vers l’objet strstreambuf associé au flux.
 strstreambuf *rdbuf() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un pointeur vers l’objet strstreambuf associé au flux.
 
@@ -118,7 +119,7 @@ La fonction membre retourne l’adresse de la mémoire tampon de flux stockée d
 
 Pour obtenir un exemple qui utilise `rdbuf`, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).
 
-## <a name="strstreamstr"></a><a name="str"></a>strstream :: Str
+## <a name="strstreamstr"></a><a name="str"></a> strstream :: Str
 
 Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.
 
@@ -126,7 +127,7 @@ Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourn
 char *str();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le début de la séquence contrôlée.
 
@@ -138,7 +139,7 @@ La fonction membre retourne [rdbuf](#rdbuf)  ->  [Str](../standard-library/strst
 
 Consultez [strstreambuf :: Str](../standard-library/strstreambuf-class.md#str) pour obtenir un exemple qui utilise `str` .
 
-## <a name="strstreamstrstream"></a><a name="strstream"></a>strstream :: strstream
+## <a name="strstreamstrstream"></a><a name="strstream"></a> strstream :: strstream
 
 Construit un objet de type `strstream`.
 

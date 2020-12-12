@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe sub_match'
 title: sub_match, classe
 ms.date: 09/10/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 57aa4ec366588f71f41a747a2dc5127f87ea2e2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 683b0bc6cf73a44ce426d5dcab3cdf13221be66b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222197"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183397"
 ---
 # <a name="sub_match-class"></a>sub_match, classe
 
@@ -137,7 +138,7 @@ compare(sub) == 0
 
 **Espace de noms :** std
 
-## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match :: compare
+## <a name="sub_matchcompare"></a><a name="compare"></a> sub_match :: compare
 
 Comparer une sous-correspondance à une séquence.
 
@@ -170,7 +171,7 @@ zéro si les valeurs comparées sont égales élément par élément et qu'elles
 
 une valeur positive dans les autres cas.
 
-## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match ::d ifference_type
+## <a name="sub_matchdifference_type"></a><a name="difference_type"></a> sub_match ::d ifference_type
 
 Type d’une différence d’itérateur.
 
@@ -182,7 +183,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 Le typedef est un synonyme de `iterator_traits<BidIt>::difference_type`.
 
-## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match :: Iterator
+## <a name="sub_matchiterator"></a><a name="iterator"></a> sub_match :: Iterator
 
 Type d'un itérateur.
 
@@ -194,7 +195,7 @@ typedef BidIt iterator;
 
 Le typedef est un synonyme de l'argument de type de modèle `Bidit`.
 
-## <a name="sub_matchlength"></a><a name="length"></a>sub_match :: length
+## <a name="sub_matchlength"></a><a name="length"></a> sub_match :: length
 
 Retourne la longueur d'une sous-correspondance.
 
@@ -206,7 +207,7 @@ difference_type length() const;
 
 La fonction membre retourne la longueur de la séquence mise en correspondance, ou zéro en l'absence de séquence mise en correspondance.
 
-## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match :: correspondance
+## <a name="sub_matchmatched"></a><a name="matched"></a> sub_match :: correspondance
 
 Indique si la correspondance a réussi.
 
@@ -218,7 +219,7 @@ bool matched;
 
 Le membre contient **`true`** uniquement si le groupe de capture associé à **`*this`** faisait partie de la correspondance d’expression régulière.
 
-## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match :: Operator basic_string &lt; Value_type&gt;
+## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a> sub_match :: Operator basic_string &lt; Value_type&gt;
 
 Effectue un cast de la sous-correspondance en chaîne.
 
@@ -230,7 +231,7 @@ operator basic_string<value_type>() const;
 
 L’opérateur membre retourne `str()`.
 
-## <a name="sub_matchstr"></a><a name="str"></a>sub_match :: Str
+## <a name="sub_matchstr"></a><a name="str"></a> sub_match :: Str
 
 Convertit la sous-correspondance en chaîne.
 
@@ -242,7 +243,7 @@ basic_string<value_type> str() const;
 
 La fonction membre retourne `basic_string<value_type>(first, second)`.
 
-## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match :: value_type
+## <a name="sub_matchvalue_type"></a><a name="value_type"></a> sub_match :: value_type
 
 Type d’un élément.
 

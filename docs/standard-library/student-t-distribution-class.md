@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe student_t_distribution'
 title: student_t_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 23ded8704e1e29dabddadfdc0a1ced3644374ad9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24740a5fa15d9d77cb966184fe27e37956b3412e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840958"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183449"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution, classe
 
@@ -69,7 +70,7 @@ Le type de résultat à virgule flottante a comme valeur par défaut **`double`*
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées en fonction de la distribution *t*de Student. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées en fonction de la distribution *t* de Student. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 [student_t_distribution](#student_t_distribution)\
 [param_type](#param_type)
@@ -155,7 +156,7 @@ Distribution for 10 samples:
     10: 92.7084335614
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

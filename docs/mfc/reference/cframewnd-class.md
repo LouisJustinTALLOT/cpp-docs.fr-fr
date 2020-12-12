@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CFrameWnd'
 title: CFrameWnd (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -106,12 +107,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 5e40f08447d24eed51588b5c2dfa87e289d99eed
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 85bad5ad63a07b58f245df06a44d82f58d6a561c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184281"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -276,7 +277,7 @@ Cette fonction membre est généralement appelée après un événement d’inte
 
 L’implémentation par défaut active le frame et l’affiche en haut de l’ordre de plan et, si nécessaire, effectue les mêmes étapes pour la fenêtre frame principale de l’application.
 
-Substituez cette fonction membre pour modifier la façon dont un frame est activé. Par exemple, vous pouvez forcer les fenêtres enfants MDI à être agrandies. Ajoutez la fonctionnalité appropriée, puis appelez la version de la classe de base avec un *nCmdShow*explicite.
+Substituez cette fonction membre pour modifier la façon dont un frame est activé. Par exemple, vous pouvez forcer les fenêtres enfants MDI à être agrandies. Ajoutez la fonctionnalité appropriée, puis appelez la version de la classe de base avec un *nCmdShow* explicite.
 
 ### <a name="example"></a>Exemple
 
@@ -336,15 +337,15 @@ Spécifie la taille et la position de la fenêtre. La valeur *rectDefault* perme
 Spécifie la fenêtre parente de cette fenêtre frame. Ce paramètre doit avoir la valeur NULL pour les fenêtres frame de niveau supérieur.
 
 *lpszMenuName*<br/>
-Identifie le nom de la ressource de menu à utiliser avec la fenêtre. Utilisez MAKEINTRESOURCE si le menu a un ID d’entier au lieu d’une chaîne. Ce paramètre peut avoir la valeur NULL.
+Identifie le nom de la ressource de menu à utiliser avec la fenêtre. Utilisez MAKEINTRESOURCE si le menu a un ID d’entier au lieu d’une chaîne. Ce paramètre peut être NULL.
 
 *dwExStyle*<br/>
 Spécifie les attributs de [style](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) étendu de la fenêtre.
 
 *pContext*<br/>
-Spécifie un pointeur vers une structure [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Ce paramètre peut avoir la valeur NULL.
+Spécifie un pointeur vers une structure [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Ce paramètre peut être NULL.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si l’initialisation réussit ; Sinon, 0.
 
@@ -372,7 +373,7 @@ Spécifie le type de vue et de document.
 *nID*<br/>
 Numéro d’identification d’une vue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un `CWnd` objet en cas de réussite ; sinon, null.
 
@@ -505,7 +506,7 @@ Appelez cette fonction membre pour obtenir un pointeur vers le actuel `CDocument
 virtual CDocument* GetActiveDocument();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le [CDocument](../../mfc/reference/cdocument-class.md)actuel. S’il n’y a aucun document actif, retourne la valeur NULL.
 
@@ -517,7 +518,7 @@ Appelez cette fonction membre pour obtenir un pointeur vers la fenêtre enfant M
 virtual CFrameWnd* GetActiveFrame();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la fenêtre enfant MDI active. Si l’application est une application SDI ou si la fenêtre frame MDI n’a aucun document actif, le pointeur implicite est **`this`** retourné.
 
@@ -533,7 +534,7 @@ Appelez cette fonction membre pour obtenir un pointeur vers la vue active (le ca
 CView* GetActiveView() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le [CView](../../mfc/reference/cview-class.md)actuel. S’il n’existe pas d’affichage actuel, retourne la valeur NULL.
 
@@ -556,7 +557,7 @@ CControlBar* GetControlBar(UINT nID);
 *nID*<br/>
 Numéro d’identification d’une barre de contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la barre de contrôle associée à l’ID.
 
@@ -591,7 +592,7 @@ Récupère l’état d’affichage du menu dans l’application MFC actuelle.
 virtual DWORD GetMenuBarState();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour peut avoir les valeurs suivantes :
 
@@ -611,7 +612,7 @@ Indique si l’État par défaut du menu dans l’application MFC actuelle est m
 virtual DWORD CFrameWnd::GetMenuBarVisibility();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La méthode retourne l'une des valeurs suivantes :
 
@@ -633,7 +634,7 @@ Appelez cette fonction membre pour obtenir un pointeur vers la barre d’État.
 virtual CWnd* GetMessageBar();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur désignant la fenêtre de la barre d’État.
 
@@ -667,7 +668,7 @@ Récupère le titre de l’objet Window.
 CString GetTitle() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenant le titre actuel de l’objet Window.
 
@@ -703,7 +704,7 @@ Appelez cette fonction membre pour vérifier si une fenêtre frame est modale ou
 BOOL InModalState() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si oui ; Sinon, 0.
 
@@ -715,7 +716,7 @@ Appelez cette fonction membre pour déterminer si la barre de fractionnement dan
 BOOL IsTracking() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si une opération de fractionnement est en cours ; Sinon, 0.
 
@@ -732,7 +733,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 *lpszResourceName*<br/>
 Identifie le nom de la ressource d’accélérateur. Utilisez MAKEINTRESOURCE si la ressource est identifiée par un ID d’entier.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la table d’accélérateurs a été chargée avec succès ; Sinon, 0.
 
@@ -787,7 +788,7 @@ ID des ressources partagées associées à la fenêtre frame.
 Pointeur vers le parent du frame.
 
 *pContext*<br/>
-Pointeur vers une structure [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Ce paramètre peut avoir la valeur NULL.
+Pointeur vers une structure [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) . Ce paramètre peut être NULL.
 
 ### <a name="remarks"></a>Notes
 
@@ -846,7 +847,7 @@ Contient l’une des valeurs suivantes à partir de `enum BorderCmd` :
 *lpRectBorder*<br/>
 Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) ou un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui spécifie les coordonnées de la bordure.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -867,7 +868,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 *nID*<br/>
 ID de la barre de contrôle affichée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Différent de zéro si la barre de contrôle existait ; Sinon, 0.
 
@@ -907,7 +908,7 @@ Pointeur vers une structure Windows [CREATESTRUCT](/windows/win32/api/winuser/ns
 *pContext*<br/>
 Pointeur vers une structure [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
@@ -1097,7 +1098,7 @@ dans Spécifie s’il faut afficher ou masquer le menu. Le paramètre *nState* p
 - `AFX_MBS_VISIBLE` (0x01) : affiche le menu s’il est masqué, mais n’a aucun effet s’il est visible.
 - `AFX_MBS_HIDDEN` (0x02) : masque le menu s’il est visible, mais n’a aucun effet s’il est masqué.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si cette méthode modifie correctement l’état du menu ; Sinon, FALSe.
 
@@ -1226,7 +1227,7 @@ Pointeur vers une chaîne qui fournit une version texte de remplacement des info
 *hIcon*<br/>
 Handle d’une icône à utiliser comme superposition. Il doit s’agir d’une petite icône, mesurant 16x16 pixels à 96 points par pouce (dpi). Si une icône de superposition est déjà appliquée au bouton de la barre des tâches, cette superposition existante est remplacée. Cette valeur peut être NULL. La façon dont une valeur NULL est gérée varie selon que le bouton de la barre des tâches représente une fenêtre unique ou un groupe de fenêtres. Il incombe à l’application appelante de libérer *HICON* lorsqu’elle n’est plus nécessaire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE en cas de réussite ; FALSe si la version du système d’exploitation est inférieure à Windows 7 ou si une erreur se produit lors de la définition de l’icône.
 

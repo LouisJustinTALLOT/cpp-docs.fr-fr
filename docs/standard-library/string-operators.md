@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; opérateurs de chaîne'
 title: '&lt;string&gt;, opérateurs'
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9a23b4539fbb84533de83a541458deddbd13615e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183709"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;, opérateurs
 
@@ -579,7 +580,7 @@ Chaîne à entrer dans le flux de sortie.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle surcharge l' **opérateur<<** pour insérer un objet *Str* de la classe template [basic_string](../standard-library/basic-string-class.md) dans le flux * \_ OSTR*. La fonction retourne effectivement la valeur `_Ostr.write( str.c_str, str.size )` .
+La fonction de modèle surcharge l' **opérateur<<** pour insérer un objet *Str* de la classe template [basic_string](../standard-library/basic-string-class.md) dans le flux *\_ OSTR*. La fonction retourne effectivement la valeur `_Ostr.write( str.c_str, str.size )` .
 
 ## <a name="operatorgt"></a><a name="op_gt"></a> and&gt;
 

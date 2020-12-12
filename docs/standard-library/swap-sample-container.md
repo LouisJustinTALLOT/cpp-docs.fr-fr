@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : swap ( &lt; exemple de conteneur &gt; )'
 title: swap (&lt;sample container&gt;)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: d8dd6436-fb97-46ed-bec5-052cfd710462
-ms.openlocfilehash: 8d89a59e90c3e4258c8ca7bf9e981536f3779d4b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a0086d8acbb4742f3e7a1f5360e7ba84d2f15ab7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450337"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183332"
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;sample container&gt;)
 
 > [!NOTE]
-> Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans la documentation de Microsoft C++ comme un exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque standard C++](../standard-library/stl-containers.md).
 
-Exécute `left.`[swap](../standard-library/container-class-swap.md)`(right)`.
+Exécute `left.` [swap](../standard-library/container-class-swap.md) `(right)` .
 
 ## <a name="syntax"></a>Syntaxe
 
