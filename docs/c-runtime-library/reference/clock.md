@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Clock'
 title: horloge
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 03d1a9ece92dbedfdceb89488e5d0440dc64f7ae
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a766a34518d7658768f3ea390eb4d87076b1d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260746"
 ---
 # <a name="clock"></a>horloge
 
@@ -59,7 +60,7 @@ En raison de suffisamment de temps, la valeur retournée par **Clock** peut dép
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**horloge**|\<time.h>|
+|**24x7**|\<time.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

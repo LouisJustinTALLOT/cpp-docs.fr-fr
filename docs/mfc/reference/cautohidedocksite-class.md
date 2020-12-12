@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CAutoHideDockSite'
 title: CAutoHideDockSite, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 00ac5224d559f84378bd87bd9abe56756a6f4d97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261279"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite, classe
 
@@ -94,7 +95,7 @@ L’exemple suivant montre comment récupérer un `CAutoHideDockSite` objet à p
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxautohidedocksite. h
 

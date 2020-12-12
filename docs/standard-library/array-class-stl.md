@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Array, classe (bibliothèque standard C++)'
 title: array, classe (Bibliothèque C++ Standard)| Microsoft Docs
 ms.date: 11/13/2019
 f1_keywords:
@@ -96,12 +97,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: f826bb679d3391855d0a0dbc7c4355a735b9c529
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 058d1a6f3ad49392271f553fe381cc31624be360
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562569"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261123"
 ---
 # <a name="array-class-c-standard-library"></a>array, classe (Bibliothèque C++ standard)
 
@@ -167,7 +168,7 @@ Nombre d'éléments.
 
 ## <a name="remarks"></a>Notes
 
-Le type a un constructeur par défaut `array()` et un opérateur d'assignation par défaut `operator=`, et il satisfait aux conditions requises pour un `aggregate`. Par conséquent, les objets de type `array<Ty, N>` peuvent être initialisés à l'aide d'un initialiseur d'agrégat. Par exemple,
+Le type a un constructeur par défaut `array()` et un opérateur d'assignation par défaut `operator=`, et il satisfait aux conditions requises pour un `aggregate`. Par conséquent, les objets de type `array<Ty, N>` peuvent être initialisés à l'aide d'un initialiseur d'agrégat. Par exemple :
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -388,7 +389,7 @@ Retourne un **`const`** itérateur qui traite le premier élément de la plage.
 const_iterator cbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`const`** Itérateur à accès aléatoire qui pointe vers le premier élément de la plage, ou vers l’emplacement situé juste après la fin d’une plage vide (pour une plage vide, `cbegin() == cend()` ).
 
@@ -414,7 +415,7 @@ Retourne un **`const`** itérateur qui traite l’emplacement juste après le de
 const_iterator cend() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur d'accès aléatoire qui pointe juste après la fin de la plage.
 
@@ -622,7 +623,7 @@ Retourne un itérateur const qui traite le premier élément d'un tableau invers
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur à accès aléatoire inversé const qui traite le premier élément d'un tableau inversé (ou qui traite ce qui était le dernier élément du tableau non inversé).
 
@@ -666,7 +667,7 @@ Retourne un itérateur const qui traite l'emplacement qui suit le dernier élém
 const_reverse_iterator crend() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur d'accès aléatoire inversé const qui traite l'emplacement qui suit le dernier élément d'un tableau inversé (emplacement qui précédait le premier élément dans le tableau non inversé).
 

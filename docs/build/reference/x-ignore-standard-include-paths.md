@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : `/X` (ignorer les chemins d’accès Include standard)'
 title: /X (Ignorer les chemins d’accès Include standard)
 ms.date: 07/31/2020
 f1_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 652feeb200b7106aaca1ed7264f1e25c088a3dab
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 69936b80893de2c45622ec9973a218a94e8029a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520406"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261006"
 ---
-# <a name="x-ignore-standard-include-paths"></a>`/X`(Ignorer les chemins d’accès Include standard)
+# <a name="x-ignore-standard-include-paths"></a>`/X` (Ignorer les chemins d’accès Include standard)
 
 Empêche le compilateur de rechercher des fichiers include dans les répertoires spécifiés dans les variables d’environnement PATH et INCLUDe.
 
@@ -37,7 +38,7 @@ Vous pouvez utiliser cette option avec l’option [ `/I` (autres répertoires In
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés de **Configuration Propriétés**du  >  préprocesseur**C/C++**  >  **Preprocessor** .
+1. Sélectionnez la page de propriétés de **Configuration Propriétés** du  >  préprocesseur **C/C++**  >   .
 
 1. Modifiez la propriété **ignorer le chemin d’accès Include standard** .
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : asctime, _wasctime'
 title: asctime, _wasctime
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ae075481b364af01bfa75f1cc29423de9fcdbf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260798"
 ---
 # <a name="asctime-_wasctime"></a>asctime, _wasctime
 
@@ -63,17 +64,17 @@ wchar_t *_wasctime(
 *timeptr*<br/>
 Structure date/heure.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **asctime** retourne un pointeur vers le résultat de chaîne de caractères ; **_wasctime** retourne un pointeur vers le résultat de chaîne à caractères larges. Aucune valeur de retour d’erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
-La fonction **asctime** convertit une heure stockée sous la forme d’une structure en une chaîne de caractères. La valeur *timeptr* est généralement obtenue à partir d’un appel à **gmtime** ou **localtime**, qui retournent tous deux un pointeur vers une structure **TM** , définie dans le temps. Manutention.
+La fonction **asctime** convertit une heure stockée sous la forme d’une structure en une chaîne de caractères. La valeur *timeptr* est généralement obtenue à partir d’un appel à **gmtime** ou **localtime**, qui retournent tous deux un pointeur vers une structure **TM** , définie dans Time. H.
 
-|Membre de timeptr|Value|
+|Membre de timeptr|Valeur|
 |--------------------|-----------|
 |**tm_hour**|Heures depuis minuit (0-23)|
 |**tm_isdst**|Positif si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; négatif si l’état de l’heure d’été est inconnu. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis.|
@@ -87,7 +88,7 @@ La fonction **asctime** convertit une heure stockée sous la forme d’une struc
 
 La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Pour plus d’informations sur la configuration de l’heure locale, consultez les fonctions [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md) et [localtime](localtime-localtime32-localtime64.md) et, pour plus d’informations sur la définition des variables globales et d’environnement des fuseaux horaires, consultez la fonction [_tzset](tzset.md).
 
-Le résultat de chaîne produit par **asctime** contient exactement 26 caractères et se présente `Wed Jan 02 02:03:55 1980\n\0`sous la forme. Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne et le caractère null occupent les deux dernières positions de la chaîne. **asctime** utilise une seule mémoire tampon allouée de manière statique pour contenir la chaîne de retour. Chaque appel à cette fonction détruit le résultat de l’appel précédent.
+Le résultat de chaîne produit par **asctime** contient exactement 26 caractères et se présente sous la forme `Wed Jan 02 02:03:55 1980\n\0` . Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne et le caractère null occupent les deux dernières positions de la chaîne. **asctime** utilise une seule mémoire tampon allouée de manière statique pour contenir la chaîne de retour. Chaque appel à cette fonction détruit le résultat de l’appel précédent.
 
 **_wasctime** est une version à caractères larges de **asctime**. dans le cas contraire, **_wasctime** et **asctime** se comportent de la même façon.
 
@@ -108,7 +109,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |**asctime**|\<time.h>|
 |**_wasctime**|\<time.h> ou \<wchar.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme place l’heure système dans l’entier long **aclock**, le convertit en structure **Newtime** , puis le convertit sous forme de chaîne pour la sortie, à l’aide de la fonction **asctime** .
 

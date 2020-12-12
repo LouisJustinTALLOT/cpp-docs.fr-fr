@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragma fp_contract'
 title: fp_contract, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cefcf0519f08b3fd68a0f8b464938ea7cdbda6d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218560"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261175"
 ---
 # <a name="fp_contract-pragma"></a>fp_contract, pragma
 
@@ -21,13 +22,13 @@ Détermine si la contraction à virgule flottante a lieu. Une contraction à vir
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma fp_contract (** { **on** | **off** } **)**
+> **#pragma FP_CONTRACT (** { **on**  |  **off** } **)**
 
 ## <a name="remarks"></a>Notes
 
 Par défaut, **fp_contract** est **activé**. Cela indique au compilateur d’utiliser des instructions de contraction à virgule flottante dans la mesure du possible. Affectez la valeur **off** à **fp_contract** pour conserver les instructions à virgule flottante individuelles.
 
-Pour plus d’informations sur le comportement de virgule flottante, consultez [/FP (spécifier le comportement à virgule flottante)](../build/reference/fp-specify-floating-point-behavior.md).
+Pour plus d’informations sur le comportement à virgule flottante, consultez [/FP (spécifier le comportement de Floating-Point)](../build/reference/fp-specify-floating-point-behavior.md).
 
 Les autres pragmas à virgule flottante incluent :
 
@@ -37,7 +38,7 @@ Les autres pragmas à virgule flottante incluent :
 
 ## <a name="example"></a>Exemple
 
-Le code généré à partir de cet exemple n’utilise pas d’instruction de multiplication par fusion et d’ajout, même lorsqu’il est disponible sur le processeur cible. Si vous supprimez `#pragma fp_contract (off)`les commentaires, le code généré peut utiliser une instruction-multiplier-ajouter fusionnée s’il est disponible.
+Le code généré à partir de cet exemple n’utilise pas d’instruction de multiplication par fusion et d’ajout, même lorsqu’il est disponible sur le processeur cible. Si vous supprimez `#pragma fp_contract (off)` les commentaires, le code généré peut utiliser une instruction-multiplier-ajouter fusionnée s’il est disponible.
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -77,4 +78,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

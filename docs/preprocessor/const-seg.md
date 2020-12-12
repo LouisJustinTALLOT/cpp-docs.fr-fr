@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragma const_seg'
 title: const_seg, pragma
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: 04467df1205bd6d4c70687422572aef898d46f68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 596f44a030aa6c09824d5798e54a3b126ce34544
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231622"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261201"
 ---
 # <a name="const_seg-pragma"></a>const_seg, pragma
 

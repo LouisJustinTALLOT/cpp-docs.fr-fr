@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : clearerr'
 title: clearerr
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: fc9ce31c4bdb0f7bedba461dd48b4072bfc50613
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3085039b142f4aa5eec84259626deef961e37fa0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916982"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260785"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -52,9 +53,9 @@ void clearerr(
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **clearerr** réinitialise l’indicateur d’erreur et l’indicateur de fin de fichier pour *Stream*. Les indicateurs d’erreur ne sont pas automatiquement effacés. une fois que l’indicateur d’erreur pour un flux spécifié est défini, les opérations sur ce flux continuent de retourner une valeur d’erreur jusqu’à ce que **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**ou [Rewind](rewind.md) soit appelé.
+La fonction **clearerr** réinitialise l’indicateur d’erreur et l’indicateur de fin de fichier pour *Stream*. Les indicateurs d’erreur ne sont pas automatiquement effacés. une fois que l’indicateur d’erreur pour un flux spécifié est défini, les opérations sur ce flux continuent de retourner une valeur d’erreur jusqu’à ce que **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos** ou [Rewind](rewind.md) soit appelé.
 
 Si *Stream* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne. Pour plus d’informations sur la fonction **errno** et les codes d’erreur, consultez [errno, constantes](../../c-runtime-library/errno-constants.md).
 
@@ -70,7 +71,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_clearerr.c

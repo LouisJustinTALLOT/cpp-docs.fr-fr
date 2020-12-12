@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les pages de propriétés de l’outil générateur de documents XML
 title: Outil Générateur de documents XML, page de propriétés
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: d17913909532c5bebcac712937af00be3ad98712
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e344d8ef796a5c3455c88851a1fc410801b991bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260967"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Outil Générateur de documents XML, page de propriétés
 
@@ -34,7 +35,7 @@ La page de propriétés Outil Générateur de documents XML expose les fonctionn
 
 - **Fichier de document de sortie**
 
-   Nom et emplacement du répertoire du fichier de sortie .xml. Voir [les macros communes pour construire des commandes et des propriétés](common-macros-for-build-commands-and-properties.md) pour obtenir des informations sur l’utilisation de macros pour spécifier les emplacements des répertoires.
+   Nom et emplacement du répertoire du fichier de sortie .xml. Pour plus d’informations sur l’utilisation des macros pour spécifier des emplacements de répertoire [, consultez macros courantes pour les propriétés et les commandes de génération](common-macros-for-build-commands-and-properties.md) .
 
 - **Dépendances de bibliothèque de documents**
 
@@ -42,4 +43,4 @@ La page de propriétés Outil Générateur de documents XML expose les fonctionn
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de page de propriété du projet CMD](property-pages-visual-cpp.md)
+[Informations de référence sur les pages de propriétés de projet C++](property-pages-visual-cpp.md)

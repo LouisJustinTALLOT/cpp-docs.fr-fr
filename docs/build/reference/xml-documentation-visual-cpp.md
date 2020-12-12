@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : documentation XML (Visual C++)'
 title: Documentation XML (Visual C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: c25c54e81bb9c10fc871a2abc178f57e661ae4e6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 762380d08483292866cb96b34be4d85f7a2f510a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260941"
 ---
 # <a name="xml-documentation-visual-c"></a>Documentation XML (Visual C++)
 
@@ -34,10 +35,10 @@ Pour plus d’informations sur la création d’un fichier .xml avec des comment
 |Pour obtenir des informations sur|Consultez|
 |---------------------------|---------|
 |Options du compilateur à utiliser|[/doc](doc-process-documentation-comments-c-cpp.md)|
-|Balises que vous pouvez utiliser pour fournir les fonctionnalités couramment utilisées dans la documentation|[Tags recommandés pour les commentaires de documentation](recommended-tags-for-documentation-comments-visual-cpp.md)|
-|Chaînes d’ID que le compilateur produit pour identifier les constructions dans votre code|[Traitement du fichier .xml](dot-xml-file-processing.md)|
+|Balises que vous pouvez utiliser pour fournir les fonctionnalités couramment utilisées dans la documentation|[Balises recommandées pour les commentaires de documentation](recommended-tags-for-documentation-comments-visual-cpp.md)|
+|Chaînes d’ID que le compilateur produit pour identifier les constructions dans votre code|[Traitement du fichier. Xml](dot-xml-file-processing.md)|
 |Procédure pour délimiter les balises de documentation|[Délimiteurs pour les étiquettes de documentation Visual C++](delimiters-for-visual-cpp-documentation-tags.md)|
-|Génération d’un fichier .xml à partir d’un ou de plusieurs fichiers .xdc|[Informations de référence sur XDCMake](xdcmake-reference.md)|
+|Génération d’un fichier .xml à partir d’un ou de plusieurs fichiers .xdc|[Référence XDCMake](xdcmake-reference.md)|
 |Liens vers des informations sur XML par rapport aux zones des fonctionnalités Visual Studio|[XML dans Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)|
 
 Si vous devez placer des caractères spéciaux XML dans le texte d’un commentaire de documentation, vous devez utiliser des entités XML ou une section CDATA.

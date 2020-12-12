@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C3807'
 title: Erreur du compilateur C3807
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3807
 ms.assetid: 7e2b0aab-8c61-4e71-b9c1-fcaeb6a1b5ea
-ms.openlocfilehash: a4b33782c0a1e5abb811210c9e7a28da7040c805
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ffa8b52b13ae7245b62cd5aa8d7fec9285754b73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260096"
 ---
 # <a name="compiler-error-c3807"></a>Erreur du compilateur C3807
 
 'type' : une classe avec l’attribut ComImport ne peut pas dériver de’type2 ', seule l’implémentation d’interface est autorisée
 
-Un type dérivé de <xref:System.Runtime.InteropServices.ComImportAttribute> peut implémenter uniquement une interface.
+Un type dérivé de <xref:System.Runtime.InteropServices.ComImportAttribute> ne peut implémenter qu’une interface.
 
 ## <a name="example"></a>Exemple
 

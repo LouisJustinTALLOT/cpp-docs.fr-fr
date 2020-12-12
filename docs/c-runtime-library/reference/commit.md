@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _commit'
 title: _commit
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: 217bccbc4ebc937b89bca5cc127de72b7118481c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9ec0a6dad2e1dc7531d99e386adf41e4c444b8d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918528"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260681"
 ---
 # <a name="_commit"></a>_commit
 
@@ -55,11 +56,11 @@ int _commit(
 *FD*<br/>
 Descripteur de fichier faisant référence au fichier ouvert.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_commit** retourne 0 si le fichier a été correctement vidé sur le disque. Une valeur de retour de-1 indique une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_commit** force le système d’exploitation à écrire le fichier associé à *FD* sur le disque. Grâce à cet appel, le fichier spécifié est vidé immédiatement, et non quand le système d’exploitation le souhaite.
 
@@ -77,7 +78,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>
