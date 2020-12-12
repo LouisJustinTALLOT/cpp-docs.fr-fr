@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CManualAccessor, classe'
 title: CManualAccessor, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,24 +31,24 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3d625a9a02431445cc1505c6a3f7e9673a04201d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504104"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170553"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor, classe
 
 Représente un type d’accesseur conçu pour une utilisation avancée.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CManualAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -62,7 +63,7 @@ class CManualAccessor : public CAccessorBase
 |[CreateAccessor](#createaccessor)|Alloue de la mémoire pour les structures de liaison de colonne et initialise les membres de données de colonne.|
 |[CreateParameterAccessor](#createparameteraccessor)|Alloue de la mémoire pour les structures de liaison de paramètre et initialise les membres de données de paramètre.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 À l’aide `CManualAccessor` de, vous pouvez spécifier la liaison de paramètre et de colonne de sortie par des appels de fonction au moment de l’exécution.
 
@@ -102,7 +103,7 @@ dans Pointeur vers la longueur de champ, si nécessaire.
 *pStatus*<br/>
 dans Pointeur vers la variable à lier à l’état de colonne, si nécessaire.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour utiliser cette fonction, vous devez d’abord appeler [CreateAccessor](#createaccessor). Vous ne pouvez pas ajouter plus d’entrées que le nombre de colonnes spécifié dans `CreateAccessor` .
 
@@ -146,7 +147,7 @@ dans Pointeur vers la variable à lier à l’état de colonne, si nécessaire.
 *Affectez à eParamIO*<br/>
 dans Spécifie si le paramètre auquel la liaison est associée est un paramètre d’entrée, d’entrée/sortie ou de sortie.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour utiliser cette fonction, vous devez d’abord appeler [CreateParameterAccessor](#createparameteraccessor).
 
@@ -177,7 +178,7 @@ dans Taille de la mémoire tampon en octets.
 
 L’une des valeurs HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Appelez cette fonction avant d’appeler la `CManualAccessor::AddBindEntry` fonction.
 
@@ -208,7 +209,7 @@ dans Taille de la mémoire tampon en octets.
 
 L’une des valeurs HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous devez appeler cette fonction avant d’appeler [AddParameterEntry](#addparameterentry).
 

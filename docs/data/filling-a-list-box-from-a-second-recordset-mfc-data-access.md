@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : remplissage d’une zone de liste à partir d’un second Recordset (accès aux données MFC)'
 title: Remplissage d'une zone de liste à partir d'un second recordset (Accès aux données MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 8664e98c6668568918cc0e6504a38119d2e71428
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b912511512b42e15e98a35836758ba37bf4cb989
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336927"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170904"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Remplissage d'une zone de liste à partir d'un second recordset (Accès aux données MFC)
 
@@ -28,13 +29,13 @@ Le modèle pour cette rubrique se compose d'un recordset principal qui remplit l
 
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Pour remplir une zone de liste déroulante ou une zone de liste à partir d'un second recordset
 
-1. Créez l’objet de l’enregistrement ([CRecordset](../mfc/reference/crecordset-class.md).
+1. Créez l’objet Recordset ([CRecordset](../mfc/reference/crecordset-class.md).
 
-1. Obtenez un pointeur à l’objet [CComboBox](../mfc/reference/ccombobox-class.md) pour le contrôle de la boîte combo.
+1. Obtenez un pointeur vers l’objet [CComboBox](../mfc/reference/ccombobox-class.md) pour le contrôle de zone de liste déroulante.
 
 1. Videz la zone de liste déroulante de son contenu précédent.
 
-1. Déplacez-vous à travers tous les enregistrements dans le recordet, appelant [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) pour chaque chaîne de l’enregistrement actuel que vous souhaitez ajouter à la boîte combo.
+1. Parcourez tous les enregistrements de l’ensemble d’enregistrements, en appelant [CComboBox :: AddString](../mfc/reference/ccombobox-class.md#addstring) pour chaque chaîne à partir de l’enregistrement actif que vous souhaitez ajouter à la zone de liste déroulante.
 
 1. Initialisez la sélection dans la zone de liste déroulante.
 
@@ -70,5 +71,5 @@ La fonction obtient `m_courseSet` à partir du document et l'ouvre. Ensuite, ell
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d'enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Vues des enregistrements (accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Liste des pilotes ODBC](../data/odbc/odbc-driver-list.md)

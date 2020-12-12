@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CDynamicParameterAccessor, classe'
 title: CDynamicParameterAccessor (classe)
 ms.date: 02/14/2018
 f1_keywords:
@@ -90,24 +91,24 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 4596f5181dd197b16786ee4d4d16cf06721b13b6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5470ced8b4479124f0db3878fe2562a658547f9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170774"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor (classe)
 
 Semblable à [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) mais obtient les informations sur les paramètres à définir en appelant l’interface [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) .
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CDynamicParameterAccessor : public CDynamicAccessor
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: atldbcli. h
 
@@ -131,7 +132,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 |[SetParamStatus](#setparamstatus)|Définit l’état du paramètre spécifié stocké en mémoire tampon.|
 |[SetParamString](#setparamstring)|Définit les données de chaîne du paramètre spécifié stocké en mémoire tampon.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Le fournisseur doit prendre en charge `ICommandWithParameters` pour permettre au consommateur d’utiliser cette classe.
 
@@ -161,7 +162,7 @@ Spécifie comment les données d’objet BLOB doivent être gérées. La valeur 
 *nBlobSize*<br/>
 Taille maximale d’objet BLOB en octets ; les données de colonne sur cette valeur sont traitées comme un objet BLOB. La valeur par défaut est 8 000. Pour plus d’informations, consultez [CDynamicAccessor :: SetBlobSizeLimit](./cdynamicaccessor-class.md#setblobsizelimit) .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur la gestion des objets BLOB, consultez le constructeur [CDynamicAccessor :: CDynamicAccessor](./cdynamicaccessor-class.md#cdynamicaccessor) .
 
@@ -271,7 +272,7 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 *pLength*<br/>
 à Pointeur vers la variable contenant la longueur en octets du paramètre spécifié.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première substitution retourne **`true`** en cas de réussite ou **`false`** d’échec. Le deuxième remplacement pointe vers la mémoire qui contient la longueur du paramètre.
 
@@ -313,9 +314,9 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé aux valeurs de retour. Le paramètre number est l’index du paramètre en fonction de son ordre dans l’appel de procédure stockée ou SQL. Pour obtenir un exemple, consultez [setParam](#setparam) .
 
 *pStatus*<br/>
-à Pointeur vers la variable qui contient l’État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs de DBSTATUS, consultez l' [État](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*ou recherchez DBSTATUS dans OleDb. h.
+à Pointeur vers la variable qui contient l’État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs de DBSTATUS, consultez l' [État](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* ou recherchez DBSTATUS dans OleDb. h.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première substitution retourne **`true`** en cas de réussite ou **`false`** d’échec. Le deuxième remplacement pointe vers la mémoire qui contient l’état du paramètre spécifié.
 
@@ -357,7 +358,7 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 *pMaxLen*<br/>
 à Pointeur vers la taille de la mémoire tampon vers laquelle pointe *pbuffer* (en caractères, y compris le caractère null de fin).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
@@ -425,7 +426,7 @@ dans Nom du paramètre.
 dans Pointeur vers la mémoire qui contient les données à écrire dans la mémoire tampon.
 
 *statut*<br/>
-dans État de la colonne DBSTATUS. Pour plus d’informations sur les valeurs de DBSTATUS, consultez l' [État](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*ou recherchez DBSTATUS dans OleDb. h.
+dans État de la colonne DBSTATUS. Pour plus d’informations sur les valeurs de DBSTATUS, consultez l' [État](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* ou recherchez DBSTATUS dans OleDb. h.
 
 ### <a name="return-value"></a>Valeur renvoyée
 
@@ -452,7 +453,7 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 *length*<br/>
 dans Longueur, en octets, du paramètre spécifié.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
@@ -473,9 +474,9 @@ bool SetParamStatus(DBORDINAL nParam,
 dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé aux valeurs de retour. Le paramètre number est l’index du paramètre en fonction de son ordre dans l’appel de procédure stockée ou SQL. Pour obtenir un exemple, consultez [setParam](#setparam) .
 
 *statut*<br/>
-dans État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs de DBSTATUS, consultez l' [État](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*ou recherchez DBSTATUS dans OleDb. h.
+dans État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs de DBSTATUS, consultez l' [État](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* ou recherchez DBSTATUS dans OleDb. h.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 
@@ -502,9 +503,9 @@ dans Le numéro de paramètre (décalage de 1). Le paramètre 0 est réservé au
 dans Pointeur vers les données de chaîne ANSI (**char**) ou Unicode (**WCHAR**) du paramètre spécifié. Consultez DBSTATUS dans OleDb. h.
 
 *statut*<br/>
-dans État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs de DBSTATUS, consultez l' [État](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*ou recherchez DBSTATUS dans OleDb. h.
+dans État DBSTATUS du paramètre spécifié. Pour plus d’informations sur les valeurs de DBSTATUS, consultez l' [État](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* ou recherchez DBSTATUS dans OleDb. h.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Retourne **`true`** en cas de réussite ou **`false`** d’échec.
 

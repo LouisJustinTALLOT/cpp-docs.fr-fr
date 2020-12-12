@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CEnumerator, classe'
 title: CEnumerator, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,25 +23,25 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: dfc358c06179d50cbf6442863fd2ed2c533cd00a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1d66afad29bd9fd785f5bc4e75a72605232af41c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170644"
 ---
 # <a name="cenumerator-class"></a>CEnumerator, classe
 
 Utilise un objet énumérateur OLE DB, qui expose l’interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) pour retourner un ensemble de lignes décrivant toutes les sources de données et les énumérateurs.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CEnumerator :
    public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -54,7 +55,7 @@ class CEnumerator :
 |[GetMoniker](#getmoniker)|Récupère l' `IMoniker` interface pour l’enregistrement en cours.|
 |[Ouvrir](#open)|Ouvre l’énumérateur.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Vous pouvez récupérer les `ISourcesRowset` données indirectement à partir de cette classe.
 
@@ -77,7 +78,7 @@ dans Nom à rechercher.
 
 **`true`** Si le nom a été trouvé. Sinon, **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Ce nom est mappé au `SOURCES_NAME` membre de l’interface [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 

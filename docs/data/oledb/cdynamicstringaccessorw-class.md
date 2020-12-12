@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDynamicStringAccessorW,'
 title: CDynamicStringAccessorW, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDynamicStringAccessorW class
 ms.assetid: 9b7fd5cc-3a9b-4b57-b907-f1e35de2c98f
-ms.openlocfilehash: 20ea4a2d795108e00c4b11c3abea6cf7b9953ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 360a9592cdce3a1046eecb360a8691b1d8480caf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170670"
 ---
 # <a name="cdynamicstringaccessorw-class"></a>CDynamicStringAccessorW, classe
 
@@ -25,20 +26,20 @@ typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;
 
 ## <a name="remarks"></a>Notes
 
-Les deux demandent que le fournisseur récupère toutes les données accessibles à partir du magasin de données en tant que données de chaîne, mais `CDynamicStringAccessor` demande des données de chaîne Unicode.
+Ils demandent tous deux que le fournisseur récupère toutes les données accessibles depuis le magasin de données en tant que données de chaîne, mais `CDynamicStringAccessor` demande les données de chaîne Unicode.
 
-`CDynamicStringAccessorW` hérite `GetString` et `SetString` de `CDynamicStringAccessor`. Lorsque vous utilisez ces méthodes dans un `CDynamicStringAccessorW` objet, `BaseType` est **WCHAR**.
+`CDynamicStringAccessorW` hérite `GetString` `SetString` de et de `CDynamicStringAccessor` . Lorsque vous utilisez ces méthodes dans un `CDynamicStringAccessorW` objet, `BaseType` est **WCHAR**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête**: atldbcli.h
+**En-tête**: atldbcli. h
 
 ## <a name="see-also"></a>Voir aussi
 
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor, classe](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor, classe](../../data/oledb/cmanualaccessor-class.md)<br/>
 [CDynamicAccessor, classe](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicStringAccessor, classe](../../data/oledb/cdynamicstringaccessor-class.md)<br/>

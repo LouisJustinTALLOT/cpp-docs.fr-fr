@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CCustomSource (CustomDS. h)'
 title: CCustomSource (CustomDS.H)
 ms.date: 10/22/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 8e92c30e8d62ade095167880917ad70da8e59b36
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6fbb9fe0676521b01caa3bba5f5bb2be03d0fe6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170436"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS. h)
 
@@ -153,7 +154,7 @@ Si vous souhaitez modifier la valeur par défaut d’une propriété (Notez qu�
 
 Si vous souhaitez définir votre propre jeu de propriétés, vous pouvez en ajouter un en effectuant une combinaison BEGIN_PROPSET_MAP/END_PROPSET_MAP supplémentaire. Définissez un GUID pour le jeu de propriétés, puis définissez vos propres propriétés. Si vous avez des propriétés spécifiques au fournisseur, ajoutez-les à un nouveau jeu de propriétés au lieu d’en utiliser un existant. Cela évite les problèmes dans les versions ultérieures de OLE DB.
 
-## <a name="user-defined-property-sets"></a>Jeux de propriétés définis par l’utilisateur
+## <a name="user-defined-property-sets"></a>Jeux de propriétés User-Defined
 
 Visual C++ prend en charge les jeux de propriétés définis par l’utilisateur. Vous n’êtes pas obligé de remplacer `GetProperties` ou `GetPropertyInfo` . Au lieu de cela, les modèles détectent tout jeu de propriétés défini par l’utilisateur et l’ajoutent à l’objet approprié.
 
@@ -167,4 +168,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers générés par l’Assistant fournisseur](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[Fichiers de Wizard-Generated du fournisseur](../../data/oledb/provider-wizard-generated-files.md)<br/>

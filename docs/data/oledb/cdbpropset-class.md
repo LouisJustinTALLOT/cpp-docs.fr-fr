@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDBPropSet'
 title: CDBPropSet, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,24 +33,24 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 45772896cac520eba35ec475f8b6ae7bd2993045
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3c1695e16f050866c2df5725cec4a716c04b3093
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170813"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet, classe
 
 Hérite de la `DBPROPSET` structure et ajoute un constructeur qui initialise les champs clés ainsi que la `AddProperty` méthode d’accès.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CDBPropSet : public tagDBPROPSET
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -69,7 +70,7 @@ class CDBPropSet : public tagDBPROPSET
 |-|-|
 |[opérateur =](#op_equal)|Assigne le contenu d’une propriété définie à une autre.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les fournisseurs de OLE DB et les consommateurs utilisent `DBPROPSET` des structures pour passer des tableaux de `DBPROP` structures. Chaque `DBPROP` structure représente une propriété unique qui peut être définie.
 
@@ -161,7 +162,7 @@ void SetGUID(const GUID& guid) throw();
 *guid*<br/>
 dans GUID utilisé pour définir le `guidPropertySet` champ de la structure [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Ce champ peut également être défini par le [constructeur](#cdbpropset) .
 

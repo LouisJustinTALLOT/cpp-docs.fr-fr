@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CRestrictions, classe'
 title: CRestrictions, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: a380f1ba00dcc444099f186071b7d55c9db71291
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 28eee2ea8d7e3b28edaab745c48426c878cc2f2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170280"
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
 
@@ -43,7 +44,7 @@ Nombre de colonnes de restriction pour l’ensemble de lignes de schéma.
 *pguid*<br/>
 Pointeur vers le GUID du schéma.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbsch. h
 

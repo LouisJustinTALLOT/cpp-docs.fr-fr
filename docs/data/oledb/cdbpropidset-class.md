@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CDBPropIDSet'
 title: CDBPropIDSet, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -31,24 +32,24 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6f0c3ea19daeef2b262f6ac1ad76599160baf266
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502504"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170826"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet, classe
 
 Hérite de la `DBPROPIDSET` structure et ajoute un constructeur qui initialise les champs clés ainsi que la méthode d’accès [AddPropertyID](#addpropertyid) .
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CDBPropIDSet : public tagDBPROPIDSET
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -68,7 +69,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |-|-|
 |[opérateur =](#op_equal)|Attribue le contenu d’un ensemble d’ID de propriété à un autre.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 OLE DB consommateurs utilisent des `DBPROPIDSET` structures pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans une structure [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) unique appartiennent à un jeu de propriétés.
 
@@ -124,7 +125,7 @@ void SetGUID(const GUID& guid) throw();
 *guid*<br/>
 dans GUID utilisé pour définir le `guidPropertySet` champ de la structure [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Ce champ peut également être défini par le [constructeur](#cdbpropidset) . Appelez cette fonction si vous utilisez le constructeur par défaut pour cette classe.
 

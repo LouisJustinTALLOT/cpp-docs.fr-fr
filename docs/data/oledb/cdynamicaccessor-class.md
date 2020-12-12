@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CDynamicAccessor, classe'
 title: CDynamicAccessor, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -124,24 +125,24 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 31cc996b8beedadf9cba5a46b3b4da20e19268b0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2cb5c23ef72bafc85b4300707eb6c5ffe33314f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170800"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor, classe
 
 Vous permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (la structure sous-jacente de la base de données).
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```cpp
 class CDynamicAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: atldbcli. h
 
@@ -172,7 +173,7 @@ class CDynamicAccessor : public CAccessorBase
 |[SetStatus](#setstatus)|Définit l’état d’une colonne spécifiée.|
 |[SetValue](#setvalue)|Stocke les données dans la mémoire tampon.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Utilisez `CDynamicAccessor` des méthodes pour obtenir des informations sur les colonnes, telles que les noms de colonnes, le nombre de colonnes, le type de données, etc. Vous utilisez ensuite ces informations de colonne pour créer un accesseur de manière dynamique au moment de l’exécution.
 
@@ -199,7 +200,7 @@ dans `DBCOLUMNINFO` Structure contenant des informations sur les colonnes. Consu
 
 L’une des valeurs HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Utilisez cette méthode lors de la substitution de l’accesseur par défaut créé avec `CDynamicAccessor` (consultez [comment extraire des données ?](../../data/oledb/fetching-data.md)).
 
@@ -222,7 +223,7 @@ Spécifie la manière dont les données BLOB (Binary Large Object) doivent être
 *nBlobSize*<br/>
 Taille maximale d’objet BLOB en octets ; les données de colonne sur cette valeur sont traitées comme un objet BLOB. La valeur par défaut est 8 000. Pour plus d’informations, consultez [SetBlobSizeLimit](#setblobsizelimit) .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si vous utilisez le constructeur pour initialiser l' `CDynamicAccessor` objet, vous pouvez spécifier comment il doit lier des objets BLOB. Les objets BLOB peuvent contenir des données binaires telles que des graphiques, du son ou du code compilé. Le comportement par défaut consiste à traiter les colonnes de plus de 8 000 octets comme des objets BLOB et à essayer de les lier à un `ISequentialStream` objet. Toutefois, vous pouvez spécifier une valeur différente pour la taille de l’objet BLOB.
 
@@ -232,7 +233,7 @@ Vous pouvez également spécifier la manière dont `CDynamicAccessor` gère les 
 
 Annule la liaison de toutes les colonnes, libère la mémoire allouée et libère le pointeur d’interface [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) dans la classe.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 void Close() throw();
@@ -285,7 +286,7 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 
 L’une des valeurs HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous devez définir `DBPROP_IRowsetLocate` sur VARIANT_TRUE pour récupérer un signet.
 
@@ -326,7 +327,7 @@ dans Numéro de la colonne. Les numéros de colonne commencent par 1. La valeur 
 
 Retourne **`true`** si les caractéristiques des colonnes sont récupérées avec succès. Sinon, elle retourne **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le numéro de colonne est décalé par rapport à un. La colonne zéro est un cas particulier ; Il s’agit du signet, s’il est disponible.
 
@@ -361,7 +362,7 @@ dans Pointeur vers l’interface [IRowset](/previous-versions/windows/desktop/ms
 
 L’une des valeurs HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations sur les types de données, et, consultez [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *OLE DB Guide de référence du programmeur* `DBORDINAL` `DBCOLUMNINFO` `OLECHAR` .
 
@@ -439,7 +440,7 @@ dans Pointeur vers une chaîne de caractères contenant le nom de la colonne.
 
 Retourne **`true`** si la colonne spécifiée est trouvée. Sinon, cette fonction retourne **`false`** .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La première substitution prend le numéro de colonne, tandis que les deuxième et troisième remplacements prennent respectivement le nom de colonne au format ANSI ou Unicode.
 
@@ -544,7 +545,7 @@ Si vous souhaitez passer des données de type chaîne, utilisez les versions non
 
 Pour tous les autres types de données, il est plus simple d’utiliser les versions basées sur un modèle de `GetValue` . Les versions basées sur un modèle retournent **`true`** en cas de réussite ou **`false`** d’échec.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Utilisez les versions sans modèle pour retourner les colonnes qui contiennent des chaînes et les versions basées sur des modèles pour les colonnes qui contiennent d’autres types de données.
 
@@ -571,7 +572,7 @@ Spécifie comment les données d’objet BLOB doivent être gérées. Il peut av
 
 - DBBLOBHANDLING_SKIP : ignorer (ne pas lier) les colonnes qui sont qualifiées d’objets BLOB contenants (l’accesseur ne lie ni ne récupère la valeur de colonne, mais il récupère toujours l’État et la longueur de la colonne).
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous devez appeler `SetBlobHandling` avant d'appeler `Open`.
 
@@ -592,7 +593,7 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 *nBlobSize*<br/>
 Spécifie la taille limite de l’objet BLOB.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Définit la taille maximale des objets BLOB en octets ; les données de colonne supérieures à cette valeur sont traitées comme un objet BLOB. Certains fournisseurs offrent des tailles extrêmement élevées pour les colonnes (par exemple, 2 Go). Plutôt que de tenter d’allouer de la mémoire pour une colonne de cette taille, vous essayez généralement de lier ces colonnes en tant qu’objets BLOB. De cette façon, vous n’êtes pas obligé d’allouer toute la mémoire, mais vous pouvez toujours lire toutes les données sans crainte de tronquer. Toutefois, dans certains cas, vous souhaiterez peut-être forcer `CDynamicAccessor` à lier des colonnes de grande taille dans leurs types de données natifs. Pour ce faire, appelez `SetBlobSizeLimit` avant d’appeler `Open` .
 
