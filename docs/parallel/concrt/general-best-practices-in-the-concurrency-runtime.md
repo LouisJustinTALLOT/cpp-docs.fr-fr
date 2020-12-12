@@ -1,21 +1,22 @@
 ---
+description: 'En savoir plus sur : meilleures pratiques générales dans le runtime d’accès concurrentiel'
 title: Meilleures pratiques en général du runtime d’accès concurrentiel
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 77ca8acbd3dedc28aaa6c330c3e91ed09046d162
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a0de8d9a0070bfc0691aeb9484c755cbfcbb40b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197424"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Meilleures pratiques en général du runtime d’accès concurrentiel
 
 Ce document décrit les meilleures pratiques qui s’appliquent à plusieurs zones du runtime d’accès concurrentiel.
 
-## <a name="sections"></a><a name="top"></a>Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
 Ce document contient les sections suivantes :
 
@@ -33,13 +34,13 @@ Ce document contient les sections suivantes :
 
 - [Ne pas utiliser d’objets d’accès concurrentiel dans des segments de données partagés](#shared-data)
 
-## <a name="use-cooperative-synchronization-constructs-when-possible"></a><a name="synchronization"></a>Utiliser les constructions de synchronisation coopérative lorsque cela est possible
+## <a name="use-cooperative-synchronization-constructs-when-possible"></a><a name="synchronization"></a> Utiliser les constructions de synchronisation coopérative lorsque cela est possible
 
 Le runtime d’accès concurrentiel fournit de nombreuses constructions de concurrence sécurisée qui ne nécessitent pas d’objet de synchronisation externe. Par exemple, la classe [Concurrency :: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) fournit des opérations d’ajout et d’accès à l’élément sécurisées pour l’accès concurrentiel. Ici, l’accès concurrentiel sécurisé signifie que les pointeurs ou les itérateurs sont toujours valides. Il ne s’agit pas d’une garantie d’initialisation d’élément ou d’un ordre de parcours particulier. Toutefois, dans les cas où vous avez besoin d’un accès exclusif à une ressource, le Runtime fournit les classes [Concurrency :: critical_section](../../parallel/concrt/reference/critical-section-class.md), [Concurrency :: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)et [Concurrency :: Event](../../parallel/concrt/reference/event-class.md) . Ces types se comportent de manière coopérative ; par conséquent, le planificateur de tâches peut réallouer les ressources de traitement à un autre contexte lorsque la première tâche attend des données. Dans la mesure du possible, utilisez ces types de synchronisation au lieu d’autres mécanismes de synchronisation, tels que ceux fournis par l’API Windows, qui ne se comportent pas de manière coopérative. Pour plus d’informations sur ces types de synchronisation et un exemple de code, consultez [structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md) et comparaison des [structures de données de synchronisation avec l’API Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
 [[Haut](#top)]
 
-## <a name="avoid-lengthy-tasks-that-do-not-yield"></a><a name="yield"></a>Évitez les tâches longues qui ne génèrent pas
+## <a name="avoid-lengthy-tasks-that-do-not-yield"></a><a name="yield"></a> Évitez les tâches longues qui ne génèrent pas
 
 Étant donné que le planificateur de tâches se comporte de manière coopérative, il ne fournit pas d’équité entre les tâches. Par conséquent, une tâche peut empêcher le démarrage d’autres tâches. Bien que cela soit acceptable dans certains cas, cela peut entraîner un blocage ou une privation.
 
@@ -74,7 +75,7 @@ Il existe d’autres moyens d’activer la coopération entre les tâches de lon
 
 [[Haut](#top)]
 
-## <a name="use-oversubscription-to-offset-operations-that-block-or-have-high-latency"></a><a name="oversubscription"></a>Utiliser le surabonnement pour décaler les opérations qui bloquent ou ont une latence élevée
+## <a name="use-oversubscription-to-offset-operations-that-block-or-have-high-latency"></a><a name="oversubscription"></a> Utiliser le surabonnement pour décaler les opérations qui bloquent ou ont une latence élevée
 
 Le runtime d’accès concurrentiel fournit des primitives de synchronisation, telles que [Concurrency :: critical_section](../../parallel/concrt/reference/critical-section-class.md), qui permettent aux tâches de se bloquer et de se céder les unes aux autres. Lorsqu’une tâche se bloque ou cède de façon coopérative, le planificateur de tâches peut réallouer les ressources de traitement à un autre contexte lorsque la première tâche attend des données.
 
@@ -88,7 +89,7 @@ Considérez la fonction suivante, `download` , qui télécharge le fichier à l�
 
 [[Haut](#top)]
 
-## <a name="use-concurrent-memory-management-functions-when-possible"></a><a name="memory"></a>Utilisez des fonctions de gestion simultanée de la mémoire lorsque cela est possible
+## <a name="use-concurrent-memory-management-functions-when-possible"></a><a name="memory"></a> Utilisez des fonctions de gestion simultanée de la mémoire lorsque cela est possible
 
 Utilisez les fonctions de gestion de la mémoire, la [concurrence :: Alloc](reference/concurrency-namespace-functions.md#alloc) et l' [accès concurrentiel :: Free](reference/concurrency-namespace-functions.md#free), lorsque vous avez des tâches affinées qui allouez fréquemment de petits objets qui ont une durée de vie relativement courte. Le runtime d’accès concurrentiel détient un cache mémoire distinct pour chaque thread en cours d’exécution. Les `Alloc` `Free` fonctions et allouent et libèrent de la mémoire à partir de ces caches sans l’utilisation de verrous ou de barrières de mémoire.
 
@@ -96,7 +97,7 @@ Pour plus d’informations sur ces fonctions de gestion de la mémoire, consulte
 
 [[Haut](#top)]
 
-## <a name="use-raii-to-manage-the-lifetime-of-concurrency-objects"></a><a name="raii"></a>Utiliser RAII pour gérer la durée de vie des objets de concurrence
+## <a name="use-raii-to-manage-the-lifetime-of-concurrency-objects"></a><a name="raii"></a> Utiliser RAII pour gérer la durée de vie des objets de concurrence
 
 Le runtime d’accès concurrentiel utilise la gestion des exceptions pour implémenter des fonctionnalités telles que l’annulation. Par conséquent, écrivez du code sécurisé au moment de l’exception quand vous appelez le runtime ou appelez une autre bibliothèque qui appelle le Runtime.
 
@@ -124,11 +125,11 @@ Error details:
     negative balance: -76
 ```
 
-Pour obtenir des exemples supplémentaires qui utilisent le modèle RAII pour gérer la durée de vie des objets d’accès concurrentiel, consultez [procédure pas à pas : suppression de travail d’un thread d’interface utilisateur](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [Comment : utiliser la classe de contexte pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)et [Comment : utiliser le surabonnement pour compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Pour obtenir des exemples supplémentaires qui utilisent le modèle RAII pour gérer la durée de vie des objets de concurrence, consultez [procédure pas à pas : suppression de travail d’un thread de User-Interface](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [Comment : utiliser la classe de contexte pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)et [Comment : utiliser le surabonnement pour décaler la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Haut](#top)]
 
-## <a name="do-not-create-concurrency-objects-at-global-scope"></a><a name="global-scope"></a>Ne pas créer d’objets de concurrence au niveau de la portée globale
+## <a name="do-not-create-concurrency-objects-at-global-scope"></a><a name="global-scope"></a> Ne pas créer d’objets de concurrence au niveau de la portée globale
 
 Lorsque vous créez un objet d’accès concurrentiel au niveau de la portée globale, vous pouvez provoquer des problèmes tels que des violations d’accès mémoire ou des interblocages dans votre application.
 
@@ -142,7 +143,7 @@ Pour obtenir des exemples de la façon correcte de créer des `Scheduler` objets
 
 [[Haut](#top)]
 
-## <a name="do-not-use-concurrency-objects-in-shared-data-segments"></a><a name="shared-data"></a>Ne pas utiliser d’objets d’accès concurrentiel dans des segments de données partagés
+## <a name="do-not-use-concurrency-objects-in-shared-data-segments"></a><a name="shared-data"></a> Ne pas utiliser d’objets d’accès concurrentiel dans des segments de données partagés
 
 La runtime d’accès concurrentiel ne prend pas en charge l’utilisation d’objets concurrentiels dans une section de données partagées, par exemple, une section de données créée par la directive [data_seg](../../preprocessor/data-seg.md) `#pragma` . Un objet d’accès concurrentiel partagé entre des limites de processus peut mettre le runtime dans un état incohérent ou non valide.
 
@@ -159,6 +160,6 @@ La runtime d’accès concurrentiel ne prend pas en charge l’utilisation d’o
 [Comment : utiliser Alloc et Free pour améliorer les performances de la mémoire](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
 [Comment : utiliser le surabonnement pour compenser la latence](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
 [Comment : utiliser la classe Context pour implémenter un sémaphore coopératif](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[Procédure pas à pas : suppression de travail d’un thread d’interface utilisateur](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
+[Procédure pas à pas : suppression de travail d’un thread de User-Interface](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 [Meilleures pratiques dans la bibliothèque de modèles parallèles](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Meilleures pratiques dans la bibliothèque des agents asynchrones](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

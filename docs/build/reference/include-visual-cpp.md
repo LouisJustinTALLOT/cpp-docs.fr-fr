@@ -1,5 +1,6 @@
 ---
-title: '&lt;inclure des >C++ (commentaires de documentation)'
+description: 'En savoir plus sur : &lt; include&gt;'
+title: '&lt;inclure des> (commentaires de documentation C++)'
 ms.date: 11/04/2016
 f1_keywords:
 - <include>
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: e1d6a26f28069cfb4a1c74bd591d63bc89352774
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 577281b293fcca9b9b0b9491dd239240d435f32c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199777"
 ---
 # <a name="ltincludegt"></a>&lt;include&gt;
 
-La balise \<include> vous permet de faire référence à des commentaires dans un autre fichier qui décrivent les types et les membres dans votre code source. Il s’agit d’une solution alternative au placement direct des commentaires de la documentation dans votre fichier de code source.  Par exemple, vous pouvez utiliser \<include> pour insérer des commentaires « d’éléments réutilisables » standard qui sont utilisés au sein de votre équipe ou société.
+La \<include> balise vous permet de faire référence aux commentaires d’un autre fichier qui décrivent les types et les membres de votre code source. Il s’agit d’une solution alternative au placement direct des commentaires de la documentation dans votre fichier de code source.  Par exemple, vous pouvez utiliser \<include> pour insérer des commentaires « réutilisables » standard qui sont utilisés dans votre équipe ou votre entreprise.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,13 +41,13 @@ ID de la balise qui précède les commentaires.  Mettez le nom entre guillemets 
 
 ## <a name="remarks"></a>Notes
 
-La balise \<include> utilise la syntaxe XML XPath. Reportez-vous à la documentation XPath pour savoir comment personnaliser votre utilisation de la balise \<include>.
+La \<include> balise utilise la syntaxe XML XPath. Reportez-vous à la documentation XPath pour savoir comment personnaliser à l’aide de \<include> .
 
-Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.
+Compilez avec [/doc](doc-process-documentation-comments-c-cpp.md) pour traiter les commentaires de documentation dans un fichier.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple comprend plusieurs fichiers. Le premier fichier, qui utilise \<include>, contient les commentaires de documentation suivants :
+Cet exemple comprend plusieurs fichiers. Le premier fichier, qui utilise \<include> , contient les commentaires de documentation suivants :
 
 ```cpp
 // xml_include_tag.cpp

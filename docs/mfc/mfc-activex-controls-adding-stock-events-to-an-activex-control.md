@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : ajout d’événements stock à un contrôle ActiveX'
 title: "Contrôles ActiveX MFC : ajout d'événements stock à un contrôle ActiveX"
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: e63e63b914b9db64139b9b81a2c749a78ac4a58f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e5b99ca2cd8675ab133f56d0e815abe0829867eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202897"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Contrôles ActiveX MFC : ajout d'événements stock à un contrôle ActiveX
 

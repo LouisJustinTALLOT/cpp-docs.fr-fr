@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : ajout de propriétés personnalisées'
 title: 'Contrôles ActiveX MFC : ajout de propriétés personnalisées'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: af1ca2d63abcb112bfe1e7d7538dbf70fb817ae5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: efae1c7cedc2202a2a40974393be881466442b84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202936"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Contrôles ActiveX MFC : ajout de propriétés personnalisées
 

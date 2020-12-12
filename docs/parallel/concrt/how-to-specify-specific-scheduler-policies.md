@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Comment : spécifier des stratégies de planificateur spécifiques'
 title: 'Comment : spécifier des stratégies de planificateur'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-ms.openlocfilehash: bd5edfbdf6b0fda9c7e327dab9538bbf6b5e4b12
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c4aeeea04d69613ef3eb80f36863b16530e18e37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197255"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>Comment : spécifier des stratégies de planificateur
 
@@ -45,12 +46,12 @@ Bien que les deux ensembles de tâches produisent le même résultat, la version
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `scheduler-policy.cpp` puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
+Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `scheduler-policy.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-> **CL. exe/EHsc Scheduler-Policy. cpp**
+> **cl.exe/EHsc Scheduler-Policy. cpp**
 
 ## <a name="see-also"></a>Voir aussi
 
 [Stratégies de planificateur](../../parallel/concrt/scheduler-policies.md)<br/>
-[Guide pratique pour gérer une instance de planificateur](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
-[Guide pratique pour créer des agents qui utilisent des stratégies de planificateur spécifiques](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+[Comment : gérer une instance de planificateur](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
+[Comment : créer des agents qui utilisent des stratégies de planificateur spécifiques](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

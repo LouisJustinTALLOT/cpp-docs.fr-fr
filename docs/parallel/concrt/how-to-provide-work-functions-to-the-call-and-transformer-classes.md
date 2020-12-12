@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : fournir des fonctions de travail aux classes Call et transformer'
 title: 'Comment : fournir des fonctions de travail aux classes call et transformer'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: b629d0e0e11388e212c56b8e1f6bea290368c884
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 05def4dcc8357e73a8606fbc4ce741eebb647d37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197359"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Comment : fournir des fonctions de travail aux classes call et transformer
 

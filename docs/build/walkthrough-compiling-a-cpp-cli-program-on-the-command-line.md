@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : procédure pas à pas : compilation d’un programme C++/CLI sur la ligne de commande'
 title: "Procédure pas à pas : compilation d'un programme C++/CLI sur la ligne de commande"
 ms.date: 04/23/2019
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-ms.openlocfilehash: 8a5c5659367350a80725b365ef9c431bbec209d1
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 075ac90f08f62fb75c9a220b398f34841eafa60d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198997"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Procédure pas à pas : compilation d'un programme C++/CLI sur la ligne de commande
 
@@ -29,7 +30,7 @@ Pour activer la compilation pour C++/CLI, vous devez utiliser l’option du comp
 
 1. Ouvrez une fenêtre de **invite de commandes développeur** . Pour obtenir des instructions spécifiques, consultez [pour ouvrir une fenêtre d’invite de commandes développeur](building-on-the-command-line.md#developer_command_prompt).
 
-   Des informations d'identification d'administrateur peuvent être nécessaires pour compiler le code, selon la configuration et le système d'exploitation de l'ordinateur. Pour exécuter la fenêtre d’invite de commandes en tant qu’administrateur, cliquez avec le bouton droit pour ouvrir le menu contextuel de l’invite de commandes, puis choisissez **plus** > **exécuter en tant qu’administrateur**.
+   Des informations d'identification d'administrateur peuvent être nécessaires pour compiler le code, selon la configuration et le système d'exploitation de l'ordinateur. Pour exécuter la fenêtre d’invite de commandes en tant qu’administrateur, cliquez avec le bouton droit pour ouvrir le menu contextuel de l’invite de commandes, puis choisissez **plus**  >  **exécuter en tant qu’administrateur**.
 
 1. À l'invite de commandes, entrez `notepad basicclr.cpp`.
 
@@ -44,9 +45,9 @@ Pour activer la compilation pour C++/CLI, vous devez utiliser l’option du comp
    }
    ```
 
-1. Dans la barre de menus, choisissez **fichier** > **Enregistrer**.
+1. Dans la barre de menus, choisissez **fichier**  >  **Enregistrer**.
 
-   Vous avez créé un Visual C++ fichier source qui utilise une classe .NET Framework (<xref:System.Console>) dans l' <xref:System> espace de noms.
+   Vous avez créé un Visual C++ fichier source qui utilise une classe .NET Framework ( <xref:System.Console> ) dans l' <xref:System> espace de noms.
 
 1. À l'invite de commandes, entrez `cl /clr basicclr.cpp`. Le compilateur cl.exe compile le code source en un fichier .obj qui contient du code MSIL, puis exécute l'éditeur de liens pour générer un programme exécutable nommé basicclr.exe.
 

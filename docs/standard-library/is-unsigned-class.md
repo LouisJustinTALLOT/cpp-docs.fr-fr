@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_unsigned'
 title: is_unsigned, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_unsigned class
 - is_unsigned
 ms.assetid: ba5bec3d-796b-4e54-8595-a3941ec6a8dc
-ms.openlocfilehash: 3da9f71543815b507307f2cf4969e8f19c79e8c5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2ad1aff24d578c2073aa649fb78b73d28ab1a6cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197203"
 ---
-# <a name="isunsigned-class"></a>is_unsigned, classe
+# <a name="is_unsigned-class"></a>is_unsigned, classe
 
 Teste si le type est un entier non signé.
 
@@ -69,13 +70,13 @@ is_unsigned<unsigned int> == true
 is_unsigned<float> == false
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
 [<type_traits>](../standard-library/type-traits.md)\
-[is_signed, classe](../standard-library/is-signed-class.md)
+[Classe is_signed](../standard-library/is-signed-class.md)

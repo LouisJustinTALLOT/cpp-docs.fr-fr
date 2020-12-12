@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/IMPORTS (DUMPBIN)
 title: /IMPORTS (DUMPBIN)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /IMPORTS dumpbin option
 - -IMPORTS dumpbin option
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
-ms.openlocfilehash: c8b0f88b38eb657fe4d3916ef0df13972e985cbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86c428280bbca3a4957f7d7a0a640482607547de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199790"
 ---
 # <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
 
@@ -21,9 +22,9 @@ ms.locfileid: "62291837"
 /IMPORTS[:file]
 ```
 
-Cette option affiche la liste des DLL (à lien statique et [chargé différé](linker-support-for-delay-loaded-dlls.md)) qui sont importées vers un fichier exécutable ou une DLL et toutes les instructions imports individuels à partir de chacune de ces DLL.
+Cette option affiche la liste des dll (liées de manière statique et [retardées](linker-support-for-delay-loaded-dlls.md)) qui sont importées dans un fichier exécutable ou une dll et toutes les importations individuelles de chacune de ces dll.
 
-Le paramètre facultatif `file` spécification vous permet de spécifier que les importations pour seulement cette DLL seront affichées. Exemple :
+La `file` spécification facultative vous permet de spécifier que les importations de cette dll uniquement seront affichées. Par exemple :
 
 ```
 dumpbin /IMPORTS:msvcrt.dll
@@ -31,10 +32,10 @@ dumpbin /IMPORTS:msvcrt.dll
 
 ## <a name="remarks"></a>Notes
 
-La sortie affichée par cette option est similaire à la [/EXPORTE](dash-exports.md) sortie.
+La sortie affichée par cette option est semblable à la sortie [/exports](dash-exports.md) .
 
-Uniquement les [/HEADERS](headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](gl-whole-program-optimization.md) option du compilateur.
+Seule l’option [/HEADERS](headers.md) DUMPBIN peut être utilisée sur les fichiers générés avec l’option du compilateur [/GL](gl-whole-program-optimization.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](dumpbin-options.md)
+[Options DUMPBIN](dumpbin-options.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes Internet Win32'
 title: Classes Internet Win32
 ms.date: 09/12/2018
 f1_keywords:
@@ -9,34 +10,34 @@ helpviewer_keywords:
 - Win32 [MFC], Internet classes
 - Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
-ms.openlocfilehash: c067d0c0067ee13b0e6ce6d84fd97135274c88b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b6acad5f867444c33ed86cb7e70f4f1eec42df0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197476"
 ---
 # <a name="win32-internet-classes"></a>Classes Internet Win32
 
-MFC encapsule l’Internet Win32 (WinInet) et la technologie ActiveX pour faciliter la programmation Internet.
+MFC enveloppe la technologie Win32 Internet (WinInet) et ActiveX pour faciliter la programmation Internet.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour un nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 [CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
-Crée et initialise une ou plusieurs sessions Internet simultanées et, si nécessaire, décrit la connexion à un serveur proxy.
+Crée et Initialise une session Internet ou plusieurs sessions Internet simultanées et, si nécessaire, décrit la connexion à un serveur proxy.
 
 [CInternetConnection](../mfc/reference/cinternetconnection-class.md)<br/>
 Gère votre connexion à un serveur Internet.
 
 [CInternetFile](../mfc/reference/cinternetfile-class.md)<br/>
-Cette classe et ses classes dérivées autorisent l’accès aux fichiers sur des systèmes distants qui utilisent des protocoles Internet.
+Cette classe et ses classes dérivées autorisent l’accès aux fichiers sur les systèmes distants qui utilisent des protocoles Internet.
 
 [CHttpConnection](../mfc/reference/chttpconnection-class.md)<br/>
 Gère votre connexion à un serveur HTTP.
 
 [CHttpFile](../mfc/reference/chttpfile-class.md)<br/>
-Fournit les fonctionnalités pour rechercher et lire des fichiers sur un serveur HTTP.
+Fournit les fonctionnalités permettant de rechercher et de lire des fichiers sur un serveur HTTP.
 
 [CGopherFile](../mfc/reference/cgopherfile-class.md)<br/>
 Fournit les fonctionnalités permettant de rechercher et de lire des fichiers sur un serveur Gopher.
@@ -45,10 +46,10 @@ Fournit les fonctionnalités permettant de rechercher et de lire des fichiers su
 Gère votre connexion à un serveur FTP.
 
 [CGopherConnection](../mfc/reference/cgopherconnection-class.md)<br/>
-Gère votre connexion à un serveur gopher.
+Gère votre connexion à un serveur Gopher.
 
 [CFileFind](../mfc/reference/cfilefind-class.md)<br/>
-Effectue des locaux et des recherches de fichiers Internet.
+Effectue des recherches de fichiers locaux et Internet.
 
 [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)<br/>
 Contribue à la recherche des fichiers Internet sur les serveurs FTP.
@@ -64,4 +65,4 @@ Représente une condition d'exception liée à une opération Internet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+[Vue d'ensemble des classes](../mfc/class-library-overview.md)

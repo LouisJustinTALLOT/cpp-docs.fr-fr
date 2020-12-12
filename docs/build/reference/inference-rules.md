@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : règles d’inférence'
 title: Règles d'inférence
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rules, inference
 - NMAKE program, inference rules
 ms.assetid: caff320f-fb07-4eea-80c3-a6a2133a8492
-ms.openlocfilehash: d3d7ca41d96d3845237b445edefff05044dacdc2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fc063f71ff88442ce6f7fc02c5b22f015ce0010c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199751"
 ---
 # <a name="inference-rules"></a>Règles d'inférence
 
@@ -33,4 +34,4 @@ Si une dépendance obsolète n’a pas de commande et si [. Les SUFFIXes](dot-di
 
 ## <a name="see-also"></a>Voir aussi
 
-[NMAKE, référence](nmake-reference.md)
+[Référence NMAKE](nmake-reference.md)

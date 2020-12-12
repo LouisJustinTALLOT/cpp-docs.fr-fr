@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/DIRECTIVES
 title: /DIRECTIVES
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DIRECTIVES dumpbin option
 - -DIRECTIVES dumpbin option
 ms.assetid: cb85d679-6d20-4244-ba0b-6f495228e970
-ms.openlocfilehash: df25ca2c57cd15883b8ba1a9e2254b57a2c24a5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c75fb0afebf1c6f6d3b20b79aa553ed9d4f0632f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201376"
 ---
 # <a name="directives"></a>/DIRECTIVES
 
@@ -23,10 +24,10 @@ ms.locfileid: "62293769"
 
 ## <a name="remarks"></a>Notes
 
-Cette option vide la section .drective généré par le compilateur d’une image.
+Cette option vide la section. drective générée par le compilateur d’une image.
 
-Uniquement les [/HEADERS](headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](gl-whole-program-optimization.md) option du compilateur.
+Seule l’option [/HEADERS](headers.md) DUMPBIN peut être utilisée sur les fichiers générés avec l’option du compilateur [/GL](gl-whole-program-optimization.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[DUMPBIN, options](dumpbin-options.md)
+[Options DUMPBIN](dumpbin-options.md)

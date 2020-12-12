@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : ajout de méthodes stock'
 title: 'Contrôles ActiveX MFC : ajout de méthodes stock'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: b4b01e4fb202cfd7a923d22cb57ce5ec6988e11d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1bd176c81a3c97ad5530a9b1971656e5204fe407
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202871"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Contrôles ActiveX MFC : ajout de méthodes stock
 

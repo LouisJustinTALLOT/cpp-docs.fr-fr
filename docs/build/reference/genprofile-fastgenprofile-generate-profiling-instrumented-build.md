@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/GENPROFILE,/FASTGENPROFILE (générer la génération instrumentée de profilage)
 title: /GENPROFILE, /FASTGENPROFILE (Générer une build instrumentée de profilage)
 ms.date: 03/14/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-ms.openlocfilehash: a0d1678cd400801f4cb809ec3e93d333fbc6416a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7bb0f9b1c7a6036c5e721f79b438bf9dd6504111
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200232"
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Générer une build instrumentée de profilage)
 
@@ -36,7 +37,7 @@ Utilisez **COUNTER32** pour spécifier l’utilisation des compteurs de sonde 32
 **Exact** &#124; **noexact**<br/>
 Utilisez **exact** pour spécifier des incréments de verrouillage thread-safe pour les sondes. **Noexact** spécifie les opérations d’incrément non protégées pour les sondes. La valeur par défaut est **noexact**.
 
-**MEMMAX** = *valeur*, **MEMMIN** = *valeur* MEMMIN<br/>
+**MEMMAX** = *valeur*,  = *valeur* MEMMIN<br/>
 Utilisez **MEMMAX** et **MEMMIN** pour spécifier les tailles de réservation maximale et minimale pour les données d’apprentissage en mémoire. La valeur est la quantité de mémoire à réserver en octets. Par défaut, ces valeurs sont déterminées par une méthode heuristique interne.
 
 **Chemin d’accès**  &#124; **nopath** <br/>
@@ -48,7 +49,7 @@ Spécifie s’il faut utiliser des compteurs supplémentaires pour conserver un 
 **PGD** = *nom du fichier*<br/>
 Spécifie un nom de fichier de base pour le fichier .pgd. Par défaut, l’éditeur de liens utilise le nom du fichier image exécutable de base avec une extension .pgd.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les options **/GENPROFILE** et **/FASTGENPROFILE** indiquent à l’éditeur de liens de générer le fichier d’instrumentation de profilage nécessaire pour prendre en charge la formation des applications pour l’optimisation guidée par profil (PGO). Ces options sont nouvelles dans Visual Studio 2015. Privilégiez ces options pour les options **/LTCG : PGINSTRUMENT**, **/PGD** et **/POGOSAFEMODE** déconseillées, ainsi que les variables d’environnement **POGOSAFEMODE**, **VCPROFILE_ALLOC_SCALE** et **VCPROFILE_PATH** . Les informations de profilage générées par l’apprentissage de l’application sont utilisées comme entrée pour effectuer les optimisations de la totalité du programme ciblé pendant les générations. Vous pouvez définir des options supplémentaires pour contrôler différentes fonctionnalités de profilage pour les performances pendant l’apprentissage de l’application et les builds. Les options par défaut spécifiées par **/GENPROFILE** donnent des résultats plus précis, en particulier pour les grandes applications multithread complexes. L’option **/FASTGENPROFILE** utilise des valeurs par défaut différentes pour un encombrement mémoire plus faible et des performances plus rapides pendant l’apprentissage, au détriment de la précision.
 
@@ -60,7 +61,7 @@ Vous devez également spécifier **/LTCG** quand vous spécifiez **/GENPROFILE**
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
 1. Entrez les options et les arguments **/GENPROFILE** ou **/FASTGENPROFILE** dans la zone **options supplémentaires** . Choisissez **OK** pour enregistrer vos modifications.
 

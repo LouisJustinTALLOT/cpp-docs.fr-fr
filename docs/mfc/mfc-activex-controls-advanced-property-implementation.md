@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : implémentation avancée des propriétés'
 title: 'Contrôles ActiveX MFC : implémentation des propriétés avancées'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: 017959c5809d324af6ab13247fd093a6df280dab
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3cdd4353348d4c233b71dd25d2950adaac2ef06f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202832"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Contrôles ActiveX MFC : implémentation des propriétés avancées
 
@@ -24,7 +25,7 @@ Cet article décrit les rubriques relatives à l’implémentation des propriét
 
 - [Renvoi de codes d’erreur à partir d’une propriété](#_core_returning_error_codes_from_a_property)
 
-## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Propriétés en lecture seule et en écriture seule
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Propriétés Read-Only et Write-Only
 
 L’Assistant Ajout de propriété fournit une méthode simple et rapide pour implémenter les propriétés en lecture seule ou en écriture seule pour le contrôle.
 

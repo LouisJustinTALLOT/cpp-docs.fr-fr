@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/IDLOUT (nommer les fichiers de sortie MIDL)
 title: /IDLOUT (Nommer les fichiers de sortie MIDL)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: 8dc26a0564a979c918d1eb1eb85e63e9c73caba0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9835721d3e9b376feca51d87d375efa79dc43df7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199842"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Nommer les fichiers de sortie MIDL)
 
@@ -31,10 +32,10 @@ ms.locfileid: "91506934"
 *path*<br/>
 Spécification de chemin d’accès absolu ou relatif. En spécifiant un chemin d’accès, vous affectez uniquement l’emplacement d’un fichier. idl ; tous les autres fichiers sont placés dans le répertoire du projet.
 
-*extension*<br/>
+*filename*<br/>
 Spécifie le nom du fichier. idl créé par le compilateur MIDL. Aucune extension de fichier n’est utilisée. Spécifiez *filename*. idl si vous souhaitez une extension. idl.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’option/IDLOUT spécifie le nom et l’extension du fichier. idl.
 
@@ -44,13 +45,13 @@ Le compilateur MIDL est appelé par l’éditeur de liens MSVC lors de la liaiso
 
 - *filename*. tlb
 
-- *nom de fichier*_p. c
+- *nom de fichier* _p. c
 
-- *nom de fichier*_i. c
+- *nom de fichier* _i. c
 
 - *nom de fichier*. h
 
-*filename* est le paramètre que vous transmettez à/Idlout. Si [/TLBOUT](tlbout-name-dot-tlb-file.md) est spécifié, le fichier. tlb obtiendra son nom à partir du *nom*de fichier/TLBOUT.
+*filename* est le paramètre que vous transmettez à/Idlout. Si [/TLBOUT](tlbout-name-dot-tlb-file.md) est spécifié, le fichier. tlb obtiendra son nom à partir du *nom* de fichier/TLBOUT.
 
 Si vous ne spécifiez ni/IDLOUT ni/TLBOUT, l’éditeur de liens crée vc70. tlb, vc70. idl, vc70_p. c, vc70_i. c et vc70. h.
 
