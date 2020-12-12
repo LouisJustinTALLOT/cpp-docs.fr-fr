@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : chaîne (C++/CLI et C++/CX)'
 title: Chaîne (C++/CLI et C++/CX)
 ms.date: 10/08/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a47842713d1e7349717eaaeddcd4f3cba86fbbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206329"
 ---
 # <a name="string--ccli-and-ccx"></a>Chaîne (C++/CLI et C++/CX)
 
@@ -261,6 +262,6 @@ System.String
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Littéraux de chaîne et de caractère](../cpp/string-and-character-literals-cpp.md)<br/>
-[/clr (Compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
+[/CLR (compilation pour le Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

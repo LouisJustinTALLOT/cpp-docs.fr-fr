@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _AddressOfReturnAddress'
 title: _AddressOfReturnAddress
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - _AddressOfReturnAddress intrinsic
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-ms.openlocfilehash: d705029c30fdbc117c4c6e96923691e43e072e23
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1a79ccbe7ddc2865d8225a62cd0d294f0bc66b4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221076"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331921"
 ---
 # <a name="_addressofreturnaddress"></a>_AddressOfReturnAddress
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Fournit l’adresse de l’emplacement de mémoire qui contient l’adresse de retour de la fonction active. Cette adresse ne peut pas être utilisée pour accéder à d’autres emplacements de mémoire (par exemple, les arguments de la fonction).
 
@@ -27,17 +28,17 @@ Fournit l’adresse de l’emplacement de mémoire qui contient l’adresse de r
 void * _AddressOfReturnAddress();
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_AddressOfReturnAddress`|x86, x64, ARM, ARM64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-Quand `_AddressOfReturnAddress` est utilisé dans un programme compilé avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la fonction qui contient `_AddressOfReturnAddress` l’appel est compilée comme une fonction native. Lorsqu’une fonction compilée en tant qu’appels managés `_AddressOfReturnAddress`dans `_AddressOfReturnAddress` la fonction contenant, peut ne pas se comporter comme prévu.
+Quand `_AddressOfReturnAddress` est utilisé dans un programme compilé avec [/CLR](../build/reference/clr-common-language-runtime-compilation.md), la fonction qui contient l' `_AddressOfReturnAddress` appel est compilée comme une fonction native. Lorsqu’une fonction compilée en tant qu’appels managés dans la fonction contenant `_AddressOfReturnAddress` , `_AddressOfReturnAddress` peut ne pas se comporter comme prévu.
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
@@ -73,7 +74,7 @@ int main() {
 00401058
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

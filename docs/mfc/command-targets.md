@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : cibles de commande'
 title: Cibles de la commande
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - messages, command [MFC]
 - command routing [MFC], command targets
 ms.assetid: b0f784e5-c6dc-4391-9e71-aa7b7dcbe9f0
-ms.openlocfilehash: 59ba197174e95e42cd237c875f39f07801cb3dbe
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b7be03282400c2d3a0dcf5eb0d24a0b06456ebca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619310"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206251"
 ---
 # <a name="command-targets"></a>Cibles de la commande
 

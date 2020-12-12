@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4727'
 title: Avertissement du compilateur (niveau 1) C4727
 ms.date: 08/19/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: e1eeb7e466e325772d6a1522e77983fd3de04293
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 7639e6462cd5da0f5bd452bd0b80eddc80d5fe76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97194109"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Avertissement du compilateur (niveau 1) C4727
 
@@ -20,7 +21,7 @@ ms.locfileid: "92923962"
 > [!NOTE]
 > Dans Visual Studio 2017 et les versions antérieures, l’en-tête précompilé est appelé *stdafx. h* par défaut, et dans visual studio 2019 et versions ultérieures, il est appelé *pch. h* par défaut.
 
-C4727 se produit lors de la compilation de plusieurs compilands avec **/Yc** , et où le compilateur a pu marquer tous les fichiers. obj avec le même horodatage. pch.
+C4727 se produit lors de la compilation de plusieurs compilands avec **/Yc**, et où le compilateur a pu marquer tous les fichiers. obj avec le même horodatage. pch.
 
 Pour résoudre le, compilez un fichier source avec **/Yc/c** (crée PCH) et les autres compilent séparément avec **/Yu/c** (utilise PCH), puis liez-les ensemble.
 

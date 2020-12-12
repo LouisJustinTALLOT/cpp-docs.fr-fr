@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4731'
 title: Avertissement du compilateur (niveau 1) C4731
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-ms.openlocfilehash: 72483b734a1463b7b211c49ef21a01536ffa0ea1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d2041936d7d3c4b7189f57d57ffb1c9f226ea933
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228649"
 ---
 # <a name="compiler-warning-level-1-c4731"></a>Avertissement du compilateur (niveau 1) C4731
 
@@ -39,4 +40,4 @@ void bad(int p) {
 }
 ```
 
-EBP est le pointeur de frame (FPO n’est pas autorisé) et il est en cours de modification. Lorsque `p` est référencé ultérieurement, il est référencé par rapport à `EBP`. Mais `EBP` a été remplacé par le code, de sorte que le programme ne fonctionnera pas correctement et peut même être défaillant.
+EBP est le pointeur de frame (FPO n’est pas autorisé) et il est en cours de modification. Lorsque `p` est référencé ultérieurement, il est référencé par rapport à `EBP` . Mais `EBP` a été remplacé par le code, de sorte que le programme ne fonctionnera pas correctement et peut même être défaillant.

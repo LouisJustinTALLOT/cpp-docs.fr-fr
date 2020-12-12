@@ -1,23 +1,24 @@
 ---
-title: Erreur RC2001 du compilateur de ressources
+description: 'En savoir plus sur : erreur du compilateur de ressources RC2001'
+title: 'Erreur RC2001 du compilateur de ressources '
 ms.date: 11/04/2016
 f1_keywords:
 - RC2001
 helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-ms.openlocfilehash: 35042687b798b53857becdedba57861bd4f41a05
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 101ebb260bcfd24fb74368ca66e1e9d318418367
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80191719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206342"
 ---
-# <a name="resource-compiler-error-rc2001"></a>Erreur RC2001 du compilateur de ressources
+# <a name="resource-compiler-error-rc2001"></a>Erreur RC2001 du compilateur de ressources 
 
 saut de ligne dans la constante
 
-Une constante de chaîne a été poursuivie sur une deuxième ligne sans une barre oblique inverse ( **\\** ) ou en fermant et en ouvrant des guillemets doubles ( **"** ).
+Une constante de chaîne a été poursuivie sur une deuxième ligne sans une barre oblique inverse ( **\\** ) ou en fermant et en ouvrant des guillemets doubles (**"**).
 
 Pour rompre une constante de chaîne qui se trouve sur deux lignes dans le fichier source, effectuez l’une des opérations suivantes :
 

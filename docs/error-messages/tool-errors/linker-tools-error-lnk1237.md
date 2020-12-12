@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK1237'
 title: Erreur des outils Éditeur de liens LNK1237
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1237
 ms.assetid: 8722ffa8-096a-4bb0-85f9-f3aa0e10872a
-ms.openlocfilehash: c56b2eb86c7605fb3330d7b1bb01e3235466ede6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ba6a0d23eea4d8d555115950fcd54a5e4f6a8bde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193980"
 ---
 # <a name="linker-tools-error-lnk1237"></a>Erreur des outils Éditeur de liens LNK1237
 

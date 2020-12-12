@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conception et création d’une vue de l’enregistrement (accès aux données MFC)'
 title: Conception et création d'une vue de l'enregistrement (Accès aux données MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: dfd486c397dffa87295839f5ef62de0bd1ba812a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6bcf388abb164c4f20bb639dc19c427bd3fbcad3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317907"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Conception et création d'une vue de l'enregistrement (Accès aux données MFC)
 
@@ -34,14 +35,14 @@ Vous pouvez créer votre classe de vue d’enregistrement avec l' [Assistant App
 
 Les rubriques suivantes décrivent d'autres aspects de l'utilisation des vues d'enregistrements :
 
-- [Vues des enregistrements : prise en charge de la navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [Vues d'enregistrements : prise en charge de la navigation dans une vue d'enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [Vues des enregistrements : utilisation d’une vue de l’enregistrement](../data/using-a-record-view-mfc-data-access.md)
+- [Vues d'enregistrements : utilisation d'une vue d'enregistrement](../data/using-a-record-view-mfc-data-access.md)
 
-- [Vues des enregistrements : remplissage d’une zone de liste à partir d’un second Recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [Vues d'enregistrements : remplissage d'une zone de liste à partir d'un second recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Vues des enregistrements (accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Recordset (ODBC)](../data/odbc/recordset-odbc.md)<br/>
-[Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)
+[Liste des pilotes ODBC](../data/odbc/odbc-driver-list.md)
