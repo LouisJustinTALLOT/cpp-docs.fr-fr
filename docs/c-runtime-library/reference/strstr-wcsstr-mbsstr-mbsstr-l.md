@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strstr, wcsstr, _mbsstr, _mbsstr_l'
 title: strstr, wcsstr, _mbsstr, _mbsstr_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 3ac4df470e40b35257495d51c5d2d0efdb9310af
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05f7cd3b03a56cb5e0e9343bd8cdee98af124988
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181681"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -131,7 +132,7 @@ Chaîne se terminant par un caractère Null à rechercher.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur désignant la première occurrence de *strSearch* dans *Str*, ou null si *strSearch* n’apparaît pas dans *Str*. Si *strSearch* pointe vers une chaîne de longueur nulle, la fonction retourne *Str*.
 
@@ -206,7 +207,7 @@ lazy found at position 36
 
 [Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>

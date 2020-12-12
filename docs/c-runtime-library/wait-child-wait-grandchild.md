@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _WAIT_CHILD, _WAIT_GRANDCHILD'
 title: _WAIT_CHILD, _WAIT_GRANDCHILD
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - _WAIT_CHILD constant
 - _WAIT_GRANDCHILD constant
 ms.assetid: 7acd96fa-d118-4339-bb00-e5afaf286945
-ms.openlocfilehash: 98858058add6a0a11d4f9331989c6816e38130aa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b14586232258f635b428b6c197213782591c8af1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745052"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181655"
 ---
-# <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
+# <a name="_wait_child-_wait_grandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,7 +28,7 @@ ms.locfileid: "57745052"
 #include <process.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction `_cwait` peut être utilisée par n’importe quel processus pour attendre un autre processus (si l’ID du processus est connu). L’argument action peut être une des valeurs suivantes :
 

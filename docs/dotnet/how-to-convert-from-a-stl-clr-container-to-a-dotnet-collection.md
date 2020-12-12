@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Comment : effectuer une conversion à partir d’un conteneur STL/CLR en collection .NET'
 title: 'Comment : convertir un conteneur STL/CLR en collection .NET'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: a4a754bbee08e93e2db9af50f98d7603fabcd8d4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 93649ae411c53d21db5e660d8faa6aa707f74f16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498502"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181304"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Comment : convertir un conteneur STL/CLR en collection .NET
 

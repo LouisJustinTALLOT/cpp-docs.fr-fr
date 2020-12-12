@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur irrécupérable C1113'
 title: Erreur irrécupérable C1113
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1113
 ms.assetid: 1c7c3ce7-2827-4822-9c63-0abc8615ea39
-ms.openlocfilehash: 3f70b62d2699a0d6a6e2caa5b750fe3690a9e8b3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bdc922e83ad2b24acb9fbf8a8a44b2b57859c70e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80203631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181083"
 ---
 # <a name="fatal-error-c1113"></a>Erreur irrécupérable C1113
 
