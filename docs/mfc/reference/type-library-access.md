@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : accès à la bibliothèque de types'
 title: Accès à la bibliothèque de types
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 55d6a56f566416bb25f3ee3ae508c86f17f0df99
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c855f82914e540ab13f4bc20581c041633b5bc0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218652"
 ---
 # <a name="type-library-access"></a>Accès à la bibliothèque de types
 
@@ -41,7 +42,7 @@ Nom de la classe de contrôle associée à la bibliothèque de types.
 
 Utilisez cette macro dans le fichier d’en-tête de la classe de contrôle.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
@@ -71,7 +72,7 @@ Numéro de version mineure de la bibliothèque de types.
 
 Cette macro doit apparaître dans le fichier d’implémentation pour toute classe de contrôle qui utilise la macro DECLARE_OLETYPELIB.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 

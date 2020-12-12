@@ -1,5 +1,6 @@
 ---
-title: 'Sérialisation : Sérialisation ou Base de données d’entrée-sortie'
+description: 'En savoir plus sur : sérialisation : sérialisation et entrées/sorties de base de données'
+title: 'Sérialisation : sérialisation et Input-Output de base de données'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - database applications [MFC], file I/O vs. serialization
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - I/O [MFC], vs. serialization
 - databases [MFC], input/output handling
 ms.assetid: f1d23d77-4761-4a52-a7ea-54fc92d347ea
-ms.openlocfilehash: c4f44f1ac291b2d068ca0525543938331d6e07d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2c2c8aa9597e23ac3e6caefcb2adb8b31dc3e93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217508"
 ---
-# <a name="serialization-serialization-vs-database-inputoutput"></a>Sérialisation : Sérialisation ou Base de données d’entrée/sortie
+# <a name="serialization-serialization-vs-database-inputoutput"></a>Sérialisation : sérialisation et entrées/sorties de base de données
 
-Cet article explique quand utiliser des objets de document et la sérialisation pour les fichiers d’entrée/sortie (e/s) et lorsque d’autres techniques d’e/s sont appropriés, étant donné que l’application lit et écrit des données sur une base par transaction, comme dans les applications de base de données. Si vous n’utilisez pas sérialisation, vous également ne devez l’ouvrir, enregistrer, commandes et enregistrer sous. Les sujets abordés incluent :
+Cet article explique quand utiliser les objets de document et la sérialisation pour les entrées/sorties basées sur des fichiers (e/s) et quand d’autres techniques d’e/s sont appropriées, car l’application lit et écrit les données par transaction, comme dans les applications de base de données. Si vous n’utilisez pas la sérialisation, vous n’aurez pas non plus besoin des commandes ouvrir, enregistrer et enregistrer sous. Sont abordés les sujets suivants :
 
 - [Recommandations pour la gestion des entrées/sorties](../mfc/recommendations-for-handling-input-output.md)
 
