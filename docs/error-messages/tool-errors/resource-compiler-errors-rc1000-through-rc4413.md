@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : erreurs et avertissements du compilateur de ressources (RCxxxx, RWxxxx)'
 title: Erreurs et avertissements du compilateur et de ressources
 ms.date: 04/17/2019
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
-ms.openlocfilehash: dec141723e911c09fc63d7868a2783fb399e6fc3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 328a64cfba23ef4904f9591c90168fab3a1b08ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265751"
 ---
 # <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>Erreurs et avertissements du compilateur et de ressources (RCxxxx, RWxxxx)
 
-Cette section est une référence aux erreurs générées par le compilateur de ressources. Les erreurs et avertissements du compilateur de ressources se présentent sous la forme RC*xxxx* ou RW*xxxx*, où *xxxx* est un nombre à quatre chiffres.
+Cette section est une référence aux erreurs générées par le compilateur de ressources. Les erreurs et avertissements du compilateur de ressources se présentent sous la forme RC *xxxx* ou RW *xxxx*, où *xxxx* est un nombre à quatre chiffres.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -99,5 +100,5 @@ Cette section est une référence aux erreurs générées par le compilateur de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Erreurs etC++ avertissements](../compiler-errors-1/c-cpp-build-errors.md)
-[du compilateur de ressources](/windows/win32/menurc/resource-compiler) C/compiler et des outils de génération
+[Erreurs et avertissements du compilateur C/C++ et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md) 
+ [Compilateur de ressources](/windows/win32/menurc/resource-compiler)
