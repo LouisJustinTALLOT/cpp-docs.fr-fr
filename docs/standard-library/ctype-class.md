@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CType, classe'
 title: ctype, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-ms.openlocfilehash: a0e3aad99c335f1a907189ee84e55a38e41b62e1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ef23707aa08e0fb3ad7edcff07bd2c6a4ae3814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233082"
 ---
 # <a name="ctype-class"></a>ctype, classe
 
@@ -114,7 +115,7 @@ Toutes les autres opérations sont effectuées sur des **`char`** valeurs de la 
 
 **Espace de noms :** std
 
-## <a name="ctypechar_type"></a><a name="char_type"></a>CType :: char_type
+## <a name="ctypechar_type"></a><a name="char_type"></a> CType :: char_type
 
 Type qui décrit un caractère utilisé par les paramètres régionaux.
 
@@ -130,7 +131,7 @@ Le type est un synonyme du paramètre de modèle *CharType*.
 
 Consultez la fonction membre [widen](#widen) pour obtenir un exemple d’utilisation de `char_type` comme valeur de retour.
 
-## <a name="ctypectype"></a><a name="ctype"></a>CType :: CType
+## <a name="ctypectype"></a><a name="ctype"></a> CType :: CType
 
 Constructeur des objets de classe ctype qui servent de facettes de paramètres régionaux pour les caractères.
 
@@ -151,13 +152,13 @@ Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les 
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1 : ces valeurs ne sont pas définies.
+- \> 1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
 Le constructeur initialise son `locale::facet` objet de base avec **locale ::**[facette](../standard-library/locale-class.md#facet_class)( `_Refs` ).
 
-## <a name="ctypedo_is"></a><a name="do_is"></a>CType ::d o_is
+## <a name="ctypedo_is"></a><a name="do_is"></a> CType ::d o_is
 
 Fonction virtuelle appelée pour vérifier si un caractère unique possède un attribut particulier, ou pour classer les attributs de chaque caractère dans une plage et les stocker dans un tableau.
 
@@ -189,7 +190,7 @@ Pointeur vers le caractère juste après le dernier caractère de la plage dont 
 *dest*\
 Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre retourne une valeur booléenne qui est **`true`** si le caractère testé a l’attribut décrit par la valeur de masque ; **`false`** s’il ne peut pas avoir l’attribut.
 
@@ -203,7 +204,7 @@ Les valeurs de masque qui classent les attributs des caractères sont fournies p
 
 Consultez l’exemple relatif à [is](#is), qui appelle `do_is`.
 
-## <a name="ctypedo_narrow"></a><a name="do_narrow"></a>CType ::d o_narrow
+## <a name="ctypedo_narrow"></a><a name="do_narrow"></a> CType ::d o_narrow
 
 Fonction virtuelle appelée pour convertir un caractère de type `CharType` utilisé par des paramètres régionaux en caractère correspondant de type **`char`** dans le jeu de caractères natif.
 
@@ -236,7 +237,7 @@ Pointeur vers le caractère juste après le dernier caractère de la plage de ca
 *dest*\
 Pointeur const vers le premier caractère de type **`char`** dans la plage de destination qui stocke la plage de caractères convertie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre protégée retourne le caractère natif de type char qui correspond au caractère de paramètre de type `CharType` ou *default* si aucun équivalent n’est défini.
 
@@ -250,7 +251,7 @@ La deuxième fonction de modèle de membre protégée stocke dans `dest` [ `I` ]
 
 Consultez l’exemple relatif à [narrow](#narrow), qui appelle `do_narrow`.
 
-## <a name="ctypedo_scan_is"></a><a name="do_scan_is"></a>CType ::d o_scan_is
+## <a name="ctypedo_scan_is"></a><a name="do_scan_is"></a> CType ::d o_scan_is
 
 Fonction virtuelle appelée pour rechercher le premier caractère d'une plage qui correspond au masque spécifié.
 
@@ -272,7 +273,7 @@ Pointeur vers le premier caractère de la plage à analyser.
 *famille*\
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le premier caractère d’une plage qui correspond à un masque spécifié. Si cette valeur n’existe pas, la fonction retourne *Last*.
 
@@ -284,7 +285,7 @@ La fonction membre protégée retourne le plus petit pointeur `ptr` de la plage 
 
 Consultez l’exemple relatif à [scan_is](#scan_is), qui appelle `do_scan_is`.
 
-## <a name="ctypedo_scan_not"></a><a name="do_scan_not"></a>CType ::d o_scan_not
+## <a name="ctypedo_scan_not"></a><a name="do_scan_not"></a> CType ::d o_scan_not
 
 Fonction virtuelle appelée pour rechercher le premier caractère d'une plage qui ne correspond pas au masque spécifié.
 
@@ -306,7 +307,7 @@ Pointeur vers le premier caractère de la plage à analyser.
 *famille*\
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le premier caractère d’une plage qui ne correspond pas à un masque spécifié. Si cette valeur n’existe pas, la fonction retourne *Last*.
 
@@ -318,7 +319,7 @@ La fonction membre protégée retourne le plus petit pointeur `ptr` de la plage 
 
 Consultez l’exemple relatif à [scan_not](#scan_not), qui appelle `do_scan_not`.
 
-## <a name="ctypedo_tolower"></a><a name="do_tolower"></a>CType ::d o_tolower
+## <a name="ctypedo_tolower"></a><a name="do_tolower"></a> CType ::d o_tolower
 
 Fonction virtuelle appelée pour convertir un caractère ou une plage de caractères en minuscules.
 
@@ -341,7 +342,7 @@ Pointeur vers le premier caractère de la plage de caractères dont la casse doi
 *famille*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre protégée retourne la forme minuscule du paramètre *ch*. Si aucune forme minuscule n’existe, elle retourne *ch*. La deuxième fonction membre protégée retourne *Last*.
 
@@ -353,7 +354,7 @@ La deuxième fonction de modèle de membre protégé remplace chaque élément `
 
 Consultez l’exemple relatif à [tolower](#tolower), qui appelle `do_tolower`.
 
-## <a name="ctypedo_toupper"></a><a name="do_toupper"></a>CType ::d o_toupper
+## <a name="ctypedo_toupper"></a><a name="do_toupper"></a> CType ::d o_toupper
 
 Fonction virtuelle appelée pour convertir un caractère ou une plage de caractères en majuscules.
 
@@ -376,7 +377,7 @@ Pointeur vers le premier caractère de la plage de caractères dont la casse doi
 *famille*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre protégée retourne la forme majuscule du paramètre *ch*. S’il n’existe pas de forme en majuscules, elle retourne *ch*. La deuxième fonction membre protégée retourne *Last*.
 
@@ -388,7 +389,7 @@ La deuxième fonction de modèle de membre protégé remplace chaque élément `
 
 Consultez l’exemple relatif à [toupper](#toupper), qui appelle `do_toupper`.
 
-## <a name="ctypedo_widen"></a><a name="do_widen"></a>CType ::d o_widen
+## <a name="ctypedo_widen"></a><a name="do_widen"></a> CType ::d o_widen
 
 Fonction virtuelle appelée pour convertir un caractère de type **`char`** dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par les paramètres régionaux.
 
@@ -415,7 +416,7 @@ Pointeur vers le caractère juste après le dernier caractère de la plage de ca
 *dest*\
 Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre protégée retourne le caractère de type `CharType` qui correspond au caractère de paramètre de type natif **`char`** .
 
@@ -429,7 +430,7 @@ La deuxième fonction membre de modèle protégée stocke dans `dest`[ `I`] la v
 
 Consultez l’exemple relatif à [widen](#widen), qui appelle `do_widen`.
 
-## <a name="ctypeis"></a><a name="is"></a>CType :: est
+## <a name="ctypeis"></a><a name="is"></a> CType :: est
 
 Vérifie si un seul caractère a un attribut spécifique, ou classe les attributs de chaque caractère dans une plage et les stocke dans un tableau.
 
@@ -459,7 +460,7 @@ Pointeur vers le caractère juste après le dernier caractère de la plage dont 
 *dest*\
 Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre retourne **`true`** si le caractère testé a l’attribut décrit par la valeur de masque ; **`false`** s’il ne peut pas avoir l’attribut.
 
@@ -508,7 +509,7 @@ int main() {
 }
 ```
 
-## <a name="ctypenarrow"></a><a name="narrow"></a>CType :: Narrow
+## <a name="ctypenarrow"></a><a name="narrow"></a> CType :: Narrow
 
 Convertit des caractères de type `CharType` utilisés par des paramètres régionaux en caractères correspondants de type **`char`** dans le jeu de caractères natif.
 
@@ -539,7 +540,7 @@ Pointeur vers le caractère juste après le dernier caractère de la plage de ca
 *dest*\
 Pointeur const vers le premier caractère de type **`char`** dans la plage de destination qui stocke la plage de caractères convertie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre retourne le caractère natif de type **`char`** qui correspond au caractère de paramètre de type `CharType default` si aucun équivalent n’est défini.
 
@@ -575,7 +576,7 @@ int main( )
 Xhello everyone
 ```
 
-## <a name="ctypescan_is"></a><a name="scan_is"></a>CType :: scan_is
+## <a name="ctypescan_is"></a><a name="scan_is"></a> CType :: scan_is
 
 Localise le premier caractère d'une plage qui correspond au masque spécifié.
 
@@ -597,7 +598,7 @@ Pointeur vers le premier caractère de la plage à analyser.
 *famille*\
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le premier caractère d’une plage qui correspond à un masque spécifié. Si cette valeur n’existe pas, la fonction retourne *Last*.
 
@@ -631,7 +632,7 @@ int main( )
 The first punctuation is "," at position: 5
 ```
 
-## <a name="ctypescan_not"></a><a name="scan_not"></a>CType :: scan_not
+## <a name="ctypescan_not"></a><a name="scan_not"></a> CType :: scan_not
 
 Localise le premier caractère d'une plage qui ne correspond pas au masque spécifié.
 
@@ -653,7 +654,7 @@ Pointeur vers le premier caractère de la plage à analyser.
 *famille*\
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le premier caractère d’une plage qui ne correspond pas à un masque spécifié. Si cette valeur n’existe pas, la fonction retourne *Last*.
 
@@ -687,7 +688,7 @@ int main( )
 First nonalpha character is "," at position: 5
 ```
 
-## <a name="ctypetolower"></a><a name="tolower"></a>CType :: ToLower
+## <a name="ctypetolower"></a><a name="tolower"></a> CType :: ToLower
 
 Convertit un caractère ou une plage de caractères en minuscules.
 
@@ -708,7 +709,7 @@ Pointeur vers le premier caractère de la plage de caractères dont la casse doi
 *famille*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre retourne la forme minuscule du paramètre *ch*. Si aucune forme minuscule n’existe, elle retourne *ch*.
 
@@ -743,7 +744,7 @@ int main( )
 The lowercase string is: hello, my name is john
 ```
 
-## <a name="ctypetoupper"></a><a name="toupper"></a>CType :: ToUpper
+## <a name="ctypetoupper"></a><a name="toupper"></a> CType :: ToUpper
 
 Convertit un caractère ou une plage de caractères en majuscules.
 
@@ -763,7 +764,7 @@ Pointeur vers le premier caractère de la plage de caractères dont la casse doi
 *famille*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre retourne la forme majuscule du paramètre *ch*. S’il n’existe pas de forme en majuscules, elle retourne *ch*.
 
@@ -798,7 +799,7 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN
 ```
 
-## <a name="ctypewiden"></a><a name="widen"></a>CType :: Widening
+## <a name="ctypewiden"></a><a name="widen"></a> CType :: Widening
 
 Convertit un caractère de type **`char`** dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par les paramètres régionaux.
 
@@ -821,7 +822,7 @@ Pointeur vers le caractère juste après le dernier caractère de la plage de ca
 *dest*\
 Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La première fonction membre retourne le caractère de type `CharType` qui correspond au caractère de paramètre de type natif **`char`** .
 

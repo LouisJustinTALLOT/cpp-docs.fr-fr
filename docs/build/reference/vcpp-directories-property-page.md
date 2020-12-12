@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : page de propriétés des répertoires VC + + (Windows)'
 title: Page de propriétés Répertoires VC++
 ms.date: 07/17/2019
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 39362deaa770b39eea964f1e4e58186dd5923b7f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6d5b30e635003aa4db35e3aef9e1a32f8fa3176c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846028"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247135"
 ---
 # <a name="vc-directories-property-page-windows"></a>Répertoires VC++, page de propriétés (Windows)
 
@@ -90,7 +91,7 @@ Répertoires dans lesquels rechercher des fichiers Include référencés dans le
 Répertoires dans lesquels rechercher des fichiers d’assembly et de modules (métadonnées) référencés dans le code source par la directive [#using](../../preprocessor/hash-using-directive-cpp.md). Correspond à la variable d’environnement **LIBPATH**.
 
 **Répertoires de bibliothèques**<br/>
-Répertoires dans lesquels se trouvent des fichiers bibliothèques (.lib) ; cela inclut des bibliothèques Runtime. Correspond à la variable d’environnement **LIB**. Ce paramètre ne s’applique pas aux fichiers. obj ; pour créer un lien vers un fichier. obj, sur la page **Propriétés de configuration**  >  général de l'**éditeur de liens**  >  **General** , sélectionnez **dépendances de bibliothèque supplémentaires** , puis spécifiez le chemin d’accès relatif du fichier. Pour plus d’informations, consultez [Éditeur de liens, page de propriétés](linker-property-pages.md).
+Répertoires dans lesquels se trouvent des fichiers bibliothèques (.lib) ; cela inclut des bibliothèques Runtime. Correspond à la variable d’environnement **LIB**. Ce paramètre ne s’applique pas aux fichiers. obj ; pour créer un lien vers un fichier. obj, sur la page **Propriétés de configuration**  >  général de l'**éditeur de liens**  >   , sélectionnez **dépendances de bibliothèque supplémentaires** , puis spécifiez le chemin d’accès relatif du fichier. Pour plus d’informations, consultez [Éditeur de liens, page de propriétés](linker-property-pages.md).
 
 **Répertoires de la bibliothèque WinRT**<br/>
 Répertoires dans lesquels rechercher des fichiers de la bibliothèque WinRT à utiliser dans les applications UWP (plateforme Windows universelle).

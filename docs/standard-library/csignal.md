@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; cSignal&gt;'
 title: '&lt;csignal&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: fcad9c1b5ec20a7a10afc40884ece8ae8abec184
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 77006bb83b7181dd2778d50b76e690df5216d664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233277"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-Inclut l’en-tête de la bibliothèque standard C \<signal. h > et ajoute les noms associés à l’espace de noms `std`. L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
+Inclut l’en-tête de la bibliothèque standard C \<signal.h> et ajoute les noms associés à l' `std` espace de noms. L'inclusion de cet en-tête garantit également que les noms déclarés à l'aide d'une liaison externe dans l'en-tête de la bibliothèque C standard soient déclarés dans l'espace de noms `std`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,6 +53,6 @@ int raise(int sig);
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
 [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; cstdio&gt;'
 title: '&lt;cstdio&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdio header
 ms.assetid: 838ca50b-dea5-4ee3-a39c-e7c23a6ee016
-ms.openlocfilehash: b5896bdc79c7f494fa83a4c741df0260ae4f6b61
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2ddb7f4e56042432fdc8237b8f888d04226e06b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447446"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233238"
 ---
 # <a name="ltcstdiogt"></a>&lt;cstdio&gt;
 
-Inclut l’en-tête \<stdio.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.
+Inclut l’en-tête de la bibliothèque C standard \<stdio.h> et ajoute les noms associés à l' `std` espace de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,6 +30,6 @@ L'inclusion de cet en-tête garantit également que les noms déclarés à l'aid
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

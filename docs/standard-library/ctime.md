@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; ctime&gt;'
 title: '&lt;ctime&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-ms.openlocfilehash: 2b3f31ba48ca831b2d2d8cd460b60549c4debe83
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 68b165c2abeee91b9880e91f8cf67750e7a2a5e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233147"
 ---
 # <a name="ltctimegt"></a>&lt;ctime&gt;
 
-Inclut l’en-tête \<time.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.
+Inclut l’en-tête de la bibliothèque C standard \<time.h> et ajoute les noms associés à l' `std` espace de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,6 +67,6 @@ size_t strftime(char* s, size_t maxsize, const char* format, const struct tm* ti
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
 [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
