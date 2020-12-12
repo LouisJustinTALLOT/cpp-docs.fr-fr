@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : printf, _printf_l, wprintf, _wprintf_l'
 title: printf, _printf_l, wprintf, _wprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 73de90667479fff647e399068f9b97453819d27c
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: cd38713b4646536fb2ee5186810fd7630478743f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252829"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -92,7 +93,7 @@ Retourne le nombre de caractères imprimés ou une valeur négative si une erreu
 
 Pour plus d’informations sur les codes d’erreur et **errno** , consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction **printf** met en forme et imprime une série de caractères et de valeurs dans le flux de sortie standard, **stdout**. Si les arguments suivent la chaîne de *format* , la chaîne de *format* doit contenir des spécifications qui déterminent le format de sortie des arguments. **printf** et [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md) se comportent de la même manière, sauf que **printf** écrit la sortie dans **stdout** plutôt que sur une destination de type **file**.
 
@@ -131,14 +132,14 @@ Les [spécifications de format](../../c-runtime-library/format-specification-syn
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 |**_tprintf_l**|**_printf_l**|**_printf_l**|**_wprintf_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**printf**, **_printf_l**|\<stdio.h>|
 |**wprintf**, **_wprintf_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 > [!IMPORTANT]
 > À compter de Windows 10 version 2004 (Build 19041), la `printf` famille de fonctions imprime exactement des nombres à virgule flottante représentables en fonction des règles IEEE 754 pour l’arrondi. Dans les versions précédentes de Windows, les nombres à virgule flottante représentables exactement se terminant par « 5 » s’arrondissent toujours. IEEE 754 déclare qu’il doit arrondir au chiffre pair le plus proche (également appelé « arrondissement de Banker »). Par exemple, 1,5 et 2,5 doivent arrondir à 2. Auparavant, 1,5 passerait à 2 et 2,5 à 3. Cette modification affecte uniquement les nombres exactement représentables. Par exemple, 2,35 (qui, lorsqu’il est représenté en mémoire, est plus proche de 2.35000000000000008) continue à s’arrondir à 2,4. L’arrondi effectué par ces fonctions respecte désormais également le mode d’arrondi de virgule flottante défini par [fesetround](fegetround-fesetround2.md). Auparavant, l’arrondi a toujours choisi FE_TONEAREST comportement. Cette modification affecte uniquement les programmes créés à l’aide de Visual Studio 2019 version 16,2 et versions ultérieures. Pour utiliser le comportement d’arrondi de virgule flottante hérité, liez avec [legacy_stdio_float_rounding. obj](../link-options.md).

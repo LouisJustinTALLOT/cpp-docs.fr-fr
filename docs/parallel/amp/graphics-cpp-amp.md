@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : Graphics (C++ AMP)'
 title: Graphiques (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 97fd433387aac809053ea6dd8ac59a56207a4fc8
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 79e908ac673fb8fcc5ac370d6900697b3274585c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344720"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254545"
 ---
 # <a name="graphics-c-amp"></a>Graphiques (C++ AMP)
 
@@ -21,7 +22,7 @@ C++ AMP contient plusieurs API dans l’espace de noms [Concurrency :: Graphics
 
 ## <a name="the-norm-and-unorm-types"></a>Les types norm et unorm
 
-Les `norm` `unorm` types et sont des types scalaires qui limitent la plage de **`float`** valeurs ; c’est ce qu’on appelle la « *fixation* ». Ces types peuvent être explicitement construits à partir d'autres types scalaires. Dans le cast, la valeur est d’abord convertie en, **`float`** puis ancrée à la région respective autorisée par la norme [-1,0, 1,0] ou unorm [0,0, 1,0]. Le cast de +/- infini retourne +/-1. Le cast depuis NaN n'est pas défini. Un norm peut être implicitement construit à partir d'un unorm sans perte de données. L'opérateur de conversion implicite en float est défini sur ces types. Les opérateurs binaires sont définis entre ces types et d’autres types scalaires intégrés tels que **`float`** et **`int`** : +,-, \* ,/, = =, ! =, >, \<, > =, <=. Les opérateurs d’assignation composée sont également pris en charge : + =,-=, \* =,/=. L'opérateur de négation unaire (-) est défini pour les types norm.
+Les `norm` `unorm` types et sont des types scalaires qui limitent la plage de **`float`** valeurs ; c’est ce qu’on appelle la « *fixation*». Ces types peuvent être explicitement construits à partir d'autres types scalaires. Dans le cast, la valeur est d’abord convertie en, **`float`** puis ancrée à la région respective autorisée par la norme [-1,0, 1,0] ou unorm [0,0, 1,0]. Le cast de +/- infini retourne +/-1. Le cast depuis NaN n'est pas défini. Un norm peut être implicitement construit à partir d'un unorm sans perte de données. L'opérateur de conversion implicite en float est défini sur ces types. Les opérateurs binaires sont définis entre ces types et d’autres types scalaires intégrés tels que **`float`** et **`int`** : +,-, \* ,/, = =, ! =, >, \<, > =, <=. Les opérateurs d’assignation composée sont également pris en charge : + =,-=, \* =,/=. L'opérateur de négation unaire (-) est défini pour les types norm.
 
 ## <a name="short-vector-library"></a>Bibliothèque de vecteurs courts
 
@@ -46,7 +47,7 @@ Si un opérateur est défini entre deux vecteurs courts, alors il est également
 
 L'opération est portée entre chaque composant du vecteur court et la variable scalaire. Voici les opérateurs valides :
 
-|Type d’opérateur|Types valides|
+|Type d'opérateur|Types valides|
 |-------------------|-----------------|
 |Opérateurs binaires|Valide sur tous les types : +,-, \* ,/,<br /><br /> Valide sur les types d’entiers :%, ^, &#124;, &, <\<, >><br /><br /> Les deux vecteurs doivent avoir la même taille et le résultat doit être un vecteur de la même taille.|
 |Opérateurs relationnels|Valides sur tous les types : == et !=|
@@ -57,7 +58,7 @@ L'opération est portée entre chaque composant du vecteur court et la variable 
 
 ### <a name="swizzling-expressions"></a>Expressions de swizzling
 
-La bibliothèque de vecteurs courts prend en charge la construction de l'accesseur `vector_type.identifier` pour accéder aux composants d'un vecteur court. `identifier`, Qui est connu sous le nom d' *expression swizzling* , spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Les caractères individuels de l’identificateur peuvent être : x, y, z et w ; ou r, g, b et a. « x » et « r » signifient le zéro du composant, « y » et « g » signifient le premier composant, et ainsi de suite. (Notez que « x » et « r » ne peuvent pas être utilisés dans le même identificateur.) Par conséquent, « RVBA » et « XYZW » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.
+La bibliothèque de vecteurs courts prend en charge la construction de l'accesseur `vector_type.identifier` pour accéder aux composants d'un vecteur court. `identifier`, Qui est connu sous le nom d' *expression swizzling*, spécifie les composants du vecteur. L'expression peut être une l-value ou une r-value. Les caractères individuels de l’identificateur peuvent être : x, y, z et w ; ou r, g, b et a. « x » et « r » signifient le zéro du composant, « y » et « g » signifient le premier composant, et ainsi de suite. (Notez que « x » et « r » ne peuvent pas être utilisés dans le même identificateur.) Par conséquent, « RVBA » et « XYZW » retournent le même résultat. Les accesseurs à un composant tels que « x » et « y » sont des types de valeur scalaire. Les accesseurs à plusieurs composants sont des types de vecteurs courts. Par exemple, si vous construisez un vecteur `int_4` nommé `fourInts` et ayant les valeurs 2, 4, 6 et 8, alors `fourInts.y` retourne l'entier 4 et `fourInts.rg` retourne un objet `int_2` ayant les valeurs 2 et 4.
 
 ## <a name="texture-classes"></a>Classes de texture
 
@@ -342,7 +343,7 @@ Notez comment une vue de texture dont le type d'élément est non const avec un 
 
 Le type d'élément d'une `texture_view` (son attribut const/non const et aussi le nombre de composants qu'il comporte) joue également un rôle pour déterminer si la vue prend en charge l'échantillonnage, et comment les niveaux de mipmap sont accessibles :
 
-|Type|Components|Lire|Write|échantillonnage|Accès aux mipmaps|
+|Type|Composants|Lire|Write|échantillonnage|Accès aux mipmaps|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N>|1, 2, 4|Oui|Non (1)|Oui|Oui, indexable. La plage est déterminée à l'instanciation.|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|Oui<br /><br /> Non (2)|Oui<br /><br /> Oui|Non (1)<br /><br /> Non (1)|Oui, un niveau. Le niveau est déterminé à l'instanciation.<br /><br /> Oui, un niveau. Le niveau est déterminé à l'instanciation.|
