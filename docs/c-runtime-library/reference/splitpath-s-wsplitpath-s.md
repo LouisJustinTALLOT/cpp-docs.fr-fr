@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _splitpath_s, _wsplitpath_s'
 title: _splitpath_s, _wsplitpath_s
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 984b55737e575656670f561c45f528265800f214
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f14ea8a31d241abae3a214067cae1e4d34e97861
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292342"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
@@ -103,7 +104,7 @@ Lettre de lecteur, suivie d’un signe deux-points (**:**). Vous pouvez passer l
 Taille de la mémoire tampon du *lecteur* en caractères codés sur un octet ou larges. Si le *lecteur* est **null**, cette valeur doit être 0.
 
 *dir*<br/>
-Chemin de répertoire incluant une barre oblique de fin. Les barres obliques **/** (), les barres obliques inverses ( **\\** ) ou les deux peuvent être utilisées. Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin du chemin d’accès au répertoire.
+Chemin de répertoire incluant une barre oblique de fin. Les barres obliques ( **/** ), les barres obliques inverses ( **\\** ) ou les deux peuvent être utilisées. Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin du chemin d’accès au répertoire.
 
 *dirNumberOfElements*<br/>
 Taille de la mémoire tampon de *répertoire* en caractères codés sur un octet ou larges. Si *dir* est **null**, cette valeur doit être 0.
@@ -120,7 +121,7 @@ Extension de nom de fichier, y compris le point de début (**.**). Vous pouvez p
 *extNumberOfElements*<br/>
 Taille de la mémoire tampon *ext* en caractères codés sur un octet ou larges. Si *ext* a la valeur **null**, cette valeur doit être 0.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
@@ -130,19 +131,19 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 |---------------|------------------|
 |le *chemin d’accès* est **null**|**EINVAL**|
 |le *lecteur* est **null**, *driveNumberOfElements* est différent de zéro|**EINVAL**|
-|le *lecteur* n’est pas**null**, *driveNumberOfElements* est égal à zéro|**EINVAL**|
+|le *lecteur* n’est pas **null**, *driveNumberOfElements* est égal à zéro|**EINVAL**|
 |*dir* est **null**, *dirNumberOfElements* est différent de zéro|**EINVAL**|
-|*dir* est non**null**, *dirNumberOfElements* est égal à zéro|**EINVAL**|
+|*dir* est non **null**, *dirNumberOfElements* est égal à zéro|**EINVAL**|
 |*fname* est **null**, *nameNumberOfElements* est différent de zéro|**EINVAL**|
-|*fname* est non**null**, *nameNumberOfElements* est égal à zéro|**EINVAL**|
+|*fname* est non **null**, *nameNumberOfElements* est égal à zéro|**EINVAL**|
 |*ext* a la **valeur null**, *extNumberOfElements* est différent de zéro|**EINVAL**|
-|*ext* est non**null**, *extNumberOfElements* est égal à zéro|**EINVAL**|
+|*ext* est non **null**, *extNumberOfElements* est égal à zéro|**EINVAL**|
 
 Si l’une des conditions ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
-Si l’une des mémoires tampons est trop petite pour contenir le résultat, ces fonctions effacent toutes les mémoires tampons de chaînes vides, attribuent à **errno** la valeur **ERANGE**et retournent **ERANGE**.
+Si l’une des mémoires tampons est trop petite pour contenir le résultat, ces fonctions effacent toutes les mémoires tampons de chaînes vides, attribuent à **errno** la valeur **ERANGE** et retournent **ERANGE**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_splitpath_s** divise un chemin d’accès en quatre composants. **_splitpath_s** gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. **_wsplitpath_s** est une version à caractères larges de **_splitpath_s**; les arguments de **_wsplitpath_s** sont des chaînes à caractères larges. Sinon, ces fonctions se comportent de façon identique.
 
@@ -154,7 +155,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Chaque composant du chemin d’accès complet est stocké dans une mémoire tampon distincte ; les constantes de manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**et **_MAX_EXT** (définies dans stdlib. H) spécifiez la taille maximale autorisée pour chaque composant de fichier. Les composants de fichier dont la taille dépasse celle des constantes manifestes correspondantes occasionnent une altération du tas.
+Chaque composant du chemin d’accès complet est stocké dans une mémoire tampon distincte ; les constantes de manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME** et **_MAX_EXT** (définies dans stdlib. H) spécifiez la taille maximale autorisée pour chaque composant de fichier. Les composants de fichier dont la taille dépasse celle des constantes manifestes correspondantes occasionnent une altération du tas.
 
 Le tableau suivant répertorie les valeurs des constantes manifestes.
 
@@ -180,7 +181,7 @@ Les versions de la bibliothèque de débogage de ces fonctions remplissent d’a
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 

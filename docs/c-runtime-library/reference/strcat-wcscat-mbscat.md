@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : strcat, wcscat, _mbscat'
 title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 12ec6f6e0e9f940ef72d0aec742137843238c534
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292154"
 ---
 # <a name="strcat-wcscat-_mbscat"></a>strcat, wcscat, _mbscat
 
@@ -92,12 +93,12 @@ unsigned char *_mbscat(
 ### <a name="parameters"></a>Paramètres
 
 *strDestination*<br/>
-Chaîne de destination se terminant par un caractère Null.
+Chaîne de destination se terminant par un caractère null.
 
 *strSource*<br/>
 Chaîne source se terminant par null.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne la chaîne de destination (*strDestination*). Aucune valeur de retour n'est réservée pour indiquer une erreur.
 
@@ -110,7 +111,7 @@ La fonction **strcat** ajoute *strSource* à *strDestination* et met fin à la c
 
 **wcscat** et **_mbscat** sont des versions à caractères larges et à caractères multioctets de **strcat**. Les arguments et la valeur de retour de **wcscat** sont des chaînes à caractères larges ; ceux de **_mbscat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
-En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -118,7 +119,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat**|**strcat**|**_mbscat**|**wcscat**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

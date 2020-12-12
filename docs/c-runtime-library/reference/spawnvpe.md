@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spawnvpe'
 title: spawnvpe
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - spawnvpe function
 ms.assetid: be16bf98-5059-4c33-be00-7524142a017e
-ms.openlocfilehash: 7166ddc2f3116ef5d2560486bd69c8525cfbdc42
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 6c4c12539b5754b0c5cd834db6a714382b74629f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300623"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292323"
 ---
 # <a name="spawnvpe"></a>spawnvpe
 

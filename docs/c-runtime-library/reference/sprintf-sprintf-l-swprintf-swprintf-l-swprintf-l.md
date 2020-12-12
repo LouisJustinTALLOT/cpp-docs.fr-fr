@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l'
 title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 ms.date: 06/23/2020
 api_name:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: da3c5b3660b481fd3a7140adbc236f44cd51f37e
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 12c7560a57c126e2e35cf78b0d11b1262c14a9e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292206"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -127,7 +128,7 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Nombre de caractères écrits, ou-1 si une erreur s’est produite. Si la *mémoire tampon* ou le *format* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
@@ -153,7 +154,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_stprintf**|**sprintf**|**sprintf**|**_swprintf**|
 |**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spawnle'
 title: spawnle
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - spawnle function
 ms.assetid: 7c90cfdd-dcee-4ea6-b709-cd0f7598b0fe
-ms.openlocfilehash: 65c795fed82e2ae2f552fb2b68e533dc2b7478b6
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 28ebb643903d37b1b3198a686a9fbed6e077562e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292492"
 ---
 # <a name="spawnle"></a>spawnle
 

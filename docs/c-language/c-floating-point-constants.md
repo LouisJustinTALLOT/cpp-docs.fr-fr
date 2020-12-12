@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les constantes : C Floating-Point'
 title: Constantes à virgule flottante C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: 8777f04b047516ef29ae7bf67ddaf4195e3aaf6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0bad45db33cd40060c4d20312c5318d443efc60f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228022"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293558"
 ---
 # <a name="c-floating-point-constants"></a>Constantes à virgule flottante C
 
@@ -27,7 +28,7 @@ Une « constante à virgule flottante » est un nombre décimal qui représent
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *exponent-part* *floating-suffix*<sub>opt</sub>
 
 *fractional-constant* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;option *de séquence numérique*<sub>opt</sub> **.** *digit-sequence*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;option *de séquence numérique*<sub></sub> **.** *digit-sequence*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*chiffre-séquence*  **.**
 
 *partie exposant*:<br/>
@@ -58,7 +59,7 @@ Les exemples suivants illustrent certaines formes de constantes et expressions �
 
 Les constantes à virgule flottante sont positives, sauf si elles sont précédées d’un signe moins ( **-** ). Dans ce cas, le signe moins est considéré comme un opérateur de négation arithmétique unaire. Les constantes à virgule flottante ont le type **`float`** , **`double`** ou **`long double`** .
 
-Une constante à virgule flottante sans suffixe **f**, **f**, **l**ou **l** est de type **`double`** . Si la lettre **f** ou **f** est le suffixe, la constante est de type **`float`** . En cas de suffixe par la lettre **l** ou **l**, le type est **`long double`** . Par exemple :
+Une constante à virgule flottante sans suffixe **f**, **f**, **l** ou **l** est de type **`double`** . Si la lettre **f** ou **f** est le suffixe, la constante est de type **`float`** . En cas de suffixe par la lettre **l** ou **l**, le type est **`long double`** . Par exemple :
 
 ```C
 10.0L  /* Has type long double  */

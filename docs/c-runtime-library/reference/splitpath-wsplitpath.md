@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _splitpath, _wsplitpath'
 title: _splitpath, _wsplitpath
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: 1d24565a912d74060e60024dcfd90b8018cae32d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d270cf15c00c42f350dafe0cd45dddbb2f6594c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920281"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292310"
 ---
 # <a name="_splitpath-_wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -78,7 +79,7 @@ Chemin complet.
 Lettre de lecteur, suivie d’un signe deux-points (**:**). Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin de la lettre de lecteur.
 
 *dir*<br/>
-Chemin de répertoire incluant une barre oblique de fin. Les barres obliques **/** (), les barres obliques inverses ( **\\** ) ou les deux peuvent être utilisées. Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin du chemin d’accès au répertoire.
+Chemin de répertoire incluant une barre oblique de fin. Les barres obliques ( **/** ), les barres obliques inverses ( **\\** ) ou les deux peuvent être utilisées. Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin du chemin d’accès au répertoire.
 
 *fname*<br/>
 Nom de fichier de base (sans extension). Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin du nom de fichier.
@@ -86,7 +87,7 @@ Nom de fichier de base (sans extension). Vous pouvez passer la **valeur null** p
 *ext*<br/>
 Extension de nom de fichier, y compris le point de début (**.**). Vous pouvez passer la **valeur null** pour ce paramètre si vous n’avez pas besoin de l’extension de nom de fichier.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_splitpath** divise un chemin d’accès en quatre composants. **_splitpath** gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation. **_wsplitpath** est une version à caractères larges de **_splitpath**; les arguments de **_wsplitpath** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
 
@@ -100,7 +101,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Chaque composant du chemin d’accès complet est stocké dans une mémoire tampon distincte ; les constantes de manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**et **_MAX_EXT** (définies dans stdlib. H) spécifiez la taille maximale de chaque composant de fichier. Les composants de fichier dont la taille dépasse celle des constantes manifestes correspondantes occasionnent une altération du tas.
+Chaque composant du chemin d’accès complet est stocké dans une mémoire tampon distincte ; les constantes de manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME** et **_MAX_EXT** (définies dans stdlib. H) spécifiez la taille maximale de chaque composant de fichier. Les composants de fichier dont la taille dépasse celle des constantes manifestes correspondantes occasionnent une altération du tas.
 
 Chaque mémoire tampon doit être aussi volumineuse que sa constante manifeste correspondante pour éviter un possible dépassement de mémoire tampon.
 
@@ -128,7 +129,7 @@ Si *path* a la **valeur null**, le gestionnaire de paramètres non valides est a
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [_makepath](makepath-wmakepath.md).
 

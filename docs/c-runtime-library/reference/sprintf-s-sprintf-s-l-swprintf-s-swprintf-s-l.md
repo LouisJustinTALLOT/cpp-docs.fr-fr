@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l'
 title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 006b0f84494466b5c23a8c86f586774b66839b03
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 4d5114367daf8061315d296816799c5707c0323c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008830"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292258"
 ---
 # <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
@@ -117,7 +118,7 @@ Paramètres régionaux à utiliser.
 
 Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Nombre de caractères écrits, ou-1 si une erreur s’est produite. Si *buffer* ou *format* est un pointeur null, **sprintf_s** et **swprintf_s** retournent-1 et attribuent à **errno** la valeur **EINVAL**.
 
@@ -144,7 +145,7 @@ Il existe des versions de **sprintf_s** qui offrent un contrôle supplémentaire
 |**_stprintf_s**|**sprintf_s**|**sprintf_s**|**swprintf_s**|
 |**_stprintf_s_l**|**_sprintf_s_l**|**_sprintf_s_l**|**_swprintf_s_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

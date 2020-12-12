@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCDynamicLayout'
 title: CMFCDynamicLayout Class
 ms.date: 08/29/2019
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: 1c5d73897f7028768476c82824f8c0b6d530aea2
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 56979cce8ff20224cae444dab038bae29deeb39b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293909"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout Class
 
@@ -111,7 +112,7 @@ Structure qui décrit la façon dont le contrôle doit être déplacé quand la 
 *sizeSettings*<br/>
 Structure qui décrit la façon dont le contrôle doit être redimensionné quand la taille de fenêtre change.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l'élément a bien été ajouté ; sinon, FALSE.
 
@@ -144,7 +145,7 @@ BOOL Create(CWnd* pHostWnd);
 *pHostWnd*<br/>
 Pointeur vers la fenêtre hôte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la création a abouti ; sinon, FALSE.
 
@@ -158,7 +159,7 @@ Retourne un pointeur vers une fenêtre hôte.
 CWnd* GetHostWnd();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers la fenêtre hôte.
 
@@ -174,7 +175,7 @@ Retourne la taille de fenêtre en dessous de laquelle la disposition n'est pas a
 CSize GetMinSize();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Taille de fenêtre en dessous de laquelle la disposition n'est pas ajustée.
 
@@ -210,7 +211,7 @@ BOOL HasItem(HWND hwnd);
 *HWND*<br/>
 Handle de fenêtre pour le contrôle.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la disposition contient déjà cet élément ; sinon, FALSE.
 
@@ -224,7 +225,7 @@ Vérifie qu'aucune fenêtre enfant n'a été ajoutée à une disposition dynamiq
 BOOL IsEmpty();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la disposition n'a pas d'éléments ; sinon, FALSE.
 
@@ -251,7 +252,7 @@ Pointeur vers la mémoire tampon qui contient la ressource AFX_DIALOG_LAYOUT.
 *dwSize nul*<br/>
 Taille de la mémoire tampon en octets.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si la ressource est chargée et appliquée à la fenêtre hôte ; sinon, FALSE.
 
@@ -270,7 +271,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 *nRatio*<br/>
 Définit sous forme de pourcentage l'amplitude du déplacement d'un contrôle enfant sur le plan horizontal quand l'utilisateur redimensionne la fenêtre hôte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [MoveSettings](#movesettings_structure) qui encapsule le rapport de déplacement demandé.
 
@@ -292,7 +293,7 @@ Définit sous forme de pourcentage l'amplitude du déplacement d'un contrôle en
 *nYRatio*<br/>
 Définit sous forme de pourcentage l'amplitude du déplacement d'un contrôle enfant sur le plan vertical quand l'utilisateur redimensionne la fenêtre hôte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [MoveSettings](#movesettings_structure) qui encapsule le rapport de déplacement demandé.
 
@@ -306,7 +307,7 @@ Obtient une valeur [MoveSettings](#movesettings_structure) qui ne représente au
 static MoveSettings MoveNone();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [MoveSettings](#movesettings_structure) qui résout le contrôle en place, afin qu’il ne se déplace pas lorsque l’utilisateur redimensionne la fenêtre hôte.
 
@@ -332,7 +333,7 @@ Vérifie si les données de déplacement spécifient un déplacement horizontal 
 BOOL IsHorizontal() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l'objet `MoveSettings` spécifie un déplacement horizontal différent de zéro.
 
@@ -344,7 +345,7 @@ Vérifie si les données de déplacement ne spécifient aucun déplacement.
 BOOL IsNone() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l'objet `MoveSettings` ne spécifie aucun déplacement.
 
@@ -356,7 +357,7 @@ Vérifie si les données de déplacement spécifient un déplacement vertical di
 BOOL IsVertical() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l'objet `MoveSettings` spécifie un déplacement vertical différent de zéro.
 
@@ -373,7 +374,7 @@ static MoveSettings MoveVertical(int nRatio);
 *nRatio*<br/>
 Définit sous forme de pourcentage l'amplitude du déplacement d'un contrôle enfant sur le plan vertical quand l'utilisateur redimensionne la fenêtre hôte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [MoveSettings](#movesettings_structure) qui encapsule le rapport de déplacement demandé.
 
@@ -409,7 +410,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 *nRatio*<br/>
 Définit sous forme de pourcentage l'amplitude du redimensionnement d'un contrôle enfant sur le plan horizontal quand l'utilisateur redimensionne la fenêtre hôte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [SizeSettings](#sizesettings_structure) qui encapsule le ratio de taille demandé.
 
@@ -431,7 +432,7 @@ Définit sous forme de pourcentage l'amplitude du redimensionnement d'un contrô
 *nYRatio*<br/>
 Définit sous forme de pourcentage l'amplitude du redimensionnement d'un contrôle enfant sur le plan vertical quand l'utilisateur redimensionne la fenêtre hôte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [SizeSettings](#sizesettings_structure) qui encapsule le ratio de taille demandé.
 
@@ -445,7 +446,7 @@ Obtient une valeur [SizeSettings](#sizesettings_structure) qui ne représente au
 static SizeSettings SizeNone();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [SizeSettings](#sizesettings_structure) qui résout le contrôle à une certaine taille, afin qu’il ne change pas de taille lorsque l’utilisateur redimensionne la fenêtre hôte.
 
@@ -471,7 +472,7 @@ Vérifie si les données de redimensionnement spécifient un redimensionnement h
 BOOL IsHorizontal() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l'objet `SizeSettings` spécifie un redimensionnement horizontal différent de zéro.
 
@@ -483,7 +484,7 @@ Vérifie si les données de redimensionnement ne spécifient aucun redimensionne
 BOOL IsNone() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l'objet `SizeSettings` ne spécifie aucun redimensionnement.
 
@@ -495,7 +496,7 @@ Vérifie si les données de redimensionnement spécifient un redimensionnement v
 BOOL IsVertical() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 TRUE si l'objet `SizeSettings` spécifie un redimensionnement vertical différent de zéro.
 
@@ -512,7 +513,7 @@ static SizeSettings SizeVertical(int nRatio);
 *nRatio*<br/>
 Définit sous forme de pourcentage l'amplitude du redimensionnement d'un contrôle enfant sur le plan vertical quand l'utilisateur redimensionne la fenêtre hôte.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur [SizeSettings](#sizesettings_structure) qui encapsule le ratio de taille demandé.
 

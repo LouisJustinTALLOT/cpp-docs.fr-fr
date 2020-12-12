@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spawnvp'
 title: spawnvp
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - spawnvp function
 ms.assetid: 25d3896d-1934-4453-ae8b-4fb5480a2657
-ms.openlocfilehash: a1a3bb4d5220810ecdea9fb3bad07a88f7eb17cf
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c56a3a1e68bba52527198fda4f152ec07cd2006b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300675"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292505"
 ---
 # <a name="spawnvp"></a>spawnvp
 

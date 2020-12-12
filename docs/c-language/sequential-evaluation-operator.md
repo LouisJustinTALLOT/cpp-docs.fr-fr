@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateur Sequential-Evaluation'
 title: Opérateur d'évaluation séquentielle
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - sequential-evaluation operator
 - comma operator
 ms.assetid: 587514f4-c8e2-44e9-81a8-7a553ce1453a
-ms.openlocfilehash: ec2c866b512bc0b398375041b03c0ea697d3a0d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7bbe9bd6f70f32bd51e46df28f6e072edf9b6c15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292791"
 ---
 # <a name="sequential-evaluation-operator"></a>Opérateur d'évaluation séquentielle
 

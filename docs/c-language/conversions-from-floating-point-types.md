@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : conversions des types à virgule flottante'
 title: Conversions depuis les types à virgule flottante
 ms.date: 10/02/2019
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-ms.openlocfilehash: 72d0f95a6e48dcf0a5e8fea3757e85f9a03bf7e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e2a78a68b39d9109a2304d78070bddef36e9b52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293233"
 ---
 # <a name="conversions-from-floating-point-types"></a>Conversions depuis les types à virgule flottante
 
@@ -40,26 +41,26 @@ Le tableau suivant répertorie les conversions des types de flottant.
 
 ## <a name="table-of-conversions-from-floating-point-types"></a>Table des conversions des types à virgule flottante
 
-|À partir|À|Méthode|
+|Du|À|Méthode|
 |----------|--------|------------|
-|**`float`**|**`char`**|Convertir en **`long`** ; convertir **`long`** en**`char`**|
-|**`float`**|**`short`**|Convertir en **`long`** ; convertir **`long`** en**`short`**|
+|**`float`**|**`char`**|Convertir en **`long`** ; convertir **`long`** en **`char`**|
+|**`float`**|**`short`**|Convertir en **`long`** ; convertir **`long`** en **`short`**|
 |**`float`**|**`int`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`int`** , le résultat n’est pas défini.|
 |**`float`**|**`long`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`long`** , le résultat n’est pas défini.|
 |**`float`**|**`long long`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`long long`** , le résultat n’est pas défini.|
-|**`float`**|**`unsigned char`**|Convertir en **`long`** ; convertir **`long`** en**`unsigned char`**|
-|**`float`**|**`unsigned short`**|Convertir en **`long`** ; convertir **`long`** en**`unsigned short`**|
+|**`float`**|**`unsigned char`**|Convertir en **`long`** ; convertir **`long`** en **`unsigned char`**|
+|**`float`**|**`unsigned short`**|Convertir en **`long`** ; convertir **`long`** en **`unsigned short`**|
 |**`float`**|**`unsigned`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`unsigned`** , le résultat n’est pas défini.|
 |**`float`**|**`unsigned long`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`unsigned long`** , le résultat n’est pas défini.|
 |**`float`**|**`unsigned long long`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`unsigned long long`** , le résultat n’est pas défini.|
 |**`float`**|**`double`**|Représente comme un **`double`** .|
 |**`float`**|**`long double`**|Représente comme un **`long double`** .|
-|**`double`**|**`char`**|Convertir en **`float`** ; convertir **`float`** en**`char`**|
-|**`double`**|**`short`**|Convertir en **`float`** ; convertir **`float`** en**`short`**|
+|**`double`**|**`char`**|Convertir en **`float`** ; convertir **`float`** en **`char`**|
+|**`double`**|**`short`**|Convertir en **`float`** ; convertir **`float`** en **`short`**|
 |**`double`**|**`int`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`int`** , le résultat n’est pas défini.|
 |**`double`**|**`long`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`long`** , le résultat n’est pas défini.|
-|**`double`**|**`unsigned char`**|Convertir en **`long`** ; convertir **`long`** en**`unsigned char`**|
-|**`double`**|**`unsigned short`**|Convertir en **`long`** ; convertir **`long`** en**`unsigned short`**|
+|**`double`**|**`unsigned char`**|Convertir en **`long`** ; convertir **`long`** en **`unsigned char`**|
+|**`double`**|**`unsigned short`**|Convertir en **`long`** ; convertir **`long`** en **`unsigned short`**|
 |**`double`**|**`unsigned`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`unsigned`** , le résultat n’est pas défini.|
 |**`double`**|**`unsigned long`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`unsigned long`** , le résultat n’est pas défini.|
 |**`double`**|**`unsigned long long`**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **`unsigned long long`** , le résultat n’est pas défini.|

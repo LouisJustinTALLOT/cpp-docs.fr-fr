@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : instruction composée (C)'
 title: Instruction composite (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-ms.openlocfilehash: 473a4acfa9f6fa2c9089f242a24962570cae4f1c
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: b4c1ee15bc081c34cbc12bfe2c3e997ca181b7be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293441"
 ---
 # <a name="compound-statement-c"></a>Instruction composite (C)
 
