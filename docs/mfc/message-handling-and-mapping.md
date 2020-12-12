@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestion et mappage des messages'
 title: Gestion et mappage des messages
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: a27f8220055630873b02dd7ff975c04744ad9e8e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 50a55f4718b47054690325e882177fa9acad2f46
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622406"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203196"
 ---
 # <a name="message-handling-and-mapping"></a>Gestion et mappage des messages
 
@@ -31,7 +32,7 @@ Pour obtenir des informations générales sur les messages et les files d’atte
 
 - [Comment le Framework appelle un gestionnaire de messages](how-the-framework-calls-a-handler.md)
 
-- [Comment le Framework effectue des recherches dans les tables des messages](how-the-framework-searches-message-maps.md)
+- [Comment le Framework recherche les tables des messages](how-the-framework-searches-message-maps.md)
 
 - [Déclaration des fonctions de gestionnaire de messages](declaring-message-handler-functions.md)
 
@@ -46,6 +47,6 @@ Pour obtenir des informations générales sur les messages et les files d’atte
 ## <a name="see-also"></a>Voir aussi
 
 [Concepts](mfc-concepts.md)<br/>
-[Rubriques MFC générales](general-mfc-topics.md)<br/>
+[Rubriques générales sur MFC](general-mfc-topics.md)<br/>
 [CWnd, classe](reference/cwnd-class.md)<br/>
 [CCmdTarget, classe](reference/ccmdtarget-class.md)

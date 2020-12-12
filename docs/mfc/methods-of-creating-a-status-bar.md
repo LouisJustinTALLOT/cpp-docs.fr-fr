@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les méthodes de création d’une barre d’État
 title: Méthodes de création d'une barre d'état
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - methods [MFC]
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
-ms.openlocfilehash: 9bdaa76dc68467dce1021d9b5f54eaafa248c529
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 06ae4002fdffb8ba90964b5ef488d0c115b3a0e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203053"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Méthodes de création d'une barre d'état
 
-MFC fournit deux classes pour créer des barres d’État : [CStatusBar](reference/cstatusbar-class.md) et [CStatusBarCtrl](reference/cstatusbarctrl-class.md) (qui encapsule l’API de contrôle commun Windows). `CStatusBar`fournit toutes les fonctionnalités du contrôle commun de barre d’État, il interagit automatiquement avec les menus et les barres d’outils et gère un grand nombre des paramètres et structures de contrôle communs requis pour vous. Toutefois, l’exécutable qui en résulte sera généralement plus grand que celui créé à l’aide de `CStatusBarCtrl` .
+MFC fournit deux classes pour créer des barres d’État : [CStatusBar](reference/cstatusbar-class.md) et [CStatusBarCtrl](reference/cstatusbarctrl-class.md) (qui encapsule l’API de contrôle commun Windows). `CStatusBar` fournit toutes les fonctionnalités du contrôle commun de barre d’État, il interagit automatiquement avec les menus et les barres d’outils et gère un grand nombre des paramètres et structures de contrôle communs requis pour vous. Toutefois, l’exécutable qui en résulte sera généralement plus grand que celui créé à l’aide de `CStatusBarCtrl` .
 
-`CStatusBarCtrl`entraîne généralement un fichier exécutable plus petit, et vous pouvez utiliser `CStatusBarCtrl` si vous n’avez pas l’intention d’intégrer la barre d’État dans l’architecture MFC. Si vous envisagez d’utiliser `CStatusBarCtrl` et d’intégrer la barre d’État dans l’architecture MFC, vous devez faire attention à la communication des manipulations de contrôle de barre d’État aux MFC. Cette communication n’est pas difficile. Toutefois, il s’agit d’un travail supplémentaire qui n’est pas nécessaire lorsque vous utilisez `CStatusBar` .
+`CStatusBarCtrl` entraîne généralement un fichier exécutable plus petit, et vous pouvez utiliser `CStatusBarCtrl` si vous n’avez pas l’intention d’intégrer la barre d’État dans l’architecture MFC. Si vous envisagez d’utiliser `CStatusBarCtrl` et d’intégrer la barre d’État dans l’architecture MFC, vous devez faire attention à la communication des manipulations de contrôle de barre d’État aux MFC. Cette communication n’est pas difficile. Toutefois, il s’agit d’un travail supplémentaire qui n’est pas nécessaire lorsque vous utilisez `CStatusBar` .
 
 Visual C++ offre deux façons de tirer parti du contrôle commun de barre d’État.
 
@@ -33,4 +34,4 @@ L’une ou l’autre des méthodes vous donne accès aux fonctions membres du co
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CStatusBarCtrl](using-cstatusbarctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

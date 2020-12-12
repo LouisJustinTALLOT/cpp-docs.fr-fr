@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestion des messages et cibles des commandes'
 title: Gestion des messages et cibles des commandes
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 - command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
-ms.openlocfilehash: cbcbce1e476fef0d076f9c25b46b3166c1eb5935
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 35dc54687c7f3742f72d58f5c84cd274bc8fee09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203287"
 ---
 # <a name="message-handling-and-command-targets"></a>Gestion des messages et cibles des commandes
 
@@ -24,9 +25,9 @@ Dans la conception de l’interface de dispatch de commande, chaque commande app
 
 `IOleCommandTarget` prend en charge les scénarios suivants :
 
-- Lorsqu’un objet est activé sur place, seules les barres d’outils de l’objet sont généralement affichées et les barres d’outils de l’objet peuvent avoir des boutons pour certaines commandes de conteneur, telles que **Imprimer**, **Aperçu avant impression**, **Enregistrer**, **nouveau**, **Zoom**et autres. (Les normes d'activation sur place recommandent que les objets suppriment ces boutons de leurs barres d'outils, ou au moins les désactivent. Cette conception permet à ces commandes d’être activées et encore routées vers le gestionnaire approprié.) Actuellement, il n’existe aucun mécanisme permettant à l’objet de distribuer ces commandes au conteneur.
+- Lorsqu’un objet est activé sur place, seules les barres d’outils de l’objet sont généralement affichées et les barres d’outils de l’objet peuvent avoir des boutons pour certaines commandes de conteneur, telles que **Imprimer**, **Aperçu avant impression**, **Enregistrer**, **nouveau**, **Zoom** et autres. (Les normes d'activation sur place recommandent que les objets suppriment ces boutons de leurs barres d'outils, ou au moins les désactivent. Cette conception permet à ces commandes d’être activées et encore routées vers le gestionnaire approprié.) Actuellement, il n’existe aucun mécanisme permettant à l’objet de distribuer ces commandes au conteneur.
 
-- Lorsqu’un document actif est incorporé dans un conteneur de documents actifs (tel qu’un classeur Office), le conteneur peut avoir besoin d’envoyer des commandes telles que l' **impression**, la **mise en page**, les **Propriétés**et d’autres éléments dans le document actif contenu.
+- Lorsqu’un document actif est incorporé dans un conteneur de documents actifs (tel qu’un classeur Office), le conteneur peut avoir besoin d’envoyer des commandes telles que l' **impression**, la **mise en page**, les **Propriétés** et d’autres éléments dans le document actif contenu.
 
 Le routage de commande simple peut être géré via les normes Automation existantes et `IDispatch`. Toutefois, la surcharge liée à `IDispatch` est supérieure à la valeur requise ici, `IOleCommandTarget` fournit donc un moyen plus simple d'atteindre les mêmes objectifs :
 
@@ -47,7 +48,7 @@ interface IOleCommandTarget : IUnknown
     }
 ```
 
-La `QueryStatus` méthode vérifie ici si un ensemble particulier de commandes, le jeu identifié avec un **GUID**, est pris en charge. Cet appel remplit un tableau de valeurs **OLECMD** (structures) avec la liste des commandes prises en charge et retourne du texte décrivant le nom d’une commande et/ou des informations d’État. Lorsque l’appelant souhaite appeler une commande, il peut passer la commande (et le **GUID**du jeu) à `Exec` , ainsi qu’à des options et des arguments, en obtenant une valeur de retour.
+La `QueryStatus` méthode vérifie ici si un ensemble particulier de commandes, le jeu identifié avec un **GUID**, est pris en charge. Cet appel remplit un tableau de valeurs **OLECMD** (structures) avec la liste des commandes prises en charge et retourne du texte décrivant le nom d’une commande et/ou des informations d’État. Lorsque l’appelant souhaite appeler une commande, il peut passer la commande (et le **GUID** du jeu) à `Exec` , ainsi qu’à des options et des arguments, en obtenant une valeur de retour.
 
 ## <a name="see-also"></a>Voir aussi
 
