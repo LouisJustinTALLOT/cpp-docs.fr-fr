@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __invlpg'
 title: __invlpg
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-ms.openlocfilehash: ba8bd81498f805992336b0dc4163fe18fa157a2c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 16d8f51c8bf36ea94be7b1325ee5bed256c29693
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221898"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167901"
 ---
 # <a name="__invlpg"></a>__invlpg
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Génère l’instruction `invlpg` x86, qui invalide la mémoire tampon de traduction (TLB) pour la page associée à la mémoire vers laquelle pointe l' *adresse*.
+Génère l' `invlpg` instruction x86, qui invalide la mémoire tampon de traduction (TLB) pour la page associée à la mémoire vers laquelle pointe l' *adresse*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,16 +32,16 @@ void __invlpg(
 
 ### <a name="parameters"></a>Paramètres
 
-*-* \
+*-*\
 dans Adresse 64 bits.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__invlpg`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
@@ -48,7 +49,7 @@ L’intrinsèque `__invlpg` émet une instruction privilégiée et est disponibl
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

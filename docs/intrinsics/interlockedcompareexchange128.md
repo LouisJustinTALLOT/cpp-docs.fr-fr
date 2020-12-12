@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions intrinsèques de _InterlockedCompareExchange128'
 title: _InterlockedCompareExchange128 fonctions intrinsèques
 ms.date: 09/02/2019
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 6f6b36b238945f7d46e9817cdc85977d666e1e9b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ee04a71dafe37d6075a054946cd947f6f3829092
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168135"
 ---
 # <a name="_interlockedcompareexchange128-intrinsic-functions"></a>_InterlockedCompareExchange128 fonctions intrinsèques
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Effectue une comparaison et un échange interverrouillés 128 bits.
 
@@ -62,7 +63,7 @@ unsigned char _InterlockedCompareExchange128_rel(
 
 ### <a name="parameters"></a>Paramètres
 
-\ de *destination*
+*Destination*\
 [in, out] Pointeur vers la destination, qui est un tableau d’entiers 2 64 bits considéré comme un champ de 128 bits. Les données de destination doivent être alignées sur 16 octets pour éviter une erreur de protection générale.
 
 *ExchangeHigh*\
@@ -76,7 +77,7 @@ dans Entier 64 bits qui peut être échangé avec la partie inférieure de la de
 
 ## <a name="return-value"></a>Valeur retournée
 
-1 si la valeur de 128 bits comparand est égale à la valeur d’origine de la destination. `ExchangeHigh` et `ExchangeLow` remplacer la destination 128 bits.
+1 si la valeur de 128 bits comparand est égale à la valeur d’origine de la destination. `ExchangeHigh` et `ExchangeLow` remplacent la destination 128 bits.
 
 0 si comparand n’est pas égal à la valeur d’origine de la destination. La valeur de la destination est inchangée et la valeur de comparand est remplacée par la valeur de la destination.
 
@@ -88,20 +89,20 @@ dans Entier 64 bits qui peut être échangé avec la partie inférieure de la de
 |`_InterlockedCompareExchange128_acq`, `_InterlockedCompareExchange128_nf`, `_InterlockedCompareExchange128_rel`|ARM64|
 |`_InterlockedCompareExchange128_np`|x64|
 
-**Fichier d’en-tête** \<Intro. h >
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-L’intrinsèque `_InterlockedCompareExchange128` génère l’instruction `cmpxchg16b` (avec le préfixe `lock`) pour effectuer une comparaison et un échange verrouillés 128 bits. Les versions antérieures du matériel AMD 64 bits ne prennent pas en charge cette instruction. Pour vérifier la prise en charge matérielle de l’instruction `cmpxchg16b`, appelez l' `__cpuid` intrinsèque avec `InfoType=0x00000001 (standard function 1)`. Le bit 13 de `CPUInfo[2]` (ECX) est 1 si l’instruction est prise en charge.
+L' `_InterlockedCompareExchange128` intrinsèque génère l' `cmpxchg16b` instruction (avec le `lock` préfixe) pour effectuer une comparaison et un échange verrouillés 128 bits. Les versions antérieures du matériel AMD 64 bits ne prennent pas en charge cette instruction. Pour vérifier la prise en charge matérielle de l' `cmpxchg16b` instruction, appelez l' `__cpuid` intrinsèque avec `InfoType=0x00000001 (standard function 1)` . Le bit 13 de `CPUInfo[2]` (ECX) est 1 si l’instruction est prise en charge.
 
 > [!NOTE]
-> La valeur de `ComparandResult` est toujours remplacée. Après l' `lock` instruction, cette intrinsèque copie immédiatement la valeur initiale de `Destination` dans `ComparandResult`. Pour cette raison, `ComparandResult` et `Destination` doivent pointer vers des emplacements de mémoire distincts pour éviter un comportement inattendu.
+> La valeur de `ComparandResult` est toujours remplacée. Après l' `lock` instruction, cette intrinsèque copie immédiatement la valeur initiale de `Destination` dans `ComparandResult` . Pour cette raison, `ComparandResult` et `Destination` doit pointer vers des emplacements de mémoire distincts pour éviter un comportement inattendu.
 
 Bien que vous puissiez utiliser `_InterlockedCompareExchange128` pour la synchronisation de threads de bas niveau, vous n’avez pas besoin de synchroniser plus de 128 bits si vous pouvez utiliser des fonctions de synchronisation plus petites (telles que les autres `_InterlockedCompareExchange` intrinsèques) à la place. Utilisez `_InterlockedCompareExchange128` si vous souhaitez un accès atomique à une valeur 128 bits dans la mémoire.
 
-Si vous exécutez du code qui utilise l’intrinsèque sur du matériel qui ne prend pas en charge l’instruction `cmpxchg16b`, les résultats sont imprévisibles.
+Si vous exécutez du code qui utilise l’intrinsèque sur du matériel qui ne prend pas en charge l' `cmpxchg16b` instruction, les résultats sont imprévisibles.
 
-Sur les plateformes ARM, utilisez les intrinsèques avec les suffixes `_acq` et `_rel` pour la sémantique Acquire et Release, comme au début et à la fin d'une section critique. Les intrinsèques ARM avec un suffixe `_nf` (« aucune limite ») n’agissent pas comme une barrière de mémoire.
+Sur les plateformes ARM, utilisez les intrinsèques avec les suffixes `_acq` et `_rel` pour la sémantique Acquire et Release, comme au début et à la fin d'une section critique. Les intrinsèques ARM avec un `_nf` suffixe (« no cloture ») n’agissent pas comme une barrière de mémoire.
 
 Les fonctions intrinsèques avec un suffixe `_np` (pour « no prefetch », « pas de prérécupération ») empêchent l'insertion par le compilateur d'une possible opération de prérécupération.
 
@@ -109,7 +110,7 @@ Cette routine est disponible uniquement comme intrinsèque.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple utilise `_InterlockedCompareExchange128` pour remplacer le mot de poids fort d’un tableau d’entiers 2 64 bits par la somme de ses mots hauts et bas et pour incrémenter le mot de poids faible. L’accès au tableau `BigInt.Int` est atomique, mais cet exemple utilise un thread unique et ignore le verrouillage pour plus de simplicité.
+Cet exemple utilise `_InterlockedCompareExchange128` pour remplacer le mot de poids fort d’un tableau d’entiers 2 64 bits par la somme de ses mots hauts et bas et pour incrémenter le mot de poids faible. L’accès au `BigInt.Int` tableau est atomique, mais cet exemple utilise un thread unique et ignore le verrouillage pour plus de simplicité.
 
 ```cpp
 // cmpxchg16b.c
@@ -157,7 +158,7 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12
 ```
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions intrinsèques de _InterlockedExchangeAdd'
 title: _InterlockedExchangeAdd fonctions intrinsèques
 ms.date: 09/02/2019
 f1_keywords:
@@ -55,18 +56,18 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-ms.openlocfilehash: a81439a4ee20e7251173fd0eb0e7ddf240a9341f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fa1403889aec15ba8cdaae135db2b7563636c21e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168018"
 ---
 # <a name="_interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd fonctions intrinsèques
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Assurez la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [_InterlockedExchangeAdd fonctions intrinsèques](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) .
+Fournit la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [_InterlockedExchangeAdd fonctions intrinsèques](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -156,24 +157,24 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 ### <a name="parameters"></a>Paramètres
 
 *Addend*\
-[in, out] Valeur à ajouter à; remplacé par le résultat de l’addition.
+[in, out] Valeur à ajouter à ; remplacé par le résultat de l’addition.
 
-*Ajoutée*\
+*Value*\
 dans Valeur à ajouter.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 La valeur de retour est la valeur initiale de la variable vers laquelle pointe le paramètre `Addend`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|Header|
+|Intrinsic|Architecture|En-tête|
 |---------------|------------------|------------|
 |`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedExchangeAdd64`|ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM, ARM64|\<intrin.h>|
 |`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`|x86, x64|\<immintrin.h>|
-|`_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|X64|\<immintrin.h>|
+|`_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Notes
 
@@ -181,7 +182,7 @@ Il existe plusieurs variantes de `_InterlockedExchangeAdd` qui varient selon les
 
 La fonction `_InterlockedExchangeAdd` opère sur les valeurs entières de 32 bits, `_InterlockedExchangeAdd8` sur les valeurs entières de 8 bits, `_InterlockedExchangeAdd16` sur les valeurs entières de 16 bits et `_InterlockedExchangeAdd64` sur les valeurs entières de 64 bits.
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques avec un `_nf` suffixe («no cloture») n’agissent pas comme une barrière de mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques avec un `_nf` suffixe (« no cloture ») n’agissent pas comme une barrière de mémoire.
 
 Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les fonctions intrinsèques avec les suffixes `_HLEAcquire` et `_HLERelease` comprennent une indication pour le processeur qui peut accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des plateformes qui ne prennent pas en charge HLE, l’indicateur est ignoré.
 
@@ -189,12 +190,12 @@ Ces routines sont disponibles seulement comme fonctions intrinsèques. Elles son
 
 ## <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation `_InterlockedExchangeAdd`de, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Pour obtenir un exemple d’utilisation de `_InterlockedExchangeAdd` , consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
 [Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
-[Mots clés](../cpp/keywords-cpp.md)\
+[Mot](../cpp/keywords-cpp.md)\
 [Conflits avec le compilateur x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

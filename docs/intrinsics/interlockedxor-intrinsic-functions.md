@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions intrinsèques de _InterlockedXor'
 title: _InterlockedXor fonctions intrinsèques
 ms.date: 09/02/2019
 f1_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-ms.openlocfilehash: 22cb9edd5fa4ffd8ffae7363ab07dc48f519fff0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 47fb057f4a7e70b8cb8bcee1a5b05ad55d5918e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221905"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167966"
 ---
 # <a name="_interlockedxor-intrinsic-functions"></a>_InterlockedXor fonctions intrinsèques
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Effectuer une opération ou exclusif (XOR) atomique au niveau du bit sur une variable partagée par plusieurs threads.
 
@@ -150,32 +151,32 @@ __int64 _InterlockedXor64_rel(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ajoutée*\
+*Value*\
 [in, out] Pointeur vers le premier opérande, à remplacer par le résultat.
 
 *Filtrage*\
 dans Deuxième opérande.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Valeur d’origine du premier opérande.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|Header|
+|Intrinsic|Architecture|En-tête|
 |---------------|------------------|------------|
 |`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedXor64`|ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM, ARM64|\<intrin.h>|
-|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|
+|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|x64|\<intrin.h>|
 |`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`|x86, x64|\<immintrin.h>|
-|`_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|X64|\<immintrin.h>|
+|`_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Notes
 
 Le nombre dans le nom de chaque fonction spécifie la taille en bits des arguments.
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques ARM avec un `_nf` suffixe («no cloture») n’agissent pas comme une barrière de mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques ARM avec un `_nf` suffixe (« no cloture ») n’agissent pas comme une barrière de mémoire.
 
 Les fonctions intrinsèques avec un suffixe `_np` (pour « no prefetch », « pas de prérécupération ») empêchent l'insertion par le compilateur d'une possible opération de prérécupération.
 
@@ -204,7 +205,7 @@ int main()
 0xffff0000 0xffff00 0xff00ff00
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

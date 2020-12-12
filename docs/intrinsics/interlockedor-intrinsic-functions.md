@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions intrinsèques de _InterlockedOr'
 title: _InterlockedOr fonctions intrinsèques
 ms.date: 09/02/2019
 f1_keywords:
@@ -56,16 +57,16 @@ helpviewer_keywords:
 - _InterlockedOr16_rel intrinsic
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
-ms.openlocfilehash: baad724c85d2d8fb981ec7836d7a46152000fae3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: d0bd01bdc1b3a32398d65d11c49fe162fa7b4cd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167979"
 ---
 # <a name="_interlockedor-intrinsic-functions"></a>_InterlockedOr fonctions intrinsèques
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Effectuer une opération OR atomique au niveau du bit sur une variable partagée par plusieurs threads.
 
@@ -172,32 +173,32 @@ __int64 _InterlockedOr64_rel(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ajoutée*\
+*Value*\
 [in, out] Pointeur vers le premier opérande, à remplacer par le résultat.
 
 *Filtrage*\
 dans Deuxième opérande.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Valeur d'origine vers laquelle pointe le premier paramètre.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|Header|
+|Intrinsic|Architecture|En-tête|
 |---------------|------------------|------------|
 |`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedOr64`|ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM, ARM64|\<intrin.h>|
-|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|X64|\<intrin.h>|
+|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|x64|\<intrin.h>|
 |`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`|x86, x64|\<immintrin.h>|
-|`_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|X64|\<immintrin.h>|
+|`_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Notes
 
 Le nombre dans le nom de chaque fonction spécifie la taille en bits des arguments.
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques ARM avec un `_nf` suffixe («no cloture») n’agissent pas comme une barrière de mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques ARM avec un `_nf` suffixe (« no cloture ») n’agissent pas comme une barrière de mémoire.
 
 Les fonctions intrinsèques avec un suffixe `_np` (pour « no prefetch », « pas de prérécupération ») empêchent l'insertion par le compilateur d'une possible opération de prérécupération.
 
@@ -226,7 +227,7 @@ int main()
 0xffffff00 0xffff00 0xff00ff00
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

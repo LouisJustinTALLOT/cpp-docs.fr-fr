@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions intrinsèques de _InterlockedCompareExchangePointer'
 title: _InterlockedCompareExchangePointer fonctions intrinsèques
 ms.date: 09/02/2019
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cd8d42c6a7036a6c779af6fc32a7176b7e48a73c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168057"
 ---
 # <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer fonctions intrinsèques
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Effectue une opération atomique qui stocke l'adresse `Exchange` dans l'adresse `Destination` si les adresses `Comparand` et `Destination` sont égales.
 
@@ -82,19 +83,19 @@ long _InterlockedCompareExchangePointer_rel (
 *Destination*\
 [in, out] Pointeur vers un pointeur vers la valeur de destination. Le signe est ignoré.
 
-*Échanger*\
+*Exchange*\
 dans Pointeur Exchange. Le signe est ignoré.
 
 *Comparateur*\
 dans Pointeur à comparer à la destination. Le signe est ignoré.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 La valeur de retour est la valeur initiale de la destination.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|Header|
+|Intrinsic|Architecture|En-tête|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchangePointer`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM, ARM64|\<iiintrin.h>|
@@ -104,11 +105,11 @@ La valeur de retour est la valeur initiale de la destination.
 
 `_InterlockedCompareExchangePointer` effectue une comparaison atomique de l'adresse `Destination` à l'adresse `Comparand`. Si l'adresse `Destination` est égale à l'adresse `Comparand`, l'adresse `Exchange` est stockée dans l'adresse spécifiée par `Destination`. Dans le cas contraire, aucune opération n'est effectuée.
 
-`_InterlockedCompareExchangePointer`fournit la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) .
+`_InterlockedCompareExchangePointer` fournit la prise en charge intrinsèque du compilateur pour la fonction Win32 SDK Windows [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) .
 
-Pour obtenir un exemple d’utilisation `_InterlockedCompareExchangePointer`de, consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Pour obtenir un exemple d’utilisation de `_InterlockedCompareExchangePointer` , consultez [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques ARM avec `_nf` un suffixe («no cloture») n’agissent pas comme une barrière de mémoire.
+Sur les plateformes ARM, utilisez les fonctions intrinsèques avec des suffixes `_acq` et `_rel` si vous devez acquérir et libérer des éléments de la sémantique, comme le début et la fin d’une section critique. Les intrinsèques ARM avec un `_nf` suffixe (« no cloture ») n’agissent pas comme une barrière de mémoire.
 
 Les fonctions intrinsèques avec un suffixe `_np` (pour « no prefetch », « pas de prérécupération ») empêchent l'insertion par le compilateur d'une possible opération de prérécupération.
 
@@ -116,7 +117,7 @@ Sur les plateformes Intel qui prennent en charge les instructions HLE (Hardware 
 
 Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
