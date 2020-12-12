@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 4) C4463'
 title: Avertissement du compilateur (niveau 4) C4463
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-ms.openlocfilehash: acc7957493942a9c0e19ce098b74ed0b5d75a12d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fe4ea13c50e16bf5b72f5753fa989970db3cadde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214358"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251321"
 ---
 # <a name="compiler-warning-level-4-c4463"></a>Avertissement du compilateur (niveau 4) C4463
 
 > surcharge affectation d’une *valeur* à un champ de bits qui ne peut contenir que des valeurs de *low_value* à *HIGH_VALUE*
 
-La *valeur* assignée est en dehors de la plage de valeurs que le champ de bits peut contenir. Les types de champ de bits signés utilisent le bit de poids fort pour le signe, donc si *n* est la taille du champ de bits, la plage des champs de bits signés est-2<sup>n-1</sup> à 2<sup>n-1</sup>-1, tandis que les champs de bits non signés ont une plage comprise entre 0 et 2<sup>n</sup>-1.
+La *valeur* assignée est en dehors de la plage de valeurs que le champ de bits peut contenir. Les types de champ de bits signés utilisent le bit de poids fort pour le signe, donc si *n* est la taille du champ de bits, la plage des champs de bits signés est-2 <sup>n-1</sup> à 2 <sup>n-1</sup>-1, tandis que les champs de bits non signés ont une plage comprise entre 0 et 2 <sup>n</sup>-1.
 
 ## <a name="example"></a>Exemple
 

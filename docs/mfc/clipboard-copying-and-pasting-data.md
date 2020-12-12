@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : presse-papiers : copier et coller des données'
 title: 'Presse-papiers : copier-coller des données'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: ed3056ec4fb3d3098870a03522d3bf17f41fbe34
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: fdc102cf7a92bc78df83419269bb5de828dc9d19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620705"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251230"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : copier-coller des données
 
@@ -18,7 +19,7 @@ Cette rubrique décrit le travail minimum nécessaire pour implémenter la copie
 
 Avant de pouvoir implémenter la copie ou le collage, vous devez d’abord fournir des fonctions pour gérer les options copier, couper et coller du menu Edition.
 
-## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a>Copie ou découpe de données
+## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a> Copie ou découpe de données
 
 #### <a name="to-copy-data-to-the-clipboard"></a>Pour copier des données dans le presse-papiers
 
@@ -34,7 +35,7 @@ Avant de pouvoir implémenter la copie ou le collage, vous devez d’abord fourn
 
 Pour voir un exemple de cette séquence, consultez les `OnEditCut` `OnEditCopy` fonctions et dans les exemples de programmes OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) et [HIERSVR](../overview/visual-cpp-samples.md). Notez que ces exemples maintiennent un pointeur vers les données actuellement sélectionnées. l’étape 1 est donc déjà terminée.
 
-## <a name="pasting-data"></a><a name="_core_pasting_data"></a>Coller des données
+## <a name="pasting-data"></a><a name="_core_pasting_data"></a> Coller des données
 
 Le collage de données est plus complexe que la copie, car vous devez choisir le format à utiliser pour coller les données dans votre application.
 
@@ -69,4 +70,4 @@ Pour gérer l’option Collage spécial dans le menu Edition, consultez la rubri
 
 ## <a name="see-also"></a>Voir aussi
 
-[Presse-papiers : utilisation du mécanisme de Presse-papiers OLE](clipboard-using-the-ole-clipboard-mechanism.md)
+[Presse-papiers : utilisation du mécanisme de presse-papiers OLE](clipboard-using-the-ole-clipboard-mechanism.md)

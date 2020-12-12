@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les opérations du presse-papiers dans les contrôles RichEdit
 title: Opérations du Presse-papiers dans les contrôles RichEdit
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Clipboard, operations in CRichEditCtrl
 - rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
-ms.openlocfilehash: 3dea112ed32ae618991f6ff5f05823bd5be001b6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9a9fda9aebe3a749359776c1bc0d41e75deaef76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251204"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Opérations du Presse-papiers dans les contrôles RichEdit
 
@@ -32,4 +33,4 @@ Les contrôles RichEdit inscrivent deux formats de presse-papiers : le format d
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CRichEditCtrl](using-cricheditctrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

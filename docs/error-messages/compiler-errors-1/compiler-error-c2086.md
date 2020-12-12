@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2086'
 title: Erreur du compilateur C2086
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2086
 ms.assetid: 4329bf72-90c8-444c-8524-4ef75e6b2139
-ms.openlocfilehash: 417763e8c26918d3cd83702b283244d1c13d9d1f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b98b4ed3896b11d8df434935c1b539f76640f24c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735747"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252075"
 ---
 # <a name="compiler-error-c2086"></a>Erreur du compilateur C2086
 
@@ -19,7 +20,7 @@ ms.locfileid: "74735747"
 
 L’identificateur est défini plusieurs fois, ou une déclaration suivante diffère d’un précédent.
 
-C2086 peut également être le résultat d’une génération incrémentielle pour un C# assembly référencé. Régénérez l' C# assembly pour résoudre cette erreur.
+C2086 peut également être le résultat d’une génération incrémentielle pour un assembly C# référencé. Régénérez l’assembly C# pour résoudre cette erreur.
 
 L’exemple suivant génère l’C2086 :
 

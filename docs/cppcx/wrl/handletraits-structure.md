@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : structure HANDLETraits'
 title: HANDLETraits (structure)
 ms.date: 09/27/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: c04e53789fd737b12ca10ef2c279a05fb43f5925
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3eef03c724b1ba868ba67ed251acdb310d8b66f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250021"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits (structure)
 
@@ -53,7 +54,7 @@ Nom                                              | Description
 
 **Espace de noms :** Microsoft :: WRL :: wrappers :: HandleTraits
 
-## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits :: Close
+## <a name="handletraitsclose"></a><a name="close"></a> HANDLETraits :: Close
 
 Ferme le handle spécifié.
 
@@ -68,11 +69,11 @@ inline static bool Close(
 *h*<br/>
 Handle à fermer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si handle *h* a été fermé avec succès ; Sinon, **`false`** .
 
-## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits :: Getinvalidvalue,
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> HANDLETraits :: Getinvalidvalue,
 
 Représente un handle non valide.
 
@@ -80,6 +81,6 @@ Représente un handle non valide.
 inline static HANDLE GetInvalidValue();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne toujours INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE est défini par Windows.)
