@@ -1,21 +1,22 @@
 ---
-title: 'TN060 : Les nouveaux contrôles communs Windows'
+description: 'En savoir plus sur : TN060 : les nouveaux contrôles communs Windows'
+title: 'TN060 : nouveaux contrôles Windows communs'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.common
 helpviewer_keywords:
 - TN060
 ms.assetid: 1a8eea6c-283a-4043-a7dc-a036e37e508e
-ms.openlocfilehash: 55490630c11a6669164f6459de9d92c3789fe765
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dbf81a3a1b64084008ca3c7ac8037b74d344bf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214739"
 ---
-# <a name="tn060-the-new-windows-common-controls"></a>TN060 : Les nouveaux contrôles communs Windows
+# <a name="tn060-the-new-windows-common-controls"></a>TN060 : nouveaux contrôles Windows communs
 
-Les 60 Note technique, qui décrivent les nouveaux contrôles communs Windows et comment les utiliser, ont été intégrées à [contrôles](../mfc/controls-mfc.md).
+La note technique 60, qui décrit les nouveaux contrôles communs Windows et comment les utiliser, a été incorporée dans les [contrôles](../mfc/controls-mfc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

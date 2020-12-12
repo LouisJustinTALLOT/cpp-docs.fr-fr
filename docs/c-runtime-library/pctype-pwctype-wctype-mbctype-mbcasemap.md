@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _pctype, _pwctype, _wctype, _mbctype, _mbcasemap'
 title: _pctype, _pwctype, _wctype, _mbctype, _mbcasemap
 ms.date: 11/04/2016
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - mbctype function
 - _mbcasemap function
 ms.assetid: 7f5e1107-c43b-4b9b-b387-781e6d2373cb
-ms.openlocfilehash: 8ffb46dc410bc1397e3d592f68339b4a58dae86c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4122d282b3b205af3d6fb67f9755f9c13c4bb5e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213453"
 ---
 # <a name="_pctype-_pwctype-_wctype-_mbctype-_mbcasemap"></a>_pctype, _pwctype, _wctype, _mbctype, _mbcasemap
 
@@ -73,11 +74,11 @@ Les informations contenues dans `_pctype`, `_pwctype` et `_wctype` sont utilisé
 
 Les informations contenues dans `_mbctype` et `_mbcasemap` sont utilisées en interne par les fonctions [_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md), [_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md), [_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md), [_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md), [_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md), [_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md), [_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md), [_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md), [_ismbbgraph, _ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md), [_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md), [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md), [_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md) et [_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md). Utilisez ces fonctions au lieu d’accéder aux variables globales.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Pas d’usage public.
 
 ## <a name="see-also"></a>Voir aussi
 
-[is, isw, routines](../c-runtime-library/is-isw-routines.md)<br/>
+[is, ISW, routines](../c-runtime-library/is-isw-routines.md)<br/>
 [__pctype_func](../c-runtime-library/pctype-func.md)

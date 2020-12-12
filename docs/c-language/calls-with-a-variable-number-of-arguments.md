@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : appels avec un nombre variable d’arguments'
 title: Appels avec un nombre variable d’arguments
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-ms.openlocfilehash: 9fee0c214b697126708ae36b4daee082ac0171e9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e30759d25d7dd3b5b3bcb69c0edc0e97849c7e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214140"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Appels avec un nombre variable d’arguments
 

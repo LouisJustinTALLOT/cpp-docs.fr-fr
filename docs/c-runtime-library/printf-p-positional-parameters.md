@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : paramètres positionnels printf_p'
 title: Paramètres positionnels printf_p
 ms.date: 11/04/2016
 api_location:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-ms.openlocfilehash: 156baa1a91931199ebca5f6200e239aa944fee1e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2db76bc937e52b5945bf39cab1f47161fd3b162c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944048"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213427"
 ---
 # <a name="printf_p-positional-parameters"></a>Paramètres positionnels printf_p
 
@@ -30,12 +31,12 @@ Les paramètres positionnels permettent de spécifier à l’aide d’un nombre 
 | Fonctions printf non-positionnelles | Équivalents de paramètres positionnels |
 |---|---|
 |[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|[_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|
-|[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|
+|[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|
 |[_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|[_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l](../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)|
 |[fprintf, _fprintf_l, fwprintf, _fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|
 |[vprintf, _vprintf_l, vwprintf, _vwprintf_l](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)|[_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l](../c-runtime-library/reference/vprintf-p-vprintf-p-l-vwprintf-p-vwprintf-p-l.md)|
 |[vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|[_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l](../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)|
-|[vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, \__vswprintf_l](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)|[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|
+|[vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, \_ _vswprintf_l](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)|[_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|
 
 ## <a name="how-to-specify-positional-parameters"></a>Comment spécifier des paramètres positionnels
 
@@ -67,7 +68,7 @@ Cela imprime :
 10 November
 ```
 
-Contrairement aux chaînes de format classiques, vous pouvez utiliser des paramètres positionnels plusieurs fois dans une chaîne de format. Par exemple,
+Contrairement aux chaînes de format classiques, vous pouvez utiliser des paramètres positionnels plusieurs fois dans une chaîne de format. Par exemple :
 
 ```C
 _printf_p("%1$d times %1$d is %2$d", 10, 100);
@@ -83,13 +84,13 @@ Tous les arguments doivent être utilisés au moins une fois dans la chaîne de 
 
 ### <a name="width-and-precision"></a>Largeur et précision
 
-Vous pouvez utiliser `*n$` pour spécifier un paramètre positionnel comme spécificateur de largeur ou de précision, où `n` est la position du paramètre de largeur ou de précision dans la liste de paramètres. La position de la valeur de largeur ou de précision doit apparaître immédiatement après le symbole \*. Par exemple,
+Vous pouvez utiliser `*n$` pour spécifier un paramètre positionnel comme spécificateur de largeur ou de précision, où `n` est la position du paramètre de largeur ou de précision dans la liste de paramètres. La position de la valeur de largeur ou de précision doit apparaître immédiatement après le symbole \*. Par exemple :
 
 ```C
 _printf_p("%1$*2$s","Hello", 10);
 ```
 
-ou Gestionnaire de configuration
+ou
 
 ```C
 _printf_p("%2$*1$s", 10, "Hello");
@@ -99,7 +100,7 @@ _printf_p("%2$*1$s", 10, "Hello");
 
 Les paramètres positionnels ne doivent pas être mélangés avec des paramètres non positionnels dans la même chaîne de format. Si aucune mise en forme positionnelle n’est utilisée, tous les spécificateurs de format doivent utiliser la mise en forme positionnelle. Toutefois, `printf_p` et les fonctions connexes prennent toujours en charge les paramètres non positionnels dans les chaînes de format qui contiennent des paramètres positionnels.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // positional_args.c

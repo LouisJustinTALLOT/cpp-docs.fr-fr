@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : TN017 : destruction d’objets fenêtres'
 title: 'TN017 : destruction d’objets fenêtres'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 2448a2661851f14fc6fe8747ca19495925442436
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 86ce1255055db98a247ac8997aa7d146eb135583
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226813"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215909"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017 : destruction d’objets fenêtres
 
@@ -39,7 +40,7 @@ Le deuxième cas, l’utilisation de l' **`delete`** opérateur sur les objets W
 
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>Nettoyage automatique avec CWnd ::P ostNcDestroy
 
-Lorsque le système détruit une fenêtre Windows, le dernier message Windows envoyé à la fenêtre est WM_NCDESTROY. Le gestionnaire par défaut `CWnd` de ce message est [CWnd :: OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy`détache le `HWND` de l’objet C++ et appelle la fonction virtuelle `PostNcDestroy` . Certaines classes remplacent cette fonction pour supprimer l’objet C++.
+Lorsque le système détruit une fenêtre Windows, le dernier message Windows envoyé à la fenêtre est WM_NCDESTROY. Le gestionnaire par défaut `CWnd` de ce message est [CWnd :: OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy` détache le `HWND` de l’objet C++ et appelle la fonction virtuelle `PostNcDestroy` . Certaines classes remplacent cette fonction pour supprimer l’objet C++.
 
 L’implémentation par défaut de `CWnd::PostNcDestroy` ne fait rien, ce qui est approprié pour les objets de fenêtre qui sont alloués sur le frame de pile ou incorporés dans d’autres objets. Cela ne convient pas pour les objets de fenêtre qui sont conçus pour être alloués sur le tas sans autres objets. En d’autres termes, il n’est pas approprié pour les objets de fenêtre qui ne sont pas incorporés dans d’autres objets C++.
 

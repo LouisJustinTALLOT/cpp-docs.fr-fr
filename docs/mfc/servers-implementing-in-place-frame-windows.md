@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : serveurs : implémentation de fenêtres Frame In-Place'
 title: 'Serveurs : implémentations de fenêtres frame sur place'
 ms.date: 09/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: a082afe141a21e4175886f13a26043694ac0d426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 859a31bf107162aea6adb4d40ccf7b7b87f485b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217352"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Serveurs : implémentations de fenêtres frame sur place
 
@@ -47,7 +48,7 @@ La série d’appels de fonction dans l' **`if`** instruction crée la barre d�
 
 L'ID de la bitmap de la barre d'outils doit être le même que les autres ressources en place définies dans votre application serveur. Pour plus d’informations, consultez [menus et ressources : ajouts de serveurs](../mfc/menus-and-resources-server-additions.md) .
 
-Pour plus d’informations, consultez [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md)et [CDocTemplate :: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) dans la *référence*de la bibliothèque de classes.
+Pour plus d’informations, consultez [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md)et [CDocTemplate :: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) dans la *référence* de la bibliothèque de classes.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,16 +1,17 @@
 ---
+description: En savoir plus sur les éléments de C
 title: Éléments de C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: 52b20c5a8eccbf9e8a87cfa7e8fb01da846153d8
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 447ae9d2065783db12ddceb94217c39122db4b98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213778"
 ---
 # <a name="elements-of-c"></a>Éléments de C
 
@@ -32,9 +33,9 @@ Les rubriques suivantes sont présentées :
 
 - [Littéraux de chaîne](../c-language/c-string-literals.md)
 
-- [Caractères de ponctuation et caractères spéciaux](../c-language/punctuation-and-special-characters.md)
+- [Caractères de ponctuation et spéciaux](../c-language/punctuation-and-special-characters.md)
 
-La section comprend également des tables de référence pour les [trigraphes](../c-language/trigraphs.md), des [limites sur les constantes à virgule flottante](../c-language/limits-on-floating-point-constants.md), les [limites d’entiers C et C++](../c-language/cpp-integer-limits.md), et les [séquences d’échappement](../c-language/escape-sequences.md).
+La section comprend également des tables de référence pour les [trigraphes](../c-language/trigraphs.md), des [limites sur les constantes de Floating-Point](../c-language/limits-on-floating-point-constants.md), des [limites d’entiers C et C++](../c-language/cpp-integer-limits.md)et des [séquences d’échappement](../c-language/escape-sequences.md).
 
 Les opérateurs sont des symboles (caractères uniques et combinaisons de caractères) qui spécifient comment les valeurs doivent être manipulées. Chaque symbole est interprété comme une unité unique, appelée un jeton. Pour plus d’informations, consultez [Opérateurs](../c-language/c-operators.md).
 

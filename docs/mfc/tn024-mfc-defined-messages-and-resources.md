@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : TN024 : messages et ressources MFC-Defined'
 title: 'TN024 : messages et ressources définis par MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 9ad6827e4a46bb9f2ff3b02986a01737772e0858
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ead4d72588b9acae125cbe90be67d1e03230de8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215753"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024 : messages et ressources définis par MFC
 

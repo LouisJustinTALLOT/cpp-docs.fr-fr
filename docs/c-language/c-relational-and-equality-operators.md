@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateurs relationnels et d’égalité C'
 title: Opérateurs relationnels et d'égalité C
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: 9ae5a31b5f4b81876d2fe518635a9766d2b5323c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6ed6b4de51fdc9eda929cdaf4cf87d238bf7dcc6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214254"
 ---
 # <a name="c-relational-and-equality-operators"></a>Opérateurs relationnels et d'égalité C
 
@@ -92,5 +93,5 @@ Ces instructions déclarent une variable d'énumération nommée `col` avec la b
 
 ## <a name="see-also"></a>Voir aussi
 
-[Opérateurs relationnels : \<, > ,\<=, and >=](../cpp/relational-operators-equal-and-equal.md)<br/>
+[Opérateurs relationnels : \<, > , \<=, and >=](../cpp/relational-operators-equal-and-equal.md)<br/>
 [Opérateurs d’égalité : = = et ! =](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

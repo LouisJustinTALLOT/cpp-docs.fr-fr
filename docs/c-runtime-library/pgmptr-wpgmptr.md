@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _pgmptr, _wpgmptr'
 title: _pgmptr, _wpgmptr
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 70902be4f1c9686839a958439116fc3e28a2a315
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300155"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213440"
 ---
 # <a name="_pgmptr-_wpgmptr"></a>_pgmptr, _wpgmptr
 
@@ -48,7 +49,7 @@ Lorsqu’un programme n’est pas exécuté à partir de la ligne de commande, `
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 |Variable|En-tête requis|
 |--------------|---------------------|

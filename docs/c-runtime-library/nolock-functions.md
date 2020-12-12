@@ -1,18 +1,19 @@
 ---
+description: 'En savoir plus sur les fonctions suivantes : _nolock'
 title: _nolock, fonctions
 ms.date: 11/04/2016
 helpviewer_keywords:
 - _nolock functions
 - nolock functions
 ms.assetid: 7d651d87-38d2-4303-9897-fdb5f7a3e899
-ms.openlocfilehash: 7bd0592fb8dc43307a902714723d1b1e43207d1c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f4326f873ab16a368624b28dd70a8d39cb9a9ac9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213648"
 ---
-# <a name="nolock-functions"></a>_nolock, fonctions
+# <a name="_nolock-functions"></a>_nolock, fonctions
 
 Ce sont des fonctions qui n’effectuent pas de verrouillage. Elles sont fournies pour les utilisateurs nécessitant des performances maximales. Pour plus d'informations, consultez [Performances des bibliothèques multithreads](../c-runtime-library/multithreaded-libraries-performance.md).
 

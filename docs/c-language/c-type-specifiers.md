@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : spécificateurs de type C'
 title: Spécificateurs de type C
 ms.date: 01/29/2018
 helpviewer_keywords:
 - type specifiers, C
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
-ms.openlocfilehash: 652388fdf345cab7878bbd8c054b769377b322a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: afff33e385564f5ef8d04988255a239135be13b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214202"
 ---
 # <a name="c-type-specifiers"></a>Spécificateurs de type C
 
@@ -26,7 +27,7 @@ Les mots clés facultatifs **`signed`** et **`unsigned`** peuvent précéder ou 
 
 Les types énumération sont considérés comme des types de base. Les spécificateurs de type pour les types énumération sont traités dans [Déclarations d'énumération](../c-language/c-enumeration-declarations.md).
 
-Le mot clé **`void`** a trois utilisations : pour spécifier un type de retour de fonction, pour spécifier une liste de types d’arguments pour une fonction qui n’accepte aucun argument et pour spécifier un pointeur vers un type non spécifié. Vous pouvez utiliser le **`void`** type pour déclarer des fonctions qui ne retournent aucune valeur ou pour déclarer un pointeur vers un type non spécifié. Pour [Arguments](../c-language/arguments.md) plus d’informations sur **`void`** lorsqu’il apparaît seul entre les parenthèses qui suivent un nom de fonction, consultez arguments.
+Le mot clé **`void`** a trois utilisations : pour spécifier un type de retour de fonction, pour spécifier une liste de types d’arguments pour une fonction qui n’accepte aucun argument et pour spécifier un pointeur vers un type non spécifié. Vous pouvez utiliser le **`void`** type pour déclarer des fonctions qui ne retournent aucune valeur ou pour déclarer un pointeur vers un type non spécifié. Pour [](../c-language/arguments.md) plus d’informations sur **`void`** lorsqu’il apparaît seul entre les parenthèses qui suivent un nom de fonction, consultez arguments.
 
 **Spécifique à Microsoft**
 

@@ -1,5 +1,6 @@
 ---
-title: 'TN068 : Exécution de Transactions avec le pilote ODBC Microsoft Access 7'
+description: 'En savoir plus sur : TN068 : exécution de transactions avec le pilote ODBC Microsoft Access 7'
+title: 'TN068 : exécution de transactions avec le pilote ODBC Microsoft Access 7'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.data.odbc
@@ -8,41 +9,41 @@ helpviewer_keywords:
 - transactions [MFC], calling BeginTrans
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
-ms.openlocfilehash: 3121587f85c4ea19cc92e39569008b597d24ea58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebc98a0fd2bea78c0159daa9a53a11a292482257
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214544"
 ---
-# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068 : Exécution de Transactions avec le pilote ODBC Microsoft Access 7
+# <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068 : exécution de transactions avec le pilote ODBC Microsoft Access 7
 
 > [!NOTE]
 > La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
 
-Cette note décrit comment effectuer des transactions lorsque vous utilisez les classes de base de données ODBC MFC et le pilote ODBC Microsoft Access 7.0 inclus dans la version de Microsoft ODBC Desktop Driver Pack 3.0.
+Cette note décrit comment effectuer des transactions lors de l’utilisation des classes de base de données ODBC MFC et du pilote ODBC Microsoft Access 7,0 inclus dans Microsoft ODBC Desktop Driver Pack version 3,0.
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
-Si votre application de base de données effectue des transactions, vous devez veiller à appeler `CDatabase::BeginTrans` et `CRecordset::Open` dans l’ordre approprié dans votre application. Le pilote Microsoft Access 7.0 utilise le moteur de base de données Microsoft Jet et Jet nécessite que votre application ne commence pas une transaction sur une base de données qui a un curseur ouvert. Pour les classes de base de données ODBC MFC, un curseur ouvert équivaut à une ouverture `CRecordset` objet.
+Si votre application de base de données effectue des transactions, vous devez veiller à appeler `CDatabase::BeginTrans` et `CRecordset::Open` dans l’ordre correct dans votre application. Le pilote Microsoft Access 7,0 utilise le moteur de base de données Microsoft Jet, et jet requiert que votre application ne démarre pas de transaction sur une base de données qui a un curseur ouvert. Pour les classes de base de données ODBC MFC, un curseur ouvert correspond à un `CRecordset` objet ouvert.
 
-Si vous ouvrez un jeu d’enregistrements avant d’appeler `BeginTrans`, vous ne voyiez pas les messages d’erreur. Toutefois, n’importe quel jeu d’enregistrements met à jour votre application, deviennent permanentes après avoir appelé `CRecordset::Update`, et les mises à jour ne seront pas restaurées en appelant `Rollback`. Pour éviter ce problème, vous devez appeler `BeginTrans` premier, puis ouvrez le jeu d’enregistrements.
+Si vous ouvrez un Recordset avant d’appeler `BeginTrans` , vous risquez de ne pas voir de messages d’erreur. Toutefois, tout Recordset mis à jour votre application devient permanent après l’appel de `CRecordset::Update` , et les mises à jour ne sont pas annulées en appelant `Rollback` . Pour éviter ce problème, vous devez d' `BeginTrans` abord appeler, puis ouvrir le jeu d’enregistrements.
 
-MFC vérifie la fonctionnalité de pilote pour le comportement de validation et l’annulation du curseur. Classe `CDatabase` fournit deux fonctions membres, `GetCursorCommitBehavior` et `GetCursorRollbackBehavior`, pour déterminer l’effet d’une transaction sur votre open `CRecordset` objet. Pour le pilote ODBC Microsoft Access 7.0, ces fonctions membres retournent `SQL_CB_CLOSE` , car le pilote Access ne prend pas en charge la conservation de curseur. Par conséquent, vous devez appeler `CRecordset::Requery` suivant un `CommitTrans` ou `Rollback` opération.
+MFC vérifie la fonctionnalité du pilote pour la validation de curseur et le comportement de restauration. `CDatabase`La classe fournit deux fonctions membres, `GetCursorCommitBehavior` et `GetCursorRollbackBehavior` , pour déterminer l’effet de toute transaction sur votre `CRecordset` objet ouvert. Pour le pilote ODBC Microsoft Access 7,0, ces fonctions membres retournent `SQL_CB_CLOSE` car le pilote Access ne prend pas en charge la conservation des curseurs. Par conséquent, vous devez appeler `CRecordset::Requery` après `CommitTrans` une `Rollback` opération ou.
 
-Lorsque vous avez besoin effectuer des transactions multiples une après l’autre, vous ne pouvez pas appeler `Requery` après la première transaction et le démarrage puis celle qui suit. Vous devez fermer le jeu d’enregistrements avant l’appel suivant à `BeginTrans` afin de satisfaire à des exigences de Jet. Cette note technique décrit deux méthodes pour gérer cette situation :
+Lorsque vous devez effectuer plusieurs transactions l’une après l’autre, vous ne pouvez pas appeler `Requery` après la première transaction, puis démarrer la suivante. Vous devez fermer le Recordset avant le prochain appel à pour `BeginTrans` répondre aux exigences de jet. Cette note technique décrit deux méthodes de gestion de cette situation :
 
-- Fermeture de l’objet recordset après chaque `CommitTrans` ou `Rollback` opération.
+- Fermeture du recordset après chaque `CommitTrans` `Rollback` opération ou.
 
-- À l’aide de la fonction API ODBC `SQLFreeStmt`.
+- Utilisation de la fonction API ODBC `SQLFreeStmt` .
 
-## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Fermeture de l’objet Recordset après chaque CommitTrans ou d’une opération de restauration
+## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>Fermeture du recordset après chaque opération CommitTrans ou Rollback
 
-Avant de commencer une transaction, assurez-vous que l’objet recordset est fermé. Après avoir appelé `BeginTrans`, appelez le jeu d’enregistrements `Open` fonction membre. Fermer le jeu d’enregistrements immédiatement après l’appel `CommitTrans` ou `Rollback`. Notez qu’à plusieurs reprises ouvrant et fermant le jeu d’enregistrements peuvent ralentir les performances d’une application.
+Avant de démarrer une transaction, assurez-vous que l’objet Recordset est fermé. Après l’appel de `BeginTrans` , appelez la fonction membre du recordset `Open` . Fermez le Recordset juste après l’appel `CommitTrans` de ou de `Rollback` . Notez que l’ouverture et la fermeture répétées du Recordset peuvent ralentir les performances d’une application.
 
-## <a name="using-sqlfreestmt"></a>À l’aide de SQLFreeStmt
+## <a name="using-sqlfreestmt"></a>Utilisation de SQLFreeStmt
 
-Vous pouvez également utiliser la fonction API ODBC `SQLFreeStmt` pour fermer explicitement le curseur après la fin d’une transaction. Pour démarrer une autre transaction, appelez `BeginTrans` suivie `CRecordset::Requery`. Lors de l’appel `SQLFreeStmt`, vous devez spécifier HSTMT le jeu d’enregistrements comme premier paramètre et *SQL_CLOSE* comme deuxième paramètre. Cette méthode est plus rapide que l’ouverture de l’ensemble d’enregistrements au début de chaque transaction et de clôture. Le code suivant montre comment implémenter cette technique :
+Vous pouvez également utiliser la fonction API ODBC `SQLFreeStmt` pour fermer explicitement le curseur après la fin d’une transaction. Pour démarrer une autre transaction, appelez `BeginTrans` suivi de `CRecordset::Requery` . Lors de l’appel de `SQLFreeStmt` , vous devez spécifier HSTMT du Recordset comme premier paramètre et *SQL_CLOSE* comme deuxième paramètre. Cette méthode est plus rapide que la fermeture et l’ouverture du Recordset au début de chaque transaction. Le code suivant montre comment implémenter cette technique :
 
 ```cpp
 CMyDatabase db;
@@ -76,15 +77,15 @@ rs.Close();
 db.Close();
 ```
 
-Une autre façon d’implémenter cette technique consiste à écrire une nouvelle fonction, `RequeryWithBeginTrans`, que vous pouvez appeler pour démarrer la transaction suivante après avoir validé ou restauration de la première condition. Pour écrire une telle fonction, procédez comme suit :
+Une autre façon d’implémenter cette technique consiste à écrire une nouvelle fonction, `RequeryWithBeginTrans` , que vous pouvez appeler pour démarrer la transaction suivante après la validation ou la restauration de la première. Pour écrire une telle fonction, procédez comme suit :
 
-1. Copiez le code pour `CRecordset::Requery( )` à la nouvelle fonction.
+1. Copiez le code pour `CRecordset::Requery( )` dans la nouvelle fonction.
 
-2. Ajoutez la ligne suivante immédiatement après l’appel à `SQLFreeStmt`:
+2. Ajoutez la ligne suivante immédiatement après l’appel à `SQLFreeStmt` :
 
    `m_pDatabase->BeginTrans( );`
 
-Maintenant, vous pouvez appeler cette fonction entre chaque paire de transactions :
+Vous pouvez maintenant appeler cette fonction entre chaque paire de transactions :
 
 ```cpp
 // start transaction 1 and
@@ -109,7 +110,7 @@ db.CommitTrans();   // or Rollback()
 ```
 
 > [!NOTE]
-> N’utilisez pas cette technique si vous avez besoin de modifier les variables de membre du jeu d’enregistrements *m_strFilter* ou *m_strSort* entre les transactions. Dans ce cas, vous devez fermer le jeu d’enregistrements après chaque `CommitTrans` ou `Rollback` opération.
+> N’utilisez pas cette technique si vous devez modifier les variables de membre du jeu d’enregistrements *m_strFilter* ou *m_strSort* entre les transactions. Dans ce cas, vous devez fermer le jeu d’enregistrements après `CommitTrans` chaque `Rollback` opération ou.
 
 ## <a name="see-also"></a>Voir aussi
 

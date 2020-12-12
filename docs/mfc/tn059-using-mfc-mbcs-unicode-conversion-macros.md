@@ -1,5 +1,6 @@
 ---
-title: 'TN059 : utilisation de macros de conversion MBCS/Unicode MFC'
+description: 'En savoir plus sur : TN059 : utilisation des macros de conversion MFC MBCS/Unicode'
+title: 'TN059 : utilisation de macros de conversion de MBCS-Unicode MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFCANS32.DLL
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: d689e87b8f2804fe99804c6ca37a48bac01df263
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c1b767a8d90f2c788a15c9e880056206e7d1326a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182731"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214765"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059 : utilisation des macros de conversion MBCS/Unicode MFC
 

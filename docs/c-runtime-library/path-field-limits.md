@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : limites de champ de chemin'
 title: Limites de champ de chemin
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-ms.openlocfilehash: 8db9961bd2d5b5b3ea9d3addad3c26737b4f5199
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41698d946e45a78f9b89f40fdd3c7c58af5d4354
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213479"
 ---
 # <a name="path-field-limits"></a>Limites de champ de chemin
 
@@ -39,7 +40,7 @@ ms.locfileid: "80171396"
 
 Ces constantes définissent la longueur maximale pour le chemin d’accès et pour les champs individuels dans le chemin d’accès.
 
-|Constant|Signification|
+|Constante|Signification|
 |--------------|-------------|
 |`_MAX_DIR`|Longueur maximale du composant de répertoire|
 |`_MAX_DRIVE`|Longueur maximale du composant de lecteur|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classes de stockage C'
 title: Classes de stockage C
 ms.date: 08/31/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 4f793e8485628faf0a80445ce0414835e3b71d1f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 000cb06047a948de413dc9bd55d5ec992459d11c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214241"
 ---
 # <a name="c-storage-classes"></a>Classes de stockage C
 
@@ -38,7 +39,7 @@ C fournit les spécificateurs de classe de stockage suivants :
 
 Les éléments déclarés avec le **`auto`** **`register`** spécificateur ou ont des durées de vie locales. Les éléments déclarés avec le **`static`** **`extern`** spécificateur ou ont des durées de vie globales.
 
-Étant donné que **`typedef`** et **`__declspec`** sont sémantiquement différents des quatre autres terminaux *Storage-Class-specifier* , ils sont traités séparément. Pour obtenir des informations spécifiques sur **`typedef`** , consultez [ `typedef` déclarations](../c-language/typedef-declarations.md). Pour obtenir des informations spécifiques sur **`__declspec`** , consultez [attributs étendus de classe de stockage](../c-language/c-extended-storage-class-attributes.md).
+Étant donné que **`typedef`** et **`__declspec`** sont sémantiquement différents des quatre autres terminaux *Storage-Class-specifier* , ils sont traités séparément. Pour obtenir des informations spécifiques sur **`typedef`** , consultez [ `typedef` déclarations](../c-language/typedef-declarations.md). Pour obtenir des informations spécifiques sur **`__declspec`** , consultez [attributs de Storage-Class étendus](../c-language/c-extended-storage-class-attributes.md).
 
 Le positionnement des déclarations de variables et des fonctions dans des fichiers sources affecte également la classe de stockage et la visibilité. Les déclarations en dehors de toutes les définitions de fonction sont supposées apparaître « au niveau externe ». Les déclarations dans des définitions de fonction apparaissent au « niveau interne ».
 

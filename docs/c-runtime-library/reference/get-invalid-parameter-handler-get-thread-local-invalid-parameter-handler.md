@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler'
 title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 27e42c9f3f570b24df8fa2a26798b3dc3fa326b3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ecb39588ea2776d661f391596d3f482628eddd7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909898"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213375"
 ---
 # <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
@@ -54,7 +55,7 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 Un pointeur désignant la fonction de gestionnaire de paramètres non valides définie, ou un pointeur Null si aucune n’a été définie.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_get_invalid_parameter_handler** obtient le gestionnaire de paramètres non valides globaux actuellement définis. Elle retourne un pointeur Null si aucun gestionnaire de paramètres non valides global n’a été défini. De même, le **_get_thread_local_invalid_parameter_handler** obtient le gestionnaire de paramètres non valides local de thread actuel du thread sur lequel il est appelé, ou un pointeur null si aucun gestionnaire n’a été défini. Pour plus d’informations sur la façon de définir des gestionnaires de paramètres non valides globaux et locaux de thread, consultez [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
@@ -78,7 +79,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C : \<stdlib.h><br /><br /> C++ : \<cstdlib> ou \<stdlib.h>|
+|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|Secteur \<stdlib.h><br /><br /> C++ : \<cstdlib> ou \<stdlib.h>|
 
 Les fonctions **_get_invalid_parameter_handler** et **_get_thread_local_invalid_parameter_handler** sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
