@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : instruction Break (C++)'
 title: break, instruction (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 30ca602ecc65099adff7300f730c500a31fe0ed5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13efaf55307f7f1d7decaf7cd0039c84b3141fc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229572"
 ---
 # <a name="break-statement-c"></a>break, instruction (C++)
 

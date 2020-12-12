@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : COleDataSource Class'
 title: COleDataSource, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,18 +37,18 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 2cce7b888f929da9d313babc51a7724a4eb43482
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 1fc6dd8a7df1d8b841c4f95a14c2bd1708c94fd2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227323"
 ---
 # <a name="coledatasource-class"></a>COleDataSource, classe
 
 Agit comme un cache dans lequel une application place les données qu’elle proposera pendant les opérations de transfert de données, par exemple les opérations du Presse-papiers ou de glisser-déposer.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 ```
 class COleDataSource : public CCmdTarget
@@ -80,7 +81,7 @@ class COleDataSource : public CCmdTarget
 |[COleDataSource :: OnSetData](#onsetdata)|Appelé pour remplacer les données dans l' `COleDataSource` objet.|
 |[COleDataSource :: SetClipboard](#setclipboard)|Place un `COleDataSource` objet dans le presse-papiers.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Vous pouvez créer directement des sources de données OLE. Les classes [COleClientItem](../../mfc/reference/coleclientitem-class.md) et [COleServerItem](../../mfc/reference/coleserveritem-class.md) créent également des sources de données OLE en réponse à leurs `CopyToClipboard` `DoDragDrop` fonctions membres et. Consultez [COleServerItem :: copytoclipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) pour obtenir une brève description. Substituez la `OnGetClipboardData` fonction membre de votre classe d’élément client ou d’élément de serveur pour ajouter des formats de presse-papiers supplémentaires aux données de la source de données OLE créée pour la `CopyToClipboard` `DoDragDrop` fonction membre ou.
 
@@ -100,7 +101,7 @@ Pour plus d’informations sur les sources de données et le transfert de donné
 
 **En-tête :** AFXOLE. h
 
-## <a name="coledatasourcecachedata"></a><a name="cachedata"></a>COleDataSource :: CacheData
+## <a name="coledatasourcecachedata"></a><a name="cachedata"></a> COleDataSource :: CacheData
 
 Appelez cette fonction pour spécifier un format dans lequel les données sont proposées pendant les opérations de transfert de données.
 
@@ -122,7 +123,7 @@ Pointe vers une structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgme
 *lpFormatEtc*<br/>
 Pointe vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) décrivant le format dans lequel les données doivent être proposées. Fournissez une valeur pour ce paramètre si vous souhaitez spécifier des informations de mise en forme supplémentaires au-delà du format du presse-papiers spécifié par *cfFormat*. Si la valeur est NULL, les valeurs par défaut sont utilisées pour les autres champs de la `FORMATETC` structure.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous devez fournir les données, car cette fonction les fournit en utilisant le rendu immédiat. Les données sont mises en cache jusqu’à ce que cela soit nécessaire.
 
@@ -136,7 +137,7 @@ Pour plus d’informations, consultez les structures [STGMEDIUM](/windows/win32/
 
 Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) dans le SDK Windows.
 
-## <a name="coledatasourcecacheglobaldata"></a><a name="cacheglobaldata"></a>COleDataSource :: CacheGlobalData
+## <a name="coledatasourcecacheglobaldata"></a><a name="cacheglobaldata"></a> COleDataSource :: CacheGlobalData
 
 Appelez cette fonction pour spécifier un format dans lequel les données sont proposées pendant les opérations de transfert de données.
 
@@ -158,7 +159,7 @@ Handle du bloc de mémoire globale contenant les données dans le format spécif
 *lpFormatEtc*<br/>
 Pointe vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) décrivant le format dans lequel les données doivent être proposées. Fournissez une valeur pour ce paramètre si vous souhaitez spécifier des informations de mise en forme supplémentaires au-delà du format du presse-papiers spécifié par *cfFormat*. Si la valeur est NULL, les valeurs par défaut sont utilisées pour les autres champs de la `FORMATETC` structure.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonction fournit les données à l’aide du rendu immédiat. vous devez donc fournir les données lors de l’appel de la fonction ; les données sont mises en cache jusqu’à ce que cela soit nécessaire. Utilisez la `CacheData` fonction membre si vous fournissez une grande quantité de données ou si vous avez besoin d’un support de stockage structuré.
 
@@ -168,7 +169,7 @@ Pour plus d’informations, consultez la structure [FORMATETC](/windows/win32/ap
 
 Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) dans le SDK Windows.
 
-## <a name="coledatasourcecoledatasource"></a><a name="coledatasource"></a>COleDataSource :: COleDataSource
+## <a name="coledatasourcecoledatasource"></a><a name="coledatasource"></a> COleDataSource :: COleDataSource
 
 Construit un objet `COleDataSource`.
 
@@ -176,7 +177,7 @@ Construit un objet `COleDataSource`.
 COleDataSource();
 ```
 
-## <a name="coledatasourcedelayrenderdata"></a><a name="delayrenderdata"></a>COleDataSource ::D elayRenderData
+## <a name="coledatasourcedelayrenderdata"></a><a name="delayrenderdata"></a> COleDataSource ::D elayRenderData
 
 Appelez cette fonction pour spécifier un format dans lequel les données sont proposées pendant les opérations de transfert de données.
 
@@ -194,7 +195,7 @@ Format du presse-papiers dans lequel les données doivent être proposées. Ce p
 *lpFormatEtc*<br/>
 Pointe vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) décrivant le format dans lequel les données doivent être proposées. Fournissez une valeur pour ce paramètre si vous souhaitez spécifier des informations de mise en forme supplémentaires au-delà du format du presse-papiers spécifié par *cfFormat*. Si la valeur est NULL, les valeurs par défaut sont utilisées pour les autres champs de la `FORMATETC` structure.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonction fournit les données à l’aide d’un rendu retardé, donc les données ne sont pas fournies immédiatement. La fonction membre [OnRenderData](#onrenderdata) ou [OnRenderGlobalData](#onrenderglobaldata) est appelée pour demander les données.
 
@@ -206,7 +207,7 @@ Pour plus d’informations, consultez la structure [FORMATETC](/windows/win32/ap
 
 Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) dans le SDK Windows.
 
-## <a name="coledatasourcedelayrenderfiledata"></a><a name="delayrenderfiledata"></a>COleDataSource ::D elayRenderFileData
+## <a name="coledatasourcedelayrenderfiledata"></a><a name="delayrenderfiledata"></a> COleDataSource ::D elayRenderFileData
 
 Appelez cette fonction pour spécifier un format dans lequel les données sont proposées pendant les opérations de transfert de données.
 
@@ -224,7 +225,7 @@ Format du presse-papiers dans lequel les données doivent être proposées. Ce p
 *lpFormatEtc*<br/>
 Pointe vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) décrivant le format dans lequel les données doivent être proposées. Fournissez une valeur pour ce paramètre si vous souhaitez spécifier des informations de mise en forme supplémentaires au-delà du format du presse-papiers spécifié par *cfFormat*. Si la valeur est NULL, les valeurs par défaut sont utilisées pour les autres champs de la `FORMATETC` structure.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonction fournit les données à l’aide d’un rendu retardé, donc les données ne sont pas fournies immédiatement. La fonction membre [OnRenderFileData](#onrenderfiledata) est appelée pour demander les données.
 
@@ -236,7 +237,7 @@ Pour plus d’informations, consultez la structure [FORMATETC](/windows/win32/ap
 
 Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) dans le SDK Windows.
 
-## <a name="coledatasourcedelaysetdata"></a><a name="delaysetdata"></a>COleDataSource ::D elaySetData
+## <a name="coledatasourcedelaysetdata"></a><a name="delaysetdata"></a> COleDataSource ::D elaySetData
 
 Appelez cette fonction pour prendre en charge la modification du contenu de la source de données.
 
@@ -254,15 +255,15 @@ Format du presse-papiers dans lequel les données doivent être placées. Ce par
 *lpFormatEtc*<br/>
 Pointe vers une structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) décrivant le format dans lequel les données doivent être remplacées. Fournissez une valeur pour ce paramètre si vous souhaitez spécifier des informations de mise en forme supplémentaires au-delà du format du presse-papiers spécifié par *cfFormat*. Si la valeur est NULL, les valeurs par défaut sont utilisées pour les autres champs de la `FORMATETC` structure.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-[OnSetData](#onsetdata) sera appelé par l’infrastructure lorsque cela se produit. Utilisé uniquement lorsque le Framework retourne la source de données à partir de [COleServerItem :: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Si `DelaySetData` n’est pas appelé, votre `OnSetData` fonction ne sera jamais appelée. `DelaySetData`doit être appelé pour chaque presse-papiers ou `FORMATETC` format que vous prenez en charge.
+[OnSetData](#onsetdata) sera appelé par l’infrastructure lorsque cela se produit. Utilisé uniquement lorsque le Framework retourne la source de données à partir de [COleServerItem :: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Si `DelaySetData` n’est pas appelé, votre `OnSetData` fonction ne sera jamais appelée. `DelaySetData` doit être appelé pour chaque presse-papiers ou `FORMATETC` format que vous prenez en charge.
 
 Pour plus d’informations, consultez la structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) dans le SDK Windows.
 
 Pour plus d’informations, consultez [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) dans le SDK Windows.
 
-## <a name="coledatasourcedodragdrop"></a><a name="dodragdrop"></a>COleDataSource ::D oDragDrop
+## <a name="coledatasourcedodragdrop"></a><a name="dodragdrop"></a> COleDataSource ::D oDragDrop
 
 Appelez la `DoDragDrop` fonction membre pour effectuer une opération de glisser-déplacer pour cette source de données, généralement dans un gestionnaire [CWnd :: OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) .
 
@@ -296,7 +297,7 @@ Pointe vers une source de déplacement. Si la valeur est NULL, une implémentati
 
 Effet de déplacement généré par l’opération de glisser-déplacer ; sinon DROPEFFECT_NONE si l’opération ne commence jamais parce que l’utilisateur a relâché le bouton de la souris avant de quitter le rectangle fourni.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’opération de glisser-déplacer ne démarre pas immédiatement. Elle attend que le curseur de la souris quitte le rectangle spécifié par *lpRectStartDrag* ou jusqu’à ce qu’un nombre spécifié de millisecondes soit écoulé. Si *lpRectStartDrag* a la valeur null, la taille du rectangle est d’un pixel.
 
@@ -312,7 +313,7 @@ Pour plus d’informations sur la façon dont les informations sur les retards d
 
 Pour plus d’informations, consultez l’article [glisser-déplacer OLE](../../mfc/drag-and-drop-ole.md).
 
-## <a name="coledatasourceempty"></a><a name="empty"></a>COleDataSource :: Empty
+## <a name="coledatasourceempty"></a><a name="empty"></a> COleDataSource :: Empty
 
 Appelez cette fonction pour vider l' `COleDataSource` objet de données.
 
@@ -320,13 +321,13 @@ Appelez cette fonction pour vider l' `COleDataSource` objet de données.
 void Empty();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les formats de rendu mis en cache et différés sont vidés afin de pouvoir être réutilisés.
 
 Pour plus d’informations, consultez [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) dans le SDK Windows.
 
-## <a name="coledatasourceflushclipboard"></a><a name="flushclipboard"></a>COleDataSource :: FlushClipboard
+## <a name="coledatasourceflushclipboard"></a><a name="flushclipboard"></a> COleDataSource :: FlushClipboard
 
 Affiche les données qui se trouvent dans le presse-papiers, puis vous permet de coller des données à partir du presse-papiers après l’arrêt de votre application.
 
@@ -334,11 +335,11 @@ Affiche les données qui se trouvent dans le presse-papiers, puis vous permet de
 static void PASCAL FlushClipboard();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Utilisez [SetClipboard](#setclipboard) pour placer des données dans le presse-papiers.
 
-## <a name="coledatasourcegetclipboardowner"></a><a name="getclipboardowner"></a>COleDataSource :: GetClipboardOwner
+## <a name="coledatasourcegetclipboardowner"></a><a name="getclipboardowner"></a> COleDataSource :: GetClipboardOwner
 
 Détermine si les données du presse-papiers ont changé depuis le dernier appel à [SetClipboard](#setclipboard) et, le cas échéant, identifie le propriétaire actuel.
 
@@ -350,7 +351,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 
 Source de données actuellement dans le presse-papiers, ou NULL s’il n’y a rien dans le presse-papiers ou si le presse-papiers n’est pas détenu par l’application appelante.
 
-## <a name="coledatasourceonrenderdata"></a><a name="onrenderdata"></a>COleDataSource :: OnRenderData
+## <a name="coledatasourceonrenderdata"></a><a name="onrenderdata"></a> COleDataSource :: OnRenderData
 
 Appelé par le Framework pour récupérer des données dans le format spécifié.
 
@@ -372,7 +373,7 @@ Pointe vers une structure [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgme
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le format spécifié est un précédemment placé dans l' `COleDataSource` objet à l’aide de la fonction membre [DelayRenderData](#delayrenderdata) ou [DelayRenderFileData](#delayrenderfiledata) pour un rendu retardé. L’implémentation par défaut de cette fonction appellera [OnRenderFileData](#onrenderfiledata) ou [OnRenderGlobalData](#onrenderglobaldata) si le support de stockage fourni est un fichier ou une mémoire, respectivement. Si aucun de ces formats n’est fourni, l’implémentation par défaut retourne 0 et ne fait rien. Pour plus d’informations sur le rendu retardé comme géré par MFC, consultez l’article [objets de données et sources de données : manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
@@ -382,7 +383,7 @@ Il s’agit d’un substituable avancé. Substituez cette fonction pour fournir 
 
 Pour plus d’informations, consultez les structures [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) et [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , le type d’énumération [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) et [IDataObject :: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) dans le SDK Windows.
 
-## <a name="coledatasourceonrenderfiledata"></a><a name="onrenderfiledata"></a>COleDataSource :: OnRenderFileData
+## <a name="coledatasourceonrenderfiledata"></a><a name="onrenderfiledata"></a> COleDataSource :: OnRenderFileData
 
 Appelé par le Framework pour récupérer des données dans le format spécifié lorsque le support de stockage spécifié est un fichier.
 
@@ -404,7 +405,7 @@ Pointe vers un objet [CFile](../../mfc/reference/cfile-class.md) dans lequel les
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le format spécifié est un précédemment placé dans l' `COleDataSource` objet à l’aide de la fonction membre [DelayRenderData](#delayrenderdata) pour un rendu retardé. L’implémentation par défaut de cette fonction retourne simplement FALSe.
 
@@ -412,7 +413,7 @@ Il s’agit d’un substituable avancé. Substituez cette fonction pour fournir 
 
 Pour plus d’informations, consultez la structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) et [IDataObject :: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) dans le SDK Windows.
 
-## <a name="coledatasourceonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleDataSource :: OnRenderGlobalData
+## <a name="coledatasourceonrenderglobaldata"></a><a name="onrenderglobaldata"></a> COleDataSource :: OnRenderGlobalData
 
 Appelé par le Framework pour récupérer des données dans le format spécifié lorsque le support de stockage spécifié est une mémoire globale.
 
@@ -434,7 +435,7 @@ Pointe vers un handle vers la mémoire globale dans laquelle les données doiven
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le format spécifié est un précédemment placé dans l' `COleDataSource` objet à l’aide de la fonction membre [DelayRenderData](#delayrenderdata) pour un rendu retardé. L’implémentation par défaut de cette fonction retourne simplement FALSe.
 
@@ -444,7 +445,7 @@ Il s’agit d’un substituable avancé. Substituez cette fonction pour fournir 
 
 Pour plus d’informations, consultez la structure [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) et [IDataObject :: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) dans le SDK Windows.
 
-## <a name="coledatasourceonsetdata"></a><a name="onsetdata"></a>COleDataSource :: OnSetData
+## <a name="coledatasourceonsetdata"></a><a name="onsetdata"></a> COleDataSource :: OnSetData
 
 Appelé par l’infrastructure pour définir ou remplacer les données dans l' `COleDataSource` objet dans le format spécifié.
 
@@ -470,7 +471,7 @@ Indique qui a la propriété du support de stockage après avoir effectué l’a
 
 Valeur différente de zéro cas de réussite ; sinon, 0.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La source de données ne prend pas possession des données tant qu’elle n’a pas été obtenue. Autrement dit, il ne prend pas possession de la `OnSetData` valeur si retourne 0. Si la source de données prend possession, elle libère le support de stockage en appelant la fonction [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) .
 
@@ -478,7 +479,7 @@ L'implémentation par défaut n'exécute aucune opération. Substituez cette fon
 
 Pour plus d’informations, consultez les structures [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) et [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) et les fonctions [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) et [IDataObject :: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) dans le SDK Windows.
 
-## <a name="coledatasourcesetclipboard"></a><a name="setclipboard"></a>COleDataSource :: SetClipboard
+## <a name="coledatasourcesetclipboard"></a><a name="setclipboard"></a> COleDataSource :: SetClipboard
 
 Place les données contenues dans l' `COleDataSource` objet dans le presse-papiers après l’appel de l’une des fonctions suivantes : [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata)ou [DelayRenderFileData](#delayrenderfiledata).
 

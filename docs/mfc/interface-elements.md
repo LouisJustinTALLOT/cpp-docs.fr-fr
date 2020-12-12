@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : éléments d’interface'
 title: Éléments de l'interface
 ms.date: 11/19/2018
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 4d4d81287cb30a7d3608025085cdb3f9a208147a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0aa762455f6bfe97d371244682c66dbd141a761
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228051"
 ---
 # <a name="interface-elements"></a>Éléments de l'interface
 
@@ -40,7 +41,7 @@ Le site d'ancrage (ou fenêtre frame principale) possède tous les volets et fen
 
 ## <a name="dock-bars"></a>Barres d'ancrage
 
-Chaque fenêtre frame principale peut positionner des *barres d’ancrage* le long de ses bordures. Une barre d’ancrage est un volet qui appartient à une [classe CDockSite](reference/cdocksite-class.md). Les barres d’ancrage peuvent accepter des objets dérivés de [CPane](reference/cpane-class.md), tels que des barres d’outils. Pour créer des barres d'ancrage lorsque la fenêtre frame principale est initialisée, appelez `EnableDocking`. Pour activer les barres de masquage automatique, appelez `EnableAutoHideBars`. `EnableAutoHideBars`crée des objets [CAutoHideDockSite](reference/cautohidedocksite-class.md) et les positionne en regard de chaque barre d’ancrage.
+Chaque fenêtre frame principale peut positionner des *barres d’ancrage* le long de ses bordures. Une barre d’ancrage est un volet qui appartient à une [classe CDockSite](reference/cdocksite-class.md). Les barres d’ancrage peuvent accepter des objets dérivés de [CPane](reference/cpane-class.md), tels que des barres d’outils. Pour créer des barres d'ancrage lorsque la fenêtre frame principale est initialisée, appelez `EnableDocking`. Pour activer les barres de masquage automatique, appelez `EnableAutoHideBars`. `EnableAutoHideBars` crée des objets [CAutoHideDockSite](reference/cautohidedocksite-class.md) et les positionne en regard de chaque barre d’ancrage.
 
 Chaque barre d'ancrage est divisée en lignes d'ancrage. Les lignes Dock sont représentées par la [classe CDockingPanesRow](reference/cdockingpanesrow-class.md). Chaque ligne d'ancrage contient une liste de barres d'outils. Si un utilisateur ancre une barre d'outils ou déplace la barre d'outils d'une ligne à une autre de la même barre d'ancrage, le framework crée une ligne et redimensionne la barre d'ancrage en conséquence, ou elle positionne la barre d'outils sur une ligne existante.
 
@@ -52,7 +53,7 @@ Un volet flottant réside dans une fenêtre mini-frame. Les fenêtres mini-frame
 
 Les diviseurs de volet (également appelés curseurs ou séparateurs) sont représentés par la [classe CPaneDivider](reference/cpanedivider-class.md). Lorsqu'un utilisateur ancre un volet, le framework crée des diviseurs de volet, que le volet soit ancré au site d'ancrage ou à un autre volet. Lorsqu’un volet est ancré au site d’ancrage, le séparateur de volets est appelé *diviseur de volet par défaut*. Le diviseur de volet par défaut est chargé de la disposition de tous les volets d'ancrage dans le site d'ancrage. Le gestionnaire d'ancrage gère une liste de diviseurs de volet par défaut et une liste de volets. Les gestionnaires d'ancrage sont chargés de la disposition de tous les volets d'ancrage.
 
-## <a name="containers"></a>Containers
+## <a name="containers"></a>Conteneurs
 
 Tous les volets redimensionnables, une fois ancrés entre eux, sont conservés dans des conteneurs. Les conteneurs sont représentés par la [classe CPaneContainer](reference/cpanecontainer-class.md). Chaque conteneur possède des pointeurs vers son volet gauche, volet droit, sous-conteneur gauche, sous-conteneur droit ainsi que vers le séparateur entre les parties gauche et droite. (*Gauche* et *droite* ne font pas référence aux côtés physiques mais identifient plutôt les branches d’une structure arborescente.) De cette façon, nous pouvons créer une arborescence de volets et de séparateurs et, par conséquent, obtenir des dispositions complexes des volets qui peuvent être redimensionnés ensemble. La classe `CPaneContainer` gère l’arborescence des conteneurs ; elle gère également deux listes de volets et de curseurs qui résident dans cette arborescence. Les gestionnaires de conteneur de volet sont généralement incorporés dans les curseurs et les fenêtres mini-frame par défaut qui comportent plusieurs volets.
 

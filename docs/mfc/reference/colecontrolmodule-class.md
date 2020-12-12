@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe COleControlModule'
 title: COleControlModule, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - COleControlModule class [MFC]
 - control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
-ms.openlocfilehash: f6d486c7bacb897d70d85414ac3d0bd0d13e447b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f88296b7c0e897f82227343b31ca2f639902256e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310394"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227479"
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule, classe
 
@@ -28,9 +29,9 @@ class COleControlModule : public CWinApp
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit des fonctions membres pour l’initialisation du module de votre contrôle. Chaque module de contrôle OLE qui utilise les classes Microsoft Foundation ne peut contenir un objet dérivé de `COleControlModule`. Cet objet est construit lorsque les autres objets globaux C++ sont construites. Déclarez votre dérivée `COleControlModule` objet au niveau global.
+Cette classe fournit des fonctions membres pour l’initialisation de votre module de contrôle. Chaque module de contrôle OLE qui utilise les classes Microsoft Foundation ne peut contenir qu’un seul objet dérivé de `COleControlModule` . Cet objet est construit lorsque d’autres objets globaux C++ sont construits. Déclarez votre `COleControlModule` objet dérivé au niveau global.
 
-Pour plus d’informations sur l’utilisation de la `COleControlModule` de classe, consultez le [CWinApp](../../mfc/reference/cwinapp-class.md) classe et l’article [contrôles ActiveX](../../mfc/mfc-activex-controls.md).
+Pour plus d’informations sur l’utilisation de la `COleControlModule` classe, consultez la classe [CWinApp](../../mfc/reference/cwinapp-class.md) et l’article [contrôles ActiveX](../../mfc/mfc-activex-controls.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -44,9 +45,9 @@ Pour plus d’informations sur l’utilisation de la `COleControlModule` de clas
 
 `COleControlModule`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxctl.h
+**En-tête :** afxctl. h
 
 ## <a name="see-also"></a>Voir aussi
 

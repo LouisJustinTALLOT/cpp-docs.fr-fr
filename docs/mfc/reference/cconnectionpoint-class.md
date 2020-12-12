@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CConnectionPoint'
 title: CConnectionPoint, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: f428ec597e0e4a56788fae2455eff80b286fda39
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62525428d8f9bf5303f379140837d75e53cbb387
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227843"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint, classe
 
@@ -102,7 +103,7 @@ Pour plus d’informations sur l’utilisation de `CConnectionPoint` , consultez
 
 **En-tête :** afxdisp.h
 
-## <a name="cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint :: CConnectionPoint
+## <a name="cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a> CConnectionPoint :: CConnectionPoint
 
 Construit un objet `CConnectionPoint`.
 
@@ -110,7 +111,7 @@ Construit un objet `CConnectionPoint`.
 CConnectionPoint();
 ```
 
-## <a name="cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint :: GetConnections
+## <a name="cconnectionpointgetconnections"></a><a name="getconnections"></a> CConnectionPoint :: GetConnections
 
 Appelez cette fonction pour récupérer toutes les connexions actives pour un point de connexion.
 
@@ -118,11 +119,11 @@ Appelez cette fonction pour récupérer toutes les connexions actives pour un po
 const CPtrArray* GetConnections();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers un tableau de connexions actives (récepteurs). Certains des pointeurs du tableau peuvent être NULL. Chaque pointeur non NULL dans ce tableau peut être converti en toute sécurité en un pointeur vers l’interface du récepteur à l’aide d’un opérateur de cast.
 
-## <a name="cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint :: GetContainer
+## <a name="cconnectionpointgetcontainer"></a><a name="getcontainer"></a> CConnectionPoint :: GetContainer
 
 Appelé par l’infrastructure pour récupérer le `IConnectionPointContainer` pour le point de connexion.
 
@@ -130,7 +131,7 @@ Appelé par l’infrastructure pour récupérer le `IConnectionPointContainer` p
 virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, pointeur vers le conteneur ; Sinon, NULL.
 
@@ -138,7 +139,7 @@ En cas de réussite, pointeur vers le conteneur ; Sinon, NULL.
 
 Cette fonction est généralement implémentée par la macro BEGIN_CONNECTION_PART.
 
-## <a name="cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint :: GetIID
+## <a name="cconnectionpointgetiid"></a><a name="getiid"></a> CConnectionPoint :: GetIID
 
 Appelé par l’infrastructure pour récupérer l’ID d’interface d’un point de connexion.
 
@@ -146,7 +147,7 @@ Appelé par l’infrastructure pour récupérer l’ID d’interface d’un poin
 virtual REFIID GetIID() = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’ID d’interface du point de connexion.
 
@@ -154,7 +155,7 @@ Référence à l’ID d’interface du point de connexion.
 
 Substituez cette fonction pour retourner l’ID d’interface pour ce point de connexion.
 
-## <a name="cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint :: GetMaxConnections
+## <a name="cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a> CConnectionPoint :: GetMaxConnections
 
 Appelée par l’infrastructure pour récupérer le nombre maximal de connexions prises en charge par le point de connexion.
 
@@ -162,7 +163,7 @@ Appelée par l’infrastructure pour récupérer le nombre maximal de connexions
 virtual int GetMaxConnections();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Le nombre maximal de connexions prises en charge par le contrôle, ou-1 si aucune limite n’est définie.
 
@@ -172,7 +173,7 @@ L’implémentation par défaut retourne-1, ce qui indique qu’aucune limite n�
 
 Substituez cette fonction si vous souhaitez limiter le nombre de récepteurs qui peuvent se connecter à votre contrôle.
 
-## <a name="cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>CConnectionPoint :: GetNextConnection
+## <a name="cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a> CConnectionPoint :: GetNextConnection
 
 Récupère un pointeur vers l’élément de connexion sur *pos*.
 
@@ -182,10 +183,10 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
+*pos*<br/>
 Spécifie une référence à une valeur de POSITION retournée par un `GetNextConnection` appel précédent ou [GetStartPosition](#getstartposition) .
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’élément de connexion spécifié par *pos*, ou null.
 
@@ -197,7 +198,7 @@ Cette fonction est particulièrement utile pour itérer au sein de tous les él�
 
 [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]
 
-## <a name="cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint :: GetStartPosition
+## <a name="cconnectionpointgetstartposition"></a><a name="getstartposition"></a> CConnectionPoint :: GetStartPosition
 
 Démarre une itération de mappage en retournant une valeur de POSITION qui peut être passée à un appel [GetNextConnection](#getnextconnection) .
 
@@ -205,7 +206,7 @@ Démarre une itération de mappage en retournant une valeur de POSITION qui peut
 POSITION GetStartPosition() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur de POSITION qui indique une position de départ pour itérer la carte ; ou NULL si le mappage est vide.
 
@@ -217,7 +218,7 @@ La séquence d’itération n’est pas prévisible ; par conséquent, le « p
 
   Consultez l’exemple de [CConnectionPoint :: GetNextConnection](#getnextconnection).
 
-## <a name="cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint :: OnAdvise
+## <a name="cconnectionpointonadvise"></a><a name="onadvise"></a> CConnectionPoint :: OnAdvise
 
 Appelé par le Framework lorsqu’une connexion est en cours d’établissement ou de rupture.
 
@@ -236,7 +237,7 @@ L'implémentation par défaut n'exécute aucune opération.
 
 Remplacez cette fonction si vous souhaitez recevoir une notification lorsque des récepteurs se connectent à votre point de connexion ou s’en déconnectent.
 
-## <a name="cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint :: QuerySinkInterface
+## <a name="cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a> CConnectionPoint :: QuerySinkInterface
 
 Récupère un pointeur vers l’interface de récepteur demandée.
 
@@ -254,7 +255,7 @@ Identificateur de l’interface du récepteur demandée.
 *ppInterface*<br/>
 Pointeur vers le pointeur d’interface identifié par *pUnkSink*. Si l’objet ne prend pas en charge cette interface, \* *ppInterface* a la valeur null.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur HRESULT standard.
 

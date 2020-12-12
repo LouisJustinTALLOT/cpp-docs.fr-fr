@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe COleException'
 title: COleException, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: c82099d816bc8ee8c179e9d4656f474156a629a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb11e9c285180c6e54701c210c5329714d7dccb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227089"
 ---
 # <a name="coleexception-class"></a>COleException, classe
 
@@ -61,7 +62,7 @@ Pour plus d’informations sur les exceptions, consultez les articles [gestion d
 
 **En-tête :** afxdisp.h
 
-## <a name="coleexceptionm_sc"></a><a name="m_sc"></a>COleException :: m_sc
+## <a name="coleexceptionm_sc"></a><a name="m_sc"></a> COleException :: m_sc
 
 Ce membre de données contient le code d’État OLE qui indique la raison de l’exception.
 
@@ -79,7 +80,7 @@ Pour plus d’informations sur SCODE, consultez [structure of com Error Codes](/
 
 [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]
 
-## <a name="coleexceptionprocess"></a><a name="process"></a>COleException ::P tionnaire
+## <a name="coleexceptionprocess"></a><a name="process"></a> COleException ::P tionnaire
 
 Appelez la fonction membre **Process** pour convertir une exception interceptée en code d’État OLE.
 
@@ -92,7 +93,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
 *pAnyException*<br/>
 Pointeur vers une exception interceptée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Code d’État OLE.
 

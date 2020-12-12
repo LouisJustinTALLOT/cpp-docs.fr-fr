@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_null_pointer'
 title: is_null_pointer, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_null_pointer
 ms.assetid: f3b3601b-f162-4803-a6e9-dabf5c3876cc
-ms.openlocfilehash: b306753146a51bde842b55e4f36d3c1afa82591d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 91a8b6a27668af72d7641ce1fe36dafc119f5aa7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455844"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230663"
 ---
-# <a name="isnullpointer-class"></a>is_null_pointer, classe
+# <a name="is_null_pointer-class"></a>is_null_pointer, classe
 
 Teste si le type est std::nullptr_t.
 
@@ -31,11 +32,11 @@ Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le  type T `std::nullptr_t`est. sinon, sa valeur est false.
+Une instance du prédicat de type a la valeur true si le type *T* est `std::nullptr_t` . sinon, sa valeur est false.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

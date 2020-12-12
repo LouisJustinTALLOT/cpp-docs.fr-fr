@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les menus et les ressources : fusion de menus'
 title: 'Menus et ressource : fusion de menus'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 03d27443f90634b5d787eee25acc951d24178f42
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b326e02fb4dbdaaef0ae6015fef6b647cc85b907
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227973"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menus et ressource : fusion de menus
 
@@ -27,7 +28,7 @@ Les sujets abordés dans cet article sont les suivants :
 
 - [Barres d’outils et barres d’État](#_core_toolbars_and_status_bars)
 
-## <a name="menu-layouts"></a><a name="_core_menu_layouts"></a>Dispositions de menu
+## <a name="menu-layouts"></a><a name="_core_menu_layouts"></a> Dispositions de menu
 
 La première étape consiste à coordonner les dispositions des menus. Les applications de conteneur doivent créer un menu à utiliser uniquement lorsque des éléments incorporés sont activés sur place. Au minimum, ce menu doit se composer des éléments suivants, dans l’ordre indiqué :
 
@@ -99,9 +100,9 @@ Les tables d’accélérateurs associées au menu sur place doivent également �
 
 Lorsqu’un élément incorporé est activé sur place, le Framework charge le menu sur place. Elle demande ensuite à l’application serveur de son menu une activation sur place et l’insère là où se trouvent les séparateurs. C’est ainsi que les menus sont combinés. Vous recevez des menus à partir du conteneur pour le fonctionnement au niveau du fichier et de la fenêtre, et vous recevez des menus du serveur pour l’utilisation de l’élément.
 
-## <a name="toolbars-and-status-bars"></a><a name="_core_toolbars_and_status_bars"></a>Barres d’outils et barres d’État
+## <a name="toolbars-and-status-bars"></a><a name="_core_toolbars_and_status_bars"></a> Barres d’outils et barres d’État
 
-Les applications serveur doivent créer une nouvelle barre d’outils et stocker son bitmap dans un fichier séparé. Les applications générées par l’Assistant Application stockent cette image bitmap dans un fichier appelé ITOOLBAR. Affiché. La nouvelle barre d’outils remplace la barre d’outils de l’application conteneur lorsque l’élément de votre serveur est activé sur place et doit contenir les mêmes éléments que votre barre d’outils normale, mais supprimer les icônes représentant les éléments dans les menus fichier et fenêtre.
+Les applications serveur doivent créer une nouvelle barre d’outils et stocker son bitmap dans un fichier séparé. Les applications générées par l’Assistant Application stockent cette image bitmap dans un fichier appelé ITOOLBAR.BMP. La nouvelle barre d’outils remplace la barre d’outils de l’application conteneur lorsque l’élément de votre serveur est activé sur place et doit contenir les mêmes éléments que votre barre d’outils normale, mais supprimer les icônes représentant les éléments dans les menus fichier et fenêtre.
 
 Cette barre d’outils est chargée dans votre `COleIPFrameWnd` classe dérivée de, créée pour vous par l’Assistant Application. La barre d’État est gérée par l’application conteneur. Pour plus d’informations sur l’implémentation des fenêtres Frame sur place, consultez [serveurs : implémentation d’un serveur](servers-implementing-a-server.md).
 

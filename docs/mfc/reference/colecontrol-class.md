@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : COleControl Class'
 title: Classe COleControl
 ms.date: 08/27/2018
 f1_keywords:
@@ -334,12 +335,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 074b0e1df5a8d70c8b32ee03dcb073c26c13be9b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6cc5e1896d186f1fa87eee34565819d518f9d4d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227544"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 
@@ -568,7 +569,7 @@ Pour plus d’informations sur le développement d’une infrastructure de contr
 
 `COleControl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxctl. h
 
@@ -734,7 +735,7 @@ short AmbientTextAlign();
 
 La liste suivante répertorie les valeurs de retour valides :
 
-|Valeur de retour|Signification|
+|Valeur retournée|Signification|
 |------------------|-------------|
 |0|Alignement général (nombres à droite, texte à gauche).|
 |1|Justifier à gauche|
@@ -3736,7 +3737,7 @@ void SerializeExtent(CArchive& ar);
 
 ### <a name="parameters"></a>Paramètres
 
-*AR*<br/>
+*ar*<br/>
 `CArchive`Objet à sérialiser vers ou à partir de.
 
 ### <a name="remarks"></a>Notes
@@ -3757,7 +3758,7 @@ void SerializeStockProps(CArchive& ar);
 
 ### <a name="parameters"></a>Paramètres
 
-*AR*<br/>
+*ar*<br/>
 `CArchive`Objet à sérialiser vers ou à partir de.
 
 ### <a name="remarks"></a>Notes
@@ -3779,7 +3780,7 @@ DWORD SerializeVersion(
 
 ### <a name="parameters"></a>Paramètres
 
-*AR*<br/>
+*ar*<br/>
 `CArchive`Objet à sérialiser vers ou à partir de.
 
 *dwVersionDefault*<br/>

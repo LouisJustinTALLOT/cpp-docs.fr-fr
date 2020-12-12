@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _bstr_t :: Attach'
 title: _bstr_t::Attach
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-ms.openlocfilehash: 718efb9e3dac0d776678fe9efd912a602e041659
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b3f29c8eaf81a492f7e3c4282227d3d6d246988e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229429"
 ---
 # <a name="_bstr_tattach"></a>_bstr_t::Attach
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
 Lie un wrapper `_bstr_t` à un `BSTR`.
 
@@ -38,10 +39,10 @@ Si `_bstr_t` a été précédemment attaché à un autre `BSTR`, `_bstr_t` netto
 
 ## <a name="example"></a>Exemple
 
-Voir [_bstr_t::Assigner](../cpp/bstr-t-assign.md) par exemple en utilisant **Attach**.
+Consultez [_bstr_t :: assign](../cpp/bstr-t-assign.md) pour obtenir un exemple utilisant **Attach**.
 
-**END Microsoft Spécifique**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[_bstr_t, classe](../cpp/bstr-t-class.md)
+[Classe _bstr_t](../cpp/bstr-t-class.md)

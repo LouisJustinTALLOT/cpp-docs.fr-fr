@@ -1,5 +1,6 @@
 ---
-title: COleDBRecordView, classe
+description: 'En savoir plus sur : COleDBRecordView, classe'
+title: COleDBRecordView (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - COleDBRecordView
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: de9c602cb747ee3d4449df479530e55ce907cb8a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bce03a482aff558ed6d22c7720ff74f304a9214f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227310"
 ---
-# <a name="coledbrecordview-class"></a>COleDBRecordView, classe
+# <a name="coledbrecordview-class"></a>COleDBRecordView (classe)
 
 Vue qui affiche des enregistrements de base de données dans des contrôles.
 
@@ -35,27 +36,27 @@ class COleDBRecordView : public CFormView
 
 |Nom|Description|
 |----------|-----------------|
-|[COleDBRecordView::COleDBRecordView](#coledbrecordview)|Construit un objet `COleDBRecordView`.|
+|[COleDBRecordView :: COleDBRecordView](#coledbrecordview)|Construit un objet `COleDBRecordView`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|Retourne une valeur HRESULT standard.|
-|[COleDBRecordView::OnMove](#onmove)|Mise à jour de l’enregistrement actuel (si sale) sur la source de données, puis passe à l’enregistrement spécifié (suivant, précédent, premier ou dernier).|
+|[COleDBRecordView :: OnGetRowset](#ongetrowset)|Retourne une valeur HRESULT standard.|
+|[COleDBRecordView :: OnMove](#onmove)|Met à jour l’enregistrement actif (s’il a été modifié) sur la source de données, puis se déplace vers l’enregistrement spécifié (suivant, précédent, premier ou dernier).|
 
 ## <a name="remarks"></a>Notes
 
-La vue est une vue `CRowset` de formulaire directement connectée à un objet. La vue est créée à partir d’une `CRowset` ressource de modèle de dialogue et affiche les champs de l’objet dans les contrôles du modèle de dialogue. L’objet `COleDBRecordView` utilise l’échange de données de dialogue (DDX), et la fonctionnalité de navigation intégrée, `CRowset`pour automatiser le mouvement des données entre les contrôles sur la forme et les champs de l’aviron. `COleDBRecordView`fournit également une implémentation par défaut pour passer à la première, suivante, précédente, ou dernier enregistrement et une interface pour la mise à jour de l’enregistrement actuellement à l’affiche.
+La vue est une vue de formulaire directement connectée à un `CRowset` objet. La vue est créée à partir d’une ressource de modèle de boîte de dialogue et affiche les champs de l' `CRowset` objet dans les contrôles du modèle de boîte de dialogue. L' `COleDBRecordView` objet utilise l’échange de données de boîtes de dialogue (DDX) et les fonctionnalités de navigation intégrées `CRowset` à pour automatiser le déplacement des données entre les contrôles du formulaire et les champs de l’ensemble de lignes. `COleDBRecordView` fournit également une implémentation par défaut pour le passage au premier enregistrement, suivant, précédent ou dernier, ainsi qu’une interface pour la mise à jour de l’enregistrement actuellement affiché.
 
-Vous pouvez utiliser les fonctions DDX pour `COleDbRecordView` obtenir des données directement à partir de l’enregistrement de base de données et les afficher dans un contrôle de dialogue. Vous devez `DDX_*` utiliser les `DDX_Text`méthodes (telles que ), pas les `DDX_Field*` fonctions (telles que `DDX_FieldText`) avec `COleDbRecordView`. `DDX_FieldText`ne fonctionnera `COleDbRecordView` pas `DDX_FieldText` avec parce que `CRecordset*` prend `CRecordView`un `CDaoRecordset*` argument `CDaoRecordView`supplémentaire de type (pour ) ou (pour ).
+Vous pouvez utiliser les fonctions DDX avec `COleDbRecordView` pour obtenir des données directement à partir de l’ensemble d’enregistrements de la base de données et les afficher dans un contrôle de boîte de dialogue. Vous devez utiliser les `DDX_*` méthodes (telles que `DDX_Text` ), et non les `DDX_Field*` fonctions (telles que `DDX_FieldText` ) avec `COleDbRecordView` . `DDX_FieldText` ne fonctionne pas avec `COleDbRecordView` , car `DDX_FieldText` accepte un argument supplémentaire de type `CRecordset*` (pour `CRecordView` ) ou `CDaoRecordset*` (pour `CDaoRecordView` ).
 
 > [!NOTE]
-> Si vous travaillez avec les classes d’objets d’accès aux données (DAO) plutôt qu’avec les classes OLE DB Consumer Template, utilisez plutôt la classe [CDaoRecordView.](../../mfc/reference/cdaorecordview-class.md) Pour plus d’informations, voir l’article [Aperçu: Programmation de base de données](../../data/data-access-programming-mfc-atl.md).
+> Si vous utilisez les classes DAO (Data Access Objects) au lieu des classes de modèle de consommateur OLE DB, utilisez à la place la classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) . Pour plus d’informations, consultez l’article [vue d’ensemble : programmation de bases de données](../../data/data-access-programming-mfc-atl.md).
 
-`COleDBRecordView`garde une trace de la position de l’utilisateur dans le jeu de lignes afin que la vue d’enregistrement puisse mettre à jour l’interface utilisateur. Lorsque l’utilisateur se déplace à l’une ou l’autre extrémité de la ligne, la vue d’enregistrement désactive les objets d’interface utilisateur — tels que les éléments de menu ou les boutons de barre d’outils — pour aller plus loin dans la même direction.
+`COleDBRecordView` effectue le suivi de la position de l’utilisateur dans l’ensemble de lignes afin que la vue d’enregistrement puisse mettre à jour l’interface utilisateur. Lorsque l’utilisateur passe à l’une des extrémités de l’ensemble de lignes, la vue d’enregistrement désactive les objets d’interface utilisateur, tels que les éléments de menu ou les boutons de barre d’outils, pour se déplacer dans la même direction.
 
-Pour plus d’informations sur les classes rowset, voir [l’article Using OLE DB Consumer Templates.](../../data/oledb/ole-db-consumer-templates-cpp.md)
+Pour plus d’informations sur les classes d’ensemble de lignes, consultez l’article [utilisation de modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md) .
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -75,9 +76,9 @@ Pour plus d’informations sur les classes rowset, voir [l’article Using OLE D
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxoledb.h
+**En-tête :** afxoledb. h
 
-## <a name="coledbrecordviewcoledbrecordview"></a><a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView
+## <a name="coledbrecordviewcoledbrecordview"></a><a name="coledbrecordview"></a> COleDBRecordView :: COleDBRecordView
 
 Construit un objet `COleDBRecordView`.
 
@@ -89,46 +90,46 @@ COleDBRecordView(UINT nIDTemplate);
 ### <a name="parameters"></a>Paramètres
 
 *lpszTemplateName*<br/>
-Contient une chaîne non terminée qui est le nom d’une ressource de dialogue-modèle.
+Contient une chaîne terminée par le caractère null qui est le nom d’une ressource de modèle de boîte de dialogue.
 
-*nIDTemplate (en)*<br/>
-Contient le numéro d’identification d’une ressource de modèle de dialogue.
+*nIDTemplate*<br/>
+Contient le numéro d’identification d’une ressource de modèle de boîte de dialogue.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque vous créez un objet `COleDBRecordView`d’un type dérivé de , invoquez l’un des constructeurs pour créer l’objet de vue et identifier la ressource de dialogue sur laquelle la vue est basée. Vous pouvez identifier la ressource soit par son nom (passez une chaîne comme argument au constructeur) ou par sa pièce d’identité (passez un insignable non signé comme argument).
+Quand vous créez un objet d’un type dérivé de `COleDBRecordView` , appelez l’un des constructeurs pour créer l’objet de vue et identifier la ressource de boîte de dialogue sur laquelle la vue est basée. Vous pouvez identifier la ressource par son nom (passer une chaîne en tant qu’argument au constructeur) ou par son ID (passer un entier non signé comme argument).
 
 > [!NOTE]
-> Votre classe dérivée *doit* fournir son propre constructeur. Dans le constructeur, invoquez le constructeur, `COleDBRecordView::COleDBRecordView`, avec le nom de ressource ou ID comme argument.
+> Votre classe dérivée *doit* fournir son propre constructeur. Dans le constructeur, appelez le constructeur, `COleDBRecordView::COleDBRecordView` , avec le nom de la ressource ou l’ID en tant qu’argument.
 
-## <a name="coledbrecordviewongetrowset"></a><a name="ongetrowset"></a>COleDBRecordView::OnGetRowset
+## <a name="coledbrecordviewongetrowset"></a><a name="ongetrowset"></a> COleDBRecordView :: OnGetRowset
 
-Retourne une poignée pour l’objet **<>CRowset** associé à la vue d’enregistrement.
+Retourne un handle pour l’objet **CRowset<>** associé à la vue de l’enregistrement.
 
 ```
 virtual CRowset<>* OnGetRowset() = 0;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une valeur HRESULT standard.
+Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Vous devez remplacer cette fonction de membre pour construire ou obtenir un objet encastré et y retourner une poignée. Si vous déclarez votre classe de vue d’enregistrement avec ClassWizard, l’assistant vous écrit un remplacement par défaut. L’implémentation par défaut de ClassWizard renvoie la poignée rowset stockée dans la vue d’enregistrement si elle existe. Si ce n’est pas le cas, il construit un objet `Open` encastré du type que vous avez spécifié avec ClassWizard et appelle sa fonction de membre pour ouvrir la table ou exécuter la requête, puis renvoie une poignée à l’objet.
+Vous devez substituer cette fonction membre pour construire ou obtenir un objet d’ensemble de lignes et retourner un handle à celui-ci. Si vous déclarez votre classe de vue d’enregistrement avec ClassWizard, l’Assistant écrit une substitution par défaut pour vous. L’implémentation par défaut de ClassWizard retourne le handle d’ensemble de lignes stocké dans la vue d’enregistrement, le cas échéant. Si ce n’est pas le cas, il construit un objet d’ensemble de lignes du type que vous avez spécifié avec ClassWizard et appelle la `Open` fonction membre pour ouvrir la table ou exécuter la requête, puis retourne un handle à l’objet.
 
 > [!NOTE]
-> Avant MFC 7.0, `OnGetRowset` retourné `CRowset`un pointeur à . Si vous avez `OnGetRowset`du code qui appelle, vous devez modifier le type de retour à la classe templatisée **CRowset<>**.
+> Avant MFC 7,0, `OnGetRowset` retourne un pointeur vers `CRowset` . Si vous avez du code qui appelle `OnGetRowset` , vous devez remplacer le type de retour par la classe de classeuse **CRowset<>**.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-Pour plus d’informations et d’exemples, voir l’article [Affichages d’enregistrement: Utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
+Pour plus d’informations et d’exemples, consultez l’article [vues des enregistrements : utilisation d’une vue d’enregistrement](../../data/using-a-record-view-mfc-data-access.md).
 
-## <a name="coledbrecordviewonmove"></a><a name="onmove"></a>COleDBRecordView::OnMove
+## <a name="coledbrecordviewonmove"></a><a name="onmove"></a> COleDBRecordView :: OnMove
 
-Se déplace vers un enregistrement différent dans le rowset et affiche ses champs dans les commandes de la vue d’enregistrement.
+Passe à un autre enregistrement de l’ensemble de lignes et affiche ses champs dans les contrôles de la vue de l’enregistrement.
 
 ```
 virtual BOOL OnMove(UINT nIDMoveCommand);
@@ -136,30 +137,30 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 
 ### <a name="parameters"></a>Paramètres
 
-*nIDMoveCommand (en)*<br/>
-L’une des valeurs d’identification de commande standard suivantes :
+*nIDMoveCommand*<br/>
+L’une des valeurs d’ID de commande standard suivantes :
 
-- ID_RECORD_FIRST — Passez au premier disque dans le dossier.
+- ID_RECORD_FIRST : accédez au premier enregistrement du jeu d’enregistrements.
 
-- ID_RECORD_LAST — Passez au dernier record dans le dossier.
+- ID_RECORD_LAST : accédez au dernier enregistrement du jeu d’enregistrements.
 
-- ID_RECORD_NEXT — Passez au prochain disque dans le dossier.
+- ID_RECORD_NEXT : accédez à l’enregistrement suivant dans le jeu d’enregistrements.
 
-- ID_RECORD_PREV — Passez au record précédent dans le dossier.
+- ID_RECORD_PREV : accédez à l’enregistrement précédent dans le jeu d’enregistrements.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Nonzero si le déménagement a été un succès; autrement 0 si la demande de déménagement a été refusée.
+Valeur différente de zéro si le déplacement a réussi ; Sinon, 0 si la demande de déplacement a été refusée.
 
 ### <a name="remarks"></a>Notes
 
-La mise en `Move` œuvre `CRowset` par défaut appelle la fonction membre appropriée de l’objet associé à la vue d’enregistrement.
+L’implémentation par défaut appelle la `Move` fonction membre appropriée de l' `CRowset` objet associé à la vue de l’enregistrement.
 
-Par défaut, `OnMove` met à jour l’enregistrement actuel sur la source de données si l’utilisateur l’a modifié dans la vue d’enregistrement.
+Par défaut, `OnMove` met à jour l’enregistrement actif sur la source de données si l’utilisateur l’a modifié dans la vue de l’enregistrement.
 
-L’Assistant d’application crée une ressource de menu avec First Record, Last Record, Next Record et Les éléments de menu Précédent Record. Si vous sélectionnez l’option Dockable Toolbar, The Application Wizard crée également une barre d’outils avec des boutons correspondant à ces commandes.
+L’Assistant application crée une ressource de menu avec les éléments de menu premier enregistrement, dernier enregistrement, enregistrement suivant et enregistrement précédent. Si vous sélectionnez l’option ancrabte de la barre d’outils, l’Assistant application crée également une barre d’outils avec des boutons correspondant à ces commandes.
 
-Si vous passez au-delà du dernier enregistrement dans le recordet, la vue d’enregistrement continue d’afficher le dernier enregistrement. Si vous reculez au-delà du premier enregistrement, la vue d’enregistrement continue d’afficher le premier enregistrement.
+Si vous déplacez au-delà du dernier enregistrement dans le jeu d’enregistrements, la vue de l’enregistrement continue d’afficher le dernier enregistrement. Si vous reculez au-delà du premier enregistrement, la vue de l’enregistrement continue d’afficher le premier enregistrement.
 
 ## <a name="see-also"></a>Voir aussi
 
