@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe (C++)'
 title: class (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 1dfa0b5e2dd65567b965be756ff171a3df75370a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2b1e984f3facd4d2d212979a1dcf6be2eee3b3a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278738"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -52,7 +53,7 @@ Liste des membres de la classe. Pour plus d’informations, consultez [vue d’e
 *declarators*<br/>
 Liste des déclarateurs spécifiant les noms d’une ou plusieurs instances du type de classe. Les déclarateurs peuvent inclure des listes d’initialiseurs si toutes les données membres de la classe sont **`public`** . Cela est plus courant dans les structures, dont les membres de données sont **`public`** par défaut, que dans les classes. Pour plus d’informations, consultez [vue d’ensemble des déclarateurs](./declarations-and-definitions-cpp.md) .
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Pour plus d’informations sur les classes en général, reportez-vous à l’une des rubriques suivantes :
 

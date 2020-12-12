@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2097'
 title: Erreur du compilateur C2097
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2097
 ms.assetid: 7e5b2fd4-f61c-4b8a-b265-93e987a04bd3
-ms.openlocfilehash: cdb14aeef61d136a6992a05a72f382e589e88770
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b9aa67f85ce9ba60a693500a2d7e3f69014cbba3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278608"
 ---
 # <a name="compiler-error-c2097"></a>Erreur du compilateur C2097
 

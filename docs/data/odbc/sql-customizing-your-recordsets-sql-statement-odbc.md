@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : SQL : personnalisation de l’instruction SQL du recordset (ODBC)'
 title: "SQL : personnalisation de l'instruction SQL du recordset (ODBC)"
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,27 +11,27 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-ms.openlocfilehash: 083d268d2b2f2eef072809b1afde9d6ea34f6996
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73765ed66dacbc017cca6236ae5a90388390fa45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278686"
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL : personnalisation de l'instruction SQL du recordset (ODBC)
 
 Cette rubrique répond aux questions suivantes :
 
-- Comment le cadre construit une déclaration SQL
+- Comment l’infrastructure construit une instruction SQL
 
-- Comment remplacer la déclaration SQL
+- Comment substituer l’instruction SQL
 
 > [!NOTE]
-> Ces informations s’appliquent aux classes ODBC MFC. Si vous travaillez avec les classes MFC DAO, consultez le thème "Comparaison de Microsoft Jet Database Engine SQL et ANSI SQL" dans DAO Help.
+> Ces informations s’appliquent aux classes ODBC MFC. Si vous utilisez les classes DAO MFC, consultez la rubrique « Comparaison de Microsoft Jet Moteur de base de données SQL et ANSI SQL » dans l’aide de DAO.
 
-## <a name="sql-statement-construction"></a>Construction de déclaration SQL
+## <a name="sql-statement-construction"></a>Construction d’instructions SQL
 
-Votre dossier base la sélection des enregistrements principalement sur une déclaration **SQL SELECT.** Lorsque vous déclarez votre classe avec un assistant, `GetDefaultSQL` il écrit une version prépondérer de `CAuthors`la fonction membre qui ressemble à ceci (pour une classe recordet appelé ).
+Votre jeu d’enregistrements base la sélection des enregistrements principalement sur une instruction SQL **Select** . Quand vous déclarez votre classe à l’aide d’un Assistant, elle écrit une version de substitution de la `GetDefaultSQL` fonction membre qui ressemble à ceci (pour une classe de Recordset appelée `CAuthors` ).
 
 ```cpp
 CString CAuthors::GetDefaultSQL()
@@ -39,35 +40,35 @@ CString CAuthors::GetDefaultSQL()
 }
 ```
 
-Par défaut, ce remplacement renvoie le nom de table que vous avez spécifié avec l’assistant. Dans l’exemple, le nom de table est « AUTHORS ». Lorsque vous appelez plus tard `Open` la `Open` fonction membre du recordet, construit une déclaration **SELECT** finale du formulaire :
+Par défaut, ce remplacement retourne le nom de la table que vous avez spécifié à l’aide de l’Assistant. Dans l’exemple, le nom de la table est « AUTHORs ». Lorsque vous appelez ultérieurement la fonction membre du recordset `Open` , `Open` construit une instruction **Select** finale de la forme :
 
 ```
 SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
        [ORDER BY m_strSort]
 ```
 
-`table-name` où est obtenu `GetDefaultSQL` `rfx-field-list` en appelant et est obtenu à `DoFieldExchange`partir de la fonction RFX appelle en . C’est ce que vous obtenez pour une déclaration **SELECT** sauf si vous la remplacez par une version prépondérer au moment de l’exécution, bien que vous puissiez également modifier l’énoncé par défaut avec des paramètres ou un filtre.
+où `table-name` est obtenu en appelant `GetDefaultSQL` et `rfx-field-list` est obtenu à partir des appels de la fonction RFX dans `DoFieldExchange` . C’est ce que vous pouvez obtenir pour une instruction **Select** , sauf si vous la remplacez par une version de remplacement au moment de l’exécution, bien que vous puissiez également modifier l’instruction par défaut avec des paramètres ou un filtre.
 
 > [!NOTE]
-> Si vous spécifiez un nom de colonne qui contient (ou pourrait contenir) des espaces, vous devez enfermer le nom dans des supports carrés. Par exemple, le nom « Prénom » doit être « [prénom]».
+> Si vous spécifiez un nom de colonne qui contient (ou peut contenir) des espaces, vous devez placer le nom entre crochets. Par exemple, le nom « First Name » doit être « [First Name] ».
 
-Pour remplacer la déclaration **SELECT** par défaut, passez une chaîne `Open`contenant une déclaration **SELECT** complète lorsque vous appelez . Au lieu de construire sa propre chaîne par défaut, le recordet utilise la chaîne que vous fournissez. Si votre relevé de remplacement contient une clause `m_strFilter` **WHERE,** ne spécifiez pas un filtre parce que vous auriez alors deux relevés de filtre. De même, si votre relevé de remplacement contient une `m_strSort` clause **ORDER BY,** ne spécifiez pas une sorte de sorte que vous n’aurez pas deux instructions de tri.
+Pour remplacer l’instruction **Select** par défaut, passez une chaîne contenant une instruction **Select** complète lorsque vous appelez `Open` . Au lieu de construire sa propre chaîne par défaut, le recordset utilise la chaîne que vous fournissez. Si votre instruction de remplacement contient une clause **Where** , ne spécifiez pas de filtre dans `m_strFilter` , car vous auriez alors deux instructions de filtre. De même, si votre instruction de remplacement contient une clause **order by** , ne spécifiez pas de tri dans `m_strSort` afin que vous n’ayez pas deux instructions de tri.
 
 > [!NOTE]
-> Si vous utilisez des chaînes littérales dans vos filtres (ou d’autres parties de la déclaration SQL), vous pourriez avoir à «citer» (enclos dans des délimitations spécifiées) de telles chaînes avec un préfixe littéral DBMS et le caractère suffixe littéral (ou des caractères).
+> Si vous utilisez des chaînes littérales dans vos filtres (ou d’autres parties de l’instruction SQL), vous devrez peut-être « citer » (entre les délimiteurs spécifiés) ces chaînes avec un préfixe littéral spécifique au SGBD et un ou plusieurs caractères de suffixe littéral.
 
-Vous pourriez également rencontrer des exigences syntaxes spéciales pour des opérations telles que les jointures extérieures, en fonction de votre DBMS. Utilisez les fonctions ODBC pour obtenir ces informations auprès de votre chauffeur pour le DBMS. Par exemple, `::SQLGetTypeInfo` appelez un type de `SQL_VARCHAR`données particulier, tel que , pour demander les caractères LITERAL_PREFIX et LITERAL_SUFFIX. Si vous écrivez un code indépendant dans la base de données, consultez [l’annexe C: SQL Grammar](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) dans la [référence du programmeur ODBC](/sql/odbc/reference/odbc-programmer-s-reference) pour des informations détaillées sur la syntaxe.
+Vous pouvez également rencontrer des exigences syntaxiques spéciales pour les opérations telles que les jointures externes, en fonction de votre SGBD. Utilisez les fonctions ODBC pour obtenir ces informations à partir de votre pilote pour le SGBD. Par exemple, appelez `::SQLGetTypeInfo` pour un type de données particulier, tel que `SQL_VARCHAR` , pour demander les caractères LITERAL_PREFIX et LITERAL_SUFFIX. Si vous écrivez du code indépendant de la base de données, consultez l' [annexe C : syntaxe SQL](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) dans le [Guide de référence du programmeur ODBC](/sql/odbc/reference/odbc-programmer-s-reference) pour obtenir des informations détaillées sur la syntaxe.
 
-Un objet de recordet construit la déclaration SQL qu’il utilise pour sélectionner des enregistrements à moins que vous passiez une déclaration SQL personnalisée. La façon dont cela est fait dépend principalement de la valeur que `Open` vous passez dans le paramètre *lpszSQL* de la fonction membre.
+Un objet recordset construit l’instruction SQL qu’il utilise pour sélectionner des enregistrements, sauf si vous transmettez une instruction SQL personnalisée. Cette opération dépend principalement de la valeur que vous transmettez dans le paramètre *lpszSQL* de la `Open` fonction membre.
 
-La forme générale d’une déclaration **SQL SELECT** est la suivante :
+La forme générale d’une instruction SQL **Select** est la suivante :
 
 ```
 SELECT [ALL | DISTINCT] column-list FROM table-list
     [WHERE search-condition][ORDER BY column-list [ASC | DESC]]
 ```
 
-Une façon d’ajouter le mot clé **DISTINCT** à la déclaration SQL de votre dossier `DoFieldExchange`est d’intégrer le mot clé dans le premier appel de fonction RFX . Par exemple :
+Pour ajouter le mot clé **distinct** à l’instruction SQL de votre jeu d’enregistrements, vous pouvez incorporer le mot clé dans le premier appel de fonction RFX dans `DoFieldExchange` . Par exemple :
 
 ```
 ...
@@ -76,33 +77,33 @@ Une façon d’ajouter le mot clé **DISTINCT** à la déclaration SQL de votre 
 ```
 
 > [!NOTE]
-> Utilisez cette technique uniquement avec un livre ouvert uniquement comme lu.
+> Utilisez cette technique uniquement avec un jeu d’enregistrements ouvert en lecture seule.
 
-## <a name="overriding-the-sql-statement"></a>L’emporter sur la déclaration sqL
+## <a name="overriding-the-sql-statement"></a>Substitution de l’instruction SQL
 
-Le tableau suivant montre les possibilités pour le paramètre *lpssSQL* à `Open`. Les cas dans le tableau sont expliqués en suivant le tableau.
+Le tableau suivant présente les possibilités du paramètre *lpszSQL* à `Open` . Les cas du tableau sont expliqués à la suite du tableau.
 
-**Le paramètre lpszSQL et la chaîne SQL résultant**
+**Le paramètre lpszSQL et la chaîne SQL obtenue**
 
-|Cas|Ce que vous passez en lpszSQL|La déclaration SELECT qui en résulte|
+|Cas|Ce que vous transmettez dans lpszSQL|Instruction SELECT qui en résulte|
 |----------|------------------------------|------------------------------------|
-|1|NULL|**SELECT** *rfx-field-list* **FROM** *table-name*<br /><br /> `CRecordset::Open`appels `GetDefaultSQL` pour obtenir le nom de table. La chaîne résultante est l’un des cas `GetDefaultSQL` 2 à 5, selon les retours.|
-|2|Un nom de table|**SELECT** *rfx-field-list* **FROM** *table-name*<br /><br /> La liste de terrain est tirée `DoFieldExchange`des relevés RFX en . Si `m_strFilter` `m_strSort` et ne sont pas vides, ajoute les clauses **WHERE** et/ou **ORDER BY.**|
-|3\*|Une déclaration **SELECT** complète mais sans clause **WHERE** ou **ORDER BY**|Comme passé. Si `m_strFilter` `m_strSort` et ne sont pas vides, ajoute les clauses **WHERE** et/ou **ORDER BY.**|
-|4\*|Une déclaration **SELECT** complète avec une clause **WHERE** et/ou **ORDER BY**|Comme passé. `m_strFilter`et/ou `m_strSort` doivent rester vides, ou deux relevés de filtre et/ou de tri sont produits.|
-|5\*|Un appel à une procédure stockée|Comme passé.|
+|1|NULL|**Select** *RFX-Field-List* **from** *table-Name*<br /><br /> `CRecordset::Open` appelle `GetDefaultSQL` pour récupérer le nom de la table. La chaîne résultante est l’un des cas 2 à 5, en fonction de ce qui est `GetDefaultSQL` retourné.|
+|2|Un nom de table|**Select** *RFX-Field-List* **from** *table-Name*<br /><br /> La liste de champs est extraite des instructions RFX dans `DoFieldExchange` . Si `m_strFilter` et ne `m_strSort` sont pas vides, ajoute les clauses **Where** et/ou **order by** .|
+|1,3 \*|Une instruction **Select** complète, mais sans clause **Where** ou **order by**|Comme passé. Si `m_strFilter` et ne `m_strSort` sont pas vides, ajoute les clauses **Where** et/ou **order by** .|
+|4 \*|Une instruction **Select** complète avec une clause **Where** et/ou **order by**|Comme passé. `m_strFilter` et/ou `m_strSort` doivent rester vides, ou deux instructions de filtre et/ou de tri sont produites.|
+|5,5 \*|Un appel à une procédure stockée|Comme passé.|
 
-\*`m_nFields` doivent être inférieurs ou égaux au nombre de colonnes spécifiées dans l’instruction **SELECT.** Le type de données de chaque colonne spécifiée dans l’instruction **SELECT** doit être le même que le type de données de la colonne de sortie RFX correspondante.
+\*`m_nFields`doit être inférieur ou égal au nombre de colonnes spécifié dans l’instruction **Select** . Le type de données de chaque colonne spécifiée dans l’instruction **Select** doit être le même que le type de données de la colonne de sortie RFX correspondante.
 
-### <a name="case-1---lpszsql--null"></a>Cas 1 lpszSQL - NULL
+### <a name="case-1---lpszsql--null"></a>Cas 1 lpszSQL = NULL
 
-La sélection des enregistrements `GetDefaultSQL` dépend `CRecordset::Open` de ce qui revient lorsque l’appelle. Les cas 2 à 5 décrivent les cordes possibles.
+La sélection du recordset dépend de ce qui est `GetDefaultSQL` retourné lors de `CRecordset::Open` son appel. Les cas 2 à 5 décrivent les chaînes possibles.
 
-### <a name="case-2---lpszsql--a-table-name"></a>Cas 2 lpszSQL - un nom de table
+### <a name="case-2---lpszsql--a-table-name"></a>Cas 2 lpszSQL = un nom de table
 
-Le recordet utilise l’échange de champ record (RFX) pour construire la liste de colonne à partir `DoFieldExchange`des noms de colonnes fournis dans les appels de fonction RFX dans la override de la classe de l’enregistrement de . Si vous avez utilisé un assistant pour déclarer votre classe de recordet, ce cas a le même résultat que le cas 1 (à condition que vous passiez le même nom de table que vous avez spécifié dans l’assistant). Si vous n’utilisez pas un assistant pour écrire votre classe, le cas 2 est le moyen le plus simple de construire la déclaration SQL.
+Le recordset utilise RFX (Record Field Exchange) pour générer la liste des colonnes à partir des noms de colonnes fournis dans les appels de fonction RFX dans la substitution de la classe Recordset de `DoFieldExchange` . Si vous avez utilisé un Assistant pour déclarer votre classe de Recordset, ce cas a le même résultat que le cas 1 (à condition que vous passiez le même nom de table que celui que vous avez spécifié dans l’Assistant). Si vous n’utilisez pas d’Assistant pour écrire votre classe, le cas 2 est le moyen le plus simple de construire l’instruction SQL.
 
-L’exemple suivant construit un relevé SQL qui sélectionne les enregistrements d’une application de base de données MFC. Lorsque le cadre `GetDefaultSQL` appelle la fonction membre, la `SECTION`fonction renvoie le nom de la table, .
+L’exemple suivant construit une instruction SQL qui sélectionne des enregistrements à partir d’une application de base de données MFC. Lorsque le Framework appelle la `GetDefaultSQL` fonction membre, la fonction retourne le nom de la table, `SECTION` .
 
 ```cpp
 CString CEnrollSet::GetDefaultSQL()
@@ -111,7 +112,7 @@ CString CEnrollSet::GetDefaultSQL()
 }
 ```
 
-Pour obtenir les noms des colonnes pour la déclaration `DoFieldExchange` **SQL SELECT,** le cadre appelle la fonction membre.
+Pour obtenir les noms des colonnes de l’instruction SQL **Select** , le Framework appelle la `DoFieldExchange` fonction membre.
 
 ```cpp
 void CEnrollSet::DoFieldExchange(CFieldExchange* pFX)
@@ -125,40 +126,40 @@ void CEnrollSet::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-Une fois terminé, la déclaration SQL ressemble à ceci:
+Une fois l’exécution terminée, l’instruction SQL se présente comme suit :
 
 ```sql
 SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
     FROM SECTION
 ```
 
-### <a name="case-3---lpszsql--a-selectfrom-statement"></a>Cas 3 lpszSQL - une déclaration SELECT/FROM
+### <a name="case-3---lpszsql--a-selectfrom-statement"></a>Cas 3 lpszSQL = a SELECT/FROM (instruction)
 
-Vous spécifiez la liste de colonnes à la main plutôt que de compter sur RFX pour la construire automatiquement. Vous voudrez peut-être le faire lorsque :
+Vous spécifiez manuellement la liste des colonnes au lieu de vous appuyer sur RFX pour la construire automatiquement. Vous pouvez effectuer cette opération dans les cas suivants :
 
-- Vous souhaitez spécifier le mot clé **DISTINCT** suivant **SELECT**.
+- Vous souhaitez spécifier le mot clé **distinct** après **Select**.
 
-   Votre liste de colonnes doit correspondre aux noms et `DoFieldExchange`types de colonnes dans le même ordre qu’ils sont répertoriés dans .
+   Votre liste de colonnes doit correspondre aux noms de colonne et aux types dans le même ordre que celui dans lequel ils sont répertoriés `DoFieldExchange` .
 
-- Vous avez des raisons de récupérer manuellement `::SQLGetData` les valeurs de colonnes à l’aide de la fonction ODBC plutôt que de compter sur RFX pour lier et récupérer des colonnes pour vous.
+- Vous avez la raison de récupérer manuellement des valeurs de colonne à l’aide de la fonction ODBC `::SQLGetData` au lieu de vous appuyer sur RFX pour lier et récupérer des colonnes pour vous.
 
-   Vous pouvez, par exemple, accueillir de nouvelles colonnes d’un client de votre application ajouté aux tables de base de données après la distribution de l’application. Vous devez ajouter ces membres de données de terrain supplémentaires, qui n’étaient pas connus au moment où vous avez déclaré la classe avec un assistant.
+   Vous pouvez, par exemple, souhaiter accepter les nouvelles colonnes qu’un client de votre application a ajoutées aux tables de la base de données après la distribution de l’application. Vous devez ajouter ces membres de données de champ supplémentaires, qui n’étaient pas connus au moment où vous avez déclaré la classe à l’aide d’un Assistant.
 
-   Votre liste de colonnes doit correspondre aux noms et `DoFieldExchange`types de colonnes dans le même ordre qu’ils sont répertoriés dans , suivi par les noms des colonnes manuellement liées. Pour plus d’informations, voir [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+   Votre liste de colonnes doit correspondre aux noms et aux types des colonnes dans le même ordre que celui dans lequel ils sont répertoriés `DoFieldExchange` , suivis des noms des colonnes liées manuellement. Pour plus d’informations, consultez [Recordset : liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-- Vous souhaitez rejoindre les tables en spécifiant plusieurs tables de la clause **FROM.**
+- Vous souhaitez joindre des tables en spécifiant plusieurs tables dans la clause **from** .
 
-   Pour plus d’informations et un exemple, voir [Recordset: Performing a Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Pour obtenir des informations et un exemple, consultez [Recordset : exécution d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
-### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>Cas 4 lpszSQL - SELECT/FROM Plus Où et/ou ORDER BY
+### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>Cas 4 lpszSQL = SELECT/FROM plus WHERE et/ou ORDER BY
 
-Vous spécifiez tout : la liste `DoFieldExchange`de colonnes (basée sur les appels RFX), la liste de table, et le contenu d’une clause **WHERE** et/ou un **ORDER BY.** Si vous spécifiez vos clauses **WHERE** et/ou `m_strSort`ORDER **BY** de cette façon, n’utilisez `m_strFilter` pas et/ou .
+Vous spécifiez tout : la liste des colonnes (en fonction des appels RFX dans `DoFieldExchange` ), la liste des tables et le contenu d’une clause **Where** et/ou **order by** . Si vous spécifiez des clauses **Where** et/ou **order by** de cette manière, n’utilisez pas `m_strFilter` et/ou `m_strSort` .
 
-### <a name="case-5---lpszsql--a-stored-procedure-call"></a>Cas 5 lpszSQL - un appel de procédure stocké
+### <a name="case-5---lpszsql--a-stored-procedure-call"></a>Cas 5 lpszSQL = un appel de procédure stockée
 
-Si vous avez besoin d’appeler une requête prédéfinie (comme une procédure stockée dans une base de données Microsoft SQL Server), vous devez écrire une déclaration **CALL** dans la chaîne que vous passez à *lpszSQL*. Les sorciers ne sont pas en faveur de déclarer une classe recordet pour appeler une requête prédéfinie. Toutes les requêtes prédéfinies ne renvoient pas les dossiers.
+Si vous devez appeler une requête prédéfinie (par exemple, une procédure stockée dans une base de données Microsoft SQL Server), vous devez écrire une instruction **Call** dans la chaîne que vous transmettez à *lpszSQL*. Les assistants ne prennent pas en charge la déclaration d’une classe de Recordset pour l’appel d’une requête prédéfinie. Les requêtes prédéfinies ne retournent pas toutes les enregistrements.
 
-Si une requête prédéfinie ne renvoie pas `CDatabase` d’enregistrements, vous pouvez utiliser la fonction `ExecuteSQL` du membre directement. Pour une requête prédéfinie qui renvoie les enregistrements, vous devez `DoFieldExchange` également écrire manuellement les appels RFX pour toutes les colonnes de la procédure retourne. Les appels RFX doivent être dans le même ordre et retourner les mêmes types, que la requête prédéfinie. Pour plus d’informations, voir [Recordset: Déclarer une classe pour une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+Si une requête prédéfinie ne retourne pas d’enregistrements, vous pouvez utiliser `CDatabase` directement la fonction membre `ExecuteSQL` . Pour une requête prédéfinie qui retourne des enregistrements, vous devez également écrire manuellement les appels RFX dans `DoFieldExchange` pour toutes les colonnes retournées par la procédure. Les appels RFX doivent être dans le même ordre et retourner les mêmes types, comme la requête prédéfinie. Pour plus d’informations, consultez [Recordset : déclaration d’une classe pour une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

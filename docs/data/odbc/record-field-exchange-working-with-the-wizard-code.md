@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Record Field Exchange : utilisation du code de l’Assistant'
 title: "Record Field Exchange : utilisation du code écrit par l'Assistant"
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 8e42fc9da672ca4ef97e775776935650ab7f545a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6b44c7c5e3ec09e02e70ad5dd0fecfa434cc0a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278712"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Record Field Exchange : utilisation du code écrit par l'Assistant
 
@@ -30,7 +31,7 @@ ms.locfileid: "81367115"
 Cette rubrique explique le code que les Assistants Application MFC et **Ajout de classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) écrivent pour prendre en charge RFX et comment vous pouvez modifier ce code.
 
 > [!NOTE]
-> Cette rubrique s’applique aux classes dérivées de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, l’échange de champs d’enregistrements en bloc (Bulk RFX) est implémenté. Bulk RFX est similaire à RFX. Pour comprendre les différences, voir [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Cette rubrique s’applique aux classes dérivées de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, l’échange de champs d’enregistrements en bloc (Bulk RFX) est implémenté. Bulk RFX est similaire à RFX. Pour comprendre les différences, consultez [Recordset : extraction globale d’enregistrements (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Quand vous créez une classe recordset avec l’Assistant Application MFC ou **Ajout de classe**, l’Assistant écrit les éléments associés à RFX suivants pour vous, en fonction de la source de données, des tables et des colonnes que vous choisissez dans l’Assistant :
 
@@ -102,7 +103,7 @@ Notez les fonctionnalités clés suivantes de la fonction :
 
 - Un appel à `CFieldExchange::SetFieldType`, jusqu’au pointeur `pFX`. Cet appel indique que tous les appels de fonction RFX jusqu’à la fin de `DoFieldExchange` ou l’appel suivant à `SetFieldType` sont des colonnes de sortie. Pour plus d’informations, consultez [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Plusieurs appels à la fonction globale `RFX_Text`, à raison d’un par membre de données de champ (qui sont tous des variables `CString` dans l’exemple). Ces appels spécifient la relation entre un nom de colonne sur la source de données et un membre de données de champ. Les fonctions RFX effectuent le transfert de données proprement dit. La bibliothèque de classes fournit des fonctions RFX pour tous les types de données courants. Pour plus d’informations sur les fonctions RFX, voir [Record Field Exchange: Using the RFX Functions](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Plusieurs appels à la fonction globale `RFX_Text`, à raison d’un par membre de données de champ (qui sont tous des variables `CString` dans l’exemple). Ces appels spécifient la relation entre un nom de colonne sur la source de données et un membre de données de champ. Les fonctions RFX effectuent le transfert de données proprement dit. La bibliothèque de classes fournit des fonctions RFX pour tous les types de données courants. Pour plus d’informations sur les fonctions RFX, consultez [Record Field Exchange : utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  L’ordre des colonnes dans votre jeu de résultats doit correspondre à l’ordre des appels de fonction RFX dans `DoFieldExchange`.
@@ -143,4 +144,4 @@ Ce code permet d’ajouter trois nouveaux champs. Si vous ajoutez des membres de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Échange de terrain record (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[RFX (Record Field Exchange)](../../data/odbc/record-field-exchange-rfx.md)

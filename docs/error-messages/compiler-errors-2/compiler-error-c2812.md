@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2812'
 title: Erreur du compilateur C2812
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2812
 ms.assetid: 22aadb8c-7232-489d-a3ad-60662dda30a8
-ms.openlocfilehash: cec92982646c64e6c5b669df328e4836d4f44df8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d59105397ae773c2a46b04a64eb50da3055c3a4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278418"
 ---
 # <a name="compiler-error-c2812"></a>Erreur du compilateur C2812
 
-> l’importation \#n’est pas prise en charge avec/clr : pure et/CLR : safe
+> \#l’importation n’est pas prise en charge avec/clr : pure et/CLR : safe
 
 ## <a name="remarks"></a>Notes
 
