@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCImagePaintArea'
 title: CMFCImagePaintArea, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: ee960b27651489ac1c196789d41a6c5ee396b260
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c12a85c05686dcde24560b5ecc69cc68de07aa48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265348"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea, classe
 
@@ -75,7 +76,7 @@ L’exemple suivant montre comment construire un objet de la `CMFCImagePaintArea
 
 [CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afximagepaintarea. h
 

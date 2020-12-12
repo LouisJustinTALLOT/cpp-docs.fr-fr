@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CPageSetupDialog'
 title: CPageSetupDialog, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 280d75c3bcacd673107fd32ecaa39953b06a77c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 862e8c1edff04ba58efe13f471ffeee71c11ede5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264906"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog, classe
 
@@ -82,7 +83,7 @@ Cette classe est conçue pour remplacer la boîte de dialogue Configuration de l
 
 Pour utiliser un `CPageSetupDialog` objet, commencez par créer l’objet à l’aide du `CPageSetupDialog` constructeur. Une fois la boîte de dialogue construite, vous pouvez définir ou modifier les valeurs `m_psd` du membre de données pour initialiser les valeurs des contrôles de la boîte de dialogue. La structure [m_psd](#m_psd) est de type PAGESETUPDLG.
 
-Après l’initialisation des contrôles de boîte de dialogue, appelez la `DoModal` fonction membre pour afficher la boîte de dialogue et permettre à l’utilisateur de sélectionner des options d’impression. `DoModal`retourne une valeur indiquant si l’utilisateur a sélectionné le bouton OK (IDOK) ou CANCEL (IDCANCEL).
+Après l’initialisation des contrôles de boîte de dialogue, appelez la `DoModal` fonction membre pour afficher la boîte de dialogue et permettre à l’utilisateur de sélectionner des options d’impression. `DoModal` retourne une valeur indiquant si l’utilisateur a sélectionné le bouton OK (IDOK) ou CANCEL (IDCANCEL).
 
 Si `DoModal` retourne IDOK, vous pouvez utiliser plusieurs `CPageSetupDialog` fonctions membres de ou accéder au membre de `m_psd` données pour récupérer les informations entrées par l’utilisateur.
 
@@ -107,7 +108,7 @@ Si `DoModal` retourne IDOK, vous pouvez utiliser plusieurs `CPageSetupDialog` fo
 
 **En-tête :** afxdlgs. h
 
-## <a name="cpagesetupdialogcpagesetupdialog"></a><a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog
+## <a name="cpagesetupdialogcpagesetupdialog"></a><a name="cpagesetupdialog"></a> CPageSetupDialog::CPageSetupDialog
 
 Appelez cette fonction pour construire un `CPageSetupDialog` objet.
 
@@ -169,7 +170,7 @@ Utilisez la fonction [DoModal](../../mfc/reference/cdialog-class.md#domodal) pou
 
 [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]
 
-## <a name="cpagesetupdialogcreateprinterdc"></a><a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC
+## <a name="cpagesetupdialogcreateprinterdc"></a><a name="createprinterdc"></a> CPageSetupDialog::CreatePrinterDC
 
 Crée un contexte de périphérique d’impression à partir des structures [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) et [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
@@ -177,11 +178,11 @@ Crée un contexte de périphérique d’impression à partir des structures [DEV
 HDC CreatePrinterDC();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Handle vers le contexte de périphérique (DC) d’imprimante nouvellement créé.
 
-## <a name="cpagesetupdialogdomodal"></a><a name="domodal"></a>CPageSetupDialog ::D oModal
+## <a name="cpagesetupdialogdomodal"></a><a name="domodal"></a> CPageSetupDialog ::D oModal
 
 Appelez cette fonction pour afficher la boîte de dialogue mise en page OLE courante de Windows et autoriser l’utilisateur à sélectionner diverses options d’impression, telles que les marges d’impression, la taille et l’orientation du papier et l’imprimante de destination.
 
@@ -189,7 +190,7 @@ Appelez cette fonction pour afficher la boîte de dialogue mise en page OLE cour
 virtual INT_PTR DoModal();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 IDOK ou IDCANCEL. Si IDCANCEL est retourné, appelez la fonction [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) de Windows pour déterminer si une erreur s’est produite.
 
@@ -209,7 +210,7 @@ Si vous souhaitez propager les paramètres actuels entrés par l’utilisateur, 
 
   Consultez l’exemple de [CPageSetupDialog :: CPageSetupDialog](#cpagesetupdialog).
 
-## <a name="cpagesetupdialoggetdevicename"></a><a name="getdevicename"></a>CPageSetupDialog::GetDeviceName
+## <a name="cpagesetupdialoggetdevicename"></a><a name="getdevicename"></a> CPageSetupDialog::GetDeviceName
 
 Appelez cette fonction après `DoModal` pour récupérer le nom de l’imprimante actuellement sélectionnée.
 
@@ -217,11 +218,11 @@ Appelez cette fonction après `DoModal` pour récupérer le nom de l’imprimant
 CString GetDeviceName() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nom de l’appareil utilisé par l' `CPageSetupDialog` objet.
 
-## <a name="cpagesetupdialoggetdevmode"></a><a name="getdevmode"></a>CPageSetupDialog::GetDevMode
+## <a name="cpagesetupdialoggetdevmode"></a><a name="getdevmode"></a> CPageSetupDialog::GetDevMode
 
 Appelez cette fonction après avoir appelé `DoModal` pour extraire des informations sur le contexte de périphérique d’impression de l' `CPageSetupDialog` objet.
 
@@ -229,11 +230,11 @@ Appelez cette fonction après avoir appelé `DoModal` pour extraire des informat
 LPDEVMODE GetDevMode() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Structure de données [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , qui contient des informations sur l’initialisation de l’appareil et l’environnement d’un pilote d’impression. Vous devez déverrouiller la mémoire prise par cette structure à l’aide de la fonction [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) de Windows, qui est décrite dans la SDK Windows.
 
-## <a name="cpagesetupdialoggetdrivername"></a><a name="getdrivername"></a>CPageSetupDialog :: GetDriverName
+## <a name="cpagesetupdialoggetdrivername"></a><a name="getdrivername"></a> CPageSetupDialog :: GetDriverName
 
 Appelez cette fonction après avoir appelé [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) pour récupérer le nom du pilote de périphérique d’imprimante défini par le système.
 
@@ -241,7 +242,7 @@ Appelez cette fonction après avoir appelé [DoModal](../../mfc/reference/cprint
 CString GetDriverName() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `CString`Spécifiant le nom du pilote défini par le système.
 
@@ -249,7 +250,7 @@ CString GetDriverName() const;
 
 Utilisez un pointeur vers l' `CString` objet retourné par `GetDriverName` comme valeur de `lpszDriverName` dans un appel à [CDC :: CreateDC](../../mfc/reference/cdc-class.md#createdc).
 
-## <a name="cpagesetupdialoggetmargins"></a><a name="getmargins"></a>CPageSetupDialog::GetMargins
+## <a name="cpagesetupdialoggetmargins"></a><a name="getmargins"></a> CPageSetupDialog::GetMargins
 
 Appelez cette fonction après un appel à `DoModal` pour récupérer les marges du pilote de périphérique d’impression.
 
@@ -267,7 +268,7 @@ Pointeur vers une structure [Rect](/windows/win32/api/windef/ns-windef-rect) ou 
 *lpRectMinMargins*<br/>
 Pointeur vers une `RECT` structure ou un `CRect` objet qui décrit (en 1/1000 pouces ou 1/100 mm) les marges d’impression minimales pour l’imprimante actuellement sélectionnée. Transmettez la valeur NULL pour ce paramètre, si vous n’êtes pas intéressé par ce rectangle.
 
-## <a name="cpagesetupdialoggetpapersize"></a><a name="getpapersize"></a>CPageSetupDialog::GetPaperSize
+## <a name="cpagesetupdialoggetpapersize"></a><a name="getpapersize"></a> CPageSetupDialog::GetPaperSize
 
 Appelez cette fonction pour récupérer la taille du papier sélectionné pour l’impression.
 
@@ -275,11 +276,11 @@ Appelez cette fonction pour récupérer la taille du papier sélectionné pour l
 CSize GetPaperSize() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet [CSize](../../atl-mfc-shared/reference/csize-class.md) contenant la taille du papier (en 1/1000 pouces ou 1/100 mm) sélectionné pour l’impression.
 
-## <a name="cpagesetupdialoggetportname"></a><a name="getportname"></a>CPageSetupDialog::GetPortName
+## <a name="cpagesetupdialoggetportname"></a><a name="getportname"></a> CPageSetupDialog::GetPortName
 
 Appelez cette fonction après avoir appelé `DoModal` pour récupérer le nom du port d’imprimante actuellement sélectionné.
 
@@ -287,11 +288,11 @@ Appelez cette fonction après avoir appelé `DoModal` pour récupérer le nom du
 CString GetPortName() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nom du port d’imprimante actuellement sélectionné.
 
-## <a name="cpagesetupdialogm_psd"></a><a name="m_psd"></a>CPageSetupDialog :: m_psd
+## <a name="cpagesetupdialogm_psd"></a><a name="m_psd"></a> CPageSetupDialog :: m_psd
 
 Structure de type PAGESETUPDLG, dont les membres stockent les caractéristiques de l’objet Dialog.
 
@@ -309,7 +310,7 @@ Pour plus d’informations sur la structure [PAGESETUPDLG](/windows/win32/api/co
 
 Consultez l’exemple de [CPageSetupDialog :: CPageSetupDialog](#cpagesetupdialog).
 
-## <a name="cpagesetupdialogondrawpage"></a><a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage
+## <a name="cpagesetupdialogondrawpage"></a><a name="ondrawpage"></a> CPageSetupDialog::OnDrawPage
 
 Appelé par l’infrastructure pour dessiner une image d’écran d’une page imprimée.
 
@@ -343,7 +344,7 @@ Spécifie un message indiquant la zone de la page en cours de dessin. Il peut s'
 *lpRect*<br/>
 Pointeur vers un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [Rect](/windows/win32/api/windef/ns-windef-rect) contenant les coordonnées de la zone de dessin.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si elle est gérée ; Sinon, 0.
 
@@ -357,7 +358,7 @@ Substituez cette fonction pour personnaliser le dessin d’une zone spécifique 
 
 Notez que vous n’avez pas besoin de gérer tous les cas de *nsuivant*. Vous pouvez choisir de gérer un composant de l’image, plusieurs composants de l’image ou la zone entière.
 
-## <a name="cpagesetupdialogpredrawpage"></a><a name="predrawpage"></a>CPageSetupDialog ::P reDrawPage
+## <a name="cpagesetupdialogpredrawpage"></a><a name="predrawpage"></a> CPageSetupDialog ::P reDrawPage
 
 Appelée par l’infrastructure avant de dessiner l’image d’écran d’une page imprimée.
 
@@ -395,7 +396,7 @@ Indique l’orientation du papier ou de l’enveloppe, et si l’imprimante est 
 *pPSD*<br/>
 Pointeur désignant une structure `PAGESETUPDLG`. Pour plus d’informations sur [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw), consultez la SDK Windows.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur différente de zéro si elle est gérée ; Sinon, 0.
 

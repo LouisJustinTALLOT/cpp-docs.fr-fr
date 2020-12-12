@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : énumération de CMFCImagePaintArea :: IMAGE_EDIT_MODE'
 title: CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f28880d108be8fb4f2b14ede1a3cbd3c7dac9f2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265322"
 ---
 # <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
 
@@ -48,7 +49,7 @@ Les `CMFCImagePaintArea` `CMFCImageEditorDialog` classes et utilisent cette énu
 
 Lorsque vous sélectionnez une couleur à partir d’une image à l’aide du mode de dessin IMAGE_EDIT_MODE_COLOR, l’infrastructure définit le mode de dessin actuel sur IMAGE_EDIT_MODE_PEN.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afximagepaintarea. h
 

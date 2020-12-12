@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMFCRibbonStatusBarPane'
 title: CMFCRibbonStatusBarPane, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: bb4e09eabab17061812ed22b2739d06accd57fee
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 4ddbee5a6c44411ef2ac34bff3e07b47c3d950a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264984"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane, classe
 
-La `CMFCRibbonStatusBarPane` classe implémente un élément ruban que vous pouvez ajouter à une barre d’état de ruban.
+La `CMFCRibbonStatusBarPane` classe implémente un élément de ruban que vous pouvez ajouter à une barre d’état de ruban.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,27 +62,27 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Retourne la chaîne qui définit la plus longue chaîne de texte qui peut être affichée dans la vitre sans troncation.|
+|[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Retourne la chaîne qui définit la chaîne de texte la plus longue qui peut être affichée dans le volet sans troncation.|
 |[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Retourne le paramètre actuel de l’alignement du texte.|
 |[CMFCRibbonStatusBarPane::IsAnimation](#isanimation)|Détermine si l’animation est en cours.|
-|[CMFCRibbonStatusBarPane::IsExtended](#isextended)|Détermine si la vitre est située dans la zone étendue de la barre d’état du ruban.|
-|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Overrides [CMFCRibbonButton::OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|
-|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Overrides [CMFCRibbonButton::OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|
-|[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|Définit la plus longue chaîne de texte qui peut être affichée dans le volet sans troncation.|
-|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Assigne à la vitre une liste d’images qui peut être utilisée pour l’animation.|
+|[CMFCRibbonStatusBarPane::IsExtended](#isextended)|Détermine si le volet se trouve dans la zone étendue de la barre d’État du ruban.|
+|[CMFCRibbonStatusBarPane::OnDrawBorder](#ondrawborder)|(Substitue [CMFCRibbonButton :: OnDrawBorder](../../mfc/reference/cmfcribbonbutton-class.md#ondrawborder).)|
+|[CMFCRibbonStatusBarPane::OnFillBackground](#onfillbackground)|(Substitue [CMFCRibbonButton :: OnFillBackground](../../mfc/reference/cmfcribbonbutton-class.md#onfillbackground).)|
+|[CMFCRibbonStatusBarPane::SetAlmostLargeText](#setalmostlargetext)|Définit la chaîne de texte la plus longue qui peut être affichée dans le volet sans troncation.|
+|[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|Affecte au volet une liste d’images qui peut être utilisée pour l’animation.|
 |[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|Définit l’alignement du texte.|
-|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Démarre l’animation qui est assignée à la vitre.|
-|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|Arrête l’animation qui est assignée à la vitre. .|
+|[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|Démarre l’animation qui est assignée au volet.|
+|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|Arrête l’animation qui est assignée au volet. .|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Appelé par le cadre lorsque l’animation qui est attribuée à la vitre s’arrête.|
+|[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Appelée par l’infrastructure lorsque l’animation qui est assignée au volet s’arrête.|
 
 ## <a name="example"></a>Exemple
 
-L'exemple suivant montre comment utiliser les différentes méthodes de la classe `CMFCRibbonStatusBarPane`. L’exemple montre comment `CMFCRibbonStatusBarPane` construire un objet, définir l’alignement du texte de l’étiquette du volet de barre d’état, définir le texte le plus long qui peut être affiché dans le volet de barre d’état sans troncation, attacher à la barre d’état une liste d’image qui peut être utilisée pour l’animation, et commencer l’animation.
+L'exemple suivant montre comment utiliser les différentes méthodes de la classe `CMFCRibbonStatusBarPane`. L’exemple montre comment construire un `CMFCRibbonStatusBarPane` objet, définir l’alignement du texte de l’étiquette du volet barre d’État, définir le texte le plus long qui peut être affiché dans le volet barre d’État sans troncation, attacher au volet barre d’État une liste d’images qui peut être utilisée pour l’animation et démarrer l’animation.
 
 [!code-cpp[NVC_MFC_RibbonApp#2](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbarpane-class_1.cpp)]
 
@@ -97,11 +98,11 @@ L'exemple suivant montre comment utiliser les différentes méthodes de la class
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxribbonstatusbarpane.h
+**En-tête :** afxribbonstatusbarpane. h
 
-## <a name="cmfcribbonstatusbarpanecmfcribbonstatusbarpane"></a><a name="cmfcribbonstatusbarpane"></a>CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane
+## <a name="cmfcribbonstatusbarpanecmfcribbonstatusbarpane"></a><a name="cmfcribbonstatusbarpane"></a> CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane
 
-Construire un objet de vitre dans la barre d’état.
+Construisez un objet Pane dans la barre d’État.
 
 ```
 CMFCRibbonStatusBarPane(
@@ -132,56 +133,56 @@ CMFCRibbonStatusBarPane(
 
 ### <a name="parameters"></a>Paramètres
 
-*nCmdID (en)*<br/>
-[dans] Spécifie l’id de commande de la vitre.
+*nCmdID*<br/>
+dans Spécifie l’ID de commande du volet.
 
 *lpszText*<br/>
-[dans] Spécifie la chaîne de texte à afficher sur le volet.
+dans Spécifie la chaîne de texte à afficher dans le volet.
 
-*bIsStatic (Enstatique)*<br/>
-[dans] Si VRAI, le volet d’état ne peut pas être mis en surbrillance ou sélectionné en cliquant dessus.
+*bIsStatic*<br/>
+dans Si la valeur est TRUE, le volet d’État ne peut pas être mis en surbrillance ou sélectionné en cliquant dessus.
 
-*hIcon (en)*<br/>
-[dans] Spécifie une poignée à une icône à afficher sur la vitre.
+*hIcon*<br/>
+dans Spécifie un handle vers une icône à afficher dans le volet.
 
 *lpszAlmostLargeText*<br/>
-[dans] Spécifie la plus longue chaîne de texte qui peut être affichée par la vitre.
+dans Spécifie la chaîne de texte la plus longue pouvant être affichée par le volet.
 
-*hBmpAnimationList (en)*<br/>
-[dans] Spécifie une poignée à une liste d’images qui est utilisée pour l’animation.
+*hBmpAnimationList*<br/>
+dans Spécifie un handle vers une liste d’images utilisée pour l’animation.
 
 *cxAnimation*<br/>
-[dans] Spécifie la largeur, en pixels, de l’icône dans la liste d’images qui est utilisée pour l’animation.
+dans Spécifie la largeur, en pixels, de l’icône dans la liste d’images utilisée pour l’animation.
 
 *clrTrnsp*<br/>
-[dans] Spécifie la couleur transparente des images dans la liste d’images qui sont utilisées pour l’animation.
+dans Spécifie la couleur transparente des images de la liste d’images utilisées pour l’animation.
 
 *uiAnimationListResID*<br/>
-[dans] Spécifie une pièce d’identité de ressource d’une liste d’images qui est utilisée pour l’animation.
+dans Spécifie un ID de ressource d’une liste d’images utilisée pour l’animation.
 
-## <a name="cmfcribbonstatusbarpanegetalmostlargetext"></a><a name="getalmostlargetext"></a>CMFCRibbonStatusBarPane::GetAlmostLargeText
+## <a name="cmfcribbonstatusbarpanegetalmostlargetext"></a><a name="getalmostlargetext"></a> CMFCRibbonStatusBarPane::GetAlmostLargeText
 
-Obtient la chaîne de texte la plus longue que la vitre de barre d’état peut afficher.
+Obtient la chaîne de texte la plus longue que le volet de barre d’État peut afficher.
 
 ```
 LPCTSTR GetAlmostLargeText() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-La plus longue chaîne de texte que la vitre de barre d’état peut afficher.
+La chaîne de texte la plus longue que le volet de barre d’État peut afficher.
 
-## <a name="cmfcribbonstatusbarpanegettextalign"></a><a name="gettextalign"></a>CMFCRibbonStatusBarPane::GetTextAlign
+## <a name="cmfcribbonstatusbarpanegettextalign"></a><a name="gettextalign"></a> CMFCRibbonStatusBarPane::GetTextAlign
 
-Obtient le réglage actuel de l’alignement de texte de l’étiquette de la barre d’état.
+Obtient le paramètre actuel de l’alignement du texte de l’étiquette du volet de la barre d’État.
 
 ```
 int GetTextAlign() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-L’alignement de texte actuel qui peut être l’un des éléments suivants:
+L’alignement du texte actuel qui peut être l’un des éléments suivants :
 
 - TA_LEFT
 
@@ -189,7 +190,7 @@ L’alignement de texte actuel qui peut être l’un des éléments suivants:
 
 - TA_RIGHT.
 
-## <a name="cmfcribbonstatusbarpaneisanimation"></a><a name="isanimation"></a>CMFCRibbonStatusBarPane::IsAnimation
+## <a name="cmfcribbonstatusbarpaneisanimation"></a><a name="isanimation"></a> CMFCRibbonStatusBarPane::IsAnimation
 
 Détermine si l’animation est en cours.
 
@@ -197,25 +198,25 @@ Détermine si l’animation est en cours.
 BOOL IsAnimation() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si l’animation est en cours; FALSE autrement.
+TRUE si l’animation est en cours ; FALSe dans le cas contraire.
 
-## <a name="cmfcribbonstatusbarpaneisextended"></a><a name="isextended"></a>CMFCRibbonStatusBarPane::IsExtended
+## <a name="cmfcribbonstatusbarpaneisextended"></a><a name="isextended"></a> CMFCRibbonStatusBarPane::IsExtended
 
-Déterminez si la vitre est située dans la zone étendue de la barre d’état du ruban.
+Déterminez si le volet se trouve dans la zone étendue de la barre d’État du ruban.
 
 ```
 BOOL IsExtended() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si la vitre est sur la zone étendue de barre d’état. Sinon, la valeur est FALSE.
+TRUE si le volet est sur la zone étendue de la barre d’État. Sinon, la valeur est FALSE.
 
-## <a name="cmfcribbonstatusbarpaneondrawborder"></a><a name="ondrawborder"></a>CMFCRibbonStatusBarPane::OnDrawBorder
+## <a name="cmfcribbonstatusbarpaneondrawborder"></a><a name="ondrawborder"></a> CMFCRibbonStatusBarPane::OnDrawBorder
 
-Pour plus de détails, consultez le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
+Pour plus d’informations, consultez le code source situé dans le dossier **VC \\ ATLMFC \\ src \\ MFC** de votre installation de Visual Studio.
 
 ```
 virtual void OnDrawBorder(CDC*);
@@ -223,13 +224,13 @@ virtual void OnDrawBorder(CDC*);
 
 ### <a name="parameters"></a>Paramètres
 
-[dans] *&#42;des CDC*<br/>
+dans *&#42;* de capture de données modifiées<br/>
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfcribbonstatusbarpaneonfillbackground"></a><a name="onfillbackground"></a>CMFCRibbonStatusBarPane::OnFillBackground
+## <a name="cmfcribbonstatusbarpaneonfillbackground"></a><a name="onfillbackground"></a> CMFCRibbonStatusBarPane::OnFillBackground
 
-Pour plus de détails, consultez le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
+Pour plus d’informations, consultez le code source situé dans le dossier **VC \\ ATLMFC \\ src \\ MFC** de votre installation de Visual Studio.
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -237,15 +238,15 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Paramètres
 
-[dans] *pDC (pDC)*<br/>
+dans *contrôleur de domaine principal*<br/>
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cmfcribbonstatusbarpaneonfinishanimation"></a><a name="onfinishanimation"></a>CMFCRibbonStatusBarPane::OnFinishAnimation
+## <a name="cmfcribbonstatusbarpaneonfinishanimation"></a><a name="onfinishanimation"></a> CMFCRibbonStatusBarPane::OnFinishAnimation
 
-Framework appelle cette méthode lorsque l’animation qui est attribuée à la vitre se termine.
+L’infrastructure appelle cette méthode lorsque l’animation qui est assignée au volet se termine.
 
 ```
 virtual void OnFinishAnimation();
@@ -253,11 +254,11 @@ virtual void OnFinishAnimation();
 
 ### <a name="remarks"></a>Notes
 
-`StopAnimation`méthode appelle `OnFinishAnimation` la méthode, que vous pouvez utiliser pour nettoyer les données lorsque l’animation se termine.
+`StopAnimation` la méthode appelle la `OnFinishAnimation` méthode, que vous pouvez utiliser pour nettoyer les données lorsque l’animation se termine.
 
-## <a name="cmfcribbonstatusbarpanesetalmostlargetext"></a><a name="setalmostlargetext"></a>CMFCRibbonStatusBarPane::SetAlmostLargeText
+## <a name="cmfcribbonstatusbarpanesetalmostlargetext"></a><a name="setalmostlargetext"></a> CMFCRibbonStatusBarPane::SetAlmostLargeText
 
-Définissez le texte le plus long qui peut être affiché dans le volet de barre d’état sans troncation.
+Définissez le texte le plus long qui peut être affiché dans le volet de barre d’État sans troncation.
 
 ```cpp
 void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
@@ -266,15 +267,15 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ### <a name="parameters"></a>Paramètres
 
 *lpszAlmostLargeText*<br/>
-[dans] Spécifie la plus longue chaîne qui peut être affichée sur le volet de barre d’état sans troncation.
+dans Spécifie la chaîne la plus longue pouvant être affichée dans le volet de barre d’État sans troncation.
 
 ### <a name="remarks"></a>Notes
 
-La bibliothèque calcule la taille du texte qui *lpszAlmostLargeText* spécifie et resize le volet en conséquence. Le texte sera tronqué s’il ne rentre toujours pas dans la vitre.
+La bibliothèque calcule la taille du texte que *lpszAlmostLargeText* spécifie et redimensionne le volet en conséquence. Le texte est tronqué s’il ne tient pas dans le volet.
 
-## <a name="cmfcribbonstatusbarpanesetanimationlist"></a><a name="setanimationlist"></a>CMFCRibbonStatusBarPane::SetAnimationList
+## <a name="cmfcribbonstatusbarpanesetanimationlist"></a><a name="setanimationlist"></a> CMFCRibbonStatusBarPane::SetAnimationList
 
-Attache à la barre d’état une liste d’images qui peut être utilisée pour l’animation.
+Joint au volet de la barre d’État une liste d’images qui peut être utilisée pour l’animation.
 
 ```cpp
 void SetAnimationList(
@@ -290,25 +291,25 @@ BOOL SetAnimationList(
 
 ### <a name="parameters"></a>Paramètres
 
-*hBmpAnimationList (en)*<br/>
-[dans] Spécifie une poignée à une liste d’images.
+*hBmpAnimationList*<br/>
+dans Spécifie un handle vers une liste d’images.
 
 *cxAnimation*<br/>
-[dans] Spécifie la largeur, en pixels, du cadre dans la liste d’images.
+dans Spécifie la largeur, en pixels, du cadre dans la liste d’images.
 
 *clrTransp*<br/>
-[dans] Spécifie la couleur transparente de la liste d’images.
+dans Spécifie la couleur transparente de la liste d’images.
 
 *uiAnimationListResID*<br/>
-[dans] Spécifie l’ID de ressources de la liste d’images.
+dans Spécifie l’ID de ressource de la liste d’images.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-VRAI si la liste d’images est jointe avec succès à la barre d’état; FALSE autrement.
+TRUE si la liste d’images est correctement attachée au volet de la barre d’État ; FALSe dans le cas contraire.
 
-## <a name="cmfcribbonstatusbarpanesettextalign"></a><a name="settextalign"></a>CMFCRibbonStatusBarPane::SetTextAlign
+## <a name="cmfcribbonstatusbarpanesettextalign"></a><a name="settextalign"></a> CMFCRibbonStatusBarPane::SetTextAlign
 
-Définit l’alignement de texte de l’étiquette de la barre d’état.
+Définit l’alignement du texte de l’étiquette du volet de la barre d’État.
 
 ```cpp
 void SetTextAlign(int nAlign);
@@ -317,21 +318,21 @@ void SetTextAlign(int nAlign);
 ### <a name="parameters"></a>Paramètres
 
 *nAlign*<br/>
-[dans] Spécifie l’alignement du texte.
+dans Spécifie l’alignement du texte.
 
 ### <a name="remarks"></a>Notes
 
-*nAlign* peut avoir l’une des valeurs suivantes :
+*nAlign* peut avoir l’une des valeurs suivantes :
 
-- TA_LEFT : alignement gauche
+- TA_LEFT : alignement à gauche
 
-- TA_CENTER : alignement central
+- TA_CENTER : alignement centré
 
-- TA_RIGHT : alignement droit
+- TA_RIGHT : alignement à droite
 
-## <a name="cmfcribbonstatusbarpanestartanimation"></a><a name="startanimation"></a>CMFCRibbonStatusBarPane::StartAnimation
+## <a name="cmfcribbonstatusbarpanestartanimation"></a><a name="startanimation"></a> CMFCRibbonStatusBarPane::StartAnimation
 
-Démarre l’animation que vous attribuez à la vitre.
+Démarre l’animation que vous affectez au volet.
 
 ```cpp
 void StartAnimation(
@@ -341,19 +342,19 @@ void StartAnimation(
 
 ### <a name="parameters"></a>Paramètres
 
-*nFrameDelay (en)*<br/>
-[dans] Spécifie le taux d’image d’animation, en millisecondes.
+*nFrameDelay*<br/>
+dans Spécifie la fréquence d’images d’animation, en millisecondes.
 
 *nDuration*<br/>
-[dans] Précise combien de temps pour jouer de l’animation, en millisecondes. Utilisez -1 pour une boucle infinie.
+dans Spécifie la durée pendant laquelle l’animation doit être lue, en millisecondes. Utilisez-1 pour une boucle infinie.
 
 ### <a name="remarks"></a>Notes
 
-Vous devez spécifier une poignée `StartAnimation` à `SetAnimationList`une liste d’images avant d’appeler en utilisant .
+Vous devez spécifier un handle vers une liste d’images avant d’appeler `StartAnimation` à l’aide de `SetAnimationList` .
 
-## <a name="cmfcribbonstatusbarpanestopanimation"></a><a name="stopanimation"></a>CMFCRibbonStatusBarPane::StopAnimation
+## <a name="cmfcribbonstatusbarpanestopanimation"></a><a name="stopanimation"></a> CMFCRibbonStatusBarPane::StopAnimation
 
-Arrête l’animation que vous avez assignée à la vitre de barre d’état.
+Arrête l’animation que vous avez assignée au volet barre d’État.
 
 ```cpp
 void StopAnimation();
