@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX'
 title: 'Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: b32dbd8e1777f11998085a90e8851b25e4298e1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb6a6ea52dee7aaf1fcb4c9f15db89cfa5f25deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206082"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX
 
@@ -31,7 +32,7 @@ L’une des utilisations les plus puissantes des contrôles ActiveX est la liais
 Cet article couvre le côté contrôle de votre tâche. L’implémentation des interactions de liaison de données avec la base de données est la responsabilité du conteneur de contrôle. La façon dont vous gérez les interactions de la base de données dans votre conteneur dépasse le cadre de cette documentation. La façon dont vous préparez le contrôle pour la liaison de données est expliquée dans le reste de cet article.
 
 ![Diagramme conceptuel d’un contrôle lié à un&#45;de données](../mfc/media/vc374v1.gif "Diagramme conceptuel d’un contrôle lié à un&#45;de données") <br/>
-Diagramme conceptuel d’un contrôle lié aux données
+Diagramme conceptuel d’un contrôle Data-Bound
 
 La `COleControl` classe fournit deux fonctions membres qui rendent la liaison de données facile à implémenter. La première fonction, [BoundPropertyRequestEdit](reference/colecontrol-class.md#boundpropertyrequestedit), est utilisée pour demander l’autorisation de modifier la valeur de la propriété. [BoundPropertyChanged](reference/colecontrol-class.md#boundpropertychanged), la deuxième fonction, est appelée une fois que la valeur de la propriété a été modifiée avec succès.
 
@@ -41,7 +42,7 @@ Cet article aborde les thèmes suivants :
 
 - [Création d’une méthode d’extraction/définition pouvant être liée](#vchowcreatingbindablegetsetmethod)
 
-## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a>Création d’une propriété stock pouvant être liée
+## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a> Création d’une propriété stock pouvant être liée
 
 Il est possible de créer une propriété stock liée aux données, bien qu’il soit plus probable que vous souhaitiez une [méthode d’extraction/définition pouvant être liée](#vchowcreatingbindablegetsetmethod).
 
@@ -70,7 +71,7 @@ Il est possible de créer une propriété stock liée aux données, bien qu’il
 
 Vous pouvez maintenant générer le projet, ce qui permet d’inscrire le contrôle. Lorsque vous insérez le contrôle dans une boîte de dialogue, les propriétés du **champ de données** et de la **source de données** ont été ajoutées. vous pouvez maintenant sélectionner une source de données et un champ à afficher dans le contrôle.
 
-## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a>Création d’une méthode d’extraction/définition pouvant être liée
+## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a> Création d’une méthode d’extraction/définition pouvant être liée
 
 Outre une méthode d’extraction/définition liée aux données, vous pouvez également créer une [propriété stock pouvant être liée](#vchowcreatingbindablestockproperty).
 
@@ -97,7 +98,7 @@ Outre une méthode d’extraction/définition liée aux données, vous pouvez é
 
 1. Pour **Type d’implémentation**, cliquez sur **Méthodes Get/Set**.
 
-1. Activez les cases à cocher suivantes à partir de l’onglet Attributs IDL : **Bindable**, **modification**, **displaybind**et **defaultbind** pour ajouter les attributs à la définition de propriété dans le du projet. Fichier IDL. Ces attributs rendent le contrôle visible pour l’utilisateur et font de la propriété stock la propriété pouvant être liée par défaut.
+1. Activez les cases à cocher suivantes à partir de l’onglet Attributs IDL : **Bindable**, **modification**, **displaybind** et **defaultbind** pour ajouter les attributs à la définition de propriété dans le du projet. Fichier IDL. Ces attributs rendent le contrôle visible pour l’utilisateur et font de la propriété stock la propriété pouvant être liée par défaut.
 
 1. Cliquez sur **Terminer**.
 

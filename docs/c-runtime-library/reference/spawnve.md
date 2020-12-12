@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : spawnve'
 title: spawnve
 ms.date: 12/16/2019
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - spawnve function
 ms.assetid: 39507df8-f15f-45fb-b2b6-01359272b147
-ms.openlocfilehash: 0b4171a4e10eb390f901c1246d3a2207da2513c4
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 41b0b82152130c8c632a54579ce94ff5beb2b9b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345535"
 ---
 # <a name="spawnve"></a>spawnve
 

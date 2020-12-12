@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : &lt; nouveaux &gt; typedefs'
 title: '&lt;new&gt;, typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
-ms.openlocfilehash: 30bd84a1d69d3d8f24cd36450a18b23b92c3c2c6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0c8e73f10b8429d2c55805c017dded98843af9f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338168"
 ---
 # <a name="ltnewgt-typedefs"></a>&lt;new&gt;, typedefs
 
-## <a name="hardware_constructive_interference_size"></a><a name="hardware_constructive_interference_size"></a>hardware_constructive_interference_size
+## <a name="hardware_constructive_interference_size"></a><a name="hardware_constructive_interference_size"></a> hardware_constructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_constructive_interference_size = implementation-defined;
@@ -21,7 +22,7 @@ inline constexpr size_t hardware_constructive_interference_size = implementation
 
 ### <a name="remarks"></a>Notes
 
-Ce nombre correspond à la taille maximale recommandée de la mémoire contiguë occupée par deux objets accessibles avec la localité temporelle par des threads simultanés. Elle doit être au moins `alignof(max_align_t)`.
+Ce nombre correspond à la taille maximale recommandée de la mémoire contiguë occupée par deux objets accessibles avec la localité temporelle par des threads simultanés. Elle doit être au moins égale à `alignof(max_align_t)` .
 
 ### <a name="example"></a>Exemple
 
@@ -40,7 +41,7 @@ struct kennel {
 static_assert(sizeof(together) <= hardware_constructive_interference_size);
 ```
 
-## <a name="hardware_destructive_interference_size"></a><a name="hardware_destructive_interference_size"></a>hardware_destructive_interference_size
+## <a name="hardware_destructive_interference_size"></a><a name="hardware_destructive_interference_size"></a> hardware_destructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_destructive_interference_size = implementation-defined;
@@ -48,7 +49,7 @@ inline constexpr size_t hardware_destructive_interference_size = implementation-
 
 ### <a name="remarks"></a>Notes
 
-Ce nombre est le décalage minimal recommandé entre deux objets faisant l’objet d’un accès simultané pour éviter une dégradation des performances supplémentaire en raison de la contention introduite par l’implémentation. Elle doit être au moins `alignof(max_align_t)`.
+Ce nombre est le décalage minimal recommandé entre deux objets faisant l’objet d’un accès simultané pour éviter une dégradation des performances supplémentaire en raison de la contention introduite par l’implémentation. Elle doit être au moins égale à `alignof(max_align_t)` .
 
 ### <a name="example"></a>Exemple
 
@@ -59,7 +60,7 @@ struct keep_apart {
 };
 ```
 
-## <a name="new_handler"></a><a name="new_handler"></a>new_handler
+## <a name="new_handler"></a><a name="new_handler"></a> new_handler
 
 Le type pointe vers une fonction pouvant être utilisée comme gestionnaire new.
 
@@ -69,8 +70,8 @@ typedef void (*new_handler)();
 
 ### <a name="remarks"></a>Notes
 
-Ce type de fonction de gestionnaire est appelé par **opérateur New** ou `operator new[]` lorsqu’ils ne peuvent pas répondre à une demande de stockage supplémentaire.
+Ce type de fonction de gestionnaire est appelé par l' **opérateur New** ou `operator new[]` lorsqu’il ne peut pas répondre à une demande de stockage supplémentaire.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple utilisant [ comme valeur de retour, consultez ](../standard-library/new-functions.md#set_new_handler)set_new_handler`new_handler`.
+Pour obtenir un exemple utilisant `new_handler` comme valeur de retour, consultez [set_new_handler](../standard-library/new-functions.md#set_new_handler).

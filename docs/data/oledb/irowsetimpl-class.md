@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe IRowsetImpl'
 title: IRowsetImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -88,12 +89,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 27a07d10256147d3c3ed383744ba1ee5fdfd06a1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 45b34d0404383bc425b0b4938782b2a34e725808
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317413"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl, classe
 
@@ -126,7 +127,7 @@ Unité de stockage pour le `HROW` .
 *MapClass*<br/>
 Unité de stockage pour tous les handles de ligne détenus par le fournisseur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -157,7 +158,7 @@ Unité de stockage pour tous les handles de ligne détenus par le fournisseur.
 |[m_iRowset](#irowset)|Index de l’ensemble de lignes, représentant le curseur.|
 |[m_rgRowHandles](#rgrowhandles)|Liste de handles de ligne.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) est l’interface de l’ensemble de lignes de base.
 
@@ -201,7 +202,7 @@ Référence retournée à l’utilisateur indiquant le nombre de lignes créées
 *rgRows*<br/>
 Tableau d’objets `HROW` retournés à l’appelant avec les descripteurs de ligne nouvellement créés.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si la ligne existe, cette méthode appelle [AddRefRows](#addrefrows) et retourne. Dans le cas contraire, il alloue une nouvelle instance de la variable de modèle RowClass et l’ajoute à [m_rgRowHandles](#rgrowhandles).
 
@@ -227,7 +228,7 @@ Certains paramètres correspondent à *OLE DB paramètres de référence du prog
 |--------------------------------|------------------------------------------------|
 |*pDstData*|*pData*|
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Gère également la conversion de données à l’aide de la DLL de conversion de données OLE DB.
 
@@ -340,7 +341,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 Consultez [IRowset :: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 La position de l’ensemble de lignes n’est pas définie tant que `GetNextRow` n’est pas appelé. Vous pouvez revenir en arrière dans un rowet en appelant `RestartPosition` , puis en extrayant ou en faisant défiler vers l’arrière.
 
@@ -371,7 +372,7 @@ Colonne pour laquelle l’État est défini.
 
 Valeur HRESULT standard.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le fournisseur remplace cette fonction pour fournir un traitement spécial pour DBSTATUS_S_ISNULL et DBSTATUS_S_DEFAULT.
 
@@ -421,7 +422,7 @@ Si le consommateur appelle [GetNextRows](#getnextrows) avec un négatif `lOffset
 
 Index de l’ensemble de lignes, représentant le curseur.
 
-### <a name="syntax"></a>Syntax
+### <a name="syntax"></a>Syntaxe
 
 ```cpp
 DBROWOFFSET m_iRowset;

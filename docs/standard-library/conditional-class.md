@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe conditionnelle'
 title: conditional, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: 03ec6248ba3361622ad061ac3854a60995148f4a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8edbd7341598957ecbe8b0822a832973f0e06a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228373"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324969"
 ---
 # <a name="conditional-class"></a>conditional, classe
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK1306'
 title: Erreur des outils Éditeur de liens LNK1306
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1306
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
-ms.openlocfilehash: ddaa8797e0cf8ff617408aedc770b21cc656cec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa6386da7c836eea8365d8a4ffde0bbd80d0fa81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160456"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193654"
 ---
 # <a name="linker-tools-error-lnk1306"></a>Erreur des outils Éditeur de liens LNK1306
 
-> Fonction de point d’entrée DLL ne peut pas être gérée ; compilez en natif
+> La fonction de point d’entrée DLL ne peut pas être gérée ; compiler en natif
 
-`DllMain` ne peut pas être compilée en langage MSIL ; Il doit être compilé en natif.
+`DllMain` ne peut pas être compilé en MSIL ; elle doit être compilée en natif.
 
 Pour résoudre ce problème,
 
 - Compilez le fichier qui contient le point d’entrée sans **/CLR**.
 
-- Placez le point d’entrée dans un `#pragma unmanaged` section.
+- Placez le point d’entrée dans une `#pragma unmanaged` section.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
-- [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/CLR (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [managed, unmanaged](../../preprocessor/managed-unmanaged.md)
+- [managé, non managé](../../preprocessor/managed-unmanaged.md)
 
 - [Initialisation d’assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md)
 
@@ -37,7 +38,7 @@ Pour plus d'informations, voir :
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur LNK1306.
+L’exemple suivant génère l’LNK1306.
 
 ```cpp
 // LNK1306.cpp
@@ -49,7 +50,7 @@ int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
 }
 ```
 
-Pour résoudre ce problème, n’utilisez pas l’option/CLR pour compiler ce fichier, ou utiliser un `#pragma` directive pour placer la définition de point d’entrée dans une section non managée comme indiqué dans cet exemple :
+Pour résoudre ce problème, n’utilisez pas l’option/CLR pour compiler ce fichier, ou utilisez une `#pragma` directive pour placer la définition du point d’entrée dans une section non managée, comme illustré dans cet exemple :
 
 ```cpp
 // LNK1306fix.cpp

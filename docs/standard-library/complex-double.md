@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : complexe &lt; double&gt;'
 title: complex&lt;double&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: b9bf4780dd78800653804762301b36ff6bb30a92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9238e71fcdd70576276eb1ba429a48eeec954601
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230076"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325034"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -45,7 +46,7 @@ Valeur de type **`double`** pour la partie imaginaire du nombre complexe en cour
 *complexNum*\
 Nombre complexe de type **`float`** ou de type **`long double`** dont les parties réelle et imaginaire sont utilisées pour initialiser un nombre complexe de type **`double`** en cours de construction.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Nombre complexe de type **`double`** .
 
@@ -112,7 +113,7 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête**:\<complex>
+**En-tête**: \<complex>
 
 **Espace de noms :** std
 

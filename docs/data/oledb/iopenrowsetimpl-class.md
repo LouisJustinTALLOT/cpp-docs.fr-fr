@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Iopenrowsetimpl,'
 title: IOpenRowsetImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: a3c94c75db21218aae1205bf9c5c379ab772a7f8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4ec7f8ebdab132854172f7e5f4dff7387e46717f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843714"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317426"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl, classe
 
@@ -36,7 +37,7 @@ class IOpenRowsetImpl : public IOpenRowset
 *SessionClass*<br/>
 Votre classe, dérivée de `IOpenRowsetImpl` .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -103,7 +104,7 @@ Consultez [IOpenRowset :: OpenRowset](/previous-versions/windows/desktop/ms7167
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est introuvable dans ATLDB. Manutention. Elle est créée par l’Assistant objet ATL lorsque vous créez un fournisseur.
+Cette méthode est introuvable dans ATLDB. H. Elle est créée par l’Assistant objet ATL lorsque vous créez un fournisseur.
 
 ## <a name="see-also"></a>Voir aussi
 

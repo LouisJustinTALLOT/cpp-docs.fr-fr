@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : &lt; mutex&gt;'
 title: '&lt;mutex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b04b62629253e725e650009f373702f907b9116a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338257"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -18,7 +19,7 @@ Incluez l’en-tête standard \<mutex> pour définir les classes `mutex` , `recu
 > [!WARNING]
 > À compter de Visual Studio 2015, les types de synchronisation de la bibliothèque standard C++ sont basés sur les primitives de synchronisation Windows et n’utilisent plus ConcRT (sauf si la plateforme cible est Windows XP). Les types définis dans \<mutex> ne doivent pas être utilisés avec des fonctions ou types concrt.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<mutex>
 
@@ -61,7 +62,7 @@ Un type mutex est également appelé *type verrouillable*. S’il ne fournit pas
 |[Classe timed_mutex](../standard-library/timed-mutex-class.md)|Représente un type mutex limité dans le temps. Utilisez les objets de ce type pour appliquer une exclusion mutuelle (mutex) dont le blocage est limité dans le temps au sein d'un programme.|
 |[Classe unique_lock](../standard-library/unique-lock-class.md)|Représente un modèle qui peut être instancié pour créer des objets qui gèrent le verrouillage et le déverrouillage d'un `mutex`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

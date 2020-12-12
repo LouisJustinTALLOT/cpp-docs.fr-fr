@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : objets de données et sources de données : création et destruction'
 title: 'Objets de données et sources de données : création et destruction'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: 8d4edc93594bf453c61e03dca7e3117aefaa6c42
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a19c7c2125c7d591bc4df4b3f01553a54de6a18b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206186"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objets de données et sources de données : création et destruction
 
@@ -34,7 +35,7 @@ Comme expliqué dans l’article [objets de données et sources de données (OLE
 
 - [Destruction de sources de données](#_core_destroying_data_sources)
 
-## <a name="creating-data-objects"></a><a name="_core_creating_data_objects"></a>Création d’objets de données
+## <a name="creating-data-objects"></a><a name="_core_creating_data_objects"></a> Création d’objets de données
 
 Les objets de données sont utilisés par l'application de destination : le client ou le serveur. Un objet de données dans l'application de destination est une extrémité d'une connexion entre l'application source et l'application de destination. Un objet de données dans l'application de destination permet d'accéder et d'interagir avec les données de la source de données.
 
@@ -44,13 +45,13 @@ Dans le cas d’un glissement-dépôt, vous n’avez pas besoin de créer un obj
 
 Si l'application effectue une opération de collage ou de collage spécial, vous devrez créer un objet `COleDataObject` et appeler ses fonctions membres `AttachClipboard`. Cette opération permet d'associer l'objet de données aux données dans le Presse-papiers. Vous pouvez ensuite utiliser cet objet de données dans votre fonction de collage.
 
-## <a name="destroying-data-objects"></a><a name="_core_destroying_data_objects"></a>Destruction d’objets de données
+## <a name="destroying-data-objects"></a><a name="_core_destroying_data_objects"></a> Destruction d’objets de données
 
 Si vous suivez le schéma décrit dans [création d’objets de données](#_core_creating_data_objects), la destruction des objets de données est un aspect trivial des transferts de données. L'objet de données créé dans votre fonction de collage est détruit par MFC lorsque votre fonction de collage retourne son résultat.
 
 Si vous suivez une autre méthode de gestion d'opérations de collage, assurez-vous que l'objet de données est détruit une fois l'opération de collage terminée. Tant que l’objet de données est détruit, il est impossible pour toute application de copier avec succès des données dans le Presse-papiers.
 
-## <a name="creating-data-sources"></a><a name="_core_creating_data_sources"></a>Création de sources de données
+## <a name="creating-data-sources"></a><a name="_core_creating_data_sources"></a> Création de sources de données
 
 Les sources de données sont utilisées par la source de transfert de données, qui peut être le côté client ou le côté serveur du transfert des données. Une source de données dans l'application source est une extrémité d'une connexion entre l'application source et l'application de destination. Un objet de données dans l'application de destination est utilisé pour interagir avec les données de la source de données.
 
@@ -72,7 +73,7 @@ Ce scénario est implémenté par les exemples OLE MFC [OCLIENT](../overview/vis
 
 Une autre situation dans laquelle vous pouvez créer un objet `COleDataSource` se produit si vous modifiez le comportement par défaut d’une opération Glisser-déposer. Pour plus d’informations, consultez l’article [glisser-déplacer OLE : personnaliser l’article glisser-déplacer](drag-and-drop-ole.md#customize-drag-and-drop) .
 
-## <a name="destroying-data-sources"></a><a name="_core_destroying_data_sources"></a>Destruction de sources de données
+## <a name="destroying-data-sources"></a><a name="_core_destroying_data_sources"></a> Destruction de sources de données
 
 Les sources de données doivent être détruites par l’application actuellement chargée de ces derniers. Dans les situations où vous confiez la source de données à OLE, par exemple en appelant [COleDataSource ::D odragdrop](reference/coledatasource-class.md#dodragdrop), vous devez appeler `pDataSrc->InternalRelease` . Par exemple :
 

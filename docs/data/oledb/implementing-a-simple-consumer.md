@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : implémentation d’un consommateur simple'
 title: Implémentation d'un consommateur simple
 ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 2d59989f8afd180b39153eed1ad0a20435aad9d4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 9670b14d64a38cd8cfc6122386f69296838fb378
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923911"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317439"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implémentation d'un consommateur simple
 
@@ -21,7 +22,7 @@ L’Assistant Consommateur OLE DB ATL n’est pas disponible dans Visual Studio 
 
 ::: moniker range="<=msvc-150"
 
-Les rubriques suivantes montrent comment modifier les fichiers créés par l’ **Assistant Application MFC** et l’ **Assistant Consommateur OLE DB ATL** pour créer un consommateur simple. Cet exemple comporte les parties suivantes :
+Les rubriques suivantes montrent comment modifier les fichiers créés par l’**Assistant Application MFC** et l’**Assistant Consommateur OLE DB ATL** pour créer un consommateur simple. Cet exemple comporte les parties suivantes :
 
 - [Récupération des données avec le consommateur](#retrieve) montre comment implémenter le code dans le consommateur qui lit toutes les données, ligne par ligne, à partir d’une table de base de données.
 

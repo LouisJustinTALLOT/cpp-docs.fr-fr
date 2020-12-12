@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : surcharge de fonction'
 title: Surcharge de fonction
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: 0eaaf5c8fd18d4d00652107a5a2071b2f5774d7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59fb43c849518251170b6f84a74cd8cbc2e2ed22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232311"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345548"
 ---
 # <a name="function-overloading"></a>Surcharge de fonction
 
 C++ permet la spécification de plusieurs fonctions du même nom dans la même portée. Ces fonctions sont appelées fonctions *surchargées* . Les fonctions surchargées vous permettent de fournir différentes sémantiques pour une fonction, selon les types et le nombre d’arguments.
 
-Par exemple, une `print` fonction qui accepte un `std::string` argument peut exécuter des tâches très différentes de celles qui acceptent un argument de type **`double`** . La surcharge vous évite d’avoir à utiliser des noms tels que `print_string` ou `print_double` . Au moment de la compilation, le compilateur choisit la surcharge à utiliser en fonction du type d’arguments passé par l’appelant.  Si vous appelez `print(42.0)` , la `void print(double d)` fonction sera appelée. Si vous appelez `print("hello world")` , la `void print(std::string)` surcharge sera appelée.
+Par exemple, une `print` fonction qui accepte un `std::string`  argument peut exécuter des tâches très différentes de celles qui acceptent un argument de type **`double`** . La surcharge vous évite d’avoir à utiliser des noms tels que `print_string` ou `print_double` . Au moment de la compilation, le compilateur choisit la surcharge à utiliser en fonction du type d’arguments passé par l’appelant.  Si vous appelez `print(42.0)` , la `void print(double d)` fonction sera appelée. Si vous appelez `print("hello world")` , la `void print(std::string)` surcharge sera appelée.
 
 Vous pouvez surcharger les fonctions membres et les fonctions non-membres. Le tableau suivant montre les parties qu'une déclaration de fonction C++ utilise pour différencier les groupes de fonctions portant le même nom dans la même portée.
 
@@ -31,7 +32,7 @@ Vous pouvez surcharger les fonctions membres et les fonctions non-membres. Le ta
 |Présence ou absence de points de suspension|Oui|
 |Utilisation de **`typedef`** noms|Non|
 |Limites de tableau non spécifiées|Non|
-|**`const`** ni**`volatile`**|Oui, quand elle est appliquée à la fonction entière|
+|**`const`** ou **`volatile`**|Oui, quand elle est appliquée à la fonction entière|
 |[Qualificateurs Ref](#ref-qualifiers)|Oui|
 
 ## <a name="example"></a>Exemple
@@ -155,7 +156,7 @@ F1 = Add( F2, 23 );
 
 L'instruction précédente génère deux ensembles :
 
-|Ensemble 1 : Fonctions candidates qui comportent le premier argument de type fraction|Set 2 : fonctions candidates dont le deuxième argument peut être converti en type**`int`**|
+|Ensemble 1 : Fonctions candidates qui comportent le premier argument de type fraction|Set 2 : fonctions candidates dont le deuxième argument peut être converti en type **`int`**|
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 |Variant 1|Variante 1 ( **`int`** peut être convertie en **`long`** utilisation d’une conversion standard)|
 |Variant 3||
@@ -170,7 +171,7 @@ F1 = Add( 3, 6 );
 
 L'appel de fonction précédent génère les ensembles suivants :
 
-|Set 1 : fonctions candidates qui ont le premier argument de type**`int`**|Set 2 : fonctions candidates qui ont un deuxième argument de type**`int`**|
+|Set 1 : fonctions candidates qui ont le premier argument de type **`int`**|Set 2 : fonctions candidates qui ont un deuxième argument de type **`int`**|
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
 |Variante 2 ( **`int`** peut être convertie en **`long`** utilisation d’une conversion standard)|Variante 1 ( **`int`** peut être convertie en **`long`** utilisation d’une conversion standard)|
 
@@ -398,7 +399,7 @@ obj.name
 
 L'opérande gauche des opérateurs (pointeur vers membre) `->*` et `.*` est traité de la même façon que les opérateurs (sélection de membres) `.` et `->` en ce qui concerne la correspondance d'arguments.
 
-## <a name="ref-qualifiers-on-member-functions"></a><a name="ref-qualifiers"></a>Qualificateurs Ref sur les fonctions membres
+## <a name="ref-qualifiers-on-member-functions"></a><a name="ref-qualifiers"></a> Qualificateurs Ref sur les fonctions membres
 
 Les qualificateurs de référence permettent de surcharger une fonction membre sur la base du fait que l’objet pointé par **`this`** est une rvalue ou une lvalue.  Cette fonctionnalité peut être utilisée pour éviter les opérations de copie inutiles dans les scénarios où vous choisissez de ne pas fournir un accès de pointeur aux données. Par exemple, supposons que `C` la classe initialise des données dans son constructeur et retourne une copie de ces données dans la fonction membre `get_data()` . Si un objet de type `C` est une rvalue qui va être détruite, le compilateur choisit la `get_data() &&` surcharge, qui déplace les données au lieu de les copier.
 
@@ -462,7 +463,7 @@ Vous pouvez surcharger **operator new** uniquement sur la base du type de retour
     void Print( PSTR szToPrint );
     ```
 
-   Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR`est un synonyme de type `char *` . Dans la portée du membre, ce code génère une erreur.
+   Les deux fonctions précédentes ont des listes d’arguments identiques. `PSTR` est un synonyme de type `char *` . Dans la portée du membre, ce code génère une erreur.
 
 - Les types énumérés sont des types distincts et peuvent être utilisés pour établir une distinction entre les fonctions surchargées.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : contrôles ActiveX MFC : pages de propriétés'
 title: 'Contrôles ActiveX MFC : pages de propriétés'
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 3d22085daa503a7c778111718445920f98b98a89
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 40267857b12b2f23c07f03d0ee77b2ae8e6bf1a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206147"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Contrôles ActiveX MFC : pages de propriétés
 
@@ -45,13 +46,13 @@ Cet article aborde les rubriques relatives à l’utilisation des pages de propr
 
 Pour plus d’informations sur l’utilisation des pages de propriétés dans un contrôle ActiveX, consultez les articles suivants :
 
-- [Contrôles ActiveX MFC : ajout d'une page de propriétés personnalisées](mfc-activex-controls-adding-another-custom-property-page.md)
+- [Contrôles ActiveX MFC : ajout d’une autre page de propriétés personnalisée](mfc-activex-controls-adding-another-custom-property-page.md)
 
 - [Contrôles ActiveX MFC : utilisation des pages de propriétés stock](mfc-activex-controls-using-stock-property-pages.md)
 
 Pour plus d’informations sur l’utilisation des feuilles de propriétés dans une application MFC autre qu’un contrôle ActiveX, consultez [feuilles de propriétés](property-sheets-mfc.md).
 
-## <a name="implementing-the-default-property-page"></a><a name="_core_implementing_the_default_property_page"></a>Implémentation de la page de propriétés par défaut
+## <a name="implementing-the-default-property-page"></a><a name="_core_implementing_the_default_property_page"></a> Implémentation de la page de propriétés par défaut
 
 Si vous utilisez l’Assistant contrôle ActiveX pour créer votre projet de contrôle, l’Assistant contrôle ActiveX fournit une classe de page de propriétés par défaut pour le contrôle dérivé de la [classe COlePropertyPage](reference/colepropertypage-class.md). Initialement, cette page de propriétés est vide, mais vous pouvez y ajouter n’importe quel contrôle de boîte de dialogue ou ensemble de contrôles. Étant donné que l’Assistant contrôle ActiveX ne crée qu’une seule classe de page de propriétés par défaut, des classes de page de propriétés supplémentaires (également dérivées de `COlePropertyPage` ) doivent être créées à l’aide de affichage de classes. Pour plus d’informations sur cette procédure, consultez [contrôles ActiveX MFC : ajout d’une autre page de propriétés personnalisée](mfc-activex-controls-adding-another-custom-property-page.md).
 
@@ -67,7 +68,7 @@ L’implémentation d’une page de propriétés (dans ce cas, la valeur par dé
 
 À titre d’exemple, les procédures suivantes utilisent un contrôle simple (nommé « Sample »). L’exemple a été créé à l’aide de l’Assistant contrôle ActiveX et contient uniquement la propriété stock Caption.
 
-## <a name="adding-controls-to-a-property-page"></a><a name="_core_adding_controls_to_a_property_page"></a>Ajout de contrôles à une page de propriétés
+## <a name="adding-controls-to-a-property-page"></a><a name="_core_adding_controls_to_a_property_page"></a> Ajout de contrôles à une page de propriétés
 
 #### <a name="to-add-controls-to-a-property-page"></a>Pour ajouter des contrôles à une page de propriétés
 
@@ -87,7 +88,7 @@ L’implémentation d’une page de propriétés (dans ce cas, la valeur par dé
 
 Maintenant que l’interface utilisateur a été modifiée, vous devez lier la zone d’édition à la propriété Caption. Pour ce faire, vous modifiez la fonction à l’aide de la section suivante `CSamplePropPage::DoDataExchange` .
 
-## <a name="customizing-the-dodataexchange-function"></a><a name="_core_customizing_the_dodataexchange_function"></a>Personnalisation de la fonction DoDataExchange
+## <a name="customizing-the-dodataexchange-function"></a><a name="_core_customizing_the_dodataexchange_function"></a> Personnalisation de la fonction DoDataExchange
 
 Votre page de propriétés [CWnd ::D fonction odataexchange](reference/cwnd-class.md#dodataexchange) vous permet de lier des valeurs de page de propriétés avec les valeurs réelles des propriétés dans le contrôle. Pour établir des liens, vous devez mapper les champs de page de propriétés appropriés à leurs propriétés respectives de contrôle.
 
@@ -118,4 +119,4 @@ Les [pages de propriétés](reference/property-pages-mfc.md) sont disponibles po
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](mfc-activex-controls.md)<br/>
-[COlePropertyPage, classe](reference/colepropertypage-class.md)
+[COlePropertyPage (classe)](reference/colepropertypage-class.md)

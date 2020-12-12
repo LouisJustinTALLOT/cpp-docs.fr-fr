@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mutex, classe (bibliothèque standard C++)'
 title: mutex, classe (Bibliothèque standard C++)| Microsoft Docs
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 20e2165a70dec8a3d3918eece6cb78057ac19138
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 528fe0698fb7815be9b678d72055c54bad5ce2bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338275"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex, classe (Bibliothèque standard C++)
 
@@ -57,7 +58,7 @@ class mutex;
 
 **Espace de noms :** std
 
-## <a name="mutexlock"></a><a name="lock"></a>mutex :: Lock
+## <a name="mutexlock"></a><a name="lock"></a> mutex :: Lock
 
 Bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du `mutex`.
 
@@ -69,7 +70,7 @@ void lock();
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="mutexmutex-constructor"></a><a name="mutex"></a>mutex :: mutex, constructeur
+## <a name="mutexmutex-constructor"></a><a name="mutex"></a> mutex :: mutex, constructeur
 
 Construit un objet `mutex` qui n’est pas verrouillé.
 
@@ -77,7 +78,7 @@ Construit un objet `mutex` qui n’est pas verrouillé.
 constexpr mutex() noexcept;
 ```
 
-## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>mutex :: ~ mutex, destructeur
+## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a> mutex :: ~ mutex, destructeur
 
 Libère les ressources utilisées par l’objet `mutex`.
 
@@ -89,7 +90,7 @@ Libère les ressources utilisées par l’objet `mutex`.
 
 Si l'objet est verrouillé lorsque le destructeur s'exécute, le comportement est indéfini.
 
-## <a name="mutexnative_handle"></a><a name="native_handle"></a>mutex :: native_handle
+## <a name="mutexnative_handle"></a><a name="native_handle"></a> mutex :: native_handle
 
 Retourne le type propre à l’implémentation qui représente le descripteur de mutex. Vous pouvez utiliser le descripteur de plusieurs manières propres à l’implémentation.
 
@@ -97,11 +98,11 @@ Retourne le type propre à l’implémentation qui représente le descripteur de
 native_handle_type native_handle();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `native_handle_type` est défini comme un `Concurrency::critical_section *` converti en `void *`.
 
-## <a name="mutextry_lock"></a><a name="try_lock"></a>mutex :: try_lock
+## <a name="mutextry_lock"></a><a name="try_lock"></a> mutex :: try_lock
 
 Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 
@@ -109,7 +110,7 @@ Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 bool try_lock();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si la méthode obtient avec succès la propriété de `mutex` ; sinon, **`false`** .
 
@@ -117,7 +118,7 @@ bool try_lock();
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="mutexunlock"></a><a name="unlock"></a>mutex :: Unlock
+## <a name="mutexunlock"></a><a name="unlock"></a> mutex :: Unlock
 
 Libère la propriété du `mutex`.
 

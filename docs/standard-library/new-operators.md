@@ -1,26 +1,27 @@
 ---
+description: 'En savoir plus sur : &lt; nouveaux &gt; opérateurs et énumérations'
 title: '&lt;nouveaux &gt; opérateurs et énumérations'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 2af2b3bc24e045d66626607781bc97f83686d559
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e5b6a675b200c80dc56778a66d63d5940561eb1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215632"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338180"
 ---
 # <a name="ltnewgt-operators-and-enums"></a>&lt;nouveaux &gt; opérateurs et énumérations
 
-## <a name="enum-align_val_t"></a><a name="op_align_val_t"></a>align_val_t enum
+## <a name="enum-align_val_t"></a><a name="op_align_val_t"></a> align_val_t enum
 
 ```cpp
 enum class align_val_t : size_t {};
 ```
 
-## <a name="operator-delete"></a><a name="op_delete"></a>opérateur delete
+## <a name="operator-delete"></a><a name="op_delete"></a> opérateur delete
 
 Fonction appelée par une expression Delete pour libérer le stockage de chaque objet.
 
@@ -49,7 +50,7 @@ La troisième fonction est appelée par une expression Delete de positionnement 
 
 Pour obtenir un exemple qui utilise l' **opérateur delete**, consultez [operator new](../standard-library/new-operators.md#op_new) .
 
-## <a name="operator-delete"></a><a name="op_delete_arr"></a>delete [], opérateur
+## <a name="operator-delete"></a><a name="op_delete_arr"></a> delete [], opérateur
 
 Fonction appelée par une expression delete pour libérer le stockage pour un tableau d'objets.
 
@@ -76,7 +77,7 @@ La troisième fonction est appelée par une expression delete de positionnement 
 
 Pour obtenir des exemples d’utilisation de `operator delete[]`, consultez [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr).
 
-## <a name="operator-new"></a><a name="op_new"></a>New, opérateur
+## <a name="operator-new"></a><a name="op_new"></a> New, opérateur
 
 Fonction appelée par une expression new pour allouer le stockage pour des objets distincts.
 
@@ -94,7 +95,7 @@ Nombre d’octets de stockage à allouer.
 *effectués*\
 Pointeur à retourner.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’adresse de poids le plus faible de la mémoire nouvellement allouée. Ou *ptr*.
 
@@ -171,7 +172,7 @@ int main( )
 }
 ```
 
-## <a name="operator-new"></a><a name="op_new_arr"></a>New (opérateur)
+## <a name="operator-new"></a><a name="op_new_arr"></a> New (opérateur)
 
 Fonction d’allocation appelée par une expression new pour allouer le stockage pour un tableau d’objets.
 
@@ -189,7 +190,7 @@ Nombre d’octets de stockage à allouer pour l’objet tableau.
 *effectués*\
 Pointeur à retourner.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers l’adresse de poids le plus faible de la mémoire nouvellement allouée. Ou *ptr*.
 

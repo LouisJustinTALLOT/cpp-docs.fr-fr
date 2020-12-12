@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : fonctions de bibliothèque'
 title: Fonctions des bibliothèques
 ms.date: 11/04/2016
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
-ms.openlocfilehash: 6cb9c0197ad625487a2c0e98d176c46c4bba4139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fceed64171e687cff3c987bab9782823147d6fbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243547"
 ---
 # <a name="library-functions"></a>Fonctions des bibliothèques
 
@@ -15,11 +16,11 @@ ms.locfileid: "62232785"
 
 - [Diagnostic imprimé par la fonction Assert](../c-language/diagnostic-printed-by-the-assert-function.md)
 
-- [Test de caractère](../c-language/character-testing.md)
+- [Test de caractères](../c-language/character-testing.md)
 
 - [Erreurs de domaine](../c-language/domain-errors.md)
 
-- [Dépassement de capacité négatif des valeurs à virgule flottante](../c-language/underflow-of-floating-point-values.md)
+- [Dépassement des valeurs de Floating-Point](../c-language/underflow-of-floating-point-values.md)
 
 - [Fonction fmod](../c-language/fmod-function.md)
 
@@ -41,9 +42,9 @@ ms.locfileid: "62232785"
 
 - [Fichiers de longueur nulle](../c-language/zero-length-files.md)
 
-- [Noms](../c-language/filenames.md)
+- [Noms de fichiers](../c-language/filenames.md)
 
-- [Limites d’accès au fichier](../c-language/file-access-limits.md)
+- [Limites d’accès aux fichiers](../c-language/file-access-limits.md)
 
 - [Suppression de fichiers ouverts](../c-language/deleting-open-files.md)
 
@@ -57,7 +58,7 @@ ms.locfileid: "62232785"
 
 - [Messages générés par la fonction perror](../c-language/messages-generated-by-the-perror-function.md)
 
-- [Allocation de mémoire initialisée à zéro](../c-language/allocating-zero-memory.md)
+- [Allocation de mémoire égale à zéro](../c-language/allocating-zero-memory.md)
 
 - [Fonction d'interruption](../c-language/abort-function-c.md)
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Idbcreatesessionimpl,'
 title: IDBCreateSessionImpl, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: aeeca008499ca43cdcebd008390e5cb6c5a9e63c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8456ce4ec7bde5721ac6753ed9ec64d69c63e41f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845521"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317478"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl, classe
 
@@ -39,7 +40,7 @@ VOTRE CLASSE, DÉRIVÉE DE
 *SessionClass*<br/>
 Objet de session.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 

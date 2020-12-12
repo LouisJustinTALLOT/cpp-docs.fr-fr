@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __writecr8'
 title: __writecr8
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - _writecr8 intrinsic
 ms.assetid: 6f8bd632-dddb-4335-971e-1acee24aa2b9
-ms.openlocfilehash: c8df13c15b5cd8a51b77d65ad930a1852809ee30
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: b9c642d92cd5d5cfb861dbff3d159b5c98a1aa5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331889"
 ---
 # <a name="__writecr8"></a>__writecr8
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Écrit la valeur `Data` dans le registre CR8.
 
@@ -29,22 +30,22 @@ void writecr8(
 
 ### <a name="parameters"></a>Paramètres
 
-*Métadonnée*\
+*Données*\
 dans Valeur à écrire dans le registre CR8.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`__writecr8`|X64|
+|`__writecr8`|x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
 L' `__writecr8` intrinsèque est disponible uniquement en mode noyau et la routine n’est disponible qu’en tant qu’intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

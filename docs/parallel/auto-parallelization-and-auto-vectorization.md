@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : la parallélisation automatique et la vectorisation automatique'
 title: Parallélisation et vectorisation automatiques
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: adc0dd9346cc2850b02e01804e26044c367f2d14
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: 4de73924ab6c28335ea6fcf2e6473e74d68bd189
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538613"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338316"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Parallélisation et vectorisation automatiques
 
@@ -34,7 +35,7 @@ void loop_test(int u) {
 }
 ```
 
-Comme avec toutes les [directives pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), l’autre syntaxe `__pragma(loop(hint_parallel(n)))` de pragma est également prise en charge.
+Comme avec toutes les [directives pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), l’autre syntaxe de pragma `__pragma(loop(hint_parallel(n)))` est également prise en charge.
 
 Il existe quelques boucles que le compilateur ne peut pas paralléliser même si vous voulez qu'il le fasse. Voici un exemple :
 
@@ -101,9 +102,9 @@ for (int i = 0; i < 1000; ++i)
    A[i] = B[i] + C[i];
 ```
 
-Comme avec toutes les [directives pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), l’autre syntaxe `__pragma(loop(no_vector))` de pragma est également prise en charge.
+Comme avec toutes les [directives pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md), l’autre syntaxe de pragma `__pragma(loop(no_vector))` est également prise en charge.
 
-Comme avec l’auto-paralléliseur, vous pouvez spécifier l’option de ligne de commande [/qvec-Report (auto-vectoriseur Reporting Level)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour signaler les boucles vectorisées avec`/Qvec-report:1`succès uniquement (ou à la fois, avec succès et sans`/Qvec-report:2`succès).
+Comme avec l’auto-paralléliseur, vous pouvez spécifier l’option de ligne de commande [/qvec-Report (auto-vectoriseur Reporting Level)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour signaler les boucles vectorisées avec succès uniquement (ou à la `/Qvec-report:1` fois, avec succès et sans succès `/Qvec-report:2` ).
 
 Pour plus d’informations sur les codes de raison et les messages, consultez [messages vectoriseur et paralléliseur](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
@@ -111,9 +112,9 @@ Pour obtenir un exemple illustrant le fonctionnement du vectoriseur dans la prat
 
 ## <a name="see-also"></a>Voir aussi
 
-[circuit](../preprocessor/loop.md)<br/>
+[loop](../preprocessor/loop.md)<br/>
 [Programmation parallèle en code natif](/archive/blogs/nativeconcurrency)<br/>
-[/Qpar (Paralléliseur automatique)](../build/reference/qpar-auto-parallelizer.md)<br/>
-[/Qpar-report (Niveau de rapport du paralléliseur automatique)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
-[/Qvec-report (Niveau de rapport du vectoriseur automatique)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>
-[Messages du vectoriseur et du paralléliseur](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)
+[/QPAR (auto-paralléliseur)](../build/reference/qpar-auto-parallelizer.md)<br/>
+[/QPAR-Report (niveau de rapport paralléliseur automatique)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[/Qvec-Report (niveau de rapport Vectoriseur automatique)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>
+[Messages vectoriseur et paralléliseur](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)
