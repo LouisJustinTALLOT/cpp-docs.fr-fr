@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn'
 title: 'Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8ada869b615e26d004e10ccc3355e83c9772888f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913474"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171866"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -92,19 +93,19 @@ Valeur à virgule flottante.
 *n*<br/>
 Ordre d’entier de la fonction de Bessel.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Chacune de ces routines retourne une fonction de Bessel de *x*. Si *x* est négatif dans les **fonctions _y0**, **_Y1**ou **_Yn** , la routine définit **errno** sur **Edom**, imprime un message d’erreur **_DOMAIN** sur **stderr**et retourne **_HUGE_VAL**. Vous pouvez modifier la gestion des erreurs à l’aide de **_matherr**.
+Chacune de ces routines retourne une fonction de Bessel de *x*. Si *x* est négatif dans les **fonctions _y0**, **_Y1** ou **_Yn** , la routine définit **errno** sur **Edom**, imprime un message d’erreur **_DOMAIN** sur **stderr** et retourne **_HUGE_VAL**. Vous pouvez modifier la gestion des erreurs à l’aide de **_matherr**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Les routines **_j0**, **_j1**et **_jn** retournent des fonctions de Bessel du premier genre : Orders 0, 1 et n, respectivement.
+Les routines **_j0**, **_j1** et **_jn** retournent des fonctions de Bessel du premier genre : Orders 0, 1 et n, respectivement.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
 |± **QNAN**, **IND**|**Non valide**|**_DOMAIN**|
 
-Les routines **_y0**, **_Y1**et **_yn** retournent des fonctions de Bessel du deuxième genre : Orders 0, 1 et n, respectivement.
+Les routines **_y0**, **_Y1** et **_yn** retournent des fonctions de Bessel du deuxième genre : Orders 0, 1 et n, respectivement.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
@@ -118,7 +119,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_Y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_Y1**, **_yn**|\<cmath> (c++), \<math.h> (C, c++)|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

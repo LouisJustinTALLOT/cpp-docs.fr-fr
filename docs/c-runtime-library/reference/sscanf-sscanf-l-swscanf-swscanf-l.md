@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : sscanf, _sscanf_l, swscanf, _swscanf_l'
 title: sscanf, _sscanf_l, swscanf, _swscanf_l
 ms.date: 08/29/2019
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-ms.openlocfilehash: e3b453166278fff4c3230cb51895c487319e33d9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f5681e1f8e122c6f24151ae5e8d37186d8bd066e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958228"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171268"
 ---
 # <a name="sscanf-_sscanf_l-swscanf-_swscanf_l"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 
@@ -83,11 +84,11 @@ int _swscanf_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Données stockées
 
 *format*<br/>
-Chaîne de contrôle de format. Pour plus d'informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+Chaîne de contrôle de format. Pour plus d’informations, consultez [Spécifications de format](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
 *argument*<br/>
 Arguments facultatifs
@@ -95,7 +96,7 @@ Arguments facultatifs
 *locale*<br/>
 Paramètres régionaux à utiliser
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est **EOF** pour une erreur ou si la fin de la chaîne est atteinte avant la première conversion.
 
@@ -110,7 +111,7 @@ La fonction **sscanf** lit les données de la *mémoire tampon* dans l’emplace
 Pour plus d’informations sur les caractères du champ de type scanf, consultez [caractères du champ de type scanf](../scanf-type-field-characters.md). Pour plus d’informations sur les champs de spécification de format scanf, consultez [champs de spécification de format](../format-specification-fields-scanf-and-wscanf-functions.md).
 
 > [!IMPORTANT]
-> Lors de la lecture d’une chaîne avec **sscanf**, spécifiez toujours une largeur pour le format **% s** (par exemple, **« % 32s »** au lieu de **« % s »** ); dans le cas contraire, une entrée mal mise en forme peut facilement provoquer un dépassement de mémoire tampon.
+> Lors de la lecture d’une chaîne avec **sscanf**, spécifiez toujours une largeur pour le format **% s** (par exemple, **« % 32s »** au lieu de **« % s »**); dans le cas contraire, une entrée mal mise en forme peut facilement provoquer un dépassement de mémoire tampon.
 
 **swscanf** est une version à caractères larges de **sscanf**; les arguments de **swscanf** sont des chaînes à caractères larges. **sscanf** ne gère pas les caractères hexadécimaux multioctets. **swscanf** ne gère pas les caractères hexadécimaux ou « zone de compatibilité » Unicode à pleine chasse. Sinon, **swscanf** et **sscanf** se comportent de la même façon.
 
@@ -123,7 +124,7 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 |**_stscanf**|**sscanf**|**sscanf**|**swscanf**|
 |**_stscanf_l**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -132,7 +133,7 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_sscanf.c
@@ -178,5 +179,5 @@ Real:     = 15.000000
 [E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

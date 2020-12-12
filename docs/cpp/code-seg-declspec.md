@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : code_seg (__declspec)'
 title: code_seg (__declspec)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
-ms.openlocfilehash: 22703e92b1a127378c965ce12bcc4e5475b3e452
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b382e0a758c28ffab297badda7670c1de3b08d32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171089"
 ---
 # <a name="code_seg-__declspec"></a>code_seg (__declspec)
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 L’attribut de Déclaration **code_seg** nomme un segment de texte exécutable dans le fichier. obj dans lequel le code objet des fonctions membres de la fonction ou de la classe sera stocké.
 
@@ -103,7 +104,7 @@ int main()
 }
 ```
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

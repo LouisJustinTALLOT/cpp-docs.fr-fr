@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : memset, wmemset'
 title: memset, wmemset
 ms.date: 11/04/2016
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: 6e1db021da70f0af7b045e2a3100dbaaa81e5a50
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 547cbbcab4966291ab540b6e57f68d4057995ff8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951748"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171346"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -66,7 +67,7 @@ Caractère à définir.
 *count*<br/>
 Nombre de caractères.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Valeur de *dest*.
 
@@ -76,7 +77,7 @@ Définit les premiers caractères de la *valeur* *dest* sur le caractère *c*.
 
 **Note de sécurité** Assurez-vous que la mémoire tampon de destination a suffisamment d’espace pour au moins le *nombre* de caractères. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -89,7 +90,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_memset.c
@@ -110,7 +111,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Before: This is a test of the memset function
@@ -138,7 +139,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Before: This is a test of the wmemset function

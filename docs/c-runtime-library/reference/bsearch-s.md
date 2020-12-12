@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : bsearch_s'
 title: bsearch_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 348638b2a6b5a97491d9929b22a983b43794da9a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a38868d9093a4da4338fb0fddb99a6a0ed53ef5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171788"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -72,7 +73,7 @@ Fonction de rappel qui compare deux éléments. Le premier argument est le point
 *contexte*\
 Pointeur vers un objet accessible dans la fonction de comparaison.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 **bsearch_s** retourne un pointeur vers une occurrence de la *clé* dans le tableau désigné par *base*. Si la *clé* est introuvable, la fonction retourne la **valeur null**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
 
@@ -87,7 +88,7 @@ Si des paramètres non valides sont passés à la fonction, elle appelle le gest
 |n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|= 0|**EINVAL**|
 |n'importe laquelle|n'importe laquelle|**NULL**|an|n'importe laquelle|**EINVAL**|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction **bsearch_s** effectue une recherche binaire d’un tableau trié d’éléments Number, chacun d’un *nombre* d’octets de *largeur* . La valeur de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche, et *Key* est la valeur recherchée. Le paramètre de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne l’une des valeurs suivantes en spécifiant leur relation :
 
@@ -101,7 +102,7 @@ Le pointeur de *contexte* peut être utile si la structure de données recherch�
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

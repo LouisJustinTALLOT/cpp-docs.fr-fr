@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Comment : utiliser un filtre de bloc de message'
 title: 'Comment : utiliser un filtre de bloc de message'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: ac58ef2240d2ea6ba34b334106c08595e70b02e8
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 3c07aa7f12ed952d5256ba8fc7f53b619edefb7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172586"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Comment : utiliser un filtre de bloc de message
 
@@ -18,7 +19,7 @@ Ce document montre comment utiliser une fonction de filtre pour permettre à un 
 
 Lorsque vous créez un objet de bloc de message tel qu’un [accès concurrentiel :: unbounded_buffer](reference/unbounded-buffer-class.md), un [accès concurrentiel :: Call](../../parallel/concrt/reference/call-class.md)ou un [Concurrency :: transformer](../../parallel/concrt/reference/transformer-class.md), vous pouvez fournir une *fonction de filtre* qui détermine si le bloc de message accepte ou rejette un message. Une fonction de filtre est un moyen utile de garantir qu’un bloc de message ne reçoit que certaines valeurs.
 
-Les fonctions de filtre sont importantes car elles vous permettent de connecter des blocs de messages pour former des *réseaux de flux*de données. Dans un réseau de flux de données, les blocs de messages contrôlent le flux de données en traitant uniquement les messages qui répondent à des critères spécifiques. Comparez cela au modèle de contrôle de workflow, où le workflow de données est régulé à l’aide de structures de contrôle telles que des instructions conditionnelles, des boucles, etc.
+Les fonctions de filtre sont importantes car elles vous permettent de connecter des blocs de messages pour former des *réseaux de flux* de données. Dans un réseau de flux de données, les blocs de messages contrôlent le flux de données en traitant uniquement les messages qui répondent à des critères spécifiques. Comparez cela au modèle de contrôle de workflow, où le workflow de données est régulé à l’aide de structures de contrôle telles que des instructions conditionnelles, des boucles, etc.
 
 Ce document fournit un exemple de base de l’utilisation d’un filtre de messages. Pour obtenir des exemples supplémentaires qui utilisent des filtres de messages et le modèle de flux de données pour connecter des blocs de messages, consultez [procédure pas à pas : création d’un agent de flux](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) de données et [procédure pas à pas : création d’un réseau Image-Processing](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
 

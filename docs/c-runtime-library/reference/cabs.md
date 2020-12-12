@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _cabs'
 title: _cabs
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 362121ab160e46ec0922b193ccedf77d5bf99468
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171632"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -50,16 +51,16 @@ double _cabs(
 
 ### <a name="parameters"></a>Paramètres
 
-*Lettre*<br/>
+*z*<br/>
 Nombre complexe.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_cabs** retourne la valeur absolue de son argument en cas de réussite. En cas de dépassement, **_cabs** retourne **HUGE_VAL** et définit **errno** sur **ERANGE**. Vous pouvez modifier la gestion des erreurs avec [_matherr](matherr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_cabs** calcule la valeur absolue d’un nombre complexe, qui doit être une structure de type [_complex](../../c-runtime-library/standard-types.md). La structure *z* est composée d’un composant réel *x* et d’un composant imaginaire *y*. Un appel à **_cabs** produit une valeur équivalant à celle de l' `sqrt( z.x * z.x + z.y * z.y )`expression.
+La fonction **_cabs** calcule la valeur absolue d’un nombre complexe, qui doit être une structure de type [_complex](../../c-runtime-library/standard-types.md). La structure *z* est composée d’un composant réel *x* et d’un composant imaginaire *y*. Un appel à **_cabs** produit une valeur équivalant à celle de l’expression `sqrt( z.x * z.x + z.y * z.y )` .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

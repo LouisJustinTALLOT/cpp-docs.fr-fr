@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/TSAWARE (créer une application prenant en charge Terminal Server)
 title: /TSAWARE (Créer une application sensible à Terminal Server)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: c2ec12b0b5fbe241d75acc4bb0d87837371a293e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6086bdcdf4aa41f116491a602286a0c8410bd61d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845729"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171970"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Créer une application sensible à Terminal Server)
 
@@ -58,5 +59,5 @@ Si une application a été liée avec l’utilitaire/TSAWARE, DUMPBIN [/headers]
 
 [Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)<br/>
-[Stockage des informations spécifiques à l’utilisateur](/windows/win32/TermServ/storing-user-specific-information)<br/>
+[Stockage des informations de User-Specific](/windows/win32/TermServ/storing-user-specific-information)<br/>
 [Applications héritées dans un environnement de services Terminal Server](/previous-versions/aa382957(v=vs.85))

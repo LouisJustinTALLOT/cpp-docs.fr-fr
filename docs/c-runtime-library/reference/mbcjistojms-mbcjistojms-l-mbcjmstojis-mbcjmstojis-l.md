@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l'
 title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: fc4df04274c33fa14af0762dc62f20ed09f23cd9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6c7d19ce59c381d4f4a60fb2d1ddbed41fe43ba3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171515"
 ---
 # <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
@@ -81,17 +82,17 @@ unsigned int _mbcjmstojis_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère à convertir.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Dans les paramètres régionaux japonais, ces fonctions retournent un caractère converti ou retournent 0 si aucune conversion n’est possible. Dans les paramètres régionaux non japonais, ces fonctions retournent le caractère passé.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbcjistojms** convertit un caractère JIS (Japon Industry Standard) en un caractère Microsoft kanji (Shift JIS). Le caractère est converti uniquement si les octets de tête et de fin se trouvent dans la plage 0x21-0x7E. Si l’octet de tête ou d’essai est en dehors de cette plage, **errno** a la valeur **EILSEQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

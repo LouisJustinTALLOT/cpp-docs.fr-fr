@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : cab, cabsf, CAB'
 title: cabs, cabsf, cabsl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-ms.openlocfilehash: ac31df51490880cdd831a34c8adeed9223aafc21
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ae24a0b7c158c2a13a595e946ee79b0760d75ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171658"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -66,10 +67,10 @@ long double cabsl(
 
 ### <a name="parameters"></a>Paramètres
 
-*Lettre*<br/>
+*z*<br/>
 Nombre complexe.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Valeur absolue de *z*.
 
@@ -81,7 +82,7 @@ C++ autorisant la surcharge, vous pouvez appeler des surcharges de **CAB** qui a
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**CAB**, **cabsf**, **taxi**|\<complex.h>|\<ccomplex>|
+|**CAB**,               **cabsf**, **taxi**|\<complex.h>|\<ccomplex>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : ensuite bsearch'
 title: bsearch
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 3a6083f39e12182ae512f5327b5f7d8d89deb2a2
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5afdd00576392b4e464880ec88772357e3ae2135
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171775"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -68,11 +69,11 @@ Largeur des éléments.
 *compar*\
 Fonction de rappel qui compare deux éléments. Le premier est un pointeur vers la clé de la recherche, tandis que le second est un pointeur vers l’élément de tableau à comparer à la clé.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 **ensuite bsearch** retourne un pointeur vers une occurrence de la *clé* dans le tableau désigné par *base*. Si la *clé* est introuvable, la fonction retourne la **valeur null**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction **ensuite bsearch** effectue une recherche binaire d’un tableau trié d’éléments Number, chacun d’un *nombre* d’octets de *largeur* . La valeur de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche, et *Key* est la valeur recherchée. Le paramètre de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau. Elle retourne l’une des valeurs suivantes qui spécifient leur relation :
 
@@ -86,7 +87,7 @@ Cette fonction valide ses paramètres. Si *compare*, *Key* ou *Number* a la **va
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l'
 title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f61292932ea6b77b4694588726094d78b8405cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229348"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171307"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -96,7 +97,7 @@ Arguments facultatifs
 *locale*<br/>
 Paramètres régionaux à utiliser
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne le nombre de champs correctement convertis et assignés. La valeur de retour n’inclut pas les champs qui ont été lus, mais pas assignés. La valeur de retour 0 indique qu'aucun champ n'a été assigné. La valeur de retour est **EOF** pour une erreur ou si la fin de la chaîne est atteinte avant la première conversion.
 
@@ -106,7 +107,7 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **sscanf_s** lit les données de la *mémoire tampon* dans l’emplacement donné par chaque *argument*. Les arguments qui suivent la chaîne de format spécifient des pointeurs vers des variables dont le type correspond à un spécificateur de type au *format*. Contrairement à la version moins sécurisée [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), un paramètre de taille de mémoire tampon est requis lorsque vous utilisez les jeux de contrôles de type **c**, **c**, **s**, **s**ou String placés dans **[]**. La taille de mémoire tampon des caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
+La fonction **sscanf_s** lit les données de la *mémoire tampon* dans l’emplacement donné par chaque *argument*. Les arguments qui suivent la chaîne de format spécifient des pointeurs vers des variables dont le type correspond à un spécificateur de type au *format*. Contrairement à la version moins sécurisée [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), un paramètre de taille de mémoire tampon est requis lorsque vous utilisez les jeux de contrôles de type **c**, **c**, **s**, **s** ou String placés dans **[]**. La taille de mémoire tampon des caractères doit être fournie comme paramètre supplémentaire de suite après chaque paramètre de mémoire tampon qui le nécessite. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
 
 ```C
 wchar_t ws[10];

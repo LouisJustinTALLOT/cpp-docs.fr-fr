@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : lier un exécutable à une DLL'
 title: Lier un exécutable à une DLL
 ms.date: 08/22/2019
 helpviewer_keywords:
@@ -11,20 +12,20 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfcc1f506b1e9c8da14549795a9c282b66788c6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172048"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Lier un exécutable à une DLL
 
 Un fichier exécutable lie (ou charge) une DLL de l’une des deux manières suivantes :
 
-- *Liaison implicite*, où le système d’exploitation charge la dll en même temps que l’exécutable qui l’utilise. L’exécutable client appelle les fonctions exportées de la DLL de la même façon que si les fonctions étaient liées statiquement et contenues dans l’exécutable. La liaison implicite est parfois désignée sous le terme de *liaison dynamique*de charge ou de *charge statique* .
+- *Liaison implicite*, où le système d’exploitation charge la dll en même temps que l’exécutable qui l’utilise. L’exécutable client appelle les fonctions exportées de la DLL de la même façon que si les fonctions étaient liées statiquement et contenues dans l’exécutable. La liaison implicite est parfois désignée sous le terme de *liaison dynamique* de charge ou de *charge statique* .
 
-- *Liaison explicite*, où le système d’exploitation charge la dll à la demande au moment de l’exécution. Un exécutable qui utilise une DLL par liaison explicite doit charger et décharger explicitement la DLL. Il doit également configurer un pointeur de fonction pour accéder à chaque fonction qu’il utilise à partir de la DLL. Contrairement aux appels aux fonctions d’une bibliothèque liée de manière statique ou à une DLL implicitement liée, l’exécutable client doit appeler les fonctions exportées dans une DLL explicitement liée par le biais de pointeurs de fonction. La liaison explicite est parfois appelée liaison dynamique de *charge* ou de la *liaison dynamique au moment*de l’exécution.
+- *Liaison explicite*, où le système d’exploitation charge la dll à la demande au moment de l’exécution. Un exécutable qui utilise une DLL par liaison explicite doit charger et décharger explicitement la DLL. Il doit également configurer un pointeur de fonction pour accéder à chaque fonction qu’il utilise à partir de la DLL. Contrairement aux appels aux fonctions d’une bibliothèque liée de manière statique ou à une DLL implicitement liée, l’exécutable client doit appeler les fonctions exportées dans une DLL explicitement liée par le biais de pointeurs de fonction. La liaison explicite est parfois appelée liaison dynamique de *charge* ou de la *liaison dynamique au moment* de l’exécution.
 
 Un exécutable peut utiliser la méthode de liaison pour établir une liaison à la même DLL. En outre, ces méthodes ne s’excluent pas mutuellement ; un exécutable peut être lié de manière implicite à une DLL et un autre peut s’y attacher explicitement.
 

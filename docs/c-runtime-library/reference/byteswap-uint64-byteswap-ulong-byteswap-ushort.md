@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _byteswap_uint64, _byteswap_ulong _byteswap_ushort'
 title: _byteswap_uint64, _byteswap_ulong, _byteswap_ushort
 ms.date: 11/04/2016
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - byteswap_ulong function
 - _byteswap_ulong function
 ms.assetid: 83bda211-f02f-4cf0-8a78-d6de1f175970
-ms.openlocfilehash: 46ebc82919327ef5d51b760ae1aae15425910b4c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 741b9dc5e6db789ab9b1847c841486f0d19bde4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171684"
 ---
 # <a name="_byteswap_uint64-_byteswap_ulong-_byteswap_ushort"></a>_byteswap_uint64, _byteswap_ulong, _byteswap_ushort
 
@@ -60,10 +61,10 @@ unsigned __int64 _byteswap_uint64 ( unsigned __int64 val );
 
 ### <a name="parameters"></a>Paramètres
 
-*val*<br/>
+*multiples*<br/>
 Entier dans lequel inverser l’ordre d’octet.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -71,7 +72,7 @@ Entier dans lequel inverser l’ordre d’octet.
 |**_byteswap_ulong**|\<stdlib.h>|
 |**_byteswap_uint64**|\<stdlib.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

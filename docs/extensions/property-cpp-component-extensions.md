@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Property (C++/CLI et C++/CX)'
 title: propriété (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: fbec97a5bd30bb9bb76459ef2f7b0956ae6a264f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bc3a4e7bd55d82244195a4d9ecf0072a6c513b72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172997"
 ---
 # <a name="property--ccli-and-ccx"></a>propriété (C++/CLI et C++/CX)
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : btowc'
 title: btowc
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-ms.openlocfilehash: cbeff70674a257217c66d39475a2c809c9bd9559
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bbd6121499e03c356e80e49cbcbe75929ca96c2a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913365"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171723"
 ---
 # <a name="btowc"></a>btowc
 
@@ -47,14 +48,14 @@ wint_t btowc(
 
 ### <a name="parameters"></a>Paramètres
 
-*symbole*<br/>
+*character*<br/>
 Entier à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne la représentation sous forme de caractères larges du caractère si l’entier représente un caractère sur un octet valide dans l’état de décalage initial. Retourne WEOF si l’entier est EOF ou n’est pas un caractère sur un octet valide dans l’état de décalage initial. La sortie de cette fonction est affectée par les paramètres régionaux actuels **LC_TYPE** .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

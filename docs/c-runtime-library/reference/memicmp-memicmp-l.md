@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _memicmp, _memicmp_l'
 title: _memicmp, _memicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 365b57dc300da5686895d66fa642e3870612c2ed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 261c7b64cc7da58c201515697addc587c575a9ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171411"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
@@ -74,7 +75,7 @@ Nombre de caractères.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 La valeur de retour indique la relation entre les mémoires tampons.
 
@@ -85,7 +86,7 @@ La valeur de retour indique la relation entre les mémoires tampons.
 |> 0|*Buffer1* supérieur à *buffer2*.|
 |**_NLSCMPERROR**|Une erreur est survenue.|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_memicmp** compare les premiers caractères de *nombre* des deux mémoires tampons *Buffer1* et *buffer2* octet par octet. La comparaison ne respecte pas la casse.
 

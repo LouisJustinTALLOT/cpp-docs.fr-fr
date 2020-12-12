@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe cancellation_token_registration'
 title: cancellation_token_registration, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-ms.openlocfilehash: 9342841e207c93b66521c2fc742c1b1114682f78
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1901e5132a9bad6849b1b00a6be63caf9afc9170
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142236"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172139"
 ---
 # <a name="cancellation_token_registration-class"></a>cancellation_token_registration, classe
 
@@ -29,18 +30,18 @@ class cancellation_token_registration;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[cancellation_token_registration](#ctor)||
 |[Destructeur ~ cancellation_token_registration](#dtor)||
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[operator!=](#operator_neq)||
-|[operator=](#operator_eq)||
-|[operator==](#operator_eq_eq)||
+|[opérateur ! =](#operator_neq)||
+|[opérateur =](#operator_eq)||
+|[opérateur = =](#operator_eq_eq)||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -50,15 +51,15 @@ class cancellation_token_registration;
 
 **En-tête :** pplcancellation_token. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="dtor"></a>~ cancellation_token_registration
+## <a name="cancellation_token_registration"></a><a name="dtor"></a> ~ cancellation_token_registration
 
 ```cpp
 ~cancellation_token_registration();
 ```
 
-## <a name="ctor"></a>cancellation_token_registration
+## <a name="cancellation_token_registration"></a><a name="ctor"></a> cancellation_token_registration
 
 ```cpp
 cancellation_token_registration();
@@ -71,9 +72,9 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ### <a name="parameters"></a>Paramètres
 
 *_Src*<br/>
-`cancellation_token_registration` à copier ou déplacer.
+`cancellation_token_registration`À copier ou à déplacer.
 
-## <a name="operator_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="operator_neq"></a> opérateur ! =
 
 ```cpp
 bool operator!= (const cancellation_token_registration& _Rhs) const;
@@ -84,9 +85,9 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 *_Rhs*<br/>
 `cancellation_token_registration` à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="operator_eq"></a>opérateur =
+## <a name="operator"></a><a name="operator_eq"></a> opérateur =
 
 ```cpp
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
@@ -97,11 +98,11 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ### <a name="parameters"></a>Paramètres
 
 *_Src*<br/>
-`cancellation_token_registration` à assigner.
+`cancellation_token_registration`À assigner.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="operator_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> opérateur = =
 
 ```cpp
 bool operator== (const cancellation_token_registration& _Rhs) const;
@@ -112,8 +113,8 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 *_Rhs*<br/>
 `cancellation_token_registration` à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

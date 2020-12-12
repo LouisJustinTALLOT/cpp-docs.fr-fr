@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : safe_cast (C++/CLI et C++/CX)'
 title: safe_cast (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 2eb09680ef6e7d1ee90b62eee8c8971fb4963212
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7753af357fd782a513ce941b42ad0433ca24b0dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172945"
 ---
 # <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI et C++/CX)
 
@@ -110,7 +111,7 @@ Expression qui s'évalue en handle vers un type référence ou type valeur, type
 
 ### <a name="remarks"></a>Notes
 
-L’expression `safe_cast<` d' *ID de type*expression `>(` *expression* `)` convertit l' *expression* d’opérande en un objet de type *type-ID*.
+L’expression `safe_cast<` d' *ID de type* expression `>(`  `)` convertit l' *expression* d’opérande en un objet de type *type-ID*.
 
 Le compilateur accepte un [static_cast](../cpp/static-cast-operator.md) à la plupart des emplacements auxquels il accepte un **safe_cast**.  Toutefois, **safe_cast** garantit la génération de code MSIL vérifiable, où **`static_cast`** peut produire du code MSIL non vérifiable.  Voir [Code pur et vérifiable (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) et [Peverify.exe (Outil PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) pour plus d’informations sur le code vérifiable.
 

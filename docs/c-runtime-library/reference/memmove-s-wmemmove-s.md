@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : memmove_s, wmemmove_s'
 title: memmove_s, wmemmove_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: faa68f073949c9c1bcd3d96bb48472484adc312c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914097"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171398"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -72,7 +73,7 @@ Objet source.
 *count*<br/>
 Nombre d’octets (**memmove_s**) ou de caractères (**wmemmove_s**) à copier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l’opération a réussi ; code d’erreur en cas de échec.
 
@@ -80,11 +81,11 @@ Zéro si l’opération a réussi ; code d’erreur en cas de échec.
 
 |*dest*|*numberOfElements*|*src*|Valeur retournée|Contenu de *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NUL**|n'importe laquelle|n'importe laquelle|**EINVAL**|non modifié|
-|n'importe laquelle|n'importe laquelle|**NUL**|**EINVAL**|non modifié|
-|n'importe laquelle|< *count*|n'importe laquelle|**ERANGE**|non modifié|
+|**NULL**|n'importe laquelle|n'importe laquelle|**EINVAL**|non modifié|
+|n'importe laquelle|n'importe laquelle|**NULL**|**EINVAL**|non modifié|
+|n'importe laquelle|< *saut*|n'importe laquelle|**ERANGE**|non modifié|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Copie le *nombre* d’octets des caractères de *src* vers *dest*. Si certaines régions de la zone source et de la destination se chevauchent, **memmove_s** garantit que les octets source d’origine dans la région de chevauchement sont copiés avant d’être remplacés.
 
@@ -101,7 +102,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_memmove_s.c

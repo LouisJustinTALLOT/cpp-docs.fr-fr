@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : memmove, wmemmove'
 title: memmove, wmemmove
 ms.date: 11/04/2016
 api_name:
@@ -28,16 +29,16 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: bca0badb13dbbc754b6546f62cdd865eacd14fbc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 15dee8eab2a1b7eedd3891d8673647a711c0e499
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171385"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
-Déplace une mémoire tampon vers une autre. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [memmove_s, wmemmove_s](memmove-s-wmemmove-s.md).
+Déplace une mémoire tampon vers une autre Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [memmove_s, wmemmove_s](memmove-s-wmemmove-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,7 +66,7 @@ Objet source.
 *count*<br/>
 Nombre d’octets (**memmove**) ou de caractères (**wmemmove**) à copier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Valeur de *dest*.
 
@@ -82,14 +83,14 @@ Les fonctions **memmove** et **wmemmove** seront dépréciées uniquement si la 
 #include <string.h>
 ```
 
-ou Gestionnaire de configuration
+ou
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
 #include <wchar.h>
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -98,7 +99,7 @@ ou Gestionnaire de configuration
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_memcpy.c

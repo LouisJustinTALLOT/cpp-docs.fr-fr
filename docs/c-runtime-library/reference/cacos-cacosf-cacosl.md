@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Cacos, cacosf, cacosl'
 title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d7a4fcc10da68d170d0cf3b2d9cce0d486b4318
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171594"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
@@ -62,25 +63,25 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 *z*<br/>
 Nombre complexe qui représente un angle, en radians.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Arccosinus de *z*, en radians. Le résultat est illimité le long de l’axe imaginaire, et dans l’intervalle [0, π] le long de l’axe réel. Une erreur de domaine se produit si *z* est en dehors de l’intervalle [-1, + 1].
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **Cacos** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **Cacos** accepte et retourne toujours une valeur **_Dcomplex** .
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Cacos** qui acceptent et retournent des valeurs **_Fcomplex** et **_Lcomplex** . Dans un programme C, **Cacos** accepte et retourne toujours une valeur **_Dcomplex** .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
+|**Cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan, catanf, catanl](catan-catanf-catanl.md)<br/>

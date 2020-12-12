@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32'
 title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 ms.date: 4/2/2020
 api_name:
@@ -118,12 +119,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-ms.openlocfilehash: bb9603b6a76e92561db6c28792e4644949e190d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0aa9c825821608aaf7f71bc9e3d8331efea8a82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229335"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171255"
 ---
 # <a name="_stat-_stat32-_stat64-_stati64-_stat32i64-_stat64i32-_wstat-_wstat32-_wstat64-_wstati64-_wstat32i64-_wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -190,13 +191,13 @@ Pointeur vers une chaîne contenant le chemin d’accès du fichier ou répertoi
 *mémoire tampon*<br/>
 Pointeur vers une structure qui stocke les résultats.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne 0 si les informations sur l’état des fichiers sont obtenues. Une valeur de retour de-1 indique une erreur, auquel cas **errno** a la valeur **ENOENT**, ce qui indique que le nom de fichier ou le chemin d’accès est introuvable. Une valeur de retour de **EINVAL** indique un paramètre non valide ; **errno** est également défini sur **EINVAL** dans ce cas.
 
 Pour plus d’informations sur ce code de retour et d’autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-L’horodatage d’un fichier peut être représenté s’il est ultérieur à minuit le 1er janvier 1970 et 23:59:59 avant le 31 décembre 3000, heure UTC, sauf si vous utilisez **_stat32** ou **_wstat32**ou si vous avez défini **_USE_32BIT_TIME_T**, auquel cas la date peut être représentée uniquement jusqu' 23:59:59 au 18 janvier, 2038, UTC.
+L’horodatage d’un fichier peut être représenté s’il est ultérieur à minuit le 1er janvier 1970 et 23:59:59 avant le 31 décembre 3000, heure UTC, sauf si vous utilisez **_stat32** ou **_wstat32** ou si vous avez défini **_USE_32BIT_TIME_T**, auquel cas la date peut être représentée uniquement jusqu' 23:59:59 au 18 janvier, 2038, UTC.
 
 ## <a name="remarks"></a>Notes
 
@@ -206,7 +207,7 @@ La fonction **_stat** obtient des informations sur le fichier ou le répertoire 
 
 Les variantes de ces fonctions prennent en charge les types d’heures 32 ou 64 bits et les longueurs de fichiers 32 ou 64 bits. Le premier suffixe numérique (**32** ou **64**) indique la taille du type d’heure utilisé ; le deuxième suffixe est soit **i32** , soit **I64**, indiquant si la taille du fichier est représentée sous la forme d’un entier 32 bits ou 64 bits.
 
-**_stat** équivaut à **_stat64i32**et **`struct`** **_stat** contient une heure de 64 bits. Cela est vrai, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_stat** utilise une heure de 32 bits et **`struct`** **_stat** contient une heure de 32 bits. Il en va de même pour **_stati64**.
+**_stat** équivaut à **_stat64i32** et **`struct`** **_stat** contient une heure de 64 bits. Cela est vrai, sauf si **_USE_32BIT_TIME_T** est défini, auquel cas l’ancien comportement est appliqué. **_stat** utilise une heure de 32 bits et **`struct`** **_stat** contient une heure de 32 bits. Il en va de même pour **_stati64**.
 
 > [!NOTE]
 > **_wstat** ne fonctionne pas avec les liens symboliques de Windows Vista. Dans ces cas, **_wstat** signalera toujours une taille de fichier de 0. **_stat** fonctionne correctement avec les liens symboliques.
@@ -219,14 +220,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Fonctions|_USE_32BIT_TIME_T défini ?|Type d’heure|Type de longueur de fichier|
 |---------------|------------------------------------|---------------|----------------------|
-|**_stat**, **_wstat**|Non défini|64 bits|32 bits|
+|**_stat**, **_wstat**|Non défini|64 bits|32 bits|
 |**_stat**, **_wstat**|Défini|32 bits|32 bits|
 |**_stat32**, **_wstat32**|Non affecté par la définition de macro|32 bits|32 bits|
-|**_stat64**, **_wstat64**|Non affecté par la définition de macro|64 bits|64 bits|
-|**_stati64**, **_wstati64**|Non défini|64 bits|64 bits|
-|**_stati64**, **_wstati64**|Défini|32 bits|64 bits|
-|**_stat32i64**, **_wstat32i64**|Non affecté par la définition de macro|32 bits|64 bits|
-|**_stat64i32**, **_wstat64i32**|Non affecté par la définition de macro|64 bits|32 bits|
+|**_stat64**, **_wstat64**|Non affecté par la définition de macro|64 bits|64 bits|
+|**_stati64**, **_wstati64**|Non défini|64 bits|64 bits|
+|**_stati64**, **_wstati64**|Défini|32 bits|64 bits|
+|**_stat32i64**, **_wstat32i64**|Non affecté par la définition de macro|32 bits|64 bits|
+|**_stat64i32**, **_wstat64i32**|Non affecté par la définition de macro|64 bits|32 bits|
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -254,14 +255,14 @@ Structure **_stat** , définie dans SYS\STAT. H, comprend les champs suivants.
 | **st_size** | Taille du fichier en octets ; entier 64 bits pour les variations avec le suffixe **I64** . |
 | **st_uid** | Identificateur numérique de l’utilisateur propriétaire du fichier (propre à UNIX). Ce champ est toujours zéro sur les systèmes Windows. Un fichier de redirection est classé comme un fichier Windows. |
 
-Si le *chemin d’accès* fait référence à un périphérique, les **st_size**, les différents champs d’heure, les **st_dev**et les champs de **st_rdev** de la structure de **_stat** sont sans signification. Étant donné que STAT.H utilise le type [_dev_t](../../c-runtime-library/standard-types.md) défini dans TYPES.H, vous devez inclure TYPES.H avant STAT.H dans votre code.
+Si le *chemin d’accès* fait référence à un périphérique, les **st_size**, les différents champs d’heure, les **st_dev** et les champs de **st_rdev** de la structure de **_stat** sont sans signification. Étant donné que STAT.H utilise le type [_dev_t](../../c-runtime-library/standard-types.md) défini dans TYPES.H, vous devez inclure TYPES.H avant STAT.H dans votre code.
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
-|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h>suivi de\<sys/stat.h>|\<errno.h>|
-|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h>suivi de \<sys/stat.h> ou\<wchar.h>|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h> suivi de \<sys/stat.h>|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h> suivi de \<sys/stat.h> ou \<wchar.h>|\<errno.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : énumérations (C++)'
 title: Énumérations (C++)
 ms.date: 06/01/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: d4511ed7d09ff280d01214a2a177148956580ee5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c612628b141e60c02ac4d6d80506e77f7ef35761
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171060"
 ---
 # <a name="enumerations-c"></a>Énumérations (C++)
 
@@ -46,7 +47,7 @@ enum class C : short;  // ... may have any integral underlying type
 
 ## <a name="parameters"></a>Paramètres
 
-*identificateur*<br/>
+*identifier*<br/>
 Nom de type donné à l'énumération.
 
 *type*<br/>
@@ -143,7 +144,7 @@ namespace ScopedEnumConversions
 
 Notez que la ligne `hand = account_num;` provoque toujours l'erreur avec les enums non délimités, comme indiqué précédemment. Elle est autorisée avec un transtypage explicite. Toutefois, avec les enums délimités, la tentative de conversion dans l'instruction suivante, `account_num = Suit::Hearts;`, n'est plus autorisée sans transtypage explicite.
 
-## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Enums sans énumérateurs
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a> Enums sans énumérateurs
 
 **Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : en définissant un enum (normal ou étendu) avec un type sous-jacent explicite et sans énumérateurs, vous pouvez en effet introduire un nouveau type intégral qui n’a pas de conversion implicite vers un autre type. En utilisant ce type au lieu de son type sous-jacent intégré, vous pouvez éliminer le risque d’erreurs subtiles causées par des conversions implicites involontaires.
 

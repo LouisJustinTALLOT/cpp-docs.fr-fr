@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conteneurs et objets parallèles'
 title: Conteneurs et objets parallèles
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 7387173378e79a4707008a11846eab19d7ae4341
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2d0b6b491fbe41ea74ad0e6c138cb270558f6e73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172438"
 ---
 # <a name="parallel-containers-and-objects"></a>Conteneurs et objets parallèles
 
@@ -87,7 +88,7 @@ La `concurrent_vector` classe ressemble étroitement à la `vector` classe. La c
 
 - Le runtime ne définit pas une version spécialisée de `concurrent_vector` pour le type **`bool`** .
 
-### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> Opérations sécurisées pour l’accès concurrentiel
+### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> Opérations de Concurrency-Safe
 
 Toutes les méthodes qui ajoutent ou augmentent la taille d’un `concurrent_vector` objet, ou accèdent à un élément dans un `concurrent_vector` objet, sont sécurisées pour l’accès concurrentiel. Ici, l’accès concurrentiel sécurisé signifie que les pointeurs ou les itérateurs sont toujours valides. Il ne s’agit pas d’une garantie d’initialisation d’élément ou d’un ordre de parcours particulier. L’exception à cette règle est la `resize` méthode.
 
@@ -176,7 +177,7 @@ La `concurrent_queue` classe ressemble étroitement à la `queue` classe. Les po
 
 - La `concurrent_queue` classe fournit la méthode [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) à la place de la `size` méthode. La `unsafe_size` méthode n’est pas sécurisée pour la concurrence.
 
-### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> Opérations sécurisées pour l’accès concurrentiel
+### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> Opérations de Concurrency-Safe
 
 Toutes les méthodes qui sont empilées ou déplacées de la file d’attente d’un `concurrent_queue` objet sont sécurisées pour l’accès concurrentiel. Ici, l’accès concurrentiel sécurisé signifie que les pointeurs ou les itérateurs sont toujours valides. Il ne s’agit pas d’une garantie d’initialisation d’élément ou d’un ordre de parcours particulier.
 
@@ -254,7 +255,7 @@ La `concurrent_unordered_map` classe ressemble étroitement à la `unordered_map
 
 Pour éviter les verrous mortels, aucune méthode de ne `concurrent_unordered_map` détient un verrou lorsqu’il appelle l’allocateur de mémoire, les fonctions de hachage ou tout autre code défini par l’utilisateur. En outre, vous devez vous assurer que la fonction de hachage évalue toujours les clés égales à la même valeur. Les meilleures fonctions de hachage distribuent uniformément les clés dans l’espace de code de hachage.
 
-### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> Opérations sécurisées pour l’accès concurrentiel
+### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> Opérations de Concurrency-Safe
 
 La `concurrent_unordered_map` classe permet d’effectuer des opérations d’insertion et d’accès aux éléments sécurisés pour l’accès concurrentiel. Les opérations d’insertion n’invalident pas les pointeurs ou les itérateurs existants. L’accès aux itérateurs et les opérations de parcours sont également sécurisés pour la concurrence. Ici, l’accès concurrentiel sécurisé signifie que les pointeurs ou les itérateurs sont toujours valides. Il ne s’agit pas d’une garantie d’initialisation d’élément ou d’un ordre de parcours particulier. Le tableau suivant répertorie les `concurrent_unordered_map` méthodes et les opérateurs couramment utilisés qui sont sécurisés pour l’accès concurrentiel.
 
@@ -391,7 +392,7 @@ Montre comment utiliser une `combine` fonction pour fusionner des jeux de donné
 [Bibliothèque de modèles parallèles](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Décrit la bibliothèque PPL, qui fournit un modèle de programmation impératif qui favorise l’évolutivité et la facilité d’utilisation du développement d’applications simultanées.
 
-## <a name="reference"></a>Référence
+## <a name="reference"></a>Informations de référence
 
 [Classe concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)
 

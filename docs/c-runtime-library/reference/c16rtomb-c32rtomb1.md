@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : c16rtomb, c32rtomb'
 title: c16rtomb, c32rtomb
 ms.date: 10/22/2019
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: 8f480d9b450b528275fea78ae878269fa6a4fa54
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 35fb8f46693008cca9ee2a28e5b2656f009e4a6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811068"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171671"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -60,15 +61,15 @@ size_t c32rtomb(
 *mbchar*\
 Pointeur vers un tableau pour stocker le caractère multioctet UTF-8 converti.
 
-\ *WCHAR*
+*WCHAR*\
 Caractère large à convertir.
 
-\ d' *État*
+*Département*\
 Pointeur vers un objet **mbstate_t** .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
-Nombre d’octets stockés dans le tableau d’objets *mbchar*, y compris les séquences de décalage. Si *WCHAR* n’est pas un caractère élargi valide, la valeur (**size_t**) (-1) est retournée, **errno** a la valeur **EILSEQ**et la valeur de l' *État* n’est pas spécifiée.
+Nombre d’octets stockés dans le tableau d’objets *mbchar*, y compris les séquences de décalage. Si *WCHAR* n’est pas un caractère élargi valide, la valeur (**size_t**) (-1) est retournée, **errno** a la valeur **EILSEQ** et la valeur de l' *État* n’est pas spécifiée.
 
 ## <a name="remarks"></a>Notes
 
@@ -82,17 +83,17 @@ L’objet d’état de conversion d' *État* vous permet d’effectuer des appel
 
 Pour convertir des caractères UTF-16 en caractères multioctets non UTF-8, utilisez les fonctions [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md), [wcstombs_s ou _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) .
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**c16rtomb**, **c32rtomb**|C, C++ : \<uchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-\ de [conversion de données](../data-conversion.md)
+[Conversion de données](../data-conversion.md)\
 [Paramètres régionaux](../locale.md)\
 [Interprétation des séquences de caractères multioctets](../interpretation-of-multibyte-character-sequences.md)\
 [mbrtoc16, mbrtoc32](mbrtoc16-mbrtoc323.md)\

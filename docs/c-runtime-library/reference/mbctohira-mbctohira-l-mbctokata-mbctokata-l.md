@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l'
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aca32a81f1a7c74241be5d4574307a39731b1b6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914377"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171489"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -81,17 +82,17 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère multioctet à convertir.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne le caractère converti *c*, si possible. Dans le cas contraire, elle retourne le caractère *c* inchangé.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **_mbctohira** et **_mbctokata** testent un caractère *c* et, si possible, appliquent l’une des conversions suivantes.
 

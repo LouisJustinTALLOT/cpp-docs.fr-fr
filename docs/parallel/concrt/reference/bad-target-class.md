@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe bad_target'
 title: bad_target, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 023607ff142b7fa39165cc9b5280a8e9345a3645
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0bade57ef06ee1ecf675d69531da918fc2a3510f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172243"
 ---
 # <a name="bad_target-class"></a>bad_target, classe
 
@@ -29,7 +30,7 @@ class bad_target : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[bad_target](#ctor)|Surchargé. Construit un objet `bad_target`.|
 
@@ -47,9 +48,9 @@ Cette exception est généralement levée pour des raisons telles qu’une cible
 
 **En-tête :** concrt. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>bad_target
+## <a name="bad_target"></a><a name="ctor"></a> bad_target
 
 Construit un objet `bad_target`.
 
@@ -66,5 +67,5 @@ Message descriptif de l'erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [Blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md)

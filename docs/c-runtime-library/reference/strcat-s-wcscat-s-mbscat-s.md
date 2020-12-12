@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l'
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 ms.date: 4/2/2020
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: f7d890a753638112c4a1bb56cf6093a9510dbee2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c0ac9643593b509d4eeae1aca2d60aaa8269aa73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171125"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -118,7 +119,7 @@ Mémoire tampon de chaîne source se terminant par null.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
@@ -127,10 +128,10 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 |*strDestination*|*numberOfElements*|*strSource*|Valeur retournée|Contenu de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**Null** ou inachevé|n'importe laquelle|n'importe laquelle|**EINVAL**|non modifié|
-|n'importe laquelle|n'importe laquelle|**NUL**|**EINVAL**|*strDestination*[0] a la valeur 0|
+|n'importe laquelle|n'importe laquelle|**NULL**|**EINVAL**|*strDestination*[0] a la valeur 0|
 |n'importe laquelle|0 ou trop petit|n'importe laquelle|**ERANGE**|*strDestination*[0] a la valeur 0|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **strcat_s** ajoute *strSource* à *strDestination* et met fin à la chaîne résultante avec un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat_s** n’est pas défini si les chaînes source et de destination se chevauchent.
 
@@ -171,7 +172,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple de code dans [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
