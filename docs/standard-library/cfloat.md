@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; cfloat&gt;'
 title: '&lt;cfloat&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cfloat header
 ms.assetid: 25ec4ab9-3c1d-46e3-9e68-ad9a8762cadb
-ms.openlocfilehash: 0ce5a4612363dde1daa991d4f84eb8a77aebaaa5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fb445044945791a9b105d39a60f6ce3c93c8978d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325273"
 ---
 # <a name="ltcfloatgt"></a>&lt;cfloat&gt;
 
-Inclut l’en-tête \<float.h> de la bibliothèque C Standard.
+Comprend l’en-tête de la bibliothèque C standard \<float.h> .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,6 +71,6 @@ Inclut l’en-tête \<float.h> de la bibliothèque C Standard.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

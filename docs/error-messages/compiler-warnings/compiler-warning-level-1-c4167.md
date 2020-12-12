@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4167'
 title: Avertissement du compilateur (niveau 1) C4167
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4167
 ms.assetid: 74a420bd-9371-4167-b1ee-74dd8680f97b
-ms.openlocfilehash: 99d60bc08a077ae1637b80eac6775c8fa2571a1e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8d0b08ea4d97c6e85f5e07ce4844abdae7afafbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266986"
 ---
 # <a name="compiler-warning-level-1-c4167"></a>Avertissement du compilateur (niveau 1) C4167
 

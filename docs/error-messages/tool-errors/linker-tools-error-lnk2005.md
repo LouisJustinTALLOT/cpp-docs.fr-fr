@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK2005'
 title: Erreur des outils Éditeur de liens LNK2005
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-ms.openlocfilehash: 278f05b8338ac4238d6862fd7b9bd7744f6c8ee5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c6de300bc731104f51056911515d0cc7a95e05f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225213"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338494"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Erreur des outils Éditeur de liens LNK2005
 

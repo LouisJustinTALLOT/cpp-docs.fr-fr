@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe _com_error'
 title: _com_error, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: ace3ac33e4dccd66c0a44095533d657e32b15f1c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2d297da005feba39838679ed2b7062ce54ad9c38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837812"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318206"
 ---
 # <a name="_com_error-class"></a>_com_error, classe
 
@@ -64,7 +65,7 @@ Un objet **_com_error** représente une condition d’exception détectée par l
 
 **FIN spécifique à Microsoft**
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<comdef.h>
 

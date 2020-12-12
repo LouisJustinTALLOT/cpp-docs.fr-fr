@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe de module'
 title: Module (classe)
 ms.date: 10/18/2018
 ms.topic: reference
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterObjects method
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-ms.openlocfilehash: f7930247c979c111a7f4798e35ebe7aa95209f37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 00063bca4d35ca2d7eab09ad9d03d57dcdc85593
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186387"
 ---
 # <a name="module-class"></a>Module (classe)
 
@@ -148,7 +149,7 @@ Nom                                                                   | Descript
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="modulemodule"></a><a name="tilde-module"></a>Module :: ~ module
+## <a name="modulemodule"></a><a name="tilde-module"></a> Module :: ~ module
 
 Désinitialise l’instance actuelle de la `Module` classe.
 
@@ -156,7 +157,7 @@ Désinitialise l’instance actuelle de la `Module` classe.
 virtual ~Module();
 ```
 
-## <a name="modulecreate"></a><a name="create"></a>Module :: Create
+## <a name="modulecreate"></a><a name="create"></a> Module :: Create
 
 Crée une instance d’un module.
 
@@ -187,11 +188,11 @@ Les paramètres d' *objet* et de *méthode* sont utilisés en combinaison. Point
 *method*<br/>
 Les paramètres d' *objet* et de *méthode* sont utilisés en combinaison. Pointe vers la méthode du dernier objet d’instance lorsque le dernier objet d’instance du module est relâché.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au module.
 
-## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a>Module ::D ecrementObjectCount
+## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a> Module ::D ecrementObjectCount
 
 Décrémente le nombre d’objets suivis par le module.
 
@@ -199,11 +200,11 @@ Décrémente le nombre d’objets suivis par le module.
 virtual long DecrementObjectCount();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre avant l’opération de décrémentation.
 
-## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a>Module :: GetActivationFactory
+## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a> Module :: GetActivationFactory
 
 Obtient une fabrique d’activation pour le module.
 
@@ -223,14 +224,14 @@ IID d’une classe Runtime.
 *ppIFactory*<br/>
 IActivationFactory pour la classe d’exécution spécifiée.
 
-*Nom du serveur*<br/>
+*serverName*<br/>
 Nom d’un sous-ensemble de fabriques de classes dans le module actuel. Spécifiez le nom du serveur utilisé dans la macro [ActivatableClassWithFactoryEx](activatableclass-macros.md) ou spécifiez **`nullptr`** pour récupérer le nom du serveur par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de réussite ; Sinon, HRESULT retourné par GetActivationFactory.
 
-## <a name="modulegetclassobject"></a><a name="getclassobject"></a>Module :: GetClassObject,
+## <a name="modulegetclassobject"></a><a name="getclassobject"></a> Module :: GetClassObject,
 
 Extrait un cache de fabriques de classes.
 
@@ -245,7 +246,7 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
+*identificateur*<br/>
 ID de classe.
 
 *riid*<br/>
@@ -254,16 +255,16 @@ ID d’interface que vous demandez.
 *ppv*<br/>
 Pointeur vers un objet retourné.
 
-*Nom du serveur*<br/>
+*serverName*<br/>
 Nom du serveur spécifié dans la `ActivatableClassWithFactory` macro, ou, `ActivatableClassWithFactoryEx` `ActivatableClass` ou **`nullptr`** pour récupérer le nom du serveur par défaut.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 ### <a name="remarks"></a>Notes
 
 Utilisez cette méthode uniquement pour COM, et non pour le Windows Runtime. Cette méthode expose uniquement les `IClassFactory` méthodes.
 
-## <a name="modulegetmodule"></a><a name="getmodule"></a>Module :: GetModule
+## <a name="modulegetmodule"></a><a name="getmodule"></a> Module :: GetModule
 
 Crée une instance d’un module.
 
@@ -272,11 +273,11 @@ static Module& GetModule();
 WRL_NOTHROW static Module& GetModule();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à un module.
 
-## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a>Module :: Getobjectcount,
+## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a> Module :: Getobjectcount,
 
 Récupère le nombre d’objets managés par ce module.
 
@@ -284,11 +285,11 @@ Récupère le nombre d’objets managés par ce module.
 virtual long GetObjectCount() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre actuel d’objets gérés par ce module.
 
-## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a>Module :: Incrementobjectcount,
+## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a> Module :: Incrementobjectcount,
 
 Incrémente le nombre d’objets suivis par le module.
 
@@ -296,11 +297,11 @@ Incrémente le nombre d’objets suivis par le module.
 virtual long IncrementObjectCount();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre avant l’opération d’incrémentation.
 
-## <a name="modulemodule"></a><a name="module"></a>Module :: module
+## <a name="modulemodule"></a><a name="module"></a> Module :: module
 
 Initialise une nouvelle instance de la classe `Module`.
 
@@ -312,7 +313,7 @@ Module();
 
 Ce constructeur est protégé et ne peut pas être appelé avec le **`new`** mot clé. Au lieu de cela, appelez [module :: GetModule](#getmodule) ou [module :: Create](#create).
 
-## <a name="moduleobjectcount_"></a><a name="objectcount"></a>Module :: objectCount_
+## <a name="moduleobjectcount_"></a><a name="objectcount"></a> Module :: objectCount_
 
 Effectue le suivi du nombre de classes qui ont été créées avec la fonction [Make](make-function.md) .
 
@@ -320,7 +321,7 @@ Effectue le suivi du nombre de classes qui ont été créées avec la fonction [
 volatile long objectCount_;
 ```
 
-## <a name="moduleregistercomobject"></a><a name="registercomobject"></a>Module :: Registercomobject,
+## <a name="moduleregistercomobject"></a><a name="registercomobject"></a> Module :: Registercomobject,
 
 Inscrit un ou plusieurs objets COM afin que d’autres applications puissent s’y connecter.
 
@@ -335,7 +336,7 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nom du serveur*<br/>
+*serverName*<br/>
 Nom complet d’un serveur.
 
 *CLSID*<br/>
@@ -350,7 +351,7 @@ Lorsque l’opération est terminée, un tableau de pointeurs vers des valeurs q
 *count*<br/>
 Nombre de CLSID à inscrire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si réussies ; Sinon, HRESULT comme CO_E_OBJISREG qui indique la raison de l’échec de l’opération.
 
@@ -360,7 +361,7 @@ Les objets COM sont inscrits avec l’énumérateur CLSCTX_LOCAL_SERVER de l’�
 
 Le type de connexion aux objets inscrits est spécifié par une combinaison du paramètre de modèle *comindicateur* actuel et de l’énumérateur REGCLS_SUSPENDED de l’énumération REGCLS.
 
-## <a name="moduleregisterobjects"></a><a name="registerobjects"></a>Module :: Registerobjects,
+## <a name="moduleregisterobjects"></a><a name="registerobjects"></a> Module :: Registerobjects,
 
 Inscrit des objets COM ou Windows Runtime pour permettre à d’autres applications de s’y connecter.
 
@@ -375,14 +376,14 @@ HRESULT RegisterObjects(
 *modules*<br/>
 Tableau d’objets COM ou Windows Runtime.
 
-*Nom du serveur*<br/>
+*serverName*<br/>
 Nom du serveur qui a créé les objets.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de réussite ; Sinon, HRESULT qui indique la raison de l’échec de l’opération.
 
-## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a>Module :: Registerwinrtobject,
+## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a> Module :: Registerwinrtobject,
 
 Inscrit un ou plusieurs objets Windows Runtime pour permettre à d’autres applications de s’y connecter.
 
@@ -395,7 +396,7 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>Paramètres
 
-*Nom du serveur*<br/>
+*serverName*<br/>
 Nom qui spécifie un sous-ensemble d’objets affectés par cette opération.
 
 *activatableClassIds*<br/>
@@ -407,11 +408,11 @@ Valeur qui identifie les objets de classe qui ont été inscrits. Cette valeur e
 *count*<br/>
 Nombre d’objets à inscrire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK en cas de réussite ; Sinon, une erreur HRESULT telle que CO_E_OBJISREG qui indique la raison de l’échec de l’opération.
 
-## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a>Module :: releaseNotifier_
+## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a> Module :: releaseNotifier_
 
 Contient un pointeur vers un `ReleaseNotifier` objet.
 
@@ -419,7 +420,7 @@ Contient un pointeur vers un `ReleaseNotifier` objet.
 ReleaseNotifier *releaseNotifier_;
 ```
 
-## <a name="moduleterminate"></a><a name="terminate"></a>Module :: Terminate
+## <a name="moduleterminate"></a><a name="terminate"></a> Module :: Terminate
 
 Entraîne l’arrêt de toutes les fabriques instanciées par le module.
 
@@ -431,7 +432,7 @@ void Terminate();
 
 Libère les fabriques dans le cache.
 
-## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a>Module :: Unregistercomobject,
+## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a> Module :: Unregistercomobject,
 
 Annule l’inscription d’un ou plusieurs objets COM, ce qui empêche d’autres applications de s’y connecter.
 
@@ -444,7 +445,7 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nom du serveur*<br/>
+*serverName*<br/>
 Inutilisé
 
 *cookies*<br/>
@@ -453,11 +454,11 @@ Tableau de pointeurs vers des valeurs qui identifient les objets de classe dont 
 *count*<br/>
 Nombre de classes dont l’inscription doit être annulée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si cette opération réussit ; Sinon, une erreur HRESULT qui indique la raison de l’échec de l’opération.
 
-## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a>Module :: Unregisterobjects,
+## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a> Module :: Unregisterobjects,
 
 Annule l’inscription des objets dans le module spécifié afin que d’autres applications ne puissent pas s’y connecter.
 
@@ -472,14 +473,14 @@ HRESULT UnregisterObjects(
 *modules*<br/>
 Pointeur vers un module.
 
-*Nom du serveur*<br/>
+*serverName*<br/>
 Nom qualifiant qui spécifie un sous-ensemble d’objets affectés par cette opération.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 S_OK si cette opération réussit ; Sinon, une erreur HRESULT qui indique la raison de l’échec de cette opération.
 
-## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a>Module :: Unregisterwinrtobject,
+## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a> Module :: Unregisterwinrtobject,
 
 Annule l’inscription d’un ou plusieurs objets Windows Runtime afin que d’autres applications ne puissent pas s’y connecter.
 

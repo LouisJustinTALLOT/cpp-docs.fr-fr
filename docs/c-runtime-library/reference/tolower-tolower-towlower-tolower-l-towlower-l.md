@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les éléments suivants : ToLower, _tolower, towlower, _tolower_l, _towlower_l'
 title: tolower, _tolower, towlower, _tolower_l, _towlower_l
 ms.date: 4/2/2020
 api_name:
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: c8b27c4cc618d34d9da9b5884c6db2f525fd2388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5b686d9b511fe4864724f85be78ac511a6351ef7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318323"
 ---
 # <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
@@ -87,17 +88,17 @@ int _towlower_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère à convertir.
 
 *locale*<br/>
 Paramètres régionaux à utiliser pour une traduction spécifique aux paramètres régionaux.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces routines convertit une copie de *c* en minuscules si la conversion est possible et retourne le résultat. Il n’existe aucune valeur de retour réservée pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces routines convertit une lettre majuscule donnée en lettre minuscule si cela est possible et approprié. La conversion de casse de **towlower** est spécifique aux paramètres régionaux. Seuls les caractères relevant des paramètres régionaux actifs changent de casse. Les fonctions sans suffixe **_L** utilisent les paramètres régionaux actuellement définis. Les versions de ces fonctions qui ont le suffixe **_L** prennent les paramètres régionaux en tant que paramètre et les utilisent à la place des paramètres régionaux actuellement définis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -125,14 +126,14 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple dans [to, fonctions](../../c-runtime-library/to-functions.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
-[to, fonctions](../../c-runtime-library/to-functions.md)<br/>
+[is, ISW, routines](../../c-runtime-library/is-isw-routines.md)<br/>
+[à des fonctions](../../c-runtime-library/to-functions.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

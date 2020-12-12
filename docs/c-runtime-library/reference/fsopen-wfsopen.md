@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fsopen, _wfsopen'
 title: _fsopen, _wfsopen
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 7c7f079d8867416ab4f091d7c95a01ab9e40c0e8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c7b54a6735939e26c8ff0153abc640e3dc2c8b41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318336"
 ---
 # <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
@@ -69,7 +70,7 @@ FILE *_wfsopen(
 
 ### <a name="parameters"></a>Paramètres
 
-*extension*<br/>
+*filename*<br/>
 Nom du fichier à ouvrir.
 
 *mode*<br/>
@@ -78,13 +79,13 @@ Type d'accès autorisé.
 *shflag*<br/>
 Type de partage autorisé.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne un pointeur vers le flux. Une valeur de pointeur null indique une erreur. Si *filename* ou *mode* a la **valeur null** ou est une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la **valeur null** et attribuent à **errno** la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_fsopen** ouvre le fichier spécifié par *nom* de fichier en tant que flux et prépare le fichier pour la lecture ou l’écriture partagée ultérieure, tel que défini par les arguments mode et *shflag* . **_wfsopen** est une version à caractères larges de **_fsopen**; les arguments de *nom de fichier* et de *mode* de **_wfsopen** sont des chaînes à caractères larges. dans le cas contraire, **_wfsopen** et **_fsopen** se comportent de la même façon.
 
@@ -106,8 +107,8 @@ Lorsqu’un fichier est ouvert avec le type d’accès **« a »** ou **« a 
 |Terme|Définition|
 |----------|----------------|
 |**t**|Ouvre un fichier en mode texte (traduit). Dans ce mode, les combinaisons retour chariot-saut de ligne sont traduites en flux à ligne unique (LF) en entrée et les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture ou en lecture/écriture, **_fsopen** recherche un Ctrl + Z à la fin du fichier et le supprime, si possible. Cela est dû au fait que l’utilisation de [fseek](fseek-fseeki64.md) et de [ftell](ftell-ftelli64.md) pour se déplacer dans un fichier qui se termine par un Ctrl + Z peut provoquer un comportement incorrect de [fseek](fseek-fseeki64.md) à proximité de la fin du fichier.|
-|**p**|Ouvre un fichier en mode binaire (non traduit) ; les traductions ci-dessus sont supprimées.|
-|**X**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque.|
+|**b**|Ouvre un fichier en mode binaire (non traduit) ; les traductions ci-dessus sont supprimées.|
+|**S**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque.|
 |**R**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque.|
 |**T**|Spécifie un fichier comme temporaire. Si possible, il n'est pas vidé sur disque.|
 |**D**|Spécifie un fichier comme temporaire. Il est supprimé lorsque le dernier pointeur de fichier est fermé.|
@@ -134,7 +135,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|En-têtes facultatifs|
+|Fonction|En-tête requis|En-têtes facultatifs|
 |--------------|---------------------|----------------------|
 |**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Pour la constante de manifeste pour le paramètre *shflag* .|
 |**_wfsopen**|\<stdio.h> ou \<wchar.h>|\<share.h><br /><br /> Pour la constante de manifeste pour le paramètre *shflag* .|

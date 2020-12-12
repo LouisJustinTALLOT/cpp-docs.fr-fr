@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe cache_chunklist'
 title: cache_chunklist, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 1ee422423356a18f1c81796790593a20dc03fbab
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 264713ed12727d45928f40f2bc6a790e0e3b1db1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560711"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325396"
 ---
 # <a name="cache_chunklist-class"></a>cache_chunklist, classe
 
@@ -71,7 +72,7 @@ void *allocate(std::size_t count);
 *saut*\
 Nombre d’éléments du tableau à allouer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un pointeur vers l’objet alloué.
 

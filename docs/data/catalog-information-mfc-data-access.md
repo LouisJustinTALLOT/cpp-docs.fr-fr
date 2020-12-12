@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : informations de catalogue (accès aux données MFC)'
 title: Informations relatives au catalogue (Accès aux données MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - catalog information database [C++]
 - databases [C++], catalog information database
 ms.assetid: c184e80f-ff17-409f-9df8-05275080bb8d
-ms.openlocfilehash: 18b76f3e9d3e2bf17763d433f388647b0261b12b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7ea09c4267afc438bbdd40f2c96d888b40d5bb68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213484"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213193"
 ---
 # <a name="catalog-information--mfc-data-access"></a>Informations relatives au catalogue (Accès aux données MFC)
 

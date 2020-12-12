@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK2013'
 title: Erreur des outils Éditeur de liens LNK2013
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 51b754e19656ad8ec7ef1686605086b6e4a41853
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194744"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338463"
 ---
 # <a name="linker-tools-error-lnk2013"></a>Erreur des outils Éditeur de liens LNK2013
 
@@ -27,4 +28,4 @@ Lorsque le nom du symbole est un symbole défini par l’utilisateur (et non un 
 
 - Renommez la section de code contenant la fonction statique pour qu’elle soit identique à celle de l’appelant.
 
-Utilisez `DUMPBIN /SYMBOLS`pour voir si une fonction est statique.
+Utilisez `DUMPBIN /SYMBOLS` pour voir si une fonction est statique.

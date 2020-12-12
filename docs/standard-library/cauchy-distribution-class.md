@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe cauchy_distribution'
 title: cauchy_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: f8e35815a702878fde702e772edb21899608e7f7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bf87f28b49ffa6b13a60c8faf237d38175cd9464
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325327"
 ---
 # <a name="cauchy_distribution-class"></a>cauchy_distribution, classe
 
@@ -232,7 +233,7 @@ Distribution for 10 samples:
     10: 35.2531547063
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

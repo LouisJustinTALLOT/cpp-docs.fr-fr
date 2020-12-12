@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 4) C4256'
 title: Avertissement du compilateur (niveau 4) C4256
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 1ec3e64548cead53cea906cdf2abd3dd25ee06d4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3ccd8447f930f40df5e488714cdcfb52e54d9928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991384"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189299"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Avertissement du compilateur (niveau 4) C4256
 
-'fonction' : le constructeur pour la classe avec des bases virtuelles a'... '; les appels peuvent ne pas être compatibles avec les versions antérieures de VisualC++
+'fonction' : le constructeur pour la classe avec des bases virtuelles a'... '; les appels peuvent ne pas être compatibles avec les versions antérieures de Visual C++
 
 Incompatibilité possible.
 
-Prenez l'exemple du code suivant. Si la définition du constructeur S2 :: S2 (int i,...) a été compilée à l’aide d’une version C++ du compilateur Microsoft antérieure à la version 7, mais que l’exemple suivant est compilé à l’aide de la version actuelle, l’appel au constructeur pour S3 ne fonctionnera pas correctement en raison d’une modification de convention d’appel de cas spécial. Si les deux étaient compilés à C++ l’aide de Visual 6,0, l’appel ne fonctionnerait pas non plus correctement, à moins qu’aucun paramètre ne soit passé pour les points de suspension.
+Considérez l’exemple de code suivant. Si la définition du constructeur S2 :: S2 (int i,...) a été compilée à l’aide d’une version du compilateur Microsoft C++ antérieure à la version 7, mais que l’exemple suivant est compilé à l’aide de la version actuelle, l’appel au constructeur pour S3 ne fonctionnera pas correctement en raison d’une modification de convention d’appel de cas spécial. Si les deux étaient compilés à l’aide de Visual C++ 6,0, l’appel ne fonctionnerait pas non plus correctement, à moins qu’aucun paramètre ne soit passé pour les points de suspension.
 
 Pour résoudre cet avertissement,
 

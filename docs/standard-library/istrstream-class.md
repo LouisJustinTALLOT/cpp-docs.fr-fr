@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe istrstream,'
 title: istrstream, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 37118772f7cefd6f380ceb01908da55500ee7ab5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 45e60878c63c30daca85924a9d0091e202387b55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306649"
 ---
 # <a name="istrstream-class"></a>istrstream, classe
 
@@ -50,7 +51,7 @@ L'objet stocke un objet de classe `strstreambuf`.
 
 **Espace de noms :** std
 
-## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream, :: istrstream,
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a> istrstream, :: istrstream,
 
 Construit un objet de type `istrstream`.
 
@@ -82,7 +83,7 @@ Contenu avec lequel la mémoire tampon est initialisée.
 
 Tous les constructeurs initialisent la classe de base en appelant [IStream](../standard-library/istream-typedefs.md#istream)(**SB**), où `sb` est l’objet stocké de la classe [strstreambuf](../standard-library/strstreambuf-class.md). Les deux premiers constructeurs s’initialisent également `sb` en appelant `strstreambuf( ( const char *) ptr, 0 )` . Les deux constructeurs restants appellent à la place `strstreambuf( ( const char *) ptr, count )` .
 
-## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream, :: rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a> istrstream, :: rdbuf
 
 Retourne un pointeur vers l’objet strstreambuf associé au flux.
 
@@ -90,7 +91,7 @@ Retourne un pointeur vers l’objet strstreambuf associé au flux.
 strstreambuf *rdbuf() const
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un pointeur vers l’objet strstreambuf associé au flux.
 
@@ -102,7 +103,7 @@ La fonction membre retourne l’adresse de la mémoire tampon de flux stockée d
 
 Pour obtenir un exemple qui utilise `rdbuf`, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).
 
-## <a name="istrstreamstr"></a><a name="str"></a>istrstream, :: Str
+## <a name="istrstreamstr"></a><a name="str"></a> istrstream, :: Str
 
 Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.
 
@@ -110,7 +111,7 @@ Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourn
 char *str();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le début de la séquence contrôlée.
 

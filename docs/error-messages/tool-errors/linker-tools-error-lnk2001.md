@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur des outils Éditeur de liens LNK2001'
 title: Erreur des outils Éditeur de liens LNK2001
 ms.date: 12/19/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 59915b3aa0ad25b5638a43a6d09dccc2b42825ab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 790c75b290b49fe40362ad1bc4ee93e90cc2d018
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230569"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338529"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erreur des outils Éditeur de liens LNK2001
 
@@ -27,7 +28,7 @@ Il existe plusieurs façons d’accéder à des erreurs LNK2001. Tous impliquent
 
 Un *symbole* est le nom interne d’une fonction ou d’une variable globale. Il s’agit de la forme du nom utilisé ou défini dans un fichier objet ou une bibliothèque compilé (e). Une variable globale est définie dans le fichier objet où le stockage est alloué. Une fonction est définie dans le fichier objet où le code compilé pour le corps de la fonction est placé. Un *symbole externe* est référencé dans un fichier objet, mais il est défini dans une bibliothèque ou un fichier objet différent. Un *symbole exporté* est un symbole qui est mis à la disposition du public par le fichier objet ou la bibliothèque qui le définit.
 
-Pour créer une application ou une DLL, chaque symbole utilisé doit avoir une définition. L’éditeur de liens doit *résoudre*ou trouver la définition correspondante pour, chaque symbole externe référencé par chaque fichier objet. L’éditeur de liens génère une erreur lorsqu’il ne peut pas résoudre un symbole externe. Cela signifie que l’éditeur de liens n’a pas pu trouver une définition de symbole exportée correspondante dans l’un des fichiers liés.
+Pour créer une application ou une DLL, chaque symbole utilisé doit avoir une définition. L’éditeur de liens doit *résoudre* ou trouver la définition correspondante pour, chaque symbole externe référencé par chaque fichier objet. L’éditeur de liens génère une erreur lorsqu’il ne peut pas résoudre un symbole externe. Cela signifie que l’éditeur de liens n’a pas pu trouver une définition de symbole exportée correspondante dans l’un des fichiers liés.
 
 ## <a name="compilation-and-link-issues"></a>Problèmes de compilation et de liaison
 

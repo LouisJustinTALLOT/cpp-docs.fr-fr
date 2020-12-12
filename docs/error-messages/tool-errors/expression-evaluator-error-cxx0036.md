@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : évaluateur d’expression, erreur CXX0036'
 title: Évaluateur d'expression, erreur CXX0036
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CXX0036
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-ms.openlocfilehash: 164fd9ee00071e218e5bb4f3ab00febc618725a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fa595c590b6e59b74d693f3b6ff777055b5af2c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195498"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338536"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Évaluateur d'expression, erreur CXX0036
 
@@ -28,7 +29,7 @@ Ce message peut être généré par l’une des erreurs suivantes dans l’utili
 
    Spécifie le contexte de l' *expression*. L’opérateur de contexte a la même priorité et utilisation qu’un cast de type.
 
-   Les virgules de fin peuvent être omises. Si l’une des *fonctions*, *modules*ou *dll* contient une virgule littérale, vous devez placer le nom entier entre parenthèses.
+   Les virgules de fin peuvent être omises. Si l’une des *fonctions*, *modules* ou *dll* contient une virgule littérale, vous devez placer le nom entier entre parenthèses.
 
 - Le nom de la fonction n’a pas été orthographié correctement ou n’existe pas dans le module ou la bibliothèque de liens dynamiques spécifiés.
 

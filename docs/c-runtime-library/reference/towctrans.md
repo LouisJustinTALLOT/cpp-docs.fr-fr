@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : towctrans'
 title: towctrans
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-ms.openlocfilehash: d63fc343647cd0f949f282e2a64d4a0636e62bd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b8ecdd38ca45eb658d5e9f61bf05549878228bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318297"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -52,7 +53,7 @@ Caractère que vous souhaitez transformer.
 *category*<br/>
 Identificateur qui contient la valeur de retour de [wctrans](wctrans.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Le caractère *c*, après que **towctrans** a utilisé la règle de transformation dans la *catégorie*.
 
@@ -60,7 +61,7 @@ Le caractère *c*, après que **towctrans** a utilisé la règle de transformati
 
 La valeur de *Category* doit avoir été retournée par un appel antérieur réussi à [wctrans](wctrans.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

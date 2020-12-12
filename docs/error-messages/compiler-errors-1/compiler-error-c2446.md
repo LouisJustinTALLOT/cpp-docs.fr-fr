@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2446'
 title: Erreur du compilateur C2446
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2446
 ms.assetid: 4f70dd11-6baf-4b92-9a08-f88f65ffa199
-ms.openlocfilehash: 140b280d3f7d797142faac134cab1c8689022a58
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 489c94f06f3bba0673f46a4ad7062bafd292d574
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205255"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189637"
 ---
 # <a name="compiler-error-c2446"></a>Erreur du compilateur C2446
 
 'operator' : aucune conversion de’type1 'en’type2 '
 
-Le compilateur ne peut pas convertir `type1` en `type2`. La conversion peut ne pas avoir de sens, car elle neC++ respecte pas la sémantique C/.
+Le compilateur ne peut pas convertir `type1` en `type2` . La conversion peut ne pas avoir de sens, car elle enfreint la sémantique C/C++.

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conversions standard'
 title: Conversions standard
 ms.date: 10/02/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: cb4960c2f981b99fbc798098357a0ac65e8ddaa6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cfebc861fca1ccf8119c6055b37f112df7d4dca0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318037"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 
@@ -57,7 +58,7 @@ Le résultat d'une conversion est une l-value uniquement si elle produit un type
 
 Les objets d’un type intégral peuvent être convertis en un autre type intégral plus large, autrement dit un type qui peut représenter un plus grand ensemble de valeurs. Ce type étendu de conversion est appelé *promotion intégrale*. Avec la promotion intégrale, vous pouvez utiliser les types suivants dans une expression partout où un autre type intégral peut être utilisé :
 
-- Objets, littéraux et constantes de type **`char`** et**`short int`**
+- Objets, littéraux et constantes de type **`char`** et **`short int`**
 
 - Types d'énumération
 
@@ -69,11 +70,11 @@ Les promotions C++ sont « préservation de la valeur », car la valeur de la 
 
 Les promotions de type conservation-valeur et les promotions qui conservent l'entier non signé produisent normalement les mêmes résultats. Toutefois, ils peuvent produire des résultats différents si l’objet promu apparaît comme suit :
 
-- Opérande de `/` ,, `%` , `/=` `%=` ,, `<` , `<=` `>` ou`>=`
+- Opérande de `/` ,, `%` , `/=` `%=` ,, `<` , `<=` `>` ou `>=`
 
    Ces opérateurs se basent sur un signe pour déterminer le résultat. Les promotions de préservation de la valeur et de préconservation produisent des résultats différents lorsqu’elles sont appliquées à ces opérandes.
 
-- Opérande gauche de `>>` ou`>>=`
+- Opérande gauche de `>>` ou `>>=`
 
    Ces opérateurs traitent différemment les quantités signées et non signées dans une opération de décalage. Pour les quantités signées, une opération de décalage vers la droite propage le bit de signe dans les positions de bit libérées, tandis que les positions de bit libérées sont remplies de zéros dans des quantités non signées.
 
@@ -139,7 +140,7 @@ La valeur maximale pouvant être représentée par le type **`float`** est 3.402
 
 Certaines expressions peuvent provoquer la conversion des objets de type flottant en types intégraux, ou vice versa. Quand un objet de type intégral est converti en type flottant et que la valeur d’origine n’est pas représentable exactement, le résultat est soit la valeur la plus élevée suivante, soit la valeur représentable suivante.
 
-Lorsqu’un objet de type flottant est converti en type intégral, la partie fractionnaire est *tronquée*ou arrondie à zéro. Un nombre comme 1,3 est converti en 1, et-1,3 est converti en-1. Si la valeur tronquée est supérieure à la valeur représentable la plus élevée, ou inférieure à la valeur représentable la plus faible, le résultat n’est pas défini.
+Lorsqu’un objet de type flottant est converti en type intégral, la partie fractionnaire est *tronquée* ou arrondie à zéro. Un nombre comme 1,3 est converti en 1, et-1,3 est converti en-1. Si la valeur tronquée est supérieure à la valeur représentable la plus élevée, ou inférieure à la valeur représentable la plus faible, le résultat n’est pas défini.
 
 ## <a name="arithmetic-conversions"></a>Conversions arithmétiques
 

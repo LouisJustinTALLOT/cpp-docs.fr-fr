@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe cache_suballoc'
 title: cache_suballoc, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 410cdc7bd45c54c252ce33c7d8e3e2f883ac0eb4
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9df13155101a77d327c8bdee9da1fe03bfa00366
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325367"
 ---
 # <a name="cache_suballoc-class"></a>cache_suballoc, classe
 
@@ -71,7 +72,7 @@ void *allocate(std::size_t count);
 *saut*\
 Nombre d’éléments du tableau à allouer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Un pointeur vers l’objet alloué.
 

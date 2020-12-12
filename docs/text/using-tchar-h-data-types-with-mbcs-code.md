@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : TCHAR. H (types de données avec _MBCS code)'
 title: Utilisation de types de données TCHAR.H avec _MBCS
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: dd43c29d77c3351e8f597b474c4756ad3d45ef2b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4672ba210e0df0af1a4f4ee106d31cc978bdf2fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306584"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs-code"></a>Utilisation de types de données TCHAR.H avec _MBCS
 
@@ -61,7 +62,7 @@ Voici les trois solutions pour empêcher ce conflit de types (et les avertisseme
     #define _tcschr _mbschr
     ```
 
-   Lorsque vous adoptez cette approche, vous devez veiller à utiliser les types de données appropriés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique `_TXCHAR`. `_TXCHAR`correspond au type **`char`** dans le code SBCS mais correspond au type **`unsigned char`** dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans la référence de la *bibliothèque Runtime*.
+   Lorsque vous adoptez cette approche, vous devez veiller à utiliser les types de données appropriés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique `_TXCHAR`. `_TXCHAR` correspond au type **`char`** dans le code SBCS mais correspond au type **`unsigned char`** dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans la référence de la *bibliothèque Runtime*.
 
 ## <a name="see-also"></a>Voir aussi
 

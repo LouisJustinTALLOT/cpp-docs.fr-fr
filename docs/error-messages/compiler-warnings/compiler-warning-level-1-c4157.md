@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4157'
 title: Avertissement du compilateur (niveau 1) C4157
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4157
 ms.assetid: 6dabc303-eba1-4a8e-a124-a6e1dc84f4bd
-ms.openlocfilehash: 45ac28a2dd9442f7b8f012abcae22c7c4a1676ed
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b9f0d06f54b2fbedf0040a6187824c0d78fa2529
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80176193"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97267233"
 ---
 # <a name="compiler-warning-level-1-c4157"></a>Avertissement du compilateur (niveau 1) C4157
 
 le pragma a été ignoré par le compilateur C
 
-Seul le C++ compilateur reconnaît **init_seg ()** .
+Seul le compilateur C++ reconnaît **init_seg ()**.

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : module :: ReleaseNotifier, classe'
 title: Module::ReleaseNotifier, classe
 ms.date: 09/17/2018
 ms.topic: reference
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::ReleaseNotifier::Release method
 - Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier, constructor
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
-ms.openlocfilehash: 25fbb23ee7ecb7e55377aed74effe8bfa43a1597
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ebb4d949cbb1e7230894fa24a523e4d6b6cd2657
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186257"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier, classe
 
@@ -58,7 +59,7 @@ Nom                                                         | Description
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a>Module :: ReleaseNotifier :: ~ ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-tilde-releasenotifier"></a> Module :: ReleaseNotifier :: ~ ReleaseNotifier
 
 Désinitialise l’instance actuelle de la `Module::ReleaseNotifier` classe.
 
@@ -66,7 +67,7 @@ Désinitialise l’instance actuelle de la `Module::ReleaseNotifier` classe.
 WRL_NOTHROW virtual ~ReleaseNotifier();
 ```
 
-## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a>Module :: ReleaseNotifier :: Invoke
+## <a name="modulereleasenotifierinvoke"></a><a name="releasenotifier-invoke"></a> Module :: ReleaseNotifier :: Invoke
 
 En cas d’implémentation, appelle un gestionnaire d’événements lorsque le dernier objet d’un module est relâché.
 
@@ -74,7 +75,7 @@ En cas d’implémentation, appelle un gestionnaire d’événements lorsque le 
 virtual void Invoke() = 0;
 ```
 
-## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a>Module :: ReleaseNotifier :: Release
+## <a name="modulereleasenotifierrelease"></a><a name="releasenotifier-release"></a> Module :: ReleaseNotifier :: Release
 
 Supprime l’objet actuel `Module::ReleaseNotifier` si l’objet a été construit avec un paramètre de **`true`** .
 
@@ -82,7 +83,7 @@ Supprime l’objet actuel `Module::ReleaseNotifier` si l’objet a été constru
 void Release() throw();
 ```
 
-## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a>Module :: ReleaseNotifier :: ReleaseNotifier
+## <a name="modulereleasenotifierreleasenotifier"></a><a name="releasenotifier-releasenotifier"></a> Module :: ReleaseNotifier :: ReleaseNotifier
 
 Initialise une nouvelle instance de la classe `Module::ReleaseNotifier`.
 

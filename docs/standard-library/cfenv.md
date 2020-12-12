@@ -1,17 +1,18 @@
 ---
+description: 'En savoir plus sur : &lt; cfenv&gt;'
 title: '&lt;cfenv&gt;'
 ms.date: 11/04/2016
 ms.assetid: 6a17ad51-2182-4e91-8108-65997382acd3
-ms.openlocfilehash: b1ae987d49c95b781cb255a4d7e3a9a04ab6043a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e01a74b9df3431ed257cb015260d0775320a88ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325287"
 ---
 # <a name="ltcfenvgt"></a>&lt;cfenv&gt;
 
-Inclut l’en-tête \<fenv.h> de la bibliothèque C Standard et ajoute les noms associés à l’espace de noms `std`.
+Inclut l’en-tête de la bibliothèque C standard \<fenv.h> et ajoute les noms associés à l' `std` espace de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,6 +63,6 @@ int feupdateenv(const fenv_t* penv);
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

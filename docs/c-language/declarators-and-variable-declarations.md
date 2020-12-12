@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : déclarateurs et déclarations de variable'
 title: Déclarateurs et déclarations de variable
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: b20cde6982e99dedaff59518b71c041233a01dd8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 920c44e3345c6143489815de55ea81470e46d279
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226449"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306415"
 ---
 # <a name="declarators-and-variable-declarations"></a>Déclarateurs et déclarations de variable
 
@@ -56,7 +57,7 @@ Vous utilisez des déclarateurs pour déclarer des tableaux de valeurs, des poin
 
 *pointeur*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List*<sub>OPT</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List-*<sub>opt</sub> *pointeur* opt
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List-*<sub></sub> *pointeur* opt
 
 *type-qualifier-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*qualificateur de type*<br/>

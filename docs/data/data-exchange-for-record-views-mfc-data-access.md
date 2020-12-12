@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : échange de données pour les vues d’enregistrement (accès aux données MFC)'
 title: Échange de données pour les affichages des enregistrements (Accès aux données MFC)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-ms.openlocfilehash: f9f460305b55a2313b64effdf4d1dbbfd9823def
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6ffb82e3fb1e035b1334e15d5b4d1d25634739c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213206"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Échange de données pour les affichages des enregistrements (Accès aux données MFC)
 
@@ -23,12 +24,12 @@ DDX pour les vues d’enregistrement fonctionne conjointement avec [RFX](../data
 
 L’illustration suivante montre la relation entre DDX et RFX pour les vues d’enregistrement.
 
-![Échange&#45;de données de boîtes&#45;de dialogue et échange de champs d’enregistrement](../data/media/vc37xt1.gif "Échange&#45;de données de boîtes&#45;de dialogue et échange de champs d’enregistrement")<br/>
+![Boîte de dialogue&#45;l’échange de données et l’échange de champs d'&#45;](../data/media/vc37xt1.gif "Boîte de dialogue&#45;l’échange de données et l’échange de champs d'&#45;")<br/>
 Échange de données de boîtes de dialogue et de champs d'enregistrements
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md). Pour plus d’informations sur RFX, consultez [Record Field Exchange (RFX)](../data/odbc/record-field-exchange-rfx.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vues d’enregistrements (Accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
-[Liste de pilotes ODBC](../data/odbc/odbc-driver-list.md)
+[Vues des enregistrements (accès aux données MFC)](../data/record-views-mfc-data-access.md)<br/>
+[Liste des pilotes ODBC](../data/odbc/odbc-driver-list.md)

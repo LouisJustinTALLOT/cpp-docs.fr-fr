@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : classe boyer_moore_searcher'
 title: classe boyer_moore_searcher
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_searcher
 helpviewer_keywords:
 - std::boyer_moore_searcher [C++]
-ms.openlocfilehash: d6fa4dd203336107614ca3431f38846f0c3c89af
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7d8efe145870847aae8e961dad1b4a92fec8bd57
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325409"
 ---
 # <a name="boyer_moore_searcher-class"></a>classe boyer_moore_searcher
 
@@ -73,9 +74,9 @@ Objet pouvant être appelé, utilisé pour hacher les éléments de séquence.
 *prédit*\
 Prédicat de comparaison d’égalité facultatif pour les éléments de séquence. Si un type de comparaison d’égalité n’est pas spécifié, la valeur par défaut est `std::equal_to` .
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-Lève toute exception levée par le constructeur de copie des types *BinaryPredicate*, *hash*ou *RandomAccessIterator* , ou l’opérateur d’appel de *BinaryPredicate* ou *hash*.
+Lève toute exception levée par le constructeur de copie des types *BinaryPredicate*, *hash* ou *RandomAccessIterator* , ou l’opérateur d’appel de *BinaryPredicate* ou *hash*.
 
 Cette classe est nouvelle dans C++ 17.
 
@@ -98,7 +99,7 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 *famille*\
 Fin de la séquence dans laquelle effectuer la recherche.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si le modèle de recherche `[pat_first, pat_last)` est vide, retourne `make_pair(first, first)` . Si le modèle de recherche est introuvable, retourne `make_pair(last, last)` . Sinon, retourne une paire d’itérateurs au début et à la fin d’une séquence dans `[first, last)` qui est égal à `[pat_first, pat_last)` conformément au prédicat *prédit*.
 
