@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mbsbtype, _mbsbtype_l'
 title: _mbsbtype, _mbsbtype_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-ms.openlocfilehash: c1431a2d0886ffd3d16b43abf82b7342c166273a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a1d17a947d830281b05291601c74ee944cebdb10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271055"
 ---
 # <a name="_mbsbtype-_mbsbtype_l"></a>_mbsbtype, _mbsbtype_l
 
@@ -73,7 +74,7 @@ Décalage d’octet à partir du début de la chaîne.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_mbsbtype** et **_mbsbtype_l** retourne une valeur entière indiquant le résultat du test sur l’octet spécifié. Les constantes manifestes présentes dans le tableau suivant sont définies dans Mbctype.h.
 
@@ -84,7 +85,7 @@ Paramètres régionaux à utiliser.
 |**_MBC_TRAIL** (2)|Octet de fin de caractère multioctet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 2 si l’octet spécifié est compris dans la plage 0X40-0x7E ou 0X80-0xFC.|
 |**_MBC_ILLEGAL** (-1)|Chaîne **null** , caractère non valide ou octet NULL trouvé avant le *nombre* d’octets au niveau du décalage dans *mbstr*.|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbsbtype** détermine le type d’un octet dans une chaîne de caractères multioctets. La fonction examine uniquement le *nombre* d’octets au niveau du décalage dans *mbstr*, en ignorant les caractères non valides avant l’octet spécifié.
 

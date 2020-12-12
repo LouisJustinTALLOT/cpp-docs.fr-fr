@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur:/Zc : throwingNew (supposer les nouvelles levées de l’opérateur)'
 title: /Zc:throwingNew (Supposer de nouvelles levées d’exception de l’opérateur)
 ms.date: 03/01/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-ms.openlocfilehash: 7593107a280995145d252efa76e0a88bddbd2275
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83a78c62328853bdaf9515b55bef72503d166b58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211864"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271198"
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (Supposer de nouvelles levées d’exception de l’opérateur)
 
@@ -48,14 +49,14 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 1. Dans le menu déroulant **configuration** , choisissez **toutes les configurations**.
 
-1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >   .
 
 1. Modifiez la propriété **options supplémentaires** pour inclure **/Zc : throwingNew** ou **/Zc : ThrowingNew-** , puis choisissez **OK**.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [/Zc (Conformité)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [Spécifications d’exception (throw) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _mbsnbcat, _mbsnbcat_l'
 title: _mbsnbcat, _mbsnbcat_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 25df567525fc190be94529fba3b7de131122e6b5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 633ee28a1ab90eef286eb27d75e7a5e808c06ef8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915670"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271042"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat, _mbsnbcat_l
 
@@ -95,11 +96,11 @@ Nombre d’octets de *src* à ajouter à *dest*.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_mbsnbcat** retourne un pointeur vers la chaîne de destination. Aucune valeur de retour n'est réservée pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_mbsnbcat** ajoute, au plus, le premier *nombre* d’octets de *src* à *dest*. Si l’octet qui précède immédiatement le caractère NULL dans *dest* est un octet de tête, l’octet initial de *src* remplace cet octet de tête. Dans le cas contraire, l’octet initial de *src* remplace le caractère null de fin de *dest*. Si un octet NULL apparaît dans *src* avant que le *nombre* d’octets soit ajouté, **_mbsnbcat** ajoute tous les octets de *src*, jusqu’au caractère null. Si *Count* est supérieur à la longueur de *src*, la longueur de *src* est utilisée à la place de *Count*. La chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 

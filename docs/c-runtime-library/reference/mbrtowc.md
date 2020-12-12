@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : mbrtowc'
 title: mbrtowc
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: 55d866e6f0e372c148de36bf259954bed11a953c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f00c9fd01826a80cb729bfe10af242db8dec2414
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271159"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -50,7 +51,7 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>Paramètres
 
-*WCHAR*<br/>
+*wchar*<br/>
 Adresse d’un caractère élargi devant recevoir la chaîne de caractères larges convertie (type **`wchar_t`** ). Cette valeur peut être un pointeur null si un caractère large n'est pas requis en retour.
 
 *mbchar*<br/>
@@ -62,7 +63,7 @@ Nombre d'octets à vérifier.
 *mbstate*<br/>
 Pointeur vers un objet d'état de conversion. Si cette valeur est un pointeur null, la fonction utilise un objet d'état de conversion interne statique. Étant donné que l’objet **mbstate_t** interne n’est pas thread-safe, nous vous recommandons de toujours passer votre propre argument *mbstate* .
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Une des valeurs suivantes :
 
@@ -217,4 +218,4 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de Multibyte-Character](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

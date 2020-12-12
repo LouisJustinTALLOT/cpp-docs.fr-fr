@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _putchar_nolock, _putwchar_nolock'
 title: _putchar_nolock, _putwchar_nolock
 ms.date: 11/04/2016
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-ms.openlocfilehash: 4dba6537c5fb7ec66a812f2c34831b1b908fc3e4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ee4981ce05ab233c387bdbd56fa90edbd5b0af1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271029"
 ---
 # <a name="_putchar_nolock-_putwchar_nolock"></a>_putchar_nolock, _putwchar_nolock
 
@@ -62,7 +63,7 @@ wint_t _putwchar_nolock(
 *c*<br/>
 Caractère à écrire.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Consultez **putchar, putwchar**.
 
@@ -76,14 +77,14 @@ Consultez **putchar, putwchar**.
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_puttchar_nolock**|**_putchar_nolock**|**_putchar_nolock**|**_putwchar_nolock**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_putchar_nolock**|\<stdio.h>|
 |**_putwchar_nolock**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -113,7 +114,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 This is the line of output
