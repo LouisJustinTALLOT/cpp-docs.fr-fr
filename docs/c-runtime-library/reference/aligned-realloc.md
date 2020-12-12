@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _aligned_realloc'
 title: _aligned_realloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_realloc function
 - _aligned_realloc function
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
-ms.openlocfilehash: 28c47507fb6b1ee175842159bf6fab8807f29f76
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 305610f7eed8be180c9324f0e1e56e4af2f6a79b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312486"
 ---
 # <a name="_aligned_realloc"></a>_aligned_realloc
 
@@ -60,13 +61,13 @@ Taille de l'allocation de mémoire demandée.
 *repère*<br/>
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_aligned_realloc** retourne un pointeur void vers le bloc de mémoire réalloué (et éventuellement déplacé). La valeur de retour est **null** si la taille est égale à zéro et l’argument de mémoire tampon n’est pas **null**, ou s’il n’y a pas assez de mémoire disponible pour développer le bloc à la taille donnée. Dans le premier cas, le bloc d'origine est libéré. Dans le second cas, le bloc d'origine est inchangé. La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que void, utilisez un cast de type sur la valeur de retour.
 
 Le fait de réallouer la mémoire et de modifier l'alignement d'un bloc constitue une erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **_aligned_realloc** est basé sur **malloc**. Pour plus d’informations sur l’utilisation de **_aligned_offset_malloc**, consultez [malloc](malloc.md).
 
@@ -80,7 +81,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |-------------|---------------------|
 |**_aligned_realloc**|\<malloc.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Pour plus d’informations, consultez [_aligned_malloc](aligned-malloc.md).
 

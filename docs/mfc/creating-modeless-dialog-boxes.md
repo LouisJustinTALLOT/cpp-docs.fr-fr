@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création de boîtes de dialogue non modales'
 title: Création de boîtes de dialogue non modales
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - modeless dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], creating
 ms.assetid: 70d78c7f-3d40-477b-9f78-0f33c359f88b
-ms.openlocfilehash: 7a6125e84438b0ef2ad541c26bda33051d483c8d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c754391a0f1ab2713f3ce01b5d30ccc33be4aaa5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309782"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Création de boîtes de dialogue non modales
 

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : création du contrôle de sélecteur de date et heure'
 title: Création du contrôle de sélecteur de date et heure
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DateTimePicker control [MFC], creating
 - CDateTimeCtrl class [MFC], creating
 ms.assetid: 764ec2fb-98cd-478b-a5f2-d63f0bb12279
-ms.openlocfilehash: 5d753b166454b795932ec8f47b0897829fab9b8e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0ead228e98fdcbcfe707fee88c175453808e7047
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309730"
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>Création du contrôle de sélecteur de date et heure
 
@@ -37,4 +38,4 @@ Le mode de création du contrôle de sélecteur de date et d’heure varie selon
 ## <a name="see-also"></a>Voir aussi
 
 [Utilisation de CDateTimeCtrl](using-cdatetimectrl.md)<br/>
-[Commandes](controls-mfc.md)
+[Contrôles](controls-mfc.md)

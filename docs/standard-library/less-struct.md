@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : struct'
 title: less (struct)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - less struct
 - less function
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
-ms.openlocfilehash: 13aef35856066f9c1897c3d8855c5ff537aa3567
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b80789f2d2f2c8d1267450a39c39317af1da9244
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245348"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312876"
 ---
 # <a name="less-struct"></a>less (struct)
 
-Un prédicat binaire qui effectue la moins-que l’opération (`operator<`) sur ses arguments.
+Prédicat binaire qui effectue l’opération « inférieur à » ( `operator<` ) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,18 +44,18 @@ struct less<void>
 Tout type qui prend en charge un `operator<` qui accepte des opérandes des types spécifiés ou inférés.
 
 *Gauche*\
-Opérande gauche de l’opération Inférieur à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+Opérande gauche de l’opération Inférieur à. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
 *Oui*\
-Opérande droit de l’opération Inférieur à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+Opérande droit de l’opération Inférieur à. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left < Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator<`.
 
 ## <a name="remarks"></a>Notes
 
-Le prédicat binaire `less` < `Type`> fournit un ordre faible strict d’un ensemble de valeurs d’éléments de type *Type* dans des classes d’équivalence, si et seulement si ce type remplit la norme mathématique configuration requise pour donc classées. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
+Le prédicat binaire `less` < `Type`> fournit un classement faible strict d’un ensemble de valeurs d’élément de type *type* dans des classes d’équivalence, si et seulement si ce type satisfait les exigences mathématiques standard pour être classé. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
 
 ## <a name="example"></a>Exemple
 

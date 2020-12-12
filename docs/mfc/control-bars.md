@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : barres de contrôles'
 title: Barres de contrôles
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-ms.openlocfilehash: a2d3683b744493bb5566456b9e1358c1ddc418d4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 985201b2c09c4d60996e9ee64b2507fe1593e5ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310146"
 ---
 # <a name="control-bars"></a>Barres de contrôles
 
@@ -36,7 +37,7 @@ Les barres de contrôle sont des fenêtres affichant des lignes de contrôle ave
 - Rebarres, dans la classe [CReBar](reference/crebar-class.md)
 
 > [!IMPORTANT]
-> Depuis la version 4,0 de MFC, les barres d’outils, les barres d’État et les info-bulles sont implémentées à l’aide des fonctionnalités système implémentées dans *Comctl32. dll* au lieu de l’implémentation précédente propre à MFC. Dans MFC version 6,0, `CReBar` , qui encapsule également la fonctionnalité Comctl32. dll, a été ajouté.
+> À compter de la version 4,0 de MFC, les barres d’outils, les barres d’État et les info-bulles sont implémentées à l’aide des fonctionnalités système implémentées dans le *comctl32.dll* au lieu de l’implémentation précédente propre à MFC. Dans MFC version 6,0, `CReBar` , qui encapsule également les fonctionnalités de comctl32.dll, a été ajouté.
 
 De brèves présentations des types de barre de contrôle suivent. Pour plus d'informations, consultez les liens ci-dessous.
 

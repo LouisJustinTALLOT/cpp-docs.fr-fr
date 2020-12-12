@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : problèmes de migration à virgule flottante'
 title: Problèmes de migration de virgule flottante
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 079706570a52d164f4308941924d0a96ca5d44ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215018"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312902"
 ---
 # <a name="floating-point-migration-issues"></a>Problèmes de migration de virgule flottante
 
@@ -31,6 +32,6 @@ Dans la plupart des cas, les modifications apportées aux opérations à virgule
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mise à niveau de projets à partir de versions antérieures de VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Mise à niveau de projets à partir de versions antérieures de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Historique des modifications de Visual C++ entre 2003 et 2015](visual-cpp-change-history-2003-2015.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe value_compare ( &lt; Map &gt; )'
 title: value_compare, classe (&lt;map&gt;)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-ms.openlocfilehash: 1f872edce6f0114be7c90a8108ba248fd793a989
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c5b7ba865606e0bc5a5c8238de72824f9061c1b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312811"
 ---
 # <a name="value_compare-class-ltmapgt"></a>value_compare, classe (&lt;map&gt;)
 
@@ -34,22 +35,22 @@ protected:
 
 ## <a name="remarks"></a>Notes
 
-Le critère de comparaison fourni par `value_compare` entre `value_types` d’éléments entiers contenus dans un mappage est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de la classe auxiliaire. L’opérateur de fonction membre utilise l’objet `comp` de type `key_compare` stocké dans l’objet de fonction fourni par `value_compare` pour comparer les composants de clé de tri de deux éléments.
+Le critère de comparaison fourni par `value_compare` entre les `value_types` éléments entiers contenus dans un mappage est induit à partir d’une comparaison entre les clés des éléments respectifs par la construction de la classe auxiliaire. L’opérateur de fonction membre utilise l’objet `comp` de type `key_compare` stocké dans l’objet de fonction fourni par `value_compare` pour comparer les composants de clé de tri de deux éléments.
 
 Pour les jeux et multijeux, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, `value_compare` équivaut à `key_compare` ; pour les objets map et multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.
 
 ## <a name="example"></a>Exemple
 
-Consultez l’exemple relatif à [value_comp](../standard-library/map-class.md#value_comp) qui illustre comment déclarer et utiliser `value_compare`.
+Consultez l’exemple relatif à [value_comp](../standard-library/map-class.md#value_comp) pour découvrir comment déclarer et utiliser `value_compare`.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<> de mappage
+**En-tête :**\<map>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[binary_function, struct](../standard-library/binary-function-struct.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)
+[Struct binary_function](../standard-library/binary-function-struct.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; fonctions de type Variant &gt;'
 title: '&lt;&gt;fonctions variant'
 ms.date: 04/04/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 - variant/std::get_if
 - variant/std::holds_alternative
 - variant/std::visit
-ms.openlocfilehash: b39e75cb94f8439bba802925e6145dcf67942960
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6ee0a0076e916329e45e452b3795ef487cd40762
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312798"
 ---
 # <a name="ltvariantgt-functions"></a>&lt;&gt;fonctions variant
 
-## <a name="get"></a><a name="get"></a>Télécharger
+## <a name="get"></a><a name="get"></a> Télécharger
 
 Obtient le variant d’un objet.
 
@@ -38,7 +39,7 @@ template <class T, class... Types>
     constexpr const T&& get(const variant<Types...>&&);
 ```
 
-## <a name="get_if"></a><a name="get_if"></a>get_if
+## <a name="get_if"></a><a name="get_if"></a> get_if
 
 Obtient la variante d’un objet, le cas échéant.
 
@@ -53,7 +54,7 @@ template <class T, class... Types>
     constexpr add_pointer_t<const T> get_if(const variant<Types...>*) noexcept;
 ```
 
-## <a name="holds_alternative"></a><a name="holds_alternative"></a>holds_alternative
+## <a name="holds_alternative"></a><a name="holds_alternative"></a> holds_alternative
 
 Retourne **`true`** si un variant existe.
 
@@ -62,14 +63,14 @@ template <class T, class... Types>
     constexpr bool holds_alternative(const variant<Types...>&) noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a> échange
 
 ```cpp
 template <class... Types>
     void swap(variant<Types...>&, variant<Types...>&) noexcept(see below);
 ```
 
-## <a name="variant_npos"></a><a name="variant_npos"></a>variant_npos
+## <a name="variant_npos"></a><a name="variant_npos"></a> variant_npos
 
 ```cpp
 namespace std {
@@ -77,9 +78,9 @@ namespace std {
 }
 ```
 
-## <a name="visit"></a><a name="visit"></a>consultez
+## <a name="visit"></a><a name="visit"></a> consultez
 
-Passe à la **variante**suivante.
+Passe à la **variante** suivante.
 
 ```cpp
 template <class Visitor, class... Variants>

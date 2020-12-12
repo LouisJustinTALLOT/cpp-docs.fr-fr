@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : création de collections de piles et de files d’attente'
 title: Création de collections de piles et de files d’attente
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 5db90422f78fc6ca3bc2a182f9569c33db56cad1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e6c3d4a2ade4262e01bd5d84529aa57d308a8623
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623208"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309769"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Création de collections de piles et de files d’attente
 
 Cet article explique comment créer d’autres structures de données, telles que des [piles](#_core_stacks) et des [files d’attente](#_core_queues), à partir de classes de liste MFC. Les exemples utilisent des classes dérivées de `CList`, mais vous pouvez utiliser `CList` directement à moins que vous deviez ajouter des fonctionnalités.
 
-## <a name="stacks"></a><a name="_core_stacks"></a>Piles
+## <a name="stacks"></a><a name="_core_stacks"></a> Piles
 
 Étant donné que la collection de listes standard a un début et une fin, il est facile de créer une collection de listes dérivée qui reproduit le comportement d’une pile de type "dernière entrée - première sortie". Une pile est similaire à un empilement de plateaux dans une cafétéria. Lorsque les plateaux sont ajoutés à la pile, ils sont sur le dessus de la pile. Le dernier plateau ajouté est le premier à être enlevé. Les fonctions membres de la collection de listes `AddHead` et `RemoveHead` peuvent être utilisées pour ajouter et supprimer des éléments en particulier en tête de liste. Ainsi, le dernier élément ajouté est le premier à être supprimé.
 

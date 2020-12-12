@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_new_handler'
 title: _set_new_handler
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1e693e010bcbb9489426fc5c67e888d50f430765
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312395"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -52,7 +53,7 @@ _PNH _set_new_handler( _PNH pNewHandler );
 *pNewHandler*<br/>
 Pointeur vers la fonction de gestion de la mémoire fournie par l'application. L’argument 0 provoque la suppression du nouveau gestionnaire.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers la précédente fonction de gestion des exceptions inscrite par **_set_new_handler**, afin que la fonction précédente puisse être restaurée ultérieurement. Si aucune fonction précédente n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **null**.
 
@@ -171,5 +172,5 @@ Please contact the application's support team for more information.
 
 [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Gratuit](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>

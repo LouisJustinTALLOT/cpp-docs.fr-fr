@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 1) C4397'
 title: Avertissement du compilateur (niveau 1) C4397
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-ms.openlocfilehash: e9fb7527124d1838c1f900144f1fea943616f384
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17ad322980a199b9602c4aa1ea60d818e657eaa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311251"
 ---
 # <a name="compiler-warning-level-1-c4397"></a>Avertissement du compilateur (niveau 1) C4397
 
 DefaultCharSetAttribute est ignoré
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> est ignoré par le compilateur C++ Microsoft. Pour spécifier un jeu de caractères pour la DLL, utilisez l’option CharSet de DllImport. Pour plus d’informations, [consultez C++ utilisation de l’interopérabilité (PInvoke implicite)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).
+<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> est ignoré par le compilateur Microsoft C++. Pour spécifier un jeu de caractères pour la DLL, utilisez l’option CharSet de DllImport. Pour plus d’informations, consultez [utilisation de l’interopérabilité C++ (PInvoke implicite)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 ## <a name="example"></a>Exemple
 

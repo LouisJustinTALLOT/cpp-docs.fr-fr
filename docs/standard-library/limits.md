@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; limites&gt;'
 title: '&lt;limits&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: 1527672bd51682bf32c82601ff54a94ea4154a0b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5347a5035e3650a2685d3be9166b41506fc14b1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312837"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
 Définit le modèle `numeric_limits` de classe et deux énumérations concernant les représentations à virgule flottante et l’arrondi.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<limits>
 

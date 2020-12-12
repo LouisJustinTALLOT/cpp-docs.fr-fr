@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : conteneurs : fonctionnalités avancées'
 title: 'Conteneurs : fonctionnalités avancées'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 1ef4ed9865d3a88a6ff85f777984b856d03cc48e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d49f699ec0349e5c53b95996c6ee4b5d151dce5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310510"
 ---
 # <a name="containers-advanced-features"></a>Conteneurs : fonctionnalités avancées
 
@@ -27,7 +28,7 @@ Cet article décrit les étapes nécessaires pour intégrer des fonctionnalités
 
 - [Un lien OLE vers un objet incorporé](#_core_links_to_embedded_objects)
 
-## <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>Création d’une application conteneur/serveur
+## <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a> Création d’une application conteneur/serveur
 
 Une application conteneur/serveur est une application qui joue à la fois le rôle de conteneur et de serveur. Microsoft Word pour Windows en est un exemple. Vous pouvez inclure Word dans d'autres applications, vous pouvez également inclure des éléments dans Word pour les documents Windows. Le processus pour modifier votre application conteneur pour qu'elle soit à la fois un conteneur et un serveur complet (vous ne pouvez pas créer d'application combinaison conteneur/mini-serveur) est semblable au processus de création d'un serveur complet.
 
@@ -45,7 +46,7 @@ Si vous créez une application et souhaitez qu'elle s'exécute en tant qu'applic
 
 Notez que vous ne pouvez pas insérer une application MDI en elle-même. Une application qui est conteneur/serveur ne peut pas être insérée dans elle-même à moins d'être une application SDI.
 
-## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>Liens vers des objets incorporés
+## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a> Liens vers des objets incorporés
 
 Les liens vers la fonction d'objets incorporés permet à un utilisateur de créer un document avec un lien OLE vers un objet incorporé dans votre application conteneur. Par exemple, créez un document dans un traitement de texte contenant une feuille de calcul incorporée. Si votre application prend en charge les liens vers des objets incorporés, elle pourrait également coller un lien vers la feuille de calcul contenue dans le document de traitement de texte. Cette fonctionnalité permet à votre application d'utiliser les informations contenues dans la feuille de calcul sans savoir où le traitement de texte l'a initialement obtenue.
 

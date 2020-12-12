@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : struct less_equal'
 title: less_equal (struct)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-ms.openlocfilehash: 67a686b139ae4abbf25a42a994cceaba008decf5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b2d715971c5278629a6ea812c5a9c199f00c4a07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245382"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312889"
 ---
-# <a name="lessequal-struct"></a>less_equal (struct)
+# <a name="less_equal-struct"></a>less_equal (struct)
 
-Un prédicat binaire qui effectue l’opération inférieur à ou égal à (`operator<=`) sur ses arguments.
+Prédicat binaire qui effectue l’opération « inférieur à » ou « égal à » ( `operator<=` ) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,20 +44,20 @@ struct less_equal<void>
 Tout type qui prend en charge un `operator<=` qui accepte des opérandes des types spécifiés ou inférés.
 
 *Gauche*\
-Opérande gauche de l’opération Inférieur ou égal à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+Opérande gauche de l’opération Inférieur ou égal à. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
 *Oui*\
-Opérande droit de l’opération Inférieur ou égal à. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+Opérande droit de l’opération Inférieur ou égal à. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left <= Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator<=`.
 
 ## <a name="remarks"></a>Notes
 
-Le prédicat binaire `less_equal` < `Type`> fournit un ordre faible strict d’un ensemble de valeurs d’éléments de type *Type* dans des classes d’équivalence, si et seulement si ce type remplit la norme mathématique configuration requise pour donc classées. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
+Le prédicat binaire `less_equal` < `Type`> fournit un classement faible strict d’un ensemble de valeurs d’élément de type *type* dans des classes d’équivalence, si et seulement si ce type satisfait les exigences mathématiques standard pour être classé. Les spécialisations de tout type pointeur produisent un ordre total des éléments, dans le sens où tous les éléments de valeurs distinctes sont ordonnés les uns par rapport aux autres.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // functional_less_equal.cpp
