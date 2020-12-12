@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _BitScanReverse, _BitScanReverse64'
 title: _BitScanReverse, _BitScanReverse64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1a535dcc95f9fbf791de3ecd2c2d54eddcc0399c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337214"
 ---
 # <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Rechercher les données de masque du bit le plus significatif (MSB) au bit le moins significatif (LSB) pour un bit défini (1).
 
@@ -39,19 +40,19 @@ unsigned char _BitScanReverse64(
 
 ### <a name="parameters"></a>Paramètres
 
-*Évaluer*\
+*Index*\
 à Chargé avec la position de bit du premier bit défini (1) trouvé.
 
 *Filtrage*\
 dans Valeur 32 bits ou 64 bits dans laquelle effectuer la recherche.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Différent de zéro si `Index` a été défini ou 0 si aucun bit défini n'a été détecté.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|Header|
+|Intrinsic|Architecture|En-tête|
 |---------------|------------------|------------|
 |`_BitScanReverse`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_BitScanReverse64`|ARM64, x64|\<intrin.h>|
@@ -96,7 +97,7 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

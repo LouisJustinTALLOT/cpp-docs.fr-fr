@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Mutex'
 title: Mutex, classe
 ms.date: 10/03/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Mutex::Mutex, constructor
 - Microsoft::WRL::Wrappers::Mutex::operator= operator
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-ms.openlocfilehash: 36466bd00c5b100f20ee87173e68fdef4131ec23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f69c14014a2283fe56ef8e7f705bebe5a5f6dc9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330843"
 ---
 # <a name="mutex-class"></a>Mutex, classe
 
@@ -36,25 +37,25 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 
 Nom       | Description
 ---------- | ------------------------------------------------------
-`SyncLock` | Un synonyme pour une classe qui prend en charge les serrures synchrones.
+`SyncLock` | Synonyme pour une classe qui prend en charge les verrous synchrones.
 
 ### <a name="public-constructor"></a>Constructeur public
 
 Nom                   | Description
 ---------------------- | ------------------------------------------------
-[Mutex::Mutex](#mutex) | Initialise une nouvelle instance de la classe `Mutex`.
+[Mutex :: mutex](#mutex) | Initialise une nouvelle instance de la classe `Mutex`.
 
-### <a name="public-members"></a>Membres du public
+### <a name="public-members"></a>Membres publics
 
 Nom                 | Description
 -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Mutex::Lock](#lock) | Attend que l’objet actuel, ou l’objet `Mutex` associé à la poignée spécifiée, libère le mutex ou l’intervalle de temps d’expiration spécifié s’est écoulé.
+[Mutex :: Lock](#lock) | Attend la fin de l’objet actif ou de l' `Mutex` objet associé au handle spécifié, libère le mutex ou l’intervalle de délai d’attente spécifié s’est écoulé.
 
 ### <a name="public-operator"></a>Opérateur public
 
 Nom                                 | Description
 ------------------------------------ | ---------------------------------------------------------------------------
-[Mutex::opérateur](#operator-assign) | Assigne (déplace) `Mutex` l’objet `Mutex` spécifié à l’objet actuel.
+[Mutex :: Operator =](#operator-assign) | Assigne (déplace) l' `Mutex` objet spécifié à l' `Mutex` objet actuel.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -62,13 +63,13 @@ Nom                                 | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** corewrappers.h
+**En-tête :** corewrappers. h
 
-**Espace nom:** Microsoft::WRL::Wrappers
+**Espace de noms :** Microsoft :: WRL :: wrappers
 
-## <a name="mutexlock"></a><a name="lock"></a>Mutex::Lock
+## <a name="mutexlock"></a><a name="lock"></a> Mutex :: Lock
 
-Attend que l’objet actuel, ou l’objet `Mutex` associé à la poignée spécifiée, libère le mutex ou l’intervalle de temps d’expiration spécifié s’est écoulé.
+Attend la fin de l’objet actif ou de l' `Mutex` objet associé au handle spécifié, libère le mutex ou l’intervalle de délai d’attente spécifié s’est écoulé.
 
 ```cpp
 SyncLock Lock(
@@ -83,15 +84,15 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Paramètres
 
-*Millisecondes*<br/>
-L’intervalle de temps d’exécution, en millisecondes. La valeur par défaut est INFINITE, qui attend indéfiniment.
+*milliseconds*<br/>
+Intervalle de délai d’attente, en millisecondes. La valeur par défaut est Infinite, qui attend indéfiniment.
 
 *h*<br/>
-La poignée `Mutex` d’un objet.
+Handle d’un `Mutex` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-## <a name="mutexmutex"></a><a name="mutex"></a>Mutex::Mutex
+## <a name="mutexmutex"></a><a name="mutex"></a> Mutex :: mutex
 
 Initialise une nouvelle instance de la classe `Mutex`.
 
@@ -108,15 +109,15 @@ Mutex(
 ### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-Une poignée, ou une référence rvalue à `Mutex` une poignée, à un objet.
+Handle, ou référence rvalue à un handle, à un `Mutex` objet.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise `Mutex` un objet à partir de la poignée spécifiée. Le deuxième constructeur initialise `Mutex` un objet à partir de la poignée spécifiée, puis déplace la propriété du mutex vers l’objet actuel. `Mutex`
+Le premier constructeur initialise un `Mutex` objet à partir du handle spécifié. Le deuxième constructeur initialise un `Mutex` objet à partir du handle spécifié, puis déplace la propriété du mutex à l’objet actuel `Mutex` .
 
-## <a name="mutexoperator"></a><a name="operator-assign"></a>Mutex::opérateur
+## <a name="mutexoperator"></a><a name="operator-assign"></a> Mutex :: Operator =
 
-Assigne (déplace) `Mutex` l’objet `Mutex` spécifié à l’objet actuel.
+Assigne (déplace) l' `Mutex` objet spécifié à l' `Mutex` objet actuel.
 
 ```cpp
 Mutex& operator=(
@@ -127,12 +128,12 @@ Mutex& operator=(
 ### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-Une référence à un `Mutex` objet.
+Référence rvalue à un `Mutex` objet.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
-Une référence à `Mutex` l’objet actuel.
+Référence à l’objet actuel `Mutex` .
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, voir la section **Move Semantics** de [Rvalue Reference Declarator: &&](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Pour plus d’informations, consultez la section relative à la **sémantique de déplacement** du [déclarateur de référence rvalue :  &&](../../cpp/rvalue-reference-declarator-amp-amp.md).

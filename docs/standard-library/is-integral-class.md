@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_integral'
 title: is_integral, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: a3d618b77d69f5d80736ac20304c9184c5963b25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: db586054614b9a5ef49ffe9fe8b643b35c65a217
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217764"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323699"
 ---
 # <a name="is_integral-class"></a>is_integral, classe
 

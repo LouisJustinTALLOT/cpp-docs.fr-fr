@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe SyncLockWithStatusT'
 title: SyncLockWithStatusT, classe
 ms.date: 10/03/2018
 ms.topic: reference
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: 4b7dbe8ae1648e4185a9eb1e1142df4a3869aa2f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a19ae22253fddd48c7baaf29e4b88a4863b89bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186153"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT, classe
 
@@ -83,7 +84,7 @@ Nom                                    | Description
 
 **Espace de noms :** Microsoft :: WRL :: wrappers ::D étails
 
-## <a name="synclockwithstatustgetstatus"></a><a name="getstatus"></a>SyncLockWithStatusT :: GetStatus
+## <a name="synclockwithstatustgetstatus"></a><a name="getstatus"></a> SyncLockWithStatusT :: GetStatus
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -91,7 +92,7 @@ Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé
 DWORD GetStatus() const;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Résultat d’une opération d’attente sur l’objet qui est basé sur la `SyncLockWithStatusT` classe, tel qu’un [mutex](mutex-class.md) ou un [sémaphore](semaphore-class.md). Zéro (0) indique que l’opération d’attente a retourné l’état signalé ; dans le cas contraire, un autre État s’est produit, tel que la valeur du délai d’attente s’est écoulée.
 
@@ -101,7 +102,7 @@ Récupère l’état d’attente de l' `SyncLockWithStatusT` objet actuel.
 
 La fonction GetStatus () récupère la valeur du membre de données [STATUS_](#status) sous-jacent. Lorsqu’un objet basé sur la `SyncLockWithStatusT` classe effectue une opération de verrouillage, l’objet commence par attendre que l’objet devienne disponible. Le résultat de cette opération d’attente est stocké dans le `status_` membre de données. Les valeurs possibles du `status_` membre de données sont les valeurs de retour de l’opération d’attente. Pour plus d’informations, consultez les valeurs de retour de la [`WaitForSingleObjectEx`](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobjectex) fonction.
 
-## <a name="synclockwithstatustislocked"></a><a name="islocked"></a>SyncLockWithStatusT :: IsLocked
+## <a name="synclockwithstatustislocked"></a><a name="islocked"></a> SyncLockWithStatusT :: IsLocked
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -113,11 +114,11 @@ bool IsLocked() const;
 
 Indique si l' `SyncLockWithStatusT` objet actuel possède une ressource ; autrement dit, l' `SyncLockWithStatusT` objet est *verrouillé*.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si l' `SyncLockWithStatusT` objet est verrouillé ; sinon, **`false`** .
 
-## <a name="synclockwithstatuststatus_"></a><a name="status"></a>SyncLockWithStatusT :: status_
+## <a name="synclockwithstatuststatus_"></a><a name="status"></a> SyncLockWithStatusT :: status_
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -129,7 +130,7 @@ DWORD status_;
 
 Contient le résultat de l’opération d’attente sous-jacente après une opération de verrouillage sur un objet basé sur l' `SyncLockWithStatusT` objet actuel.
 
-## <a name="synclockwithstatustsynclockwithstatust"></a><a name="synclockwithstatust"></a>SyncLockWithStatusT :: SyncLockWithStatusT
+## <a name="synclockwithstatustsynclockwithstatust"></a><a name="synclockwithstatust"></a> SyncLockWithStatusT :: SyncLockWithStatusT
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 

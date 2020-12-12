@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : utilisation des objets accélérateur et accelerator_view'
 title: Utilisation des objets accelerator et accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 7807f0c1c572b2e7c3224cf0366233e2a28dbe07
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 270b517764b8060efbaea9d00c20e24aa1746818
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215892"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314488"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>Utilisation des objets accelerator et accelerator_view
 
@@ -94,7 +95,7 @@ void pick_with_most_memory()
 
 ## <a name="shared-memory"></a>Mémoire partagée
 
-La mémoire partagée est une mémoire accessible à la fois par l’UC et l’accélérateur. L’utilisation de la mémoire partagée permet d’éliminer ou de réduire considérablement la surcharge liée à la copie de données entre l’UC et l’accélérateur. Bien que la mémoire soit partagée, elle ne peut pas être accessible simultanément à la fois par l’UC et l’accélérateur, ce qui entraîne un comportement indéfini. La propriété d’accélérateur [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) retourne **`true`** si l’accélérateur prend en charge la mémoire partagée, et la propriété [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) obtient le [access_type](reference/concurrency-namespace-enums-amp.md#access_type) par défaut pour la mémoire allouée sur le, `accelerator` par exemple, le **tableau**s associé à `accelerator` , ou les `array_view` objets accédés sur le `accelerator` .
+La mémoire partagée est une mémoire accessible à la fois par l’UC et l’accélérateur. L’utilisation de la mémoire partagée permet d’éliminer ou de réduire considérablement la surcharge liée à la copie de données entre l’UC et l’accélérateur. Bien que la mémoire soit partagée, elle ne peut pas être accessible simultanément à la fois par l’UC et l’accélérateur, ce qui entraîne un comportement indéfini. La propriété d’accélérateur [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) retourne **`true`** si l’accélérateur prend en charge la mémoire partagée, et la propriété [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) obtient le [access_type](reference/concurrency-namespace-enums-amp.md#access_type) par défaut pour la mémoire allouée sur le, `accelerator` par exemple, le **tableau** s associé à `accelerator` , ou les `array_view` objets accédés sur le `accelerator` .
 
 Le Runtime C++ AMP choisit automatiquement la meilleure valeur par défaut `access_type` pour chacun d’entre eux `accelerator` , mais les caractéristiques de performance (bande passante et latence) de la mémoire partagée peuvent être pires que celles de la mémoire d’accélérateur dédiée (non partagée) lors de la lecture à partir du processeur, de l’écriture à partir du processeur, ou des deux. Si la mémoire partagée s’exécute aussi bien que la mémoire dédiée pour la lecture et l’écriture à partir de l’UC, le runtime prend la valeur par défaut `access_type_read_write` ; sinon, le runtime choisit une valeur par défaut plus restrictive `access_type` et autorise l’application à la substituer si les modèles d’accès mémoire de ses noyaux de calcul bénéficient d’un autre `access_type` .
 

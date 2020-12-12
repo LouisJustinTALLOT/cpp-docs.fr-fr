@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : __assume'
 title: __assume
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: 80acb417ed85ced8f72906848474837efe6bc9d1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd7f275a8b570bc6176f4464ee59f2656328cf30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337244"
 ---
 # <a name="__assume"></a>__assume
 

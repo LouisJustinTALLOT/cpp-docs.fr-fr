@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_error_condition_enum'
 title: is_error_condition_enum, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_condition_enum class
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
-ms.openlocfilehash: c40f8f6eb93a33098cfbcf8133f08c56285abb43
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3fd4f95e06ebee66a1f4d7d0e7de039d26b9f1fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323726"
 ---
-# <a name="iserrorconditionenum-class"></a>is_error_condition_enum, classe
+# <a name="is_error_condition_enum-class"></a>is_error_condition_enum, classe
 
 Représente un prédicat de type qui teste l’énumération [error_condition](../standard-library/error-condition-class.md).
 

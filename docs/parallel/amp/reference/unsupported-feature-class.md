@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe unsupported_feature'
 title: unsupported_feature, classe
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 22cbc193de2a42e76ead4097d1e39351693ef706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314501"
 ---
 # <a name="unsupported_feature-class"></a>unsupported_feature, classe
 
@@ -29,9 +30,9 @@ class unsupported_feature : public runtime_exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[Constructeur unsupported_feature](#unsupported_feature)|Construit une nouvelle instance de l’exception `unsupported_feature`.|
+|[Constructeur unsupported_feature](#unsupported_feature)|Construit une nouvelle instance de l' `unsupported_feature` exception.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -41,9 +42,9 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a>unsupported_feature
+## <a name="unsupported_feature"></a><a name="unsupported_feature"></a> unsupported_feature
 
-  Construit une nouvelle instance de l’exception `unsupported_feature`.
+  Construit une nouvelle instance de l' `unsupported_feature` exception.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -59,7 +60,7 @@ unsupported_feature() throw();
 *_Message*<br/>
 Description de l’erreur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet `unsupported_feature`.
 
@@ -71,4 +72,4 @@ Objet `unsupported_feature`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrence de l’espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)

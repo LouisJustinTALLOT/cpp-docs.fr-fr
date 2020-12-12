@@ -1,25 +1,26 @@
 ---
-title: Erreur RW2001 du compilateur de ressources
+description: 'En savoir plus sur : erreur du compilateur de ressources RW2001'
+title: 'Erreur RW2001 du compilateur de ressources '
 ms.date: 11/04/2016
 f1_keywords:
 - RW2001
 helpviewer_keywords:
 - RW2001
 ms.assetid: 963bdc7d-6ebe-4378-8bbc-47dfcf5d330c
-ms.openlocfilehash: 900bfed9d57af0f6f5dd8fac19380bb7c382addc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e550854af4d504e484b722050f0274887956f2c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337252"
 ---
-# <a name="resource-compiler-error-rw2001"></a>Erreur RW2001 du compilateur de ressources
+# <a name="resource-compiler-error-rw2001"></a>Erreur RW2001 du compilateur de ressources 
 
 Directive non valide dans le fichier RC prétraité
 
 Le fichier RC contient une directive **#pragma** .
 
-Utilisez la directive de préprocesseur **#ifndef** avec la constante **RC_INVOKED** que le compilateur de ressources définit lors du traitement d’un fichier include. Placez la directive **#pragma** à l’intérieur d’un bloc de code qui n’est pas traité lorsque la constante **RC_INVOKED** est définie. Le code dans le bloc est traité uniquement par le compilateurC++ C/et non par le compilateur de ressources. L’exemple de code suivant illustre cette technique :
+Utilisez la directive de préprocesseur **#ifndef** avec la constante **RC_INVOKED** que le compilateur de ressources définit lors du traitement d’un fichier include. Placez la directive **#pragma** à l’intérieur d’un bloc de code qui n’est pas traité lorsque la constante **RC_INVOKED** est définie. Le code dans le bloc est traité uniquement par le compilateur C/C++ et non par le compilateur de ressources. L’exemple de code suivant illustre cette technique :
 
 ```
 #ifndef RC_INVOKED

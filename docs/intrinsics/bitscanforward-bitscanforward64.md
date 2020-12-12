@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _BitScanForward, _BitScanForward64'
 title: _BitScanForward, _BitScanForward64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 91f43d19259419b78d1910a00a154d2d4f0adfc7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 182f22b5350fcad7c3da9a0d6f6df36c0871a3e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337220"
 ---
 # <a name="_bitscanforward-_bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Rechercher les données de masque du bit le moins significatif (LSB) au bit le plus significatif (MSB) pour un bit défini (1).
 
@@ -39,13 +40,13 @@ unsigned char _BitScanForward64(
 
 ### <a name="parameters"></a>Paramètres
 
-*Évaluer*\
+*Index*\
 à Chargé avec la position de bit du premier bit défini (1) trouvé.
 
 *Filtrage*\
 dans Valeur 32 bits ou 64 bits dans laquelle effectuer la recherche.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 0 si le masque est zéro ; différent de zéro dans le cas contraire.
 
@@ -53,14 +54,14 @@ dans Valeur 32 bits ou 64 bits dans laquelle effectuer la recherche.
 
 Si un bit défini est détecté, la position de bit du premier bit défini détecté est retournée dans le premier paramètre. Si aucun bit défini n'est détecté, 0 est retourné ; dans le cas contraire, 1 est retourné.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_BitScanForward`|x86, ARM, x64, ARM64|
 |`_BitScanForward64`|ARM64, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="example"></a>Exemple
 
@@ -102,7 +103,7 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

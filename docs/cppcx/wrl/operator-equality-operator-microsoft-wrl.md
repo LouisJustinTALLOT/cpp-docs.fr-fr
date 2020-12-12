@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Operator = =, opérateur (Microsoft :: WRL)'
 title: operator==, opérateur (Microsoft::WRL)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator==
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-ms.openlocfilehash: 4774d4801f917691610a457105fc6690ab030a44
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36d178dc948a6d580fc0a0dab43c36e734a319c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330806"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator==, opérateur (Microsoft::WRL)
 
@@ -58,10 +59,10 @@ WRL_NOTHROW bool operator==(
 *un*<br/>
 Objet gauche.
 
-*p*<br/>
+*b*<br/>
 Objet droit.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **`true`** Si les objets sont égaux ; Sinon, **`false`** .
 

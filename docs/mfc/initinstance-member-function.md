@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : InitInstance, fonction membre'
 title: InitInstance, fonction membre
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-ms.openlocfilehash: 0a458f19f956bb1092cc76acd587bc467f25325e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b55c5dbd665b45c74e5990b7d40a63fcd9098a9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220615"
 ---
 # <a name="initinstance-member-function"></a>InitInstance, fonction membre
 
-Le système d’exploitation Windows vous permet d’exécuter plusieurs copies, ou « instances », de la même application. `WinMain`appelle [InitInstance](reference/cwinapp-class.md#initinstance) chaque fois qu’une nouvelle instance de l’application démarre.
+Le système d’exploitation Windows vous permet d’exécuter plusieurs copies, ou « instances », de la même application. `WinMain` appelle [InitInstance](reference/cwinapp-class.md#initinstance) chaque fois qu’une nouvelle instance de l’application démarre.
 
 L' `InitInstance` implémentation standard créée par l’Assistant Application MFC effectue les tâches suivantes :
 

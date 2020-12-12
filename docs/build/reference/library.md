@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : bibliothèque'
 title: LIBRARY
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - LIBRARY .def file statement
 ms.assetid: 1d7ccc92-e088-4ef7-9ef0-25c3862cc051
-ms.openlocfilehash: b43f269726e8925abeefd41aab0edfd57b071035
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d8c63f323568949cf2fb30935d2557755346422
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291091"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199530"
 ---
 # <a name="library"></a>LIBRARY
 
-Indique à LINK pour créer une DLL. En même temps, LINK crée une bibliothèque d’importation, sauf si un fichier .exp est utilisé dans la build.
+Indique à LINK de créer une DLL. En même temps, LINK crée une bibliothèque d’importation, à moins qu’un fichier. exp ne soit utilisé dans la Build.
 
 ```
 LIBRARY [library][BASE=address]
@@ -23,12 +24,12 @@ LIBRARY [library][BASE=address]
 
 ## <a name="remarks"></a>Notes
 
-Le *bibliothèque* argument spécifie le nom de la DLL. Vous pouvez également utiliser le [/OUT](out-output-file-name.md) option de l’éditeur de liens pour spécifier le nom de sortie de la DLL.
+L’argument *Library* spécifie le nom de la dll. Vous pouvez également utiliser l’option de l’éditeur de liens [/out](out-output-file-name.md) pour spécifier le nom de sortie de la dll.
 
-La BASE =*adresse* argument définit l’adresse de base du système d’exploitation utilise pour charger la DLL. Cet argument remplace l’emplacement de la DLL par défaut de 0 x 10000000. Consultez la description de la [/de BASE](base-base-address.md) option pour plus d’informations sur les adresses de base.
+L’argument BASE =*Address* définit l’adresse de base utilisée par le système d’exploitation pour charger la dll. Cet argument remplace l’emplacement par défaut de la DLL 0x10000000. Pour plus d’informations sur les adresses de base, consultez la description de l’option [/base](base-base-address.md) .
 
-N’oubliez pas d’utiliser le [/DLL](dll-build-a-dll.md) option de l’éditeur de liens quand vous générez une DLL.
+N’oubliez pas d’utiliser l’option [/dll](dll-build-a-dll.md) de l’éditeur de liens lorsque vous générez une dll.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Règles s’appliquant aux instructions de définition de module](rules-for-module-definition-statements.md)
+[Règles pour les instructions Module-Definition](rules-for-module-definition-statements.md)

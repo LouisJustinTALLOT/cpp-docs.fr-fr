@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_literal_type'
 title: is_literal_type, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: d5b750755f2499c89e91e497ed03244a11484871
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97cb609c5a42bed0be205b1b51ff901d3e366bb1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212252"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323684"
 ---
 # <a name="is_literal_type-class"></a>is_literal_type, classe
 
