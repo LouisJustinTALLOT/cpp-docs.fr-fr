@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur Runtime C R6033'
 title: Erreur Runtime C R6033
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
-ms.openlocfilehash: 86ac98a2635975b811c7b50020e4d4782675ae4d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 377f872957af4ab4a844e7d93345a612a16c0490
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206602"
 ---
 # <a name="c-runtime-error-r6033"></a>Erreur Runtime C R6033
 
@@ -29,4 +30,4 @@ Tentative d’utilisation du code MSIL de cet assembly pendant l’initialisatio
 
 **Informations pour les programmeurs**
 
-Ce diagnostic indique que les instructions MSIL étaient en cours d’exécution pendant le verrouillage du chargeur. Cela peut se produire si vous avez compilé C++ en natif à l’aide de l’indicateur/CLR. Utilisez uniquement l’indicateur/CLR sur les modules qui contiennent du code managé. Pour plus d’informations, consultez [initialisation des assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md).
+Ce diagnostic indique que les instructions MSIL étaient en cours d’exécution pendant le verrouillage du chargeur. Cela peut se produire si vous avez compilé du code C++ natif à l’aide de l’indicateur/CLR. Utilisez uniquement l’indicateur/CLR sur les modules qui contiennent du code managé. Pour plus d’informations, consultez [initialisation des assemblys mixtes](../../dotnet/initialization-of-mixed-assemblies.md).

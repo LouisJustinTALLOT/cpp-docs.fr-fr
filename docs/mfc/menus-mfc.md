@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : menus (MFC)'
 title: Menus (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - menus [MFC], manipulating during execution
 - menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
-ms.openlocfilehash: 4a9a20676c91dab0d1708293e004513bb648d178
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d1cdc91cae8ae0ddfc8c7e9853d9f920511ffb05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203404"
 ---
 # <a name="menus-mfc"></a>Menus (MFC)
 
@@ -28,7 +29,7 @@ Visual C++ fournit également un [éditeur de menus](../windows/menu-editor.md) 
 
 - [Manipulation des objets de menu pendant l’exécution du programme](manipulating-menus-during-program-execution.md)
 
-- [Comment mettre à jour des objets d’interface utilisateur](how-to-update-user-interface-objects.md)
+- [Comment mettre à jour des objets User-Interface](how-to-update-user-interface-objects.md)
 
 - [Exemple](menu-sample-list.md)
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle'
 title: 'Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: 9d84cdbecb7cc6d39cb30077780c558db85888c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4146bed939e265f611d79c465681c10ef28a1ebe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205666"
 ---
 # <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle
 
@@ -24,7 +25,7 @@ Bien que le tri bitonique soit un exemple de *réseau de tri* qui trie toutes le
 > [!NOTE]
 > Cet exemple utilise une routine de tri parallèle pour l’illustration. Vous pouvez également utiliser les algorithmes de tri intégrés fournis par la bibliothèque PPL : [concurrence ::p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [accès concurrentiel ::p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)et [accès concurrentiel ::p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Pour plus d’informations, consultez [algorithmes parallèles](../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="sections"></a><a name="top"></a>Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
 Ce document décrit les tâches suivantes :
 
@@ -32,7 +33,7 @@ Ce document décrit les tâches suivantes :
 
 - [Utilisation de parallel_invoke pour effectuer un tri bitonique en parallèle](#parallel)
 
-## <a name="performing-bitonic-sort-serially"></a><a name="serial"></a>Exécution d’un tri bitonique en série
+## <a name="performing-bitonic-sort-serially"></a><a name="serial"></a> Exécution d’un tri bitonique en série
 
 L’exemple suivant illustre la version série de l’algorithme de tri bitonique. La `bitonic_sort` fonction divise la séquence en deux partitions, trie ces partitions dans des directions opposées, puis fusionne les résultats. Cette fonction s’appelle elle-même deux fois de manière récursive pour trier chaque partition.
 
@@ -40,7 +41,7 @@ L’exemple suivant illustre la version série de l’algorithme de tri bitoniqu
 
 [[Haut](#top)]
 
-## <a name="using-parallel_invoke-to-perform-bitonic-sort-in-parallel"></a><a name="parallel"></a>Utilisation de parallel_invoke pour effectuer un tri bitonique en parallèle
+## <a name="using-parallel_invoke-to-perform-bitonic-sort-in-parallel"></a><a name="parallel"></a> Utilisation de parallel_invoke pour effectuer un tri bitonique en parallèle
 
 Cette section décrit comment utiliser l' `parallel_invoke` algorithme pour exécuter l’algorithme de tri bitonique en parallèle.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _unlink, _wunlink'
 title: _unlink, _wunlink
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: af6fd6c7065529b43f5e275ce1d745d0031ddfb7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 742df45211b6e19314a3b3f89880d7f2cd83fb2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205146"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
@@ -62,16 +63,16 @@ int _wunlink(
 
 ### <a name="parameters"></a>Paramètres
 
-*extension*<br/>
+*filename*<br/>
 Nom du fichier à supprimer.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne 0 en cas d’échec. Dans le cas contraire, la fonction retourne-1 et définit **errno** à **EACCES**, ce qui signifie que le chemin d’accès spécifie un fichier en lecture seule ou un répertoire, ou à **ENOENT**, ce qui signifie que le fichier ou le chemin d’accès est introuvable.
 
 Pour plus d’informations sur ces codes de retour et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_unlink** supprime le fichier spécifié par *filename*. **_wunlink** est une version à caractères larges de **_unlink**; l’argument de *nom de fichier* pour **_wunlink** est une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 

@@ -1,19 +1,20 @@
 ---
+description: 'En savoir plus sur : tâches légères'
 title: Tâches légères
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-ms.openlocfilehash: be417052ffab19c1bc2d2ba6f35094f98e315812
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 328d556eacb2e33bdf3077b722defa81669a525c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141852"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205562"
 ---
 # <a name="lightweight-tasks"></a>Tâches légères
 
-Ce document décrit le rôle des tâches légères dans le runtime d’accès concurrentiel. Une *tâche légère* est une tâche que vous planifiez directement à partir d’un objet `concurrency::Scheduler` ou `concurrency::ScheduleGroup`. Une tâche légère ressemble à la fonction que vous fournissez à la fonction d’API Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) . Par conséquent, les tâches légères sont utiles quand vous adaptez du code existant pour utiliser la fonctionnalité de planification de la runtime d’accès concurrentiel. Le runtime d’accès concurrentiel lui-même utilise des tâches légères pour planifier des agents asynchrones et envoyer des messages entre des blocs de messages asynchrones.
+Ce document décrit le rôle des tâches légères dans le runtime d’accès concurrentiel. Une *tâche légère* est une tâche que vous planifiez directement à partir d’un `concurrency::Scheduler` `concurrency::ScheduleGroup` objet ou. Une tâche légère ressemble à la fonction que vous fournissez à la fonction d’API Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) . Par conséquent, les tâches légères sont utiles quand vous adaptez du code existant pour utiliser la fonctionnalité de planification de la runtime d’accès concurrentiel. Le runtime d’accès concurrentiel lui-même utilise des tâches légères pour planifier des agents asynchrones et envoyer des messages entre des blocs de messages asynchrones.
 
 > [!TIP]
 > Le runtime d'accès concurrentiel fournit un planificateur par défaut, et vous n'êtes donc pas obligé d'en créer un dans votre application. Étant donné que le Planificateur de tâches vous aide à ajuster les performances de vos applications, nous vous recommandons de commencer avec la [bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) ou la [bibliothèque d’agents asynchrones](../../parallel/concrt/asynchronous-agents-library.md) si vous débutez avec le runtime d’accès concurrentiel.
@@ -31,4 +32,4 @@ Pour obtenir un exemple qui montre comment adapter du code existant pour utilise
 ## <a name="see-also"></a>Voir aussi
 
 [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Procédure pas à pas : adaptation d’un code existant pour l’utilisation de tâches légères](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
+[Procédure pas à pas : adaptation du code existant pour utiliser des tâches légères](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)

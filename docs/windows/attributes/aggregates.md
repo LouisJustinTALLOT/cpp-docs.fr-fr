@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : agrégats'
 title: agrégats (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: e745cae5710bbf8df1314ec20a4a0b72545c0591
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c108b18f957047a6a5dbb33538a23de6c3469783
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205471"
 ---
 # <a name="aggregates"></a>agrégats
 
@@ -28,7 +29,7 @@ Indique que l’objet agrège l’objet spécifié par le CLSID.
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
+*identificateur*<br/>
 Spécifie le CLSID de l’objet qui peut être agrégé.
 
 *variable_name*<br/>
@@ -77,14 +78,14 @@ struct CObject : IObject
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|**`class`**, **`struct`**|
-|**Repeatable Read**|Oui|
+|**Renouvelable**|Oui|
 |**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass` , `progid` ou `vi_progid` .|
-|**Attributs non valides**|Aucun|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

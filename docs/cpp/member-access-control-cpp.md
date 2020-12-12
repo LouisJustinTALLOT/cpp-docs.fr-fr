@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Member Access Control (C++)'
 title: Contrôle d'accès aux membres (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: de775c511701cd0b7cf923f47e33723b30a966e1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2cce7cb98e76098f3c20a6c2404f91ccf40db1cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206875"
 ---
 # <a name="member-access-control-c"></a>Contrôle d'accès aux membres (C++)
 

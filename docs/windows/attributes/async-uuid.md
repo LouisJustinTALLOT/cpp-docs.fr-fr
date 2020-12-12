@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : async_uuid'
 title: async_uuid (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: cb0abdcedc26c5ffe197e52d5da4fbad1ec516d2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb55fe66f05bfc7879470bfa6c64c00ffd2913e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205328"
 ---
 # <a name="async_uuid"></a>async_uuid
 
@@ -46,13 +47,13 @@ __interface ICustom {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 | Contexte d’attribut | Valeur |
 |-|-|
 |**S’applique à**|`interface`|
-|**Repeatable Read**|Non|
-|**Attributs requis**|Aucun|
+|**Renouvelable**|Non|
+|**Attributs requis**|None|
 |**Attributs non valides**|**Dual**, **dispinterface**|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

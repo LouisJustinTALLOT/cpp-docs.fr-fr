@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : conversions de User-Defined (C++/CLI)'
 title: Conversions définies par l'utilisateur (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0b07ab3201bfd379a17922f020486d0b17a59558
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204262"
 ---
 # <a name="user-defined-conversions-ccli"></a>Conversions définies par l'utilisateur (C++/CLI)
 
@@ -80,7 +81,7 @@ in N::N
 
 Les opérateurs Convert-from créent un objet de la classe dans laquelle l’opérateur est défini à partir d’un objet d’une autre classe.
 
-Standard C++ ne prend pas en charge les opérateurs Convert-from ; la C++ norme utilise des constructeurs à cet effet. Toutefois, lors de l’utilisation de types C++ CLR, Visual fournit une prise en charge syntaxique pour appeler des opérateurs Convert-from.
+Le C++ standard ne prend pas en charge les opérateurs Convert-from ; le langage C++ standard utilise des constructeurs à cet effet. Toutefois, lorsque vous utilisez des types CLR, Visual C++ assurer la prise en charge syntaxique de l’appel des opérateurs Convert-from.
 
 Pour interagir correctement avec d’autres langages conformes CLS, vous souhaiterez peut-être encapsuler chaque constructeur unaire défini par l’utilisateur pour une classe donnée avec un opérateur Convert-from correspondant.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2386'
 title: Erreur du compilateur C2386
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2386
 ms.assetid: aaaa1284-34a0-4da2-8547-9fcbb559dae0
-ms.openlocfilehash: 1ac58d63498df32488c1a0743aa6ad9f7b77b7ca
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 65dca1cf052cab1292f6f594a316536a5097a032
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204093"
 ---
 # <a name="compiler-error-c2386"></a>Erreur du compilateur C2386
 

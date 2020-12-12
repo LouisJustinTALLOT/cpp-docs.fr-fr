@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : sélection et manipulation d’enregistrements'
 title: Sélection et manipulation d'enregistrements
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -6,17 +7,17 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: 596ee602b5358fbd854888f43f21748fd4d85b7a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8f4254f85eb8c2e30b5e912890fdc271340df9db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204301"
 ---
 # <a name="selecting-and-manipulating-records"></a>Sélection et manipulation d'enregistrements
 
 > [!NOTE]
-> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez quand même créer un consommateur manuellement.
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
 
 Normalement, quand vous sélectionnez des enregistrements d’une source de données à l’aide d’une instruction SQL **SELECT**, vous obtenez un jeu de résultats, qui est un jeu d’enregistrements issus d’une table ou d’une requête. Avec les classes de base de données, vous utilisez un objet recordset pour sélectionner le jeu de résultats et y accéder. Il s’agit d’un objet d’une classe propre à l’application que vous dérivez de la classe [CRecordset](../../mfc/reference/crecordset-class.md). Quand vous définissez une classe recordset, vous spécifiez la source de données à lui associer, la table à utiliser et les colonnes de la table. L’Assistant Application MFC ou **Ajouter une classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) crée une classe avec une connexion à une source de données spécifique. Les Assistants écrivent la fonction membre [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) de la classe `CRecordset` pour retourner le nom de table.
 

@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : Comment : utiliser la classe Context pour implémenter un sémaphore coopératif'
 title: 'Comment : utiliser la classe Context pour implémenter un sémaphore coopératif'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 77cf33288761c75d056649ebe27f9d74c6fa62dc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d80d364a9dcd27ee7012da5f710d38208c7a9e1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205653"
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Comment : utiliser la classe Context pour implémenter un sémaphore coopératif
 

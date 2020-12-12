@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _recalloc'
 title: _recalloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-ms.openlocfilehash: 45f483bcaa397969a81097768ebbd1ed4cda288b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 09cecc0b7fe006ca5f52340254534fcc67b70e84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205172"
 ---
 # <a name="_recalloc"></a>_recalloc
 
@@ -60,19 +61,19 @@ Nombre d'éléments.
 *size*<br/>
 Longueur en octets de chaque élément.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_recalloc** retourne un **`void`** pointeur vers le bloc de mémoire réalloué (et éventuellement déplacé).
 
 Si la mémoire disponible est insuffisante pour étendre le bloc à la taille donnée, le bloc d’origine reste inchangé et la **valeur null** est retournée.
 
-Si la taille demandée est égale à zéro, le bloc pointé par *memblock* est libéré ; la valeur de retour est **null**et *memblock* pointe vers un bloc libéré.
+Si la taille demandée est égale à zéro, le bloc pointé par *memblock* est libéré ; la valeur de retour est **null** et *memblock* pointe vers un bloc libéré.
 
 La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que **`void`** , utilisez un cast de type sur la valeur de retour.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_recalloc** modifie la taille d’un bloc de mémoire alloué. L’argument *memblock* pointe vers le début du bloc de mémoire. Si *memblock* a **la valeur null**, **_recalloc** se comporte de la même façon que [calloc](calloc.md) et alloue un nouveau bloc de *nombre*d’octets de  *  *taille* . Chaque élément est initialisé à 0. Si *memblock* n’a pas la **valeur null**, il doit s’agir d’un pointeur retourné par un appel précédent à **calloc**, [malloc](malloc.md)ou [realloc](realloc.md).
+La fonction **_recalloc** modifie la taille d’un bloc de mémoire alloué. L’argument *memblock* pointe vers le début du bloc de mémoire. Si *memblock* a **la valeur null**, **_recalloc** se comporte de la même façon que [calloc](calloc.md) et alloue un nouveau bloc de *nombre* d’octets de  *  *taille* . Chaque élément est initialisé à 0. Si *memblock* n’a pas la **valeur null**, il doit s’agir d’un pointeur retourné par un appel précédent à **calloc**, [malloc](malloc.md)ou [realloc](realloc.md).
 
 Étant donné que le nouveau bloc peut se trouver dans un nouvel emplacement de mémoire, il n’est pas garanti que le pointeur renvoyé par **_recalloc** soit le pointeur transmis via l’argument *memblock* .
 
@@ -106,5 +107,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [_recalloc_dbg](recalloc-dbg.md)<br/>
 [_aligned_recalloc](aligned-recalloc.md)<br/>
 [_aligned_offset_recalloc](aligned-offset-recalloc.md)<br/>
-[Gratuit](free.md)<br/>
+[free](free.md)<br/>
 [Options de lien](../../c-runtime-library/link-options.md)<br/>

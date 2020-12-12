@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 4) C4471'
 title: Avertissement du compilateur (niveau 4) C4471
 ms.date: 04/24/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5b8c3ef419a4c6eaf9a674827cd5545a1f1b2bfe
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cef492bf8aab33f46b3f590a13ffa5462a7ca41d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685500"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203495"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>Avertissement du compilateur (niveau 4) C4471
 
@@ -19,7 +20,7 @@ ms.locfileid: "90685500"
 
 Une déclaration anticipée d’une énumération non délimitée a été trouvée sans spécificateur pour le type sous-jacent. Par défaut, Visual C++ suppose que **`int`** est le type sous-jacent pour une énumération. Cela peut provoquer des problèmes si un type différent est utilisé dans la définition d’énumération, par exemple, si un type explicite différent est spécifié, ou si un type différent est défini implicitement par un initialiseur. Vous pouvez également rencontrer des problèmes de portabilité. les autres compilateurs ne supposent pas que **`int`** est le type sous-jacent d’une énumération.
 
-Cet avertissement est désactivé par défaut. vous pouvez utiliser/Wall ou/w*N*4471 pour l’activer sur la ligne de commande, ou utiliser #pragma [Avertissement](../../preprocessor/warning.md) dans votre fichier source.
+Cet avertissement est désactivé par défaut. vous pouvez utiliser/Wall ou/w *N* 4471 pour l’activer sur la ligne de commande, ou utiliser #pragma [Avertissement](../../preprocessor/warning.md) dans votre fichier source.
 
 ## <a name="examples"></a>Exemples
 

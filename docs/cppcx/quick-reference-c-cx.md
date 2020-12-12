@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : aide-mémoire (C++/CX)'
 title: Aide-mémoire (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-ms.openlocfilehash: 6effcaec6a619bdd674dcae3bf4092fe82404d08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 74640449df21787d059509e80deb1e1e0cdaf94c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204652"
 ---
 # <a name="quick-reference-ccx"></a>Aide-mémoire (C++/CX)
 
@@ -15,7 +16,7 @@ Le Windows Runtime prend en charge les applications plateforme Windows universel
 
 Quand vous générez sur la ligne de commande, utilisez l’option du compilateur **/ZW** pour générer une application UWP ou Windows Runtime composant. Pour accéder à Windows Runtime déclarations, qui sont définies dans les fichiers de métadonnées Windows Runtime (. winmd), spécifiez la `#using` directive ou l’option de compilateur **/Fu** . Lorsque vous créez un projet pour une application UWP, Visual Studio définit par défaut ces options et ajoute des références à toutes les bibliothèques de Windows Runtime.
 
-## <a name="quick-reference"></a>Aide-mémoire
+## <a name="quick-reference"></a>Référence rapide
 
 |Concept|C++ standard|C++/CX|Notes|
 |-------------|--------------------|------------------------------------------------------------------|-------------|
@@ -23,8 +24,8 @@ Quand vous générez sur la ligne de commande, utilisez l’option du compilateu
 ||**`bool`**|**`bool`**|Valeur booléenne de 8 bits.|
 ||**`wchar_t`**, **`char16_t`**|`char16`|Valeur non numérique 16 bits qui représente un point de code Unicode (UTF-16).|
 ||**`short`**<br /><br /> **`unsigned short`**|`int16`<br /><br /> `uint16`|Entier signé 16 bits.<br /><br /> Entier non signé 16 bits.|
-||**`int`**<br /><br /> **`unsigned int`**|**`int`**<br /><br /> `uint32`|Entier signé de 32 bits.<br /><br /> Entier non signé 32 bits.|
-||**`long long`** ni**`__int64`**<br /><br /> **`unsigned long long`**|`int64`<br /><br /> `uint64`|Entier signé de 64 bits.<br /><br /> Entier non signé 64 bits.|
+||**`int`**<br /><br /> **`unsigned int`**|**`int`**<br /><br /> `uint32`|Entier signé 32 bits.<br /><br /> Entier non signé 32 bits.|
+||**`long long`** ni **`__int64`**<br /><br /> **`unsigned long long`**|`int64`<br /><br /> `uint64`|Entier signé 64 bits.<br /><br /> Entier 64 bits non signé.|
 ||**`float`**, **`double`**|`float32, float64`|Nombre à virgule flottante IEEE 754 32 bits ou 64 bits.|
 ||**`enum`**|**`enum class`**<br /><br /> -ou-<br /><br /> **`enum struct`**|Énumération de 32 bits.|
 ||(Non applicable)|`Platform::Guid`|Valeur non numérique de 128 bits (un GUID) dans l'espace de noms `Platform` .|
@@ -42,9 +43,9 @@ Quand vous générez sur la ligne de commande, utilisez l’option du compilateu
 |déclaration d'interface|classe abstraite qui contient uniquement des fonctions virtuelles pures.|**`interface class`***identificateur*`{}`<br /><br /> **`interface struct`***identificateur*`{}`|Déclare une interface ayant un accès privé par défaut.<br /><br /> Déclare une interface ayant un accès public par défaut.|
 |Délégué|`std::function`|`public delegate` *return-type* *delegate-type-identifier* `(` *[ parameters ]* `);`|Déclare un objet qui peut être appelé comme un appel de fonction.|
 |Événement|(Non applicable)|**`event`***identificateur d’événement* d' *identificateur de type délégué*`;`<br /><br /> Delegate *-type-identifier* -Delegate- *ID*  =  `ref new` *delegate-type-identifier* `( this` *[, Parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> -ou-<br /><br /> `EventRegistrationToken`*identificateur*  =  de jeton *obj* `.` *identificateur* `+=` d’événement *identificateur délégué*`;`<br /><br /> -ou-<br /><br /> **`auto`***identificateur*  =  de jeton *obj*. *identificateur* `::add(` d’événement *identificateur délégué*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> -ou-<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Déclare un objet d'événement, qui stocke une collection de gestionnaires d'événements (délégués) qui sont appelés lorsqu'un événement se produit.<br /><br /> Crée un gestionnaire d'événements.<br /><br /> Ajoute un gestionnaire d'événements.<br /><br /> L’ajout d’un gestionnaire d’événements retourne un jeton d’événement (*token-identifier*). Si vous prévoyez de supprimer explicitement le gestionnaire d'événements, vous devez enregistrer le jeton d'événement pour l'utiliser ultérieurement.<br /><br /> Supprime un gestionnaire d'événements.<br /><br /> Pour supprimer un gestionnaire d'événements, vous devez spécifier le jeton d'événement que vous avez enregistré lorsque le gestionnaire d'événements a été ajouté.|
-|Propriété|(Non applicable)|**`property`***T* *Identificateur*T ;<br /><br /> **`property`***T* *identifier* `[` *Index* d’identificateur T`];`<br /><br /> **`property`***T* `default[` *Index* T`];`|Déclare qu'une fonction membre de classe ou d'objet est accessible en utilisant la même syntaxe qui est utilisée pour accéder à des données membres ou à un élément de tableau indexé.<br /><br /> Déclare une propriété sur une fonction membre de classe ou d'objet.<br /><br /> Déclare une propriété indexée sur une fonction membre d'objet.<br /><br /> Déclare une propriété indexée sur une fonction membre de classe.|
-|Types paramétrables|modèles|`generic <typename`*T* `> interface class` *Identificateur* T`{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|Déclare une classe d'interface paramétrée.<br /><br /> Déclare un délégué paramétré.|
-|Types valeur Nullable|`boost::optional<T>`|[Platform :: IBox\<T>](../cppcx/platform-ibox-interface.md)|Permet aux variables des types scalaires et des structs de valeur d’avoir la valeur **`nullptr`** .|
+|Propriété|(Non applicable)|**`property`** *Identificateur* T ;<br /><br /> **`property`**  `[` *Index* d’identificateur T`];`<br /><br /> **`property`** `default[` *Index* T`];`|Déclare qu'une fonction membre de classe ou d'objet est accessible en utilisant la même syntaxe qui est utilisée pour accéder à des données membres ou à un élément de tableau indexé.<br /><br /> Déclare une propriété sur une fonction membre de classe ou d'objet.<br /><br /> Déclare une propriété indexée sur une fonction membre d'objet.<br /><br /> Déclare une propriété indexée sur une fonction membre de classe.|
+|Types paramétrables|modèles|`generic <typename` `> interface class` *Identificateur* T`{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|Déclare une classe d'interface paramétrée.<br /><br /> Déclare un délégué paramétré.|
+|Types valeur Nullable|`boost::optional<T>`|[Platform :: IBox \<T>](../cppcx/platform-ibox-interface.md)|Permet aux variables des types scalaires et des structs de valeur d’avoir la valeur **`nullptr`** .|
 
 ## <a name="see-also"></a>Voir aussi
 

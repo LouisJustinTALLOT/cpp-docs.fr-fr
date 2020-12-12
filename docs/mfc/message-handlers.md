@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gestionnaires de messages'
 title: Gestionnaires de messages
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-ms.openlocfilehash: f9c5272b513a92dc6dcfa37559b00ae79b658918
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dc3f52956f125542ef0c5d879543f1e8a49e803b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619978"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203365"
 ---
 # <a name="message-handlers"></a>Gestionnaires de messages
 
-Dans MFC, une fonction de *Gestionnaire* dédiée traite chaque message distinct. Les fonctions de gestionnaire de messages sont des fonctions membres d’une classe. Cette documentation utilise les termes *fonction membre du gestionnaire*de messages, *fonction du gestionnaire de*messages, *Gestionnaire de messages*et *Gestionnaire* de manière interchangeable. Certains types de gestionnaires de messages sont également appelés « gestionnaires de commandes ».
+Dans MFC, une fonction de *Gestionnaire* dédiée traite chaque message distinct. Les fonctions de gestionnaire de messages sont des fonctions membres d’une classe. Cette documentation utilise les termes *fonction membre du gestionnaire* de messages, *fonction du gestionnaire de* messages, *Gestionnaire de messages* et *Gestionnaire* de manière interchangeable. Certains types de gestionnaires de messages sont également appelés « gestionnaires de commandes ».
 
 L’écriture de gestionnaires de messages tient compte d’une grande partie de votre travail lors de l’écriture d’une application de Framework. Cette famille d’articles décrit le fonctionnement du mécanisme de traitement des messages.
 

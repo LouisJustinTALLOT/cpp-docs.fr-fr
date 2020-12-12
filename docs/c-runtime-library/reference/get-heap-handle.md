@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _get_heap_handle'
 title: _get_heap_handle
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 895814a1a44910ef65a826cba330a3edd70b85a9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dacf90e981233c92534a2667ad31462e9bf5992c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205211"
 ---
 # <a name="_get_heap_handle"></a>_get_heap_handle
 
@@ -51,7 +52,7 @@ intptr_t _get_heap_handle( void );
 
 Retourne le handle vers le tas Win32 utilisé par le système runtime C.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Utilisez cette fonction pour appeler [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) et activer le tas LFH (Low Fragmentation Heap) sur le tas CRT.
 

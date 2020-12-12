@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Recordset (ODBC)'
 title: Recordset (ODBC)
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: b7a55621f4875b24cc33a0fd49a5b8b4c88b34cb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: edbad5851db6f5ac9e1fddcc769c4f860ee5478e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204535"
 ---
 # <a name="recordset-odbc"></a>Recordset (ODBC)
 
@@ -66,60 +67,60 @@ Il existe deux types de jeux d’enregistrements principaux : les [instantanés
 
 ## <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> Vos recordsets
 
-Pour chaque table, vue ou procédure stockée distincte à laquelle vous voulez accéder, vous définissez généralement une classe dérivée de `CRecordset`. (L’exception est une jointure de base de données, dans laquelle un enregistrement représente des colonnes de deux tableaux ou plus.) Lorsque vous dérivez une classe de recordset, vous activez le mécanisme d’échange de champ record (RFX) ou le mécanisme d’échange d’enregistrements en vrac (Bulk RFX), qui sont similaires au mécanisme d’échange de données de dialogue (DDX). RFX et RFX en bloc simplifient le transfert des données de la source de données vers votre recordset. RFX transfère en plus les données de votre recordset vers la source de données. Pour plus d’informations, voir [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md) et [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Pour chaque table, vue ou procédure stockée distincte à laquelle vous voulez accéder, vous définissez généralement une classe dérivée de `CRecordset`. (L’exception est une jointure de base de données, dans laquelle un jeu d’enregistrements représente des colonnes de deux tables ou plus.) Lorsque vous dérivez une classe de Recordset, vous activez le mécanisme RFX (Record Field Exchange) ou le mécanisme RFX en bloc (Bulk RFX), qui sont similaires au mécanisme DDX (Dialog Data Exchange). RFX et RFX en bloc simplifient le transfert des données de la source de données vers votre recordset. RFX transfère en plus les données de votre recordset vers la source de données. Pour plus d’informations, consultez [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md) et [Recordset : récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Un objet recordset vous donne accès à tous les enregistrements sélectionnés. Vous faites défiler les enregistrements sélectionnés à l’aide de fonctions membres `CRecordset`, comme `MoveNext` et `MovePrev`. En même temps, un objet recordset représente un seul des enregistrements sélectionnés, l’enregistrement actuel. Vous pouvez examiner les champs de l’enregistrement actuel en déclarant des variables membres de la classe recordset qui correspondent aux colonnes de la table ou des enregistrements qui résultent de la requête de base de données. Pour plus d’informations sur les membres des données de recordset, voir [Recordset: Architecture (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
+Un objet recordset vous donne accès à tous les enregistrements sélectionnés. Vous faites défiler les enregistrements sélectionnés à l’aide de fonctions membres `CRecordset`, comme `MoveNext` et `MovePrev`. En même temps, un objet recordset représente un seul des enregistrements sélectionnés, l’enregistrement actuel. Vous pouvez examiner les champs de l’enregistrement actuel en déclarant des variables membres de la classe recordset qui correspondent aux colonnes de la table ou des enregistrements qui résultent de la requête de base de données. Pour plus d’informations sur les données membres de Recordset, consultez [Recordset : architecture (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
 
 Les rubriques suivantes décrivent en détail l’utilisation des objets recordset. Les rubriques sont listées dans des catégories fonctionnelles et dans un ordre naturel de navigation pour permettre une lecture séquentielle.
 
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Rubriques sur les mécanismes d’ouverture, de lecture et de fermeture des recordsets
 
-- [Recordet: Architecture (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
+- [Recordset : architecture (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [Recordset : déclaration de la classe d'une table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [Recordset : déclaration d’une classe pour une table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
 - [Recordset : création et fermeture de recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
-- [Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
+- [Recordset : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
 - [Recordset : signets et positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-- [Recordset : filtrage d'enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+- [Recordset : filtrage d’enregistrements (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [Recordset : tri d'enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [Recordset : tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [Recordset : paramétrage d'un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Rubriques sur les mécanismes de modification des recordsets
 
-- [Recordset : ajout, modification et suppression d'enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [Recordset : ajout, mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-- [Recordset : verrouillage d'enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+- [Recordset : verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [Recordset : lancement d'une nouvelle requête sur un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [Recordset : rerequête d’un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>Rubriques sur les techniques un peu plus avancées
 
-- [Recordset : création d'une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [Recordset : exécution d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [Recordset : déclaration de la classe d'une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [Recordset : déclaration d’une classe pour une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [Recordset : liaison dynamique de colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [Recordset : liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [Recordset : extraction globale d'enregistrements (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [Recordset : extraction globale d’enregistrements (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- [Recordset : utilisation d'éléments de données volumineux (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [Recordset : utilisation d’éléments de données volumineux (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [Recordset : calculs de totaux et autres résultats de regroupement (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [Recordset : calculs de totaux et autres résultats d’agrégation (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>Rubriques sur le fonctionnement des recordsets
 
-- [Recordset : sélection d'enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [Recordset : sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
 - [Recordset : modification des enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Connectivité open Database (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Consommation ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Transaction (ODBC)](../../data/odbc/transaction-odbc.md)
