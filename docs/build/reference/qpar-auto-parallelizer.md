@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur:/QPAR (auto-paralléliseur)
 title: /Qpar (paralléliseur automatique)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: effe1ad7799022ea85184513de1dc48c72d6bfcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f0d4264acc4224aaad518f936dcb885d592d3007
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225581"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (paralléliseur automatique)
 
@@ -46,6 +47,6 @@ Pour plus d’informations sur l’activation des messages de sortie pour l’au
 [/Q options (opérations de bas niveau)](q-options-low-level-operations.md)<br/>
 [/QPAR-Report (niveau de rapport paralléliseur automatique)](qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
+[Syntaxe Command-Line du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [boucle de #pragma ()](../../preprocessor/loop.md)<br/>
 [Vectorisation de code natif dans Visual Studio](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)
