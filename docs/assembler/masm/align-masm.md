@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : aligner'
 title: ALIGN (MASM)
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: 700721768deaf92e88b32a97e68c6e017219d19d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: d13fce5d70d96e4e88a3f1044f633be0145a3fc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121769"
 ---
 # <a name="align"></a>ALIGN
 
@@ -31,6 +32,6 @@ Lorsque les données sont alignées, l’espace ignoré est complété avec des 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Même](even.md)\
-Informations de référence sur les [Directives](directives-reference.md)\
+[ESPACÉ](even.md)\
+[Informations de référence sur les directives](directives-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)

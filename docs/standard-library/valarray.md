@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; valarray&gt;'
 title: '&lt;valarray&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7cc902a60a68f9cb667530dac76812d4a8e082be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168772"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
 Définit le modèle de classe valarray et de nombreux modèles de classe et fonctions de prise en charge.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<valarray>
 
@@ -32,7 +33,7 @@ Ces modèles de classe et fonctions sont autorisés une latitude inhabituelle da
 
 ## <a name="members"></a>Membres
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|
@@ -54,7 +55,7 @@ Ces modèles de classe et fonctions sont autorisés une latitude inhabituelle da
 |[racine](../standard-library/valarray-functions.md#sqrt)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux à la racine carrée des éléments du valarray d'entrée.|
 |[swap](../standard-library/valarray-functions.md#swap)||
 |[Tan](../standard-library/valarray-functions.md#tan)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux à la tangente des éléments du valarray d'entrée.|
-|[tanh](../standard-library/valarray-functions.md#tanh)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux à la tangente hyperbolique des éléments du valarray d'entrée.|
+|[Tanh](../standard-library/valarray-functions.md#tanh)|Opère sur les éléments d'un valarray d'entrée, en retournant un valarray dont les éléments sont égaux à la tangente hyperbolique des éléments du valarray d'entrée.|
 
 ### <a name="operators"></a>Opérateurs
 

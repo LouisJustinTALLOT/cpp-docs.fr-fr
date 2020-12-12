@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _RTC_GetErrDesc'
 title: _RTC_GetErrDesc
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-ms.openlocfilehash: 7174e9242b77a904df817886df4f8c763e3e0b2c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5e9beccec5e13d6c2c00e3edaefec695a8e16737
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168720"
 ---
 # <a name="_rtc_geterrdesc"></a>_RTC_GetErrDesc
 
@@ -47,14 +48,14 @@ const char * _RTC_GetErrDesc(
 
 ### <a name="parameters"></a>Paramètres
 
-*errnum*<br/>
+*ErrNum*<br/>
 Un nombre entre zéro et un de moins que la valeur retournée par **_RTC_NumErrors**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
-Une chaîne de caractères qui contient une brève description d’un des types d’erreurs détectées par le système de vérification d’erreurs au moment de l’exécution. Si l’erreur est inférieure à zéro ou supérieure ou égale à la valeur retournée par [_RTC_NumErrors](rtc-numerrors.md), **_RTC_GetErrDesc** retourne **null**.
+Une chaîne de caractères qui contient une brève description d’un des types d’erreurs détectées par le système de vérification d’erreurs au moment de l’exécution. Si l’erreur est inférieure à zéro ou supérieure ou égale à la valeur retournée par [_RTC_NumErrors](rtc-numerrors.md), **_RTC_GetErrDesc** retourne la valeur **null**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -69,4 +70,4 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 ## <a name="see-also"></a>Voir aussi
 
 [_RTC_NumErrors](rtc-numerrors.md)<br/>
-[Vérifications des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)<br/>
+[Vérification des erreurs au moment de l’exécution](../../c-runtime-library/run-time-error-checking.md)<br/>

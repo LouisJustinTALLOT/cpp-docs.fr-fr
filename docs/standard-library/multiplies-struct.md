@@ -1,5 +1,6 @@
 ---
-title: multiplies (struct)
+description: 'En savoir plus sur : multiplie la structure'
+title: multiplies, struct
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::multiplies
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - multiplies class
 - multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
-ms.openlocfilehash: 3bccaf2a5e6594652a1179b357cdbbee2d2436b3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 552f36d2060ca9ad6141438a45a128e84b705630
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114986"
 ---
-# <a name="multiplies-struct"></a>multiplies (struct)
+# <a name="multiplies-struct"></a>multiplies, struct
 
 Objet de fonction prédéfini qui effectue l’opération de multiplication ( `operator*` binaire) sur ses arguments.
 
@@ -40,15 +41,15 @@ struct multiplies<void>
 ### <a name="parameters"></a>Paramètres
 
 *Type*, *T*, *U*\
-Tout type prenant en charge un `operator*` binaire qui accepte des opérandes des types spécifiés ou déduits.
+Tout type qui prend en charge un `operator*` binaire qui accepte des opérandes des types spécifiés ou déduits.
 
 *Gauche*\
-Opérande gauche de l’opération de multiplication. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+Opérande gauche de l’opération de multiplication. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
 
 *Oui*\
-Opérande droit de l’opération de multiplication. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+Opérande droit de l’opération de multiplication. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Résultat de `Left * Right`. Le modèle spécialisé effectue un transfert parfait du résultat, qui a le type retourné par `operator*`.
 

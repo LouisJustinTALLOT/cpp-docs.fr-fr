@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : xor_eq'
 title: xor_eq
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - xor_eq function
 ms.assetid: eca4b6b4-b77a-4d44-a09a-5a7e69fdb56c
-ms.openlocfilehash: 107f8b6ecccf2976086654370164d73b3fb81f3d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d16c1a85ff2943156b03bb772ffb8231180a16c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117144"
 ---
 # <a name="xor_eq"></a>xor_eq
 
@@ -76,4 +77,4 @@ int main( )
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<ISO646. h >
+**En-tête :**\<iso646.h>

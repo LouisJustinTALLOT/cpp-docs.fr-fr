@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : écriture de fonctions avec un assembly inline'
 title: Écriture de fonctions avec un assembly inline
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 3ce42147693f0c4c180076c627ef88c182745186
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94a1e03842620982e74818dbf2f1bd492a2a4738
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121801"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>Écriture de fonctions avec un assembly inline
 

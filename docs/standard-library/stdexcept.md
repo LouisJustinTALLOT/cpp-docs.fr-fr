@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; stdexcept&gt;'
 title: '&lt;stdexcept&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - stdexcept header
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
-ms.openlocfilehash: d4028d57a6e8898f85a37d9731e7e8d4cda19a2f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07ab90442630c6dfb5a96604ba7c0cb6b214f605
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169084"
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 
@@ -37,17 +38,17 @@ Les erreurs d'exécution sont dues à des erreurs dans les fonctions de biblioth
 
 |Classe|Description|
 |-|-|
-|[domain_error, classe](../standard-library/domain-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler une erreur de domaine.|
-|[invalid_argument, classe](../standard-library/invalid-argument-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler un argument non valide.|
-|[length_error, classe](../standard-library/length-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler une tentative de génération d'un objet trop long pour être spécifié.|
-|[logic_error, classe](../standard-library/logic-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler des erreurs normalement détectables avant l'exécution du programme, telles que les violations de conditions préalables logiques.|
-|[out_of_range, classe](../standard-library/out-of-range-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler un argument qui est en dehors de sa plage valide.|
-|[overflow_error, classe](../standard-library/overflow-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler un dépassement de capacité arithmétique positif.|
-|[range_error, classe](../standard-library/range-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler une erreur de plage.|
-|[runtime_error, classe](../standard-library/runtime-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler des erreurs normalement détectables uniquement durant l'exécution du programme.|
-|[underflow_error, classe](../standard-library/underflow-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler un dépassement de capacité arithmétique négatif.|
+|[Classe domain_error](../standard-library/domain-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler une erreur de domaine.|
+|[Classe invalid_argument](../standard-library/invalid-argument-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler un argument non valide.|
+|[Classe length_error](../standard-library/length-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler une tentative de génération d'un objet trop long pour être spécifié.|
+|[Classe logic_error](../standard-library/logic-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler des erreurs normalement détectables avant l'exécution du programme, telles que les violations de conditions préalables logiques.|
+|[Classe out_of_range](../standard-library/out-of-range-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler un argument qui est en dehors de sa plage valide.|
+|[Classe overflow_error](../standard-library/overflow-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler un dépassement de capacité arithmétique positif.|
+|[Classe range_error](../standard-library/range-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler une erreur de plage.|
+|[Classe runtime_error](../standard-library/runtime-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler des erreurs normalement détectables uniquement durant l'exécution du programme.|
+|[Classe underflow_error](../standard-library/underflow-error-class.md)|Classe qui sert de classe de base pour toutes les exceptions levées pour signaler un dépassement de capacité arithmétique négatif.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

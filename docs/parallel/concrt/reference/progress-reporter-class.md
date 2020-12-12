@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe progress_reporter'
 title: progress_reporter, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: bd8f50a8c9829ff9de3e2412b89aa4de88d90db6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 40ae3dba0c804381478d8c32da4425b20a9825d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169357"
 ---
 # <a name="progress_reporter-class"></a>progress_reporter, classe
 
@@ -36,15 +37,15 @@ Type de charge utile de chaque notification d'avancement signalé via l'indicate
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[progress_reporter](#ctor)||
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[port](#report)|Envoie un rapport d'avancement à l'action asynchrone ou à l'opération à laquelle est lié cet indicateur de progression.|
+|[report (rapport)](#report)|Envoie un rapport d'avancement à l'action asynchrone ou à l'opération à laquelle est lié cet indicateur de progression.|
 
 ## <a name="remarks"></a>Notes
 
@@ -58,15 +59,15 @@ Ce type est uniquement disponible pour les applications Windows Runtime.
 
 **En-tête :** ppltasks. h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="ctor"></a>progress_reporter
+## <a name="progress_reporter"></a><a name="ctor"></a> progress_reporter
 
 ```cpp
 progress_reporter();
 ```
 
-## <a name="report"></a>port
+## <a name="report"></a><a name="report"></a> port
 
 Envoie un rapport d'avancement à l'action asynchrone ou à l'opération à laquelle est lié cet indicateur de progression.
 
@@ -76,9 +77,9 @@ void report(const _ProgressType& val) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*val*<br/>
+*multiples*<br/>
 Charge utile à signaler via une notification de progression.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)

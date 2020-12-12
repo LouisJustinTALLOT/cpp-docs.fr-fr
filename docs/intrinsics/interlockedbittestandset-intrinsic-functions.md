@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fonctions intrinsèques de _interlockedbittestandset'
 title: _interlockedbittestandset fonctions intrinsèques
 ms.date: 09/02/2019
 f1_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - _interlockedbittestandset64 intrinsic
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
-ms.openlocfilehash: 9679abf674b5ef366818e73504c3c8c80c5d8ed7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bc1ee5e70c5b892b7c98bb9cb03f75b3baeda268
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217760"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168200"
 ---
 # <a name="_interlockedbittestandset-intrinsic-functions"></a>_interlockedbittestandset fonctions intrinsèques
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-Générez une instruction pour examiner `b` le bit de `a` l’adresse et retourner sa valeur actuelle avant de lui affecter la valeur 1.
+Générez une instruction pour examiner `b` le bit de l’adresse `a` et retourner sa valeur actuelle avant de lui affecter la valeur 1.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -95,32 +96,32 @@ dans Pointeur vers la mémoire à examiner.
 *p*\
 dans Position de bit à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Valeur du bit à la position `b` avant qu’il ne soit défini.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|Header|
+|Intrinsic|Architecture|En-tête|
 |---------------|------------------|------------|
 |`_interlockedbittestandset`|x86, ARM, x64, ARM64|\<intrin.h>|
 |`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM, ARM64|\<intrin.h>|
 |`_interlockedbittestandset64_acq`, `_interlockedbittestandset64_nf`, `_interlockedbittestandset64_rel`|ARM64|\<intrin.h>|
 |`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h>|
 |`_interlockedbittestandset64`|x64, ARM64|\<intrin.h>|
-|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Notes
 
 Sur les processeurs x86 et x64, ces fonctions intrinsèques utilisent l' `lock bts` instruction pour lire et définir le bit spécifié sur 1. L'opération est atomique.
 
-Sur les processeurs ARM et ARM64, utilisez les intrinsèques `_rel` avec `_acq` les suffixes et pour les sémantiques Acquire et Release, par exemple au début et à la fin d’une section critique. Les intrinsèques ARM avec un `_nf` suffixe («no cloture») n’agissent pas comme une barrière de mémoire.
+Sur les processeurs ARM et ARM64, utilisez les intrinsèques avec les `_acq` `_rel` suffixes et pour les sémantiques Acquire et Release, par exemple au début et à la fin d’une section critique. Les intrinsèques ARM avec un `_nf` suffixe (« no cloture ») n’agissent pas comme une barrière de mémoire.
 
 Sur les processeurs Intel qui prennent en charge les instructions HLE (Hardware Lock Elision), les intrinsèques ayant les suffixes `_HLEAcquire` et `_HLERelease` incluent une indication pour le processeur. Celle-ci permet d'accélérer les performances en éliminant une étape d'écriture de verrou dans le matériel. Si ces fonctions intrinsèques sont appelées sur des processeurs qui ne prennent pas en charge HLE, l’indicateur est ignoré.
 
 Ces routines sont disponibles seulement comme fonctions intrinsèques.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : struct steady_clock'
 title: steady_clock, struct
 ms.date: 05/22/2018
 f1_keywords:
 - chrono/std::chrono::steady_clock
 ms.assetid: 970d12ec-fc80-4391-a2f7-b57b2aec668d
-ms.openlocfilehash: d21d5c2ed7ed667333007f3bd12d13f47b868380
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 066a98f4eba6670e640e9fcc9b79eb017859a3d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217400"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169071"
 ---
 # <a name="steady_clock-struct"></a>steady_clock, struct
 
@@ -27,7 +28,7 @@ Sur Windows, `steady_clock` encapsule la `QueryPerformanceCounter` fonction.
 
 Une horloge est *monotonic* si la valeur retournée par un premier appel à `now` est toujours inférieure ou égale à la valeur retournée par un appel ultérieur à `now`. Une horloge est *stable* si elle est *monotone* et si le laps de temps entre les battements d’horloge est constant.
 
-`high_resolution_clock`est un typedef pour `steady_clock` .
+`high_resolution_clock` est un typedef pour `steady_clock` .
 
 ### <a name="public-typedefs"></a>Typedefs publics
 

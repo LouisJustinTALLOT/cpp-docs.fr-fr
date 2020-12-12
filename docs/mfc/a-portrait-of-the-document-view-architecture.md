@@ -1,5 +1,6 @@
 ---
-title: Portrait de l’architecture document-vue
+description: 'En savoir plus sur : un portrait de l’architecture document/vue'
+title: Portrait de l’architecture Document-View
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], views
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: 8c7bb4add1ebce62147f0bd5403f693cbec87e91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e4f8fc636349aaa12ee4481c7f6223c343b6d406
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214189"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169630"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portrait de l'architecture document/vue
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe _variant_t'
 title: _variant_t (classe)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - VARIANT object
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
-ms.openlocfilehash: 3873452afca0159cba815a2cb290ebb6e62aff07
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e720d78e6f7fd22fc369d4b39804260892e235c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116611"
 ---
 # <a name="_variant_t-class"></a>_variant_t (classe)
 
@@ -49,7 +50,7 @@ Un objet **_variant_t** encapsule le `VARIANT` type de données. La classe gère
 
 **FIN spécifique à Microsoft**
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<comutil.h>
 

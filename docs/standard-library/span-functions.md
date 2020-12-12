@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; fonctions span'
 title: '&lt;span, &gt; fonctions'
 ms.date: 05/28/2020
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::span [C++], as_writable_bytes
 - std::as_bytes [C++]
-ms.openlocfilehash: f51c99d2f2a051a07cefcb985fdb46340fefb3ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 09d712d6dfffee2aa24e0e8cecca4031a27923f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169188"
 ---
 # <a name="ltspangt-functions"></a>&lt;span, &gt; fonctions
 
@@ -43,7 +44,7 @@ Nombre d’éléments dans l’étendue (s’il est connu au moment de la compil
 *x*\
 Étendue pour laquelle la représentation brute doit être obtenue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `span<const byte, S>`Au premier élément stocké dans l’étendue où `S` est`{reinterpret_cast<const std::byte*>(s.data()), s.size_bytes()}`
 
@@ -83,7 +84,7 @@ Nombre d’éléments dans l’étendue (s’il est connu au moment de la compil
 *x*\
 Étendue pour laquelle la représentation brute doit être obtenue.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 `span<byte, S>`Au premier élément stocké dans l’étendue où `S` est`{reinterpret_cast<std::byte*>(s.data()), s.size_bytes()}`
 

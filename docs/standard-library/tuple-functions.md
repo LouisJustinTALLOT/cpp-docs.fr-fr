@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur &lt; : &gt; fonctions de Tuple'
 title: '&lt;tuple&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: cf58cab5f222594a935156cf7e7f2e886639da2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168954"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt;, fonctions
 
@@ -39,7 +40,7 @@ template <class... TTypes>
     constexpr tuple<TTypes&&...> forward_as_tuple(TTypes&&...) noexcept;
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne `tuple<TTypes&&...>(std::forward<TTypes>(t)...)`.
 
@@ -95,7 +96,7 @@ Type de l’élément à obtenir.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions de modèle retournent une référence à la valeur à l' *index*d’index ou de type *T* dans l' `tuple` objet.
+Les fonctions de modèle retournent une référence à la valeur à l' *index* d’index ou de type *T* dans l' `tuple` objet.
 
 L'appel de `get<T>(Tuple)` génère une erreur de compilation si le Tuple ne contient pas un seul élément de type T.
 
@@ -268,7 +269,7 @@ int main() {
 template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet Tuple construit en initialisant chaque élément de type.
 

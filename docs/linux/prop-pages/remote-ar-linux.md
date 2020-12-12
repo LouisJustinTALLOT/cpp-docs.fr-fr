@@ -1,14 +1,15 @@
 ---
+description: 'En savoir plus sur : propriétés d’archive à distance (C++ Linux)'
 title: Archive distante, propriétés (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 5ee1e44c-8337-4c3a-b2f3-35e4be954f9f
 f1_keywords: []
-ms.openlocfilehash: 9e35c9cc0b8a99e87654f1052e8666c52e35a071
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 39449e900878739cb61e5df536ee5e06a307364e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169682"
 ---
 # <a name="remote-archive-properties-c-linux"></a>Archive distante, propriétés (Linux C++)
 

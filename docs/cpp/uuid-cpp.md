@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : UUID (C++)'
 title: uuid (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], uuid
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
-ms.openlocfilehash: f775820fe7f84c5081a213ca9ecb07d617716a9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c841bb1813769ab70e756fe4edb7fd351c1dbc49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226982"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116728"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 

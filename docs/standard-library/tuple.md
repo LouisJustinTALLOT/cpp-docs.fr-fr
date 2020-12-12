@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; Tuple&gt;'
 title: '&lt;tuple&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: b1eeba2fced21f5a38799db7fc4af259e03bc266
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7c9f55866cc723aa6f7414b6a633a3cfbebd625a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168837"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
 Définit un modèle `tuple` dont les instances détiennent des objets de types variables.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<tuple>
 
@@ -52,7 +53,7 @@ Définit un modèle `tuple` dont les instances détiennent des objets de types v
 |[>d’opérateur ](../standard-library/tuple-operators.md#op_gt)|Comparaison d' `tuple` objets, supérieur à.|
 |[>opérateur =](../standard-library/tuple-operators.md#op_gt_eq)|Comparaison d' `tuple` objets, supérieur ou égal à.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

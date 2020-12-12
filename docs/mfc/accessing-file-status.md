@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : accès à l’état des fichiers'
 title: Accès au statut de fichier
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-ms.openlocfilehash: 23c626940e700d3e9827ef6a7cf849d970e40d5d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: defff16ddfb8cb5321def898cad451f1e12f1f8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169526"
 ---
 # <a name="accessing-file-status"></a>Accès au statut de fichier
 
-`CFile`prend également en charge l’obtention de l’état du fichier, notamment si le fichier existe, les dates et heures de création et de modification, la taille logique et le chemin d’accès.
+`CFile` prend également en charge l’obtention de l’état du fichier, notamment si le fichier existe, les dates et heures de création et de modification, la taille logique et le chemin d’accès.
 
 ### <a name="to-get-file-status"></a>Pour récupérer l’état d’un fichier
 

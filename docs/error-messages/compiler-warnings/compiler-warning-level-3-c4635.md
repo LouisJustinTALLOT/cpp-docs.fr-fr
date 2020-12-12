@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : avertissement du compilateur (niveau 3) C4635'
 title: Avertissement du compilateur (niveau 3) C4635
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
-ms.openlocfilehash: fd3bf6c1b14c6dae8e2fa95a54e2d4fbc4f295c5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: e885c501e4f10719618bb552c153dc13a481332d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168330"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>Avertissement du compilateur (niveau 3) C4635
 
@@ -35,4 +36,4 @@ public ref class Test {};
 
 Notez que la sortie de cet exemple indique : **La balise de fin 'member' ne correspond pas à la balise de début 'summary'.**
 
-Le problème avec cet exemple est que la balise de fin de \<Résumé > est mal formée et que le compilateur ne la reconnaît pas comme balise de fin de > de \<.  La balise de > de membre \<est incorporée dans le fichier. XDC par le compilateur dans chaque compilation/doc.  Le problème ici est que la balise de fin \</Member > ne correspond pas à la balise de début précédente traitée par le compilateur (\<Résumé >.
+Le problème avec cet exemple est que la balise de fin pour \<summary> est mal formée et que le compilateur ne la reconnaît pas comme \<summary> balise de fin.  La \<member> balise est incorporée dans le fichier. XDC par le compilateur dans chaque compilation/doc.  Le problème ici est que la balise de fin \</member> ne correspond pas à la balise de début précédente traitée par le compilateur ( \<summary> .

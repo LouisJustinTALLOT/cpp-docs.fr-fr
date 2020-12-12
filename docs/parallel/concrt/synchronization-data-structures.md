@@ -1,21 +1,22 @@
 ---
+description: 'En savoir plus sur : structures de données de synchronisation'
 title: Structures de données de synchronisation
 ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 244aaac9bd40c83d0bbec3c360bdf7351da54baf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5e2e9e6d79f1e71a8f18f98d69fb794597d0ccb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169344"
 ---
 # <a name="synchronization-data-structures"></a>Structures de données de synchronisation
 
 L’runtime d’accès concurrentiel fournit plusieurs structures de données qui vous permettent de synchroniser l’accès aux données partagées à partir de plusieurs threads. Ces structures de données sont utiles quand vous avez des données partagées que vous modifiez rarement. Un objet de synchronisation, par exemple une section critique, entraîne l’attente d’autres threads jusqu’à ce que la ressource partagée soit disponible. Par conséquent, si vous utilisez un tel objet pour synchroniser l’accès aux données fréquemment utilisées, vous pouvez perdre l’extensibilité dans votre application. La [bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) fournit la classe [Concurrency :: combinable](../../parallel/concrt/reference/combinable-class.md) , qui vous permet de partager une ressource entre plusieurs threads ou tâches sans nécessiter de synchronisation. Pour plus d’informations sur la `combinable` classe, consultez [conteneurs et objets parallèles](../../parallel/concrt/parallel-containers-and-objects.md).
 
-## <a name="sections"></a><a name="top"></a>Sections
+## <a name="sections"></a><a name="top"></a> Sections
 
 Cette rubrique décrit en détail les types de blocs de messages asynchrones suivants :
 
@@ -27,7 +28,7 @@ Cette rubrique décrit en détail les types de blocs de messages asynchrones sui
 
 - [event](#event)
 
-## <a name="critical_section"></a><a name="critical_section"></a>critical_section
+## <a name="critical_section"></a><a name="critical_section"></a> critical_section
 
 La classe [Concurrency :: critical_section](../../parallel/concrt/reference/critical-section-class.md) représente un objet d’exclusion mutuelle coopérative qui donne à d’autres tâches au lieu de les préemption. Les sections critiques sont utiles lorsque plusieurs threads requièrent un accès exclusif en lecture et en écriture aux données partagées.
 
@@ -45,7 +46,7 @@ Le tableau suivant présente les méthodes importantes définies par la `critica
 
 [[Haut](#top)]
 
-## <a name="reader_writer_lock"></a><a name="reader_writer_lock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="reader_writer_lock"></a> reader_writer_lock
 
 La classe [Concurrency :: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) fournit des opérations de lecture/écriture thread-safe aux données partagées. Utilisez des verrous en lecture/écriture lorsque plusieurs threads requièrent un accès en lecture simultané à une ressource partagée, mais écrivent rarement dans cette ressource partagée. Cette classe fournit à tout moment un seul thread d’accès en écriture à un objet.
 
@@ -74,7 +75,7 @@ Le tableau suivant présente les méthodes importantes définies par la `reader_
 
 [[Haut](#top)]
 
-## <a name="scoped_lock-and-scoped_lock_read"></a><a name="scoped_lock"></a>scoped_lock et scoped_lock_read
+## <a name="scoped_lock-and-scoped_lock_read"></a><a name="scoped_lock"></a> scoped_lock et scoped_lock_read
 
 Les `critical_section` `reader_writer_lock` classes et fournissent des classes d’assistance imbriquées qui simplifient la façon dont vous travaillez avec les objets d’exclusion mutuelle. Ces classes d’assistance sont appelées *verrous étendus*.
 
@@ -97,7 +98,7 @@ Le tableau suivant présente plusieurs des méthodes importantes définies par l
 
 |Méthode|Description|
 |------------|-----------------|
-|[qu'](reference/event-class.md#wait)|Attend que l’événement soit signalé.|
+|[wait](reference/event-class.md#wait)|Attend que l’événement soit signalé.|
 |[set](reference/event-class.md#set)|Définit l’événement à l’état signalé.|
 |[reset](reference/event-class.md#reset)|Définit l’événement à l’état non signalé.|
 |[wait_for_multiple](reference/event-class.md#wait_for_multiple)|Attend que plusieurs événements soient signalés.|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : accès à tous les membres d’un regroupement'
 title: Accès à tous les membres d'une collection
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0207c082f17cf1a02da1829d5e04ea3eccae3b40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169578"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Accès à tous les membres d'une collection
 
@@ -34,7 +35,7 @@ Les procédures suivantes montrent comment itérer sur les trois principaux type
 
 - [Itération d’un mappage](#_core_to_iterate_a_map)
 
-### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a>Pour itérer un tableau
+### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a> Pour itérer un tableau
 
 1. Utilisez des numéros d’index séquentiels avec la fonction membre `GetAt` :
 

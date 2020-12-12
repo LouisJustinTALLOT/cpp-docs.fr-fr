@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _variant_t :: ChangeType'
 title: _variant_t::ChangeType
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: c2283158856a6781ab2e12c51f4e2ad0e4f1d531
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 32ce43f1d9afb388c97e5271927113c71d31bb92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750729"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116624"
 ---
 # <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
-Modifications du `_variant_t` type de `VARTYPE`l’objet à l’indiqué .
+Remplace le type de l' `_variant_t` objet par le indiqué `VARTYPE` .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,17 +34,17 @@ void ChangeType(
 
 #### <a name="parameters"></a>Paramètres
 
-*vartype*<br/>
-Le `VARTYPE` pour `_variant_t` cet objet.
+*utilisable*<br/>
+`VARTYPE`Pour cet `_variant_t` objet.
 
-*pSrc (en)*<br/>
+*pSrc*<br/>
 Pointeur vers l'objet `_variant_t` à convertir. Si cette valeur est NULL, la conversion s'effectue sur place.
 
 ## <a name="remarks"></a>Notes
 
-Cette fonction de `_variant_t` membre convertit `VARTYPE`un objet en indiqué . Si *pSrc* est NULL, la conversion est `_variant_t` effectuée en place, sinon cet objet est copié à partir de *pSrc,* puis converti.
+Cette fonction membre convertit un `_variant_t` objet en le indiqué `VARTYPE` . Si *pSrc* a la valeur null, la conversion est effectuée sur place, sinon cet `_variant_t` objet est copié à partir de *pSrc* , puis converti.
 
-**END Microsoft Spécifique**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

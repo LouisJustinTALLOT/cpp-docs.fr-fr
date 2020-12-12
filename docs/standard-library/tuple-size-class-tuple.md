@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe tuple_size ;'
 title: tuple_size, classe ;
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e825acc02e27a8d0c1ae29e5bfcf4ac1e0a708b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688852"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168876"
 ---
 # <a name="tuple_size-class"></a>tuple_size, classe ;
 
@@ -60,27 +61,27 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 de *Tuple*
+*Passent*\
 Type du tuple.
 
-@No__t_1 *elem*
+*Elem*\
 Type des éléments du tableau.
 
-*Taille* \
+*Taille*\
 Taille du tableau.
 
-@No__t_1 *T1*
+*T1*\
 Type du premier membre de la paire.
 
-*T2* \
+*H2*\
 Type du second membre de la paire.
 
-*Types*\
+*Modes*\
 Types des éléments de tuple.
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe a un membre `value` qui est une expression constante intégrale dont la valeur est l’étendue du *Tuple*de type de Tuple.
+Le modèle de classe a un membre `value` qui est une expression constante intégrale dont la valeur est l’étendue du *Tuple* de type de Tuple.
 
 La spécialisation de modèle pour les tableaux a un membre `value` qui est une expression constante intégrale dont la valeur est *taille*, qui est la taille du tableau.
 
@@ -115,12 +116,12 @@ int main()
 4
 ```
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<tuple>
+**En-tête :**\<tuple>
 
 **En-tête :** \<array> (pour la spécialisation de tableau)
 
-**En-tête :** \<utility> (pour la spécialisation de paire)
+**En-tête :** \<utility> (pour la spécialisation des paires)
 
 **Espace de noms :** std

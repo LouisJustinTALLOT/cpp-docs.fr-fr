@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les attributs de Storage-Class étendu C
 title: Attributs étendus de classe de stockage C
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: 5e1fe80f3bc1f581c6ea05c54409b1e76eacfce7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9dff43594ef97214609c6ed2195240d0e21648e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190219"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168759"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Attributs étendus de classe de stockage C
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur de génération de projet projet PRJ0003'
 title: Erreur de génération de projet PRJ0003
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 59028c6d886630ef7db115a2ea93327669b2fcfd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cefd56e1d11da77f288333fb0e1f9c10ef684d12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80192924"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119406"
 ---
 # <a name="project-build-error-prj0003"></a>Erreur de génération de projet PRJ0003
 
-> Erreur lors de la génération de la*ligne de commande*.
+> Erreur lors de la génération de la *ligne de commande*.
 
 La commande de *ligne de commande* formée à partir d’une entrée dans la boîte de dialogue **pages de propriétés** a retourné un code d’erreur, mais aucune information n’apparaît dans la fenêtre **sortie** .
 
@@ -29,7 +30,7 @@ Les raisons possibles de cette erreur sont les suivantes :
 
 - Les chemins d’accès aux fichiers exécutables spécifiés dans les **Répertoires VC + +** n’incluent pas le chemin d’accès de l’outil que vous tentez d’exécuter. Pour plus d’informations, consultez [définir les propriétés de compilation et de génération](../../build/working-with-project-properties.md)
 
-- Pour les projets Makefile, vous ne disposez pas d’une commande à exécuter sur une ligne de **commande Build** ou une **ligne de commande**Rebuild.
+- Pour les projets Makefile, vous ne disposez pas d’une commande à exécuter sur une ligne de **commande Build** ou une **ligne de commande** Rebuild.
 
 ## <a name="see-also"></a>Voir aussi
 

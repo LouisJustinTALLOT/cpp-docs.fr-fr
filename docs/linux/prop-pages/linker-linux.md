@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : propriétés de l’éditeur de liens (Linux C++)'
 title: Éditeur de liens, propriétés (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: d6c6bc44a4d681f442a5a85ca9d5865c4590f884
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 93ded9016cecb629fe17d171387260179b208f77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921488"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169747"
 ---
 # <a name="linker-properties-linux-c"></a>Éditeur de liens, propriétés (Linux C++)
 

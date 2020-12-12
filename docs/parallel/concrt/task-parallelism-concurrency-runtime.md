@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : parallélisme des tâches (runtime d’accès concurrentiel)'
 title: Parallélisme des tâches (runtime d’accès concurrentiel)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 09c6153a1440684156226acbda909ca8b0398989
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22dc275d70a84c37fa5250c4798a01cbfe2c4c78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224927"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169292"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallélisme des tâches (runtime d’accès concurrentiel)
 
@@ -68,7 +69,7 @@ Vous utilisez des tâches quand vous écrivez du code asynchrone et que vous vou
 
 - [Programmation robuste](#robust)
 
-## <a name="using-lambda-expressions"></a><a name="lambdas"></a>Utilisation d’expressions lambda
+## <a name="using-lambda-expressions"></a><a name="lambdas"></a> Utilisation d’expressions lambda
 
 En raison de leur syntaxe concise, les expressions lambda constituent une manière courante de définir le travail effectué par les tâches et les groupes de tâches. Voici quelques conseils d'utilisation :
 
@@ -86,11 +87,11 @@ Pour résoudre ce problème, utilisez un pointeur intelligent, tel que [std :: 
 
 Pour plus d’informations sur les expressions lambda, consultez [expressions lambda](../../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="the-task-class"></a><a name="task-class"></a>La classe Task
+## <a name="the-task-class"></a><a name="task-class"></a> La classe Task
 
 Vous pouvez utiliser la classe [Concurrency :: Task](../../parallel/concrt/reference/task-class.md) pour composer des tâches dans un ensemble d’opérations dépendantes. Ce modèle de composition est pris en charge par la notion de *continuations*. Une continuation permet d’exécuter le code lorsque la tâche précédente, ou *antécédente*, se termine. Le résultat de la tâche antécédente est transmis comme entrée à une ou plusieurs tâches de continuation. Quand une tâche antécédente est terminée, toutes les tâches de continuation qui l'attendent sont planifiées pour l'exécution. Chaque tâche de continuation reçoit une copie du résultat de la tâche antécédente. À leur tour, ces tâches de continuation peuvent également être des tâches antécédentes pour d’autres continuations, créant ainsi une chaîne de tâches. Les continuations vous aident à créer des chaînes de longueur arbitraire de tâches qui ont des dépendances spécifiques entre elles. De plus, une tâche peut participer à l’annulation avant le démarrage d’une tâche ou de manière coopérative pendant son exécution. Pour plus d’informations sur ce modèle d’annulation, consultez [annulation dans la bibliothèque de modèles parallèles](cancellation-in-the-ppl.md).
 
-`task` est une classe de modèle. Le paramètre de type `T` est le type du résultat produit par la tâche. Ce type peut être **`void`** si la tâche ne retourne pas de valeur. `T`Impossible d’utiliser le **`const`** modificateur.
+`task` est une classe de modèle. Le paramètre de type `T` est le type du résultat produit par la tâche. Ce type peut être **`void`** si la tâche ne retourne pas de valeur. `T` Impossible d’utiliser le **`const`** modificateur.
 
 Lorsque vous créez une tâche, vous fournissez une *fonction de travail* qui exécute le corps de la tâche. Cette fonction de travail se présente sous la forme d'une fonction lambda, de pointeur de fonction ou d'objet de fonction. Pour attendre qu’une tâche se termine sans obtenir le résultat, appelez la méthode [Concurrency :: Task :: wait](reference/task-class.md#wait) . La `task::wait` méthode retourne une valeur [Concurrency :: task_status](reference/concurrency-namespace-enums.md#task_group_status) qui indique si la tâche a été terminée ou annulée. Pour obtenir le résultat de la tâche, appelez la méthode [Concurrency :: Task :: obtenir](reference/task-class.md#get) . Cette méthode appelle `task::wait` pour attendre que la tâche se termine, et bloque donc l'exécution du thread actuel jusqu'à ce que le résultat soit disponible.
 
@@ -113,7 +114,7 @@ Pour obtenir un exemple qui utilise `task` , [Concurrency :: task_completion_ev
 > [!TIP]
 > Pour en savoir plus sur les tâches spécifiques aux tâches dans les applications UWP, consultez [programmation asynchrone en C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) et [création d’opérations asynchrones en C++ pour les applications UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 
-## <a name="continuation-tasks"></a><a name="continuations"></a>Tâches de continuation
+## <a name="continuation-tasks"></a><a name="continuations"></a> Tâches de continuation
 
 En programmation asynchrone, il est très courant pour une opération asynchrone, une fois terminée, d'appeler une deuxième opération et de lui passer des données. Pour cela, il est d'usage d'avoir recours à des méthodes de rappel. Dans le runtime d’accès concurrentiel, les mêmes fonctionnalités sont fournies par les *tâches de continuation*. Une tâche de continuation (également appelée continuation) est une tâche asynchrone appelée par une autre tâche, appelée *antécédent*, lorsque l’antécédent se termine. En utilisant les continuations, vous pouvez :
 
@@ -150,15 +151,15 @@ Une continuation peut également retourner une autre tâche. En l’absence d’
 > [!IMPORTANT]
 > Quand une continuation d’une tâche retourne une tâche imbriquée de type `N`, la tâche qui en résulte a le type `N`, et non `task<N>`, et elle se termine quand la tâche imbriquée se termine. En d’autres termes, la continuation désencapsule la tâche imbriquée.
 
-## <a name="value-based-versus-task-based-continuations"></a><a name="value-versus-task"></a>Continuations basées sur les valeurs et les continuations basées sur les tâches
+## <a name="value-based-versus-task-based-continuations"></a><a name="value-versus-task"></a> Value-Based contre les continuations Task-Based
 
 Étant donné un objet `task` dont le type de retour est `T`, vous pouvez fournir une valeur de type `T` ou `task<T>` à ses tâches de continuation. Une continuation qui prend le type `T` est appelée *continuation basée sur des valeurs*. Une continuation basée sur des valeurs est planifiée pour l‘exécution quand la tâche antécédente se termine sans erreur et qu‘elle n‘est pas annulée. Une continuation qui prend `task<T>` le type comme paramètre est appelée *continuation basée sur les tâches*. Une continuation basée sur des tâches est toujours planifiée pour l’exécution quand la tâche antécédente se termine, même quand la tâche antécédente est annulée ou lève une exception. Vous pouvez alors appeler `task::get` pour obtenir le résultat de la tâche antécédente. Si la tâche antécédente a été annulée, `task::get` lève l' [accès concurrentiel :: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Si la tâche antécédente a levé une exception, `task::get` lève à nouveau cette exception. Une continuation basée sur des tâches n‘est pas marquée comme annulée quand sa tâche antécédente est annulée.
 
-## <a name="composing-tasks"></a><a name="composing-tasks"></a>Composition de tâches
+## <a name="composing-tasks"></a><a name="composing-tasks"></a> Composition de tâches
 
 Cette section décrit les fonctions [Concurrency :: when_all](reference/concurrency-namespace-functions.md#when_all) et [Concurrency :: when_any](reference/concurrency-namespace-functions.md#when_all) , qui peuvent vous aider à composer plusieurs tâches pour implémenter des modèles courants.
 
-### <a name="the-when_all-function"></a><a name="when-all"></a>Fonction when_all
+### <a name="the-when_all-function"></a><a name="when-all"></a> Fonction when_all
 
 La fonction `when_all` produit une tâche qui s'exécute une fois qu'un ensemble de tâches est terminé. Cette fonction retourne un objet std ::[Vector](../../standard-library/vector-class.md) qui contient le résultat de chaque tâche dans le jeu. L'exemple de base suivant utilise `when_all` pour créer une tâche qui représente l'achèvement de trois autres tâches.
 
@@ -206,7 +207,7 @@ Prenons l’exemple d’une application UWP qui utilise C++ et XAML et qui écri
 > [!TIP]
 > `when_all` est une fonction non bloquante qui produit un `task` en tant que résultat. Contrairement à [Task :: wait](reference/task-class.md#wait), il est possible d’appeler cette fonction en toute sécurité dans une application UWP sur le thread asta (application STA).
 
-### <a name="the-when_any-function"></a><a name="when-any"></a>Fonction when_any
+### <a name="the-when_any-function"></a><a name="when-any"></a> Fonction when_any
 
 La fonction `when_any` produit une tâche qui se termine quand la première tâche d'un ensemble de tâches se termine. Cette fonction retourne un objet [std ::p air](../../standard-library/pair-structure.md) qui contient le résultat de la tâche terminée et l’index de cette tâche dans le jeu.
 
@@ -236,17 +237,17 @@ Vous pouvez également utiliser la syntaxe `||` pour produire une tâche qui s�
 > [!TIP]
 > Comme avec `when_all` , `when_any` est non bloquant et peut être appelé en toute sécurité dans une application UWP sur le thread asta.
 
-## <a name="delayed-task-execution"></a><a name="delayed-tasks"></a>Exécution différée des tâches
+## <a name="delayed-task-execution"></a><a name="delayed-tasks"></a> Exécution différée des tâches
 
 Il est parfois nécessaire de retarder l’exécution d’une tâche jusqu’à ce qu’une condition soit satisfaite, ou de démarrer une tâche en réponse à un événement externe. Par exemple, en programmation asynchrone, vous devrez peut-être démarrer une tâche en réponse à un événement d’achèvement d’E/S.
 
 Pour ce faire, il existe deux façons d’utiliser une continuation ou de démarrer une tâche et d’attendre un événement à l’intérieur de la fonction de travail de la tâche. Toutefois, il existe des cas où il n'est pas possible d'utiliser l'une de ces techniques. Par exemple, pour créer une continuation, vous devez disposer de la tâche antécédente. Toutefois, si vous n’avez pas la tâche antécédente, vous pouvez créer un *événement d’achèvement de tâche* et chaîner ultérieurement cet événement d’achèvement à la tâche antécédente lorsqu’elle est disponible. De plus, puisqu’une tâche en attente bloque également un thread, vous pouvez utiliser des événements d’achèvement de tâche pour effectuer un travail quand une opération asynchrone se termine et ainsi libérer un thread.
 
-La classe [Concurrency :: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) permet de simplifier cette composition de tâches. Comme la classe `task`, le paramètre de type `T` est le type du résultat produit par la tâche. Ce type peut être **`void`** si la tâche ne retourne pas de valeur. `T`Impossible d’utiliser le **`const`** modificateur. En règle générale, un objet `task_completion_event` est fourni à un thread ou une tâche qui le signale quand sa valeur devient disponible. En même temps, une ou plusieurs tâches sont définies en tant qu’écouteurs de cet événement. Quand l’événement est défini, les tâches de l’écouteur s’achèvent et leurs continuations sont planifiées pour s’exécuter.
+La classe [Concurrency :: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) permet de simplifier cette composition de tâches. Comme la classe `task`, le paramètre de type `T` est le type du résultat produit par la tâche. Ce type peut être **`void`** si la tâche ne retourne pas de valeur. `T` Impossible d’utiliser le **`const`** modificateur. En règle générale, un objet `task_completion_event` est fourni à un thread ou une tâche qui le signale quand sa valeur devient disponible. En même temps, une ou plusieurs tâches sont définies en tant qu’écouteurs de cet événement. Quand l’événement est défini, les tâches de l’écouteur s’achèvent et leurs continuations sont planifiées pour s’exécuter.
 
 Pour obtenir un exemple qui utilise `task_completion_event` pour implémenter une tâche qui se termine après un certain délai, consultez [Comment : créer une tâche qui se termine après un certain délai](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
 
-## <a name="task-groups"></a><a name="task-groups"></a>Groupes de tâches
+## <a name="task-groups"></a><a name="task-groups"></a> Groupes de tâches
 
 Un *groupe de tâches* organise une collection de tâches. Les groupes de tâches transmettent des tâches vers une file d'attente de vol de travail. Le planificateur supprime les tâches de cette file d’attente et les exécute sur les ressources informatiques disponibles. Après avoir ajouté des tâches à un groupe de tâches, vous pouvez attendre que toutes les tâches se terminent ou annuler celles qui n’ont pas encore commencé.
 
@@ -263,7 +264,7 @@ Les groupes de tâches prennent en charge le concept d’annulation. L’annulat
 
 Le runtime fournit également un modèle de gestion des exceptions qui vous permet de lever une exception à partir d'une tâche et de gérer cette exception quand vous attendez que le groupe de tâches associé se termine. Pour plus d’informations sur ce modèle de gestion des exceptions, consultez [gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-## <a name="comparing-task_group-to-structured_task_group"></a><a name="comparing-groups"></a>Comparaison de task_group à structured_task_group
+## <a name="comparing-task_group-to-structured_task_group"></a><a name="comparing-groups"></a> Comparaison de task_group à structured_task_group
 
 Bien que nous vous recommandions d'utiliser `task_group` ou `parallel_invoke` au lieu de la classe `structured_task_group`, dans certains cas, vous pouvez utiliser `structured_task_group`, par exemple, quand vous écrivez un algorithme parallèle qui effectue un nombre variable de tâches ou qui requiert la prise en charge de l'annulation. Cette section explique les différences entre les classes `task_group` et `structured_task_group`.
 
@@ -301,7 +302,7 @@ Message from task: 42
 
 Pour obtenir des exemples complets qui montrent comment utiliser l' `parallel_invoke` algorithme, consultez [Comment : utiliser Parallel_invoke pour écrire une routine de tri parallèle](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) et [Comment : utiliser Parallel_invoke pour exécuter des opérations parallèles](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Pour obtenir un exemple complet qui utilise la `task_group` classe pour implémenter des futures asynchrones, consultez [procédure pas à pas : implémentation de futures](../../parallel/concrt/walkthrough-implementing-futures.md).
 
-## <a name="robust-programming"></a><a name="robust"></a>Programmation robuste
+## <a name="robust-programming"></a><a name="robust"></a> Programmation robuste
 
 Assurez-vous de bien comprendre le rôle de l’annulation et la gestion des exceptions quand vous utilisez des tâches, des groupes de tâches et des algorithmes parallèles. Par exemple, dans une arborescence de travail parallèle, une tâche qui est annulée empêche les tâches enfants de s'exécuter. Des problèmes peuvent alors survenir si l'une des tâches enfants effectue une opération importante pour votre application, comme la libération d'une ressource. De plus, si une tâche enfant lève une exception, cette exception risque de se propager via un destructeur d'objet et d'entraîner un comportement indéfini dans votre application. Pour obtenir un exemple qui illustre ces points, consultez la section [comprendre comment l’annulation et la gestion des exceptions affectent la destruction d’objets](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) du document meilleures pratiques de la bibliothèque de modèles parallèles. Pour plus d’informations sur les modèles d’annulation et de gestion des exceptions dans la bibliothèque PPL, consultez la page relative à l' [annulation](../../parallel/concrt/cancellation-in-the-ppl.md) et à la [gestion des exceptions](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 

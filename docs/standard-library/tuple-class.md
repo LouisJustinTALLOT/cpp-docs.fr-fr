@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Tuple'
 title: tuple, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 04fd3ec6ce3363d118174025823279a80dd00f0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9beb3f263fa516d7d4096c404c135deffde6fc31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169020"
 ---
 # <a name="tuple-class"></a>tuple, classe
 
@@ -116,7 +117,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a> opérateur =
 
 Assigne un objet `tuple`.
 
@@ -198,7 +199,7 @@ int main()
 x 4
 ```
 
-## <a name="swap"></a><a name="tuple_swap"></a>échange
+## <a name="swap"></a><a name="tuple_swap"></a> échange
 
 Échange les éléments de deux tuples.
 
@@ -210,7 +211,7 @@ template <class... Types>
 ### <a name="parameters"></a>Paramètres
 
 *gauche*\
-Tuple dont les éléments doivent être échangés avec ceux du *droit*de Tuple.
+Tuple dont les éléments doivent être échangés avec ceux du *droit* de Tuple.
 
 *Oui*\
 Tuple dont les éléments doivent être échangés avec ceux du Tuple *restant*.
@@ -219,7 +220,7 @@ Tuple dont les éléments doivent être échangés avec ceux du Tuple *restant*.
 
 La fonction exécute `left.swap(right)`.
 
-## <a name="tuple"></a><a name="tuple"></a>passent
+## <a name="tuple"></a><a name="tuple"></a> passent
 
 Construit un objet `tuple`.
 
