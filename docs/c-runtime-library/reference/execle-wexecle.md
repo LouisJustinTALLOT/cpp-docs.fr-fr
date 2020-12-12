@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _execle, _wexecle'
 title: _execle, _wexecle
 ms.date: 11/04/2016
 api_name:
@@ -30,19 +31,19 @@ helpviewer_keywords:
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-ms.openlocfilehash: 3480b2220c71984dcc30cec54d00deac1f4dfbc7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 28e05222d0ee91f44f96717056117a67afe5c0b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304894"
 ---
 # <a name="_execle-_wexecle"></a>_execle, _wexecle
 
 Charge et exécute les nouveaux processus enfant.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,7 +75,7 @@ Liste des pointeurs désignant les paramètres.
 *envp*<br/>
 Tableau de pointeurs vers les paramètres d'environnement.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de-1 indique une erreur, auquel cas la variable globale **errno** est définie.
 
@@ -96,14 +97,14 @@ Chacune de ces fonctions charge et exécute un nouveau processus, passe chaque a
 
 Les fonctions **_execle** valident leurs paramètres. Si *CmdName* ou *arg0* est un pointeur null ou une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1. Aucun nouveau processus n'est lancé.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
 |**_execle**|\<process.h>|\<errno.h>|
 |**_wexecle**|\<process.h> ou \<wchar.h>|\<errno.h>|
 
-Pour plus d'informations, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -112,10 +113,10 @@ Consultez l’exemple dans [_exec, _wexec, fonctions](../../c-runtime-library/ex
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [abort](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

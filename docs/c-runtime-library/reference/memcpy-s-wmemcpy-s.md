@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : memcpy_s, wmemcpy_s'
 title: memcpy_s, wmemcpy_s
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77c71e594d9a3853438987e85e43700d1f467718
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304738"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -73,7 +74,7 @@ Mémoire tampon à partir de laquelle effectuer la copie.
 *count*<br/>
 Nombre de caractères à copier.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
@@ -82,11 +83,11 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 |*dest*|*destSize*|*src*|*count*|Valeur retournée|Contenu de *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
 |n'importe laquelle|n'importe laquelle|n'importe laquelle|0|0|Non modifiée|
-|**NUL**|n'importe laquelle|n'importe laquelle|Différent de zéro|**EINVAL**|Non modifiée|
-|n'importe laquelle|n'importe laquelle|**NUL**|Différent de zéro|**EINVAL**|*dest* est mis à zéro|
-|n'importe laquelle|< *count*|n'importe laquelle|Différent de zéro|**ERANGE**|*dest* est mis à zéro|
+|**NULL**|n'importe laquelle|n'importe laquelle|Différent de zéro|**EINVAL**|Non modifiée|
+|n'importe laquelle|n'importe laquelle|**NULL**|Différent de zéro|**EINVAL**|*dest* est mis à zéro|
+|n'importe laquelle|< *saut*|n'importe laquelle|Différent de zéro|**ERANGE**|*dest* est mis à zéro|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **memcpy_s** copie le *nombre* d’octets de *src* vers *dest*; **wmemcpy_s** copie le *nombre* de caractères larges (deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy_s** n’est pas défini. Utilisez **memmove_s** pour gérer les régions qui se chevauchent.
 
