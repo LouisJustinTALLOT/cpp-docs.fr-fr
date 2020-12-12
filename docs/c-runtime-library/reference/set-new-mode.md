@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _set_new_mode'
 title: _set_new_mode
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: aa21854f6a8c4b58a510b16e824449a53b91f329
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 233ab9cd4c74eaeb413d7c299620c29a52c41298
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313994"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
@@ -51,7 +52,7 @@ int _set_new_mode( int newhandlermode );
 *newhandlermode*<br/>
 Nouveau mode de gestionnaire pour **malloc**; la valeur valide est 0 ou 1.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le mode de gestionnaire précédent défini pour **malloc**. Une valeur de retour de 1 indique que, en cas d’échec d’allocation de mémoire, **malloc** a précédemment appelé la nouvelle routine de gestionnaire ; une valeur de retour de 0 indique qu’elle ne l’a pas fait. Si l’argument *newhandlermode* n’est pas égal à 0 ou 1, retourne-1.
 
@@ -81,7 +82,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[Gratuit](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>
 [_query_new_mode](query-new-mode.md)<br/>

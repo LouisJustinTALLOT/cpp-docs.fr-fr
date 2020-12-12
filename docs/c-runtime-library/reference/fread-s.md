@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fread_s'
 title: fread_s
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 340d8188deb34166b1bea58cfc4fe7985cdc5e05
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 311184fc871e138675e2447b3f3ccdf2f7529325
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919464"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314072"
 ---
 # <a name="fread_s"></a>fread_s
 
@@ -50,7 +51,7 @@ size_t fread_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage des données.
 
 *Tampon*<br/>
@@ -65,13 +66,13 @@ Nombre maximal d’éléments à lire.
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **fread_s** retourne le nombre d’éléments (entiers) qui ont été lus dans la mémoire tampon, ce qui peut être inférieur à *Count* si une erreur de lecture ou la fin du fichier est rencontrée avant que le *nombre* soit atteint. Utilisez la fonction **feof** ou **ferror** pour distinguer une erreur d’une condition de fin de fichier. Si la *taille* ou le *nombre* est égal à 0, **fread_s** retourne 0 et le contenu de la mémoire tampon n’est pas modifié. Si *Stream* ou *buffer* est un pointeur null, **fread_s** appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne 0.
 
 Pour plus d’informations sur les codes d’erreur, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **fread_s** lit jusqu’à *compter le nombre* d’éléments d' *éléments d’élément* dans le *flux* d’entrée et les stocke dans la *mémoire tampon*.  Le pointeur de fichier associé au *flux* (le cas échéant) est augmenté du nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, les paires retour chariot-saut de ligne sont remplacées par des caractères de saut de ligne simples. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
 
@@ -81,7 +82,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 

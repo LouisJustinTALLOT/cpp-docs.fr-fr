@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : gratuit'
 title: gratuit
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-ms.openlocfilehash: 0e0a53dd9d24634442c8dd456e4f9d38f742e292
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 731bd1ea6cf3bfe56bf71ee762fb3477346ddf13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314020"
 ---
 # <a name="free"></a>gratuit
 
@@ -51,9 +52,9 @@ void free(
 *memblock*<br/>
 Bloc mémoire précédemment alloué à libérer.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **Free libère** un bloc de mémoire (*memblock*) qui a été précédemment alloué par un appel à **calloc**, **malloc**ou **realloc**. Le nombre d’octets libérés est équivalent au nombre d’octets demandés quand le bloc a été alloué (ou réalloué, dans le cas de **realloc**). Si *memblock* a la **valeur null**, le pointeur est ignoré et la fonction **Free** retourne immédiatement la valeur. Toute tentative de libération d’un pointeur non valide (un pointeur vers un bloc de mémoire qui n’a pas été alloué par **calloc**, **malloc**ou **realloc**) peut affecter les demandes d’allocation ultérieures et provoquer des erreurs.
+La fonction **Free libère** un bloc de mémoire (*memblock*) qui a été précédemment alloué par un appel à **calloc**, **malloc** ou **realloc**. Le nombre d’octets libérés est équivalent au nombre d’octets demandés quand le bloc a été alloué (ou réalloué, dans le cas de **realloc**). Si *memblock* a la **valeur null**, le pointeur est ignoré et la fonction **Free** retourne immédiatement la valeur. Toute tentative de libération d’un pointeur non valide (un pointeur vers un bloc de mémoire qui n’a pas été alloué par **calloc**, **malloc** ou **realloc**) peut affecter les demandes d’allocation ultérieures et provoquer des erreurs.
 
 Si une erreur se produit lors de la libération de la mémoire, **errno** est défini avec les informations du système d’exploitation sur la nature de la défaillance. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -61,7 +62,7 @@ Une fois qu’un bloc de mémoire a été libéré, [_heapmin](heapmin.md) rédu
 
 Lorsque l’application est liée à une version de débogage des bibliothèques Runtime C, la résolution **gratuite** est résolue en [_free_dbg](free-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**Free** est marqué `__declspec(noalias)`, ce qui signifie que la fonction ne peut pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
+**Free** est marqué `__declspec(noalias)` , ce qui signifie que la fonction ne peut pas modifier les variables globales. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md).
 
 Pour libérer de la mémoire allouée avec [_malloca](malloca.md), utilisez [_freea](freea.md).
 
@@ -69,13 +70,13 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
-|**Gratuit**|\<stdlib.h> et \<malloc.h>|
+|**free**|\<stdlib.h> et \<malloc.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [malloc](malloc.md).
 

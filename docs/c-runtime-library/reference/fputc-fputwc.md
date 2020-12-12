@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fputc, fputwc'
 title: fputc, fputwc
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: 90091bff6a8ee3ced050c359ed540f45afe74f6b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 85958ce10bd70a13d246be70890d552b7ffdcd3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314176"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -60,19 +61,19 @@ wint_t fputwc(
 
 ### <a name="parameters"></a>Paramètres
 
-*secteur*<br/>
+*c*<br/>
 Caractère à écrire.
 
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne le caractère écrit. Pour **fputc**, une valeur de retour de **EOF** indique une erreur. Pour **fputwc**, une valeur de retour de **WEOF** indique une erreur. Si *Stream* a la **valeur null**, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, elles retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
 Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Chacune de ces fonctions écrit le caractère unique *c* dans un fichier à l’emplacement indiqué par l’indicateur de position de fichier associé (Si défini) et avance l’indicateur comme il convient. Dans le cas de **fputc** et de **fputwc**, le fichier est associé au *flux*. Si le fichier ne peut pas prendre en charge les demandes de positionnement ou a été ouvert en mode ajout, le caractère est ajouté à la fin du flux.
 
@@ -82,7 +83,7 @@ Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles 
 
 Voici une série de notes spécifiques aux routines.
 
-|Routine|Notes |
+|Routine|Notes|
 |-------------|-------------|
 |**fputc**|Équivalent à **putc**, mais implémenté uniquement comme une fonction, plutôt que comme une fonction et une macro.|
 |**fputwc**|Version à caractères larges de **fputc**. Écrit *c* sous la forme d’un caractère multioctet ou d’un caractère élargi selon que le *flux* est ouvert en mode texte ou binaire.|
@@ -97,12 +98,12 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console (**stdin**, **stdout**et **stderr**) doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console (**stdin**, **stdout** et **stderr**) doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

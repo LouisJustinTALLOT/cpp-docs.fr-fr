@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : opérateurs de multiplication et opérateur modulo'
 title: Opérateurs de multiplication et opérateur modulo
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: c277c93640201de69a4cb29060bc5191aa91629c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e3e3e3823abb255922bf31be90b4a116fb100efe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313864"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Opérateurs de multiplication et opérateur modulo
 
@@ -72,7 +73,7 @@ Dans Microsoft C++, le résultat d'une expression de modulo est toujours le mêm
 
 Si la division calculée de deux entiers est incorrecte et qu'un seul opérande est négatif, le résultat est le plus grand entier (en amplitude, sans tenir compte du signe) qui est inférieur à la valeur exacte que l'opérateur de division produirait. Par exemple, la valeur calculée de-11/3 est-3,666666666. Le résultat de cette division intégrale est-3.
 
-La relation entre les opérateurs de multiplication est donnée par l’identité (*E1*  /  *E2*) \* *E2*  +  *E1 E1*  %  *e2*  ==  *E1*.
+La relation entre les opérateurs de multiplication est donnée par l’identité (*E1*  /  *E2*) \* *E2*  +  *E1 E1*  %    ==  *E1*.
 
 ## <a name="example"></a>Exemple
 

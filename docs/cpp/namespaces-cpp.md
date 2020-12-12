@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : espaces de noms (C++)'
 title: Espaces de noms (C++)
 ms.date: 08/30/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-ms.openlocfilehash: 234df334a8c385859440175cb9a1aab5b2e26ead
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a655b5e772d16df34e64c5e4808ce68de64f49f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227294"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313760"
 ---
 # <a name="namespaces-c"></a>Espaces de noms (C++)
 
@@ -58,7 +59,7 @@ mgr.DoSomething();
 Func(mgr);
 ```
 
-## <a name="using-directives"></a><a id="using_directives"></a>directives using
+## <a name="using-directives"></a><a id="using_directives"></a> directives using
 
 La **`using`** directive autorise l’utilisation de tous les noms dans un **`namespace`** sans le *nom d’espace de noms* comme qualificateur explicite. Utilisez une directive using dans un fichier d’implémentation (par exemple, *. cpp) si vous utilisez plusieurs identificateurs différents dans un espace de noms ; Si vous utilisez uniquement un ou deux identificateurs, envisagez d’utiliser une déclaration using pour placer ces identificateurs uniquement dans la portée et non dans tous les identificateurs de l’espace de noms. Si une variable locale a le même nom qu'une variable d'espace de noms, la variable d'espace de noms est masquée. Le fait qu'une variable d'espace de noms porte le même nom qu'une variable globale est une erreur.
 
@@ -241,7 +242,7 @@ namespace Contoso
 }
 ```
 
-## <a name="namespace-aliases"></a><a id="namespace_aliases"></a>Alias d’espace de noms
+## <a name="namespace-aliases"></a><a id="namespace_aliases"></a> Alias d’espace de noms
 
 Les noms des espaces de noms doivent être uniques, ce qui signifie qu'ils ne doivent pas être trop courts. Si la longueur d’un nom rend le code difficile à lire, ou s’il est fastidieux de taper un fichier d’en-tête où les directives using ne peuvent pas être utilisées, vous pouvez créer un alias d’espace de noms qui sert d’abréviation pour le nom réel. Par exemple :
 

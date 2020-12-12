@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Naked (C++)'
 title: naked (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], naked
 - naked __declspec keyword
 ms.assetid: 69723241-05e1-439b-868e-20a83a16ab6d
-ms.openlocfilehash: cff2455608966886e9c5b07039dff439538caefe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f416f116d7d2a3179dc43545f1302fcd9c7d101
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313825"
 ---
 # <a name="naked-c"></a>naked (C++)
 

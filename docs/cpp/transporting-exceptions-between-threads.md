@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : le transport d’exceptions entre les threads'
 title: Transport des exceptions entre les threads
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8b62937c95c755304ab5766185168fad618a53aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313669"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Transport des exceptions entre les threads
 
@@ -88,7 +89,7 @@ Seule la combinaison suivante des options du compilateur et des instructions de 
 
 - L’option de compilateur **/EHa** et l' **`catch`** instruction peuvent transporter des exceptions SEH et C++.
 
-- Les options de compilateur **/EHa**, **/EHS**et **/EHsc** et l' **`catch`** instruction peuvent transporter des exceptions C++.
+- Les options de compilateur **/EHa**, **/EHS** et **/EHsc** et l' **`catch`** instruction peuvent transporter des exceptions C++.
 
 - L’option du compilateur **/CLR** et l' **`catch`** instruction peuvent transporter des exceptions C++. L’option du compilateur **/CLR** implique la spécification de l’option **/EHa** . Notez que le compilateur ne prend pas en charge le transport des exceptions managées. Cela est dû au fait que les exceptions managées, dérivées de la [classe System. exception](../standard-library/exception-class.md), sont déjà des objets que vous pouvez déplacer entre les threads à l’aide des fonctionnalités du Common Language Runtime.
 

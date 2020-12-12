@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : fread'
 title: fread
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: ec5af25070e253f6c04d1aab13404306251ed716
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 131dacd296d4e710ea1b91d9a8578ef06b76a341
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314046"
 ---
 # <a name="fread"></a>fread
 
@@ -53,7 +54,7 @@ size_t fread(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage des données.
 
 *size*<br/>
@@ -65,17 +66,17 @@ Nombre maximal d’éléments à lire.
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **fread** retourne le nombre d’éléments complets réellement lus, qui peut être inférieur à *Count* si une erreur se produit ou si la fin du fichier est rencontrée avant d’atteindre le *nombre*. Utilisez la fonction **feof** ou **ferror** pour distinguer une erreur de lecture d’une condition de fin de fichier. Si la *taille* ou le *nombre* est égal à 0, **fread** retourne 0 et le contenu de la mémoire tampon n’est pas modifié. Si *Stream* ou *buffer* est un pointeur null, **fread** appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne 0.
 
-Pour plus d’informations sur ces codes d’erreur [ \_, consultez doserrno \_, errno, sys\_errlist et \_sys\_nErr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Pour plus d’informations sur ces codes d’erreur [ \_ , consultez doserrno, errno, \_ sys \_ errlist et \_ sys \_ nErr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **fread** lit le *nombre* d’éléments de *taille* octets à partir du *flux* d’entrée et les stocke dans la *mémoire tampon*. Le pointeur de fichier associé au *flux* (le cas échéant) est augmenté du nombre d’octets réellement lus. Si le flux donné est ouvert en [mode texte](../../c-runtime-library/text-and-binary-mode-file-i-o.md), les nouvelles lignes de style Windows sont converties en nouvelles lignes de style UNIX. Autrement dit, les paires CRLF (retour chariot-saut de ligne) sont remplacées par des caractères de saut de ligne unique (LF). Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
 
-En cas d’utilisation sur un flux en mode texte, si la quantité de données demandées (autrement dit, le *nombre*de *tailles* \* ) est supérieure ou égale à la taille de la mémoire tampon du **fichier** \* interne (par défaut, il s’agit de 4096 octets, configurable à l’aide de [setvbuf](../../c-runtime-library/reference/setvbuf.md)), les données de flux sont copiées directement dans la mémoire tampon fournie par l’utilisateur, et la conversion Étant donné que les données converties peuvent être plus courtes que les données de flux copiées dans la mémoire tampon, les données passées dans la *mémoire tampon*\[*return_value* \* *taille*] (où *return_value* est la valeur de retour de **fread**) peuvent contenir des données non converties du fichier. Pour cette raison, nous vous recommandons d’arrêter les données de type caractère au niveau de la *mémoire tampon*\[*return_value* \* *taille*] si l’objectif de la mémoire tampon est d’agir en tant que chaîne de style C. Pour plus d’informations sur les effets du mode texte et du mode binaire, consultez [fopen](fopen-wfopen.md) .
+En cas d’utilisation sur un flux en mode texte, si la quantité de données demandées (autrement dit, le nombre de *tailles* \* ) est supérieure ou égale à la taille de la mémoire tampon du **fichier** interne \* (par défaut, il s’agit de 4096 octets, configurable à l’aide de [setvbuf](../../c-runtime-library/reference/setvbuf.md)), les données de flux sont copiées directement dans la mémoire tampon fournie par l’utilisateur, et la conversion Étant donné que les données converties peuvent être plus courtes que les données de flux copiées dans la mémoire tampon, les données passées dans la *mémoire tampon* \[ *return_value* \* *taille*] (où *return_value* est la valeur de retour de **fread**) peuvent contenir des données non converties du fichier. Pour cette raison, nous vous recommandons d’arrêter les données de type caractère au niveau de la *mémoire tampon* \[ *return_value* \* *taille*] si l’objectif de la mémoire tampon est d’agir en tant que chaîne de style C. Pour plus d’informations sur les effets du mode texte et du mode binaire, consultez [fopen](fopen-wfopen.md) .
 
 Cette fonction verrouille les autres threads. Si vous avez besoin d’une version sans verrouillage, utilisez **_fread_nolock**.
 
@@ -83,7 +84,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**fread**|\<stdio.h>|
 

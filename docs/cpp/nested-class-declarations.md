@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les déclarations de classes imbriquées
 title: Déclarations de classes imbriquées
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 672156e65e223be45c91558ed91065859566a8b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8247a969be59cb35752f141ea281a271de24f87b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227281"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313682"
 ---
 # <a name="nested-class-declarations"></a>Déclarations de classes imbriquées
 
@@ -54,7 +55,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput`et `BufferedIO::BufferedOutput` sont déclarées dans `BufferedIO` . Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`. Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.
+`BufferedIO::BufferedInput` et `BufferedIO::BufferedOutput` sont déclarées dans `BufferedIO` . Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`. Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.
 
 Les classes imbriquées ne peuvent utiliser directement les noms, les noms de types, les noms des membres statiques et les énumérateurs qu'à partir de la classe englobante. Pour utiliser des noms d'autres membres de classe, vous devez utiliser des pointeurs, les références ou des noms d'objet.
 

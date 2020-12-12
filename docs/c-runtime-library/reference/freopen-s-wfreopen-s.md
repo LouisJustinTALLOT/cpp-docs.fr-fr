@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : freopen_s, _wfreopen_s'
 title: freopen_s, _wfreopen_s
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 9ccd2f52f8d746c3e555c9ad04fc6ae07c53a665
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cbb10582128073501433a1a12c59e195bec011d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915839"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314007"
 ---
 # <a name="freopen_s-_wfreopen_s"></a>freopen_s, _wfreopen_s
 
@@ -77,15 +78,15 @@ Type d'accès autorisé.
 *train*<br/>
 Pointeur désignant la structure **FILE**.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Chacune de ces fonctions retourne un code d'erreur. Si une erreur se produit, le fichier d'origine est fermé.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **freopen_s** ferme le fichier actuellement associé au *flux* et réaffecte le *flux* au fichier spécifié par le *chemin d’accès*. **_wfreopen_s** est une version à caractères larges de **_freopen_s**; les arguments *path* et *mode* de **_wfreopen_s** sont des chaînes à caractères larges. dans le cas contraire, **_wfreopen_s** et **_freopen_s** se comportent de la même façon.
 
-Si l’un *des pFile*, *path*, *mode*ou *Stream* a la **valeur null**, ou si *path* est une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
+Si l’un *des pFile*, *path*, *mode* ou *Stream* a la **valeur null**, ou si *path* est une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -95,9 +96,9 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
 
-**freopen_s** est généralement utilisé pour rediriger les fichiers **stdin**, **stdout**et **stderr** des fichiers préalablement ouverts vers des fichiers spécifiés par l’utilisateur. Le nouveau fichier associé à *Stream* est ouvert en *mode*, qui est une chaîne de caractères spécifiant le type d’accès demandé pour le fichier, comme suit :
+**freopen_s** est généralement utilisé pour rediriger les fichiers **stdin**, **stdout** et **stderr** des fichiers préalablement ouverts vers des fichiers spécifiés par l’utilisateur. Le nouveau fichier associé à *Stream* est ouvert en *mode*, qui est une chaîne de caractères spécifiant le type d’accès demandé pour le fichier, comme suit :
 
-|*mode*|Accès|
+|*mode*|Access|
 |-|-|
 | **r** | Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, l’appel de **freopen_s** échoue. |
 | **s** | Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit. |
@@ -117,7 +118,7 @@ Quand le type d’accès **"r +"**, **"w +"** ou **"a +"** est spécifié, la le
 |modificateur de *mode*|Mode de traduction|
 |-|-|
 | **t** | Ouvrir en mode texte (traduit). |
-| **p** | Ouvrir en mode binaire (non traduit); les traductions qui impliquent des caractères de retour chariot et de saut de ligne sont supprimées. |
+| **b** | Ouvrir en mode binaire (non traduit); les traductions qui impliquent des caractères de retour chariot et de saut de ligne sont supprimées. |
 
 En mode texte (traduit), les combinaisons retour chariot-saut de ligne sont traduites en caractères de saut de ligne unique (LF) à l’entrée ; Les caractères de saut de ligne sont traduits en combinaisons CR-LF en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture ou pour l’écriture et la lecture avec **« a + »**, la bibliothèque Runtime recherche un Ctrl + Z à la fin du fichier et le supprime, si possible. Cela est dû au fait que l’utilisation de [fseek](fseek-fseeki64.md) et [ftell](ftell-ftelli64.md) pour se déplacer dans un fichier peut entraîner un comportement incorrect de [fseek](fseek-fseeki64.md) vers la fin du fichier. L’option **t** est une extension Microsoft qui ne doit pas être utilisée là où la portabilité ANSI est souhaitée.
 
@@ -127,12 +128,12 @@ Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**freopen_s**|\<stdio.h>|
 |**_wfreopen_s**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout** et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

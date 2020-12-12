@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur les éléments suivants : constructeurs de déplacement et opérateurs d’assignation de déplacement (C++)'
 title: 'Comment : définir des constructeurs de déplacement et des opérateurs d’assignation de déplacement (C++)'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: e57f67eeca93572b26ee03033cbe4dcf90431f78
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 9430f4970a0f911000c31b142ed177aee7dff2d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313968"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructeurs de déplacement et opérateurs d'assignation de déplacement (C++)
 
