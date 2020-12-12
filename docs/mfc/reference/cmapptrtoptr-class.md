@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CMapPtrToPtr'
 title: CMapPtrToPtr, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapPtrToPtr [MFC], RemoveKey
 - CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: f8fc69007d35927daaa7128de1bc0ceb0b44c746
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3cc561f7420e9c3c7bc2b2f6460536a80d7ef7cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223042"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259537"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr, classe
 
@@ -93,7 +94,7 @@ par exemple, se traduit par
 
 ## <a name="remarks"></a>Notes
 
-`CMapPtrToPtr`incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un `CDumpContext` objet. Si vous avez besoin d’un vidage d’éléments cartographiques individuels (valeurs de pointeur), vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
+`CMapPtrToPtr` incorpore la macro IMPLEMENT_DYNAMIC pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un `CDumpContext` objet. Si vous avez besoin d’un vidage d’éléments cartographiques individuels (valeurs de pointeur), vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1.
 
 Les mappages de pointeur vers pointeur ne peuvent pas être sérialisés.
 
