@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les st_mode constantes de champ de _stat structure
 title: Constantes du champ st_mode de la structure _stat
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,14 +36,14 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-ms.openlocfilehash: ff2b6ac806b774ae3fe80f9b3cf4b3d2e82a2a9c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: bd304119c705196981342caf5a257cc113fed923
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744690"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235734"
 ---
-# <a name="stat-structure-stmode-field-constants"></a>Constantes du champ st_mode de la structure _stat
+# <a name="_stat-structure-st_mode-field-constants"></a>Constantes du champ st_mode de la structure _stat
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,7 +51,7 @@ ms.locfileid: "57744690"
 #include <sys/stat.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Ces constantes sont utilisées pour indiquer le type de fichier dans le champ **st_mode** de [_stat structure](../c-runtime-library/standard-types.md).
 
@@ -61,7 +62,7 @@ Les constantes de masque de bits sont décrites ci-dessous :
 |`_S_IFMT`|Masque de type de fichier|
 |`_S_IFDIR`|Répertoire|
 |`_S_IFCHR`|Caractère spécial (indique un appareil si défini)|
-|`_S_IFREG`|Normale|
+|`_S_IFREG`|Normal|
 |`_S_IREAD`|Autorisation de lecture, propriétaire|
 |`_S_IWRITE`|Autorisation d’écriture, propriétaire|
 |`_S_IEXEC`|Exécuter/Rechercher autorisation, propriétaire|

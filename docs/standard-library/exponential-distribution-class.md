@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe exponential_distribution'
 title: exponential_distribution, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: dbb8425047d9076343922dfbcf5c6162b6054c3b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f89976cf4da829f5778070079691b20371b0cd67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232445"
 ---
 # <a name="exponential_distribution-class"></a>exponential_distribution, classe
 
@@ -163,7 +164,7 @@ Distribution for 10 samples:
     10: 2.1201210996
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<random>
 

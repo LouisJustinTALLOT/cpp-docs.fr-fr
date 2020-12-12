@@ -1,5 +1,6 @@
 ---
-title: Bibliothèque C++, conventions
+description: 'En savoir plus sur : conventions de la bibliothèque C++'
+title: Conventions de la bibliothèque C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ Standard Library, conventions
@@ -11,20 +12,20 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: d92636a7ed63e09396ff68749560cde9d1f8639c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4426996b7420c056a964378655c72c43b99fcf97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755705"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233368"
 ---
-# <a name="c-library-conventions"></a>Bibliothèque C++, conventions
+# <a name="c-library-conventions"></a>Conventions de la bibliothèque C++
 
 La bibliothèque C++ obéit à une grande partie des conventions de la bibliothèque C Standard, plus quelques autres décrites ici.
 
 Une implémentation a une certaine latitude dans la façon dont elle déclare des types et des fonctions dans la bibliothèque C++ :
 
-- Les noms des fonctions de la bibliothèque C standard peuvent avoir une liaisonC++extern « » ou extern «C ». Incluez l’en-tête C Standard approprié au lieu de déclarer une entité de bibliothèque en ligne.
+- Les noms des fonctions de la bibliothèque C standard peuvent avoir une liaison extern « C++ » ou extern « C ». Incluez l’en-tête C Standard approprié au lieu de déclarer une entité de bibliothèque en ligne.
 
 - Un nom de fonction membre dans une classe de bibliothèque peut avoir des signatures de fonction supplémentaires par rapport à celles qui sont répertoriées dans ce document. Vous pouvez être certain qu’un appel de fonction décrit ici se comporte comme prévu, mais vous ne pouvez pas prendre de manière fiable l’adresse d’une fonction membre de bibliothèque. (Le type peut ne pas être celui que vous attendez.)
 
@@ -51,4 +52,4 @@ En revanche, il existe certaines restrictions :
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

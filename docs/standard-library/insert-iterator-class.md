@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe insert_iterator'
 title: insert_iterator, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: 530168f5e259934f7d614b305e6ac1092ba68f4d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9089e0ab592ed6c8289570cc422aa6183444d55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231574"
 ---
 # <a name="insert_iterator-class"></a>insert_iterator, classe
 
@@ -60,11 +61,11 @@ Le conteneur de type `Container` doit satisfaire les exigences d’un conteneur 
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête**:\<iterator>
+**En-tête**: \<iterator>
 
 **Espace de noms :** std
 
-## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a>insert_iterator :: container_type
+## <a name="insert_iteratorcontainer_type"></a><a name="container_type"></a> insert_iterator :: container_type
 
 Type qui représente le conteneur dans lequel une insertion générale doit être effectuée.
 
@@ -106,7 +107,7 @@ The list L2 is: ( 40 20 10 ).
 */
 ```
 
-## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a>insert_iterator :: insert_iterator
+## <a name="insert_iteratorinsert_iterator"></a><a name="insert_iterator"></a> insert_iterator :: insert_iterator
 
 Construit un `insert_iterator` qui insère un élément à une position spécifiée dans un conteneur.
 
@@ -172,7 +173,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="insert_iteratoroperator"></a><a name="op_star"></a>insert_iterator :: Operator *
+## <a name="insert_iteratoroperator"></a><a name="op_star"></a> insert_iterator :: Operator *
 
 Supprime la référence à l’itérateur d’insertion retournant l’élément traité.
 
@@ -180,13 +181,13 @@ Supprime la référence à l’itérateur d’insertion retournant l’élément
 insert_iterator<Container>& operator*();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 La fonction membre retourne la valeur de l’élément ciblé.
 
 ### <a name="remarks"></a>Notes
 
-Utilisé pour implémenter la valeur d' ** \* ITER**de l’expression d’itérateur de sortie  =  **value**. Si `Iter` est un itérateur qui traite un élément dans une séquence, la ** \* **  =  **valeur** d’ITER remplace cet élément par la valeur et ne modifie pas le nombre total d’éléments dans la séquence.
+Utilisé pour implémenter la valeur d' **\* ITER** de l’expression d’itérateur de sortie  =  . Si `Iter` est un itérateur qui traite un élément dans une séquence, la **\***  =  **valeur** d’ITER remplace cet élément par la valeur et ne modifie pas le nombre total d’éléments dans la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -232,7 +233,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a>insert_iterator :: Operator + +
+## <a name="insert_iteratoroperator"></a><a name="op_add_add"></a> insert_iterator :: Operator + +
 
 Incrémente le `insert_iterator` à l'emplacement suivant où une valeur peut être stockée.
 
@@ -296,7 +297,7 @@ After the insertions, the vector vec becomes:
 */
 ```
 
-## <a name="insert_iteratoroperator"></a><a name="op_eq"></a>insert_iterator :: Operator =
+## <a name="insert_iteratoroperator"></a><a name="op_eq"></a> insert_iterator :: Operator =
 
 Insère une valeur dans le conteneur et retourne l’itérateur mis à jour pour pointer vers le nouvel élément.
 
@@ -313,7 +314,7 @@ insert_iterator<Container>& operator=(
 *multiples*\
 Valeur à assigner au conteneur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’élément inséré dans le conteneur.
 
@@ -379,7 +380,7 @@ After the insertions, the list L is:
 */
 ```
 
-## <a name="insert_iteratorreference"></a><a name="reference"></a>insert_iterator :: référence
+## <a name="insert_iteratorreference"></a><a name="reference"></a> insert_iterator :: référence
 
 Type qui fournit une référence à un élément dans une séquence contrôlée par le conteneur associé.
 

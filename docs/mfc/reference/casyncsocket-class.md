@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : CAsyncSocket, classe'
 title: CAsyncSocket (classe)
 ms.date: 06/25/2020
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: cac3a95734a60252f241ab3080c05c65a9e04723
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a9b020a93d4d0f279b5b79fa76a9f6b94e4f9f03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234330"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (classe)
 
@@ -174,7 +175,7 @@ Pour plus d’informations, consultez [Windows Sockets : utilisation de la clas
 
 `CAsyncSocket`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** AfxSock. h
 

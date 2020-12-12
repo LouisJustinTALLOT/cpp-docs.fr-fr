@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur les fonctions suivantes : strcoll'
 title: strcoll, fonctions
 ms.date: 11/04/2016
 api_location:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-ms.openlocfilehash: c63a130cee6913006fff2ed5568c41cc4fdeac3c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8a0b146bff2eab8927733923367b0ae49ecea4c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235682"
 ---
 # <a name="strcoll-functions"></a>strcoll, fonctions
 
@@ -42,7 +43,7 @@ Chacune des fonctions `strcoll` et `wcscoll` compare deux chaînes en fonction d
 
 ## <a name="remarks"></a>Notes
 
-Les versions jeu de caractères codés sur un octet (SBCS) de ces fonctions (`strcoll`, `stricoll`, `_strncoll` et `_strnicoll`) comparent `string1` et `string2` conformément au paramètre de catégorie `LC_COLLATE` des paramètres régionaux actuels. Ces fonctions diffèrent des fonctions `strcmp` correspondantes en cela que les fonctions `strcoll` utilisent les informations de page de code de paramètres régionaux qui fournissent des séquences de classement. Pour les comparaisons de chaînes dans les paramètres régionaux dans lesquelles l’ordre du jeu de caractères et celui de l’ordre lexicographique des caractères diffèrent, les fonctions `strcoll` doivent être utilisées à la place des fonctions `strcmp` correspondantes. Pour plus d’informations sur `LC_COLLATE`, consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
+Les versions jeu de caractères codés sur un octet (SBCS) de ces fonctions (`strcoll`, `stricoll`, `_strncoll` et `_strnicoll`) comparent `string1` et `string2` conformément au paramètre de catégorie `LC_COLLATE` des paramètres régionaux actuels. Ces fonctions diffèrent des fonctions `strcmp` correspondantes en cela que les fonctions `strcoll` utilisent les informations de page de code de paramètres régionaux qui fournissent des séquences de classement. Pour les comparaisons de chaînes dans les paramètres régionaux dans lesquelles l’ordre du jeu de caractères et celui de l’ordre lexicographique des caractères diffèrent, les fonctions `strcoll` doivent être utilisées à la place des fonctions `strcmp` correspondantes. Pour plus d’informations sur `LC_COLLATE` , consultez [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
 Pour certaines pages de codes et les jeux de caractères correspondants, l’ordre des caractères dans le jeu de caractères peut différer de l’ordre lexicographique des caractères. Dans les paramètres régionaux « C », ce n’est pas le cas : l’ordre des caractères dans le jeu de caractères ASCII est le même que l’ordre lexicographique des caractères. Cependant, dans certaines pages de code européennes, par exemple, le caractère « a » (valeur 0x61) précède le caractère « ä » (valeur 0xE4) dans le jeu de caractères, alors que d’un point de vue lexicographique, le caractère « ä » précède le caractère « a ». Pour effectuer une comparaison lexicographique dans un cas comme celui-ci, utilisez `strcoll` plutôt que `strcmp`. Vous pouvez aussi utiliser `strxfrm` sur les chaînes d'origine, puis utiliser `strcmp` sur les chaînes résultantes.
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; exception&gt;'
 title: '&lt;exception&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 1533e8238b40f6ca5dc6faaef35a65db9020defd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b4cba2def6416e7bcabb8d769e92c7c7f2af4281
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232523"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
 Définit plusieurs types et fonctions relatifs à la gestion des exceptions. La gestion des exceptions est utilisée dans les situations dans lesquelles le système peut récupérer d'une erreur. Elle permet au contrôle d'être retourné au programme depuis une fonction. L'ajout de la gestion des exceptions a pour but d'augmenter la robustesse du programme et de récupérer d'une erreur de façon appropriée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :**\<exception>
 
@@ -33,7 +34,7 @@ Définit plusieurs types et fonctions relatifs à la gestion des exceptions. La 
 |[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|Type qui décrit un pointeur vers une fonction pouvant être utilisée comme un `terminate_handler`.|
 |[unexpected_handler](../standard-library/exception-typedefs.md#unexpected_handler)|Type qui décrit un pointeur vers une fonction pouvant être utilisée comme un `unexpected_handler`.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe is_copy_constructible'
 title: is_copy_constructible, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_constructible
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
-ms.openlocfilehash: 70de134fa0cb3e9d6b0259135372f37b9c017e92
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0cef349dcfd25652bab133822a047352a7c9371d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231171"
 ---
-# <a name="iscopyconstructible-class"></a>is_copy_constructible, classe
+# <a name="is_copy_constructible-class"></a>is_copy_constructible, classe
 
 Teste si le type a un constructeur de copie.
 
@@ -67,9 +68,9 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

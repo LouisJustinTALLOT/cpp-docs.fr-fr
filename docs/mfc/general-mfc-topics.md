@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : rubriques MFC générales'
 title: Rubriques MFC générales
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: effab556277b3cd9ca072798bea3a77dbde58620
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0e19a205e29297bf6808d6d979b9e27366b3e4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618760"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234356"
 ---
 # <a name="general-mfc-topics"></a>Rubriques MFC générales
 
@@ -29,7 +30,7 @@ L'infrastructure MFC est une approche puissante qui vous permet de vous servir d
 
 [Versions de bibliothèque MFC](mfc-library-versions.md)
 
-[Utilisation des classes pour l’écriture d’applications pour Windows](using-the-classes-to-write-applications-for-windows.md)
+[Utilisation des classes pour écrire des applications pour Windows](using-the-classes-to-write-applications-for-windows.md)
 
 [Génération sur le Framework](building-on-the-framework.md)
 
@@ -45,9 +46,9 @@ L'infrastructure MFC est une approche puissante qui vous permet de vous servir d
 
 [Isolation de la bibliothèque de contrôles communs MFC](isolation-of-the-mfc-common-controls-library.md)
 
-[Configuration requise pour les contrôles communs Windows Vista](build-requirements-for-windows-vista-common-controls.md)
+[Exigences de build pour les contrôles communs Windows Vista](build-requirements-for-windows-vista-common-controls.md)
 
-[Guide pratique pour ajouter la prise en charge du Gestionnaire de redémarrage](how-to-add-restart-manager-support.md)
+[Procédure : ajouter la prise en charge du gestionnaire de redémarrage](how-to-add-restart-manager-support.md)
 
 [Disposition dynamique](dynamic-layout.md)
 
@@ -57,4 +58,4 @@ Pour plus d’informations sur ATL, consultez [Active Template Library référen
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation d'objets fenêtres](working-with-window-objects.md)
+[Utilisation d’objets fenêtres](working-with-window-objects.md)

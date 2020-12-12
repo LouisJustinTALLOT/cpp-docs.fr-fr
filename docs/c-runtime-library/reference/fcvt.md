@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : _fcvt'
 title: _fcvt
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-ms.openlocfilehash: 2ca8a7fcd58e91ffa8982f30117b09af587d96cf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4d2439c586ec28526849e956b1302c444cafa3a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235760"
 ---
 # <a name="_fcvt"></a>_fcvt
 
@@ -66,11 +67,11 @@ Pointeur désignant la position de la virgule décimale stockée.
 *sign*<br/>
 Pointeur désignant l’indicateur de signe stocké.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 **_fcvt** retourne un pointeur vers la chaîne de chiffres, **null** en cas d’erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_fcvt** convertit un nombre à virgule flottante en une chaîne de caractères terminée par le caractère null. Le paramètre de *valeur* est le nombre à virgule flottante à convertir. **_fcvt** stocke les chiffres de *valeur* sous forme de chaîne et ajoute un caractère null (' \ 0 '). Le paramètre *Count* spécifie le nombre de chiffres à stocker après la virgule décimale. Les chiffres excédentaires sont arrondis à la *valeur nombre* d’emplacements. Si le *nombre* de chiffres de précision est inférieur à, la chaîne est remplie de zéros.
 
@@ -78,17 +79,17 @@ Le nombre total de chiffres renvoyés par **_fcvt** ne doit pas dépasser **_CVT
 
 Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de la *valeur* peuvent être obtenus à partir de *Dec* et du signe après l’appel. Le paramètre *Dec* pointe sur une valeur entière ; Cette valeur entière indique la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou zéro indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre *signe* pointe sur un entier indiquant le signe de la *valeur*. L’entier est défini sur 0 si la *valeur* est positive et est définie sur un nombre différent de zéro si la *valeur* est négative.
 
-La différence entre **_ecvt** et **_fcvt** est l’interprétation du paramètre *Count* . **_ecvt** interprète le *nombre comme le* nombre total de chiffres dans la chaîne de sortie, tandis que *count* **_fcvt** interprète le nombre comme le nombre de chiffres après la virgule décimale.
+La différence entre **_ecvt** et **_fcvt** est l’interprétation du paramètre *Count* . **_ecvt** interprète le *nombre comme le* nombre total de chiffres dans la chaîne de sortie, tandis que  **_fcvt** interprète le nombre comme le nombre de chiffres après la virgule décimale.
 
 **_ecvt** et **_fcvt** utilisent une seule mémoire tampon allouée de manière statique pour la conversion. Chaque appel à une de ces routines détruit les résultats de l’appel précédent.
 
-Cette fonction valide ses paramètres. Si *Dec* ou *Sign* est **null**ou si *Count* a la valeur 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la **valeur null** est retournée.
+Cette fonction valide ses paramètres. Si *Dec* ou *Sign* est **null** ou si *Count* a la valeur 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la **valeur null** est retournée.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_fcvt**|\<stdlib.h>|
 

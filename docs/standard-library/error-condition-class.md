@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe error_condition'
 title: error_condition, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - std::error_condition::clear
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
-ms.openlocfilehash: 1708a3f560f60fe3933406a904d95b4d29890a7f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6567a4406271147eadfdc9e9443ba333d931afba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830772"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232679"
 ---
 # <a name="error_condition-class"></a>error_condition, classe
 
@@ -52,7 +53,7 @@ Un objet de type `error_condition` stocke une valeur de code d’erreur et un po
 |-|-|
 |[value_type](#value_type)|Type qui représente la valeur de code d’erreur stockée.|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Fonctions
 
 |Nom|Description|
 |-|-|

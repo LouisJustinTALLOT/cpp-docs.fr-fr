@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur : Container Class :: rend'
 title: Conteneur Class::rend
 ms.date: 11/04/2016
 helpviewer_keywords:
 - rend method
 ms.assetid: 80f3dd04-dd2c-4b52-b0ed-d567ec5d186c
-ms.openlocfilehash: 494099e8d9c96b143e8c9de14a2c7d4f48cfc4a1
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9b2b2bdf71a1ae25e6ee52f45c15720f519008cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233407"
 ---
 # <a name="container-classrend"></a>Conteneur Class::rend
 
 > [!NOTE]
-> Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
+> Cette rubrique se trouve dans la documentation de Microsoft C++ comme un exemple non fonctionnel de conteneurs utilisés dans la bibliothèque standard C++. Pour plus d’informations, consultez [Conteneurs disponibles dans la bibliothèque standard C++](../standard-library/stl-containers.md).
 
 La fonction membre retourne un itérateur inverse qui pointe vers le premier élément de la séquence (ou juste après la fin d’une séquence vide), désignant ainsi la fin de la séquence inverse.
 

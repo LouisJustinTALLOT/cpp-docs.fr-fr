@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : &lt; iOS&gt;'
 title: '&lt;ios&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9ea336c3dc36b6f9afa76d00496965bb860d1be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845482"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231405"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 Définit plusieurs types et fonctions de base pour l'opération d'iostreams. Cet en-tête est généralement inclus pour vous par un autre en-tête iostream ; vous l'incluez rarement directement.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: \<ios>
 
@@ -60,9 +61,9 @@ appelle [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 |[decembre](../standard-library/ios-functions.md#dec)|Indique que les variables de type entier sont affichées en notation de base 10.|
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Configure les indicateurs d'un objet `ios_base` pour utiliser un format d'affichage par défaut pour les valeurs de type float.|
 |[des](../standard-library/ios-functions.md#fixed)|Indique qu'un nombre à virgule flottante est affiché en notation décimale fixe.|
-|[hex](../standard-library/ios-functions.md#hex)|Indique que les variables de type entier sont affichées en notation de base 16.|
+|[séquence](../standard-library/ios-functions.md#hex)|Indique que les variables de type entier sont affichées en notation de base 16.|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
-|[internal](../standard-library/ios-functions.md#internal)|Aligne à gauche le signe d'un nombre et aligne à droite le nombre.|
+|[intérieurs](../standard-library/ios-functions.md#internal)|Aligne à gauche le signe d'un nombre et aligne à droite le nombre.|
 |[gauche](../standard-library/ios-functions.md#left)|Fait en sorte que le texte qui n'est pas aussi large que la largeur de sortie apparaisse dans le flux aligné avec la marge de gauche.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Indique que les variables de type [bool](../cpp/bool-cpp.md) apparaissent comme 1 ou 0 dans le flux.|
 |[noshowbase](../standard-library/ios-functions.md#noshowbase)|Désactive l'indication de la base de notation dans laquelle un nombre est affiché.|

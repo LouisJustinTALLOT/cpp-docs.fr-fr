@@ -1,20 +1,21 @@
 ---
+description: 'En savoir plus sur les fonctions suivantes : &lt; Chrono &gt;'
 title: '&lt;chrono&gt;, fonctions'
 ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::duration_cast
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
-ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 161edeccace243c10a6382d931f5f9387f35790d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234200"
 ---
 # <a name="ltchronogt-functions"></a>&lt;chrono&gt;, fonctions
 
-## <a name="duration_cast"></a>duration_cast
+## <a name="duration_cast"></a><a name="duration_cast"></a> duration_cast
 
 Caste un objet `duration` en un type spécifié.
 
@@ -30,7 +31,7 @@ template <class ToDuration, class Rep, class Period>
 constexpr ToDuration round(const duration<Rep, Period>& d);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet `duration` de type `To` qui représente l’intervalle de temps `Dur`, qui est tronqué s’il doit tenir dans le type cible.
 
@@ -38,7 +39,7 @@ Objet `duration` de type `To` qui représente l’intervalle de temps `Dur`, qui
 
 Si `To` est une instanciation de `duration`, cette fonction ne participe pas à la résolution de surcharge.
 
-## <a name="time_point_cast"></a>time_point_cast
+## <a name="time_point_cast"></a><a name="time_point_cast"></a> time_point_cast
 
 Caste un objet [time_point](../standard-library/time-point-class.md) en type spécifié.
 
@@ -57,7 +58,7 @@ constexpr time_point<Clock, ToDuration>
 round(const time_point<Clock, Duration>& tp);
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Objet `time_point` qui a une durée de type `To`.
 

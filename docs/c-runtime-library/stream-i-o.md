@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : e/s de flux'
 title: E/S de flux
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a787d83390239679ad48c2ca09b41f567a0a8c95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235669"
 ---
 # <a name="stream-io"></a>E/S de flux
 
@@ -57,7 +58,7 @@ Ces fonctions permettent de traiter des données de tailles et de formats diffé
 |[putchar, putwchar](../c-runtime-library/reference/putc-putwc.md)|Écrire un caractère dans **stdout** (versions macro de **fputchar** et **fputwchar**)|
 |[puts, _putws](../c-runtime-library/reference/puts-putws.md)|Écrire une ligne dans le flux|
 |[_putw](../c-runtime-library/reference/putw.md)|Écrire le binaire **`int`** dans le flux|
-|[rewind](../c-runtime-library/reference/rewind.md)|Déplacer la position d'un fichier au début du flux|
+|[Rewind](../c-runtime-library/reference/rewind.md)|Déplacer la position d'un fichier au début du flux|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|Supprimer les fichiers temporaires créés par **tmpfile**|
 |[scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md),[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|Lire les données mises en forme d’un **stdin**|
 |[setbuf](../c-runtime-library/reference/setbuf.md)|Contrôler la mise en mémoire tampon du flux|

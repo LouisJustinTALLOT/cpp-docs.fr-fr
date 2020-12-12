@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : stdin, stdout, stderr'
 title: stdin, stdout, stderr
 ms.date: 10/23/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - standard input stream
 - stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
-ms.openlocfilehash: 5de1ff01282f30ad133f909cb87f5d7c8d521ae5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ba31487c472bd714560e919f45ec9e9aa5acd717
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741952"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235721"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
 
@@ -31,7 +32,7 @@ FILE *stderr;
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Il s’agit des flux standard pour l’entrée, la sortie et la sortie d’erreur.
 
@@ -39,10 +40,10 @@ Par défaut, une entrée standard est en lecture à partir du clavier, tandis qu
 
 Les pointeurs de flux suivants sont disponibles pour accéder aux flux standard :
 
-|Pointeur|Flux|
+|Pointeur|STREAM|
 |-------------|------------|
 |`stdin`|Entrée standard|
-|`stdout`|Objet de flux de sortie standard|
+|`stdout`|Sortie standard|
 |`stderr`|Erreur standard|
 
 Ces pointeurs peuvent être utilisés comme arguments pour fonctions. Certaines fonctions, telles que [getchar](../c-runtime-library/reference/getchar-getwchar.md) et [putchar](../c-runtime-library/reference/putchar-putwchar.md), utilisent `stdin` et `stdout` automatiquement.

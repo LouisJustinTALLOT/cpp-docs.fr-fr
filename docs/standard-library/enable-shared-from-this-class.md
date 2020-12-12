@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe enable_shared_from_this'
 title: enable_shared_from_this, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - enable_shared_from_this class
 - enable_shared_from_this
 ms.assetid: 9237603d-22e2-421f-b070-838ac006baf5
-ms.openlocfilehash: 9b417eabdaf6002724a0fa947dd97dea6f0df0a5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c6103846810bee07000821f4613c8f7979174ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232666"
 ---
 # <a name="enable_shared_from_this-class"></a>enable_shared_from_this, classe
 
@@ -49,7 +50,7 @@ Les constructeurs, le destructeur et l’opérateur d’assignation sont protég
 
 Pour obtenir un exemple d’utilisation, consultez [enable_shared_from_this::shared_from_this](#shared_from_this).
 
-## <a name="shared_from_this"></a><a name="shared_from_this"></a>shared_from_this
+## <a name="shared_from_this"></a><a name="shared_from_this"></a> shared_from_this
 
 Génère un `shared_ptr` qui partage la propriété de l’instance avec les propriétaires `shared_ptr` existants.
 
@@ -96,7 +97,7 @@ int main()
 sp2->val == 3
 ```
 
-## <a name="weak_from_this"></a><a name="weak_from_this"></a>weak_from_this
+## <a name="weak_from_this"></a><a name="weak_from_this"></a> weak_from_this
 
 ```cpp
 weak_ptr<T> weak_from_this() noexcept;

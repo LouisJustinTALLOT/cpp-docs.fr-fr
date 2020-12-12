@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : création d’opérations asynchrones en C++ pour les applications UWP'
 title: Création d’opérations asynchrones en C++ pour les applications UWP
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 0361da761b9b05e75233711df9e826c15aa14e28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2c7ec1a6fc469bf56faa746f11b52547cbf9ac8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234498"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Création d’opérations asynchrones en C++ pour les applications UWP
 
@@ -79,8 +80,8 @@ Le tableau suivant résume les combinaisons qu'il est possible d'utiliser pour d
 
 |Pour créer cette interface Windows Runtime|Retournez ce type à partir de `create_async`|Passez ces types de paramètre à votre fonction de travail pour utiliser un jeton implicite d'annulation|Passez ces types de paramètre à votre fonction de travail pour utiliser un jeton explicite d'annulation|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-|`IAsyncAction`|**`void`** ni`task<void>`|(aucun)|(`cancellation_token`)|
-|`IAsyncActionWithProgress<TProgress>`|**`void`** ni`task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
+|`IAsyncAction`|**`void`** ni `task<void>`|(aucun)|(`cancellation_token`)|
+|`IAsyncActionWithProgress<TProgress>`|**`void`** ni `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 |`IAsyncOperation<TResult>`|`T` ou `task<T>`|(aucun)|(`cancellation_token`)|
 |`IAsyncActionOperationWithProgress<TProgress, TProgress>`|`T` ou `task<T>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 
@@ -90,7 +91,7 @@ L’exemple suivant montre les différentes façons de créer un `IAsyncAction` 
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>Exemple : création d’un composant Windows Runtime C++ et utilisation de celui-ci à partir de C\#
+## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a> Exemple : création d’un composant Windows Runtime C++ et utilisation de celui-ci à partir de C\#
 
 Prenons l’exemple d’une application qui utilise XAML et C# pour définir l’interface utilisateur et un composant Windows Runtime C++ pour exécuter des opérations nécessitant de nombreuses ressources de calcul. Dans cet exemple, le composant C++ calcule les nombres premiers inclus dans un intervalle donné. Pour illustrer les différences entre les quatre Windows Runtime interfaces de tâches asynchrones, démarrez, dans Visual Studio, en créant une **solution vide** et en la nommant `Primes` . Ajoutez ensuite à la solution un projet **Composant Windows Runtime** et nommez-le `PrimesLibrary`. Ajoutez le code suivant au fichier d'en-tête généré en C++ (cet exemple renomme Class1.h en Primes.h). Chaque **`public`** méthode définit l’une des quatre interfaces asynchrones. Les méthodes qui retournent une valeur retournent un objet [Windows :: Foundation : \<int> : Collections :: IVector](/uwp/api/windows.foundation.collections.ivector-1) . Les méthodes qui signalent la progression produisent **`double`** des valeurs qui définissent le pourcentage de travail global terminé.
 
@@ -128,7 +129,7 @@ L’illustration suivante montre l’application `Primes` après la sélection d
 
 Pour obtenir un exemple qui utilise `create_async` pour créer des tâches asynchrones qui peuvent être consommées par d’autres langages, consultez [utilisation de C++ dans l’exemple optimiseur de voyage Bing Maps](/previous-versions/windows/apps/hh699891(v=vs.140)).
 
-## <a name="controlling-the-execution-thread"></a><a name="exethread"></a>Contrôle du thread d’exécution
+## <a name="controlling-the-execution-thread"></a><a name="exethread"></a> Contrôle du thread d’exécution
 
 Le Windows Runtime utilise le modèle de thread COM. Dans ce modèle, les objets sont hébergés dans des cloisonnements différents, selon la façon dont ils gèrent leur synchronisation. Les objets thread-safe sont hébergés dans des multithreads cloisonnés (MTA). Les objets accessibles par un thread unique sont hébergés dans un thread cloisonné (STA).
 
@@ -153,7 +154,7 @@ La section suivante présente une application qui lit un fichier sur le disque d
 > [!IMPORTANT]
 > N'appelez pas [concurrency::task::wait](reference/task-class.md#wait) dans le corps d'une continuation qui s'exécute sur le STA. Sinon, le runtime lève [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) , car cette méthode bloque le thread actuel et peut provoquer le blocage de l'application. Toutefois, vous pouvez appeler la méthode [concurrency::task::get](reference/task-class.md#get) pour recevoir le résultat de la tâche précédente dans une continuation basée sur des tâches.
 
-## <a name="example-controlling-execution-in-a-windows-runtime-app-with-c-and-xaml"></a><a name="example-app"></a>Exemple : contrôle de l’exécution dans une application Windows Runtime avec C++ et XAML
+## <a name="example-controlling-execution-in-a-windows-runtime-app-with-c-and-xaml"></a><a name="example-app"></a> Exemple : contrôle de l’exécution dans une application Windows Runtime avec C++ et XAML
 
 Considérez une application C++ XAML qui lit un fichier sur le disque, recherche les mots les plus courants dans ce fichier, et donne les résultats dans l'interface utilisateur. Pour créer cette application, démarrez, dans Visual Studio, en créant un projet **application vide (Windows universel)** et en le nommant `CommonWords` . Dans votre manifeste d'application, spécifiez la **Bibliothèque de documents** pour permettre à l'application d'accéder au dossier Documents. Ajoutez également le type de fichier texte (.txt) dans la section des déclarations du manifeste d'application. Pour plus d’informations sur les fonctionnalités et les déclarations des applications, consultez [empaquetage, déploiement et interrogation des applications Windows](/windows/win32/appxpkg/appx-portal).
 
