@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur les instructions suivantes : for, instruction (C)'
 title: for, instruction (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-ms.openlocfilehash: 91675fbe15ec6abf5aae4548990d9b4e0703e967
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e20529ccec4f586f8785e122903b22be42e69a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196020"
 ---
 # <a name="for-statement-c"></a>for, instruction (C)
 
@@ -26,7 +27,7 @@ L’exécution d’une **`for`** instruction continue comme suit :
 
 1. *cond-expression* est évaluée (s’il en existe une). Cette expression doit avoir un type arithmétique ou pointeur. Elle est évaluée avant chaque itération. Trois résultats sont possibles :
 
-   - Si *cond-expression* est **`true`** (différent de zéro), l' *instruction* est exécutée, puis *loop-expression, le*cas échéant, est évaluée. *loop-expression* est évaluée à l’issue de chaque itération. Il n'existe aucune restriction sur son type. Les effets secondaires s'exécuteront dans l'ordre. Le processus recommence ensuite avec l’évaluation de *cond-expression*.
+   - Si *cond-expression* est **`true`** (différent de zéro), l' *instruction* est exécutée, puis *loop-expression, le* cas échéant, est évaluée. *loop-expression* est évaluée à l’issue de chaque itération. Il n'existe aucune restriction sur son type. Les effets secondaires s'exécuteront dans l'ordre. Le processus recommence ensuite avec l’évaluation de *cond-expression*.
 
    - Si *cond-expression* est omis, *cond-expression* est considéré comme true, et l’exécution reprend exactement comme décrit dans le paragraphe précédent. Une **`for`** instruction sans argument *cond-expression* se termine uniquement lorsqu’une **`break`** **`return`** instruction ou dans le corps de l’instruction est exécutée ou lorsqu’une instruction **`goto`** (vers une instruction étiquetée en dehors du corps de l' **`for`** instruction) est exécutée.
 

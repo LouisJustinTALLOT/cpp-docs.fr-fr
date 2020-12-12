@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les expressions entre parenthèses
 title: Expressions entre parenthèses
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - expressions [C++], evaluating
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
-ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd33cab851f7ec55c395fee62e4300d42365f00f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233739"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196371"
 ---
 # <a name="expressions-in-parentheses"></a>Expressions entre parenthèses
 
@@ -22,7 +23,7 @@ Vous pouvez placer n’importe quel opérande entre parenthèses sans modifier l
 ( 10 + 5 ) / 5
 ```
 
-les parenthèses autour `10 + 5` de signifient que la `10 + 5` valeur de est évaluée en premier et qu’elle devient l’opérande**/** de gauche de l’opérateur de division (). Le résultat de `( 10 + 5 ) / 5` est égal à 3. Sans parenthèses, la valeur de `10 + 5 / 5` serait égale à 11.
+les parenthèses autour `10 + 5` de signifient que la valeur de `10 + 5` est évaluée en premier et qu’elle devient l’opérande de gauche de l’opérateur de division ( **/** ). Le résultat de `( 10 + 5 ) / 5` est égal à 3. Sans parenthèses, la valeur de `10 + 5 / 5` serait égale à 11.
 
 Bien que les parenthèses aient une incidence sur la manière dont les opérandes sont regroupés dans une expression, elles ne peuvent pas garantir un ordre spécifique d'évaluation dans tous les cas. Par exemple, ni les parenthèses ni le regroupement de gauche à droite de l'expression suivante garantissent à quoi sera égale la valeur de `i` dans l'une ou l'autre des sous-expressions :
 

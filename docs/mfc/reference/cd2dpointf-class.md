@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe Cd2dpointf,'
 title: CD2DPointF, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
-ms.openlocfilehash: 5d66c31289f9e17df99df4681cff1d5cf6a0ec86
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0f63aa35acb33504c96316b67ecc4f885f4f0247
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193355"
 ---
 # <a name="cd2dpointf-class"></a>CD2DPointF, classe
 
@@ -31,13 +32,13 @@ class CD2DPointF : public D2D1_POINT_2F;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DPointF::CD2DPointF](#cd2dpointf)|Surchargé. Construit un `CD2DPointF` objet `D2D1_POINT_2F` à partir de l’objet.|
+|[Cd2dpointf, :: Cd2dpointf,](#cd2dpointf)|Surchargé. Construit un `CD2DPointF` objet à partir de l' `D2D1_POINT_2F` objet.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DPointF::opérateur CPoint](#operator_cpoint)|Convertit `CD2DPointF` `CPoint` en objet.|
+|[Cd2dpointf, :: Operator CPoint](#operator_cpoint)|Convertit `CD2DPointF` en `CPoint` objet.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -47,11 +48,11 @@ class CD2DPointF : public D2D1_POINT_2F;
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxrendertarget.h
+**En-tête :** afxrendertarget. h
 
-## <a name="cd2dpointfcd2dpointf"></a><a name="cd2dpointf"></a>CD2DPointF::CD2DPointF
+## <a name="cd2dpointfcd2dpointf"></a><a name="cd2dpointf"></a> Cd2dpointf, :: Cd2dpointf,
 
-Construit un objet CD2DPointF à partir d’un objet CPoint.
+Construit un objet Cd2dpointf, à partir de l’objet CPoint.
 
 ```
 CD2DPointF(const CPoint& pt);
@@ -62,24 +63,24 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 
 ### <a name="parameters"></a>Paramètres
 
-*Pt*<br/>
+*pt*<br/>
 point source
 
-*Fx*<br/>
+*Rotation*<br/>
 source X
 
-*Fy*<br/>
+*Années*<br/>
 source Y
 
-## <a name="cd2dpointfoperator-cpoint"></a><a name="operator_cpoint"></a>CD2DPointF::opérateur CPoint
+## <a name="cd2dpointfoperator-cpoint"></a><a name="operator_cpoint"></a> Cd2dpointf, :: Operator CPoint
 
-Convertit CD2DPointF en objet CPoint.
+Convertit Cd2dpointf, en objet CPoint.
 
 ```
 operator CPoint();
 ```
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur renvoyée
 
 Valeur actuelle du point D2D.
 

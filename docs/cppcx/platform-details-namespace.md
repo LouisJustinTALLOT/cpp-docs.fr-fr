@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : plateforme ::D espace de noms étails'
 title: Platform::Details (espace de noms)
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-ms.openlocfilehash: 05677a08b7c63ddbe2196da946d62c00004d8942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 693dea2aa366868fe6a118baf5c57ac58b338cf8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387641"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195370"
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details (espace de noms)
 
@@ -30,11 +31,11 @@ namespace Platform {
 
 Bien que cet espace de noms est destiné à un usage interne, les navigateurs peuvent afficher les membres suivants de cet espace de noms.
 
-|Nom|Note|
+|Nom|Remarque|
 |----------|------------|
 |Console|Classe Affiche la sortie dans les tests d'unité.|
-|GUID|Struct|
-|Heap|Classe|
+|GUID|Structure|
+|Segment de mémoire (heap)|Classe|
 |HeapAllocationTrackingLevel|Énumération|
 |HeapEntryHandler|Délégué|
 |IActivationFactory|Interface|
@@ -49,12 +50,12 @@ Bien que cet espace de noms est destiné à un usage interne, les navigateurs pe
 
 `Platform`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
-**Espace de noms :** Platform::Details
+**Espace de noms :** Platform::Details
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)
+[Espace de noms de plateforme](platform-namespace-c-cx.md)

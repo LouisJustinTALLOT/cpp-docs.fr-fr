@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : instruction d’expression (C)'
 title: Instruction d'expression (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - statements, expression
 - expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
-ms.openlocfilehash: 736ed4fbbd9f87c675c0bb9566c6c31287e77917
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7bd4b0bac73277cedfd1e651ba731715a083b72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233707"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196436"
 ---
 # <a name="expression-statement-c"></a>Instruction d'expression (C)
 

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : plateforme ::D classe isconnectedException'
 title: Platform::DisconnectedException, classe
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::DisconnectedException
 ms.assetid: c25e0d64-5bff-4c21-88e5-c4ec2776fa7f
-ms.openlocfilehash: 56276a7d09cc82e05886c2c67a4784993083adb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ccfedc143d0245582c7c1f95110207d583949fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387615"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195318"
 ---
 # <a name="platformdisconnectedexception-class"></a>Platform::DisconnectedException, classe
 
@@ -31,16 +32,16 @@ Quand une classe A fait référence à une autre classe (classe B) qui se trouve
 
 Pour plus d'informations, consultez la classe [COMException](../cppcx/platform-comexception-class.md) .
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Prise en charge minimale du client :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform
 
-**Métadonnées :** platform.winmd
+**Métadonnées :** Platform. winmd
 
 ## <a name="see-also"></a>Voir aussi
 
-[Platform::COMException, classe](../cppcx/platform-comexception-class.md)
+[Platform :: COMException, classe](../cppcx/platform-comexception-class.md)

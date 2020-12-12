@@ -1,5 +1,6 @@
 ---
-title: open
+description: 'En savoir plus sur : ouvrir'
+title: ouvert
 ms.date: 12/16/2019
 api_name:
 - open
@@ -23,15 +24,15 @@ f1_keywords:
 helpviewer_keywords:
 - open function
 ms.assetid: e3139118-4da2-434b-a551-fcf3fccf49b5
-ms.openlocfilehash: 648f55511983264f127976b83a73dd5623717c14
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 65dc30f24737e1071deedead78d0b8267e4de97b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301260"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195643"
 ---
-# <a name="open"></a>open
+# <a name="open"></a>ouvert
 
-Le nom de fonction POSIX implémenté par Microsoft `open` est un alias déconseillé pour la fonction [_open](open-wopen.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
+Le nom de fonction POSIX implémenté `open` par Microsoft est un alias déconseillé pour la fonction [_open](open-wopen.md) . Par défaut, il génère un [Avertissement du compilateur (niveau 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Le nom est déconseillé, car il ne suit pas les règles C standard pour les noms spécifiques à l’implémentation. Toutefois, la fonction est toujours prise en charge.
 
 Nous vous recommandons d’utiliser [_open](open-wopen.md) à la place. Vous pouvez continuer à utiliser ce nom de fonction et désactiver l’avertissement. Pour plus d’informations, consultez [Désactiver les](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) noms de [fonction](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)d’avertissement et POSIX.

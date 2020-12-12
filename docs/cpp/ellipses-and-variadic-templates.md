@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : les points de suspension et les modèles variadiques'
 title: Points de suspension et modèles variadiques
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: e916dac40355f4397ef4846c0edf568c60b7d3dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 37cb2e02f818cc5d4db8954a348fc749a477b7d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195462"
 ---
 # <a name="ellipsis-and-variadic-templates"></a>Points de suspension et modèles variadiques
 

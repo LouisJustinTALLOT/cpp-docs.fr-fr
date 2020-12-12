@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : localeconv'
 title: localeconv
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 488a6e9dbc913f1102be3a53685dc68b38fb833b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195669"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -47,7 +48,7 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**localeconv** retourne un pointeur vers un objet rempli de type [struct lconv](../../c-runtime-library/standard-types.md). Les valeurs contenues dans l’objet sont copiées à partir des paramètres régionaux dans le stockage local des threads et peuvent être remplacées par les appels suivants à **localeconv**. Les modifications apportées aux valeurs de cet objet ne modifient pas les paramètres régionaux. Les appels à [setlocale](setlocale-wsetlocale.md) avec les valeurs de *catégorie* de **LC_ALL**, **LC_MONETARY**ou **LC_NUMERIC** remplacent le contenu de la structure.
+**localeconv** retourne un pointeur vers un objet rempli de type [struct lconv](../../c-runtime-library/standard-types.md). Les valeurs contenues dans l’objet sont copiées à partir des paramètres régionaux dans le stockage local des threads et peuvent être remplacées par les appels suivants à **localeconv**. Les modifications apportées aux valeurs de cet objet ne modifient pas les paramètres régionaux. Les appels à [setlocale](setlocale-wsetlocale.md) avec les valeurs de *catégorie* de **LC_ALL**, **LC_MONETARY** ou **LC_NUMERIC** remplacent le contenu de la structure.
 
 ## <a name="remarks"></a>Notes
 

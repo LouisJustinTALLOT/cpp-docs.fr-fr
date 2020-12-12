@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur:/DYNAMICBASE (utiliser la randomisation du format d’espace d’adresse)
 title: /DYNAMICBASE (Utiliser la randomisation du format d'espace d'adresse)
 ms.date: 06/12/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 9af502d65dd81efdedc6b80951f11d68f766cb31
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 481194b0da1a64d8170104344911223bf6ca6f6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842622"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192607"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Utiliser la randomisation du format d'espace d'adresse)
 
@@ -33,7 +34,7 @@ Par défaut, **/DynamicBase** est activé. Pour désactiver cette option, utilis
 
 1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés avancé de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Advanced** .
+1. Sélectionnez la page de propriétés avancé de l’éditeur de liens **Propriétés de configuration**  >    >   .
 
 1. Modifiez la propriété **adresse de base aléatoire** .
 

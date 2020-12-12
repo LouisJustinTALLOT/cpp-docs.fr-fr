@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : instruction do-while (C++)'
 title: do-while, instruction (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-ms.openlocfilehash: f52c065210a8861dc065508248a506770b039b1d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fed7dc3300651dd35326c1eb28e3078538db1301
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189271"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195487"
 ---
 # <a name="do-while-statement-c"></a>do-while, instruction (C++)
 
@@ -57,7 +58,7 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Instructions d’itération](../cpp/iteration-statements-cpp.md)<br/>
+[Instructions d'itération](../cpp/iteration-statements-cpp.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
 [while, instruction (C++)](../cpp/while-statement-cpp.md)<br/>
 [for, instruction (C++)](../cpp/for-statement-cpp.md)<br/>

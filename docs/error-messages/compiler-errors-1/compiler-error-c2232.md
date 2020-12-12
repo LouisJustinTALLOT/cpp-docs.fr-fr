@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : erreur du compilateur C2232'
 title: Erreur du compilateur C2232
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2232
 ms.assetid: 76f302b7-30a7-4a81-9a39-b4edde33b54c
-ms.openlocfilehash: 78ed8970b29126bceb06ff89d12c83cb98c4b5fd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 13262d923b2e1412b0bf13ad0e296fd32fb1e3e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97194928"
 ---
 # <a name="compiler-error-c2232"></a>Erreur du compilateur C2232
 

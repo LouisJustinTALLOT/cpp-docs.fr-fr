@@ -1,15 +1,16 @@
 ---
+description: En savoir plus sur :. Traitement des fichiers XML
 title: Traitement de fichier.Xml
 ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: 1a0d231a066209307041681232cc3410210d4d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ded4551adcc4bec4aef27fe38f47470065ea9ef4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192692"
 ---
 # <a name="xml-file-processing"></a>Traitement de fichier.Xml
 
@@ -25,14 +26,14 @@ Le compilateur respecte les règles suivantes quand il génère les chaînes d�
 
   | Caractère | Description |
   |---------------|-----------------|
-  | N | namespace<br /><br /> Vous ne pouvez pas ajouter de commentaires de documentation à un espace de noms, mais des références cref à un espace de noms sont possibles. |
+  | N | espace de noms<br /><br /> Vous ne pouvez pas ajouter de commentaires de documentation à un espace de noms, mais des références cref à un espace de noms sont possibles. |
   | T | type : classe, interface, struct, enum, délégué |
   | D | typedef |
-  | F | champ |
+  | F | field |
   | P | propriété (notamment des indexeurs ou autres propriétés indexées) |
   | M | méthode (notamment des méthodes spéciales telles que des constructeurs, des opérateurs, etc.) |
   | E | événement |
-  | ! | chaîne d’erreur<br /><br /> Le reste de la chaîne fournit des informations sur l’erreur. Le compilateur MSVC génère des informations d’erreur pour les liens qui ne peut pas être résolus. |
+  | ! | chaîne d’erreur<br /><br /> Le reste de la chaîne fournit des informations sur l’erreur. Le compilateur MSVC génère des informations d’erreur pour les liens qui ne peuvent pas être résolus. |
 
 - La deuxième partie de la chaîne est le nom qualifié complet de l’élément, en commençant à la racine de l’espace de noms. Le nom de l’élément, son ou ses types englobants et l’espace de noms sont séparés par des points. Si le nom de l’élément lui-même comporte des points, ceux-ci sont remplacés par un signe dièse (« # »). On suppose qu’aucun élément n’a de signe dièse directement dans son nom. Par exemple, le nom complet du constructeur `String` est « System.String.#ctor ».
 
@@ -46,19 +47,19 @@ Le compilateur respecte les règles suivantes quand il génère les chaînes d�
 
   - ELEMENT_TYPE_BYREF est représenté par un '\@' après le type modifié.
 
-  - ELEMENT_TYPE_PINNED est représenté par un « ^ » après le type modifié. Le compilateur MSVC ne génère jamais ceci.
+  - ELEMENT_TYPE_PINNED est représenté par un « ^ » après le type modifié. Le compilateur MSVC ne génère jamais This.
 
-  - ELEMENT_TYPE_CMOD_REQ est représenté par un « &#124; » et le nom qualifié complet de la classe de modification, après le type modifié. Le compilateur MSVC ne génère jamais ceci.
+  - ELEMENT_TYPE_CMOD_REQ est représenté par un « &#124; » et le nom qualifié complet de la classe de modification, après le type modifié. Le compilateur MSVC ne génère jamais This.
 
   - ELEMENT_TYPE_CMOD_OPT est représenté par un « ! » et le nom qualifié complet de la classe de modification, après le type modifié.
 
   - ELEMENT_TYPE_SZARRAY est représenté par « [] » après le type d’élément du tableau.
 
-  - ELEMENT_TYPE_GENERICARRAY est représenté par « [?] » après le type d’élément du tableau. Le compilateur MSVC ne génère jamais ceci.
+  - ELEMENT_TYPE_GENERICARRAY est représenté par « [?] » après le type d’élément du tableau. Le compilateur MSVC ne génère jamais This.
 
-  - ELEMENT_TYPE_ARRAY est représenté par [*limite_inférieure*:`size`,*limite_supérieure*:`size`], où le nombre de virgules correspond au rang - 1, et la limite inférieure et la taille de chaque dimension, si elles sont connues, sont représentées sous forme décimale. Si la limite inférieure ou la taille n’est pas spécifiée, elle est simplement omise. Si la limite inférieure et la taille d’une dimension particulière sont omises, le « : » est également omis. Par exemple, un tableau à deux dimensions avec 1 comme limite inférieure et une taille non spécifiée est [1:,1:].
+  - ELEMENT_TYPE_ARRAY est représenté sous la *forme [Lower*: `size` , Lower : `size` ], où le nombre de virgules est le rang-1, et les limites inférieures et la taille de chaque dimension, si elles sont connues, sont représentées au format décimal. Si la limite inférieure ou la taille n’est pas spécifiée, elle est simplement omise. Si la limite inférieure et la taille d’une dimension particulière sont omises, le « : » est également omis. Par exemple, un tableau à deux dimensions avec 1 comme limite inférieure et une taille non spécifiée est [1:,1:].
 
-  - ELEMENT_TYPE_FNPTR est représenté en tant que « =FUNC:`type`(*signature*) », où `type` est le type de retour et *signature* correspond aux arguments de la méthode. S’il n’y a pas d’argument, les parenthèses sont omises. Le compilateur MSVC ne génère jamais ceci.
+  - ELEMENT_TYPE_FNPTR est représenté en tant que « =FUNC:`type`(*signature*) », où `type` est le type de retour et *signature* correspond aux arguments de la méthode. S’il n’y a pas d’argument, les parenthèses sont omises. Le compilateur MSVC ne génère jamais This.
 
   Les composants de signature suivants ne sont pas représentés, car ils ne sont jamais utilisés pour différencier les méthodes surchargées :
 

@@ -1,13 +1,14 @@
 ---
+description: En savoir plus sur les noms de fichiers
 title: Noms de fichiers
 ms.date: 11/04/2016
 ms.assetid: f08d2b81-4bfc-49bc-986c-bfb2face8138
-ms.openlocfilehash: b7d11a4453039d5007a491e098df6e2a34fe40c7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c973551b9b1e6dd297f45507229a04248806fb30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196163"
 ---
 # <a name="filenames"></a>Noms de fichiers
 

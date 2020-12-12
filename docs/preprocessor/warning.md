@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : pragma warning'
 title: warning (pragma)
 ms.date: 08/29/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: ac810076d1db0c975d28bc64d0a6d761c9cec608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193102"
 ---
 # <a name="warning-pragma"></a>warning (pragma)
 
@@ -23,10 +24,10 @@ Active la modification sélective du comportement des messages d'avertissement d
 
 ## <a name="syntax"></a>Syntaxe
 
-> **avertissement de #pragma (** \
+> **Avertissement de #pragma (**\
 > &nbsp;&nbsp;&nbsp;&nbsp;*Warning-specifier* **:** *Warning-Number-List*\
-> &nbsp;&nbsp;&nbsp;&nbsp;[ **;** *Warning-specifier* **:** *Warning-Number-List* ...] **)** \
-> **Avertissement #pragma (push** [ **,** *n* ] **)** \
+> &nbsp;&nbsp;&nbsp;&nbsp;[**;** *Warning-specifier* **:** *Warning-Number-List* ...] **)**\
+> **Avertissement #pragma (push** [ **,** *n* ] **)**\
 > **AVERTISSEMENT #pragma (POP)**
 
 ## <a name="remarks"></a>Notes
@@ -39,7 +40,7 @@ Les paramètres spécificateur-avertissement suivants sont disponibles.
 |*default*|Réinitialise le comportement d'avertissement à sa valeur par défaut. Active également un avertissement spécifié qui est désactivé par défaut. L'avertissement est généré à son niveau par défaut, documenté.<br /><br /> Pour plus d’informations, consultez [avertissements du compilateur désactivés par défaut](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |*disable*|N’émettez pas le ou les messages d’avertissement spécifiés.|
 |*error*|Signale les avertissements spécifiés comme des erreurs.|
-|*once*|Affiche le ou les messages spécifiés une seule fois.|
+|*toutes*|Affiche le ou les messages spécifiés une seule fois.|
 |*supprimer*|Exécute un push de l'état actuel du pragma sur la pile, désactive l'avertissement spécifié pour la ligne suivante, puis dépile la pile d'avertissement afin que l'état pragma soit réinitialisé.|
 
 L'instruction de code suivante montre qu'un paramètre `warning-number-list` peut contenir plusieurs numéros d'avertissement, et que plusieurs paramètres `warning-specifier` peuvent être spécifiés dans la même directive pragma.
@@ -93,7 +94,7 @@ Le pragma **Warning** prend également en charge la syntaxe suivante, où *n* re
 
 Le pragma `warning( push )` stocke l’état d’avertissement actuel pour chaque avertissement. Le pragma `warning( push, n )` stocke l’état actuel pour chaque avertissement et définit le niveau d’avertissement global sur *n*.
 
-Le pragma `warning( pop )` dépile le dernier état d’avertissement envoyé sur la pile. Toutes les modifications que vous avez apportées à l’état d’avertissement entre les opérations *Push* et *pop* sont annulées. Examinez cet exemple :
+Le pragma `warning( pop )` dépile le dernier état d’avertissement envoyé sur la pile. Toutes les modifications que vous avez apportées à l’état d’avertissement entre les opérations *Push* et *pop* sont annulées. Prenons l’exemple suivant :
 
 ```cpp
 #pragma warning( push )
@@ -118,4 +119,4 @@ Pour plus d’informations sur les options du compilateur qui vous aident à sup
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

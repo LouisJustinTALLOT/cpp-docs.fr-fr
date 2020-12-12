@@ -1,4 +1,5 @@
 ---
+description: En savoir plus sur les fenêtres Frame
 title: Fenêtres frame
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 39c0b4b866fa123d8bcae639342c925570d96e1b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ee993b7f8314c28dba38c9ca607366f6fb93da1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193498"
 ---
 # <a name="frame-windows"></a>Fenêtres frame
 
@@ -45,11 +46,11 @@ Une autre disposition courante consiste à faire en sorte que la fenêtre frame 
 
 - [Classes de fenêtres Frame](frame-window-classes.md)
 
-- [Classes de fenêtre frame créées par l’Assistant Application](frame-window-classes-created-by-the-application-wizard.md)
+- [Classes Frame-Window créées par l’Assistant Application](frame-window-classes-created-by-the-application-wizard.md)
 
 - [Styles des fenêtres Frame](frame-window-styles-cpp.md)
 
-- [Les fenêtres Frame](what-frame-windows-do.md)
+- [Fonctionnement des fenêtres d’image](what-frame-windows-do.md)
 
 **Rubriques sur l’utilisation des fenêtres Frame**
 
@@ -81,7 +82,7 @@ Une autre disposition courante consiste à faire en sorte que la fenêtre frame 
 
 - [Boîtes de dialogue](dialog-boxes.md)
 
-- [Commandes](controls-mfc.md)
+- [Contrôles](controls-mfc.md)
 
 ## <a name="see-also"></a>Voir aussi
 

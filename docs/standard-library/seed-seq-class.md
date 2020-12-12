@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe seed_seq'
 title: seed_seq, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - std::seed_seq [C++], size
 - std::seed_seq [C++], param
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
-ms.openlocfilehash: d2dc561a9160188507a61ec3734cfbf9f3e74199
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c92bda66b37162bcaaf9c614185f2c31f29d22c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197034"
 ---
-# <a name="seedseq-class"></a>seed_seq, classe
+# <a name="seed_seq-class"></a>seed_seq, classe
 
 Stocke un vecteur de valeurs entières non signées pouvant fournir une valeur initiale aléatoire pour un moteur de nombres aléatoires.
 
@@ -118,7 +119,7 @@ Copie la séquence interne dans l'itérateur de sortie `dest`.
 
 ## <a name="example"></a>Exemple
 
-L'exemple de code suivant teste les trois constructeurs et génère une sortie à partir des instances `seed_seq` obtenues lors de l'assignation à un tableau. Pour obtenir un exemple qui utilise `seed_seq` avec un générateur de nombres aléatoires, consultez [\<random>](../standard-library/random.md).
+L'exemple de code suivant teste les trois constructeurs et génère une sortie à partir des instances `seed_seq` obtenues lors de l'assignation à un tableau. Pour obtenir un exemple qui utilise `seed_seq` avec un générateur de nombres aléatoires, consultez [\<random>](../standard-library/random.md) .
 
 ```cpp
 #include <iostream>
@@ -189,9 +190,9 @@ Generating a sequence of 5 elements into an array:
 
 Les fonctions membres de cette classe ne lèvent pas d’exceptions.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<random>
+**En-tête :**\<random>
 
 **Espace de noms :** std
 

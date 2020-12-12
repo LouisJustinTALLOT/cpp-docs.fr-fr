@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : page de propriétés NMake'
 title: NMake, page de propriétés (Windows C++)| Microsoft Docs
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,22 +10,22 @@ f1_keywords:
 helpviewer_keywords:
 - NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
-ms.openlocfilehash: c0dbe537635fe6698f814f3d8456f0caa9c8c796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58256ad8542e7d411769efb661970f9c41797ec3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196800"
 ---
 # <a name="nmake-property-page"></a>NMake (page de propriétés)
 
-La page de propriétés **NMake** vous permet de spécifier des paramètres de build pour les projets NMake. (NMAKE est l’implémentation Microsoft de [rendre](https://wikipedia.org/wiki/Make_(software)).)
+La page de propriétés **NMake** vous permet de spécifier des paramètres de build pour les projets NMake. (NMAKE est l’implémentation Microsoft de [Make](https://wikipedia.org/wiki/Make_(software)).)
 
-Pour plus d’informations sur les projets NMake, consultez [Création d’un projet Makefile](creating-a-makefile-project.md). Pour les projets MakeFile non - Windows, consultez [propriétés de projet MakeFile (Linux C++)](../../linux/prop-pages/makefile-linux.md), [propriétés générales du projet (Makefile Android C++)](/visualstudio/cross-platform/general-makefile-android-prop-page) ou [propriétés NMake (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
+Pour plus d’informations sur les projets NMake, consultez [Création d’un projet Makefile](creating-a-makefile-project.md). Pour les projets MakeFile non-Windows, consultez [Propriétés du projet Makefile (Linux c++)](../../linux/prop-pages/makefile-linux.md), [général propriétés du projet (Makefile Android C++)](/visualstudio/cross-platform/general-makefile-android-prop-page) ou [Propriétés NMAKE (Android c++)](/visualstudio/cross-platform/nmake-android-prop-page).
 
 La page de propriétés **NMake** contient les propriétés suivantes.
 
-## <a name="uielement-list"></a>Liste des éléments d’interface
+## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur
 
 - **Ligne de commande Build**
 
@@ -66,10 +67,10 @@ La page de propriétés **NMake** contient les propriétés suivantes.
 
    Spécifie tous les commutateurs du compilateur supplémentaires que doit utiliser IntelliSense lors de l’analyse de fichiers C++.
 
-Pour plus d’informations sur l’accès à la **NMake** page de propriétés, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+Pour plus d’informations sur l’accès à la page de propriétés **NMAKE** , consultez [définir le compilateur C++ et les propriétés de génération dans Visual Studio](../working-with-project-properties.md).
 
 Pour plus d’informations sur l’accès par programmation aux membres de cet objet, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de page de propriété de projet C++](property-pages-visual-cpp.md)<br>
+[Informations de référence sur les pages de propriétés de projet C++](property-pages-visual-cpp.md)<br>

@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : extern Storage-Class, spécificateur'
 title: Spécificateur extern de classe de stockage
 ms.date: 07/10/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-ms.openlocfilehash: e3242f86e30dcf3227586400b83266ad366ec7e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3a4a583f21809761878a060a3131a000f57915f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196306"
 ---
 # <a name="extern-storage-class-specifier"></a>Spécificateur extern de classe de stockage
 
@@ -65,4 +66,4 @@ Dans la `func` fonction, l’adresse de la variable globale `i` est utilisée po
 
 ## <a name="see-also"></a>Voir aussi
 
-[Spécificateurs de classe de stockage pour les déclarations de niveau interne](../c-language/storage-class-specifiers-for-internal-level-declarations.md)
+[Spécificateurs de classe de stockage pour les déclarations de Internal-Level](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

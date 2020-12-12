@@ -1,13 +1,14 @@
 ---
+description: 'En savoir plus sur : exemple de programme'
 title: Exemple de programme
 ms.date: 11/04/2016
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-ms.openlocfilehash: da8c772a3534df2c865c18959329ac850e359160
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 85cba2263e2e9f8f94bf8fda8ca1359cecc9a5d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218856"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196514"
 ---
 # <a name="example-program"></a>Exemple de programme
 

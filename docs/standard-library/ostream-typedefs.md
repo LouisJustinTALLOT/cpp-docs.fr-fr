@@ -1,16 +1,17 @@
 ---
+description: 'En savoir plus sur : &lt; ostream &gt; typedefs'
 title: '&lt;ostream&gt;, typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::ostream
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
-ms.openlocfilehash: ff9f19f56c8d8fdb9e469e6361a5419468fe7e67
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 886fb729f389fac161e4d154e00898b530d1d9f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193017"
 ---
 # <a name="ltostreamgt-typedefs"></a>&lt;ostream&gt;, typedefs
 

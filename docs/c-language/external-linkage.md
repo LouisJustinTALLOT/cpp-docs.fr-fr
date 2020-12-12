@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : liaison externe'
 title: Liaison externe
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - external linkage, about external linkage
 - external linkage
 ms.assetid: a6f8ea69-b405-4cdd-bf12-ad5462b73183
-ms.openlocfilehash: d8a7655b7504aa8458bda8db24ff3f919b5b09c1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6920183c53067462dbaadb8514bf747300eb6a1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196280"
 ---
 # <a name="external-linkage"></a>Liaison externe
 
