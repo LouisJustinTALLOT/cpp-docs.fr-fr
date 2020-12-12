@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : Concurrency :: Graphics ::d irect3d, fonctions de l’espace de noms'
 title: Concurrency::graphics::direct3d, fonctions de l’espace de noms
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: 66db1d348c6c58a9226322b51662ef7a4ef75b3d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 52556835c843744e03661b3ef5b718c884765c08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841294"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122354"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d, fonctions de l’espace de noms
 
@@ -174,7 +175,7 @@ Vecteur de 4 valeurs à ajouter à la somme masquée de différences absolues de
 
 Retourne un vecteur de 4 sommes. Chaque somme correspond à la somme masquée de différences absolues d’alignements d’octets différents entre la valeur de référence et la valeur source.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amp_graphics. h
 

@@ -1,15 +1,16 @@
 ---
+description: 'En savoir plus sur : accès concurrentiel :: fast_math espace de noms'
 title: Concurrency::fast_math, espace de noms
 ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 6ed8dcfa2faff49e8811769b76aad9df15b2fe7b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99638e3d8b0a452774d1e92d408ce3edddfa861c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226748"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122367"
 ---
 # <a name="concurrencyfast_math-namespace"></a>Concurrency::fast_math, espace de noms
 
@@ -47,7 +48,7 @@ namespace fast_math;
 |[expf](concurrency-fast-math-namespace-functions.md#expf)|Calcule la valeur exponentielle de base e de l’argument.|
 |[fabs](concurrency-fast-math-namespace-functions.md#fabs)|Retourne la valeur absolue de l’argument.|
 |[fabsf](concurrency-fast-math-namespace-functions.md#fabsf)|Retourne la valeur absolue de l’argument.|
-|[Floor](concurrency-fast-math-namespace-functions.md#floor)|Calcule le plancher de l’argument|
+|[floor](concurrency-fast-math-namespace-functions.md#floor)|Calcule le plancher de l’argument|
 |[floorf](concurrency-fast-math-namespace-functions.md#floorf)|Calcule le plancher de l’argument|
 |[fmax](concurrency-fast-math-namespace-functions.md#fmax)|Déterminer la valeur numérique maximale des arguments|
 |[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|Déterminer la valeur numérique maximale des arguments|
@@ -58,7 +59,7 @@ namespace fast_math;
 |[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Obtient la mantisse et l’exposant de _X|
 |[frexpf,](concurrency-fast-math-namespace-functions.md#frexpf)|Obtient la mantisse et l’exposant de _X|
 |[isFinite,](concurrency-fast-math-namespace-functions.md#isfinite)|Détermine si l’argument a une valeur finie|
-|[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Détermine si l’argument est un infini|
+|[isinf,](concurrency-fast-math-namespace-functions.md#isinf)|Détermine si l’argument est un infini|
 |[isNaN](concurrency-fast-math-namespace-functions.md#isnan)|Détermine si l’argument est une valeur NaN|
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Calcule un nombre réel à partir de la mantisse et de l’exposant|
 |[ldexpf,](concurrency-fast-math-namespace-functions.md#ldexpf)|Calcule un nombre réel à partir de la mantisse et de l’exposant|

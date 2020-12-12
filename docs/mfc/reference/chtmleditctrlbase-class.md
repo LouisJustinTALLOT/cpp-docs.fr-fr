@@ -1,4 +1,5 @@
 ---
+description: 'En savoir plus sur : classe CHtmlEditCtrlBase'
 title: CHtmlEditCtrlBase, classe
 ms.date: 11/04/2016
 f1_keywords:
@@ -220,12 +221,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 74df35a82342bad59e9065ef593581add6d3d734
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 2dfe61dfce86230f87f7e4883f6800e897c3770b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115415"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase, classe
 
@@ -366,7 +367,7 @@ Nom de la classe dérivée.
 
 `CHtmlEditCtrlBase`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxhtml.h
 
@@ -714,7 +715,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*sa*<br/>
+*SA*<br/>
 Balises de format de bloc disponibles, sous la forme d’un tableau de chaînes.
 
 ### <a name="return-value"></a>Valeur renvoyée
@@ -1704,7 +1705,7 @@ ID de la commande. Les identificateurs de commande sont extraits du groupe de co
 
 ### <a name="return-value"></a>Valeur renvoyée
 
-Retourne un [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf) qui indique l’état de *cmdID* , ou 0 en cas d’échec.
+Retourne un [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf) qui indique l’état de *cmdID*, ou 0 en cas d’échec.
 
 ## <a name="chtmleditctrlbaseradiobutton"></a><a name="radiobutton"></a> CHtmlEditCtrlBase :: RadioButton
 
